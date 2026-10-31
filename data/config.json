@@ -148,7 +148,9 @@
         "twitter": "SenOssoff",
         "facebook": "SenOssoff",
         "instagram": "jonossoff",
-        "bluesky": [],
+        "bluesky": [
+          "ossoff.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": null,
@@ -415,7 +417,9 @@
         "youtube": "USRepMarcyKaptur",
         "youtube_id": "UCIJUNf22o09nO02oQPLKQ6w",
         "instagram": "repmarcykaptur",
-        "bluesky": [],
+        "bluesky": [
+          "repmarcykaptur.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": null,
@@ -532,7 +536,9 @@
         "youtube": "RepKathyCastor",
         "youtube_id": "UC_irxhmLqVenTFPxDxznG6g",
         "instagram": "usrepkathycastor",
-        "bluesky": [],
+        "bluesky": [
+          "usrepkathycastor.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": null,
@@ -558,7 +564,9 @@
       "race": "S-TX",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "jamestalarico.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://jamestalarico.com",
@@ -604,7 +612,9 @@
       "race": "S-MI",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "abdulelsayed.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://abdulforsenate.com/",
@@ -660,7 +670,9 @@
       "race": "S-NC",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "roycoopernc.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://roycooper.com/",
@@ -706,7 +718,9 @@
       "race": "S-IA",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "joshturek4iowa.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://turek4iowa.com",
@@ -773,7 +787,10 @@
       },
       "social": {
         "twitter": "RepChrisPappas",
-        "bluesky": [],
+        "bluesky": [
+          "repchrispappas.bsky.social",
+          "chrispappasnh.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://chrispappas.org/",
@@ -831,7 +848,10 @@
       "race": "S-MN",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "peggyflanagan.bsky.social",
+          "ltgovflanagan.mn.gov"
+        ],
         "threads": []
       },
       "campaignSite": "https://peggyflanagan.com",
@@ -877,7 +897,10 @@
       "race": "S-IL",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "julianastratton.bsky.social",
+          "ltgovstratton.illinois.gov"
+        ],
         "threads": []
       },
       "campaignSite": "https://www.julianastratton.com/news",
@@ -923,7 +946,9 @@
       "race": "S-KY",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "booker4ky.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://charlesbooker.org",
@@ -1114,7 +1139,9 @@
       "race": "S-WY",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "byrdforsenate.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://byrdforsenate.com",
@@ -1172,7 +1199,9 @@
       "race": "S-OK",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "jasmineforok.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://www.jasmineforok.com",
@@ -1232,7 +1261,9 @@
       "race": "S-LA",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "jamieforlouisiana.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://jamieforlouisiana.com/",
@@ -1332,7 +1363,9 @@
         "thomas": "00136"
       },
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "sherrodbrownoh.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": null,
@@ -1416,7 +1449,9 @@
       "race": "S-ME",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "troyjackson207.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://www.jacksonformaine.com",
@@ -1597,7 +1632,9 @@
       "race": "H-NY-17",
       "ids": {},
       "social": {
-        "bluesky": [],
+        "bluesky": [
+          "caitfornewyork.bsky.social"
+        ],
         "threads": []
       },
       "campaignSite": "https://caitconley.com/",
@@ -2280,7 +2317,9 @@
         "twitter": "RepRubenGallego",
         "facebook": "RepRubenGallego",
         "instagram": "reprubengallego",
-        "bluesky": [],
+        "bluesky": [
+          "gallegoforarizona.com"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -2318,7 +2357,9 @@
         "facebook": "SenMarkKelly",
         "youtube": "SenMarkKelly",
         "instagram": "senmarkkelly",
-        "bluesky": [],
+        "bluesky": [
+          "captmarkkelly.bsky.social"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -3251,7 +3292,9 @@
         "youtube": "SenatorRandPaul",
         "youtube_id": "UCeM9I-20oWUs8daIIpsNHoQ",
         "instagram": "senatorrandpaul",
-        "bluesky": [],
+        "bluesky": [
+          "paulbrand.bsky.social"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -3417,7 +3460,9 @@
         "youtube": "senelizabethwarren",
         "youtube_id": "UCTH9zV8Imw09J5bOoTR18_A",
         "instagram": "senwarren",
-        "bluesky": [],
+        "bluesky": [
+          "elizabeth-warren.bsky.social"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -3656,7 +3701,9 @@
         "twitter": "SenAmyKlobuchar",
         "youtube": "senatorklobuchar",
         "youtube_id": "UCvdeJsDsV51tFb_hVqvtYGA",
-        "bluesky": [],
+        "bluesky": [
+          "amyklobuchar.com"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -4653,7 +4700,9 @@
         "youtube": "SenatorJeffMerkley",
         "youtube_id": "UCRoXttCJhMnLVCxCaa6VnNQ",
         "instagram": "senjeffmerkley",
-        "bluesky": [],
+        "bluesky": [
+          "jeff-merkley.bsky.social"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -4731,7 +4780,9 @@
       "social": {
         "facebook": "SenFettermanPA",
         "instagram": "senfettermanpa",
-        "bluesky": [],
+        "bluesky": [
+          "johnfetterman.com"
+        ],
         "threads": []
       },
       "inOffice": true,
@@ -5333,7 +5384,9 @@
         "youtube": "SenatorMarkWarner",
         "youtube_id": "UCwyivNlEGf4sGd1oDLfY5jw",
         "instagram": "senatorwarner",
-        "bluesky": [],
+        "bluesky": [
+          "markwarner.bsky.social"
+        ],
         "threads": []
       },
       "inOffice": true,
