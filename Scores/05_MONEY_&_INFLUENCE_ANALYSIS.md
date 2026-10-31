@@ -1,6 +1,6 @@
 # MONEY & INFLUENCE ANALYSIS 💰
 
-<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **In the works** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Not started**. To change one, swap the image name in its line: `checkbox-empty` (not started), `checkbox-progress` (in the works) or `checkbox-checked` (done).
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -11,16 +11,16 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Kept as an analysis, not a grade | Choice A. Labeled **Correlation, not cause**. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Insider Trading Index 📈 shown beside the trade list | The same number as the Ethics tab, with a link to it. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Money sources built | Donors by employer and by month, lobbying, foreign-agent registrations, contracts, rule comments, and the groups behind outside spending. Some wait on their keys. |
-| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Donor Loyalty Index 🤝 | On the Money & Influence tab, beside Vote Donor Alignment, with each funder's difference in a table. It needs the votes' party totals: run `npm run votes:party` once on your computer. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Super PAC Dependence Index 💸 | Replaces the withdrawn super PAC share. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Lobbyist Overlap Index 🏛️ | |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Contracts for Donors Index 📝 | Needs a table matching agencies to the committees that oversee them. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Foreign Agent Flag 🚩 | |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Donor hover details | Three bullets: sector, what they do, and political stance with a cited source. Today the hover is one sentence. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Donor Loyalty Index 🤝 | On the Money & Influence tab, beside Vote Donor Alignment, with each funder's difference in a table. Party totals are loaded for all 56 saved roll calls, the Senate's from Voteview when Senate.gov refuses. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Super PAC Dependence Index 💸 | Replaces the withdrawn super PAC share. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Lobbyist Overlap Index 🏛️ | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Contracts for Donors Index 📝 | Needs a table matching agencies to the committees that oversee them. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Foreign Agent Flag 🚩 | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Donor hover details | Three bullets: sector, what they do, and political stance with a cited source. Today the hover is one sentence. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Treemap of itemized PAC contributions by sector | On the Money & Influence tab, colored People-aligned, Profit-aligned or Other. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | SAM.gov: look up each organization once, then recheck monthly | Saves its 1-request-a-run limit. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Check for Epstein-linked donors in FEC records | Offered, not started. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | SAM.gov: look up each organization once, then recheck monthly | Saves its 1-request-a-run limit. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Check for Epstein-linked donors in FEC records | Offered, not started. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide the graph for each index | |
 
 ---
 

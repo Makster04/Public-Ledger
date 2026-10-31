@@ -1,6 +1,6 @@
 # ETHICS SCORE ⚖️
 
-<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **In the works** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Not started**. To change one, swap the image name in its line: `checkbox-empty` (not started), `checkbox-progress` (in the works) or `checkbox-checked` (done).
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -16,14 +16,14 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Indexes shown on the Ethics tab, Money & Influence tab and Scores page | The same numbers everywhere, with the math on the Ethics tab. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Trades read from the official House and Senate reports | House Clerk PDFs and Senate eFD, no key. Their dates win over the trade services. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | "Reports to check by hand" list | Paper or scanned reports that can't be read as text. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | Today: case timeline, trades and votes, days from trade to disclosure, and points lost by kind. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | First live run of the trade readers | The cloud sandbox can't reach the House and Senate sites, so the first run on your computer is the real test. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Review every case's tags | Kind, decided year, and open or closed. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Confirm the placeholder weights | Criminal × 1.5, technical × 0.5, half after 10 years, and a tenth for each trading index. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Senators' annual financial disclosures | Not imported yet, so that part of the Stock Disclosure Dodger Index drops out for senators. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide who confirms leads before they count | Court records, FEC enforcement records and DOJ press releases. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide the graph for each index | Today: case timeline, trades and votes, days from trade to disclosure, and points lost by kind. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | First live run of the trade readers | The cloud sandbox can't reach the House and Senate sites, so the first run on your computer is the real test. Senate.gov turned scripts away (HTTP 403) for the vote files, so watch for the same on the Senate eFD reader. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Review every case's tags | Kind, decided year, and open or closed. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Confirm the placeholder weights | Criminal × 1.5, technical × 0.5, half after 10 years, and a tenth for each trading index. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Senators' annual financial disclosures | Not imported yet, so that part of the Stock Disclosure Dodger Index drops out for senators. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide who confirms leads before they count | Court records, FEC enforcement records and DOJ press releases. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | The president's trades listed | From Disclosed Capitol's open dataset of the OGE 278e and 278-T reports (`npm run exec:build`), on the Ethics tab. Not scored. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Score the president's trades? | Decide what replaces the committee-conflict rule for a president, and whether 278-T reports filed after 45 days count. Spot-check the dataset against the OGE PDFs first. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Score the president's trades? | Decide what replaces the committee-conflict rule for a president, and whether 278-T reports filed after 45 days count. Spot-check the dataset against the OGE PDFs first. |
 
 ---
 

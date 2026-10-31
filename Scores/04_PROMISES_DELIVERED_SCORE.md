@@ -1,6 +1,6 @@
 # PROMISES DELIVERED SCORE 📦
 
-<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **In the works** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Not started**. To change one, swap the image name in its line: `checkbox-empty` (not started), `checkbox-progress` (in the works) or `checkbox-checked` (done).
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -12,13 +12,13 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | The president graded from PolitiFact's trackers | Both terms counted together. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Statement sources built | Floor speeches, hearings, press releases, Bluesky, YouTube and Threads. Some wait on their keys, and Threads waits on Meta's approval. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Fact-check source built | Google Fact Check Tools. Starts once `GOOGLE_API_KEY` is set. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Flip-Flop Index 🩴 | Designed, not built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Pants on Fire Index 🔥 | Designed, not built. Needs `GOOGLE_API_KEY`. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Promises Delivered grade formula | After both indexes are built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether Pants on Fire counts in the grade | Or sits beside it (the option in its design). |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Tag true campaign promises separately | Apart from other stated positions. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Check the MAGA-Meter tally against PolitiFact's live page | |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Flip-Flop Index 🩴 | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Pants on Fire Index 🔥 | Designed, not built. Needs `GOOGLE_API_KEY`. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | New Promises Delivered grade formula | After both indexes are built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide whether Pants on Fire counts in the grade | Or sits beside it (the option in its design). |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Tag true campaign promises separately | Apart from other stated positions. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Check the MAGA-Meter tally against PolitiFact's live page | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide the graph for each index | |
 
 ---
 
