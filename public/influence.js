@@ -61,6 +61,38 @@ export function voteDonorAlignment(funders){
   return {pct:n?Math.round(same/n*100):null,n,same,rows};
 }
 
+// Donor Loyalty Index 🤝: how much more often they vote the way their funders wanted than the rest of their party does on
+// the same votes. For each funder that gave to the campaign or spent for them and took public positions on votes they cast
+// (scorecards, key-vote letters): their rate of voting its way, minus their party's rate on those votes from each roll
+// call's party totals (their own vote left out), in points. Funders are weighted by the money each gave or spent for them.
+// Only the part above the party average counts, up to the ceiling. An independent is compared with the party they caucus
+// with (both sitting independents caucus with the Democrats). tallies: {voteId: {R:{Yea,Nay}, D:{...}, I:{...}}}.
+export const DONOR_LOYALTY={ceiling:25,minVotes:5}; // (placeholder) 25 points above the party average scores 100
+const yesNo=v=>({yea:'Yea',aye:'Yea',yes:'Yea',guilty:'Yea',nay:'Nay',no:'Nay','not guilty':'Nay'})[String(v??'').trim().toLowerCase()]||null;
+export function donorLoyalty(funders,party,tallies){
+  const P=party==='I'?'D':party,rows=[];let positions=0;
+  for(const f of funders||[]){
+    const money=(f.pac||0)+(f.for||0);if(!(money>0))continue;
+    const votes=[];
+    for(const c of f.compared||[]){
+      if(c.match!==true&&c.match!==false)continue;positions++;
+      const t=tallies?.[c.voteId]?.[P],wanted=yesNo(c.wanted);if(!t||!wanted)continue;
+      const other=wanted==='Yea'?'Nay':'Yea',own=party===P?yesNo(c.cast):null;
+      const w=(t[wanted]||0)-(own===wanted?1:0),o=(t[other]||0)-(own===other?1:0);
+      if(w+o>0)votes.push({voteId:c.voteId,match:c.match,party:w/(w+o)});
+    }
+    if(!votes.length)continue;
+    const same=votes.filter(v=>v.match).length,rate=same/votes.length,partyRate=votes.reduce((t,v)=>t+v.party,0)/votes.length;
+    rows.push({org:f.org,key:f.key,money,n:votes.length,same,rate:Math.round(rate*100),partyRate:Math.round(partyRate*100),diff:Math.round((rate-partyRate)*1000)/10});
+  }
+  rows.sort((a,b)=>b.money-a.money);
+  const n=rows.reduce((t,r)=>t+r.n,0),total=rows.reduce((t,r)=>t+r.money,0);
+  if(!rows.length)return {index:null,why:!positions?'No funder took a position on their votes':!tallies?'Party totals not loaded':'No party totals for these votes',n:0,diff:null,rows};
+  const diff=Math.round(rows.reduce((t,r)=>t+r.diff*r.money,0)/total*10)/10;
+  if(n<DONOR_LOYALTY.minVotes)return {index:null,why:'Not enough data',n,diff,rows};
+  return {index:Math.round(Math.min(100,Math.max(0,diff)/DONOR_LOYALTY.ceiling*100)),why:null,n,diff,rows};
+}
+
 // Months: "2026-03" arithmetic.
 export const addMonths=(m,k)=>{let y=+m.slice(0,4),mo=+m.slice(5,7)-1+k;y+=Math.floor(mo/12);mo=((mo%12)+12)%12;return `${y}-${String(mo+1).padStart(2,'0')}`;};
 const sumMonths=(series,from,to)=>Object.entries(series).reduce((t,[m,v])=>m>=from&&m<=to?t+v:t,0);

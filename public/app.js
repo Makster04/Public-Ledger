@@ -3,7 +3,7 @@ import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LAT
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
-import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
+import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
 const app=$('#app'), tip=$('#tip');
@@ -1923,12 +1923,22 @@ const H0=()=>window.FUNDHIST?monLabel(window.FUNDHIST.start.slice(0,7)):'2019';
 const FLAG_TEXT={rose:'Donations rose',dropped:'Donations dropped',changed:'Position changed after a donation shift',stock:'Held or traded stock in a donor'};
 function analysisBlock(s){
   const d=influenceData(s),v=d.vda;
+  // Donor Loyalty 🤝: against the rest of their party on the same votes, from the saved votes' party totals
+  // (public/vote-party.json, written by scripts/build-vote-party.mjs). A president signs bills rather than voting.
+  const dl=s.office?null:donorLoyalty(s.funderPos,s.party,window.VOTE_PARTY),side=s.party==='R'?'Republicans':'Democrats';
+  const pts1=x=>`${x>0?'+':x<0?'−':''}${Math.abs(Math.round(x))}`;
+  const dlText=!dl?`Not measured for a president, who signs bills rather than voting on them`
+    :dl.index!=null?`${pts1(dl.diff)} points vs. other ${side} on ${dl.n} votes, weighted by each funder's money. 100 at ${DONOR_LOYALTY.ceiling} points above`
+    :dl.why==='Not enough data'?`Not enough data: ${dl.n} compared vote${dl.n===1?'':'s'}, ${DONOR_LOYALTY.minVotes} needed${dl.diff!=null?` (${pts1(dl.diff)} points vs. other ${side} so far)`:''}`
+    :dl.why==='Party totals not loaded'?`The party totals for these votes aren't loaded yet`
+    :dl.why==='No funder took a position on their votes'?`No group that gave to the campaign or spent for them took a public side on a vote compared here`:esc(dl.why);
   const flagRows=d.allFlags.map(f=>f.kind==='stock'?`<li><b>${FLAG_TEXT.stock}:</b> ${esc(f.org)} · ${esc(f.decision.label)} on ${fmtDate(f.decision.date)}</li>`
     :`<li><b>${FLAG_TEXT[f.kind]}${f.kind==='rose'?' after a vote it wanted':f.kind==='dropped'?' after a vote it opposed':''}:</b> ${esc(f.org)}, ${fmtFull(f.before)} in the ${WINDOW_MONTHS} months before → ${fmtFull(f.after)} from ${monLabel(f.decision.date.slice(0,7))} through ${monLabel(f.to)}. ${esc(f.decision.label)} (${fmtDate(f.decision.date)}).</li>`);
   return `<section id="f-analysis"><h2 style="margin-top:6px">Money &amp; Influence Analysis</h2>
     <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Not graded','It sits beside the grades, never inside them.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
     <div class="cx-stats">
       <div class="cx-stat"><span>Vote Donor Alignment</span><b>${v.pct==null?'—':v.pct+'%'}</b><small>${v.n?`${v.same} of ${v.n} votes went the way a donor that took a public position wanted (${v.rows.length} donor${v.rows.length===1?'':'s'})`:'No donor that gave to the campaign took a public position on a vote compared here'}</small></div>
+      <div class="cx-stat"><span>Donor Loyalty 🤝</span><b>${dl?.index==null?'—':dl.index}</b><small>${dlText}</small></div>
       <div class="cx-stat"><span>Speech Donor Alignment</span><b>—</b><small>Not measured yet. Floor speeches are collected, but must be sorted by issue and side before they can be compared</small></div>
       <div class="cx-stat"><span>Timing flags</span><b>${d.allFlags.length}</b><small>for review, not scored${d.stock.length?`; ${d.stock.length} from stock in a donor`:''}</small></div>
       <div class="cx-stat"><span>Stock in donors</span><b>${tradeCoverage(s).ok&&d.trades.length?d.inDonors.length:'—'}</b><small>${!tradeCoverage(s).ok?esc(tradeCoverage(s).short||'No trading data'):d.trades.length?`of ${d.trades.length} reviewed trade${d.trades.length===1?' was':'s were'} in a donor's company`:'No reviewed trades yet. The latest reports are checked below'}</small></div></div>
@@ -1937,6 +1947,7 @@ function analysisBlock(s){
       ${tableView(['Donor','Total','Votes compared','Flags'],d.rows.map(r=>[esc(r.label),fmtFull(r.total),r.markers.length,r.flags.length]))}</div>`:s.office?`<p class="small muted">The monthly donations from the ${GP.length} groups this app tracks cover the 2026 candidates' committees, not ${esc(s.short)}'s. There is no series to compare.</p>`:`<p class="small muted">None of the ${GP.length} groups this app tracks gave to ${esc(s.short)}'s campaign since ${H0()}, in the FEC data. There is no monthly series to compare yet.</p>`}
     ${flagRows.length?`<div class="chart"><h3>Timing flags</h3><ul class="list small">${flagRows.join('')}</ul></div>`:''}
     ${stockBlock(s,d)}
+    ${dl?.rows.length?`<details class="tv"><summary>Donor Loyalty 🤝 by funder</summary>${points([['Each funder','A group that gave to the campaign or spent for them, on the votes where it took a public side.'],['Party\'s way',`How the rest of the ${side} in the chamber voted on the same votes, from the official roll calls.`],['The index',`The differences weighted by each funder's money. Only the part above the party counts, and ${DONOR_LOYALTY.ceiling} points above scores 100.`]],'small')}<div class="tablewrap"><table><thead><tr><th>Funder</th><th class="r">Gave or spent for them</th><th class="r">Votes</th><th class="r">Their way</th><th class="r">Party's way</th><th class="r">Difference</th></tr></thead><tbody>${dl.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${fmtFull(r.money)}</td><td class="r">${r.n}</td><td class="r">${r.rate}%</td><td class="r">${r.partyRate}%</td><td class="r">${pts1(r.diff)}</td></tr>`).join('')}</tbody></table></div></details>`:''}
     ${v.rows.length?`<details class="tv"><summary>Vote Donor Alignment by donor</summary><div class="tablewrap"><table><thead><tr><th>Donor</th><th class="r">Votes its way</th><th class="r">Votes compared</th></tr></thead><tbody>${v.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${r.same}</td><td class="r">${r.n}</td></tr>`).join('')}</tbody></table></div></details>`:''}
     <div id="f-live-analysis"></div></section>`;
 }
@@ -2099,7 +2110,7 @@ function renderMethod(sub){
     <ul class="list">
       <li><b>New scoring rules (Rule 1):</b> votes, sponsorships, cosponsorships and official acts count fully. Statements count half, and only where no action exists. A vote and a sponsorship on the same bill count once. Promises left unacted at the end of a term count as contradicted. Vague goals and promises with no related bill yet are left out. Workers > Profit also counts sponsorships, from a list of marked bills. Ethics adds stock-trading deductions.</li>
       <li><b>Score pages:</b> a Scores menu ranks everyone on each grade. "Not graded" people show as grey rows, with the data behind each grade.</li>
-      <li><b>Money &amp; Influence Analysis:</b> on each Money &amp; Influence tab. It has Vote Donor Alignment, monthly donations with vote markers, and timing flags. From the daily refresh, it adds the top 20 donor organizations and who lobbied on their bills. Outside spending is also split by sector and colored People- or Profit-aligned.</li>
+      <li><b>Money &amp; Influence Analysis:</b> on each Money &amp; Influence tab. It has Vote Donor Alignment, Donor Loyalty 🤝, monthly donations with vote markers, and timing flags. From the daily refresh, it adds the top 20 donor organizations and who lobbied on their bills. Outside spending is also split by sector and colored People- or Profit-aligned.</li>
       <li><b>New charts:</b> an Ethics case timeline, trading charts, a Workers > Profit diverging bar and a donor tree map.</li>
       <li><b>More official sources:</b> many now refresh automatically (listed under "What refreshes" below), each with its own free key. Every key that is set is used at once, and a record found in several sources shows once.</li>
       <li><b>Committees and IDs:</b> committee seats and each member's IDs come from congress-legislators. Senate votes now match senators by their official LIS ID, not surname and state.</li>
@@ -2232,6 +2243,7 @@ function renderMethod(sub){
     <h3>What it measures</h3>
     <ul class="list">
       <li><b>Vote Donor Alignment:</b> votes on bills where a donor group took a public position (in its scorecard or key-vote letter). It is the share that went the group's way. Missed votes are not counted.</li>
+      <li><b>Donor Loyalty 🤝:</b> how much more often they vote the way their funders wanted than the rest of their party does on the same votes. For each group that gave to the campaign or spent for them, their rate of voting its way minus the party's rate, from the official roll calls' party totals with their own vote left out. The groups are weighted by the money each gave or spent. Only the part above the party counts: ${DONOR_LOYALTY.ceiling} points above scores 100. It needs ${DONOR_LOYALTY.minVotes} compared votes. Independents are compared with the party they caucus with.</li>
       <li><b>Speech Donor Alignment:</b> not measured yet. Floor speeches arrive from the Congressional Record, but must first be sorted by issue and side.</li>
       <li><b>Donations by month:</b> each group's PAC giving to the campaign by month (FEC bulk data since 2019), with the votes it took a side on marked under its row.</li>
       <li><b>Top donor organizations:</b> from the daily FEC refresh, the top ${TOP_DONORS} organizations, each combining its PAC with its employees' itemized giving, grouped by employer. Donors' names are never shown, as FEC rules on reusing contributor information require.</li>

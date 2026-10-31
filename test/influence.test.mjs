@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {categoryAlign,spenderSector,outsideBySector,topDonors,voteDonorAlignment,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,addMonths,TOP_DONORS} from '../public/influence.js';
+import {categoryAlign,spenderSector,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,addMonths,TOP_DONORS} from '../public/influence.js';
 const research=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
 
 test('donor alignment: unions and small donors are People, industry is Profit, the rest Other',()=>{
@@ -48,4 +48,36 @@ test('position-change and stock flags',()=>{
   const trades=[{asset:'Lockheed Martin Corporation - Common Stock',traded:'2026-02-01'},{company:'Microsoft Corp',traded:'2026-02-02'}];
   assert.deepEqual(tradesInDonors(trades,[{org:'Lockheed Martin'},{org:'Boeing'}]).map(x=>x.org),['Lockheed Martin'],'a trade in any donor is listed');
   assert.deepEqual(stockFlags(trades,[{org:'Lockheed Martin',stake:false},{org:'Microsoft',stake:true}]).map(x=>x.org),['Microsoft'],'a donor that lobbied on their bills makes it a flag');
+});
+
+test('Donor Loyalty: their rate of voting a funder\'s way minus their party\'s, weighted by money, above the party only',()=>{
+  // Party totals per vote (made up). On v1 and v2 their party mostly voted Yea, on v3 mostly Nay.
+  const tallies={v1:{R:{Yea:40,Nay:10},D:{Nay:47}},v2:{R:{Yea:45,Nay:5}},v3:{R:{Yea:10,Nay:40}},v4:{R:{Yea:25,Nay:25}},v5:{R:{Yea:30,Nay:20}}};
+  const c=(voteId,wanted,cast)=>({voteId,wanted,cast,match:wanted===cast});
+  const big={org:'Big Group',key:'big',pac:90000,for:10000,compared:[c('v1','Yea','Yea'),c('v2','Yea','Yea'),c('v3','Yea','Yea'),c('v4','Yea','Yea')]};
+  const small={org:'Small Group',key:'small',pac:25000,compared:[c('v5','Nay','Yea')]};
+  const spentAgainst={org:'Opponent',key:'opp',pac:0,for:0,against:5e5,compared:[c('v1','Nay','Yea')]};
+  const r=donorLoyalty([big,small,spentAgainst],'R',tallies);
+  // Big: 4 of 4 its way. Party (without them): v1 39/49, v2 44/49, v3 9/49, v4 24/49, about 59%. So about +41 points.
+  const b=r.rows.find(x=>x.key==='big');assert.deepEqual([b.n,b.same,b.rate,b.partyRate],[4,4,100,59]);
+  assert.ok(Math.abs(b.diff-40.8)<0.2,String(b.diff));
+  // Small: 0 of 1 its way, party 20/49 Nay (their own Yea left out), about −41 points.
+  const sm=r.rows.find(x=>x.key==='small');assert.equal(sm.rate,0);assert.equal(sm.partyRate,41);
+  assert.equal(r.rows.length,2,'a group that only spent against them carries no weight');
+  // Weighted by money: (40.8×100,000 + −40.8×25,000) ÷ 125,000 ≈ +24.5, so about 98 of 100 at the 25-point ceiling.
+  assert.equal(r.n,5);assert.ok(Math.abs(r.diff-24.5)<0.3,String(r.diff));assert.equal(r.index,Math.round(Math.min(100,r.diff/DONOR_LOYALTY.ceiling*100)));
+});
+
+test('Donor Loyalty: below the party scores 0, too few votes is not enough data, and the reasons for no number',()=>{
+  const tallies={v1:{R:{Yea:10,Nay:40}},v2:{R:{Yea:10,Nay:40}},v3:{R:{Yea:10,Nay:40}},v4:{R:{Yea:10,Nay:40}},v5:{R:{Yea:10,Nay:40}},v6:{D:{Yea:45,Nay:2}}};
+  const f=(ids,match)=>({org:'G',key:'g',pac:1000,compared:ids.map(voteId=>({voteId,wanted:'Yea',cast:match?'Yea':'Nay',match}))});
+  const below=donorLoyalty([f(['v1','v2','v3','v4','v5'],false)],'R',tallies);
+  assert.ok(below.diff<0);assert.equal(below.index,0,'only the part above the party average counts');
+  assert.equal(donorLoyalty([f(['v1','v2'],true)],'R',tallies).why,'Not enough data');
+  assert.equal(donorLoyalty([f(['v1'],true)],'R',null).why,'Party totals not loaded');
+  assert.equal(donorLoyalty([f(['v9'],true)],'R',tallies).why,'No party totals for these votes');
+  assert.equal(donorLoyalty([],'R',tallies).why,'No funder took a position on their votes');
+  // An independent is compared with the Democrats, and their own vote isn't in the Democrats' totals.
+  const ind=donorLoyalty([{org:'G',key:'g',pac:1,compared:[{voteId:'v6',wanted:'Yea',cast:'Yea',match:true}]}],'I',tallies);
+  assert.equal(ind.rows[0].partyRate,96,'45 of 47 Democrats, nobody left out');
 });
