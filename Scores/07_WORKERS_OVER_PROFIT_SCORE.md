@@ -10,7 +10,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 |---|---|---|
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Renamed from People vs. Profit | |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Top donors treemap | On the Workers > Profit tab. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Corporation Compromised Index 🏢 | Designed. Needs the Donor Loyalty Index 🤝 first. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Corporation Compromised Index 🏢 | Designed. The Donor Loyalty Index 🤝 it depends on is built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Worker Backed Index ✊ | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grassroots Index 🌱 | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |

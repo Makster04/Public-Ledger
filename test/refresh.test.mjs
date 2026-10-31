@@ -92,13 +92,15 @@ test('manual refresh cannot be triggered cross-origin or on the hosted worker',a
 });
 test('House vote mapping uses Bioguide IDs; Senate uses LIS member IDs, never names',()=>{
   const parser=new XMLParser({ignoreAttributes:false,parseTagValue:false});
-  const senate=parser.parse('<roll_call_vote><congress>119</congress><session>2</session><vote_number>1</vote_number><vote_date>January 6, 2026, 12:00 PM</vote_date><vote_title>Example vote</vote_title><members><member><last_name>Collins</last_name><state>ME</state><lis_member_id>S252</lis_member_id><vote_cast>Nay</vote_cast></member><member><last_name>Collins</last_name><state>GA</state><lis_member_id>S999</lis_member_id><vote_cast>Yea</vote_cast></member><member><last_name>King</last_name><state>ME</state><lis_member_id>S363</lis_member_id><vote_cast>Yea</vote_cast></member></members></roll_call_vote>');
+  const senate=parser.parse('<roll_call_vote><congress>119</congress><session>2</session><vote_number>1</vote_number><vote_date>January 6, 2026, 12:00 PM</vote_date><vote_title>Example vote</vote_title><members><member><last_name>Collins</last_name><party>R</party><state>ME</state><lis_member_id>S252</lis_member_id><vote_cast>Nay</vote_cast></member><member><last_name>Collins</last_name><party>R</party><state>GA</state><lis_member_id>S999</lis_member_id><vote_cast>Yea</vote_cast></member><member><last_name>King</last_name><party>I</party><state>ME</state><lis_member_id>S363</lis_member_id><vote_cast>Yea</vote_cast></member></members></roll_call_vote>');
   const people=[{id:'collins',name:'Susan M. Collins',bioguide:'C001035',lis:'S252',state:'ME',chamber:'S'},{id:'king',name:'Angus S. King',bioguide:'K000383',lis:null,state:'ME',chamber:'S'}];
   const v=normalizeVote(senate,{chamber:'S',congress:119,session:2,number:1},people);assert.equal(v.positions.collins,'Nay');
   assert.equal(v.positions.king,undefined,'no LIS ID, so no inferred vote even though the surname and state match');
+  assert.deepEqual(v.byParty,{R:{Nay:1,Yea:1},I:{Yea:1}},'party totals from every member in the file');
   assert.throws(()=>normalizeVote(senate,{chamber:'S',congress:119,session:2,number:2},people),/identity/);
-  const house=parser.parse('<rollcall-vote><vote-metadata><rollcall-num>1</rollcall-num><action-date>6-Jan-2026</action-date><vote-question>Passage</vote-question></vote-metadata><vote-data><recorded-vote><legislator name-id="C001035">Another name</legislator><vote>Yea</vote></recorded-vote></vote-data></rollcall-vote>');
-  assert.equal(normalizeVote(house,{chamber:'H',year:2026,number:1},people).positions.collins,'Yea');
+  const house=parser.parse('<rollcall-vote><vote-metadata><rollcall-num>1</rollcall-num><action-date>6-Jan-2026</action-date><vote-question>Passage</vote-question></vote-metadata><vote-data><recorded-vote><legislator name-id="C001035" party="R">Another name</legislator><vote>Yea</vote></recorded-vote><recorded-vote><legislator name-id="X000001" party="D">Someone</legislator><vote>No</vote></recorded-vote></vote-data></rollcall-vote>');
+  const hv=normalizeVote(house,{chamber:'H',year:2026,number:1},people);
+  assert.equal(hv.positions.collins,'Yea');assert.deepEqual(hv.byParty,{R:{Yea:1},D:{Nay:1}},'"No" counts as Nay');
 });
 
 test('adding a senator reads the Senate roll calls already read once more, so their positions are filled in',async()=>{
