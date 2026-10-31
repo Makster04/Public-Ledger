@@ -483,42 +483,42 @@ Some links were built from paths the sites list rather than opened directly (vot
 
 **Before grades go public:**
 
-- [ ] Review every ethics tag and open/closed label
-- [ ] Review the liberal/conservative marks on the 16 key bills
-- [ ] Fact-check the original research file
-- [ ] Add Workers > Profit bills with cited analyses (two added so far)
-- [ ] Check the MAGA-Meter tally against PolitiFact's live page
-- [ ] Tag true campaign promises separately from other stated positions
-- [ ] Review the committee-sector list (`public/committee-sectors.json`) and the outside-spender sectors assigned from names
-- [ ] Enter the API keys and check each new source's first live refresh on the API updates and Website updates screens
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review every ethics tag and open/closed label
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the liberal/conservative marks on the 16 key bills
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Fact-check the original research file
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Add Workers > Profit bills with cited analyses (two added so far)
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Check the MAGA-Meter tally against PolitiFact's live page
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Tag true campaign promises separately from other stated positions
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the committee-sector list (`public/committee-sectors.json`) and the outside-spender sectors assigned from names
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Enter the API keys and check each new source's first live refresh on the API updates and Website updates screens
 
 ## Open decisions
 
 These values are placeholders or interpretations of the original notes. Confirm or adjust each one.
 
-- [ ] **Ethics deductions:** the original notes used −10 / −5 / −3; the app uses −20 / −15 / −5, which this doc follows. Confirm which set to keep.
-- [ ] **Ethics index weights:** the kind multipliers (criminal × 1.5, technical × 0.5), the age rule (× 0.5 after 10 years), the trading indexes' tenth, and each index's part weights are placeholders. Confirm them, and review each case's `kind` and `decided` tags in the research.
-- [x] **Statement-only issues in Your match:** counted at half importance (Rule 1), in this doc and in the app.
-- [x] **Workers > Profit scope:** votes, sponsorships and cosponsorships with Rule 1 weights, in this doc and in the app.
-- [ ] **Weights:** statements at 0.5; votes, sponsorships, and official acts at 1.0. Should sponsoring a bill count more than voting for it?
-- [ ] **Half credit in the Promise Score:** partly supported and changed position both earn ½. Raise partial credit (for example to 0.75) if a compromise should count closer to a kept promise.
-- [x] **Finding severity:** cases are now weighted by kind in the Legal Trouble Index (criminal × 1.5, ethics or civil × 1, technical × 0.5). The multipliers themselves are confirmed under **Ethics index weights**.
-- [x] **Transparency:** late or missing trade reports and late annual disclosures now count, through the Stock Disclosure Dodger Index.
-- [ ] **The 80% rule:** read here as "a tax bill favors the wealthy if 80% or more of its benefit goes to them." If it meant "votes for such bills 80% or more of the time," this rule changes. Also define "wealthy" (top 1%, top 10%, or another cut-off).
-- [ ] **People-leaning list:** the original notes repeated the Profit items under "People," so the People column was written as their mirror image. Add anything missing.
-- [ ] **Which votes count:** final-passage votes only, or also amendments and procedural motions? When a bill has more than one recorded vote (H.R. 1 of 2025 has the House's May passage and its July final vote), the app counts the first one listed. No profiled member voted differently on the two, but the final vote should probably win.
-- [ ] **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade.
-- [ ] **Flag thresholds:** top 20 donors, a 50% donation change, and a 6-month window.
-- [ ] **Who marks bills:** who assigns People/Profit and liberal/conservative marks, and how reviewer disagreements are settled.
-- [ ] **State records in Workers > Profit:** the CBO and JCT analyze federal bills only, so decide which sources (such as state legislative fiscal offices) can mark state bills. Voteview's DW-NOMINATE also covers Congress only, so the ideological position indicator is blank for state-only officials unless a state-level measure is added.
-- [ ] **Trading deductions:** the old −2 per late report and −1 per conflict trade are replaced by the Insider Trading and Stock Disclosure Dodger indexes, at a tenth each (their weights are under **Ethics index weights**). Still open: the 30-day window for trades near votes, and checking each trade service's terms before republishing its data.
-- [ ] **Overlapping sources:** where several sources cover the same thing (stock trades, state bills, news), they are merged and the official record wins. Confirm this rule, and who reviews the disagreements.
-- [ ] **Trading history:** the refresh now reads both chambers' official trade reports from the last two years (House Clerk and Senate eFD). Older trades still come from `scripts/build-holdings.py`, for review. Confirm your use fits the Ethics in Government Act limits: no commercial use other than news media, no credit ratings and no fundraising.
-- [ ] **Court records:** CourtListener's free account allows only about 125 requests a day. Decide whether checking the profiled politicians weekly fits that, or whether a membership is needed.
-- [ ] **Ethics leads:** court records, FEC enforcement records, DOJ press releases, and news only point to possible cases. Decide who confirms a case's status from an official record before it is scored.
-- [x] **The president's promises:** graded from PolitiFact's trackers, with both terms counted together (the Trump-O-Meter and the MAGA-Meter).
-- [x] **Shared bill marks:** a People or Profit mark applies to everyone who acted on the bill, so a president's signature and members' votes on the same bill are scored from the same mark.
-- [ ] **Agency estimates:** decide whether a government agency's own estimate (for example the CFPB's estimate of what its overdraft-fee rule saved consumers) can mark a bill, or only the CBO, the Joint Committee on Taxation and the Tax Policy Center. The repeal of that rule, which Trump signed in 2025, would be the next mark.
-- [ ] **Tariffs:** analyses find the 2025 tariffs cost lower-income households the most as a share of income, but show no group that gains. Decide whether a policy like that can be marked.
-- [ ] **The president's trades:** now listed, from Disclosed Capitol's dataset of the OGE reports, but not scored. Decide what replaces the committee-conflict rule for a president (for example, trades in companies or industries the president's own executive orders or signed bills directly affected), or whether conflicts are left out, and whether 278-T reports filed more than 45 days after a trade count in the Stock Disclosure Dodger Index.
-- [ ] **Featured profiles on the score pages:** the president is left out of the score pages, which rank the 2026 candidates. Decide whether to show the president there too.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Ethics deductions:** the original notes used −10 / −5 / −3; the app uses −20 / −15 / −5, which this doc follows. Confirm which set to keep.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Ethics index weights:** the kind multipliers (criminal × 1.5, technical × 0.5), the age rule (× 0.5 after 10 years), the trading indexes' tenth, and each index's part weights are placeholders. Confirm them, and review each case's `kind` and `decided` tags in the research.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Statement-only issues in Your match:** counted at half importance (Rule 1), in this doc and in the app.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Workers > Profit scope:** votes, sponsorships and cosponsorships with Rule 1 weights, in this doc and in the app.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Weights:** statements at 0.5; votes, sponsorships, and official acts at 1.0. Should sponsoring a bill count more than voting for it?
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Half credit in the Promise Score:** partly supported and changed position both earn ½. Raise partial credit (for example to 0.75) if a compromise should count closer to a kept promise.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Finding severity:** cases are now weighted by kind in the Legal Trouble Index (criminal × 1.5, ethics or civil × 1, technical × 0.5). The multipliers themselves are confirmed under **Ethics index weights**.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Transparency:** late or missing trade reports and late annual disclosures now count, through the Stock Disclosure Dodger Index.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **The 80% rule:** read here as "a tax bill favors the wealthy if 80% or more of its benefit goes to them." If it meant "votes for such bills 80% or more of the time," this rule changes. Also define "wealthy" (top 1%, top 10%, or another cut-off).
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **People-leaning list:** the original notes repeated the Profit items under "People," so the People column was written as their mirror image. Add anything missing.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Which votes count:** final-passage votes only, or also amendments and procedural motions? When a bill has more than one recorded vote (H.R. 1 of 2025 has the House's May passage and its July final vote), the app counts the first one listed. No profiled member voted differently on the two, but the final vote should probably win.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Flag thresholds:** top 20 donors, a 50% donation change, and a 6-month window.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Who marks bills:** who assigns People/Profit and liberal/conservative marks, and how reviewer disagreements are settled.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **State records in Workers > Profit:** the CBO and JCT analyze federal bills only, so decide which sources (such as state legislative fiscal offices) can mark state bills. Voteview's DW-NOMINATE also covers Congress only, so the ideological position indicator is blank for state-only officials unless a state-level measure is added.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Trading deductions:** the old −2 per late report and −1 per conflict trade are replaced by the Insider Trading and Stock Disclosure Dodger indexes, at a tenth each (their weights are under **Ethics index weights**). Still open: the 30-day window for trades near votes, and checking each trade service's terms before republishing its data.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Overlapping sources:** where several sources cover the same thing (stock trades, state bills, news), they are merged and the official record wins. Confirm this rule, and who reviews the disagreements.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Trading history:** the refresh now reads both chambers' official trade reports from the last two years (House Clerk and Senate eFD). Older trades still come from `scripts/build-holdings.py`, for review. Confirm your use fits the Ethics in Government Act limits: no commercial use other than news media, no credit ratings and no fundraising.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Court records:** CourtListener's free account allows only about 125 requests a day. Decide whether checking the profiled politicians weekly fits that, or whether a membership is needed.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Ethics leads:** court records, FEC enforcement records, DOJ press releases, and news only point to possible cases. Decide who confirms a case's status from an official record before it is scored.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **The president's promises:** graded from PolitiFact's trackers, with both terms counted together (the Trump-O-Meter and the MAGA-Meter).
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Shared bill marks:** a People or Profit mark applies to everyone who acted on the bill, so a president's signature and members' votes on the same bill are scored from the same mark.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Agency estimates:** decide whether a government agency's own estimate (for example the CFPB's estimate of what its overdraft-fee rule saved consumers) can mark a bill, or only the CBO, the Joint Committee on Taxation and the Tax Policy Center. The repeal of that rule, which Trump signed in 2025, would be the next mark.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Tariffs:** analyses find the 2025 tariffs cost lower-income households the most as a share of income, but show no group that gains. Decide whether a policy like that can be marked.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **The president's trades:** now listed, from Disclosed Capitol's dataset of the OGE reports, but not scored. Decide what replaces the committee-conflict rule for a president (for example, trades in companies or industries the president's own executive orders or signed bills directly affected), or whether conflicts are left out, and whether 278-T reports filed more than 45 days after a trade count in the Stock Disclosure Dodger Index.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Featured profiles on the score pages:** the president is left out of the score pages, which rank the 2026 candidates. Decide whether to show the president there too.

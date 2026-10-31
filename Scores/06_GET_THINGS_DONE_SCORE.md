@@ -1,6 +1,6 @@
 # GET THINGS DONE SCORE 🏗️ (Still Optional)
 
-[x] **Done** · [ ] **Still in the works**. To check one off, change its [ ] to [x].
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -8,13 +8,13 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 
 | Status | Item | Notes |
 |---|---|---|
-| [ ] | Decide whether to add it as a fifth grade | |
-| [ ] | Get It Done Index ✅ | Needs `CONGRESS_API_KEY`. |
-| [ ] | No-Show Index 🪑 | Needs a new job that reads every roll call. |
-| [ ] | Across the Aisle Index 🌉 | Needs `CONGRESS_API_KEY`. |
-| [ ] | Party Rebel Index 🤠 | From Voteview. Beside the grade, not inside it. |
-| [ ] | Grade formula, home card, profile tab and Scores page | Only if the grade is added. |
-| [ ] | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether to add it as a fifth grade | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Get It Done Index ✅ | Needs `CONGRESS_API_KEY`. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | No-Show Index 🪑 | Needs a new job that reads every roll call. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Across the Aisle Index 🌉 | Needs `CONGRESS_API_KEY`. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Party Rebel Index 🤠 | From Voteview. Beside the grade, not inside it. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grade formula, home card, profile tab and Scores page | Only if the grade is added. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
 
 ---
 

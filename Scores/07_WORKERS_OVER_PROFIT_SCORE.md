@@ -1,6 +1,6 @@
 # WORKERS > PROFIT SCORE 👷
 
-[x] **Done** · [ ] **Still in the works**. To check one off, change its [ ] to [x].
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -8,17 +8,17 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 
 | Status | Item | Notes |
 |---|---|---|
-| [x] | Renamed from People vs. Profit | |
-| [x] | Top donors treemap | On the Workers > Profit tab. |
-| [ ] | Corporation Compromised Index 🏢 | Designed. Needs the Donor Loyalty Index 🤝 first. |
-| [ ] | Worker Backed Index ✊ | Designed, not built. |
-| [ ] | Grassroots Index 🌱 | Designed, not built. |
-| [ ] | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
-| [ ] | Add more Workers > Profit bills with cited analyses | Two added so far. The AFL-CIO's key votes could suggest more. |
-| [ ] | Rename the "People" side to "Workers" | In the charts and tables. |
-| [ ] | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. |
-| [ ] | Decide the graph for each index | |
-| [ ] | Better bill marking | Score each bill from worker-backed to corporate-backed. See below. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Renamed from People vs. Profit | |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Top donors treemap | On the Workers > Profit tab. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Corporation Compromised Index 🏢 | Designed. Needs the Donor Loyalty Index 🤝 first. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Worker Backed Index ✊ | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grassroots Index 🌱 | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited analyses | Two added so far. The AFL-CIO's key votes could suggest more. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Rename the "People" side to "Workers" | In the charts and tables. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Better bill marking | Score each bill from worker-backed to corporate-backed. See below. |
 
 ## Better bill marking
 
@@ -56,7 +56,7 @@ Outside spending is left out, because candidates legally can't control it.
 **Example:** PAC share 8% scores 40, employees 3% scores 30, +10 vs. party scores 40, and 2 of 4 lobbied bills scores 50. That gives (0.35×40) + (0.10×30) + (0.35×40) + (0.20×50) = **41**.
 
 **Keys and sources:**
-- **Campaign money:** `FEC_API_KEY` [x] for campaign totals, PAC contributions and donors by employer. PAC sectors are assigned by this app from committee names, with no key.
+- **Campaign money:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for campaign totals, PAC contributions and donors by employer. PAC sectors are assigned by this app from committee names, with no key.
 - **Business funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
 - **Lobbying:** `LDA_API_KEY` (optional).
@@ -71,14 +71,14 @@ The same formula with unions:
 
 It's shown next to the Corporation Compromised Index, so both sides are measured the same way.
 
-**Keys and sources:** the same as the Corporation Compromised Index 🏢: `FEC_API_KEY` [x], `CONGRESS_API_KEY`, `LDA_API_KEY` (optional), the roll calls (no key) and the reviewed research.
+**Keys and sources:** the same as the Corporation Compromised Index 🏢: `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done">, `CONGRESS_API_KEY`, `LDA_API_KEY` (optional), the roll calls (no key) and the reviewed research.
 
 ### Grassroots Index 🌱
 **Measures:** the share of campaign funds from donors who gave $200 or less, × 100. A score of 42 means 42% came from small donors.
 
 **Minimum:** an FEC report.
 
-**Keys and sources:** `FEC_API_KEY` [x], from the campaign totals (the FEC's "unitemized" contributions).
+**Keys and sources:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done">, from the campaign totals (the FEC's "unitemized" contributions).
 
 ### ↓↓↓
 

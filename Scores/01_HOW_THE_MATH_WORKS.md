@@ -10,4 +10,4 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md).
 - **Party comparison:** every index also shows how the person compares with the average for their party and chamber, for example "+12 vs. party."
 - **Reviewed data only:** refreshed records stay as leads until they're reviewed.
 - **One calculation per index:** each index is calculated once, on its home tab. If another tab shows it, it's the same number with a link back.
-- **Keys:** in these files, [x] after a key means you already have it. "No key" sources work for free.
+- **Keys:** in these files, <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> after a key means you already have it. "No key" sources work for free.

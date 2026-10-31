@@ -1,6 +1,6 @@
 # ETHICS SCORE ⚖️
 
-[x] **Done** · [ ] **Still in the works**. To check one off, change its [ ] to [x].
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -8,22 +8,22 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 
 | Status | Item | Notes |
 |---|---|---|
-| [x] | Legal Trouble Index 🚨 | Status points × kind of case × age, ceiling 100. Keeps its exact value, so only the grade is rounded. |
-| [x] | Insider Trading Index 📈 | Committee conflicts, trades near votes, trades in donors and single-stock activity. Needs 5 reviewed trades. |
-| [x] | Stock Disclosure Dodger Index 🙈 | Late or missing trade reports and late annual disclosures. Needs 3 filings. |
-| [x] | New Ethics grade formula | 100 − Legal Trouble − a tenth of Insider Trading − a tenth of Stock Disclosure Dodger. |
-| [x] | Each case tagged with its kind and the year it was decided | In the reviewed research. |
-| [x] | Indexes shown on the Ethics tab, Money & Influence tab and Scores page | The same numbers everywhere, with the math on the Ethics tab. |
-| [x] | Trades read from the official House and Senate reports | House Clerk PDFs and Senate eFD, no key. Their dates win over the trade services. |
-| [x] | "Reports to check by hand" list | Paper or scanned reports that can't be read as text. |
-| [ ] | Decide the graph for each index | Today: case timeline, trades and votes, days from trade to disclosure, and points lost by kind. |
-| [ ] | First live run of the trade readers | The cloud sandbox can't reach the House and Senate sites, so the first run on your computer is the real test. |
-| [ ] | Review every case's tags | Kind, decided year, and open or closed. |
-| [ ] | Confirm the placeholder weights | Criminal × 1.5, technical × 0.5, half after 10 years, and a tenth for each trading index. |
-| [ ] | Senators' annual financial disclosures | Not imported yet, so that part of the Stock Disclosure Dodger Index drops out for senators. |
-| [ ] | Decide who confirms leads before they count | Court records, FEC enforcement records and DOJ press releases. |
-| [x] | The president's trades listed | From Disclosed Capitol's open dataset of the OGE 278e and 278-T reports (`npm run exec:build`), on the Ethics tab. Not scored. |
-| [ ] | Score the president's trades? | Decide what replaces the committee-conflict rule for a president, and whether 278-T reports filed after 45 days count. Spot-check the dataset against the OGE PDFs first. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Legal Trouble Index 🚨 | Status points × kind of case × age, ceiling 100. Keeps its exact value, so only the grade is rounded. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Insider Trading Index 📈 | Committee conflicts, trades near votes, trades in donors and single-stock activity. Needs 5 reviewed trades. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Stock Disclosure Dodger Index 🙈 | Late or missing trade reports and late annual disclosures. Needs 3 filings. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | New Ethics grade formula | 100 − Legal Trouble − a tenth of Insider Trading − a tenth of Stock Disclosure Dodger. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Each case tagged with its kind and the year it was decided | In the reviewed research. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Indexes shown on the Ethics tab, Money & Influence tab and Scores page | The same numbers everywhere, with the math on the Ethics tab. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Trades read from the official House and Senate reports | House Clerk PDFs and Senate eFD, no key. Their dates win over the trade services. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | "Reports to check by hand" list | Paper or scanned reports that can't be read as text. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | Today: case timeline, trades and votes, days from trade to disclosure, and points lost by kind. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | First live run of the trade readers | The cloud sandbox can't reach the House and Senate sites, so the first run on your computer is the real test. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Review every case's tags | Kind, decided year, and open or closed. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Confirm the placeholder weights | Criminal × 1.5, technical × 0.5, half after 10 years, and a tenth for each trading index. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Senators' annual financial disclosures | Not imported yet, so that part of the Stock Disclosure Dodger Index drops out for senators. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide who confirms leads before they count | Court records, FEC enforcement records and DOJ press releases. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | The president's trades listed | From Disclosed Capitol's open dataset of the OGE 278e and 278-T reports (`npm run exec:build`), on the Ethics tab. Not scored. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Score the president's trades? | Decide what replaces the committee-conflict rule for a president, and whether 278-T reports filed after 45 days count. Spot-check the dataset against the OGE PDFs first. |
 
 ---
 
@@ -65,7 +65,7 @@ The index is the total of every case's points, with a ceiling of 100.
 - **The cases themselves:** the reviewed research. No key.
 - **New leads to review:**
   - `COURTLISTENER_API_TOKEN`: court records.
-  - `FEC_API_KEY` [x]: FEC enforcement records.
+  - `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done">: FEC enforcement records.
   - DOJ press releases: no key.
 
 ### Insider Trading Index 📈
@@ -98,7 +98,7 @@ The index is the total of every case's points, with a ceiling of 100.
 - **Votes and bill actions:**
   - Senate and House roll calls: no key.
   - `CONGRESS_API_KEY`: bill actions and House votes from 2023 on.
-- **Donors:** `FEC_API_KEY` [x] for PAC money and donors by employer.
+- **Donors:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for PAC money and donors by employer.
 - **Lobbying:** `LDA_API_KEY` (optional).
 
 ### Stock Disclosure Dodger Index 🙈
