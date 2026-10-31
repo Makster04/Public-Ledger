@@ -44,7 +44,7 @@ export function csvRows(text){
 // Voteview's codes (voteview.com/articles/data_help_votes): 1 Yea, 6 Nay, 7–8 Present; paired and announced votes
 // (2–5) and 9 are not cast on the floor, as in the official record. Parties: 100 Democrat, 200 Republican,
 // 328 Independent.
-const CAST={1:'Yea',2:'Not Voting',3:'Not Voting',4:'Not Voting',5:'Not Voting',6:'Nay',7:'Present',8:'Present',9:'Not Voting'};
+export const CAST={1:'Yea',2:'Not Voting',3:'Not Voting',4:'Not Voting',5:'Not Voting',6:'Nay',7:'Present',8:'Present',9:'Not Voting'};
 const PARTY={100:'D',200:'R',328:'I'};
 
 // The yea and nay counts in a saved result ("Not sustained, 6-93", "Passed 51-50 (VP tie-break)"), if it has them.
@@ -77,14 +77,19 @@ export function voteviewParty({rollcalls,members,votes},wanted){
   return {votes:out,problems};
 }
 
+// One Congress's three Voteview Senate files, parsed: rollcalls (each vote's official session and roll number), members
+// (party and Bioguide ID) and votes (each senator's cast code).
+export async function voteviewFiles(congress){
+  const files={};
+  for(const kind of ['rollcalls','members','votes'])files[kind]=csvRows(await requestSource(`${VOTEVIEW}/${kind}/S${congress}_${kind}.csv`,{},{as:'text'}));
+  return files;
+}
 async function fromVoteview(wanted){
   const out={},problems={},byCongress=new Map();
   for(const w of wanted)(byCongress.get(w.args.congress)||byCongress.set(w.args.congress,[]).get(w.args.congress)).push(w);
   for(const [congress,list] of byCongress){
     try{
-      const files={};
-      for(const kind of ['rollcalls','members','votes'])files[kind]=csvRows(await requestSource(`${VOTEVIEW}/${kind}/S${congress}_${kind}.csv`,{},{as:'text'}));
-      const r=voteviewParty(files,list);Object.assign(out,r.votes);Object.assign(problems,r.problems);
+      const r=voteviewParty(await voteviewFiles(congress),list);Object.assign(out,r.votes);Object.assign(problems,r.problems);
     }catch(e){for(const w of list)problems[w.id]=`Voteview: ${e.message}`;}
   }
   return {votes:out,problems};

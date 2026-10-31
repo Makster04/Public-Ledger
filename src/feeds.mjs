@@ -124,7 +124,7 @@ export const FEEDS={
 
   // Key bills: the Workers > Profit bills and the bills behind the selected votes (config.keyBills).
   bill:{host:'api.congress.gov',label:'Bill details',tab:'match',
-    jobs:c=>(c.keyBills||[]).map(k=>({id:`bill:${k}`,subject:k,args:{bill:k}})),
+    jobs:c=>(c.keyBills||[]).filter(k=>!/-[sh]amdt-/.test(k)).map(k=>({id:`bill:${k}`,subject:k,args:{bill:k}})),
     async page(job,a,env){
       const [congress,type,number]=a.bill.split('-'),base=`https://api.congress.gov/v3/bill/${congress}/${type}/${number}`;
       const step=job.cursor||'detail';

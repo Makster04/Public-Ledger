@@ -62,6 +62,11 @@ test('a bill\'s score: who gains and who took a side count half each, and opposi
   assert.equal(billScore({sides:[p('itep','support'),p('taxfoundation','oppose')]}).status,'none');
   assert.equal(billScore({tax:true,sides:[p('itep','support'),p('taxfoundation','oppose')]}).score,100);
   assert.equal(billScore({gains:g(30)}).status,'none','only the five steps count');
+  // The building-trades unions and the contractors' group count on construction-pay measures only.
+  assert.equal(billScore({sides:[p('nabtu','oppose'),p('abc','support')]}).status,'none');
+  assert.equal(billScore({construction:true,sides:[p('nabtu','oppose'),p('abc','support')]}).score,-100);
+  // An amendment is keyed on its own, so its vote isn't merged with the bill's.
+  assert.equal(billKeyFromText('S.Amdt. 1858 (117th Congress)'),'117-samdt-1858');
 });
 test('every Workers > Profit bill has a valid ID, cited evidence and known groups',()=>{
   for(const v of data.votes.concat(data.hvotes))assert.ok(!v.pvp,v.id+': bill evidence belongs in the bills list, once per bill');

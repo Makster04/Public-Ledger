@@ -54201,6 +54201,49 @@
       "measureKey": "S:H.R.1319(117thCongress)"
     },
     {
+      "id": "117-1-223",
+      "congress": 117,
+      "session": 1,
+      "number": 223,
+      "date": "2021-06-08",
+      "short": "Cornyn amendment to remove prevailing wages from CHIPS funding",
+      "issue": "S.Amdt. 1858 to S. 1260, the United States Innovation and Competition Act of 2021, whose CHIPS for America funding became the CHIPS and Science Act",
+      "question": "On the Amendment S.Amdt. 1858",
+      "result": "Not agreed to 42-58",
+      "area": "Labor & workers",
+      "pos": {
+        "sullivan": "Nay",
+        "ossoff": "Nay",
+        "booker": "Nay",
+        "hickenlooper": "Nay",
+        "brown": "Nay",
+        "ricketts": "Not in office",
+        "husted": "Not in office"
+      },
+      "bill": {
+        "measure": "S.Amdt. 1858 (117th Congress)",
+        "officialTitle": "Amendment No. 1858 to S. 1260 (United States Innovation and Competition Act of 2021)",
+        "popularTitle": "Cornyn amendment on Davis-Bacon prevailing wages",
+        "summary": "Would have removed the Davis-Bacon prevailing-wage requirements added in committee to the CHIPS for America semiconductor funding in S. 1260.",
+        "summarySrc": {
+          "t": "Sen. Cornyn: amendment to remove the wage provision from semiconductor funding",
+          "u": "https://www.cornyn.senate.gov/news/cornyn-files-amendment-to-remove-controversial-wage-provision-from-semiconductor-funding"
+        },
+        "voteQuestion": "On the Amendment S.Amdt. 1858",
+        "voteResult": "Not agreed to 42-58",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "B",
+          "why": "A Yea vote supported removing prevailing-wage requirements from CHIPS-funded semiconductor construction."
+        }
+      ],
+      "excluded": null,
+      "measureKey": "S:S.Amdt.1858(117thCongress)"
+    },
+    {
       "id": "117-1-314",
       "congress": 117,
       "session": 1,
@@ -191700,6 +191743,112 @@
           }
         }
       ]
+    },
+    {
+      "id": "117-hr-3684",
+      "title": "Infrastructure Investment and Jobs Act (Public Law 117-58)",
+      "sides": [
+        {
+          "group": "aflcio",
+          "pos": "support",
+          "date": "2021-08-10",
+          "why": "Key vote on Senate passage: its labor standards guarantee family-supporting wages on the jobs it creates, and its \"Buy America\" rules bolster U.S. manufacturing.",
+          "src": {
+            "t": "AFL-CIO Legislative Scorecard, 2021 Senate: Infrastructure Investment and Jobs Act",
+            "u": "https://aflcio.org/scorecard/votes/2021/senate/infrastructure-investment-and-jobs-act"
+          }
+        },
+        {
+          "group": "chamber",
+          "pos": "support",
+          "date": "2021-08-05",
+          "why": "Key-vote letter urging the Senate to support cloture and final passage.",
+          "src": {
+            "t": "U.S. Chamber Key Vote Alert! Letter on the Infrastructure Investment and Jobs Act (Senate, Aug. 5, 2021)",
+            "u": "https://www.uschamber.com/improving-government/us-chamber-key-vote-alert-letter-the-infrastructure-investment-and-jobs-act"
+          }
+        }
+      ],
+      "context": {
+        "note": {
+          "why": "No Senate amendment vote on its wage or labor rules was found. The roll-call amendments (from Sens. Lee, Barrasso, Daines, Duckworth and others) dealt with other parts of the bill.",
+          "src": {
+            "t": "Senate Periodical Press Gallery floor log, Aug. 3, 2021",
+            "u": "https://www.dailypress.senate.gov/tuesday-august-3-2021"
+          }
+        }
+      }
+    },
+    {
+      "id": "117-hr-4346",
+      "title": "CHIPS and Science Act (Public Law 117-167)",
+      "sides": [
+        {
+          "group": "aflcio",
+          "pos": "support",
+          "date": "2022-07-27",
+          "why": "Statement on Senate passage: \"CHIPS Act Will Help Secure America's Future.\"",
+          "src": {
+            "t": "AFL-CIO: CHIPS Act Will Help Secure America's Future (July 2022)",
+            "u": "https://aflcio.org/press/releases/chips-act-will-help-secure-americas-future"
+          }
+        },
+        {
+          "group": "chamber",
+          "pos": "support",
+          "date": "2022-07-19",
+          "why": "Key-vote letter urging senators to \"swiftly enact this important legislation.\"",
+          "src": {
+            "t": "U.S. Chamber Key Vote Letter on the CHIPS Act of 2022 (Senate)",
+            "u": "https://uschamber.com/international/u-s-chamber-key-vote-letter-on-the-chips-act-of-2022"
+          }
+        }
+      ],
+      "context": {
+        "note": {
+          "why": "Its amendment vote is scored on its own: the Cornyn amendment to the 2021 version of the bill (S. 1260), which would have removed prevailing wages from CHIPS-funded construction, failed 42–58.",
+          "src": {
+            "t": "Senate floor activity, June 8, 2021",
+            "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/06_08_2021_Senate_Floor.htm"
+          }
+        }
+      }
+    },
+    {
+      "id": "117-samdt-1858",
+      "title": "Cornyn amendment to remove prevailing wages from CHIPS-funded construction (S.Amdt. 1858 to S. 1260)",
+      "construction": true,
+      "sides": [
+        {
+          "group": "nabtu",
+          "pos": "oppose",
+          "date": "2021-06-08",
+          "why": "Praised the Senate for rejecting it, saying it would have cut wages on the semiconductor construction the bill funds, and thanked the Republicans who voted no.",
+          "src": {
+            "t": "NABTU Commends Bipartisan Defeat of Wage Cutting Amendment (June 8, 2021)",
+            "u": "https://nabtu.org/press_releases/defeat-wage-cutting-amendment/"
+          }
+        },
+        {
+          "group": "abc",
+          "pos": "support",
+          "date": "2021-06",
+          "why": "Key-vote letter urging a yes vote to remove the \"flawed and inflationary\" Davis-Bacon prevailing-wage requirements from the CHIPS for America funding.",
+          "src": {
+            "t": "ABC Key Vote: Sen. Cornyn Davis-Bacon Amendment #1858 to S. 1260",
+            "u": "https://abc.org/Portals/1/2021%20Files/ABC%20Key%20Vote%20Sen.%20Cornyn%20Davis%20Bacon%20Amendment%20to%20S.%201260.pdf"
+          }
+        }
+      ],
+      "context": {
+        "note": {
+          "why": "Senate roll call 223 (June 8, 2021), rejected 42–58: every Democrat and eight Republicans voted no. The CHIPS for America funding in S. 1260 became law the next year in the CHIPS and Science Act.",
+          "src": {
+            "t": "Senate floor activity, June 8, 2021",
+            "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/06_08_2021_Senate_Floor.htm"
+          }
+        }
+      }
     }
   ],
   "featured": [

@@ -22,14 +22,15 @@ export const ACTION_TYPES=new Set(['senate_vote','house_vote','vote','state_vote
 export function letter(pct){return pct>=90?'A':pct>=80?'B':pct>=70?'C':pct>=60?'D':'F';}
 
 // One ID per bill, so a vote and a sponsorship on the same bill can be matched: "H.R. 1319 (117th Congress)" -> "117-hr-1319".
-const BILL_TYPES=new Set(['HR','S','HJRES','SJRES','HCONRES','SCONRES','HRES','SRES']);
+// Amendments (SAMDT, HAMDT) are keyed like bills ("117-samdt-1858"), so a vote on one is scored on its own, not as the bill.
+const BILL_TYPES=new Set(['HR','S','HJRES','SJRES','HCONRES','SCONRES','HRES','SRES','SAMDT','HAMDT']);
 export function billKey(congress,measure){
   const m=String(measure||'').toUpperCase().replace(/[.\s]/g,'').match(/^([A-Z]+)(\d+)$/);
   if(!m||!BILL_TYPES.has(m[1])||!(+congress>0))return null;
   return `${+congress}-${m[1].toLowerCase()}-${+m[2]}`;
 }
 export function billKeyFromText(text){
-  const m=String(text||'').match(/^((?:H|S)\.?\s?(?:J\.?\s?Res|Con\.?\s?Res|Res|R)?\.?)\s*(\d+)\s*\((\d+)(?:st|nd|rd|th) Congress\)/i);
+  const m=String(text||'').match(/^((?:H|S)\.?\s?(?:J\.?\s?Res|Con\.?\s?Res|Res|R|Amdt)?\.?)\s*(\d+)\s*\((\d+)(?:st|nd|rd|th) Congress\)/i);
   return m?billKey(m[3],m[1]+m[2]):null;
 }
 const isVote=t=>/vote$/.test(t||'')||t==='vote';
@@ -187,7 +188,9 @@ export const BILL_GROUPS={
   aflcio:{org:'AFL-CIO',side:'worker'},epi:{org:'Economic Policy Institute',side:'worker'},nelp:{org:'National Employment Law Project',side:'worker'},
   itep:{org:'Institute on Taxation and Economic Policy (ITEP)',side:'worker',tax:true},
   chamber:{org:'U.S. Chamber of Commerce',side:'business'},nfib:{org:'NFIB',side:'business'},nam:{org:'National Association of Manufacturers',side:'business'},
-  taxfoundation:{org:'Tax Foundation',side:'business',tax:true}};
+  taxfoundation:{org:'Tax Foundation',side:'business',tax:true},
+  // Construction pay and prevailing-wage measures (bills marked "construction"), one from each side.
+  nabtu:{org:"North America's Building Trades Unions",side:'worker',construction:true},abc:{org:'Associated Builders and Contractors',side:'business',construction:true}};
 export const GAINS_STEPS={
   '100':'Lower-income households come out ahead while the top pays more',
   '50':'Tilts toward lower-income households: they gain more, or pay less, as a share of income than the top',
@@ -197,7 +200,7 @@ export const GAINS_STEPS={
 const SIDE_SIGN={worker:1,business:-1};
 export function billScore(b){
   const step=b?.gains?.step,gains=[100,50,0,-50,-100].includes(step)?step:null;
-  const stance=side=>{const ps=(b?.sides||[]).filter(p=>BILL_GROUPS[p.group]?.side===side&&(p.pos==='support'||p.pos==='oppose')&&(!BILL_GROUPS[p.group].tax||b.tax));
+  const stance=side=>{const ps=(b?.sides||[]).filter(p=>BILL_GROUPS[p.group]?.side===side&&(p.pos==='support'||p.pos==='oppose')&&(!BILL_GROUPS[p.group].tax||b.tax)&&(!BILL_GROUPS[p.group].construction||b.construction));
     return ps.length?ps.reduce((t,p)=>t+(p.pos==='support'?100:-100)*SIDE_SIGN[side],0)/ps.length:null;};
   const worker=stance('worker'),business=stance('business'),both=[worker,business].filter(v=>v!=null);
   const sides=both.length?both.reduce((t,v)=>t+v,0)/both.length:null;

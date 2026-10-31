@@ -206,20 +206,23 @@ Bills in the areas listed in Step 2 are in scope. Each bill is scored from **−
   - **0:** about even across incomes.
   - **−50:** it tilts toward the top: it gains more, as a share of income, than lower-income households.
   - **−100:** lower-income households lose while the top gains.
-- **Who took a side (50%):** each worker group (the AFL-CIO, the Economic Policy Institute, the National Employment Law Project) that supports a bill counts +100, and each that opposes it −100. Business groups (the U.S. Chamber of Commerce, NFIB, the National Association of Manufacturers) count the other way, so a business group opposing a bill counts toward workers. On tax bills, ITEP counts with the worker groups and the Tax Foundation with the business groups. Each side's groups are averaged first, then the two sides, so a side with more groups on file doesn't outweigh the other. If both sides support a bill, it lands near 0.
+- **Who took a side (50%):** each worker group (the AFL-CIO, the Economic Policy Institute, the National Employment Law Project) that supports a bill counts +100, and each that opposes it −100. Business groups (the U.S. Chamber of Commerce, NFIB, the National Association of Manufacturers) count the other way, so a business group opposing a bill counts toward workers. On tax bills, ITEP counts with the worker groups and the Tax Foundation with the business groups. On construction-pay (prevailing-wage) measures, North America's Building Trades Unions and Associated Builders and Contractors do the same. Each side's groups are averaged first, then the two sides, so a side with more groups on file doesn't outweigh the other. If both sides support a bill, it lands near 0.
 - **When they disagree:** if the two parts point opposite ways, the bill is **Disputed**. It's shown, but not scored.
 - **One part only:** that part decides. A bill marked from groups' positions alone needs a worker group and a business group on opposite sides.
 - **Shown, not scored:** lobbying reports that name the bill (LDA.gov), split into unions and other clients, because a report doesn't say which side the client was on; CBO estimates that don't split by income; and the White House's position, which follows the president's party.
 
-Seven bills are on file, and five are scored:
+Ten bills and amendments are on file, and six are scored:
 
 | Bill | Who gains | Who took a side | Score |
 | --- | --- | --- | --- |
 | H.R. 1 of 2025, the One Big Beautiful Bill Act (Public Law 119-21) | −100. CBO, *Distributional Effects of Public Law 119-21* (August 2025): the bottom tenth lose about $1,200 a year (3.1% of income), mainly through Medicaid and SNAP cuts, while the top tenth gain about $13,600 a year. | −100. The AFL-CIO opposed it; the Chamber and NFIB supported it. | **−100** |
 | H.R. 6703 of 2025, the Lower Health Care Premiums for All Americans Act | No study by income. (CBO: premiums 11% lower, about 100,000 fewer insured.) | −100. The AFL-CIO opposed it; NFIB supported it. | **−100** |
+| S.Amdt. 1858 of 2021, the Cornyn amendment to S. 1260 (the bill whose CHIPS for America funding became the CHIPS and Science Act) | None on file. It would have removed prevailing wages from CHIPS-funded construction. | −100. North America's Building Trades Unions opposed it; Associated Builders and Contractors supported it. Senate roll call 223, rejected 42–58. | **−100** |
 | H.R. 1 of 2017, the Tax Cuts and Jobs Act (Public Law 115-97) | −50. Tax Policy Center (December 2017): the largest cuts as a share of income go to households making about $308,000 to $733,000, and by 2027 the top 1% receive 83% of the benefit. | −100. The AFL-CIO opposed it; the Chamber, NAM and NFIB supported it. | **−75** |
 | H.R. 5376 of 2022, the Inflation Reduction Act (Public Law 117-169) | +50. Tax Policy Center (August 2022): the tax changes fall mainly on the top 1%, with the lowest fifth about unchanged. | +100. The AFL-CIO supported it; the Chamber and NAM opposed it. | **+75** |
 | H.R. 1319 of 2021, the American Rescue Plan Act (Public Law 117-2) | +50. Tax Policy Center (March 2021): households making $91,000 or less get nearly 70% of the tax benefits. | +100. The AFL-CIO supported it. | **+75** |
+| H.R. 3684 of 2021, the Infrastructure Investment and Jobs Act (Public Law 117-58) | None on file (CBO's estimate gives the cost, not who gains by income) | 0. The AFL-CIO and the Chamber both supported it. No Senate amendment vote on its wage or labor rules was found. | **Even**, not scored |
+| H.R. 4346 of 2022, the CHIPS and Science Act (Public Law 117-167) | None on file | 0. The AFL-CIO and the Chamber both supported it. Its amendment vote is scored on its own (above). | **Even**, not scored |
 | S. 1582 of 2025, the GENIUS Act | None on file | The AFL-CIO opposed it. | Not scored: needs a business group's position or a study |
 | H.R. 1834 of 2025, the three-year ACA premium tax credit extension | None on file | The AFL-CIO supported it. | Not scored: needs a business group's position or a study |
 
@@ -244,7 +247,7 @@ Each action carries its Rule 1 weight and takes a side as Rule 1 describes, and 
 
 **Example:** a Nay on the American Rescue Plan Act (+75) and on the Inflation Reduction Act (+75) adds 1.5 Profit-leaning points, and a Nay on the One Big Beautiful Bill Act (−100) adds 1 People-leaning point: 1 ÷ 2.5 = 40%, shown as **F (40%)**.
 
-**Where it stands:** 5 people have the 3 scored actions a grade needs: Collins (40%), Marshall (0%), Ossoff, Booker and Hickenlooper (100%). Trump signed two scored bills, both Profit-leaning, one short of a grade. Most House members have 2 scored actions (the One Big Beautiful Bill Act and H.R. 6703).
+**Where it stands:** 7 people have the 3 scored actions a grade needs: Collins (40%), Sullivan (36%), Marshall (0%), and Ossoff, Booker, Hickenlooper and Brown (100%). Collins's and Marshall's votes on the CHIPS amendment are still to be filled from Voteview (`npm run votes:positions`), which will change their grades. Trump signed two scored bills, both Profit-leaning, one short of a grade. Most House members have 2 scored actions (the One Big Beautiful Bill Act and H.R. 6703).
 
 ## Other indicators (not graded)
 
@@ -470,7 +473,7 @@ Each data category below lists its free sources and the parts of the scorecard i
 
 ### Other sources
 
-- Nonpartisan analyses from the Congressional Budget Office, the Joint Committee on Taxation, the Tax Policy Center and the Penn Wharton Budget Model, and the positions of worker and business groups, score Workers > Profit bills (seven on file, five scored).
+- Nonpartisan analyses from the Congressional Budget Office, the Joint Committee on Taxation, the Tax Policy Center and the Penn Wharton Budget Model, and the positions of worker and business groups, score Workers > Profit bills (ten on file, six scored).
 - The project's original research file supplies vote records, statement checks, ethics summaries, and the issue coding of each vote.
 
 ### Do not use (shut down, closing, or not free)
@@ -490,7 +493,7 @@ Some links were built from paths the sites list rather than opened directly (vot
 **Where things stand now:**
 
 - 46 of 59 politicians are "Not graded" on the Promise Score, because most have only 2 or 3 checks. The president is graded from PolitiFact's trackers: **F (43%)**.
-- Seven bills are on file for Workers > Profit and five are scored. Five people have the 3 scored actions a grade needs; everyone else is "Not graded" on that score.
+- Ten bills and amendments are on file for Workers > Profit and six are scored. Seven people have the 3 scored actions a grade needs; everyone else is "Not graded" on that score.
 - The president's Ethics Score is **F (0%)**: 5 confirmed findings and 7 investigations that ended without a finding.
 - The original research file was not independently fact-checked.
 - The ethics tags, open/closed labels, and liberal/conservative key-vote marks were added on top of that file and are judgment calls.
@@ -500,7 +503,7 @@ Some links were built from paths the sites list rather than opened directly (vot
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review every ethics tag and open/closed label
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the liberal/conservative marks on the 16 key bills
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Fact-check the original research file
-- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Add Workers > Profit bills with cited evidence (seven on file, five scored)
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Add Workers > Profit bills with cited evidence (ten on file, six scored)
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Check the MAGA-Meter tally against PolitiFact's live page
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Tag true campaign promises separately from other stated positions
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the committee-sector list (`public/committee-sectors.json`) and the outside-spender sectors assigned from names

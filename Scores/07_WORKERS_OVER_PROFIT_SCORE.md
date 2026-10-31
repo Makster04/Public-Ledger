@@ -14,7 +14,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Worker Backed Index ✊ | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grassroots Index 🌱 | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited evidence | 7 on file, 5 scored. Next: bills where the AFL-CIO's and the Chamber's key votes took opposite sides, and a business group's position on the GENIUS Act and the ACA credit extension. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited evidence | 10 on file, 6 scored. Next: bills where the AFL-CIO's and the Chamber's key votes took opposite sides, and a business group's position on the GENIUS Act and the ACA credit extension. Run `npm run votes:positions` to fill Collins's and Marshall's votes on the CHIPS amendment. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Rename the "People" side to "Workers" | In the charts and tables. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
@@ -29,6 +29,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
   - **Worker side:** the [AFL-CIO](https://aflcio.org/scorecard), [Economic Policy Institute](https://www.epi.org/) and [National Employment Law Project](https://www.nelp.org/).
   - **Business side:** the [U.S. Chamber of Commerce](https://www.uschamber.com/how-they-voted), [NFIB](https://www.nfib.com/) and [National Association of Manufacturers](https://www.nam.org/).
   - **Tax bills, one from each side:** the [Tax Foundation](https://taxfoundation.org/) and [ITEP](https://itep.org/).
+  - **Construction pay, one from each side:** [North America's Building Trades Unions](https://nabtu.org/) and [Associated Builders and Contractors](https://www.abc.org/), on prevailing-wage measures only.
 - **Who lobbied:** unions vs. corporations lobbying on each bill, from [LDA.gov](https://lda.gov/) (`LDA_API_KEY`, optional). Read weekly for each key bill and shown beside its score.
 - **Bill details:**
   - [Congress.gov](https://api.congress.gov/sign-up/) (`CONGRESS_API_KEY`) for subjects, summaries and committee reports.
@@ -44,7 +45,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
   - **One part only:** that part decides. A bill marked from groups' positions alone needs a worker group and a business group on opposite sides.
   - **Shown, not scored:** lobbying (a report says a client lobbied on the bill, not which side it was on), CBO estimates that don't split by income, and the White House's position (it follows the president's party).
   - **Each vote counts the bill's strength:** a Yea on a +75 bill adds 0.75 to the working-people side; a Nay adds 0.75 to the other side.
-- **On file now:** 7 bills, 5 scored. One Big Beautiful Bill Act −100, H.R. 6703 (Lower Health Care Premiums) −100, Tax Cuts and Jobs Act −75, Inflation Reduction Act +75, American Rescue Plan Act +75. The GENIUS Act and the three-year ACA credit extension have only the AFL-CIO's position so far, so they wait for a business group's position or a who-gains study. 5 people now have the 3 scored actions a grade needs.
+- **On file now:** 10 bills and amendments, 6 scored. One Big Beautiful Bill Act −100, H.R. 6703 (Lower Health Care Premiums) −100, the Cornyn amendment to strip prevailing wages from CHIPS-funded construction −100, Tax Cuts and Jobs Act −75, Inflation Reduction Act +75, American Rescue Plan Act +75. The infrastructure law (IIJA) and the CHIPS and Science Act are listed as **Even**: the AFL-CIO and the Chamber both supported them, so they move no grade. The CHIPS amendment vote is scored on its own; no IIJA amendment vote on its wage or labor rules was found. The GENIUS Act and the three-year ACA credit extension have only the AFL-CIO's position so far.
 
 ---
 
