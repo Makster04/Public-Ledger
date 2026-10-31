@@ -3,6 +3,7 @@ import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LAT
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
+import {billFamilies,groupInfo} from './bills.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -353,6 +354,7 @@ function route(){
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
   else if(m[1]==='races'){renderRaces();}
+  else if(m[1]==='bills'){renderBills(m[2]||'all');}
   else if(m[1]==='senate'){renderSenate();}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}
   else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}
@@ -1829,6 +1831,66 @@ function renderRaces(){
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
   $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||Object.assign({chamber:'H'},DATA.liteRaces.find(x=>x.id===e.target.value));const want=r.chamber;const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
+}
+
+// ---------- bills ----------
+// Every bill on file (public/bills.js): the bills behind the saved roll calls and the Workers > Profit bills, split into
+// those that became law and those that haven't (or were reintroduced), each with the groups that took a side on it.
+let billQ='';
+const BILL_SEG=[['all','All'],['law','Became law'],['not','Not passed or reintroduced']];
+const posDate=d=>!d?'':/^\d{4}-\d{2}-\d{2}$/.test(d)?fmtDate(d):/^\d{4}-\d{2}$/.test(d)?monLabel(d):d;
+function billGroupLine(p){
+  const g=groupInfo(DATA,p.group),tags=[];
+  if(g.pac>0)tags.push(`PACs gave ${fmt$(g.pac)} to campaigns here`);
+  if(g.out>0)tags.push(`${fmt$(g.out)} in outside spending here`);
+  if(!g.pac&&!g.out)tags.push(g.pacs?'Has PACs; none gave to campaigns here':'Advocacy group; no PAC on file');
+  const src=p.src?.u?` <a href="${esc(p.src.u)}" target="_blank" rel="noopener" title="${esc(p.src.t||'Source')}">Source ↗</a>`:'';
+  return `<li><b${g.about?` data-tip="${esc(`${g.org}: ${g.about}`)}" class="org"`:''}>${esc(g.org)}</b> ${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join(' ')}<div class="small muted">${esc(p.why||'')}${p.date?` (${esc(posDate(p.date))})`:''}${src}</div></li>`;
+}
+function billCard(e){
+  const u=billUrl(e.id),nums=e.keys.map(billLabel);
+  const sup=e.positions.filter(p=>p.pos==='support'),opp=e.positions.filter(p=>p.pos==='oppose');
+  const here=[...new Set((e.work?.cosponsors||[]).map(c=>c.person))].filter(id=>byId[id]).map(id=>`<a href="#${id}-pvp">${esc(byId[id].short||byId[id].name)}</a>`);
+  const statusSrc=e.statusSrc?` <a href="${esc(e.statusSrc.u)}" target="_blank" rel="noopener" title="${esc(e.statusSrc.t)}">Source ↗</a>`:'';
+  const status=e.status==='law'?`<b class="gr-A">Became law</b>: ${esc(e.law)}, signed ${fmtDate(e.date)}.${statusSrc}`:`<b>${e.reintroduced?'Not passed; reintroduced':'Not passed'}</b>: ${esc(e.stage)}${statusSrc}`;
+  const tally=v=>{const c={};for(const x of Object.values(v.pos||{}))if(/^(Yea|Nay|Aye|No)$/.test(x))c[x==='Aye'?'Yea':x==='No'?'Nay':x]=(c[x==='Aye'?'Yea':x==='No'?'Nay':x]||0)+1;return c.Yea||c.Nay?` · people on this site: ${c.Yea||0} yes, ${c.Nay||0} no`:'';};
+  const votes=e.votes.map(v=>`<li>${esc(v.chamber)}, ${fmtDate(v.date)}: ${esc(v.question||v.bill?.voteQuestion||'Vote')}, <b>${esc(v.result)}</b> <a href="${esc(voteUrl(v))}" target="_blank" rel="noopener">Roll call ↗</a><span class="muted">${tally(v)}</span></li>`)
+    .concat((e.steps||[]).map(x=>`<li>${esc(x.text)}${x.src?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener" title="${esc(x.src.t)}">Source ↗</a>`:''}</li>`));
+  return `<article class="card bill-card" id="bill-${esc(e.id)}">
+    <div class="bill-head"><h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}</h3>${e.area?`<span class="tag">${esc(e.area)}</span>`:''}${e.work?`<span class="tag" title="Workers > Profit bill score">Workers > Profit: ${e.work.status==='scored'?signed(e.work.score):'not scored'}</span>`:''}</div>
+    <div class="small muted">${nums.map(esc).join(' · ')}</div>
+    <p class="small" style="margin:8px 0 0">${status}</p>
+    ${e.summary?`<p class="small" style="margin:6px 0 0">${esc(e.summary)}${e.summarySrc?.u?` <a href="${esc(e.summarySrc.u)}" target="_blank" rel="noopener" title="${esc(e.summarySrc.t||'')}">Source ↗</a>`:''}</p>`:''}
+    ${e.note?`<p class="small muted" style="margin:6px 0 0">${esc(e.note)}</p>`:''}
+    <div class="bill-sides">
+      <div><h4 class="gr-A">Supported it (${sup.length})</h4>${sup.length?`<ul class="list small">${sup.map(billGroupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
+      <div><h4 class="gr-F">Opposed it (${opp.length})</h4>${opp.length?`<ul class="list small">${opp.map(billGroupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
+    </div>
+    ${votes.length?`<details class="small" style="margin-top:8px"><summary>Votes (${votes.length})</summary><ul class="list">${votes.join('')}</ul></details>`:''}
+    ${here.length?`<p class="small" style="margin:6px 0 0"><b>Sponsors and cosponsors on this site:</b> ${here.join(', ')}</p>`:''}
+    <div class="small" style="margin-top:6px" data-lob="${esc(e.id)}"></div>
+  </article>`;
+}
+function renderBills(seg){
+  if(!BILL_SEG.some(([k])=>k===seg))seg='all';
+  const F=billFamilies(DATA,PVP_BILLS),law=F.filter(e=>e.status==='law'),not=F.filter(e=>e.status!=='law');
+  const groups=new Set(F.flatMap(e=>e.positions.map(p=>p.group)));
+  app.innerHTML=`<section class="hero" style="padding-bottom:10px"><div class="asof">${F.length} bills · ${law.length} became law · ${not.length} not passed or reintroduced</div><h1 style="margin-top:8px">Bills</h1>
+    <p class="lede">Every bill collected so far: the bills behind the saved roll calls and the bills scored for Workers > Profit, with the groups that supported or opposed each one.</p>
+    ${points([['Supported and opposed','Positions from the groups\' own scorecards, key-vote letters and statements, each with its source: '+groups.size+' groups so far, including Heritage Action, the ACLU, the League of Conservation Voters and the Human Rights Campaign.'],['Money','Beside each group, what its PACs gave to the campaigns on this site and what it spent on outside ads, from FEC records. A group with no PAC lobbies but gives no campaign money tracked here.'],['Versions','A bill reintroduced in a later Congress, or its Senate companion, is listed once with all its numbers.'],['Not graded here','This page lists bills. Grades count votes and sponsorships on them as described in the <a href="#method">methodology</a>.']])}
+    <div class="toolbar"><div class="seg" id="bill-seg">${BILL_SEG.map(([k,l])=>`<button data-k="${k}" class="${k===seg?'active':''}">${esc(l)} (${k==='all'?F.length:k==='law'?law.length:not.length})</button>`).join('')}</div>
+    <div class="search"><input id="bill-q" type="search" placeholder="Search by name, number, topic or group" aria-label="Search bills" value="${esc(billQ)}"></div></div></section>
+    <section class="section" style="padding-top:6px" id="bill-list"></section>`;
+  const text=e=>[e.title,...e.keys.map(billLabel),e.area,e.summary,...e.positions.map(p=>groupInfo(DATA,p.group).org)].join(' ').toLowerCase();
+  const draw=()=>{
+    const q=billQ.trim().toLowerCase(),hit=e=>!q||text(e).includes(q);
+    const part=(title,sub,list)=>{const L=list.filter(hit);return `<h2 style="margin-top:14px">${esc(title)} <span class="muted small">(${L.length})</span></h2><p class="small muted" style="margin:2px 0 10px">${sub}</p>${L.length?`<div class="bill-grid">${L.map(billCard).join('')}</div>`:'<p class="small muted">None match the search.</p>'}`;};
+    $('#bill-list').innerHTML=(seg!=='not'?part('Became law','Signed into law. Newest first.',law):'')+(seg!=='law'?part('Not passed yet, or reintroduced','Passed one chamber, fell short, or never got a vote. Bills reintroduced in later Congresses are marked. Newest action first.',not):'');
+    mountBillLobbying($('#bill-list'));bindTips(app);hoverTips(app);
+  };
+  draw();
+  $('#bill-seg').addEventListener('click',ev=>{const b=ev.target.closest('button');if(b)location.hash='#bills'+(b.dataset.k==='all'?'':'-'+b.dataset.k);});
+  $('#bill-q').addEventListener('input',ev=>{billQ=ev.target.value;draw();});
 }
 
 // ---------- compare ----------
