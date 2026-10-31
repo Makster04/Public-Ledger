@@ -115,7 +115,7 @@ export async function buildIds([current,historical,social,committees,membership]
     p.campaignSite=s.office?null:s.cand?(s.site||null):(p.campaignSite||null);
     p.openstates=p.openstates||null;p.legiscan=p.legiscan||null;
   }
-  // Key bills for the bill-detail job: the bills behind the selected votes and the bills marked People or Profit.
+  // Key bills for the bill-detail job: the bills behind the selected votes and the Workers > Profit bills.
   const {billKeyFromText}=await import('../public/grades.js');
   config.keyBills=[...new Set([...research.votes,...research.hvotes].map(v=>billKeyFromText(v.bill?.measure)).concat((research.bills||[]).map(b=>b.id)).filter(k=>k&&Number(k.split('-')[0])>=93))].sort();
   const out=buildCommittees(committees,membership,curMatched,config.congress);

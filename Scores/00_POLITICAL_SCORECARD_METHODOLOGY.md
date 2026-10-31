@@ -196,18 +196,35 @@ From reviewed Periodic Transaction Reports, which members of Congress file under
 
 The Workers > Profit Score measures whether a politician's legislative actions work for lower- and middle-income households or for the wealthy and corporations. A higher percentage means more of their record works for the people: an **A** means they work for the people, and an **F** means they work for the wealthy and corporations.
 
-### Step 1: Classify each bill
+### Step 1: Score each bill
 
-Bills in the areas listed in Step 2 are in scope. A bill counts **only if** a nonpartisan analysis of who gains is cited for it, from the Congressional Budget Office, the Joint Committee on Taxation, or the Tax Policy Center. That analysis marks the bill **People** or **Profit**, recorded with a short written reason. A bill whose analysis shows no clear winner is left out.
+Bills in the areas listed in Step 2 are in scope. Each bill is scored from **−100 (fully corporate-backed)** to **+100 (fully worker-backed)**, from two equal parts, and stored once per bill so it applies to everyone who acted on it.
 
-A tax bill counts as benefiting the wealthy when independent analysis shows 80% or more of its benefits go to the highest-income households and large corporations.
+- **Who gains (50%):** a cited nonpartisan analysis from the Congressional Budget Office, the Joint Committee on Taxation, the Tax Policy Center or the Penn Wharton Budget Model, placed on one of five steps:
+  - **+100:** lower-income households come out ahead while the top pays more.
+  - **+50:** it tilts toward lower-income households: they gain more, or pay less, as a share of income than the top.
+  - **0:** about even across incomes.
+  - **−50:** it tilts toward the top: it gains more, as a share of income, than lower-income households.
+  - **−100:** lower-income households lose while the top gains.
+- **Who took a side (50%):** each worker group (the AFL-CIO, the Economic Policy Institute, the National Employment Law Project) that supports a bill counts +100, and each that opposes it −100. Business groups (the U.S. Chamber of Commerce, NFIB, the National Association of Manufacturers) count the other way, so a business group opposing a bill counts toward workers. On tax bills, ITEP counts with the worker groups and the Tax Foundation with the business groups. On construction-pay (prevailing-wage) measures, North America's Building Trades Unions and Associated Builders and Contractors do the same. Each side's groups are averaged first, then the two sides, so a side with more groups on file doesn't outweigh the other. If both sides support a bill, it lands near 0.
+- **When they disagree:** if the two parts point opposite ways, the bill is **Disputed**. It's shown, but not scored.
+- **One part only:** that part decides. A bill marked from groups' positions alone needs a worker group and a business group on opposite sides.
+- **Shown, not scored:** lobbying reports that name the bill (LDA.gov), split into unions and other clients, because a report doesn't say which side the client was on; CBO estimates that don't split by income; and the White House's position, which follows the president's party.
 
-Each mark is stored once per bill and applies to everyone who acted on that bill. Two bills are marked so far, both **Profit**:
+Ten bills and amendments are on file, and six are scored:
 
-| Bill | Analysis | Why |
-| --- | --- | --- |
-| H.R. 1 of 2025, the One Big Beautiful Bill Act (Public Law 119-21) | CBO, *Distributional Effects of Public Law 119-21* (August 2025) | Households in the bottom tenth of the income distribution lose about $1,200 a year (3.1% of income), mainly through Medicaid and SNAP cuts, while the top tenth gain about $13,600 a year, mainly through lower taxes. A loss at the bottom, so the 80% test is not needed. |
-| H.R. 1 of 2017, the Tax Cuts and Jobs Act (Public Law 115-97) | Tax Policy Center, *Distributional Analysis of the Conference Agreement for the Tax Cuts and Jobs Act* (December 2017) | By 2027, after most individual provisions expire, the top 1% receive 83% of the total benefit. |
+| Bill | Who gains | Who took a side | Score |
+| --- | --- | --- | --- |
+| H.R. 1 of 2025, the One Big Beautiful Bill Act (Public Law 119-21) | −100. CBO, *Distributional Effects of Public Law 119-21* (August 2025): the bottom tenth lose about $1,200 a year (3.1% of income), mainly through Medicaid and SNAP cuts, while the top tenth gain about $13,600 a year. | −100. The AFL-CIO opposed it; the Chamber and NFIB supported it. | **−100** |
+| H.R. 6703 of 2025, the Lower Health Care Premiums for All Americans Act | No study by income. (CBO: premiums 11% lower, about 100,000 fewer insured.) | −100. The AFL-CIO opposed it; NFIB supported it. | **−100** |
+| S.Amdt. 1858 of 2021, the Cornyn amendment to S. 1260 (the bill whose CHIPS for America funding became the CHIPS and Science Act) | None on file. It would have removed prevailing wages from CHIPS-funded construction. | −100. North America's Building Trades Unions opposed it; Associated Builders and Contractors supported it. Senate roll call 223, rejected 42–58. | **−100** |
+| H.R. 1 of 2017, the Tax Cuts and Jobs Act (Public Law 115-97) | −50. Tax Policy Center (December 2017): the largest cuts as a share of income go to households making about $308,000 to $733,000, and by 2027 the top 1% receive 83% of the benefit. | −100. The AFL-CIO opposed it; the Chamber, NAM and NFIB supported it. | **−75** |
+| H.R. 5376 of 2022, the Inflation Reduction Act (Public Law 117-169) | +50. Tax Policy Center (August 2022): the tax changes fall mainly on the top 1%, with the lowest fifth about unchanged. | +100. The AFL-CIO supported it; the Chamber and NAM opposed it. | **+75** |
+| H.R. 1319 of 2021, the American Rescue Plan Act (Public Law 117-2) | +50. Tax Policy Center (March 2021): households making $91,000 or less get nearly 70% of the tax benefits. | +100. The AFL-CIO supported it. | **+75** |
+| H.R. 3684 of 2021, the Infrastructure Investment and Jobs Act (Public Law 117-58) | None on file (CBO's estimate gives the cost, not who gains by income) | 0. The AFL-CIO and the Chamber both supported it. No Senate amendment vote on its wage or labor rules was found. | **Even**, not scored |
+| H.R. 4346 of 2022, the CHIPS and Science Act (Public Law 117-167) | None on file | 0. The AFL-CIO and the Chamber both supported it. Its amendment vote is scored on its own (above). | **Even**, not scored |
+| S. 1582 of 2025, the GENIUS Act | None on file | The AFL-CIO opposed it. | Not scored: needs a business group's position or a study |
+| H.R. 1834 of 2025, the three-year ACA premium tax credit extension | None on file | The AFL-CIO supported it. | Not scored: needs a business group's position or a study |
 
 ### Step 2: Score each action
 
@@ -220,7 +237,7 @@ Each mark is stored once per bill and applies to everyone who acted on that bill
 | Cost of essentials | Votes for bills that lower prescription drug, healthcare, and education costs | Votes against those bills; votes for bills that raise those costs |
 | Regulation | Votes to keep or strengthen financial, worker, and consumer protections | Votes to dismantle key financial regulations or other worker and consumer protections |
 
-Each action carries its Rule 1 weight and takes a side as Rule 1 describes. For a president, the actions are bills signed or vetoed and executive orders: signing a marked bill or issuing a marked order counts for its side, and a veto for the other side. An executive order can be marked like a bill, from a cited analysis of who gains.
+Each action carries its Rule 1 weight and takes a side as Rule 1 describes, and counts its bill's strength (the score ÷ 100): a Yea on a +75 bill adds 0.75 to the People side, and a Nay adds 0.75 to the Profit side. For a president, the actions are bills signed or vetoed and executive orders: signing a marked bill or issuing a marked order counts for its side, and a veto for the other side. An executive order can be marked like a bill, from a cited analysis of who gains.
 
 ### Step 3: Calculate
 
@@ -228,9 +245,9 @@ Each action carries its Rule 1 weight and takes a side as Rule 1 describes. For 
 \text{Workers > Profit} = \frac{\text{People-leaning points}}{\text{People-leaning points} + \text{Profit-leaning points}} \times 100
 ```
 
-**Example:** 12 People-leaning points and 8 Profit-leaning points give 12 ÷ 20 = 60%, shown as **D (60%)**.
+**Example:** a Nay on the American Rescue Plan Act (+75) and on the Inflation Reduction Act (+75) adds 1.5 Profit-leaning points, and a Nay on the One Big Beautiful Bill Act (−100) adds 1 People-leaning point: 1 ÷ 2.5 = 40%, shown as **F (40%)**.
 
-**Where it stands:** Trump signed both marked bills, which gives Trump 2 Profit-leaning actions, one short of the 3 a grade needs. 24 members of Congress have 1 scored action each, from their vote on H.R. 1 of 2025 (a Nay counts as People-leaning, a Yea as Profit-leaning). Everyone is still "Not graded" on this score.
+**Where it stands:** 7 people have the 3 scored actions a grade needs: Collins (40%), Sullivan (36%), Marshall (0%), and Ossoff, Booker, Hickenlooper and Brown (100%). Collins's and Marshall's votes on the CHIPS amendment are still to be filled from Voteview (`npm run votes:positions`), which will change their grades. Trump signed two scored bills, both Profit-leaning, one short of a grade. Most House members have 2 scored actions (the One Big Beautiful Bill Act and H.R. 6703).
 
 ## Other indicators (not graded)
 
@@ -325,7 +342,7 @@ Outside spending is shown as a plain number, not a grade. The politician cannot 
 Scores are refreshed once a month, matching the monthly donation data.
 
 1. Collect everything new since the last update: votes, sponsorships, floor speeches, campaign statements, ethics case changes, stock trade disclosures, donation filings, and, for the president, PolitiFact's latest tracker tallies and new bills signed or vetoed.
-2. Mark new bills People or Profit from a cited nonpartisan analysis, and record the reason.
+2. Add new Workers > Profit bills with their cited evidence (who gains, and each group's position), and record the reasons.
 3. Match new actions to existing promises, and replace earlier statements with votes where Rule 1 applies.
 4. Apply the weights and recalculate all four scores.
 5. Rerun the Money & Influence flags with the new month's donations.
@@ -456,7 +473,7 @@ Each data category below lists its free sources and the parts of the scorecard i
 
 ### Other sources
 
-- Nonpartisan analyses from the Congressional Budget Office, the Joint Committee on Taxation, and the Tax Policy Center mark Workers > Profit bills (two so far, from CBO and the Tax Policy Center).
+- Nonpartisan analyses from the Congressional Budget Office, the Joint Committee on Taxation, the Tax Policy Center and the Penn Wharton Budget Model, and the positions of worker and business groups, score Workers > Profit bills (ten on file, six scored).
 - The project's original research file supplies vote records, statement checks, ethics summaries, and the issue coding of each vote.
 
 ### Do not use (shut down, closing, or not free)
@@ -476,7 +493,7 @@ Some links were built from paths the sites list rather than opened directly (vot
 **Where things stand now:**
 
 - 46 of 59 politicians are "Not graded" on the Promise Score, because most have only 2 or 3 checks. The president is graded from PolitiFact's trackers: **F (43%)**.
-- Two bills are marked for Workers > Profit (H.R. 1 of 2025 and the 2017 Tax Cuts and Jobs Act), but no one has the 3 scored actions a grade needs yet, so everyone is still "Not graded" on that score.
+- Ten bills and amendments are on file for Workers > Profit and six are scored. Seven people have the 3 scored actions a grade needs; everyone else is "Not graded" on that score.
 - The president's Ethics Score is **F (0%)**: 5 confirmed findings and 7 investigations that ended without a finding.
 - The original research file was not independently fact-checked.
 - The ethics tags, open/closed labels, and liberal/conservative key-vote marks were added on top of that file and are judgment calls.
@@ -486,7 +503,7 @@ Some links were built from paths the sites list rather than opened directly (vot
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review every ethics tag and open/closed label
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the liberal/conservative marks on the 16 key bills
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Fact-check the original research file
-- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Add Workers > Profit bills with cited analyses (two added so far)
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Add Workers > Profit bills with cited evidence (ten on file, six scored)
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Check the MAGA-Meter tally against PolitiFact's live page
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Tag true campaign promises separately from other stated positions
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> Review the committee-sector list (`public/committee-sectors.json`) and the outside-spender sectors assigned from names
@@ -504,7 +521,7 @@ These values are placeholders or interpretations of the original notes. Confirm 
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Half credit in the Promise Score:** partly supported and changed position both earn ½. Raise partial credit (for example to 0.75) if a compromise should count closer to a kept promise.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Finding severity:** cases are now weighted by kind in the Legal Trouble Index (criminal × 1.5, ethics or civil × 1, technical × 0.5). The multipliers themselves are confirmed under **Ethics index weights**.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Transparency:** late or missing trade reports and late annual disclosures now count, through the Stock Disclosure Dodger Index.
-- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **The 80% rule:** read here as "a tax bill favors the wealthy if 80% or more of its benefit goes to them." If it meant "votes for such bills 80% or more of the time," this rule changes. Also define "wealthy" (top 1%, top 10%, or another cut-off).
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **The 80% rule:** replaced by the five who-gains steps (Step 1 of Workers > Profit), which compare lower-income households with the top instead of using one cut-off.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **People-leaning list:** the original notes repeated the Profit items under "People," so the People column was written as their mirror image. Add anything missing.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Which votes count:** final-passage votes only, or also amendments and procedural motions? When a bill has more than one recorded vote (H.R. 1 of 2025 has the House's May passage and its July final vote), the app counts the first one listed. No profiled member voted differently on the two, but the final vote should probably win.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade.
@@ -517,7 +534,7 @@ These values are placeholders or interpretations of the original notes. Confirm 
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Court records:** CourtListener's free account allows only about 125 requests a day. Decide whether checking the profiled politicians weekly fits that, or whether a membership is needed.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Ethics leads:** court records, FEC enforcement records, DOJ press releases, and news only point to possible cases. Decide who confirms a case's status from an official record before it is scored.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **The president's promises:** graded from PolitiFact's trackers, with both terms counted together (the Trump-O-Meter and the MAGA-Meter).
-- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Shared bill marks:** a People or Profit mark applies to everyone who acted on the bill, so a president's signature and members' votes on the same bill are scored from the same mark.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Shared bill scores:** a bill's score applies to everyone who acted on it, so a president's signature and members' votes on the same bill are scored the same way.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Agency estimates:** decide whether a government agency's own estimate (for example the CFPB's estimate of what its overdraft-fee rule saved consumers) can mark a bill, or only the CBO, the Joint Committee on Taxation and the Tax Policy Center. The repeal of that rule, which Trump signed in 2025, would be the next mark.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Tariffs:** analyses find the 2025 tariffs cost lower-income households the most as a share of income, but show no group that gains. Decide whether a policy like that can be marked.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **The president's trades:** now listed, from Disclosed Capitol's dataset of the OGE reports, but not scored. Decide what replaces the committee-conflict rule for a president (for example, trades in companies or industries the president's own executive orders or signed bills directly affected), or whether conflicts are left out, and whether 278-T reports filed more than 45 days after a trade count in the Stock Disclosure Dodger Index.

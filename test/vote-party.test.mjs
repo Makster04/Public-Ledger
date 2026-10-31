@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {voteArgs,savedVotes,csvRows,resultCounts,totalsAgree,voteviewParty} from '../scripts/build-vote-party.mjs';
 import {voteURL} from '../src/sources.mjs';
+import {votePositions} from '../scripts/fill-vote-positions.mjs';
 
 test('each saved vote maps to its official roll-call file',()=>{
   assert.deepEqual(voteArgs({id:'119-1-372'},'S'),{chamber:'S',congress:119,session:1,number:372});
@@ -42,4 +43,19 @@ test('Voteview rows give party totals by the official session and roll number, a
   assert.equal(out.problems['119-2-7'],'not in Voteview yet');
   const late=voteviewParty({rollcalls,members,votes},[w('119-2-5',{date:'2026-02-20'})]);
   assert.match(late.problems['119-2-5'],/dates it/,'a different day means a different vote');
+});
+
+test('senators\' positions from Voteview fill only the missing ones, by Bioguide ID, and a listed one that differs is reported',()=>{
+  // Made-up rows in Voteview's layout.
+  const rollcalls=[{congress:'117',chamber:'Senate',rollnumber:'210',date:'2021-06-08',session:'1',clerk_rollnumber:'223'}];
+  const members=[['1','C001035'],['2','M001198'],['3','S001198']].map(([icpsr,bioguide_id])=>({congress:'117',chamber:'Senate',icpsr,bioguide_id,party_code:'200'}));
+  const votes=[['1','6'],['2','1'],['3','1']].map(([icpsr,cast_code])=>({congress:'117',chamber:'Senate',rollnumber:'210',icpsr,cast_code}));
+  const tracked=[{id:'collins',bioguide:'C001035'},{id:'marshall',bioguide:'M001198'},{id:'sullivan',bioguide:'S001198'},{id:'ricketts',bioguide:'R000618'}];
+  const saved=[{id:'117-1-223',congress:117,session:1,number:223,date:'2021-06-08',pos:{sullivan:'Nay',ricketts:'Not in office'}},{id:'117-1-999',congress:117,session:1,number:999,pos:{}}];
+  const r=votePositions({rollcalls,members,votes},saved,tracked);
+  assert.deepEqual(r.fill,{'117-1-223':{collins:'Nay',marshall:'Yea'}},'only the missing senators, and never a listed one');
+  assert.deepEqual(r.differ,[{vote:'117-1-223',person:'sullivan',research:'Nay',voteview:'Yea'}]);
+  assert.equal(r.unread['117-1-999'],'not in Voteview yet');
+  const r2=votePositions({rollcalls,members,votes},[{...saved[0],pos:{}}],[{id:'ricketts',bioguide:'R000618'}]);
+  assert.deepEqual(r2.fill,{'117-1-223':{ricketts:'Not in office'}},'not a senator in that Congress');
 });

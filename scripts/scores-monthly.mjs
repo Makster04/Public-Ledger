@@ -24,7 +24,8 @@ export function personScores(s,scorer,history){
   return {
     promises:{pct:p.pct,kept:p.kept,half:p.half,broken:p.broken,counted:p.clear},
     ethics:{pct:e.pct,finding:e.finding,open:e.open,closed:e.closed,allegation:e.allegation,late:e.late,conflict:e.conflict,legal:e.legal.index,insider:e.insider.index,dodger:e.dodger.index},
-    pvp:{pct:v.pct,people:v.people,profit:v.profit,actions:v.n},
+    // Counts of actions on each side (each one is weighted by its bill's strength in the grade itself).
+    pvp:{pct:v.pct,people:v.nPeople,profit:v.nProfit,actions:v.n},
     flags,
   };
 }

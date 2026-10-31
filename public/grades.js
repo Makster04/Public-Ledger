@@ -22,14 +22,15 @@ export const ACTION_TYPES=new Set(['senate_vote','house_vote','vote','state_vote
 export function letter(pct){return pct>=90?'A':pct>=80?'B':pct>=70?'C':pct>=60?'D':'F';}
 
 // One ID per bill, so a vote and a sponsorship on the same bill can be matched: "H.R. 1319 (117th Congress)" -> "117-hr-1319".
-const BILL_TYPES=new Set(['HR','S','HJRES','SJRES','HCONRES','SCONRES','HRES','SRES']);
+// Amendments (SAMDT, HAMDT) are keyed like bills ("117-samdt-1858"), so a vote on one is scored on its own, not as the bill.
+const BILL_TYPES=new Set(['HR','S','HJRES','SJRES','HCONRES','SCONRES','HRES','SRES','SAMDT','HAMDT']);
 export function billKey(congress,measure){
   const m=String(measure||'').toUpperCase().replace(/[.\s]/g,'').match(/^([A-Z]+)(\d+)$/);
   if(!m||!BILL_TYPES.has(m[1])||!(+congress>0))return null;
   return `${+congress}-${m[1].toLowerCase()}-${+m[2]}`;
 }
 export function billKeyFromText(text){
-  const m=String(text||'').match(/^((?:H|S)\.?\s?(?:J\.?\s?Res|Con\.?\s?Res|Res|R)?\.?)\s*(\d+)\s*\((\d+)(?:st|nd|rd|th) Congress\)/i);
+  const m=String(text||'').match(/^((?:H|S)\.?\s?(?:J\.?\s?Res|Con\.?\s?Res|Res|R|Amdt)?\.?)\s*(\d+)\s*\((\d+)(?:st|nd|rd|th) Congress\)/i);
   return m?billKey(m[3],m[1]+m[2]):null;
 }
 const isVote=t=>/vote$/.test(t||'')||t==='vote';
@@ -171,30 +172,79 @@ export function ethicsScore(ethics,trading={},{asOfYear=null}={}){
     late:rows.filter(r=>r.late).length,conflict:rows.filter(r=>r.conflict).length};
 }
 
-// Workers > Profit: actions on bills marked People or Profit by a cited nonpartisan analysis of who gains.
-// actions: [{bill, kind: 'vote'|'sponsored'|'cosponsored', pos?, mark: 'people'|'profit'}]. A Yea or a sponsorship takes the
-// bill's side, a Nay the other; missed votes count for nothing; one credit per bill (the vote wins). Each counts 1.0.
+// ---------- Workers > Profit bill scores ----------
+// Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts:
+//   Who gains (50%): a cited nonpartisan analysis (CBO, JCT, the Tax Policy Center or the Penn Wharton Budget Model),
+//     placed on one of five steps by a fixed rule (GAINS_STEPS).
+//   Who took a side (50%): each worker group that supports the bill counts +100 and each that opposes it −100; business
+//     groups count the other way (a business group opposing a bill counts toward workers). Each side's groups are averaged,
+//     then the two sides are averaged, so a side with more groups on file doesn't outweigh the other. When both sides
+//     support a bill it lands near 0.
+// Both parts present: their average, unless they point opposite ways; then the bill is "Disputed", shown but not scored.
+// One part only: that part decides. A bill marked from groups' positions alone needs a worker group and a business group
+// on opposite sides. Lobbying reports and the White House's position are shown with the bill but never scored: a
+// lobbying report doesn't say which side the client was on, and the White House follows the president's party.
+export const BILL_GROUPS={
+  aflcio:{org:'AFL-CIO',side:'worker'},epi:{org:'Economic Policy Institute',side:'worker'},nelp:{org:'National Employment Law Project',side:'worker'},
+  itep:{org:'Institute on Taxation and Economic Policy (ITEP)',side:'worker',tax:true},
+  chamber:{org:'U.S. Chamber of Commerce',side:'business'},nfib:{org:'NFIB',side:'business'},nam:{org:'National Association of Manufacturers',side:'business'},
+  taxfoundation:{org:'Tax Foundation',side:'business',tax:true},
+  // Construction pay and prevailing-wage measures (bills marked "construction"), one from each side.
+  nabtu:{org:"North America's Building Trades Unions",side:'worker',construction:true},abc:{org:'Associated Builders and Contractors',side:'business',construction:true}};
+export const GAINS_STEPS={
+  '100':'Lower-income households come out ahead while the top pays more',
+  '50':'Tilts toward lower-income households: they gain more, or pay less, as a share of income than the top',
+  '0':'About even across incomes',
+  '-50':'Tilts toward the top: it gains more, as a share of income, than lower-income households',
+  '-100':'Lower-income households lose while the top gains'};
+const SIDE_SIGN={worker:1,business:-1};
+export function billScore(b){
+  const step=b?.gains?.step,gains=[100,50,0,-50,-100].includes(step)?step:null;
+  const stance=side=>{const ps=(b?.sides||[]).filter(p=>BILL_GROUPS[p.group]?.side===side&&(p.pos==='support'||p.pos==='oppose')&&(!BILL_GROUPS[p.group].tax||b.tax)&&(!BILL_GROUPS[p.group].construction||b.construction));
+    return ps.length?ps.reduce((t,p)=>t+(p.pos==='support'?100:-100)*SIDE_SIGN[side],0)/ps.length:null;};
+  const worker=stance('worker'),business=stance('business'),both=[worker,business].filter(v=>v!=null);
+  const sides=both.length?both.reduce((t,v)=>t+v,0)/both.length:null;
+  let score=null,status;
+  if(gains!=null&&sides!=null){if(gains*sides<0)status='disputed';else score=Math.round((gains+sides)/2);}
+  else if(gains!=null)score=gains;
+  else if(sides!=null){if(worker!=null&&business!=null)score=Math.round(sides);else status='one-side';}
+  else status='none';
+  if(score===0)status='even';else if(score!=null)status='scored';
+  // gainsPart and sidesPart: the two halves, each from −100 to +100 (null when missing).
+  return {score,gainsPart:gains,sidesPart:sides==null?null:Math.round(sides),worker,business,status,
+    side:status==='scored'?(score>0?'people':'profit'):null,weight:status==='scored'?Math.abs(score)/100:0};
+}
+// Why a bill isn't scored, in a few words.
+export const BILL_STATUS={disputed:'Disputed: who gains and who took a side point opposite ways',even:'Even: no clear side',
+  'one-side':'Needs a position from the other side, or a who-gains study',none:'No evidence on file yet'};
+
+// Workers > Profit: actions on scored bills. actions: [{bill, kind: 'vote'|'sponsored'|'cosponsored'|..., pos?, mark:
+// 'people'|'profit', weight}]. A Yea or a sponsorship takes the bill's side, a Nay the other; missed votes count for
+// nothing; one credit per bill (the vote wins). Each action counts the bill's strength (its score ÷ 100), so a Yea on a
+// +60 bill adds 0.6 to the working-people side and a Nay adds 0.6 to the other side.
+const pts2=n=>Math.round(n*100)/100;
 export function pvpScore(actions){
-  let people=0,profit=0;const scored=[];
-  for(const a of oneCreditPerBill((actions||[]).filter(a=>a.mark==='people'||a.mark==='profit'))){
+  let people=0,profit=0,nPeople=0,nProfit=0;const scored=[];
+  for(const a of oneCreditPerBill((actions||[]).filter(a=>(a.mark==='people'||a.mark==='profit')&&a.weight>0))){
     let took;
     if(a.kind==='vote'){if(a.pos!=='Yea'&&a.pos!=='Nay')continue;took=a.pos==='Yea'?a.mark:(a.mark==='people'?'profit':'people');}
     // A president's veto takes the other side of the bill, like a Nay; signing a bill or issuing an order takes its side.
     else if(a.kind==='vetoed')took=a.mark==='people'?'profit':'people';
     else took=a.mark;
-    if(took==='people')people+=WEIGHT.action;else profit+=WEIGHT.action;
-    scored.push(Object.assign({},a,{took}));
+    const w=a.weight*WEIGHT.action;
+    if(took==='people'){people+=w;nPeople++;}else{profit+=w;nProfit++;}
+    scored.push(Object.assign({},a,{took,points:pts2(w)}));
   }
   const n=scored.length;
-  return {pct:n>=MIN_PVP_ACTIONS?Math.round(people/(people+profit)*100):null,people,profit,n,scored};
+  return {pct:n>=MIN_PVP_ACTIONS?Math.round(people/(people+profit)*100):null,people:pts2(people),profit:pts2(profit),nPeople,nProfit,n,scored};
 }
-// The actions one person took on marked bills: their recorded votes, and the bills they sponsored or cosponsored (or, for
-// a president, signed or vetoed, and executive orders, keyed "eo-14251").
-// marks: Map billKey -> {pvp}; votes: [{bill, pos}]; sponsorships: [{bill, kind}].
+// The actions one person took on scored bills: their recorded votes, and the bills they sponsored or cosponsored (or,
+// for a president, signed or vetoed, and executive orders, keyed "eo-14251").
+// marks: Map billKey -> bill with its billScore ({side, weight, ...}); votes: [{bill, pos}]; sponsorships: [{bill, kind}].
 export function pvpActions(marks,votes,sponsorships){
-  const out=[];
-  for(const v of votes||[]){const m=v.bill&&marks.get(v.bill);if(m)out.push({bill:v.bill,kind:'vote',pos:v.pos,mark:m.pvp,ref:v.ref});}
-  for(const sp of sponsorships||[]){const m=sp.bill&&marks.get(sp.bill);if(m)out.push({bill:sp.bill,kind:sp.kind||'sponsored',mark:m.pvp,ref:sp.ref});}
+  const out=[],mk=(bill,m)=>({bill,mark:m.side,weight:m.weight,score:m.score});
+  for(const v of votes||[]){const m=v.bill&&marks.get(v.bill);if(m)out.push({...mk(v.bill,m),kind:'vote',pos:v.pos,ref:v.ref});}
+  for(const sp of sponsorships||[]){const m=sp.bill&&marks.get(sp.bill);if(m)out.push({...mk(sp.bill,m),kind:sp.kind||'sponsored',ref:sp.ref});}
   return out;
 }
 
