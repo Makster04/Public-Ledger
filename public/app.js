@@ -714,7 +714,7 @@ async function fillBasic(root=document){
 }
 // The records each tab adds from the daily refresh (public/live.js), the same groups the full profiles' tabs show.
 const BASIC_LIVE={match:['legislation','cosponsored','crs','committees','votes'],promises:['crec-day','hearings','statements','factcheck','news'],
-  ethics:['trades','legal'],pvp:['donorOrgs'],finance:['campaign','pac','outside','donorOrgs','outside-groups']};
+  ethics:['trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){
   if(!PANES[tab]||tab==='sources')tab='overview';
@@ -1067,7 +1067,7 @@ function paneFinance(s,pane){
   mountPacSectors(s);pacTable(s,$('#pachost'));
   ieItems(s,$('#iehost'));
   mountAnalysis(s);hoverTips(pane);
-  window.RecordLive.profile(s,$('#live-records'),['campaign','pac','outside','donorOrgs','outside-groups']);
+  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']);
   pane.querySelectorAll('.jump a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
   bindTips(pane);
 }
@@ -1082,7 +1082,7 @@ function paneFinanceOffice(s,pane){
   ${analysisBlock(s)}
   <section id="live-records" style="margin-top:28px"></section>`;
   mountAnalysis(s);hoverTips(pane);
-  window.RecordLive.profile(s,$('#live-records'),['campaign','pac','outside','donorOrgs','outside-groups']);
+  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']);
   bindTips(pane);
 }
 
@@ -2018,7 +2018,7 @@ async function liveAnalysis(s,host){
     for(const e of emp){const k=orgKey(e.employer);orgs.set(k,{name:e.employer,pac:0,emp:e.total});}
     for(const x of pac){const k=orgKey(x.name);const o=orgs.get(k)||{name:x.name,pac:0,emp:0};o.pac+=x.amount;orgs.set(k,o);}
     const top=[...orgs.values()].map(o=>({...o,total:o.pac+o.emp})).sort((a,b)=>b.total-a.total).slice(0,TOP_DONORS);
-    const mine=new Set([...(p.sections.legislation?.rows||[]),...(p.sections.cosponsored?.rows||[])].map(r=>r.bill||String(r.id).toLowerCase()).concat(DATA.votes.concat(DATA.hvotes).filter(v=>v.pos&&s.id in v.pos).map(voteBill)).filter(Boolean));
+    const mine=new Set([...(p.sections.legislation?.rows||[]),...(p.sections.cosponsored?.rows||[])].map(r=>r.bill||String(r.id).toLowerCase()).concat(p.sections.legislation?.bills||[],p.sections.cosponsored?.bills||[]).concat(DATA.votes.concat(DATA.hvotes).filter(v=>v.pos&&s.id in v.pos).map(voteBill)).filter(Boolean));
     const stake=lob.filter(l=>l.bills.some(b=>mine.has(b)));
     const hits=liveStock(s,p,top,stake);
     const mrows=Object.entries(months).map(([org,series])=>({label:org,series,markers:[]})).slice(0,8),ms=[...new Set(mrows.flatMap(r=>Object.keys(r.series)))].sort();
@@ -2291,7 +2291,7 @@ function renderMethod(sub){
       <li><b>Vote Donor Alignment:</b> votes on bills where a donor group took a public position (in its scorecard or key-vote letter). It is the share that went the group's way. Missed votes are not counted.</li>
       <li><b>Donor Loyalty 🤝:</b> how much more often they vote the way their funders wanted than the rest of their party does on the same votes. For each group that gave to the campaign or spent for them, their rate of voting its way minus the party's rate, from the official roll calls' party totals with their own vote left out (Voteview's copy of a Senate vote when Senate.gov won't send it, kept only when its totals match the recorded result). The groups are weighted by the money each gave or spent. Only the part above the party counts: ${DONOR_LOYALTY.ceiling} points above scores 100. It needs ${DONOR_LOYALTY.minVotes} compared votes. Independents are compared with the party they caucus with.</li>
       <li><b>Speech Donor Alignment:</b> not measured yet. Floor speeches arrive from the Congressional Record, but must first be sorted by issue and side.</li>
-      <li><b>Donations by month:</b> each group's PAC giving to the campaign by month (FEC bulk data since 2019), with the votes it took a side on marked under its row.</li>
+      <li><b>Donations by month:</b> each group's PAC giving to the campaign by month (FEC bulk data since ${H0()}), with the votes it took a side on marked under its row.</li>
       <li><b>Top donor organizations:</b> from the daily FEC refresh, the top ${TOP_DONORS} organizations, each combining its PAC with its employees' itemized giving, grouped by employer. Donors' names are never shown, as FEC rules on reusing contributor information require.</li>
       <li><b>Timing flags (for review, not scored):</b>
         <ul class="list">
@@ -2519,7 +2519,7 @@ function renderMethod(sub){
       <li><b>Correlation, not cause:</b> agreeing with a funder's positions is not evidence that money changed a vote.</li>
     </ul>
     <h3>Money and votes over time</h3>
-    <p>Under each comparison, a timeline shows the group's money to or about the candidate by month since January 2019. The compared votes are numbered circles on the same time axis.</p>
+    <p>Under each comparison, a timeline shows the group's money to or about the candidate by month since ${H0()}. The compared votes are numbered circles on the same time axis.</p>
     <ul class="list">
       <li><b>Above the line:</b> contributions to the campaign from the group's PACs, and independent expenditures supporting the candidate.</li>
       <li><b>Below the line:</b> independent expenditures opposing the candidate. This is money spent to defeat them, not money they received.</li>

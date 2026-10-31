@@ -88,7 +88,10 @@ async function run(kind,subject,args,env){
 test('House reader: each trade report in the index is read once; a scanned report is listed for review',async()=>{
   const jobs=FEEDS['trades-house'].jobs(config);
   assert.ok(jobs.length&&jobs.every(j=>config.people.find(p=>p.id===j.subject).chamber==='H'),'House members in office');
-  assert.deepEqual(FEEDS['house-fd'].jobs(config).map(j=>j.args.year),[config.year,config.year-1],'this year\'s index and last year\'s');
+  const years=FEEDS['house-fd'].jobs(config).map(j=>j.args.year);
+  assert.deepEqual([years[0],years.at(-1),years.length],[config.year,2016,config.year-2016+1],'an index for each year back to 2016');
+  assert.equal(FEEDS['house-fd'].jobs(config)[0].id,'house-fd','this year\'s keeps its job');
+  assert.equal(FEEDS['house-fd'].every({year:2017}),7*86400000,'a year that has ended is checked weekly');
   const filing=(id,filed)=>({id,ptr:true,filed,url:`https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/${id}.pdf`});
   const index={id:'house-fd',kind:'house-fd',payload:{byPerson:{perry:[filing('20031001','2026-03-25'),filing('8220222','2026-02-01'),{id:'10066',ptr:false,filed:'2026-05-15'}]}}};
   const fetched=[];
@@ -119,7 +122,7 @@ test('Senate reader: agrees to the terms, searches the senator\'s trade reports,
     if(url.endsWith('/search/home/')&&init.method==='GET')return new Response('<form><input type="hidden" name="csrfmiddlewaretoken" value="tok123"><input type="checkbox" name="prohibition_agreement"></form>',{headers:{'set-cookie':'csrftoken=csrf1; Path=/'}});
     if(url.endsWith('/search/home/'))return new Response(null,{status:302,headers:{location:'/search/','set-cookie':'sessionid=s1; HttpOnly'}});
     if(url.endsWith('/search/report/data/')){
-      assert.match(init.body,/report_types=%5B11%5D/);assert.match(init.body,/last_name=Collins/);assert.equal(init.headers['X-CSRFToken'],'csrf1');assert.match(init.headers.Cookie,/sessionid=s1/);
+      assert.match(init.body,/report_types=%5B11%5D/);assert.match(init.body,/last_name=Collins/);assert.match(init.body,/submitted_start_date=01%2F01%2F2016/,'reports back to 2016');assert.equal(init.headers['X-CSRFToken'],'csrf1');assert.match(init.headers.Cookie,/sessionid=s1/);
       return Response.json({recordsFiltered:3,data:[['Susan M','Collins','Collins, Susan M. (Senator)',link('ptr',ids[0],'Periodic Transaction Report for 03/02/2026'),'03/05/2026'],
         ['Susan M','Collins','Collins, Susan M. (Senator)',link('paper',ids[1],'Periodic Transaction Report'),'01/20/2026'],['Susan M','Collins','Collins, Susan M. (Senator)',link('ptr',ids[2],'Periodic Transaction Report for 12/01/2025'),'12/10/2025']]});}
     if(url.includes(ids[0])&&expired){expired=false;return new Response(null,{status:302,headers:{location:'/search/home/'}});}

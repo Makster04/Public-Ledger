@@ -24,7 +24,7 @@ test('each source gets only its share of a run, and a job that has started fetch
   assert.equal(hosts.filter(h=>h==='api.nytimes.com').length,HOSTS['api.nytimes.com'].perRun,'the New York Times gets at most its share');
   assert.equal(hosts.filter(h=>h==='api.open.fec.gov').length,3,'other sources still run in the same pass');
   await statement(db,"UPDATE jobs SET next_due=0,status='pending'").run();
-  await statement(db,"UPDATE jobs SET cursor='page-2',run_id='r',started_at=? WHERE id='news-nyt:p9'",new Date().toISOString()).run();
+  await statement(db,"UPDATE jobs SET cursor=?,run_id='r',started_at=? WHERE id='news-nyt:p9'",JSON.stringify({todo:[2025,2026],i:1,at:null}),new Date().toISOString()).run();
   const order=[];
   await runRefresh({DB:db,FEC_API_KEY:'f',NYT_API_KEY:'n',fetch:async u=>{order.push(String(u));return new Response('{}',{status:500});}},{steps:1});
   assert.equal(order.length,1);assert.equal(new URL(order[0]).host,'api.nytimes.com');
