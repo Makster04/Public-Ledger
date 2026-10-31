@@ -1,6 +1,6 @@
 # WORKERS > PROFIT SCORE 👷
 
-<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **In the works** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Not started**. To change one, swap the image name in its line: `checkbox-empty` (not started), `checkbox-progress` (in the works) or `checkbox-checked` (done).
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -10,15 +10,20 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 |---|---|---|
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Renamed from People vs. Profit | |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Top donors treemap | On the Workers > Profit tab. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Corporation Compromised Index 🏢 | Designed. The Donor Loyalty Index 🤝 it depends on is built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Worker Backed Index ✊ | Designed, not built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grassroots Index 🌱 | Designed, not built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited evidence | 14 on file, 10 scored. Next: a business group's position on the GENIUS Act and the National Right-to-Work Act, cited public statements for candidates without a voting record, and more bills where the AFL-CIO's and the Chamber's key votes split. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Rename the "People" side to "Workers" | In the charts and tables. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Corporation Compromised Index 🏢 | Designed. The Donor Loyalty Index 🤝 and the bill scores it depends on are built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Worker Backed Index ✊ | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Grassroots Index 🌱 | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Add more Workers > Profit bills with cited evidence | 14 on file, 10 scored. Next: a business group's position on the GENIUS Act and the National Right-to-Work Act, cited public statements for candidates without a voting record, and more bills where the AFL-CIO's and the Chamber's key votes split. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Rename the "People" side to "Workers" | In the charts and tables. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. CBO's coverage estimates now count, as access. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide the graph for each index | |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Better bill marking | Each bill scored from −100 to +100. See below, and the full list on the Workers > Profit scores page. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Access to basic needs in who gains | A cited estimate that a bill expands or cuts access to health coverage, schools, child care, food assistance, housing and the like, averaged with the money side. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Bills that didn't pass | Cosponsorships (from Congress.gov) count like a Yea, and cited public statements count half. The PRO Act, the Raise the Wage Act and the Paycheck Fairness Act are on file. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Infrastructure law and CHIPS Act listed as Even | Both sides supported them. The CHIPS prevailing-wage amendment is scored on its own. |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Cited statements for candidates without a voting record | 25 from 22 candidates so far; the rest are listed in Updates & fixes. |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Lobbying on each key bill (LDA.gov) | Built, and shown beside each bill, never in its score. Waits on its first live run. |
 
 ## Better bill marking
 

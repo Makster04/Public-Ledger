@@ -1,6 +1,6 @@
 # GET THINGS DONE SCORE 🏗️ (Still Optional)
 
-<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> **Still in the works**. To check one off, change `checkbox-empty` to `checkbox-checked` in its line.
+<img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Done** · <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **In the works** · <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Not started**. To change one, swap the image name in its line: `checkbox-empty` (not started), `checkbox-progress` (in the works) or `checkbox-checked` (done).
 
 Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules every index follows are in [How the math works](01_HOW_THE_MATH_WORKS.md).
 
@@ -8,13 +8,13 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 
 | Status | Item | Notes |
 |---|---|---|
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether to add it as a fifth grade | |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Get It Done Index ✅ | Needs `CONGRESS_API_KEY`. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | No-Show Index 🪑 | Needs a new job that reads every roll call. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Across the Aisle Index 🌉 | Needs `CONGRESS_API_KEY`. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Party Rebel Index 🤠 | From Voteview. Beside the grade, not inside it. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grade formula, home card, profile tab and Scores page | Only if the grade is added. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide whether to add it as a fifth grade | |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Get It Done Index ✅ | Needs `CONGRESS_API_KEY`, which is set now. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | No-Show Index 🪑 | Needs a new job that reads every roll call. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Across the Aisle Index 🌉 | Needs `CONGRESS_API_KEY`, which is set now. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Party Rebel Index 🤠 | From Voteview. Beside the grade, not inside it. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Grade formula, home card, profile tab and Scores page | Only if the grade is added. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide the graph for each index | |
 
 ---
 

@@ -280,6 +280,7 @@ Deployment remains a later manual step because this version was requested to sta
 - `scripts/local.mjs` — localhost server using the same backend
 - `scripts/scores-monthly.mjs` — the monthly recalculation and change log (`npm run scores:monthly`)
 - `scripts/build-ids.mjs`, `scripts/build-senate.mjs`, `scripts/build-funder-history.mjs`, `scripts/build-portraits.py`, `scripts/build-holdings.py`, `scripts/build-exec-trades.mjs` — rebuilt by hand; `public/senate.json` — every sitting senator (written by `build-senate.mjs`); `public/exec-trades.json` — the president's trades (written by `build-exec-trades.mjs`); `scripts/build-vote-party.mjs` and `public/vote-party.json` — party totals for the saved roll calls
+- `assets/checkbox-checked.svg`, `assets/checkbox-progress.svg` and `assets/checkbox-empty.svg` — the status icons in the planning docs (`.03_Future_Goals.md`, `.04_UPDATES_&_FIXES_IN_NEED.md` and the `Scores` files): done, in the works, not started
 - `scripts/export-seed.mjs` — writes `data/seed.json` (`npm run seed:export`)
 - `data/config.json` — who and which election and Congress are tracked, with each person's IDs; `data/holdings-review.json` — disclosures imported for review (written by `build-holdings.py`); `data/portraits/` and `scripts/portrait-extra.json` — supplied photos and their credits
 - `migrations/` — portable SQLite/D1 schema
