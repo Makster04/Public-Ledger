@@ -14,7 +14,12 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={})
   // Workers > Profit: every bill on file (research.json "bills") with its score, and the scored ones (marks), which each
   // person's votes and sponsorships count on.
   const bills=(data.bills||[]).map(b=>Object.assign({},b,billScore(b)));
-  const marks=new Map(bills.filter(b=>b.status==='scored').map(b=>[b.id,b]));
+  // Each scored bill under its own key and every version's (the same bill in other Congresses, or its Senate companion).
+  const marks=new Map(bills.filter(b=>b.status==='scored').flatMap(b=>[b.id,...(b.versions||[])].map(k=>[k,b])));
+  // Cosponsorships recorded on each bill (scripts/fill-bill-cosponsors.mjs) and cited public statements, by person.
+  const onBills=(field,f)=>{const m=new Map();for(const b of bills)for(const r of b[field]||[])(m.get(r.person)||m.set(r.person,[]).get(r.person)).push(f(r,b));return m;};
+  const billSpons=onBills('cosponsors',(r,b)=>({bill:b.id,via:r.bill,kind:r.sponsor?'sponsored':'cosponsored'}));
+  const billStated=onBills('stated',(r,b)=>({bill:b.id,pos:r.pos,ref:r.src?.u}));
   // A subcommittee seat counts under its full committee.
   const committeesOf=s=>committees.people[s.id]||[];
   const fullCommittee=id=>(committees.committees[id]||{}).parent||id;
@@ -35,11 +40,12 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={})
     promises:s=>promiseScore(s.statements,s.promiseTrackers),
     ethics:s=>ethicsScore(s.ethics,trading(s),{asOfYear}),
     pvp(s){
-      const v=votes.filter(v=>v.pos&&s.id in v.pos).map(v=>({bill:voteBill(v),pos:v.pos[s.id],ref:v.id}));
+      // Newest first, so when two versions of a bill were voted on, the latest vote is the one counted.
+      const v=votes.filter(v=>v.pos&&s.id in v.pos).sort((x,y)=>String(y.date).localeCompare(String(x.date))).map(v=>({bill:voteBill(v),pos:v.pos[s.id],ref:v.id}));
       const spons=(s.bills||[]).map((b,i)=>({bill:billKey(b.congress,b.num),kind:'sponsored',ref:`${s.id}:bill:${i}`}))
         .concat((s.cosponsored||[]).map(b=>({bill:b.bill||billKey(b.congress,b.num),kind:'cosponsored'})))
-        .concat(executiveActions(s));
-      return pvpScore(pvpActions(marks,v,spons));
+        .concat(executiveActions(s)).concat(billSpons.get(s.id)||[]);
+      return pvpScore(pvpActions(marks,v,spons,billStated.get(s.id)||[]));
     },
   };
 }

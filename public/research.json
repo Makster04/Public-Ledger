@@ -54140,6 +54140,51 @@
       "measureKey": "S:ArticleofimpeachmentinH.Res.24(117thCongress)"
     },
     {
+      "excluded": null,
+      "id": "117-1-74",
+      "congress": 117,
+      "session": 1,
+      "number": 74,
+      "date": "2021-03-05",
+      "short": "$15 minimum wage (Sanders amendment to the American Rescue Plan)",
+      "issue": "S.Amdt. 972 to H.R. 1319: raise the federal minimum wage to $15 an hour (the Raise the Wage Act)",
+      "question": "Motion to waive the Budget Act with respect to the Sanders amendment",
+      "result": "Not agreed to 42-58 (60 needed)",
+      "area": "Labor & workers",
+      "pos": {
+        "collins": "Nay",
+        "sullivan": "Nay",
+        "marshall": "Nay",
+        "ossoff": "Yea",
+        "booker": "Yea",
+        "hickenlooper": "Yea",
+        "brown": "Yea",
+        "ricketts": "Not in office",
+        "husted": "Not in office"
+      },
+      "bill": {
+        "measure": "S.Amdt. 972 (117th Congress)",
+        "officialTitle": "Amendment No. 972 to H.R. 1319 (American Rescue Plan Act of 2021)",
+        "popularTitle": "Raise the Wage Act amendment",
+        "summary": "Would have raised the federal minimum wage to $15 an hour, as in the Raise the Wage Act. A point of order said it broke the budget rules; the motion to waive them needed 60 votes.",
+        "summarySrc": {
+          "t": "Senate floor activity, Mar. 5, 2021",
+          "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/03_05_2021_Senate_Floor.htm"
+        },
+        "voteQuestion": "Motion to waive the Budget Act",
+        "voteResult": "Not agreed to 42-58",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "A",
+          "why": "A Yea vote supported raising the federal minimum wage to $15."
+        }
+      ],
+      "measureKey": "S:S.Amdt.972(117thCongress)"
+    },
+    {
       "id": "117-1-110",
       "congress": 117,
       "session": 1,
@@ -54244,6 +54289,41 @@
       ],
       "excluded": null,
       "measureKey": "S:S.Amdt.1858(117thCongress)"
+    },
+    {
+      "excluded": "Equal pay is not one of the site's issues; it counts for Workers > Profit only.",
+      "id": "117-1-227",
+      "congress": 117,
+      "session": 1,
+      "number": 227,
+      "date": "2021-06-08",
+      "short": "Paycheck Fairness Act (motion to take it up)",
+      "issue": "H.R. 7, the Paycheck Fairness Act: equal-pay protections and remedies",
+      "question": "Cloture on the motion to proceed to H.R. 7",
+      "result": "Not invoked 49-50 (60 needed)",
+      "area": "Labor & workers",
+      "pos": {
+        "collins": "Nay",
+        "sullivan": "Nay",
+        "marshall": "Nay",
+        "ricketts": "Not in office",
+        "husted": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 7 (117th Congress)",
+        "officialTitle": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+        "popularTitle": "Paycheck Fairness Act",
+        "summary": "Would limit the defenses employers can give for paying men and women differently, bar retaliation for discussing pay, and expand damages for pay discrimination.",
+        "summarySrc": {
+          "t": "Senate Democrats: roll call vote on cloture on the motion to proceed to H.R. 7",
+          "u": "https://www.democrats.senate.gov/2021/06/08/roll-call-vote-cloture-on-the-mtp-to-hr7-paycheck-fairness"
+        },
+        "voteQuestion": "On the cloture motion",
+        "voteResult": "Not invoked 49-50",
+        "provisions": []
+      },
+      "codes": [],
+      "measureKey": "S:H.R.7(117thCongress)"
     },
     {
       "id": "117-1-314",
@@ -56810,6 +56890,124 @@
       ],
       "excluded": null,
       "measureKey": "H:H.R.8035(118thCongress)"
+    },
+    {
+      "excluded": null,
+      "area": "Labor & workers",
+      "id": "h-116-2-050",
+      "year": 2020,
+      "roll": 50,
+      "date": "2020-02-06",
+      "short": "PRO Act (2020 House passage)",
+      "issue": "H.R. 2474, the Protecting the Right to Organize Act: stronger protections for organizing and bargaining",
+      "question": "On passage",
+      "result": "Passed 224-194",
+      "pos": {
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office",
+        "millermeeks": "Not in office",
+        "hinson": "Not in office",
+        "moore": "Not in office",
+        "letlow": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 2474 (116th Congress)",
+        "officialTitle": "To amend the National Labor Relations Act, the Labor Management Relations Act, 1947, and the Labor-Management Reporting and Disclosure Act of 1959, and for other purposes.",
+        "popularTitle": "PRO Act",
+        "summary": "Would add penalties for employers that violate workers' organizing rights, limit employer interference in union elections, and override state right-to-work laws for union fees.",
+        "summarySrc": {
+          "t": "House Clerk roll call 50 (2020)",
+          "u": "https://clerk.house.gov/evs/2020/roll050"
+        },
+        "voteQuestion": "On passage",
+        "voteResult": "Passed 224-194",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "A",
+          "why": "A Yea vote supported strengthening workers' rights to organize and bargain."
+        }
+      ],
+      "measureKey": "H:H.R.2474(116thCongress)"
+    },
+    {
+      "excluded": null,
+      "area": "Labor & workers",
+      "id": "h-117-1-070",
+      "year": 2021,
+      "roll": 70,
+      "date": "2021-03-09",
+      "short": "PRO Act (2021 House passage)",
+      "issue": "H.R. 842, the Protecting the Right to Organize Act",
+      "question": "On passage",
+      "result": "Passed 225-206",
+      "pos": {
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 842 (117th Congress)",
+        "officialTitle": "To amend the National Labor Relations Act, the Labor Management Relations Act, 1947, and the Labor-Management Reporting and Disclosure Act of 1959, and for other purposes.",
+        "popularTitle": "PRO Act",
+        "summary": "Would add penalties for employers that violate workers' organizing rights, limit employer interference in union elections, and override state right-to-work laws for union fees.",
+        "summarySrc": {
+          "t": "ProPublica: H.R. 842 (117th Congress)",
+          "u": "https://projects.propublica.org/represent/bills/117/hr842"
+        },
+        "voteQuestion": "On passage",
+        "voteResult": "Passed 225-206",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "A",
+          "why": "A Yea vote supported strengthening workers' rights to organize and bargain."
+        }
+      ],
+      "measureKey": "H:H.R.842(117thCongress)"
+    },
+    {
+      "excluded": "Equal pay is not one of the site's issues; it counts for Workers > Profit only.",
+      "area": "Labor & workers",
+      "id": "h-117-1-108",
+      "year": 2021,
+      "roll": 108,
+      "date": "2021-04-15",
+      "short": "Paycheck Fairness Act (House passage)",
+      "issue": "H.R. 7, the Paycheck Fairness Act: equal-pay protections and remedies",
+      "question": "On passage",
+      "result": "Passed 217-210",
+      "pos": {
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 7 (117th Congress)",
+        "officialTitle": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+        "popularTitle": "Paycheck Fairness Act",
+        "summary": "Would limit the defenses employers can give for paying men and women differently, bar retaliation for discussing pay, and expand damages for pay discrimination.",
+        "summarySrc": {
+          "t": "House Clerk roll call 108 (2021)",
+          "u": "https://clerk.house.gov/evs/2021/roll108"
+        },
+        "voteQuestion": "On passage",
+        "voteResult": "Passed 217-210",
+        "provisions": []
+      },
+      "codes": [],
+      "measureKey": "H:H.R.7(117thCongress)"
     }
   ],
   "categories": {
@@ -191549,7 +191747,16 @@
             "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
           }
         }
-      ]
+      ],
+      "access": {
+        "step": -100,
+        "by": "CBO",
+        "why": "CBO estimates about 10 million more people without health insurance in 2034, most of them from the Medicaid changes.",
+        "src": {
+          "t": "FactCheck.org: The CBO Breakdown on Medicaid Losses, Increase in Uninsured (July 2025)",
+          "u": "https://www.factcheck.org/2025/07/the-cbo-breakdown-on-medicaid-losses-increase-in-uninsured/"
+        }
+      }
     },
     {
       "id": "115-hr-1",
@@ -191704,13 +191911,13 @@
           }
         }
       ],
-      "context": {
-        "cbo": {
-          "why": "CBO estimates benchmark premiums fall 11% on average and about 100,000 fewer people have insurance (2027–2035), while the deficit falls $35.6 billion. It does not say how this splits by income.",
-          "src": {
-            "t": "CBO: H.R. 6703, Lower Health Care Premiums for All Americans Act",
-            "u": "https://www.cbo.gov/publication/61959"
-          }
+      "access": {
+        "step": -50,
+        "by": "CBO",
+        "why": "CBO estimates about 100,000 fewer people with insurance on average over 2027–2035, even though benchmark premiums fall 11%: a small cut in access, with a tradeoff. The deficit falls $35.6 billion.",
+        "src": {
+          "t": "CBO: H.R. 6703, Lower Health Care Premiums for All Americans Act",
+          "u": "https://www.cbo.gov/publication/61959"
         }
       }
     },
@@ -191728,7 +191935,16 @@
             "u": "https://aflcio.org/about/advocacy/legislative-alerts/letter-opposing-lower-health-care-premiums-all-americans-act-and"
           }
         }
-      ]
+      ],
+      "access": {
+        "step": 100,
+        "by": "CBO",
+        "why": "CBO estimates 3.0 million more people insured in 2027 and 4.0 million in 2028, at a cost of about $80.6 billion over 2026–2035. The credits are set by income.",
+        "src": {
+          "t": "Bloomberg Government: 3-Year Obamacare Tax Credit Extension Has $80 Billion Price Tag (CBO, Jan. 8, 2026)",
+          "u": "https://news.bloomberglaw.com/bloomberg-government-news/3-year-obamacare-tax-credit-extension-has-80-billion-price-tag"
+        }
+      }
     },
     {
       "id": "119-s-1582",
@@ -191848,6 +192064,152 @@
           "src": {
             "t": "Senate floor activity, June 8, 2021",
             "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/06_08_2021_Senate_Floor.htm"
+          }
+        }
+      }
+    },
+    {
+      "id": "117-hr-842",
+      "title": "PRO Act (Richard L. Trumka Protecting the Right to Organize Act)",
+      "versions": [
+        "116-hr-2474",
+        "117-s-420",
+        "118-hr-20",
+        "118-s-567",
+        "119-hr-20"
+      ],
+      "sides": [
+        {
+          "group": "aflcio",
+          "pos": "support",
+          "date": "2021-03-09",
+          "why": "Key vote on House passage.",
+          "src": {
+            "t": "AFL-CIO Legislative Scorecard, 2021 House: Protecting the Right to Organize (PRO) Act",
+            "u": "https://aflcio.org/scorecard/votes/2021/house/protecting-right-organize-pro-act"
+          }
+        },
+        {
+          "group": "chamber",
+          "pos": "oppose",
+          "date": "2021-03-08",
+          "why": "Key-vote letter strongly opposing it: it would \"radically rewrite American labor policy.\"",
+          "src": {
+            "t": "U.S. Chamber Key Vote Letter on H.R. 842, the PRO Act",
+            "u": "https://www.uschamber.com/employment-law/us-chamber-key-vote-letter-hr-842-the-pro-act"
+          }
+        },
+        {
+          "group": "nfib",
+          "pos": "oppose",
+          "date": "2021-03-09",
+          "why": "Key-vote letter: it would \"dramatically upend long-standing employment law in favor of labor unions.\" NFIB opposed the 2025 version too.",
+          "src": {
+            "t": "NFIB Key Vote letter in opposition to the PRO Act of 2021",
+            "u": "https://assets.nfib.com/nfibcom/03-09-21-NFIB-Key-Vote-letter-in-opposition-to-the-PRO-Act-of-2021.pdf"
+          }
+        }
+      ],
+      "context": {
+        "note": {
+          "why": "Passed the House in 2020 (224–194) and 2021 (225–206); the Senate never voted on it. It has been reintroduced every Congress since 2019.",
+          "src": {
+            "t": "ProPublica: H.R. 842 (117th Congress)",
+            "u": "https://projects.propublica.org/represent/bills/117/hr842"
+          }
+        }
+      }
+    },
+    {
+      "id": "117-s-53",
+      "title": "Raise the Wage Act ($15 federal minimum wage)",
+      "versions": [
+        "117-hr-603",
+        "117-samdt-972"
+      ],
+      "gains": {
+        "step": 100,
+        "by": "CBO",
+        "why": "CBO estimates that a $15 minimum wage by 2025 raises family income by $7.7 billion for families below the poverty line and $14.2 billion for those at one to three times it, while families above three times it lose $30.5 billion, mostly those above six times. It also estimates about 1.3 million fewer jobs (median estimate), which these income figures include.",
+        "src": {
+          "t": "CBO: The Effects on Employment and Family Income of Increasing the Federal Minimum Wage (July 2019)",
+          "u": "https://www.cbo.gov/publication/55410"
+        }
+      },
+      "sides": [
+        {
+          "group": "nfib",
+          "pos": "oppose",
+          "date": "2021-03-05",
+          "why": "Letter urging Congress to reject S. 53 (Feb. 1, 2021), and a key vote against the Sanders amendment that would have added it to the American Rescue Plan.",
+          "src": {
+            "t": "NFIB Key Vote in opposition to the Raise the Wage Act amendment (Sanders), Mar. 5, 2021",
+            "u": "https://assets.nfib.com/nfibcom/03-05-21-NFIB-Key-Vote-in-opposition-to-the-Raise-the-Wage-Act-Amendment-Sanders.pdf"
+          }
+        }
+      ],
+      "context": {
+        "note": {
+          "why": "The Senate voted on it as the Sanders amendment to the American Rescue Plan (Senate roll call 74, Mar. 5, 2021), which fell short 42–58 with 60 needed.",
+          "src": {
+            "t": "Senate floor activity, Mar. 5, 2021",
+            "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/03_05_2021_Senate_Floor.htm"
+          }
+        }
+      }
+    },
+    {
+      "id": "117-hr-7",
+      "title": "Paycheck Fairness Act (equal pay)",
+      "versions": [
+        "117-s-205"
+      ],
+      "sides": [
+        {
+          "group": "aflcio",
+          "pos": "support",
+          "date": "2021-06-08",
+          "why": "Key vote on the Senate vote to take it up.",
+          "src": {
+            "t": "AFL-CIO Legislative Scorecard, 2021 Senate: Paycheck Fairness Act",
+            "u": "https://aflcio.org/scorecard/votes/2021/senate/paycheck-fairness-act"
+          }
+        },
+        {
+          "group": "chamber",
+          "pos": "oppose",
+          "date": "2021-06-08",
+          "why": "Key-vote letter strongly opposing it: it would erode employer defenses for legitimate pay differences and allow unlimited damages.",
+          "src": {
+            "t": "U.S. Chamber Key Vote Letter on H.R. 7, the Paycheck Fairness Act (Senate)",
+            "u": "https://www.uschamber.com/employment-law/us-chamber-key-vote-letter-hr-7-paycheck-fairness-act"
+          }
+        },
+        {
+          "group": "nfib",
+          "pos": "oppose",
+          "date": "2021-04-14",
+          "why": "Key vote against House passage, citing lawsuits and paperwork for small employers.",
+          "src": {
+            "t": "NFIB Key Vote in opposition to H.R. 7, the Paycheck Fairness Act",
+            "u": "https://assets.nfib.com/nfibcom/04-14-21-NFIB-Key-Vote-in-opposition-to-HR-7-Paycheck-Fairness-Act.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-hr-1232",
+      "title": "National Right-to-Work Act",
+      "versions": [
+        "119-s-533",
+        "118-hr-1200"
+      ],
+      "context": {
+        "note": {
+          "why": "No cited position from the groups on the list yet. The AFL-CIO letters found oppose related bills, not this one, and NFIB cites a 2013 member poll (73% favor a national right-to-work law), which isn't a position on the bill. It would end union-security agreements nationwide.",
+          "src": {
+            "t": "H.R. 1232 (119th Congress), GovInfo",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr1232ih"
           }
         }
       }
