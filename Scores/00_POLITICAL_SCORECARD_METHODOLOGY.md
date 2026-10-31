@@ -254,7 +254,7 @@ Each action carries its Rule 1 weight and takes a side as Rule 1 describes, and 
 
 **Example:** a Nay on the American Rescue Plan Act (+75) and on the Inflation Reduction Act (+75) adds 1.5 Profit-leaning points, and a Nay on the One Big Beautiful Bill Act (−100) adds 1 People-leaning point: 1 ÷ 2.5 = 40%, shown as **F (40%)**.
 
-**Where it stands:** 23 people have the 3 scored actions a grade needs, most of the House members through their votes on the One Big Beautiful Bill Act, H.R. 6703 and the ACA credit extension. Some positions on the newly saved roll calls, and everyone's cosponsorships, are filled on your computer (`npm run votes:positions` and `npm run bills:cosponsors`), which will change grades. Trump signed two scored bills, both Profit-leaning, one short of a grade.
+**Where it stands:** 23 people have the 3 scored actions a grade needs, most of the House members through their votes on the One Big Beautiful Bill Act, H.R. 6703 and the ACA credit extension. Some positions on the newly saved roll calls, and everyone's cosponsorships, are filled on your computer (`npm run votes:positions` and `npm run bills:cosponsors`), which will change grades. Trump signed two scored bills, both Profit-leaning, one short of a grade. Candidates without a voting record are scored from cited public statements: 25 so far, from 22 candidates, each counting half a vote.
 
 ## Other indicators (not graded)
 

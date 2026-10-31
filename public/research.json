@@ -191821,7 +191821,209 @@
           "t": "FactCheck.org: The CBO Breakdown on Medicaid Losses, Increase in Uninsured (July 2025)",
           "u": "https://www.factcheck.org/2025/07/the-cbo-breakdown-on-medicaid-losses-increase-in-uninsured/"
         }
-      }
+      },
+      "stated": [
+        {
+          "person": "elsayed",
+          "pos": "oppose",
+          "date": "2026-09",
+          "why": "Said \"Medicaid and SNAP have been cut to deliver $4.5 trillion in tax cuts primarily for billionaires and corporations\" about the law (quoted in a fact-check that disputes his framing).",
+          "src": {
+            "t": "Townhall: fact-check of Abdul El-Sayed on the One Big Beautiful Bill (Sept. 30, 2026)",
+            "u": "https://townhall.com/news/amy-curtis/2026/09/30/el-sayed-obbb-fact-check-n2683884"
+          }
+        },
+        {
+          "person": "cooper",
+          "pos": "oppose",
+          "date": "2025-09",
+          "why": "On the campaign trail, said the Republican tax and spending law put North Carolina's Medicaid expansion \"in danger.\"",
+          "src": {
+            "t": "NC Newsline: Roy Cooper warns Medicaid expansion is in danger as he slams GOP spending bill",
+            "u": "https://ncnewsline.com/briefs/roy-cooper-warns-medicaid-expansion-is-in-danger-as-he-slams-gop-spending-bill-on-campaign-trail/"
+          }
+        },
+        {
+          "person": "osborn",
+          "pos": "oppose",
+          "date": "2025-07-08",
+          "why": "Launching his campaign, said he would have opposed the law and criticized it as overwhelmingly benefiting the wealthy.",
+          "src": {
+            "t": "Nebraska Examiner: Dan Osborn launches Senate bid against Sen. Pete Ricketts (July 8, 2025)",
+            "u": "https://nebraskaexaminer.com/2025/07/08/nebraskas-dan-osborn-picks-a-race-launches-senate-bid-against-u-s-sen-pete-ricketts/"
+          }
+        },
+        {
+          "person": "flanagan",
+          "pos": "oppose",
+          "date": "2025-09-02",
+          "why": "Called it the \"big, ugly bill\" and said senators who relied on SNAP and Medicaid \"probably wouldn't have passed\" it; has said repealing its tax cuts would be at the top of her list.",
+          "src": {
+            "t": "Minnesota Reformer: Lt. Gov. Peggy Flanagan steps out on her own in Senate race (Sept. 2, 2025)",
+            "u": "https://minnesotareformer.com/2025/09/02/lt-gov-peggy-flanagan-steps-out-on-her-own-in-senate-race/"
+          }
+        },
+        {
+          "person": "jackson",
+          "pos": "oppose",
+          "date": "2026-10",
+          "why": "In the Senate debate, said the bill \"cut $3.5 billion out of our healthcare system here in Maine, cut SNAP benefits, it cut heating assistance.\"",
+          "src": {
+            "t": "PBS: Maine U.S. Senate debate (2026)",
+            "u": "https://www.pbs.org/video/us-senate-debate-61dc0o/"
+          }
+        },
+        {
+          "person": "turek",
+          "pos": "oppose",
+          "date": "2026-06",
+          "why": "Called Rep. Ashley Hinson's vote for the law \"the largest Medicaid cut ever,\" citing rural hospital and clinic closures.",
+          "src": {
+            "t": "Iowa Capital Dispatch: Turek criticizes Hinson's vote for Medicaid cuts at healthcare event",
+            "u": "https://iowacapitaldispatch.com/?p=57617"
+          }
+        },
+        {
+          "person": "bodnar",
+          "pos": "oppose",
+          "date": "2026",
+          "why": "At a campaign event, tied Medicaid reimbursement problems and cuts to local mental-health services to the law.",
+          "src": {
+            "t": "The Pulp: Seth Bodnar in Ravalli County",
+            "u": "https://thepulp.org/seth-bodnar-ravalli-county-senate-independent/"
+          }
+        },
+        {
+          "person": "stelson",
+          "pos": "oppose",
+          "date": "2026-05",
+          "why": "After winning her primary: \"the Big Beautiful bill that is taking away healthcare coverage from millions of Americans, and Medicaid from 20,000 right here in central Pennsylvania.\"",
+          "src": {
+            "t": "Pennsylvania Capital-Star: Janelle Stelson will face Rep. Scott Perry again",
+            "u": "https://penncapital-star.com/election-2026/janelle-stelson-will-face-rep-scott-perry-again-after-victory-in-pa-10-democratic-primary/"
+          }
+        },
+        {
+          "person": "conley",
+          "pos": "oppose",
+          "date": "2025-07",
+          "why": "\"This so-called 'big beautiful bill' is a betrayal, another backroom deal that rewards the ultra-wealthy.\"",
+          "src": {
+            "t": "Cait Conley campaign: Conley slams Mike Lawler's vote to gut Medicaid",
+            "u": "https://caitconley.com/cait-conley-slams-mike-lawlers-vote-to-gut-medicaid-raise-taxes-on-new-york-families/"
+          }
+        },
+        {
+          "person": "bohannan",
+          "pos": "oppose",
+          "date": "2025-06-17",
+          "why": "Said Rep. Miller-Meeks \"voted to cut Medicaid for 100,000 Iowans\" and pledged to reverse the Medicaid cuts if elected.",
+          "src": {
+            "t": "Iowa Public Radio: Bohannan launches campaign for Iowa's 1st District (June 17, 2025)",
+            "u": "https://www.iowapublicradio.org/ipr-news/2025-06-17/democrat-christina-bohannan-campaign-iowa-1st-congressional-district-against-miller-meeks"
+          }
+        },
+        {
+          "person": "hamilton",
+          "pos": "oppose",
+          "date": "2026-09",
+          "why": "Named it as a reason he ran: \"I think about the big, beautiful bill that cut Medicaid.\"",
+          "src": {
+            "t": "AP via PBS NewsHour: No Democrat has won a Kansas Senate seat in a century (Sept. 2026)",
+            "u": "https://pbs.org/newshour/politics/no-democrat-has-won-a-kansas-senate-seat-in-a-century-can-a-megachurch-pastor-change-that"
+          }
+        },
+        {
+          "person": "stratton",
+          "pos": "oppose",
+          "date": "2025-06",
+          "why": "On its Medicaid cuts: \"These cuts aren't just unpopular but they're also dangerous, ripping away health care from millions of Americans.\"",
+          "src": {
+            "t": "The Illinoize: Stratton says Medicaid cuts in budget bill \"dangerous\" to Illinois",
+            "u": "https://www.theillinoize.com/articles/stratton-medicaid-cuts-budget-bill"
+          }
+        },
+        {
+          "person": "wess",
+          "pos": "oppose",
+          "date": "2026-09-16",
+          "why": "Criticized Rep. Barry Moore's support for the law and its Medicaid changes, saying the new rural health program won't make up for them.",
+          "src": {
+            "t": "Alabama Reflector: Wess highlights Alabama's rural health care crisis (Sept. 16, 2026)",
+            "u": "https://www.alreporter.com/2026/09/16/wess-highlights-alabamas-rural-healthcare-crisis-criticizes-moores-voting-record/"
+          }
+        },
+        {
+          "person": "paxton",
+          "pos": "support",
+          "date": "2025-07",
+          "why": "Called it \"HISTORIC legislation\" after it passed; his 2026 economic plan would make two of its provisions permanent and expand them.",
+          "src": {
+            "t": "KXAN: Texas politicians react to passage of the Big Beautiful Bill (July 2025)",
+            "u": "https://digital-release.kxan.com/news/national-news/texas-politicians-officials-react-to-passage-of-big-beautiful-bill"
+          }
+        },
+        {
+          "person": "whatley",
+          "pos": "support",
+          "date": "2025",
+          "why": "Defended its Medicaid changes: \"Those are widely supported in North Carolina. Those are widely supported across the country.\"",
+          "src": {
+            "t": "Punchbowl News: Inside Whatley's bid",
+            "u": "https://punchbowl.news/article/campaigns/inside-whatley-bid/"
+          }
+        },
+        {
+          "person": "braun",
+          "pos": "support",
+          "date": "2025-07",
+          "why": "In a radio interview, defended the law's Medicaid changes, tax relief and farm support.",
+          "src": {
+            "t": "Washington Senate Republicans: Sen. Braun breaks down the \"Big Beautiful Bill\" on KVI (July 2025)",
+            "u": "https://src.wastateleg.org/blog/audio-accountability-fear-sen-braun-breaks-big-beautiful-bill-kvis-ari-hoffman-show/"
+          }
+        },
+        {
+          "person": "baisley",
+          "pos": "support",
+          "date": "2026-10",
+          "why": "In a debate with Sen. Hickenlooper, defended the Republican law's Medicaid cuts and other changes to the safety net.",
+          "src": {
+            "t": "Colorado Newsline (via News From the States): Hickenlooper–Baisley debate",
+            "u": "https://www.newsfromthestates.com/node/432814"
+          }
+        },
+        {
+          "person": "beltran",
+          "pos": "support",
+          "date": "2026",
+          "why": "His campaign site highlighted his support for the law, and his campaign said \"Of course Mike supports President Trump and the Working Families Tax Cut.\"",
+          "src": {
+            "t": "Washington Examiner: Florida GOP House candidate removes pro-Trump mentions from campaign website",
+            "u": "https://www.washingtonexaminer.com/?p=4706796"
+          }
+        },
+        {
+          "person": "flores",
+          "pos": "support",
+          "date": "2025-07-21",
+          "why": "Endorsed President Trump's \"Big, Beautiful Bill\" when launching his campaign.",
+          "src": {
+            "t": "Texas Tribune: GOP Army veteran Eric Flores challenges Vicente Gonzalez (July 21, 2025)",
+            "u": "https://www.texastribune.org/2025/07/21/texas-congress-eric-flores-vicente-gonzalez-34th-district/"
+          }
+        },
+        {
+          "person": "sununu",
+          "pos": "support",
+          "date": "2026-06-25",
+          "why": "In a Republican primary debate, said he backed the policies in the law.",
+          "src": {
+            "t": "NHPR: Brown, Sununu discuss ties to Trump in Hampton debate (June 25, 2026)",
+            "u": "https://www.nhpr.org/politics/2026-06-25/brown-sununu-discuss-ties-to-trump-hampton-debate"
+          }
+        }
+      ]
     },
     {
       "id": "115-hr-1",
@@ -192017,7 +192219,29 @@
           "t": "Bloomberg Government: 3-Year Obamacare Tax Credit Extension Has $80 Billion Price Tag (CBO, Jan. 8, 2026)",
           "u": "https://news.bloomberglaw.com/bloomberg-government-news/3-year-obamacare-tax-credit-extension-has-80-billion-price-tag"
         }
-      }
+      },
+      "stated": [
+        {
+          "person": "turek",
+          "pos": "support",
+          "date": "2025-12-11",
+          "why": "Criticized the Senate for failing to extend the enhanced ACA premium tax credits.",
+          "src": {
+            "t": "Josh Turek campaign: statement on the Senate's failure to protect health care (Dec. 11, 2025)",
+            "u": "https://turek4iowa.com/news/statement-josh-turek-slams-the-senate-for-failure-to-protect-health-care"
+          }
+        },
+        {
+          "person": "davis",
+          "pos": "support",
+          "date": "2026-06-24",
+          "why": "Said the near-term priority should be restoring the Affordable Care Act subsidies and strengthening Medicaid and Medicare.",
+          "src": {
+            "t": "KNOE: A farmer's longshot: Jamie Davis's bid for U.S. Senate (June 24, 2026)",
+            "u": "https://www.knoe.com/2026/06/24/farmers-longshot-jamie-daviss-bid-us-senate/"
+          }
+        }
+      ]
     },
     {
       "id": "119-s-1582",
@@ -192344,6 +192568,38 @@
           "person": "peltola",
           "bill": "118-hr-20",
           "date": "2023-02-28"
+        }
+      ],
+      "stated": [
+        {
+          "person": "talarico",
+          "pos": "support",
+          "date": "2026",
+          "why": "At a union training center in San Antonio, called for passing the PRO Act along with raising pay and expanding paths into the skilled trades.",
+          "src": {
+            "t": "Fox San Antonio: Talarico highlights worker pay, skilled trades",
+            "u": "https://foxsanantonio.com/news/local/talarico-san-antonio-campaign-stop"
+          }
+        },
+        {
+          "person": "elsayed",
+          "pos": "support",
+          "date": "2026-10-28",
+          "why": "Said keeping wages in step with prices \"means empowering unions by passing the PRO Act.\"",
+          "src": {
+            "t": "Michigan Public: Who is Abdul El-Sayed? (Oct. 28, 2026)",
+            "u": "https://www.michiganpublic.org/politics-government/2026-10-28/who-is-abdul-el-sayed-michigan-us-senate-race"
+          }
+        },
+        {
+          "person": "osborn",
+          "pos": "support",
+          "date": "2024",
+          "why": "His 2024 campaign platform: \"Pass the PRO Act,\" with $50,000 fines for labor-law violations.",
+          "src": {
+            "t": "OnTheIssues: Dan Osborn on Jobs (from his 2024 campaign site)",
+            "u": "https://ontheissues.org/domestic/Dan_Osborn_Jobs.htm"
+          }
         }
       ]
     },
