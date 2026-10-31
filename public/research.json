@@ -54307,7 +54307,11 @@
         "sullivan": "Nay",
         "marshall": "Nay",
         "ricketts": "Not in office",
-        "husted": "Not in office"
+        "husted": "Not in office",
+        "ossoff": "Yea",
+        "booker": "Yea",
+        "hickenlooper": "Yea",
+        "brown": "Yea"
       },
       "bill": {
         "measure": "H.R. 7 (117th Congress)",
@@ -56739,7 +56743,15 @@
         "kaptur": "Nay",
         "mgp": "Not in office",
         "gonzalez": "Nay",
-        "castor": "Nay"
+        "castor": "Nay",
+        "hinson": "Nay",
+        "pappas": "Nay",
+        "barr": "Nay",
+        "moore": "Yea",
+        "hageman": "Not in office",
+        "hern": "Yea",
+        "letlow": "Not in office",
+        "mcollins": "Not in office"
       },
       "bill": {
         "measure": "Objection to counting Pennsylvania's electoral votes (2020 presidential election), joint session of Jan. 6-7, 2021",
@@ -56783,7 +56795,15 @@
         "kaptur": "Yea",
         "mgp": "Not in office",
         "gonzalez": "Yea",
-        "castor": "Yea"
+        "castor": "Yea",
+        "hinson": "Nay",
+        "pappas": "Yea",
+        "barr": "Nay",
+        "moore": "Nay",
+        "hageman": "Not in office",
+        "hern": "Nay",
+        "letlow": "Not in office",
+        "mcollins": "Not in office"
       },
       "bill": {
         "measure": "H.Res. 24 (117th Congress)",
@@ -56827,7 +56847,15 @@
         "kaptur": "Yea",
         "mgp": "Yea",
         "gonzalez": "Yea",
-        "castor": "Yea"
+        "castor": "Yea",
+        "hinson": "Yea",
+        "pappas": "Yea",
+        "barr": "Yea",
+        "moore": "Nay",
+        "hageman": "Nay",
+        "hern": "Nay",
+        "letlow": "Yea",
+        "mcollins": "Nay"
       },
       "bill": {
         "measure": "H.R. 3746 (118th Congress)",
@@ -56865,7 +56893,15 @@
         "kaptur": "Yea",
         "mgp": "Yea",
         "gonzalez": "Yea",
-        "castor": "Yea"
+        "castor": "Yea",
+        "hinson": "Yea",
+        "pappas": "Yea",
+        "barr": "Yea",
+        "moore": "Nay",
+        "hageman": "Nay",
+        "hern": "Nay",
+        "letlow": "Nay",
+        "mcollins": "Nay"
       },
       "bill": {
         "measure": "H.R. 8035 (118th Congress)",
@@ -56911,7 +56947,14 @@
         "millermeeks": "Not in office",
         "hinson": "Not in office",
         "moore": "Not in office",
-        "letlow": "Not in office"
+        "letlow": "Not in office",
+        "perry": "Nay",
+        "kaptur": "Yea",
+        "gonzalez": "Yea",
+        "castor": "Yea",
+        "pappas": "Yea",
+        "barr": "Nay",
+        "hern": "Nay"
       },
       "bill": {
         "measure": "H.R. 2474 (116th Congress)",
@@ -56951,7 +56994,18 @@
         "evans": "Not in office",
         "mgp": "Not in office",
         "hageman": "Not in office",
-        "mcollins": "Not in office"
+        "mcollins": "Not in office",
+        "perry": "Nay",
+        "millermeeks": "Nay",
+        "kaptur": "Yea",
+        "gonzalez": "Yea",
+        "castor": "Yea",
+        "hinson": "Nay",
+        "pappas": "Yea",
+        "barr": "Nay",
+        "moore": "Nay",
+        "hern": "Nay",
+        "letlow": "Not in office"
       },
       "bill": {
         "measure": "H.R. 842 (117th Congress)",
@@ -56991,7 +57045,18 @@
         "evans": "Not in office",
         "mgp": "Not in office",
         "hageman": "Not in office",
-        "mcollins": "Not in office"
+        "mcollins": "Not in office",
+        "perry": "Nay",
+        "millermeeks": "Nay",
+        "kaptur": "Yea",
+        "gonzalez": "Yea",
+        "castor": "Yea",
+        "hinson": "Nay",
+        "pappas": "Yea",
+        "barr": "Nay",
+        "moore": "Nay",
+        "hern": "Nay",
+        "letlow": "Nay"
       },
       "bill": {
         "measure": "H.R. 7 (117th Congress)",
@@ -191919,7 +191984,15 @@
           "t": "CBO: H.R. 6703, Lower Health Care Premiums for All Americans Act",
           "u": "https://www.cbo.gov/publication/61959"
         }
-      }
+      },
+      "cosponsors": [
+        {
+          "person": "millermeeks",
+          "bill": "119-hr-6703",
+          "sponsor": true,
+          "date": "2025-12-15"
+        }
+      ]
     },
     {
       "id": "119-hr-1834",
@@ -191959,6 +192032,18 @@
             "t": "AFL-CIO letter opposing the GENIUS and CLARITY Acts (July 14, 2025)",
             "u": "https://democrats-financialservices.house.gov/UploadedFiles/7.14.25_AFLR-CIO_Ltr.pdf"
           }
+        }
+      ],
+      "cosponsors": [
+        {
+          "person": "ricketts",
+          "bill": "119-s-1582",
+          "date": "2025-06-17"
+        },
+        {
+          "person": "sullivan",
+          "bill": "119-s-1582",
+          "date": "2025-05-07"
         }
       ]
     },
@@ -192118,7 +192203,149 @@
             "u": "https://projects.propublica.org/represent/bills/117/hr842"
           }
         }
-      }
+      },
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "116-s-1306",
+          "date": "2019-05-02"
+        },
+        {
+          "person": "booker",
+          "bill": "117-s-420",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "booker",
+          "bill": "118-s-567",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "brown",
+          "bill": "116-s-1306",
+          "date": "2019-05-02"
+        },
+        {
+          "person": "brown",
+          "bill": "117-s-420",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "brown",
+          "bill": "118-s-567",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "castor",
+          "bill": "116-hr-2474",
+          "date": "2019-06-13"
+        },
+        {
+          "person": "castor",
+          "bill": "117-hr-842",
+          "date": "2021-02-04"
+        },
+        {
+          "person": "castor",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "castor",
+          "bill": "119-hr-20",
+          "date": "2025-03-05"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "116-hr-2474",
+          "date": "2019-05-24"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "117-hr-842",
+          "date": "2021-02-04"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "hickenlooper",
+          "bill": "117-s-420",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "hickenlooper",
+          "bill": "118-s-567",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "kaptur",
+          "bill": "116-hr-2474",
+          "date": "2019-05-02"
+        },
+        {
+          "person": "kaptur",
+          "bill": "117-hr-842",
+          "date": "2021-02-04"
+        },
+        {
+          "person": "kaptur",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "kaptur",
+          "bill": "119-hr-20",
+          "date": "2025-03-05"
+        },
+        {
+          "person": "mgp",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "mgp",
+          "bill": "119-hr-20",
+          "date": "2025-03-05"
+        },
+        {
+          "person": "ossoff",
+          "bill": "117-s-420",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "ossoff",
+          "bill": "118-s-567",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "pappas",
+          "bill": "116-hr-2474",
+          "date": "2019-06-12"
+        },
+        {
+          "person": "pappas",
+          "bill": "117-hr-842",
+          "date": "2021-02-04"
+        },
+        {
+          "person": "pappas",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        },
+        {
+          "person": "pappas",
+          "bill": "119-hr-20",
+          "date": "2025-03-05"
+        },
+        {
+          "person": "peltola",
+          "bill": "118-hr-20",
+          "date": "2023-02-28"
+        }
+      ]
     },
     {
       "id": "117-s-53",
@@ -192156,7 +192383,34 @@
             "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/03_05_2021_Senate_Floor.htm"
           }
         }
-      }
+      },
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "117-s-53",
+          "date": "2021-01-26"
+        },
+        {
+          "person": "brown",
+          "bill": "117-s-53",
+          "date": "2021-01-26"
+        },
+        {
+          "person": "castor",
+          "bill": "117-hr-603",
+          "date": "2021-01-28"
+        },
+        {
+          "person": "kaptur",
+          "bill": "117-hr-603",
+          "date": "2021-01-28"
+        },
+        {
+          "person": "ossoff",
+          "bill": "117-s-53",
+          "date": "2021-01-26"
+        }
+      ]
     },
     {
       "id": "117-hr-7",
@@ -192195,6 +192449,48 @@
             "u": "https://assets.nfib.com/nfibcom/04-14-21-NFIB-Key-Vote-in-opposition-to-HR-7-Paycheck-Fairness-Act.pdf"
           }
         }
+      ],
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "117-s-205",
+          "date": "2021-02-03"
+        },
+        {
+          "person": "brown",
+          "bill": "117-s-205",
+          "date": "2021-02-03"
+        },
+        {
+          "person": "castor",
+          "bill": "117-hr-7",
+          "date": "2021-01-28"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "117-hr-7",
+          "date": "2021-01-28"
+        },
+        {
+          "person": "hickenlooper",
+          "bill": "117-s-205",
+          "date": "2021-02-03"
+        },
+        {
+          "person": "kaptur",
+          "bill": "117-hr-7",
+          "date": "2021-01-28"
+        },
+        {
+          "person": "ossoff",
+          "bill": "117-s-205",
+          "date": "2021-02-03"
+        },
+        {
+          "person": "pappas",
+          "bill": "117-hr-7",
+          "date": "2021-01-28"
+        }
       ]
     },
     {
@@ -192212,7 +192508,104 @@
             "u": "https://www.govinfo.gov/app/details/BILLS-119hr1232ih"
           }
         }
-      }
+      },
+      "cosponsors": [
+        {
+          "person": "barr",
+          "bill": "118-hr-1200",
+          "date": "2023-07-17"
+        },
+        {
+          "person": "barr",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "hageman",
+          "bill": "118-hr-1200",
+          "date": "2023-03-22"
+        },
+        {
+          "person": "hageman",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "hern",
+          "bill": "118-hr-1200",
+          "date": "2023-08-29"
+        },
+        {
+          "person": "hern",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "hinson",
+          "bill": "118-hr-1200",
+          "date": "2023-02-27"
+        },
+        {
+          "person": "hinson",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "letlow",
+          "bill": "118-hr-1200",
+          "date": "2023-04-13"
+        },
+        {
+          "person": "letlow",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "mcollins",
+          "bill": "118-hr-1200",
+          "date": "2023-12-12"
+        },
+        {
+          "person": "mcollins",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "millermeeks",
+          "bill": "118-hr-1200",
+          "date": "2024-10-04"
+        },
+        {
+          "person": "millermeeks",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "moore",
+          "bill": "118-hr-1200",
+          "date": "2023-02-27"
+        },
+        {
+          "person": "moore",
+          "bill": "119-hr-1232",
+          "date": "2025-03-31"
+        },
+        {
+          "person": "perry",
+          "bill": "118-hr-1200",
+          "date": "2023-02-27"
+        },
+        {
+          "person": "perry",
+          "bill": "119-hr-1232",
+          "date": "2025-02-12"
+        },
+        {
+          "person": "ricketts",
+          "bill": "119-s-533",
+          "date": "2025-02-12"
+        }
+      ]
     }
   ],
   "featured": [
