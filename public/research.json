@@ -57057,7 +57057,10 @@
         "millermeeks": "Not in office",
         "hinson": "Not in office",
         "moore": "Not in office",
-        "letlow": "Not in office"
+        "letlow": "Not in office",
+        "perry": "Nay",
+        "barr": "Nay",
+        "hern": "Nay"
       },
       "bill": {
         "measure": "H.R. 7 (116th Congress)",
@@ -57100,7 +57103,9 @@
         "millermeeks": "Not in office",
         "hinson": "Not in office",
         "moore": "Not in office",
-        "letlow": "Not in office"
+        "letlow": "Not in office",
+        "gonzalez": "Yea",
+        "pappas": "Yea"
       },
       "bill": {
         "measure": "H.R. 582 (116th Congress)",
@@ -192844,8 +192849,28 @@
       "cosponsors": [
         {
           "person": "booker",
+          "bill": "115-s-1242",
+          "date": "2017-05-25"
+        },
+        {
+          "person": "booker",
+          "bill": "116-s-150",
+          "date": "2019-01-16"
+        },
+        {
+          "person": "booker",
           "bill": "117-s-53",
           "date": "2021-01-26"
+        },
+        {
+          "person": "brown",
+          "bill": "115-s-1242",
+          "date": "2017-05-25"
+        },
+        {
+          "person": "brown",
+          "bill": "116-s-150",
+          "date": "2019-01-16"
         },
         {
           "person": "brown",
@@ -192854,8 +192879,23 @@
         },
         {
           "person": "castor",
+          "bill": "116-hr-582",
+          "date": "2019-01-16"
+        },
+        {
+          "person": "castor",
           "bill": "117-hr-603",
           "date": "2021-01-28"
+        },
+        {
+          "person": "kaptur",
+          "bill": "115-hr-15",
+          "date": "2017-05-25"
+        },
+        {
+          "person": "kaptur",
+          "bill": "116-hr-582",
+          "date": "2019-01-16"
         },
         {
           "person": "kaptur",
@@ -192916,8 +192956,38 @@
       "cosponsors": [
         {
           "person": "booker",
+          "bill": "114-s-862",
+          "date": "2015-04-13"
+        },
+        {
+          "person": "booker",
+          "bill": "115-s-819",
+          "date": "2017-04-04"
+        },
+        {
+          "person": "booker",
+          "bill": "116-s-270",
+          "date": "2019-01-30"
+        },
+        {
+          "person": "booker",
           "bill": "117-s-205",
           "date": "2021-02-03"
+        },
+        {
+          "person": "brown",
+          "bill": "114-s-862",
+          "date": "2015-03-25"
+        },
+        {
+          "person": "brown",
+          "bill": "115-s-819",
+          "date": "2017-04-04"
+        },
+        {
+          "person": "brown",
+          "bill": "116-s-270",
+          "date": "2019-01-30"
         },
         {
           "person": "brown",
@@ -192926,8 +192996,33 @@
         },
         {
           "person": "castor",
+          "bill": "114-hr-1619",
+          "date": "2015-03-25"
+        },
+        {
+          "person": "castor",
+          "bill": "115-hr-1869",
+          "date": "2017-04-04"
+        },
+        {
+          "person": "castor",
+          "bill": "116-hr-7",
+          "date": "2019-01-30"
+        },
+        {
+          "person": "castor",
           "bill": "117-hr-7",
           "date": "2021-01-28"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "115-hr-1869",
+          "date": "2017-04-04"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "116-hr-7",
+          "date": "2019-01-30"
         },
         {
           "person": "gonzalez",
@@ -192941,6 +193036,21 @@
         },
         {
           "person": "kaptur",
+          "bill": "114-hr-1619",
+          "date": "2015-03-25"
+        },
+        {
+          "person": "kaptur",
+          "bill": "115-hr-1869",
+          "date": "2017-04-04"
+        },
+        {
+          "person": "kaptur",
+          "bill": "116-hr-7",
+          "date": "2019-01-30"
+        },
+        {
+          "person": "kaptur",
           "bill": "117-hr-7",
           "date": "2021-01-28"
         },
@@ -192948,6 +193058,11 @@
           "person": "ossoff",
           "bill": "117-s-205",
           "date": "2021-02-03"
+        },
+        {
+          "person": "pappas",
+          "bill": "116-hr-7",
+          "date": "2019-01-30"
         },
         {
           "person": "pappas",
@@ -192976,6 +193091,11 @@
         }
       },
       "cosponsors": [
+        {
+          "person": "barr",
+          "bill": "115-hr-785",
+          "date": "2017-02-06"
+        },
         {
           "person": "barr",
           "bill": "118-hr-1200",
@@ -193027,6 +193147,11 @@
           "date": "2025-02-12"
         },
         {
+          "person": "marshall",
+          "bill": "115-hr-785",
+          "date": "2017-09-27"
+        },
+        {
           "person": "mcollins",
           "bill": "118-hr-1200",
           "date": "2023-12-12"
@@ -193055,6 +193180,11 @@
           "person": "moore",
           "bill": "119-hr-1232",
           "date": "2025-03-31"
+        },
+        {
+          "person": "perry",
+          "bill": "115-hr-785",
+          "date": "2017-10-05"
         },
         {
           "person": "perry",
