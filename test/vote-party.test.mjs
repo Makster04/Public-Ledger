@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {voteArgs,savedVotes,csvRows,resultCounts,totalsAgree,voteviewParty} from '../scripts/build-vote-party.mjs';
 import {voteURL} from '../src/sources.mjs';
-import {votePositions} from '../scripts/fill-vote-positions.mjs';
+import {votePositions,houseVotePositions} from '../scripts/fill-vote-positions.mjs';
+import {cosponsorRecords,identical} from '../scripts/fill-bill-cosponsors.mjs';
 
 test('each saved vote maps to its official roll-call file',()=>{
   assert.deepEqual(voteArgs({id:'119-1-372'},'S'),{chamber:'S',congress:119,session:1,number:372});
@@ -58,4 +59,21 @@ test('senators\' positions from Voteview fill only the missing ones, by Bioguide
   assert.equal(r.unread['117-1-999'],'not in Voteview yet');
   const r2=votePositions({rollcalls,members,votes},[{...saved[0],pos:{}}],[{id:'ricketts',bioguide:'R000618'}]);
   assert.deepEqual(r2.fill,{'117-1-223':{ricketts:'Not in office'}},'not a senator in that Congress');
+});
+
+test('House positions come from the Clerk\'s file by Bioguide ID; someone not on it wasn\'t a member then',()=>{
+  const normalized={date:'2021-03-09',positions:{kaptur:'Aye',perry:'No',castor:'Not Voting'}};
+  const tracked=['kaptur','perry','castor','lawler'].map(id=>({id,bioguide:id.toUpperCase()}));
+  const r=houseVotePositions(normalized,{id:'h-117-1-070',date:'2021-03-09',pos:{perry:'Yea'}},tracked);
+  assert.deepEqual(r.fill,{kaptur:'Yea',castor:'Not voting',lawler:'Not in office'});
+  assert.deepEqual(r.differ,[{vote:'h-117-1-070',person:'perry',research:'Yea',voteview:'Nay'}]);
+  assert.match(houseVotePositions(normalized,{id:'x',date:'2021-03-10',pos:{}},tracked).unread,/dates it/);
+});
+
+test('cosponsors: profiled people only, the sponsor marked, a withdrawn cosponsorship left out, identical bills followed',()=>{
+  const people=new Map([['B001288','booker'],['B000944','brown'],['C001035','collins']]);
+  const recs=cosponsorRecords({'117-s-420':{sponsor:'B000944',introduced:'2021-02-24',cosponsors:[{bioguideId:'B001288',sponsorshipDate:'2021-02-24'},{bioguideId:'C001035',sponsorshipDate:'2021-03-01',sponsorshipWithdrawnDate:'2021-03-05'},{bioguideId:'X000001'}]},
+    '117-hr-842':{sponsor:'S000185',cosponsors:[{bioguideId:'B001288'}]}},people);
+  assert.deepEqual(recs,[{person:'booker',bill:'117-hr-842',date:null},{person:'booker',bill:'117-s-420',date:'2021-02-24'},{person:'brown',bill:'117-s-420',sponsor:true,date:'2021-02-24'}]);
+  assert.deepEqual(identical([{congress:117,type:'S',number:420,relationshipDetails:[{type:'Identical bill'}]},{congress:117,type:'HR',number:5,relationshipDetails:[{type:'Related bill'}]},{congress:116,type:'S',number:1306,relationshipDetails:[{type:'Identical bill'}]}],117),['117-s-420']);
 });

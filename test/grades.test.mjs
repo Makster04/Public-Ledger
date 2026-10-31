@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
+import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,ACCESS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
 const data=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=data.members.concat(data.cands,data.featured||[]);
 const st=(...a)=>a.map(assessment=>({assessment}));
@@ -65,6 +65,10 @@ test('a bill\'s score: who gains and who took a side count half each, and opposi
   // The building-trades unions and the contractors' group count on construction-pay measures only.
   assert.equal(billScore({sides:[p('nabtu','oppose'),p('abc','support')]}).status,'none');
   assert.equal(billScore({construction:true,sides:[p('nabtu','oppose'),p('abc','support')]}).score,-100);
+  // Access to a basic need counts with money in who gains; with both, their average.
+  assert.equal(billScore({access:g(100),sides:[p('aflcio','support')]}).score,100,'access alone is a who-gains study');
+  assert.deepEqual(['gainsPart','moneyPart','accessPart'].map(k=>billScore({gains:g(-100),access:g(-50)})[k]),[-75,-100,-50]);
+  assert.equal(billScore({gains:g(50),access:g(-100)}).gainsPart,-25,'money and access pointing opposite ways are averaged');
   // An amendment is keyed on its own, so its vote isn't merged with the bill's.
   assert.equal(billKeyFromText('S.Amdt. 1858 (117th Congress)'),'117-samdt-1858');
 });
@@ -74,8 +78,12 @@ test('every Workers > Profit bill has a valid ID, cited evidence and known group
   for(const b of data.bills||[]){
     assert.ok(/^(\d+-[a-z]+-\d+|eo-\d+)$/.test(b.id),b.id);assert.ok(b.title,b.id+' needs a title');assert.ok(!b.pvp,b.id+': the side comes from its score now');
     if(b.gains){assert.ok(String(b.gains.step) in GAINS_STEPS,b.id+' who-gains step');assert.ok(cited(b.gains)&&b.gains.by,b.id+' who-gains needs a reason, an analyst and a source');}
+    if(b.access){assert.ok(String(b.access.step) in ACCESS_STEPS,b.id+' access step');assert.ok(cited(b.access)&&b.access.by,b.id+' access needs a reason, an analyst and a source');}
+    for(const k of b.versions||[])assert.ok(/^\d+-[a-z]+-\d+$/.test(k)&&k!==b.id,b.id+': bad version '+k);
+    for(const st of b.stated||[]){assert.ok(st.person&&['support','oppose'].includes(st.pos),b.id+' statement');assert.ok(cited(st),b.id+': '+st.person+'\'s statement needs a reason and a source');}
+    for(const c of b.cosponsors||[])assert.ok(c.person&&/^\d+-[a-z]+-\d+$/.test(c.bill),b.id+' cosponsor record');
     for(const s of b.sides||[]){assert.ok(BILL_GROUPS[s.group],b.id+': unknown group '+s.group);assert.ok(['support','oppose'].includes(s.pos),b.id);assert.ok(cited(s),b.id+': '+s.group+' needs a reason and a source');}
-    assert.ok(b.gains||b.sides?.length,b.id+' needs some evidence');
+    assert.ok(b.gains||b.access||b.sides?.length||b.context?.note,b.id+' needs some evidence, or a note saying why there is none');
   }
 });
 test('My alignment: every issue has a statement to agree or disagree with, and a known category',()=>{
@@ -207,4 +215,21 @@ test('Workers > Profit: a president\'s signature or order takes the bill\'s side
   const marks=new Map([['119-hr-1',mark('profit')],['118-s-2',mark('people')],['eo-14251',mark('profit')]]);
   const v=pvpScore(pvpActions(marks,[],[{bill:'119-hr-1',kind:'signed'},{bill:'118-s-2',kind:'vetoed'},{bill:'eo-14251',kind:'order'},{bill:'1-hr-9',kind:'signed'}]));
   assert.deepEqual(v.scored.map(a=>a.took),['profit','profit','profit']);assert.equal(v.pct,0);
+});
+
+test('Workers > Profit: versions of a bill count once, the latest vote wins, and a statement counts half and gives way to a vote',()=>{
+  const m={...mark('people',1),id:'117-hr-842'},marks=new Map([['117-hr-842',m],['118-hr-20',m],['119-hr-20',m]]);
+  // A cosponsorship of one version and a vote on another: one credit, the vote.
+  let r=pvpScore(pvpActions(marks,[{bill:'117-hr-842',pos:'Nay'}],[{bill:'119-hr-20',kind:'cosponsored'}]));
+  assert.deepEqual([r.n,r.scored[0].kind,r.scored[0].took],[1,'vote','profit']);
+  // Two cosponsorships of different versions still count once.
+  r=pvpScore(pvpActions(marks,[],[{bill:'118-hr-20',kind:'cosponsored'},{bill:'119-hr-20',kind:'cosponsored'}]));
+  assert.equal(r.n,1);
+  // A statement alone counts half the bill's strength; opposing takes the other side.
+  r=pvpScore(pvpActions(marks,[],[],[{bill:'117-hr-842',pos:'oppose'}]));
+  assert.deepEqual([r.scored[0].took,r.scored[0].points,r.profit],['profit',0.5,0.5]);
+  r=pvpScore(pvpActions(marks,[{bill:'117-hr-842',pos:'Yea'}],[],[{bill:'117-hr-842',pos:'oppose'}]));
+  assert.deepEqual([r.n,r.scored[0].kind,r.people],[1,'vote',1],'the vote replaces the statement');
+  r=pvpScore(pvpActions(marks,[],[{bill:'118-hr-20',kind:'cosponsored'}],[{bill:'117-hr-842',pos:'oppose'}]));
+  assert.equal(r.scored[0].kind,'cosponsored','a cosponsorship wins over a statement');
 });
