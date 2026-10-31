@@ -3,7 +3,7 @@
 // create, how to fetch one page, and how to summarize the validated records into the published snapshot.
 // Response formats follow each source's published documentation; live responses need your keys and are not verified
 // here. Every adapter checks the identity and shape of what comes back and refuses to publish anything else.
-import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader} from './sources.mjs';
+import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader,partyTally} from './sources.mjs';
 import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
@@ -102,6 +102,7 @@ export function normalizeHouseApiVote(d,args,people){
   const date=day(v.startDate);need(date&&Number(date.slice(0,4))===Number(args.year),'House vote date mismatch');
   const measure=v.legislationType?`${v.legislationType} ${v.legislationNumber}`:null;
   return {id:`h-${args.year}-${args.number}`,chamber:'H',number:Number(args.number),date,title:measure?`${measure}: ${v.voteQuestion||''}`.trim():v.voteQuestion,question:v.voteQuestion,result:v.result,positions,
+    byParty:partyTally(members.map(m=>[m.voteParty,m.voteCast])),
     bill:v.legislationType?billKey(v.congress,v.legislationType+v.legislationNumber):null,via:'Congress.gov'};
 }
 export const houseApiURL=args=>`https://api.congress.gov/v3/house-vote/${congressOf(args.year)}/${args.year%2?1:2}/${args.number}/members?format=json`;

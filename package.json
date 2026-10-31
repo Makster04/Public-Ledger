@@ -15,6 +15,7 @@
     "social:bluesky": "node scripts/find-bluesky.mjs",
     "senate:build": "node scripts/build-senate.mjs",
     "exec:build": "node scripts/build-exec-trades.mjs",
+    "votes:party": "node scripts/build-vote-party.mjs",
     "cloudflare:preview": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply public-ledger --remote"

@@ -11,7 +11,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Kept as an analysis, not a grade | Choice A. Labeled **Correlation, not cause**. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Insider Trading Index 📈 shown beside the trade list | The same number as the Ethics tab, with a link to it. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Money sources built | Donors by employer and by month, lobbying, foreign-agent registrations, contracts, rule comments, and the groups behind outside spending. Some wait on their keys. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Donor Loyalty Index 🤝 | Build next. The Corporation Compromised Index depends on it. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Donor Loyalty Index 🤝 | On the Money & Influence tab, beside Vote Donor Alignment, with each funder's difference in a table. It needs the votes' party totals: run `npm run votes:party` once on your computer. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Super PAC Dependence Index 💸 | Replaces the withdrawn super PAC share. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Lobbyist Overlap Index 🏛️ | |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Contracts for Donors Index 📝 | Needs a table matching agencies to the committees that oversee them. |
@@ -45,7 +45,14 @@ Not a separate index:
 
 **Minimum:** 5 compared votes.
 
+**Details:**
+- **Party average:** how the rest of their party in the chamber voted on each vote, from the official roll call's party totals, with their own vote left out.
+- **Independents:** compared with the party they caucus with.
+- **Money:** what each funder gave to the campaign plus what it spent for them. A group that only spent against them carries no weight.
+- **No number:** for a president (who signs bills rather than voting), and until the party totals are loaded.
+
 **Keys and sources:**
+- **Party totals:** the official Senate and House Clerk roll calls, no key. `npm run votes:party` (`scripts/build-vote-party.mjs`) reads them for the saved votes into `public/vote-party.json`, and new roll calls the refresh reads keep their own.
 - **Money from each funder:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for contributions and outside spending, plus the FEC's bulk files for earlier years (no key).
 - **Funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.

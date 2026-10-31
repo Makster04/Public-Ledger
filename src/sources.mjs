@@ -206,6 +206,15 @@ export function summarizeTransactions(rows,kind,args,through) {
 }
 
 export function voteURL(args) {return args.chamber==='S'?`https://www.senate.gov/legislative/LIS/roll_call_votes/vote${args.congress}${args.session}/vote_${args.congress}_${args.session}_${String(args.number).padStart(5,'0')}.xml`:`https://clerk.house.gov/evs/${args.year}/roll${String(args.number).padStart(3,'0')}.xml`;}
+// A recorded vote as Yea or Nay where it means one ("Aye", "No", "Guilty", "Not Guilty"); anything else as written.
+export const castOf=v=>({yea:'Yea',aye:'Yea',yes:'Yea',guilty:'Yea',nay:'Nay',no:'Nay','not guilty':'Nay'})[String(v??'').trim().toLowerCase()]||String(v??'').trim();
+// How each party voted, from every member in the official file: {R:{Yea:n,Nay:n,...},D:{...},I:{...}}. It lets a
+// person's vote be compared with the rest of their party's (the Donor Loyalty Index).
+export function partyTally(members){
+  const out={};
+  for(const [party,cast] of members){const p=String(party??'').trim().toUpperCase().slice(0,1),c=castOf(cast);if(!p||!c)continue;(out[p]||={})[c]=(out[p][c]||0)+1;}
+  return out;
+}
 export function normalizeVote(document,args,people) {
   let result;
   if(args.chamber==='S') {
@@ -218,13 +227,14 @@ export function normalizeVote(document,args,people) {
     }
     const date=new Date(v.vote_date.replace(/,\s+\d\d?:\d\d.*$/,'')+' UTC');
     if(!Number.isFinite(+date))throw new SourceError('Senate vote date invalid');
-    result={id:`s-${args.congress}-${args.session}-${args.number}`,chamber:'S',number:Number(args.number),date:date.toISOString().slice(0,10),title:v.vote_title||v.vote_document_text||v.question,question:v.vote_question_text||v.question,result:v.vote_result_text||v.vote_result,positions};
+    result={id:`s-${args.congress}-${args.session}-${args.number}`,chamber:'S',number:Number(args.number),date:date.toISOString().slice(0,10),title:v.vote_title||v.vote_document_text||v.question,question:v.vote_question_text||v.question,result:v.vote_result_text||v.vote_result,positions,byParty:partyTally(members.map(m=>[m.party,m.vote_cast]))};
   }else{
     const root=document['rollcall-vote'],v=root?.['vote-metadata'];if(!v||Number(v['rollcall-num'])!==Number(args.number))throw new SourceError('House vote identity mismatch');
     const members=list(root['vote-data']?.['recorded-vote']);if(!members.length)throw new SourceError('House vote has no member records');
     const positions={};for(const p of people.filter(p=>p.bioguide)){const m=members.find(m=>m.legislator?.['@_name-id']===p.bioguide);if(m)positions[p.id]=m.vote;}
     const date=new Date(v['action-date']+' UTC');if(!Number.isFinite(+date)||date.getUTCFullYear()!==Number(args.year))throw new SourceError('House vote date mismatch');
-    result={id:`h-${args.year}-${args.number}`,chamber:'H',number:Number(args.number),date:date.toISOString().slice(0,10),title:v['vote-desc']||v['legis-num']||v['vote-question'],question:v['vote-question'],result:v['vote-result'],positions};
+    result={id:`h-${args.year}-${args.number}`,chamber:'H',number:Number(args.number),date:date.toISOString().slice(0,10),title:v['vote-desc']||v['legis-num']||v['vote-question'],question:v['vote-question'],result:v['vote-result'],positions,
+      byParty:partyTally(members.map(m=>[m.legislator?.['@_party'],m.vote]))};
   }
   result.source=voteURL(args);return result;
 }
