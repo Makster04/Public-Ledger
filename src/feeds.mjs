@@ -27,6 +27,11 @@ const profiled=c=>c.people.filter(p=>p.ids);
 const congressOf=year=>Math.floor((year-1789)/2)+1;
 const BILL_PATH={HR:'house-bill',S:'senate-bill',HJRES:'house-joint-resolution',SJRES:'senate-joint-resolution',HCONRES:'house-concurrent-resolution',SCONRES:'senate-concurrent-resolution',HRES:'house-resolution',SRES:'senate-resolution'};
 const billPage=(congress,type,number)=>`https://www.congress.gov/bill/${congress}th-congress/${BILL_PATH[String(type).toUpperCase()]}/${number}`;
+// How a bill number is written in a lobbying report's search ("H.R. 5376").
+const BILL_ABBR={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.'};
+// A client that is a labor union, by its name (a lobbying report doesn't say what kind of group the client is).
+const NOT_UNION=/credit unions?|union pacific|western union|union bank|union carbide|european union|civil liberties union|taxpayers union|union of concerned|union league/i;
+export const isUnion=name=>!NOT_UNION.test(String(name||''))&&/\b(unions?|brotherhood|afl-cio|teamsters|seiu|afscme|steelworkers|uaw|ufcw|ibew|machinists|nurses united|national education association|communications workers|federation of (?:teachers|government employees|state, county|labor|musicians)|laborers'? international|united (?:auto|food|mine|farm) workers)\b/i.test(String(name||''));
 // Bill numbers named in free text, such as a lobbying report ("H.R. 1", "S.J.Res. 12").
 export function billsInText(text,congress){
   const out=new Set(),re=/(?<![\w.])(H\.?\s?R|H\.?\s?J\.?\s?Res|S\.?\s?J\.?\s?Res|H\.?\s?Con\.?\s?Res|S\.?\s?Con\.?\s?Res|H\.?\s?Res|S)\.?\s?(\d{1,5})\b/gi;
@@ -117,7 +122,7 @@ export const FEEDS={
     },
     summarize:(rows,a)=>({count:rows.length,congress:a.congress,rows:top(rows,100),rowLimit:100})},
 
-  // Key bills: the bills marked People or Profit and the bills behind the selected votes (config.keyBills).
+  // Key bills: the Workers > Profit bills and the bills behind the selected votes (config.keyBills).
   bill:{host:'api.congress.gov',label:'Bill details',tab:'match',
     jobs:c=>(c.keyBills||[]).map(k=>({id:`bill:${k}`,subject:k,args:{bill:k}})),
     async page(job,a,env){
@@ -624,6 +629,31 @@ export const FEEDS={
       return {rows,next:i+1<a.orgs.length?String(i+1):null};
     },
     summarize:rows=>({count:rows.length,rows:top(rows,150),rowLimit:150})},
+  // Lobbying reports that name a key bill (LDA.gov), in the two years of its Congress: how many there are, and of the
+  // reports read (up to 100 a year), how many were filed for unions. Shown with the Workers > Profit bill scores as
+  // context, never scored: a report says a client lobbied on the bill, not which side it was on.
+  'bill-lobbying':{host:'lda.gov',label:'Lobbying on key bills',tab:'pvp',scope:'global',every:WEEK,
+    jobs:c=>(c.keyBills||[]).filter(k=>BILL_ABBR[k.split('-')[1]]).map(k=>({id:`bill-lobbying:${k}`,subject:k,args:{bill:k}})),
+    async page(job,a,env){
+      const [congress,type,number]=a.bill.split('-'),first=1787+2*Number(congress),cur=job.cursor?JSON.parse(job.cursor):{year:first,page:1};
+      const u=new URL('https://lda.gov/api/v1/filings/');
+      for(const [k,v] of Object.entries({filing_specific_lobbying_issues:`${BILL_ABBR[type]} ${number}`,filing_year:cur.year,page_size:25,page:cur.page}))u.searchParams.set(k,v);
+      const d=await requestSource(u.href,env,{allow404:true});
+      const results=list(d?.results).filter(f=>f.filing_uuid);
+      const rows=results.map(f=>{const acts=list(f.lobbying_activities),client=f.client?.name||null;
+        return {id:f.filing_uuid,year:Number(f.filing_year)||cur.year,total:Number(d.count)||0,client,registrant:f.registrant?.name||null,union:isUnion(client),
+          named:acts.some(x=>billsInText(x.description,Number(congress)).includes(a.bill)),url:https(f.filing_document_url)};});
+      // The search must have matched on the bill: if most reports returned don't name it, the filter wasn't applied.
+      need(rows.length<10||rows.filter(r=>r.named).length>=rows.length/2,`LDA.gov did not filter reports by ${BILL_ABBR[type]} ${number}; nothing counted`);
+      const next=cur.page<4&&d?.next?{year:cur.year,page:cur.page+1}:cur.year<first+1?{year:first+1,page:1}:null;
+      return {rows,next:next&&JSON.stringify(next)};
+    },
+    summarize:(rows,a)=>{
+      const named=rows.filter(r=>r.named),byYear={};for(const r of rows)byYear[r.year]=Math.max(byYear[r.year]||0,r.total);
+      const clients=list=>[...new Set(list.map(r=>r.client).filter(Boolean))];
+      return {bill:a.bill,total:Object.values(byYear).reduce((t,n)=>t+n,0),read:named.length,unions:named.filter(r=>r.union).length,others:named.filter(r=>!r.union).length,
+        unionClients:clients(named.filter(r=>r.union)).slice(0,8),otherClients:clients(named.filter(r=>!r.union)).slice(0,8)};
+    }},
   fara:{host:'efile.fara.gov',label:'Foreign agent registrations',tab:'finance',scope:'global',every:WEEK,
     jobs:()=>[{id:'fara',subject:'FARA',args:{}}],
     async page(job,a,env){

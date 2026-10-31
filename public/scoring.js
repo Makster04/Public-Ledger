@@ -1,7 +1,7 @@
 // Each person's three reviewed grades (Promises delivered, Ethics, Workers > Profit) from the reviewed research, the
 // committee lists and the committee sectors. The page and the monthly recalculation (scripts/scores-monthly.mjs) both
 // use this, so they always agree. Your match is not here: it depends on each visitor's own choices.
-import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions} from './grades.js';
+import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore} from './grades.js';
 import {tradesInDonors} from './influence.js';
 
 export const voteBill=v=>billKeyFromText((v.bill||{}).measure);
@@ -11,8 +11,10 @@ export function executiveActions(s){
 }
 export function makeScorer(data,committees={committees:{},people:{}},sectors={}){
   const votes=data.votes.concat(data.hvotes);
-  // Workers > Profit: bills marked People or Profit (research.json "bills"), and each person's votes and sponsorships on them.
-  const marks=new Map((data.bills||[]).filter(b=>b.pvp==='people'||b.pvp==='profit').map(b=>[b.id,b]));
+  // Workers > Profit: every bill on file (research.json "bills") with its score, and the scored ones (marks), which each
+  // person's votes and sponsorships count on.
+  const bills=(data.bills||[]).map(b=>Object.assign({},b,billScore(b)));
+  const marks=new Map(bills.filter(b=>b.status==='scored').map(b=>[b.id,b]));
   // A subcommittee seat counts under its full committee.
   const committeesOf=s=>committees.people[s.id]||[];
   const fullCommittee=id=>(committees.committees[id]||{}).parent||id;
@@ -29,7 +31,7 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={})
   // Cases are aged against the date of the reviewed research ("asof"), so the page and the monthly log agree.
   const asOfYear=Number(String(data.asof||'').match(/\b(19|20)\d{2}\b/)?.[0])||null;
   return {
-    marks,committeesOf,fullCommittee,overseen,trading,asOfYear,
+    bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,
     promises:s=>promiseScore(s.statements,s.promiseTrackers),
     ethics:s=>ethicsScore(s.ethics,trading(s),{asOfYear}),
     pvp(s){

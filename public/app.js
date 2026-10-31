@@ -1,5 +1,5 @@
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
-import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio} from './grades.js';
+import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,BILL_GROUPS,BILL_STATUS} from './grades.js';
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
@@ -29,7 +29,7 @@ for(const s of ALL.concat(FEATURED))for(const ev of Object.values(s.evidence||{}
 // committee-conflict check.
 const COMMITTEES=window.COMMITTEES||{committees:{},people:{}}, COMMITTEE_SECTORS=window.COMMITTEE_SECTORS||{};
 const SCORER=makeScorer(DATA,COMMITTEES,COMMITTEE_SECTORS);
-const PVP_MARKS=SCORER.marks, committeesOf=SCORER.committeesOf, fullCommittee=SCORER.fullCommittee, overseenSectors=SCORER.overseen;
+const PVP_MARKS=SCORER.marks, PVP_BILLS=SCORER.bills, committeesOf=SCORER.committeesOf, fullCommittee=SCORER.fullCommittee, overseenSectors=SCORER.overseen;
 const personPvp=SCORER.pvp, personTrading=SCORER.trading, personEthics=SCORER.ethics;
 const icH=s=>s.ideoKind==='house'?'H':s.chamber;
 const chipCh=s=>s.office?CH[s.chamber].member:s.senInc?'Senate':s.cand?(s.openSeat?'Senate candidate':(s.chamber==='S'?'Senate challenger':'House challenger')):CH[s.chamber].name;
@@ -394,8 +394,9 @@ const GRADE={
   pvp:{q:'Does their record help working people or the wealthy?',pts:[
     ['High grade','Their record helped working and middle-class families more.'],
     ['Low grade','Their record helped the wealthy and corporations more.'],
-    ['What counts','Their votes on, and sponsorships of, bills that a nonpartisan analyst, like the Congressional Budget Office, says mostly help one side.'],
-    ['How votes count',"A yes vote takes the bill's side. A no vote takes the other side."],
+    ['What counts','Their votes on, and sponsorships of, scored bills.'],
+    ['Bill scores','Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed): half from a nonpartisan study of who gains, half from which side worker and business groups took.'],
+    ['How votes count',"A yes vote takes the bill's side and a no vote the other side, counted by the bill's strength: a yes on a +60 bill adds 0.6 to the working-people side."],
     ['For a president','Signing a bill counts like a yes. A veto counts like a no.'],
     ['Not graded',`Until they have at least ${MIN_PVP_ACTIONS} of these.`]]},
 };
@@ -425,7 +426,7 @@ function reportCard(s,links){
   const bar=pr.pct!=null?`<div class="hc-seg" aria-hidden="true">${pr.kept?`<i style="flex:${pr.kept};background:var(--good)"></i>`:''}${pr.half?`<i style="flex:${pr.half};background:var(--warn)"></i>`:''}${pr.broken?`<i style="flex:${pr.broken};background:var(--crit)"></i>`:''}</div>`:'';
   const pd=pr.pct!=null?`${pr.kept} of ${pr.clear} kept`:pr.total?`${pr.clear} of ${MIN_CHECKS} clear checks`:'no checks yet';
   const ed=[e.finding&&`${e.finding} finding${e.finding>1?'s':''}`,e.open&&`${e.open} open inquir${e.open>1?'ies':'y'}`,e.closed&&`${e.closed} closed inquir${e.closed>1?'ies':'y'}`,e.allegation&&`${e.allegation} allegation${e.allegation>1?'s':''}`,e.late&&`${e.late} late report${e.late>1?'s':''}`,e.conflict&&`${e.conflict} conflict trade${e.conflict>1?'s':''}`].filter(Boolean).join(' · ')||'none located';
-  const vd=v.pct!=null?`${v.people} of ${v.n} actions for working people`:v.n?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:PVP_MARKS.size?'no scored actions yet':'no bills scored yet';
+  const vd=v.pct!=null?`${v.nPeople} of ${v.n} actions for working people`:v.n?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:PVP_MARKS.size?'no scored actions yet':'no bills scored yet';
   return `<div class="hc-rc">${gradeTile('Your match',m.score,md,GRADE_TIP.match,'',h('match'))}${gradeTile('Promises delivered',pr.pct,pd,GRADE_TIP.prom,bar,h('promises'))}${gradeTile('Ethics',e.pct,ed,GRADE_TIP.eth,'',h('ethics'))}${gradeTile('Workers > Profit',v.pct,vd,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
 }
 // Promises, Ethics and Workers > Profit are recalculated monthly after review (public/score-log.json). The tab says
@@ -1579,15 +1580,48 @@ const PVP_SIDE={people:'Working people',profit:'The wealthy and corporations'};
 const billUrl=k=>{const eo=/^eo-(\d+)$/.exec(k||'');if(eo)return `https://www.govinfo.gov/link/cpd/executiveorder/${eo[1]}`;const m=/^(\d+)-([a-z]+)-(\d+)$/.exec(k||'');if(!m)return null;const T={hr:'house-bill',s:'senate-bill',hjres:'house-joint-resolution',sjres:'senate-joint-resolution',hconres:'house-concurrent-resolution',sconres:'senate-concurrent-resolution',hres:'house-resolution',sres:'senate-resolution'};return `https://www.congress.gov/bill/${m[1]}th-congress/${T[m[2]]}/${m[3]}`;};
 const billLabel=k=>{const eo=/^eo-(\d+)$/.exec(k||'');if(eo)return `Executive Order ${eo[1]}`;const m=/^(\d+)-([a-z]+)-(\d+)$/.exec(k||'');if(!m)return k;const L={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.',hres:'H.Res.',sres:'S.Res.'};return `${L[m[2]]} ${m[3]} (${m[1]}th Congress)`;};
 const PVP_DID={vote:p=>`Voted ${p}`,sponsored:()=>'Sponsored',cosponsored:()=>'Cosponsored',signed:()=>'Signed into law',vetoed:()=>'Vetoed',order:()=>'Issued the order'};
+// Workers > Profit bill scores (grades.js billScore): the badge, a short reason, and the full list of bills on file.
+const POS_WORD={support:'supported',oppose:'opposed'};
+const signed=n=>n==null?'—':`${n>0?'+':n<0?'−':''}${Math.abs(n)}`;
+const srcLink=x=>x?.src?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener">${esc(x.src.t)} ↗</a>`:'';
+const billScoreBadge=b=>b.status==='scored'?`<b class="${b.score>0?'gr-A':'gr-F'}">${signed(b.score)}</b>`:`<span class="muted">Not scored</span>`;
+const sidesText=b=>(b.sides||[]).map(p=>`${esc(BILL_GROUPS[p.group]?.org||p.group)} ${POS_WORD[p.pos]}`).join(', ');
+function billWhyShort(b){
+  return [b.gains&&`<b>Who gains (${signed(b.gainsPart)}):</b> ${esc(b.gains.by)}: ${esc(GAINS_STEPS[b.gains.step].toLowerCase())}.`,
+    b.sides?.length&&`<b>Who took a side (${signed(b.sidesPart)}):</b> ${sidesText(b)}.`].filter(Boolean).join(' ');
+}
+function billsBlock(bills){
+  if(!bills.length)return '';
+  const order=b=>b.status==='scored'?0:b.status==='disputed'?1:2;
+  const rows=bills.slice().sort((a,b)=>order(a)-order(b)||Math.abs(b.score||0)-Math.abs(a.score||0)||a.title.localeCompare(b.title));
+  const n=bills.filter(b=>b.status==='scored').length;
+  return `<div class="chart" id="pvp-bills"><h3>Every bill on file</h3><div class="sub">${n} of ${bills.length} bills are scored, from −100 (fully corporate-backed) to +100 (fully worker-backed). Half the score is who gains, from a nonpartisan study; half is which side worker and business groups took. <a href="#method">How bills are scored</a></div>
+    <div class="tablewrap"><table><thead><tr><th>Bill</th><th class="r">Score</th><th>Who gains</th><th>Who took a side</th><th>Also on record (not scored)</th></tr></thead><tbody>${rows.map(b=>{const u=billUrl(b.id);
+      return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(b.title)}</a>`:esc(b.title)}<div class="small muted">${esc(billLabel(b.id))}</div></td>
+      <td class="r">${billScoreBadge(b)}${b.status!=='scored'?`<div class="small muted">${esc(BILL_STATUS[b.status]||'')}</div>`:''}</td>
+      <td class="small">${b.gains?`<b>${signed(b.gainsPart)}</b> · ${esc(GAINS_STEPS[b.gains.step])}. ${esc(b.gains.why)}${srcLink(b.gains)}`:'<span class="muted">No who-gains study on file.</span>'}</td>
+      <td class="small">${b.sides?.length?`<b>${signed(b.sidesPart)}</b><ul class="list">${b.sides.map(p=>`<li><b>${esc(BILL_GROUPS[p.group]?.org||p.group)} ${POS_WORD[p.pos]}</b> (${BILL_GROUPS[p.group]?.side==='worker'?'worker side':'business side'}${p.date?', '+esc(p.date):''}). ${esc(p.why)}${srcLink(p)}</li>`).join('')}</ul>`:'<span class="muted">No group positions on file.</span>'}</td>
+      <td class="small"><div data-lob="${esc(b.id)}"><span class="muted">Lobbying: checking…</span></div>${b.context?.cbo?`<div><b>CBO:</b> ${esc(b.context.cbo.why)}${srcLink(b.context.cbo)}</div>`:''}${b.context?.whiteHouse?`<div><b>White House:</b> ${esc(POS_WORD[b.context.whiteHouse.pos]||b.context.whiteHouse.pos)}. ${esc(b.context.whiteHouse.why||'')}${srcLink(b.context.whiteHouse)}</div>`:''}</td></tr>`;}).join('')}</tbody></table></div>
+    <p class="small muted"><b>Lobbying</b> comes from LDA.gov reports that name the bill, in the two years of its Congress. A report says a client lobbied on the bill, not which side it was on, so it's shown here and never scored. Unions are counted by the client's name.</p></div>`;
+}
+// Fills each bill's lobbying line from the daily refresh (/api/bills), or says the update service isn't running.
+async function mountBillLobbying(host){
+  const els=[...host.querySelectorAll('[data-lob]')];if(!els.length)return;
+  let lob=null;try{const r=await fetch('/api/bills',{cache:'no-cache'});if(r.ok)lob=(await r.json()).lobbying||{};}catch{}
+  const yrs=id=>{const c=Number(id.split('-')[0]),y=1787+2*c;return `${y}–${String(y+1).slice(2)}`;};
+  for(const el of els){const x=lob?.[el.dataset.lob],id=el.dataset.lob;
+    el.innerHTML=!lob?'<span class="muted">Lobbying counts need the update service running.</span>':!x?'<span class="muted">Lobbying: not checked yet.</span>'
+      :`<b>Lobbying (${yrs(id)}):</b> ${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
+}
 function panePvp(s,pane){
   const v=personPvp(s);
-  const detail=v.pct!=null?`${v.people} of ${v.n} scored actions delivered more for working people; ${v.profit} more for the wealthy and corporations.`:!PVP_MARKS.size?'No bills have been scored yet, so no one has this grade.':v.n?`${v.n} of the ${MIN_PVP_ACTIONS} scored actions a grade needs.`:`None of ${esc(s.short)}'s recorded ${s.office?'bill signings, vetoes or executive orders':'votes or sponsorships'} is on a scored bill yet.`;
-  const math=v.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> ${v.people} People-leaning ÷ (${v.people} People + ${v.profit} Profit) = <b>${v.pct}%</b>. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts 1, and a bill counts once.</p>`:'';
-  const table=v.scored.length?`<div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th>Delivered more for</th><th>Who gains, per</th></tr></thead><tbody>${v.scored.map(a=>{const mk=PVP_MARKS.get(a.bill)||{},u=billUrl(a.bill);return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(mk.title||billLabel(a.bill))}</a>`:esc(mk.title||a.bill)}<div class="small muted">${esc(billLabel(a.bill))}</div></td><td>${esc(PVP_DID[a.kind](a.pos))}</td><td><b class="${a.took==='people'?'gr-A':'gr-F'}">${PVP_SIDE[a.took]}</b></td><td class="small">${esc(mk.why||'')} ${mk.src?`<a href="${esc(mk.src.u)}" target="_blank" rel="noopener">${esc(mk.src.t)} ↗</a>`:''}</td></tr>`}).join('')}</tbody></table></div>`
-    :`<div class="note">${PVP_MARKS.size?`${esc(s.short)} has no recorded ${s.office?'signing, veto or executive order':'vote or sponsorship'} on any of the ${PVP_MARKS.size} scored bill${PVP_MARKS.size===1?'':'s'}.`:`<b>No bills are scored yet.</b>${points([['When a bill counts','Once a nonpartisan study of who gains from it is cited, such as from the Congressional Budget Office, the Joint Committee on Taxation or the Tax Policy Center.'],['What will show here','Each scored vote and sponsorship, the side it took, and the study behind it.']])}`}</div>`;
+  const detail=v.pct!=null?`${v.nPeople} of ${v.n} scored actions delivered more for working people; ${v.nProfit} more for the wealthy and corporations.`:!PVP_MARKS.size?'No bills have been scored yet, so no one has this grade.':v.n?`${v.n} of the ${MIN_PVP_ACTIONS} scored actions a grade needs.`:`None of ${esc(s.short)}'s recorded ${s.office?'bill signings, vetoes or executive orders':'votes or sponsorships'} is on a scored bill yet.`;
+  const math=v.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> working-people points ÷ all points = ${v.people} ÷ (${v.people} + ${v.profit}) = <b>${v.pct}%</b>. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.</p>`:'';
+  const table=v.scored.length?`<div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th class="r">Bill score</th><th>Delivered more for</th><th class="r">Points</th><th>Why the bill scores this way</th></tr></thead><tbody>${v.scored.map(a=>{const mk=PVP_MARKS.get(a.bill)||{},u=billUrl(a.bill);return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(mk.title||billLabel(a.bill))}</a>`:esc(mk.title||a.bill)}<div class="small muted">${esc(billLabel(a.bill))}</div></td><td>${esc(PVP_DID[a.kind](a.pos))}</td><td class="r">${billScoreBadge(mk)}</td><td><b class="${a.took==='people'?'gr-A':'gr-F'}">${PVP_SIDE[a.took]}</b></td><td class="r">${a.points}</td><td class="small">${billWhyShort(mk)}</td></tr>`}).join('')}</tbody></table></div><p class="small muted">Every bill on file, with all its evidence and who lobbied on it: <a href="#scores-pvp">Workers > Profit scores</a>.</p>`
+    :`<div class="note">${PVP_MARKS.size?`${esc(s.short)} has no recorded ${s.office?'signing, veto or executive order':'vote or sponsorship'} on any of the ${PVP_MARKS.size} scored bill${PVP_MARKS.size===1?'':'s'}.`:`<b>No bills are scored yet.</b>${points([['When a bill counts','Once a nonpartisan study of who gains from it is cited, or worker and business groups took opposite sides on it.'],['What will show here','Each scored vote and sponsorship, the side it took, and the evidence behind the bill.']])}`}</div>`;
   pane.innerHTML=`${gradeHead('Workers > Profit',v.pct,detail,gradeRule('pvp'),math+monthlyNote(s,'pvp',v.pct))}
   <div class="chart"><h3>Who the record delivered more for</h3><div class="sub"><b>Right of 50%:</b> leans toward working people. <b>Left:</b> leans toward the wealthy and corporations. <a href="#scores-pvp">Everyone on one chart</a></div>
-    ${divergingRows([{label:s.name,sub:`${v.people} for working people · ${v.profit} for the wealthy and corporations`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:`${v.n} scored actions`}])}</div>
+    ${divergingRows([{label:s.name,sub:`${v.people} points for working people · ${v.profit} for the wealthy and corporations`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:`${v.n} scored actions`}])}</div>
   <h3 style="margin:18px 0 8px">${s.office?'Scored bills signed or vetoed, and executive orders':'Scored votes and sponsorships'}</h3>${table}
   ${s.office?`<h2 style="margin-top:30px">Their funders and their votes</h2>
   <p class="intro">Not shown for ${esc(s.short)}.</p>${points([['What it covers','Who pays for each 2026 campaign, next to the votes the candidate cast.'],['Why not here',`${esc(s.short)} is not on the 2026 ballot and casts no roll-call votes.`],['FEC records',`The committee that still files is on the <a href="#${s.id}-finance">Money &amp; Influence tab</a>.`]])}`:`${donorTreemapBlock(s)}
@@ -2073,13 +2107,15 @@ function scoresPvp(host){
   const rows=ALL.map(s=>({s,v:personPvp(s)})).sort((a,b)=>(b.v.pct??-1)-(a.v.pct??-1)||b.v.n-a.v.n||a.s.name.localeCompare(b.s.name));
   const graded=rows.filter(x=>x.v.pct!=null);
   const pts=graded.filter(x=>x.s.ideo).map(({s,v})=>({x:s.ideo.dim1,y:v.pct,cls:s.party,tip:`${s.name}: ${v.pct}% for working people · DW-NOMINATE ${s.ideo.dim1>0?'+':''}${s.ideo.dim1.toFixed(2)}`}));
-  host.innerHTML=`${PVP_MARKS.size?'':`<div class="note" style="margin-bottom:12px"><b>No bills are scored yet, so no one has this grade.</b> A bill counts once a nonpartisan study of who gains from it is cited, such as from CBO, the Joint Committee on Taxation or the Tax Policy Center. Until then everyone is listed as Not graded.</div>`}
+  host.innerHTML=`${PVP_MARKS.size?'':`<div class="note" style="margin-bottom:12px"><b>No bills are scored yet, so no one has this grade.</b> A bill counts once a nonpartisan study of who gains from it is cited, or worker and business groups took opposite sides on it. Until then everyone is listed as Not graded.</div>`}
     <div class="chart"><h3>Who their record delivered more for</h3><div class="sub"><b>Right of 50%:</b> more of their scored actions favored working people. <b>Left:</b> more favored the wealthy and corporations. ${graded.length} of ${ALL.length} have the ${MIN_PVP_ACTIONS} scored actions a grade needs.</div>
-    ${divergingRows(rows.map(({s,v})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-pvp`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} actions`:`${v.people} of ${v.n} actions`,tip:v.pct==null?'':`${s.name}: ${v.people} for working people, ${v.profit} for the wealthy and corporations`})))}
-    ${tableView(['Name','Score','People','Profit'],rows.map(({s,v})=>[`<a href="#${s.id}-pvp">${esc(s.name)}</a>`,v.pct==null?'Not graded':`${letter(v.pct)} ${v.pct}%`,v.people,v.profit]))}</div>
+    ${divergingRows(rows.map(({s,v})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-pvp`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} actions`:`${v.nPeople} of ${v.n} actions`,tip:v.pct==null?'':`${s.name}: ${v.people} points for working people, ${v.profit} for the wealthy and corporations`})))}
+    ${tableView(['Name','Score','Actions','People points','Profit points'],rows.map(({s,v})=>[`<a href="#${s.id}-pvp">${esc(s.name)}</a>`,v.pct==null?'Not graded':`${letter(v.pct)} ${v.pct}%`,v.n,v.people,v.profit]))}</div>
+    ${billsBlock(PVP_BILLS)}
     <div class="chart"><h3>Workers > Profit against ideology</h3><div class="sub">Each graded person with a DW-NOMINATE score. <b>Look for outliers:</b> someone far from others with a similar ideology.</div>
     ${pts.length?`<div class="cx-plot" id="sc-scatter"></div>${legend([['var(--dem)','Democrats'],['var(--rep)','Republicans'],['var(--muted)','Independents']])}`:'<p class="small muted">Nothing to plot until people are graded.</p>'}</div>`;
   if(pts.length){const f=()=>drawScatter(document.getElementById('sc-scatter'),pts,{x:{min:-1,max:1,ticks:[-1,-.5,0,.5,1],left:'More liberal',right:'More conservative',label:'DW-NOMINATE'},y:{min:0,max:100,ticks:[0,25,50,75,100],label:'Workers > Profit'}});f();resizers.push(f);}
+  mountBillLobbying(host);
 }
 function scoresIdeology(host){
   const list=ALL.filter(s=>s.ideo);
@@ -2211,8 +2247,14 @@ function renderMethod(sub){
         </ul></li>
       <li><b>Workers > Profit:</b> whether the record did more for working people or for the wealthy and corporations.
         <ul class="list">
-          <li><b>Marked bills:</b> a bill is marked People or Profit only when a nonpartisan study of who gains is cited, with a short reason. Examples are the Congressional Budget Office, the Joint Committee on Taxation and the Tax Policy Center. A bill with no clear winner is left out.</li>
-          <li><b>Counting:</b> each vote or sponsorship on a marked bill counts 1 for the side it took, once per bill. The score is People points ÷ (People + Profit points).</li>
+          <li><b>Bill scores:</b> each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts.
+            <ul class="list">
+              <li><b>Who gains (50%):</b> a cited nonpartisan study (the Congressional Budget Office, the Joint Committee on Taxation, the Tax Policy Center or the Penn Wharton Budget Model), placed on one of five steps: ${Object.entries(GAINS_STEPS).sort((a,b)=>b[0]-a[0]).map(([k,t])=>`${Number(k)>0?'+':''}${k} ${esc(t.toLowerCase())}`).join('; ')}.</li>
+              <li><b>Who took a side (50%):</b> worker groups (${Object.values(BILL_GROUPS).filter(g=>g.side==='worker'&&!g.tax).map(g=>esc(g.org)).join(', ')}) count +100 for supporting a bill and −100 for opposing it. Business groups (${Object.values(BILL_GROUPS).filter(g=>g.side==='business'&&!g.tax).map(g=>esc(g.org)).join(', ')}) count the other way, so a business group opposing a bill counts toward workers. On tax bills, ITEP counts with the worker groups and the Tax Foundation with the business groups. Each side's groups are averaged, then the two sides. If both sides support a bill, it lands near 0.</li>
+              <li><b>When they disagree:</b> if who gains and who took a side point opposite ways, the bill is Disputed: it's shown, but not scored. With only one part on file, that part decides, but a bill marked from groups' positions alone needs a worker group and a business group on opposite sides.</li>
+              <li><b>Shown, not scored:</b> lobbying reports naming the bill (LDA.gov), split into unions and other clients, since a report doesn't say which side the client was on; CBO estimates that don't say who gains by income; and the White House's position, which follows the president's party.</li>
+            </ul></li>
+          <li><b>Counting:</b> each vote or sponsorship on a scored bill counts the bill's strength (its score ÷ 100) for the side it took, once per bill. A yes on a +75 bill adds 0.75 to the working-people side; a no adds 0.75 to the other side. The score is working-people points ÷ all points.</li>
           <li><b>For a president:</b> signing a marked bill or issuing a marked executive order counts for its side. A veto counts for the other side.</li>
           <li><b>Needed:</b> ${MIN_PVP_ACTIONS} scored actions. ${PVP_MARKS.size?`${PVP_MARKS.size} bill${PVP_MARKS.size===1?' is':'s are'} marked so far.`:'<b>No bills are marked yet</b>, so no one is graded.'}</li>
         </ul></li>

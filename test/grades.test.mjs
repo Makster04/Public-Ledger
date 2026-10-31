@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
+import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
 const data=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=data.members.concat(data.cands,data.featured||[]);
 const st=(...a)=>a.map(assessment=>({assessment}));
@@ -24,11 +24,12 @@ test('ethics: findings, open and closed investigations cost points; allegations 
   assert.equal(ethicsScore([e('investigation','closed')]).pct,100-ETHICS_COST.closed);
   assert.equal(ethicsScore(Array(9).fill(e('finding'))).pct,0);
 });
+const mark=(side,weight=1)=>({side,weight,score:(side==='people'?100:-100)*weight});
 test('Workers > Profit: a Yea or sponsorship takes the bill side, a Nay the other, missed votes count nothing, one credit per bill; needs 3 actions',()=>{
-  const marks=new Map([['119-hr-1',{pvp:'profit'}],['119-s-5',{pvp:'people'}],['119-hr-7',{pvp:'people'}],['119-hr-9',{pvp:'profit'}]]);
+  const marks=new Map([['119-hr-1',mark('profit')],['119-s-5',mark('people')],['119-hr-7',mark('people')],['119-hr-9',mark('profit')]]);
   const acts=pvpActions(marks,[{bill:'119-hr-1',pos:'Nay'},{bill:'119-s-5',pos:'Yea'},{bill:'119-hr-9',pos:'Not Voting'},{bill:'119-hr-2',pos:'Yea'}],[{bill:'119-hr-7',kind:'sponsored'},{bill:'119-s-5',kind:'cosponsored'}]);
   const r=pvpScore(acts);
-  assert.equal(r.n,3);assert.equal(r.people,3);assert.equal(r.profit,0);assert.equal(r.pct,100);
+  assert.equal(r.n,3);assert.equal(r.people,3);assert.equal(r.nPeople,3);assert.equal(r.profit,0);assert.equal(r.pct,100);
   assert.equal(r.scored.find(a=>a.bill==='119-s-5').kind,'vote');
   assert.equal(pvpScore(pvpActions(marks,[{bill:'119-hr-1',pos:'Yea'},{bill:'119-s-5',pos:'Nay'}],[])).pct,null);
   assert.equal(pvpScore(pvpActions(marks,[{bill:'119-hr-1',pos:'Yea'},{bill:'119-s-5',pos:'Yea'}],[{bill:'119-hr-7'}])).pct,67);
@@ -36,9 +37,41 @@ test('Workers > Profit: a Yea or sponsorship takes the bill side, a Nay the othe
 test('every displayed investigation says whether it is open or closed',()=>{
   for(const s of people)for(const e of s.ethics)if(e.status==='investigation')assert.ok(['open','closed'].includes(e.stage),`${s.id}: ${e.title}`);
 });
-test('any bill marked for Workers > Profit has a valid ID, a side, a reason and a source',()=>{
-  for(const v of data.votes.concat(data.hvotes))assert.ok(!v.pvp,v.id+': People/Profit marks belong in the bills list, once per bill');
-  for(const b of data.bills||[]){assert.ok(/^(\d+-[a-z]+-\d+|eo-\d+)$/.test(b.id),b.id);assert.ok(['people','profit'].includes(b.pvp),b.id);assert.ok(b.why,b.id+' needs a reason');assert.ok(b.src&&/^https:\/\//.test(b.src.u),b.id+' needs a source link');}
+test('Workers > Profit: each action counts its bill\'s strength, so a lukewarm bill counts less than a clear-cut one',()=>{
+  const marks=new Map([['1-hr-1',mark('people',0.75)],['1-hr-2',mark('profit',1)],['1-hr-3',mark('people',0.5)]]);
+  const r=pvpScore(pvpActions(marks,[{bill:'1-hr-1',pos:'Yea'},{bill:'1-hr-2',pos:'Yea'},{bill:'1-hr-3',pos:'Nay'}],[]));
+  assert.deepEqual([r.people,r.profit,r.nPeople,r.nProfit,r.pct],[0.75,1.5,1,2,33]);
+  assert.deepEqual(r.scored.map(a=>a.points),[0.75,1,0.5]);
+});
+test('a bill\'s score: who gains and who took a side count half each, and opposite signals set it aside',()=>{
+  const g=step=>({step,why:'x',src:{t:'x',u:'https://x'}}),p=(group,pos)=>({group,pos});
+  // The One Big Beautiful Bill Act: the bottom loses while the top gains, and the AFL-CIO opposed it while the Chamber backed it.
+  assert.deepEqual([billScore({gains:g(-100),sides:[p('aflcio','oppose'),p('chamber','support'),p('nfib','support')]})].map(b=>[b.score,b.status,b.side,b.weight]),[[-100,'scored','profit',1]]);
+  // A business group opposing a bill counts toward workers.
+  assert.equal(billScore({gains:g(50),sides:[p('aflcio','support'),p('chamber','oppose')]}).score,75);
+  assert.equal(billScore({sides:[p('chamber','oppose'),p('aflcio','support')]}).score,100,'opposite sides decide alone');
+  assert.equal(billScore({sides:[p('chamber','support'),p('aflcio','support')]}).status,'even','both sides support it');
+  assert.equal(billScore({sides:[p('aflcio','oppose')]}).status,'one-side','one side alone does not mark a bill');
+  assert.equal(billScore({gains:g(50),sides:[p('aflcio','support')]}).score,75,'with a who-gains study, one side counts');
+  assert.equal(billScore({gains:g(-50),sides:[p('aflcio','support'),p('chamber','oppose')]}).status,'disputed');
+  assert.equal(billScore({gains:g(-50)}).score,-50);
+  // Each side is averaged first, so three business groups don't outweigh one worker group.
+  assert.equal(billScore({sides:[p('aflcio','support'),p('chamber','support'),p('nfib','support'),p('nam','support')]}).score,0);
+  assert.equal(billScore({sides:[p('aflcio','support'),p('epi','oppose'),p('chamber','oppose')]}).score,50,'a split side counts as its average');
+  // The Tax Foundation and ITEP count on tax bills only.
+  assert.equal(billScore({sides:[p('itep','support'),p('taxfoundation','oppose')]}).status,'none');
+  assert.equal(billScore({tax:true,sides:[p('itep','support'),p('taxfoundation','oppose')]}).score,100);
+  assert.equal(billScore({gains:g(30)}).status,'none','only the five steps count');
+});
+test('every Workers > Profit bill has a valid ID, cited evidence and known groups',()=>{
+  for(const v of data.votes.concat(data.hvotes))assert.ok(!v.pvp,v.id+': bill evidence belongs in the bills list, once per bill');
+  const cited=x=>x&&x.why&&x.src&&/^https:\/\//.test(x.src.u);
+  for(const b of data.bills||[]){
+    assert.ok(/^(\d+-[a-z]+-\d+|eo-\d+)$/.test(b.id),b.id);assert.ok(b.title,b.id+' needs a title');assert.ok(!b.pvp,b.id+': the side comes from its score now');
+    if(b.gains){assert.ok(String(b.gains.step) in GAINS_STEPS,b.id+' who-gains step');assert.ok(cited(b.gains)&&b.gains.by,b.id+' who-gains needs a reason, an analyst and a source');}
+    for(const s of b.sides||[]){assert.ok(BILL_GROUPS[s.group],b.id+': unknown group '+s.group);assert.ok(['support','oppose'].includes(s.pos),b.id);assert.ok(cited(s),b.id+': '+s.group+' needs a reason and a source');}
+    assert.ok(b.gains||b.sides?.length,b.id+' needs some evidence');
+  }
 });
 test('My alignment: every issue has a statement to agree or disagree with, and a known category',()=>{
   const groups=new Set(['econ','rights','imm','foreign','env']);
@@ -166,7 +199,7 @@ test('promises: a president\'s PolitiFact tracker tallies count kept 1, compromi
   }
 });
 test('Workers > Profit: a president\'s signature or order takes the bill\'s side and a veto the other',()=>{
-  const marks=new Map([['119-hr-1',{pvp:'profit'}],['118-s-2',{pvp:'people'}],['eo-14251',{pvp:'profit'}]]);
+  const marks=new Map([['119-hr-1',mark('profit')],['118-s-2',mark('people')],['eo-14251',mark('profit')]]);
   const v=pvpScore(pvpActions(marks,[],[{bill:'119-hr-1',kind:'signed'},{bill:'118-s-2',kind:'vetoed'},{bill:'eo-14251',kind:'order'},{bill:'1-hr-9',kind:'signed'}]));
   assert.deepEqual(v.scored.map(a=>a.took),['profit','profit','profit']);assert.equal(v.pct,0);
 });

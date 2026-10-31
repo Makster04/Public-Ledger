@@ -217,6 +217,11 @@ export async function getStatus(env) {
     history:(await statement(env.DB,'SELECT job_id,status,at,message,row_count FROM refresh_history ORDER BY id DESC LIMIT 120').all()).results};
 }
 const GLOBAL_KINDS=FEED_KINDS.filter(k=>FEEDS[k].scope==='global');
+// The lobbying counts for each key bill, for the Workers > Profit bill scores.
+export async function getBills(env){
+  const rows=(await statement(env.DB,"SELECT j.subject,s.payload,s.updated_at FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind='bill-lobbying'").all()).results;
+  return {lobbying:Object.fromEntries(rows.map(r=>[r.subject,{...JSON.parse(r.payload),checkedAt:r.updated_at}]))};
+}
 export async function getProfile(env,id) {
   const person=config.people.find(p=>p.id===id);if(!person)return null;
   const kinds=['vote',...GLOBAL_KINDS];

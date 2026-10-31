@@ -14,11 +14,11 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Worker Backed Index ✊ | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Grassroots Index 🌱 | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited analyses | Two added so far. The AFL-CIO's key votes could suggest more. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Add more Workers > Profit bills with cited evidence | 7 on file, 5 scored. Next: bills where the AFL-CIO's and the Chamber's key votes took opposite sides, and a business group's position on the GENIUS Act and the ACA credit extension. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Rename the "People" side to "Workers" | In the charts and tables. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Decide the graph for each index | |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not done"> | Better bill marking | Score each bill from worker-backed to corporate-backed. See below. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Better bill marking | Each bill scored from −100 to +100. See below, and the full list on the Workers > Profit scores page. |
 
 ## Better bill marking
 
@@ -29,7 +29,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
   - **Worker side:** the [AFL-CIO](https://aflcio.org/scorecard), [Economic Policy Institute](https://www.epi.org/) and [National Employment Law Project](https://www.nelp.org/).
   - **Business side:** the [U.S. Chamber of Commerce](https://www.uschamber.com/how-they-voted), [NFIB](https://www.nfib.com/) and [National Association of Manufacturers](https://www.nam.org/).
   - **Tax bills, one from each side:** the [Tax Foundation](https://taxfoundation.org/) and [ITEP](https://itep.org/).
-- **Who lobbied:** unions vs. corporations lobbying on each bill, from [LDA.gov](https://lda.gov/) (`LDA_API_KEY`).
+- **Who lobbied:** unions vs. corporations lobbying on each bill, from [LDA.gov](https://lda.gov/) (`LDA_API_KEY`, optional). Read weekly for each key bill and shown beside its score.
 - **Bill details:**
   - [Congress.gov](https://api.congress.gov/sign-up/) (`CONGRESS_API_KEY`) for subjects, summaries and committee reports.
   - [GovInfo](https://www.govinfo.gov/api-signup) (`GOVINFO_API_KEY`) for full bill text.
@@ -37,7 +37,14 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 - **Many groups at once (paid only):** [Vote Smart](https://www.votesmart.org/votesmart-api) has business and labor groups' key votes and ratings, but it needs a paid license ($4,850 a year to publish) and doesn't allow crediting it. Not planned; the groups' own scorecards above are free.
 - **White House position:** Statements of Administration Policy, from the [American Presidency Project](https://www.presidency.ucsb.edu/).
 - **Other scorecards:** Heritage Action, LCV, the ACLU and HRC mostly rate other issues, so they fit in Your match instead.
-- **Open question:** how to combine who gains, who took a side and who lobbied into one score, and what to do when they disagree.
+- **Decided:** each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts.
+  - **Who gains (50%):** a cited CBO, JCT, Tax Policy Center or Penn Wharton analysis, on one of five steps: +100 lower-income households come out ahead while the top pays more; +50 it tilts toward lower-income households; 0 about even; −50 it tilts toward the top; −100 lower-income households lose while the top gains.
+  - **Who took a side (50%):** each worker group that supports a bill counts +100 and each that opposes it −100. Business groups count the other way, so a business group opposing a bill counts toward workers. Each side's groups are averaged first, then the two sides, so three business groups don't outweigh one worker group. If both sides support a bill, it lands near 0.
+  - **When they disagree:** if the two parts point opposite ways, the bill is **Disputed**: shown, but not scored.
+  - **One part only:** that part decides. A bill marked from groups' positions alone needs a worker group and a business group on opposite sides.
+  - **Shown, not scored:** lobbying (a report says a client lobbied on the bill, not which side it was on), CBO estimates that don't split by income, and the White House's position (it follows the president's party).
+  - **Each vote counts the bill's strength:** a Yea on a +75 bill adds 0.75 to the working-people side; a Nay adds 0.75 to the other side.
+- **On file now:** 7 bills, 5 scored. One Big Beautiful Bill Act −100, H.R. 6703 (Lower Health Care Premiums) −100, Tax Cuts and Jobs Act −75, Inflation Reduction Act +75, American Rescue Plan Act +75. The GENIUS Act and the three-year ACA credit extension have only the AFL-CIO's position so far, so they wait for a business group's position or a who-gains study. 5 people now have the 3 scored actions a grade needs.
 
 ---
 
@@ -60,7 +67,7 @@ Outside spending is left out, because candidates legally can't control it.
 - **Business funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
 - **Lobbying:** `LDA_API_KEY` (optional).
-- **Bills marked Profit or People:** the reviewed research. No key.
+- **Bill scores:** the reviewed research (who gains and who took a side). No key.
 
 ### Worker Backed Index ✊
 The same formula with unions:
