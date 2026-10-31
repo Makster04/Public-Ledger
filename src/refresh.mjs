@@ -1,13 +1,18 @@
 import config from '../data/config.json' with {type:'json'};
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 import {fetchPage,summarize,SourceError,requestSource,missingKey,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
-import {FEEDS,FEED_KINDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL} from './feeds.mjs';
+import {FEEDS,FEED_KINDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,mergeHearings,mergeLegal,mergeStatements,donorOrgs} from './merge.mjs';
 
 const DAY=86400000;
 // A recorded roll call does not change, so a published vote is never fetched again.
 const NEVER=Number.MAX_SAFE_INTEGER;
-const nextRefresh=(kind,from=Date.now())=>{const every=FEEDS[kind]?.every??(kind==='vote'?NEVER:kind==='committee'?7*DAY:DAY);return every===NEVER?NEVER:from+every;};
+// How often a job runs: its source's setting, which can depend on the job (a past year's index is checked weekly).
+const everyOf=(kind,args)=>{const e=FEEDS[kind]?.every;const v=typeof e==='function'?e(typeof args==='string'?JSON.parse(args):args||{}):e;return v??(kind==='vote'?NEVER:kind==='committee'?7*DAY:DAY);};
+const nextRefresh=(kind,from=Date.now(),args)=>{const every=everyOf(kind,args);return every===NEVER?NEVER:from+every;};
+// A job still catching up on its history (a backlog of trade reports, CRS reports back to historyFrom) publishes what
+// it has read and runs again this soon, instead of waiting a day.
+const CATCH_UP=10*60_000;
 // The host each job kind calls, which decides the key it needs and which jobs share a rate limit.
 const LEGACY_HOST={campaign:'api.open.fec.gov',committee:'api.open.fec.gov',pac:'api.open.fec.gov',outside:'api.open.fec.gov',legislation:'api.congress.gov','senate-index':'www.senate.gov','house-next':'clerk.house.gov',vote:'clerk.house.gov'};
 const hostOf=kind=>FEEDS[kind]?.host||LEGACY_HOST[kind];
@@ -32,7 +37,7 @@ async function applySeed(db,seed) {
     await addJob(db,j.id,j.kind,j.subject,j.args);
     // Seeded data keeps its original check date, so an old seed is refreshed promptly once keys are present.
     await db.batch([
-      statement(db,"UPDATE jobs SET args=?,status='ready',last_success=?,checked_through=?,published_run=?,next_due=? WHERE id=?",JSON.stringify(j.args),j.lastSuccess,j.checkedThrough,j.run,nextRefresh(j.kind,Date.parse(j.lastSuccess)),j.id),
+      statement(db,"UPDATE jobs SET args=?,status='ready',last_success=?,checked_through=?,published_run=?,next_due=? WHERE id=?",JSON.stringify(j.args),j.lastSuccess,j.checkedThrough,j.run,nextRefresh(j.kind,Date.parse(j.lastSuccess),j.args),j.id),
       statement(db,'INSERT OR REPLACE INTO snapshots(job_id,run_id,payload,updated_at) VALUES(?,?,?,?)',j.id,j.run,JSON.stringify(j.snapshot),j.lastSuccess)
     ]);
   }
@@ -157,7 +162,7 @@ export async function runRefresh(env,{steps=8}={}) {
         // Snapshot publication and success stamp are atomic; unfinished pages are never served.
         await db.batch([
           statement(db,'INSERT INTO snapshots(job_id,run_id,payload,updated_at) VALUES(?,?,?,?) ON CONFLICT(job_id) DO UPDATE SET run_id=excluded.run_id,payload=excluded.payload,updated_at=excluded.updated_at',job.id,job.run_id,JSON.stringify(snapshot),completed),
-          statement(db,"UPDATE jobs SET status='ready',last_success=?,checked_through=?,published_run=?,next_due=?,run_id=NULL,cursor=NULL,page=0,failures=0,error=NULL WHERE id=?",completed,through,job.run_id,nextRefresh(job.kind),job.id),
+          statement(db,"UPDATE jobs SET status='ready',last_success=?,checked_through=?,published_run=?,next_due=?,run_id=NULL,cursor=NULL,page=0,failures=0,error=NULL WHERE id=?",completed,through,job.run_id,snapshot.more?Date.now()+CATCH_UP:nextRefresh(job.kind,Date.now(),job.args),job.id),
           statement(db,'INSERT INTO refresh_history(job_id,status,at,message,row_count) VALUES(?,?,?,?,?)',job.id,'success',completed,'Validated and published',records.length)
         ]);
         if(oldRun&&oldRun!==job.run_id)await statement(db,'DELETE FROM records WHERE run_id=?',oldRun).run();
@@ -205,9 +210,9 @@ export async function getCards(env) {
 }
 export async function getStatus(env) {
   await initialize(env.DB);
-  const jobs=(await statement(env.DB,'SELECT id,kind,subject,status,last_attempt,last_success,checked_through,error,failures,page FROM jobs ORDER BY kind,subject').all()).results;
+  const jobs=(await statement(env.DB,'SELECT id,kind,subject,args,status,last_attempt,last_success,checked_through,error,failures,page FROM jobs ORDER BY kind,subject').all()).results;
   for(const j of jobs){const missing=needsKey(j.kind,env);if(missing){j.status='blocked';j.error=keyMessage(missing);}
-    const every=FEEDS[j.kind]?.every??DAY;
+    const every=everyOf(j.kind,j.args);delete j.args;
     j.stale=j.kind==='vote'||every===NEVER?!j.last_success:!j.last_success||Date.now()-Date.parse(j.last_success)>every*1.5;
     j.label=FEEDS[j.kind]?.label||null;j.tab=FEEDS[j.kind]?.tab||null;j.site=isSite(j,env);
     const who=config.people.find(p=>p.id===j.subject);j.name=who?.name||j.subject;j.person=!!who;
@@ -222,10 +227,31 @@ export async function getBills(env){
   const rows=(await statement(env.DB,"SELECT j.subject,s.payload,s.updated_at FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind='bill-lobbying'").all()).results;
   return {lobbying:Object.fromEntries(rows.map(r=>[r.subject,{...JSON.parse(r.payload),checkedAt:r.updated_at}]))};
 }
+// Global sources with one snapshot per day of the Record, hearing or meeting, each listing records by person: there are
+// thousands of them back to historyFrom, so a profile reads only the ones that name the person.
+const BY_PERSON=['crec-day','hearing','meeting'];
+// Index jobs list what to read (days of the Record, hearings, meetings, key bills' lobbying); a profile doesn't use them.
+const NOT_PROFILE=['meetings','crec-index','crec-archive','hearing-index','hearing-archive','bill-lobbying'];
+const named=id=>`%"${String(id).replace(/[%_\\]/g,'')}":[%`;
+// The meetings and transcripts that share a jacket number with this person's (the number in a transcript's GovInfo ID,
+// which a meeting lists): a member's meeting can have a transcript that doesn't list them, and the other way round.
+async function hearingPairs(db,meetings,transcripts){
+  const jackets=[...new Set(meetings.flatMap(m=>m.transcripts||[]).filter(j=>/^\d+$/.test(j)))];
+  const own=[...new Set(transcripts.map(t=>/[hsj]hrg(\d+)$/i.exec(t.id||'')?.[1]).filter(Boolean))];
+  const out={meeting:[],hearing:[]},read=async(kind,clause,values)=>{
+    for(let i=0;i<values.length;i+=80){const part=values.slice(i,i+80);
+      const r=await statement(db,`SELECT s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind=? AND (${part.map(()=>clause).join(' OR ')})`,kind,...part).all();
+      for(const x of r.results)out[kind].push(...Object.values(JSON.parse(x.payload).byPerson||{}).flat());}
+  };
+  await read('hearing','j.id LIKE ?',jackets.map(j=>`hearing:CHRG-%hrg${j}`));
+  await read('meeting','s.payload LIKE ?',own.map(j=>`%"${j}"%`));
+  const uniq=l=>[...new Map(l.map(r=>[r.id,r])).values()];
+  return {meeting:uniq([...meetings,...out.meeting]),hearing:uniq([...transcripts,...out.hearing])};
+}
 export async function getProfile(env,id) {
   const person=config.people.find(p=>p.id===id);if(!person)return null;
-  const kinds=['vote',...GLOBAL_KINDS];
-  const rows=(await statement(env.DB,`SELECT s.job_id,s.payload,s.updated_at,j.kind,j.subject FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.subject=? OR j.kind IN (${kinds.map(()=>'?').join(',')})`,id,...kinds).all()).results;
+  const kinds=['vote',...GLOBAL_KINDS.filter(k=>!BY_PERSON.includes(k)&&!NOT_PROFILE.includes(k))];
+  const rows=(await statement(env.DB,`SELECT s.job_id,s.payload,s.updated_at,j.kind,j.subject FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.subject=? OR j.kind IN (${kinds.map(()=>'?').join(',')}) OR (j.kind IN (${BY_PERSON.map(()=>'?').join(',')}) AND s.payload LIKE ?)`,id,...kinds,...BY_PERSON,named(id)).all()).results;
   const sections={},votes=[],global={};
   for(const row of rows){
     const data=JSON.parse(row.payload);
@@ -239,29 +265,32 @@ export async function getProfile(env,id) {
     if(row.subject===id)sections[row.kind]={...data,checkedAt:row.updated_at};
   }
   for(const s of Object.values(sections))if(Array.isArray(s.rows)&&s.rows.every(r=>r&&r.date!==undefined))s.rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  const pairs=sections.meeting||sections.hearing?await hearingPairs(env.DB,sections.meeting?.rows||[],sections.hearing?.rows||[]):{meeting:[],hearing:[]};
+  // Ten years of floor speeches can run to thousands: the newest 40 of each year are sent, with every year's count.
+  for(const k of BY_PERSON)if(sections[k]){const h=history(sections[k].rows,40);sections[k]={...sections[k],...h};}
   votes.sort((a,b)=>b.date.localeCompare(a.date)||b.number-a.number);
   // Merged views: one row per trade, state bill and article, whichever sources reported it.
   // The official reports first, so their descriptions and dates win; then the three services.
   const official=['trades-house','trades-senate'].filter(k=>sections[k]);
   const tradeLists=[...official,'trades-bargo','trades-eulerpool','trades-fmp'].map(k=>sections[k]?.rows).filter(Boolean);
   const merged={};
-  if(tradeLists.length)merged.trades=mergeTrades(tradeLists,sections['house-fd']?.rows||[],global['sec-sic']?.[0]?.byTicker||{},{officialFrom:official.length?`${config.year-1}-01-01`:null}).slice(0,200);
+  if(tradeLists.length)merged.trades=mergeTrades(tradeLists,sections['house-fd']?.rows||[],global['sec-sic']?.[0]?.byTicker||{},{officialFrom:official.length?`${SINCE(config)}-01-01`:null}).slice(0,1500);
   // Official reports that couldn't be read (filed on paper, or no text), for review by hand.
   merged.tradesUnread=official.flatMap(k=>sections[k].unread||[]);
   if(sections['state-openstates']||sections['state-legiscan'])merged.stateBills=mergeStateBills(sections['state-openstates']?.rows,sections['state-legiscan']?.rows).slice(0,150);
-  if(sections['news-gdelt']||sections['news-nyt'])merged.news=mergeNews(sections['news-gdelt']?.rows,sections['news-nyt']?.rows).slice(0,60);
+  // The newest 40 articles, then up to 10 from each earlier year.
+  if(sections['news-gdelt']||sections['news-nyt']){const all=mergeNews(sections['news-gdelt']?.rows,sections['news-nyt']?.rows);merged.news=[...all.slice(0,40),...history(all.slice(40),10).rows];}
   const lists=sections['senate-committees']||sections['house-committees'];
   if(lists)merged.committees={rows:lists.rows,checkedAt:lists.checkedAt,...committeeDiff(lists.rows,COMMITTEES.people[id]||[])};
-  // Bills this person sponsored or cosponsored this Congress, and CRS reports on them or on the key bills.
-  const theirBills=new Set([...(sections.legislation?.rows||[]),...(sections.cosponsored?.rows||[])].map(r=>r.bill||String(r.id).toLowerCase()));
-  merged.crs=(global.crs||[]).flatMap(c=>Object.entries(c.byBill||{}).filter(([b])=>theirBills.has(b)).flatMap(([b,list])=>list.map(r=>({...r,bill:b})))).slice(0,30);
+  // Bills they sponsored or cosponsored from historyFrom on (the snapshots list every bill, past the rows they show).
+  const theirBills=new Set([...(sections.legislation?.rows||[]),...(sections.cosponsored?.rows||[])].map(r=>r.bill||String(r.id).toLowerCase()).concat(sections.legislation?.bills||[],sections.cosponsored?.bills||[]));
+  merged.crs=(global.crs||[]).flatMap(c=>Object.entries(c.byBill||{}).filter(([b])=>theirBills.has(b)).flatMap(([b,list])=>list.map(r=>({...r,bill:b})))).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))).slice(0,60);
   // Foreign-agent registrants whose name matches one of this person's top donor organizations.
   const norm=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'').replace(/(inc|llc|corp|corporation|co|company|lp|llp)$/,'');
   const orgs=new Set((sections.donors?.orgs||[]).slice(0,20).map(o=>norm(o.employer)));
   merged.fara=(global.fara?.[0]?.rows||[]).filter(r=>orgs.has(norm(r.name))||orgs.has(norm(r.business)));
   // Sources that cover the same thing, joined: each fills in what the others don't have yet (see src/merge.mjs).
-  const everyone=kind=>{const seen=new Map();for(const d of global[kind]||[])for(const r of Object.values(d.byPerson||{}).flat())seen.set(r.id,r);return [...seen.values()];};
-  if(sections.meeting||sections.hearing)merged.hearings=mergeHearings({meetings:sections.meeting?.rows||[],transcripts:sections.hearing?.rows||[]},{allMeetings:everyone('meeting'),allTranscripts:everyone('hearing')},id).slice(0,40);
+  if(sections.meeting||sections.hearing){const all=mergeHearings({meetings:sections.meeting?.rows||[],transcripts:sections.hearing?.rows||[]},{allMeetings:pairs.meeting,allTranscripts:pairs.hearing},id);merged.hearings=[...all.slice(0,30),...history(all.slice(30),15).rows];}
   if(sections.courts||sections['fec-legal']||sections.doj)merged.legal=mergeLegal(sections.courts?.rows,sections['fec-legal']?.rows,sections.doj?.rows).slice(0,60);
   if(sections.press||sections.bluesky||sections.threads||sections.youtube)merged.statements={rows:mergeStatements({press:sections.press?.rows,bluesky:sections.bluesky?.rows,threads:sections.threads?.rows,youtube:sections.youtube?.rows}).slice(0,80),
     feed:sections.press?.feed||null,accounts:sections.bluesky?.accounts||[],missing:sections.bluesky?.missing||[]};

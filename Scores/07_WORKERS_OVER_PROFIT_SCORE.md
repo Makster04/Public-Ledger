@@ -24,6 +24,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Infrastructure law and CHIPS Act listed as Even | Both sides supported them. The CHIPS prevailing-wage amendment is scored on its own. |
 | <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Cited statements for candidates without a voting record | 25 from 22 candidates so far; the rest are listed in Updates & fixes. |
 | <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Lobbying on each key bill (LDA.gov) | Built, and shown beside each bill, never in its score. Waits on its first live run. |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Votes and cosponsorships back to 2016 | Added the 2017 tax law's final Senate and House votes, the 2019 House votes on the Raise the Wage Act and the Paycheck Fairness Act, and those bills' versions back to 2015. A bill still counts once per person: the latest vote on any version. Positions and cosponsors fill in on your computer (`npm run votes:positions`, `npm run bills:cosponsors`). |
 
 ## Better bill marking
 

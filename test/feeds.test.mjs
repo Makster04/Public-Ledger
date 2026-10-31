@@ -47,9 +47,12 @@ test('Congress.gov: sponsored bills leave out a senator\'s sponsored amendments'
   assert.deepEqual(r.rows.map(x=>x.id),['119-S-7']);
 });
 test('Congress.gov: cosponsored bills, House votes, bill details, CRS reports and committee meetings',async()=>{
-  const co=await run('cosponsored','collins',{bioguide:'C001035',congress:119,cycle:2026},[[/cosponsored-legislation/,{cosponsoredLegislation:[{congress:119,type:'S',number:'12',title:'A bill',introducedDate:'2026-02-01',latestAction:{text:'Referred',actionDate:'2026-02-01'}},{congress:118,type:'HR',number:'1',title:'Old',introducedDate:'2024-01-01'},
+  const co=await run('cosponsored','collins',{bioguide:'C001035',congress:119,cycle:2026},[[/cosponsored-legislation/,{cosponsoredLegislation:[{congress:119,type:'S',number:'12',title:'A bill',introducedDate:'2026-02-01',latestAction:{text:'Referred',actionDate:'2026-02-01'}},{congress:118,type:'HR',number:'1',title:'Last Congress',introducedDate:'2024-01-01'},{congress:113,type:'S',number:'9',title:'Before 2015',introducedDate:'2013-02-01'},
     {amendmentNumber:'2360',congress:119,type:'SAMDT',introducedDate:'2026-03-01',latestAction:{text:'Submitted',actionDate:'2026-03-01'}}],pagination:{count:3}}]]);
-  assert.equal(co.rows.length,1,'a cosponsored Senate amendment is left out, not a failed page');assert.equal(co.rows[0].bill,'119-s-12');assert.match(co.calls[0].url,/api_key=ck/);
+  const cob=co.rows.filter(r=>r.measure);
+  assert.deepEqual(cob.map(r=>r.bill),['119-s-12','118-hr-1'],'a cosponsored Senate amendment is left out, not a failed page; bills before the 114th Congress (2015-16) too');
+  assert.match(co.calls[0].url,/api_key=ck/);assert.match(co.calls[0].url,/fromDateTime=2016-01-01/,'the first run reads back to historyFrom');
+  assert.equal(co.snapshot.since,2016);assert.deepEqual(co.snapshot.bills,['119-s-12','118-hr-1']);assert.deepEqual(co.snapshot.byCongress,{119:1,118:1});
   const people=[{id:'perry',bioguide:'P000605'}];
   const v=normalizeHouseApiVote({houseRollCallVoteMemberVotes:{congress:119,sessionNumber:2,rollCallNumber:17,startDate:'2026-01-13T15:00:00-05:00',voteQuestion:'On Passage',result:'Passed',legislationType:'HR',legislationNumber:'55',results:[{bioguideID:'P000605',voteCast:'Aye'}]}},{chamber:'H',year:2026,number:17},people);
   assert.equal(v.positions.perry,'Aye');assert.equal(v.bill,'119-hr-55');assert.equal(houseApiURL({year:2026,number:17}),'https://api.congress.gov/v3/house-vote/119/2/17/members?format=json');
@@ -96,8 +99,9 @@ test('Vote Smart, Bluesky, Wayback, fact-checks, YouTube and news',async()=>{
   const g=await run('news-gdelt','collins',{name:'Susan M. Collins'},[[/gdeltproject/,{articles:[{url:'https://www.example.com/a?utm=1',title:'Collins votes',seendate:'20261020T143000Z',domain:'example.com'}]}]]);
   assert.equal(g.rows[0].date,'2026-10-20');
   await assert.rejects(run('news-gdelt','collins',{name:'x'},[[/gdeltproject/,new Response('Your query was too short')]]),/GDELT returned an error/);
-  const n=await run('news-nyt','collins',{name:'Susan M. Collins'},[[/nytimes/,{status:'OK',response:{docs:[{web_url:'https://example.com/a',headline:{main:'Times story'},pub_date:'2026-10-21T00:00:00Z'}]}}]]);
-  const merged=mergeNews(g.rows,n.rows);assert.equal(merged.length,1);assert.deepEqual(merged[0].sources,['GDELT','New York Times']);assert.equal(merged[0].date,'2026-10-20');
+  const n=await run('news-nyt','collins',{name:'Susan M. Collins'},[[/nytimes/,u=>json({status:'OK',response:{docs:/begin_date=20260101&end_date=20261231/.test(u)?[{web_url:'https://example.com/a',headline:{main:'Times story'},pub_date:'2026-10-21T00:00:00Z'}]:[]}})]]);
+  assert.equal(n.calls.length,new Date().getUTCFullYear()-2016+1,'one search for each year back to 2016');
+  const merged=mergeNews(g.rows,n.snapshot.rows);assert.equal(merged.length,1);assert.deepEqual(merged[0].sources,['GDELT','New York Times']);assert.equal(merged[0].date,'2026-10-20');
 });
 
 test('state records from Open States and LegiScan merge by state, session year and bill number',async()=>{
@@ -167,16 +171,18 @@ test('ethics leads: court records, FEC enforcement and DOJ releases stay leads a
   const f=await run('fec-legal','collins',{name:'Susan M. Collins',committee:'C00314575'},[[/legal\/search/,{murs:[{no:'8000',name:'Collins for Senator',respondents:['Collins for Senator'],open_date:'2024-01-01',close_date:'2025-01-01'},{no:'8001',name:'Unrelated PAC',respondents:['Someone']}],admin_fines:[{no:'4000',name:'Other committee',committee_id:'C00314575'}]}]]);
   assert.deepEqual(f.rows.map(r=>r.id),['mur-8000','af-4000']);
   const d=await run('doj','collins',{last:'Collins'},[[/press_releases/,{results:[{uuid:'u1',title:'Statement',body:'Senator Susan Collins announced the plea in case 1:25-cr-00042-ABC',url:'https://www.justice.gov/opa/pr/x',date:'1767225600'},{uuid:'u2',title:'Man named Collins sentenced',body:'John Collins was sentenced',url:'https://www.justice.gov/opa/pr/y'}]}]]);
-  assert.equal(d.rows.length,1);assert.equal(d.rows[0].date,'2026-01-01');assert.deepEqual(d.rows[0].dockets,['25-cr-42']);
+  assert.equal(d.snapshot.rows.length,1);assert.equal(d.snapshot.rows[0].date,'2026-01-01');assert.deepEqual(d.snapshot.rows[0].dockets,['25-cr-42']);
   assert.ok(namesPerson('Sen. Susan Collins',person('collins')));assert.ok(!namesPerson('Mike Collins',person('collins')));
   assert.ok(namesCampaign('Collins for Senator',person('collins')));assert.ok(namesCampaign('Friends of Susan Collins',person('collins')));assert.ok(!namesCampaign('Collins Aerospace PAC',person('collins')));
 });
 
 test('money: donor organizations by employer, monthly totals, lobbying, rule comments, contracts and nonprofits',async()=>{
   const dn=await run('donors','collins',{committee:'C00314575',cycle:2026},[[/by_employer/,{results:[{employer:'RETIRED',total:90000,count:300,committee_id:'C00314575'},{employer:'ACME CORP',total:12000,count:20,committee_id:'C00314575'},{employer:'BIG BANK',total:8000,count:9,committee_id:'C00314575'}]}]]);
-  assert.deepEqual(dn.snapshot.orgs.map(o=>o.employer),['ACME CORP','BIG BANK']);assert.ok(!isOrg('Self-Employed'));assert.ok(isOrg('Acme Corp'));
-  const mo=await run('donor-months','collins',{committee:'C00314575',cycle:2026,orgs:['ACME CORP']},[[/schedule_a/,u=>{assert.match(u,/contributor_employer=ACME\+CORP|contributor_employer=ACME%20CORP/);return new Response('{"results":[{"sub_id":4010120269999999999,"committee_id":"C00314575","contributor_name":"DOE, JANE","contributor_employer":"Acme Corp","contribution_receipt_date":"2026-03-04","contribution_receipt_amount":500},{"sub_id":2,"committee_id":"C00314575","contributor_employer":"ACME CORP","contribution_receipt_date":"2026-03-20","contribution_receipt_amount":250}],"pagination":{}}');}]]);
-  assert.deepEqual(mo.snapshot.months,{'ACME CORP':{'2026-03':750}});assert.ok(!JSON.stringify(mo.rows).includes('DOE'),'donor names are never kept');
+  assert.deepEqual(dn.snapshot.orgs.map(o=>o.employer),['ACME CORP','BIG BANK']);
+  assert.deepEqual(Object.keys(dn.snapshot.cycles),['2016','2018','2020','2022','2024'],'the earlier cycles back to 2016');assert.ok(!isOrg('Self-Employed'));assert.ok(isOrg('Acme Corp'));
+  const mo=await run('donor-months','collins',{committee:'C00314575',cycle:2026,orgs:['ACME CORP']},[[/schedule_a/,u=>{assert.match(u,/contributor_employer=ACME\+CORP|contributor_employer=ACME%20CORP/);if(!/two_year_transaction_period=2026/.test(u))return json({results:[],pagination:{}});return new Response('{"results":[{"sub_id":4010120269999999999,"committee_id":"C00314575","contributor_name":"DOE, JANE","contributor_employer":"Acme Corp","contribution_receipt_date":"2026-03-04","contribution_receipt_amount":500},{"sub_id":2,"committee_id":"C00314575","contributor_employer":"ACME CORP","contribution_receipt_date":"2026-03-20","contribution_receipt_amount":250}],"pagination":{}}');}]]);
+  assert.deepEqual(mo.snapshot.months,{'ACME CORP':{'2026-03':750}});
+  assert.deepEqual(mo.calls.map(c=>new URL(c.url).searchParams.get('two_year_transaction_period')),['2016','2018','2020','2022','2024','2026'],'each cycle back to 2016');assert.ok(!JSON.stringify(mo.rows).includes('DOE'),'donor names are never kept');
   const lb=await run('lobbying','collins',{orgs:['ACME CORP'],year:2026},[[/lda\.gov/,{results:[{filing_uuid:'f1',filing_year:2026,filing_period_display:'1st Quarter',income:'50000.00',registrant:{name:'K Street LLC'},client:{name:'ACME CORP'},filing_document_url:'https://lda.gov/filings/public/filing/f1/print/',lobbying_activities:[{general_issue_code_display:'Taxation/Internal Revenue Code',description:'H.R. 1, One Big Beautiful Bill Act; S.1234; issues re U.S. 50 rules'}]}]}]]);
   assert.deepEqual(lb.rows[0].bills,['119-hr-1','119-s-1234']);assert.equal(lb.rows[0].amount,50000);
   assert.deepEqual(billsInText('H.J.Res. 7 and H. Con. Res. 14 and S 99',119),['119-hjres-7','119-hconres-14','119-s-99']);
@@ -220,7 +226,8 @@ test('new sources join an existing database once, wait for their keys, and chain
   // Finishing the donors job fills in the organizations for the jobs that depend on it.
   await statement(db,"UPDATE jobs SET next_due=? WHERE id!='donors:collins'",Date.now()+DAYMS).run();
   await statement(db,"UPDATE jobs SET next_due=0 WHERE id='donors:collins'").run();
-  await runRefresh({DB:db,FEC_API_KEY:'k',fetch:async()=>json({results:[{employer:'ACME CORP',total:100,count:1,committee_id:'C00314575'}]})},{steps:1});
+  // One page for each election cycle back to 2016.
+  await runRefresh({DB:db,FEC_API_KEY:'k',fetch:async()=>json({results:[{employer:'ACME CORP',total:100,count:1,committee_id:'C00314575'}]})},{steps:6});
   const lob=await statement(db,"SELECT args,next_due FROM jobs WHERE id='lobbying:collins'").first();
   assert.deepEqual(JSON.parse(lob.args).orgs,['ACME CORP']);assert.equal(lob.next_due,0);
   db.close();

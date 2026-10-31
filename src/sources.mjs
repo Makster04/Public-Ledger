@@ -262,11 +262,13 @@ export async function fetchPage(job,env,config) {
     return {rows:d.results.map(r=>normalizeTransaction(r,job.kind,a)),next};
   }
   if(job.kind==='legislation') {
-    const url=job.cursor||`https://api.congress.gov/v3/member/${a.bioguide}/sponsored-legislation?format=json&limit=250&fromDateTime=${a.cycle-1}-01-01T00%3A00%3A00Z`;
+    // Every bill they sponsored from the Congress that includes historyFrom (2016: the 114th) on.
+    const since=Number(config?.historyFrom)||2016,first=Math.floor((since-1789)/2)+1;
+    const url=job.cursor||`https://api.congress.gov/v3/member/${a.bioguide}/sponsored-legislation?format=json&limit=250&fromDateTime=${since}-01-01T00%3A00%3A00Z`;
     const d=await requestSource(url,env);if(!Array.isArray(d.sponsoredLegislation)||!d.pagination)throw new SourceError('Sponsored legislation response incomplete');
     const types={HR:'house-bill',S:'senate-bill',HJRES:'house-joint-resolution',SJRES:'senate-joint-resolution',HCONRES:'house-concurrent-resolution',SCONRES:'senate-concurrent-resolution',HRES:'house-resolution',SRES:'senate-resolution'};
     // Amendments a senator sponsored are listed too; they have no bill number or title and are left out.
-    const rows=d.sponsoredLegislation.filter(r=>Number(r.congress)===Number(a.congress)&&r.amendmentNumber==null&&!/AMDT$/i.test(r.type||'')).map(r=>{
+    const rows=d.sponsoredLegislation.filter(r=>Number(r.congress)>=first&&r.amendmentNumber==null&&!/AMDT$/i.test(r.type||'')).map(r=>{
       if(!types[r.type]||!r.number||!(r.title||r.latestTitle)||!day(r.introducedDate))throw new SourceError('Legislation record incomplete');
       return {id:`${r.congress}-${r.type}-${r.number}`,title:r.title||r.latestTitle,measure:`${r.type} ${r.number}`,date:day(r.introducedDate),latestAction:r.latestAction?.text||null,actionDate:day(r.latestAction?.actionDate),source:`https://www.congress.gov/bill/${r.congress}th-congress/${types[r.type]}/${r.number}`};
     });
@@ -292,7 +294,8 @@ export async function fetchPage(job,env,config) {
 export function summarize(job,rows) {
   const a=JSON.parse(job.args),through=job.started_at.slice(0,10);
   if(['pac','outside'].includes(job.kind))return summarizeTransactions(rows,job.kind,a,through);
-  if(job.kind==='legislation')return {count:rows.length,congress:a.congress,rows:rows.sort((a,b)=>b.date.localeCompare(a.date)).slice(0,100),rowLimit:100};
+  if(job.kind==='legislation'){const by={};for(const r of rows)by[r.id.split('-')[0]]=(by[r.id.split('-')[0]]||0)+1;
+    return {count:rows.length,congress:a.congress,rows:rows.sort((a,b)=>b.date.localeCompare(a.date)).slice(0,300),rowLimit:300,byCongress:by,bills:rows.map(r=>r.id.toLowerCase())};}
   if(job.kind==='house-next')return {count:rows.length,rows:rows.sort((a,b)=>b.number-a.number).slice(0,30)};
   if(job.kind==='senate-index')return {rows};
   if(!rows.length)throw new SourceError('No validated record to publish');

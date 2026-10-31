@@ -3,7 +3,7 @@
 // create, how to fetch one page, and how to summarize the validated records into the published snapshot.
 // Response formats follow each source's published documentation; live responses need your keys and are not verified
 // here. Every adapter checks the identity and shape of what comes back and refuses to publish anything else.
-import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader,partyTally} from './sources.mjs';
+import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader,partyTally,normalizeCampaign} from './sources.mjs';
 import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
@@ -46,6 +46,76 @@ const recent=(rows,n=50)=>({count:rows.length,rows:top(rows,n),rowLimit:n});
 export const docketKey=v=>{const m=/(?:\b\d{1,2}:)?\b(\d{2})-([a-z]{2,4})-0*(\d{1,6})\b/i.exec(String(v||''));return m?`${m[1]}-${m[2].toLowerCase()}-${m[3]}`:null;};
 export const docketsIn=text=>[...new Set([...String(text||'').matchAll(/(?:\b\d{1,2}:)?\b\d{2}-(?:cr|cv|mj|mc|po|sw)-\d{1,6}\b/gi)].map(m=>docketKey(m[0])).filter(Boolean))];
 const byPersonOf=rows=>{const out={};for(const r of rows)for(const id of r.people||[])(out[id]||=[]).push(r);return out;};
+
+// ---------- History back to config.historyFrom (2016) ----------
+// The year the refresh reads history from. Each source goes back to it where it can; see README "How far back".
+export const SINCE=c=>Number(c?.historyFrom)||2016;
+const thisYear=()=>new Date().getUTCFullYear();
+export const yearsFrom=(from,to=thisYear())=>Array.from({length:Math.max(0,to-from+1)},(_,i)=>from+i);
+// Election cycles (even years) from the one that includes `from` through `to`.
+export const cyclesFrom=(from,to)=>yearsFrom(from+from%2,to).filter(y=>y%2===0);
+const isoDay=ms=>new Date(ms).toISOString().slice(0,10);
+// A year whose records are complete: it ended more than two months ago, so late filings (fourth-quarter lobbying
+// reports, year-end campaign reports) are in. Its records are read once and kept.
+export const ended=(year,now=new Date())=>Number(year)<now.getUTCFullYear()-1||(Number(year)===now.getUTCFullYear()-1&&now.getUTCMonth()>=2);
+// A long list kept by year: the newest perYear rows of each year, newest first, with every year's full count, so ten
+// years of records stay a manageable size and the older years can still be opened.
+export function history(rows,perYear=40){
+  const by={};for(const r of rows)(by[String(r.date||'').slice(0,4)||'undated']||=[]).push(r);
+  const kept=Object.values(by).flatMap(l=>top(l,perYear));
+  return {count:rows.length,rows:top(kept,kept.length),byYear:Object.fromEntries(Object.entries(by).map(([y,l])=>[y,l.length])),perYear};
+}
+// Every record behind a job's last published snapshot (not only the rows the snapshot shows): what a job carries over.
+async function publishedRecords(env,jobId){
+  if(!env.DB)return [];
+  const r=await env.DB.prepare('SELECT r.payload FROM records r JOIN jobs j ON r.run_id=j.published_run WHERE j.id=?').bind(jobId).all();
+  return r.results.map(x=>JSON.parse(x.payload));
+}
+// Which of these record IDs the current run has already saved.
+async function recorded(env,runId,ids){
+  const have=new Set();if(!env.DB||!runId)return have;
+  for(let i=0;i<ids.length;i+=90){const part=ids.slice(i,i+90).map(String);
+    const r=await env.DB.prepare(`SELECT id FROM records WHERE run_id=? AND id IN (${part.map(()=>'?').join(',')})`).bind(runId,...part).all();
+    for(const x of r.results)have.add(x.id);}
+  return have;
+}
+// History read one period at a time (a year, an election cycle, a year for one organization). A period that has
+// ended is read once: its records are carried over from the job's last published run, with a marker saying it was read
+// in full. Periods still open are read again on each run. tag: what else the records depend on (the organizations a
+// donor search names), so a change reads the period again. read(period, cursor) returns {rows, next}.
+export async function byPeriod(job,env,{periods,closed=ended,tag='',read}){
+  let c=state(job.cursor),rows=[];
+  if(!c){
+    const old=await publishedRecords(env,job.id),keep=new Set(periods.map(String));
+    const done=new Set(old.filter(r=>r.periodDone!=null&&r.tag===tag&&keep.has(String(r.periodDone))&&closed(r.periodDone)).map(r=>String(r.periodDone)));
+    rows=old.filter(r=>done.has(String(r.periodDone??r.period)));
+    c={todo:periods.filter(p=>!done.has(String(p))),i:0,at:null};
+    if(!c.todo.length)return {rows,next:null};
+  }
+  const p=c.todo[c.i],r=await read(p,c.at);
+  rows.push(...r.rows.map(x=>({...x,id:`${p}:${x.id}`,period:p})));
+  if(r.next)return {rows,next:JSON.stringify({...c,at:r.next})};
+  if(closed(p))rows.push({id:`period:${p}`,periodDone:p,tag});
+  return {rows,next:c.i+1<c.todo.length?JSON.stringify({todo:c.todo,i:c.i+1,at:null}):null};
+}
+const periodRows=rows=>rows.filter(r=>r.periodDone==null);
+const countBy=(rows,key)=>{const o={};for(const r of rows){const k=key(r);o[k]=(o[k]||0)+1;}return o;};
+// A newest-first list read back to historyFrom: in full about once a month, and in between only its newest page, with
+// the older records carried over from the last run. read(cursor) returns {rows, next, oldest} (oldest: the date of the
+// last item on the page, read or not).
+async function readBack(job,env,config,read,{maxPages=10,name='list'}={}){
+  const since=`${SINCE(config)}-01-01`,mark=`scan:${name}`;let c=state(job.cursor);const rows=[];
+  if(!c){
+    const old=await publishedRecords(env,job.id),m=old.find(r=>r.id===mark);
+    c={at:null,n:0,full:!(m&&m.since===since&&Date.now()-Date.parse(m.at)<30*DAY)};
+    if(!c.full)rows.push(...old);
+  }
+  const r=await read(c.at);rows.push(...r.rows);
+  const more=c.full&&r.next&&c.n+1<maxPages&&!(r.oldest&&r.oldest<since);
+  if(c.full&&!more)rows.push({id:mark,since,at:new Date().toISOString()});
+  return {rows,next:more?JSON.stringify({...c,at:r.next,n:c.n+1}):null};
+}
+const scanRows=rows=>rows.filter(r=>!/^scan:/.test(String(r.id))&&r.periodDone==null);
 
 // ---------- Statements: social accounts and official press releases ----------
 const domainOf=u=>{try{return new URL(u).hostname.replace(/^www\./,'').toLowerCase();}catch{return null;}};
@@ -92,8 +162,9 @@ export function feedItems(doc){
 // Congress.gov lists the amendments a member sponsored or cosponsored (mostly senators') with their bills; an amendment
 // has an amendment number instead of a bill number and no title, so it is left out rather than failing the page.
 export const isAmendment=r=>r.amendmentNumber!=null||/AMDT$/i.test(r.type||'');
+// Bills in the response from a.first (a Congress number) on, or from a.congress alone.
 function billRows(items,a){
-  return items.filter(r=>Number(r.congress)===Number(a.congress)&&!isAmendment(r)).map(r=>{
+  return items.filter(r=>(a.first?Number(r.congress)>=Number(a.first):Number(r.congress)===Number(a.congress))&&!isAmendment(r)).map(r=>{
     need(BILL_PATH[r.type]&&r.number&&(r.title||r.latestTitle)&&day(r.introducedDate),'Legislation record incomplete');
     return {id:`${r.congress}-${r.type}-${r.number}`,bill:billKey(r.congress,r.type+r.number),title:r.title||r.latestTitle,measure:`${r.type} ${r.number}`,date:day(r.introducedDate),latestAction:r.latestAction?.text||null,actionDate:day(r.latestAction?.actionDate),source:billPage(r.congress,r.type,r.number)};
   });
@@ -112,15 +183,49 @@ export function normalizeHouseApiVote(d,args,people){
 }
 export const houseApiURL=args=>`https://api.congress.gov/v3/house-vote/${congressOf(args.year)}/${args.year%2?1:2}/${args.number}/members?format=json`;
 
+// GovInfo packages of one collection issued from historyFrom until `lag` days ago (the newer ones come from the daily
+// index), from GovInfo's published-date service.
+async function publishedPage(job,a,env,config,lag,re){
+  const url=job.cursor||`https://api.govinfo.gov/published/${SINCE(config)}-01-01/${daysAgo(lag)}?collection=${a.collection}&offsetMark=*&pageSize=1000`;
+  const d=await requestSource(url,env);need(Array.isArray(d.packages),'GovInfo package list missing');
+  return {rows:d.packages.filter(x=>re.test(x.packageId||'')).map(x=>({id:x.packageId,date:day(x.dateIssued)})),next:d.nextPage?cleanURL(d.nextPage):null};
+}
+// The speeches in one day's Congressional Record, from the day's MODS metadata file: each section of the Record (a
+// granule) with its ID (accessId), its part of the Record (granuleClass) and the members speaking in it (congMember,
+// by Bioguide ID), in the same shape as the granule-by-granule reader.
+export function crecModsRows(doc,pkg,bios){
+  const merge=exts=>{const o={};for(const e of exts)if(e&&typeof e==='object')for(const [k,v] of Object.entries(e))o[k]=k in o?[...list(o[k]),...list(v)]:v;return o;};
+  const parts=list(doc?.mods?.relatedItem).map(it=>{const ext=merge(list(it.extension));return {it,ext,id:String(txt(list(ext.accessId)[0])).trim()};}).filter(x=>x.id);
+  need(parts.some(x=>x.id.startsWith(pkg+'-')),'Congressional Record metadata missing');
+  return parts.map(x=>{
+    const section=String(txt(list(x.ext.granuleClass)[0])).trim();if(!['HOUSE','SENATE','EXTENSIONS'].includes(section))return null;
+    const people=[...new Set(list(x.ext.congMember).filter(m=>m&&(!m['@_role']||/speak/i.test(m['@_role']))).map(m=>bios.get(m['@_bioGuideId'])).filter(Boolean))];
+    if(!people.length)return null;
+    const title=String(txt(list(list(x.it.titleInfo)[0]?.title)[0])||String(txt(list(x.ext.searchTitle)[0])).replace(/;\s*Congressional Record Vol\..*$/,'')).trim();
+    return {id:x.id,title:cut(title,300),date:pkg.slice(5,15),section,people,url:`https://www.govinfo.gov/app/details/${pkg}/${x.id}`};
+  }).filter(Boolean);
+}
+
 export const FEEDS={
+  // Every bill they cosponsored from historyFrom on: read in full once a week, and on the other days only the bills
+  // updated since the last run (a new cosponsor or action updates a bill), with the rest carried over.
   cosponsored:{host:'api.congress.gov',label:'Cosponsored legislation',tab:'match',
     jobs:c=>profiled(c).filter(p=>p.bioguide).map(p=>({id:`cosponsored:${p.id}`,subject:p.id,args:{bioguide:p.bioguide,congress:c.congress,cycle:c.cycle}})),
-    async page(job,a,env){
-      const url=job.cursor||`https://api.congress.gov/v3/member/${a.bioguide}/cosponsored-legislation?format=json&limit=250&fromDateTime=${a.cycle-1}-01-01T00%3A00%3A00Z`;
-      const d=await requestSource(url,env);need(Array.isArray(d.cosponsoredLegislation)&&d.pagination,'Cosponsored legislation response incomplete');
-      return {rows:billRows(d.cosponsoredLegislation,a),next:congressNext(d,job.cursor)};
+    async page(job,a,env,config){
+      const since=SINCE(config);let c=state(job.cursor),carry=[];
+      if(!c){
+        const old=await publishedRecords(env,job.id),m=old.find(r=>r.id==='scan:full');
+        const fresh=m&&m.since===since&&Date.now()-Date.parse(m.at)<WEEK&&job.last_success;
+        const from=fresh?isoDay(Date.parse(job.last_success)-3*DAY):`${since}-01-01`;
+        carry=fresh?old:[{id:'scan:full',since,at:new Date().toISOString()}];
+        c={url:`https://api.congress.gov/v3/member/${a.bioguide}/cosponsored-legislation?format=json&limit=250&fromDateTime=${from}T00%3A00%3A00Z`};
+      }
+      const d=await requestSource(c.url,env);need(Array.isArray(d.cosponsoredLegislation)&&d.pagination,'Cosponsored legislation response incomplete');
+      const next=congressNext(d,c.url);
+      return {rows:[...carry,...billRows(d.cosponsoredLegislation,{first:congressOf(since)})],next:next&&JSON.stringify({url:next})};
     },
-    summarize:(rows,a)=>({count:rows.length,congress:a.congress,rows:top(rows,100),rowLimit:100})},
+    summarize:(rows,a)=>{const bills=rows.filter(r=>r.measure),m=rows.find(r=>r.id==='scan:full');
+      return {...history(bills,30),congress:a.congress,since:m?.since||null,bills:[...new Set(bills.map(r=>r.bill).filter(Boolean))],byCongress:countBy(bills,r=>r.id.split('-')[0])};}},
 
   // Key bills: the Workers > Profit bills and the bills behind the selected votes (config.keyBills).
   bill:{host:'api.congress.gov',label:'Bill details',tab:'match',
@@ -145,31 +250,47 @@ export const FEEDS={
     },
     summarize:(rows,a)=>{const out={bill:a.bill};for(const r of rows){const {id,...rest}=r;Object.assign(out,rest);}need(out.title,'Bill details missing');return out;}},
 
-  // CRS reports published recently, each with the bills it covers.
-  crs:{host:'api.congress.gov',label:'CRS reports',tab:'match',scope:'global',
-    jobs:()=>[{id:'crs',subject:'CRS',args:{days:60}}],
-    async page(job,a,env){
-      const c=state(job.cursor)||{ids:null,i:0};
-      if(!c.ids){
-        const d=await requestSource(`https://api.congress.gov/v3/crsreport?format=json&limit=250&fromDateTime=${daysAgo(a.days)}T00%3A00%3A00Z`,env);
-        const items=list(d.CRSReports||d.crsReports);need(Array.isArray(d.CRSReports||d.crsReports),'CRS report list missing');
-        return {rows:[],next:items.length?JSON.stringify({ids:items.map(x=>x.id).filter(Boolean).slice(0,250),i:0}):null};
+  // CRS reports from historyFrom on, each with the bills it covers. A report already read is carried over, not read
+  // again; the first run reads up to 1,700 reports and the rest follow in the next runs, a few minutes apart. Once all are
+  // read, each weekly run lists only the reports updated since the last one.
+  crs:{host:'api.congress.gov',label:'CRS reports',tab:'match',scope:'global',every:WEEK,
+    jobs:()=>[{id:'crs',subject:'CRS',args:{}}],
+    async page(job,a,env,config){
+      const since=SINCE(config);let c=state(job.cursor);
+      // First: the reports already read, so the listing below can skip them.
+      if(!c){
+        const old=await publishedRecords(env,job.id),m=old.find(r=>r.id==='scan:crs'),complete=m?.since===since&&m.complete&&job.last_success;
+        return {rows:old.filter(r=>r.id!=='scan:crs'),next:JSON.stringify({from:complete?isoDay(Date.parse(job.last_success)-7*DAY):`${since}-01-01`,offset:0,todo:[],i:0})};
       }
-      const id=c.ids[c.i],r=(await requestSource(`https://api.congress.gov/v3/crsreport/${encodeURIComponent(id)}?format=json`,env)).CRSReport;
-      need(r&&r.id===id,'CRS report identity mismatch');
-      const bills=list(r.relatedMaterials).map(m=>m.type&&m.number&&m.congress?billKey(m.congress,m.type+m.number):null).filter(Boolean);
-      const pdf=list(r.formats).find(f=>/pdf/i.test(f.format||''))||list(r.formats)[0];
-      const row={id,title:r.title,date:day(r.publishDate),bills,url:https(r.url)||https(pdf?.url)||`https://www.congress.gov/crs-product/${id}`};
-      return {rows:[row],next:c.i+1<c.ids.length?JSON.stringify({ids:c.ids,i:c.i+1}):null};
+      if(c.i<c.todo.length){
+        const id=c.todo[c.i],r=(await requestSource(`https://api.congress.gov/v3/crsreport/${encodeURIComponent(id)}?format=json`,env)).CRSReport;
+        need(r&&r.id===id,'CRS report identity mismatch');
+        const bills=list(r.relatedMaterials).map(m=>m.type&&m.number&&m.congress?billKey(m.congress,m.type+m.number):null).filter(Boolean);
+        const pdf=list(r.formats).find(f=>/pdf/i.test(f.format||''))||list(r.formats)[0];
+        const row={id,title:r.title,date:day(r.publishDate),bills,url:https(r.url)||https(pdf?.url)||`https://www.congress.gov/crs-product/${id}`};
+        return {rows:[row],next:JSON.stringify({...c,i:c.i+1})};
+      }
+      if(c.last)return {rows:[{id:'scan:crs',since,complete:true}],next:null};
+      // A run stops well before the page limit and publishes what it has; the next run continues.
+      if(job.page>1700)return {rows:[{id:'scan:crs',since,complete:false}],next:null};
+      const d=await requestSource(`https://api.congress.gov/v3/crsreport?format=json&limit=250&offset=${c.offset}&fromDateTime=${c.from}T00%3A00%3A00Z`,env);
+      const items=list(d.CRSReports||d.crsReports);need(Array.isArray(d.CRSReports||d.crsReports),'CRS report list missing');
+      const ids=[...new Set(items.map(x=>x.id).filter(Boolean))],have=await recorded(env,job.run_id,ids);
+      return {rows:[],next:JSON.stringify({...c,offset:c.offset+250,todo:ids.filter(id=>!have.has(String(id))),i:0,last:items.length<250})};
     },
-    summarize:rows=>{const byBill={};for(const r of rows)for(const b of r.bills)(byBill[b]||=[]).push(r);return {count:rows.length,byBill};}},
+    summarize:rows=>{const m=rows.find(r=>r.id==='scan:crs'),reports=rows.filter(r=>r!==m),byBill={};
+      for(const r of reports)for(const b of r.bills||[])(byBill[b]||=[]).push(r);
+      return {count:reports.length,byBill,since:m?.since||null,more:m?!m.complete:false};}},
 
   // Committee meetings with witnesses and their testimony, and the committee's own documents (the House Document
-  // Repository's files, served through Congress.gov), for committees that profiled members sit on.
+  // Repository's files, served through Congress.gov), for committees that profiled members sit on: every meeting of the
+  // current Congress. Earlier Congresses' meetings are left out because a meeting is matched to members by their
+  // committee seats, and only the current seats are on file; the hearing transcripts (GovInfo) cover earlier years with
+  // the members who attended.
   meetings:{host:'api.congress.gov',label:'Committee meetings',scope:'global',
     jobs:c=>['house','senate'].map(ch=>({id:`meetings:${ch}`,subject:ch==='house'?'House':'Senate',args:{chamber:ch,congress:c.congress,days:30}})),
     async page(job,a,env){
-      const url=job.cursor||`https://api.congress.gov/v3/committee-meeting/${a.congress}/${a.chamber}?format=json&limit=250&fromDateTime=${daysAgo(a.days)}T00%3A00%3A00Z`;
+      const url=job.cursor||`https://api.congress.gov/v3/committee-meeting/${a.congress}/${a.chamber}?format=json&limit=250`;
       const d=await requestSource(url,env);need(Array.isArray(d.committeeMeetings),'Committee meeting list missing');
       return {rows:d.committeeMeetings.map(m=>({id:String(m.eventId),eventId:String(m.eventId)})).filter(r=>/^\d+$/.test(r.id)),next:congressNext(d,job.cursor)};
     },
@@ -194,17 +315,18 @@ export const FEEDS={
   // Federal Register documents for profiled people who held federal executive office (config federalRegister).
   'official-acts':{host:'www.federalregister.gov',label:'Official acts',tab:'match',
     jobs:c=>profiled(c).filter(p=>p.federalRegister).map(p=>({id:`official-acts:${p.id}`,subject:p.id,args:p.federalRegister})),
-    async page(job,a,env){
+    // Documents from historyFrom on (up to 3,000), read in full about once a month; other days read the newest 100.
+    page:(job,a,env,config)=>readBack(job,env,config,async next=>{
       const u=new URL('https://www.federalregister.gov/api/v1/documents.json');u.searchParams.set('order','newest');u.searchParams.set('per_page','100');
       if(a.president){u.searchParams.append('conditions[president][]',a.president);u.searchParams.append('conditions[type][]','PRESDOCU');}
       if(a.agency)u.searchParams.append('conditions[agencies][]',a.agency);
+      u.searchParams.set('conditions[publication_date][gte]',`${SINCE(config)}-01-01`);
       need(a.president||a.agency,'Federal Register filter missing');
-      const d=await requestSource(job.cursor||u.href,env);need(Array.isArray(d.results),'Federal Register results missing');
+      const d=await requestSource(next||u.href,env);need(Array.isArray(d.results),'Federal Register results missing');
       const rows=d.results.map(r=>({id:r.document_number,title:r.title,type:r.type,date:day(r.publication_date),order:r.executive_order_number||null,url:https(r.html_url)})).filter(r=>r.id&&r.url);
-      const page=Number(new URL(job.cursor||u.href).searchParams.get('page')||1);
-      return {rows,next:d.next_page_url&&page<5?https(d.next_page_url):null};
-    },
-    summarize:rows=>recent(rows,100)},
+      return {rows,next:https(d.next_page_url),oldest:day(d.results.at(-1)?.publication_date)};
+    },{maxPages:30}),
+    summarize:rows=>history(scanRows(rows),40)},
 
   // State legislative records, from Open States and LegiScan together (merged by state bill number when read).
   'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',
@@ -225,9 +347,9 @@ export const FEEDS={
         return {id:b.id,state:a.state.toUpperCase(),session:String(b.session),identifier:b.identifier,title:cut(b.title,300),role:sp?(sp.primary?'sponsor':'cosponsor'):'sponsor',
           latestAction:b.latest_action_description||null,date:day(b.latest_action_date),votes,url:https(b.openstates_url),source:'Open States'};
       });
-      return {rows,next:c.page<Math.min(5,d.pagination.max_page||1)?JSON.stringify({person:c.person,page:c.page+1}):null};
+      return {rows,next:c.page<Math.min(10,d.pagination.max_page||1)?JSON.stringify({person:c.person,page:c.page+1}):null};
     },
-    summarize:rows=>recent(rows,100)},
+    summarize:rows=>history(rows,25)},
   // The person's LegiScan ID is looked up once and kept in the published snapshot, so each later weekly check spends one
   // query (their sponsored bills) instead of repeating the session and people lookups, which LegiScan asks users to avoid.
   'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,
@@ -275,8 +397,17 @@ export const FEEDS={
     },
     summarize:rows=>({count:rows.length,packages:rows.map(r=>r.id)}),
     after:async(snapshot,job,ctx)=>{for(const pkg of snapshot.packages)await ctx.addJob(`crec-day:${pkg}`,'crec-day',pkg,{pkg});}},
+  // Every daily issue from historyFrom until two weeks ago, by the date it was issued; each one is read once, in full,
+  // from its metadata file (one request a day of the Record instead of one for each speech).
+  'crec-archive':{host:'api.govinfo.gov',label:'Congressional Record archive',scope:'global',every:WEEK,
+    jobs:()=>[{id:'crec-archive',subject:'Congress',args:{collection:'CREC'}}],
+    page:(job,a,env,config)=>publishedPage(job,a,env,config,15,/^CREC-\d{4}-\d{2}-\d{2}$/),
+    summarize:rows=>({count:rows.length,packages:rows.map(r=>r.id)}),
+    after:async(snapshot,job,ctx)=>{for(const pkg of snapshot.packages)await ctx.addJob(`crec-day:${pkg}`,'crec-day',pkg,{pkg,whole:true});}},
   'crec-day':{host:'api.govinfo.gov',label:'Floor speeches',tab:'promises',scope:'global',every:NEVER,jobs:()=>[],
     async page(job,a,env,config){
+      const bios=new Map(config.people.filter(p=>p.bioguide).map(p=>[p.bioguide,p.id]));
+      if(a.whole)return {rows:crecModsRows(parseXML(await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/mods`,env,{as:'text'})),a.pkg,bios),next:null};
       const c=state(job.cursor)||{ids:null,i:0};
       if(!c.ids){
         const d=await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/granules?offsetMark=*&pageSize=1000`,env);need(Array.isArray(d.granules),'GovInfo granule list missing');
@@ -285,7 +416,6 @@ export const FEEDS={
       }
       const g=await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/granules/${c.ids[c.i]}/summary`,env);
       need(g&&g.granuleId===c.ids[c.i],'GovInfo granule identity mismatch');
-      const bios=new Map(config.people.filter(p=>p.bioguide).map(p=>[p.bioguide,p.id]));
       const people=[...new Set(list(g.members).filter(m=>!m.role||/speak/i.test(m.role)).map(m=>bios.get(m.bioGuideId)).filter(Boolean))];
       const rows=people.length?[{id:g.granuleId,title:cut(g.title,300),date:day(g.dateIssued),section:g.granuleClass,people,url:`https://www.govinfo.gov/app/details/${a.pkg}/${g.granuleId}`}]:[];
       return {rows,next:c.i+1<c.ids.length?JSON.stringify({ids:c.ids,i:c.i+1}):null};
@@ -294,6 +424,12 @@ export const FEEDS={
   'hearing-index':{host:'api.govinfo.gov',label:'Hearing transcripts',scope:'global',
     jobs:()=>[{id:'hearing-index',subject:'Congress',args:{collection:'CHRG',days:60}}],
     page:(...x)=>FEEDS['crec-index'].page(...x),
+    summarize:rows=>({count:rows.length,packages:rows.map(r=>r.id)}),
+    after:async(snapshot,job,ctx)=>{for(const pkg of snapshot.packages)await ctx.addJob(`hearing:${pkg}`,'hearing',pkg,{pkg});}},
+  // Every hearing transcript published from historyFrom until two months ago, each read once.
+  'hearing-archive':{host:'api.govinfo.gov',label:'Hearing transcript archive',scope:'global',every:WEEK,
+    jobs:()=>[{id:'hearing-archive',subject:'Congress',args:{collection:'CHRG'}}],
+    page:(job,a,env,config)=>publishedPage(job,a,env,config,60,/^CHRG-\d+/),
     summarize:rows=>({count:rows.length,packages:rows.map(r=>r.id)}),
     after:async(snapshot,job,ctx)=>{for(const pkg of snapshot.packages)await ctx.addJob(`hearing:${pkg}`,'hearing',pkg,{pkg});}},
   hearing:{host:'api.govinfo.gov',label:'Hearing transcript',tab:'promises',scope:'global',every:NEVER,jobs:()=>[],
@@ -327,7 +463,7 @@ export const FEEDS={
     async page(job,a,env){
       const i=Number(job.cursor||0),handle=a.handles[i];
       // Bluesky answers 400 for a handle with no account (most often a website domain that isn't used as a handle).
-      const d=await requestSource(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(handle)}&limit=50&filter=posts_no_replies`,env,{allow:[400,404]});
+      const d=await requestSource(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(handle)}&limit=100&filter=posts_no_replies`,env,{allow:[400,404]});
       if(d===null)return {rows:[{id:`missing:${handle}`,missing:handle}],next:i+1<a.handles.length?String(i+1):null};
       need(Array.isArray(d.feed),'Bluesky feed missing');
       const linksOf=r=>[...new Set([r?.embed?.external?.uri,...list(r?.facets).flatMap(f=>list(f.features).map(x=>x.uri))].map(u=>https(u)).filter(Boolean))];
@@ -375,42 +511,48 @@ export const FEEDS={
     // A post that mentions several issues is listed once, with each of them.
     summarize:rows=>{const by=new Map();for(const r of rows){const o=by.get(r.id);if(o)o.issues=[...new Set([...o.issues,...r.issues])];else by.set(r.id,{...r});}return recent([...by.values()],60);}},
 
-  // Every distinct Wayback Machine capture of the campaign site, so promises can be compared after edits.
+  // Every distinct Wayback Machine capture of the campaign site from historyFrom on, so promises can be compared after
+  // edits. Read a year at a time; a year that has ended is read once and kept.
   wayback:{host:'web.archive.org',label:'Campaign-site snapshots',tab:'promises',
     jobs:c=>profiled(c).filter(p=>p.campaignSite).map(p=>({id:`wayback:${p.id}`,subject:p.id,args:{site:p.campaignSite,from:c.cycle-1}})),
-    async page(job,a,env){
+    async page(job,a,env,config){
       const host=new URL(a.site).host;
-      const d=await requestSource(`https://web.archive.org/cdx/search/cdx?url=${encodeURIComponent(host)}&output=json&fl=timestamp,original,statuscode,digest&collapse=digest&filter=statuscode:200&from=${a.from}&limit=500`,env);
-      need(Array.isArray(d),'Wayback response missing');
-      if(!d.length)return {rows:[],next:null};
-      need(JSON.stringify(d[0])===JSON.stringify(['timestamp','original','statuscode','digest']),'Wayback columns changed');
-      const rows=d.slice(1).filter(r=>/^\d{14}$/.test(r[0])).map(([ts,original,,digest])=>({id:ts,date:`${ts.slice(0,4)}-${ts.slice(4,6)}-${ts.slice(6,8)}`,digest,url:`https://web.archive.org/web/${ts}/${original}`}));
-      return {rows,next:null};
+      return byPeriod(job,env,{periods:yearsFrom(SINCE(config)),read:async year=>{
+        const d=await requestSource(`https://web.archive.org/cdx/search/cdx?url=${encodeURIComponent(host)}&output=json&fl=timestamp,original,statuscode,digest&collapse=digest&filter=statuscode:200&from=${year}&to=${year}&limit=2000`,env);
+        need(Array.isArray(d),'Wayback response missing');
+        if(!d.length)return {rows:[],next:null};
+        need(JSON.stringify(d[0])===JSON.stringify(['timestamp','original','statuscode','digest']),'Wayback columns changed');
+        return {rows:d.slice(1).filter(r=>/^\d{14}$/.test(r[0])&&r[0].startsWith(String(year))).map(([ts,original,,digest])=>({id:ts,date:`${ts.slice(0,4)}-${ts.slice(4,6)}-${ts.slice(6,8)}`,digest,url:`https://web.archive.org/web/${ts}/${original}`})),next:null};
+      }});
     },
-    summarize:(rows,a)=>({site:a.site,...recent(rows,40),first:rows.map(r=>r.date).sort()[0]||null})},
+    summarize:(rows,a)=>{const caps=periodRows(rows);return {site:a.site,...history(caps,12),first:caps.map(r=>r.date).sort()[0]||null};}},
 
   factcheck:{host:'factchecktools.googleapis.com',label:'Fact-checks',tab:'promises',
     jobs:c=>profiled(c).map(p=>({id:`factcheck:${p.id}`,subject:p.id,args:{name:p.name}})),
     async page(job,a,env,config){
       const p=config.people.find(x=>x.id===job.subject);
-      const u=new URL('https://factchecktools.googleapis.com/v1alpha1/claims:search');u.searchParams.set('query',a.name);u.searchParams.set('languageCode','en-US');u.searchParams.set('pageSize','50');u.searchParams.set('maxAgeDays','730');
-      if(job.cursor)u.searchParams.set('pageToken',job.cursor);
+      const u=new URL('https://factchecktools.googleapis.com/v1alpha1/claims:search');u.searchParams.set('query',a.name);u.searchParams.set('languageCode','en-US');u.searchParams.set('pageSize','50');
+      // Claims reviewed from historyFrom on, up to four pages of 50.
+      u.searchParams.set('maxAgeDays',String(Math.ceil((Date.now()-Date.parse(`${SINCE(config)}-01-01`))/DAY)));
+      const c=state(job.cursor)||{n:0};if(c.token)u.searchParams.set('pageToken',c.token);
       const d=await requestSource(u.href,env);need(d&&typeof d==='object','Fact-check response missing');
       const rows=list(d.claims).filter(c=>namesPerson(`${c.claimant||''} ${c.text||''}`,p)).flatMap(c=>list(c.claimReview).filter(r=>https(r.url)).map(r=>({id:r.url,claim:cut(c.text,400),claimant:c.claimant||null,date:day(r.reviewDate)||day(c.claimDate),publisher:r.publisher?.name||r.publisher?.site||null,rating:r.textualRating||null,url:https(r.url)})));
-      return {rows,next:d.nextPageToken&&!job.cursor?d.nextPageToken:null};
+      return {rows,next:d.nextPageToken&&c.n<3?JSON.stringify({token:d.nextPageToken,n:c.n+1}):null};
     },
-    summarize:rows=>recent(rows,40)},
+    summarize:rows=>history(rows,20)},
 
   youtube:{host:'www.googleapis.com',label:'YouTube videos',tab:'promises',
     jobs:c=>profiled(c).filter(p=>/^UC[\w-]{22}$/.test(p.social?.youtube_id||'')).map(p=>({id:`youtube:${p.id}`,subject:p.id,args:{channel:p.social.youtube_id}})),
-    async page(job,a,env){
+    // The uploads back to historyFrom (up to 1,000), read in full about once a month; other days read the newest 50.
+    page:(job,a,env,config)=>readBack(job,env,config,async token=>{
       // A channel's uploads playlist is its ID with "UC" replaced by "UU"; reading it costs 1 quota unit, a search 100.
-      const d=await requestSource(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UU${a.channel.slice(2)}`,env);
+      const d=await requestSource(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UU${a.channel.slice(2)}${token?`&pageToken=${encodeURIComponent(token)}`:''}`,env);
       need(Array.isArray(d.items),'YouTube response missing');
-      const rows=d.items.map(i=>i.snippet).filter(s=>s?.resourceId?.videoId&&(!s.videoOwnerChannelId||s.videoOwnerChannelId===a.channel)).map(s=>({id:s.resourceId.videoId,title:cut(s.title,200),date:day(s.publishedAt),url:`https://www.youtube.com/watch?v=${s.resourceId.videoId}`}));
-      return {rows,next:null};
-    },
-    summarize:rows=>recent(rows,30)},
+      const items=d.items.map(i=>i.snippet).filter(Boolean);
+      const rows=items.filter(s=>s?.resourceId?.videoId&&(!s.videoOwnerChannelId||s.videoOwnerChannelId===a.channel)).map(s=>({id:s.resourceId.videoId,title:cut(s.title,200),date:day(s.publishedAt),url:`https://www.youtube.com/watch?v=${s.resourceId.videoId}`}));
+      return {rows,next:d.nextPageToken||null,oldest:day(items.at(-1)?.publishedAt)};
+    },{maxPages:20}),
+    summarize:rows=>history(scanRows(rows),15)},
 
   'news-gdelt':{host:'api.gdeltproject.org',label:'News (GDELT)',tab:'promises',
     jobs:c=>profiled(c).map(p=>({id:`news-gdelt:${p.id}`,subject:p.id,args:{name:p.name}})),
@@ -424,13 +566,13 @@ export const FEEDS={
     summarize:rows=>recent(rows,60)},
   'news-nyt':{host:'api.nytimes.com',label:'News (New York Times)',tab:'promises',
     jobs:c=>profiled(c).map(p=>({id:`news-nyt:${p.id}`,subject:p.id,args:{name:p.name}})),
-    async page(job,a,env){
-      const d=await requestSource(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${encodeURIComponent(`"${a.name}"`)}&sort=newest`,env);
+    // The newest 10 articles of each year from historyFrom on; a year that has ended is read once and kept.
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:yearsFrom(SINCE(config)),read:async year=>{
+      const d=await requestSource(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${encodeURIComponent(`"${a.name}"`)}&begin_date=${year}0101&end_date=${year}1231&sort=newest`,env);
       need(d&&d.status==='OK'&&d.response,'New York Times response incomplete');
-      const rows=list(d.response.docs).filter(x=>https(x.web_url)).map(x=>({id:https(x.web_url),title:cut(x.headline?.main,250),outlet:'New York Times',section:x.section_name||null,summary:cut(x.abstract,300),date:day(x.pub_date),url:https(x.web_url),source:'New York Times'}));
-      return {rows,next:null};
-    },
-    summarize:rows=>recent(rows,40)},
+      return {rows:list(d.response.docs).filter(x=>https(x.web_url)).map(x=>({id:https(x.web_url),title:cut(x.headline?.main,250),outlet:'New York Times',section:x.section_name||null,summary:cut(x.abstract,300),date:day(x.pub_date),url:https(x.web_url),source:'New York Times'})),next:null};
+    }}),
+    summarize:rows=>history(periodRows(rows),10)},
 
   // ---------- Ethics leads ----------
   // Stock trades from three services at once. Each service is filtered to the member by name, chamber and state;
@@ -467,7 +609,7 @@ export const FEEDS={
     },
     summarize:rows=>({count:rows.length,rows:top(rows,200,'traded'),rowLimit:200})},
   // Trades read straight from each House member's official trade reports (PDFs), listed in the House Clerk's index
-  // (the house-fd jobs, this year and last). An electronically filed report has text; one filed on paper is a scanned
+  // (the house-fd jobs, each year from historyFrom). An electronically filed report has text; one filed on paper is a scanned
   // image, so it is listed for review. Reports already read are kept from the last run and not downloaded again.
   'trades-house':{host:'disclosures-clerk.house.gov',label:'Stock trades (House Clerk reports)',tab:'ethics',
     jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='H').map(p=>({id:`trades-house:${p.id}`,subject:p.id,args:{}})),
@@ -477,7 +619,10 @@ export const FEEDS={
         const index=await snapshotsOf(env,'house-fd');need(index.length,'Waiting for the House disclosure index');
         const filings=index.flatMap(x=>x.byPerson?.[job.subject]||[]).filter(f=>f.ptr&&f.url&&f.filed);
         const {rows,done}=await carried(env,job.id);
-        const todo=filings.filter(f=>!done.has(f.id)).sort((x,y)=>y.filed.localeCompare(x.filed)).slice(0,80).map(f=>({doc:f.id,filed:f.filed,url:f.url}));
+        const left=filings.filter(f=>!done.has(f.id)).sort((x,y)=>y.filed.localeCompare(x.filed));
+        const todo=left.slice(0,80).map(f=>({doc:f.id,filed:f.filed,url:f.url}));
+        // More than 80 reports to read (the years back to historyFrom, the first time): the rest follow in the next runs.
+        if(left.length>80)rows.push({id:'scan:more',backlog:left.length-80});
         return {rows,next:todo.length?JSON.stringify({todo,i:0}):null};
       }
       const f=c.todo[c.i],found=housePtrTrades(await pdfText(await requestSource(f.url,env,{as:'bytes'})));
@@ -485,16 +630,17 @@ export const FEEDS={
     },
     summarize:officialSummary},
   // Trades read from each senator's reports on the Senate's financial disclosure site (eFD). A session agrees to the
-  // site's terms, as a visitor does, searches the senator's trade reports since January of last year, and reads each
+  // site's terms, as a visitor does, searches the senator's trade reports since January of historyFrom, and reads each
   // electronic report's table. A report filed on paper is a scanned image, so it is listed for review.
   'trades-senate':{host:'efdsearch.senate.gov',label:'Stock trades (Senate eFD reports)',tab:'ethics',
     jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='S').map(p=>({id:`trades-senate:${p.id}`,subject:p.id,args:{last:surname(p),first:[firstName(p),...(p.nicknames||[])],from:c.year-1}})),
-    async page(job,a,env){
+    async page(job,a,env,config){
       const c=state(job.cursor);
       if(!c){
-        const session=await efdSession(env),reports=await efdReports(env,session,a);
+        const session=await efdSession(env),reports=await efdReports(env,session,{...a,from:SINCE(config)});
         const {rows,done}=await carried(env,job.id);
-        const todo=reports.filter(r=>!done.has(r.doc)).slice(0,80);
+        const left=reports.filter(r=>!done.has(r.doc)),todo=left.slice(0,80);
+        if(left.length>80)rows.push({id:'scan:more',backlog:left.length-80});
         return {rows,next:todo.length?JSON.stringify({todo,i:0,jar:session.jar}):null};
       }
       const f=c.todo[c.i];let rows;
@@ -508,10 +654,12 @@ export const FEEDS={
       return {rows,next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
     summarize:officialSummary},
-  // The House Clerk's yearly index of every financial disclosure filing (this year and last): the official record
+  // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
   // trades are checked against, and the list of trade reports the House reader opens.
   'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',
-    jobs:c=>[c.year,c.year-1].map((year,i)=>({id:i?`house-fd:${year}`:'house-fd',subject:'House',args:{year}})),
+    // One index a year from historyFrom on; a year that has ended is checked weekly, for late and amended filings.
+    every:a=>ended(a.year)?WEEK:DAY,
+    jobs:c=>yearsFrom(SINCE(c),c.year).reverse().map((year,i)=>({id:i?`house-fd:${year}`:'house-fd',subject:'House',args:{year}})),
     async page(job,a,env,config){
       const text=await unzipFile(await requestSource(`https://disclosures-clerk.house.gov/public_disc/financial-pdfs/${a.year}FD.zip`,env,{as:'bytes'}),new RegExp(`^${a.year}FD\\.xml$`,'i'));
       const filings=list(parseXML(text).FinancialDisclosure?.Member);need(filings.length,'House disclosure index is empty');
@@ -551,16 +699,18 @@ export const FEEDS={
 
   courts:{host:'www.courtlistener.com',label:'Court records',tab:'ethics',every:WEEK,
     jobs:c=>profiled(c).map(p=>({id:`courts:${p.id}`,subject:p.id,args:{name:p.name}})),
+    // Up to three pages (60 results) of dockets and three of opinions, newest first, with no start date.
     async page(job,a,env){
-      const type=job.cursor||'r';
-      const d=await requestSource(`https://www.courtlistener.com/api/rest/v4/search/?q=${encodeURIComponent(`"${a.name}"`)}&type=${type}&order_by=${encodeURIComponent('dateFiled desc')}`,env);
+      const c=state(job.cursor)||{type:'r',n:0},type=c.type;
+      const d=await requestSource(c.url||`https://www.courtlistener.com/api/rest/v4/search/?q=${encodeURIComponent(`"${a.name}"`)}&type=${type}&order_by=${encodeURIComponent('dateFiled desc')}`,env);
       need(Array.isArray(d.results),'CourtListener results missing');
       // The search is for the exact full name; every hit is a lead for review, never a scored case.
       const rows=d.results.map(r=>({id:`${type}-${r.docket_id||r.cluster_id}`,kind:type==='r'?'Docket':'Opinion',title:cut(r.caseName,250),court:r.court||r.court_id||null,docket:r.docketNumber||null,date:day(r.dateFiled),
         url:https('https://www.courtlistener.com'+(r.docket_absolute_url||r.absolute_url||''))})).filter(r=>r.url);
-      return {rows,next:type==='r'?'o':null};
+      const more=https(d.next)&&c.n<2?{type,n:c.n+1,url:https(d.next)}:type==='r'?{type:'o',n:0}:null;
+      return {rows,next:more&&JSON.stringify(more)};
     },
-    summarize:rows=>recent(rows,40)},
+    summarize:rows=>history(rows,15)},
   'fec-legal':{host:'api.open.fec.gov',label:'FEC enforcement records',tab:'ethics',every:WEEK,
     jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`fec-legal:${p.id}`,subject:p.id,args:{name:p.name,committee:p.fecCmte||null}})),
     async page(job,a,env,config){
@@ -572,63 +722,91 @@ export const FEEDS={
           opened:day(m.open_date),closed:day(m.close_date),date:day(m.close_date)||day(m.open_date)||day(m.issue_date),url:`https://www.fec.gov/data/legal/${path}/${m.no||m.case_no}/`}));
       return {rows:[...pick(d.murs,'mur','matter-under-review'),...pick(d.admin_fines,'af','administrative-fine'),...pick(d.adrs,'adr','alternative-dispute-resolution'),...pick(d.advisory_opinions,'ao','advisory-opinions')],next:null};
     },
-    summarize:rows=>recent(rows,40)},
+    summarize:rows=>history(rows,15)},
   doj:{host:'www.justice.gov',label:'DOJ press releases',tab:'ethics',
     jobs:c=>profiled(c).map(p=>({id:`doj:${p.id}`,subject:p.id,args:{last:surname(p)}})),
-    async page(job,a,env,config){
+    // Releases with their surname in the title, back to historyFrom (up to 500), read in full about once a month;
+    // other days read the newest 50.
+    page:(job,a,env,config)=>readBack(job,env,config,async n=>{
       const p=config.people.find(x=>x.id===job.subject);
-      const d=await requestSource(`https://www.justice.gov/api/v1/press_releases.json?parameters%5Btitle%5D=${encodeURIComponent(a.last)}&sort=date&direction=DESC&pagesize=50`,env);
+      const d=await requestSource(`https://www.justice.gov/api/v1/press_releases.json?parameters%5Btitle%5D=${encodeURIComponent(a.last)}&sort=date&direction=DESC&pagesize=50&page=${n||0}`,env);
       need(Array.isArray(d.results),'DOJ press releases missing');
-      const rows=d.results.filter(r=>namesPerson(`${r.title||''} ${strip(r.body||r.teaser||'')}`,p)).map(r=>({id:r.uuid||r.url,title:cut(r.title,250),date:/^\d+$/.test(String(r.date))?new Date(Number(r.date)*1000).toISOString().slice(0,10):day(r.date),url:https(r.url),
+      const when=r=>/^\d+$/.test(String(r.date))?new Date(Number(r.date)*1000).toISOString().slice(0,10):day(r.date);
+      const rows=d.results.filter(r=>namesPerson(`${r.title||''} ${strip(r.body||r.teaser||'')}`,p)).map(r=>({id:r.uuid||r.url,title:cut(r.title,250),date:when(r),url:https(r.url),
         dockets:docketsIn(`${r.title||''} ${strip(r.body||r.teaser||'')}`)})).filter(r=>r.url);
-      return {rows,next:null};
-    },
-    summarize:rows=>recent(rows,30)},
+      return {rows,next:d.results.length>=50?(n||0)+1:null,oldest:d.results.length?when(d.results.at(-1)):null};
+    },{maxPages:10}),
+    summarize:rows=>history(scanRows(rows),15)},
 
   // ---------- Money ----------
   // Donor organizations: itemized individual contributions grouped by the donor's employer (FEC). Names are never kept.
+  // The campaign's money in each election cycle from historyFrom on, from the FEC's totals for its committee (one
+  // request covers every cycle): raised, from individuals and from PACs, spent, and cash at the end.
+  'campaign-history':{host:'api.open.fec.gov',label:'Campaign money by cycle',tab:'finance',
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`campaign-history:${p.id}`,subject:p.id,args:{committee:p.fecCmte}})),
+    async page(job,a,env,config){
+      const d=await requestSource(`https://api.open.fec.gov/v1/committee/${a.committee}/totals/?per_page=20&sort=-cycle`,env);
+      need(Array.isArray(d.results),'Campaign totals missing');
+      // A cycle whose totals don't check out (another committee, missing dates) is left out rather than shown.
+      const ok=r=>{try{return {...normalizeCampaign(r,a.committee,r.cycle),id:String(r.cycle)};}catch{return null;}};
+      return {rows:d.results.filter(r=>Number(r.cycle)>=SINCE(config)).map(ok).filter(Boolean),next:null};
+    },
+    summarize:rows=>({cycles:rows.sort((x,y)=>y.cycle-x.cycle)})},
+  // Each election cycle from historyFrom on (a cycle that has ended is read once and kept). The top organizations, and
+  // the sources that follow them, are the current cycle's; the earlier cycles' top 10 are kept by cycle.
   donors:{host:'api.open.fec.gov',label:'Donors by employer',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donors:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
-    async page(job,a,env){
-      const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_employer/?committee_id=${a.committee}&cycle=${a.cycle}&sort=-total&per_page=100`,env);
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:cyclesFrom(SINCE(config),a.cycle),read:async cycle=>{
+      const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_employer/?committee_id=${a.committee}&cycle=${cycle}&sort=-total&per_page=100`,env);
       need(Array.isArray(d.results),'FEC employer totals missing');
-      const rows=d.results.filter(r=>r.committee_id===a.committee).map(r=>({id:String(r.employer||''),employer:r.employer,total:Number(r.total)||0,count:Number(r.count)||0}));
-      return {rows,next:null};
+      return {rows:d.results.filter(r=>r.committee_id===a.committee).map(r=>({id:String(r.employer||''),employer:r.employer,total:Number(r.total)||0,count:Number(r.count)||0})),next:null};
+    }}),
+    summarize:(rows,a)=>{
+      const all=periodRows(rows),org=r=>({id:String(r.employer||''),employer:r.employer,total:r.total,count:r.count});
+      const pick=list=>list.filter(r=>isOrg(r.employer)).sort((x,y)=>y.total-x.total).map(org);
+      const now=all.filter(r=>Number(r.period??a.cycle)===Number(a.cycle)),orgs=pick(now),by={};
+      for(const r of all)if(r.period!=null&&Number(r.period)!==Number(a.cycle))(by[r.period]||=[]).push(r);
+      return {orgs:orgs.slice(0,50),count:orgs.length,notOrgs:now.length-orgs.length,cycle:a.cycle,
+        cycles:Object.fromEntries(Object.entries(by).sort((x,y)=>y[0]-x[0]).map(([c,l])=>[c,pick(l).slice(0,10)]))};
     },
-    summarize:rows=>{const orgs=rows.filter(r=>isOrg(r.employer)).sort((a,b)=>b.total-a.total);return {orgs:orgs.slice(0,50),count:orgs.length,notOrgs:rows.length-orgs.length};},
     after:async(snapshot,job,ctx)=>{const orgs=snapshot.orgs.slice(0,20).map(o=>o.employer);for(const k of ['donor-months','lobbying','regulations','sam'])await ctx.setArgs(`${k}:${job.subject}`,{orgs});}},
   'donor-months':{host:'api.open.fec.gov',label:'Top donors by month',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donor-months:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle,orgs:[]}})),
-    async page(job,a,env){
+    // The current top organizations' gifts in each cycle from historyFrom on; an ended cycle is read once and kept
+    // (read again when the top organizations change).
+    async page(job,a,env,config){
       if(!a.orgs?.length)return {rows:[],next:null};
-      const u=new URL('https://api.open.fec.gov/v1/schedules/schedule_a/');
-      for(const[k,v]of Object.entries({committee_id:a.committee,two_year_transaction_period:a.cycle,is_individual:'true',per_page:100,sort:'-contribution_receipt_date'}))u.searchParams.set(k,v);
-      for(const o of a.orgs)u.searchParams.append('contributor_employer',o);
-      const url=job.cursor||u.href,d=await requestSource(url,env);
-      const next=fecNext(url,d);
-      const rows=d.results.map(r=>{need(r.sub_id&&r.committee_id===a.committee,'Wrong recipient committee in FEC response');
-        return {id:String(r.sub_id),employer:r.contributor_employer,date:day(r.contribution_receipt_date),amount:Number(r.contribution_receipt_amount)||0,memo:r.memo_code==='X'};});
-      return {rows,next};
+      return byPeriod(job,env,{periods:cyclesFrom(SINCE(config),a.cycle),tag:a.orgs.join('|'),read:async(cycle,cursor)=>{
+        const u=new URL('https://api.open.fec.gov/v1/schedules/schedule_a/');
+        for(const[k,v]of Object.entries({committee_id:a.committee,two_year_transaction_period:cycle,is_individual:'true',per_page:100,sort:'-contribution_receipt_date'}))u.searchParams.set(k,v);
+        for(const o of a.orgs)u.searchParams.append('contributor_employer',o);
+        const url=cursor||u.href,d=await requestSource(url,env);
+        const rows=d.results.map(r=>{need(r.sub_id&&r.committee_id===a.committee,'Wrong recipient committee in FEC response');
+          return {id:String(r.sub_id),employer:r.contributor_employer,date:day(r.contribution_receipt_date),amount:Number(r.contribution_receipt_amount)||0,memo:r.memo_code==='X'};});
+        return {rows,next:fecNext(url,d)};
+      }});
     },
     summarize:(rows,a)=>{
+      rows=periodRows(rows);
       const m={};for(const r of rows){if(r.memo||!r.date)continue;const key=a.orgs.find(o=>fold(o)===fold(r.employer))||r.employer;((m[key]||={})[r.date.slice(0,7)]||=0);m[key][r.date.slice(0,7)]+=r.amount;}
       for(const o of Object.values(m))for(const k in o)o[k]=Math.round(o[k]*100)/100;
       return {orgs:a.orgs,months:m,count:rows.length};
     }},
-  // Lobbying reports filed for each top donor organization, with the bills each report names.
+  // Lobbying reports filed for each top donor organization in each year from historyFrom on (up to 25 a year), with the
+  // bills each report names. A year that has ended is read once and kept.
   lobbying:{host:'lda.gov',label:'Lobbying filings',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`lobbying:${p.id}`,subject:p.id,args:{orgs:[],year:c.year}})),
-    async page(job,a,env){
-      const i=Number(job.cursor||0),org=a.orgs?.[i];if(!org)return {rows:[],next:null};
-      const d=await requestSource(`https://lda.gov/api/v1/filings/?client_name=${encodeURIComponent(org)}&filing_year=${a.year}&page_size=25`,env);
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:yearsFrom(SINCE(config)).reverse().flatMap(y=>(a.orgs||[]).map(o=>`${y}|${o}`)),closed:p=>ended(String(p).split('|')[0]),read:async p=>{
+      const year=Number(p.slice(0,4)),org=p.slice(5);
+      const d=await requestSource(`https://lda.gov/api/v1/filings/?client_name=${encodeURIComponent(org)}&filing_year=${year}&page_size=25`,env);
       need(Array.isArray(d.results),'LDA filings missing');
       const rows=d.results.filter(f=>f.filing_uuid).map(f=>{const acts=list(f.lobbying_activities);
         return {id:f.filing_uuid,org,client:f.client?.name||null,registrant:f.registrant?.name||null,period:f.filing_period_display||f.filing_period||null,year:f.filing_year,
           amount:Number(f.income??f.expenses)||null,issues:[...new Set(acts.map(x=>x.general_issue_code_display||x.general_issue_code).filter(Boolean))],
-          bills:[...new Set(acts.flatMap(x=>billsInText(x.description,congressOf(Number(f.filing_year)||a.year))))],date:day(f.dt_posted),url:https(f.filing_document_url)};});
-      return {rows,next:i+1<a.orgs.length?String(i+1):null};
-    },
-    summarize:rows=>({count:rows.length,rows:top(rows,150),rowLimit:150})},
+          bills:[...new Set(acts.flatMap(x=>billsInText(x.description,congressOf(Number(f.filing_year)||year))))],date:day(f.dt_posted),url:https(f.filing_document_url)};});
+      return {rows,next:null};
+    }}),
+    summarize:rows=>history(periodRows(rows),60)},
   // Lobbying reports that name a key bill (LDA.gov), in the two years of its Congress: how many there are, and of the
   // reports read (up to 100 a year), how many were filed for unions. Shown with the Workers > Profit bill scores as
   // context, never scored: a report says a client lobbied on the bill, not which side it was on.
@@ -666,12 +844,13 @@ export const FEEDS={
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`regulations:${p.id}`,subject:p.id,args:{orgs:[]}})),
     async page(job,a,env){
       const i=Number(job.cursor||0),org=a.orgs?.[i];if(!org)return {rows:[],next:null};
-      const d=await requestSource(`https://api.regulations.gov/v4/comments?filter%5BsearchTerm%5D=${encodeURIComponent(`"${org}"`)}&sort=-postedDate&page%5Bsize%5D=25`,env);
+      // The newest 250 comments that name the organization (one request each; the most a page holds).
+      const d=await requestSource(`https://api.regulations.gov/v4/comments?filter%5BsearchTerm%5D=${encodeURIComponent(`"${org}"`)}&sort=-postedDate&page%5Bsize%5D=250`,env);
       need(Array.isArray(d.data),'Regulations.gov comments missing');
       const rows=d.data.filter(x=>x.id&&x.type==='comments').map(x=>({id:x.id,org,title:cut(x.attributes?.title,250),agency:x.attributes?.agencyId||null,date:day(x.attributes?.postedDate),url:`https://www.regulations.gov/comment/${encodeURIComponent(x.id)}`}));
       return {rows,next:i+1<a.orgs.length?String(i+1):null};
     },
-    summarize:rows=>recent(rows,100)},
+    summarize:rows=>history(rows,20)},
   sam:{host:'api.sam.gov',label:'Company federal IDs',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`sam:${p.id}`,subject:p.id,args:{orgs:[]}})),
     async page(job,a,env){
@@ -688,10 +867,12 @@ export const FEEDS={
     after:async(snapshot,job,ctx)=>ctx.setArgs(`contracts:${job.subject}`,{orgs:snapshot.rows.filter(r=>r.uei).map(r=>({org:r.org,uei:r.uei}))})},
   contracts:{host:'api.usaspending.gov',label:'Federal contracts',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`contracts:${p.id}`,subject:p.id,args:{orgs:[],cycle:c.cycle}})),
-    async page(job,a,env){
+    // The ten largest awards to each organization from the federal fiscal year that includes historyFrom (it starts
+    // the October before) through this cycle's.
+    async page(job,a,env,config){
       const i=Number(job.cursor||0),o=a.orgs?.[i];if(!o)return {rows:[],next:null};
       const d=await requestSource('https://api.usaspending.gov/api/v2/search/spending_by_award/',env,{body:{
-        filters:{recipient_search_text:[o.uei],award_type_codes:['A','B','C','D'],time_period:[{start_date:`${a.cycle-2}-10-01`,end_date:`${a.cycle}-09-30`}]},
+        filters:{recipient_search_text:[o.uei],award_type_codes:['A','B','C','D'],time_period:[{start_date:`${SINCE(config)-1}-10-01`,end_date:`${a.cycle}-09-30`}]},
         fields:['Award ID','Recipient Name','Award Amount','Awarding Agency','Start Date','Description','generated_internal_id'],page:1,limit:10,sort:'Award Amount',order:'desc'}});
       need(Array.isArray(d.results),'USAspending results missing');
       const rows=d.results.filter(r=>r.generated_internal_id).map(r=>({id:r.generated_internal_id,org:o.org,uei:o.uei,award:r['Award ID'],amount:Number(r['Award Amount'])||0,agency:r['Awarding Agency']||null,date:day(r['Start Date']),description:cut(r.Description,200),url:`https://www.usaspending.gov/award/${encodeURIComponent(r.generated_internal_id)}`}));
@@ -701,7 +882,7 @@ export const FEEDS={
   // Nonprofits among the groups spending in the race: their own filings, from ProPublica's Nonprofit Explorer.
   'outside-groups':{host:'projects.propublica.org',label:'Groups behind outside spending',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`outside-groups:${p.id}`,subject:p.id,args:{groups:[]}})),
-    async page(job,a,env){
+    async page(job,a,env,config){
       const i=Number(job.cursor||0),g=a.groups?.[i];if(!g)return {rows:[],next:null};
       const d=await requestSource(`https://projects.propublica.org/nonprofits/api/v2/search.json?q=${encodeURIComponent(`"${g}"`)}`,env);
       need(Array.isArray(d.organizations),'Nonprofit Explorer response missing');
@@ -710,7 +891,7 @@ export const FEEDS={
       const ein=exact[0].ein,o=await requestSource(`https://projects.propublica.org/nonprofits/api/v2/organizations/${ein}.json`,env);
       need(Number(o.organization?.ein)===Number(ein),'Nonprofit identity mismatch');
       return {rows:[{id:g,group:g,ein,name:o.organization.name,subsection:o.organization.subsection_code??exact[0].subseccd??null,state:o.organization.state||null,
-        filings:list(o.filings_with_data).slice(0,4).map(f=>({year:f.tax_prd_yr,revenue:f.totrevenue??null,expenses:f.totfuncexpns??null,pdf:https(f.pdf_url)})),url:`https://projects.propublica.org/nonprofits/organizations/${ein}`}],next:i+1<a.groups.length?String(i+1):null};
+        filings:list(o.filings_with_data).filter(f=>Number(f.tax_prd_yr)>=SINCE(config)-1).slice(0,12).map(f=>({year:f.tax_prd_yr,revenue:f.totrevenue??null,expenses:f.totfuncexpns??null,pdf:https(f.pdf_url)})),url:`https://projects.propublica.org/nonprofits/organizations/${ein}`}],next:i+1<a.groups.length?String(i+1):null};
     },
     summarize:rows=>({rows})},
 
@@ -862,8 +1043,10 @@ function officialRows(source,f,found,why){
   return rows.length?numberTrades(rows).map(r=>({...r,id:`${f.doc}:${r.id}`})):[unreadRow(f,why)];
 }
 function officialSummary(rows){
+  const mark=rows.find(r=>r.id==='scan:more');rows=rows.filter(r=>r!==mark);
   const trades=rows.filter(r=>!r.unread),unread=rows.filter(r=>r.unread).map(r=>r.unread);
-  return {count:trades.length,rows:top(trades,2000,'traded'),rowLimit:2000,unread:top(unread,200,'filed'),reports:new Set(rows.map(r=>r.doc).filter(Boolean)).size};
+  return {count:trades.length,rows:top(trades,2000,'traded'),rowLimit:2000,unread:top(unread,200,'filed'),reports:new Set(rows.map(r=>r.doc).filter(Boolean)).size,
+    ...(mark?{more:true,backlog:mark.backlog}:{})};
 }
 // The LegiScan person ID saved in a job's last snapshot. It travels as one extra record, which summarize takes out.
 const LEGISCAN_PERSON='ls-person';
@@ -875,9 +1058,14 @@ async function savedLegiscanPerson(env,jobId){
 // The last published snapshot of a job, or of every job of a kind.
 async function snapshotsOf(env,kind){return (await env.DB.prepare('SELECT s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind=?').bind(kind).all()).results.map(r=>JSON.parse(r.payload));}
 // What the last run already read: its trades and unreadable reports carry over, and those reports aren't fetched again.
+// They come from the run's records (all of them, past the snapshot's 2,000-row limit), or from the snapshot when the
+// records aren't there (a database started from a seed).
 async function carried(env,jobId){
-  const r=await env.DB.prepare('SELECT payload FROM snapshots WHERE job_id=?').bind(jobId).first(),last=r?JSON.parse(r.payload):null;
-  const rows=[...(last?.rows||[]),...(last?.unread||[]).map(u=>({id:`unread:${u.doc}`,doc:u.doc,unread:u}))];
+  let rows=(await publishedRecords(env,jobId)).filter(r=>r.id!=='scan:more');
+  if(!rows.length){
+    const r=await env.DB.prepare('SELECT payload FROM snapshots WHERE job_id=?').bind(jobId).first(),last=r?JSON.parse(r.payload):null;
+    rows=[...(last?.rows||[]),...(last?.unread||[]).map(u=>({id:`unread:${u.doc}`,doc:u.doc,unread:u}))];
+  }
   return {rows,done:new Set(rows.map(x=>x.doc).filter(Boolean))};
 }
 

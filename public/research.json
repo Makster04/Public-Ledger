@@ -54048,6 +54048,56 @@
   ],
   "votes": [
     {
+      "excluded": null,
+      "id": "115-1-323",
+      "congress": 115,
+      "session": 1,
+      "number": 323,
+      "date": "2017-12-20",
+      "short": "Tax Cuts and Jobs Act (2017 Senate final passage)",
+      "issue": "H.R. 1, the Tax Cuts and Jobs Act (budget reconciliation)",
+      "question": "On the motion to recede from the Senate amendment to H.R. 1 and concur with a further amendment",
+      "result": "Agreed to 51-48",
+      "area": "Budget, taxes & health",
+      "pos": {
+        "collins": "Yea",
+        "sullivan": "Yea",
+        "booker": "Nay",
+        "brown": "Nay",
+        "marshall": "Not in office",
+        "ossoff": "Not in office",
+        "hickenlooper": "Not in office",
+        "ricketts": "Not in office",
+        "husted": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 1 (115th Congress)",
+        "officialTitle": "An act to provide for reconciliation pursuant to titles II and V of the concurrent resolution on the budget for fiscal year 2018.",
+        "popularTitle": "Tax Cuts and Jobs Act",
+        "summary": "Cuts the corporate income tax rate from 35 percent to 21 percent permanently, lowers individual income tax rates and roughly doubles the standard deduction through 2025, and sets the individual-mandate penalty to zero from 2019.",
+        "summarySrc": {
+          "t": "Senate roll call vote 323 (115th Congress, 1st session)",
+          "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00323.htm"
+        },
+        "voteQuestion": "On the motion to recede and concur with a further amendment",
+        "voteResult": "Agreed to 51-48",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "taxes",
+          "yea": "B",
+          "why": "It permanently cut the corporate tax rate from 35 percent to 21 percent, and the Tax Policy Center estimates most of its benefit goes to the highest earners by 2027."
+        },
+        {
+          "issue": "health",
+          "yea": "B",
+          "why": "CBO estimates that zeroing out the individual-mandate penalty leaves 13 million more people uninsured in 2027 and cuts federal health spending, mostly on Medicaid and marketplace subsidies (CBO, Nov. 2017)."
+        }
+      ],
+      "measureKey": "S:H.R.1(115thCongress)"
+    },
+    {
       "id": "117-1-1",
       "congress": 117,
       "session": 1,
@@ -56926,6 +56976,153 @@
       ],
       "excluded": null,
       "measureKey": "H:H.R.8035(118thCongress)"
+    },
+    {
+      "excluded": null,
+      "id": "h-115-1-699",
+      "year": 2017,
+      "roll": 699,
+      "date": "2017-12-20",
+      "short": "Tax Cuts and Jobs Act (2017 House final passage)",
+      "issue": "H.R. 1, the Tax Cuts and Jobs Act, as amended by the Senate",
+      "question": "On motion to concur in the Senate amendment",
+      "result": "Agreed to 224-201",
+      "area": "Budget, taxes & health",
+      "pos": {
+        "perry": "Yea",
+        "barr": "Yea",
+        "kaptur": "Nay",
+        "castor": "Nay",
+        "gonzalez": "Nay",
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office",
+        "millermeeks": "Not in office",
+        "hinson": "Not in office",
+        "moore": "Not in office",
+        "letlow": "Not in office",
+        "pappas": "Not in office",
+        "hern": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 1 (115th Congress)",
+        "officialTitle": "An act to provide for reconciliation pursuant to titles II and V of the concurrent resolution on the budget for fiscal year 2018.",
+        "popularTitle": "Tax Cuts and Jobs Act",
+        "summary": "Cuts the corporate income tax rate from 35 percent to 21 percent permanently, lowers individual income tax rates and roughly doubles the standard deduction through 2025, and sets the individual-mandate penalty to zero from 2019.",
+        "summarySrc": {
+          "t": "House Clerk roll call 699 (2017)",
+          "u": "https://clerk.house.gov/evs/2017/roll699"
+        },
+        "voteQuestion": "On motion to concur in the Senate amendment",
+        "voteResult": "Agreed to 224-201",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "taxes",
+          "yea": "B",
+          "why": "It permanently cut the corporate tax rate from 35 percent to 21 percent, and the Tax Policy Center estimates most of its benefit goes to the highest earners by 2027."
+        },
+        {
+          "issue": "health",
+          "yea": "B",
+          "why": "CBO estimates that zeroing out the individual-mandate penalty leaves 13 million more people uninsured in 2027 and cuts federal health spending, mostly on Medicaid and marketplace subsidies (CBO, Nov. 2017)."
+        }
+      ],
+      "measureKey": "H:H.R.1(115thCongress)"
+    },
+    {
+      "excluded": "Equal pay is not one of the site's issues; it counts for Workers > Profit only.",
+      "id": "h-116-1-134",
+      "year": 2019,
+      "roll": 134,
+      "date": "2019-03-27",
+      "short": "Paycheck Fairness Act (2019 House passage)",
+      "issue": "H.R. 7, the Paycheck Fairness Act: equal-pay protections and remedies",
+      "question": "On passage",
+      "result": "Passed 242-187",
+      "area": "Labor & workers",
+      "pos": {
+        "kaptur": "Yea",
+        "castor": "Yea",
+        "gonzalez": "Yea",
+        "pappas": "Yea",
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office",
+        "millermeeks": "Not in office",
+        "hinson": "Not in office",
+        "moore": "Not in office",
+        "letlow": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 7 (116th Congress)",
+        "officialTitle": "To amend the Fair Labor Standards Act of 1938 to provide more effective remedies to victims of discrimination in the payment of wages on the basis of sex, and for other purposes.",
+        "popularTitle": "Paycheck Fairness Act",
+        "summary": "Would limit the defenses employers can give for paying men and women differently, bar retaliation for discussing pay, and allow more damages in pay-discrimination cases.",
+        "summarySrc": {
+          "t": "House Clerk roll call 134 (2019)",
+          "u": "https://clerk.house.gov/Votes/2019134"
+        },
+        "voteQuestion": "On passage",
+        "voteResult": "Passed 242-187",
+        "provisions": []
+      },
+      "codes": [],
+      "measureKey": "H:H.R.7(116thCongress)"
+    },
+    {
+      "excluded": null,
+      "id": "h-116-1-496",
+      "year": 2019,
+      "roll": 496,
+      "date": "2019-07-18",
+      "short": "Raise the Wage Act (2019 House passage)",
+      "issue": "H.R. 582, the Raise the Wage Act: a $15 federal minimum wage by 2025",
+      "question": "On passage",
+      "result": "Passed 231-199",
+      "area": "Labor & workers",
+      "pos": {
+        "kaptur": "Yea",
+        "castor": "Yea",
+        "perry": "Nay",
+        "barr": "Nay",
+        "hern": "Nay",
+        "lawler": "Not in office",
+        "evans": "Not in office",
+        "mgp": "Not in office",
+        "hageman": "Not in office",
+        "mcollins": "Not in office",
+        "millermeeks": "Not in office",
+        "hinson": "Not in office",
+        "moore": "Not in office",
+        "letlow": "Not in office"
+      },
+      "bill": {
+        "measure": "H.R. 582 (116th Congress)",
+        "officialTitle": "To provide for increases in the Federal minimum wage, and for other purposes.",
+        "popularTitle": "Raise the Wage Act",
+        "summary": "Would raise the federal minimum wage in steps to $15 an hour by 2025, phase out the lower minimums for tipped, young and disabled workers, and then index it to median wages.",
+        "summarySrc": {
+          "t": "House Clerk roll call 496 (2019)",
+          "u": "https://clerk.house.gov/evs/2019/roll496"
+        },
+        "voteQuestion": "On passage",
+        "voteResult": "Passed 231-199",
+        "provisions": []
+      },
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "A",
+          "why": "A Yea vote supported raising the federal minimum wage to $15."
+        }
+      ],
+      "measureKey": "H:H.R.582(116thCongress)"
     },
     {
       "excluded": null,
@@ -192608,7 +192805,11 @@
       "title": "Raise the Wage Act ($15 federal minimum wage)",
       "versions": [
         "117-hr-603",
-        "117-samdt-972"
+        "117-samdt-972",
+        "116-hr-582",
+        "116-s-150",
+        "115-hr-15",
+        "115-s-1242"
       ],
       "gains": {
         "step": 100,
@@ -192633,7 +192834,7 @@
       ],
       "context": {
         "note": {
-          "why": "The Senate voted on it as the Sanders amendment to the American Rescue Plan (Senate roll call 74, Mar. 5, 2021), which fell short 42–58 with 60 needed.",
+          "why": "The House passed the 2019 version (H.R. 582) 231–199 on July 18, 2019. The Senate voted on the 2021 version as the Sanders amendment to the American Rescue Plan (Senate roll call 74, Mar. 5, 2021), which fell short 42–58 with 60 needed.",
           "src": {
             "t": "Senate floor activity, Mar. 5, 2021",
             "u": "https://www.senate.gov/legislative/LIS/floor_activity/2021/03_05_2021_Senate_Floor.htm"
@@ -192672,7 +192873,13 @@
       "id": "117-hr-7",
       "title": "Paycheck Fairness Act (equal pay)",
       "versions": [
-        "117-s-205"
+        "117-s-205",
+        "116-hr-7",
+        "116-s-270",
+        "115-hr-1869",
+        "115-s-819",
+        "114-hr-1619",
+        "114-s-862"
       ],
       "sides": [
         {
@@ -192754,7 +192961,10 @@
       "title": "National Right-to-Work Act",
       "versions": [
         "119-s-533",
-        "118-hr-1200"
+        "118-hr-1200",
+        "115-hr-785",
+        "115-s-545",
+        "116-s-525"
       ],
       "context": {
         "note": {
