@@ -18,6 +18,8 @@ export const HOSTS = {
   'api.congress.gov':{name:'Congress.gov',keys:['CONGRESS_API_KEY'],query:'api_key',perRun:40},
   'www.senate.gov':{name:'Senate.gov',site:true,perRun:10},
   'clerk.house.gov':{name:'House Clerk',site:true,perRun:10},
+  // UCLA's roll-call archive (free downloads, no key): the backup for Senate votes Senate.gov won't send.
+  'voteview.com':{name:'Voteview',site:true,perRun:10},
   'disclosures-clerk.house.gov':{name:'House Clerk disclosures',site:true,perRun:10},
   // The Senate's financial disclosure site. It is a website, not an API: a session agrees to its terms first.
   'efdsearch.senate.gov':{name:'Senate eFD',site:true,perRun:10,ua:'PublicLedger/1.0 (public-records research; non-commercial)'},
