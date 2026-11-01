@@ -72,7 +72,7 @@ Outside spending is left out, because candidates legally can't control it.
 **Example:** PAC share 8% scores 40, employees 3% scores 30, +10 vs. party scores 40, and 2 of 4 lobbied bills scores 50. That gives (0.35×40) + (0.10×30) + (0.35×40) + (0.20×50) = **41**.
 
 **Keys and sources:**
-- **Campaign money:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for campaign totals, PAC contributions and donors by employer. PAC sectors are assigned by this app from committee names, with no key.
+- **Campaign money:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for campaign totals, PAC contributions and donors by employer. PAC sectors are assigned by this app from committee names, with no key. Each PAC's type as the FEC records it (corporate, labor, trade and so on) is now saved by `npm run pacs:types`, for the corporate PAC share.
 - **Business funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
 - **Lobbying:** `LDA_API_KEY` (optional).

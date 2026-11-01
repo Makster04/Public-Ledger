@@ -18,6 +18,7 @@
     "votes:party": "node scripts/build-vote-party.mjs",
     "votes:positions": "node scripts/fill-vote-positions.mjs",
     "bills:cosponsors": "node --env-file-if-exists=.dev.vars scripts/fill-bill-cosponsors.mjs",
+    "pacs:types": "node --env-file-if-exists=.dev.vars scripts/build-pac-types.mjs",
     "cloudflare:preview": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply public-ledger --remote"

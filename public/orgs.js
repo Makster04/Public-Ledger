@@ -4,6 +4,7 @@
 // spender already carries; otherwise a description built from what the app knows about the committee (its type, the
 // sector this app assigned from its name, and its stated orientation). Nothing here is used in a grade.
 import {categoryAlign,spenderSector,ALIGN_LABEL,SECTOR_LABEL_EXTRA} from './influence.js';
+import {pacTypeOf} from './pac-types.js';
 
 // The groups whose scorecards and key-vote letters are collected (research.json groupPos), by key.
 export const GROUP_ABOUT={
@@ -94,7 +95,8 @@ export function makeOrgs(data){
     const name=(data.pacNames||[])[i],cat=pacCat.get(i),orient=(data.pacOrient||{})[i];
     const named=NAMED_ABOUT[norm(name)]||GROUP_ABOUT[groupByName.get(norm(name))];
     const kind=named||PAC_KIND[cat]||(cat?`PAC of a company or a trade or professional group in ${label(cat).toLowerCase()} (sector assigned by this app from its name).`:'Political action committee.');
-    return `${kind}${orient?` Orientation: ${orient}.`:''}${named?'':alignNote(cat)}`;
+    const t=pacTypeOf(data,i);
+    return `${kind}${orient?` Orientation: ${orient}.`:''}${named?'':alignNote(cat)}${t?` FEC type: ${t.label}${t.lobbyist?', also registered as a lobbyist PAC':''}.`:''}`;
   }
   function spender(c){
     const [,name,cls,note]=c,named=NAMED_ABOUT[norm(name)]||GROUP_ABOUT[groupByName.get(norm(name))];
