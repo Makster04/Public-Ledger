@@ -16559,6 +16559,21 @@
               "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00608.htm"
             }
           }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "marshall:said:0",
+            "title": "Stock trading by members of Congress",
+            "date": "2026-03-19",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"Members of Congress shouldn't be trading individual stocks while making decisions that move markets.\" Introduced the Senate Stop Insider Trading Act.",
+            "src": {
+              "t": "Marshall press release",
+              "u": "https://www.marshall.senate.gov/?p=81891"
+            }
+          }
         ]
       },
       "notVoted": {},
@@ -20622,6 +20637,21 @@
             "src": {
               "t": "Official roll call",
               "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00608.htm"
+            }
+          }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "ossoff:said:0",
+            "title": "Banning stock trading by members of Congress",
+            "date": "2022-01-12",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"Members of Congress should not be playing the stock market while we make federal policy and have extraordinary access to confidential information.\" He pledged a ban as a 2020 candidate and placed his own portfolio in a blind trust in 2021.",
+            "src": {
+              "t": "Ossoff press release",
+              "u": "https://www.ossoff.senate.gov/press-releases/sens-ossoff-kelly-introduce-bill-banning-stock-trading-by-members-of-congress/"
             }
           }
         ]
@@ -48822,6 +48852,21 @@
             "src": {
               "t": "Official roll call",
               "u": "https://clerk.house.gov/Votes/2024151"
+            }
+          }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "mgp:said:0",
+            "title": "Congressional stock trading ban",
+            "date": "2025-01-16",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"By preventing Members of Congress from trading stocks, receiving yearly pay raises, and turning to lobbying shortly after their term, more lawmakers will be accountable to their constituents and be in the work of governing for the right reasons.\" Said when sh…",
+            "src": {
+              "t": "Office of Rep. Gluesenkamp Perez",
+              "u": "https://gluesenkampperez.house.gov/posts/gluesenkamp-perez-nunn-introduce-bipartisan-bill-to-ban-congressional-stock-trading-end-automatic-pay-raises-extend-lobbying-prohibition"
             }
           }
         ]
@@ -77452,6 +77497,21 @@
               "u": "https://www.kcrg.com/content/news/How-lawmakers-voted-Heartbeat-abortion-bill-481503581.html"
             }
           }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "hinson:said:1",
+            "title": "Congressional stock trading",
+            "date": "2026-09-05",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"I don't trade stocks and no one else in Congress should either,\" Hinson says in a 2026 campaign ad, adding, \"I voted to ban it.\"",
+            "src": {
+              "t": "KCRG: Fact check: Did Ashley Hinson vote to ban stock trading in Congress?",
+              "u": "https://www.kcrg.com/2026/09/05/fact-check-did-ashley-hinson-vote-ban-stock-trading-congress/"
+            }
+          }
         ]
       },
       "notVoted": {},
@@ -80141,6 +80201,21 @@
             "src": {
               "t": "Official roll call",
               "u": "https://clerk.house.gov/Votes/2026207"
+            }
+          }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "pappas:said:1",
+            "title": "Congressional stock trading",
+            "date": "2026-07-22",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"For far too long, members of both parties have gotten rich trading stocks using insider information they got while holding public office, and thousands of my constituents are demanding we put a stop to this corrupt practice.\"",
+            "src": {
+              "t": "Office of Rep. Chris Pappas: Pappas Votes to Ban Stock Trading by Members of Congress (July 22, 2026)",
+              "u": "https://pappas.house.gov/media/press-releases/pappas-votes-to-ban-stock-trading-by-members-of-congress-fights-for-additional-reforms"
             }
           }
         ]
@@ -112159,6 +112234,21 @@
             "src": {
               "t": "Official roll call",
               "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00608.htm"
+            }
+          }
+        ],
+        "ethics": [
+          {
+            "type": "stated",
+            "ref": "ricketts:said:0",
+            "title": "Congressional stock trading",
+            "date": "2026-03-18",
+            "pos": "Stated",
+            "side": "A",
+            "why": "Said: \"No lawmaker should ever profit from insider information. Nebraskans send us to Congress to build a better country. Public service is a privilege, not a profit center.\" Statement introducing his Senate stock-trading bill.",
+            "src": {
+              "t": "Sen. Ricketts press release: Ricketts Introduces Senate Companion to Steil's Stop Insider Trading Act",
+              "u": "https://www.ricketts.senate.gov/news/press-releases/ricketts-introduces-senate-companion-to-steils-stop-insider-trading-act/"
             }
           }
         ]
@@ -195066,6 +195156,17 @@
       "leanNote": null,
       "group": "rights",
       "statement": "Public money should help pay private-school costs, through vouchers or education savings accounts."
+    },
+    {
+      "id": "ethics",
+      "label": "Money in politics and congressional ethics",
+      "q": "Banning members' stock trading and lobbying after office, and overturning Citizens United",
+      "A": "Ban members of Congress from trading stocks and from lobbying after they leave, and amend the Constitution to overturn Citizens United",
+      "B": "Keep the current rules on members' stock trading, lobbying after office and campaign spending",
+      "liberalSide": null,
+      "leanNote": "Stock-trading and lobbying bans draw sponsors from both parties; only the Citizens United amendment splits mostly by party, so the issue is not marked liberal or conservative.",
+      "group": "gov",
+      "statement": "Congress should ban members from trading stocks and from lobbying after they leave, and overturn Citizens United."
     }
   ],
   "typeLabel": {
@@ -201140,6 +201241,156 @@
         "119-sjres-90",
         "119-hconres-64",
         "119-hconres-68"
+      ]
+    },
+    {
+      "id": "119-hr-5106",
+      "title": "Restore Trust in Congress Act (ban on members' stock ownership and trading)",
+      "status": "not",
+      "reintroduced": false,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Introduced Sept. 3, 2025, with 16 original cosponsors, eight from each party, and referred to the House Administration Committee; no committee vote.",
+      "summary": "Would bar members of Congress, their spouses and dependent children from owning or trading individual stocks; they would have to sell them or put them in a qualified blind trust.",
+      "summarySrc": {
+        "t": "Rep. Magaziner: Magaziner, Roy Introduce New Bipartisan Bill to Ban Congressional Stock Trading (Sept. 3, 2025)",
+        "u": "https://magaziner.house.gov/media/press-releases/magaziner-roy-introduce-new-bipartisan-bill-ban-congressional-stock-trading"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Chip Roy (R-TX) with Rep. Seth Magaziner (D-RI) on Sept. 3, 2025.",
+          "src": {
+            "t": "GovInfo: H.R. 5106 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr5106ih"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-s-1879",
+      "title": "Ban Congressional Stock Trading Act",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Introduced May 22, 2025 (first introduced in 2023 as S. 2773) and referred to the Homeland Security and Governmental Affairs Committee; no committee vote.",
+      "summary": "Would require members of Congress, their spouses and dependent children to sell their stocks or place them in a qualified blind trust within 120 days, with a fine of up to a full year's salary for violations.",
+      "summarySrc": {
+        "t": "Sen. Ossoff: Sens. Ossoff, Kelly Introduce Bill Banning Stock Trading by Members of Congress",
+        "u": "https://www.ossoff.senate.gov/press-releases/sens-ossoff-kelly-introduce-bill-banning-stock-trading-by-members-of-congress"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Sen. Jon Ossoff (D-GA) on May 22, 2025.",
+          "src": {
+            "t": "GovInfo: S. 1879 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119s1879is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-s-1498",
+      "title": "HONEST Act (stock-trading ban for members of Congress and the president, formerly the PELOSI Act)",
+      "status": "not",
+      "reintroduced": false,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Approved 8–7 by the Homeland Security and Governmental Affairs Committee on July 30, 2025 (Sen. Hawley and every Democrat in favor); reported Dec. 10, 2025, and waiting on the Senate calendar.",
+      "summary": "Would bar members of Congress and their spouses from buying stock 90 days after enactment and require them to sell holdings, and apply similar limits to the president and vice president starting in 2029.",
+      "summarySrc": {
+        "t": "AP via News4JAX: Trump calls GOP's Hawley \"second-tier\" senator after stock trading ban bill advances (July 30, 2025)",
+        "u": "https://www.news4jax.com/news/politics/2025/07/30/trump-calls-gops-hawley-second-tier-senator-after-stock-trading-ban-bill-advances/"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Sen. Josh Hawley (R-MO) on Apr. 28, 2025; reported by the committee with an amendment on Dec. 10, 2025.",
+          "src": {
+            "t": "GovInfo: S. 1498, reported in the Senate",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119s1498rs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-hr-358",
+      "title": "No Corruption in Government Act (stock-trading ban, no automatic pay raises, longer lobbying ban)",
+      "status": "not",
+      "reintroduced": false,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Introduced Jan. 13, 2025, and referred to committee; no committee vote.",
+      "summary": "Would bar members of Congress from trading stocks (with profits from banned trades going to the Treasury), end their automatic annual pay raises, and triple how long former members must wait before lobbying.",
+      "summarySrc": {
+        "t": "Rep. Gluesenkamp Perez: Gluesenkamp Perez, Nunn Introduce Bipartisan Bill to Ban Congressional Stock Trading, End Automatic Pay Raises, Extend Lobbying Prohibition",
+        "u": "https://gluesenkampperez.house.gov/posts/gluesenkamp-perez-nunn-introduce-bipartisan-bill-to-ban-congressional-stock-trading-end-automatic-pay-raises-extend-lobbying-prohibition"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Zach Nunn (R-IA), with Rep. Marie Gluesenkamp Perez (D-WA) as co-lead, on Jan. 13, 2025.",
+          "src": {
+            "t": "Rep. Nunn: Nunn Introduces Bipartisan Anti-Corruption Legislation (Jan. 10, 2025)",
+            "u": "https://nunn.house.gov/2025/01/10/nunn-introduces-bipartisan-anti-corruption-legislation"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-hr-3554",
+      "title": "Close the Revolving Door Act of 2025 (lifetime lobbying ban for former members)",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Introduced May 21, 2025 (earlier versions since 2010) and referred to the Judiciary Committee; no committee vote.",
+      "summary": "Would bar former members of Congress for life from lobbying current members and staff, lengthen the lobbying wait for senior staff to six years, and raise penalties under the Lobbying Disclosure Act.",
+      "summarySrc": {
+        "t": "Rep. Neguse: Rep. Neguse and Rep. Ocasio-Cortez Introduce Legislation to Impose Lifetime Ban (July 10, 2025)",
+        "u": "https://neguse.house.gov/media/press-releases/rep-neguse-and-rep-ocasio-cortez-introduce-legislation-impose-lifetime-ban"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Joe Neguse (D-CO) on May 21, 2025.",
+          "src": {
+            "t": "GovInfo: H.R. 3554 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr3554ih"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-sjres-43",
+      "title": "Democracy for All Amendment (constitutional amendment to overturn Citizens United)",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Ethics & money in politics",
+      "issue": "ethics",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Ban members' stock trading and lobbying after office, and overturn Citizens United.\"",
+      "stage": "Introduced Mar. 27, 2025 (versions in every Congress since 2012) and referred to the Judiciary Committee; no committee vote. An amendment needs two-thirds of both chambers and 38 states.",
+      "summary": "A constitutional amendment that would let Congress and the states set reasonable limits on raising and spending money in elections, including by corporations, overturning the Supreme Court's 2010 Citizens United decision.",
+      "summarySrc": {
+        "t": "Sen. Shaheen: Shaheen Reintroduces Constitutional Amendment to Overturn Citizens United Ruling",
+        "u": "https://www.shaheen.senate.gov/shaheen-reintroduces-constitutional-amendment-to-overturn-citizens-united-ruling-get-dark-money-out-of-our-elections"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Sen. Jeanne Shaheen (D-NH) on Mar. 27, 2025.",
+          "src": {
+            "t": "Sen. Shaheen's release",
+            "u": "https://www.shaheen.senate.gov/shaheen-reintroduces-constitutional-amendment-to-overturn-citizens-united-ruling-get-dark-money-out-of-our-elections"
+          }
+        }
       ]
     }
   ],

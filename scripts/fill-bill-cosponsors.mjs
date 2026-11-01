@@ -2,6 +2,8 @@
 // site profiles, from Congress.gov (CONGRESS_API_KEY in .dev.vars). It reads each bill and each of its versions, plus
 // any bill Congress.gov lists as identical (a Senate companion), and writes them to the bill's "cosponsors" list:
 // [{person, bill, sponsor?, date}]. A cosponsorship later withdrawn is left out. The list is rebuilt on each run.
+// It does the same for the bills on the Bills page that count in Your match (research.json "billIndex" entries with an
+// "issue", such as the stock-trading, lobbying and Citizens United bills).
 //   npm run bills:cosponsors
 // Run it after adding a bill, review the changes, and commit public/research.json.
 import fs from 'node:fs/promises';
@@ -34,7 +36,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const get=async path=>{await wait();return requestSource(`https://api.congress.gov/v3/bill/${path}${path.includes('?')?'&':'?'}format=json`,env);};
   const list=async(path,field)=>{const rows=[];for(let offset=0;;offset+=250){const d=await get(`${path}?limit=250&offset=${offset}`);const page=d[field]||[];rows.push(...page);if(page.length<250)return rows;}};
   let total=0;
-  for(const b of research.bills){
+  for(const b of [...research.bills,...(research.billIndex||[]).filter(x=>x.issue)]){
     const keys=[b.id,...(b.versions||[])].filter(k=>BILL.test(k)),read={},queue=[...keys];
     try{
       while(queue.length){
