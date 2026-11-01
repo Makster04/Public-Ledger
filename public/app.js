@@ -2270,10 +2270,20 @@ function renderMethod(sub){
   app.innerHTML=`
   <section class="hero" style="padding-bottom:10px"><div class="asof">How this works</div><h1 style="margin-top:8px">Methodology</h1><p class="lede">What is covered, where every number comes from, how figures are calculated, and what is missing.</p></section>
   <section class="section prose">
-    <h2>What changed in this version (October 28, 2026)</h2>
+    <h2>What changed in this version (November 1, 2026)</h2>
+    <ul class="list">
+      <li><b>Donors by gift size:</b> the Overview's money card has a second bar that splits individual gifts into the FEC's five size groups, from the daily refresh. Shown only.</li>
+      <li><b>PAC types:</b> each PAC's type as the FEC records it (corporate, trade association, labor union, leadership PAC and so on) is shown beside the sector this app assigns from its name, once it has been looked up. Shown only.</li>
+      <li><b>Bundled donations:</b> what AIPAC's, Club for Growth's, EMILY's List's, J Street's and the Senate Conservatives Fund's PACs forwarded from their donors to each campaign is now read from those PACs' own FEC reports, and shown beside each group's own money (see "Money routed through PACs on donors' behalf" below). It counts as that group's money in Donor Loyalty and Vote Donor Alignment, never in a grade.</li>
+      <li><b>Net worth:</b> a range from each sitting member's latest annual financial disclosure, on the Ethics tab and the Overview's ethics card (see "Ethics and compliance" below). Shown only.</li>
+      <li><b>Money in politics and congressional ethics:</b> a new Your match issue, the 16th: banning members' stock trading and lobbying after office, and overturning Citizens United. Sponsoring or cosponsoring one of the six bills on it counts as an action.</li>
+      <li><b>Donor Loyalty 🤝 cap:</b> no single funder counts for more than all the others put together (at most half the weight), so one large funder with one position on file can't decide the number alone.</li>
+      <li><b>No grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
+    </ul>
+    <details class="tv"><summary>Earlier changes (October 28, 2026)</summary>
     <ul class="list">
       <li><b>Ethics indexes:</b> the Ethics grade is now 100 − the Legal Trouble Index 🚨 − a tenth of the Insider Trading Index 📈 − a tenth of the Stock Disclosure Dodger Index 🙈. A case now counts by its kind (criminal cases more, technical ones less) and its age (half after 10 years). Thirteen grades changed. Each changed grade says so on its Ethics tab, and the next monthly recalculation logs why.</li>
-    </ul>
+    </ul></details>
     <details class="tv"><summary>Earlier changes (October 24, 2026)</summary>
     <ul class="list">
       <li><b>New scoring rules (Rule 1):</b> votes, sponsorships, cosponsorships and official acts count fully. Statements count half, and only where no action exists. A vote and a sponsorship on the same bill count once. Promises left unacted at the end of a term count as contradicted. Vague goals and promises with no related bill yet are left out. Workers > Profit also counts sponsorships, from a list of marked bills. Ethics adds stock-trading deductions.</li>
@@ -2307,7 +2317,10 @@ function renderMethod(sub){
     <h2>The Overview page</h2>
     <p>Each profile opens on its Overview: the four grades, five small visuals and a short ethics list. Each reads in a few seconds, and each card links to a deeper tab.</p>
     <ul class="list">
-      <li><b>Where the campaign's money comes from:</b> one bar splitting the FEC two-year total receipts into groups. The groups are small donors (gifts of $200 or less, the FEC's "unitemized" contributions), larger donors (over $200), PACs and other committees, party committees, the candidate's own money and loans, and joint-fundraising transfers and other receipts. They add up to total receipts, so nothing is left out or counted twice. A campaign with no FEC report yet shows a note instead.</li>
+      <li><b>Where the campaign's money comes from:</b> one bar splitting the FEC two-year total receipts into groups. The groups are small donors (gifts of $200 or less, the FEC's "unitemized" contributions), larger donors (over $200), PACs and other committees, party committees, the candidate's own money and loans, and joint-fundraising transfers and other receipts. They add up to total receipts, so nothing is left out or counted twice. A campaign with no FEC report yet shows a note instead.
+        <ul class="list">
+          <li><b>Second bar, by gift size:</b> individuals' money in the FEC's five size groups ($200 and under, $200.01–$499.99, $500–$999.99, $1,000–$1,999.99, $2,000 and over), from the daily refresh. Each gift counts by its own amount, so "$200 and under" also holds small gifts from donors who gave more in all, and can be larger than "small donors" in the first bar. Shown only, never in a grade.</li>
+        </ul></li>
       <li><b>Outside money for and against:</b> two bars on one scale, with the three largest spenders named under each. They use the same totals as the Money &amp; Influence tab (see Outside spending below). This is never added to campaign money.</li>
       <li><b>How they compare with your choices:</b> one row per issue you chose in My alignment. No single percentage is shown. Until you choose issues, the card just invites you to.
         <ul class="list">
@@ -2323,6 +2336,7 @@ function renderMethod(sub){
           <li><b>Allegation:</b> a complaint or report with no official finding.</li>
           <li><b>Investigation:</b> a formal inquiry, lawsuit or proceeding. It may be pending, closed, or ended without a finding against the person.</li>
           <li><b>Confirmed finding:</b> a court, agency or ethics body found a violation or set a penalty, or the person admitted it.</li>
+          <li><b>Net worth:</b> for a sitting member, a range from their latest annual financial disclosure, under the list (see Ethics and compliance below).</li>
         </ul></li>
     </ul>
     <h2>Profile pages</h2>
@@ -2419,7 +2433,7 @@ function renderMethod(sub){
     <h3>What it measures</h3>
     <ul class="list">
       <li><b>Vote Donor Alignment:</b> votes on bills where a donor group took a public position (in its scorecard or key-vote letter). It is the share that went the group's way. Missed votes are not counted.</li>
-      <li><b>Donor Loyalty 🤝:</b> how much more often they vote the way their funders wanted than the rest of their party does on the same votes. For each group that gave to the campaign or spent for them, their rate of voting its way minus the party's rate, from the official roll calls' party totals with their own vote left out (Voteview's copy of a Senate vote when Senate.gov won't send it, kept only when its totals match the recorded result). The groups are weighted by the money each gave or spent. Only the part above the party counts: ${DONOR_LOYALTY.ceiling} points above scores 100. It needs ${DONOR_LOYALTY.minVotes} compared votes. Independents are compared with the party they caucus with.</li>
+      <li><b>Donor Loyalty 🤝:</b> how much more often they vote the way their funders wanted than the rest of their party does on the same votes. For each group that gave to the campaign or spent for them, their rate of voting its way minus the party's rate, from the official roll calls' party totals with their own vote left out (Voteview's copy of a Senate vote when Senate.gov won't send it, kept only when its totals match the recorded result). The groups are weighted by the money each gave, bundled from its donors or spent for them, but no group counts for more than all the others put together (at most half the weight), so one large funder with a single position on file can't decide the number alone. Only the part above the party counts: ${DONOR_LOYALTY.ceiling} points above scores 100. It needs ${DONOR_LOYALTY.minVotes} compared votes. Independents are compared with the party they caucus with.</li>
       <li><b>Speech Donor Alignment:</b> not measured yet. Floor speeches arrive from the Congressional Record, but must first be sorted by issue and side.</li>
       <li><b>Donations by month:</b> each group's PAC giving to the campaign by month (FEC bulk data since ${H0()}), with the votes it took a side on marked under its row.</li>
       <li><b>Top donor organizations:</b> from the daily FEC refresh, the top ${TOP_DONORS} organizations, each combining its PAC with its employees' itemized giving, grouped by employer. Donors' names are never shown, as FEC rules on reusing contributor information require.</li>
@@ -2535,6 +2549,7 @@ function renderMethod(sub){
       <li><b>Dates:</b> the FEC lists contributions by report, so each row shows its report and period, not an exact date.</li>
       <li><b>Transcription:</b> rows were copied from the FEC's report viewer. Where some couldn't be read, the profile shows the share covered and doesn't estimate the rest.</li>
       <li><b>Sectors:</b> assigned by this app from each committee's name and sponsor, not by the FEC. Committees that can't be identified are left unclassified.</li>
+      <li><b>FEC type:</b> each PAC's type as the FEC records it from the committee's own registration: corporate, trade association, membership group, cooperative, labor union, lobbyist, leadership PAC, nonconnected, another candidate's committee, party or joint fundraiser. Each name on file is matched to its FEC committee ID first; a name that could be two committees is left unmatched. Shown in the PAC table, a by-type chart and each PAC's description once the lookup has been run (<code>npm run pacs:types</code>). Shown only, never in a grade.</li>
       <li><b>Orientation:</b> shown only where a group's political purpose is documented.</li>
     </ul>
     <h2>Outside spending (independent expenditures)</h2>
@@ -2569,10 +2584,12 @@ function renderMethod(sub){
     <h2>Money routed through PACs on donors' behalf</h2>
     <ul class="list">
       <li><b>How it works:</b> some groups bundle their members' donations. Members give through the group's PAC, which forwards each gift to the candidate as an "earmarked" contribution.</li>
-      <li><b>Why it's hidden:</b> the FEC treats this as individual money, so it doesn't show in a PAC breakdown even when a group directed it.</li>
-      <li><b>Sen. Booker:</b> $707,803 routed through AIPAC's PAC from January to September 2025, as tallied from FEC filings by Sludge.</li>
-      <li><b>Sen. Collins:</b> AIPAC PAC's August 2026 report shows earmarked contributions forwarded to the Collins campaign. The total is not yet tallied.</li>
-      <li><b>Everyone else:</b> "not measured". That does not mean none was received.</li>
+      <li><b>Why it's hidden:</b> the FEC treats this as individual money, so it doesn't show in a PAC breakdown even when a group directed it. It is already in campaign funds raised, so it is never added to them.</li>
+      <li><b>Groups read for everyone:</b> AIPAC, Club for Growth, EMILY's List, J Street and the Senate Conservatives Fund. For each profiled campaign, what each group's PAC forwarded is read from the PAC's own FEC reports (its disbursements to that campaign marked "earmark"), for the cycles its PAC reports cover. A group that reports a total line with each gift listed below it is counted from the total line, so nothing counts twice. The PAC's own checks stay in the PAC table.</li>
+      <li><b>Left out:</b> ActBlue and WinRed, which forward gifts for any campaign that uses them, so the campaign, not a group, chose them.</li>
+      <li><b>Researched by hand:</b> where the FEC reading misses a total found in the filings by a reporter, the hand-researched total is used and labeled. Sen. Booker: $707,803 through AIPAC's PAC from January to September 2025, as tallied from FEC filings by Sludge; $5,000 of it was the PAC's own check, so $702,803 counts as bundled.</li>
+      <li><b>Where it counts:</b> beside each group's own money in the funder list, a table on the Money &amp; Influence tab and a tag on the Bills page. It counts as that group's money in Donor Loyalty 🤝 and Vote Donor Alignment, never in a grade.</li>
+      <li><b>Anyone else:</b> no row means none of these groups forwarded gifts to that campaign in the FEC's processed records as of the date shown. Other groups that bundle aren't read yet.</li>
     </ul>
     <h2>Voting ideology (liberal–conservative %)</h2>
     <ul class="list">
@@ -2615,6 +2632,7 @@ function renderMethod(sub){
       <li><b>Covered:</b> findings by ethics bodies, enforcement actions, reported STOCK Act late disclosures, complaints and referrals (with their documented outcome), and investigations that ended without charges.</li>
       <li><b>Sources:</b> a partisan outlet is never the only source.</li>
       <li><b>"None found":</b> the listed searches turned up nothing. That does not mean nothing exists.</li>
+      <li><b>Net worth:</b> for each sitting member, from their latest annual financial disclosure (an amendment over the original), read weekly: House reports from the House Clerk's disclosure index, senators' from Senate eFD. The forms give every value as a range, so net worth is a range too: the lowest is every asset at the bottom of its range minus every debt at the top of its, and the highest is the reverse. A range with no upper limit ("Over $50,000,000") shows as "or more". A home and its mortgage aren't on the form unless the home earns income, so neither is counted. Candidates who never served aren't covered yet. Shown only, never in a grade.</li>
     </ul>
     <h2>Voter alignment</h2>
     <ul class="list">
@@ -2686,7 +2704,8 @@ function renderMethod(sub){
       <li><b>No report yet:</b> Troy Jackson (D-ME) has not filed a financial report.</li>
       <li><b>Missing PAC rows:</b> two of Sen. Collins' reports (Year-End 2025 and Pre-Primary 2026) could not be retrieved, so those PAC rows are incomplete. Several other candidates' rows are a few short of their reports' totals; each profile shows its coverage.</li>
       <li><b>Possible duplicate:</b> one of Sen. Marshall's reports (April 2025) transcribed to $5,000 more than the report's subtotal. It is flagged on Marshall's profile.</li>
-      <li><b>Earmarked totals:</b> measured only for Sen. Booker.</li>
+      <li><b>Earmarked totals:</b> read for five groups that bundle (see above). Other groups' bundling isn't read yet, and the FEC reading can miss gifts a conduit reported in an unusual way, as it did for Sen. Booker.</li>
+      <li><b>Net worth:</b> only for sitting members, and a paper-filed report can't be read.</li>
       <li><b>House toss-ups:</b> 14 of the 22 are shown with funding only. Their candidates have no record, statement or ethics research yet.</li>
       <li><b>Issue list:</b> covers ${ISS.length} issues that could be documented. Candidates whose records are mostly on other topics (for example, Texas education bills) have little coded evidence. Several candidates without a voting record show "Insufficient data".</li>
       <li><b>Primary results:</b> some 2026 primary percentages could not be confirmed against certified results and were removed from status lines.</li>

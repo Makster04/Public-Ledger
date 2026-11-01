@@ -1,10 +1,10 @@
 # Politician Scorecard: Scoring Methodology
 
-Oct 22, 2026 · Mak Trnka
+Oct 22, 2026 (updated Nov. 1, 2026) · Mak Trnka
 
 ## How the scorecard works
 
-Each politician gets four graded scores, shown as a letter grade with the percentage beside it, for example **B (84%)**. When there is not enough evidence, a score shows **"Not graded"**, never a zero or a guess. Two other indicators and the Money & Influence analysis are shown without grades. The app applies these rules in `public/grades.js`.
+Each politician gets four graded scores, shown as a letter grade with the percentage beside it, for example **B (84%)**. When there is not enough evidence, a score shows **"Not graded"**, never a zero or a guess. Three other indicators and the Money & Influence analysis are shown without grades. The app applies these rules in `public/grades.js`.
 
 | Score | Shown in the app as | What it measures | Minimum evidence for a grade |
 | --- | --- | --- | --- |
@@ -180,7 +180,7 @@ From reviewed Periodic Transaction Reports, which members of Congress file under
 | Part | Weight | How it's figured |
 | --- | --- | --- |
 | Late or missing trade reports (required) | 70% | The share of trades reported after the 45-day deadline, or never reported. |
-| Late annual financial disclosures | 30% | The share of the last 3 years' annual reports filed after their due date, extensions included (from the House disclosure index; not imported yet, so this part drops out for now). |
+| Late annual financial disclosures | 30% | The share of the last 3 years' annual reports filed after their due date, extensions included (from the House disclosure index; not imported yet, so this part drops out for now). The refresh now reads each member's latest annual report for net worth, but not yet when each one was due and filed. |
 
 - **Minimum:** 3 required filings.
 - **No double counting:** a STOCK Act late-disclosure case counts in the Legal Trouble Index until the person's trades are reviewed; after that, late reports count here instead.
@@ -190,7 +190,16 @@ From reviewed Periodic Transaction Reports, which members of Congress file under
 
 - **State-only officials and candidates who never served in Congress** show "No trading data," since these filings cover Congress only and state disclosure rules vary.
 - **A president** files OGE Form 278-T transaction reports instead, under the same 30- and 45-day deadlines. Trump's are listed on the Ethics tab from Disclosed Capitol's open dataset of the OGE reports (CC BY 4.0), with how many were reported more than 45 days after the trade as a lead. They're not scored yet, so the two trading indexes show "Not scored for a president". The committee-conflict rule has no direct equivalent for a president (see Open decisions).
-- **Votes on stock-trading-ban bills** are policy positions, so they are scored in Your match and Promise, not here.
+- **Votes on stock-trading-ban bills** are policy positions, so they are scored in Your match (the "Money in politics and congressional ethics" issue, where sponsoring or cosponsoring a ban counts as an action) and Promise, not here.
+
+### Net worth (shown, not scored)
+
+Each sitting member's net worth is shown on the Ethics tab and the Overview's ethics card, as a range from their latest annual financial disclosure (an amendment over the original): House reports from the House Clerk's disclosure index, senators' from Senate eFD, read weekly.
+
+- **Why a range:** the forms give every asset and debt as a range ("$15,001 – $50,000"). The lowest net worth is every asset at the bottom of its range minus every debt at the top of its; the highest is the reverse. A value with no upper limit ("Over $50,000,000") makes the range "or more".
+- **Not on the form:** a home and its mortgage, unless the home earns income, so neither is counted.
+- **Not covered yet:** candidates who never served, and reports filed on paper.
+- **Planned use (step 8 of the plan in [Updates & fixes](../.04_UPDATES_&_FIXES_IN_NEED.md)):** the asset list it keeps is what a blind-trust or divestment rule would read: a member whose holdings are in a qualified blind trust, or only in diversified funds, would have no Insider Trading Index deduction. Not decided yet.
 
 ## Workers > Profit Score
 
@@ -254,11 +263,11 @@ Each action carries its Rule 1 weight and takes a side as Rule 1 describes, and 
 
 **Example:** a Nay on the American Rescue Plan Act (+75) and on the Inflation Reduction Act (+75) adds 1.5 Profit-leaning points, and a Nay on the One Big Beautiful Bill Act (−100) adds 1 People-leaning point: 1 ÷ 2.5 = 40%, shown as **F (40%)**.
 
-**Where it stands:** 23 people have the 3 scored actions a grade needs, most of the House members through their votes on the One Big Beautiful Bill Act, H.R. 6703 and the ACA credit extension. Some positions on the newly saved roll calls, and everyone's cosponsorships, are filled on your computer (`npm run votes:positions` and `npm run bills:cosponsors`), which will change grades. Trump signed two scored bills, both Profit-leaning, one short of a grade. Candidates without a voting record are scored from cited public statements: 25 so far, from 22 candidates, each counting half a vote.
+**Where it stands:** 23 people have the 3 scored actions a grade needs, most of the House members through their votes on the One Big Beautiful Bill Act, H.R. 6703 and the ACA credit extension. Every saved roll call's positions and each bill's profiled cosponsors were filled on Oct. 31, 2026 (`npm run votes:positions` and `npm run bills:cosponsors`); rerun them when bills or roll calls are added. Trump signed two scored bills, both Profit-leaning, one short of a grade. Candidates without a voting record are scored from cited public statements: 25 so far, from 22 candidates, each counting half a vote.
 
 ## Other indicators (not graded)
 
-Three more indicators appear on each profile as plain numbers or bars, without a letter grade.
+Three more indicators appear on each profile as plain numbers or bars, without a letter grade. Net worth (under the Ethics Score) and the money figures under the Money & Influence Analysis are shown the same way.
 
 | Indicator | How it appears | How it is calculated |
 | --- | --- | --- |
@@ -273,6 +282,9 @@ This analysis checks whether month-by-month changes in a politician's donations,
 ### What is tracked
 
 - **Donations by month and source:** contributions from each organization's PAC and employees, grouped by organization and industry, from FEC filings. Only the politician's top 20 donor organizations in the current election cycle are analyzed.
+- **Bundled (earmarked) donations:** individual donors' gifts that a group collected and forwarded through its PAC (AIPAC, Club for Growth, EMILY's List, J Street and the Senate Conservatives Fund), read from each group's PAC's own FEC reports and shown beside the group's own money. They are the donors' own money, which the FEC counts as individual contributions, so they are already in campaign funds raised; the group decided where they went. ActBlue and WinRed are left out, because they forward gifts for any campaign that uses them.
+- **Donors by gift size:** individuals' money in the FEC's five size groups ($200 and under up to $2,000 and over), shown on the Overview's money card.
+- **PAC type:** each PAC's type from its FEC registration (corporate, trade association, labor union, membership group, leadership PAC, nonconnected and so on), shown beside the sector this app assigns from the PAC's name.
 - **Who had a stake in each bill:** organizations that lobbied on the bill, from federal lobbying disclosure reports.
 - **Decisions:** votes, sponsorships, and speeches in Congress, weighted as in Rule 1.
 - **Stock holdings and trades:** holdings from annual financial disclosure reports and trades from Periodic Transaction Reports, including spouse and dependent-child accounts (see Stock trading under the Ethics Score).
@@ -283,12 +295,15 @@ Every profile's analysis shows where stock stands, even when nothing is flagged:
 - **Stock holdings and trades:** the reviewed trades in a donor's company and whether each is a timing flag. Below them, the latest disclosed trades from the daily refresh (not yet reviewed) are checked against the top 20 donor organizations as leads.
 - Most of the reviewed donor groups are advocacy groups and unions, which have no stock, so most matches are expected to come from the top 20 donor organizations in the refresh: companies, their PACs and their employees.
 
-### Two alignment measures
+### Three alignment measures
 
 | Measure | Question it answers |
 | --- | --- |
 | Vote Donor Alignment | Of the votes and sponsorships on bills a top donor lobbied on, what percentage went the donor's way? |
-| Speech Donor Alignment | Of the speeches on issues a top donor lobbied on, what percentage took the donor's side? |
+| Donor Loyalty 🤝 | How much more often do they vote their funders' way than the rest of their party does on the same votes? |
+| Speech Donor Alignment | Of the speeches on issues a top donor lobbied on, what percentage took the donor's side? (Not measured yet.) |
+
+**Donor Loyalty 🤝:** for each funder that took public positions, the person's rate of voting its way minus their party's rate on the same votes (from the official roll calls' party totals, with their own vote left out). The funders are weighted by the money each gave, bundled or spent for them, but no funder counts for more than all the others put together (at most half the weight); before this cap, one funder with a single position on file could decide the number alone. Only the part above the party counts, and 25 points above scores 100. It needs 5 compared votes. Full design: [Money & Influence](05_MONEY_&_INFLUENCE_ANALYSIS.md).
 
 ### Timing flags
 
@@ -430,8 +445,8 @@ Each data category below lists its free sources and the parts of the scorecard i
 
 *Feeds the Insider Trading and Stock Disclosure Dodger indexes in the Ethics Score and the stock flag in the Money & Influence Analysis. The official reports are read directly and are the record of truth: House members' PDFs from the House Clerk, and senators' reports from the Senate eFD site. Bargo, Eulerpool, and Financial Modeling Prep (if its free plan includes trades) run alongside as a cross-check: duplicate trades are merged, the official report's date wins, and a trade only a service reports goes to review. Reports filed on paper are scanned images and are checked by hand. Only reviewed trades count. Capitol API is not needed, since it reads the same filings.*
 
-- **House Clerk disclosures** *(in use: the yearly filing index, and each electronically filed trade report's PDF, read automatically)*: official yearly downloads, with trades as PDFs; reports filed on paper are scanned images, listed for review **(Federal only)**. [disclosures-clerk.house.gov/FinancialDisclosure](https://disclosures-clerk.house.gov/FinancialDisclosure)
-- **Senate eFD** *(in use: each senator's electronic trade reports, read automatically)*: official search portal, no API; it asks visitors to agree that reports won't be used for commercial purposes (other than news media), credit ratings or solicitation, and the reader agrees each session **(Federal only)**. [efdsearch.senate.gov](https://efdsearch.senate.gov/)
+- **House Clerk disclosures** *(in use: the yearly filing index, each electronically filed trade report's PDF, and each member's latest annual report's PDF for net worth, read automatically)*: official yearly downloads, with trades as PDFs; reports filed on paper are scanned images, listed for review **(Federal only)**. [disclosures-clerk.house.gov/FinancialDisclosure](https://disclosures-clerk.house.gov/FinancialDisclosure)
+- **Senate eFD** *(in use: each senator's electronic trade reports, and their latest annual report for net worth, read automatically)*: official search portal, no API; it asks visitors to agree that reports won't be used for commercial purposes (other than news media), credit ratings or solicitation, and the reader agrees each session **(Federal only)**. [efdsearch.senate.gov](https://efdsearch.senate.gov/)
 - **CapitolGains** *(by hand, scripts/build-holdings.py)*: free Python package for trades, holdings, and blind trusts from both chambers **(Federal only)**. [pypi.org/project/capitolgains](https://pypi.org/project/capitolgains/)
 - **Capitol API** *(not used)*: open-source and self-hostable; its GitHub repo is crnicholson/capitol-api **(Federal only)**. [Archived copy](https://archive.hackclub.com/archive/8ODyA/mhtml/html)
 - **Bargo Congress Trades API** *(in use)*: free with limits, and works without a key at a lower limit. Its published description has no late-filing field, so lateness comes from the dates. The free tier covers only the last 3 months of trades, so older trades need the official filings **(Federal only)**. [API](https://www.bargo.ai/free-apis/congress/v1) · [Free key](https://www.bargo.ai/free-apis/dash)
@@ -454,7 +469,7 @@ Each data category below lists its free sources and the parts of the scorecard i
 
 *Feeds the Money & Influence Analysis and its charts.*
 
-- **FEC API and bulk files** *(in use)*: campaign totals (including the total from individual donors), PAC contributions, and outside spending; the bulk files feed the funder timelines. Individual contributions are now also totaled by the donor's employer for the top-donor tracking; donors' names are never kept **(Federal only)**. [api.open.fec.gov/developers](https://api.open.fec.gov/developers/)
+- **FEC API and bulk files** *(in use)*: campaign totals (including the total from individual donors), PAC contributions, and outside spending; the bulk files feed the funder timelines. Individual contributions are now also totaled by the donor's employer for the top-donor tracking; donors' names are never kept. Also read: individuals' money by gift size (daily), each PAC's committee registration for its FEC type (`npm run pacs:types`), and the bundled gifts each conduit PAC forwarded to each campaign (`npm run funders:bundled`) **(Federal only)**. [api.open.fec.gov/developers](https://api.open.fec.gov/developers/)
 - **ProPublica Nonprofit Explorer API** *(in use)*: tax filings of nonprofits that spend in races ("dark money" groups), with no key **(Federal only)**. [Announcement](https://www.propublica.org/nerds/announcing-the-nonprofit-explorer-api)
 - **IRS political organization (527) data** *(not refreshed: bulk downloads only, so 527 spenders link to the IRS search)*: groups that report to the IRS instead of the FEC, as weekly bulk downloads with no key **(Federal only)**. [IRS political organizations](https://www.irs.gov/node/471)
 
@@ -504,6 +519,8 @@ Some links were built from paths the sites list rather than opened directly (vot
 - 46 of 59 politicians are "Not graded" on the Promise Score, because most have only 2 or 3 checks. The president is graded from PolitiFact's trackers: **F (43%)**.
 - Fourteen bills and amendments are on file for Workers > Profit and ten are scored. 23 people have the 3 scored actions a grade needs; everyone else is "Not graded" on that score.
 - The president's Ethics Score is **F (0%)**: 5 confirmed findings and 7 investigations that ended without a finding.
+- Money figures added Nov. 1, 2026, all shown without a grade: $6.0 million in bundled donations to 23 people from five groups' PACs (AIPAC $4.9 million, J Street $0.6 million, the Senate Conservatives Fund $0.3 million, Club for Growth $0.1 million, EMILY's List $12,000), plus Booker's hand-researched AIPAC total; 378 funder entries for 51 of 59 people. Gift sizes and net worth fill in from the refresh. PAC types are built but not saved yet (`npm run pacs:types`).
+- The 16th Your match issue, money in politics and congressional ethics, has six bills: 17 sponsorships and cosponsorships from 12 people, and 6 cited statements.
 - The original research file was not independently fact-checked.
 - The ethics tags, open/closed labels, and liberal/conservative key-vote marks were added on top of that file and are judgment calls.
 
@@ -533,7 +550,10 @@ These values are placeholders or interpretations of the original notes. Confirm 
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **The 80% rule:** replaced by the five who-gains steps (Step 1 of Workers > Profit), which compare lower-income households with the top instead of using one cut-off.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **People-leaning list:** the original notes repeated the Profit items under "People," so the People column was written as their mirror image. Add anything missing.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Which votes count:** an amendment vote counts on its own, keyed like a bill (the Cornyn and Sanders amendments). A procedural vote, such as cloture or a motion to waive the budget rules, counts as the vote on its bill. When a bill has more than one recorded vote, or versions in different Congresses, the latest vote is the one counted.
-- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade. The Corporation Compromised Index 🏢 (step 9 of the plan in [Updates & fixes](../.04_UPDATES_&_FIXES_IN_NEED.md)) would be the first: 25% of Workers > Profit. Decide whether to build it, and whether its corporate PAC share uses the FEC's PAC types or this app's sectors.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **One funder deciding Donor Loyalty:** decided Nov. 1, 2026: no funder counts for more than all the others put together (at most half the weight).
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Blind trusts and divestment (step 8):** decide whether a qualified blind trust, or holding only diversified funds, removes the Insider Trading Index deduction, and how it is confirmed from the annual disclosure.
+- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Money promises (step 7):** decide which public pledges count as promise checks (for example, refusing corporate PAC money or backing a stock-trading ban), and how each is checked against the FEC records and the bills' cosponsors.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Flag thresholds:** top 20 donors, a 50% donation change, and a 6-month window.
 - <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **Who marks bills:** the Workers > Profit bill score now follows a fixed rule from cited evidence (who gains and who took a side). Still open: who reviews the evidence and settles disagreements, and who assigns the liberal/conservative marks.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **State records in Workers > Profit:** the CBO and JCT analyze federal bills only, so decide which sources (such as state legislative fiscal offices) can mark state bills. Voteview's DW-NOMINATE also covers Congress only, so the ideological position indicator is blank for state-only officials unless a state-level measure is added.

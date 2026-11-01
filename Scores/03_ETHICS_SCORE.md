@@ -20,7 +20,9 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | First live run of the trade readers | The cloud sandbox can't reach the House and Senate sites, so the first run on your computer is the real test. Senate.gov turned scripts away (HTTP 403) for the vote files, so watch for the same on the Senate eFD reader. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Review every case's tags | Kind, decided year, and open or closed. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Confirm the placeholder weights | Criminal × 1.5, technical × 0.5, half after 10 years, and a tenth for each trading index. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Senators' annual financial disclosures | Not imported yet, so that part of the Stock Disclosure Dodger Index drops out for senators. |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Senators' annual financial disclosures | Each senator's latest annual report is now read from Senate eFD for net worth (below). Their due and filing dates aren't read yet, so the annual-disclosure part of the Stock Disclosure Dodger Index still drops out for senators. Next: read the last 3 years' filing dates from the same search. |
+| <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Net worth range (step 4 of 9) | Built: a weekly refresh reads each sitting member's latest annual disclosure (House PDFs from the Clerk's index, Senate eFD pages) and shows net worth as a range on this tab and the Overview's ethics card, with every asset and debt as listed. Shown only, never in the grade. Fills in with `npm start`. The readers haven't been checked against real reports yet: send any odd range or error from Website updates. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Blind-trust and divestment rule (step 8 of 9) | Idea from the Integrity Index: a member whose holdings are in a qualified blind trust, or only in diversified funds (mutual funds, index funds, Treasuries), would have no Insider Trading Index deduction. It would read the asset list the net-worth refresh keeps. To decide: whether to add it, which holdings count as diversified, and whether it removes the whole deduction or only the single-stock parts. Not started. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide who confirms leads before they count | Court records, FEC enforcement records and DOJ press releases. |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | The president's trades listed | From Disclosed Capitol's open dataset of the OGE 278e and 278-T reports (`npm run exec:build`), on the Ethics tab. Not scored. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Score the president's trades? | Decide what replaces the committee-conflict rule for a president, and whether 278-T reports filed after 45 days count. Spot-check the dataset against the OGE PDFs first. |
@@ -117,7 +119,7 @@ Late trade reports are counted here, not in the Insider Trading Index, so nothin
 **Keys and sources:**
 - **Trade and filing dates:** the members' own trade reports, from the House Clerk and Senate eFD (no key). The trade services above are optional cross-checks.
 - **Annual disclosures:** the House disclosure index. No key.
-- **Senators:** their trade reports are read from Senate eFD, but their annual disclosures aren't imported yet. For senators, the annual-disclosure part drops out and only the trade-report part counts.
+- **Senators:** their trade reports are read from Senate eFD. Their latest annual report is now read too, for net worth, but not yet when each report was due and filed. Until it is, the annual-disclosure part drops out for senators and only the trade-report part counts.
 
 ### ↓↓↓
 
@@ -133,3 +135,16 @@ The three indexes don't overlap:
 - **Legal Trouble Index 🚨:** official findings, investigations and charges.
 - **Insider Trading Index 📈:** what they traded, and whether it overlaps with their committees, votes or donors.
 - **Stock Disclosure Dodger Index 🙈:** whether they reported it on time.
+
+### Net worth (shown, not scored) 💵
+**Shows:** a range for what they and their spouse and dependent children own minus what they owe, from their latest annual financial disclosure.
+
+- **Lowest:** every asset at the bottom of its range minus every debt at the top of its. **Highest:** the reverse.
+- **Open-ended values:** an asset listed as "Over $50,000,000" (or a spouse's "Over $1,000,000") has no upper limit, so the range reads "or more".
+- **Left out:** a home and its mortgage, which the form lists only when the home earns income.
+- **Not covered yet:** candidates who never served, and reports filed on paper (shown as "filed on paper; not read").
+- **Not in the grade.** It's context, and the asset list is what the planned blind-trust rule (step 8) would read.
+
+**Keys and sources:**
+- **House:** the latest annual report (an amendment over the original) listed in the House Clerk's disclosure index, read as a PDF. No key.
+- **Senate:** the latest annual report on Senate eFD, after agreeing to its terms. No key.
