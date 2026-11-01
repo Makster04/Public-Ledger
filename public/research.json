@@ -194144,7 +194144,19 @@
       "title": "Bipartisan Safer Communities Act",
       "status": "law",
       "law": "Public Law 117-159",
-      "date": "2022-06-25"
+      "date": "2022-06-25",
+      "groups": [
+        {
+          "group": "nra",
+          "pos": "oppose",
+          "why": "Announced its opposition when the bill text came out, saying it \"falls short at every level\": it does little to address violent crime and opens the door to new burdens on gun owners.",
+          "src": {
+            "t": "NRA-ILA: NRA Announces Opposition To Senate Gun Control Legislation (June 21, 2022)",
+            "u": "https://www.nraila.org/articles/20220621/nra-announces-opposition-to-senate-gun-control-legislation"
+          },
+          "date": "2022-06-21"
+        }
+      ]
     },
     {
       "id": "117-hr-4346",
