@@ -40,7 +40,7 @@ Not a separate index:
 **Measures:** how much more they vote with their funders than members of their own party do.
 
 1. For each funder that took public positions, take the person's rate of voting its way minus their party's average on those same votes.
-2. Weight each funder by the money it gave, bundled or spent for them.
+2. Weight each funder by the money it gave, bundled or spent for them, but no funder counts more than all the others put together (at most half the weight). Without this, one big funder with a single position on file decided some people's index on its own (Collins: 100 with AIPAC's $3.35M on one vote; 70 with the cap).
 3. Only the amount above the party average counts. The ceiling is 25 points above.
 
 **Minimum:** 5 compared votes.

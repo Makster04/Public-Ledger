@@ -3,7 +3,7 @@ import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LAT
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
-import {billFamilies,groupInfo} from './bills.js';
+import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
@@ -28,6 +28,8 @@ for(const s of ALL.concat(FEATURED))for(const ev of Object.values(s.evidence||{}
   const v=VOTE_BY_ID.get(e.ref);if(v){e.bill=voteBill(v);continue;}
   const m=/:bill:(\d+)$/.exec(e.ref||''), b=m&&(s.bills||[])[+m[1]];if(b)e.bill=billKey(b.congress,b.num);
 }
+// Sponsorships and cosponsorships of the bills on the Bills page that count in Your match (public/bills.js).
+for(const [id,list] of issueEvidence(DATA))for(const {issue,entry} of list){const s=byId[id];if(!s)continue;const ev=(s.evidence||={})[issue]||=[];if(!ev.some(e=>e.bill===entry.bill))ev.push(entry);}
 // The reviewed grades come from public/scoring.js, shared with the monthly recalculation. Committee assignments
 // (public/committees.json) and the sectors each committee oversees (public/committee-sectors.json) feed the Ethics
 // committee-conflict check.
@@ -1249,7 +1251,7 @@ function bindBuilder(root,onChange){
 const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What this is','A comparison between the positions <i>you</i> pick and each candidate\'s documented record.'],['What it is not','A rating of how good a candidate is. It covers only issues with documented evidence.'],['Evidence used','Recorded votes, bills and official acts come first. Stated positions are used only for an issue with no recorded action, and they are labeled.'],['When a score shows','Evidence must cover at least three of your issues and half of your total importance. Otherwise you see "Insufficient data", never a zero.']])}<p style="margin:6px 0 0"><a href="#method">How it is calculated</a></p></div>`;
 // ---------- My alignment: a five-point quiz over the issue list. Each answer is saved as a side and an importance:
 // strongly agree/disagree = importance 3, agree/disagree = 2, neutral = answered but not counted. ----------
-const AL_GROUPS=[['econ','Economy & health','$'],['rights','Rights & social','♥'],['imm','Immigration & elections','⛨'],['foreign','Foreign policy','◍'],['env','Environment','❦']];
+const AL_GROUPS=[['econ','Economy & health','$'],['rights','Rights & social','♥'],['imm','Immigration & elections','⛨'],['foreign','Foreign policy','◍'],['env','Environment','❦'],['gov','Ethics & money in politics','⚖']];
 const AL_GBY=Object.fromEntries(AL_GROUPS.map(g=>[g[0],g]));
 // mixed order for "All questions": one from each category in turn
 const AL_ORDER=(()=>{const by=AL_GROUPS.map(([g])=>ISS.filter(i=>i.group===g)),out=[];for(let k=0;out.length<ISS.length&&k<ISS.length;k++)by.forEach(l=>{if(l[k])out.push(l[k])});ISS.forEach(i=>{if(!out.includes(i))out.push(i)});return out})();
@@ -1915,7 +1917,7 @@ function billGroupLine(p){
 function billCard(e){
   const u=billUrl(e.id),nums=e.keys.map(billLabel);
   const sup=e.positions.filter(p=>p.pos==='support'),opp=e.positions.filter(p=>p.pos==='oppose');
-  const here=[...new Set((e.work?.cosponsors||[]).map(c=>c.person))].filter(id=>byId[id]).map(id=>`<a href="#${id}-pvp">${esc(byId[id].short||byId[id].name)}</a>`);
+  const here=[...new Set([...(e.work?.cosponsors||[]),...(e.cosponsors||[])].map(c=>c.person))].filter(id=>byId[id]).map(id=>`<a href="#${id}-${e.issue?'match':'pvp'}">${esc(byId[id].short||byId[id].name)}</a>`);
   const statusSrc=e.statusSrc?` <a href="${esc(e.statusSrc.u)}" target="_blank" rel="noopener" title="${esc(e.statusSrc.t)}">Source ↗</a>`:'';
   const status=e.status==='law'?`<b class="gr-A">Became law</b>: ${esc(e.law)}, signed ${fmtDate(e.date)}.${statusSrc}`:`<b>${e.reintroduced?'Not passed; reintroduced':'Not passed'}</b>: ${esc(e.stage)}${statusSrc}`;
   const tally=v=>{const c={};for(const x of Object.values(v.pos||{}))if(/^(Yea|Nay|Aye|No)$/.test(x))c[x==='Aye'?'Yea':x==='No'?'Nay':x]=(c[x==='Aye'?'Yea':x==='No'?'Nay':x]||0)+1;return c.Yea||c.Nay?` · people on this site: ${c.Yea||0} yes, ${c.Nay||0} no`:'';};
@@ -1933,6 +1935,7 @@ function billCard(e){
     </div>
     ${votes.length?`<details class="small" style="margin-top:8px"><summary>Votes (${votes.length})</summary><ul class="list">${votes.join('')}</ul></details>`:''}
     ${here.length?`<p class="small" style="margin:6px 0 0"><b>Sponsors and cosponsors on this site:</b> ${here.join(', ')}</p>`:''}
+    ${e.issue?`<p class="small muted" style="margin:6px 0 0"><b>Counts in Your match</b> under "${esc(ISSBY[e.issue]?.label||e.issue)}": sponsoring or cosponsoring it counts toward "${esc(ISSBY[e.issue]?.[e.side]||e.side)}".</p>`:''}
     <div class="small" style="margin-top:6px" data-lob="${esc(e.id)}"></div>
   </article>`;
 }
@@ -2110,7 +2113,7 @@ function analysisBlock(s){
       ${tableView(['Donor','Total','Votes compared','Flags'],d.rows.map(r=>[esc(r.label),fmtFull(r.total),r.markers.length,r.flags.length]))}</div>`:s.office?`<p class="small muted">The monthly donations from the ${GP.length} groups this app tracks cover the 2026 candidates' committees, not ${esc(s.short)}'s. There is no series to compare.</p>`:`<p class="small muted">None of the ${GP.length} groups this app tracks gave to ${esc(s.short)}'s campaign since ${H0()}, in the FEC data. There is no monthly series to compare yet.</p>`}
     ${flagRows.length?`<div class="chart"><h3>Timing flags</h3><ul class="list small">${flagRows.join('')}</ul></div>`:''}
     ${stockBlock(s,d)}
-    ${dl?.rows.length?`<details class="tv"><summary>Donor Loyalty 🤝 by funder</summary>${points([['Each funder','A group that gave to the campaign or spent for them, on the votes where it took a public side.'],['Party\'s way',`How the rest of the ${side} in the chamber voted on the same votes, from the official roll calls (Voteview's copy for Senate votes Senate.gov wouldn't send).`],['The index',`The differences weighted by each funder's money. Only the part above the party counts, and ${DONOR_LOYALTY.ceiling} points above scores 100.`]],'small')}<div class="tablewrap"><table><thead><tr><th>Funder</th><th class="r">Gave, bundled or spent for them</th><th class="r">Votes</th><th class="r">Their way</th><th class="r">Party's way</th><th class="r">Difference</th></tr></thead><tbody>${dl.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${fmtFull(r.money)}</td><td class="r">${r.n}</td><td class="r">${r.rate}%</td><td class="r">${r.partyRate}%</td><td class="r">${pts1(r.diff)}</td></tr>`).join('')}</tbody></table></div></details>`:''}
+    ${dl?.rows.length?`<details class="tv"><summary>Donor Loyalty 🤝 by funder</summary>${points([['Each funder','A group that gave to the campaign or spent for them, on the votes where it took a public side.'],['Party\'s way',`How the rest of the ${side} in the chamber voted on the same votes, from the official roll calls (Voteview's copy for Senate votes Senate.gov wouldn't send).`],['The index',`The differences weighted by each funder's money, with no funder counting more than all the others put together (at most half the weight). Only the part above the party counts, and ${DONOR_LOYALTY.ceiling} points above scores 100.`]],'small')}<div class="tablewrap"><table><thead><tr><th>Funder</th><th class="r">Gave, bundled or spent for them</th><th class="r">Weight</th><th class="r">Votes</th><th class="r">Their way</th><th class="r">Party's way</th><th class="r">Difference</th></tr></thead><tbody>${dl.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${fmtFull(r.money)}</td><td class="r">${r.share}%</td><td class="r">${r.n}</td><td class="r">${r.rate}%</td><td class="r">${r.partyRate}%</td><td class="r">${pts1(r.diff)}</td></tr>`).join('')}</tbody></table></div></details>`:''}
     ${v.rows.length?`<details class="tv"><summary>Vote Donor Alignment by donor</summary><div class="tablewrap"><table><thead><tr><th>Donor</th><th class="r">Votes its way</th><th class="r">Votes compared</th></tr></thead><tbody>${v.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${r.same}</td><td class="r">${r.n}</td></tr>`).join('')}</tbody></table></div></details>`:''}
     <div id="f-live-analysis"></div></section>`;
 }

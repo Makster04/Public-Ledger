@@ -64,8 +64,15 @@ test('Donor Loyalty: their rate of voting a funder\'s way minus their party\'s, 
   // Small: 0 of 1 its way, party 20/49 Nay (their own Yea left out), about −41 points.
   const sm=r.rows.find(x=>x.key==='small');assert.equal(sm.rate,0);assert.equal(sm.partyRate,41);
   assert.equal(r.rows.length,2,'a group that only spent against them carries no weight');
-  // Weighted by money: (40.8×100,000 + −40.8×25,000) ÷ 125,000 ≈ +24.5, so about 98 of 100 at the 25-point ceiling.
-  assert.equal(r.n,5);assert.ok(Math.abs(r.diff-24.5)<0.3,String(r.diff));assert.equal(r.index,Math.round(Math.min(100,r.diff/DONOR_LOYALTY.ceiling*100)));
+  // Weighted by money, but Big's $100,000 can't count more than all the others put together ($25,000): the two count
+  // equally, so +40.8 and −40.8 cancel out.
+  assert.equal(b.weight,25000);assert.equal(sm.weight,25000);assert.deepEqual([b.share,sm.share],[50,50]);
+  assert.equal(r.n,5);assert.ok(Math.abs(r.diff)<0.3,String(r.diff));assert.equal(r.index,0);
+  // With no funder over half, the weights are the money: (40.8×100,000 + −40.8×25,000 + 0×80,000) ÷ 205,000 ≈ +14.9.
+  const third={org:'Third',key:'third',pac:80000,compared:[c('v4','Yea','Yea')]};
+  const r3=donorLoyalty([big,small,third],'R',tallies),t3=r3.rows.find(x=>x.key==='third');
+  assert.equal(r3.rows.find(x=>x.key==='big').weight,100000,'not capped: $100,000 is less than the others\' $105,000');
+  const want=(b.diff*100000+sm.diff*25000+t3.diff*80000)/205000;assert.ok(Math.abs(r3.diff-want)<0.1,`${r3.diff} vs ${want}`);
 });
 
 test('Donor Loyalty: below the party scores 0, too few votes is not enough data, and the reasons for no number',()=>{

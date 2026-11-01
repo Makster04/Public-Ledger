@@ -87,7 +87,7 @@ test('every Workers > Profit bill has a valid ID, cited evidence and known group
   }
 });
 test('My alignment: every issue has a statement to agree or disagree with, and a known category',()=>{
-  const groups=new Set(['econ','rights','imm','foreign','env']);
+  const groups=new Set(['econ','rights','imm','foreign','env','gov']);
   for(const i of data.issues){
     assert.ok(groups.has(i.group),`${i.id}: group ${i.group}`);
     assert.ok(typeof i.statement==='string'&&i.statement.length>20&&/[.]$/.test(i.statement),`${i.id}: statement`);

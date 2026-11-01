@@ -65,7 +65,8 @@ export function voteDonorAlignment(funders){
 // the same votes. For each funder that gave to the campaign or spent for them and took public positions on votes they cast
 // (scorecards, key-vote letters): their rate of voting its way, minus their party's rate on those votes from each roll
 // call's party totals (their own vote left out), in points. Funders are weighted by the money each gave, bundled (donors'
-// gifts forwarded through its PAC) or spent for them.
+// gifts forwarded through its PAC) or spent for them, but no funder counts more than all the others put together (at
+// most half the weight), so one big funder with a vote or two can't decide the index on its own.
 // Only the part above the party average counts, up to the ceiling. An independent is compared with the party they caucus
 // with (both sitting independents caucus with the Democrats). tallies: {voteId: {R:{Yea,Nay}, D:{...}, I:{...}}}.
 export const DONOR_LOYALTY={ceiling:25,minVotes:5}; // (placeholder) 25 points above the party average scores 100
@@ -88,8 +89,10 @@ export function donorLoyalty(funders,party,tallies){
   }
   rows.sort((a,b)=>b.money-a.money);
   const n=rows.reduce((t,r)=>t+r.n,0),total=rows.reduce((t,r)=>t+r.money,0);
+  for(const r of rows)r.weight=rows.length>1?Math.min(r.money,total-r.money):r.money;
+  const wsum=rows.reduce((t,r)=>t+r.weight,0);for(const r of rows)r.share=Math.round(r.weight/wsum*100);
   if(!rows.length)return {index:null,why:!positions?'No funder took a position on their votes':!tallies?'Party totals not loaded':'No party totals for these votes',n:0,diff:null,rows};
-  const diff=Math.round(rows.reduce((t,r)=>t+r.diff*r.money,0)/total*10)/10;
+  const diff=Math.round(rows.reduce((t,r)=>t+r.diff*r.weight,0)/wsum*10)/10;
   if(n<DONOR_LOYALTY.minVotes)return {index:null,why:'Not enough data',n,diff,rows};
   return {index:Math.round(Math.min(100,Math.max(0,diff)/DONOR_LOYALTY.ceiling*100)),why:null,n,diff,rows};
 }

@@ -73,3 +73,22 @@ export function unlisted(data){
   const keys=new Set(billFamilies(data).flatMap(e=>e.keys));
   return [...(data.votes||[]),...(data.hvotes||[])].map(v=>[v.id,voteBill(v)]).filter(([,k])=>k&&!/-[hs]res-/.test(k)&&!keys.has(k));
 }
+
+// Evidence for Your match from the bills on this list that count there (entries with an "issue" and a "side"): each
+// profiled sponsor or cosponsor (their "cosponsors", from scripts/fill-bill-cosponsors.mjs) gets one action on that
+// issue, toward the bill's side. Returns Map person -> [{issue, entry}], entries in the shape of research.json evidence.
+const TYPE_LABEL={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hres:'H.Res.',sres:'S.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.'};
+const TYPE_PATH={hr:'house-bill',s:'senate-bill',hjres:'house-joint-resolution',sjres:'senate-joint-resolution',hres:'house-resolution',sres:'senate-resolution',hconres:'house-concurrent-resolution',sconres:'senate-concurrent-resolution'};
+export function issueEvidence(data){
+  const issues=new Set((data.issues||[]).map(i=>i.id)),out=new Map();
+  for(const b of data.billIndex||[]){
+    if(!b.issue||!issues.has(b.issue)||!['A','B'].includes(b.side))continue;
+    for(const r of b.cosponsors||[]){
+      const [c,t,n]=String(r.bill||b.id).split('-'),label=`${TYPE_LABEL[t]||t.toUpperCase()} ${n}`;
+      const entry={type:r.sponsor?'sponsored':'cosponsored',ref:`${b.id}:${r.person}`,bill:b.id,title:`${label}: ${b.title}`,date:r.date||null,
+        pos:r.sponsor?'Sponsored':'Cosponsored',side:b.side,why:b.why,src:{t:`${label} on Congress.gov`,u:`https://www.congress.gov/bill/${c}th-congress/${TYPE_PATH[t]}/${n}`}};
+      (out.get(r.person)||out.set(r.person,[]).get(r.person)).push({issue:b.issue,entry});
+    }
+  }
+  return out;
+}
