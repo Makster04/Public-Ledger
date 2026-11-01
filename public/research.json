@@ -194082,5 +194082,469 @@
         }
       ]
     }
+  ],
+  "billIndex": [
+    {
+      "id": "115-hr-1",
+      "title": "Tax Cuts and Jobs Act",
+      "status": "law",
+      "law": "Public Law 115-97",
+      "date": "2017-12-22",
+      "groups": [
+        {
+          "group": "lcv",
+          "pos": "oppose",
+          "why": "Scored the final Senate vote as anti-environment because the law opens the Arctic National Wildlife Refuge to oil drilling.",
+          "src": {
+            "t": "LCV Scorecard: Anti-Environmental Tax Bill that Opens Drilling in the Arctic Refuge (2017)",
+            "u": "https://www.lcv.org/roll-call-vote/anti-environmental-tax-bill-that-opens-drilling-in-the-arctic-refuge/"
+          },
+          "date": "2017-12-20"
+        }
+      ]
+    },
+    {
+      "id": "115-s-2155",
+      "title": "Economic Growth, Regulatory Relief, and Consumer Protection Act",
+      "status": "law",
+      "law": "Public Law 115-174",
+      "date": "2018-05-24",
+      "area": "Banking & finance",
+      "summary": "Eases rules from the 2010 Dodd-Frank Act: it raises the size at which banks face the strictest Federal Reserve oversight from $50 billion to $250 billion in assets, exempts many small lenders from some mortgage and reporting rules, and adds some consumer protections, such as free credit freezes.",
+      "summarySrc": {
+        "t": "CRS: Economic Growth, Regulatory Relief, and Consumer Protection Act (P.L. 115-174) and Selected Policy Issues",
+        "u": "https://www.everycrsreport.com/reports/R45073.html"
+      },
+      "steps": [
+        {
+          "text": "Passed the Senate on Mar. 14, 2018, and the House on May 22, 2018; signed May 24, 2018.",
+          "src": {
+            "t": "CRS report R45073",
+            "u": "https://www.everycrsreport.com/reports/R45073.html"
+          }
+        }
+      ]
+    },
+    {
+      "id": "117-hr-1319",
+      "title": "American Rescue Plan Act of 2021",
+      "status": "law",
+      "law": "Public Law 117-2",
+      "date": "2021-03-11"
+    },
+    {
+      "id": "117-hr-3684",
+      "title": "Infrastructure Investment and Jobs Act",
+      "status": "law",
+      "law": "Public Law 117-58",
+      "date": "2021-11-15"
+    },
+    {
+      "id": "117-s-2938",
+      "title": "Bipartisan Safer Communities Act",
+      "status": "law",
+      "law": "Public Law 117-159",
+      "date": "2022-06-25"
+    },
+    {
+      "id": "117-hr-4346",
+      "title": "CHIPS and Science Act",
+      "status": "law",
+      "law": "Public Law 117-167",
+      "date": "2022-08-09"
+    },
+    {
+      "id": "117-hr-5376",
+      "title": "Inflation Reduction Act of 2022",
+      "status": "law",
+      "law": "Public Law 117-169",
+      "date": "2022-08-16"
+    },
+    {
+      "id": "117-hr-8404",
+      "title": "Respect for Marriage Act",
+      "status": "law",
+      "law": "Public Law 117-228",
+      "date": "2022-12-13",
+      "groups": [
+        {
+          "group": "heritage",
+          "pos": "oppose",
+          "why": "Heritage Action and the Heritage Foundation ran a $1.3 million ad campaign against it before the Senate vote, saying it threatens religious liberty.",
+          "src": {
+            "t": "Heritage Foundation: Heritage Foundation, Heritage Action Launch $1.3 Million Ad Campaign to Highlight Religious Liberty (Nov. 2022)",
+            "u": "https://www.heritage.org/press/heritage-foundation-heritage-action-launch-13-million-ad-campaign-highlight-religious-liberty"
+          },
+          "date": "2022-11"
+        },
+        {
+          "group": "aclu",
+          "pos": "support",
+          "why": "Urged a yes vote and applauded the Senate's passage.",
+          "src": {
+            "t": "ACLU: ACLU Applauds Senate Passage of Respect for Marriage Act",
+            "u": "https://aclu.org/press-releases/aclu-applauds-senate-passage-respect-marriage-act"
+          },
+          "date": "2022-11-29"
+        },
+        {
+          "group": "hrc",
+          "pos": "support",
+          "why": "Mobilized members for it and called Senate passage \"a landmark step toward equality.\"",
+          "src": {
+            "t": "HRC: A Landmark Step Toward Equality: Human Rights Campaign Celebrates Senate Passage of Bipartisan Respect for Marriage Act",
+            "u": "https://www.hrc.org/press-releases/a-landmark-step-toward-equality-human-rights-campaign-celebrates-senate-passage-of-bipartisan-respect-for-marriage-act"
+          },
+          "date": "2022-11-29"
+        }
+      ]
+    },
+    {
+      "id": "118-hr-3746",
+      "title": "Fiscal Responsibility Act of 2023",
+      "status": "law",
+      "law": "Public Law 118-5",
+      "date": "2023-06-03"
+    },
+    {
+      "id": "118-hr-815",
+      "title": "National security supplemental (Ukraine, Israel and Indo-Pacific aid)",
+      "status": "law",
+      "law": "Public Law 118-50",
+      "date": "2024-04-24",
+      "versions": [
+        "118-hr-8035"
+      ],
+      "note": "The House passed the Ukraine aid as its own bill, H.R. 8035; its text was then sent to the Senate as part of H.R. 815, which became law."
+    },
+    {
+      "id": "119-s-5",
+      "title": "Laken Riley Act",
+      "status": "law",
+      "law": "Public Law 119-1",
+      "date": "2025-01-29",
+      "groups": [
+        {
+          "group": "aclu",
+          "pos": "oppose",
+          "why": "Urged senators to vote no, saying it would allow detention without due process.",
+          "src": {
+            "t": "ACLU: Letter to Senators Urging No Vote on S. 5, the Laken Riley Act (Jan. 9, 2025)",
+            "u": "https://www.aclu.org/documents/aclu-letter-to-senators-urging-no-vote-on-s-5-the-laken-riley-act"
+          },
+          "date": "2025-01-09"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "status": "law",
+      "law": "Public Law 119-4",
+      "date": "2025-03-15"
+    },
+    {
+      "id": "119-hr-1",
+      "title": "One Big Beautiful Bill Act",
+      "status": "law",
+      "law": "Public Law 119-21",
+      "date": "2025-07-04",
+      "groups": [
+        {
+          "group": "heritage",
+          "pos": "support",
+          "why": "Made House passage of the Senate version a key vote on its scorecard.",
+          "src": {
+            "t": "The Daily Signal: Heritage Action Labels Big, Beautiful Bill a Key Vote (July 3, 2025)",
+            "u": "https://www.dailysignal.com/2025/07/03/heritage-action-labels-big-beautiful-bill-a-key-vote/"
+          },
+          "date": "2025-07-03"
+        },
+        {
+          "group": "hrc",
+          "pos": "oppose",
+          "why": "Its president called it a bill \"funneling more wealth to the ultra rich while hardworking Americans, including LGBTQ+ people, suffer,\" citing the Medicaid cuts.",
+          "src": {
+            "t": "The Advocate: Republicans pass unpopular Big Beautiful Bill (quotes HRC President Kelley Robinson)",
+            "u": "https://www.advocate.com/politics/republicans-pass-unpopular-big-beautiful-bill"
+          },
+          "date": "2025-05-22"
+        }
+      ]
+    },
+    {
+      "id": "119-s-1582",
+      "title": "GENIUS Act (stablecoin rules)",
+      "status": "law",
+      "law": "Public Law 119-27",
+      "date": "2025-07-18"
+    },
+    {
+      "id": "119-hr-4",
+      "title": "Rescissions Act of 2025",
+      "status": "law",
+      "law": "Public Law 119-28",
+      "date": "2025-07-24",
+      "groups": [
+        {
+          "group": "heritage",
+          "pos": "support",
+          "why": "Made it the first key vote of the 119th Congress, urging members to \"codify cuts in wasteful spending identified by the Department of Government Efficiency.\"",
+          "src": {
+            "t": "The Daily Signal: Trump's Rescissions Package Becomes First Heritage Action Key Vote of Session (June 12, 2025)",
+            "u": "https://www.dailysignal.com/2025/06/12/heritage-action-scores-trumps-rescissions-package-key-vote/"
+          },
+          "date": "2025-06-12"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-5371",
+      "title": "Continuing Appropriations Act, 2026 (ended the fall 2025 shutdown)",
+      "status": "law",
+      "law": "Public Law 119-37",
+      "date": "2025-11-12",
+      "statusSrc": {
+        "t": "CRS: Overview of Continuing Appropriations for FY2026 (Division A of P.L. 119-37)",
+        "u": "https://www.everycrsreport.com/reports/R48765.html"
+      }
+    },
+    {
+      "id": "119-hr-4405",
+      "title": "Epstein Files Transparency Act",
+      "status": "law",
+      "law": "Public Law 119-38",
+      "date": "2025-11-19",
+      "statusSrc": {
+        "t": "JURIST: Trump signs Epstein Files Transparency Act into law (Nov. 2025)",
+        "u": "https://www.jurist.org/news/2025/11/trump-signs-epstein-files-transparency-act-into-law/"
+      }
+    },
+    {
+      "id": "119-hr-7148",
+      "title": "Consolidated Appropriations Act, 2026",
+      "status": "law",
+      "law": "Public Law 119-75",
+      "date": "2026-02-03",
+      "statusSrc": {
+        "t": "White House: Congressional Bill H.R. 7148 Signed into Law (Feb. 2026)",
+        "u": "https://www.whitehouse.gov/briefings-statements/2026/02/congressional-bill-h-r-7148-signed-into-law"
+      }
+    },
+    {
+      "id": "117-hr-842",
+      "title": "PRO Act (Protecting the Right to Organize Act)",
+      "status": "not",
+      "stage": "Passed the House in 2020 and 2021; the Senate never voted on it. Reintroduced every Congress since 2019.",
+      "reintroduced": true
+    },
+    {
+      "id": "117-s-53",
+      "title": "Raise the Wage Act ($15 federal minimum wage)",
+      "status": "not",
+      "stage": "Passed the House in 2019; as an amendment to the American Rescue Plan it fell short in the Senate in 2021, 42–58 with 60 needed. Reintroduced since.",
+      "reintroduced": true
+    },
+    {
+      "id": "117-hr-7",
+      "title": "Paycheck Fairness Act",
+      "status": "not",
+      "stage": "Passed the House in 2019 and 2021; the Senate fell short of the 60 votes to take it up in 2021 (49–50). Reintroduced every Congress.",
+      "reintroduced": true
+    },
+    {
+      "id": "119-hr-1232",
+      "title": "National Right-to-Work Act",
+      "status": "not",
+      "stage": "Introduced again and again (H.R. 785 and S. 545 in 2017, S. 525 in 2019, H.R. 1200 in 2023, H.R. 1232 in 2025); no floor vote on any of these versions.",
+      "reintroduced": true,
+      "area": "Labor & workers",
+      "versions": [
+        "115-hr-785",
+        "115-s-545",
+        "116-s-525",
+        "118-hr-1200",
+        "119-s-533"
+      ]
+    },
+    {
+      "id": "117-samdt-1858",
+      "title": "Cornyn amendment to remove prevailing wages from CHIPS-funded construction",
+      "status": "not",
+      "stage": "Rejected in the Senate, 42–58, on June 8, 2021."
+    },
+    {
+      "id": "117-s-4132",
+      "title": "Women's Health Protection Act",
+      "status": "not",
+      "stage": "Fell short of 60 votes in the Senate twice in 2022 (the second time 49–51, on May 11); the House passed it in 2021 and 2022. Reintroduced since.",
+      "reintroduced": true,
+      "groups": [
+        {
+          "group": "aclu",
+          "pos": "support",
+          "why": "Urged a yes vote and scored the vote on passage in its congressional scorecard.",
+          "src": {
+            "t": "ACLU: Statement on the U.S. Senate Vote on the Women's Health Protection Act (2022)",
+            "u": "https://aclu.org/press-releases/aclu-statement-us-senate-vote-womens-health-protection-act"
+          },
+          "date": "2022"
+        }
+      ]
+    },
+    {
+      "id": "118-s-4381",
+      "title": "Right to Contraception Act",
+      "status": "not",
+      "stage": "Fell short in the Senate, 51–39 with 60 needed, on June 5, 2024; the House passed an earlier version (H.R. 8373) in July 2022.",
+      "versions": [
+        "117-hr-8373"
+      ],
+      "reintroduced": true
+    },
+    {
+      "id": "117-hr-4",
+      "title": "John Lewis Voting Rights Advancement Act",
+      "status": "not",
+      "stage": "Passed the House in 2019 and on Aug. 24, 2021 (219–212); the Senate fell short of the 60 votes to take up its version (S. 4), 50–49, on Nov. 3, 2021. Reintroduced since.",
+      "versions": [
+        "116-hr-4",
+        "117-s-4"
+      ],
+      "reintroduced": true,
+      "area": "Elections & voting",
+      "summary": "Would restore the Voting Rights Act's requirement that states and localities with a recent record of voting discrimination get federal approval (\"preclearance\") before changing their voting rules, with a new formula for which places are covered, after the Supreme Court struck down the old formula in 2013 (Shelby County v. Holder).",
+      "summarySrc": {
+        "t": "Democracy Docket: The John Lewis Voting Rights Advancement Act Unpacked",
+        "u": "https://www.democracydocket.com/analysis/the-john-lewis-voting-rights-advancement-act-unpacked/"
+      },
+      "steps": [
+        {
+          "text": "House passage, Aug. 24, 2021: passed 219–212.",
+          "src": {
+            "t": "House Clerk roll call 260 (2021)",
+            "u": "https://clerk.house.gov/evs/2021/roll260"
+          }
+        },
+        {
+          "text": "Senate cloture on taking up S. 4, Nov. 3, 2021: not invoked, 50–49 (60 needed).",
+          "src": {
+            "t": "Senate Democrats: Roll call vote on cloture on the motion to proceed to S. 4",
+            "u": "https://www.democrats.senate.gov/2021/11/03/roll-call-vote-cloture-on-the-motion-to-proceed-to-s4"
+          }
+        }
+      ],
+      "groups": [
+        {
+          "group": "aclu",
+          "pos": "support",
+          "why": "Urged senators to vote for cloture so the Senate could take it up.",
+          "src": {
+            "t": "ACLU: Vote recommendation for the Senate's vote on the John Lewis Voting Rights Advancement Act",
+            "u": "https://www.aclu.org/documents/aclus-vote-recommendation-senates-vote-john-lewis-voting-rights-advancement-act"
+          },
+          "date": "2021-11"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-22",
+      "title": "SAVE Act (proof of citizenship to register to vote)",
+      "status": "not",
+      "stage": "Passed the House 220–208 on Apr. 10, 2025 (and an earlier version in 2024); stalled in the Senate, which needs 60 votes. A newer version, the SAVE America Act, adds a photo-ID rule and has also stalled there.",
+      "versions": [
+        "118-hr-8281"
+      ],
+      "reintroduced": true,
+      "statusSrc": {
+        "t": "Deseret News: Is the SAVE America Act dead? (May 15, 2026)",
+        "u": "https://www.deseret.com/politics/2026/05/15/is-the-save-america-act-dead/"
+      },
+      "groups": [
+        {
+          "group": "heritage",
+          "pos": "support",
+          "why": "Made the 2024 SAVE Act a key vote on its scorecard, and the 2026 SAVE America Act too.",
+          "src": {
+            "t": "The Daily Signal: Heritage Action Scores SAVE Act as Key Vote (July 8, 2024)",
+            "u": "https://www.dailysignal.com/2024/07/08/heritage-action-scores-save-act-as-key-vote/"
+          },
+          "date": "2024-07-08"
+        },
+        {
+          "group": "aclu",
+          "pos": "oppose",
+          "why": "Urged House members to vote no and said it would score the vote: the proof-of-citizenship rule would keep eligible citizens from registering.",
+          "src": {
+            "t": "ACLU: ACLU Urges House to Oppose H.R. 22, the SAVE Act (Jan. 2025)",
+            "u": "https://www.aclu.org/documents/aclu-urges-house-to-oppose-h-r-22-the-safeguard-american-voter-eligibility-save-act"
+          },
+          "date": "2025-01-10"
+        },
+        {
+          "group": "hrc",
+          "pos": "oppose",
+          "why": "Said it threatens the voting rights of people who have legally changed their names, including many married women and transgender Americans.",
+          "src": {
+            "t": "The Advocate: HRC on the SAVE Act",
+            "u": "https://www.advocate.com/politics/national/hrc-trump-save-act-desperate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-hr-7008",
+      "title": "Stop Insider Trading Act (stock-trading limits for members of Congress)",
+      "status": "not",
+      "stage": "Passed the House 232–198 on July 22, 2026; in the Senate, the motion to take it up fell short, 53–47 with 60 needed, on Sept. 30, 2026."
+    },
+    {
+      "id": "119-hr-2550",
+      "title": "Protect America's Workforce Act (restores federal workers' collective bargaining)",
+      "status": "not",
+      "stage": "Passed the House 231–195 on Dec. 11, 2025, after a discharge petition forced the vote; no Senate vote found."
+    },
+    {
+      "id": "119-hr-6703",
+      "title": "Lower Health Care Premiums for All Americans Act",
+      "status": "not",
+      "stage": "Passed the House 216–211 on Dec. 17, 2025; no Senate vote found."
+    },
+    {
+      "id": "119-hr-1834",
+      "title": "Three-year extension of the enhanced ACA premium tax credits",
+      "status": "not",
+      "stage": "Passed the House 230–196 on Jan. 8, 2026, after a discharge petition forced the vote; the Senate had rejected a three-year extension on Dec. 11, 2025, and hasn't passed this bill. The credits expired at the end of 2025.",
+      "statusSrc": {
+        "t": "Health Affairs Forefront: Senate fails to extend enhanced ACA subsidies; focus turns to the House",
+        "u": "https://www.healthaffairs.org/content/forefront/senate-fails-extend-enhanced-aca-subsidies-focus-turns-house"
+      }
+    },
+    {
+      "id": "119-hr-2913",
+      "title": "Ukraine Support Act",
+      "status": "not",
+      "stage": "Passed the House 226–195 on June 4, 2026, after a discharge petition forced the vote; no Senate vote found."
+    },
+    {
+      "id": "119-sjres-77",
+      "title": "Ending the national emergency behind the Canada tariffs",
+      "status": "not",
+      "stage": "The Senate passed S.J.Res. 77 (50–46, Oct. 29, 2025) and the House passed H.J.Res. 72 (219–211, Feb. 11, 2026); neither has become law, and the White House threatened a veto.",
+      "versions": [
+        "119-hjres-72"
+      ]
+    },
+    {
+      "id": "119-sjres-98",
+      "title": "Venezuela war powers resolutions",
+      "status": "not",
+      "stage": "None passed both chambers: the House rejected two resolutions (211–213 and a 215–215 tie), and the Senate rejected one (49–51) and voted 52–47 to take up another, S.J.Res. 98.",
+      "versions": [
+        "119-sjres-90",
+        "119-hconres-64",
+        "119-hconres-68"
+      ]
+    }
   ]
 }
