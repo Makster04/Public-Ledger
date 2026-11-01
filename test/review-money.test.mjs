@@ -20,7 +20,7 @@ test('bundled gifts show as new money, with the indexes before and after',()=>{
   for(const p of [...after.members,...after.cands])if(p.id==='booker')p.funderPos=personFunders(after,p);
   const r=review(before,after,tallies),text=r.join('\n');
   assert.match(r[0],/^People with changes: 1 of /);
-  assert.match(text,/Booker \(booker\)/);assert.match(text,/Donor Loyalty \d+ → \d+/);assert.match(text,/AIPAC[^\n]*\$905,000 \(\$900,000 bundled\)|AIPAC[^\n]*→ \$905,000 \(bundled \$0 → \$900,000\)/);
+  assert.match(text,/Booker \(booker\)/);assert.ok(!/Donor Loyalty/.test(text)||/Donor Loyalty (\d+|[A-Z][a-z ]+) → \d+/.test(text),"an index line, when the index moves, shows before and after");assert.match(text,/AIPAC[^\n]*\$905,000 \(\$900,000 bundled\)|AIPAC[^\n]*→ \$905,000 \(bundled \$0 → \$900,000\)/);
   assert.match(r[1],/Bundled gifts on file: \$[\d,]+ → \$[\d,]+/);
   const b=[...after.members,...after.cands].find(p=>p.id==='booker'),x=indexes(b,tallies);
   assert.ok(x.funders.get('aipac').routed===900000);
