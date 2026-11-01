@@ -44,6 +44,7 @@ test('families gather the votes and positions: researched first, then bill sides
   const pro=by('117-hr-842');assert.ok(pro.work&&pro.keys.includes('116-hr-2474'),'versions come from the Workers > Profit bill too');
   assert.deepEqual(pro.votes.map(v=>v.id),['h-117-1-070','h-116-2-050'],'newest vote first');
   assert.ok(pro.positions.some(p=>p.group==='aflcio'&&p.from==='bill'));
+  assert.deepEqual(by('117-s-2938').positions.map(p=>`${p.group}:${p.pos}`),['nra:oppose'],'the NRA opposed the gun-safety law');
   const war=by('119-sjres-98');assert.equal(war.votes.length,4,'all four Venezuela war powers votes');
   // Laws come first by signing date; the rest by their latest vote.
   assert.ok(F.filter(e=>e.status==='law').every((e,i,a)=>!i||a[i-1].when>=e.when));
