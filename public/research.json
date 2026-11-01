@@ -201234,6 +201234,38 @@
       "stage": "Passed the House 232–198 on July 22, 2026; in the Senate, the motion to take it up fell short, 53–47 with 60 needed, on Sept. 30, 2026.",
       "reform": [
         "stock-trading"
+      ],
+      "cosponsors": [
+        {
+          "person": "evans",
+          "bill": "119-hr-7008",
+          "date": "2026-01-27"
+        },
+        {
+          "person": "hinson",
+          "bill": "119-hr-7008",
+          "date": "2026-01-12"
+        },
+        {
+          "person": "lawler",
+          "bill": "119-hr-7008",
+          "date": "2026-01-12"
+        },
+        {
+          "person": "mcollins",
+          "bill": "119-hr-7008",
+          "date": "2026-01-12"
+        },
+        {
+          "person": "millermeeks",
+          "bill": "119-hr-7008",
+          "date": "2026-01-12"
+        },
+        {
+          "person": "perry",
+          "bill": "119-hr-7008",
+          "date": "2026-01-12"
+        }
       ]
     },
     {
@@ -201386,8 +201418,19 @@
         },
         {
           "person": "hickenlooper",
+          "bill": "117-s-3494",
+          "date": "2022-06-15"
+        },
+        {
+          "person": "hickenlooper",
           "bill": "119-s-1879",
           "date": "2025-12-16"
+        },
+        {
+          "person": "ossoff",
+          "bill": "117-s-3494",
+          "sponsor": true,
+          "date": "2022-01-12"
         },
         {
           "person": "ossoff",
@@ -201578,6 +201621,28 @@
           "routed": 3348020.18,
           "n": 2136,
           "direct": 10000,
+          "byMonth": {
+            "2025-01": 54300,
+            "2025-02": 167750,
+            "2025-03": 4509.43,
+            "2025-05": 57560,
+            "2025-06": 70504.35,
+            "2025-07": 252,
+            "2025-08": 22801,
+            "2025-09": 202688,
+            "2025-10": 33800,
+            "2025-11": 183505.25,
+            "2025-12": 44880,
+            "2026-01": 12650,
+            "2026-02": 201816,
+            "2026-03": 123101,
+            "2026-04": 198750.56,
+            "2026-05": 399288.33,
+            "2026-06": 925160,
+            "2026-07": 182903,
+            "2026-08": 163920,
+            "2026-09": 297881.26
+          },
           "cycles": [
             2026
           ],
@@ -201589,6 +201654,28 @@
           "routed": 975531.5,
           "n": 572,
           "direct": 11000,
+          "byMonth": {
+            "2025-02": 7000,
+            "2025-03": 4009.43,
+            "2025-04": 162970,
+            "2025-05": 51901,
+            "2025-06": 86032.01,
+            "2025-07": 1.99,
+            "2025-08": 1,
+            "2025-09": 4510,
+            "2025-10": 1,
+            "2025-11": 43579.91,
+            "2025-12": 13251,
+            "2026-01": 74501,
+            "2026-02": 18001,
+            "2026-03": 184752,
+            "2026-04": 20209.56,
+            "2026-05": 55283.33,
+            "2026-06": 45259,
+            "2026-07": 51553,
+            "2026-08": 20875,
+            "2026-09": 131840.27
+          },
           "cycles": [
             2026
           ],
@@ -201597,139 +201684,110 @@
       },
       "marshall": {
         "scf": {
-          "routed": 158087.01,
-          "n": 4434,
+          "routed": 143383.01,
+          "n": 3838,
           "direct": 0,
+          "byMonth": {
+            "2025-08": 2946,
+            "2025-09": 8505.66,
+            "2025-10": 3412,
+            "2025-11": 3425,
+            "2025-12": 6879.53,
+            "2026-01": 8631.5,
+            "2026-02": 5836.5,
+            "2026-03": 17863.45,
+            "2026-04": 20617.87,
+            "2026-05": 9631,
+            "2026-06": 3751,
+            "2026-07": 6200.5,
+            "2026-08": 15746,
+            "2026-09": 29937
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00576173&two_year_transaction_period=2026"
         }
       },
-      "hickenlooper": {
-        "jstreet": {
-          "routed": 12200,
-          "n": 12,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00716720&two_year_transaction_period=2026"
-        }
-      },
       "perry": {
         "cfg": {
-          "routed": 37935,
-          "n": 107,
+          "routed": 32544,
+          "n": 41,
           "direct": 0,
+          "byMonth": {
+            "2026-03": 3750,
+            "2026-04": 10525,
+            "2026-05": 825,
+            "2026-06": 2020,
+            "2026-07": 11512,
+            "2026-08": 3912
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00510164&two_year_transaction_period=2026"
-        },
-        "scf": {
-          "routed": 3705,
-          "n": 97,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00510164&two_year_transaction_period=2026"
-        },
-        "aipac": {
-          "routed": 58074.77,
-          "n": 58,
-          "direct": 10000,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00510164&two_year_transaction_period=2026"
         }
       },
       "evans": {
-        "aipac": {
-          "routed": 67281.77,
-          "n": 72,
-          "direct": 10000,
+        "cfg": {
+          "routed": 5000,
+          "n": 2,
+          "direct": 0,
+          "byMonth": {
+            "2025-04": 5000
+          },
           "cycles": [
             2026
           ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00849844&two_year_transaction_period=2026"
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00849844&two_year_transaction_period=2026"
         }
       },
-      "gonzalez": {
-        "aipac": {
-          "routed": 207516.83,
-          "n": 143,
+      "mgp": {
+        "emily": {
+          "routed": 1724.5,
+          "n": 49,
           "direct": 10000,
+          "byMonth": {
+            "2025-07": 1437.5,
+            "2025-08": 147,
+            "2025-09": 70,
+            "2026-01": 20,
+            "2026-10": 50
+          },
           "cycles": [
             2026
           ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00592659&two_year_transaction_period=2026"
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00193433&recipient_committee_id=C00806174&two_year_transaction_period=2026"
         }
       },
       "paxton": {
         "cfg": {
-          "routed": 11361.5,
-          "n": 56,
+          "routed": 9685.5,
+          "n": 52,
           "direct": 0,
+          "byMonth": {
+            "2026-07": 5410,
+            "2026-08": 4275.5
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00901918&two_year_transaction_period=2026"
         }
       },
-      "whatley": {
-        "scf": {
-          "routed": 100,
-          "n": 1,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00913996&two_year_transaction_period=2026"
-        }
-      },
-      "turek": {
-        "jstreet": {
-          "routed": 50429.33,
-          "n": 100,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00915645&two_year_transaction_period=2026"
-        }
-      },
       "pappas": {
         "aipac": {
-          "routed": 221279.44,
-          "n": 138,
-          "direct": 10000,
+          "routed": 155234,
+          "n": 100,
+          "direct": 0,
+          "byMonth": {
+            "2025-03": 152734,
+            "2025-04": 2500
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00660464&two_year_transaction_period=2026"
-        },
-        "jstreet": {
-          "routed": 13241.29,
-          "n": 29,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00660464&two_year_transaction_period=2026"
-        }
-      },
-      "flanagan": {
-        "jstreet": {
-          "routed": 42572.69,
-          "n": 67,
-          "direct": 0,
-          "cycles": [
-            2026
-          ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00897751&two_year_transaction_period=2026"
         }
       },
       "barr": {
@@ -201737,6 +201795,12 @@
           "routed": 47359.43,
           "n": 18,
           "direct": 5000,
+          "byMonth": {
+            "2025-03": 27009.43,
+            "2025-04": 2100,
+            "2026-08": 2000,
+            "2026-09": 16250
+          },
           "cycles": [
             2026
           ],
@@ -201744,45 +201808,148 @@
         }
       },
       "moore": {
+        "cfg": {
+          "routed": 29627,
+          "n": 83,
+          "direct": 0,
+          "byMonth": {
+            "2026-01": 275,
+            "2026-02": 5500,
+            "2026-03": 2400,
+            "2026-04": 7275,
+            "2026-05": 2057,
+            "2026-06": 8550,
+            "2026-07": 3570
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00720375&two_year_transaction_period=2026"
+        },
+        "scf": {
+          "routed": 154013.12,
+          "n": 3268,
+          "direct": 15000,
+          "byMonth": {
+            "2025-08": 1024,
+            "2025-09": 22226.7,
+            "2025-10": 7708,
+            "2025-11": 5868,
+            "2025-12": 12039.95,
+            "2026-01": 13147.5,
+            "2026-02": 14374.5,
+            "2026-03": 25537.61,
+            "2026-04": 23818.86,
+            "2026-05": 23257,
+            "2026-06": 5011
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00720375&two_year_transaction_period=2026"
+        },
         "aipac": {
           "routed": 513.43,
           "n": 5,
           "direct": 0,
+          "byMonth": {
+            "2025-03": 9.44,
+            "2025-06": 501,
+            "2025-07": 1.99,
+            "2025-08": 1
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00720375&two_year_transaction_period=2026"
         }
       },
-      "hageman": {
-        "scf": {
-          "routed": 1810,
-          "n": 100,
+      "alme": {
+        "cfg": {
+          "routed": 407,
+          "n": 6,
           "direct": 0,
+          "byMonth": {
+            "2026-08": 407
+          },
           "cycles": [
             2026
           ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00788943&two_year_transaction_period=2026"
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00942060&two_year_transaction_period=2026"
         },
+        "aipac": {
+          "routed": 21000,
+          "n": 11,
+          "direct": 0,
+          "byMonth": {
+            "2026-09": 21000
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00942060&two_year_transaction_period=2026"
+        }
+      },
+      "hageman": {
         "aipac": {
           "routed": 49.36,
           "n": 10,
           "direct": 0,
+          "byMonth": {
+            "2025-03": 9.44,
+            "2025-05": 10,
+            "2025-06": 1,
+            "2025-07": 2,
+            "2025-08": 1,
+            "2025-11": 25.92
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00788943&two_year_transaction_period=2026"
         }
       },
-      "ricketts": {
-        "cfg": {
-          "routed": 12742,
-          "n": 50,
+      "hern": {
+        "scf": {
+          "routed": 1967,
+          "n": 100,
           "direct": 0,
+          "byMonth": {
+            "2026-09": 1967
+          },
           "cycles": [
             2026
           ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00832436&two_year_transaction_period=2026"
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00943142&two_year_transaction_period=2026"
+        }
+      },
+      "ricketts": {
+        "aipac": {
+          "routed": 195037.17,
+          "n": 122,
+          "direct": 10000,
+          "byMonth": {
+            "2025-03": 9.43,
+            "2025-06": 50005.35,
+            "2025-07": 501.99,
+            "2025-08": 1,
+            "2025-09": 9500,
+            "2025-10": 24651,
+            "2025-11": 29027.25,
+            "2025-12": 1,
+            "2026-02": 251,
+            "2026-03": 1,
+            "2026-04": 8.56,
+            "2026-05": 3533.33,
+            "2026-06": 35606,
+            "2026-07": 28805,
+            "2026-08": 5578,
+            "2026-09": 7557.26
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00832436&two_year_transaction_period=2026"
         }
       },
       "osborn": {
@@ -201790,6 +201957,11 @@
           "routed": 38205,
           "n": 42,
           "direct": 0,
+          "byMonth": {
+            "2026-07": 2200,
+            "2026-08": 5900,
+            "2026-09": 30105
+          },
           "cycles": [
             2026
           ],
@@ -201801,6 +201973,10 @@
           "routed": 149631.19,
           "n": 220,
           "direct": 0,
+          "byMonth": {
+            "2026-08": 2595,
+            "2026-09": 147036.19
+          },
           "cycles": [
             2026
           ],
@@ -201808,10 +201984,40 @@
         }
       },
       "peltola": {
+        "emily": {
+          "routed": 163165.64,
+          "n": 222,
+          "direct": 5000,
+          "byMonth": {
+            "2026-01": 29725,
+            "2026-02": 2525,
+            "2026-03": 21015.65,
+            "2026-04": 13404,
+            "2026-05": 10298.99,
+            "2026-06": 14571.49,
+            "2026-07": 11760,
+            "2026-08": 17405.5,
+            "2026-09": 29707.34,
+            "2026-10": 12752.67
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00193433&recipient_committee_id=C00933978&two_year_transaction_period=2026"
+        },
         "jstreet": {
           "routed": 245666.19,
           "n": 424,
           "direct": 0,
+          "byMonth": {
+            "2026-03": 6550,
+            "2026-04": 30290,
+            "2026-05": 16960,
+            "2026-06": 51217,
+            "2026-07": 44950,
+            "2026-08": 34681,
+            "2026-09": 61018.19
+          },
           "cycles": [
             2026
           ],
@@ -201823,6 +202029,14 @@
           "routed": 49973.5,
           "n": 63,
           "direct": 0,
+          "byMonth": {
+            "2026-03": 2320,
+            "2026-04": 21975,
+            "2026-05": 10738,
+            "2026-06": 1775,
+            "2026-07": 9705,
+            "2026-08": 3460.5
+          },
           "cycles": [
             2026
           ],
@@ -201832,6 +202046,14 @@
           "routed": 139565.5,
           "n": 1248,
           "direct": 15000,
+          "byMonth": {
+            "2026-04": 4012.5,
+            "2026-05": 15755,
+            "2026-06": 16441,
+            "2026-07": 20637,
+            "2026-08": 34573,
+            "2026-09": 48147
+          },
           "cycles": [
             2026
           ],
@@ -201841,28 +202063,42 @@
           "routed": 14146.43,
           "n": 11,
           "direct": 5000,
+          "byMonth": {
+            "2025-03": 9.44,
+            "2025-05": 10,
+            "2025-06": 14125,
+            "2025-07": 1.99
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00544684&two_year_transaction_period=2026"
         }
       },
-      "stelson": {
+      "conley": {
         "emily": {
-          "routed": 11628.25,
-          "n": 27,
-          "direct": 10000,
+          "routed": 36248,
+          "n": 105,
+          "direct": 5000,
+          "byMonth": {
+            "2026-06": 2500,
+            "2026-07": 5425,
+            "2026-08": 8265,
+            "2026-09": 13387,
+            "2026-10": 6671
+          },
           "cycles": [
             2026
           ],
-          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00193433&recipient_committee_id=C00852368&two_year_transaction_period=2026"
-        }
-      },
-      "conley": {
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00193433&recipient_committee_id=C00900431&two_year_transaction_period=2026"
+        },
         "jstreet": {
           "routed": 29943.33,
           "n": 100,
           "direct": 0,
+          "byMonth": {
+            "2026-09": 29943.33
+          },
           "cycles": [
             2026
           ],
@@ -201871,13 +202107,33 @@
       },
       "rutinel": {
         "jstreet": {
-          "routed": 57632.83,
-          "n": 100,
+          "routed": 68032.83,
+          "n": 114,
           "direct": 0,
+          "byMonth": {
+            "2026-08": 18100,
+            "2026-09": 49932.83
+          },
           "cycles": [
             2026
           ],
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00896670&two_year_transaction_period=2026"
+        }
+      },
+      "merrin": {
+        "cfg": {
+          "routed": 9943,
+          "n": 19,
+          "direct": 0,
+          "byMonth": {
+            "2026-06": 400,
+            "2026-07": 9121,
+            "2026-08": 422
+          },
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00909630&two_year_transaction_period=2026"
         }
       }
     }
