@@ -4340,6 +4340,37 @@
       },
       "funderPos": [
         {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "routed": 3348020.18,
+          "routedN": 2136,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "118-2-154",
+              "short": "Ukraine, Israel, Taiwan aid + TikTok divestiture package",
+              "date": "2024-04-23",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Welcomed Congress's approval of the aid package for Israel",
+              "src": {
+                "t": "AIPAC: America Stands With Israel: Congress Approves Historic Aid Package (April 2024)",
+                "u": "https://aipac.org/press-release/america-stands-with-israel-congress-approves-historic-aid-package"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
@@ -4627,35 +4658,6 @@
           ],
           "agree": 0,
           "n": 3
-        },
-        {
-          "key": "aipac",
-          "org": "AIPAC (American Israel Public Affairs Committee)",
-          "status": "done",
-          "pac": 5000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [
-            {
-              "voteId": "118-2-154",
-              "short": "Ukraine, Israel, Taiwan aid + TikTok divestiture package",
-              "date": "2024-04-23",
-              "chamber": "Senate",
-              "wanted": "Yea",
-              "cast": "Yea",
-              "match": true,
-              "basis": "statement",
-              "scoredAs": "Welcomed Congress's approval of the aid package for Israel",
-              "src": {
-                "t": "AIPAC: America Stands With Israel: Congress Approves Historic Aid Package (April 2024)",
-                "u": "https://aipac.org/press-release/america-stands-with-israel-congress-approves-historic-aid-package"
-              }
-            }
-          ],
-          "agree": 1,
-          "n": 1
         },
         {
           "key": "nfib",
@@ -11927,6 +11929,37 @@
           "n": 0
         },
         {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 975531.5,
+          "routedN": 572,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "118-2-154",
+              "short": "Ukraine, Israel, Taiwan aid + TikTok divestiture package",
+              "date": "2024-04-23",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Welcomed Congress's approval of the aid package for Israel",
+              "src": {
+                "t": "AIPAC: America Stands With Israel: Congress Approves Historic Aid Package (April 2024)",
+                "u": "https://aipac.org/press-release/america-stands-with-israel-congress-approves-historic-aid-package"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "cfg",
           "org": "Club for Growth",
           "status": "done",
@@ -17938,6 +17971,8 @@
           "status": "done",
           "pac": 10000,
           "pacN": 2,
+          "routed": 158087.01,
+          "routedN": 4434,
           "for": 32567.71,
           "against": 0,
           "spenders": [
@@ -27687,6 +27722,37 @@
       },
       "funderPos": [
         {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 12200,
+          "routedN": 12,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "118-2-154",
+              "short": "Ukraine, Israel, Taiwan aid + TikTok divestiture package",
+              "date": "2024-04-23",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Backed the aid package for Ukraine, Israel and Taiwan, with humanitarian aid for Gaza, as \"a step forward\"",
+              "src": {
+                "t": "J Street: Statement on House Passage of National Security Supplemental (Apr. 20, 2024)",
+                "u": "https://jstreet.org/press-releases/statement-on-house-passage-of-national-security-supplemental/"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
@@ -30546,6 +30612,8 @@
           "status": "done",
           "pac": 0,
           "pacN": 0,
+          "routed": 37935,
+          "routedN": 107,
           "for": 333998.59,
           "against": 0,
           "spenders": [
@@ -30619,6 +30687,21 @@
           "n": 1
         },
         {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "routed": 58074.77,
+          "routedN": 58,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -30634,11 +30717,11 @@
           "n": 0
         },
         {
-          "key": "aipac",
-          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "key": "nar",
+          "org": "National Association of Realtors",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 4000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -30647,11 +30730,13 @@
           "n": 0
         },
         {
-          "key": "nar",
-          "org": "National Association of Realtors",
+          "key": "scf",
+          "org": "Senate Conservatives Fund",
           "status": "done",
-          "pac": 4000,
-          "pacN": 2,
+          "pac": 0,
+          "pacN": 0,
+          "routed": 3705,
+          "routedN": 97,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -38809,6 +38894,8 @@
           "status": "done",
           "pac": 10000,
           "pacN": 2,
+          "routed": 67281.77,
+          "routedN": 72,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -53031,6 +53118,8 @@
           "status": "done",
           "pac": 10000,
           "pacN": 2,
+          "routed": 207516.83,
+          "routedN": 143,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -66972,6 +67061,8 @@
           "status": "done",
           "pac": 0,
           "pacN": 0,
+          "routed": 11361.5,
+          "routedN": 56,
           "for": 15545.78,
           "against": 0,
           "spenders": [
@@ -73465,6 +73556,21 @@
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "scf",
+          "org": "Senate Conservatives Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 100,
+          "routedN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         }
       ]
     },
@@ -74842,6 +74948,21 @@
           "spenders": [
             "CFFE PAC"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 50429.33,
+          "routedN": 100,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -80575,6 +80696,52 @@
           "n": 1
         },
         {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 221279.44,
+          "routedN": 138,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 13241.29,
+          "routedN": 29,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-118-2-151",
+              "short": "Ukraine aid supplemental",
+              "date": "2024-04-20",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Backed the House package, including the aid for Ukraine",
+              "src": {
+                "t": "J Street: Statement on House Passage of National Security Supplemental (Apr. 20, 2024)",
+                "u": "https://jstreet.org/press-releases/statement-on-house-passage-of-national-security-supplemental/"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
@@ -82555,7 +82722,23 @@
           "out": []
         }
       },
-      "funderPos": [],
+      "funderPos": [
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 42572.69,
+          "routedN": 67,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
       "fecCandPast": [
         "H8MN05155"
       ]
@@ -87722,6 +87905,21 @@
       },
       "funderPos": [
         {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 47359.43,
+          "routedN": 18,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -90490,6 +90688,8 @@
           "status": "done",
           "pac": 38000,
           "pacN": 3,
+          "routed": 513.43,
+          "routedN": 5,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -95756,6 +95956,8 @@
           "status": "done",
           "pac": 5000,
           "pacN": 1,
+          "routed": 1810,
+          "routedN": 100,
           "for": 25532.01,
           "against": 0,
           "spenders": [
@@ -95853,6 +96055,21 @@
           ],
           "agree": 2,
           "n": 5
+        },
+        {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 49.36,
+          "routedN": 10,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         }
       ],
       "fecCandPast": [
@@ -112930,6 +113147,8 @@
           "status": "done",
           "pac": 1212.5,
           "pacN": 1,
+          "routed": 12742,
+          "routedN": 50,
           "for": 4636.24,
           "against": 0,
           "spenders": [
@@ -113944,6 +114163,21 @@
       },
       "funderPos": [
         {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 38205,
+          "routedN": 42,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "cfg",
           "org": "Club for Growth",
           "status": "done",
@@ -114856,6 +115090,21 @@
           "spenders": [
             "Afscme Working Families Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 149631.19,
+          "routedN": 220,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -116678,6 +116927,21 @@
           "spenders": [
             "Club for Growth Action"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 245666.19,
+          "routedN": 424,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -118524,6 +118788,23 @@
       },
       "funderPos": [
         {
+          "key": "scf",
+          "org": "Senate Conservatives Fund",
+          "status": "done",
+          "pac": 15000,
+          "pacN": 3,
+          "routed": 139565.5,
+          "routedN": 1248,
+          "for": 56309.29,
+          "against": 0,
+          "spenders": [
+            "Senate Conservatives Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nrlc",
           "org": "National Right to Life Committee",
           "status": "done",
@@ -118539,26 +118820,13 @@
           "n": 0
         },
         {
-          "key": "scf",
-          "org": "Senate Conservatives Fund",
-          "status": "done",
-          "pac": 15000,
-          "pacN": 3,
-          "for": 56309.29,
-          "against": 0,
-          "spenders": [
-            "Senate Conservatives Fund"
-          ],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
           "key": "cfg",
           "org": "Club for Growth",
           "status": "done",
           "pac": 0,
           "pacN": 0,
+          "routed": 49973.5,
+          "routedN": 63,
           "for": 11529.02,
           "against": 0,
           "spenders": [
@@ -118598,6 +118866,21 @@
           ],
           "agree": 2,
           "n": 2
+        },
+        {
+          "key": "aipac",
+          "org": "AIPAC (American Israel Public Affairs Committee)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 14146.43,
+          "routedN": 11,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         },
         {
           "key": "lcv",
@@ -121447,11 +121730,13 @@
           "n": 0
         },
         {
-          "key": "afscme",
-          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "key": "emily",
+          "org": "EMILY's List",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
+          "routed": 11628.25,
+          "routedN": 27,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -121460,8 +121745,8 @@
           "n": 0
         },
         {
-          "key": "emily",
-          "org": "EMILY's List",
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
@@ -122643,6 +122928,21 @@
           "n": 0
         },
         {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 29943.33,
+          "routedN": 100,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
@@ -123683,6 +123983,21 @@
           "spenders": [
             "American Federation of State County & Municipal Employees PEOPLE"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "routed": 57632.83,
+          "routedN": 100,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -200823,5 +201138,334 @@
         "119-hconres-68"
       ]
     }
-  ]
+  ],
+  "bundled": {
+    "asOf": "2026-11-01",
+    "conduits": {
+      "cfg": [
+        "C00432260"
+      ],
+      "scf": [
+        "C00448696"
+      ],
+      "emily": [
+        "C00193433"
+      ],
+      "aipac": [
+        "C00797670"
+      ],
+      "jstreet": [
+        "C00441949"
+      ]
+    },
+    "people": {
+      "collins": {
+        "aipac": {
+          "routed": 3348020.18,
+          "n": 2136,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00314575&two_year_transaction_period=2026"
+        }
+      },
+      "sullivan": {
+        "aipac": {
+          "routed": 975531.5,
+          "n": 572,
+          "direct": 11000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00570994&two_year_transaction_period=2026"
+        }
+      },
+      "marshall": {
+        "scf": {
+          "routed": 158087.01,
+          "n": 4434,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00576173&two_year_transaction_period=2026"
+        }
+      },
+      "hickenlooper": {
+        "jstreet": {
+          "routed": 12200,
+          "n": 12,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00716720&two_year_transaction_period=2026"
+        }
+      },
+      "perry": {
+        "cfg": {
+          "routed": 37935,
+          "n": 107,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00510164&two_year_transaction_period=2026"
+        },
+        "scf": {
+          "routed": 3705,
+          "n": 97,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00510164&two_year_transaction_period=2026"
+        },
+        "aipac": {
+          "routed": 58074.77,
+          "n": 58,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00510164&two_year_transaction_period=2026"
+        }
+      },
+      "evans": {
+        "aipac": {
+          "routed": 67281.77,
+          "n": 72,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00849844&two_year_transaction_period=2026"
+        }
+      },
+      "gonzalez": {
+        "aipac": {
+          "routed": 207516.83,
+          "n": 143,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00592659&two_year_transaction_period=2026"
+        }
+      },
+      "paxton": {
+        "cfg": {
+          "routed": 11361.5,
+          "n": 56,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00901918&two_year_transaction_period=2026"
+        }
+      },
+      "whatley": {
+        "scf": {
+          "routed": 100,
+          "n": 1,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00913996&two_year_transaction_period=2026"
+        }
+      },
+      "turek": {
+        "jstreet": {
+          "routed": 50429.33,
+          "n": 100,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00915645&two_year_transaction_period=2026"
+        }
+      },
+      "pappas": {
+        "aipac": {
+          "routed": 221279.44,
+          "n": 138,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00660464&two_year_transaction_period=2026"
+        },
+        "jstreet": {
+          "routed": 13241.29,
+          "n": 29,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00660464&two_year_transaction_period=2026"
+        }
+      },
+      "flanagan": {
+        "jstreet": {
+          "routed": 42572.69,
+          "n": 67,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00897751&two_year_transaction_period=2026"
+        }
+      },
+      "barr": {
+        "aipac": {
+          "routed": 47359.43,
+          "n": 18,
+          "direct": 5000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00467571&two_year_transaction_period=2026"
+        }
+      },
+      "moore": {
+        "aipac": {
+          "routed": 513.43,
+          "n": 5,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00720375&two_year_transaction_period=2026"
+        }
+      },
+      "hageman": {
+        "scf": {
+          "routed": 1810,
+          "n": 100,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00788943&two_year_transaction_period=2026"
+        },
+        "aipac": {
+          "routed": 49.36,
+          "n": 10,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00788943&two_year_transaction_period=2026"
+        }
+      },
+      "ricketts": {
+        "cfg": {
+          "routed": 12742,
+          "n": 50,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00832436&two_year_transaction_period=2026"
+        }
+      },
+      "osborn": {
+        "jstreet": {
+          "routed": 38205,
+          "n": 42,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00901355&two_year_transaction_period=2026"
+        }
+      },
+      "jackson": {
+        "jstreet": {
+          "routed": 149631.19,
+          "n": 220,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00955609&two_year_transaction_period=2026"
+        }
+      },
+      "peltola": {
+        "jstreet": {
+          "routed": 245666.19,
+          "n": 424,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00933978&two_year_transaction_period=2026"
+        }
+      },
+      "mcollins": {
+        "cfg": {
+          "routed": 49973.5,
+          "n": 63,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00544684&two_year_transaction_period=2026"
+        },
+        "scf": {
+          "routed": 139565.5,
+          "n": 1248,
+          "direct": 15000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00448696&recipient_committee_id=C00544684&two_year_transaction_period=2026"
+        },
+        "aipac": {
+          "routed": 14146.43,
+          "n": 11,
+          "direct": 5000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00797670&recipient_committee_id=C00544684&two_year_transaction_period=2026"
+        }
+      },
+      "stelson": {
+        "emily": {
+          "routed": 11628.25,
+          "n": 27,
+          "direct": 10000,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00193433&recipient_committee_id=C00852368&two_year_transaction_period=2026"
+        }
+      },
+      "conley": {
+        "jstreet": {
+          "routed": 29943.33,
+          "n": 100,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00900431&two_year_transaction_period=2026"
+        }
+      },
+      "rutinel": {
+        "jstreet": {
+          "routed": 57632.83,
+          "n": 100,
+          "direct": 0,
+          "cycles": [
+            2026
+          ],
+          "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00441949&recipient_committee_id=C00896670&two_year_transaction_period=2026"
+        }
+      }
+    }
+  }
 }
