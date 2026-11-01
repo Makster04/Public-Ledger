@@ -6,6 +6,7 @@ import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals} from './pac-types.js';
+import {rangeText} from './net-worth.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -729,7 +730,7 @@ async function fillBasic(root=document){
 }
 // The records each tab adds from the daily refresh (public/live.js), the same groups the full profiles' tabs show.
 const BASIC_LIVE={match:['legislation','cosponsored','crs','committees','votes'],promises:['crec-day','hearings','statements','factcheck','news'],
-  ethics:['trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
+  ethics:['netWorth','trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){
   if(!PANES[tab]||tab==='sources')tab='overview';
@@ -991,7 +992,7 @@ function ovWords(s){
 }
 // ethics: a short text list, never a chart, because an allegation, an investigation and a confirmed finding are very different things
 const ETH_TAG={finding:['Confirmed finding','crit'],investigation:['Investigation','warn'],allegation:['Allegation','neutral']};
-function ovEthics(s){
+function ovEthicsCard(s){
   const items=s.ethics.filter(e=>e.outcome!=='None found');
   const order=Object.keys(ETH_TAG), rank=e=>{const i=order.indexOf(e.status);return i<0?order.length:i};
   const list=items.map((e,i)=>[e,i]).sort((a,b)=>rank(a[0])-rank(b[0])||a[1]-b[1]).map(x=>x[0]);
@@ -999,6 +1000,18 @@ function ovEthics(s){
     ${points([['Allegation','A complaint or report with no official finding.'],['Investigation',`A formal inquiry, lawsuit or case, still open or ended without a finding against ${esc(s.short)}.`],['Confirmed finding',`A court, agency or ethics body found a violation or issued a penalty, or ${esc(s.short)} admitted it.`]],'small')}`
     :`<p class="small" style="margin:8px 0 0">No documented violations, penalties or findings located in the sources checked.</p>`;
   return ovCard('Ethics','Ethics & compliance',`${list.length?`${list.length} item${list.length===1?'':'s'}, most certain first`:'Sources checked'}`,body,`<a href="#${s.id}-ethics">Details, sources and the grade →</a>`,'ov-top-align');
+}
+// The ethics card, with a line for the net-worth range from the member's latest annual disclosure (filled from the refresh).
+function ovEthics(s){
+  const card=ovEthicsCard(s),at=card.lastIndexOf('</section>');
+  return at<0?card:card.slice(0,at)+`<div class="ov-networth" data-networth="${esc(s.id)}" hidden></div>`+card.slice(at);
+}
+async function fillNetWorth(root){
+  for(const el of root.querySelectorAll('.ov-networth[data-networth]')){
+    let x;try{x=await window.RecordLive.netWorth(el.dataset.networth);}catch{continue;}
+    if(!x||!el.isConnected)continue;el.hidden=false;
+    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper; not read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}. <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>`;
+  }
 }
 
 // In place of the campaign and outside-money cards for someone in office who is not on the 2026 ballot.
@@ -1029,7 +1042,7 @@ function paneOverview(s,pane){
   </div>`;
   mountStrip('ovstrip',s);
   mountKV('ovkv',s);
-  bindTips(pane);fillSizes(pane);
+  bindTips(pane);fillSizes(pane);fillNetWorth(pane);
 }
 
 function conduitBlock(s){
@@ -1051,9 +1064,13 @@ function conduitBlock(s){
   const B=DATA.bundled,mine=Object.entries(B?.people?.[s.id]||{}).sort((a,b)=>b[1].routed-a[1].routed);
   if(B){
     const names=Object.keys(B.conduits||{}).map(k=>(GPBY[k]||{}).org||k);
+    const hand=c.status==='measured'||c.status==='present';
     const auto=mine.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Gifts forwarded</th><th class="r">Amount</th></tr></thead><tbody>${mine.map(([k,v])=>`<tr><td>${orgName((GPBY[k]||{}).org||k,ORGS.group(k))}<div class="small"><a href="${esc(v.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a>${v.direct?` · its PAC's own checks, ${fmtFull(v.direct)}, are in the PAC table above`:''}</div></td><td class="small">${esc(bundledCycle(s.id,k))}</td><td class="r">${v.n?v.n.toLocaleString():'—'}</td><td class="r"><b class="num">${fmtFull(v.routed)}</b></td></tr>`).join('')}</tbody></table></div>`
-      :`<div class="note">None of the groups tracked here (${esc(names.join(', '))}) forwarded donors' gifts to ${esc(s.short)}'s campaign, in the FEC's processed records as of ${esc(fmtDate(B.asOf))}.</div>`;
-    body=`${auto}<p class="small muted" style="margin:6px 0 0">From each group's PAC's own FEC reports, read ${esc(fmtDate(B.asOf))}. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.</p>${c.status==='measured'||c.status==='present'?`<details style="margin-top:8px"><summary>Researched by hand</summary>${body}${note}</details>`:''}`;note='';
+      :hand?'':`<div class="note">None of the groups tracked here (${esc(names.join(', '))}) forwarded donors' gifts to ${esc(s.short)}'s campaign, in the FEC's processed records as of ${esc(fmtDate(B.asOf))}.</div>`;
+    const read=`From each group's PAC's own FEC reports, read ${esc(fmtDate(B.asOf))}. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.`;
+    if(!mine.length&&hand)body=`${body}${note}<p class="small muted" style="margin:6px 0 0">The automatic reading of every campaign's bundled gifts (from each group's PAC's own FEC reports, ${esc(fmtDate(B.asOf))}) found none for ${esc(s.short)}, so the figure researched by hand above stands.</p>`;
+    else body=`${auto}<p class="small muted" style="margin:6px 0 0">${read}</p>${hand?`<details style="margin-top:8px"><summary>Researched by hand</summary>${body}${note}</details>`:''}`;
+    note='';
   }
   const dl=s.pac.filings.length?(direct.length?`<p class="small" style="margin-top:8px"><b>Direct checks from AIPAC's PAC (${esc(s.pac.window)}):</b> <span class="num">${fmtFull(dsum)}</span>. ${direct.map(d=>`${esc(d.report)} ${fmtFull(d.amount)}`).join('; ')}. These are in the PAC table above.</p>`:`<p class="small muted" style="margin-top:8px">No direct check from AIPAC's PAC appears in the reports itemized here (${esc(s.pac.window)}).</p>`):'';
   return head+body+note+dl;
@@ -1503,7 +1520,7 @@ function fundersBlock(s){
     <div class="note small" style="margin:6px 0 12px">${points([['Which groups',`Groups that gave to ${esc(s.short)}'s campaign, bundled their donors' gifts to it, or spent on the race, <i>and</i> take public positions on bills (scorecards, "key vote" letters or statements).`],['Bundled','Donors\' own gifts a group collected and forwarded through its PAC ("earmarked"). The FEC counts them as individual contributions, not the PAC\'s, so they are shown apart from its PAC checks.'],['What is shown',`Each key vote the group took a side on, next to ${esc(s.short)}'s recorded vote, with a link to the source: the group's own page, or a news report of its campaign.`],['Correlation, not cause','A match shows agreement, not that money changed the vote. Groups mostly back people who already vote their way, and spend against people who don\'t.'],['Groups covered',`Only the ${GP.length} groups whose public positions this app collects${GP.some(g=>g.status!=='done')?` (${GP.filter(g=>g.status!=='done').length} still being researched)`:''}. Other spenders, including the big party-aligned super PACs, are not compared.`]])}</div>`;
   if(!F.length)return head+`<p class="small muted">None of the ${GP.length} groups whose positions this app collects gave to ${esc(s.short)}'s campaign or spent on this race.</p></section>`;
   const money=g=>[g.pac?`gave <b class="num">${fmtFull(g.pac)}</b> to the campaign (${g.pacN} contribution${g.pacN>1?'s':''}, ${esc(s.pac.window)})`:'',
-    g.routed?`${term('earmarked','bundled')} <b class="num">${fmtFull(g.routed)}</b> of its donors' own gifts to the campaign${g.routedN?` (${g.routedN.toLocaleString()} gift${g.routedN>1?'s':''})`:''}, ${esc(bundledCycle(s.id,g.key))}`:'',g.for?`spent <b class="num">${fmtFull(g.for)}</b> ${s.out.multi?'supporting':'for'} ${esc(s.short)}`:'',g.against?`spent <b class="num">${fmtFull(g.against)}</b> ${s.out.multi?'opposing':'against'} ${esc(s.short)}`:''].filter(Boolean).join('; ');
+    g.routed?`${term('earmarked','bundled')} <b class="num">${fmtFull(g.routed)}</b> of its donors' own gifts to the campaign${g.routedN?` (${g.routedN.toLocaleString()} gift${g.routedN>1?'s':''})`:''}, ${g.routedBy==='hand'?`${esc(g.routedPeriod)}, researched by hand from the filings`:esc(bundledCycle(s.id,g.key))}`:'',g.for?`spent <b class="num">${fmtFull(g.for)}</b> ${s.out.multi?'supporting':'for'} ${esc(s.short)}`:'',g.against?`spent <b class="num">${fmtFull(g.against)}</b> ${s.out.multi?'opposing':'against'} ${esc(s.short)}`:''].filter(Boolean).join('; ');
   const body=F.map(g=>{
     const meta=GPBY[g.key]||{};
     let res;
@@ -1622,7 +1639,7 @@ function paneEthics(s,pane){
   const math=parts.length?`<p class="small gh-m"><b>How it was calculated:</b> 100 − ${parts.join(' − ')} = ${e.raw<0?`${total}, shown as <b>0%</b>`:+total===e.pct?`<b>${e.pct}%</b>`:`${total}, rounded to <b>${e.pct}%</b>`}.</p>`:'';
   pane.innerHTML=`${gradeHead('Ethics',e.pct,detail,gradeRule('eth'),math+monthlyNote(s,'ethics',e.pct))}${ethIndexes(s,e)}${ethicsHTML(s)}${caseTimelineBlock(s)}${tradingHTML(s)}<section id="live-records" style="margin-top:28px"></section>`;
   mountCaseTimeline(s);mountTradeCharts(s,personTrading(s).rows,'eth-tr');hoverTips(pane);
-  window.RecordLive.profile(s,pane.querySelector('#live-records'),['trades','legal']);
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['netWorth','trades','legal']);
 }
 
 // ---------- Workers > Profit tab: votes on scored bills, then who funds them and how those funders wanted them to vote ----------

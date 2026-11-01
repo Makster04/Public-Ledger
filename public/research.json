@@ -23775,24 +23775,15 @@
       },
       "funderPos": [
         {
-          "key": "afscme",
-          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
-          "status": "done",
-          "pac": 5000,
-          "pacN": 2,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
+          "routed": 702803,
+          "routedN": 0,
+          "routedBy": "hand",
+          "routedPeriod": "Jan – Sep 2025",
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -23815,6 +23806,19 @@
           ],
           "agree": 1,
           "n": 1
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         },
         {
           "key": "aft",
