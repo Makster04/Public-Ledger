@@ -40,8 +40,12 @@ test('bundled gifts add a funder entry of their own, kept apart from PAC checks,
   const F=personFunders(data,p),a=F.find(f=>f.key==='aipac');
   assert.ok(a,'an AIPAC entry from bundled gifts');assert.equal(a.routed,900000);assert.equal(a.routedN,850);
   assert.equal(F[0].key,'aipac','largest money first, bundled gifts included');
-  assert.equal(personFunders(D,p).find(f=>f.key==='aipac')?.routed,undefined,'no "bundled" record, no routed amount');
-  assert.ok(funderChanges({...data,members:[],cands:[{...p}],featured:[]}).some(l=>/AIPAC.*routed \$0 → \$900000|\+ AIPAC.*bundled \$900000/.test(l)));
+  assert.equal(a.routedBy,undefined,'read from the FEC');
+  // No FEC reading for the group: the total researched by hand from the filings stands, less the PAC's own check in it.
+  const h=personFunders({...D,bundled:{people:{}}},p).find(f=>f.key==='aipac');
+  assert.equal(h.routed,707803-5000);assert.equal(h.routedBy,'hand');assert.match(h.routedPeriod,/2025/);
+  assert.equal(personFunders({...D,bundled:{people:{}}},{...p,conduit:{status:'not_measured',rows:[]}}).find(f=>f.key==='aipac')?.routed,undefined,'nothing read, nothing researched: no routed amount');
+  assert.ok(funderChanges({...data,members:[],cands:[{...p}],featured:[]}).some(l=>/AIPAC.*routed \$\d+ → \$900000|\+ AIPAC.*bundled \$900000/.test(l)));
   // The indexes weight each funder by money: bundled gifts count; a funder with only bundled gifts is a donor.
   const f=[{org:'Group',key:'g',pac:0,routed:1000,for:0,against:0,compared:[{voteId:'v1',wanted:'Yea',cast:'Yea',match:true}]}];
   assert.equal(voteDonorAlignment(f).n,1);
@@ -53,5 +57,5 @@ test('the Bills page adds up bundled gifts apart from PAC checks and outside spe
   const data={...D,members:D.members.map(m=>m.id==='booker'?{...m,funderPos:[{key:'aipac',org:'AIPAC',pac:5000,routed:900000,for:0,against:0,compared:[]}]}:m),
     cands:D.cands.map(m=>m.id==='booker'?{...m,funderPos:[{key:'aipac',org:'AIPAC',pac:5000,routed:900000,for:0,against:0,compared:[]}]}:m)};
   assert.ok(p);const g=groupInfo(data,'aipac');assert.ok(g.routed>=900000);assert.ok(g.people>=1);
-  assert.equal(groupInfo(D,'aipac').routed,0,'nothing bundled on file yet');
+  assert.ok(groupInfo(D,'aipac').routed>0,'the bundled gifts on file');
 });

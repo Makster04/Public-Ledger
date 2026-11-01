@@ -3,7 +3,8 @@
 //     "committees" or "pacMatch") and its outside spending for and against them (out.cms, matched by the FEC IDs in
 //     "fecIds");
 //   - bundled gifts: donors' own gifts the group collected and forwarded through its PAC ("earmarked"), from
-//     research.json "bundled" (scripts/build-bundled.mjs), kept apart as "routed";
+//     research.json "bundled" (scripts/build-bundled.mjs), kept apart as "routed"; when that read finds none for a
+//     group, a total researched by hand from the filings (the person's "conduit" rows) is used, marked as such;
 //   - positions: each saved roll call the group took a side on (groupPos[].positions), next to the person's vote.
 // A person gets an entry for each group that gave to the campaign, bundled gifts to it or spent on the race. Run it after adding a group, a
 // group's position, a saved vote or new FEC rows:
@@ -31,7 +32,9 @@ export function personFunders(data,p){
     const ids=new Set((g.fecIds||[]).map(f=>f.id));let pac=0,pacN=0,fr=0,ag=0;const spenders=[];
     for(const x of p.pac?.rows||[])if(isGroupPac((data.pacNames||[])[x[0]],g)){pac+=x[1]||0;pacN++;}
     for(const x of p.out?.cms||[]){const cm=(data.ie?.cm||[])[x[0]];if(!cm||!ids.has(cm[0]))continue;fr+=x[1]||0;ag+=x[2]||0;if((x[1]||0)+(x[2]||0)&&!spenders.includes(cm[1]))spenders.push(cm[1]);}
-    const b=data.bundled?.people?.[p.id]?.[g.key],routed=b?.routed||0;
+    const b=data.bundled?.people?.[p.id]?.[g.key];
+    const hand=b?[]:(p.conduit?.status==='measured'?p.conduit.rows||[]:[]).filter(r=>(g.conduits||[]).includes(r.id)&&r.amount>0);
+    const routed=b?.routed||hand.reduce((t,r)=>t+r.amount-(r.directIncluded||0),0);
     if(!(pac||fr||ag||routed))continue;
     const compared=[];
     for(const q of g.positions||[]){
@@ -40,7 +43,7 @@ export function personFunders(data,p){
       compared.push({voteId:q.voteId,short:hit.v.short,date:hit.v.date,chamber:hit.chamber,wanted:q.wanted,cast,match:matchOf(cast,q.wanted),basis:q.basis,scoredAs:q.scoredAs,src:q.src});
     }
     compared.sort((a,b)=>b.date.localeCompare(a.date));
-    out.push({key:g.key,org:g.org,status:g.status||'done',pac:cents(pac),pacN,...(routed?{routed:cents(routed),routedN:b.n||0}:{}),for:cents(fr),against:cents(ag),spenders,compared,
+    out.push({key:g.key,org:g.org,status:g.status||'done',pac:cents(pac),pacN,...(routed?{routed:cents(routed),routedN:b?.n||0,...(b?{}:{routedBy:'hand',routedPeriod:hand.map(r=>r.period).join('; ')})}:{}),for:cents(fr),against:cents(ag),spenders,compared,
       agree:compared.filter(c=>c.match===true).length,n:compared.filter(c=>c.match!==null).length});
   }
   const order=new Map((data.groupPos||[]).map((g,i)=>[g.key,i]));

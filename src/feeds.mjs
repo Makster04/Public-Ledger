@@ -8,6 +8,7 @@ import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
 import {donorSizes} from '../public/donor-sizes.js';
+import {netWorth} from '../public/net-worth.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 
 export const DAY=86400000, WEEK=7*DAY, NEVER=Number.MAX_SAFE_INTEGER;
@@ -655,6 +656,30 @@ export const FEEDS={
       return {rows,next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
     summarize:officialSummary},
+  // Net worth from each member's latest annual financial disclosure (the most recent report year, an amendment over
+  // the original): a range, since every value on the form is one. House reports are PDFs from the disclosure index;
+  // senators' are eFD pages (report type 7). Read weekly; a report filed on paper is listed for checking by hand.
+  'net-worth-house':{host:'disclosures-clerk.house.gov',label:'Net worth (House annual disclosures)',tab:'ethics',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='H').map(p=>({id:`net-worth-house:${p.id}`,subject:p.id,args:{}})),
+    async page(job,a,env){
+      const index=await snapshotsOf(env,'house-fd');need(index.length,'Waiting for the House disclosure index');
+      const f=index.flatMap(x=>x.byPerson?.[job.subject]||[]).filter(f=>['O','A','C'].includes(f.type)&&f.url&&f.filed)
+        .sort((x,y)=>(y.year-x.year)||((y.type==='A')-(x.type==='A'))||y.filed.localeCompare(x.filed))[0];
+      need(f,'No annual report in the House disclosure index yet');
+      return {rows:[{id:f.id,...holdingsSnapshot(f,houseAnnualHoldings(await pdfText(await requestSource(f.url,env,{as:'bytes'}))))}],next:null};
+    },
+    summarize:rows=>rows[0]||{}},
+  'net-worth-senate':{host:'efdsearch.senate.gov',label:'Net worth (Senate annual disclosures)',tab:'ethics',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='S').map(p=>({id:`net-worth-senate:${p.id}`,subject:p.id,args:{last:surname(p),first:[firstName(p),...(p.nicknames||[])]}})),
+    async page(job,a,env,config){
+      const session=await efdSession(env),reports=await efdReports(env,session,{...a,from:new Date().getUTCFullYear()-2,reportTypes:'[7]'});
+      const f=reports[0];need(f,'No annual report on Senate eFD in the last two years');
+      const doc={id:f.doc,url:f.url,filed:f.filed,year:f.filed?Number(f.filed.slice(0,4))-1:null,type:'annual'};
+      if(f.paper)return {rows:[{id:doc.id,...holdingsSnapshot(doc,{assets:[],debts:[]})}],next:null};
+      const html=await efdGet(env,session.jar,f.url,/Assets|Liabilities/i);need(html!==null,'Senate eFD annual report could not be opened');
+      return {rows:[{id:doc.id,...holdingsSnapshot(doc,efdAnnualHoldings(html))}],next:null};
+    },
+    summarize:rows=>rows[0]||{}},
   // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
   // trades are checked against, and the list of trade reports the House reader opens.
   'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',
@@ -1019,6 +1044,41 @@ export function efdTrades(html){
   }
   return out.filter(t=>t.traded);
 }
+// ---------- the annual financial disclosures (what they own and owe, as value ranges) ----------
+// A value as written on an annual report: the asset value ranges, the open-ended top ranges, or no amount.
+const FD_VALUE=String.raw`(?:Spouse\/DC\s+Over\s+\$[\d,]+|Over\s+\$[\d,]+|\$[\d,]+\s*-\s*\$[\d,]+|None|Undetermined|Unascertainable)`;
+const section=(t,from,to)=>{const a=t.search(from);if(a<0)return '';const rest=t.slice(a+1),b=rest.search(to);return b<0?rest:rest.slice(0,b);};
+// An electronically filed House annual (or candidate) report's text: Schedule A's assets, each anchored on its [ST]-style
+// code with the owner code and the value right after it (the income ranges that follow are left out), and Schedule D's
+// liabilities, each ending on its amount. A report filed on paper has no text, so nothing is read.
+export function houseAnnualHoldings(text){
+  const t=String(text||''),a=section(t,/Schedule\s*A\b/i,/Schedule\s*B\b/i),d=section(t,/Schedule\s*D\b/i,/Schedule\s*E\b/i);
+  const assets=[...a.matchAll(new RegExp(String.raw`([^\n\[]*)\[([A-Z]{2})\]\s*(?:(SP|JT|DC)\s+)?(${FD_VALUE})`,'g'))].map(m=>({name:m[1].replace(/\s+/g,' ').trim().replace(/^(SP|JT|DC)\s+/,'')||null,code:m[2],
+    owner:m[3]?HOUSE_OWNER[m[3]]:'self',value:m[4].replace(/\s+/g,' ').trim()}));
+  const debts=/None\s+disclosed/i.test(d)&&!/\$[\d,]+/.test(d)?[]:[...d.matchAll(/([^\n]*?)(Over\s+\$[\d,]+|\$[\d,]+\s*-\s*\$[\d,]+)\s*$/gm)].filter(m=>!/^(Owner|Creditor)\b/i.test(m[1].trim()))
+    .map(m=>{const l=m[1].replace(/\s+/g,' ').trim(),owner=l.match(/^(SP|JT|DC)\s+/);return {creditor:l.replace(/^(SP|JT|DC)\s+/,'')||null,owner:owner?HOUSE_OWNER[owner[1]]:'self',amount:m[2].replace(/\s+/g,' ').trim()};});
+  return {assets,debts};
+}
+// A Senate eFD annual report's asset table (it has Asset and Value columns; the gifts table has Value but no Asset) and
+// liability table (Amount with a Creditor or Debtor column). Columns are found by their headings.
+export function efdAnnualHoldings(html){
+  const assets=[],debts=[];
+  for(const [table] of String(html||'').matchAll(/<table[\s\S]*?<\/table>/gi)){
+    const heads=[...(table.match(/<thead[\s\S]*?<\/thead>/i)?.[0]||'').matchAll(/<th[^>]*>([\s\S]*?)<\/th>/gi)].map(m=>fold(strip(m[1])));
+    const at=name=>heads.findIndex(h=>h===name||h.startsWith(name+' '));
+    const isAssets=at('asset')>=0&&at('value')>=0,isDebts=at('amount')>=0&&(at('creditor')>=0||at('debtor')>=0)&&!heads.some(h=>/transaction/.test(h));
+    if(!isAssets&&!isDebts)continue;
+    for(const [,row] of (table.match(/<tbody[\s\S]*?<\/tbody>/i)?.[0]||'').matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)){
+      const cells=[...row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m=>m[1]),cell=i=>i>=0&&cells[i]!=null?strip(cells[i]):'';
+      if(isAssets){const value=cell(at('value'));if(value)assets.push({name:cell(at('asset'))||null,type:cell(at('asset type'))||null,owner:SENATE_OWNER(cell(at('owner'))),value});}
+      else{const amount=cell(at('amount'));if(amount)debts.push({creditor:cell(at('creditor'))||null,type:cell(at('type'))||null,owner:SENATE_OWNER(cell(at('debtor'))),amount});}
+    }
+  }
+  return {assets,debts};
+}
+// One annual report's holdings, with the net-worth range (public/net-worth.js). No assets read means a paper report.
+const holdingsSnapshot=(f,h)=>({year:f.year||null,filed:f.filed||null,url:f.url,type:f.type||null,...netWorth(h.assets,h.debts),
+  unreadable:!h.assets.length&&!h.debts.length,assets:h.assets.slice(0,400),debts:h.debts.slice(0,100)});
 const EFD='https://efdsearch.senate.gov';
 // Agree to the site's terms (the checkbox every visitor ticks), keeping the session's cookies.
 async function efdSession(env){
@@ -1033,7 +1093,7 @@ async function efdSession(env){
 async function efdReports(env,{jar},a){
   const found=[];
   for(let start=0;start<1000;start+=100){
-    const d=await requestSource(`${EFD}/search/report/data/`,env,{form:{start:String(start),length:'100',report_types:'[11]',filer_types:'[1]',submitted_start_date:`01/01/${a.from} 00:00:00`,submitted_end_date:'',candidate_state:'',senator_state:'',office_id:'',first_name:'',last_name:a.last,csrfmiddlewaretoken:jar.csrftoken},
+    const d=await requestSource(`${EFD}/search/report/data/`,env,{form:{start:String(start),length:'100',report_types:a.reportTypes||'[11]',filer_types:'[1]',submitted_start_date:`01/01/${a.from} 00:00:00`,submitted_end_date:'',candidate_state:'',senator_state:'',office_id:'',first_name:'',last_name:a.last,csrfmiddlewaretoken:jar.csrftoken},
       headers:{Cookie:cookieHeader(jar),Referer:`${EFD}/search/`,'X-CSRFToken':jar.csrftoken,'X-Requested-With':'XMLHttpRequest'}});
     need(Array.isArray(d?.data),'Senate eFD search response missing');
     found.push(...d.data.filter(r=>Array.isArray(r)&&fold(r[1])===fold(a.last)));
@@ -1044,14 +1104,14 @@ async function efdReports(env,{jar},a){
   const rows=firsts.size>1?found.filter(r=>[a.first].flat().some(f=>fold(r[0]).startsWith(fold(f).slice(0,3)))):found;
   const out=[];
   for(const r of rows){
-    const href=String(r[3]).match(/href=["']([^"']+)["']/)?.[1],m=href?.match(/^\/search\/view\/(ptr|paper)\/([0-9a-f-]{8,40})\/?$/i);
+    const href=String(r[3]).match(/href=["']([^"']+)["']/)?.[1],m=href?.match(/^\/search\/view\/(ptr|annual|paper)\/([0-9a-f-]{8,40})\/?$/i);
     if(m)out.push({doc:m[2].toLowerCase(),paper:m[1].toLowerCase()==='paper',filed:mdy(r[4]),url:`${EFD}${href}`});
   }
   return out.sort((x,y)=>String(y.filed).localeCompare(String(x.filed)));
 }
-async function efdGet(env,jar,url){
+async function efdGet(env,jar,url,expect=/Transaction|transactions/i){
   const html=await requestSource(url,env,{as:'text',headers:{Cookie:cookieHeader(jar),Referer:`${EFD}/search/`},allow:[301,302,303]});
-  return html===null||!/Transaction|transactions/i.test(html)?null:html;
+  return html===null||!expect.test(html)?null:html;
 }
 // The rows one official report gives: its trades, numbered and tagged with the report, or one "not read" row.
 const unreadRow=(f,why)=>({id:`unread:${f.doc}`,doc:f.doc,unread:{doc:f.doc,filed:f.filed,url:f.url,why}});
