@@ -44,18 +44,22 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const env=process.env;
   if(!env.FEC_API_KEY){console.error('Set FEC_API_KEY in .dev.vars first (see README, "Connect official data sources").');process.exit(1);}
   const file=new URL('../public/research.json',import.meta.url),data=JSON.parse(await fs.readFile(file,'utf8'));
-  const wait=()=>new Promise(r=>setTimeout(r,250)),get=async u=>{await wait();return requestSource(u,env);};
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  // Each request is tried up to three times (the FEC turns away bursts and sometimes times out), with a pause between.
+  const get=async u=>{for(let k=0;;k++){await sleep(250);try{return await requestSource(u,env);}catch(e){if(k>=2)throw e;await sleep(2000*3**k);}}};
+  const before=data.bundled?.people||{},kept=[];
   const groups=(data.groupPos||[]).filter(g=>g.conduits?.length),out={};
   for(const p of people(data)){
     if(!p.fecCmte)continue;
     const cycles=cyclesOf(p).length?cyclesOf(p):[2026];
     for(const g of groups){
       const rows=[];let failed=null;
-      for(const conduit of g.conduits)for(const cycle of cycles){
+      for(const conduit of g.conduits){for(const cycle of cycles){
         try{let url=conduitURL(conduit,p.fecCmte,cycle);for(let page=0;url&&page<80;page++){const d=await get(url);rows.push(...(d.results||[]).filter(r=>r.recipient_committee_id==null||r.recipient_committee_id===p.fecCmte));url=fecNext(url,d);}}
-        catch(e){failed=e.message;}
-      }
-      if(failed)console.log(`${p.id} · ${g.org}: ${failed}`);
+        catch(e){failed=e.message;break;}
+      }if(failed)break;}
+      // A read that failed partway would save a partial total (or none), so the earlier saved total is kept instead.
+      if(failed){const prev=before[p.id]?.[g.key];kept.push(`${p.id} · ${g.org}: ${failed}${prev?` (kept the earlier $${Math.round(prev.routed).toLocaleString()})`:' (none saved before)'}`);if(prev)(out[p.id]||={})[g.key]=prev;continue;}
       const t=conduitTotals(rows);
       if(t.routed>0)(out[p.id]||={})[g.key]={...t,cycles,src:conduitLink(g.conduits[0],p.fecCmte,cycles.at(-1))};
     }
@@ -64,6 +68,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // A check against the one total researched by hand (Booker through AIPAC's PAC, from Sludge's reading of the filings).
   const hand=people(data).find(p=>p.id==='booker')?.conduit?.rows?.find(r=>r.id==='C00797670');
   if(hand)console.log(`\nCheck: Booker through AIPAC PAC, researched by hand $${hand.amount.toLocaleString()} for ${hand.period}; found $${Math.round(out.booker?.aipac?.routed||0).toLocaleString()} for the whole cycle.`);
+  if(kept.length)console.log(`\n${kept.length} read${kept.length===1?'':'s'} failed after three tries, so the earlier totals were kept:\n  ${kept.join('\n  ')}\nRun it again later to fill them in.`);
   if(!process.argv.includes('--check')){
     data.bundled={asOf:new Date().toISOString().slice(0,10),conduits:Object.fromEntries(groups.map(g=>[g.key,g.conduits])),people:out};
     await fs.writeFile(file,JSON.stringify(data,null,2));
