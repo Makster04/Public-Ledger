@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {buildRankingRows,stockHoldingRange,collectStockData,filterStockRows} from '../public/explore-finance.js';
+import {buildRankingRows,stockHoldingRange,collectStockData,filterStockRows,reviewedHoldingNotes} from '../public/explore-finance.js';
 
 const people=[
   {id:'a',name:'Member A',party:'D',state:'NJ',stateName:'New Jersey',chamber:'S',camp:{receipts:1000,pac:100,start:'2025-01-01',end:'2026-06-30'},pac:{rows:[[0,50],[1,20],[2,30]],window:'2025–26'}},
@@ -45,4 +45,13 @@ test('presidential trades are not included in congressional comparisons and unsa
   assert.equal(buildRankingRows([p],data,{},'raised').length,0);assert.equal(collectStockData([p]).trades.length,0);
   const result=collectStockData([{...people[0],trades:[{ticker:'ABC',company:'Example',traded:'2026-01-01',url:'javascript:alert(1)'}]}]);
   assert.equal(result.trades[0].source,'');
+});
+
+
+test('reviewed holdings notes stay visible without fabricating itemized holdings or zero values',()=>{
+  const person={...people[0],holdings:{status:'blind-trust',since:'2021-01-01',note:'Portfolio in a qualified blind trust.',src:{t:'Reviewed statement',u:'https://example.gov/statement'}}};
+  const notes=reviewedHoldingNotes([person,people[1]]);
+  assert.equal(notes.length,1);assert.equal(notes[0].status,'blind-trust');assert.equal(notes[0].source,'https://example.gov/statement');
+  assert.equal(notes[0].note,person.holdings.note);assert.deepEqual(collectStockData([person],{}),{trades:[],holdings:[]});
+  assert.equal(buildRankingRows([person],{},{} ,'holdings').length,0,'a status is not a portfolio valuation');
 });
