@@ -201266,6 +201266,48 @@
             "u": "https://www.govinfo.gov/app/details/BILLS-119hr5106ih"
           }
         }
+      ],
+      "cosponsors": [
+        {
+          "person": "hern",
+          "bill": "119-hr-5106",
+          "date": "2026-03-09"
+        },
+        {
+          "person": "lawler",
+          "bill": "119-hr-5106",
+          "date": "2026-03-24"
+        },
+        {
+          "person": "mcollins",
+          "bill": "119-hr-5106",
+          "date": "2025-11-12"
+        },
+        {
+          "person": "mgp",
+          "bill": "119-hr-5106",
+          "date": "2025-10-08"
+        },
+        {
+          "person": "millermeeks",
+          "bill": "119-hr-5106",
+          "date": "2025-09-11"
+        },
+        {
+          "person": "moore",
+          "bill": "119-hr-5106",
+          "date": "2026-06-02"
+        },
+        {
+          "person": "pappas",
+          "bill": "119-hr-5106",
+          "date": "2025-10-28"
+        },
+        {
+          "person": "perry",
+          "bill": "119-hr-5106",
+          "date": "2025-09-03"
+        }
       ]
     },
     {
@@ -201290,6 +201332,24 @@
             "t": "GovInfo: S. 1879 as introduced",
             "u": "https://www.govinfo.gov/app/details/BILLS-119s1879is"
           }
+        }
+      ],
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "119-s-1879",
+          "date": "2026-02-10"
+        },
+        {
+          "person": "hickenlooper",
+          "bill": "119-s-1879",
+          "date": "2025-12-16"
+        },
+        {
+          "person": "ossoff",
+          "bill": "119-s-1879",
+          "sponsor": true,
+          "date": "2025-05-22"
         }
       ]
     },
@@ -201316,6 +201376,13 @@
             "u": "https://www.govinfo.gov/app/details/BILLS-119s1498rs"
           }
         }
+      ],
+      "cosponsors": [
+        {
+          "person": "ossoff",
+          "bill": "119-s-1498",
+          "date": "2025-07-30"
+        }
       ]
     },
     {
@@ -201340,6 +201407,13 @@
             "t": "Rep. Nunn: Nunn Introduces Bipartisan Anti-Corruption Legislation (Jan. 10, 2025)",
             "u": "https://nunn.house.gov/2025/01/10/nunn-introduces-bipartisan-anti-corruption-legislation"
           }
+        }
+      ],
+      "cosponsors": [
+        {
+          "person": "mgp",
+          "bill": "119-hr-358",
+          "date": "2025-01-13"
         }
       ]
     },
@@ -201390,6 +201464,28 @@
             "t": "Sen. Shaheen's release",
             "u": "https://www.shaheen.senate.gov/shaheen-reintroduces-constitutional-amendment-to-overturn-citizens-united-ruling-get-dark-money-out-of-our-elections"
           }
+        }
+      ],
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "119-sjres-43",
+          "date": "2025-03-27"
+        },
+        {
+          "person": "hickenlooper",
+          "bill": "119-sjres-43",
+          "date": "2026-06-22"
+        },
+        {
+          "person": "kaptur",
+          "bill": "119-hjres-121",
+          "date": "2026-10-29"
+        },
+        {
+          "person": "mgp",
+          "bill": "119-hjres-121",
+          "date": "2025-10-28"
         }
       ]
     }
