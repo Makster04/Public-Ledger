@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import {pathToFileURL} from 'node:url';
-import {ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER,LATE_DAYS,WEIGHT,MIN_CHECKS,MIN_PVP_ACTIONS} from '../public/grades.js';
+import {ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER,LATE_DAYS,WEIGHT,MIN_CHECKS,MIN_PVP_ACTIONS,CORP_COMPROMISED} from '../public/grades.js';
 import {makeScorer} from '../public/scoring.js';
 import {timingFlags,SWING,WINDOW_MONTHS,TOP_DONORS} from '../public/influence.js';
 
@@ -25,7 +25,7 @@ export function personScores(s,scorer,history){
     promises:{pct:p.pct,kept:p.kept,half:p.half,broken:p.broken,counted:p.clear},
     ethics:{pct:e.pct,finding:e.finding,open:e.open,closed:e.closed,allegation:e.allegation,late:e.late,conflict:e.conflict,legal:e.legal.index,insider:e.insider.index,dodger:e.dodger.index},
     // Counts of actions on each side (each one is weighted by its bill's strength in the grade itself).
-    pvp:{pct:v.pct,people:v.nPeople,profit:v.nProfit,actions:v.n},
+    pvp:{pct:v.pct,people:v.nPeople,profit:v.nProfit,actions:v.n,bills:v.billsPct,cci:v.cci?.index??null},
     flags,
   };
 }
@@ -35,7 +35,7 @@ const PARTS={
   promises:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
   ethics:[['finding','confirmed finding','confirmed findings'],['open','open investigation','open investigations'],['closed','investigation closed without a finding','investigations closed without a finding'],['allegation','allegation (not scored)','allegations (not scored)'],['late','late disclosure','late disclosures'],['conflict','committee-conflict trade','committee-conflict trades'],
     ['legal','Legal Trouble Index point','Legal Trouble Index points'],['insider','Insider Trading Index point','Insider Trading Index points'],['dodger','Stock Disclosure Dodger Index point','Stock Disclosure Dodger Index points']],
-  pvp:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations']],
+  pvp:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations'],['cci','Corporation Compromised Index point','Corporation Compromised Index points']],
 };
 // What moved between two runs, with the reason drawn from the counts behind each grade.
 export function compare(before,after){
@@ -55,11 +55,11 @@ export function compare(before,after){
   for(const id of Object.keys(before||{}))if(!after[id])changes.push({id,grade:'all',from:null,to:null,why:'No longer profiled'});
   return changes.filter(c=>!(c.from===undefined&&c.to===null&&c.why==='First recorded score'));
 }
-export function buildEntry(research,committees,sectors,history,config,date){
-  const scorer=makeScorer(research,committees,sectors.committees||{});
+export function buildEntry(research,committees,sectors,history,config,date,tallies=null){
+  const scorer=makeScorer(research,committees,sectors.committees||{},tallies);
   const scores=Object.fromEntries([...research.members,...research.cands,...(research.featured||[])].map(s=>[s.id,personScores(s,scorer,history)]));
   return {date,reviewedAt:config.reviewedAt,research:crypto.createHash('sha256').update(JSON.stringify(research)).digest('hex').slice(0,12),
-    rules:{ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER,LATE_DAYS,WEIGHT,MIN_CHECKS,MIN_PVP_ACTIONS,SWING,WINDOW_MONTHS,TOP_DONORS},scores};
+    rules:{ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER,LATE_DAYS,WEIGHT,MIN_CHECKS,MIN_PVP_ACTIONS,CORP_COMPROMISED,SWING,WINDOW_MONTHS,TOP_DONORS},scores};
 }
 
 if(import.meta.url===pathToFileURL(process.argv[1]).href){
@@ -69,7 +69,8 @@ if(import.meta.url===pathToFileURL(process.argv[1]).href){
   const history=fs.existsSync(new URL('public/funder-history.json',root))?JSON.parse(read('public/funder-history.json')):null;
   const log=fs.existsSync(new URL(LOG,root))?JSON.parse(read(LOG)):{about:'',entries:[]};
   const date=new Date().toISOString().slice(0,10);
-  const entry=buildEntry(research,committees,sectors,history,config,date);
+  const tallies=fs.existsSync(new URL('public/vote-party.json',root))?JSON.parse(read('public/vote-party.json')).votes:null;
+  const entry=buildEntry(research,committees,sectors,history,config,date,tallies);
   const prev=log.entries.filter(e=>e.date!==date).at(-1);
   entry.changes=prev?compare(prev.scores,entry.scores):[];
   entry.note=prev?`${entry.changes.length} change${entry.changes.length===1?'':'s'} since ${prev.date}.`:'First recalculation: these are the starting scores.';

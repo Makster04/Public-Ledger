@@ -97,6 +97,17 @@ export function donorLoyalty(funders,party,tallies){
   return {index:Math.round(Math.min(100,Math.max(0,diff)/DONOR_LOYALTY.ceiling*100)),why:null,n,diff,rows};
 }
 
+// The business funders for the Corporation Compromised Index 🏢 (public/grades.js): business lobbies, industries' trade
+// associations, and the free-market groups the index's design names (Americans for Prosperity, Club for Growth). Keys of
+// research.json groupPos.
+export const BUSINESS_FUNDERS=['chamber','nfib','afp','cfg','aba','mba','icba','nar','phrma','aha','acu','fairshake'];
+// Donor Loyalty for the business funders only, weighted by the money they gave or bundled to the campaign (not by what they
+// spent on their own, which the candidate can't control).
+export function businessLoyalty(funders,party,tallies){
+  const set=new Set(BUSINESS_FUNDERS);
+  return donorLoyalty((funders||[]).filter(f=>set.has(f.key)).map(f=>({...f,for:0})),party,tallies);
+}
+
 // Months: "2026-03" arithmetic.
 export const addMonths=(m,k)=>{let y=+m.slice(0,4),mo=+m.slice(5,7)-1+k;y+=Math.floor(mo/12);mo=((mo%12)+12)%12;return `${y}-${String(mo+1).padStart(2,'0')}`;};
 const sumMonths=(series,from,to)=>Object.entries(series).reduce((t,[m,v])=>m>=from&&m<=to?t+v:t,0);

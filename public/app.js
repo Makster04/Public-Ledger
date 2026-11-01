@@ -1,5 +1,5 @@
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
-import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS} from './grades.js';
+import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED} from './grades.js';
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
@@ -36,7 +36,7 @@ for(const [id,list] of issueEvidence(DATA))for(const {issue,entry} of list){cons
 // (public/committees.json) and the sectors each committee oversees (public/committee-sectors.json) feed the Ethics
 // committee-conflict check.
 const COMMITTEES=window.COMMITTEES||{committees:{},people:{}}, COMMITTEE_SECTORS=window.COMMITTEE_SECTORS||{};
-const SCORER=makeScorer(DATA,COMMITTEES,COMMITTEE_SECTORS);
+const SCORER=makeScorer(DATA,COMMITTEES,COMMITTEE_SECTORS,window.VOTE_PARTY);
 const PVP_MARKS=SCORER.marks, PVP_BILLS=SCORER.bills, committeesOf=SCORER.committeesOf, fullCommittee=SCORER.fullCommittee, overseenSectors=SCORER.overseen;
 const personPvp=SCORER.pvp, personTrading=SCORER.trading, personEthics=SCORER.ethics;
 const icH=s=>s.ideoKind==='house'?'H':s.chamber;
@@ -418,6 +418,7 @@ const GRADE={
     ['Bill scores','Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed): half from a nonpartisan study of who gains, half from which side worker and business groups took.'],
     ['How votes count',"A yes vote takes the bill's side and a no vote the other side, counted by the bill's strength: a yes on a +60 bill adds 0.6 to the working-people side."],
     ['Bills that didn\'t pass','Count too: sponsoring or cosponsoring one counts like a yes vote, and a cited public statement for or against it counts half as much. A bill counts once across its versions in different Congresses.'],
+    ['Corporation Compromised Index 🏢','A quarter of the grade: 100 minus the index, which measures how much of their campaign money comes from businesses\' PACs and how much more often they vote with business funders than their party does. The other three quarters are the bills.'],
     ['For a president','Signing a bill counts like a yes. A veto counts like a no.'],
     ['Not graded',`Until they have at least ${MIN_PVP_ACTIONS} of these.`]]},
 };
@@ -1694,15 +1695,32 @@ async function mountBillLobbying(host){
     el.innerHTML=!lob?'<span class="muted">Lobbying counts need the update service running.</span>':!x?'<span class="muted">Lobbying: not checked yet.</span>'
       :`<b>Lobbying (${yrs(id)}):</b> ${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
 }
+// The Corporation Compromised Index 🏢 on the Workers > Profit tab: its parts, what each is built from, and what's missing.
+const CCI_PART={pacShare:'Business PACs\' share of funds raised',employees:'Donor companies\' employees',businessVotes:'Votes with business funders',lobbiedBills:'Profit side on lobbied bills'};
+function cciBlock(s,v){
+  const c=v.cci;if(!c||s.office)return '';
+  const C=CORP_COMPROMISED,m=c.money,bv=c.votes,w=k=>c.weights?.[k]!=null?` · ${Math.round(c.weights[k]*100)}% of the index`:'';
+  if(c.index==null)return `<div class="chart"><h3>Corporation Compromised Index 🏢</h3><p class="small muted">${esc(c.why)}, so it isn't counted.</p></div>`;
+  const pacLine=m?(m.pacTotal?`${fmt1(c.share)}% of the ${fmtFull(m.receipts)} raised (${period(m.start,m.end)}), scoring ${Math.round(c.parts.pacShare)}; ${C.pacCeiling}% scores 100${w('pacShare')}. ${fmtFull(m.rowsBusiness)} of the ${fmtFull(m.rowsTotal)} in itemized PAC contributions on file came from business PACs (companies, trade associations and cooperatives${m.typed<m.rowsTotal?'; a PAC not yet matched to its FEC record counts by the sector this app assigns from its name':''}), and that share is applied to the cycle's ${fmtFull(m.pacTotal)} in PAC money: about ${fmtFull(Math.round(m.businessPac))}.`:`No PAC money in the ${fmtFull(m.receipts)} raised, scoring 0${w('pacShare')}.`):'';
+  const voteLine=c.parts.businessVotes!=null?`Voted the way business funders wanted ${fmt1(Math.abs(bv.diff))} points ${bv.diff>=0?'more':'less'} often than their party, on ${bv.n} votes where a business funder that gave to the campaign took a side, scoring ${c.parts.businessVotes}; ${C.voteCeiling} points above scores 100${w('businessVotes')}.`
+    :bv?.rows?.length?`Not counted: ${bv.n} compared vote${bv.n===1?'':'s'}, and it needs 5.`:'Not counted: no business funder that gave to the campaign took a side on their votes on file.';
+  return `<div class="chart"><h3>Corporation Compromised Index 🏢: ${c.index}</h3><div class="sub">How much of their campaign money comes from businesses' PACs, and how much more often they vote with business funders than their party does. Higher means more. It is a quarter of this grade, as 100 minus the index.</div>
+    ${points([[CCI_PART.pacShare,pacLine],[CCI_PART.businessVotes,`${voteLine} Business funders: the Chamber of Commerce, NFIB, Americans for Prosperity, Club for Growth, and industries' associations (bankers, mortgage bankers, community banks, Realtors, drug makers, hospitals, credit unions, the crypto industry's Fairshake).`],
+      [CCI_PART.employees,'Not counted yet: the top donor organizations\' employee giving comes from the daily refresh and isn\'t reviewed.'],[CCI_PART.lobbiedBills,'Not counted yet: lobbying on each bill comes from the refresh and isn\'t reviewed.'],
+      ['Left out','Outside spending, which candidates can\'t control.']],'small')}</div>`;
+}
 function panePvp(s,pane){
   const v=personPvp(s);
   const detail=v.pct!=null?`${v.nPeople} of ${v.n} scored actions delivered more for working people; ${v.nProfit} more for the wealthy and corporations.`:!PVP_MARKS.size?'No bills have been scored yet, so no one has this grade.':v.n?`${v.n} of the ${MIN_PVP_ACTIONS} scored actions a grade needs.`:`None of ${esc(s.short)}'s recorded ${s.office?'bill signings, vetoes or executive orders':'votes or sponsorships'} is on a scored bill yet.`;
-  const math=v.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> working-people points ÷ all points = ${v.people} ÷ (${v.people} + ${v.profit}) = <b>${v.pct}%</b>. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.</p>`:'';
+  const billMath=`working-people points ÷ all points = ${v.people} ÷ (${v.people} + ${v.profit}) = ${v.billsPct}%`;
+  const math=v.pct==null?'':v.blended?`<p class="small gh-m"><b>How it was calculated:</b> the bills, ${billMath}, count three quarters; 100 minus the Corporation Compromised Index 🏢 (${v.cci.index}) counts one quarter: 0.75 × ${v.billsPct} + 0.25 × ${100-v.cci.index} = ${fmt1(v.raw)}, rounded to <b>${v.pct}%</b>. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.</p>`
+    :`<p class="small gh-m"><b>How it was calculated:</b> ${billMath.replace(/ = (\d+)%$/,' = <b>$1%</b>')}. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.${v.cci?.why?` The Corporation Compromised Index 🏢 isn't counted: ${esc(v.cci.why.toLowerCase())}.`:''}</p>`;
   const table=v.scored.length?`<div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th class="r">Bill score</th><th>Delivered more for</th><th class="r">Points</th><th>Why the bill scores this way</th></tr></thead><tbody>${v.scored.map(a=>{const mk=PVP_MARKS.get(a.bill)||{},u=billUrl(a.bill);return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(mk.title||billLabel(a.bill))}</a>`:esc(mk.title||a.bill)}<div class="small muted">${esc(billLabel(a.bill))}</div></td><td>${esc(PVP_DID[a.kind](a.pos))}${a.kind==='statement'&&a.ref?` <a href="${esc(a.ref)}" target="_blank" rel="noopener">source ↗</a>`:''}${a.via&&a.via!==a.bill?`<div class="small muted">${esc(billLabel(a.via))}</div>`:''}</td><td class="r">${billScoreBadge(mk)}</td><td><b class="${a.took==='people'?'gr-A':'gr-F'}">${PVP_SIDE[a.took]}</b></td><td class="r">${a.points}</td><td class="small">${billWhyShort(mk)}</td></tr>`}).join('')}</tbody></table></div><p class="small muted">Every bill on file, with all its evidence and who lobbied on it: <a href="#scores-pvp">Workers > Profit scores</a>.</p>`
     :`<div class="note">${PVP_MARKS.size?`${esc(s.short)} has no recorded ${s.office?'signing, veto or executive order':'vote or sponsorship'} on any of the ${PVP_MARKS.size} scored bill${PVP_MARKS.size===1?'':'s'}.`:`<b>No bills are scored yet.</b>${points([['When a bill counts','Once a nonpartisan study of who gains from it is cited, or worker and business groups took opposite sides on it.'],['What will show here','Each scored vote and sponsorship, the side it took, and the evidence behind the bill.']])}`}</div>`;
   pane.innerHTML=`${gradeHead('Workers > Profit',v.pct,detail,gradeRule('pvp'),math+monthlyNote(s,'pvp',v.pct))}
   <div class="chart"><h3>Who the record delivered more for</h3><div class="sub"><b>Right of 50%:</b> leans toward working people. <b>Left:</b> leans toward the wealthy and corporations. <a href="#scores-pvp">Everyone on one chart</a></div>
     ${divergingRows([{label:s.name,sub:`${v.people} points for working people · ${v.profit} for the wealthy and corporations`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:`${v.n} scored actions`}])}</div>
+  ${cciBlock(s,v)}
   <h3 style="margin:18px 0 8px">${s.office?'Scored bills signed or vetoed, and executive orders':'Scored votes and sponsorships'}</h3>${table}
   ${s.office?`<h2 style="margin-top:30px">Their funders and their votes</h2>
   <p class="intro">Not shown for ${esc(s.short)}.</p>${points([['What it covers','Who pays for each 2026 campaign, next to the votes the candidate cast.'],['Why not here',`${esc(s.short)} is not on the 2026 ballot and casts no roll-call votes.`],['FEC records',`The committee that still files is on the <a href="#${s.id}-finance">Money &amp; Influence tab</a>.`]])}`:`${donorTreemapBlock(s)}
@@ -2283,9 +2301,9 @@ function scoresPvp(host){
   const graded=rows.filter(x=>x.v.pct!=null);
   const pts=graded.filter(x=>x.s.ideo).map(({s,v})=>({x:s.ideo.dim1,y:v.pct,cls:s.party,tip:`${s.name}: ${v.pct}% for working people · DW-NOMINATE ${s.ideo.dim1>0?'+':''}${s.ideo.dim1.toFixed(2)}`}));
   host.innerHTML=`${PVP_MARKS.size?'':`<div class="note" style="margin-bottom:12px"><b>No bills are scored yet, so no one has this grade.</b> A bill counts once a nonpartisan study of who gains from it is cited, or worker and business groups took opposite sides on it. Until then everyone is listed as Not graded.</div>`}
-    <div class="chart"><h3>Who their record delivered more for</h3><div class="sub"><b>Right of 50%:</b> more of their scored actions favored working people. <b>Left:</b> more favored the wealthy and corporations. ${graded.length} of ${ALL.length} have the ${MIN_PVP_ACTIONS} scored actions a grade needs.</div>
+    <div class="chart"><h3>Who their record delivered more for</h3><div class="sub"><b>Right of 50%:</b> their grade leans toward working people. <b>Left:</b> toward the wealthy and corporations. <b>The grade:</b> three quarters their scored actions, one quarter 100 minus the Corporation Compromised Index 🏢. ${graded.length} of ${ALL.length} have the ${MIN_PVP_ACTIONS} scored actions a grade needs.</div>
     ${divergingRows(rows.map(({s,v})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-pvp`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} actions`:`${v.nPeople} of ${v.n} actions`,tip:v.pct==null?'':`${s.name}: ${v.people} points for working people, ${v.profit} for the wealthy and corporations`})))}
-    ${tableView(['Name','Score','Actions','People points','Profit points'],rows.map(({s,v})=>[`<a href="#${s.id}-pvp">${esc(s.name)}</a>`,v.pct==null?'Not graded':`${letter(v.pct)} ${v.pct}%`,v.n,v.people,v.profit]))}</div>
+    ${tableView(['Name','Score','Bills','Corporation Compromised 🏢','Actions','People points','Profit points'],rows.map(({s,v})=>[`<a href="#${s.id}-pvp">${esc(s.name)}</a>`,v.pct==null?'Not graded':`${letter(v.pct)} ${v.pct}%`,v.billsPct==null?'—':`${v.billsPct}%`,v.cci?.index??'—',v.n,v.people,v.profit]))}</div>
     ${billsBlock(PVP_BILLS)}
     <div class="chart"><h3>Workers > Profit against ideology</h3><div class="sub">Each graded person with a DW-NOMINATE score. <b>Look for outliers:</b> someone far from others with a similar ideology.</div>
     ${pts.length?`<div class="cx-plot" id="sc-scatter"></div>${legend([['var(--dem)','Democrats'],['var(--rep)','Republicans'],['var(--muted)','Independents']])}`:'<p class="small muted">Nothing to plot until people are graded.</p>'}</div>`;
@@ -2323,7 +2341,8 @@ function renderMethod(sub){
       <li><b>Donor Loyalty 🤝 cap:</b> no single funder counts for more than all the others put together (at most half the weight), so one large funder with one position on file can't decide the number alone.</li>
       <li><b>Money pledges checked against the records:</b> 12 pledges on the Promises tabs (corporate PAC money, single-issue PAC money and stock-trading bans) now show what the FEC records, the bills' cosponsors and the votes on file say, under the reviewed verdict. Shown only.</li>
       <li><b>Blind trusts and divestment:</b> a qualified blind trust now takes its trustee's trades out of the trading indexes, and "no individual stocks" is shown on the Insider Trading Index. Managed accounts aren't excused. Two statuses are reviewed so far (Ossoff and Hinson), and no grade changed.</li>
-      <li><b>No grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
+      <li><b>Corporation Compromised Index 🏢 in Workers > Profit:</b> a quarter of the grade is now 100 minus the index, which measures business PACs' share of the money raised and votes with business funders beyond the party. Three letter grades changed (Kaptur, Gonzalez and Castor, from A); each Workers > Profit tab shows the math.</li>
+      <li><b>No other grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
     </ul>
     <details class="tv"><summary>Earlier changes (October 28, 2026)</summary>
     <ul class="list">
@@ -2451,6 +2470,7 @@ function renderMethod(sub){
           <li><b>Bills that didn't pass:</b> count the same way. Sponsoring or cosponsoring one counts like a yes vote (cosponsors from Congress.gov). A cited public statement that names the bill counts half a vote, and a later vote or cosponsorship replaces it. Not cosponsoring counts for nothing. A bill counts once across its versions in different Congresses, with the latest vote winning.</li>
           <li><b>Counting:</b> each vote or sponsorship on a scored bill counts the bill's strength (its score ÷ 100) for the side it took, once per bill. A yes on a +75 bill adds 0.75 to the working-people side; a no adds 0.75 to the other side. The score is working-people points ÷ all points.</li>
           <li><b>For a president:</b> signing a marked bill or issuing a marked executive order counts for its side. A veto counts for the other side.</li>
+          <li><b>Corporation Compromised Index 🏢 (a quarter of the grade):</b> the grade is 0.75 × the bills' score + 0.25 × (100 − the index). The index (0–100) has four parts. Business PACs' share of the money they raised: ${CORP_COMPROMISED.weights.pacShare*100}%, with ${CORP_COMPROMISED.pacCeiling}% of funds scoring 100. A business PAC is one the FEC records as sponsored by a corporation, trade association or cooperative, or by its sector when it isn't matched to its FEC record yet. Votes with business funders that gave to the campaign, compared with their party: ${CORP_COMPROMISED.weights.businessVotes*100}%, with ${CORP_COMPROMISED.voteCeiling} points above the party scoring 100, from 5 compared votes. Donor companies' employees' giving: ${CORP_COMPROMISED.weights.employees*100}%. The Profit side on bills their top donors lobbied on: ${CORP_COMPROMISED.weights.lobbiedBills*100}%. The last two aren't counted until their data is reviewed, and a part without data drops out, so the others are reweighted. Outside spending is left out. Without the index (no campaign money on file, or a president), the bills count alone.</li>
           <li><b>Needed:</b> ${MIN_PVP_ACTIONS} scored actions. ${PVP_MARKS.size?`${PVP_MARKS.size} bill${PVP_MARKS.size===1?' is':'s are'} marked so far.`:'<b>No bills are marked yet</b>, so no one is graded.'}</li>
         </ul></li>
     </ul>

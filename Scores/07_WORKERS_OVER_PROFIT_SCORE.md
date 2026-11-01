@@ -10,10 +10,10 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 |---|---|---|
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Renamed from People vs. Profit | |
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Top donors treemap | On the Workers > Profit tab. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Corporation Compromised Index 🏢 (step 9 of 9: decide) | Designed. The Donor Loyalty Index 🤝 and the bill scores it depends on are built, and the FEC's PAC types (step 2) give its corporate PAC share an official basis once saved. To decide: whether to build it, since it would be the first money figure inside a grade (25% of Workers > Profit), and whether "corporate" means the FEC's corporate PACs only or also trade associations. The Integrity Index's per-dollar PAC penalty is the comparison: it charges corporate PAC money most, then lobbyist, trade, ideological and labor. |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Corporation Compromised Index 🏢 (step 9 of 9) | Approved and built Nov. 1, 2026. Two of its four parts are counted today (business PACs' share of funds raised, and votes with business funders), each at half; the employee-giving and lobbied-bills parts join once their data is reviewed. 23 people have a grade; 3 letters changed: Kaptur A → B (85%), Gonzalez and Castor A → C (75%), whose business PACs are over 20% of the money they raised. Republicans at 0% on the bills now range from 10% to 25%, still F. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Worker Backed Index ✊ | Designed, not built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Grassroots Index 🌱 | Designed, not built. Its data is now refreshed (step 1): the FEC's gift-size groups, shown on the Overview's money card. To decide: whether it uses the FEC's "unitemized" total (donors who gave $200 or less in all) or the "$200 and under" gift-size group (each gift by its own amount), which can differ. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
+| <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised), since Nov. 1, 2026. Without the index (no campaign money on file, or a president) the bills count alone. |
 | <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Add more Workers > Profit bills with cited evidence | 14 on file, 10 scored. Next: a business group's position on the GENIUS Act and the National Right-to-Work Act, cited public statements for candidates without a voting record, and more bills where the AFL-CIO's and the Chamber's key votes split. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Rename the "People" side to "Workers" | In the charts and tables. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Decide whether agency estimates and tariffs can mark a bill | From the methodology's open decisions. CBO's coverage estimates now count, as access. |
@@ -60,24 +60,24 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 ## Index designs
 
 ### Corporation Compromised Index 🏢
-**Measures:** how much of their money comes from corporations, and how often they side with those funders.
+**Measures:** how much of their campaign money comes from businesses' PACs, and how much more often they side with business funders than their own party does. 0–100, higher meaning more. Built Nov. 1, 2026 (`corporationCompromised` in `public/grades.js`).
 
-- **Corporate PAC share (35%, required):** money from corporate and industry-group PACs ÷ campaign funds raised, over the same reports. The ceiling is 20%.
-- **Corporate employees' giving (10%):** giving from employees of the companies among their top 20 donor organizations ÷ campaign funds raised. The ceiling is 10%.
-- **Voting with business funders (35%):** on key votes where a business funder took a public side, how often they voted that way, minus their party's average on the same votes. Being at or below the party average scores 0, and the ceiling is 25 points above it. Business funders include the Chamber of Commerce, NFIB, Americans for Prosperity and Club for Growth.
-- **Profit side on lobbied bills (20%):** on Workers > Profit bills that a top donor organization lobbied on, the share where they took the Profit side. This part needs at least 3 such bills.
+- **Business PACs' share of funds raised (35%, required):** business PACs' money ÷ campaign funds raised, over the same dates. The ceiling is 20%. A business PAC is one the FEC records as sponsored by a corporation, a trade association or a cooperative; until a PAC is matched to its FEC record (`npm run pacs:types`), it counts by the sector this app assigns from its name, so professional associations (doctors, lawyers, accountants) count with businesses for now. Most House members' PAC rows cover only January–June 2026, so the business share of the itemized PAC money on file is applied to the cycle's PAC total from the FEC summary, which covers the same dates as the funds raised.
+- **Corporate employees' giving (10%):** giving from employees of the companies among their top 20 donor organizations ÷ campaign funds raised. The ceiling is 10%. **Not counted yet:** the employer totals come from the daily refresh and aren't reviewed.
+- **Voting with business funders (35%):** on votes where a business funder that gave to the campaign took a public side, how often they voted that way, minus their party's rate on the same votes (Donor Loyalty's method, from the roll calls' party totals). Being at or below the party scores 0, and the ceiling is 25 points above it. Funders count by the money they gave or bundled, not what they spent on their own. Needs 5 compared votes. **Business funders:** the Chamber of Commerce, NFIB, Americans for Prosperity, Club for Growth, and industries' associations: the American Bankers Association, Mortgage Bankers Association, ICBA, the National Association of Realtors, PhRMA, the American Hospital Association, America's Credit Unions and the crypto industry's Fairshake (`BUSINESS_FUNDERS` in `public/influence.js`).
+- **Profit side on lobbied bills (20%):** on Workers > Profit bills that a top donor organization lobbied on, the share where they took the Profit side. Needs at least 3 such bills. **Not counted yet:** lobbying on each bill comes from the refresh and isn't reviewed.
+
+**Missing parts:** a part without data drops out and the others are reweighted; today that means the PAC share and the votes at half each, or the PAC share alone for anyone without 5 compared votes.
 
 Outside spending is left out, because candidates legally can't control it.
 
-**Example:** PAC share 8% scores 40, employees 3% scores 30, +10 vs. party scores 40, and 2 of 4 lobbied bills scores 50. That gives (0.35×40) + (0.10×30) + (0.35×40) + (0.20×50) = **41**.
+**Example (all four parts):** PAC share 8% scores 40, employees 3% scores 30, +10 vs. party scores 40, and 2 of 4 lobbied bills scores 50. That gives (0.35×40) + (0.10×30) + (0.35×40) + (0.20×50) = **41**.
 
 **Keys and sources:**
-- **Campaign money:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for campaign totals, PAC contributions and donors by employer. PAC sectors are assigned by this app from committee names, with no key. Each PAC's type as the FEC records it (corporate, labor, trade and so on) is saved by `npm run pacs:types` (built; not saved in the repository yet), for the corporate PAC share.
-- **Bundled gifts:** the gifts a business group's PAC forwarded from its donors (`npm run funders:bundled`) would count with that group's money in "Voting with business funders", as they already do in Donor Loyalty. None of the five groups read today is a business group.
+- **Campaign money:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for campaign totals and PAC contributions. Each PAC's FEC type from `npm run pacs:types` (built; not saved yet), otherwise the app's sectors.
 - **Business funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
-- **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
-- **Lobbying:** `LDA_API_KEY` (optional).
-- **Bill scores:** the reviewed research (who gains and who took a side). No key.
+- **Party totals:** `public/vote-party.json` (`npm run votes:party`). No key.
+- **Later parts:** donors by employer (`FEC_API_KEY`) and lobbying (`LDA_API_KEY`, optional), once reviewed.
 
 ### Worker Backed Index ✊
 The same formula with unions:
@@ -100,7 +100,11 @@ It's shown next to the Corporation Compromised Index, so both sides are measured
 ### ↓↓↓
 
 ### New Workers > Profit grade formula 👷
-**Workers > Profit** = 75% from today's score (actions on marked bills) + 25% from (100 − Corporation Compromised Index).
+**Workers > Profit** = 75% from today's score (actions on marked bills) + 25% from (100 − Corporation Compromised Index). In use since Nov. 1, 2026.
+
+**What it moved:** 23 people have a grade; 3 letters changed: Kaptur A → B (85%), Gonzalez and Castor A → C (75%), whose business PACs are over 20% of the money they raised. Republicans at 0% on the bills now range from 10% to 25%, still F.
 
 - The grade still needs today's minimum number of scored actions on marked bills. Without them, it stays "Not graded", and the index is shown on its own.
+- Without the index (no campaign money on file, or a president, who doesn't run a 2026 campaign), the bills count alone.
+- The tab shows the math: for example 0.75 × 18 + 0.25 × (100 − 42) = 28%.
 - The Worker Backed ✊ and Grassroots 🌱 indexes sit beside the grade, not inside it.
