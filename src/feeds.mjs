@@ -7,6 +7,7 @@ import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,a
 import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
+import {donorSizes} from '../public/donor-sizes.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 
 export const DAY=86400000, WEEK=7*DAY, NEVER=Number.MAX_SAFE_INTEGER;
@@ -752,6 +753,23 @@ export const FEEDS={
       return {rows:d.results.filter(r=>Number(r.cycle)>=SINCE(config)).map(ok).filter(Boolean),next:null};
     },
     summarize:rows=>({cycles:rows.sort((x,y)=>y.cycle-x.cycle)})},
+  // Money from individual donors in the current cycle, by the size of each gift: the FEC's five size groups for the
+  // campaign committee, checked against the committee's itemized and unitemized totals (public/donor-sizes.js).
+  'donor-sizes':{host:'api.open.fec.gov',label:'Donors by gift size',tab:'finance',
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donor-sizes:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
+    async page(job,a,env){
+      const s=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_size/?committee_id=${a.committee}&cycle=${a.cycle}&per_page=100`,env);
+      need(Array.isArray(s.results),'FEC gift-size totals missing');
+      const t=await requestSource(`https://api.open.fec.gov/v1/committee/${a.committee}/totals/?cycle=${a.cycle}&per_page=20`,env);
+      need(Array.isArray(t.results),'Campaign totals missing');
+      const tot=t.results.find(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(a.cycle));
+      need(tot,'No campaign report for this committee and cycle yet');
+      const rows=s.results.filter(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(a.cycle)).map(r=>({id:`size-${r.size}`,size:Number(r.size),total:Number(r.total)||0,count:Number(r.count)||0}));
+      return {rows:[...rows,{id:'totals',individual_itemized_contributions:tot.individual_itemized_contributions??null,individual_unitemized_contributions:tot.individual_unitemized_contributions??null,
+        coverage_start_date:day(tot.coverage_start_date),coverage_end_date:day(tot.coverage_end_date)}],next:null};
+    },
+    summarize:(rows,a)=>({...donorSizes(rows.filter(r=>r.id!=='totals'),rows.find(r=>r.id==='totals')||{}),cycle:a.cycle,committee:a.committee,
+      source:`https://www.fec.gov/data/committee/${a.committee}/?cycle=${a.cycle}&tab=raising`})},
   // Each election cycle from historyFrom on (a cycle that has ended is read once and kept). The top organizations, and
   // the sources that follow them, are the current cycle's; the earlier cycles' top 10 are kept by cycle.
   donors:{host:'api.open.fec.gov',label:'Donors by employer',tab:'finance',
