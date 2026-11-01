@@ -1,5 +1,5 @@
 // A portable view of the same reviewed scores shown on the profile. No scoring is done here.
-const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#c0b8e9',party:'Independent'}};
+const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
 const LABELS=['Your match','Promises delivered','Ethics','Workers > Profit'];
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
@@ -42,7 +42,7 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     <desc id="desc">${xml(grades.map((g,i)=>`${g.label}: ${g.value===null?(i===0&&model.matchConfigured===false?'Set priorities':'Not graded'):letter(g.value)+' '+g.value+' out of 100'}`).join('. '))}. Reporting periods and evidence coverage are shown below.</desc>
     <defs><linearGradient id="tile" x2="1" y2="1"><stop stop-color="#1b2329"/><stop offset="1" stop-color="#151a22"/></linearGradient><clipPath id="photo"><rect x="60" y="166" width="340" height="452" rx="10"/></clipPath></defs>
     <rect width="1000" height="1230" fill="#0d1117"/>
-    <path d="M42 41h40M46 50h32M49 59v26M62 59v26M75 59v26M42 88h40" fill="none" stroke="#28d17c" stroke-width="5"/>
+    <path d="M42 41h40M46 50h32M49 59v26M62 59v26M75 59v26M42 88h40" fill="none" stroke="#d1d5db" stroke-width="5"/>
     ${text('PUBLIC LEDGER',103,70,{size:31,weight:700,width:35})}
     ${text('FOLLOW THE MONEY. CHECK THE RECORD.',42,118,{size:17,color:'#a8b6c8',width:75})}
     <rect x="40" y="146" width="920" height="498" rx="16" fill="url(#tile)" stroke="${p.accent}" stroke-width="2"/>
@@ -74,7 +74,7 @@ const STYLE=`
 .scorecard-toolbar{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:#10151df5;border-bottom:1px solid #2d3745}
 .scorecard-toolbar h2{font:700 18px system-ui,sans-serif;margin:0}.scorecard-close{font:inherit;background:transparent;color:#e6edf8;border:1px solid #48566a;border-radius:8px;padding:8px 12px;cursor:pointer}
 .scorecard-preview{padding:20px 22px 0}.scorecard-preview svg{display:block;width:100%;height:auto;border-radius:10px}
-.scorecard-actions{display:flex;gap:10px;flex-wrap:wrap;padding:18px 22px 4px}.scorecard-actions button{font:600 14px system-ui,sans-serif;border:1px solid var(--scorecard-accent);padding:11px 16px;border-radius:8px;background:transparent;color:var(--scorecard-accent);cursor:pointer}.scorecard-actions button:first-child{background:#28d17c;border-color:#28d17c;color:#0d1117}.scorecard-actions button:disabled{opacity:.5;cursor:wait}
+.scorecard-actions{display:flex;gap:10px;flex-wrap:wrap;padding:18px 22px 4px}.scorecard-actions button{font:600 14px system-ui,sans-serif;border:1px solid var(--scorecard-accent);padding:11px 16px;border-radius:8px;background:transparent;color:var(--scorecard-accent);cursor:pointer}.scorecard-actions button:first-child{background:#c1c7d0;border-color:#c1c7d0;color:#0d1117}.scorecard-actions button:disabled{opacity:.5;cursor:wait}
 .scorecard-status{font:14px/1.5 system-ui,sans-serif;color:#b6c0cf;margin:10px 22px 18px;min-height:21px}.scorecard-link{display:block;width:calc(100% - 44px);margin:0 22px 20px;padding:10px;background:#192130;border:1px solid #48566a;color:#edf2fa;border-radius:6px;box-sizing:border-box}
 .scorecard-dialog :focus-visible{outline:3px solid var(--scorecard-accent);outline-offset:4px}
 @media(max-width:520px){.scorecard-toolbar{padding:14px}.scorecard-preview{padding:12px 10px 0}.scorecard-actions{padding:14px 12px 4px}.scorecard-status{margin:8px 12px 14px}.scorecard-actions button{flex:1}.scorecard-dialog{max-height:calc(100dvh - 16px)}}`;
