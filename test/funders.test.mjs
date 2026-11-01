@@ -52,7 +52,7 @@ test('the saved funders match a rebuild (run node scripts/build-funders.mjs afte
 test('each funder entry: money adds up, votes are the group\'s positions next to the person\'s vote',()=>{
   const byVote=new Map([...D.votes,...D.hvotes].map(v=>[v.id,v]));
   for(const p of people(D))for(const f of p.funderPos||[]){
-    assert.ok(f.pac+f.for+f.against>0,`${p.id} ${f.key} has no money`);
+    assert.ok(f.pac+(f.routed||0)+f.for+f.against>0,`${p.id} ${f.key} has no money`);
     const g=G(f.key);assert.ok(g,f.key);
     for(const c of f.compared){
       const q=g.positions.find(x=>x.voteId===c.voteId);assert.ok(q,`${p.id} ${f.key} ${c.voteId}`);

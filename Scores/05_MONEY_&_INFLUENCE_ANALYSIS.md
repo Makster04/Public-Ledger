@@ -40,7 +40,7 @@ Not a separate index:
 **Measures:** how much more they vote with their funders than members of their own party do.
 
 1. For each funder that took public positions, take the person's rate of voting its way minus their party's average on those same votes.
-2. Weight each funder by the money it gave or spent for them.
+2. Weight each funder by the money it gave, bundled or spent for them.
 3. Only the amount above the party average counts. The ceiling is 25 points above.
 
 **Minimum:** 5 compared votes.
@@ -48,13 +48,14 @@ Not a separate index:
 **Details:**
 - **Party average:** how the rest of their party in the chamber voted on each vote, from the official roll call's party totals, with their own vote left out.
 - **Independents:** compared with the party they caucus with.
-- **Money:** what each funder gave to the campaign plus what it spent for them. A group that only spent against them carries no weight.
+- **Money:** what each funder gave to the campaign, plus the donors' gifts it bundled to the campaign through its PAC ("earmarked": AIPAC, Club for Growth, EMILY's List, J Street and the Senate Conservatives Fund), plus what it spent for them. A group that only spent against them carries no weight.
 - **No number:** for a president (who signs bills rather than voting), and until the party totals are loaded.
 
 **Keys and sources:**
 - **Party totals:** the official Senate and House Clerk roll calls, no key. `npm run votes:party` (`scripts/build-vote-party.mjs`) reads them for the saved votes into `public/vote-party.json`, and new roll calls the refresh reads keep their own. Senate.gov can turn the script away (HTTP 403); then the Senate votes come from Voteview's free files, and each one is kept only when its yeas and nays match the result saved with the vote.
 - **Money from each funder:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for contributions and outside spending, plus the FEC's bulk files for earlier years (no key).
-- **Funders' positions:** the reviewed research (their scorecards, key-vote letters and public statements, for 35 groups). No key.
+- **Bundled gifts:** `FEC_API_KEY`, from each conduit PAC's own reports (`npm run funders:bundled`, then `node scripts/build-funders.mjs`).
+- **Funders' positions:** the reviewed research (their scorecards, key-vote letters and public statements, for 36 groups). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
 
 ### Super PAC Dependence Index 💸

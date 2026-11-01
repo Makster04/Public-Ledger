@@ -13,12 +13,12 @@ export const EXTRA_GROUPS={
 // this site (from each person's funders, research.json funderPos).
 export function groupInfo(data,key){
   const gp=(data.groupPos||[]).find(g=>g.key===key);
-  let pac=0,out=0;const people=new Set();
+  let pac=0,routed=0,out=0;const people=new Set();
   for(const p of [...(data.members||[]),...(data.cands||[]),...(data.featured||[])])for(const f of p.funderPos||[]){
-    if(f.key!==key)continue;const a=(f.pac||0),b=(f.for||0)+(f.against||0);pac+=a;out+=b;if(a+b>0)people.add(p.id);}
+    if(f.key!==key)continue;const a=(f.pac||0),r=(f.routed||0),b=(f.for||0)+(f.against||0);pac+=a;routed+=r;out+=b;if(a+r+b>0)people.add(p.id);}
   const pacs=gp?new Set([...(gp.committees||[]),...(gp.fecIds||[]).map(f=>f.name)]).size||(gp.pacMatch||[]).length:0;
   return {key,org:gp?.org||BILL_GROUPS[key]?.org||EXTRA_GROUPS[key]?.org||key,about:GROUP_ABOUT[key]||EXTRA_GROUPS[key]?.about||null,
-    pacs,pac,out,people:people.size};
+    pacs,pac,routed,out,people:people.size};
 }
 
 const BASIS_FROM={key_vote_alert:'key vote',scorecard:'scorecard',statement:'statement'};

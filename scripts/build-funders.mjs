@@ -2,8 +2,10 @@
 //   - money: each group's PAC gifts to the campaign (the person's pac.rows, matched by the PAC names in the group's
 //     "committees" or "pacMatch") and its outside spending for and against them (out.cms, matched by the FEC IDs in
 //     "fecIds");
+//   - bundled gifts: donors' own gifts the group collected and forwarded through its PAC ("earmarked"), from
+//     research.json "bundled" (scripts/build-bundled.mjs), kept apart as "routed";
 //   - positions: each saved roll call the group took a side on (groupPos[].positions), next to the person's vote.
-// A person gets an entry for each group that gave to the campaign or spent on the race. Run it after adding a group, a
+// A person gets an entry for each group that gave to the campaign, bundled gifts to it or spent on the race. Run it after adding a group, a
 // group's position, a saved vote or new FEC rows:
 //   node scripts/build-funders.mjs           rewrite public/research.json and list what changed
 //   node scripts/build-funders.mjs --check   list what would change, without writing
@@ -29,7 +31,8 @@ export function personFunders(data,p){
     const ids=new Set((g.fecIds||[]).map(f=>f.id));let pac=0,pacN=0,fr=0,ag=0;const spenders=[];
     for(const x of p.pac?.rows||[])if(isGroupPac((data.pacNames||[])[x[0]],g)){pac+=x[1]||0;pacN++;}
     for(const x of p.out?.cms||[]){const cm=(data.ie?.cm||[])[x[0]];if(!cm||!ids.has(cm[0]))continue;fr+=x[1]||0;ag+=x[2]||0;if((x[1]||0)+(x[2]||0)&&!spenders.includes(cm[1]))spenders.push(cm[1]);}
-    if(!(pac||fr||ag))continue;
+    const b=data.bundled?.people?.[p.id]?.[g.key],routed=b?.routed||0;
+    if(!(pac||fr||ag||routed))continue;
     const compared=[];
     for(const q of g.positions||[]){
       const hit=votes.get(q.voteId),cast=hit?.v.pos?.[p.id];
@@ -37,11 +40,12 @@ export function personFunders(data,p){
       compared.push({voteId:q.voteId,short:hit.v.short,date:hit.v.date,chamber:hit.chamber,wanted:q.wanted,cast,match:matchOf(cast,q.wanted),basis:q.basis,scoredAs:q.scoredAs,src:q.src});
     }
     compared.sort((a,b)=>b.date.localeCompare(a.date));
-    out.push({key:g.key,org:g.org,status:g.status||'done',pac:cents(pac),pacN,for:cents(fr),against:cents(ag),spenders,compared,
+    out.push({key:g.key,org:g.org,status:g.status||'done',pac:cents(pac),pacN,...(routed?{routed:cents(routed),routedN:b.n||0}:{}),for:cents(fr),against:cents(ag),spenders,compared,
       agree:compared.filter(c=>c.match===true).length,n:compared.filter(c=>c.match!==null).length});
   }
   const order=new Map((data.groupPos||[]).map((g,i)=>[g.key,i]));
-  return out.sort((a,b)=>(b.pac+b.for+b.against)-(a.pac+a.for+a.against)||order.get(a.key)-order.get(b.key));
+  const money=f=>f.pac+(f.routed||0)+f.for+f.against;
+  return out.sort((a,b)=>money(b)-money(a)||order.get(a.key)-order.get(b.key));
 }
 export const people=data=>[...(data.members||[]),...(data.cands||[]),...(data.featured||[])];
 
@@ -51,8 +55,8 @@ export function funderChanges(data){
   for(const p of people(data)){
     const old=new Map((p.funderPos||[]).map(f=>[f.key,f])),now=new Map(personFunders(data,p).map(f=>[f.key,f]));
     for(const [k,f] of now){const o=old.get(k);
-      if(!o)lines.push(`${p.id}: + ${f.org} (gave $${f.pac}, for $${f.for}, against $${f.against}; ${f.compared.length} votes)`);
-      else{const d=['pac','for','against'].filter(x=>o[x]!==f[x]).map(x=>`${x} $${o[x]} → $${f[x]}`);
+      if(!o)lines.push(`${p.id}: + ${f.org} (gave $${f.pac}${f.routed?`, bundled $${f.routed}`:''}, for $${f.for}, against $${f.against}; ${f.compared.length} votes)`);
+      else{const d=['pac','routed','for','against'].filter(x=>(o[x]||0)!==(f[x]||0)).map(x=>`${x} $${o[x]||0} → $${f[x]||0}`);
         if(o.compared?.length!==f.compared.length||o.status!==f.status)d.push(`votes ${o.compared?.length||0} → ${f.compared.length}${o.status!==f.status?`, ${o.status} → ${f.status}`:''}`);
         if(d.length)lines.push(`${p.id}: ${f.org}: ${d.join('; ')}`);}}
     for(const [k,o] of old)if(!now.has(k))lines.push(`${p.id}: − ${o.org}`);

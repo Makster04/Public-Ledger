@@ -56,7 +56,7 @@ export function topDonors(pacRows,names,smallDollar,n=TOP_DONORS){
 // Vote Donor Alignment: of the votes on bills a donor took a public position on (scorecards, key-vote letters), the
 // share that went the donor's way. Only groups that gave to the campaign count; missed votes count for nothing.
 export function voteDonorAlignment(funders){
-  const rows=(funders||[]).filter(f=>f.pac>0).map(f=>{const c=(f.compared||[]).filter(x=>x.match===true||x.match===false);return {org:f.org,key:f.key,n:c.length,same:c.filter(x=>x.match).length};}).filter(r=>r.n);
+  const rows=(funders||[]).filter(f=>f.pac>0||f.routed>0).map(f=>{const c=(f.compared||[]).filter(x=>x.match===true||x.match===false);return {org:f.org,key:f.key,n:c.length,same:c.filter(x=>x.match).length};}).filter(r=>r.n);
   const n=rows.reduce((t,r)=>t+r.n,0),same=rows.reduce((t,r)=>t+r.same,0);
   return {pct:n?Math.round(same/n*100):null,n,same,rows};
 }
@@ -64,7 +64,8 @@ export function voteDonorAlignment(funders){
 // Donor Loyalty Index 🤝: how much more often they vote the way their funders wanted than the rest of their party does on
 // the same votes. For each funder that gave to the campaign or spent for them and took public positions on votes they cast
 // (scorecards, key-vote letters): their rate of voting its way, minus their party's rate on those votes from each roll
-// call's party totals (their own vote left out), in points. Funders are weighted by the money each gave or spent for them.
+// call's party totals (their own vote left out), in points. Funders are weighted by the money each gave, bundled (donors'
+// gifts forwarded through its PAC) or spent for them.
 // Only the part above the party average counts, up to the ceiling. An independent is compared with the party they caucus
 // with (both sitting independents caucus with the Democrats). tallies: {voteId: {R:{Yea,Nay}, D:{...}, I:{...}}}.
 export const DONOR_LOYALTY={ceiling:25,minVotes:5}; // (placeholder) 25 points above the party average scores 100
@@ -72,7 +73,7 @@ const yesNo=v=>({yea:'Yea',aye:'Yea',yes:'Yea',guilty:'Yea',nay:'Nay',no:'Nay','
 export function donorLoyalty(funders,party,tallies){
   const P=party==='I'?'D':party,rows=[];let positions=0;
   for(const f of funders||[]){
-    const money=(f.pac||0)+(f.for||0);if(!(money>0))continue;
+    const money=(f.pac||0)+(f.routed||0)+(f.for||0);if(!(money>0))continue;
     const votes=[];
     for(const c of f.compared||[]){
       if(c.match!==true&&c.match!==false)continue;positions++;
