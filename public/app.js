@@ -1,5 +1,5 @@
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
-import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS} from './grades.js';
+import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS} from './grades.js';
 import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
@@ -8,6 +8,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
+import {holdingsLead} from './holdings.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -1013,7 +1014,8 @@ async function fillNetWorth(root){
   for(const el of root.querySelectorAll('.ov-networth[data-networth]')){
     let x;try{x=await window.RecordLive.netWorth(el.dataset.networth);}catch{continue;}
     if(!x||!el.isConnected)continue;el.hidden=false;
-    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper; not read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}. <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>`;
+    const lead=holdingsLead(x),held=lead?(lead.status==='stocks'?` It lists ${lead.stocks} individual stock${lead.stocks===1?'':'s'} or option${lead.stocks===1?'':'s'}.`:lead.status==='blind-trust'?' It lists a qualified blind trust.':' It lists no individual stocks.'):'';
+    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper; not read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}.${held} <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>`;
   }
 }
 
@@ -1621,14 +1623,22 @@ function presidentTradesHTML(s){
     <p class="small muted" style="margin:8px 0 0">The full list: ${ext(x.profile||EXEC.source,`${s.short} on Disclosed Capitol`)}</p></div>
   <p class="small muted" style="margin:12px 0 0"><b>Source:</b> ${ext(EXEC.source,EXEC.credit)}, under ${ext(EXEC.licenseUrl,EXEC.license)}, from ${esc(EXEC.from)}. ${esc(EXEC.changes)} Dataset refreshed ${fmtDate(EXEC.refreshed)}.</p>`;
 }
+// How they hold investments (step 8), from the reviewed research: a qualified blind trust or no individual stocks.
+function holdingsLine(s){
+  const h=s.holdings;if(!h||!HOLDINGS[h.status])return '';
+  const src=[h.src,h.also].filter(Boolean).map(x=>`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a>`).join(' · ');
+  const rule=h.status==='blind-trust'?'An independent trustee decides what to buy and sell and doesn\'t tell them, so trades made inside the trust don\'t count in the trading indexes. Trades they report outside it, or made before it, count as usual.'
+    :'Trades in funds don\'t count as conflicts or single-stock activity. Stock trades from before they sold count as usual.';
+  return `<div class="note small" style="margin:6px 0 10px">${points([[esc(HOLDINGS[h.status]),`Since ${esc(h.since)}. ${esc(h.note||'')} ${src}`],['What it changes',rule],['What doesn\'t count','A managed or "discretionary" account, an adviser who trades without asking, or a trust that isn\'t a qualified blind trust. Those trades are still theirs to report, and count in full.'],['No bonus','The Ethics grade starts at 100 and only loses points.']],'small')}</div>`;
+}
 function tradingHTML(s){
   const t=personTrading(s), sec=overseenSectors(s);
   const head=`<section class="recsec" id="eth-trades"><div class="kicker">Stock trading</div><h3 style="margin-top:4px">Stock trades</h3>`;
   if(s.office)return head+presidentTradesHTML(s)+'</section>';
   if(!s.bioguide)return head+`<p class="small muted" style="margin:4px 0 0"><b>No trading data:</b> these reports cover members of Congress only. State rules vary.</p></section>`;
-  if(!t.rows.length)return head+`<p class="small muted" style="margin:4px 0 0">No reviewed stock trades for ${esc(s.short)} yet. New trades from official reports show under Latest official records below. They count toward the grade only after review.</p></section>`;
+  if(!t.rows.length)return head+holdingsLine(s)+`<p class="small muted" style="margin:4px 0 0">No reviewed stock trades for ${esc(s.short)} yet. New trades from official reports show under Latest official records below. They count toward the grade only after review.</p></section>`;
   const e=personEthics(s),ip=e.insider.parts,dp=e.dodger.parts,n=v=>`${Math.round(v)}%`;
-  return head+`<div style="margin:0 0 8px">${points([['Insider Trading Index 📈',`${e.insider.index??'—'}${e.insider.why?` (${esc(e.insider.why)})`:''}. Committee conflicts ${n(ip.conflicts)} of the dollars in single stocks, near related votes ${n(ip.nearVotes)}, in donors' companies ${n(ip.donors)}, single-stock activity ${Math.round(ip.activity)}.`],['Stock Disclosure Dodger Index 🙈',`${e.dodger.index??'—'}${e.dodger.why?` (${esc(e.dodger.why)})`:''}. Trade reports late or missing: ${n(dp.trades)}${dp.annual!=null?`; annual disclosures late: ${n(dp.annual)}`:'; annual disclosures are not on file yet'}.`],['Filing deadline',`Trade reports are due within ${LATE_DAYS} days of a trade.`],['Their committees oversee',sec.length?esc(sec.join(', ')):'Not recorded yet, so no trade counts as a conflict.'],['Family trades','Spouse and dependent-child trades are included and labeled.'],['Returns','Not scored.']],'small')}</div>
+  return head+holdingsLine(s)+`<div style="margin:0 0 8px">${e.inTrust?`<p class="small" style="margin:0 0 6px"><b>Left out:</b> ${e.inTrust} trade${e.inTrust===1?'':'s'} made inside the qualified blind trust.</p>`:''}${points([['Insider Trading Index 📈',`${e.insider.index??'—'}${e.insider.why?` (${esc(e.insider.why)})`:''}. Committee conflicts ${n(ip.conflicts)} of the dollars in single stocks, near related votes ${n(ip.nearVotes)}, in donors' companies ${n(ip.donors)}, single-stock activity ${Math.round(ip.activity)}.`],['Stock Disclosure Dodger Index 🙈',`${e.dodger.index??'—'}${e.dodger.why?` (${esc(e.dodger.why)})`:''}. Trade reports late or missing: ${n(dp.trades)}${dp.annual!=null?`; annual disclosures late: ${n(dp.annual)}`:'; annual disclosures are not on file yet'}.`],['Filing deadline',`Trade reports are due within ${LATE_DAYS} days of a trade.`],['Their committees oversee',sec.length?esc(sec.join(', ')):'Not recorded yet, so no trade counts as a conflict.'],['Family trades','Spouse and dependent-child trades are included and labeled.'],['Returns','Not scored.']],'small')}</div>
   ${tradeChartsBlock(t.rows,sec,'eth-tr')}
   <div class="tablewrap"><table><thead><tr><th>Traded</th><th>Filed</th><th>Company</th><th>Type</th><th class="r">Amount</th><th>Owner</th><th>Checks</th></tr></thead><tbody>${t.rows.map(r=>`<tr><td class="mono">${esc(r.traded||'')}</td><td class="mono">${r.missing?'<b style="color:var(--crit)">not filed</b>':esc(r.filed||'')}${r.days!=null?`<div class="small muted">${r.days} days</div>`:''}</td><td>${esc(r.company||'')}${r.ticker?` <span class="mono muted">${esc(r.ticker)}</span>`:''}${r.sector?`<div class="small muted">${esc(r.sector)}</div>`:''}</td><td>${esc(r.type||'')}</td><td class="r">${esc(r.amount||'')}</td><td>${esc(TRADE_OWNER[r.owner]||r.owner||'')}</td><td>${r.late?'<span class="chip crit">Late</span> ':''}${r.conflict?'<span class="chip warn">Committee conflict</span>':''}${r.flag||r.nearVote?` <span class="chip ghost" title="${esc(r.flag||'')}">Near a related vote</span>`:''}${r.src?` <a class="small" href="${esc(r.src.u)}" target="_blank" rel="noopener">filing ↗</a>`:''}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
@@ -2312,6 +2322,7 @@ function renderMethod(sub){
       <li><b>Money in politics and congressional ethics:</b> a new Your match issue, the 16th: banning members' stock trading and lobbying after office, and overturning Citizens United. Sponsoring or cosponsoring one of the six bills on it counts as an action.</li>
       <li><b>Donor Loyalty 🤝 cap:</b> no single funder counts for more than all the others put together (at most half the weight), so one large funder with one position on file can't decide the number alone.</li>
       <li><b>Money pledges checked against the records:</b> 12 pledges on the Promises tabs (corporate PAC money, single-issue PAC money and stock-trading bans) now show what the FEC records, the bills' cosponsors and the votes on file say, under the reviewed verdict. Shown only.</li>
+      <li><b>Blind trusts and divestment:</b> a qualified blind trust now takes its trustee's trades out of the trading indexes, and "no individual stocks" is shown on the Insider Trading Index. Managed accounts aren't excused. Two statuses are reviewed so far (Ossoff and Hinson), and no grade changed.</li>
       <li><b>No grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
     </ul>
     <details class="tv"><summary>Earlier changes (October 28, 2026)</summary>
@@ -2423,6 +2434,7 @@ function renderMethod(sub){
           <li><b>Kind:</b> criminal × ${CASE_KIND.criminal} (indictments, convictions, guilty pleas), ethics or civil × ${CASE_KIND.ethics}, technical × ${CASE_KIND.technical} (such as an FEC fine for a late report, or a late stock disclosure).</li>
           <li><b>Age:</b> × ${CASE_AGE.factor} when the case was decided more than ${CASE_AGE.years} years before the reviewed research. Open cases always count in full.</li>
           <li><b>Insider Trading Index 📈:</b> committee conflicts 40% (the dollar share of single-stock trades in sectors their committees oversee, using the middle of each disclosed range), trades near related votes 25%, trades in donors' companies 20%, and single-stock activity 15% (trades a year, with 50 counting as 100). It needs 5 reviewed trades; no trades scores 0.</li>
+          <li><b>Blind trusts and divestment:</b> a qualified blind trust, certified by the House or Senate ethics committee, takes the trades its trustee makes out of both trading indexes, because the member neither chooses nor sees them. Trades they report outside it, or made before it, count as usual. Holding no individual stocks labels the index. A managed or "discretionary" account, an adviser who trades without asking, a spouse's account, or a trust that isn't a qualified blind trust is not excused: those trades count in full. Neither adds points; the grade starts at 100. Each status is reviewed and cited; the latest annual report only suggests one.</li>
           <li><b>Stock Disclosure Dodger Index 🙈:</b> trade reports filed after the ${LATE_DAYS}-day deadline or never 70%, and annual financial disclosures filed late 30%. It needs 3 required filings. A STOCK Act late-disclosure case moves here from the Legal Trouble Index once the person's trades are reviewed, so a late report never costs twice.</li>
           <li><b>Who counts:</b> spouse and dependent-child trades count and are labeled. A president's trades are listed on the Ethics tab, from OGE reports, but not scored. Other people not in Congress show "No trading data". Only reviewed trades count; new reports are listed for review first. Returns are never scored.</li>
         </ul></li>

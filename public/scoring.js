@@ -1,7 +1,7 @@
 // Each person's three reviewed grades (Promises delivered, Ethics, Workers > Profit) from the reviewed research, the
 // committee lists and the committee sectors. The page and the monthly recalculation (scripts/scores-monthly.mjs) both
 // use this, so they always agree. Your match is not here: it depends on each visitor's own choices.
-import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore} from './grades.js';
+import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore,ownTrades} from './grades.js';
 import {tradesInDonors} from './influence.js';
 
 export const voteBill=v=>billKeyFromText((v.bill||{}).measure);
@@ -32,7 +32,8 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={})
   // Donors: the PACs that gave to the campaign and the groups whose positions are compared, matched to traded companies.
   const donorsOf=s=>[...(s.pac?.rows||[]).map(r=>({org:(data.pacNames||[])[r[0]]})),...(s.funderPos||[]).map(g=>({org:g.org}))].filter(d=>d.org);
   const trading=s=>{const t=tradeChecks(s.trades,overseen(s));
-    return Object.assign(t,{covered:coveredBy(s),why:uncovered(s),annual:s.annualDisclosures||[],inDonors:new Set(tradesInDonors(t.rows,donorsOf(s)).map(x=>x.trade)).size});};
+    const own=ownTrades(t.rows,s.holdings);
+    return Object.assign(t,{covered:coveredBy(s),why:uncovered(s),annual:s.annualDisclosures||[],holdings:s.holdings||null,inDonors:new Set(tradesInDonors(own,donorsOf(s)).map(x=>x.trade)).size});};
   // Cases are aged against the date of the reviewed research ("asof"), so the page and the monthly log agree.
   const asOfYear=Number(String(data.asof||'').match(/\b(19|20)\d{2}\b/)?.[0])||null;
   return {
