@@ -67,7 +67,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(!env.FEC_API_KEY){console.error('Set FEC_API_KEY in .dev.vars first (see README, "Connect official data sources").');process.exit(1);}
   const file=new URL('../public/research.json',import.meta.url),data=JSON.parse(await fs.readFile(file,'utf8'));
   const nameLimit=Number((process.argv.find(a=>a.startsWith('--names='))||'--names=300').split('=')[1]);
-  const wait=()=>new Promise(r=>setTimeout(r,250)),get=async u=>{await wait();return requestSource(u,env);};
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  // Each request is tried up to three times (the FEC turns away bursts and sometimes times out), with a pause between.
+  const get=async u=>{for(let k=0;;k++){await sleep(250);try{return await requestSource(u,env);}catch(e){if(k>=2)throw e;await sleep(2000*3**k);}}};
+  const failed=[];
   const votes=new Map(),vote=(i,id)=>(votes.get(i)||votes.set(i,[]).get(i)).push(id);
   // 1. The FEC's processed PAC contributions to each campaign committee.
   for(const p of people(data)){
@@ -78,7 +81,11 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
         let url=`${FEC}schedules/schedule_a/?committee_id=${p.fecCmte}&two_year_transaction_period=${cycle}&line_number=F3-11C&per_page=100&sort=-contribution_receipt_date`;
         for(let page=0;url&&page<60;page++){const d=await get(url);records.push(...(d.results||[]).map(r=>({name:r.contributor_name,id:r.contributor_id})));url=fecNext(url,d);}
       }
-    }catch(e){console.log(`${p.id}: ${e.message}`);}
+    }catch(e){
+      // A read that failed partway is not used: a name could look like one committee only because the rest of the
+      // records weren't read. Its names keep the IDs an earlier run found.
+      failed.push(`${p.id}: ${e.message}`);console.log(`${p.id}: ${e.message}; its PAC names keep their earlier IDs`);continue;
+    }
     const m=matchIds(names,records);for(const [i,id] of m)vote(i,id);
     console.log(`${p.id}: ${m.size} of ${names.length} PAC names matched (${records.length} FEC records)`);
   }
@@ -99,6 +106,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   console.log(`\nMatched ${[...amount.keys()].filter(i=>kept[i]).length} of ${amount.size} PAC names, covering $${Math.round(matched).toLocaleString()} of $${Math.round(total).toLocaleString()} (${Math.round(matched/total*100)}%).`);
   const all=people(data).flatMap(p=>p.pac?.rows||[]),view={pacIds:kept,pacCommittees:committees};
   for(const k of pacKindTotals(view,all))console.log(`  ${k.label}: $${Math.round(k.total).toLocaleString()} (${k.n} contributions)`);
+  if(failed.length)console.log(`\n${failed.length} campaign${failed.length===1?'':'s'} couldn't be read after three tries; run it again later to match their PACs:\n  ${failed.join('\n  ')}`);
   const missing=[...amount].filter(([i])=>!kept[i]).sort((a,b)=>b[1]-a[1]).slice(0,15);
   if(missing.length)console.log(`\nLargest unmatched:\n${missing.map(([i,a])=>`  ${data.pacNames[i]}: $${Math.round(a).toLocaleString()}`).join('\n')}`);
   if(!process.argv.includes('--check')){
