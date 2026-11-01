@@ -44,7 +44,11 @@ test('families gather the votes and positions: researched first, then bill sides
   const pro=by('117-hr-842');assert.ok(pro.work&&pro.keys.includes('116-hr-2474'),'versions come from the Workers > Profit bill too');
   assert.deepEqual(pro.votes.map(v=>v.id),['h-117-1-070','h-116-2-050'],'newest vote first');
   assert.ok(pro.positions.some(p=>p.group==='aflcio'&&p.from==='bill'));
-  assert.deepEqual(by('117-s-2938').positions.map(p=>`${p.group}:${p.pos}`),['nra:oppose'],'the NRA opposed the gun-safety law');
+  assert.deepEqual(by('117-s-2938').positions.map(p=>`${p.group}:${p.pos}`),['nra:oppose','giffords:support','everytown:support'],'the NRA opposed the gun-safety law; the gun-safety groups backed it');
+  // Each group's positions on saved votes come from its funder record, with the kind of source.
+  const ira=by('117-hr-5376');
+  assert.ok(ira.positions.some(p=>p.group==='phrma'&&p.pos==='oppose'&&p.from==='statement'&&p.vote==='117-2-325'));
+  assert.ok(ira.positions.some(p=>p.group==='cfg'&&p.pos==='oppose'&&p.from==='key vote'));
   const war=by('119-sjres-98');assert.equal(war.votes.length,4,'all four Venezuela war powers votes');
   // Laws come first by signing date; the rest by their latest vote.
   assert.ok(F.filter(e=>e.status==='law').every((e,i,a)=>!i||a[i-1].when>=e.when));
@@ -52,7 +56,9 @@ test('families gather the votes and positions: researched first, then bill sides
 });
 
 test('group details: advocacy groups have no PAC; PAC money and outside spending add up from the funders on file',()=>{
-  for(const k of Object.keys(EXTRA_GROUPS)){const g=groupInfo(D,k);assert.equal(g.pacs,0);assert.equal(g.pac+g.out,0);assert.ok(g.about);}
+  for(const k of Object.keys(EXTRA_GROUPS)){assert.ok(!D.groupPos.some(g=>g.key===k),`${k} has a funder record`);const g=groupInfo(D,k);assert.equal(g.pacs,0);assert.equal(g.pac+g.out,0);assert.ok(g.about);}
+  for(const g of D.groupPos)assert.ok(groupInfo(D,g.key).about,`${g.key} needs a description in orgs.js`);
+  const her=groupInfo(D,'heritage');assert.ok(her.pacs>0&&her.out>0&&her.pac===0,'Heritage Action spends through its super PAC and gives no PAC money');
   const lcv=groupInfo(D,'lcv');assert.ok(lcv.pacs>0&&lcv.out>0&&lcv.people>0);
   let pac=0;for(const p of [...D.members,...D.cands,...(D.featured||[])])for(const f of p.funderPos||[])if(f.key==='chamber')pac+=f.pac||0;
   assert.equal(groupInfo(D,'chamber').pac,pac);

@@ -111,6 +111,7 @@ async function main(){
     about:'Monthly money from each researched group to or about each profiled candidate, from FEC bulk files. See scripts/build-funder-history.mjs.',
     built:new Date().toISOString().slice(0,10),
     start:`${CYCLES[0]-1}-01-01`, ieBefore:IE_BEFORE, contribThrough, sources,
+    groups:D.groupPos.map(g=>g.key),   // the groups this file was built for, so the page can tell a new group from no money
     people:aggregate(items),
   };
   fs.writeFileSync(path.join(ROOT,'public','funder-history.json'),JSON.stringify(out));

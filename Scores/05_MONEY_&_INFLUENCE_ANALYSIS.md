@@ -54,7 +54,7 @@ Not a separate index:
 **Keys and sources:**
 - **Party totals:** the official Senate and House Clerk roll calls, no key. `npm run votes:party` (`scripts/build-vote-party.mjs`) reads them for the saved votes into `public/vote-party.json`, and new roll calls the refresh reads keep their own. Senate.gov can turn the script away (HTTP 403); then the Senate votes come from Voteview's free files, and each one is kept only when its yeas and nays match the result saved with the vote.
 - **Money from each funder:** `FEC_API_KEY` <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> for contributions and outside spending, plus the FEC's bulk files for earlier years (no key).
-- **Funders' positions:** the reviewed research (their scorecards and key-vote letters). No key.
+- **Funders' positions:** the reviewed research (their scorecards, key-vote letters and public statements, for 35 groups). No key.
 - **Votes:** Senate and House roll calls (no key), and `CONGRESS_API_KEY` for House votes from 2023 on.
 
 ### Super PAC Dependence Index 💸
