@@ -11,17 +11,17 @@ const D=JSON.parse(await fs.readFile(new URL('../public/research.json',import.me
 
 test('forwarded gifts are counted once, whether reported as one total line or as memo entries only',()=>{
   // A total line with each gift listed below it as a memo entry: the line counts, the memos don't add to it.
-  const a=conduitTotals([{disbursement_amount:3000,disbursement_description:'EARMARKED CONTRIBUTIONS FORWARDED'},
-    {disbursement_amount:1000,disbursement_description:'EARMARKED CONTRIBUTION',memo_code:'X'},{disbursement_amount:2000,memo_text:'Earmarked for candidate',memo_code:'X'},
-    {disbursement_amount:5000,disbursement_description:'CONTRIBUTION'}]);
-  assert.deepEqual(a,{routed:3000,n:2,direct:5000},'the PAC\'s own $5,000 check is kept apart');
+  const a=conduitTotals([{disbursement_amount:3000,disbursement_description:'EARMARKED CONTRIBUTIONS FORWARDED',disbursement_date:'2026-04-02T00:00:00'},
+    {disbursement_amount:1000,disbursement_description:'EARMARKED CONTRIBUTION',memo_code:'X',disbursement_date:'2026-03-30'},{disbursement_amount:2000,memo_text:'Earmarked for candidate',memo_code:'X',disbursement_date:'2026-04-01'},
+    {disbursement_amount:5000,disbursement_description:'CONTRIBUTION',disbursement_date:'2026-01-15'}]);
+  assert.deepEqual(a,{routed:3000,n:2,direct:5000,byMonth:{'2026-04':3000}},'the PAC\'s own $5,000 check is kept apart, and the months follow the line counted');
   // Memo entries only.
-  const b=conduitTotals([{disbursement_amount:250,disbursement_description:'Earmarked',memoed_subtotal:true},{disbursement_amount:750,disbursement_description:'earmarked',memo_code:'X'},
-    {disbursement_amount:-250,disbursement_description:'Earmarked refund',memo_code:'X'}]);
-  assert.deepEqual(b,{routed:750,n:3,direct:0},'a refund comes off');
-  assert.deepEqual(conduitTotals([]),{routed:0,n:0,direct:0});
+  const b=conduitTotals([{disbursement_amount:250,disbursement_description:'Earmarked',memoed_subtotal:true,disbursement_date:'2025-02-03'},{disbursement_amount:750,disbursement_description:'earmarked',memo_code:'X',disbursement_date:'2025-03-01'},
+    {disbursement_amount:-250,disbursement_description:'Earmarked refund',memo_code:'X',disbursement_date:'2025-03-20'}]);
+  assert.deepEqual(b,{routed:750,n:3,direct:0,byMonth:{'2025-02':250,'2025-03':500}},'a refund comes off, in its own month');
+  assert.deepEqual(conduitTotals([]),{routed:0,n:0,direct:0,byMonth:{}});
   // A memo entry that isn't an earmark is neither bundled nor a check.
-  assert.deepEqual(conduitTotals([{disbursement_amount:99,memo_code:'X',disbursement_description:'IN-KIND'}]),{routed:0,n:0,direct:0});
+  assert.deepEqual(conduitTotals([{disbursement_amount:99,memo_code:'X',disbursement_description:'IN-KIND'}]),{routed:0,n:0,direct:0,byMonth:{}});
   const u=new URL(conduitURL('C00797670','C00540500',2026));
   assert.equal(u.pathname,'/v1/schedules/schedule_b/');assert.equal(u.searchParams.get('recipient_committee_id'),'C00540500');assert.equal(u.searchParams.get('two_year_transaction_period'),'2026');
   assert.match(conduitLink('C00797670','C00540500',2026),/^https:\/\/www\.fec\.gov\/data\/disbursements\/\?/);

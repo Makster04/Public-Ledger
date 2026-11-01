@@ -11,7 +11,8 @@
 // conduits here.
 //
 // Writes research.json "bundled": {asOf, conduits: {group: [committee ID]}, people: {person: {group: {routed, n, direct,
-// cycles, src}}}}; scripts/build-funders.mjs adds "routed" to each person's funders from it. Rerun build-funders after.
+// byMonth, cycles, src}}}}; scripts/build-funders.mjs adds "routed" to each person's funders from it. Rerun build-funders
+// after.
 //   npm run funders:bundled             look up and rewrite public/research.json
 //   npm run funders:bundled -- --check  list what it found, without writing
 import fs from 'node:fs/promises';
@@ -22,15 +23,18 @@ import {cyclesOf} from './build-pac-types.mjs';
 const EARMARK=/earmark/i;
 const isMemo=r=>r.memo_code==='X'||r.memoed_subtotal===true||r.memoed_subtotal==='true';
 const cents=n=>Math.round(n*100)/100;
-// One conduit's disbursements to one campaign: the forwarded (earmarked) total, how many gifts, and the PAC's own checks.
+// One conduit's disbursements to one campaign: the forwarded (earmarked) total, how many gifts, the PAC's own checks, and
+// the forwarded total by month (YYYY-MM, from the disbursement date), which the money-pledge checks date against a pledge.
 export function conduitTotals(rows){
-  let lines=0,memos=0,nLines=0,nMemos=0,direct=0;
+  let lines=0,memos=0,nLines=0,nMemos=0,direct=0;const lineMonths={},memoMonths={};
+  const add=(by,r,amt)=>{const m=String(r.disbursement_date||'').slice(0,7);if(/^\d{4}-\d{2}$/.test(m))by[m]=cents((by[m]||0)+amt);};
   for(const r of rows||[]){
     const amt=Number(r.disbursement_amount)||0,earmark=EARMARK.test(`${r.disbursement_description||''} ${r.memo_text||''}`);
-    if(earmark){if(isMemo(r)){memos+=amt;nMemos++;}else{lines+=amt;nLines++;}}
+    if(earmark){if(isMemo(r)){memos+=amt;nMemos++;add(memoMonths,r,amt);}else{lines+=amt;nLines++;add(lineMonths,r,amt);}}
     else if(!isMemo(r))direct+=amt;
   }
-  return {routed:cents(nLines?lines:memos),n:nMemos||nLines,direct:cents(direct)};
+  const byMonth=nLines?lineMonths:memoMonths;
+  return {routed:cents(nLines?lines:memos),n:nMemos||nLines,direct:cents(direct),byMonth:Object.fromEntries(Object.entries(byMonth).sort())};
 }
 export const conduitURL=(conduit,cmte,cycle)=>`https://api.open.fec.gov/v1/schedules/schedule_b/?committee_id=${conduit}&recipient_committee_id=${cmte}&two_year_transaction_period=${cycle}&per_page=100&sort=-disbursement_date`;
 export const conduitLink=(conduit,cmte,cycle)=>`https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=${conduit}&recipient_committee_id=${cmte}&two_year_transaction_period=${cycle}`;

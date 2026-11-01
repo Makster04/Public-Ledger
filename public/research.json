@@ -12513,7 +12513,10 @@
             "u": "https://www.legistorm.com/pro_news/2835/sen-marshall-didnt-report-stock-transactions-on-time.html"
           },
           "assessment": "partial",
-          "note": "Current position and vote align; his own household's 2020 trades were reported late."
+          "note": "Current position and vote align; his own household's 2020 trades were reported late.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Medicaid in the 2025 reconciliation bill (H.R. 1)",
@@ -18290,7 +18293,10 @@
             "u": "https://www.aol.com/articles/senate-democrats-block-bill-limit-165534000.html"
           },
           "assessment": "unclear",
-          "note": "A long record of sponsoring a ban; opposed the 2026 Republican vehicle on stated grounds of scope and the attached voter-ID language."
+          "note": "A long record of sponsoring a ban; opposed the 2026 Republican vehicle on stated grounds of scope and the attached voter-ID language.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Corporate PAC money",
@@ -18311,7 +18317,10 @@
             }
           },
           "assessment": "consistent",
-          "note": "Consistent with the pledge as commonly defined (company PACs). He does accept trade-association and leadership-PAC money, which critics count as corporate-adjacent."
+          "note": "Consistent with the pledge as commonly defined (company PACs). He does accept trade-association and leadership-PAC money, which critics count as corporate-adjacent.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
         },
         {
           "topic": "Immigration enforcement — the Laken Riley Act",
@@ -22173,7 +22182,10 @@
             }
           },
           "assessment": "consistent",
-          "note": "Consistent with the pledge's terms; PAC money now comes mostly from fellow Democrats' leadership PACs and unions."
+          "note": "Consistent with the pledge's terms; PAC money now comes mostly from fellow Democrats' leadership PACs and unions.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
         },
         {
           "topic": "Importing cheaper prescription drugs from Canada",
@@ -22246,7 +22258,10 @@
             "u": "https://docquery.fec.gov/cgi-bin/forms/C00540500/"
           },
           "assessment": "changed",
-          "note": "He took substantial money routed through AIPAC's PAC in 2025, then announced a policy against single-issue PAC money in March 2026; his 2026 PAC receipts fit that change, though earmarked flows after September 2025 are not tallied here."
+          "note": "He took substantial money routed through AIPAC's PAC in 2025, then announced a policy against single-issue PAC money in March 2026; his 2026 PAC receipts fit that change, though earmarked flows after September 2025 are not tallied here.",
+          "pledge": {
+            "kind": "single-issue-pac"
+          }
         }
       ],
       "ethics": [
@@ -47373,7 +47388,10 @@
           "record": "",
           "recordSrc": null,
           "assessment": "consistent",
-          "note": "She co-introduced a congressional stock-trading ban in 2025 and voted for the House-passed ban in 2026."
+          "note": "She co-introduced a congressional stock-trading ban in 2025 and voted for the House-passed ban in 2026.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Independence from party leadership",
@@ -67271,7 +67289,11 @@
             "u": "https://www.fec.gov/data/candidate/S6MI00418/"
           },
           "assessment": "consistent",
-          "note": "An independent fact-check of his fundraising found the no-corporate-money claim accurate."
+          "note": "An independent fact-check of his fundraising found the no-corporate-money claim accurate.",
+          "pledge": {
+            "kind": "corporate-pac",
+            "since": null
+          }
         },
         {
           "topic": "Medical debt relief",
@@ -75174,7 +75196,10 @@
             "u": "https://www.kcrg.com/2026/09/05/fact-check-did-ashley-hinson-vote-ban-stock-trading-congress/"
           },
           "assessment": "consistent",
-          "note": "KCRG confirmed she voted for the House-passed bill, which restricts members' stock purchases but does not bar all holdings."
+          "note": "KCRG confirmed she voted for the House-passed bill, which restricts members' stock purchases but does not bar all holdings.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Iran war",
@@ -78974,7 +78999,10 @@
           "record": "",
           "recordSrc": null,
           "assessment": "consistent",
-          "note": "His cosponsorships, discharge-petition signature and reported vote match his stated position."
+          "note": "His cosponsorships, discharge-petition signature and reported vote match his stated position.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Home heating costs",
@@ -83581,7 +83609,11 @@
             "u": "https://chicago.suntimes.com/the-watchdogs/2025/11/21/juliana-stratton-us-senate-bid-march-primary-corporate-pac-money"
           },
           "assessment": "partial",
-          "note": "The Senate campaign itself returned the corporate PAC check it received, but a super PAC she formed and her earlier state campaigns took corporate PAC money."
+          "note": "The Senate campaign itself returned the corporate PAC check it received, but a super PAC she formed and her earlier state campaigns took corporate PAC money.",
+          "pledge": {
+            "kind": "corporate-pac",
+            "since": null
+          }
         },
         {
           "topic": "Cannabis revenue for communities affected by drug enforcement",
@@ -110546,7 +110578,10 @@
             "u": "https://www.forbes.com/sites/saradorn/2026/09/30/lawmaker-stock-trading-ban-fails-senate/"
           },
           "assessment": "consistent",
-          "note": "He sponsored and pushed for a vote on the restriction he described; the dispute was over how far the bill goes, not whether he acted."
+          "note": "He sponsored and pushed for a vote on the restriction he described; the dispute was over how far the bill goes, not whether he acted.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
         },
         {
           "topic": "Foreign ownership of farmland",
@@ -122009,7 +122044,10 @@
             "u": "https://www.spotlightpa.org/news/2026/08/midterm-elections-pac-money-workaround-federal-government/"
           },
           "assessment": "unclear",
-          "note": "No direct corporate PAC contributions were reported, but part of her PAC money came from committees funded partly by corporate PACs, which the pledge does not explicitly cover."
+          "note": "No direct corporate PAC contributions were reported, but part of her PAC money came from committees funded partly by corporate PACs, which the pledge does not explicitly cover.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
         }
       ],
       "ethicsSearched": "Searched the web for FEC complaints or enforcement, Hatch Act or ethics matters, lawsuits and investigations involving Conley, and reviewed her Wikipedia profile and campaign coverage (City & State, Nextgov, NOTUS/Spotlight PA). An FEC complaint, filed August 14, 2026 by Putnam County Republican chairman Andres Gil and alleging that a de facto campaign spokesperson was paid by outside groups (MD PAC and Precinct LLC), was found only in NRCC materials and a reprint of an NRCC release. It is not listed here because no independent source was found, and its FEC status is unknown. Republican ads criticizing her work for AI firms tied to Palantir are a campaign controversy, not a legal or ethics matter. The FEC enforcement (MUR) database was not searched directly. Only one statement-versus-action pairing was included because few dated, verifiable actions of hers outside her government roles were found within the research budget.",
@@ -201193,7 +201231,10 @@
       "id": "119-hr-7008",
       "title": "Stop Insider Trading Act (stock-trading limits for members of Congress)",
       "status": "not",
-      "stage": "Passed the House 232–198 on July 22, 2026; in the Senate, the motion to take it up fell short, 53–47 with 60 needed, on Sept. 30, 2026."
+      "stage": "Passed the House 232–198 on July 22, 2026; in the Senate, the motion to take it up fell short, 53–47 with 60 needed, on Sept. 30, 2026.",
+      "reform": [
+        "stock-trading"
+      ]
     },
     {
       "id": "119-hr-2550",
@@ -201308,6 +201349,9 @@
           "bill": "119-hr-5106",
           "date": "2025-09-03"
         }
+      ],
+      "reform": [
+        "stock-trading"
       ]
     },
     {
@@ -201351,6 +201395,12 @@
           "sponsor": true,
           "date": "2025-05-22"
         }
+      ],
+      "reform": [
+        "stock-trading"
+      ],
+      "versions": [
+        "117-s-3494"
       ]
     },
     {
@@ -201383,6 +201433,9 @@
           "bill": "119-s-1498",
           "date": "2025-07-30"
         }
+      ],
+      "reform": [
+        "stock-trading"
       ]
     },
     {
@@ -201415,6 +201468,10 @@
           "bill": "119-hr-358",
           "date": "2025-01-13"
         }
+      ],
+      "reform": [
+        "stock-trading",
+        "lobbying"
       ]
     },
     {
@@ -201440,6 +201497,9 @@
             "u": "https://www.govinfo.gov/app/details/BILLS-119hr3554ih"
           }
         }
+      ],
+      "reform": [
+        "lobbying"
       ]
     },
     {
@@ -201487,6 +201547,9 @@
           "bill": "119-hjres-121",
           "date": "2025-10-28"
         }
+      ],
+      "reform": [
+        "citizens-united"
       ]
     }
   ],

@@ -7,6 +7,7 @@ import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
+import {pledgeCheck} from './pledges.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -1781,6 +1782,37 @@ function trackerBlock(s){
     ${t.examples?.length?`<h4 style="margin:14px 0 6px">Examples</h4><ul class="pf-ex">${t.examples.map(x=>{const [cls,ic,lab]=PF_RATING[x.rating];return `<li><span class="chip ${cls}">${ic} ${lab}</span><div><b>${esc(x.title)}</b><div class="small" style="color:var(--ink-2);margin-top:2px">${esc(x.did)}</div><div class="small" style="margin-top:2px">${x.action?`<a href="${esc(x.action.u)}" target="_blank" rel="noopener">${esc(x.action.t)} ↗</a> · `:''}<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.urlT||'PolitiFact rating')} ↗</a></div></div></li>`}).join('')}</ul><p class="small muted" style="margin:6px 0 0">A sample of the ratings. The tally above counts all ${rated+waiting} promises.</p>`:''}
     <p class="small" style="margin:8px 0 0"><b>Source:</b> <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>${t.also?` · <a href="${esc(t.also.u)}" target="_blank" rel="noopener">${esc(t.also.t)} ↗</a>`:''}</p></div>`}).join('')}`;
 }
+// Under a money pledge (a statement tagged "pledge"): what the records on file show now (public/pledges.js). Shown only;
+// the reviewed verdict above it is the one the Promise score counts.
+const PLEDGE_CHIP={kept:['good','✓'],'not-kept':['crit','✕'],mixed:['warn','◐'],against:['warn','◐'],waiting:['neutral','…'],none:['neutral','…']};
+function pledgeBlock(s,x){
+  const c=pledgeCheck(DATA,s,x);if(!c)return '';
+  const [cls,icon]=PLEDGE_CHIP[c.outcome];
+  // Only the reports on file are read, so "after the pledge" names the dates they cover.
+  const when=c.span?`in the ${c.span.n} report${c.span.n===1?'':'s'} on file${c.since?' after the pledge':''} (${period(c.span.start,c.span.end)})`:c.since?`in the reports on file after ${fmtDate(c.since)}`:'in the reports on file';
+  const pacList=rows=>{const top=rows.slice().sort((a,b)=>b.amount-a.amount);
+    return `<ul class="list small" style="margin:4px 0 0">${top.slice(0,6).map(r=>`<li>${orgName(r.name,ORGS.about(r.name,'pac'))}: ${fmtFull(r.amount)}${r.report?` (${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.report)} ↗</a>`:esc(r.report)})`:''}</li>`).join('')}${top.length>6?`<li>${top.length-6} more, on the Money &amp; Influence tab</li>`:''}</ul>`;};
+  let body;
+  if(c.totals){
+    const corp=c.kind==='corporate-pac',n=c.counted.after.length;
+    body=points([
+      [corp?'Company PACs':'Ideological PACs',`${n?`${fmtFull(c.totals.after)} from ${n} contribution${n===1?'':'s'} ${when}`:`none ${when}`}${corp?'. These are PACs the FEC records as sponsored by a corporation.':'. These are PACs in this app\'s "ideological, single-issue and advocacy" sector, assigned from their names.'}${n?pacList(c.counted.after):''}`],
+      c.totals.during?['In the report covering the pledge date',`${fmtFull(c.totals.during)}. A report can't be split by day, so it is shown here and decides nothing.`]:null,
+      c.totals.beside?['Trade and membership groups\' PACs',`${fmtFull(c.totals.beside)} ${when}. Listed, not counted: they are funded by a group's members, not by one company.`]:null,
+      c.totals.unknown?['No FEC type on file yet',`${fmtFull(c.totals.unknown)} from ${c.unknown.after.length+c.unknown.during.length} contribution${c.unknown.after.length+c.unknown.during.length===1?'':'s'} ${when}. These PACs haven't been matched to their FEC registration yet, so a company's PAC can't be told apart from a trade group's.`]:null,
+      ...c.bundled.map(b=>[`Bundled through ${esc(b.org)}`,`${fmtFull(b.amount)} ${b.when==='undated'?'(the months weren\'t saved, so it decides nothing)':b.when==='during'?'in the month of the pledge (decides nothing)':b.when}. <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`]),
+      c.refunded.length?['Returned',c.refunded.map(r=>`${esc(r.name)} ${fmtFull(r.amount)}`).join('; ')+', not counted.']:null,
+      ['How it\'s checked',`Each FEC report that starts on or after the pledge date counts${c.since?'':' (here, every report on file, because the statement covers the whole campaign)'}. ${corp?'Only PACs sponsored by a corporation count; leadership PACs, unions and trade groups don\'t.':'Gifts a group bundled from its donors through its PAC count too.'}`]],'small');
+  }else{
+    const a=c.actions;
+    body=a.length?`<ul class="list small" style="margin:4px 0 0">${a.map(r=>`<li><b>${r.way==='for'?'Backed':'Against'}:</b> ${esc(r.what)} ${esc(r.measure)}, ${esc(r.title)}${r.date?` (${fmtDate(r.date)})`:''}. <a href="${esc(r.src.u)}" target="_blank" rel="noopener">${esc(r.src.t)} ↗</a></li>`).join('')}</ul>`
+      :`<p class="small" style="margin:4px 0 0">No sponsorship, cosponsorship or vote on the ${c.bills.length} bill${c.bills.length===1?'':'s'} on file for this.</p>`;
+    body+=points([['How it\'s checked',`Sponsoring, cosponsoring or voting for one of the bills on the Bills page that would ${c.kind==='stock-trading'?'ban or limit members\' stock trading':c.kind==='lobbying'?'ban lobbying by former members':'overturn Citizens United'} counts as backing it. A vote against one is weighed with the reason given (for example, a section the bill carried on something else), so it is reviewed rather than counted as a broken pledge.`]],'small');
+  }
+  return `<div class="note small" style="margin-top:12px"><div class="k" style="margin-bottom:6px"><b>Checked against the records on file · ${esc(c.label)}</b> <span class="chip ${cls}">${icon} ${esc(c.outcomeLabel)}</span></div>${body}
+    ${c.conflict?`<p class="small" style="margin:8px 0 0"><b>Flagged for review:</b> the records point the other way from the reviewed verdict above. The reviewed verdict is still the one counted until it's checked again.</p>`:''}
+    <p class="small muted" style="margin:6px 0 0">Shown only. The verdict above is the reviewed one, and it is the one the grade counts.</p></div>`;
+}
 function panePromises(s,pane){
   const pr=SCORER.promises(s), out=pr.notCounted, pf=!!(s.promiseTrackers||[]).length;
   const detail=pf&&pr.pct!=null?`${pr.kept} of ${pr.clear} promises with a final PolitiFact rating kept, ${pr.half} compromises, ${pr.broken} broken.`:pr.pct!=null?`${pr.kept} of ${pr.clear} clear checks kept${pr.half?`, ${pr.half} partly kept or changed over time`:''}${pr.broken?`, ${pr.broken} contradicted by the record`:''}.`:pr.total?`${pr.clear} clear check${pr.clear===1?'':'s'} so far; a grade needs ${MIN_CHECKS}.`:'No statements checked yet.';
@@ -1811,6 +1843,7 @@ function panePromises(s,pane){
     ${x.record?`<div class="small" style="margin-top:10px;color:var(--ink-2)"><b>Context:</b> ${esc(x.record)} ${x.recordSrc?`<a href="${esc(x.recordSrc.u)}" target="_blank" rel="noopener">${esc(x.recordSrc.t)} ↗</a>`:''}</div>`:''}
     ${x.unacted?`<div class="small" style="margin-top:10px;color:var(--ink-2)"><b>Not acted on by the end of the term</b>${x.unacted.date?` (${esc(x.unacted.date)})`:''}: ${esc(x.unacted.reason||'')}</div>`:''}
     <div class="verdict"><span class="chip ${cls}">${AICON[x.assessment]} ${lab}</span><div class="note">${esc(x.note)}</div></div>
+    ${pledgeBlock(s,x)}
   </article>`}).join('')}`}
   <section id="live-records" style="margin-top:28px"></section>`;
   window.RecordLive.profile(s,pane.querySelector('#live-records'),['crec-day','hearings','statements','votesmart','wayback','factcheck','news']);
@@ -2278,6 +2311,7 @@ function renderMethod(sub){
       <li><b>Net worth:</b> a range from each sitting member's latest annual financial disclosure, on the Ethics tab and the Overview's ethics card (see "Ethics and compliance" below). Shown only.</li>
       <li><b>Money in politics and congressional ethics:</b> a new Your match issue, the 16th: banning members' stock trading and lobbying after office, and overturning Citizens United. Sponsoring or cosponsoring one of the six bills on it counts as an action.</li>
       <li><b>Donor Loyalty 🤝 cap:</b> no single funder counts for more than all the others put together (at most half the weight), so one large funder with one position on file can't decide the number alone.</li>
+      <li><b>Money pledges checked against the records:</b> 12 pledges on the Promises tabs (corporate PAC money, single-issue PAC money and stock-trading bans) now show what the FEC records, the bills' cosponsors and the votes on file say, under the reviewed verdict. Shown only.</li>
       <li><b>No grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
     </ul>
     <details class="tv"><summary>Earlier changes (October 28, 2026)</summary>
@@ -2380,6 +2414,7 @@ function renderMethod(sub){
           <li><b>Left out:</b> ambiguous checks, outcome checks, promises with no related bill yet, and vague goals such as "fight for families."</li>
           <li><b>Needed:</b> ${MIN_CHECKS} counted checks. True campaign promises are labeled "Promise".</li>
           <li><b>For a president:</b> PolitiFact's promise trackers are used instead (the Trump-O-Meter and MAGA-Meter for Donald Trump). Promise Kept counts 1, Compromise ½ and Promise Broken 0. Stalled and In the Works wait for a final rating.</li>
+          <li><b>Money pledges:</b> a pledge to refuse corporate PAC money or single-issue PAC money, or to back a ban on members' stock trading, a lobbying ban for former members or overturning Citizens United, is checked again against the records on file each time the page loads. Company PACs come from the FEC's PAC types, counted from the first report that starts on or after the pledge (trade-association PACs are listed, not counted). Bans come from the bills' sponsors, cosponsors and votes. The result is shown under the reviewed verdict and never replaces it; where the records point the other way, the check is flagged for the next review.</li>
         </ul></li>
       <li><b>Ethics:</b> 100 − Legal Trouble Index − a tenth of the Insider Trading Index − a tenth of the Stock Disclosure Dodger Index, rounded. It never goes below 0, and an index without enough data costs nothing.
         <ul class="list">
