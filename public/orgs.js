@@ -43,6 +43,7 @@ export const GROUP_ABOUT={
   phrma:'Trade association of brand-name drug companies.',
   sba:'National anti-abortion group (formerly the Susan B. Anthony List) that backs anti-abortion candidates.',
   everytown:'Gun-safety advocacy group, the umbrella for Moms Demand Action and Students Demand Action.',
+  jstreet:'Liberal pro-Israel advocacy group that backs a two-state solution; its PAC, JStreetPAC, bundles supporters\' donations to candidates.',
 };
 // Well-known committees by name (compared without case or punctuation).
 const NAMED_ABOUT={

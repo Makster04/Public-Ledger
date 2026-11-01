@@ -196640,6 +196640,9 @@
       ],
       "pacMatch": [
         "^Club for Growth"
+      ],
+      "conduits": [
+        "C00432260"
       ]
     },
     {
@@ -197438,6 +197441,9 @@
       "positions": [],
       "pacMatch": [
         "^Senate Conservatives Fund"
+      ],
+      "conduits": [
+        "C00448696"
       ]
     },
     {
@@ -197716,7 +197722,8 @@
       "key": "emily",
       "org": "EMILY's List",
       "committees": [
-        "Women Vote"
+        "Women Vote",
+        "EMILY's List"
       ],
       "scorecards": [],
       "status": "done",
@@ -197727,12 +197734,19 @@
         {
           "id": "C00473918",
           "name": "Women Vote"
+        },
+        {
+          "id": "C00193433",
+          "name": "EMILY's List"
         }
       ],
       "pacMatch": [
         "^Emily'?s List"
       ],
-      "positions": []
+      "positions": [],
+      "conduits": [
+        "C00193433"
+      ]
     },
     {
       "key": "acu",
@@ -197813,6 +197827,9 @@
             "u": "https://aipac.org/press-release/america-stands-with-israel-congress-approves-historic-aid-package"
           }
         }
+      ],
+      "conduits": [
+        "C00797670"
       ]
     },
     {
@@ -198166,6 +198183,52 @@
           "src": {
             "t": "Everytown: Massive Victory for Gun Safety: Everytown, Moms Demand Action Celebrate Senate Passage of Bipartisan Safer Communities Act",
             "u": "https://www.everytown.org/press/massive-victory-for-gun-safety-everytown-moms-demand-action-celebrate-senate-passage-of-bipartisan-safer-communities-act/"
+          }
+        }
+      ]
+    },
+    {
+      "key": "jstreet",
+      "org": "J Street",
+      "committees": [
+        "JStreetPAC"
+      ],
+      "scorecards": [],
+      "status": "done",
+      "notFound": "J Street publishes no vote-by-vote scorecard that could be read; positions come from its statements. Only the 2024 aid package was checked.",
+      "dropped": [],
+      "nPositions": 2,
+      "fecIds": [
+        {
+          "id": "C00441949",
+          "name": "JStreetPAC"
+        }
+      ],
+      "pacMatch": [
+        "^J ?Street"
+      ],
+      "conduits": [
+        "C00441949"
+      ],
+      "positions": [
+        {
+          "voteId": "118-2-154",
+          "wanted": "Yea",
+          "basis": "statement",
+          "scoredAs": "Backed the aid package for Ukraine, Israel and Taiwan, with humanitarian aid for Gaza, as \"a step forward\"",
+          "src": {
+            "t": "J Street: Statement on House Passage of National Security Supplemental (Apr. 20, 2024)",
+            "u": "https://jstreet.org/press-releases/statement-on-house-passage-of-national-security-supplemental/"
+          }
+        },
+        {
+          "voteId": "h-118-2-151",
+          "wanted": "Yea",
+          "basis": "statement",
+          "scoredAs": "Backed the House package, including the aid for Ukraine",
+          "src": {
+            "t": "J Street: Statement on House Passage of National Security Supplemental (Apr. 20, 2024)",
+            "u": "https://jstreet.org/press-releases/statement-on-house-passage-of-national-security-supplemental/"
           }
         }
       ]
