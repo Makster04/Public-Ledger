@@ -190,6 +190,45 @@ export function ethicsScore(ethics,trading={},{asOfYear=null}={}){
     late:rows.filter(r=>r.late).length,conflict:rows.filter(r=>r.conflict).length};
 }
 
+// ---------- Corporation Compromised Index 🏢 (step 9) ----------
+// How much of their campaign money comes from businesses' PACs, and how much more often they side with business funders
+// than their own party does. 0-100, higher meaning more. Four parts; a part without data drops out and the others are
+// reweighted, but the PAC share is required (no campaign money on file: no index).
+//   pacShare (35%)       business PACs' money ÷ campaign funds raised; 20% scores 100. A business PAC is one the FEC
+//                        records as sponsored by a corporation, a trade association or a cooperative (public/pac-types.js);
+//                        one not matched to its FEC record counts by the sector this app assigns from its name.
+//   employees (10%)      giving by employees of the companies among their top 20 donor organizations ÷ campaign funds
+//                        raised; 10% scores 100. Not in the reviewed research yet, so it drops out.
+//   businessVotes (35%)  on votes where a business funder that gave to the campaign took a public side, how much more often
+//                        they voted its way than their party did (Donor Loyalty's method, PAC and bundled money only); 25
+//                        points above the party scores 100. Needs 5 compared votes.
+//   lobbiedBills (20%)   of the Workers > Profit bills a top donor organization lobbied on, the share where they took the
+//                        Profit side; needs 3. Not in the reviewed research yet, so it drops out.
+// Outside spending is left out: candidates can't control it.
+// In the Workers > Profit grade: 75% the bills + 25% (100 − this index), once both exist.
+export const CORP_COMPROMISED={weights:{pacShare:0.35,employees:0.10,businessVotes:0.35,lobbiedBills:0.20},pacCeiling:20,employeeCeiling:10,voteCeiling:25,minLobbied:3,inGrade:0.25};
+// businessPac and receipts: dollars over the same period; employees: dollars or null; businessVotes: Donor Loyalty's
+// result for the business funders ({index, diff, n}); lobbied: {profit, n} or null.
+export function corporationCompromised({businessPac=null,receipts=null,employees=null,businessVotes=null,lobbied=null}={}){
+  const C=CORP_COMPROMISED,parts={pacShare:null,employees:null,businessVotes:null,lobbiedBills:null};
+  const share=businessPac!=null&&receipts>0?businessPac/receipts*100:null;
+  if(share!=null)parts.pacShare=ceiling(share,C.pacCeiling);
+  if(employees!=null&&receipts>0)parts.employees=ceiling(employees/receipts*100,C.employeeCeiling);
+  if(businessVotes?.index!=null)parts.businessVotes=businessVotes.index;
+  if(lobbied&&lobbied.n>=C.minLobbied)parts.lobbiedBills=pct(lobbied.profit,lobbied.n);
+  if(parts.pacShare==null)return {index:null,why:'No campaign money on file',parts,used:[],share:null};
+  const used=Object.keys(C.weights).filter(k=>parts[k]!=null),w=used.reduce((t,k)=>t+C.weights[k],0);
+  const raw=used.reduce((t,k)=>t+C.weights[k]*parts[k],0)/w;
+  return {index:Math.round(raw),raw,why:null,parts,used,weights:Object.fromEntries(used.map(k=>[k,C.weights[k]/w])),share:Math.round(share*100)/100};
+}
+// The Workers > Profit grade: the bills' score (pvpScore) blended with the index when both exist; otherwise the bills
+// alone (an index without data costs nothing, as on Ethics). billsPct keeps the bills' own score.
+export function workersOverProfit(v,cci){
+  const C=CORP_COMPROMISED,bills=v?.pct??null,on=bills!=null&&cci?.index!=null;
+  const raw=on?(1-C.inGrade)*bills+C.inGrade*(100-cci.index):bills;
+  return Object.assign({},v,{billsPct:bills,cci:cci||null,blended:on,raw,pct:raw==null?null:Math.round(raw)});
+}
+
 // ---------- Workers > Profit bill scores ----------
 // Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts:
 //   Who gains (50%): a cited nonpartisan analysis (CBO, JCT, the Tax Policy Center or the Penn Wharton Budget Model),

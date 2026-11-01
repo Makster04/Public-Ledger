@@ -11,7 +11,7 @@ Each politician gets four graded scores, shown as a letter grade with the percen
 | Ideology Match | Your match | How closely the politician's record matches the visitor's own views | 3 issues with evidence, covering at least half of the visitor's total importance |
 | Promise | Promises delivered | Whether what they said matches what they did | 3 counted checks |
 | Ethics | Ethics | Documented ethics and legal problems, plus stock-trading disclosures and conflicts | None: "none located" scores 100% |
-| Workers > Profit | Workers > Profit | Whether their record favors lower- and middle-income households or the wealthy and corporations | 3 scored actions on marked bills |
+| Workers > Profit | Workers > Profit | Whether their record favors lower- and middle-income households or the wealthy and corporations, with a quarter from how much they rely on and side with business money | 3 scored actions on marked bills |
 
 ### Grade scale
 
@@ -269,6 +269,12 @@ Each action carries its Rule 1 weight and takes a side as Rule 1 describes, and 
 
 ```latex
 \text{Workers > Profit} = \frac{\text{People-leaning points}}{\text{People-leaning points} + \text{Profit-leaning points}} \times 100
+```
+
+Since Nov. 1, 2026 that is three quarters of the grade; the other quarter is 100 minus the Corporation Compromised Index 🏢 (step 9), which measures how much of their campaign money comes from businesses' PACs (the share of funds raised; 20% scores 100) and how much more often they vote with business funders than their party does (25 points above scores 100). Parts without reviewed data drop out. Without the index (no campaign money on file, or a president), the bills count alone. Full design: [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md).
+
+```latex
+\text{Workers > Profit} = 0.75 \times \text{bills score} + 0.25 \times (100 - \text{Corporation Compromised Index})
 ```
 
 **Example:** a Nay on the American Rescue Plan Act (+75) and on the Inflation Reduction Act (+75) adds 1.5 Profit-leaning points, and a Nay on the One Big Beautiful Bill Act (−100) adds 1 People-leaning point: 1 ÷ 2.5 = 40%, shown as **F (40%)**.
@@ -560,7 +566,7 @@ These values are placeholders or interpretations of the original notes. Confirm 
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **The 80% rule:** replaced by the five who-gains steps (Step 1 of Workers > Profit), which compare lower-income households with the top instead of using one cut-off.
 - <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **People-leaning list:** the original notes repeated the Profit items under "People," so the People column was written as their mirror image. Add anything missing.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Which votes count:** an amendment vote counts on its own, keyed like a bill (the Cornyn and Sanders amendments). A procedural vote, such as cloture or a motion to waive the budget rules, counts as the vote on its bill. When a bill has more than one recorded vote, or versions in different Congresses, the latest vote is the one counted.
-- <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> **Money analysis:** kept separate from the grades. Decide whether it should ever affect a grade. The Corporation Compromised Index 🏢 (step 9 of the plan in [Updates & fixes](../.04_UPDATES_&_FIXES_IN_NEED.md)) would be the first: 25% of Workers > Profit. Decide whether to build it, and whether its corporate PAC share uses the FEC's PAC types or this app's sectors.
+- <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Money analysis:** decided Nov. 1, 2026: the Money & Influence analysis stays outside the grades, except the Corporation Compromised Index 🏢, which is now 25% of Workers > Profit (step 9). "Corporate" means PACs the FEC records as sponsored by a corporation, a trade association or a cooperative.
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **One funder deciding Donor Loyalty:** decided Nov. 1, 2026: no funder counts for more than all the others put together (at most half the weight).
 - <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> **Blind trusts and divestment (step 8):** decided Nov. 1, 2026: a qualified blind trust takes the trustee's trades out of the trading indexes; no individual stocks labels the index; managed accounts and trusts in name only are not excused; no bonus. See Blind trusts and divestment under the Ethics Score.
 - <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> **Money promises (step 7):** built as a records check beside the reviewed verdict, not a score change. Defaults to confirm: trade-association and membership PACs don't count against a corporate-PAC pledge; the FEC report covering the pledge date decides nothing; a vote against a ban is reviewed, not counted as broken on its own.
