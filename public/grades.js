@@ -161,16 +161,31 @@ export function disclosureDodger(rows,annual=[],{covered=true,why='No trading da
   return {index:Math.round(use.reduce((t,k)=>t+W[k]*parts[k],0)/w),why:null,n:rows.length+annual.length,late:rows.filter(r=>r.late).length,lateAnnual,parts};
 }
 
+// Blind trusts and divestment (step 8), from the reviewed research: holdings {status, since, src, note}.
+//   'blind-trust'  a qualified blind trust, certified by the House or Senate ethics committee. The trustee decides and
+//                  doesn't tell them, so a trade made inside it (a reviewed trade marked inTrust) isn't theirs and counts in
+//                  neither trading index. Trades they report outside it, or made before it, count as usual.
+//   'no-stocks'    no individual stocks or stock options: only funds, bonds, cash, retirement plans, real estate or a
+//                  private business. It labels the index; earlier stock trades still count.
+// Not excused: a managed or "discretionary" account, an adviser who trades without asking, or a trust that isn't a
+// qualified blind trust. The member still controls it and must report it, so those trades count in full. No bonus either
+// way: the Ethics grade starts at 100 and only loses points.
+export const HOLDINGS={'blind-trust':'Holdings in a qualified blind trust','no-stocks':'No individual stocks'};
+export function ownTrades(rows,holdings){return holdings?.status==='blind-trust'?(rows||[]).filter(r=>!r.inTrust):(rows||[]);}
+
 // Ethics: 100 − Legal Trouble Index − a tenth of the Insider Trading Index − a tenth of the Stock Disclosure Dodger Index,
-// rounded, never below 0. An index without enough data costs nothing. trading: {rows, covered, why, inDonors, annual}.
+// rounded, never below 0. An index without enough data costs nothing. trading: {rows, covered, why, inDonors, annual,
+// holdings}.
 export function ethicsScore(ethics,trading={},{asOfYear=null}={}){
-  const rows=trading.rows||[],covered=trading.covered!==false;
+  const all=trading.rows||[],covered=trading.covered!==false,held=HOLDINGS[trading.holdings?.status]?trading.holdings:null;
+  const rows=ownTrades(all,held),inTrust=all.length-rows.length;
   const legal=legalTrouble(ethics,{asOfYear,stockActCovered:covered&&rows.length>0});
-  const insider=insiderTrading(rows,{covered,inDonors:trading.inDonors||0,why:trading.why});
+  const insider=insiderTrading(rows,{covered,inDonors:Math.min(trading.inDonors||0,rows.length),why:trading.why});
+  if(covered&&held&&!rows.length)insider.why=HOLDINGS[held.status];
   const dodger=disclosureDodger(rows,trading.annual,{covered,why:trading.why});
   const insiderCost=(insider.index||0)*INDEX_COST, dodgerCost=(dodger.index||0)*INDEX_COST;
   const raw=100-legal.index-insiderCost-dodgerCost;
-  return {pct:Math.max(0,Math.round(raw)),raw,legal,insider,dodger,insiderCost,dodgerCost,
+  return {pct:Math.max(0,Math.round(raw)),raw,legal,insider,dodger,insiderCost,dodgerCost,holdings:held,inTrust,
     finding:legal.finding,open:legal.open,closed:legal.closed,allegation:legal.allegation,
     late:rows.filter(r=>r.late).length,conflict:rows.filter(r=>r.conflict).length};
 }

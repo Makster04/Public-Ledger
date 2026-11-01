@@ -3,6 +3,7 @@ import {LATE_DAYS} from './grades.js';
 import {makeOrgs,EMPLOYER_ABOUT} from './orgs.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {rangeText} from './net-worth.js';
+import {holdingsLead} from './holdings.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cash=n=>n==null?'Not reported':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
 const date=v=>v?new Date(/^\d{4}-\d{2}-\d{2}$/.test(v)?v+'T12:00:00Z':v).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'Not yet checked';
@@ -46,13 +47,15 @@ async function status(force=false){if(force||!statusPromise||Date.now()-statusTi
 const short=n=>{const a=Math.abs(n),v=a>=1e6?`$${(a/1e6).toFixed(a>=1e7?0:1)}M`:a>=1e3?`$${Math.round(a/1e3)}K`:`$${Math.round(a)}`;return n<0?'−'+v:v;};
 // The net-worth card: the range, how it's figured, and what was read from the report.
 function netWorthBody(x){
+  const lead=holdingsLead(x);
   const report=`${x.year?`${esc(x.year)} report`:'Annual report'}${x.filed?`, filed ${date(x.filed)}`:''}: ${link(x.url,'open the report')}`;
   if(x.unreadable)return `${pts([['Report',report],['Not read','filed on paper (a scanned image) or not readable as text, so no range is shown; check the report by hand']])}`;
   const row=(a,b,c)=>`<tr><td>${esc(a||'—')}</td><td>${esc(b||'')}</td><td class="r">${esc(c)}</td></tr>`;
   return `<p class="live-stat-line"><strong>${esc(rangeText(x,short))}</strong></p>
     ${pts([['Report',report],['Lowest','every asset at the bottom of its range, minus every debt at the top of its'],['Highest','the reverse; "or more" when an asset has no upper limit on the form'],
       ['Read',`${x.nAssets} asset${x.nAssets===1?'':'s'} (${esc(rangeText({low:x.assetsLow,high:x.assetsHigh},short))}) and ${x.nDebts} debt${x.nDebts===1?'':'s'} (${esc(rangeText({low:x.debtsLow,high:x.debtsHigh},short))})${x.unread?`; ${x.unread} with no amount (undetermined) left out`:''}`],
-      ['Not on the form','their home and a mortgage on it, unless the home earns income'],['Not graded','shown only; no grade uses it']])}
+      ['Not on the form','their home and a mortgage on it, unless the home earns income'],['Not graded','shown only; no grade uses it'],
+      ...(lead?[['How they hold investments',`${esc(lead.label.toLowerCase())}${lead.status==='blind-trust'&&lead.stocks?`, plus ${lead.stocks} individual stock${lead.stocks===1?'':'s'} or option${lead.stocks===1?'':'s'} outside it`:''}${lead.managed?`; ${lead.managed} managed account${lead.managed===1?'':'s'}, which count as theirs`:''}. Read from this report and not reviewed yet: a qualified blind trust changes the Ethics grade only after review`]]:[])])}
     ${x.assets?.length?`<details><summary>Assets as listed (${x.assets.length})</summary><div class="tablewrap"><table><thead><tr><th>Asset</th><th>Owner</th><th class="r">Value</th></tr></thead><tbody>${x.assets.map(a=>row(a.name,a.owner,a.value)).join('')}</tbody></table></div></details>`:''}
     ${x.debts?.length?`<details><summary>Debts as listed (${x.debts.length})</summary><div class="tablewrap"><table><thead><tr><th>Creditor</th><th>Owner</th><th class="r">Amount</th></tr></thead><tbody>${x.debts.map(d=>row(d.creditor,d.owner,d.amount)).join('')}</tbody></table></div></details>`:''}`;
 }

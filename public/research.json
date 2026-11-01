@@ -22060,7 +22060,20 @@
       ],
       "fecCandPast": [
         "H8GA06195"
-      ]
+      ],
+      "holdings": {
+        "status": "blind-trust",
+        "since": "2021",
+        "src": {
+          "t": "Sen. Ossoff: Senator Ossoff Leads on Ethics, Fulfills Campaign Promise to Move Stocks Into Blind Trust",
+          "u": "https://www.ossoff.senate.gov/press-releases/senator-ossoff-leads-on-ethics-fulfills-campaign-promise-to-move-stocks-into-blind-trust/"
+        },
+        "also": {
+          "t": "Capitol Beat: Ossoff moving stock holdings into blind trust (June 2021)",
+          "u": "https://capitol-beat.org/2021/06/ossoff-moving-stock-holdings-into-blind-trust/"
+        },
+        "note": "He moved his stock portfolio into a qualified blind trust in 2021, as he had promised in his campaign. His office has declined to say what the trust now holds."
+      }
     },
     {
       "name": "Cory A. Booker",
@@ -78861,7 +78874,16 @@
       ],
       "fecCandPast": [
         "H0IA01174"
-      ]
+      ],
+      "holdings": {
+        "status": "no-stocks",
+        "since": "2021",
+        "src": {
+          "t": "KCRG: Fact check: Did Ashley Hinson vote to ban stock trading in Congress? (Sept. 5, 2026)",
+          "u": "https://www.kcrg.com/2026/09/05/fact-check-did-ashley-hinson-vote-ban-stock-trading-congress/"
+        },
+        "note": "She sold her publicly traded stocks after taking office in 2021. Her family holds $1 million–$5 million in private stock from the sale of her husband's insurance business, which isn't traded on a stock market."
+      }
     },
     {
       "id": "pappas",
