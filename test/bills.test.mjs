@@ -74,7 +74,7 @@ test('the anti-corruption bills count in Your match under their issue, through t
   for(const b of tagged){assert.ok(issues.has(b.issue),b.id);assert.ok(['A','B'].includes(b.side),b.id);assert.ok(b.why&&b.summarySrc?.u&&b.steps?.length,b.id);}
   assert.ok(!D.billIndex.find(b=>b.id==='119-hr-7008').issue,'the Stop Insider Trading Act, with its voter-ID section, is left out of the issue');
   // Made-up cosponsors: each profiled sponsor or cosponsor gets one action toward the bill's side.
-  const data={...D,billIndex:D.billIndex.map(b=>b.id==='119-s-1879'?{...b,cosponsors:[{person:'ossoff',bill:'119-s-1879',sponsor:true,date:'2025-05-22'},{person:'nobody',bill:'119-s-1879'}]}:b)};
+  const data={...D,billIndex:D.billIndex.map(b=>b.id==='119-s-1879'?{...b,cosponsors:[{person:'ossoff',bill:'119-s-1879',sponsor:true,date:'2025-05-22'},{person:'nobody',bill:'119-s-1879'}]}:{...b,cosponsors:[]})};
   const ev=issueEvidence(data),o=ev.get('ossoff');
   assert.equal(o.length,1);assert.equal(o[0].issue,'ethics');assert.equal(o[0].entry.type,'sponsored');assert.equal(o[0].entry.side,'A');
   assert.match(o[0].entry.src.u,/congress\.gov\/bill\/119th-congress\/senate-bill\/1879$/);assert.match(o[0].entry.title,/^S\. 1879: /);
@@ -83,4 +83,9 @@ test('the anti-corruption bills count in Your match under their issue, through t
   const r=matchScore([{id:'ethics',side:'A',w:2}],evidence).rows[0];
   assert.equal(r.status,'record');assert.equal(r.match,1);assert.equal(r.n,1);
   assert.equal(matchScore([{id:'ethics',side:'A',w:2}],p.evidence).rows[0].status,'stated','before: the stated position on file');
+  // The cosponsors on file (from npm run bills:cosponsors): each is a profiled person, once per bill, and counts once.
+  const ids=new Set([...D.members,...D.cands,...(D.featured||[])].map(x=>x.id)),real=issueEvidence(D);
+  for(const b of tagged){const c=(b.cosponsors||[]).map(x=>x.person);assert.equal(new Set(c).size,c.length,b.id);for(const id of c)assert.ok(ids.has(id),`${b.id}: ${id}`);}
+  for(const [id,list] of real){assert.ok(ids.has(id));assert.equal(new Set(list.map(x=>x.entry.bill)).size,list.length,id);}
+  assert.deepEqual(real.get('ossoff').map(x=>x.entry.bill).sort(),['119-s-1498','119-s-1879']);
 });
