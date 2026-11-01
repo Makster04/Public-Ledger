@@ -83,7 +83,11 @@ export function issueEvidence(data){
   const issues=new Set((data.issues||[]).map(i=>i.id)),out=new Map();
   for(const b of data.billIndex||[]){
     if(!b.issue||!issues.has(b.issue)||!['A','B'].includes(b.side))continue;
-    for(const r of b.cosponsors||[]){
+    // One entry per person and bill: the current version when they sponsored or cosponsored it, otherwise the latest
+    // earlier version (a bill counts once across its versions in different Congresses).
+    const rows=[...(b.cosponsors||[])].sort((x,y)=>((y.bill||b.id)===b.id)-((x.bill||b.id)===b.id)||String(y.date||'').localeCompare(String(x.date||''))),seen=new Set();
+    for(const r of rows){
+      if(seen.has(r.person))continue;seen.add(r.person);
       const [c,t,n]=String(r.bill||b.id).split('-'),label=`${TYPE_LABEL[t]||t.toUpperCase()} ${n}`;
       const entry={type:r.sponsor?'sponsored':'cosponsored',ref:`${b.id}:${r.person}`,bill:b.id,title:`${label}: ${b.title}`,date:r.date||null,
         pos:r.sponsor?'Sponsored':'Cosponsored',side:b.side,why:b.why,src:{t:`${label} on Congress.gov`,u:`https://www.congress.gov/bill/${c}th-congress/${TYPE_PATH[t]}/${n}`}};

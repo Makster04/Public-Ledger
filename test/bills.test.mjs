@@ -85,7 +85,9 @@ test('the anti-corruption bills count in Your match under their issue, through t
   assert.equal(matchScore([{id:'ethics',side:'A',w:2}],p.evidence).rows[0].status,'stated','before: the stated position on file');
   // The cosponsors on file (from npm run bills:cosponsors): each is a profiled person, once per bill, and counts once.
   const ids=new Set([...D.members,...D.cands,...(D.featured||[])].map(x=>x.id)),real=issueEvidence(D);
-  for(const b of tagged){const c=(b.cosponsors||[]).map(x=>x.person);assert.equal(new Set(c).size,c.length,b.id);for(const id of c)assert.ok(ids.has(id),`${b.id}: ${id}`);}
+  for(const b of tagged){const c=(b.cosponsors||[]).map(x=>`${x.person}:${x.bill||b.id}`);assert.equal(new Set(c).size,c.length,b.id);for(const x of b.cosponsors||[])assert.ok(ids.has(x.person),`${b.id}: ${x.person}`);}
+  // A person on two versions of a bill (S. 1879 and Ossoff's 2022 S. 3494) still counts once.
+  assert.equal(real.get('ossoff').filter(x=>x.entry.bill==='119-s-1879').length,1);
   for(const [id,list] of real){assert.ok(ids.has(id));assert.equal(new Set(list.map(x=>x.entry.bill)).size,list.length,id);}
   assert.deepEqual(real.get('ossoff').map(x=>x.entry.bill).sort(),['119-s-1498','119-s-1879']);
 });
