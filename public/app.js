@@ -4,6 +4,7 @@ import {makeScorer,voteBill} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo} from './bills.js';
+import {sizeParts,sizeShare} from './donor-sizes.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -716,7 +717,7 @@ async function fillBasic(root=document){
 }
 // The records each tab adds from the daily refresh (public/live.js), the same groups the full profiles' tabs show.
 const BASIC_LIVE={match:['legislation','cosponsored','crs','committees','votes'],promises:['crec-day','hearings','statements','factcheck','news'],
-  ethics:['trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']};
+  ethics:['trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){
   if(!PANES[tab]||tab==='sources')tab='overview';
@@ -815,7 +816,26 @@ function ovMoney(s,here){
     <div class="ov-stack" role="group" aria-label="Campaign funds raised, by source">${segs.map(x=>`<i style="flex:${x.v};background:var(${x.col})" data-tip="${esc(x.l)}: ${fmtFull(x.v)} (${ovPct(x.v,tot)})"></i>`).join('')}</div>
     <ul class="ov-legend">${segs.map(x=>`<li><i style="background:var(${x.col})"></i><span>${esc(x.l)}${x.d?`<small class="muted">${esc(x.d)}</small>`:''}</span><b>${ovPct(x.v,tot)}</b><span class="v">${fmt$(x.v)}</span></li>`).join('')}</ul>
     <details class="tv"><summary>Show as a table</summary><div class="tablewrap"><table><thead><tr><th>Source</th><th class="r">Amount</th><th class="r">Share</th></tr></thead><tbody>${rows.map(([l,v])=>`<tr><td>${esc(l)}</td><td class="r">${fmtFull(v)}</td><td class="r">${v>0?ovPct(v,c.receipts):'0%'}</td></tr>`).join('')}</tbody></table></div></details>`;
-  return ovCard('Campaign money',T,`Share of the ${fmtFull(c.receipts)} the campaign raised, ${period(c.start,c.end)}`,body,`FEC two-year committee summary · <a href="${esc(c.src)}" target="_blank" rel="noopener">source ↗</a>${here?'':` · <a href="#${s.id}-finance">Money &amp; Influence details →</a>`}`,'ov-wide');
+  return ovCard('Campaign money',T,`Share of the ${fmtFull(c.receipts)} the campaign raised, ${period(c.start,c.end)}`,body+`<div class="ov-sizes" data-sizes="${esc(s.id)}" hidden></div>`,`FEC two-year committee summary · <a href="${esc(c.src)}" target="_blank" rel="noopener">source ↗</a>${here?'':` · <a href="#${s.id}-finance">Money &amp; Influence details →</a>`}`,'ov-wide');
+}
+// The money card's second bar: individual donors' money by gift size, from the daily FEC refresh (public/donor-sizes.js).
+// Left out when the update service is offline; says so while the first refresh is still to come.
+async function fillSizes(root){
+  for(const el of root.querySelectorAll('.ov-sizes[data-sizes]')){
+    const s=byId[el.dataset.sizes];if(!s)continue;
+    let x;try{x=await window.RecordLive.section(s.id,'donor-sizes');}catch{continue;}
+    if(!el.isConnected)continue;el.hidden=false;
+    const head=`<h4 class="ov-subhead">Individual donors, by gift size</h4>`;
+    const parts=x?sizeParts(x):[];
+    if(!parts.length){el.innerHTML=`${head}<p class="small muted" style="margin:4px 0 0">${x?'No gifts from individuals reported for this cycle yet.':'Appears after the FEC gift-size refresh runs.'}</p>`;continue;}
+    const share=k=>sizeShare(x.brackets[k].total,x.total);
+    el.innerHTML=`${head}<p class="small muted" style="margin:2px 0 0">Share of the ${fmtFull(x.total)} individuals gave${x.start?`, ${period(x.start,x.end)}`:''}. Each gift counts by its own amount, so "$200 and under" also holds smaller gifts from donors who gave more in all, and can be larger than "Small donors" above. <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC ↗</a></p>
+      <div class="big" style="font-size:1rem;margin-top:6px">Of individuals' money: $200 and under ${share(0)} · $2,000 and over ${share(4)}</div>
+      <div class="ov-stack" role="group" aria-label="Individual donors' money by gift size">${parts.map(p=>`<i style="flex:${p.total};background:var(--${p.key})" data-tip="${esc(p.label)}: ${fmtFull(p.total)} (${sizeShare(p.total,x.total)})"></i>`).join('')}</div>
+      <ul class="ov-legend">${parts.map(p=>`<li><i style="background:var(--${p.key})"></i><span>${esc(p.label)}</span><b>${sizeShare(p.total,x.total)}</b><span class="v">${fmt$(p.total)}</span></li>`).join('')}</ul>
+      <details class="tv"><summary>Show gift sizes as a table</summary><div class="tablewrap"><table><thead><tr><th>Gift size</th><th class="r">Amount</th><th class="r">Share</th></tr></thead><tbody>${parts.map(p=>`<tr><td>${esc(p.label)}</td><td class="r">${fmtFull(p.total)}</td><td class="r">${sizeShare(p.total,x.total)}</td></tr>`).join('')}</tbody></table></div></details>`;
+    bindTips(el);
+  }
 }
 // 2. outside money for and against: two bars on one scale, top groups named under each
 function ovOutside(s,here){
@@ -997,7 +1017,7 @@ function paneOverview(s,pane){
   </div>`;
   mountStrip('ovstrip',s);
   mountKV('ovkv',s);
-  bindTips(pane);
+  bindTips(pane);fillSizes(pane);
 }
 
 function conduitBlock(s){
@@ -1069,7 +1089,7 @@ function paneFinance(s,pane){
   mountPacSectors(s);pacTable(s,$('#pachost'));
   ieItems(s,$('#iehost'));
   mountAnalysis(s);hoverTips(pane);
-  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']);
+  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']);fillSizes(pane);
   pane.querySelectorAll('.jump a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
   bindTips(pane);
 }
@@ -1084,7 +1104,7 @@ function paneFinanceOffice(s,pane){
   ${analysisBlock(s)}
   <section id="live-records" style="margin-top:28px"></section>`;
   mountAnalysis(s);hoverTips(pane);
-  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','pac','outside','donorOrgs','outside-groups']);
+  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']);
   bindTips(pane);
 }
 

@@ -12,7 +12,7 @@ Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md). The rules 
 | <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> | Top donors treemap | On the Workers > Profit tab. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Corporation Compromised Index 🏢 | Designed. The Donor Loyalty Index 🤝 and the bill scores it depends on are built. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Worker Backed Index ✊ | Designed, not built. |
-| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Grassroots Index 🌱 | Designed, not built. |
+| <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Grassroots Index 🌱 | Designed, not built. Its data is now refreshed: the FEC's gift-size groups, shown on the Overview's money card. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | New Workers > Profit grade formula | 75% from the bills + 25% from (100 − Corporation Compromised). |
 | <img src="../assets/checkbox-progress.svg" width="20" align="absmiddle" alt="In the works"> | Add more Workers > Profit bills with cited evidence | 14 on file, 10 scored. Next: a business group's position on the GENIUS Act and the National Right-to-Work Act, cited public statements for candidates without a voting record, and more bills where the AFL-CIO's and the Chamber's key votes split. |
 | <img src="../assets/checkbox-empty.svg" width="20" align="absmiddle" alt="Not started"> | Rename the "People" side to "Workers" | In the charts and tables. |
