@@ -204,10 +204,10 @@ export const RecordLive={
   },
   async banner(){
     const element=document.querySelector('#refresh-banner');if(!element)return;
-    try{const s=await status();const successes=s.jobs.filter(j=>j.last_success).length;const blocked=s.jobs.filter(j=>j.status==='blocked').length;
-      element.innerHTML=`<span>Research snapshot: ${esc(s.reviewedAt)}. Official records refresh separately.</span><a href="#updates">${successes} sources updated${blocked?' · '+blocked+' awaiting setup':''}</a>`;
+    try{const s=await status();
+      element.innerHTML=`<span>Research snapshot: ${esc(s.reviewedAt)}. Official records refresh separately.</span><a href="#updates">Source status &amp; coverage</a>`;
       const pane=document.querySelector('#pane'),hash=location.hash;
-      if(pane&&!pane.dataset.basic&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note"><b>Reviewed research:</b> as of ${esc(s.reviewedAt)}. Figures below keep their original reporting dates. <a href="${esc('#'+hash.slice(1).split('-')[0]+'-latest')}">See latest official records</a>.</div>`);
+      if(pane&&!pane.dataset.basic&&!document.querySelector('.profile-coverage')&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note"><b>Reviewed research:</b> as of ${esc(s.reviewedAt)}. Figures below keep their original reporting dates. <a href="${esc('#'+hash.slice(1).split('-')[0]+'-latest')}">See latest official records</a>.</div>`);
         const own=pane.querySelector('#live-records'),a=pane.querySelector('.snapshot-note a');if(own&&a)a.addEventListener('click',e=>{e.preventDefault();own.scrollIntoView({behavior:'smooth',block:'start'});});}
     }catch{element.innerHTML='Saved research is available. The update service is offline.';}
   },
