@@ -5,6 +5,7 @@ import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRo
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
+import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -314,21 +315,32 @@ function pacSectors(s){
     <div class="cx-plot" id="pac-tm"></div>${legend([['var(--s1)',`People-aligned ${fmt$(sum('people'))}`],['var(--s5)',`Profit-aligned ${fmt$(sum('profit'))}`],['var(--cx-other)',`Other ${fmt$(sum('other'))}`]])}
     ${tableView(['Sector','Amount','Share','Alignment'],tiles.map(x=>[esc(x.label),fmtFull(x.value),pct(x.value,p.retrieved)+'%',x.alignLabel]))}</div>`;
 }
+// The same itemized PAC money by the type the FEC records for each committee (public/pac-types.js), once
+// scripts/build-pac-types.mjs has looked them up.
+function pacKinds(s){
+  const p=s.pac;if(!p.rows.length||!DATA.pacIds)return '';
+  const k=pacKindTotals(DATA,p.rows),max=Math.max(1,...k.map(x=>x.total)),known=k.filter(x=>x.kind!=='unknown').reduce((t,x)=>t+x.total,0);
+  return `<div class="chart"><h3>Itemized PAC contributions by FEC type</h3><div class="sub">${points([['Type','From each committee\'s own FEC registration: who sponsors it (a company, union, trade or membership group), or that it is a leadership, party or candidate committee. Not assigned by this app.'],
+      ['Matched',`${pct(known,p.retrieved)}% of the ${fmtFull(p.retrieved)}, by each committee's FEC ID (looked up ${esc(fmtDate(DATA.pacTypesAsOf))}).`],['Not graded','Shown only; no grade uses it.']],'small')}</div>
+    <div class="cx-rows">${k.map(x=>`<div class="cx-row"><div class="cx-who">${esc(x.label)}</div><div class="cx-track"><i class="cx-bar" style="width:${Math.max(1,x.total/max*100)}%;background:${x.kind==='unknown'?'var(--cx-other)':'var(--s1)'}" data-tip="${esc(`${x.label}: ${fmtFull(x.total)}, ${x.n} contribution${x.n===1?'':'s'}`)}"></i></div><div class="cx-val"><b>${pct(x.total,p.retrieved)}%</b> <span class="muted">${fmt$(x.total)}</span></div></div>`).join('')}</div>
+    ${tableView(['FEC type','Amount','Share','Contributions'],k.map(x=>[esc(x.label),fmtFull(x.total),pct(x.total,p.retrieved)+'%',String(x.n)]))}</div>`;
+}
 const pacSectorTiles=s=>s.pac.byCat.map(([k,v])=>{const align=categoryAlign(k);return {label:DATA.categories[k]||k,value:v,align,alignLabel:ALIGN_LABEL[align],about:`${pct(v,s.pac.retrieved)}% of the itemized PAC money`};});
 function mountPacSectors(s){if(!s.pac?.byCat?.length)return;const tiles=pacSectorTiles(s),f=()=>drawTreemap(document.getElementById('pac-tm'),tiles);f();resizers.push(f);}
 function pacTable(s,host){
   const p=s.pac;if(!p.rows.length){host.innerHTML='';return}
   let st={q:'',k:'amt',dir:-1,n:50};
-  host.innerHTML=`<div class="toolbar" style="margin:0 0 10px"><div class="search" style="margin:0"><input id="pq" type="search" placeholder="Filter by committee or sector" aria-label="Filter PAC contributions"></div></div>
+  host.innerHTML=`<div class="toolbar" style="margin:0 0 10px"><div class="search" style="margin:0"><input id="pq" type="search" placeholder="Filter by committee, sector or FEC type" aria-label="Filter PAC contributions"></div></div>
     <p class="small" id="psum" style="margin:0 0 8px"></p>
-    <div class="tablewrap"><table id="pt"><thead><tr><th><button data-k="name">Contributor (as filed)</button></th><th><button data-k="cat">Sector (assigned)</button></th><th><button data-k="rep">Report and period</button></th><th class="r"><button data-k="amt">Amount</button></th></tr></thead><tbody></tbody></table></div><div id="pmore" style="margin-top:8px"></div>`;
-  const R=p.rows.map(r=>({name:DATA.pacNames[r[0]],about:ORGS.pac(r[0]),amt:r[1],cat:DATA.categories[r[2]]||r[2],fi:r[3],rep:p.filings[r[3]].start,orient:(DATA.pacOrient||{})[r[0]]}));
+    <div class="tablewrap"><table id="pt"><thead><tr><th><button data-k="name">Contributor (as filed)</button></th><th><button data-k="cat">Sector (assigned)</button></th><th><button data-k="type">FEC type</button></th><th><button data-k="rep">Report and period</button></th><th class="r"><button data-k="amt">Amount</button></th></tr></thead><tbody></tbody></table></div><div id="pmore" style="margin-top:8px"></div>`;
+  const R=p.rows.map(r=>{const t=pacTypeOf(DATA,r[0]);return {name:DATA.pacNames[r[0]],about:ORGS.pac(r[0]),amt:r[1],cat:DATA.categories[r[2]]||r[2],fi:r[3],rep:p.filings[r[3]].start,orient:(DATA.pacOrient||{})[r[0]],
+    t,type:t?t.label:DATA.pacIds?'Not matched':'Not looked up yet'};});
   const draw=()=>{
     const q=st.q.toLowerCase();
-    let L=R.filter(x=>!q||(x.name+' '+x.cat).toLowerCase().includes(q));
+    let L=R.filter(x=>!q||(x.name+' '+x.cat+' '+x.type).toLowerCase().includes(q));
     L.sort((a,b)=>{const x=a[st.k],y=b[st.k];return (typeof x==='number'?x-y:String(x).localeCompare(String(y)))*st.dir||b.amt-a.amt});
     host.querySelector('#psum').innerHTML=`<b class="num">${L.length.toLocaleString()}</b> contributions · <b class="num">${fmtFull(L.reduce((a,x)=>a+x.amt,0))}</b>. The FEC lists these by report, so each row shows its report period, not an exact date.`;
-    host.querySelector('#pt tbody').innerHTML=L.slice(0,st.n).map(x=>{const f=p.filings[x.fi];return `<tr><td>${orgName(x.name,x.about)}${x.orient?`<div class="small muted">${esc(x.orient)}</div>`:''}</td><td class="small">${esc(x.cat)}</td><td class="small"><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.report)}</a><div class="muted">${fmtDate(f.start)} – ${fmtDate(f.end)}</div></td><td class="r">${fmtFull(x.amt)}</td></tr>`}).join('')||'<tr><td colspan="4" class="muted">No rows match.</td></tr>';
+    host.querySelector('#pt tbody').innerHTML=L.slice(0,st.n).map(x=>{const f=p.filings[x.fi];return `<tr><td>${orgName(x.name,x.about)}${x.orient?`<div class="small muted">${esc(x.orient)}</div>`:''}</td><td class="small">${esc(x.cat)}</td><td class="small">${x.t?`<span class="org" data-tip="${esc(`${x.t.label}: ${x.t.about} FEC ID ${x.t.id}.`)}">${esc(x.t.label)}</span>${x.t.lobbyist?'<div class="muted">also a lobbyist PAC</div>':''}`:`<span class="muted">${esc(x.type)}</span>`}</td><td class="small"><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.report)}</a><div class="muted">${fmtDate(f.start)} – ${fmtDate(f.end)}</div></td><td class="r">${fmtFull(x.amt)}</td></tr>`}).join('')||'<tr><td colspan="4" class="muted">No rows match.</td></tr>';
     hoverTips(host.querySelector('#pt tbody'));
     host.querySelector('#pmore').innerHTML=L.length>st.n?`<button class="more" id="pmb">Show ${Math.min(50,L.length-st.n)} more of ${(L.length-st.n).toLocaleString()} remaining</button>`:'';
     const b=host.querySelector('#pmb');if(b)b.addEventListener('click',()=>{st.n+=50;draw();});
@@ -1067,6 +1079,7 @@ function paneFinance(s,pane){
   <p class="small muted" style="margin:4px 0 10px">Part of campaign funds raised. Each row is one contribution, as listed on FEC Schedule A, line 11C.</p>
   ${pacCoverage(s)}
   ${pacSectors(s)}
+  ${pacKinds(s)}
   <div id="pachost"></div>
   ${conduitBlock(s)}
   <h2 id="f-out" style="margin-top:28px">Outside spending (${term('ie','independent expenditures')})</h2>
