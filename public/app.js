@@ -1,3 +1,4 @@
+import {mountRankings,mountStocks} from './explore-finance.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
@@ -364,7 +365,7 @@ function topSpenders(s,role,n){
 // ---------- routing ----------
 let homeCh='', cmpCh='S';
 // Older profile links (#id-record, #id-funding, ...) still work: each opens the tab that now holds that content, and the spot on it.
-const TAB_ALIAS={record:['legislation'],align:['match'],statements:['promises'],funding:['finance'],superpacs:['finance','f-out'],latest:['finance','live-records'],bills:['legislation','leg-sponsored'],funders:['pvp','rec-funders'],money:['pvp','rec-money']};
+const TAB_ALIAS={record:['legislation','m-record'],align:['match'],statements:['promises'],funding:['finance'],superpacs:['finance','f-out'],latest:['finance','live-records'],bills:['legislation','leg-sponsored'],funders:['connections','rec-funders'],money:['connections','rec-money']};
 function route(){
   resizers=[];tip.classList.remove('show');
   const h=(location.hash||'#home').slice(1);
@@ -372,13 +373,16 @@ function route(){
   const current=byId[m[1]]||BASIC[m[1]];
   document.body.dataset.party=current?(['D','R'].includes(current.party)?current.party:'I'):'';
   document.body.dataset.page=current?'profile':(m[1]||'home');
-  document.body.dataset.tab=current?(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview'):'';
+  document.body.dataset.tab=current?profileLocation(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview').primary:'';
+  document.body.dataset.view=current?(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview'):'';
   document.title=current?`${current.name} · Public Ledger`:'Public Ledger · Follow the record';
   document.querySelectorAll('.nav-more[open]').forEach(el=>el.open=false);
   document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&!!BASIC[m[1]])));
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
+  else if(m[1]==='rankings'){mountRankings(app,financeExplorerModel());}
+  else if(m[1]==='stocks'){mountStocks(app,financeExplorerModel());}
   else if(m[1]==='races'){renderRaces();}
   else if(m[1]==='bills'){renderBills(m[2]||'all');}
   else if(m[1]==='senate'){renderSenate();}
@@ -526,7 +530,6 @@ function homeCard(s){
       <div class="hc-mt">${c.missing?'<b class="hc-na">Not yet reported</b><span>Campaign funds raised</span><small>no FEC report filed yet</small>':`<b>${fmt$(c.receipts)}</b><span>Campaign funds raised</span><small>${shortPer(c.end)}</small>`}</div>
       <div class="hc-mt"><b class="hc-two"><i class="sw" style="background:var(--s3)"></i>${fmt$(o.for.total)} <em>${o.multi?'supporting':'for'}</em><br><i class="sw" style="background:var(--s2)"></i>${fmt$(o.against.total)} <em>${o.multi?'opposing':'against'}</em></b><span>Outside money</span><small>${shortPer(o.end)}</small></div>
     </div>
-    ${miniOutside(s)}
     <div class="hc-ft"><span>${race?esc(race.label):''}</span><span class="hc-vs">${riv.length?'vs. '+esc(riv.map(x=>x.short).join(', ')):'No profiled opponent'}</span></div>
   </article>`;
 }
@@ -602,7 +605,7 @@ function renderHome(){
   <div class="directory-heading"><div><div class="page-eyebrow">THE PEOPLE BEHIND THE RECORD</div><h2>Explore profiles</h2></div><span id="profile-count" class="small muted" role="status"></span></div>
   <div class="seg party-filter" id="hparty" role="group" aria-label="Filter profiles by party">${[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>`<button data-p="${k}" aria-pressed="${homeParty===k}" class="${homeParty===k?'active':''}">${l}</button>`).join('')}</div>
   <div class="grid hc-grid" id="cards"></div>
-  ${gradeHow()}
+  <details class="directory-method"><summary>How the four grades work</summary>${gradeHow()}</details>
   <section class="section">
     <div class="cols">
       <div class="card"><h3>Head-to-head races</h3><p class="small" style="margin-top:6px">Each candidate next to their 2026 opponents: money raised, cash on hand, and outside spending for and against each side.</p><a class="cta" href="#races">See the ${DATA.races.length} races</a></div>
@@ -634,12 +637,12 @@ function renderHome(){
 
 // ---------- profile ----------
 // Overview, then one tab per home-card grade, then the money.
-const TABS=[['overview','Overview'],['match','Your match'],['promises','Promises Delivered'],['ethics','Ethics'],['pvp','Workers > Profit'],['legislation','Legislative Activity'],['finance','Money &amp; Influence']];
+const TABS=[['overview','Overview'],['finance','Money &amp; Influence'],['legislation','Legislative Activity'],['accountability','Accountability']];
 const tabsFor=s=>TABS;
 const PANES={overview:(...a)=>paneOverview(...a),match:(...a)=>paneMatch(...a),promises:(...a)=>panePromises(...a),ethics:(...a)=>paneEthics(...a),pvp:(...a)=>panePvp(...a),finance:(...a)=>paneFinance(...a),legislation:(...a)=>paneLegislation(...a),sources:(...a)=>paneSources(...a)};
 // Shared profile presentation. The evidence panes and scorer remain the source of truth.
 const profileAmount=n=>n==null?'Not available':Math.abs(n)>=1e6?'$'+(n/1e6).toFixed(2)+'M':fmtFull(n);
-function profileHeader(s){
+function profileHeader(s,showFacts=false){
   const basic=!!s.basic,c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
   const photo=portrait(s), office=basic?'U.S. Senate':s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House';
   const compareHref=s.office?'#home':s.chamber==='H'?'#compare-house':'#compare-senate';
@@ -665,8 +668,9 @@ function profileHeader(s){
       <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(basic?'Term ends '+fmtDate(s.termEnd):s.term||'')}</span></div>
       ${s.cand?`<p class="small profile-background">${esc(s.status||s.background||'')}</p>`:''}
     </div><div class="profile-actions"><a class="profile-compare" href="${compareHref}">${s.office?'Explore people':'Compare'}</a><button class="profile-share" type="button">Share scorecard <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 3h6v6M17 3l-8 8M8 4H4v12h12v-4"/></svg></button></div></div>
-    <div class="profile-facts">${c?[['Raised',c.receipts],['Cash on hand',c.cash],['Spent',c.disbursements]].map(([label,n])=>`<div class="profile-fact"><span>${label}</span><b title="${esc(n==null?'Not available':fmtFull(n))}">${profileAmount(n)}</b></div>`).join(''):`<div class="profile-fact profile-fact-empty"><span>${s.office?'Officeholder profile':'Campaign records'}</span><b>${s.office?'Not on the 2026 ballot':basic?'Awaiting reviewed data':'No FEC report available'}</b></div>`}</div>
+    ${showFacts?`<div class="profile-facts">${c?[['Raised',c.receipts],['Cash on hand',c.cash],['Spent',c.disbursements]].map(([label,n])=>`<div class="profile-fact"><span>${label}</span><b title="${esc(n==null?'Not available':fmtFull(n))}">${profileAmount(n)}</b></div>`).join(''):`<div class="profile-fact profile-fact-empty"><span>${s.office?'Officeholder profile':'Campaign records'}</span><b>${s.office?'Not on the 2026 ballot':basic?'Awaiting reviewed data':'No FEC report available'}</b></div>`}</div>
     <p class="profile-period small muted">${c?`Campaign filings: ${period(c.start,c.end)}${c.src?` · <a href="${esc(c.src)}" target="_blank" rel="noopener">FEC source ↗</a>`:''}`:basic?'Official records remain available in the tabs below.':esc(s.seat||'Campaign records are on the Money & Influence tab.')}</p>
+    `:''}
     <details class="profile-details"><summary>Biography, committees & source links</summary>${s.cand?`<p class="small">${esc(s.status||'')}${s.statusSrc?` <a href="${esc(s.statusSrc.u)}" target="_blank" rel="noopener">${esc(s.statusSrc.t)} ↗</a>`:''}</p>${s.background?`<p class="small muted">${esc(s.background)}</p>`:''}`:''}${details}</details>
   </header>`;
 }
@@ -689,20 +693,64 @@ function bindProfileActions(s,pane){
   });
 }
 const sectionNav=items=>`<nav class="profile-subnav" aria-label="On this page">${items.map(([id,label])=>`<button type="button" data-section="${id}">${label}</button>`).join('')}</nav>`;
-function renderProfile(s,tab,focus){
-  if(!PANES[tab])tab='overview';
-  app.innerHTML=`
-  ${profileHeader(s)}
-  ${tab==='overview'?profileReport(s):''}
-  <div class="tabs"><div class="wrap" style="padding-inline:0" id="tabs">${tabsFor(s).map(([k,l])=>`<button data-tab="${k}" class="${k===tab?'active':''}" aria-current="${k===tab?'page':'false'}">${l}</button>`).join('')}</div></div>
-  <section class="section" id="pane"></section>`;
-  $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b){location.hash=`${s.id}-${b.dataset.tab}`;}});
+function financeExplorerModel(){return {people:ALL.concat(BASIC_LIST),data:DATA,portraits:PORTRAITS,recordLive:window.RecordLive};}
+function profileLocation(view){
+  if(['finance','connections','history'].includes(view))return {primary:'finance',view};
+  if(['legislation','match','pvp'].includes(view))return {primary:'legislation',view};
+  if(['accountability','promises','ethics'].includes(view))return {primary:'accountability',view:view==='accountability'?'promises':view};
+  return {primary:'overview',view:view==='sources'?'sources':'overview'};
+}
+function sectionSwitch(s,items,active){
+  return `<nav class="profile-section-switch" aria-label="Section">${items.map(([key,label])=>`<a class="profile-section-link ${key===active?'active':''}" href="#${s.id}-${key}"${key===active?' aria-current="page"':''}>${label}</a>`).join('')}</nav>`;
+}
+function renderProfile(s,requested='overview',focus){
+  const {primary,view}=profileLocation(requested),overview=view==='overview';
+  app.innerHTML=`${profileHeader(s,overview)}${overview?profileReport(s):''}<nav class="tabs" aria-label="Profile"><div class="wrap" style="padding-inline:0" id="tabs">${TABS.map(([key,label])=>`<button type="button" data-tab="${key}" class="${key===primary?'active':''}" aria-current="${key===primary?'page':'false'}">${label}</button>`).join('')}</div></nav><section class="section" id="pane"${s.basic?' data-basic="1"':''}></section>`;
+  $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=`${s.id}-${b.dataset.tab}`;});
   const pane=$('#pane');
-  PANES[tab](s,pane,focus);
-  pane.insertAdjacentHTML('beforeend',evidenceStrip(s));
+  const switches=primary==='legislation'?sectionSwitch(s,[['legislation','Bills & votes'],['match','Your match'],['pvp','Workers > Profit']],view):primary==='accountability'?sectionSwitch(s,[['promises','Promises & quotes'],['ethics','Ethics & personal finances']],view):primary==='finance'?sectionSwitch(s,[['finance','Campaign funding'],['connections','Funder connections'],['history','History & source records']],view):'';
+  pane.innerHTML=switches+'<div id="profile-content"></div>';
+  const content=pane.querySelector('#profile-content');
+  if(overview)paneOverview(s,content);
+  else if(s.basic)paneBasicContent(s,view,content);
+  else if(view==='connections')paneConnections(s,content);
+  else if(view==='history')paneMoneyHistory(s,content);
+  else (PANES[view]||panePromises)(s,content,focus);
+  simplifyDetailSections(content,view);
+  if(overview&&s.basic)fillBasicHeader(s);
+  if(!overview)content.insertAdjacentHTML('beforeend',evidenceStrip(s));
   bindProfileActions(s,pane);
-  if(focus){const t=document.getElementById(focus);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),50);}
-  const act=$('#tabs .active');if(act)act.scrollIntoView({block:'nearest',inline:'center'});
+  if(focus){const target=document.getElementById(focus);if(target){for(let p=target.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;setTimeout(()=>target.scrollIntoView({block:'start'}),50);}}
+  $('#tabs .active')?.scrollIntoView({block:'nearest',inline:'center'});
+}
+// One visible summary per section; detailed evidence remains expandable and deep-linkable.
+function simplifyDetailSections(root,view){
+  const fold=(node,label)=>{
+    if(!node||node.closest('details.data-disclosure'))return;
+    const details=document.createElement('details');details.className='data-disclosure';
+    const summary=document.createElement('summary');summary.textContent=label;
+    node.before(details);details.append(summary,node);
+    details.addEventListener('toggle',()=>{if(details.open)resizers.forEach(fn=>fn());});
+  };
+  if(view==='promises'){
+    const legend=root.querySelector('.legendlist');
+    if(legend){const next=legend.nextElementSibling;fold(legend,'Verdict labels & counting rules');if(next&&next.querySelector('.pts'))legend.parentElement.append(next);}
+  }
+  if(view==='ethics'){
+    fold(root.querySelector('#eth-indexes'),'Ethics index breakdowns & calculations');
+    fold(root.querySelector('#eth-timeline'),'Case timeline');
+    fold(root.querySelector('#eth-trades'),'Reviewed stock trades & disclosure analysis');
+    fold(root.querySelector('#live-records'),'Personal finances & latest official records');
+  }
+  if(view==='legislation')fold(root.querySelector('#legislation-record'),'Full voting record, committees & official actions');
+  if(view==='finance')fold(root.querySelector('#live-records'),'Latest official filings & source coverage');
+}
+async function fillBasicHeader(s){
+  let c;try{c=await window.RecordLive.section(s.id,'campaign');}catch{return;}
+  if(!c||document.body.dataset.view!=='overview'||!location.hash.startsWith('#'+s.id))return;
+  const facts=document.querySelector('.profile-facts'),label=document.querySelector('.profile-period');if(!facts||!label)return;
+  facts.innerHTML=[['Raised',c.receipts],['Cash on hand',c.cash],['Spent',c.disbursements]].map(([title,n])=>`<div class="profile-fact"><span>${title}</span><b>${profileAmount(n)}</b></div>`).join('');
+  label.textContent=`Official campaign snapshot: ${period(c.start,c.end)} · Not reviewed for a grade`;
 }
 // ---------- The Senate: every sitting senator, with a full profile (reviewed research) or a basic one ----------
 const monthYear=d=>{const m=/^(\d{4})-(\d{2})/.exec(d||'');return m?new Date(+m[1],+m[2]-1,1).toLocaleDateString('en-US',{month:'long',year:'numeric'}):'—';};
@@ -792,59 +840,28 @@ async function fillBasic(root=document){
 const BASIC_LIVE={promises:['crec-day','hearings','statements','factcheck','news'],
   ethics:['netWorth','trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
-function renderBasic(s,tab,focus){
-  if(!PANES[tab]||tab==='sources')tab='overview';
-  const cmte=[...new Set(committeesOf(s).map(c=>fullCommittee(c.id)))].map(id=>(COMMITTEES.committees[id]||{}).name).filter(Boolean);
-  app.innerHTML=`
-  ${profileHeader(s)}
-  ${tab==='overview'?profileReport(s):''}
-  <div class="tabs"><div class="wrap" style="padding-inline:0" id="tabs">${TABS.map(([k,l])=>`<button data-tab="${k}" class="${k===tab?'active':''}" aria-current="${k===tab?'page':'false'}">${l}</button>`).join('')}</div></div>
-  <section class="section" id="pane" data-basic="1"></section>`;
-  $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=`${s.id}-${b.dataset.tab}`;});
-  const pane=$('#pane'),person={id:s.id,name:s.name,chamber:'S',bioguide:s.bioguide};
-  const live=()=>{const host=pane.querySelector('#live-records');if(host)window.RecordLive.profile(person,host,BASIC_LIVE[tab],{intro:BASIC_INTRO});};
-  const head=(title,k)=>gradeHead(title,null,BASIC_GRADE[k],gradeRule(k));
-  if(tab==='overview'){
-    pane.innerHTML=`
-    <h2>At a glance</h2>
-    <p class="intro">Their four grades and the main facts at a glance. The grades stay "Not graded" until their research is reviewed.</p>
-    <div class="ov-grid">
-      ${ovCard(offBallot(s)?'Not on the ballot':'2026 ballot',offBallot(s)?'Not running for election in 2026':'Seat up in 2026',`Class ${s.class} · term ends ${fmtDate(s.termEnd)}`,`<div class="big">${offBallot(s)?`Next election ${s.nextElection}`:'Race not covered here'}</div>${points([offBallot(s)?['No 2026 race','No opponent, race rating or 2026 outside spending to show.']:['Not covered in depth','This seat is on the 2026 ballot, but the race isn\'t one of the races this site profiles.'],['Still tracked','Their votes, bills, statements, stock trades and campaign money, from the daily refresh.']],'small')}`,'')}
-      ${ovCard('Campaign money','Campaign funds raised','From the daily FEC refresh',`<div class="hc-live" data-basic="${s.id}" data-mini="0">${basicMoney(s,undefined,{mini:false})}</div>`,`<a href="#${s.id}-finance">Money &amp; Influence →</a>`)}
-      ${ovIdeo(s)}
-      ${ovCard('Your issues','How they compare with your choices','Issue by issue, never a single score',`<div class="big">Not graded</div><p class="small" style="margin:6px 0 0;color:var(--ink-2)">${BASIC_GRADE.match}</p>`,`<a href="#${s.id}-match">Issue match &amp; ideology →</a>`)}
-      ${ovCard('Words and actions','Do their words match their actions?','Checked statements','<div class="big">No statements checked</div>',`<a href="#${s.id}-promises">Their statements →</a>`)}
-      ${ovCard('Ethics','Ethics record','Reviewed cases','<div class="big">Not reviewed yet</div><p class="small" style="margin:6px 0 0;color:var(--ink-2)">Court records, FEC enforcement records and DOJ press releases are listed as leads, not scored.</p>',`<a href="#${s.id}-ethics">Ethics leads →</a>`)}
-    </div>
-    <div class="cols" style="margin-top:14px">
-      <div class="card"><h3>Term in office</h3><p class="small" style="margin-top:8px">In the Senate since ${esc(monthYear(s.since))}.</p><p class="small" style="margin-top:6px">Class ${s.class}. Current term ends ${fmtDate(s.termEnd)}. ${esc(ballotLine(s))}.</p><p style="margin-top:10px"><a href="#senate">All senators →</a></p></div>
-      <div class="card"><h3>Votes &amp; bills</h3><p class="small" style="margin-top:8px">Their sponsored and cosponsored bills, committee seats and roll-call votes, from the daily refresh.</p><p style="margin-top:10px"><a href="#${s.id}-legislation">Open Legislative Activity →</a></p></div>
-    </div>`;
-    mountStrip('ovstrip',s);mountKV('ovkv',s);fillBasic(pane);
-  }else if(tab==='match'){
-    pane.innerHTML=`${head('Your match','match')}
-    <p class="intro">Full vote and bill lists are on <a href="#${s.id}-legislation">Legislative Activity</a>.</p><h2 style="margin-top:34px">Career ideology</h2>
-    <div id="rec-ideo">${s.ideo?ideoBlock(s,'ideo-b'):`<div class="chart"><div class="kicker">Voting ideology</div><p style="margin:8px 0 0">No DW-NOMINATE score yet. Voteview scores a senator once they have cast enough roll-call votes.</p></div>`}</div>
-    `;
+function renderBasic(s,tab,focus){renderProfile(s,tab,focus);}
+function paneBasicContent(s,view,pane){
+  const person={id:s.id,name:s.name,chamber:'S',bioguide:s.bioguide};
+  const head=(title,key)=>gradeHead(title,null,BASIC_GRADE[key],gradeRule(key));
+  if(view==='legislation'){
+    pane.innerHTML=`<h2>Legislative Activity</h2><p class="intro">Bills, votes and committee records. Research has not been reviewed for this basic profile.</p><div id="legislation-lists"></div>${committeeBlock(s)}<section id="live-records"></section>`;
+    mountLegislation(pane.querySelector('#legislation-lists'),{person:s,data:DATA,recordLive:window.RecordLive});
+    window.RecordLive.profile(person,pane.querySelector('#live-records'),['crs','stateBills','committees','votes'],{intro:BASIC_INTRO});
+  }else if(view==='match'){
+    pane.innerHTML=`${head('Your match','match')}<p class="intro">No reviewed issue evidence yet. <a href="#${s.id}-legislation">Open bills and votes</a>.</p>${s.ideo?ideoBlock(s,'ideo-b'):'<p class="note">No comparable career ideology score is available.</p>'}`;
     if(s.ideo)mountIdeo('ideo-b',s);
-  }else if(tab==='promises'){pane.innerHTML=`${head('Promises delivered','prom')}<section id="live-records" style="margin-top:28px"></section>`;live();}
-  else if(tab==='ethics'){pane.innerHTML=`${head('Ethics','eth')}<section id="live-records" style="margin-top:28px"></section>`;live();}
-  else if(tab==='legislation'){pane.innerHTML=`<div class="page-eyebrow">OFFICIAL RECORDS</div><h2>Legislative Activity</h2><p class="intro">Sponsored bills, cosponsored legislation and roll calls. This basic profile has no reviewed research yet; official records are shown as they become available.</p><div id="legislation-lists"></div>${committeeBlock(s)}<section id="live-records" style="margin-top:28px"></section>`;mountLegislation(pane.querySelector('#legislation-lists'),{person:s,data:DATA,recordLive:window.RecordLive});window.RecordLive.profile(person,pane.querySelector('#live-records'),['crs','stateBills','committees','votes'],{intro:BASIC_INTRO});}
-  else if(tab==='pvp'){pane.innerHTML=`${head('Workers > Profit','pvp')}<section id="live-records" style="margin-top:28px"></section>`;live();}
+  }else if(['promises','ethics','pvp'].includes(view)){
+    const [title,key]=({promises:['Promises delivered','prom'],ethics:['Ethics','eth'],pvp:['Workers > Profit','pvp']})[view];
+    pane.innerHTML=`${head(title,key)}<section id="live-records"></section>`;
+    window.RecordLive.profile(person,pane.querySelector('#live-records'),BASIC_LIVE[view],{intro:BASIC_INTRO});
+  }else if(view==='sources')pane.innerHTML=`<h2>Sources & coverage</h2><p>No reviewed research yet. Official records are under Legislative Activity and Accountability.</p><a href="#method-sources">Source guide</a>`;
   else{
-    pane.innerHTML=`<h2>Money &amp; Influence</h2><p class="intro">Who pays for ${esc(s.short)}'s campaign, from the daily FEC refresh. Never part of a grade.</p>
-    <div class="cols" style="margin-bottom:14px">
-      <div class="card"><h3>Campaign money</h3><div class="hc-live" data-basic="${s.id}" data-mini="0">${basicMoney(s,undefined,{mini:false})}</div></div>
-      <div class="card"><h3>Outside spending</h3><p class="small" style="margin-top:8px"><b>${esc(ballotLine(s))}.</b> ${offBallot(s)?`Outside groups spend for and against candidates in a race, and ${esc(s.short)} has no 2026 race. The seat is next on the ballot in ${s.nextElection}.`:'Any outside spending for or against them is listed below once the FEC refresh reads it.'}</p></div>
-    </div>
-    <section id="live-records"></section>`;
-    fillBasic(pane);live();
+    const parts=view==='connections'?['donorOrgs','outside-groups']:view==='history'?['campaign-history','donor-sizes']:['campaign','pac','outside'];
+    pane.innerHTML=`<h2>${view==='connections'?'Funder connections':view==='history'?'History & source records':'Campaign funding'}</h2><p class="intro">${view==='finance'?esc(ballotLine(s))+'. ':''}Available official snapshots, separate from reviewed research.</p><section id="live-records"></section>`;
+    window.RecordLive.profile(person,pane.querySelector('#live-records'),parts,{intro:BASIC_INTRO});
   }
-  pane.insertAdjacentHTML('beforeend',evidenceStrip(s));
-  bindProfileActions(s,pane);
   bindTips(pane);
-  if(focus){const t=document.getElementById(focus);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),50);}
-  const act=$('#tabs .active');if(act)act.scrollIntoView({block:'nearest',inline:'center'});
 }
 function tiles(items){return `<div class="tiles">${items.map(t=>`<div class="tile"><div class="l">${t[0]}</div><div class="v">${t[1]}</div><div class="d">${t[2]||''}</div></div>`).join('')}</div>`}
 const statedVotes=s=>CH[icH(s)].votes.filter(v=>s.id in v.pos&&!/not in office/i.test(v.pos[s.id])).length;
@@ -1065,30 +1082,17 @@ function ovOffice(s){
   return ovCard('Not on the ballot','No 2026 race to show',esc(s.term),`<div class="big">${esc(s.seat)}</div>${points([['Nothing to compare','No 2026 campaign totals, outside spending or opponents.'],['Left out of','The filters, races, comparisons and score pages.'],['Grades','From the official acts and the ethics record.'],['Campaign committee',`${esc(s.cmteName||'The 2024 committee')} (${esc(s.fecCmte)}) still files with the FEC. Its latest totals are on the Money &amp; Influence tab.`]],'small')}`,`<a href="${fecCmteUrl(s.fecCmte)}" target="_blank" rel="noopener">FEC committee page ↗</a> · <a href="#${s.id}-finance">Money &amp; Influence →</a>`);
 }
 function paneOverview(s,pane){
-  const race=raceOf(s), riv=rivalsOf(s);
-  pane.innerHTML=`
-  <div class="page-eyebrow">THE DETAILS BEHIND THE LETTERS</div><h2>The record at a glance</h2>
-  <p class="intro">Start with the big picture. Open any card for the records, sources and calculations.</p>
-  <div class="ov-grid">
-    ${s.office?ovOffice(s):ovMoney(s,false,false)}
-    ${ovWords(s)}
-    ${ovAlign(s)}
-    ${ovEthics(s)}
-    ${s.office?'':ovOutside(s,false,true)}
-    ${ovIdeo(s)}
-  </div>
-  <div class="cols" style="margin-top:14px">
-    ${s.office?`<div class="card"><h3>Term in office</h3><p class="small" style="margin-top:8px">${esc(s.since)}.</p><p class="small" style="margin-top:6px">${esc(s.term)}. ${esc(s.seat)}.</p><p style="margin-top:10px"><a href="#${s.id}-ethics">Ethics record →</a></p></div>`:`<div class="card"><h3>2026 race</h3>
-      ${riv.length?`<ul class="list small" style="margin-top:8px">${riv.map(x=>`<li><a href="#${x.id}">${esc(x.name)}</a> (${x.party}${x.id===s.incumbent?', incumbent':''}): campaign funds ${campLine(x)}; outside spending for ${fmt$(x.out.for.total)}</li>`).join('')}</ul>`:'<p class="small muted">No profiled opponent.</p>'}
-      ${race&&race.note?`<p class="small muted" style="margin-top:6px">${esc(race.note)}</p>`:''}
-      <p style="margin-top:10px"><a href="#races">Side-by-side race view →</a></p></div>`}
-    <div class="card"><h3>${s.cand?'Record':'Votes & bills'}</h3>
-      ${s.cand?`<p class="small" style="margin-top:8px">${esc(REC_LABEL[s.recordType]||'')}. ${s.record.length} documented ${s.recordType==='state_legislator'?'votes and bills':s.recordType==='executive'?'official actions':'items'}${s.ideoKind==='house'?`, plus positions on ${statedVotes(s)} key House roll calls`:''}.</p><ul class="list small">${s.record.slice(0,3).map(r=>`<li>${esc(r.title)}</li>`).join('')}</ul>`:`<p class="small" style="margin-top:8px">Positions on ${statedVotes(s)} key ${CH[s.chamber].name} roll calls. ${s.sponsoredCount?`<b class="num">${s.sponsoredCount.toLocaleString()}</b> measures sponsored over a congressional career.`:''} ${s.bills.length} notable sponsored bills listed.</p>`}
-      <p style="margin-top:10px"><a href="#${s.id}-record">The record behind your match →</a></p></div>
-  </div>`;
-  mountStrip('ovstrip',s);
-  mountKV('ovkv',s);
-  bindTips(pane);fillSizes(pane);fillNetWorth(pane);
+  const pr=s.basic?null:SCORER.promises(s),v=s.basic?null:personPvp(s),e=s.basic?null:personEthics(s);
+  const highlights=s.basic?[
+    ['Office & election',`In the Senate since ${monthYear(s.since)}. Class ${s.class}; term ends ${fmtDate(s.termEnd)}. ${ballotLine(s)}.`, 'legislation','View official records'],
+    ['Reviewed coverage','Research is not yet reviewed. Missing grades do not mean a zero or a clean record.','ethics','See disclosure coverage'],
+    ['Find your alignment','Choose your priorities; this profile needs reviewed issue evidence before it can be compared.','match','Your match']
+  ]:[
+    ['Words & actions',pr.clear?`${pr.clear} counted checks: ${pr.kept} supported${pr.half?`, ${pr.half} partial or changed`:''}${pr.broken?`, ${pr.broken} contradicted`:''}. ${pr.notCounted+pr.vague} excluded or pending.`:'No reviewed statement checks are available yet.','promises','Read quotes and checks'],
+    ['Legislative record',`${v.n} scored actions for Workers > Profit. ${evidenceOf(s).label}.`,'legislation','Explore bills and votes'],
+    ['Ethics & disclosures',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'ethics','Review cases and finances']
+  ];
+  pane.innerHTML=`<div class="overview-summary-head"><h2>Three things to know</h2><p class="intro">A quick summary. Open a finding or a grade for its evidence.</p></div><div class="overview-highlights">${highlights.map(([title,body,route,label])=>`<article class="overview-highlight"><h3>${title}</h3><p>${esc(body)}</p><a href="#${s.id}-${route}">${label} →</a></article>`).join('')}</div><div class="overview-links"><a href="#${s.id}-finance">Campaign and outside money</a><a href="#${s.id}-match">Issue positions & ideology</a>${s.basic?'':`<a href="#${s.id}-sources">Sources & coverage</a>`}<a href="#method">Methodology</a><a href="#method-log">Score history</a></div><p class="small muted overview-asof">Research snapshot: ${esc(DATA.asof)}. Financial records and source updates keep their own dates.</p>`;
 }
 
 function conduitBlock(s){
@@ -1129,34 +1133,40 @@ function researchedFunders(s){
   const cash=n=>'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:2});
   return `<section class="chart researched-funders" id="f-groups"><div class="page-eyebrow">FOLLOW THE MONEY</div><h3>Selected researched funder groups</h3><p class="sub">Reviewed groups on file, not a complete donor ranking. Each underlying filing keeps its own period.</p><div class="tablewrap"><table><thead><tr><th>Group</th><th class="r">PAC’s own contribution</th><th class="r">Routed individual gifts</th></tr></thead><tbody>${rows.map(f=>`<tr><td><a href="#${s.id}-funders">${esc(f.org)}</a></td><td class="r mono">${cash(f.pac||0)}</td><td class="r mono">${f.routed?cash(f.routed):'—'}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Routed gifts are already part of campaign receipts; never add them again. A dash means no routed amount is shown in these reviewed entries.</p><a href="#${s.id}-funders">Compare each group’s positions with their actions →</a></section>`;
 }
+function paneConnections(s,pane){
+  pane.innerHTML=`${analysisBlock(s)}${s.office?'':`<details class="data-disclosure" open><summary>Funder positions & voting evidence</summary>${donorTreemapBlock(s)}${fundersBlock(s)}${moneyVotesBlock(s)}</details>`}<section id="live-records"></section>`;
+  mountAnalysis(s);if(!s.office){mountFundTL(pane);mountTreemap(s);}hoverTips(pane);bindTips(pane);
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['donorOrgs','outside-groups']);
+}
+function paneMoneyHistory(s,pane){
+  pane.innerHTML=`<h2>History & source records</h2><p class="intro">Reporting periods and historical records, separate from the current campaign summary.</p>${s.office?'':`<section class="chart"><h3>Outside spending over time</h3>${miniOutside(s)}</section><details class="data-disclosure"><summary>Same-period combined view & reporting notes</summary>${combinedBlock(s)}${shareBlock(s)}</details>`}<section id="live-records"></section>`;
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['campaign-history','donor-sizes','pac','outside']);bindTips(pane);
+}
 function paneFinance(s,pane){
   if(s.office)return paneFinanceOffice(s,pane);
   const c=s.camp, o=s.out;
   pane.innerHTML=`
   <h2>Money &amp; Influence</h2>
-  <p class="intro">Who funds the campaign, and how the record compares. Relationships and timing are context, not proof of influence.</p>${points([['Campaign funds',`What ${esc(s.short)}'s own committee raised and reported to the FEC.`],['Outside spending','Money other groups spent on the race on their own. The campaign never receives it.']])}
-  <nav class="jump small"><a href="#f-glance">Campaign funding</a><a href="#f-groups">Researched groups</a><a href="#f-analysis">Funder connections &amp; history</a><a href="#f-sum">Summary</a><a href="#f-camp">Campaign funds</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every item</a><a href="#f-comb">Combined view</a><a href="#live-records">Latest filings</a></nav>
-  <div class="ov-grid" id="f-glance" style="margin-top:22px">${ovMoney(s,true)}${ovOutside(s,true)}${ovCard('Outside money','Outside money by month',`For and against ${esc(s.short)}, the last seven months`,miniOutside(s,true),`The badge is the for-to-against ratio for these months. <a href="#method">How it is figured</a>`)}</div>
-  ${researchedFunders(s)}
-  <div id="f-sum" style="margin-top:14px">${fundingPanels(s)}</div>
-  ${scaleChart(s,false)}
-  ${shareBlock(s)}
+  <p class="intro">Where campaign receipts come from and what outside groups spend. Each keeps its own reporting period.</p>${points([['Campaign funds',`What ${esc(s.short)}'s own committee raised and reported to the FEC.`],['Outside spending','Money other groups spent on the race on their own. The campaign never receives it.']])}
+  <nav class="jump small"><a href="#f-glance">Funding mix</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every filing</a></nav>
+  <div id="f-glance">${ovMoney(s,true)}</div>
+  <details class="data-disclosure"><summary>Selected researched funders</summary>${researchedFunders(s)}</details>
+  <details class="data-disclosure"><summary>Campaign and outside-money comparison charts</summary><div id="f-sum">${fundingPanels(s)}</div>${scaleChart(s,false)}</details>
   <h2 id="f-camp" style="margin-top:28px">Campaign funds raised</h2>
   ${c.missing?`<div class="note"><b>No FEC financial report yet.</b> ${esc(c.note)} <a href="${fecCandUrl(s.fecCand)}" target="_blank" rel="noopener">FEC candidate page ↗</a></div>`:`
   <p class="small muted" style="margin:4px 0 0">${esc(c.cmte||'Campaign committee')} (${esc(c.cmteId)}) · FEC two-year summary, ${period(c.start,c.end)} · <a href="${esc(c.src)}" target="_blank" rel="noopener">source ↗</a></p>
-  ${tiles([
+  <details class="data-disclosure"><summary>Campaign totals & reporting details</summary>${tiles([
     ['Campaign funds raised',fmt$(c.receipts),period(c.start,c.end)],
     ['Small donors',fmt$(c.unitemized),c.unitemized==null?'not broken out':`${pct(c.unitemized,c.receipts)}% of campaign funds (gifts of $200 or less)`],
     [term('pac','From PACs'),fmt$(c.pac),`${pct(c.pac,c.receipts)}% of campaign funds`],
     ['Spent · cash on hand',c.disbursements==null?fmt$(c.cash):`${fmt$(c.disbursements)} · ${fmt$(c.cash)}`,`cash on ${fmtDate(c.end)}${c.debts?` · debts ${fmt$(c.debts)}`:''}`],
-  ])}
+  ])}</details>
   ${c.selfShare>20?`<div class="note" style="margin-bottom:12px"><b>Mostly self-funded so far.</b> ${fmtFull(c.self)} (${c.selfShare}%) of ${esc(s.short)}'s campaign funds are the candidate's own loans or contributions${c.debts?`; the committee reports ${fmtFull(c.debts)} in debts`:''}.</div>`:''}
   ${c.itemized==null?'<p class="small muted" style="margin:8px 0 0">The itemized/unitemized split is not available for this committee.</p>':''}`}
   <h2 id="f-pac" style="margin-top:28px">${term('pac','PAC contributions to the campaign')}</h2>
   <p class="small muted" style="margin:4px 0 10px">Part of campaign funds raised. Each row is one contribution, as listed on FEC Schedule A, line 11C.</p>
   ${pacCoverage(s)}
-  ${pacSectors(s)}
-  ${pacKinds(s)}
+  <details class="data-disclosure" data-chart-refresh><summary>PAC sectors and FEC types</summary>${pacSectors(s)}${pacKinds(s)}</details>
   <div id="pachost"></div>
   ${conduitBlock(s)}
   <h2 id="f-out" style="margin-top:28px">Outside spending (${term('ie','independent expenditures')})</h2>
@@ -1174,13 +1184,11 @@ function paneFinance(s,pane){
   <h3 id="f-items" style="margin:22px 0 8px">Every item</h3>
   <p class="small muted" style="margin:0 0 8px">Each outside-spending item as filed, with the date it went out and its FEC filing.</p>
   <div id="iehost"></div>
-  ${analysisBlock(s)}
-  <div id="f-comb" style="margin-top:22px">${combinedBlock(s)}</div>
   <section id="live-records" style="margin-top:28px"></section>`;
   mountPacSectors(s);pacTable(s,$('#pachost'));
   ieItems(s,$('#iehost'));
-  mountAnalysis(s);hoverTips(pane);
-  window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']);fillSizes(pane);
+  pane.querySelectorAll('[data-chart-refresh]').forEach(el=>el.addEventListener('toggle',()=>{if(el.open)mountPacSectors(s);}));hoverTips(pane);
+  window.RecordLive.profile(s,$('#live-records'),['campaign','donor-sizes','pac','outside']);fillSizes(pane);
   pane.querySelectorAll('.jump a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
   bindTips(pane);
 }
@@ -1192,9 +1200,9 @@ function paneFinanceOffice(s,pane){
   <h2>Money &amp; Influence</h2>
   <p class="intro">${esc(s.short)} is not on the 2026 ballot.</p>${points([['Not shown','2025–26 campaign totals and outside spending. There is no race to compare.'],['Still filing',`${esc(s.cmteName||'The 2024 committee')} (${esc(s.fecCmte)}) still files with the FEC. Its totals, PAC contributions and donors by employer are under Latest official records, from the daily refresh.`]])}
   <p class="small" style="margin:0 0 6px"><a href="${fecCandUrl(s.fecCand)}" target="_blank" rel="noopener">FEC candidate page ↗</a> · <a href="${fecCmteUrl(s.fecCmte)}" target="_blank" rel="noopener">FEC committee page ↗</a></p>
-  ${analysisBlock(s)}
+  <p><a href="#${s.id}-connections">Open funder connections and analysis →</a></p>
   <section id="live-records" style="margin-top:28px"></section>`;
-  mountAnalysis(s);hoverTips(pane);
+  hoverTips(pane);
   window.RecordLive.profile(s,$('#live-records'),['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']);
   bindTips(pane);
 }
@@ -1801,13 +1809,8 @@ function panePvp(s,pane){
     ${divergingRows([{label:s.name,sub:`${v.people} points for working people · ${v.profit} for the wealthy and corporations`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:`${v.n} scored actions`}])}</div>
   ${cciBlock(s,v)}
   <h3 style="margin:18px 0 8px">${s.office?'Scored bills signed or vetoed, and executive orders':'Scored votes and sponsorships'}</h3>${table}
-  ${s.office?`<h2 style="margin-top:30px">Their funders and their votes</h2>
-  <p class="intro">Not shown for ${esc(s.short)}.</p>${points([['What it covers','Who pays for each 2026 campaign, next to the votes the candidate cast.'],['Why not here',`${esc(s.short)} is not on the 2026 ballot and casts no roll-call votes.`],['FEC records',`The committee that still files is on the <a href="#${s.id}-finance">Money &amp; Influence tab</a>.`]])}`:`${donorTreemapBlock(s)}
-  <h2 style="margin-top:30px">Their funders and their votes</h2>
-  <p class="intro">Who pays for ${esc(s.short)}'s campaign or spends on the race, and how those groups wanted ${esc(s.short)} to vote. Shown side by side so you can look for patterns yourself.</p>
-  ${fundersBlock(s)}
-  ${moneyVotesBlock(s)}`}`;
-  mountFundTL(pane);mountTreemap(s);hoverTips(pane);
+  <p class="note"><a href="#${s.id}-connections">Explore funders, donor alignment and money/vote histories →</a></p>`;
+  hoverTips(pane);
   bindTips(pane);
 }
 
@@ -2236,7 +2239,7 @@ function analysisBlock(s){
   const flagRows=d.allFlags.map(f=>f.kind==='stock'?`<li><b>${FLAG_TEXT.stock}:</b> ${esc(f.org)} · ${esc(f.decision.label)} on ${fmtDate(f.decision.date)}</li>`
     :`<li><b>${FLAG_TEXT[f.kind]}${f.kind==='rose'?' after a vote it wanted':f.kind==='dropped'?' after a vote it opposed':''}:</b> ${esc(f.org)}, ${fmtFull(f.before)} in the ${WINDOW_MONTHS} months before → ${fmtFull(f.after)} from ${monLabel(f.decision.date.slice(0,7))} through ${monLabel(f.to)}. ${esc(f.decision.label)} (${fmtDate(f.decision.date)}).</li>`);
   return `<section id="f-analysis"><h2 style="margin-top:6px">Money &amp; Influence Analysis</h2>
-    <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Not graded','It sits beside the grades, never inside them.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
+    <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Context','These timing and alignment analyses sit beside the grades. The Corporation Compromised Index separately contributes to Workers > Profit as explained in its calculation.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
     <div class="cx-stats ix-row">
       ${ixCard({name:'Vote Donor Alignment',value:v.pct==null?'—':v.pct+'%',about:v.n?`${v.same} of ${v.n} votes went the way a donor that took a public position wanted (${v.rows.length} donor${v.rows.length===1?'':'s'})`:'No donor that gave to the campaign took a public position on a vote compared here',
         how:`Votes that went a donor's way ÷ votes where a donor that gave to the campaign, bundled for it or spent for them took a public side (its scorecard or key-vote letter). Missed votes don't count.<div class="ix-f">${v.n?`${v.same} ÷ ${v.n} = <b>${v.pct}%</b>`:'No compared votes = <b>—</b>'}</div>`})}
@@ -2483,9 +2486,9 @@ function renderMethod(sub){
         </ul></li>
     </ul>
     <h2>Profile pages</h2>
-    <p>Each profile has seven tabs, including a dedicated Legislative Activity tab. Four tabs explain the home-page grades. Each grade tab opens with its letter, its percentage and the math, then the evidence. Old links to earlier tabs still work.</p>
+    <p>Each profile has four main tabs: Overview, Money & Influence, Legislative Activity and Accountability. Your match and Workers > Profit are sections of Legislative Activity; Promises and Ethics are sections of Accountability. Grade calculations and original evidence remain available. Old profile links still work.</p>
     <ul class="list">
-      <li><b>Overview:</b> the four grades, where the campaign's money comes from, outside money, how the record compares with your choices, where they sit politically, whether their words match their actions, and a short ethics list.</li>
+      <li><b>Overview:</b> four grades, one campaign snapshot and three short findings. Full charts, records and interpretations open in the appropriate section.</li>
       <li><b>Your match:</b> the comparison with your positions, issue by issue, with every piece of evidence. Career ideology and issue-position charts provide context; the complete vote and bill lists are on Legislative Activity.</li>
       <li><b>Promises Delivered:</b> every statement check, pairing what was said with what the record shows. Then the latest official records: floor speeches, hearings, press releases, Vote Smart positions and ratings, fact-checks, videos, Bluesky and Threads posts, campaign-site snapshots and news.</li>
       <li><b>Ethics:</b> every ethics entry, most serious first, tagged with what it is and what it costs the grade. Then a case timeline, reviewed stock trades with charts, and the latest trades and leads from court records, FEC enforcement records and DOJ press releases. Leads are kept apart from scored cases.</li>
