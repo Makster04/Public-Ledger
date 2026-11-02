@@ -189,6 +189,7 @@ The data underneath refreshes daily (see What refreshes). Scores are recalculate
 3. Match new actions to existing promises, and replace earlier statements with votes where Rule 1 applies.
 4. Run `npm run scores:monthly` to recalculate Promises delivered, Ethics and Workers > Profit for everyone and rerun the Money & Influence timing flags (`-- --dry-run` previews it).
 5. It adds an entry to `public/score-log.json`: which score moved, by how much and why (for example "+1 open investigation"). The Methodology page shows the latest entries, and each grade tab says when it was last recalculated and marks a grade that reviewed edits have changed since.
+6. The Integrity comparison is separate: `npm run integrity:monthly` writes `public/integrity-preview-log.json`. It never writes official grade history or switches a grade. Its adapted methodology is credited to [IntegrityIndex.us](https://integrityindex.us/methodology) and documented on the Methodology page; parameters remain provisional and uncalibrated.
 
 ## Profile tabs
 
@@ -304,7 +305,7 @@ Deployment remains a later manual step because this version was requested to sta
 
 ## Files
 
-- `public/` — the site: `app.js` (pages), `bills.js` (the Bills page's list), `live.js` (API updates, Website updates and latest official records), `grades.js` (every scoring rule, weight and threshold, and the outside-money ratio), `scoring.js` (each person's reviewed grades), `influence.js` (the Money & Influence Analysis), `charts.js` (chart builders), `lean.js` (liberal/conservative bill marks), `sectors.js` (industry sectors from SEC codes), `research.json` (reviewed research), `committees.json`, `committee-sectors.json`, `score-log.json` (every monthly score change), `funder-history.json`, `portraits/`
+- `public/` — the site: `app.js` (pages), `bills.js` (the Bills page's list), `live.js` (API updates, Website updates and latest official records), `grades.js` (published scoring rules), `integrity.js` (preview-only calculations), `scoring.js` (each person's reviewed grades), `influence.js` (the Money & Influence Analysis), `charts.js` (chart builders), `lean.js` (liberal/conservative bill marks), `sectors.js` (industry sectors from SEC codes), `research.json` (reviewed research), `committees.json`, `committee-sectors.json`, `score-log.json` (official monthly score history), `integrity-preview-log.json` (separate comparison log), `funder-history.json`, `portraits/`
 - `src/sources.mjs` — approved hosts, how each key is sent, and the original FEC, Congress.gov and roll-call adapters
 - `src/feeds.mjs` — the adapters for every source added since, one per job kind
 - `src/merge.mjs` — joining what several sources report about the same thing: trades, state bills, articles, hearings, legal leads, statements and top donor organizations

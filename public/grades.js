@@ -21,22 +21,6 @@ export const ACTION_TYPES=new Set(['senate_vote','house_vote','vote','state_vote
 
 export function letter(pct){return pct>=90?'A':pct>=80?'B':pct>=70?'C':pct>=60?'D':'F';}
 
-// Preview-only composite. The three component scores must be on the 0–100 scale. Missing components are omitted
-// and the available weights are renormalized, but at least two are required. Legal trouble must be known because
-// an absent index is not evidence of zero trouble. This function is intentionally not used by the live grade cards.
-export const INTEGRITY_PREVIEW={weights:{honesty:0.30,personalFinances:0.30,fundraising:0.40},minimumComponents:2};
-export function integrityFinancePreview({honesty=null,personalFinances=null,fundraising=null,legalTrouble=null}={}){
-  const values={honesty,personalFinances,fundraising};
-  const used=Object.keys(INTEGRITY_PREVIEW.weights).filter(k=>Number.isFinite(values[k])&&values[k]>=0&&values[k]<=100);
-  const knownLegal=Number.isFinite(legalTrouble)&&legalTrouble>=0&&legalTrouble<=100;
-  if(used.length<INTEGRITY_PREVIEW.minimumComponents||!knownLegal)
-    return {pct:null,raw:null,components:used,missing:Object.keys(values).filter(k=>!used.includes(k)),legalTrouble:knownLegal?legalTrouble:null,why:used.length<INTEGRITY_PREVIEW.minimumComponents?'Needs two complete components':'Legal Trouble data is missing'};
-  const weight=used.reduce((sum,k)=>sum+INTEGRITY_PREVIEW.weights[k],0);
-  const weighted=used.reduce((sum,k)=>sum+INTEGRITY_PREVIEW.weights[k]*values[k],0)/weight;
-  const raw=Math.max(0,weighted-legalTrouble);
-  return {pct:Math.round(raw),raw,weighted,components:used,missing:Object.keys(values).filter(k=>!used.includes(k)),legalTrouble,why:null};
-}
-
 // One ID per bill, so a vote and a sponsorship on the same bill can be matched: "H.R. 1319 (117th Congress)" -> "117-hr-1319".
 // Amendments (SAMDT, HAMDT) are keyed like bills ("117-samdt-1858"), so a vote on one is scored on its own, not as the bill.
 const BILL_TYPES=new Set(['HR','S','HJRES','SJRES','HCONRES','SCONRES','HRES','SRES','SAMDT','HAMDT']);

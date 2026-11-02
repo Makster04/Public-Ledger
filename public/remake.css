@@ -807,3 +807,18 @@ input, select { accent-color: var(--accent); }
 .stocks-table:has(.ranking-empty) thead { display: none; }
 .stocks-table:has(.ranking-empty) td { padding: 0; border: 0; }
 .stocks-table .ranking-empty { white-space: normal; overflow-wrap: anywhere; }
+.integrity-preview{grid-column:1/-1;border-color:var(--line);background:var(--surface-2,var(--surface));}
+.integrity-preview h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.integrity-pill{font:600 .65rem var(--font-body);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--ink-2);background:var(--surface)}
+.integrity-score{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:10px 0 14px}
+.integrity-score>b{font:700 1.25rem var(--font-display);color:var(--ink)}
+.integrity-score>span{font-size:.82rem;color:var(--ink-2)}
+.integrity-components{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.integrity-components details,.integrity-worker{min-width:0;border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:var(--surface)}
+.integrity-components summary,.integrity-worker summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer;list-style:none}
+.integrity-components summary::-webkit-details-marker,.integrity-worker summary::-webkit-details-marker{display:none}
+.integrity-components summary span,.integrity-worker summary span{color:var(--ink-2);text-align:right}
+.integrity-components p,.integrity-worker p{margin:8px 0 0;line-height:1.5}
+.integrity-components a{color:var(--ink-2)}
+.integrity-worker{margin-top:9px}
+@media(max-width:600px){.integrity-components{grid-template-columns:1fr}.integrity-components summary,.integrity-worker summary{align-items:flex-start;flex-direction:column;gap:3px}.integrity-components summary span,.integrity-worker summary span{text-align:left}}

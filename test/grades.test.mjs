@@ -1,23 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,ACCESS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER,integrityFinancePreview} from '../public/grades.js';
+import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,ACCESS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
 const data=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=data.members.concat(data.cands,data.featured||[]);
 const st=(...a)=>a.map(assessment=>({assessment}));
 test('letter grades use the usual 90/80/70/60 cut-offs',()=>{
   assert.deepEqual([100,90,89.9,80,79,70,69,60,59,0].map(letter),['A','A','B','B','C','C','D','D','F','F']);
-});
-test('preview composite weights honesty, personal finances and fundraising; requires two components and known legal trouble',()=>{
-  assert.deepEqual(integrityFinancePreview({honesty:80,personalFinances:90,fundraising:70,legalTrouble:10}),{
-    pct:69,raw:69,weighted:79,components:['honesty','personalFinances','fundraising'],missing:[],legalTrouble:10,why:null});
-  const two=integrityFinancePreview({honesty:80,personalFinances:90,legalTrouble:10});
-  assert.equal(two.raw,75); // Renormalized 30:30 weights.
-  assert.deepEqual(two.components,['honesty','personalFinances']);
-  assert.equal(integrityFinancePreview({honesty:100,fundraising:50}).pct,null,'unknown legal trouble is not zero');
-  assert.equal(integrityFinancePreview({honesty:100,legalTrouble:0}).pct,null,'one component is insufficient');
-  assert.equal(integrityFinancePreview({honesty:null,personalFinances:100,fundraising:100,legalTrouble:101}).pct,null,'out-of-range data is invalid');
-  assert.equal(integrityFinancePreview({honesty:0,personalFinances:0,legalTrouble:100}).pct,0,'the preview is floored at zero');
 });
 test('promises: kept 1, partly or changed 1/2, broken 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
   assert.equal(promiseScore(st('consistent','consistent','contradiction')).pct,67);
