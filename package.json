@@ -25,7 +25,13 @@
     "review:holdings": "node --no-warnings=ExperimentalWarning scripts/review-holdings.mjs",
     "cloudflare:preview": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
-    "db:migrate": "wrangler d1 migrations apply public-ledger --remote"
+    "db:migrate": "wrangler d1 migrations apply public-ledger --remote",
+    "consistency:prepare": "node --env-file-if-exists=.dev.vars scripts/consistency.mjs prepare",
+    "consistency:run": "node --env-file-if-exists=.dev.vars scripts/consistency.mjs run",
+    "consistency:export": "node --env-file-if-exists=.dev.vars scripts/consistency.mjs export",
+    "consistency:status": "node --env-file-if-exists=.dev.vars scripts/consistency.mjs status",
+    "consistency:evaluate": "python3 scripts/consistency/evaluate.py",
+    "test:consistency": "python3 -m unittest discover -s test/consistency -v"
   },
   "dependencies": {
     "fast-xml-parser": "^5.0.0"
