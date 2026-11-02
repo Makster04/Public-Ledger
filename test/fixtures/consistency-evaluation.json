@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "purpose": "Small development evaluation set; not a representative political benchmark.",
+  "label_status": "Provisional reference labels. No new human adjudication has been performed.",
+  "required_before_production": "Have independent human reviewers adjudicate each label under statement-action-v1, including mixed-event legacy records.",
+  "cases": [
+    {
+      "id": "research-lawler-0",
+      "party": "R",
+      "person_name": "Mike Lawler",
+      "statement": {
+        "id": "lawler:statement:0",
+        "person_id": "bioguide:L000599",
+        "text": "\"With House leadership refusing to bring any proposal to the floor, I am signing another discharge petition to force a vote and prevent higher health care costs for families in the Hudson Valley.\" Lawler's office said this was the third discharge petition he had signed on extending the enhanced ACA credits.",
+        "date": "2025-12-17",
+        "sources": [
+          {
+            "url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=5208",
+            "title": "Office of Rep. Lawler"
+          }
+        ],
+        "kind": "statement"
+      },
+      "action": {
+        "id": "lawler:reviewed_record:0",
+        "person_id": "bioguide:L000599",
+        "text": "Voted Yea on H.R. 1834, a three-year extension of the enhanced ACA premium tax credits brought to the floor by discharge petition (roll call 11, Jan. 8, 2026); it passed 230-196, with 17 Republicans voting yes.",
+        "date": "2026-01-08",
+        "sources": [
+          {
+            "url": "https://clerk.house.gov/Votes/202611",
+            "title": "House Clerk, Roll Call 11 (2026)"
+          }
+        ],
+        "kind": "reviewed_record"
+      },
+      "expected_label": "consistent",
+      "expected_review": false,
+      "label_provenance": {
+        "type": "legacy_research_assessment",
+        "assessment": "consistent",
+        "path": "public/research.json:lawler:statements[0]",
+        "human_adjudicated": false,
+        "note": "Reference label copied from the existing research; label authorship and new-rubric agreement require human adjudication."
+      }
+    },
+    {
+      "id": "research-kaptur-0",
+      "party": "D",
+      "person_name": "Marcy Kaptur",
+      "statement": {
+        "id": "kaptur:statement:0",
+        "person_id": "bioguide:K000009",
+        "text": "\"Tariffs are not a strategy. They are a tax on working Americans and the firms that employ them.\" In the same House floor remarks she called Canada \"Ohio's largest fair trade partner that keeps our auto industry strong and globally competitive.\"",
+        "date": "2025-04-10",
+        "sources": [
+          {
+            "url": "https://govinfo.gov/content/pkg/CREC-2025-04-10/html/CREC-2025-04-10-pt1-PgH1593-2.htm",
+            "title": "Congressional Record (House)"
+          }
+        ],
+        "kind": "statement"
+      },
+      "action": {
+        "id": "kaptur:reviewed_record:0",
+        "person_id": "bioguide:K000009",
+        "text": "Voted YES on H.J.Res. 72, terminating the national emergency used to impose tariffs on imports from Canada (roll call 65, Feb. 11, 2026); the resolution passed the House.",
+        "date": "2026-02-11",
+        "sources": [
+          {
+            "url": "https://clerk.house.gov/Votes/202665",
+            "title": "House Clerk, Roll Call 65 (2026)"
+          }
+        ],
+        "kind": "reviewed_record"
+      },
+      "expected_label": "consistent",
+      "expected_review": false,
+      "label_provenance": {
+        "type": "legacy_research_assessment",
+        "assessment": "consistent",
+        "path": "public/research.json:kaptur:statements[0]",
+        "human_adjudicated": false,
+        "note": "Reference label copied from the existing research; label authorship and new-rubric agreement require human adjudication."
+      }
+    },
+    {
+      "id": "research-osborn-0",
+      "party": "I",
+      "person_name": "Dan Osborn",
+      "statement": {
+        "id": "osborn:statement:0",
+        "person_id": "fec:S4NE00207",
+        "text": "\"I've been a registered independent from the time I could vote.\" Osborn said this at his 2026 campaign launch, adding that he would \"not caucus with either party.\"",
+        "date": "2025-07-08",
+        "sources": [
+          {
+            "url": "https://nebraskaexaminer.com/2025/07/08/nebraskas-dan-osborn-picks-a-race-launches-senate-bid-against-u-s-sen-pete-ricketts/",
+            "title": "Nebraska Examiner (July 8, 2025)"
+          }
+        ],
+        "kind": "statement"
+      },
+      "action": {
+        "id": "osborn:reviewed_record:0",
+        "person_id": "fec:S4NE00207",
+        "text": "Qualified for the ballot by nonpartisan petition, submitting about 12,500 signatures, instead of running in a party primary.",
+        "date": "2026-06-11",
+        "sources": [
+          {
+            "url": "https://nebraskaexaminer.com/2026/06/11/dan-osborn-submits-signatures-to-challenge-ricketts-on-nebraskas-november-ballot/",
+            "title": "Nebraska Examiner (June 11, 2026)"
+          }
+        ],
+        "kind": "reviewed_record"
+      },
+      "expected_label": "consistent",
+      "expected_review": false,
+      "label_provenance": {
+        "type": "legacy_research_assessment",
+        "assessment": "consistent",
+        "path": "public/research.json:osborn:statements[0]",
+        "human_adjudicated": false,
+        "note": "Reference label copied from the existing research; label authorship and new-rubric agreement require human adjudication."
+      }
+    },
+    {
+      "id": "research-elsayed-1",
+      "party": "D",
+      "person_name": "Abdul El-Sayed",
+      "statement": {
+        "id": "elsayed:statement:1",
+        "person_id": "fec:S6MI00418",
+        "text": "\"$700 million medical debt erased\" — wording from El-Sayed's first major TV ad, as cited by Bridge Michigan, which also noted he called it \"the biggest medical debt erasure in Michigan state history.\"",
+        "date": "2026-06-25",
+        "sources": [
+          {
+            "url": "https://bridgemi.com/michigan-government/fact-check-abdul-el-sayed-overstates-claim-he-erased-700m-in-medical-debt/",
+            "title": "Bridge Michigan: Fact check: Abdul El-Sayed overstates claim he erased $700M in medical debt (Jun. 25, 2026)"
+          }
+        ],
+        "kind": "statement"
+      },
+      "action": {
+        "id": "elsayed:reviewed_record:1",
+        "person_id": "fec:S6MI00418",
+        "text": "As Wayne County health director he launched a county contract with a medical-debt nonprofit aimed at eliminating up to $700 million in debt for about 300,000 residents.",
+        "date": "2024-03-13",
+        "sources": [
+          {
+            "url": "https://www.bridgedetroit.com/wayne-county-signs-off-on-contract-to-erase-medical-debt-for-up-to-300k/",
+            "title": "BridgeDetroit: Wayne County inks deal to erase medical debts for up to 300K (Mar. 13, 2024)"
+          }
+        ],
+        "kind": "reviewed_record"
+      },
+      "expected_label": "inconsistent",
+      "expected_review": false,
+      "label_provenance": {
+        "type": "legacy_research_assessment",
+        "assessment": "contradiction",
+        "path": "public/research.json:elsayed:statements[1]",
+        "human_adjudicated": false,
+        "note": "Reference label copied from the existing research; label authorship and new-rubric agreement require human adjudication."
+      }
+    },
+    {
+      "id": "synthetic-support",
+      "party": "R",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:support:statement",
+        "person_id": "fixture:support",
+        "text": "I will vote to raise the minimum wage to $15.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/support",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:support:action",
+        "person_id": "fixture:support",
+        "text": "Voted Yea on final passage. The cited provision raises the federal minimum wage to $15.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/support",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": "consistent",
+      "expected_review": false,
+      "expected_aggregate_inclusion": true,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-oppose",
+      "party": "D",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:oppose:statement",
+        "person_id": "fixture:oppose",
+        "text": "I will vote against reducing school meal eligibility.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/oppose",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:oppose:action",
+        "person_id": "fixture:oppose",
+        "text": "Voted Yea on final passage. The cited provision reduces school meal eligibility.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/oppose",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": "inconsistent",
+      "expected_review": false,
+      "expected_aggregate_inclusion": true,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-unrelated",
+      "party": "I",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:unrelated:statement",
+        "person_id": "fixture:unrelated",
+        "text": "I support extending health insurance tax credits.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/unrelated",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:unrelated:action",
+        "person_id": "fixture:unrelated",
+        "text": "Voted Yea to rename a postal facility; the measure contains no health insurance provisions.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/unrelated",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": "not_relevant",
+      "expected_review": false,
+      "expected_aggregate_inclusion": false,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-vague",
+      "party": "R",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:vague:statement",
+        "person_id": "fixture:vague",
+        "text": "I will fight for families.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/vague",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": true
+      },
+      "action": {
+        "id": "fixture:vague:action",
+        "person_id": "fixture:vague",
+        "text": "Voted Yea on a transportation appropriation with several unrelated provisions.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/vague",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": null,
+      "expected_review": true,
+      "expected_aggregate_inclusion": false,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-missing-source",
+      "party": "D",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:missing-source:statement",
+        "person_id": "fixture:missing-source",
+        "text": "I oppose closing rural clinics.",
+        "date": "2025-06-01",
+        "sources": [],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:missing-source:action",
+        "person_id": "fixture:missing-source",
+        "text": "An unsourced post says the member voted to close clinics.",
+        "date": "2025-06-10",
+        "sources": [],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": null,
+      "expected_review": true,
+      "expected_aggregate_inclusion": false,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-conflicting",
+      "party": "I",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:conflicting:statement",
+        "person_id": "fixture:conflicting",
+        "text": "I will oppose this bill unless the clinic closures are removed.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/conflicting",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:conflicting:action",
+        "person_id": "fixture:conflicting",
+        "text": "A roll call records Yea; available summaries disagree about whether the adopted amendment removed clinic closures.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/conflicting",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": null,
+      "expected_review": true,
+      "expected_aggregate_inclusion": false,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-before",
+      "party": "D",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:before:statement",
+        "person_id": "fixture:before",
+        "text": "I now support ending the tariff.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/before",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:before:action",
+        "person_id": "fixture:before",
+        "text": "Voted Nay on a tariff repeal before making the statement.",
+        "date": "2025-05-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/before",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "before",
+      "expected_label": "inconsistent",
+      "expected_review": false,
+      "expected_aggregate_inclusion": false,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    },
+    {
+      "id": "synthetic-changed-position",
+      "party": "R",
+      "person_name": "Synthetic officeholder",
+      "synthetic": true,
+      "statement": {
+        "id": "fixture:changed-position:statement",
+        "person_id": "fixture:changed-position",
+        "text": "I previously supported the tariff, but I now oppose it and will vote to repeal it.",
+        "date": "2025-06-01",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/changed-position",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "vague": false
+      },
+      "action": {
+        "id": "fixture:changed-position:action",
+        "person_id": "fixture:changed-position",
+        "text": "Voted Yea on a measure that repeals the tariff.",
+        "date": "2025-06-10",
+        "sources": [
+          {
+            "url": "https://example.test/evaluation/changed-position",
+            "title": "Synthetic test evidence; not an actual public record"
+          }
+        ],
+        "kind": "vote"
+      },
+      "temporal_relation": "after",
+      "expected_label": "consistent",
+      "expected_review": false,
+      "expected_aggregate_inclusion": true,
+      "label_provenance": {
+        "type": "synthetic_specification_fixture",
+        "human_adjudicated": false,
+        "note": "Assistant-authored test reference, not a human benchmark. Before-statement classification is context only and must be excluded from future-follow-through aggregation."
+      }
+    }
+  ]
+}

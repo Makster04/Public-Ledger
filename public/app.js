@@ -1,4 +1,5 @@
 import {mountRankings,mountStocks} from './explore-finance.js';
+import {mountConsistency} from './consistency.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
@@ -1927,7 +1928,8 @@ function panePromises(s,pane){
   pane.innerHTML=`
   ${gradeHead('Promises Delivered',pr.pct,detail,gradeRule('prom'),bar+math+monthlyNote(s,'promises',pr.pct))}<div class="page-eyebrow">WHAT WAS SAID → WHAT THE RECORD SHOWS</div>
   ${trackerBlock(s)}
-  ${pf&&!s.statements.length?'':`<p class="intro">Each check pairs something ${esc(s.short)} said or promised with what the record shows. The label rates that match, not whether the policy is good.</p>
+  <section class="consistency-block" id="statement-consistency" aria-label="Statement–action consistency"></section>
+  ${pf&&!s.statements.length?'':`<details class="consistency-legacy"><summary>Reviewed promise assessments (used by grade)</summary><p class="intro">Each check pairs something ${esc(s.short)} said or promised with what the record shows. The label rates that match, not whether the policy is good.</p>
   <dl class="legendlist small">
     <div><dt><span class="chip good">✓ Consistent</span></dt><dd>The action matches the statement.</dd></div>
     <div><dt><span class="chip crit">✕ Direct contradiction</span></dt><dd>The record directly conflicts with what was said.</dd></div>
@@ -1949,8 +1951,9 @@ function panePromises(s,pane){
     ${x.unacted?`<div class="small" style="margin-top:10px;color:var(--ink-2)"><b>Not acted on by the end of the term</b>${x.unacted.date?` (${esc(x.unacted.date)})`:''}: ${esc(x.unacted.reason||'')}</div>`:''}
     <div class="verdict"><span class="chip ${cls}">${AICON[x.assessment]} ${lab}</span><div class="note">${esc(x.note)}</div></div>
     ${pledgeBlock(s,x)}
-  </article>`}).join('')}`}
+  </article>`}).join('')}</details>`}
   <section id="live-records" style="margin-top:28px"></section>`;
+  void mountConsistency(pane.querySelector('#statement-consistency'),s.id);
   window.RecordLive.profile(s,pane.querySelector('#live-records'),['crec-day','hearings','statements','votesmart','wayback','factcheck','news']);
 }
 
