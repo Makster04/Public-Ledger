@@ -1,6 +1,6 @@
 # Ethics ⚖️
 
-**Status: published grade; unchanged during the Integrity comparison period.** Ethics is a higher-is-better 0–100 grade. The indices deducted from it are higher-is-worse.
+**Status: historical published grade, preserved without recalculation.** Ethics is no longer a current headline grade. Its reviewed legal and trading evidence remains accessible in the corresponding Integrity sections. Its percentage is not part of the Integrity calculation.
 
 ```text
 Ethics = max(0, round(100 − Legal Trouble − 0.10 × Insider Trading

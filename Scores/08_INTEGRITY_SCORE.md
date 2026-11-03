@@ -1,6 +1,6 @@
 # Integrity Score preview 🧭
 
-**Current status: visible preview, not yet a published grade.** The formula and component calculator are implemented in `public/integrity.js`, the preview is presented on reviewed profiles, and monthly comparisons are stored separately. The score is currently unavailable where required reviewed coverage is missing. The application has **not** merged the existing Ethics and Promises Delivered grade histories or replaced those published grades.
+**Current status: Integrity is now one of the three primary grades in the interface; its methodology remains provisional and uncalibrated.** The formula and component calculator are implemented in `public/integrity.js`, profile evidence is consolidated in one Integrity section, and monthly comparisons are stored separately. The score is Not graded where required reviewed coverage is missing. Historical Ethics and Promises Delivered records are preserved and are not averaged into Integrity.
 
 This adapted design is inspired by and credits [IntegrityIndex.us](https://integrityindex.us/methodology). Public Ledger's weights, caps, curves, midpoints, reference-campaign context, and evidence minimums are provisional and uncalibrated. This is not a claim to reproduce IntegrityIndex.us's numerical outputs.
 
@@ -71,6 +71,6 @@ The separate preview CCI removes the direct business-PAC-share component. Remain
 
 The method is in code, but formula implementation is not the same as a complete, calibrated score. Current methodology notes that reviewed annual holdings/trade coverage is not yet available as complete score input, sourced Legal Trouble coverage reviews are not recorded for profiles, earmark coverage is incomplete, and employee-giving/lobbied-bill CCI inputs are not built. Those values remain unavailable rather than clean. As a result, an overall Integrity grade may not be produced even while the component explanations are visible.
 
-Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history. No automatic switch is allowed. Cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. Ethics and Promises Delivered remain published and accessible until that migration is explicitly approved and implemented.
+Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history. No automatic methodology switch is allowed. Cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. Ethics and Promises Delivered are no longer separate headline grades, but their past published values remain in official history and their supporting evidence remains accessible within Integrity.
 
 See [Ethics and its indices](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md), and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).
