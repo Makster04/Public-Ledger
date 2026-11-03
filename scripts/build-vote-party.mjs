@@ -11,10 +11,10 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {requestSource,voteURL,normalizeVote,partyTally} from '../src/sources.mjs';
+import {csvRows,CAST,PARTY,voteviewFiles} from '../src/voteview.mjs';
 
 const root=new URL('../',import.meta.url);
 const OUT=new URL('public/vote-party.json',root);
-const VOTEVIEW='https://voteview.com/static/data/out';
 
 // The official file's address arguments for a saved vote: Senate votes are "117-1-1" (Congress, session, number), House
 // votes carry their year and roll number.
@@ -25,27 +25,8 @@ export function voteArgs(v,chamber){
 }
 export const savedVotes=research=>[...(research.votes||[]).map(v=>[v,'S']),...(research.hvotes||[]).map(v=>[v,'H'])].map(([v,ch])=>({id:v.id,date:v.date||null,result:v.result||'',args:voteArgs(v,ch)})).filter(v=>v.args);
 
-// A CSV file as one object per row, keyed by the header line. Quoted fields may hold commas, quotes and line breaks.
-export function csvRows(text){
-  const rows=[];let row=[],field='',quoted=false;
-  for(let i=0;i<text.length;i++){
-    const c=text[i];
-    if(quoted){if(c==='"'){if(text[i+1]==='"'){field+='"';i++;}else quoted=false;}else field+=c;continue;}
-    if(c==='"')quoted=true;
-    else if(c===','){row.push(field);field='';}
-    else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(field);field='';if(row.some(f=>f!==''))rows.push(row);row=[];}
-    else field+=c;
-  }
-  row.push(field);if(row.some(f=>f!==''))rows.push(row);
-  const [head=[],...body]=rows;
-  return body.map(r=>Object.fromEntries(head.map((h,i)=>[h.trim(),r[i]??''])));
-}
-
-// Voteview's codes (voteview.com/articles/data_help_votes): 1 Yea, 6 Nay, 7–8 Present; paired and announced votes
-// (2–5) and 9 are not cast on the floor, as in the official record. Parties: 100 Democrat, 200 Republican,
-// 328 Independent.
-export const CAST={1:'Yea',2:'Not Voting',3:'Not Voting',4:'Not Voting',5:'Not Voting',6:'Nay',7:'Present',8:'Present',9:'Not Voting'};
-const PARTY={100:'D',200:'R',328:'I'};
+// CSV parsing, Voteview's vote and party codes and its files are shared with the refresh (src/voteview.mjs).
+export {csvRows,CAST};
 
 // The yea and nay counts in a saved result ("Not sustained, 6-93", "Passed 51-50 (VP tie-break)"), if it has them.
 export function resultCounts(result){const m=String(result||'').match(/(\d+)\s*-\s*(\d+)/);return m?{yea:Number(m[1]),nay:Number(m[2])}:null;}
@@ -77,13 +58,7 @@ export function voteviewParty({rollcalls,members,votes},wanted){
   return {votes:out,problems};
 }
 
-// One Congress's three Voteview Senate files, parsed: rollcalls (each vote's official session and roll number), members
-// (party and Bioguide ID) and votes (each senator's cast code).
-export async function voteviewFiles(congress){
-  const files={};
-  for(const kind of ['rollcalls','members','votes'])files[kind]=csvRows(await requestSource(`${VOTEVIEW}/${kind}/S${congress}_${kind}.csv`,{},{as:'text'}));
-  return files;
-}
+export {voteviewFiles};
 async function fromVoteview(wanted){
   const out={},problems={},byCongress=new Map();
   for(const w of wanted)(byCongress.get(w.args.congress)||byCongress.set(w.args.congress,[]).get(w.args.congress)).push(w);

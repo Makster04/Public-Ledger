@@ -1,6 +1,7 @@
 import config from '../data/config.json' with {type:'json'};
 import COMMITTEES from '../public/committees.json' with {type:'json'};
-import {fetchPage,summarize,SourceError,describeFailure,requestSource,missingKey,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
+import {fetchPage,summarize,SourceError,describeFailure,requestSource,missingKey,voteURL,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
+import {voteviewFiles,voteviewSenateVote,voteviewSenateIndex} from './voteview.mjs';
 import {FEEDS,FEED_KINDS,RETIRED_FEEDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,mergeHearings,mergeLegal,mergeStatements,donorOrgs} from './merge.mjs';
 
@@ -118,11 +119,26 @@ const AFTER={outside:async(snapshot,job,ctx)=>{
   const by=new Map();for(const r of snapshot.rows||[])by.set(r.name,(by.get(r.name)||0)+Math.abs(r.amount||0));
   await ctx.setArgs(`outside-groups:${job.subject}`,{groups:[...by].sort((a,b)=>b[1]-a[1]).slice(0,10).map(x=>x[0]).filter(Boolean)});
 }};
+// Senate roll calls and the Senate's list of new votes come from Senate.gov; when it turns scripts away (HTTP 403), from
+// Voteview's files instead (src/voteview.mjs), and for the next six hours every Senate vote goes straight to Voteview.
+const SENATE_PAUSE=6*60*60_000;let senateRefused=0;
+const senateViaVoteview=(job,a)=>(job.kind==='vote'&&a.chamber==='S')||job.kind==='senate-index';
+async function fromVoteview(job,a,env){
+  const files=await voteviewFiles(a.congress,env);
+  if(job.kind==='senate-index')return {rows:voteviewSenateIndex(files,a),next:null};
+  return {rows:[voteviewSenateVote(files,a,config.people,voteURL(a))],next:null};
+}
+export const resetSenateRefusal=()=>{senateRefused=0;};
 // House roll calls from 2023 on come from Congress.gov's House vote endpoint when its key is set; otherwise, and for
 // votes it does not cover yet, from the House Clerk.
 async function fetchJob(job,env){
   const a=JSON.parse(job.args);
   if(FEEDS[job.kind])return FEEDS[job.kind].page(job,a,env,config);
+  if(senateViaVoteview(job,a)){
+    if(Date.now()-senateRefused<SENATE_PAUSE)return fromVoteview(job,a,env);
+    try{return await fetchPage(job,env,config);}
+    catch(e){if(e?.statusCode!==403)throw e;senateRefused=Date.now();return fromVoteview(job,a,env);}
+  }
   if(job.kind==='vote'&&a.chamber==='H'&&a.year>=2023&&env.CONGRESS_API_KEY){
     const d=await requestSource(houseApiURL(a),env,{allow404:true});
     if(d)return {rows:[{...normalizeHouseApiVote(d,a,config.people),source:`https://clerk.house.gov/Votes/${a.year}${a.number}`}],next:null};
