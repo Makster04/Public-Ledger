@@ -416,11 +416,20 @@ const points=(items,cls='')=>`<ul class="pts${cls?' '+cls:''}">${items.filter(Bo
 // The three primary grades: the question each answers and how it is figured. Shown as bullets on the pages, and joined into one
 // line for the grade tiles' hover text.
 const GRADE={
-  match:{q:'How closely does their record match the positions you picked?',pts:[
+  match:{q:'How closely does this politician\'s record align with your views?',pts:[
+    ['What it compares','Your issue positions with their documented positions and recorded actions. It is personalized to your answers.'],
     ['What counts','Their votes, bills and official acts on each issue you picked in My alignment.'],
     ['Statements','An issue backed only by speeches or statements counts half as much.'],
     ['Your choices','Saved only in this browser.'],
+    ['Higher score','Closer agreement with you. It does not measure honesty, ethics, or whether their policies benefit working people.'],
     ['Not graded','Until there is evidence on at least 3 of your issues.']]},
+  integ:{q:'How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?',pts:[
+    ['Honesty (30%)','The Promises Delivered Index: reviewed kept, partly kept and broken commitments.'],
+    ['Personal Finances (30%)','The Insider Trading Index, the Stock Disclosure Dodger Index, and the holdings and trading penalties.'],
+    ['Fundraising (40%)','Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from IntegrityIndex.us.'],
+    ['Legal Trouble Index 🚨','Subtracted at full strength after averaging the available components. The result stays between 0 and 100.'],
+    ['Not graded','Until at least two components are complete and the Legal Trouble review is sourced. Honesty needs at least 3 counted promise checks. Missing evidence is never treated as a clean record.'],
+    ['Provisional','The parameters still need calibration. Flip-Flop and Pants on Fire are planned additions to Honesty.']]},
   prom:{q:'Did they do what they said they would?',pts:[
     ['Kept','1 point. The record supports the promise.'],
     ['Partly kept or changed','½ point.'],
@@ -434,14 +443,15 @@ const GRADE={
     ['Insider Trading Index 📈','Minus a tenth of it. Stock trades in industries their committees oversee, near related votes, or in donors\' companies.'],
     ['Stock Disclosure Dodger Index 🙈',`Minus a tenth of it. Trade reports filed after the ${LATE_DAYS}-day deadline, or never.`],
     ['Not counted','Accusations no official body has acted on. They are listed, but cost nothing.']]},
-  pvp:{q:'Does their record help working people or the wealthy?',pts:[
+  pvp:{q:'How consistently do this politician\'s legislative actions prioritize working people?',pts:[
     ['High grade','Their record helped working and middle-class families more.'],
     ['Low grade','Their record helped the wealthy and corporations more.'],
     ['What counts','Their votes on, and sponsorships of, scored bills.'],
     ['Bill scores','Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed): half from a nonpartisan study of who gains, half from which side worker and business groups took.'],
     ['How votes count',"A yes vote takes the bill's side and a no vote the other side, counted by the bill's strength: a yes on a +60 bill adds 0.6 to the working-people side."],
     ['Bills that didn\'t pass','Count too: sponsoring or cosponsoring one counts like a yes vote, and a cited public statement for or against it counts half as much. A bill counts once across its versions in different Congresses.'],
-    ['Corporation Compromised Index 🏢','A quarter of the grade: 100 minus the index, which measures how much of their campaign money comes from businesses\' PACs and how much more often they vote with business funders than their party does. The other three quarters are the bills.'],
+    ['How it adds up','75% their legislative-action score + 25% (100 − the Corporation Compromised Index 🏢). A lower index raises the grade. Without the index, the legislative-action score stands alone.'],
+    ['Corporation Compromised Index 🏢','Measures how much of their campaign money comes from businesses\' PACs and how much more often they vote with business funders than their party does.'],
     ['For a president','Signing a bill counts like a yes. A veto counts like a no.'],
     ['Not graded',`Until they have at least ${MIN_PVP_ACTIONS} of these.`]]},
 };
@@ -471,9 +481,9 @@ function reportCard(s,links){
   const md=!m.nChosen?'Choose issues in My alignment':m.score==null?`evidence on ${m.nCov} of ${m.nChosen} issues`:`${m.nCov} of your ${m.nChosen} issues`;
   const vd=v.pct!=null?`${v.nPeople} of ${v.n} actions for working people`:v.n?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:PVP_MARKS.size?'no scored actions yet':'no bills scored yet';
   const integrityDetail=i.record?.why|| (i.pct==null?'Requires 2 complete components and a sourced Legal Trouble review':`Monthly comparison snapshot ${fmtDate(i.entry?.date)}`);
-  return `<div class="hc-rc">${gradeTile('Your Match',m.score,md,GRADE_TIP.match,'',h('match'),!m.nChosen?'Set priorities':'Not graded')}${gradeTile('Integrity',i.pct,integrityDetail,'Provisional Integrity calculation; source components and coverage in the Integrity section.','',h('integrity'))}${gradeTile('Workers > Profit',v.pct,vd,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
+  return `<div class="hc-rc">${gradeTile('Your Match',m.score,md,GRADE_TIP.match,'',h('match'),!m.nChosen?'Set priorities':'Not graded')}${gradeTile('Integrity',i.pct,integrityDetail,'Provisional Integrity calculation; source components and coverage in the Integrity section.','',h('integrity'))}${gradeTile('People First',v.pct,vd,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
 }
-// Promises, Ethics and Workers > Profit are recalculated monthly after review (public/score-log.json). The tab says
+// Promises, Ethics and People First are recalculated monthly after review (public/score-log.json). The tab says
 // when, and marks a grade that reviewed edits have changed since; the next monthly run logs it.
 function monthlyNote(s,key,pct){
   const last=(window.SCORELOG||[]).at(-1);if(!last)return '';
@@ -576,8 +586,8 @@ async function fillFeatured(){
 const gradeHow=()=>`<section class="hc-how" aria-labelledby="hc-how-h"><h2 id="hc-how-h" style="font-size:1.05rem">How the grades work</h2>
   <div class="hc-howg">
     <div><h3>Your match</h3>${gradeRule('match')}</div>
-    <div><h3>Integrity</h3><p>Honesty (reviewed promises), Personal Finances, and Fundraising form a weighted average; the full Legal Trouble Index is subtracted afterward. At least two complete components and a sourced legal review are required. Its formula is provisional and many profiles remain Not graded because coverage is incomplete.</p><p class="small"><a href="#method-integrity">Full Integrity formula and coverage</a></p></div>
-    <div><h3>Workers > Profit</h3>${gradeRule('pvp')}</div>
+    <div><h3>Integrity</h3>${gradeRule('integ')}<p class="small"><a href="#method-integrity">Full Integrity formula and coverage</a></p></div>
+    <div><h3>People First</h3>${gradeRule('pvp')}</div>
     <div><h3>Grade scale</h3>${points([['A','90–100'],['B','80–89'],['C','70–79'],['D','60–69'],['F','Below 60'],['Not graded','Too little evidence yet. It never means zero.']],'small')}<p class="small"><a href="#method">Full rules</a></p></div>
   </div></section>`;
 let homeSort='', homeParty='';
@@ -598,7 +608,7 @@ function renderHome(){
       ['Who is covered',`${nS} senators and ${nH} House members on the November 3, 2026 ballot, their ${CANDS.filter(c=>!c.openSeat&&!c.senInc).length} opponents, and ${CANDS.filter(c=>c.openSeat).length} nominees for ${DATA.races.filter(r=>r.open).length} open Senate seats. That includes all ${nComp} Senate races rated competitive by Cook, Inside Elections or Sabato.`],
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
-      ['Grades','Three primary grades: Your Match, Integrity, and Workers > Profit. "Not graded" means required evidence is missing, never a zero.'],
+      ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
       SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`]],'lede-pts')}</details>
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
@@ -691,7 +701,7 @@ function bindProfileActions(s,pane){
     let c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
     if(s.basic||s.office){try{const records=await loadCards();c=records?.[s.id]?.campaign||null;}catch{}}
     const m=scoreFor(s), i=s.basic?null:integritySnapshot(s), v=s.basic?null:personPvp(s);
-    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:m.nChosen>0,grades:[{label:'Your Match',value:s.basic?null:m.score,detail:s.basic?'Research not reviewed':m.nChosen?`${m.nCov} of ${m.nChosen} issues`:'Personal to you'},{label:'Integrity',value:i?.pct??null,detail:i?.record?.why||'Provisional; see component coverage in Integrity'},{label:'Workers > Profit',value:v?.pct??null,detail:v?`${v.n} scored actions`:'Not reviewed'}]});
+    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:m.nChosen>0,grades:[{label:'Your Match',value:s.basic?null:m.score,detail:s.basic?'Research not reviewed':m.nChosen?`${m.nCov} of ${m.nChosen} issues`:'Personal to you'},{label:'Integrity',value:i?.pct??null,detail:i?.record?.why||'Provisional; see component coverage in Integrity'},{label:'People First',value:v?.pct??null,detail:v?`${v.n} scored actions`:'Not reviewed'}]});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
     if(!pane.querySelector('#'+b.dataset.section)){b.hidden=true;return;}
@@ -714,7 +724,7 @@ function renderProfile(s,requested='overview',focus){
   app.innerHTML=`${profileHeader(s,overview)}${overview?profileReport(s):''}<nav class="tabs" aria-label="Profile"><div class="wrap" style="padding-inline:0" id="tabs">${TABS.map(([key,label])=>`<button type="button" data-tab="${key}" class="${key===primary?'active':''}" aria-current="${key===primary?'page':'false'}">${label}</button>`).join('')}</div></nav><section class="section" id="pane"${s.basic?' data-basic="1"':''}></section>`;
   $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=`${s.id}-${b.dataset.tab}`;});
   const pane=$('#pane');
-  const switches=primary==='legislation'?sectionSwitch(s,[['legislation','Bills & votes'],['match','Your match'],['pvp','Workers > Profit']],view):primary==='finance'?sectionSwitch(s,[['finance','Campaign funding'],['connections','Funder connections'],['history','History & source records']],view):'';
+  const switches=primary==='legislation'?sectionSwitch(s,[['legislation','Bills & votes'],['match','Your match'],['pvp','People First']],view):primary==='finance'?sectionSwitch(s,[['finance','Campaign funding'],['connections','Funder connections'],['history','History & source records']],view):'';
   pane.innerHTML=switches+'<div id="profile-content"></div>';
   const content=pane.querySelector('#profile-content');
   if(overview)paneOverview(s,content);
@@ -809,7 +819,7 @@ const BASIC_GRADE={match:'No reviewed record of their votes and statements on th
   eth:'No cases reviewed yet. Leads from official records are on the Ethics tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
 function basicReport(s,links){
   const h=k=>links?`#${s.id}-${k}`:'',d='Research not reviewed yet';
-  return `<div class="hc-rc">${gradeTile('Your Match',null,d,GRADE_TIP.match,'',h('match'))}${gradeTile('Integrity',null,'Requires reviewed evidence in at least two components and a sourced Legal Trouble review.','Provisional Integrity calculation; missing data never means clean.','',h('integrity'))}${gradeTile('Workers > Profit',null,d,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
+  return `<div class="hc-rc">${gradeTile('Your Match',null,d,GRADE_TIP.match,'',h('match'))}${gradeTile('Integrity',null,'Requires reviewed evidence in at least two components and a sourced Legal Trouble review.','Provisional Integrity calculation; missing data never means clean.','',h('integrity'))}${gradeTile('People First',null,d,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
 }
 // Campaign and outside-money totals for everyone, loaded once (/api/cards) and reused by the cards and profiles.
 let cardsData=null,cardsTime=0;
@@ -861,7 +871,7 @@ function paneBasicContent(s,view,pane){
     pane.innerHTML=`${head('Your match','match')}<p class="intro">No reviewed issue evidence yet. <a href="#${s.id}-legislation">Open bills and votes</a>.</p>${s.ideo?ideoBlock(s,'ideo-b'):'<p class="note">No comparable career ideology score is available.</p>'}`;
     if(s.ideo)mountIdeo('ideo-b',s);
   }else if(['promises','ethics','pvp'].includes(view)){
-    const [title,key]=({promises:['Promises delivered','prom'],ethics:['Ethics','eth'],pvp:['Workers > Profit','pvp']})[view];
+    const [title,key]=({promises:['Promises delivered','prom'],ethics:['Ethics','eth'],pvp:['People First','pvp']})[view];
     pane.innerHTML=`${head(title,key)}<section id="live-records"></section>`;
     window.RecordLive.profile(person,pane.querySelector('#live-records'),BASIC_LIVE[view],{intro:BASIC_INTRO});
   }else if(view==='sources')pane.innerHTML=`<h2>Sources & coverage</h2><p>No reviewed research yet. Official records are under Legislative Activity and Accountability.</p><a href="#method-sources">Source guide</a>`;
@@ -1111,14 +1121,14 @@ function paneOverview(s,pane){
     ['Find your alignment','Choose your priorities; this profile needs reviewed issue evidence before it can be compared.','match','Your match']
   ]:[
     ['Words & actions',pr.clear?`${pr.clear} counted checks: ${pr.kept} supported${pr.half?`, ${pr.half} partial or changed`:''}${pr.broken?`, ${pr.broken} contradicted`:''}. ${pr.notCounted+pr.vague} excluded or pending.`:'No reviewed statement checks are available yet.','promises','Read quotes and checks'],
-    ['Legislative record',`${v.n} scored actions for Workers > Profit. ${evidenceOf(s).label}.`,'legislation','Explore bills and votes'],
+    ['Legislative record',`${v.n} scored actions for People First. ${evidenceOf(s).label}.`,'legislation','Explore bills and votes'],
     ['Integrity & disclosures',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'integrity','Review Integrity evidence']
   ];
   pane.innerHTML=`<div class="overview-summary-head"><h2>Three things to know</h2><p class="intro">A quick summary. Open a finding or a grade for its evidence.</p></div><div class="overview-highlights">${highlights.map(([title,body,route,label])=>`<article class="overview-highlight"><h3>${title}</h3><p>${esc(body)}</p><a href="#${s.id}-${route}">${label} →</a></article>`).join('')}</div><div class="overview-links"><a href="#${s.id}-integrity">Integrity: components and evidence</a><a href="#${s.id}-finance">Campaign and outside money</a><a href="#${s.id}-match">Issue positions & ideology</a>${s.basic?'':`<a href="#${s.id}-sources">Sources & coverage</a>`}<a href="#method">Methodology</a><a href="#method-log">Score history</a></div><p class="small muted overview-asof">Research snapshot: ${esc(DATA.asof)}. Financial records and source updates keep their own dates.</p>`;
   if(!s.basic)loadIntegrityPreview(s,pane,v);
 }
 
-function integrityPreviewShell(s){return `<section class="integrity-preview chart" aria-labelledby="integrity-title"><div class="kicker">PROVISIONAL METHODOLOGY · CALIBRATION PENDING</div><h2 id="integrity-title">Integrity <span class="integrity-pill">Provisional</span></h2><div data-integrity-content><p class="small muted">Checking reviewed evidence and official filing coverage…</p></div><p class="small muted">The interface is consolidated; this does not mean the methodology is calibrated. <a href="#method-integrity">Formula and coverage limits</a>.</p></section>`;}
+function integrityPreviewShell(s){return `<section class="integrity-preview chart" aria-labelledby="integrity-title"><div class="kicker">PROVISIONAL METHODOLOGY · CALIBRATION PENDING</div><h2 id="integrity-title">Integrity <span class="integrity-pill">Provisional</span></h2>${gradeRule('integ')}<div data-integrity-content><p class="small muted">Checking reviewed evidence and official filing coverage…</p></div><p class="small muted">The interface is consolidated; this does not mean the methodology is calibrated. <a href="#method-integrity">Formula and coverage limits</a>.</p></section>`;}
 function integrityComponentRow(label,component,formula=''){
   const val=component?.value==null?'Not graded':`${Number(component.value.toFixed(2))}%`;
   const tone=label==='Legal Trouble'?'bad':'good';
@@ -1155,7 +1165,7 @@ async function loadIntegrityPreview(s,pane,workers){
   const fund=preview.fundraising,fundMath=[fund.D!=null?`D ${fund.D.toFixed(2)}`:'D unavailable',fund.P!=null?`P ${fund.P.toFixed(2)}`:'P unavailable',fund.R!=null?`R ${fund.R.toFixed(2)}`:'R unavailable',fund.E!=null?`E ${fund.E.toFixed(2)}`:'E unavailable',`pledges ${pledge.points>0?'+':''}${pledge.points}`].join(' · ');
   const summary=`<div class="integrity-score"><b${toneAttrs(o.pct,'good')}>${esc(grade)}</b><span>${esc(overallWhy)}</span></div>
     <div class="integrity-components">${integrityComponentRow('Honesty',preview.honesty,formula)}${integrityComponentRow('Personal Finances',preview.personalFinances,finMath)}${integrityComponentRow('Fundraising',preview.fundraising,`${fundMath}${sizes?` · Gift buckets: ${esc(sizes.start||'')} – ${esc(sizes.end||'')}; receipts: ${campaign.receipts==null?'unavailable':fmtFull(campaign.receipts)}`:' · Same-period gift-size data unavailable'}`)}${integrityComponentRow('Legal Trouble',preview.legal,preview.legal.reviewed?`Legal Trouble index: ${preview.legal.value}; sourced review dated ${esc(preview.legal.reviewedAt)}.`:'A dated, sourced review is required; no legal input is assumed.')}</div>
-    <details class="integrity-worker"><summary><b>Workers > Profit comparison</b><span>${esc(workText)}</span></summary><p class="small">Preview CCI omits direct business-PAC share. Its available implemented parts are employee giving (10%), business-funder votes (35%) and lobbied bills (20%), renormalized over available evidence. Current Workers > Profit remains unchanged. <a href="#${s.id}-pvp">Open its actions and supporting research →</a></p></details>`;
+    <details class="integrity-worker"><summary><b>People First comparison</b><span>${esc(workText)}</span></summary><p class="small">Preview CCI omits direct business-PAC share. Its available implemented parts are employee giving (10%), business-funder votes (35%) and lobbied bills (20%), renormalized over available evidence. Current People First remains unchanged. <a href="#${s.id}-pvp">Open its actions and supporting research →</a></p></details>`;
   if(host)host.innerHTML=summary;
   const tile=app.querySelector(`[data-integrity-tile][href="#${s.id}-integrity"]`);if(tile){const pct=o.pct;tile.querySelector('.hc-gv').innerHTML=pct==null?'<span class="hc-ng">Not graded</span>':`<b class="gr-${letter(pct)}">${letter(pct)}</b><span>${pct}%</span>`;tile.querySelector('.hc-gd').textContent=o.why||`${o.used.length} complete components; Legal Trouble review sourced.`;}
   const fundraising=pane.querySelector('[data-integrity-fundraising-detail]');if(fundraising)fundraising.innerHTML=integrityFundraisingDetails({s,preview,sizes,typed,typedTotal,earmarkEvidence,pledge});
@@ -1813,7 +1823,7 @@ function integrityFundraisingDetails({s,preview,sizes,typed,typedTotal,earmarkEv
   <h4>Pledge adjustments</h4><div class="tablewrap"><table><thead><tr><th>Category</th><th>Points</th><th>Review/source</th></tr></thead><tbody>${pledge.rows.map(r=>`<tr><td>${esc(r.category)}</td><td>${r.score>0?'+1':r.score<0?'−1':'0'}</td><td>${r.awaiting?'Awaiting review':r.source?`<a href="${esc(r.source)}" target="_blank" rel="noopener">Evidence ↗</a>`:'No qualifying pledge or cosponsorship evidence recorded'}</td></tr>`).join('')}</tbody></table></div></details>`;
 }
 function paneIntegrity(s,pane){
-  pane.innerHTML=`${integrityPreviewShell(s)}<nav class="jump small" aria-label="Integrity sections"><a href="#integrity-honesty">Honesty</a><a href="#integrity-personal-finances">Personal Finances</a><a href="#integrity-fundraising">Fundraising</a><a href="#integrity-legal">Legal Trouble</a><a href="#integrity-method">Method & coverage</a><a href="#integrity-history">Historical grades</a></nav><section id="integrity-honesty"><h2>Honesty</h2><div data-integrity-honesty></div></section><section id="integrity-personal-finances"><h2>Personal Finances</h2><div data-integrity-finances></div></section><section id="integrity-fundraising"><h2>Fundraising</h2><div data-integrity-fundraising-detail><p class="small muted">Loading reviewed sources…</p></div></section><section id="integrity-legal"><h2>Legal Trouble</h2><div data-integrity-legal></div></section><section id="integrity-method"><h2>Methodology and coverage</h2><p>Integrity is provisional and uncalibrated. Component values remain visible even when the overall grade is Not graded. At least two complete components and a sourced Legal Trouble review are required. Missing data is never treated as zero misconduct.</p><p>IntegrityIndex.us inspired the adapted structure. Fundraising and campaign receipts retain reporting dates; holdings and trades retain separate dates. Selected bundler coverage is partial.</p><p><a href="#method-integrity">Full formulas, parameters and source credit</a> · <a href="#method-integrity-log">Separate monthly comparison log</a> · <a href="#method-log">Published grade history</a></p></section><section id="integrity-history"><h2>Historical grades</h2>${historicalIntegrityGrades(s)}</section><div data-integrity-staging hidden></div>`;
+  pane.innerHTML=`${integrityPreviewShell(s)}<nav class="jump small" aria-label="Integrity sections"><a href="#integrity-honesty">Honesty</a><a href="#integrity-personal-finances">Personal Finances</a><a href="#integrity-fundraising">Fundraising</a><a href="#integrity-legal">Legal Trouble</a><a href="#integrity-method">Method & coverage</a><a href="#integrity-history">Historical grades</a></nav><section id="integrity-honesty"><h2>Honesty: Promises Delivered Index</h2><div data-integrity-honesty></div></section><section id="integrity-personal-finances"><h2>Personal Finances</h2><div data-integrity-finances></div></section><section id="integrity-fundraising"><h2>Fundraising</h2><div data-integrity-fundraising-detail><p class="small muted">Loading reviewed sources…</p></div></section><section id="integrity-legal"><h2>Legal Trouble</h2><div data-integrity-legal></div></section><section id="integrity-method"><h2>Methodology and coverage</h2><p>Integrity is provisional and uncalibrated. Component values remain visible even when the overall grade is Not graded. At least two complete components and a sourced Legal Trouble review are required. Missing data is never treated as zero misconduct.</p><p>IntegrityIndex.us inspired the adapted structure. Fundraising and campaign receipts retain reporting dates; holdings and trades retain separate dates. Selected bundler coverage is partial.</p><p><a href="#method-integrity">Full formulas, parameters and source credit</a> · <a href="#method-integrity-log">Separate monthly comparison log</a> · <a href="#method-log">Published grade history</a></p></section><section id="integrity-history"><h2>Historical grades</h2>${historicalIntegrityGrades(s)}</section><div data-integrity-staging hidden></div>`;
   const honesty=pane.querySelector('[data-integrity-honesty]'),fin=pane.querySelector('[data-integrity-finances]'),legal=pane.querySelector('[data-integrity-legal]'),staging=pane.querySelector('[data-integrity-staging]');
   panePromises(s,honesty,{embedded:true});paneEthics(s,staging,{embedded:true});
   const indexes=staging.querySelector('#eth-indexes'),cards=[...(indexes?.querySelectorAll('.ix-card')||[])];
@@ -1831,12 +1841,12 @@ function historicalIntegrityGrades(s){
   return `<details><summary>Ethics and Promises Delivered history (${entries.length} monthly records)</summary><p class="small">Preserved published values; not recalculated or averaged into Integrity.</p><div class="tablewrap"><table><thead><tr><th>Date</th><th>Promises Delivered</th><th>Ethics</th></tr></thead><tbody>${entries.map(e=>{const v=e.scores[s.id],p=v.promises?.pct??null,eth=v.ethics?.pct??null;return `<tr><td>${fmtDate(e.date)}</td><td>${p==null?'Not graded':`${letter(p)} ${p}%`}</td><td>${eth==null?'Not graded':`${letter(eth)} ${eth}%`}</td></tr>`}).join('')}</tbody></table></div></details>`;
 }
 
-// ---------- Workers > Profit tab: votes on scored bills, then who funds them and how those funders wanted them to vote ----------
+// ---------- People First tab: votes on scored bills, then who funds them and how those funders wanted them to vote ----------
 const PVP_SIDE={people:'Working people',profit:'The wealthy and corporations'};
 const billUrl=k=>{const eo=/^eo-(\d+)$/.exec(k||'');if(eo)return `https://www.govinfo.gov/link/cpd/executiveorder/${eo[1]}`;const m=/^(\d+)-([a-z]+)-(\d+)$/.exec(k||'');if(!m)return null;const T={hr:'house-bill',s:'senate-bill',hjres:'house-joint-resolution',sjres:'senate-joint-resolution',hconres:'house-concurrent-resolution',sconres:'senate-concurrent-resolution',hres:'house-resolution',sres:'senate-resolution'},A={samdt:'senate-amendment',hamdt:'house-amendment'};return A[m[2]]?`https://www.congress.gov/amendment/${m[1]}th-congress/${A[m[2]]}/${m[3]}`:`https://www.congress.gov/bill/${m[1]}th-congress/${T[m[2]]}/${m[3]}`;};
 const billLabel=k=>{const eo=/^eo-(\d+)$/.exec(k||'');if(eo)return `Executive Order ${eo[1]}`;const m=/^(\d+)-([a-z]+)-(\d+)$/.exec(k||'');if(!m)return k;const L={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.',hres:'H.Res.',sres:'S.Res.',samdt:'S.Amdt.',hamdt:'H.Amdt.'};return `${L[m[2]]} ${m[3]} (${m[1]}th Congress)`;};
 const PVP_DID={vote:p=>`Voted ${p}`,sponsored:()=>'Sponsored',cosponsored:()=>'Cosponsored',signed:()=>'Signed into law',vetoed:()=>'Vetoed',order:()=>'Issued the order',statement:p=>`Said they ${p==='support'?'support':'oppose'} it`};
-// Workers > Profit bill scores (grades.js billScore): the badge, a short reason, and the full list of bills on file.
+// People First bill scores (grades.js billScore): the badge, a short reason, and the full list of bills on file.
 const POS_WORD={support:'supported',oppose:'opposed'};
 const signed=n=>n==null?'—':`${n>0?'+':n<0?'−':''}${Math.abs(n)}`;
 const srcLink=x=>x?.src?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener">${esc(x.src.t)} ↗</a>`:'';
@@ -1870,7 +1880,7 @@ async function mountBillLobbying(host){
     el.innerHTML=!lob?'<span class="muted">Lobbying counts need the update service running.</span>':!x?'<span class="muted">Lobbying: not checked yet.</span>'
       :`<b>Lobbying (${yrs(id)}):</b> ${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
 }
-// The Corporation Compromised Index 🏢 on the Workers > Profit tab: its parts, what each is built from, and what's missing.
+// The Corporation Compromised Index 🏢 on the People First tab: its parts, what each is built from, and what's missing.
 const CCI_PART={pacShare:'Business PACs\' share of funds raised',employees:'Donor companies\' employees',businessVotes:'Votes with business funders',lobbiedBills:'Profit side on lobbied bills'};
 function cciBlock(s,v){
   const c=v.cci;if(!c||s.office)return '';
@@ -1889,7 +1899,7 @@ function cciBlock(s,v){
       ${ixCard({name:CCI_PART.pacShare,value:c.parts.pacShare==null?'—':pc('pacShare'),score:c.parts.pacShare,tone:'bad',about:`${c.share!=null?`${fmt1(c.share)}% of the money raised${m?.start?`, ${period(m.start,m.end)}`:''}`:'No campaign money on file'}. ${wt('pacShare')}.`,how:pacHow})}
       ${ixCard({name:CCI_PART.businessVotes,value:c.parts.businessVotes??'—',score:c.parts.businessVotes,tone:'bad',about:`${c.parts.businessVotes!=null?`${bv.diff>=0?fmt1(bv.diff)+' points more':fmt1(-bv.diff)+' points less'} often than their party, on ${bv.n} votes`:'Not counted'}. ${wt('businessVotes')}.`,how:voteHow})}
       ${ixCard({name:CCI_PART.employees,value:'—',about:'Not counted yet: the top donor organizations\' employee giving comes from the daily refresh and isn\'t reviewed.',how:`Giving by employees of the companies among their top 20 donor organizations ÷ funds raised; ${C.employeeCeiling}% or more scores 100.`})}
-      ${ixCard({name:CCI_PART.lobbiedBills,value:'—',about:'Not counted yet: lobbying on each bill comes from the refresh and isn\'t reviewed.',how:`Of the Workers > Profit bills a top donor organization lobbied on, the share where they took the Profit side. Needs ${C.minLobbied} such bills.`})}
+      ${ixCard({name:CCI_PART.lobbiedBills,value:'—',about:'Not counted yet: lobbying on each bill comes from the refresh and isn\'t reviewed.',how:`Of the People First bills a top donor organization lobbied on, the share where they took the Profit side. Needs ${C.minLobbied} such bills.`})}
     </div>
     ${points([['Business funders','The Chamber of Commerce, NFIB, Americans for Prosperity, Club for Growth, and industries\' associations (bankers, mortgage bankers, community banks, Realtors, drug makers, hospitals, credit unions, the crypto industry\'s Fairshake).'],['Left out','Outside spending, which candidates can\'t control.']],'small')}</div>`;
 }
@@ -1899,9 +1909,9 @@ function panePvp(s,pane){
   const billMath=`working-people points ÷ all points = ${v.people} ÷ (${v.people} + ${v.profit}) = ${v.billsPct}%`;
   const math=v.pct==null?'':v.blended?`<p class="small gh-m"><b>How it was calculated:</b> the bills, ${billMath}, count three quarters; 100 minus the Corporation Compromised Index 🏢 (${v.cci.index}) counts one quarter: 0.75 × ${v.billsPct} + 0.25 × ${100-v.cci.index} = ${fmt1(v.raw)}, rounded to <b>${v.pct}%</b>. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.</p>`
     :`<p class="small gh-m"><b>How it was calculated:</b> ${billMath.replace(/ = (\d+)%$/,' = <b>$1%</b>')}. Each ${s.office?'signing, veto or order':'vote or sponsorship'} counts its bill's strength (a +75 bill counts 0.75), and a bill counts once.${v.cci?.why?` The Corporation Compromised Index 🏢 isn't counted: ${esc(v.cci.why.toLowerCase())}.`:''}</p>`;
-  const table=v.scored.length?`<div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th class="r">Bill score</th><th>Delivered more for</th><th class="r">Points</th><th>Why the bill scores this way</th></tr></thead><tbody>${v.scored.map(a=>{const mk=PVP_MARKS.get(a.bill)||{},u=billUrl(a.bill);return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(mk.title||billLabel(a.bill))}</a>`:esc(mk.title||a.bill)}<div class="small muted">${esc(billLabel(a.bill))}</div></td><td>${esc(PVP_DID[a.kind](a.pos))}${a.kind==='statement'&&a.ref?` <a href="${esc(a.ref)}" target="_blank" rel="noopener">source ↗</a>`:''}${a.via&&a.via!==a.bill?`<div class="small muted">${esc(billLabel(a.via))}</div>`:''}</td><td class="r">${billScoreBadge(mk)}</td><td><b class="${a.took==='people'?'gr-A':'gr-F'}">${PVP_SIDE[a.took]}</b></td><td class="r">${a.points}</td><td class="small">${billWhyShort(mk)}</td></tr>`}).join('')}</tbody></table></div><p class="small muted">Every bill on file, with all its evidence and who lobbied on it: <a href="#scores-pvp">Workers > Profit scores</a>.</p>`
+  const table=v.scored.length?`<div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th class="r">Bill score</th><th>Delivered more for</th><th class="r">Points</th><th>Why the bill scores this way</th></tr></thead><tbody>${v.scored.map(a=>{const mk=PVP_MARKS.get(a.bill)||{},u=billUrl(a.bill);return `<tr><td>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(mk.title||billLabel(a.bill))}</a>`:esc(mk.title||a.bill)}<div class="small muted">${esc(billLabel(a.bill))}</div></td><td>${esc(PVP_DID[a.kind](a.pos))}${a.kind==='statement'&&a.ref?` <a href="${esc(a.ref)}" target="_blank" rel="noopener">source ↗</a>`:''}${a.via&&a.via!==a.bill?`<div class="small muted">${esc(billLabel(a.via))}</div>`:''}</td><td class="r">${billScoreBadge(mk)}</td><td><b class="${a.took==='people'?'gr-A':'gr-F'}">${PVP_SIDE[a.took]}</b></td><td class="r">${a.points}</td><td class="small">${billWhyShort(mk)}</td></tr>`}).join('')}</tbody></table></div><p class="small muted">Every bill on file, with all its evidence and who lobbied on it: <a href="#scores-pvp">People First scores</a>.</p>`
     :`<div class="note">${PVP_MARKS.size?`${esc(s.short)} has no recorded ${s.office?'signing, veto or executive order':'vote or sponsorship'} on any of the ${PVP_MARKS.size} scored bill${PVP_MARKS.size===1?'':'s'}.`:`<b>No bills are scored yet.</b>${points([['When a bill counts','Once a nonpartisan study of who gains from it is cited, or worker and business groups took opposite sides on it.'],['What will show here','Each scored vote and sponsorship, the side it took, and the evidence behind the bill.']])}`}</div>`;
-  pane.innerHTML=`${gradeHead('Workers > Profit',v.pct,detail,gradeRule('pvp'),math+monthlyNote(s,'pvp',v.pct))}
+  pane.innerHTML=`${gradeHead('People First',v.pct,detail,gradeRule('pvp'),math+monthlyNote(s,'pvp',v.pct))}
   <div class="chart"><h3>Who the record delivered more for</h3><div class="sub"><b>Right of 50%:</b> leans toward working people. <b>Left:</b> leans toward the wealthy and corporations. <a href="#scores-pvp">Everyone on one chart</a></div>
     ${divergingRows([{label:s.name,sub:`${v.people} points for working people · ${v.profit} for the wealthy and corporations`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} scored actions`:`${v.n} scored actions`}])}</div>
   ${cciBlock(s,v)}
@@ -2137,7 +2147,7 @@ function renderRaces(){
 }
 
 // ---------- bills ----------
-// Every bill on file (public/bills.js): the bills behind the saved roll calls and the Workers > Profit bills, split into
+// Every bill on file (public/bills.js): the bills behind the saved roll calls and the People First bills, split into
 // those that became law and those that haven't (or were reintroduced), each with the groups that took a side on it.
 let billQ='';
 const BILL_SEG=[['all','All'],['law','Became law'],['not','Not passed or reintroduced']];
@@ -2161,7 +2171,7 @@ function billCard(e){
   const votes=e.votes.map(v=>`<li>${esc(v.chamber)}, ${fmtDate(v.date)}: ${esc(v.question||v.bill?.voteQuestion||'Vote')}, <b>${esc(v.result)}</b> <a href="${esc(voteUrl(v))}" target="_blank" rel="noopener">Roll call ↗</a><span class="muted">${tally(v)}</span></li>`)
     .concat((e.steps||[]).map(x=>`<li>${esc(x.text)}${x.src?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener" title="${esc(x.src.t)}">Source ↗</a>`:''}</li>`));
   return `<article class="card bill-card" id="bill-${esc(e.id)}">
-    <div class="bill-head"><h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}</h3>${e.area?`<span class="tag">${esc(e.area)}</span>`:''}${e.work?`<span class="tag" title="Workers > Profit bill score">Workers > Profit: ${e.work.status==='scored'?signed(e.work.score):'not scored'}</span>`:''}</div>
+    <div class="bill-head"><h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}</h3>${e.area?`<span class="tag">${esc(e.area)}</span>`:''}${e.work?`<span class="tag" title="People First bill score">People First: ${e.work.status==='scored'?signed(e.work.score):'not scored'}</span>`:''}</div>
     <div class="small muted">${nums.map(esc).join(' · ')}</div>
     <p class="small" style="margin:8px 0 0">${status}</p>
     ${e.summary?`<p class="small" style="margin:6px 0 0">${esc(e.summary)}${e.summarySrc?.u?` <a href="${esc(e.summarySrc.u)}" target="_blank" rel="noopener" title="${esc(e.summarySrc.t||'')}">Source ↗</a>`:''}</p>`:''}
@@ -2181,7 +2191,7 @@ function renderBills(seg){
   const F=billFamilies(DATA,PVP_BILLS),law=F.filter(e=>e.status==='law'),not=F.filter(e=>e.status!=='law');
   const groups=new Set(F.flatMap(e=>e.positions.map(p=>p.group)));
   app.innerHTML=`<section class="hero" style="padding-bottom:10px"><div class="asof">${F.length} bills · ${law.length} became law · ${not.length} not passed or reintroduced</div><h1 style="margin-top:8px">Bills</h1>
-    <p class="lede">Every bill collected so far: the bills behind the saved roll calls and the bills scored for Workers > Profit, with the groups that supported or opposed each one.</p>
+    <p class="lede">Every bill collected so far: the bills behind the saved roll calls and the bills scored for People First, with the groups that supported or opposed each one.</p>
     ${points([['Supported and opposed','Positions from the groups\' own scorecards, key-vote letters and statements, each with its source: '+groups.size+' groups so far, including Heritage Action, the ACLU, the League of Conservation Voters and the Human Rights Campaign.'],['Money','Beside each group, what its PACs gave to the campaigns on this site and what it spent on outside ads, from FEC records. A group with no PAC lobbies but gives no campaign money tracked here.'],['Versions','A bill reintroduced in a later Congress, or its Senate companion, is listed once with all its numbers.'],['Not graded here','This page lists bills. Grades count votes and sponsorships on them as described in the <a href="#method">methodology</a>.']])}
     <div class="toolbar"><div class="seg" id="bill-seg">${BILL_SEG.map(([k,l])=>`<button data-k="${k}" class="${k===seg?'active':''}">${esc(l)} (${k==='all'?F.length:k==='law'?law.length:not.length})</button>`).join('')}</div>
     <div class="search"><input id="bill-q" type="search" placeholder="Search by name, number, topic or group" aria-label="Search bills" value="${esc(billQ)}"></div></div></section>
@@ -2234,7 +2244,7 @@ function renderCompare(){
 }
 
 // ---------- methodology ----------
-// ---------- profile charts: Ethics case timeline and trading, Workers > Profit donors, Money & Influence Analysis ----------
+// ---------- profile charts: Ethics case timeline and trading, People First donors, Money & Influence Analysis ----------
 const CASE_COLOR={finding:'var(--s1)',open:'var(--s2)',closed:'var(--s3)',allegation:'var(--cx-other)'};
 const CASE_LABEL={finding:'Confirmed finding',open:'Open investigation',closed:'Investigation closed without a finding',allegation:'Allegation'};
 function caseRows(s){
@@ -2268,7 +2278,7 @@ function mountTradeCharts(s,rows,id){
 }
 function mountCaseTimeline(s){const el=document.getElementById('eth-tl');if(!el)return;const rows=caseRows(s).filter(r=>r.from);const f=()=>drawCaseTimeline(document.getElementById('eth-tl'),rows,CASE_COLOR);f();resizers.push(f);}
 
-// Workers > Profit: the person's own diverging bar, and the tree map of their top donors.
+// People First: the person's own diverging bar, and the tree map of their top donors.
 const catLabel=c=>c==='small'?'Small-dollar donors':DATA.categories[c]||SECTOR_LABEL_EXTRA[c]||c;
 function donorTreemapBlock(s){
   const p=s.pac||{},t=topDonors(p.rows,DATA.pacNames,s.camp&&!s.camp.missing?s.camp.unitemized:0);
@@ -2338,7 +2348,7 @@ function analysisBlock(s){
   const flagRows=d.allFlags.map(f=>f.kind==='stock'?`<li><b>${FLAG_TEXT.stock}:</b> ${esc(f.org)} · ${esc(f.decision.label)} on ${fmtDate(f.decision.date)}</li>`
     :`<li><b>${FLAG_TEXT[f.kind]}${f.kind==='rose'?' after a vote it wanted':f.kind==='dropped'?' after a vote it opposed':''}:</b> ${esc(f.org)}, ${fmtFull(f.before)} in the ${WINDOW_MONTHS} months before → ${fmtFull(f.after)} from ${monLabel(f.decision.date.slice(0,7))} through ${monLabel(f.to)}. ${esc(f.decision.label)} (${fmtDate(f.decision.date)}).</li>`);
   return `<section id="f-analysis"><h2 style="margin-top:6px">Money &amp; Influence Analysis</h2>
-    <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Context','These timing and alignment analyses sit beside the grades. The Corporation Compromised Index separately contributes to Workers > Profit as explained in its calculation.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
+    <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Context','These timing and alignment analyses sit beside the grades. The Corporation Compromised Index separately contributes to People First as explained in its calculation.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
     <div class="cx-stats ix-row">
       ${ixCard({name:'Vote Donor Alignment',value:v.pct==null?'—':v.pct+'%',score:v.pct,tone:'bad',about:v.n?`${v.same} of ${v.n} votes went the way a donor that took a public position wanted (${v.rows.length} donor${v.rows.length===1?'':'s'})`:'No donor that gave to the campaign took a public position on a vote compared here',
         how:`Votes that went a donor's way ÷ votes where a donor that gave to the campaign, bundled for it or spent for them took a public side (its scorecard or key-vote letter). Missed votes don't count.<div class="ix-f">${v.n?`${v.same} ÷ ${v.n} = <b>${v.pct}%</b>`:'No compared votes = <b>—</b>'}</div>`})}
@@ -2419,7 +2429,7 @@ function outsideSectorBlock(s){
 }
 
 // ---------- score pages: each grade ranks everyone; people who are "Not graded" stay as grey rows ----------
-const SCORE_PAGES=[['match','Your Match'],['integrity','Integrity'],['pvp','Workers > Profit'],['ideology','Ideological position']];
+const SCORE_PAGES=[['match','Your Match'],['integrity','Integrity'],['pvp','People First'],['ideology','Ideological position']];
 const GRADE_FILL={A:'var(--good)',B:'var(--grade-b)',C:'var(--warn)',D:'var(--serious)',F:'var(--crit)'};
 const gradeFill=p=>GRADE_FILL[letter(p)];
 const whoSub=s=>`${partyName(s.party)} · ${chipCh(s)} · ${seatLabel(s)}`;
@@ -2491,9 +2501,9 @@ function scoresPvp(host){
     ${divergingRows(rows.map(({s,v})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-pvp`,value:v.pct,cls:v.pct==null?'':'gr-'+letter(v.pct),note:v.pct==null?`${v.n} of ${MIN_PVP_ACTIONS} actions`:`${v.nPeople} of ${v.n} actions`,tip:v.pct==null?'':`${s.name}: ${v.people} points for working people, ${v.profit} for the wealthy and corporations`})))}
     ${tableView(['Name','Score','Bills','Corporation Compromised 🏢','Actions','People points','Profit points'],rows.map(({s,v})=>[`<a href="#${s.id}-pvp">${esc(s.name)}</a>`,v.pct==null?'Not graded':`${letter(v.pct)} ${v.pct}%`,v.billsPct==null?'—':`${v.billsPct}%`,v.cci?.index??'—',v.n,v.people,v.profit]))}</div>
     ${billsBlock(PVP_BILLS)}
-    <div class="chart"><h3>Workers > Profit against ideology</h3><div class="sub">Each graded person with a DW-NOMINATE score. <b>Look for outliers:</b> someone far from others with a similar ideology.</div>
+    <div class="chart"><h3>People First against ideology</h3><div class="sub">Each graded person with a DW-NOMINATE score. <b>Look for outliers:</b> someone far from others with a similar ideology.</div>
     ${pts.length?`<div class="cx-plot" id="sc-scatter"></div>${legend([['var(--dem)','Democrats'],['var(--rep)','Republicans'],['var(--muted)','Independents']])}`:'<p class="small muted">Nothing to plot until people are graded.</p>'}</div>`;
-  if(pts.length){const f=()=>drawScatter(document.getElementById('sc-scatter'),pts,{x:{min:-1,max:1,ticks:[-1,-.5,0,.5,1],left:'More liberal',right:'More conservative',label:'DW-NOMINATE'},y:{min:0,max:100,ticks:[0,25,50,75,100],label:'Workers > Profit'}});f();resizers.push(f);}
+  if(pts.length){const f=()=>drawScatter(document.getElementById('sc-scatter'),pts,{x:{min:-1,max:1,ticks:[-1,-.5,0,.5,1],left:'More liberal',right:'More conservative',label:'DW-NOMINATE'},y:{min:0,max:100,ticks:[0,25,50,75,100],label:'People First'}});f();resizers.push(f);}
   mountBillLobbying(host);
 }
 function scoresIdeology(host){
@@ -2509,7 +2519,7 @@ function scoresIdeology(host){
 function methodLog(){
   const migrations=(window.SCOREMIGRATIONS||[]).map(e=>`<div class="note"><b>Presentation migration · ${fmtDate(e.date)}</b><p>${esc(e.note)}</p></div>`).join('');
   const L=(window.SCORELOG||[]).slice(-3).reverse();if(!L.length)return migrations+'<p class="small muted">No monthly recalculation has been recorded yet.</p>';
-  const G={promises:'Promises delivered',ethics:'Ethics',pvp:'Workers > Profit',all:'All grades'},pc=v=>v==null?'Not graded':v+'%';
+  const G={promises:'Promises delivered',ethics:'Ethics',pvp:'People First',all:'All grades'},pc=v=>v==null?'Not graded':v+'%';
   return migrations+L.map(e=>`<div class="chart"><h3>${fmtDate(e.date)}</h3><div class="sub">Research reviewed ${esc(e.reviewedAt)} · ${esc(e.note||'')}</div>${e.changes.length?`<div class="tablewrap"><table><thead><tr><th>Person</th><th>Grade</th><th>From</th><th>To</th><th>Why</th></tr></thead><tbody>${e.changes.slice(0,60).map(c=>`<tr><td>${byId[c.id]?`<a href="#${c.id}">${esc(byId[c.id].name)}</a>`:esc(c.id)}</td><td>${G[c.grade]||esc(c.grade)}</td><td>${c.from===undefined?'—':pc(c.from)}</td><td>${pc(c.to)}</td><td class="small">${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>${e.changes.length>60?`<p class="small muted">and ${e.changes.length-60} more in the log file.</p>`:''}`:'<p class="small muted">No grade changed.</p>'}</div>`).join('');
 }
 function integrityPreviewLog(){
@@ -2533,7 +2543,7 @@ function renderMethod(sub){
       <li><b>Donor Loyalty 🤝 cap:</b> no single funder counts for more than all the others put together (at most half the weight), so one large funder with one position on file can't decide the number alone.</li>
       <li><b>Money pledges checked against the records:</b> 12 pledges on the Promises tabs (corporate PAC money, single-issue PAC money and stock-trading bans) now show what the FEC records, the bills' cosponsors and the votes on file say, under the reviewed verdict. Shown only.</li>
       <li><b>Blind trusts and divestment:</b> a qualified blind trust now takes its trustee's trades out of the trading indexes, and "no individual stocks" is shown on the Insider Trading Index. Managed accounts aren't excused. Two statuses are reviewed so far (Ossoff and Hinson), and no grade changed.</li>
-      <li><b>Corporation Compromised Index 🏢 in Workers > Profit:</b> a quarter of the grade is now 100 minus the index, which measures business PACs' share of the money raised and votes with business funders beyond the party. Three letter grades changed (Kaptur, Gonzalez and Castor, from A); each Workers > Profit tab shows the math.</li>
+      <li><b>Corporation Compromised Index 🏢 in People First:</b> a quarter of the grade is now 100 minus the index, which measures business PACs' share of the money raised and votes with business funders beyond the party. Three letter grades changed (Kaptur, Gonzalez and Castor, from A); each People First tab shows the math.</li>
       <li><b>No other grade formula changed.</b> Your match changes only for visitors who pick the new issue.</li>
     </ul>
     <details class="tv"><summary>Earlier changes (October 28, 2026)</summary>
@@ -2542,13 +2552,13 @@ function renderMethod(sub){
     </ul></details>
     <details class="tv"><summary>Earlier changes (October 24, 2026)</summary>
     <ul class="list">
-      <li><b>New scoring rules (Rule 1):</b> votes, sponsorships, cosponsorships and official acts count fully. Statements count half, and only where no action exists. A vote and a sponsorship on the same bill count once. Promises left unacted at the end of a term count as contradicted. Vague goals and promises with no related bill yet are left out. Workers > Profit also counts sponsorships, from a list of marked bills. Ethics adds stock-trading deductions.</li>
+      <li><b>New scoring rules (Rule 1):</b> votes, sponsorships, cosponsorships and official acts count fully. Statements count half, and only where no action exists. A vote and a sponsorship on the same bill count once. Promises left unacted at the end of a term count as contradicted. Vague goals and promises with no related bill yet are left out. People First also counts sponsorships, from a list of marked bills. Ethics adds stock-trading deductions.</li>
       <li><b>Score pages:</b> a Scores menu ranks everyone on each grade. "Not graded" people show as grey rows, with the data behind each grade.</li>
       <li><b>Money &amp; Influence Analysis:</b> on each Money &amp; Influence tab. It has Vote Donor Alignment, Donor Loyalty 🤝, monthly donations with vote markers, and timing flags. From the daily refresh, it adds the top 20 donor organizations and who lobbied on their bills. Outside spending is also split by sector and colored People- or Profit-aligned.</li>
-      <li><b>New charts:</b> an Ethics case timeline, trading charts, a Workers > Profit diverging bar and a donor tree map.</li>
+      <li><b>New charts:</b> an Ethics case timeline, trading charts, a People First diverging bar and a donor tree map.</li>
       <li><b>More official sources:</b> many now refresh automatically (listed under "What refreshes" below), each with its own free key. Every key that is set is used at once, and a record found in several sources shows once.</li>
       <li><b>Committees and IDs:</b> committee seats and each member's IDs come from congress-legislators. Senate votes now match senators by their official LIS ID, not surname and state.</li>
-      <li><b>Monthly recalculation:</b> Promises, Ethics and Workers > Profit are recalculated each month after review, with a change log (below).</li>
+      <li><b>Monthly recalculation:</b> Promises, Ethics and People First are recalculated each month after review, with a change log (below).</li>
       <li><b>Press releases, Bluesky and Threads:</b> members' press releases now come from their official websites, Bluesky accounts are checked at each person's official and campaign website domains, and Threads posts that mention an issue can be collected once Meta approves access. See "What refreshes" below.</li>
     </ul></details>
     <details class="tv"><summary>Earlier changes (October 3, 2026)</summary>
@@ -2596,14 +2606,14 @@ function renderMethod(sub){
         </ul></li>
     </ul>
     <h2>Profile pages</h2>
-    <p>Each profile has four main tabs: Overview, Money & Influence, Legislative Activity and Integrity. Your Match and Workers > Profit remain in Legislative Activity. Integrity combines promise evidence, personal-finance evidence, fundraising and Legal Trouble. Old Ethics and Promises links open the corresponding Integrity evidence.</p>
+    <p>Each profile has four main tabs: Overview, Money & Influence, Legislative Activity and Integrity. Your Match and People First remain in Legislative Activity. Integrity combines promise evidence, personal-finance evidence, fundraising and Legal Trouble. Old Ethics and Promises links open the corresponding Integrity evidence.</p>
     <ul class="list">
       <li><b>Overview:</b> three grades, one campaign snapshot and three short findings. Full charts, records and interpretations open in the appropriate section.</li>
       <li><b>Your match:</b> the comparison with your positions, issue by issue, with every piece of evidence. Career ideology and issue-position charts provide context; the complete vote and bill lists are on Legislative Activity.</li>
       <li><b>Integrity → Honesty:</b> reviewed promise checks, quotes, tracker ratings, dates, outcomes, evidence and latest official statement records.</li>
       <li><b>Integrity → Personal Finances and Legal Trouble:</b> holdings, trades, Insider Trading and Stock Disclosure Dodger indices, cases, findings, the full legal deduction and source records.</li>
       <li><b>Integrity → Fundraising:</b> donor-size and PAC breakdowns, earmark coverage and pledge adjustments, with reporting dates and missing-data explanations.</li>
-      <li><b>Workers > Profit:</b> a diverging bar, votes and sponsorships on bills scored by who gains, a tree map of the top 20 donors, how funders wanted the candidate to vote, and money and votes by issue. These show agreement, not that money changed a vote.</li>
+      <li><b>People First:</b> a diverging bar, votes and sponsorships on bills scored by who gains, a tree map of the top 20 donors, how funders wanted the candidate to vote, and money and votes by issue. These show agreement, not that money changed a vote.</li>
       <li><b>Legislative Activity:</b> sponsored bills and cosponsored legislation, searchable by title or measure and filterable by Congress. Reviewed selections and refreshed records are labeled separately; roll calls, state records, committees and official acts follow. Counts describe loaded records, not an assumed complete career total.</li>
       <li><b>Money &amp; Influence:</b> the Money &amp; Influence Analysis (below), where the campaign's money comes from, outside money for and against (also by month), campaign funds raised, cash on hand, every PAC contribution, money routed through PACs, every outside-spending group and item, the combined view, and the latest official filings.</li>
     </ul>
@@ -2651,7 +2661,7 @@ function renderMethod(sub){
           <li><b>Stock Disclosure Dodger Index 🙈:</b> trade reports filed after the ${LATE_DAYS}-day deadline or never 70%, and annual financial disclosures filed late 30%. It needs 3 required filings. A STOCK Act late-disclosure case moves here from the Legal Trouble Index once the person's trades are reviewed, so a late report never costs twice.</li>
           <li><b>Who counts:</b> spouse and dependent-child trades count and are labeled. A president's trades are listed on the Ethics tab, from OGE reports, but not scored. Other people not in Congress show "No trading data". Only reviewed trades count; new reports are listed for review first. Returns are never scored.</li>
         </ul></li>
-      <li><b>Workers > Profit:</b> whether the record did more for working people or for the wealthy and corporations.
+      <li><b>People First:</b> whether the record did more for working people or for the wealthy and corporations.
         <ul class="list">
           <li><b>Bill scores:</b> each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts.
             <ul class="list">
@@ -2681,7 +2691,7 @@ function renderMethod(sub){
     <ul class="list">
       <li><b>Your match:</b> ranked bars colored by grade, and an issue-by-issue breakdown for one person, most important issues first.</li>
       <li><b>Integrity:</b> latest monthly comparison values, with profile links to component coverage and Not graded explanations. Historical Ethics and Promise values remain in the official monthly score log.</li>
-      <li><b>Workers > Profit:</b> bars centered at 50%, and a chart of Workers > Profit against DW-NOMINATE to spot outliers.</li>
+      <li><b>People First:</b> bars centered at 50%, and a chart of People First against DW-NOMINATE to spot outliers.</li>
       <li><b>Ideological position:</b> the whole chamber on the DW-NOMINATE scale, with one person highlighted.</li>
     </ul>
     <h2 id="method-influence">Money &amp; Influence Analysis</h2>
@@ -2713,7 +2723,7 @@ function renderMethod(sub){
           <li><b>Other:</b> party, ideological and candidate-aligned groups.</li>
           <li><b>Sectors:</b> outside spenders have no industry code, so this app assigns one from the committee's name, as for PACs. Under review.</li>
         </ul></li>
-      <li><b>Top donors tree map (Workers > Profit tab):</b> tile size is the amount given. Unions and small-dollar donors (one tile) are People-aligned. Corporate PACs and industry groups are Profit-aligned. Leadership, party and ideological committees are Other.</li>
+      <li><b>Top donors tree map (People First tab):</b> tile size is the amount given. Unions and small-dollar donors (one tile) are People-aligned. Corporate PACs and industry groups are Profit-aligned. Leadership, party and ideological committees are Other.</li>
     </ul>
     <h2 id="method-integrity">Integrity (provisional, uncalibrated)</h2>
     <p>The current grading interface consolidates reviewed promises as Honesty with Personal Finances, Fundraising, and a full Legal Trouble deduction, adapting the structure of <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us</a>. This presentation migration does not establish calibration. Historical Ethics and Promises Delivered grades and formulas remain preserved, and the monthly comparison log remains separate. A methodology change still requires reviewed live coverage, source-backed calibration, and a later explicit methodology migration.</p>
@@ -2723,7 +2733,7 @@ function renderMethod(sub){
       <li><b>Personal Finances:</b> <code>100 − 20·Hill(stock value, $400,000) − 20·Hill(trade count, 50) − 20·Hill(trade value, $1,000,000) − 0.20·Insider − 0.20·Dodger</code>, clamped to 0–100; <code>Hill(x,m)=x^0.745/(m^0.745+x^0.745)</code>. Stock value means the sum of individual-stock range midpoints from one reviewed annual snapshot. The snapshot date and trade period remain separate. Only verified holdings/trades inside a qualified blind trust after its effective date can be excluded. A complete reviewed snapshot, transaction coverage, amounts, filing dates and sources are required.</li>
       <li><b>Fundraising:</b> <code>clamp(75 + D − P − R − E + pledges, 0, 100)</code>. D scores same-period FEC gift-size buckets using weights 14, 10, 6, 3 and 2, plus 5.2 for itemized gifts not yet sorted, 1 for self-funding and 1 for joint fundraising; cap 14. Buckets are by each gift: ≤$200 (including unitemized once), $200.01–$499.99, $500–$999.99, $1,000–$1,999.99, and ≥$2,000; the FEC’s unsorted itemized remainder is separate. P applies category rates per percentage point of receipts (corporate 2; lobbyist 1; trade/membership/cooperative 0.2; political/leadership/party/candidate/ideological 0.1; labor/other 0.05), capped at 30. PAC categories must reconcile to the same-period FEC total. R = 10 × Hill(PAC receipts share, 0.20). E is 4 points per percentage point of eligible earmarks, capped at 30; ActBlue and WinRed are excluded. Selected-group conduit data is partial and cannot establish complete coverage or zero.</li>
       <li><b>Pledges:</b> four categories, each counted once: corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. A reviewed kept/broken pledge adds/subtracts 1; absent pledge evidence may receive +1 for qualifying bill cosponsorship; pending pledges receive no fallback. No abstention bonuses.</li>
-      <li><b>Workers comparison:</b> a separate preview CCI drops direct business-PAC share and renormalizes employee giving (10%), business-funder voting (35%) and lobbied bills (20%) over available implemented parts. The comparison is 75% legislative actions + 25% (100 − preview CCI), or the legislative-action score alone when CCI is unavailable. Published Workers &gt; Profit remains unchanged.</li>
+      <li><b>People First comparison:</b> a separate preview CCI drops direct business-PAC share and renormalizes employee giving (10%), business-funder voting (35%) and lobbied bills (20%) over available implemented parts. The comparison is 75% legislative actions + 25% (100 − preview CCI), or the legislative-action score alone when CCI is unavailable. Published Workers &gt; Profit remains unchanged.</li>
       <li><b>Calibration:</b> all supplied weights, caps, $400,000/$1,000,000 Hill midpoints, 50-trade midpoint, $20M reference-campaign context, and evidence minimums are provisional and uncalibrated. The $20M reference is documentation context, not an extra calculation in these formulas. Scores and preview history are not official grade history.</li>
       <li><b>Coverage today:</b> current imported annual financial records and official trade refreshes are not yet reviewed score inputs; dated, source-linked Legal Trouble coverage reviews are not recorded for profiles; complete earmark coverage is unavailable; and employee-giving/lobbied-bill CCI inputs are not built. Those values remain unavailable instead of earning a clean score. Existing quotes, promises, votes, legislation, holdings, trades, disclosures, cases and indices stay accessible.</li>
       <li><b>Rollout:</b> the interface consolidation is complete. Continue monthly comparisons in the separate log; do not switch grade calculations automatically. Methodology activation still requires an adequate comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration.</li>
@@ -2758,7 +2768,7 @@ function renderMethod(sub){
     </ul>
     <h2 id="method-log">Monthly recalculation and change log</h2>
     <ul class="list">
-      <li><b>What is recalculated:</b> Promises delivered, Ethics and Workers > Profit, once a month after the month's review.</li>
+      <li><b>What is recalculated:</b> Promises delivered, Ethics and People First, once a month after the month's review.</li>
       <li><b>How:</b> <span class="mono">npm run scores:monthly</span> records every change, and why, in <span class="mono">public/score-log.json</span>.</li>
       <li><b>Not logged:</b> Your match, since it depends on your own choices.</li>
       <li><b>On each grade tab:</b> when it was last recalculated, and a note if reviewed edits have changed the grade since.</li>
@@ -2924,7 +2934,7 @@ function renderMethod(sub){
       <li><b>Your choices:</b> stored only in your browser. The example starting points are labeled by their content, and every choice can be changed.</li>
     </ul>
     <h2>Money and votes side by side</h2>
-    <p>For each issue, the Workers > Profit tab lists the candidate's recorded actions next to groups linked to that issue.</p>
+    <p>For each issue, the People First tab lists the candidate's recorded actions next to groups linked to that issue.</p>
     <ul class="list">
       <li><b>How groups are linked:</b> by their documented stance or description (for example, a gun-rights or environmental group), by their name, or by the sector this app assigned to a PAC (for example, oil and gas for climate and energy). The reason is shown.</li>
       <li><b>Amounts:</b> PAC contributions to the campaign in the itemized reports, and outside spending for or against the candidate, with dates.</li>

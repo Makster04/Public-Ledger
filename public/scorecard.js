@@ -1,6 +1,6 @@
 // A portable view of the same reviewed scores shown on the profile. No scoring is done here.
 const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
-const LABELS=['Your match','Promises delivered','Ethics','Workers > Profit'];
+const LABELS=['Your match','Promises delivered','Ethics','People First'];
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
 const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';

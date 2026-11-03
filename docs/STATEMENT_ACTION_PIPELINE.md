@@ -1,6 +1,6 @@
 # Statement–action consistency pipeline
 
-This feature evaluates agreement between a dated statement and selected, sourced actions by the same politician. It is a separate evidence report in Accountability → Promises & quotes. It does not replace the reviewed Promises Delivered grade or modify Ethics or Workers > Profit.
+This feature evaluates agreement between a dated statement and selected, sourced actions by the same politician. It is a separate evidence report in Accountability → Promises & quotes. It does not replace the reviewed Promises Delivered grade or modify Ethics or People First.
 
 ## Architecture and data model
 

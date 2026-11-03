@@ -4,14 +4,14 @@ This is the canonical guide to every score, index, and position measure currentl
 
 ## At a glance
 
-The current grading interface has three primary grades: Your Match, Integrity, and Workers > Profit. **The presentation migration to Integrity is complete; the methodology is still provisional and uncalibrated.** This interface change does not claim calibration or alter the historical published calculations for Ethics and Promises Delivered. Monthly Integrity comparisons remain in their separate log. Future methodology activation requires a completed comparison period, reviewed live financial coverage, source-backed calibration, and an explicit methodology migration.
+The current grading interface has three primary grades: Your Match, Integrity, and People First (called Workers > Profit until Nov. 3, 2026; the name changed, the calculations did not). **The presentation migration to Integrity is complete; the methodology is still provisional and uncalibrated.** This interface change does not claim calibration or alter the historical published calculations for Ethics and Promises Delivered. Monthly Integrity comparisons remain in their separate log. Future methodology activation requires a completed comparison period, reviewed live financial coverage, source-backed calibration, and an explicit methodology migration.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
-| Your Match | Published grade | How closely a politician's record matches this visitor's saved issue positions | At least 3 issues with evidence and at least 50% of selected issue importance covered |
-| Integrity | Current primary grade; provisional and uncalibrated | Honesty, Personal Finances, and Fundraising, less Legal Trouble | At least 2 complete components and a dated, sourced Legal Trouble review |
-| Workers > Profit | Published grade | Whether scored legislative actions favor workers, adjusted for the Corporation Compromised Index when available | At least 3 scored actions |
-| Promises Delivered; Ethics | Historical published grades, preserved in the official monthly log; evidence now lives inside Integrity | Existing reviewed statement and case/trading records | Historical values only; not current headline grades |
+| Your Match | Published grade | How closely does this politician's record align with your views? Personalized to your answers; it does not measure honesty, ethics, or whether their policies benefit working people | At least 3 issues with evidence and at least 50% of selected issue importance covered |
+| Integrity | Current primary grade; provisional and uncalibrated | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (30%), Personal Finances (30%) and Fundraising (40%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
+| People First | Published grade | How consistently do this politician's legislative actions prioritize working people? 75% legislative-action score + 25% (100 − CCI) | At least 3 scored actions |
+| Promises Delivered; Ethics | Historical published grades; Promises Delivered is now the Promises Delivered Index (Honesty) and Ethics' three indices feed Integrity; preserved in the official monthly log; evidence now lives inside Integrity | Existing reviewed statement and case/trading records | Historical values only; not current headline grades |
 | Statement–action consistency | Per-statement analysis, not a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
 
 Letter thresholds are A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F < 60. Each grade rounds its final displayed percentage to a whole number. An insufficient-evidence result is **Not graded**, never an imputed zero.
@@ -54,11 +54,13 @@ Stock value is the sum of individual-stock position range midpoints in one revie
 - `E = min(30, eligible earmarked dollars ÷ receipts × 100 × 4)`. Bundling groups share the same rate. ActBlue and WinRed are excluded. Duplicate receipts and direct-PAC/routed-gift duplication are excluded. The currently selected conduit collection is partial and cannot prove complete earmark coverage or a zero total.
 - Pledges are corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge plus qualifying bill cosponsorship +1; otherwise 0. Pending pledges cannot use the no-pledge fallback. No abstention bonuses are awarded.
 
+**Methodology status:** Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices. Flip-Flop and Pants on Fire are planned additions to Honesty once their methods and evidence are ready.
+
 Parameters still needing calibration include the 30/30/40 weights, two-component threshold, $400,000 stock midpoint, 50-trade midpoint, $1,000,000 trade-value midpoint, 20% PAC-reliance midpoint, 30-point PAC and earmark caps, and $20 million reference-campaign context. The reference campaign is explanatory context, not an extra multiplier in the share-based equations.
 
-### Workers > Profit comparison preview
+### People First comparison preview (proposed CCI revision)
 
-A separate preview CCI removes the direct business-PAC-share component. Its remaining relative weights are employee giving 10%, business-funder voting 35%, and lobbied bills 20%, normalized over available implemented components. The preview is `0.75 × legislative-action score + 0.25 × (100 − preview CCI)`. If preview CCI is unavailable, it uses the legislative-action score alone, subject to the existing minimum. This does not change the published Workers > Profit grade or its existing CCI.
+A separate preview CCI removes the direct business-PAC-share component. Its remaining relative weights are employee giving 10%, business-funder voting 35%, and lobbied bills 20%, normalized over available implemented components. The preview is `0.75 × legislative-action score + 0.25 × (100 − preview CCI)`. If preview CCI is unavailable, it uses the legislative-action score alone, subject to the existing minimum. The published People First calculation continues using the existing CCI until this revision is explicitly adopted.
 
 ## Published grades
 
@@ -66,7 +68,7 @@ A separate preview CCI removes the direct business-PAC-share component. Its rema
 
 For each visitor-selected issue, calculate the share of the politician's weighted record that matches the visitor's side. Weight each issue by its visitor-selected importance (low 1, medium 2, high 3); divide matching weighted evidence by all available weighted evidence and multiply by 100. Actions count 1, statements count 0.5, and statements are only used for an issue without an action. One bill receives one credit; unsupported issues drop out. A grade requires at least 3 issues with evidence and coverage of at least half the visitor's selected issue importance. Choices are stored locally in the visitor's browser. See [Your Match](02_YOUR_MATCH.md).
 
-### Honesty (formerly Promises Delivered)
+### Honesty: the Promises Delivered Index
 
 `100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not independently change this grade. See [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md).
 
@@ -74,13 +76,20 @@ For each visitor-selected issue, calculate the share of the politician's weighte
 
 `max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the preserved historical Ethics method only. Ethics is no longer a current headline score and its old percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_ETHICS_SCORE.md).
 
-### Workers > Profit
+### People First
 
-Each bill is scored from −100 (profit side) to +100 (worker side) using who gains and worker/business group positions, each half-weighted when both are available. Disputed bills are shown but not scored. The politician's votes/actions on each scored bill count its strength (`abs(bill score)/100`) for the side taken; each bill counts once. The bill-action score is `worker points ÷ (worker points + profit points) × 100`. The published grade is 75% this score and 25% `100 − CCI` when CCI is available; otherwise it is the bill-action score alone. A grade needs 3 scored actions. For a president, signings and executive orders count for the marked side and vetoes for the other side. See [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md).
+**How consistently do this politician's legislative actions prioritize working people?**
+
+```text
+People First = 0.75 × Legislative-action score + 0.25 × (100 − CCI)
+```
+
+
+Each bill is scored from −100 (profit side) to +100 (worker side) using who gains and worker/business group positions, each half-weighted when both are available. Disputed bills are shown but not scored. The politician's votes/actions on each scored bill count its strength (`abs(bill score)/100`) for the side taken; each bill counts once. The legislative-action score is `worker points ÷ (worker points + profit points) × 100`. The published grade is 75% the legislative-action score and 25% `100 − CCI` when CCI is available; otherwise it is the legislative-action score alone. A grade needs 3 scored actions. For a president, signings and executive orders count for the marked side and vetoes for the other side. See [People First](07_PEOPLE_FIRST_SCORE.md).
 
 ## Indices and related analyses
 
-These indices are components of Ethics, Workers > Profit, or standalone Money & Influence analyses. They are not additional A–F grades.
+These indices are components of Integrity, People First, or standalone Money & Influence analyses. They are not additional A–F grades.
 
 ### Legal Trouble Index 🚨 (higher is worse)
 
@@ -96,7 +105,7 @@ Late/missing transaction reports contribute 70%; late annual disclosures contrib
 
 ### Corporation Compromised Index 🏢 (higher is worse)
 
-CCI weights: business PAC receipts share 35% (20% share reaches 100), employee giving from donor companies 10% (10% share reaches 100), business-funder voting above party 35% (25 percentage points reaches 100; five compared votes), and profit-side results on donor-lobbied bills 20% (at least three bills). Missing parts drop out and weights are normalized; business PAC share is required. The existing CCI remains in the published Workers > Profit grade. The separate preview CCI has the modified weights described above.
+CCI weights: business PAC receipts share 35% (20% share reaches 100), employee giving from donor companies 10% (10% share reaches 100), business-funder voting above party 35% (25 percentage points reaches 100; five compared votes), and profit-side results on donor-lobbied bills 20% (at least three bills). Missing parts drop out and weights are normalized; business PAC share is required. The existing CCI remains in the published People First grade. The separate preview CCI has the modified weights described above.
 
 ### Donor Loyalty Index 🤝 (higher means more donor-aligned)
 
@@ -132,5 +141,5 @@ Integrity cutover requires a monthly comparison period, reviewed live financial 
 - [Promises Delivered and Honesty](04_PROMISES_DELIVERED_SCORE.md)
 - [Money & Influence analysis](05_MONEY_&_INFLUENCE_ANALYSIS.md)
 - [Unimplemented or retired concepts](06_GET_THINGS_DONE_SCORE.md)
-- [Workers > Profit and CCI](07_WORKERS_OVER_PROFIT_SCORE.md)
+- [People First and CCI](07_PEOPLE_FIRST_SCORE.md)
 - [Integrity preview](08_INTEGRITY_SCORE.md)

@@ -229,7 +229,7 @@ export const FEEDS={
     summarize:(rows,a)=>{const bills=rows.filter(r=>r.measure),m=rows.find(r=>r.id==='scan:full');
       return {...history(bills,30),congress:a.congress,since:m?.since||null,bills:[...new Set(bills.map(r=>r.bill).filter(Boolean))],byCongress:countBy(bills,r=>r.id.split('-')[0])};}},
 
-  // Key bills: the Workers > Profit bills and the bills behind the selected votes (config.keyBills).
+  // Key bills: the People First bills and the bills behind the selected votes (config.keyBills).
   bill:{host:'api.congress.gov',label:'Bill details',tab:'match',
     jobs:c=>(c.keyBills||[]).filter(k=>!/-[sh]amdt-/.test(k)).map(k=>({id:`bill:${k}`,subject:k,args:{bill:k}})),
     async page(job,a,env){
@@ -851,7 +851,7 @@ export const FEEDS={
     }}),
     summarize:rows=>history(periodRows(rows),60)},
   // Lobbying reports that name a key bill (LDA.gov), in the two years of its Congress: how many there are, and of the
-  // reports read (up to 100 a year), how many were filed for unions. Shown with the Workers > Profit bill scores as
+  // reports read (up to 100 a year), how many were filed for unions. Shown with the People First bill scores as
   // context, never scored: a report says a client lobbied on the bill, not which side it was on.
   'bill-lobbying':{host:'lda.gov',label:'Lobbying on key bills',tab:'pvp',scope:'global',every:WEEK,
     jobs:c=>(c.keyBills||[]).filter(k=>BILL_ABBR[k.split('-')[1]]).map(k=>({id:`bill-lobbying:${k}`,subject:k,args:{bill:k}})),

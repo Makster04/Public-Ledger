@@ -202,10 +202,10 @@ export function ethicsScore(ethics,trading={},{asOfYear=null}={}){
 //   businessVotes (35%)  on votes where a business funder that gave to the campaign took a public side, how much more often
 //                        they voted its way than their party did (Donor Loyalty's method, PAC and bundled money only); 25
 //                        points above the party scores 100. Needs 5 compared votes.
-//   lobbiedBills (20%)   of the Workers > Profit bills a top donor organization lobbied on, the share where they took the
+//   lobbiedBills (20%)   of the People First bills a top donor organization lobbied on, the share where they took the
 //                        Profit side; needs 3. Not in the reviewed research yet, so it drops out.
 // Outside spending is left out: candidates can't control it.
-// In the Workers > Profit grade: 75% the bills + 25% (100 − this index), once both exist.
+// In the People First grade: 75% the bills + 25% (100 − this index), once both exist.
 export const CORP_COMPROMISED={weights:{pacShare:0.35,employees:0.10,businessVotes:0.35,lobbiedBills:0.20},pacCeiling:20,employeeCeiling:10,voteCeiling:25,minLobbied:3,inGrade:0.25};
 // businessPac and receipts: dollars over the same period; employees: dollars or null; businessVotes: Donor Loyalty's
 // result for the business funders ({index, diff, n}); lobbied: {profit, n} or null.
@@ -221,7 +221,7 @@ export function corporationCompromised({businessPac=null,receipts=null,employees
   const raw=used.reduce((t,k)=>t+C.weights[k]*parts[k],0)/w;
   return {index:Math.round(raw),raw,why:null,parts,used,weights:Object.fromEntries(used.map(k=>[k,C.weights[k]/w])),share:Math.round(share*100)/100};
 }
-// The Workers > Profit grade: the bills' score (pvpScore) blended with the index when both exist; otherwise the bills
+// The People First grade: the bills' score (pvpScore) blended with the index when both exist; otherwise the bills
 // alone (an index without data costs nothing, as on Ethics). billsPct keeps the bills' own score.
 export function workersOverProfit(v,cci){
   const C=CORP_COMPROMISED,bills=v?.pct??null,on=bills!=null&&cci?.index!=null;
@@ -229,7 +229,7 @@ export function workersOverProfit(v,cci){
   return Object.assign({},v,{billsPct:bills,cci:cci||null,blended:on,raw,pct:raw==null?null:Math.round(raw)});
 }
 
-// ---------- Workers > Profit bill scores ----------
+// ---------- People First bill scores ----------
 // Each bill is scored from −100 (fully corporate-backed) to +100 (fully worker-backed), from two equal parts:
 //   Who gains (50%): a cited nonpartisan analysis (CBO, JCT, the Tax Policy Center or the Penn Wharton Budget Model),
 //     placed on one of five steps by a fixed rule. Two kinds count: money (who comes out ahead, GAINS_STEPS) and access
@@ -286,7 +286,7 @@ export function billScore(b){
 export const BILL_STATUS={disputed:'Disputed: who gains and who took a side point opposite ways',even:'Even: no clear side',
   'one-side':'Needs a position from the other side, or a who-gains study',none:'No evidence on file yet'};
 
-// Workers > Profit: actions on scored bills. actions: [{bill, kind: 'vote'|'sponsored'|'cosponsored'|'statement'|...,
+// People First: actions on scored bills. actions: [{bill, kind: 'vote'|'sponsored'|'cosponsored'|'statement'|...,
 // pos?, mark: 'people'|'profit', weight, credit?}]. A Yea, a sponsorship or a statement of support takes the bill's side;
 // a Nay or a statement of opposition the other; missed votes count for nothing. One credit per bill, across all its
 // versions (credit is the bill on file): a vote wins over a sponsorship, which wins over a statement. Each action counts

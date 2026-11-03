@@ -29,7 +29,7 @@ export function personScores(s,scorer,history){
     flags,
   };
 }
-const NAMES={promises:'Promises delivered',ethics:'Ethics',pvp:'Workers > Profit'};
+const NAMES={promises:'Promises delivered',ethics:'Ethics',pvp:'People First'};
 // The counts behind each grade, as [field, one, several], for the reason given with each change.
 const PARTS={
   promises:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
@@ -78,7 +78,7 @@ if(import.meta.url===pathToFileURL(process.argv[1]).href){
   console.log(`${entry.note} Research ${entry.research}, reviewed ${entry.reviewedAt}.`);
   for(const c of entry.changes)console.log(`  ${c.id} · ${NAMES[c.grade]||c.grade}: ${c.from==null?'Not graded':c.from+'%'} → ${c.to==null?'Not graded':c.to+'%'} (${c.why})`);
   if(dry){console.log('Dry run: nothing written.');process.exit(0);}
-  log.about='Monthly recalculations of Promises delivered, Ethics and Workers > Profit, after review, with every change and why. Written by scripts/scores-monthly.mjs; newest last.';
+  log.about='Monthly recalculations of Promises delivered, Ethics and People First, after review, with every change and why. Written by scripts/scores-monthly.mjs; newest last.';
   log.entries=log.entries.filter(e=>e.date!==date).concat(entry);
   // One entry per line keeps the log reviewable as a diff.
   fs.writeFileSync(new URL(LOG,root),`{"about":${JSON.stringify(log.about)},"entries":[\n${log.entries.map(e=>JSON.stringify(e)).join(',\n')}\n]}\n`);

@@ -1,6 +1,6 @@
 # Money & Influence: descriptive analysis
 
-Money & Influence is not an overall grade. Campaign receipts, PACs, outside spending, donations, holdings, trades, and timing comparisons describe records or identify topics for review. Association and timing do not establish that money caused a decision. Only the explicitly named CCI is an index used in a published grade (Workers > Profit); Integrity's Fundraising component is a separate preview calculation.
+Money & Influence is not an overall grade. Campaign receipts, PACs, outside spending, donations, holdings, trades, and timing comparisons describe records or identify topics for review. Association and timing do not establish that money caused a decision. Only the explicitly named CCI is an index used in a published grade (People First); Integrity's Fundraising component is a separate preview calculation.
 
 ## Vote Donor Alignment
 

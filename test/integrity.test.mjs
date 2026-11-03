@@ -127,6 +127,6 @@ test('monthly preview comparisons track components in their own log without trea
   const before={x:{integrity:{pct:null,honesty:75,personalFinances:null,fundraising:null,legalTrouble:10},workers:{pct:60}}};
   const after={x:{integrity:{pct:null,honesty:80,personalFinances:null,fundraising:null,legalTrouble:10},workers:{pct:60}}};
   assert.deepEqual(previewChanges(before,after),[{id:'x',grade:'Honesty',from:75,to:80,why:'Preview calculation changed'}]);
-  assert.deepEqual(previewChanges({},after).map(x=>x.grade),['Honesty','Legal Trouble','Workers comparison']);
+  assert.deepEqual(previewChanges({},after).map(x=>x.grade),['Honesty','Legal Trouble','People First comparison']);
 });
 

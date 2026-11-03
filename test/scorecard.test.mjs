@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {renderScorecardSvg} from '../public/scorecard.js';
 
-const model={id:'booker',name:'Cory Booker',party:'D',office:'U.S. Senate',state:'New Jersey',raised:18869341.39,cash:23060940.12,period:'Jan 2025–Jun 2026',reviewedAt:'Oct 2, 2026',matchConfigured:false,grades:[{label:'Your match',value:null},{label:'Promises delivered',value:67,detail:'3 counted checks'},{label:'Ethics',value:100},{label:'Workers > Profit',value:100}]};
+const model={id:'booker',name:'Cory Booker',party:'D',office:'U.S. Senate',state:'New Jersey',raised:18869341.39,cash:23060940.12,period:'Jan 2025–Jun 2026',reviewedAt:'Oct 2, 2026',matchConfigured:false,grades:[{label:'Your match',value:null},{label:'Promises delivered',value:67,detail:'3 counted checks'},{label:'Ethics',value:100},{label:'People First',value:100}]};
 
 test('portable scorecard uses real supplied scores, party colors and missing-data states',()=>{
   const dem=renderScorecardSvg(model),rep=renderScorecardSvg({...model,party:'R',raised:null,cash:null});

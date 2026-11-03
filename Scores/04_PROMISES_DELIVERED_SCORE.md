@@ -1,6 +1,6 @@
-# Promises Delivered 📦
+# Promises Delivered Index 📦
 
-**Status: historical published grade and evidence source for Integrity's Honesty component.** It remains unchanged in the official monthly history and is no longer a separate current headline grade. The reviewed commitments, quotes, checks, and sources now appear under Integrity → Honesty. It measures reviewed commitments and stated positions against documented actions; it does not measure whether a politician is generally truthful in every setting.
+**Status: the Promises Delivered Index is Integrity's Honesty component (30%).** It was a separate published grade until Nov. 2, 2026; those historical grades remain accessible in the official monthly history. It remains unchanged in the official monthly history and is no longer a separate current headline grade. The reviewed commitments, quotes, checks, and sources now appear under Integrity → Honesty. It measures reviewed commitments and stated positions against documented actions; it does not measure whether a politician is generally truthful in every setting.
 
 ```text
 Promises Delivered = 100 × (kept + 0.5 × partly kept or changed)

@@ -25,7 +25,7 @@ test('each listed bill has a valid number, a status, and cited positions from kn
   }
 });
 
-test('every bill behind a saved roll call and every Workers > Profit bill is on the list',()=>{
+test('every bill behind a saved roll call and every People First bill is on the list',()=>{
   assert.deepEqual(unlisted(D),[],'saved roll calls on bills missing from the list');
   const keys=new Set(billFamilies(D).flatMap(e=>e.keys));
   for(const b of D.bills)assert.ok(keys.has(b.id),`${b.id} is scored but not listed`);
@@ -41,7 +41,7 @@ test('families gather the votes and positions: researched first, then bill sides
   assert.ok(rfma.positions.some(p=>p.group==='lcv'&&p.pos==='support'&&p.from==='scorecard'),'LCV\'s scorecard position comes from the funder research');
   const save=by('119-hr-22');assert.ok(save.keys.includes('118-hr-8281'));
   assert.equal(new Set(save.positions.map(p=>p.group)).size,save.positions.length,'one position per group');
-  const pro=by('117-hr-842');assert.ok(pro.work&&pro.keys.includes('116-hr-2474'),'versions come from the Workers > Profit bill too');
+  const pro=by('117-hr-842');assert.ok(pro.work&&pro.keys.includes('116-hr-2474'),'versions come from the People First bill too');
   assert.deepEqual(pro.votes.map(v=>v.id),['h-117-1-070','h-116-2-050'],'newest vote first');
   assert.ok(pro.positions.some(p=>p.group==='aflcio'&&p.from==='bill'));
   assert.deepEqual(by('117-s-2938').positions.map(p=>`${p.group}:${p.pos}`),['nra:oppose','giffords:support','everytown:support'],'the NRA opposed the gun-safety law; the gun-safety groups backed it');
@@ -62,7 +62,7 @@ test('group details: advocacy groups have no PAC; PAC money and outside spending
   const lcv=groupInfo(D,'lcv');assert.ok(lcv.pacs>0&&lcv.out>0&&lcv.people>0);
   let pac=0;for(const p of [...D.members,...D.cands,...(D.featured||[])])for(const f of p.funderPos||[])if(f.key==='chamber')pac+=f.pac||0;
   assert.equal(groupInfo(D,'chamber').pac,pac);
-  assert.equal(groupInfo(D,'epi').org,'Economic Policy Institute','Workers > Profit groups are named too');
+  assert.equal(groupInfo(D,'epi').org,'Economic Policy Institute','People First groups are named too');
 });
 
 test('the anti-corruption bills count in Your match under their issue, through their sponsors and cosponsors',async()=>{
