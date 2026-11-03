@@ -6,3 +6,5 @@ node_modules/
 .env
 *.log
 __pycache__/
+# Senate eFD report pages saved by hand (npm run efd:import); public records, kept on your computer only.
+efd-downloads/

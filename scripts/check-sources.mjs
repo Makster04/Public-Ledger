@@ -4,7 +4,7 @@
 //   3. Groups behind outside spending (ProPublica 404)   4. Lobbying on key bills (LDA.gov, "did not filter")
 // About 15 requests in all. Every key in .dev.vars is replaced by [key] in what is printed. Run it while the refresh is
 // stopped, or an hour after other FEC scripts, so the FEC's hourly limit isn't the answer.
-//   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda)
+//   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda|bargo)
 import fs from 'node:fs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {HOSTS} from '../src/sources.mjs';
@@ -47,7 +47,7 @@ const pick=(kind,pattern)=>person(argPerson)||person(failed(kind,pattern)?.subje
 const only=process.argv.includes('--only')?process.argv[process.argv.indexOf('--only')+1]:null,part=n=>!only||only===n;
 async function main(){
   console.log(`Source check, ${new Date().toISOString().slice(0,16)}Z. ${jobs.length?'Using the failed checks saved by npm start.':'No local refresh database found; using a sample person.'}`);
-  if(!env.FEC_API_KEY)console.log('FEC_API_KEY is not set in .dev.vars, so the FEC answers will be about the missing key.');
+  if(part('fec')&&!env.FEC_API_KEY)console.log('FEC_API_KEY is not set in .dev.vars, so the FEC answers will be about the missing key.');
 
   if(part('fec')){
   // 1. FEC enforcement records: the refresh's request, then the same search with each setting changed.
@@ -106,6 +106,22 @@ async function main(){
     }
   }
 
+  }
+  if(part('bargo')){
+  // 5. Bargo for senators' trades: what it returns for a last name, and how many trades the refresh's name and state
+  // check keeps (src/feeds.mjs trades-bargo).
+  const senators=['marshall','sullivan','collins'].map(person).filter(Boolean);
+  for(const p of senators){
+    const last=p.name.replace(/,?\s+(Jr\.?|Sr\.?|II|III|IV)$/i,'').trim().split(/\s+/).pop(),first=p.name.split(/\s+/)[0];
+    console.log(`\n=== 5. Bargo trades for ${p.name} (${p.state})`);
+    const r=await ask(`Search Bargo for "${last}" in the Senate`,`https://www.bargo.ai/free-apis/congress/v1/trades?member=${encodeURIComponent(last)}&chamber=senate&limit=250&page=0`);
+    const trades=Array.isArray(r.json?.trades)?r.json.trades:[];
+    const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z]/g,'');
+    const kept=trades.filter(t=>fold(t.member).includes(fold(last))&&fold(t.member).includes(fold(first).slice(0,3))&&String(t.state||'').toUpperCase().startsWith(p.state));
+    console.log(`  ${trades.length} trades returned; ${kept.length} kept by the name and state check.`);
+    for(const t of trades.slice(0,3))console.log(`  - member "${t.member}", state "${t.state}", traded ${t.transaction_date}, disclosed ${t.disclosure_date}, ${t.ticker||t.asset}`);
+    if(trades.length&&!kept.length)console.log('  (None kept: the name or state above is written differently from what the refresh expects.)');
+  }
   }
   console.log('\nDone. Copy everything above and send it; no keys are in it.');
 }
