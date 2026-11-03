@@ -12,7 +12,9 @@ const sum = (rows, get) => Math.round(rows.reduce((n,r)=>n+Math.round((get(r)||0
 // their jobs under Website updates.
 // perRun: the most requests to a source in one refresh run (the local server runs once a minute), kept under each
 // source's published or reported rate limit; sources without one get DEFAULT_PER_RUN.
-export const DEFAULT_PER_RUN=5;
+// dailyLimit: the source's limit is a day's allowance (SAM.gov: about 10 requests a day on a free key), so when it
+// refuses with HTTP 429 and gives no Retry-After, the source waits DAILY_LIMIT_WAIT instead of an hour.
+export const DEFAULT_PER_RUN=5,DAILY_LIMIT_WAIT=6*60*60_000;
 export const HOSTS = {
   'api.open.fec.gov':{name:'FEC',keys:['FEC_API_KEY'],query:'api_key',perRun:15},
   'api.congress.gov':{name:'Congress.gov',keys:['CONGRESS_API_KEY'],query:'api_key',perRun:40},
@@ -38,7 +40,7 @@ export const HOSTS = {
   'api.nytimes.com':{name:'New York Times',keys:['NYT_API_KEY'],query:'api-key',perRun:4},
   'api.gdeltproject.org':{name:'GDELT',perRun:2},
   'api.regulations.gov':{name:'Regulations.gov',keys:['REGULATIONS_API_KEY','CONGRESS_API_KEY'],query:'api_key',perRun:15},
-  'api.sam.gov':{name:'SAM.gov',keys:['SAM_API_KEY'],query:'api_key',perRun:1},
+  'api.sam.gov':{name:'SAM.gov',keys:['SAM_API_KEY'],query:'api_key',perRun:1,dailyLimit:true},
   'api.usaspending.gov':{name:'USAspending',perRun:10},
   'www.federalregister.gov':{name:'Federal Register',perRun:10},
   'public.api.bsky.app':{name:'Bluesky',perRun:10},
@@ -134,7 +136,8 @@ export async function requestSource(url, env, {json=true,as=json?'json':'xml',al
   if(!response.ok) {
     const retry=response.headers.get('retry-after');
     const seconds=retry ? (Number.isFinite(Number(retry))?Number(retry):Math.max(0,(Date.parse(retry)-Date.now())/1000)):0;
-    throw new SourceError(`${u.hostname} returned HTTP ${response.status}`,seconds*1000,response.status);
+    const wait=seconds?seconds*1000:response.status===429&&h.dailyLimit?DAILY_LIMIT_WAIT:0;
+    throw new SourceError(`${u.hostname} returned HTTP ${response.status}${response.status===429&&h.dailyLimit&&!seconds?' (its daily allowance is used up; trying again in 6 hours)':''}`,wait,response.status);
   }
   if(as==='bytes'){const b=new Uint8Array(await response.arrayBuffer());if(b.length>40_000_000)throw new SourceError('Source response exceeds safe page size');return out(b);}
   const text=await response.text(); if(text.length>Math.min(maxChars,40_000_000)) throw new SourceError('Source response exceeds safe page size');
