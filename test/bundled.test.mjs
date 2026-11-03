@@ -45,7 +45,7 @@ test('bundled gifts add a funder entry of their own, kept apart from PAC checks,
   const h=personFunders({...D,bundled:{people:{}}},p).find(f=>f.key==='aipac');
   assert.equal(h.routed,707803-5000);assert.equal(h.routedBy,'hand');assert.match(h.routedPeriod,/2025/);
   assert.equal(personFunders({...D,bundled:{people:{}}},{...p,conduit:{status:'not_measured',rows:[]}}).find(f=>f.key==='aipac')?.routed,undefined,'nothing read, nothing researched: no routed amount');
-  assert.ok(funderChanges({...data,members:[],cands:[{...p}],featured:[]}).some(l=>/AIPAC.*routed \$\d+ → \$900000|\+ AIPAC.*bundled \$900000/.test(l)));
+  assert.ok(funderChanges({...data,members:[],cands:[{...p}],featured:[]}).some(l=>/AIPAC.*routed \$[\d,.]+ → \$900,?000|\+ AIPAC.*bundled \$900,?000/.test(l)));
   // The indexes weight each funder by money: bundled gifts count; a funder with only bundled gifts is a donor.
   const f=[{org:'Group',key:'g',pac:0,routed:1000,for:0,against:0,compared:[{voteId:'v1',wanted:'Yea',cast:'Yea',match:true}]}];
   assert.equal(voteDonorAlignment(f).n,1);
