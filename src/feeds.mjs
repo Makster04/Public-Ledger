@@ -1099,12 +1099,33 @@ export function efdAnnualHoldings(html){
   return {assets,debts};
 }
 // One annual report's holdings, with the net-worth range (public/net-worth.js). No assets read means a paper report.
-const holdingsSnapshot=(f,h)=>({year:f.year||null,filed:f.filed||null,url:f.url,type:f.type||null,...netWorth(h.assets,h.debts),
+export const holdingsSnapshot=(f,h)=>({year:f.year||null,filed:f.filed||null,url:f.url,type:f.type||null,...netWorth(h.assets,h.debts),
   unreadable:!h.assets.length&&!h.debts.length,assets:h.assets.slice(0,400),debts:h.debts.slice(0,100)});
+// A Senate eFD report page saved from a browser (scripts/import-efd.mjs): whose report it is, what kind, when it was
+// filed, and its eFD address when the saved page carries it (browsers often note it at the top, and the page links to
+// itself). The kind comes from the title, or else from which table the page has. A page with neither is not a report.
+export function efdSavedReport(html){
+  const raw=String(html||''),text=strip(raw);
+  const at=raw.match(/(?:https:\/\/efdsearch\.senate\.gov)?\/search\/view\/(ptr|annual|paper)\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\/?/i);
+  const trades=efdTrades(raw),holdings=efdAnnualHoldings(raw);
+  const titled=/Periodic Transaction Report/i.test(text)?'ptr':/Annual Report/i.test(text)?'annual':null;
+  const kind=at?.[1].toLowerCase()==='paper'?'paper':titled||(trades.length?'ptr':holdings.assets.length||holdings.debts.length?'annual':null);
+  const who=text.match(/The Honorable\s+([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i);
+  const year=Number(text.match(/(?:Annual Report for|Calendar Year|\bCY)\s*(\d{4})/i)?.[1])||null;
+  return {kind,doc:at?at[2].toLowerCase():null,url:at?`${EFD}/search/view/${at[1].toLowerCase()}/${at[2].toLowerCase()}/`:null,
+    filed:mdy(text.match(/\bFiled\s+(\d{1,2}\/\d{1,2}\/\d{4})/i)?.[1]),year,
+    name:who?{full:who[1].trim(),last:who[2].trim(),first:who[3].trim()}:null,trades,holdings};
+}
 const EFD='https://efdsearch.senate.gov';
 // Agree to the site's terms (the checkbox every visitor ticks), keeping the session's cookies.
+// Senate eFD turns scripts away (HTTP 403) at times. Then its checks wait a week and say how to bring the reports in by
+// hand: save them from a browser and run npm run efd:import (scripts/import-efd.mjs). Imported reports are kept.
+export const EFD_REFUSED='Senate eFD turns scripts away (HTTP 403); save the reports from a browser and run npm run efd:import. Reports imported by hand are kept';
 async function efdSession(env){
-  const home=await requestSource(`${EFD}/search/home/`,env,{as:'text',withHeaders:true}),jar=addCookies({},home.headers);
+  let home;
+  try{home=await requestSource(`${EFD}/search/home/`,env,{as:'text',withHeaders:true});}
+  catch(e){if(e?.statusCode===403)throw new SourceError(EFD_REFUSED,WEEK,403);throw e;}
+  const jar=addCookies({},home.headers);
   const input=String(home.body).match(/<input[^>]*name=["']csrfmiddlewaretoken["'][^>]*>/i)?.[0],token=input?.match(/value=["']([^"']+)/)?.[1];
   need(token,'Senate eFD agreement form not found');
   const agreed=await requestSource(`${EFD}/search/home/`,env,{as:'text',form:{csrfmiddlewaretoken:token,prohibition_agreement:'1'},headers:{Cookie:cookieHeader(jar),Referer:`${EFD}/search/home/`},allow:[301,302,303],withHeaders:true});
@@ -1137,12 +1158,12 @@ async function efdGet(env,jar,url,expect=/Transaction|transactions/i){
 }
 // The rows one official report gives: its trades, numbered and tagged with the report, or one "not read" row.
 const unreadRow=(f,why)=>({id:`unread:${f.doc}`,doc:f.doc,unread:{doc:f.doc,filed:f.filed,url:f.url,why}});
-function officialRows(source,f,found,why){
+export function officialRows(source,f,found,why){
   const official={doc:f.doc,filed:f.filed,url:f.url};
   const rows=found.filter(t=>t.traded).map(t=>({...trade(source,{...t,disclosed:f.filed,link:f.url}),assetType:t.assetType||null,doc:f.doc,official}));
   return rows.length?numberTrades(rows).map(r=>({...r,id:`${f.doc}:${r.id}`})):[unreadRow(f,why)];
 }
-function officialSummary(rows){
+export function officialSummary(rows){
   const mark=rows.find(r=>r.id==='scan:more');rows=rows.filter(r=>r!==mark);
   const trades=rows.filter(r=>!r.unread),unread=rows.filter(r=>r.unread).map(r=>r.unread);
   return {count:trades.length,rows:top(trades,2000,'traded'),rowLimit:2000,unread:top(unread,200,'filed'),reports:new Set(rows.map(r=>r.doc).filter(Boolean)).size,

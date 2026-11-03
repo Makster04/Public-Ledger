@@ -1,6 +1,6 @@
 // What a member's latest annual financial disclosure shows about how they hold investments (step 8): a qualified blind
 // trust, individual stocks, or neither. Read from the asset list the net-worth refresh keeps (src/feeds.mjs,
-// "net-worth-house" and "net-worth-senate"). It is a lead: the Ethics grade uses only the reviewed status in
+// "net-worth-house" and "net-worth-senate"). It is a lead: the Integrity grade uses only the reviewed status in
 // research.json ("holdings", see HOLDINGS in public/grades.js), which a person confirms from the report or a cited source.
 import {HOLDINGS} from './grades.js';
 
