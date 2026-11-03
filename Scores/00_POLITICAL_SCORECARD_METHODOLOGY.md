@@ -4,7 +4,7 @@ This is the canonical guide to every score, index, and position measure currentl
 
 ## At a glance
 
-The current grading interface has three primary grades: Your Match, Integrity, and People First (called Workers > Profit until Nov. 3, 2026; the name changed, the calculations did not). **The presentation migration to Integrity is complete; the methodology is still provisional and uncalibrated.** This interface change does not claim calibration or alter the historical published calculations for Ethics and Promises Delivered. Monthly Integrity comparisons remain in their separate log. Future methodology activation requires a completed comparison period, reviewed live financial coverage, source-backed calibration, and an explicit methodology migration.
+There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional. Ethics and Promises Delivered are historical grades, kept without recalculation.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
@@ -56,7 +56,7 @@ Stock value is the sum of individual-stock position range midpoints in one revie
 
 **Methodology status:** Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices. Flip-Flop and Pants on Fire are planned additions to Honesty once their methods and evidence are ready.
 
-Parameters still needing calibration include the 30/30/40 weights, two-component threshold, $400,000 stock midpoint, 50-trade midpoint, $1,000,000 trade-value midpoint, 20% PAC-reliance midpoint, 30-point PAC and earmark caps, and $20 million reference-campaign context. The reference campaign is explanatory context, not an extra multiplier in the share-based equations.
+The $20 million reference campaign used to convert IntegrityIndex.us's per-dollar weights into shares is explanatory context, not an extra multiplier in the share-based equations.
 
 ### People First comparison preview (proposed CCI revision)
 
@@ -74,7 +74,7 @@ For each visitor-selected issue, calculate the share of the politician's weighte
 
 ### Historical Ethics grade
 
-`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the preserved historical Ethics method only. Ethics is no longer a current headline score and its old percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_INTEGRITY_SCORE.md).
+`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the historical Ethics grade only. Its percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_INTEGRITY_SCORE.md).
 
 ### People First
 
@@ -125,13 +125,13 @@ For each statement independently: `consistent ÷ (consistent + inconsistent) × 
 - **Key-vote position:** share of selected votes on marked bills on which the person took the conservative side; at least three marked votes are required. House and Senate sets differ, so compare within a chamber.
 - **Issue-position bars:** direction and balance of available evidence by issue. Context only; no single overall score.
 - **Campaign receipts, outside spending, donor shares, net-worth ranges, stock holdings/trades, timing flags, and donor-employer figures:** descriptive financial data or review leads, not grades unless explicitly included in a formula above. Outside spending is not treated as money controlled by the candidate.
-- **Get It Done, No-Show, Across the Aisle, Party Rebel, Worker Backed, Grassroots, Super PAC Dependence, Lobbyist Overlap, Contracts for Donors, and Foreign Agent Flag:** older design notes or proposed measures. They are not implemented as current scores/indices unless separately documented as implemented in the app. See [future/retired score concepts](06_PROPOSED_AND_RETIRED_IDEAS.md).
+- **Get It Done, No-Show, Across the Aisle, Party Rebel, Worker Backed, Grassroots, Super PAC Dependence, Lobbyist Overlap, Contracts for Donors, and Foreign Agent Flag:** proposed measures, not calculated. See [Future goals](../.03_Future_Goals.md#proposed-indices).
 
-## Missing data, sources, history, and rollout
+## Missing data, sources and history
 
 Missing and incomplete data stay unknown; they are not converted into zero activity or a clean score. Refreshed official records remain leads until reviewed. Every score view links to its evidence, sources, relevant dates, and limitations. Official score changes are recorded in `public/score-log.json`; monthly Integrity comparisons use the separate `public/integrity-preview-log.json` and never rewrite official history.
 
-Integrity cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. No automatic grade switch occurs. This is how Public Ledger adapts and credits [IntegrityIndex.us](https://integrityindex.us/methodology); it does not claim that its provisional parameters reproduce that site's calibrated results.
+This is how Public Ledger adapts and credits [IntegrityIndex.us](https://integrityindex.us/methodology); it does not claim that its provisional parameters reproduce that site's calibrated results.
 
 ## Related guides
 
@@ -140,4 +140,3 @@ Integrity cutover requires a monthly comparison period, reviewed live financial 
 - [Integrity](03_INTEGRITY_SCORE.md), including the Promises Delivered, Insider Trading, Stock Disclosure Dodger and Legal Trouble indices, and the historical Ethics and Promises Delivered grades
 - [People First and the Corporation Compromised Index](04_PEOPLE_FIRST_SCORE.md)
 - [Money & Influence analysis](05_MONEY_&_INFLUENCE_ANALYSIS.md)
-- [Proposed and retired ideas](06_PROPOSED_AND_RETIRED_IDEAS.md)

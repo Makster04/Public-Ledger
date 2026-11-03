@@ -2,7 +2,7 @@
 
 **How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?**
 
-**Status: primary grade, provisional and uncalibrated.** The formula and component calculator are implemented in `public/integrity.js`, and profile evidence is consolidated in one Integrity section. Promises and ethics evidence are available within Integrity. Historical Ethics and Promises Delivered grades remain accessible in the official monthly history and are never averaged into Integrity.
+**Status: primary grade; its parameters are provisional.** Calculated in `public/integrity.js`. Promises and ethics evidence are available within Integrity. Historical grades remain accessible.
 
 Integrity combines three components:
 
@@ -135,7 +135,7 @@ A non-open case whose latest status change was more than 10 years before the rev
 
 ## Historical grades: Ethics and Promises Delivered
 
-Ethics and Promises Delivered were separate published grades until Nov. 2, 2026. Their past values remain accessible in the official monthly history (`public/score-log.json`) and on each profile's Integrity tab. They are preserved without recalculation and are never averaged into Integrity.
+Ethics and Promises Delivered are earlier published grades. Their past values remain accessible in the official monthly history (`public/score-log.json`) and on each profile's Integrity tab. They are preserved without recalculation and are never averaged into Integrity.
 
 ```text
 Ethics (historical) = max(0, round(100 − Legal Trouble − 0.10 × Insider Trading
@@ -149,12 +149,10 @@ Under the historical Ethics method an unavailable trading index created no deduc
 
 The proposed CCI revision removes the direct business-PAC-share component and reweights employee giving (10%), business-funder voting (35%), and lobbied bills (20%) over the available implemented components. The comparison is `0.75 × existing legislative-action score + 0.25 × (100 − preview CCI)`, or the legislative-action score alone if the preview CCI is unavailable. The published People First calculation continues using the existing CCI until the revision is explicitly adopted. See [People First](04_PEOPLE_FIRST_SCORE.md).
 
-## Methodology status, limitations and cutover conditions
+## Methodology status
 
 Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices.
 
-The method is in code, but formula implementation is not the same as a complete, calibrated score. Current methodology notes that reviewed annual holdings/trade coverage is not yet available as complete score input, sourced Legal Trouble coverage reviews are not recorded for profiles, earmark coverage is incomplete, and employee-giving/lobbied-bill CCI inputs are not built. Those values remain unavailable rather than clean. As a result, an overall Integrity grade may not be produced even while the component explanations are visible.
-
-Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history. No automatic methodology switch is allowed. Cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. Ethics and Promises Delivered are no longer separate headline grades, but their past published values remain in official history and their supporting evidence remains accessible within Integrity.
+Inputs without reviewed coverage stay unavailable rather than clean, so a profile can show its component explanations and still be Not graded overall. Monthly Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history.
 
 See [People First](04_PEOPLE_FIRST_SCORE.md) and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).

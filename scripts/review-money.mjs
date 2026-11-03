@@ -49,5 +49,5 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const before=JSON.parse(against?await fs.readFile(against,'utf8'):execFileSync('git',['show','HEAD:public/research.json'],{cwd:root,maxBuffer:1<<28}).toString());
   const tallies=JSON.parse(await fs.readFile(new URL('public/vote-party.json',root),'utf8')).votes;
   console.log(review(before,after,tallies).join('\n'));
-  console.log('\nIf this looks right, commit public/research.json (see .04_UPDATES_&_FIXES_IN_NEED.md, "Checkpoint").');
+  console.log('\nIf this looks right, commit public/research.json (see .04_UPDATES_&_FIXES_IN_NEED.md, "On your computer").');
 }
