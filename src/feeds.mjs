@@ -742,7 +742,8 @@ export const FEEDS={
     jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`fec-legal:${p.id}`,subject:p.id,args:{name:p.name,committee:p.fecCmte||null}})),
     async page(job,a,env,config){
       const p=config.people.find(x=>x.id===job.subject);
-      const d=await requestSource(`https://api.open.fec.gov/v1/legal/search/?q=${encodeURIComponent(`"${a.name}"`)}&type=all&hits_returned=50`,env);
+      // No type: the FEC searches every kind of legal document then (it rejects type=all with HTTP 422).
+      const d=await requestSource(`https://api.open.fec.gov/v1/legal/search/?q=${encodeURIComponent(`"${a.name}"`)}&hits_returned=50`,env);
       need(d&&typeof d==='object','FEC legal search response missing');
       const pick=(arr,kind,path)=>list(arr).filter(m=>{const t=`${m.name||''} ${list(m.respondents).join(' ')}`;return namesPerson(t,p)||namesCampaign(t,p)||(a.committee&&m.committee_id===a.committee);})
         .map(m=>({id:`${kind}-${m.no||m.case_no}`,kind:{mur:'Enforcement case (MUR)',af:'Administrative fine',adr:'Alternative dispute resolution',ao:'Advisory opinion'}[kind],title:cut(m.name||m.case_name,250),
@@ -820,14 +821,20 @@ export const FEEDS={
     // (read again when the top organizations change).
     async page(job,a,env,config){
       if(!a.orgs?.length)return {rows:[],next:null};
+      // The FEC takes at most 10 employer names per request (HTTP 422 beyond that), so the names go 10 at a time; the
+      // cursor is {k: which group of 10, url: the next page of it}. A contribution found under two names is one record.
+      const names=a.orgs.filter(isOrg),groups=Math.ceil(names.length/EMPLOYERS_PER_REQUEST);
+      if(!groups)return {rows:[],next:null};
       return byPeriod(job,env,{periods:cyclesFrom(SINCE(config),a.cycle),tag:a.orgs.join('|'),read:async(cycle,cursor)=>{
+        const at=!cursor?{k:0,url:null}:/^https:/.test(cursor)?{k:0,url:cursor}:JSON.parse(cursor);
         const u=new URL('https://api.open.fec.gov/v1/schedules/schedule_a/');
         for(const[k,v]of Object.entries({committee_id:a.committee,two_year_transaction_period:cycle,is_individual:'true',per_page:100,sort:'-contribution_receipt_date'}))u.searchParams.set(k,v);
-        for(const o of a.orgs)u.searchParams.append('contributor_employer',o);
-        const url=cursor||u.href,d=await requestSource(url,env);
+        for(const o of names.slice(at.k*EMPLOYERS_PER_REQUEST,(at.k+1)*EMPLOYERS_PER_REQUEST))u.searchParams.append('contributor_employer',o);
+        const url=at.url||u.href,d=await requestSource(url,env);
         const rows=d.results.map(r=>{need(r.sub_id&&r.committee_id===a.committee,'Wrong recipient committee in FEC response');
           return {id:String(r.sub_id),employer:r.contributor_employer,date:day(r.contribution_receipt_date),amount:Number(r.contribution_receipt_amount)||0,memo:r.memo_code==='X'};});
-        return {rows,next:fecNext(url,d)};
+        const page=fecNext(url,d),next=page?{k:at.k,url:page}:at.k+1<groups?{k:at.k+1,url:null}:null;
+        return {rows,next:next&&JSON.stringify(next)};
       }});
     },
     summarize:(rows,a)=>{
@@ -974,8 +981,9 @@ export function committeeCode(code){
   return null;
 }
 // Employers that are not organizations are left out of the donor-organization list.
-const NOT_ORG=/^(none|n\/?a|not employed|unemployed|retired|self[- ]?employed|self|homemaker|student|information requested( per best efforts)?|requested|disabled|entrepreneur|attorney|physician|consultant|refused|unknown|-)$/i;
+const NOT_ORG=/^(none|null|nil|n\/?a|not applicable|not employed|unemployed|retired|self[- ]?employed|self|homemaker|student|information requested( per best efforts)?|requested|disabled|entrepreneur|attorney|physician|consultant|refused|unknown|-)$/i;
 export const isOrg=e=>!!e&&!NOT_ORG.test(String(e).trim());
+const EMPLOYERS_PER_REQUEST=10;
 
 // ---------- trades ----------
 const TYPES={purchase:'purchase',buy:'purchase',p:'purchase',sale:'sale',sell:'sale',s:'sale','sale (full)':'sale','sale (partial)':'sale','s (partial)':'sale',exchange:'exchange',e:'exchange'};

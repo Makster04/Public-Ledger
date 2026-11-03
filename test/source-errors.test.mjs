@@ -56,3 +56,30 @@ test('a reply over 12 MB fails unless the request allows more, and never over 40
   assert.equal((await requestSource('https://api.govinfo.gov/packages/CREC-2026-01-01/mods',env,{as:'text',maxChars:40_000_000})).length,13_000_000);
   await assert.rejects(requestSource('https://api.govinfo.gov/x',{GOVINFO_API_KEY:'gk',fetch:async()=>new Response('x'.repeat(40_000_001))},{as:'text',maxChars:90_000_000}),/exceeds safe page size/);
 });
+
+test('FEC enforcement search leaves out type, which the FEC rejects as "all"',async()=>{
+  const seen=[],env={FEC_API_KEY:'fk',fetch:async u=>{seen.push(String(u));return new Response(JSON.stringify({murs:[],admin_fines:[],adrs:[],advisory_opinions:[]}));}};
+  await FEEDS['fec-legal'].page({kind:'fec-legal',subject:'collins',cursor:null},{name:'Susan M. Collins',committee:'C00314575'},env,config);
+  assert.equal(seen.length,1);assert.doesNotMatch(seen[0],/[?&]type=/);assert.match(seen[0],/q=%22Susan/);
+});
+
+test('top donors by month asks for at most 10 employer names at a time, skips "NULL", and counts a gift once',async()=>{
+  const names=Array.from({length:23},(_,i)=>`EMPLOYER ${i}`);names[2]='APOLLO';names[12]='APOLLO GLOBAL MANAGEMENT';names.splice(5,0,'NULL');
+  const db=openDatabase(':memory:');db.exec(migration);db.exec(`INSERT INTO metadata VALUES ('initialized','test fixture'),('feeds','${feedSignature()}')`);
+  await addJob(db,'donor-months:collins','donor-months','collins',{committee:'C00314575',cycle:2026,orgs:names});
+  const asked=[];
+  const fetch=async u=>{const url=new URL(String(u)),emp=url.searchParams.getAll('contributor_employer');asked.push(emp);
+    if(url.searchParams.get('two_year_transaction_period')!=='2026')return new Response('{"results":[],"pagination":{}}');
+    const rows=[{sub_id:`9${asked.length}`,committee_id:'C00314575',contributor_employer:emp[0],contribution_receipt_date:'2026-03-04',contribution_receipt_amount:100}];
+    if(emp.some(e=>/^APOLLO/.test(e)))rows.push({sub_id:'77',committee_id:'C00314575',contributor_employer:'APOLLO GLOBAL MANAGEMENT',contribution_receipt_date:'2026-03-20',contribution_receipt_amount:1000});
+    return new Response(JSON.stringify({results:rows,pagination:{}}));};
+  for(let i=0;i<20;i++){await runRefresh({DB:db,FEC_API_KEY:'fk',fetch},{steps:40});if((await statement(db,"SELECT status FROM jobs WHERE id='donor-months:collins'").first()).status==='ready')break;}
+  const job=await statement(db,"SELECT status,error FROM jobs WHERE id='donor-months:collins'").first();
+  assert.equal(job.status,'ready',job.error||'');
+  assert.ok(asked.length&&asked.every(e=>e.length>=1&&e.length<=10),'never more than 10 names in one request');
+  assert.ok(!asked.some(e=>e.includes('NULL')),'"NULL" is not an employer');
+  const all=asked.flat();for(const n of names.filter(n=>n!=='NULL'))assert.ok(all.includes(n),`${n} is asked for`);
+  const snap=JSON.parse((await statement(db,"SELECT payload FROM snapshots WHERE job_id='donor-months:collins'").first()).payload);
+  assert.deepEqual(snap.months['APOLLO GLOBAL MANAGEMENT'],{'2026-03':1000},'found under APOLLO and under APOLLO GLOBAL MANAGEMENT, counted once');
+  db.close();
+});

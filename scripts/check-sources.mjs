@@ -4,7 +4,7 @@
 //   3. Groups behind outside spending (ProPublica 404)   4. Lobbying on key bills (LDA.gov, "did not filter")
 // About 15 requests in all. Every key in .dev.vars is replaced by [key] in what is printed. Run it while the refresh is
 // stopped, or an hour after other FEC scripts, so the FEC's hourly limit isn't the answer.
-//   npm run check:sources            (or: npm run check:sources -- --person collins)
+//   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda)
 import fs from 'node:fs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {HOSTS} from '../src/sources.mjs';
@@ -44,10 +44,12 @@ const jobs=localJobs(),failed=(kind,pattern)=>jobs.find(j=>j.kind===kind&&(!patt
 const person=id=>config.people.find(p=>p.id===id);
 const pick=(kind,pattern)=>person(argPerson)||person(failed(kind,pattern)?.subject)||config.people.find(p=>p.fecCand&&p.fecCmte);
 
+const only=process.argv.includes('--only')?process.argv[process.argv.indexOf('--only')+1]:null,part=n=>!only||only===n;
 async function main(){
   console.log(`Source check, ${new Date().toISOString().slice(0,16)}Z. ${jobs.length?'Using the failed checks saved by npm start.':'No local refresh database found; using a sample person.'}`);
   if(!env.FEC_API_KEY)console.log('FEC_API_KEY is not set in .dev.vars, so the FEC answers will be about the missing key.');
 
+  if(part('fec')){
   // 1. FEC enforcement records: the refresh's request, then the same search with each setting changed.
   const p1=pick('fec-legal',/422/),q=encodeURIComponent(`"${p1.name}"`);
   console.log(`\n=== 1. FEC enforcement records, for ${p1.name}`);
@@ -71,6 +73,8 @@ async function main(){
   const last=first.json?.pagination?.last_indexes;
   if(last&&first.json.results?.length){const u=new URL(donors(a2.cycle||config.cycle,orgs));for(const[k,v]of Object.entries(last))if(v!=null)u.searchParams.set(k,String(v));await ask('Page 2, as the refresh asks for it',u.href);}
 
+  }
+  if(part('propublica')){
   // 3. ProPublica's nonprofit search: a super PAC (not a nonprofit), a nonprofit, and a group from the failed checks.
   console.log('\n=== 3. Groups behind outside spending (ProPublica Nonprofit Explorer)');
   await ask('A super PAC, which is not a nonprofit: "Senate Leadership Fund"',`https://projects.propublica.org/nonprofits/api/v2/search.json?q=${encodeURIComponent('"Senate Leadership Fund"')}`);
@@ -78,20 +82,31 @@ async function main(){
   const j3=failed('outside-groups',/404/),g3=j3?JSON.parse(j3.args).groups?.[0]:null;
   if(g3)await ask(`A group from a failed check: "${g3}"`,`https://projects.propublica.org/nonprofits/api/v2/search.json?q=${encodeURIComponent(`"${g3}"`)}`);
 
-  // 4. LDA.gov: one bill the refresh couldn't count, with a few of the reports it returned.
+  }
+  if(part('lda')){
+  // 4. LDA.gov: two bills the refresh couldn't count, each searched a few ways; for each way, how many reports matched and
+  // how many of the first 25 actually name the bill (what the refresh needs, at least half).
   const ABBR={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.'};
-  const j4=failed('bill-lobbying',/did not filter/),bill=j4?.subject||(config.keyBills||[]).find(k=>/-hr-1$/.test(k))||(config.keyBills||[])[0];
-  if(bill){const [congress,type,number]=bill.split('-'),year=1787+2*Number(congress),label=`${ABBR[type]} ${number}`;
-    console.log(`\n=== 4. Lobbying on key bills: ${label} (${congress}th Congress), ${year}`);
-    const r=await ask(`Search reports for "${label}"`,`https://lda.gov/api/v1/filings/?filing_specific_lobbying_issues=${encodeURIComponent(label)}&filing_year=${year}&page_size=25&page=1`);
-    const results=Array.isArray(r.json?.results)?r.json.results:[];
-    console.log(`  ${r.json?.count??'?'} reports matched; the first ${Math.min(6,results.length)}:`);
-    for(const f of results.slice(0,6)){
-      const texts=(f.lobbying_activities||[]).map(x=>String(x.description||'')),named=texts.some(t=>billsInText(t,Number(congress)).includes(bill));
-      const hit=texts.map(t=>{const i=t.search(new RegExp(ABBR[type].replace(/\./g,'\\.?\\s*')+'\\s*'+number+'\\b','i'));return i<0?null:t.slice(Math.max(0,i-40),i+60);}).find(Boolean);
-      console.log(`  - ${named?'names the bill':'not recognized as naming it'}: ${redact((hit||texts[0]||'(no issue text)').replace(/\s+/g,' ')).slice(0,140)}`);
-    }}
+  const research=JSON.parse(fs.readFileSync(new URL('public/research.json',root),'utf8'));
+  const titleOf=k=>(research.billIndex.find(b=>b.id===k||(b.versions||[]).includes(k))||research.bills.find(b=>b.id===k))?.title?.replace(/\s*\(.*\)\s*$/,'')||null;
+  const failedBills=jobs.filter(j=>j.kind==='bill-lobbying'&&/did not filter/.test(j.error||'')).map(j=>j.subject);
+  const bills=[...new Set([...failedBills.filter(titleOf).slice(0,1),...failedBills.filter(k=>!titleOf(k)).slice(0,1),...(failedBills.length?[]:['115-hr-1'])])];
+  for(const bill of bills){
+    const [congress,type,number]=bill.split('-'),year=1787+2*Number(congress),label=`${ABBR[type]} ${number}`,title=titleOf(bill);
+    console.log(`\n=== 4. Lobbying on key bills: ${label} (${congress}th Congress)${title?`, "${title}"`:''}, ${year}`);
+    const ways=[[`As the refresh asks: ${label}`,label],[`In quotes: "${label}"`,`"${label}"`],[`No space, in quotes: "${label.replace(' ','')}"`,`"${label.replace(' ','')}"`],...(title?[[`The bill's name in quotes: "${title}"`,`"${title}"`]]:[])];
+    for(const [how,q] of ways){
+      const r=await ask(how,`https://lda.gov/api/v1/filings/?filing_specific_lobbying_issues=${encodeURIComponent(q)}&filing_year=${year}&page_size=25&page=1`);
+      const results=Array.isArray(r.json?.results)?r.json.results:[];
+      const named=results.filter(f=>(f.lobbying_activities||[]).some(x=>billsInText(String(x.description||''),Number(congress)).includes(bill))).length;
+      console.log(`  ${r.json?.count??'?'} reports matched; ${named} of the first ${results.length} name ${label}.`);
+      const miss=results.find(f=>!(f.lobbying_activities||[]).some(x=>billsInText(String(x.description||''),Number(congress)).includes(bill)));
+      const text=miss&&(miss.lobbying_activities||[]).map(x=>String(x.description||'')).find(t=>new RegExp(number+'\\b').test(t));
+      if(text)console.log(`  e.g. not counted: ${redact(text.replace(/\s+/g,' ')).slice(0,160)}`);
+    }
+  }
 
+  }
   console.log('\nDone. Copy everything above and send it; no keys are in it.');
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await main();
