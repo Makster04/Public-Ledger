@@ -62,3 +62,19 @@ test('the House disclosure index matches legal first names and two-word last nam
   assert.ok(sameName('Felix Barry','Moore',person('moore')));assert.ok(sameName('Kathleen','Castor',person('castor')));
   assert.ok(firstNames(person('barr')).includes('garland'),'a legal first name from data/config.json');
 });
+
+test('checks made before this version get the new details and the House index is read again',async()=>{
+  const fs=await import('node:fs');const {openDatabase}=await import('../scripts/sqlite.mjs');
+  const {addJob,getStatus,statement}=await import('../src/refresh.mjs');
+  const db=openDatabase(':memory:');db.exec(fs.readFileSync(new URL('../migrations/0001_initial.sql',import.meta.url),'utf8'));
+  db.exec(`INSERT INTO metadata VALUES ('initialized','test fixture'),('feeds','an older version')`);
+  await addJob(db,'state-openstates:brown','state-openstates','brown',{state:'oh',name:'Sherrod Brown',openstates:null},Date.now()+86400000);
+  await addJob(db,'donor-months:collins','donor-months','collins',{committee:'C00314575',cycle:2026,orgs:['ACME CORP']});
+  await addJob(db,'house-fd:2024','house-fd','House',{year:2024},Date.now()+86400000);
+  await getStatus({DB:db});
+  const os=await statement(db,"SELECT args,next_due FROM jobs WHERE id='state-openstates:brown'").first();
+  assert.deepEqual(JSON.parse(os.args).years,[1975,1982]);assert.equal(os.next_due,0);
+  assert.deepEqual(JSON.parse((await statement(db,"SELECT args FROM jobs WHERE id='donor-months:collins'").first()).args).orgs,['ACME CORP'],'details another check filled in are kept');
+  assert.equal((await statement(db,"SELECT next_due FROM jobs WHERE id='house-fd:2024'").first()).next_due,0,'the House index is read again');
+  db.close();
+});

@@ -358,7 +358,8 @@ export const FEEDS={
     summarize:rows=>history(scanRows(rows),40)},
 
   // State legislative records, from Open States and LegiScan together (merged by state bill number when read).
-  'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',
+  // configArgs: the job's details come only from data/config.json, so a check made before they changed is updated.
+  'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',configArgs:true,
     jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-openstates:${p.id}`,subject:p.id,args:{state:p.stateLeg.toLowerCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,openstates:p.openstates||null}})),
     async page(job,a,env){
       const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
@@ -398,7 +399,7 @@ export const FEEDS={
       return {...history(rows.filter(r=>r.id!==STATE_PERSON&&r.id!==STATE_COVERAGE),25),person:p?.person??null,notCovered:nc?.notCovered??null};}},
   // The person's LegiScan ID is looked up once and kept in the published snapshot, so each later weekly check spends one
   // query (their sponsored bills) instead of repeating the session and people lookups, which LegiScan asks users to avoid.
-  'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,
+  'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,configArgs:true,
     jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-legiscan:${p.id}`,subject:p.id,args:{state:p.stateLeg.toUpperCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,legiscan:p.legiscan||null}})),
     async page(job,a,env){
       const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
@@ -732,7 +733,8 @@ export const FEEDS={
     summarize:rows=>rows[0]||{}},
   // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
   // trades are checked against, and the list of trade reports the House reader opens.
-  'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',
+  // rereadOnUpgrade: read again at once when FEEDS_VERSION changes (here, how members are matched by name).
+  'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',rereadOnUpgrade:true,
     // One index a year from historyFrom on; a year that has ended is checked weekly, for late and amended filings.
     every:a=>ended(a.year)?WEEK:DAY,
     jobs:c=>yearsFrom(SINCE(c),c.year).reverse().map((year,i)=>({id:i?`house-fd:${year}`:'house-fd',subject:'House',args:{year}})),
@@ -1245,4 +1247,6 @@ async function carried(env,jobId){
 // created for them, and the refresh deletes any it made before (refresh.mjs, ensureFeeds).
 export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
-export const FEEDS_VERSION=1;
+// Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
+// years and names, and House members matched by legal first names.
+export const FEEDS_VERSION=2;
