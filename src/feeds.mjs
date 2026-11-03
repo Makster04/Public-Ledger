@@ -15,6 +15,8 @@ export const DAY=86400000, WEEK=7*DAY, NEVER=Number.MAX_SAFE_INTEGER;
 const need=(ok,message)=>{if(!ok)throw new SourceError(message);};
 const daysAgo=n=>new Date(Date.now()-n*DAY).toISOString().slice(0,10);
 const fold=v=>String(v||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase();
+// SAM.gov answers are kept 30 days, by organization name (case and punctuation aside); see the sam source.
+const SAM_FRESH=30*DAY,samKey=org=>fold(org).replace(/[^a-z0-9]/g,'');
 const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/).at(-1);
 const firstName=p=>p.name.split(/\s+/)[0];
 // The person's full name appears in the text (first name or a listed nickname, and surname).
@@ -964,17 +966,30 @@ export const FEEDS={
       return {rows,next:i+1<a.orgs.length?String(i+1):null};
     },
     summarize:rows=>history(rows,20)},
-  sam:{host:'api.sam.gov',label:'Company federal IDs',tab:'finance',
+  // SAM.gov allows about 10 requests a day on a free key, and a company's federal ID rarely changes. So each
+  // organization is looked up once and the answer shared by everyone whose donors include it, for 30 days; the job runs
+  // monthly, or at once when the person's top donor organizations change (only the new names are looked up). One page
+  // makes at most one request: names already known are filled in from the saved answers on the way.
+  sam:{host:'api.sam.gov',label:'Company federal IDs',tab:'finance',every:SAM_FRESH,
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`sam:${p.id}`,subject:p.id,args:{orgs:[]}})),
     async page(job,a,env){
-      const i=Number(job.cursor||0),org=a.orgs?.[i];if(!org)return {rows:[],next:null};
-      const d=await requestSource(`https://api.sam.gov/entity-information/v3/entities?legalBusinessName=${encodeURIComponent(org)}&registrationStatus=A&includeSections=entityRegistration`,env);
-      need(Array.isArray(d.entityData)||Number(d.totalRecords)===0,'SAM.gov entity response missing');
-      const hits=list(d.entityData).map(e=>e.entityRegistration).filter(e=>e?.ueiSAM);
-      const exact=hits.filter(e=>fold(e.legalBusinessName).replace(/[^a-z0-9]/g,'')===fold(org).replace(/[^a-z0-9]/g,''));
-      // Only a single exact name match is used; anything else is left for review.
-      const row=exact.length===1?{id:org,org,uei:exact[0].ueiSAM,name:exact[0].legalBusinessName,review:null}:{id:org,org,uei:null,name:null,review:hits.length?`${hits.length} possible matches`:'No registered entity found'};
-      return {rows:[row],next:i+1<a.orgs.length?String(i+1):null};
+      let i=Number(job.cursor||0);const orgs=a.orgs||[];if(i>=orgs.length)return {rows:[],next:null};
+      const known=await samAnswers(env),rows=[];let asked=false;
+      for(;i<orgs.length;i++){
+        const org=orgs[i],hit=known.get(samKey(org));
+        if(hit&&Date.now()-Date.parse(hit.checked||0)<SAM_FRESH){rows.push({...hit,id:org,org});continue;}
+        if(asked)break;
+        asked=true;
+        const d=await requestSource(`https://api.sam.gov/entity-information/v3/entities?legalBusinessName=${encodeURIComponent(org)}&registrationStatus=A&includeSections=entityRegistration`,env);
+        need(Array.isArray(d.entityData)||Number(d.totalRecords)===0,'SAM.gov entity response missing');
+        const hits=list(d.entityData).map(e=>e.entityRegistration).filter(e=>e?.ueiSAM);
+        const exact=hits.filter(e=>samKey(e.legalBusinessName)===samKey(org));
+        // Only a single exact name match is used; anything else is left for review.
+        rows.push({...(exact.length===1?{uei:exact[0].ueiSAM,name:exact[0].legalBusinessName,review:null}:{uei:null,name:null,review:hits.length?`${hits.length} possible matches`:'No registered entity found'}),
+          id:org,org,checked:new Date().toISOString().slice(0,10)});
+        known.set(samKey(org),rows.at(-1));
+      }
+      return {rows,next:i<orgs.length?String(i):null};
     },
     summarize:rows=>({rows}),
     after:async(snapshot,job,ctx)=>ctx.setArgs(`contracts:${job.subject}`,{orgs:snapshot.rows.filter(r=>r.uei).map(r=>({org:r.org,uei:r.uei}))})},
@@ -1044,6 +1059,12 @@ export function committeeCode(code){
 }
 // Employers that are not organizations are left out of the donor-organization list.
 const NOT_ORG=/^(none|null|nil|n\/?a|not applicable|not employed|unemployed|retired|self[- ]?employed|self|homemaker|student|information requested( per best efforts)?|requested|disabled|entrepreneur|attorney|physician|consultant|refused|unknown|-)$/i;
+// SAM.gov answers on file, from every person's last SAM.gov check, by organization name (case and punctuation aside).
+async function samAnswers(env){
+  const out=new Map();if(!env.DB)return out;
+  for(const s of await snapshotsOf(env,'sam'))for(const r of list(s.rows))if(r.checked){const k=samKey(r.org),had=out.get(k);if(!had||String(r.checked)>String(had.checked))out.set(k,r);}
+  return out;
+}
 export const isOrg=e=>!!e&&!NOT_ORG.test(String(e).trim());
 const EMPLOYERS_PER_REQUEST=10;
 
