@@ -1878,7 +1878,7 @@ async function mountBillLobbying(host){
   const yrs=id=>{const c=Number(id.split('-')[0]),y=1787+2*c;return `${y}–${String(y+1).slice(2)}`;};
   for(const el of els){const x=lob?.[el.dataset.lob],id=el.dataset.lob;
     el.innerHTML=!lob?'<span class="muted">Lobbying counts need the update service running.</span>':!x?'<span class="muted">Lobbying: not checked yet.</span>'
-      :`<b>Lobbying (${yrs(id)}):</b> ${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
+      :`<b>Lobbying (${yrs(id)}):</b> ${x.atLeast?'At least ':''}${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
 }
 // The Corporation Compromised Index 🏢 on the People First tab: its parts, what each is built from, and what's missing.
 const CCI_PART={pacShare:'Business PACs\' share of funds raised',employees:'Donor companies\' employees',businessVotes:'Votes with business funders',lobbiedBills:'Profit side on lobbied bills'};

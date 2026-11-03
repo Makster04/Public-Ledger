@@ -254,12 +254,17 @@ test('a profile merges each person\'s records from every source',async()=>{
 
 test('lobbying on a key bill: reports in the two years of its Congress, unions counted by name, and a search that ignored the bill fails',async()=>{
   const filing=(id,client,desc,year)=>({filing_uuid:id,filing_year:year,client:{name:client},registrant:{name:'K Street LLC'},filing_document_url:`https://lda.gov/filings/public/filing/${id}/print/`,lobbying_activities:[{description:desc}]});
-  const routes=[[/filing_year=2021/,u=>json({count:2,next:null,results:[filing('a','SERVICE EMPLOYEES INTERNATIONAL UNION','H.R.1319, American Rescue Plan',2021),filing('b','ACME CORP','HR 1319 relief provisions',2021)]})],
-    [/filing_year=2022/,json({count:1,next:null,results:[filing('c','Credit Union National Association','H.R. 1319 implementation',2022)]})]];
+  // Both quoted spellings are searched; "H.R.1319" finds report a again, which counts once.
+  const spaced=u=>new URL(u).searchParams.get('filing_specific_lobbying_issues')==='"H.R. 1319"';
+  const routes=[[/filing_year=2021/,u=>spaced(u)?json({count:2,next:null,results:[filing('a','SERVICE EMPLOYEES INTERNATIONAL UNION','H.R.1319, American Rescue Plan',2021),filing('b','ACME CORP','HR 1319 relief provisions',2021)]})
+      :json({count:1,next:null,results:[filing('a','SERVICE EMPLOYEES INTERNATIONAL UNION','H.R.1319, American Rescue Plan',2021)]})],
+    [/filing_year=2022/,u=>spaced(u)?json({count:1,next:null,results:[filing('c','Credit Union National Association','H.R. 1319 implementation',2022)]}):json({count:0,next:null,results:[]})]];
   const r=await run('bill-lobbying','117-hr-1319',{bill:'117-hr-1319'},routes);
-  assert.ok(r.calls.every(c=>new URL(c.url).searchParams.get('filing_specific_lobbying_issues')==='H.R. 1319'));
-  assert.deepEqual(r.calls.map(c=>new URL(c.url).searchParams.get('filing_year')),['2021','2022'],'the two years of the 117th Congress');
-  assert.deepEqual([r.snapshot.total,r.snapshot.read,r.snapshot.unions,r.snapshot.others],[3,3,1,2]);
+  assert.deepEqual(r.calls.map(c=>[new URL(c.url).searchParams.get('filing_year'),new URL(c.url).searchParams.get('filing_specific_lobbying_issues')]),
+    [['2021','"H.R. 1319"'],['2021','"H.R.1319"'],['2022','"H.R. 1319"'],['2022','"H.R.1319"']],'both quoted spellings, in the two years of the 117th Congress');
+  assert.deepEqual([r.snapshot.total,r.snapshot.atLeast,r.snapshot.read,r.snapshot.unions,r.snapshot.others],[3,true,3,1,2],'2 + 1 reports (the larger spelling each year), so "at least"; report a counted once');
+  const one=await run('bill-lobbying','117-hr-1319',{bill:'117-hr-1319'},[[/lda\.gov/,u=>spaced(u)?json({count:1,next:null,results:[filing('c','ACME CORP','H.R. 1319',2021)]}):json({count:0,next:null,results:[]})]]);
+  assert.equal(one.snapshot.atLeast,false,'one spelling only: an exact count');
   assert.deepEqual(r.snapshot.unionClients,['SERVICE EMPLOYEES INTERNATIONAL UNION'],'a credit union is not a labor union');
   const ignored=[[/lda\.gov/,json({count:900,next:null,results:[...Array(12)].map((_,i)=>filing('x'+i,'ACME CORP','Appropriations generally',2021))})]];
   await assert.rejects(run('bill-lobbying','117-hr-1319',{bill:'117-hr-1319'},ignored),/did not filter/);
