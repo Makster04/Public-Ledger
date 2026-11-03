@@ -864,23 +864,34 @@ export const FEEDS={
   'bill-lobbying':{host:'lda.gov',label:'Lobbying on key bills',tab:'pvp',scope:'global',every:WEEK,
     jobs:c=>(c.keyBills||[]).filter(k=>BILL_ABBR[k.split('-')[1]]).map(k=>({id:`bill-lobbying:${k}`,subject:k,args:{bill:k}})),
     async page(job,a,env){
-      const [congress,type,number]=a.bill.split('-'),first=1787+2*Number(congress),cur=job.cursor?JSON.parse(job.cursor):{year:first,page:1};
+      // LDA.gov's issue search matches loose words unless the number is in quotes ("H.R. 1" alone matched 2,006 reports
+      // in 2017, almost none naming it; in quotes, 25 of 25 did). Reports write it with or without the space, so both
+      // quoted spellings are read: form 0 "H.R. 1", form 1 "H.R.1". The cursor is {year, form, page}.
+      const [congress,type,number]=a.bill.split('-'),first=1787+2*Number(congress),cur={form:0,...(job.cursor?JSON.parse(job.cursor):{year:first,page:1})};
+      const forms=[`"${BILL_ABBR[type]} ${number}"`,`"${BILL_ABBR[type]}${number}"`];
       const u=new URL('https://lda.gov/api/v1/filings/');
-      for(const [k,v] of Object.entries({filing_specific_lobbying_issues:`${BILL_ABBR[type]} ${number}`,filing_year:cur.year,page_size:25,page:cur.page}))u.searchParams.set(k,v);
+      for(const [k,v] of Object.entries({filing_specific_lobbying_issues:forms[cur.form],filing_year:cur.year,page_size:25,page:cur.page}))u.searchParams.set(k,v);
       const d=await requestSource(u.href,env,{allow404:true});
       const results=list(d?.results).filter(f=>f.filing_uuid);
       const rows=results.map(f=>{const acts=list(f.lobbying_activities),client=f.client?.name||null;
-        return {id:f.filing_uuid,year:Number(f.filing_year)||cur.year,total:Number(d.count)||0,client,registrant:f.registrant?.name||null,union:isUnion(client),
+        return {id:f.filing_uuid,year:Number(f.filing_year)||cur.year,client,registrant:f.registrant?.name||null,union:isUnion(client),
           named:acts.some(x=>billsInText(x.description,Number(congress)).includes(a.bill)),url:https(f.filing_document_url)};});
       // The search must have matched on the bill: if most reports returned don't name it, the filter wasn't applied.
       need(rows.length<10||rows.filter(r=>r.named).length>=rows.length/2,`LDA.gov did not filter reports by ${BILL_ABBR[type]} ${number}; nothing counted`);
-      const next=cur.page<4&&d?.next?{year:cur.year,page:cur.page+1}:cur.year<first+1?{year:first+1,page:1}:null;
+      // Each spelling's count is kept on its own, since a report can use both spellings.
+      if(cur.page===1)rows.push({id:`count:${cur.year}:${cur.form}`,count:true,year:cur.year,form:cur.form,total:Number(d?.count)||0});
+      const next=cur.page<4&&d?.next?{...cur,page:cur.page+1}:cur.form+1<forms.length?{year:cur.year,form:cur.form+1,page:1}:cur.year<first+1?{year:first+1,form:0,page:1}:null;
       return {rows,next:next&&JSON.stringify(next)};
     },
     summarize:(rows,a)=>{
-      const named=rows.filter(r=>r.named),byYear={};for(const r of rows)byYear[r.year]=Math.max(byYear[r.year]||0,r.total);
+      rows=[...new Map(rows.map(r=>[r.id,r])).values()];
+      const reports=rows.filter(r=>!r.count),named=reports.filter(r=>r.named),byYear={};let both=false;
+      // A year's total is the larger spelling's count: a report using both spellings can't be counted twice, so when
+      // both spellings found reports the total is a floor ("at least").
+      for(const r of rows.filter(r=>r.count)){const y=byYear[r.year]||={max:0,found:0};y.max=Math.max(y.max,r.total);if(r.total)y.found++;}
+      for(const y of Object.values(byYear))if(y.found>1)both=true;
       const clients=list=>[...new Set(list.map(r=>r.client).filter(Boolean))];
-      return {bill:a.bill,total:Object.values(byYear).reduce((t,n)=>t+n,0),read:named.length,unions:named.filter(r=>r.union).length,others:named.filter(r=>!r.union).length,
+      return {bill:a.bill,total:Object.values(byYear).reduce((t,y)=>t+y.max,0),atLeast:both,read:named.length,unions:named.filter(r=>r.union).length,others:named.filter(r=>!r.union).length,
         unionClients:clients(named.filter(r=>r.union)).slice(0,8),otherClients:clients(named.filter(r=>!r.union)).slice(0,8)};
     }},
   fara:{host:'efile.fara.gov',label:'Foreign agent registrations',tab:'finance',scope:'global',every:WEEK,
