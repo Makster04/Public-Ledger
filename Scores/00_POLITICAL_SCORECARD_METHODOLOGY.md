@@ -70,11 +70,11 @@ For each visitor-selected issue, calculate the share of the politician's weighte
 
 ### Honesty: the Promises Delivered Index
 
-`100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not independently change this grade. See [Promises Delivered](05_PROMISES_DELIVERED_INDEX.md).
+`100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not independently change this grade. See [Promises Delivered](03_INTEGRITY_SCORE.md).
 
 ### Historical Ethics grade
 
-`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the preserved historical Ethics method only. Ethics is no longer a current headline score and its old percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](06_ETHICS_INDICES.md).
+`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the preserved historical Ethics method only. Ethics is no longer a current headline score and its old percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_INTEGRITY_SCORE.md).
 
 ### People First
 
@@ -125,7 +125,7 @@ For each statement independently: `consistent ÷ (consistent + inconsistent) × 
 - **Key-vote position:** share of selected votes on marked bills on which the person took the conservative side; at least three marked votes are required. House and Senate sets differ, so compare within a chamber.
 - **Issue-position bars:** direction and balance of available evidence by issue. Context only; no single overall score.
 - **Campaign receipts, outside spending, donor shares, net-worth ranges, stock holdings/trades, timing flags, and donor-employer figures:** descriptive financial data or review leads, not grades unless explicitly included in a formula above. Outside spending is not treated as money controlled by the candidate.
-- **Get It Done, No-Show, Across the Aisle, Party Rebel, Worker Backed, Grassroots, Super PAC Dependence, Lobbyist Overlap, Contracts for Donors, and Foreign Agent Flag:** older design notes or proposed measures. They are not implemented as current scores/indices unless separately documented as implemented in the app. See [future/retired score concepts](08_PROPOSED_AND_RETIRED_IDEAS.md).
+- **Get It Done, No-Show, Across the Aisle, Party Rebel, Worker Backed, Grassroots, Super PAC Dependence, Lobbyist Overlap, Contracts for Donors, and Foreign Agent Flag:** older design notes or proposed measures. They are not implemented as current scores/indices unless separately documented as implemented in the app. See [future/retired score concepts](06_PROPOSED_AND_RETIRED_IDEAS.md).
 
 ## Missing data, sources, history, and rollout
 
@@ -136,12 +136,8 @@ Integrity cutover requires a monthly comparison period, reviewed live financial 
 ## Related guides
 
 - [How calculations and missing data work](01_HOW_THE_MATH_WORKS.md)
-- Grades:
-  - [Your Match](02_YOUR_MATCH_SCORE.md)
-  - [Integrity](03_INTEGRITY_SCORE.md)
-  - [People First and the Corporation Compromised Index](04_PEOPLE_FIRST_SCORE.md)
-- Indices inside Integrity:
-  - [Promises Delivered Index (Honesty)](05_PROMISES_DELIVERED_INDEX.md)
-  - [Legal Trouble, Insider Trading and Stock Disclosure Dodger indices](06_ETHICS_INDICES.md)
-- [Money & Influence analysis](07_MONEY_&_INFLUENCE_ANALYSIS.md)
-- [Proposed and retired ideas](08_PROPOSED_AND_RETIRED_IDEAS.md)
+- [Your Match](02_YOUR_MATCH_SCORE.md)
+- [Integrity](03_INTEGRITY_SCORE.md), including the Promises Delivered, Insider Trading, Stock Disclosure Dodger and Legal Trouble indices, and the historical Ethics and Promises Delivered grades
+- [People First and the Corporation Compromised Index](04_PEOPLE_FIRST_SCORE.md)
+- [Money & Influence analysis](05_MONEY_&_INFLUENCE_ANALYSIS.md)
+- [Proposed and retired ideas](06_PROPOSED_AND_RETIRED_IDEAS.md)

@@ -39,4 +39,4 @@ The grade is assigned after rounding the final percentage. Insufficient evidence
 - Statement–action consistency is calculated separately for each statement and does not roll up to a politician grade.
 - DW-NOMINATE and key-vote positioning describe political position, not quality or performance.
 
-See [Ethics](06_ETHICS_INDICES.md), [Promises Delivered](05_PROMISES_DELIVERED_INDEX.md), and [Integrity](03_INTEGRITY_SCORE.md) for their evidence rules and formulas.
+See [Integrity](03_INTEGRITY_SCORE.md) for the evidence rules and formulas of its components and indices, including the historical Ethics and Promises Delivered grades.
