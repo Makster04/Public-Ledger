@@ -29,4 +29,4 @@ The index is higher when donor alignment is greater. It is a distinct measure fr
 
 ## Data limits
 
-FEC rows, conduit records, outside spending, and official filing imports retain their own source periods. Do not combine numerator and denominator periods. A missing donor-size fetch does not mean unsorted gifts. An absent selected conduit is not proof of zero earmarks. Detailed current limitations are in [Integrity](08_INTEGRITY_SCORE.md) and the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).
+FEC rows, conduit records, outside spending, and official filing imports retain their own source periods. Do not combine numerator and denominator periods. A missing donor-size fetch does not mean unsorted gifts. An absent selected conduit is not proof of zero earmarks. Detailed current limitations are in [Integrity](03_INTEGRITY_SCORE.md) and the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).

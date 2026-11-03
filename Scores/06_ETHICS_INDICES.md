@@ -1,6 +1,6 @@
-# Ethics ⚖️ and its indices
+# Ethics indices ⚖️: Legal Trouble, Insider Trading and Stock Disclosure Dodger
 
-**Status: historical published grade, preserved without recalculation.** Ethics is no longer a current headline grade. Its indices live on inside [Integrity](08_INTEGRITY_SCORE.md): the **Legal Trouble Index** is deducted from Integrity at full strength, and the **Insider Trading Index** and **Stock Disclosure Dodger Index** are part of its Personal Finances component. Its reviewed legal and trading evidence remains accessible in the corresponding Integrity sections. Its percentage is not part of the Integrity calculation.
+**Status:** these three indices live on inside [Integrity](03_INTEGRITY_SCORE.md): the **Legal Trouble Index** is deducted from Integrity at full strength, and the **Insider Trading Index** and **Stock Disclosure Dodger Index** are part of its Personal Finances component. They were combined into a separate Ethics grade until Nov. 2, 2026; that historical grade is preserved below without recalculation and remains accessible in the official monthly history. The reviewed legal and trading evidence remains accessible in the corresponding Integrity sections. The old Ethics percentage is not part of the Integrity calculation.
 
 ```text
 Ethics = max(0, round(100 − Legal Trouble − 0.10 × Insider Trading
@@ -49,4 +49,4 @@ Measures late/missing Periodic Transaction Reports and late annual disclosures. 
 
 The app preserves case sources, status, case type, dates, trade filings, deadlines, annual holdings/disclosures, and reviewed trust status. Holdings and trades are not themselves part of the published Ethics grade; the two trading indices are. Net-worth ranges are displayed for context and do not determine this grade.
 
-See [Integrity](08_INTEGRITY_SCORE.md) for why it requires a sourced Legal Trouble review and for its different finance weights and missing-data rules. See the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md) for all outputs.
+See [Integrity](03_INTEGRITY_SCORE.md) for why it requires a sourced Legal Trouble review and for its different finance weights and missing-data rules. See the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md) for all outputs.

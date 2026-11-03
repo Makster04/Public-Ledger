@@ -61,4 +61,4 @@ The comparison preview removes the direct business-PAC-share component, so money
 
 The proposed CCI revision still requires calibration and evaluation. The CCI is a component of People First, not an additional standalone grade.
 
-See [Integrity](08_INTEGRITY_SCORE.md), [Money & Influence](05_MONEY_&_INFLUENCE_ANALYSIS.md), and [the canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).
+See [Integrity](03_INTEGRITY_SCORE.md), [Money & Influence](07_MONEY_&_INFLUENCE_ANALYSIS.md), and [the canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).

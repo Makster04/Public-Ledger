@@ -1,6 +1,6 @@
 # Public Ledger
 
-A local, automatically refreshed scorecard of 2026 Senate and House candidates, with a Cloudflare Worker and D1 configuration for later hosting. The primary grading interface now shows Your Match, Integrity, and People First. Integrity combines reviewed promises as Honesty with Personal Finances, Fundraising, and a full Legal Trouble deduction. Its interface migration is complete, but its provisional methodology remains uncalibrated and the monthly comparison log continues separately. Historical Ethics and Promises Delivered grades remain preserved and unchanged. See the [complete score and index methodology](Scores/00_POLITICAL_SCORECARD_METHODOLOGY.md) and [Integrity specification](Scores/08_INTEGRITY_SCORE.md).
+A local, automatically refreshed scorecard of 2026 Senate and House candidates, with a Cloudflare Worker and D1 configuration for later hosting. The primary grading interface now shows Your Match, Integrity, and People First. Integrity combines reviewed promises as Honesty with Personal Finances, Fundraising, and a full Legal Trouble deduction. Its interface migration is complete, but its provisional methodology remains uncalibrated and the monthly comparison log continues separately. Historical Ethics and Promises Delivered grades remain preserved and unchanged. See the [complete score and index methodology](Scores/00_POLITICAL_SCORECARD_METHODOLOGY.md) and [Integrity specification](Scores/03_INTEGRITY_SCORE.md).
 
 ## Run locally
 

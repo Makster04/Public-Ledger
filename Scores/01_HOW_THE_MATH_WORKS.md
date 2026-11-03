@@ -13,7 +13,7 @@ This project has grades, indices, per-statement analyses, and context measures. 
 
 ## Actions and statements
 
-For issue matching and People First actions: votes, sponsorships/cosponsorships, and official acts count 1.0. Public statements count 0.5 and are used only where no action is recorded for that issue. One bill receives one credit. The full rules are described in [Your Match](02_YOUR_MATCH.md) and [People First](07_PEOPLE_FIRST_SCORE.md).
+For issue matching and People First actions: votes, sponsorships/cosponsorships, and official acts count 1.0. Public statements count 0.5 and are used only where no action is recorded for that issue. One bill receives one credit. The full rules are described in [Your Match](02_YOUR_MATCH_SCORE.md) and [People First](04_PEOPLE_FIRST_SCORE.md).
 
 ## Weighting and 0–100 scales
 
@@ -39,4 +39,4 @@ The grade is assigned after rounding the final percentage. Insufficient evidence
 - Statement–action consistency is calculated separately for each statement and does not roll up to a politician grade.
 - DW-NOMINATE and key-vote positioning describe political position, not quality or performance.
 
-See [Ethics](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), and [Integrity](08_INTEGRITY_SCORE.md) for their evidence rules and formulas.
+See [Ethics](06_ETHICS_INDICES.md), [Promises Delivered](05_PROMISES_DELIVERED_INDEX.md), and [Integrity](03_INTEGRITY_SCORE.md) for their evidence rules and formulas.

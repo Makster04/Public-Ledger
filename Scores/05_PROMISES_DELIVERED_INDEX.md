@@ -27,4 +27,4 @@ Pledge records are checked against FEC and legislative records as supporting evi
 
 Flip-Flop and Pants on Fire are not implemented. They do not affect this grade or the Integrity Honesty component. Do not use the older proposed combined Promise formula until those methods are implemented, reviewed, and explicitly migrated.
 
-See [Integrity](08_INTEGRITY_SCORE.md), [the canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md), and the [statement–action consistency pipeline](../docs/STATEMENT_ACTION_PIPELINE.md). Consistency analysis is separately calculated per statement and is not the Promises Delivered formula.
+See [Integrity](03_INTEGRITY_SCORE.md), [the canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md), and the [statement–action consistency pipeline](../docs/STATEMENT_ACTION_PIPELINE.md). Consistency analysis is separately calculated per statement and is not the Promises Delivered formula.

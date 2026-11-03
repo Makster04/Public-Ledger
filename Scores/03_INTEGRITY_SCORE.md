@@ -87,7 +87,7 @@ The preview subtracts the existing Legal Trouble Index after component averaging
 
 ## People First comparison
 
-The proposed CCI revision removes the direct business-PAC-share component and reweights employee giving (10%), business-funder voting (35%), and lobbied bills (20%) over the available implemented components. The comparison is `0.75 × existing legislative-action score + 0.25 × (100 − preview CCI)`, or the legislative-action score alone if the preview CCI is unavailable. The published People First calculation continues using the existing CCI until the revision is explicitly adopted. See [People First](07_PEOPLE_FIRST_SCORE.md).
+The proposed CCI revision removes the direct business-PAC-share component and reweights employee giving (10%), business-funder voting (35%), and lobbied bills (20%) over the available implemented components. The comparison is `0.75 × existing legislative-action score + 0.25 × (100 − preview CCI)`, or the legislative-action score alone if the preview CCI is unavailable. The published People First calculation continues using the existing CCI until the revision is explicitly adopted. See [People First](04_PEOPLE_FIRST_SCORE.md).
 
 ## Methodology status, limitations and cutover conditions
 
@@ -97,4 +97,4 @@ The method is in code, but formula implementation is not the same as a complete,
 
 Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history. No automatic methodology switch is allowed. Cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. Ethics and Promises Delivered are no longer separate headline grades, but their past published values remain in official history and their supporting evidence remains accessible within Integrity.
 
-See [Ethics and its indices](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), [People First](07_PEOPLE_FIRST_SCORE.md), and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).
+See [Ethics and its indices](06_ETHICS_INDICES.md), [Promises Delivered](05_PROMISES_DELIVERED_INDEX.md), [People First](04_PEOPLE_FIRST_SCORE.md), and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).
