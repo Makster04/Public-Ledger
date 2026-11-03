@@ -1,13 +1,42 @@
-# HOW THE MATH WORKS
+# How the calculations work
 
-The rules every index in this folder follows.
+This project has grades, indices, per-statement analyses, and context measures. They are different things; a number shown in a chart is not automatically an overall grade. The canonical inventory and equations are in [the score methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).
 
-Back to [Updates & fixes in need](../.04_UPDATES_&_FIXES_IN_NEED.md).
+## Shared rules
 
-- **Turning a part into 0–100:** a share is multiplied by 100, so 30% becomes 30. Anything else is compared with a ceiling. At or above the ceiling counts as 100, and below it scales down. For example, with a ceiling of 20%, a share of 8% scores 40.
-- **The index:** the weighted average of its parts.
-- **Missing data:** a missing part drops out and the other parts are re-weighted. If a part marked *required* is missing, the index shows "Not enough data".
-- **Party comparison:** every index also shows how the person compares with the average for their party and chamber, for example "+12 vs. party."
-- **Reviewed data only:** refreshed records stay as leads until they're reviewed.
-- **One calculation per index:** each index is calculated once, on its home tab. If another tab shows it, it's the same number with a link back.
-- **Keys:** in these files, <img src="../assets/checkbox-checked.svg" width="20" align="absmiddle" alt="Done"> after a key means you already have it. "No key" sources work for free.
+- **Keep unknowns unknown.** Missing, unreadable, unreviewed, or uncovered data is not automatically zero, a clean record, or evidence of no activity. Each score has its own requirements. If they are not met, the app says why it is unavailable.
+- **Use reviewed evidence.** New API or official-source records are leads until checked. Calculated outputs retain the sources, dates, and evidence used where the data model supports them.
+- **Avoid duplicate credit.** Repeated underlying events are deduplicated where the method requires it. A vote supersedes sponsorship or a statement on the same bill; one bill is credited once.
+- **Weights and normalization are explicit.** Only methods that specify reweighting renormalize around missing parts. Do not carry a default score into a missing component.
+- **Round at display time.** Keep the underlying calculation precise where possible; apply each method's stated rounding only to its displayed result.
+- **Separate official history from experiments.** Published grade changes go to `public/score-log.json`. Integrity comparisons go to `public/integrity-preview-log.json`; they are not official grade history.
+
+## Actions and statements
+
+For issue matching and Workers > Profit actions: votes, sponsorships/cosponsorships, and official acts count 1.0. Public statements count 0.5 and are used only where no action is recorded for that issue. One bill receives one credit. The full rules are described in [Your Match](02_YOUR_MATCH.md) and [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md).
+
+## Weighting and 0–100 scales
+
+A weighted average is `sum(weight × value) / sum(available weights)`. Missing parts drop out only where the method explicitly permits reweighting. A cap maps a stated reference threshold to 100; it is not evidence that values beyond the cap are equivalent in the real world. Provisional thresholds and uncalibrated settings are identified as such in the relevant guide.
+
+## Letter grades
+
+| Grade | Displayed percentage |
+|---|---:|
+| A | 90–100 |
+| B | 80–89 |
+| C | 70–79 |
+| D | 60–69 |
+| F | 0–59 |
+
+The grade is assigned after rounding the final percentage. Insufficient evidence is shown as “Not graded,” never as 0%.
+
+## Current boundaries
+
+- Your Match depends on each visitor's private, local alignment choices.
+- Ethics and Promises Delivered remain published grades while the Integrity comparison period runs.
+- Integrity is a provisional preview. It requires two complete components and a dated, sourced Legal Trouble review; missing legal coverage prevents an overall score.
+- Statement–action consistency is calculated separately for each statement and does not roll up to a politician grade.
+- DW-NOMINATE and key-vote positioning describe political position, not quality or performance.
+
+See [Ethics](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), and [Integrity](08_INTEGRITY_SCORE.md) for their evidence rules and formulas.
