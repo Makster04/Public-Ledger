@@ -68,6 +68,16 @@ async function ensureFeeds(db){
   await removeRetired(db);
   for(const p of config.people)await addPerson(db,p,config);
   for(const j of feedJobs())await addJob(db,j.id,j.kind,j.subject,j.args);
+  // Checks whose details come only from the config are brought up to date and run again; others keep theirs, since
+  // another check fills them in (a person's top donor organizations, their outside spenders).
+  for(const j of feedJobs())if(FEEDS[j.kind].configArgs)
+    await statement(db,"UPDATE jobs SET args=?,next_due=0,cursor=NULL,page=0,status=CASE WHEN status='blocked' THEN status ELSE 'pending' END WHERE id=? AND args!=? AND status!='running'",JSON.stringify(j.args),j.id,JSON.stringify(j.args)).run();
+  const version=await statement(db,"SELECT value FROM metadata WHERE key='feeds-version'").first();
+  if(version?.value!==String(FEEDS_VERSION)){
+    const kinds=FEED_KINDS.filter(k=>FEEDS[k].rereadOnUpgrade);
+    if(kinds.length)await statement(db,`UPDATE jobs SET next_due=0 WHERE kind IN (${kinds.map(()=>'?').join(',')}) AND status!='running'`,...kinds).run();
+    await statement(db,"INSERT OR REPLACE INTO metadata(key,value) VALUES('feeds-version',?)",String(FEEDS_VERSION)).run();
+  }
   // A roll call is read once, with the positions of the people configured then. When someone who votes in that chamber
   // is added (every senator, say), the roll calls already read are read again once, so their positions are filled in.
   for(const chamber of ['S','H']){

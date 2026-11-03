@@ -108,7 +108,8 @@ test('state records from Open States and LegiScan merge by state, session year a
   const os=await run('state-openstates','talarico',{state:'tx',name:'James Talarico',openstates:null},[
     [/\/people\?/,{results:[{id:'ocd-person/abc',name:'James Talarico'}],pagination:{max_page:1}}],
     [/\/bills\?/,{results:[{id:'ocd-bill/1',identifier:'HB 1',session:'89',title:'School funding',openstates_url:'https://openstates.org/tx/bills/89/HB1/',latest_action_date:'2025-05-01',sponsorships:[{person:{id:'ocd-person/abc'},primary:true}],votes:[{start_date:'2025-04-01',motion_text:'passage',result:'pass',votes:[{option:'yes',voter:{id:'ocd-person/abc'}}]}]}],pagination:{max_page:1}}]]);
-  assert.equal(os.rows[0].role,'sponsor');assert.equal(os.rows[0].votes[0].option,'yes');assert.equal(os.calls[0].init.headers['X-API-KEY'],'ok');
+  const bill=os.rows.find(r=>r.id==='ocd-bill/1');assert.equal(bill.role,'sponsor');assert.equal(bill.votes[0].option,'yes');
+  assert.equal(os.snapshot.person,'ocd-person/abc','the Open States ID found is saved with the snapshot');assert.ok(!os.snapshot.rows.some(r=>r.id==='os-person'));assert.equal(os.calls[0].init.headers['X-API-KEY'],'ok');
   await assert.rejects(run('state-openstates','x',{state:'tx',name:'Same Name'},[[/\/people\?/,{results:[{id:'ocd-person/1'},{id:'ocd-person/2'}]}]]),/Several Open States people/);
   const ls=await run('state-legiscan','talarico',{state:'TX',first:'James',last:'Talarico',legiscan:null},[
     [/getSessionList/,{status:'OK',sessions:[{session_id:2100,year_start:2025,special:0},{session_id:2000,year_start:2023,special:0}]}],
@@ -129,7 +130,7 @@ test('state records from Open States and LegiScan merge by state, session year a
     [/getSessionPeople/,{status:'OK',sessionpeople:{people:[{people_id:88,first_name:'James',last_name:'Talarico'}]}}],
     [/getSponsoredList&id=88/,{status:'OK',sponsoredbills:{sessions:[],bills:[]}}]],{DB:db});
   assert.equal(stale.snapshot.person,88);
-  const os2={...os.rows[0],year:'2025'};
+  const os2={...bill,year:'2025'};
   const m=mergeStateBills([os2],ls.snapshot.rows);assert.equal(m.length,2);assert.deepEqual(m.find(b=>b.identifier==='HB 1').sources,['Open States','LegiScan']);
   assert.equal(stateBillKey({state:'TX',year:2025,identifier:'HB 0042'}),stateBillKey({state:'TX',session:'2025 Regular',identifier:'HB42'}));
 });

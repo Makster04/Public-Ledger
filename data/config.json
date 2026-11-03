@@ -280,7 +280,11 @@
       "official": {
         "site": "https://perry.house.gov",
         "feed": "https://perry.house.gov/rss.xml"
-      }
+      },
+      "stateLegYears": [
+        2007,
+        2012
+      ]
     },
     {
       "id": "lawler",
@@ -317,7 +321,11 @@
       "official": {
         "site": "https://lawler.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2021,
+        2022
+      ]
     },
     {
       "id": "evans",
@@ -353,7 +361,11 @@
       "official": {
         "site": "https://gabeevans.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2023,
+        2025
+      ]
     },
     {
       "id": "millermeeks",
@@ -388,7 +400,11 @@
       "official": {
         "site": "https://millermeeks.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2019,
+        2021
+      ]
     },
     {
       "id": "kaptur",
@@ -575,7 +591,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "TX",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2018,
+        2026
+      ]
     },
     {
       "id": "paxton",
@@ -598,7 +618,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "TX",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2003,
+        2015
+      ]
     },
     {
       "id": "elsayed",
@@ -656,7 +680,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "MI",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        1995,
+        2001
+      ]
     },
     {
       "id": "cooper",
@@ -681,7 +709,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "NC",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        1987,
+        2001
+      ]
     },
     {
       "id": "whatley",
@@ -729,7 +761,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "IA",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2023,
+        2026
+      ]
     },
     {
       "id": "hinson",
@@ -764,7 +800,11 @@
       "official": {
         "site": "https://hinson.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2017,
+        2021
+      ]
     },
     {
       "id": "pappas",
@@ -802,7 +842,11 @@
       "official": {
         "site": "https://pappas.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2003,
+        2007
+      ]
     },
     {
       "id": "sununu",
@@ -860,7 +904,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "MN",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2015,
+        2019
+      ]
     },
     {
       "id": "tafoya",
@@ -909,7 +957,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "IL",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2017,
+        2019
+      ]
     },
     {
       "id": "tracy",
@@ -957,7 +1009,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "KY",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2019,
+        2020
+      ]
     },
     {
       "id": "barr",
@@ -998,7 +1054,10 @@
       "official": {
         "site": "https://barr.house.gov",
         "feed": "https://barr.house.gov/rss.xml"
-      }
+      },
+      "nicknames": [
+        "Garland"
+      ]
     },
     {
       "id": "wess",
@@ -1056,7 +1115,14 @@
       "official": {
         "site": "https://barrymoore.house.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2010,
+        2018
+      ],
+      "nicknames": [
+        "Felix"
+      ]
     },
     {
       "id": "bankhead",
@@ -1150,7 +1216,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "WY",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2009,
+        2019
+      ]
     },
     {
       "id": "hageman",
@@ -1339,7 +1409,11 @@
       "official": {
         "site": "https://www.husted.senate.gov",
         "feed": null
-      }
+      },
+      "stateLegYears": [
+        2001,
+        2011
+      ]
     },
     {
       "id": "brown",
@@ -1374,7 +1448,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "OH",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        1975,
+        1982
+      ]
     },
     {
       "id": "ricketts",
@@ -1460,7 +1538,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "ME",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2002,
+        2024
+      ]
     },
     {
       "id": "peltola",
@@ -1490,7 +1572,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "AK",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        1999,
+        2009
+      ]
     },
     {
       "id": "hamilton",
@@ -1595,7 +1681,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "CO",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2019,
+        2026
+      ]
     },
     {
       "id": "stelson",
@@ -1666,7 +1756,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "CO",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2023,
+        2026
+      ]
     },
     {
       "id": "bohannan",
@@ -1689,7 +1783,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "IA",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2021,
+        2023
+      ]
     },
     {
       "id": "merrin",
@@ -1712,7 +1810,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "OH",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2016,
+        2025
+      ]
     },
     {
       "id": "braun",
@@ -1735,7 +1837,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "WA",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2013,
+        2026
+      ]
     },
     {
       "id": "flores",
@@ -1781,7 +1887,11 @@
       "legiscan": null,
       "inOffice": false,
       "stateLeg": "FL",
-      "official": null
+      "official": null,
+      "stateLegYears": [
+        2018,
+        2024
+      ]
     },
     {
       "id": "trump",

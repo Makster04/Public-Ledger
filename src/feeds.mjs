@@ -19,6 +19,33 @@ const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/
 const firstName=p=>p.name.split(/\s+/)[0];
 // The person's full name appears in the text (first name or a listed nickname, and surname).
 export const namesPerson=(text,p)=>{const t=fold(text);return t.includes(fold(surname(p)))&&[firstName(p),...(p.nicknames||[])].some(f=>t.includes(fold(f)));};
+// First names written either way on official lists (the House disclosure index uses legal names: Michael, not Mike),
+// plus the person's own nicknames in data/config.json (a legal first name no table would guess: Garland for Andy Barr).
+const NICKNAMES=[['mike','michael'],['andy','andrew'],['kathy','kathleen','katherine','kathryn'],['gabe','gabriel'],['chris','christopher','christine'],
+  ['marcy','marcia'],['bill','william'],['bob','robert'],['jim','james'],['tom','thomas'],['joe','joseph'],['dan','daniel'],['ted','edward','theodore'],
+  ['rick','richard'],['tony','anthony'],['steve','steven','stephen'],['ron','ronald'],['don','donald'],['ken','kenneth'],['pat','patrick','patricia'],
+  ['jeff','jeffrey'],['greg','gregory'],['matt','matthew'],['nick','nicholas'],['sam','samuel','samantha'],['ben','benjamin'],['dave','david'],
+  ['liz','elizabeth'],['beth','elizabeth'],['sue','susan'],['kate','katherine'],['josh','joshua'],['zach','zachary'],['jon','jonathan'],['peggy','margaret'],
+  ['manny','manuel'],['jamie','james'],['charlie','charles'],['jack','john'],['larry','lawrence'],['jerry','gerald','jerome'],['terry','terrence','theresa']];
+export function firstNames(p){
+  const f=fold(firstName(p)),out=new Set([f,...(p.nicknames||[]).map(fold)]);
+  for(const g of NICKNAMES)if(g.includes(f))for(const x of g)out.add(x);
+  return [...out];
+}
+// The person an official list's row names: the same last name (or one word of a two-word one: Gluesenkamp Perez), and
+// a first name that is one of theirs; the list's first-name field can hold middle names too.
+export function sameName(first,last,p){
+  const l=fold(last).replace(/[^a-z\s-]/g,'').trim(),sur=fold(surname(p));
+  if(!(l===sur||l.split(/\s+/).includes(sur)))return false;
+  const words=fold(first).split(/[\s.,]+/).filter(w=>w.length>1);
+  // One of their first names exactly, or one a prefix of the other (Chris, Christopher); Michelle is not Michael.
+  return firstNames(p).some(n=>words.some(w=>w===n||(w.length>=3&&n.startsWith(w))||(n.length>=3&&w.startsWith(n))));
+}
+// Open States and LegiScan cover state legislatures from about 2010; a career that ended earlier has no bills to read.
+export const STATE_COVERAGE_FROM=2010;
+const stateNotCovered=a=>a.years&&a.years[1]<STATE_COVERAGE_FROM?`Served in the state legislature ${a.years[0]}–${a.years[1]}, before Open States and LegiScan cover it (from about ${STATE_COVERAGE_FROM})`:null;
+// A name without middle initials or a suffix ("Roger W. Marshall" → "Roger Marshall").
+const plainName=name=>{const w=String(name).replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/);return w.length>2?`${w[0]} ${w.at(-1)}`:w.join(' ');};
 // A campaign committee named after the person ("Collins for Senator", "Friends of Collins", "Team Collins").
 export const namesCampaign=(text,p)=>{const t=fold(text),s=fold(surname(p));return t.includes(s)&&new RegExp(`\\b${s}\\b.*\\bfor\\b|\\bfriends of\\b.*\\b${s}\\b|\\b(team|elect)\\s+${s}\\b|\\b${s}\\s+(victory|campaign|committee)\\b`).test(t);};
 const strip=html=>String(html||'').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&#39;|&rsquo;/g,"'").replace(/&quot;|&[lr]dquo;/g,'"').replace(/\s+/g,' ').trim();
@@ -331,15 +358,31 @@ export const FEEDS={
     summarize:rows=>history(scanRows(rows),40)},
 
   // State legislative records, from Open States and LegiScan together (merged by state bill number when read).
-  'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',
-    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-openstates:${p.id}`,subject:p.id,args:{state:p.stateLeg.toLowerCase(),name:p.name,openstates:p.openstates||null}})),
+  // configArgs: the job's details come only from data/config.json, so a check made before they changed is updated.
+  'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',configArgs:true,
+    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-openstates:${p.id}`,subject:p.id,args:{state:p.stateLeg.toLowerCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,openstates:p.openstates||null}})),
     async page(job,a,env){
-      let c=state(job.cursor)||{person:a.openstates,page:1};
+      const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
+      let c=state(job.cursor);
+      if(!c){const saved=a.openstates?null:await savedPerson(env,job.id);c={person:a.openstates||saved,page:1};}
       if(!c.person){
-        const d=await requestSource(`https://v3.openstates.org/people?jurisdiction=${a.state}&name=${encodeURIComponent(a.name)}&per_page=10`,env);
-        const found=list(d.results).filter(r=>/^ocd-person\//.test(r.id||''));
+        // The people search covers sitting legislators, by name as Open States writes it: the full name, then without a
+        // middle initial. A former legislator isn't in it, but their bills name them, with their Open States ID.
+        const who={name:a.name,first:a.first,last:a.last,nicknames:a.nicknames};
+        let found=[];
+        for(const name of [...new Set([a.name,plainName(a.name)])]){
+          const d=await requestSource(`https://v3.openstates.org/people?jurisdiction=${a.state}&name=${encodeURIComponent(name)}&per_page=10`,env);
+          found=list(d.results).filter(r=>/^ocd-person\//.test(r.id||''));if(found.length)break;
+        }
+        if(!found.length&&a.last){
+          const d=await requestSource(`https://v3.openstates.org/bills?jurisdiction=${a.state}&sponsor=${encodeURIComponent(a.last)}&per_page=20&include=sponsorships`,env);
+          const ids=new Set();
+          for(const b of list(d?.results))for(const s of list(b.sponsorships)){const id=s.person?.id,n=String(s.person?.name||s.name||'').trim().split(/\s+/);
+            if(/^ocd-person\//.test(id||'')&&n.length>1&&sameName(n.slice(0,-1).join(' '),n.at(-1),who))ids.add(id);}
+          found=[...ids].map(id=>({id}));
+        }
         need(found.length===1,found.length?'Several Open States people match; set openstates in data/config.json':'No Open States person matches; set openstates in data/config.json');
-        return {rows:[],next:JSON.stringify({person:found[0].id,page:1})};
+        return {rows:[{id:STATE_PERSON,person:found[0].id}],next:JSON.stringify({person:found[0].id,page:1})};
       }
       const d=await requestSource(`https://v3.openstates.org/bills?jurisdiction=${a.state}&sponsor=${encodeURIComponent(c.person)}&sort=updated_desc&per_page=20&page=${c.page}&include=sponsorships&include=votes`,env);
       need(Array.isArray(d.results)&&d.pagination,'Open States bill list incomplete');
@@ -349,27 +392,34 @@ export const FEEDS={
         return {id:b.id,state:a.state.toUpperCase(),session:String(b.session),identifier:b.identifier,title:cut(b.title,300),role:sp?(sp.primary?'sponsor':'cosponsor'):'sponsor',
           latestAction:b.latest_action_description||null,date:day(b.latest_action_date),votes,url:https(b.openstates_url),source:'Open States'};
       });
+      if(c.page===1)rows.push({id:STATE_PERSON,person:c.person});
       return {rows,next:c.page<Math.min(10,d.pagination.max_page||1)?JSON.stringify({person:c.person,page:c.page+1}):null};
     },
-    summarize:rows=>history(rows,25)},
+    summarize:rows=>{const p=rows.find(r=>r.id===STATE_PERSON),nc=rows.find(r=>r.id===STATE_COVERAGE);
+      return {...history(rows.filter(r=>r.id!==STATE_PERSON&&r.id!==STATE_COVERAGE),25),person:p?.person??null,notCovered:nc?.notCovered??null};}},
   // The person's LegiScan ID is looked up once and kept in the published snapshot, so each later weekly check spends one
   // query (their sponsored bills) instead of repeating the session and people lookups, which LegiScan asks users to avoid.
-  'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,
-    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-legiscan:${p.id}`,subject:p.id,args:{state:p.stateLeg.toUpperCase(),first:firstName(p),last:surname(p),legiscan:p.legiscan||null}})),
+  'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,configArgs:true,
+    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-legiscan:${p.id}`,subject:p.id,args:{state:p.stateLeg.toUpperCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,legiscan:p.legiscan||null}})),
     async page(job,a,env){
+      const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
       const ask=(op,extra)=>requestSource(`https://api.legiscan.com/?op=${op}&${extra}`,env);
       const api=(op,extra)=>ask(op,extra).then(d=>{need(d&&d.status==='OK','LegiScan returned an error');return d;});
       let c=state(job.cursor);
       if(!c){const saved=a.legiscan?null:await savedLegiscanPerson(env,job.id);c={person:a.legiscan||saved,saved:!!saved,sessions:null,i:0};}
       if(!c.person&&!c.sessions){
         const d=await api('getSessionList',`state=${a.state}`);
-        const sessions=list(d.sessions).filter(s=>!Number(s.special)).sort((x,y)=>y.year_start-x.year_start).map(s=>s.session_id).slice(0,8);
+        // The sessions they served in (from the research's years), newest first; without years, the latest 8.
+        const all=list(d.sessions).filter(s=>!Number(s.special)),y=a.years;
+        const served=y?all.filter(s=>Number(s.year_start)<=y[1]&&Number(s.year_end||s.year_start)>=y[0]):[];
+        const sessions=(served.length?served:all).sort((x,z)=>z.year_start-x.year_start).map(s=>s.session_id).slice(0,served.length?16:8);
         need(sessions.length,'LegiScan has no sessions for this state');
         return {rows:[],next:JSON.stringify({person:null,sessions,i:0})};
       }
       if(!c.person){
         const d=await api('getSessionPeople',`id=${c.sessions[c.i]}`);
-        const hit=list(d.sessionpeople?.people).filter(x=>fold(x.last_name)===fold(a.last)&&fold(x.first_name).startsWith(fold(a.first).slice(0,3)));
+        const who={name:a.name||`${a.first} ${a.last}`,first:a.first,last:a.last,nicknames:a.nicknames};
+        const hit=list(d.sessionpeople?.people).filter(x=>sameName(`${x.first_name||''} ${x.nickname||''}`,x.last_name,who));
         need(hit.length<2,'Several LegiScan people match; set legiscan in data/config.json');
         if(hit.length)return {rows:[],next:JSON.stringify({person:hit[0].people_id})};
         need(c.i+1<c.sessions.length,'No LegiScan person matches; set legiscan in data/config.json');
@@ -386,7 +436,7 @@ export const FEEDS={
           url:year?`https://legiscan.com/${a.state}/bill/${encodeURIComponent(b.number)}/${year}`:null,source:'LegiScan'};});
       return {rows:[...rows,{id:LEGISCAN_PERSON,person:c.person}],next:null};
     },
-    summarize:rows=>{const p=rows.find(r=>r.id===LEGISCAN_PERSON);return {...recent(rows.filter(r=>r!==p),100),person:p?.person??null};}},
+    summarize:rows=>{const p=rows.find(r=>r.id===LEGISCAN_PERSON),nc=rows.find(r=>r.id===STATE_COVERAGE);return {...recent(rows.filter(r=>r!==p&&r!==nc),100),person:p?.person??null,notCovered:nc?.notCovered??null};}},
 
   // ---------- Statements ----------
   // The Congressional Record: each new daily issue becomes its own job; its speeches are matched to members by Bioguide ID.
@@ -683,7 +733,8 @@ export const FEEDS={
     summarize:rows=>rows[0]||{}},
   // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
   // trades are checked against, and the list of trade reports the House reader opens.
-  'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',
+  // rereadOnUpgrade: read again at once when FEEDS_VERSION changes (here, how members are matched by name).
+  'house-fd':{host:'disclosures-clerk.house.gov',label:'House disclosure filings',tab:'ethics',scope:'global',rereadOnUpgrade:true,
     // One index a year from historyFrom on; a year that has ended is checked weekly, for late and amended filings.
     every:a=>ended(a.year)?WEEK:DAY,
     jobs:c=>yearsFrom(SINCE(c),c.year).reverse().map((year,i)=>({id:i?`house-fd:${year}`:'house-fd',subject:'House',args:{year}})),
@@ -693,7 +744,7 @@ export const FEEDS={
       const house=config.people.filter(p=>p.inOffice&&p.chamber==='H');
       const rows=[];
       for(const f of filings){
-        const p=house.filter(p=>fold(f.Last)===fold(surname(p))&&String(f.StateDst||'').toUpperCase().startsWith(p.state)&&fold(f.First).startsWith(fold(firstName(p)).slice(0,3)));
+        const p=house.filter(p=>String(f.StateDst||'').toUpperCase().startsWith(p.state)&&sameName(f.First,f.Last,p));
         if(p.length!==1||!/^\d+$/.test(String(f.DocID)))continue;
         const [m,d,y]=String(f.FilingDate||'').split('/');const filed=y?`${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`:null;
         rows.push({id:String(f.DocID),people:[p[0].id],type:f.FilingType,ptr:f.FilingType==='P',filed,year:Number(f.Year),
@@ -1170,12 +1221,13 @@ export function officialSummary(rows){
     ...(mark?{more:true,backlog:mark.backlog}:{})};
 }
 // The LegiScan person ID saved in a job's last snapshot. It travels as one extra record, which summarize takes out.
-const LEGISCAN_PERSON='ls-person';
-async function savedLegiscanPerson(env,jobId){
+const LEGISCAN_PERSON='ls-person',STATE_PERSON='os-person',STATE_COVERAGE='coverage';
+async function savedPerson(env,jobId){
   if(!env.DB)return null;
   const r=await env.DB.prepare('SELECT payload FROM snapshots WHERE job_id=?').bind(jobId).first();
   return r?JSON.parse(r.payload).person||null:null;
 }
+const savedLegiscanPerson=savedPerson;
 // The last published snapshot of a job, or of every job of a kind.
 async function snapshotsOf(env,kind){return (await env.DB.prepare('SELECT s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind=?').bind(kind).all()).results.map(r=>JSON.parse(r.payload));}
 // What the last run already read: its trades and unreadable reports carry over, and those reports aren't fetched again.
@@ -1195,4 +1247,6 @@ async function carried(env,jobId){
 // created for them, and the refresh deletes any it made before (refresh.mjs, ensureFeeds).
 export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
-export const FEEDS_VERSION=1;
+// Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
+// years and names, and House members matched by legal first names.
+export const FEEDS_VERSION=2;
