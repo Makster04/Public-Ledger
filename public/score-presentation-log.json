@@ -4,6 +4,10 @@
     {
       "date": "2026-11-02",
       "note": "Consolidated the current grading interface to Your Match, Integrity, and Workers > Profit. Ethics and Promises Delivered remain preserved in the official monthly history and their evidence is now grouped inside Integrity. No historical values or scoring formulas were recalculated by this presentation migration. Integrity remains provisional and uncalibrated; its monthly comparison log continues separately."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "Renamed Workers > Profit to People First and rewrote the three grade descriptions (Your Match, Integrity, People First). The calculations are unchanged: People First is still 75% the legislative-action score plus 25% of (100 − the existing Corporation Compromised Index), and the proposed CCI revision stays a comparison preview until it is explicitly adopted. Historical values were not recalculated; earlier entries keep the old name."
     }
   ]
 }

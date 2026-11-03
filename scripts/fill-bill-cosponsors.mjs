@@ -1,4 +1,4 @@
-// Who sponsored and cosponsored each Workers > Profit bill on file (public/research.json "bills"), among the people the
+// Who sponsored and cosponsored each People First bill on file (public/research.json "bills"), among the people the
 // site profiles, from Congress.gov (CONGRESS_API_KEY in .dev.vars). It reads each bill and each of its versions, plus
 // any bill Congress.gov lists as identical (a Senate companion), and writes them to the bill's "cosponsors" list:
 // [{person, bill, sponsor?, date}]. A cosponsorship later withdrawn is left out. The list is rebuilt on each run.

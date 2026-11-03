@@ -8,11 +8,11 @@ const scoreLog=JSON.parse(fs.readFileSync(new URL('../public/score-log.json',imp
 const migration=JSON.parse(fs.readFileSync(new URL('../public/score-presentation-log.json',import.meta.url),'utf8'));
 
 test('current profile and score navigation expose only the three primary grades',()=>{
-  assert.match(app,/const SCORE_PAGES=\[\['match','Your Match'\],\['integrity','Integrity'\],\['pvp','Workers > Profit'\]/);
+  assert.match(app,/const SCORE_PAGES=\[\['match','Your Match'\],\['integrity','Integrity'\],\['pvp','People First'\]/);
   assert.match(app,/\['accountability','Integrity'\]/);
   assert.match(app,/promises:\['integrity','integrity-honesty'\]/);
   assert.match(app,/ethics:\['integrity','integrity-personal-finances'\]/);
-  assert.match(app,/grades:\[\{label:'Your Match'[^\]]*\{label:'Integrity'[^\]]*\{label:'Workers > Profit'/);
+  assert.match(app,/grades:\[\{label:'Your Match'[^\]]*\{label:'Integrity'[^\]]*\{label:'People First'/);
   assert.doesNotMatch(app,/\$\{gradeTile\('Promises delivered'/);
   assert.doesNotMatch(app,/\$\{gradeTile\('Ethics'/);
 });

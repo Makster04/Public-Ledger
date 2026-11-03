@@ -25,7 +25,7 @@ test('ethics: findings, open and closed investigations cost points; allegations 
   assert.equal(ethicsScore(Array(9).fill(e('finding'))).pct,0);
 });
 const mark=(side,weight=1)=>({side,weight,score:(side==='people'?100:-100)*weight});
-test('Workers > Profit: a Yea or sponsorship takes the bill side, a Nay the other, missed votes count nothing, one credit per bill; needs 3 actions',()=>{
+test('People First: a Yea or sponsorship takes the bill side, a Nay the other, missed votes count nothing, one credit per bill; needs 3 actions',()=>{
   const marks=new Map([['119-hr-1',mark('profit')],['119-s-5',mark('people')],['119-hr-7',mark('people')],['119-hr-9',mark('profit')]]);
   const acts=pvpActions(marks,[{bill:'119-hr-1',pos:'Nay'},{bill:'119-s-5',pos:'Yea'},{bill:'119-hr-9',pos:'Not Voting'},{bill:'119-hr-2',pos:'Yea'}],[{bill:'119-hr-7',kind:'sponsored'},{bill:'119-s-5',kind:'cosponsored'}]);
   const r=pvpScore(acts);
@@ -37,7 +37,7 @@ test('Workers > Profit: a Yea or sponsorship takes the bill side, a Nay the othe
 test('every displayed investigation says whether it is open or closed',()=>{
   for(const s of people)for(const e of s.ethics)if(e.status==='investigation')assert.ok(['open','closed'].includes(e.stage),`${s.id}: ${e.title}`);
 });
-test('Workers > Profit: each action counts its bill\'s strength, so a lukewarm bill counts less than a clear-cut one',()=>{
+test('People First: each action counts its bill\'s strength, so a lukewarm bill counts less than a clear-cut one',()=>{
   const marks=new Map([['1-hr-1',mark('people',0.75)],['1-hr-2',mark('profit',1)],['1-hr-3',mark('people',0.5)]]);
   const r=pvpScore(pvpActions(marks,[{bill:'1-hr-1',pos:'Yea'},{bill:'1-hr-2',pos:'Yea'},{bill:'1-hr-3',pos:'Nay'}],[]));
   assert.deepEqual([r.people,r.profit,r.nPeople,r.nProfit,r.pct],[0.75,1.5,1,2,33]);
@@ -72,7 +72,7 @@ test('a bill\'s score: who gains and who took a side count half each, and opposi
   // An amendment is keyed on its own, so its vote isn't merged with the bill's.
   assert.equal(billKeyFromText('S.Amdt. 1858 (117th Congress)'),'117-samdt-1858');
 });
-test('every Workers > Profit bill has a valid ID, cited evidence and known groups',()=>{
+test('every People First bill has a valid ID, cited evidence and known groups',()=>{
   for(const v of data.votes.concat(data.hvotes))assert.ok(!v.pvp,v.id+': bill evidence belongs in the bills list, once per bill');
   const cited=x=>x&&x.why&&x.src&&/^https:\/\//.test(x.src.u);
   for(const b of data.bills||[]){
@@ -211,13 +211,13 @@ test('promises: a president\'s PolitiFact tracker tallies count kept 1, compromi
     for(const x of t.examples||[])assert.ok(t.counts[x.rating]>0&&/^https:\/\//.test(x.url),`${s.id}: ${t.name} example ${x.title}`);
   }
 });
-test('Workers > Profit: a president\'s signature or order takes the bill\'s side and a veto the other',()=>{
+test('People First: a president\'s signature or order takes the bill\'s side and a veto the other',()=>{
   const marks=new Map([['119-hr-1',mark('profit')],['118-s-2',mark('people')],['eo-14251',mark('profit')]]);
   const v=pvpScore(pvpActions(marks,[],[{bill:'119-hr-1',kind:'signed'},{bill:'118-s-2',kind:'vetoed'},{bill:'eo-14251',kind:'order'},{bill:'1-hr-9',kind:'signed'}]));
   assert.deepEqual(v.scored.map(a=>a.took),['profit','profit','profit']);assert.equal(v.pct,0);
 });
 
-test('Workers > Profit: versions of a bill count once, the latest vote wins, and a statement counts half and gives way to a vote',()=>{
+test('People First: versions of a bill count once, the latest vote wins, and a statement counts half and gives way to a vote',()=>{
   const m={...mark('people',1),id:'117-hr-842'},marks=new Map([['117-hr-842',m],['118-hr-20',m],['119-hr-20',m]]);
   // A cosponsorship of one version and a vote on another: one credit, the vote.
   let r=pvpScore(pvpActions(marks,[{bill:'117-hr-842',pos:'Nay'}],[{bill:'119-hr-20',kind:'cosponsored'}]));

@@ -1,4 +1,4 @@
-// Each person's three reviewed grades (Promises delivered, Ethics, Workers > Profit) from the reviewed research, the
+// Each person's three reviewed grades (Promises delivered, Ethics, People First) from the reviewed research, the
 // committee lists, the committee sectors and the roll calls' party totals. The page and the monthly recalculation (scripts/scores-monthly.mjs) both
 // use this, so they always agree. Your match is not here: it depends on each visitor's own choices.
 import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore,ownTrades,corporationCompromised,workersOverProfit} from './grades.js';
@@ -15,7 +15,7 @@ const BUSINESS_KINDS=new Set(['corporate','trade','cooperative']),NOT_BUSINESS_S
 // tallies: each saved roll call's party totals (public/vote-party.json "votes"), for the business-funder votes part.
 export function makeScorer(data,committees={committees:{},people:{}},sectors={},tallies=null){
   const votes=data.votes.concat(data.hvotes);
-  // Workers > Profit: every bill on file (research.json "bills") with its score, and the scored ones (marks), which each
+  // People First: every bill on file (research.json "bills") with its score, and the scored ones (marks), which each
   // person's votes and sponsorships count on.
   const bills=(data.bills||[]).map(b=>Object.assign({},b,billScore(b)));
   // Each scored bill under its own key and every version's (the same bill in other Congresses, or its Senate companion).

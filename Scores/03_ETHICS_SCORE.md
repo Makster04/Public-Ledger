@@ -1,6 +1,6 @@
-# Ethics ⚖️
+# Ethics ⚖️ and its indices
 
-**Status: historical published grade, preserved without recalculation.** Ethics is no longer a current headline grade. Its reviewed legal and trading evidence remains accessible in the corresponding Integrity sections. Its percentage is not part of the Integrity calculation.
+**Status: historical published grade, preserved without recalculation.** Ethics is no longer a current headline grade. Its indices live on inside [Integrity](08_INTEGRITY_SCORE.md): the **Legal Trouble Index** is deducted from Integrity at full strength, and the **Insider Trading Index** and **Stock Disclosure Dodger Index** are part of its Personal Finances component. Its reviewed legal and trading evidence remains accessible in the corresponding Integrity sections. Its percentage is not part of the Integrity calculation.
 
 ```text
 Ethics = max(0, round(100 − Legal Trouble − 0.10 × Insider Trading

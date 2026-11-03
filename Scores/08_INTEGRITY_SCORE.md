@@ -1,31 +1,53 @@
-# Integrity Score preview 🧭
+# Integrity 🧭
 
-**Current status: Integrity is now one of the three primary grades in the interface; its methodology remains provisional and uncalibrated.** The formula and component calculator are implemented in `public/integrity.js`, profile evidence is consolidated in one Integrity section, and monthly comparisons are stored separately. The score is Not graded where required reviewed coverage is missing. Historical Ethics and Promises Delivered records are preserved and are not averaged into Integrity.
+**How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?**
 
-This adapted design is inspired by and credits [IntegrityIndex.us](https://integrityindex.us/methodology). Public Ledger's weights, caps, curves, midpoints, reference-campaign context, and evidence minimums are provisional and uncalibrated. This is not a claim to reproduce IntegrityIndex.us's numerical outputs.
+**Status: primary grade, provisional and uncalibrated.** The formula and component calculator are implemented in `public/integrity.js`, and profile evidence is consolidated in one Integrity section. Promises and ethics evidence are available within Integrity. Historical Ethics and Promises Delivered grades remain accessible in the official monthly history and are never averaged into Integrity.
 
-## Overall formula
+Integrity combines three components:
+
+| Component | Weight | What it includes |
+|---|---:|---|
+| **Honesty** | **30%** | The **Promises Delivered Index**, based on reviewed kept, partly kept, and broken commitments. |
+| **Personal Finances** | **30%** | The **Insider Trading Index**, **Stock Disclosure Dodger Index**, and the approved holdings and trading penalties. |
+| **Fundraising** | **40%** | Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from [IntegrityIndex.us](https://integrityindex.us/methodology). |
+
+The **Legal Trouble Index** is deducted at full strength after averaging the available components:
+
+```text
+Integrity =
+    weighted average of available components
+    − Legal Trouble
+
+Final result is bounded between 0 and 100.
+```
+
+In detail:
 
 ```text
 available_average = sum(weight × complete component) / sum(available weights)
 Integrity = clamp(available_average − Legal Trouble, 0, 100)
 ```
 
-| Component | Weight |
-|---|---:|
-| Honesty | 30% |
-| Personal Finances | 30% |
-| Fundraising | 40% |
+**Evidence requirements:**
+- At least **two complete components** and a **sourced Legal Trouble review** are required, including for the president.
+- Missing components are excluded, and the remaining weights are normalized.
+- Insufficient evidence produces **"Not graded,"** rather than an assumed clean record. Unknown legal input is not zero.
+- Honesty requires at least **three counted promise checks**.
 
-Missing components are omitted and the remaining weights normalized. At least **two complete components** are required, including for the president. A dated, sourced Legal Trouble review is independently required; unknown legal input is not zero. Legal Trouble is subtracted after the weighted average at full strength. Only the final displayed grade is rounded, using the application's standard A–F thresholds. A missing required input makes Integrity Not graded with an explanation.
+Only the final displayed grade is rounded, using the standard A–F thresholds.
 
-## Honesty
+**Flip-Flop** and **Pants on Fire** are planned additions to Honesty once their methods and evidence are ready.
+
+This adapted design credits [IntegrityIndex.us](https://integrityindex.us/methodology). Public Ledger's weights, caps, curves, midpoints, reference-campaign context, and evidence minimums are its own provisional choices; this is not a claim to reproduce IntegrityIndex.us's numerical outputs.
+
+## Honesty: the Promises Delivered Index
 
 ```text
 H = 100 × (kept + 0.5 × partly kept) / counted checks
 ```
 
-At least three counted checks are required. Pending and ambiguous checks do not enter the denominator. The preview reuses reviewed Promises Delivered evidence and the president's PolitiFact tracker handling. Flip-Flop and Pants on Fire are future additions, not implemented indices; no scores are invented for them.
+At least three counted checks are required. Pending and ambiguous checks do not enter the denominator. The preview reuses reviewed Promises Delivered evidence and the president's PolitiFact tracker handling. Flip-Flop and Pants on Fire are planned additions, not implemented indices; no scores are invented for them.
 
 ## Personal Finances
 
@@ -63,14 +85,16 @@ Every monetary share is divided by total campaign receipts for the same reportin
 
 The preview subtracts the existing Legal Trouble Index after component averaging. A review must be dated, sourced, and explicit even if it finds no scored cases. Existing Ethics rules determine its 0–100 value. A missing review is unknown, never a clean 0.
 
-## Workers > Profit comparison
+## People First comparison
 
-The separate preview CCI removes the direct business-PAC-share component. Remaining relative weights are employee giving 10%, business-funder voting 35%, and lobbied bills 20%, normalized over available implemented components. The comparison is `0.75 × existing legislative-action score + 0.25 × (100 − preview CCI)`. If preview CCI is unavailable, use the legislative-action score alone, subject to its current evidence minimum. The published Workers > Profit grade and CCI remain unchanged.
+The proposed CCI revision removes the direct business-PAC-share component and reweights employee giving (10%), business-funder voting (35%), and lobbied bills (20%) over the available implemented components. The comparison is `0.75 × existing legislative-action score + 0.25 × (100 − preview CCI)`, or the legislative-action score alone if the preview CCI is unavailable. The published People First calculation continues using the existing CCI until the revision is explicitly adopted. See [People First](07_PEOPLE_FIRST_SCORE.md).
 
-## Current limitations and cutover conditions
+## Methodology status, limitations and cutover conditions
+
+Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices.
 
 The method is in code, but formula implementation is not the same as a complete, calibrated score. Current methodology notes that reviewed annual holdings/trade coverage is not yet available as complete score input, sourced Legal Trouble coverage reviews are not recorded for profiles, earmark coverage is incomplete, and employee-giving/lobbied-bill CCI inputs are not built. Those values remain unavailable rather than clean. As a result, an overall Integrity grade may not be produced even while the component explanations are visible.
 
 Integrity comparisons are stored in `public/integrity-preview-log.json`, separate from official score history. No automatic methodology switch is allowed. Cutover requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration. Ethics and Promises Delivered are no longer separate headline grades, but their past published values remain in official history and their supporting evidence remains accessible within Integrity.
 
-See [Ethics and its indices](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md), and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).
+See [Ethics and its indices](03_ETHICS_SCORE.md), [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md), [People First](07_PEOPLE_FIRST_SCORE.md), and the [canonical score inventory](00_POLITICAL_SCORECARD_METHODOLOGY.md).

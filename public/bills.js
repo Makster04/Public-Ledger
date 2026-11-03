@@ -1,4 +1,4 @@
-// The Bills page's list (research.json "billIndex"): every bill behind a saved roll call or on file for Workers > Profit,
+// The Bills page's list (research.json "billIndex"): every bill behind a saved roll call or on file for People First,
 // one entry per bill family (a bill, its versions in other Congresses and its companion measures), with the saved votes on
 // it and every group position on file for it. Kept apart from app.js so the tests can check it against the research.
 import {BILL_GROUPS} from './grades.js';
@@ -39,7 +39,7 @@ function wantedByVote(data){
   return by;
 }
 
-// The families, with their votes (newest first) and positions. scored: the Workers > Profit bills with their scores.
+// The families, with their votes (newest first) and positions. scored: the People First bills with their scores.
 export function billFamilies(data,scored=data.bills||[]){
   const keyOf=new Map(),out=[];
   for(const b of data.billIndex||[]){
@@ -53,7 +53,7 @@ export function billFamilies(data,scored=data.bills||[]){
   const wanted=wantedByVote(data);
   for(const e of out){
     e.votes.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    // The researched positions first, then the Workers > Profit sides, then each group's positions on the saved votes
+    // The researched positions first, then the People First sides, then each group's positions on the saved votes
     // (newest vote first); one per group.
     const seen=new Set(),add=p=>{if(seen.has(p.group))return;seen.add(p.group);e.positions.push(p);};
     for(const p of e.groups||[])add({...p,from:'research'});

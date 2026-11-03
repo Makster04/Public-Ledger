@@ -1,5 +1,5 @@
 // The Corporation Compromised Index 🏢 (step 9): business PACs' share of campaign funds and votes with business funders
-// beyond the party, 25% of the Workers > Profit grade. Parts without data drop out; the PAC share is required.
+// beyond the party, 25% of the People First grade. Parts without data drop out; the PAC share is required.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -23,7 +23,7 @@ test('the index weights its parts, drops the ones without data, and needs the PA
   assert.equal(corporationCompromised({businessVotes:{index:80}}).index,null,'no campaign money: no index');
 });
 
-test('it is a quarter of the Workers > Profit grade, and costs nothing without data',()=>{
+test('it is a quarter of the People First grade, and costs nothing without data',()=>{
   const v={pct:80,people:4,profit:1,n:5,nPeople:4,nProfit:1,scored:[]};
   const g=workersOverProfit(v,{index:40});
   assert.equal(g.pct,Math.round(0.75*80+0.25*60));assert.equal(g.billsPct,80);assert.equal(g.blended,true);

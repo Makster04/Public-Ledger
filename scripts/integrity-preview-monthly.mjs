@@ -1,4 +1,4 @@
-// Separate monthly snapshot for the Integrity / Workers comparison preview. Never writes official score history.
+// Separate monthly snapshot for the Integrity / People First comparison preview. Never writes official score history.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import {pathToFileURL} from 'node:url';
@@ -25,7 +25,7 @@ export function previewChanges(before={},after={}){
     const old=before[id];
     const metrics=[['integrity',old?.integrity?.pct,next.integrity.pct],['Honesty',old?.integrity?.honesty,next.integrity.honesty],
       ['Personal Finances',old?.integrity?.personalFinances,next.integrity.personalFinances],['Fundraising',old?.integrity?.fundraising,next.integrity.fundraising],
-      ['Legal Trouble',old?.integrity?.legalTrouble,next.integrity.legalTrouble],['Workers comparison',old?.workers?.pct,next.workers.pct]];
+      ['Legal Trouble',old?.integrity?.legalTrouble,next.integrity.legalTrouble],['People First comparison',old?.workers?.pct,next.workers.pct]];
     for(const [grade,a,b] of metrics){
       if(old&&a===b)continue;
       if(a==null&&b==null)continue;
@@ -42,7 +42,7 @@ if(import.meta.url===pathToFileURL(process.argv[1]).href){
   const dry=process.argv.includes('--dry-run'),data=JSON.parse(read('public/research.json')),
     committees=JSON.parse(read('public/committees.json')),sectors=JSON.parse(read('public/committee-sectors.json')),
     tallies=JSON.parse(read('public/vote-party.json')).votes;
-  const log=fs.existsSync(new URL(LOG,root))?JSON.parse(read(LOG)):{about:'Monthly Integrity and Workers comparison preview only. Separate from official score history; no grade switches automatically.',entries:[]};
+  const log=fs.existsSync(new URL(LOG,root))?JSON.parse(read(LOG)):{about:'Monthly Integrity and People First comparison preview only. Separate from official score history; no grade switches automatically.',entries:[]};
   const date=new Date().toISOString().slice(0,10),entry=buildPreviewEntry(data,committees,sectors.committees||{},tallies,date);
   const previous=log.entries.filter(x=>x.date!==date).at(-1);entry.changes=previewChanges(previous?.scores||{},entry.scores);
   entry.rulesChanged=!!previous&&previous.rules!==entry.rules;

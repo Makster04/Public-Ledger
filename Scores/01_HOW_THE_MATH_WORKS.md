@@ -13,7 +13,7 @@ This project has grades, indices, per-statement analyses, and context measures. 
 
 ## Actions and statements
 
-For issue matching and Workers > Profit actions: votes, sponsorships/cosponsorships, and official acts count 1.0. Public statements count 0.5 and are used only where no action is recorded for that issue. One bill receives one credit. The full rules are described in [Your Match](02_YOUR_MATCH.md) and [Workers > Profit](07_WORKERS_OVER_PROFIT_SCORE.md).
+For issue matching and People First actions: votes, sponsorships/cosponsorships, and official acts count 1.0. Public statements count 0.5 and are used only where no action is recorded for that issue. One bill receives one credit. The full rules are described in [Your Match](02_YOUR_MATCH.md) and [People First](07_PEOPLE_FIRST_SCORE.md).
 
 ## Weighting and 0–100 scales
 

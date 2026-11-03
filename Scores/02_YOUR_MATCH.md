@@ -1,6 +1,12 @@
 # Your Match 🎯
 
-**Status: published grade.** Your Match compares one politician's documented record with the issue positions and importance selected by the visitor. It is personalized: choices are saved in that visitor's browser and are not a universal candidate score.
+**How closely does this politician's record align with your views?**
+
+Your Match compares your issue positions with the politician's documented positions and recorded actions. It is personalized to your answers.
+
+A higher score means closer agreement with you. It does not measure honesty, ethics, or whether their policies benefit working people.
+
+**Status: published grade.** Choices are saved in the visitor's browser and are not a universal candidate score.
 
 ## Calculation
 
