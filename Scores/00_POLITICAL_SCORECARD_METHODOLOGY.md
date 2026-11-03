@@ -4,22 +4,21 @@ This is the canonical guide to every score, index, and position measure currentl
 
 ## At a glance
 
-Public Ledger currently publishes four A–F grades. **Integrity is implemented as a separate, provisional preview.** It is not yet the replacement grade for Ethics and Promises Delivered. This distinction is deliberate: published grades and their calculations remain unchanged during the comparison period. A later migration requires monthly comparison, reviewed financial coverage, source-backed calibration, and an explicit methodology migration.
+The current grading interface has three primary grades: Your Match, Integrity, and Workers > Profit. **The presentation migration to Integrity is complete; the methodology is still provisional and uncalibrated.** This interface change does not claim calibration or alter the historical published calculations for Ethics and Promises Delivered. Monthly Integrity comparisons remain in their separate log. Future methodology activation requires a completed comparison period, reviewed live financial coverage, source-backed calibration, and an explicit methodology migration.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
 | Your Match | Published grade | How closely a politician's record matches this visitor's saved issue positions | At least 3 issues with evidence and at least 50% of selected issue importance covered |
-| Promises Delivered | Published grade; also supplies Integrity's Honesty component | Whether reviewed statements and commitments are supported by later actions | At least 3 counted checks |
-| Ethics | Published grade; kept unchanged while Integrity is previewed | Reviewed legal/ethics cases and, where adequately covered, congressional trading disclosures | No overall grade minimum; each unavailable index is handled under the existing Ethics method |
+| Integrity | Current primary grade; provisional and uncalibrated | Honesty, Personal Finances, and Fundraising, less Legal Trouble | At least 2 complete components and a dated, sourced Legal Trouble review |
 | Workers > Profit | Published grade | Whether scored legislative actions favor workers, adjusted for the Corporation Compromised Index when available | At least 3 scored actions |
-| Integrity | **Preview only; provisional and uncalibrated** | Honesty, Personal Finances, and Fundraising, less Legal Trouble | At least 2 complete components and a dated, sourced Legal Trouble review |
+| Promises Delivered; Ethics | Historical published grades, preserved in the official monthly log; evidence now lives inside Integrity | Existing reviewed statement and case/trading records | Historical values only; not current headline grades |
 | Statement–action consistency | Per-statement analysis, not a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
 
 Letter thresholds are A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F < 60. Each grade rounds its final displayed percentage to a whole number. An insufficient-evidence result is **Not graded**, never an imputed zero.
 
-## Why Integrity is a preview
+## Integrity: current presentation, provisional method
 
-The Integrity component calculations and presentation have been implemented, adapting the structure of [IntegrityIndex.us](https://integrityindex.us/methodology) and crediting that source. Public Ledger adds reviewed promise evidence as Honesty and subtracts its existing Legal Trouble Index. The parameters are Public Ledger's provisional choices, not calibrated reproductions of IntegrityIndex.us.
+The Integrity component calculations and consolidated presentation are implemented, adapting the structure of [IntegrityIndex.us](https://integrityindex.us/methodology) and crediting that source. Public Ledger adds reviewed promise evidence as Honesty and subtracts its existing Legal Trouble Index. The parameters are Public Ledger's provisional choices, not calibrated reproductions of IntegrityIndex.us. Interface consolidation does not count as calibration.
 
 The overall Integrity formula is:
 
@@ -67,13 +66,13 @@ A separate preview CCI removes the direct business-PAC-share component. Its rema
 
 For each visitor-selected issue, calculate the share of the politician's weighted record that matches the visitor's side. Weight each issue by its visitor-selected importance (low 1, medium 2, high 3); divide matching weighted evidence by all available weighted evidence and multiply by 100. Actions count 1, statements count 0.5, and statements are only used for an issue without an action. One bill receives one credit; unsupported issues drop out. A grade requires at least 3 issues with evidence and coverage of at least half the visitor's selected issue importance. Choices are stored locally in the visitor's browser. See [Your Match](02_YOUR_MATCH.md).
 
-### Promises Delivered
+### Honesty (formerly Promises Delivered)
 
 `100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not independently change this grade. See [Promises Delivered](04_PROMISES_DELIVERED_SCORE.md).
 
-### Ethics
+### Historical Ethics grade
 
-`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))`. The three indexes are described below. The Ethics grade remains a published grade during the Integrity comparison period; it is not silently replaced. See [Ethics](03_ETHICS_SCORE.md).
+`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the preserved historical Ethics method only. Ethics is no longer a current headline score and its old percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_ETHICS_SCORE.md).
 
 ### Workers > Profit
 

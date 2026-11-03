@@ -1,6 +1,6 @@
 # Promises Delivered 📦
 
-**Status: published grade, and the source for the Integrity preview's Honesty component.** This grade remains unchanged while Integrity is compared. It measures reviewed commitments and stated positions against documented actions; it does not measure whether a politician is generally truthful in every setting.
+**Status: historical published grade and evidence source for Integrity's Honesty component.** It remains unchanged in the official monthly history and is no longer a separate current headline grade. The reviewed commitments, quotes, checks, and sources now appear under Integrity → Honesty. It measures reviewed commitments and stated positions against documented actions; it does not measure whether a politician is generally truthful in every setting.
 
 ```text
 Promises Delivered = 100 × (kept + 0.5 × partly kept or changed)
