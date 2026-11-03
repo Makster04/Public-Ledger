@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T05:16:17.949349+00:00",
+  "generated_at": "2026-11-03T00:42:52.591476+00:00",
   "methodology": {
     "version": "consistency-unweighted-v1",
     "rubric_version": "statement-action-v1",
@@ -13,10 +13,11 @@
     "coverage_definition": "Resolved relevant actions divided by selected candidate actions; not all career activity."
   },
   "provider": {
-    "configured": false,
-    "model": "unconfigured",
-    "model_version": "unconfigured",
-    "provider_contract_hash": "unconfigured"
+    "configured": true,
+    "provider": "openai-responses",
+    "model": "gpt-6-luna",
+    "model_version": "gpt-6-luna",
+    "provider_contract_hash": "15ed2383576a85f6c2241b393ace8ea1b9d83e1fd729a659ab33107c26052fef"
   },
   "people": {
     "collins": {
@@ -149,13 +150,32 @@
                 "shared_keywords:medicaid,reconciliation"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "058411d8a298bd5f5673cc5668e577e41fbf52e7a06d094cd37a54588fdc6d75",
+              "classified_at": "2026-11-03T00:41:22.983334+00:00",
               "included_in_percentage": false
             },
             {
@@ -221,13 +241,32 @@
                 "shared_keywords:health,impact,reconciliation"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "fc3440fd1526543962bb42338e1edd772bd0787571a8e66bb52b9a78da96a691",
+              "classified_at": "2026-11-03T00:41:28.884393+00:00",
               "included_in_percentage": false
             },
             {
@@ -295,13 +334,32 @@
                 "shared_keywords:health,reconciliation"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "0795007aeaf7aecbce23217eff20100017723451b5919ba352b757a7384677df",
+              "classified_at": "2026-11-03T00:41:34.208550+00:00",
               "included_in_percentage": false
             },
             {
@@ -363,13 +421,32 @@
                 "shared_topic:health"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "13770b331b4cff4a58a6babf32266c4ec52493bcf25bb915e25051c3a0ec4b94",
+              "classified_at": "2026-11-03T00:41:38.740407+00:00",
               "included_in_percentage": false
             },
             {
@@ -433,13 +510,17 @@
               ],
               "review_reasons": [
                 "missing_substantive_description",
-                "Awaiting classification"
+                "Evidence needs review before classification"
               ],
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "status": "blocked",
+              "rubric_version": "statement-action-v1",
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "dd6a8f910da990792f7bc65171ffe451d561c7da77588d34cabda8924f09f807",
+              "classified_at": "2026-11-03T00:38:02.346301+00:00",
               "included_in_percentage": false
             },
             {
@@ -503,13 +584,17 @@
               ],
               "review_reasons": [
                 "missing_substantive_description",
-                "Awaiting classification"
+                "Evidence needs review before classification"
               ],
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "status": "blocked",
+              "rubric_version": "statement-action-v1",
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "928ee7d8c7ec0dfcd312739710320f7bc000d8fd73a73a9ace6c563af0d0c681",
+              "classified_at": "2026-11-03T00:38:02.375681+00:00",
               "included_in_percentage": false
             },
             {
@@ -573,13 +658,17 @@
               ],
               "review_reasons": [
                 "missing_substantive_description",
-                "Awaiting classification"
+                "Evidence needs review before classification"
               ],
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "status": "blocked",
+              "rubric_version": "statement-action-v1",
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "ebbb65a5fe3ae214cccdb71e6c1e41b4e8ac8a3c0a33e75e60a53dc7d3368a8b",
+              "classified_at": "2026-11-03T00:38:02.400450+00:00",
               "included_in_percentage": false
             },
             {
@@ -644,13 +733,32 @@
                 "shared_keywords:care,health,providers"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "d75aae579cc68547c51ba7ea4a3d2e969cd93c77cd32d3c7f5f742d8c8895157",
+              "classified_at": "2026-11-03T00:41:43.161546+00:00",
               "included_in_percentage": false
             }
           ],
@@ -761,13 +869,32 @@
                 "shared_keywords:hhs,kennedy,robert,secretary"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "93f3e8130f8b9e4333505b7472919d1497ed12ba6d04fb64e98e673a57e0457c",
+              "classified_at": "2026-11-03T00:41:47.518800+00:00",
               "included_in_percentage": false
             }
           ],
@@ -882,13 +1009,32 @@
                 "shared_keywords:abortion,after,casey,codify,dobbs,rights,roe"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "3a544db2b0d39d4cbb90e25c5ca319476159887aa58aa48800663195b210060f",
+              "classified_at": "2026-11-03T00:41:52.242598+00:00",
               "included_in_percentage": false
             },
             {
@@ -952,13 +1098,32 @@
                 "shared_keywords:abortion,codify,introduced,rights"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "bf556337d15f075a09f4d5e7b5f6b669617693bcced21850f0a470b66e3fecf1",
+              "classified_at": "2026-11-03T00:41:56.913581+00:00",
               "included_in_percentage": false
             },
             {
@@ -1020,13 +1185,17 @@
               ],
               "review_reasons": [
                 "missing_substantive_description",
-                "Awaiting classification"
+                "Evidence needs review before classification"
               ],
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "status": "blocked",
+              "rubric_version": "statement-action-v1",
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "ca2c45ea2e02456bdcbec38982bd7e804971ac29391f4bbdfa79007801ed3cc3",
+              "classified_at": "2026-11-03T00:38:14.653780+00:00",
               "included_in_percentage": false
             }
           ],
@@ -1150,13 +1319,32 @@
                 "shared_keywords:canada,tariffs"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "181167b44d48632c67d97a1c66fc663ab797646744e157dc1feb0fbe462cecc3",
+              "classified_at": "2026-11-03T00:42:01.352019+00:00",
               "included_in_percentage": false
             },
             {
@@ -1219,13 +1407,32 @@
                 "shared_keywords:businesses,impact,state"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "512be5c0f96bf2397b5fa9362d2dcab76068d59251f30747247c980f136b58ae",
+              "classified_at": "2026-11-03T00:42:05.893204+00:00",
               "included_in_percentage": false
             },
             {
@@ -1282,13 +1489,32 @@
                 "shared_keywords:only,state"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "21c3c6f1a9c9f8ecfb6b741f9ef5d19c538ab7afa0951f8cc9cf84315a64c174",
+              "classified_at": "2026-11-03T00:42:10.495572+00:00",
               "included_in_percentage": false
             },
             {
@@ -1359,13 +1585,32 @@
                 "shared_keywords:border,one"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "37f2eaf23c0e33030bf503c57517d661820604c75966a3aeff4aea8d92327452",
+              "classified_at": "2026-11-03T00:42:15.021098+00:00",
               "included_in_percentage": false
             }
           ],
@@ -1487,13 +1732,32 @@
                 "shared_keywords:donald,impeachment,january,second,trump"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "2c4417350a0ee44132eb98631a8d97715164886bc1b62de9e50ad60da8fbd19a",
+              "classified_at": "2026-11-03T00:42:19.703138+00:00",
               "included_in_percentage": false
             },
             {
@@ -1551,13 +1815,32 @@
                 "shared_keywords:january,senate"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "d040b43b225869e232f366191110ebaa004824cae439496739709924b1038e68",
+              "classified_at": "2026-11-03T00:42:24.280812+00:00",
               "included_in_percentage": false
             },
             {
@@ -1625,13 +1908,32 @@
                 "shared_keywords:donald,president,trump"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "fd147cfac79e0792e31872ac3c9d54be0e675c6b432b7fec47d26c1b14a74999",
+              "classified_at": "2026-11-03T00:42:29.195829+00:00",
               "included_in_percentage": false
             },
             {
@@ -1688,13 +1990,32 @@
                 "shared_keywords:day,january,senate"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "41aced1de01c17b17823bb0d0e164ea74b0b7c1b7f5547228eed47a8d8cd75e7",
+              "classified_at": "2026-11-03T00:42:33.996568+00:00",
               "included_in_percentage": false
             },
             {
@@ -1757,13 +2078,32 @@
                 "shared_keywords:january,president,senate"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "1f6fa077ef9091db74f8aa69b6319ef87ed922b989f96c70fc713053c792b33b",
+              "classified_at": "2026-11-03T00:42:38.562143+00:00",
               "included_in_percentage": false
             }
           ],
@@ -1888,13 +2228,17 @@
               ],
               "review_reasons": [
                 "unknown_date",
-                "Awaiting classification"
+                "Evidence needs review before classification"
               ],
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "status": "blocked",
+              "rubric_version": "statement-action-v1",
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "fbeffa6947d872c8e5024a504bf0f771e8eec6193091dfdac3c0e969a9cc9814",
+              "classified_at": "2026-11-03T00:39:53.105512+00:00",
               "included_in_percentage": false
             }
           ],
@@ -2016,13 +2360,32 @@
                 "shared_keywords:members,stock,trading"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "41f27169082310db073fb4d13f9ffe71cda7b9786bbfd3853e0a3f3c6bfa74c7",
+              "classified_at": "2026-11-03T00:42:43.427348+00:00",
               "included_in_percentage": false
             },
             {
@@ -2085,13 +2448,32 @@
                 "shared_keywords:requires,two"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "8e1d8ef17d7d62fcbf35b23e35d867a6014ecbd8513eb2082d4925dcdbe0f726",
+              "classified_at": "2026-11-03T00:42:47.938722+00:00",
               "included_in_percentage": false
             }
           ],
@@ -2227,13 +2609,32 @@
                 "shared_keywords:insider,members,stock,stocks,stop,trading"
               ],
               "review_reasons": [
-                "Awaiting classification"
+                "rate_limited"
               ],
+              "status": "error",
               "classification": null,
               "probabilities": null,
               "confidence": null,
               "review_status": "needs_review",
-              "status": "pending",
+              "error": "rate_limited",
+              "model": "gpt-6-luna",
+              "model_version": "gpt-6-luna",
+              "rubric_version": "statement-action-v1",
+              "probability_semantics": "uncalibrated_model_estimates",
+              "usage": {
+                "input_tokens": null,
+                "output_tokens": null,
+                "total_tokens": null,
+                "cost": null,
+                "currency": null
+              },
+              "metadata": {
+                "attempts": 3,
+                "retry_after_seconds": null
+              },
+              "aggregation_version": "consistency-unweighted-v1",
+              "input_fingerprint": "ee7097b392f2d580b05f166b52e64db8db94a66fdc86b875d99c8bb17876f16c",
+              "classified_at": "2026-11-03T00:42:52.541332+00:00",
               "included_in_percentage": false
             },
             {

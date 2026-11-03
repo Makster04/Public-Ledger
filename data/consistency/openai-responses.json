@@ -1,0 +1,16 @@
+{
+  "provider": "openai-responses",
+  "reviewed": true,
+  "verified_on": "2026-11-02",
+  "docs_url": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+  "structured_outputs_docs_url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "model": "gpt-6-luna",
+  "model_version": "gpt-6-luna",
+  "auth_header": "Authorization",
+  "auth_prefix": "Bearer ",
+  "reasoning_effort": "none",
+  "max_output_tokens": 256,
+  "store": false,
+  "probability_semantics": "uncalibrated_model_estimates"
+}

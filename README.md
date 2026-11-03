@@ -10,7 +10,7 @@ The local server binds only to your computer. It uses `.local/records.sqlite` an
 
 ## Enable automatic updates
 
-1. Get the free keys below. Each key unlocks only its own sources, and the app runs without any of them.
+1. Get the free or optional keys below for the sources and offline tools you want. The app runs without them.
 2. Copy `.dev.vars.example` to `.dev.vars` in this directory. Every key in the example is blank.
 3. Enter each key after its name. Keep this file private; Git ignores it.
 4. Restart the local server. Open **API updates** to see which keys are set and each API's progress, and **Website updates** for the official websites read directly.
@@ -33,10 +33,11 @@ The local server binds only to your computer. It uses `.local/records.sqlite` an
 | `NYT_API_KEY` | [developer.nytimes.com](https://developer.nytimes.com/) | New York Times articles naming each politician |
 | `REGULATIONS_API_KEY` | [open.gsa.gov/api/regulationsgov](https://open.gsa.gov/api/regulationsgov/) | Donor companies' comments on federal rules. Leave it blank to use the Congress.gov key |
 | `SAM_API_KEY` | [open.gsa.gov/api/entity-api](https://open.gsa.gov/api/entity-api) | Companies' federal IDs, for matching donors to federal contracts |
+| `OPENAI_API_KEY` (optional; consistency worker only) | [OpenAI API keys](https://platform.openai.com/api-keys) | Runs the offline statement–action classifier using the verified Responses API configuration; not used by page loads or source refresh |
 | `SEC_USER_AGENT` (not a key) | [SEC developer resources](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) | Your name and contact email, which SEC EDGAR asks every request to include, for company industry codes |
 | `THREADS_ACCESS_TOKEN` | [Threads keyword search](https://developers.facebook.com/docs/threads/keyword-search) | Threads posts that mention one of the issues. Free, but searching other people's posts needs Meta's approval: create an app with the Threads use case, add the `threads_basic` and `threads_keyword_search` permissions, and request advanced access in App Review. Long-lived tokens last 60 days |
 
-No key is needed for the Senate and House roll calls, the Senate and House committee lists, the House Clerk's disclosure index, members' press-release feeds, the Federal Register, Bluesky posts, the Wayback Machine, GDELT news, DOJ press releases, ProPublica's Nonprofit Explorer, FARA or USAspending. Every key that is set is used at the same time. Sources whose key is missing wait on the Updates screen as "Setup needed", and the app shows the reviewed research. The Updates screen distinguishes setup requirements, queued work, successful refreshes, and retrying failures. The button runs the next eight source pages; a large source can require several batches. Frontend keys are never used, and saved request links never include a key.
+No key is needed for the Senate and House roll calls, the Senate and House committee lists, the House Clerk's disclosure index, members' press-release feeds, the Federal Register, Bluesky posts, the Wayback Machine, GDELT news, DOJ press releases, ProPublica's Nonprofit Explorer, FARA or USAspending. Set source keys are used by their respective refreshes; the OpenAI key is used only by the offline statement–action classifier command. Sources whose key is missing wait on the Updates screen as "Setup needed", and the app shows the reviewed research. The Updates screen distinguishes setup requirements, queued work, successful refreshes, and retrying failures. The button runs the next eight source pages; a large source can require several batches. Frontend code never receives the OpenAI key, and saved request links never include any key.
 
 ## What refreshes
 

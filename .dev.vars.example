@@ -68,6 +68,11 @@ REGULATIONS_API_KEY=
 # https://open.gsa.gov/api/entity-api
 SAM_API_KEY=
 
+# Optional: statement–action consistency classification via the OpenAI Responses API.
+# Create a project API key at https://platform.openai.com/api-keys and keep it server-side.
+# The non-secret, reviewed request configuration is data/consistency/openai-responses.json.
+OPENAI_API_KEY=
+
 # SEC EDGAR asks every request to name you: "Your Name you@example.com" (not a key)
 SEC_USER_AGENT=
 
