@@ -24,6 +24,7 @@
     "review:money": "node scripts/review-money.mjs",
     "review:pledges": "node scripts/review-pledges.mjs",
     "review:holdings": "node --no-warnings=ExperimentalWarning scripts/review-holdings.mjs",
+    "check:sources": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/check-sources.mjs",
     "cloudflare:preview": "wrangler dev",
     "cloudflare:deploy": "wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply public-ledger --remote",

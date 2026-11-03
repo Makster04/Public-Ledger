@@ -409,7 +409,8 @@ export const FEEDS={
   'crec-day':{host:'api.govinfo.gov',label:'Floor speeches',tab:'promises',scope:'global',every:NEVER,jobs:()=>[],
     async page(job,a,env,config){
       const bios=new Map(config.people.filter(p=>p.bioguide).map(p=>[p.bioguide,p.id]));
-      if(a.whole)return {rows:crecModsRows(parseXML(await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/mods`,env,{as:'text'})),a.pkg,bios),next:null};
+      // A whole day's MODS file can pass the usual 12 MB page limit, so this one request may be up to 40 MB.
+      if(a.whole)return {rows:crecModsRows(parseXML(await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/mods`,env,{as:'text',maxChars:40_000_000})),a.pkg,bios),next:null};
       const c=state(job.cursor)||{ids:null,i:0};
       if(!c.ids){
         const d=await requestSource(`https://api.govinfo.gov/packages/${a.pkg}/granules?offsetMark=*&pageSize=1000`,env);need(Array.isArray(d.granules),'GovInfo granule list missing');
@@ -927,9 +928,11 @@ export const FEEDS={
     jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`outside-groups:${p.id}`,subject:p.id,args:{groups:[]}})),
     async page(job,a,env,config){
       const i=Number(job.cursor||0),g=a.groups?.[i];if(!g)return {rows:[],next:null};
-      const d=await requestSource(`https://projects.propublica.org/nonprofits/api/v2/search.json?q=${encodeURIComponent(`"${g}"`)}`,env);
-      need(Array.isArray(d.organizations),'Nonprofit Explorer response missing');
-      const exact=d.organizations.filter(o=>fold(o.name).replace(/[^a-z0-9]/g,'')===fold(g).replace(/[^a-z0-9]/g,''));
+      // Nonprofit Explorer answers a search with no matches with HTTP 404 (most outside spenders are super PACs, not
+      // nonprofits), so a 404 means "not found as a nonprofit", not a failed check.
+      const d=await requestSource(`https://projects.propublica.org/nonprofits/api/v2/search.json?q=${encodeURIComponent(`"${g}"`)}`,env,{allow404:true});
+      need(d===null||Array.isArray(d.organizations),'Nonprofit Explorer response missing');
+      const exact=list(d?.organizations).filter(o=>fold(o.name).replace(/[^a-z0-9]/g,'')===fold(g).replace(/[^a-z0-9]/g,''));
       if(exact.length!==1)return {rows:[{id:g,group:g,ein:null,review:exact.length?'Several nonprofits share this name':'Not found as a nonprofit (it may be a super PAC or a 527 group)',irs527:`https://forms.irs.gov/app/pod/basicSearch/search?searchType=1&organizationName=${encodeURIComponent(g)}`}],next:i+1<a.groups.length?String(i+1):null};
       const ein=exact[0].ein,o=await requestSource(`https://projects.propublica.org/nonprofits/api/v2/organizations/${ein}.json`,env);
       need(Number(o.organization?.ein)===Number(ein),'Nonprofit identity mismatch');
