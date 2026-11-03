@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T05:16:17.949349+00:00",
+  "generated_at": "2026-11-03T00:32:10.824533+00:00",
   "methodology": {
     "version": "consistency-unweighted-v1",
     "rubric_version": "statement-action-v1",
@@ -13,10 +13,11 @@
     "coverage_definition": "Resolved relevant actions divided by selected candidate actions; not all career activity."
   },
   "provider": {
-    "configured": false,
-    "model": "unconfigured",
-    "model_version": "unconfigured",
-    "provider_contract_hash": "unconfigured"
+    "configured": true,
+    "provider": "openai-responses",
+    "model": "gpt-6-luna",
+    "model_version": "gpt-6-luna",
+    "provider_contract_hash": "15ed2383576a85f6c2241b393ace8ea1b9d83e1fd729a659ab33107c26052fef"
   },
   "people": {
     "collins": {

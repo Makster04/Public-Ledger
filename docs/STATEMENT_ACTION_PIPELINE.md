@@ -33,7 +33,8 @@ Initial input is the saved research, including previously linked `did` records a
 - Each statement has an explicit time scope: `position` (default) includes dated earlier and later actions as agreement; `forward_commitment` excludes earlier actions; `retrospective` excludes later actions. Existing `promise: true` records default to forward commitments, with an explicit scope override supported. Excluded actions remain visible as context. Same-day actions are included but labeled as having unknown within-day order. Unknown dates require review. Review the assigned scope, especially retrospective claims currently tagged as promises. Agreement is not proof the statement caused an action.
 - Percentage = `100 × consistent / (consistent + inconsistent)`, using only resolved relevant actions. No subjective importance weights. Default minimum: one resolved relevant action, with the denominator visible; use `--min-resolved` to require more. Zero resolved relevant actions means **Insufficient evidence**, never 0% or 100%.
 - Relevant evidence coverage means resolved relevant actions divided by selected candidates. It is not measured recall over every action the politician ever took.
-- Summaries are deterministic Python text based on stored counts. No narrative LLM is used, and no generated text is presented as JEV's reasoning.
+- Summaries are deterministic Python text based on stored counts. No narrative LLM is used, and no generated text is presented as the classifier's reasoning.
+- Category scores returned by the model are uncalibrated model estimates. They are used only for review thresholds and are not empirical probabilities or measures of accuracy.
 
 These are explicit initial implementation choices. Different temporal treatment, candidate limits, thresholds or minimum counts should be versioned and evaluated before publication.
 
@@ -45,22 +46,21 @@ Jobs have unique pair/fingerprint keys, atomic leases and durable statuses. Comp
 
 `Store.history(pair_key)` provides the local audit history. Public reports expose current classifications and provenance, not secrets or raw provider error bodies. Unknown token/cost amounts remain unknown rather than being reported as zero.
 
-## JEV configuration: provider verification outstanding
+## OpenAI Responses API configuration
 
-There was no configured JEV integration or provider documentation in this repository when this feature was implemented. **The actual endpoint, authentication scheme, request schema, model and response schema still need verification from the intended provider's documentation.** The adapter deliberately supplies no guessed endpoint. Mocked tests verify transport behavior, not the real JEV service.
+The earlier `JEV` names were placeholders, not a provider selection. The implementation now uses the OpenAI Responses API at `https://api.openai.com/v1/responses`, with `Authorization: Bearer …` authentication and Structured Outputs. The non-secret, reviewed configuration is `data/consistency/openai-responses.json`. It records official documentation URLs, model ID/version `gpt-6-luna`, reasoning effort `none`, a 256-token output limit, `store: false`, and the explicit `uncalibrated_model_estimates` probability semantics. The configured model documentation lists Responses and Structured Outputs as supported. The runtime also stores the actual model identifier returned by each response.
 
-Keep the key in the server environment or the ignored `.dev.vars` file:
+The request builder sends the statement/action pair as data, the fixed classification rubric as instructions, and a strict JSON schema requiring one of the three labels plus one numeric score for each label. The parser handles refusal and incomplete states before looking for output, then validates the label, all values, their range, sum and selected-label maximum. Any refusal, incomplete response, HTTP/authentication error, timeout or malformed output is stored without a fabricated classification. OpenAI request IDs and token usage are recorded when returned; API cost is left unknown unless a future documented response supplies it.
 
-```dotenv
-JEV_API_KEY=your-server-side-key
-JEV_PROVIDER_CONFIG=/absolute/path/to/verified-provider.json
-```
+The manifest validator now requires an explicit `auth_prefix` and checks `Authorization` plus `Bearer ` for this provider, resolving the previous guide/validator mismatch. It pins the endpoint to the documented OpenAI host and URL so the secret cannot be sent to a manifest-supplied host. No key is stored in the config or public artifact.
 
-The manifest must specify `reviewed: true`, `docs_url`, HTTPS `endpoint`, `model`, `model_version`, `auth_header`, `auth_prefix`, `request_template` and `response_paths`. Set `reviewed` only after checking those values against the provider's documentation. Never put a key in the manifest, URL, public report or browser code.
+### Credential setup
 
-Request templates support exact-value placeholders `{{context}}`, `{{rubric}}`, `{{rubric_version}}`, `{{model}}` and `{{model_version}}`. Context and rubric are structured objects. Response paths are dotted keys for `classification`, `probabilities`, and optionally `model`, `input_tokens`, `output_tokens`, `total_tokens`, and `cost`; `cost_currency` identifies reported costs. A provider needing a different wire protocol requires an adapter adjustment after verification. The generic mapper is not a claim that JEV uses any particular schema.
+1. Create an OpenAI API project key from the [API Keys page](https://platform.openai.com/api-keys). API access and model availability depend on the API project and account limits.
+2. Copy `.dev.vars.example` to the ignored local `.dev.vars` file if needed, and set `OPENAI_API_KEY=…`. Alternatively export `OPENAI_API_KEY` only in the server-side worker shell. Do not paste the key into chat, source control, the configuration file, or browser code.
+3. Run `npm run consistency:prepare` to refresh the queue without network calls, then `npm run consistency:run -- --limit 20` to classify at most 20 eligible pairs. The reviewed config is selected by default; `--openai-config PATH` is available for explicit testing. `npm run consistency:export` republishes saved results. `npm start` does not run classifications.
 
-Batch API calls are not enabled because provider batch support is unverified. The worker instead processes a bounded queue with up to three transient-failure attempts per pair. It honors ordinary Retry-After delays and records longer deferrals without retrying prematurely. Hosted provider access also needs an allowed network host.
+The default worker makes individual requests, not provider batch jobs. It uses bounded retries for transient network/server errors, honors `Retry-After`, records deferrals, and never retries authentication failures automatically. Run it from a Python-capable environment with access to `api.openai.com`; the Cloudflare Worker only serves the saved report. GPT-6 Luna is the documented cost-sensitive, high-volume option selected for this workload. Its API model availability still depends on the user's API project and limits.
 
 ## Running the pipeline
 
@@ -74,7 +74,7 @@ npm run consistency:run -- --limit 20 --retry-errors
 npm run consistency:export
 ```
 
-Preparation builds the queue and exports honest unresolved reports without a provider or key. `run` requires the verified manifest and server key. `--research`, `--database`, `--output`, `--records`, `--candidates`, `--min-resolved`, `--confidence` and `--margin` are available for reproducible runs.
+Preparation builds the queue and exports honest unresolved reports without a key. `run` requires the checked-in reviewed OpenAI configuration and server key. `--openai-config`, `--research`, `--database`, `--output`, `--records`, `--candidates`, `--min-resolved`, `--confidence` and `--margin` are available for reproducible runs.
 
 For a background service:
 
@@ -82,7 +82,7 @@ For a background service:
 npm run consistency:run -- --watch 300 --limit 20
 ```
 
-Each cycle reloads the inputs, adds changed/new pairs, resumes saved jobs, and atomically writes `public/consistency.json`. Public page loads only read that artifact through `/api/consistency?id=PROFILE_ID`, with a static-host fallback. They never invoke Python or JEV. Run the worker under a process supervisor or scheduler for production. Cloudflare Workers cannot run this standard-library Python process; run classification in a separate Python-capable job and publish the resulting artifact with the site. The existing Cloudflare source-refresh cron does not classify statements automatically.
+Each cycle reloads the inputs, adds changed/new pairs, resumes saved jobs, and atomically writes `public/consistency.json`. Public page loads only read that artifact through `/api/consistency?id=PROFILE_ID`, with a static-host fallback. They never invoke Python or OpenAI. Run the worker under a process supervisor or scheduler for production. Cloudflare Workers cannot run this standard-library Python process; run classification in a separate Python-capable job and publish the resulting artifact with the site. The existing Cloudflare source-refresh cron does not classify statements automatically.
 
 ## Validation and evaluation
 
@@ -97,10 +97,10 @@ npm run consistency:evaluate -- --results /path/to/model-results.json --output /
 
 The evaluation fixture includes sourced legacy record comparisons across parties and explicitly synthetic boundary cases. Labels preserve their provenance, and **none is represented as independently human-adjudicated**. A human reviewer must adjudicate them before treating this as a human benchmark. Without model outputs, evaluation reports unavailable accuracy rather than inventing results. With outputs it reports confusion matrices, disagreements, review outcomes, errors, party slices and high-confidence agreement separately.
 
-Remaining production validation: verify the real JEV contract and credentials; collect model outputs; obtain independent human reference labels; evaluate both candidate recall and classification errors; review probability calibration and thresholds; inspect source fidelity and generated summaries; and decide how incremental reports will be published on the hosted deployment. This implementation does not establish model accuracy or political completeness.
+Remaining production validation: configure the user's OpenAI API credential, collect model outputs, obtain independent human reference labels, evaluate both candidate recall and classification errors, calibrate model-score thresholds, inspect source fidelity and generated summaries, and decide how incremental reports will be published on the hosted deployment. Provider contract and model selection are recorded, but account-specific model access has not been verified. This implementation does not establish model accuracy or political completeness.
 
 ## Validation snapshot
 
-Implementation validation on November 2, 2026: 48 Python tests passed; saved-report frontend/API tests, syntax checks and the Cloudflare worker build passed. Desktop and 390px mobile browser checks found no page errors or horizontal overflow; the saved-report API returned HTTP 200. The existing JavaScript suite passed 33 of 34 test files; `test/bundled.test.mjs` retains its pre-existing failure.
+Implementation validation on November 2, 2026: 48 Python tests passed; saved-report frontend/API tests, syntax checks and the Cloudflare worker build passed. Desktop and 390px mobile browser checks found no page errors or horizontal overflow; the saved-report API returned HTTP 200. The previous bundled-gifts assertion was corrected to accept the source amount's cents; the current JavaScript test suite passes.
 
-Preparation produced 144 statement reports across 59 profiles with statements and selected 494 candidate pairs. The normalizer covers 60 research profiles and 1,027 actions. No live JEV calls were made and no accuracy score is claimed. Reports intentionally show insufficient/unresolved evidence pending provider configuration and evaluation. The local queue may also retain pending jobs for older fingerprints; workers only claim the current input/configuration fingerprints.
+Preparation produced 144 statement reports across 59 profiles with statements and selected 494 candidate pairs. The normalizer covers 60 research profiles and 1,027 actions. No live OpenAI calls have been made and no accuracy score is claimed. Reports intentionally show insufficient/unresolved evidence pending credential setup and human evaluation. Model-reported category scores are explicitly labeled uncalibrated estimates. The local queue may also retain pending jobs for older fingerprints; workers only claim the current input/configuration fingerprints.

@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 
 from scripts.consistency import cli
-from scripts.consistency.provider import JEVClient
+from scripts.consistency.provider import OpenAIResponsesClient
 from scripts.consistency.storage import Store
 
 
@@ -20,11 +20,15 @@ def fixture():
                     "src": {"u": "https://example.org/action"}}}]}]}
 
 
-def manifest():
-    return {"reviewed": True, "endpoint": "https://example.org/classify", "docs_url": "https://example.org/docs",
-            "model": "fixture-model", "model_version": "1", "auth_header": "Authorization", "auth_prefix": "Bearer ",
-            "request_template": {"context": "{{context}}", "rubric": "{{rubric}}", "model": "{{model}}"},
-            "response_paths": {"classification": "classification", "probabilities": "probabilities"}}
+def config():
+    return json.loads((Path(__file__).resolve().parents[2] / 'data/consistency/openai-responses.json').read_text())
+
+
+def response():
+    return {"status": "completed", "model": "gpt-6-luna", "output": [{"type": "message", "status": "completed",
+        "content": [{"type": "output_text", "text": json.dumps({"classification": "consistent", "probabilities": {
+            "consistent": .95, "inconsistent": .03, "not_relevant": .02}})}]}],
+        "usage": {"input_tokens": 12, "output_tokens": 8, "total_tokens": 20}}
 
 
 class PipelineTests(unittest.TestCase):
@@ -33,8 +37,8 @@ class PipelineTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.research = self.root / "research.json"
         self.research.write_text(json.dumps(fixture()))
-        self.provider = self.root / "provider.json"
-        self.provider.write_text(json.dumps(manifest()))
+        self.provider = self.root / "openai.json"
+        self.provider.write_text(json.dumps(config()))
         self.report = self.root / "report.json"
         self.db = self.root / "jobs.sqlite"
         self.args = ["--research", str(self.research), "--output", str(self.report), "--database", str(self.db)]
@@ -44,9 +48,9 @@ class PipelineTests(unittest.TestCase):
 
     def invoke(self, command, *extra):
         with contextlib.redirect_stdout(io.StringIO()):
-            return cli.main([command, *self.args, *extra])
+            return cli.main([command, *self.args, '--openai-config', str(self.provider), *extra])
 
-    def test_prepare_no_provider_no_network_and_no_fabricated_percentage(self):
+    def test_prepare_without_key_no_network_and_no_fabricated_percentage(self):
         with patch.dict(os.environ, {}, clear=True), patch('urllib.request.OpenerDirector.open', side_effect=AssertionError('network')):
             self.assertEqual(self.invoke('prepare'), 0)
             self.assertEqual(self.invoke('prepare'), 0)
@@ -58,30 +62,34 @@ class PipelineTests(unittest.TestCase):
                 self.assertEqual(len(store.jobs()), 1)
             self.assertEqual(self.invoke('run'), 2)
 
-    def test_prepare_with_manifest_without_key(self):
+    def test_prepare_with_openai_config_without_key(self):
         with patch.dict(os.environ, {}, clear=True):
-            self.assertEqual(self.invoke('prepare', '--provider', str(self.provider)), 0)
-            self.assertEqual(self.invoke('run', '--provider', str(self.provider)), 2)
+            self.assertEqual(self.invoke('prepare'), 0)
+            self.assertEqual(self.invoke('run'), 2)
 
     def test_full_mocked_flow_idempotency_and_changed_evidence_history(self):
         calls = []
         def transport(*args):
             calls.append(args)
-            return 200, {}, {'classification': 'consistent', 'probabilities': {
-                'consistent': .95, 'inconsistent': .03, 'not_relevant': .02}}
+            return 200, {}, response()
         def client(config, **kwargs):
-            return JEVClient(config, transport=transport, **kwargs)
-        with patch.dict(os.environ, {'JEV_API_KEY': 'fixture-secret'}, clear=True), patch.object(cli, 'JEVClient', client):
-            self.assertEqual(self.invoke('run', '--provider', str(self.provider)), 0)
-            self.assertEqual(self.invoke('run', '--provider', str(self.provider)), 0)
+            return OpenAIResponsesClient(config, api_key='fixture-secret', transport=transport, **kwargs)
+        with patch.dict(os.environ, {'OPENAI_API_KEY': 'fixture-secret'}, clear=True), patch.object(cli, 'OpenAIResponsesClient', client):
+            self.assertEqual(self.invoke('run'), 0)
+            self.assertEqual(self.invoke('run'), 0)
             self.assertEqual(len(calls), 1)
             report = json.loads(self.report.read_text())
-            self.assertEqual(report['people']['sample']['statements'][0]['percentage'], 100)
+            self.assertEqual(report['provider']['provider'], 'openai-responses')
+            self.assertEqual(report['provider']['model'], 'gpt-6-luna')
+            statement = report['people']['sample']['statements'][0]
+            self.assertEqual(statement['percentage'], 100)
+            self.assertEqual(statement['actions'][0]['actual_model'], 'gpt-6-luna')
+            self.assertEqual(statement['actions'][0]['probability_semantics'], 'uncalibrated_model_estimates')
             self.assertNotIn('fixture-secret', self.report.read_text())
             data = fixture()
             data['members'][0]['statements'][0]['did']['text'] += ' The program covers all public schools.'
             self.research.write_text(json.dumps(data))
-            self.assertEqual(self.invoke('run', '--provider', str(self.provider)), 0)
+            self.assertEqual(self.invoke('run'), 0)
             self.assertEqual(len(calls), 2)
             with Store(self.db) as store:
                 self.assertEqual(sum(len(store.history(k)) for k in {j['pair_key'] for j in store.jobs()}), 2)
@@ -89,8 +97,8 @@ class PipelineTests(unittest.TestCase):
     def test_missing_source_is_blocked_before_provider_call(self):
         data = fixture(); del data['members'][0]['statements'][0]['did']['src']
         self.research.write_text(json.dumps(data))
-        with patch.dict(os.environ, {'JEV_API_KEY': 'fixture-secret'}, clear=True), patch.object(JEVClient, 'classify', side_effect=AssertionError('must not classify')):
-            self.assertEqual(self.invoke('run', '--provider', str(self.provider)), 0)
+        with patch.dict(os.environ, {'OPENAI_API_KEY': 'fixture-secret'}, clear=True), patch.object(OpenAIResponsesClient, 'classify', side_effect=AssertionError('must not classify')):
+            self.assertEqual(self.invoke('run'), 0)
         result = json.loads(self.report.read_text())['people']['sample']['statements'][0]
         self.assertIsNone(result['percentage'])
         self.assertEqual(result['actions'][0]['status'], 'blocked')

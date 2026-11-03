@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from .records import normalize_research, sources, exact_date
 from .retrieval import select_candidates
 from .aggregate import aggregate_statement
-from .provider import JEVClient, ConfigurationError, load_manifest, manifest_identity, fingerprint, RUBRIC_VERSION
+from .provider import OpenAIResponsesClient, ConfigurationError, load_config, config_identity, fingerprint, RUBRIC_VERSION
 from .storage import Store
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -121,9 +121,8 @@ def publish(store, planned, args, identity, policy):
 
 
 def cycle(args):
-    manifest = load_manifest(args.provider) if args.provider else None
-    identity = manifest_identity(manifest) if manifest else {
-        "model": "unconfigured", "model_version": "unconfigured", "provider_contract_hash": "unconfigured"}
+    config = load_config(args.openai_config)
+    identity = config_identity(config)
     policy = {"version": METHOD_VERSION, "min_resolved": args.min_resolved,
               "candidate_limit": args.candidates, "min_confidence": args.confidence,
               "min_margin": args.margin, "temporal_policy": "per-statement-scope-v1"}
@@ -139,13 +138,10 @@ def cycle(args):
                 fingerprints.append(digest)
                 store.enqueue(key, digest, pair, retry_errors=args.retry_errors)
         if args.command == "run":
-            if not manifest:
+            if not os.environ.get("OPENAI_API_KEY"):
                 publish(store, planned, args, identity, policy)
-                raise ConfigurationError("JEV provider documentation and a verified provider manifest are required; no requests were made")
-            if not os.environ.get("JEV_API_KEY"):
-                publish(store, planned, args, identity, policy)
-                raise ConfigurationError("Set JEV_API_KEY in the server environment; no requests were made")
-            client = JEVClient(manifest, min_confidence=args.confidence, min_margin=args.margin)
+                raise ConfigurationError("Set OPENAI_API_KEY in the server environment; no requests were made")
+            client = OpenAIResponsesClient(config, min_confidence=args.confidence, min_margin=args.margin)
             for _ in range(args.limit):
                 job = store.claim(fingerprints=fingerprints)
                 if not job:
@@ -163,7 +159,8 @@ def cycle(args):
             # Export even with an empty queue: incremental reruns remain idempotent.
         document = publish(store, planned, args, identity, policy)
         print(json.dumps({"profiles": len(document["people"]), "statements": len(planned),
-                          "selected_pairs": len(fingerprints), "provider_configured": bool(manifest),
+                          "selected_pairs": len(fingerprints), "provider_configured": True,
+                          "credentials_configured": bool(os.environ.get("OPENAI_API_KEY")),
                           "output": str(args.output), "queue": store.summary()}, sort_keys=True))
     return 0
 
@@ -176,7 +173,7 @@ def main(argv=None):
     parser.add_argument("--records", help="Additional normalized sourced records matched by canonical ID")
     parser.add_argument("--database", default=str(ROOT / ".local/consistency.sqlite"))
     parser.add_argument("--output", default=str(ROOT / "public/consistency.json"))
-    parser.add_argument("--provider", default=os.environ.get("JEV_PROVIDER_CONFIG"))
+    parser.add_argument("--openai-config", default=os.environ.get("OPENAI_PROVIDER_CONFIG", str(ROOT / "data/consistency/openai-responses.json")))
     parser.add_argument("--limit", type=int, default=20, help="Maximum pairs per run; each may retry up to three requests")
     parser.add_argument("--candidates", type=int, default=20)
     parser.add_argument("--min-resolved", type=int, default=1)

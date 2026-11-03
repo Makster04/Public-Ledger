@@ -13,7 +13,7 @@ test('consistency renders scored, irrelevant, unresolved and earlier evidence wi
   assert.match(html,/50%/);assert.match(html,/✓ 1 consistent/);assert.match(html,/✕ 1 inconsistent/);assert.match(html,/— 1 not relevant/);assert.match(html,/\? 1 need review/);
   assert.match(html,/context only/);assert.match(html,/Before statement/);assert.match(html,/Provisional classification: Consistent/);
   assert.match(html,/4 of 5 selected action candidates evaluated/);assert.match(html,/40% of selected candidates/);assert.match(html,/not every action/);
-  assert.match(html,/href="https:\/\/example.org\/vote"/);assert.match(html,/Model category probabilities/);assert.match(html,/91%/);assert.match(html,/separate from the reviewed Promises Delivered grade/);
+  assert.match(html,/href="https:\/\/example.org\/vote"/);assert.match(html,/Uncalibrated model-estimated category scores/);assert.match(html,/not calibrated probabilities/);assert.match(html,/91%/);assert.match(html,/separate from the reviewed Promises Delivered grade/);
 });
 
 test('insufficient and absent evidence never becomes a perfect or zero score',()=>{
