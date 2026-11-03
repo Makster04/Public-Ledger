@@ -27,9 +27,25 @@ test('financial overview preserves annual ranges, periods and missing coverage w
     assert.equal(result.people.booker.netWorth.low,1001);assert.equal(result.people.booker.netWorth.high,null);
     assert.deepEqual(result.people.booker.netWorth.assets,annual.assets);
     assert.deepEqual(result.people.booker.coverage,{netWorth:true,trades:false,campaign:false});
+    assert.equal(result.sourceCoverage.booker['net-worth-senate'].status,'pending');
+    assert.equal(result.sourceCoverage.booker['net-worth-senate'].stale,true);
     assert.equal(result.people.collins.netWorth,null);assert.equal(result.people.collins.campaign.end,'2026-06-30');
     assert.deepEqual(result.people.collins.trades,[]);assert.equal(result.people['untracked-person'],undefined);
     assert.equal(result.checkedAt,'2026-11-01T12:00:00.000Z');
+  }finally{db.close();}
+});
+
+test('financial overview exposes failed disclosure imports separately from empty holdings or trade rows',async()=>{
+  const db=database();
+  try{
+    await addJob(db,'trades-senate:ossoff','trades-senate','ossoff',{});
+    await addJob(db,'net-worth-senate:ossoff','net-worth-senate','ossoff',{});
+    await statement(db,"UPDATE jobs SET status='error',error='efdsearch.senate.gov returned HTTP 403' WHERE id='trades-senate:ossoff'").run();
+    const result=await getFinanceOverview({DB:db});
+    assert.equal(result.people.ossoff.trades.length,0);
+    assert.equal(result.sourceCoverage.ossoff['trades-senate'].status,'error');
+    assert.equal(result.sourceCoverage.ossoff['trades-senate'].error,'efdsearch.senate.gov returned HTTP 403');
+    assert.equal(result.sourceCoverage.ossoff['net-worth-senate'].status,'pending');
   }finally{db.close();}
 });
 

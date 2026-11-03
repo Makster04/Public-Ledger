@@ -4,7 +4,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {assetKind,holdingsLead,holdingsReview,stockTradesSince} from '../public/holdings.js';
+import {assetKind,holdingsLead,holdingsReview,stockTradesSince,reviewedHoldingsSummary,officialDisclosureCoverage} from '../public/holdings.js';
 import {ethicsScore,tradeChecks,HOLDINGS,INSIDER} from '../public/grades.js';
 import {makeScorer} from '../public/scoring.js';
 import {holdingsReport} from '../scripts/review-holdings.mjs';
@@ -35,6 +35,21 @@ test('the latest report gives a lead: a blind trust, no individual stocks, or st
   assert.equal(holdingsReview({status:'no-stocks'},s),'differs');
   assert.equal(holdingsReview(null,b),'lead');assert.equal(holdingsReview(null,s),null,'holding stocks is the usual case, not a lead');
   assert.equal(holdingsReview({status:'blind-trust'},null),null);
+});
+
+test('reviewed holdings notes remain usable without a live disclosure snapshot',()=>{
+  const people=[...D.members,...D.cands],ossoff=people.find(p=>p.id==='ossoff'),hinson=people.find(p=>p.id==='hinson');
+  assert.match(reviewedHoldingsSummary(ossoff.holdings).note,/qualified blind trust/i);
+  assert.match(reviewedHoldingsSummary(ossoff.holdings).source.u,/ossoff\.senate\.gov/);
+  assert.match(reviewedHoldingsSummary(hinson.holdings).note,/private stock/i);
+  assert.equal(reviewedHoldingsSummary(hinson.holdings).since,'2021');
+});
+
+test('missing or stale disclosure imports stay unknown, not a clean no-trades result',()=>{
+  assert.equal(officialDisclosureCoverage(null).complete,false);
+  assert.match(officialDisclosureCoverage({status:'error',error:'source returned HTTP 403'}).reason,/403/);
+  assert.equal(officialDisclosureCoverage({status:'ready',stale:true}).complete,false);
+  assert.equal(officialDisclosureCoverage({status:'ready',stale:false}).complete,true);
 });
 
 const trades=n=>Array.from({length:n},(_,i)=>({traded:`2025-0${1+i%9}-10`,filed:`2025-0${1+i%9}-20`,amount:'$1,001 - $15,000',sector:'Technology',asset:'stock'}));

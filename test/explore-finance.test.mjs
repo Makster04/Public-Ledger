@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {buildRankingRows,stockHoldingRange,collectStockData,filterStockRows,reviewedHoldingNotes} from '../public/explore-finance.js';
+import {buildRankingRows,stockHoldingRange,collectStockData,filterStockRows,reviewedHoldingNotes,summarizeDisclosureCoverage} from '../public/explore-finance.js';
 
 const people=[
   {id:'a',name:'Member A',party:'D',state:'NJ',stateName:'New Jersey',chamber:'S',camp:{receipts:1000,pac:100,start:'2025-01-01',end:'2026-06-30'},pac:{rows:[[0,50],[1,20],[2,30]],window:'2025–26'}},
@@ -54,4 +54,13 @@ test('reviewed holdings notes stay visible without fabricating itemized holdings
   assert.equal(notes.length,1);assert.equal(notes[0].status,'blind-trust');assert.equal(notes[0].source,'https://example.gov/statement');
   assert.equal(notes[0].note,person.holdings.note);assert.deepEqual(collectStockData([person],{}),{trades:[],holdings:[]});
   assert.equal(buildRankingRows([person],{},{} ,'holdings').length,0,'a status is not a portfolio valuation');
+});
+
+test('stock explorer distinguishes current disclosure coverage from missing activity rows',()=>{
+  const coverage=summarizeDisclosureCoverage(people,{a:{'trades-senate':{status:'error',error:'eFD returned HTTP 403'},'net-worth-senate':{status:'pending'}},
+    b:{'trades-house':{status:'ready',stale:false},'net-worth-house':{status:'ready',stale:true}}});
+  assert.deepEqual(coverage.trades,{ready:1,total:2});
+  assert.deepEqual(coverage.holdings,{ready:0,total:2});
+  assert.equal(coverage.issues.length,3);
+  assert.ok(coverage.issues.some(x=>x.person.id==='a'&&x.reason.includes('403')));
 });

@@ -1,6 +1,6 @@
 // Cross-profile financial views read completed snapshots; they never refresh sources or score records.
 import config from '../data/config.json' with {type:'json'};
-import {initialize,statement} from './refresh.mjs';
+import {getStatus,statement} from './refresh.mjs';
 import {mergeTrades} from './merge.mjs';
 import {SINCE} from './feeds.mjs';
 
@@ -12,7 +12,12 @@ const newerAnnual=(a,b)=>Number(a.year||0)-Number(b.year||0)||String(a.filed||''
 
 /** One bounded, local query for the same finance records already available on individual profiles. */
 export async function getFinanceOverview(env){
-  await initialize(env.DB);
+  const sourceStatus=await getStatus(env);
+  const sourceCoverage={};
+  for(const job of sourceStatus.jobs){
+    if(!config.people.some(p=>p.id===job.subject)||!ANNUAL_KINDS.concat(TRADE_KINDS).includes(job.kind))continue;
+    (sourceCoverage[job.subject]||={})[job.kind]={status:job.status,stale:job.stale,last_success:job.last_success,error:job.error};
+  }
   const rows=(await statement(env.DB,`SELECT j.subject,j.kind,s.payload,s.updated_at FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN (${KINDS.map(()=>'?').join(',')}) ORDER BY s.updated_at,s.job_id`,...KINDS).all()).results;
   const known=new Set(config.people.map(p=>p.id)),sections=new Map(),filings=new Map();
   let sectors={};
@@ -51,5 +56,9 @@ export async function getFinanceOverview(env){
     if(own.campaign)entry.campaign=own.campaign;
     people[id]=entry;checkedAt=latest(checkedAt,ownChecked);
   }
-  return {people,checkedAt};
+  // Return explicit empty sections for configured people even when their imports have never completed. The separate
+  // sourceCoverage map explains those absences; an empty record list is never presented as a no-activity finding.
+  for(const person of config.people)people[person.id]||={netWorth:null,trades:[],tradesUnread:[],checkedAt:null,
+    coverage:{netWorth:false,trades:false,campaign:false},tradesTruncated:false,campaign:null};
+  return {people,sourceCoverage,checkedAt};
 }

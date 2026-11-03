@@ -48,6 +48,20 @@ export function holdingsReview(reviewed,lead){
   if(!r)return lead.status==='stocks'?null:'lead';
   return r===lead.status?'agrees':'differs';
 }
+// Turn a reviewed note into display data independently of the live annual-report import. A missing snapshot must not
+// hide existing research or be mistaken for evidence that the person owns no stocks.
+export function reviewedHoldingsSummary(reviewed){
+  if(!reviewed||!HOLDINGS[reviewed.status])return null;
+  return {label:HOLDINGS[reviewed.status],since:reviewed.since||null,note:reviewed.note||null,
+    source:reviewed.src||null,also:reviewed.also||null};
+}
+// Official source coverage is separate from the presence or absence of rows. Only a recent, successfully published
+// import supports saying that the source was checked; every other state leaves activity unknown.
+export function officialDisclosureCoverage(job){
+  if(!job)return {complete:false,reason:'No official disclosure import is configured for this profile.'};
+  if(job.status==='ready'&&!job.stale)return {complete:true,reason:null};
+  return {complete:false,reason:job.error||'The latest official disclosure import has not completed.'};
+}
 // Reviewed trades in individual stocks after a "no-stocks" status began: the status can't be right as written.
 export function stockTradesSince(holdings,trades){
   if(holdings?.status!=='no-stocks'||!holdings.since)return [];
