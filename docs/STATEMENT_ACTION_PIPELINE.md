@@ -60,11 +60,11 @@ The manifest validator now requires an explicit `auth_prefix` and checks `Author
 2. Copy `.dev.vars.example` to the ignored local `.dev.vars` file if needed, and set `OPENAI_API_KEY=…`. Alternatively export `OPENAI_API_KEY` only in the server-side worker shell. Do not paste the key into chat, source control, the configuration file, or browser code.
 3. Run `npm run consistency:prepare` to refresh the queue without network calls, then `npm run consistency:run -- --limit 20` to classify at most 20 eligible pairs. The reviewed config is selected by default; `--openai-config PATH` is available for explicit testing. `npm run consistency:export` republishes saved results. `npm start` does not run classifications.
 
-The default worker makes individual requests, not provider batch jobs. It uses bounded retries for transient network/server errors, honors `Retry-After`, records deferrals, and never retries authentication failures automatically. Run it from a Python-capable environment with access to `api.openai.com`; the Cloudflare Worker only serves the saved report. GPT-6 Luna is the documented cost-sensitive, high-volume option selected for this workload. Its API model availability still depends on the user's API project and limits.
+The default worker makes individual requests, not provider batch jobs. It uses bounded retries for transient network/server errors, honors `Retry-After`, records deferrals, and never retries authentication failures automatically. Run it from a Python-capable environment with access to `api.openai.com`; the Cloudflare Worker only serves the saved report. TLS certificate verification is always enabled. If the Python distribution has no default CA bundle, install the optional `certifi` package with `python3 -m pip install certifi`; the adapter uses it when available and otherwise falls back to Python's configured CA roots. GPT-6 Luna is the documented cost-sensitive, high-volume option selected for this workload. Its API model availability still depends on the user's API project and limits.
 
 ## Running the pipeline
 
-Python 3.10+ and the project's Node version are required. Python uses the standard library; no Python dependencies or optional LLM are needed.
+Python 3.10+ and the project's Node version are required. The classifier uses Python's standard library; `certifi` is optional for installations without a system CA bundle. No optional LLM is used.
 
 ```sh
 npm run consistency:prepare

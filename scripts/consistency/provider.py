@@ -3,6 +3,7 @@ import hashlib
 import json
 import math
 import os
+import ssl
 import time
 import urllib.error
 import urllib.parse
@@ -211,9 +212,21 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
+def verified_tls_context():
+    """Return a certificate-validating TLS context with portable CA roots."""
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
 def http_transport(endpoint, headers, body, timeout):
     request = urllib.request.Request(endpoint, data=canonical(body).encode(), headers=headers, method="POST")
-    opener = urllib.request.build_opener(_NoRedirect())
+    # Some Python distributions (including the framework build on macOS) do
+    # not install a default CA bundle. Use certifi when present; never disable
+    # certificate verification. Otherwise retain Python's configured trust.
+    opener = urllib.request.build_opener(_NoRedirect(), urllib.request.HTTPSHandler(context=verified_tls_context()))
     try:
         response = opener.open(request, timeout=timeout)
     except urllib.error.HTTPError as error:
