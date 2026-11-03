@@ -25,7 +25,7 @@ The index is higher when donor alignment is greater. It is a distinct measure fr
 - **Outside spending:** independent expenditures for/against the candidate. Shown separately from campaign receipts; not treated as money controlled by the campaign and not included in the described grades.
 - **Bundled/routed gifts:** selected conduit committee reports are currently partial. A partial list cannot establish complete earmark coverage or prove no earmarks.
 - **Monthly donation series, donor-company trading, lobbyist overlap, employer giving, contracts, and flags:** shown as data or review leads only unless a guide explicitly says an implemented score consumes that field. No proposed “Super PAC Dependence,” “Lobbyist Overlap,” “Contracts for Donors,” or “Foreign Agent” measure is currently a graded index.
-- **Net worth and holdings:** sourced annual disclosure ranges and asset descriptions are shown, but net worth is not part of the published Ethics grade. Individual stock holding values enter only the Integrity preview when a reviewed snapshot has complete coverage and readable individual-stock ranges.
+- **Net worth and holdings:** sourced annual disclosure ranges and asset descriptions are shown, but net worth is not part of any grade. Individual stock holding values enter only Integrity's Personal Finances component when a reviewed snapshot has complete coverage and readable individual-stock ranges.
 
 ## Data limits
 

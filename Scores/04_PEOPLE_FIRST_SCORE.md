@@ -2,7 +2,7 @@
 
 **How consistently do this politician's legislative actions prioritize working people?**
 
-**Status: published grade.** People First was called Workers > Profit until Nov. 3, 2026. The name changed; the approved calculations stay the same. It is a methodology-based comparison of documented actions, not a claim about intent.
+**Status: published grade.** It is a methodology-based comparison of documented actions, not a claim about intent.
 
 People First combines the effects of their legislative actions with the Corporation Compromised Index:
 
@@ -55,7 +55,7 @@ Available component weights are normalized, but the business-PAC-share component
 
 The comparison preview removes the direct business-PAC-share component, so money sources are not penalized twice (they are already in Integrity's Fundraising component). It reweights the available employee-giving (10%), business-funder voting-alignment (35%) and lobbied-bill (20%) evidence, normalized over the parts that exist. The preview comparison is `0.75 × legislative-action score + 0.25 × (100 − preview CCI)`, or the legislative-action score alone when the preview CCI is unavailable.
 
-**The published People First calculation continues using the existing CCI until this revision is explicitly adopted.** Employee-giving and lobbied-bill inputs are not yet built or reviewed, so the preview has limited coverage, and it never changes the published grade.
+**The published People First calculation continues using the existing CCI until this revision is explicitly adopted.** The preview never changes the published grade.
 
 ## Methodology status
 
