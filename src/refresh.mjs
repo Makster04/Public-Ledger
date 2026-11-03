@@ -1,6 +1,6 @@
 import config from '../data/config.json' with {type:'json'};
 import COMMITTEES from '../public/committees.json' with {type:'json'};
-import {fetchPage,summarize,SourceError,requestSource,missingKey,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
+import {fetchPage,summarize,SourceError,describeFailure,requestSource,missingKey,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
 import {FEEDS,FEED_KINDS,RETIRED_FEEDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,mergeHearings,mergeLegal,mergeStatements,donorOrgs} from './merge.mjs';
 
@@ -183,8 +183,8 @@ export async function runRefresh(env,{steps=8}={}) {
         const after=FEEDS[job.kind]?.after||AFTER[job.kind];if(after)await after(snapshot,job,chainContext(db));
         if(job.kind==='house-next'&&result.nextProbe)await statement(db,'UPDATE jobs SET args=? WHERE id=?',JSON.stringify({...JSON.parse(job.args),number:result.nextProbe}),job.id).run();
       }catch(error){
-        // Never save upstream URLs or response bodies: they may contain API credentials.
-        const message=error instanceof SourceError?error.message:'Source request or validation failed; previous data retained';
+        // Never save upstream URLs or response bodies: they may contain API credentials (see describeFailure).
+        const message=error instanceof SourceError?error.message:describeFailure(error);
         const delay=Math.max(error.retryAfter||0,Math.min(DAY,60_000*2**Math.min(job.failures,10)));
         await db.batch([
           statement(db,"UPDATE jobs SET status='error',failures=failures+1,last_attempt=?,error=?,next_due=?,run_id=NULL,cursor=NULL,page=0 WHERE id=?",nowISO(),message,Date.now()+delay,job.id),

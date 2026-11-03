@@ -69,12 +69,43 @@ export function missingKey(host,env){
 }
 export class SourceError extends Error { constructor(message, retryAfter=0,statusCode=0){super(message);this.retryAfter=retryAfter;this.statusCode=statusCode;} }
 
+// The message saved for a failed check that isn't a SourceError: what kind of failure it was, and for an error inside our
+// own code the file and line it came from. Built only from fixed wording, error names, system error codes and source
+// file names, never from an error's own text, which can contain a request URL and so a key.
+const SAFE_WORD=/^[A-Za-z_$][\w$]{0,40}$/;
+function codeLocation(error){
+  for(const line of String(error?.stack||'').split('\n').slice(1)){
+    const m=line.match(/[\\/](src|scripts|public)[\\/]([\w.-]+\.m?js):(\d+):\d+/);
+    if(m)return `${m[2]}:${m[3]}`;
+  }
+  return null;
+}
+export function describeFailure(error){
+  const kept='; previous data retained',name=SAFE_WORD.test(error?.name||'')?error.name:'Unknown';
+  if(name==='TimeoutError'||name==='AbortError')return `Timed out: no complete reply within 20 seconds${kept}`;
+  const cause=error?.cause,code=[cause?.code,error?.code].find(c=>typeof c==='string'&&/^[A-Z][A-Z0-9_]{1,40}$/.test(c));
+  if(name==='TypeError'&&/^(fetch failed|terminated)$/.test(String(error?.message))){
+    if(/unexpected redirect/i.test(String(cause?.message)))return `Source redirected unexpectedly${kept}`;
+    if(code==='UND_ERR_CONNECT_TIMEOUT'||cause?.name==='ConnectTimeoutError')return `Could not connect: the source did not answer${kept}`;
+    return `Could not connect${code?` (${code})`:''}: the connection failed or was dropped${kept}`;
+  }
+  if(code&&/^ERR_SQLITE|^SQLITE/.test(code))return `Local database error (${code})${kept}`;
+  const where=codeLocation(error),at=where?` at ${where}`:'';
+  if(name==='SyntaxError')return `The reply could not be read${at}${kept}`;
+  if(name==='TypeError'){
+    const field=String(error?.message).match(/reading '([^']{1,40})'/)?.[1];
+    const what=field&&SAFE_WORD.test(field)?`the reply was missing an expected field (${field})`:'the reply had an unexpected shape';
+    return `Unexpected reply or a bug in our reader: ${what}${at}${kept}`;
+  }
+  return `Unexpected ${name}${at}${kept}`;
+}
+
 // as: 'json' (default), 'xml', 'text' or 'bytes'. A body is sent as JSON with POST, and a form as an HTML form post.
 // allow lists HTTP statuses that return null instead of failing (allow404 is the same as allow:[404]); a 3xx in allow
 // is returned rather than followed. follow allows up to 3 redirects, each to an approved https host; otherwise any
 // redirect fails. headers adds request headers (never a credential header); withHeaders returns {body, status,
 // headers} so a caller can read the response's cookies.
-export async function requestSource(url, env, {json=true,as=json?'json':'xml',allow404=false,allow=allow404?[404]:[],follow=false,body=null,form=null,headers:extra=null,withHeaders=false}={}) {
+export async function requestSource(url, env, {json=true,as=json?'json':'xml',allow404=false,allow=allow404?[404]:[],follow=false,body=null,form=null,headers:extra=null,withHeaders=false,maxChars=12_000_000}={}) {
   let u=new URL(url),h=hostRule(u.hostname); if(u.protocol!=='https:' || !h) throw new SourceError('Unapproved data source');
   const missing=missingKey(u.hostname,env);if(missing)throw new SourceError(`${missing} API key needed`);
   const headers={Accept:as==='json'?'application/json':as==='xml'?'application/rss+xml,application/atom+xml,application/xml,text/xml':'*/*'};
@@ -106,7 +137,7 @@ export async function requestSource(url, env, {json=true,as=json?'json':'xml',al
     throw new SourceError(`${u.hostname} returned HTTP ${response.status}`,seconds*1000,response.status);
   }
   if(as==='bytes'){const b=new Uint8Array(await response.arrayBuffer());if(b.length>40_000_000)throw new SourceError('Source response exceeds safe page size');return out(b);}
-  const text=await response.text(); if(text.length>12_000_000) throw new SourceError('Source response exceeds safe page size');
+  const text=await response.text(); if(text.length>Math.min(maxChars,40_000_000)) throw new SourceError('Source response exceeds safe page size');
   if(as==='text')return out(text);
   if(as==='json') { try {
     // FEC identifiers can exceed JavaScript's safe integer range. Preserve them before parsing.
