@@ -83,6 +83,14 @@ async function wikidata(fecIds){
 }
 
 // Fills in config.people (in place) and returns the committee file and a summary line.
+// The first and last year of state legislative service in the research's own entries ("Texas House, District 50,
+// 2023–present", "Ohio House, August 2016–January 2025"), so a career that ended before Open States and LegiScan
+// cover a state isn't searched for. "present" is the current year.
+export function stateLegYears(entries,now=new Date().getUTCFullYear()){
+  const years=[];
+  for(const e of entries||[])for(const m of String(e).matchAll(/(\d{4})\s*[–-]\s*(?:[A-Za-z]+\.?\s+)?(\d{4}|present)/gi))years.push(Number(m[1]),/present/i.test(m[2])?now:Number(m[2]));
+  return years.length?[Math.min(...years),Math.max(...years)]:null;
+}
 export async function buildIds([current,historical,social,committees,membership],config,research){
   const profiles=new Map([...research.members,...research.cands,...(research.featured||[])].map(s=>[s.id,s]));
   const profiled=p=>profiles.has(p.id)||p.basic;
@@ -111,6 +119,7 @@ export async function buildIds([current,historical,social,committees,membership]
     p.official=p.inOffice?officialOf(x):null;
     // State legislative service, for the Open States and LegiScan jobs (the legislature of the state they run in).
     p.stateLeg=(s.stateLeg||[]).length?p.state:null;
+    p.stateLegYears=p.stateLeg?stateLegYears(s.stateLeg):null;
     // A featured officeholder's site is the official one, not a campaign site to snapshot.
     p.campaignSite=s.office?null:s.cand?(s.site||null):(p.campaignSite||null);
     p.openstates=p.openstates||null;p.legiscan=p.legiscan||null;
