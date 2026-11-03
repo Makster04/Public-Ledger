@@ -416,6 +416,10 @@ footer b { color: var(--ink-2); }
 .gr-B { color: var(--grade-b); }
 .gr-C, .gr-D { color: var(--warn); }
 .gr-F { color: var(--crit); }
+.score-tone { color: var(--neutral); }
+@supports (color: color-mix(in srgb, var(--crit), var(--good))) {
+  .score-tone { color: color-mix(in srgb, var(--crit) calc(100% - var(--score-goodness)), var(--good) var(--score-goodness)); }
+}
 .hero-stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
 .hero-stats > div, .hero-stats > span, .hero-stats > a { border: 1px solid var(--line); border-radius: 9px; padding: 10px 15px; background: #202020; font-size: .78rem; color: var(--muted); }
 .hero-stats b, .hero-stats strong { color: var(--ink); margin-right: 6px; font-family: var(--font-mono); font-size: 1rem; }
