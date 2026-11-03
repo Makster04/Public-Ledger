@@ -12,7 +12,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
-import {holdingsLead} from './holdings.js';
+import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -1068,14 +1068,27 @@ function ovEthicsCard(s){
 // The ethics card, with a line for the net-worth range from the member's latest annual disclosure (filled from the refresh).
 function ovEthics(s){
   const card=ovEthicsCard(s),at=card.lastIndexOf('</section>');
-  return at<0?card:card.slice(0,at)+`<div class="ov-networth" data-networth="${esc(s.id)}" hidden></div>`+card.slice(at);
+  const reviewed=reviewedHoldingsSummary(s.holdings);
+  const citation=src=>src?.u?` · <a href="${esc(src.u)}" target="_blank" rel="noopener noreferrer">${esc(src.t||'source')} ↗</a>`:'';
+  const reviewedHTML=reviewed?`<p class="small ov-holdings-note"><b>Reviewed holdings note:</b> ${esc(reviewed.note||reviewed.label)}${reviewed.since?` (since ${esc(reviewed.since)})`:''}${citation(reviewed.source)}${citation(reviewed.also)}</p>`:'';
+  return at<0?card:card.slice(0,at)+`<div class="ov-networth" data-networth="${esc(s.id)}">${reviewedHTML}</div>`+card.slice(at);
 }
 async function fillNetWorth(root){
   for(const el of root.querySelectorAll('.ov-networth[data-networth]')){
-    let x;try{x=await window.RecordLive.netWorth(el.dataset.networth);}catch{continue;}
-    if(!x||!el.isConnected)continue;el.hidden=false;
+    let x=null,coverage=null;try{x=await window.RecordLive.netWorth(el.dataset.networth);}catch{}
+    if(!el.isConnected)continue;
+    if(!x){try{coverage=await window.RecordLive.netWorthStatus(el.dataset.networth);}catch{}}
+    if(!x){
+      const note=el.innerHTML;
+      const why=coverage?.error?`The latest import reported: ${esc(coverage.error)}.`:
+        coverage?.last_success?`Last successful import: ${esc(new Date(coverage.last_success).toLocaleDateString())}.`:
+        'No completed disclosure import is available.';
+      el.innerHTML=`<p class="small ov-holdings-status"><b>Current holdings and trades:</b> unknown. ${why} Missing data does not mean no holdings or no trades. <a href="#updates">Check source coverage</a>.</p>${note}`;
+      continue;
+    }
+    const reviewed=el.innerHTML;
     const lead=holdingsLead(x),held=lead?(lead.status==='stocks'?` It lists ${lead.stocks} individual stock${lead.stocks===1?'':'s'} or option${lead.stocks===1?'':'s'}.`:lead.status==='blind-trust'?' It lists a qualified blind trust.':' It lists no individual stocks.'):'';
-    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper; not read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}.${held} <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>`;
+    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper or could not be read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}.${held} <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>${reviewed}`;
   }
 }
 
