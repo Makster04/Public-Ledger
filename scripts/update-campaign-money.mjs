@@ -42,13 +42,17 @@ export function nomineeFromTotals(r,old){
   if(receipts==null||!through)return {problem:'the FEC totals have no receipts or reporting date'};
   if(old?.through&&through<old.through)return {problem:`the FEC's latest totals end ${through}, before the ${old.through} figures on file`};
   if(old?.through===through)return {same:true};
-  return {nominee:{...old,receipts:cents(receipts),cash:cents(n(r.last_cash_on_hand_end_period)),through}};
+  // First figures for someone who had none: the note saying they weren't found no longer applies.
+  return {nominee:{...old,receipts:cents(receipts),cash:cents(n(r.last_cash_on_hand_end_period)),through,...(old?.receipts==null?{campNote:''}:{})}};
 }
 
 const money=v=>v==null?'—':`$${Math.round(v).toLocaleString('en-US')}`;
+// A report ending this long before the newest one found is probably an old campaign's committee (a candidate ID from
+// an earlier run), not this race's: it is listed as CHECK and not saved.
+export const STALE_DAYS=120;
 // Every update, as lines to print. totals(kind, id) gives the FEC result for a committee or a candidate (or null).
 export async function updateMoney(research,totals,{cycle=config.cycle}={}){
-  const lines=[],people=[...research.members,...research.cands];let changed=0;
+  const lines=[],people=[...research.members,...research.cands],updates=[];let changed=0;
   for(const p of people){
     const old=p.camp;if(!old?.cmteId){lines.push(`SKIP  ${p.name}: no campaign committee on file`);continue;}
     const r=await totals('committee',old.cmteId,cycle);
@@ -56,6 +60,7 @@ export async function updateMoney(research,totals,{cycle=config.cycle}={}){
     const u=campFromTotals(r,old);
     if(u.problem){lines.push(`CHECK ${p.name}: ${u.problem}; left as is`);continue;}
     if(u.same){lines.push(`SAME  ${p.name}: already through ${old.end}`);continue;}
+    const label=p.cycleLabel;updates.push({end:u.camp.end,who:p.name,undo:()=>{p.camp=old;p.cycleLabel=label;}});
     p.camp=u.camp;p.cycleLabel=periodLabel(u.camp.start,u.camp.end);changed++;
     const pacMove=old.pac!=null&&u.camp.pac!==old.pac?`, PACs ${money(old.pac)} → ${money(u.camp.pac)}`:'';
     lines.push(`NEW   ${p.name}: ${old.missing?'first report':`through ${old.end} →`} ${u.camp.end}, raised ${old.missing?'':`${money(old.receipts)} → `}${money(u.camp.receipts)}${pacMove}, cash ${money(u.camp.cash)}${u.camp.note?` (note kept: "${u.camp.note.slice(0,90)}"; check it still fits)`:''}`);
@@ -67,8 +72,15 @@ export async function updateMoney(research,totals,{cycle=config.cycle}={}){
     const u=nomineeFromTotals(r,nm);
     if(u.problem){lines.push(`CHECK ${nm.name} (${race.label}): ${u.problem}; left as is`);continue;}
     if(u.same)continue;
+    updates.push({end:u.nominee.through,who:`${nm.name} (${race.label})`,undo:()=>{race.nominees[i]=nm;}});
     race.nominees[i]=u.nominee;changed++;
     lines.push(`NEW   ${nm.name} (${race.label}): through ${nm.through||'—'} → ${u.nominee.through}, raised ${money(nm.receipts)} → ${money(u.nominee.receipts)}`);
+  }
+  const newest=updates.map(x=>x.end).sort().at(-1);
+  for(const x of updates)if(Date.parse(newest)-Date.parse(x.end)>STALE_DAYS*864e5){
+    x.undo();changed--;
+    const at=lines.findIndex(l=>l.startsWith(`NEW   ${x.who}:`));
+    lines[at]=`CHECK ${x.who}: the FEC's report ends ${x.end}, long before the others (${newest}); probably an old campaign's committee, so left as is`;
   }
   return {lines,changed};
 }

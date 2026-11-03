@@ -62,3 +62,18 @@ test('the whole update: people and toss-up nominees, the president left alone, a
   assert.ok(out.lines.some(l=>/^SAME  .*no FEC totals for 2026 yet/.test(l)));
   assert.equal(nomineeFromTotals({receipts:1,coverage_end_date:'2026-01-01'},{through:'2026-06-30'}).problem.includes('before'),true);
 });
+
+test('a report ending long before the others is left out, and first figures clear the old note',async()=>{
+  const r=research();
+  const lookup=async(kind,id)=>{
+    if(kind==='committee'&&id==='C00718866')return totals();
+    if(kind==='candidate'&&id==='H8VA02111')return {cycle:2026,receipts:591,last_cash_on_hand_end_period:0,coverage_end_date:'2025-07-15T00:00:00'};
+    if(kind==='candidate'&&id==='H6NC11321')return {cycle:2026,receipts:399492,last_cash_on_hand_end_period:100000,coverage_end_date:'2026-10-14T00:00:00'};
+    return null;};
+  const out=await updateMoney(r,lookup);
+  const nominee=name=>r.liteRaces.flatMap(x=>x.nominees).find(x=>x.name===name);
+  assert.equal(nominee('Elaine Luria').receipts,null,'an old committee\'s $591 from July 2025 is not saved');
+  assert.ok(out.lines.some(l=>l.startsWith("CHECK Elaine Luria (Virginia VA-02): the FEC's report ends 2025-07-15, long before the others (2026-10-14)")));
+  assert.equal(nominee('Jennifer Balkcom').receipts,399492);assert.equal(nominee('Jennifer Balkcom').campNote,'','the "not found" note goes with her first figures');
+  assert.equal(out.changed,2);
+});
