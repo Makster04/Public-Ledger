@@ -1,6 +1,8 @@
 // A portable view of the same reviewed scores shown on the profile. No scoring is done here.
 const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
-const LABELS=['Your match','Promises delivered','Ethics','People First'];
+// The three primary grades, in the order the profile shows them.
+const LABELS=['Your Match','Integrity','People First'];
+const TILE={x:40,gap:16,width:296};
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
 const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
@@ -27,14 +29,14 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
   const raw=Array.isArray(model.grades)?model.grades:[];
   const grades=LABELS.map((label,i)=>({label,...(raw[i]||{}),value:finite(raw[i]?.value)?Math.max(0,Math.min(100,raw[i].value)):null}));
   const panels=grades.map((grade,i)=>{
-    const x=40+i*234,y=694,personal=i===0&&model.matchConfigured===false,graded=grade.value!==null;
+    const x=TILE.x+i*(TILE.width+TILE.gap),y=694,personal=i===0&&model.matchConfigured===false,graded=grade.value!==null;
     const display=graded?letter(grade.value):personal?'Set your priorities':'Not graded';
-    return `<rect x="${x}" y="${y}" width="218" height="330" rx="14" fill="url(#tile)" stroke="${p.accent}" stroke-opacity=".58"/>
+    return `<rect x="${x}" y="${y}" width="${TILE.width}" height="330" rx="14" fill="url(#tile)" stroke="${p.accent}" stroke-opacity=".58"/>
       <path d="M${x+22} ${y+27}h32" stroke="${p.accent}" stroke-width="4"/>
-      ${text(grade.label.toUpperCase(),x+22,y+68,{size:17,color:p.accent,weight:700,width:17,max:2})}
-      ${text(display,x+22,y+155,{size:graded?76:25,color:graded?GRADE_COLORS[letter(grade.value)]:personal?'#eff2f8':'#a7b0be',weight:700,width:12,max:2})}
+      ${text(grade.label.toUpperCase(),x+22,y+68,{size:17,color:p.accent,weight:700,width:24,max:2})}
+      ${text(display,x+22,y+155,{size:graded?76:25,color:graded?GRADE_COLORS[letter(grade.value)]:personal?'#eff2f8':'#a7b0be',weight:700,width:17,max:2})}
       ${graded?text(`${Math.round(grade.value)} / 100`,x+22,y+208,{size:24,weight:700,width:14}):''}
-      ${text(grade.detail||(personal?'Personal to you':'Reviewed evidence required'),x+22,y+266,{size:17,color:'#b6c0cf',width:19,max:3})}`;
+      ${text(grade.detail||(personal?'Personal to you':'Reviewed evidence required'),x+22,y+266,{size:17,color:'#b6c0cf',width:27,max:3})}`;
   }).join('');
   const nameLines=lines(name,20,3),nameSize=name.length>36?39:49;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1230" viewBox="0 0 1000 1230" role="img" aria-labelledby="title desc">
@@ -58,13 +60,13 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     ${text('Cash on hand',694,504,{size:17,color:'#b6c0cf',width:23})}
     ${text(amount(model.cash),694,543,{size:31,weight:700,width:15,max:2})}
     ${text(model.period||'Reporting period not available',432,596,{size:16,color:'#b6c0cf',width:49,max:2,lineHeight:20})}
-    ${text('FOUR MEASURES. FOLLOW THE EVIDENCE.',40,674,{size:17,color:'#b6c0cf',weight:700,width:75})}
+    ${text('THREE GRADES. FOLLOW THE EVIDENCE.',40,674,{size:17,color:'#b6c0cf',weight:700,width:75})}
     ${panels}
     ${text('Based on reviewed records. Coverage varies.',40,1060,{size:19,color:'#b6c0cf',width:90})}
     <rect x="40" y="1090" width="920" height="110" rx="12" fill="#141b25" stroke="${p.accent}" stroke-opacity=".5"/>
     ${text('SEE THE EVIDENCE, NOT JUST THE LETTER.',62,1127,{size:23,weight:700,width:70})}
     ${text(`${model.reviewedAt?'Research snapshot: '+model.reviewedAt+'. ':''}Some methodology weights remain under review.`,62,1158,{size:16,color:'#b6c0cf',width:102,max:2,lineHeight:20})}
-    ${text('An Ethics grade is not a clearance. Missing data is not zero.',62,1183,{size:16,color:'#b6c0cf',width:102,max:1})}
+    ${text('An Integrity grade is not a clearance. Missing data is not zero.',62,1183,{size:16,color:'#b6c0cf',width:102,max:1})}
   </svg>`;
 }
 

@@ -13,11 +13,6 @@ CONGRESS_API_KEY=
 # https://www.govinfo.gov/api-signup
 GOVINFO_API_KEY=
 
-# Vote Smart: issue positions and interest-group ratings. Optional and NOT free: a paid license is needed
-# ($350 a month to build with, $4,850 a year to publish). Leave blank unless you buy one.
-# https://www.votesmart.org/votesmart-api
-VOTESMART_API_KEY=
-
 # Open States: state legislators' bills, votes and sponsorships
 # https://openstates.org/accounts/signup/
 OPENSTATES_API_KEY=
@@ -30,17 +25,10 @@ LEGISCAN_API_KEY=
 # https://lda.gov/
 LDA_API_KEY=
 
-# Stock trades: the official House and Senate reports are read without a key. These three services are an optional
-# cross-check and run together.
+# Stock trades: the official House and Senate reports are read without a key. Bargo is an optional cross-check.
+# (Vote Smart, Eulerpool and Financial Modeling Prep are turned off; any keys for them are ignored.)
 # Optional. Bargo: last 3 months (works without a key at a lower limit). https://www.bargo.ai/free-apis/dash
 BARGO_API_KEY=
-
-# Optional. Eulerpool: 100,000 requests a month free. https://eulerpool.com/developers/register
-EULERPOOL_API_KEY=
-
-# Optional. Financial Modeling Prep, if its free plan includes congressional trades.
-# https://site.financialmodelingprep.com/developer/docs/senate-trading-api
-FMP_API_KEY=
 
 # Not used. Disclosed Capitol's API: members' and executive-branch stock trades. The key is free, but its 750 credits are a
 # one-time trial and every call costs money after that, so nothing reads this key. The president's trades come from its
