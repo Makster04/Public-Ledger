@@ -1102,7 +1102,7 @@ function integrityPreviewShell(s){return `<section class="integrity-preview char
 function integrityComponentRow(label,component,formula=''){
   const val=component?.value==null?'Not graded':`${Number(component.value.toFixed(2))}%`;
   const reason=component?.why||'Complete from available reviewed inputs';
-  const links=(component?.sources||[]).map(x=>({url:typeof x==='string'?x:x?.u||x?.url,label:typeof x==='string'?'Source':x?.t||x?.title||'Source'})).filter(x=>/^https?:\/\//.test(x.url||'')).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)} ↗</a>`).join(' · ');
+  const seen=new Set(),links=(component?.sources||[]).map(x=>{const url=typeof x==='string'?x:x?.u||x?.url;let label=typeof x==='string'?'':x?.t||x?.title||'';if(!label&&/^https?:\/\//.test(url||'')){try{label=new URL(url).hostname.replace(/^www\./,'');}catch{label='Source';}}return {url,label:label||'Source'};}).filter(x=>/^https?:\/\//.test(x.url||'')&&!seen.has(x.url)&&seen.add(x.url)).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)} ↗</a>`).join(' · ');
   return `<details><summary><b>${esc(label)}</b><span>${val}</span></summary><p class="small">${esc(reason)}${formula?`<br>${formula}`:''}</p>${links?`<p class="small">${links}</p>`:''}</details>`;
 }
 async function loadIntegrityPreview(s,pane,workers){
