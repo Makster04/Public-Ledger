@@ -1147,5 +1147,9 @@ async function carried(env,jobId){
   return {rows,done:new Set(rows.map(x=>x.doc).filter(Boolean))};
 }
 
-export const FEED_KINDS=Object.keys(FEEDS);
+// Sources turned off: Vote Smart needs a paid license, Financial Modeling Prep's free plan leaves out congressional trades
+// (HTTP 402), and Eulerpool was only an optional cross-check. Their readers stay for a later decision; no checks are
+// created for them, and the refresh deletes any it made before (refresh.mjs, ensureFeeds).
+export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
+export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 export const FEEDS_VERSION=1;

@@ -319,7 +319,7 @@ function pacCoverage(s){
   if(!p.filings.length)return `<div class="note">${c.missing?'No FEC reports have been filed yet, so there are no itemized PAC contributions to show.':`No PAC contribution rows were itemized for ${esc(s.short)}${c.pac?` (the FEC summary shows ${fmtFull(c.pac)} from PACs and other committees in 2025–26)`:''}.`}</div>`;
   const notIt=(c.pac||0)-p.subtotal;
   const over=p.filings.filter(f=>f.over);
-  return `<div style="margin:0 0 8px">${points([['Reports read',`${p.filings.length}, covering ${esc(p.window)}.`],['Rows add to',`<span class="num">${fmtFull(p.retrieved)}</span>, of <span class="num">${fmtFull(p.subtotal)}</span> in PAC contributions listed in those reports (${term('coverage',`${p.coverage}% coverage`)}).`],!c.missing&&c.pac!=null&&['FEC summary',`<span class="num">${fmtFull(c.pac)}</span> from PACs and other committees, ${period(c.start,c.end)}.${notIt>500?` <span class="num">${fmtFull(notIt)}</span> of it is in reports not itemized here.`:''}`]],'small')}</div>
+  return `<div style="margin:0 0 8px">${points([['Reports read',`${p.filings.length}, covering ${esc(p.window)}.`],p.subtotal>0?['Rows add to',`<span class="num">${fmtFull(p.retrieved)}</span>, of <span class="num">${fmtFull(p.subtotal)}</span> in PAC contributions listed in those reports (${term('coverage',`${p.coverage}% coverage`)}).`]:['PAC contributions','None listed in those reports.'],!c.missing&&c.pac!=null&&['FEC summary',`<span class="num">${fmtFull(c.pac)}</span> from PACs and other committees, ${period(c.start,c.end)}.${notIt>500?` <span class="num">${fmtFull(notIt)}</span> of it is in reports not itemized here.`:''}`]],'small')}</div>
   ${p.coverage!=null&&p.coverage<95?`<div class="row" style="margin-bottom:8px">${flag('Incomplete rows',`Only ${p.coverage}% of the PAC money in these reports could be read row by row. The missing rows are not shown or guessed.`)}</div>`:''}
   ${over.length?`<div class="note" style="margin-bottom:8px"><b>Check needed:</b> ${over.map(f=>`the ${esc(f.report)} transcription adds to ${fmtFull(f.retrieved-f.subtotal)} more than the report's own subtotal`).join('; ')}, so a row may be duplicated. Compare with the linked report before relying on individual rows.</div>`:''}
   ${p.gap?`<p class="small muted" style="margin:0 0 8px">${esc(p.gap)}</p>`:''}`;
@@ -816,7 +816,7 @@ function renderSenate(){
 const offBallot=s=>s.nextElection!==2026;
 const ballotLine=s=>offBallot(s)?'Not running for election in 2026':'Seat up in 2026 · race not covered here';
 const BASIC_GRADE={match:'No reviewed record of their votes and statements on the site\'s issues yet.',prom:'No statements checked against the record yet.',
-  eth:'No cases reviewed yet. Leads from official records are on the Ethics tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
+  eth:'No cases reviewed yet. Leads from official records are on the Integrity tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
 function basicReport(s,links){
   const h=k=>links?`#${s.id}-${k}`:'',d='Research not reviewed yet';
   return `<div class="hc-rc">${gradeTile('Your Match',null,d,GRADE_TIP.match,'',h('match'))}${gradeTile('Integrity',null,'Requires reviewed evidence in at least two components and a sourced Legal Trouble review.','Provisional Integrity calculation; missing data never means clean.','',h('integrity'))}${gradeTile('People First',null,d,GRADE_TIP.pvp,'',h('pvp'))}</div>`;
@@ -1080,7 +1080,7 @@ function ovEthicsCard(s){
   const body=list.length?`<ul class="ov-eths">${list.map(e=>{const [lab,cls]=ETH_TAG[e.status]||[e.type,'ghost'];return `<li class="ov-eth"><span class="chip ${cls}">${esc(lab)}</span><b>${esc(e.title)}</b> <span class="mono muted">${esc(e.date)}</span><div class="small muted ov-clamp" style="margin-top:4px">${esc(e.outcome)}</div></li>`}).join('')}</ul>
     ${points([['Allegation','A complaint or report with no official finding.'],['Investigation',`A formal inquiry, lawsuit or case, still open or ended without a finding against ${esc(s.short)}.`],['Confirmed finding',`A court, agency or ethics body found a violation or issued a penalty, or ${esc(s.short)} admitted it.`]],'small')}`
     :`<p class="small" style="margin:8px 0 0">No documented violations, penalties or findings located in the sources checked.</p>`;
-  return ovCard('Ethics','Ethics & compliance',`${list.length?`${list.length} item${list.length===1?'':'s'}, most certain first`:'Sources checked'}`,body,`<a href="#${s.id}-ethics">Details, sources and the grade →</a>`,'ov-top-align');
+  return ovCard('Integrity','Legal & ethics records',`${list.length?`${list.length} item${list.length===1?'':'s'}, most certain first`:'Sources checked'}`,body,`<a href="#${s.id}-integrity">Details and sources in Integrity →</a>`,'ov-top-align');
 }
 // The ethics card, with a line for the net-worth range from the member's latest annual disclosure (filled from the refresh).
 function ovEthics(s){
@@ -1927,7 +1927,7 @@ function committeeBlock(s){
   const list=committeesOf(s), info=id=>COMMITTEES.committees[id]||{name:id};if(!list.length)return '';
   const full=[...new Set(list.map(c=>fullCommittee(c.id)))], seat=id=>list.find(c=>c.id===id);
   return `<section class="recsec" id="rec-cmte"><div class="kicker">Committee assignments</div><h3 style="margin-top:4px">Committees in the ${COMMITTEES.congress}th Congress</h3>
-  <div style="margin:0 0 8px">${points([['Source',`The <a href="${esc(COMMITTEES.source)}" target="_blank" rel="noopener">congress-legislators</a> project, checked ${fmtDate(COMMITTEES.checked)}.`],['Colored tags','The sectors each committee oversees.'],['Why it matters','A stock trade in one of these sectors counts as a committee conflict on the Ethics tab. The sector list is a draft under review.']],'small')}</div>
+  <div style="margin:0 0 8px">${points([['Source',`The <a href="${esc(COMMITTEES.source)}" target="_blank" rel="noopener">congress-legislators</a> project, checked ${fmtDate(COMMITTEES.checked)}.`],['Colored tags','The sectors each committee oversees.'],['Why it matters','A stock trade in one of these sectors counts as a committee conflict in the Insider Trading Index, on the Integrity tab. The sector list is a draft under review.']],'small')}</div>
   <ul class="list small cmte">${full.map(id=>{const c=seat(id),i=info(id),sec=(COMMITTEE_SECTORS[id]||{}).sectors||[],subs=list.filter(x=>x.id!==id&&fullCommittee(x.id)===id);
     return `<li>${i.url?`<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.name)} ↗</a>`:esc(i.name)}${c&&c.title?` <span class="chip ghost">${esc(c.title)}</span>`:''}${c?'':' <span class="small muted">(subcommittee seat only)</span>'}${sec.map(x=>` <span class="chip warn">${esc(x)}</span>`).join('')}${subs.length?`<div class="muted">Subcommittees: ${subs.map(x=>esc(info(x.id).name)+(x.title?` (${esc(x.title)})`:'')).join('; ')}</div>`:''}</li>`;}).join('')}</ul></section>`;
 }
@@ -2060,7 +2060,7 @@ function panePromises(s,pane,{embedded=false}={}){
   </article>`}).join('')}</details>`}
   <section id="live-records" style="margin-top:28px"></section>`;
   void mountConsistency(pane.querySelector('#statement-consistency'),s.id);
-  window.RecordLive.profile(s,pane.querySelector('#live-records'),['crec-day','hearings','statements','votesmart','wayback','factcheck','news']);
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['crec-day','hearings','statements','wayback','factcheck','news']);
 }
 
 function paneSources(s,pane){
@@ -2320,16 +2320,16 @@ function influenceData(s){
 }
 // Whose trades the disclosures cover: members of Congress file Periodic Transaction Reports (STOCK Act); a president files
 // OGE Form 278-T reports, listed on the Ethics tab but not compared with donors; anyone else has no trading data.
-const tradeCoverage=s=>s.office?{ok:false,label:'Not compared with donors',short:'Not compared for a president',why:`A president's trades are listed on the Ethics tab, from OGE reports. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`}
+const tradeCoverage=s=>s.office?{ok:false,label:'Not compared with donors',short:'Not compared for a president',why:`A president's trades are listed on the Integrity tab, from OGE reports. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`}
   :s.bioguide?{ok:true}:{ok:false,why:'Trade disclosures cover members of Congress only, and state disclosure rules vary.'};
 function stockBlock(s,d){
   const cov=tradeCoverage(s),tr=d.trades;
-  const body=!cov.ok?`<p class="small muted" style="margin:0"><b>${esc(cov.label||'No trading data')}:</b> ${s.office?`${esc(s.short)}'s trades are listed from OGE reports on the <a href="#${s.id}-ethics">Ethics tab</a>. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`:esc(cov.why)}</p>`
+  const body=!cov.ok?`<p class="small muted" style="margin:0"><b>${esc(cov.label||'No trading data')}:</b> ${s.office?`${esc(s.short)}'s trades are listed from OGE reports on the <a href="#${s.id}-integrity">Integrity tab</a>. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`:esc(cov.why)}</p>`
     :!tr.length?`<p class="small muted" style="margin:0">No reviewed trades for ${esc(s.short)} yet. The latest reported trades are checked against the top donors below, as leads. A trade counts once it is reviewed.</p>`
     :d.inDonors.length?`<div class="tablewrap"><table><thead><tr><th>Traded</th><th>Company</th><th>Type</th><th>Owner</th><th>Donor</th><th>Flag</th></tr></thead><tbody>${d.inDonors.map(({org,trade:t})=>`<tr><td class="mono" style="white-space:nowrap">${esc(t.traded||'')}</td><td>${esc(t.company||t.asset||'')}</td><td>${esc(t.type||'')}</td><td>${esc(t.owner||'Self')}</td><td>${esc(org)}</td><td>${d.stock.some(f=>f.trade===t)?`<b>${FLAG_TEXT.stock}</b>`:'<span class="muted">Donor took no position on a vote compared here</span>'}</td></tr>`).join('')}</tbody></table></div>`
     :`<p class="small muted" style="margin:0">None of ${esc(s.short)}'s ${tr.length} reviewed trade${tr.length===1?'':'s'} was in a donor's company.</p>`;
   if(!cov.ok)return `<div class="chart" id="f-stock"><h3>Stock holdings and trades</h3>${body}</div>`;
-  return `<div class="chart" id="f-stock"><h3>Stock holdings and trades</h3><div class="sub">${points([['What is checked','Trades from official reports, including spouse and dependent-child accounts, against the donors.'],['Timing flag',`A trade in a donor that had a stake in ${esc(s.short)}'s decisions, such as a public position on a vote or lobbying on a bill ${esc(s.short)} acted on.`],['Insider Trading Index 📈',`${(e=>e.index==null?esc(e.why):e.index)(personEthics(s).insider)}. The same number as on the <a href="#${s.id}-ethics">Ethics tab</a>, which shows how it's figured.`],['Graded on Ethics',`Trades count in <a href="#${s.id}-ethics">Ethics</a> through the Insider Trading 📈 and Stock Disclosure Dodger 🙈 indexes, not here.`]],'small')}</div>
+  return `<div class="chart" id="f-stock"><h3>Stock holdings and trades</h3><div class="sub">${points([['What is checked','Trades from official reports, including spouse and dependent-child accounts, against the donors.'],['Timing flag',`A trade in a donor that had a stake in ${esc(s.short)}'s decisions, such as a public position on a vote or lobbying on a bill ${esc(s.short)} acted on.`],['Insider Trading Index 📈',`${(e=>e.index==null?esc(e.why):e.index)(personEthics(s).insider)}. The same number as on the <a href="#${s.id}-integrity">Integrity tab</a>, which shows how it's figured.`],['Graded in Integrity',`Trades count in <a href="#${s.id}-integrity">Integrity</a>'s Personal Finances through the Insider Trading 📈 and Stock Disclosure Dodger 🙈 indexes, not here.`]],'small')}</div>
     ${body}<div id="f-live-stock"></div></div>`;
 }
 const H0=()=>window.FUNDHIST?monLabel(window.FUNDHIST.start.slice(0,7)):'2019';
@@ -2659,7 +2659,7 @@ function renderMethod(sub){
           <li><b>Insider Trading Index 📈:</b> committee conflicts 40% (the dollar share of single-stock trades in sectors their committees oversee, using the middle of each disclosed range), trades near related votes 25%, trades in donors' companies 20%, and single-stock activity 15% (trades a year, with 50 counting as 100). It needs 5 reviewed trades; no trades scores 0.</li>
           <li><b>Blind trusts and divestment:</b> a qualified blind trust, certified by the House or Senate ethics committee, takes the trades its trustee makes out of both trading indexes, because the member neither chooses nor sees them. Trades they report outside it, or made before it, count as usual. Holding no individual stocks labels the index. A managed or "discretionary" account, an adviser who trades without asking, a spouse's account, or a trust that isn't a qualified blind trust is not excused: those trades count in full. Neither adds points; the grade starts at 100. Each status is reviewed and cited; the latest annual report only suggests one.</li>
           <li><b>Stock Disclosure Dodger Index 🙈:</b> trade reports filed after the ${LATE_DAYS}-day deadline or never 70%, and annual financial disclosures filed late 30%. It needs 3 required filings. A STOCK Act late-disclosure case moves here from the Legal Trouble Index once the person's trades are reviewed, so a late report never costs twice.</li>
-          <li><b>Who counts:</b> spouse and dependent-child trades count and are labeled. A president's trades are listed on the Ethics tab, from OGE reports, but not scored. Other people not in Congress show "No trading data". Only reviewed trades count; new reports are listed for review first. Returns are never scored.</li>
+          <li><b>Who counts:</b> spouse and dependent-child trades count and are labeled. A president's trades are listed on the Integrity tab, from OGE reports, but not scored. Other people not in Congress show "No trading data". Only reviewed trades count; new reports are listed for review first. Returns are never scored.</li>
         </ul></li>
       <li><b>People First:</b> whether the record did more for working people or for the wealthy and corporations.
         <ul class="list">

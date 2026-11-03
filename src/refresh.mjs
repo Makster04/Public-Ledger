@@ -1,7 +1,7 @@
 import config from '../data/config.json' with {type:'json'};
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 import {fetchPage,summarize,SourceError,requestSource,missingKey,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
-import {FEEDS,FEED_KINDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
+import {FEEDS,FEED_KINDS,RETIRED_FEEDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,mergeHearings,mergeLegal,mergeStatements,donorOrgs} from './merge.mjs';
 
 const DAY=86400000;
@@ -64,6 +64,7 @@ async function addPerson(db,p,c){
 async function ensureFeeds(db){
   const v=await statement(db,"SELECT value FROM metadata WHERE key='feeds'").first(),sig=feedSignature();
   if(v?.value===sig)return;
+  await removeRetired(db);
   for(const p of config.people)await addPerson(db,p,config);
   for(const j of feedJobs())await addJob(db,j.id,j.kind,j.subject,j.args);
   // A roll call is read once, with the positions of the people configured then. When someone who votes in that chamber
@@ -75,6 +76,17 @@ async function ensureFeeds(db){
     await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',key,now).run();
   }
   await statement(db,"INSERT OR REPLACE INTO metadata(key,value) VALUES('feeds',?)",sig).run();
+}
+// The checks, saved results and history of sources that were turned off (RETIRED_FEEDS), so they no longer show on the
+// Updates page or wait for a key.
+async function removeRetired(db){
+  for(const kind of RETIRED_FEEDS){
+    const like=`${kind}:%`;
+    await statement(db,'DELETE FROM records WHERE run_id IN (SELECT run_id FROM snapshots WHERE job_id LIKE ?)',like).run();
+    await statement(db,'DELETE FROM snapshots WHERE job_id LIKE ?',like).run();
+    await statement(db,'DELETE FROM refresh_history WHERE job_id LIKE ?',like).run();
+    await statement(db,'DELETE FROM jobs WHERE kind=?',kind).run();
+  }
 }
 export async function initialize(db,seed=null) {
   // INSERT OR IGNORE preserves checkpoints and dates between restarts/deployments.
@@ -217,7 +229,8 @@ export async function getStatus(env) {
     j.label=FEEDS[j.kind]?.label||null;j.tab=FEEDS[j.kind]?.tab||null;j.site=isSite(j,env);
     const who=config.people.find(p=>p.id===j.subject);j.name=who?.name||j.subject;j.person=!!who;
   }
-  const keyNames=[...new Set(Object.values(HOSTS).flatMap(h=>[...(h.keys||[]),...(h.agent?[h.agent]:[])]))];
+  const off=new Set(RETIRED_FEEDS.map(k=>FEEDS[k].host).filter(h=>!ALL_KINDS.some(k=>hostOf(k)===h)));
+  const keyNames=[...new Set(Object.entries(HOSTS).filter(([h])=>!off.has(h)).flatMap(([,h])=>[...(h.keys||[]),...(h.agent?[h.agent]:[])]))];
   return {generatedAt:nowISO(),local:env.LOCAL_MODE===true,reviewedAt:config.reviewedAt,cycle:config.cycle,keys:{fec:!!env.FEC_API_KEY,congress:!!env.CONGRESS_API_KEY,...Object.fromEntries(keyNames.map(k=>[k,!!env[k]]))},jobs,
     history:(await statement(env.DB,'SELECT job_id,status,at,message,row_count FROM refresh_history ORDER BY id DESC LIMIT 120').all()).results};
 }
