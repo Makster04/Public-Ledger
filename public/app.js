@@ -13,6 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead} from './holdings.js';
+import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -1093,7 +1094,47 @@ function paneOverview(s,pane){
     ['Legislative record',`${v.n} scored actions for Workers > Profit. ${evidenceOf(s).label}.`,'legislation','Explore bills and votes'],
     ['Ethics & disclosures',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'ethics','Review cases and finances']
   ];
-  pane.innerHTML=`<div class="overview-summary-head"><h2>Three things to know</h2><p class="intro">A quick summary. Open a finding or a grade for its evidence.</p></div><div class="overview-highlights">${highlights.map(([title,body,route,label])=>`<article class="overview-highlight"><h3>${title}</h3><p>${esc(body)}</p><a href="#${s.id}-${route}">${label} →</a></article>`).join('')}</div><div class="overview-links"><a href="#${s.id}-finance">Campaign and outside money</a><a href="#${s.id}-match">Issue positions & ideology</a>${s.basic?'':`<a href="#${s.id}-sources">Sources & coverage</a>`}<a href="#method">Methodology</a><a href="#method-log">Score history</a></div><p class="small muted overview-asof">Research snapshot: ${esc(DATA.asof)}. Financial records and source updates keep their own dates.</p>`;
+  pane.innerHTML=`<div class="overview-summary-head"><h2>Three things to know</h2><p class="intro">A quick summary. Open a finding or a grade for its evidence.</p></div><div class="overview-highlights">${highlights.map(([title,body,route,label])=>`<article class="overview-highlight"><h3>${title}</h3><p>${esc(body)}</p><a href="#${s.id}-${route}">${label} →</a></article>`).join('')}</div>${s.basic?'':integrityPreviewShell(s)}<div class="overview-links"><a href="#${s.id}-finance">Campaign and outside money</a><a href="#${s.id}-match">Issue positions & ideology</a>${s.basic?'':`<a href="#${s.id}-sources">Sources & coverage</a>`}<a href="#method">Methodology</a><a href="#method-log">Score history</a></div><p class="small muted overview-asof">Research snapshot: ${esc(DATA.asof)}. Financial records and source updates keep their own dates.</p>`;
+  if(!s.basic)loadIntegrityPreview(s,pane,v);
+}
+
+function integrityPreviewShell(s){return `<section class="integrity-preview chart" aria-labelledby="integrity-title"><div class="kicker">COMPARISON PERIOD · PREVIEW ONLY</div><h3 id="integrity-title">Integrity preview <span class="integrity-pill">Provisional</span></h3><div data-integrity-content><p class="small muted">Calculating coverage from reviewed research and official filings…</p></div><p class="small muted">This preview does not change published grades. <a href="#method-integrity">Formula and coverage limits</a>.</p></section>`;}
+function integrityComponentRow(label,component,formula=''){
+  const val=component?.value==null?'Not graded':`${Number(component.value.toFixed(2))}%`;
+  const reason=component?.why||'Complete from available reviewed inputs';
+  const seen=new Set(),links=(component?.sources||[]).map(x=>{const url=typeof x==='string'?x:x?.u||x?.url;let label=typeof x==='string'?'':x?.t||x?.title||'';if(!label&&/^https?:\/\//.test(url||'')){try{label=new URL(url).hostname.replace(/^www\./,'');}catch{label='Source';}}return {url,label:label||'Source'};}).filter(x=>/^https?:\/\//.test(x.url||'')&&!seen.has(x.url)&&seen.add(x.url)).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)} ↗</a>`).join(' · ');
+  return `<details><summary><b>${esc(label)}</b><span>${val}</span></summary><p class="small">${esc(reason)}${formula?`<br>${formula}`:''}</p>${links?`<p class="small">${links}</p>`:''}</details>`;
+}
+async function loadIntegrityPreview(s,pane,workers){
+  const host=pane.querySelector('[data-integrity-content]');if(!host)return;
+  const asOfYear=Number(String(DATA.asof||'').match(/\b(19|20)\d{2}\b/)?.[0])||null;
+  const [sizes,annual]=await Promise.all([
+    window.RecordLive.section(s.id,'donor-sizes').catch(()=>null),
+    window.RecordLive.section(s.id,s.chamber==='S'?'net-worth-senate':'net-worth-house').catch(()=>null)
+  ]);
+  if(!host.isConnected||!location.hash.startsWith('#'+s.id))return;
+  const typed=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(!t)continue;
+    const kind=({corporate:'corporate',lobbyist:'lobbyist',trade:'trade',membership:'membership',cooperative:'cooperative',leadership:'leadership',party:'party',candidate:'candidate',unconnected:'unconnected',labor:'labor',joint:'other',other:'other'})[t.kind]||'other';typed.push({amount,kind});}
+  const typedTotal=typed.reduce((n,r)=>n+r.amount,0),campaign=s.camp||{};
+  const pledge=fundraisingPledgePoints(DATA,s),ethics=personEthics(s);
+  const bundled=Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([group,r])=>({id:`bundled:${group}`,group,amount:r.routed,src:r.src,period:bundledCycle(s.id,group)}));
+  const hand=(s.conduit?.rows||[]).map((r,i)=>({id:`conduit:${i}`,group:r.conduit,amount:r.amount,src:r.srcs?.[0],period:r.period}));
+  const earmarkEvidence=bundled.concat(hand).filter(r=>Number.isFinite(r.amount)&&r.src);
+  const preview=integrityPreview({...s,ethicsResult:ethics},{asOfYear,finance:{netWorth:annual},sizes,
+    pacRows:typed,pacReceipts:typedTotal,pacCoverage:campaign.pac!=null&&Math.abs(typedTotal-campaign.pac)<=.02,
+    pacPeriodMatches:coversPeriod(s.pac?.filings,campaign.start,campaign.end),
+    earmarks:{complete:false,rows:earmarkEvidence},pledgePoints:pledge.points,pledgeSources:pledge.rows.map(r=>r.source).filter(Boolean),pledgesReviewed:true,
+    trust:s.holdings?.status==='blind-trust'?{verified:false}:null});
+  const cci=previewCci({businessVotes:SCORER.cci(s)?.votes?.index??null}),workerPreview=workersPreview(workers?.billsPct??null,cci);
+  const o=preview.overall,grade=o.pct==null?'Not graded':`${o.pct}% · ${letter(o.pct)}`;
+  const overallWhy=o.why||`${o.used.length} components, weights normalized; Legal Trouble deducted at full strength.`;
+  const formula=preview.honesty.value==null?'Promise data needs three counted checks':`(${preview.honesty.score.kept} + 0.5 × ${preview.honesty.score.half}) ÷ ${preview.honesty.score.clear} counted checks × 100 = ${Number(preview.honesty.value.toFixed(4))}%`;
+  const workText=workerPreview.pct==null?workerPreview.why:`${workerPreview.pct}%${workerPreview.blended?' · 75% legislative actions + 25% (100 − preview CCI)':' · legislative actions only; preview CCI unavailable'}`;
+  const fin=preview.personalFinances,finMath=fin.complete?`S = ${fin.stockPenalty.toFixed(2)}; T = ${fin.tradeCountPenalty.toFixed(2)} + ${fin.tradeValuePenalty.toFixed(2)}; index deductions = ${fin.insiderPenalty.toFixed(2)} + ${fin.dodgerPenalty.toFixed(2)}. Holdings year ${esc(fin.holdingsYear)}; trades ${esc(fin.tradePeriod?.start)} – ${esc(fin.tradePeriod?.end)}.`:'S, T, and index deductions are shown only when the reviewed holdings and trade coverage are complete.';
+  const fund=preview.fundraising,fundMath=[fund.D!=null?`D ${fund.D.toFixed(2)}`:'D unavailable',fund.P!=null?`P ${fund.P.toFixed(2)}`:'P unavailable',fund.R!=null?`R ${fund.R.toFixed(2)}`:'R unavailable',fund.E!=null?`E ${fund.E.toFixed(2)}`:'E unavailable',`pledges ${pledge.points>0?'+':''}${pledge.points}`].join(' · ');
+  host.innerHTML=`<div class="integrity-score"><b>${esc(grade)}</b><span>${esc(overallWhy)}</span></div>
+    <div class="integrity-components">${integrityComponentRow('Honesty',preview.honesty,formula)}${integrityComponentRow('Personal Finances',preview.personalFinances,finMath)}${integrityComponentRow('Fundraising',preview.fundraising,`${fundMath}${sizes?` · Gift buckets: ${esc(sizes.start||'')} – ${esc(sizes.end||'')}; receipts: ${campaign.receipts==null?'unavailable':fmtFull(campaign.receipts)}`:' · Same-period gift-size data unavailable'}`)}${integrityComponentRow('Legal Trouble',preview.legal,preview.legal.reviewed?`Legal Trouble index: ${preview.legal.value}; sourced review dated ${esc(preview.legal.reviewedAt)}.`:'A dated, sourced review is required; no legal input is assumed.')}</div>
+    <details class="integrity-worker"><summary><b>Workers > Profit comparison</b><span>${esc(workText)}</span></summary><p class="small">Preview CCI omits direct business-PAC share. Its available implemented parts are employee giving (10%), business-funder votes (35%) and lobbied bills (20%), renormalized over available evidence. Current Workers > Profit remains unchanged. <a href="#${s.id}-pvp">Open its actions and supporting research →</a></p></details>`;
 }
 
 function conduitBlock(s){
@@ -2410,6 +2451,11 @@ function methodLog(){
   const G={promises:'Promises delivered',ethics:'Ethics',pvp:'Workers > Profit',all:'All grades'},pc=v=>v==null?'Not graded':v+'%';
   return L.map(e=>`<div class="chart"><h3>${fmtDate(e.date)}</h3><div class="sub">Research reviewed ${esc(e.reviewedAt)} · ${esc(e.note||'')}</div>${e.changes.length?`<div class="tablewrap"><table><thead><tr><th>Person</th><th>Grade</th><th>From</th><th>To</th><th>Why</th></tr></thead><tbody>${e.changes.slice(0,60).map(c=>`<tr><td>${byId[c.id]?`<a href="#${c.id}">${esc(byId[c.id].name)}</a>`:esc(c.id)}</td><td>${G[c.grade]||esc(c.grade)}</td><td>${c.from===undefined?'—':pc(c.from)}</td><td>${pc(c.to)}</td><td class="small">${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>${e.changes.length>60?`<p class="small muted">and ${e.changes.length-60} more in the log file.</p>`:''}`:'<p class="small muted">No grade changed.</p>'}</div>`).join('');
 }
+function integrityPreviewLog(){
+  const entries=(window.INTEGRITYLOG||[]).slice(-3).reverse();
+  if(!entries.length)return '<p class="small muted">No preview comparison has been recorded. <code>npm run integrity:monthly</code> writes to the separate preview log.</p>';
+  return entries.map(e=>`<div class="chart"><h3>${fmtDate(e.date)}</h3><p class="sub">${esc(e.note||'Integrity preview only')} · Reviewed ${esc(e.reviewedAt||'date unavailable')}. Not official score history.</p>${e.changes?.length?`<div class="tablewrap"><table><thead><tr><th>Person</th><th>Preview</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody>${e.changes.slice(0,30).map(c=>`<tr><td>${byId[c.id]?`<a href="#${c.id}">${esc(byId[c.id].name)}</a>`:esc(c.id)}</td><td>${esc(c.grade)}</td><td>${c.from==null?'Not graded':c.from+'%'}</td><td>${c.to==null?'Not graded':c.to+'%'}</td><td>${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="small muted">No preview value changed.</p>'}</div>`).join('');
+}
 function renderMethod(sub){
   const sv=DATA.votes.length, hv=DATA.hvotes.length;
   const nRows=Object.values(IE.rows).reduce((a,r)=>a+r.length,0);
@@ -2608,6 +2654,21 @@ function renderMethod(sub){
         </ul></li>
       <li><b>Top donors tree map (Workers > Profit tab):</b> tile size is the amount given. Unions and small-dollar donors (one tile) are People-aligned. Corporate PACs and industry groups are Profit-aligned. Leadership, party and ideological committees are Other.</li>
     </ul>
+    <h2 id="method-integrity">Integrity preview (provisional, uncalibrated)</h2>
+    <p>The separate Integrity preview adapts the structure of <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us</a>, which publishes a financial-integrity score for congressional candidates and members. Public Ledger adds reviewed promise evidence as Honesty and subtracts its existing Legal Trouble Index. These settings are experimental; they do not replace Ethics, Promises Delivered, or Workers &gt; Profit.</p>
+    <ul class="list">
+      <li><b>Overall:</b> available component values weighted Honesty 30%, Personal Finances 30%, Fundraising 40%; missing components drop out and available weights are normalized. At least two complete components and a sourced Legal Trouble review are required. Subtract Legal Trouble at full strength, floor at zero, and round only the final display. The two-component minimum also applies to the president.</li>
+      <li><b>Honesty:</b> 100 × (kept + 0.5 × partly kept) ÷ counted checks, with at least 3. It reuses reviewed Promise assessments and PolitiFact trackers; pending, vague and ambiguous checks remain out. Flip-Flop and Pants on Fire are not implemented.</li>
+      <li><b>Personal Finances:</b> <code>100 − 20·Hill(stock value, $400,000) − 20·Hill(trade count, 50) − 20·Hill(trade value, $1,000,000) − 0.20·Insider − 0.20·Dodger</code>, clamped to 0–100; <code>Hill(x,m)=x^0.745/(m^0.745+x^0.745)</code>. Stock value means the sum of individual-stock range midpoints from one reviewed annual snapshot. The snapshot date and trade period remain separate. Only verified holdings/trades inside a qualified blind trust after its effective date can be excluded. A complete reviewed snapshot, transaction coverage, amounts, filing dates and sources are required.</li>
+      <li><b>Fundraising:</b> <code>clamp(75 + D − P − R − E + pledges, 0, 100)</code>. D scores same-period FEC gift-size buckets using weights 14, 10, 6, 3 and 2, plus 5.2 for itemized gifts not yet sorted, 1 for self-funding and 1 for joint fundraising; cap 14. Buckets are by each gift: ≤$200 (including unitemized once), $200.01–$499.99, $500–$999.99, $1,000–$1,999.99, and ≥$2,000; the FEC’s unsorted itemized remainder is separate. P applies category rates per percentage point of receipts (corporate 2; lobbyist 1; trade/membership/cooperative 0.2; political/leadership/party/candidate/ideological 0.1; labor/other 0.05), capped at 30. PAC categories must reconcile to the same-period FEC total. R = 10 × Hill(PAC receipts share, 0.20). E is 4 points per percentage point of eligible earmarks, capped at 30; ActBlue and WinRed are excluded. Selected-group conduit data is partial and cannot establish complete coverage or zero.</li>
+      <li><b>Pledges:</b> four categories, each counted once: corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. A reviewed kept/broken pledge adds/subtracts 1; absent pledge evidence may receive +1 for qualifying bill cosponsorship; pending pledges receive no fallback. No abstention bonuses.</li>
+      <li><b>Workers comparison:</b> a separate preview CCI drops direct business-PAC share and renormalizes employee giving (10%), business-funder voting (35%) and lobbied bills (20%) over available implemented parts. The comparison is 75% legislative actions + 25% (100 − preview CCI), or the legislative-action score alone when CCI is unavailable. Published Workers &gt; Profit remains unchanged.</li>
+      <li><b>Calibration:</b> all supplied weights, caps, $400,000/$1,000,000 Hill midpoints, 50-trade midpoint, $20M reference-campaign context, and evidence minimums are provisional and uncalibrated. The $20M reference is documentation context, not an extra calculation in these formulas. Scores and preview history are not official grade history.</li>
+      <li><b>Coverage today:</b> current imported annual financial records and official trade refreshes are not yet reviewed score inputs; dated, source-linked Legal Trouble coverage reviews are not recorded for profiles; complete earmark coverage is unavailable; and employee-giving/lobbied-bill CCI inputs are not built. Those values remain unavailable instead of earning a clean score. Existing quotes, promises, votes, legislation, holdings, trades, disclosures, cases and indices stay accessible.</li>
+      <li><b>Rollout:</b> keep monthly comparisons in a separate preview log. Do not switch grades automatically. A future migration requires a monthly comparison period, reviewed live financial coverage, source-backed calibration, and a later explicit methodology migration.</li>
+    </ul>
+    <h3 id="method-integrity-log">Monthly preview comparisons</h3>
+    ${integrityPreviewLog()}
     <h2 id="method-sources">What refreshes, and how sources are merged</h2>
     <ul class="list">
       <li><b>Grades:</b> based on the reviewed research.</li>

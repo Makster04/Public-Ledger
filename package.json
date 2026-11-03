@@ -12,6 +12,7 @@
     "check": "node scripts/check.mjs",
     "seed:export": "node --env-file-if-exists=.dev.vars scripts/export-seed.mjs",
     "scores:monthly": "node scripts/scores-monthly.mjs",
+    "integrity:monthly": "node scripts/integrity-preview-monthly.mjs",
     "social:bluesky": "node scripts/find-bluesky.mjs",
     "senate:build": "node scripts/build-senate.mjs",
     "exec:build": "node scripts/build-exec-trades.mjs",
