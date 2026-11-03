@@ -4,21 +4,24 @@ This is the canonical guide to every score, index, and position measure currentl
 
 ## At a glance
 
-There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional. Ethics and Promises Delivered are historical grades, kept without recalculation.
+There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
 | Your Match | Published grade | How closely does this politician's record align with your views? Personalized to your answers; it does not measure honesty, ethics, or whether their policies benefit working people | At least 3 issues with evidence and at least 50% of selected issue importance covered |
 | Integrity | Current primary grade; provisional and uncalibrated | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (30%), Personal Finances (30%) and Fundraising (40%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
 | People First | Published grade | How consistently do this politician's legislative actions prioritize working people? 75% legislative-action score + 25% (100 − CCI) | At least 3 scored actions |
-| Promises Delivered; Ethics | Historical published grades; Promises Delivered is now the Promises Delivered Index (Honesty) and Ethics' three indices feed Integrity; preserved in the official monthly log; evidence now lives inside Integrity | Existing reviewed statement and case/trading records | Historical values only; not current headline grades |
 | Statement–action consistency | Per-statement analysis, not a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
 
 Letter thresholds are A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F < 60. Each grade rounds its final displayed percentage to a whole number. An insufficient-evidence result is **Not graded**, never an imputed zero.
 
-## Integrity: current presentation, provisional method
+## Your Match
 
-The Integrity component calculations and consolidated presentation are implemented, adapting the structure of [IntegrityIndex.us](https://integrityindex.us/methodology) and crediting that source. Public Ledger adds reviewed promise evidence as Honesty and subtracts its existing Legal Trouble Index. The parameters are Public Ledger's provisional choices, not calibrated reproductions of IntegrityIndex.us. Interface consolidation does not count as calibration.
+For each visitor-selected issue, calculate the share of the politician's weighted record that matches the visitor's side. Weight each issue by its visitor-selected importance (low 1, medium 2, high 3); divide matching weighted evidence by all available weighted evidence and multiply by 100. Actions count 1, statements count 0.5, and statements are only used for an issue without an action. One bill receives one credit; unsupported issues drop out. A grade requires at least 3 issues with evidence and coverage of at least half the visitor's selected issue importance. Choices are stored locally in the visitor's browser. See [Your Match](02_YOUR_MATCH_SCORE.md).
+
+## Integrity
+
+The Integrity component calculations and consolidated presentation are implemented, adapting the structure of [IntegrityIndex.us](https://integrityindex.us/methodology) and crediting that source. Public Ledger adds reviewed promise evidence as Honesty and subtracts its existing Legal Trouble Index. The parameters are Public Ledger's provisional choices, not calibrated reproductions of IntegrityIndex.us.
 
 The overall Integrity formula is:
 
@@ -32,7 +35,7 @@ Honesty, Personal Finances, and Fundraising have weights 30%, 30%, and 40%. Miss
 
 ### Integrity components
 
-**Honesty:** `100 × (kept + 0.5 × partly kept) ÷ counted checks`. It reuses the reviewed Promise calculation and PolitiFact tracker handling. At least three counted checks are required; pending, vague, and ambiguous items do not count. Flip-Flop and Pants on Fire are not implemented.
+**Honesty (the Promises Delivered Index):** `100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not change Honesty; pledges count in Fundraising. Flip-Flop and Pants on Fire are planned additions.
 
 **Personal Finances:**
 
@@ -54,29 +57,29 @@ Stock value is the sum of individual-stock position range midpoints in one revie
 - `E = min(30, eligible earmarked dollars ÷ receipts × 100 × 4)`. Bundling groups share the same rate. ActBlue and WinRed are excluded. Duplicate receipts and direct-PAC/routed-gift duplication are excluded. The currently selected conduit collection is partial and cannot prove complete earmark coverage or a zero total.
 - Pledges are corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge plus qualifying bill cosponsorship +1; otherwise 0. Pending pledges cannot use the no-pledge fallback. No abstention bonuses are awarded.
 
-**Methodology status:** Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices. Flip-Flop and Pants on Fire are planned additions to Honesty once their methods and evidence are ready.
-
 The $20 million reference campaign used to convert IntegrityIndex.us's per-dollar weights into shares is explanatory context, not an extra multiplier in the share-based equations.
 
-### People First comparison preview (proposed CCI revision)
+### Indices inside Integrity
 
-A separate preview CCI removes the direct business-PAC-share component. Its remaining relative weights are employee giving 10%, business-funder voting 35%, and lobbied bills 20%, normalized over available implemented components. The preview is `0.75 × legislative-action score + 0.25 × (100 − preview CCI)`. If preview CCI is unavailable, it uses the legislative-action score alone, subject to the existing minimum. The published People First calculation continues using the existing CCI until this revision is explicitly adopted.
+The Insider Trading and Stock Disclosure Dodger indices feed Personal Finances; the Legal Trouble Index is deducted after averaging.
 
-## Published grades
+#### Legal Trouble Index 🚨 (higher is worse)
 
-### Your Match
+Each reviewed case contributes status points × kind × age, summed and capped at 100. Status values: finding 20, open investigation 15, closed without finding 5, allegation 0. Kind factors: criminal 1.5, ethics/civil 1, technical 0.5. A non-open case decided more than 10 years before the reviewed research is multiplied by 0.5; open cases count in full. Each matter counts once at its current reviewed status. Allegations remain visible but do not score.
 
-For each visitor-selected issue, calculate the share of the politician's weighted record that matches the visitor's side. Weight each issue by its visitor-selected importance (low 1, medium 2, high 3); divide matching weighted evidence by all available weighted evidence and multiply by 100. Actions count 1, statements count 0.5, and statements are only used for an issue without an action. One bill receives one credit; unsupported issues drop out. A grade requires at least 3 issues with evidence and coverage of at least half the visitor's selected issue importance. Choices are stored locally in the visitor's browser. See [Your Match](02_YOUR_MATCH_SCORE.md).
+#### Insider Trading Index 📈 (higher is worse)
 
-### Honesty: the Promises Delivered Index
+Weighted parts: committee conflicts 40%, trades within 30 days of related votes 25%, trades in donor companies 20%, and single-stock activity 15% (50 trades/year reaches 100 for that part). The conflict part uses trade value midpoints when available; if amounts cannot all be read, it uses trade counts. Needs five reviewed trades. A verified covered review with no trades scores 0; uncovered or incomplete data is unavailable, not a zero.
 
-`100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not independently change this grade. See [Promises Delivered](03_INTEGRITY_SCORE.md).
+#### Stock Disclosure Dodger Index 🙈 (higher is worse)
 
-### Historical Ethics grade
+Late/missing transaction reports contribute 70%; late annual disclosures contribute 30%, renormalized over filing types with usable coverage. Trade filing deadlines are 45 days. It needs three required filings and transaction-report coverage. A STOCK Act case moves to this index when those trades have been reviewed, avoiding a duplicate Legal Trouble deduction.
 
-`max(0, round(100 − Legal Trouble − 0.10 × Insider Trading − 0.10 × Stock Disclosure Dodger))` describes the historical Ethics grade only. Its percentage is never averaged into Integrity. Its case and trading evidence remains in the Integrity section. See [historical Ethics method](03_INTEGRITY_SCORE.md).
+### Methodology status
 
-### People First
+Integrity's provisional parameters and the proposed CCI revision still require calibration and evaluation. Holdings penalties, funding penalties, and pledge adjustments are calculation components, rather than additional standalone indices. Flip-Flop and Pants on Fire are planned additions to Honesty once their methods and evidence are ready.
+
+## People First
 
 **How consistently do this politician's legislative actions prioritize working people?**
 
@@ -84,28 +87,19 @@ For each visitor-selected issue, calculate the share of the politician's weighte
 People First = 0.75 × Legislative-action score + 0.25 × (100 − CCI)
 ```
 
-
 Each bill is scored from −100 (profit side) to +100 (worker side) using who gains and worker/business group positions, each half-weighted when both are available. Disputed bills are shown but not scored. The politician's votes/actions on each scored bill count its strength (`abs(bill score)/100`) for the side taken; each bill counts once. The legislative-action score is `worker points ÷ (worker points + profit points) × 100`. The published grade is 75% the legislative-action score and 25% `100 − CCI` when CCI is available; otherwise it is the legislative-action score alone. A grade needs 3 scored actions. For a president, signings and executive orders count for the marked side and vetoes for the other side. See [People First](04_PEOPLE_FIRST_SCORE.md).
-
-## Indices and related analyses
-
-These indices are components of Integrity, People First, or standalone Money & Influence analyses. They are not additional A–F grades.
-
-### Legal Trouble Index 🚨 (higher is worse)
-
-Each reviewed case contributes status points × kind × age, summed and capped at 100. Status values: finding 20, open investigation 15, closed without finding 5, allegation 0. Kind factors: criminal 1.5, ethics/civil 1, technical 0.5. A non-open case decided more than 10 years before the reviewed research is multiplied by 0.5; open cases count in full. Each matter counts once at its current reviewed status. Allegations remain visible but do not score.
-
-### Insider Trading Index 📈 (higher is worse)
-
-Weighted parts: committee conflicts 40%, trades within 30 days of related votes 25%, trades in donor companies 20%, and single-stock activity 15% (50 trades/year reaches 100 for that part). The conflict part uses trade value midpoints when available; if amounts cannot all be read, it uses trade counts. Needs five reviewed trades. Under existing Ethics behavior, a verified covered review with no trades scores 0; uncovered or incomplete data must not be represented as no activity in the Integrity component.
-
-### Stock Disclosure Dodger Index 🙈 (higher is worse)
-
-Late/missing transaction reports contribute 70%; late annual disclosures contribute 30%, renormalized over filing types with usable coverage. Trade filing deadlines are 45 days. It needs three required filings and transaction-report coverage. A STOCK Act case moves to this index when those trades have been reviewed, avoiding a duplicate Legal Trouble deduction.
 
 ### Corporation Compromised Index 🏢 (higher is worse)
 
-CCI weights: business PAC receipts share 35% (20% share reaches 100), employee giving from donor companies 10% (10% share reaches 100), business-funder voting above party 35% (25 percentage points reaches 100; five compared votes), and profit-side results on donor-lobbied bills 20% (at least three bills). Missing parts drop out and weights are normalized; business PAC share is required. The existing CCI remains in the published People First grade. The separate preview CCI has the modified weights described above.
+CCI weights: business PAC receipts share 35% (20% share reaches 100), employee giving from donor companies 10% (10% share reaches 100), business-funder voting above party 35% (25 percentage points reaches 100; five compared votes), and profit-side results on donor-lobbied bills 20% (at least three bills). Missing parts drop out and weights are normalized; business PAC share is required. The published People First grade uses this CCI.
+
+### Proposed CCI revision (comparison preview)
+
+A separate preview CCI removes the direct business-PAC-share component. Its remaining relative weights are employee giving 10%, business-funder voting 35%, and lobbied bills 20%, normalized over available implemented components. The preview is `0.75 × legislative-action score + 0.25 × (100 − preview CCI)`. If preview CCI is unavailable, it uses the legislative-action score alone, subject to the existing minimum. The published People First calculation continues using the existing CCI until this revision is explicitly adopted.
+
+## Other indices and analyses
+
+These are Money & Influence analyses, not A–F grades.
 
 ### Donor Loyalty Index 🤝 (higher means more donor-aligned)
 
@@ -132,6 +126,8 @@ For each statement independently: `consistent ÷ (consistent + inconsistent) × 
 Missing and incomplete data stay unknown; they are not converted into zero activity or a clean score. Refreshed official records remain leads until reviewed. Every score view links to its evidence, sources, relevant dates, and limitations. Official score changes are recorded in `public/score-log.json`; monthly Integrity comparisons use the separate `public/integrity-preview-log.json` and never rewrite official history.
 
 This is how Public Ledger adapts and credits [IntegrityIndex.us](https://integrityindex.us/methodology); it does not claim that its provisional parameters reproduce that site's calibrated results.
+
+Ethics and Promises Delivered are earlier published grades. Their past values stay in `public/score-log.json` without recalculation and are never averaged into Integrity; their formulas are in the [Integrity guide](03_INTEGRITY_SCORE.md#historical-grades-ethics-and-promises-delivered).
 
 ## Related guides
 
