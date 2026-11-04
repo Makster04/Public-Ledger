@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -272,4 +272,52 @@ test("Virginia's race is named \"Member, United States Senate\"; a bot check is 
   assert.match(SOURCES['S-MI'].help,/turned this one away, so use your browser: open https:\/\/mvic\.sos\.state\.mi\.us\/.*save the page .* --file "S-MI=~\/Downloads\/<the saved file>"/);
   assert.equal(sampleOf('<html><script>var a=1</script><style>p{}</style><!-- note --><p>Votes</p>\n\n\n<td>5</td></html>'),'<html><p>Votes</p>\n<td>5</td></html>');
   for(const urls of Object.values(SAMPLES))for(const u of urls)assert.match(u,/^https:\/\//);
+});
+
+// A county page on the county-page sites (Montana, Nebraska, New Mexico, Oregon, South Dakota), as they lay it out.
+const box=(race,cands,{h1=true,prec='Precincts Fully: 502 / 728'}={})=>`<div class="display-results-box-wrapper"><div class="display-results-box-a"><h1>${race}</h1></div>
+  <div class="col display-results-box-c"><div class="precinct-fully">${prec}</div></div>`+cands.map(([n,p,v])=>`<div class="section group"><img src="x.png" class="photo-display" />
+  <div class="col display-results-box-d wide-28"><h1>${n}</h1><h2 class="${p}">${p}</h2></div><div class="col display-results-box-e"><div class="bar-graph-wrap"><div id="bar1"></div></div></div>
+  <div class="col display-results-box-f">${h1?`<h1>${v}</h1>`:`<div>${v}</div>`}</div></div><hr />`).join('');
+const countyPage=(county,body)=>`<html><head><title>Montana Secretary of State</title></head><body><span id="MainContent_lblCountyName" class="county-identifier-name">${county} County Results</span>${body}</body></html>`;
+
+test('the county-page sites: each county page read for the Senate race, its county named on the page',async()=>{
+  const mt=SOURCES['S-MT'].contest,page=countyPage('Beaverhead',box('UNITED STATES SENATOR',[['KURT ALME','Republican','2,794'],['ALANI BANKHEAD','Democrat','374']])+box('STATE SENATOR DISTRICT 36',[['X','Republican','9']]));
+  assert.deepEqual(readResultBoxes(page,mt),{head:'UNITED STATES SENATOR',rows:[{choice:'KURT ALME',party:'Republican',votes:2794},{choice:'ALANI BANKHEAD',party:'Democrat',votes:374}],reporting:{n:502,of:728,unit:'precincts'}});
+  assert.equal(countyNameIn(page),'Beaverhead');assert.equal(countyNameIn('<span class="county-identifier-name">Baker County, Oregon</span>'),'Baker');
+  assert.equal(readResultBoxes(countyPage('X',box('STATE SENATOR DISTRICT 1',[['Y','R','1']])),mt),null,'a state senate race is not it');
+  const or=readResultBoxes(box('US Senator',[['Jeff Merkley','Democrat, Working Families','864,436']],{h1:false,prec:'0 out of 1318 Precincts Reported'}),SOURCES['S-OR'].contest);
+  assert.deepEqual([or.rows[0].votes,or.reporting],[864436,{n:0,of:1318,unit:'precincts'}],"Oregon's votes in a <div>");
+  assert.ok(SOURCES['S-NE'].contest.test('For United States Senator - 6  Year Term'));
+  // Montana: the list of county pages, each read; a page that fails is noted, the rest kept.
+  const [alme,bankhead]=raceCandidates(D,'S-MT').filter(c=>/Alme|Bankhead/.test(c.name)).map(c=>c.name);
+  const list='<html><a href="ResultsSW.aspx?type=CTYALL&amp;cty=01&amp;map=CTY">Beaverhead</a> <a href="ResultsSW.aspx?type=CTYALL&amp;cty=02&amp;map=CTY">Big Horn</a> <a href="ResultsSW.aspx?type=CTYALL&amp;cty=03&amp;map=CTY">Blaine</a> <a href="ResultsSW.aspx?type=FED&amp;map=CTY">Federal</a></html>';
+  const asked=[],get=async u=>{asked.push(u);if(u.endsWith('ResultsList.aspx'))return list;if(u.includes('cty=03'))throw new Error('HTTP 500');
+    return countyPage('x',box('UNITED STATES SENATOR',[[alme,'Republican',u.includes('cty=01')?'2,794':'1,000'],[bankhead,'Democrat','374']]));};
+  const r=await countyRace(D,'S-MT',{maps:async st=>map(st),get});
+  const f=n=>map('MT').counties.find(c=>c.name===n).fips;
+  assert.equal(Object.values(r.race.counties[f('Beaverhead')]).reduce((a,b)=>a+b,0),3168);assert.equal(Object.keys(r.race.counties).length,2);
+  assert.ok(r.lines.some(l=>/1 of 3 county pages couldn't be read \(.*cty=03.*HTTP 500\)/.test(l)));assert.deepEqual(r.race.reporting,{n:502,of:728,unit:'precincts'});
+  assert.ok(!asked.some(u=>/type=FED/.test(u)),'only county pages');
+  // Nebraska: numbered pages, each naming its county; Oregon's "0 of 1,318 precincts" with votes is left out.
+  const ne=await countyRace(D,'S-NE',{maps:async st=>map(st),get:async u=>{const m=/cty=(\d+)/.exec(u);if(m[1]!=='01'&&m[1]!=='02')throw new Error('HTTP 404');
+    const [a,b]=raceCandidates(D,'S-NE').map(c=>c.name);return countyPage(m[1]==='01'?'Douglas':'Lancaster',box('For United States Senator - 6 Year Term',[[a,'Republican','77,328'],[b,'By Petition','121,080']],{prec:'0 out of 1318 Precincts Reported'}));}});
+  assert.equal(Object.keys(ne.race.counties).length,2);assert.equal(ne.race.reporting,undefined,'a zero precinct count with votes says nothing');
+  assert.ok(SOURCES['S-MT'].slow&&SOURCES['S-IA'].slow,'many pages: read every fourth pass while watching');
+});
+
+test("Iowa: no statewide detail file, so each county's own Clarity detail file is read for its totals",async()=>{
+  const [a,b]=raceCandidates(D,'S-IA').map(c=>c.name);
+  const county=(n)=>zipOf('detail.xml',`<?xml version="1.0"?><ElectionResult><Contest key="1" text="United States Senator" precinctsParticipating="10" precinctsReported="${n}"><Choice key="1" text="${a}" party="DEM" totalVotes="${100*n}"><VoteType name="Election Day" votes="1"><Precinct name="P1" votes="1"/></VoteType></Choice><Choice key="2" text="${b}" party="REP" totalVotes="50"/></Contest></ElectionResult>`);
+  const settings={settings:{electiondetails:{participatingcounties:['Adair|127078|384979|11/3/2026 10:57:28 PM CST|16','Black_Hawk|127084|384733|11/3/2026 9:39:16 PM CST|16','Polk|127150|385000|x|16']}}};
+  const asked=[],get=async u=>{asked.push(u);if(u.endsWith('/IA/elections.json'))return JSON.stringify([{EID:'127077',ElectionName:'2026 General Election',Date:'11/3/2026 12:00:00 AM'}]);
+    if(u.endsWith('/IA/127077/current_ver.txt'))return '385624';if(u.endsWith('/127077/385624/json/en/electionsettings.json'))return JSON.stringify(settings);
+    if(u.includes('/IA/Adair/127078/384979/reports/detailxml.zip'))return county(10);if(u.includes('/IA/Black_Hawk/127084/384733/reports/detailxml.zip'))return county(4);throw new Error('HTTP 404');};
+  const r=await countyRace(D,'S-IA',{maps:async st=>map(st),get});
+  const f=n=>map('IA').counties.find(c=>c.name===n).fips,k=raceCandidates(D,'S-IA').map(c=>c.key);
+  assert.deepEqual(r.race.counties[f('Adair')],{[k[0]]:1000,[k[1]]:50});assert.deepEqual(r.race.counties[f('Black Hawk')],{[k[0]]:400,[k[1]]:50},'"Black_Hawk" is Black Hawk County');
+  assert.deepEqual(r.race.reporting,{n:14,of:20,unit:'precincts'},'precincts added up over the counties read');
+  assert.ok(r.lines.some(l=>/1 of 3 counties' detail files couldn't be read \(.*Polk.*HTTP 404\)/.test(l)));
+  assert.ok(asked.includes('https://results.enr.clarityelections.com/IA/127077/385624/reports/detailxml.zip'),'the statewide file is tried first');
+  assert.deepEqual(readClarityCountyXml('<Contest text="Governor"></Contest>',SOURCES['S-IA'].contest,'Adair'),null);
 });
