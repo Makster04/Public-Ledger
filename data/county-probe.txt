@@ -1,4 +1,4 @@
-County results probe, 2026-11-04T21:52:27.699Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-04T21:53:34.444Z: what each state's results site serves, for writing its reader.
 
 AL
   https://www2.alabamavotes.gov/electionnight/ → HTTP 200, text/html, 0 KB
@@ -92,7 +92,7 @@ IA
       data addresses in its scripts: IDBDatabase · __nghData__ · NoDataFromResolver · routerOutletData · elections.json?v=
   https://sos.iowa.gov/elections/results/ → HTTP 403, text/html, 5 KB
       title: Just a moment... · 58 characters of text
-      data addresses in its scripts: /elections/results/?__cf_chl_tk=E1kRXOQVzEusOBMOe7.nzGMJGu5snmnVcRvXxycUKWg-1793829151-1.0.1.1-BeMxQ_x3HNxPteOHiSFHFwuztkYBw6eZ1ngfeddBUMw · /elections/results/?__cf_chl_f_tk=E1kRXOQVzEusOBMOe7.nzGMJGu5snmnVcRvXxycUKWg-1793829151-1.0.1.1-BeMxQ_x3HNxPteOHiSFHFwuztkYBw6eZ1ngfeddBUMw · /elections/results/?__cf_chl_rt_tk=E1kRXOQVzEusOBMOe7.nzGMJGu5snmnVcRvXxycUKWg-1793829151-1.0.1.1-BeMxQ_x3HNxPteOHiSFHFwuztkYBw6eZ1ngfeddBUMw
+      data addresses in its scripts: /elections/results/?__cf_chl_tk=cyslYYSrOQt91xdu2J32c5naiA22GIOGhV5VfW9blvE-1793829217-1.0.1.1-rIE1mQT332x_Miby3KTFkJhwGydiIKZ1LQjE._Io7sM · /elections/results/?__cf_chl_f_tk=cyslYYSrOQt91xdu2J32c5naiA22GIOGhV5VfW9blvE-1793829217-1.0.1.1-rIE1mQT332x_Miby3KTFkJhwGydiIKZ1LQjE._Io7sM · /elections/results/?__cf_chl_rt_tk=cyslYYSrOQt91xdu2J32c5naiA22GIOGhV5VfW9blvE-1793829217-1.0.1.1-rIE1mQT332x_Miby3KTFkJhwGydiIKZ1LQjE._Io7sM
 
 IL
   https://www.elections.il.gov/ → HTTP 200, text/html, 76 KB
@@ -191,8 +191,8 @@ MA
       table: Year | Office | District | Stage | Candidates
       table: 30,079 | elections
       data addresses in its scripts: search_results_table · ui-controlgroup-data · data-date · data-month · data-year · data-event · data-handler · data-highcharts-chart · data-style · data-z-index · postProcessData · dataLabel · dataLabelPath · dataLabelUpper · highcharts-data-label-hidden · beforeGetHoverData
-  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 0 KB
-      title: (none) · 0 characters of text
+  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 1 KB
+      title: (none) · 82 characters of text
 
 ME
   https://www.maine.gov/sos/cec/elec/results/ → HTTP 404, text/html, 92 KB
@@ -219,23 +219,9 @@ ME
       data addresses in its scripts: https://www.maine.gov/sos/elections-voting/election-results · data_layer · dataLayer · /sos/elections-voting/voter-data · /sos/elections-voting/voter-data/voting-reports-and-studies · /sos/elections-voting/voter-data/early-voting-reports · /sos/elections-voting/voter-data/previous-data · /sos/elections-voting/voter-data/previous-enrollment-data · /sos/elections-voting/voter-data/previous-absentee-data · /sos/elections-voting/voter-data/previous-apportionment-information · /sos/elections-voting/election-results-data · /sos/elections-voting/election-results-data/previous-election-results · /sos/corporations-commissions/bulk-data · /sos/elections-voting/election-results
 
 MN
-  https://electionresults.sos.mn.gov/ → HTTP 200, text/html, 260 KB
-      title: Home - Election Results · 60,213 characters of text
-      link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
-      link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
-      link: Existing Notaries → https://notary.sos.mn.gov/account/login
-      link: Select My Races → https://electionresults.sos.mn.gov/Select/SelectMyRaces/Index?ersElectionId=201
-      link: Ballot Questions → https://electionresults.sos.mn.gov/Select/BallotQuestions/Index?ersElectionId=201
-      link: Search by Candidate → https://electionresults.sos.mn.gov/Select/SearchByCandidate/Index?ersElectionId=201
-      link: About these Results → https://electionresults.sos.mn.gov/Select/AboutTheseResults/Index?ersElectionId=201
-      link: Voter Turnout → https://electionresults.sos.mn.gov/Select/VoterTurnOut/Index?ersElectionId=201
-      link: Precincts Reporting → https://electionresults.sos.mn.gov/Select/MapCountyPrecinctsReporting/Index?ersElectionId=201
-      link: All without Judicial → https://electionresults.sos.mn.gov/Results/Index?ersElectionId=201&scenario=AllwithoutJudicial&electionDate=11%2F3%2F2026%2012%3A00%3A00%20AM
-      link: U.S. Senate → https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00
-      link: Governor → https://electionresults.sos.mn.gov/Results/Index?ersElectionId=201&scenario=Governor&officeInElectionId=38695
-      link: Secretary of State → https://electionresults.sos.mn.gov/Results/Index?ersElectionId=201&scenario=SecretaryOfState&officeInElectionId=38696
-      link: State Auditor → https://electionresults.sos.mn.gov/Results/Index?ersElectionId=201&scenario=StateAuditor&officeInElectionId=38697
-      data addresses in its scripts: https://electionresults.sos.mn.gov/18f5227b-e27b-445a-a53f-f845fbe69b40/stormcaster.js · https://electionresults.sos.mn.gov · electionresults.sos.mn.gov · https://www.sos.mn.gov/search-results-master/?search-box= · https://www.sos.mn.gov/elections-voting/election-results · https://www.sos.mn.gov/election-administration-campaigns/data-maps/ · https://www.sos.mn.gov/about-the-office/rulemaking-data-practice/ · /Select/AboutTheseResults/Index?ersElectionId=201 · /results/Index · ResultsInCounty · /Results/CountyStatisticsStatewide/Index?ersElectionId=201
+  https://electionresults.sos.mn.gov/ → HTTP 200 (now https://validate.perfdrive.com/?ssa=cec99516-f0fe-4240-b829-01aaf2f2ff53&ssb=41977282853&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2F&ssi=517eb273-cxg2-482b-a966-db7cee966534&ssk=botmanager_support@radware.com&ssm=99499982980105444104811732482040&ssn=5f07676ec9c9958c374b3bb11a9dc0b0c127a07eb701-8870-4a7b-944378&sso=70fdd62b-aa92430eda66322aff0f80852a8c58e2137c4cd56ef4d8b4&ssp=99575419621793834825179381933032552&ssq=09348152922155254146429221474153470555920&ssr=NTAuMTUxLjg5LjE0Ng==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJyZCI6Im1uLmdvdiIsInV6bXgiOiI3ZmMwMDA1MzQwOTg0Ny1iNWY4LTQ0OWItOGU0MS00MmZmOGNkZTIxMWExLTE3OTM4MjkyMjE0NzEwLTAwYzVlNTI5MWNmODZkZGRjMDYxMCIsIl9fdXptZiI6IjdmOTAwMGEwN2ViNzAxLTg4NzAtNGE3Yi05NjJiLWFhOTI0MzBlZGE2NjEtMTc5MzgyOTIyMTQ3MTAtMDA1ZTdmMTRhZTFhOTFkODUwZjEwIn0=), text/html, 15 KB
+      title: Radware Captcha Page · 691 characters of text
+      data addresses in its scripts: https://hcaptcha.com/1/api.js?recaptchacompat=off
   https://electionresultsfiles.sos.mn.gov/20261103/ → HTTP 403, text/html, 1 KB
       title: 403 - Forbidden: Access is denied. · 181 characters of text
 
@@ -412,7 +398,7 @@ OH
       data addresses in its scripts: /Content/browser-icons/manifest.json · ResultsDiv · ResultsByCountyHeader · MyResultsHeader · myResultsHeader-template · ResultsContainer · results-template · ResultsNoStatsContainer · results-nostats-template · AllResults · AllResults-template · xmlResultsModal · resultsDiscalimer · myResultsSelectionDiv · checkboxlbl--myresults · contestResultsRow · /Api/v1/Contest/getTabs
   https://www.ohiosos.gov/elections/election-results-and-data/ → HTTP 403, text/html, 1255 KB
       title: Ohio Secretary of State's Office Website Maintenance · 1,055 characters of text
-      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=10ZtjiJvxxlcrX8nWywFZI5QGsYY5SJPq26dZT21Hjo-1793829163-1.0.1.1-UICkUXhXhxY1HMjJsjsV9wqRyFuBT5OUGJEdtetdHoE · /elections/election-results-and-data/?__cf_chl_f_tk=10ZtjiJvxxlcrX8nWywFZI5QGsYY5SJPq26dZT21Hjo-1793829163-1.0.1.1-UICkUXhXhxY1HMjJsjsV9wqRyFuBT5OUGJEdtetdHoE · /elections/election-results-and-data/?__cf_chl_rt_tk=10ZtjiJvxxlcrX8nWywFZI5QGsYY5SJPq26dZT21Hjo-1793829163-1.0.1.1-UICkUXhXhxY1HMjJsjsV9wqRyFuBT5OUGJEdtetdHoE · data-cfemail · data-cf-beacon
+      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=wyC.VYF8tGrWGp97qeQ.gnXRom_syz4sl6Tl.ms2xgM-1793829225-1.0.1.1-9nZ41DoRIVO4LwV_LtRb9Em4H13ZvFIe5lDeMVVtTuo · /elections/election-results-and-data/?__cf_chl_f_tk=wyC.VYF8tGrWGp97qeQ.gnXRom_syz4sl6Tl.ms2xgM-1793829225-1.0.1.1-9nZ41DoRIVO4LwV_LtRb9Em4H13ZvFIe5lDeMVVtTuo · /elections/election-results-and-data/?__cf_chl_rt_tk=wyC.VYF8tGrWGp97qeQ.gnXRom_syz4sl6Tl.ms2xgM-1793829225-1.0.1.1-9nZ41DoRIVO4LwV_LtRb9Em4H13ZvFIe5lDeMVVtTuo · data-cfemail · data-cf-beacon
 
 OK
   https://results.okelections.us/ → HTTP 403, text/html, 1 KB
@@ -523,31 +509,10 @@ SD
       data addresses in its scripts: /elections-voting/upcoming-elections/general-information/2026-Election-Absentee-Data.aspx · /Business-Services/database-downloads.aspx · https://electionresults.sd.gov/Default.aspx · county_map_data_table · distrit_map_data_table
 
 TN
-  https://elections.tn.gov/ → HTTP 200 (now https://elections.tn.gov/categories/governor/offices), text/html, 28 KB
-      title: Governor | Election Night Reporting Dashboard · 717 characters of text
-      link: Results by County → https://elections.tn.gov/results-by-county
-      link: Results by District → https://elections.tn.gov/district/congressional
-      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
-      link: View County Breakdown for Governor → https://elections.tn.gov/county-breakdown/Governor
-      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
-      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · data-dtconfig · HISTORY_API_EVENT · datadog · QuantumMetricAPI · adobeDataLayer · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04 · data-name
-  https://sos.tn.gov/elections/results → HTTP 200, text/html, 259 KB
-      title: Historical Election Results | Tennessee Secretary of State · 21,631 characters of text
-      link: View live unofficial election results here. → https://elections.tn.gov/
-      link: Results by Precinct Spreadsheet → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806AllbyPrecinct.xlsx
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806RepublicanPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806RepublicanPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806DemocraticPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806DemocraticPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806StateGeneralbyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806StateGeneralbyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806JudicialRetentionbyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806JudicialRetentionbyPrecinct.pdf
-      link: ​By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_RepublicanPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_RepublicanPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_DemocraticPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_DemocraticPrimarybyPrecinct.pdf
-      data addresses in its scripts: http://sos.tn.gov/elections/results · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108TotalResults.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108ResultsbyCounty.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108ResultsbyPrecinct.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20220804ResultsbyPrecinct.xlsx · https://sos-tn-gov-files.tnsosfiles.com/March2020Results.xlsx · e7341cbce8f5d5566213a11feedfc57d7 · https://sos-tn-gov-files.tnsosfiles.com/180802_ResultsbyPrecinct.xlsx · https://sos-tn-gov-files.s3.amazonaws.com/March2016Results.xlsx · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofvote.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofsub.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofasc.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012-TNcertvote.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USPresidentCountyTotals.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USPresidentPrecinctTotals.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USSenateCountyTotals.pdf · data-dtconfig
+  https://elections.tn.gov/ → HTTP 202, text/html, 0 KB
+      starts: 
+  https://sos.tn.gov/elections/results → HTTP 202, text/html, 0 KB
+      starts: 
 
 TX
   https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 285 KB
