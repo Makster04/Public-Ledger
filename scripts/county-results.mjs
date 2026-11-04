@@ -26,6 +26,7 @@ import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import os from 'node:os';
 import {unzipFile} from '../src/sources.mjs';
+import {pdfText} from '../src/pdf.mjs';
 
 const root=new URL('..',import.meta.url);
 // What to do for a site that turns scripts away with a bot check: save the page from a browser, which reads it as any
@@ -97,7 +98,7 @@ export const SOURCES={
 
 // A name reduced to letters, for matching ("St. Clair County" and "ST CLAIR" are the same; "El-Sayed" and "El Sayed").
 const letters=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z]/g,'');
-export const countyKey=s=>letters(String(s||'').replace(/\b(county|parish|borough|city and county)\b/ig,'').replace(/\bsaint\b/ig,'st'));
+export const countyKey=s=>letters(String(s||'').replace(/&/g,' and ').replace(/\b(county|parish|borough|city and county)\b/ig,'').replace(/\bsaint\b/ig,'st'));
 // A candidate's last name, without suffixes and the party or incumbent marks some states add: "Jon Ossoff (I) (Dem)".
 export function lastName(name){
   const words=String(name||'').replace(/\([^)]*\)/g,' ').replace(/,?\s+(jr|sr|ii|iii|iv)\.?\s*$/i,'').trim().split(/\s+/);
@@ -504,20 +505,54 @@ const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
 // Pages the probe also saves, without their scripts and styles, to data/county-samples/, for the states whose results
 // pages don't use plain tables: one county's page and the race's page.
 export const SAMPLES={
-  MT:['https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=01&map=CTY','https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY'],
-  NE:['https://electionresults.nebraska.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=01','https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY'],
-  NM:['https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo','https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY'],
-  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY'],
-  SD:['https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=10&map=CTY','https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY'],
-  TN:['https://elections.tn.gov/county-breakdown/Governor'],
-  WY:['https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx'],
-  DE:['https://elections.delaware.gov/results/enr/GE2026.html'],
-  KS:['https://results.enr.clarityelections.com/KS/elections.json'],
-  WV:['https://results.enr.clarityelections.com/WV/elections.json'],
-  IA:['https://results.enr.clarityelections.com/IA/elections.json','https://results.enr.clarityelections.com/IA/127077/385624/json/en/electionsettings.json'],
+  // Pages filled in by their own scripts: the addresses those scripts ask for (from every script on the page, wherever
+  // it is kept), and the page as served.
+  TX:[{u:'https://results.texas-election.com/',kind:'scripts'},{u:'https://results.texas-election.com/',kind:'raw'}],
+  TN:[{u:'https://elections.tn.gov/county-breakdown/United%20States%20Senate',kind:'raw'},{u:'https://elections.tn.gov/county-breakdown/United%20States%20Senate',kind:'scripts'}],
+  DE:[{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'scripts'}],
+  AL:[{u:'https://www2.alabamavotes.gov/electionnight/',kind:'raw'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'scripts'}],
+  AR:[{u:'https://arkansas.tally-enr.com/',kind:'scripts'}],
+  FL:[{u:'https://results.elections.myflorida.com/',kind:'raw'},{u:'https://results.elections.myflorida.com/',kind:'scripts'}],
+  LA:['https://voterportal.sos.la.gov/ElectionResults/GraphicalConfig',{u:'https://voterportal.sos.la.gov/graphical',kind:'scripts'}],
+  OH:[{u:'https://liveresults.ohiosos.gov/',kind:'scripts'},'https://liveresults.ohiosos.gov/Api/v1/Contest/getTabs'],
+  // Oregon's county page, now that the hidden form field that filled the last sample is cut out.
+  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/ResultsExport.aspx'],
+  // Wyoming posts a PDF per county: its text.
+  WY:[{u:'https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP.pdf',kind:'pdf'},{u:'https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP_TBC.pdf',kind:'pdf'}],
+  KS:['https://sos.ks.gov/elections/election-results.html'],
+  KY:['https://elect.ky.gov/results/2020-2029/Pages/2026.aspx'],
+  WV:['https://sos.wv.gov/elections','https://apps.sos.wv.gov/elections/results/'],
+  OK:['https://results.okelections.us/OKER/','https://oklahoma.gov/elections.html'],
+  MS:['https://www.sos.ms.gov/elections-voting/election-results'],
 };
 // A page as saved for a sample: no scripts, styles or comments, at most 150 KB.
-export const sampleOf=text=>String(text).replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/\n\s*\n+/g,'\n').slice(0,150000);
+// ASP.NET's hidden form fields (__VIEWSTATE …) can run to hundreds of kilobytes; their values are cut out.
+const noViewState=t=>String(t).replace(/(<input\b[^>]*\bname="__[A-Z]+"[^>]*\bvalue=")[^"]*/gi,'$1…');
+export const sampleOf=text=>noViewState(text).replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/\n\s*\n+/g,'\n').slice(0,150000);
+// The addresses a page's scripts ask for: the quoted paths and URLs in its own and linked scripts that look like data.
+export function scriptAddresses(code){
+  const out=new Set();
+  for(const m of String(code).matchAll(/["'`]((?:https?:)?\/{0,2}[\w.$\{\}-]*\/[\w.\/?=&%$\{\}:+-]{2,200})["'`]/g)){
+    const v=m[1];if(/\.(css|js|png|svg|gif|jpe?g|ico|woff2?|ttf|map)(\?|$)/i.test(v)||/^\/\/?$/.test(v)||!/[a-z]{3}/i.test(v))continue;
+    if(/api|json|xml|result|election|contest|county|race|data|export|feed|summary|candidate|s3|cdn|enr|vote/i.test(v))out.add(v);
+    if(out.size>=300)break;
+  }
+  return [...out];
+}
+// One sample: a page (cleaned), a page as served, the addresses in its scripts, or a PDF's text.
+export async function sampleOne(x,{get=fetch}={}){
+  const {u,kind='page'}=typeof x==='string'?{u:x}:x,opt={headers:{'User-Agent':UA},signal:AbortSignal.timeout(60000)},r=await get(u,opt);
+  if(kind==='pdf'){const t=await pdfText(new Uint8Array(await r.arrayBuffer()));return {status:r.status,ext:'txt',text:t?t.slice(0,80000):'(no text in the PDF)'};}
+  const text=await r.text();
+  if(kind==='raw')return {status:r.status,ext:'html',text:noViewState(text).slice(0,150000)};
+  if(kind==='scripts'){
+    const base=r.url||u,lines=[`Scripts of ${u} (HTTP ${r.status}):`],found=new Set(scriptAddresses(text));
+    const srcs=[...text.matchAll(/<script\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/gi)].map(m=>{try{return new URL(decode(m[1]),base).href;}catch{return null;}}).filter(Boolean).slice(0,10);
+    for(const src of srcs){try{const c=await (await get(src,opt)).text();const a=scriptAddresses(c);lines.push(`  ${src}: ${Math.round(c.length/1024)} KB, ${a.length} addresses`);a.forEach(v=>found.add(v));}catch(e){lines.push(`  ${src}: couldn't fetch (${e.cause?.code||e.message})`);}}
+    return {status:r.status,ext:'txt',text:[...lines,'',...found].join('\n')+'\n'};
+  }
+  return {status:r.status,ext:/^\s*[{[]/.test(text)?'json':'html',text:sampleOf(text)};
+}
 // What one address serves: its status, kind and size, and for a web page its title, links, tables and the data
 // addresses named in its own scripts; for JSON its keys.
 export async function probeOne(u,{get=fetch}={}){
@@ -583,15 +618,15 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(args.includes('--probe')){
     // The states with no county results saved yet: their known addresses, and their source's own when they have one.
     const saved=new Set(Object.values(out.races).map(r=>r.state)),own=Object.fromEntries(Object.values(SOURCES).map(x=>[x.state,[...x.urls,...(x.pages||[])]]));
-    const states=[...new Set([...Object.keys(PROBE),...Object.keys(own)])].sort().filter(st=>!saved.has(st)&&(!only||only.has(st)||only.has('S-'+st)))
+    const states=[...new Set([...Object.keys(PROBE),...Object.keys(own),...Object.keys(SAMPLES)])].sort().filter(st=>!saved.has(st)&&(!only||only.has(st)||only.has('S-'+st)))
       .map(st=>[st,[...new Set([...(own[st]||[]),...(PROBE[st]||[])])]]);
     const lines=[`County results probe, ${new Date().toISOString()}: what each state's results site serves, for writing its reader.`];
     console.log(`Looking at the results sites of ${states.length} states; this takes a few minutes.`);
     for(const [st,urls] of states){lines.push('',`${st}`);console.log(`${st}…`);for(const u of urls)lines.push(...(await probeOne(u)).map(l=>'  '+l));
-      for(const [i,u] of (SAMPLES[st]||[]).entries()){
-        const file=`data/county-samples/${st}-${i+1}.${/\.json(\?|$)/.test(u)?'json':'html'}`;
-        try{const r=await fetch(u,{headers:{'User-Agent':UA},signal:AbortSignal.timeout(45000)}),t=await r.text();
-          await fs.mkdir(new URL('data/county-samples/',root),{recursive:true});await fs.writeFile(new URL(file,root),sampleOf(t));lines.push(`  saved ${u} (HTTP ${r.status}) as ${file}`);}
+      for(const [i,x] of (SAMPLES[st]||[]).entries()){
+        const u=typeof x==='string'?x:x.u;
+        try{const r=await sampleOne(x),file=`data/county-samples/${st}-${i+1}.${r.ext}`;
+          await fs.mkdir(new URL('data/county-samples/',root),{recursive:true});await fs.writeFile(new URL(file,root),r.text);lines.push(`  saved ${u} (HTTP ${r.status}) as ${file}`);}
         catch(e){lines.push(`  couldn't save ${u} (${e.cause?.code||e.message})`);}
       }}
     await fs.writeFile(new URL('data/county-probe.txt',root),lines.join('\n')+'\n');

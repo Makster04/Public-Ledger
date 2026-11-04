@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -271,7 +271,7 @@ test("Virginia's race is named \"Member, United States Senate\"; a bot check is 
   assert.ok(!botCheck(404,'https://example.gov/x','<title>Not Found</title>'));assert.ok(!botCheck(200,'https://example.gov/','<title>Just a moment</title>'),'a page that happens to say it');
   assert.match(SOURCES['S-MI'].help,/turned this one away, so use your browser: open https:\/\/mvic\.sos\.state\.mi\.us\/.*save the page .* --file "S-MI=~\/Downloads\/<the saved file>"/);
   assert.equal(sampleOf('<html><script>var a=1</script><style>p{}</style><!-- note --><p>Votes</p>\n\n\n<td>5</td></html>'),'<html><p>Votes</p>\n<td>5</td></html>');
-  for(const urls of Object.values(SAMPLES))for(const u of urls)assert.match(u,/^https:\/\//);
+  for(const list of Object.values(SAMPLES))for(const x of list){assert.match(typeof x==='string'?x:x.u,/^https:\/\//);if(typeof x!=='string')assert.ok(['raw','scripts','pdf'].includes(x.kind));}
 });
 
 // A county page on the county-page sites (Montana, Nebraska, New Mexico, Oregon, South Dakota), as they lay it out.
@@ -320,4 +320,17 @@ test("Iowa: no statewide detail file, so each county's own Clarity detail file i
   assert.ok(r.lines.some(l=>/1 of 3 counties' detail files couldn't be read \(.*Polk.*HTTP 404\)/.test(l)));
   assert.ok(asked.includes('https://results.enr.clarityelections.com/IA/127077/385624/reports/detailxml.zip'),'the statewide file is tried first');
   assert.deepEqual(readClarityCountyXml('<Contest text="Governor"></Contest>',SOURCES['S-IA'].contest,'Adair'),null);
+});
+
+test('the probe keeps what a reader needs: the addresses in a page\'s scripts, a page as served, a PDF\'s text',async()=>{
+  assert.equal(countyKey('Lewis & Clark'),countyKey('Lewis and Clark'),"Montana's county, as the state writes it");
+  assert.deepEqual(scriptAddresses(`fetch("/api/v1/election/2026/contests.json");const a='https://goelect.example.gov/api-ivis-system/api/s3/enr/election/57/county/'+id;x="/css/site.css";y="text/html";z='/static/logo.png'`),
+    ['/api/v1/election/2026/contests.json','https://goelect.example.gov/api-ivis-system/api/s3/enr/election/57/county/']);
+  const reply=(body,type='text/html')=>({status:200,url:'',text:async()=>body,arrayBuffer:async()=>new TextEncoder().encode(body).buffer,headers:{get:()=>type}});
+  const get=async u=>u.endsWith('main.js')?reply('const u="/api/results/statewide.json";'):u.endsWith('.pdf')?reply('not a pdf'):reply('<html><input type="hidden" name="__VIEWSTATE" value="AAAA'+'x'.repeat(5000)+'" /><script src="https://cdn.example.net/main.js"></script><script>var k="/data/county.json"</script></html>');
+  const s=await sampleOne({u:'https://example.gov/',kind:'scripts'},{get});
+  assert.match(s.text,/^Scripts of https:\/\/example\.gov\/ \(HTTP 200\):\n  https:\/\/cdn\.example\.net\/main\.js: 0 KB, 1 addresses\n\n\/data\/county\.json\n\/api\/results\/statewide\.json\n$/,'scripts on other hosts too');
+  const raw=await sampleOne({u:'https://example.gov/',kind:'raw'},{get});assert.ok(raw.text.length<300&&raw.text.includes('value="…"')&&raw.text.includes('<script'),'the hidden form field cut, the scripts kept');
+  assert.equal((await sampleOne({u:'https://example.gov/a.pdf',kind:'pdf'},{get})).text,'(no text in the PDF)');
+  assert.equal((await sampleOne('https://example.gov/',{get})).text.includes('<script'),false,'a plain sample has no scripts');
 });
