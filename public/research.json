@@ -63690,13 +63690,32 @@
         "tally": {
           "asof": "2026-11-04",
           "shares": {
-            "cooper": 58.7,
-            "whatley": 39.2
+            "cooper": 58.72,
+            "whatley": 39.09
           },
-          "counted": "Most results in",
+          "votes": {
+            "cooper": 2467963,
+            "whatley": 1643088
+          },
+          "others": [
+            {
+              "name": "Shannon W. Bray",
+              "party": "L",
+              "pct": 1.33,
+              "votes": 55726
+            },
+            {
+              "name": "Michael Dublin",
+              "party": "G",
+              "pct": 0.87,
+              "votes": 36404
+            }
+          ],
+          "total": 4203181,
+          "counted": "All 100 counties, in the state’s unofficial results file of 6:40 a.m. Nov. 4",
           "src": {
-            "t": "WRAL, Nov. 4, 2026",
-            "u": "https://www.wral.com/news/nccapitol/us-senate-race-nc-north-carolina-roy-cooper-michael-whatley-midterm-results-november-2026/"
+            "t": "North Carolina State Board of Elections, precinct results file",
+            "u": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/results_pct_20261103.zip"
           }
         }
       }

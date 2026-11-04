@@ -2144,10 +2144,60 @@ function resultCard(r){
   return `<article class="race rc">
     <div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open||lite&&!r.nominees.some(n=>n.incumbent)?'Open seat':'Incumbent ran'}</span></div>
     ${res&&!res.decided?`<p class="small rc-status"><span class="chip warn">Not called yet</span> ${esc(res.how)}</p>`:res?`<p class="small muted rc-status">${esc(res.how||'Race called')} · <a href="${esc(res.src.u)}" target="_blank" rel="noopener">${esc(res.src.t)} ↗</a></p>`:''}
+    <div class="rc-cols"><div class="rc-left">
     <div class="rc-grid">${keys.map(tile).join('')}</div>
     ${others.length?`<p class="small muted" style="margin:0">Also on the ballot: ${others.join(' · ')}</p>`:''}
     <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}</p>
+    </div><aside class="rc-map" data-map="${esc(r.id)}" hidden></aside></div>
   </article>`;
+}
+// ---------- county maps (public/county-results.json, outlines in public/maps/<ST>.json) ----------
+// Each county is colored by who leads it, darker the wider the lead; hovering shows its count.
+const COUNTY={data:null,maps:{}};
+const countyData=()=>COUNTY.data??=fetch('/county-results.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+const stateMap=st=>COUNTY.maps[st]??=fetch(`/maps/${st}.json`).then(r=>r.ok?r.json():null).catch(()=>null);
+const MARGINS=[5,15,30];
+const marginBand=m=>MARGINS.filter(x=>m>=x).length;
+// One county's count: candidates by votes, each with a share, and the leader's margin over the runner-up in points.
+function countyCount(res,votes){
+  const rows=res.candidates.map(c=>({...c,votes:votes?.[c.key]||0})).filter(c=>c.votes>0).sort((a,b)=>b.votes-a.votes);
+  const total=rows.reduce((a,c)=>a+c.votes,0);
+  return {rows,total,lead:rows[0]||null,margin:total&&rows.length?((rows[0].votes-(rows[1]?.votes||0))/total*100):0};
+}
+function countyMap(res,m){
+  const name=res.candidates.reduce((o,c)=>(o[c.key]=c,o),{}),led={};
+  const paths=m.counties.map(c=>{const k=countyCount(res,res.counties[c.fips]);
+    if(!k.lead)return `<path d="${c.d}" class="cm-none" data-f="${c.fips}"></path>`;
+    led[k.lead.key]=(led[k.lead.key]||0)+1;const party=k.lead.key==='other'?'O':(name[k.lead.key]?.party||'I');
+    return `<path d="${c.d}" class="cm-${party} cm-m${marginBand(k.margin)}" data-f="${c.fips}"></path>`;}).join('');
+  const main=res.candidates.filter(c=>c.key!=='other');
+  const summary=main.map(c=>`${c.name} led ${led[c.key]||0}`).join(', ')+` of ${m.counties.length} counties`;
+  const swatch=p=>MARGINS.concat(99).map((x,i)=>`<i class="cm-${p} cm-m${i}"></i>`).join('');
+  return `<svg viewBox="0 0 ${m.width} ${m.height}" role="img" aria-label="${esc(`County map: ${summary}`)}"><g class="cm-counties">${paths}</g><path class="cm-state" d="${m.outline}"></path></svg>
+    <div class="cm-legend small">${main.map(c=>`<span><span class="cm-sw">${swatch(c.party)}</span>${esc(c.name.split(' ').at(-1))}</span>`).join('')}<span class="muted">Stronger color: wider lead (under 5, 5–15, 15–30, 30+ points)</span></div>
+    <p class="small muted cm-src">${esc(summary)}. County results: <a href="${esc(res.source.u)}" target="_blank" rel="noopener">${esc(res.source.t)} ↗</a>, read ${esc(fmtDate(res.fetched.slice(0,10)))}.</p>
+    <details class="cm-table small"><summary>All ${m.counties.length} counties</summary><div class="tablewrap"><table><thead><tr><th>County</th>${main.map(c=>`<th>${esc(c.name.split(' ').at(-1))}</th>`).join('')}<th>Others</th><th>Lead</th></tr></thead><tbody>
+    ${m.counties.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>{const k=countyCount(res,res.counties[c.fips]),v=res.counties[c.fips]||{};
+      return `<tr><td>${esc(c.name)}</td>${main.map(x=>`<td class="num">${k.total?((v[x.key]||0)/k.total*100).toFixed(1)+'%':'—'}</td>`).join('')}<td class="num">${k.total?((v.other||0)/k.total*100).toFixed(1)+'%':'—'}</td><td>${k.lead?`${esc(k.lead.key==='other'?'Other':k.lead.name.split(' ').at(-1))} +${k.margin.toFixed(1)}`:'No votes'}</td></tr>`;}).join('')}
+    </tbody></table></div></details>`;
+}
+// Hover (or tap) a county for its count.
+function bindCountyTips(el,res,m){
+  const names=new Map(m.counties.map(c=>[c.fips,c.name]));
+  const text=f=>{const k=countyCount(res,res.counties[f]);
+    return `${names.get(f)} ${m.state==='LA'?'Parish':'County'}: `+(k.total?k.rows.map(r=>`${r.key==='other'?'Others':r.name} ${(r.votes/k.total*100).toFixed(1)}% (${numFmt(r.votes)})`).join(' · ')+` · lead ${k.margin.toFixed(1)} points`:'no votes reported');};
+  const show=e=>{const p=e.target.closest('path[data-f]');if(!p){tip.classList.remove('show');return;}
+    tip.textContent=text(p.dataset.f);tip.classList.add('show');
+    const x=Math.max(10,Math.min(e.clientX+12,window.innerWidth-310));tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px';};
+  const svg=el.querySelector('svg');svg.addEventListener('mousemove',show);svg.addEventListener('click',show);svg.addEventListener('mouseleave',()=>tip.classList.remove('show'));
+}
+async function fillMaps(root){
+  const d=await countyData();if(!d?.races)return;
+  for(const el of root.querySelectorAll('.rc-map[data-map]')){
+    const res=d.races[el.dataset.map];if(!res||!el.isConnected)continue;
+    const m=await stateMap(res.state);if(!m||!el.isConnected)continue;
+    el.innerHTML=countyMap(res,m);el.hidden=false;el.parentElement.classList.add('has-map');bindCountyTips(el,res,m);
+  }
 }
 // How many covered races are called, and which are not yet.
 function resultsLine(){
@@ -2169,7 +2219,7 @@ function renderRaces(){
         <h2 style="margin-top:26px">The rest of the 2026 Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LS.length} Senate races on the November 3 ballot, with results only. Open a sitting senator for their Senate profile; their opponents don't have profiles yet.</p>${LS.map(card).join('')}`
       :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+LH.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
         <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Their nominees don't have profiles yet.</p>${LH.map(card).join('')}`;
-    bindTips(app);};
+    bindTips(app);fillMaps($('#rlist'));};
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
   $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||DATA.liteRaces.find(x=>x.id===e.target.value);const want=r.chamber||'H';const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
@@ -2856,6 +2906,7 @@ function renderMethod(sub){
       <li><b>Not called yet:</b> a race nobody has called and no candidate has conceded shows who was leading, but nobody is marked as having won or lost.</li>
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
+      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
       <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
     <h2>Campaign funds raised</h2>
