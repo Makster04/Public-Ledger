@@ -14,7 +14,7 @@ function research(){
   const camp=(id,o)=>{const p=[...r.members,...r.cands].find(x=>x.id===id);const {researchNote,...c}=p.camp;p.camp={...c,...o};};
   camp('ossoff',{cmteId:'C00718866',cmte:'Jon Ossoff for Senate',start:'2025-01-01',end:'2026-06-30',receipts:77279766,pac:920316,missing:false,note:'Coverage 2025-01-01..2026-06-30 (hand research).'});
   camp('jackson',{cmteId:'C00955609',missing:true,note:'Committee registered after June 30; first report due Oct. 15.',start:null,end:null,receipts:null});
-  camp('moore',{end:'2026-06-30',receipts:3765805,indiv:2800000,pac:881598,party:0,transfers:0,candidate:0,loans:0,missing:false});
+  camp('moore',{end:'2026-06-30',receipts:3765805,indiv:2800000,pac:881598,party:0,transfers:0,candidate:0,loans:0,missing:false,totalsFrom:undefined,cmteId:'C00720375',cmte:'Barry Moore For U.S. Senate'});
   camp('bankhead',{end:'2026-06-30',receipts:58829.06,indiv:45679.62,pac:6627.29,party:0,missing:false});
   const nominee=(fec,o)=>{for(const race of r.liteRaces)for(const [i,n] of race.nominees.entries())if(n.fecCand===fec)race.nominees[i]={...n,...o};};
   nominee('H2AZ02360',{through:'2026-07-01',receipts:6172867});
@@ -121,4 +121,17 @@ test('a part lower than on file is listed as WATCH and the FEC figure used; prog
   assert.equal(r.cands.find(p=>p.id==='bankhead').camp.pac,525);
   const people=[...r.members,...r.cands].filter(p=>p.camp?.cmteId).length,nominees=r.liteRaces.flatMap(x=>x.nominees).filter(x=>x.fecCand).length;
   assert.equal(seen.length,people+nominees);assert.deepEqual(seen.at(-1).slice(0,2),[people+nominees,people+nominees]);
+});
+
+test('candidate totals for a campaign that moved committees, and --only for one person',async()=>{
+  const r=research(),moore=r.cands.find(p=>p.id==='moore');moore.camp.totalsFrom='candidate';
+  const asked=[];
+  const out=await updateMoney(r,async(kind,id)=>{asked.push(`${kind}:${id}`);
+    return kind==='candidate'&&id===moore.fecCand?totals({committee_id:null,coverage_start_date:'2025-01-01',coverage_end_date:'2026-10-14',receipts:6000000,individual_contributions:4200000,
+      other_political_committee_contributions:1100000,political_party_committee_contributions:0,transfers_from_other_authorized_committee:600000,candidate_contribution:0,loans_made_by_candidate:0}):null;},{only:new Set(['moore'])});
+  assert.deepEqual(asked,['candidate:S6AL00476'],'only Moore, from the candidate totals, and no principal-committee check');
+  const c=r.cands.find(p=>p.id==='moore').camp;
+  assert.equal(c.receipts,6000000);assert.equal(c.end,'2026-10-14');assert.match(c.note,/candidate totals \(all of the candidate's authorized committees\) through 2026-10-14/);
+  assert.ok(out.lines.some(l=>/^WATCH Barry Moore: the FEC's candidate totals include \$600,000 moved between the candidate's own committees/.test(l)));
+  assert.equal(out.changed,1);
 });
