@@ -12,6 +12,9 @@
 //   npm run counties:update -- --only S-GA       just these races
 //   npm run counties:update -- --file "S-MI=~/Downloads/mi-county-results.txt"   a file saved from the state's site
 //   npm run counties:update -- --file "S-GA=https://…"   an address instead: a data file, or an Enhanced Voting results page
+//   npm run counties:update -- --probe           for the states without a reader yet: what each one's results site serves
+//                                                (status, links, tables, the data addresses in its scripts), saved to
+//                                                data/county-probe.txt, so a reader can be written for the real thing
 //   npm run counties:update -- --watch           read them all again every 15 minutes (or --watch 5), until Ctrl+C; the
 //                                                Races page shows each new read within two minutes, without reloading
 // Each candidate is matched to the race's own candidates by last name; everyone else counts as "other". Each county is
@@ -42,6 +45,12 @@ export const SOURCES={
     page:'https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026',
     help:'Open https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026, open the county results for United States Senator, copy that page\'s address (or a download link on it), then: npm run counties:update -- --file "S-MI=<that address>"',
     source:'Michigan Department of State, county results file'},
+  // Idaho's statewide results run on Enhanced Voting, as Georgia's do (jurisdiction "id", election "nov2026").
+  'S-ID':{state:'ID',contest:/^(u\.?\s?s\.?|united states)\s+senat/i,
+    urls:['https://app.enhancedvoting.com/cdn/results/id/export-nov2026.json'],
+    page:'https://app.enhancedvoting.com/results/public/id/elections/nov2026',
+    help:'Open https://app.enhancedvoting.com/results/public/id/elections/nov2026 in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-ID=<the file>"',
+    source:'Idaho Secretary of State, results export'},
 };
 
 // A name reduced to letters, for matching ("St. Clair County" and "ST CLAIR" are the same; "El-Sayed" and "El Sayed").
@@ -263,6 +272,76 @@ export async function countyRace(research,id,{get,file=null,maps}){
     ...(rows.reporting?{reporting:rows.reporting}:{}),...(b.others.length?{others:b.others}:{}),counties:b.counties}};
 }
 
+// Where each Senate state without a reader posts (or links to) its results, for --probe: the official results sites as
+// best known, some of them guesses. What the probe finds there decides each state's reader.
+export const PROBE={
+  AL:['https://www2.alabamavotes.gov/electionnight/','https://www.sos.alabama.gov/alabama-votes/voter/election-information'],
+  AR:['https://enr.totalresults.com/arkansas','https://www.sos.arkansas.gov/elections/research/election-results'],
+  CO:['https://results.enr.clarityelections.com/CO/','https://www.coloradosos.gov/pubs/elections/Results/Archives.html'],
+  DE:['https://elections.delaware.gov/results/html/index.shtml','https://elections.delaware.gov/'],
+  FL:['https://results.elections.myflorida.com/','https://fldoselectionfiles.elections.myflorida.com/enightfilespublic/20261103_ElecResultsFL.txt'],
+  IA:['https://electionresults.iowa.gov/','https://results.enr.clarityelections.com/IA/','https://sos.iowa.gov/elections/results/'],
+  IL:['https://www.elections.il.gov/','https://www.elections.il.gov/electionoperations/ElectionVoteTotals.aspx'],
+  KS:['https://sos.ks.gov/elections/elections-results.html','https://results.enr.clarityelections.com/KS/'],
+  KY:['https://elect.ky.gov/results/','https://results.enr.clarityelections.com/KY/'],
+  LA:['https://voterportal.sos.la.gov/graphical','https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Index'],
+  MA:['https://electionstats.state.ma.us/','https://www.sec.state.ma.us/divisions/elections/'],
+  ME:['https://www.maine.gov/sos/cec/elec/results/','https://www.maine.gov/sos/elections-voting/election-results'],
+  MN:['https://electionresults.sos.mn.gov/','https://electionresultsfiles.sos.mn.gov/20261103/'],
+  MS:['https://www.sos.ms.gov/elections-voting/election-results','https://www.sos.ms.gov/'],
+  MT:['https://electionresults.mt.gov/','https://sosmt.gov/elections/results/'],
+  NE:['https://electionresults.nebraska.gov/','https://sos.nebraska.gov/elections/election-results'],
+  NH:['https://www.sos.nh.gov/elections/results','https://www.sos.nh.gov/'],
+  NJ:['https://www.nj.gov/state/elections/election-information-results.shtml','https://www.nj.gov/state/elections/'],
+  NM:['https://electionresults.sos.nm.gov/','https://www.sos.nm.gov/voting-and-elections/election-results/'],
+  OH:['https://liveresults.ohiosos.gov/','https://www.ohiosos.gov/elections/election-results-and-data/'],
+  OK:['https://results.okelections.us/','https://oklahoma.gov/elections/election-results.html'],
+  OR:['https://results.oregonvotes.gov/','https://sos.oregon.gov/elections/Pages/electionhistory.aspx'],
+  RI:['https://electionresults.ri.gov/','https://vote.sos.ri.gov/'],
+  SC:['https://scvotes.gov/election-results/','https://results.enr.clarityelections.com/SC/'],
+  SD:['https://electionresults.sd.gov/','https://sdsos.gov/elections-voting/election-resources/election-history/'],
+  TN:['https://elections.tn.gov/','https://sos.tn.gov/elections/results'],
+  TX:['https://electionresults.sos.state.tx.us/results.html','https://results.texas-election.com/'],
+  VA:['https://enr.elections.virginia.gov/','https://www.elections.virginia.gov/resultsreports/election-results/'],
+  WV:['https://results.enr.clarityelections.com/WV/','https://sos.wv.gov/elections/Pages/ElectionResults.aspx'],
+  WY:['https://sos.wyo.gov/Elections/State/Results.aspx','https://sos.wyo.gov/Elections/'],
+};
+const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
+// What one address serves: its status, kind and size, and for a web page its title, links, tables and the data
+// addresses named in its own scripts; for JSON its keys.
+export async function probeOne(u,{get=fetch}={}){
+  let res;try{res=await get(u,{headers:{'User-Agent':UA},signal:AbortSignal.timeout(45000)});}catch(e){return [`${u} → couldn't connect (${e.cause?.code||e.message})`];}
+  const type=(res.headers.get('content-type')||'').split(';')[0],bytes=new Uint8Array(await res.arrayBuffer()),text=new TextDecoder().decode(bytes.subarray(0,3e6));
+  const out=[`${u} → HTTP ${res.status}${res.redirected?` (now ${res.url})`:''}, ${type||'no type'}, ${Math.round(bytes.length/1024)} KB`],base=res.url||u;
+  if(/^\s*[{[]/.test(text.slice(0,200))){
+    try{const j=JSON.parse(text),first=Array.isArray(j)?j[0]:j,keys=o=>o&&typeof o==='object'?Object.keys(o).slice(0,20).join(', '):'';
+      out.push(`    JSON: ${Array.isArray(j)?`a list of ${j.length}; first item's keys: `:'keys: '}${keys(first)}`);
+      for(const [k,v] of Object.entries(first||{}).slice(0,20))if(v&&typeof v==='object')out.push(`    ${k}: ${Array.isArray(v)?`a list of ${v.length}; first item's keys: ${keys(v[0])}`:`keys: ${keys(v)}`}`);}
+    catch{out.push('    JSON that does not read (cut off?)');}
+    return out;
+  }
+  if(!/^\s*</.test(text.slice(0,300))){out.push(`    starts: ${text.slice(0,240).replace(/\s+/g,' ')}`);return out;}
+  out.push(`    title: ${strip(/<title\b[^>]*>([\s\S]*?)<\/title>/i.exec(text)?.[1]||'(none)').slice(0,100)} · ${strip(text).length.toLocaleString('en-US')} characters of text`);
+  const seen=new Set();
+  for(const m of text.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)){
+    const href=/\bhref\s*=\s*["']([^"']+)["']/i.exec(m[1])?.[1],t=strip(m[2]);if(!href||/^(#|javascript:|mailto:)/i.test(href))continue;
+    let a;try{a=new URL(decode(href),base).href;}catch{continue;}
+    if(seen.has(a)||!/2026|nov|general|result|count|senat|download|export|csv|json|xml|zip|txt|report/i.test(t+' '+a))continue;
+    seen.add(a);out.push(`    link: ${t.slice(0,50)||'(no text)'} → ${a}`);if(seen.size>=14)break;
+  }
+  for(const t of readHtmlTables(text).tables)out.push(`    table: ${t.slice(0,160)}`);
+  // A page filled in by its scripts: the addresses those scripts ask for.
+  const scripts=[...text.matchAll(/<script\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/gi)].map(m=>{try{return new URL(decode(m[1]),base);}catch{return null;}}).filter(x=>x&&x.host===new URL(base).host).slice(0,3);
+  const found=new Set();
+  for(const src of [null,...scripts]){
+    let code=text;if(src){try{const r=await get(src.href,{headers:{'User-Agent':UA},signal:AbortSignal.timeout(45000)});code=await r.text();}catch{continue;}}
+    for(const m of code.matchAll(/["'`]((?:https?:\/\/[\w.-]+)?\/?[\w.\/{}$-]*(?:api|\.json|export|feed|results|data)[\w.\/?=&{}$-]*)["'`]/gi)){
+      const v=m[1];if(v.length<6||v.length>160||/\.(css|png|svg|woff2?|jpg|gif|ico)$/i.test(v))continue;found.add(v);if(found.size>=16)break;}
+  }
+  if(found.size)out.push(`    data addresses in its scripts: ${[...found].join(' · ')}`);
+  return out;
+}
+
 // A file on this computer, or an address: its bytes, or why they couldn't be had.
 async function fetchRaw(u){
   if(!/^https?:/.test(u))return new Uint8Array(await fs.readFile(u.replace(/^~(?=\/)/,os.homedir())));
@@ -284,6 +363,15 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // A file given by hand reads just its own race, unless --only names more.
   const pick=only||(Object.keys(files).length?new Set(Object.keys(files)):null),ids=Object.keys(SOURCES).filter(x=>!pick||pick.has(x)||files[x]);
   const wi=args.indexOf('--watch'),watch=wi<0?0:Math.max(2,Number(args[wi+1])||15);
+  if(args.includes('--probe')){
+    const have=new Set(Object.values(SOURCES).map(x=>x.state)),states=Object.entries(PROBE).filter(([st])=>!have.has(st)&&(!only||only.has(st)||only.has('S-'+st)));
+    const lines=[`County results probe, ${new Date().toISOString()}: what each state's results site serves, for writing its reader.`];
+    console.log(`Looking at the results sites of ${states.length} states; this takes a few minutes.`);
+    for(const [st,urls] of states){lines.push('',`${st}`);console.log(`${st}…`);for(const u of urls)lines.push(...(await probeOne(u)).map(l=>'  '+l));}
+    await fs.writeFile(new URL('data/county-probe.txt',root),lines.join('\n')+'\n');
+    console.log(`\nSaved data/county-probe.txt (${lines.length} lines). Commit and push it so the readers can be written from it.`);
+    process.exit(0);
+  }
   // One pass over the races: each one read again replaces what was saved; one that can't be read keeps its last read.
   const pass=async()=>{
     let read=0,moved=0;
