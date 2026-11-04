@@ -3,7 +3,7 @@
   "election": {
     "date": "2026-11-03",
     "asof": "2026-11-04",
-    "note": "Unofficial results, from news organizations' race calls and candidates' concessions on election night and the morning after. Each state certifies its official results in the following weeks."
+    "note": "Unofficial results, from news organizations' race calls and candidates' concessions on election night and the day after. Each state certifies its official results in the following weeks."
   },
   "members": [
     {
@@ -63325,10 +63325,10 @@
       "result": {
         "winner": null,
         "leader": "peltola",
-        "how": "Mary Peltola led Dan Sullivan by 626 votes on Wednesday morning, with ballots still being counted. Alaska counts ranked-choice ballots and certifies its results by Nov. 25.",
+        "how": "Mary Peltola led Dan Sullivan by 626 votes when the election-night count finished, with more than 98% of precincts in. Thousands of absentee and early ballots are still to be counted; Alaska accepts mailed ballots for 10 days (15 from overseas), and a ranked-choice count is likely, since neither has a majority.",
         "src": {
-          "t": "Anchorage Daily News, Nov. 4, 2026",
-          "u": "https://www.adn.com/politics/2026/11/03/peltola-leads-sullivan-in-limited-early-results-in-hard-fought-us-senate-race/"
+          "t": "Alaska Beacon, Nov. 4, 2026",
+          "u": "https://alaskabeacon.com/2026/11/03/democratic-candidate-mary-peltola-leads-in-early-vote-counts-for-alaskas-us-senate-election/"
         },
         "tally": {
           "asof": "2026-11-04",
@@ -64844,12 +64844,11 @@
       },
       "competitive": true,
       "result": {
-        "winner": null,
-        "leader": "mgp",
-        "how": "NBC News projects Marie Gluesenkamp Perez the winner, but the AP has not called the race and John Braun has not conceded. Washington counts mailed ballots for days after the election.",
+        "winner": "mgp",
+        "how": "Called by the AP on Wednesday morning, Nov. 4",
         "src": {
-          "t": "KGW, Nov. 4, 2026",
-          "u": "https://www.kgw.com/article/news/politics/elections/washington-3rd-congressional-district-rep-gluesenkamp-perez-john-braun-election-results-update/283-1ed78fd8-c043-465d-a528-0ebbe75bf193"
+          "t": "KATU, Nov. 4, 2026",
+          "u": "https://katu.com/news/politics/election-results-gluesenkamp-perez-braun-battle-for-washingtons-3rd"
         },
         "tally": {
           "asof": "2026-11-04",
@@ -197286,27 +197285,33 @@
       "ieTotal": 6135499.01,
       "notes": "Vote shares not given in source. Former U.S. Ambassador to Ukraine Bridget Brink lost the Democratic primary.",
       "result": {
-        "winner": null,
-        "leader": "H6MI07298",
-        "how": "William Lawrence declared victory, leading by about 3 points, but the AP has not called the race and Tom Barrett has not commented.",
+        "winner": "H6MI07298",
+        "how": "Called by the AP on Wednesday afternoon, Nov. 4; Tom Barrett conceded",
         "src": {
-          "t": "Michigan Advance, Nov. 4, 2026",
-          "u": "https://michiganadvance.com/2026/11/04/lawrence-declares-victory-in-michigans-7th-congressional-district/"
+          "t": "WKAR, Nov. 4, 2026",
+          "u": "https://www.wkar.org/election-2026/2026-11-04/barrett-concedes-to-lawrence-as-democrats-net-another-battleground-victory"
         },
         "tally": {
           "asof": "2026-11-04",
           "shares": {
-            "H6MI07298": 50.95,
-            "H2MI07123": 47.79
+            "H6MI07298": 51.03,
+            "H2MI07123": 47.71
           },
           "votes": {
-            "H6MI07298": 201719,
-            "H2MI07123": 189203
+            "H6MI07298": 202657,
+            "H2MI07123": 189482
           },
-          "counted": "About 96% of the expected vote counted",
+          "others": [
+            {
+              "name": "Shane Dedrick",
+              "party": "G",
+              "pct": 1.25,
+              "votes": 4974
+            }
+          ],
           "src": {
-            "t": "Poliwave, Michigan District 7 results",
-            "u": "https://www.poliwave.com/us/live/midterms-2026/house/michigan-07"
+            "t": "WDIV ClickOnDetroit (AP count), Nov. 4, 2026",
+            "u": "https://www.clickondetroit.com/decision-2026/2026/11/04/william-lawrence-wins-michigan-us-house-district-7-ap-projects/"
           }
         }
       },
@@ -198661,10 +198666,10 @@
       "result": {
         "winner": null,
         "leader": "ms-colom",
-        "how": "Too close to call. Decision Desk HQ's count had Scott Colom ahead by about 2,200 votes; at 3 a.m. Wednesday, WLBT's count had him ahead by 43 votes with about 95.6% of ballots tabulated. Affidavit and absentee ballots are still being processed, and Mississippi has no runoff.",
+        "how": "Still too close to call on Wednesday: Scott Colom led Cindy Hyde-Smith by 43 votes with more than 90% of the vote counted. The Colom campaign says up to 15,000 affidavit ballots are uncounted, and voters whose affidavit ballots lacked a photo ID have until Nov. 10 to show one. Mississippi has no runoff.",
         "src": {
-          "t": "WLBT, Nov. 4, 2026",
-          "u": "https://www.wlbt.com/2026/11/04/cindy-hyde-smiths-campaign-releases-statement-senate-race-remains-undecided/"
+          "t": "Mississippi Free Press, Nov. 4, 2026",
+          "u": "https://www.mississippifreepress.org/democrat-scott-colom-leads-mississippi-us-senate-race-by-28-votes-against-republican-cindy-hyde-smith/"
         },
         "tally": {
           "shares": {
