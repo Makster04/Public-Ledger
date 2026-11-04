@@ -1,4 +1,4 @@
-County results probe, 2026-11-04T22:51:59.733Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-04T23:11:47.053Z: what each state's results site serves, for writing its reader.
 
 AL
   https://www2.alabamavotes.gov/electionnight/ → HTTP 200, text/html, 0 KB
@@ -13,6 +13,8 @@ AL
       link: 2026 → https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026
       table: 2026 | 2025 | 2024 | 2023
       data addresses in its scripts: https://www.sos.alabama.gov/alabama-votes/voter/election-data · /alabama-votes/voter/election-data · alabama-votes/voter/election-data · hasDataAttrs · processData
+  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-1.html
+  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-2.txt
 
 AR
   https://enr.totalresults.com/arkansas → HTTP 200 (now https://arkansas.tally-enr.com/), text/html, 1 KB
@@ -35,6 +37,7 @@ AR
       link: 2026 Special General House District 44 → https://arkansas.tally-enr.com/#election=e7ecbe00-7138-4d7d-b740-8b51e25b32e8
       link: 2026 Primary Special Election Senate District 1 → https://arkansas.tally-enr.com/#election=4b025e66-db9f-4e01-a7b8-3d06d87bccda
       data addresses in its scripts: /state-capitol · https://www.sos.arkansas.gov/state-capitol/for-business-visitors · https://www.sos.arkansas.gov/state-capitol/for-tourists-educators · https://www.sos.arkansas.gov/state-capitol/for-events · https://www.sos.arkansas.gov/state-capitol/about-the-capitol · https://www.sos.arkansas.gov/state-capitol/arkansas-state-capitol-police · https://www.pinterest.com/ARStateCapitol/ · https://www.sos.arkansas.gov/elections/research/election-results · /education/capitol-field-trips · /state-capitol/for-business-visitors · /state-capitol/for-tourists-educators · /state-capitol/for-events · /state-capitol/about-the-capitol · https://www.sos.arkansas.gov/state-capitol/about-the-capitol/open-call-for-exhibit-proposals · /state-capitol/arkansas-state-capitol-police · sub-hero-capitol · data-slick-index
+  saved https://arkansas.tally-enr.com/ (HTTP 200) as data/county-samples/AR-1.txt
 
 DE
   https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000 → HTTP 200, text/csv, 22 KB
@@ -65,26 +68,15 @@ DE
       link: (no text) → https://elections.delaware.gov/elections/resultsarchive/elect86/elect86_election_index.html
       table: Link/QR | Category | Description
       data addresses in its scripts: /results/enr/GE2026.html · /results/index.html · map-data · https://elections.delaware.gov/elections/resultsarchive/elect75/elect75_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect79/elect79_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect81/elect81_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect83/elect83_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect86/elect86_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect96/1996_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_general/elect98_general_edrd.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_general/elect98_general_office.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_edrd.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_grid.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_office.html · https://elections.delaware.gov/elections/resultsarchive/elect98/1998_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect00/2000gencounty.html · data-bs-no-jquery
-  saved https://elections.delaware.gov/results/enr/GE2026.html (HTTP 200) as data/county-samples/DE-1.html
+  saved https://elections.delaware.gov/results/enr/GE2026.html (HTTP 200) as data/county-samples/DE-1.txt
 
 FL
   https://results.elections.myflorida.com/ → HTTP 200, text/html, 2 KB
       title: Florida Department of State - Election Results · 112 characters of text
       data addresses in its scripts: WinResults
   https://fldoselectionfiles.elections.myflorida.com/enightfilespublic/20261103_ElecResultsFL.txt → couldn't connect (ENOTFOUND)
-
-IA
-  https://electionresults.iowa.gov/ → HTTP 200 (now https://electionresults.iowa.gov/IA/), text/html, 4 KB
-      title: List Elections · 14 characters of text
-      data addresses in its scripts: IDBDatabase · __nghData__ · NoDataFromResolver · routerOutletData · elections.json?v=
-  https://results.enr.clarityelections.com/IA/ → HTTP 200, text/html, 4 KB
-      title: List Elections · 14 characters of text
-      data addresses in its scripts: IDBDatabase · __nghData__ · NoDataFromResolver · routerOutletData · elections.json?v=
-  https://sos.iowa.gov/elections/results/ → HTTP 403, text/html, 5 KB
-      title: Just a moment... · 58 characters of text
-      data addresses in its scripts: /elections/results/?__cf_chl_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE · /elections/results/?__cf_chl_f_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE · /elections/results/?__cf_chl_rt_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE
-  saved https://results.enr.clarityelections.com/IA/elections.json (HTTP 200) as data/county-samples/IA-1.json
-  saved https://results.enr.clarityelections.com/IA/127077/385624/json/en/electionsettings.json (HTTP 200) as data/county-samples/IA-2.json
+  saved https://results.elections.myflorida.com/ (HTTP 200) as data/county-samples/FL-1.html
+  saved https://results.elections.myflorida.com/ (HTTP 200) as data/county-samples/FL-2.txt
 
 IL
   https://www.elections.il.gov/ → HTTP 200, text/html, 76 KB
@@ -120,6 +112,23 @@ IL
       data addresses in its scripts: hypFeedbackHeader · /Main/Feedback.aspx · divElectionResultsMenuLink · divElectionResultsMenu · electionResultsActive · hypFeedbackFooter · hasDataAttrs · processData
 
 KS
+  https://sos.ks.gov/elections/election-results.html → HTTP 200, text/html, 97 KB
+      title: Kansas Secretary of State | Elections | Election Results · 9,678 characters of text
+      link: File Information Report → https://sos.ks.gov/businesses/information-reports.html
+      link: File Campaign Finance Report → https://sos.ks.gov/elections/campaign_finance/cfr_online.aspx
+      link: View Campaign Finance Report → https://sos.ks.gov/elections/cfr_viewer/cfr_examiner_entry.aspx
+      link: County Election Offices → https://sos.ks.gov/elections/county_election_officers.aspx
+      link: Election Results → https://sos.ks.gov/elections/election-results.html
+      link: Report Voter Fraud → https://sos.ks.gov/elections/voterfraud/default.aspx
+      link: Forms → https://sos.ks.gov/forms/forms_results.aspx?division=EL
+      link: General Services → https://sos.ks.gov/general-services/general-services.html
+      link: Notary → https://sos.ks.gov/general-services/notary.html
+      link: Apostilles & Authentications → https://sos.ks.gov/general-services/apostilles-authentications.html
+      link: Filing Information → https://sos.ks.gov/general-services/ucc-filing-information.html
+      link: Definitions → https://sos.ks.gov/general-services/ucc-definitions.html
+      link: Frequently Asked Questions → https://sos.ks.gov/general-services/ucc-faq.html
+      link: Trademark/Service Mark Information → https://sos.ks.gov/general-services/trademark-information.html
+      data addresses in its scripts: ../elections/advance-voting-data.html · ../elections/election-results.html · ../forms/forms_results.aspx?division=EL · 24elec/2024-Presidential-Results.xlsx · electionResults · 2026Results · election-results-data.html · 24elec/2024-General-Election-President-Precinct-Level-Results.xlsx · 24elec/2024-General-Election-United-States-House-of-Representatives-Precinct-Results.xlsx · 24elec/2024-General-Election-Kansas-Senate-Precinct-Results.xlsx · 24elec/2024-General-Election-Kansas-House-of-Representatives-Precinct-Results.xlsx · 24elec/2024-General-Election-State-Board-of-Education-Precinct-Results.xlsx · 24elec/2024-General-Election-Court-of-Appeals-Precinct-Results.xlsx · 24elec/2024-General-Election-District-Court-Judge-Precinct-Results.xlsx · 24elec/2024-General-Election-District-Magistrate-Judge-Precinct-Results.xlsx · 24elec/2024-General-Election-District-Attorney-Precinct-Results.xlsx · exports · data-bs-no-jquery
   https://sos.ks.gov/elections/elections-results.html → HTTP 200 (now https://sos.ks.gov/messages/page404.html), text/html, 30 KB
       title: Kansas Secretary of State - Page Not Found · 3,541 characters of text
       link: File Information Report → https://sos.ks.gov/businesses/information-reports.html
@@ -140,7 +149,7 @@ KS
   https://results.enr.clarityelections.com/KS/ → HTTP 200, text/html, 3 KB
       title: List Elections · 247 characters of text
       data addresses in its scripts: https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js · elections.json
-  saved https://results.enr.clarityelections.com/KS/elections.json (HTTP 200) as data/county-samples/KS-1.json
+  saved https://sos.ks.gov/elections/election-results.html (HTTP 200) as data/county-samples/KS-1.html
 
 KY
   https://elect.ky.gov/results/ → HTTP 200 (now https://elect.ky.gov/results/Pages/default.aspx), text/html, 104 KB
@@ -162,6 +171,7 @@ KY
       data addresses in its scripts: /results/_vti_bin/spsdisco.aspx · /results · https://elect.ky.gov/results · /results/Pages · /results/Pages/default.aspx · Results · MenuData · userTimeZoneData · webTimeZoneData · /Candidates/Pages/Request-Voter-Registration-Data.aspx · /results/2020-2029/Pages/default.aspx · /results/2020-2029/Pages/2020.aspx · /results/2020-2029/Pages/2022.aspx · /results/2020-2029/Pages/2023.aspx · /results/2020-2029/Pages/2024.aspx · /results/2020-2029/Pages/2026.aspx · FilterData · data-ThemingId
   https://results.enr.clarityelections.com/KY/ → HTTP 403, text/html, 0 KB
       title: 403 Forbidden · 33 characters of text
+  saved https://elect.ky.gov/results/2020-2029/Pages/2026.aspx (HTTP 200) as data/county-samples/KY-1.html
 
 LA
   https://voterportal.sos.la.gov/graphical → HTTP 200, text/html, 34 KB
@@ -173,6 +183,8 @@ LA
   https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Index → HTTP 404 (now https://voterportal.sos.la.gov/Error404?aspxerrorpath=/ElectionResults/ElectionResults/Index), text/html, 3 KB
       title: Error · 119 characters of text
       data addresses in its scripts: hasDataAttrs · data-ajax-mode · data-ajax-update · data-ajax-confirm · data-ajax-loading · data-ajax-loading-duration · data-ajax-method · data-ajax-url · data-ajax-cache · data-ajax-begin · data-ajax-complete · data-ajax-success · data-ajax-failure · multipart/form-data · data-valmsg-replace · data-val- · data-labels · data-target
+  saved https://voterportal.sos.la.gov/ElectionResults/GraphicalConfig (HTTP 200) as data/county-samples/LA-1.html
+  saved https://voterportal.sos.la.gov/graphical (HTTP 200) as data/county-samples/LA-2.txt
 
 MA
   https://electionstats.state.ma.us/ → HTTP 200, text/html, 336 KB
@@ -184,8 +196,8 @@ MA
       table: Year | Office | District | Stage | Candidates
       table: 30,079 | elections
       data addresses in its scripts: search_results_table · ui-controlgroup-data · data-date · data-month · data-year · data-event · data-handler · data-highcharts-chart · data-style · data-z-index · postProcessData · dataLabel · dataLabelPath · dataLabelUpper · highcharts-data-label-hidden · beforeGetHoverData
-  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 1 KB
-      title: (none) · 82 characters of text
+  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 0 KB
+      title: (none) · 0 characters of text
 
 ME
   https://www.maine.gov/sos/cec/elec/results/ → HTTP 404, text/html, 92 KB
@@ -216,10 +228,10 @@ MI
       title: Just a moment... · 58 characters of text
 
 MN
-  https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00 → HTTP 200 (now https://validate.perfdrive.com/?ssa=f50cf5f0-ce04-4c30-be05-951a60ba69c9&ssb=82609241221&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2FResults%2FIndex%3FErsElectionId%3D201%26officeInElectionIdList%3D38485%26officeInElectionIdList%3D-1%26scenario%3DUSSenate%26electionDate%3D11%252F03%252F2026%252000%253A00%253A00&ssi=1eab56c8-cxg2-4672-9ae5-a4fd405130dd&ssk=botmanager_support@radware.com&ssm=24311260451279514108288153489742&ssn=e833e9fd5d92c92c72bdd6e8159d234eaf42963867d9-9a04-4395-8b91c6&sso=969c4301-005695371677756ede629aa919f345aa65d043eb9a877cf4&ssp=26736729721793897789179380108471399&ssq=71085843273047930361332730789663145052619&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwYTJlYmY1ZDYtZDczZi00YjNlLTg0NzgtZWY2YjM2NTNlMzEzMS0xNzkzODMyNzMwNTg1MC0wMGM3NzUyMGVhZTc0ZmQ0NzFmMTAiLCJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMDk2Mzg2N2Q5LTlhMDQtNDM5NS04MzAxLTAwNTY5NTM3MTY3NzEtMTc5MzgzMjczMDU4NjAtMDA1NDM4NDI1NTVjZjUwZTAwNjEwIn0=), text/html, 15 KB
+  https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00 → HTTP 200 (now https://validate.perfdrive.com/?ssa=ceefe010-22f9-4017-ac7d-fc59ec69e569&ssb=84577206623&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2FResults%2FIndex%3FErsElectionId%3D201%26officeInElectionIdList%3D38485%26officeInElectionIdList%3D-1%26scenario%3DUSSenate%26electionDate%3D11%252F03%252F2026%252000%253A00%253A00&ssi=95da5a38-cxg2-4af6-8f8b-022ca68d7974&ssk=botmanager_support@radware.com&ssm=83255941928308551107557052746400&ssn=ccda527ab6f58a19efc62ebaed5023ea5925286621c0-0a27-4900-862571&sso=4e5a520c-c03cdb702898eaf81b5bcbbb331af26a8a77a096c3bbac0d&ssp=24901266831793809929179386166015616&ssq=32898713391910884276833919231994645842401&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAyODY2MjFjMC0wYTI3LTQ5MDAtODIwYy1jMDNjZGI3MDI4OTgxLTE3OTM4MzM5MTk4NzYwLTAwNTRhYWNmMzFlMTk4YzFkNzcxMCIsInV6bXgiOiI3ZmMwMDBmODkzYTY4Mi1lMjc4LTRkZjYtYTUyYy03ZTg0NWMxZTM2MjQxLTE3OTM4MzM5MTk4NzYwLTAwY2RiODQzYTNlZWNhYjU1YzYxMCIsInJkIjoibW4uZ292In0=), text/html, 15 KB
       title: Radware Captcha Page · 854 characters of text
       data addresses in its scripts: https://hcaptcha.com/1/api.js?recaptchacompat=off
-  https://electionresults.sos.mn.gov/ → HTTP 200 (now https://validate.perfdrive.com/?ssa=f5a45a9f-181e-49dc-8d21-51385fe707e1&ssb=82609241221&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2F&ssi=b748e0c5-cxg2-43d7-8e9f-c4dc7297c03f&ssk=botmanager_support@radware.com&ssm=24311260451279514108288153489742&ssn=e833e9fd45b7777beb856a34b27d234eaf427aacbc25-b079-4d76-8b91c6&sso=969c49bf-3e6b06212dd0756ede6285033a76a25d9d87603d9a877cf4&ssp=26736729721793897789179380108471399&ssq=71085843273047930361332730789663145052619&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwOTMwYzRmNDAtOThhYy00NDM0LThjYjctNmViZDMzMGE0ZGY4MS0xNzkzODMyNzMwODk5MC0wMGMwNWY1MjhkYTkwODFmY2NkMTAiLCJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMDdhYWNiYzI1LWIwNzktNGQ3Ni04OWJmLTNlNmIwNjIxMmRkMDEtMTc5MzgzMjczMDg5OTAtMDA1ZDQyYjQxODI5NjE5MTY0OTEwIn0=), text/html, 15 KB
+  https://electionresults.sos.mn.gov/ → HTTP 200 (now https://validate.perfdrive.com/?ssa=e350cd36-d02b-4137-b3da-0a64b8109f74&ssb=84173256890&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2F&ssi=ec307a0d-cxg2-4314-9214-c36e116254a0&ssk=botmanager_support@radware.com&ssm=77840968300567746102787666097607&ssn=44dd515fa6b3fe7d9a2e05b3995bead73627eb9e8252-1831-40bb-9c854d&sso=78a7eef4-13ad0ca5dbb43099c24adf3c8c1ce1dda15619827394f005&ssp=24715567071793882531179384665037343&ssq=49490753392013140346233920821256000154375&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBlYjllODI1Mi0xODMxLTQwYmItOWVmNC0xM2FkMGNhNWRiYjQxLTE3OTM4MzM5MjAxMzkwLTAwNTVjYjk2OTQyZjM4NGIzYjYxMCIsInV6bXgiOiI3ZmMwMDA5YTMyYTgyMS03NGViLTQzNWItODY4Zi02MTcxYTc3NDBhM2UxLTE3OTM4MzM5MjAxMzkwLTAwY2VkNWI2MjI1NzZjOTAxNjIxMCIsInJkIjoibW4uZ292In0=), text/html, 15 KB
       title: Radware Captcha Page · 691 characters of text
       data addresses in its scripts: https://hcaptcha.com/1/api.js?recaptchacompat=off
   https://electionresultsfiles.sos.mn.gov/20261103/ → HTTP 403, text/html, 1 KB
@@ -245,129 +257,7 @@ MS
       data addresses in its scripts: https://www.sos.ms.gov/elections-voting/election-results · /elections-voting/election-results · block-ms-sos-views-block-election-results-block-1 · views-exposed-form-election-results-block-1 · views-exposed-election-results-title · views-exposed-election-results-field-election-result-date-value · edit-submit-election-results · edit-reset-election-results · accordionElectionResults · /elections-voting/election-results/2026/march-10-2026-democratic-primary-results · /elections-voting/election-results/2026/march-10-2026-republican-primary-results · /elections-voting/election-results/2025/2025-municipal-republican-primary-results · /elections-voting/election-results/2025/2025-municipal-democratic-primary-results · /elections-voting/election-results/2025/2025-municipal-democratic-primary-run-results · /elections-voting/election-results/2025/2025-municipal-republican-primary-run-results · /elections-voting/election-results/2025/2025-legislative-special-election-results · data-cfemail
   https://www.sos.ms.gov/ → HTTP 403, text/html, 6 KB
       title: Attention Required! | Cloudflare · 767 characters of text
-
-MT
-  https://electionresults.mt.gov/ResultsExport.aspx → HTTP 200, text/html, 45 KB
-      title: Montana Secretary of State · 2,014 characters of text
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=https://electionresults.mt.gov/ResultsExport.aspx
-      link: (no text) → https://twitter.com/intent/tweet?text=https://electionresults.mt.gov/ResultsExport.aspx&hashtags=Vote
-      link: My Tracked Contests → https://electionresults.mt.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.mt.gov/Default.aspx
-      link: Statewide Voter Turnout → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Reporting → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Results By County → https://electionresults.mt.gov/ResultsList.aspx
-      link: Voter Turnout → https://electionresults.mt.gov/VoterTurnoutDetails.aspx
-      link: Potential Recount Races → https://electionresults.mt.gov/ResultsSW.aspx?type=RECOUNT
-      link: Statewide and County Exports → https://electionresults.mt.gov/ResultsExport.aspx
-      link: Federal → https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
-      link: Public Service Commissioner → https://electionresults.mt.gov/resultsSW.aspx?type=PSC&map=CTY
-      link: State Supreme Court → https://electionresults.mt.gov/resultsSW.aspx?type=SCJ&map=CTY
-      link: District Court Judge → https://electionresults.mt.gov/resultsSW.aspx?type=JUD&map=CTY
-      data addresses in its scripts: ./ResultsExport.aspx · display-results-box-wrapper · export-links-centered · county-export-list · county-export-listitem · MainContent_rptCountyExport_LinkButton1_0 · MainContent_rptCountyExport_LinkButton1_1 · MainContent_rptCountyExport_LinkButton1_2 · MainContent_rptCountyExport_LinkButton1_3 · MainContent_rptCountyExport_LinkButton1_4 · MainContent_rptCountyExport_LinkButton1_5 · MainContent_rptCountyExport_LinkButton1_6 · MainContent_rptCountyExport_LinkButton1_7 · MainContent_rptCountyExport_LinkButton1_8 · MainContent_rptCountyExport_LinkButton1_9 · MainContent_rptCountyExport_LinkButton1_10 · hasDataAttrs · _onData
-  https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY → HTTP 200, text/html, 60 KB
-      title: Montana Secretary of State · 2,339 characters of text
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
-      link: (no text) → https://twitter.com/intent/tweet?text=https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY&hashtags=Vote
-      link: My Tracked Contests → https://electionresults.mt.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.mt.gov/Default.aspx
-      link: Statewide Voter Turnout → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Reporting → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=mtresults.totalvote.com/SearchResults.aspx?ID=595
-      link: (no text) → https://twitter.com/intent/tweet?text=electionresults.mt.gov/SearchResults.aspx?ID=595&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=mtresults.totalvote.com/SearchResults.aspx?ID=593
-      link: (no text) → https://twitter.com/intent/tweet?text=electionresults.mt.gov/SearchResults.aspx?ID=593&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=mtresults.totalvote.com/SearchResults.aspx?ID=594
-      link: (no text) → https://twitter.com/intent/tweet?text=electionresults.mt.gov/SearchResults.aspx?ID=594&hashtags=Vote
-      link: Results By County → https://electionresults.mt.gov/ResultsList.aspx
-      link: Voter Turnout → https://electionresults.mt.gov/VoterTurnoutDetails.aspx
-      data addresses in its scripts: NavLinks_lnkbtnSWExport · display-results-box-wrapper · display-results-box-a · display-results-box-g · export-595 · export-header · export-button · Mapinfo450000000004069 · export-593 · Mapinfo450000000004067 · export-594 · Mapinfo450000000004068 · ResultsList.aspx · ResultsSW.aspx?type=RECOUNT · lnkResultsExport · ResultsExport.aspx · hasDataAttrs · _onData
-  https://electionresults.mt.gov/ → HTTP 200, text/html, 39 KB
-      title: Montana Secretary of State · 1,676 characters of text
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=https://electionresults.mt.gov/default.aspx
-      link: (no text) → https://twitter.com/intent/tweet?text=https://electionresults.mt.gov/default.aspx&hashtags=Vote
-      link: My Tracked Contests → https://electionresults.mt.gov/MyTrackedContests.aspx
-      link: Statewide Voter Turnout → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Reporting → https://electionresults.mt.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: FED Federal → https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
-      link: PSC Public Service Commissioner → https://electionresults.mt.gov/resultsSW.aspx?type=PSC&map=CTY
-      link: SCJ State Supreme Court → https://electionresults.mt.gov/resultsSW.aspx?type=SCJ&map=CTY
-      link: JUD District Court Judge → https://electionresults.mt.gov/resultsSW.aspx?type=JUD&map=CTY
-      link: SENATE State Senate → https://electionresults.mt.gov/resultsSW.aspx?type=SENATE&map=DIST
-      link: HOUSE State House → https://electionresults.mt.gov/resultsSW.aspx?type=HOUSE&map=DIST
-      link: BQ Ballot Issues → https://electionresults.mt.gov/resultsSW.aspx?type=BQ&map=CTY
-      link: " + item.name + " " + item.desc + " → https://electionresults.mt.gov/SearchResults.aspx?ID=
-      link: Results By County → https://electionresults.mt.gov/ResultsList.aspx
-      data addresses in its scripts: elec-results-header · elec-results-grid-wrapper · results-gridbox-links · results-county-header · ResultsAjax.svc/GetCandidates?ElectionType= · SearchResults.aspx?ID= · /ResultsSW.aspx?type=CTYALL&cty= · ResultsList.aspx · ResultsSW.aspx?type=RECOUNT · lnkResultsExport · ResultsExport.aspx · /resultsSW.aspx?type=FED&map=CTY · /resultsSW.aspx?type=PSC&map=CTY · /resultsSW.aspx?type=SCJ&map=CTY · /resultsSW.aspx?type=JUD&map=CTY · /resultsSW.aspx?type=SENATE&map=DIST · hasDataAttrs · _onData
-  https://sosmt.gov/elections/results/ → HTTP 403, text/html, 8 KB
-      title: (none) · 819 characters of text
-      table:  | Firewall Event Triggered
-      data addresses in its scripts: data-api · /api/event · data-domain
-  saved https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=01&map=CTY (HTTP 200) as data/county-samples/MT-1.html
-  saved https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/MT-2.html
-
-NE
-  https://electionresults.nebraska.gov/ResultsExport.aspx → HTTP 200, text/html, 44 KB
-      title: Nebraska Secretary of State · 1,522 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.nebraska.gov/ResultsExport.aspx
-      link: (no text) → https://twitter.com/share?url=http://electionresults.nebraska.gov/ResultsExport.aspx&text=Nebraska%20%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.nebraska.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.nebraska.gov/Default.aspx
-      link: Unofficial Results General Election November 3, 20 → https://electionresults.nebraska.gov/Default.aspx?
-      link: Statewide Voter Turnout → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Statewide → https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
-      link: U.S. Congressional District → https://electionresults.nebraska.gov/resultsSW.aspx?type=CG&map=DIST
-      link: Legislature → https://electionresults.nebraska.gov/resultsSW.aspx?type=LD&map=DIST
-      link: Public Service Commission → https://electionresults.nebraska.gov/resultsSW.aspx?type=PS&map=DIST
-      link: State Board of Education → https://electionresults.nebraska.gov/resultsSW.aspx?type=SE&map=DIST
-      link: Board of Regents → https://electionresults.nebraska.gov/resultsSW.aspx?type=RG&map=DIST
-      link: Judicial Retention → https://electionresults.nebraska.gov/resultsSW.aspx?type=JD&map=CTY
-      data addresses in its scripts: https://neresultswebservice.azurewebsites.us/Scripts/script.bundle.js · https://neresultswebservice.azurewebsites.us/ · ./ResultsExport.aspx · pnlResultsHeader · wrapper-results-header · export-links-centered · statewide-export-listitem · county-export-list · county-export-listitem · /resultsSW.aspx?type=SW&map=CTY · /resultsSW.aspx?type=CG&map=DIST · /resultsSW.aspx?type=LD&map=DIST · /resultsSW.aspx?type=PS&map=DIST · /resultsSW.aspx?type=SE&map=DIST · /resultsSW.aspx?type=RG&map=DIST · /resultsSW.aspx?type=JD&map=CTY · hasDataAttrs · beforeDatasetsUpdate · resultsSW.aspx?type=CTYALL&map=CTY&cty=
-  https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY → HTTP 200, text/html, 92 KB
-      title: Nebraska Secretary of State · 2,501 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
-      link: (no text) → https://twitter.com/share?url=http://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY&text=Nebraska%20Statewide%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.nebraska.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.nebraska.gov/Default.aspx
-      link: Unofficial Results General Election November 3, 20 → https://electionresults.nebraska.gov/Default.aspx?
-      link: Statewide Voter Turnout → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.nebraska.gov/SearchResults.aspx?ID=148
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.nebraska.gov/SearchResults.aspx?ID=148&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.nebraska.gov/SearchResults.aspx?ID=112
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.nebraska.gov/SearchResults.aspx?ID=112&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.nebraska.gov/SearchResults.aspx?ID=146
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.nebraska.gov/SearchResults.aspx?ID=146&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.nebraska.gov/SearchResults.aspx?ID=147
-      data addresses in its scripts: https://neresultswebservice.azurewebsites.us/Scripts/script.bundle.js · https://neresultswebservice.azurewebsites.us/ · NavLinks_lnkbtnSWExport · display-results-box-wrapper · display-results-box-a · display-results-box-g · export-148 · export-header · export-button · Mapinfo13224102 · export-112 · Mapinfo13508105 · export-146 · Mapinfo13222106 · export-147 · Mapinfo13223107 · hasDataAttrs · beforeDatasetsUpdate · resultsSW.aspx?type=CTYALL&map=CTY&cty=
-  https://electionresults.nebraska.gov/ → HTTP 200, text/html, 54 KB
-      title: Nebraska Secretary of State · 1,161 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.nebraska.gov/default.aspx
-      link: (no text) → https://twitter.com/share?url=http://electionresults.nebraska.gov/default.aspx&text=Nebraska%20%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.nebraska.gov/MyTrackedContests.aspx
-      link: (no text) → https://electionresults.nebraska.gov/Default.aspx
-      link: Statewide Voter Turnout → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.nebraska.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Statewide → https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
-      link: U.S. Congressional District → https://electionresults.nebraska.gov/resultsSW.aspx?type=CG&map=DIST
-      link: Legislature → https://electionresults.nebraska.gov/resultsSW.aspx?type=LD&map=DIST
-      link: Public Service Commission → https://electionresults.nebraska.gov/resultsSW.aspx?type=PS&map=DIST
-      link: State Board of Education → https://electionresults.nebraska.gov/resultsSW.aspx?type=SE&map=DIST
-      link: Board of Regents → https://electionresults.nebraska.gov/resultsSW.aspx?type=RG&map=DIST
-      link: Judicial Retention → https://electionresults.nebraska.gov/resultsSW.aspx?type=JD&map=CTY
-      link: Community College → https://electionresults.nebraska.gov/resultsSW.aspx?type=CC&map=CTY
-      data addresses in its scripts: https://neresultswebservice.azurewebsites.us/Scripts/script.bundle.js · https://neresultswebservice.azurewebsites.us/ · elec-results-header · elec-results-grid-wrapper · results-gridbox-links · results-county-header · /resultsSW.aspx?type=SW&map=CTY · /resultsSW.aspx?type=CG&map=DIST · /resultsSW.aspx?type=LD&map=DIST · /resultsSW.aspx?type=PS&map=DIST · /resultsSW.aspx?type=SE&map=DIST · /resultsSW.aspx?type=RG&map=DIST · /resultsSW.aspx?type=JD&map=CTY · /resultsSW.aspx?type=CC&map=CTY · /resultsSW.aspx?type=LC&map=CTY · /resultsSW.aspx?type=NR&map=CTY · hasDataAttrs · beforeDatasetsUpdate · resultsSW.aspx?type=CTYALL&map=CTY&cty=
-  https://sos.nebraska.gov/elections/election-results → HTTP 404, text/html, 38 KB
-      title: Page not found | Nebraska Secretary of State · 2,506 characters of text
-      link: Annual / Biennial Reporting → https://sos.nebraska.gov/business-services/annualbiennial-reporting
-      link: County Election Office Directory → https://sos.nebraska.gov/election-officials-contact-information
-      link: Previous Election Results → https://sos.nebraska.gov/previous-elections
-      link: General Voter Information → https://sos.nebraska.gov/elections/general-voter-information
-      link: 2026 Elections → https://sos.nebraska.gov/elections
-      link: Disposition Form → https://ne.accessgov.com/sos/Forms/Page/sos/sos-records-disposition-report
-      data addresses in its scripts: hasDataAttrs · processData
-  saved https://electionresults.nebraska.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=01 (HTTP 200) as data/county-samples/NE-1.html
-  saved https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY (HTTP 200) as data/county-samples/NE-2.html
+  saved https://www.sos.ms.gov/elections-voting/election-results (HTTP 200) as data/county-samples/MS-1.html
 
 NH
   https://www.sos.nh.gov/elections/results → HTTP 404, text/html, 2877 KB
@@ -421,65 +311,6 @@ NJ
       title: (none) · 0 characters of text
       data addresses in its scripts: characterData · exports
 
-NM
-  https://electionresults.sos.nm.gov/ResultsExport.aspx → HTTP 200 (now https://electionresults.sos.nm.gov/ErrorPages/Error.aspx?aspxerrorpath=/ResultsExport.aspx), text/html, 6 KB
-      title: New Mexico Secretary of State · 86 characters of text
-      link: Home → https://electionresults.sos.nm.gov/Default.aspx
-      data addresses in its scripts: //api.reciteme.com/asset/js?key= · .county-results.fixed · .county-results.fixed.absolute · .county-results
-  https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY → HTTP 200, text/html, 84 KB
-      title: New Mexico Secretary of State · 1,866 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://nmresults.azurewebsites.net/resultsSW.aspx?type=FED&map=CTY
-      link: (no text) → https://twitter.com/share?url=http://nmresults.azurewebsites.net/resultsSW.aspx?type=FED&map=CTY&text=New%20Mexico%20Contests&hashtags=nmpol
-      link: My Tracked Contests → https://electionresults.sos.nm.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.sos.nm.gov/Default.aspx
-      link: Unofficial Results GENERAL 2026 November 3, 2026 R → https://electionresults.sos.nm.gov/Default.aspx?
-      link: Statewide Voter Turnout → https://electionresults.sos.nm.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.sos.nm.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=307
-      link: (no text) → https://twitter.com/intent/tweet?text=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=307&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=462
-      link: (no text) → https://twitter.com/intent/tweet?text=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=462&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=270
-      link: (no text) → https://twitter.com/intent/tweet?text=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=270&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://nmresults.azurewebsites.net/SearchResults.aspx?ID=353
-      data addresses in its scripts: resultsSW · //api.reciteme.com/asset/js?key= · https://nmresultswebservice.azurewebsites.us/ · ctl00$NavLinks$lnkbtnSWExport · NavLinks_lnkbtnSWExport · ctl00$MainContent$rptRace$ctl00$CountyExport · MainContent_rptRace_CountyExport_0 · ctl00$MainContent$rptRace$ctl00$PrecinctExport · MainContent_rptRace_PrecinctExport_0 · ctl00$MainContent$rptRace$ctl01$CountyExport · MainContent_rptRace_CountyExport_1 · ctl00$MainContent$rptRace$ctl01$PrecinctExport · MainContent_rptRace_PrecinctExport_1 · ctl00$MainContent$rptRace$ctl02$CountyExport · MainContent_rptRace_CountyExport_2 · ctl00$MainContent$rptRace$ctl02$PrecinctExport · beforeDatasetsUpdate · resultsSW.aspx?type=CTYALL&map=CTY&cty= · .county-results.fixed
-  https://electionresults.sos.nm.gov/ → HTTP 200, text/html, 56 KB
-      title: New Mexico Secretary of State · 1,196 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://nmresults.azurewebsites.net/default.aspx
-      link: (no text) → https://twitter.com/share?url=http://nmresults.azurewebsites.net/default.aspx&text=New%20Mexico%20Contests&hashtags=nmpol
-      link: My Tracked Contests → https://electionresults.sos.nm.gov/MyTrackedContests.aspx
-      link: (no text) → https://electionresults.sos.nm.gov/Default.aspx
-      link: Statewide Voter Turnout → https://electionresults.sos.nm.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.sos.nm.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Federal → https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY
-      link: Statewide Offices & Questions → https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
-      link: Legislative → https://electionresults.sos.nm.gov/resultsSW.aspx?type=LGX&map=CTY
-      link: District Judges → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JDX&map=CTY
-      link: Public Education Commission → https://electionresults.sos.nm.gov/resultsSW.aspx?type=ECX&map=CTY
-      link: Metropolitan Court Judges - Bernalillo → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JMC&map=CTY
-      link: Magistrate Judges → https://electionresults.sos.nm.gov/resultsSW.aspx?type=MGX&map=CTY
-      link: Offices and Questions by County → https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY
-      data addresses in its scripts: //api.reciteme.com/asset/js?key= · https://nmresultswebservice.azurewebsites.us/ · elec-results-header · elec-results-grid-wrapper · results-gridbox-links · results-county-header · ../resultsSW.aspx?type=CTYALL&map=CTY&cty=18&name=Union · /resultsSW.aspx?type=FED&map=CTY · /resultsSW.aspx?type=SW&map=CTY · /resultsSW.aspx?type=LGX&map=CTY · /resultsSW.aspx?type=JDX&map=CTY · /resultsSW.aspx?type=ECX&map=CTY · /resultsSW.aspx?type=JMC&map=CTY · /resultsSW.aspx?type=MGX&map=CTY · /resultsList.aspx?type=cty&map=CTY · /resultsSW.aspx?type=MUX&map=CTY · beforeDatasetsUpdate · resultsSW.aspx?type=CTYALL&map=CTY&cty= · .county-results.fixed
-  https://www.sos.nm.gov/voting-and-elections/election-results/ → HTTP 200, text/html, 110 KB
-      title: Election Results | Maggie Toulouse Oliver - New Mexico Secretary of State · 4,533 characters of text
-      link: Election Results Homepage → https://electionresults.sos.state.nm.us/resultsSW.aspx?type=FED&map=CTY&eid=2796
-      link: Congressional District l → https://electionresults.sos.state.nm.us/resultsSW.aspx?type=FED&map=CTY&eid=2791
-      link: Statewide → https://nmresults.azurewebsites.net/resultsSW.aspx?type=SW&map=CTY
-      link: Legislative → https://nmresults.azurewebsites.net/resultsSW.aspx?type=LGX&map=CTY
-      link: Public Regulation Commission → https://nmresults.azurewebsites.net/resultsSW.aspx?type=PRX&map=CTY
-      link: Public Education Commission → https://nmresults.azurewebsites.net/resultsSW.aspx?type=ECX&map=CTY
-      link: District Judges → https://nmresults.azurewebsites.net/resultsSW.aspx?type=JDX&map=CTY
-      link: District Attorneys → https://nmresults.azurewebsites.net/resultsSW.aspx?type=DAX&map=CTY
-      link: Magistrate Judges → https://nmresults.azurewebsites.net/resultsSW.aspx?type=MGX&map=CTY
-      link: County Office → https://nmresults.azurewebsites.net/resultsList.aspx?type=cty&map=CTY
-      link: Election Results → https://www.sos.nm.gov/voting-and-elections/election-results/
-      link: 2026 Election Results → https://www.sos.nm.gov/voting-and-elections/election-results/2026-election-results/
-      link: 2025 Election Results → https://www.sos.nm.gov/sos-archive/election-results-archive/2025-election-results/
-      link: 2024 Election Results → https://www.sos.nm.gov/sos-archive/election-results-archive/2024-election-results/
-      data addresses in its scripts: https://www.sos.nm.gov/feed/ · https://www.sos.nm.gov/comments/feed/ · https://www.sos.nm.gov/voting-and-elections/election-results/ · dataLayer · https://hc5modlw0l.execute-api.us-west-2.amazonaws.com/qa/js/sos-rf.js?v=08182021 · https://www.sos.nm.gov/voting-and-elections/data-and-maps/voter-data-information/ · menu-election-results-archive-container · menu-election-results-archive · https://www.sos.nm.gov/voting-and-elections/election-results/2026-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2025-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2024-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2023-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2022-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2021-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2020-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2019-election-results/ · hasDataAttrs · data-camelCase
-  saved https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo (HTTP 200) as data/county-samples/NM-1.html
-  saved https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/NM-2.html
-
 OH
   https://liveresults.ohiosos.gov/ → HTTP 200, text/html, 66 KB
       title: Ohio Decides - Election Night Reporting · 3,267 characters of text
@@ -493,7 +324,9 @@ OH
       data addresses in its scripts: /Content/browser-icons/manifest.json · ResultsDiv · ResultsByCountyHeader · MyResultsHeader · myResultsHeader-template · ResultsContainer · results-template · ResultsNoStatsContainer · results-nostats-template · AllResults · AllResults-template · xmlResultsModal · resultsDiscalimer · myResultsSelectionDiv · checkboxlbl--myresults · contestResultsRow · /Api/v1/Contest/getTabs
   https://www.ohiosos.gov/elections/election-results-and-data/ → HTTP 403, text/html, 1255 KB
       title: Ohio Secretary of State's Office Website Maintenance · 1,055 characters of text
-      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · /elections/election-results-and-data/?__cf_chl_f_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · /elections/election-results-and-data/?__cf_chl_rt_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · data-cfemail · data-cf-beacon
+      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=U5Sdg8FVW59Y6FEBKg1TZqJuEi0vBA8cqDRu.DnUoMs-1793833925-1.0.1.1-nji2bpi7hH6iptlSMMg4tWXuHsJeAs_MxVkZn9Wiu4U · /elections/election-results-and-data/?__cf_chl_f_tk=U5Sdg8FVW59Y6FEBKg1TZqJuEi0vBA8cqDRu.DnUoMs-1793833925-1.0.1.1-nji2bpi7hH6iptlSMMg4tWXuHsJeAs_MxVkZn9Wiu4U · /elections/election-results-and-data/?__cf_chl_rt_tk=U5Sdg8FVW59Y6FEBKg1TZqJuEi0vBA8cqDRu.DnUoMs-1793833925-1.0.1.1-nji2bpi7hH6iptlSMMg4tWXuHsJeAs_MxVkZn9Wiu4U · data-cfemail · data-cf-beacon
+  saved https://liveresults.ohiosos.gov/ (HTTP 200) as data/county-samples/OH-1.txt
+  saved https://liveresults.ohiosos.gov/Api/v1/Contest/getTabs (HTTP 200) as data/county-samples/OH-2.json
 
 OK
   https://results.okelections.us/ → HTTP 403, text/html, 1 KB
@@ -501,42 +334,10 @@ OK
   https://oklahoma.gov/elections/election-results.html → HTTP 404, text/html, 47 KB
       title: 404 · 811 characters of text
       data addresses in its scripts: https://apis.google.com/js/api.js · https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js · Feedback · /etc.clientlibs/sok-wcm/clientlibs/clientlib-datalayer.min.70c5f7e8bbc0f47e742d9e19966e46ca.js · gcoe-adobe-client-data-layer/src/lib/dataElements/datalayerComputedState.js · core/src/lib/dataElements/customCode.js · adobe-alloy/dist/lib/dataElements/xdmObject/index.js · core/src/lib/dataElements/javascriptVariable.js · sdi-toolkit/src/lib/data_elements/one_way_hash.js · core/src/lib/dataElements/pageInfo.js · contextData · contextData. · data-ps- · ecid.vapiVersion · setUserData · mergeData · /libs/granite/csrf/token.json
+  saved https://results.okelections.us/OKER/ (HTTP 200) as data/county-samples/OK-1.html
+  saved https://oklahoma.gov/elections.html (HTTP 200) as data/county-samples/OK-2.html
 
 OR
-  https://results.oregonvotes.gov/ResultsExport.aspx → HTTP 200, text/html, 44 KB
-      title: Oregon Secretary of State · 1,949 characters of text
-      link: My Tracked Contests → https://results.oregonvotes.gov/MyTrackedContests.aspx
-      link: Home → https://results.oregonvotes.gov/Default.aspx
-      link: Statewide Voter Turnout (details) → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Results By County → https://results.oregonvotes.gov/ResultsList.aspx
-      link: Voter Turnout → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx
-      link: Statewide and County Exports → https://results.oregonvotes.gov/ResultsExport.aspx
-      link: Election Terminology → https://results.oregonvotes.gov/ElectionTerminology.aspx
-      link: Federal → https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
-      link: State → https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
-      link: State Senator → https://results.oregonvotes.gov/resultsSW.aspx?type=SENATE&map=CTY
-      link: State Representative → https://results.oregonvotes.gov/resultsSW.aspx?type=HOUSE&map=CTY
-      link: Nonpartisan → https://results.oregonvotes.gov/resultsSW.aspx?type=SWNON&map=CTY
-      link: Local Measure → https://results.oregonvotes.gov/resultsSW.aspx?type=LMEA&map=CTY
-      link: Shared County, City And District Races And Measure → https://results.oregonvotes.gov/resultsSW.aspx?type=MCR&map=CTY
-      data addresses in its scripts: https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us//Scripts/utils.js · https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us/Scripts/utils.js · https://orresultswebservices.azureedge.us/ · ./ResultsExport.aspx · https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-ui.js · display-results-box-wrapper · export-message · export-format · export-error · export-type-select · export-selection · export-links-centered · county-export-list · county-export-listitem · DataTypeCheck
-  https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY → HTTP 200, text/html, 102 KB
-      title: Oregon Secretary of State · 3,611 characters of text
-      link: My Tracked Contests → https://results.oregonvotes.gov/MyTrackedContests.aspx
-      link: Home → https://results.oregonvotes.gov/Default.aspx
-      link: Statewide Voter Turnout (details) → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Results By County → https://results.oregonvotes.gov/ResultsList.aspx
-      link: Voter Turnout → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx
-      link: Statewide and County Exports → https://results.oregonvotes.gov/ResultsExport.aspx
-      link: Election Terminology → https://results.oregonvotes.gov/ElectionTerminology.aspx
-      link: Federal → https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
-      link: State → https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
-      link: State Senator → https://results.oregonvotes.gov/resultsSW.aspx?type=SENATE&map=CTY
-      link: State Representative → https://results.oregonvotes.gov/resultsSW.aspx?type=HOUSE&map=CTY
-      link: Nonpartisan → https://results.oregonvotes.gov/resultsSW.aspx?type=SWNON&map=CTY
-      link: Local Measure → https://results.oregonvotes.gov/resultsSW.aspx?type=LMEA&map=CTY
-      link: Shared County, City And District Races And Measure → https://results.oregonvotes.gov/resultsSW.aspx?type=MCR&map=CTY
-      data addresses in its scripts: https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us//Scripts/utils.js · https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us/Scripts/utils.js · https://orresultswebservices.azureedge.us/ · https://orresultswebservices.azureedge.us//Scripts/animated-horizontal-charts/jqbar.js · https://orresultswebservices.azureedge.us//Scripts/jquery-jtemplates.js · https://orresultswebservices.azureedge.us//maps/static/js/0_7_7_leaflet.js · https://orresultswebservices.azureedge.us//maps/static/js/CreateMap.js · https://orresultswebservices.azureedge.us//maps/static/js/BuildCountyMap.js · https://orresultswebservices.azureedge.us//maps/static/js/BuildPrecinctsForCounty.js · https://orresultswebservices.azureedge.us//maps/static/js/BuildDistrictMap.js · https://orresultswebservices.azureedge.us//maps/static/js/BuildSWLegMap.js · https://orresultswebservices.azureedge.us//maps/static/js/underscore-min.js · https://orresultswebservices.azureedge.us//maps/static/js/Leaflet.Label/BaseMarkerMethods.min.js · https://orresultswebservices.azureedge.us//maps/static/js/Leaflet.Label/Label.min.js
   https://results.oregonvotes.gov/ → HTTP 200, text/html, 36 KB
       title: Oregon Secretary of State · 1,600 characters of text
       link: My Tracked Contests → https://results.oregonvotes.gov/MyTrackedContests.aspx
@@ -572,7 +373,7 @@ OR
       link: November 2025 → https://sos.oregon.gov/elections/Documents/Registration/2025-november.pdf
       data addresses in its scripts: https://sos.oregon.gov/elections/pages/historical-data.aspx · dataLayer · /elections/_layouts/15/OID.SharePoint.StarterTemplate/scripts/data-tables-web-part.js · search-results.aspx · ./historical-data.aspx · /elections/pages/historical-data.aspx · MenuData · userTimeZoneData · webTimeZoneData · /elections/Pages/historical-data.aspx · or-dataTablesWebPart · data-lang · _layouts/15/OID.SharePoint.StarterTemplate/scripts/data.txt · datatableswebpart_pagetotalrange · datatableswebpart_pagetotal · datatableswebpart_filteredfrom · FilterData
   saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-1.html
-  saved https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/OR-2.html
+  saved https://results.oregonvotes.gov/ResultsExport.aspx (HTTP 200) as data/county-samples/OR-2.html
 
 RI
   https://electionresults.ri.gov/ → HTTP 200 (now https://electionresults.ri.gov/results/public/rhodeisland), text/html, 9 KB
@@ -581,97 +382,47 @@ RI
   https://vote.sos.ri.gov/ → HTTP 403, text/html, 5 KB
       title: Just a moment... · 58 characters of text
 
-SD
-  https://electionresults.sd.gov/ResultsExport.aspx → HTTP 200, text/html, 39 KB
-      title: South Dakota Secretary of State · 1,233 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.sd.gov/ResultsExport.aspx
-      link: (no text) → https://twitter.com/share?url=http://electionresults.sd.gov/ResultsExport.aspx&text=South%20Dakota%20%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.sd.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.sd.gov/Default.aspx
-      link: Unofficial Results General Election November 3, 20 → https://electionresults.sd.gov/Default.aspx?
-      link: Statewide Voter Turnout → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Statewide Races → https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
-      link: Statewide Ballot Questions → https://electionresults.sd.gov/resultsSW.aspx?type=BQ&map=CTY
-      link: Legislative Races → https://electionresults.sd.gov/resultsSW.aspx?type=LEG&map=DIST
-      link: County Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=cty&map=CTY
-      link: Local Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=mun&map=CTY
-      link: Results by County → https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL
-      link: Exports → https://electionresults.sd.gov/ResultsExport.aspx?
-      data addresses in its scripts: ./ResultsExport.aspx · pnlResultsHeader · wrapper-results-header · export-links-centered · statewide-export-listitem · county-export-list · county-export-listitem · /resultsSW.aspx?type=SWR&map=CTY · /resultsSW.aspx?type=BQ&map=CTY · /resultsSW.aspx?type=LEG&map=DIST · /resultsList.aspx?type=cty&map=CTY · /resultsList.aspx?type=mun&map=CTY · /ResultsList.aspx?type=CTYALL · /ResultsExport.aspx? · /ResultsSW.aspx?type=RECOUNT · ResultsMedia.aspx
-  https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY → HTTP 200, text/html, 109 KB
-      title: South Dakota Secretary of State · 2,762 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
-      link: (no text) → https://twitter.com/share?url=http://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY&text=South%20Dakota%20%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.sd.gov/MyTrackedContests.aspx
-      link: Home → https://electionresults.sd.gov/Default.aspx
-      link: Unofficial Results General Election November 3, 20 → https://electionresults.sd.gov/Default.aspx?
-      link: Statewide Voter Turnout → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.sd.gov/SearchResults.aspx?ID=216
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.sd.gov/SearchResults.aspx?ID=216&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.sd.gov/SearchResults.aspx?ID=215
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.sd.gov/SearchResults.aspx?ID=215&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.sd.gov/SearchResults.aspx?ID=210
-      link: (no text) → https://twitter.com/intent/tweet?text=http://electionresults.sd.gov/SearchResults.aspx?ID=210&hashtags=Vote
-      link: (no text) → https://www.facebook.com/sharer/sharer.php?u=http://electionresults.sd.gov/SearchResults.aspx?ID=212
-      data addresses in its scripts: NavLinks_lnkbtnSWExport · pnlResultsHeader · wrapper-results-header · MainContent_lblResultsHeader · display-results-box-wrapper · display-results-box-a · display-results-box-g · export-216 · export-header · export-button · Mapinfo14412 · export-215 · Mapinfo14869 · export-210 · Mapinfo14896 · export-212 · ResultsAjax.svc/GetVoterTurnoutArchive?electionID=
-  https://electionresults.sd.gov/ → HTTP 200, text/html, 44 KB
-      title: South Dakota Secretary of State · 924 characters of text
-      link: (no text) → http://www.facebook.com/sharer.php?u=http://electionresults.sd.gov/default.aspx
-      link: (no text) → https://twitter.com/share?url=http://electionresults.sd.gov/default.aspx&text=South%20Dakota%20%20Contests&hashtags=sdpol
-      link: My Tracked Contests → https://electionresults.sd.gov/MyTrackedContests.aspx
-      link: (no text) → https://electionresults.sd.gov/Default.aspx
-      link: Statewide Voter Turnout → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: Precincts Fully Reported → https://electionresults.sd.gov/VoterTurnoutDetails.aspx?map=PREC
-      link: Statewide Races → https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
-      link: Statewide Ballot Questions → https://electionresults.sd.gov/resultsSW.aspx?type=BQ&map=CTY
-      link: Legislative Races → https://electionresults.sd.gov/resultsSW.aspx?type=LEG&map=DIST
-      link: County Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=cty&map=CTY
-      link: Local Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=mun&map=CTY
-      link: Results by County → https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL
-      link: Exports → https://electionresults.sd.gov/ResultsExport.aspx?
-      link: Possible Recounts → https://electionresults.sd.gov/ResultsSW.aspx?type=RECOUNT
-      data addresses in its scripts: elec-results-header · elec-results-grid-wrapper · results-gridbox-links · /ResultsList.aspx?type=CTYALL · /ResultsExport.aspx? · /ResultsSW.aspx?type=RECOUNT · results-county-header · /resultsSW.aspx?type=SWR&map=CTY · /resultsSW.aspx?type=BQ&map=CTY · /resultsSW.aspx?type=LEG&map=DIST · /resultsList.aspx?type=cty&map=CTY · /resultsList.aspx?type=mun&map=CTY · ResultsMedia.aspx · ResultsAjax.svc/GetCandidates?ElectionType= · SearchResults.aspx?ID=
-  https://sdsos.gov/elections-voting/election-resources/election-history/ → HTTP 200, text/html, 108 KB
-      title: Election Resources: South Dakota Secretary of State · 13,422 characters of text
-      link: 2026 Election Information → https://sdsos.gov/elections-voting/upcoming-elections/general-information/default.aspx
-      link: Ballot Questions → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026%20Election%20Information/2026-ballot-questions.aspx
-      link: Candidate Calendar → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-candidate-calendar.aspx
-      link: Election Calendar → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-Election-Information.aspx
-      link: Number of Signers Required for 2026 Candidate Peti → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-signature-requirements-candidates.aspx
-      link: Circulate a Nominating Petition for Statewide, Leg → https://sdsos.gov/elections-voting/upcoming-elections/general-information/Circulate-2026-nominating-petitions-candidates.aspx
-      link: Independent Candidate Information → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-Independent-Candidate-Information.aspx
-      link: How to be a County Candidate → https://sdsos.gov/elections-voting/assets/2026%20Documents/2026CountyCandidatesCampaignGuide.pdf
-      link: Offices to be Filled in 2026 → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-offices-to-be-filled.aspx
-      link: Qualifications to Hold Office & Term Limits → https://sdsos.gov/elections-voting/upcoming-elections/general-information/office-term-limits-and-qualifications.aspx
-      link: Candidate Withdrawal Information → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-candidate-withdrawal-info.aspx
-      link: 2026 Election Precincts & Polling Places → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-Election-Polling-Places.aspx
-      link: 2026 Weekly Absentee Numbers → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-Election-Absentee-Data.aspx
-      link: Election Equipment, Electronic Pollbooks, and Vote → https://sdsos.gov/elections-voting/upcoming-elections/general-information/information-on-election-equipment.aspx
-      data addresses in its scripts: /elections-voting/upcoming-elections/general-information/2026-Election-Absentee-Data.aspx · /Business-Services/database-downloads.aspx · https://electionresults.sd.gov/Default.aspx · county_map_data_table · distrit_map_data_table
-  saved https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=10&map=CTY (HTTP 200) as data/county-samples/SD-1.html
-  saved https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY (HTTP 200) as data/county-samples/SD-2.html
-
 TN
-  https://elections.tn.gov/county-breakdown/United%20States%20Senate → HTTP 202, text/html, 0 KB
-      starts: 
-  https://elections.tn.gov/county-breakdown/U.S.%20Senate → HTTP 202, text/html, 0 KB
-      starts: 
-  https://elections.tn.gov/county-breakdown/US%20Senate → HTTP 202, text/html, 0 KB
-      starts: 
+  https://elections.tn.gov/county-breakdown/United%20States%20Senate → HTTP 200, text/html, 276 KB
+      title: County Breakdown for United States Senate | Election Night Reporting Dashboard · 44,409 characters of text
+      link: Results by County → https://elections.tn.gov/results-by-county
+      link: Results by District → https://elections.tn.gov/district/congressional
+      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
+      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
+      table: Candidate | Party | Votes | Precincts Completed
+      table: Candidate | Party | Votes | Precincts Completed
+      table: Candidate | Party | Votes | Precincts Completed
+      table: Candidate | Party | Votes | Precincts Completed
+      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · data-dtconfig · HISTORY_API_EVENT · datadog · QuantumMetricAPI · adobeDataLayer · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04 · data-name
+  https://elections.tn.gov/county-breakdown/U.S.%20Senate → HTTP 200, text/html, 24 KB
+      title: County Breakdown for U.S. Senate | Election Night Reporting Dashboard · 589 characters of text
+      link: Results by County → https://elections.tn.gov/results-by-county
+      link: Results by District → https://elections.tn.gov/district/congressional
+      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
+      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
+      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04 · data-name · data/GeneralTennesseeMap.json
+  https://elections.tn.gov/county-breakdown/US%20Senate → HTTP 200, text/html, 24 KB
+      title: County Breakdown for US Senate | Election Night Reporting Dashboard · 585 characters of text
+      link: Results by County → https://elections.tn.gov/results-by-county
+      link: Results by District → https://elections.tn.gov/district/congressional
+      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
+      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
+      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · data-dtconfig · HISTORY_API_EVENT · datadog · QuantumMetricAPI · adobeDataLayer · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04
   https://elections.tn.gov/categories/federal/offices → HTTP 202, text/html, 0 KB
       starts: 
   https://elections.tn.gov/ → HTTP 202, text/html, 0 KB
       starts: 
   https://sos.tn.gov/elections/results → HTTP 202, text/html, 0 KB
       starts: 
-  saved https://elections.tn.gov/county-breakdown/Governor (HTTP 202) as data/county-samples/TN-1.html
+  saved https://elections.tn.gov/county-breakdown/United%20States%20Senate (HTTP 202) as data/county-samples/TN-1.html
+  saved https://elections.tn.gov/county-breakdown/United%20States%20Senate (HTTP 202) as data/county-samples/TN-2.txt
 
 TX
-  https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 276 KB
-      title: Election Results - Tuesday, November 3, 2026 · 89,732 characters of text
+  https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 285 KB
+      title: Election Results - Tuesday, November 3, 2026 · 92,033 characters of text
       link: (no text) → https://electionresults.sos.state.tx.us/index.html
+      link: Business Copies and Certificates → https://www.sos.texas.gov/corp/filingandothergeneralfaqs.shtml#CC
+      link: Fraud Reporting → https://sao.fraud.texas.gov/ReportFraud/
       table: Party | Candidate | Ballots Cast
       table: Party | Candidate | Ballots Cast
       table: Party | Candidate | Ballots Cast
@@ -680,6 +431,8 @@ TX
   https://results.texas-election.com/ → HTTP 200, text/html, 2 KB
       title: ::Texas Election Night Results:: · 32 characters of text
       data addresses in its scripts: https://fonts.googleapis.com/css?family=Lato&display=swap · scrollData · loadeddata · loadedmetadata · dataavailable · datasetchanged · datasetcomplete · metadata · hasDataAttrs · data-slick-index · data-lazy · data-srcset · data-sizes
+  saved https://results.texas-election.com/ (HTTP 200) as data/county-samples/TX-1.txt
+  saved https://results.texas-election.com/ (HTTP 200) as data/county-samples/TX-2.html
 
 WV
   https://results.enr.clarityelections.com/WV/ → HTTP 200, text/html, 4 KB
@@ -702,11 +455,12 @@ WV
       link: Ordering and Payment → https://sos.wv.gov/licensing/general-information/ordering-and-payment-licensing-services
       link: Initial Application → https://sos.wv.gov/media/344/download?inline=
       data addresses in its scripts: views-exposed-form-search-api-basic-block-1 · edit-submit-search-api-basic · https://apps.wv.gov/SOS/BulkData · https://www.fec.gov/data · /elections/election-data/historical-election-results-and-turnout · /elections/election-data/historical-voter-turnout · /elections/election-data/west-virginia-voter-registration-totals · hasDataAttrs · processData · data-once
-  saved https://results.enr.clarityelections.com/WV/elections.json (HTTP 200) as data/county-samples/WV-1.json
+  saved https://sos.wv.gov/elections (HTTP 200) as data/county-samples/WV-1.html
+  saved https://apps.sos.wv.gov/elections/results/ (HTTP 200) as data/county-samples/WV-2.html
 
 WY
   https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx → HTTP 200, text/html, 53 KB
-      title: Wyoming Secretary of State | 2026 General Election Results · 5,388 characters of text
+      title: Wyoming Secretary of State | 2026 General Election Results · 5,376 characters of text
       link: Annual Report Online Filing → https://wyobiz.wyo.gov/Business/AnnualReport.aspx
       link: Report Business Filing Fraud → https://sos.wyo.gov/Business/ReportFraud
       link: 2026 Election → https://sos.wyo.gov/Elections/2026ElectionInformation.aspx
@@ -741,4 +495,5 @@ WY
       link: By Legislative District → https://sos.wyo.gov/Elections/Docs/2026/2026_Districts_and_Precincts_by_Legislative_District.pdf
       link: General Election Candidates Roster (PDF file) Gene → https://sos.wyo.gov/Elections/Docs/2026/2026_WY_General_Election_Candidates.pdf
       data addresses in its scripts: dataLayer · https://sos.wyo.gov/Elections/ElectionResults.aspx · /Elections/Docs/2026/2026GeneralResults.aspx · /Elections/Docs/2026/2026PrimaryResults.aspx · datalist
-  saved https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx (HTTP 200) as data/county-samples/WY-1.html
+  saved https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP.pdf (HTTP 200) as data/county-samples/WY-1.txt
+  saved https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP_TBC.pdf (HTTP 200) as data/county-samples/WY-2.txt

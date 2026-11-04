@@ -1,0 +1,2257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+	Oregon Secretary of State
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="text/html; charset=windows-1252" http-equiv="Content-Type" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=10.0" /><link href='https://orresultswebservices.azureedge.us//Styles/styles.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/stylesmobile.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/sidemenu.css' rel='stylesheet' /> 
+    <link href='https://orresultswebservices.azureedge.us//Scripts/animated-horizontal-charts/jqbar.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//maps/static/css/0_7_7_leaflet.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//maps/static/css/or-maps.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Maps/static/js/Leaflet.Zoom/L.Control.ZoomMin.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Maps/static/css/Leaflet.Dialog.css' rel="stylesheet" />
+<link id="countyBackground" rel="stylesheet" type="text/css" href="https://orresultswebservices.azureedge.us//Styles/CountyStyles/20.css" /><link id="allcountystyles" rel="stylesheet" type="text/css" href="https://orresultswebservices.azureedge.us//Styles/countyheader.css" /></head>
+<body>
+    <form method="post" action="./ResultsSW.aspx?type=CTYALL&amp;cty=20&amp;map=CTY" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="…" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="…" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="…" />
+</div>
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="…" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="…" />
+</div>
+        <input type="hidden" name="ctl00$hidElectionType" id="hidElectionType" value="General" />
+        <input type="hidden" name="ctl00$hidElectionDate" id="hidElectionDate" value="11/3/2026" />
+        <input type="hidden" name="ctl00$hidPrecinctsReported" id="hidPrecinctsReported" value="0" />
+        <input type="hidden" name="ctl00$hidPrecinctsNotReported" id="hidPrecinctsNotReported" value="17" />
+        <input type="hidden" name="ctl00$hidVoterTurnout" id="hidVoterTurnout" value="8317" />
+        <input type="hidden" name="ctl00$hidVoterTotal" id="hidVoterTotal" value="4535" />
+        <div id="fader">
+            <h1>Preparing Export...</h1>
+        </div>
+        <div></div>
+        <div class="outside-wrapper">
+            <div class="top-colorbar">
+            </div>
+            <div class="top-header">
+                <div id="pnlHeader" class="section group">
+                    <div id="pnlSeal" class="col top-header-seal">
+                        <img id="imgSeal" class="county-seal" src="https://orresultswebservices.azureedge.us//Images/CountySeals/20.png" alt="County Seal" />
+                        <a id="lnkSOSimg" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"></a>
+	</div>					
+                    <div id="pnlHeaderBox1" class="col top-header-box1 county-header-box">
+                        <h2></h2>
+                        <h1><a id="lnkStateSOS" href="https://resultsor.azurewebsites.us/ResultsSW.aspx?type=CTYALL&amp;cty=20&amp;map=CTY" target="_blank">Baker County, <span>Oregon</span></a></h1>
+	</div>
+                    <div id="pnlHeaderBox2" class="col top-header-box2 county-header-box2">
+    <h3>
+        <div id="ExportLink_pnlHeaderExport" class="export-box-main dropdown">
+            <div class="export-main dropbtn">Export</div>
+            <div class="dropdown-content export-main-container">
+                <div class="export-main-header">EXPORT:</div>
+                <div class="export-main-icon-wrapper">
+                    <input onclick="DownloadFile(); __doPostBack('ctl00$ExportLink$lnkbtnPrecExport','')" name="ctl00$ExportLink$lnkbtnPrecExport" type="button" id="ExportLink_lnkbtnPrecExport" class="export-button" value="Precinct Level" />
+                    <input onclick="DownloadFile(); __doPostBack('ctl00$ExportLink$lnkbtnCtyExport','')" name="ctl00$ExportLink$lnkbtnCtyExport" type="button" id="ExportLink_lnkbtnCtyExport" class="export-button" value="County Level" />
+                </div>
+            </div>
+		</div>
+    </h3>
+                        <h2>
+                            <a id="lnkTracked" href="MyTrackedContests.aspx">My Tracked Contests</a>
+                        </h2>
+                        <h3>
+    <a id="NavLinks_lnkHome" href="Default.aspx">Home</a>
+                        </h3>
+	</div>
+</div>
+            </div>
+            <div class="header-box-wrapper">
+                <div class="section group">
+                    <div class="col header-box1">
+                        <h3>Unofficial</h3>
+                        <h2>General Election<br/>November 3, 2026</h2>
+                    </div>
+                    <div class="col header-box2">
+                        <div class="header-box-content-top">
+                            <h1><a id="lnkVoterTurnout" class="button" href="VoterTurnoutDetails.aspx?map=TURN">Voter Turnout<span></span></a></h1>
+                        </div>
+                        <div class="header-box-content-bottom">
+                            <div class="animate-position desktop">
+                                <div style="height: 100px;"><canvas id="voter-turnout"></canvas><div class="dough-percent"><span class="int">64</span><span class="dec">.71%</span></div></div>
+                            </div>
+                            <div class="animate-position mobile">
+                                <div><canvas id="voter-turnout-mobile"></canvas><div class="dough-percent"><span class="int">64</span><span class="dec">.71%</span></div></div>
+                            </div>
+                        </div>
+                        <div class="header-box-content-reg"><h1 style="width:100%;font-size:95%"><span class="vt-text">Ballots Counted</span><span class="vt-number">8,317</span><br /><span class="vt-text">Active Registered Voters</span><span class="vt-number">12,852</span></h1></div>
+                        <div class="next-count">Results last updated: 11/4/2026 | 3:00 PM PT<br/>Next Ballot Count: unavailable PT</div>
+                    </div>
+                    <div id="chartjs-tooltip"></div>
+                </div>
+            </div>
+    <div id="MainContent_pnlUpdateSchedule" class="site-message">
+        <span id="MainContent_lblUpdateSchedule">If you don’t see results for a particular county, please check the county’s website or view the <u><a href="https://www.bakercountyor.gov/pages/whats-new.html" target="_blank">schedule</a></u> describing approximate times counties will post unofficial results.</span>
+</div>
+    <div id="MainContent_pnlCountyHeader" class="wrapper-inside">
+                    <div class="county-identifier county-contact">
+                        <span>Stefanie Kirby, County Clerk<br />
+                        <a href="https://www.bakercountyor.gov/clerks/clerks.html" target="_blank">Baker County Website</a></span>
+                        <span>1995 Third Street, Suite 150<br /> Baker City, OR 97814</span>
+                        <span>(541) 523-8207
+                        <br />
+                        <a href="mailto:skirby@bakercountyor.gov">skirby@bakercountyor.gov</a></span></div>
+</div>
+    <div id="MainContent_pnlCountyButtonWrapper" class="county-contest-wrapper">
+        <div id="pnlCountyRaces" class="wrapper-button-leg">
+            <input type="submit" name="ctl00$MainContent$btnCtyCTY" value="Local Contests" id="MainContent_btnCtyCTY" class="active-tab button-leg left" />
+            <input type="submit" name="ctl00$MainContent$btnCtySW" value="Local Results for State Contests" id="MainContent_btnCtySW" class="button-leg" />
+            <input type="submit" name="ctl00$MainContent$btnCtyAll" value="State Results" id="MainContent_btnCtyAll" class="button-leg right" />
+	</div>
+</div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>Baker County Clerk</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-146">
+                                        <label class="css-label" for="chk-146">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-146" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl00$ctl00','')" name="ctl00$MainContent$rptRace$ctl00$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039077" party="" osn="130010001" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl00$ctl01','')" name="ctl00$MainContent$rptRace$ctl00$ctl01" type="button" class="export-button" value="County Level" raceid="300039077" party="" osn="130010001" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 17 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Stefanie L Kirby</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039077300034777">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>6,328</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039077_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390779901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>53</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039077_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039077totals">6,381</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039077', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for Baker County Clerk contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039077', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for Baker County Clerk contest</span>
+                </div>
+                <div id="Map300039077" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039077">
+                            <div id="countyInfoBox300039077"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039077"></span>
+                            <div class="map" id="Mapmap300039077">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039077"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039077" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039077200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>Baker County Commissioner Position 3</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-147">
+                                        <label class="css-label" for="chk-147">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-147" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl01$ctl00','')" name="ctl00$MainContent$rptRace$ctl01$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039078" party="" osn="130010002" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl01$ctl01','')" name="ctl00$MainContent$rptRace$ctl01$ctl01" type="button" class="export-button" value="County Level" raceid="300039078" party="" osn="130010002" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 17 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Kody Justus</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039078300060818">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>3,803</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039078_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Whitney Rilee</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039078300060817">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>3,957</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039078_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390789901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>19</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039078_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039078totals">7,779</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039078', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for Baker County Commissioner Position 3 contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039078', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for Baker County Commissioner Position 3 contest</span>
+                </div>
+                <div id="Map300039078" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039078">
+                            <div id="countyInfoBox300039078"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039078"></span>
+                            <div class="map" id="Mapmap300039078">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039078"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039078" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039078200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Baker City Council (Vote For 3)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-217">
+                                        <label class="css-label" for="chk-217">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-217" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl02$ctl00','')" name="ctl00$MainContent$rptRace$ctl02$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039079" party="" osn="135010037" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl02$ctl01','')" name="ctl00$MainContent$rptRace$ctl02$ctl01" type="button" class="export-button" value="County Level" raceid="300039079" party="" osn="135010037" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 5 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Randy Schiewe</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039079300060825">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>2,121</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Jared P Bain</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039079300060823">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>2,309</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Gratton Miller</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039079300060824">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>1,612</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Samantha Haldane</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039079300060822">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>1,822</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Sarah Langron Heiner</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039079300060820">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>1,609</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390799901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>199</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039079_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039079totals">9,672</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039079', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Baker City Council (Vote For 3) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039079', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Baker City Council (Vote For 3) contest</span>
+                </div>
+                <div id="Map300039079" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039079">
+                            <div id="countyInfoBox300039079"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039079"></span>
+                            <div class="map" id="Mapmap300039079">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039079"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039079" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039079200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Haines City Council (Vote For 3)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-395">
+                                        <label class="css-label" for="chk-395">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-395" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl03$ctl00','')" name="ctl00$MainContent$rptRace$ctl03$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039082" party="" osn="135010228" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl03$ctl01','')" name="ctl00$MainContent$rptRace$ctl03$ctl01" type="button" class="export-button" value="County Level" raceid="300039082" party="" osn="135010228" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Noel Scott</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039082300060840">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>129</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039082_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Angie Shurtleff</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039082300060843">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>135</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039082_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Jeannette Corbin</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039082300060838">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>117</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039082_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390829901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>8</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039082_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039082totals">389</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039082', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Haines City Council (Vote For 3) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039082', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Haines City Council (Vote For 3) contest</span>
+                </div>
+                <div id="Map300039082" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039082">
+                            <div id="countyInfoBox300039082"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039082"></span>
+                            <div class="map" id="Mapmap300039082">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039082"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039082" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039082200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Haines Mayor</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-396">
+                                        <label class="css-label" for="chk-396">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-396" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl04$ctl00','')" name="ctl00$MainContent$rptRace$ctl04$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039083" party="" osn="135010229" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl04$ctl01','')" name="ctl00$MainContent$rptRace$ctl04$ctl01" type="button" class="export-button" value="County Level" raceid="300039083" party="" osn="135010229" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Kenny Bain</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039083300060845">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>118</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039083_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Kay Rood</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039083300060846">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>56</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039083_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390839901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>1</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039083_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039083totals">175</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039083', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Haines Mayor contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039083', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Haines Mayor contest</span>
+                </div>
+                <div id="Map300039083" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039083">
+                            <div id="countyInfoBox300039083"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039083"></span>
+                            <div class="map" id="Mapmap300039083">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039083"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039083" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039083200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Halfway City Council (Vote For 3)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-398">
+                                        <label class="css-label" for="chk-398">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-398" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl05$ctl00','')" name="ctl00$MainContent$rptRace$ctl05$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039084" party="" osn="135010230" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl05$ctl01','')" name="ctl00$MainContent$rptRace$ctl05$ctl01" type="button" class="export-button" value="County Level" raceid="300039084" party="" osn="135010230" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Kertis Lorence</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039084300061455">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>132</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039084_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390849901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>69</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039084_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039084totals">201</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039084', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Halfway City Council (Vote For 3) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039084', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Halfway City Council (Vote For 3) contest</span>
+                </div>
+                <div id="Map300039084" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039084">
+                            <div id="countyInfoBox300039084"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039084"></span>
+                            <div class="map" id="Mapmap300039084">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039084"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039084" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039084200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Halfway City Council (2 Year Unexpired Term) (Vote For 2)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-397">
+                                        <label class="css-label" for="chk-397">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-397" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl06$ctl00','')" name="ctl00$MainContent$rptRace$ctl06$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039378" party="" osn="135010231" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl06$ctl01','')" name="ctl00$MainContent$rptRace$ctl06$ctl01" type="button" class="export-button" value="County Level" raceid="300039378" party="" osn="135010231" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Gene Zachary</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039378300061646">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>75</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039378_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Nora Aspy</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039378300061647">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>134</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039378_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000393789901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>31</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039378_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039378totals">240</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039378', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Halfway City Council (2 Year Unexpired Term) (Vote For 2) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039378', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Halfway City Council (2 Year Unexpired Term) (Vote For 2) contest</span>
+                </div>
+                <div id="Map300039378" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039378">
+                            <div id="countyInfoBox300039378"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039378"></span>
+                            <div class="map" id="Mapmap300039378">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039378"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039378" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039378200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Halfway Mayor</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-399">
+                                        <label class="css-label" for="chk-399">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-399" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl07$ctl00','')" name="ctl00$MainContent$rptRace$ctl07$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039085" party="" osn="135010232" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl07$ctl01','')" name="ctl00$MainContent$rptRace$ctl07$ctl01" type="button" class="export-button" value="County Level" raceid="300039085" party="" osn="135010232" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Jackelyn Jackson</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039085300061454">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>132</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039085_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390859901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>3</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039085_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039085totals">135</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039085', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Halfway Mayor contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039085', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Halfway Mayor contest</span>
+                </div>
+                <div id="Map300039085" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039085">
+                            <div id="countyInfoBox300039085"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039085"></span>
+                            <div class="map" id="Mapmap300039085">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039085"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039085" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039085200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Huntington City Council (Vote For 3)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-425">
+                                        <label class="css-label" for="chk-425">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-425" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl08$ctl00','')" name="ctl00$MainContent$rptRace$ctl08$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039086" party="" osn="135010258" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl08$ctl01','')" name="ctl00$MainContent$rptRace$ctl08$ctl01" type="button" class="export-button" value="County Level" raceid="300039086" party="" osn="135010258" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Robyn McKay</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039086300061257">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>150</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039086_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Lillian Mathews</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039086300061255">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>128</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039086_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Harmonie Hicks</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039086300061256">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>151</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039086_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390869901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>47</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039086_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039086totals">476</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039086', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Huntington City Council (Vote For 3) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039086', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Huntington City Council (Vote For 3) contest</span>
+                </div>
+                <div id="Map300039086" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039086">
+                            <div id="countyInfoBox300039086"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039086"></span>
+                            <div class="map" id="Mapmap300039086">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039086"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039086" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039086200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Huntington Mayor</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-426">
+                                        <label class="css-label" for="chk-426">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-426" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl09$ctl00','')" name="ctl00$MainContent$rptRace$ctl09$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039087" party="" osn="135010259" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl09$ctl01','')" name="ctl00$MainContent$rptRace$ctl09$ctl01" type="button" class="export-button" value="County Level" raceid="300039087" party="" osn="135010259" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Charles Guerri</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039087300047427">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>165</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039087_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390879901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>8</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039087_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039087totals">173</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039087', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Huntington Mayor contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039087', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Huntington Mayor contest</span>
+                </div>
+                <div id="Map300039087" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039087">
+                            <div id="countyInfoBox300039087"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039087"></span>
+                            <div class="map" id="Mapmap300039087">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039087"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039087" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039087200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Richland City Council (Vote For 3)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-616">
+                                        <label class="css-label" for="chk-616">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-616" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl10$ctl00','')" name="ctl00$MainContent$rptRace$ctl10$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039088" party="" osn="135010454" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl10$ctl01','')" name="ctl00$MainContent$rptRace$ctl10$ctl01" type="button" class="export-button" value="County Level" raceid="300039088" party="" osn="135010454" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Debra Buchanan</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039088100085817">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>63</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039088_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Jef Geurts</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039088300060850">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>67</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039088_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Dianna Carnell</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039088300060851">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>58</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039088_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390889901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>7</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039088_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039088totals">195</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039088', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Richland City Council (Vote For 3) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039088', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Richland City Council (Vote For 3) contest</span>
+                </div>
+                <div id="Map300039088" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039088">
+                            <div id="countyInfoBox300039088"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039088"></span>
+                            <div class="map" id="Mapmap300039088">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039088"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039088" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039088200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Richland Mayor</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-617">
+                                        <label class="css-label" for="chk-617">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-617" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl11$ctl00','')" name="ctl00$MainContent$rptRace$ctl11$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039089" party="" osn="135010455" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl11$ctl01','')" name="ctl00$MainContent$rptRace$ctl11$ctl01" type="button" class="export-button" value="County Level" raceid="300039089" party="" osn="135010455" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>No Candidate Filed</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039089300060848">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>0</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039089_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390899901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>28</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039089_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039089totals">28</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039089', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Richland Mayor contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039089', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Richland Mayor contest</span>
+                </div>
+                <div id="Map300039089" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039089">
+                            <div id="countyInfoBox300039089"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039089"></span>
+                            <div class="map" id="Mapmap300039089">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039089"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039089" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039089200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Sumpter Council, Position 2</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-695">
+                                        <label class="css-label" for="chk-695">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-695" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl12$ctl00','')" name="ctl00$MainContent$rptRace$ctl12$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039090" party="" osn="135010529" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl12$ctl01','')" name="ctl00$MainContent$rptRace$ctl12$ctl01" type="button" class="export-button" value="County Level" raceid="300039090" party="" osn="135010529" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>No Candidate Filed</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039090300061391">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>0</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039090_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390909901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>47</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039090_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039090totals">47</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039090', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Sumpter Council, Position 2 contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039090', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Sumpter Council, Position 2 contest</span>
+                </div>
+                <div id="Map300039090" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039090">
+                            <div id="countyInfoBox300039090"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039090"></span>
+                            <div class="map" id="Mapmap300039090">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039090"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039090" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039090200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Sumpter Council, Position 4</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-696">
+                                        <label class="css-label" for="chk-696">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-696" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl13$ctl00','')" name="ctl00$MainContent$rptRace$ctl13$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039091" party="" osn="135010530" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl13$ctl01','')" name="ctl00$MainContent$rptRace$ctl13$ctl01" type="button" class="export-button" value="County Level" raceid="300039091" party="" osn="135010530" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>No Candidate Filed</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039091300061392">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>0</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039091_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390919901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>38</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039091_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039091totals">38</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039091', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Sumpter Council, Position 4 contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039091', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Sumpter Council, Position 4 contest</span>
+                </div>
+                <div id="Map300039091" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039091">
+                            <div id="countyInfoBox300039091"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039091"></span>
+                            <div class="map" id="Mapmap300039091">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039091"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039091" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039091200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Sumpter Mayor</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-697">
+                                        <label class="css-label" for="chk-697">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-697" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl14$ctl00','')" name="ctl00$MainContent$rptRace$ctl14$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039092" party="" osn="135010531" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl14$ctl01','')" name="ctl00$MainContent$rptRace$ctl14$ctl01" type="button" class="export-button" value="County Level" raceid="300039092" party="" osn="135010531" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Linda Wise</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039092300061395">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>78</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039092_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390929901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>38</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039092_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039092totals">116</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039092', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Sumpter Mayor contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039092', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Sumpter Mayor contest</span>
+                </div>
+                <div id="Map300039092" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039092">
+                            <div id="countyInfoBox300039092"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039092"></span>
+                            <div class="map" id="Mapmap300039092">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039092"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039092" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039092200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>City of Unity City Council (Vote For 4)</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-747">
+                                        <label class="css-label" for="chk-747">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-747" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl15$ctl00','')" name="ctl00$MainContent$rptRace$ctl15$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039093" party="" osn="135010577" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl15$ctl01','')" name="ctl00$MainContent$rptRace$ctl15$ctl01" type="button" class="export-button" value="County Level" raceid="300039093" party="" osn="135010577" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Robert Bradford</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039093300060827">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>22</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039093_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Erin F Cantrell</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039093300060829">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>20</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039093_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Kinzi Rasmussen</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039093300060834">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>14</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039093_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390939901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>15</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039093_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039093totals">71</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('LOCAL', '300039093', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for City of Unity City Council (Vote For 4) contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('LOCAL', '300039093', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for City of Unity City Council (Vote For 4) contest</span>
+                </div>
+                <div id="Map300039093" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039093">
+                            <div id="countyInfoBox300039093"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039093"></span>
+                            <div class="map" id="Mapmap300039093">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039093"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039093" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039093200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>Baker Valley Soil and Water Zone 1<a href="/SearchResults.aspx?ID=150" class="mcr-link">All Results</a></h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-150">
+                                        <label class="css-label" for="chk-150">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-150" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl16$ctl00','')" name="ctl00$MainContent$rptRace$ctl16$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300039095" party="" osn="175010001" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl16$ctl01','')" name="ctl00$MainContent$rptRace$ctl16$ctl01" type="button" class="export-button" value="County Level" raceid="300039095" party="" osn="175010001" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 9 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Myron Miles</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300039095300035135">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>4,901</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039095_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000390959901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>38</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300039095_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300039095totals">4,939</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('MCR', '300039095', '0', ''); ToggleButton(this);" value="Map" style="display: none;" /><span class="hidden-text">for Baker Valley Soil and Water Zone 1 contest</span>
+                    <input class="button-maps precinct closed right" type="button" onclick="BuildPrecincts('MCR', '300039095', '0', '20', '', false); ToggleButton(this);" value="Precinct Results" style="display: none;" /><span class="hidden-text">for Baker Valley Soil and Water Zone 1 contest</span>
+                </div>
+                <div id="Map300039095" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300039095">
+                            <div id="countyInfoBox300039095"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300039095"></span>
+                            <div class="map" id="Mapmap300039095">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300039095"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300039095" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="Precinct300039095200" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>Baker Valley Soil and Water Zone 3<a href="/SearchResults.aspx?ID=152" class="mcr-link">All Results</a></h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-152">
+                                        <label class="css-label" for="chk-152">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-152" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                              

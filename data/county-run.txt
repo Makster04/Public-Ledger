@@ -21,6 +21,7 @@ NEW   S-CO: 64 of 64 counties, 2,214,943 votes · John W. Hickenlooper 60.03% ·
       same counts as the last read
 Reading S-IA…
 NEW   S-IA: 99 of 99 counties, 1,360,839 votes · Josh Turek 50.45% · Ashley Hinson 46.34% · others 3.21% (from https://results.enr.clarityelections.com/IA/127077/)
+      same counts as the last read
 Reading S-KS…
 CHECK S-KS: couldn't read the county results.
       https://sos.ks.gov/elections/election-results.html: a web page, linking to 8 county results or data pages, tried next
@@ -59,31 +60,23 @@ CHECK S-WY: couldn't read the county results.
       https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Carbon_County_General_PbP_TBC.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
       Open https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-WY=<that address or file>"
 Reading S-MT…
-CHECK S-MT: 55 of 56 counties, 439,086 votes · Alani Bankhead 12.24% · Kurt Alme 49.21% · Seth Bodnar 36.71% · others 1.85% · 567 of 728 precincts reporting (from https://electionresults.mt.gov/ResultsList.aspx)
-      1 of the state's counties have no results in the file yet
-      counties not on the map, left out: Lewis & Clark
+NEW   S-MT: 56 of 56 counties, 473,461 votes · Alani Bankhead 12.05% · Kurt Alme 48.58% · Seth Bodnar 37.53% · others 1.83% · 567 of 728 precincts reporting (from https://electionresults.mt.gov/ResultsList.aspx)
 Reading S-NE…
 NEW   S-NE: 93 of 93 counties, 739,692 votes · Pete Ricketts 50.44% · Dan Osborn 43.62% · others 5.94% · 1,322 of 1,322 precincts reporting (from https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY)
+      same counts as the last read
 Reading S-NM…
 NEW   S-NM: 33 of 33 counties, 720,722 votes · Ben Ray Luján 63.15% · Larry Marker 36.85% · 2,204 of 2,204 precincts reporting (from https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY)
+      same counts as the last read
 Reading S-OR…
 CHECK S-OR: couldn't read the county results.
-      county pages: none of the 36 county pages had the Senate race (https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=04&map=CTY: no Senate race on the page; https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=13&map=CTY: no Senate race on the page)
+      county pages: none of the 36 county pages had the Senate race (https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY: no Senate race on the page; https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=36&map=CTY: no Senate race on the page)
       Open https://results.oregonvotes.gov/ResultsList.aspx, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-OR=<that address or file>"
 Reading S-SD…
 NEW   S-SD: 66 of 66 counties, 305,066 votes · Mike Rounds 60.50% · Brian Bengs 39.50% · 671 of 671 precincts reporting (from https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL)
+      same counts as the last read
 Reading S-MN…
 CHECK S-MN: couldn't read the county results.
-      https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00: a web page, with nothing to follow on its site
-              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
-              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
-              link: Existing Notaries → https://notary.sos.mn.gov/account/login
-              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
-              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
-              link: Results Home → https://electionresults.sos.mn.gov/201
-              link: Subscribe for email updates! → https://public.govdelivery.com/accounts/MNSOS/subscriber/new
-              table: Counties Reporting: 87 of 87 | Counties Complete: 87 | 
-              table: Party | Party | Candidate | Totals | Percent | Graph
+      https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00: the site answered with a bot check (HTTP 200), not the results
       This site checks for scripts and turned this one away, so use your browser: open https://electionresults.sos.mn.gov/, open U.S. Senate and its results by county, then save the page (in Safari: File, Save As, Format "Page Source"; in Chrome: File, Save Page As, "Webpage, HTML Only") and run: npm run counties:update -- --file "S-MN=~/Downloads/<the saved file>"
 Reading S-TN…
 CHECK S-TN: couldn't read the county results.

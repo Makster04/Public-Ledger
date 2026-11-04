@@ -1,0 +1,37 @@
+Scripts of https://elections.delaware.gov/results/enr/GE2026.html (HTTP 200):
+  https://www.googletagmanager.com/gtag/js?id=G-CB055P36N8: 538 KB, 5 addresses
+  https://elections.delaware.gov/assets/js/bootstrap.bundle.min.js: 79 KB, 0 addresses
+  https://elections.delaware.gov/funnelback/funnelbackConfig.js: 1 KB, 0 addresses
+  https://elections.delaware.gov/funnelback/funnelback.search.js: 5 KB, 0 addresses
+  https://elections.delaware.gov/results/enr/js/results.js: 20 KB, 5 addresses
+  https://elections.delaware.gov/assets/js/all.min.js: 1471 KB, 0 addresses
+  https://elections.delaware.gov/assets/js/fontawesome.min.js: 66 KB, 0 addresses
+  https://use.fontawesome.com/releases/v5.1.0-6/assets/js/all.js: 27 KB, 1 addresses
+  https://use.fontawesome.com/releases/v5.1.0-6/assets/js/v4-shims.js: 27 KB, 1 addresses
+
+https://elections.delaware.gov/results/enr/GE2026.html
+/voter/absentee/absentee_aff.html
+/voter/absentee/
+https://cfrs.elections.delaware.gov/
+/candidates/
+/voter/absentee/uocava.html
+/voter/
+/candidates/candidatelist
+/voter/education.html
+/elections/elections.html
+/candidates/regtotals.html
+/voter/technology.html
+/elections/electionofficers.html
+https://twitter.com/DE_Elections
+https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election
+/d/ccm/form-data
+/pagead/form-data
+/ccm/form-data
+https://www.youtube.com/iframe_api
+application/ld+json
+/results/enr/Election_VoterTurnout_ID_${electionId}.json?t=${tstamp}
+/results/enr/Election_StatewideResults_ID_${electionId}.json?t=${tstamp}
+/results/enr/Election_ByRepresentativeDistrict_ID_${electionId}.json?t=${tstamp}
+/results/enr/Election_ByElectionDistrict_ID_${electionId}.json?t=${tstamp}
+/results/enr/Election_ByCountyWithWilmington_ID_${electionId}.json?t=${tstamp}
+https://developers.cloudflare.com/r2/data-access/public-buckets/
