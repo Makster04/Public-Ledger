@@ -646,6 +646,11 @@
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
       "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/V000129.jpg"
     },
+    "H6CA22190": {
+      "file": "portraits/H6CA22190.webp",
+      "credit": "Photo: Maremoto Fund, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Randy_Villegas_at_Vota_Palooza_in_2024_(cropped).jpg"
+    },
     "H2FL22171": {
       "file": "portraits/H2FL22171.webp",
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
@@ -655,6 +660,21 @@
       "file": "portraits/H2IA03119.webp",
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
       "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/N000193.jpg"
+    },
+    "H2MI07123": {
+      "file": "portraits/H2MI07123.webp",
+      "credit": "Photo: Brian Thorpe, public domain, via Wikimedia Commons",
+      "src": "https://commons.wikimedia.org/wiki/File:Tom_Barrett,_official_portrait_(119th_Congress).jpg"
+    },
+    "H6MI07298": {
+      "file": "portraits/H6MI07298.webp",
+      "credit": "Photo: Sabio117, CC0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:William_Lawrence_2026.jpg"
+    },
+    "H6NC11321": {
+      "file": "portraits/H6NC11321.webp",
+      "credit": "Photo: NC House, public domain, via Wikimedia Commons",
+      "src": "https://commons.wikimedia.org/wiki/File:Rep._Jennifer_Balkcom.jpg"
     },
     "H2OH16051": {
       "file": "portraits/H2OH16051.webp",
@@ -671,6 +691,11 @@
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
       "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/B001327.jpg"
     },
+    "H6PA08293": {
+      "file": "portraits/H6PA08293.webp",
+      "credit": "Photo: US Department of Labor, CC BY 2.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Paige_Cognetti_(52165104986)_(3x4a).jpg"
+    },
     "H0TX15124": {
       "file": "portraits/H0TX15124.webp",
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
@@ -681,10 +706,55 @@
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
       "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/original/K000399.jpg"
     },
+    "H6VA02198": {
+      "file": "portraits/H6VA02198.webp",
+      "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+      "src": "https://commons.wikimedia.org/wiki/File:Rep._Elaine_Luria_official_photo,_117th_Congress.jpg"
+    },
     "H0WI03175": {
       "file": "portraits/H0WI03175.webp",
       "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
       "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/original/V000135.jpg"
+    },
+    "H4WI03169": {
+      "file": "portraits/H4WI03169.webp",
+      "credit": "Photo: UpNorthNews, CC BY 3.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Rebecca_Cooke_on_UpNorthNews_March_2025_(cropped).jpg"
+    },
+    "ar-shoffner": {
+      "file": "portraits/ar-shoffner.webp",
+      "credit": "Photo: Hallie Shoffner, CC0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Hallie_Shoffner_headshot_003.jpg"
+    },
+    "fl-nixon": {
+      "file": "portraits/fl-nixon.webp",
+      "credit": "Photo: Florida House of Representatives, public domain, via Wikimedia Commons",
+      "src": "https://commons.wikimedia.org/wiki/File:Angie_Nixon_official_portrait.jpg"
+    },
+    "id-achilles": {
+      "file": "portraits/id-achilles.webp",
+      "credit": "Photo: DL a.k.a. LibertyDad, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Todd_Achilles_on_LibertyDad%27s_stream.png"
+    },
+    "ma-deaton": {
+      "file": "portraits/ma-deaton.webp",
+      "credit": "Photo: Jeff Dranetz, CC BY 3.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:John_Deaton,_2024_(cropped).jpg"
+    },
+    "ms-colom": {
+      "file": "portraits/ms-colom.webp",
+      "credit": "Photo: Editor13443, CC0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Scott_Colom.jpg"
+    },
+    "sc-andrews": {
+      "file": "portraits/sc-andrews.webp",
+      "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+      "src": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
+    },
+    "va-mizusawa": {
+      "file": "portraits/va-mizusawa.webp",
+      "credit": "Photo: U.S. Army, public domain, via Wikimedia Commons",
+      "src": "https://commons.wikimedia.org/wiki/File:Mizusawa.jpg"
     }
   }
 }

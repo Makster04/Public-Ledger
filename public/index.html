@@ -359,7 +359,11 @@ a.rc-c:hover b{text-decoration:underline}
 .rc-change.flip.D{background:var(--dem);border-color:var(--dem)}
 .rc-change.flip.R{background:var(--rep);border-color:var(--rep)}
 .rc-change.flip.I{background:var(--neutral);border-color:var(--neutral)}
-.rc-map svg{display:block;width:100%;height:auto;max-height:460px}
+.cm-box{width:100%;aspect-ratio:4/3}
+.cm-box svg{display:block;width:100%;height:100%}
+.cm-rep{display:flex;flex-direction:column;gap:4px;margin-top:8px;color:var(--ink-2)}
+.cm-bar{height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.cm-bar i{display:block;height:100%;background:var(--ink-2);border-radius:4px}
 .cm-counties path{stroke:var(--surface);stroke-width:.5;stroke-linejoin:round;cursor:crosshair}
 .cm-counties path:hover{stroke:var(--ink);stroke-width:1.4}
 .cm-state{fill:none;stroke:var(--ink-2);stroke-width:.8}

@@ -18,6 +18,8 @@
 # if it is wider than the whole frame, "zoom": <factor below 1> shrinks that portrait to fit.
 # A supplied photo that already has a transparent background (a PNG cut-out) keeps its own outline.
 # {"<id>": {"skip": "<why>"}} leaves someone on initials, for an official photo that can't be cut out (cropped at the chin).
+# Add "lookup": false when the reason is that their Wikipedia photo was looked at and can't be used, so that
+# npm run portraits:fetch (scripts/fetch-portrait-photos.mjs) doesn't fetch it again.
 # People with neither keep the initials circle.
 #
 # Each photo's background is removed with MediaPipe selfie segmentation, and the face is found with MediaPipe face

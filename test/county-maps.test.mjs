@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -44,6 +44,9 @@ test("North Carolina's precinct file is read by its own column names, and only t
     'WAKE\t11/03/2026\t01-02\t1383\tS\tUS SENATE\tRoy Cooper\tDEM\t1\t1\t1\t1\t0\t3\tY','MCDOWELL\t11/03/2026\tP1\t1383\tS\tUS SENATE\tMichael Whatley\tREP\t1\t9\t9\t0\t0\t18\tY',
     'WAKE\t11/03/2026\t01-01\t1322\tS\tNC STATE SENATE DISTRICT 14\tSomeone\tDEM\t1\t1\t1\t1\t1\t4\tY'].join('\n');
   const rows=readNcsbe(text,SOURCES['S-NC'].contest);assert.equal(rows.length,3);
+  assert.deepEqual(rows.reporting,{n:3,of:3,unit:'precincts'},'precincts reporting: the real precincts with votes in the race');
+  const later=readNcsbe(text+'\nWAKE\t11/03/2026\t09-09\t1383\tS\tUS SENATE\tRoy Cooper\tDEM\t1\t0\t0\t0\t0\t0\tY\nWAKE\t11/03/2026\tABSENTEE\t1383\tS\tUS SENATE\tRoy Cooper\tDEM\t1\t0\t0\t9\t0\t9\tN',SOURCES['S-NC'].contest);
+  assert.deepEqual(later.reporting,{n:3,of:4,unit:'precincts'},'a precinct with no votes yet has not reported; the absentee tally is not a precinct');
   const b=byCounty(rows,raceCandidates(D,'S-NC'),map('NC'));
   assert.deepEqual(b.counties['37183'],{cooper:1224},'Wake: both precincts added up');assert.deepEqual(b.counties['37111'],{whatley:18},'McDowell');
   assert.equal(b.total,1242);assert.deepEqual(b.unmatched,[]);
@@ -56,6 +59,11 @@ test("Georgia's results export is read by locality; a state senate race and a mi
     localResults:[{name:'Appling',ballotItems:[{id:'1',name:'US Senate',ballotOptions:[opt('Jon Ossoff (I)','Dem',1000),opt('Mike Collins','Rep',2000),opt('Write-in','',3)]},{id:'9',name:'State Senate - District 1',ballotOptions:[opt('Jon Ossoff','Dem',99)]}]},
       {name:'DeKalb County',ballotItems:[{id:'1',name:'US Senate',ballotOptions:[opt('Jon Ossoff (I)','Dem',2000),opt('Mike Collins','Rep',1300)]}]}]};
   const rows=readEnhanced(data,SOURCES['S-GA'].contest);assert.equal(rows.length,5,'the state senate race is left out');
+  assert.equal(rows.reporting,undefined,'no precinct counts in this export');
+  const withCounts=structuredClone(data);Object.assign(withCounts.results.ballotItems[0],{precinctsReporting:2600,precinctsParticipating:2654});
+  assert.deepEqual(readEnhanced(withCounts,SOURCES['S-GA'].contest).reporting,{n:2600,of:2654,unit:'precincts'},'from the statewide ballot item');
+  const byLoc=structuredClone(data);delete byLoc.results;byLoc.localResults.forEach((l,i)=>Object.assign(l.ballotItems[0],{precinctsReporting:10+i,precinctsParticipating:12}));
+  assert.deepEqual(readEnhanced(byLoc,SOURCES['S-GA'].contest).reporting,{n:21,of:24,unit:'precincts'},'added up over the localities');
   const b=byCounty(rows,raceCandidates(D,'S-GA'),map('GA'));
   assert.deepEqual(b.counties['13001'],{ossoff:1000,mcollins:2000,other:3});assert.deepEqual(b.counties['13089'],{ossoff:2000,mcollins:1300},'DeKalb County, by name');
   assert.throws(()=>readEnhanced({results:{ballotItems:[]}},/senate/i),/no localResults \(top-level keys: results\)/);
@@ -113,6 +121,13 @@ test("a results page: its links to county results after the Senate race first, t
   assert.equal(enhancedExport('~/Downloads/ga.json'),'~/Downloads/ga.json');
 });
 
+test('how much has reported, as a page says it',()=>{
+  assert.deepEqual(reportingIn('Updated 11/4/2026 2:19 PM · 82 of 83 counties reporting'),{n:82,of:83,unit:'counties'});
+  assert.deepEqual(reportingIn('Precincts reporting: 2,650 of 2,660'),{n:2650,of:2660,unit:'precincts'});
+  assert.deepEqual(reportingIn('2,650/2,660 precincts reported'),{n:2650,of:2660,unit:'precincts'});
+  assert.equal(reportingIn('Total votes 2,650 of 2,660'),null);assert.equal(reportingIn('90 of 83 counties reporting'),null,'more than all of them');
+});
+
 test("a page's tables of votes: by county and candidate, in any of three layouts, without totals or percentages",()=>{
   assert.deepEqual(readHtmlTables(MI_COUNTY).rows,[{county:'ST. CLAIR',choice:'Abdul El-Sayed (DEM)',party:'',votes:30000},{county:'ST. CLAIR',choice:'Mike Rogers (REP)',party:'',votes:52000},
     {county:'ST. CLAIR',choice:'Pat Smith (LIB)',party:'',votes:1000},{county:'Wayne',choice:'Abdul El-Sayed (DEM)',party:'',votes:500000},{county:'Wayne',choice:'Mike Rogers (REP)',party:'',votes:200000},{county:'Wayne',choice:'Pat Smith (LIB)',party:'',votes:900}]);
@@ -160,13 +175,17 @@ test('the saved county results fit their race and map, and add up',()=>{
     assert.deepEqual(r.candidates.map(c=>c.key).filter(k=>!keys.has(k)),[],id);
     let sum=0;for(const [f,v] of Object.entries(r.counties)){assert.ok(fips.has(f),`${id}: ${f} is on the map`);for(const [k,n] of Object.entries(v)){assert.ok(keys.has(k),`${id}: ${k}`);assert.ok(Number.isInteger(n)&&n>=0);sum+=n;}}
     assert.equal(sum,r.total,id);assert.match(r.source.u,/^https:\/\//);assert.match(r.fetched,/^\d{4}-\d{2}-\d{2}T/);
+    if(r.reporting){const {n,of,unit}=r.reporting;assert.ok(Number.isInteger(n)&&Number.isInteger(of)&&n>=0&&n<=of&&of>0,id);assert.ok(['precincts','counties'].includes(unit),id);}
   }
   const nc=C.races['S-NC'];assert.equal(Object.keys(nc.counties).length,100);assert.equal(nc.total,4203181,"the state's own total");
+  assert.equal(nc.reporting.unit,'precincts');assert.ok(nc.reporting.of>2000,'North Carolina has over 2,000 precincts');
   const share=k=>Object.values(nc.counties).reduce((a,v)=>a+(v[k]||0),0)/nc.total*100;
   const tally=D.races.find(r=>r.id==='S-NC').result.tally;assert.ok(Math.abs(share('cooper')-tally.shares.cooper)<0.01&&Math.abs(share('whatley')-tally.shares.whatley)<0.01,'the card and the map agree');
 });
 
 test('the races page draws the maps and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
-  assert.match(app,/async function fillMaps\(root\)/);assert.match(app,/fillMaps\(\$\('#rlist'\)\)/);assert.match(app,/id="method-county-maps"/);
+  assert.match(app,/async function fillMaps\(root\)/);assert.match(app,/<div class="cm-box"><svg viewBox="0 0 \$\{m\.width\} \$\{m\.height\}" preserveAspectRatio="xMidYMid meet"/,'every map in the same box');
+  assert.match(app,/\$\{reportingBar\(res,m\)\}/);assert.match(app,/role="progressbar"/);
+  assert.match(fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8'),/\.cm-box\{width:100%;aspect-ratio:4\/3\}/);assert.match(app,/fillMaps\(\$\('#rlist'\)\)/);assert.match(app,/id="method-county-maps"/);
 });
