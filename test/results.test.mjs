@@ -4,14 +4,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct} from '../public/results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey} from '../public/results.js';
 const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
 test('every covered race has a result with a source, and its winner or leader is one of its candidates',()=>{
   assert.match(D.election.date,/^2026-11-03$/);assert.match(D.election.asof,/^\d{4}-\d{2}-\d{2}$/);assert.match(D.election.note,/[Uu]nofficial/);
   for(const r of [...D.races,...D.liteRaces]){
-    const x=r.result,keys=r.keys||r.nominees.map(n=>n.fecCand);
+    const x=r.result,keys=r.keys||r.nominees.map(nomineeKey);
     assert.ok(x,`${r.id} has a result`);assert.match(x.src?.u||'',/^https:\/\//,`${r.id} has a source`);assert.ok(x.src.t,r.id);
     if(x.winner)assert.ok(keys.includes(x.winner),`${r.id}: the winner runs in the race`);
     else{assert.ok(x.how,`${r.id}: a race not called yet says why`);assert.doesNotMatch(x.how,/^Not called yet/,'the label is added on the page');}
@@ -62,7 +62,7 @@ test('every race has a vote count with a source: a share for each candidate, the
   }
   // A source that gave neither the votes counted nor how much was in is shown as such, not left blank.
   const without=[...D.races,...D.liteRaces].filter(r=>{const t=tallyOf(r);return t.total==null&&!t.counted;}).map(r=>r.id);
-  assert.ok(without.length<=3,`turnout missing for ${without.join(', ')}`);
+  assert.ok(without.length<=4,`turnout missing for ${without.join(', ')}`);
   assert.match(fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),/not given in this source/);
 });
 
@@ -79,14 +79,29 @@ test('turnout: the source\'s total, or the sum of all votes only when every cand
 
 test('the count of called races names the ones not called yet',()=>{
   const c=resultCounts([...D.races,...D.liteRaces]);
-  assert.equal(c.total,43);assert.equal(c.missing,0);assert.equal(c.decided+c.pending.length,43);
-  assert.deepEqual(c.pending.map(r=>r.id).sort(),['H-MI-07','H-WA-03','S-AK']);
+  const n=D.races.length+D.liteRaces.length;
+  assert.equal(c.total,n);assert.equal(c.missing,0);assert.equal(c.decided+c.pending.length,n);
+  assert.deepEqual(c.pending.map(r=>r.id).sort(),['H-MI-07','H-WA-03','S-AK','S-MS']);
 });
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
-  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
+  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
   assert.match(app,/function resultCard\(r\)/);assert.match(app,/Reported turnout:/);assert.doesNotMatch(app,/function raceCard|function liteCard/,'the money tables are gone from the Races page');
   assert.match(app,/November 3, 2026 result/);assert.match(app,/res=personResult\(s\)/);
   assert.match(app,/id="method-results"/);assert.match(app,/no grade uses the results/);
+});
+
+test('every 2026 Senate seat is on the Races page: profiled, or results only with its sitting senator linked',()=>{
+  const S=JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8')).senators;
+  const states=new Set([...D.races,...D.liteRaces].filter(r=>r.chamber==='S').map(r=>r.state));
+  for(const x of S.filter(y=>y.nextElection===2026))assert.ok(states.has(x.state),`${x.name}'s seat (${x.state}) has a race`);
+  const lite=D.liteRaces.filter(r=>r.chamber==='S');assert.equal(lite.length,14);
+  for(const r of lite){
+    assert.ok(!D.races.some(x=>x.chamber==='S'&&x.state===r.state),`${r.state} is not also a profiled race`);
+    for(const n of r.nominees){assert.ok(nomineeKey(n),r.id);if(n.incumbent)assert.ok(S.some(x=>x.id===n.id),`${n.name} is a sitting senator, known by their directory ID`);else assert.match(n.id,/^[a-z]{2}-[a-z]+$/,n.name);}
+  }
+  assert.equal(S.find(x=>x.id==='moody').nextElection,2026,'an appointed senator\'s special election counts as their next election');
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
+  assert.match(app,/The rest of the 2026 Senate races/);assert.match(app,/function seatRace\(s\)/);
 });

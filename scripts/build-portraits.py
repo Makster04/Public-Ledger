@@ -270,8 +270,13 @@ def main():
     profiled = {s['id'] for s in D['members'] + D.get('cands', []) + D.get('featured', [])}
     basic = [{'id': x['id'], 'bioguide': x['bioguide']} for x in senate if x['id'] not in profiled]
     # Toss-up nominees without profiles, for their tiles on the Races page: known by their FEC candidate ID.
-    nominees = [{'id': n['fecCand'], 'bioguide': n.get('bioguide')} for r in D.get('liteRaces', []) for n in r['nominees']]
+    # Known by their FEC candidate ID, or "id" without one (a sitting senator's directory ID, whose portrait is the same).
+    nominees = [{'id': n.get('fecCand') or n['id'], 'bioguide': n.get('bioguide')} for r in D.get('liteRaces', []) for n in r['nominees']]
+    done = set()
     for s in D['members'] + D.get('cands', []) + D.get('featured', []) + basic + nominees:
+        if s['id'] in done:
+            continue  # a sitting senator who is also a results-only nominee: one portrait
+        done.add(s['id'])
         if only is not None and s['id'] not in only:
             if s['id'] in old:
                 people[s['id']] = old[s['id']]

@@ -29,12 +29,14 @@ export function assignIds(senators,taken){
   return ids;
 }
 
-// One senator's directory entry. The next election is the year before their term ends (terms end on January 3).
+// One senator's directory entry. The next election is the year before their term ends (terms end on January 3), or,
+// for an appointed senator whose term ends at a special election (November 3, 2026), that election's year.
+export const nextElectionOf=end=>Number(end.slice(0,4))-(end.slice(5,7)==='01'?1:0);
 export function senatorEntry(x,id,profiled){
   const t=x.terms.at(-1),senate=x.terms.filter(s=>s.type==='sen');
   return {id,profiled,name:x.name.official_full||`${x.name.first} ${x.name.last}`,short:x.name.last,party:PARTY[t.party]||t.party?.[0]||null,
     state:t.state,stateName:STATE_NAMES[t.state]||t.state,bioguide:x.id.bioguide,lis:x.id.lis||null,class:t.class??null,
-    since:senate[0]?.start||t.start,termEnd:t.end,nextElection:Number(t.end.slice(0,4))-1,site:t.url||null,fecCand:senateFecId(x)};
+    since:senate[0]?.start||t.start,termEnd:t.end,nextElection:nextElectionOf(t.end),site:t.url||null,fecCand:senateFecId(x)};
 }
 // A senator's FEC candidate ID: the Senate one for their state, if congress-legislators lists it.
 export const senateFecId=x=>(x.id.fec||[]).filter(f=>f.startsWith('S')&&f.slice(2,4)===x.terms.at(-1).state).at(-1)||null;

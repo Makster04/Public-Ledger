@@ -14,7 +14,7 @@ function research(){
   const camp=(id,o)=>{const p=[...r.members,...r.cands].find(x=>x.id===id);const {researchNote,...c}=p.camp;p.camp={...c,...o};};
   camp('ossoff',{cmteId:'C00718866',cmte:'Jon Ossoff for Senate',start:'2025-01-01',end:'2026-06-30',receipts:77279766,pac:920316,missing:false,note:'Coverage 2025-01-01..2026-06-30 (hand research).'});
   camp('jackson',{cmteId:'C00955609',missing:true,note:'Committee registered after June 30; first report due Oct. 15.',start:null,end:null,receipts:null});
-  camp('moore',{end:'2026-06-30',receipts:3765805,indiv:2800000,pac:881598,party:0,transfers:0,candidate:0,loans:0,missing:false,totalsFrom:undefined,cmteId:'C00720375',cmte:'Barry Moore For U.S. Senate'});
+  camp('moore',{end:'2026-06-30',receipts:3765805,indiv:2800000,pac:881598,party:0,transfers:0,candidate:0,loans:0,missing:false,totalsFrom:undefined,internalTransfers:undefined,cmteId:'C00720375',cmte:'Barry Moore For U.S. Senate'});
   camp('bankhead',{end:'2026-06-30',receipts:58829.06,indiv:45679.62,pac:6627.29,party:0,missing:false});
   const nominee=(fec,o)=>{for(const race of r.liteRaces)for(const [i,n] of race.nominees.entries())if(n.fecCand===fec)race.nominees[i]={...n,...o};};
   nominee('H2AZ02360',{through:'2026-07-01',receipts:6172867});
