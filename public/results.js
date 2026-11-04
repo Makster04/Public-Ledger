@@ -6,6 +6,9 @@
 //   {"winner":"ossoff","how":"Called by NBC News and CBS News","src":{"t":"…","u":"https://…"}}
 //   {"winner":null,"leader":"peltola","how":"Mary Peltola led by 626 votes …","src":{…}}
 // "special": a special election, whose winner takes the seat once the state certifies the result, not on Jan. 3.
+// A results-only race (liteRaces, chamber "S" or "H") lists its nominees; each is known by their FEC candidate ID, or,
+// without one, by "id": a sitting senator's directory ID (their basic profile and portrait) or "state-lastname".
+export const nomineeKey=n=>n.fecCand||n.id;
 
 export const OUTCOME={
   won:{label:'Won',cls:'good'},
@@ -51,8 +54,9 @@ export function termAfter(term,outcome){
 // left unnamed. counted: how much of the vote was in.
 export function tallyOf(race){
   const t=race?.result?.tally;if(!t)return null;
-  const keys=race.keys||race.nominees.map(n=>n.fecCand);
-  const rows=keys.map(key=>({key,pct:t.shares?.[key]??null,votes:t.votes?.[key]??null})).sort((a,b)=>(b.pct??-1)-(a.pct??-1));
+  const keys=race.keys||race.nominees.map(nomineeKey);
+  // Highest share first; on equal shares (rounded), the one with more votes.
+  const rows=keys.map(key=>({key,pct:t.shares?.[key]??null,votes:t.votes?.[key]??null})).sort((a,b)=>(b.pct??-1)-(a.pct??-1)||(b.votes??-1)-(a.votes??-1));
   const others=t.others||[],listed=[...rows,...others];
   const rest=Math.round((100-listed.reduce((a,x)=>a+(x.pct||0),0))*10)/10;
   const summed=t.total==null&&rest<0.5&&listed.every(x=>x.votes!=null);

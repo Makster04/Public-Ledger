@@ -13,7 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct} from './results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -821,7 +821,7 @@ function renderSenate(){
     L.sort(by);
     $('#sen-n').innerHTML=`<b class="num">${L.length}</b> of ${SENATE.length} senators`;
     $('#sen-rows').innerHTML=L.map(x=>`<tr><td><a href="#${esc(x.id)}">${esc(x.name)}</a></td><td>${esc(x.stateName)}</td><td><span class="chip ${esc(x.party)}">${partyName(x.party)}</span></td>
-      <td>${x.nextElection}${x.nextElection===2026?' <span class="chip warn">On the 2026 ballot</span>':''}</td>
+      <td>${x.nextElection}${(o=>o?' '+resultChip(o):x.nextElection===2026?' <span class="chip ghost">Not running</span>':'')(senatorOutcome(x))}</td>
       <td>${x.ideo?`<span class="mono">${x.ideo.dim1>0?'+':''}${x.ideo.dim1.toFixed(2)}</span><div class="small muted">${esc(ideoText(x).short)}</div>`:'<span class="small muted">No score yet</span>'}</td>
       <td>${byId[x.id]?'<span class="chip good">Full</span>':'<span class="chip ghost">Basic</span>'}</td></tr>`).join('')||'<tr><td colspan="6">No senators match.</td></tr>';
   };
@@ -834,8 +834,28 @@ function renderSenate(){
 // Basic profiles: senators without reviewed research. They use the same header, tabs and cards as the full profiles;
 // every grade stays "Not graded" until the research is reviewed, and each tab shows the records the daily refresh
 // collects. Election boxes say whether the seat is on the 2026 ballot.
-const offBallot=s=>s.nextElection!==2026;
-const ballotLine=s=>offBallot(s)?'Not running for election in 2026':'Seat up in 2026 · race not covered here';
+// A senator's 2026 race: the results-only race they ran in, or, for a seat up in 2026, the state's Senate race.
+function seatRace(s){
+  const ran=DATA.liteRaces.find(r=>r.chamber==='S'&&r.nominees.some(n=>nomineeKey(n)===s.id));if(ran)return ran;
+  if(s.nextElection!==2026)return null;
+  return DATA.races.find(r=>r.chamber==='S'&&r.state===s.state)||DATA.liteRaces.find(r=>r.chamber==='S'&&r.state===s.state)||null;
+}
+const offBallot=s=>s.nextElection!==2026&&!seatRace(s);
+// A senator's own November 3 outcome (won, lost, not called yet), or null when they weren't on the ballot.
+function senatorOutcome(x){
+  const r=byId[x.id]?raceOf(byId[x.id]):seatRace(x);if(!r)return null;
+  return (r.keys||r.nominees.map(nomineeKey)).includes(x.id)?outcomeOf(r,x.id):null;
+}
+// The election box: their own result if they ran, else who won the seat they're leaving.
+function ballotLine(s){
+  if(offBallot(s))return 'Not running for election in 2026';
+  const r=seatRace(s);if(!r)return 'Seat up in 2026 · race not covered here';
+  const res=raceResult(r),w=res&&res.winner,ran=(r.keys||r.nominees.map(nomineeKey)).includes(s.id);
+  const name=w&&(byId[w]?.name||r.nominees?.find(n=>nomineeKey(n)===w)?.name);
+  if(ran){const o=outcomeOf(r,s.id);
+    return o==='won'?(res.special?'Won the November 3, 2026 special election':'Re-elected November 3, 2026'):o==='lost'?`Lost to ${name} on November 3, 2026`:'On the November 3, 2026 ballot · not called yet';}
+  return res?.decided?`Not running in 2026 · ${name} won the seat`:'Not running in 2026 · the race for the seat is not called yet';
+}
 const BASIC_GRADE={match:'No reviewed record of their votes and statements on the site\'s issues yet.',prom:'No statements checked against the record yet.',
   eth:'No cases reviewed yet. Leads from official records are on the Integrity tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
 function basicReport(s,links){
@@ -2111,8 +2131,9 @@ function paneSources(s,pane){
 const numFmt=n=>Number(n).toLocaleString('en-US');
 function resultCard(r){
   const lite=!r.keys,res=raceResult(r),t=tallyOf(r);
-  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>x.fecCand===k);return {id:k,name:n.name,party:n.party,href:''};};
-  const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(n=>n.fecCand));
+  // A results-only nominee who is a sitting senator opens their basic profile; others have no profile yet.
+  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k);return {id:k,name:n.name,party:n.party,href:BASIC[k]||byId[k]?'#'+k:''};};
+  const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(nomineeKey));
   const tile=k=>{const p=who(k),row=t&&t.rows.find(x=>x.key===k),o=outcomeOf(r,k),tag=p.href?'a':'div';
     return `<${tag} class="rc-c${o==='won'?' won':''}"${p.href?` href="${p.href}"`:''}>${portrait(p)}
       <div class="rc-who"><b>${esc(p.name)}</b> <span class="chip ${p.party}">${p.party}</span></div>
@@ -2123,10 +2144,60 @@ function resultCard(r){
   return `<article class="race rc">
     <div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open||lite&&!r.nominees.some(n=>n.incumbent)?'Open seat':'Incumbent ran'}</span></div>
     ${res&&!res.decided?`<p class="small rc-status"><span class="chip warn">Not called yet</span> ${esc(res.how)}</p>`:res?`<p class="small muted rc-status">${esc(res.how||'Race called')} · <a href="${esc(res.src.u)}" target="_blank" rel="noopener">${esc(res.src.t)} ↗</a></p>`:''}
+    <div class="rc-cols"><div class="rc-left">
     <div class="rc-grid">${keys.map(tile).join('')}</div>
     ${others.length?`<p class="small muted" style="margin:0">Also on the ballot: ${others.join(' · ')}</p>`:''}
     <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}</p>
+    </div><aside class="rc-map" data-map="${esc(r.id)}" hidden></aside></div>
   </article>`;
+}
+// ---------- county maps (public/county-results.json, outlines in public/maps/<ST>.json) ----------
+// Each county is colored by who leads it, darker the wider the lead; hovering shows its count.
+const COUNTY={data:null,maps:{}};
+const countyData=()=>COUNTY.data??=fetch('/county-results.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+const stateMap=st=>COUNTY.maps[st]??=fetch(`/maps/${st}.json`).then(r=>r.ok?r.json():null).catch(()=>null);
+const MARGINS=[5,15,30];
+const marginBand=m=>MARGINS.filter(x=>m>=x).length;
+// One county's count: candidates by votes, each with a share, and the leader's margin over the runner-up in points.
+function countyCount(res,votes){
+  const rows=res.candidates.map(c=>({...c,votes:votes?.[c.key]||0})).filter(c=>c.votes>0).sort((a,b)=>b.votes-a.votes);
+  const total=rows.reduce((a,c)=>a+c.votes,0);
+  return {rows,total,lead:rows[0]||null,margin:total&&rows.length?((rows[0].votes-(rows[1]?.votes||0))/total*100):0};
+}
+function countyMap(res,m){
+  const name=res.candidates.reduce((o,c)=>(o[c.key]=c,o),{}),led={};
+  const paths=m.counties.map(c=>{const k=countyCount(res,res.counties[c.fips]);
+    if(!k.lead)return `<path d="${c.d}" class="cm-none" data-f="${c.fips}"></path>`;
+    led[k.lead.key]=(led[k.lead.key]||0)+1;const party=k.lead.key==='other'?'O':(name[k.lead.key]?.party||'I');
+    return `<path d="${c.d}" class="cm-${party} cm-m${marginBand(k.margin)}" data-f="${c.fips}"></path>`;}).join('');
+  const main=res.candidates.filter(c=>c.key!=='other');
+  const summary=main.map(c=>`${c.name} led ${led[c.key]||0}`).join(', ')+` of ${m.counties.length} counties`;
+  const swatch=p=>MARGINS.concat(99).map((x,i)=>`<i class="cm-${p} cm-m${i}"></i>`).join('');
+  return `<svg viewBox="0 0 ${m.width} ${m.height}" role="img" aria-label="${esc(`County map: ${summary}`)}"><g class="cm-counties">${paths}</g><path class="cm-state" d="${m.outline}"></path></svg>
+    <div class="cm-legend small">${main.map(c=>`<span><span class="cm-sw">${swatch(c.party)}</span>${esc(c.name.split(' ').at(-1))}</span>`).join('')}<span class="muted">Stronger color: wider lead (under 5, 5–15, 15–30, 30+ points)</span></div>
+    <p class="small muted cm-src">${esc(summary)}. County results: <a href="${esc(res.source.u)}" target="_blank" rel="noopener">${esc(res.source.t)} ↗</a>, read ${esc(fmtDate(res.fetched.slice(0,10)))}.</p>
+    <details class="cm-table small"><summary>All ${m.counties.length} counties</summary><div class="tablewrap"><table><thead><tr><th>County</th>${main.map(c=>`<th>${esc(c.name.split(' ').at(-1))}</th>`).join('')}<th>Others</th><th>Lead</th></tr></thead><tbody>
+    ${m.counties.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>{const k=countyCount(res,res.counties[c.fips]),v=res.counties[c.fips]||{};
+      return `<tr><td>${esc(c.name)}</td>${main.map(x=>`<td class="num">${k.total?((v[x.key]||0)/k.total*100).toFixed(1)+'%':'—'}</td>`).join('')}<td class="num">${k.total?((v.other||0)/k.total*100).toFixed(1)+'%':'—'}</td><td>${k.lead?`${esc(k.lead.key==='other'?'Other':k.lead.name.split(' ').at(-1))} +${k.margin.toFixed(1)}`:'No votes'}</td></tr>`;}).join('')}
+    </tbody></table></div></details>`;
+}
+// Hover (or tap) a county for its count.
+function bindCountyTips(el,res,m){
+  const names=new Map(m.counties.map(c=>[c.fips,c.name]));
+  const text=f=>{const k=countyCount(res,res.counties[f]);
+    return `${names.get(f)} ${m.state==='LA'?'Parish':'County'}: `+(k.total?k.rows.map(r=>`${r.key==='other'?'Others':r.name} ${(r.votes/k.total*100).toFixed(1)}% (${numFmt(r.votes)})`).join(' · ')+` · lead ${k.margin.toFixed(1)} points`:'no votes reported');};
+  const show=e=>{const p=e.target.closest('path[data-f]');if(!p){tip.classList.remove('show');return;}
+    tip.textContent=text(p.dataset.f);tip.classList.add('show');
+    const x=Math.max(10,Math.min(e.clientX+12,window.innerWidth-310));tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px';};
+  const svg=el.querySelector('svg');svg.addEventListener('mousemove',show);svg.addEventListener('click',show);svg.addEventListener('mouseleave',()=>tip.classList.remove('show'));
+}
+async function fillMaps(root){
+  const d=await countyData();if(!d?.races)return;
+  for(const el of root.querySelectorAll('.rc-map[data-map]')){
+    const res=d.races[el.dataset.map];if(!res||!el.isConnected)continue;
+    const m=await stateMap(res.state);if(!m||!el.isConnected)continue;
+    el.innerHTML=countyMap(res,m);el.hidden=false;el.parentElement.classList.add('has-map');bindCountyTips(el,res,m);
+  }
 }
 // How many covered races are called, and which are not yet.
 function resultsLine(){
@@ -2135,20 +2206,23 @@ function resultsLine(){
 }
 function renderRaces(){
   const S=DATA.races.filter(r=>r.chamber==='S'), H=DATA.races.filter(r=>r.chamber==='H');
+  // Results-only races (no profiles): the other 2026 Senate races and the other House toss-ups.
+  const lite=ch=>DATA.liteRaces.filter(r=>(r.chamber||'H')===ch),LS=lite('S'),LH=lite('H');
   app.innerHTML=`
   <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''}</div><h1 style="margin-top:8px">The races</h1>
   <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them on election night or the morning after, with how much of the vote was counted. They change as counting finishes.']].filter(Boolean),'lede-pts')}
-  <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length})</button><button data-c="H">House (${H.length+DATA.liteRaces.length})</button></div>
-  <label class="small muted">Jump to <select id="rj">${S.concat(H).concat(DATA.liteRaces.map(r=>({id:r.id,label:r.label,chamber:'H'}))).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
+  <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length+LS.length})</button><button data-c="H">House (${H.length+LH.length})</button></div>
+  <label class="small muted">Jump to <select id="rj">${S.concat(LS,H,LH).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
   const draw=ch=>{const L=DATA.races.filter(r=>r.chamber===ch),card=r=>`<div id="r-${r.id}">${resultCard(r)}</div>`;
-    $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Rated Toss-up, Tilt or Lean by at least one forecaster (Cook, Inside Elections or Sabato's Crystal Ball, Sept. 2026).</p>${L.filter(r=>r.competitive).map(card).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(card).join('')}`
-      :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+DATA.liteRaces.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
-        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${DATA.liteRaces.length} Cook toss-ups. Their nominees don't have profiles yet.</p>${DATA.liteRaces.map(card).join('')}`;
-    bindTips(app);};
+    $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Rated Toss-up, Tilt or Lean by at least one forecaster (Cook, Inside Elections or Sabato's Crystal Ball, Sept. 2026).</p>${L.filter(r=>r.competitive).map(card).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(card).join('')}
+        <h2 style="margin-top:26px">The rest of the 2026 Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LS.length} Senate races on the November 3 ballot, with results only. Open a sitting senator for their Senate profile; their opponents don't have profiles yet.</p>${LS.map(card).join('')}`
+      :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+LH.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
+        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Their nominees don't have profiles yet.</p>${LH.map(card).join('')}`;
+    bindTips(app);fillMaps($('#rlist'));};
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
-  $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||Object.assign({chamber:'H'},DATA.liteRaces.find(x=>x.id===e.target.value));const want=r.chamber;const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
+  $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||DATA.liteRaces.find(x=>x.id===e.target.value);const want=r.chamber||'H';const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
 }
 
 // ---------- bills ----------
@@ -2814,6 +2888,7 @@ function renderMethod(sub){
       <li><b>Senate incumbents:</b> six senators on the November 3, 2026 ballot, three Republicans and three Democrats, as a bipartisan mix of competitive and safe seats. Two senators first picked were replaced because they won't be on the ballot: Sen. Lindsey Graham (R-SC) died in July 2026, and Sen. Markwayne Mullin (R-OK) left the Senate for an administration post.</li>
       <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their records, statements, ethics and campaign money are not shown yet.</li>
       <li><b>Challengers and open seats:</b> every opponent of those incumbents, and both major-party nominees in each open Senate race (plus independent Seth Bodnar in Montana). Nominees were confirmed from primary and runoff results.</li>
+      <li><b>The rest of the 2026 Senate races:</b> the ${DATA.liteRaces.filter(r=>r.chamber==='S').length} other Senate races on the November 3 ballot, including Florida's special election, are on the Races page with results only: the nominees, each one's share of the vote, the reported turnout and the winner. Sitting senators link to their Senate page profile; their opponents don't have profiles yet.</li>
       <li><b>Every other senator:</b> a basic profile for each sitting senator not in these races (see the <a href="#senate">Senate</a> page): their place in the Senate, their committees, and the records the daily refresh collects. No grades until their research is reviewed. The list comes from the congress-legislators project.</li>
       <li><b>Ohio and Nebraska:</b> Sen. Jon Husted (appointed in January 2025) and Sen. Pete Ricketts are profiled with their opponents, Sherrod Brown and independent Dan Osborn. No Democrat is on the Nebraska ballot: the nominee withdrew in July 2026 and the state party named no replacement.</li>
     </ul>
@@ -2831,6 +2906,7 @@ function renderMethod(sub){
       <li><b>Not called yet:</b> a race nobody has called and no candidate has conceded shows who was leading, but nobody is marked as having won or lost.</li>
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
+      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
       <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
     <h2>Campaign funds raised</h2>

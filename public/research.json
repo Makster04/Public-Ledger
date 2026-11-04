@@ -63690,13 +63690,32 @@
         "tally": {
           "asof": "2026-11-04",
           "shares": {
-            "cooper": 58.7,
-            "whatley": 39.2
+            "cooper": 58.72,
+            "whatley": 39.09
           },
-          "counted": "Most results in",
+          "votes": {
+            "cooper": 2467963,
+            "whatley": 1643088
+          },
+          "others": [
+            {
+              "name": "Shannon W. Bray",
+              "party": "L",
+              "pct": 1.33,
+              "votes": 55726
+            },
+            {
+              "name": "Michael Dublin",
+              "party": "G",
+              "pct": 0.87,
+              "votes": 36404
+            }
+          ],
+          "total": 4203181,
+          "counted": "All 100 counties, in the state’s unofficial results file of 6:40 a.m. Nov. 4",
           "src": {
-            "t": "WRAL, Nov. 4, 2026",
-            "u": "https://www.wral.com/news/nccapitol/us-senate-race-nc-north-carolina-roy-cooper-michael-whatley-midterm-results-november-2026/"
+            "t": "North Carolina State Board of Elections, precinct results file",
+            "u": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/results_pct_20261103.zip"
           }
         }
       }
@@ -196533,7 +196552,8 @@
             "u": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-district-6-results-elex"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-CA-22",
@@ -196662,7 +196682,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/california-us-house-district-22-results"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-FL-22",
@@ -196782,7 +196803,8 @@
             "u": "https://www.nbcmiami.com/elections/pia-dandiya-wins-newly-drawn-district-becomes-floridas-first-south-asian-u-s-rep/3883335/"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-FL-25",
@@ -196910,7 +196932,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/florida-us-house-district-25-results"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-IA-03",
@@ -197027,7 +197050,8 @@
             "u": "https://iowacapitaldispatch.com/2026/11/03/democrat-sarah-trone-garriott-defeats-incumbent-zach-nunn-in-iowas-3rd-district/"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-MI-07",
@@ -197149,7 +197173,8 @@
             "u": "https://www.poliwave.com/us/live/midterms-2026/house/michigan-07"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-MI-10",
@@ -197286,7 +197311,8 @@
             "u": "https://michiganadvance.com/2026/11/04/in-michigans-10th-congressional-district-hines-claims-victory/"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-NC-11",
@@ -197414,7 +197440,8 @@
             "u": "https://www.bpr.org/politics-government/2026-11-03/cooper-ager-and-roney-are-some-of-the-victors-in-the-2026-midterm-election-read-the-results-here"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-OH-07",
@@ -197532,7 +197559,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-7-results"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-PA-07",
@@ -197653,7 +197681,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/pennsylvania-us-house-district-7-results"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-PA-08",
@@ -197774,7 +197803,8 @@
             "u": "https://www.wvia.org/news/local/2026-11-03/cnn-other-networks-project-cognetti-to-beat-bresnahan-in-8th-congressional-district-race"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-TX-15",
@@ -197891,7 +197921,8 @@
             "u": "https://www.tpr.org/government-politics/2026-11-03/bobby-pulido-declares-victory-over-monica-de-la-cruz-in-south-texas-congressional-race"
           }
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-VA-02",
@@ -198034,7 +198065,8 @@
           "total": 303901,
           "counted": "Votes tallied by 11:55 p.m. Nov. 3"
         }
-      }
+      },
+      "chamber": "H"
     },
     {
       "id": "H-WI-03",
@@ -198154,6 +198186,690 @@
             "t": "Wisconsin Examiner, Nov. 4, 2026",
             "u": "https://wisconsinexaminer.com/2026/11/04/rebecca-cooke-flips-wisconsins-3rd-congressional-district-for-democrats/"
           }
+        }
+      },
+      "chamber": "H"
+    },
+    {
+      "id": "S-AR",
+      "chamber": "S",
+      "state": "AR",
+      "label": "Arkansas Senate",
+      "nominees": [
+        {
+          "id": "cotton",
+          "name": "Tom Cotton",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "C001095"
+        },
+        {
+          "id": "ar-shoffner",
+          "name": "Hallie Shoffner",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": "cotton",
+        "how": "Called by the AP",
+        "src": {
+          "t": "KATV, Nov. 4, 2026",
+          "u": "https://katv.com/news/local/tom-cotton-wins-arkansas-us-senate-race"
+        },
+        "tally": {
+          "shares": {
+            "cotton": 54.3,
+            "ar-shoffner": 42.6
+          },
+          "others": [
+            {
+              "name": "Jeff Wadlin",
+              "party": "L",
+              "pct": 3.1
+            }
+          ],
+          "counted": "An estimated 82% of votes counted",
+          "src": {
+            "t": "Breitbart News, Nov. 3, 2026, from the AP count",
+            "u": "https://www.breitbart.com/politics/2026/11/03/republican-tom-cotton-wins-third-term-arkansas-senate-race/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-DE",
+      "chamber": "S",
+      "state": "DE",
+      "label": "Delaware Senate",
+      "nominees": [
+        {
+          "id": "coons",
+          "name": "Christopher A. Coons",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "C001088"
+        },
+        {
+          "id": "de-katz",
+          "name": "Mike Katz",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "coons",
+        "how": "",
+        "src": {
+          "t": "NBC News, Delaware Senate results",
+          "u": "https://www.nbcnews.com/politics/2026-elections/delaware-senate-results"
+        },
+        "tally": {
+          "shares": {
+            "coons": 63.6,
+            "de-katz": 36.4
+          },
+          "votes": {
+            "coons": 240347,
+            "de-katz": 137764
+          },
+          "counted": "99% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Delaware Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/delaware-senate-results"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-FL",
+      "chamber": "S",
+      "state": "FL",
+      "label": "Florida Senate (special)",
+      "nominees": [
+        {
+          "id": "moody",
+          "name": "Ashley Moody",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "M001244"
+        },
+        {
+          "id": "fl-nixon",
+          "name": "Angie Nixon",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": "moody",
+        "special": true,
+        "how": "",
+        "src": {
+          "t": "WINK News, Nov. 4, 2026",
+          "u": "https://www.winknews.com/news/politics/republican-ashley-moody-wins-florida-u-s-senate-special-election/article_b0fd8fb4-7d0a-466d-b885-2fbaefc53ce2.html"
+        },
+        "tally": {
+          "shares": {
+            "moody": 50.8,
+            "fl-nixon": 48.1
+          },
+          "votes": {
+            "moody": 4060559,
+            "fl-nixon": 3846419
+          },
+          "others": [
+            {
+              "name": "Neil J. Gillespie",
+              "party": "NPA",
+              "pct": 1.1,
+              "votes": 90728
+            }
+          ],
+          "counted": "96% of votes counted (AP count)",
+          "src": {
+            "t": "WINK News, Nov. 4, 2026",
+            "u": "https://www.winknews.com/news/politics/republican-ashley-moody-wins-florida-u-s-senate-special-election/article_b0fd8fb4-7d0a-466d-b885-2fbaefc53ce2.html"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-ID",
+      "chamber": "S",
+      "state": "ID",
+      "label": "Idaho Senate",
+      "nominees": [
+        {
+          "id": "risch",
+          "name": "James E. Risch",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "R000584"
+        },
+        {
+          "id": "id-achilles",
+          "name": "Todd Achilles",
+          "party": "I"
+        }
+      ],
+      "result": {
+        "winner": "risch",
+        "how": "Called by NBC News",
+        "src": {
+          "t": "NBC News, Idaho Senate results",
+          "u": "https://www.nbcnews.com/politics/2026-elections/idaho-senate-results"
+        },
+        "tally": {
+          "shares": {
+            "risch": 56.52,
+            "id-achilles": 33.55
+          },
+          "votes": {
+            "risch": 401280
+          },
+          "others": [
+            {
+              "name": "Natalie Fleming",
+              "party": "I",
+              "pct": 7.02
+            },
+            {
+              "name": "Matt Loesby",
+              "party": "L",
+              "pct": 2.91
+            }
+          ],
+          "counted": "Count as of 8:59 a.m. Nov. 4",
+          "src": {
+            "t": "The Spokesman-Review, Idaho results",
+            "u": "https://www.spokesman.com/elections/2026/idaho-general-election-nov-3/results/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-MA",
+      "chamber": "S",
+      "state": "MA",
+      "label": "Massachusetts Senate",
+      "nominees": [
+        {
+          "id": "markey",
+          "name": "Edward J. Markey",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "M000133"
+        },
+        {
+          "id": "ma-deaton",
+          "name": "John Deaton",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "markey",
+        "how": "Called by the AP; John Deaton conceded",
+        "src": {
+          "t": "WBUR, Nov. 3, 2026",
+          "u": "https://www.wbur.org/news/2026/11/03/massachusetts-markey-senate-election-result"
+        },
+        "tally": {
+          "shares": {
+            "markey": 63.79,
+            "ma-deaton": 31.67
+          },
+          "votes": {
+            "markey": 1384546,
+            "ma-deaton": 687377
+          },
+          "others": [
+            {
+              "name": "Shiva Ayyadurai",
+              "party": "I",
+              "pct": 2.29,
+              "votes": 49600
+            },
+            {
+              "name": "Joe Tache",
+              "party": "PSL",
+              "pct": 2.25,
+              "votes": 48869
+            }
+          ],
+          "counted": "About 81% of votes counted (AP count)",
+          "src": {
+            "t": "NewsLink Live, Nov. 4, 2026",
+            "u": "https://newslinklive.com/2026/11/04/2026-massachusetts-midterm-election-results/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-MS",
+      "chamber": "S",
+      "state": "MS",
+      "label": "Mississippi Senate",
+      "nominees": [
+        {
+          "id": "hydesmith",
+          "name": "Cindy Hyde-Smith",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "H001079"
+        },
+        {
+          "id": "ms-colom",
+          "name": "Scott Colom",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": null,
+        "leader": "ms-colom",
+        "how": "Too close to call. Decision Desk HQ's count had Scott Colom ahead by about 2,200 votes; at 3 a.m. Wednesday, WLBT's count had him ahead by 43 votes with about 95.6% of ballots tabulated. Affidavit and absentee ballots are still being processed, and Mississippi has no runoff.",
+        "src": {
+          "t": "WLBT, Nov. 4, 2026",
+          "u": "https://www.wlbt.com/2026/11/04/cindy-hyde-smiths-campaign-releases-statement-senate-race-remains-undecided/"
+        },
+        "tally": {
+          "shares": {
+            "ms-colom": 49.06,
+            "hydesmith": 48.83
+          },
+          "votes": {
+            "ms-colom": 461370,
+            "hydesmith": 459201
+          },
+          "others": [
+            {
+              "name": "Ty Pinkins",
+              "party": "I",
+              "pct": 2.1
+            }
+          ],
+          "src": {
+            "t": "Decision Desk HQ, Mississippi Senate results",
+            "u": "https://votes.decisiondeskhq.com/races/2026-11-03/mississippi-us-senate-general-election"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-NM",
+      "chamber": "S",
+      "state": "NM",
+      "label": "New Mexico Senate",
+      "nominees": [
+        {
+          "id": "lujan",
+          "name": "Ben Ray Luján",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "L000570"
+        },
+        {
+          "id": "nm-marker",
+          "name": "Larry Marker",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "lujan",
+        "how": "Called by the AP",
+        "src": {
+          "t": "Albuquerque Journal, Nov. 3, 2026",
+          "u": "https://www.abqjournal.com/news/lujan-breezes-to-second-term/3154396"
+        },
+        "tally": {
+          "shares": {
+            "lujan": 63.2,
+            "nm-marker": 36.8
+          },
+          "total": 720722,
+          "counted": "98% of the expected vote counted",
+          "src": {
+            "t": "NBC News, New Mexico Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/new-mexico-senate-results"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-OR",
+      "chamber": "S",
+      "state": "OR",
+      "label": "Oregon Senate",
+      "nominees": [
+        {
+          "id": "merkley",
+          "name": "Jeff Merkley",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "M001176"
+        },
+        {
+          "id": "or-smith",
+          "name": "David Brock Smith",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "merkley",
+        "how": "Called by NBC News",
+        "src": {
+          "t": "KOBI-TV NBC5, Nov. 4, 2026",
+          "u": "https://kobi5.com/news/sen-merkley-retains-seat-excited-about-dem-winnning-senate-house-318763/"
+        },
+        "tally": {
+          "shares": {
+            "merkley": 56.57,
+            "or-smith": 40.53
+          },
+          "votes": {
+            "merkley": 864411,
+            "or-smith": 619239
+          },
+          "total": 1527987,
+          "counted": "75.19% reporting",
+          "src": {
+            "t": "KOBI-TV NBC5, Oregon Senate results",
+            "u": "https://kobi5.com/elections-coverage/oregon/us-senator/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-RI",
+      "chamber": "S",
+      "state": "RI",
+      "label": "Rhode Island Senate",
+      "nominees": [
+        {
+          "id": "reed",
+          "name": "Jack Reed",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "R000122"
+        },
+        {
+          "id": "ri-mckay",
+          "name": "Raymond McKay",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "reed",
+        "how": "Called by the AP",
+        "src": {
+          "t": "Rhode Island Current, via News From The States",
+          "u": "https://www.newsfromthestates.com/article/jack-reed-wins-sixth-term-us-senate"
+        },
+        "tally": {
+          "shares": {
+            "reed": 66.6,
+            "ri-mckay": 29.44
+          },
+          "votes": {
+            "reed": 235276,
+            "ri-mckay": 103996
+          },
+          "others": [
+            {
+              "name": "Michael Bahry",
+              "party": "I",
+              "pct": 3.8
+            }
+          ],
+          "counted": "All 40 cities and towns reporting",
+          "src": {
+            "t": "Rhode Island Current, via News From The States",
+            "u": "https://www.newsfromthestates.com/article/jack-reed-wins-sixth-term-us-senate"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-SC",
+      "chamber": "S",
+      "state": "SC",
+      "label": "South Carolina Senate",
+      "nominees": [
+        {
+          "id": "grahamnordone",
+          "name": "Darline Graham",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "G000608"
+        },
+        {
+          "id": "sc-andrews",
+          "name": "Annie Andrews",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": "sc-andrews",
+        "how": "Called by NBC News",
+        "src": {
+          "t": "NBC News, South Carolina Senate results",
+          "u": "https://www.nbcnews.com/politics/2026-elections/south-carolina-senate-results"
+        },
+        "tally": {
+          "shares": {
+            "sc-andrews": 51.13,
+            "grahamnordone": 46.65
+          },
+          "votes": {
+            "sc-andrews": 1042362,
+            "grahamnordone": 951165
+          },
+          "others": [
+            {
+              "name": "Kasie Whitener",
+              "party": "L",
+              "pct": 1.16
+            },
+            {
+              "name": "Mark Hackett",
+              "party": "C",
+              "pct": 0.82
+            }
+          ],
+          "total": 2038780,
+          "src": {
+            "t": "WLTX, election results",
+            "u": "https://www.wltx.com/elections"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-SD",
+      "chamber": "S",
+      "state": "SD",
+      "label": "South Dakota Senate",
+      "nominees": [
+        {
+          "id": "rounds",
+          "name": "Mike Rounds",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "R000605"
+        },
+        {
+          "id": "sd-bengs",
+          "name": "Brian Bengs",
+          "party": "I"
+        }
+      ],
+      "result": {
+        "winner": "rounds",
+        "how": "Called by the AP",
+        "src": {
+          "t": "One America News, Nov. 4, 2026",
+          "u": "https://www.oann.com/newsroom/sen-mike-rounds-wins-south-dakota-senate-race/"
+        },
+        "tally": {
+          "shares": {
+            "rounds": 60.5,
+            "sd-bengs": 39.5
+          },
+          "votes": {
+            "rounds": 184571,
+            "sd-bengs": 120484
+          },
+          "counted": "About 99% of the vote counted",
+          "src": {
+            "t": "Dakota News Now, election results",
+            "u": "https://www.dakotanewsnow.com/politics/election-results/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-TN",
+      "chamber": "S",
+      "state": "TN",
+      "label": "Tennessee Senate",
+      "nominees": [
+        {
+          "id": "hagerty",
+          "name": "Bill Hagerty",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "H000601"
+        },
+        {
+          "id": "tn-bradshaw",
+          "name": "Marquita Bradshaw",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": "hagerty",
+        "how": "Called by NBC News",
+        "src": {
+          "t": "WSMV, Nov. 4, 2026",
+          "u": "https://www.wsmv.com/2026/11/04/hagerty-serve-second-us-senate-term-after-defeating-democrat-bradshaw/"
+        },
+        "tally": {
+          "shares": {
+            "hagerty": 55.1,
+            "tn-bradshaw": 42.9
+          },
+          "votes": {
+            "hagerty": 1138407,
+            "tn-bradshaw": 886911
+          },
+          "counted": "An estimated 99% of votes counted",
+          "src": {
+            "t": "Action News 5, election results",
+            "u": "https://www.actionnews5.com/politics/election-results/"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-VA",
+      "chamber": "S",
+      "state": "VA",
+      "label": "Virginia Senate",
+      "nominees": [
+        {
+          "id": "warner",
+          "name": "Mark R. Warner",
+          "party": "D",
+          "incumbent": true,
+          "bioguide": "W000805"
+        },
+        {
+          "id": "va-mizusawa",
+          "name": "Bert Mizusawa",
+          "party": "R"
+        }
+      ],
+      "result": {
+        "winner": "warner",
+        "how": "Called by the AP",
+        "src": {
+          "t": "WSLS, Nov. 4, 2026",
+          "u": "https://www.wsls.com/decision-2026/2026/11/04/mark-warner-wins-reelection-to-us-senate-in-virginia-defeating-mizusawa/"
+        },
+        "tally": {
+          "shares": {
+            "warner": 61.1,
+            "va-mizusawa": 38.7
+          },
+          "others": [
+            {
+              "name": "Write-ins",
+              "pct": 0.3,
+              "votes": 9412
+            }
+          ],
+          "counted": "97% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Virginia Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/virginia-senate-results"
+          },
+          "asof": "2026-11-04"
+        }
+      }
+    },
+    {
+      "id": "S-WV",
+      "chamber": "S",
+      "state": "WV",
+      "label": "West Virginia Senate",
+      "nominees": [
+        {
+          "id": "capito",
+          "name": "Shelley Moore Capito",
+          "party": "R",
+          "incumbent": true,
+          "bioguide": "C001047"
+        },
+        {
+          "id": "wv-anderson",
+          "name": "Rachel Fetty Anderson",
+          "party": "D"
+        }
+      ],
+      "result": {
+        "winner": "capito",
+        "how": "Called by the AP",
+        "src": {
+          "t": "WBOY, Nov. 4, 2026",
+          "u": "https://www.wboy.com/news/your-local-election-hq/capito-keeps-us-senate-seat-for-six-more-years/"
+        },
+        "tally": {
+          "shares": {
+            "capito": 58.3,
+            "wv-anderson": 37.9
+          },
+          "others": [
+            {
+              "name": "S. Marshall Wilson",
+              "party": "C",
+              "pct": 3.8
+            }
+          ],
+          "counted": "98.9% of the expected vote counted",
+          "src": {
+            "t": "NBC News, West Virginia Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/west-virginia-senate-results"
+          },
+          "asof": "2026-11-04"
         }
       }
     }
