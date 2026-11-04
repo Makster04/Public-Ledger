@@ -2176,13 +2176,28 @@ function countyMap(res,m){
   const main=res.candidates.filter(c=>c.key!=='other');
   const summary=main.map(c=>`${c.name} led ${led[c.key]||0}`).join(', ')+` of ${m.counties.length} counties`;
   const swatch=p=>MARGINS.concat(99).map((x,i)=>`<i class="cm-${p} cm-m${i}"></i>`).join('');
-  return `<svg viewBox="0 0 ${m.width} ${m.height}" role="img" aria-label="${esc(`County map: ${summary}`)}"><g class="cm-counties">${paths}</g><path class="cm-state" d="${m.outline}"></path></svg>
+  // Every state is drawn in the same box, as large as fits: a tall state is narrower, a wide one shorter.
+  return `<div class="cm-box"><svg viewBox="0 0 ${m.width} ${m.height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(`County map: ${summary}`)}"><g class="cm-counties">${paths}</g><path class="cm-state" d="${m.outline}"></path></svg></div>
+    ${reportingBar(res,m)}
     <div class="cm-legend small">${main.map(c=>`<span><span class="cm-sw">${swatch(c.party)}</span>${esc(c.name.split(' ').at(-1))}</span>`).join('')}<span class="muted">Stronger color: wider lead (under 5, 5–15, 15–30, 30+ points)</span></div>
     <p class="small muted cm-src">${esc(summary)}. County results: <a href="${esc(res.source.u)}" target="_blank" rel="noopener">${esc(res.source.t)} ↗</a>, read ${esc(fmtDate(res.fetched.slice(0,10)))}.</p>
     <details class="cm-table small"><summary>All ${m.counties.length} counties</summary><div class="tablewrap"><table><thead><tr><th>County</th>${main.map(c=>`<th>${esc(c.name.split(' ').at(-1))}</th>`).join('')}<th>Others</th><th>Lead</th></tr></thead><tbody>
     ${m.counties.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>{const k=countyCount(res,res.counties[c.fips]),v=res.counties[c.fips]||{};
       return `<tr><td>${esc(c.name)}</td>${main.map(x=>`<td class="num">${k.total?((v[x.key]||0)/k.total*100).toFixed(1)+'%':'—'}</td>`).join('')}<td class="num">${k.total?((v.other||0)/k.total*100).toFixed(1)+'%':'—'}</td><td>${k.lead?`${esc(k.lead.key==='other'?'Other':k.lead.name.split(' ').at(-1))} +${k.margin.toFixed(1)}`:'No votes'}</td></tr>`;}).join('')}
     </tbody></table></div></details>`;
+}
+// How much has reported, as a bar under the map: the precincts reporting when the state's file says, otherwise the
+// counties with any votes in it.
+function reporting(res,m){
+  const r=res.reporting;
+  if(r&&r.of>0)return {n:r.n,of:r.of,unit:r.unit||'precincts'};
+  return {n:m.counties.filter(c=>countyCount(res,res.counties[c.fips]).total>0).length,of:m.counties.length,unit:'counties'};
+}
+function reportingBar(res,m){
+  const r=reporting(res,m),p=r.n/r.of*100,shown=p>=99.95&&r.n<r.of?'99.9':p.toFixed(p<10&&p>0?1:p%1?1:0);
+  const what=r.unit==='counties'?(m.state==='LA'?'Parishes':'Counties'):r.unit[0].toUpperCase()+r.unit.slice(1);
+  return `<div class="cm-rep small"><div class="cm-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${p.toFixed(1)}" aria-label="${esc(what)} reporting"><i style="width:${p.toFixed(2)}%"></i></div>
+    <span>${esc(what)} reporting: <b>${shown}%</b> (${numFmt(r.n)} of ${numFmt(r.of)}${r.unit==='counties'?' with votes':''})</span></div>`;
 }
 // Hover (or tap) a county for its count.
 function bindCountyTips(el,res,m){
@@ -2910,7 +2925,7 @@ function renderMethod(sub){
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
       <li><b>Flip or hold:</b> once a race is called, the card says "Flip +1" when the winner's party is not the one that held the seat before the election, or "Remains Blue" or "Remains Red" when it is, in the winner's color. The seat's holder is the incumbent who ran or, for an open seat, its outgoing member: the retiring senator, or a redrawn House district's current member.</li>
-      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
+      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. Every state is drawn in the same box, as large as it fits. The bar under a map is how much had reported in the state's file when it was read: the share of precincts reporting when the file gives them, otherwise the share of counties with any votes. A precinct or county that has reported can still add ballots counted later, such as mail, absentee and provisional ballots. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
       <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
     <h2>Campaign funds raised</h2>

@@ -55,7 +55,12 @@ export function lastName(name){
 export function readNcsbe(text,contest){
   const lines=text.split(/\r?\n/).filter(Boolean),head=lines[0].split('\t'),at=n=>{const i=head.indexOf(n);if(i<0)throw new Error(`the NC file has no "${n}" column (it has: ${head.join(', ')})`);return i;};
   const c={county:at('County'),contest:at('Contest Name'),choice:at('Choice'),party:at('Choice Party'),votes:at('Total Votes')},rows=[];
-  for(const l of lines.slice(1)){const f=l.split('\t');if(!contest.test(f[c.contest]||''))continue;rows.push({county:f[c.county],choice:f[c.choice],party:(f[c.party]||'').trim(),votes:Number(f[c.votes])||0});}
+  // Precincts reporting: the real precincts (not the absentee and early-voting tallies) with votes in the race.
+  const pc=head.indexOf('Precinct'),real=head.indexOf('Real Precinct'),all=new Set(),voted=new Set();
+  for(const l of lines.slice(1)){const f=l.split('\t');if(!contest.test(f[c.contest]||''))continue;
+    const votes=Number(f[c.votes])||0;rows.push({county:f[c.county],choice:f[c.choice],party:(f[c.party]||'').trim(),votes});
+    if(pc>=0&&real>=0&&f[real]==='Y'){const k=f[c.county]+'|'+f[pc];all.add(k);if(votes>0)voted.add(k);}}
+  if(all.size)rows.reporting={n:voted.size,of:all.size,unit:'precincts'};
   return rows;
 }
 // Enhanced Voting's export: results.ballotItems statewide, and localResults (or results.localResults) per locality, each
@@ -72,6 +77,14 @@ export function readEnhanced(data,contest){
     }
   }
   if(!found)throw new Error('no ballot item matches the Senate race in localResults (first locality has: '+(locs[0]?.ballotItems||[]).slice(0,8).map(b=>b.name).join('; ')+')');
+  // Precincts reporting, when the export gives them: on the statewide ballot item, or added up over the localities.
+  const race=bi=>contest.test(String(bi.name||'').trim())&&!/state senat/i.test(bi.name);
+  const count=(bi,re)=>{const k=Object.keys(bi||{}).find(x=>re.test(x));const v=k==null?NaN:Number(bi[k]);return Number.isFinite(v)?v:null;};
+  const pair=bi=>({n:count(bi,/^precincts?report(ed|ing)$/i),of:count(bi,/^(precincts?participating|totalprecincts|precincts?total)$/i)});
+  const top=(data?.results?.ballotItems||[]).find(race),local=locs.flatMap(l=>(l.ballotItems||[]).filter(race)).map(pair);
+  let rp=top?pair(top):{n:null,of:null};
+  if((rp.n==null||!rp.of)&&local.length&&local.every(x=>x.n!=null&&x.of))rp={n:local.reduce((a,x)=>a+x.n,0),of:local.reduce((a,x)=>a+x.of,0)};
+  if(rp.n!=null&&rp.of>0&&rp.n<=rp.of)rows.reporting={...rp,unit:'precincts'};
   return rows;
 }
 // A CSV or tab-separated file: a county column, a contest column, the candidate (or first and last name) and votes.
@@ -108,7 +121,9 @@ export async function readAny(raw,src,counties=[]){
   }else text=new TextDecoder().decode(bytes);
   text=text.replace(/^\uFEFF/,'');const head=text.trimStart().slice(0,300);
   if(/^[{[]/.test(head)){let data;try{data=JSON.parse(text);}catch(e){throw new Error(`a JSON file that doesn't read (${e.message})`);}return {rows:readEnhanced(data,src.contest)};}
-  if(/^<(!doctype\s+html|html|head|body|!--)/i.test(head)){const t=readHtmlTables(text,counties);return {page:text,rows:t.rows.length?t.rows:null,tables:t.tables};}
+  if(/^<(!doctype\s+html|html|head|body|!--)/i.test(head)){const t=readHtmlTables(text,counties);
+    if(t.rows.length){const r=reportingIn(strip(text));if(r)t.rows.reporting=r;}
+    return {page:text,rows:t.rows.length?t.rows:null,tables:t.tables};}
   if(/^</.test(head))throw new Error('an XML file, which no reader here handles yet');
   return {rows:src.reader==='ncsbe'?readNcsbe(text,src.contest):readTable(text,src.contest)};
 }
@@ -118,6 +133,14 @@ const decode=s=>s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,(m,e)=>e[0]==='#'?Stri
 const strip=h=>decode(String(h).replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,' ').replace(/<[^>]+>/g,' ')).replace(/\s+/g,' ').trim();
 // A Senate race named anywhere in a page's text.
 const SENATE=/\b(united states senat|u\.\s?s\.\s?senat|us senat)/i;
+// "2,650 of 2,660 precincts reporting" (or counties) in a page's text.
+export function reportingIn(text){
+  const m=/([\d,]+)\s*(?:of|\/)\s*([\d,]+)\s+(precincts|counties)\s+(?:reporting|reported|have reported)/i.exec(text)
+    ||/(precincts|counties)\s+reporting:?\s*([\d,]+)\s*(?:of|\/)\s*([\d,]+)/i.exec(text);
+  if(!m)return null;
+  const [n,of,unit]=/^\d/.test(m[1])?[m[1],m[2],m[3]]:[m[2],m[3],m[1]],a=Number(n.replace(/,/g,'')),b=Number(of.replace(/,/g,''));
+  return b>0&&a<=b?{n:a,of:b,unit:unit.toLowerCase()}:null;
+}
 // The links on a results page worth following, on the same site: first the links to county results that follow a mention
 // of the Senate race, closest first; then data files, county files first; then other links to county results.
 export function pageLinks(html,base){
@@ -224,13 +247,15 @@ export async function countyRace(research,id,{get,file=null,maps}){
   if(!rows)return {lines:[`CHECK ${id}: couldn't read the county results.`,...tried.map(t=>`      ${t}`),
     `      ${src.help||`Open ${src.page||src.urls[0]}, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "${id}=<that address or file>"`}`]};
   const lines=[`${b.unmatched.length||b.missing.length||b.mapped<b.of?'CHECK':'NEW  '} ${id}: ${b.mapped} of ${b.of} counties, ${b.total.toLocaleString('en-US')} votes · `+
-    cands.map(c=>`${c.name} ${pct(b.totals[c.key]||0,b.total)}`).join(' · ')+(b.totals.other?` · others ${pct(b.totals.other,b.total)}`:'')+` (from ${from})`];
+    cands.map(c=>`${c.name} ${pct(b.totals[c.key]||0,b.total)}`).join(' · ')+(b.totals.other?` · others ${pct(b.totals.other,b.total)}`:'')+
+    (rows.reporting?` · ${rows.reporting.n.toLocaleString('en-US')} of ${rows.reporting.of.toLocaleString('en-US')} ${rows.reporting.unit} reporting`:'')+` (from ${from})`];
   if(b.mapped<b.of)lines.push(`      ${b.of-b.mapped} of the state's counties have no results in the file yet`);
   if(b.unmatched.length)lines.push(`      counties not on the map, left out: ${b.unmatched.join(', ')}`);
   if(b.missing.length)lines.push(`      no votes found for ${b.missing.join(', ')} (their name may be written differently in the file)`);
   const isUrl=/^https?:/.test(from);
   return {lines,race:{state:src.state,fetched:new Date().toISOString(),source:{t:src.source,u:isUrl?from:(src.page||src.urls[0])},
-    candidates:[...cands.map(c=>({key:c.key,name:c.name,party:c.party})),{key:'other',name:'Other candidates'}],total:b.total,counties:b.counties}};
+    candidates:[...cands.map(c=>({key:c.key,name:c.name,party:c.party})),{key:'other',name:'Other candidates'}],total:b.total,
+    ...(rows.reporting?{reporting:rows.reporting}:{}),counties:b.counties}};
 }
 
 // A file on this computer, or an address: its bytes, or why they couldn't be had.
