@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -160,7 +160,7 @@ test('a race is read from the first address that works, then its page\'s links, 
   assert.match(two.lines[0],/^CHECK S-MI: 2 of 83 counties/);assert.match(two.race.source.u,/officeCode=2/);
   const none=await countyRace(D,'S-MI',{maps,get:async u=>u.includes('Index?')?MI_INDEX.replace(/<a [^>]*CountyResults[^>]*>County Results<\/a>/g,''):gov});
   assert.equal(none.race,undefined);
-  assert.match(none.lines.join('\n'),/^CHECK S-MI: couldn't read the county results\.\n.*Index\?type=C&electionDate=11-3-2026: a web page, with nothing to follow on its site\n\s+link: Precinct by Precinct Results → https:\/\/mvic\.sos\.state\.mi\.us\/votehistory\/Precincts\?officeCode=2\n[\s\S]*\s+table: Candidate \| Party \| Votes\n[\s\S]*open the county results for United States Senator, copy that page's address \(or a download link on it\), then: npm run counties:update -- --file "S-MI=<that address>"$/);
+  assert.match(none.lines.join('\n'),/^CHECK S-MI: couldn't read the county results\.\n.*Index\?type=C&electionDate=11-3-2026: a web page, with nothing to follow on its site\n\s+link: Precinct by Precinct Results → https:\/\/mvic\.sos\.state\.mi\.us\/votehistory\/Precincts\?officeCode=2\n[\s\S]*\s+table: Candidate \| Party \| Votes\n[\s\S]*open the county results for United States Senator, then save the page .* --file "S-MI=~\/Downloads\/<the saved file>"$/);
   const byHand=await countyRace(D,'S-MI',{maps,file:'https://mvic.sos.state.mi.us/votehistory/CountyResults?officeCode=2',get:async()=>gov});
   assert.match(byHand.lines[1],/officeCode=2: a web page, its votes by county are for other candidates \(Jocelyn Benson \(DEM\), John James \(REP\), Pat Smith \(LIB\)\); with nothing to follow/);
   // An address given by hand: an Enhanced Voting results page stands for its media export.
@@ -232,7 +232,9 @@ test("Clarity's detail XML: votes added up over vote types, by county, with prec
   // The list of elections, laid out one way or another.
   assert.equal(clarityElection([{EID:'124001',ElectionName:'2026 Primary Election',ElectionDate:'6/30/2026'},{EID:'125600',ElectionName:'2026 General Election',ElectionDate:'11/3/2026'}]),'125600');
   assert.equal(clarityElection({elections:{items:[{id:125700,name:'November 3, 2026 General Election'}]}}),'125700');
-  assert.throws(()=>clarityElection([{EID:'1240',ElectionName:'2026 Primary',ElectionDate:'6/30/2026'}]),/no November 3, 2026 election in the list \(it has: 1240 2026 Primary 6\/30\/2026\)/);
+  assert.throws(()=>clarityElection([{EID:'1240',ElectionName:'2026 Primary',ElectionDate:'6/30/2026'},{EID:'1300',ElectionName:'2026 Runoff'}]),/no November 3, 2026 election in the list \(newest: 1300 2026 Runoff; 1240 2026 Primary 6\/30\/2026\)/,'the newest named first');
+  assert.equal(clarityElection({'124001':{name:'2026 Primary',date:'8/4/2026'},'127408':{name:'2026 General Election',date:'11/3/2026'}}),'127408','a list keyed by election number');
+  assert.equal(clarityElection({'127409':'11/3/2026 General Election','124002':'8/4/2026 Primary'}),'127409');
 });
 
 test('a Clarity state: its November 3 election found in the list, then its current version and detail XML',async()=>{
@@ -257,4 +259,17 @@ test("Virginia: independent cities are told apart from counties of the same name
   assert.deepEqual([r.counties['51760'],r.counties['51159'],r.counties['51059'],r.counties['51600'],r.counties['51710']],[{[k[0]]:10},{[k[1]]:7},{[k[0]]:5},{[k[1]]:3},{[k[0]]:2}]);
   assert.deepEqual(r.unmatched,[]);
   const keys=va.counties.map(mapKey);assert.equal(new Set(keys).size,keys.length,'every Virginia locality has its own name');
+});
+
+test("Virginia's race is named \"Member, United States Senate\"; a bot check is said as such; sample pages are kept lean",()=>{
+  const va=SOURCES['S-VA'].contest;assert.ok(va.test('Member, United States Senate'));assert.ok(!va.test('Member, Senate of Virginia'));
+  const data={localResults:[{name:'Richmond City',ballotItems:[{name:'Member, United States Senate',ballotOptions:[{name:'Mark R. Warner',politicalParty:'Democratic',voteCount:9}]},{name:'Member, Senate of Virginia (District 14)',ballotOptions:[{name:'X',voteCount:1}]}]}]};
+  assert.deepEqual(readEnhanced(data,va).map(r=>r.votes),[9]);
+  assert.ok(SOURCES['S-DE'].urls[0].startsWith('https://data.delaware.gov/resource/')&&/\$limit=/.test(SOURCES['S-DE'].urls[0]),"Delaware's CSV, all of its rows");
+  assert.deepEqual(readTable('election_name,office_name,county_name,candidate_name,party,vote_count\n2026 General Election,UNITED STATES SENATOR,KENT,Chris Coons,DEM,"1,200"\n',SOURCES['S-DE'].contest),[{county:'KENT',choice:'Chris Coons',party:'DEM',votes:1200}],"an open-data CSV's column names");
+  assert.ok(botCheck(403,'https://mvic.sos.state.mi.us/votehistory/','<title>Just a moment...</title>'));assert.ok(botCheck(200,'https://validate.perfdrive.com/?ssa=1',''));
+  assert.ok(!botCheck(404,'https://example.gov/x','<title>Not Found</title>'));assert.ok(!botCheck(200,'https://example.gov/','<title>Just a moment</title>'),'a page that happens to say it');
+  assert.match(SOURCES['S-MI'].help,/turned this one away, so use your browser: open https:\/\/mvic\.sos\.state\.mi\.us\/.*save the page .* --file "S-MI=~\/Downloads\/<the saved file>"/);
+  assert.equal(sampleOf('<html><script>var a=1</script><style>p{}</style><!-- note --><p>Votes</p>\n\n\n<td>5</td></html>'),'<html><p>Votes</p>\n<td>5</td></html>');
+  for(const urls of Object.values(SAMPLES))for(const u of urls)assert.match(u,/^https:\/\//);
 });

@@ -28,6 +28,9 @@ import os from 'node:os';
 import {unzipFile} from '../src/sources.mjs';
 
 const root=new URL('..',import.meta.url);
+// What to do for a site that turns scripts away with a bot check: save the page from a browser, which reads it as any
+// visitor does, and give the saved file.
+const SAVED_PAGE=(id,page,what)=>`This site checks for scripts and turned this one away, so use your browser: open ${page}, ${what}, then save the page (in Safari: File, Save As, Format "Page Source"; in Chrome: File, Save Page As, "Webpage, HTML Only") and run: npm run counties:update -- --file "${id}=~/Downloads/<the saved file>"`;
 // The U.S. Senate race, as a state may name it.
 const SENATE_CONTEST=/^(u\.?\s?s\.?|united states)\s+senat|^us senat/i;
 export const SOURCES={
@@ -48,7 +51,7 @@ export const SOURCES={
     urls:[],
     pages:['https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026'],
     page:'https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026',
-    help:'Open https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026, open the county results for United States Senator, copy that page\'s address (or a download link on it), then: npm run counties:update -- --file "S-MI=<that address>"',
+    help:SAVED_PAGE('S-MI','https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026','open the county results for United States Senator'),
     source:'Michigan Department of State, county results file'},
   // Idaho's statewide results run on Enhanced Voting, as Georgia's do (jurisdiction "id", election "nov2026").
   'S-ID':{state:'ID',contest:/^(u\.?\s?s\.?|united states)\s+senat/i,
@@ -57,7 +60,7 @@ export const SOURCES={
     help:'Open https://app.enhancedvoting.com/results/public/id/elections/nov2026 in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-ID=<the file>"',
     source:'Idaho Secretary of State, results export'},
   // Virginia's results run on Enhanced Voting too; its localities are counties and independent cities.
-  'S-VA':{state:'VA',contest:/^(u\.?\s?s\.?|united states)\s+senat/i,
+  'S-VA':{state:'VA',contest:/united states senat/i,
     urls:['https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json','https://enr.elections.virginia.gov/cdn/results/Virginia/export-2026-November-General.json'],
     page:'https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General',
     help:'Open https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-VA=<the file>"',
@@ -71,15 +74,16 @@ export const SOURCES={
   'S-SC':{state:'SC',contest:SENATE_CONTEST,clarity:{base:'https://www.enr-scvotes.org',st:'SC'},urls:[],pages:['https://scvotes.gov/2026-general-election-results/'],page:'https://scvotes.gov/2026-general-election-results/',source:'South Carolina Election Commission, election night results (Clarity)'},
   // States whose results pages are read for their tables of votes by county, or for the exports and county pages they
   // link to. What each one holds is checked on the first run.
-  'S-DE':{state:'DE',contest:SENATE_CONTEST,urls:[],pages:['https://elections.delaware.gov/results/enr/GE2026.html'],page:'https://elections.delaware.gov/results/enr/GE2026.html',source:'Delaware Department of Elections, unofficial results'},
+  // Delaware's results page links to its results as a CSV on the state's open-data site (a Socrata dataset).
+  'S-DE':{state:'DE',contest:/united states senat|^u\.?\s?s\.?\s+senat|^us senat/i,urls:['https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000'],pages:['https://elections.delaware.gov/results/enr/GE2026.html'],page:'https://elections.delaware.gov/results/enr/GE2026.html',source:'Delaware Department of Elections, unofficial results'},
   'S-WY':{state:'WY',contest:SENATE_CONTEST,urls:[],pages:['https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx'],page:'https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx',source:'Wyoming Secretary of State, unofficial results'},
   'S-MT':{state:'MT',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.mt.gov/ResultsExport.aspx','https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY',source:'Montana Secretary of State, election results'},
   'S-NE':{state:'NE',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.nebraska.gov/ResultsExport.aspx','https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY'],page:'https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY',source:'Nebraska Secretary of State, election results'},
   'S-NM':{state:'NM',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.nm.gov/ResultsExport.aspx','https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY',source:'New Mexico Secretary of State, election results'},
   'S-OR':{state:'OR',contest:SENATE_CONTEST,urls:[],pages:['https://results.oregonvotes.gov/ResultsExport.aspx','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY',source:'Oregon Secretary of State, election results'},
   'S-SD':{state:'SD',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sd.gov/ResultsExport.aspx','https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY'],page:'https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY',source:'South Dakota Secretary of State, election results'},
-  'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',source:'Minnesota Secretary of State, election results'},
-  'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/results-by-county','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
+  'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',help:SAVED_PAGE('S-MN','https://electionresults.sos.mn.gov/','open U.S. Senate and its results by county'),source:'Minnesota Secretary of State, election results'},
+  'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/county-breakdown/United%20States%20Senate','https://elections.tn.gov/county-breakdown/U.S.%20Senate','https://elections.tn.gov/county-breakdown/US%20Senate','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
   'S-TX':{state:'TX',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.state.tx.us/results.html'],page:'https://electionresults.sos.state.tx.us/results.html',source:'Texas Secretary of State, election results'},
 };
 
@@ -129,9 +133,10 @@ export function readEnhanced(data,contest){
   return rows;
 }
 // A CSV or tab-separated file: a county column, a contest column, the candidate (or first and last name) and votes.
-const PICK={county:['countyname','county','countydescription'],contest:['officedescription','contestname','office','contest','racename','race'],
-  choice:['candidate','choice','candidatename','name'],last:['candidatelastname','lastname'],first:['candidatefirstname','firstname'],
-  party:['partyname','party','choiceparty','partydescription'],votes:['candidatevotes','totalvotes','votes','total']};
+const PICK={county:['countyname','county','countydescription','jurisdiction','jurisdictionname'],
+  contest:['officedescription','contestname','officename','office','contest','contesttitle','racename','racetitle','race'],
+  choice:['candidate','choice','candidatename','candidatefullname','ballotname','name'],last:['candidatelastname','lastname'],first:['candidatefirstname','firstname'],
+  party:['partyname','party','choiceparty','partydescription','partycode'],votes:['candidatevotes','totalvotes','votes','votecount','votetotal','total']};
 const splitRow=(l,sep)=>{if(sep==='\t')return l.split('\t');const out=[];let cur='',q=false;for(const ch of l){if(ch==='"'){q=!q;continue;}if(ch===','&&!q){out.push(cur);cur='';continue;}cur+=ch;}out.push(cur);return out;};
 export function readTable(text,contest){
   const lines=text.replace(/^﻿/,'').split(/\r?\n/).filter(l=>l.trim());if(!lines.length)throw new Error('the file is empty');
@@ -193,12 +198,17 @@ export const clarityOf=u=>{const m=/^(https?:\/\/[^/]+)\/+([A-Z]{2})\/+(\d{4,})(
 export function clarityElection(list){
   const found=[],walk=(o,depth=0)=>{if(!o||typeof o!=='object'||depth>6)return;
     if(!Array.isArray(o)){const idKey=Object.keys(o).find(k=>/^(eid|electionid|id)$/i.test(k)&&/^\d{4,}$/.test(String(o[k])));
-      if(idKey){const text=Object.values(o).filter(v=>typeof v!=='object').join(' ');found.push({eid:String(o[idKey]),text});}}
+      if(idKey){const text=Object.values(o).filter(v=>typeof v!=='object').join(' ');found.push({eid:String(o[idKey]),text});}
+      // A list keyed by election number: {"127408": {"name": …, "date": …}} or {"127408": "11/3/2026 General Election"}.
+      for(const [k,v] of Object.entries(o))if(/^\d{4,}$/.test(k)&&!found.some(f=>f.eid===k)){
+        const text=v&&typeof v==='object'?Object.values(v).filter(x=>typeof x!=='object').join(' '):String(v??'');found.push({eid:k,text});}}
     for(const v of Object.values(o))walk(v,depth+1);};
   walk(list);
   const day=/\b11\/0?3\/2026\b|2026-11-03|november 0?3,? 2026|20261103/i;
   const best=found.filter(f=>day.test(f.text)).sort((a,b)=>(/general/i.test(b.text)?1:0)-(/general/i.test(a.text)?1:0))[0];
-  if(!best)throw new Error(`no November 3, 2026 election in the list (it has: ${found.slice(0,5).map(f=>f.text.slice(0,60)).join('; ')||'nothing that reads as an election'})`);
+  // None found: name the newest ones in the list (the highest numbers), to see what it holds.
+  const newest=found.slice().sort((a,b)=>Number(b.eid)-Number(a.eid)).slice(0,5);
+  if(!best)throw new Error(`no November 3, 2026 election in the list (newest: ${newest.map(f=>(f.text.includes(f.eid)?f.text:`${f.eid} ${f.text}`).slice(0,70)).join('; ')||'nothing that reads as an election'})`);
   return best.eid;
 }
 const asText=x=>typeof x==='string'?x:new TextDecoder().decode(x);
@@ -210,11 +220,12 @@ async function clarityDetail({base,st,eid},get){
 }
 // The state's November 3 election on its Clarity site, from the list of elections.
 async function clarityFind({base,st},get){
-  let last;
+  const errs=[];
   for(const u of [`${base}/${st}/elections.json`,`${base}/${st}/elections.json?v=1`]){
-    try{return await clarityDetail({base,st,eid:clarityElection(JSON.parse(asText(await get(u))))},get);}catch(e){last=`${u}: ${e.message}`;}
+    let list;try{list=JSON.parse(asText(await get(u)));}catch(e){errs.push(`${u}: ${/JSON/.test(e.message)?'not a list of elections':e.message}`);continue;}
+    try{return await clarityDetail({base,st,eid:clarityElection(list)},get);}catch(e){errs.push(`${u}: ${e.message}`);break;}
   }
-  throw new Error(last);
+  throw new Error(errs.join(' · '));
 }
 
 // Web pages: text without tags, and the links and tables in them.
@@ -396,6 +407,23 @@ export const PROBE={
   WY:['https://sos.wyo.gov/Elections/State/Results.aspx','https://sos.wyo.gov/Elections/'],
 };
 const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
+// Pages the probe also saves, without their scripts and styles, to data/county-samples/, for the states whose results
+// pages don't use plain tables: one county's page and the race's page.
+export const SAMPLES={
+  MT:['https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=01&map=CTY','https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY'],
+  NE:['https://electionresults.nebraska.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=01','https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY'],
+  NM:['https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo','https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY'],
+  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY'],
+  SD:['https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=10&map=CTY','https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY'],
+  TN:['https://elections.tn.gov/county-breakdown/Governor'],
+  WY:['https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx'],
+  DE:['https://elections.delaware.gov/results/enr/GE2026.html'],
+  KS:['https://results.enr.clarityelections.com/KS/elections.json'],
+  WV:['https://results.enr.clarityelections.com/WV/elections.json'],
+  IA:['https://results.enr.clarityelections.com/IA/elections.json','https://results.enr.clarityelections.com/IA/127077/385624/json/en/electionsettings.json'],
+};
+// A page as saved for a sample: no scripts, styles or comments, at most 150 KB.
+export const sampleOf=text=>String(text).replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/\n\s*\n+/g,'\n').slice(0,150000);
 // What one address serves: its status, kind and size, and for a web page its title, links, tables and the data
 // addresses named in its own scripts; for JSON its keys.
 export async function probeOne(u,{get=fetch}={}){
@@ -431,14 +459,20 @@ export async function probeOne(u,{get=fetch}={}){
   return out;
 }
 
+// A reply that is a bot check ("Just a moment…", a captcha) rather than the page: the site turns scripts away. It is said
+// as such, and the way around it is a page saved from a browser, never a disguise.
+export const botCheck=(status,url,head)=>/perfdrive\.com|captcha|__cf_chl/i.test(url||'')||(status===403||status===429||status===503||status===202)&&/just a moment|attention required|captcha|cf-chl|radware|challenge-platform/i.test(head||'');
+
 // A file on this computer, or an address: its bytes, or why they couldn't be had.
 async function fetchRaw(u){
   if(!/^https?:/.test(u))return new Uint8Array(await fs.readFile(u.replace(/^~(?=\/)/,os.homedir())));
   let res;
   try{res=await fetch(u,{headers:{'User-Agent':'Mozilla/5.0 (compatible; PublicLedger/1.0; county results)'},signal:AbortSignal.timeout(180000)});}
   catch(e){throw new Error(`couldn't connect (${e.cause?.code||e.cause?.message||e.message})`);}
+  const bytes=new Uint8Array(await res.arrayBuffer());
+  if(botCheck(res.status,res.url,new TextDecoder().decode(bytes.subarray(0,4000))))throw new Error(`the site answered with a bot check (HTTP ${res.status}), not the results`);
   if(!res.ok)throw new Error(`HTTP ${res.status}${res.redirected?` (after a redirect to ${res.url})`:''}`);
-  return new Uint8Array(await res.arrayBuffer());
+  return bytes;
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
@@ -459,9 +493,15 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       .map(st=>[st,[...new Set([...(own[st]||[]),...(PROBE[st]||[])])]]);
     const lines=[`County results probe, ${new Date().toISOString()}: what each state's results site serves, for writing its reader.`];
     console.log(`Looking at the results sites of ${states.length} states; this takes a few minutes.`);
-    for(const [st,urls] of states){lines.push('',`${st}`);console.log(`${st}…`);for(const u of urls)lines.push(...(await probeOne(u)).map(l=>'  '+l));}
+    for(const [st,urls] of states){lines.push('',`${st}`);console.log(`${st}…`);for(const u of urls)lines.push(...(await probeOne(u)).map(l=>'  '+l));
+      for(const [i,u] of (SAMPLES[st]||[]).entries()){
+        const file=`data/county-samples/${st}-${i+1}.${/\.json(\?|$)/.test(u)?'json':'html'}`;
+        try{const r=await fetch(u,{headers:{'User-Agent':UA},signal:AbortSignal.timeout(45000)}),t=await r.text();
+          await fs.mkdir(new URL('data/county-samples/',root),{recursive:true});await fs.writeFile(new URL(file,root),sampleOf(t));lines.push(`  saved ${u} (HTTP ${r.status}) as ${file}`);}
+        catch(e){lines.push(`  couldn't save ${u} (${e.cause?.code||e.message})`);}
+      }}
     await fs.writeFile(new URL('data/county-probe.txt',root),lines.join('\n')+'\n');
-    console.log(`\nSaved data/county-probe.txt (${lines.length} lines). Commit and push it so the readers can be written from it.`);
+    console.log(`\nSaved data/county-probe.txt (${lines.length} lines) and the sample pages in data/county-samples/. Commit and push them so the readers can be written from them.`);
     process.exit(0);
   }
   // One pass over the races: each one read again replaces what was saved; one that can't be read keeps its last read.
