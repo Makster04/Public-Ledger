@@ -3,6 +3,9 @@
 // requests, well under the FEC's hourly limit; run it while npm start is stopped or an hour after other FEC scripts.
 //   npm run money:update -- --dry-run   list what would change, write nothing
 //   npm run money:update                write public/research.json, then review the changes and commit
+//   npm run money:update -- --only moore,H6VA02198   just these people (profile IDs) or toss-up nominees (FEC IDs)
+// A person whose campaign moved to a new committee mid-cycle has camp.totalsFrom "candidate": their figures come from
+// the FEC's candidate totals (all of the candidate's authorized committees) instead of one committee's.
 // A figure never goes back to an earlier reporting period, and a report whose parts don't add up to its receipts is
 // left out and listed, as is a committee that raised almost nothing while the FEC lists a newer principal committee.
 // The hand research's note on the old figures is kept as researchNote. The president is not updated (his figures are
@@ -36,10 +39,11 @@ export function campFromTotals(r,old){
   if(other<-1)return {problem:`its parts add up to ${cents(parts)}, more than its ${receipts} in receipts`};
   const self=cents((candidate??0)+(candLoans??0));
   const researchNote=old?.researchNote||(old?.note&&!old.missing?{through:old.end,text:old.note}:null);
+  const from=old?.totalsFrom==='candidate'?"the FEC's candidate totals (all of the candidate's authorized committees)":"the FEC's committee totals";
   return {camp:{...old,...(researchNote?{researchNote}:{}),receipts:cents(receipts),indiv:cents(indiv),itemized:cents(n(r.individual_itemized_contributions)),unitemized:cents(n(r.individual_unitemized_contributions)),
     party:cents(party),pac:cents(pac),transfers:cents(transfers),candidate:cents(candidate),loans:cents(candLoans),
     disbursements:cents(n(r.disbursements)),cash:cents(n(r.last_cash_on_hand_end_period)),debts:cents(n(r.last_debts_owed_by_committee)),
-    start,end,missing:false,note:`Figures from the FEC's committee totals through ${end} (npm run money:update).`,other:Math.max(0,other),loansKnown:candLoans!=null,self,selfShare:receipts?Math.round(self/receipts*1000)/10:0}};
+    start,end,missing:false,note:`Figures from ${from} through ${end} (npm run money:update).`,other:Math.max(0,other),loansKnown:candLoans!=null,self,selfShare:receipts?Math.round(self/receipts*1000)/10:0}};
 }
 // A toss-up nominee's candidate totals → their receipts, cash and reporting date.
 export function nomineeFromTotals(r,old){
@@ -64,13 +68,17 @@ export const LITTLE_SHARE=0.02,LITTLE_DAYS=60;
 // Every update, as lines to print. totals(kind, id) gives the FEC result for a committee or a candidate, or for
 // kind 'principal' a candidate's principal campaign committees for the cycle ([{id, name}]); null when there is none.
 // progress(done, total, name) is called before each request.
-export async function updateMoney(research,totals,{cycle=config.cycle,progress=()=>{}}={}){
-  const lines=[],people=[...research.members,...research.cands],updates=[];let changed=0;
-  const asks=people.filter(p=>p.camp?.cmteId).length+(research.liteRaces||[]).reduce((a,r)=>a+(r.nominees||[]).filter(x=>x.fecCand).length,0);let asked=0;
+// only: a set of profile IDs and toss-up nominees' FEC IDs to update, leaving everyone else out (null: everyone).
+export async function updateMoney(research,totals,{cycle=config.cycle,progress=()=>{},only=null}={}){
+  const lines=[],updates=[];let changed=0;
+  const people=[...research.members,...research.cands].filter(p=>!only||only.has(p.id));
+  const nominees=(research.liteRaces||[]).flatMap(race=>(race.nominees||[]).map((nm,i)=>({race,nm,i}))).filter(x=>x.nm.fecCand&&(!only||only.has(x.nm.fecCand)));
+  const asks=people.filter(p=>p.camp?.cmteId).length+nominees.length;let asked=0;
   for(const p of people){
     const old=p.camp;if(!old?.cmteId){lines.push(`SKIP  ${p.name}: no campaign committee on file`);continue;}
     progress(++asked,asks,p.name);
-    const r=await totals('committee',old.cmteId,cycle);
+    const all=old.totalsFrom==='candidate'&&p.fecCand;
+    const r=all?await totals('candidate',p.fecCand,cycle):await totals('committee',old.cmteId,cycle);
     if(!r){lines.push(`SAME  ${p.name}: no FEC totals for ${cycle} yet`);continue;}
     const u=campFromTotals(r,old);
     if(u.problem){lines.push(`CHECK ${p.name}: ${u.problem}; left as is`);continue;}
@@ -79,7 +87,7 @@ export async function updateMoney(research,totals,{cycle=config.cycle,progress=(
     // committee after a Senate run began, say): that committee's figures would leave out the new money.
     const grew=old.missing?null:u.camp.receipts-(old.receipts||0),days=old.missing?0:(Date.parse(u.camp.end)-Date.parse(old.end))/864e5;
     let little='';
-    if(grew!=null&&days>=LITTLE_DAYS&&grew<(old.receipts||0)*LITTLE_SHARE){
+    if(!all&&grew!=null&&days>=LITTLE_DAYS&&grew<(old.receipts||0)*LITTLE_SHARE){
       const newer=p.fecCand?((await totals('principal',p.fecCand,cycle))||[]).filter(c=>c.id!==old.cmteId):[];
       if(newer.length){lines.push(`CHECK ${p.name}: ${old.cmte||old.cmteId} (${old.cmteId}) raised only ${money(grew)} from ${old.end} to ${u.camp.end}, and the FEC lists ${newer.map(c=>`${c.name} (${c.id})`).join(' and ')} as the principal campaign committee; left as is`);continue;}
       little=` (only ${money(grew)} raised since ${old.end})`;
@@ -88,10 +96,11 @@ export async function updateMoney(research,totals,{cycle=config.cycle,progress=(
     p.camp=u.camp;p.cycleLabel=periodLabel(u.camp.start,u.camp.end);changed++;
     const pacMove=old.pac!=null&&u.camp.pac!==old.pac?`, PACs ${money(old.pac)} → ${money(u.camp.pac)}`:'';
     lines.push(`NEW   ${p.name}: ${old.missing?'first report':`through ${old.end} →`} ${u.camp.end}, raised ${old.missing?'':`${money(old.receipts)} → `}${money(u.camp.receipts)}${little}${pacMove}, cash ${money(u.camp.cash)}`);
+    // Candidate totals add up all the candidate's committees: money moved between them would count twice.
+    if(all&&u.camp.transfers>u.camp.receipts*0.02)lines.push(`WATCH ${p.name}: the FEC's candidate totals include ${money(u.camp.transfers)} moved between the candidate's own committees, which may count that money twice; compare with the committees' pages on fec.gov`);
     if(!old.missing)for(const [k,label] of lowerParts(old,u.camp))lines.push(`WATCH ${p.name}: money from ${label} is lower than on file (${money(old[k])} → ${money(u.camp[k])}); the FEC counts it differently from the hand research, and its figure is used`);
   }
-  for(const race of research.liteRaces||[])for(const [i,nm] of (race.nominees||[]).entries()){
-    if(!nm.fecCand)continue;
+  for(const {race,nm,i} of nominees){
     progress(++asked,asks,nm.name);
     const r=await totals('candidate',nm.fecCand,cycle);
     if(!r){lines.push(`SAME  ${nm.name} (${race.label}): no FEC totals for ${cycle} yet`);continue;}
@@ -134,11 +143,13 @@ async function fecTotals(kind,id,cycle){
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(!process.env.FEC_API_KEY){console.log('Set FEC_API_KEY in .dev.vars first.');process.exit(1);}
   const dry=process.argv.includes('--dry-run'),research=JSON.parse(await fs.readFile(file,'utf8'));
+  const at=process.argv.indexOf('--only'),only=at>0&&process.argv[at+1]?new Set(process.argv[at+1].split(',').map(x=>x.trim()).filter(Boolean)):null;
   // Progress on one line while the requests run (a minute or two), so it doesn't look stuck.
   const tty=process.stderr.isTTY;
   console.log('Asking the FEC for the latest totals. This takes a minute or two; leave it running until the list appears.');
   const progress=(i,total,who)=>{if(tty)process.stderr.write(`\rAsking the FEC: ${i} of ${total} (${who})\x1b[K`);else if(i%20===0)process.stderr.write(`Asked the FEC about ${i} of ${total}\n`);};
-  const {lines,changed}=await updateMoney(research,fecTotals,{progress});
+  const {lines,changed}=await updateMoney(research,fecTotals,{progress,only});
+  if(only&&!lines.length)console.log(`No one matches --only ${[...only].join(',')}: use profile IDs (moore) or toss-up nominees' FEC IDs (H6VA02198).`);
   if(tty)process.stderr.write('\r\x1b[K');
   for(const l of lines)console.log(l);
   console.log(`\n${changed} ${changed===1?'figure':'figures'} ${dry?'would change':'updated'}.`);
