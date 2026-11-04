@@ -561,6 +561,98 @@
     "tighten": true
   },
   "H6VA02198": {
-    "skip": "Elaine Luria's official portrait is cropped at the chin, so the cut-out has no shoulders. Initials until a photo is supplied."
+    "file": "data/portraits/H6VA02198.jpg",
+    "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Rep._Elaine_Luria_official_photo,_117th_Congress.jpg"
+  },
+  "H6AZ06099": {
+    "file": "data/portraits/H6AZ06099.jpg",
+    "credit": "Photo: Lance Cpl. Shaltiel Dominguez, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:CLR-17_conducts_morning_training_in_remembrance_of_9_11_(Image_3_of_5).jpg"
+  },
+  "H6CA22190": {
+    "file": "data/portraits/H6CA22190.jpg",
+    "credit": "Photo: Maremoto Fund, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Randy_Villegas_at_Vota_Palooza_in_2024_(cropped).jpg"
+  },
+  "H6FL21059": {
+    "file": "data/portraits/H6FL21059.png",
+    "credit": "Photo: Executive Office of the President, White House Office, White House Fellows, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Pia_Dandiya_WHF_(cropped).png"
+  },
+  "H2MI07123": {
+    "file": "data/portraits/H2MI07123.jpg",
+    "credit": "Photo: Brian Thorpe, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Tom_Barrett,_official_portrait_(119th_Congress).jpg"
+  },
+  "H6MI07298": {
+    "file": "data/portraits/H6MI07298.jpg",
+    "credit": "Photo: Sabio117, CC0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:William_Lawrence_2026.jpg"
+  },
+  "H6NC11321": {
+    "file": "data/portraits/H6NC11321.jpg",
+    "credit": "Photo: NC House, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Rep._Jennifer_Balkcom.jpg"
+  },
+  "H6PA08293": {
+    "file": "data/portraits/H6PA08293.jpg",
+    "credit": "Photo: US Department of Labor, CC BY 2.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Paige_Cognetti_(52165104986)_(3x4a).jpg"
+  },
+  "H6TX15246": {
+    "file": "data/portraits/H6TX15246.jpg",
+    "credit": "Photo: Mezquitic, CC BY-SA 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Bobby23_(cropped).jpg"
+  },
+  "H4WI03169": {
+    "file": "data/portraits/H4WI03169.jpg",
+    "credit": "Photo: UpNorthNews, CC BY 3.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Rebecca_Cooke_on_UpNorthNews_March_2025_(cropped).jpg"
+  },
+  "ar-shoffner": {
+    "file": "data/portraits/ar-shoffner.jpg",
+    "credit": "Photo: Hallie Shoffner, CC0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Hallie_Shoffner_headshot_003.jpg"
+  },
+  "fl-nixon": {
+    "file": "data/portraits/fl-nixon.jpg",
+    "credit": "Photo: Florida House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Angie_Nixon_official_portrait.jpg"
+  },
+  "id-achilles": {
+    "file": "data/portraits/id-achilles.png",
+    "credit": "Photo: DL a.k.a. LibertyDad, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Todd_Achilles_on_LibertyDad%27s_stream.png"
+  },
+  "ma-deaton": {
+    "file": "data/portraits/ma-deaton.jpg",
+    "credit": "Photo: Jeff Dranetz, CC BY 3.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:John_Deaton,_2024_(cropped).jpg"
+  },
+  "ms-colom": {
+    "file": "data/portraits/ms-colom.jpg",
+    "credit": "Photo: Editor13443, CC0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Scott_Colom.jpg"
+  },
+  "or-smith": {
+    "file": "data/portraits/or-smith.jpg",
+    "credit": "Photo: Oregon Secretary of State from Portland, United States, CC BY 2.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:David_Brock_Smith.jpg"
+  },
+  "sc-andrews": {
+    "file": "data/portraits/sc-andrews.png",
+    "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
+  },
+  "tn-bradshaw": {
+    "file": "data/portraits/tn-bradshaw.jpg",
+    "credit": "Photo: Walker Kinsler, CC BY-SA 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Marquita_Bradshaw_at_Morristown.jpg"
+  },
+  "va-mizusawa": {
+    "file": "data/portraits/va-mizusawa.jpg",
+    "credit": "Photo: U.S. Army, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Mizusawa.jpg"
   }
 }
