@@ -46,7 +46,9 @@ test('the business-funder votes use Donor Loyalty\'s method on business groups, 
 test('on the data on file, the PAC share is applied to the cycle and the grade blends only when both exist',()=>{
   const sc=makeScorer(D,undefined,undefined,T),ppl=[...D.members,...D.cands];
   const ossoff=sc.pvp(ppl.find(p=>p.id==='ossoff'));
-  assert.equal(ossoff.cci.index,1,'about $160,000 from business PACs of $77 million raised');assert.equal(ossoff.pct,100);
+  // Business PACs gave Ossoff well under 1% of what he raised (about $160,000 of $77 million in the summer figures).
+  assert.ok(ossoff.cci.share<1&&ossoff.cci.index<=2,`share ${ossoff.cci.share}, index ${ossoff.cci.index}`);
+  assert.ok(Math.abs(ossoff.cci.parts.pacShare-ossoff.cci.share/20*100)<0.05,'the share scores against the 20% ceiling');
   const m=sc.cci(ppl.find(p=>p.id==='marshall'));
   assert.equal(m.money.pacTotal,ppl.find(p=>p.id==='marshall').camp.pac);assert.ok(m.share>20&&m.parts.pacShare===100);
   // Each grade is 75% the bills + 25% (100 − the index), rounded.

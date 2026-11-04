@@ -7,7 +7,21 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {campFromTotals,nomineeFromTotals,updateMoney,periodLabel} from '../scripts/update-campaign-money.mjs';
-const research=()=>JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+// The research with the people these tests use set back to fixed figures from before an update, so the tests pass
+// whichever figures are on file (before or after npm run money:update).
+function research(){
+  const r=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+  const camp=(id,o)=>{const p=[...r.members,...r.cands].find(x=>x.id===id);const {researchNote,...c}=p.camp;p.camp={...c,...o};};
+  camp('ossoff',{cmteId:'C00718866',cmte:'Jon Ossoff for Senate',start:'2025-01-01',end:'2026-06-30',receipts:77279766,pac:920316,missing:false,note:'Coverage 2025-01-01..2026-06-30 (hand research).'});
+  camp('jackson',{cmteId:'C00955609',missing:true,note:'Committee registered after June 30; first report due Oct. 15.',start:null,end:null,receipts:null});
+  camp('moore',{end:'2026-06-30',receipts:3765805,indiv:2800000,pac:881598,party:0,transfers:0,candidate:0,loans:0,missing:false});
+  camp('bankhead',{end:'2026-06-30',receipts:58829.06,indiv:45679.62,pac:6627.29,party:0,missing:false});
+  const nominee=(fec,o)=>{for(const race of r.liteRaces)for(const [i,n] of race.nominees.entries())if(n.fecCand===fec)race.nominees[i]={...n,...o};};
+  nominee('H2AZ02360',{through:'2026-07-01',receipts:6172867});
+  nominee('H6VA02198',{through:null,receipts:null,cash:null});
+  nominee('H6NC11321',{through:null,receipts:null,cash:null,campNote:'No FEC committee found yet.'});
+  return r;
+}
 
 const totals=(o={})=>({cycle:2026,committee_id:'C00718866',coverage_start_date:'2025-01-01T00:00:00',coverage_end_date:'2026-10-14T00:00:00',
   receipts:90000000,individual_contributions:80000000,individual_itemized_contributions:33000000,individual_unitemized_contributions:47000000,
@@ -22,8 +36,8 @@ test('the FEC totals map onto the research fields, and the parts add up to recei
   assert.equal(camp.cmte,'Jon Ossoff for Senate');assert.equal(camp.cmteId,'C00718866');assert.equal(camp.missing,false);
   assert.equal(camp.self,0);assert.equal(camp.loansKnown,true);
   assert.equal(camp.note,"Figures from the FEC's committee totals through 2026-10-14 (npm run money:update).");
-  if(old.note){assert.deepEqual(camp.researchNote,{through:old.end,text:old.note},'the hand research note is kept, with the date of the figures it describes');
-    const again=campFromTotals(totals({coverage_end_date:'2026-12-31'}),camp).camp;assert.deepEqual(again.researchNote,camp.researchNote,'a later update keeps the first research note');}
+  assert.deepEqual(camp.researchNote,{through:'2026-06-30',text:'Coverage 2025-01-01..2026-06-30 (hand research).'},'the hand research note is kept, with the date of the figures it describes');
+  const again=campFromTotals(totals({coverage_end_date:'2026-12-31'}),camp).camp;assert.deepEqual(again.researchNote,camp.researchNote,'a later update keeps the first research note');
   const parts=['indiv','party','pac','transfers','candidate','loans','other'].reduce((t,k)=>t+(camp[k]||0),0);
   assert.equal(Math.round(parts*100)/100,camp.receipts);
   assert.equal(periodLabel(camp.start,camp.end),'Jan 2025 – Oct 2026');
@@ -85,8 +99,8 @@ test('a report ending long before the others is left out, and first figures clea
 
 test('little raised over months while the FEC lists a newer principal committee: left as is; otherwise listed',async()=>{
   const r=research(),moore=r.cands.find(p=>p.id==='moore'),old=moore.camp;
-  const t=(id,o={})=>totals({committee_id:id,coverage_start_date:'2025-01-01',coverage_end_date:'2026-10-14',receipts:old.receipts+24109,individual_contributions:old.indiv,
-    other_political_committee_contributions:old.pac,political_party_committee_contributions:old.party||0,transfers_from_other_authorized_committee:old.transfers||0,candidate_contribution:old.candidate||0,loans_made_by_candidate:old.loans||0,...o});
+  const t=(id,o={})=>totals({committee_id:id,coverage_start_date:'2025-01-01',coverage_end_date:'2026-10-14',receipts:old.receipts+24109,individual_contributions:2850000,
+    other_political_committee_contributions:904598,political_party_committee_contributions:0,transfers_from_other_authorized_committee:0,candidate_contribution:0,loans_made_by_candidate:0,...o});
   const run=async principal=>{const x=research(),asked=[];
     const out=await updateMoney(x,async(kind,id)=>{asked.push(kind);if(kind==='committee'&&id===old.cmteId)return t(id);if(kind==='principal'&&id===moore.fecCand)return principal;return null;});
     return {x,out,asked};};
