@@ -123,15 +123,26 @@ test('a part lower than on file is listed as WATCH and the FEC figure used; prog
   assert.equal(seen.length,people+nominees);assert.deepEqual(seen.at(-1).slice(0,2),[people+nominees,people+nominees]);
 });
 
-test('candidate totals for a campaign that moved committees, and --only for one person',async()=>{
+test('candidate totals for a campaign that moved committees leave out transfers between them; --only for one person',async()=>{
   const r=research(),moore=r.cands.find(p=>p.id==='moore');moore.camp.totalsFrom='candidate';
+  const fec=o=>totals({committee_id:null,coverage_start_date:'2025-01-01',coverage_end_date:'2026-10-14',receipts:6000000,individual_contributions:4200000,
+    other_political_committee_contributions:1100000,political_party_committee_contributions:0,transfers_from_other_authorized_committee:600000,transfers_to_other_authorized_committee:600000,
+    candidate_contribution:0,loans_made_by_candidate:0,disbursements:5000000,...o});
   const asked=[];
-  const out=await updateMoney(r,async(kind,id)=>{asked.push(`${kind}:${id}`);
-    return kind==='candidate'&&id===moore.fecCand?totals({committee_id:null,coverage_start_date:'2025-01-01',coverage_end_date:'2026-10-14',receipts:6000000,individual_contributions:4200000,
-      other_political_committee_contributions:1100000,political_party_committee_contributions:0,transfers_from_other_authorized_committee:600000,candidate_contribution:0,loans_made_by_candidate:0}):null;},{only:new Set(['moore'])});
+  const out=await updateMoney(r,async(kind,id)=>{asked.push(`${kind}:${id}`);return kind==='candidate'&&id===moore.fecCand?fec():null;},{only:new Set(['moore'])});
   assert.deepEqual(asked,['candidate:S6AL00476'],'only Moore, from the candidate totals, and no principal-committee check');
   const c=r.cands.find(p=>p.id==='moore').camp;
-  assert.equal(c.receipts,6000000);assert.equal(c.end,'2026-10-14');assert.match(c.note,/candidate totals \(all of the candidate's authorized committees\) through 2026-10-14/);
-  assert.ok(out.lines.some(l=>/^WATCH Barry Moore: the FEC's candidate totals include \$600,000 moved between the candidate's own committees/.test(l)));
+  assert.equal(c.receipts,5400000,'the $600,000 moved between his committees counts once');assert.equal(c.transfers,0);assert.equal(c.disbursements,4400000);
+  assert.deepEqual(c.internalTransfers,{in:600000,out:600000});assert.equal(c.other,100000,'the parts still add up to receipts');
+  assert.match(c.note,/candidate totals \(all of the candidate's authorized committees\) through 2026-10-14, leaving out \$600,000 moved between those committees/);
+  assert.ok(out.lines.some(l=>/^NEW {3}Barry Moore: .*leaving out \$600,000 moved between the candidate's own committees$/.test(l)));
   assert.equal(out.changed,1);
+  // Candidate totals saved before the transfers were left out: the same report is read again and fixed, then it's SAME.
+  const r2=research(),m2=r2.cands.find(p=>p.id==='moore');
+  m2.camp={...m2.camp,totalsFrom:'candidate',end:'2026-10-14',receipts:6000000,transfers:600000,disbursements:5000000};
+  const again=await updateMoney(r2,async kind=>kind==='candidate'?fec():null,{only:new Set(['moore'])});
+  assert.equal(r2.cands.find(p=>p.id==='moore').camp.receipts,5400000);
+  assert.ok(again.lines.includes("NEW   Barry Moore: still through 2026-10-14; raised $6,000,000 → $5,400,000, leaving out $600,000 moved between the candidate's own committees"));
+  const third=await updateMoney(r2,async kind=>kind==='candidate'?fec():null,{only:new Set(['moore'])});
+  assert.equal(third.changed,0);assert.ok(third.lines[0].startsWith('SAME  Barry Moore'));
 });
