@@ -78,3 +78,20 @@ export function seatChange(race,winnerParty){
   return {flip,from,to:winnerParty,label:flip?'Flip +1':`Remains ${PARTY_COLOR[winnerParty]||winnerParty}`,
     detail:flip?`${to} take the seat from ${PARTY_PLURAL[from]||from}`:`${to} keep the seat`};
 }
+// The vote count from the state's own county results (public/county-results.json), in tallyOf's shape, when that read is
+// at least as recent as the count on file (result.tally): each candidate's share and votes, the other candidates by name
+// (from half a point; the rest together), the votes counted and how many precincts or counties had reported. Null
+// without county results, or when the count on file is newer.
+const SHORT_PARTY=p=>({LIB:'L',GRE:'G',GRN:'G',IND:'I',CON:'C',CST:'C',DEM:'D',REP:'R'})[String(p||'').slice(0,3).toUpperCase()]||'';
+export function countyTally(race,c){
+  if(!c?.total||!c.counties)return null;
+  const t=race?.result?.tally;if(t?.asof&&String(c.fetched||'').slice(0,10)<t.asof)return null;
+  const totals={};for(const v of Object.values(c.counties))for(const [k,n] of Object.entries(v))totals[k]=(totals[k]||0)+n;
+  const pct=n=>n/c.total*100,keys=race.keys||race.nominees.map(nomineeKey);
+  const rows=keys.map(key=>({key,pct:totals[key]?pct(totals[key]):null,votes:totals[key]??null})).sort((a,b)=>(b.pct??-1)-(a.pct??-1)||(b.votes??-1)-(a.votes??-1));
+  const named=(c.others||[]).filter(o=>pct(o.votes)>=0.5).slice(0,4).map(o=>({name:o.name,party:SHORT_PARTY(o.party),pct:pct(o.votes),votes:o.votes}));
+  const rest=Math.round((pct(totals.other||0)-named.reduce((a,o)=>a+o.pct,0))*10)/10;
+  const r=c.reporting,n=x=>x.toLocaleString('en-US');
+  const counted=[r?`${n(r.n)} of ${n(r.of)} ${r.unit} reporting`:`${Object.keys(c.counties).length} counties with votes`,'in the state’s own count'].join(', ');
+  return {rows,others:named,rest:rest>=0.5?rest:0,total:c.total,summed:false,whole:false,counted,src:c.source,asof:String(c.fetched).slice(0,10),fetched:c.fetched,fromState:true};
+}

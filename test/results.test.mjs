@@ -4,7 +4,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from '../public/results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from '../public/results.js';
 const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
@@ -86,8 +86,8 @@ test('the count of called races names the ones not called yet',()=>{
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
-  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
-  assert.match(app,/function resultCard\(r\)/);assert.match(app,/Reported turnout:/);assert.doesNotMatch(app,/function raceCard|function liteCard/,'the money tables are gone from the Races page');
+  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
+  assert.match(app,/function resultCard\(r,county=null\)/);assert.match(app,/Reported turnout:/);assert.doesNotMatch(app,/function raceCard|function liteCard/,'the money tables are gone from the Races page');
   assert.match(app,/November 3, 2026 result/);assert.match(app,/res=personResult\(s\)/);
   assert.match(app,/id="method-results"/);assert.match(app,/no grade uses the results/);
 });
@@ -120,4 +120,18 @@ test('flip or hold: the winner against the party that held the seat before the e
   assert.equal(seatChange(race('H-FL-22'),'D').label,'Remains Blue','a redrawn district: its current member is a Democrat');
   assert.equal(seatChange(race('S-AK'),'D'),null,'nothing until the race is called');
   assert.match(fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),/class="rc-change \$\{ch\.flip\?'flip':'hold'\}/);
+});
+
+test("a race's count from the state's own county results, when that read is at least as recent as the count on file",()=>{
+  const C=JSON.parse(fs.readFileSync(new URL('../public/county-results.json',import.meta.url),'utf8'));
+  const nc=countyTally(race('S-NC'),C.races['S-NC']),news=tallyOf(race('S-NC'));
+  assert.deepEqual(nc.rows.map(r=>r.key),['cooper','whatley']);assert.equal(nc.total,4203181);assert.ok(nc.fromState);
+  for(const r of nc.rows){const n=news.rows.find(x=>x.key===r.key);assert.equal(r.votes,n.votes,r.key);assert.ok(Math.abs(r.pct-n.pct)<0.01,r.key);}
+  assert.deepEqual(nc.others.map(o=>[o.name,o.party,o.votes]),[['Shannon W. Bray','L',55726],['Michael Dublin','G',36404]],'the other candidates by name, as the state wrote them');
+  assert.match(nc.counted,/^2,626 of 2,626 precincts reporting, in the state’s own count$/);assert.equal(nc.rest,0);
+  const counties={a:{x:60,y:30,other:10}},fx={id:'t',keys:['x','y'],result:{winner:'x',tally:{asof:'2026-11-05',shares:{x:60,y:40}}}};
+  assert.equal(countyTally(fx,{total:100,fetched:'2026-11-04T20:00:00Z',counties}),null,'the count on file is newer');
+  const t2=countyTally({...fx,result:{winner:'x',tally:{asof:'2026-11-04'}}},{total:100,fetched:'2026-11-04T20:00:00Z',counties});
+  assert.deepEqual([t2.rows.map(r=>r.pct),t2.rest,t2.counted],[[60,30],10,'1 counties with votes, in the state’s own count'],'unnamed others together; counties when precincts are not given');
+  assert.equal(countyTally(fx,null),null);
 });

@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -50,6 +50,8 @@ test("North Carolina's precinct file is read by its own column names, and only t
   const b=byCounty(rows,raceCandidates(D,'S-NC'),map('NC'));
   assert.deepEqual(b.counties['37183'],{cooper:1224},'Wake: both precincts added up');assert.deepEqual(b.counties['37111'],{whatley:18},'McDowell');
   assert.equal(b.total,1242);assert.deepEqual(b.unmatched,[]);
+  assert.deepEqual(byCounty([...rows,{county:'WAKE',choice:'Shannon W. Bray',party:'LIB',votes:7},{county:'WAKE',choice:'Write-In',party:'',votes:0}],raceCandidates(D,'S-NC'),map('NC')).others,
+    [{name:'Shannon W. Bray',party:'LIB',votes:7}],'the other candidates by name, statewide');
   assert.throws(()=>readNcsbe('County\tChoice\n',/x/),/no "Contest Name" column/);
 });
 
@@ -186,6 +188,24 @@ test('the saved county results fit their race and map, and add up',()=>{
 test('the races page draws the maps and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
   assert.match(app,/async function fillMaps\(root\)/);assert.match(app,/<div class="cm-box"><svg viewBox="0 0 \$\{m\.width\} \$\{m\.height\}" preserveAspectRatio="xMidYMid meet"/,'every map in the same box');
-  assert.match(app,/\$\{reportingBar\(res,m\)\}/);assert.match(app,/role="progressbar"/);
+  assert.match(app,/\$\{reportingBar\(res,m\)\}/);
+  assert.match(app,/COUNTY\.poll\?\?=setInterval\(/,'the page looks for a new read while the Races page is open');assert.match(app,/box\.innerHTML=resultCard\(race,ct\)/,"the card takes the state's count");
+  const script=fs.readFileSync(new URL('../scripts/county-results.mjs',import.meta.url),'utf8');assert.match(script,/--watch/);assert.match(script,/Math\.max\(2,Number\(args\[wi\+1\]\)\|\|15\)/,'every 15 minutes, never under 2');assert.match(app,/role="progressbar"/);
   assert.match(fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8'),/\.cm-box\{width:100%;aspect-ratio:4\/3\}/);assert.match(app,/fillMaps\(\$\('#rlist'\)\)/);assert.match(app,/id="method-county-maps"/);
+});
+
+test("the probe says what a state's results site serves, for writing its reader",async()=>{
+  const have=new Set(Object.values(SOURCES).map(s=>s.state)),senate=new Set([...D.races,...D.liteRaces].filter(r=>r.chamber==='S'&&r.state!=='AK').map(r=>r.state));
+  for(const st of senate)assert.ok(have.has(st)||PROBE[st]?.length,`${st}: a reader, or somewhere to look`);
+  for(const urls of Object.values(PROBE))for(const u of urls)assert.match(u,/^https:\/\//);
+  const page=`<html><head><title>Election Night Results</title><script src="/static/app.js"></script></head><body><a href="/results/2026-11-03/county.csv">County results (CSV)</a> <a href="/about">About us</a>
+    <table><tr><th>County</th><th>Risch</th></tr><tr><td>Ada</td><td>5</td></tr></table></body></html>`;
+  const reply=(body,type)=>({status:200,redirected:false,url:'',headers:{get:()=>type},arrayBuffer:async()=>new TextEncoder().encode(body).buffer,text:async()=>body});
+  const get=async u=>u.endsWith('app.js')?reply('fetch(`/api/elections/${id}/summary.json`);const x="/cdn/results/export.json"','text/javascript'):u.endsWith('.json')?reply('{"localResults":[{"name":"Ada","ballotItems":[]}],"results":{}}','application/json'):reply(page,'text/html');
+  const lines=await probeOne('https://example.gov/results/',{get});
+  assert.match(lines[0],/^https:\/\/example\.gov\/results\/ → HTTP 200, text\/html, 0 KB$/);
+  assert.ok(lines.includes('    link: County results (CSV) → https://example.gov/results/2026-11-03/county.csv'));assert.ok(!lines.some(l=>/About us/.test(l)));
+  assert.ok(lines.includes('    table: County | Risch'));assert.match(lines.at(-1),/^    data addresses in its scripts: .*\/api\/elections\/\$\{id\}\/summary\.json · \/cdn\/results\/export\.json$/,'from the page and from its own script');
+  const json=await probeOne('https://example.gov/x.json',{get});assert.equal(json[1],'    JSON: keys: localResults, results');assert.equal(json[2],"    localResults: a list of 1; first item's keys: name, ballotItems");
+  assert.match((await probeOne('https://example.gov/',{get:async()=>{throw Object.assign(new Error('fetch failed'),{cause:{code:'ENOTFOUND'}});}}))[0],/couldn't connect \(ENOTFOUND\)/);
 });
