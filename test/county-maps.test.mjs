@@ -1,14 +1,28 @@
 // County maps on the Races page: the county outlines (public/maps/<ST>.json, scripts/build-maps.mjs), the readers for
 // each state's results file (scripts/county-results.mjs: North Carolina's precinct file, Enhanced Voting's export for
-// Georgia, a county table for Michigan), and the saved county results (public/county-results.json).
+// Georgia, a county table for Michigan, each told apart by what the file holds), and the saved county results
+// (public/county-results.json).
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {readNcsbe,readEnhanced,readTable,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import zlib from 'node:zlib';
+import {readNcsbe,readEnhanced,readTable,readAny,dataLinks,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
-const FIPS={NC:'37',GA:'13',MI:'26'};
+// A ZIP file holding one file.
+const zipOf=(file,text)=>{
+  const data=zlib.deflateRawSync(Buffer.from(text)),name=Buffer.from(file),size=Buffer.byteLength(text);
+  const local=Buffer.alloc(30);local.writeUInt32LE(0x04034b50,0);local.writeUInt16LE(8,8);local.writeUInt32LE(data.length,18);local.writeUInt32LE(size,22);local.writeUInt16LE(name.length,26);
+  const central=Buffer.alloc(46);central.writeUInt32LE(0x02014b50,0);central.writeUInt16LE(8,10);central.writeUInt32LE(data.length,20);central.writeUInt32LE(size,24);central.writeUInt16LE(name.length,28);
+  const end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50,0);end.writeUInt16LE(1,8);end.writeUInt16LE(1,10);end.writeUInt32LE(46+name.length,12);end.writeUInt32LE(30+name.length+data.length,16);
+  return new Uint8Array(Buffer.concat([local,name,data,central,name,end]));
+};
+const MI_TSV=['ElectionDate\tOfficeCode(Text)\tDistrictCode(Text)\tStatusCode\tCountyCode\tCountyName\tOfficeDescription\tPartyOrder\tPartyName\tPartyDescription\tCandidateID\tCandidateLastName\tCandidateFirstName\tCandidateMiddleName\tCandidateFormerName\tCandidateVotes',
+  '11/3/2026\t5\t00000\t0\t74\tST. CLAIR\tUnited States Senator 6 Year Term (1) Position\t1\tDEM\tDemocratic\t1\tEl-Sayed\tAbdul\t\t\t30000',
+  '11/3/2026\t5\t00000\t0\t74\tST. CLAIR\tUnited States Senator 6 Year Term (1) Position\t2\tREP\tRepublican\t2\tRogers\tMike\t\t\t52000',
+  '11/3/2026\t5\t00000\t0\t82\tWAYNE\tUnited States Senator 6 Year Term (1) Position\t3\tLIB\tLibertarian\t3\tSmith\tPat\t\t\t900',
+  '11/3/2026\t6\t00000\t0\t82\tWAYNE\tState Senator 1st District\t1\tDEM\tDemocratic\t4\tDoe\tJane\t\t\t1'].join('\n');
 
 test('every state with a Senate race on the page has county outlines (Alaska reports by district instead)',()=>{
   const states=new Set([...D.races,...D.liteRaces].filter(r=>r.chamber==='S'&&r.state!=='AK').map(r=>r.state));
@@ -49,12 +63,7 @@ test("Georgia's results export is read by locality; a state senate race and a mi
 });
 
 test("Michigan's county table: a header row names the columns, in tab- or comma-separated files",()=>{
-  const tsv=['ElectionDate\tOfficeCode(Text)\tDistrictCode(Text)\tStatusCode\tCountyCode\tCountyName\tOfficeDescription\tPartyOrder\tPartyName\tPartyDescription\tCandidateID\tCandidateLastName\tCandidateFirstName\tCandidateMiddleName\tCandidateFormerName\tCandidateVotes',
-    '11/3/2026\t5\t00000\t0\t74\tST. CLAIR\tUnited States Senator 6 Year Term (1) Position\t1\tDEM\tDemocratic\t1\tEl-Sayed\tAbdul\t\t\t30000',
-    '11/3/2026\t5\t00000\t0\t74\tST. CLAIR\tUnited States Senator 6 Year Term (1) Position\t2\tREP\tRepublican\t2\tRogers\tMike\t\t\t52000',
-    '11/3/2026\t5\t00000\t0\t82\tWAYNE\tUnited States Senator 6 Year Term (1) Position\t3\tLIB\tLibertarian\t3\tSmith\tPat\t\t\t900',
-    '11/3/2026\t6\t00000\t0\t82\tWAYNE\tState Senator 1st District\t1\tDEM\tDemocratic\t4\tDoe\tJane\t\t\t1'].join('\n');
-  const rows=readTable(tsv,SOURCES['S-MI'].contest);assert.equal(rows.length,3,'a state senator race is left out');
+  const rows=readTable(MI_TSV,SOURCES['S-MI'].contest);assert.equal(rows.length,3,'a state senator race is left out');
   const b=byCounty(rows,raceCandidates(D,'S-MI'),map('MI'));
   assert.deepEqual(b.counties['26147'],{elsayed:30000,rogers:52000},'St. Clair');assert.deepEqual(b.counties['26163'],{other:900},'Wayne');
   const csv='County,Contest,Candidate,Party,Votes\n"Kent","U.S. Senate","Abdul El-Sayed","DEM","1,234"\n';
@@ -63,12 +72,52 @@ test("Michigan's county table: a header row names the columns, in tab- or comma-
   assert.throws(()=>readTable('A,B\n1,2',/x/),/can't find the county, contest, candidate and votes columns \(the header is: A \| B\)/);
 });
 
-test('a race is read from the first address that works, and says how to use a saved file when none does',async()=>{
+test('a file is read by what it holds, whatever its name says',async()=>{
+  const mi=SOURCES['S-MI'],ga=SOURCES['S-GA'];
+  assert.equal((await readAny(MI_TSV,mi)).rows.length,3,"Michigan's \".xls\" is tab-separated text");
+  assert.equal((await readAny(zipOf('2026GEN_MI_CENR_BY_COUNTY.txt',MI_TSV),mi)).rows.length,3,'a ZIP: the table inside');
+  const ev=JSON.stringify({localResults:[{name:'Appling',ballotItems:[{name:'US Senate',ballotOptions:[{name:'Jon Ossoff',voteCount:5}]}]}]});
+  assert.deepEqual((await readAny(ev,ga)).rows,[{county:'Appling',choice:'Jon Ossoff',party:'',votes:5}],'JSON: an Enhanced Voting export');
+  assert.deepEqual((await readAny(zipOf('export.json',ev),ga)).rows.length,1,'a ZIP holding the export');
+  assert.match((await readAny('\n<!DOCTYPE html><html><a href="x.txt">',mi)).page,/x\.txt/,'a web page is handed back for its links');
+  await assert.rejects(readAny(new Uint8Array([0xd0,0xcf,0x11,0xe0,0xa1,0xb1,0x1a,0xe1]),mi),/an Excel workbook.*save it as CSV/);
+  await assert.rejects(readAny(zipOf('xl/workbook.xml','<workbook/>'),mi),/an Excel workbook/,'an .xlsx is a ZIP too');
+  await assert.rejects(readAny(zipOf('notes.pdf','x'),mi),/a ZIP file with no \.txt, \.tsv, \.csv or \.json file/);
+  await assert.rejects(readAny('<?xml version="1.0"?><ElectionResult/>',mi),/an XML file/);
+  await assert.rejects(readAny('{"localResults":',ga),/a JSON file that doesn't read/);
+  await assert.rejects(readAny('{"results":{}}',ga),/no localResults/);
+});
+
+test("a results page's links to data files on its own site are tried, county files first",()=>{
+  const base='https://mielections.us/election/results/2026GEN_CENR.html';
+  const html=`<a href="DATA/2026GEN_MI_CENR_BY_PRECINCT.zip">Precincts</a> <a href='DATA/2026GEN_MI_CENR_BY_COUNTY.xls'>Counties</a>
+    <a href="/election/results/2026GEN/01000000.html">President</a> <a href="https://example.com/county.csv">elsewhere</a>
+    <a href="DATA/file.csv?x=1&amp;y=2">query</a> <a href="DATA/2026GEN_MI_CENR_BY_COUNTY.xls">again</a> <a href="#top">top</a>`;
+  assert.deepEqual(dataLinks(html,base),['https://mielections.us/election/results/DATA/2026GEN_MI_CENR_BY_COUNTY.xls',
+    'https://mielections.us/election/results/DATA/2026GEN_MI_CENR_BY_PRECINCT.zip','https://mielections.us/election/results/DATA/file.csv?x=1&y=2']);
+  assert.deepEqual(dataLinks(html,'~/Downloads/page.html'),[],'a saved page has no site to follow');
+  assert.equal(enhancedExport('https://results.sos.ga.gov/results/public/Georgia/elections/2026NovGen?tab=1'),'https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json');
+  assert.equal(enhancedExport('https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json'),'https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json');
+  assert.equal(enhancedExport('~/Downloads/ga.json'),'~/Downloads/ga.json');
+});
+
+test('a race is read from the first address that works, then its page\'s links, and says what to do by hand when none does',async()=>{
   const maps=async st=>map(st),ok={localResults:[{name:'Appling',ballotItems:[{name:'US Senate',ballotOptions:[{name:'Jon Ossoff',voteCount:5},{name:'Mike Collins',voteCount:7}]}]}]};
   const got=await countyRace(D,'S-GA',{maps,get:async u=>{if(u.includes('2026NovGen'))return JSON.stringify(ok);throw new Error('HTTP 404');}});
   assert.equal(got.race.counties['13001'].mcollins,7);assert.match(got.lines[0],/^CHECK S-GA: 1 of 159 counties/,'a partial map is a CHECK');
-  const none=await countyRace(D,'S-MI',{maps,get:async()=>{throw new Error('HTTP 404');}});
-  assert.equal(none.race,undefined);assert.match(none.lines.join('\n'),/couldn't read the county results[\s\S]*HTTP 404[\s\S]*npm run counties:update -- --file S-MI=<the file>/);
+  assert.match(got.lines[0],/\(from https:\/\/results\.sos\.ga\.gov\/cdn\/results\/Georgia\/export-2026NovGen\.json\)$/);
+  // Michigan: the guessed addresses are missing, so the results page is read and its county file tried.
+  const asked=[],page='<html><a href="DATA/2026_MI_COUNTY_RESULTS.txt">County results (tab-delimited)</a></html>';
+  const mi=await countyRace(D,'S-MI',{maps,get:async u=>{asked.push(u);if(u.endsWith('2026GEN_CENR.html'))return page;if(u.endsWith('2026_MI_COUNTY_RESULTS.txt'))return MI_TSV;throw new Error('HTTP 404');}});
+  assert.deepEqual(asked.map(u=>u.split('/').pop()),['2026GEN_MI_CENR_BY_COUNTY.xls','2026GEN_MI_CENR_BY_COUNTY.txt','2026GEN_CENR.html','2026_MI_COUNTY_RESULTS.txt']);
+  assert.deepEqual(mi.race.counties['26147'],{elsayed:30000,rogers:52000});assert.equal(mi.race.source.u,'https://mielections.us/election/results/DATA/2026_MI_COUNTY_RESULTS.txt');
+  const none=await countyRace(D,'S-MI',{maps,get:async u=>{if(u.endsWith('.html'))return '<html>nothing here</html>';throw new Error('HTTP 404');}});
+  assert.equal(none.race,undefined);
+  assert.match(none.lines.join('\n'),/^CHECK S-MI: couldn't read the county results\.\n.*BY_COUNTY\.xls: HTTP 404\n[\s\S]*2026GEN_CENR\.html: a web page, not a results file, with no links to data files on its site\n.*right-click the county results download and copy its link, then: npm run counties:update -- --file "S-MI=<that link>"/);
+  // An address given by hand: an Enhanced Voting results page stands for its media export.
+  const byHand=[];await countyRace(D,'S-GA',{maps,file:'https://results.sos.ga.gov/results/public/Georgia/elections/2026GenNov',get:async u=>{byHand.push(u);return JSON.stringify(ok);}});
+  assert.deepEqual(byHand,['https://results.sos.ga.gov/cdn/results/Georgia/export-2026GenNov.json']);
+  for(const [id,s] of Object.entries(SOURCES))assert.ok(s.help||s.page,`${id}: what to do by hand`);
 });
 
 test('the saved county results fit their race and map, and add up',()=>{
