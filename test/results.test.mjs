@@ -4,7 +4,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey} from '../public/results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from '../public/results.js';
 const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
@@ -86,7 +86,7 @@ test('the count of called races names the ones not called yet',()=>{
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
-  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
+  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
   assert.match(app,/function resultCard\(r\)/);assert.match(app,/Reported turnout:/);assert.doesNotMatch(app,/function raceCard|function liteCard/,'the money tables are gone from the Races page');
   assert.match(app,/November 3, 2026 result/);assert.match(app,/res=personResult\(s\)/);
   assert.match(app,/id="method-results"/);assert.match(app,/no grade uses the results/);
@@ -104,4 +104,20 @@ test('every 2026 Senate seat is on the Races page: profiled, or results only wit
   assert.equal(S.find(x=>x.id==='moody').nextElection,2026,'an appointed senator\'s special election counts as their next election');
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
   assert.match(app,/The rest of the 2026 Senate races/);assert.match(app,/function seatRace\(s\)/);
+});
+
+test('flip or hold: the winner against the party that held the seat before the election',()=>{
+  const S=JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8')).senators,people=[...D.members,...D.cands];
+  for(const r of [...D.races,...D.liteRaces]){
+    assert.ok(['D','R','I'].includes(r.held?.party)&&r.held.by,`${r.id}: who held the seat`);
+    const inc=r.inc?people.find(p=>p.id===r.inc):r.nominees?.find(n=>n.incumbent);
+    if(inc)assert.deepEqual([r.held.party,r.held.by],[inc.party,inc.name],`${r.id}: the incumbent who ran holds it`);
+    else if(r.chamber==='S'){const out=S.find(x=>x.state===r.state&&x.nextElection===2026);assert.equal(r.held.by,out.name,`${r.id}: the outgoing senator`);}
+  }
+  assert.deepEqual(seatChange(race('S-ME'),'D'),{flip:true,from:'R',to:'D',label:'Flip +1',detail:'Democrats take the seat from Republicans'});
+  assert.equal(seatChange(race('S-GA'),'D').label,'Remains Blue');assert.equal(seatChange(race('S-AL'),'R').label,'Remains Red');
+  assert.equal(seatChange(race('S-IA'),'D').label,'Flip +1','an open seat: Joni Ernst held it');
+  assert.equal(seatChange(race('H-FL-22'),'D').label,'Remains Blue','a redrawn district: its current member is a Democrat');
+  assert.equal(seatChange(race('S-AK'),'D'),null,'nothing until the race is called');
+  assert.match(fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),/class="rc-change \$\{ch\.flip\?'flip':'hold'\}/);
 });
