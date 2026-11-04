@@ -66,3 +66,15 @@ export function tallyOf(race){
 }
 // A share as shown: one decimal, or a whole number when the source gave whole percentages.
 export const sharePct=(x,whole=false)=>x==null?'—':(whole?Math.round(x):x.toFixed(1))+'%';
+// Did the seat change parties? The winner's party against the party that held the seat before the election (race.held:
+// the incumbent who ran, or the outgoing member of an open seat, including a redrawn district's current member). Null
+// until the race is decided.
+export const PARTY_COLOR={D:'Blue',R:'Red',I:'Independent'};
+const PARTY_PLURAL={D:'Democrats',R:'Republicans',I:'Independents'};
+export function seatChange(race,winnerParty){
+  const r=raceResult(race),from=race?.held?.party;
+  if(!r?.decided||!from||!winnerParty)return null;
+  const flip=winnerParty!==from,to=PARTY_PLURAL[winnerParty]||winnerParty;
+  return {flip,from,to:winnerParty,label:flip?'Flip +1':`Remains ${PARTY_COLOR[winnerParty]||winnerParty}`,
+    detail:flip?`${to} take the seat from ${PARTY_PLURAL[from]||from}`:`${to} keep the seat`};
+}

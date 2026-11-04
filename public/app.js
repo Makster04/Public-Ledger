@@ -13,7 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey} from './results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -2141,14 +2141,17 @@ function resultCard(r){
       <div class="rc-pct">${sharePct(row&&row.pct,t&&t.whole)}</div><div class="small muted">${row&&row.votes!=null?numFmt(row.votes)+' votes':'&nbsp;'}</div></${tag}>`;};
   const others=t?[...t.others.map(o=>`${esc(o.name)}${o.party?` (${esc(o.party)})`:''} ${sharePct(o.pct,t.whole)}`),t.rest?`other candidates and write-ins ${sharePct(t.rest)}`:''].filter(Boolean):[];
   const turnout=!t?'not reported yet':[t.total!=null?`${numFmt(t.total)} votes counted`:'',t.counted].filter(Boolean).map(esc).join(' · ')||'not given in this source';
+  // Between the candidates and the map: whether the seat flipped, in the winner's color.
+  const ch=res&&res.decided?seatChange(r,who(res.winner)?.party):null;
+  const change=ch?`<div class="rc-change ${ch.flip?'flip':'hold'} ${esc(ch.to)}" title="${esc(`Held before the election by ${r.held.by} (${r.held.party})`)}"><b>${esc(ch.label)}</b><span>${esc(ch.detail)}</span></div>`:'';
   return `<article class="race rc">
     <div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open||lite&&!r.nominees.some(n=>n.incumbent)?'Open seat':'Incumbent ran'}</span></div>
     ${res&&!res.decided?`<p class="small rc-status"><span class="chip warn">Not called yet</span> ${esc(res.how)}</p>`:res?`<p class="small muted rc-status">${esc(res.how||'Race called')} · <a href="${esc(res.src.u)}" target="_blank" rel="noopener">${esc(res.src.t)} ↗</a></p>`:''}
-    <div class="rc-cols"><div class="rc-left">
+    <div class="rc-cols${change?' has-side':''}"><div class="rc-left">
     <div class="rc-grid">${keys.map(tile).join('')}</div>
     ${others.length?`<p class="small muted" style="margin:0">Also on the ballot: ${others.join(' · ')}</p>`:''}
     <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}</p>
-    </div><aside class="rc-map" data-map="${esc(r.id)}" hidden></aside></div>
+    </div><aside class="rc-side">${change}<div class="rc-map" data-map="${esc(r.id)}" hidden></div></aside></div>
   </article>`;
 }
 // ---------- county maps (public/county-results.json, outlines in public/maps/<ST>.json) ----------
@@ -2196,7 +2199,7 @@ async function fillMaps(root){
   for(const el of root.querySelectorAll('.rc-map[data-map]')){
     const res=d.races[el.dataset.map];if(!res||!el.isConnected)continue;
     const m=await stateMap(res.state);if(!m||!el.isConnected)continue;
-    el.innerHTML=countyMap(res,m);el.hidden=false;el.parentElement.classList.add('has-map');bindCountyTips(el,res,m);
+    el.innerHTML=countyMap(res,m);el.hidden=false;el.closest('.rc-cols').classList.add('has-side');bindCountyTips(el,res,m);
   }
 }
 // How many covered races are called, and which are not yet.
@@ -2906,6 +2909,7 @@ function renderMethod(sub){
       <li><b>Not called yet:</b> a race nobody has called and no candidate has conceded shows who was leading, but nobody is marked as having won or lost.</li>
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
+      <li><b>Flip or hold:</b> once a race is called, the card says "Flip +1" when the winner's party is not the one that held the seat before the election, or "Remains Blue" or "Remains Red" when it is, in the winner's color. The seat's holder is the incumbent who ran or, for an open seat, its outgoing member: the retiring senator, or a redrawn House district's current member.</li>
       <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
       <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
