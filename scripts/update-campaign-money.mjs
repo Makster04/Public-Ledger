@@ -5,7 +5,8 @@
 //   npm run money:update                write public/research.json, then review the changes and commit
 //   npm run money:update -- --only moore,H6VA02198   just these people (profile IDs) or toss-up nominees (FEC IDs)
 // A person whose campaign moved to a new committee mid-cycle has camp.totalsFrom "candidate": their figures come from
-// the FEC's candidate totals (all of the candidate's authorized committees) instead of one committee's.
+// the FEC's candidate totals (all of the candidate's authorized committees) instead of one committee's. Money moved
+// between those committees is left out of receipts and spending (camp.internalTransfers), so none counts twice.
 // A figure never goes back to an earlier reporting period, and a report whose parts don't add up to its receipts is
 // left out and listed, as is a committee that raised almost nothing while the FEC lists a newer principal committee.
 // The hand research's note on the old figures is kept as researchNote. The president is not updated (his figures are
@@ -27,23 +28,30 @@ const day=v=>String(v||'').slice(0,10)||null;
 // figures moves to researchNote {through, text} (once: a later update keeps the first one), and a "not filed yet"
 // note simply goes. Returns {camp} or {problem}.
 export function campFromTotals(r,old){
-  const receipts=n(r?.receipts),start=day(r?.coverage_start_date),end=day(r?.coverage_end_date);
+  const all=old?.totalsFrom==='candidate';
+  // Across all of a candidate's committees, a transfer between two of them is money one of them already took in.
+  const internal=all?{in:n(r?.transfers_from_other_authorized_committee)??0,out:n(r?.transfers_to_other_authorized_committee)??0}:null;
+  const gross=n(r?.receipts),receipts=gross==null?null:all?gross-internal.in:gross,start=day(r?.coverage_start_date),end=day(r?.coverage_end_date);
   if(receipts==null||!start||!end)return {problem:'the FEC totals have no receipts or reporting dates'};
   if(old?.end&&!old.missing&&end<old.end)return {problem:`the FEC's latest totals end ${end}, before the ${old.end} figures on file`};
-  if(old?.end&&!old.missing&&end===old.end)return {same:true};
+  // The same report again is nothing new, unless candidate totals on file still count the transfers twice.
+  const stale=all&&!old.internalTransfers;
+  if(old?.end&&!old.missing&&end===old.end&&!stale)return {same:true};
   // Within a cycle, money raised only adds up; clearly less than on file means another committee or period.
-  if(old?.receipts&&!old.missing&&receipts<old.receipts*0.98)return {problem:`the FEC's latest totals show ${Math.round(receipts).toLocaleString('en-US')} raised, less than the ${Math.round(old.receipts).toLocaleString('en-US')} on file`};
+  const onFile=old?.receipts==null?null:stale?old.receipts-(old.transfers||0):old.receipts;
+  if(onFile&&!old.missing&&receipts<onFile*0.98)return {problem:`the FEC's latest totals show ${Math.round(receipts).toLocaleString('en-US')} raised, less than the ${Math.round(onFile).toLocaleString('en-US')} on file`};
   const indiv=n(r.individual_contributions)??0,party=n(r.political_party_committee_contributions)??0,pac=n(r.other_political_committee_contributions)??0;
-  const transfers=n(r.transfers_from_other_authorized_committee)??0,candidate=n(r.candidate_contribution),candLoans=n(r.loans_made_by_candidate);
+  const transfers=all?0:n(r.transfers_from_other_authorized_committee)??0,candidate=n(r.candidate_contribution),candLoans=n(r.loans_made_by_candidate);
   const parts=indiv+party+pac+transfers+(candidate??0)+(candLoans??0),other=cents(receipts-parts);
   if(other<-1)return {problem:`its parts add up to ${cents(parts)}, more than its ${receipts} in receipts`};
   const self=cents((candidate??0)+(candLoans??0));
   const researchNote=old?.researchNote||(old?.note&&!old.missing?{through:old.end,text:old.note}:null);
   const from=old?.totalsFrom==='candidate'?"the FEC's candidate totals (all of the candidate's authorized committees)":"the FEC's committee totals";
-  return {camp:{...old,...(researchNote?{researchNote}:{}),receipts:cents(receipts),indiv:cents(indiv),itemized:cents(n(r.individual_itemized_contributions)),unitemized:cents(n(r.individual_unitemized_contributions)),
+  const spent=n(r.disbursements);
+  return {camp:{...old,...(researchNote?{researchNote}:{}),...(internal?{internalTransfers:{in:cents(internal.in),out:cents(internal.out)}}:{}),receipts:cents(receipts),indiv:cents(indiv),itemized:cents(n(r.individual_itemized_contributions)),unitemized:cents(n(r.individual_unitemized_contributions)),
     party:cents(party),pac:cents(pac),transfers:cents(transfers),candidate:cents(candidate),loans:cents(candLoans),
-    disbursements:cents(n(r.disbursements)),cash:cents(n(r.last_cash_on_hand_end_period)),debts:cents(n(r.last_debts_owed_by_committee)),
-    start,end,missing:false,note:`Figures from ${from} through ${end} (npm run money:update).`,other:Math.max(0,other),loansKnown:candLoans!=null,self,selfShare:receipts?Math.round(self/receipts*1000)/10:0}};
+    disbursements:cents(spent==null?null:all?spent-internal.out:spent),cash:cents(n(r.last_cash_on_hand_end_period)),debts:cents(n(r.last_debts_owed_by_committee)),
+    start,end,missing:false,note:`Figures from ${from} through ${end}${internal?`, leaving out ${money(internal.in)} moved between those committees`:''} (npm run money:update).`,other:Math.max(0,other),loansKnown:candLoans!=null,self,selfShare:receipts?Math.round(self/receipts*1000)/10:0}};
 }
 // A toss-up nominee's candidate totals → their receipts, cash and reporting date.
 export function nomineeFromTotals(r,old){
@@ -83,6 +91,8 @@ export async function updateMoney(research,totals,{cycle=config.cycle,progress=(
     const u=campFromTotals(r,old);
     if(u.problem){lines.push(`CHECK ${p.name}: ${u.problem}; left as is`);continue;}
     if(u.same){lines.push(`SAME  ${p.name}: already through ${old.end}`);continue;}
+    if(all&&!old.internalTransfers&&old.end===u.camp.end){p.camp=u.camp;changed++;
+      lines.push(`NEW   ${p.name}: still through ${old.end}; raised ${money(old.receipts)} → ${money(u.camp.receipts)}, leaving out ${money(u.camp.internalTransfers.in)} moved between the candidate's own committees`);continue;}
     // Almost nothing raised over months can mean the campaign moved to a new principal committee (a House member's
     // committee after a Senate run began, say): that committee's figures would leave out the new money.
     const grew=old.missing?null:u.camp.receipts-(old.receipts||0),days=old.missing?0:(Date.parse(u.camp.end)-Date.parse(old.end))/864e5;
@@ -96,8 +106,7 @@ export async function updateMoney(research,totals,{cycle=config.cycle,progress=(
     p.camp=u.camp;p.cycleLabel=periodLabel(u.camp.start,u.camp.end);changed++;
     const pacMove=old.pac!=null&&u.camp.pac!==old.pac?`, PACs ${money(old.pac)} → ${money(u.camp.pac)}`:'';
     lines.push(`NEW   ${p.name}: ${old.missing?'first report':`through ${old.end} →`} ${u.camp.end}, raised ${old.missing?'':`${money(old.receipts)} → `}${money(u.camp.receipts)}${little}${pacMove}, cash ${money(u.camp.cash)}`);
-    // Candidate totals add up all the candidate's committees: money moved between them would count twice.
-    if(all&&u.camp.transfers>u.camp.receipts*0.02)lines.push(`WATCH ${p.name}: the FEC's candidate totals include ${money(u.camp.transfers)} moved between the candidate's own committees, which may count that money twice; compare with the committees' pages on fec.gov`);
+    if(all&&u.camp.internalTransfers.in)lines[lines.length-1]+=`, leaving out ${money(u.camp.internalTransfers.in)} moved between the candidate's own committees`;
     if(!old.missing)for(const [k,label] of lowerParts(old,u.camp))lines.push(`WATCH ${p.name}: money from ${label} is lower than on file (${money(old[k])} → ${money(u.camp[k])}); the FEC counts it differently from the hand research, and its figure is used`);
   }
   for(const {race,nm,i} of nominees){
