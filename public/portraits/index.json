@@ -1,6 +1,6 @@
 {
   "about": "Transparent portraits for the home cards. See scripts/build-portraits.py.",
-  "built": "2026-10-30",
+  "built": "2026-11-04",
   "people": {
     "collins": {
       "file": "portraits/collins.webp",
@@ -635,6 +635,56 @@
     "lummis": {
       "file": "portraits/lummis.webp",
       "credit": "Photo supplied by the site's editor for use on this site"
+    },
+    "H2AZ02360": {
+      "file": "portraits/H2AZ02360.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/original/C001133.jpg"
+    },
+    "H2CA20094": {
+      "file": "portraits/H2CA20094.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/V000129.jpg"
+    },
+    "H2FL22171": {
+      "file": "portraits/H2FL22171.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/M001217.jpg"
+    },
+    "H2IA03119": {
+      "file": "portraits/H2IA03119.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/N000193.jpg"
+    },
+    "H2OH16051": {
+      "file": "portraits/H2OH16051.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/M001222.jpg"
+    },
+    "H8PA15195": {
+      "file": "portraits/H8PA15195.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/M001230.jpg"
+    },
+    "H4PA08124": {
+      "file": "portraits/H4PA08124.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/B001327.jpg"
+    },
+    "H0TX15124": {
+      "file": "portraits/H0TX15124.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/D000594.jpg"
+    },
+    "H2VA02064": {
+      "file": "portraits/H2VA02064.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/original/K000399.jpg"
+    },
+    "H0WI03175": {
+      "file": "portraits/H0WI03175.webp",
+      "credit": "Official congressional portrait (public domain), via the unitedstates/images project",
+      "src": "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/original/V000135.jpg"
     }
   }
 }

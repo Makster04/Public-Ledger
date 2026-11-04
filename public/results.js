@@ -45,3 +45,20 @@ export function termAfter(term,outcome){
   for(const [re,won,lost] of PAST)if(re.test(term))return term.replace(re,outcome==='won'?won:lost);
   return term;
 }
+// The vote count on file for a race (result.tally): each candidate's share, and votes when reported, highest first; the
+// other candidates named in the same count; what is left (candidates and write-ins not named, shown from half a point);
+// and the votes counted: the source's total, or the sum of every candidate's votes when all were reported and none is
+// left unnamed. counted: how much of the vote was in.
+export function tallyOf(race){
+  const t=race?.result?.tally;if(!t)return null;
+  const keys=race.keys||race.nominees.map(n=>n.fecCand);
+  const rows=keys.map(key=>({key,pct:t.shares?.[key]??null,votes:t.votes?.[key]??null})).sort((a,b)=>(b.pct??-1)-(a.pct??-1));
+  const others=t.others||[],listed=[...rows,...others];
+  const rest=Math.round((100-listed.reduce((a,x)=>a+(x.pct||0),0))*10)/10;
+  const summed=t.total==null&&rest<0.5&&listed.every(x=>x.votes!=null);
+  // whole: the source gave whole percentages, so they are shown that way; otherwise every share gets one decimal.
+  const whole=listed.every(x=>x.pct==null||Number.isInteger(x.pct));
+  return {rows,others,rest:rest>=0.5?rest:0,total:t.total??(summed?listed.reduce((a,x)=>a+x.votes,0):null),summed,whole,counted:t.counted||'',src:t.src||null,asof:t.asof||null};
+}
+// A share as shown: one decimal, or a whole number when the source gave whole percentages.
+export const sharePct=(x,whole=false)=>x==null?'—':(whole?Math.round(x):x.toFixed(1))+'%';
