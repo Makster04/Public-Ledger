@@ -3,9 +3,12 @@
 //   urls   the results file's address (tried in order)
 //   pages  a results page: its tables are read, then its links to county results and data files are followed
 //   help   what to do by hand when none of them works
-// A file is read by what it turns out to be, whatever its name says: a ZIP (the .txt, .tsv, .csv or .json inside), the
-// "media export" JSON of the Enhanced Voting results sites (Georgia's), North Carolina's precinct file, any CSV or
-// tab-separated table with a row per county and candidate, or a web page's tables of votes by county (Michigan's).
+//   clarity  a state on a Clarity Elections results site: the November 3 election is found in the state's list of
+//            elections, and its detail XML (votes by county and vote type) is read
+// A file is read by what it turns out to be, whatever its name says: a ZIP (the .txt, .tsv, .csv, .json or .xml inside),
+// the "media export" JSON of the Enhanced Voting results sites (Georgia's, Idaho's, Virginia's), Clarity's detail XML,
+// North Carolina's precinct file, any CSV or tab-separated table with a row per county and candidate, or a web page's
+// tables of votes by county (Michigan's).
 // What is read counts only when it has votes in the state's counties for the race's own candidates; otherwise the next
 // address is tried.
 //   npm run counties:update                      every race below
@@ -25,6 +28,8 @@ import os from 'node:os';
 import {unzipFile} from '../src/sources.mjs';
 
 const root=new URL('..',import.meta.url);
+// The U.S. Senate race, as a state may name it.
+const SENATE_CONTEST=/^(u\.?\s?s\.?|united states)\s+senat|^us senat/i;
 export const SOURCES={
   'S-NC':{state:'NC',reader:'ncsbe',contest:/^US SENATE$/,
     urls:['https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/results_pct_20261103.zip'],
@@ -51,6 +56,31 @@ export const SOURCES={
     page:'https://app.enhancedvoting.com/results/public/id/elections/nov2026',
     help:'Open https://app.enhancedvoting.com/results/public/id/elections/nov2026 in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-ID=<the file>"',
     source:'Idaho Secretary of State, results export'},
+  // Virginia's results run on Enhanced Voting too; its localities are counties and independent cities.
+  'S-VA':{state:'VA',contest:/^(u\.?\s?s\.?|united states)\s+senat/i,
+    urls:['https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json','https://enr.elections.virginia.gov/cdn/results/Virginia/export-2026-November-General.json'],
+    page:'https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General',
+    help:'Open https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-VA=<the file>"',
+    source:'Virginia Department of Elections, results export'},
+  // States on Clarity Elections results sites.
+  'S-CO':{state:'CO',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'CO'},urls:[],page:'https://results.enr.clarityelections.com/CO/',source:'Colorado Secretary of State, election night results (Clarity)'},
+  'S-IA':{state:'IA',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'IA'},urls:[],page:'https://electionresults.iowa.gov/IA/',source:'Iowa Secretary of State, election night results (Clarity)'},
+  'S-KS':{state:'KS',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'KS'},urls:[],page:'https://results.enr.clarityelections.com/KS/',source:'Kansas Secretary of State, election night results (Clarity)'},
+  'S-WV':{state:'WV',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'WV'},urls:[],page:'https://results.enr.clarityelections.com/WV/',source:'West Virginia Secretary of State, election night results (Clarity)'},
+  // South Carolina's results page links to its Clarity site (enr-scvotes.org) for each election.
+  'S-SC':{state:'SC',contest:SENATE_CONTEST,clarity:{base:'https://www.enr-scvotes.org',st:'SC'},urls:[],pages:['https://scvotes.gov/2026-general-election-results/'],page:'https://scvotes.gov/2026-general-election-results/',source:'South Carolina Election Commission, election night results (Clarity)'},
+  // States whose results pages are read for their tables of votes by county, or for the exports and county pages they
+  // link to. What each one holds is checked on the first run.
+  'S-DE':{state:'DE',contest:SENATE_CONTEST,urls:[],pages:['https://elections.delaware.gov/results/enr/GE2026.html'],page:'https://elections.delaware.gov/results/enr/GE2026.html',source:'Delaware Department of Elections, unofficial results'},
+  'S-WY':{state:'WY',contest:SENATE_CONTEST,urls:[],pages:['https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx'],page:'https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx',source:'Wyoming Secretary of State, unofficial results'},
+  'S-MT':{state:'MT',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.mt.gov/ResultsExport.aspx','https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY',source:'Montana Secretary of State, election results'},
+  'S-NE':{state:'NE',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.nebraska.gov/ResultsExport.aspx','https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY'],page:'https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY',source:'Nebraska Secretary of State, election results'},
+  'S-NM':{state:'NM',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.nm.gov/ResultsExport.aspx','https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY',source:'New Mexico Secretary of State, election results'},
+  'S-OR':{state:'OR',contest:SENATE_CONTEST,urls:[],pages:['https://results.oregonvotes.gov/ResultsExport.aspx','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY'],page:'https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY',source:'Oregon Secretary of State, election results'},
+  'S-SD':{state:'SD',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sd.gov/ResultsExport.aspx','https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY'],page:'https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY',source:'South Dakota Secretary of State, election results'},
+  'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',source:'Minnesota Secretary of State, election results'},
+  'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/results-by-county','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
+  'S-TX':{state:'TX',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.state.tx.us/results.html'],page:'https://electionresults.sos.state.tx.us/results.html',source:'Texas Secretary of State, election results'},
 };
 
 // A name reduced to letters, for matching ("St. Clair County" and "ST CLAIR" are the same; "El-Sayed" and "El Sayed").
@@ -128,16 +158,65 @@ export async function readAny(raw,src,counties=[]){
   let text;
   if(isZip(bytes)){
     if(await unzipFile(bytes,/^xl\/workbook\.xml$/).then(()=>true,()=>false))throw new Error(EXCEL);
-    text=await unzipFile(bytes,/\.(txt|tsv|csv|json)$/i).catch(()=>{throw new Error('a ZIP file with no .txt, .tsv, .csv or .json file in it');});
+    text=await unzipFile(bytes,/\.(txt|tsv|csv|json|xml)$/i).catch(()=>{throw new Error('a ZIP file with no .txt, .tsv, .csv, .json or .xml file in it');});
   }else text=new TextDecoder().decode(bytes);
   text=text.replace(/^\uFEFF/,'');const head=text.trimStart().slice(0,300);
   if(/^[{[]/.test(head)){let data;try{data=JSON.parse(text);}catch(e){throw new Error(`a JSON file that doesn't read (${e.message})`);}return {rows:readEnhanced(data,src.contest)};}
-  if(/^<(!doctype\s+html|html|head|body|!--)/i.test(head)){const t=readHtmlTables(text,counties);
+  if(/^<(!doctype\s+html|html|head|body|!--)/i.test(head)||/<html\b/i.test(head)){const t=readHtmlTables(text,counties);
     if(t.rows.length){const r=reportingIn(strip(text));if(r)t.rows.reporting=r;}
     return {page:text,rows:t.rows.length?t.rows:null,tables:t.tables};}
-  if(/^</.test(head))throw new Error('an XML file, which no reader here handles yet');
+  if(/^</.test(head)){if(/<ElectionResult\b/.test(text.slice(0,4000)))return {rows:readClarityXml(text,src.contest)};throw new Error('an XML file, which no reader here handles yet');}
   return {rows:src.reader==='ncsbe'?readNcsbe(text,src.contest):readTable(text,src.contest)};
 }
+// Clarity's detail XML: <Contest text> holds <Choice text party>, each with <VoteType> totals by <County name votes>.
+// The votes of every vote type (election day, early, absentee …) are added up; precincts reporting come from the contest.
+const attrs=tag=>Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map(m=>[m[1],decode(m[2])]));
+export function readClarityXml(xml,contest){
+  const rows=[],names=[];let reporting=null;
+  for(const c of xml.matchAll(/<Contest\b([^>]*)>([\s\S]*?)<\/Contest>/g)){
+    const a=attrs(c[1]);names.push(a.text);if(!contest.test(String(a.text||'').trim())||/state senat/i.test(a.text))continue;
+    const n=Number(a.precinctsReported),of=Number(a.precinctsParticipating);if(of>0&&n<=of)reporting={n,of,unit:'precincts'};
+    for(const ch of c[2].matchAll(/<Choice\b([^>]*)>([\s\S]*?)<\/Choice>/g)){
+      const b=attrs(ch[1]),by={};
+      for(const v of ch[2].matchAll(/<County\b([^>]*?)\/?>/g)){const x=attrs(v[1]);if(x.name)by[x.name]=(by[x.name]||0)+(Number(x.votes)||0);}
+      for(const [county,votes] of Object.entries(by))rows.push({county,choice:String(b.text||'').trim(),party:String(b.party||'').trim(),votes});
+    }
+  }
+  if(!rows.length)throw new Error('no Senate contest with votes by county in the detail XML (contests: '+names.slice(0,8).join('; ')+')');
+  if(reporting)rows.reporting=reporting;
+  return rows;
+}
+// A Clarity election's address (…/CO/123456/… or …/SC/127227/): its site, state and election number.
+export const clarityOf=u=>{const m=/^(https?:\/\/[^/]+)\/+([A-Z]{2})\/+(\d{4,})(?:[/?#]|$)/.exec(String(u));return m?{base:m[1],st:m[2],eid:m[3]}:null;};
+// The November 3, 2026 election in a Clarity site's list of elections, which may be laid out in several ways: the
+// object with an election number whose name or date says November 3, 2026.
+export function clarityElection(list){
+  const found=[],walk=(o,depth=0)=>{if(!o||typeof o!=='object'||depth>6)return;
+    if(!Array.isArray(o)){const idKey=Object.keys(o).find(k=>/^(eid|electionid|id)$/i.test(k)&&/^\d{4,}$/.test(String(o[k])));
+      if(idKey){const text=Object.values(o).filter(v=>typeof v!=='object').join(' ');found.push({eid:String(o[idKey]),text});}}
+    for(const v of Object.values(o))walk(v,depth+1);};
+  walk(list);
+  const day=/\b11\/0?3\/2026\b|2026-11-03|november 0?3,? 2026|20261103/i;
+  const best=found.filter(f=>day.test(f.text)).sort((a,b)=>(/general/i.test(b.text)?1:0)-(/general/i.test(a.text)?1:0))[0];
+  if(!best)throw new Error(`no November 3, 2026 election in the list (it has: ${found.slice(0,5).map(f=>f.text.slice(0,60)).join('; ')||'nothing that reads as an election'})`);
+  return best.eid;
+}
+const asText=x=>typeof x==='string'?x:new TextDecoder().decode(x);
+// A Clarity election's detail XML address: the election's current version, then its reports/detailxml.zip.
+async function clarityDetail({base,st,eid},get){
+  const ver=asText(await get(`${base}/${st}/${eid}/current_ver.txt`)).trim();
+  if(!/^\d+$/.test(ver))throw new Error(`current_ver.txt for election ${eid} reads "${ver.slice(0,40)}"`);
+  return `${base}/${st}/${eid}/${ver}/reports/detailxml.zip`;
+}
+// The state's November 3 election on its Clarity site, from the list of elections.
+async function clarityFind({base,st},get){
+  let last;
+  for(const u of [`${base}/${st}/elections.json`,`${base}/${st}/elections.json?v=1`]){
+    try{return await clarityDetail({base,st,eid:clarityElection(JSON.parse(asText(await get(u))))},get);}catch(e){last=`${u}: ${e.message}`;}
+  }
+  throw new Error(last);
+}
+
 // Web pages: text without tags, and the links and tables in them.
 const ENTITY={amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' '};
 const decode=s=>s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,(m,e)=>e[0]==='#'?String.fromCodePoint(e[1]==='x'||e[1]==='X'?parseInt(e.slice(2),16):Number(e.slice(1))):ENTITY[e.toLowerCase()]??m);
@@ -160,9 +239,9 @@ export function pageLinks(html,base){
   for(const m of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)){
     const href=/\bhref\s*=\s*["']([^"']+)["']/i.exec(m[1])?.[1];if(!href||/^(#|javascript:|mailto:)/i.test(href.trim()))continue;
     let u;try{u=new URL(decode(href).trim(),base);}catch{continue;}
-    if(u.host!==host)continue;u.hash='';
+    const clarity=clarityOf(u.href);if(u.host!==host&&!clarity)continue;u.hash='';
     const text=strip(m[2]),file=/\.(txt|tsv|csv|xls|xlsx|zip|json)$/i.test(u.pathname),about=`${text} ${decode(u.pathname+u.search)}`;
-    const county=/count|cnty/i.test(about),results=county&&(file||/result|vote|download|export|csv/i.test(about));
+    const county=/count|cnty/i.test(about),results=!!clarity||county&&(file||/result|vote|download|export|csv|breakdown/i.test(about));
     if(!file&&!results)continue;
     // How far the link comes after the closest mention of the Senate race before it.
     const since=m.index-Math.max(-Infinity,...senate.filter(x=>x<m.index));
@@ -213,6 +292,10 @@ export function readHtmlTables(html,counties=[]){
 // (…/cdn/results/Georgia/export-2026NovGen.json); any other address or file is left as it is.
 export const enhancedExport=u=>{const m=/^(https?:\/\/[^/]+)\/results\/public\/([^/]+)\/elections\/([^/?#]+)/i.exec(u);return m?`${m[1]}/cdn/results/${m[2]}/export-${m[3]}.json`:u;};
 
+// A county outline's name for matching. Virginia's independent cities (FIPS 51500 and up) share names with counties
+// (Fairfax, Franklin, Richmond, Roanoke), so they are matched as "<name> city", as the state writes them.
+export const mapKey=c=>countyKey(c.name)+(c.fips.startsWith('51')&&Number(c.fips.slice(2))>=500?'city':'');
+
 // The race's candidates ({key, name, party}), from the profiles or the results-only nominees.
 export function raceCandidates(research,id){
   const race=research.races.find(r=>r.id===id),people=[...research.members,...research.cands];
@@ -222,10 +305,12 @@ export function raceCandidates(research,id){
 }
 // Rows → votes by county FIPS and candidate key. map: the state's outlines (public/maps/<ST>.json).
 export function byCounty(rows,cands,map){
-  const fips=new Map(map.counties.map(c=>[countyKey(c.name),c.fips])),last=new Map(cands.map(c=>[lastName(c.name),c.key]));
+  const fips=new Map(map.counties.map(c=>[mapKey(c),c.fips])),last=new Map(cands.map(c=>[lastName(c.name),c.key]));
+  // A county written without "city" when only the independent city has the name ("Norfolk" for Norfolk city).
+  const find=name=>{const k=countyKey(name);return fips.get(k)??fips.get(k+'city');};
   const counties={},unmatched=new Set(),names=new Map(),others=new Map();
   for(const r of rows){
-    const f=fips.get(countyKey(r.county));if(!f){unmatched.add(r.county);continue;}
+    const f=find(r.county);if(!f){unmatched.add(r.county);continue;}
     const key=last.get(lastName(r.choice))||'other';if(key!=='other')names.set(key,r.choice);
     else if(r.votes){const o=others.get(r.choice)||others.set(r.choice,{name:r.choice,party:r.party||'',votes:0}).get(r.choice);o.votes+=r.votes;}
     const c=counties[f]||(counties[f]={});c[key]=(c[key]||0)+r.votes;
@@ -244,9 +329,13 @@ const pct=(v,t)=>t?(v/t*100).toFixed(2)+'%':'—';
 export async function countyRace(research,id,{get,file=null,maps}){
   const src=SOURCES[id],map=await maps(src.state),cands=raceCandidates(research,id);
   const queue=file?[enhancedExport(file)]:[...src.urls,...(src.pages||[])],tried=[],names=map.counties.map(c=>c.name);let rows=null,from=null,b=null;
+  // A Clarity state: find the November 3 election first.
+  if(src.clarity&&!file){try{queue.unshift(await clarityFind(src.clarity,get));}catch(e){tried.push(`${src.clarity.base}/${src.clarity.st}/ (list of elections): ${e.message}`);}}
   for(let i=0;i<queue.length&&i<20&&!rows;i++){
-    const u=queue[i];
+    let u=queue[i];
     try{
+      // The address of a Clarity election (a page, not a file): its detail XML.
+      const c=clarityOf(u);if(c&&!/\.(zip|xml|txt|json)$/i.test(new URL(u).pathname)){u=await clarityDetail(c,get);queue[i]=u;}
       const got=await readAny(await get(u),src,names),notes=[];
       // What was read counts only with votes in the state's counties for at least one of the race's candidates.
       if(got.rows){const c=byCounty(got.rows,cands,map);
@@ -364,7 +453,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const pick=only||(Object.keys(files).length?new Set(Object.keys(files)):null),ids=Object.keys(SOURCES).filter(x=>!pick||pick.has(x)||files[x]);
   const wi=args.indexOf('--watch'),watch=wi<0?0:Math.max(2,Number(args[wi+1])||15);
   if(args.includes('--probe')){
-    const have=new Set(Object.values(SOURCES).map(x=>x.state)),states=Object.entries(PROBE).filter(([st])=>!have.has(st)&&(!only||only.has(st)||only.has('S-'+st)));
+    // The states with no county results saved yet: their known addresses, and their source's own when they have one.
+    const saved=new Set(Object.values(out.races).map(r=>r.state)),own=Object.fromEntries(Object.values(SOURCES).map(x=>[x.state,[...x.urls,...(x.pages||[])]]));
+    const states=[...new Set([...Object.keys(PROBE),...Object.keys(own)])].sort().filter(st=>!saved.has(st)&&(!only||only.has(st)||only.has('S-'+st)))
+      .map(st=>[st,[...new Set([...(own[st]||[]),...(PROBE[st]||[])])]]);
     const lines=[`County results probe, ${new Date().toISOString()}: what each state's results site serves, for writing its reader.`];
     console.log(`Looking at the results sites of ${states.length} states; this takes a few minutes.`);
     for(const [st,urls] of states){lines.push('',`${st}`);console.log(`${st}…`);for(const u of urls)lines.push(...(await probeOne(u)).map(l=>'  '+l));}
@@ -373,13 +465,16 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     process.exit(0);
   }
   // One pass over the races: each one read again replaces what was saved; one that can't be read keeps its last read.
+  const failed=new Set();let passes=0;
   const pass=async()=>{
-    let read=0,moved=0;
+    let read=0,moved=0;passes++;
     for(const id of ids){
+      // While watching, a race that couldn't be read is tried again every fourth pass, not every time.
+      if(watch&&failed.has(id)&&passes%4!==1)continue;
       console.log(`Reading ${id}…`);
       const r=await countyRace(research,id,{get:fetchRaw,file:files[id]||null,maps});
       for(const l of r.lines)console.log(l);
-      if(!r.race)continue;
+      if(!r.race){failed.add(id);continue;}failed.delete(id);
       const old=out.races[id],same=old&&JSON.stringify({...old,fetched:0})===JSON.stringify({...r.race,fetched:0});
       if(old&&same)console.log('      same counts as the last read');else moved++;
       out.races[id]=r.race;read++;

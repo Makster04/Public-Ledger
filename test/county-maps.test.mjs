@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -92,8 +92,8 @@ test('a file is read by what it holds, whatever its name says',async()=>{
   assert.match((await readAny('\n<!DOCTYPE html><html><a href="x.txt">',mi)).page,/x\.txt/,'a web page is handed back for its links');
   await assert.rejects(readAny(new Uint8Array([0xd0,0xcf,0x11,0xe0,0xa1,0xb1,0x1a,0xe1]),mi),/an Excel workbook.*save it as CSV/);
   await assert.rejects(readAny(zipOf('xl/workbook.xml','<workbook/>'),mi),/an Excel workbook/,'an .xlsx is a ZIP too');
-  await assert.rejects(readAny(zipOf('notes.pdf','x'),mi),/a ZIP file with no \.txt, \.tsv, \.csv or \.json file/);
-  await assert.rejects(readAny('<?xml version="1.0"?><ElectionResult/>',mi),/an XML file/);
+  await assert.rejects(readAny(zipOf('notes.pdf','x'),mi),/a ZIP file with no \.txt, \.tsv, \.csv, \.json or \.xml file/);
+  await assert.rejects(readAny('<?xml version="1.0"?><Results/>',mi),/an XML file, which no reader here handles yet/);
   await assert.rejects(readAny('{"localResults":',ga),/a JSON file that doesn't read/);
   await assert.rejects(readAny('{"results":{}}',ga),/no localResults/);
 });
@@ -208,4 +208,53 @@ test("the probe says what a state's results site serves, for writing its reader"
   assert.ok(lines.includes('    table: County | Risch'));assert.match(lines.at(-1),/^    data addresses in its scripts: .*\/api\/elections\/\$\{id\}\/summary\.json · \/cdn\/results\/export\.json$/,'from the page and from its own script');
   const json=await probeOne('https://example.gov/x.json',{get});assert.equal(json[1],'    JSON: keys: localResults, results');assert.equal(json[2],"    localResults: a list of 1; first item's keys: name, ballotItems");
   assert.match((await probeOne('https://example.gov/',{get:async()=>{throw Object.assign(new Error('fetch failed'),{cause:{code:'ENOTFOUND'}});}}))[0],/couldn't connect \(ENOTFOUND\)/);
+});
+
+// Clarity's detail XML, as its sites publish it: each choice's votes by county under each vote type.
+const CLARITY=`<?xml version="1.0" encoding="utf-8"?><ElectionResult><Timestamp>11/4/2026 3:00:00 PM MST</Timestamp><ElectionName>2026 General Election</ElectionName><ElectionDate>11/3/2026</ElectionDate><Region>CO</Region>
+<Contest key="1" text="Governor" voteFor="1" precinctsParticipating="10" precinctsReported="10"><Choice key="1" text="Phil Weiser" party="DEM" totalVotes="9"><VoteType name="Mail" votes="9"><County name="Adams" votes="9" /></VoteType></Choice></Contest>
+<Contest key="2" text="United States Senator" voteFor="1" countiesParticipating="64" countiesReported="64" precinctsParticipating="3200" precinctsReported="3150">
+<ParticipatingCounties><County name="Adams" precinctsParticipating="300" precinctsReported="300" /></ParticipatingCounties>
+<Choice key="3" text="John W. Hickenlooper" party="DEM" totalVotes="130"><VoteType name="Mail Ballots" votes="120"><County name="Adams" votes="100" /><County name="Denver" votes="20" /></VoteType><VoteType name="In Person" votes="10"><County name="Adams" votes="10" /></VoteType></Choice>
+<Choice key="4" text="Janak Joshi" party="REP" totalVotes="80"><VoteType name="Mail Ballots" votes="80"><County name="Adams" votes="80" /><County name="Denver" votes="0" /></VoteType></Choice>
+<Choice key="5" text="Caryn Ann Harlos" party="LBR" totalVotes="5"><VoteType name="Mail Ballots" votes="5"><County name="Denver" votes="5" /></VoteType></Choice></Contest>
+<Contest key="3" text="State Senate District 21" voteFor="1"><Choice key="6" text="Someone" party="DEM"><VoteType name="Mail" votes="1"><County name="Adams" votes="1" /></VoteType></Choice></Contest></ElectionResult>`;
+
+test("Clarity's detail XML: votes added up over vote types, by county, with precincts reporting",async()=>{
+  const rows=readClarityXml(CLARITY,SOURCES['S-CO'].contest);
+  assert.deepEqual(rows.filter(r=>r.county==='Adams').map(r=>[r.choice,r.votes]),[['John W. Hickenlooper',110],['Janak Joshi',80]],'mail and in-person added up; the Governor and the state senate left out');
+  assert.deepEqual(rows.reporting,{n:3150,of:3200,unit:'precincts'});
+  assert.equal((await readAny(zipOf('detail.xml',CLARITY),SOURCES['S-CO'])).rows.length,5,'the detail XML inside its ZIP');
+  assert.throws(()=>readClarityXml(CLARITY.replace(/United States Senator/,'Treasurer'),SOURCES['S-CO'].contest),/no Senate contest .*contests: Governor; Treasurer; State Senate District 21/);
+  assert.deepEqual(clarityOf('https://www.enr-scvotes.org/SC/127227/'),{base:'https://www.enr-scvotes.org',st:'SC',eid:'127227'});
+  assert.deepEqual(clarityOf('https://results.enr.clarityelections.com//CO/125000/web.345435/#/summary'),{base:'https://results.enr.clarityelections.com',st:'CO',eid:'125000'});
+  assert.equal(clarityOf('https://results.enr.clarityelections.com/CO/'),null);
+  // The list of elections, laid out one way or another.
+  assert.equal(clarityElection([{EID:'124001',ElectionName:'2026 Primary Election',ElectionDate:'6/30/2026'},{EID:'125600',ElectionName:'2026 General Election',ElectionDate:'11/3/2026'}]),'125600');
+  assert.equal(clarityElection({elections:{items:[{id:125700,name:'November 3, 2026 General Election'}]}}),'125700');
+  assert.throws(()=>clarityElection([{EID:'1240',ElectionName:'2026 Primary',ElectionDate:'6/30/2026'}]),/no November 3, 2026 election in the list \(it has: 1240 2026 Primary 6\/30\/2026\)/);
+});
+
+test('a Clarity state: its November 3 election found in the list, then its current version and detail XML',async()=>{
+  const maps=async st=>map(st),asked=[];
+  const get=async u=>{asked.push(u);if(u.endsWith('/CO/elections.json'))return JSON.stringify([{EID:'125600',ElectionName:'2026 General Election',ElectionDate:'11/3/2026'}]);
+    if(u.endsWith('/125600/current_ver.txt'))return '356001\n';if(u.endsWith('/125600/356001/reports/detailxml.zip'))return zipOf('detail.xml',CLARITY);throw new Error('HTTP 404');};
+  const co=await countyRace(D,'S-CO',{maps,get});
+  assert.deepEqual(asked,['https://results.enr.clarityelections.com/CO/elections.json','https://results.enr.clarityelections.com/CO/125600/current_ver.txt','https://results.enr.clarityelections.com/CO/125600/356001/reports/detailxml.zip']);
+  const fips=n=>map('CO').counties.find(c=>c.name===n).fips;
+  assert.deepEqual(Object.values(co.race.counties[fips('Adams')]).reduce((a,b)=>a+b,0),190);assert.equal(co.race.counties[fips('Denver')].other,5);
+  assert.equal(co.race.reporting.of,3200);assert.equal(co.race.source.u,asked[2]);
+  // South Carolina: its results page links to the election on its own Clarity site.
+  const sc=[];const page='<html><a href="https://www.enr-scvotes.org/SC/127300/">Statewide General Election results</a> <a href="https://www.enr-scvotes.org/SC/127179/">U.S. Senate Special Republican Runoff</a>';
+  await countyRace(D,'S-SC',{maps,get:async u=>{sc.push(u);if(u.endsWith('elections.json'))throw new Error('HTTP 404');if(u.includes('scvotes.gov/2026'))return page;if(u.endsWith('current_ver.txt'))return '9';throw new Error('HTTP 404');}});
+  assert.ok(sc.includes('https://www.enr-scvotes.org/SC/127300/current_ver.txt')&&sc.includes('https://www.enr-scvotes.org/SC/127300/9/reports/detailxml.zip'),'the linked election is read');
+});
+
+test("Virginia: independent cities are told apart from counties of the same name",()=>{
+  const va=map('VA'),cands=raceCandidates(D,'S-VA'),[a,b]=cands.map(c=>c.name);
+  const rows=[['Richmond City',a,10],['Richmond County',b,7],['Fairfax County',a,5],['Fairfax City',b,3],['Norfolk',a,2]].map(([county,choice,votes])=>({county,choice,party:'',votes}));
+  const r=byCounty(rows,cands,va),k=cands.map(c=>c.key);
+  assert.deepEqual([r.counties['51760'],r.counties['51159'],r.counties['51059'],r.counties['51600'],r.counties['51710']],[{[k[0]]:10},{[k[1]]:7},{[k[0]]:5},{[k[1]]:3},{[k[0]]:2}]);
+  assert.deepEqual(r.unmatched,[]);
+  const keys=va.counties.map(mapKey);assert.equal(new Set(keys).size,keys.length,'every Virginia locality has its own name');
 });
