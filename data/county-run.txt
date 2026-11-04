@@ -1,0 +1,241 @@
+npm notice run public-ledger@1.0.0 counties:update
+npm notice run node scripts/county-results.mjs
+Reading S-NC…
+NEW   S-NC: 100 of 100 counties, 4,203,181 votes · Roy Cooper 58.72% · Michael Whatley 39.09% · others 2.19% · 2,626 of 2,626 precincts reporting (from https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/results_pct_20261103.zip)
+      same counts as the last read
+Reading S-GA…
+NEW   S-GA: 159 of 159 counties, 4,174,461 votes · Jon Ossoff 59.00% · Mike Collins 41.00% · 2,581 of 2,581 precincts reporting (from https://results.sos.ga.gov/cdn/results/Georgia/export-11032026GeneralAndSpecialElection.json)
+      same counts as the last read
+Reading S-MI…
+CHECK S-MI: couldn't read the county results.
+      https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026: HTTP 403
+      Open https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026, open the county results for United States Senator, copy that page's address (or a download link on it), then: npm run counties:update -- --file "S-MI=<that address>"
+Reading S-ID…
+NEW   S-ID: 44 of 44 counties, 710,679 votes · James E. Risch 56.53% · Todd Achilles 33.54% · others 9.93% · 986 of 986 precincts reporting (from https://app.enhancedvoting.com/cdn/results/id/export-nov2026.json)
+      same counts as the last read
+Reading S-VA…
+CHECK S-VA: couldn't read the county results.
+      https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json: no ballot item matches the Senate race in localResults (first locality has: Member, United States Senate; Member, House of Representatives (9th District); Mayor (Town of Narrows); Member Town Council - Special (Town of Rich Creek); Member Town Council (Town of Narrows); Member Town Council - Special (Town of Pearisburg); Proposed Constitutional Amendment Question 1; Proposed Constitutional Amendment Question 2)
+      https://enr.elections.virginia.gov/cdn/results/Virginia/export-2026-November-General.json: HTTP 404
+      Open https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-VA=<the file>"
+Reading S-CO…
+NEW   S-CO: 64 of 64 counties, 2,214,943 votes · John W. Hickenlooper 60.03% · Mark Baisley 35.74% · others 4.23% · 733 of 4,230 precincts reporting (from https://results.enr.clarityelections.com/CO/127407/385659/reports/detailxml.zip)
+Reading S-IA…
+CHECK S-IA: couldn't read the county results.
+      https://results.enr.clarityelections.com/IA/127077/385624/reports/detailxml.zip: HTTP 404
+      Open https://electionresults.iowa.gov/IA/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-IA=<that address or file>"
+Reading S-KS…
+CHECK S-KS: couldn't read the county results.
+      https://results.enr.clarityelections.com/KS/ (list of elections): https://results.enr.clarityelections.com/KS/elections.json?v=1: no November 3, 2026 election in the list (it has: KS 609   55188 April 2015 City/School/Ext. Dust. Gen Electio)
+      Open https://results.enr.clarityelections.com/KS/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-KS=<that address or file>"
+Reading S-WV…
+CHECK S-WV: couldn't read the county results.
+      https://results.enr.clarityelections.com/WV/ (list of elections): https://results.enr.clarityelections.com/WV/elections.json?v=1: no November 3, 2026 election in the list (it has: nothing that reads as an election)
+      Open https://results.enr.clarityelections.com/WV/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-WV=<that address or file>"
+Reading S-SC…
+NEW   S-SC: 46 of 46 counties, 2,038,780 votes · Darline Graham 46.65% · Annie Andrews 51.13% · others 2.22% · 2,312 of 2,312 precincts reporting (from https://www.enr-scvotes.org/SC/127300/385464/reports/detailxml.zip)
+Reading S-DE…
+CHECK S-DE: couldn't read the county results.
+      https://elections.delaware.gov/results/enr/GE2026.html: a web page, with nothing to follow on its site
+              link: Download CSV Report → https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election
+      Open https://elections.delaware.gov/results/enr/GE2026.html, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-DE=<that address or file>"
+Reading S-WY…
+CHECK S-WY: couldn't read the county results.
+      https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx: a web page, linking to 8 county results or data pages, tried next
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP_TBC.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Big_Horn_County_General_PbP.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.6%����)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Big_Horn_County_General_PbP_TBC.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Campbell_County_General_PbP.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.6%����)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Campbell_County_General_PbP_TBC.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Carbon_County_General_PbP.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Carbon_County_General_PbP_TBC.pdf: can't find the county, contest, candidate and votes columns (the header is: %PDF-1.4)
+      Open https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-WY=<that address or file>"
+Reading S-MT…
+CHECK S-MT: couldn't read the county results.
+      https://electionresults.mt.gov/ResultsExport.aspx: a web page, linking to 2 county results or data pages, tried next
+      https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Results By County → https://electionresults.mt.gov/ResultsList.aspx
+              link: Potential Recount Races → https://electionresults.mt.gov/ResultsSW.aspx?type=RECOUNT
+              link: Statewide and County Exports → https://electionresults.mt.gov/ResultsExport.aspx
+              link: Federal → https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
+              link: Public Service Commissioner → https://electionresults.mt.gov/resultsSW.aspx?type=PSC&map=CTY
+              link: State Supreme Court → https://electionresults.mt.gov/resultsSW.aspx?type=SCJ&map=CTY
+              link: District Court Judge → https://electionresults.mt.gov/resultsSW.aspx?type=JUD&map=CTY
+      https://electionresults.mt.gov/ResultsList.aspx: a web page, with nothing to follow on its site
+              link: Beaverhead → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=01&map=CTY
+              link: Big Horn → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=02&map=CTY
+              link: Blaine → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=03&map=CTY
+              link: Broadwater → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=04&map=CTY
+              link: Carbon → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=05&map=CTY
+              link: Carter → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=06&map=CTY
+              link: Cascade → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=07&map=CTY
+              link: Chouteau → https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=08&map=CTY
+      https://electionresults.mt.gov/ResultsSW.aspx?type=RECOUNT: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Results By County → https://electionresults.mt.gov/ResultsList.aspx
+              link: Potential Recount Races → https://electionresults.mt.gov/ResultsSW.aspx?type=RECOUNT
+              link: Statewide and County Exports → https://electionresults.mt.gov/ResultsExport.aspx
+              link: Federal → https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
+              link: Public Service Commissioner → https://electionresults.mt.gov/resultsSW.aspx?type=PSC&map=CTY
+              link: State Supreme Court → https://electionresults.mt.gov/resultsSW.aspx?type=SCJ&map=CTY
+              link: District Court Judge → https://electionresults.mt.gov/resultsSW.aspx?type=JUD&map=CTY
+      Open https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-MT=<that address or file>"
+Reading S-NE…
+CHECK S-NE: couldn't read the county results.
+      https://electionresults.nebraska.gov/ResultsExport.aspx: a web page, with nothing to follow on its site
+              link: Unofficial Results General Election Nove → https://electionresults.nebraska.gov/Default.aspx?
+              link: Statewide Export → javascript:__doPostBack('ctl00$MainContent$Statewide','')
+              link: Legislative Export → javascript:__doPostBack('ctl00$MainContent$Legislative','')
+              link: Statewide → https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
+              link: U.S. Congressional District → https://electionresults.nebraska.gov/resultsSW.aspx?type=CG&map=DIST
+              link: Legislature → https://electionresults.nebraska.gov/resultsSW.aspx?type=LD&map=DIST
+              link: Public Service Commission → https://electionresults.nebraska.gov/resultsSW.aspx?type=PS&map=DIST
+              link: State Board of Education → https://electionresults.nebraska.gov/resultsSW.aspx?type=SE&map=DIST
+      https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Unofficial Results General Election Nove → https://electionresults.nebraska.gov/Default.aspx?
+              link: Statewide → https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
+              link: U.S. Congressional District → https://electionresults.nebraska.gov/resultsSW.aspx?type=CG&map=DIST
+              link: Legislature → https://electionresults.nebraska.gov/resultsSW.aspx?type=LD&map=DIST
+              link: Public Service Commission → https://electionresults.nebraska.gov/resultsSW.aspx?type=PS&map=DIST
+              link: State Board of Education → https://electionresults.nebraska.gov/resultsSW.aspx?type=SE&map=DIST
+              link: Board of Regents → https://electionresults.nebraska.gov/resultsSW.aspx?type=RG&map=DIST
+      Open https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-NE=<that address or file>"
+Reading S-NM…
+CHECK S-NM: couldn't read the county results.
+      https://electionresults.sos.nm.gov/ResultsExport.aspx: a web page, with nothing to follow on its site
+      https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY: a web page, linking to 3 county results or data pages, tried next
+      https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY: a web page, with nothing to follow on its site
+              link: Unofficial Results GENERAL 2026 November → https://electionresults.sos.nm.gov/Default.aspx?
+              link: Bernalillo → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=02%20&name=Bernalillo
+              link: Catron → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=28%20&name=Catron
+              link: Chaves → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=04%20&name=Chaves
+              link: Cibola → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=33%20&name=Cibola
+              link: Colfax → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=09%20&name=Colfax
+              link: Curry → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=05%20&name=Curry
+              link: De Baca → https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYSPEC&map=CTY&cty=27%20&name=De%20Baca
+      https://electionresults.sos.nm.gov/resultsCountyLastUpdated.aspx: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnTurnoutExport','')
+              link: Unofficial Results GENERAL 2026 November → https://electionresults.sos.nm.gov/Default.aspx?
+              link: Federal → https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY
+              link: Statewide Offices & Questions → https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
+              link: Legislative → https://electionresults.sos.nm.gov/resultsSW.aspx?type=LGX&map=CTY
+              link: District Judges → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JDX&map=CTY
+              link: Public Education Commission → https://electionresults.sos.nm.gov/resultsSW.aspx?type=ECX&map=CTY
+              link: Metropolitan Court Judges - Bernalillo → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JMC&map=CTY
+      https://electionresults.sos.nm.gov/ResultsSW.aspx?type=RECOUNT: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Unofficial Results GENERAL 2026 November → https://electionresults.sos.nm.gov/Default.aspx?
+              link: Federal → https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY
+              link: Statewide Offices & Questions → https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
+              link: Legislative → https://electionresults.sos.nm.gov/resultsSW.aspx?type=LGX&map=CTY
+              link: District Judges → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JDX&map=CTY
+              link: Public Education Commission → https://electionresults.sos.nm.gov/resultsSW.aspx?type=ECX&map=CTY
+              link: Metropolitan Court Judges - Bernalillo → https://electionresults.sos.nm.gov/resultsSW.aspx?type=JMC&map=CTY
+      Open https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-NM=<that address or file>"
+Reading S-OR…
+CHECK S-OR: couldn't read the county results.
+      https://results.oregonvotes.gov/ResultsExport.aspx: a web page, linking to 2 county results or data pages, tried next
+      https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$ExportLink$lnkbtnSWExport','')
+              link: Results By County → https://results.oregonvotes.gov/ResultsList.aspx
+              link: Statewide and County Exports → https://results.oregonvotes.gov/ResultsExport.aspx
+              link: Federal → https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
+              link: State → https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
+              link: State Senator → https://results.oregonvotes.gov/resultsSW.aspx?type=SENATE&map=CTY
+              link: State Representative → https://results.oregonvotes.gov/resultsSW.aspx?type=HOUSE&map=CTY
+              link: Nonpartisan → https://results.oregonvotes.gov/resultsSW.aspx?type=SWNON&map=CTY
+      https://results.oregonvotes.gov/ResultsList.aspx: a web page, with nothing to follow on its site
+              link: Baker → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY
+              link: Benton → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=13&map=CTY
+              link: Clackamas → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=23&map=CTY
+              link: Clatsop → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=36&map=CTY
+              link: Columbia → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=35&map=CTY
+              link: Coos → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=04&map=CTY
+              link: Crook → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=12&map=CTY
+              link: Curry → https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=02&map=CTY
+      https://results.oregonvotes.gov/resultsSW.aspx?type=MCR&map=CTY: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$ExportLink$lnkbtnSWExport','')
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+              link: rcvresults.multco.us → https://rcvresults.multco.us/
+      Open https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-OR=<that address or file>"
+Reading S-SD…
+CHECK S-SD: couldn't read the county results.
+      https://electionresults.sd.gov/ResultsExport.aspx: a web page, linking to 3 county results or data pages, tried next
+      https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Unofficial Results General Election Nove → https://electionresults.sd.gov/Default.aspx?
+              link: Statewide Races → https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
+              link: Statewide Ballot Questions → https://electionresults.sd.gov/resultsSW.aspx?type=BQ&map=CTY
+              link: Legislative Races → https://electionresults.sd.gov/resultsSW.aspx?type=LEG&map=DIST
+              link: County Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=cty&map=CTY
+              link: Local Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=mun&map=CTY
+              link: Results by County → https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL
+      https://electionresults.sd.gov/resultsList.aspx?type=cty&map=CTY: a web page, with nothing to follow on its site
+              link: Unofficial Results General Election Nove → https://electionresults.sd.gov/Default.aspx?
+              link: Aurora → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=10&name=Aurora
+              link: Beadle → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=04&name=Beadle
+              link: Bennett → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=11&name=Bennett
+              link: Bon Homme → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=12&name=Bon%20Homme
+              link: Brookings → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=06&name=Brookings
+              link: Brown → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=03&name=Brown
+              link: Brule → https://electionresults.sd.gov/resultsSW.aspx?type=CTY&map=CTY&cty=13&name=Brule
+      https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL: a web page, with nothing to follow on its site
+              link: Unofficial Results General Election Nove → https://electionresults.sd.gov/Default.aspx?
+              link: Aurora → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=10&map=CTY
+              link: Beadle → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=04&map=CTY
+              link: Bennett → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=11&map=CTY
+              link: Bon Homme → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=12&map=CTY
+              link: Brookings → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=06&map=CTY
+              link: Brown → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=03&map=CTY
+              link: Brule → https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=13&map=CTY
+      https://electionresults.sd.gov/ResultsSW.aspx?type=RECOUNT: a web page, with nothing to follow on its site
+              link: Export → javascript:__doPostBack('ctl00$NavLinks$lnkbtnSWExport','')
+              link: Unofficial Results General Election Nove → https://electionresults.sd.gov/Default.aspx?
+              link: Statewide Races → https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
+              link: Statewide Ballot Questions → https://electionresults.sd.gov/resultsSW.aspx?type=BQ&map=CTY
+              link: Legislative Races → https://electionresults.sd.gov/resultsSW.aspx?type=LEG&map=DIST
+              link: County Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=cty&map=CTY
+              link: Local Races and Ballot Questions → https://electionresults.sd.gov/resultsList.aspx?type=mun&map=CTY
+              link: Results by County → https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL
+      Open https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-SD=<that address or file>"
+Reading S-MN…
+CHECK S-MN: couldn't read the county results.
+      https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00: a web page, with nothing to follow on its site
+              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
+              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
+              link: Existing Notaries → https://notary.sos.mn.gov/account/login
+              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
+              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
+              link: Results Home → https://electionresults.sos.mn.gov/201
+              link: Subscribe for email updates! → https://public.govdelivery.com/accounts/MNSOS/subscriber/new
+              table: Counties Reporting: 87 of 87 | Counties Complete: 87 | 
+              table: Party | Party | Candidate | Totals | Percent | Graph
+      Open https://electionresults.sos.mn.gov/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-MN=<that address or file>"
+Reading S-TN…
+CHECK S-TN: couldn't read the county results.
+      https://elections.tn.gov/results-by-county: a web page, with nothing to follow on its site
+              link: Results by County → https://elections.tn.gov/results-by-county
+              link: Results by District → https://elections.tn.gov/district/congressional
+              link: County Status Report → https://elections.tn.gov/county-status
+              link: County Status Report → https://elections.tn.gov/county-status
+              table: County Name | Status | Vote Count Includes | Precincts Reporting | Notes
+      https://elections.tn.gov/categories/federal/offices: HTTP 404
+      Open https://elections.tn.gov/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-TN=<that address or file>"
+Reading S-TX…
+CHECK S-TX: couldn't read the county results.
+      https://electionresults.sos.state.tx.us/results.html: a web page, with nothing to follow on its site
+              table: Party | Candidate | Ballots Cast
+              table: Party | Candidate | Ballots Cast
+              table: Party | Candidate | Ballots Cast
+              table: Party | Candidate | Ballots Cast
+      Open https://electionresults.sos.state.tx.us/results.html, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-TX=<that address or file>"
+
+Wrote public/county-results.json (5 races). Look over any CHECK lines, run npm test, then commit and push it.
