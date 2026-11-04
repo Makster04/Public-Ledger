@@ -27,6 +27,7 @@
     "money:update": "node --env-file-if-exists=.dev.vars scripts/update-campaign-money.mjs",
     "counties:update": "node scripts/county-results.mjs",
     "maps:build": "node scripts/build-maps.mjs",
+    "portraits:fetch": "node scripts/fetch-portrait-photos.mjs",
     "efd:import": "node --no-warnings=ExperimentalWarning scripts/import-efd.mjs",
     "check:sources": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/check-sources.mjs",
     "cloudflare:preview": "wrangler dev",
