@@ -89695,16 +89695,16 @@
         "Alabama House of Representatives, District 91, 2010–2018"
       ],
       "camp": {
-        "receipts": 4635925.74,
+        "receipts": 4004222.92,
         "indiv": 2857769.5,
         "itemized": 2447768.1,
         "unitemized": 410001.4,
         "party": 0,
         "pac": 1089097.83,
-        "transfers": 631702.82,
+        "transfers": 0,
         "candidate": 0,
         "loans": 50000,
-        "disbursements": 4293858.11,
+        "disbursements": 3976461.67,
         "cash": 467199.29,
         "debts": 534459.39,
         "cmte": "All of Barry Moore’s authorized committees (FEC candidate totals)",
@@ -89713,15 +89713,19 @@
         "end": "2026-10-14",
         "missing": false,
         "src": "https://www.fec.gov/data/candidate/S6AL00476/?cycle=2026&election_full=false",
-        "note": "Figures from the FEC's candidate totals (all of the candidate's authorized committees) through 2026-10-14 (npm run money:update).",
+        "note": "Figures from the FEC's candidate totals (all of the candidate's authorized committees) through 2026-10-14, leaving out $631,703 moved between those committees (npm run money:update).",
         "other": 7355.59,
         "loansKnown": true,
         "self": 50000,
-        "selfShare": 1.1,
+        "selfShare": 1.2,
         "totalsFrom": "candidate",
         "researchNote": {
           "through": "2026-06-30",
           "text": "Candidate page lists principal committee as BARRY MOORE FOR SENATE (C00954974), but it registered 2026-07-01 and FEC shows no 2025-2026 data for it. All Jan 2025-Jun 2026 activity is in authorized committee C00720375 (BARRY MOORE FOR U.S. SENATE, registered 2019), used here. Also authorized: MOORE FOR AL SENATE REPUBLICAN NOMINEE FUND 2026 (C00903518), not included. Coverage 2025-01-01..2026-06-30. Latest amendments used: APR Q F3A 1986741, PRE-PRIMARY F3A 1999035, PRE-RUNOFF F3A 1999036, JUL Q F3A 1999039. 11C itemization: APR Q 37/39 rows (110662.80 of 124441.80; 2 rows/$13779 missed; page <150 rows so no split re-fetch), PRE-PRIMARY (F3A 1999035) 11C fetched in a later pass: 16/20 rows = 50811.25 of 70639.11 (4 rows/$19827.86 missed; page <150 rows so no split re-fetch), PRE-RUNOFF 36/36 complete, JUL Q 74/74 complete."
+        },
+        "internalTransfers": {
+          "in": 631702.82,
+          "out": 317396.44
         }
       },
       "pac": {
