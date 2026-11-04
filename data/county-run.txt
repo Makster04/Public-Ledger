@@ -8,34 +8,34 @@ NEW   S-GA: 159 of 159 counties, 4,174,461 votes · Jon Ossoff 59.00% · Mike Co
       same counts as the last read
 Reading S-MI…
 CHECK S-MI: couldn't read the county results.
-      https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026: HTTP 403
-      Open https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026, open the county results for United States Senator, copy that page's address (or a download link on it), then: npm run counties:update -- --file "S-MI=<that address>"
+      https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026: the site answered with a bot check (HTTP 403), not the results
+      This site checks for scripts and turned this one away, so use your browser: open https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026, open the county results for United States Senator, then save the page (in Safari: File, Save As, Format "Page Source"; in Chrome: File, Save Page As, "Webpage, HTML Only") and run: npm run counties:update -- --file "S-MI=~/Downloads/<the saved file>"
 Reading S-ID…
 NEW   S-ID: 44 of 44 counties, 710,679 votes · James E. Risch 56.53% · Todd Achilles 33.54% · others 9.93% · 986 of 986 precincts reporting (from https://app.enhancedvoting.com/cdn/results/id/export-nov2026.json)
       same counts as the last read
 Reading S-VA…
-CHECK S-VA: couldn't read the county results.
-      https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json: no ballot item matches the Senate race in localResults (first locality has: Member, United States Senate; Member, House of Representatives (9th District); Mayor (Town of Narrows); Member Town Council - Special (Town of Rich Creek); Member Town Council (Town of Narrows); Member Town Council - Special (Town of Pearisburg); Proposed Constitutional Amendment Question 1; Proposed Constitutional Amendment Question 2)
-      https://enr.elections.virginia.gov/cdn/results/Virginia/export-2026-November-General.json: HTTP 404
-      Open https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General in your browser, save its media export (or its results download) and give that file: npm run counties:update -- --file "S-VA=<the file>"
+NEW   S-VA: 133 of 133 counties, 3,552,671 votes · Mark R. Warner 61.07% · Bert Mizusawa 38.67% · others 0.26% · 2,529 of 2,529 precincts reporting (from https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json)
 Reading S-CO…
 NEW   S-CO: 64 of 64 counties, 2,214,943 votes · John W. Hickenlooper 60.03% · Mark Baisley 35.74% · others 4.23% · 733 of 4,230 precincts reporting (from https://results.enr.clarityelections.com/CO/127407/385659/reports/detailxml.zip)
+      same counts as the last read
 Reading S-IA…
 CHECK S-IA: couldn't read the county results.
       https://results.enr.clarityelections.com/IA/127077/385624/reports/detailxml.zip: HTTP 404
       Open https://electionresults.iowa.gov/IA/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-IA=<that address or file>"
 Reading S-KS…
 CHECK S-KS: couldn't read the county results.
-      https://results.enr.clarityelections.com/KS/ (list of elections): https://results.enr.clarityelections.com/KS/elections.json?v=1: no November 3, 2026 election in the list (it has: KS 609   55188 April 2015 City/School/Ext. Dust. Gen Electio)
+      https://results.enr.clarityelections.com/KS/ (list of elections): https://results.enr.clarityelections.com/KS/elections.json: no November 3, 2026 election in the list (newest: KS 609   55188 April 2015 City/School/Ext. Dust. Gen Election 4/7/2015)
       Open https://results.enr.clarityelections.com/KS/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-KS=<that address or file>"
 Reading S-WV…
 CHECK S-WV: couldn't read the county results.
-      https://results.enr.clarityelections.com/WV/ (list of elections): https://results.enr.clarityelections.com/WV/elections.json?v=1: no November 3, 2026 election in the list (it has: nothing that reads as an election)
+      https://results.enr.clarityelections.com/WV/ (list of elections): https://results.enr.clarityelections.com/WV/elections.json: no November 3, 2026 election in the list (newest: nothing that reads as an election)
       Open https://results.enr.clarityelections.com/WV/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-WV=<that address or file>"
 Reading S-SC…
 NEW   S-SC: 46 of 46 counties, 2,038,780 votes · Darline Graham 46.65% · Annie Andrews 51.13% · others 2.22% · 2,312 of 2,312 precincts reporting (from https://www.enr-scvotes.org/SC/127300/385464/reports/detailxml.zip)
+      same counts as the last read
 Reading S-DE…
 CHECK S-DE: couldn't read the county results.
+      https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000: can't find the county, contest, candidate and votes columns (the header is: election_name | office | candidate_name | party | machine_votes | absentee_votes | early_votes | total_votes | percent_votes | electiondate | data_as_of)
       https://elections.delaware.gov/results/enr/GE2026.html: a web page, with nothing to follow on its site
               link: Download CSV Report → https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election
       Open https://elections.delaware.gov/results/enr/GE2026.html, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-DE=<that address or file>"
@@ -208,26 +208,24 @@ CHECK S-SD: couldn't read the county results.
       Open https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-SD=<that address or file>"
 Reading S-MN…
 CHECK S-MN: couldn't read the county results.
-      https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00: a web page, with nothing to follow on its site
-              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
-              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
-              link: Existing Notaries → https://notary.sos.mn.gov/account/login
-              link: Election Results → https://www.sos.mn.gov/elections-voting/election-results
-              link: Find County Election Office → https://www.sos.mn.gov/elections-voting/find-county-election-office/
-              link: Results Home → https://electionresults.sos.mn.gov/201
-              link: Subscribe for email updates! → https://public.govdelivery.com/accounts/MNSOS/subscriber/new
-              table: Counties Reporting: 87 of 87 | Counties Complete: 87 | 
-              table: Party | Party | Candidate | Totals | Percent | Graph
-      Open https://electionresults.sos.mn.gov/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-MN=<that address or file>"
+      https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00: the site answered with a bot check (HTTP 200), not the results
+      This site checks for scripts and turned this one away, so use your browser: open https://electionresults.sos.mn.gov/, open U.S. Senate and its results by county, then save the page (in Safari: File, Save As, Format "Page Source"; in Chrome: File, Save Page As, "Webpage, HTML Only") and run: npm run counties:update -- --file "S-MN=~/Downloads/<the saved file>"
 Reading S-TN…
 CHECK S-TN: couldn't read the county results.
+      https://elections.tn.gov/county-breakdown/United%20States%20Senate: a web page, linking to 1 county results or data page, tried next
+      https://elections.tn.gov/county-breakdown/U.S.%20Senate: a web page, with nothing to follow on its site
+              link: Results by County → https://elections.tn.gov/results-by-county
+              link: Results by District → https://elections.tn.gov/district/congressional
+      https://elections.tn.gov/county-breakdown/US%20Senate: a web page, with nothing to follow on its site
+              link: Results by County → https://elections.tn.gov/results-by-county
+              link: Results by District → https://elections.tn.gov/district/congressional
+      https://elections.tn.gov/categories/federal/offices: HTTP 404
       https://elections.tn.gov/results-by-county: a web page, with nothing to follow on its site
               link: Results by County → https://elections.tn.gov/results-by-county
               link: Results by District → https://elections.tn.gov/district/congressional
               link: County Status Report → https://elections.tn.gov/county-status
               link: County Status Report → https://elections.tn.gov/county-status
               table: County Name | Status | Vote Count Includes | Precincts Reporting | Notes
-      https://elections.tn.gov/categories/federal/offices: HTTP 404
       Open https://elections.tn.gov/, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-TN=<that address or file>"
 Reading S-TX…
 CHECK S-TX: couldn't read the county results.
@@ -238,4 +236,4 @@ CHECK S-TX: couldn't read the county results.
               table: Party | Candidate | Ballots Cast
       Open https://electionresults.sos.state.tx.us/results.html, copy the address of the county results file (or save the file), then: npm run counties:update -- --file "S-TX=<that address or file>"
 
-Wrote public/county-results.json (5 races). Look over any CHECK lines, run npm test, then commit and push it.
+Wrote public/county-results.json (6 races). Look over any CHECK lines, run npm test, then commit and push it.

@@ -1,4 +1,4 @@
-County results probe, 2026-11-04T22:45:01.301Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-04T22:51:59.733Z: what each state's results site serves, for writing its reader.
 
 AL
   https://www2.alabamavotes.gov/electionnight/ → HTTP 200, text/html, 0 KB
@@ -37,6 +37,8 @@ AR
       data addresses in its scripts: /state-capitol · https://www.sos.arkansas.gov/state-capitol/for-business-visitors · https://www.sos.arkansas.gov/state-capitol/for-tourists-educators · https://www.sos.arkansas.gov/state-capitol/for-events · https://www.sos.arkansas.gov/state-capitol/about-the-capitol · https://www.sos.arkansas.gov/state-capitol/arkansas-state-capitol-police · https://www.pinterest.com/ARStateCapitol/ · https://www.sos.arkansas.gov/elections/research/election-results · /education/capitol-field-trips · /state-capitol/for-business-visitors · /state-capitol/for-tourists-educators · /state-capitol/for-events · /state-capitol/about-the-capitol · https://www.sos.arkansas.gov/state-capitol/about-the-capitol/open-call-for-exhibit-proposals · /state-capitol/arkansas-state-capitol-police · sub-hero-capitol · data-slick-index
 
 DE
+  https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000 → HTTP 200, text/csv, 22 KB
+      starts: "election_name","office","candidate_name","party","machine_votes","absentee_votes","early_votes","total_votes","percent_votes","electiondate","data_as_of" "2026 General Election","U.S. Senator","CHRIS COONS","Democratic Party","140652","158
   https://elections.delaware.gov/results/enr/GE2026.html → HTTP 200, text/html, 49 KB
       title: Results - Department of Elections - State of Delaware · 6,024 characters of text
       link: Download CSV Report → https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election
@@ -63,6 +65,7 @@ DE
       link: (no text) → https://elections.delaware.gov/elections/resultsarchive/elect86/elect86_election_index.html
       table: Link/QR | Category | Description
       data addresses in its scripts: /results/enr/GE2026.html · /results/index.html · map-data · https://elections.delaware.gov/elections/resultsarchive/elect75/elect75_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect79/elect79_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect81/elect81_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect83/elect83_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect86/elect86_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect96/1996_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_general/elect98_general_edrd.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_general/elect98_general_office.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_edrd.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_grid.html · https://elections.delaware.gov/elections/resultsarchive/elect98/elect98_primary/elect98_primary_office.html · https://elections.delaware.gov/elections/resultsarchive/elect98/1998_election_index.html · https://elections.delaware.gov/elections/resultsarchive/elect00/2000gencounty.html · data-bs-no-jquery
+  saved https://elections.delaware.gov/results/enr/GE2026.html (HTTP 200) as data/county-samples/DE-1.html
 
 FL
   https://results.elections.myflorida.com/ → HTTP 200, text/html, 2 KB
@@ -79,7 +82,9 @@ IA
       data addresses in its scripts: IDBDatabase · __nghData__ · NoDataFromResolver · routerOutletData · elections.json?v=
   https://sos.iowa.gov/elections/results/ → HTTP 403, text/html, 5 KB
       title: Just a moment... · 58 characters of text
-      data addresses in its scripts: /elections/results/?__cf_chl_tk=jjdqwiUTcovNXRirzYZEyTTcO_uyN_DT0rTMDaz8v.g-1793832306-1.0.1.1-mJXDUBDf3pgVs1PX8yZYbPDpAW1diWy0WlmlJGXHA68 · /elections/results/?__cf_chl_f_tk=jjdqwiUTcovNXRirzYZEyTTcO_uyN_DT0rTMDaz8v.g-1793832306-1.0.1.1-mJXDUBDf3pgVs1PX8yZYbPDpAW1diWy0WlmlJGXHA68 · /elections/results/?__cf_chl_rt_tk=jjdqwiUTcovNXRirzYZEyTTcO_uyN_DT0rTMDaz8v.g-1793832306-1.0.1.1-mJXDUBDf3pgVs1PX8yZYbPDpAW1diWy0WlmlJGXHA68
+      data addresses in its scripts: /elections/results/?__cf_chl_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE · /elections/results/?__cf_chl_f_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE · /elections/results/?__cf_chl_rt_tk=xzu8T7rfqXm2iCDHYD53EZaBUKFjBBK_KbswbQEfYn0-1793832724-1.0.1.1-AvD34eyGA25fb6z7JSrOfjJs53haoMXT5ctO.Z3mINE
+  saved https://results.enr.clarityelections.com/IA/elections.json (HTTP 200) as data/county-samples/IA-1.json
+  saved https://results.enr.clarityelections.com/IA/127077/385624/json/en/electionsettings.json (HTTP 200) as data/county-samples/IA-2.json
 
 IL
   https://www.elections.il.gov/ → HTTP 200, text/html, 76 KB
@@ -135,6 +140,7 @@ KS
   https://results.enr.clarityelections.com/KS/ → HTTP 200, text/html, 3 KB
       title: List Elections · 247 characters of text
       data addresses in its scripts: https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js · elections.json
+  saved https://results.enr.clarityelections.com/KS/elections.json (HTTP 200) as data/county-samples/KS-1.json
 
 KY
   https://elect.ky.gov/results/ → HTTP 200 (now https://elect.ky.gov/results/Pages/default.aspx), text/html, 104 KB
@@ -178,8 +184,8 @@ MA
       table: Year | Office | District | Stage | Candidates
       table: 30,079 | elections
       data addresses in its scripts: search_results_table · ui-controlgroup-data · data-date · data-month · data-year · data-event · data-handler · data-highcharts-chart · data-style · data-z-index · postProcessData · dataLabel · dataLabelPath · dataLabelUpper · highcharts-data-label-hidden · beforeGetHoverData
-  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 0 KB
-      title: (none) · 0 characters of text
+  https://www.sec.state.ma.us/divisions/elections/ → HTTP 200, text/html, 1 KB
+      title: (none) · 82 characters of text
 
 ME
   https://www.maine.gov/sos/cec/elec/results/ → HTTP 404, text/html, 92 KB
@@ -210,10 +216,10 @@ MI
       title: Just a moment... · 58 characters of text
 
 MN
-  https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00 → HTTP 200 (now https://validate.perfdrive.com/?ssa=f8d4054e-4228-4606-a5eb-63a56e5bc899&ssb=50779274704&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2FResults%2FIndex%3FErsElectionId%3D201%26officeInElectionIdList%3D38485%26officeInElectionIdList%3D-1%26scenario%3DUSSenate%26electionDate%3D11%252F03%252F2026%252000%253A00%253A00&ssi=fc146ba7-cxg2-4e73-af9b-531f67179100&ssk=botmanager_support@radware.com&ssm=16717402692809175104933055862721&ssn=0a813ac97494be64c9a4c82334ce0fd37f9ada90e8e0-a210-49f1-a3f776&sso=0ca3301c-fa9aae8ffaa0c3698fa0fd0f6d0921f36b5962e62eaa0169&ssp=67822892681793847671179383382314940&ssq=87616003231293282699832312128849697998287&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMGRhOTBlOGUwLWEyMTAtNDlmMS1hMDFjLWZhOWFhZThmZmFhMDEtMTc5MzgzMjMxMjIyNTAtMDA1ZTE2MzY3M2U0NTkwMmIxNDEwIiwidXpteCI6IjdmYzAwMGMwOGJmZDIwLWFlNTctNDlhYy1hMjU2LTMzOTBjYjc1N2NlOTEtMTc5MzgzMjMxMjIyNTAtMDBjZTRhYzI2MWUyMzFjYzYxNDEwIn0=), text/html, 15 KB
+  https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00 → HTTP 200 (now https://validate.perfdrive.com/?ssa=f50cf5f0-ce04-4c30-be05-951a60ba69c9&ssb=82609241221&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2FResults%2FIndex%3FErsElectionId%3D201%26officeInElectionIdList%3D38485%26officeInElectionIdList%3D-1%26scenario%3DUSSenate%26electionDate%3D11%252F03%252F2026%252000%253A00%253A00&ssi=1eab56c8-cxg2-4672-9ae5-a4fd405130dd&ssk=botmanager_support@radware.com&ssm=24311260451279514108288153489742&ssn=e833e9fd5d92c92c72bdd6e8159d234eaf42963867d9-9a04-4395-8b91c6&sso=969c4301-005695371677756ede629aa919f345aa65d043eb9a877cf4&ssp=26736729721793897789179380108471399&ssq=71085843273047930361332730789663145052619&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwYTJlYmY1ZDYtZDczZi00YjNlLTg0NzgtZWY2YjM2NTNlMzEzMS0xNzkzODMyNzMwNTg1MC0wMGM3NzUyMGVhZTc0ZmQ0NzFmMTAiLCJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMDk2Mzg2N2Q5LTlhMDQtNDM5NS04MzAxLTAwNTY5NTM3MTY3NzEtMTc5MzgzMjczMDU4NjAtMDA1NDM4NDI1NTVjZjUwZTAwNjEwIn0=), text/html, 15 KB
       title: Radware Captcha Page · 854 characters of text
       data addresses in its scripts: https://hcaptcha.com/1/api.js?recaptchacompat=off
-  https://electionresults.sos.mn.gov/ → HTTP 200 (now https://validate.perfdrive.com/?ssa=57bdc10a-8569-4df1-aee2-9e3437edacb7&ssb=55681265611&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2F&ssi=4949eaa1-cxg2-4e3d-a75c-0a506d760778&ssk=botmanager_support@radware.com&ssm=79386826988468787107889509639943&ssn=a6bce8eb455f9a17a456e8dde9bf73314390ea7ecc3f-3564-4cb0-8c3937&sso=b82eef68-a7275d0f5aaf681d66423876f70b1918715cc1e2686a66d9&ssp=18212772441793869143179389505525267&ssq=20036733231335255060432313359066740902760&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMGVhN2VjYzNmLTM1NjQtNGNiMC04ZjY4LWE3Mjc1ZDBmNWFhZjEtMTc5MzgzMjMxMzA1NTAtMDA1MGI4ZDg2ZDBjNzVmOGI0MjEwIiwidXpteCI6IjdmYzAwMDQzMmQyOTIwLTcyNTQtNDdmNy1hNGZhLTVlZjc1ODk2MzhiYzEtMTc5MzgzMjMxMzA1NTAtMDBjNmY5ZDg0MDc1MTI5ZDIyYzEwIn0=), text/html, 15 KB
+  https://electionresults.sos.mn.gov/ → HTTP 200 (now https://validate.perfdrive.com/?ssa=f5a45a9f-181e-49dc-8d21-51385fe707e1&ssb=82609241221&ssc=https%3A%2F%2Felectionresults.sos.mn.gov%2F&ssi=b748e0c5-cxg2-43d7-8e9f-c4dc7297c03f&ssk=botmanager_support@radware.com&ssm=24311260451279514108288153489742&ssn=e833e9fd45b7777beb856a34b27d234eaf427aacbc25-b079-4d76-8b91c6&sso=969c49bf-3e6b06212dd0756ede6285033a76a25d9d87603d9a877cf4&ssp=26736729721793897789179380108471399&ssq=71085843273047930361332730789663145052619&ssr=MTYxLjI1My4yLjI0Mw==&sst=Mozilla/5.0%20(compatible;%20PublicLedger/1.0;%20county%20results)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwOTMwYzRmNDAtOThhYy00NDM0LThjYjctNmViZDMzMGE0ZGY4MS0xNzkzODMyNzMwODk5MC0wMGMwNWY1MjhkYTkwODFmY2NkMTAiLCJyZCI6Im1uLmdvdiIsIl9fdXptZiI6IjdmOTAwMDdhYWNiYzI1LWIwNzktNGQ3Ni04OWJmLTNlNmIwNjIxMmRkMDEtMTc5MzgzMjczMDg5OTAtMDA1ZDQyYjQxODI5NjE5MTY0OTEwIn0=), text/html, 15 KB
       title: Radware Captcha Page · 691 characters of text
       data addresses in its scripts: https://hcaptcha.com/1/api.js?recaptchacompat=off
   https://electionresultsfiles.sos.mn.gov/20261103/ → HTTP 403, text/html, 1 KB
@@ -296,6 +302,8 @@ MT
       title: (none) · 819 characters of text
       table:  | Firewall Event Triggered
       data addresses in its scripts: data-api · /api/event · data-domain
+  saved https://electionresults.mt.gov/ResultsSW.aspx?type=CTYALL&cty=01&map=CTY (HTTP 200) as data/county-samples/MT-1.html
+  saved https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/MT-2.html
 
 NE
   https://electionresults.nebraska.gov/ResultsExport.aspx → HTTP 200, text/html, 44 KB
@@ -358,6 +366,8 @@ NE
       link: 2026 Elections → https://sos.nebraska.gov/elections
       link: Disposition Form → https://ne.accessgov.com/sos/Forms/Page/sos/sos-records-disposition-report
       data addresses in its scripts: hasDataAttrs · processData
+  saved https://electionresults.nebraska.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=01 (HTTP 200) as data/county-samples/NE-1.html
+  saved https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY (HTTP 200) as data/county-samples/NE-2.html
 
 NH
   https://www.sos.nh.gov/elections/results → HTTP 404, text/html, 2877 KB
@@ -467,6 +477,8 @@ NM
       link: 2025 Election Results → https://www.sos.nm.gov/sos-archive/election-results-archive/2025-election-results/
       link: 2024 Election Results → https://www.sos.nm.gov/sos-archive/election-results-archive/2024-election-results/
       data addresses in its scripts: https://www.sos.nm.gov/feed/ · https://www.sos.nm.gov/comments/feed/ · https://www.sos.nm.gov/voting-and-elections/election-results/ · dataLayer · https://hc5modlw0l.execute-api.us-west-2.amazonaws.com/qa/js/sos-rf.js?v=08182021 · https://www.sos.nm.gov/voting-and-elections/data-and-maps/voter-data-information/ · menu-election-results-archive-container · menu-election-results-archive · https://www.sos.nm.gov/voting-and-elections/election-results/2026-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2025-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2024-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2023-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2022-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2021-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2020-election-results/ · https://www.sos.nm.gov/sos-archive/election-results-archive/2019-election-results/ · hasDataAttrs · data-camelCase
+  saved https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo (HTTP 200) as data/county-samples/NM-1.html
+  saved https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/NM-2.html
 
 OH
   https://liveresults.ohiosos.gov/ → HTTP 200, text/html, 66 KB
@@ -481,7 +493,7 @@ OH
       data addresses in its scripts: /Content/browser-icons/manifest.json · ResultsDiv · ResultsByCountyHeader · MyResultsHeader · myResultsHeader-template · ResultsContainer · results-template · ResultsNoStatsContainer · results-nostats-template · AllResults · AllResults-template · xmlResultsModal · resultsDiscalimer · myResultsSelectionDiv · checkboxlbl--myresults · contestResultsRow · /Api/v1/Contest/getTabs
   https://www.ohiosos.gov/elections/election-results-and-data/ → HTTP 403, text/html, 1255 KB
       title: Ohio Secretary of State's Office Website Maintenance · 1,055 characters of text
-      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=6AwtA_YaFZMSXlaRMOiWbTZOn7NjK.Xq4PfEs0Ant90-1793832324-1.0.1.1-FgEwYvY._J9_c_2bQk0ISnqxbG80D358TFOq0E7edLM · /elections/election-results-and-data/?__cf_chl_f_tk=6AwtA_YaFZMSXlaRMOiWbTZOn7NjK.Xq4PfEs0Ant90-1793832324-1.0.1.1-FgEwYvY._J9_c_2bQk0ISnqxbG80D358TFOq0E7edLM · /elections/election-results-and-data/?__cf_chl_rt_tk=6AwtA_YaFZMSXlaRMOiWbTZOn7NjK.Xq4PfEs0Ant90-1793832324-1.0.1.1-FgEwYvY._J9_c_2bQk0ISnqxbG80D358TFOq0E7edLM · data-cfemail · data-cf-beacon
+      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · /elections/election-results-and-data/?__cf_chl_f_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · /elections/election-results-and-data/?__cf_chl_rt_tk=bXisDmEq9Es6SKbk.zODbiQaXvypS7R0IOPyjokk2Ts-1793832741-1.0.1.1-j7bqUrnB_BPjQXKWq9nb3O.F1.ZIhenarISstxLQe30 · data-cfemail · data-cf-beacon
 
 OK
   https://results.okelections.us/ → HTTP 403, text/html, 1 KB
@@ -559,6 +571,8 @@ OR
       link: January 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-January.pdf
       link: November 2025 → https://sos.oregon.gov/elections/Documents/Registration/2025-november.pdf
       data addresses in its scripts: https://sos.oregon.gov/elections/pages/historical-data.aspx · dataLayer · /elections/_layouts/15/OID.SharePoint.StarterTemplate/scripts/data-tables-web-part.js · search-results.aspx · ./historical-data.aspx · /elections/pages/historical-data.aspx · MenuData · userTimeZoneData · webTimeZoneData · /elections/Pages/historical-data.aspx · or-dataTablesWebPart · data-lang · _layouts/15/OID.SharePoint.StarterTemplate/scripts/data.txt · datatableswebpart_pagetotalrange · datatableswebpart_pagetotal · datatableswebpart_filteredfrom · FilterData
+  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-1.html
+  saved https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/OR-2.html
 
 RI
   https://electionresults.ri.gov/ → HTTP 200 (now https://electionresults.ri.gov/results/public/rhodeisland), text/html, 9 KB
@@ -636,43 +650,23 @@ SD
       link: 2026 Weekly Absentee Numbers → https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026-Election-Absentee-Data.aspx
       link: Election Equipment, Electronic Pollbooks, and Vote → https://sdsos.gov/elections-voting/upcoming-elections/general-information/information-on-election-equipment.aspx
       data addresses in its scripts: /elections-voting/upcoming-elections/general-information/2026-Election-Absentee-Data.aspx · /Business-Services/database-downloads.aspx · https://electionresults.sd.gov/Default.aspx · county_map_data_table · distrit_map_data_table
+  saved https://electionresults.sd.gov/ResultsSW.aspx?type=CTYALL&cty=10&map=CTY (HTTP 200) as data/county-samples/SD-1.html
+  saved https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY (HTTP 200) as data/county-samples/SD-2.html
 
 TN
-  https://elections.tn.gov/results-by-county → HTTP 200, text/html, 82 KB
-      title: Results by County | Election Night Reporting Dashboard · 8,872 characters of text
-      link: Results by County → https://elections.tn.gov/results-by-county
-      link: Results by District → https://elections.tn.gov/district/congressional
-      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
-      link: County Status Report → https://elections.tn.gov/county-status
-      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
-      table: County Name | Status | Vote Count Includes | Precincts Reporting | Notes
-      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · data-dtconfig · HISTORY_API_EVENT · datadog · QuantumMetricAPI · adobeDataLayer · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04 · data-name
-  https://elections.tn.gov/categories/federal/offices → HTTP 404, text/html, 25 KB
-      title: | Election Night Reporting Dashboard · 665 characters of text
-      link: Results by County → https://elections.tn.gov/results-by-county
-      link: Results by District → https://elections.tn.gov/district/congressional
-      link: General Assembly → https://elections.tn.gov/categories/general-assembly/offices
-      link: (no text) → https://sos.tn.gov/elections/services/download-the-govotetn-app
-      data addresses in its scripts: Capitol · /results-by-county · search-results · /search-results · data-dtconfig · HISTORY_API_EVENT · datadog · QuantumMetricAPI · adobeDataLayer · exports · __data__ · feeddefdbe85fd8d3cd94701 · feeddefdbe85fd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3ce6550da63603 · feeddefdd0a2fdae6bfd8d3cf16913d948018c2d04 · data-name
-  https://elections.tn.gov/ → HTTP 202 (now https://elections.tn.gov/categories/governor/offices), text/html, 0 KB
+  https://elections.tn.gov/county-breakdown/United%20States%20Senate → HTTP 202, text/html, 0 KB
       starts: 
-  https://sos.tn.gov/elections/results → HTTP 200, text/html, 258 KB
-      title: Historical Election Results | Tennessee Secretary of State · 21,631 characters of text
-      link: View live unofficial election results here. → https://elections.tn.gov/
-      link: Results by Precinct Spreadsheet → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806AllbyPrecinct.xlsx
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806RepublicanPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806RepublicanPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806DemocraticPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806DemocraticPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806StateGeneralbyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806StateGeneralbyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806JudicialRetentionbyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260806JudicialRetentionbyPrecinct.pdf
-      link: ​By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_RepublicanPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_RepublicanPrimarybyPrecinct.pdf
-      link: By County → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_DemocraticPrimarybyCounty.pdf
-      link: By Precinct → https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20260506_DemocraticPrimarybyPrecinct.pdf
-      data addresses in its scripts: http://sos.tn.gov/elections/results · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108TotalResults.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108ResultsbyCounty.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20221108ResultsbyPrecinct.pdf · https://sos-prod.tnsosgovfiles.com/s3fs-public/document/20220804ResultsbyPrecinct.xlsx · https://sos-tn-gov-files.tnsosfiles.com/March2020Results.xlsx · e7341cbce8f5d5566213a11feedfc57d7 · https://sos-tn-gov-files.tnsosfiles.com/180802_ResultsbyPrecinct.xlsx · https://sos-tn-gov-files.s3.amazonaws.com/March2016Results.xlsx · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofvote.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofsub.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012_certofasc.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/2012-TNcertvote.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USPresidentCountyTotals.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USPresidentPrecinctTotals.pdf · https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2012-11/USSenateCountyTotals.pdf
+  https://elections.tn.gov/county-breakdown/U.S.%20Senate → HTTP 202, text/html, 0 KB
+      starts: 
+  https://elections.tn.gov/county-breakdown/US%20Senate → HTTP 202, text/html, 0 KB
+      starts: 
+  https://elections.tn.gov/categories/federal/offices → HTTP 202, text/html, 0 KB
+      starts: 
+  https://elections.tn.gov/ → HTTP 202, text/html, 0 KB
+      starts: 
+  https://sos.tn.gov/elections/results → HTTP 202, text/html, 0 KB
+      starts: 
+  saved https://elections.tn.gov/county-breakdown/Governor (HTTP 202) as data/county-samples/TN-1.html
 
 TX
   https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 276 KB
@@ -686,46 +680,6 @@ TX
   https://results.texas-election.com/ → HTTP 200, text/html, 2 KB
       title: ::Texas Election Night Results:: · 32 characters of text
       data addresses in its scripts: https://fonts.googleapis.com/css?family=Lato&display=swap · scrollData · loadeddata · loadedmetadata · dataavailable · datasetchanged · datasetcomplete · metadata · hasDataAttrs · data-slick-index · data-lazy · data-srcset · data-sizes
-
-VA
-  https://enr.elections.virginia.gov/cdn/results/virginia/export-2026-November-General.json → HTTP 200, application/octet-stream, 26330 KB
-      JSON that does not read (cut off?)
-  https://enr.elections.virginia.gov/cdn/results/Virginia/export-2026-November-General.json → HTTP 404, application/xml, 0 KB
-      title: (none) · 128 characters of text
-  https://enr.elections.virginia.gov/ → HTTP 200 (now https://www.elections.virginia.gov/results/), text/html, 37 KB
-      title: Virginia Dept. of Elections: Results · 6,523 characters of text
-      link: Results/Reports → https://www.elections.virginia.gov/resultsreports/
-      link: Registration Statistics & Polling Places → https://www.elections.virginia.gov/resultsreports/registration-statistics/
-      link: Registration/Turnout Reports → https://www.elections.virginia.gov/resultsreports/registrationturnout-statistics/
-      link: Election Results → https://www.elections.virginia.gov/resultsreports/election-results/
-      link: Post-Election Reporting → https://www.elections.virginia.gov/resultsreports/post-election-analysis/
-      link: Voter Registration List Maintenance → https://www.elections.virginia.gov/resultsreports/maintenance-reports/
-      link: Election Security → https://www.elections.virginia.gov/resultsreports/election-security/
-      link: Campaign Finance Reports → https://www.elections.virginia.gov/candidatepac-info/reporting/
-      link: Results → https://www.elections.virginia.gov/results/
-      link: March 5, 2024 Democratic Party Presidential Primar → https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Democratic_Primary
-      link: March 5, 2024 Republican Party Presidential Primar → https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Republican_Primary
-      link: November 3, 2026 General and Special Elections → https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General
-      link: April 21, 2026 Special Elections → https://enr.elections.virginia.gov/results/public/virginia/2026-April-21-Special
-      link: August 4, 2026 Democratic Primary → https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Democratic-Primary
-      data addresses in its scripts: /resultsreports/ · /resultsreports/registration-statistics/ · /resultsreports/registrationturnout-statistics/ · /resultsreports/election-results/ · /resultsreports/post-election-analysis/ · /resultsreports/maintenance-reports/ · /resultsreports/election-security/ · /results/ · https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Democratic_Primary · https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Republican_Primary · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General · https://enr.elections.virginia.gov/results/public/virginia/2026-April-21-Special · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Democratic-Primary · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Republican-Primary · https://enr.elections.virginia.gov/results/public/virginia/2026-April-14-Special · https://enr.elections.virginia.gov/results/public/virginia/2026-March-17-Special · data-bs-no-jquery
-  https://www.elections.virginia.gov/resultsreports/election-results/ → HTTP 200, text/html, 40 KB
-      title: Virginia Dept. of Elections: Election Results · 6,942 characters of text
-      link: Results/Reports → https://www.elections.virginia.gov/resultsreports/
-      link: Registration Statistics & Polling Places → https://www.elections.virginia.gov/resultsreports/registration-statistics/
-      link: Registration/Turnout Reports → https://www.elections.virginia.gov/resultsreports/registrationturnout-statistics/
-      link: Election Results → https://www.elections.virginia.gov/resultsreports/election-results/
-      link: Post-Election Reporting → https://www.elections.virginia.gov/resultsreports/post-election-analysis/
-      link: Voter Registration List Maintenance → https://www.elections.virginia.gov/resultsreports/maintenance-reports/
-      link: Election Security → https://www.elections.virginia.gov/resultsreports/election-security/
-      link: Campaign Finance Reports → https://www.elections.virginia.gov/candidatepac-info/reporting/
-      link: March 5, 2024 Democratic Party Presidential Primar → https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Democratic_Primary
-      link: March 5, 2024 Republican Party Presidential Primar → https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Republican_Primary
-      link: November 3, 2026 General and Special Elections → https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General
-      link: April 21, 2026 Special Elections → https://enr.elections.virginia.gov/results/public/virginia/2026-April-21-Special
-      link: August 4, 2026 Democratic Primary → https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Democratic-Primary
-      link: August 4, 2026 Republican Primary → https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Republican-Primary
-      data addresses in its scripts: /resultsreports/ · /resultsreports/registration-statistics/ · /resultsreports/registrationturnout-statistics/ · /resultsreports/election-results/ · /resultsreports/post-election-analysis/ · /resultsreports/maintenance-reports/ · /resultsreports/election-security/ · https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Democratic_Primary · https://enr.elections.virginia.gov/results/public/Virginia/2024_March_Republican_Primary · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General · https://enr.elections.virginia.gov/results/public/virginia/2026-April-21-Special · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Democratic-Primary · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Republican-Primary · https://enr.elections.virginia.gov/results/public/virginia/2026-April-14-Special · https://enr.elections.virginia.gov/results/public/virginia/2026-March-17-Special · https://enr.elections.virginia.gov/results/public/virginia/elections/2026-March-10-Special · data-bs-no-jquery
 
 WV
   https://results.enr.clarityelections.com/WV/ → HTTP 200, text/html, 4 KB
@@ -748,6 +702,7 @@ WV
       link: Ordering and Payment → https://sos.wv.gov/licensing/general-information/ordering-and-payment-licensing-services
       link: Initial Application → https://sos.wv.gov/media/344/download?inline=
       data addresses in its scripts: views-exposed-form-search-api-basic-block-1 · edit-submit-search-api-basic · https://apps.wv.gov/SOS/BulkData · https://www.fec.gov/data · /elections/election-data/historical-election-results-and-turnout · /elections/election-data/historical-voter-turnout · /elections/election-data/west-virginia-voter-registration-totals · hasDataAttrs · processData · data-once
+  saved https://results.enr.clarityelections.com/WV/elections.json (HTTP 200) as data/county-samples/WV-1.json
 
 WY
   https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx → HTTP 200, text/html, 53 KB
@@ -786,3 +741,4 @@ WY
       link: By Legislative District → https://sos.wyo.gov/Elections/Docs/2026/2026_Districts_and_Precincts_by_Legislative_District.pdf
       link: General Election Candidates Roster (PDF file) Gene → https://sos.wyo.gov/Elections/Docs/2026/2026_WY_General_Election_Candidates.pdf
       data addresses in its scripts: dataLayer · https://sos.wyo.gov/Elections/ElectionResults.aspx · /Elections/Docs/2026/2026GeneralResults.aspx · /Elections/Docs/2026/2026PrimaryResults.aspx · datalist
+  saved https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx (HTTP 200) as data/county-samples/WY-1.html
