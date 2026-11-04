@@ -13,6 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -181,6 +182,30 @@ const candName=id=>IE.cands[id]||id;
 const flag=(t,why)=>`<span class="flag" ${why?`data-tip="${esc(why)}" tabindex="0"`:''}>${t}</span>`;
 function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))}
 function rivalsOf(s){const r=raceOf(s);return r?r.keys.filter(k=>k!==s.id).map(k=>byId[k]):[]}
+// ---------- November 3, 2026 results (public/results.js) ----------
+const resultChip=o=>o?`<span class="chip ${OUTCOME[o].cls}">${OUTCOME[o].label}</span>`:'';
+const decidedChip=o=>o==='pending'?'':resultChip(o);
+const resultSrc=x=>x&&x.u?`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a>`:'';
+const RESULTS_ASOF=()=>DATA.election?`unofficial results as of ${fmtDate(DATA.election.asof)}`:'';
+// Their 2026 line ("Seeking a 6th term") in the past tense once their race is decided.
+const termNow=s=>{const r=raceOf(s);return termAfter(s.term,r?outcomeOf(r,s.id):null)};
+// One profiled person's result: their outcome, and a line saying how the race was decided and what it means for the seat.
+function personResult(s){
+  const race=raceOf(s),r=raceResult(race);if(!r)return null;
+  const o=outcomeOf(race,s.id),w=r.winner&&byId[r.winner];
+  const to=o==='lost'?`to ${w?w.name:'another candidate'}`:'';
+  const line=parts=>parts.filter(Boolean).map(x=>x.replace(/\.$/,'')).join('. ')+'.';
+  const rest=[r.how||(r.decided?'Race called':''),seatNote(race,s.id,{incumbent:race.inc===s.id,winner:w&&w.name})];
+  // text: the whole sentence ("Lost to Jon Ossoff. Called by …"); after: what follows the Won, Lost or Not called yet label.
+  return {o,src:r.src,text:line([OUTCOME[o].label+(to?' '+to:''),...rest]),after:line([to,...rest])};
+}
+// The result above a race's table. who(key) gives {name, party} for a person ID or a toss-up nominee's FEC ID.
+function resultBanner(race,who){
+  const r=raceResult(race);if(!r)return '';
+  const person=k=>{const x=k&&who(k);return x?`<b>${esc(x.name)}</b> <span class="chip ${x.party}">${x.party}</span>`:''};
+  return r.decided?`<div class="result won"><span class="chip good">Won</span> ${person(r.winner)}<p class="small">${esc(r.how||'Race called')} · ${resultSrc(r.src)}</p></div>`
+    :`<div class="result pending"><span class="chip warn">Not called yet</span>${r.leader?` <span class="small">Leading:</span> ${person(r.leader)}`:''}<p class="small">${esc(r.how)} ${resultSrc(r.src)}</p></div>`;
+}
 function campFlags(s){
   const c=s.camp, f=[];
   if(c.missing)return [flag('No FEC report yet',c.note)];
@@ -532,12 +557,12 @@ function miniOutside(s,bare,live){
 // A titled section of a home card: the grades ("Report Card"), then the money ("Money & Influence Analysis").
 const hcHead=(icon,cls,title,sub)=>`<div class="hc-sh"><h4><i class="${cls}" aria-hidden="true">${icon}</i>${title}</h4><p>${sub}</p></div>`;
 function homeCard(s){
-  const c=s.camp, o=s.out, it=ideoText(s), race=raceOf(s), riv=rivalsOf(s);
+  const c=s.camp, o=s.out, it=ideoText(s), race=raceOf(s), riv=rivalsOf(s), res=personResult(s);
   const ideo=s.cand&&!s.ideo&&s.ideoKind!=='former_text'&&s.ideoKind!=='state'?`No voting score · ${REC_LABEL[s.recordType]||it.short}`:it.short;
-  const sub=s.cand?`${s.openSeat?'Open seat':s.term} · ${s.since}`:`In the ${CH[s.chamber].name} since ${String(s.since).split(' (')[0]} · ${s.term}`;
+  const sub=s.cand?`${s.openSeat?'Open seat':termNow(s)} · ${s.since}`:`In the ${CH[s.chamber].name} since ${String(s.since).split(' (')[0]} · ${termNow(s)}`;
   return `<article class="card sen-card hc" tabindex="0" data-id="${s.id}" data-party="${esc(s.party)}" role="link" aria-label="Open profile of ${esc(s.name)}">
     <div class="hc-top">${portrait(s)}<div class="hc-who">
-      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div>
+      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(sub)}</div></div></div>
     <div class="hc-ideo">${esc(ideo)}</div>
     ${hcHead('✓','rc','Report Card','Four A–F grades from the documented record and your own answers')}
@@ -606,6 +631,7 @@ function renderHome(){
     <details class="coverage-details"><summary>About the research <span>Snapshot: ${esc(DATA.asof)}</span></summary>
     ${points([
       ['Who is covered',`${nS} senators and ${nH} House members on the November 3, 2026 ballot, their ${CANDS.filter(c=>!c.openSeat&&!c.senInc).length} opponents, and ${CANDS.filter(c=>c.openSeat).length} nominees for ${DATA.races.filter(r=>r.open).length} open Senate seats. That includes all ${nComp} Senate races rated competitive by Cook, Inside Elections or Sabato.`],
+      DATA.election&&['November 3 results',resultsLine()],
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
       ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
@@ -624,7 +650,7 @@ function renderHome(){
   <details class="directory-method"><summary>How the three grades work</summary>${gradeHow()}</details>
   <section class="section">
     <div class="cols">
-      <div class="card"><h3>Head-to-head races</h3><p class="small" style="margin-top:6px">Each candidate next to their 2026 opponents: money raised, cash on hand, and outside spending for and against each side.</p><a class="cta" href="#races">See the ${DATA.races.length} races</a></div>
+      <div class="card"><h3>Head-to-head races</h3><p class="small" style="margin-top:6px">Each candidate next to their 2026 opponents${DATA.election?', with who won on November 3':''}: money raised, cash on hand, and outside spending for and against each side.</p><a class="cta" href="#races">See the ${DATA.races.length} races</a></div>
       <div class="card"><h3>Compare the record</h3><p class="small" style="margin-top:6px">How Senate and House members voted on major bills since 2021, with their ideology and money side by side.</p><a class="cta" href="#compare">Open the comparison</a></div>
       <div class="card"><h3>How the numbers work</h3><p class="small" style="margin-top:6px">Every rule, every source and every known gap, in one place.</p><a class="cta" href="#method">Read the methodology</a></div>
     </div>
@@ -660,12 +686,13 @@ const PANES={overview:(...a)=>paneOverview(...a),integrity:(...a)=>paneIntegrity
 const profileAmount=n=>n==null?'Not available':Math.abs(n)>=1e6?'$'+(n/1e6).toFixed(2)+'M':fmtFull(n);
 function profileHeader(s,showFacts=false){
   const basic=!!s.basic,c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
-  const photo=portrait(s), office=basic?'U.S. Senate':s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House';
+  const photo=portrait(s), office=basic?'U.S. Senate':s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House', res=!basic&&!s.office&&personResult(s);
   const compareHref=s.office?'#home':s.chamber==='H'?'#compare-house':'#compare-senate';
   const details=basic?`<div class="meta"><div><span>In the Senate since</span>${esc(monthYear(s.since))}</div><div><span>2026 ballot</span>${esc(ballotLine(s))}${offBallot(s)?` · next election ${s.nextElection}`:''}</div><div class="roles"><span>Committees / roles</span>${esc(committeesOf(s).map(x=>fullCommittee(x.id)).filter((x,i,a)=>a.indexOf(x)===i).map(id=>COMMITTEES.committees[id]?.name||id).join('; ')||'None listed')}</div><div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand)+' · ':''}Bioguide ${esc(s.bioguide)}${s.lis?' · LIS '+esc(s.lis):''}</div></div><div class="links row">${s.fecCand?`<a href="${fecCycleUrl(s.fecCand,s.nextElection)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}<a href="${cgUrl(s)}" target="_blank" rel="noopener">Congress.gov member page ↗</a>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">Official site ↗</a>`:''}<a href="#senate">All senators →</a></div>`:`
     <div class="meta">
       <div><span>${s.office?'In office':s.cand?'Current or most recent role':'In the '+CH[s.chamber].name+' since'}</span>${esc(s.since)}</div>
       ${s.office?`<div><span>2026 ballot</span>${esc(s.seat)}</div>`:`<div><span>2026 ${s.cand?'opponents':'opponent'}</span>${esc(s.opponent)} · <a href="#races">race view</a></div>`}
+      ${res?`<div><span>November 3, 2026 result</span>${esc(res.text)} ${resultSrc(res.src)}</div>`:''}
       <div class="roles"><span>${s.cand?'Offices held':'Committees / roles'}</span>${esc(s.roles||'None')}</div>
       <div><span>Identifiers</span><span class="mono" style="display:inline;color:var(--ink-2);text-transform:none;letter-spacing:0;font-size:.82rem">FEC ${esc(s.fecCand)}${s.office&&s.fecCmte?' · committee '+esc(s.fecCmte):''}${s.bioguide?' · Bioguide '+esc(s.bioguide):''}</span></div>
     </div>
@@ -681,7 +708,8 @@ function profileHeader(s,showFacts=false){
     <div class="profile-main"><div class="profile-photo">${photo}</div><div class="profile-identity">
       <div class="page-eyebrow">${basic?'SENATE DIRECTORY':'THE PUBLIC RECORD'}</div><h1>${esc(s.name)}</h1>
       <p class="profile-office">${partyName(s.party)} · ${esc(s.stateName||s.state||'United States')}${s.chamber==='H'?' · '+esc(s.district):''} · ${office}</p>
-      <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(basic?'Term ends '+fmtDate(s.termEnd):s.term||'')}</span></div>
+      <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(basic?'Term ends '+fmtDate(s.termEnd):termNow(s)||'')}</span></div>
+      ${res?`<p class="small profile-result">${resultChip(res.o)} ${esc(res.after)} <span class="muted">(${esc(RESULTS_ASOF())})</span></p>`:''}
       ${s.cand?`<p class="small profile-background">${esc(s.status||s.background||'')}</p>`:''}
     </div><div class="profile-actions"><a class="profile-compare" href="${compareHref}">${s.office?'Explore people':'Compare'}</a><button class="profile-share" type="button">Share scorecard <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 3h6v6M17 3l-8 8M8 4H4v12h12v-4"/></svg></button></div></div>
     ${showFacts?`<div class="profile-facts">${c?[['Raised',c.receipts],['Cash on hand',c.cash],['Spent',c.disbursements]].map(([label,n])=>`<div class="profile-fact"><span>${label}</span><b title="${esc(n==null?'Not available':fmtFull(n))}">${profileAmount(n)}</b></div>`).join(''):`<div class="profile-fact profile-fact-empty"><span>${s.office?'Officeholder profile':'Campaign records'}</span><b>${s.office?'Not on the 2026 ballot':basic?'Awaiting reviewed data':'No FEC report available'}</b></div>`}</div>
@@ -1428,8 +1456,8 @@ function alLive(){
 function alResults(){
   const ch=chosenIssues();
   if(!ch.length)return '<div class="note">Answer at least one question (other than Neutral) to see how every candidate compares, race by race.</div>';
-  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} issue${ch.length===1?'':'s'}. Open a candidate for the issue-by-issue breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':'Incumbent running'}</span></div>
-    <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span></td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
+  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} issue${ch.length===1?'':'s'}. Open a candidate for the issue-by-issue breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
+    <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span> ${decidedChip(outcomeOf(r,s.id))}</td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
     ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}</article>`}).join('');
 }
 function renderAlign(){
@@ -2091,10 +2119,11 @@ function raceCard(r){
   const row=(lab,f)=>`<tr><td class="k">${lab}</td>${C.map(s=>`<td>${f(s)}</td>`).join('')}</tr>`;
   const multi=C.some(s=>s.out.multi);
   return `<article class="race">
-    <div class="rh"><h3>${esc(r.label)}${r.competitive&&r.chamber==='S'?' <span class="chip warn" style="vertical-align:middle">Competitive</span>':''}</h3><span class="small muted">${r.open?'Open seat':'Incumbent running'} · outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
+    <div class="rh"><h3>${esc(r.label)}${r.competitive&&r.chamber==='S'?' <span class="chip ghost" style="vertical-align:middle">Rated competitive</span>':''}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'} · outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
+    ${resultBanner(r,k=>byId[k])}
     ${ratingLine(r)}
     <div class="tablewrap"><table>
-      <thead><tr><th></th>${C.map(s=>`<th>${s.id===r.inc?'Incumbent':(r.open?partyName(s.party):'Challenger')}</th>`).join('')}</tr></thead>
+      <thead><tr><th></th>${C.map(s=>`<th>${s.id===r.inc?'Incumbent':(r.open?partyName(s.party):'Challenger')} ${decidedChip(outcomeOf(r,s.id))}</th>`).join('')}</tr></thead>
       <tbody>
       ${row('Candidate',s=>`<a href="#${s.id}"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span>`)}
       ${row('Record',s=>esc(s.cand?(REC_LABEL[s.recordType]||''):'U.S. '+CH[s.chamber].name)+((s.ideo||s.ideoKind==='former_text'||s.ideoKind==='state'||hasStateLeg(s))?`<div class="small muted">${esc(ideoText(s).short)}</div>`:''))}
@@ -2114,10 +2143,11 @@ function raceCard(r){
 function liteCard(r){
   const N=r.nominees;
   const row=(lab,f)=>`<tr><td class="k">${lab}</td>${N.map(n=>`<td>${f(n)}</td>`).join('')}</tr>`;
-  return `<article class="race lite"><div class="rh"><h3>${esc(r.label)} <span class="chip warn" style="vertical-align:middle">Toss-up</span></h3><span class="small muted">Outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
+  return `<article class="race lite"><div class="rh"><h3>${esc(r.label)} <span class="chip ghost" style="vertical-align:middle">Rated toss-up</span></h3><span class="small muted">Outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
+    ${resultBanner(r,k=>N.find(n=>n.fecCand===k))}
     <div class="rating"><span>Cook: <b>${esc(r.ratings.cook)}</b></span><span>Inside Elections: <b>${esc(r.ratings.ie)}</b></span><span>Sabato: <b>${esc(r.ratings.sabato)}</b></span></div>
     <div class="note small" style="margin:8px 0"><b>Funding only:</b> full profiles (record, statements, ethics, alignment) are not built for this race yet.</div>
-    <div class="tablewrap"><table><thead><tr><th></th>${N.map(n=>`<th>${n.incumbent?'Incumbent':partyName(n.party)}</th>`).join('')}</tr></thead><tbody>
+    <div class="tablewrap"><table><thead><tr><th></th>${N.map(n=>`<th>${n.incumbent?'Incumbent':partyName(n.party)} ${decidedChip(outcomeOf(r,n.fecCand))}</th>`).join('')}</tr></thead><tbody>
     ${row('Nominee',n=>`<b>${esc(n.name)}</b> <span class="chip ${n.party}">${n.party}</span><div class="small muted">${esc(n.basis||'')} ${n.src?`<a href="${esc(n.src.u)}" target="_blank" rel="noopener">source ↗</a>`:''}</div>`)}
     ${row(term('receipts','Campaign funds raised'),n=>n.receipts!=null?`${fmtFull(n.receipts)}<div class="small muted">2025–26, through ${fmtDate(n.through)} (FEC totals via the Follow the Money compilation)</div>`:`<span class="muted">${esc(n.campNote)}</span>`)}
     ${row('Cash on hand',n=>n.cash!=null?`${fmtFull(n.cash)}<div class="small muted">on ${fmtDate(n.through)}</div>`:'<span class="muted">—</span>')}
@@ -2128,11 +2158,16 @@ function liteCard(r){
     ${N.some(n=>n.out.possibleRepeat)?'<p class="small muted" style="margin:6px 0 0">Outside-spending totals include items flagged as possible repeat filings.</p>':''}
   </article>`;
 }
+// How many covered races are called, and which are not yet.
+function resultsLine(){
+  const all=DATA.races.concat(DATA.liteRaces),c=resultCounts(all);
+  return `${c.decided} of ${c.total} races called as of ${fmtDate(DATA.election.asof)}.${c.pending.length?` Not called yet: ${c.pending.map(r=>esc(r.label)).join(', ')}.`:''} A race counts as called once a news organization calls it or the loser concedes. Unofficial until each state certifies. <a href="#method-results">How results are shown</a>`;
+}
 function renderRaces(){
   const S=DATA.races.filter(r=>r.chamber==='S'), H=DATA.races.filter(r=>r.chamber==='H');
   app.innerHTML=`
-  <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election · outside spending through ${fmtDate(DATA.ie_asof)}</div><h1 style="margin-top:8px">The races</h1>
-  <p class="lede">Every profiled candidate next to their 2026 opponents. Competitive races come first.</p>${points([['Money','Campaign funds and outside spending are separate rows, each with its own dates.'],['Records','Each candidate\'s kind of record is labeled, so like is compared with like.']],'lede-pts')}
+  <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''} · outside spending through ${fmtDate(DATA.ie_asof)}</div><h1 style="margin-top:8px">The races</h1>
+  <p class="lede">Every profiled candidate next to their 2026 opponents${DATA.election?', with the November 3 results':''}. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Money','Campaign funds and outside spending are separate rows, each with its own dates.'],['Records','Each candidate\'s kind of record is labeled, so like is compared with like.']].filter(Boolean),'lede-pts')}
   <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length})</button><button data-c="H">House (${H.length+DATA.liteRaces.length})</button></div>
   <label class="small muted">Jump to <select id="rj">${S.concat(H).concat(DATA.liteRaces.map(r=>({id:r.id,label:r.label,chamber:'H'}))).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
@@ -2818,6 +2853,14 @@ function renderMethod(sub){
       <li><b>The ten races:</b> Alaska, Georgia, Iowa, Kansas, Maine, Michigan, New Hampshire, North Carolina, Ohio and Texas. All are covered.</li>
       <li><b>Nebraska:</b> rated Likely Republican by all three, but Toss-up or Lean by some other forecasters. It is included.</li>
       <li><b>House:</b> chosen from Cook's toss-up list at the time of research. The ratings have not been re-checked.</li>
+    </ul>
+    <h2 id="method-results">Election results</h2>
+    <ul class="list">
+      <li><b>What is shown:</b> who won each covered race on November 3, 2026, and how it was decided: a news organization's call (the AP, a TV network or Decision Desk HQ) or the losing candidate's concession. Each result links to its source.</li>
+      <li><b>Not called yet:</b> a race nobody has called and no candidate has conceded shows who was leading, but nobody is marked as having won or lost.</li>
+      <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
+      <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
+      <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
     <h2>Campaign funds raised</h2>
     <ul class="list">

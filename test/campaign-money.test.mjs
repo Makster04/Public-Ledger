@@ -67,7 +67,7 @@ test('a report ending long before the others is left out, and first figures clea
   const r=research();
   const lookup=async(kind,id)=>{
     if(kind==='committee'&&id==='C00718866')return totals();
-    if(kind==='candidate'&&id==='H8VA02111')return {cycle:2026,receipts:591,last_cash_on_hand_end_period:0,coverage_end_date:'2025-07-15T00:00:00'};
+    if(kind==='candidate'&&id==='H6VA02198')return {cycle:2026,receipts:591,last_cash_on_hand_end_period:0,coverage_end_date:'2025-07-15T00:00:00'};
     if(kind==='candidate'&&id==='H6NC11321')return {cycle:2026,receipts:399492,last_cash_on_hand_end_period:100000,coverage_end_date:'2026-10-14T00:00:00'};
     return null;};
   const out=await updateMoney(r,lookup);

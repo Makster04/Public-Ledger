@@ -1,5 +1,10 @@
 {
   "asof": "October 2, 2026",
+  "election": {
+    "date": "2026-11-03",
+    "asof": "2026-11-04",
+    "note": "Unofficial results, from news organizations' race calls and candidates' concessions on election night and the morning after. Each state certifies its official results in the following weeks."
+  },
   "members": [
     {
       "name": "Susan M. Collins",
@@ -63316,7 +63321,16 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": null,
+        "leader": "peltola",
+        "how": "Mary Peltola led Dan Sullivan by 626 votes on Wednesday morning, with ballots still being counted. Alaska counts ranked-choice ballots and certifies its results by Nov. 25.",
+        "src": {
+          "t": "Anchorage Daily News, Nov. 4, 2026",
+          "u": "https://www.adn.com/politics/2026/11/03/peltola-leads-sullivan-in-limited-early-results-in-hard-fought-us-senate-race/"
+        }
+      }
     },
     {
       "id": "S-GA",
@@ -63341,7 +63355,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "ossoff",
+        "how": "Called by NBC News and CBS News",
+        "src": {
+          "t": "NBC News, 2026 Senate results",
+          "u": "https://www.nbcnews.com/politics/2026-elections/senate-results"
+        }
+      }
     },
     {
       "id": "S-IA",
@@ -63366,7 +63388,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "turek",
+        "how": "Called by the AP",
+        "src": {
+          "t": "CBS News, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/news/iowa-2026-senate-hinson-turek/"
+        }
+      }
     },
     {
       "id": "S-KS",
@@ -63391,7 +63421,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "hamilton",
+        "how": "Called by the AP",
+        "src": {
+          "t": "NBC News, Nov. 4, 2026",
+          "u": "https://www.nbcnews.com/politics/2026-election/adam-hamilton-kansas-senate-democrat-winner-upset-roger-marshall-rcna603310"
+        }
+      }
     },
     {
       "id": "S-ME",
@@ -63416,7 +63454,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "jackson",
+        "how": "Susan Collins conceded",
+        "src": {
+          "t": "NBC News, Nov. 4, 2026",
+          "u": "https://www.nbcnews.com/politics/2026-election/troy-jackson-maine-senator-win-democrat-senate-majority-susan-collins-rcna603312"
+        }
+      }
     },
     {
       "id": "S-MI",
@@ -63441,7 +63487,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "elsayed",
+        "how": "Called by the AP",
+        "src": {
+          "t": "CBS News, Senate election results 2026",
+          "u": "https://www.cbsnews.com/live-updates/senate-election-results-2026/"
+        }
+      }
     },
     {
       "id": "S-NH",
@@ -63466,7 +63520,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "pappas",
+        "how": "John E. Sununu conceded",
+        "src": {
+          "t": "NBC News, Nov. 4, 2026",
+          "u": "https://www.nbcnews.com/politics/2026-election/chris-pappas-democrat-wins-new-hampshire-senate-race-john-sununu-rcna603326"
+        }
+      }
     },
     {
       "id": "S-NC",
@@ -63491,7 +63553,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "cooper",
+        "how": "Michael Whatley conceded",
+        "src": {
+          "t": "WRAL, Nov. 4, 2026",
+          "u": "https://www.wral.com/news/nccapitol/us-senate-race-nc-north-carolina-roy-cooper-michael-whatley-midterm-results-november-2026/"
+        }
+      }
     },
     {
       "id": "S-OH",
@@ -63516,7 +63586,16 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "brown",
+        "special": true,
+        "how": "Jon Husted conceded",
+        "src": {
+          "t": "Scripps News, Nov. 4, 2026",
+          "u": "https://www.scrippsnews.com/politics/america-votes/democrat-sherrod-brown-defeats-gops-jon-husted-in-ohio-senate-race"
+        }
+      }
     },
     {
       "id": "S-TX",
@@ -63541,7 +63620,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "talarico",
+        "how": "Ken Paxton conceded",
+        "src": {
+          "t": "The Texas Tribune, Nov. 3, 2026",
+          "u": "https://www.texastribune.org/2026/11/03/texas-ken-paxton-james-talarico-us-senate-elections-2026/"
+        }
+      }
     },
     {
       "id": "S-AL",
@@ -63566,7 +63653,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "moore",
+        "how": "",
+        "src": {
+          "t": "Alabama Daily News, Nov. 4, 2026",
+          "u": "https://aldailynews.com/republican-barry-moore-wins-alabamas-us-senate-seat/"
+        }
+      }
     },
     {
       "id": "S-CO",
@@ -63591,7 +63686,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "hickenlooper",
+        "how": "",
+        "src": {
+          "t": "Colorado Public Radio, Nov. 3, 2026",
+          "u": "https://www.cpr.org/2026/11/03/colorado-election-results-us-senate-hickenlooper-baisley/"
+        }
+      }
     },
     {
       "id": "S-IL",
@@ -63616,7 +63719,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "stratton",
+        "how": "",
+        "src": {
+          "t": "Axios Chicago, Nov. 4, 2026",
+          "u": "https://www.axios.com/local/chicago/2026/11/04/juliana-stratton-wins-illinois-senate-election-2026"
+        }
+      }
     },
     {
       "id": "S-KY",
@@ -63641,7 +63752,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "barr",
+        "how": "",
+        "src": {
+          "t": "Louisville Public Media, Nov. 3, 2026",
+          "u": "https://www.lpm.org/news/2026-11-03/andy-barr-wins-against-booker-to-replace-mitch-mcconnell-as-kentuckys-new-us-senator"
+        }
+      }
     },
     {
       "id": "S-LA",
@@ -63666,7 +63785,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "letlow",
+        "how": "Projected winner, by a narrow margin",
+        "src": {
+          "t": "KSLA, Nov. 4, 2026",
+          "u": "https://www.ksla.com/2026/11/04/julia-letlow-projected-win-louisiana-senate-race/"
+        }
+      }
     },
     {
       "id": "S-MN",
@@ -63691,7 +63818,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "flanagan",
+        "how": "",
+        "src": {
+          "t": "CBS News, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/news/minnesota-2026-senate-flanagan-tafoya/"
+        }
+      }
     },
     {
       "id": "S-MT",
@@ -63717,7 +63852,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "alme",
+        "how": "Seth Bodnar conceded",
+        "src": {
+          "t": "Daily Montanan, Nov. 4, 2026",
+          "u": "https://dailymontanan.com/2026/11/04/republican-kurt-alme-declares-victory-independent-seth-bodnar-concedes/"
+        }
+      }
     },
     {
       "id": "S-NE",
@@ -63742,7 +63885,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "ricketts",
+        "how": "",
+        "src": {
+          "t": "NBC News, Nov. 4, 2026",
+          "u": "https://www.nbcnews.com/politics/2026-election/pete-ricketts-nebraska-senator-gop-win-dan-osborn-election-rcna603328"
+        }
+      }
     },
     {
       "id": "S-NJ",
@@ -63767,7 +63918,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "booker",
+        "how": "",
+        "src": {
+          "t": "WHYY, Nov. 3, 2026",
+          "u": "https://whyy.org/articles/election-2026-new-jersey-us-senate-booker-murphy/"
+        }
+      }
     },
     {
       "id": "S-OK",
@@ -63792,7 +63951,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "hern",
+        "how": "",
+        "src": {
+          "t": "KTUL, Nov. 4, 2026",
+          "u": "https://ktul.com/news/local/kevin-hern-wins-oklahoma-us-senate-race-defeating-nkiyla-jasmine-thomas-11-04-2026"
+        }
+      }
     },
     {
       "id": "S-WY",
@@ -63817,7 +63984,15 @@
           "u": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
         }
       },
-      "competitive": false
+      "competitive": false,
+      "result": {
+        "winner": "hageman",
+        "how": "",
+        "src": {
+          "t": "Oil City News, Nov. 3, 2026",
+          "u": "https://oilcity.news/community/elections/2026/11/03/election-2026-hageman-defeats-byrd-for-wyoming-u-s-senate-seat/"
+        }
+      }
     },
     {
       "id": "H-CO-08",
@@ -63842,7 +64017,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "rutinel",
+        "how": "Called by the AP; Gabe Evans has not conceded",
+        "src": {
+          "t": "Colorado Public Radio, Nov. 3, 2026",
+          "u": "https://www.cpr.org/2026/11/03/colorado-election-results-congressional-district-8-evans-rutinel/"
+        }
+      }
     },
     {
       "id": "H-FL-14",
@@ -63867,7 +64050,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "castor",
+        "how": "",
+        "src": {
+          "t": "Bay News 9, Nov. 3, 2026",
+          "u": "https://baynews9.com/fl/tampa/news/2026/11/03/castor-belran-make-final-push-for-floridas-newly-redrawn-1th-congressional-district"
+        }
+      }
     },
     {
       "id": "H-IA-01",
@@ -63892,7 +64083,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "bohannan",
+        "how": "Called by CBS News",
+        "src": {
+          "t": "CBS News, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/news/iowa-1st-district-results-christina-bohannan-mariannette-miller-meeks/"
+        }
+      }
     },
     {
       "id": "H-NY-17",
@@ -63917,7 +64116,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "conley",
+        "how": "Mike Lawler conceded",
+        "src": {
+          "t": "ABC7 New York, Nov. 4, 2026",
+          "u": "https://abc7ny.com/post/midterm-elections-2026-lawler-conley-vie-ny-17-seat-voters-weigh-costs/20012701/"
+        }
+      }
     },
     {
       "id": "H-OH-09",
@@ -63942,7 +64149,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "kaptur",
+        "how": "Called by the AP",
+        "src": {
+          "t": "WTOL, Nov. 4, 2026",
+          "u": "https://www.wtol.com/article/news/politics/elections/ohio-9th-district-election-results-kaptur-merrin-2026/512-2feb38cb-61b0-45c0-a3be-5a410a54d8a8"
+        }
+      }
     },
     {
       "id": "H-PA-10",
@@ -63967,7 +64182,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "stelson",
+        "how": "Called by the AP",
+        "src": {
+          "t": "Spotlight PA, Nov. 2026",
+          "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-tenth-congressional-district-scott-perry-janelle-stelson-elections/"
+        }
+      }
     },
     {
       "id": "H-TX-34",
@@ -63992,7 +64215,15 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": "gonzalez",
+        "how": "Eric Flores conceded",
+        "src": {
+          "t": "KRIS 6 News, Nov. 4, 2026",
+          "u": "https://www.kristv.com/news/political/elections/vicente-gonzalez-wins-reelection-in-texas-34th-congressional-district-after-eric-flores-concedes"
+        }
+      }
     },
     {
       "id": "H-WA-03",
@@ -64017,7 +64248,16 @@
           "u": "https://www.cookpolitical.com/print/ratings/races/house"
         }
       },
-      "competitive": true
+      "competitive": true,
+      "result": {
+        "winner": null,
+        "leader": "mgp",
+        "how": "NBC News projects Marie Gluesenkamp Perez the winner, but the AP has not called the race and John Braun has not conceded. Washington counts mailed ballots for days after the election.",
+        "src": {
+          "t": "KGW, Nov. 4, 2026",
+          "u": "https://www.kgw.com/article/news/politics/elections/washington-3rd-congressional-district-rep-gluesenkamp-perez-john-braun-election-results-update/283-1ed78fd8-c043-465d-a528-0ebbe75bf193"
+        }
+      }
     }
   ],
   "ie_asof": "2026-09-30",
@@ -195608,7 +195848,15 @@
         }
       ],
       "ieTotal": 5282878.63,
-      "notes": "Verified from search-result headline (KJZZ); article not fetched."
+      "notes": "Verified from search-result headline (KJZZ); article not fetched.",
+      "result": {
+        "winner": "H6AZ06099",
+        "how": "Called by Decision Desk HQ",
+        "src": {
+          "t": "The Hill, Nov. 3, 2026",
+          "u": "https://thehill.com/homenews/campaign/6178905-democrat-mendoza-wins-arizona-district-6/"
+        }
+      }
     },
     {
       "id": "H-CA-22",
@@ -195716,7 +195964,15 @@
         }
       ],
       "ieTotal": 7584960.01,
-      "notes": "Top-two system. Verified from Ballotpedia News headline in search results; article not fetched."
+      "notes": "Top-two system. Verified from Ballotpedia News headline in search results; article not fetched.",
+      "result": {
+        "winner": "H6CA22190",
+        "how": "Projected by Decision Desk HQ and NewsNation; California counts ballots for weeks",
+        "src": {
+          "t": "NewsNation, 2026 results",
+          "u": "https://www.newsnationnow.com/politics/2026-midterm-elections/ca-22-election-results-2026/"
+        }
+      }
     },
     {
       "id": "H-FL-22",
@@ -195812,7 +196068,15 @@
         }
       ],
       "ieTotal": 293348.86,
-      "notes": "Open seat after redistricting shifted the district ~15 pts to the right; per 270toWin, Frankel is running in the new FL-23. Winners confirmed from page summary; vote shares not available."
+      "notes": "Open seat after redistricting shifted the district ~15 pts to the right; per 270toWin, Frankel is running in the new FL-23. Winners confirmed from page summary; vote shares not available.",
+      "result": {
+        "winner": "H6FL21059",
+        "how": "Projected by CBS News",
+        "src": {
+          "t": "CBS Miami, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/miami/news/florida-district-22-midterm-election-results-2026/"
+        }
+      }
     },
     {
       "id": "H-FL-25",
@@ -195908,7 +196172,15 @@
         }
       ],
       "ieTotal": 6209588.11,
-      "notes": "Singer is the former mayor of Boca Raton. District shifted ~15 pts to the right in redistricting (270toWin). Singer's GOP primary margin not given in source."
+      "notes": "Singer is the former mayor of Boca Raton. District shifted ~15 pts to the right in redistricting (270toWin). Singer's GOP primary margin not given in source.",
+      "result": {
+        "winner": "H2FL22171",
+        "how": "Called by the AP; Scott Singer congratulated Jared Moskowitz",
+        "src": {
+          "t": "CBS Miami, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/miami/news/florida-district-25-election-results-2026-midterm/"
+        }
+      }
     },
     {
       "id": "H-IA-03",
@@ -196004,7 +196276,15 @@
         }
       ],
       "ieTotal": 3882732.83,
-      "notes": "Primary source is 270toWin's pre-primary preview stating both June 2, 2026 primaries were uncontested. Corroborated by The New Republic (Aug 20, 2026, https://newrepublic.com/post/214564/sarah-trone-garriott-attack-ads-iowa), which describes Trone Garriott as facing Rep. Nunn in the general election."
+      "notes": "Primary source is 270toWin's pre-primary preview stating both June 2, 2026 primaries were uncontested. Corroborated by The New Republic (Aug 20, 2026, https://newrepublic.com/post/214564/sarah-trone-garriott-attack-ads-iowa), which describes Trone Garriott as facing Rep. Nunn in the general election.",
+      "result": {
+        "winner": "H6IA03268",
+        "how": "Called by the AP; Zach Nunn conceded",
+        "src": {
+          "t": "Iowa Capital Dispatch, Nov. 3, 2026",
+          "u": "https://iowacapitaldispatch.com/2026/11/03/democrat-sarah-trone-garriott-defeats-incumbent-zach-nunn-in-iowas-3rd-district/"
+        }
+      }
     },
     {
       "id": "H-MI-07",
@@ -196100,7 +196380,16 @@
         }
       ],
       "ieTotal": 6135499.01,
-      "notes": "Vote shares not given in source. Former U.S. Ambassador to Ukraine Bridget Brink lost the Democratic primary."
+      "notes": "Vote shares not given in source. Former U.S. Ambassador to Ukraine Bridget Brink lost the Democratic primary.",
+      "result": {
+        "winner": null,
+        "leader": "H6MI07298",
+        "how": "William Lawrence declared victory, leading by about 3 points, but the AP has not called the race and Tom Barrett has not commented.",
+        "src": {
+          "t": "Michigan Advance, Nov. 4, 2026",
+          "u": "https://michiganadvance.com/2026/11/04/lawrence-declares-victory-in-michigans-7th-congressional-district/"
+        }
+      }
     },
     {
       "id": "H-MI-10",
@@ -196196,7 +196485,15 @@
         }
       ],
       "ieTotal": 2927571.35,
-      "notes": "Open seat: John James running for governor of Michigan. Bouchard is the son of longtime Oakland County Sheriff Mike Bouchard."
+      "notes": "Open seat: John James running for governor of Michigan. Bouchard is the son of longtime Oakland County Sheriff Mike Bouchard.",
+      "result": {
+        "winner": "H6MI10276",
+        "how": "Michael Bouchard conceded",
+        "src": {
+          "t": "Michigan Advance, Nov. 4, 2026",
+          "u": "https://michiganadvance.com/2026/11/04/in-michigans-10th-congressional-district-hines-claims-victory/"
+        }
+      }
     },
     {
       "id": "H-NC-11",
@@ -196304,7 +196601,15 @@
         }
       ],
       "ieTotal": 5333186.28,
-      "notes": "Edwards won the March 3 GOP primary but withdrew Aug 4, 2026 after the House Ethics Committee recommended his censure; state Rep. Jennifer Balkcom (NC House District 117) was chosen by the party. Cook lists this as an open seat; Sabato's table on 270toWin still labels it '(Edwards)'. Ager's primary win verified from search-result headline (WUNC/WHQR); not fetched."
+      "notes": "Edwards won the March 3 GOP primary but withdrew Aug 4, 2026 after the House Ethics Committee recommended his censure; state Rep. Jennifer Balkcom (NC House District 117) was chosen by the party. Cook lists this as an open seat; Sabato's table on 270toWin still labels it '(Edwards)'. Ager's primary win verified from search-result headline (WUNC/WHQR); not fetched.",
+      "result": {
+        "winner": "H6NC11248",
+        "how": "Projected by CBS News",
+        "src": {
+          "t": "CBS News, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/news/north-carolina-11th-district-results-jennifer-balkcom-jamie-ager/"
+        }
+      }
     },
     {
       "id": "H-OH-07",
@@ -196400,7 +196705,15 @@
         }
       ],
       "ieTotal": 2888676.19,
-      "notes": "Miller faces domestic-abuse allegations in court filings by his ex-wife (he denies them); Sens. Husted and Moreno called on him to step aside, and a House Ethics Committee matter was referenced in coverage. Poindexter is a union ironworker and Brook Park city councilman. Poindexter's primary win details not independently verified."
+      "notes": "Miller faces domestic-abuse allegations in court filings by his ex-wife (he denies them); Sens. Husted and Moreno called on him to step aside, and a House Ethics Committee matter was referenced in coverage. Poindexter is a union ironworker and Brook Park city councilman. Poindexter's primary win details not independently verified.",
+      "result": {
+        "winner": "H6OH07168",
+        "how": "Called by the AP",
+        "src": {
+          "t": "CBS News, Nov. 4, 2026",
+          "u": "https://www.cbsnews.com/news/ohio-7th-district-results-max-miller-brian-poindexter/"
+        }
+      }
     },
     {
       "id": "H-PA-07",
@@ -196496,7 +196809,15 @@
         }
       ],
       "ieTotal": 2536208.57,
-      "notes": ""
+      "notes": "",
+      "result": {
+        "winner": "H6PA07188",
+        "how": "Called by the AP; Ryan Mackenzie conceded",
+        "src": {
+          "t": "Spotlight PA, Nov. 2026",
+          "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-seventh-congressional-district-bob-brooks-ryan-mackenzie-elections/"
+        }
+      }
     },
     {
       "id": "H-PA-08",
@@ -196592,7 +196913,15 @@
         }
       ],
       "ieTotal": 5908342.49,
-      "notes": ""
+      "notes": "",
+      "result": {
+        "winner": "H6PA08293",
+        "how": "Called by the AP",
+        "src": {
+          "t": "Spotlight PA, Nov. 2026",
+          "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-tenth-congressional-district-paige-cognetti-rob-bresnahan-elections/"
+        }
+      }
     },
     {
       "id": "H-TX-15",
@@ -196688,7 +197017,15 @@
         }
       ],
       "ieTotal": 4201271.24,
-      "notes": "Source does not state whether De La Cruz was opposed in the GOP primary. District redrawn in Texas' 2025 redistricting."
+      "notes": "Source does not state whether De La Cruz was opposed in the GOP primary. District redrawn in Texas' 2025 redistricting.",
+      "result": {
+        "winner": "H6TX15246",
+        "how": "Called by the AP; Monica De La Cruz conceded",
+        "src": {
+          "t": "The Texas Tribune, Nov. 3, 2026",
+          "u": "https://www.texastribune.org/2026/11/03/texas-bobby-pulido-monica-de-la-cruz-congress-district-15-elections-2026/"
+        }
+      }
     },
     {
       "id": "H-VA-02",
@@ -196752,7 +197089,7 @@
           "name": "Elaine Luria",
           "party": "D",
           "incumbent": false,
-          "fecCand": "H8VA02111",
+          "fecCand": "H6VA02198",
           "basis": "won the Democratic primary (~80%) over Nila Devanath, Bill Fleming and Patrick B. Mosolf (reported Aug 5, 2026)",
           "src": {
             "t": "WHRO - Luria to face Kiggans again after Democratic primary win (Aug 5, 2026)",
@@ -196796,7 +197133,15 @@
         }
       ],
       "ieTotal": 4340881.05,
-      "notes": "Former Rep. Luria (D) lost the seat to Kiggans in 2022; this is a rematch. Primary was held in early August 2026 (article dated Aug 5), not the usual June date; exact primary date not stated in source."
+      "notes": "Former Rep. Luria (D) lost the seat to Kiggans in 2022; this is a rematch. Primary was held in early August 2026 (article dated Aug 5), not the usual June date; exact primary date not stated in source.",
+      "result": {
+        "winner": "H6VA02198",
+        "how": "Called by the AP",
+        "src": {
+          "t": "Virginia Mercury, Nov. 3, 2026",
+          "u": "https://virginiamercury.com/2026/11/03/warner-wins-fourth-term-as-three-virginia-house-races-remain-undecided/"
+        }
+      }
     },
     {
       "id": "H-WI-03",
@@ -196892,7 +197237,15 @@
         }
       ],
       "ieTotal": 4445879.03,
-      "notes": "Verified from search-result headlines (Civic Media; Washington Examiner: 'Rebecca Cooke bests DSA-backed challenger'); articles not fetched."
+      "notes": "Verified from search-result headlines (Civic Media; Washington Examiner: 'Rebecca Cooke bests DSA-backed challenger'); articles not fetched.",
+      "result": {
+        "winner": "H4WI03169",
+        "how": "Derrick Van Orden conceded",
+        "src": {
+          "t": "Wisconsin Examiner, Nov. 4, 2026",
+          "u": "https://wisconsinexaminer.com/2026/11/04/rebecca-cooke-flips-wisconsins-3rd-congressional-district-for-democrats/"
+        }
+      }
     }
   ],
   "groupPos": [
