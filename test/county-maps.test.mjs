@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,dataLinks,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,enhancedExport,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -88,35 +88,67 @@ test('a file is read by what it holds, whatever its name says',async()=>{
   await assert.rejects(readAny('{"results":{}}',ga),/no localResults/);
 });
 
-test("a results page's links to data files on its own site are tried, county files first",()=>{
-  const base='https://mielections.us/election/results/2026GEN_CENR.html';
-  const html=`<a href="DATA/2026GEN_MI_CENR_BY_PRECINCT.zip">Precincts</a> <a href='DATA/2026GEN_MI_CENR_BY_COUNTY.xls'>Counties</a>
-    <a href="/election/results/2026GEN/01000000.html">President</a> <a href="https://example.com/county.csv">elsewhere</a>
-    <a href="DATA/file.csv?x=1&amp;y=2">query</a> <a href="DATA/2026GEN_MI_CENR_BY_COUNTY.xls">again</a> <a href="#top">top</a>`;
-  assert.deepEqual(dataLinks(html,base),['https://mielections.us/election/results/DATA/2026GEN_MI_CENR_BY_COUNTY.xls',
-    'https://mielections.us/election/results/DATA/2026GEN_MI_CENR_BY_PRECINCT.zip','https://mielections.us/election/results/DATA/file.csv?x=1&y=2']);
-  assert.deepEqual(dataLinks(html,'~/Downloads/page.html'),[],'a saved page has no site to follow');
-  assert.equal(enhancedExport('https://results.sos.ga.gov/results/public/Georgia/elections/2026NovGen?tab=1'),'https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json');
-  assert.equal(enhancedExport('https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json'),'https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json');
+// Michigan's results pages, as the script would find them: the election's page with the statewide races, each linking
+// to its county results, and the Senate race's county results.
+const MI_INDEX=`<html><head><title>2026 Michigan Election Results</title></head><body><nav><a href="/votehistory/">Home</a></nav>
+  <h3>Governor</h3><table><tr><th>Candidate</th><th>Party</th><th>Votes</th></tr><tr><td>Jocelyn Benson</td><td>DEM</td><td>2,400,000</td></tr></table>
+  <a href="/votehistory/CountyResults?officeCode=2&amp;electionDate=11-3-2026">County Results</a> <a href="/votehistory/Precincts?officeCode=2">Precinct by Precinct Results</a>
+  <h3>United States Senator</h3><table><tr><th>Candidate</th><th>Party</th><th>Votes</th></tr><tr><td>Abdul El-Sayed</td><td>DEM</td><td>2,500,000</td></tr><tr><td>Mike Rogers</td><td>REP</td><td>2,100,000</td></tr></table>
+  <a href="/votehistory/CountyResults?officeCode=5&amp;electionDate=11-3-2026">County Results</a> <a href="/votehistory/Precincts?officeCode=5">Precinct by Precinct Results</a>
+  <a href="javascript:void(0)">County results</a> <a href="https://example.com/county.csv">elsewhere</a></body></html>`;
+const MI_COUNTY=`<html><h2>United States Senator &ndash; County Results</h2><table><thead><tr><th>County</th><th>Abdul El-Sayed (DEM)</th><th>Mike Rogers (REP)</th><th>Pat Smith (LIB)</th><th>Total Votes</th><th>Percent</th></tr></thead>
+  <tbody><tr><td>ST. CLAIR</td><td>30,000</td><td>52,000</td><td>1,000</td><td>83,000</td><td>1.6%</td></tr><tr><td>Wayne</td><td>500,000</td><td>200,000</td><td>900</td><td>700,900</td><td>14%</td></tr>
+  <tr><td>Total</td><td>530,000</td><td>252,000</td><td>1,900</td><td>783,900</td><td>100%</td></tr></tbody></table></html>`;
+
+test("a results page: its links to county results after the Senate race first, then data files, all on its own site",()=>{
+  const base='https://mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026';
+  assert.deepEqual(pageLinks(MI_INDEX,base),['https://mvic.sos.state.mi.us/votehistory/CountyResults?officeCode=5&electionDate=11-3-2026',
+    'https://mvic.sos.state.mi.us/votehistory/CountyResults?officeCode=2&electionDate=11-3-2026'],"the Senate race's county results first; precinct pages and other sites left out");
+  const html=`<a href="DATA/2026_PRECINCTS.zip">Precincts</a> <a href='DATA/2026GEN_MI_CENR_BY_COUNTY.xls'>Counties</a> <a href="DATA/file.csv?x=1&amp;y=2">query</a> <a href="DATA/2026GEN_MI_CENR_BY_COUNTY.xls#top">again</a>`;
+  assert.deepEqual(pageLinks(html,'https://mielections.us/election/results/2026GEN_CENR.html'),['https://mielections.us/election/results/DATA/2026GEN_MI_CENR_BY_COUNTY.xls',
+    'https://mielections.us/election/results/DATA/2026_PRECINCTS.zip','https://mielections.us/election/results/DATA/file.csv?x=1&y=2']);
+  assert.deepEqual(pageLinks(html,'~/Downloads/page.html'),[],'a saved page has no site to follow');
+  assert.equal(enhancedExport('https://results.sos.ga.gov/results/public/Georgia/elections/11032026GeneralAndSpecialElection?tab=1'),'https://results.sos.ga.gov/cdn/results/Georgia/export-11032026GeneralAndSpecialElection.json');
+  assert.equal(enhancedExport(SOURCES['S-GA'].page),SOURCES['S-GA'].urls[0],"Georgia's page and its export agree");
   assert.equal(enhancedExport('~/Downloads/ga.json'),'~/Downloads/ga.json');
+});
+
+test("a page's tables of votes: by county and candidate, in any of three layouts, without totals or percentages",()=>{
+  assert.deepEqual(readHtmlTables(MI_COUNTY).rows,[{county:'ST. CLAIR',choice:'Abdul El-Sayed (DEM)',party:'',votes:30000},{county:'ST. CLAIR',choice:'Mike Rogers (REP)',party:'',votes:52000},
+    {county:'ST. CLAIR',choice:'Pat Smith (LIB)',party:'',votes:1000},{county:'Wayne',choice:'Abdul El-Sayed (DEM)',party:'',votes:500000},{county:'Wayne',choice:'Mike Rogers (REP)',party:'',votes:200000},{county:'Wayne',choice:'Pat Smith (LIB)',party:'',votes:900}]);
+  const long='<table><tr><th>County</th><th>Candidate</th><th>Party</th><th>Votes</th></tr><tr><td>Kent</td><td>Mike Rogers</td><td>REP</td><td>1,234</td></tr></table>';
+  assert.deepEqual(readHtmlTables(long).rows,[{county:'Kent',choice:'Mike Rogers',party:'REP',votes:1234}]);
+  const each='<h4>Alcona County</h4><table><tr><th>Candidate</th><th>Votes</th></tr><tr><td>Mike Rogers</td><td>4,000</td></tr><tr><td>Total</td><td>4,000</td></tr></table><h4>St. Joseph County</h4><table><tr><th>Candidate</th><th>Votes</th></tr><tr><td>Mike Rogers</td><td>9</td></tr></table>';
+  assert.deepEqual(readHtmlTables(each,map('MI').counties.map(c=>c.name)).rows.map(r=>[r.county,r.votes]),[['Alcona',4000],['St. Joseph',9]],'a table per county, named above it');
+  assert.deepEqual(readHtmlTables(each).rows,[],'without the county names, nothing is guessed');
+  const two='<h3>Governor</h3><table><tr><th>County</th><th>Benson</th></tr><tr><td>Kent</td><td>5</td></tr></table><h3>U.S. Senator</h3><table><tr><th>County</th><th>Rogers</th></tr><tr><td>Kent</td><td>7</td></tr></table>';
+  assert.deepEqual(readHtmlTables(two).rows,[{county:'Kent',choice:'Rogers',party:'',votes:7}],'only the tables after the Senate race is named');
+  assert.deepEqual(readHtmlTables(MI_INDEX).tables.slice(0,1),['Candidate | Party | Votes']);
 });
 
 test('a race is read from the first address that works, then its page\'s links, and says what to do by hand when none does',async()=>{
   const maps=async st=>map(st),ok={localResults:[{name:'Appling',ballotItems:[{name:'US Senate',ballotOptions:[{name:'Jon Ossoff',voteCount:5},{name:'Mike Collins',voteCount:7}]}]}]};
-  const got=await countyRace(D,'S-GA',{maps,get:async u=>{if(u.includes('2026NovGen'))return JSON.stringify(ok);throw new Error('HTTP 404');}});
+  const got=await countyRace(D,'S-GA',{maps,get:async u=>{if(u.includes('export-11032026GeneralAndSpecialElection'))return JSON.stringify(ok);throw new Error('HTTP 404');}});
   assert.equal(got.race.counties['13001'].mcollins,7);assert.match(got.lines[0],/^CHECK S-GA: 1 of 159 counties/,'a partial map is a CHECK');
-  assert.match(got.lines[0],/\(from https:\/\/results\.sos\.ga\.gov\/cdn\/results\/Georgia\/export-2026NovGen\.json\)$/);
-  // Michigan: the guessed addresses are missing, so the results page is read and its county file tried.
-  const asked=[],page='<html><a href="DATA/2026_MI_COUNTY_RESULTS.txt">County results (tab-delimited)</a></html>';
-  const mi=await countyRace(D,'S-MI',{maps,get:async u=>{asked.push(u);if(u.endsWith('2026GEN_CENR.html'))return page;if(u.endsWith('2026_MI_COUNTY_RESULTS.txt'))return MI_TSV;throw new Error('HTTP 404');}});
-  assert.deepEqual(asked.map(u=>u.split('/').pop()),['2026GEN_MI_CENR_BY_COUNTY.xls','2026GEN_MI_CENR_BY_COUNTY.txt','2026GEN_CENR.html','2026_MI_COUNTY_RESULTS.txt']);
-  assert.deepEqual(mi.race.counties['26147'],{elsayed:30000,rogers:52000});assert.equal(mi.race.source.u,'https://mielections.us/election/results/DATA/2026_MI_COUNTY_RESULTS.txt');
-  const none=await countyRace(D,'S-MI',{maps,get:async u=>{if(u.endsWith('.html'))return '<html>nothing here</html>';throw new Error('HTTP 404');}});
+  assert.match(got.lines[0],/\(from https:\/\/results\.sos\.ga\.gov\/cdn\/results\/Georgia\/export-11032026GeneralAndSpecialElection\.json\)$/);
+  // Michigan: the election's page is read (its statewide tables have no counties), then the Senate race's county results.
+  const asked=[];
+  const mi=await countyRace(D,'S-MI',{maps,get:async u=>{asked.push(u);if(u.includes('Index?'))return MI_INDEX;if(u.includes('officeCode=5'))return MI_COUNTY;throw new Error('HTTP 404');}});
+  assert.deepEqual(asked,[SOURCES['S-MI'].pages[0],'https://mvic.sos.state.mi.us/votehistory/CountyResults?officeCode=5&electionDate=11-3-2026']);
+  assert.deepEqual(mi.race.counties['26147'],{elsayed:30000,rogers:52000,other:1000});assert.deepEqual(mi.race.counties['26163'],{elsayed:500000,rogers:200000,other:900});
+  assert.equal(mi.race.total,783900,'the Total row is left out');assert.equal(mi.race.source.u,asked[1]);
+  // Votes by county for other candidates (the Governor's race) don't count, and the next link is tried.
+  const gov=MI_COUNTY.replace('United States Senator','Governor').replace('Abdul El-Sayed','Jocelyn Benson').replace('Mike Rogers','John James');
+  const two=await countyRace(D,'S-MI',{maps,get:async u=>u.includes('Index?')?MI_INDEX:u.includes('officeCode=5')?gov:MI_COUNTY});
+  assert.match(two.lines[0],/^CHECK S-MI: 2 of 83 counties/);assert.match(two.race.source.u,/officeCode=2/);
+  const none=await countyRace(D,'S-MI',{maps,get:async u=>u.includes('Index?')?MI_INDEX.replace(/<a [^>]*CountyResults[^>]*>County Results<\/a>/g,''):gov});
   assert.equal(none.race,undefined);
-  assert.match(none.lines.join('\n'),/^CHECK S-MI: couldn't read the county results\.\n.*BY_COUNTY\.xls: HTTP 404\n[\s\S]*2026GEN_CENR\.html: a web page, not a results file, with no links to data files on its site\n.*right-click the county results download and copy its link, then: npm run counties:update -- --file "S-MI=<that link>"/);
+  assert.match(none.lines.join('\n'),/^CHECK S-MI: couldn't read the county results\.\n.*Index\?type=C&electionDate=11-3-2026: a web page, with nothing to follow on its site\n\s+link: Precinct by Precinct Results → https:\/\/mvic\.sos\.state\.mi\.us\/votehistory\/Precincts\?officeCode=2\n[\s\S]*\s+table: Candidate \| Party \| Votes\n[\s\S]*open the county results for United States Senator, copy that page's address \(or a download link on it\), then: npm run counties:update -- --file "S-MI=<that address>"$/);
+  const byHand=await countyRace(D,'S-MI',{maps,file:'https://mvic.sos.state.mi.us/votehistory/CountyResults?officeCode=2',get:async()=>gov});
+  assert.match(byHand.lines[1],/officeCode=2: a web page, its votes by county are for other candidates \(Jocelyn Benson \(DEM\), John James \(REP\), Pat Smith \(LIB\)\); with nothing to follow/);
   // An address given by hand: an Enhanced Voting results page stands for its media export.
-  const byHand=[];await countyRace(D,'S-GA',{maps,file:'https://results.sos.ga.gov/results/public/Georgia/elections/2026GenNov',get:async u=>{byHand.push(u);return JSON.stringify(ok);}});
-  assert.deepEqual(byHand,['https://results.sos.ga.gov/cdn/results/Georgia/export-2026GenNov.json']);
+  const seen=[];await countyRace(D,'S-GA',{maps,file:SOURCES['S-GA'].page,get:async u=>{seen.push(u);return JSON.stringify(ok);}});
+  assert.deepEqual(seen,[SOURCES['S-GA'].urls[0]]);
   for(const [id,s] of Object.entries(SOURCES))assert.ok(s.help||s.page,`${id}: what to do by hand`);
 });
 
