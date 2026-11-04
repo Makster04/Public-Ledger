@@ -13,7 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from './results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -2129,8 +2129,9 @@ function paneSources(s,pane){
 // One race on the Races page: each candidate's photo, name and party over their share of the vote, highest first, then
 // the other candidates, the votes counted and the source. A profiled candidate's tile opens their profile.
 const numFmt=n=>Number(n).toLocaleString('en-US');
-function resultCard(r){
-  const lite=!r.keys,res=raceResult(r),t=tallyOf(r);
+// county: the state's own count (countyTally), shown instead of the count on file when it is as recent or newer.
+function resultCard(r,county=null){
+  const lite=!r.keys,res=raceResult(r),t=county||tallyOf(r);
   // A results-only nominee who is a sitting senator opens their basic profile; others have no profile yet.
   const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k);return {id:k,name:n.name,party:n.party,href:BASIC[k]||byId[k]?'#'+k:''};};
   const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(nomineeKey));
@@ -2150,14 +2151,16 @@ function resultCard(r){
     <div class="rc-cols${change?' has-side':''}"><div class="rc-left">
     <div class="rc-grid">${keys.map(tile).join('')}</div>
     ${others.length?`<p class="small muted" style="margin:0">Also on the ballot: ${others.join(' · ')}</p>`:''}
-    <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}</p>
+    <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}${t&&t.fromState?`, read ${esc(readTime(t.fetched))}`:''}</p>
     </div><aside class="rc-side">${change}<div class="rc-map" data-map="${esc(r.id)}" hidden></div></aside></div>
   </article>`;
 }
 // ---------- county maps (public/county-results.json, outlines in public/maps/<ST>.json) ----------
 // Each county is colored by who leads it, darker the wider the lead; hovering shows its count.
-const COUNTY={data:null,maps:{}};
-const countyData=()=>COUNTY.data??=fetch('/county-results.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+const COUNTY={data:null,maps:{},text:null,poll:null};
+const countyData=()=>COUNTY.data??=fetch('/county-results.json',{cache:'no-cache'}).then(r=>r.ok?r.text():null).then(t=>{COUNTY.text=t;return t?JSON.parse(t):null;}).catch(()=>null);
+// When the county results were read: "Nov 4, 3:06 PM".
+const readTime=iso=>{const d=new Date(iso);return isNaN(d)?'':d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});};
 const stateMap=st=>COUNTY.maps[st]??=fetch(`/maps/${st}.json`).then(r=>r.ok?r.json():null).catch(()=>null);
 const MARGINS=[5,15,30];
 const marginBand=m=>MARGINS.filter(x=>m>=x).length;
@@ -2180,7 +2183,7 @@ function countyMap(res,m){
   return `<div class="cm-box"><svg viewBox="0 0 ${m.width} ${m.height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(`County map: ${summary}`)}"><g class="cm-counties">${paths}</g><path class="cm-state" d="${m.outline}"></path></svg></div>
     ${reportingBar(res,m)}
     <div class="cm-legend small">${main.map(c=>`<span><span class="cm-sw">${swatch(c.party)}</span>${esc(c.name.split(' ').at(-1))}</span>`).join('')}<span class="muted">Stronger color: wider lead (under 5, 5–15, 15–30, 30+ points)</span></div>
-    <p class="small muted cm-src">${esc(summary)}. County results: <a href="${esc(res.source.u)}" target="_blank" rel="noopener">${esc(res.source.t)} ↗</a>, read ${esc(fmtDate(res.fetched.slice(0,10)))}.</p>
+    <p class="small muted cm-src">${esc(summary)}. County results: <a href="${esc(res.source.u)}" target="_blank" rel="noopener">${esc(res.source.t)} ↗</a>, read ${esc(readTime(res.fetched))}.</p>
     <details class="cm-table small"><summary>All ${m.counties.length} counties</summary><div class="tablewrap"><table><thead><tr><th>County</th>${main.map(c=>`<th>${esc(c.name.split(' ').at(-1))}</th>`).join('')}<th>Others</th><th>Lead</th></tr></thead><tbody>
     ${m.counties.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>{const k=countyCount(res,res.counties[c.fips]),v=res.counties[c.fips]||{};
       return `<tr><td>${esc(c.name)}</td>${main.map(x=>`<td class="num">${k.total?((v[x.key]||0)/k.total*100).toFixed(1)+'%':'—'}</td>`).join('')}<td class="num">${k.total?((v.other||0)/k.total*100).toFixed(1)+'%':'—'}</td><td>${k.lead?`${esc(k.lead.key==='other'?'Other':k.lead.name.split(' ').at(-1))} +${k.margin.toFixed(1)}`:'No votes'}</td></tr>`;}).join('')}
@@ -2209,13 +2212,23 @@ function bindCountyTips(el,res,m){
     const x=Math.max(10,Math.min(e.clientX+12,window.innerWidth-310));tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px';};
   const svg=el.querySelector('svg');svg.addEventListener('mousemove',show);svg.addEventListener('click',show);svg.addEventListener('mouseleave',()=>tip.classList.remove('show'));
 }
+// Each race with county results gets its map, and its card takes the state's own count when that is the newer one.
 async function fillMaps(root){
   const d=await countyData();if(!d?.races)return;
-  for(const el of root.querySelectorAll('.rc-map[data-map]')){
+  for(let el of [...root.querySelectorAll('.rc-map[data-map]')]){
     const res=d.races[el.dataset.map];if(!res||!el.isConnected)continue;
     const m=await stateMap(res.state);if(!m||!el.isConnected)continue;
+    const race=DATA.races.find(x=>x.id===el.dataset.map)||DATA.liteRaces.find(x=>x.id===el.dataset.map),ct=race&&countyTally(race,res),box=el.closest('[id^="r-"]');
+    if(ct&&box){box.innerHTML=resultCard(race,ct);el=box.querySelector('.rc-map');}
     el.innerHTML=countyMap(res,m);el.hidden=false;el.closest('.rc-cols').classList.add('has-side');bindCountyTips(el,res,m);
   }
+  // While the Races page is open, look for a new read every two minutes (npm run counties:update -- --watch).
+  COUNTY.poll??=setInterval(async()=>{
+    const list=$('#rlist');if(!list||document.hidden)return;
+    const t=await fetch('/county-results.json',{cache:'no-cache'}).then(r=>r.ok?r.text():null).catch(()=>null);
+    if(!t||t===COUNTY.text)return;
+    COUNTY.data=Promise.resolve(JSON.parse(t));COUNTY.text=t;fillMaps(list);
+  },120000);
 }
 // How many covered races are called, and which are not yet.
 function resultsLine(){
@@ -2925,7 +2938,7 @@ function renderMethod(sub){
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
       <li><b>Flip or hold:</b> once a race is called, the card says "Flip +1" when the winner's party is not the one that held the seat before the election, or "Remains Blue" or "Remains Red" when it is, in the winner's color. The seat's holder is the incumbent who ran or, for an open seat, its outgoing member: the retiring senator, or a redrawn House district's current member.</li>
-      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. Every state is drawn in the same box, as large as it fits. The bar under a map is how much had reported in the state's file when it was read: the share of precincts reporting when the file gives them, otherwise the share of counties with any votes. A precinct or county that has reported can still add ballots counted later, such as mail, absentee and provisional ballots. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
+      <li id="method-county-maps"><b>County maps:</b> where a state's county-by-county results are on file, the race shows a map of its counties, each colored by who leads it; the stronger the color, the wider the lead (under 5, 5–15, 15–30 and 30 or more points). Hover over or tap a county for its count, or open the table under the map. Every state is drawn in the same box, as large as it fits. While the county results are being read again (every 15 minutes or so), the page picks up each new read within two minutes, and the race's shares and turnout then come from the same count. The bar under a map is how much had reported in the state's file when it was read: the share of precincts reporting when the file gives them, otherwise the share of counties with any votes. A precinct or county that has reported can still add ballots counted later, such as mail, absentee and provisional ballots. The counts come from each state's own results file, linked under its map, and are unofficial until the state certifies. County outlines: U.S. Census Bureau cartographic boundary files, simplified in the us-atlas package.</li>
       <li><b>Grades:</b> no grade uses the results. Everyone keeps their profile, records and grades whether they won or lost.</li>
     </ul>
     <h2>Campaign funds raised</h2>

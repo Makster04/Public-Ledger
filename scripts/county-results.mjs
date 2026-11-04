@@ -12,6 +12,8 @@
 //   npm run counties:update -- --only S-GA       just these races
 //   npm run counties:update -- --file "S-MI=~/Downloads/mi-county-results.txt"   a file saved from the state's site
 //   npm run counties:update -- --file "S-GA=https://…"   an address instead: a data file, or an Enhanced Voting results page
+//   npm run counties:update -- --watch           read them all again every 15 minutes (or --watch 5), until Ctrl+C; the
+//                                                Races page shows each new read within two minutes, without reloading
 // Each candidate is matched to the race's own candidates by last name; everyone else counts as "other". Each county is
 // matched by name to the outlines in public/maps/<ST>.json. A county the outlines don't know is listed and left out.
 import fs from 'node:fs/promises';
@@ -212,15 +214,18 @@ export function raceCandidates(research,id){
 // Rows → votes by county FIPS and candidate key. map: the state's outlines (public/maps/<ST>.json).
 export function byCounty(rows,cands,map){
   const fips=new Map(map.counties.map(c=>[countyKey(c.name),c.fips])),last=new Map(cands.map(c=>[lastName(c.name),c.key]));
-  const counties={},unmatched=new Set(),names=new Map();
+  const counties={},unmatched=new Set(),names=new Map(),others=new Map();
   for(const r of rows){
     const f=fips.get(countyKey(r.county));if(!f){unmatched.add(r.county);continue;}
     const key=last.get(lastName(r.choice))||'other';if(key!=='other')names.set(key,r.choice);
+    else if(r.votes){const o=others.get(r.choice)||others.set(r.choice,{name:r.choice,party:r.party||'',votes:0}).get(r.choice);o.votes+=r.votes;}
     const c=counties[f]||(counties[f]={});c[key]=(c[key]||0)+r.votes;
   }
   const totals={};for(const c of Object.values(counties))for(const [k,v] of Object.entries(c))totals[k]=(totals[k]||0)+v;
   const missing=cands.filter(c=>!names.has(c.key)).map(c=>c.name);
-  return {counties,totals,total:Object.values(totals).reduce((a,b)=>a+b,0),unmatched:[...unmatched],missing,
+  // The other candidates by name, statewide, largest first (the six largest; the rest stay in "other").
+  const named=[...others.values()].sort((a,b)=>b.votes-a.votes).slice(0,6);
+  return {counties,totals,others:named,total:Object.values(totals).reduce((a,b)=>a+b,0),unmatched:[...unmatched],missing,
     mapped:Object.keys(counties).length,of:map.counties.length};
 }
 
@@ -255,7 +260,7 @@ export async function countyRace(research,id,{get,file=null,maps}){
   const isUrl=/^https?:/.test(from);
   return {lines,race:{state:src.state,fetched:new Date().toISOString(),source:{t:src.source,u:isUrl?from:(src.page||src.urls[0])},
     candidates:[...cands.map(c=>({key:c.key,name:c.name,party:c.party})),{key:'other',name:'Other candidates'}],total:b.total,
-    ...(rows.reporting?{reporting:rows.reporting}:{}),counties:b.counties}};
+    ...(rows.reporting?{reporting:rows.reporting}:{}),...(b.others.length?{others:b.others}:{}),counties:b.counties}};
 }
 
 // A file on this computer, or an address: its bytes, or why they couldn't be had.
@@ -276,17 +281,37 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const outFile=new URL('public/county-results.json',root);
   const out=await fs.readFile(outFile,'utf8').then(JSON.parse,()=>({races:{}}));
   const maps=async st=>JSON.parse(await fs.readFile(new URL(`public/maps/${st}.json`,root),'utf8'));
-  let changed=0;
   // A file given by hand reads just its own race, unless --only names more.
-  const pick=only||(Object.keys(files).length?new Set(Object.keys(files)):null);
-  for(const id of Object.keys(SOURCES).filter(x=>!pick||pick.has(x)||files[x])){
-    console.log(`Reading ${id}…`);
-    const r=await countyRace(research,id,{get:fetchRaw,file:files[id]||null,maps});
-    for(const l of r.lines)console.log(l);
-    if(r.race){out.races[id]=r.race;changed++;}
+  const pick=only||(Object.keys(files).length?new Set(Object.keys(files)):null),ids=Object.keys(SOURCES).filter(x=>!pick||pick.has(x)||files[x]);
+  const wi=args.indexOf('--watch'),watch=wi<0?0:Math.max(2,Number(args[wi+1])||15);
+  // One pass over the races: each one read again replaces what was saved; one that can't be read keeps its last read.
+  const pass=async()=>{
+    let read=0,moved=0;
+    for(const id of ids){
+      console.log(`Reading ${id}…`);
+      const r=await countyRace(research,id,{get:fetchRaw,file:files[id]||null,maps});
+      for(const l of r.lines)console.log(l);
+      if(!r.race)continue;
+      const old=out.races[id],same=old&&JSON.stringify({...old,fetched:0})===JSON.stringify({...r.race,fetched:0});
+      if(old&&same)console.log('      same counts as the last read');else moved++;
+      out.races[id]=r.race;read++;
+    }
+    out.about='County results for the maps on the Races page, from each state\'s election office (scripts/county-results.mjs). Unofficial until each state certifies.';
+    out.races=Object.fromEntries(Object.entries(out.races).sort(([a],[b])=>a.localeCompare(b)));
+    if(read)await fs.writeFile(outFile,JSON.stringify(out)+'\n');
+    return {read,moved};
+  };
+  if(!watch){
+    const {read}=await pass();
+    if(read)console.log(`\nWrote public/county-results.json (${read} ${read===1?'race':'races'}). Look over any CHECK lines, run npm test, then commit and push it.`);
+    else console.log('\nNothing written.');
+  }else{
+    console.log(`Watching ${ids.length} ${ids.length===1?'race':'races'}: reading ${ids.length===1?'it':'them'} again every ${watch} minutes. Leave this running (npm start in another window shows the site); stop with Ctrl+C.`);
+    for(;;){
+      console.log(`\n— ${new Date().toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'})} —`);
+      const {read,moved}=await pass();
+      console.log(read?`Saved public/county-results.json: ${moved?`new counts for ${moved} ${moved===1?'race':'races'}`:'no new counts'}. Next read at ${new Date(Date.now()+watch*60000).toLocaleTimeString('en-US',{timeStyle:'short'})}.`:'Nothing could be read this time; trying again later.');
+      await new Promise(r=>setTimeout(r,watch*60000));
+    }
   }
-  out.about='County results for the maps on the Races page, from each state\'s election office (scripts/county-results.mjs). Unofficial until each state certifies.';
-  out.races=Object.fromEntries(Object.entries(out.races).sort(([a],[b])=>a.localeCompare(b)));
-  if(changed){await fs.writeFile(outFile,JSON.stringify(out)+'\n');console.log(`\nWrote public/county-results.json (${changed} ${changed===1?'race':'races'}). Look over any CHECK lines, run npm test, then commit and push it.`);}
-  else console.log('\nNothing written.');
 }

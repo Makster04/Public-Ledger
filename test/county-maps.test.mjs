@@ -50,6 +50,8 @@ test("North Carolina's precinct file is read by its own column names, and only t
   const b=byCounty(rows,raceCandidates(D,'S-NC'),map('NC'));
   assert.deepEqual(b.counties['37183'],{cooper:1224},'Wake: both precincts added up');assert.deepEqual(b.counties['37111'],{whatley:18},'McDowell');
   assert.equal(b.total,1242);assert.deepEqual(b.unmatched,[]);
+  assert.deepEqual(byCounty([...rows,{county:'WAKE',choice:'Shannon W. Bray',party:'LIB',votes:7},{county:'WAKE',choice:'Write-In',party:'',votes:0}],raceCandidates(D,'S-NC'),map('NC')).others,
+    [{name:'Shannon W. Bray',party:'LIB',votes:7}],'the other candidates by name, statewide');
   assert.throws(()=>readNcsbe('County\tChoice\n',/x/),/no "Contest Name" column/);
 });
 
@@ -186,6 +188,8 @@ test('the saved county results fit their race and map, and add up',()=>{
 test('the races page draws the maps and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
   assert.match(app,/async function fillMaps\(root\)/);assert.match(app,/<div class="cm-box"><svg viewBox="0 0 \$\{m\.width\} \$\{m\.height\}" preserveAspectRatio="xMidYMid meet"/,'every map in the same box');
-  assert.match(app,/\$\{reportingBar\(res,m\)\}/);assert.match(app,/role="progressbar"/);
+  assert.match(app,/\$\{reportingBar\(res,m\)\}/);
+  assert.match(app,/COUNTY\.poll\?\?=setInterval\(/,'the page looks for a new read while the Races page is open');assert.match(app,/box\.innerHTML=resultCard\(race,ct\)/,"the card takes the state's count");
+  const script=fs.readFileSync(new URL('../scripts/county-results.mjs',import.meta.url),'utf8');assert.match(script,/--watch/);assert.match(script,/Math\.max\(2,Number\(args\[wi\+1\]\)\|\|15\)/,'every 15 minutes, never under 2');assert.match(app,/role="progressbar"/);
   assert.match(fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8'),/\.cm-box\{width:100%;aspect-ratio:4\/3\}/);assert.match(app,/fillMaps\(\$\('#rlist'\)\)/);assert.match(app,/id="method-county-maps"/);
 });
