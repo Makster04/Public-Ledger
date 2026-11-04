@@ -26,10 +26,15 @@ test('no stray portrait files',async()=>{
 const {missing,titleFits,freeLicense,creditOf,lookUp,STATES}=await import('../scripts/fetch-portrait-photos.mjs');
 const extra=JSON.parse(await fs.readFile(new URL('../scripts/portrait-extra.json',root),'utf8'));
 test('the people still showing initials are looked up by name and state, and only a free photo of the right person is kept',async()=>{
-  const left=missing(data,index,extra);
-  for(const p of left){assert.ok(ids.has(p.id)&&p.name&&Object.values(STATES).includes(p.state),p.id);assert.ok(!index.people[p.id],p.id);}
-  assert.ok(left.some(p=>p.id==='sc-andrews'&&p.state==='South Carolina'),'a results-only Senate nominee');
-  assert.ok(left.some(p=>p.id==='H6VA02198'),'someone left on initials for a cropped official photo is tried again');
+  for(const p of missing(data,index,extra)){assert.ok(ids.has(p.id)&&p.name&&Object.values(STATES).includes(p.state),p.id);assert.ok(!index.people[p.id]&&!(extra[p.id]?.file),p.id);}
+  // Who would be looked up with no portraits and no photos on file.
+  const none=missing(data,{people:{}},{H6VA02198:{skip:'cropped at the chin'},'tn-bradshaw':{file:'data/portraits/tn-bradshaw.jpg'},'or-smith':{skip:'too small',lookup:false}});
+  assert.ok(none.some(p=>p.id==='sc-andrews'&&p.state==='South Carolina'),'a results-only Senate nominee, by state code');
+  assert.ok(none.some(p=>p.id==='H6AZ06099'&&p.state==='Arizona'),'a toss-up nominee, by state name');
+  assert.ok(none.some(p=>p.id==='H6VA02198'),'someone left on initials for a cropped official photo is tried again');
+  assert.ok(!none.some(p=>p.id==='tn-bradshaw'),'a photo on file is not looked up again');
+  assert.ok(!none.some(p=>p.id==='or-smith'),'nor a Wikipedia photo already looked at and turned down');
+  for(const [id,x] of Object.entries(extra))if(x.lookup===false)assert.ok(x.skip&&!x.file,`${id}: turned down, so on initials`);
   assert.ok(titleFits('Tom Barrett (Michigan politician)','Tom Barrett'));assert.ok(titleFits('Marie Gluesenkamp Perez','Marie Gluesenkamp Perez'));
   assert.ok(!titleFits('Tom Barrett (footballer)','Thomas Barrett'),'a different first name');assert.ok(!titleFits('Barrett Tom','Tom Barrett'));
   for(const ok of ['CC BY-SA 4.0','CC BY 2.0','CC0','Public domain','PD-USGov'])assert.ok(freeLicense(ok),ok);

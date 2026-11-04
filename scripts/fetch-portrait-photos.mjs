@@ -2,7 +2,8 @@
 // public/portraits/index.json): the lead photo of their Wikipedia article, when it is on Wikimedia Commons under a free
 // license or in the public domain. Each photo is saved to data/portraits/<id>.<jpg|png> and listed in
 // scripts/portrait-extra.json with its author, license and file page, for scripts/build-portraits.py to cut out.
-// A Wikipedia article counts only when its title is the person's name and its opening names their state; anyone without
+// An entry in portrait-extra.json with "lookup": false (its Wikipedia photo was looked at and can't be used) isn't looked
+// up again. A Wikipedia article counts only when its title is the person's name and its opening names their state; anyone without
 // such an article, or whose article's photo isn't free, is listed and keeps the initials.
 //   npm run portraits:fetch                      looks everyone up and saves the photos
 //   npm run portraits:fetch -- --dry-run         lists what it would use, saving nothing
@@ -23,7 +24,7 @@ const strip=s=>String(s||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').repla
 // Everyone on the site without a portrait: profiled people and the results-only nominees, with their state's name
 // (written as a code or in full in research.json).
 export function missing(research,index,extra){
-  const out=[],seen=new Set(),add=(id,name,state)=>{if(!id||seen.has(id)||index.people?.[id]||(extra[id]&&!extra[id].skip))return;seen.add(id);out.push({id,name,state:STATES[state]||state});};
+  const out=[],seen=new Set(),add=(id,name,state)=>{if(!id||seen.has(id)||index.people?.[id]||(extra[id]&&(!extra[id].skip||extra[id].lookup===false)))return;seen.add(id);out.push({id,name,state:STATES[state]||state});};
   for(const p of [...research.members,...research.cands,...(research.featured||[])])add(p.id,p.name,p.state);
   for(const r of research.liteRaces)for(const n of r.nominees)add(n.fecCand||n.id,n.name,r.state);
   return out;
