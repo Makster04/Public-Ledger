@@ -13,7 +13,7 @@ import {pacTypeOf,pacKindTotals} from './pac-types.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary} from './holdings.js';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter} from './results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
@@ -198,13 +198,6 @@ function personResult(s){
   const rest=[r.how||(r.decided?'Race called':''),seatNote(race,s.id,{incumbent:race.inc===s.id,winner:w&&w.name})];
   // text: the whole sentence ("Lost to Jon Ossoff. Called by …"); after: what follows the Won, Lost or Not called yet label.
   return {o,src:r.src,text:line([OUTCOME[o].label+(to?' '+to:''),...rest]),after:line([to,...rest])};
-}
-// The result above a race's table. who(key) gives {name, party} for a person ID or a toss-up nominee's FEC ID.
-function resultBanner(race,who){
-  const r=raceResult(race);if(!r)return '';
-  const person=k=>{const x=k&&who(k);return x?`<b>${esc(x.name)}</b> <span class="chip ${x.party}">${x.party}</span>`:''};
-  return r.decided?`<div class="result won"><span class="chip good">Won</span> ${person(r.winner)}<p class="small">${esc(r.how||'Race called')} · ${resultSrc(r.src)}</p></div>`
-    :`<div class="result pending"><span class="chip warn">Not called yet</span>${r.leader?` <span class="small">Leading:</span> ${person(r.leader)}`:''}<p class="small">${esc(r.how)} ${resultSrc(r.src)}</p></div>`;
 }
 function campFlags(s){
   const c=s.camp, f=[];
@@ -650,7 +643,7 @@ function renderHome(){
   <details class="directory-method"><summary>How the three grades work</summary>${gradeHow()}</details>
   <section class="section">
     <div class="cols">
-      <div class="card"><h3>Head-to-head races</h3><p class="small" style="margin-top:6px">Each candidate next to their 2026 opponents${DATA.election?', with who won on November 3':''}: money raised, cash on hand, and outside spending for and against each side.</p><a class="cta" href="#races">See the ${DATA.races.length} races</a></div>
+      <div class="card"><h3>Head-to-head races</h3><p class="small" style="margin-top:6px">${DATA.election?'Who won on November 3, each candidate\'s share of the vote, and the reported turnout.':'Each candidate next to their 2026 opponents: money raised, cash on hand, and outside spending for and against each side.'}</p><a class="cta" href="#races">See the ${DATA.races.length} races</a></div>
       <div class="card"><h3>Compare the record</h3><p class="small" style="margin-top:6px">How Senate and House members voted on major bills since 2021, with their ideology and money side by side.</p><a class="cta" href="#compare">Open the comparison</a></div>
       <div class="card"><h3>How the numbers work</h3><p class="small" style="margin-top:6px">Every rule, every source and every known gap, in one place.</p><a class="cta" href="#method">Read the methodology</a></div>
     </div>
@@ -2113,49 +2106,26 @@ function paneSources(s,pane){
 }
 
 // ---------- races ----------
-const ratingLine=r=>r.rating&&r.rating.cook?`<div class="rating"><span>Cook: <b>${esc(r.rating.cook)}</b></span><span>Inside Elections: <b>${esc(r.rating.ie)}</b></span><span>Sabato: <b>${esc(r.rating.sabato)}</b></span>${r.rating.note?`<span class="muted">${esc(r.rating.note)}</span>`:''}</div>`:(r.rating&&r.rating.note?`<div class="rating muted">${esc(r.rating.note)}</div>`:'');
-function raceCard(r){
-  const C=r.keys.map(k=>byId[k]);
-  const row=(lab,f)=>`<tr><td class="k">${lab}</td>${C.map(s=>`<td>${f(s)}</td>`).join('')}</tr>`;
-  const multi=C.some(s=>s.out.multi);
-  return `<article class="race">
-    <div class="rh"><h3>${esc(r.label)}${r.competitive&&r.chamber==='S'?' <span class="chip ghost" style="vertical-align:middle">Rated competitive</span>':''}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'} · outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
-    ${resultBanner(r,k=>byId[k])}
-    ${ratingLine(r)}
-    <div class="tablewrap"><table>
-      <thead><tr><th></th>${C.map(s=>`<th>${s.id===r.inc?'Incumbent':(r.open?partyName(s.party):'Challenger')} ${decidedChip(outcomeOf(r,s.id))}</th>`).join('')}</tr></thead>
-      <tbody>
-      ${row('Candidate',s=>`<a href="#${s.id}"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span>`)}
-      ${row('Record',s=>esc(s.cand?(REC_LABEL[s.recordType]||''):'U.S. '+CH[s.chamber].name)+((s.ideo||s.ideoKind==='former_text'||s.ideoKind==='state'||hasStateLeg(s))?`<div class="small muted">${esc(ideoText(s).short)}</div>`:''))}
-      ${row('Evidence available',s=>`<span class="small">${esc(evidenceOf(s).label)}</span> <a class="small" href="#${s.id}-record">record →</a>`)}
-      ${row(term('receipts','Campaign funds raised'),s=>s.camp.missing?'<span class="muted">No FEC report yet</span>':`${fmtFull(s.camp.receipts)}<div class="small muted">${period(s.camp.start,s.camp.end)}</div>${s.camp.selfShare>20?`<div>${flag(s.camp.selfShare+'% self-funded','Candidate loans and contributions as a share of campaign funds.')}</div>`:''}`)}
-      ${row('Cash on hand',s=>s.camp.missing?'<span class="muted">—</span>':`${fmtFull(s.camp.cash)}<div class="small muted">on ${fmtDate(s.camp.end)}</div>`)}
-      ${row(term('ie',multi?'Outside spending supporting':'Outside spending for'),s=>`${fmtFull(s.out.for.total)}<div class="small muted">${CLS.filter(k=>s.out.for[k]).map(k=>CLSL[k]+' '+fmt$(s.out.for[k])).join(' · ')||'none'}</div>`)}
-      ${row(term('ie',multi?'Outside spending opposing':'Outside spending against'),s=>`${fmtFull(s.out.against.total)}<div class="small muted">${CLS.filter(k=>s.out.against[k]).map(k=>CLSL[k]+' '+fmt$(s.out.against[k])).join(' · ')||'none'}</div>`)}
-      ${row('Largest outside spenders '+(multi?'supporting':'for'),s=>topSpenders(s,'for',3).map(x=>esc(x.name)).join(', ')||'<span class="muted">None</span>')}
-      </tbody></table></div>
-    <p class="small muted" style="margin:8px 0 0"><b>Kept separate:</b> campaign funds and outside spending. Outside spending never passes through a campaign, and the two cover different dates (outside spending runs through ${fmtDate(DATA.ie_asof)}).</p>
-    ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}
-    ${r.note?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)">${esc(r.note)}</p>`:''}
-    <p class="small" style="margin:8px 0 0">${C.map(s=>`<a href="${fecCandUrl(s.fecCand)}" target="_blank" rel="noopener">FEC: ${esc(s.short)} ↗</a>`).join(' · ')}</p>
-  </article>`;
-}
-function liteCard(r){
-  const N=r.nominees;
-  const row=(lab,f)=>`<tr><td class="k">${lab}</td>${N.map(n=>`<td>${f(n)}</td>`).join('')}</tr>`;
-  return `<article class="race lite"><div class="rh"><h3>${esc(r.label)} <span class="chip ghost" style="vertical-align:middle">Rated toss-up</span></h3><span class="small muted">Outside spending on all candidates: <b class="num">${fmt$(r.ieTotal)}</b></span></div>
-    ${resultBanner(r,k=>N.find(n=>n.fecCand===k))}
-    <div class="rating"><span>Cook: <b>${esc(r.ratings.cook)}</b></span><span>Inside Elections: <b>${esc(r.ratings.ie)}</b></span><span>Sabato: <b>${esc(r.ratings.sabato)}</b></span></div>
-    <div class="note small" style="margin:8px 0"><b>Funding only:</b> full profiles (record, statements, ethics, alignment) are not built for this race yet.</div>
-    <div class="tablewrap"><table><thead><tr><th></th>${N.map(n=>`<th>${n.incumbent?'Incumbent':partyName(n.party)} ${decidedChip(outcomeOf(r,n.fecCand))}</th>`).join('')}</tr></thead><tbody>
-    ${row('Nominee',n=>`<b>${esc(n.name)}</b> <span class="chip ${n.party}">${n.party}</span><div class="small muted">${esc(n.basis||'')} ${n.src?`<a href="${esc(n.src.u)}" target="_blank" rel="noopener">source ↗</a>`:''}</div>`)}
-    ${row(term('receipts','Campaign funds raised'),n=>n.receipts!=null?`${fmtFull(n.receipts)}<div class="small muted">2025–26, through ${fmtDate(n.through)} (FEC totals via the Follow the Money compilation)</div>`:`<span class="muted">${esc(n.campNote)}</span>`)}
-    ${row('Cash on hand',n=>n.cash!=null?`${fmtFull(n.cash)}<div class="small muted">on ${fmtDate(n.through)}</div>`:'<span class="muted">—</span>')}
-    ${row(term('ie','Outside spending for'),n=>`${fmtFull(n.out.for.total)}<div class="small muted">${CLS.filter(k=>n.out.for[k]).map(k=>CLSL[k]+' '+fmt$(n.out.for[k])).join(' · ')||'none'}</div>`)}
-    ${row(term('ie','Outside spending against'),n=>`${fmtFull(n.out.against.total)}<div class="small muted">${CLS.filter(k=>n.out.against[k]).map(k=>CLSL[k]+' '+fmt$(n.out.against[k])).join(' · ')||'none'}</div>`)}
-    </tbody></table></div>
-    <p class="small" style="margin:8px 0 0">${N.map(n=>`<a href="${fecCandUrl(n.fecCand)}" target="_blank" rel="noopener">FEC: ${esc(n.name)} ↗</a>`).join(' · ')} · <a href="${fecIeUrl(N[0].fecCand)}" target="_blank" rel="noopener">FEC independent expenditures ↗</a></p>
-    ${N.some(n=>n.out.possibleRepeat)?'<p class="small muted" style="margin:6px 0 0">Outside-spending totals include items flagged as possible repeat filings.</p>':''}
+// One race on the Races page: each candidate's photo, name and party over their share of the vote, highest first, then
+// the other candidates, the votes counted and the source. A profiled candidate's tile opens their profile.
+const numFmt=n=>Number(n).toLocaleString('en-US');
+function resultCard(r){
+  const lite=!r.keys,res=raceResult(r),t=tallyOf(r);
+  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>x.fecCand===k);return {id:k,name:n.name,party:n.party,href:''};};
+  const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(n=>n.fecCand));
+  const tile=k=>{const p=who(k),row=t&&t.rows.find(x=>x.key===k),o=outcomeOf(r,k),tag=p.href?'a':'div';
+    return `<${tag} class="rc-c${o==='won'?' won':''}"${p.href?` href="${p.href}"`:''}>${portrait(p)}
+      <div class="rc-who"><b>${esc(p.name)}</b> <span class="chip ${p.party}">${p.party}</span></div>
+      <div class="rc-flag">${o==='won'?resultChip('won'):''}</div>
+      <div class="rc-pct">${sharePct(row&&row.pct,t&&t.whole)}</div><div class="small muted">${row&&row.votes!=null?numFmt(row.votes)+' votes':'&nbsp;'}</div></${tag}>`;};
+  const others=t?[...t.others.map(o=>`${esc(o.name)}${o.party?` (${esc(o.party)})`:''} ${sharePct(o.pct,t.whole)}`),t.rest?`other candidates and write-ins ${sharePct(t.rest)}`:''].filter(Boolean):[];
+  const turnout=!t?'not reported yet':[t.total!=null?`${numFmt(t.total)} votes counted`:'',t.counted].filter(Boolean).map(esc).join(' · ')||'not given in this source';
+  return `<article class="race rc">
+    <div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open||lite&&!r.nominees.some(n=>n.incumbent)?'Open seat':'Incumbent ran'}</span></div>
+    ${res&&!res.decided?`<p class="small rc-status"><span class="chip warn">Not called yet</span> ${esc(res.how)}</p>`:res?`<p class="small muted rc-status">${esc(res.how||'Race called')} · <a href="${esc(res.src.u)}" target="_blank" rel="noopener">${esc(res.src.t)} ↗</a></p>`:''}
+    <div class="rc-grid">${keys.map(tile).join('')}</div>
+    ${others.length?`<p class="small muted" style="margin:0">Also on the ballot: ${others.join(' · ')}</p>`:''}
+    <p class="small rc-turnout"><b>Reported turnout:</b> ${turnout}${t&&t.src?` · <a href="${esc(t.src.u)}" target="_blank" rel="noopener">${esc(t.src.t)} ↗</a>`:''}</p>
   </article>`;
 }
 // How many covered races are called, and which are not yet.
@@ -2166,15 +2136,15 @@ function resultsLine(){
 function renderRaces(){
   const S=DATA.races.filter(r=>r.chamber==='S'), H=DATA.races.filter(r=>r.chamber==='H');
   app.innerHTML=`
-  <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''} · outside spending through ${fmtDate(DATA.ie_asof)}</div><h1 style="margin-top:8px">The races</h1>
-  <p class="lede">Every profiled candidate next to their 2026 opponents${DATA.election?', with the November 3 results':''}. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Money','Campaign funds and outside spending are separate rows, each with its own dates.'],['Records','Each candidate\'s kind of record is labeled, so like is compared with like.']].filter(Boolean),'lede-pts')}
+  <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''}</div><h1 style="margin-top:8px">The races</h1>
+  <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them on election night or the morning after, with how much of the vote was counted. They change as counting finishes.']].filter(Boolean),'lede-pts')}
   <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length})</button><button data-c="H">House (${H.length+DATA.liteRaces.length})</button></div>
   <label class="small muted">Jump to <select id="rj">${S.concat(H).concat(DATA.liteRaces.map(r=>({id:r.id,label:r.label,chamber:'H'}))).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
-  const draw=ch=>{const L=DATA.races.filter(r=>r.chamber===ch);
-    $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Every race rated Toss-up, Tilt or Lean by at least one forecaster is covered.</p>${points([['Forecasters','The Cook Political Report, Inside Elections and Sabato\'s Crystal Ball.'],['Ratings',`Sept. 17–23, 2026, as compiled on <a href="https://en.wikipedia.org/wiki/2026_United_States_Senate_elections" target="_blank" rel="noopener">Wikipedia</a>.`]],'small')}${L.filter(r=>r.competitive).map(r=>`<div id="r-${r.id}">${raceCard(r)}</div>`).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(r=>`<div id="r-${r.id}">${raceCard(r)}</div>`).join('')}`
-      :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+DATA.liteRaces.length} House races the Cook Political Report rates Toss-up (Sept. 25, 2026). Both nominees have full profiles.</p>${L.map(r=>`<div id="r-${r.id}">${raceCard(r)}</div>`).join('')}
-        <h2 style="margin-top:26px">Other House toss-ups: funding only</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${DATA.liteRaces.length} Cook toss-ups.</p>${points([['Shown','Verified nominees, campaign funds and outside spending.'],['Not yet researched','Records, statements and ethics. These candidates have no profiles yet.']],'small')}${DATA.liteRaces.map(r=>`<div id="r-${r.id}">${liteCard(r)}</div>`).join('')}`;
+  const draw=ch=>{const L=DATA.races.filter(r=>r.chamber===ch),card=r=>`<div id="r-${r.id}">${resultCard(r)}</div>`;
+    $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Rated Toss-up, Tilt or Lean by at least one forecaster (Cook, Inside Elections or Sabato's Crystal Ball, Sept. 2026).</p>${L.filter(r=>r.competitive).map(card).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(card).join('')}`
+      :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+DATA.liteRaces.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
+        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${DATA.liteRaces.length} Cook toss-ups. Their nominees don't have profiles yet.</p>${DATA.liteRaces.map(card).join('')}`;
     bindTips(app);};
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
@@ -2842,7 +2812,7 @@ function renderMethod(sub){
     <h2>Who is covered</h2>
     <ul class="list">
       <li><b>Senate incumbents:</b> six senators on the November 3, 2026 ballot, three Republicans and three Democrats, as a bipartisan mix of competitive and safe seats. Two senators first picked were replaced because they won't be on the ballot: Sen. Lindsey Graham (R-SC) died in July 2026, and Sen. Markwayne Mullin (R-OK) left the Senate for an administration post.</li>
-      <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with funding only: their nominees (verified from results or news reports), campaign funds and outside spending. Their records, statements and ethics are not researched yet.</li>
+      <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their records, statements, ethics and campaign money are not shown yet.</li>
       <li><b>Challengers and open seats:</b> every opponent of those incumbents, and both major-party nominees in each open Senate race (plus independent Seth Bodnar in Montana). Nominees were confirmed from primary and runoff results.</li>
       <li><b>Every other senator:</b> a basic profile for each sitting senator not in these races (see the <a href="#senate">Senate</a> page): their place in the Senate, their committees, and the records the daily refresh collects. No grades until their research is reviewed. The list comes from the congress-legislators project.</li>
       <li><b>Ohio and Nebraska:</b> Sen. Jon Husted (appointed in January 2025) and Sen. Pete Ricketts are profiled with their opponents, Sherrod Brown and independent Dan Osborn. No Democrat is on the Nebraska ballot: the nominee withdrew in July 2026 and the state party named no replacement.</li>
@@ -2857,6 +2827,7 @@ function renderMethod(sub){
     <h2 id="method-results">Election results</h2>
     <ul class="list">
       <li><b>What is shown:</b> who won each covered race on November 3, 2026, and how it was decided: a news organization's call (the AP, a TV network or Decision Desk HQ) or the losing candidate's concession. Each result links to its source.</li>
+      <li><b>Shares and turnout:</b> each candidate's share of the vote, and their votes when the source gave them, from one news report or results page per race, with how much of the vote was counted at the time. Reported turnout is the votes counted in that report: the source's own total, or the sum of every candidate's votes when all were given. Where a source gave neither, the page says so. Shares that don't reach 100% leave the rest to candidates and write-ins not named.</li>
       <li><b>Not called yet:</b> a race nobody has called and no candidate has conceded shows who was leading, but nobody is marked as having won or lost.</li>
       <li><b>Unofficial:</b> ${DATA.election?`results were last checked ${fmtDate(DATA.election.asof)}. `:''}They are updated as races are called, and each state certifies its official results in the following weeks.</li>
       <li><b>Taking office:</b> winners of regular elections take office January 3, 2027, and incumbents who lost serve until then. Ohio's was a special election for the rest of the term ending in January 2029, so its winner takes the seat once the state certifies the result.</li>
@@ -3034,7 +3005,7 @@ function renderMethod(sub){
       <li><b>Possible duplicate:</b> one of Sen. Marshall's reports (April 2025) transcribed to $5,000 more than the report's subtotal. It is flagged on Marshall's profile.</li>
       <li><b>Earmarked totals:</b> read for five groups that bundle (see above). Other groups' bundling isn't read yet, and the FEC reading can miss gifts a conduit reported in an unusual way, as it did for Sen. Booker.</li>
       <li><b>Net worth:</b> only for sitting members, and a paper-filed report can't be read.</li>
-      <li><b>House toss-ups:</b> 14 of the 22 are shown with funding only. Their candidates have no record, statement or ethics research yet.</li>
+      <li><b>House toss-ups:</b> 14 of the 22 are shown with results only. Their candidates have no profile, record, statement or ethics research yet.</li>
       <li><b>Issue list:</b> covers ${ISS.length} issues that could be documented. Candidates whose records are mostly on other topics (for example, Texas education bills) have little coded evidence. Several candidates without a voting record show "Insufficient data".</li>
       <li><b>Primary results:</b> some 2026 primary percentages could not be confirmed against certified results and were removed from status lines.</li>
       <li><b>State records:</b> thin where old journals are offline. None could be sourced for Chris Pappas or Juliana Stratton, and only a leadership post for Mary Peltola and Mariannette Miller-Meeks.</li>

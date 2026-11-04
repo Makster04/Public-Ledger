@@ -4,7 +4,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter} from '../public/results.js';
+import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct} from '../public/results.js';
 const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
@@ -52,6 +52,31 @@ test('the 2026 line under a name turns past tense once the race is decided',()=>
     if(o==='won'||o==='lost')assert.doesNotMatch(termAfter(p.term,o),/^(Seeking|Running|Challenging)|in the special/,p.id);}
 });
 
+test('every race has a vote count with a source: a share for each candidate, the winner or leader ahead, and nothing over 100%',()=>{
+  for(const r of [...D.races,...D.liteRaces]){
+    const t=tallyOf(r),x=r.result;
+    assert.ok(t,r.id);assert.match(t.src?.u||'',/^https:\/\//,r.id);assert.match(t.asof,/^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(t.rows.every(y=>typeof y.pct==='number'&&y.pct>0&&y.pct<100),`${r.id}: a share for each candidate`);
+    const top=t.rows[0].key;assert.equal(top,x.winner||x.leader,`${r.id}: the ${x.winner?'winner':'leader'} has the largest share`);
+    assert.ok(t.rows.reduce((a,y)=>a+y.pct,0)+t.others.reduce((a,o)=>a+o.pct,0)<=100.6,r.id);
+  }
+  // A source that gave neither the votes counted nor how much was in is shown as such, not left blank.
+  const without=[...D.races,...D.liteRaces].filter(r=>{const t=tallyOf(r);return t.total==null&&!t.counted;}).map(r=>r.id);
+  assert.ok(without.length<=3,`turnout missing for ${without.join(', ')}`);
+  assert.match(fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),/not given in this source/);
+});
+
+test('turnout: the source\'s total, or the sum of all votes only when every candidate\'s votes were given',()=>{
+  const race=(id,tally,keys=['a','b'])=>({id,keys,result:{winner:'a',tally}});
+  assert.equal(tallyOf(race('x',{shares:{a:50.8,b:46.1},votes:{a:643244,b:583403},others:[{name:'L',pct:3.1,votes:38759}]})).total,1265406);
+  assert.equal(tallyOf(race('x',{shares:{a:52.5,b:45.5},votes:{a:2497852,b:2162890}})).total,null,'2% unnamed: no sum');
+  assert.equal(tallyOf(race('x',{shares:{a:52.5,b:45.5},votes:{a:2497852,b:2162890}})).rest,2);
+  assert.equal(tallyOf(race('x',{shares:{a:60,b:40},total:5000})).total,5000);
+  assert.deepEqual(tallyOf(race('x',{shares:{a:40,b:60}})).rows.map(y=>y.key),['b','a'],'highest share first');
+  assert.equal(sharePct(54,true),'54%');assert.equal(sharePct(48),'48.0%');assert.equal(sharePct(50.01),'50.0%');assert.equal(sharePct(null),'—');
+  assert.equal(tallyOf(race('x',{shares:{a:54,b:46}})).whole,true);assert.equal(tallyOf(race('x',{shares:{a:48,b:47.7}})).whole,false,'48.0 next to 47.7 keeps its decimal');
+});
+
 test('the count of called races names the ones not called yet',()=>{
   const c=resultCounts([...D.races,...D.liteRaces]);
   assert.equal(c.total,43);assert.equal(c.missing,0);assert.equal(c.decided+c.pending.length,43);
@@ -60,8 +85,8 @@ test('the count of called races names the ones not called yet',()=>{
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
-  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
-  assert.match(app,/\$\{resultBanner\(r,k=>byId\[k\]\)\}/);assert.match(app,/\$\{resultBanner\(r,k=>N\.find\(n=>n\.fecCand===k\)\)\}/);
+  assert.match(app,/import \{OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct\} from '\.\/results\.js'/);assert.match(app,/termNow\(s\)/);
+  assert.match(app,/function resultCard\(r\)/);assert.match(app,/Reported turnout:/);assert.doesNotMatch(app,/function raceCard|function liteCard/,'the money tables are gone from the Races page');
   assert.match(app,/November 3, 2026 result/);assert.match(app,/res=personResult\(s\)/);
   assert.match(app,/id="method-results"/);assert.match(app,/no grade uses the results/);
 });

@@ -2,7 +2,8 @@
 # public/portraits/index.json listing who has one and where each photo came from.
 #
 # Photos: official congressional portraits (public domain, U.S. government works) from
-# https://github.com/unitedstates/images, for everyone in research.json with a Bioguide ID and every other sitting senator
+# https://github.com/unitedstates/images, for everyone in research.json with a Bioguide ID (the toss-up nominees in
+# liteRaces too, keyed by their FEC candidate ID, as the Races page shows them) and every other sitting senator
 # in public/senate.json (from scripts/build-senate.mjs). Other photos, supplied
 # for use here, are kept in data/portraits/ and listed in scripts/portrait-extra.json, which takes precedence:
 #   {"<person id>": {"file": "data/portraits/<id>.jpg", "credit": "Photo: <who>, used with permission", "url": optional}}
@@ -16,6 +17,7 @@
 # side, such as a hat brim, "nudge": <px> moves the portrait sideways (positive is right) without changing its size;
 # if it is wider than the whole frame, "zoom": <factor below 1> shrinks that portrait to fit.
 # A supplied photo that already has a transparent background (a PNG cut-out) keeps its own outline.
+# {"<id>": {"skip": "<why>"}} leaves someone on initials, for an official photo that can't be cut out (cropped at the chin).
 # People with neither keep the initials circle.
 #
 # Each photo's background is removed with MediaPipe selfie segmentation, and the face is found with MediaPipe face
@@ -267,12 +269,16 @@ def main():
     senate = json.load(open(senate_path, encoding='utf8'))['senators'] if os.path.exists(senate_path) else []
     profiled = {s['id'] for s in D['members'] + D.get('cands', []) + D.get('featured', [])}
     basic = [{'id': x['id'], 'bioguide': x['bioguide']} for x in senate if x['id'] not in profiled]
-    for s in D['members'] + D.get('cands', []) + D.get('featured', []) + basic:
+    # Toss-up nominees without profiles, for their tiles on the Races page: known by their FEC candidate ID.
+    nominees = [{'id': n['fecCand'], 'bioguide': n.get('bioguide')} for r in D.get('liteRaces', []) for n in r['nominees']]
+    for s in D['members'] + D.get('cands', []) + D.get('featured', []) + basic + nominees:
         if only is not None and s['id'] not in only:
             if s['id'] in old:
                 people[s['id']] = old[s['id']]
                 listed.add(s['id'])
             continue
+        if extra.get(s['id'], {}).get('skip'):
+            continue  # its photo doesn't make a usable cut-out (the reason is in portrait-extra.json): initials until one is supplied
         if s['id'] in extra:
             x = extra[s['id']]
             options, credit = [(os.path.join(ROOT, x['file']), x.get('url'))], x['credit']

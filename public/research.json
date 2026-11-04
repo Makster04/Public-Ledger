@@ -63329,6 +63329,22 @@
         "src": {
           "t": "Anchorage Daily News, Nov. 4, 2026",
           "u": "https://www.adn.com/politics/2026/11/03/peltola-leads-sullivan-in-limited-early-results-in-hard-fought-us-senate-race/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "peltola": 48,
+            "sullivan": 47.7
+          },
+          "votes": {
+            "peltola": 102701,
+            "sullivan": 102075
+          },
+          "counted": "More than 98% of precincts reporting; absentee and early ballots still being counted",
+          "src": {
+            "t": "Anchorage Daily News, Nov. 4, 2026",
+            "u": "https://www.adn.com/politics/2026/11/03/peltola-leads-sullivan-in-limited-early-results-in-hard-fought-us-senate-race/"
+          }
         }
       }
     },
@@ -63362,6 +63378,17 @@
         "src": {
           "t": "NBC News, 2026 Senate results",
           "u": "https://www.nbcnews.com/politics/2026-elections/senate-results"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "ossoff": 59,
+            "mcollins": 41
+          },
+          "src": {
+            "t": "NBC News, Georgia Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/georgia-senate-results"
+          }
         }
       }
     },
@@ -63395,6 +63422,30 @@
         "src": {
           "t": "CBS News, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/news/iowa-2026-senate-hinson-turek/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "turek": 50.8,
+            "hinson": 46.1
+          },
+          "votes": {
+            "turek": 643244,
+            "hinson": 583403
+          },
+          "others": [
+            {
+              "name": "Thomas Laehn",
+              "party": "L",
+              "pct": 3.1,
+              "votes": 38759
+            }
+          ],
+          "counted": "An estimated 91% of votes counted",
+          "src": {
+            "t": "Breitbart News, Nov. 3, 2026, from the AP count",
+            "u": "https://www.breitbart.com/politics/2026/11/03/iasen/"
+          }
         }
       }
     },
@@ -63428,6 +63479,30 @@
         "src": {
           "t": "NBC News, Nov. 4, 2026",
           "u": "https://www.nbcnews.com/politics/2026-election/adam-hamilton-kansas-senate-democrat-winner-upset-roger-marshall-rcna603310"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "hamilton": 51,
+            "marshall": 46
+          },
+          "others": [
+            {
+              "name": "David Graham",
+              "party": "L",
+              "pct": 3,
+              "votes": 32934
+            }
+          ],
+          "src": {
+            "t": "WIBW, Nov. 4, 2026",
+            "u": "https://www.wibw.com/2026/11/04/adam-hamilton-tops-incumbent-roger-marshall-become-kansas-first-democratic-senator-nearly-century/"
+          },
+          "votes": {
+            "hamilton": 556414,
+            "marshall": 503230
+          },
+          "counted": "98.5% of ballots counted"
         }
       }
     },
@@ -63461,6 +63536,22 @@
         "src": {
           "t": "NBC News, Nov. 4, 2026",
           "u": "https://www.nbcnews.com/politics/2026-election/troy-jackson-maine-senator-win-democrat-senate-majority-susan-collins-rcna603312"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "jackson": 54,
+            "collins": 46
+          },
+          "votes": {
+            "jackson": 361291,
+            "collins": 310089
+          },
+          "counted": "91% of the expected vote counted",
+          "src": {
+            "t": "ABC News, Nov. 4, 2026",
+            "u": "https://abcnews.com/Politics/maine-2026-live-midterm-election-results/story?id=136761571"
+          }
         }
       }
     },
@@ -63494,6 +63585,22 @@
         "src": {
           "t": "CBS News, Senate election results 2026",
           "u": "https://www.cbsnews.com/live-updates/senate-election-results-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "elsayed": 52.5,
+            "rogers": 45.5
+          },
+          "votes": {
+            "elsayed": 2497852,
+            "rogers": 2162890
+          },
+          "counted": "95% of votes counted",
+          "src": {
+            "t": "Patch, Nov. 4, 2026",
+            "u": "https://patch.com/michigan/across-mi/michigan-u-s-senate-election-results-2026-el-sayed-vs-rogers-live-updates"
+          }
         }
       }
     },
@@ -63527,6 +63634,25 @@
         "src": {
           "t": "NBC News, Nov. 4, 2026",
           "u": "https://www.nbcnews.com/politics/2026-election/chris-pappas-democrat-wins-new-hampshire-senate-race-john-sununu-rcna603326"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "pappas": 56.1,
+            "sununu": 42
+          },
+          "others": [
+            {
+              "name": "Edmond Laplante",
+              "party": "I",
+              "pct": 1.9
+            }
+          ],
+          "counted": "91.5% of the expected vote counted",
+          "src": {
+            "t": "NBC News, New Hampshire Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/new-hampshire-senate-results"
+          }
         }
       }
     },
@@ -63560,6 +63686,18 @@
         "src": {
           "t": "WRAL, Nov. 4, 2026",
           "u": "https://www.wral.com/news/nccapitol/us-senate-race-nc-north-carolina-roy-cooper-michael-whatley-midterm-results-november-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "cooper": 58.7,
+            "whatley": 39.2
+          },
+          "counted": "Most results in",
+          "src": {
+            "t": "WRAL, Nov. 4, 2026",
+            "u": "https://www.wral.com/news/nccapitol/us-senate-race-nc-north-carolina-roy-cooper-michael-whatley-midterm-results-november-2026/"
+          }
         }
       }
     },
@@ -63594,6 +63732,22 @@
         "src": {
           "t": "Scripps News, Nov. 4, 2026",
           "u": "https://www.scrippsnews.com/politics/america-votes/democrat-sherrod-brown-defeats-gops-jon-husted-in-ohio-senate-race"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "brown": 50.01,
+            "husted": 45.15
+          },
+          "votes": {
+            "brown": 2301042,
+            "husted": 2077748
+          },
+          "counted": "87% of votes reported",
+          "src": {
+            "t": "Fox 8 Cleveland, Nov. 4, 2026",
+            "u": "https://fox8.com/news/who-is-going-to-win-the-us-senate-race-in-ohio/"
+          }
         }
       }
     },
@@ -63627,6 +63781,30 @@
         "src": {
           "t": "The Texas Tribune, Nov. 3, 2026",
           "u": "https://www.texastribune.org/2026/11/03/texas-ken-paxton-james-talarico-us-senate-elections-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "talarico": 55.08,
+            "paxton": 42.99
+          },
+          "votes": {
+            "talarico": 5445121,
+            "paxton": 4249752
+          },
+          "src": {
+            "t": "WFAA, Nov. 4, 2026",
+            "u": "https://www.wfaa.com/article/news/politics/elections/texas-election-results-ken-paxton-james-talarico-vie-for-us-senate-seat/287-373a76f3-4a0d-498e-a1d6-445ccc0b987e"
+          },
+          "others": [
+            {
+              "name": "Ted Brown",
+              "party": "L",
+              "pct": 1.92
+            }
+          ],
+          "total": 9885131,
+          "counted": "Count as of 10:39 a.m. Nov. 4"
         }
       }
     },
@@ -63660,6 +63838,21 @@
         "src": {
           "t": "Alabama Daily News, Nov. 4, 2026",
           "u": "https://aldailynews.com/republican-barry-moore-wins-alabamas-us-senate-seat/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "moore": 54.7,
+            "wess": 45.2
+          },
+          "votes": {
+            "moore": 917860,
+            "wess": 758465
+          },
+          "src": {
+            "t": "Alabama Reporter, 2026 election results",
+            "u": "https://www.alreporter.com/election-results"
+          }
         }
       }
     },
@@ -63693,6 +63886,18 @@
         "src": {
           "t": "Colorado Public Radio, Nov. 3, 2026",
           "u": "https://www.cpr.org/2026/11/03/colorado-election-results-us-senate-hickenlooper-baisley/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "hickenlooper": 60.2,
+            "baisley": 35.6
+          },
+          "total": 2176267,
+          "src": {
+            "t": "NBC News, Colorado Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/colorado-senate-results"
+          }
         }
       }
     },
@@ -63726,6 +63931,21 @@
         "src": {
           "t": "Axios Chicago, Nov. 4, 2026",
           "u": "https://www.axios.com/local/chicago/2026/11/04/juliana-stratton-wins-illinois-senate-election-2026"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "stratton": 60.69,
+            "tracy": 37.74
+          },
+          "votes": {
+            "stratton": 2144441,
+            "tracy": 1333622
+          },
+          "src": {
+            "t": "Decision Desk HQ, Illinois Senate results",
+            "u": "https://votes.decisiondeskhq.com/races/2026-11-03/illinois-us-senate-general-election"
+          }
         }
       }
     },
@@ -63759,6 +63979,25 @@
         "src": {
           "t": "Louisville Public Media, Nov. 3, 2026",
           "u": "https://www.lpm.org/news/2026-11-03/andy-barr-wins-against-booker-to-replace-mitch-mcconnell-as-kentuckys-new-us-senator"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "barr": 55,
+            "cbooker": 42.9
+          },
+          "others": [
+            {
+              "name": "Christopher Campbell",
+              "party": "I",
+              "pct": 2.1
+            }
+          ],
+          "counted": "99% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Kentucky Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/kentucky-senate-results"
+          }
         }
       }
     },
@@ -63792,6 +64031,18 @@
         "src": {
           "t": "KSLA, Nov. 4, 2026",
           "u": "https://www.ksla.com/2026/11/04/julia-letlow-projected-win-louisiana-senate-race/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "letlow": 50.9,
+            "davis": 49.1
+          },
+          "counted": "More than 1.46 million votes counted; Letlow ahead by 25,857",
+          "src": {
+            "t": "Louisiana Illuminator, Nov. 3, 2026",
+            "u": "https://lailluminator.com/2026/11/03/letlow-senate-5/"
+          }
         }
       }
     },
@@ -63825,6 +64076,29 @@
         "src": {
           "t": "CBS News, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/news/minnesota-2026-senate-flanagan-tafoya/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "flanagan": 53.71,
+            "tafoya": 43.55
+          },
+          "others": [
+            {
+              "name": "Marisa Simonetti",
+              "pct": 1.47
+            },
+            {
+              "name": "Rebecca Whiting",
+              "party": "L",
+              "pct": 1.15
+            }
+          ],
+          "counted": "100% of precincts reporting",
+          "src": {
+            "t": "KNSI, Nov. 4, 2026",
+            "u": "https://knsiradio.com/2026/11/04/election-results/"
+          }
         }
       }
     },
@@ -63859,6 +64133,26 @@
         "src": {
           "t": "Daily Montanan, Nov. 4, 2026",
           "u": "https://dailymontanan.com/2026/11/04/republican-kurt-alme-declares-victory-independent-seth-bodnar-concedes/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "alme": 47.7,
+            "bodnar": 38.6,
+            "bankhead": 11.9
+          },
+          "others": [
+            {
+              "name": "Kyle Austin",
+              "party": "L",
+              "pct": 1.8
+            }
+          ],
+          "counted": "About 78% of the vote counted, when the AP called the race",
+          "src": {
+            "t": "Montana Free Press, Nov. 4, 2026",
+            "u": "https://montanafreepress.org/2026/11/04/alme-wins-montana-us-senate-seat/"
+          }
         }
       }
     },
@@ -63892,6 +64186,18 @@
         "src": {
           "t": "NBC News, Nov. 4, 2026",
           "u": "https://www.nbcnews.com/politics/2026-election/pete-ricketts-nebraska-senator-gop-win-dan-osborn-election-rcna603328"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "ricketts": 50.2,
+            "osborn": 43.8
+          },
+          "src": {
+            "t": "Washington Examiner, Nov. 4, 2026",
+            "u": "https://www.washingtonexaminer.com/news/campaigns/4770721/nebraska-senate-race-pete-ricketts-dan-osborn/"
+          },
+          "counted": "87% of the vote counted, when the AP called the race"
         }
       }
     },
@@ -63925,6 +64231,30 @@
         "src": {
           "t": "WHYY, Nov. 3, 2026",
           "u": "https://whyy.org/articles/election-2026-new-jersey-us-senate-booker-murphy/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "booker": 62.1,
+            "murphy": 35.3
+          },
+          "votes": {
+            "booker": 1781640,
+            "murphy": 1013579
+          },
+          "others": [
+            {
+              "name": "Veronica Fernandez",
+              "party": "I",
+              "pct": 1.6,
+              "votes": 47026
+            }
+          ],
+          "counted": "94.1% of the expected vote counted",
+          "src": {
+            "t": "NBC News, New Jersey Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/new-jersey-senate-results"
+          }
         }
       }
     },
@@ -63958,6 +64288,25 @@
         "src": {
           "t": "KTUL, Nov. 4, 2026",
           "u": "https://ktul.com/news/local/kevin-hern-wins-oklahoma-us-senate-race-defeating-nkiyla-jasmine-thomas-11-04-2026"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "hern": 57.3,
+            "thomas": 39.2
+          },
+          "others": [
+            {
+              "name": "Curtis Stinnett",
+              "party": "I",
+              "pct": 1.3
+            }
+          ],
+          "total": 1113879,
+          "src": {
+            "t": "NBC News, Oklahoma Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/oklahoma-senate-results"
+          }
         }
       }
     },
@@ -63991,6 +64340,18 @@
         "src": {
           "t": "Oil City News, Nov. 3, 2026",
           "u": "https://oilcity.news/community/elections/2026/11/03/election-2026-hageman-defeats-byrd-for-wyoming-u-s-senate-seat/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "hageman": 65.2,
+            "byrd": 34.8
+          },
+          "counted": "97% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Wyoming Senate results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/wyoming-senate-results"
+          }
         }
       }
     },
@@ -64024,6 +64385,30 @@
         "src": {
           "t": "Colorado Public Radio, Nov. 3, 2026",
           "u": "https://www.cpr.org/2026/11/03/colorado-election-results-congressional-district-8-evans-rutinel/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "rutinel": 55.47,
+            "evans": 40.82
+          },
+          "votes": {
+            "rutinel": 124631,
+            "evans": 91712
+          },
+          "others": [
+            {
+              "name": "Dave Wood",
+              "party": "L",
+              "pct": 3.72
+            }
+          ],
+          "total": 224699,
+          "counted": "Secretary of State returns as of 4:02 a.m. Nov. 4",
+          "src": {
+            "t": "Denver Gazette, Nov. 4, 2026",
+            "u": "https://www.denvergazette.com/2026/11/03/gabe-evans-manny-rutinel-colorado-cd8-election-results/"
+          }
         }
       }
     },
@@ -64057,6 +64442,18 @@
         "src": {
           "t": "Bay News 9, Nov. 3, 2026",
           "u": "https://baynews9.com/fl/tampa/news/2026/11/03/castor-belran-make-final-push-for-floridas-newly-redrawn-1th-congressional-district"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "castor": 51.2,
+            "beltran": 45.9
+          },
+          "counted": "97% of precincts reporting",
+          "src": {
+            "t": "Bay News 9, Nov. 3, 2026",
+            "u": "https://baynews9.com/fl/tampa/news/2026/11/03/castor-belran-make-final-push-for-floridas-newly-redrawn-1th-congressional-district"
+          }
         }
       }
     },
@@ -64090,6 +64487,17 @@
         "src": {
           "t": "CBS News, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/news/iowa-1st-district-results-christina-bohannan-mariannette-miller-meeks/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "bohannan": 52.8,
+            "millermeeks": 43.6
+          },
+          "src": {
+            "t": "NBC News, Iowa District 1 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/iowa-us-house-district-1-results"
+          }
         }
       }
     },
@@ -64123,6 +64531,22 @@
         "src": {
           "t": "ABC7 New York, Nov. 4, 2026",
           "u": "https://abc7ny.com/post/midterm-elections-2026-lawler-conley-vie-ny-17-seat-voters-weigh-costs/20012701/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "conley": 52.2,
+            "lawler": 47.7
+          },
+          "votes": {
+            "conley": 133219,
+            "lawler": 121881
+          },
+          "counted": "60.9% of the expected vote counted",
+          "src": {
+            "t": "NBC New York, Nov. 4, 2026",
+            "u": "https://www.nbcnewyork.com/elections/live-results-2026-ny-nj-ct-midterm-elections/6563336/"
+          }
         }
       }
     },
@@ -64156,6 +64580,18 @@
         "src": {
           "t": "WTOL, Nov. 4, 2026",
           "u": "https://www.wtol.com/article/news/politics/elections/ohio-9th-district-election-results-kaptur-merrin-2026/512-2feb38cb-61b0-45c0-a3be-5a410a54d8a8"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "kaptur": 52.7,
+            "merrin": 47.3
+          },
+          "counted": "All votes counted (unofficial); Kaptur ahead by 16,476",
+          "src": {
+            "t": "WTOL, Nov. 4, 2026",
+            "u": "https://www.wtol.com/article/news/politics/elections/ohio-9th-district-election-results-kaptur-merrin-2026/512-2feb38cb-61b0-45c0-a3be-5a410a54d8a8"
+          }
         }
       }
     },
@@ -64189,6 +64625,21 @@
         "src": {
           "t": "Spotlight PA, Nov. 2026",
           "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-tenth-congressional-district-scott-perry-janelle-stelson-elections/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "stelson": 55.03,
+            "perry": 44.97
+          },
+          "votes": {
+            "stelson": 173845,
+            "perry": 142059
+          },
+          "src": {
+            "t": "ABC27, Nov. 3, 2026",
+            "u": "https://www.abc27.com/local-news/pa-10-election-results-live-updates-on-the-scott-perry-janelle-stelson-race/"
+          }
         }
       }
     },
@@ -64222,6 +64673,18 @@
         "src": {
           "t": "KRIS 6 News, Nov. 4, 2026",
           "u": "https://www.kristv.com/news/political/elections/vicente-gonzalez-wins-reelection-in-texas-34th-congressional-district-after-eric-flores-concedes"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "gonzalez": 55.6,
+            "flores": 39.8
+          },
+          "total": 202645,
+          "src": {
+            "t": "NBC News, Texas District 34 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/texas-us-house-district-34-results"
+          }
         }
       }
     },
@@ -64256,6 +64719,22 @@
         "src": {
           "t": "KGW, Nov. 4, 2026",
           "u": "https://www.kgw.com/article/news/politics/elections/washington-3rd-congressional-district-rep-gluesenkamp-perez-john-braun-election-results-update/283-1ed78fd8-c043-465d-a528-0ebbe75bf193"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "mgp": 55,
+            "braun": 44.1
+          },
+          "votes": {
+            "mgp": 142298,
+            "braun": 114028
+          },
+          "counted": "Initial ballot counts; Washington counts mailed ballots for days",
+          "src": {
+            "t": "Fox 13 Seattle, Nov. 4, 2026",
+            "u": "https://www.fox13seattle.com/news/wa-03-election-results"
+          }
         }
       }
     }
@@ -195804,7 +196283,8 @@
             },
             "possibleRepeat": 0,
             "n": 104
-          }
+          },
+          "bioguide": "C001133"
         },
         {
           "name": "JoAnna Mendoza",
@@ -195855,6 +196335,18 @@
         "src": {
           "t": "The Hill, Nov. 3, 2026",
           "u": "https://thehill.com/homenews/campaign/6178905-democrat-mendoza-wins-arizona-district-6/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6AZ06099": 54,
+            "H2AZ02360": 44
+          },
+          "counted": "Count as of 2 a.m. Nov. 4",
+          "src": {
+            "t": "KJZZ, Nov. 4, 2026",
+            "u": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-district-6-results-elex"
+          }
         }
       }
     },
@@ -195914,7 +196406,8 @@
             },
             "possibleRepeat": 0,
             "n": 114
-          }
+          },
+          "bioguide": "V000129"
         },
         {
           "name": "Randy Villegas",
@@ -195971,6 +196464,18 @@
         "src": {
           "t": "NewsNation, 2026 results",
           "u": "https://www.newsnationnow.com/politics/2026-midterm-elections/ca-22-election-results-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6CA22190": 66.4,
+            "H2CA20094": 33.6
+          },
+          "counted": "57.1% of the expected vote counted",
+          "src": {
+            "t": "NBC News, California District 22 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/california-us-house-district-22-results"
+          }
         }
       }
     },
@@ -196075,6 +196580,22 @@
         "src": {
           "t": "CBS Miami, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/miami/news/florida-district-22-midterm-election-results-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6FL21059": 51.9,
+            "H6FL22248": 48.1
+          },
+          "votes": {
+            "H6FL21059": 153047,
+            "H6FL22248": 141886
+          },
+          "counted": "99% of the expected vote counted",
+          "src": {
+            "t": "NBC 6 South Florida, Nov. 4, 2026",
+            "u": "https://www.nbcmiami.com/elections/pia-dandiya-wins-newly-drawn-district-becomes-floridas-first-south-asian-u-s-rep/3883335/"
+          }
         }
       }
     },
@@ -196128,7 +196649,8 @@
             },
             "possibleRepeat": 0,
             "n": 37
-          }
+          },
+          "bioguide": "M001217"
         },
         {
           "name": "Scott Singer",
@@ -196179,6 +196701,29 @@
         "src": {
           "t": "CBS Miami, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/miami/news/florida-district-25-election-results-2026-midterm/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H2FL22171": 51.3,
+            "H6FL23188": 46.6
+          },
+          "votes": {
+            "H2FL22171": 143753,
+            "H6FL23188": 130787
+          },
+          "others": [
+            {
+              "name": "Peter Jassenoff",
+              "party": "I",
+              "pct": 2.1
+            }
+          ],
+          "counted": "About 99% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Florida District 25 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/florida-us-house-district-25-results"
+          }
         }
       }
     },
@@ -196232,7 +196777,8 @@
             },
             "possibleRepeat": 0,
             "n": 88
-          }
+          },
+          "bioguide": "N000193"
         },
         {
           "name": "Sarah Trone Garriott",
@@ -196283,6 +196829,18 @@
         "src": {
           "t": "Iowa Capital Dispatch, Nov. 3, 2026",
           "u": "https://iowacapitaldispatch.com/2026/11/03/democrat-sarah-trone-garriott-defeats-incumbent-zach-nunn-in-iowas-3rd-district/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6IA03268": 55,
+            "H2IA03119": 45
+          },
+          "counted": "92% of precincts reporting",
+          "src": {
+            "t": "Iowa Capital Dispatch, Nov. 3, 2026",
+            "u": "https://iowacapitaldispatch.com/2026/11/03/democrat-sarah-trone-garriott-defeats-incumbent-zach-nunn-in-iowas-3rd-district/"
+          }
         }
       }
     },
@@ -196336,7 +196894,8 @@
             },
             "possibleRepeat": 0,
             "n": 136
-          }
+          },
+          "bioguide": "B001321"
         },
         {
           "name": "William Lawrence",
@@ -196388,6 +196947,22 @@
         "src": {
           "t": "Michigan Advance, Nov. 4, 2026",
           "u": "https://michiganadvance.com/2026/11/04/lawrence-declares-victory-in-michigans-7th-congressional-district/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6MI07298": 50.95,
+            "H2MI07123": 47.79
+          },
+          "votes": {
+            "H6MI07298": 201719,
+            "H2MI07123": 189203
+          },
+          "counted": "About 96% of the expected vote counted",
+          "src": {
+            "t": "Poliwave, Michigan District 7 results",
+            "u": "https://www.poliwave.com/us/live/midterms-2026/house/michigan-07"
+          }
         }
       }
     },
@@ -196488,10 +197063,43 @@
       "notes": "Open seat: John James running for governor of Michigan. Bouchard is the son of longtime Oakland County Sheriff Mike Bouchard.",
       "result": {
         "winner": "H6MI10276",
-        "how": "Michael Bouchard conceded",
+        "how": "Called by the AP; Michael Bouchard conceded",
         "src": {
           "t": "Michigan Advance, Nov. 4, 2026",
           "u": "https://michiganadvance.com/2026/11/04/in-michigans-10th-congressional-district-hines-claims-victory/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6MI10276": 52.4,
+            "H6MI10359": 45.3
+          },
+          "votes": {
+            "H6MI10276": 188078,
+            "H6MI10359": 162347
+          },
+          "others": [
+            {
+              "name": "Andrea Kirby",
+              "party": "WCP",
+              "pct": 1.1
+            },
+            {
+              "name": "Mike Saliba",
+              "party": "L",
+              "pct": 0.9
+            },
+            {
+              "name": "Kwabena Nkromo",
+              "party": "G",
+              "pct": 0.3
+            }
+          ],
+          "counted": "95% of votes counted",
+          "src": {
+            "t": "Michigan Advance, Nov. 4, 2026",
+            "u": "https://michiganadvance.com/2026/11/04/in-michigans-10th-congressional-district-hines-claims-victory/"
+          }
         }
       }
     },
@@ -196608,6 +197216,18 @@
         "src": {
           "t": "CBS News, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/news/north-carolina-11th-district-results-jennifer-balkcom-jamie-ager/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6NC11248": 56.7,
+            "H6NC11321": 41.65
+          },
+          "counted": "State Board of Elections count",
+          "src": {
+            "t": "Blue Ridge Public Radio, Nov. 3, 2026",
+            "u": "https://www.bpr.org/politics-government/2026-11-03/cooper-ager-and-roney-are-some-of-the-victors-in-the-2026-midterm-election-read-the-results-here"
+          }
         }
       }
     },
@@ -196661,7 +197281,8 @@
             },
             "possibleRepeat": 0,
             "n": 40
-          }
+          },
+          "bioguide": "M001222"
         },
         {
           "name": "Brian Poindexter",
@@ -196712,6 +197333,19 @@
         "src": {
           "t": "CBS News, Nov. 4, 2026",
           "u": "https://www.cbsnews.com/news/ohio-7th-district-results-max-miller-brian-poindexter/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6OH07168": 54.9,
+            "H2OH16051": 45.1
+          },
+          "total": 328791,
+          "counted": "98% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Ohio District 7 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-7-results"
+          }
         }
       }
     },
@@ -196765,7 +197399,8 @@
             },
             "possibleRepeat": 0,
             "n": 93
-          }
+          },
+          "bioguide": "M001230"
         },
         {
           "name": "Bob Brooks",
@@ -196816,6 +197451,22 @@
         "src": {
           "t": "Spotlight PA, Nov. 2026",
           "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-seventh-congressional-district-bob-brooks-ryan-mackenzie-elections/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6PA07188": 56.1,
+            "H8PA15195": 43.9
+          },
+          "votes": {
+            "H6PA07188": 164370,
+            "H8PA15195": 128655
+          },
+          "counted": "98% of the expected vote counted",
+          "src": {
+            "t": "NBC News, Pennsylvania District 7 results",
+            "u": "https://www.nbcnews.com/politics/2026-elections/pennsylvania-us-house-district-7-results"
+          }
         }
       }
     },
@@ -196869,7 +197520,8 @@
             },
             "possibleRepeat": 0,
             "n": 95
-          }
+          },
+          "bioguide": "B001327"
         },
         {
           "name": "Paige Cognetti",
@@ -196920,6 +197572,22 @@
         "src": {
           "t": "Spotlight PA, Nov. 2026",
           "u": "https://www.spotlightpa.org/news/2026/11/pennsylvania-election-results-tenth-congressional-district-paige-cognetti-rob-bresnahan-elections/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6PA08293": 54.4,
+            "H4PA08124": 45.6
+          },
+          "votes": {
+            "H6PA08293": 152583,
+            "H4PA08124": 128081
+          },
+          "counted": "98% of votes counted",
+          "src": {
+            "t": "WVIA, Nov. 3, 2026",
+            "u": "https://www.wvia.org/news/local/2026-11-03/cnn-other-networks-project-cognetti-to-beat-bresnahan-in-8th-congressional-district-race"
+          }
         }
       }
     },
@@ -196973,7 +197641,8 @@
             },
             "possibleRepeat": 0,
             "n": 95
-          }
+          },
+          "bioguide": "D000594"
         },
         {
           "name": "Bobby Pulido",
@@ -197024,6 +197693,18 @@
         "src": {
           "t": "The Texas Tribune, Nov. 3, 2026",
           "u": "https://www.texastribune.org/2026/11/03/texas-bobby-pulido-monica-de-la-cruz-congress-district-15-elections-2026/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6TX15246": 61.6,
+            "H0TX15124": 38.4
+          },
+          "counted": "About 89% of votes counted",
+          "src": {
+            "t": "Texas Public Radio, Nov. 3, 2026",
+            "u": "https://www.tpr.org/government-politics/2026-11-03/bobby-pulido-declares-victory-over-monica-de-la-cruz-in-south-texas-congressional-race"
+          }
         }
       }
     },
@@ -197083,7 +197764,8 @@
             },
             "possibleRepeat": 0,
             "n": 63
-          }
+          },
+          "bioguide": "K000399"
         },
         {
           "name": "Elaine Luria",
@@ -197129,7 +197811,8 @@
             },
             "possibleRepeat": 0,
             "n": 63
-          }
+          },
+          "bioguide": "L000591"
         }
       ],
       "ieTotal": 4340881.05,
@@ -197140,6 +197823,31 @@
         "src": {
           "t": "Virginia Mercury, Nov. 3, 2026",
           "u": "https://virginiamercury.com/2026/11/03/warner-wins-fourth-term-as-three-virginia-house-races-remain-undecided/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H6VA02198": 51.51,
+            "H2VA02064": 46.14
+          },
+          "others": [
+            {
+              "name": "Matt Baker",
+              "party": "I",
+              "pct": 1.42
+            },
+            {
+              "name": "Bishop Staten",
+              "party": "I",
+              "pct": 0.8
+            }
+          ],
+          "src": {
+            "t": "Royal Examiner, Nov. 4, 2026",
+            "u": "https://royalexaminer.com/warner-wins-fourth-term-luria-ousts-kiggans-in-va-02-taylor-triumphs-in-va-01/"
+          },
+          "total": 303901,
+          "counted": "Votes tallied by 11:55 p.m. Nov. 3"
         }
       }
     },
@@ -197193,7 +197901,8 @@
             },
             "possibleRepeat": 0,
             "n": 99
-          }
+          },
+          "bioguide": "V000135"
         },
         {
           "name": "Rebecca Cooke",
@@ -197244,6 +197953,22 @@
         "src": {
           "t": "Wisconsin Examiner, Nov. 4, 2026",
           "u": "https://wisconsinexaminer.com/2026/11/04/rebecca-cooke-flips-wisconsins-3rd-congressional-district-for-democrats/"
+        },
+        "tally": {
+          "asof": "2026-11-04",
+          "shares": {
+            "H4WI03169": 52.4,
+            "H0WI03175": 45.8
+          },
+          "votes": {
+            "H4WI03169": 156573,
+            "H0WI03175": 136950
+          },
+          "counted": "91% of ballots counted",
+          "src": {
+            "t": "Wisconsin Examiner, Nov. 4, 2026",
+            "u": "https://wisconsinexaminer.com/2026/11/04/rebecca-cooke-flips-wisconsins-3rd-congressional-district-for-democrats/"
+          }
         }
       }
     }

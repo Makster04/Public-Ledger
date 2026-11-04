@@ -6,7 +6,8 @@ const data=JSON.parse(await fs.readFile(new URL('research.json',root),'utf8'));
 const index=JSON.parse(await fs.readFile(new URL('portraits/index.json',root),'utf8'));
 // Everyone profiled, plus every other sitting senator (their basic profiles' cards).
 const senate=JSON.parse(await fs.readFile(new URL('senate.json',root),'utf8')).senators;
-const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id)));
+// Toss-up nominees (liteRaces) are known by their FEC candidate ID.
+const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.fecCand))));
 test('every portrait belongs to a profiled person or a sitting senator, exists as a WebP, and says where it came from',async()=>{
   for(const [id,p] of Object.entries(index.people)){
     assert.ok(ids.has(id),id+' is not in research.json or senate.json');
