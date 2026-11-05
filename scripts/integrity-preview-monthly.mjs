@@ -4,20 +4,21 @@ import crypto from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {makeScorer} from '../public/scoring.js';
 import {tradeChecks} from '../public/grades.js';
-import {integrityOverall,honestyComponent,legalReviewComponent,showingUpComponent,previewCci,workersPreview} from '../public/integrity.js';
+import {integrityOverall,honestyComponent,legalReviewComponent,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent,previewCci,workersPreview} from '../public/integrity.js';
 
 const root=new URL('../',import.meta.url),read=f=>fs.readFileSync(new URL(f,root),'utf8'),LOG='public/integrity-preview-log.json';
-// attendance: public/attendance.json (npm run attendance:build), for Showing Up; without it, Showing Up stays unknown.
-export function previewScores(data,committees,sectors,tallies,attendance=null){
+// attendance, getItDone, conflicts: public/attendance.json, public/get-it-done.json and public/conflicts.json; a part
+// whose file isn't there stays unknown.
+export function previewScores(data,committees,sectors,tallies,attendance=null,getItDone=null,conflicts=null){
   const scorer=makeScorer(data,committees,sectors,tallies),year=Number(String(data.asof||'').match(/\b(19|20)\d{2}\b/)?.[0])||null;
   return Object.fromEntries([...data.members,...data.cands,...(data.featured||[])].map(person=>{
     const honesty=honestyComponent(person),usedTradeIds=new Set(tradeChecks(person.trades||[],[]).rows.filter(t=>t.late).map(t=>t.id).filter(Boolean));
     const legal=legalReviewComponent(person,{asOfYear:year,stockActCovered:usedTradeIds});
-    const showing=showingUpComponent(person,attendance,{asOfYear:year});
-    const integrity=integrityOverall({honesty:honesty.complete?honesty.value:null,showingUp:showing.complete?showing.value:null,legalTrouble:legal.value});
+    const showing=showingUpPart(showingUpComponent(person,attendance,{asOfYear:year}),getItDoneComponent(person,getItDone)),conflict=conflictsComponent(person,conflicts);
+    const integrity=integrityOverall({honesty:honesty.complete?honesty.value:null,showingUp:showing.complete?showing.value:null,conflicts:conflict.complete?conflict.value:null,legalTrouble:legal.value});
     const legislative=scorer.pvp(person),cci=previewCci({businessVotes:scorer.cci(person)?.votes?.index??null});
-    return [person.id,{integrity:{pct:integrity.pct,why:integrity.why,honesty:honesty.complete?honesty.value:null,personalFinances:null,fundraising:null,showingUp:showing.complete?showing.value:null,legalTrouble:legal.value},
-      workers:{pct:workersPreview(legislative.billsPct,cci).pct,legislative:legislative.billsPct,cci:cci.index},coverage:{honesty:honesty.complete,personalFinances:false,fundraising:false,showingUp:showing.complete,legal:legal.reviewed}}];
+    return [person.id,{integrity:{pct:integrity.pct,why:integrity.why,honesty:honesty.complete?honesty.value:null,personalFinances:null,fundraising:null,showingUp:showing.complete?showing.value:null,conflicts:conflict.complete?conflict.value:null,legalTrouble:legal.value},
+      workers:{pct:workersPreview(legislative.billsPct,cci).pct,legislative:legislative.billsPct,cci:cci.index},coverage:{honesty:honesty.complete,personalFinances:false,fundraising:false,showingUp:showing.complete,conflicts:conflict.complete,legal:legal.reviewed}}];
   }));
 }
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
@@ -26,7 +27,7 @@ export function previewChanges(before={},after={}){
   for(const [id,next] of Object.entries(after)){
     const old=before[id];
     const metrics=[['integrity',old?.integrity?.pct,next.integrity.pct],['Honesty',old?.integrity?.honesty,next.integrity.honesty],
-      ['Personal Finances',old?.integrity?.personalFinances,next.integrity.personalFinances],['Fundraising',old?.integrity?.fundraising,next.integrity.fundraising],['Showing Up',old?.integrity?.showingUp,next.integrity.showingUp],
+      ['Personal Finances',old?.integrity?.personalFinances,next.integrity.personalFinances],['Fundraising',old?.integrity?.fundraising,next.integrity.fundraising],['Showing Up',old?.integrity?.showingUp,next.integrity.showingUp],['Conflicts of Interest',old?.integrity?.conflicts,next.integrity.conflicts],
       ['Legal Trouble',old?.integrity?.legalTrouble,next.integrity.legalTrouble],['People First comparison',old?.workers?.pct,next.workers.pct]];
     for(const [grade,a,b] of metrics){
       if(old&&a===b)continue;
@@ -36,17 +37,18 @@ export function previewChanges(before={},after={}){
   }
   return changes;
 }
-export function buildPreviewEntry(data,committees,sectors,tallies,date,attendance=null){
-  const scores=previewScores(data,committees,sectors,tallies,attendance),rules=crypto.createHash('sha256').update(read('public/integrity.js')).digest('hex').slice(0,12);
+export function buildPreviewEntry(data,committees,sectors,tallies,date,attendance=null,getItDone=null,conflicts=null){
+  const scores=previewScores(data,committees,sectors,tallies,attendance,getItDone,conflicts),rules=crypto.createHash('sha256').update(read('public/integrity.js')).digest('hex').slice(0,12);
   return {date,reviewedAt:data.asof,rules,scores};
 }
 if(import.meta.url===pathToFileURL(process.argv[1]).href){
   const dry=process.argv.includes('--dry-run'),data=JSON.parse(read('public/research.json')),
     committees=JSON.parse(read('public/committees.json')),sectors=JSON.parse(read('public/committee-sectors.json')),
     tallies=JSON.parse(read('public/vote-party.json')).votes,
-    attendance=fs.existsSync(new URL('public/attendance.json',root))?JSON.parse(read('public/attendance.json')):null;
+    optional=f=>fs.existsSync(new URL(f,root))?JSON.parse(read(f)):null,
+    attendance=optional('public/attendance.json'),getItDone=optional('public/get-it-done.json'),conflicts=optional('public/conflicts.json');
   const log=fs.existsSync(new URL(LOG,root))?JSON.parse(read(LOG)):{about:'Monthly Integrity and People First comparison preview only. Separate from official score history; no grade switches automatically.',entries:[]};
-  const date=new Date().toISOString().slice(0,10),entry=buildPreviewEntry(data,committees,sectors.committees||{},tallies,date,attendance);
+  const date=new Date().toISOString().slice(0,10),entry=buildPreviewEntry(data,committees,sectors.committees||{},tallies,date,attendance,getItDone,conflicts);
   const previous=log.entries.filter(x=>x.date!==date).at(-1);entry.changes=previewChanges(previous?.scores||{},entry.scores);
   entry.rulesChanged=!!previous&&previous.rules!==entry.rules;
   entry.note=previous?`${entry.changes.length} preview changes since ${previous.date}.${entry.rulesChanged?' Preview rules changed.':''}`:'First preview snapshot.';

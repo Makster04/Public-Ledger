@@ -3,7 +3,7 @@ import {promiseScore,legalTrouble,ownTrades,tradeChecks,amountMid} from './grade
 import {assetKind} from './holdings.js';
 import {SIZE_BRACKETS} from './donor-sizes.js';
 
-export const INTEGRITY_WEIGHTS={honesty:.25,personalFinances:.25,fundraising:.30,showingUp:.20};
+export const INTEGRITY_WEIGHTS={honesty:.20,personalFinances:.20,fundraising:.25,showingUp:.15,conflicts:.20};
 export const HILL_POWER=.745;
 export const hill=(x,midpoint)=>Number.isFinite(x)&&x>=0&&Number.isFinite(midpoint)&&midpoint>0?x**HILL_POWER/(midpoint**HILL_POWER+x**HILL_POWER):null;
 const clamp=(x,min=0,max=100)=>Math.max(min,Math.min(max,x));
@@ -17,8 +17,8 @@ function reviewedMidpoint(text,reviewedValue,reviewedSource,explicitOpen=false){
   return amountMid(text);
 }
 
-export function integrityOverall({honesty=null,personalFinances=null,fundraising=null,showingUp=null,legalTrouble:nullLegal=null}={}){
-  const values={honesty,personalFinances,fundraising,showingUp};
+export function integrityOverall({honesty=null,personalFinances=null,fundraising=null,showingUp=null,conflicts=null,legalTrouble:nullLegal=null}={}){
+  const values={honesty,personalFinances,fundraising,showingUp,conflicts};
   const used=Object.keys(INTEGRITY_WEIGHTS).filter(k=>validScore(values[k]));
   const legal=validScore(nullLegal)?nullLegal:null;
   if(used.length<2)return {pct:null,raw:null,weighted:null,used,missing:Object.keys(values).filter(k=>!used.includes(k)),legalTrouble:legal,why:'Needs two complete components'};
@@ -199,7 +199,76 @@ export function showingUpComponent(person,attendance,{asOfYear=null}={}){
   return {complete:true,value:clamp(100-SHOWING_UP_PER_POINT*rate),rate,votes,missed,years,excused,first,last,sources,why:null};
 }
 
-export function integrityPreview(person,{asOfYear=null,attendance=null,finance=null,sizes=null,pacRows=null,pacReceipts=null,pacCoverage=false,pacPeriodMatches=false,earmarks=null,pledgePoints=0,pledgeSources=[],pledgesReviewed=false,trust=null}={}){
+// Get It Done, inside Showing Up: the share of the bills and joint resolutions they sponsored that advanced (reported by
+// a committee, placed on a calendar, passed a chamber, sent to the other, signed or law), against the typical member of
+// their party in their chamber (public/get-it-done.json, npm run getitdone:build), over the window's Congresses:
+// 100 × min(1, their rate ÷ the typical rate, weighted by their own bills in each Congress). At least 10 bills.
+export const GET_IT_DONE_MIN_BILLS=10,SHOWING_UP_PARTS={attendance:.75,getItDone:.25};
+export function getItDoneComponent(person,data){
+  const rec=data?.people?.[person?.id];
+  const none=why=>({complete:false,value:null,why,sponsored:0,advanced:0,rate:null,typical:null,congresses:[]});
+  if(!rec)return none('No sponsored bills on record for these Congresses (not in Congress then, or the Get It Done file has not been built)');
+  const congresses=Object.entries(rec.congresses||{}).map(([c,x])=>({congress:Number(c),...x,typical:data.medians?.[c]?.[x.chamber]?.[x.party]??null})).sort((a,b)=>b.congress-a.congress);
+  const sponsored=congresses.reduce((n,c)=>n+c.sponsored,0),advanced=congresses.reduce((n,c)=>n+c.advanced,0);
+  if(sponsored<GET_IT_DONE_MIN_BILLS)return {...none(`Fewer than ${GET_IT_DONE_MIN_BILLS} sponsored bills in these Congresses`),sponsored,advanced,congresses};
+  const weighed=congresses.filter(c=>c.sponsored&&c.typical!=null),w=weighed.reduce((n,c)=>n+c.sponsored,0);
+  const typical=w?weighed.reduce((n,c)=>n+c.sponsored*c.typical,0)/w:null,rate=advanced/sponsored;
+  if(!typical)return {...none('No typical rate for their party in their chamber'),sponsored,advanced,congresses};
+  return {complete:true,value:100*Math.min(1,rate/typical),rate,typical,sponsored,advanced,congresses,why:null};
+}
+// Showing Up: 75% Attendance and 25% Get It Done; Attendance alone when Get It Done isn't available. Attendance is
+// required. The attendance details (years, excused absences) stay on the result for the page.
+export function showingUpPart(attendance,getItDone){
+  if(!attendance?.complete)return {...attendance,attendance,getItDone,complete:false,value:null};
+  const value=getItDone?.complete?SHOWING_UP_PARTS.attendance*attendance.value+SHOWING_UP_PARTS.getItDone*getItDone.value:attendance.value;
+  return {...attendance,attendance,getItDone,value,complete:true};
+}
+
+// Conflicts of Interest: 100 − (60% Outside Income & Conflicts + 40% Gifts & Travel), from the person's latest annual
+// (or candidate) report and the reviewed matches of the organizations on it (public/conflicts.json). An interested
+// organization lobbied on a bill sent to one of their committees, is a company in a sector their committees oversee, or
+// received contracts from an agency their committees oversee; a candidate's lobbied the chamber they're running for.
+// Only reviewed matches are marked "interested"; an unreviewed name is a lead and counts for nothing.
+export const CONFLICT_WEIGHTS={income:.40,lobbyistOverlap:.25,contractsForDonors:.20,foreignAgent:.15},CONFLICT_PARTS={outside:.60,giftsTravel:.40};
+const interested=list=>(list||[]).filter(x=>x?.interested===true);
+const amount=x=>Number.isFinite(Number(x?.amount??x?.value))?Number(x.amount??x.value):0;
+// I: income, board seats and agreements (latest report year): 60 × Hill(income from interested organizations, $50,000)
+// + 20 a board seat or officer position with one (at most 40) + 40 for an agreement with one, capped at 100.
+export function incomeConflicts({income=[],positions=[],agreements=[]}={}){
+  const money=interested(income).reduce((n,x)=>n+amount(x),0),seats=interested(positions).length,deals=interested(agreements).length;
+  return {value:clamp((money>0?60*hill(money,50000):0)+Math.min(40,20*seats)+(deals?40:0)),money,seats,deals};
+}
+export const lobbyistOverlap=sharePct=>Number.isFinite(sharePct)&&sharePct>=0?100*(sharePct>0?hill(sharePct,25):0):null;
+export const contractsForDonors=companies=>Number.isFinite(companies)&&companies>=0?100*(companies>0?hill(companies,5):0):null;
+export const foreignAgentFlag=filings=>Number.isFinite(filings)&&filings>=0?Math.min(100,25*filings):null;
+// Gifts & Travel (latest two report years): 60 × Hill(value from interested organizations, $10,000) + 10 a gift or
+// trip (at most 40), capped at 100.
+export function giftsTravel({gifts=[],travel=[]}={}){
+  const items=[...interested(gifts),...interested(travel)],value=items.reduce((n,x)=>n+amount(x),0);
+  return {value:clamp((value>0?60*hill(value,10000):0)+Math.min(40,10*items.length)),total:value,count:items.length};
+}
+// The weighted parts over the ones available; null when the required one is missing.
+const weightedOver=(parts,weights,required)=>{
+  if(parts[required]==null)return null;
+  const used=Object.keys(weights).filter(k=>Number.isFinite(parts[k])),total=used.reduce((n,k)=>n+weights[k],0);
+  return used.reduce((n,k)=>n+weights[k]*parts[k],0)/total;
+};
+export function conflictsComponent(person,data){
+  const rec=data?.people?.[person?.id];
+  const none=why=>({complete:false,value:null,why,outside:null,gifts:null,parts:{},sources:[]});
+  if(!rec)return none('No reviewed annual or candidate report on file for Conflicts of Interest yet');
+  if(!rec.report?.year||!rec.reviewed?.at)return none('The latest report and its organization matches have not been reviewed yet');
+  const inc=rec.income||rec.positions||rec.agreements?incomeConflicts(rec):null;
+  const parts={income:inc?.value??null,lobbyistOverlap:lobbyistOverlap(rec.lobbyistOverlap?.sharePct),contractsForDonors:contractsForDonors(rec.contractsForDonors?.companies),foreignAgent:foreignAgentFlag(rec.foreignAgent?.filings)};
+  const outside=weightedOver(parts,CONFLICT_WEIGHTS,'income');
+  const gt=rec.gifts||rec.travel?giftsTravel(rec):null;
+  if(outside==null&&gt==null)return {...none('Nothing from the report read yet'),parts};
+  const value=outside!=null&&gt!=null?100-(CONFLICT_PARTS.outside*outside+CONFLICT_PARTS.giftsTravel*gt.value):100-(outside??gt.value);
+  const sources=[rec.report?.url?{t:`${rec.report.year} report`,u:rec.report.url}:null,rec.reviewed?.src||null,...[...(rec.income||[]),...(rec.positions||[]),...(rec.agreements||[]),...(rec.gifts||[]),...(rec.travel||[])].map(x=>x?.src)].filter(x=>sourceUrl(x));
+  return {complete:true,value:clamp(value),outside,gifts:gt?.value??null,income:inc,giftsTravel:gt,parts,report:rec.report,reviewed:rec.reviewed,sources,why:null};
+}
+
+export function integrityPreview(person,{asOfYear=null,attendance=null,getItDone=null,conflicts=null,finance=null,sizes=null,pacRows=null,pacReceipts=null,pacCoverage=false,pacPeriodMatches=false,earmarks=null,pledgePoints=0,pledgeSources=[],pledgesReviewed=false,trust=null}={}){
   const h=honestyComponent(person),covered=!!person?.bioguide&&!person?.office;
   const ethics=person?.ethicsResult||{};
   const usedTradeIds=new Set(tradeChecks(person?.trades||[],[]).rows.filter(t=>t.late).map(t=>t.id).filter(Boolean));
@@ -207,7 +276,8 @@ export function integrityPreview(person,{asOfYear=null,attendance=null,finance=n
   const financeWithIndexes=personalFinancesComponent(person,{snapshot:finance?.netWorth,trust,trades:person?.trades,tradeCoverage:person?.tradeCoverage,
     insiderIndex:ethics.insider?.index,dodgerIndex:ethics.dodger?.index,covered});
   const m=fundraisingComponent(person,{sizes,pacRows,pacReceipts,pacCoverage,pacPeriodMatches,earmarks,pledgePoints,pledgeSources,pledgesReviewed});
-  const showing=showingUpComponent(person,attendance,{asOfYear});
-  const overall=integrityOverall({honesty:h.complete?h.value:null,personalFinances:financeWithIndexes.complete?financeWithIndexes.value:null,fundraising:m.complete?m.value:null,showingUp:showing.complete?showing.value:null,legalTrouble:legal.value});
-  return {overall,honesty:h,personalFinances:financeWithIndexes,fundraising:m,showingUp:showing,legal};
+  const showing=showingUpPart(showingUpComponent(person,attendance,{asOfYear}),getItDoneComponent(person,getItDone));
+  const conflict=conflictsComponent(person,conflicts);
+  const overall=integrityOverall({honesty:h.complete?h.value:null,personalFinances:financeWithIndexes.complete?financeWithIndexes.value:null,fundraising:m.complete?m.value:null,showingUp:showing.complete?showing.value:null,conflicts:conflict.complete?conflict.value:null,legalTrouble:legal.value});
+  return {overall,honesty:h,personalFinances:financeWithIndexes,fundraising:m,showingUp:showing,conflicts:conflict,legal};
 }

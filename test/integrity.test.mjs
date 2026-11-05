@@ -8,11 +8,12 @@ import {previewChanges} from '../scripts/integrity-preview-monthly.mjs';
 import data from '../public/research.json' with {type:'json'};
 
 test('overall Integrity normalizes available weights, requires two components and sourced legal review, and rounds only after the legal deduction',()=>{
-  // Honesty 25%, Personal Finances 25%, Fundraising 30%, Showing Up 20%.
-  const r=integrityOverall({honesty:90,personalFinances:80,fundraising:70,showingUp:95,legalTrouble:12.25});
-  assert.equal(r.weighted,82.5);assert.equal(r.raw,70.25);assert.equal(r.pct,70);assert.equal(letter(r.pct),'C');
-  const three=integrityOverall({honesty:90,personalFinances:80,fundraising:70,legalTrouble:12.25});
-  assert.equal(three.raw,67.125,'without Showing Up, the other three weights normalized');assert.deepEqual(three.missing,['showingUp']);
+  // Honesty 20%, Personal Finances 20%, Fundraising 25%, Showing Up 15%, Conflicts of Interest 20% (the worked example
+  // in Scores/03a_INTEGRITY_REVISION.md).
+  const r=integrityOverall({honesty:80,personalFinances:74,fundraising:70,showingUp:92.5,conflicts:55,legalTrouble:5});
+  assert.equal(Number(r.weighted.toFixed(4)),73.175);assert.equal(Number(r.raw.toFixed(4)),68.175);assert.equal(r.pct,68);assert.equal(letter(r.pct),'D');
+  const four=integrityOverall({honesty:80,personalFinances:74,fundraising:70,showingUp:92.5,legalTrouble:5});
+  assert.equal(Number(four.weighted.toFixed(4)),Number(((16+14.8+17.5+13.875)/0.8).toFixed(4)),'Conflicts missing: the other four rescaled');assert.deepEqual(four.missing,['conflicts']);
   const two=integrityOverall({honesty:80,personalFinances:90,legalTrouble:10});
   assert.equal(two.weighted,85);assert.equal(two.raw,75);assert.deepEqual(two.used,['honesty','personalFinances']);
   assert.equal(integrityOverall({honesty:99,legalTrouble:0}).pct,null);
