@@ -89,7 +89,9 @@ export const SOURCES={
   'S-MT':{state:'MT',contest:BOX_SENATE,boxes:{list:'https://electionresults.mt.gov/ResultsList.aspx'},slow:true,urls:[],page:'https://electionresults.mt.gov/ResultsList.aspx',source:'Montana Secretary of State, results by county'},
   'S-NE':{state:'NE',contest:BOX_SENATE,boxes:{pattern:'https://electionresults.nebraska.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty={code}',codes:93},slow:true,urls:[],page:'https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY',source:'Nebraska Secretary of State, results by county'},
   'S-NM':{state:'NM',contest:BOX_SENATE,boxes:{list:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY'},slow:true,urls:[],page:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY',source:'New Mexico Secretary of State, results by county'},
-  'S-OR':{state:'OR',contest:BOX_SENATE,boxes:{list:'https://results.oregonvotes.gov/ResultsList.aspx'},slow:true,urls:[],page:'https://results.oregonvotes.gov/ResultsList.aspx',source:'Oregon Secretary of State, results by county'},
+  // Oregon's county pages hold only county races; its export page sends the statewide races by county as CSV when its
+  // form is sent back with "CSV" chosen and the Statewide button pressed.
+  'S-OR':{state:'OR',contest:/^(us|u\.s\.|united states) senat/i,postback:{page:'https://results.oregonvotes.gov/ResultsExport.aspx',target:'ctl00$MainContent$Statewide',choices:{'ctl00$MainContent$rblTypes':'1'}},urls:[],page:'https://results.oregonvotes.gov/ResultsExport.aspx',source:'Oregon Secretary of State, statewide export'},
   'S-SD':{state:'SD',contest:BOX_SENATE,boxes:{list:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL'},slow:true,urls:[],page:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL',source:'South Dakota Secretary of State, results by county'},
   'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',help:SAVED_PAGE('S-MN','https://electionresults.sos.mn.gov/','open U.S. Senate and its results by county'),source:'Minnesota Secretary of State, election results'},
   'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/county-breakdown/United%20States%20Senate','https://elections.tn.gov/county-breakdown/U.S.%20Senate','https://elections.tn.gov/county-breakdown/US%20Senate','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
@@ -311,6 +313,18 @@ async function clarityCounties({base,st,eid,ver},get,contest){
   return rows;
 }
 
+// An ASP.NET page's export behind a button: its form's action and fields (the hidden ones, the checked choices, and the
+// given ones), with __EVENTTARGET set to the button, as a browser sends them back.
+export function postBackForm(html,base,target,choices={}){
+  const action=new URL(decode(/<form\b[^>]*\baction="([^"]*)"/i.exec(html)?.[1]||''),base).href,fields={};
+  for(const m of String(html).matchAll(/<input\b([^>]*)>/gi)){
+    const a=attrs(m[1]),type=String(a.type||'text').toLowerCase();if(!a.name)continue;
+    if(type==='hidden'||type==='text')fields[a.name]=a.value??'';
+    else if((type==='radio'||type==='checkbox')&&/\bchecked\b/i.test(m[1]))fields[a.name]=a.value??'on';
+  }
+  return {action,fields:{...fields,__EVENTTARGET:target,__EVENTARGUMENT:'',...choices}};
+}
+
 // Web pages: text without tags, and the links and tables in them.
 const ENTITY={amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' '};
 const decode=s=>s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,(m,e)=>e[0]==='#'?String.fromCodePoint(e[1]==='x'||e[1]==='X'?parseInt(e.slice(2),16):Number(e.slice(1))):ENTITY[e.toLowerCase()]??m);
@@ -420,7 +434,7 @@ export function byCounty(rows,cands,map){
 const pct=(v,t)=>t?(v/t*100).toFixed(2)+'%':'—';
 // One race: read its rows (a file or address given by hand, or each of the race's addresses and then its pages' links),
 // add them up by county, and say what was found.
-export async function countyRace(research,id,{get,file=null,maps}){
+export async function countyRace(research,id,{get,post=null,file=null,maps}){
   const src=SOURCES[id],map=await maps(src.state),cands=raceCandidates(research,id);
   const queue=file?[enhancedExport(file)]:[...src.urls,...(src.pages||[])],tried=[],names=map.counties.map(c=>c.name);let rows=null,from=null,b=null;
   // A Clarity state: find the November 3 election first.
@@ -428,6 +442,12 @@ export async function countyRace(research,id,{get,file=null,maps}){
   if(src.clarity&&!file){try{election=await clarityFind(src.clarity,get);queue.unshift(election.detail);}catch(e){tried.push(`${src.clarity.base}/${src.clarity.st}/ (list of elections): ${e.message}`);}}
   // What was read counts only with votes in the state's counties for at least one of the race's candidates.
   const take=(r,u)=>{const c=byCounty(r,cands,map);if(c.mapped&&c.missing.length<cands.length){rows=r;from=u;b=c;return true;}return false;};
+  // A state whose export is behind a form button.
+  if(src.postback&&!file){const pb=src.postback;
+    try{const got=await readAny(await post(pb.page,pb.target,pb.choices||{}),src,names);
+      if(!got.rows)tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): a web page came back, not the export`);
+      else if(!take(got.rows,pb.page))tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): the Senate race's candidates were not found in it`);}
+    catch(e){tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): ${e.message}`);}}
   // A county-page state: every county's page.
   if(src.boxes&&!file){try{const r=await readBoxCounties(src,get);if(!take(r,src.boxes.list||src.page))tried.push('county pages: the Senate race\'s candidates were not found on them');else if(r.note)tried.push(r.note);}
     catch(e){tried.push(`county pages: ${e.message}`);}}
@@ -505,25 +525,15 @@ const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
 // Pages the probe also saves, without their scripts and styles, to data/county-samples/, for the states whose results
 // pages don't use plain tables: one county's page and the race's page.
 export const SAMPLES={
-  // Pages filled in by their own scripts: the addresses those scripts ask for (from every script on the page, wherever
-  // it is kept), and the page as served.
-  TX:[{u:'https://results.texas-election.com/',kind:'scripts'},{u:'https://results.texas-election.com/',kind:'raw'}],
-  TN:[{u:'https://elections.tn.gov/county-breakdown/United%20States%20Senate',kind:'raw'},{u:'https://elections.tn.gov/county-breakdown/United%20States%20Senate',kind:'scripts'}],
-  DE:[{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'scripts'}],
-  AL:[{u:'https://www2.alabamavotes.gov/electionnight/',kind:'raw'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'scripts'}],
-  AR:[{u:'https://arkansas.tally-enr.com/',kind:'scripts'}],
-  FL:[{u:'https://results.elections.myflorida.com/',kind:'raw'},{u:'https://results.elections.myflorida.com/',kind:'scripts'}],
-  LA:['https://voterportal.sos.la.gov/ElectionResults/GraphicalConfig',{u:'https://voterportal.sos.la.gov/graphical',kind:'scripts'}],
-  OH:[{u:'https://liveresults.ohiosos.gov/',kind:'scripts'},'https://liveresults.ohiosos.gov/Api/v1/Contest/getTabs'],
-  // Oregon's county page, now that the hidden form field that filled the last sample is cut out.
-  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/ResultsExport.aspx'],
-  // Wyoming posts a PDF per county: its text.
-  WY:[{u:'https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP.pdf',kind:'pdf'},{u:'https://sos.wyo.gov/Elections/Docs/2026/Results/General/2026_Albany_County_General_PbP_TBC.pdf',kind:'pdf'}],
-  KS:['https://sos.ks.gov/elections/election-results.html'],
-  KY:['https://elect.ky.gov/results/2020-2029/Pages/2026.aspx'],
-  WV:['https://sos.wv.gov/elections','https://apps.sos.wv.gov/elections/results/'],
-  OK:['https://results.okelections.us/OKER/','https://oklahoma.gov/elections.html'],
-  MS:['https://www.sos.ms.gov/elections-voting/election-results'],
+  // Sites filled in by their own scripts: the code around each data address, to see how the addresses are built.
+  TX:[{u:'https://results.texas-election.com/',kind:'context',patterns:['static/data','Version.json','ElectionConstants_','Race.json','County.json','OfficeSummary','"/races','"/county']}],
+  DE:[{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'context',patterns:['Election_StatewideResults','Election_By','electionId','.json?t=']},{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'raw'}],
+  OH:[{u:'https://liveresults.ohiosos.gov/',kind:'context',patterns:['GetContestsByCounty','getCountyList','GetContestDetailsObject','GetElectionSummaryCsv','download?filename','getContestList']},
+    'https://liveresults.ohiosos.gov/Api/v1/Contest/getCountyList','https://liveresults.ohiosos.gov/Api/v1/Contest/getContestList'],
+  AR:[{u:'https://arkansas.tally-enr.com/',kind:'context',patterns:['GetContestResults','GetElectionList','GetElectionInfo','-counties.json','apiUrl','X-Results-Token']}],
+  LA:[{u:'https://voterportal.sos.la.gov/graphical',kind:'context',patterns:['VotesRaceByParish','RacesCandidates','dataUrl','blob','ElectionDate','electionDate']}],
+  OK:['https://oklahoma.gov/elections/elections-results/election-results/2026-election-results/november-general-election.html',{u:'https://results.okelections.us/OKER/',kind:'context',patterns:['api','.json','county','Contest']}],
+  FL:['https://results.elections.myflorida.com/ElectionRaces.asp?ElectionDate=11/3/2026&DATAMODE=','https://results.elections.myflorida.com/TitlePage.asp?ElectionDate=11/3/2026&DATAMODE='],
 };
 // A page as saved for a sample: no scripts, styles or comments, at most 150 KB.
 // ASP.NET's hidden form fields (__VIEWSTATE …) can run to hundreds of kilobytes; their values are cut out.
@@ -545,6 +555,15 @@ export async function sampleOne(x,{get=fetch}={}){
   if(kind==='pdf'){const t=await pdfText(new Uint8Array(await r.arrayBuffer()));return {status:r.status,ext:'txt',text:t?t.slice(0,80000):'(no text in the PDF)'};}
   const text=await r.text();
   if(kind==='raw')return {status:r.status,ext:'html',text:noViewState(text).slice(0,150000)};
+  if(kind==='context'){
+    const base=r.url||u,out=[`Code around ${(x.patterns||[]).join(', ')} in the scripts of ${u} (HTTP ${r.status}):`],codes=[['the page',text]];
+    const srcs=[...text.matchAll(/<script\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/gi)].map(m=>{try{return new URL(decode(m[1]),base).href;}catch{return null;}}).filter(v=>v&&!/googletagmanager|google-analytics|fontawesome|jquery|bootstrap/i.test(v)).slice(0,10);
+    for(const src of srcs){try{codes.push([src,await (await get(src,opt)).text()]);}catch(e){out.push(`  ${src}: couldn't fetch (${e.cause?.code||e.message})`);}}
+    for(const pat of x.patterns||[])for(const [where,code] of codes){
+      let at=0,n=0;while((at=code.indexOf(pat,at))>=0&&n<6){out.push('',`== ${pat} in ${where} at ${at}:`,code.slice(Math.max(0,at-350),at+350).replace(/\s+/g,' '));at+=pat.length;n++;}
+    }
+    return {status:r.status,ext:'txt',text:out.join('\n')+'\n'};
+  }
   if(kind==='scripts'){
     const base=r.url||u,lines=[`Scripts of ${u} (HTTP ${r.status}):`],found=new Set(scriptAddresses(text));
     const srcs=[...text.matchAll(/<script\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/gi)].map(m=>{try{return new URL(decode(m[1]),base).href;}catch{return null;}}).filter(Boolean).slice(0,10);
@@ -586,6 +605,19 @@ export async function probeOne(u,{get=fetch}={}){
   }
   if(found.size)out.push(`    data addresses in its scripts: ${[...found].join(' · ')}`);
   return out;
+}
+
+// Sends an ASP.NET page's form back with a button pressed, keeping the page's cookies, as a browser does: the export's bytes.
+async function postRaw(page,target,choices){
+  const opt={headers:{'User-Agent':'Mozilla/5.0 (compatible; PublicLedger/1.0; county results)'},signal:AbortSignal.timeout(180000)};
+  let res;try{res=await fetch(page,opt);}catch(e){throw new Error(`couldn't connect (${e.cause?.code||e.cause?.message||e.message})`);}
+  const html=await res.text();if(botCheck(res.status,res.url,html.slice(0,4000)))throw new Error(`the site answered with a bot check (HTTP ${res.status}), not the page`);
+  if(!res.ok)throw new Error(`HTTP ${res.status}`);
+  const cookie=(res.headers.getSetCookie?.()||[]).map(c=>c.split(';')[0]).join('; '),{action,fields}=postBackForm(html,res.url||page,target,choices);
+  const sent=await fetch(action,{...opt,method:'POST',body:new URLSearchParams(fields),headers:{...opt.headers,'Content-Type':'application/x-www-form-urlencoded',Referer:page,...(cookie?{Cookie:cookie}:{})}});
+  const bytes=new Uint8Array(await sent.arrayBuffer());
+  if(!sent.ok)throw new Error(`HTTP ${sent.status} for the export`);
+  return bytes;
 }
 
 // A reply that is a bot check ("Just a moment…", a captcha) rather than the page: the site turns scripts away. It is said
@@ -641,7 +673,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       // While watching, a race that couldn't be read, or one read from many pages, is read every fourth pass.
       if(watch&&(failed.has(id)||SOURCES[id].slow)&&passes%4!==1)continue;
       console.log(`Reading ${id}…`);
-      const r=await countyRace(research,id,{get:fetchRaw,file:files[id]||null,maps});
+      const r=await countyRace(research,id,{get:fetchRaw,post:postRaw,file:files[id]||null,maps});
       for(const l of r.lines)console.log(l);
       if(!r.race){failed.add(id);continue;}failed.delete(id);
       const old=out.races[id],same=old&&JSON.stringify({...old,fetched:0})===JSON.stringify({...r.race,fetched:0});
