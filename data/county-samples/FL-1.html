@@ -1,192 +1,1472 @@
-
-<html>
+<!DOCTYPE html>
+<html style="overflow-y: scroll;" xml:lang="en" lang="en">
 <head>
-<title>Election Results</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" href="ArchiveResults.css">
+    <meta name="description" content= "Florida Election Watch displays votes collected from all Florida counties as they are being reported on election night.">
+    <meta name="keywords" content="Florida Department of State, election, election results, Florida election results, Florida election, 2026 election results, 2026 Florida election results, Florida Election Watch, election night">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Election Watch - County Results</title>
+    <link href="/Scripts/umd/popper.js" rel="stylesheet"/>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/Content/BSVerticalMenu.css">
 </head>
-<body bgcolor="#FFFFFF">
-<table cellspacing="0" cellpadding="0" border="0">
-  <tr>
-    <td width="1" valign="top"></td>
-    <td width="10" height="1" valign="top"></td>
-    <td width="200" height="1" valign="top"></td>
-    <td width="10" height="1" valign="top"></td>
-  </tr>
-  <tr>
-    <td width="1" valign="top"></td>
-    <td width="200" COLSPAN="3" class="headerCenterAlignLight" bgcolor="#336699">Election Results </td>
-  </tr>
-  <tr>
-    <td width="1" valign="top"></td>
-    <td colspan="3" valign="top" bgcolor="#336699"><img src="images/transparent.gif" height="4"></TD>
-  <tr>
-    <td width="1" valign="top"></td>
-    <td colspan="3" valign="top" bgcolor="#E6E6E6"> 
-  <FORM ACTION="" METHOD="post" NAME="ElecForm" ID="ElecForm">
-  <INPUT TYPE="hidden" NAME="DATAMODE" ID="DATAMODE" VALUE="">
-  <table width="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
-    <tr bgcolor="#cccccc"><td colspan="3" class="headerLeftAlign">Select Election:</td>
-    </tr><tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
-    <tr bgcolor="#cccccc"> 
-      <td colspan="3" class="ComboList">
-          <SELECT NAME="SelectElection" onChange="SwitchElection(this,'')">
-            <option value="Select">Select</option>
-            	<option value="8/18/2026" 
-            	>2026 Primary Election</option>
-            	<option value="11/5/2024" 
-            	>2024 General Election</option>
-            	<option value="8/20/2024" 
-            	>2024 Primary Election</option>
-            	<option value="3/19/2024" 
-            	>2024 Presidential Preference Primary</option>
-            	<option value="11/8/2022" 
-            	>2022 General Election</option>
-            	<option value="8/23/2022" 
-            	>2022 Primary Election</option>
-            	<option value="11/3/2020" 
-            	>2020 General Election</option>
-            	<option value="8/18/2020" 
-            	>2020 Primary Election</option>
-            	<option value="3/17/2020" 
-            	>2020 Presidential Preference Primary</option>
-            	<option value="11/6/2018" 
-            	>2018 General Election</option>
-            	<option value="8/28/2018" 
-            	>2018 Primary Election</option>
-            	<option value="11/8/2016" 
-            	>2016 General Election</option>
-            	<option value="8/30/2016" 
-            	>2016 Primary Election</option>
-            	<option value="3/15/2016" 
-            	>2016 Presidential Preference</option>
-            	<option value="11/4/2014" 
-            	>2014 General Election</option>
-            	<option value="8/26/2014" 
-            	>2014 Primary Election</option>
-            	<option value="11/6/2012" 
-            	>2012 General Election</option>
-            	<option value="8/14/2012" 
-            	>2012 Primary Election</option>
-            	<option value="1/31/2012" 
-            	>2012 Presidential Preference</option>
-            	<option value="11/2/2010" 
-            	>2010 General</option>
-            	<option value="8/24/2010" 
-            	>2010 Primary</option>
-            	<option value="11/4/2008" 
-            	>2008 General</option>
-            	<option value="8/26/2008" 
-            	>2008 Primary</option>
-            	<option value="1/29/2008" 
-            	>2008 Presidential Preference</option>
-            	<option value="11/7/2006" 
-            	>2006 General</option>
-            	<option value="9/5/2006" 
-            	>2006 Primary</option>
-            	<option value="11/2/2004" 
-            	>2004 General</option>
-            	<option value="8/31/2004" 
-            	>2004 Primary</option>
-            	<option value="3/9/2004" 
-            	>2004 Pres. Preference</option>
-            	<option value="11/5/2002" 
-            	>2002 General</option>
-            	<option value="9/10/2002" 
-            	>2002 Primary</option>
-            	<option value="11/7/2000" 
-            	>2000 General</option>
-            	<option value="10/3/2000" 
-            	>2000 Runoff</option>
-            	<option value="9/5/2000" 
-            	>2000 Primary</option>
-            	<option value="3/14/2000" 
-            	>2000 Pres. Preference</option>
-            	<option value="11/3/1998" 
-            	>1998 General</option>
-            	<option value="10/1/1998" 
-            	>1998 Runoff</option>
-            	<option value="9/1/1998" 
-            	>1998 Primary</option>
-            	<option value="11/5/1996" 
-            	>1996 General</option>
-            	<option value="10/1/1996" 
-            	>1996 Runoff</option>
-            	<option value="9/3/1996" 
-            	>1996 Primary</option>
-            	<option value="3/12/1996" 
-            	>1996 Pres. Preference</option>
-            	<option value="11/8/1994" 
-            	>1994 General</option>
-            	<option value="10/4/1994" 
-            	>1994 Runoff</option>
-            	<option value="9/8/1994" 
-            	>1994 Primary</option>
-            	<option value="11/3/1992" 
-            	>1992 General</option>
-            	<option value="10/1/1992" 
-            	>1992 Runoff</option>
-            	<option value="9/1/1992" 
-            	>1992 Primary</option>
-            	<option value="3/10/1992" 
-            	>1992 Pres. Preference</option>
-            	<option value="11/6/1990" 
-            	>1990 General</option>
-            	<option value="10/2/1990" 
-            	>1990 Runoff</option>
-            	<option value="9/4/1990" 
-            	>1990 Primary</option>
-            	<option value="11/8/1988" 
-            	>1988 General</option>
-            	<option value="10/4/1988" 
-            	>1988 Runoff</option>
-            	<option value="9/6/1988" 
-            	>1988 Primary</option>
-            	<option value="3/8/1988" 
-            	>1988 Pres. Preference</option>
-            	<option value="11/4/1986" 
-            	>1986 General</option>
-            	<option value="9/30/1986" 
-            	>1986 Runoff</option>
-            	<option value="9/2/1986" 
-            	>1986 Primary</option>
-            	<option value="11/6/1984" 
-            	>1984 General</option>
-            	<option value="10/2/1984" 
-            	>1984 Runoff</option>
-            	<option value="9/4/1984" 
-            	>1984 Primary</option>
-            	<option value="3/13/1984" 
-            	>1984 Pres. Preference</option>
-            	<option value="11/2/1982" 
-            	>1982 General</option>
-            	<option value="10/5/1982" 
-            	>1982 Runoff</option>
-            	<option value="9/7/1982" 
-            	>1982 Primary</option>
-            	<option value="11/4/1980" 
-            	>1980 General</option>
-            	<option value="10/7/1980" 
-            	>1980 Runoff</option>
-            	<option value="9/9/1980" 
-            	>1980 Primary</option>
-            	<option value="3/11/1980" 
-            	>1980 Pres. Preference</option>
-            	<option value="11/7/1978" 
-            	>1978 General</option>
-            	<option value="10/5/1978" 
-            	>1978 Runoff</option>
-            	<option value="9/12/1978" 
-            	>1978 Primary</option>
-          </select>
-      </td>
-    </tr>
-    <tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="10"></td></tr>
-    <tr bgcolor="#336699"><td colspan="3" ><img src="images/transparent.gif" width="1" height="2"></td></tr>
- <font face="Arial" size=2>
-<p>ADODB.Field</font> <font face="Arial" size=2>error '800a0bcd'</font>
-<p>
-<font face="Arial" size=2>Either BOF or EOF is True, or the current record has been deleted. Requested operation requires a current record.</font>
-<p>
-<font face="Arial" size=2>/ElectionRaces.asp</font><font face="Arial" size=2>, line 169</font> 
+<body style="padding-top: 0px;">
+<div style="background: linear-gradient(to right,#2C5084,#2C5084, white); height: 120px;">
+    <div class="container">
+        <div class="row pt-2 ">
+            <div class="col-6 col-md pl-5 pr-0 text-left">
+                <img src="/Images/Enight Logo - transparent.png" alt="Florida Election Watch-Logo">
+            </div>
+            <div class="col-6 col-md pl-5 text-center  d-none d-none d-lg-block">
+                <span style="color: white;">
+                    2026 General Election<br /> 
+                    November 3, 2026 <br />
+                    Unofficial Election Night Results<br />
+                </span>
+            </div>
+            <div class="col-6 col-md text-right d-none d-sm-none d-md-block">
+                <a href="https://dos.fl.gov/elections/" title="Division of Elections" target="blank">
+                    <img src="/Images/Elections-Logo-Small.png" alt="Division of Elections-Logo" target="blank">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row star-bar">
+</div>
+    <div class="row" style="background: linear-gradient(#135F8B, white);">
+        <div class="container pl-lg-5 pr-lg-5">
+            <div class="row">
+    <div class="col-lg-2 pl-0 pr-1">       
+        <nav class="navbar bootstrap-vertical-nav rounded  pt-0 mt-4" style="background-color: white;">
+            <div style="background-color: #2C5084;">
+                <button class="btn btn-dark d-lg-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Toggle navigation">
+                    <span>MENU</span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse " id="collapseExample">
+                        <ul class="nav flex-column list-group " id="exCollapsingNavbar3">
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/Home'>Home</a>
+                                    </li>
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/ElectionDayTurnout'>Election Day Turnout</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/CountyReportingStatus'>County Reporting Status</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/FAQs'>FAQs</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/LegislativeProjection'>Legislative Projections</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/Timeline'>Timeline</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="dropdown menuitem">
+                                            <div id="trackcounty" style="font-size:12px; font-family:Arial, Helvetica,sans-serif; padding-top:5px;padding-bottom:0px; line-height:1.3; font-weight:bold;">Track By County</div>
+                                            <div>
+                                                <a class="dropdown-toggle menuitemLink" data-toggle="dropdown" href="#">Select County <span class="caret"></a>
+                                                    <ul class="dropdown-menu scrollable-menu pl-2">
+                                                            <li><a class="countyDropdown" href="/TrackCounty/ALA">AlachuaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/BAK">BakerCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/BAY">BayCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/BRA">BradfordCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/BRE">BrevardCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/BRO">BrowardCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CAL">CalhounCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CHA">CharlotteCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CIT">CitrusCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CLA">ClayCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CLL">CollierCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/CLM">ColumbiaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/DES">DesotoCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/DIX">DixieCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/DUV">DuvalCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/ESC">EscambiaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/FLA">FlaglerCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/FRA">FranklinCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/GAD">GadsdenCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/GIL">GilchristCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/GLA">GladesCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/GUL">GulfCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HAM">HamiltonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HAR">HardeeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HEN">HendryCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HER">HernandoCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HIG">HighlandsCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HIL">HillsboroughCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/HOL">HolmesCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/IND">Indian RiverCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/JAC">JacksonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/JEF">JeffersonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LAF">LafayetteCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LAK">LakeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LEE">LeeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LEO">LeonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LEV">LevyCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/LIB">LibertyCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/MAD">MadisonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/MAN">ManateeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/MRN">MarionCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/MRT">MartinCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/DAD">Miami-DadeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/MON">MonroeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/NAS">NassauCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/OKA">OkaloosaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/OKE">OkeechobeeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/ORA">OrangeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/OSC">OsceolaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/PAL">Palm BeachCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/PAS">PascoCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/PIN">PinellasCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/POL">PolkCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/PUT">PutnamCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/SAN">Santa RosaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/SAR">SarasotaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/SEM">SeminoleCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/STJ">St. JohnsCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/STL">St. LucieCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/SUM">SumterCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/SUW">SuwanneeCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/TAY">TaylorCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/UNI">UnionCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/VOL">VolusiaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/WAK">WakullaCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/WAL">WaltonCounty</a></li>
+                                                            <li><a class="countyDropdown" href="/TrackCounty/WAS">WashingtonCounty</a></li>
+                                                    </ul>
+                                            </div>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/FederalOffices'>Federal Offices</a>
+                                    </li>
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/FederalOffices/USSenator'>U.S. Senator</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/FederalOffices/USRepresentative'>U.S. Representative</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/StateOffices'>State Offices</a>
+                                    </li>
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/StateOffices/Governor'>Governor</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/StateOffices/AttorneyGeneral'>Attorney General</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/StateOffices/ChiefFinancialOfficer'>Chief Financial Officer</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/StateOffices/CommissionerOfAgriculture'>Commissioner of Agriculture</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/DistrictOffices'>Multi-County or District Offices</a>
+                                    </li>
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/DistrictOffices/StateSenator'>State Senate</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/DistrictOffices/StateRepresentative'>State Representative</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/DistrictOffices/SpecialDistricts'>Special Districts</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/JudicialOffices'>Judicial Offices</a>
+                                    </li>
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/JudicialOffices/SupremeCourt'>Supreme Court</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/JudicialOffices/DistrictCourtOfAppeal'>District Court of Appeal</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                        <li class="menu-item ">
+                                            <a class="menuitemLink" href='/JudicialOffices/CircuitCourt'>Circuit Court</a>
+                                        </li>
+                                    <hr class="mt-0 mb-0" />
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/Amendments'>Amendments</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a class="menuHeader" href='/Downloads'>Downloads</a>
+                                    </li>
+                        </ul>
+                        <br /><br /><br />
+            </div>
+        </nav>
+    </div>
+                <div class="col-lg-10 footerstyle">
+<div class="card rounded ml-2 mt-4 " style="border: 0px; ">
+            <h4 class="card-header card-title  pt-2 pb-1 pl-2  contestHeader" >Track by Alachua County</h4>
+            <div class="card-body">
+                        <div class="btn-block pl-1 resultsHeader">
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                    United States Senator
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/120000" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/120000" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Ashley Moody</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,208,004</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:50.8716045684302%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50.87%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Angie Nixon</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,969,271</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:47.9855020900497%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">47.99%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Neil J. Gillespie</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>94,538</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:1.14289334152017%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1.14%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 8,271,813</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Representative in Congress, District 3
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/140030" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/140030" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Kat Cammack</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>165,313</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:55.1451407374791%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55.15%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Seth Harp</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>128,866</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:42.98714381976%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">42.99%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Mike Klein</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>5,599</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:1.86771544276098%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1.87%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 299,778</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Governor and Lieutenant Governor
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/160000" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/160000" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Byron Donalds and Bryan Avila</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,132,334</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:50.0177202381096%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50.02%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> David Jolly and Gwen Graham</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,024,639</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:48.7141812741626%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48.71%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Scott Eckhard Jewett and Nicole Skelly</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">LPF</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>37,889</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.45860799298937%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.46%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Charles Burkett and Ruben A. Coto</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>15,239</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.184452669776585%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.18%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Frank J. Russo and Rachel Rodriguez</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>23,201</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.280824620479463%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.28%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Moliere &quot;Moe&quot; Dimanche and Benjiman Rojas</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>7,591</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.0918813712365676%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.09%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Dean Ocean Abrams and Joe Van Vactor</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>12,535</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.151723486819968%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.15%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Jeffrey Peter &quot;Dr. Jeff&quot; Datto and Juan Santana</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">NPA</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>8,312</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.100608346425813%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.1%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Kathy Anderson and Daniel Nokovich</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">WRI</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>0</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Erik Morris and LeRoy Alaways</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">WRI</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>0</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 8,261,740</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Attorney General
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/160200" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/160200" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> James Uthmeier</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,177,901</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:50.9347069368424%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50.93%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Jose Javier Rodriguez</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,024,563</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:49.0652930631576%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">49.07%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 8,202,464</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Chief Financial Officer
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/160500" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/160500" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Blaise Ingoglia</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,151,579</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:50.9426761924734%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50.94%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Annette Taddeo</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,997,932</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:49.0573238075266%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">49.06%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 8,149,511</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Commissioner of Agriculture
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/160800" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/160800" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Wilton Simpson</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,160,577</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:51.0801210725632%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">51.08%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Joey Mendoza Atkins</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,984,621</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:48.9198789274368%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48.92%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Kyle &quot;KC&quot; Gibson</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">WRI</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>0</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 8,145,198</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    State Senator, District 6
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/240060" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/240060" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Jennifer Bradley</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>122,289</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:58.2303615559333%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">58.23%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Jason Bellamy-Fults</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>85,682</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:40.7992038436448%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40.8%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Joseph Thornton</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">ASP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>2,038</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0.970434600421887%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0.97%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 210,009</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    State Representative, District 10
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/260100" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/260100" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Marshall Rawson</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>43,597</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:68.1522588713459%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">68.15%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Merrillee Malwitz Jipson</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>20,373</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:31.8477411286541%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">31.85%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> James Hunter Batley</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">WRI</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>0</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:0%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 63,970</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    State Representative, District 22
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> General </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/260220" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/260220" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Candidate</td>
+                                        <td width="50" class="grid-cell" style="border:none; ">Party</td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Chad Johnson</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">REP</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>38,313</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:48.6730610430032%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48.67%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Amy Trask</td>
+                                                <td class="pt-2 font-weight-normal grid-cell">DEM</td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>40,402</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:51.3269389569968%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">51.33%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 78,715</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div class="btn-block pl-1 resultsHeader">
+                                <div class="row m-0">
+                                    <div class="col-md text-left " style="padding-left:5px;">
+                                        Justice of the Supreme Court
+                                    </div>
+                                    <div class="py-2  col-md  contestLink pull-right text-right">
+                                        <strong>   </strong>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                    Shall Justice Carlos G. Mu&#241;iz be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/500001" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/500001" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,296,744</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:57.6923123401098%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">57.69%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,150,945</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:42.3076876598902%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">42.31%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 7,447,689</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div class="btn-block pl-1 resultsHeader">
+                                <div class="row m-0">
+                                    <div class="col-md text-left " style="padding-left:5px;">
+                                        First District Court of Appeal
+                                    </div>
+                                    <div class="py-2  col-md  contestLink pull-right text-right">
+                                        <strong>   </strong>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                    Shall Judge Joseph Lewis Jr. be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/520101" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/520101" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>442,366</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:60.6521706343602%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60.65%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>286,983</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:39.3478293656398%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">39.35%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 729,349</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Shall Judge Rachel Nordby be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/520102" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/520102" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>426,757</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:58.7931314767821%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">58.79%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>299,105</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:41.2068685232179%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.21%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 725,862</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Shall Judge Tim Osterhaus be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/520103" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/520103" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>419,933</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:57.9305825711487%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">57.93%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>304,957</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:42.0694174288513%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">42.07%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 724,890</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Shall Judge Clay Roberts be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/520104" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/520104" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>418,510</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:57.7502104348066%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">57.75%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>306,180</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:42.2497895651934%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">42.25%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 724,690</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                                <div class="btn-block titleDescription">
+                                    Shall Judge Raymond Treadwell be retained in Office?
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/520105" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/520105" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>423,754</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:58.486178069581%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">58.49%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>300,783</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:41.513821930419%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.51%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;"></td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 724,537</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div class="btn-block pl-1 resultsHeader">
+                                <div class="row m-0">
+                                    <div class="col-md text-left " style="padding-left:5px;">
+                                        Amendment No. 1
+                                    </div>
+                                    <div class="py-2  col-md  contestLink pull-right text-right">
+                                        <strong>  Full Text: <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_01_english.pdf" title="Amendment Number 1 in English" target="_blank"> English</a> | <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_01_spanish.pdf" title="Amendment Number 1 in Spanish" target="_blank"> Español</a> </strong>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                    Budget Stabilization Fund
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/900001" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/900001" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes for Approval</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,170,557</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:40.9022957766575%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40.9%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No for Rejection</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,580,981</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:59.0977042233425%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">59.1%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;">Amendments require 60% to pass</td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 7,751,538</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div class="btn-block pl-1 resultsHeader">
+                                <div class="row m-0">
+                                    <div class="col-md text-left " style="padding-left:5px;">
+                                        Amendment No. 2
+                                    </div>
+                                    <div class="py-2  col-md  contestLink pull-right text-right">
+                                        <strong>  Full Text: <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_02_english.pdf" title="Amendment Number 2 in English" target="_blank"> English</a> | <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_02_spanish.pdf" title="Amendment Number 2 in Spanish" target="_blank"> Español</a> </strong>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                    Exemption of Tangible Personal Property on Agricultural Land From Taxation
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/900002" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/900002" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes for Approval</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,542,890</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:58.2146469445412%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">58.21%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No for Rejection</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,260,799</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:41.7853530554588%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">41.79%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;">Amendments require 60% to pass</td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 7,803,689</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div class="btn-block pl-1 resultsHeader">
+                                <div class="row m-0">
+                                    <div class="col-md text-left " style="padding-left:5px;">
+                                        Amendment No. 3
+                                    </div>
+                                    <div class="py-2  col-md  contestLink pull-right text-right">
+                                        <strong>  Full Text: <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_03_english.pdf" title="Amendment Number 3 in English" target="_blank"> English</a> | <a href="https://flelectionfiles.floridados.gov/enightfilespublic/20261103_Amendment_03_spanish.pdf" title="Amendment Number 3 in Spanish" target="_blank"> Español</a> </strong>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="py-2  contestLink"></div>                                 <div class="btn-block titleDescription">
+                                     Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments
+                                </div>
+                                <div class="btn-block ">
+                                </div>
+                                <div class="row pr-0 mr-0">
+                                    <div class="col-2 sub-title d-flex align-items-center">
+                                        <strong> Nonpartisan </strong>
+                                    </div>
+                                    <div class="col-10 text-right font-weight-bold">
+                                        <a href="/ContestResultsByCounty/900003" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Contest Results by County</a><br />
+                                        <a href="/CompareStateToCounty/900003" style="font-size:12px;color:#1f3d51;text-align:left;text-decoration:underline;">Compare State to County</a>
+                                    </div>
+                                </div>
+                            <table style="width:100%;">
+                                <tr class="grid-head" style="border:none;">
+                                    <td width="200" class="grid-cell" style="border:none; ">Ballot Choice</td>
+                                        <td width="50" class="grid-cell" style="border:none; "></td>
+                                    <td class="text-right pr-3  grid-cell" width="160" style="border:none;">Votes Received</td>
+                                    <td width="320" class="text-right grid-cell" style="border:none; "></td>
+                                </tr>
+                                <tbody>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> Yes for Approval</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>4,917,796</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  winner font-weight-normal" style=width:61.9838867979558%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">61.98%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="grid-row" style="font-size: 14px;font-family: Arial, Helvetica,sans-serif;">
+                                            <td class="pt-2 grid-cell"> No for Rejection</td>
+                                                <td class="pt-2 font-weight-normal grid-cell"></td>
+                                            <td class="pr-3 pt-2 text-right font-weight-normal grid-cell">
+                                                <span>3,016,195</span>
+                                            </td>
+                                            <td class="pt-2" style="white-space:nowrap; font-size:12px;">
+                                                <div class="progressbar  loser font-weight-normal" style=width:38.0161132020442%;overflow-x:visible !important; aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">38.02%</div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                                    <tr>
+                                        <td style="color: #a52a2a;" colspan="3"></td>
+                                        <td style="color: #a52a2a;">Amendments require 60% to pass</td>
+                                    </tr>
+                                <tr class="grid-head">
+                                    <td colspan="3" class="pr-3 text-right" style="text-align: right; border-right: none;" id="bar"><strong>Total &nbsp;&nbsp; 7,933,991</strong></td>
+                                    <td style="border-left: none;"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br /><br />
+                                    </td>
+                                </tr>
+                            </table>
+            </div>
+</div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row star-bar">
+</div>
+<div class="row" style="background-color: #2C5084;">
+    <div class="container footerstyle">
+        <div class="row pt-2 ">
+            <div class="col-6 col-md pl-5 pr-0 text-left d-none d-sm-none d-md-block">
+                <img src="/Images/Enightfooter.png" alt="">
+            </div>
+            <div class="col-6 col-md pl-5 text-left ">  
+                <p class="p-0 m-0">
+                    <a href="https://dos.fl.gov/" target="_blank" style="color: #fcca65;">Florida Department of State</a>
+                </p>
+                <p class="p-0 m-0">
+                    <a href="https://dos.fl.gov/elections/" target="_blank" style="color: #fcca65;">Division of Elections</a>
+                </p>
+                <p style="color: white;">
+                    Room 316, R.A.Gray Building, 500 S.Bronough Street
+                    <br />
+                    Tallahassee, FL 32399-0250
+                    <br />
+                    1.850.245.6200
+                </p>
+            </div>
+            <div class="col-6 col-md text-right ">  
+                <ul style="list-style-type: none;">
+                    <li><a href="https://dos.fl.gov/privacy-policy.aspx" target="_blank" style="color: #fcca65;">Privacy Policy</a></li>
+                    <li><a href="https://dos.fl.gov/elections/contacts/contact-us/" target="_blank" style="color: #fcca65;"> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

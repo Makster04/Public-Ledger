@@ -1,21 +1,4 @@
-County results probe, 2026-11-05T19:09:12.985Z: what each state's results site serves, for writing its reader.
-
-AL
-  https://www2.alabamavotes.gov/electionnight/ → HTTP 200, text/html, 0 KB
-      title:  · 0 characters of text
-  https://www.sos.alabama.gov/alabama-votes/voter/election-information → HTTP 200, text/html, 41 KB
-      title: Election Information | Alabama Secretary of State · 3,511 characters of text
-      link: Business Downloads → https://www.sos.alabama.gov/business-entities/business-downloads
-      link: UCC Downloads → https://www.sos.alabama.gov/business-services/ucc-downloads
-      link: Campaign Finance Records → https://www.sos.alabama.gov/alabama-votes/media/campaign-finance-reports
-      link: City - County Lookup → https://www.sos.alabama.gov/city-county-lookup
-      link: Photo Voter ID Guide → https://www.sos.alabama.gov/sites/default/files/election-2026/PhotoVoterIDGuide.pdf
-      link: 2026 → https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026
-      table: 2026 | 2025 | 2024 | 2023
-      data addresses in its scripts: https://www.sos.alabama.gov/alabama-votes/voter/election-data · /alabama-votes/voter/election-data · alabama-votes/voter/election-data · hasDataAttrs · processData
-  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-1.html
-  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-2.txt
-  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-3.txt
+County results probe, 2026-11-05T19:15:17.742Z: what each state's results site serves, for writing its reader.
 
 FL
   https://floridaelectionwatch.gov/ → HTTP 200, text/html, 23 KB
@@ -38,27 +21,5 @@ FL
   https://results.elections.myflorida.com/ → HTTP 200, text/html, 2 KB
       title: Florida Department of State - Election Results · 112 characters of text
       data addresses in its scripts: WinResults
-  saved https://floridaelectionwatch.gov/ (HTTP 200) as data/county-samples/FL-1.txt
-  saved https://floridaelectionwatch.gov/ (HTTP 200) as data/county-samples/FL-2.txt
-
-KY
-  https://elect.ky.gov/results/ → HTTP 200 (now https://elect.ky.gov/results/Pages/default.aspx), text/html, 104 KB
-      title: Election Results - State Board of Elections · 6,615 characters of text
-      link: County Boards of Elections → https://elect.ky.gov/About-Us/Pages/County-Boards-of-Elections.aspx
-      link: County Clerks → https://elect.ky.gov/About-Us/Pages/County-Clerks.aspx
-      link: Results → https://elect.ky.gov/results/Pages/default.aspx
-      link: Kentucky Elections Results 2020-2029 → https://elect.ky.gov/results/2020-2029/Pages/default.aspx
-      link: 2020 → https://elect.ky.gov/results/2020-2029/Pages/2020.aspx
-      link: 2022 → https://elect.ky.gov/results/2020-2029/Pages/2022.aspx
-      link: 2023 → https://elect.ky.gov/results/2020-2029/Pages/2023.aspx
-      link: 2024 → https://elect.ky.gov/results/2020-2029/Pages/2024.aspx
-      link: 2026 → https://elect.ky.gov/results/2020-2029/Pages/2026.aspx
-      link: 2020 Primary and General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2020recap-sheets.aspx
-      link: 2022 Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2022recap-sheets.aspx
-      link: 2023Primary-Recap-Sheets → https://elect.ky.gov/results/2020-2029/Pages/2023Primary-Recap-Sheets.aspx
-      link: 2022 General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2022-General-Recap-Sheets.aspx
-      link: 2023 General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2023General-Recap-Sheets.aspx
-      data addresses in its scripts: /results/_vti_bin/spsdisco.aspx · /results · https://elect.ky.gov/results · /results/Pages · /results/Pages/default.aspx · Results · MenuData · userTimeZoneData · webTimeZoneData · /Candidates/Pages/Request-Voter-Registration-Data.aspx · /results/2020-2029/Pages/default.aspx · /results/2020-2029/Pages/2020.aspx · /results/2020-2029/Pages/2022.aspx · /results/2020-2029/Pages/2023.aspx · /results/2020-2029/Pages/2024.aspx · /results/2020-2029/Pages/2026.aspx · FilterData · data-ThemingId
-  https://results.enr.clarityelections.com/KY/ → HTTP 403, text/html, 0 KB
-      title: 403 Forbidden · 33 characters of text
-  saved https://elect.ky.gov/results/2020-2029/Pages/2026.aspx (HTTP 200) as data/county-samples/KY-1.html
+  saved https://floridaelectionwatch.gov/TrackCounty/ALA (HTTP 200) as data/county-samples/FL-1.html
+  saved https://floridaelectionwatch.gov/TrackCounty/ALA (HTTP 200) as data/county-samples/FL-2.html
