@@ -1,20 +1,40 @@
-County results probe, 2026-11-05T17:56:47.583Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-05T18:54:55.275Z: what each state's results site serves, for writing its reader.
 
-OH
-  https://liveresults.ohiosos.gov/ → HTTP 200, text/html, 66 KB
-      title: Ohio Decides - Election Night Reporting · 3,267 characters of text
-      link: standardized NIST 1500-100 → https://liveresults.ohiosos.gov/Content/PDF/P1622Documentation.pdf
-      link: Understanding Unofficial Results → https://www.ohiosos.gov/elections/election-night-unofficial-results-disclaimer/
-      link: Download Acrobat Reader → https://get.adobe.com/reader/
-      table:  | 
-      table: Candidate Selection | Votes | % of Votes
-      table: Candidate Selection | Votes | % of Votes
-      table: County | Registered Voters | Ballots Counted* | Unofficial Voter Turnout † | Outstanding UOCAVA Absentees | Outstanding Provisionals | Total Precincts | Electio
-      data addresses in its scripts: /Content/browser-icons/manifest.json · ResultsDiv · ResultsByCountyHeader · MyResultsHeader · myResultsHeader-template · ResultsContainer · results-template · ResultsNoStatsContainer · results-nostats-template · AllResults · AllResults-template · xmlResultsModal · resultsDiscalimer · myResultsSelectionDiv · checkboxlbl--myresults · contestResultsRow · /Api/v1/Contest/getTabs
-  https://www.ohiosos.gov/elections/election-results-and-data/ → HTTP 403, text/html, 1255 KB
-      title: Ohio Secretary of State's Office Website Maintenance · 1,055 characters of text
-      data addresses in its scripts: /elections/election-results-and-data/?__cf_chl_tk=Jarzpp7Bim3_pukoTlkt8K1iKNajD5UcJ9EmkSbjUeg-1793901407-1.0.1.1-xIfr3yL1ST8u7mgKn31i6IYjN4xxBziYTQclOJ9XorY · /elections/election-results-and-data/?__cf_chl_f_tk=Jarzpp7Bim3_pukoTlkt8K1iKNajD5UcJ9EmkSbjUeg-1793901407-1.0.1.1-xIfr3yL1ST8u7mgKn31i6IYjN4xxBziYTQclOJ9XorY · /elections/election-results-and-data/?__cf_chl_rt_tk=Jarzpp7Bim3_pukoTlkt8K1iKNajD5UcJ9EmkSbjUeg-1793901407-1.0.1.1-xIfr3yL1ST8u7mgKn31i6IYjN4xxBziYTQclOJ9XorY · data-cfemail · data-cf-beacon
-  saved https://liveresults.ohiosos.gov/Api/v1/Contest/GetContestsByCounty?countyId=_55A742EA504C09A3E0633390EE0AE290 (HTTP 200) as data/county-samples/OH-1.json
+OR
+  https://results.oregonvotes.gov/ → HTTP 200, text/html, 36 KB
+      title: Oregon Secretary of State · 1,601 characters of text
+      link: My Tracked Contests → https://results.oregonvotes.gov/MyTrackedContests.aspx
+      link: Statewide Voter Turnout (details) → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx?map=TURN
+      link: FEDERAL → https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
+      link: STATE → https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
+      link: STATE SENATOR → https://results.oregonvotes.gov/resultsSW.aspx?type=SENATE&map=CTY
+      link: STATE REPRESENTATIVE → https://results.oregonvotes.gov/resultsSW.aspx?type=HOUSE&map=CTY
+      link: NONPARTISAN → https://results.oregonvotes.gov/resultsSW.aspx?type=SWNON&map=CTY
+      link: LOCAL MEASURE → https://results.oregonvotes.gov/resultsSW.aspx?type=LMEA&map=CTY
+      link: SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURE → https://results.oregonvotes.gov/resultsSW.aspx?type=MCR&map=CTY
+      link: " + item.name + " " + item.desc + " → https://results.oregonvotes.gov/SearchResults.aspx?ID=
+      link: Results By County → https://results.oregonvotes.gov/ResultsList.aspx
+      link: Voter Turnout → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx
+      link: Statewide and County Exports → https://results.oregonvotes.gov/ResultsExport.aspx
+      link: Election Terminology → https://results.oregonvotes.gov/ElectionTerminology.aspx
+      data addresses in its scripts: https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us//Scripts/utils.js · https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us/Scripts/utils.js · https://orresultswebservices.azureedge.us/ · https://orresultswebservices.azureedge.us//maps/static/js/underscore-min.js · https://orresultswebservices.azureedge.us//maps/static/js/es5-shim.min.js · https://orresultswebservices.azureedge.us//Scripts/imageMapResizer.min.js · https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-ui.js · elec-results-header · elec-results-grid-wrapper · results-gridbox-links · results-county-header · ResultsAjax.svc/GetCandidates?ElectionType= · SearchResults.aspx?ID= · /ResultsSW.aspx?type=CTYALL&cty=
+  https://sos.oregon.gov/elections/Pages/electionhistory.aspx → HTTP 200 (now https://sos.oregon.gov/elections/pages/historical-data.aspx), text/html, 134 KB
+      title: Oregon Secretary of State : Election Results & History : State of Oregon · 5,045 characters of text
+      link: County Elections Officials → https://sos.oregon.gov/elections/Pages/county-officials.aspx
+      link: Election Results & History → https://sos.oregon.gov/elections/Pages/historical-data.aspx
+      link: ​November​ ​​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-November.pdf
+      link: ​October​​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-October.pdf
+      link: ​September​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-September.pdf
+      link: ​August ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-August.pdf
+      link: ​July 2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-July.pdf
+      link: June 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-june.pdf
+      link: May 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-may.pdf
+      link: April 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-April.pdf
+      link: March 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-March.pdf
+      link: February 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-february.pdf
+      link: January 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-January.pdf
+      link: November 2025 → https://sos.oregon.gov/elections/Documents/Registration/2025-november.pdf
+      data addresses in its scripts: https://sos.oregon.gov/elections/pages/historical-data.aspx · dataLayer · /elections/_layouts/15/OID.SharePoint.StarterTemplate/scripts/data-tables-web-part.js · search-results.aspx · ./historical-data.aspx · /elections/pages/historical-data.aspx · MenuData · userTimeZoneData · webTimeZoneData · /elections/Pages/historical-data.aspx · or-dataTablesWebPart · data-lang · _layouts/15/OID.SharePoint.StarterTemplate/scripts/data.txt · datatableswebpart_pagetotalrange · datatableswebpart_pagetotal · datatableswebpart_filteredfrom · FilterData
 
 TX
   https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 285 KB
