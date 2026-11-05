@@ -27,14 +27,14 @@ export function csvRows(text){
   return body.map(r=>Object.fromEntries(head.map((h,i)=>[h.trim(),r[i]??''])));
 }
 
-// One Congress's three Senate files, parsed. The refresh keeps them for six hours, so the votes of one Congress share a
-// single download.
+// One Congress's three files for a chamber (Senate by default; "H" for the House), parsed. The refresh keeps them for six
+// hours, so the votes of one Congress share a single download.
 const KEEP=6*60*60_000,cache=new Map();
-export async function voteviewFiles(congress,env={}){
-  const hit=cache.get(congress);if(hit&&Date.now()-hit.at<KEEP&&!env.fetch)return hit.files;
+export async function voteviewFiles(congress,env={},chamber='S'){
+  const key=`${chamber}${congress}`,hit=cache.get(key);if(hit&&Date.now()-hit.at<KEEP&&!env.fetch)return hit.files;
   const files={};
-  for(const kind of ['rollcalls','members','votes'])files[kind]=csvRows(await requestSource(`${VOTEVIEW}/${kind}/S${congress}_${kind}.csv`,env,{as:'text',maxChars:40_000_000}));
-  if(!env.fetch)cache.set(congress,{at:Date.now(),files});
+  for(const kind of ['rollcalls','members','votes'])files[kind]=csvRows(await requestSource(`${VOTEVIEW}/${kind}/${key}_${kind}.csv`,env,{as:'text',maxChars:40_000_000}));
+  if(!env.fetch)cache.set(key,{at:Date.now(),files});
   return files;
 }
 export const clearVoteviewCache=()=>cache.clear();

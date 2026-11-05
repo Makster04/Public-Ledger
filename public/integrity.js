@@ -3,7 +3,7 @@ import {promiseScore,legalTrouble,ownTrades,tradeChecks,amountMid} from './grade
 import {assetKind} from './holdings.js';
 import {SIZE_BRACKETS} from './donor-sizes.js';
 
-export const INTEGRITY_WEIGHTS={honesty:.30,personalFinances:.30,fundraising:.40};
+export const INTEGRITY_WEIGHTS={honesty:.25,personalFinances:.25,fundraising:.30,showingUp:.20};
 export const HILL_POWER=.745;
 export const hill=(x,midpoint)=>Number.isFinite(x)&&x>=0&&Number.isFinite(midpoint)&&midpoint>0?x**HILL_POWER/(midpoint**HILL_POWER+x**HILL_POWER):null;
 const clamp=(x,min=0,max=100)=>Math.max(min,Math.min(max,x));
@@ -17,8 +17,8 @@ function reviewedMidpoint(text,reviewedValue,reviewedSource,explicitOpen=false){
   return amountMid(text);
 }
 
-export function integrityOverall({honesty=null,personalFinances=null,fundraising=null,legalTrouble:nullLegal=null}={}){
-  const values={honesty,personalFinances,fundraising};
+export function integrityOverall({honesty=null,personalFinances=null,fundraising=null,showingUp=null,legalTrouble:nullLegal=null}={}){
+  const values={honesty,personalFinances,fundraising,showingUp};
   const used=Object.keys(INTEGRITY_WEIGHTS).filter(k=>validScore(values[k]));
   const legal=validScore(nullLegal)?nullLegal:null;
   if(used.length<2)return {pct:null,raw:null,weighted:null,used,missing:Object.keys(values).filter(k=>!used.includes(k)),legalTrouble:legal,why:'Needs two complete components'};
@@ -165,7 +165,41 @@ function qualifyingCosponsor(data,person,category){
   return null;
 }
 
-export function integrityPreview(person,{asOfYear=null,finance=null,sizes=null,pacRows=null,pacReceipts=null,pacCoverage=false,pacPeriodMatches=false,earmarks=null,pledgePoints=0,pledgeSources=[],pledgesReviewed=false,trust=null}={}){
+// Showing Up: the share of roll-call votes a member missed while in office over the last four calendar years
+// (public/attendance.json, from Voteview), as 100 − 5 points per percentage point missed (2% missed is 90, 10% is 50,
+// 20% or more is 0). Votes missed while campaigning count. An excused absence, a reviewed entry with a cited source in
+// the person's "absences" (medical leave, a birth or adoption, a death in the family, military duty), is left out of
+// both the votes and the misses for its dates. The record shows a missed vote, not where the member was.
+export const SHOWING_UP_PER_POINT=5,SHOWING_UP_MIN_VOTES=50,SHOWING_UP_YEARS=4;
+export const EXCUSED_ABSENCES={medical:'Medical leave',birth:'Birth or adoption',adoption:'Birth or adoption',bereavement:'Death in the family',military:'Military duty'};
+const isDay=d=>/^\d{4}-\d{2}-\d{2}$/.test(String(d||''));
+export function excusedAbsences(person){
+  return (person?.absences||[]).filter(a=>EXCUSED_ABSENCES[a?.reason]&&isDay(a.from)&&isDay(a.to||a.from)&&String(a.from)<=String(a.to||a.from)&&sourceUrl(a.src))
+    .map(a=>({from:a.from,to:a.to||a.from,reason:a.reason,label:EXCUSED_ABSENCES[a.reason],note:a.note||'',src:a.src}));
+}
+export function showingUpComponent(person,attendance,{asOfYear=null}={}){
+  const rec=attendance?.people?.[person?.id];
+  const none=why=>({complete:false,value:null,why,years:[],excused:[],missed:0,votes:0,rate:null,sources:[]});
+  if(!rec)return none(person?.office?'Not graded for this office':'No roll-call votes on record for the last four years (not in Congress then, or the attendance file has not been built)');
+  const last=asOfYear||Math.max(...Object.keys(rec.years||{}).map(Number)),first=last-SHOWING_UP_YEARS+1,inRange=d=>Number(String(d).slice(0,4))>=first&&Number(String(d).slice(0,4))<=last;
+  const years=Object.entries(rec.years||{}).filter(([y])=>Number(y)>=first&&Number(y)<=last).map(([year,y])=>({year:Number(year),votes:y.votes,missed:y.missed})).sort((a,b)=>b.year-a.year);
+  let votes=years.reduce((n,y)=>n+y.votes,0),missed=years.reduce((n,y)=>n+y.missed,0);
+  // Each excused period: the roll calls held on its days while the member served, and the ones they missed then.
+  const excused=excusedAbsences(person).map(a=>{
+    let held=0,gone=0;
+    for(const [chamber,start,end] of rec.spans||[])for(const [d,n] of Object.entries(attendance.days?.[chamber]||{}))if(d>=a.from&&d<=a.to&&d>=start&&d<=end&&inRange(d))held+=n;
+    for(const [d,n] of Object.entries(rec.missed||{}))if(d>=a.from&&d<=a.to&&inRange(d))gone+=n;
+    return {...a,votes:held,missed:Math.min(gone,held)};
+  });
+  for(const a of excused){votes-=a.votes;missed-=a.missed;}
+  votes=Math.max(0,votes);missed=Math.max(0,Math.min(missed,votes));
+  const sources=[{t:'Voteview roll-call records',u:attendance.source||'https://voteview.com/data'},...excused.map(a=>a.src)];
+  if(votes<SHOWING_UP_MIN_VOTES)return {...none(`Fewer than ${SHOWING_UP_MIN_VOTES} roll-call votes in office in ${first}–${last}`),years,excused,votes,missed,sources};
+  const rate=missed/votes*100;
+  return {complete:true,value:clamp(100-SHOWING_UP_PER_POINT*rate),rate,votes,missed,years,excused,first,last,sources,why:null};
+}
+
+export function integrityPreview(person,{asOfYear=null,attendance=null,finance=null,sizes=null,pacRows=null,pacReceipts=null,pacCoverage=false,pacPeriodMatches=false,earmarks=null,pledgePoints=0,pledgeSources=[],pledgesReviewed=false,trust=null}={}){
   const h=honestyComponent(person),covered=!!person?.bioguide&&!person?.office;
   const ethics=person?.ethicsResult||{};
   const usedTradeIds=new Set(tradeChecks(person?.trades||[],[]).rows.filter(t=>t.late).map(t=>t.id).filter(Boolean));
@@ -173,6 +207,7 @@ export function integrityPreview(person,{asOfYear=null,finance=null,sizes=null,p
   const financeWithIndexes=personalFinancesComponent(person,{snapshot:finance?.netWorth,trust,trades:person?.trades,tradeCoverage:person?.tradeCoverage,
     insiderIndex:ethics.insider?.index,dodgerIndex:ethics.dodger?.index,covered});
   const m=fundraisingComponent(person,{sizes,pacRows,pacReceipts,pacCoverage,pacPeriodMatches,earmarks,pledgePoints,pledgeSources,pledgesReviewed});
-  const overall=integrityOverall({honesty:h.complete?h.value:null,personalFinances:financeWithIndexes.complete?financeWithIndexes.value:null,fundraising:m.complete?m.value:null,legalTrouble:legal.value});
-  return {overall,honesty:h,personalFinances:financeWithIndexes,fundraising:m,legal};
+  const showing=showingUpComponent(person,attendance,{asOfYear});
+  const overall=integrityOverall({honesty:h.complete?h.value:null,personalFinances:financeWithIndexes.complete?financeWithIndexes.value:null,fundraising:m.complete?m.value:null,showingUp:showing.complete?showing.value:null,legalTrouble:legal.value});
+  return {overall,honesty:h,personalFinances:financeWithIndexes,fundraising:m,showingUp:showing,legal};
 }

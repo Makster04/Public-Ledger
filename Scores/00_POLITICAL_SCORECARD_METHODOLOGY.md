@@ -9,7 +9,7 @@ There are three primary grades: Your Match, Integrity, and People First. Integri
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
 | Your Match | Published grade | How closely does this politician's record align with your views? Personalized to your answers; it does not measure honesty, ethics, or whether their policies benefit working people | At least 3 issues with evidence and at least 50% of selected issue importance covered |
-| Integrity | Current primary grade; provisional and uncalibrated | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (30%), Personal Finances (30%) and Fundraising (40%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
+| Integrity | Current primary grade; provisional and uncalibrated | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (25%), Personal Finances (25%), Fundraising (30%) and Showing Up (20%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
 | People First | Published grade | How consistently do this politician's legislative actions prioritize working people? 75% legislative-action score + 25% (100 − CCI) | At least 3 scored actions |
 | Statement–action consistency | Per-statement analysis, not a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
 
@@ -31,11 +31,13 @@ weighted = sum(component weight × component value for complete components)
 Integrity = clamp(weighted − Legal Trouble, 0, 100)
 ```
 
-Honesty, Personal Finances, and Fundraising have weights 30%, 30%, and 40%. Missing components are excluded and available weights normalized. At least two components must be complete. A sourced, dated Legal Trouble review is also required; unknown legal input is not zero. Legal Trouble is subtracted after the weighted average, at full strength. Only the final displayed grade is rounded. The same two-component minimum applies to the president.
+Honesty, Personal Finances, Fundraising, and Showing Up have weights 25%, 25%, 30%, and 20%. Missing components are excluded and available weights normalized. At least two components must be complete. A sourced, dated Legal Trouble review is also required; unknown legal input is not zero. Legal Trouble is subtracted after the weighted average, at full strength. Only the final displayed grade is rounded. The same two-component minimum applies to the president.
 
 ### Integrity components
 
 **Honesty (the Promises Delivered Index):** `100 × (kept + 0.5 × partly kept or changed) ÷ counted checks`. Contradicted checks earn zero. Pending, ambiguous, vague, and outcome-only checks are excluded. A promise that could have been acted on but remains unacted at the end of a term is counted as contradicted. The president uses reviewed PolitiFact tracker counts: Kept 1, Compromise 0.5, Broken 0; Stalled and In the Works wait. At least three counted checks are required. Pledge evidence is shown with the reviewed verdict and does not change Honesty; pledges count in Fundraising. Flip-Flop and Pants on Fire are planned additions.
+
+**Showing Up:** `clamp(100 − 5 × missed %, 0, 100)`, where missed % is the share of roll-call votes the member missed while in office in the last four calendar years. The record is Voteview's file of every roll call in both chambers (built into `public/attendance.json` by `npm run attendance:build`): "not voting", paired and announced votes are missed; Yea, Nay and Present count as there; votes before a member joined or after they left don't count. 2% missed scores 90, 10% scores 50, 20% or more scores 0. Votes missed while campaigning count as missed. A reviewed absence with a cited source in the person's `absences` in `public/research.json` (`{from, to, reason, src}`, reason `medical`, `birth`, `adoption`, `bereavement` or `military`) is left out of both the votes and the misses for its dates; any other reason, or one without a source, is not. At least 50 votes in office in those years are required: a former member who served then is counted for the time they served, and a candidate who hasn't served has no Showing Up part. The record shows that a vote was missed, not why or where the member was, and the page never says more than that.
 
 **Personal Finances:**
 
