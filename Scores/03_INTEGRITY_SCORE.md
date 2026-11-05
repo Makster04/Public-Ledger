@@ -1,5 +1,7 @@
 # Integrity 🧭
 
+> **Revision approved, not built yet:** Integrity is moving to five parts (Honesty 20%, Personal Finances 20%, Fundraising 25%, Showing Up 15%, Conflicts of Interest 20%). The formulas for sign-off are in [03a_INTEGRITY_REVISION.md](03a_INTEGRITY_REVISION.md); this guide describes what runs today.
+
 **How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?**
 
 **Status: primary grade; its parameters are provisional.** Calculated in `public/integrity.js`. Promises and ethics evidence are available within Integrity. Historical grades remain accessible.
