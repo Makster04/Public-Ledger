@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,exportButtons,oneArea,boxHeads} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,exportButtons,oneArea,boxHeads,readRaceSection} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -481,4 +481,26 @@ test('JSON results nested by county: the race in each county, by name, key or id
   assert.deepEqual(nestedCounties({'7':{USSenator:{list:[{n:'A',v:'1,200'}]}}},{contest,counties}),[{county:'Brown',choice:'A',party:'',votes:1200}],'a county by its id, the race by its key');
   assert.deepEqual(jsonRace({a:{title:'State Senator',c:[{name:'X',votes:1}]}},contest),null,'a state senate race is not it');
   assert.deepEqual(wideRows([{name:'A',Adams:'5',Total:'5'}],['Adams']),[{county:'Adams',choice:'A',party:'',votes:5}]);
+});
+
+test("Florida: each county's page on Florida Election Watch, the race read from the rows after its heading",async()=>{
+  const [moody,nixon]=raceCandidates(D,'S-FL').map(c=>c.name),contest=SOURCES['S-FL'].contest;
+  // A table under the race's heading, up to the next race's heading of the same kind.
+  const table=(a,b)=>`<html><body><h3 class="race-name">United States Senator</h3><table><tr><th>Candidate</th><th>Party</th><th>Votes</th><th>%</th></tr>
+    <tr><td>${moody}</td><td>REP</td><td>${a}</td><td>55.10%</td></tr><tr><td>${nixon}</td><td>DEM</td><td>${b}</td><td>44.90%</td></tr><tr><td>Total</td><td></td><td>9</td><td></td></tr></table>
+    <h3 class="race-name">State Senator, District 9</h3><table><tr><td>X</td><td>REP</td><td>7</td></tr></table></body></html>`;
+  assert.deepEqual(readRaceSection(table('12,345','6,789'),contest).rows,[{choice:moody,party:'REP',votes:12345},{choice:nixon,party:'DEM',votes:6789}]);
+  // Text in blocks: "Name (PARTY) votes percent".
+  const text=`<div class="contest"><span class="title">U.S. Senator</span><div class="cand">${moody} (REP) 5,000 60.00%</div><div class="cand">${nixon} (DEM) 3,333 40.00%</div></div><div class="contest"><span class="title">Governor</span><div>Y (REP) 1 100%</div></div>`;
+  assert.deepEqual(readRaceSection(text,contest).rows,[{choice:moody,party:'REP',votes:5000},{choice:nixon,party:'DEM',votes:3333}]);
+  assert.equal(readRaceSection('<h3>State Senator, District 9</h3>',contest),null);
+  // The home page's county links, each county's page read; one without the race is noted.
+  const home=`<ul><li><a class="countyDropdown" href="/TrackCounty/ALA">AlachuaCounty</a></li><li><a class="countyDropdown" href="/TrackCounty/IND">IndianRiverCounty</a></li><li><a class="countyDropdown" href="/TrackCounty/STJ">St.JohnsCounty</a></li><li><a href="/CountyReportingStatus">County Reporting Status</a></li></ul>`;
+  const asked=[],get=async u=>{asked.push(u);if(u==='https://floridaelectionwatch.gov/')return home;if(u.endsWith('/ALA'))return table('40,000','60,000');if(u.endsWith('/IND'))return table('50,000','30,000');
+    if(u.endsWith('/STJ'))return '<h3 class="race-name">United States Senator</h3><p>Results will be posted after the polls close.</p>';throw new Error('HTTP 404');};
+  const r=await countyRace(D,'S-FL',{maps:async st=>map(st),get}),f=n=>map('FL').counties.find(c=>c.name===n).fips,[km,kn]=raceCandidates(D,'S-FL').map(c=>c.key);
+  assert.deepEqual(r.race.counties[f('Indian River')],{[km]:50000,[kn]:30000},'"IndianRiverCounty" is Indian River');
+  assert.deepEqual(r.race.counties[f('Alachua')],{[km]:40000,[kn]:60000});
+  assert.ok(r.lines.some(l=>/1 of 3 county pages couldn't be read \(St\.Johns: the Senate race's candidates weren't read \(after its heading the page reads: "Results will be posted after the polls close\."\)\)/.test(l)));
+  assert.ok(!asked.some(u=>/CountyReportingStatus/.test(u)),'only the county pages');
 });

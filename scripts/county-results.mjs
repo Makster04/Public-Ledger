@@ -74,7 +74,11 @@ export const SOURCES={
   'S-IA':{state:'IA',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'IA'},slow:true,urls:[],page:'https://electionresults.iowa.gov/IA/',source:'Iowa Secretary of State, election night results (Clarity)'},
   // Kansas's Clarity site lists nothing after 2015; its own results page is read instead.
   'S-KS':{state:'KS',contest:SENATE_CONTEST,urls:[],pages:['https://sos.ks.gov/elections/election-results.html'],page:'https://sos.ks.gov/elections/election-results.html',source:'Kansas Secretary of State, election results'},
-  'S-KY':{state:'KY',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'KY'},slow:true,urls:[],page:'https://elect.ky.gov/results/Pages/default.aspx',source:'Kentucky State Board of Elections, election night results (Clarity)'},
+  // Kentucky's results are no longer on Clarity (HTTP 403), and its 2026 page has the primary only so far.
+  'S-KY':{state:'KY',contest:SENATE_CONTEST,urls:[],pages:['https://elect.ky.gov/results/2020-2029/Pages/2026.aspx'],page:'https://elect.ky.gov/results/2020-2029/Pages/2026.aspx',
+    help:"Kentucky's county results for the general come as its recap sheets after the state certifies (its 2026 page has the primary's so far); until then the Kentucky card has no map.",source:'Kentucky State Board of Elections, election results'},
+  // Florida: Florida Election Watch, a page per county (its archive site stops at the 2026 primary).
+  'S-FL':{state:'FL',contest:SENATE_CONTEST,countyPages:{list:'https://floridaelectionwatch.gov/',match:/^\/TrackCounty\/[A-Z]{3}$/i},slow:true,urls:[],page:'https://floridaelectionwatch.gov/',source:'Florida Department of State, Florida Election Watch'},
   'S-WV':{state:'WV',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'WV'},urls:[],page:'https://results.enr.clarityelections.com/WV/',source:'West Virginia Secretary of State, election night results (Clarity)'},
   // South Carolina's results page links to its Clarity site (enr-scvotes.org) for each election.
   'S-SC':{state:'SC',contest:SENATE_CONTEST,clarity:{base:'https://www.enr-scvotes.org',st:'SC'},urls:[],pages:['https://scvotes.gov/2026-general-election-results/'],page:'https://scvotes.gov/2026-general-election-results/',source:'South Carolina Election Commission, election night results (Clarity)'},
@@ -278,6 +282,59 @@ export function boxHeads(html){
   const title=strip(/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1]||''),h=[...String(html).matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi)].map(m=>strip(m[1])).filter(Boolean).slice(0,5);
   return `no results boxes on it; title "${title}"${h.length?`, headings: ${h.join('; ')}`:''}, ${Math.round(String(html).length/1024)} KB`;
 }
+// A race on a page laid out by its own markup: its heading (an element whose own text is the race's name), then the
+// candidates after it, up to the next heading of the same kind: the rows of a table, each a name and a vote count, or
+// else lines of text ending in a vote count (and a percentage). {rows, after} with the text that follows the heading, or
+// null without the race.
+export function readRaceSection(html,contest){
+  const h=String(html),re=/<(h[1-6]|div|span|td|th|caption|strong|b|p|a|label|legend|button)\b([^>]*)>([^<]{3,160})<\/\1>/gi;let m;
+  while((m=re.exec(h))){const t=decode(m[3]).replace(/\s+/g,' ').trim();if(contest.test(t)&&!/state senat/i.test(t))break;}
+  if(!m)return null;
+  // The section: to the next element like the heading (same tag and class), at most 60 KB on.
+  const start=re.lastIndex,cls=/\bclass\s*=\s*["']([^"']*)["']/i.exec(m[2])?.[1],tail=h.slice(start,start+60000);
+  const next=new RegExp(`<${m[1]}\\b[^>]*${cls?`class\\s*=\\s*["']${cls.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}["']`:''}[^>]*>`,'i').exec(tail);
+  const part=next&&next.index>0?tail.slice(0,next.index):tail,rows=[];
+  const count=s=>/^\d{1,3}(,\d{3})*$|^\d+$/.test(s)?Number(s.replace(/,/g,'')):null,pctLike=s=>/%$/.test(s)||/^\d*\.\d+$/.test(s);
+  for(const tr of part.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)){
+    const cells=[...tr[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(c=>strip(c[1]));
+    const name=cells.find(c=>/[a-z]{2}/i.test(c)&&!pctLike(c)),votes=cells.map(count).find(v=>v!=null);
+    if(!name||votes==null||/^(total|candidate|name|choice|over ?votes|under ?votes|blank)/i.test(name))continue;
+    const party=cells.find(c=>c!==name&&/^\(?(rep|dem|lib|grn|npa|ind|wri|[A-Z]{3})\)?$|republican|democrat|libertarian|green|independent|no party/i.test(c))||'';
+    rows.push({choice:name.replace(/\s*\((rep|dem|lib|grn|npa|ind|[A-Z]{3})\)\s*$/i,'').trim(),party,votes});
+  }
+  if(!rows.length){
+    // Text lines: "Ashley Moody (REP) 123,456 55.20%".
+    const text=decode(part.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,' ').replace(/<\/?(div|p|li|tr|br|h[1-6]|table|ul)\b[^>]*>/gi,'\n').replace(/<[^>]+>/g,' '));
+    for(const line of text.split('\n').map(l=>l.replace(/\s+/g,' ').trim()).filter(Boolean)){
+      const x=/^(.*?[a-z]{2}.*?)\s+(?:\(([A-Z]{2,4})\)\s+)?(\d{1,3}(?:,\d{3})+|\d+)(?:\s+\d+(?:\.\d+)?\s?%)?$/i.exec(line);
+      if(x&&!/^(total|precincts|ballots|registered|turnout)/i.test(x[1]))rows.push({choice:x[1].replace(/\s*\(([A-Z]{2,4})\)$/,'').trim(),party:x[2]||'',votes:Number(x[3].replace(/,/g,''))});
+    }
+  }
+  return {rows,after:strip(part).slice(0,300)};
+}
+// A state with a page per county on its own site (Florida Election Watch's /TrackCounty/ALA …): the list page's links to
+// them, each county named by its link ("AlachuaCounty"), each page read for the race, six at a time.
+async function readCountyPages(src,get){
+  const c=src.countyPages,html=asText(await get(c.list)),pages=[];
+  for(const m of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)){
+    const raw=/\bhref\s*=\s*["']([^"']+)["']/i.exec(m[1])?.[1];if(!raw)continue;let u;try{u=new URL(decode(raw),c.list);}catch{continue;}
+    if(!c.match.test(u.pathname)||pages.some(p=>p.u===u.href))continue;
+    pages.push({u:u.href,name:strip(m[2]).replace(/\s*County$/i,'').trim()});
+  }
+  if(!pages.length)throw new Error(`no county pages linked from ${c.list}`);
+  const rows=[],errs=[];
+  await sixAtATime(pages,async p=>{
+    try{const r=readRaceSection(asText(await get(p.u)),src.contest);
+      if(!r){errs.push(`${p.name}: no Senate race on its page`);return;}
+      if(!r.rows.length){errs.push(`${p.name}: the Senate race's candidates weren't read (after its heading the page reads: "${r.after}")`);return;}
+      for(const x of r.rows)rows.push({county:p.name,...x});}
+    catch(e){errs.push(`${p.name}: ${e.message}`);}
+  });
+  if(!rows.length)throw new Error(`none of the ${pages.length} county pages had the Senate race read (${errs.slice(0,2).join('; ')})`);
+  rows.note=errs.length?`${errs.length} of ${pages.length} county pages couldn't be read (${errs[0]})`:'';
+  return rows;
+}
+
 // A county-page state: its list of county pages (or numbered pages), each read for the Senate race, six at a time.
 async function readBoxCounties(src,get){
   const b=src.boxes,pages=[];
@@ -744,6 +801,9 @@ export async function countyRace(research,id,{get,post=null,file=null,maps}){
       else if(!take(got.rows,pb.page))tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): the Senate race's candidates were not found in it`);}
     catch(e){tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): ${e.message}`);}}
   // A county-page state: every county's page.
+  // A state with a page per county on its own site.
+  if(src.countyPages&&!file&&!rows){try{const r=await readCountyPages(src,get);if(!take(r,src.countyPages.list))tried.push(`county pages: the Senate race's candidates were not found on them (they have: ${[...new Set(r.map(x=>x.choice))].slice(0,4).join(', ')})`);}
+    catch(e){tried.push(`county pages: ${e.message}`);}}
   if(src.boxes&&!file&&!rows){try{const r=await readBoxCounties(src,get);if(!take(r,src.boxes.list||src.page))tried.push('county pages: the Senate race\'s candidates were not found on them');else if(r.note)tried.push(r.note);}
     catch(e){tried.push(`county pages: ${e.message}`);}}
   // A state read through its site's own data files, in steps.
@@ -838,7 +898,7 @@ export const SAMPLES={
     'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20261103/ParishesInElection.htm',{u:'https://voterportal.sos.la.gov/graphical',kind:'context',patterns:['prefixWithDateFolder=function','prefixWithDateFolder:function','processMultiparish=function','processMultiparish:function']}],
   OK:['https://oklahoma.gov/elections/elections-results/election-results/2026-election-results/november-general-election.html',{u:'https://results.okelections.us/OKER/',kind:'context',patterns:['api','.json','county','Contest']}],
   // Florida's archive stops at the 2026 primary; election night is on Florida Election Watch, an app built by its scripts.
-  FL:[{u:'https://floridaelectionwatch.gov/',kind:'scripts'},{u:'https://floridaelectionwatch.gov/',kind:'context',patterns:['.json','api/','County','download','.csv','.txt']}],
+  FL:['https://floridaelectionwatch.gov/TrackCounty/ALA',{u:'https://floridaelectionwatch.gov/TrackCounty/ALA',kind:'raw'}],
   // Alabama's election-night page is empty until its scripts fill it in.
   AL:[{u:'https://www2.alabamavotes.gov/electionnight/',kind:'raw'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'scripts'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'context',patterns:['.json','api/','County','.csv','.txt','.xml']}],
   KY:['https://elect.ky.gov/results/2020-2029/Pages/2026.aspx'],
