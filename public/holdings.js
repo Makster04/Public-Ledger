@@ -3,6 +3,7 @@
 // "net-worth-house" and "net-worth-senate"). It is a lead: the Integrity grade uses only the reviewed status in
 // research.json ("holdings", see HOLDINGS in public/grades.js), which a person confirms from the report or a cited source.
 import {HOLDINGS} from './grades.js';
+import {valueRange} from './net-worth.js';
 
 // The House's asset-type codes (the bracketed code after each asset on the form), by kind. EQ is "excepted or qualified
 // blind trust": only one named as a blind trust counts as one; an excepted trust is a different arrangement.
@@ -66,4 +67,21 @@ export function officialDisclosureCoverage(job){
 export function stockTradesSince(holdings,trades){
   if(holdings?.status!=='no-stocks'||!holdings.since)return [];
   return (trades||[]).filter(t=>(t.asset||'stock')==='stock'&&String(t.traded||'')>=String(holdings.since));
+}
+
+// The individual stocks and options on one annual report, added up: {low, high, count} (high null when one has no upper
+// limit), or null when the report lists none or a value can't be read. A history entry carries it already ("stocks").
+export function stockRange(report){
+  if(!report)return null;
+  if(!Array.isArray(report.assets)||!report.assets.length)return report.stocks??null;
+  const ranges=report.assets.filter(a=>assetKind(a)==='stock').map(a=>valueRange(a.value));
+  if(!ranges.length||ranges.some(r=>!r))return null;
+  return {low:ranges.reduce((n,r)=>n+r[0],0),high:ranges.some(r=>r[1]===null)?null:ranges.reduce((n,r)=>n+r[1],0),count:ranges.length};
+}
+// One year of a member's annual reports, for the history kept with their net worth: the report's range, its parts and its
+// stocks, without the asset list.
+export function annualEntry(r){
+  return {id:r.id??r.doc??null,year:r.year??null,filed:r.filed??null,url:r.url??null,type:r.type??null,low:r.low??null,high:r.high??null,
+    assetsLow:r.assetsLow??null,assetsHigh:r.assetsHigh??null,debtsLow:r.debtsLow??null,debtsHigh:r.debtsHigh??null,
+    nAssets:r.nAssets??0,nDebts:r.nDebts??0,unread:r.unread??0,unreadable:!!r.unreadable,stocks:stockRange(r)};
 }

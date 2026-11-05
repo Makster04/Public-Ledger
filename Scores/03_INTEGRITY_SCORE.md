@@ -8,9 +8,12 @@ Integrity combines three components:
 
 | Component | Weight | What it includes |
 |---|---:|---|
-| **Honesty** | **30%** | The **Promises Delivered Index**, based on reviewed kept, partly kept, and broken commitments. |
-| **Personal Finances** | **30%** | The **Insider Trading Index**, **Stock Disclosure Dodger Index**, and the approved holdings and trading penalties. |
-| **Fundraising** | **40%** | Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from [IntegrityIndex.us](https://integrityindex.us/methodology). |
+| **Honesty** | **25%** | The **Promises Delivered Index**, based on reviewed kept, partly kept, and broken commitments. |
+| **Personal Finances** | **25%** | The **Insider Trading Index**, **Stock Disclosure Dodger Index**, and the approved holdings and trading penalties. |
+| **Fundraising** | **30%** | Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from [IntegrityIndex.us](https://integrityindex.us/methodology). |
+| **Showing Up** | **20%** | Roll-call votes missed while in office over the last four years: `100 − 5 × missed %`, floored at 0. Cited medical leave, birth or adoption, a death in the family, and military duty are left out; votes missed while campaigning count. |
+
+**Showing Up:** `clamp(100 − 5 × missed %, 0, 100)`, where missed % is the share of roll-call votes the member missed while in office in the last four calendar years. The record is Voteview's file of every roll call in both chambers (built into `public/attendance.json` by `npm run attendance:build`): "not voting", paired and announced votes are missed; Yea, Nay and Present count as there; votes before a member joined or after they left don't count. 2% missed scores 90, 10% scores 50, 20% or more scores 0. Votes missed while campaigning count as missed. A reviewed absence with a cited source in the person's `absences` in `public/research.json` (`{from, to, reason, src}`, reason `medical`, `birth`, `adoption`, `bereavement` or `military`) is left out of both the votes and the misses for its dates; any other reason, or one without a source, is not. At least 50 votes in office in those years are required: a former member who served then is counted for the time they served, and a candidate who hasn't served has no Showing Up part. The record shows that a vote was missed, not why or where the member was, and the page never says more than that.
 
 The **Legal Trouble Index** is deducted at full strength after averaging the available components:
 

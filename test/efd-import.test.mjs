@@ -70,8 +70,14 @@ test('importing saves the trades and the newest annual report, and a second impo
   assert.equal(w.year,2025,'the newest annual report');assert.equal(w.nAssets,2);assert.equal(w.nDebts,1);assert.equal(w.unreadable,false);
   const job=await statement(d,"SELECT status,error,next_due FROM jobs WHERE id='trades-senate:ossoff'").first();
   assert.equal(job.status,'ready');assert.equal(job.error,null);assert.equal(job.next_due,now.getTime()+7*86400000);
+  assert.deepEqual(w.history.map(h=>[h.year,h.nAssets,h.low]),[[2025,2,w.low],[2024,2,w.low]],'every year saved is kept, newest first');
+  assert.match(r.summary.join('\n'),/Jon Ossoff: 2 annual reports imported \(2025, 2024\), 2 years on file/);
   await importEfd({dir,db:d,now});
   assert.equal((await snap(d,'trades-senate:ossoff')).count,2,'the same report imported again counts once');
+  assert.equal((await snap(d,'net-worth-senate:ossoff')).history.length,2,'and the same years once');
+  // A later import of a new year adds it; the years on file stay.
+  await importEfd({dir:folder({'ossoff/annual-2026.html':annual(2026)}),db:d,now});
+  assert.deepEqual((await snap(d,'net-worth-senate:ossoff')).history.map(h=>h.year),[2026,2025,2024]);
   // A page saved without its address is known by its contents, so it also counts once.
   const dir2=folder({'ossoff/a.html':ptr(undefined,false),'ossoff/b.html':ptr(undefined,false)}),d2=db();
   await importEfd({dir:dir2,db:d2,now});assert.equal((await snap(d2,'trades-senate:ossoff')).count,2);

@@ -15,7 +15,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import config from '../data/config.json' with {type:'json'};
-import {FEEDS,efdSavedReport,officialRows,officialSummary,holdingsSnapshot} from '../src/feeds.mjs';
+import {FEEDS,efdSavedReport,officialRows,officialSummary,holdingsSnapshot,annualSummary,annualRows} from '../src/feeds.mjs';
 import {addJob,statement} from '../src/refresh.mjs';
 import {openDatabase} from './sqlite.mjs';
 
@@ -87,11 +87,15 @@ export async function importEfd({dir,db,dryRun=false,now=new Date()}){
       if(!dryRun)await save(db,id,'trades-senate',person,snap,runId,stamp,later,`Imported ${ptr.length} report${ptr.length===1?'':'s'} saved by hand`);
     }
     if(annual.length){
-      const best=annual.sort((x,y)=>(y.f.year||0)-(x.f.year||0)||String(y.f.filed).localeCompare(String(x.f.filed)))[0];
-      const year=best.f.year||(best.f.filed?Number(best.f.filed.slice(0,4))-1:null);
-      const snap={...holdingsSnapshot({...best.f,year,type:'annual',url:best.f.url},best.report.holdings),imported:stamp};
-      summary.push(`${person.name}: annual report for ${year||'an unknown year'} imported${snap.unreadable?' (nothing could be read)':''}`);
-      if(!dryRun)await save(db,`net-worth-senate:${person.id}`,'net-worth-senate',person,snap,runId,stamp,later,'Imported an annual report saved by hand');
+      // Every year saved is kept, with the years already on file: the newest in full, each year in its history.
+      const id=`net-worth-senate:${person.id}`,old=dryRun?null:await statement(db,'SELECT payload FROM snapshots WHERE job_id=?',id).first();
+      const fresh=annual.map(({f,report})=>{const year=f.year||(f.filed?Number(f.filed.slice(0,4))-1:null);
+        return {id:f.doc,...holdingsSnapshot({...f,year,type:'annual',url:f.url},report.holdings)};});
+      const ids=new Set(fresh.map(r=>String(r.id))),kept=annualRows(old?JSON.parse(old.payload):null).filter(r=>!ids.has(String(r.id)));
+      const snap={...annualSummary([...kept,...fresh]),imported:stamp},years=[...new Set(fresh.map(r=>r.year).filter(Boolean))].sort((a,b)=>b-a);
+      const read=fresh.length===1?`annual report for ${years[0]||'an unknown year'} imported`:`${fresh.length} annual reports imported (${years.join(', ')||'years unknown'})`;
+      summary.push(`${person.name}: ${read}${fresh.some(r=>r.unreadable)?' (nothing could be read from '+(fresh.length===1?'it':'some')+')':''}${snap.history.length>1?`, ${snap.history.length} years on file`:''}`);
+      if(!dryRun)await save(db,id,'net-worth-senate',person,snap,runId,stamp,later,`Imported ${fresh.length===1?'an annual report':fresh.length+' annual reports'} saved by hand`);
     }
   }
   return {lines,summary,files:files.length};

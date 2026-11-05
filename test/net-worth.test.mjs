@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import config from '../data/config.json' with {type:'json'};
 import {valueRange,netWorth,rangeText} from '../public/net-worth.js';
-import {FEEDS,houseAnnualHoldings,efdAnnualHoldings} from '../src/feeds.mjs';
+import {FEEDS,houseAnnualHoldings,efdAnnualHoldings,annualSummary,annualRows} from '../src/feeds.mjs';
 
 test('values as written on the forms',()=>{
   assert.deepEqual(valueRange('$15,001 - $50,000'),[15001,50000]);
@@ -62,7 +62,7 @@ test('a Senate eFD annual report: the asset and liability tables, not the gifts 
   assert.deepEqual(h.debts.map(d=>[d.creditor,d.owner,d.amount]),[['Big Bank','joint','$250,001 - $500,000']]);
 });
 
-test('the House job reads the newest report year, an amendment over the original, and lists a paper report as unreadable',async()=>{
+test("the House job reads every year's report once (an amendment over the original), keeps them all, and lists a paper report as unreadable",async()=>{
   const p=config.people.find(x=>x.inOffice&&x.chamber==='H');assert.ok(p);
   assert.ok(FEEDS['net-worth-house'].jobs(config).some(j=>j.id===`net-worth-house:${p.id}`));
   assert.ok(FEEDS['net-worth-senate'].jobs(config).every(j=>config.people.find(x=>x.id===j.subject).chamber==='S'));
@@ -70,12 +70,47 @@ test('the House job reads the newest report year, an amendment over the original
     {id:'2',type:'O',year:2025,filed:'2025-05-15',url:'https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/2.pdf'},
     {id:'3',type:'A',year:2025,filed:'2025-06-01',url:'https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/3.pdf'},
     {id:'4',type:'P',year:2025,filed:'2025-07-01',url:'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2025/4.pdf'}];
-  const urls=[];
-  const env={DB:{prepare:()=>({bind:()=>({all:async()=>({results:[{payload:JSON.stringify({byPerson:{[p.id]:filings}})}]})})})},
+  // The House index (all) and the snapshot saved last time (first), as the refresh's database answers them.
+  let saved=null;const urls=[];
+  const env={DB:{prepare:()=>({bind:()=>({all:async()=>({results:[{payload:JSON.stringify({byPerson:{[p.id]:filings}})}]}),first:async()=>saved?{payload:JSON.stringify(saved)}:null})})},
     fetch:async u=>{urls.push(String(u));return new Response(new Uint8Array([1,2,3]));}};
-  const job={kind:'net-worth-house',subject:p.id,args:'{}',cursor:null,started_at:new Date().toISOString()};
-  const r=await FEEDS['net-worth-house'].page(job,{},env,config);
-  assert.deepEqual(urls,[filings[2].url],'the 2025 amendment');
-  const snap=FEEDS['net-worth-house'].summarize(r.rows);
+  // One run: the first page lists what to read, then a page a report; the summary is built from all of them.
+  const run=async()=>{let cursor=null,rows=[];do{const r=await FEEDS['net-worth-house'].page({kind:'net-worth-house',subject:p.id,args:'{}',cursor,started_at:new Date().toISOString()},{},env,config);rows.push(...r.rows);cursor=r.next;}while(cursor);
+    return FEEDS['net-worth-house'].summarize(rows);};
+  let snap=await run();
+  assert.deepEqual(urls,[filings[2].url,filings[0].url],'the 2025 amendment, then 2024; never the trade report');
   assert.equal(snap.year,2025);assert.equal(snap.unreadable,true,'no text: filed on paper, checked by hand');assert.equal(snap.url,filings[2].url);
+  assert.deepEqual(snap.history.map(h=>[h.year,h.id,h.unreadable]),[[2025,'3',true],[2024,'1',true]],'every year kept, newest first');
+  // The next run reads nothing it has read; a new year's report is read, and the years before stay.
+  saved=snap;urls.length=0;
+  snap=await run();assert.deepEqual(urls,[],'nothing new: nothing read');assert.equal(snap.history.length,2);
+  filings.push({id:'5',type:'O',year:2026,filed:'2026-05-15',url:'https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/5.pdf'});
+  saved=snap;snap=await run();
+  assert.deepEqual(urls,[filings[4].url],'only the new year');assert.deepEqual(snap.history.map(h=>h.year),[2026,2025,2024]);assert.equal(snap.year,2026);
+});
+
+test('annual reports over the years: the newest in full, one entry a year with its range and stocks',()=>{
+  const r=(id,year,filed,assets,extra={})=>({id,year,filed,url:`u${id}`,type:'annual',...netWorth(assets,[]),unreadable:false,assets,debts:[],...extra});
+  const apple={name:'Apple Inc.',type:'Stock',value:'$15,001 - $50,000'},fund={name:'Vanguard 500',type:'Mutual Funds',value:'$100,001 - $250,000'};
+  const s=annualSummary([r('a',2023,'2023-05-10',[fund]),r('b',2024,'2024-05-10',[fund,apple]),r('c',2024,'2024-08-01',[fund,apple,apple])]);
+  assert.equal(s.id,'c','an amendment (filed later) over the original');assert.equal(s.assets.length,3);
+  assert.deepEqual(s.history.map(h=>[h.year,h.id,h.low,h.stocks?.count??0]),[[2024,'c',130003,2],[2023,'a',100001,0]]);
+  assert.ok(!('assets' in s.history[0]),'history entries carry no asset list');
+  // Carried into the next read: the full newest and the other years; the same report read again replaces its entry.
+  const rows=annualRows(s);assert.deepEqual(rows.map(x=>[x.id,Array.isArray(x.assets)]),[['c',true],['a',false]]);
+  const again=annualSummary([...rows,r('c',2024,'2024-08-01',[fund])]);assert.equal(again.assets.length,3,'the carried full report and the same report read again: one of them, with its assets');
+  assert.deepEqual(annualSummary([]),{});assert.deepEqual(annualRows(null),[]);
+});
+
+
+test('the Ethics tab lists net worth by year when more than one year is on file',async()=>{
+  const {netWorthYears}=await import('../public/live.js');
+  const x={year:2025,history:[{year:2025,low:100000,high:500000,stocks:{low:1001,high:15000,count:1},url:'https://efdsearch.senate.gov/search/view/annual/a/'},{year:2024,low:-50000,high:250000,stocks:null},{year:2023,unreadable:true}]};
+  const html=netWorthYears(x);
+  assert.match(html,/Net worth by year \(3 annual reports\)/);
+  assert.match(html,/<td>2025<\/td><td class="r">\$100K – \$500K<\/td><td class="r">\$1K – \$15K in 1<\/td>/);
+  assert.match(html,/<td>2024<\/td><td class="r">−\$50K – \$250K<\/td><td class="r">none listed<\/td>/);
+  assert.match(html,/<td>2023<\/td><td class="r">not readable \(filed on paper\)<\/td>/);
+  assert.equal(netWorthYears({history:[{year:2025}]}),'','one year: nothing to compare');assert.equal(netWorthYears({}),'');
+  assert.ok(!/<script/i.test(netWorthYears({history:[{year:'<script>',low:1,high:2},{year:2024,low:1,high:2,url:'javascript:alert(1)'}]})),'escaped, and only https links');
 });

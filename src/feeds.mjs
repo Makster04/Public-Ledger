@@ -9,6 +9,7 @@ import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
 import {donorSizes} from '../public/donor-sizes.js';
 import {netWorth} from '../public/net-worth.js';
+import {annualEntry} from '../public/holdings.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 
 export const DAY=86400000, WEEK=7*DAY, NEVER=Number.MAX_SAFE_INTEGER;
@@ -709,31 +710,46 @@ export const FEEDS={
       return {rows,next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
     summarize:officialSummary},
-  // Net worth from each member's latest annual financial disclosure (the most recent report year, an amendment over
-  // the original): a range, since every value on the form is one. House reports are PDFs from the disclosure index;
-  // senators' are eFD pages (report type 7). Read weekly; a report filed on paper is listed for checking by hand.
-  'net-worth-house':{host:'disclosures-clerk.house.gov',label:'Net worth (House annual disclosures)',tab:'ethics',every:WEEK,
+  // Net worth from each member's annual financial disclosures, every year since historyFrom (for each year, an amendment
+  // over the original): a range, since every value on the form is one, so it can be followed over time. House reports are
+  // PDFs from the disclosure index, each read once (later runs read only a new or amended report); senators' are eFD pages
+  // (report type 7). Read weekly; a report filed on paper is listed for checking by hand. rereadOnUpgrade: when the
+  // version changes (here, to keep every year), read again at once.
+  'net-worth-house':{host:'disclosures-clerk.house.gov',label:'Net worth (House annual disclosures)',tab:'ethics',every:WEEK,rereadOnUpgrade:true,
     // House members, and the profiled House candidates, whose candidate reports ("C") the House Clerk keeps too.
     jobs:c=>profiled(c).filter(p=>p.chamber==='H').map(p=>({id:`net-worth-house:${p.id}`,subject:p.id,args:{}})),
     async page(job,a,env){
-      const index=await snapshotsOf(env,'house-fd');need(index.length,'Waiting for the House disclosure index');
-      const f=index.flatMap(x=>x.byPerson?.[job.subject]||[]).filter(f=>['O','A','C'].includes(f.type)&&f.url&&f.filed)
-        .sort((x,y)=>(y.year-x.year)||((y.type==='A')-(x.type==='A'))||y.filed.localeCompare(x.filed))[0];
-      need(f,'No annual report in the House disclosure index yet');
-      return {rows:[{id:f.id,...holdingsSnapshot(f,houseAnnualHoldings(await pdfText(await requestSource(f.url,env,{as:'bytes'}))))}],next:null};
+      const c=state(job.cursor);
+      if(!c){
+        const index=await snapshotsOf(env,'house-fd');need(index.length,'Waiting for the House disclosure index');
+        // One report a year: an amendment over the original, else the one filed last.
+        const all=index.flatMap(x=>x.byPerson?.[job.subject]||[]).filter(f=>['O','A','C'].includes(f.type)&&f.url&&f.filed)
+          .sort((x,y)=>(y.year-x.year)||((y.type==='A')-(x.type==='A'))||y.filed.localeCompare(x.filed));
+        const reports=all.filter((f,i)=>all.findIndex(g=>g.year===f.year)===i);
+        need(reports.length,'No annual report in the House disclosure index yet');
+        // The years read before are carried; a report not read yet (a new year, or an amendment) is read, newest first.
+        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.map(r=>String(r.id)));
+        const todo=reports.filter(f=>!done.has(String(f.id))).slice(0,12).map(({id,year,filed,url,type})=>({id,year,filed,url,type}));
+        return {rows:before,next:todo.length?JSON.stringify({todo,i:0}):null};
+      }
+      const f=c.todo[c.i];
+      return {rows:[{id:f.id,...holdingsSnapshot(f,houseAnnualHoldings(await pdfText(await requestSource(f.url,env,{as:'bytes'}))))}],
+        next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
-    summarize:rows=>rows[0]||{}},
+    summarize:annualSummary},
   'net-worth-senate':{host:'efdsearch.senate.gov',label:'Net worth (Senate annual disclosures)',tab:'ethics',every:WEEK,
     jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='S').map(p=>({id:`net-worth-senate:${p.id}`,subject:p.id,args:{last:surname(p),first:[firstName(p),...(p.nicknames||[])]}})),
     async page(job,a,env,config){
       const session=await efdSession(env),reports=await efdReports(env,session,{...a,from:new Date().getUTCFullYear()-2,reportTypes:'[7]'});
       const f=reports[0];need(f,'No annual report on Senate eFD in the last two years');
       const doc={id:f.doc,url:f.url,filed:f.filed,year:f.filed?Number(f.filed.slice(0,4))-1:null,type:'annual'};
-      if(f.paper)return {rows:[{id:doc.id,...holdingsSnapshot(doc,{assets:[],debts:[]})}],next:null};
+      // The years on file before (imported by hand, or read earlier) are carried, so a new report adds a year.
+      const before=annualRows(await lastPayload(env,job.id)).filter(r=>String(r.id)!==String(doc.id));
+      if(f.paper)return {rows:[...before,{id:doc.id,...holdingsSnapshot(doc,{assets:[],debts:[]})}],next:null};
       const html=await efdGet(env,session.jar,f.url,/Assets|Liabilities/i);need(html!==null,'Senate eFD annual report could not be opened');
-      return {rows:[{id:doc.id,...holdingsSnapshot(doc,efdAnnualHoldings(html))}],next:null};
+      return {rows:[...before,{id:doc.id,...holdingsSnapshot(doc,efdAnnualHoldings(html))}],next:null};
     },
-    summarize:rows=>rows[0]||{}},
+    summarize:annualSummary},
   // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
   // trades are checked against, and the list of trade reports the House reader opens.
   // rereadOnUpgrade: read again at once when FEEDS_VERSION changes (here, how members are matched by name).
@@ -1173,6 +1189,32 @@ export function efdAnnualHoldings(html){
   return {assets,debts};
 }
 // One annual report's holdings, with the net-worth range (public/net-worth.js). No assets read means a paper report.
+// A member's annual reports over the years, as one snapshot: the newest in full (its range, assets and debts, as every
+// page reads it) and "history", one entry a year, newest first (its range and stocks, without the asset list). For each
+// year, the report filed last (an amendment over the original), and one read in full over the same report carried from
+// before. rows: reports read now, and the ones carried from the last snapshot (annualRows).
+export function annualSummary(rows){
+  const byYear=new Map();
+  for(const r of rows||[]){
+    if(!r||r.year==null&&!r.filed)continue;
+    const k=String(r.year??String(r.filed).slice(0,4)),o=byYear.get(k),f=String(r.filed||''),g=String(o?.filed||'');
+    if(!o||f>g||f===g&&Array.isArray(r.assets)&&!Array.isArray(o.assets))byYear.set(k,r);
+  }
+  const list=[...byYear.values()].sort((a,b)=>(Number(b.year)||0)-(Number(a.year)||0)||String(b.filed||'').localeCompare(String(a.filed||'')));
+  if(!list.length)return {};
+  const top=list[0];
+  return {...top,assets:top.assets||[],debts:top.debts||[],history:list.map(annualEntry)};
+}
+// The reports in a saved snapshot, to carry into the next read: the newest in full, and the other years' entries.
+export function annualRows(payload){
+  if(!payload||payload.year==null&&!payload.filed)return [];
+  const {history,...top}=payload,id=String(top.id??'');
+  return [top,...(history||[]).filter(h=>String(h.id??'')!==id||h.year!==top.year)];
+}
+async function lastPayload(env,jobId){
+  const r=await env.DB.prepare('SELECT payload FROM snapshots WHERE job_id=?').bind(jobId).first();
+  return r?JSON.parse(r.payload):null;
+}
 export const holdingsSnapshot=(f,h)=>({year:f.year||null,filed:f.filed||null,url:f.url,type:f.type||null,...netWorth(h.assets,h.debts),
   unreadable:!h.assets.length&&!h.debts.length,assets:h.assets.slice(0,400),debts:h.debts.slice(0,100)});
 // A Senate eFD report page saved from a browser (scripts/import-efd.mjs): whose report it is, what kind, when it was
@@ -1276,5 +1318,5 @@ export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
-// and its net-worth check.
-export const FEEDS_VERSION=3;
+// and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each).
+export const FEEDS_VERSION=4;

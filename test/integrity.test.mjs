@@ -8,8 +8,11 @@ import {previewChanges} from '../scripts/integrity-preview-monthly.mjs';
 import data from '../public/research.json' with {type:'json'};
 
 test('overall Integrity normalizes available weights, requires two components and sourced legal review, and rounds only after the legal deduction',()=>{
-  const r=integrityOverall({honesty:90,personalFinances:80,fundraising:70,legalTrouble:12.25});
-  assert.equal(r.raw,66.75);assert.equal(r.pct,67);assert.equal(letter(r.pct),'D');
+  // Honesty 25%, Personal Finances 25%, Fundraising 30%, Showing Up 20%.
+  const r=integrityOverall({honesty:90,personalFinances:80,fundraising:70,showingUp:95,legalTrouble:12.25});
+  assert.equal(r.weighted,82.5);assert.equal(r.raw,70.25);assert.equal(r.pct,70);assert.equal(letter(r.pct),'C');
+  const three=integrityOverall({honesty:90,personalFinances:80,fundraising:70,legalTrouble:12.25});
+  assert.equal(three.raw,67.125,'without Showing Up, the other three weights normalized');assert.deepEqual(three.missing,['showingUp']);
   const two=integrityOverall({honesty:80,personalFinances:90,legalTrouble:10});
   assert.equal(two.weighted,85);assert.equal(two.raw,75);assert.deepEqual(two.used,['honesty','personalFinances']);
   assert.equal(integrityOverall({honesty:99,legalTrouble:0}).pct,null);
