@@ -165,6 +165,8 @@ export function readTable(text,contest){
       // Oregon's export: a row per area (statewide, and each county by its number), each with its kind of area.
       ...(areaType>=0?{area:(f[areaType]||'').trim()}:{})});}
   if(!rows.length)throw new Error('no rows for the Senate race (contests in the file: '+[...new Set(lines.slice(1,400).map(l=>splitRow(l,sep)[c.contest]))].slice(0,8).join('; ')+')');
+  // Not one of the rows' own fields: kept out of sight, for a CHECK line about the file's layout.
+  Object.defineProperty(rows,'layout',{value:`its header: ${splitRow(lines[0],sep).join(' | ')}; a row of the race: ${splitRow(lines.slice(1).find(l=>contest.test((splitRow(l,sep)[c.contest]||'').trim()))||'',sep).join(' | ')}`});
   return rows;
 }
 
@@ -267,6 +269,13 @@ export function readResultBoxes(html,contest){
 }
 // The county a county page is about: "Beaverhead County Results", "Baker County, Oregon".
 export const countyNameIn=html=>{const m=/county-identifier-name[^>]*>([^<]+)</i.exec(html)||/<title>[^<]*?([A-Z][\w .'-]+?) County/i.exec(html);return m?strip(m[1]).replace(/\s+County\b.*$/i,'').trim():'';};
+// What a county page holds, when the Senate race isn't on it: its races' headings, or its title and headings.
+export function boxHeads(html){
+  const heads=String(html).split(/<div class="display-results-box-a">/i).slice(1).map(p=>strip(/<h1[^>]*>([\s\S]*?)<\/h1>/i.exec(p)?.[1]||'')).filter(Boolean);
+  if(heads.length)return `its races: ${heads.slice(0,6).join('; ')}${heads.length>6?` and ${heads.length-6} more`:''}`;
+  const title=strip(/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1]||''),h=[...String(html).matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi)].map(m=>strip(m[1])).filter(Boolean).slice(0,5);
+  return `no results boxes on it; title "${title}"${h.length?`, headings: ${h.join('; ')}`:''}, ${Math.round(String(html).length/1024)} KB`;
+}
 // A county-page state: its list of county pages (or numbered pages), each read for the Senate race, six at a time.
 async function readBoxCounties(src,get){
   const b=src.boxes,pages=[];
@@ -282,7 +291,7 @@ async function readBoxCounties(src,get){
   }else for(let i=1;i<=b.codes;i++)pages.push({u:b.pattern.replace('{code}',String(i).padStart(2,'0')),name:''});
   const rows=[],errs=[];let reporting=null;
   for(let i=0;i<pages.length;i+=6)await Promise.all(pages.slice(i,i+6).map(async p=>{
-    try{const html=asText(await get(p.u)),r=readResultBoxes(html,src.contest);if(!r?.rows.length){errs.push(`${p.u}: no Senate race on the page`);return;}
+    try{const html=asText(await get(p.u)),r=readResultBoxes(html,src.contest);if(!r?.rows.length){errs.push(`${p.u}: no Senate race on the page (${boxHeads(html)})`);return;}
       const county=p.name||countyNameIn(html);for(const x of r.rows)rows.push({county,...x});if(r.reporting)reporting=r.reporting;}
     catch(e){errs.push(`${p.u}: ${e.message}`);}
   }));
@@ -357,8 +366,10 @@ async function readTexas(src,get,map){
     if(!Array.isArray(o))for(const [id,x] of Object.entries(o))if(x&&typeof x==='object'&&!Array.isArray(x)&&x.ID==null&&typeof (x.N??x.Name)==='string'&&(x.Y!=null||x.ET!=null))els.push({ID:id,...x});
     for(const x of Array.isArray(o)?o:Object.values(o))walk(x,d+1);};walk(k,0);
   const title=e=>String(e.N||e.Name||'');
-  const el=els.find(e=>/2026/.test(JSON.stringify(e))&&/general/i.test(title(e))&&!/primary|runoff|special/i.test(title(e)))||k.currentelectionInfo;
-  if(el?.ID==null)throw new Error(`no election in ElectionConstants_${v}.json (it reads: ${shapeOf(k)})`);
+  // The November 3, 2026 general ("General and Special" counts too), never an earlier one the site still calls current.
+  const of2026=e=>/2026/.test(title(e))||String(e.Y)==='2026';
+  const el=els.find(e=>of2026(e)&&/general/i.test(title(e))&&!/primary|runoff/i.test(title(e)))||els.find(e=>of2026(e)&&/nov/i.test(title(e)));
+  if(el?.ID==null)throw new Error(`the site doesn't list the November 3, 2026 election (its current one is "${title(k.currentelectionInfo||{})||'none'}"; it lists: ${[...new Set(els.map(title))].slice(0,8).join('; ')||shapeOf(k)})`);
   // The election's folder: data/election/<ID>, as the site's own page makes it (setElectionUrl), or another name it may have.
   let eu=null,ev=null;const tried=[];
   const paths=Object.values(el).filter(x=>typeof x==='string'&&/\//.test(x)&&!/\s/.test(x)&&!/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(x)).map(x=>/^https?:/.test(x)?x.replace(/\/$/,''):`${src.data}/${x.replace(/^\/|\/$/g,'')}`);
@@ -416,7 +427,7 @@ export function byAreaNumber(rows,codes){
   const n=c=>String(Number(c)),known=new Map([...codes].map(([k,v])=>[n(k),typeof v==='string'?v:v.name])),groups=new Map();
   for(const r of rows){const g=r.area??'';(groups.get(g)||groups.set(g,[]).get(g)).push(r);}
   let best=null,most=0;for(const g of groups.values()){const c=new Set(g.filter(r=>known.has(n(r.county))).map(r=>n(r.county))).size;if(c>most){best=g;most=c;}}
-  if(!best)throw new Error(`none of the export's area numbers are counties (its kinds of area: ${[...groups.keys()].map(k=>k||'blank').join(', ')}; its area numbers: ${[...new Set(rows.map(r=>r.county||'blank'))].slice(0,8).join(', ')})`);
+  if(!best)throw new Error(`none of the export's area numbers are counties (its kinds of area: ${[...groups.keys()].map(k=>k||'blank').join(', ')}; its area numbers: ${[...new Set(rows.map(r=>r.county||'blank'))].slice(0,8).join(', ')}${rows.layout?`; ${rows.layout}`:''})`);
   const out=best.filter(r=>known.has(n(r.county))).map(({area,...r})=>({...r,county:known.get(n(r.county))}));
   if(rows.reporting)out.reporting=rows.reporting;
   return out;
@@ -810,8 +821,10 @@ const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
 // pages don't use plain tables: one county's page and the race's page.
 export const SAMPLES={
   // Sites filled in by their own scripts: the code around each data address, to see how the addresses are built.
-  TX:[{u:'https://results.texas-election.com/',kind:'context',patterns:['setElectionUrl=function','setElectionVersionUrl=function','LoadCountyData=function','GetCountyData()','countiesData[']},
-    'https://results.texas-election.com/static/data/Version.json'],
+  // Texas's November 3, 2026 results are on its other site; the older one still shows 2024.
+  TX:[{u:'https://electionresults.sos.state.tx.us/results.html',kind:'raw'},{u:'https://electionresults.sos.state.tx.us/results.html',kind:'scripts'},'https://electionresults.sos.state.tx.us/index.html',
+    'https://results.texas-election.com/static/data/ElectionConstants_404.json'],
+  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY',{u:'https://results.oregonvotes.gov/ResultsExport.aspx',kind:'raw'}],
   DE:['https://elections.delaware.gov/results/enr/Election_ByCountyWithWilmington_ID_GE2026.json'],
   OH:['https://liveresults.ohiosos.gov/Api/v1/Contest/GetContestsByCounty?countyId=_55A742EA504C09A3E0633390EE0AE290'],
   AR:[{u:'https://arkansas.tally-enr.com/',kind:'context',patterns:['GetContestResults','GetElectionList','GetElectionInfo','-counties.json','apiUrl','X-Results-Token']}],

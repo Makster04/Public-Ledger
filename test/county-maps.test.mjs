@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,countyCodes,byAreaNumber} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,countyCodes,byAreaNumber,boxHeads} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -368,6 +368,12 @@ test("Oregon's statewide export: its ASP.NET form sent back with CSV chosen and 
   r=await oregon([20,13],'<html>busy</html>');assert.ok(r.race&&r.lines.some(l=>/county numbers are taken as its county pages number them \(Baker County's page couldn't be read/.test(l)));
   assert.deepEqual([...countyCodes(list,'https://results.oregonvotes.gov/ResultsList.aspx')].map(([k,v])=>[k,v.name]),[['20','Baker'],['13','Benton']]);
   assert.throws(()=>byAreaNumber([{county:'99',choice:'x',votes:1,area:'County'}],new Map([['20','Baker']])),/none of the export's area numbers are counties \(its kinds of area: County; its area numbers: 99\)/);
+  // What a county page has when the Senate race isn't on it, and the export's own layout, for the CHECK line.
+  assert.equal(boxHeads(box('Governor',[['X','R','1']])+box('State Senator 30th District',[['Y','R','1']])),'its races: Governor; State Senator 30th District');
+  assert.equal(boxHeads('<html><head><title>Results</title></head><body><h2>Please wait</h2></body></html>'),'no results boxes on it; title "Results", headings: Please wait, 0 KB');
+  const t=readTable('ContestName,AreaType,AreaNum,CandidateName,CandidateVotes\nUS Senator,,Federal,Jeff Merkley,10\n',SOURCES['S-OR'].contest);
+  assert.equal(t.layout,'its header: ContestName | AreaType | AreaNum | CandidateName | CandidateVotes; a row of the race: US Senator |  | Federal | Jeff Merkley | 10');
+  assert.throws(()=>byAreaNumber(t,new Map([['20','Baker']])),/its kinds of area: blank; its area numbers: Federal; its header: ContestName/);
   assert.ok(!SOURCES['S-OR'].contest.test('State Senator 30th District'));
 });
 
@@ -448,6 +454,14 @@ test('Texas: its data files found as its own page finds them, then the race in e
   delete files[`${el}/Version.json`];
   const lost=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
   assert.ok(lost.lines.some(l=>/the election's folder wasn't found \(election 53, "2026 November 3rd General Election", reads: .*tried https:\/\/results\.texas-election\.com\/static\/data\/election\/53\/Version\.json: HTTP 404; https:\/\/results\.texas-election\.com\/static\/data\/53\/Version\.json: HTTP 404\)/.test(l)),'which address failed');
+  // A site that still shows 2024 as its current election: never read as 2026.
+  const old=structuredClone(files[`${data}/ElectionConstants_404.json`]);
+  files[`${data}/ElectionConstants_404.json`]={currentelectionInfo:{ID:'49',N:'2024 November 5th General Election'},electionInfo:{'2024':{G:{'49':{N:'2024 November 5th General Election',Y:2024,ET:'G'}}}}};
+  const stale=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
+  assert.ok(stale.lines.some(l=>/the site doesn't list the November 3, 2026 election \(its current one is "2024 November 5th General Election"; it lists: 2024 November 5th General Election\)/.test(l)));
+  files[`${data}/ElectionConstants_404.json`]={...old,electionInfo:{'2026':{G:{'53':{N:'2026 November 3rd General and Special Election',Y:2026,ET:'G'}}}}};
+  assert.ok(/Version\.json: HTTP 404/.test((await countyRace(D,'S-TX',{maps:async st=>map(st),get})).lines.join(' ')),'a "General and Special" election is the one');
+  files[`${data}/ElectionConstants_404.json`]=old;
   files[`${el}/Version.json`]={___versionNo:12};files[`${el}/12/County.json`]={Counties:'later'};
   const bad=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
   assert.ok(bad.lines.some(l=>/no Senate race by county in .*\/election\/53\/12\/County\.json \(race ids 1001; 2 counties listed; County\.json reads: \{Counties: "later"\}/.test(l)));
