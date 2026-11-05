@@ -359,9 +359,15 @@ test("Oregon's statewide export: its ASP.NET form sent back with CSV chosen and 
   assert.ok(!r.lines.some(l=>/numbers|newer/.test(l)),'checked against Baker County\'s page, nothing to say');
   r=await oregon([1,2]);assert.deepEqual(r.race.counties[fp('Baker')],{[key[0]]:5000,[key[1]]:2000},'numbered alphabetically instead: Baker 1, Benton 2');
   assert.ok(r.lines.some(l=>/the export numbers its counties alphabetically/.test(l)));
+  // A statewide export without county rows: each county's own page instead.
+  const statewide=[head,row('US Senator','','',a,'REP','5,100'),row('US Senator','','',b,'DEM','32,000')].join('\n');
+  const pages=await countyRace(D,'S-OR',{maps:async st=>map(st),post:async()=>statewide,get:async u=>{if(u.endsWith('ResultsList.aspx'))return list;
+    if(u.includes('cty=20'))return bakerPage;if(u.includes('cty=13'))return countyPage('Benton',box('US Senator',[[a,'Republican','100'],[b,'Democrat','30,000']],{h1:false}));throw new Error('HTTP 404');}});
+  assert.equal(pages.race.total,37100);assert.deepEqual(pages.race.counties[fp('Benton')],{[key[0]]:100,[key[1]]:30000});
+  assert.ok(SOURCES['S-OR'].slow,'36 county pages when the export has no counties');
   r=await oregon([20,13],'<html>busy</html>');assert.ok(r.race&&r.lines.some(l=>/county numbers are taken as its county pages number them \(Baker County's page couldn't be read/.test(l)));
   assert.deepEqual([...countyCodes(list,'https://results.oregonvotes.gov/ResultsList.aspx')].map(([k,v])=>[k,v.name]),[['20','Baker'],['13','Benton']]);
-  assert.throws(()=>byAreaNumber([{county:'99',choice:'x',votes:1,area:'County'}],new Map([['20','Baker']])),/none of the export's area numbers are counties \(its kinds of area: County\)/);
+  assert.throws(()=>byAreaNumber([{county:'99',choice:'x',votes:1,area:'County'}],new Map([['20','Baker']])),/none of the export's area numbers are counties \(its kinds of area: County; its area numbers: 99\)/);
   assert.ok(!SOURCES['S-OR'].contest.test('State Senator 30th District'));
 });
 
@@ -402,7 +408,15 @@ test("Ohio: each county's contests read for the Senate race, found by its name o
   assert.ok(r.lines.some(l=>/2 of 4 counties couldn't be read/.test(l)));assert.ok(asked.includes(`${api}/GetContestsByCounty?countyId=_L`));
   assert.deepEqual(raceIds(contests,SOURCES['S-OH'].contest),['_SEN']);assert.ok(SOURCES['S-OH'].slow,'88 counties: read every fourth pass while watching');
   const none=await countyRace(D,'S-OH',{maps:async st=>map(st),get:async u=>u.endsWith('getCountyList')?JSON.stringify(list):JSON.stringify({x:[]})});
-  assert.ok(none.lines.some(l=>/none of the 4 counties' contests had the Senate race .*a county's contests read: \{x: \[0× \]\}/.test(l)),'what a county\'s reply holds, to fix the reader by');
+  assert.ok(none.lines.some(l=>/none of the 4 counties' contests had the Senate race .*Adams's reply: the race isn't named in it; it reads: \{x: \[0× \]\}/.test(l)),'what a county\'s reply holds, to fix the reader by');
+  // A reply like Ohio's: the county's own statistics first, its contests after; candidates by displayName.
+  const real=n=>({contestStatistics:{statsTitle:'County Statistics'},contestDisplayName:n,contestName:n,contestId:'_X',contestSubHeader:null,contestPartyCode:'',isPartisan:false,isPrimaryElection:false,hasWriteIns:true,isElectionOfficial:true,
+    contestResults:[{contestDisplayName:'U.S. Senator - Unexpired Term Ending 01/03/2029',choices:[{displayName:husted,partyCode:'REP',votes:'1,500'},{displayName:brown,partyCode:'DEM',votes:'900'}]}],lastUpdated:'x'});
+  const oh=await countyRace(D,'S-OH',{maps:async st=>map(st),get:async u=>u.endsWith('getCountyList')?JSON.stringify(list):u.endsWith('getContestList')?'[]':JSON.stringify(real(new URL(u).searchParams.get('countyId')))});
+  assert.deepEqual(oh.race.counties[f('Ross')],{[kh]:1500,[kb]:900});
+  const missing=await countyRace(D,'S-OH',{maps:async st=>map(st),get:async u=>{if(u.endsWith('getCountyList'))return JSON.stringify(list);const x=real('Adams');x.contestResults[0].choices=[{who:husted,n:1}];return JSON.stringify(x);}});
+  assert.ok(missing.lines.some(l=>/Adams's reply: the race is named in \{contestDisplayName: "U\.S\. Senator - Unexpired Term ", choices: \[1× \{who: "Jon Husted", n: 1\}\]\}/.test(l)),'the race\'s own object, to show its candidates\' keys');
+  assert.match(shapeOf(real('Adams')),/isElectionOfficial: true, and contestResults: \[1×\], lastUpdated: string\}$/,'keys past the tenth by name');
 });
 
 test('Texas: its data files found as its own page finds them, then the race in each county by its id',async()=>{
@@ -421,6 +435,14 @@ test('Texas: its data files found as its own page finds them, then the race in e
   // Nested by race instead: the race holds its counties.
   files[`${data}/53/12/County.json`]={'1001':{'1':{C:[{id:'5',V:1}]},'101':{C:[{id:'6',V:2}]}}};
   assert.equal((await countyRace(D,'S-TX',{maps:async st=>map(st),get})).race.total,3);
+  // The election's folder under another name: tried in turn.
+  for(const k of Object.keys(files).filter(k=>k.includes('/53/')))files[k.replace('/53/','/election/53/')]=files[k];
+  delete files[`${data}/53/Version.json`];
+  assert.equal((await countyRace(D,'S-TX',{maps:async st=>map(st),get})).race.total,3);
+  delete files[`${data}/election/53/Version.json`];
+  const lost=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
+  assert.ok(lost.lines.some(l=>/the election's folder wasn't found \(election 53, "2026 November 3rd General Election", reads: .*tried https:\/\/results\.texas-election\.com\/static\/data\/53\/Version\.json: HTTP 404/.test(l)),'which address failed');
+  files[`${data}/53/Version.json`]={___versionNo:'12'};
   files[`${data}/53/12/County.json`]={Counties:'later'};
   const bad=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
   assert.ok(bad.lines.some(l=>/no Senate race by county in .*\/53\/12\/County\.json \(race ids 1001; 2 counties listed; County\.json reads: \{Counties: "later"\}/.test(l)));
