@@ -74,6 +74,7 @@ export const SOURCES={
   'S-IA':{state:'IA',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'IA'},slow:true,urls:[],page:'https://electionresults.iowa.gov/IA/',source:'Iowa Secretary of State, election night results (Clarity)'},
   // Kansas's Clarity site lists nothing after 2015; its own results page is read instead.
   'S-KS':{state:'KS',contest:SENATE_CONTEST,urls:[],pages:['https://sos.ks.gov/elections/election-results.html'],page:'https://sos.ks.gov/elections/election-results.html',source:'Kansas Secretary of State, election results'},
+  'S-KY':{state:'KY',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'KY'},slow:true,urls:[],page:'https://elect.ky.gov/results/Pages/default.aspx',source:'Kentucky State Board of Elections, election night results (Clarity)'},
   'S-WV':{state:'WV',contest:SENATE_CONTEST,clarity:{base:'https://results.enr.clarityelections.com',st:'WV'},urls:[],page:'https://results.enr.clarityelections.com/WV/',source:'West Virginia Secretary of State, election night results (Clarity)'},
   // South Carolina's results page links to its Clarity site (enr-scvotes.org) for each election.
   'S-SC':{state:'SC',contest:SENATE_CONTEST,clarity:{base:'https://www.enr-scvotes.org',st:'SC'},urls:[],pages:['https://scvotes.gov/2026-general-election-results/'],page:'https://scvotes.gov/2026-general-election-results/',source:'South Carolina Election Commission, election night results (Clarity)'},
@@ -791,7 +792,7 @@ export const PROBE={
   AR:['https://enr.totalresults.com/arkansas','https://www.sos.arkansas.gov/elections/research/election-results'],
   CO:['https://results.enr.clarityelections.com/CO/','https://www.coloradosos.gov/pubs/elections/Results/Archives.html'],
   DE:['https://elections.delaware.gov/results/html/index.shtml','https://elections.delaware.gov/'],
-  FL:['https://results.elections.myflorida.com/','https://fldoselectionfiles.elections.myflorida.com/enightfilespublic/20261103_ElecResultsFL.txt'],
+  FL:['https://floridaelectionwatch.gov/','https://results.elections.myflorida.com/'],
   IA:['https://electionresults.iowa.gov/','https://results.enr.clarityelections.com/IA/','https://sos.iowa.gov/elections/results/'],
   IL:['https://www.elections.il.gov/','https://www.elections.il.gov/electionoperations/ElectionVoteTotals.aspx'],
   KS:['https://sos.ks.gov/elections/elections-results.html','https://results.enr.clarityelections.com/KS/'],
@@ -836,7 +837,11 @@ export const SAMPLES={
   LA:['https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=ElectionDates.htm','https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20261103/RacesCandidates_Multiparish.htm',
     'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20261103/ParishesInElection.htm',{u:'https://voterportal.sos.la.gov/graphical',kind:'context',patterns:['prefixWithDateFolder=function','prefixWithDateFolder:function','processMultiparish=function','processMultiparish:function']}],
   OK:['https://oklahoma.gov/elections/elections-results/election-results/2026-election-results/november-general-election.html',{u:'https://results.okelections.us/OKER/',kind:'context',patterns:['api','.json','county','Contest']}],
-  FL:['https://results.elections.myflorida.com/ElectionRaces.asp?ElectionDate=11/3/2026&DATAMODE=','https://results.elections.myflorida.com/TitlePage.asp?ElectionDate=11/3/2026&DATAMODE='],
+  // Florida's archive stops at the 2026 primary; election night is on Florida Election Watch, an app built by its scripts.
+  FL:[{u:'https://floridaelectionwatch.gov/',kind:'scripts'},{u:'https://floridaelectionwatch.gov/',kind:'context',patterns:['.json','api/','County','download','.csv','.txt']}],
+  // Alabama's election-night page is empty until its scripts fill it in.
+  AL:[{u:'https://www2.alabamavotes.gov/electionnight/',kind:'raw'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'scripts'},{u:'https://www2.alabamavotes.gov/electionnight/',kind:'context',patterns:['.json','api/','County','.csv','.txt','.xml']}],
+  KY:['https://elect.ky.gov/results/2020-2029/Pages/2026.aspx'],
 };
 // A page as saved for a sample: no scripts, styles or comments, at most 150 KB.
 // ASP.NET's hidden form fields (__VIEWSTATE …) can run to hundreds of kilobytes; their values are cut out.
