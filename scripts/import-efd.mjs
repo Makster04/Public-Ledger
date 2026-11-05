@@ -6,6 +6,8 @@
 // them (src/feeds.mjs efdTrades, efdAnnualHoldings). Run npm start once first, so the local database exists.
 //   npm run efd:import                  read efd-downloads/
 //   npm run efd:import -- --dry-run     only list what would be imported
+//   npm run efd:import -- --list        the reports still to save, for the senators and candidates in 2026 races, with a
+//                                       folder made for each in efd-downloads/
 // Saving a page: open the report on efdsearch.senate.gov, then in Chrome File > Save Page As > "Webpage, HTML Only",
 // or in Safari File > Save As > Format "Page Source". A report filed on paper is a scanned image: it is listed, not read.
 import fs from 'node:fs';
@@ -33,6 +35,14 @@ export function senatorFor(file,report,people=SENATORS()){
   }
   if(byName.length===1)return {person:byName[0],warn:null};
   return {person:null,warn:report.name?`no single senator or Senate candidate matches ${report.name.full}; put it in a folder named after the person's id`:'no senator\'s name found on the page; put it in a folder named after the senator\'s id'};
+}
+
+// The reports still to save: each senator and Senate candidate in a 2026 race without an imported annual or candidate
+// report, with what to search for on eFD and the folder to save it in. have: the ids with a net worth on file.
+export function toSave(have=new Set(),people=SENATORS().filter(p=>p.race)){
+  return people.filter(p=>!have.has(p.id)).map(p=>({id:p.id,name:p.name,state:p.state,senator:!!p.inOffice,folder:`efd-downloads/${p.id}/`,
+    search:p.inOffice?`Last Name "${surname(p)}", Filer Type "Senator", Report Type "Annual"; open the newest Annual Report`
+      :`Last Name "${surname(p)}", Filer Type "Candidate", any report type; open the newest Candidate Report (or Annual Report)`}));
 }
 
 const listFiles=dir=>fs.existsSync(dir)?fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?listFiles(path.join(dir,e.name)):[path.join(dir,e.name)]):[];
@@ -94,6 +104,16 @@ async function save(db,id,kind,person,snap,runId,stamp,later,message){
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const dir=path.join(root,'efd-downloads'),dbFile=path.join(root,'.local','records.sqlite'),dryRun=process.argv.includes('--dry-run');
+  if(process.argv.includes('--list')){
+    const have=new Set();
+    if(fs.existsSync(dbFile)){const d=openDatabase(dbFile);try{for(const r of await statement(d,"SELECT job_id FROM snapshots WHERE job_id LIKE 'net-worth-senate:%'").all())have.add(r.job_id.split(':')[1]);}finally{d.close();}}
+    const list=toSave(have);
+    for(const x of list)fs.mkdirSync(path.join(root,x.folder),{recursive:true});
+    console.log(list.length?`${list.length} reports to save. On https://efdsearch.senate.gov/search/home/ tick the box to agree, then for each one search as below, open the report, and save the page (Safari: File, Save As, Format "Page Source"; Chrome: File, Save Page As, "Webpage, HTML Only") into its folder, which is made for you:\n`:'Every senator and Senate candidate in a 2026 race has a report imported.');
+    for(const x of list)console.log(`${x.folder.padEnd(28)} ${x.name} (${x.state}, ${x.senator?'senator':'candidate'}): ${x.search}`);
+    if(list.length)console.log('\nThen stop npm start, run npm run efd:import, and start it again. Run --list again any time to see what is left.');
+    process.exit(0);
+  }
   if(!fs.existsSync(dir)){fs.mkdirSync(dir,{recursive:true});console.log(`Made the folder efd-downloads/. Save the senators' report pages there (one folder per senator, e.g. efd-downloads/ossoff/), then run this again.`);process.exit(0);}
   if(!dryRun&&!fs.existsSync(dbFile)){console.log('No local database yet (.local/records.sqlite). Run npm start once, stop it, then run this again.');process.exit(1);}
   const db=dryRun?null:openDatabase(dbFile);

@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -271,7 +271,7 @@ test("Virginia's race is named \"Member, United States Senate\"; a bot check is 
   assert.ok(!botCheck(404,'https://example.gov/x','<title>Not Found</title>'));assert.ok(!botCheck(200,'https://example.gov/','<title>Just a moment</title>'),'a page that happens to say it');
   assert.match(SOURCES['S-MI'].help,/turned this one away, so use your browser: open https:\/\/mvic\.sos\.state\.mi\.us\/.*save the page .* --file "S-MI=~\/Downloads\/<the saved file>"/);
   assert.equal(sampleOf('<html><script>var a=1</script><style>p{}</style><!-- note --><p>Votes</p>\n\n\n<td>5</td></html>'),'<html><p>Votes</p>\n<td>5</td></html>');
-  for(const list of Object.values(SAMPLES))for(const x of list){assert.match(typeof x==='string'?x:x.u,/^https:\/\//);if(typeof x!=='string')assert.ok(['raw','scripts','pdf'].includes(x.kind));}
+  for(const list of Object.values(SAMPLES))for(const x of list){assert.match(typeof x==='string'?x:x.u,/^https:\/\//);if(typeof x!=='string')assert.ok(['raw','scripts','pdf','context'].includes(x.kind));}
 });
 
 // A county page on the county-page sites (Montana, Nebraska, New Mexico, Oregon, South Dakota), as they lay it out.
@@ -333,4 +333,27 @@ test('the probe keeps what a reader needs: the addresses in a page\'s scripts, a
   const raw=await sampleOne({u:'https://example.gov/',kind:'raw'},{get});assert.ok(raw.text.length<300&&raw.text.includes('value="…"')&&raw.text.includes('<script'),'the hidden form field cut, the scripts kept');
   assert.equal((await sampleOne({u:'https://example.gov/a.pdf',kind:'pdf'},{get})).text,'(no text in the PDF)');
   assert.equal((await sampleOne('https://example.gov/',{get})).text.includes('<script'),false,'a plain sample has no scripts');
+});
+
+test("Oregon's statewide export: its ASP.NET form sent back with CSV chosen and the Statewide button pressed",async()=>{
+  const html=`<form method="post" action="./ResultsExport.aspx" id="ctl01"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="abc" /><input type="hidden" name="__EVENTVALIDATION" value="xyz" />
+    <input id="MainContent_rblTypes_0" type="radio" name="ctl00$MainContent$rblTypes" value="1" /><input id="MainContent_rblTypes_1" type="radio" name="ctl00$MainContent$rblTypes" value="2" checked="checked" />
+    <input type="hidden" name="ctl00$hidElectionDate" value="11/3/2026" /><input type="button" class="button" value="Election Resources" /></form>`;
+  const f=postBackForm(html,'https://results.oregonvotes.gov/ResultsExport.aspx','ctl00$MainContent$Statewide',{'ctl00$MainContent$rblTypes':'1'});
+  assert.equal(f.action,'https://results.oregonvotes.gov/ResultsExport.aspx');
+  assert.deepEqual(f.fields,{__VIEWSTATE:'abc',__EVENTVALIDATION:'xyz','ctl00$MainContent$rblTypes':'1','ctl00$hidElectionDate':'11/3/2026',__EVENTTARGET:'ctl00$MainContent$Statewide',__EVENTARGUMENT:''},'CSV, not the checked Excel; buttons left out');
+  const [a,b]=raceCandidates(D,'S-OR').map(c=>c.name),sent=[];
+  const r=await countyRace(D,'S-OR',{maps:async st=>map(st),get:async()=>{throw new Error('not asked');},post:async(page,target,choices)=>{sent.push([page,target,choices]);
+    return `County,Contest,Candidate,Party,Votes\nBaker,US Senator,${a},REP,"5,000"\nBaker,US Senator,${b},DEM,"2,000"\nBenton,US Senator,${b},DEM,"30,000"\nBaker,State Senator 30th District,X,REP,1\n`;}});
+  assert.deepEqual(sent,[['https://results.oregonvotes.gov/ResultsExport.aspx','ctl00$MainContent$Statewide',{'ctl00$MainContent$rblTypes':'1'}]]);
+  assert.equal(Object.keys(r.race.counties).length,2);assert.equal(r.race.total,37000);assert.equal(r.race.source.u,'https://results.oregonvotes.gov/ResultsExport.aspx');
+  assert.ok(!SOURCES['S-OR'].contest.test('State Senator 30th District'));
+});
+
+test("the probe's context kind keeps the code around each data address, in the page and its scripts",async()=>{
+  const reply=b=>({status:200,url:'',text:async()=>b,arrayBuffer:async()=>new TextEncoder().encode(b).buffer});
+  const get=async u=>u.endsWith('main.js')?reply('x'.repeat(400)+'const url=base+"/static/data/election/"+id+"/Race.json";'+'y'.repeat(400)):reply('<html><script src="/main.js"></script><script src="https://www.googletagmanager.com/gtag/js?id=1"></script></html>');
+  const s=await sampleOne({u:'https://results.example.gov/',kind:'context',patterns:['Race.json']},{get});
+  assert.match(s.text,/^Code around Race\.json in the scripts of https:\/\/results\.example\.gov\/ \(HTTP 200\):\n\n== Race\.json in https:\/\/results\.example\.gov\/main\.js at \d+:\nx+const url=base\+"\/static\/data\/election\/"\+id\+"\/Race\.json";y+\n$/);
+  assert.ok(!s.text.includes('googletagmanager'),'analytics scripts are skipped');
 });
