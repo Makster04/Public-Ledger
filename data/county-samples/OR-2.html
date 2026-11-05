@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+	Oregon Secretary of State
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="text/html; charset=windows-1252" http-equiv="Content-Type" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=10.0" /><link href='https://orresultswebservices.azureedge.us//Styles/styles.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/stylesmobile.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/sidemenu.css' rel='stylesheet' /> 
+    <link href='https://orresultswebservices.azureedge.us//Scripts/animated-horizontal-charts/jqbar.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//maps/static/css/0_7_7_leaflet.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//maps/static/css/or-maps.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Maps/static/js/Leaflet.Zoom/L.Control.ZoomMin.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Maps/static/css/Leaflet.Dialog.css' rel="stylesheet" />
+<link id="countyBackground" rel="stylesheet" type="text/css" /><link id="allcountystyles" rel="stylesheet" type="text/css" /></head>
+<body>
+    <form method="post" action="./resultsSW.aspx?type=FED&amp;map=CTY" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="…" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="…" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="…" />
+</div>
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="…" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="…" />
+</div>
+        <input type="hidden" name="ctl00$hidElectionType" id="hidElectionType" value="General" />
+        <input type="hidden" name="ctl00$hidElectionDate" id="hidElectionDate" value="11/3/2026" />
+        <input type="hidden" name="ctl00$hidPrecinctsReported" id="hidPrecinctsReported" value="0" />
+        <input type="hidden" name="ctl00$hidPrecinctsNotReported" id="hidPrecinctsNotReported" value="1318" />
+        <input type="hidden" name="ctl00$hidVoterTurnout" id="hidVoterTurnout" value="1638442" />
+        <input type="hidden" name="ctl00$hidVoterTotal" id="hidVoterTotal" value="1470644" />
+        <div id="fader">
+            <h1>Preparing Export...</h1>
+        </div>
+        <div></div>
+        <div class="outside-wrapper">
+            <div class="top-colorbar">
+            </div>
+            <div class="top-header">
+                <div id="pnlHeader" class="section group">
+                    <div id="pnlSeal" class="top-sos-seal">
+                        <a id="lnkSOSimg" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"><img id="imgSOS" class="img-sos" src="https://orresultswebservices.azureedge.us//Images/Small_OregonSOSSecondaryLogo-Color.png" alt="Secretary of State portrait" /></a>
+	</div>					
+                    <div id="pnlHeaderBox1" class="col top-header-box1">
+                        <h2><a id="lnkSOSName" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"></a></h2>
+                        <h1><a id="lnkStateSOS" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank">Secretary of State, <span style='font-size: 70%;'>Oregon</span></a></h1>
+	</div>
+                    <div id="pnlHeaderBox2" class="col top-header-box2">
+    <h3>
+        <a onclick="DownloadFile();" id="ExportLink_lnkbtnSWExport" href="javascript:__doPostBack(&#39;ctl00$ExportLink$lnkbtnSWExport&#39;,&#39;&#39;)">Export</a>
+    </h3>
+                        <h2>
+                            <a id="lnkTracked" href="MyTrackedContests.aspx">My Tracked Contests</a>
+                        </h2>
+                        <h3>
+    <a id="NavLinks_lnkHome" href="Default.aspx">Home</a>
+                        </h3>
+	</div>
+</div>
+            </div>
+            <div class="header-box-wrapper">
+                <div class="section group">
+                    <div class="col header-box1">
+                        <h3>Unofficial</h3>
+                        <h2>General Election<br/>November 3, 2026</h2>
+                    </div>
+                    <div class="col header-box2">
+                        <div class="header-box-content-top">
+                            <h1><a id="lnkVoterTurnout" class="button" href="VoterTurnoutDetails.aspx?map=TURN">Statewide Voter Turnout<span>(details)</span></a></h1>
+                        </div>
+                        <div class="header-box-content-bottom">
+                            <div class="animate-position desktop">
+                                <div style="height: 100px;"><canvas id="voter-turnout"></canvas><div class="dough-percent"><span class="int">52</span><span class="dec">.70%</span></div></div>
+                            </div>
+                            <div class="animate-position mobile">
+                                <div><canvas id="voter-turnout-mobile"></canvas><div class="dough-percent"><span class="int">52</span><span class="dec">.70%</span></div></div>
+                            </div>
+                        </div>
+                        <div class="header-box-content-reg"><h1 style="width:100%;font-size:95%"><span class="vt-text">Ballots Counted</span><span class="vt-number">1,638,442</span><br /><span class="vt-text">Active Registered Voters</span><span class="vt-number">3,109,086</span></h1></div>
+                        <div class="next-count">Results last updated: 11/5/2026 | 10:45 AM PT</div>
+                    </div>
+                    <div id="chartjs-tooltip"></div>
+                </div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Senator</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1158">
+                                        <label class="css-label" for="chk-1158">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1158" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl00$ctl00','')" name="ctl00$MainContent$rptRace$ctl00$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038695" party="" osn="110010001" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl00$ctl01','')" name="ctl00$MainContent$rptRace$ctl00$ctl01" type="button" class="export-button" value="County Level" raceid="300038695" party="" osn="110010001" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 1318 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>David Brock Smith</h1>
+                                    <h2 class="Republican">Republican</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038695300060094">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>650,021</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038695_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Jeff Merkley</h1>
+                                    <h2 class="Democrat">Democrat, Working Families</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038695300060093">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>915,903</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038695_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Gary Lyndon Dye</h1>
+                                    <h2 class="Libertarian">Libertarian</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038695300060584">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>15,401</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038695_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Chris Henry</h1>
+                                    <h2 class="Progressive">Progressive, Pacific Green</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038695300060095">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>31,248</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038695_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000386959901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>1,188</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038695_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038695totals">1,613,761</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038695', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Senator contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038695', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Senator contest</span>
+                </div>
+                <div id="Map300038695" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038695">
+                            <div id="countyInfoBox300038695"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038695"></span>
+                            <div class="map" id="Mapmap300038695">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038695"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038695" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038695" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 1st District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1152">
+                                        <label class="css-label" for="chk-1152">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1152" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl01$ctl00','')" name="ctl00$MainContent$rptRace$ctl01$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038696" party="" osn="111010002" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl01$ctl01','')" name="ctl00$MainContent$rptRace$ctl01$ctl01" type="button" class="export-button" value="County Level" raceid="300038696" party="" osn="111010002" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 218 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Barbara J Kahl</h1>
+                                    <h2 class="Republican">Republican</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038696300060170">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>71,895</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038696_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Suzanne Bonamici</h1>
+                                    <h2 class="Democrat">Democrat, Working Families</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038696300024797">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>167,578</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038696_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000386969901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>348</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038696_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038696totals">239,821</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038696', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 1st District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038696', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 1st District contest</span>
+                </div>
+                <div id="Map300038696" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038696">
+                            <div id="countyInfoBox300038696"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038696"></span>
+                            <div class="map" id="Mapmap300038696">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038696"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038696" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038696" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 2nd District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1153">
+                                        <label class="css-label" for="chk-1153">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1153" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl02$ctl00','')" name="ctl00$MainContent$rptRace$ctl02$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038697" party="" osn="111020003" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl02$ctl01','')" name="ctl00$MainContent$rptRace$ctl02$ctl01" type="button" class="export-button" value="County Level" raceid="300038697" party="" osn="111020003" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 370 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Chris Beck</h1>
+                                    <h2 class="Democrat">Democrat, Independent</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038697300060172">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>115,716</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038697_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Cliff Bentz</h1>
+                                    <h2 class="Republican">Republican</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038697300060173">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>185,667</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038697_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000386979901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>438</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038697_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038697totals">301,821</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038697', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 2nd District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038697', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 2nd District contest</span>
+                </div>
+                <div id="Map300038697" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038697">
+                            <div id="countyInfoBox300038697"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038697"></span>
+                            <div class="map" id="Mapmap300038697">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038697"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038697" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038697" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 3rd District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1154">
+                                        <label class="css-label" for="chk-1154">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1154" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl03$ctl00','')" name="ctl00$MainContent$rptRace$ctl03$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038698" party="" osn="111030004" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl03$ctl01','')" name="ctl00$MainContent$rptRace$ctl03$ctl01" type="button" class="export-button" value="County Level" raceid="300038698" party="" osn="111030004" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 118 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Maxine E Dexter</h1>
+                                    <h2 class="Democrat">Democrat</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038698300060178">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>177,683</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038698_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Loran Ayles</h1>
+                                    <h2 class="Republican">Republican</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038698300060177">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>55,268</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038698_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000386989901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>506</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038698_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038698totals">233,457</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038698', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 3rd District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038698', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 3rd District contest</span>
+                </div>
+                <div id="Map300038698" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038698">
+                            <div id="countyInfoBox300038698"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038698"></span>
+                            <div class="map" id="Mapmap300038698">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038698"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038698" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038698" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 4th District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1155">
+                                        <label class="css-label" for="chk-1155">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1155" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl04$ctl00','')" name="ctl00$MainContent$rptRace$ctl04$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038699" party="" osn="111040005" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl04$ctl01','')" name="ctl00$MainContent$rptRace$ctl04$ctl01" type="button" class="export-button" value="County Level" raceid="300038699" party="" osn="111040005" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 187 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Monique DeSpain</h1>
+                                    <h2 class="Republican">Republican, Libertarian</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038699300060179">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>119,028</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038699_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Val Hoyle</h1>
+                                    <h2 class="Democrat">Democrat, Working Families</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038699300060180">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>149,652</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038699_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Justin Filip</h1>
+                                    <h2 class="Pacific Green">Pacific Green, Progressive</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038699300060181">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>8,345</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038699_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000386999901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>217</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038699_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038699totals">277,242</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038699', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 4th District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038699', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 4th District contest</span>
+                </div>
+                <div id="Map300038699" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038699">
+                            <div id="countyInfoBox300038699"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038699"></span>
+                            <div class="map" id="Mapmap300038699">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038699"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038699" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038699" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 5th District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1156">
+                                        <label class="css-label" for="chk-1156">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1156" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl05$ctl00','')" name="ctl00$MainContent$rptRace$ctl05$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038700" party="" osn="111050006" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl05$ctl01','')" name="ctl00$MainContent$rptRace$ctl05$ctl01" type="button" class="export-button" value="County Level" raceid="300038700" party="" osn="111050006" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 249 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Janelle S Bynum</h1>
+                                    <h2 class="Democrat">Democrat</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038700300046872">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>175,037</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038700_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Andrea Townsend</h1>
+                                    <h2 class="Pacific Green">Pacific Green</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038700300060183">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>6,732</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038700_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Patti Adair</h1>
+                                    <h2 class="Republican">Republican, Libertarian</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038700300060182">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>143,411</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038700_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000387009901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>323</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038700_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038700totals">325,503</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038700', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 5th District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038700', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 5th District contest</span>
+                </div>
+                <div id="Map300038700" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038700">
+                            <div id="countyInfoBox300038700"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038700"></span>
+                            <div class="map" id="Mapmap300038700">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038700"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038700" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038700" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <div class="wrapper-inside wrapper-border">
+                <div>
+                    <div class="display-results-box-wrapper">
+                        <div class="display-results-box-a">
+                            <h1>US Representative, 6th District</h1>
+                        </div>
+                        <div class="wrapper-mobile">
+                            <div class="section group">
+                                <div class="col display-results-box-b">
+                                    <div class="col follow-checkbox">
+                                        <input class="css-checkbox" type="checkbox" onclick="CheckboxChecked(this);" id="chk-1157">
+                                        <label class="css-label" for="chk-1157">Follow this contest</label>
+                                    </div>
+                                    <div class="recount" style='display: none;' >
+                                    <img class="recount-flag" alt="Race recount indicator" title="Recount Flag" 
+                                    src='https://orresultswebservices.azureedge.us//Images/recount-icon.png' />
+                                    </div>
+                                </div>
+                                <div class="display-results-box-g">
+                                    <div class="export-box dropdown" style="display: none">
+                                        <div class="export dropbtn">Export</div>
+                                        <div id="export-1157" class="dropdown-content export-container">
+                                            <div class="export-header">EXPORT:</div>
+                                            <div class="export-icon-wrapper">
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl06$ctl00','')" name="ctl00$MainContent$rptRace$ctl06$ctl00" type="button" class="export-button" value="Precinct Level" raceid="300038701" party="" osn="111060007" />
+                                                <input onclick="DownloadFile(); __doPostBack('ctl00$MainContent$rptRace$ctl06$ctl01','')" name="ctl00$MainContent$rptRace$ctl06$ctl01" type="button" class="export-button" value="County Level" raceid="300038701" party="" osn="111060007" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-c">
+                                    <div class="precinct-fully">
+                                        0 out of 183 Precincts Reported
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Andrea Salinas</h1>
+                                    <h2 class="Democrat">Democrat, Independent</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038701100084021">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>129,241</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038701_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>David Russ</h1>
+                                    <h2 class="Republican">Republican</h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar300038701300060184">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>94,882</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038701_NON"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-d">
+                                    <h1>Write-in</h1>
+                                    <h2 class=""></h2>
+                                </div>
+                                <div class="col display-results-box-e">
+                                    <div class="wrapper-mobile">
+                                        <div class="bar-graph-wrap">
+                                            <div id="bar3000387019901">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col display-results-box-f">
+                                    <div>191</div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div style="display: none;" id="writeins_300038701_"></div>
+                            <div class="section group">
+                                <div class="col display-results-box-totalvotes">
+                                    <div>total votes</div>
+                                </div>
+                                <div class="col display-results-box-total">
+                                    <div id="300038701totals">224,314</div>
+                                </div>
+                            </div>
+                </div>
+                <div class="wrapper-mobile-map-buttons">
+                    <input class="button-maps closed left" type="button" onclick="CreateMap('FED', '300038701', '0', ''); ToggleButton(this);" value="Map"  /><span class="hidden-text">for US Representative, 6th District contest</span>
+                    <input class="button-maps closed right" type="button" onclick="BuildCounty('FED', '300038701', '0', ''); ToggleButton(this);" value="County Results"  /><span class="hidden-text">for US Representative, 6th District contest</span>
+                </div>
+                <div id="Map300038701" style="display: none;" class="slidingDiv-maps">
+                    <div class="section group">
+                        <div class="col map-col1" id="Mapinfo300038701">
+                            <div id="countyInfoBox300038701"></div>
+                        </div>
+                        <div class="col map-col2">
+                            <span id="MapHeaderText300038701"></span>
+                            <div class="map" id="Mapmap300038701">
+                            </div>
+                        </div>
+                        <div class="col map-col3">
+                            <div id="legendInfoBox300038701"></div>
+                        </div>
+                        <div class="modal"></div>
+                    </div>
+                    <div id="PrecinctForMap300038701" style="display: none;" class="slidingDiv-maps"></div>
+                </div>
+                <div id="County300038701" style="display: none" class="slidingDiv-maps"></div>
+            </div>
+            <input type="button" class="button" value="Election Resources" onclick="Show_Div(Div_1)" />
+            <div id="Div_1" style="display: none;" class="slidingDiv">
+                <ul style="margin: 15px 0 15px 16%; padding: 0;">
+                    <li>
+                        <a id="lnkCountyList" href="ResultsList.aspx">Results By County</a>
+                    </li>
+                    <li>
+                        <a id="lnkERVoterTurnout" href="VoterTurnoutDetails.aspx">Voter Turnout</a>
+                    </li>
+                    <li>
+                        <a id="lnkResultsExport" href="ResultsExport.aspx">Statewide and County Exports</a>
+                    </li>
+                    <li>
+                        <a id="lnkFAQResources" href="ElectionTerminology.aspx">Election Terminology</a>
+                    </li>
+                </ul>
+                <div class="disclaimer">
+                    Write-in results are not reported on this site. Unofficial write-in results for statewide or state district offices may be obtained from <a href="mailto:Elections.SOS@sos.oregon.gov" style="font-weight: bold;">Elections.SOS@sos.oregon.gov</a> after election day as counties finalize write-in totals. Unofficial write-in results for county and precinct offices may be obtained from the county election office.
+                </div>
+                <div class="disclaimer">
+                    Election Night Results Reporting is a free service provided by the Office of Oregon Secretary of State, in cooperation with the Oregon Association of County Clerks.
+                </div>
+                <div class="contact-info desktop">
+                    <span class="left" style="font-weight: bold;">Elections Division</span><span class="right">Public Service Building Suite 126, 255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518</span><span>FAX 503-373-7414</span><span>TTY 800-735-2900</span><span class="right" style="font-weight: bold"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+                <div class="contact-info mobile">
+                    <span class="left">Elections Division</span>
+                    <br />
+                    <span class="right">Public Service Building Suite 501,</span>
+                    <br />
+                    <span>255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518 | FAX 503-373-7414</span>
+                    <br />
+                    <span>TTY 800-735-2900</span>
+                    <br />
+                    <span class="right"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+            </div>
+            <div class="bottom-colorbar"></div>
+        </div>
+        <div class="outside-wrapper footer"></div>
+        <nav class="navMenu">
+            <a href="" id="menuToggle" title="show menu"><span class="navClosed"><em>Menu</em></span></a><h1>Election Results</h1><a href="/Default.aspx">Home</a><a href="/resultsSW.aspx?type=FED&map=CTY" title="FEDERAL">Federal</a><a href="/resultsSW.aspx?type=SWPAR&map=CTY" title="STATE">State</a><a href="/resultsSW.aspx?type=SENATE&map=CTY" title="STATE SENATOR">State Senator</a><a href="/resultsSW.aspx?type=HOUSE&map=CTY" title="STATE REPRESENTATIVE">State Representative</a><a href="/resultsSW.aspx?type=SWNON&map=CTY" title="NONPARTISAN">Nonpartisan</a><a href="/resultsSW.aspx?type=LMEA&map=CTY" title="LOCAL MEASURE">Local Measure</a><a href="/resultsSW.aspx?type=MCR&map=CTY" title="SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURES">Shared County, City And District Races And Measures</a><a href="/ResultsList.aspx">County Results</a><a href="/ElectionTerminology.aspx">FAQ</a>
+        </nav>
+</form>
+    <div id="dhtmltooltip"></div>
+    <link href='https://orresultswebservices.azureedge.us//Styles/Roboto.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Images/favicon.ico' rel="shortcut icon" type="image/vnd.microsoft.icon" />
+</body>
+</html>

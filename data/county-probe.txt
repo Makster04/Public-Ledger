@@ -1,4 +1,4 @@
-County results probe, 2026-11-05T18:54:55.275Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-05T18:58:59.593Z: what each state's results site serves, for writing its reader.
 
 OR
   https://results.oregonvotes.gov/ → HTTP 200, text/html, 36 KB
@@ -35,6 +35,11 @@ OR
       link: January 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-January.pdf
       link: November 2025 → https://sos.oregon.gov/elections/Documents/Registration/2025-november.pdf
       data addresses in its scripts: https://sos.oregon.gov/elections/pages/historical-data.aspx · dataLayer · /elections/_layouts/15/OID.SharePoint.StarterTemplate/scripts/data-tables-web-part.js · search-results.aspx · ./historical-data.aspx · /elections/pages/historical-data.aspx · MenuData · userTimeZoneData · webTimeZoneData · /elections/Pages/historical-data.aspx · or-dataTablesWebPart · data-lang · _layouts/15/OID.SharePoint.StarterTemplate/scripts/data.txt · datatableswebpart_pagetotalrange · datatableswebpart_pagetotal · datatableswebpart_filteredfrom · FilterData
+  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-1.html
+  saved https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/OR-2.html
+  saved https://results.oregonvotes.gov/ResultsExport.aspx (HTTP 200) as data/county-samples/OR-3.html
+  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-4.txt
+  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-5.txt
 
 TX
   https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 285 KB
@@ -50,5 +55,7 @@ TX
   https://results.texas-election.com/ → HTTP 200, text/html, 2 KB
       title: ::Texas Election Night Results:: · 32 characters of text
       data addresses in its scripts: https://fonts.googleapis.com/css?family=Lato&display=swap · scrollData · loadeddata · loadedmetadata · dataavailable · datasetchanged · datasetcomplete · metadata · hasDataAttrs · data-slick-index · data-lazy · data-srcset · data-sizes
-  saved https://results.texas-election.com/ (HTTP 200) as data/county-samples/TX-1.txt
-  saved https://results.texas-election.com/static/data/Version.json (HTTP 200) as data/county-samples/TX-2.json
+  saved https://electionresults.sos.state.tx.us/results.html (HTTP 200) as data/county-samples/TX-1.html
+  saved https://electionresults.sos.state.tx.us/results.html (HTTP 200) as data/county-samples/TX-2.txt
+  saved https://electionresults.sos.state.tx.us/index.html (HTTP 404) as data/county-samples/TX-3.html
+  saved https://results.texas-election.com/static/data/ElectionConstants_404.json (HTTP 200) as data/county-samples/TX-4.json

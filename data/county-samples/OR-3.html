@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+	Oregon Secretary of State
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="text/html; charset=windows-1252" http-equiv="Content-Type" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=10.0" /><link href='https://orresultswebservices.azureedge.us//Styles/styles.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/stylesmobile.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/sidemenu.css' rel='stylesheet' /><script src='https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js'></script><script src='https://orresultswebservices.azureedge.us//Scripts/utils.js'></script> <!--styles are called in .vb file-->
+    <!-- below is the hardcoded version -->
+    <!--<link href="&lt;%= ConfigurationManager.AppSettings(&quot;ServiceRoot&quot;) &amp; &quot;/Styles/styles.css&quot; %>" rel="stylesheet" /><link href="https://orresultswebservices.azureedge.us/Styles/stylesmobile.css" rel="stylesheet" /><link href="https://orresultswebservices.azureedge.us/Styles/sidemenu.css" rel="stylesheet" />
+    <script src="https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js"></script>
+    <script src="https://orresultswebservices.azureedge.us/Scripts/utils.js"></script>-->
+    <!-- Application Insights -->
+    <script type="text/javascript">
+      var appInsights=window.appInsights||function(config){
+        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({ instrumentationKey:"42e366ff-6ff4-4763-a817-12d140390b5b" });
+       
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64L2GRDVP4"></script> 
+    <script>  
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        } gtag('js', new Date());
+        gtag('config', 'G-64L2GRDVP4');
+
+    </script>
+
+    <script>
+        var ServiceRoot = 'https://orresultswebservices.azureedge.us/';
+        var Maps = {};
+        var Bound = {};
+        var mapBuilt = [];
+
+        window.onload = function () {
+            var WatchList = getCookie("ORTracked");
+            if (WatchList == undefined)
+                WatchList = "";
+            
+            var checked = WatchList.split("_");
+            for (var i = 0; i < checked.length; i++) {
+                var checkbox = document.getElementById("chk-" + checked[i]);
+                if (checkbox !== null)
+                    checkbox.checked = true;
+            };
+        };
+    </script>
+    
+<link id="countyBackground" rel="stylesheet" type="text/css" /><link id="allcountystyles" rel="stylesheet" type="text/css" /></head>
+<body>
+    <form method="post" action="./ResultsExport.aspx" id="ctl01">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="…" />
+
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvu_ocjnhIO900jhff369YA3IIhCZFC04XpDYLEoacjg9OU0hhEQQvbxfHCiGabRZ31gswTSog5u9r-Yx704hd9LG-CrA1hcjszgVUSGdOVQMTFav5AzDsEpj2imPK1fHHoOMhKICVT0rxHYTOqd3kuc1&amp;t=ffffffffa1bf0f7b" type="text/javascript"></script>
+<script src="https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="…" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="…" />
+        <input type="hidden" name="ctl00$hidElectionType" id="hidElectionType" value="General" />
+        <input type="hidden" name="ctl00$hidElectionDate" id="hidElectionDate" value="11/3/2026" />
+        <input type="hidden" name="ctl00$hidPrecinctsReported" id="hidPrecinctsReported" value="0" />
+        <input type="hidden" name="ctl00$hidPrecinctsNotReported" id="hidPrecinctsNotReported" value="1318" />
+        <input type="hidden" name="ctl00$hidVoterTurnout" id="hidVoterTurnout" value="1638442" />
+        <input type="hidden" name="ctl00$hidVoterTotal" id="hidVoterTotal" value="1470644" />
+        <div id="fader">
+            <h1>Preparing Export...</h1>
+        </div>
+        <div></div>
+        <div class="outside-wrapper">
+            <div class="top-colorbar">
+                
+            </div>
+            <!--End Top Blue Bar-->
+            <div class="top-header">
+                <div id="pnlHeader" class="section group">
+	
+                    <div id="pnlSeal" class="top-sos-seal">
+		
+                        
+                        <a id="lnkSOSimg" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"><img id="imgSOS" class="img-sos" src="https://orresultswebservices.azureedge.us//Images/Small_OregonSOSSecondaryLogo-Color.png" alt="Secretary of State portrait" /></a>
+                    
+	</div>					
+                    <div id="pnlHeaderBox1" class="col top-header-box1">
+		
+                        <h2><a id="lnkSOSName" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"></a></h2>
+                        <h1><a id="lnkStateSOS" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank">Secretary of State, <span style='font-size: 70%;'>Oregon</span></a></h1>
+                    
+	</div>
+                    <!--End top-header-box1-->
+                    <div id="pnlHeaderBox2" class="col top-header-box2">
+		
+                        
+                        
+                        <h2>
+                            <a id="lnkTracked" href="MyTrackedContests.aspx">My Tracked Contests</a>
+                        </h2>
+                        <h3>
+                            
+    <a id="NavLinks_lnkHome" href="Default.aspx">Home</a>
+
+                        </h3>
+                    
+	</div>
+                    <!--End top-header-box2-->
+                
+</div>
+                <!--End Section Group-->
+            </div>
+            <!--End Top Header-->
+            <div class="header-box-wrapper">
+                <div class="section group">
+                    <div class="col header-box1">
+                        <h3>Unofficial</h3>
+                        <h2>General Election<br/>November 3, 2026</h2>
+                        
+                    </div>
+                    <!--End Header Box 1-->
+                    <div class="col header-box2">
+                        <div class="header-box-content-top">
+                            <h1><a id="lnkVoterTurnout" class="button" href="VoterTurnoutDetails.aspx?map=TURN">Statewide Voter Turnout<span>(details)</span></a></h1>
+                        </div>
+                        <!--End header-box2-content-top-->
+                        <div class="header-box-content-bottom">
+                            
+                            <div class="animate-position desktop">
+                                <div style="height: 100px;"><canvas id="voter-turnout"></canvas><div class="dough-percent"><span class="int">52</span><span class="dec">.70%</span></div></div>
+                            </div>
+                            <!--End Animate Position-->
+                            <div class="animate-position mobile">
+                                <div><canvas id="voter-turnout-mobile"></canvas><div class="dough-percent"><span class="int">52</span><span class="dec">.70%</span></div></div>
+                            </div>
+                            <!--End Animate Position-->
+                        </div>
+                        <!--End header-box-content-bottom-->
+                        <div class="header-box-content-reg"><h1 style="width:100%;font-size:95%"><span class="vt-text">Ballots Counted</span><span class="vt-number">1,638,442</span><br /><span class="vt-text">Active Registered Voters</span><span class="vt-number">3,109,086</span></h1></div>
+                        <div class="next-count">Results last updated: 11/5/2026 | 10:45 AM PT</div>
+                    </div>
+                    <!--End Header Box 2-->
+                    
+                    <div id="chartjs-tooltip"></div>
+                    <!--End Header Box 3-->
+                </div>
+                <!--End Section Group-->
+                
+            </div>
+            <!--End Header Box Wrapper-->
+            <!--Main Content-->
+            
+    <link rel="stylesheet" href='https://orresultswebservices.azureedge.us//Styles/jquery-ui.css' />
+    <script src='https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-ui.js'></script>
+    <input type="hidden" name="ctl00$MainContent$hidCountyID" id="hidCountyID" />
+    <div class="wrapper-outside">
+        
+        <div class="wrapper-inside" style="padding-bottom: 20px;">
+            <div class="display-results-box-wrapper">
+                <h1 style="text-align: center; padding-bottom: 8px;">Statewide and County Exports</h1>
+            </div>
+            <div class="export-message">Fields are required unless otherwise noted.</div>
+            <div id="MainContent_pnlFormats" class="export-format">
+	
+                
+                <span id="MainContent_rblTypes" class="export-type-select"><input id="MainContent_rblTypes_0" type="radio" name="ctl00$MainContent$rblTypes" value="1" /><label for="MainContent_rblTypes_0">CSV</label><br /><input id="MainContent_rblTypes_1" type="radio" name="ctl00$MainContent$rblTypes" value="2" /><label for="MainContent_rblTypes_1">Excel</label><br /><input id="MainContent_rblTypes_2" type="radio" name="ctl00$MainContent$rblTypes" value="3" /><label for="MainContent_rblTypes_2">RSS</label><br /><input id="MainContent_rblTypes_3" type="radio" name="ctl00$MainContent$rblTypes" value="4" /><label for="MainContent_rblTypes_3">XML</label></span>
+            
+</div>
+            <div id="MainContent_pnlCategories" class="export-selection">
+	
+                
+                <div class="export-links-centered">
+                    <div class="statewide-exoport-listitem">
+                        <a onclick="DownloadFile();" id="MainContent_Statewide" href="javascript:__doPostBack(&#39;ctl00$MainContent$Statewide&#39;,&#39;&#39;)">Statewide Export</a>
+                    </div>
+                    <div class="statewide-exoport-listitem">
+                        <a onclick="DownloadFile();" id="MainContent_Legislative" href="javascript:__doPostBack(&#39;ctl00$MainContent$Legislative&#39;,&#39;&#39;)">Legislative Export</a>
+                    </div>
+                    <div class="statewide-exoport-listitem">
+                        <a onclick="DownloadFile();" id="MainContent_Governor" href="javascript:__doPostBack(&#39;ctl00$MainContent$Governor&#39;,&#39;&#39;)">Governor Export</a>
+                    </div>
+                    <div class="statewide-exoport-listitem">
+                        <a onclick="DownloadFile();" id="MainContent_Judicial" href="javascript:__doPostBack(&#39;ctl00$MainContent$Judicial&#39;,&#39;&#39;)">Statewide Nonpartisan Export</a>
+                    </div>
+                </div>
+                <div class="county-export-list">
+                    <div class="county-list">
+                        
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_0" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl00$LinkButton1&#39;,&#39;&#39;)">Baker</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_1" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl01$LinkButton1&#39;,&#39;&#39;)">Benton</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_2" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl02$LinkButton1&#39;,&#39;&#39;)">Clackamas</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_3" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl03$LinkButton1&#39;,&#39;&#39;)">Clatsop</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_4" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl04$LinkButton1&#39;,&#39;&#39;)">Columbia</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_5" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl05$LinkButton1&#39;,&#39;&#39;)">Coos</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_6" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl06$LinkButton1&#39;,&#39;&#39;)">Crook</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_7" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl07$LinkButton1&#39;,&#39;&#39;)">Curry</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_8" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl08$LinkButton1&#39;,&#39;&#39;)">Deschutes</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_9" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl09$LinkButton1&#39;,&#39;&#39;)">Douglas</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_10" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl10$LinkButton1&#39;,&#39;&#39;)">Gilliam</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_11" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl11$LinkButton1&#39;,&#39;&#39;)">Grant</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_12" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl12$LinkButton1&#39;,&#39;&#39;)">Harney</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_13" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl13$LinkButton1&#39;,&#39;&#39;)">Hood River</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_14" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl14$LinkButton1&#39;,&#39;&#39;)">Jackson</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_15" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl15$LinkButton1&#39;,&#39;&#39;)">Jefferson</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_16" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl16$LinkButton1&#39;,&#39;&#39;)">Josephine</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_17" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl17$LinkButton1&#39;,&#39;&#39;)">Klamath</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_18" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl18$LinkButton1&#39;,&#39;&#39;)">Lake</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_19" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl19$LinkButton1&#39;,&#39;&#39;)">Lane</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_20" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl20$LinkButton1&#39;,&#39;&#39;)">Lincoln</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_21" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl21$LinkButton1&#39;,&#39;&#39;)">Linn</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_22" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl22$LinkButton1&#39;,&#39;&#39;)">Malheur</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_23" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl23$LinkButton1&#39;,&#39;&#39;)">Marion</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_24" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl24$LinkButton1&#39;,&#39;&#39;)">Morrow</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_25" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl25$LinkButton1&#39;,&#39;&#39;)">Multnomah</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_26" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl26$LinkButton1&#39;,&#39;&#39;)">Polk</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_27" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl27$LinkButton1&#39;,&#39;&#39;)">Sherman</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_28" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl28$LinkButton1&#39;,&#39;&#39;)">Tillamook</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_29" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl29$LinkButton1&#39;,&#39;&#39;)">Umatilla</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_30" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl30$LinkButton1&#39;,&#39;&#39;)">Union</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_31" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl31$LinkButton1&#39;,&#39;&#39;)">Wallowa</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_32" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl32$LinkButton1&#39;,&#39;&#39;)">Wasco</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_33" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl33$LinkButton1&#39;,&#39;&#39;)">Washington</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_34" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl34$LinkButton1&#39;,&#39;&#39;)">Wheeler</a>
+                                </div>
+                            
+                                <div class="county-export-listitem">
+                                    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_35" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl35$LinkButton1&#39;,&#39;&#39;)">Yamhill</a>
+                                </div>
+                            
+                    </div>
+                </div>
+            
+</div>
+        </div>
+        <div class="wrapper-inside">
+            <div class="wrapper-border">
+            </div>
+        </div>
+    </div>
+
+            
+            <input type="button" class="button" value="Election Resources" onclick="Show_Div(Div_1)" />
+            <div id="Div_1" style="display: none;" class="slidingDiv">
+                <ul style="margin: 15px 0 15px 16%; padding: 0;">
+                    <li>
+                        <a id="lnkCountyList" href="ResultsList.aspx">Results By County</a>
+                    </li>
+                    <li>
+                        <a id="lnkERVoterTurnout" href="VoterTurnoutDetails.aspx">Voter Turnout</a>
+                    </li>
+                    
+                    <li>
+                        <a id="lnkResultsExport" href="ResultsExport.aspx">Statewide and County Exports</a>
+                    </li>
+                    <li>
+                        <a id="lnkFAQResources" href="ElectionTerminology.aspx">Election Terminology</a>
+                    </li>
+                </ul>
+                <div class="disclaimer">
+                    Write-in results are not reported on this site. Unofficial write-in results for statewide or state district offices may be obtained from <a href="mailto:Elections.SOS@sos.oregon.gov" style="font-weight: bold;">Elections.SOS@sos.oregon.gov</a> after election day as counties finalize write-in totals. Unofficial write-in results for county and precinct offices may be obtained from the county election office.
+                </div>
+                <div class="disclaimer">
+                    Election Night Results Reporting is a free service provided by the Office of Oregon Secretary of State, in cooperation with the Oregon Association of County Clerks.
+                </div>
+                <div class="contact-info desktop">
+                    <span class="left" style="font-weight: bold;">Elections Division</span><span class="right">Public Service Building Suite 126, 255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518</span><span>FAX 503-373-7414</span><span>TTY 800-735-2900</span><span class="right" style="font-weight: bold"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+                <div class="contact-info mobile">
+                    <span class="left">Elections Division</span>
+                    <br />
+                    <span class="right">Public Service Building Suite 501,</span>
+                    <br />
+                    <span>255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518 | FAX 503-373-7414</span>
+                    <br />
+                    <span>TTY 800-735-2900</span>
+                    <br />
+                    <span class="right"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+            </div>
+            <div class="bottom-colorbar"></div>
+        </div>
+        <!--End Bottom Bluebar-->
+        <div class="outside-wrapper footer"></div>
+        <!--End Outside Wrapper-->
+        <nav class="navMenu">
+            <a href="" id="menuToggle" title="show menu"><span class="navClosed"><em>Menu</em></span></a><h1>Election Results</h1><a href="/Default.aspx">Home</a><a href="/resultsSW.aspx?type=FED&map=CTY" title="FEDERAL">Federal</a><a href="/resultsSW.aspx?type=SWPAR&map=CTY" title="STATE">State</a><a href="/resultsSW.aspx?type=SENATE&map=CTY" title="STATE SENATOR">State Senator</a><a href="/resultsSW.aspx?type=HOUSE&map=CTY" title="STATE REPRESENTATIVE">State Representative</a><a href="/resultsSW.aspx?type=SWNON&map=CTY" title="NONPARTISAN">Nonpartisan</a><a href="/resultsSW.aspx?type=LMEA&map=CTY" title="LOCAL MEASURE">Local Measure</a><a href="/resultsSW.aspx?type=MCR&map=CTY" title="SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURES">Shared County, City And District Races And Measures</a><a href="/ResultsList.aspx">County Results</a><a href="/ElectionTerminology.aspx">FAQ</a>
+        </nav>
+        
+    </form>
+    <div id="dhtmltooltip"></div>
+    <link href='https://orresultswebservices.azureedge.us//Styles/Roboto.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Images/favicon.ico' rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <script src='https://orresultswebservices.azureedge.us//Scripts/Chart.min.js'></script>
+    
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $('#menuToggle').click(function (e) {
+                    var $parent = $(this).parent('nav');
+                    $parent.toggleClass('open');
+                    var navState = $parent.hasClass('open') ? 'hide' : 'show';
+                    $(this).attr('title', navState + ' navigation');
+                    setTimeout(function () {
+                        //console.log('timeout set');
+                        $('#menuToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }, 200);
+                    var $twitter = $('#twitterToggle').parent('nav');
+                    if ($twitter.hasClass('open')) {
+                        $twitter.toggleClass('open');
+                        $('#twitterToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }
+                    e.preventDefault();
+                });
+                $('#twitterToggle').click(function (e) {
+                    var $parent = $(this).parent('nav');
+                    $parent.toggleClass('open');
+                    var navState = $parent.hasClass('open') ? 'hide' : 'show';
+                    $(this).attr('title', navState + ' navigation');
+                    $('#twitterToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    setTimeout(function () {
+                        //console.log('timeout set');
+                    }, 200);
+                    var $menu = $('#menuToggle').parent('nav');
+                    if ($menu.hasClass('open')) {
+                        $menu.toggleClass('open');
+                        $('#menuToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }
+                    e.preventDefault();
+                });
+            });
+        }(jQuery));
+        //@ sourceURL=pen.js
+    </script>
+    <script src='https://orresultswebservices.azureedge.us//Scripts/HeaderChart.js'></script>
+    
+    
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+        function numberMobile(e) {
+            e.target.value = e.target.value.replace(/[^\d]/g, '');
+            return false;
+        }
+        $(document).ready(function () {
+            $("input").attr("autocomplete", "off");
+        });
+    </script>
+    <!--Quick search auto complete code-->
+    
+
+
+</body>
+<script type="text/javascript">
+
+    var offsetxpoint = -60 //Customize x offset of tooltip
+    var offsetypoint = 20 //Customize y offset of tooltip
+    var ie = document.all
+    var ns6 = document.getElementById && !document.all
+    var enabletip = false
+    if (ie || ns6)
+        var tipobj = document.all ? document.all["dhtmltooltip"] : document.getElementById ? document.getElementById("dhtmltooltip") : ""
+
+    function ietruebody() {
+        return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+    }
+
+    function ddrivetip(thetext, thecolor, thewidth) {
+        if (ns6 || ie) {
+            if (typeof thewidth != "undefined") tipobj.style.width = thewidth + "px"
+            if (typeof thecolor != "undefined" && thecolor != "") tipobj.style.backgroundColor = thecolor
+            tipobj.innerHTML = thetext
+            enabletip = true
+            return false
+        }
+    }
+
+    function positiontip(e) {
+        if (enabletip) {
+            var curX = (ns6) ? e.pageX : event.clientX + ietruebody().scrollLeft;
+            var curY = (ns6) ? e.pageY : event.clientY + ietruebody().scrollTop;
+            //Find out how close the mouse is to the corner of the window
+            var rightedge = ie && !window.opera ? ietruebody().clientWidth - event.clientX - offsetxpoint : window.innerWidth - e.clientX - offsetxpoint - 20
+            var bottomedge = ie && !window.opera ? ietruebody().clientHeight - event.clientY - offsetypoint : window.innerHeight - e.clientY - offsetypoint - 20
+
+            var leftedge = (offsetxpoint < 0) ? offsetxpoint * (-1) : -1000
+
+            //if the horizontal distance isn't enough to accomodate the width of the context menu
+            if (rightedge < tipobj.offsetWidth)
+            //move the horizontal position of the menu to the left by it's width
+                tipobj.style.left = ie ? ietruebody().scrollLeft + event.clientX - tipobj.offsetWidth + "px" : window.pageXOffset + e.clientX - tipobj.offsetWidth + "px"
+            else if (curX < leftedge)
+                tipobj.style.left = "5px"
+            else
+            //position the horizontal position of the menu where the mouse is positioned
+                tipobj.style.left = curX + offsetxpoint + "px"
+
+            //same concept with the vertical position
+            if (bottomedge < tipobj.offsetHeight)
+                tipobj.style.top = ie ? ietruebody().scrollTop + event.clientY - tipobj.offsetHeight - offsetypoint + "px" : window.pageYOffset + e.clientY - tipobj.offsetHeight - offsetypoint + "px"
+            else
+                tipobj.style.top = curY + offsetypoint + "px"
+            tipobj.style.visibility = "visible"
+        }
+    }
+
+    function hideddrivetip() {
+        if (ns6 || ie) {
+            enabletip = false
+            tipobj.style.visibility = "hidden"
+            tipobj.style.left = "-1000px"
+            tipobj.style.backgroundColor = ''
+            tipobj.style.width = ''
+        }
+    }
+
+    document.onmousemove = positiontip
+ 
+</script>
+</html>
