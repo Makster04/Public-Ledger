@@ -91,12 +91,15 @@ export const SOURCES={
   'S-NM':{state:'NM',contest:BOX_SENATE,boxes:{list:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY'},slow:true,urls:[],page:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY',source:'New Mexico Secretary of State, results by county'},
   // Oregon's county pages hold only county races; its export page sends the statewide races by county as CSV when its
   // form is sent back with "CSV" chosen and the Statewide button pressed.
-  'S-OR':{state:'OR',contest:/^(us|u\.s\.|united states) senat/i,postback:{page:'https://results.oregonvotes.gov/ResultsExport.aspx',target:'ctl00$MainContent$Statewide',choices:{'ctl00$MainContent$rblTypes':'1'},areas:'https://results.oregonvotes.gov/ResultsList.aspx'},boxes:{list:'https://results.oregonvotes.gov/ResultsList.aspx'},slow:true,urls:[],page:'https://results.oregonvotes.gov/ResultsExport.aspx',source:'Oregon Secretary of State, statewide export'},
+  // Oregon: its statewide export has statewide totals only, and its county pages only the county's own races; each
+  // county's export (a button per county on the export page, CSV chosen) has the Senate race in that county.
+  'S-OR':{state:'OR',contest:/^(us|u\.s\.|united states) senat/i,postback:{page:'https://results.oregonvotes.gov/ResultsExport.aspx',counties:/rptCountyExport/,choices:{'ctl00$MainContent$rblTypes':'1'}},slow:true,urls:[],page:'https://results.oregonvotes.gov/ResultsExport.aspx',source:'Oregon Secretary of State, county exports'},
   'S-SD':{state:'SD',contest:BOX_SENATE,boxes:{list:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL'},slow:true,urls:[],page:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL',source:'South Dakota Secretary of State, results by county'},
   'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',help:SAVED_PAGE('S-MN','https://electionresults.sos.mn.gov/','open U.S. Senate and its results by county'),source:'Minnesota Secretary of State, election results'},
   'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/county-breakdown/United%20States%20Senate','https://elections.tn.gov/county-breakdown/U.S.%20Senate','https://elections.tn.gov/county-breakdown/US%20Senate','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
   // Texas, Ohio and Louisiana: sites built by their own scripts, read through the data files those scripts ask for.
-  'S-TX':{state:'TX',contest:SENATE_CONTEST,read:'texas',data:'https://results.texas-election.com/static/data',urls:[],page:'https://results.texas-election.com/',source:'Texas Secretary of State, election night results'},
+  'S-TX':{state:'TX',contest:SENATE_CONTEST,read:'texas',data:'https://results.texas-election.com/static/data',urls:[],page:'https://results.texas-election.com/',
+    help:'Texas posts only statewide totals for November 3, 2026 (https://electionresults.sos.state.tx.us/results.html), and its county results site (results.texas-election.com) stops at 2024. Its county results come with the state canvass; until then the Texas card has no map.',source:'Texas Secretary of State, election night results'},
   'S-OH':{state:'OH',contest:SENATE_CONTEST,read:'ohio',api:'https://liveresults.ohiosos.gov/Api/v1/Contest',slow:true,urls:[],page:'https://liveresults.ohiosos.gov/',source:'Ohio Secretary of State, election night results'},
   'S-LA':{state:'LA',contest:SENATE_CONTEST,read:'louisiana',data:'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data',folder:'20261103',urls:[],page:'https://voterportal.sos.la.gov/graphical',source:'Louisiana Secretary of State, election results'},
 };
@@ -162,11 +165,9 @@ export function readTable(text,contest){
   for(const l of lines.slice(1)){const f=splitRow(l,sep);if(!contest.test((f[c.contest]||'').trim())||/state senat/i.test(f[c.contest]))continue;
     const choice=c.choice>=0?f[c.choice]:`${c.first>=0?f[c.first]:''} ${f[c.last]}`;
     rows.push({county:(f[c.county]||'').trim(),choice:String(choice||'').trim(),party:c.party>=0?(f[c.party]||'').trim():'',votes:Number(String(f[c.votes]).replace(/,/g,''))||0,
-      // Oregon's export: a row per area (statewide, and each county by its number), each with its kind of area.
+      // Oregon's exports: a row per area, each with its kind of area.
       ...(areaType>=0?{area:(f[areaType]||'').trim()}:{})});}
   if(!rows.length)throw new Error('no rows for the Senate race (contests in the file: '+[...new Set(lines.slice(1,400).map(l=>splitRow(l,sep)[c.contest]))].slice(0,8).join('; ')+')');
-  // Not one of the rows' own fields: kept out of sight, for a CHECK line about the file's layout.
-  Object.defineProperty(rows,'layout',{value:`its header: ${splitRow(lines[0],sep).join(' | ')}; a row of the race: ${splitRow(lines.slice(1).find(l=>contest.test((splitRow(l,sep)[c.contest]||'').trim()))||'',sep).join(' | ')}`});
   return rows;
 }
 
@@ -363,7 +364,7 @@ async function readTexas(src,get,map){
   const k=await getJson(get,`${src.data}/ElectionConstants_${v}.json`),els=[];
   // The elections: objects with an ID and a name, or (as electionInfo lists them) named objects keyed by their IDs.
   const walk=(o,d)=>{if(!o||typeof o!=='object'||d>6)return;if(!Array.isArray(o)&&o.ID!=null&&(o.N||o.Name))els.push(o);
-    if(!Array.isArray(o))for(const [id,x] of Object.entries(o))if(x&&typeof x==='object'&&!Array.isArray(x)&&x.ID==null&&typeof (x.N??x.Name)==='string'&&(x.Y!=null||x.ET!=null))els.push({ID:id,...x});
+    if(!Array.isArray(o))for(const [id,x] of Object.entries(o))if(x&&typeof x==='object'&&!Array.isArray(x)&&x.ID==null&&typeof (x.N??x.Name)==='string'&&(x.Y!=null||x.ET!=null))els.push({...x,ID:id});
     for(const x of Array.isArray(o)?o:Object.values(o))walk(x,d+1);};walk(k,0);
   const title=e=>String(e.N||e.Name||'');
   // The November 3, 2026 general ("General and Special" counts too), never an earlier one the site still calls current.
@@ -411,43 +412,42 @@ async function readLouisiana(src,get,map){
 }
 const READERS={ohio:readOhio,texas:readTexas,louisiana:readLouisiana};
 
-// Oregon's export gives each county by number. Its list of county pages (ResultsList.aspx) gives each county's number
-// (cty=20 is Baker): {number → {name, u}}.
-export function countyCodes(html,base){
-  const out=new Map();
+// Oregon's export page: a button per county ("Baker" … "Yamhill"), each a form post-back for that county's own export.
+// {target, name} for each button whose target matches.
+export function exportButtons(html,re){
+  const out=[];
   for(const m of String(html).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)){
-    const raw=/\bhref\s*=\s*["']([^"']+)["']/i.exec(m[1])?.[1];if(!raw)continue;let u;try{u=new URL(decode(raw),base);}catch{continue;}
-    const c=u.searchParams.get('cty'),name=strip(m[2]).replace(/\s+County$/i,'');if(c&&name&&!out.has(c))out.set(c,{name,u:u.href});
+    const t=/__doPostBack\(\s*'([^']+)'/.exec(decode(m[1]))?.[1],name=strip(m[2]);
+    if(t&&re.test(t)&&name&&!out.some(x=>x.target===t))out.push({target:t,name});
   }
   return out;
 }
-// The export's county rows, by the numbers given (codes: number → name): of its kinds of area, the one whose numbers are
-// most of the counties.
-export function byAreaNumber(rows,codes){
-  const n=c=>String(Number(c)),known=new Map([...codes].map(([k,v])=>[n(k),typeof v==='string'?v:v.name])),groups=new Map();
-  for(const r of rows){const g=r.area??'';(groups.get(g)||groups.set(g,[]).get(g)).push(r);}
-  let best=null,most=0;for(const g of groups.values()){const c=new Set(g.filter(r=>known.has(n(r.county))).map(r=>n(r.county))).size;if(c>most){best=g;most=c;}}
-  if(!best)throw new Error(`none of the export's area numbers are counties (its kinds of area: ${[...groups.keys()].map(k=>k||'blank').join(', ')}; its area numbers: ${[...new Set(rows.map(r=>r.county||'blank'))].slice(0,8).join(', ')}${rows.layout?`; ${rows.layout}`:''})`);
-  const out=best.filter(r=>known.has(n(r.county))).map(({area,...r})=>({...r,county:known.get(n(r.county))}));
-  if(rows.reporting)out.reporting=rows.reporting;
-  return out;
+// One county's export holds the race once for the county, or a row per area (its total and its precincts, or only its
+// precincts): the county's total, an area named for the county or as a total, or one whose votes are the rest's added up
+// (to within 1%); or else every area added up.
+export function oneArea(rows){
+  const g=new Map();for(const r of rows){const k=`${r.area??''}|${r.county??''}`;(g.get(k)||g.set(k,[]).get(k)).push(r);}
+  if(g.size<=1)return {rows,kind:''};
+  const sum=rs=>rs.reduce((a,r)=>a+r.votes,0),all=sum(rows),groups=[...g.values()].sort((x,y)=>sum(y)-sum(x)),top=groups[0];
+  const named=groups.find(x=>/count|total/i.test(x[0].area||''));
+  if(named)return {rows:named,kind:`the county's total ("${named[0].area}") among ${g.size} areas`};
+  if(Math.abs(2*sum(top)-all)<=all*0.01)return {rows:top,kind:`the county's total among ${g.size} areas`};
+  return {rows,kind:`${g.size} areas added up`};
 }
-// Oregon's export rows by county: numbered as its county pages are, or alphabetically (Baker 1 … Yamhill 36), whichever
-// gives the first listed county the votes its own page shows for the race. When that page can't be read, the pages'
-// numbers are used, and said so.
-async function areaCounties(rows,list,src,get,map){
-  const codes=countyCodes(asText(await get(list)),list);if(!codes.size)throw new Error(`no county pages listed on ${list}`);
-  const alpha=new Map([...map.counties].sort((a,b)=>a.fips.localeCompare(b.fips)).map((c,i)=>[String(i+1),c.name]));
-  const as=m=>{try{return byAreaNumber(rows,m);}catch{return null;}},byCode=as(codes),byAlpha=as(alpha);
-  if(!byCode&&!byAlpha)return byAreaNumber(rows,codes);
-  const [,first]=[...codes][0],sum=rs=>rs?rs.filter(r=>countyKey(r.county)===countyKey(first.name)).reduce((a,r)=>a+r.votes,0):null;
-  let want=null;try{const box=readResultBoxes(asText(await get(first.u)),src.contest);if(box?.rows.length)want=box.rows.reduce((a,r)=>a+r.votes,0);}catch{}
-  if(want!=null&&sum(byCode)===want)return byCode;
-  if(want!=null&&sum(byAlpha)===want){byAlpha.note='the export numbers its counties alphabetically';return byAlpha;}
-  const out=byCode||byAlpha;
-  out.note=want==null?`the export's county numbers are taken as its county pages number them (${first.name} County's page couldn't be read to check)`
-    :`${first.name} County's page has ${want.toLocaleString('en-US')} votes in the race, the export ${(sum(out)||0).toLocaleString('en-US')} under its number (one of them may be newer)`;
-  return out;
+// Oregon: each county's export (CSV), read for the Senate race, four counties at a time; the county is its button's.
+async function readCountyExports(src,get,post,names){
+  const pb=src.postback,buttons=exportButtons(asText(await get(pb.page)),pb.counties);
+  if(!buttons.length)throw new Error(`no county export buttons on ${pb.page}`);
+  const rows=[],errs=[],kinds=new Set();
+  for(let i=0;i<buttons.length;i+=4)await Promise.all(buttons.slice(i,i+4).map(async x=>{
+    try{const got=await readAny(await post(pb.page,x.target,pb.choices||{}),src,names);
+      if(!got.rows?.length){errs.push(`${x.name}: ${got.page?'a web page came back, not the export':'no Senate race in it'}`);return;}
+      const one=oneArea(got.rows);if(one.kind)kinds.add(one.kind);for(const r of one.rows)rows.push({county:x.name,choice:r.choice,party:r.party,votes:r.votes});}
+    catch(e){errs.push(`${x.name}: ${e.message}`);}
+  }));
+  if(!rows.length)throw new Error(`none of the ${buttons.length} county exports had the Senate race (${errs.slice(0,2).join('; ')})`);
+  rows.note=[errs.length?`${errs.length} of ${buttons.length} county exports couldn't be read (${errs[0]})`:'',kinds.size?`read as ${[...kinds].join(', ')}`:''].filter(Boolean).join('; ');
+  return rows;
 }
 
 // An ASP.NET page's export behind a button: its form's action and fields (the hidden ones, the checked choices, and the
@@ -733,10 +733,12 @@ export async function countyRace(research,id,{get,post=null,file=null,maps}){
   if(src.clarity&&!file){try{election=await clarityFind(src.clarity,get);queue.unshift(election.detail);}catch(e){tried.push(`${src.clarity.base}/${src.clarity.st}/ (list of elections): ${e.message}`);}}
   // What was read counts only with votes in the state's counties for at least one of the race's candidates.
   const take=(r,u)=>{const c=byCounty(r,cands,map);if(c.mapped&&c.missing.length<cands.length){rows=r;from=u;b=c;return true;}return false;};
-  // A state whose export is behind a form button.
-  if(src.postback&&!file){const pb=src.postback;
+  // A state whose export is behind a form button: one export, or one per county.
+  if(src.postback?.counties&&!file){const pb=src.postback;
+    try{const r=await readCountyExports(src,get,post,names);if(!take(r,pb.page))tried.push(`${pb.page} (its county exports): the Senate race's candidates were not found in them`);}
+    catch(e){tried.push(`${pb.page} (its county exports): ${e.message}`);}}
+  if(src.postback?.target&&!file&&!rows){const pb=src.postback;
     try{const got=await readAny(await post(pb.page,pb.target,pb.choices||{}),src,names);
-      if(got.rows&&pb.areas)got.rows=await areaCounties(got.rows,pb.areas,src,get,map);
       if(!got.rows)tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): a web page came back, not the export`);
       else if(!take(got.rows,pb.page))tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): the Senate race's candidates were not found in it`);}
     catch(e){tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): ${e.message}`);}}

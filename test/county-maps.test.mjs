@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,countyCodes,byAreaNumber,boxHeads} from '../scripts/county-results.mjs';
+import {readNcsbe,readEnhanced,readTable,readAny,pageLinks,readHtmlTables,reportingIn,enhancedExport,probeOne,PROBE,readClarityXml,clarityElection,clarityOf,mapKey,botCheck,sampleOf,SAMPLES,readResultBoxes,countyNameIn,readClarityCountyXml,scriptAddresses,sampleOne,postBackForm,byCounty,countyKey,lastName,countyRace,raceCandidates,SOURCES,readJson,shapeOf,jsonRace,raceIds,namesById,nestedCounties,countyIds,wideRows,exportButtons,oneArea,boxHeads} from '../scripts/county-results.mjs';
 const json=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const D=json('../public/research.json'),C=json('../public/county-results.json');
 const map=st=>json(`../public/maps/${st}.json`);
@@ -335,45 +335,36 @@ test('the probe keeps what a reader needs: the addresses in a page\'s scripts, a
   assert.equal((await sampleOne('https://example.gov/',{get})).text.includes('<script'),false,'a plain sample has no scripts');
 });
 
-test("Oregon's statewide export: its ASP.NET form sent back with CSV chosen and the Statewide button pressed",async()=>{
+test("Oregon: its ASP.NET export form sent back with CSV chosen, once for each county's export button",async()=>{
   const html=`<form method="post" action="./ResultsExport.aspx" id="ctl01"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="abc" /><input type="hidden" name="__EVENTVALIDATION" value="xyz" />
     <input id="MainContent_rblTypes_0" type="radio" name="ctl00$MainContent$rblTypes" value="1" /><input id="MainContent_rblTypes_1" type="radio" name="ctl00$MainContent$rblTypes" value="2" checked="checked" />
     <input type="hidden" name="ctl00$hidElectionDate" value="11/3/2026" /><input type="button" class="button" value="Election Resources" /></form>`;
   const f=postBackForm(html,'https://results.oregonvotes.gov/ResultsExport.aspx','ctl00$MainContent$Statewide',{'ctl00$MainContent$rblTypes':'1'});
   assert.equal(f.action,'https://results.oregonvotes.gov/ResultsExport.aspx');
   assert.deepEqual(f.fields,{__VIEWSTATE:'abc',__EVENTVALIDATION:'xyz','ctl00$MainContent$rblTypes':'1','ctl00$hidElectionDate':'11/3/2026',__EVENTTARGET:'ctl00$MainContent$Statewide',__EVENTARGUMENT:''},'CSV, not the checked Excel; buttons left out');
-  // The export's real columns: a row per area (statewide, and each county by number), its kind of area beside it.
+  // The export page: a button per county. Each county's export (its real columns) has the race for that county.
+  const page=`<form method="post" action="./ResultsExport.aspx"><input type="hidden" name="__VIEWSTATE" value="abc" />
+    <a onclick="DownloadFile();" id="MainContent_Statewide" href="javascript:__doPostBack(&#39;ctl00$MainContent$Statewide&#39;,&#39;&#39;)">Statewide Export</a>
+    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_0" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl00$LinkButton1&#39;,&#39;&#39;)">Baker</a>
+    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_1" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl01$LinkButton1&#39;,&#39;&#39;)">Benton</a>
+    <a onclick="DownloadFile();" id="MainContent_rptCountyExport_LinkButton1_2" href="javascript:__doPostBack(&#39;ctl00$MainContent$rptCountyExport$ctl02$LinkButton1&#39;,&#39;&#39;)">Clackamas</a></form>`;
+  assert.deepEqual(exportButtons(page,/rptCountyExport/),[{target:'ctl00$MainContent$rptCountyExport$ctl00$LinkButton1',name:'Baker'},{target:'ctl00$MainContent$rptCountyExport$ctl01$LinkButton1',name:'Benton'},{target:'ctl00$MainContent$rptCountyExport$ctl02$LinkButton1',name:'Clackamas'}]);
   const [a,b]=raceCandidates(D,'S-OR').map(c=>c.name),sent=[],head='ContestID,ContestName,NominatingParty,PartyCode,AreaType,AreaNum,OfficeSeqNo,BallotOrder,CandidateID,CandidateName,CurrentDateTime,VoteFor,CandidateVotes,CandidatePercentage,PrecinctsReporting';
-  const row=(contest,type,n,name,party,v)=>`1,${contest},,${party},${type},${n},1,1,9,${name},11/4/2026,1,"${v}",50,0`;
-  const csv=(baker,benton)=>[head,row('US Senator','State',0,a,'REP','5,100'),row('US Senator','State',0,b,'DEM','32,000'),row('US Senator','County',baker,a,'REP','5,000'),row('US Senator','County',baker,b,'DEM','2,000'),
-    row('US Senator','County',benton,a,'REP','100'),row('US Senator','County',benton,b,'DEM','30,000'),row('State Senator 30th District','County',baker,'X','REP','1')].join('\n')+'\n';
-  const list='<html><a href="ResultsSW.aspx?type=CTYALL&amp;cty=20&amp;map=CTY">Baker</a> <a href="ResultsSW.aspx?type=CTYALL&amp;cty=13&amp;map=CTY">Benton</a></html>';
-  const bakerPage=countyPage('Baker',box('US Senator',[[a,'Republican','5,000'],[b,'Democrat','2,000']],{h1:false}));
-  const oregon=(numbers,page=bakerPage)=>countyRace(D,'S-OR',{maps:async st=>map(st),get:async u=>{if(u.endsWith('ResultsList.aspx'))return list;if(u.includes('cty=20'))return page;throw new Error('HTTP 404');},
-    post:async(page,target,choices)=>{sent.push([page,target,choices]);return csv(...numbers);}});
+  const row=(contest,type,n,name,party,v)=>`300038695,${contest},,${party},${type},${n},110010001,1,9,${name},11/5/2026,1,"${v}",0.5,0/1318`;
+  const exports={'ctl00$MainContent$rptCountyExport$ctl00$LinkButton1':[head,row('US Senator','','Baker',a,'REP','5,000'),row('US Senator','','Baker',b,'DEM','2,000'),row('Baker County Clerk','','Baker','X','','9')].join('\n'),
+    // Benton: its total and its precincts; the total is taken, not added to them.
+    'ctl00$MainContent$rptCountyExport$ctl01$LinkButton1':[head,row('US Senator','County','Benton',a,'REP','100'),row('US Senator','County','Benton',b,'DEM','30,000'),row('US Senator','Precinct','1',a,'REP','60'),row('US Senator','Precinct','1',b,'DEM','18,000'),row('US Senator','Precinct','2',a,'REP','40'),row('US Senator','Precinct','2',b,'DEM','12,000')].join('\n')};
+  const r=await countyRace(D,'S-OR',{maps:async st=>map(st),get:async u=>{if(u==='https://results.oregonvotes.gov/ResultsExport.aspx')return page;throw new Error('HTTP 404');},
+    post:async(p,target,choices)=>{sent.push([p,target,choices]);if(exports[target])return exports[target];throw new Error('HTTP 500 for the export');}});
   const fp=n=>map('OR').counties.find(c=>c.name===n).fips,key=raceCandidates(D,'S-OR').map(c=>c.key);
-  let r=await oregon([20,13]);
-  assert.deepEqual(sent[0],['https://results.oregonvotes.gov/ResultsExport.aspx','ctl00$MainContent$Statewide',{'ctl00$MainContent$rblTypes':'1'}]);
-  assert.deepEqual(r.race.counties[fp('Baker')],{[key[0]]:5000,[key[1]]:2000},'cty=20 is Baker; the statewide rows are left out');
-  assert.equal(Object.keys(r.race.counties).length,2);assert.equal(r.race.total,37100);assert.equal(r.race.source.u,'https://results.oregonvotes.gov/ResultsExport.aspx');
-  assert.ok(!r.lines.some(l=>/numbers|newer/.test(l)),'checked against Baker County\'s page, nothing to say');
-  r=await oregon([1,2]);assert.deepEqual(r.race.counties[fp('Baker')],{[key[0]]:5000,[key[1]]:2000},'numbered alphabetically instead: Baker 1, Benton 2');
-  assert.ok(r.lines.some(l=>/the export numbers its counties alphabetically/.test(l)));
-  // A statewide export without county rows: each county's own page instead.
-  const statewide=[head,row('US Senator','','',a,'REP','5,100'),row('US Senator','','',b,'DEM','32,000')].join('\n');
-  const pages=await countyRace(D,'S-OR',{maps:async st=>map(st),post:async()=>statewide,get:async u=>{if(u.endsWith('ResultsList.aspx'))return list;
-    if(u.includes('cty=20'))return bakerPage;if(u.includes('cty=13'))return countyPage('Benton',box('US Senator',[[a,'Republican','100'],[b,'Democrat','30,000']],{h1:false}));throw new Error('HTTP 404');}});
-  assert.equal(pages.race.total,37100);assert.deepEqual(pages.race.counties[fp('Benton')],{[key[0]]:100,[key[1]]:30000});
-  assert.ok(SOURCES['S-OR'].slow,'36 county pages when the export has no counties');
-  r=await oregon([20,13],'<html>busy</html>');assert.ok(r.race&&r.lines.some(l=>/county numbers are taken as its county pages number them \(Baker County's page couldn't be read/.test(l)));
-  assert.deepEqual([...countyCodes(list,'https://results.oregonvotes.gov/ResultsList.aspx')].map(([k,v])=>[k,v.name]),[['20','Baker'],['13','Benton']]);
-  assert.throws(()=>byAreaNumber([{county:'99',choice:'x',votes:1,area:'County'}],new Map([['20','Baker']])),/none of the export's area numbers are counties \(its kinds of area: County; its area numbers: 99\)/);
-  // What a county page has when the Senate race isn't on it, and the export's own layout, for the CHECK line.
-  assert.equal(boxHeads(box('Governor',[['X','R','1']])+box('State Senator 30th District',[['Y','R','1']])),'its races: Governor; State Senator 30th District');
-  assert.equal(boxHeads('<html><head><title>Results</title></head><body><h2>Please wait</h2></body></html>'),'no results boxes on it; title "Results", headings: Please wait, 0 KB');
-  const t=readTable('ContestName,AreaType,AreaNum,CandidateName,CandidateVotes\nUS Senator,,Federal,Jeff Merkley,10\n',SOURCES['S-OR'].contest);
-  assert.equal(t.layout,'its header: ContestName | AreaType | AreaNum | CandidateName | CandidateVotes; a row of the race: US Senator |  | Federal | Jeff Merkley | 10');
-  assert.throws(()=>byAreaNumber(t,new Map([['20','Baker']])),/its kinds of area: blank; its area numbers: Federal; its header: ContestName/);
+  assert.deepEqual(sent.map(x=>x[1]).sort(),Object.keys(exports).concat('ctl00$MainContent$rptCountyExport$ctl02$LinkButton1').sort(),'every county\'s button, not the statewide one');
+  assert.ok(sent.every(x=>x[0]==='https://results.oregonvotes.gov/ResultsExport.aspx'&&x[2]['ctl00$MainContent$rblTypes']==='1'),'CSV chosen');
+  assert.deepEqual(r.race.counties[fp('Baker')],{[key[0]]:5000,[key[1]]:2000});assert.deepEqual(r.race.counties[fp('Benton')],{[key[0]]:100,[key[1]]:30000});
+  assert.equal(r.race.total,37100);assert.equal(r.race.source.u,'https://results.oregonvotes.gov/ResultsExport.aspx');
+  assert.ok(r.lines.some(l=>/1 of 3 county exports couldn't be read \(Clackamas: HTTP 500 for the export\); read as the county's total \("County"\) among 3 areas/.test(l)));
+  assert.equal(oneArea([{area:'Precinct',county:'1',votes:10},{area:'Precinct',county:'2',votes:12}]).kind,'2 areas added up','only precincts: added up');
+  assert.equal(oneArea([{area:'',county:'Lake',votes:22},{area:'P',county:'1',votes:10},{area:'P',county:'2',votes:12}]).rows[0].votes,22,'unnamed: the area that is the others added up');
+  assert.ok(SOURCES['S-OR'].slow,'36 county exports: read every fourth pass while watching');
   assert.ok(!SOURCES['S-OR'].contest.test('State Senator 30th District'));
 });
 
