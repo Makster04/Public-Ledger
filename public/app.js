@@ -1131,6 +1131,17 @@ function ovEthics(s){
   const reviewedHTML=reviewed?`<p class="small ov-holdings-note"><b>Reviewed holdings note:</b> ${esc(reviewed.note||reviewed.label)}${reviewed.since?` (since ${esc(reviewed.since)})`:''}${citation(reviewed.source)}${citation(reviewed.also)}</p>`:'';
   return at<0?card:card.slice(0,at)+`<div class="ov-networth" data-networth="${esc(s.id)}">${reviewedHTML}</div>`+card.slice(at);
 }
+// Each year's annual disclosure on file, newest first: its net-worth range and its individual stocks, so a change
+// shows. Only with more than one year; a year whose report couldn't be read says so.
+function netWorthOverTime(x){
+  const years=(x?.history||[]).filter(h=>h.year!=null);
+  if(years.length<2)return '';
+  const one=h=>{const link=h.url?` <a href="${esc(h.url)}" target="_blank" rel="noopener">↗</a>`:'';
+    if(h.unreadable)return `<li><b>${esc(h.year)}</b>: not readable (filed on paper)${link}</li>`;
+    const st=h.stocks?`; ${h.stocks.count} individual stock${h.stocks.count===1?'':'s'} or option${h.stocks.count===1?'':'s'}, ${esc(rangeText(h.stocks,fmt$))}`:'';
+    return `<li><b>${esc(h.year)}</b>: ${esc(rangeText(h,fmt$))}${st}${link}</li>`;};
+  return `<details class="small ov-networth-years" style="margin:6px 0 0"><summary>Net worth by year (${years.length} annual disclosures)</summary><ul style="margin:6px 0 0;padding-left:18px">${years.map(one).join('')}</ul></details>`;
+}
 async function fillNetWorth(root){
   for(const el of root.querySelectorAll('.ov-networth[data-networth]')){
     let x=null,coverage=null;try{x=await window.RecordLive.netWorth(el.dataset.networth);}catch{}
@@ -1146,7 +1157,7 @@ async function fillNetWorth(root){
     }
     const reviewed=el.innerHTML;
     const lead=holdingsLead(x),held=lead?(lead.status==='stocks'?` It lists ${lead.stocks} individual stock${lead.stocks===1?'':'s'} or option${lead.stocks===1?'':'s'}.`:lead.status==='blind-trust'?' It lists a qualified blind trust.':' It lists no individual stocks.'):'';
-    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper or could not be read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}.${held} <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>${reviewed}`;
+    el.innerHTML=`<p class="small" style="margin:10px 0 0"><b>Net worth:</b> ${x.unreadable?'the latest annual report was filed on paper or could not be read':`${esc(rangeText(x,fmt$))}, from their ${esc(x.year||'')} annual disclosure (every value on it is a range)`}.${held} <a href="#${esc(el.dataset.networth)}-ethics">Details</a> · <a href="${esc(x.url)}" target="_blank" rel="noopener">report ↗</a></p>${netWorthOverTime(x)}${reviewed}`;
   }
 }
 

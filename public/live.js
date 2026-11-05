@@ -54,7 +54,18 @@ function netWorthBody(x){
       ['Not on the form','their home and a mortgage on it, unless the home earns income'],['Not graded','shown only; no grade uses it'],
       ...(lead?[['How they hold investments',`${esc(lead.label.toLowerCase())}${lead.status==='blind-trust'&&lead.stocks?`, plus ${lead.stocks} individual stock${lead.stocks===1?'':'s'} or option${lead.stocks===1?'':'s'} outside it`:''}${lead.managed?`; ${lead.managed} managed account${lead.managed===1?'':'s'}, which count as theirs`:''}. Read from this report and not reviewed yet: a qualified blind trust changes the Integrity grade only after review`]]:[])])}
     ${x.assets?.length?`<details><summary>Assets as listed (${x.assets.length})</summary><div class="tablewrap"><table><thead><tr><th>Asset</th><th>Owner</th><th class="r">Value</th></tr></thead><tbody>${x.assets.map(a=>row(a.name,a.owner,a.value)).join('')}</tbody></table></div></details>`:''}
-    ${x.debts?.length?`<details><summary>Debts as listed (${x.debts.length})</summary><div class="tablewrap"><table><thead><tr><th>Creditor</th><th>Owner</th><th class="r">Amount</th></tr></thead><tbody>${x.debts.map(d=>row(d.creditor,d.owner,d.amount)).join('')}</tbody></table></div></details>`:''}`;
+    ${x.debts?.length?`<details><summary>Debts as listed (${x.debts.length})</summary><div class="tablewrap"><table><thead><tr><th>Creditor</th><th>Owner</th><th class="r">Amount</th></tr></thead><tbody>${x.debts.map(d=>row(d.creditor,d.owner,d.amount)).join('')}</tbody></table></div></details>`:''}
+    ${netWorthYears(x)}`;
+}
+// Every year's annual report on file (the history kept with the newest), newest first: its net-worth range, its
+// individual stocks and the report. Only with more than one year.
+export function netWorthYears(x){
+  const years=(x?.history||[]).filter(h=>h.year!=null);
+  if(years.length<2)return '';
+  const cell=h=>h.unreadable?'not readable (filed on paper)':rangeText(h,short);
+  const stocks=h=>h.unreadable?'—':h.stocks?`${rangeText(h.stocks,short)} in ${h.stocks.count}`:'none listed';
+  return `<details open><summary>Net worth by year (${years.length} annual reports)</summary><div class="tablewrap"><table><thead><tr><th>Report year</th><th class="r">Net worth</th><th class="r">Individual stocks</th><th>Report</th></tr></thead><tbody>${
+    years.map(h=>`<tr><td>${esc(h.year)}</td><td class="r">${esc(cell(h))}</td><td class="r">${esc(stocks(h))}</td><td>${h.url?link(h.url,'open'):''}</td></tr>`).join('')}</tbody></table></div><p class="live-footnote">Each year is that year's form, read the same way; the ranges are wide, so a change is clearest when both ends move.</p></details>`;
 }
 const profileCache=new Map();
 function profileData(id){const c=profileCache.get(id);if(c&&Date.now()-c.t<15000)return c.p;const p=get('/api/profile?id='+encodeURIComponent(id)).catch(e=>{profileCache.delete(id);throw e;});profileCache.set(id,{t:Date.now(),p});return p;}

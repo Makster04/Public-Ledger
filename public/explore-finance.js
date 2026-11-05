@@ -5,7 +5,7 @@ import {valueRange,rangeText} from './net-worth.js';
 
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
-const money=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):'Not available';
+const money=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',minimumFractionDigits:0,maximumFractionDigits:2}).format(value):'Not available';
 const fullMoney=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(value):'Not available';
 const safeUrl=value=>{try{const u=new URL(String(value));return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}};
 const date=value=>{const t=String(value||'');if(!t)return 'Not recorded';const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(t);return m?new Date(Date.UTC(+m[1],+m[2]-1,+m[3])).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):t;};
@@ -19,6 +19,8 @@ const personId=p=>String(p.id||'');
 const includedPeople=model=>(model.people||[]).filter(p=>['S','H'].includes(p.chamber)&&!p.office);
 const snapshotFor=(snapshots,p)=>snapshots?.people?.[p.id]||{};
 
+// The years on file before a member's latest annual report (its history, newest first), for comparing with it.
+const earlier=report=>(report?.history||[]).filter(h=>h.year!=null&&h.year!==report.year);
 export function stockHoldingRange(report){
   if(!report||report.unreadable||!Array.isArray(report.assets)||!report.assets.length)return null;
   const stocks=report.assets.filter(a=>assetKind(a)==='stock');
@@ -43,9 +45,11 @@ export function buildRankingRows(people,data={},snapshots={},metric='raised',fil
       else if(camp?.pac===0){value=0;period=camp?.end?'Through '+date(camp.end):'';note='No PAC receipts in this reporting period';source=camp?.src||camp?.source||'';}
       display=money(value);
     }else if(metric==='networth'){
-      const n=official.netWorth;if(n&&!n.unreadable&&finite(n.low)){value=n.low;display=formatRange(n);period=n.year?`${n.year} annual disclosure`:'';source=n.url||'';note='Assets minus debts; disclosed range';}
+      const n=official.netWorth;if(n&&!n.unreadable&&finite(n.low)){value=n.low;display=formatRange(n);period=n.year?`${n.year} annual disclosure`:'';source=n.url||'';note='Assets minus debts; disclosed range';
+        const prev=earlier(n).find(h=>!h.unreadable&&finite(h.low));if(prev)note+=`; ${prev.year}: ${formatRange(prev)}`;}
     }else if(metric==='holdings'){
-      const n=official.netWorth,r=stockHoldingRange(n);if(r){value=r.low;display=formatRange(r);period=n.year?`${n.year} annual disclosure`:'';source=n.url||'';note=r.count+' individual-stock or option positions';}
+      const n=official.netWorth,r=stockHoldingRange(n);if(r){value=r.low;display=formatRange(r);period=n.year?`${n.year} annual disclosure`:'';source=n.url||'';note=r.count+' individual-stock or option positions';
+        const prev=earlier(n).find(h=>!h.unreadable);if(prev)note+=prev.stocks?`; ${prev.year}: ${formatRange(prev.stocks)} in ${prev.stocks.count}`:`; ${prev.year}: none listed`;}
     }
     if(value===null)continue;
     rows.push({person,value,display,period,source,note});

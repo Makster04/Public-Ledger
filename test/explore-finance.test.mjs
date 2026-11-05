@@ -25,6 +25,12 @@ test('wealth and stock holdings keep disclosed ranges and sort lower bounds',()=
   assert.deepEqual(stockHoldingRange(snapshots.people.a.netWorth),{low:1001,high:15000,count:1});
   assert.deepEqual(stockHoldingRange(snapshots.people.b.netWorth),{low:0,high:0,count:0},'a read report with only funds has no individual stock positions');
   assert.equal(stockHoldingRange({assets:[]}),null);assert.equal(stockHoldingRange({assets:[{code:'ST',value:'Undetermined'}]}),null);
+  // With earlier years on file, each row says where the person stood the year before.
+  snapshots.people.a.netWorth.history=[{year:2025,low:100,high:1000000},{year:2024,low:50,high:500000,stocks:{low:15001,high:50000,count:2}},{year:2023,unreadable:true}];
+  const again=buildRankingRows(people,data,snapshots,'networth').find(r=>r.person.id==='a');
+  assert.match(again.note,/^Assets minus debts; disclosed range; 2024: \$50 – \$500K$/);
+  assert.match(buildRankingRows(people,data,snapshots,'holdings').find(r=>r.person.id==='a').note,/^1 individual-stock or option positions; 2024: \$15K – \$50K in 2$/);
+  assert.equal(buildRankingRows(people,data,snapshots,'networth').find(r=>r.person.id==='b').note,'Assets minus debts; disclosed range','one year only: nothing to compare');
 });
 
 test('stock views retain actual transaction ranges, dates and distinct official records',()=>{
