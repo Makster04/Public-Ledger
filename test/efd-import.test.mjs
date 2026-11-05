@@ -60,7 +60,7 @@ test('importing saves the trades and the newest annual report, and a second impo
   const d=db(),now=new Date('2026-11-03T12:00:00Z');
   const r=await importEfd({dir,db:d,now});
   assert.equal(r.lines.filter(l=>l.startsWith('OK')).length,3);
-  assert.ok(r.lines.some(l=>/unknown\.html: no single senator matches Pat Nobody/.test(l)));
+  assert.ok(r.lines.some(l=>/unknown\.html: no single senator or Senate candidate matches Pat Nobody/.test(l)));
   assert.ok(r.lines.some(l=>/report\.webarchive: a Safari web archive/.test(l)));assert.ok(r.lines.some(l=>/scan\.pdf: not a saved web page/.test(l)));
   assert.ok(r.lines.some(l=>/search\.html: no trade table or annual report found/.test(l)));
   const t=await snap(d,'trades-senate:ossoff');
@@ -91,4 +91,27 @@ test('when eFD refuses (HTTP 403), its checks wait a week and say how to import 
     await assert.rejects(FEEDS[kind].page({kind,subject:'ossoff',cursor:null},job.args,env,config),e=>e.message===EFD_REFUSED&&e.retryAfter===WEEK&&e.statusCode===403);
   }
   assert.match(EFD_REFUSED,/npm run efd:import/);
+});
+
+// A Senate candidate's report on eFD: a Candidate Report, whose heading has no "The Honorable".
+const candidate=(who='James Talarico (Talarico, James)')=>`<!-- saved from url=(0092)https://efdsearch.senate.gov/search/view/annual/9f8e7d6c-1111-2222-3333-444455556666/ -->
+<html><body><h1>Candidate Report for 2026</h1><h2 class="filedReport">${who}</h2><p>Filed 05/15/2026 @ 9:00 AM</p>
+<table><thead><tr><th>#</th><th>Asset</th><th>Asset Type</th><th>Owner</th><th>Value</th><th>Income Type</th><th>Income Amount</th></tr></thead>
+<tbody><tr><td>1</td><td>Apple Inc. (AAPL)</td><td>Stock</td><td>Self</td><td>$15,001 - $50,000</td><td>Dividends</td><td>$201 - $1,000</td></tr>
+<tr><td>2</td><td>Teacher Retirement System of Texas</td><td>Pension</td><td>Self</td><td>$50,001 - $100,000</td><td>None</td><td>None</td></tr></tbody></table></body></html>`;
+
+test("a Senate candidate's report is imported too: matched by name or folder, with a check of its own",async()=>{
+  const report=efdSavedReport(candidate());
+  assert.deepEqual([report.kind,report.year,report.filed,report.name],['annual',2026,'2026-05-15',{full:'James Talarico',last:'Talarico',first:'James'}],'a Candidate Report reads like an annual one');
+  assert.equal(senatorFor('efd-downloads/misc/x.html',report).person?.id,'talarico','a profiled Senate candidate, by the name on the page');
+  assert.equal(senatorFor('efd-downloads/talarico/x.html',efdSavedReport(candidate('Candidate (no name)'))).person?.id,'talarico','or by the folder');
+  const dir=folder({'talarico/candidate-2026.html':candidate()}),d=db(),now=new Date('2026-11-05T12:00:00Z');
+  const r=await importEfd({dir,db:d,now});
+  assert.ok(r.lines.some(l=>/^OK +talarico\/candidate-2026\.html: James Talarico, annual report for 2026, 2 assets, 0 debts/.test(l)),r.lines.join('\n'));
+  const w=await snap(d,'net-worth-senate:talarico');assert.equal(w.nAssets,2);assert.equal(w.year,2026);
+  const job=await statement(d,"SELECT kind,subject,args,status FROM jobs WHERE id='net-worth-senate:talarico'").first();
+  assert.deepEqual([job.kind,job.subject,job.status],['net-worth-senate','talarico','ready']);
+  assert.deepEqual(JSON.parse(job.args),{last:'Talarico',first:['James'],candidate:true},'searches for candidates when eFD lets it');
+  assert.ok(!FEEDS['net-worth-senate'].jobs(config).some(j=>j.subject==='talarico'),'no check of its own until a report is imported');
+  d.close();
 });

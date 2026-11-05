@@ -713,7 +713,8 @@ export const FEEDS={
   // the original): a range, since every value on the form is one. House reports are PDFs from the disclosure index;
   // senators' are eFD pages (report type 7). Read weekly; a report filed on paper is listed for checking by hand.
   'net-worth-house':{host:'disclosures-clerk.house.gov',label:'Net worth (House annual disclosures)',tab:'ethics',every:WEEK,
-    jobs:c=>profiled(c).filter(p=>p.inOffice&&p.chamber==='H').map(p=>({id:`net-worth-house:${p.id}`,subject:p.id,args:{}})),
+    // House members, and the profiled House candidates, whose candidate reports ("C") the House Clerk keeps too.
+    jobs:c=>profiled(c).filter(p=>p.chamber==='H').map(p=>({id:`net-worth-house:${p.id}`,subject:p.id,args:{}})),
     async page(job,a,env){
       const index=await snapshotsOf(env,'house-fd');need(index.length,'Waiting for the House disclosure index');
       const f=index.flatMap(x=>x.byPerson?.[job.subject]||[]).filter(f=>['O','A','C'].includes(f.type)&&f.url&&f.filed)
@@ -743,7 +744,8 @@ export const FEEDS={
     async page(job,a,env,config){
       const text=await unzipFile(await requestSource(`https://disclosures-clerk.house.gov/public_disc/financial-pdfs/${a.year}FD.zip`,env,{as:'bytes'}),new RegExp(`^${a.year}FD\\.xml$`,'i'));
       const filings=list(parseXML(text).FinancialDisclosure?.Member);need(filings.length,'House disclosure index is empty');
-      const house=config.people.filter(p=>p.inOffice&&p.chamber==='H');
+      // Members of the House, and the profiled House candidates (their candidate reports, type "C", are in the index too).
+      const house=config.people.filter(p=>p.chamber==='H'&&(p.inOffice||p.ids));
       const rows=[];
       for(const f of filings){
         const p=house.filter(p=>String(f.StateDst||'').toUpperCase().startsWith(p.state)&&sameName(f.First,f.Last,p));
@@ -1180,10 +1182,13 @@ export function efdSavedReport(html){
   const raw=String(html||''),text=strip(raw);
   const at=raw.match(/(?:https:\/\/efdsearch\.senate\.gov)?\/search\/view\/(ptr|annual|paper)\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\/?/i);
   const trades=efdTrades(raw),holdings=efdAnnualHoldings(raw);
-  const titled=/Periodic Transaction Report/i.test(text)?'ptr':/Annual Report/i.test(text)?'annual':null;
+  // A candidate's report (Candidate Report, or a New Filer Report) lists assets and debts as an annual report does.
+  const titled=/Periodic Transaction Report/i.test(text)?'ptr':/Annual Report|Candidate Report|New Filer Report/i.test(text)?'annual':null;
   const kind=at?.[1].toLowerCase()==='paper'?'paper':titled||(trades.length?'ptr':holdings.assets.length||holdings.debts.length?'annual':null);
-  const who=text.match(/The Honorable\s+([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i);
-  const year=Number(text.match(/(?:Annual Report for|Calendar Year|\bCY)\s*(\d{4})/i)?.[1])||null;
+  // The filer: "The Honorable Jon Ossoff (Ossoff, Jon)", or a candidate's heading without the title.
+  const who=text.match(/The Honorable\s+([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i)
+    ||strip(raw.match(/class=["'][^"']*filedReport[^"']*["'][^>]*>([\s\S]*?)<\//i)?.[1]||'').match(/^(?:(?:Mr|Ms|Mrs|Dr)\.?\s+)?([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i);
+  const year=Number(text.match(/(?:Annual Report for|Candidate Report for|Calendar Year|\bCY)\s*(\d{4})/i)?.[1])||null;
   return {kind,doc:at?at[2].toLowerCase():null,url:at?`${EFD}/search/view/${at[1].toLowerCase()}/${at[2].toLowerCase()}/`:null,
     filed:mdy(text.match(/\bFiled\s+(\d{1,2}\/\d{1,2}\/\d{4})/i)?.[1]),year,
     name:who?{full:who[1].trim(),last:who[2].trim(),first:who[3].trim()}:null,trades,holdings};
@@ -1204,11 +1209,12 @@ async function efdSession(env){
   addCookies(jar,agreed.headers);need(jar.csrftoken,'Senate eFD did not start a session');
   return {jar};
 }
-// The senator's trade reports (report type 11) since January of last year, newest first.
+// The senator's trade reports (report type 11) since January of last year, newest first. Filer type 1 is a senator; a
+// candidate's check (made when their report is imported) asks for filer type 4, a candidate, as eFD's search form lists them.
 async function efdReports(env,{jar},a){
   const found=[];
   for(let start=0;start<1000;start+=100){
-    const d=await requestSource(`${EFD}/search/report/data/`,env,{form:{start:String(start),length:'100',report_types:a.reportTypes||'[11]',filer_types:'[1]',submitted_start_date:`01/01/${a.from} 00:00:00`,submitted_end_date:'',candidate_state:'',senator_state:'',office_id:'',first_name:'',last_name:a.last,csrfmiddlewaretoken:jar.csrftoken},
+    const d=await requestSource(`${EFD}/search/report/data/`,env,{form:{start:String(start),length:'100',report_types:a.reportTypes||'[11]',filer_types:a.candidate?'[4]':'[1]',submitted_start_date:`01/01/${a.from} 00:00:00`,submitted_end_date:'',candidate_state:'',senator_state:'',office_id:'',first_name:'',last_name:a.last,csrfmiddlewaretoken:jar.csrftoken},
       headers:{Cookie:cookieHeader(jar),Referer:`${EFD}/search/`,'X-CSRFToken':jar.csrftoken,'X-Requested-With':'XMLHttpRequest'}});
     need(Array.isArray(d?.data),'Senate eFD search response missing');
     found.push(...d.data.filter(r=>Array.isArray(r)&&fold(r[1])===fold(a.last)));
@@ -1269,5 +1275,6 @@ async function carried(env,jobId){
 export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
-// years and names, and House members matched by legal first names.
-export const FEEDS_VERSION=2;
+// years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
+// and its net-worth check.
+export const FEEDS_VERSION=3;
