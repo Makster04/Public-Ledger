@@ -1,9 +1,9 @@
 # Integrity revision: five parts (approved structure, formulas for sign-off)
 
-Status: the structure below was approved on November 5, 2026. The formulas, thresholds and evidence rules here are for
-sign-off before they are built. Parts marked **Built** already run as written; parts marked **To build** do not run yet,
-and the published Integrity calculation (`public/integrity.js`, [03_INTEGRITY_SCORE.md](03_INTEGRITY_SCORE.md)) changes
-only when they do. Integrity stays provisional and uncalibrated, adapting the structure of
+Status: the structure below was approved on November 5, 2026, and the five weights, Get It Done and the Conflicts of
+Interest formulas now run (`public/integrity.js`). Get It Done needs its file built (`npm run getitdone:build`).
+Conflicts of Interest is not graded for anyone until the reader that fills `public/conflicts.json` from the disclosures
+and its organization review are built; its formulas are in place. Parts still marked **To build** below don't run yet. Integrity stays provisional and uncalibrated, adapting the structure of
 [IntegrityIndex.us](https://integrityindex.us/methodology) with Public Ledger's own additions.
 
 ## The grade
@@ -24,8 +24,8 @@ final grade is rounded. Letter grades use the usual 90/80/70/60 cut-offs.
 | Honesty | 20% | Promises Delivered; Flip-Flop and Pants on Fire planned | Built (Promises Delivered) |
 | Personal Finances | 20% | Holdings and trading penalties, Insider Trading, Stock Disclosure Dodger | Built; additions to build |
 | Fundraising | 25% | D, P, R, E, pledges; Super PAC Dependence planned | Built |
-| Showing Up | 15% | Attendance (No-Show), Get It Done | Attendance built; Get It Done to build |
-| Conflicts of Interest | 20% | Outside Income & Conflicts, Gifts & Travel | To build |
+| Showing Up | 15% | Attendance (No-Show), Get It Done | Built; both need their files built |
+| Conflicts of Interest | 20% | Outside Income & Conflicts, Gifts & Travel | Formulas built; disclosure reader and review to build |
 | Subtracted | — | Legal Trouble | Built |
 
 ## Shared definitions
@@ -91,7 +91,7 @@ Unchanged from [03_INTEGRITY_SCORE.md](03_INTEGRITY_SCORE.md): D donor-size cred
 (capped at 30), R = 10 × Hill(PAC share, 20%), E earmarked-gift penalty (capped at 30), pledges +1 kept / −1 broken
 per category. Super PAC Dependence 💸 is planned; its formula comes for sign-off before it is built.
 
-## 4. Showing Up (15%) — Attendance built; Get It Done to build
+## 4. Showing Up (15%) — Built
 
 ```text
 Showing Up = 0.75 × Attendance + 0.25 × Get It Done      (Attendance alone when Get It Done isn't available)
@@ -104,7 +104,7 @@ reviewed absence with a cited source for medical leave, a birth or adoption, a d
 left out of both the votes and the misses for its dates. At least 50 votes in office. The record shows that a vote was
 missed, not why or where the member was.
 
-**Get It Done ✅, to build:**
+**Get It Done ✅, built (`npm run getitdone:build` writes `public/get-it-done.json`):**
 
 ```text
 advanced rate  r = bills advanced ÷ bills sponsored, over the window's Congresses
@@ -122,14 +122,24 @@ Get It Done    = 100 × min(1, r ÷ m)
 - **Why against their own party in their chamber:** the majority party advances more bills; comparing within the party
   keeps the minority from being marked down for being the minority.
 
-## 5. Conflicts of Interest (20%) — To build
+## 5. Conflicts of Interest (20%) — Formulas built; the disclosure reader to build
 
 ```text
 Conflicts of Interest = clamp( 100 − (0.60 × Outside Income & Conflicts + 0.40 × Gifts & Travel), 0, 100 )
 ```
 
 It needs a readable annual (or candidate) report for the latest report year and the reviewed organization matches for
-it. Either index may be unavailable; the other is then used alone. With neither, the part is not complete.
+it, in `public/conflicts.json`:
+
+```text
+people: {id: {report: {year, url}, reviewed: {at, src},
+              income: [{payer, amount, interested, src}], positions: [{org, position, interested, src}],
+              agreements: [{org, kind, interested, src}], gifts: [{source, value, interested, src}],
+              travel: [{sponsor, dates, value, interested, src}],
+              lobbyistOverlap: {sharePct}, contractsForDonors: {companies}, foreignAgent: {filings}}}
+```
+
+`interested` is true only for a reviewed match; anything else counts for nothing. Either index may be unavailable; the other is then used alone. With neither, the part is not complete.
 
 ### Outside Income & Conflicts Index
 

@@ -18,6 +18,7 @@
     "exec:build": "node scripts/build-exec-trades.mjs",
     "votes:party": "node scripts/build-vote-party.mjs",
     "attendance:build": "node scripts/build-attendance.mjs",
+    "getitdone:build": "node --env-file-if-exists=.dev.vars scripts/build-get-it-done.mjs",
     "votes:positions": "node scripts/fill-vote-positions.mjs",
     "bills:cosponsors": "node --env-file-if-exists=.dev.vars scripts/fill-bill-cosponsors.mjs",
     "pacs:types": "node --env-file-if-exists=.dev.vars scripts/build-pac-types.mjs",
