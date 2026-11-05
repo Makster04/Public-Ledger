@@ -80,7 +80,7 @@ export const SOURCES={
   // States whose results pages are read for their tables of votes by county, or for the exports and county pages they
   // link to. What each one holds is checked on the first run.
   // Delaware's results page links to its results as a CSV on the state's open-data site (a Socrata dataset).
-  'S-DE':{state:'DE',contest:/united states senat|^u\.?\s?s\.?\s+senat|^us senat/i,urls:['https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000'],pages:['https://elections.delaware.gov/results/enr/GE2026.html'],page:'https://elections.delaware.gov/results/enr/GE2026.html',source:'Delaware Department of Elections, unofficial results'},
+  'S-DE':{state:'DE',contest:/united states senat|^u\.?\s?s\.?\s+senat|^us senat/i,urls:['https://elections.delaware.gov/results/enr/Election_ByCountyWithWilmington_ID_GE2026.json','https://data.delaware.gov/resource/yg7x-kgjc.csv?election_name=2026%20General%20Election&$limit=50000'],pages:['https://elections.delaware.gov/results/enr/GE2026.html'],page:'https://elections.delaware.gov/results/enr/GE2026.html',source:'Delaware Department of Elections, unofficial results'},
   'S-WY':{state:'WY',contest:SENATE_CONTEST,urls:[],pages:['https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx'],page:'https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx',source:'Wyoming Secretary of State, unofficial results'},
   // Results sites built on the same template (Montana, Nebraska, New Mexico, Oregon, South Dakota): each county has a page
   // with every race in it, read for the Senate race. The counties come from the site's list of county pages, or, for
@@ -91,11 +91,14 @@ export const SOURCES={
   'S-NM':{state:'NM',contest:BOX_SENATE,boxes:{list:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY'},slow:true,urls:[],page:'https://electionresults.sos.nm.gov/resultsList.aspx?type=cty&map=CTY',source:'New Mexico Secretary of State, results by county'},
   // Oregon's county pages hold only county races; its export page sends the statewide races by county as CSV when its
   // form is sent back with "CSV" chosen and the Statewide button pressed.
-  'S-OR':{state:'OR',contest:/^(us|u\.s\.|united states) senat/i,postback:{page:'https://results.oregonvotes.gov/ResultsExport.aspx',target:'ctl00$MainContent$Statewide',choices:{'ctl00$MainContent$rblTypes':'1'}},urls:[],page:'https://results.oregonvotes.gov/ResultsExport.aspx',source:'Oregon Secretary of State, statewide export'},
+  'S-OR':{state:'OR',contest:/^(us|u\.s\.|united states) senat/i,postback:{page:'https://results.oregonvotes.gov/ResultsExport.aspx',target:'ctl00$MainContent$Statewide',choices:{'ctl00$MainContent$rblTypes':'1'},areas:'https://results.oregonvotes.gov/ResultsList.aspx'},urls:[],page:'https://results.oregonvotes.gov/ResultsExport.aspx',source:'Oregon Secretary of State, statewide export'},
   'S-SD':{state:'SD',contest:BOX_SENATE,boxes:{list:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL'},slow:true,urls:[],page:'https://electionresults.sd.gov/ResultsList.aspx?type=CTYALL',source:'South Dakota Secretary of State, results by county'},
   'S-MN':{state:'MN',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00'],page:'https://electionresults.sos.mn.gov/',help:SAVED_PAGE('S-MN','https://electionresults.sos.mn.gov/','open U.S. Senate and its results by county'),source:'Minnesota Secretary of State, election results'},
   'S-TN':{state:'TN',contest:SENATE_CONTEST,urls:[],pages:['https://elections.tn.gov/county-breakdown/United%20States%20Senate','https://elections.tn.gov/county-breakdown/U.S.%20Senate','https://elections.tn.gov/county-breakdown/US%20Senate','https://elections.tn.gov/categories/federal/offices'],page:'https://elections.tn.gov/',source:'Tennessee Secretary of State, election night results'},
-  'S-TX':{state:'TX',contest:SENATE_CONTEST,urls:[],pages:['https://electionresults.sos.state.tx.us/results.html'],page:'https://electionresults.sos.state.tx.us/results.html',source:'Texas Secretary of State, election results'},
+  // Texas, Ohio and Louisiana: sites built by their own scripts, read through the data files those scripts ask for.
+  'S-TX':{state:'TX',contest:SENATE_CONTEST,read:'texas',data:'https://results.texas-election.com/static/data',urls:[],pages:['https://electionresults.sos.state.tx.us/results.html'],page:'https://results.texas-election.com/races',source:'Texas Secretary of State, election night results'},
+  'S-OH':{state:'OH',contest:SENATE_CONTEST,read:'ohio',api:'https://liveresults.ohiosos.gov/Api/v1/Contest',slow:true,urls:[],page:'https://liveresults.ohiosos.gov/',source:'Ohio Secretary of State, election night results'},
+  'S-LA':{state:'LA',contest:SENATE_CONTEST,read:'louisiana',data:'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data',folder:'20261103',urls:[],page:'https://voterportal.sos.la.gov/graphical',source:'Louisiana Secretary of State, election results'},
 };
 
 // A name reduced to letters, for matching ("St. Clair County" and "ST CLAIR" are the same; "El-Sayed" and "El Sayed").
@@ -144,7 +147,7 @@ export function readEnhanced(data,contest){
   return rows;
 }
 // A CSV or tab-separated file: a county column, a contest column, the candidate (or first and last name) and votes.
-const PICK={county:['countyname','county','countydescription','jurisdiction','jurisdictionname'],
+const PICK={county:['countyname','county','countydescription','jurisdiction','jurisdictionname','areanum'],
   contest:['officedescription','contestname','officename','office','contest','contesttitle','racename','racetitle','race'],
   choice:['candidate','choice','candidatename','candidatefullname','ballotname','name'],last:['candidatelastname','lastname'],first:['candidatefirstname','firstname'],
   party:['partyname','party','choiceparty','partydescription','partycode'],votes:['candidatevotes','totalvotes','votes','votecount','votetotal','total']};
@@ -155,10 +158,12 @@ export function readTable(text,contest){
   const sep=lines[0].includes('\t')?'\t':',',head=splitRow(lines[0],sep).map(letters);
   const col=k=>PICK[k].map(n=>head.indexOf(n)).find(i=>i>=0)??-1,c=Object.fromEntries(Object.keys(PICK).map(k=>[k,col(k)]));
   if(c.county<0||c.contest<0||c.votes<0||(c.choice<0&&c.last<0))throw new Error(`can't find the county, contest, candidate and votes columns (the header is: ${splitRow(lines[0],sep).join(' | ')})`);
-  const rows=[];
+  const rows=[],areaType=head.indexOf('areatype');
   for(const l of lines.slice(1)){const f=splitRow(l,sep);if(!contest.test((f[c.contest]||'').trim())||/state senat/i.test(f[c.contest]))continue;
     const choice=c.choice>=0?f[c.choice]:`${c.first>=0?f[c.first]:''} ${f[c.last]}`;
-    rows.push({county:(f[c.county]||'').trim(),choice:String(choice||'').trim(),party:c.party>=0?(f[c.party]||'').trim():'',votes:Number(String(f[c.votes]).replace(/,/g,''))||0});}
+    rows.push({county:(f[c.county]||'').trim(),choice:String(choice||'').trim(),party:c.party>=0?(f[c.party]||'').trim():'',votes:Number(String(f[c.votes]).replace(/,/g,''))||0,
+      // Oregon's export: a row per area (statewide, and each county by its number), each with its kind of area.
+      ...(areaType>=0?{area:(f[areaType]||'').trim()}:{})});}
   if(!rows.length)throw new Error('no rows for the Senate race (contests in the file: '+[...new Set(lines.slice(1,400).map(l=>splitRow(l,sep)[c.contest]))].slice(0,8).join('; ')+')');
   return rows;
 }
@@ -177,7 +182,8 @@ export async function readAny(raw,src,counties=[]){
     text=await unzipFile(bytes,/\.(txt|tsv|csv|json|xml)$/i).catch(()=>{throw new Error('a ZIP file with no .txt, .tsv, .csv, .json or .xml file in it');});
   }else text=new TextDecoder().decode(bytes);
   text=text.replace(/^\uFEFF/,'');const head=text.trimStart().slice(0,300);
-  if(/^[{[]/.test(head)){let data;try{data=JSON.parse(text);}catch(e){throw new Error(`a JSON file that doesn't read (${e.message})`);}return {rows:readEnhanced(data,src.contest)};}
+  if(/^[{[]/.test(head)){let data;try{data=JSON.parse(text);}catch(e){throw new Error(`a JSON file that doesn't read (${e.message})`);}
+    return {rows:data&&!Array.isArray(data)&&('localResults' in data||'results' in data)?readEnhanced(data,src.contest):readJson(data,src.contest,counties)};}
   if(/^<(!doctype\s+html|html|head|body|!--)/i.test(head)||/<html\b/i.test(head)){const t=readHtmlTables(text,counties);
     if(t.rows.length){const r=reportingIn(strip(text));if(r)t.rows.reporting=r;}
     return {page:text,rows:t.rows.length?t.rows:null,tables:t.tables};}
@@ -313,6 +319,111 @@ async function clarityCounties({base,st,eid,ver},get,contest){
   return rows;
 }
 
+// A file's JSON, or why it isn't JSON.
+async function getJson(get,u){const t=asText(await get(u)).replace(/^﻿/,'');try{return JSON.parse(t);}catch{throw new Error(`${u} isn't JSON (it starts: ${strip(t).slice(0,80)})`);}}
+const sixAtATime=async(list,fn)=>{for(let i=0;i<list.length;i+=6)await Promise.all(list.slice(i,i+6).map(fn));};
+// Ohio: its counties (getCountyList, each with its id), then each county's contests (GetContestsByCounty), the Senate race
+// found in each by its name or by its contest id from the list of contests (getContestList). Six counties at a time.
+async function readOhio(src,get){
+  const list=await getJson(get,`${src.api}/getCountyList`);
+  const counties=(Array.isArray(list)?list:[]).map(x=>({name:String(x.name??x.Name??'').trim(),id:String(x.value??x.Value??x.id??'')})).filter(x=>x.name&&x.id);
+  if(!counties.length)throw new Error(`getCountyList lists no counties (it reads: ${shapeOf(list)})`);
+  let ids=[];try{ids=raceIds(await getJson(get,`${src.api}/getContestList`),src.contest);}catch{}
+  const rows=[],errs=[];let shape='';
+  await sixAtATime(counties,async c=>{
+    try{const d=await getJson(get,`${src.api}/GetContestsByCounty?countyId=${encodeURIComponent(c.id)}`),ch=jsonRace(d,src.contest,ids);
+      if(!ch?.length){shape||=shapeOf(d);errs.push(`${c.name}: no Senate race in its contests`);return;}
+      for(const x of ch)rows.push({county:c.name,choice:x.choice,party:x.party,votes:x.votes});}
+    catch(e){errs.push(`${c.name}: ${e.message}`);}
+  });
+  if(!rows.length)throw new Error(`none of the ${counties.length} counties' contests had the Senate race (${errs.slice(0,2).join('; ')}${shape?`; a county's contests read: ${shape}`:''})`);
+  rows.note=errs.length?`${errs.length} of ${counties.length} counties couldn't be read (${errs[0]})`:'';
+  return rows;
+}
+// Texas: its files, found as its own page finds them. The data folder's version, that version's election settings (the
+// November general among the elections they list, or the current one), the election's own version, and in that version
+// the races, the counties (Lookups) and the results by county.
+async function readTexas(src,get,map){
+  const v=(await getJson(get,`${src.data}/Version.json`)).___versionNo;
+  if(v==null)throw new Error(`${src.data}/Version.json has no version number`);
+  const k=await getJson(get,`${src.data}/ElectionConstants_${v}.json`),els=[];
+  const walk=(o,d)=>{if(!o||typeof o!=='object'||d>5)return;if(!Array.isArray(o)&&o.ID!=null&&(o.N||o.Name))els.push(o);for(const x of Array.isArray(o)?o:Object.values(o))walk(x,d+1);};walk(k,0);
+  const title=e=>String(e.N||e.Name||'');
+  const el=els.find(e=>/2026/.test(JSON.stringify(e))&&/general/i.test(title(e))&&!/primary|runoff|special/i.test(title(e)))||k.currentelectionInfo;
+  if(el?.ID==null)throw new Error(`no election in ElectionConstants_${v}.json (it reads: ${shapeOf(k)})`);
+  const eu=`${src.data}/${el.ID}`,ev=(await getJson(get,`${eu}/Version.json`)).___versionNo,vu=`${eu}/${ev}`;
+  const file=f=>getJson(get,`${vu}/${f}`).catch(()=>null);
+  const [county,lookups,race,federal]=await Promise.all(['County.json','Lookups.json','Race.json','Federal.json'].map(file));
+  if(!county)throw new Error(`${vu}/County.json couldn't be read (election ${el.ID}, "${title(el)}")`);
+  const ids=[...new Set([...raceIds(race,src.contest),...raceIds(federal,src.contest)])],names=namesById(federal||{});
+  // The counties by their ids: a list of {id, name} objects, or an object of id → name.
+  const byId=new Map(),cl=lookups?.County??lookups?.county;
+  if(flatList(cl))for(const x of cl){const keys=Object.keys(x),ik=keys.find(q=>keyIs(q,/^(id|countyid|c|cid|value|code)$/)),nk=keys.find(q=>keyIs(q,/^(name|n|countyname|cn|desc)$/));if(ik&&nk)byId.set(String(x[ik]),String(x[nk]));}
+  else if(cl&&typeof cl==='object')for(const [id,n] of Object.entries(cl))if(typeof n==='string')byId.set(id,n);
+  const counties=countyIds(map.counties.map(c=>c.name),new Map([...byId].map(([id,n])=>[id,map.counties.find(c=>countyKey(c.name)===countyKey(n))?.name||n])));
+  const rows=nestedCounties(county,{contest:src.contest,ids,names,counties});
+  if(!rows.length)throw new Error(`no Senate race by county in ${vu}/County.json (race ids ${ids.join(', ')||'not found'}; ${byId.size} counties listed; County.json reads: ${shapeOf(county)}; Race.json reads: ${shapeOf(race)})`);
+  return rows;
+}
+// Louisiana: the November 3 election's data files (its folder, 20261103): the races with their candidates
+// (RacesCandidates_Multiparish), then the Senate race's votes by parish (VotesRaceByParish/Votes_<race id>). Parishes are
+// numbered as ParishesInElection lists them, or else alphabetically (Acadia 1 … Winn 64, as their FIPS codes run).
+async function readLouisiana(src,get,map){
+  const at=f=>`${src.data}?blob=${src.folder}/${f}`,races=await getJson(get,at('RacesCandidates_Multiparish.htm')),ids=raceIds(races,src.contest);
+  if(!ids.length)throw new Error(`no Senate race in RacesCandidates_Multiparish.htm (it reads: ${shapeOf(races)})`);
+  const names=namesById(races),parishNo=new Map();
+  const onMap=n=>map.counties.find(c=>countyKey(c.name)===countyKey(n))?.name;
+  try{for(const [id,x] of namesById(await getJson(get,at('ParishesInElection.htm'))))if(onMap(x.name))parishNo.set(id,onMap(x.name));}catch{}
+  if(parishNo.size<map.counties.length/2){parishNo.clear();[...map.counties].sort((a,b)=>a.fips.localeCompare(b.fips)).forEach((c,i)=>{parishNo.set(String(i+1),c.name);parishNo.set(String(i+1).padStart(2,'0'),c.name);});}
+  const counties=countyIds(map.counties.map(c=>c.name),parishNo);let why='';
+  for(const id of ids){
+    try{const votes=await getJson(get,at(`VotesRaceByParish/Votes_${id}.htm`)),rows=nestedCounties(votes,{contest:src.contest,ids:[id],names,counties,oneRace:true});
+      if(rows.length)return rows;why=`VotesRaceByParish/Votes_${id}.htm has no votes by parish in a form read here (it reads: ${shapeOf(votes)})`;}
+    catch(e){why=e.message;}
+  }
+  throw new Error(why);
+}
+const READERS={ohio:readOhio,texas:readTexas,louisiana:readLouisiana};
+
+// Oregon's export gives each county by number. Its list of county pages (ResultsList.aspx) gives each county's number
+// (cty=20 is Baker): {number → {name, u}}.
+export function countyCodes(html,base){
+  const out=new Map();
+  for(const m of String(html).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)){
+    const raw=/\bhref\s*=\s*["']([^"']+)["']/i.exec(m[1])?.[1];if(!raw)continue;let u;try{u=new URL(decode(raw),base);}catch{continue;}
+    const c=u.searchParams.get('cty'),name=strip(m[2]).replace(/\s+County$/i,'');if(c&&name&&!out.has(c))out.set(c,{name,u:u.href});
+  }
+  return out;
+}
+// The export's county rows, by the numbers given (codes: number → name): of its kinds of area, the one whose numbers are
+// most of the counties.
+export function byAreaNumber(rows,codes){
+  const n=c=>String(Number(c)),known=new Map([...codes].map(([k,v])=>[n(k),typeof v==='string'?v:v.name])),groups=new Map();
+  for(const r of rows){const g=r.area??'';(groups.get(g)||groups.set(g,[]).get(g)).push(r);}
+  let best=null,most=0;for(const g of groups.values()){const c=new Set(g.filter(r=>known.has(n(r.county))).map(r=>n(r.county))).size;if(c>most){best=g;most=c;}}
+  if(!best)throw new Error(`none of the export's area numbers are counties (its kinds of area: ${[...groups.keys()].join(', ')||'none given'})`);
+  const out=best.filter(r=>known.has(n(r.county))).map(({area,...r})=>({...r,county:known.get(n(r.county))}));
+  if(rows.reporting)out.reporting=rows.reporting;
+  return out;
+}
+// Oregon's export rows by county: numbered as its county pages are, or alphabetically (Baker 1 … Yamhill 36), whichever
+// gives the first listed county the votes its own page shows for the race. When that page can't be read, the pages'
+// numbers are used, and said so.
+async function areaCounties(rows,list,src,get,map){
+  const codes=countyCodes(asText(await get(list)),list);if(!codes.size)throw new Error(`no county pages listed on ${list}`);
+  const alpha=new Map([...map.counties].sort((a,b)=>a.fips.localeCompare(b.fips)).map((c,i)=>[String(i+1),c.name]));
+  const as=m=>{try{return byAreaNumber(rows,m);}catch{return null;}},byCode=as(codes),byAlpha=as(alpha);
+  if(!byCode&&!byAlpha)return byAreaNumber(rows,codes);
+  const [,first]=[...codes][0],sum=rs=>rs?rs.filter(r=>countyKey(r.county)===countyKey(first.name)).reduce((a,r)=>a+r.votes,0):null;
+  let want=null;try{const box=readResultBoxes(asText(await get(first.u)),src.contest);if(box?.rows.length)want=box.rows.reduce((a,r)=>a+r.votes,0);}catch{}
+  if(want!=null&&sum(byCode)===want)return byCode;
+  if(want!=null&&sum(byAlpha)===want){byAlpha.note='the export numbers its counties alphabetically';return byAlpha;}
+  const out=byCode||byAlpha;
+  out.note=want==null?`the export's county numbers are taken as its county pages number them (${first.name} County's page couldn't be read to check)`
+    :`${first.name} County's page has ${want.toLocaleString('en-US')} votes in the race, the export ${(sum(out)||0).toLocaleString('en-US')} under its number (one of them may be newer)`;
+  return out;
+}
+
 // An ASP.NET page's export behind a button: its form's action and fields (the hidden ones, the checked choices, and the
 // given ones), with __EVENTTARGET set to the button, as a browser sends them back.
 export function postBackForm(html,base,target,choices={}){
@@ -323,6 +434,145 @@ export function postBackForm(html,base,target,choices={}){
     else if((type==='radio'||type==='checkbox')&&/\bchecked\b/i.test(m[1]))fields[a.name]=a.value??'on';
   }
   return {action,fields:{...fields,__EVENTTARGET:target,__EVENTARGUMENT:'',...choices}};
+}
+
+// A JSON reply's shape, briefly (keys, and the first item of each list, a few levels down), for a CHECK line when the
+// race can't be found in it.
+export function shapeOf(v,depth=0){
+  let out;
+  if(Array.isArray(v))out=`[${v.length}× ${v.length?shapeOf(v[0],depth+1):''}]`;
+  else if(v&&typeof v==='object'){const e=Object.entries(v);out=depth>=4?'{…}':`{${e.slice(0,10).map(([k,x])=>`${k}: ${shapeOf(x,depth+1)}`).join(', ')}${e.length>10?`, …${e.length-10} more`:''}}`;}
+  else out=typeof v==='string'?JSON.stringify(v.slice(0,30)):String(v);
+  return depth?out:out.slice(0,1500);
+}
+// The keys results files use, whatever their case and punctuation ("Candidate Name", "candidateName", "N").
+const keyIs=(k,re)=>re.test(letters(k));
+const NAME_KEY=/^(name|candidatename|candidate|choicename|choice|ballotname|fullname|ballotoptionname|selectionname|desc|description|cn|n)$/;
+const VOTE_KEY=/^(votes|totalvotes|votecount|candidatevotes|votetotal|numvotes|vote|v|tv|total)$/,PARTY_KEY=/^(party|partyname|partycode|partyabbreviation|partyabbr|politicalparty|p)$/;
+const ID_KEY=/^(id|choiceid|candidateid|candid|cid|ballotoptionid|i)$/;
+const flatList=v=>Array.isArray(v)&&v.length>0&&v.every(x=>x&&typeof x==='object'&&!Array.isArray(x));
+// A key of a list's items that holds a plain value (a name, a count), not a list of its own (Louisiana's races hold "Choice").
+const plainKey=(list,re)=>Object.keys(list[0]).find(k=>keyIs(k,re)&&list.some(x=>x[k]!=null&&typeof x[k]!=='object'));
+const num=v=>Number(String(v??'').replace(/,/g,''))||0;
+const isRace=(v,contest)=>typeof v==='string'&&contest.test(v.trim())&&!/state senat/i.test(v);
+// A key naming the Senate race itself, as Delaware keys its results ("USSenator").
+const senateKey=k=>/^(us|unitedstates)senat/.test(letters(k));
+// Candidates in a JSON results file: the first list of objects with a name and a vote count (whatever the keys are
+// called), with their ids when they have them. names: candidate ids → {name, party}, for lists that give only ids.
+export function choicesIn(o,names=null,depth=0){
+  if(!o||typeof o!=='object'||depth>4)return null;
+  for(const v of Array.isArray(o)?[o]:Object.values(o)){
+    if(!flatList(v))continue;
+    const nk=plainKey(v,NAME_KEY),vk=plainKey(v,VOTE_KEY),pk=plainKey(v,PARTY_KEY),ik=plainKey(v,ID_KEY);
+    if(vk&&(nk||(ik&&names)))return v.map(x=>{const id=ik!=null?String(x[ik]):null,known=id!=null&&names?.get(id);
+      return {...(id!=null?{id}:{}),choice:String((nk?x[nk]:'')||known?.name||'').trim(),party:String((pk?x[pk]:'')||known?.party||'').trim(),votes:num(x[vk])};}).filter(x=>x.choice);
+  }
+  for(const v of Array.isArray(o)?o:Object.values(o)){const c=v&&typeof v==='object'?choicesIn(v,names,depth+1):null;if(c?.length)return c;}
+  return null;
+}
+// The Senate race in a JSON results file: an object named for it, keyed by one of the race's ids or carrying one, that
+// holds a list of candidates with votes. The first one found.
+export function jsonRace(data,contest,ids=[],names=null){
+  let hit=null;const want=new Set(ids.map(String));
+  const walk=(o,depth)=>{
+    if(hit||!o||typeof o!=='object'||depth>8)return;
+    if(!Array.isArray(o)){
+      for(const [k,v] of Object.entries(o))if((want.has(k)||senateKey(k))&&v&&typeof v==='object'){const c=choicesIn(v,names);if(c?.length){hit=c;return;}}
+      const vals=Object.entries(o);
+      if(vals.some(([,v])=>isRace(v,contest))||want.size&&vals.some(([k,v])=>keyIs(k,/^(id|oid|officeid|raceid|contestid|contestobjectid|officeinelectionid|o|i|r)$/)&&want.has(String(v)))){
+        const c=choicesIn(o,names);if(c?.length){hit=c;return;}}
+    }
+    for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);
+  };
+  walk(data,0);
+  return hit;
+}
+// The ids of the objects in a JSON file named for the Senate race (its office or race id), to find it elsewhere by id.
+export function raceIds(data,contest){
+  const ids=new Set(),walk=(o,depth)=>{if(!o||typeof o!=='object'||depth>8)return;
+    if(!Array.isArray(o)&&Object.values(o).some(v=>isRace(v,contest)))
+      for(const [k,v] of Object.entries(o))if(keyIs(k,/^(id|oid|officeid|raceid|contestid|contestobjectid|officeinelectionid|o|i|r)$/)&&(typeof v==='number'||/^[\w-]+$/.test(String(v))))ids.add(String(v));
+    for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);};
+  walk(data,0);
+  return [...ids];
+}
+// The candidates named in a JSON file, by id: {id → {name, party}}, from every list of objects with an id and a name.
+export function namesById(data){
+  const out=new Map(),walk=(o,depth)=>{if(!o||typeof o!=='object'||depth>8)return;
+    if(flatList(o)){const ik=plainKey(o,ID_KEY),nk=plainKey(o,NAME_KEY),pk=plainKey(o,PARTY_KEY);
+      if(ik&&nk)for(const x of o)if(x[ik]!=null&&x[nk]&&!out.has(String(x[ik])))out.set(String(x[ik]),{name:String(x[nk]).trim(),party:pk?String(x[pk]??'').trim():''});}
+    for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);};
+  walk(data,0);
+  return out;
+}
+// The Senate race's rows in a JSON file laid out as a table: a list keyed by the race ("USSenator": […]), or the items of
+// a list that name the race.
+function raceList(data,contest){
+  let hit=null;const walk=(o,depth)=>{if(hit||!o||typeof o!=='object'||depth>8)return;
+    // The items naming the race, or the candidates listed in them.
+    if(flatList(o)){const mine=o.filter(x=>Object.values(x).some(v=>isRace(v,contest)));if(mine.length){const inner=mine.flatMap(x=>Object.values(x).find(flatList)||[]);hit=inner.length?inner:mine;return;}}
+    if(!Array.isArray(o))for(const [k,v] of Object.entries(o)){if(senateKey(k)){const l=flatList(v)?v:Object.values(v||{}).find(flatList);if(l){hit=l;return;}}
+      if(isRace(v,contest)&&!keyIs(k,NAME_KEY)){const l=Object.values(o).find(flatList);if(l){hit=l;return;}}}
+    for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);};
+  walk(data,0);
+  return hit;
+}
+// A row per candidate with a column per county (Delaware's "New Castle", "Kent", "Sussex"): a row per county and candidate.
+export function wideRows(list,counties){
+  const known=new Set(counties.map(countyKey)),rows=[];
+  for(const x of list||[]){const keys=Object.keys(x),nk=keys.find(k=>keyIs(k,NAME_KEY)&&typeof x[k]==='string'),pk=keys.find(k=>keyIs(k,PARTY_KEY)&&typeof x[k]==='string');if(!nk)continue;
+    for(const k of keys)if(known.has(countyKey(k)))rows.push({county:k,choice:String(x[nk]).trim(),party:pk?String(x[pk]??'').trim():'',votes:num(x[k])});}
+  return rows;
+}
+// A county's identity in a JSON results file: an object's id, code or name that is one of the state's counties.
+// counties: identifier (a county's own id, or its name reduced by countyKey) → county name.
+const COUNTY_KEY=/^(id|countyid|county|countyname|countycode|code|name|n|c|cid|value|parishvalue|parish|parishname|parishid|fips|jurisdiction|locality|localityname)$/;
+const countyOf=(k,counties)=>counties.get(String(k))??counties.get(countyKey(k));
+function countyIdOf(o,counties){for(const [k,v] of Object.entries(o))if((typeof v==='string'||typeof v==='number')&&keyIs(k,COUNTY_KEY)){const c=countyOf(v,counties);if(c)return c;}return null;}
+// The Senate race in each county of a JSON file nested by county (a county's results hold its races), or by race (the
+// race holds its counties): a row per county and candidate. oneRace: the file is the race's alone, so each county's
+// candidates count without the race being named in them.
+export function nestedCounties(data,{contest,ids=[],names=null,counties,oneRace=false}){
+  const rows=[],done=new Set(),add=(county,o)=>{if(done.has(county))return;const c=jsonRace(o,contest,ids,names)||(oneRace?choicesIn(o,names):null);if(!c?.length)return;done.add(county);for(const x of c)rows.push({county,choice:x.choice,party:x.party,votes:x.votes});};
+  const byCounty=(o,depth)=>{if(!o||typeof o!=='object'||depth>6)return;
+    if(Array.isArray(o)){for(const x of o){const c=x&&typeof x==='object'&&!Array.isArray(x)?countyIdOf(x,counties):null;if(c)add(c,x);else byCounty(x,depth+1);}}
+    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties):null;if(c)add(c,v);else byCounty(v,depth+1);}};
+  byCounty(data,0);
+  if(rows.length)return rows;
+  // By race: the race's node, then a list of candidates in each county under it.
+  const want=new Set(ids.map(String));let race=null;
+  const find=(o,depth)=>{if(race||!o||typeof o!=='object'||depth>8)return;
+    if(!Array.isArray(o)){for(const [k,v] of Object.entries(o))if((want.has(k)||senateKey(k))&&v&&typeof v==='object'){race=v;return;}
+      if(Object.values(o).some(v=>isRace(v,contest))||want.size&&Object.entries(o).some(([k,v])=>keyIs(k,/^(id|raceid|officeid|contestid|o|i|r)$/)&&want.has(String(v)))){race=o;return;}}
+    for(const v of Array.isArray(o)?o:Object.values(o))find(v,depth+1);};
+  find(data,0);
+  if(!race)return rows;
+  const under=(o,depth)=>{if(!o||typeof o!=='object'||depth>5)return;
+    if(Array.isArray(o)){for(const x of o){const c=x&&typeof x==='object'&&!Array.isArray(x)?countyIdOf(x,counties):null;
+      if(c&&!done.has(c)){const ch=choicesIn(x,names);if(ch?.length){done.add(c);for(const y of ch)rows.push({county:c,choice:y.choice,party:y.party,votes:y.votes});continue;}}under(x,depth+1);}}
+    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties):null;
+      if(c&&!done.has(c)){const ch=choicesIn(v,names);if(ch?.length){done.add(c);for(const y of ch)rows.push({county:c,choice:y.choice,party:y.party,votes:y.votes});continue;}}under(v,depth+1);}};
+  under(race,0);
+  return rows;
+}
+// The state's counties as nestedCounties looks for them: by name, and by any ids given (id → name).
+export const countyIds=(names,ids=new Map())=>new Map([...names.map(n=>[countyKey(n),n]),...[...ids].map(([k,v])=>[String(k),v])]);
+// A JSON file that is a table: its largest list of flat objects, read as rows by their keys (as a CSV is by its header).
+export function jsonTable(data,contest){
+  let best=null;const walk=(o,depth)=>{if(!o||typeof o!=='object'||depth>6)return;
+    if(flatList(o)&&(!best||o.length>best.length))best=o;
+    for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);};
+  walk(data,0);
+  if(!best)throw new Error('no list of rows in it');
+  const head=Object.keys(best[0]),csv=v=>`"${String(v??'').replace(/"/g,'""')}"`;
+  return readTable([head.map(csv).join(','),...best.map(r=>head.map(k=>csv(r[k])).join(','))].join('\n'),contest);
+}
+// Any other JSON results file: the race laid out with a column per county, nested by county, or as a table of rows.
+export function readJson(data,contest,counties=[]){
+  const wide=wideRows(raceList(data,contest),counties);if(wide.length)return wide;
+  const nested=nestedCounties(data,{contest,counties:countyIds(counties)});if(nested.length)return nested;
+  try{return jsonTable(data,contest);}
+  catch(e){throw new Error(`a JSON file without the Senate race by county in a form read here (${e.message}; it reads: ${shapeOf(data)})`);}
 }
 
 // Web pages: text without tags, and the links and tables in them.
@@ -445,12 +695,16 @@ export async function countyRace(research,id,{get,post=null,file=null,maps}){
   // A state whose export is behind a form button.
   if(src.postback&&!file){const pb=src.postback;
     try{const got=await readAny(await post(pb.page,pb.target,pb.choices||{}),src,names);
+      if(got.rows&&pb.areas)got.rows=await areaCounties(got.rows,pb.areas,src,get,map);
       if(!got.rows)tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): a web page came back, not the export`);
       else if(!take(got.rows,pb.page))tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): the Senate race's candidates were not found in it`);}
     catch(e){tried.push(`${pb.page} (its ${pb.target.split('$').pop()} export): ${e.message}`);}}
   // A county-page state: every county's page.
   if(src.boxes&&!file){try{const r=await readBoxCounties(src,get);if(!take(r,src.boxes.list||src.page))tried.push('county pages: the Senate race\'s candidates were not found on them');else if(r.note)tried.push(r.note);}
     catch(e){tried.push(`county pages: ${e.message}`);}}
+  // A state read through its site's own data files, in steps.
+  if(src.read&&!rows&&!file){try{const r=await READERS[src.read](src,get,map);if(!take(r,src.page))tried.push(`${src.page}: the Senate race's candidates were not found in its files (they have: ${[...new Set(r.map(x=>x.choice))].slice(0,4).join(', ')})`);}
+    catch(e){tried.push(`${src.page}: ${e.message}`);}}
   for(let i=0;i<queue.length&&i<20&&!rows;i++){
     let u=queue[i];
     try{
@@ -526,12 +780,13 @@ const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; county results)';
 // pages don't use plain tables: one county's page and the race's page.
 export const SAMPLES={
   // Sites filled in by their own scripts: the code around each data address, to see how the addresses are built.
-  TX:[{u:'https://results.texas-election.com/',kind:'context',patterns:['static/data','Version.json','ElectionConstants_','Race.json','County.json','OfficeSummary','"/races','"/county']}],
-  DE:[{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'context',patterns:['Election_StatewideResults','Election_By','electionId','.json?t=']},{u:'https://elections.delaware.gov/results/enr/GE2026.html',kind:'raw'}],
-  OH:[{u:'https://liveresults.ohiosos.gov/',kind:'context',patterns:['GetContestsByCounty','getCountyList','GetContestDetailsObject','GetElectionSummaryCsv','download?filename','getContestList']},
-    'https://liveresults.ohiosos.gov/Api/v1/Contest/getCountyList','https://liveresults.ohiosos.gov/Api/v1/Contest/getContestList'],
+  TX:[{u:'https://results.texas-election.com/',kind:'context',patterns:['setElectionUrl=function','setElectionVersionUrl=function','LoadCountyData=function','GetCountyData()','countiesData[']},
+    'https://results.texas-election.com/static/data/Version.json'],
+  DE:['https://elections.delaware.gov/results/enr/Election_ByCountyWithWilmington_ID_GE2026.json'],
+  OH:['https://liveresults.ohiosos.gov/Api/v1/Contest/GetContestsByCounty?countyId=_55A742EA504C09A3E0633390EE0AE290'],
   AR:[{u:'https://arkansas.tally-enr.com/',kind:'context',patterns:['GetContestResults','GetElectionList','GetElectionInfo','-counties.json','apiUrl','X-Results-Token']}],
-  LA:[{u:'https://voterportal.sos.la.gov/graphical',kind:'context',patterns:['VotesRaceByParish','RacesCandidates','dataUrl','blob','ElectionDate','electionDate']}],
+  LA:['https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=ElectionDates.htm','https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20261103/RacesCandidates_Multiparish.htm',
+    'https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20261103/ParishesInElection.htm',{u:'https://voterportal.sos.la.gov/graphical',kind:'context',patterns:['prefixWithDateFolder=function','prefixWithDateFolder:function','processMultiparish=function','processMultiparish:function']}],
   OK:['https://oklahoma.gov/elections/elections-results/election-results/2026-election-results/november-general-election.html',{u:'https://results.okelections.us/OKER/',kind:'context',patterns:['api','.json','county','Contest']}],
   FL:['https://results.elections.myflorida.com/ElectionRaces.asp?ElectionDate=11/3/2026&DATAMODE=','https://results.elections.myflorida.com/TitlePage.asp?ElectionDate=11/3/2026&DATAMODE='],
 };
