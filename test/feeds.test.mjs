@@ -166,6 +166,21 @@ test('the House Clerk disclosure index is read from its ZIP file and matched to 
   assert.equal(r.snapshot.byPerson.perry[0].url,'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20031111.pdf');
 });
 
+test("a House candidate's report in the House Clerk's index is theirs too, and their net worth is checked",async()=>{
+  const stelson=config.people.find(p=>p.id==='stelson');assert.ok(stelson&&!stelson.inOffice&&stelson.chamber==='H','a profiled House candidate');
+  const xml=`<?xml version="1.0"?><FinancialDisclosure><Member><Last>Stelson</Last><First>Janelle</First><FilingType>C</FilingType><StateDst>PA10</StateDst><Year>2026</Year><FilingDate>5/12/2026</FilingDate><DocID>10070001</DocID></Member><Member><Last>Stelson</Last><First>Someone</First><FilingType>C</FilingType><StateDst>OH01</StateDst><Year>2026</Year><FilingDate>5/12/2026</FilingDate><DocID>10070002</DocID></Member></FinancialDisclosure>`;
+  const data=zlib.deflateRawSync(Buffer.from(xml)),name=Buffer.from('2026FD.xml');
+  const local=Buffer.alloc(30);local.writeUInt32LE(0x04034b50,0);local.writeUInt16LE(8,8);local.writeUInt32LE(data.length,18);local.writeUInt32LE(xml.length,22);local.writeUInt16LE(name.length,26);
+  const central=Buffer.alloc(46);central.writeUInt32LE(0x02014b50,0);central.writeUInt16LE(8,10);central.writeUInt32LE(data.length,20);central.writeUInt32LE(xml.length,24);central.writeUInt16LE(name.length,28);
+  const cdStart=30+name.length+data.length,end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50,0);end.writeUInt16LE(1,8);end.writeUInt16LE(1,10);end.writeUInt32LE(46+name.length,12);end.writeUInt32LE(cdStart,16);
+  const r=await run('house-fd','House',{year:2026},[[/2026FD\.zip/,new Response(Buffer.concat([local,name,data,central,name,end]))]]);
+  assert.deepEqual(r.snapshot.byPerson.stelson.map(f=>[f.id,f.type,f.ptr,f.filed,f.year,f.url]),[['10070001','C',false,'2026-05-12',2026,'https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10070001.pdf']],'her candidate report; the other state\'s Stelson is not her');
+  const jobs=FEEDS['net-worth-house'].jobs(config).map(j=>j.subject);
+  assert.ok(jobs.includes('stelson'),'House candidates get a net-worth check');
+  assert.ok(config.people.filter(p=>p.chamber==='H'&&p.ids).every(p=>jobs.includes(p.id)),'every profiled House member and candidate');
+  assert.ok(!jobs.some(id=>config.people.find(p=>p.id===id).chamber!=='H'));
+});
+
 test('ethics leads: court records, FEC enforcement and DOJ releases stay leads and must name the person',async()=>{
   const c=await run('courts','collins',{name:'Susan M. Collins'},[[/type=r/,{results:[{caseName:'United States v. Example',docket_id:9,docketNumber:'1:26-cv-1',court:'D. Me.',dateFiled:'2026-02-01',docket_absolute_url:'/docket/9/example/'}]}],[/type=o/,{results:[]}]]);
   assert.equal(c.rows[0].url,'https://www.courtlistener.com/docket/9/example/');assert.equal(c.calls[0].init.headers.Authorization,'Token ct');

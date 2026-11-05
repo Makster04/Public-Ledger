@@ -1,6 +1,7 @@
 // Senate eFD reports saved by hand, for when efdsearch.senate.gov turns the refresh away (HTTP 403). Save each report
-// page from a browser into efd-downloads/ (one folder per senator, named by their id on this site, is easiest:
-// efd-downloads/ossoff/), then run this. Trade reports (Periodic Transaction Reports) become the senator's official
+// page from a browser into efd-downloads/ (one folder per person, named by their id on this site, is easiest:
+// efd-downloads/ossoff/), then run this. Senate candidates' reports (their Candidate Report) are read the same way, for
+// the candidates profiled here; a candidate's page often has no "The Honorable" line, so their folder says whose it is. Trade reports (Periodic Transaction Reports) become the senator's official
 // trades, and the newest annual report becomes their net worth and holdings, exactly as the refresh would have saved
 // them (src/feeds.mjs efdTrades, efdAnnualHoldings). Run npm start once first, so the local database exists.
 //   npm run efd:import                  read efd-downloads/
@@ -18,7 +19,8 @@ import {openDatabase} from './sqlite.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const fold=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z]/g,'');
-const SENATORS=()=>config.people.filter(p=>p.inOffice&&p.chamber==='S');
+// Sitting senators, and the profiled Senate candidates, who file their reports on Senate eFD too.
+const SENATORS=()=>config.people.filter(p=>p.chamber==='S'&&(p.inOffice||p.ids));
 const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|II|III|IV)$/i,'').trim().split(/\s+/).pop();
 
 // Whose report a saved page is: the folder it's in when that's a senator's id, otherwise the name on the page.
@@ -30,7 +32,7 @@ export function senatorFor(file,report,people=SENATORS()){
     return {person:byFolder,warn:clash?`the page names ${report.name.full}, not ${byFolder.name}; filed under the folder's senator`:null};
   }
   if(byName.length===1)return {person:byName[0],warn:null};
-  return {person:null,warn:report.name?`no single senator matches ${report.name.full}; put it in a folder named after the senator's id`:'no senator\'s name found on the page; put it in a folder named after the senator\'s id'};
+  return {person:null,warn:report.name?`no single senator or Senate candidate matches ${report.name.full}; put it in a folder named after the person's id`:'no senator\'s name found on the page; put it in a folder named after the senator\'s id'};
 }
 
 const listFiles=dir=>fs.existsSync(dir)?fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?listFiles(path.join(dir,e.name)):[path.join(dir,e.name)]):[];
@@ -82,8 +84,9 @@ export async function importEfd({dir,db,dryRun=false,now=new Date()}){
 
 // The snapshot the site reads, and the check marked done for a week (a refusal after that keeps this data).
 async function save(db,id,kind,person,snap,runId,stamp,later,message){
-  const job=FEEDS[kind].jobs(config).find(j=>j.subject===person.id);
-  if(job)await addJob(db,id,kind,person.id,job.args);
+  // A candidate has no check of their own until their report is imported: it gets one, searching for candidates.
+  const job=FEEDS[kind].jobs(config).find(j=>j.subject===person.id)||{args:{last:surname(person),first:[person.name.split(/\s+/)[0],...(person.nicknames||[])],candidate:true}};
+  await addJob(db,id,kind,person.id,job.args);
   await statement(db,'INSERT INTO snapshots(job_id,run_id,payload,updated_at) VALUES(?,?,?,?) ON CONFLICT(job_id) DO UPDATE SET run_id=excluded.run_id,payload=excluded.payload,updated_at=excluded.updated_at',id,runId,JSON.stringify(snap),stamp).run();
   await statement(db,"UPDATE jobs SET status='ready',last_success=?,next_due=?,failures=0,error=NULL,cursor=NULL,run_id=NULL,page=0 WHERE id=?",stamp,later,id).run();
   await statement(db,'INSERT INTO refresh_history(job_id,status,at,message,row_count) VALUES(?,?,?,?,?)',id,'success',stamp,message,snap.count||snap.nAssets||0).run();
@@ -99,6 +102,6 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     if(!r.files)console.log('efd-downloads/ is empty.');
     for(const l of r.lines)console.log(l);
     if(r.summary.length)console.log(`\n${dryRun?'Would import':'Imported'}:\n  ${r.summary.join('\n  ')}`);
-    if(!dryRun&&r.summary.length)console.log('\nStart the site (npm start) to see them on each senator\'s Integrity tab.');
+    if(!dryRun&&r.summary.length)console.log('\nStart the site (npm start) to see them on each person\'s profile.');
   }finally{db?.close();}
 }
