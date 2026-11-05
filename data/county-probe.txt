@@ -1,61 +1,64 @@
-County results probe, 2026-11-05T18:58:59.593Z: what each state's results site serves, for writing its reader.
+County results probe, 2026-11-05T19:09:12.985Z: what each state's results site serves, for writing its reader.
 
-OR
-  https://results.oregonvotes.gov/ → HTTP 200, text/html, 36 KB
-      title: Oregon Secretary of State · 1,601 characters of text
-      link: My Tracked Contests → https://results.oregonvotes.gov/MyTrackedContests.aspx
-      link: Statewide Voter Turnout (details) → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx?map=TURN
-      link: FEDERAL → https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
-      link: STATE → https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
-      link: STATE SENATOR → https://results.oregonvotes.gov/resultsSW.aspx?type=SENATE&map=CTY
-      link: STATE REPRESENTATIVE → https://results.oregonvotes.gov/resultsSW.aspx?type=HOUSE&map=CTY
-      link: NONPARTISAN → https://results.oregonvotes.gov/resultsSW.aspx?type=SWNON&map=CTY
-      link: LOCAL MEASURE → https://results.oregonvotes.gov/resultsSW.aspx?type=LMEA&map=CTY
-      link: SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURE → https://results.oregonvotes.gov/resultsSW.aspx?type=MCR&map=CTY
-      link: " + item.name + " " + item.desc + " → https://results.oregonvotes.gov/SearchResults.aspx?ID=
-      link: Results By County → https://results.oregonvotes.gov/ResultsList.aspx
-      link: Voter Turnout → https://results.oregonvotes.gov/VoterTurnoutDetails.aspx
-      link: Statewide and County Exports → https://results.oregonvotes.gov/ResultsExport.aspx
-      link: Election Terminology → https://results.oregonvotes.gov/ElectionTerminology.aspx
-      data addresses in its scripts: https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us//Scripts/utils.js · https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js · https://orresultswebservices.azureedge.us/Scripts/utils.js · https://orresultswebservices.azureedge.us/ · https://orresultswebservices.azureedge.us//maps/static/js/underscore-min.js · https://orresultswebservices.azureedge.us//maps/static/js/es5-shim.min.js · https://orresultswebservices.azureedge.us//Scripts/imageMapResizer.min.js · https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-ui.js · elec-results-header · elec-results-grid-wrapper · results-gridbox-links · results-county-header · ResultsAjax.svc/GetCandidates?ElectionType= · SearchResults.aspx?ID= · /ResultsSW.aspx?type=CTYALL&cty=
-  https://sos.oregon.gov/elections/Pages/electionhistory.aspx → HTTP 200 (now https://sos.oregon.gov/elections/pages/historical-data.aspx), text/html, 134 KB
-      title: Oregon Secretary of State : Election Results & History : State of Oregon · 5,045 characters of text
-      link: County Elections Officials → https://sos.oregon.gov/elections/Pages/county-officials.aspx
-      link: Election Results & History → https://sos.oregon.gov/elections/Pages/historical-data.aspx
-      link: ​November​ ​​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-November.pdf
-      link: ​October​​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-October.pdf
-      link: ​September​ ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-September.pdf
-      link: ​August ​2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-August.pdf
-      link: ​July 2026​ → https://sos.oregon.gov/elections/Documents/Registration/2026-July.pdf
-      link: June 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-june.pdf
-      link: May 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-may.pdf
-      link: April 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-April.pdf
-      link: March 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-March.pdf
-      link: February 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-february.pdf
-      link: January 2026 → https://sos.oregon.gov/elections/Documents/Registration/2026-January.pdf
-      link: November 2025 → https://sos.oregon.gov/elections/Documents/Registration/2025-november.pdf
-      data addresses in its scripts: https://sos.oregon.gov/elections/pages/historical-data.aspx · dataLayer · /elections/_layouts/15/OID.SharePoint.StarterTemplate/scripts/data-tables-web-part.js · search-results.aspx · ./historical-data.aspx · /elections/pages/historical-data.aspx · MenuData · userTimeZoneData · webTimeZoneData · /elections/Pages/historical-data.aspx · or-dataTablesWebPart · data-lang · _layouts/15/OID.SharePoint.StarterTemplate/scripts/data.txt · datatableswebpart_pagetotalrange · datatableswebpart_pagetotal · datatableswebpart_filteredfrom · FilterData
-  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-1.html
-  saved https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY (HTTP 200) as data/county-samples/OR-2.html
-  saved https://results.oregonvotes.gov/ResultsExport.aspx (HTTP 200) as data/county-samples/OR-3.html
-  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-4.txt
-  saved https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY (HTTP 200) as data/county-samples/OR-5.txt
+AL
+  https://www2.alabamavotes.gov/electionnight/ → HTTP 200, text/html, 0 KB
+      title:  · 0 characters of text
+  https://www.sos.alabama.gov/alabama-votes/voter/election-information → HTTP 200, text/html, 41 KB
+      title: Election Information | Alabama Secretary of State · 3,511 characters of text
+      link: Business Downloads → https://www.sos.alabama.gov/business-entities/business-downloads
+      link: UCC Downloads → https://www.sos.alabama.gov/business-services/ucc-downloads
+      link: Campaign Finance Records → https://www.sos.alabama.gov/alabama-votes/media/campaign-finance-reports
+      link: City - County Lookup → https://www.sos.alabama.gov/city-county-lookup
+      link: Photo Voter ID Guide → https://www.sos.alabama.gov/sites/default/files/election-2026/PhotoVoterIDGuide.pdf
+      link: 2026 → https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026
+      table: 2026 | 2025 | 2024 | 2023
+      data addresses in its scripts: https://www.sos.alabama.gov/alabama-votes/voter/election-data · /alabama-votes/voter/election-data · alabama-votes/voter/election-data · hasDataAttrs · processData
+  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-1.html
+  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-2.txt
+  saved https://www2.alabamavotes.gov/electionnight/ (HTTP 200) as data/county-samples/AL-3.txt
 
-TX
-  https://electionresults.sos.state.tx.us/results.html → HTTP 200, text/html, 285 KB
-      title: Election Results - Tuesday, November 3, 2026 · 92,033 characters of text
-      link: (no text) → https://electionresults.sos.state.tx.us/index.html
-      link: Business Copies and Certificates → https://www.sos.texas.gov/corp/filingandothergeneralfaqs.shtml#CC
-      link: Fraud Reporting → https://sao.fraud.texas.gov/ReportFraud/
-      table: Party | Candidate | Ballots Cast
-      table: Party | Candidate | Ballots Cast
-      table: Party | Candidate | Ballots Cast
-      table: Party | Candidate | Ballots Cast
-      data addresses in its scripts: websqldatabase · datalist · hasDataAttrs · data-target · click.bs.alert.data-api · click.bs.button.data-api · data-slide-to · click.bs.carousel.data-api · click.bs.collapse.data-api · click.bs.dropdown.data-api · keydown.bs.dropdown.data-api · click.bs.modal.data-api · data-original-title · data-content · load.bs.scrollspy.data-api · click.bs.tab.data-api
-  https://results.texas-election.com/ → HTTP 200, text/html, 2 KB
-      title: ::Texas Election Night Results:: · 32 characters of text
-      data addresses in its scripts: https://fonts.googleapis.com/css?family=Lato&display=swap · scrollData · loadeddata · loadedmetadata · dataavailable · datasetchanged · datasetcomplete · metadata · hasDataAttrs · data-slick-index · data-lazy · data-srcset · data-sizes
-  saved https://electionresults.sos.state.tx.us/results.html (HTTP 200) as data/county-samples/TX-1.html
-  saved https://electionresults.sos.state.tx.us/results.html (HTTP 200) as data/county-samples/TX-2.txt
-  saved https://electionresults.sos.state.tx.us/index.html (HTTP 404) as data/county-samples/TX-3.html
-  saved https://results.texas-election.com/static/data/ElectionConstants_404.json (HTTP 200) as data/county-samples/TX-4.json
+FL
+  https://floridaelectionwatch.gov/ → HTTP 200, text/html, 23 KB
+      title: Florida Election Watch - Home Page · 2,237 characters of text
+      link: County Reporting Status → https://floridaelectionwatch.gov/CountyReportingStatus
+      link: AlachuaCounty → https://floridaelectionwatch.gov/TrackCounty/ALA
+      link: BakerCounty → https://floridaelectionwatch.gov/TrackCounty/BAK
+      link: BayCounty → https://floridaelectionwatch.gov/TrackCounty/BAY
+      link: BradfordCounty → https://floridaelectionwatch.gov/TrackCounty/BRA
+      link: BrevardCounty → https://floridaelectionwatch.gov/TrackCounty/BRE
+      link: BrowardCounty → https://floridaelectionwatch.gov/TrackCounty/BRO
+      link: CalhounCounty → https://floridaelectionwatch.gov/TrackCounty/CAL
+      link: CharlotteCounty → https://floridaelectionwatch.gov/TrackCounty/CHA
+      link: CitrusCounty → https://floridaelectionwatch.gov/TrackCounty/CIT
+      link: ClayCounty → https://floridaelectionwatch.gov/TrackCounty/CLA
+      link: CollierCounty → https://floridaelectionwatch.gov/TrackCounty/CLL
+      link: ColumbiaCounty → https://floridaelectionwatch.gov/TrackCounty/CLM
+      link: DesotoCounty → https://floridaelectionwatch.gov/TrackCounty/DES
+      data addresses in its scripts: websqldatabase · datalist · hasDataAttrs · exports · data-target · .data-api · data-slide-to · data-parent · data-original-title · DATA_KEY · data-content
+  https://results.elections.myflorida.com/ → HTTP 200, text/html, 2 KB
+      title: Florida Department of State - Election Results · 112 characters of text
+      data addresses in its scripts: WinResults
+  saved https://floridaelectionwatch.gov/ (HTTP 200) as data/county-samples/FL-1.txt
+  saved https://floridaelectionwatch.gov/ (HTTP 200) as data/county-samples/FL-2.txt
+
+KY
+  https://elect.ky.gov/results/ → HTTP 200 (now https://elect.ky.gov/results/Pages/default.aspx), text/html, 104 KB
+      title: Election Results - State Board of Elections · 6,615 characters of text
+      link: County Boards of Elections → https://elect.ky.gov/About-Us/Pages/County-Boards-of-Elections.aspx
+      link: County Clerks → https://elect.ky.gov/About-Us/Pages/County-Clerks.aspx
+      link: Results → https://elect.ky.gov/results/Pages/default.aspx
+      link: Kentucky Elections Results 2020-2029 → https://elect.ky.gov/results/2020-2029/Pages/default.aspx
+      link: 2020 → https://elect.ky.gov/results/2020-2029/Pages/2020.aspx
+      link: 2022 → https://elect.ky.gov/results/2020-2029/Pages/2022.aspx
+      link: 2023 → https://elect.ky.gov/results/2020-2029/Pages/2023.aspx
+      link: 2024 → https://elect.ky.gov/results/2020-2029/Pages/2024.aspx
+      link: 2026 → https://elect.ky.gov/results/2020-2029/Pages/2026.aspx
+      link: 2020 Primary and General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2020recap-sheets.aspx
+      link: 2022 Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2022recap-sheets.aspx
+      link: 2023Primary-Recap-Sheets → https://elect.ky.gov/results/2020-2029/Pages/2023Primary-Recap-Sheets.aspx
+      link: 2022 General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2022-General-Recap-Sheets.aspx
+      link: 2023 General Recap Sheets → https://elect.ky.gov/results/2020-2029/Pages/2023General-Recap-Sheets.aspx
+      data addresses in its scripts: /results/_vti_bin/spsdisco.aspx · /results · https://elect.ky.gov/results · /results/Pages · /results/Pages/default.aspx · Results · MenuData · userTimeZoneData · webTimeZoneData · /Candidates/Pages/Request-Voter-Registration-Data.aspx · /results/2020-2029/Pages/default.aspx · /results/2020-2029/Pages/2020.aspx · /results/2020-2029/Pages/2022.aspx · /results/2020-2029/Pages/2023.aspx · /results/2020-2029/Pages/2024.aspx · /results/2020-2029/Pages/2026.aspx · FilterData · data-ThemingId
+  https://results.enr.clarityelections.com/KY/ → HTTP 403, text/html, 0 KB
+      title: 403 Forbidden · 33 characters of text
+  saved https://elect.ky.gov/results/2020-2029/Pages/2026.aspx (HTTP 200) as data/county-samples/KY-1.html
