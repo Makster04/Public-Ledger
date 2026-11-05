@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {openDatabase} from '../scripts/sqlite.mjs';
-import {importEfd,senatorFor} from '../scripts/import-efd.mjs';
+import {importEfd,senatorFor,toSave} from '../scripts/import-efd.mjs';
 import {efdSavedReport,FEEDS,EFD_REFUSED,WEEK} from '../src/feeds.mjs';
 import {statement} from '../src/refresh.mjs';
 import config from '../data/config.json' with {type:'json'};
@@ -114,4 +114,17 @@ test("a Senate candidate's report is imported too: matched by name or folder, wi
   assert.deepEqual(JSON.parse(job.args),{last:'Talarico',first:['James'],candidate:true},'searches for candidates when eFD lets it');
   assert.ok(!FEEDS['net-worth-senate'].jobs(config).some(j=>j.subject==='talarico'),'no check of its own until a report is imported');
   d.close();
+});
+
+test('the list of reports still to save: every senator and Senate candidate in a 2026 race, with a search and a folder',()=>{
+  const all=toSave(),ids=all.map(x=>x.id);
+  const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+  const inRaces=config.people.filter(p=>p.chamber==='S'&&p.race&&(p.inOffice||p.ids)).map(p=>p.id);
+  assert.deepEqual(ids.slice().sort(),inRaces.slice().sort());assert.ok(ids.includes('ossoff')&&ids.includes('talarico'));
+  assert.ok(!ids.includes('schumer'),'a senator not on the 2026 ballot is left off the list');
+  assert.ok([...D.races,...D.liteRaces].length>0);
+  const o=all.find(x=>x.id==='ossoff'),t=all.find(x=>x.id==='talarico');
+  assert.deepEqual([o.folder,o.senator,t.senator],['efd-downloads/ossoff/',true,false]);
+  assert.match(o.search,/Filer Type "Senator", Report Type "Annual"/);assert.match(t.search,/^Last Name "Talarico", Filer Type "Candidate"/);
+  assert.ok(!toSave(new Set(['ossoff'])).some(x=>x.id==='ossoff'),'one already imported is done');
 });
