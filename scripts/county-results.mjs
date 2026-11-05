@@ -319,6 +319,9 @@ async function clarityCounties({base,st,eid,ver},get,contest){
   return rows;
 }
 
+// A race's precincts reported, as its object in a JSON file gives them ("reportedPrecincts": 21, "totalPrecincts": 21).
+const precinctsOf=o=>{if(!o||typeof o!=='object')return null;const e=Object.entries(o),n=e.find(([k])=>keyIs(k,/^(reportedprecincts|precinctsreported|precinctsreporting)$/)),of=e.find(([k])=>keyIs(k,/^(totalprecincts|precinctstotal|precinctsparticipating)$/));
+  return n&&of&&Number(of[1])>0?{n:num(n[1]),of:num(of[1])}:null;};
 // A file's JSON, or why it isn't JSON.
 async function getJson(get,u){let raw;try{raw=await get(u);}catch(e){throw new Error(`${u}: ${e.message}`);}const t=asText(raw).replace(/^\uFEFF/,'');try{return JSON.parse(t);}catch{throw new Error(`${u} isn't JSON (it starts: ${strip(t).slice(0,80)})`);}}
 const sixAtATime=async(list,fn)=>{for(let i=0;i<list.length;i+=6)await Promise.all(list.slice(i,i+6).map(fn));};
@@ -329,13 +332,15 @@ async function readOhio(src,get){
   const counties=(Array.isArray(list)?list:[]).map(x=>({name:String(x.name??x.Name??'').trim(),id:String(x.value??x.Value??x.id??'')})).filter(x=>x.name&&x.id);
   if(!counties.length)throw new Error(`getCountyList lists no counties (it reads: ${shapeOf(list)})`);
   let ids=[];try{ids=raceIds(await getJson(get,`${src.api}/getContestList`),src.contest);}catch{}
-  const rows=[],errs=[];let shape='';
+  const rows=[],errs=[];let shape='',n=0,of=0;
   await sixAtATime(counties,async c=>{
     try{const d=await getJson(get,`${src.api}/GetContestsByCounty?countyId=${encodeURIComponent(c.id)}`),ch=jsonRace(d,src.contest,ids);
       if(!ch?.length){shape||=`${c.name}'s reply: ${raceShape(d,src.contest)}`;errs.push(`${c.name}: no Senate race in its contests`);return;}
-      for(const x of ch)rows.push({county:c.name,choice:x.choice,party:x.party,votes:x.votes});}
+      for(const x of ch)rows.push({county:c.name,choice:x.choice,party:x.party,votes:x.votes});
+      const p=precinctsOf(ch.node);if(p){n+=p.n;of+=p.of;}}
     catch(e){errs.push(`${c.name}: ${e.message}`);}
   });
+  if(of>0&&n<=of)rows.reporting={n,of,unit:'precincts'};
   if(!rows.length)throw new Error(`none of the ${counties.length} counties' contests had the Senate race (${errs.slice(0,2).join('; ')}${shape?`; ${shape}`:''})`);
   rows.note=errs.length?`${errs.length} of ${counties.length} counties couldn't be read (${errs[0]})`:'';
   return rows;
@@ -347,14 +352,17 @@ async function readTexas(src,get,map){
   const v=(await getJson(get,`${src.data}/Version.json`)).___versionNo;
   if(v==null)throw new Error(`${src.data}/Version.json has no version number`);
   const k=await getJson(get,`${src.data}/ElectionConstants_${v}.json`),els=[];
-  const walk=(o,d)=>{if(!o||typeof o!=='object'||d>5)return;if(!Array.isArray(o)&&o.ID!=null&&(o.N||o.Name))els.push(o);for(const x of Array.isArray(o)?o:Object.values(o))walk(x,d+1);};walk(k,0);
+  // The elections: objects with an ID and a name, or (as electionInfo lists them) named objects keyed by their IDs.
+  const walk=(o,d)=>{if(!o||typeof o!=='object'||d>6)return;if(!Array.isArray(o)&&o.ID!=null&&(o.N||o.Name))els.push(o);
+    if(!Array.isArray(o))for(const [id,x] of Object.entries(o))if(x&&typeof x==='object'&&!Array.isArray(x)&&x.ID==null&&typeof (x.N??x.Name)==='string'&&(x.Y!=null||x.ET!=null))els.push({ID:id,...x});
+    for(const x of Array.isArray(o)?o:Object.values(o))walk(x,d+1);};walk(k,0);
   const title=e=>String(e.N||e.Name||'');
   const el=els.find(e=>/2026/.test(JSON.stringify(e))&&/general/i.test(title(e))&&!/primary|runoff|special/i.test(title(e)))||k.currentelectionInfo;
   if(el?.ID==null)throw new Error(`no election in ElectionConstants_${v}.json (it reads: ${shapeOf(k)})`);
-  // The election's folder: under its ID, as the site's RSS files are (the page's own rule for it isn't known yet).
+  // The election's folder: data/election/<ID>, as the site's own page makes it (setElectionUrl), or another name it may have.
   let eu=null,ev=null;const tried=[];
   const paths=Object.values(el).filter(x=>typeof x==='string'&&/\//.test(x)&&!/\s/.test(x)&&!/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(x)).map(x=>/^https?:/.test(x)?x.replace(/\/$/,''):`${src.data}/${x.replace(/^\/|\/$/g,'')}`);
-  for(const u of [...paths,`${src.data}/${el.ID}`,`${src.data}/election/${el.ID}`,`${src.data}/Election/${el.ID}`,`${src.data}/elections/${el.ID}`]){
+  for(const u of [`${src.data}/election/${el.ID}`,...paths,`${src.data}/${el.ID}`]){
     try{const x=await getJson(get,`${u}/Version.json`);if(x?.___versionNo!=null){eu=u;ev=x.___versionNo;break;}tried.push(`${u}/Version.json: no version number`);}catch(e){tried.push(e.message);}
   }
   if(!eu)throw new Error(`the election's folder wasn't found (election ${el.ID}, "${title(el)}", reads: ${shapeOf(el)}; tried ${tried.join('; ')})`);
@@ -365,7 +373,7 @@ async function readTexas(src,get,map){
   const ids=[...new Set([...raceIds(race,src.contest),...raceIds(federal,src.contest)])],names=namesById(federal||{});
   // The counties by their ids: a list of {id, name} objects, or an object of id → name.
   const byId=new Map(),cl=lookups?.County??lookups?.county;
-  if(flatList(cl))for(const x of cl){const keys=Object.keys(x),ik=keys.find(q=>keyIs(q,/^(id|countyid|c|cid|value|code)$/)),nk=keys.find(q=>keyIs(q,/^(name|n|countyname|cn|desc)$/));if(ik&&nk)byId.set(String(x[ik]),String(x[nk]));}
+  if(flatList(cl))for(const x of cl){const keys=Object.keys(x),ik=keys.find(q=>keyIs(q,/^(mid|id|countyid|countyfips|fips|c|cid|value|code)$/)),nk=keys.find(q=>keyIs(q,/^(cn|countyname|name|n|desc)$/));if(ik&&nk)byId.set(String(x[ik]),String(x[nk]));}
   else if(cl&&typeof cl==='object')for(const [id,n] of Object.entries(cl))if(typeof n==='string')byId.set(id,n);
   const counties=countyIds(map.counties.map(c=>c.name),new Map([...byId].map(([id,n])=>[id,map.counties.find(c=>countyKey(c.name)===countyKey(n))?.name||n])));
   const rows=nestedCounties(county,{contest:src.contest,ids,names,counties});
@@ -463,12 +471,18 @@ export function raceShape(data,contest){
 }
 // The keys results files use, whatever their case and punctuation ("Candidate Name", "candidateName", "N").
 const keyIs=(k,re)=>re.test(letters(k));
-const NAME_KEY=/^(name|candidatename|candidate|choicename|choice|ballotname|fullname|ballotoptionname|selectionname|displayname|candidatedisplayname|candidatefullname|desc|description|cn|n)$/;
-const VOTE_KEY=/^(votes|totalvotes|votecount|candidatevotes|votetotal|numvotes|vote|v|tv|total)$/,PARTY_KEY=/^(party|partyname|partycode|partyabbreviation|partyabbr|politicalparty|p)$/;
+const NAME_KEY=/^(name|candidatename|candidate|choicename|choice|ballotname|fullname|ballotoptionname|selectionname|displayname|candidatedisplayname|candidatefullname|primarycandidate|desc|description|cn|n)$/;
+// Ohio's candidates carry the contest's "totalVotes" beside their own "voteCount", so a count is taken by the first of these
+// a list has.
+const VOTE_KEYS=['votes','votecount','vcount','candidatevotes','votetotal','numvotes','vote','v','tv','totalvotes','total'];
+const PARTY_KEY=/^(party|partyname|partycode|partyabbreviation|partyabbr|politicalparty|candidateparty|p)$/;
 const ID_KEY=/^(id|choiceid|candidateid|candid|cid|ballotoptionid|i)$/;
 const flatList=v=>Array.isArray(v)&&v.length>0&&v.every(x=>x&&typeof x==='object'&&!Array.isArray(x));
 // A key of a list's items that holds a plain value (a name, a count), not a list of its own (Louisiana's races hold "Choice").
 const plainKey=(list,re)=>Object.keys(list[0]).find(k=>keyIs(k,re)&&list.some(x=>x[k]!=null&&typeof x[k]!=='object'));
+const voteKey=list=>{const keys=Object.keys(list[0]).filter(k=>list.some(x=>x[k]!=null&&typeof x[k]!=='object'));for(const p of VOTE_KEYS){const k=keys.find(q=>letters(q)===p);if(k)return k;}};
+// The candidates as a list: a list of objects, or an object of them keyed by their ids (each given its key as "__id").
+const asList=v=>flatList(v)?v:v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).length&&Object.values(v).every(x=>x&&typeof x==='object'&&!Array.isArray(x))?Object.entries(v).map(([k,x])=>({__id:k,...x})):null;
 const num=v=>Number(String(v??'').replace(/,/g,''))||0;
 const isRace=(v,contest)=>typeof v==='string'&&contest.test(v.trim())&&!/state senat/i.test(v);
 // A key naming the Senate race itself, as Delaware keys its results ("USSenator").
@@ -477,9 +491,9 @@ const senateKey=k=>/^(us|unitedstates)senat/.test(letters(k));
 // called), with their ids when they have them. names: candidate ids → {name, party}, for lists that give only ids.
 export function choicesIn(o,names=null,depth=0){
   if(!o||typeof o!=='object'||depth>4)return null;
-  for(const v of Array.isArray(o)?[o]:Object.values(o)){
-    if(!flatList(v))continue;
-    const nk=plainKey(v,NAME_KEY),vk=plainKey(v,VOTE_KEY),pk=plainKey(v,PARTY_KEY),ik=plainKey(v,ID_KEY);
+  for(const raw of Array.isArray(o)?[o]:Object.values(o)){
+    const v=asList(raw);if(!v)continue;
+    const nk=plainKey(v,NAME_KEY),vk=voteKey(v),pk=plainKey(v,PARTY_KEY),ik=plainKey(v,ID_KEY)??('__id' in v[0]?'__id':undefined);
     if(vk&&(nk||(ik&&names)))return v.map(x=>{const id=ik!=null?String(x[ik]):null,known=id!=null&&names?.get(id);
       return {...(id!=null?{id}:{}),choice:String((nk?x[nk]:'')||known?.name||'').trim(),party:String((pk?x[pk]:'')||known?.party||'').trim(),votes:num(x[vk])};}).filter(x=>x.choice);
   }
@@ -493,10 +507,10 @@ export function jsonRace(data,contest,ids=[],names=null){
   const walk=(o,depth)=>{
     if(hit||!o||typeof o!=='object'||depth>8)return;
     if(!Array.isArray(o)){
-      for(const [k,v] of Object.entries(o))if((want.has(k)||senateKey(k))&&v&&typeof v==='object'){const c=choicesIn(v,names);if(c?.length){hit=c;return;}}
+      for(const [k,v] of Object.entries(o))if((want.has(k)||senateKey(k))&&v&&typeof v==='object'){const c=choicesIn(v,names);if(c?.length){hit=c;hit.node=v;return;}}
       const vals=Object.entries(o);
       if(vals.some(([,v])=>isRace(v,contest))||want.size&&vals.some(([k,v])=>keyIs(k,/^(id|oid|officeid|raceid|contestid|contestobjectid|officeinelectionid|o|i|r)$/)&&want.has(String(v)))){
-        const c=choicesIn(o,names);if(c?.length){hit=c;return;}}
+        const c=choicesIn(o,names);if(c?.length){hit=c;hit.node=o;return;}}
     }
     for(const v of Array.isArray(o)?o:Object.values(o))walk(v,depth+1);
   };
@@ -552,7 +566,7 @@ export function nestedCounties(data,{contest,ids=[],names=null,counties,oneRace=
   const rows=[],done=new Set(),add=(county,o)=>{if(done.has(county))return;const c=jsonRace(o,contest,ids,names)||(oneRace?choicesIn(o,names):null);if(!c?.length)return;done.add(county);for(const x of c)rows.push({county,choice:x.choice,party:x.party,votes:x.votes});};
   const byCounty=(o,depth)=>{if(!o||typeof o!=='object'||depth>6)return;
     if(Array.isArray(o)){for(const x of o){const c=x&&typeof x==='object'&&!Array.isArray(x)?countyIdOf(x,counties):null;if(c)add(c,x);else byCounty(x,depth+1);}}
-    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties):null;if(c)add(c,v);else byCounty(v,depth+1);}};
+    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties)??(!Array.isArray(v)?countyIdOf(v,counties):null):null;if(c)add(c,v);else byCounty(v,depth+1);}};
   byCounty(data,0);
   if(rows.length)return rows;
   // By race: the race's node, then a list of candidates in each county under it.
@@ -566,7 +580,7 @@ export function nestedCounties(data,{contest,ids=[],names=null,counties,oneRace=
   const under=(o,depth)=>{if(!o||typeof o!=='object'||depth>5)return;
     if(Array.isArray(o)){for(const x of o){const c=x&&typeof x==='object'&&!Array.isArray(x)?countyIdOf(x,counties):null;
       if(c&&!done.has(c)){const ch=choicesIn(x,names);if(ch?.length){done.add(c);for(const y of ch)rows.push({county:c,choice:y.choice,party:y.party,votes:y.votes});continue;}}under(x,depth+1);}}
-    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties):null;
+    else for(const [k,v] of Object.entries(o)){const c=v&&typeof v==='object'?countyOf(k,counties)??(!Array.isArray(v)?countyIdOf(v,counties):null):null;
       if(c&&!done.has(c)){const ch=choicesIn(v,names);if(ch?.length){done.add(c);for(const y of ch)rows.push({county:c,choice:y.choice,party:y.party,votes:y.votes});continue;}}under(v,depth+1);}};
   under(race,0);
   return rows;

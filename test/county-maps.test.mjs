@@ -416,36 +416,41 @@ test("Ohio: each county's contests read for the Senate race, found by its name o
   assert.deepEqual(oh.race.counties[f('Ross')],{[kh]:1500,[kb]:900});
   const missing=await countyRace(D,'S-OH',{maps:async st=>map(st),get:async u=>{if(u.endsWith('getCountyList'))return JSON.stringify(list);const x=real('Adams');x.contestResults[0].choices=[{who:husted,n:1}];return JSON.stringify(x);}});
   assert.ok(missing.lines.some(l=>/Adams's reply: the race is named in \{contestDisplayName: "U\.S\. Senator - Unexpired Term ", choices: \[1× \{who: "Jon Husted", n: 1\}\]\}/.test(l)),'the race\'s own object, to show its candidates\' keys');
+  // Ohio's own reply for Adams County, as the probe saved it: write-ins and minor parties are "other"; the contest's
+  // "totalVotes" on each candidate is not their own count; precincts reported added up.
+  const adams=fs.readFileSync(new URL('../data/county-samples/OH-1.json',import.meta.url),'utf8');
+  const own=await countyRace(D,'S-OH',{maps:async st=>map(st),get:async u=>u.endsWith('getCountyList')?JSON.stringify([{name:'Adams',value:'_55A742EA504C09A3E0633390EE0AE290'}]):u.endsWith('getContestList')?'[]':adams});
+  assert.deepEqual(own.race.counties[f('Adams')],{[kh]:6099,[kb]:2123,other:704});assert.equal(own.race.total,8926);assert.deepEqual(own.race.reporting,{n:21,of:21,unit:'precincts'});
   assert.match(shapeOf(real('Adams')),/isElectionOfficial: true, and contestResults: \[1×\], lastUpdated: string\}$/,'keys past the tenth by name');
 });
 
 test('Texas: its data files found as its own page finds them, then the race in each county by its id',async()=>{
-  const [talarico,paxton]=raceCandidates(D,'S-TX').map(c=>c.name),data='https://results.texas-election.com/static/data';
-  const files={[`${data}/Version.json`]:{___versionNo:'7'},
-    [`${data}/ElectionConstants_7.json`]:{showLandingPage:false,currentelectionInfo:{ID:51,N:'2026 March 3rd Republican Primary Election'},elections:[{ID:51,N:'2026 March 3rd Republican Primary Election'},{ID:53,N:'2026 November 3rd General Election',ED:'11/03/2026'}]},
-    [`${data}/53/Version.json`]:{___versionNo:'12',elecDate:'11/03/2026'},
-    [`${data}/53/12/Race.json`]:{OfficeTypes:[{OfficeType:'FEDERAL OFFICES',Races:[{id:'1001',N:'U. S. Senator'},{id:'1002',N:'U. S. Representative District 1'}]}]},
-    [`${data}/53/12/Federal.json`]:{Races:[{id:'1001',N:'U. S. Senator',C:[{id:'5',N:talarico,P:'DEM',V:9},{id:'6',N:paxton,P:'REP',V:9}]}]},
-    [`${data}/53/12/Lookups.json`]:{County:[{id:'1',N:'ANDERSON'},{id:'101',N:'HARRIS'}]},
-    [`${data}/53/12/County.json`]:{'1':{Races:{'1001':{C:[{id:'5',V:3000},{id:'6',V:12000}]},'1002':{C:[{id:'7',V:1}]}}},'101':{Races:{'1001':{C:[{id:'5',V:800000},{id:'6',V:600000}]}}}}};
+  const [talarico,paxton]=raceCandidates(D,'S-TX').map(c=>c.name),data='https://results.texas-election.com/static/data',el=`${data}/election/53`;
+  // As the site keeps them: elections keyed by their IDs in electionInfo, each election under data/election/<ID>/<version>,
+  // counties listed by MID and name (CN), and the results keyed by county, then by race.
+  const files={[`${data}/Version.json`]:{___versionNo:404},
+    [`${data}/ElectionConstants_404.json`]:{showLandingPage:false,currentelectionInfo:{ID:'51',N:'2026 March 3rd Republican Primary Election'},
+      electionInfo:{'2026':{G:{'51':{O:1,N:'2026 March 3rd Republican Primary Election',Y:2026,ET:'P'},'53':{O:2,N:'2026 November 3rd General Election',Y:2026,ET:'G'}}}}},
+    [`${el}/Version.json`]:{___versionNo:12,elecDate:'11/03/2026'},
+    [`${el}/12/Race.json`]:{OfficeTypes:[{OfficeType:'FEDERAL OFFICES',Races:[{id:'1001',N:'U. S. Senator'},{id:'1002',N:'U. S. Representative District 1'}]}]},
+    [`${el}/12/Federal.json`]:{Races:[{id:'1001',N:'U. S. Senator',C:[{id:'5',N:talarico,P:'DEM',V:9},{id:'6',N:paxton,P:'REP',V:9}]}]},
+    [`${el}/12/Lookups.json`]:{County:[{MID:'48001',CN:'ANDERSON'},{MID:'48201',CN:'HARRIS'}]},
+    [`${el}/12/County.json`]:{'48001':{N:'ANDERSON',Summary:{},Races:{'1001':{C:{'5':{V:3000},'6':{V:12000}}},'1002':{C:{'7':{V:1}}}}},
+      '48201':{N:'HARRIS',Summary:{},Races:{'1001':{C:{'5':{V:800000},'6':{V:600000}}}}}}};
   const get=async u=>{if(files[u])return JSON.stringify(files[u]);throw new Error('HTTP 404');};
   const r=await countyRace(D,'S-TX',{maps:async st=>map(st),get}),f=n=>map('TX').counties.find(c=>c.name===n).fips,[kt,kp]=raceCandidates(D,'S-TX').map(c=>c.key);
-  assert.deepEqual(r.race.counties[f('Harris')],{[kt]:800000,[kp]:600000},'county 101 is Harris; candidates named by their ids');
+  assert.deepEqual(r.race.counties[f('Harris')],{[kt]:800000,[kp]:600000},'county 48201 is Harris; candidates keyed by their ids, named from Federal.json');
   assert.deepEqual(r.race.counties[f('Anderson')],{[kt]:3000,[kp]:12000},'the November general, not the current primary');
-  // Nested by race instead: the race holds its counties.
-  files[`${data}/53/12/County.json`]={'1001':{'1':{C:[{id:'5',V:1}]},'101':{C:[{id:'6',V:2}]}}};
+  // Nested by race instead: the race holds its counties, each naming itself.
+  files[`${el}/12/County.json`]={'1001':{a:{N:'ANDERSON',C:[{id:'5',V:1}]},b:{N:'HARRIS',C:[{id:'6',V:2}]}}};
   assert.equal((await countyRace(D,'S-TX',{maps:async st=>map(st),get})).race.total,3);
-  // The election's folder under another name: tried in turn.
-  for(const k of Object.keys(files).filter(k=>k.includes('/53/')))files[k.replace('/53/','/election/53/')]=files[k];
-  delete files[`${data}/53/Version.json`];
-  assert.equal((await countyRace(D,'S-TX',{maps:async st=>map(st),get})).race.total,3);
-  delete files[`${data}/election/53/Version.json`];
+  // The election's folder not where the site keeps it: each address tried is named.
+  delete files[`${el}/Version.json`];
   const lost=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
-  assert.ok(lost.lines.some(l=>/the election's folder wasn't found \(election 53, "2026 November 3rd General Election", reads: .*tried https:\/\/results\.texas-election\.com\/static\/data\/53\/Version\.json: HTTP 404/.test(l)),'which address failed');
-  files[`${data}/53/Version.json`]={___versionNo:'12'};
-  files[`${data}/53/12/County.json`]={Counties:'later'};
+  assert.ok(lost.lines.some(l=>/the election's folder wasn't found \(election 53, "2026 November 3rd General Election", reads: .*tried https:\/\/results\.texas-election\.com\/static\/data\/election\/53\/Version\.json: HTTP 404; https:\/\/results\.texas-election\.com\/static\/data\/53\/Version\.json: HTTP 404\)/.test(l)),'which address failed');
+  files[`${el}/Version.json`]={___versionNo:12};files[`${el}/12/County.json`]={Counties:'later'};
   const bad=await countyRace(D,'S-TX',{maps:async st=>map(st),get});
-  assert.ok(bad.lines.some(l=>/no Senate race by county in .*\/53\/12\/County\.json \(race ids 1001; 2 counties listed; County\.json reads: \{Counties: "later"\}/.test(l)));
+  assert.ok(bad.lines.some(l=>/no Senate race by county in .*\/election\/53\/12\/County\.json \(race ids 1001; 2 counties listed; County\.json reads: \{Counties: "later"\}/.test(l)));
 });
 
 test("Louisiana: the race's candidates by id, then its votes by parish, parishes numbered alphabetically",async()=>{
