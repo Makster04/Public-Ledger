@@ -824,7 +824,10 @@ export const SAMPLES={
   // Texas's November 3, 2026 results are on its other site; the older one still shows 2024.
   TX:[{u:'https://electionresults.sos.state.tx.us/results.html',kind:'raw'},{u:'https://electionresults.sos.state.tx.us/results.html',kind:'scripts'},'https://electionresults.sos.state.tx.us/index.html',
     'https://results.texas-election.com/static/data/ElectionConstants_404.json'],
-  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY',{u:'https://results.oregonvotes.gov/ResultsExport.aspx',kind:'raw'}],
+  // Oregon's pages load their scripts from a web service (orresultswebservices.azureedge.us) that may fill in the results.
+  OR:['https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY','https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY',{u:'https://results.oregonvotes.gov/ResultsExport.aspx',kind:'raw'},
+    {u:'https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY',kind:'scripts'},
+    {u:'https://results.oregonvotes.gov/ResultsSW.aspx?type=CTYALL&cty=20&map=CTY',kind:'context',patterns:['orresultswebservices','$.ajax','getJSON','fetch(','.json','api/']}],
   DE:['https://elections.delaware.gov/results/enr/Election_ByCountyWithWilmington_ID_GE2026.json'],
   OH:['https://liveresults.ohiosos.gov/Api/v1/Contest/GetContestsByCounty?countyId=_55A742EA504C09A3E0633390EE0AE290'],
   AR:[{u:'https://arkansas.tally-enr.com/',kind:'context',patterns:['GetContestResults','GetElectionList','GetElectionInfo','-counties.json','apiUrl','X-Results-Token']}],
