@@ -39,6 +39,11 @@ export function senatorFor(file,report,people=SENATORS()){
 
 // The reports still to save: each senator and Senate candidate in a 2026 race without an imported annual or candidate
 // report, with what to search for on eFD and the folder to save it in. have: the ids with a net worth on file.
+// The people whose Senate annual report is already saved in the local database (by the refresh or an earlier import).
+export async function savedAnnuals(db){
+  const {results}=await statement(db,"SELECT job_id FROM snapshots WHERE job_id LIKE 'net-worth-senate:%'").all();
+  return new Set((results||[]).map(r=>String(r.job_id).split(':')[1]));
+}
 export function toSave(have=new Set(),people=SENATORS().filter(p=>p.race)){
   return people.filter(p=>!have.has(p.id)).map(p=>({id:p.id,name:p.name,state:p.state,senator:!!p.inOffice,folder:`efd-downloads/${p.id}/`,
     search:p.inOffice?`Last Name "${surname(p)}", Filer Type "Senator", Report Type "Annual"; open the newest Annual Report`
@@ -105,8 +110,8 @@ async function save(db,id,kind,person,snap,runId,stamp,later,message){
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const dir=path.join(root,'efd-downloads'),dbFile=path.join(root,'.local','records.sqlite'),dryRun=process.argv.includes('--dry-run');
   if(process.argv.includes('--list')){
-    const have=new Set();
-    if(fs.existsSync(dbFile)){const d=openDatabase(dbFile);try{for(const r of await statement(d,"SELECT job_id FROM snapshots WHERE job_id LIKE 'net-worth-senate:%'").all())have.add(r.job_id.split(':')[1]);}finally{d.close();}}
+    let have=new Set();
+    if(fs.existsSync(dbFile)){const d=openDatabase(dbFile);try{have=await savedAnnuals(d);}finally{d.close();}}
     const list=toSave(have);
     for(const x of list)fs.mkdirSync(path.join(root,x.folder),{recursive:true});
     console.log(list.length?`${list.length} reports to save. On https://efdsearch.senate.gov/search/home/ tick the box to agree, then for each one search as below, open the report, and save the page (Safari: File, Save As, Format "Page Source"; Chrome: File, Save Page As, "Webpage, HTML Only") into its folder, which is made for you:\n`:'Every senator and Senate candidate in a 2026 race has a report imported.');

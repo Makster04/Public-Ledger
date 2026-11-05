@@ -282,35 +282,52 @@ export function boxHeads(html){
   const title=strip(/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1]||''),h=[...String(html).matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi)].map(m=>strip(m[1])).filter(Boolean).slice(0,5);
   return `no results boxes on it; title "${title}"${h.length?`, headings: ${h.join('; ')}`:''}, ${Math.round(String(html).length/1024)} KB`;
 }
-// A race on a page laid out by its own markup: its heading (an element whose own text is the race's name), then the
-// candidates after it, up to the next heading of the same kind: the rows of a table, each a name and a vote count, or
-// else lines of text ending in a vote count (and a percentage). {rows, after} with the text that follows the heading, or
-// null without the race.
-export function readRaceSection(html,contest){
-  const h=String(html),re=/<(h[1-6]|div|span|td|th|caption|strong|b|p|a|label|legend|button)\b([^>]*)>([^<]{3,160})<\/\1>/gi;let m;
-  while((m=re.exec(h))){const t=decode(m[3]).replace(/\s+/g,' ').trim();if(contest.test(t)&&!/state senat/i.test(t))break;}
-  if(!m)return null;
-  // The section: to the next element like the heading (same tag and class), at most 60 KB on.
-  const start=re.lastIndex,cls=/\bclass\s*=\s*["']([^"']*)["']/i.exec(m[2])?.[1],tail=h.slice(start,start+60000);
-  const next=new RegExp(`<${m[1]}\\b[^>]*${cls?`class\\s*=\\s*["']${cls.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}["']`:''}[^>]*>`,'i').exec(tail);
-  const part=next&&next.index>0?tail.slice(0,next.index):tail,rows=[];
-  const count=s=>/^\d{1,3}(,\d{3})*$|^\d+$/.test(s)?Number(s.replace(/,/g,'')):null,pctLike=s=>/%$/.test(s)||/^\d*\.\d+$/.test(s);
-  for(const tr of part.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)){
+// A race on a page laid out by its own markup: an element whose own text is the race's name, then the candidates after
+// it: the rows of a table, each a name and a vote count, or lines of text ending in a vote count (and a percentage). The
+// race's name can also be a link in a menu of races, so each place it is named is tried until one has candidates after it:
+// first up to the next element like it (same tag and class), then the first table after it, then the first unbroken run of
+// candidate lines. {rows, after} with the text that follows it, or null when the race isn't named.
+const COUNT=s=>/^\d{1,3}(,\d{3})*$|^\d+$/.test(s)?Number(s.replace(/,/g,'')):null,PCT_LIKE=s=>/%$/.test(s)||/^\d*\.\d+$/.test(s);
+const PARTY_CELL=/^\(?(rep|dem|lib|grn|npa|ind|wri|[A-Z]{3})\)?$|republican|democrat|libertarian|green|independent|no party/i;
+function tableRows(html){
+  const rows=[];
+  for(const tr of String(html).matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)){
     const cells=[...tr[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(c=>strip(c[1]));
-    const name=cells.find(c=>/[a-z]{2}/i.test(c)&&!pctLike(c)),votes=cells.map(count).find(v=>v!=null);
+    const name=cells.find(c=>/[a-z]{2}/i.test(c)&&!PCT_LIKE(c)&&!PARTY_CELL.test(c)),votes=cells.map(COUNT).find(v=>v!=null);
     if(!name||votes==null||/^(total|candidate|name|choice|over ?votes|under ?votes|blank)/i.test(name))continue;
-    const party=cells.find(c=>c!==name&&/^\(?(rep|dem|lib|grn|npa|ind|wri|[A-Z]{3})\)?$|republican|democrat|libertarian|green|independent|no party/i.test(c))||'';
-    rows.push({choice:name.replace(/\s*\((rep|dem|lib|grn|npa|ind|[A-Z]{3})\)\s*$/i,'').trim(),party,votes});
+    rows.push({choice:name.replace(/\s*\((rep|dem|lib|grn|npa|ind|[A-Z]{3})\)\s*$/i,'').trim(),party:cells.find(c=>c!==name&&PARTY_CELL.test(c))||'',votes});
   }
-  if(!rows.length){
-    // Text lines: "Ashley Moody (REP) 123,456 55.20%".
-    const text=decode(part.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,' ').replace(/<\/?(div|p|li|tr|br|h[1-6]|table|ul)\b[^>]*>/gi,'\n').replace(/<[^>]+>/g,' '));
-    for(const line of text.split('\n').map(l=>l.replace(/\s+/g,' ').trim()).filter(Boolean)){
-      const x=/^(.*?[a-z]{2}.*?)\s+(?:\(([A-Z]{2,4})\)\s+)?(\d{1,3}(?:,\d{3})+|\d+)(?:\s+\d+(?:\.\d+)?\s?%)?$/i.exec(line);
-      if(x&&!/^(total|precincts|ballots|registered|turnout)/i.test(x[1]))rows.push({choice:x[1].replace(/\s*\(([A-Z]{2,4})\)$/,'').trim(),party:x[2]||'',votes:Number(x[3].replace(/,/g,''))});
-    }
+  return rows;
+}
+// Lines of text, "Ashley Moody (REP) 123,456 55.20%" or a name and a count on lines of their own; only the first unbroken
+// run of them (once one is read, the next line that isn't one ends it) when firstRun is set.
+function lineRows(html,firstRun=false){
+  const text=decode(String(html).replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,' ').replace(/<\/?(div|p|li|tr|td|th|br|h[1-6]|table|ul|span)\b[^>]*>/gi,'\n').replace(/<[^>]+>/g,' '));
+  const lines=text.split('\n').map(l=>l.replace(/\s+/g,' ').trim()).filter(Boolean),rows=[];
+  for(let i=0;i<lines.length;i++){
+    const x=/^(.*?[a-z]{2}.*?)\s+(?:\(([A-Z]{2,4})\)\s+)?(\d{1,3}(?:,\d{3})+|\d+)(?:\s+\d+(?:\.\d+)?\s?%)?$/i.exec(lines[i]);
+    if(x&&!/^(total|precincts|ballots|registered|turnout)/i.test(x[1])){rows.push({choice:x[1].replace(/\s*\(([A-Z]{2,4})\)$/,'').trim(),party:x[2]||'',votes:Number(x[3].replace(/,/g,''))});continue;}
+    // A name, its party perhaps, then its count, on lines of their own.
+    const n=lines[i],p=lines[i+1]&&PARTY_CELL.test(lines[i+1])?lines[i+1]:'',v=COUNT(lines[i+(p?2:1)]||'');
+    if(/[a-z]{2}/i.test(n)&&!PCT_LIKE(n)&&!PARTY_CELL.test(n)&&v!=null&&!/^(total|precincts|ballots|registered|turnout|candidate|votes)/i.test(n)){rows.push({choice:n,party:p,votes:v});i+=p?2:1;continue;}
+    if(firstRun&&rows.length)break;
   }
-  return {rows,after:strip(part).slice(0,300)};
+  return rows;
+}
+export function readRaceSection(html,contest){
+  const h=String(html),re=/<(h[1-6]|div|span|td|th|caption|strong|b|p|a|label|legend|button)\b([^>]*)>([^<]{3,160})<\/\1>/gi;let m,named=false,after='';
+  while((m=re.exec(h))){
+    const t=decode(m[3]).replace(/\s+/g,' ').trim();if(!contest.test(t)||/state senat/i.test(t))continue;named=true;
+    const start=re.lastIndex,cls=/\bclass\s*=\s*["']([^"']*)["']/i.exec(m[2])?.[1],tail=h.slice(start,start+60000);
+    const next=new RegExp(`<${m[1]}\\b[^>]*${cls?`class\\s*=\\s*["']${cls.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}["']`:''}[^>]*>`,'i').exec(tail);
+    const part=next&&next.index>0?tail.slice(0,next.index):'';
+    let rows=part?tableRows(part):[];if(!rows.length&&part)rows=lineRows(part);
+    if(!rows.length){const t=/<table\b[\s\S]*?<\/table>/i.exec(tail.slice(0,20000));if(t)rows=tableRows(t[0]);}
+    if(!rows.length)rows=lineRows(tail.slice(0,20000),true);
+    if(rows.length)return {rows,after:strip(part||tail).slice(0,300)};
+    after||=strip(tail).slice(0,300);
+  }
+  return named?{rows:[],after}:null;
 }
 // A state with a page per county on its own site (Florida Election Watch's /TrackCounty/ALA …): the list page's links to
 // them, each county named by its link ("AlachuaCounty"), each page read for the race, six at a time.

@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {openDatabase} from '../scripts/sqlite.mjs';
-import {importEfd,senatorFor,toSave} from '../scripts/import-efd.mjs';
+import {importEfd,senatorFor,toSave,savedAnnuals} from '../scripts/import-efd.mjs';
 import {efdSavedReport,FEEDS,EFD_REFUSED,WEEK} from '../src/feeds.mjs';
 import {statement} from '../src/refresh.mjs';
 import config from '../data/config.json' with {type:'json'};
@@ -127,4 +127,16 @@ test('the list of reports still to save: every senator and Senate candidate in a
   assert.deepEqual([o.folder,o.senator,t.senator],['efd-downloads/ossoff/',true,false]);
   assert.match(o.search,/Filer Type "Senator", Report Type "Annual"/);assert.match(t.search,/^Last Name "Talarico", Filer Type "Candidate"/);
   assert.ok(!toSave(new Set(['ossoff'])).some(x=>x.id==='ossoff'),'one already imported is done');
+});
+
+test('the list reads who is already saved from the local database itself',async()=>{
+  const d=db();
+  try{
+    assert.deepEqual([...await savedAnnuals(d)],[],'an empty database: everyone is still to save');
+    d.exec("INSERT INTO jobs(id,kind,subject,args) VALUES('net-worth-senate:ossoff','net-worth-senate','ossoff','{}'),('trades-senate:ossoff','trades-senate','ossoff','{}')");
+    d.exec("INSERT INTO snapshots(job_id,run_id,payload,updated_at) VALUES('net-worth-senate:ossoff','r','{}','2026-11-05'),('trades-senate:ossoff','r','{}','2026-11-05')");
+    const have=await savedAnnuals(d);
+    assert.deepEqual([...have],['ossoff'],'only annual reports count, not trade reports');
+    assert.ok(!toSave(have).some(x=>x.id==='ossoff'));
+  }finally{d.close();}
 });
