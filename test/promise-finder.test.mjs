@@ -21,7 +21,7 @@ test('commitments: promises, stances and refusals, not reports or opinions',()=>
   const lawler=F.commitmentIn('If the Senate reduces the SALT number, I will vote NO, and the bill will fail in the House.');
   assert.deepEqual([lawler.kind,lawler.side,lawler.conditional],['promise','oppose',true]);
   assert.equal(F.commitmentIn('And we will do everything in our power to stop it.').side,'oppose');
-  assert.deepEqual(F.commitmentIn('Madam President, I rise in support of the Laken Riley Act.'),{kind:'stance',side:'support',sentence:'Madam President, I rise in support of the Laken Riley Act.',conditional:false});
+  assert.deepEqual(F.commitmentIn('Madam President, I rise in support of the Laken Riley Act.'),{kind:'stance',side:'support',sentence:'Madam President, I rise in support of the Laken Riley Act.',at:17,conditional:false});
   assert.equal(F.commitmentIn("I won't vote for a bill that cuts Medicaid.").side,'oppose');
   assert.equal(F.commitmentIn('We will continue to support our allies in Ukraine.').side,'support');
   assert.deepEqual(F.commitmentIn('Ossoff Vows to Block the Nominee','Ossoff')?.kind,'promise');
@@ -247,7 +247,29 @@ test('from the third full run: every member\'s vote on a saved roll call, Senate
   assert.equal(F.commitmentIn('Murphy Calls For Delay of Iran Sanctions Vote','Murphy').side,'unclear');
   assert.equal(F.commitmentIn('Heinrich Calls For Removal Of Arctic Refuge Drilling From Republican Budget','Heinrich').side,'unclear');
   assert.equal(F.commitmentIn('Gillibrand Calls on Congress to Pass the PACT Act','Gillibrand').side,'support');
-  // Subject links skip a headline that slams something, an Act the finder doesn't know, and nominations for bills.
+});
+
+test('from the fourth full run: what a sentence is about against the kind of measure linked, and parts of a bill',()=>{
+  // Parts of a bill, not the bill; the provisions someone supports, not a commitment on the bill.
+  assert.equal(F.commitmentIn("I also support this bill's provisions which would tackle our housing crisis.").side,'unclear');
+  assert.equal(F.commitmentIn('This bill includes provisions I support, some even that I authored.'),null);
+  assert.equal(F.commitmentIn('We urge the Senate to protect athletes and vote no.'),null);
+  assert.ok(F.commitmentIn('Duckworth Urges Passage of Her Bill to Improve Nationwide Air Monitoring','Duckworth').intro);
+  assert.equal(F.commitmentIn('Sen. Cramer Calls for Congressional Review of Proposals to Improve Meatpacking Industry','Cramer').side,'unclear');
+  assert.deepEqual(['I support this.','I support this 1-year proposal.','the measure Senator Grassley and I support','the resolution that I will ask to be considered'].map(F.pointsAtPending),[true,false,false,false]);
+  assert.deepEqual(['119-pn-12','119-sres-8','119-hjres-3','119-hr-1','roll:S119-4'].map(F.measureKind),['nomination','simple','resolution','bill','other']);
+  assert.equal(F.mentionAt('While the GENIUS Act provides a roadmap, I support the preservation of State protections.','119-s-1582',[{name:' genius act ',keys:['119-s-1582']}]),10);
+  // A speech filed under a housing bill's title, about a war-powers resolution or a military operation, or another bill.
+  const names=F.billNames([{key:'119-hr-6644',title:'Housing for the 21st Century Act'}]);
+  const index=F.subjectIndex([{key:'119-hr-6644',text:'Housing for the 21st Century Act: housing supply, mortgages and rent'},...Array.from({length:50},(_,i)=>({key:`119-hr-${i+1}`,text:`Bill number ${i+1} on highways and post offices`}))]);
+  const acts=[{kind:'vote',key:'119-hr-6644',date:'2026-03-12',vote:'Yea',question:'On Passage of the Bill'}];
+  const link=text=>F.linkStatement({person:'x',source:'floor',text,title:'Housing for the 21st Century Act',date:'2026-03-04',url:'u'},{acts,names,index,surname:'Wicker'});
+  for(const t of ['I will vote no on the pending resolution.','I thank Senator Kaine for this resolution. I urge all of my colleagues to support it.','Operation Epic Fury is one of the boldest military operations in history. I support it fully.',
+    'So I urge my colleagues to join me in passing this commonsense bill to safeguard our homeland and ensure our security.'])assert.deepEqual(link(t),[],t);
+  assert.deepEqual(link('I urge my colleagues to support this bill to expand housing supply and lower rent.').map(x=>x.bill),['119-hr-6644']);
+});
+
+test('subject links skip a headline that slams something, an Act the finder doesn\'t know, and nominations for bills',()=>{
   const index=F.subjectIndex([{key:'119-sjres-49',text:'A joint resolution terminating the national emergency on tariffs'},{key:'119-pn-12',text:'Thomas Vilsack, of Iowa, to be Secretary of Agriculture'},{key:'117-hr-1319',text:'American Rescue Plan Act of 2021, agriculture relief for farmers'},
     ...Array.from({length:50},(_,i)=>({key:`119-hr-${i+1}`,text:`Bill number ${i+1} on highways and post offices`}))]);
   const acts=[{kind:'vote',key:'119-sjres-49',date:'2025-04-30',vote:'Yea',question:'On the Joint Resolution'},{kind:'vote',key:'117-hr-1319',date:'2025-04-20',vote:'Yea',question:'On Passage of the Bill'},{kind:'vote',key:'119-pn-12',date:'2025-04-25',vote:'Yea',question:'On the Nomination'}];
@@ -255,4 +277,12 @@ test('from the third full run: every member\'s vote on a saved roll call, Senate
   assert.deepEqual(link('Wyden Blasts Trump Tariff Chaos and Billionaire Handouts in Hearing on Trade Nominees','Wyden'),[]);
   assert.deepEqual(link('Wyden Calls for Passage of the Speedy Tariff Refunds Act to end the tariff emergency','Wyden'),[]);
   assert.deepEqual(link('Boozman Supports Nomination of Tom Vilsack for Agriculture Secretary, relief for farmers','Boozman').map(x=>x.bill),['119-pn-12']);
+});
+
+test('a headline clause that takes no side: no stand on the bill it names',()=>{
+  const names=F.billNames([{key:'119-hr-1',title:'One Big Beautiful Bill Act'}]),index=F.subjectIndex([{key:'119-hr-1',text:'One Big Beautiful Bill Act'}]);
+  const acts=[{kind:'vote',key:'119-hr-1',date:'2025-07-01',vote:'Nay',question:'On Passage of the Bill'}];
+  const link=text=>F.linkStatement({person:'warren',source:'youtube',text,title:text,date:'2025-06-24',url:'u'},{acts,names,index,surname:'Warren'});
+  assert.deepEqual(link('Warren Slams Trump’s War in Iran, Exposes 10 Ways Big Beautiful Bill Increases Costs'),[]);
+  assert.deepEqual(link('Warren Slams Trump’s War in Iran, Opposes the Big Beautiful Bill').map(x=>[x.bill,x.side]),[['119-hr-1','oppose']]);
 });
