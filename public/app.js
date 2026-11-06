@@ -60,6 +60,7 @@ const pct=(a,b)=>b?Math.round(a/b*1000)/10:0;
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const ASSESS={pending:['neutral','No related bill yet'],consistent:['good','Consistent'],contradiction:['crit','Direct contradiction'],partial:['warn','Partly consistent'],unclear:['neutral','Ambiguous or incomplete evidence'],changed:['serious','Changed position'],outcome:['neutral','Outcome check']};
 const ICON={good:'✓',crit:'✕',warn:'◐',serious:'↻',neutral:'◇'};
+const FOUND_IN={floor:'a floor speech',press:'a press release',bluesky:'a Bluesky post',threads:'a Threads post',youtube:'a YouTube video'};
 const AICON={pending:'…',consistent:'✓',contradiction:'✕',partial:'◐',unclear:'?',changed:'↻',outcome:'◇'};
 const posClass=p=>{p=(p||'').toLowerCase();if(p==='yea'||p==='guilty')return'yea';if(p==='nay'||p==='not guilty')return'nay';return'nv'};
 const voteUrl=v=>v.roll!=null?`https://clerk.house.gov/Votes/${v.year}${v.roll}`:`https://www.senate.gov/legislative/LIS/roll_call_votes/vote${v.congress}${v.session}/vote_${v.congress}_${v.session}_${String(v.number).padStart(5,'0')}.htm`;
@@ -2153,6 +2154,7 @@ function panePromises(s,pane,{embedded=false}={}){
     ${x.record?`<div class="small" style="margin-top:10px;color:var(--ink-2)"><b>Context:</b> ${esc(x.record)} ${x.recordSrc?`<a href="${esc(x.recordSrc.u)}" target="_blank" rel="noopener">${esc(x.recordSrc.t)} ↗</a>`:''}</div>`:''}
     ${x.unacted?`<div class="small" style="margin-top:10px;color:var(--ink-2)"><b>Not acted on by the end of the term</b>${x.unacted.date?` (${esc(x.unacted.date)})`:''}: ${esc(x.unacted.reason||'')}</div>`:''}
     <div class="verdict"><span class="chip ${cls}">${AICON[x.assessment]} ${lab}</span><div class="note">${esc(x.note)}</div></div>
+    ${x.found?`<div class="small" style="margin-top:6px;color:var(--ink-2)">Found by the promise finder in ${esc(FOUND_IN[x.found.source]||'a statement')}, ${x.found.link==='subject'?'linked to the bill by its subject':'which names the bill'}; reviewed ${esc(x.found.reviewed||'')}.</div>`:''}
     ${pledgeBlock(s,x)}
   </article>`}).join('')}</details>`}
   <section id="live-records" style="margin-top:28px"></section>`;
