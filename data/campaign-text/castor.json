@@ -1,0 +1,188 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "castor",
+ "name": "Kathy Castor",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.castorforcongress.com/"
+ ],
+ "years": [
+  2016,
+  2018,
+  2020,
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2016,
+   "electionDay": "2016-11-08",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2016-10-31",
+    "url": "https://web.archive.org/web/20161031085257/http://www.castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20161102041005/http://www.castorforcongress.com:80/issues",
+     "original": "http://www.castorforcongress.com:80/issues",
+     "date": "2016-11-02",
+     "title": "Issues | Castor for Congress",
+     "text": "## Issues\nKathy knows the importance of investing in Tampa Bay’s transportation and infrastructure. Infrastructure investments create jobs, grow the economy, and improve the quality of life for residents.\nKathy believes that every child deserves a good education and she has worked hard to ensure that each student has the chance to succeed through her work with Pell Grants, student loans, Upward Bound and Head Start. She has also worked diligently to fend off Republican cuts to students, schools, colleges and universities.\nKathy is a proven leader when it comes to environmental protection, clean energy, smart growth management policies and maintaining a flourishing natural environment. She is concerned about the quality of the environment and is dedicated to protecting Florida’s beaches, unique ecosystems, and the economies that rely on them. In Congress, Kathy leads the fight for complete gulf coast restoration in the aftermath of the BP oil blowout.\nKathy spearheaded new jobs and investments in the Tampa Bay area, including the Port of Tampa, Port Manatee, University of South Florida, the Moffitt Cancer Center, Tampa International Airport, MacDill Airforce Base, and new and expanded community health centers. She also worked to bring new jobs to redevelop downtown Tampa and Encore and improve local transportation through the I-4 Selmon Crosstown Connector."
+    },
+    {
+     "url": "https://web.archive.org/web/20161104060457/http://www.castorforcongress.com:80/issues/transportation",
+     "original": "http://www.castorforcongress.com:80/issues/transportation",
+     "date": "2016-11-04",
+     "title": "Transportation | Castor for Congress",
+     "text": "## Transportation\nKathy knows the importance of investing in Tampa Bay’s transportation and infrastructure. Infrastructure investments create jobs, grow the economy, and improve the quality of life for residents.\nThe new I-4 Selmon Crosstown Connector that Kathy championed is the backbone of future expansion for the Port of Tampa. The construction created almost 13,000 local jobs. Kathy continues to work hand-in-hand with the Tampa International Airport, the Port of Tampa and local agencies to keep economic growth on track.\nKathy is working hard to keep roads safe, public transportation accessible, and the community thriving."
+    },
+    {
+     "url": "https://web.archive.org/web/20161104060325/http://www.castorforcongress.com:80/issues/education",
+     "original": "http://www.castorforcongress.com:80/issues/education",
+     "date": "2016-11-04",
+     "title": "Education | Castor for Congress",
+     "text": "## Education\nKathy believes that every child deserves a good education and she has worked hard to ensure that each student has the chance to succeed through her work with Pell Grants, student loans, Upward Bound and Head Start. She has also worked diligently to fend off Republican cuts to students, schools, colleges and universities."
+    },
+    {
+     "url": "https://web.archive.org/web/20161103100814/http://www.castorforcongress.com:80/issues/environment",
+     "original": "http://www.castorforcongress.com:80/issues/environment",
+     "date": "2016-11-03",
+     "title": "Environment | Castor for Congress",
+     "text": "## Environment\nKathy is a proven leader when it comes to environmental protection, clean energy, smart growth management policies and maintaining a flourishing natural environment. She is concerned about the quality of the environment and is dedicated to protecting Florida’s beaches, unique ecosystems, and the economies that rely on them. In Congress, Kathy leads the fight for complete gulf coast restoration in the aftermath of the BP oil blowout. She authored the Florida Coastal Protection Act, which would make the 235-mile drilling ban off of Florida’s west coast permanent, and in June 2010, she secured $10 million from BP to support Florida college and university marine research, including the University of South Florida College of Marine Sciences and related endeavors.\nKathy is also focused on creating a clean energy economy in Tampa Bay – focusing on solar energy, which is clean, affordable, and plentiful in sunny Florida. Our state’s tourism and economy depends on clean air, clean water, and a thriving environment. As Tampa Bay’s Representative, Kathy stands up for the protection of our natural resources that make Florida special."
+    },
+    {
+     "url": "https://web.archive.org/web/20161103100819/http://www.castorforcongress.com:80/issues/jobs-and-economy",
+     "original": "http://www.castorforcongress.com:80/issues/jobs-and-economy",
+     "date": "2016-11-03",
+     "title": "Jobs and the Economy | Castor for Congress",
+     "text": "## Jobs and the Economy\nKathy spearheaded new jobs and investments in the Tampa Bay area, including the Port of Tampa, Port Manatee, University of South Florida, the Moffitt Cancer Center, Tampa International Airport, MacDill Airforce Base, and new and expanded community health centers. She also worked to bring new jobs to redevelop downtown Tampa and Encore and improve local transportation through the I-4 Selmon Crosstown Connector.\nIn recent months, Kathy helped pass the bipartisan JOBS Act, which helps create new jobs and businesses by cutting the red tape that too often gets in the way of growth. And earlier this year, she brought together over 75 employers at the Tampa Bay Jobs Fair to help foster economic development in the region and provide opportunities for local job seekers.\nKathy knows that there is more work to be done, and she looks forward to fighting for jobs and investment in Tampa Bay. The economy is growing, and Kathy will help keep the momentum going."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2018,
+   "electionDay": "2018-11-06",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2018-10-23",
+    "url": "https://web.archive.org/web/20181023200053/https://www.castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20181023200053/https://www.castorforcongress.com/",
+     "original": "https://www.castorforcongress.com/",
+     "date": "2018-10-23",
+     "title": "Kathy Castor for Congress",
+     "text": "Stand up for Tampa Bay"
+    },
+    {
+     "url": "https://web.archive.org/web/20181023200623/https://www.castorforcongress.com/issues",
+     "original": "https://www.castorforcongress.com/issues",
+     "date": "2018-10-23",
+     "title": "Issues | Castor for Congress",
+     "text": "## Transportation\nKathy knows the importance of investing in Tampa Bay’s transportation and infrastructure. Infrastructure investments create jobs, grow the economy, and improve the quality of life for residents. The new I-4 Selmon Crosstown Connector that Kathy championed is the backbone of future expansion for the Port of Tampa. The construction created almost 13,000 local jobs. Kathy continues to work hand-in-hand with the Tampa International Airport, the Port of Tampa and local agencies to keep economic growth on track. Kathy is working hard to keep roads safe, public transportation accessible, and the community thriving.\n## Jobs and Economy\nKathy spearheaded new jobs and investments in the Tampa Bay area, including the Port of Tampa, Port Manatee, University of South Florida, the Moffitt Cancer Center, Tampa International Airport, MacDill Airforce Base, and new and expanded community health centers. She also worked to bring new jobs to redevelop downtown Tampa and Encore and improve local transportation through the I-4 Selmon Crosstown Connector.\nIn recent months, Kathy helped pass the bipartisan JOBS Act, which helps create new jobs and businesses by cutting the red tape that too often gets in the way of growth. And earlier this year, she brought together over 75 employers at the Tampa Bay Jobs Fair to help foster economic development in the region and provide opportunities for local job seekers.\nKathy knows that there is more work to be done, and she looks forward to fighting for jobs and investment in Tampa Bay. The economy is growing, and Kathy will help keep the momentum going.\n## Education\nKathy believes that every child deserves a good education and she has worked hard to ensure that each student has the chance to succeed through her work with Pell Grants, student loans, Upward Bound and Head Start. She has also worked diligently to fend off Republican cuts to students, schools, colleges and universities.\n## Environment\nKathy is a proven leader when it comes to environmental protection, clean energy, smart growth management policies and maintaining a flourishing natural environment. She is concerned about the quality of the environment and is dedicated to protecting Florida’s beaches, unique ecosystems, and the economies that rely on them. In Congress, Kathy leads the fight for complete gulf coast restoration in the aftermath of the BP oil blowout. She authored the Florida Coastal Protection Act, which would make the 235-mile drilling ban off of Florida’s west coast permanent, and in June 2010, she secured $10 million from BP to support Florida college and university marine research, including the University of South Florida College of Marine Sciences and related endeavors.\nKathy is also focused on creating a clean energy economy in Tampa Bay – focusing on solar energy, which is clean, affordable, and plentiful in sunny Florida. Our state’s tourism and economy depends on clean air, clean water, and a thriving environment. As Tampa Bay’s Representative, Kathy stands up for the protection of our natural resources that make Florida special."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2020,
+   "electionDay": "2020-11-03",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2020-11-01",
+    "url": "https://web.archive.org/web/20201101105959/https://www.castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20201101105959/https://www.castorforcongress.com/",
+     "original": "https://www.castorforcongress.com/",
+     "date": "2020-11-01",
+     "title": "Kathy Castor for Congress",
+     "text": "Stand up for Tampa Bay"
+    },
+    {
+     "url": "https://web.archive.org/web/20201020140220/https://www.castorforcongress.com/issues",
+     "original": "https://www.castorforcongress.com/issues",
+     "date": "2020-10-20",
+     "title": "Issues | Castor for Congress",
+     "text": "## Transportation\nKathy knows the importance of investing in Tampa Bay’s transportation and infrastructure. Infrastructure investments create jobs, grow the economy, and improve the quality of life for residents. The new I-4 Selmon Crosstown Connector that Kathy championed is the backbone of future expansion for the Port of Tampa. The construction created almost 13,000 local jobs. Kathy continues to work hand-in-hand with the Tampa International Airport, the Port of Tampa and local agencies to keep economic growth on track. Kathy is working hard to keep roads safe, public transportation accessible, and the community thriving.\n## Jobs and Economy\nKathy spearheaded new jobs and investments in the Tampa Bay area, including the Port of Tampa, Port Manatee, University of South Florida, the Moffitt Cancer Center, Tampa International Airport, MacDill Airforce Base, and new and expanded community health centers. She also worked to bring new jobs to redevelop downtown Tampa and Encore and improve local transportation through the I-4 Selmon Crosstown Connector.\nIn recent months, Kathy helped pass the bipartisan JOBS Act, which helps create new jobs and businesses by cutting the red tape that too often gets in the way of growth. And earlier this year, she brought together over 75 employers at the Tampa Bay Jobs Fair to help foster economic development in the region and provide opportunities for local job seekers.\nKathy knows that there is more work to be done, and she looks forward to fighting for jobs and investment in Tampa Bay. The economy is growing, and Kathy will help keep the momentum going.\n## Education\nKathy believes that every child deserves a good education and she has worked hard to ensure that each student has the chance to succeed through her work with Pell Grants, student loans, Upward Bound and Head Start. She has also worked diligently to fend off Republican cuts to students, schools, colleges and universities.\n## Environment\nKathy is a proven leader when it comes to environmental protection, clean energy, smart growth management policies and maintaining a flourishing natural environment. She is concerned about the quality of the environment and is dedicated to protecting Florida’s beaches, unique ecosystems, and the economies that rely on them. In Congress, Kathy leads the fight for complete gulf coast restoration in the aftermath of the BP oil blowout. She authored the Florida Coastal Protection Act, which would make the 235-mile drilling ban off of Florida’s west coast permanent, and in June 2010, she secured $10 million from BP to support Florida college and university marine research, including the University of South Florida College of Marine Sciences and related endeavors.\nKathy is also focused on creating a clean energy economy in Tampa Bay – focusing on solar energy, which is clean, affordable, and plentiful in sunny Florida. Our state’s tourism and economy depends on clean air, clean water, and a thriving environment. As Tampa Bay’s Representative, Kathy stands up for the protection of our natural resources that make Florida special."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107232635/https://www.castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221107232635/https://www.castorforcongress.com/",
+     "original": "https://www.castorforcongress.com/",
+     "date": "2022-11-07",
+     "title": "Castor for Congress",
+     "text": "Stand up for Tampa Bay"
+    },
+    {
+     "url": "https://web.archive.org/web/20221107233822/https://www.castorforcongress.com/issues",
+     "original": "https://www.castorforcongress.com/issues",
+     "date": "2022-11-07",
+     "title": "Issues | Castor for Congress",
+     "text": "## Issues\nKathy knows the importance of investing in Tampa Bay’s transportation and infrastructure. Infrastructure investments create jobs, grow the economy, and improve the quality of life for residents. The new I-4 Selmon Crosstown Connector that Kathy championed is the backbone of future expansion for the Port of Tampa. The construction created almost 13,000 local jobs. Kathy continues to work hand-in-hand with the Tampa International Airport, the Port of Tampa and local agencies to keep economic growth on track. Kathy is working hard to keep roads safe, public transportation accessible, and the community thriving.\nKathy spearheaded new jobs and investments in the Tampa Bay area, including the Port of Tampa, Port Manatee, University of South Florida, the Moffitt Cancer Center, Tampa International Airport, MacDill Airforce Base, and new and expanded community health centers. She also worked to bring new jobs to redevelop downtown Tampa and Encore and improve local transportation through the I-4 Selmon Crosstown Connector.\nIn recent months, Kathy helped pass the bipartisan JOBS Act, which helps create new jobs and businesses by cutting the red tape that too often gets in the way of growth. And earlier this year, she brought together over 75 employers at the Tampa Bay Jobs Fair to help foster economic development in the region and provide opportunities for local job seekers.\nKathy knows that there is more work to be done, and she looks forward to fighting for jobs and investment in Tampa Bay. The economy is growing, and Kathy will help keep the momentum going.\nKathy believes that every child deserves a good education and she has worked hard to ensure that each student has the chance to succeed through her work with Pell Grants, student loans, Upward Bound and Head Start. She has also worked diligently to fend off Republican cuts to students, schools, colleges and universities.\nKathy is a proven leader when it comes to environmental protection, clean energy, smart growth management policies and maintaining a flourishing natural environment. She is concerned about the quality of the environment and is dedicated to protecting Florida’s beaches, unique ecosystems, and the economies that rely on them. In Congress, Kathy leads the fight for complete gulf coast restoration in the aftermath of the BP oil blowout. She authored the Florida Coastal Protection Act, which would make the 235-mile drilling ban off of Florida’s west coast permanent, and in June 2010, she secured $10 million from BP to support Florida college and university marine research, including the University of South Florida College of Marine Sciences and related endeavors.\nKathy is also focused on creating a clean energy economy in Tampa Bay – focusing on solar energy, which is clean, affordable, and plentiful in sunny Florida. Our state’s tourism and economy depends on clean air, clean water, and a thriving environment. As Tampa Bay’s Representative, Kathy stands up for the protection of our natural resources that make Florida special."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105113724/https://www.castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105113724/https://www.castorforcongress.com/",
+     "original": "https://www.castorforcongress.com/",
+     "date": "2024-11-05",
+     "title": "Kathy Castor for Congress | Finding Solutions and Standing Up for You",
+     "text": "## Finding Solutions and Standing Up for You\nU.S. Representative Kathy Castor is a native Floridian who has dedicated her career to serving her Tampa Bay neighbors. As Tampa Bay’s Congresswoman, Castor has delivered new resources for workforce training, housing, infrastructure and education. She is a champion for affordable health care, like the cap on insulin prices, and clean energy to power our community.\nKathy Castor is focused on finding solutions for you. As a proactive representative, she stands up to grow the middle class and boost small business owners so everyone has an equal opportunity to succeed. She is committed to a diverse and strong Tampa Bay economy that keeps costs for families in check, keeps health care and energy affordable, and protects our environment and way of life.\n## First elected in 2006, Kathy is the first woman to be elected to U.S. Congress from Hillsborough and Pinellas counties.\nClick on an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through immediately."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.castorforcongress.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-30",
+    "url": "https://web.archive.org/web/20261030161712/https://castorforcongress.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261030161712/https://castorforcongress.com/",
+     "original": "https://castorforcongress.com/",
+     "date": "2026-10-30",
+     "title": "Home - Castor for Congress",
+     "text": "Representative Kathy Castor has spent her career delivering proven results for our communities.\nFrom securing federal investments that drive the local economy to championing landmark environmental protections, she works tirelessly to lower family costs, create good-paying jobs, and protect Florida’s unique way of life. As a senior member of the House Energy and Commerce Committee, Congresswoman Castor is dedicated to building a strong, diverse economy that guarantees everyone an equal opportunity to succeed.\n## Interested in voting by mail?\nYou must request to vote by mail again after every general election.\nRequest a Vote By MaiL Ballot\n## Review the New FL-14 District Map\nMid-decade redistricting is in effect.\nSync pan & zoom between maps\n2022 District Lines (2022-2024 House elections)\n2026 Redistricting (enacted May 4, 2026)\nFACT CHECK: GOP Ad Against Kathy Castor Rated “Mostly False”\n(POLITICO) House overwhelmingly passes bill to shield ratepayers from data centers\n(Florida Politics) Union leaders rally around Kathy Castor after she helps save 700 jobs at Tampa International Airport\n(The Florida Pundit) Three Florida Democrats Join GOP to Pass Congressional Stock-Trading Limits and Voter ID\n(Tampa Bay Times) Can Tampa Bay’s lone Democratic representative pull off an upset?\n(Florida Politics) Kathy Castor seeks guarantee ratepayers won’t cover added costs from data centers\nHelp Kathy Castor continue to fight for FL-14 families."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

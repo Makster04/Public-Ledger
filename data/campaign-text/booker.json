@@ -1,0 +1,272 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "booker",
+ "name": "Cory A. Booker",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.corybooker.com/"
+ ],
+ "years": [
+  2020,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2020,
+   "electionDay": "2020-11-03",
+   "site": "https://www.corybooker.com/",
+   "saved": true,
+   "capture": {
+    "date": "2020-11-01",
+    "url": "https://web.archive.org/web/20201101113542/https://corybooker.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20201101113542/https://corybooker.com/",
+     "original": "https://corybooker.com/",
+     "date": "2020-11-01",
+     "title": "Stand with Cory Booker -- join our campaign for Senate today",
+     "text": "A Tireless fighter for New Jersey\nCory is running for re-election to keep fighting for justice and opportunity for all Americans. That’s why our campaign doesn't accept a dime from federal lobbyists, corporate PACs, or fossil fuel and pharma execs -- we are a campaign funded by and for the people. Chip in now:\nClick an amount to start your donation. If you’ve saved your information with ActBlue Express, your donation will go through immediately."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.corybooker.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102094226/https://corybooker.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102094226/https://corybooker.com/",
+     "original": "https://corybooker.com/",
+     "date": "2026-11-02",
+     "title": "Stand with Cory Booker -- join our campaign for Senate today",
+     "text": "A Tireless fighter for New Jersey\nCory is fighting for justice and opportunity for all Americans. That’s why we don't accept a dime from federal lobbyists, corporate PACs, or fossil fuel and pharma execs. This movement to create a more just, loving nation is powered by grassroots supporters like you. Chip in now:\nClick an amount to start your donation. If you’ve saved your information with ActBlue Express, your donation will go through immediately."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mpowcdwgbk2d",
+     "text": "What truly matters isn’t a name on an account—it’s the purpose. I’ve worked across the aisle to make  baby bonds a reality because they will transform the lives of millions of kids. \n\nGive every American child a dream, the strength to chase it, and  There are no limits to what they can achieve."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mqpaknf7bc2l",
+     "text": "Todd Blanche failed his performance review, and he should not be confirmed as Attorney General."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mr76teoo2k2h",
+     "text": "We’re down to the wire on the Todd Blanche nomination — and I’m leading the fight to hold him accountable. \n\nI will continue to fight for justice every step of the way. Tune in."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mrocyq7krc25",
+     "text": "The Garden State is known for our diners, our attitude, and our unforgettable icons (like Lucy). But what I love most about Jersey is our people, our sense of community, and how we always have each others' backs. \n\nHappy National New Jersey Day!"
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3msdxgkt6vc2j",
+     "text": "Instead of meeting with Epstein survivors, what did Todd Blanche do? He rushed to Ghislaine Maxwell’s prison cell, and then she got transferred to  a cushier prison camp. This is not justice. It is corruption of a system meant to protect the most vulnerable."
+    },
+    {
+     "date": "2026-08-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mshfxxd6pk2g",
+     "text": "The trump administration is out of excuses and out of time. I’m demanding the senate pass the Delaney Hall Closure Act—to close it within 90 days."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mttjixccf22p",
+     "text": "Amazing visit to Sterling Hill Mining Museum in Ogdensburg. Walking the tunnels of  New Jersey’s last working mine & seeing the Rainbow Tunnel was unforgettable. New Jersey history at its best!"
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mtyn6zzxas2x",
+     "text": "Proud to present a $559,000 FY26 Congressionally Directed Spending award to Liberty Science Center in Hudson County to enhance educational programming, including the expansion of a portable planetarium fleet, which is helping more curious kids reach for the stars!"
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu2x4t2uhs2l",
+     "text": "Proud to tour Trenton with Salvation and Social Justice. From the Food Pantry serving hundreds each month, to their upcoming Birthing Center tackling maternal health deserts, to the new Restorative Justice Hub where Street Teams mentor our youth."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu46yjcuts27",
+     "text": "I was honored to host a town hall last night with veterans, service members, and military families at the New Jersey Vietnam Veterans Memorial & Museum.\n\nTheir sacrifice built the freedoms we enjoy. Our job now is to make sure they have the care, dignity, and support they’ve earned."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu5dtlgbqs2l",
+     "text": "Today I delivered $2 million in CDS funding to Inspira Health for upgrades to technology  and expansion of telehealth services. Better care, better outcomes for rural communities across South Jersey!"
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu5x4oct522g",
+     "text": "Today I presented AtlantiCare with $1M in federal funding to upgrade emergency facilities & equipment. When seconds count, our neighbors deserve the best tools and care right here in Atlantic City. Proud to support the heroes on the front lines and keep fighting for the health of every New Jerseyan."
+    },
+    {
+     "date": "2026-08-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mud2ivq2fd2v",
+     "text": "Had the chance to tour The Orange Loop in Atlantic City—an Opportunity Zone that’s showing what’s possible when we invest in communities. I stopped at local businesses and saw firsthand the jobs and growth happening in New Jersey!"
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3muncfjmxqs2y",
+     "text": "I’ve worked to protect the endangered right whales throughout my time in office. This House vote is highly disappointing - but we’re prepared to fight back if this comes to the Senate. \n\ndefenders.org/newsroom/hou..."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvam2dkbs22j",
+     "text": "September 11th will forever be a day of sorrow and of resolve. New Jersey lost so many of our own. We honor the lives lost, the heroes who rushed into danger, and the families who still carry grief. May we meet tragedy’s memory with unity, love, and an unshakable commitment to one another."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvb3zacjps2x",
+     "text": "To everyone celebrating  Rosh Hashanah, I wish you and your loved ones a sweet, healthy, and peaceful new year. L’Shanah Tovah!"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvjfbzk3p22t",
+     "text": "My team will be holding Mobile Office Hours tomorrow from 10am to 1pm at Hudson County’s Resource Fair in Secaucus at the Mayor Michael Gonnelli Community Center."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvxt2emzuk2c",
+     "text": "Trump just locked CNN out of the White House. Now his billionaire allies want to own it. State attorneys general: Don't settle. Hold the line. Block this merger."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw4qkewq5c2o",
+     "text": "This Gold Star Families Week, we honor the families who carry the weight of the ultimate sacrifice. Their loved ones gave everything for our freedom — and we can never repay that debt. \n\nI will keep fighting for the support, recognition, and dignity these families deserve."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw727rclvc2v",
+     "text": "These 190,000 New York caregivers do some of the most sacred work in America — tending to aging parents, disabled loved ones, and neighbors, often alone and for too little. They deserve a real voice, fair pay, and the dignity of a union.\n\nwww.nytimes.com/2026/09/22/n..."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw7hvaeups2y",
+     "text": "Trump’s EPA let a major pesticide company pick what its regulations should be. Alarming proof that EPA is there to serve corporate interests, not protect the safety of Americans.\n\nwww.theguardian.com/us-news/2026..."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mwcnw3gxjc2e",
+     "text": "Governor Sherrill is absolutely right, the conduct described in the investigative report is totally unacceptable. For the sake of our state Lt governor caldwell should resign."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mwqei6jdbs2y",
+     "text": "My team will be holding Mobile Office Hours today at the Kenilworth Public Library from 10:00am to 12:00pm."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mx5w2w6gbc23",
+     "text": "My staff will be doing Mobile Office Hours tomorrow in Monmouth County with the Office of Senator Gopal, Assemblywoman Donlon, and Assemblywoman Peterpaul at the Freehold Public Library from 10:00–1:00."
+    },
+    {
+     "date": "2026-10-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxjmz5w6ts2m",
+     "text": "My team will be holding Mobile Office Hours today at the Linden 5th Annual Health & Wellness Fair at School #1 Gym from 11:00am to 2:00pm."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxplxxrxls2l",
+     "text": "On Indigenous Peoples’ Day, we honor the extraordinary history, cultures, and contributions of Native communities across our nation. We must also acknowledge the injustices they have endured—and continue to face—and do the work of pursuing real justice."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxw5p6yob227",
+     "text": "My team will be holding Mobile Office Hours today with the Office of Senator Gopal, Assemblywoman Donlon and Assemblywoman Peterpaul at Asbury Park Senior Center from 10:00 - 1:00."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mya65h2bos2m",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm in the Town of Clinton’s Council Chamber."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myf4xjigas2l",
+     "text": "My team will be holding Mobile Office Hours today from 9:00am to 12:00pm at Hudson County’s Resource Fair at the Mary McLeod Bethune Center in Jersey City."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myhr47sfxk2t",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm at the Warren County Library - Northeast Branch."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myuhsgbrns2y",
+     "text": "My team will be holding Mobile Office Hours today from 12pm to 2pm at the Morristown & Morris Township Library."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myuowy3dqc2z",
+     "text": "My team will be holding Mobile Office Hours today from 2pm to 5pm at the Franklin Township Public Library, DeMott Lane Branch."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myvfh6jehs2d",
+     "text": "Eight years ago, 11 lives were tragically cut short in the antisemitic attack at the Tree of Life synagogue. As we honor their memories, we must reaffirm our collective commitment to protecting houses of worship and ending gun violence."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myxjy4ovyc26",
+     "text": "My team will be holding Mobile Office Hours today from 4pm to 6pm at the Boys & Girls Club of Clifton."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myzlpsu5s223",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm at the B.E.A.T. Center in Toms River."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mzdtd3mitc2w",
+     "text": "My team will be holding Mobile Office Hours today from 1:00pm to 3:00pm at the  Mercer County Library, Lawrence Headquarters Branch."
+    }
+   ]
+  }
+ ]
+}

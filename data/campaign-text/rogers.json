@@ -1,0 +1,69 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "rogers",
+ "name": "Mike Rogers",
+ "built": "2026-11-06",
+ "sites": [
+  "https://rogersforsenate.com/"
+ ],
+ "years": [
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://rogersforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105144454/https://rogersforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105144454/https://rogersforsenate.com/",
+     "original": "https://rogersforsenate.com/",
+     "date": "2024-11-05",
+     "title": "Mike Rogers for Senate",
+     "text": "## MIKE IS\nFox News: Republican locked in dead heat with Democrat for blue stronghold Michigan Senate seat\nFox News: Michigan becomes a top GOP Senate target as Mike Rogers ties with Dem opponent among older voters\nThe Hill: Senate rankings: 5 seats most likely to flip\nFox News: Republican locked in dead heat with Democrat for blue stronghold Michigan Senate seat | Fox News: Michigan becomes a top GOP Senate target as Mike Rogers ties with Dem opponent among older voters | The Hill: Senate rankings: 5 seats most likely to flip |\n## JOIN MIKE’S TEAM TO GET AMERICA BACK ON TRACK\nBy entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms & privacy policy for auto dialed messages to the phone number you provide. Msg&data rates may apply. Text JOIN to 22033 to opt in. Reply HELP for help or STOP to opt out at any time. SMS information is not rented, sold, or shared. You can view our Privacy Policy and Mobile Terms of Service here .\n## MICHIGAN’S FUTURE IS AT RISK\nMichigan’s way of life is worth defending. That’s why I served in the Army. That’s why I served in the FBI taking down organized crime. That’s why I led the House Intelligence Committee in the hard years after 9/11.\nBut we can all feel that something is broken.\nAmerica under Biden and his cronies is going in the wrong direction. Our border is wide open, our justice system is broken, and Biden’s bad policies are making everything more expensive.\nWith your help, we’ll get America back on track.\n## BETTER\nPolitics has gotten so small and petty, that we’re failing to address big problems. We can do better. That’s why Mike is running for the United States Senate.\nEverything is at stake in this election. That’s why Mike needs your support. Contribute today:\n## ROGERS: WE FACE A CHINESE FUTURE, IF WE ALLOW IT TO HAPPEN\nUnless we make a change in 2024 and take the challenge that China represents seriously, we will lose in this era of strategic competition. We on a path that will see the most profound geopolitical defeat in our country’s history, not through invasion…\n## ROGERS: BIDEN MUST PROTECT OUR BORDERS\nRight now, President Joe Biden is begging the U.S. Congress and taxpayers for more than $60 billion to fund the continuing war in Ukraine so it can defend its borders. All of this is happening as the president and his Democrat allies in Congress resist every…\n## REPUBLICAN SENATE CANDIDATE MIKE ROGERS: BIDEN'S EV PLAN WILL KILL MICHIGAN JOBS\nThe stated goal of the Biden administration is reducing greenhouse gas emissions to fight climate change. The problem is their solution to accomplish this goal is misguided, will eliminate jobs that drive our economy, and the biggest beneficiary won’t…\n## FORMER REP. MIKE ROGERS: BIDEN’S BORDER CRISIS ENDANGERS ALL OF US\nDuring the 2020 campaign, Joe Biden declared that he would build “not another foot” of border wall. The day President Biden took office in 2021 he kept that promise by ordering an immediate end to border wall construction, sending a message…\n## ROGERS: IT'S NOT TOO LATE TO FIX AMERICA\nThere I was, at the Meijer in Brighton when something hit me like a ton of bricks. I was talking to the cashier about how expensive everything is when she told me some of her regular customers have had to leave her line and put items back on the shelves…\n## FORMER REP. MIKE ROGERS: UNITE BEHIND DONALD TRUMP FOR...\nToday, our nation is at a dangerous crossroads. Thanks to Joe Biden, families across America pay over $700 more monthly for everyday goods, while over 60% of Americans can’t afford a $500 emergency expense. The cost of eggs is up 70%, and…"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://rogersforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-01",
+    "url": "https://web.archive.org/web/20261101060140/https://rogersforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261101060140/https://rogersforsenate.com/",
+     "original": "https://rogersforsenate.com/",
+     "date": "2026-11-01",
+     "title": "Mike Rogers for Senate",
+     "text": "## LET’S\nPOLITICO: Mike Rogers launches Senate bid in Michigan\nDETROIT FREE PRESS: President Donald Trump endorses Mike Rogers in Michigan U.S. Senate race\nTHE DETROIT NEWS: Rogers launches tenacious ground game in Senate race\nPOLITICO: Mike Rogers launches Senate bid in Michigan | DETROIT FREE PRESS: President Donald Trump endorses Mike Rogers in Michigan U.S. Senate race | THE DETROIT NEWS: Rogers launches tenacious ground game in Senate race |\n## JOIN MIKE’S TEAM\nBy entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms & privacy policy for messages to the phone number you provide. Msg&data rates may apply. Reply HELP for help or STOP to opt out at any time. SMS information is not rented, sold, or shared. Message frequency may vary. You can view our Privacy Policy and Mobile Terms of Service here .\n## MICHIGAN’S FUTURE IS AT RISK\nI know what it means to fight. I followed in my family’s footsteps by serving in the Army. Then, I served in the FBI taking down human traffickers and corrupt politicians. And, I led the House Intelligence Committee to hunt down terrorists and keep Americans safe.\nI’ll stand with President Trump to deliver on the mandate given to him by the American people.\nFor too long Michigan has been represented by two-faced politicians, who say they’re “moderates” but vote as radicals when they get to Washington.\n## BETTER\nI’ll always put America and Michigan first.\nThat means bringing manufacturing jobs back home, lowering the cost of gas, groceries, & prescription drugs, protecting seniors’ social security & medicare, and setting our kids up for success by prioritizing education not indoctrination.\nBut I’ll need your support to get the job done. Will you join me?"
+    },
+    {
+     "url": "https://web.archive.org/web/20261101195019/https://rogersforsenate.com/housingplan",
+     "original": "https://rogersforsenate.com/housingplan",
+     "date": "2026-11-01",
+     "title": "HOUSING PLAN — Mike Rogers for Senate",
+     "text": "## UNLOCKING HOMEOWNERSHIP FOR FAMILIES & REBUILDING THE AMERICAN DREAM\nExpands 529 plans to cover college, vocational training, and first-time home down payments\nAllows families to open and contribute to a 529 at any time, for any purpose, with tax-free savings\nEliminates transfer fees and ensures 529 funds don’t count against PMI eligibility\nHelps cover the first year of property taxes\nHelps families build credit for timely rent payments, lowering future interest rates\nAllows Americans to defer student loans while saving for a home down payment, with dollar-for-dollar contribution\nBreaks down barriers to homeownership by rolling back overregulation that drove housing costs up with no real benefit\nPartners with states to cut red tape, reduce government interference, and expand access to homeownership for young families\nIncentivizes new home construction with residential housing zones where 100% of new construction is tax free\nReplaces empty-lot zoning with residential housing zones where 100% of new construction is tax-free\nSparks new business growth and connects young men and women with good-paying jobs"
+    },
+    {
+     "url": "https://web.archive.org/web/20261025213433/https://rogersforsenate.com/healthplan",
+     "original": "https://rogersforsenate.com/healthplan",
+     "date": "2026-10-25",
+     "title": "HEALTHCARE PLAN — Mike Rogers for Senate",
+     "text": "## HEALTHCARE THAT WORKS FOR WORKING FAMILIES\nThe Problem: Hospitals and insurance companies hide prices from patients because they don’t want you to comparison shop – which would drive prices down.\nThe Solution: If hospitals and insurance companies don’t publicly post real prices so patients know what they’re paying before they receive care - the executives should be held accountable. Fines should be imposed.\nYou deserve to know the price before you get the bill.\nThe Problem : Prescription drug prices are out of control. Drugs should not be more expensive in Michigan than they are in Canada.\nThe Solution: Expand access to Trump Rx, which takes advantage of the government’s ability to buy in bulk, force prices down, and pass those savings onto the consumer. We also need to speed up approval on lower cost generic options.\nThe Problem: Working families pay their premiums every month, only to face delays, denials, and endless paperwork when they need care.\nThe Solution: Force insurance companies to publicly report denial rates, approval times, and appeal outcomes. Companies with excessive denials or delays should face penalties. If you repeatedly deny care that should have been approved, there should be consequences."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

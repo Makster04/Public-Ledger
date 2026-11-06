@@ -1,0 +1,778 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "brown",
+ "name": "Sherrod Brown",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.sherrodbrown.com/"
+ ],
+ "years": [
+  2018,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2018,
+   "electionDay": "2018-11-06",
+   "site": "https://www.sherrodbrown.com/",
+   "saved": true,
+   "capture": {
+    "date": "2018-10-31",
+    "url": "https://web.archive.org/web/20181031162527/https://www.sherrodbrown.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20181031162527/https://www.sherrodbrown.com/",
+     "original": "https://www.sherrodbrown.com/",
+     "date": "2018-10-31",
+     "title": "U.S. Senator Sherrod Brown, Ohio -- Official Campaign Website -",
+     "text": "Why I Wear a Canary Pin\n## Latest News\nThe special interests want to defeat Sherrod. Help stop them."
+    },
+    {
+     "url": "https://web.archive.org/web/20181026203810/https://www.sherrodbrown.com/issues/",
+     "original": "https://www.sherrodbrown.com/issues/",
+     "date": "2018-10-26",
+     "title": "Issues - U.S. Senator Sherrod Brown, Ohio - Official Campaign Website",
+     "text": "## Issues\nI respect the unique experiences of people with disabilities and work in the Senate to make sure every Ohioan has access to the care and resources they need. Like all of us, people with disabilities are supported by their families and communities who should also be recognized for their hard work, selflessness, and dedication.\nWe have no more important moral obligation than supporting the men and women who risk their lives in service to our country, and the family members who sacrifice so much to support their loved ones who serve.\nEleven Ohioans will die today of an opioid overdose, and Congress must be doing everything in our power to fight this epidemic on all fronts.\nEvery student deserves a community that supports their education. I’m troubled by the lack of oversight and transparency of many charter schools -- and will continue pushing for accountability. I will also keep up my efforts to bring critical resources to K-12 schools across Ohio, along with making higher education more accessible to every American.\nInstead of repealing the Affordable Care Act, we should be working to improve and expand it so that every Ohioan has access to quality, affordable healthcare.\nOur state’s farms are an important economic engine, and as we work together to move this economy forward, I will continue to fight for the needs of our farmers.\nWe have made promises to our seniors that we must honor – Medicare, Social Security, affordable prescription drugs. These men and women have worked their entire lives, taken care of their families, and they deserve a quality of life that reflects that.\nSmall businesses and manufacturers are the backbone of Ohio’s economy.\nIt has been my honor to stand alongside you, fighting to make sure that every Ohioan is treated equally under the law and given the respect they deserve. I will never compromise on these principles and I will continue to work to drive your movement forward.\nStudent loan debt shouldn’t hold students back for decades after they’ve graduated.\nFrom protecting the Great Lakes from invasive species and toxic algal blooms to promoting a clean energy future, defending clean water and clean air is more important than ever.\nAt a time when it may seem like not much is getting done in Washington, supporting the officers who put their lives on the line each day to protect us—and the families who sacrifice alongside them—is something we can come together on in a bipartisan way.\nThe last thing Ohioans need is for politicians to turn back the clock to the days when Wall Street was free to prey on working families, wreck the economy, and hand taxpayers the bill.\nWe want more trade—Ohio businesses, including our auto supply chain, rely on trade with our neighbors. But trade should happen on a truly level playing field, and that’s not what we have right now.\nWe must continue to vigorously enforce and strengthen sanctions against Russia, to send a message to its leaders and the world that the United States of America will not tolerate efforts to undermine democracy around the world.\nWe have to defend the affirmation that black lives matter. In doing so, we acknowledge the disparity between African-American men and women and their white counterparts and the racism that deepens those discrepancies.\nWe have made great strides toward a more level playing field for Ohio women. I am proud to have helped pass the Lilly Ledbetter Fair Pay Act and been an original cosponsor of the Paycheck Fairness Act. But we still have work to do."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154355/https://www.sherrodbrown.com/issues/agricultural-and-rural-communities/",
+     "original": "https://www.sherrodbrown.com/issues/agricultural-and-rural-communities/",
+     "date": "2018-10-17",
+     "title": "Fighting for Agricultural and Rural Communities",
+     "text": "## Fighting for Agricultural and Rural Communities\n“Our state’s farms are an important economic engine, and as we work together to move this economy forward, I will continue to fight for the needs of our farmers.”\n## Advocating For Ohio Farmers\nSherrod understands the importance of Ohio’s farming communities—one in seven Ohio jobs depend on agriculture and more than half of Ohio’s land is used for farming. As a member of the Senate Agriculture Committee, he’s played a critical role in crafting comprehensive, bipartisan Farm Bills.\nSherrod travels across Ohio to hear directly from farmers and local stakeholders to effectively advocate for them in the Senate. He’s secured a number of legislative victories for Ohio farmers across multiple Farm Bills, including his approach to farm risk management, which Reuters called the “centerpiece” of the 2014 Farm Bill. Sherrod has held roundtables on rural development and farming across the state to ensure that Ohioans’ priorities are represented in the 2018 Farm Bill.\nSherrod has been recognized by a host of leading rural policy and agricultural groups, including the National Farmers Union, which has honored his tireless advocacy with the prestigious “Golden Triangle” award.\n## Spearheading Efforts For Ohio’s Rural Development\nSherrod fights to expand access to broadband for Ohio’s rural communities, securing more than $2.5 billion for underserved areas so they can compete and thrive in the 21st century.\nSherrod’s work has secured more than $150 million to advance critical rural development programs that support rural businesses, infrastructure projects, and communities in Ohio and across the country.\n## Protecting Healthcare For Rural Ohioans\nSherrod supports the Affordable Care Act (ACA) and has fought against repeal efforts that would hit rural communities hard. Ohioans living in rural communities have seen significantly expanded healthcare coverage under the ACA, and the already-shrinking pool of rural hospitals could suddenly become even smaller if repeal attempts succeed.\nSherrod continues to fight to give Ohio’s rural communities every possible tool and resource to fight the devastating opioid epidemic. He opposes the administration’s efforts to gut critical opioid and substance abuse programs, and has pressed the White House to give communities the necessary resources to combat this crisis. He led the passage of the bipartisan INTERDICT Act to help border agents intercept opioids as they enter the country and supports better education for doctors on addiction prevention and identification."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154401/https://www.sherrodbrown.com/issues/seniors/",
+     "original": "https://www.sherrodbrown.com/issues/seniors/",
+     "date": "2018-10-17",
+     "title": "Fighting for Seniors",
+     "text": "## Fighting for Seniors\n“We have made promises to our seniors that we must honor – Medicare, Social Security, affordable prescription drugs. These men and women have worked their entire lives, taken care of their families, and they deserve a quality of life that reflects that.”\n## Protecting Social Security\nTime and time again, Social Security has been attacked by Republicans who have tried to raise the retirement age and privatize the program. These misguided efforts would enrich Wall Street by risking Americans’ savings in the stock market. Sherrod’s position on these attacks is simple: no way. He has consistently voted and spoken out against any attempt to undermine Social Security benefits and deny Americans their hard-earned benefits.\n## Championing Affordable Healthcare\nSherrod believes seniors should have access to quality, affordable healthcare. He has worked throughout his career to protect and expand Medicare, helping beat back multiple assaults on this essential program and advocating to lower the eligibility age to 55. With the cost of prescription drugs on the rise, Sherrod has championed proposals to allow Medicare to directly negotiate prices and increase competition through generic alternatives. He is also fighting to pass legislation that would establish free preventive cancer and osteoporosis screenings under Medicare.\nReaching across the aisle, Sherrod has worked with Senator Rob Portman (R-OH) to introduce legislation to extend a critical healthcare tax deduction for seniors.\n## Keeping Promises, Fighting For Retirement Security\nDuring the tax debate, Sherrod promised “a hell of a fight” if Republicans moved forward with their plans to penalize workers with certain retirement savings accounts. Republicans relented, and Sherrod protected millions of Americans from new taxes on the money they put away for retirement.\nSherrod has also introduced a bold plan to stabilize pension funds, whose beneficiaries, through no fault of their own, often face a gap between what they were promised and what they actually receive in retirement. Sherrod will not allow mismanagement by corporate executives and Wall Street fund managers to upend workers’ retirement plans, and he’s committed to making sure promises made are kept. Sherrod was named the co-chair of a bipartisan committee in Congress tasked with developing bipartisan solutions to the pension crisis.\n## Supporting Strong Consumer Protections For Seniors\nSherrod knows scammers and criminals specifically target seniors. That’s why he strongly supported the Consumer Financial Protection Bureau’s (CFPB) fight against all shady and illegal financial practices. No one is more dedicated to protecting seniors from financial predators than Senator Sherrod Brown.\n## Endorsements\n- UAE Region 2B Retirees\n- USW Organization of Active Retirees\n- AFL-CIO National Alliance for Retired Americans"
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154325/https://www.sherrodbrown.com/issues/disability-community/",
+     "original": "https://www.sherrodbrown.com/issues/disability-community/",
+     "date": "2018-10-17",
+     "title": "Advocating for the Disability Community",
+     "text": "## Advocating for the Disability Community\n“I respect the unique experiences of people with disabilities and work in the Senate to make sure every Ohioan has access to the care and resources they need. Like all of us, people with disabilities are supported by their families and communities who should also be recognized for their hard work, selflessness, and dedication.”\n## Fighting For Ohioans With Disabilities\nSherrod has worked to strengthen and modernize the Americans with Disabilities Act (ADA) and has opposed efforts to weaken or undermine this critical legislation.\nHe has pushed to break down barriers to information and communications technologies for people with disabilities. He’s opposed legislation that would have made it easier for businesses to discriminate against people with disabilities.\nSherrod voted to ratify the Convention on the Rights of Persons with Disabilities in 2012, affirming his commitment to protecting the rights of all people with disabilities.\n## Creating Opportunities For People With Disabilities\nSherrod voted for the bipartisan Workforce Innovation And Opportunity Act, which created job training programs for Ohioans of all abilities. With Senator Thom Tillis (R-NC), Sherrod sponsored legislation to help veterans with service-related disabilities find good jobs.\nSherrod has fought to make sure that Ohioans with disabilities connected to their work, whether veterans wounded in service or miners with black lung, have access to the best possible care.\n## Championing Healthcare Access For All Ohioans\nThroughout his career, Sherrod has worked to make sure every Ohioan, regardless of income, can get the healthcare they need. He helped pass the Affordable Care Act (ACA), which has extended healthcare coverage for 5 million Ohioans with preexisting conditions and expanded access to community-based care and habilitative and rehabilitative services like occupational therapy and speech pathology. Sherrod also fought for nearly two decades to establish parity for mental health coverage, which he helped codify as part of the ACA.\nSherrod supports ending limits on Medicaid coverage for mental health care and has joined Governor Kasich in fighting back attempts to gut the Medicaid expansion, which has helped nearly 500,000 Ohioans get mental and behavioral health treatment.\n## Advocating For Children With Disabilities\nNo one has fought harder than Sherrod to protect the Children’s Health Insurance Program (CHIP), which serves nearly half of Ohio’s children with disabilities. Sherrod has worked for years to pass long-term funding for CHIP. In 2018 he co-sponsored the bill that successfully extended the program for the next six years.\nSherrod has worked to give children with disabilities the support they need in the classroom by supporting the Individuals With Disabilities Education (IDEA) Act, which benefits one in seven Ohio students, and by securing and protecting millions of dollars in funding for staff and services to help students with disabilities.\n## Making Social Security More Accessible\nSherrod has worked with Republicans and Democrats to decrease the backlog and wait times for Social Security Disability Insurance (SSDI).\nHe joined Senator Ron Wyden (D-OR) in calling for full funding for the Social Security Administration and teamed up with Senator John Barrasso (R-WY) to do away with the five-month waiting period for individuals with terminal illnesses to access SSDI benefits.\nSherrod and Senator Elizabeth Warren (D-MA) have worked together to expand Supplemental Security Income, which benefits nearly 300,000 Ohioans with disabilities."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154331/https://www.sherrodbrown.com/issues/veterans/",
+     "original": "https://www.sherrodbrown.com/issues/veterans/",
+     "date": "2018-10-17",
+     "title": "Caring for our Veterans",
+     "text": "## Caring for our Veterans\n“We have no more important moral obligation than supporting the men and women who risk their lives in service to our country, and the family members who sacrifice so much to support their loved ones who serve.”\n## Protecting Veterans’ Healthcare\nSherrod is committed to making sure that those who have put their lives in harm’s way to defend our country have access to the best healthcare possible. He helped secure the largest-ever increase in VA funding and has held the VA accountable for the disability claims backlog, long wait times, understaffing, and inadequate care.\nSherrod knows that comprehensive care for our veterans must include mental and behavioral care, and he helped pass the Female Veterans Suicide Prevention Act and the Clay Hunt Suicide Prevention for American Veterans Act to expand treatment and support for those struggling with trauma and mental illness.\n## Creating Opportunities For Veterans\nSherrod is working to help servicemembers and veterans rejoin the civilian workforce, introducing and co-sponsoring the Wounded Warrior Employment Improvement Act, the VOW To Hire Heroes Act, and an expansion of the Yellow Ribbon Program to provide veterans with job training and placement services.\nSherrod’s Patriot Employer Tax Credit Act would reward companies that hire veterans and servicemembers. Solar by Soldiers, which he helped launch, trains veterans to succeed in Ohio’s clean energy economy. Sherrod has secured millions of dollars for career services and related support programs for Ohio’s veterans, and passed legislation that gives hiring preference to Gold Star families.\n## Investing In Veterans’ Education\nFor many who enlist, the military offers a pathway to an education that may otherwise be out of reach. In the Senate, Sherrod co-sponsored a law that permanently expanded GI Bill education benefits for post-9/11 veterans.\nHe has passed legislation that makes these benefits more flexible and accessible to the families of fallen soldiers. Sherrod has stood up for veterans targeted by shady for-profit colleges and worked to stop them from preying on those who have served in our military.\nAs part of his bipartisan GI Bill expansion, Sherrod saw to it that the veterans and servicemembers who had been taken advantage of by failed for-profit schools had their education benefits restored.\n## Working To End Homelessness For Veterans\nSherrod has secured millions of dollars to end homelessness and expand access to affordable housing for Ohio veterans.\nWorking with Senators Susan Collins (R-ME) and Jack Reed (D-RI), Sherrod passed key provisions to ensure that no servicemember is discharged into homelessness.\nSherrod also worked with Senator Reed to introduce the Military Consumer Enforcement Act, which would protect veterans and their families from foreclosure and eviction.\n## Honoring Those Who Served\nSherrod is making sure we recognize the courage and sacrifice of those who serve. He has joined the entire Ohio congressional delegation to introduce bipartisan legislation to allow the battlefield cross to be displayed at the graves of fallen soldiers and presented long-overdue military medals to Ohio veterans.\nSherrod and Senator Rob Portman (R-OH) have honored the legacy of Ohio veterans by pushing to designate the Ohio Veterans Memorial and Museum in Columbus as the National Veterans Museum and Memorial.\nThe Columbus Dispatch wrote that Sherrod was “responsible for legislation requiring the Department of Defense to deliver the remains of soldiers killed in Iraq and Afghanistan to airports convenient to their families, not just major hubs often hundreds of miles away.”"
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154338/https://www.sherrodbrown.com/issues/opioid-crisis/",
+     "original": "https://www.sherrodbrown.com/issues/opioid-crisis/",
+     "date": "2018-10-17",
+     "title": "Combating the Opioid Crisis",
+     "text": "## Combating the Opioid Crisis\n“Eleven Ohioans will die today of an opioid overdose, and Congress must be doing everything in our power to fight this epidemic on all fronts.”\n## Working for a Comprehensive Response to the Opioid Crisis\nSherrod knows that there’s no one solution to the opioid addiction epidemic. That’s why he is proposing a comprehensive public health campaign to combat the crisis. Sherrod is calling on the federal government to launch a long-term campaign that includes widespread education and prevention efforts, expanding access to affordable addiction treatment, and recovery that includes better screening and protections against relapse.\n## Championing Efforts to Keep Opioids Out of Ohio\nSherrod and Senator Portman are united in working to prevent opioids from getting into Ohio. Together, they pushed Sherrod’s INTERDICT Act through Congress and signed into law by President Trump, giving law enforcement the tools to intercept opioids and synthetics before they enter our country. Sherrod and Portman are now working on new legislation, the POWER Act, to give local law enforcement officers access to the same fentanyl detection equipment to help them keep these drugs out of Ohio communities.\nSherrod has fought to lower the amount of prescription drugs that manufacturers and distributors pump into our healthcare system, and to make their these processes more open and transparent. He has advocated for programs that let people safely dispose of expired or unused prescription drugs to ensure they don’t end up in the hands of someone who could misuse or abuse them.\n## Investing In and Expanding Treatment\nAny long-term solution to ending the opioid crisis must include providing people suffering from addiction and mental health issues with the tools to get their lives back on track. Sherrod supported Governor Kasich’s decision to expand Medicaid, which funds treatment for more than 150,000 Ohioans, and worked with Portman on legislation to grant more Ohioans access to healthcare professionals and facilities. Sherrod knows that for infants and newborns affected by prenatal opioid addiction, treatment is especially critical, which is why he and Senator Portman have fought for measures to give affected newborns the best care available.\n## Bringing Vital Resources to Ohio Communities\nSherrod is working hard to make sure Ohio’s communities have the funding necessary to adequately address the opioid crisis. He supports a number of proposals, including the Comprehensive Addiction and Recovery Act and the 21st Century Cures Act, that would give local communities the aid they need to effectively fight this epidemic. Sherrod was also a vocal opponent of the administration’s 2018 budget proposal, which called for slashing hundreds of millions of dollars in funding to programs Ohio counts on to combat opioid addiction. And when the White House dragged its feet in declaring the crisis a national emergency, Sherrod held the Administration accountable for their inaction — and applauded them when they finally heeded his call.\nSenator Brown Is Working To Engage Communities In Awareness And Prevention\nSherrod believes that community engagement is crucial to this fight. By holding roundtable discussions with Ohio law enforcement, healthcare professionals, and those affected by the opioid crisis, Sherrod works with community leaders to help raise local awareness and understanding of the epidemic. He has also championed successful legislation that provides opioid prescribers with the training to identify warning signs before addiction occurs.\n## Endorsements\n- Ohio Fraternal Order of Police"
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154344/https://www.sherrodbrown.com/issues/education/",
+     "original": "https://www.sherrodbrown.com/issues/education/",
+     "date": "2018-10-17",
+     "title": "Ensuring Quality Education for our Children",
+     "text": "## Ensuring Quality Education for our Children\n“Every student deserves a community that supports their education. I’m troubled by the lack of oversight and transparency of many charter schools -- and will continue pushing for accountability. I will also keep up my efforts to bring critical resources to K-12 schools across Ohio, along with making higher education more accessible to every American.”\n## Supporting Ohio Students\nSherrod’s record is proof of his commitment to Ohio students. He’s consistently voted to protect and expand Head Start and Early Head Start programs, spearheaded efforts for extra funding and staffing for Full-Service Community Schools, and defended federal funding for Ohio schools.\nHe believes they should be pathways to opportunity for all students. He introduced legislation to address inequality in our public schools, and is a strong supporter of the My Brother’s Keeper program, a program launched by President Obama to mentor young African-American men.\n## Standing Shoulder To Shoulder With Ohio Educators\nOhio educators know that Sherrod has their backs. When Senate Bill 5 threatened to take away educators’ collective bargaining rights, Sherrod stood with teachers, firefighters, police officers, and organized labor to successfully overturn Ohio’s so-called “right-to-work” law.\nSherrod has worked with teachers to make sure they’re paid the salaries and benefits they deserve. When teaching jobs were on the line, Sherrod rose to the challenge, fighting for funding to save and create jobs.\n## Holding Charter Schools Accountable\nOversight, transparency, and accountability are Sherrod’s focus for charter schools. When Sherrod called for additional oversight of Ohio’s charter schools, the Department of Education listened and announced it would only fund high-performing charter schools.\nSherrod has also championed legislation to go after fraud and waste in charter schools by increasing community involvement and oversight.\n## Fighting For 21st-Century Schools\nThe discussion over infrastructure often ignores the declining state of our schools. Sherrod has introduced legislation that would repair, renovate, and build schools in Ohio and across the country, which would create almost two million jobs.\nHe’s also proposed and helped pass a number of other proposals to bring much-needed aid to school facilities while creating good-paying jobs.\n## Working To End Bullying\nNo student should feel unsafe or unwelcome in their school. Sherrod is working to end bullying in the classroom and on the schoolyard. He has repeatedly co-sponsored the Safe Schools Improvement Act, which would require schools to adopt codes of conduct that prohibit bullying based on race, gender, ability, or nationality.\nSherrod recognizes that some students are more vulnerable to bullying and discrimination than others. He has participated in the National Day of Silence and joined the “It Gets Better Project” to raise awareness of the bullying experienced by far too many LGBTQ students.\n## Endorsements\n- Ohio Federation of Teachers\n- Ohio Association of Public School Employees\n- Toledo Federation of Teachers"
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154350/https://www.sherrodbrown.com/issues/healthcare/",
+     "original": "https://www.sherrodbrown.com/issues/healthcare/",
+     "date": "2018-10-17",
+     "title": "Expanding Access to Affordable Healthcare",
+     "text": "## Expanding Access to Affordable Healthcare\n“Instead of repealing the Affordable Care Act, we should be working to improve and expand it so that every Ohioan has access to quality, affordable healthcare.”\n## Supporting and Defending Expansion of Healthcare Coverage\nMillions of families across our state and country have benefited from the Affordable Care Act (ACA). Instead of repeating partisan talking points, Sherrod focuses on protecting those who have benefited from the ACA, including more than four million Ohioans who no longer have to worry about hitting lifetime coverage caps, more than three million Ohioans with private healthcare plans that now include access to preventive services, and nearly two million Ohioans with pre-existing conditions.\nWhen Washington Republicans tried to gut the Medicaid expansion that allowed more than 700,000 Ohioans to access low-cost insurance coverage — including 150,000 who struggle with addiction — Sherrod stood with Republicans like Governor John Kasich to fight back. Sherrod has also teamed up with Senator Rob Portman (R-OH) to propose legislation to bring targeted healthcare tax credits to seniors and secure hard-earned coverage for retired miners who sacrificed their health and safety to support their families and power our nation.\n## Taking on Rising Prescription Drug Prices\nSherrod has always stood with consumers and patients in the fight for fair prescription drug prices. Whether it’s going after price-gouging drug companies or spearheading proposals that would allow Medicare to directly negotiate prescription drugs and increase competition in the pharmaceutical marketplace, Sherrod’s track record shows he’s not afraid to tangle with Big Pharma to make sure Ohioans can afford the prescription drugs they need.\n## Fighting for Ohio’s Children\nLast year’s Republican-led attempt to allow the Children’s Health Insurance Program (CHIP) to expire demonstrated how vital it is that Ohio’s children have an advocate like Sherrod in the U.S. Senate. In addition to his relentless fight for CHIP, Sherrod is a strong supporter of policies to fund training for pediatricians and pediatric specialists. He has worked across the aisle with Senator Rob Portman (R-OH) on proposals to create and fully fund a national pediatric research network, standardize care across state borders, and combat sudden childhood deaths.\n## Championing Affordable Healthcare for Seniors\nSherrod has worked throughout his career to protect and expand Medicare, beating back attacks on this essential program and advocating to lower the eligibility age to 55. He has championed proposals to allow Medicare to directly negotiate prices and increase competition through generic alternatives and to establish free preventive cancer and osteoporosis screenings under Medicare. Reaching across the aisle, Sherrod has worked with Senator Portman to introduce legislation to extend a critical healthcare tax deduction for seniors.\n## Combating Disease and Addiction\nOhio’s opioid epidemic is putting a huge strain on our families and communities. That’s why Sherrod has teamed up with Senator Portman on legislation to increase access to healthcare professionals and facilities, direct research treatment options, and prevent addiction before it begins. Sherrod is also a consistent advocate for increasing awareness and education to combat diseases from widespread ones like breast cancer to rarer diseases like Zika virus, Ebola, tuberculosis, and sickle cell anemia.\n## Endorsements\n- Ohio State Medical Association"
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154407/https://www.sherrodbrown.com/issues/small-business/",
+     "original": "https://www.sherrodbrown.com/issues/small-business/",
+     "date": "2018-10-17",
+     "title": "Helping Small Businesses Succeed",
+     "text": "## Helping Small Businesses Succeed\n“Small businesses and manufacturers are the backbone of Ohio’s economy.”\n## Fighting for Lower Taxes on Small Businesses\nSherrod knows that for small business owners, expanding and investing in employees is non-negotiable. He also knows that it can be difficult to cover costs while keeping pace with bigger competitors, which is why he has voted for over $1.3 billion in tax breaks for small businesses.\nSherrod has supported legislation that allows small businesses to stay competitive by writing off R&D costs and investments in business equipment and software. He was a vocal advocate for the Small Business Jobs Act, which the Akron Beacon Journal called “a most worthy response to the recovering yet still fragile economy.”\nSherrod recognizes that small businesses don’t have the time or resources to spend making sense of byzantine paperwork. He co-sponsored the Small Business Paperwork Mandate Elimination Act of 2011, which would have cut red tape by updating tax reporting requirements for small businesses.\n## Leveling the Playing Field for Small Businesses\nSince joining Congress, Sherrod has stood up for Ohio’s small businesses by opposing unfair trade deals that allow corporations to send jobs overseas, hollowing out communities and leaving small businesses struggling to compete.\nSherrod voted against NAFTA in 1993 and is playing an active role in the Trump administration’s renegotiation of the agreement to deliver a better deal for Ohio. He stood up to members of his own party in opposing Trade Promotion Authority and the Trans-Pacific Partnership, and led Democrats away from trade deals that hurt workers and small businesses. He has also opposed trade agreements with Central America, Colombia, China, and South Korea.\nSherrod has helped Ohio businesses enter the global marketplace by leading the reauthorization and expansion of the Export-Import Bank, which benefited 226 small businesses in Ohio between 2007 and 2015. He has been a vocal opponent of currency manipulation by foreign countries, which undercuts international trade law and puts American businesses at a disadvantage. Sherrod and Senator Rob Portman (R-OH) wrote a letter to the Department of Labor asking Secretary Wilbur Ross to investigate and crack down on countries caught engaging in unfair practices.\n## Helping Small Businesses Innovate\nSherrod has worked with members of both parties to expand financing opportunities for small and mid-sized manufacturers, and to reward small businesses that hire more employees and invest in job training and retraining. His bipartisan SECTORS Act worked to match employees skills to existing jobs by requiring that job training programs be designed with input from partnering companies.\nSherrod has worked to create business incubators and innovation hubs around the country to ensure that the America remains a leader in high-tech manufacturing. He worked with Senator Roy Blunt (R-MO) to pass bipartisan legislation to create manufacturing innovation hubs across the country, the first of which was established in Ohio in 2015.\nSince 2013, Sherrod has secured more than $17 million in federal grants and loans to support job creation and training in Ohio."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154414/https://www.sherrodbrown.com/issues/lgbtq/",
+     "original": "https://www.sherrodbrown.com/issues/lgbtq/",
+     "date": "2018-10-17",
+     "title": "Love and Respect For All Ohioans",
+     "text": "## Love and Respect For All Ohioans\n“It has been my honor to stand alongside you, fighting to make sure that every Ohioan is treated equally under the law and given the respect they deserve. I will never compromise on these principles and I will continue to work to drive your movement forward.”\n## Fought For Marriage Equality\nLong before it was a politically popular position, Sherrod stood with LGBTQ families and couples to fight for full recognition under the law.\nHe opposed the Defense Of Marriage Act in the 1990s and has consistently fought against legislative efforts to deny LGBTQ Americans the right to marry whomever they love. When the day finally came in 2015, Sherrod rejoiced with millions of Americans as the Supreme Court recognized the rights of LGBTQ couples and families across the nation.\n## Standing With LGBTQ Servicemembers\nAny American who honorably serves our country in uniform should be treated like a patriot. Since the beginning of his career, Sherrod opposed the military’s “Don’t Ask, Don’t Tell” policy, which he helped repeal in 2010. Sherrod has co-sponsored legislation to correct military records and reinstate benefits of servicemembers discharged on the basis on their sexual orientation.\nWhen President Trump pushed to ban transgender individuals from the armed services, Sherrod responded forcefully, saying, “I have deep respect and gratitude for anyone who volunteers to serve in our military. We should not turn away anyone who is willing and able to serve this country and help keep America safe.”\n## Combating Anti-LGBTQ Discrimination\nWhile we have made progress toward equality, it is legal in many states to discriminate against someone based on their sexual orientation or gender identity. Sherrod has led the charge to pass legislation that would expand federal civil rights protections and backed other bills to fight LGBTQ discrimination in housing, the workplace, and around the world.\n## Advocating For LGBTQ Youth\nSherrod has fought to protect LGBTQ youth because he knows they are especially vulnerable to harassment and discrimination. Not only has he called “conversion therapy” a “fraudulent, unfair, and deceptive” practice, he’s repeatedly moved to outlaw it.\nSherrod has worked to raise awareness of and bring an end to the all-too-common bullying and discrimination that LGBTQ youth face. In 2014, he participated in the National Day of Silence. In 2010 Sherrod joined the “It Gets Better Project” by giving a speech on the Senate floor in memory of LGBTQ teens driven to suicide by bullying, and in 2011 he participated in a video with his colleagues in support of LGBTQ students and youth. Building a more free and equal society begins with helping those who will inherit it, which is why Sherrod has so vigorously advocated for LGBTQ youth.\n## Reliably Partnering With LGBTQ Organizations And Leaders\nRegularly meeting with Ohio and national LGBTQ groups allows Sherrod to listen, learn, and discuss important issues, which makes him a more effective advocate for the LGBTQ community in the U.S. Senate. His reelection has been endorsed by Human Rights Campaign."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154419/https://www.sherrodbrown.com/issues/higher-education/",
+     "original": "https://www.sherrodbrown.com/issues/higher-education/",
+     "date": "2018-10-17",
+     "title": "Making College Affordable",
+     "text": "## Making College Affordable\n“Student loan debt shouldn’t hold students back for decades after they’ve graduated.”\n## Standing with Ohio Students\nAn entire generation is drowning in student debt, and Sherrod is committed to getting them relief. He has championed efforts to protect students from predatory student loan providers, called for stronger protections against unfair and abusive lending practices, and backed legislation to allow students and their families to refinance their existing student loan debt. Sherrod is also working to make college more affordable for Ohio families, fighting to expand student loan programs and pushing for tax reforms that would make it easier for middle-class families to afford higher education.\nMaking college more accessible to veterans and servicemembers is also a top priority for Sherrod. He has worked tirelessly to pass legislation that ensures our men and women in uniform, and their families, have the resources to go to college.\n## Supporting Ohio Colleges and Universities\nSherrod is proud of Ohio’s higher education system. He consistently works to ensure that our colleges and universities have the resources necessary to continue offering field-leading educational opportunities. Every Ohioan deserves the opportunity to study at a world-class in-state institution. Sherrod has also worked to ensure recognition and resources for Historically Black Colleges and Universities (HBCUs).\n## Standing With Ohio Communities\nWith Secretary of Education Betsy DeVos making it harder for Ohioans to get a college education, Sherrod is standing with students, educators, and families to fight for accessible, quality higher education. He regularly hosts educator forums and student leadership summits across the state so he can best advocate for those communities and hold the DeVos administration accountable for its anti-student actions.\n## Fighting Predatory For-Profit Colleges\nSherrod reached across the aisle to build a bipartisan plan that boosted GI benefits and provided relief to veterans who were taken advantage of by failed for-profit institutions. Sherrod has also worked towards ending deceitful marketing practices used by for-profit colleges — including some shamefully aimed at veterans — by holding high-paid executives accountable for their tactics.\nSherrod has been at the forefront of efforts to identify and investigate sham for-profit colleges and recoup losses for students. He is a vocal critic of forced arbitration clauses that make it nearly impossible for students at for-profit colleges to recover their tuition dollars if they’re defrauded or the institution fails."
+    },
+    {
+     "url": "https://web.archive.org/web/20181017154426/https://www.sherrodbrown.com/issues/environment/",
+     "original": "https://www.sherrodbrown.com/issues/environment/",
+     "date": "2018-10-17",
+     "title": "Preserving Our Environment",
+     "text": "## Preserving Our Environment\n“From protecting the Great Lakes from invasive species and toxic algal blooms to promoting a clean energy future, defending clean water and clean air is more important than ever.”\n## Senator Brown Is A Fierce Defender Of Ohio’s Lakes And Waterways\nSherrod is a leader in defending Ohio’s lakes and waterways. Partnering with senators throughout the region, he’s championed the Great Lakes Restoration Initiative to clean up and revitalize these vital water resources, and he joined Senator Rob Portman (R-OH) in a show of bipartisanship to vocally oppose the administration’s efforts to drastically reduce support for the project.\nSherrod knows the devastating effect algal blooms have on lakeshore communities. He has fought for more funding and pushed for more research to better understand their causes and consequences, to help develop new solutions. Partnering with Senator Portman, Sherrod has spearheaded legislation to coordinate federal, state, and local responses to combat Asian carp and other invasive species. The two have worked side by side across party lines to apply consistent pressure to ensure that the Army Corps of Engineers keeps the Cleveland Harbor and shipping channel clean.\n## Senator Brown Supports Clean Energy Innovation And Job Creation\nOhio has an opportunity to be at the forefront of our growing clean energy economy — that’s why Sherrod supports investing in a clean energy industry that will create good jobs for Ohioans. He’s fought for policies to give manufacturers the tools they need to not only adapt to a changing marketplace, but to shape it and lead it. In turn, strengthening this job-creating field will decrease our dependence on foreign oil and augment our national security.\nSherrod believes innovation across a diverse mix of energy sources is the best path toward a clean-energy economy. He’s supported policies to encourage investment in offshore wind energy, reached across the aisle to promote ethanol and biodiesel fuel, and championed carbon capture technology.\n## Senator Brown Fights For Environmental Protections\nThe health of our environment has a direct impact on the health of Ohioans. Sherrod has worked to protect our drinking water and is a strong proponent of increasing funding to prevent, monitor, and eliminate lead poisoning. He has also worked with Senator Portman to protect our water from microcystin, the byproduct of the algal blooms that created the 2014 water crisis in the Toledo area. Furthermore, Sherrod has spoken out against dangerous cuts to the federal budget that would make it nearly impossible to enforce clean air and water laws.\n## Senator Brown Has Strong Support From Environmental Groups\nSherrod’s record of stewardship and commitment to the environment has earned him a 93% lifetime score from the League Of Conservation Voters. His reelection has been endorsed by the League of Conservation Voters Action Fund and the Natural Resources Defense Council Action Fund."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.sherrodbrown.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-01",
+    "url": "https://web.archive.org/web/20241101230504/https://www.sherrodbrown.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241101230504/https://www.sherrodbrown.com/",
+     "original": "https://www.sherrodbrown.com/",
+     "date": "2024-11-01",
+     "title": "Sherrod Brown - Fighting for Ohioans",
+     "text": "## NEW: Poll shows Sherrod Brown down 2 points to his opponent\nNEW: Poll shows Sherrod Brown down 2 points to his opponent\n## When you love your country, you fight for the people who make it work.\nWhether you punch a clock or swipe a badge, earn a salary or make tips, are raising children or caring for an aging parent, Sherrod is fighting for you .\nWear the Canary Pin\nEvery day, I wear a pin on my lapel depicting a yellow canary in a birdcage.\nStanding up to special interests\nFighting for Rural Ohioans"
+    },
+    {
+     "url": "https://web.archive.org/web/20241013193138/https://www.sherrodbrown.com/issues/",
+     "original": "https://www.sherrodbrown.com/issues/",
+     "date": "2024-10-13",
+     "title": "Issues Archive - Sherrod Brown",
+     "text": "## Polls show Sherrod losing ground to his opponent. Chip in now!\n## Issues\nKeeping Ohio Communities Safe\nWorkers, Trade, & Jobs\nSherrod works with anybody to put Ohioans first and stands up to anyone who gets in the way.\nStanding up to special interests\nFighting for Rural Ohioans\nEqual Rights and Opportunities\nAbortion Access & Protecting Women’s Health"
+    },
+    {
+     "url": "https://web.archive.org/web/20241010013305/https://www.sherrodbrown.com/issue/rural-ohioans/",
+     "original": "https://www.sherrodbrown.com/issue/rural-ohioans/",
+     "date": "2024-10-10",
+     "title": "Fighting for Rural Ohioans - Sherrod Brown",
+     "text": "## Polls show Sherrod losing ground to his opponent. Chip in now!\n## Fighting for Rural Ohioans\nSherrod knows that rural communities are integral to the fabric of our state and is fighting to make sure rural Ohioans have every opportunity to get ahead.\nThe first Ohioan to serve on the Senate Agriculture Committee in nearly 50 years, Sherrod is fighting for Ohio’s local farms and agricultural sector. In 2018, Sherrod secured key priorities in the Farm Bill, including provisions to improve water quality in Ohio and permanent funding to allow Ohio farmers to sell products directly to consumers. Sherrod is also working to rein in abuse of the farm payment system and ensure taxpayer support is targeted to local Ohio farmers, not corporate agribusinesses.\nSherrod believes every Ohio family and Ohio business should have reliable, high-speed internet which is why he led the fight to get new Ohio households connected to the internet. He’s also fighting to make high-quality child care more available and affordable in rural communities to support all Ohio parents and our economy.\nSherrod secured transformational infrastructure investments that are reaching communities across Ohio – grants that will go towards making our roads and bridges safer, upgrading essential clean water infrastructure, updating regional airports, and improving power lines to ensure all Ohioans have reliable access to electricity. Sherrod will always fight for investments that create jobs, support economic development, and attract businesses to Ohio’s rural communities.\nSherrod also defended the Appalachian Regional Commission – an economic development agency dedicated to strengthening economic growth across Appalachia – from harmful cuts to ensure it can continue to be a resource for Ohio communities."
+    },
+    {
+     "url": "https://web.archive.org/web/20241010013305/https://www.sherrodbrown.com/issue/special-interests/",
+     "original": "https://www.sherrodbrown.com/issue/special-interests/",
+     "date": "2024-10-10",
+     "title": "Standing up to special interests - Sherrod Brown",
+     "text": "## Polls show Sherrod losing ground to his opponent. Chip in now!\n## Standing up to special interests\nSherrod has always stood up to special interests to level the playing field for Ohioans. Whether it’s Big Pharma, Big Oil, or Big Banks, Sherrod is fighting back against the Wall Street, profit-at-all-costs business model to make sure hard work pays off for all Ohioans.\nAfter Norfolk Southern’s greed and incompetence led to train derailments across Ohio – including the toxic train derailment in East Palestine – Sherrod partnered with Republicans to hold the rail lobby accountable and protect all Ohio communities from similar derailments.\nWhen Silicon Valley banking executives cashed out after running their banks into the ground, Sherrod made sure Ohio banks, credit unions, and small businesses had the resources they needed to stay afloat. Now, Sherrod is working across the aisle to pass the strongest bank reform law since Dodd-Frank to hold CEOs and executives accountable for their misconduct and make sure big banks – not Ohioans – pay for their bad decisions.\nSherrod stood up to Big Pharma to finally allow Medicare to negotiate directly with drug companies to get the lowest costs for Ohio seniors and continues to fight to lower drug costs for all Ohioans. He also passed the first-ever law to increase taxes on stock buybacks – where executives reward themselves instead of investing in workers and innovation – to support the economy."
+    },
+    {
+     "url": "https://web.archive.org/web/20241010163952/https://www.sherrodbrown.com/issue/ohio-first/",
+     "original": "https://www.sherrodbrown.com/issue/ohio-first/",
+     "date": "2024-10-10",
+     "title": "Putting Ohio First - Sherrod Brown",
+     "text": "## Polls show Sherrod losing ground to his opponent. Chip in now!\n## Putting Ohio First\nGrowing up in Mansfield, Ohio, Sherrod saw firsthand how politicians and corporations lobbied for bad trade deals that shipped Ohio jobs overseas. That’s why he’s always stood up to his own party to oppose trade agreements that put Ohio workers at a disadvantage, like NAFTA. Sherrod opposed President Obama on the Trans-Pacific Partnership, worked with President Trump to renegotiate NAFTA, and worked with former Senator Rob Portman to secure the strongest-ever Buy America protections in the Bipartisan Infrastructure Law. Sherrod is working to make sure foreign countries can’t cheat our trade laws and is pushing the Biden Administration to do more to stand up to the Chinese Communist government – which is threatening Ohio jobs in industries from steel to solar manufacturing.\nSherrod works with anybody to put Ohioans first and stands up to anyone who gets in the way. When Wall Street put Ohioans’ pensions at risk, most people in Washington wrote off the fight to save them as a lost cause. Sherrod refused to give up and saved the pensions of over 100,000 Ohio workers by passing the Butch Lewis Act .\nWhen Ohio veterans and their families told Sherrod how hard it was to get treatment for severe illnesses like cancer and lung disease tied to their exposure to highly toxic burn pits during their military service, Sherrod went to work, and passed the most comprehensive expansion of health care benefits for veterans who faced toxic exposure in our country’s history.\nSherrod also worked with Republicans to pass legislation tackling the fentanyl crisis at its source by imposing more powerful sanctions on illicit supply chains in China and Mexico. His bill was endorsed by law enforcement officers in Ohio and across the country – including the National Fraternal Order of Police president – because it will support their efforts and save lives."
+    },
+    {
+     "url": "https://web.archive.org/web/20241010173915/https://www.sherrodbrown.com/issue/veterans/",
+     "original": "https://www.sherrodbrown.com/issue/veterans/",
+     "date": "2024-10-10",
+     "title": "Veterans & Military - Sherrod Brown",
+     "text": "## Polls show Sherrod losing ground to his opponent. Chip in now!\n## Veterans & Military\nSherrod believes we have a sacred obligation to support all those who serve in our nation’s military – both while they serve and as veterans. That is why he has supported efforts to increase pay and benefits for our men and women in uniform and why he has fought to ensure Ohio military bases and installations have the resources and facilities necessary to support their missions.\nSherrod knows that those who serve should have world-class health care. Too often – from Vietnam, to Afghanistan, to Iraq – our nation has failed to provide care for those suffering from toxic exposure, whether from Agent Orange or toxic burn pits. Senator Brown led the years-long fight to ensure that all veterans exposed to toxins get the health care they deserve – from leading efforts to ensure that reservists exposed to Agent Orange from the planes they worked on received the care they needed to finally passing the PACT Act, the most comprehensive expansion of health care for veterans exposed to toxins in our country’s history.\nThe legislation is named after Sergeant First Class Heath Robinson, a Central Ohio veteran who passed away in 2020 at age 39 from lung cancer after exposure to burn pits during his deployment in Iraq in 2006. Sherrod is now holding roundtables with Ohio veterans across the state to ensure our veterans know how to access care.\nSherrod successfully secured eight new C-130 aircraft for the Youngstown Air Reserve Station and pushed the Air Force to locate their first cyber mission in Mansfield. Sherrod also worked with former Senator Rob Portman and others across the aisle to make sure that Wright-Patterson Air Force Base has the most up to date facilities in the world to ensure its jobs and missions remain in Dayton."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.sherrodbrown.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-26",
+    "url": "https://web.archive.org/web/20261026062336/https://www.sherrodbrown.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261026062336/https://www.sherrodbrown.com/",
+     "original": "https://www.sherrodbrown.com/",
+     "date": "2026-10-26",
+     "title": "Sherrod Brown - Fighting for Ohioans",
+     "text": "## The New York Times reports Republicans are outspending us 2:1 this week, to the tune of $23 million. Can you rush a donation to help Sherrod stay in the fight so Ohioans hear his message?\nClick on an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through immediately.\n## When you love your country, you fight for the people who make it work.\nHELP SHERROD BROWN FLIP OHIO\nClick on an option to get started. If you've saved your payment information with ActBlue Express, your donation will go through immediately.\nSherrod Brown has always been a relentless fighter for the people of Ohio.\nBorn and raised in Mansfield, Sherrod saw firsthand how corporations lobbied for tax breaks and bad trade agreements that shipped Ohio jobs overseas. That’s why he’s always opposed unfair trade deals that hurt Ohio workers.\nA tireless advocate in standing up for the dignity of work, Sherrod has never stopped fighting for Ohio families and workers across the country–and time and again he’s delivered results.\nWhen Wall Street banks gambled away workers’ hard-earned pensions, Sherrod led the charge to make sure over 100,000 Ohioans got the retirement they were owed.\nWhen the drug companies jacked up prices, Brown successfully fought to cap the cost of insulin and reduce the price of other prescription drugs for Ohio seniors.\nWhen millions of veterans returning from war who were exposed to highly toxic burn pits were being turned away by the VA as they suffered from severe illnesses like cancer and lung disease, Sherrod worked with Republicans to get them the care they deserved.\nAnd because of Sherrod Brown, over 2 million former teachers, bus drivers, police officers, firefighters, and other workers are now receiving their full Social Security payments that previously were withheld by the federal government.\nCalled “a champion for workers and the middle class” who “has advocated for Ohio and for ordinary people” Sherrod Brown “has fought for affordable health care, fair wages, worker pensions and consumer protections.”\nSherrod believes too many people think of politics as left or right, but to him it’s all about whose side you’re on, and who you are fighting for.\nWith all the craziness coming out of Washington, including giving massive tax breaks to corporations and billionaires at the expense of hardworking Ohioans, Sherrod knows he has the ability to do something about it, and that’s why he’s running for Senate.\nSherrod lives in Columbus with his wife Connie Schultz, a Pulitzer Prize-winning columnist and author. Sherrod and Connie drive Jeeps made by union workers in Toledo, and are blessed with a growing family, including three daughters, a son, eight grandchildren, and their beloved rescue dogs, Franklin and Walter."
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my3nbbtxqh24",
+     "text": "It was an honor to be with AFL-CIO leaders in Cincinnati. They’re fighting for an economy that puts workers before billionaires and I’m proud to be in that fight with them."
+    },
+    {
+     "date": "2026-10-17",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my3u7wp7p32n",
+     "text": "Everywhere I go, I hear the same thing: Ohioans are working harder than they ever have and are still struggling to keep up with this economy.\n\nThey're tired of Jon Husted's votes making life more expensive and they're ready for change."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my62cv3nh22u",
+     "text": "Workers in Toledo are tired of seeing “leaders” in Washington put billionaires before hardworking Ohioans.\n\nThank you to the Central Midwest Regional Council of Carpenters and UBC General President McCarron for showing up to this fight. I’m in the fight alongside you."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my6cfvwpwa2l",
+     "text": "It’s time to ban Congressional stock trading and make sure members of Congress are looking out for your checking account, not their investment account."
+    },
+    {
+     "date": "2026-10-18",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my6sdrxl3s2s",
+     "text": "CEOs and corporations are making record profits,  but hardworking Ohioans can’t afford to get ahead. \n\nOur economy is rigged for the wealthy and it has to change."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myaccx7jy22k",
+     "text": "Ohioans across the state are voting right now, and you can too! Vote in-person at your county Board of Elections or send in your absentee ballot today.\n\nFor more information, head to iwillvote.com/OH"
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myaipt7awu2j",
+     "text": "It's going to take all of us to win this in 15 days. Thank you to the volunteers showing up in Loveland to make sure we do just that!"
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myay2yr2bu2o",
+     "text": "Fifteen days until we win. Let’s do this, Ohio. "
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mybd23o4hf2o",
+     "text": "Jon Husted voted to increase health care premiums nine times. \n\nMany Ohioans saw insurance costs double or triple, and it was Jon Husted who sat in Washington and cast the votes to make it happen. "
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mycpt5xub22o",
+     "text": "Just 2 weeks until Election Day, Ohio! \n\nIt’s going to take all of us to win, get out and vote today!"
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myd5fq2wc62q",
+     "text": "Workers before billionaires."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myd6fbtww32f",
+     "text": "The ad released by Vivek Ramaswamy is disgusting. Everyone, including Jon Husted, should be willing to condemn this ad."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydo4cag432j",
+     "text": "Jon Husted’s Big Oil donors are profiting from the Iran war that Husted voted 14 times to continue.\n\nAs Ohioans pay record high prices at the gas pump, Husted donors like Exxon and Chevron are reporting record high profits."
+    },
+    {
+     "date": "2026-10-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydqwpzpdg2x",
+     "text": "Ohioans know nothing worth having is given, you’ve got to fight for it. \n\nI’m proud to join labor leaders in Cincinnati as we fight for a government that puts workers before billionaires. "
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydvgwbweq2n",
+     "text": "Jon Husted gave data centers $2.5 billion in out-of-control tax breaks; Ohioans got higher utility bills."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydxb52ews2b",
+     "text": "Thank you, Athens! Let’s win this!"
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myfbua3ci727",
+     "text": "No one should profit off backroom deals and insider trading while they’re supposed to be serving the public.\n\nIt’s time to ban congressional stock trading and stop the corruption."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myfs32hmia2q",
+     "text": "Folks in Chillicothe know all about Jon Husted and his broken promises.\n\nThey’re demanding a leader in Washington who will lower costs and put working people first – that’s why I’m in this fight."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myfv5l7tdv2a",
+     "text": "I can’t win this race alone – it takes all of us fighting like hell to make a difference. \n\nThank you to all the volunteers working so hard to make Ohioans' lives a whole lot better."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myfwxjipo52u",
+     "text": "Jackson County is ready to win!"
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myg2ryjtmu2q",
+     "text": "I fight for Ohioans – no one else."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myg6e5xf7i23",
+     "text": "There are 12 days left until Election Day, and it’s going to take all of us to win.\n\nJoin us in the fight and sign up to volunteer today: https://www.mobilize.us/ohiowins/ "
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mygcke75to2n",
+     "text": "Ohio – let's finish strong and win this."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mygg2bsnw22h",
+     "text": "I’m proud to fight for Ohio workers, to fight for an economy that puts working families before billionaires. \n\nThey know I’ve got their back, and I’m grateful they have mine."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myhrignmuw22",
+     "text": "If you get nervous watching the total add up at the grocery store checkout, I’m fighting for you.\n\nIf you put ten bucks at a time in the gas tank just to get through the week, I’m in this fight for you.\n\nIf you’re a billionaire looking for more tax breaks, I promise I’m not your guy."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myi7jfcgms2i",
+     "text": "Right now, Ohioans don’t have a voice in the Senate fighting for them  – in just 12 days, we're going to change that."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myighabbez2r",
+     "text": "When Jon Husted cast the deciding vote to cut Medicaid for half a million Ohioans, he betrayed families like Sarah and Audrey's."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myissppr3k2t",
+     "text": "Folks in Martins Ferry know hard work should pay off – I’m proud to fight for working Ohioans and I’m grateful for their support."
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myiup7ttwy2h",
+     "text": "We have a lot of work to do to bring down costs, and we’ve got to get started right away. "
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mykgxcyojq2o",
+     "text": "If you want know who Jon Husted is fighting for, just look at who’s been funding his campaigns: \n- Epstein Co-Conspirators: $116,000 \n- Big Oil: $191,000 \n- Data center industry: $636,000\n- Health insurance companies: $679,000 \n- FirstEnergy: $3.5 million \n- Big Tech: $45 million"
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myklzteljb2s",
+     "text": "It’s time for Washington to put workers over billionaires. "
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mykr2vvbfn2o",
+     "text": "11 more days until we win! "
+    },
+    {
+     "date": "2026-10-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mykzlywz5m27",
+     "text": "Folks in Jackson are showing up and fighting for an Ohio that puts working people first. Let’s win this. "
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mymqqykq6g2d",
+     "text": "Ohio – we are officially 10 days away from Election Day! \n\nGrab your friends and family and make a plan to vote TODAY. Head to iwillvote.com/OH for more information."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mymvrhs2vo2k",
+     "text": "Jon Husted gave data center corporations $2.5 billion in sweetheart tax breaks to bring over 220 data centers to our state. \n\nIn return, data center interests have donated over $630,000 to the Husted campaign."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mymvtt4fbs2y",
+     "text": "Cleveland is showing up and ready to win!"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynahziihe2w",
+     "text": "We’re fighting for Ohio and we’re ready to win!"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynmat7zqk2r",
+     "text": "Thank you, Cleveland!"
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynogjp3p223",
+     "text": "Thank you, Cleveland! Together, we’re fighting for Ohio.\n\nIt was an honor to be joined by @barackobama.bsky.social and @amyactonoh.bsky.social in Cleveland today."
+    },
+    {
+     "date": "2026-10-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myntoml5gc23",
+     "text": "How dare Jon Husted say your work ethic is broken."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynw7htrok2g",
+     "text": "Thank you @barackobama.bsky.social for joining me in that fight."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynyhm6trk25",
+     "text": "When you love this country, you fight for the people who make it work."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mynzhsbqbk25",
+     "text": "Ohio, let's win this."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mypz3eoxms2b",
+     "text": "Ohioans are ready for change, they’re demanding a Senator who fights for Ohio – in just 9 days, that’s what we’re going to get.\n\nThank you Emilia Sykes, I'm proud to fight alongside you for hardworking folks in Akron."
+    },
+    {
+     "date": "2026-10-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myqdl2cymo2w",
+     "text": "Health care decisions should be between you and your doctor, not your health insurance company. \n\nIt’s time for Washington to stand up to the health insurance industry and make it illegal for them to deny you care that your doctors say you need."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myqhr7e6w42e",
+     "text": "I’m taking on Big Tech, Jon Husted is just taking their money."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myrvngsw7s2b",
+     "text": "We can get things done when we work together. \n\nWe’re going to take on the corruption making your life more expensive and put hardworking Ohioans first."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysa25p3ik2p",
+     "text": "Thank you, Akron! Let’s go win this together."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysch5firi2g",
+     "text": "Jon Husted voted against the release of the Epstein files just weeks after receiving a maximum campaign contribution from an Epstein co-conspirator. \n\nOhioans deserve strong leaders in Washington, not pedophile protectors."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysfsm4jie26",
+     "text": "THROWBACK: It’s ridiculous that we hold referees to a higher standard than elected officials. It’s time to ban Congressional stock trading and end the corruption."
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myslq2tfsd2z",
+     "text": "Gold medal-winner Laila Edwards: “I’m voting for Sherrod Brown because…” "
+    },
+    {
+     "date": "2026-10-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myso6cst722m",
+     "text": "Jon Husted voted against lowering health care costs 9 times, putting his health insurance donors over  hardworking Ohioans."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysx2vgbic2f",
+     "text": "Let’s go Dayton!"
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysz43oj3o2c",
+     "text": "Sherrod Brown greets FIRED UP overflow crowd in Dayton  👏👏 "
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myt7kt2i6s2g",
+     "text": "Dayton showed up!\n\nJohn Legend, thank you for coming home and getting in the fight."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myukr52djc2n",
+     "text": "John Legend came home to join our fight for an Ohio that puts workers over billionaires."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myuulgq64h26",
+     "text": "Ohio – Election Day is just 1 week away! \n\nMake a plan to vote early or drop off your absentee ballot at your county board of elections TODAY.\n\nFor more information, head to iwillvote.com/OH "
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myuzmotr4y2k",
+     "text": "Workers before billionaires."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myvcbeaj6n2k",
+     "text": "Jon Husted voted once to hide the Epstein files, 9 times to cut your health care, and 14 times to continue the Iran War. \n\nYou only get one chance to vote him out, don't miss it. "
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myvmthock223",
+     "text": "Great to be in Youngstown with @amyactonoh.bsky.social one week before Election Day. Let's win this!"
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mywpwhdfrk2b",
+     "text": "Ohioans want an economy that puts workers before billionaires and they're showing up to vote for it. \n\nIf you haven't voted yet, you've got six days left get in the fight. Let's win this together."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mywvvm6wqh2q",
+     "text": "Jon Husted had 14 opportunities to lower costs for Ohioans by ending this costly war in Iran but he voted against it every single time."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myx62f2hjs2o",
+     "text": "Jon Husted, our work ethic isn't broken, the economy you've created is."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxau3b7ac2w",
+     "text": "When you love this country, you fight for the people who make it work. I’m proud to fight for working families in Youngstown and across the state."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxkl7u6ha2c",
+     "text": "Jon Husted’s advice to Ohioans who can’t get ahead in his disastrous economy: “Earn more.”"
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxni6w5ki2p",
+     "text": "Ohioans shouldn't have to pay more for prescription drugs made in America than folks do overseas. The same pill should be the same price. \n\nWe can ban Big Pharma from ripping off Ohioans and I’m ready to fight for that in the Senate. \n"
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myy7mnmcb22n",
+     "text": "Folks in Cincinnati are sending a message: they’re ready for a leader in Washington who fights for them. \n\nIn just six days, that’s what we’ll get."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzd3mo6ve26",
+     "text": "Ohio, we are just five days away from Election Day and it’s going to take all of us to win.\n\nVote early in person, drop your mail ballot off at your county Board of Elections, or make a plan to vote on Election Day. \n\n\n"
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzo53thvv2m",
+     "text": "From Elon Musk to Donald Trump, billionaires are spending hundreds of millions of dollars against me because they know they can buy Jon Husted’s votes. \n\nI’ll never vote on behalf of billionaires because, for me, Ohio workers always come first. "
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzu7jis722s",
+     "text": "Cincinnati – Election Day is coming, let’s win this."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzx7h7w3a2x",
+     "text": "Jon Husted voted to cut Medicaid for 500,000 Ohioans, including seniors, children, and hardworking families just trying to get by."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz2j4rrc2k26",
+     "text": "Toledo is fired up and ready to win!"
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz2ke52iab2k",
+     "text": "Thank you, Toledo! \n\nIn just five days, we’re going to win this race together. "
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz3wf7bzar2g",
+     "text": "Ohio, this weekend is your last chance to vote early! Polls are open Saturday and Sunday. \n\nHead to iwillvote.com/OH to find early voting hours and locations."
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz4jx7vi5v2w",
+     "text": "Hardworking Ohioans deserve leaders in Washington who will fight for them and protect their access to health care. "
+    },
+    {
+     "date": "2026-10-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz4oi5zoxm2z",
+     "text": "Jon Husted voted again and again to make everything more expensive - gas, groceries, health care - but he thinks your budgeting skills are the problem."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz6iut6zfh2w",
+     "text": "Just three days until Election Day! Grab your friends and family, and make a plan to vote today."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz6mtkdrlk2m",
+     "text": "REMINDER: The number of Ohioans who will lose their health care because of Jon Husted could fill Ohio Stadium five times."
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz6urqygky2p",
+     "text": "If a full-time job can’t cover groceries, gas, and health care, it’s not workers that are failing, it’s Washington. "
+    },
+    {
+     "date": "2026-10-31",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mz6zsde7ij2z",
+     "text": "Jon Husted’s shady deals secured wealthy executives at FirstEnergy a $1 billion bailout - paid for by raising your utility bills.\n\nOhioans have paid enough for Jon Husted’s corruption and we won’t forget it on Election Day."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzbbjnc6ek26",
+     "text": "Great to join my friend Rep. Joyce Beatty in Columbus yesterday at her Souls to the Polls gathering. Ohioans are taking a stand because we know that the future of Ohio is up to us. It's time to get out and vote."
+    },
+    {
+     "date": "2026-11-01",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzbw2gxutc2c",
+     "text": "If you can’t agree to not trade stocks, if you can’t pledge to not become a lobbyist, you have no business serving in public office. "
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzbzxrzmak2d",
+     "text": "Ohio – it's going to take all of us getting in the fight to win. Let's do this together."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzccjllpks2g",
+     "text": "Cleveland is ready for leadership in Washington that fights for them – and in just two days that’s exactly what they’ll get."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mze7rlrexx26",
+     "text": "So much excitement this weekend at the Cuyahoga County Board of Elections. Ohioans are fighting for a senator in Washington who puts them first – tomorrow when we win, that's what they'll get."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzecdxm2ok2j",
+     "text": "Great to be in Lorain County with so many Ohioans who are fighting for change. We're tired of the corruption in Washington and tomorrow our votes will prove it."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzeham5bkc2r",
+     "text": "John Legend: “We’ve all got to vote to support Sherrod Brown.”"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzen77ufuw23",
+     "text": "One of the largest data centers in the world is being built in Ohio and we’re paying for it."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzeryfjwb22l",
+     "text": "Columbus – thank you for joining us in the fight. Let’s finish strong and win this tomorrow!"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzfqesqkjy2c",
+     "text": "Today is the day, Ohio – get out and vote!\n\nPolls are open now until 7:30pm. Head to iwillvote.com/OH to find your polling place and more information on how to vote. "
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzfvhixqls2i",
+     "text": "This Election Day, Ohioans are demanding better. We won’t back down until we get it."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzg5sfrh652q",
+     "text": "Haven’t voted yet? Voting is open until 7:30pm. Head to iwillvote.com/OH to find your polling location."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzgeinbsht2p",
+     "text": "Ohio, you’ve got just seven hours left to vote. We need your vote to win this race. Find your polling place at IWillVote.com/OH \n"
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzgl74qobx2e",
+     "text": "Ohio – polls close in just five hours – grab a friend and go vote now. \n\nHead to iwillvote.com/OH to find your polling location."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzgr3wxazc2e",
+     "text": "Ohio, thank you for showing up to this fight again and again. Voting is open until 7:30pm, don't miss your chance to be a part of history."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzgvawfrbj2d",
+     "text": "Polls close in just two hours, Ohio. It’s going to take all of us to win this election and make a difference. \n\nFind your polling location at iwillvote.com/OH and head to the polls now."
+    },
+    {
+     "date": "2026-11-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzgymaq4rz26",
+     "text": "Ohio, if you are in line to vote before 7:30pm, you have the right to vote. Head to your polling location, stay in line, and your vote will be counted. "
+    }
+   ]
+  }
+ ]
+}

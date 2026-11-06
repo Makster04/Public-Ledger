@@ -1,0 +1,41 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "whatley",
+ "name": "Michael Whatley",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.michaelwhatley.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.michaelwhatley.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-29",
+    "url": "https://web.archive.org/web/20261029154922/https://michaelwhatley.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261029154922/https://michaelwhatley.com/",
+     "original": "https://michaelwhatley.com/",
+     "date": "2026-10-29",
+     "title": "Michael Whatley for Senate",
+     "text": "By entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms and privacy policy for auto dialed messages to the phone number you provide. Msg and data rates may apply. Msg frequency varies. Reply HELP for help or STOP to opt-out at any time. SMS information is not rented, sold, or shared.\nView Privacy Policy, Terms of Use, and Mobile Terms.\n## About Michael\nI was raised in Blowing Rock and am the son of an accountant and a librarian. My wife, Suzanne, and I live in Gaston County.\nI had the honor of serving as Chairman of the North Carolina Republican Party and, at President Trump’s request, as Chairman of the Republican National Committee during the 2024 election cycle.\nI am proud to be President Trump’s endorsed candidate to represent the great state of North Carolina in the U.S. Senate.\n## The Issues\nEnact the Trump Agenda in the U.S. Senate\nI am committed to advancing President Trump’s America First agenda as the next U.S. Senator from North Carolina.\nMake North Carolina Safe Again\nAs your U.S. Senator, I’ll work with President Trump to restore law and order, roll-back weak Democrat policies like cashless bail, and make North Carolina safe again.\nI 100% support President Trump securing the border and deporting the millions of criminal illegal aliens that Joe Biden and Roy Cooper allowed into this country.\nAmerica’s economic strength depends on reliable, affordable energy and reining in Washington’s reckless spending.\nProtect Our Conservative Values\nI will fight to defend the 2nd Amendment, protect life, support our law enforcement, and keep radical woke ideology out of schools.\nI have worked with the Trump administration to deliver billions in disaster relief aid to North Carolina.\n## The Issues\nEnact the Trump Agenda in the U.S. Senate\nI am committed to advancing President Trump’s America First agenda as the next U.S. Senator from North Carolina.\nMake North Carolina Safe Again\nAs your U.S. Senator, I’ll work with President Trump to restore law and order, roll-back weak Democrat policies like cashless bail, and make North Carolina safe again.\nI 100% support President Trump securing the border and deporting the millions of criminal illegal aliens that Joe Biden and Roy Cooper allowed into this country.\nClick to See More Issues\n## Join the Fight\nBy entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms and privacy policy for auto dialed messages to the phone number you provide. Msg and data rates may apply. Msg frequency varies. Reply HELP for help or STOP to opt-out at any time. SMS information is not rented, sold, or shared. View Privacy Policy, Terms of Use, and Mobile Terms."
+    },
+    {
+     "url": "https://web.archive.org/web/20261025221213/https://michaelwhatley.com/issues/",
+     "original": "https://michaelwhatley.com/issues/",
+     "date": "2026-10-25",
+     "title": "One moment, please...",
+     "text": "Please wait while your request is being verified..."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

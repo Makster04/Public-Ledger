@@ -1,0 +1,92 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "millermeeks",
+ "name": "Mariannette Miller-Meeks",
+ "built": "2026-11-06",
+ "sites": [
+  "https://drmillermeeks.com/"
+ ],
+ "years": [
+  2020,
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2020,
+   "electionDay": "2020-11-03",
+   "site": "https://drmillermeeks.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://drmillermeeks.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-10-16",
+    "url": "https://web.archive.org/web/20221016210817/https://drmillermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221016210817/https://drmillermeeks.com/",
+     "original": "https://drmillermeeks.com/",
+     "date": "2022-10-16",
+     "title": "Home - Miller-Meeks for Congress",
+     "text": "## ABOUT Mariannette\nI am Mariannette Miller-Meeks and I am running for Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a senator, military veteran and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn’t so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman’s kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college. I later enlisted in the US Army at 18, going from private to lt. colonel after serving a total of 24 years. I went into private practice in Ottumwa in 1997 and still reside there with my husband, Curt. We have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate.\nMiller-Meeks for CongressP.O. Box 33 Ottumwa, IA 52501\nIf you would like to send donation by mail, click here"
+    },
+    {
+     "url": "https://web.archive.org/web/20221104215259/https://drmillermeeks.com/issues/",
+     "original": "https://drmillermeeks.com/issues/",
+     "date": "2022-11-04",
+     "title": "Issues - Miller-Meeks for Congress",
+     "text": "## Issues\nMiller-Meeks for CongressP.O. Box 33 Ottumwa, IA 52501\nIf you would like to send donation by mail, click here"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://drmillermeeks.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105202341/https://drmillermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105202341/https://drmillermeeks.com/",
+     "original": "https://drmillermeeks.com/",
+     "date": "2024-11-05",
+     "title": "Miller-Meeks for Congress - Iowa's First Congressional District",
+     "text": "## Meet Mariannette\nI am Mariannette Miller-Meeks and I am running for re-election to Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a Congresswoman, state senator, military veteran, and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn’t so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman’s kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college.I later enlisted in the US Army at 18, going from Private to Lt. Colonel during my 24 years of service. I went into private medical practice in Ottumwa in 1997. My husband Curt and I have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate. In 2020, I was elected to congress by a six-vote margin, one of the closest races in United States election history. Then in 2022, the voters of southeastern Iowa elected me yet again to fight for our values in the U.S. House of Representatives. I am honored to go to work on their behalf every day.\nWe need your help.\nP.O. Box 33 Ottumwa, IA 52501"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://drmillermeeks.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102011812/https://drmillermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102011812/https://drmillermeeks.com/",
+     "original": "https://drmillermeeks.com/",
+     "date": "2026-11-02",
+     "title": "Home | Miller-Meeks for Congress",
+     "text": "## Meet Mariannette\nI am Mariannette Miller-Meeks and I am running for re-election to Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a Congresswoman, state senator, military veteran, and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn't so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman's kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college. I later enlisted in the US Army at 18, going from Private to Lt. Colonel during my 24 years of service. I went into private medical practice in Ottumwa in 1997. My husband Curt and I have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate. In 2020, I was elected to congress by a six-vote margin, one of the closest races in United States election history. Then in 2022, the voters of southeastern Iowa elected me yet again to fight for our values in the U.S. House of Representatives. I am honored to go to work on their behalf every day.\nWe need your help.\n## Upcoming Events\nNo upcoming events are scheduled right now."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

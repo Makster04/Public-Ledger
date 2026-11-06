@@ -1,0 +1,34 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "cooper",
+ "name": "Roy Cooper",
+ "built": "2026-11-06",
+ "sites": [
+  "https://roycooper.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://roycooper.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-11-03",
+    "url": "https://web.archive.org/web/20261103142323/https://roycooper.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261103142323/https://roycooper.com/",
+     "original": "https://roycooper.com/",
+     "date": "2026-11-03",
+     "title": "Roy Cooper for North Carolina",
+     "text": "## \"For too many Americans, the middle class feels like a distant dream.\nMeanwhile, the biggest corporations and the richest Americans have grabbed unimaginable wealth at your expense. I’m running for Senate because it’s time for that to change.”\n## \"For too many Americans, the middle class feels like a distant dream.\nMeanwhile, the biggest corporations and the richest Americans have grabbed unimaginable wealth at your expense. I’m running for Senate because it’s time for that to change.”\n## Meet Roy Cooper\nto Support Roy cooper\nWhat’s good for North Carolina is good for America\nRoy Cooper for U.S. Senate:"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

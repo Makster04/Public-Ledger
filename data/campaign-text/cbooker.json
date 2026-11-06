@@ -1,0 +1,34 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "cbooker",
+ "name": "Charles Booker",
+ "built": "2026-11-06",
+ "sites": [
+  "https://charlesbooker.org/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://charlesbooker.org/",
+   "saved": true,
+   "capture": {
+    "date": "2026-08-19",
+    "url": "https://web.archive.org/web/20260819173011/https://charlesbooker.org/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260819173011/https://charlesbooker.org/",
+     "original": "https://charlesbooker.org/",
+     "date": "2026-08-19",
+     "title": "Home - Charles Booker For U.S. Senate 2026",
+     "text": "This movement is fighting for the bold changes that voters are demanding. We’re relying on grassroots support to win.\nIf you’ve saved your information with ActBlue Express, your donation will go through immediately. Contributions to Booker For the Commonwealth are not deductible for federal income tax purposes.\n## We need new and bold leadership to stand for Kentucky.\nBy participating, you agree to the terms & privacy policy for recurring autodialed marketing messages from Charles Booker to the phone number you provide. No consent required to buy. Msg & data rates may apply.\nLet’s build a Kentucky that works for all.\nIf you’ve saved your information with ActBlue Express, your donation will go through immediately. Contributions to Booker For the Commonwealth are not deductible for federal income tax purposes.\n## Meet Charles.\nCharles is running for the United States Senate to fight for a Kentucky that works for all of us. A place where everyone can thrive and dream big again. Kentucky needs a bold vision to address our deepest challenges. A fighter for Kentucky’s working people, Charles is committed to a vision of government that builds a better future for everyone, not just the wealthy.\nCharles’s work builds upon Kentucky’s long history of standing up and fighting back against greedy industries and politicians. He stood with miners in Harlan County and social justice organizers from Pike to Jefferson to McCracken. He stands with the people of Kentucky, from the hood to the holler, and it’s why they stand with him.\n## Kentucky, it's time for us to turn a new page.\nI’m running for Senate because I see the urgency of this moment. I know what’s at stake, but I also know that together we can win. We can build a future that’s worthy of this state and the people who call it home. I know Kentucky is worth fighting for, and I’m proud to be in this fight alongside you.\n## Let's win for Kentucky.\nWith you on our team, we’re going to build a strong movement across the Commonwealth — uniting Kentuckians across race, religion, and class — to win.\nBy participating, you agree to the terms & privacy policy for recurring autodialed marketing messages from Booker For the Commonwealth to the phone number you provide. No consent required to buy. Msg & data rates may apply.\n## For our Commonwealth. For our Common Wealth.\nIf you’ve saved your information with ActBlue Express, your donation will go through immediately. Contributions to Booker For the Commonwealth are not deductible for federal income tax purposes."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

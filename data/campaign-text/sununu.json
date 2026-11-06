@@ -1,0 +1,34 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "sununu",
+ "name": "John E. Sununu",
+ "built": "2026-11-06",
+ "sites": [
+  "https://sununusenator.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://sununusenator.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-25",
+    "url": "https://web.archive.org/web/20261025204634/https://www.sununusenator.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261025204634/https://www.sununusenator.com/",
+     "original": "https://www.sununusenator.com/",
+     "date": "2026-10-25",
+     "title": "John Sununu for U.S. Senate",
+     "text": "## JOHN SUNUNU\nJohn Sununu is a lifelong Granite Stater who strives to reflect the character of New Hampshire: independent, practical, and results-oriented. Trained as an engineer and with significant private sector experience, John always brings a common-sense approach and a desire to fix things to public office.\nDuring his time representing New Hampshire in Washington, John took on government waste, defended the rights and privacy of ordinary Americans, opposed tax hikes, and protected our seniors. He'll bring the New Hampshire way to Washington. Never afraid to do what’s right, John Sununu always puts New Hampshire first."
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

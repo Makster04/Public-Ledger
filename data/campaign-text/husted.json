@@ -1,0 +1,43 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "husted",
+ "name": "Jon Husted",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.jonhustedforsenate.com/",
+  "https://www.jonhusted.com/"
+ ],
+ "years": [
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.jonhustedforsenate.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-25",
+    "url": "https://web.archive.org/web/20261025205144/https://www.jonhustedforsenate.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261025205144/https://www.jonhustedforsenate.com/",
+     "original": "https://www.jonhustedforsenate.com/",
+     "date": "2026-10-25",
+     "title": "Jon Husted for Senate | Working for Us. Delivering for Ohio.",
+     "text": "## Find out what drives Senator Husted\nJon Husted for Senate\nNational Champion, All American, and Senator from Ohio: Jon Husted! Victory in 9 days!\n29 Comments Comment on Facebook\nThe official campaign account for @JonHusted for Senate. #OHsen\nIt was great to join the community at Crossroads Baptist Church this morning for worship. Faith is the cornerstone for @JonHusted, and he will never stop fighting for our values.\nReply on Twitter 2114431805441085727\nRetweet on Twitter 2114431805441085727\nLike on Twitter 2114431805441085727"
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.jonhusted.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  }
+ ]
+}

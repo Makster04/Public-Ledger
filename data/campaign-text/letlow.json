@@ -1,0 +1,92 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "letlow",
+ "name": "Julia Letlow",
+ "built": "2026-11-06",
+ "sites": [
+  "https://www.julialetlow.com/"
+ ],
+ "years": [
+  2020,
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2020,
+   "electionDay": "2020-11-03",
+   "site": "https://www.julialetlow.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://www.julialetlow.com/",
+   "saved": true,
+   "capture": {
+    "date": "2022-11-07",
+    "url": "https://web.archive.org/web/20221107171753/https://www.julialetlow.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20221108210416/https://www.julialetlow.com/theissues",
+     "original": "https://www.julialetlow.com/theissues",
+     "date": "2022-11-08",
+     "title": "The Issues | Julia Letlow for Congress",
+     "text": "## 100% Pro-Life\nJulia has been a devout Christian her entire life and will always fight for the unborn.\n## Putting LA-05 Back To Work\nJulia will help create and bring jobs to our district. That includes opposing any increase to minimum wage.\n## Protecting the 2nd Amendment\nJulia is a staunch defender of our constitutional right to bear arms.\n## Supporting Farmers, Loggers, & Ranchers\nJulia will continue to promote and support our Agriculture and Logging industries.\n## Standing Up For Oil and Gas\nLouisiana is built on the Oil and Gas Industry. Julia will always fight to make sure we support and protect our Oil and Gas Industry.\n## Supporting Our Veterans, Service Members, Law Enforcement, & First Responders\nJulia will always support the men and women who protect our country at home and abroad.\n## Rebuilding Our Infrastructure\nJulia will work to ensure we get vital funding for our declining infrastructure, and to expand rural internet access.\n## Supporting Education\nFrom Early Childhood Education to Higher Ed, Julia believes education is a catalyst to elevate the district out of poverty.\n## Protecting Election Integrity\nJulia will always fight to ensure we have secure and safe elections.\n## Protecting the 1st Amendment\nJulia will always defend our constitutional right to freedom of speech, press, and assembly.\n## Focus on Rural Development\nJulia will be a strong advocate for our rural communities and fight to preserve our way of life.\n## Supporting Our Seniors\nSeniors are the greatest generation who paved the way for us, and we need to ensure they receive the best care in the world.\n## Support Our Teachers & Public Employees\nJulia will work to end the Windfall Elimination Provision (WEP) which unfairly penalizes retirees' Social Security benefits."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://www.julialetlow.com/",
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105074558/https://www.julialetlow.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105074649/https://www.julialetlow.com/theissues",
+     "original": "https://www.julialetlow.com/theissues",
+     "date": "2024-11-05",
+     "title": "The Issues | Julia Letlow for Congress",
+     "text": "## 100% Pro-Life\nJulia has been a devout Christian her entire life and will always fight for the unborn.\n## Putting LA-05 Back To Work\nJulia will help create and bring jobs to our district. That includes opposing any increase to minimum wage.\n## Protecting the 2nd Amendment\nJulia is a staunch defender of our constitutional right to bear arms.\n## Supporting Farmers, Loggers, & Ranchers\nJulia will continue to promote and support our Agriculture and Logging industries.\n## Standing Up For Oil and Gas\nLouisiana is built on the Oil and Gas Industry. Julia will always fight to make sure we support and protect our Oil and Gas Industry.\n## Supporting Our Veterans, Service Members, Law Enforcement, & First Responders\nJulia will always support the men and women who protect our country at home and abroad.\n## Rebuilding Our Infrastructure\nJulia will work to ensure we get vital funding for our declining infrastructure, and to expand rural internet access.\n## Supporting Education\nFrom Early Childhood Education to Higher Ed, Julia believes education is a catalyst to elevate the district out of poverty.\n## Protecting Election Integrity\nJulia will always fight to ensure we have secure and safe elections.\n## Protecting the 1st Amendment\nJulia will always defend our constitutional right to freedom of speech, press, and assembly.\n## Focus on Rural Development\nJulia will be a strong advocate for our rural communities and fight to preserve our way of life.\n## Supporting Our Seniors\nSeniors are the greatest generation who paved the way for us, and we need to ensure they receive the best care in the world.\n## Support Our Teachers & Public Employees\nJulia will work to end the Windfall Elimination Provision (WEP) which unfairly penalizes retirees' Social Security benefits."
+    }
+   ],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://www.julialetlow.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-10-22",
+    "url": "https://web.archive.org/web/20261022225910/https://www.julialetlow.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261022225910/https://www.julialetlow.com/",
+     "original": "https://www.julialetlow.com/",
+     "date": "2026-10-22",
+     "title": "Julia Letlow for Louisiana",
+     "text": "Julia Letlow is a Louisiana native, mother, educator, and conservative fighter who knows what it means to serve with faith, strength, and purpose. After the loss of her husband, Luke, Julia stepped forward to represent Louisiana’s 5th Congressional District, becoming the first Republican woman elected to Congress from Louisiana. In Congress, she has fought for parents, students, farmers, law enforcement, and Louisiana families, always guided by the same values that shaped her life: faith, family, service, and a deep love for our state. Now, with President Trump’s complete and total endorsement, Julia is running for the United States Senate to give Louisiana the strong conservative leadership our state deserves."
+    },
+    {
+     "url": "https://web.archive.org/web/20261024223743/https://www.julialetlow.com/policyplan",
+     "original": "https://www.julialetlow.com/policyplan",
+     "date": "2026-10-24",
+     "title": "JULIA'S PLAN | Julia Letlow",
+     "text": "## Fighting for Louisiana Families\nLouisiana deserves a Senator who will never forget where she came from, who she works for, and what is at stake for the next generation.\nAs a mother, educator, and conservative, Julia Letlow believes public service is about protecting our families, defending our values, growing our economy, and leaving our children a stronger America than the one we inherited.\nIn the Senate, Julia will work alongside President Trump to keep the border secure, lower costs for working families, assert American energy dominance, protect parents' rights, defend election integrity, and fight for the people and industries that make Louisiana strong.\nFrom our farmers and fishermen to our veterans, energy workers, small businesses, and families struggling with rising costs, Julia's focus will always be on delivering results for Louisiana.\nThese are the issues Julia will fight for in the United States Senate:\n## 1. Secure the Border and Deport Criminal Illegal Aliens\nAmerica is a nation of laws, and no nation can remain sovereign without secure borders.\nFinish construction of the border wall\nDeport criminal illegal aliens and gang members\nDesignate Mexican drug cartels as foreign terrorist organizations\nIncrease penalties for fentanyl trafficking\nEnd taxpayer-funded benefits for illegal immigrants\nPrevent illegal immigrants from being counted in the census\n## 2. Lower Costs and Make Life Affordable Again\nLouisiana families are working harder than ever, but too many feel like they're falling behind. Washington's spending addiction fueled inflation and made everyday life more expensive. It's time to bring costs down and help families keep more of what they earn.\nPermanently extend the Trump tax cuts\nMake the One Big Beautiful Bill’s no-tax-on-tips provision permanent\nMake the One Big Beautiful Bill’s no-tax-on-overtime provision permanent\nExpand and protect the Child Tax Credit for working families\nCut federal regulations that increase energy costs\nReduce government spending that fuels inflation\nLower healthcare and prescription drug costs\nIncrease American energy production to bring down gas and utility bills\n## 3. Protect Parents' Rights and Put Families First\nParents know their children better than Washington bureaucrats. Families should have the final say in how their children are educated, raised, and protected.\nPass a national Parents' Bill of Rights\nRequire schools to notify parents about major decisions involving their children\nIncrease transparency in curriculum and classroom materials\nExpand school choice and educational freedom\nProtect parental access to school records\nStop federal interference in local education decisions\nKeep political activism out of classrooms\nPenalize education institutions that are hiding DEI programs\nProvide parental warning labels on transgender content ​\n## 4. Protect Women's Sports and Defend Common Sense\nGirls deserve a level playing field, and parents deserve confidence that common sense still matters in America.\nKeep biological men out of women's sports\nProtect girls' locker rooms and private spaces\nCodify protections for women's athletics under Title IX\nBan gender transition procedures for minors\nPrevent federal agencies from redefining biological sex\nProtect schools that uphold women's sports protections\n## 5. Protect Election Integrity and Pass the Save America Act\nLouisianans deserve confidence that every legal vote counts and that elections are secure, transparent, and trustworthy.\nPass President Trump's Save America Act\nRequire proof of citizenship to vote in federal elections\nStrengthen voter ID requirements\nClean up voter rolls\nBan foreign interference in American elections\nIncrease election transparency and accountability\nOppose federal efforts to weaken election safeguards\n## 6. Ban Congressional Insider Trading and Drain the Swamp\nThe American people are tired of politicians getting rich while families struggle. Members of Congress should serve the public, not their portfolios.\nBan Members of Congress from trading individual stocks\nStrengthen financial disclosure requirements\nIncrease transparency in government spending\nCodify DOGE spending cuts\nEliminate waste, fraud, and abuse across federal agencies\nReduce the size and scope of the federal bureaucracy\nStrengthen oversight of unelected federal regulators\n## 7. Secure American Energy Dominance\nLouisiana powers America. We should be leading the world in energy production instead of begging foreign countries for resources we already have.\nExpand oil and natural gas production\nAccelerate LNG export approvals\nRefill the Strategic Petroleum Reserve\nExpand offshore energy development in the Gulf of America\nProtect Louisiana refining and petrochemical jobs\nStrengthen America's energy independence\n## 8. Fight for Louisiana Farmers and Rural Communities\nLouisiana farmers feed and fuel America. They deserve a Senator who understands the challenges facing agriculture and forestry and will always be their voice in Washington.\nDeliver a strong Farm Bill\nProtect crop insurance programs\nExpand disaster assistance for farmers\nBan Chinese ownership of American farmland\nExpand access to rural broadband\nProtect family farms from excessive regulation\nStrengthen agricultural research and extension programs\nExpand access to credit for young farmers\n## 9. Stand Up for Louisiana Fishermen and Seafood Producers\nLouisiana's seafood industry is second to none. It is an invaluable part of our state’s culture, economy, and heritage. Washington should support our domestic industry, not make it harder to stay in business.\nCrack down on unfair foreign seafood imports\nStrengthen country-of-origin labeling requirements\nProtect Gulf of America fisheries from federal overreach\nExpand disaster assistance for fishermen\nProtect working waterfronts and seafood processing jobs\n## 10. Fix the Flood Insurance Crisis\nLouisiana families should not be forced out of their homes because of skyrocketing flood insurance premiums and flawed federal policies.\nReform the National Flood Insurance Program\nIncrease transparency in FEMA risk-rating models\nRoll back unfair premium increases\nExpand mitigation funding for homeowners\nImprove flood mapping accuracy\nProtect homeowners from excessive federal mandates\nEnsure Louisiana receives fair treatment in federal flood programs\n## 11. Support Veterans and Military Families\nThe men and women who served our country deserve a government that keeps its promises long after they return home.\nReduce VA wait times\nExpand access to community care\nImprove mental health and PTSD services\nSpeed up disability claims processing\nProtect military retirement benefits\nSupport military families and spouses\nStrengthen missions at Barksdale, Fort Polk, and Belle Chasse\n## 12. Protect Louisiana's Coast and Improve Disaster Recovery\nLouisiana families know better than anyone that disasters don't end when the storm passes. Washington must do a better job helping communities recover while also investing in the infrastructure that protects our coast, waterways, and economy.\nReform FEMA and speed disaster assistance payments\nReduce federal red tape after hurricanes and natural disasters\nProtect and expand GOMESA revenue sharing\nAccelerate coastal restoration projects\nStrengthen levee and flood protection systems\nExpand dredging of navigation channels\nProtect Mississippi River commerce\nImprove hurricane resilience infrastructure\nSupport port modernization projects\nPreserve Louisiana's working coast\n## 13. Make America Healthy Again and Fix Our Food Supply\nFor too long, Washington has focused on treating illness instead of preventing it. Louisiana families deserve better information, healthier choices, and a food system that puts the health of our children first.\nIncrease transparency in food labeling\nWork with Secretary Kennedy to implement the MAHA Agenda\nStrengthen nutrition standards in federally funded programs\nSupport American farmers who produce healthy, nutritious foods\nExpand research into chronic disease prevention\nPromote healthier school meals and nutrition education\nReduce harmful additives and ingredients where supported by science\nEncourage policies that make healthy food more affordable and accessible\nShift federal health policy toward prevention and long-term wellness\n## 14. Rebuild America's Shipyards and Maritime Industry\nLouisiana is ranked as the top maritime state in America, and our maritime and shipbuilding industries are a critical part of our state’s economy and the national security of our country. Julia will continue fighting every day for this important industry.\n• Expand domestic shipbuilding capacity\n• Protect the Jones Act\n• Modernize Louisiana ports and shipyards\n• Support maritime workforce development\n• Increase Navy and Coast Guard ship procurement\n• Expand defense manufacturing jobs\n• Improve inland waterway infrastructure\n• Grow America's maritime industrial base\n## 15. Put Louisiana First\nFor too long, Washington politicians have focused on helping themselves instead of helping the people they represent. Julia believes a Senator's first responsibility is to fight for the people back home and deliver results that improve their lives.\nDeliver first-class constituent services\nHelp Louisianans cut through federal red tape\nFight for Louisiana's fair share of federal resources\nStand up for local communities when Washington gets it wrong\nWork directly with parish and local leaders\nSupport economic development and job creation across the state\nEnsure every region of Louisiana has a seat at the table\nNever lose touch with the people of Louisiana"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}

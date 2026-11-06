@@ -1,0 +1,52 @@
+{
+ "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
+ "person": "hinson",
+ "name": "Ashley Hinson",
+ "built": "2026-11-06",
+ "sites": [
+  "https://vote.ashleyhinson.com/"
+ ],
+ "years": [
+  2022,
+  2024,
+  2026
+ ],
+ "campaigns": [
+  {
+   "year": 2022,
+   "electionDay": "2022-11-08",
+   "site": "https://vote.ashleyhinson.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2024,
+   "electionDay": "2024-11-05",
+   "site": "https://vote.ashleyhinson.com/",
+   "saved": false,
+   "pages": [],
+   "posts": []
+  },
+  {
+   "year": 2026,
+   "electionDay": "2026-11-03",
+   "site": "https://vote.ashleyhinson.com/",
+   "saved": true,
+   "capture": {
+    "date": "2026-06-01",
+    "url": "https://web.archive.org/web/20260601232440/https://vote.ashleyhinson.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20260601232440/https://vote.ashleyhinson.com/",
+     "original": "https://vote.ashleyhinson.com/",
+     "date": "2026-06-01",
+     "title": "Ashley Hinson For Senate",
+     "text": "IOWA: VOTE EARLY FOR ASHLEY HINSON!\nAshley Hinson has fought for Iowa families and continues to deliver commonsense leadership in Congress. In the U.S. Senate, she will champion American First policies and bring that same common sense leadership to Washington. Make your plan to vote and ensure your voice is heard this June!\n## FIND YOUR PERSONALIZED VOTING OPTIONS\nIowans have trusted Rep. Hinson in Congress because she has delivered results and fought for commonsense leadership. She’s ready to put America First in the U.S. Senate. Make a plan to vote by filling out the form below.\n## RETURN YOUR BALLOT NOW!\nTime is running out to return your absentee ballot. Stand with Ashley Hinson by returning your ballot now!\n## PRIMARY ELECTION TIMELINE\nThe primary election is almost here — don’t wait to make your voice heard. Cast your vote before it’s too late!\n5/13/26 Primary Election — In-Person Absentee Voting Starts\n5/18/26 Mail — in Ballot Request Deadline\n6/1/26 Primary Election — In-Person Absentee Voting Ends\n6/2/26 Primary Election Day\n## TELL YOUR FRIENDS AND FAMILY!\nLet them know that you support Ashley Hinson for Senate!\nBy entering your phone number, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, voting updates, and other important information. By participating, you agree to the terms & privacy policy for auto dialed messages to the phone number you provide. Msg&data rates may apply. Text JOIN to 94646 to opt in. Reply HELP for help or STOP to opt out at any time. SMS information is not rented, sold, or shared. Terms and Conditions | Privacy Policy | Contact Us"
+    }
+   ],
+   "posts": []
+  }
+ ]
+}
