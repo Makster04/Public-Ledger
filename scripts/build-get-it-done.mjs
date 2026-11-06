@@ -1,9 +1,9 @@
 // Get It Done, for the Showing Up part of Integrity: how many of the bills each member sponsored advanced, against the
-// typical member of their party in their chamber. For each Congress in the last four calendar years (the 118th and
-// 119th for 2023–2026), every member of each chamber (Voteview's member lists give their Bioguide IDs and parties) and
+// typical member of their party in their chamber. For each Congress from 2018 (WINDOW_FROM in public/integrity.js)
+// through the current year (the 115th to the 119th for 2018–2026), every member of each chamber (Voteview's member lists give their Bioguide IDs and parties) and
 // the bills and joint resolutions each one sponsored (Congress.gov, with CONGRESS_API_KEY from .dev.vars).
-//   npm run getitdone:build                 the Congresses of the last four years
-//   npm run getitdone:build -- --years 6    further back
+//   npm run getitdone:build                 from 2018 through this year
+//   npm run getitdone:build -- --from 2016  from another year
 // Writes public/get-it-done.json:
 //   medians  {118: {S: {D: rate, R: rate}, H: {...}}}   the typical advanced rate of each party in each chamber
 //   counted  {118: {S: {D: members, R: members}, ...}}  how many members each median is taken from
@@ -16,7 +16,7 @@ import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {requestSource} from '../src/sources.mjs';
 import {voteviewFiles} from '../src/voteview.mjs';
-import {congressesFor,trackedIds} from './build-attendance.mjs';
+import {congressesBetween,fromYear,trackedIds} from './build-attendance.mjs';
 
 const root=new URL('../',import.meta.url),OUT=new URL('public/get-it-done.json',root);
 export const COUNTED=new Set(['HR','S','HJRES','SJRES']);
@@ -65,7 +65,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(!env.CONGRESS_API_KEY){console.log('This needs CONGRESS_API_KEY in .dev.vars (the Congress.gov key the refresh uses).');process.exit(1);}
   const read=async f=>JSON.parse(await fs.readFile(new URL(f,root),'utf8'));
   const config=await read('data/config.json'),research=await read('public/research.json');
-  const i=process.argv.indexOf('--years'),n=i>=0?Math.max(1,Number(process.argv[i+1])||4):4,year=config.year||new Date().getFullYear(),congresses=congressesFor(year,n);
+  const year=config.year||new Date().getFullYear(),from=fromYear(process.argv),congresses=congressesBetween(from,year);
   const site=new Map([...trackedIds(config,research)]);
   // Every member of each chamber in each Congress, with their party then.
   const roster=new Map();
@@ -88,7 +88,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   }));
   const {medians:rates,counted}=medians(members);
   const file={about:'Bills and joint resolutions each member sponsored, and how many advanced past introduction, against the typical member of their party in their chamber, for the Get It Done part of Showing Up (public/integrity.js). From Congress.gov and Voteview.',
-    source:'https://api.congress.gov',built:new Date().toISOString().slice(0,10),from:year-n+1,to:year,congresses,medians:rates,counted,
+    source:'https://api.congress.gov',built:new Date().toISOString().slice(0,10),from,to:year,congresses,medians:rates,counted,
     people:Object.fromEntries(Object.entries(people).sort(([a],[b])=>a.localeCompare(b)))};
   if(!Object.keys(file.people).length){console.log(`\nNothing read, so nothing written.${problems.length?` First problems: ${problems.slice(0,3).join('; ')}`:''}`);process.exit(1);}
   await fs.writeFile(OUT,JSON.stringify(file)+'\n');

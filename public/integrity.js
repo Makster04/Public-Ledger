@@ -165,12 +165,14 @@ function qualifyingCosponsor(data,person,category){
   return null;
 }
 
-// Showing Up: the share of roll-call votes a member missed while in office over the last four calendar years
+// The years Showing Up and Get It Done count: from WINDOW_FROM through the current year (2018–2026 now).
+export const WINDOW_FROM=2018,WINDOW_CONGRESS=Math.floor((WINDOW_FROM-1789)/2)+1;
+// Showing Up: the share of roll-call votes a member missed while in office from WINDOW_FROM on
 // (public/attendance.json, from Voteview), as 100 − 5 points per percentage point missed (2% missed is 90, 10% is 50,
 // 20% or more is 0). Votes missed while campaigning count. An excused absence, a reviewed entry with a cited source in
 // the person's "absences" (medical leave, a birth or adoption, a death in the family, military duty), is left out of
 // both the votes and the misses for its dates. The record shows a missed vote, not where the member was.
-export const SHOWING_UP_PER_POINT=5,SHOWING_UP_MIN_VOTES=50,SHOWING_UP_YEARS=4;
+export const SHOWING_UP_PER_POINT=5,SHOWING_UP_MIN_VOTES=50;
 export const EXCUSED_ABSENCES={medical:'Medical leave',birth:'Birth or adoption',adoption:'Birth or adoption',bereavement:'Death in the family',military:'Military duty'};
 const isDay=d=>/^\d{4}-\d{2}-\d{2}$/.test(String(d||''));
 export function excusedAbsences(person){
@@ -180,8 +182,8 @@ export function excusedAbsences(person){
 export function showingUpComponent(person,attendance,{asOfYear=null}={}){
   const rec=attendance?.people?.[person?.id];
   const none=why=>({complete:false,value:null,why,years:[],excused:[],missed:0,votes:0,rate:null,sources:[]});
-  if(!rec)return none(person?.office?'Not graded for this office':'No roll-call votes on record for the last four years (not in Congress then, or the attendance file has not been built)');
-  const last=asOfYear||Math.max(...Object.keys(rec.years||{}).map(Number)),first=last-SHOWING_UP_YEARS+1,inRange=d=>Number(String(d).slice(0,4))>=first&&Number(String(d).slice(0,4))<=last;
+  if(!rec)return none(person?.office?'Not graded for this office':`No roll-call votes on record since ${WINDOW_FROM} (not in Congress then, or the attendance file has not been built)`);
+  const last=asOfYear||Math.max(...Object.keys(rec.years||{}).map(Number)),first=WINDOW_FROM,inRange=d=>Number(String(d).slice(0,4))>=first&&Number(String(d).slice(0,4))<=last;
   const years=Object.entries(rec.years||{}).filter(([y])=>Number(y)>=first&&Number(y)<=last).map(([year,y])=>({year:Number(year),votes:y.votes,missed:y.missed})).sort((a,b)=>b.year-a.year);
   let votes=years.reduce((n,y)=>n+y.votes,0),missed=years.reduce((n,y)=>n+y.missed,0);
   // Each excused period: the roll calls held on its days while the member served, and the ones they missed then.
@@ -201,14 +203,14 @@ export function showingUpComponent(person,attendance,{asOfYear=null}={}){
 
 // Get It Done, inside Showing Up: the share of the bills and joint resolutions they sponsored that advanced (reported by
 // a committee, placed on a calendar, passed a chamber, sent to the other, signed or law), against the typical member of
-// their party in their chamber (public/get-it-done.json, npm run getitdone:build), over the window's Congresses:
+// their party in their chamber (public/get-it-done.json, npm run getitdone:build), over the Congresses from WINDOW_FROM:
 // 100 × min(1, their rate ÷ the typical rate, weighted by their own bills in each Congress). At least 10 bills.
 export const GET_IT_DONE_MIN_BILLS=10,SHOWING_UP_PARTS={attendance:.75,getItDone:.25};
 export function getItDoneComponent(person,data){
   const rec=data?.people?.[person?.id];
   const none=why=>({complete:false,value:null,why,sponsored:0,advanced:0,rate:null,typical:null,congresses:[]});
   if(!rec)return none('No sponsored bills on record for these Congresses (not in Congress then, or the Get It Done file has not been built)');
-  const congresses=Object.entries(rec.congresses||{}).map(([c,x])=>({congress:Number(c),...x,typical:data.medians?.[c]?.[x.chamber]?.[x.party]??null})).sort((a,b)=>b.congress-a.congress);
+  const congresses=Object.entries(rec.congresses||{}).filter(([c])=>Number(c)>=WINDOW_CONGRESS).map(([c,x])=>({congress:Number(c),...x,typical:data.medians?.[c]?.[x.chamber]?.[x.party]??null})).sort((a,b)=>b.congress-a.congress);
   const sponsored=congresses.reduce((n,c)=>n+c.sponsored,0),advanced=congresses.reduce((n,c)=>n+c.advanced,0);
   if(sponsored<GET_IT_DONE_MIN_BILLS)return {...none(`Fewer than ${GET_IT_DONE_MIN_BILLS} sponsored bills in these Congresses`),sponsored,advanced,congresses};
   const weighed=congresses.filter(c=>c.sponsored&&c.typical!=null),w=weighed.reduce((n,c)=>n+c.sponsored,0);
