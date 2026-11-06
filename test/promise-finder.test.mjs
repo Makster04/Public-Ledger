@@ -151,3 +151,24 @@ test('npm run promises:find: a whole run on a small database',()=>{
   assert.ok(!q.items.some(x=>/2026/.test(x.bill)));
   fs.rmSync(dir,{recursive:true,force:true});
 });
+
+test('from the first full run: sentences only near a bill, a side on a subject, and an introduced bill are not linked to votes',()=>{
+  const names=F.billNames([{key:'119-hr-9340',title:'Ratepayer Protection Act'}]);
+  // Fifty other bills, so a word only these two share is as rare as it is among real roll calls.
+  const index=F.subjectIndex([{key:'119-hr-9340',text:'Ratepayer Protection Act: utility costs, electricity rates and data centers'},{key:'119-sres-852',text:'A resolution requesting information on Israel\'s human rights practices'},
+    ...Array.from({length:50},(_,i)=>({key:`119-hr-${i+1}`,text:`Bill number ${i+1} on highways, farms and post offices`}))]);
+  const acts=[{kind:'vote',key:'119-sres-852',date:'2026-09-29',vote:'Nay',question:'On the Motion to Discharge'},{kind:'vote',key:'119-hr-9340',date:'2026-09-30',vote:'Nay',question:'On Cloture on the Motion to Proceed'},{kind:'vote',key:'119-hr-9340',date:'2026-10-02',vote:'Nay',question:'On Passage of the Bill'}];
+  const link=(text,title,surname,date='2026-09-30')=>F.linkStatement({person:'x',source:'floor',text,title,date,url:'u'},{acts,names,index,surname});
+  // Floor speeches filed under the bill's title, about something else.
+  assert.deepEqual(link('I urge my colleagues to join us in taking real action on AI.','Ratepayer Protection Act','Schumer'),[]);
+  assert.deepEqual(link('Conversations are taking place about how we will meet this increased energy demand.','Ratepayer Protection Act','Hagerty'),[]);
+  // ...and one about the bill.
+  const [r]=link('I urge my colleagues to oppose this legislation.','Ratepayer Protection Act','Ricketts');
+  assert.deepEqual([r.bill,r.link.how,r.draft.assessment,r.confidence],['119-hr-9340','named','consistent','high']);
+  // Support for a country isn't a side on a resolution about it.
+  assert.deepEqual(link('Daines Urges Support for Israel on Senate Floor','Daines Urges Support for Israel on Senate Floor','Daines','2026-09-29'),[]);
+  // Their own new bill, not a vote on another bill of the same subject.
+  assert.deepEqual(link('Heinrich Unveils Bill to Lower Utility Costs, Require Data Centers to Pay Fair Share',null,'Heinrich'),[]);
+  const [s]=link('I will vote against the bill that raises utility costs on families.',null,'Smith','2026-09-25');
+  assert.deepEqual([s.bill,s.link.how,s.confidence],['119-hr-9340','subject','medium']);
+});
