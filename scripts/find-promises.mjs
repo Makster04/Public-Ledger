@@ -40,21 +40,27 @@ export function statementsOf(kind,subject,r){
     srcTitle:`Congressional Record, ${new Date(r.date.slice(0,10)+'T12:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})}: ${titleCase(r.title).slice(0,100)}`}));
   return [];
 }
-// Every roll call one chamber held in a Congress, from Voteview, as each tracked person's actions; roll calls already
-// saved in research.json are left to those (their titles and summaries are fuller). people: [{id, bioguide}].
+// Every roll call one chamber held in a Congress, from Voteview, as each tracked person's actions. A roll call saved in
+// research.json keeps its fuller title and summary, and the positions saved there; everyone else's vote on it comes from
+// here (research.json has positions only for the people it tracks). people: [{id, bioguide}].
+// The motion a Senate "On the Motion" vote was on, from its description ("Motion to Concur in the House Amendment").
+export const motionOf=(question,...texts)=>{const q=String(question||'').trim();if(!/^on the motion$/i.test(q))return q;
+  const m=/\bmotion to [a-z][^;,()]{2,80}/i.exec(texts.filter(Boolean).join(' '));return m?`On the Motion (${m[0].trim()})`:q;};
 export function voteviewActs(files,chamber,congress,people,saved=[]){
   const ours=new Map(),out=new Map(),docs=[],titles=[];
   for(const m of files.members)if(m.bioguide_id&&!/president/i.test(m.chamber||'')){const p=people.find(x=>x.bioguide===m.bioguide_id);if(p)ours.set(String(m.icpsr),p.id);}
-  const have=new Set(saved.filter(v=>v.chamber===chamber&&v.congress===congress).map(v=>`${v.session}-${v.number}`));
-  const rolls=new Map();
+  const have=new Map(saved.filter(v=>v.chamber===chamber&&v.congress===congress).map(v=>[`${v.session}-${v.number}`,v]));
+  const rolls=new Map(),savedOf=new Map();
   for(const r of files.rollcalls){
     const date=String(r.date||'').slice(0,10),session=Number(r.session)||(Number(date.slice(0,4))%2?1:2),number=Number(r.clerk_rollnumber||r.rollnumber);
-    if(!date||have.has(`${session}-${number}`))continue;
+    if(!date)continue;
+    const sv=have.get(`${session}-${number}`);
+    if(sv){savedOf.set(String(r.rollnumber),sv);rolls.set(String(r.rollnumber),{key:sv.key,date:sv.date,question:sv.question,what:sv.what,measure:sv.measure,chamber,congress,session,number,url:sv.url});continue;}
     const number_=String(r.bill_number||'').replace(/[\s.]/g,''),b=/^(HR|S|HJRES|SJRES|HCONRES|SCONRES|HRES|SRES)(\d+)$/i.exec(number_),pn=/^PN(\d+)(?:-(\d+))?$/i.exec(number_);
     // A nomination's cloture and confirmation votes share its nomination number (PN).
     const key=b?billKey(congress,b[1]+b[2]):pn?`${congress}-pn-${pn[1]}${pn[2]?`-${pn[2]}`:''}`:`roll:${chamber}${congress}-${r.rollnumber}`;
     const what=String(r.vote_desc||r.dtl_desc||'').trim(),enBloc=pn&&(what.match(/\bto be\b/gi)||[]).length>1;
-    rolls.set(String(r.rollnumber),{key,date,question:String(r.vote_question||'').trim(),what:what.slice(0,200),...(enBloc?{enBloc:true}:{}),measure:measureOf(key),chamber,congress,session,number,
+    rolls.set(String(r.rollnumber),{key,date,question:motionOf(r.vote_question,r.dtl_desc,r.vote_desc),what:what.slice(0,200),...(enBloc?{enBloc:true}:{}),measure:measureOf(key),chamber,congress,session,number,
       url:chamber==='S'?`https://www.senate.gov/legislative/LIS/roll_call_votes/vote${congress}${session}/vote_${congress}_${session}_${String(number).padStart(5,'0')}.htm`:`https://clerk.house.gov/Votes/${date.slice(0,4)}${number}`});
     docs.push({key,text:`${r.vote_desc||''} ${r.dtl_desc||''}`});
     // A House roll call's description is often the bill's short title ("Laken Riley Act").
@@ -62,7 +68,9 @@ export function voteviewActs(files,chamber,congress,people,saved=[]){
   }
   for(const v of files.votes){
     const id=ours.get(String(v.icpsr)),r=id&&rolls.get(String(v.rollnumber)),cast=CAST[Number(v.cast_code)];
-    if(!r||!cast)continue;(out.get(id)||out.set(id,[]).get(id)).push({kind:'vote',...r,vote:cast});
+    if(!r||!cast)continue;
+    // Already among the saved roll calls' positions for this person.
+    const sv=savedOf.get(String(v.rollnumber));if(sv&&sv.pos[id]&&!/not in office/i.test(sv.pos[id]))continue;(out.get(id)||out.set(id,[]).get(id)).push({kind:'vote',...r,vote:cast});
   }
   return {acts:out,docs,titles};
 }
