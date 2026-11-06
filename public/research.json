@@ -208,6 +208,88 @@
           },
           "assessment": "consistent",
           "note": "Her votes against the Canada tariff emergency match her stated concern for Maine's cross-border economy."
+        },
+        {
+          "topic": "Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2026 (H.R. 3944)",
+          "said": {
+            "text": "\"Mr. President, I urge my colleagues to vote for cloture on the motion to proceed on the bipartisan fiscal year 2026 Military Construction, Veterans Affairs, and Related Agencies Appropriations bill.\"",
+            "date": "2025-07-22",
+            "src": {
+              "t": "Congressional Record, July 22, 2025: H.R. 3944 (Executive Calendar)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2025-07-22/CREC-2025-07-22-pt1-PgS4520-4"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of H.R. 3944, Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2026 (Aug 1, 2025). Also voted Nay on amendment (Aug 1, 2025); voted Yea on amendment (Aug 1, 2025); voted Yea on amendment (Aug 1, 2025).",
+            "date": "2025-08-01",
+            "src": {
+              "t": "Senate roll call 119-1-480",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00480.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, Aug 1, 2025), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Social Security Fairness Act (H.R. 82)",
+          "said": {
+            "text": "\"I rise today in strong support of the long overdue Social Security Fairness Act.\"",
+            "date": "2024-12-18",
+            "src": {
+              "t": "Congressional Record, December 18, 2024: Social Security Fairness Act--Motion to Proceed",
+              "u": "https://www.govinfo.gov/app/details/CREC-2024-12-18/CREC-2024-12-18-pt1-PgS7134-3"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of H.R. 82, Social Security Fairness Act (Dec 21, 2024). Also voted Nay on amendment (Dec 20, 2024); voted Nay on amendment (Dec 20, 2024); voted Yea on motion (Dec 20, 2024).",
+            "date": "2024-12-21",
+            "src": {
+              "t": "Senate roll call 118-2-338",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00338.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, Dec 21, 2024), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Tax Cuts and Jobs Act (H.R. 1)",
+          "said": {
+            "text": "\"Madam President, I will cast my vote in support of the conference agreement on the Tax Cuts and Jobs Act.\"",
+            "date": "2017-12-18",
+            "src": {
+              "t": "Congressional Record, December 18, 2017: Tax Cuts and Jobs Bill (Executive Session)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2017-12-18/CREC-2017-12-18-pt1-PgS8058"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion of H.R. 1, Tax Cuts and Jobs Act (Dec 20, 2017). Also voted Yea on motion to proceed (Dec 19, 2017); voted Yea on motion to recede and concur with a further amendment (Dec 20, 2017).",
+            "date": "2017-12-20",
+            "src": {
+              "t": "Senate roll call 115-1-322",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00322.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion, Dec 20, 2017), as the statement said they would.",
+          "promise": true,
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -4988,6 +5070,33 @@
           },
           "assessment": "outcome",
           "note": "A documented late disclosure in 2022; supported the 2026 Republican stock-restriction vehicle."
+        },
+        {
+          "topic": "Securing Growth and Robust Leadership in American Aviation Act (H.R. 3935)",
+          "said": {
+            "text": "\"While I urge my colleagues to put aside their differences and come together in a spirit of unity to support this bill, I am a little concerned.\"",
+            "date": "2023-09-27",
+            "src": {
+              "t": "Congressional Record, September 27, 2023: Securing Growth and Robust Leadership in American Aviation Act--Motion to Proceed--Continued",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-09-27/CREC-2023-09-27-pt1-PgS4699-2"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of H.R. 3935, Securing Growth and Robust Leadership in American Aviation Act (May 9, 2024). Also voted Not Voting on motion to proceed (May 2, 2024); voted Yea on motion to table (May 8, 2024); voted Yea on cloture motion (May 9, 2024).",
+            "date": "2024-05-09",
+            "src": {
+              "t": "Senate roll call 118-2-162",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00162.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, May 9, 2024), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -39377,6 +39486,87 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "Her vote matches her stated view that the resolution would weaken the administration's negotiating position."
+        },
+        {
+          "topic": "National Computer Forensics Institute Reauthorization Act (H.R. 7174)",
+          "said": {
+            "text": "\"Madam Speaker, I rise today in support of H.R. 7174, the National Computer Forensics Institute Reauthorization Act.\"",
+            "date": "2022-06-21",
+            "src": {
+              "t": "Congressional Record, June 21, 2022: National Computer Forensics Institute Reauthorization Act of 2022",
+              "u": "https://www.govinfo.gov/app/details/CREC-2022-06-21/CREC-2022-06-21-pt1-PgH5691"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass, as amended of H.R. 7174, National Computer Forensics Institute Reauthorization Act (Jul 13, 2022).",
+            "date": "2022-07-13",
+            "src": {
+              "t": "House roll call 305, 2022",
+              "u": "https://clerk.house.gov/Votes/2022305"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, as amended, Jul 13, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Prevent Exposure to Narcotics and Toxics Act (H.R. 5274)",
+          "said": {
+            "text": "\"Madam Speaker, I rise today in support of H.R. 5274, the Prevent Exposure to Narcotics and Toxics Act, introduced by my friend and colleague, David Joyce.\"",
+            "date": "2022-06-21",
+            "src": {
+              "t": "Congressional Record, June 21, 2022: Prevent Exposure to Narcotics and Toxics Act of 2021",
+              "u": "https://www.govinfo.gov/app/details/CREC-2022-06-21/CREC-2022-06-21-pt1-PgH5693"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass of H.R. 5274, Prevent Exposure to Narcotics and Toxics Act (Jul 13, 2022).",
+            "date": "2022-07-13",
+            "src": {
+              "t": "House roll call 306, 2022",
+              "u": "https://clerk.house.gov/Votes/2022306"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, Jul 13, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Alexander Lofgren Veterans in Parks (VIP) Act (H.R. 4300)",
+          "said": {
+            "text": "\"Mr. Speaker, I rise today in strong support of my bill, H.R. 4300, the Alexander Lofgren Veterans in Parks Act.\"",
+            "date": "2021-07-26",
+            "src": {
+              "t": "Congressional Record, July 26, 2021: Alexander Lofgren Veterans in Parks (Vip) Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2021-07-26/CREC-2021-07-26-pt1-PgH3864"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass, as amended of H.R. 4300, Alexander Lofgren Veterans in Parks (VIP) Act (Jul 29, 2021).",
+            "date": "2021-07-29",
+            "src": {
+              "t": "House roll call 254, 2021",
+              "u": "https://clerk.house.gov/Votes/2021254"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, as amended, Jul 29, 2021), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -43979,6 +44169,115 @@
           },
           "assessment": "consistent",
           "note": "As an Appropriations ranking member she sponsored a bill asserting congressional spending authority and voted for full-year FY2026 appropriations, though she opposed the earlier stopgap measure."
+        },
+        {
+          "topic": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency relating to \"Revised Definition of 'Waters of the United States'\". (H.J.Res. 27)",
+          "said": {
+            "text": "\"Today, I will vote no on H.J. Res. 27 because protecting our Great Lakes is a priority, and I strongly encourage my colleagues on both sides of the aisle to do the same, so that our waterways can be protected for future generations to come.\"",
+            "date": "2023-03-09",
+            "src": {
+              "t": "Congressional Record, March 9, 2023: Providing for Congressional Disapproval of the Rule Submitted by the Department of the Army, Corps o",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-03-09/CREC-2023-03-09-pt1-PgH1221"
+            }
+          },
+          "did": {
+            "text": "Voted Nay on passage, objections of the president to the contrary notwithstanding of H.J.Res. 27, Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency relating to \"Revised Definition of 'Waters of the United States'\". (Apr 18, 2023). Also voted Nay on passage (Mar 9, 2023).",
+            "date": "2023-04-18",
+            "src": {
+              "t": "House roll call 187, 2023",
+              "u": "https://clerk.house.gov/Votes/2023187"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Nay (passage, objections of the president to the contrary notwithstanding, Apr 18, 2023), as the statement said they would.",
+          "promise": true,
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Protecting Our Gold Star Families Education Act (S. 3373)",
+          "said": {
+            "text": "\"Madam Speaker, I rise in strong support of the PACT Act that Chairman Takano and the Committee on Veterans' Affairs brought before us today.\"",
+            "date": "2022-03-02",
+            "src": {
+              "t": "Congressional Record, March 2, 2022: Supporting the Pact Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2022-03-02/CREC-2022-03-02-pt1-PgH1258-3"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of S. 3373, Protecting Our Gold Star Families Education Act (Jul 13, 2022). Also voted Nay on motion to commit (Jul 13, 2022).",
+            "date": "2022-07-13",
+            "src": {
+              "t": "House roll call 309, 2022",
+              "u": "https://clerk.house.gov/Votes/2022309"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, Jul 13, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Inflation Reduction Act of 2022 (H.R. 5376)",
+          "said": {
+            "text": "\"Madam Speaker, I rise in support of this historic legislation and the related Rule to propel American progress.\"",
+            "date": "2021-11-05",
+            "src": {
+              "t": "Congressional Record, November 5, 2021: Providing for Consideration of H.R. 5376, Build Back Better Act; and for Other Purposes",
+              "u": "https://www.govinfo.gov/app/details/CREC-2021-11-05/CREC-2021-11-05-pt1-PgH6213"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to concur in the senate amendment of H.R. 5376, Inflation Reduction Act of 2022 (Aug 12, 2022). Also voted Nay on motion to recommit (Nov 19, 2021); voted Yea on passage (Nov 19, 2021); voted Yea on table motion to reconsider (Nov 19, 2021).",
+            "date": "2022-08-12",
+            "src": {
+              "t": "House roll call 420, 2022",
+              "u": "https://clerk.house.gov/Votes/2022420"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to concur in the senate amendment, Aug 12, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "(H.R. 2157)",
+          "said": {
+            "text": "\"Madam Chair, I rise in strong support of H.R. 2157, the Supplemental Appropriations Act for 2019.\"",
+            "date": "2019-05-10",
+            "src": {
+              "t": "Congressional Record, May 10, 2019: Supplemental Appropriations Act, 2019",
+              "u": "https://www.govinfo.gov/app/details/CREC-2019-05-10/CREC-2019-05-10-pt1-PgH3687-4"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and concur in the senate amendment of H.R. 2157 (Jun 3, 2019). Also voted Yea on agreeing to the amendment (May 10, 2019); voted Nay on motion to recommit with instructions (May 10, 2019); voted Yea on passage (May 10, 2019).",
+            "date": "2019-06-03",
+            "src": {
+              "t": "House roll call 232, 2019",
+              "u": "https://clerk.house.gov/Votes/2019232"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and concur in the senate amendment, Jun 3, 2019), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -53614,6 +53913,60 @@
           },
           "assessment": "consistent",
           "note": "Her statement on data-center energy costs matches the bill she co-led, which later passed the House."
+        },
+        {
+          "topic": "Ratepayer Protection Act (H.R. 9340)",
+          "said": {
+            "text": "\"Rep. Castor Introduces the Ratepayer Protection Act\"",
+            "date": "2026-07-02",
+            "src": {
+              "t": "YouTube video: Rep. Castor Introduces the Ratepayer Protection Act",
+              "u": "https://www.youtube.com/watch?v=cbZafWpnNPE"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass, as amended of H.R. 9340, Ratepayer Protection Act (Sep 16, 2026).",
+            "date": "2026-09-16",
+            "src": {
+              "t": "House roll call 312, 2026",
+              "u": "https://clerk.house.gov/Votes/2026312"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, as amended, Sep 16, 2026), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "youtube",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Bipartisan Safer Communities Act (S. 2938)",
+          "said": {
+            "text": "\"Madam Speaker, I rise in strong support of S. 2938 to name the Federal courthouse in Tallahassee, Florida, for Judge Joseph Woodrow Hatchett.\"",
+            "date": "2022-05-17",
+            "src": {
+              "t": "Congressional Record, May 17, 2022: Joseph Woodrow Hatchett United States Courthouse and Federal Building",
+              "u": "https://www.govinfo.gov/app/details/CREC-2022-05-17/CREC-2022-05-17-pt1-PgH5089"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on concurring in the senate amendments to the house amendment of S. 2938, Bipartisan Safer Communities Act (Jun 24, 2022). Also voted Yea on passage (May 18, 2022).",
+            "date": "2022-06-24",
+            "src": {
+              "t": "House roll call 299, 2022",
+              "u": "https://clerk.house.gov/Votes/2022299"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (concurring in the senate amendments to the house amendment, Jun 24, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -80122,6 +80475,60 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "He filed legislation matching the stated goal; the sources reviewed show no committee action on it."
+        },
+        {
+          "topic": "Veterans Benefits Improvement Act (H.R. 1530)",
+          "said": {
+            "text": "\"I rise today in support of this bipartisan legislation, the Veterans Benefits Improvement Act.\"",
+            "date": "2023-09-18",
+            "src": {
+              "t": "Congressional Record, September 18, 2023: Veterans Benefits Improvement Act of 2023",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-09-18/CREC-2023-09-18-pt1-PgH4358"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass, as amended of H.R. 1530, Veterans Benefits Improvement Act (Sep 20, 2023).",
+            "date": "2023-09-20",
+            "src": {
+              "t": "House roll call 401, 2023",
+              "u": "https://clerk.house.gov/Votes/2023401"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, as amended, Sep 20, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Hazard Eligibility and Local Projects Act (H.R. 1917)",
+          "said": {
+            "text": "\"Madam Speaker, I rise in support of H.R. 1917, introduced and championed by Representative Fletcher.\"",
+            "date": "2021-11-03",
+            "src": {
+              "t": "Congressional Record, November 3, 2021: Hazard Eligibility and Local Projects Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2021-11-03/CREC-2021-11-03-pt1-PgH6136"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and concur in the senate amendment of H.R. 1917, Hazard Eligibility and Local Projects Act (Dec 21, 2022). Also voted Yea on motion to suspend the rules and pass (Nov 4, 2021).",
+            "date": "2022-12-21",
+            "src": {
+              "t": "House roll call 536, 2022",
+              "u": "https://clerk.house.gov/Votes/2022536"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and concur in the senate amendment, Dec 21, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run.",
@@ -95562,6 +95969,33 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "The bill she introduced matches her stated view on state control of transportation funds."
+        },
+        {
+          "topic": "Lower Energy Costs Act (H.R. 1)",
+          "said": {
+            "text": "\"Mr. Chair, I rise today in support of H.R. 1.\"",
+            "date": "2023-03-28",
+            "src": {
+              "t": "Congressional Record, March 28, 2023: Lower Energy Costs Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-03-28/CREC-2023-03-28-pt1-PgH1497-2"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of H.R. 1, Lower Energy Costs Act (Mar 30, 2023). Also voted Yea on agreeing to the amendment (Mar 30, 2023); voted Yea on agreeing to the amendment (Mar 30, 2023); voted Nay on motion to recommit (Mar 30, 2023).",
+            "date": "2023-03-30",
+            "src": {
+              "t": "House roll call 182, 2023",
+              "u": "https://clerk.house.gov/Votes/2023182"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, Mar 30, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched for House Ethics Committee/Office of Congressional Conduct matters, STOCK Act or financial-disclosure issues, FEC enforcement or complaints, criminal or civil cases and bar discipline; found only the 2022 Wyoming State Bar complaint above (dismissed without investigation) and no other documented matters.",
@@ -97999,6 +98433,33 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "Hern reintroduced the bill he had promoted and moved it through the House; Senate action was not checked."
+        },
+        {
+          "topic": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Labor Relations Board relating to \"Standard for Determining Joint Employer Status\". (H.J.Res. 98)",
+          "said": {
+            "text": "\"Madam Speaker, I urge my friends on both sides of the aisle to support H.J. Res. 98.\"",
+            "date": "2024-01-12",
+            "src": {
+              "t": "Congressional Record, January 12, 2024: Providing for Congressional Disapproval Under the Rule Submitted by the National Labor Relations Boa",
+              "u": "https://www.govinfo.gov/app/details/CREC-2024-01-12/CREC-2024-01-12-pt1-PgH112-7"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage, objections of the president to the contrary notwithstanding of H.J.Res. 98, Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Labor Relations Board relating to \"Standard for Determining Joint Employer Status\". (May 7, 2024). Also voted Yea on passage (Jan 12, 2024).",
+            "date": "2024-05-07",
+            "src": {
+              "t": "House roll call 185, 2024",
+              "u": "https://clerk.house.gov/Votes/2024185"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, objections of the president to the contrary notwithstanding, May 7, 2024), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Ethics/Conduct matters, STOCK Act late-disclosure reports (Insider, NOTUS/Washington Sun, Oklahoma Watch), FEC complaints or enforcement, and controversies listed on Wikipedia. No House Ethics or OCE investigation or FEC enforcement action involving Hern was found. The FEC enforcement (MUR) database and the House Ethics Committee site were not searched directly.",
@@ -104456,6 +104917,33 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "The bill he introduced carries out the protections he described; the cited record shows only its committee referral."
+        },
+        {
+          "topic": "Protect College Sports Act of 2026 (S. 4668)",
+          "said": {
+            "text": "\"And that is why I have introduced the legislation, why it needs to be part of this discussion, so that American student-athletes still have the opportunity, like lots of little boys and little girls out there today who dream, have a dream, to be able to play college sports one day, shouldn't see that opportunity given away to someone who is not an American citizen.\"",
+            "date": "2026-09-15",
+            "src": {
+              "t": "Congressional Record, September 15, 2026: Protect College Sports Act (Executive Calendar)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgS4709"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of S. 4668, Protect College Sports Act of 2026 (Sep 28, 2026). Also voted Yea on amendment (Sep 28, 2026); voted Nay on amendment (Sep 28, 2026); voted Nay on amendment (Sep 28, 2026).",
+            "date": "2026-09-28",
+            "src": {
+              "t": "Senate roll call 119-2-250",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00250.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, Sep 28, 2026), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, Ohio Ethics Commission filings, FEC enforcement, and criminal or civil cases, including the FirstEnergy/HB 6 scandal. A June 2026 Senate ethics complaint concerning a senior aide's payments from a Columbus lobbying firm was found only in partisan or unestablished outlets (Heartland Signal, tiffinohio.net) with no public disposition, so it is not listed. Senate roll-call votes were not researched, per instructions; no ICPSR number was found.",
@@ -116704,6 +117192,33 @@
           "recordSrc": null,
           "assessment": "consistent",
           "note": "Her vote against the bill matches her stated objection to a one-size-fits-all federal rule."
+        },
+        {
+          "topic": "POWER 2.0 Act (S. 3115)",
+          "said": {
+            "text": "\"As one of my first legislative actions in Congress, I am proud to introduce the POWER 2.0 Act.\"",
+            "date": "2022-11-29",
+            "src": {
+              "t": "Congressional Record, November 29, 2022: Pro Bono Work to Empower and Represent Act of 2021",
+              "u": "https://www.govinfo.gov/app/details/CREC-2022-11-29/CREC-2022-11-29-pt1-PgH8622"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass of S. 3115, POWER 2.0 Act (Dec 1, 2022).",
+            "date": "2022-12-01",
+            "src": {
+              "t": "House roll call 499, 2022",
+              "u": "https://clerk.house.gov/Votes/2022499"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, Dec 1, 2022), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched for House Ethics/Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC complaints and criminal or civil cases; found only the March 2026 NRSC complaint to the FEC (pending). Certified primary results were not located (status uses unofficial election-night returns), and Voteview showed no numeric DW-NOMINATE score in fetched content.",
@@ -119075,6 +119590,87 @@
           },
           "assessment": "unclear",
           "note": "Collins voted for the tax cuts he described as a way to reduce mandatory spending, while his campaign says he supports Social Security and FactCheck.org notes the law reduces trust-fund revenue."
+        },
+        {
+          "topic": "Airport and Airway Extension Act (H.R. 7454)",
+          "said": {
+            "text": "\"However, Mr. Speaker, here we are, and I rise in support of the Airport and Airway Extension Act.\"",
+            "date": "2023-12-11",
+            "src": {
+              "t": "Congressional Record, December 11, 2023: Airport and Airway Extension Act of 2023, Part Ii",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-12-11/CREC-2023-12-11-pt1-PgH6756"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and pass of H.R. 7454, Airport and Airway Extension Act (Feb 29, 2024).",
+            "date": "2024-02-29",
+            "src": {
+              "t": "House roll call 59, 2024",
+              "u": "https://clerk.house.gov/Votes/202459"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and pass, Feb 29, 2024), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Securing Growth and Robust Leadership in American Aviation Act (H.R. 3935)",
+          "said": {
+            "text": "\"I also thank their incredible staffs, and I urge my colleagues to support this bill.\"",
+            "date": "2023-07-19",
+            "src": {
+              "t": "Congressional Record, July 19, 2023: Securing Growth and Robust Leadership in American Aviation Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-07-19/CREC-2023-07-19-pt1-PgH3707-4"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to suspend the rules and concur in the senate amendment of H.R. 3935, Securing Growth and Robust Leadership in American Aviation Act (May 15, 2024). Also voted Nay on agreeing to the amendment (Jul 20, 2023); voted Yea on agreeing to the amendment (Jul 20, 2023); voted Yea on passage (Jul 20, 2023).",
+            "date": "2024-05-15",
+            "src": {
+              "t": "House roll call 200, 2024",
+              "u": "https://clerk.house.gov/Votes/2024200"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to suspend the rules and concur in the senate amendment, May 15, 2024), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Lower Energy Costs Act (H.R. 1)",
+          "said": {
+            "text": "\"It is one of the main reasons I rise today in support of H.R. 1, the Lower Energy Costs Act.\"",
+            "date": "2023-03-28",
+            "src": {
+              "t": "Congressional Record, March 28, 2023: Lower Energy Costs Act",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-03-28/CREC-2023-03-28-pt1-PgH1497-2"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of H.R. 1, Lower Energy Costs Act (Mar 30, 2023). Also voted Yea on agreeing to the amendment (Mar 30, 2023); voted Yea on agreeing to the amendment (Mar 30, 2023); voted Nay on motion to recommit (Mar 30, 2023).",
+            "date": "2023-03-30",
+            "src": {
+              "t": "House roll call 182, 2023",
+              "u": "https://clerk.house.gov/Votes/2023182"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, Mar 30, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "named",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Conduct matters (found the 2025–26 referral), STOCK Act or financial-disclosure reports, FEC complaints or enforcement, and criminal or civil cases, and reviewed the controversies listed on Wikipedia and Flagpole. No STOCK Act violation, FEC enforcement action or criminal case involving Collins was found. The FEC enforcement (MUR) database and stock-trade trackers were not searched directly.",
