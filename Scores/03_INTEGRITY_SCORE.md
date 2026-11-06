@@ -67,6 +67,13 @@ H = 100 × (kept + 0.5 × partly kept or changed) / counted checks
 
 At least three counted checks are required. Pending, ambiguous, vague, and outcome-dependent checks are excluded. A promise the politician could have acted on but did not by the end of the relevant term is recorded as contradicted. Counts and individual reviews remain visible on the profile with quotes, dates, and sources.
 
+**Where checks come from:** researchers' own reviews, and the promise finder (`npm run promises:find`), which reads every collected floor speech, press release, Bluesky and Threads post and YouTube title for commitments: a sentence saying what the person will do ("I will vote no"), or the side they take now ("I oppose", "I rise in support of"). Reports of what they already did ("I voted for") are not commitments. Each commitment is linked to a bill in one of two ways:
+
+- **By name:** it names the bill, by number or name (in the sentence, the press-release headline or the floor speech's title), and they voted on it within two years afterward.
+- **By subject:** it names no bill, but within 30 days afterward they voted on one whose title, summary or descriptions share its subject (SALT, Ukraine aid, the debt limit, a nominee's name).
+
+A draft verdict comes from the deciding vote (the last final-passage vote, or a procedural vote if that is all there is): the side they took and the side they voted match, kept; they don't, broken; only a matching procedural vote, partly kept. Nothing counts until a person reviews it (`npm run promises:review`). The reviewer is shown what to check: a condition in the promise ("if the Senate reduces the SALT number…"), a procedural vote only, a vote the same day as the statement, a link by subject rather than by name, or votes that went both ways. Each person, bill and side is checked once, from the earliest statement, and a bill already checked for that person is not offered again. Checks found this way are marked on the profile.
+
 **The president:** reviewed PolitiFact tracker tallies. Promise Kept earns 1; Compromise earns 0.5; Promise Broken earns 0. Stalled and In the Works are not counted until given a final rating. The same three-check minimum applies.
 
 **Money-related pledges:** pledge records are checked against FEC and legislative records as supporting evidence on the reviewed promise. The records check is shown alongside the verdict and can flag a conflict for human review; it does not silently replace the reviewed verdict or add a second promise point. Pledges count separately in Fundraising (below).
