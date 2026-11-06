@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts} from '../scripts/collect-campaign-text.mjs';
+import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts,scriptText,savedIssuePages} from '../scripts/collect-campaign-text.mjs';
 
 test('election days and the years someone was on the ballot',()=>{
   assert.deepEqual([2016,2018,2020,2022,2024,2026].map(electionDay),['2016-11-08','2018-11-06','2020-11-03','2022-11-08','2024-11-05','2026-11-03']);
@@ -58,6 +58,9 @@ test('the links to where they stand: same site, issue pages first, no donate, ne
 function fakeWayback(saved){
   const calls=[];
   const fetch=async u=>{u=new URL(String(u));calls.push(u.href);
+    if(u.pathname==='/cdx/search/cdx'&&u.searchParams.get('matchType')==='domain'){const host=u.searchParams.get('url'),to=u.searchParams.get('to');
+      const keys=Object.keys(saved).filter(k=>k.startsWith(host)&&/issue|priorit|plan|stand/i.test(k)&&saved[k].some(s=>s.ts.slice(0,8)<=to));
+      return keys.length?Response.json([['original'],...keys.map(k=>[`https://${k}`])]):new Response('',{status:200});}
     if(u.pathname==='/cdx/search/cdx'){const page=u.searchParams.get('url').replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''),to=u.searchParams.get('to');
       const hits=(saved[page]||[]).filter(s=>s.ts.slice(0,8)<=to&&s.ts.slice(0,8)>=u.searchParams.get('from'));
       // (with no saved copy, an empty answer, as the Wayback Machine can send)
@@ -93,8 +96,34 @@ test('one campaign read from the Wayback Machine: the last copy before election 
   fs.rmSync(cache,{recursive:true,force:true});
 });
 
-test('the FEC: the campaign committee\'s website and the years on the ballot, only with a key',async()=>{
+test('the FEC: every campaign of theirs, House and Senate, with its years and committee website, only with a key',async()=>{
   assert.equal(await fecFacts({fecCmte:'C1',fecCand:'S1'},{}),null);
-  const env={FEC_API_KEY:'k',fetch:async u=>Response.json(String(u).includes('/committee/')?{results:[{website:'WWW.JONFORSENATE.COM'}]}:{results:[{election_years:[2020,2026]}]})};
-  assert.deepEqual(await fecFacts({fecCmte:'C1',fecCand:'S1'},env),{website:'WWW.JONFORSENATE.COM',years:[2020,2026]});
+  const env={FEC_API_KEY:'k',fetch:async u=>{u=new URL(String(u));
+    if(u.pathname==='/v1/candidates/')return Response.json({results:[{candidate_id:'S1',name:'SMITH, JON'},{candidate_id:'H1',name:'SMITH, JONATHAN R.'},{candidate_id:'H9',name:'SMITH, MARY'}]});
+    if(u.pathname==='/v1/candidate/S1/')return Response.json({results:[{election_years:[2026]}]});
+    if(u.pathname==='/v1/candidate/H1/')return Response.json({results:[{election_years:[2020,2022,2024]}]});
+    if(u.pathname==='/v1/candidate/S1/committees/')return Response.json({results:[{committee_id:'C1',website:'WWW.JONFORSENATE.COM'}]});
+    if(u.pathname==='/v1/candidate/H1/committees/')return Response.json({results:[{committee_id:'C2'}]});
+    if(u.pathname==='/v1/committee/C2/')return Response.json({results:[{website:'jonforcongress.com'}]});
+    return new Response('',{status:404});}};
+  // Mary Smith, of the same state, is someone else.
+  assert.deepEqual(await fecFacts({name:'Jon Smith',state:'IA',fecCmte:'C1',fecCand:'S1'},env),{websites:['WWW.JONFORSENATE.COM','jonforcongress.com'],years:[2020,2022,2024,2026],candidacies:['S1','H1']});
+});
+
+test('pages drawn by scripts, accordion headings, short points, and a splash page before election day',async()=>{
+  const next=`<html><body><div id="root"></div><script id="__NEXT_DATA__" type="application/json">{"props":{"page":{"body":"<p>Jon will vote to ban members of Congress from trading individual stocks.</p>","cta":"Donate now to keep our campaign strong this fall","css":".x{color:red}"}}}</script></body></html>`;
+  assert.deepEqual(scriptText(next),['Jon will vote to ban members of Congress from trading individual stocks.']);
+  assert.equal(pageText(next).text,'Jon will vote to ban members of Congress from trading individual stocks.');
+  assert.equal(pageText('<form id="aspnetForm"><button>Health Care</button><div><p>Jon will protect Medicare and Social Security.</p></div><ul><li>Protect Social Security</li></ul><input type="submit" value="Go"></form>').text,'## Health Care\nJon will protect Medicare and Social Security.\n- Protect Social Security');
+  assert.deepEqual(savedIssuePages(['https://jonforsenate.com/on-the-issues/','https://www.jonforsenate.com/issues/health?x=1','https://jonforsenate.com/news/plan-for-today','https://other.com/issues','https://jonforsenate.com/a/b/c/d/issues'],'https://jonforsenate.com/').map(l=>l.url),['https://jonforsenate.com/on-the-issues']);
+  // The last copy is a vote reminder and the issues page isn't linked from it: the copy from three weeks before, and
+  // the saved issues page, are read instead.
+  const cache=fs.mkdtempSync(path.join(os.tmpdir(),'wayback-'));
+  const w=fakeWayback({
+    'jonforsenate.com':[{ts:'20201005120000',html:'<h1>Jon for Senate</h1><p>Jon is running to put working families first, to lower costs for families and to clean up Washington. '.repeat(8)+'</p>'},{ts:'20201102120000',html:'<p>Election Day is November 3rd. Find your polling place now.</p>'}],
+    'jonforsenate.com/where-jon-stands':[{ts:'20200901000000',html:STOCKS}],
+  });
+  const c=await readCampaign(wayback({fetch:w.fetch},{wait:0,cache}),campaignSite('jonforsenate.com'),2020);
+  assert.deepEqual(c.pages.map(p=>[p.date,new URL(p.original).pathname]),[['2020-10-05','/'],['2020-09-01','/where-jon-stands']]);
+  fs.rmSync(cache,{recursive:true,force:true});
 });
