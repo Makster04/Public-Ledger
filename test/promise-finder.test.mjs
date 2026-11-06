@@ -8,6 +8,7 @@ import {DatabaseSync} from 'node:sqlite';
 import * as F from '../src/promise-finder.mjs';
 import {statementsOf,voteviewActs,measureOf} from '../scripts/find-promises.mjs';
 import {reviewedStatement,didText,addCheck,decidingAct,card} from '../scripts/review-promises.mjs';
+import {promiseScore} from '../public/grades.js';
 
 const root=new URL('../',import.meta.url);
 const research=JSON.parse(fs.readFileSync(new URL('public/research.json',root),'utf8'));
@@ -171,4 +172,57 @@ test('from the first full run: sentences only near a bill, a side on a subject, 
   assert.deepEqual(link('Heinrich Unveils Bill to Lower Utility Costs, Require Data Centers to Pay Fair Share',null,'Heinrich'),[]);
   const [s]=link('I will vote against the bill that raises utility costs on families.',null,'Smith','2026-09-25');
   assert.deepEqual([s.bill,s.link.how,s.confidence],['119-hr-9340','subject','medium']);
+});
+
+test('from the second full run: refusals, floor business, letters, two-clause headlines, and the bill being debated',()=>{
+  // "I will not" is a refusal, whatever verb follows.
+  assert.equal(F.commitmentIn('I cannot, I will not, I must not agree to those terms and pass this tariff bill.').side,'oppose');
+  assert.equal(F.commitmentIn('We will not stop fighting until the PRO Act is passed.').side,'support');
+  // Floor business and letters read into the Record aren't commitments.
+  for(const s of ['For the information of all Senators, we will have two rollcall votes at 5:25 today.','Later today, we will be taking up legislation here in the U.S. Senate to block the bill.',
+    'I will stop there, and I will yield to my colleague from Louisiana.','Mr. President, now I will switch to the GENIUS Act.','Dear Representative: On behalf of the 850,000 members of the United Steelworkers, we strongly urge you to oppose S. 140.'])assert.equal(F.commitmentIn(s),null,s);
+  assert.equal(F.withoutInserts('I agree. Dear Representative: On behalf of the AFL-CIO, I urge you to oppose. Sincerely, William Samuel. I yield back.').replace(/\s+/g,' ').trim(),'I agree. I yield back.');
+  // What "slams" and "calls for … on" are aimed at; a headline's clauses each take their own side.
+  assert.equal(F.commitmentIn('Rep. Barr Slams CBO on Big Beautiful Bill Scoring','Barr').side,'unclear');
+  assert.equal(F.commitmentIn('Lankford Calls for Reforms on Great American Outdoors Act','Lankford').side,'unclear');
+  assert.deepEqual(F.commitments('Sen. Cramer Slams Enhanced Unemployment Benefits, Calls for Major Bipartisan Infrastructure Reform','Cramer').map(c=>c.side),['oppose','support']);
+  assert.equal(F.commitmentIn('I urge my colleagues to stop pandering and join us in passing it.').side,'support');
+  assert.equal(F.commitmentIn('I urge my colleagues to adopt this resolution.').side,'support');
+  assert.equal(F.commitmentIn('I urge my colleagues to join me in voting in favor of S. 2102.').side,'support');
+  // In a floor speech, the bill being debated: not "a bill", "my amendment", or "the bill I introduced".
+  assert.deepEqual(['I will vote against the bill.','We urge the Senate to vote no.','I am supporting this very important legislation.','And the bill that I have introduced with Senator Cassidy works.',
+    'I am asking consent to pass a bill.','I urge support of my amendment.','We built on the legislation we passed last year.'].map(F.pointsAtPending),[true,true,true,false,false,false,false]);
+  assert.deepEqual(['I urge support of my amendment.','I support the Second Amendment and this bill.','I will vote to concur in the Senate amendment.'].map(F.aboutAmendment),[true,false,false]);
+  // Voteview's "On the Motion" is a motion (to waive, to commit), unless it concurs.
+  assert.deepEqual([F.voteKind('On the Motion','Motion to Waive All Applicable Budgetary Discipline'),F.voteKind('On the Motion','Motion to Concur in the House Amendment')],['procedural','final']);
+  // A bill of the same name in another Congress is another bill; the next Congress's only after the November election.
+  assert.deepEqual([F.sameCongress(['118-hr-3944','119-hr-3944'],'2023-09-14'),F.sameCongress(['119-hr-3944'],'2023-09-14'),F.sameCongress(['119-hr-1'],'2024-12-10')],[['118-hr-3944'],[],['119-hr-1']]);
+});
+
+test('a speech filed under a bill\'s title about another subject, a bill that undoes something, a nomination voted with others',()=>{
+  const names=F.billNames([{key:'119-s-4668',title:'Protect College Sports Act of 2026'}]);
+  const index=F.subjectIndex([{key:'119-s-4668',text:'Protect College Sports Act of 2026: college athletes'},{key:'119-sjres-37',text:'A joint resolution terminating the national emergency declared to impose duties on articles imported from Canada'},
+    ...Array.from({length:50},(_,i)=>({key:`119-hr-${i+1}`,text:`Bill number ${i+1} on highways, farms and post offices`}))]);
+  const acts=[{kind:'vote',key:'119-sjres-37',date:'2026-09-21',vote:'Nay',question:'On the Joint Resolution'},{kind:'vote',key:'119-s-4668',date:'2026-09-28',vote:'Yea',question:'On Passage of the Bill'}];
+  const link=(text,source='floor')=>F.linkStatement({person:'x',source,text,title:source==='floor'?'Protect College Sports Act of 2026':null,date:'2026-09-16',url:'u'},{acts,names,index,surname:'Murray'});
+  assert.deepEqual(link('So, today, we are going to try and pass this bill that will revoke the Canada tariffs.'),[]);
+  assert.deepEqual(link('I urge my colleagues to vote yes on this bill.').map(x=>[x.bill,x.link.via,x.confidence]),[['119-s-4668','title','high']]);
+  const [r]=link('I will vote to block S.J. Res. 37.','press');
+  assert.deepEqual([r.draft.assessment,r.flags,r.confidence],['consistent',['reversal'],'low']);
+  const enBloc=F.draftVerdict('support',[{kind:'vote',vote:'Nay',question:'On the Nomination',date:'2026-08-07',enBloc:true}]);
+  assert.ok(enBloc.flags.includes('en-bloc'));
+});
+
+test('said in debate the day of the vote or the day before: reviewed and shown, not scored',()=>{
+  const names=F.billNames([{key:'119-hr-9340',title:'Ratepayer Protection Act'}]),index=F.subjectIndex([{key:'119-hr-9340',text:'Ratepayer Protection Act'}]);
+  const acts=[{kind:'vote',key:'119-hr-9340',date:'2026-09-16',vote:'Yea',question:'On Motion to Suspend the Rules and Pass, as Amended'}];
+  const link=date=>F.linkStatement({person:'lawler',source:'floor',text:'Madam Speaker, I rise today in support of H.R. 9340, the Ratepayer Protection Act.',title:'Ratepayer Protection Act',date,url:'u'},{acts,names,index,surname:'Lawler'})[0];
+  assert.deepEqual([link('2026-09-15').debate,link('2026-09-15').flags],[true,['debate']]);
+  assert.equal(link('2026-09-10').debate,undefined);
+  const item={...link('2026-09-15'),id:'lawler|119-hr-9340|support',name:'Mike Lawler',measure:'H.R. 9340',title:'Ratepayer Protection Act',also:[]};
+  assert.equal(reviewedStatement(item,'consistent','','2026-11-06').debate,true);
+  // promiseScore leaves it out, like a vague goal.
+  const check=(a,extra={})=>({assessment:a,...extra});
+  const p=promiseScore([check('consistent'),check('consistent'),check('contradiction'),check('consistent',{debate:true}),check('consistent',{vague:true})]);
+  assert.deepEqual([p.pct,p.clear,p.debate,p.vague],[67,3,1,1]);
 });

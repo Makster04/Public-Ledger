@@ -4,6 +4,7 @@
 // every other reviewed check; every decision is kept in data/promise-decisions.json, so an item never comes back.
 //   npm run promises:review                 review one at a time
 //   npm run promises:review -- --list       only print the queue
+//   npm run promises:review -- --skip-debate  leave out what was said in debate (shown on the profile, not scored)
 //   npm run promises:review -- --only high  only the surest items (the bill named, a final vote): --only medium adds
 //                                           subject links with a final vote and matching procedural votes
 // The keys: Enter takes the draft verdict; k kept, p partly kept, b broken, c changed position, w waiting (no vote on it
@@ -21,7 +22,7 @@ const fmt=fmtDate;
 const question=q=>String(q||'').replace(/^on\s+(?:the\s+)?/i,'').toLowerCase()||'the vote';
 const rollName=a=>a.chamber==='S'?`Senate roll call ${a.congress}-${a.session}-${a.number}`:a.chamber==='H'?`House roll call ${a.number}, ${String(a.date).slice(0,4)}`:a.measure||'Congress.gov';
 // The deciding action: the last final vote, else the last vote, else a sponsorship.
-export const decidingAct=did=>{const v=did.filter(a=>a.kind==='vote'&&voteKind(a.question)!=='amendment');return v.filter(a=>voteKind(a.question)==='final').at(-1)||v.at(-1)||did.at(-1)||null;};
+export const decidingAct=did=>{const v=did.filter(a=>a.kind==='vote'&&voteKind(a.question,a.what)!=='amendment');return v.filter(a=>voteKind(a.question,a.what)==='final').at(-1)||v.at(-1)||did.at(-1)||null;};
 
 // What the record shows, as the site writes it: the deciding vote, and the other votes on it.
 export function didText(item){
@@ -38,7 +39,7 @@ export function reviewedStatement(item,assessment,note,today=new Date().toISOStr
   const quote=item.said.text.replace(/^["“]+|["”]+$/g,'');
   return {topic:bill||item.bill,said:{text:`"${quote}"`,date:item.said.date,src:item.said.src},
     did:{text:didText(item),date:main?.date||item.said.date,src:{t:main?rollName(main):item.said.src.t,u:main?.url||item.said.src.u}},
-    assessment,note:note||item.draft.why,...(item.kind==='promise'?{promise:true}:{}),
+    assessment,note:note||item.draft.why,...(item.kind==='promise'?{promise:true}:{}),...(item.debate?{debate:true}:{}),
     found:{by:'promise finder',source:item.said.source,link:item.link.how,reviewed:today}};
 }
 // Adds a reviewed check to the person's record. Returns false when the person isn't in public/research.json.
@@ -47,7 +48,7 @@ export function addCheck(research,personId,statement){
   if(!p)return false;(p.statements||=[]).push(statement);return true;
 }
 export function card(item,i,n){
-  const lines=[`\n[${i+1} of ${n}]${item.confidence?` (${item.confidence})`:''} ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
+  const lines=[`\n[${i+1} of ${n}]${item.confidence?` (${item.confidence}${item.debate?', said in debate: shown, not scored':''})`:''} ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
     `  Said ${fmt(item.said.date)} (${item.said.src.t}):`,`    "${item.said.text}"`];
   if(item.said.context&&item.said.context!==item.said.text)lines.push(`    In context: ${item.said.context.slice(0,400)}`);
   lines.push(`    ${item.said.src.u}`);
@@ -69,7 +70,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const queue=JSON.parse(fs.readFileSync(queueFile,'utf8')),decisions=fs.existsSync(decisionsFile)?JSON.parse(fs.readFileSync(decisionsFile,'utf8')):{};
   // --only high (or medium): the surest items alone.
   const only=arg('--only',null),levels=only==='high'?['high']:only==='medium'?['high','medium']:null;
-  const todo=queue.items.filter(x=>!decisions[x.id]&&(!levels||levels.includes(x.confidence||'low')));
+  // --skip-debate: leave out the statements made in debate the day of the vote or the day before (shown, not scored).
+  const todo=queue.items.filter(x=>!decisions[x.id]&&(!levels||levels.includes(x.confidence||'low'))&&!(x.debate&&process.argv.includes('--skip-debate')));
   console.log(`${todo.length} of ${queue.items.length} items in the queue (built ${queue.built}) still to review.`);
   if(process.argv.includes('--list')){todo.forEach((x,i)=>console.log(card(x,i,todo.length)));process.exit(0);}
   if(!todo.length)process.exit(0);

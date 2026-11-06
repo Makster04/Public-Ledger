@@ -68,20 +68,22 @@ export function matchScore(choices,evidence){
 
 // Promises delivered: each counted check is 1 if the record supports it, 1/2 if partly supported or the position changed,
 // 0 if contradicted (including a promise left unacted at the end of the term, recorded as a contradiction with `unacted`).
-// Left out: ambiguous and outcome checks, promises with no related bill yet ("pending"), and vague goals (`vague: true`).
+// Left out: ambiguous and outcome checks, promises with no related bill yet ("pending"), vague goals (`vague: true`), and
+// statements made in debate the day of the vote or the day before (`debate: true`), which nearly always match the vote
+// that follows and so say little about keeping a promise; both are listed on the profile, not scored.
 const COUNTED=new Set(['consistent','partial','changed','contradiction']);
 // trackers: published promise-tracker tallies (PolitiFact's Trump-O-Meter and MAGA-Meter, for a president), counted like
 // checked statements: Promise Kept 1, Compromise ½, Promise Broken 0. Stalled and In the Works wait, like a promise with
 // no related bill yet. [{counts:{kept, compromise, broken, stalled, inTheWorks}}]
 export function promiseScore(statements,trackers){
-  const list=(statements||[]).filter(x=>!x.vague), c={};
+  const list=(statements||[]).filter(x=>!x.vague&&!x.debate), c={};
   for(const x of list)c[x.assessment]=(c[x.assessment]||0)+1;
   let kept=c.consistent||0, half=(c.partial||0)+(c.changed||0), broken=c.contradiction||0, waiting=0, rated=0;
   for(const t of trackers||[]){const n=t.counts||{};kept+=n.kept||0;half+=n.compromise||0;broken+=n.broken||0;
     const w=(n.stalled||0)+(n.inTheWorks||0);waiting+=w;rated+=(n.kept||0)+(n.compromise||0)+(n.broken||0)+w;}
   const clear=kept+half+broken;
   return {pct:clear>=MIN_CHECKS?Math.round((kept+half/2)/clear*100):null,kept,half,broken,clear,total:list.length+rated,
-    notCounted:list.filter(x=>!COUNTED.has(x.assessment)).length+waiting,vague:(statements||[]).length-list.length,
+    notCounted:list.filter(x=>!COUNTED.has(x.assessment)).length+waiting,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
     unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated};
 }
 
