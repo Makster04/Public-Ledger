@@ -50,10 +50,11 @@ export function voteviewActs(files,chamber,congress,people,saved=[]){
   for(const r of files.rollcalls){
     const date=String(r.date||'').slice(0,10),session=Number(r.session)||(Number(date.slice(0,4))%2?1:2),number=Number(r.clerk_rollnumber||r.rollnumber);
     if(!date||have.has(`${session}-${number}`))continue;
-    const b=/^(HR|S|HJRES|SJRES|HCONRES|SCONRES|HRES|SRES)(\d+)$/i.exec(String(r.bill_number||'').replace(/[\s.]/g,''));
-    const key=b?billKey(congress,b[1]+b[2]):`roll:${chamber}${congress}-${r.rollnumber}`;
-    const what=String(r.vote_desc||r.dtl_desc||'').trim();
-    rolls.set(String(r.rollnumber),{key,date,question:String(r.vote_question||'').trim(),what:what.slice(0,200),measure:measureOf(key),chamber,congress,session,number,
+    const number_=String(r.bill_number||'').replace(/[\s.]/g,''),b=/^(HR|S|HJRES|SJRES|HCONRES|SCONRES|HRES|SRES)(\d+)$/i.exec(number_),pn=/^PN(\d+)(?:-(\d+))?$/i.exec(number_);
+    // A nomination's cloture and confirmation votes share its nomination number (PN).
+    const key=b?billKey(congress,b[1]+b[2]):pn?`${congress}-pn-${pn[1]}${pn[2]?`-${pn[2]}`:''}`:`roll:${chamber}${congress}-${r.rollnumber}`;
+    const what=String(r.vote_desc||r.dtl_desc||'').trim(),enBloc=pn&&(what.match(/\bto be\b/gi)||[]).length>1;
+    rolls.set(String(r.rollnumber),{key,date,question:String(r.vote_question||'').trim(),what:what.slice(0,200),...(enBloc?{enBloc:true}:{}),measure:measureOf(key),chamber,congress,session,number,
       url:chamber==='S'?`https://www.senate.gov/legislative/LIS/roll_call_votes/vote${congress}${session}/vote_${congress}_${session}_${String(number).padStart(5,'0')}.htm`:`https://clerk.house.gov/Votes/${date.slice(0,4)}${number}`});
     docs.push({key,text:`${r.vote_desc||''} ${r.dtl_desc||''}`});
     // A House roll call's description is often the bill's short title ("Laken Riley Act").
@@ -146,12 +147,14 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const grouped=F.groupFindings(found);
   const onFile=grouped.filter(x=>F.checkedBills(personOf.get(x.person),saved).has(x.bill)),decided=grouped.filter(x=>decisions[x.id]&&!onFile.includes(x));
   const items=grouped.filter(x=>!onFile.includes(x)&&!decided.includes(x)).map(x=>({...x,name:personOf.get(x.person)?.name||x.person,measure:measureOf(x.bill),title:titleOf.get(x.bill)||'',did:x.did.slice(-8)}))
-    .sort((a,b)=>F.CONFIDENCE_ORDER[a.confidence]-F.CONFIDENCE_ORDER[b.confidence]||b.said.date.localeCompare(a.said.date));
+    // The checks that will count first (made two days or more before the vote), surest first; then the ones said in debate.
+    .sort((a,b)=>(a.debate?1:0)-(b.debate?1:0)||F.CONFIDENCE_ORDER[a.confidence]-F.CONFIDENCE_ORDER[b.confidence]||b.said.date.localeCompare(a.said.date));
   const tally=(l,f)=>l.reduce((o,x)=>{const k=f(x);o[k]=(o[k]||0)+1;return o;},{});
   fs.writeFileSync(queueFile,JSON.stringify({about:'Commitments found in collected statements, linked to the bill each is about and what the person did on it, waiting for review (npm run promises:review). Nothing here counts on the site until it is reviewed. From scripts/find-promises.mjs.',
     built:new Date().toISOString().slice(0,10),since,counts:{statements:unique.length,commitments,linked:grouped.length,onFile:onFile.length,decided:decided.length,queued:items.length},items},null,1)+'\n');
   console.log(`\nCommitments found: ${commitments.toLocaleString()}. Linked to a bill they then acted on: ${grouped.length} (by name ${grouped.filter(x=>x.link.how==='named').length}, by subject ${grouped.filter(x=>x.link.how==='subject').length}); already reviewed on the site ${onFile.length}; decided before ${decided.length}.`);
-  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} to review (surest first: ${['high','medium','low'].map(c=>`${c} ${tally(items,x=>x.confidence)[c]||0}`).join(', ')}). Draft verdicts: ${Object.entries(tally(items,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
-  for(const x of items.slice(0,8))console.log(`\n  [${x.confidence}] ${x.name}, ${x.said.date} (${x.said.source}): "${x.said.text.slice(0,180)}"\n    → ${x.measure||x.bill}${x.title?` ${x.title}`:''} [${x.link.how==='named'?'named':`subject: ${(x.link.words||[]).slice(0,4).join(', ')}`}] · draft: ${x.draft.label} (${x.draft.why})${x.flags.length?`\n    check: ${x.flags.join(', ')}`:''}`);
+  const scored=items.filter(x=>!x.debate);
+  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} to review. ${scored.length} would count once confirmed (surest first: ${['high','medium','low'].map(c=>`${c} ${tally(scored,x=>x.confidence)[c]||0}`).join(', ')}); ${items.length-scored.length} were said in debate the day of the vote or the day before (listed after them; shown on the profile, not scored). Draft verdicts: ${Object.entries(tally(items,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
+  for(const x of items.slice(0,8))console.log(`\n  [${x.debate?'debate, ':''}${x.confidence}] ${x.name}, ${x.said.date} (${x.said.source}): "${x.said.text.slice(0,180)}"\n    → ${x.measure||x.bill}${x.title?` ${x.title}`:''} [${x.link.how==='named'?'named':`subject: ${(x.link.words||[]).slice(0,4).join(', ')}`}] · draft: ${x.draft.label} (${x.draft.why})${x.flags.length?`\n    check: ${x.flags.join(', ')}`:''}`);
   console.log('\nNext: npm run promises:review (or npm run promises:review -- --list to only print them).');
 }
