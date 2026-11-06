@@ -4,6 +4,8 @@
 // every other reviewed check; every decision is kept in data/promise-decisions.json, so an item never comes back.
 //   npm run promises:review                 review one at a time
 //   npm run promises:review -- --list       only print the queue
+//   npm run promises:review -- --all          also the people without a profile on the site: a verdict on one is kept in
+//                                           data/promise-decisions.json and added once they have a profile
 //   npm run promises:review -- --skip-debate  leave out what was said in debate (shown on the profile, not scored)
 //   npm run promises:review -- --only high  only the surest items (the bill named, a final vote): --only medium adds
 //                                           subject links with a final vote and matching procedural votes
@@ -47,6 +49,14 @@ export function addCheck(research,personId,statement){
   const p=[...research.members,...research.cands,...(research.featured||[])].find(x=>x.id===personId);
   if(!p)return false;(p.statements||=[]).push(statement);return true;
 }
+// The people with a profile on the site (members, candidates, the featured president): only they can hold checks.
+export const profiledIds=research=>new Set([...research.members,...research.cands,...(research.featured||[])].map(p=>p.id));
+// Verdicts given for someone who had no profile then, added now that they have one. Returns how many were added.
+export function addWaiting(research,decisions){
+  const ids=profiledIds(research);let n=0;
+  for(const d of Object.values(decisions))if(d.waiting&&d.statement&&ids.has(d.person)&&addCheck(research,d.person,d.statement)){delete d.waiting;delete d.statement;delete d.person;n++;}
+  return n;
+}
 export function card(item,i,n){
   const lines=[`\n[${i+1} of ${n}]${item.confidence?` (${item.confidence}${item.debate?', said in debate: shown, not scored':''})`:''} ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
     `  Said ${fmt(item.said.date)} (${item.said.src.t}):`,`    "${item.said.text}"`];
@@ -68,20 +78,23 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const researchFile=path.resolve(arg('--research',path.join(root,'public','research.json')));
   if(!fs.existsSync(queueFile)){console.log('No review queue yet: run npm run promises:find first.');process.exit(1);}
   const queue=JSON.parse(fs.readFileSync(queueFile,'utf8')),decisions=fs.existsSync(decisionsFile)?JSON.parse(fs.readFileSync(decisionsFile,'utf8')):{};
+  const research=JSON.parse(fs.readFileSync(researchFile,'utf8')),ids=profiledIds(research),all=process.argv.includes('--all');
+  const save=()=>{fs.writeFileSync(researchFile,JSON.stringify(research,null,2));fs.writeFileSync(decisionsFile,JSON.stringify(Object.fromEntries(Object.entries(decisions).sort(([a],[b])=>a.localeCompare(b))),null,1)+'\n');};
+  const caught=addWaiting(research,decisions);if(caught){save();console.log(`${caught} verdicts given earlier were added to people who now have a profile.`);}
   // --only high (or medium): the surest items alone.
   const only=arg('--only',null),levels=only==='high'?['high']:only==='medium'?['high','medium']:null;
   // --skip-debate: leave out the statements made in debate the day of the vote or the day before (shown, not scored).
-  const todo=queue.items.filter(x=>!decisions[x.id]&&(!levels||levels.includes(x.confidence||'low'))&&!(x.debate&&process.argv.includes('--skip-debate')));
-  console.log(`${todo.length} of ${queue.items.length} items in the queue (built ${queue.built}) still to review.`);
+  const open=queue.items.filter(x=>!decisions[x.id]&&(!levels||levels.includes(x.confidence||'low'))&&!(x.debate&&process.argv.includes('--skip-debate')));
+  // People without a profile can't hold a check on the site, so they wait unless asked for.
+  const todo=all?open:open.filter(x=>ids.has(x.person)),without=open.length-todo.length;
+  console.log(`${todo.length} of ${queue.items.length} items in the queue (built ${queue.built}) still to review.${without?` ${without} more are for people without a profile on the site, left out (add -- --all to review them too; their verdicts are kept for when they have one).`:''}`);
   if(process.argv.includes('--list')){todo.forEach((x,i)=>console.log(card(x,i,todo.length)));process.exit(0);}
   if(!todo.length)process.exit(0);
-  const research=JSON.parse(fs.readFileSync(researchFile,'utf8'));
-  const save=()=>{fs.writeFileSync(researchFile,JSON.stringify(research,null,2));fs.writeFileSync(decisionsFile,JSON.stringify(Object.fromEntries(Object.entries(decisions).sort(([a],[b])=>a.localeCompare(b))),null,1)+'\n');};
   // Answers typed or piped in, one line each; the end of the input stops the review.
   const rl=readline.createInterface({input:process.stdin,terminal:process.stdin.isTTY}),lines=[],waiting=[];
   rl.on('line',l=>waiting.length?waiting.shift()(l):lines.push(l));rl.on('close',()=>{while(waiting.length)waiting.shift()('q');lines.push('q');});
   const ask=q=>{process.stdout.write(q);return lines.length?Promise.resolve(lines.shift()):new Promise(r=>waiting.push(r));};
-  let added=0,left=0;
+  let added=0,left=0,kept=0;
   for(const [i,item] of todo.entries()){
     console.log(card(item,i,todo.length));
     const draft=['consistent','partial','contradiction','changed'].includes(item.draft.assessment)?item.draft.assessment:null;
@@ -98,10 +111,11 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     const assessment=KEYS[answer];
     const note=(await ask(`  Note for the site (Enter for: ${assessment===item.draft.assessment?item.draft.why:verdictLabel(assessment)}): `)).trim();
     const st=reviewedStatement(item,assessment,note||(assessment===item.draft.assessment?item.draft.why:`Reviewed: ${verdictLabel(assessment)}. ${item.draft.why}`),today);
-    if(!addCheck(research,item.person,st)){console.log(`  ${item.person} isn't in public/research.json, so this can't be added yet; skipped.`);continue;}
+    if(!addCheck(research,item.person,st)){decisions[item.id]={decision:assessment,at:today,waiting:'no profile',person:item.person,statement:st};kept++;save();
+      console.log(`  ${item.name} has no profile on the site yet, so this is kept in data/promise-decisions.json and added when they have one.`);continue;}
     decisions[item.id]={decision:assessment,at:today};added++;save();
     console.log(`  Added to ${item.name}'s record as ${verdictLabel(assessment)}.`);
   }
   rl.close();
-  console.log(`\n${added} added to the site, ${left} left out.${added||left?' Run npm test, then commit and push public/research.json and data/promise-decisions.json.':''}`);
+  console.log(`\n${added} added to the site, ${left} left out${kept?`, ${kept} kept for people without a profile yet`:''}.${added||left||kept?' Run npm test, then commit and push public/research.json and data/promise-decisions.json.':''}`);
 }

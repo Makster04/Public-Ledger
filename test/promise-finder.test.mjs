@@ -7,7 +7,7 @@ import {execFileSync} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
 import * as F from '../src/promise-finder.mjs';
 import {statementsOf,voteviewActs,measureOf,motionOf} from '../scripts/find-promises.mjs';
-import {reviewedStatement,didText,addCheck,decidingAct,card} from '../scripts/review-promises.mjs';
+import {reviewedStatement,didText,addCheck,decidingAct,card,addWaiting,profiledIds} from '../scripts/review-promises.mjs';
 import {promiseScore} from '../public/grades.js';
 
 const root=new URL('../',import.meta.url);
@@ -45,7 +45,8 @@ test('bills: numbers and names, without the made-up ones',()=>{
 
 test('the reviewed quotes: commitments linked by subject to the bill the reviewers chose, and none to a wrong one',()=>{
   const linked=[];
-  for(const p of people)for(const s of p.statements||[]){
+  // The hand-reviewed checks (not the ones the finder found and a reviewer confirmed).
+  for(const p of people)for(const s of (p.statements||[]).filter(x=>!x.found)){
     const out=F.linkStatement({person:p.id,source:'research',text:s.said.text,date:s.said.date,url:s.said.src?.u},{acts:F.votesOf(p.id,saved),names,index,surname:F.surnameOf(p)});
     const truth=F.checkedBills({statements:[s]},saved);
     for(const x of out){assert.ok(truth.has(x.bill),`${p.id} ${s.said.date} linked to ${x.bill}`);linked.push(`${p.id} ${x.bill} ${x.side} ${x.draft.assessment}`);}
@@ -285,4 +286,26 @@ test('a headline clause that takes no side: no stand on the bill it names',()=>{
   const link=text=>F.linkStatement({person:'warren',source:'youtube',text,title:text,date:'2025-06-24',url:'u'},{acts,names,index,surname:'Warren'});
   assert.deepEqual(link('Warren Slams Trump’s War in Iran, Exposes 10 Ways Big Beautiful Bill Increases Costs'),[]);
   assert.deepEqual(link('Warren Slams Trump’s War in Iran, Opposes the Big Beautiful Bill').map(x=>[x.bill,x.side]),[['119-hr-1','oppose']]);
+});
+
+test('npm run promises:review: people without a profile wait, and their verdicts are added once they have one',()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'review-'));
+  const item=(person,name)=>({id:`${person}|119-s-4668|support`,person,name,bill:'119-s-4668',measure:'S. 4668',title:'Protect College Sports Act of 2026',side:'support',kind:'stance',
+    said:{text:'I am supporting this legislation.',date:'2026-09-23',source:'floor',src:{t:'Congressional Record',u:'https://www.govinfo.gov/x'}},link:{how:'named',via:'title'},
+    did:[{kind:'vote',vote:'Yea',question:'On Passage of the Bill',date:'2026-09-28',chamber:'S',congress:119,session:2,number:250,url:'https://www.senate.gov/v'}],
+    draft:{assessment:'consistent',label:'kept',why:'Voted Yea.'},flags:[],confidence:'high',also:[]});
+  fs.writeFileSync(path.join(dir,'queue.json'),JSON.stringify({built:'2026-11-06',items:[item('husted','Jon Husted'),item('young','Todd Young')]}));
+  const research={members:[{id:'husted',statements:[]}],cands:[]};fs.writeFileSync(path.join(dir,'research.json'),JSON.stringify(research,null,2));
+  const run=(answers,...extra)=>execFileSync(process.execPath,['scripts/review-promises.mjs','--queue',path.join(dir,'queue.json'),'--decisions',path.join(dir,'decisions.json'),'--research',path.join(dir,'research.json'),...extra],{cwd:new URL('.',root),encoding:'utf8',input:answers});
+  // Only Husted has a profile, so Young's item waits.
+  assert.match(run('\n\n'),/1 of 2 items .* 1 more are for people without a profile/s);
+  // With --all, Young's verdict is kept for later rather than lost.
+  assert.match(run('\n\n','--all'),/Todd Young has no profile on the site yet/);
+  const decisions=JSON.parse(fs.readFileSync(path.join(dir,'decisions.json'),'utf8'));
+  assert.deepEqual([decisions['husted|119-s-4668|support'].decision,decisions['young|119-s-4668|support'].waiting],['consistent','no profile']);
+  // Once Young has a profile, the kept verdict is added.
+  const r=JSON.parse(fs.readFileSync(path.join(dir,'research.json'),'utf8'));r.members.push({id:'young',statements:[]});
+  assert.equal(addWaiting(r,decisions),1);assert.equal(r.members[1].statements[0].assessment,'consistent');assert.equal(decisions['young|119-s-4668|support'].waiting,undefined);
+  assert.deepEqual([...profiledIds(r)],['husted','young']);
+  fs.rmSync(dir,{recursive:true,force:true});
 });

@@ -154,15 +154,17 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const decisionsFile=path.resolve(arg('--decisions',DECISIONS)),decisions=fs.existsSync(decisionsFile)?JSON.parse(fs.readFileSync(decisionsFile,'utf8')):{};
   const grouped=F.groupFindings(found);
   const onFile=grouped.filter(x=>F.checkedBills(personOf.get(x.person),saved).has(x.bill)),decided=grouped.filter(x=>decisions[x.id]&&!onFile.includes(x));
-  const items=grouped.filter(x=>!onFile.includes(x)&&!decided.includes(x)).map(x=>({...x,name:personOf.get(x.person)?.name||x.person,measure:measureOf(x.bill),title:titleOf.get(x.bill)||'',did:x.did.slice(-8)}))
+  const profiled=new Set(researchPeople.map(p=>p.id));
+  const items=grouped.filter(x=>!onFile.includes(x)&&!decided.includes(x)).map(x=>({...x,name:personOf.get(x.person)?.name||x.person,measure:measureOf(x.bill),title:titleOf.get(x.bill)||'',did:x.did.slice(-8),...(profiled.has(x.person)?{}:{noProfile:true})}))
     // The checks that will count first (made two days or more before the vote), surest first; then the ones said in debate.
-    .sort((a,b)=>(a.debate?1:0)-(b.debate?1:0)||F.CONFIDENCE_ORDER[a.confidence]-F.CONFIDENCE_ORDER[b.confidence]||b.said.date.localeCompare(a.said.date));
+    // (people without a profile on the site last: their checks can't be shown until they have one)
+    .sort((a,b)=>(a.noProfile?1:0)-(b.noProfile?1:0)||(a.debate?1:0)-(b.debate?1:0)||F.CONFIDENCE_ORDER[a.confidence]-F.CONFIDENCE_ORDER[b.confidence]||b.said.date.localeCompare(a.said.date));
   const tally=(l,f)=>l.reduce((o,x)=>{const k=f(x);o[k]=(o[k]||0)+1;return o;},{});
   fs.writeFileSync(queueFile,JSON.stringify({about:'Commitments found in collected statements, linked to the bill each is about and what the person did on it, waiting for review (npm run promises:review). Nothing here counts on the site until it is reviewed. From scripts/find-promises.mjs.',
     built:new Date().toISOString().slice(0,10),since,counts:{statements:unique.length,commitments,linked:grouped.length,onFile:onFile.length,decided:decided.length,queued:items.length},items},null,1)+'\n');
   console.log(`\nCommitments found: ${commitments.toLocaleString()}. Linked to a bill they then acted on: ${grouped.length} (by name ${grouped.filter(x=>x.link.how==='named').length}, by subject ${grouped.filter(x=>x.link.how==='subject').length}); already reviewed on the site ${onFile.length}; decided before ${decided.length}.`);
-  const scored=items.filter(x=>!x.debate);
-  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} to review. ${scored.length} would count once confirmed (surest first: ${['high','medium','low'].map(c=>`${c} ${tally(scored,x=>x.confidence)[c]||0}`).join(', ')}); ${items.length-scored.length} were said in debate the day of the vote or the day before (listed after them; shown on the profile, not scored). Draft verdicts: ${Object.entries(tally(items,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
+  const mine=items.filter(x=>!x.noProfile),scored=mine.filter(x=>!x.debate);
+  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} items, ${mine.length} for people with a profile on the site (${items.length-mine.length} more for people without one are listed last; npm run promises:review leaves them out). Of theirs, ${scored.length} would count once confirmed (surest first: ${['high','medium','low'].map(c=>`${c} ${tally(scored,x=>x.confidence)[c]||0}`).join(', ')}); ${mine.length-scored.length} were said in debate the day of the vote or the day before (listed after them; shown on the profile, not scored). Draft verdicts: ${Object.entries(tally(mine,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
   for(const x of items.slice(0,8))console.log(`\n  [${x.debate?'debate, ':''}${x.confidence}] ${x.name}, ${x.said.date} (${x.said.source}): "${x.said.text.slice(0,180)}"\n    → ${x.measure||x.bill}${x.title?` ${x.title}`:''} [${x.link.how==='named'?'named':`subject: ${(x.link.words||[]).slice(0,4).join(', ')}`}] · draft: ${x.draft.label} (${x.draft.why})${x.flags.length?`\n    check: ${x.flags.join(', ')}`:''}`);
   console.log('\nNext: npm run promises:review (or npm run promises:review -- --list to only print them).');
 }
