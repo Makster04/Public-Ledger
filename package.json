@@ -27,6 +27,7 @@
     "review:pledges": "node scripts/review-pledges.mjs",
     "promises:find": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/find-promises.mjs",
     "promises:review": "node scripts/review-promises.mjs",
+    "campaign:collect": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/collect-campaign-text.mjs",
     "review:holdings": "node --no-warnings=ExperimentalWarning scripts/review-holdings.mjs",
     "money:update": "node --env-file-if-exists=.dev.vars scripts/update-campaign-money.mjs",
     "counties:update": "node scripts/county-results.mjs",
