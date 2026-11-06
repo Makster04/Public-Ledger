@@ -6,7 +6,7 @@ import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
 import * as F from '../src/promise-finder.mjs';
-import {statementsOf,voteviewActs,measureOf} from '../scripts/find-promises.mjs';
+import {statementsOf,voteviewActs,measureOf,motionOf} from '../scripts/find-promises.mjs';
 import {reviewedStatement,didText,addCheck,decidingAct,card} from '../scripts/review-promises.mjs';
 import {promiseScore} from '../public/grades.js';
 
@@ -225,4 +225,34 @@ test('said in debate the day of the vote or the day before: reviewed and shown, 
   const check=(a,extra={})=>({assessment:a,...extra});
   const p=promiseScore([check('consistent'),check('consistent'),check('contradiction'),check('consistent',{debate:true}),check('consistent',{vague:true})]);
   assert.deepEqual([p.pct,p.clear,p.debate,p.vague],[67,3,1,1]);
+});
+
+test('from the third full run: every member\'s vote on a saved roll call, Senate motions, "not just", and what subject links skip',()=>{
+  // research.json saves a roll call's positions only for the people it tracks; everyone else's comes from Voteview.
+  const files={members:[{icpsr:'1',bioguide_id:'P000605',chamber:'House'},{icpsr:'2',bioguide_id:'E000300',chamber:'House'}],
+    rollcalls:[{rollnumber:'10',clerk_rollnumber:'151',session:'2',date:'2024-04-20',bill_number:'HR8035',vote_question:'On Passage',vote_desc:'Ukraine Security Supplemental Appropriations Act, 2024'}],
+    votes:[{icpsr:'1',rollnumber:'10',cast_code:'6'},{icpsr:'2',rollnumber:'10',cast_code:'1'}]};
+  const v=voteviewActs(files,'H',118,[{id:'perry',bioguide:'P000605'},{id:'newmember',bioguide:'E000300'}],saved);
+  assert.equal(v.acts.get('perry'),undefined);
+  assert.deepEqual(v.acts.get('newmember').map(a=>[a.key,a.vote,a.what,a.url]),[['118-hr-8035','Yea','Ukraine Security Supplemental Appropriations Act, 2024','https://clerk.house.gov/Votes/2024151']]);
+  // Voteview's "On the Motion" says which motion in its description.
+  assert.equal(F.voteKind(motionOf('On the Motion','Motion to Concur in the House Amendment to the Senate Amendment to H.R. 4366')),'final');
+  assert.equal(F.voteKind(motionOf('On the Motion',null,'Motion to Waive All Applicable Budgetary Discipline')),'procedural');
+  assert.equal(F.voteKind('On the Decision of the Chair'),'procedural');
+  // "We don't just pass it" is neither side; "we should not pass it" is against.
+  assert.equal(F.commitmentIn("I will stand up and make this plea: that we don't just pass the HALT Fentanyl Act but put things in it.").side,'unclear');
+  assert.equal(F.commitmentIn('I will make sure that we do not pass this bill.').side,'oppose');
+  // Someone else's words or wishes, and a call for a delay or a removal.
+  for(const t of ['And, third, they say: We will tell the American people it adds no new debt.','Caroline called my office asking that I oppose this budget plan.'])assert.equal(F.commitmentIn(t),null,t);
+  assert.equal(F.commitmentIn('Murphy Calls For Delay of Iran Sanctions Vote','Murphy').side,'unclear');
+  assert.equal(F.commitmentIn('Heinrich Calls For Removal Of Arctic Refuge Drilling From Republican Budget','Heinrich').side,'unclear');
+  assert.equal(F.commitmentIn('Gillibrand Calls on Congress to Pass the PACT Act','Gillibrand').side,'support');
+  // Subject links skip a headline that slams something, an Act the finder doesn't know, and nominations for bills.
+  const index=F.subjectIndex([{key:'119-sjres-49',text:'A joint resolution terminating the national emergency on tariffs'},{key:'119-pn-12',text:'Thomas Vilsack, of Iowa, to be Secretary of Agriculture'},{key:'117-hr-1319',text:'American Rescue Plan Act of 2021, agriculture relief for farmers'},
+    ...Array.from({length:50},(_,i)=>({key:`119-hr-${i+1}`,text:`Bill number ${i+1} on highways and post offices`}))]);
+  const acts=[{kind:'vote',key:'119-sjres-49',date:'2025-04-30',vote:'Yea',question:'On the Joint Resolution'},{kind:'vote',key:'117-hr-1319',date:'2025-04-20',vote:'Yea',question:'On Passage of the Bill'},{kind:'vote',key:'119-pn-12',date:'2025-04-25',vote:'Yea',question:'On the Nomination'}];
+  const link=(text,surname)=>F.linkStatement({person:'x',source:'youtube',text,title:text,date:'2025-04-10',url:'u'},{acts,names:[],index,surname});
+  assert.deepEqual(link('Wyden Blasts Trump Tariff Chaos and Billionaire Handouts in Hearing on Trade Nominees','Wyden'),[]);
+  assert.deepEqual(link('Wyden Calls for Passage of the Speedy Tariff Refunds Act to end the tariff emergency','Wyden'),[]);
+  assert.deepEqual(link('Boozman Supports Nomination of Tom Vilsack for Agriculture Secretary, relief for farmers','Boozman').map(x=>x.bill),['119-pn-12']);
 });

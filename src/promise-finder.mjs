@@ -48,6 +48,10 @@ const SUPPORT=/\b(?:vot(?:e|ing) (?:yes|yea|aye|for|to pass|to confirm|in favor)
 const AGENDA=/^\s*(?:(?:be|now|then|soon|shortly|also|again|first|next|later|today|tomorrow|tonight|just)\s+)*(?:have|hold|take up|taking up|proceed|resume|recess|adjourn|convene|vote on|voting on|be voting|consider|considering|move to|turn to|begin|start|switch to|move on to|now turn|offer|yield|reserve|stop there|come back|return to|hear from|close|conclude|wrap up|(?:talk|speak|discuss|say|explain)(?!\s+(?:in support|in opposition|against|in favor))|continue (?:to|with) (?:debate|consideration|this debate))\b/i;
 // (and letters read into the Record: "Dear Representative: On behalf of the 850,000 members…")
 const NOT_COMMITMENT=/for the information of|roll ?call votes?|\bDear (?:Representative|Senator|Member|Colleague|Mr|Ms|Madam)|\bon behalf of (?:the |our )?[\d,.]+(?: million)? (?:members|workers|families)|\bI (?:ask unanimous consent that|yield|reserve|suggest the absence)/i;
+// Someone else's words or wishes: "they say: We will…", "Caroline called asking that I oppose…".
+const REPORTED=/\b(?:say|says|said|claim|claims|claimed|argue|argues|argued|promised|told (?:us|me)|asking|asked|ask|wants?|wanted|urging|urged)\s*(?:me\s+)?(?:that\s+|to\s+)?[:,]?\s*["“]?\s*$/i;
+// "Calls for Delay of the Vote", "Calls for Removal of Drilling from the Budget": against what follows, not for it.
+const CALL_AGAINST=/^\s*(?:a |the |an )?(?:delay|removal|end|halt|pause|withdrawal|rejection|defeat|repeal|postponement)\b/i;
 // "Barr Slams CBO on…", "Lankford Calls for Reforms on…": the side is about the CBO or the reforms, not the bill.
 const SLAM=/^(?:slams?|blasts?|condemns?|denounces?|for)$/i;
 // A sentence about a measure: a bill, a deal, a nominee, a vote. A sentence linked to a bill only through its subject or
@@ -61,6 +65,8 @@ const DEFINITE=/\bthe (?:bill|legislation|resolution|measure)\b(?!,?\s+(?:that|w
 export const pointsAtPending=text=>DEFINITE.test(String(text||''));
 // An amendment is its own vote, not the bill's (a constitutional amendment, or the other chamber's amendment to a bill, is).
 export const aboutAmendment=text=>/\bamendments?\b/i.test(String(text||'').replace(/constitutional amendments?|amendments? to the constitution|(?:senate|house) amendments?|\b(?:first|second|fourth|fifth|tenth|fourteenth|nineteenth|twenty-\w+|\d+(?:st|nd|rd|th))\s+amendment/gi,''));
+const NOMINATION=/\b(?:nominat\w*|nominee|confirm\w*|administrator|ambassador|commissioner)\b/i;
+const isNomination=a=>/-pn-/.test(String(a.key))||/nomination/i.test(a.question||'');
 // The bill undoes something (a disapproval, a repeal): "stop" and "block" may then be for it.
 const REVERSES=/disapprov|terminat|repeal|rescind|nullif|revok|overturn|vacat/i;
 const UNDO_WORD=/\b(?:block|stop|overturn|end|terminate|rescind|undo|reverse|strike down|roll back|kill)\b/i;
@@ -69,10 +75,13 @@ const INTRO=/\b(?:introduc\w*|unveil\w*|cosponsor\w*|reintroduc\w*)\b/i;
 const CONDITION=/\b(?:if|unless|as long as|so long as|only if|provided that|until)\b/i;
 
 // Which side a clause takes: the first "for" or "against" word after the commitment, turned around after "won't".
+// A "not" just before the word turns it around ("we should not pass it"); "not just pass it" is neither side.
 function sideOf(clause,negative){
-  const o=OPPOSE.exec(clause),s=SUPPORT.exec(clause);
-  let side=o&&(!s||o.index<=s.index)?'oppose':s?'support':'unclear';
-  if(negative&&side!=='unclear')side=side==='oppose'?'support':'oppose';
+  const o=OPPOSE.exec(clause),s=SUPPORT.exec(clause),hit=o&&(!s||o.index<=s.index)?o:s;
+  let side=hit===o&&o?'oppose':s?'support':'unclear';if(side==='unclear')return side;
+  const before=clause.slice(Math.max(0,hit.index-30),hit.index);
+  if(/(?:\bnot|n['’]t|\bnever)\s+(?:just|simply|only|merely)\s+$/i.test(before))return 'unclear';
+  if(negative||/(?:\bnot|n['’]t|\bnever|\bno longer)\s+$/i.test(before))side=side==='oppose'?'support':'oppose';
   return side;
 }
 // The commitment in one sentence, or null. name: the person's surname, for headlines written about them.
@@ -90,14 +99,17 @@ export function commitmentIn(sentence,name){
   for(const [re,kind,negative,third] of patterns(name)){
     for(const m of s.matchAll(re)){
       const rest=s.slice(m.index+m[0].length);
-      if(AGENDA.test(rest))continue;
+      if(AGENDA.test(rest)||REPORTED.test(s.slice(0,m.index)))continue;
       // "We won't stop fighting until it passes", "I won't rest": keeping on, not a refusal.
       const keepOn=negative&&/^\s*(?:ever\s+)?(?:stop|quit|rest|give up|back down|let up|relent)\b/i.test(rest);
       // From the commitment on: its verb ("I rise in support", "won't vote for") and what follows.
       let side=sideOf(keepOn?rest.replace(/^\s*(?:ever\s+)?\w+(?:\s+(?:up|down))?/,''):s.slice(m.index),negative&&!keepOn);
       const verb=m[0].trim().split(/\s+/).at(-1);
       if(third&&SLAM.test(verb)&&/^\s*(?:\S+\s+){1,4}?(?:on|over|about|for)\s/i.test(rest))side='unclear';
-      return {kind,side,sentence:s.trim(),conditional:CONDITION.test(s),...(third?{third:true}:{}),...(INTRO.test(s.slice(m.index,m.index+m[0].length+40))?{intro:true}:{})};
+      if(/\bfor$/i.test(m[0].trim())&&CALL_AGAINST.test(rest))side='unclear';
+      // A headline that slams something takes a side on a bill only if it names it ("Capito Slams the For the People Act").
+      const slam=third&&/^(?:slams?|blasts?|condemns?|denounces?)$/i.test(verb);
+      return {kind,side,sentence:s.trim(),conditional:CONDITION.test(s),...(third?{third:true}:{}),...(slam?{slam:true}:{}),...(INTRO.test(s.slice(m.index,m.index+m[0].length+40))?{intro:true}:{})};
     }
   }
   return null;
@@ -224,7 +236,7 @@ export function voteKind(question,what=''){
   const q=String(question||'');
   if(/suspend the rules and (?:pass|agree)/i.test(q))return 'final';
   if(/amendment/i.test(q)&&!/concur|recede|(?:senate|house) amendment/i.test(q))return 'amendment';
-  if(/cloture|motion to proceed|\btable\b|recommit|previous question|\brule\b|waive|point of order|discharge|instruct|quorum|adjourn|reconsider/i.test(q))return 'procedural';
+  if(/cloture|motion to proceed|\btable\b|recommit|previous question|\brule\b|waive|point of order|discharge|instruct|quorum|adjourn|reconsider|decision of the chair|ruling of the chair|\bappeal\b|motion to commit/i.test(q))return 'procedural';
   // Voteview writes a Senate motion as "On the Motion" (to waive, to commit, to proceed), with what it was in its description.
   if(/^\s*on the motion\b/i.test(q)&&!/concur|recede|override/i.test(`${q} ${what||''}`))return 'procedural';
   return 'final';
@@ -299,13 +311,14 @@ export function linkStatement(statement,{acts,names,index,surname}){
   if(!found.length&&statement.title&&statement.title!==statement.text)for(const c of commitments(statement.title,surname))found.push(c);
   const named=actsAfter(acts,date,NAMED_DAYS),near=actsAfter(acts,date,CONTEXT_DAYS);
   for(const c of found.slice(0,6)){
-    if(aboutAmendment(c.sentence))continue;
+    // About an amendment: said so, or "support it" right after talking about one.
+    if(aboutAmendment(c.sentence)||(aboutAmendment(c.context)&&!/\b(?:bill|legislation|resolution|act|package|measure|nomination)\b/i.test(c.sentence)))continue;
     // The bill: named in the sentence; else, for a sentence about the measure, the one bill the speech title names, or
     // (in a post or press release) the only one the text names. A floor speech's sentence has to point at the bill being
     // debated, and can't name a subject that bill doesn't have (a speech on tariffs filed under a sports bill).
     let keys=sameCongress(namedBills(c.sentence,date,names),date),how='named',via='sentence';
     const pointed=floor?pointsAtPending(c.sentence):aboutMeasure(c.sentence);
-    if(!keys.length&&pointed){
+    if(!keys.length&&pointed&&!c.quote){
       const t=statement.title&&statement.title!==statement.text?sameCongress(namedBills(statement.title,date,names),date):[];
       if(t.length===1){keys=t;via='title';}
       else if(!floor){const all=sameCongress(namedBills(statement.text,date,names),date);if(all.length===1){keys=all;via='text';}}
@@ -315,12 +328,15 @@ export function linkStatement(statement,{acts,names,index,surname}){
     if(keys.length)key=keys.find(k=>named.some(a=>a.key===k))||keys[0];
     else{
       // By subject: only a sentence that takes a side on a measure, and an introduced bill only to its own sponsorship.
-      if(c.side==='unclear'||!(floor?pointsAtPending(c.sentence):aboutMeasure(c.context)))continue;
+      // Not a headline that slams something, nor a sentence naming an Act this finder doesn't know (that bill, not another).
+      if(c.side==='unclear'||c.slam||/\b(?:[A-Z][\w'’.-]*\s+){1,8}Act\b/.test(c.sentence)||!(floor?pointsAtPending(c.sentence):aboutMeasure(c.context)))continue;
       how='subject';
+      // A nomination is linked only to a nomination's votes, and a bill only to a bill's.
+      const nom=NOMINATION.test(c.sentence)||/^(?:nomination|executive session|executive calendar)\b/i.test(statement.title||'');
       // (one clause of a headline is matched on its own words, not the other clauses')
       const text=prepare(`${c.quote?c.sentence:c.context} ${statement.title||''}`);
       for(const w of termsIn(surname||''))text.terms.delete(w);
-      const ranked=[...new Set(near.filter(a=>!c.intro||a.kind!=='vote').map(a=>a.key))].map(k=>({k,...subjectFit(text,k,index)})).filter(x=>x.anchor&&x.score>=MIN_SUBJECT).sort((a,b)=>b.score-a.score);
+      const ranked=[...new Set(near.filter(a=>(!c.intro||a.kind!=='vote')&&isNomination(a)===nom).map(a=>a.key))].map(k=>({k,...subjectFit(text,k,index)})).filter(x=>x.anchor&&x.score>=MIN_SUBJECT).sort((a,b)=>b.score-a.score);
       if(!ranked.length)continue;
       key=ranked[0].k;fit=ranked[0];others=ranked.slice(1).filter(x=>x.score>=ranked[0].score*0.7).map(x=>x.k).slice(0,3);
       if(offSubject(c.sentence,key,statement.title))continue;
