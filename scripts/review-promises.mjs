@@ -4,6 +4,8 @@
 // every other reviewed check; every decision is kept in data/promise-decisions.json, so an item never comes back.
 //   npm run promises:review                 review one at a time
 //   npm run promises:review -- --list       only print the queue
+//   npm run promises:review -- --only high  only the surest items (the bill named, a final vote): --only medium adds
+//                                           subject links with a final vote and matching procedural votes
 // The keys: Enter takes the draft verdict; k kept, p partly kept, b broken, c changed position, w waiting (no vote on it
 // yet: listed, not counted), u unclear (listed, not counted), n not a promise or the wrong bill (left out), s skip for
 // now, q stop. Commit and push public/research.json and data/promise-decisions.json afterward.
@@ -45,7 +47,7 @@ export function addCheck(research,personId,statement){
   if(!p)return false;(p.statements||=[]).push(statement);return true;
 }
 export function card(item,i,n){
-  const lines=[`\n[${i+1} of ${n}] ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
+  const lines=[`\n[${i+1} of ${n}]${item.confidence?` (${item.confidence})`:''} ${item.name} · ${item.kind==='promise'?'promise':'stance'}, ${item.side==='oppose'?'against':item.side==='support'?'for':'side unclear'}`,
     `  Said ${fmt(item.said.date)} (${item.said.src.t}):`,`    "${item.said.text}"`];
   if(item.said.context&&item.said.context!==item.said.text)lines.push(`    In context: ${item.said.context.slice(0,400)}`);
   lines.push(`    ${item.said.src.u}`);
@@ -65,7 +67,9 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const researchFile=path.resolve(arg('--research',path.join(root,'public','research.json')));
   if(!fs.existsSync(queueFile)){console.log('No review queue yet: run npm run promises:find first.');process.exit(1);}
   const queue=JSON.parse(fs.readFileSync(queueFile,'utf8')),decisions=fs.existsSync(decisionsFile)?JSON.parse(fs.readFileSync(decisionsFile,'utf8')):{};
-  const todo=queue.items.filter(x=>!decisions[x.id]);
+  // --only high (or medium): the surest items alone.
+  const only=arg('--only',null),levels=only==='high'?['high']:only==='medium'?['high','medium']:null;
+  const todo=queue.items.filter(x=>!decisions[x.id]&&(!levels||levels.includes(x.confidence||'low')));
   console.log(`${todo.length} of ${queue.items.length} items in the queue (built ${queue.built}) still to review.`);
   if(process.argv.includes('--list')){todo.forEach((x,i)=>console.log(card(x,i,todo.length)));process.exit(0);}
   if(!todo.length)process.exit(0);

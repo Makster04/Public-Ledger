@@ -39,7 +39,15 @@ const SUBJECT=String.raw`\b(?:I|we|my colleagues and I)\s+(?:(?:also|still|simpl
 const THIRD_PROMISE=String.raw`(?:will|won${APOS}?t|vows?|pledges?|promises?|plans?|intends?)`;
 const THIRD_STANCE=String.raw`(?:urges?|opposes?|supports?|backs?|rejects?|announces? (?:(?:her|his|their) )?(?:opposition|support)|introduces?|unveils?|cosponsors?|pushes? for|fights? (?:for|against)|demands?|calls? (?:for|on)|slams?|blasts?|condemns?|denounces?|champions?)`;
 const OPPOSE=/\b(?:vote (?:no|nay|against)|voting (?:no|nay|against)|oppos\w*|opposition|against|stop|block\w*|kill|defeat|repeal|reject\w*|filibuster|slam\w*|blast\w*|condemn\w*|denounc\w*|sink)\b/i;
-const SUPPORT=/\b(?:vote (?:yes|yea|aye|for|to pass|to confirm)|voting (?:yes|yea|for)|support\w*|pass\w*|cosponsor\w*|introduc\w*|champion\w*|fight(?:ing)? for|back\w*|sign|approv\w*|confirm\w*|endors\w*|urg\w*|calls? (?:for|on)|push\w* for|demand\w*|unveil\w*)\b/i;
+// "Urge", "call on" and "demand" take the side of what follows them ("I urge my colleagues to oppose it").
+const SUPPORT=/\b(?:vote (?:yes|yea|aye|for|to pass|to confirm)|voting (?:yes|yea|for)|support\w*|pass\w*|cosponsor\w*|introduc\w*|champion\w*|fight(?:ing)? for|back\w*|sign|approv\w*|confirm\w*|endors\w*|unveil\w*)\b/i;
+// A sentence about a measure: a bill, a deal, a nominee, a vote. A sentence linked to a bill only through its subject or
+// the speech's title has to be about one ("I urge my colleagues to support this legislation"), not just near one ("we
+// must take real action on AI", "Daines urges support for Israel").
+const MEASURE=/\b(?:bills?|legislation|measures?|package|deal|resolutions?|amendments?|supplemental|nominees?|nominations?|motions?|appropriations|blank checks?|proposals?|budget|treaty|agreement|reconciliation|cloture|veto|filibuster|vot(?:e|es|ed|ing)|confirm(?:ation)?|ban)\b|\bAct\b/i;
+export const aboutMeasure=text=>MEASURE.test(String(text||''));
+// Introducing or cosponsoring a bill is about that bill, not about a vote on another bill of the same subject.
+const INTRO=/\b(?:introduc\w*|unveil\w*|cosponsor\w*|reintroduc\w*)\b/i;
 const CONDITION=/\b(?:if|unless|as long as|so long as|only if|provided that|until)\b/i;
 
 // Which side a clause takes: the first "for" or "against" word after the commitment, turned around after "won't".
@@ -65,7 +73,7 @@ export function commitmentIn(sentence,name){
     const m=re.exec(s);if(!m)continue;
     // From the commitment on: its verb ("I rise in support", "won't vote for") and what follows.
     const side=sideOf(s.slice(m.index),negative);
-    return {kind,side,sentence:s.trim(),conditional:CONDITION.test(s)};
+    return {kind,side,sentence:s.trim(),conditional:CONDITION.test(s),...(INTRO.test(s.slice(m.index,m.index+m[0].length+40))?{intro:true}:{})};
   }
   return null;
 }
@@ -238,20 +246,25 @@ export function linkStatement(statement,{acts,names,index,surname}){
   if(!found.length&&statement.title&&statement.title!==statement.text)for(const c of commitments(statement.title,surname))found.push(c);
   const named=actsAfter(acts,date,NAMED_DAYS),near=actsAfter(acts,date,CONTEXT_DAYS);
   for(const c of found.slice(0,6)){
-    // The bill: named in the sentence, then in the headline or speech title, then the only one the text names.
+    // The bill: named in the sentence; else, for a sentence about a measure, named in the headline or speech title, or
+    // the only one the text names.
     let keys=namedBills(c.sentence,date,names),how='named';
-    if(!keys.length&&statement.title)keys=namedBills(statement.title,date,names);
-    if(!keys.length){const all=namedBills(statement.text,date,names);if(all.length===1)keys=all;}
+    if(!keys.length&&aboutMeasure(c.sentence)){
+      if(statement.title)keys=namedBills(statement.title,date,names);
+      if(!keys.length){const all=namedBills(statement.text,date,names);if(all.length===1)keys=all;}
+    }
     let key=null,fit=null,others=[];
     if(keys.length)key=keys.find(k=>named.some(a=>a.key===k))||keys[0];
     else{
+      // By subject: only a sentence that takes a side on a measure, and an introduced bill only to its own sponsorship.
+      if(c.side==='unclear'||!aboutMeasure(c.context))continue;
       how='subject';
       const text=prepare(`${c.context} ${statement.title||''}`);
-      const ranked=[...new Set(near.map(a=>a.key))].map(k=>({k,...subjectFit(text,k,index)})).filter(x=>x.anchor&&x.score>=MIN_SUBJECT).sort((a,b)=>b.score-a.score);
+      const ranked=[...new Set(near.filter(a=>!c.intro||a.kind!=='vote').map(a=>a.key))].map(k=>({k,...subjectFit(text,k,index)})).filter(x=>x.anchor&&x.score>=MIN_SUBJECT).sort((a,b)=>b.score-a.score);
       if(!ranked.length)continue;
       key=ranked[0].k;fit=ranked[0];others=ranked.slice(1).filter(x=>x.score>=ranked[0].score*0.7).map(x=>x.k).slice(0,3);
     }
-    const did=(how==='named'?named:near).filter(a=>a.key===key);
+    const did=(how==='named'?named:near).filter(a=>a.key===key&&(how==='named'||!c.intro||a.kind!=='vote'));
     // A stance with nothing done since, or a bill linked by subject with no vote, isn't a check yet.
     if(!did.length&&(how==='subject'||c.kind!=='promise'))continue;
     const draft=draftVerdict(c.side,did),flags=[...draft.flags];
@@ -264,12 +277,23 @@ export function linkStatement(statement,{acts,names,index,surname}){
       said:{text:c.sentence,context:c.context===c.sentence?undefined:c.context,date,source:statement.source,src:{t:statement.srcTitle||statement.source,u:statement.url}},
       link:{how,...(fit?{score:fit.score,words:fit.words}:{}),...(others.length?{others}:{})},
       did,draft:{assessment:draft.assessment,label:verdictLabel(draft.assessment),why:draft.why},flags:[...new Set(flags)]});
+    out.at(-1).confidence=confidence(out.at(-1));
   }
   // One check per bill from a statement: the commitment that says most clearly which way they'd go.
   const rank=x=>(x.side==='unclear'?0:2)+(x.kind==='promise'?1:0),best=new Map();
   for(const x of out)if(!best.has(x.bill)||rank(x)>rank(best.get(x.bill)))best.set(x.bill,x);
   return [...best.values()];
 }
+// How sure the draft is, for reviewing the surest first. high: the bill is named and a final vote clearly matches or
+// clearly doesn't; medium: a subject link with a clear final vote, or a matching procedural vote; low: the rest.
+const DOUBT=['conditional','side','missed','mixed','others'];
+export function confidence(x){
+  const clear=['consistent','contradiction'].includes(x.draft.assessment),doubt=x.flags.some(f=>DOUBT.includes(f));
+  if(x.link.how==='named'&&clear&&!doubt)return 'high';
+  if(!doubt&&(clear||x.draft.assessment==='partial'))return 'medium';
+  return 'low';
+}
+export const CONFIDENCE_ORDER={high:0,medium:1,low:2};
 // One review item per person, bill and side: the earliest statement, with the later ones listed as "also".
 export const reviewKey=x=>`${x.person}|${x.bill}|${x.side}`;
 export function groupFindings(found){

@@ -121,7 +121,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     if(F.namedBills(s.title,s.date,names).some(k=>named.some(a=>a.key===k)))return 10;
     const title=F.prepare(s.title);
     return Math.max(0,...[...new Set(F.actsAfter(mine,s.date,F.CONTEXT_DAYS).map(a=>a.key))].map(k=>{const f=F.subjectFit(title,k,index);return f.anchor&&f.score>=F.MIN_SUBJECT?f.score:0;}));};
-  const speeches=unique.filter(s=>s.source==='floor'&&!F.ROUTINE.test(s.title)).map(s=>({s,score:pointsToBill(s)})).filter(x=>x.score>0).sort((a,b)=>b.s.date.localeCompare(a.s.date));
+  // Speeches whose title names the bill first, then the closest fits by subject, newest first within each.
+  const speeches=unique.filter(s=>s.source==='floor'&&!F.ROUTINE.test(s.title)).map(s=>({s,score:pointsToBill(s)})).filter(x=>x.score>0).sort((a,b)=>(b.score>=10)-(a.score>=10)||Math.round(b.score)-Math.round(a.score)||b.s.date.localeCompare(a.s.date));
   let fetched=0,cached=0,noTurns=0,stopped=null;
   const key=env.GOVINFO_API_KEY||env.CONGRESS_API_KEY;
   for(const {s} of speeches){
@@ -145,12 +146,12 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const grouped=F.groupFindings(found);
   const onFile=grouped.filter(x=>F.checkedBills(personOf.get(x.person),saved).has(x.bill)),decided=grouped.filter(x=>decisions[x.id]&&!onFile.includes(x));
   const items=grouped.filter(x=>!onFile.includes(x)&&!decided.includes(x)).map(x=>({...x,name:personOf.get(x.person)?.name||x.person,measure:measureOf(x.bill),title:titleOf.get(x.bill)||'',did:x.did.slice(-8)}))
-    .sort((a,b)=>b.said.date.localeCompare(a.said.date));
+    .sort((a,b)=>F.CONFIDENCE_ORDER[a.confidence]-F.CONFIDENCE_ORDER[b.confidence]||b.said.date.localeCompare(a.said.date));
   const tally=(l,f)=>l.reduce((o,x)=>{const k=f(x);o[k]=(o[k]||0)+1;return o;},{});
   fs.writeFileSync(queueFile,JSON.stringify({about:'Commitments found in collected statements, linked to the bill each is about and what the person did on it, waiting for review (npm run promises:review). Nothing here counts on the site until it is reviewed. From scripts/find-promises.mjs.',
     built:new Date().toISOString().slice(0,10),since,counts:{statements:unique.length,commitments,linked:grouped.length,onFile:onFile.length,decided:decided.length,queued:items.length},items},null,1)+'\n');
   console.log(`\nCommitments found: ${commitments.toLocaleString()}. Linked to a bill they then acted on: ${grouped.length} (by name ${grouped.filter(x=>x.link.how==='named').length}, by subject ${grouped.filter(x=>x.link.how==='subject').length}); already reviewed on the site ${onFile.length}; decided before ${decided.length}.`);
-  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} to review. Draft verdicts: ${Object.entries(tally(items,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
-  for(const x of items.slice(0,8))console.log(`\n  ${x.name}, ${x.said.date} (${x.said.source}): "${x.said.text.slice(0,180)}"\n    → ${x.measure||x.bill}${x.title?` ${x.title}`:''} [${x.link.how==='named'?'named':`subject: ${(x.link.words||[]).slice(0,4).join(', ')}`}] · draft: ${x.draft.label} (${x.draft.why})${x.flags.length?`\n    check: ${x.flags.join(', ')}`:''}`);
+  console.log(`Wrote ${queueFile.startsWith(root)?path.relative(root,queueFile):queueFile}: ${items.length} to review (surest first: ${['high','medium','low'].map(c=>`${c} ${tally(items,x=>x.confidence)[c]||0}`).join(', ')}). Draft verdicts: ${Object.entries(tally(items,x=>x.draft.label)).map(([k,n])=>`${k} ${n}`).join(', ')||'none'}.`);
+  for(const x of items.slice(0,8))console.log(`\n  [${x.confidence}] ${x.name}, ${x.said.date} (${x.said.source}): "${x.said.text.slice(0,180)}"\n    → ${x.measure||x.bill}${x.title?` ${x.title}`:''} [${x.link.how==='named'?'named':`subject: ${(x.link.words||[]).slice(0,4).join(', ')}`}] · draft: ${x.draft.label} (${x.draft.why})${x.flags.length?`\n    check: ${x.flags.join(', ')}`:''}`);
   console.log('\nNext: npm run promises:review (or npm run promises:review -- --list to only print them).');
 }
