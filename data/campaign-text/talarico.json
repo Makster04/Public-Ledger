@@ -14,30 +14,9 @@
    "year": 2026,
    "electionDay": "2026-11-03",
    "site": "https://jamestalarico.com/",
-   "saved": true,
-   "capture": {
-    "date": "2026-11-03",
-    "url": "https://web.archive.org/web/20261103142425/https://jamestalarico.com/"
-   },
-   "pages": [
-    {
-     "url": "https://web.archive.org/web/20261103142425/https://jamestalarico.com/",
-     "original": "https://jamestalarico.com/",
-     "date": "2026-11-03",
-     "title": "Talarico for Texas - Official Campaign Website of James Talarico for U.S. Senate",
-     "text": "Opens in a new tab\n## James\nJames is an eighth-generation Texan, former middle school teacher, and Presbyterian seminarian. As a state representative, he’s led the fight against the billionaire mega-donors and puppet politicians who have taken over Texas.\nNow, he’s running for U.S. Senate to take his fight against corruption to Washington and win power back for working people.\nWe’re going up against billionaire mega-donors, a rigged system, and a whole lot of money. Pitch in now to help power this movement.\nIf you've saved your payment information with ActBlue Express, your donation will go through immediately.\nIt will take all of us to win this fight — neighbor talking to neighbor. Join our volunteer team today to help us reach Texans in every community.\n## Join Our fight to Take Power back for working People.\nBy providing your cell phone number, you consent to receive periodic campaign updates and fundraising asks from Talarico for Texas, including by automated text message. Messages include donation asks. Message frequency varies. Msg & Data rates may apply. Text HELP for help, STOP to end. Terms & Privacy policy.\n## Election day is Tuesday\nVote Tuesday, November 3, from 7 a.m. to 7 p.m. to send James Talarico to the U.S. Senate. Bring a friend!"
-    },
-    {
-     "url": "https://web.archive.org/web/20261102053919/https://jamestalarico.com/issues/",
-     "original": "https://jamestalarico.com/issues/",
-     "date": "2026-11-02",
-     "title": "Issues - Talarico for Texas",
-     "text": "Opens in a new tab\n## Energy & Environment\nVeterans roundtable in El Paso\n## Join Our fight to Take Power back for working People.\nBy providing your cell phone number, you consent to receive periodic campaign updates and fundraising asks from Talarico for Texas, including by automated text message. Messages include donation asks. Message frequency varies. Msg & Data rates may apply. Text HELP for help, STOP to end. Terms & Privacy policy."
-    }
-   ],
-   "notSaved": [
-    "https://jamestalarico.com/tos"
-   ],
+   "saved": false,
+   "error": "The operation was aborted due to timeout",
+   "pages": [],
    "posts": []
   }
  ]
