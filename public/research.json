@@ -290,6 +290,60 @@
             "link": "named",
             "reviewed": "2026-11-06"
           }
+        },
+        {
+          "topic": "(H.R. 6938)",
+          "said": {
+            "text": "\"Again, I urge my colleagues to support cloture on the motion to proceed to the package that is before us.\"",
+            "date": "2026-01-12",
+            "src": {
+              "t": "Congressional Record, January 12, 2026: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriation",
+              "u": "https://www.govinfo.gov/app/details/CREC-2026-01-12/CREC-2026-01-12-pt1-PgS121-6"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of H.R. 6938 (Jan 15, 2026). Also voted Yea on cloture on the motion to proceed (Jan 12, 2026); voted Yea on cloture motion (Jan 15, 2026).",
+            "date": "2026-01-15",
+            "src": {
+              "t": "Senate roll call 119-2-11",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00011.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, Jan 15, 2026), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "(H.R. 4366)",
+          "said": {
+            "text": "\"I urge my colleagues to join me in voting to move this important legislative package forward toward enactment.\"",
+            "date": "2024-03-06",
+            "src": {
+              "t": "Congressional Record, March 6, 2024: Government Funding (Executive Calendar)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2024-03-06/CREC-2024-03-06-pt1-PgS2232"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion of H.R. 4366 (Mar 8, 2024). Also voted Nay on motion (Mar 8, 2024); voted Nay on motion to refer (Mar 8, 2024); voted Yea on motion (Mar 8, 2024).",
+            "date": "2024-03-08",
+            "src": {
+              "t": "Senate roll call 118-2-84",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00084.htm"
+            }
+          },
+          "assessment": "partial",
+          "note": "Only a procedural vote so far, and it matches: Yea (motion, Mar 8, 2024).",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -5095,6 +5149,34 @@
             "by": "promise finder",
             "source": "floor",
             "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "117-pn-1169",
+          "said": {
+            "text": "\"I am going to vote no because I have not had the opportunity to actually meet Judge Thomas.\"",
+            "date": "2021-12-16",
+            "src": {
+              "t": "Congressional Record, December 16, 2021: Nomination of Holly a. Thomas (Executive Calendar)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2021-12-16/CREC-2021-12-16-pt1-PgS9234"
+            }
+          },
+          "did": {
+            "text": "Voted Nay on cloture motion of the bill (Dec 18, 2021). Also voted Nay on motion to discharge (Dec 16, 2021).",
+            "date": "2021-12-18",
+            "src": {
+              "t": "Senate roll call 117-1-528",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00528.htm"
+            }
+          },
+          "assessment": "partial",
+          "note": "Only a procedural vote so far, and it matches: Nay (cloture motion, Dec 18, 2021).",
+          "promise": true,
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
             "reviewed": "2026-11-06"
           }
         }
@@ -12683,6 +12765,33 @@
           },
           "assessment": "consistent",
           "note": "Action matched the announced position; he acknowledged the outcome afterward."
+        },
+        {
+          "topic": "Emergency national security supplemental with border provisions (H.R. 815)",
+          "said": {
+            "text": "\"This is why I urge every Republican in this body to vote no on cloture on any bill that does not, at a minimum, include policy changes that meaningfully address the flood of illegal immigration at our southern border.\"",
+            "date": "2023-11-29",
+            "src": {
+              "t": "Congressional Record, November 29, 2023: Border Security (Executive Session)",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-11-29/CREC-2023-11-29-pt1-PgS5656-2"
+            }
+          },
+          "did": {
+            "text": "Voted Nay on cloture motion of H.R. 815, Emergency national security supplemental with border provisions (Dec 6, 2023).",
+            "date": "2023-12-06",
+            "src": {
+              "t": "Senate roll call 118-1-332",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00332.htm"
+            }
+          },
+          "assessment": "partial",
+          "note": "Only a procedural vote so far, and it matches: Nay (cloture motion, Dec 6, 2023).",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethics": [
@@ -39565,6 +39674,60 @@
             "by": "promise finder",
             "source": "floor",
             "link": "named",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "(H.R. 4366)",
+          "said": {
+            "text": "\"These commonsense policies will help improve the VA and the military as a whole, and I urge all of my colleagues to support them.\"",
+            "date": "2023-07-25",
+            "src": {
+              "t": "Congressional Record, July 25, 2023: Funding the Department of Veterans Affairs",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-07-25/CREC-2023-07-25-pt1-PgH3900-3"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of H.R. 4366 (Jul 27, 2023). Also voted Yea on agreeing to the amendment (Jul 26, 2023); voted Yea on agreeing to the amendment (Jul 26, 2023); voted Nay on motion to recommit (Jul 27, 2023).",
+            "date": "2023-07-27",
+            "src": {
+              "t": "House roll call 380, 2023",
+              "u": "https://clerk.house.gov/Votes/2023380"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, Jul 27, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "Fiscal Responsibility Act of 2023 (H.R. 3746)",
+          "said": {
+            "text": "\"Last Congress, I led legislation to extend this important program, and I am proud to support this legislation today.\"",
+            "date": "2023-05-22",
+            "src": {
+              "t": "Congressional Record, May 22, 2023: Vet-Tec Authorization Act of 2023",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-05-22/CREC-2023-05-22-pt1-PgH2474"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of H.R. 3746, Fiscal Responsibility Act of 2023 (May 31, 2023).",
+            "date": "2023-05-31",
+            "src": {
+              "t": "House roll call 243, 2023",
+              "u": "https://clerk.house.gov/Votes/2023243"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, May 31, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
             "reviewed": "2026-11-06"
           }
         }
@@ -80529,6 +80692,33 @@
             "link": "named",
             "reviewed": "2026-11-06"
           }
+        },
+        {
+          "topic": "Fiscal Responsibility Act of 2023 (H.R. 3746)",
+          "said": {
+            "text": "\"Mr. Speaker, I urge swift passage of this bipartisan bill so we can send it to the President's desk for his signature.\"",
+            "date": "2023-05-22",
+            "src": {
+              "t": "Congressional Record, May 22, 2023: Veterans' Compensation Cost-of-Living Adjustment Act of 2023",
+              "u": "https://www.govinfo.gov/app/details/CREC-2023-05-22/CREC-2023-05-22-pt1-PgH2479"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of H.R. 3746, Fiscal Responsibility Act of 2023 (May 31, 2023).",
+            "date": "2023-05-31",
+            "src": {
+              "t": "House roll call 243, 2023",
+              "u": "https://clerk.house.gov/Votes/2023243"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage, May 31, 2023), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run.",
@@ -90146,6 +90336,33 @@
           },
           "assessment": "consistent",
           "note": "His vote matched his stated opposition to additional Ukraine funding."
+        },
+        {
+          "topic": "One Big Beautiful Bill Act (H.R. 1)",
+          "said": {
+            "text": "\"Rep. Barry Moore supports President Trump's One, Big, Beautiful Reconciliation Bill.\"",
+            "date": "2025-06-05",
+            "src": {
+              "t": "Press release: Rep. Barry Moore supports President Trump's One, Big, Beautiful Reconciliation Bill",
+              "u": "https://barrymoore.house.gov/node/2103"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on motion to concur in the senate amendment of H.R. 1, One Big Beautiful Bill Act (Jul 3, 2025).",
+            "date": "2025-07-03",
+            "src": {
+              "t": "House roll call 190, 2025",
+              "u": "https://clerk.house.gov/Votes/2025190"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (motion to concur in the senate amendment, Jul 3, 2025), as the statement said they would.",
+          "found": {
+            "by": "promise finder",
+            "source": "press",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched news and watchdog reporting for House Ethics/Office of Congressional Conduct matters, STOCK Act disclosure complaints (a 2021 Campaign Legal Center STOCK Act complaint concerned Rep. Blake Moore of Utah, not Barry Moore), criminal and civil cases, and campaign-finance issues; FEC enforcement (MUR) records and the Alabama Ethics Commission were not checked directly.",
@@ -109925,6 +110142,61 @@
           },
           "assessment": "consistent",
           "note": "He voted to advance the border package he later described as a strong step toward securing the border."
+        },
+        {
+          "topic": "United States-Mexico-Canada Agreement Implementation Act (H.R. 5430)",
+          "said": {
+            "text": "\"I will vote yes for the first time ever on a trade agreement because, by including Brown-Wyden, Democrats have made this agreement much more pro-worker.\"",
+            "date": "2020-01-06",
+            "src": {
+              "t": "Congressional Record, January 6, 2020: United States-Mexico-Canada Trade Agreement",
+              "u": "https://www.govinfo.gov/app/details/CREC-2020-01-06/CREC-2020-01-06-pt1-PgS22"
+            }
+          },
+          "did": {
+            "text": "Voted Yea on passage of the bill of H.R. 5430, United States-Mexico-Canada Agreement Implementation Act (Jan 16, 2020). Also voted Yea on motion (Jan 16, 2020).",
+            "date": "2020-01-16",
+            "src": {
+              "t": "Senate roll call 116-2-14",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00014.htm"
+            }
+          },
+          "assessment": "consistent",
+          "note": "Voted Yea (passage of the bill, Jan 16, 2020), as the statement said they would.",
+          "promise": true,
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
+        },
+        {
+          "topic": "(S. 140)",
+          "said": {
+            "text": "\"That is why I oppose this bill.\"",
+            "date": "2018-04-16",
+            "src": {
+              "t": "Congressional Record, April 16, 2018: Amending the White Mountain Apache Tribe Water Rights Quantification Act of 2010",
+              "u": "https://www.govinfo.gov/app/details/CREC-2018-04-16/CREC-2018-04-16-pt1-PgS2131-6"
+            }
+          },
+          "did": {
+            "text": "Voted Nay on cloture motion of S. 140 (Apr 18, 2018). Also voted Nay on cloture motion (Apr 16, 2018).",
+            "date": "2018-04-18",
+            "src": {
+              "t": "Senate roll call 115-2-77",
+              "u": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1152/vote_115_2_00077.htm"
+            }
+          },
+          "assessment": "partial",
+          "note": "Only a procedural vote so far, and it matches: Nay (cloture motion, Apr 18, 2018).",
+          "found": {
+            "by": "promise finder",
+            "source": "floor",
+            "link": "subject",
+            "reviewed": "2026-11-06"
+          }
         }
       ],
       "ethicsSearched": "Searched Senate and House Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases. Reports that he omitted his wife's pension from past Senate disclosures (corrected in 2023) and that his Dignity of Work PAC paid a $50,000 tax bill late in 2025 were found only in partisan or partisan-leaning outlets (Washington Free Beacon, Fox News), with no ethics-body finding, so they are not listed. The numeric DW-NOMINATE score was not available from the Voteview page, and no campaign website URL appeared in search results.",

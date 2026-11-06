@@ -1,4 +1,12 @@
 {
+ "brown|115-s-140|oppose": {
+  "decision": "partial",
+  "at": "2026-11-06"
+ },
+ "brown|116-hr-5430|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
  "castor|117-s-2938|support": {
   "decision": "consistent",
   "at": "2026-11-06"
@@ -11,11 +19,19 @@
   "decision": "consistent",
   "at": "2026-11-06"
  },
+ "collins|118-hr-4366|support": {
+  "decision": "partial",
+  "at": "2026-11-06"
+ },
  "collins|118-hr-82|support": {
   "decision": "consistent",
   "at": "2026-11-06"
  },
  "collins|119-hr-3944|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
+ "collins|119-hr-6938|support": {
   "decision": "consistent",
   "at": "2026-11-06"
  },
@@ -47,6 +63,10 @@
   "decision": "consistent",
   "at": "2026-11-06"
  },
+ "marshall|118-hr-815|oppose": {
+  "decision": "partial",
+  "at": "2026-11-06"
+ },
  "mcollins|118-hr-1|support": {
   "decision": "consistent",
   "at": "2026-11-06"
@@ -71,6 +91,18 @@
   "decision": "consistent",
   "at": "2026-11-06"
  },
+ "millermeeks|118-hr-3746|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
+ "millermeeks|118-hr-4366|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
+ "moore|119-hr-1|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
  "pappas|117-hr-1917|support": {
   "decision": "consistent",
   "at": "2026-11-06"
@@ -79,8 +111,16 @@
   "decision": "consistent",
   "at": "2026-11-06"
  },
+ "pappas|118-hr-3746|support": {
+  "decision": "consistent",
+  "at": "2026-11-06"
+ },
  "peltola|117-s-3115|support": {
   "decision": "consistent",
+  "at": "2026-11-06"
+ },
+ "sullivan|117-pn-1169|oppose": {
+  "decision": "partial",
   "at": "2026-11-06"
  },
  "sullivan|118-hr-3935|support": {
