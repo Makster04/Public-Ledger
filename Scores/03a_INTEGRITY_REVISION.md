@@ -30,7 +30,7 @@ final grade is rounded. Letter grades use the usual 90/80/70/60 cut-offs.
 
 ## Shared definitions
 
-- **The window.** The last four calendar years (2023–2026 now), the years Showing Up counts, unless a part says
+- **The window.** 2018 through the current year (2018–2026 now; `WINDOW_FROM` in `public/integrity.js`), the years Showing Up and Get It Done count, unless a part says
   otherwise. Campaign money uses the same two-year cycle as Fundraising.
 - **Their committees.** The committees and subcommittees the member sat on during the window (`public/committees.json`),
   and the sectors those committees oversee (`public/committee-sectors.json`).
@@ -98,7 +98,7 @@ Showing Up = 0.75 × Attendance + 0.25 × Get It Done      (Attendance alone whe
 ```
 
 **Attendance (the No-Show Index 🪑), built:** `clamp(100 − 5 × missed %, 0, 100)`, where missed % is the share of
-roll-call votes missed while in office in the window (Voteview, both chambers, `npm run attendance:build`). "Not
+roll-call votes missed while in office in the window (2018 on) (Voteview, both chambers, `npm run attendance:build`). "Not
 voting", paired and announced votes are missed; Present counts as there. Votes missed while campaigning count. A
 reviewed absence with a cited source for medical leave, a birth or adoption, a death in the family, or military duty is
 left out of both the votes and the misses for its dates. At least 50 votes in office. The record shows that a vote was

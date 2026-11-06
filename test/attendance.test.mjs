@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {tally,congressOf,congressesFor,trackedIds} from '../scripts/build-attendance.mjs';
+import {tally,congressOf,congressesFor,congressesBetween,fromYear,trackedIds} from '../scripts/build-attendance.mjs';
 import {showingUpComponent,excusedAbsences,integrityPreview} from '../public/integrity.js';
 
 test("Voteview's files counted: each member's votes and misses by year and day, the chamber's roll calls by day",()=>{
@@ -17,17 +17,18 @@ test("Voteview's files counted: each member's votes and misses by year and day, 
   assert.deepEqual(out.people.y.years,{2025:{votes:2,missed:1}},'not a member yet (0) is not counted; Present counts as there; a paired vote is missed');
   assert.ok(!out.people.z,'only the people on the site');assert.ok(!out.people.pres,'the President is not a member of the chamber');
   assert.equal(congressOf(2023),118);assert.equal(congressOf(2026),119);assert.deepEqual(congressesFor(2026,4),[118,119]);assert.deepEqual(congressesFor(2026,6),[117,118,119]);
+  assert.deepEqual(congressesBetween(2018,2026),[115,116,117,118,119],'2018–2026');assert.equal(fromYear([]),2018);assert.equal(fromYear(['--from','2016']),2016);
   assert.deepEqual([...trackedIds({people:[{id:'ossoff',bioguide:'O000174'},{id:'nobio'}]},{members:[{id:'perry',bioguide:'P000605'}],cands:[]})],[['O000174','ossoff'],['P000605','perry']]);
 });
 
-const attendance={source:'https://voteview.com/data',days:{S:{'2024-05-01':30,'2025-03-04':10,'2025-06-01':460,'2024-06-01':470,'2021-01-05':50}},
-  people:{a:{years:{2021:{votes:50,missed:50},2024:{votes:500,missed:30},2025:{votes:500,missed:10}},missed:{'2021-01-05':50,'2024-05-01':30,'2025-03-04':10},spans:[['S','2021-01-01','2025-12-31']]},
+const attendance={source:'https://voteview.com/data',days:{S:{'2024-05-01':30,'2025-03-04':10,'2025-06-01':460,'2024-06-01':470,'2016-01-05':50}},
+  people:{a:{years:{2016:{votes:50,missed:50},2024:{votes:500,missed:30},2025:{votes:500,missed:10}},missed:{'2016-01-05':50,'2024-05-01':30,'2025-03-04':10},spans:[['S','2016-01-01','2025-12-31']]},
     few:{years:{2026:{votes:20,missed:1}},missed:{},spans:[['S','2026-01-01','2026-02-01']]}}};
 
-test('Showing Up: 100 − 5 points per percentage point of votes missed over the last four years',()=>{
+test('Showing Up: 100 − 5 points per percentage point of votes missed since 2018',()=>{
   const s=showingUpComponent({id:'a'},attendance,{asOfYear:2026});
   assert.equal(s.complete,true);assert.equal(s.votes,1000);assert.equal(s.missed,40);assert.equal(s.rate,4);assert.equal(s.value,80);
-  assert.deepEqual(s.years.map(y=>[y.year,y.votes,y.missed]),[[2025,500,10],[2024,500,30]],'2021 is more than four years back');
+  assert.deepEqual(s.years.map(y=>[y.year,y.votes,y.missed]),[[2025,500,10],[2024,500,30]],'2016 is before the window (2018 on)');
   assert.equal(showingUpComponent({id:'a'},{...attendance,people:{a:{...attendance.people.a,years:{2025:{votes:100,missed:25}}}}},{asOfYear:2026}).value,0,'20% or more missed is 0');
   assert.equal(showingUpComponent({id:'few'},attendance,{asOfYear:2026}).complete,false,'fewer than 50 votes is not enough');
   assert.match(showingUpComponent({id:'nobody'},attendance).why,/No roll-call votes on record/);

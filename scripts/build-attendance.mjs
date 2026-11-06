@@ -1,9 +1,9 @@
 // Showing Up, for the Integrity grade: how many roll-call votes each member missed while in office, from Voteview (UCLA's
-// archive of every roll call in both chambers: free files, no key). For each Congress in the last four calendar years
-// (the 118th and 119th for 2023–2026) and each chamber, its roll calls (their dates), its members (their Bioguide IDs)
+// archive of every roll call in both chambers: free files, no key). For each Congress from 2018 (WINDOW_FROM in
+// public/integrity.js) through the current year (the 115th to the 119th for 2018–2026) and each chamber, its roll calls (their dates), its members (their Bioguide IDs)
 // and every member's vote on each.
-//   npm run attendance:build              read the Congresses of the last four years
-//   npm run attendance:build -- --years 6 read further back
+//   npm run attendance:build               from 2018 through this year
+//   npm run attendance:build -- --from 2016 from another year
 // Writes public/attendance.json:
 //   days    {S: {date: roll calls that day}, H: {...}}  the votes held, for leaving out an excused period exactly
 //   people  {id: {years: {2025: {votes, missed}}, missed: {date: count}, spans: [[chamber, first date, last date]]}}
@@ -15,12 +15,17 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {voteviewFiles} from '../src/voteview.mjs';
+import {WINDOW_FROM} from '../public/integrity.js';
 
 const root=new URL('../',import.meta.url),OUT=new URL('public/attendance.json',root);
 export const MISSED=new Set(['2','3','4','5','9']),CAST=new Set(['1','6','7','8']);
 // The Congress sitting in a year (the 118th is 2023–24) and the Congresses covering the last n years up to `year`.
 export const congressOf=year=>Math.floor((year-1789)/2)+1;
 export const congressesFor=(year,n=4)=>[...new Set(Array.from({length:n},(_,i)=>congressOf(year-i)))].sort((a,b)=>a-b);
+// The Congresses sitting from one year through another (2018–2026: the 115th to the 119th).
+export const congressesBetween=(from,to)=>{const out=[];for(let c=congressOf(from);c<=congressOf(to);c++)out.push(c);return out;};
+// The first year to read: --from YEAR, or WINDOW_FROM.
+export const fromYear=argv=>{const i=argv.indexOf('--from'),y=i>=0?Number(argv[i+1]):NaN;return Number.isInteger(y)&&y>=1990?y:WINDOW_FROM;};
 
 // One chamber's files for one Congress -> the days it voted and each tracked member's votes and misses, by year and date.
 // ids: Bioguide ID -> this site's id. from: the first year counted.
@@ -52,10 +57,10 @@ const sorted=o=>Object.fromEntries(Object.entries(o).sort(([a],[b])=>a.localeCom
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const read=async f=>JSON.parse(await fs.readFile(new URL(f,root),'utf8'));
   const config=await read('data/config.json'),research=await read('public/research.json');
-  const i=process.argv.indexOf('--years'),n=i>=0?Math.max(1,Number(process.argv[i+1])||4):4,year=config.year||new Date().getFullYear(),from=year-n+1;
+  const year=config.year||new Date().getFullYear(),from=fromYear(process.argv),congresses=congressesBetween(from,year);
   const ids=trackedIds(config,research),out={days:{S:{},H:{}},people:{}},problems=[];
-  console.log(`Reading Voteview's roll calls for Congresses ${congressesFor(year,n).join(', ')} (${from}–${year}), both chambers, for ${ids.size} people…`);
-  for(const congress of congressesFor(year,n))for(const chamber of ['S','H']){
+  console.log(`Reading Voteview's roll calls for Congresses ${congresses.join(', ')} (${from}–${year}), both chambers, for ${ids.size} people…`);
+  for(const congress of congresses)for(const chamber of ['S','H']){
     try{const files=await voteviewFiles(congress,{},chamber);tally(files,chamber,ids,from,out);console.log(`  ${chamber}${congress}: ${files.rollcalls.length} roll calls`);}
     catch(e){problems.push(`${chamber}${congress}: ${e.message}`);console.log(`  ${chamber}${congress}: couldn't read (${e.message})`);}
   }
