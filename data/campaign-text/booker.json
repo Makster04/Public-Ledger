@@ -2,7 +2,7 @@
  "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
  "person": "booker",
  "name": "Cory A. Booker",
- "built": "2026-11-06",
+ "built": "2026-11-07",
  "sites": [
   "https://www.corybooker.com/"
  ],
@@ -15,19 +15,342 @@
    "year": 2020,
    "electionDay": "2020-11-03",
    "site": "https://www.corybooker.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
+   "saved": true,
+   "capture": {
+    "date": "2020-11-01",
+    "url": "https://web.archive.org/web/20201101113542/https://corybooker.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20201101113542/https://corybooker.com/",
+     "original": "https://corybooker.com/",
+     "date": "2020-11-01",
+     "title": "Stand with Cory Booker -- join our campaign for Senate today",
+     "text": "A Tireless fighter for New Jersey\nCory is running for re-election to keep fighting for justice and opportunity for all Americans. That’s why our campaign doesn't accept a dime from federal lobbyists, corporate PACs, or fossil fuel and pharma execs -- we are a campaign funded by and for the people. Chip in now:\nor chip in"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193031/https://corybooker.com/issues/",
+     "original": "https://corybooker.com/issues/",
+     "date": "2020-01-13",
+     "title": "Cory’s Plan for America — Cory 2020",
+     "text": "Cory's Plan for America\nRight now, people fear that the lines that divide us are stronger than the ties that bind us—but Cory is running for president to change that. The answer to our common pain is to reignite our sense of common purpose to build a more fair and just nation for everyone. Here’s how we’ll do it.\nThe only way we build a nation of liberty and justice for all is by relentlessly pursuing it together.\nOur treatment of animals is a test of our character and a measure of the compassion of our society\nIt’s time to end mass incarceration in America\nDemocracy and Voting Rights\nWe need to reform our campaign finance system and pass a new Voting Rights Act to safeguard our democracy\nEquality for LGBTQ People\nAll people deserve equal rights, regardless of who they are or who they love\nEquality for People with Disabilities\nWe must guarantee rights and expand opportunity for all\nEnough. We must end the gun violence epidemic.\nWe need an immigration system that reflects our values.\nAll people deserve to control their own bodies.\nWe must ensure everyone has access to the American Dream.\nCollege and Workforce Training\nEveryone must have access to the education and training they need to succeed\nEconomic Security and Opportunity\nOur economy must be built around the success of everyday workers.\nHealth care is a human right\nAccess to safe and affordable housing transforms lives\nEvery child deserves a great public education.\nOur country is strongest and safest when we lead with our values.\nClimate Change and Environmental Justice\nWe will protect our planet and our communities.\nWe must restore America’s global and moral leadership\nVeterans and Military Families\nOur veterans deserve our gratitude, respect, and support.\nSpread the Word\nLet Cory know the issues facing your community"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/",
+     "original": "https://corybooker.com/issues/immigration/",
+     "date": "2020-01-13",
+     "title": "Immigration — Cory 2020",
+     "text": "Our immigration system is broken, and the Trump Administration’s inhumane policies stand in stark contrast to everything we say we stand for as a country.\nAs president, Cory will work to fix our broken immigration system and ensure that America once again becomes a beacon of freedom, hope, and opportunity to the world for generations to come:\n- End family separation and ensure that our immigration system is humane, fair, and respects immigrants’ rights by ending private detention facilities and not treating immigrants who cross our border seeking safety as criminals.\n- Create an asylum process that recognizes the dignity of those who have taken extraordinary risks to seek safe haven in our country.\n- Expand protections for DREAMers and people with Temporary Protected Status and Deferred Enforced Departure.\n- Fight for a pathway to citizenship for the millions of undocumented immigrants living in the United States.\nSign the Petition\nIt’s time to fix our immigration system.\nAdd Your Name\nRead the Plan"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193026/https://corybooker.com/issues/animal-welfare/",
+     "original": "https://corybooker.com/issues/animal-welfare/",
+     "date": "2020-01-13",
+     "title": "Animal Welfare — Cory 2020",
+     "text": "Our treatment of animals is a test of our character and a measure of the compassion of our society. Both in his personal life and as a US Senator, Cory has long been a leading voice on animal welfare issues.\nThe Humane Society Legislative Fund has ranked Cory at a 100% on every Humane Scorecard they have issued since Cory was elected to the Senate. Cory has led his colleagues in the Senate in blocking appropriations riders that sought to undermine the Endangered Species Act and delist vulnerable species such as Grey Wolves and Grizzly Bears, and he has introduced legislation that would require federal facilities to comply with the minimum standards of care in the Animal Welfare Act.\nWhen Cory helped write a major update to our federal chemical safety law, Cory worked for over a year to include new limits on animal testing in the bill — and it is estimated that these protections will save hundreds of thousands of animals from needless suffering. Cory has also introduced a bill to extend federal prohibitions on animal fighting to the U.S. territories and got it passed into law in the final 2018 farm bill, saving thousands of animals every year from suffering and dying.\nAs president, Cory will work to:\n- Protect all endangered species, and prohibit imports of trophies of elephants, lions, and other threatened and endangered wildlife\n- Make extreme acts of animal cruelty a federal crime and establish an animal cruelty crimes enforcement unit within the Department of Justice\n- Create millions of new acres of wildlife habitat, restoring and protecting ecosystems that will provide a lifeline for species facing the threat of extinction\n- Ban cruel traps – including steel-jaw leghold traps and snares – from being used on our National Wildlife Refuges and other federal lands\n- Immediately end all animal testing for cosmetics and develop scientifically reliable alternative methods in order to end all animal testing by 2025\n- Shut down all puppy mills\n- Prohibit the private ownership of primates and big cats such as lions and tigers\n- Ban the use of poisons for predator control\n- Enact a national ban on the sale of shark fins\n- Stop the export of U.S. horses for human consumption"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193029/https://corybooker.com/issues/criminal-justice/",
+     "original": "https://corybooker.com/issues/criminal-justice/",
+     "date": "2020-01-13",
+     "title": "Criminal Justice — Cory 2020",
+     "text": "America’s justice system is deeply broken — it treats you better, as Bryan Stevenson says, if you’re rich and guilty than if you’re poor and innocent. The United States is home to only 5% of the world’s population, but 25% of the world’s incarcerated people — disproportionately people of color. For decades, this broken system has hollowed out entire communities, wasted billions of taxpayer dollars, and failed to make us safer.\nAs president, Cory will fight to end the War on Drugs, implement bold and comprehensive reforms of our criminal justice system, and pursue restorative justice:\n- Decriminalize marijuana, expunge records, and restore justice to individuals and communities that have been devastated by the War on Drugs.\n- Extend clemency to individuals serving excessive sentences for nonviolent drug offenses.\n- Eliminate the racially-targeted sentencing disparity between crack and powder cocaine.\n- End harsh mandatory minimums for nonviolent drug offenses.\n- Improve the ability of those behind bars to stay in touch with their loved ones.\n- Reinvest in the communities most impacted by the failed War on Drugs.\n- Remove barriers to employment for people with criminal convictions by “banning the box” and making it easier to receive occupational licenses.\n- Reinstate the right to vote in federal elections for formerly incarcerated individuals.\n- Provide better training for law enforcement officers on implicit racial bias, de-escalation and use-of-force.\n- Prohibit racial and religious profiling and improve the reporting of police use-of-force incidents.\nWe can't be timid.\nRead the Plan\nThe Next Step Act\nThe most ambitious criminal justice reform bill in a generation\nRead the Plan"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193027/https://corybooker.com/issues/democracy-and-voting-rights/",
+     "original": "https://corybooker.com/issues/democracy-and-voting-rights/",
+     "date": "2020-01-13",
+     "title": "Democracy and Voting Rights — Cory 2020",
+     "text": "Democracy and Voting Rights\nThe right to vote has been under assault for millions of Americans — disproportionately for young people and in communities of color. It is time for sweeping reforms to get big money out of politics and put an end to systematic attempts to limit access to the ballot box and strip citizens of their constitutionally-guaranteed right to vote\nAs president, Cory will fight to protect and expand every American’s right to take part in our democracy:\n- Get big money out of politics by ending Citizens United.\n- Restore the original Voting Rights Act that was gutted by the Supreme Court's decision in Shelby County v. Holder .\n- Make Election Day a national holiday.\n- End voter suppression.\n- Ensure universal automatic voter registration and vote by mail.\n- Restore voting rights for formerly incarcerated people.\n- Ensure all voters are able to vote in a language they understand."
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193026/https://corybooker.com/issues/equality-for-lgbtq-people/",
+     "original": "https://corybooker.com/issues/equality-for-lgbtq-people/",
+     "date": "2020-01-13",
+     "title": "Equality for LGBTQ People — Cory 2020",
+     "text": "Equality for LGBTQ People\nDespite the progress that has been made, LGBTQ Americans are still not fully protected by civil rights and anti-discrimination law.\nAs president, Cory will fight to ensure that all LGBTQ people have full protections of federal civil rights law and the federal government:\n- Champion the Equality Act, which ensures that federal civil rights laws prohibit discrimination based on sexual orientation and gender identity.\n- Immediately end the ban on transgender servicemembers from serving in the military.\n- Rescind the Trump Administration’s “refusal rules” that allow people to be denied necessary health care because of a provider’s personal beliefs."
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193030/https://corybooker.com/issues/equality-for-people-with-disabilities/",
+     "original": "https://corybooker.com/issues/equality-for-people-with-disabilities/",
+     "date": "2020-01-13",
+     "title": "Equality for People with Disabilities — Cory 2020",
+     "text": "Equality for People with Disabilities\nIt’s been nearly 30 years since the passage of the Americans with Disabilities Act, but people with disabilities still face higher rates of poverty, are overrepresented in our criminal justice system, and must overcome other barriers to health care and quality of life.\nAs president, Cory will work to ensure accessibility, equality, and opportunity for all people with disabilities:\n- Break down barriers to accessing employment, transportation, housing, and health care with the Disability Integration Act.\n- Fully fund the Individuals with Disabilities Education Act (IDEA).\n- Raise wages for people with disabilities by phasing out the subminimum wage."
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193027/https://corybooker.com/issues/gun-violence/",
+     "original": "https://corybooker.com/issues/gun-violence/",
+     "date": "2020-01-13",
+     "title": "Gun Violence — Cory 2020",
+     "text": "In communities across the country, from Newark to Charleston, from Pittsburgh to Las Vegas, Americans are being killed and families are being torn apart by an epidemic of gun violence.\nAs president, Cory will pursue the most sweeping gun violence prevention plan in history:\n- Take on the NRA and the corporate gun lobby.\n- Keep guns out of the wrong hands with gun licensing.\n- Pass universal background checks, ban assault weapons, and close the loopholes that allow people who should never have a gun to get one.\n- Bring real regulation and oversight to gun manufacturers.\n- End legal immunity that prevents victims of gun violence from seeking justice.\n- Require handgun microstamping.\n- Ban assault weapons, high-capacity magazines, and bump stocks.\n- Limit gun buyers to one handgun per month.\n- Ramp up funding for community-based violence intervention programs and gun violence research.\n- Take executive action to build on ongoing efforts and take concrete steps forward.\nEnding the Gun Violence Epidemic\nThe most sweeping gun violence prevention plan in history\nRead the Plan\nPreventing Firearm Suicide\nA concrete proposal to address the crisis of gun suicides in America\nRead the Plan"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193030/https://corybooker.com/issues/reproductive-rights/",
+     "original": "https://corybooker.com/issues/reproductive-rights/",
+     "date": "2020-01-13",
+     "title": "Reproductive Rights — Cory 2020",
+     "text": "All people deserve to control their own bodies. That’s why Cory fights alongside those working to protect the constitutional right to abortion and to ensure that everyone has real access to reproductive health care. Donald Trump and Mike Pence have led an all-out assault on the right to safe, legal abortion—and states across the country have followed suit. This coordinated attack on abortion rights and reproductive rights requires a coordinated response.\nAs president, Cory will work to:\n- Nominate judges who are committed to upholding reproductive rights.\n- Pass legislation to codify the protections guaranteed by Roe v. Wade.\n- Create a White House Office of Reproductive Freedom charged with coordinating and affirmatively advancing abortion rights and access to reproductive health care.\n- Guarantee access to employer-provided contraceptive care.\n- Repeal the Hyde Amendment in his first budget.\n- Rescind the Trump Administration refusal rules that allow people to be denied necessary health care because of a provider’s personal beliefs.\n- Replace abstinence-only programs with evidence-based guidelines for the Teen Pregnancy Prevention Program.\n- End the domestic gag rule which prohibits health care providers from discussing with low-income patients how and where to access a safe, legal abortion.\n- End the global gag rule and restore funding for the United Nations Population Fund.\nAdvancing Reproductive Rights\nWe must protect the constitutional right to abortion and ensure everyone has real access to reproductive health care.\nRead the Plan\nAn Open Letter to Men on Abortion\nMen must support women’s fundamental freedoms.\nRead the Letter"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193029/https://corybooker.com/issues/college-and-workforce-training/",
+     "original": "https://corybooker.com/issues/college-and-workforce-training/",
+     "date": "2020-01-13",
+     "title": "College and Workforce Training — Cory 2020",
+     "text": "College and Workforce Training\nToday, student loans are the fastest-growing segment of US household debt, and too many young people see college as out of reach.\nAs president, Cory will fight for every young person’s right to pursue their dreams—whether that’s pursuing higher education without crushing student loan debt, starting a small business or getting on the job skills training through an apprenticeship program or vocational training schools:\n- Establish a path to debt-free college, because choosing to pursue higher education should not mean a lifetime of debt.\n- Invest in and strengthen Historically Black Colleges and Universities (HBCUs).\n- Make tuition-free community college and vocational training a reality across the country.\n- Make America a leader in apprenticeships.\n- Reform and simplify how students apply for federal financial aid.\n- Protect student loan borrowers by holding student loan servicers accountable for predatory practices.\nSupporting and Protecting HBCUs\nCreating pathways to opportunity and empowering Black communities\nRead the Plan\nA $100 Billion Investment in HBCUs\nRead the Article"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/",
+     "original": "https://corybooker.com/issues/economic-security-and-opportunity/",
+     "date": "2020-01-13",
+     "title": "Economic Security and Opportunity — Cory 2020",
+     "text": "Economic Security and Opportunity\nFor too long, America’s economic agenda has centered on further enriching the already-rich, with massive windfalls for multinational companies, tax breaks for the wealthy, and trade deals that boost corporate profits at the expense of hard-working Americans.\nAs president, Cory will pursue an ambitious agenda to build an economy where everyone has a stake in its success:\n- Put cash in the pockets of working Americans with the Rise Credit, a massive expansion of the Earned Income Tax Credit.\n- Enact “Baby Bonds,” a new American birthright to close the wealth gap and give every American a shot at economic opportunity. Read more about Cory's Baby Bonds proposal.\n- Make it easier for workers to join a union and strengthen the rights of workers.\n- Raise the minimum wage to $15/hour.\n- Pass the Paycheck Fairness Act and hold businesses and employers responsible for pay discrimination.\n- Pass the Worker Dividend Act to require that corporations share profits not just with shareholders, but with workers.\n- Only support trade deals that help working families.\nEnd Child Poverty\nJustice for Workers"
+    },
+    {
+     "url": "https://web.archive.org/web/20200113193032/https://corybooker.com/issues/health-care/",
+     "original": "https://corybooker.com/issues/health-care/",
+     "date": "2020-01-13",
+     "title": "Health Care — Cory 2020",
+     "text": "In one of the richest countries on the planet, no American should go bankrupt because of medical bills or be forced to choose between groceries and prescription drugs, between paying their rent and seeing a doctor.\nAs president, Cory will fight for access to quality, affordable and universal health care, end attacks on the Affordable Care Act, and act to bring down prescription drug costs:\n- Fight for Medicare for All.\n- Implement universal paid family and medical leave.\n- Combat the opioid addiction crisis by treating addiction as a disease, providing resources for communities to heal and repair, and holding pharmaceutical companies accountable.\n- Lower prescription drug costs by allowing Medicare to negotiate lower prices and import drugs from Canada and other countries.\n- Take patents away from drug companies that sell the same medication for less in other countries.\n- Invest in ending the maternal mortality epidemic and reducing racial disparities in maternal mortality rates.\n- Impose a tax penalty on drug companies that unfairly raise the cost of their drugs and take patents away from drug companies that sell the same medication for less in other countries.\n- Ensure access to affordable long-term services and support to every American that needs it and pay caregivers for the critical work they do.\nRead Cory's plan to bring dignity and choice to long-term care.\nRead the Plan\nSign the Petition\nEveryone deserves access to long-term care.\nAdd Your Name"
+    }
+   ],
    "posts": []
   },
   {
    "year": 2026,
    "electionDay": "2026-11-03",
    "site": "https://www.corybooker.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
-   "posts": []
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102094226/https://corybooker.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102094226/https://corybooker.com/",
+     "original": "https://corybooker.com/",
+     "date": "2026-11-02",
+     "title": "Stand with Cory Booker -- join our campaign for Senate today",
+     "text": "A Tireless fighter for New Jersey\nCory is fighting for justice and opportunity for all Americans. That’s why we don't accept a dime from federal lobbyists, corporate PACs, or fossil fuel and pharma execs. This movement to create a more just, loving nation is powered by grassroots supporters like you. Chip in now:\nClick an amount to start your donation. If you’ve saved your information with ActBlue Express, your donation will go through immediately.\nor chip in"
+    }
+   ],
+   "posts": [
+    {
+     "date": "2026-07-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mpowcdwgbk2d",
+     "text": "What truly matters isn’t a name on an account—it’s the purpose. I’ve worked across the aisle to make  baby bonds a reality because they will transform the lives of millions of kids. \n\nGive every American child a dream, the strength to chase it, and  There are no limits to what they can achieve."
+    },
+    {
+     "date": "2026-07-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mqpaknf7bc2l",
+     "text": "Todd Blanche failed his performance review, and he should not be confirmed as Attorney General."
+    },
+    {
+     "date": "2026-07-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mr76teoo2k2h",
+     "text": "We’re down to the wire on the Todd Blanche nomination — and I’m leading the fight to hold him accountable. \n\nI will continue to fight for justice every step of the way. Tune in."
+    },
+    {
+     "date": "2026-07-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mrocyq7krc25",
+     "text": "The Garden State is known for our diners, our attitude, and our unforgettable icons (like Lucy). But what I love most about Jersey is our people, our sense of community, and how we always have each others' backs. \n\nHappy National New Jersey Day!"
+    },
+    {
+     "date": "2026-08-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3msdxgkt6vc2j",
+     "text": "Instead of meeting with Epstein survivors, what did Todd Blanche do? He rushed to Ghislaine Maxwell’s prison cell, and then she got transferred to  a cushier prison camp. This is not justice. It is corruption of a system meant to protect the most vulnerable."
+    },
+    {
+     "date": "2026-08-07",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mshfxxd6pk2g",
+     "text": "The trump administration is out of excuses and out of time. I’m demanding the senate pass the Delaney Hall Closure Act—to close it within 90 days."
+    },
+    {
+     "date": "2026-08-24",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mttjixccf22p",
+     "text": "Amazing visit to Sterling Hill Mining Museum in Ogdensburg. Walking the tunnels of  New Jersey’s last working mine & seeing the Rainbow Tunnel was unforgettable. New Jersey history at its best!"
+    },
+    {
+     "date": "2026-08-26",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mtyn6zzxas2x",
+     "text": "Proud to present a $559,000 FY26 Congressionally Directed Spending award to Liberty Science Center in Hudson County to enhance educational programming, including the expansion of a portable planetarium fleet, which is helping more curious kids reach for the stars!"
+    },
+    {
+     "date": "2026-08-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu2x4t2uhs2l",
+     "text": "Proud to tour Trenton with Salvation and Social Justice. From the Food Pantry serving hundreds each month, to their upcoming Birthing Center tackling maternal health deserts, to the new Restorative Justice Hub where Street Teams mentor our youth."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu46yjcuts27",
+     "text": "I was honored to host a town hall last night with veterans, service members, and military families at the New Jersey Vietnam Veterans Memorial & Museum.\n\nTheir sacrifice built the freedoms we enjoy. Our job now is to make sure they have the care, dignity, and support they’ve earned."
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu5dtlgbqs2l",
+     "text": "Today I delivered $2 million in CDS funding to Inspira Health for upgrades to technology  and expansion of telehealth services. Better care, better outcomes for rural communities across South Jersey!"
+    },
+    {
+     "date": "2026-08-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mu5x4oct522g",
+     "text": "Today I presented AtlantiCare with $1M in federal funding to upgrade emergency facilities & equipment. When seconds count, our neighbors deserve the best tools and care right here in Atlantic City. Proud to support the heroes on the front lines and keep fighting for the health of every New Jerseyan."
+    },
+    {
+     "date": "2026-08-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mud2ivq2fd2v",
+     "text": "Had the chance to tour The Orange Loop in Atlantic City—an Opportunity Zone that’s showing what’s possible when we invest in communities. I stopped at local businesses and saw firsthand the jobs and growth happening in New Jersey!"
+    },
+    {
+     "date": "2026-09-03",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3muncfjmxqs2y",
+     "text": "I’ve worked to protect the endangered right whales throughout my time in office. This House vote is highly disappointing - but we’re prepared to fight back if this comes to the Senate. \n\ndefenders.org/newsroom/hou..."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvam2dkbs22j",
+     "text": "September 11th will forever be a day of sorrow and of resolve. New Jersey lost so many of our own. We honor the lives lost, the heroes who rushed into danger, and the families who still carry grief. May we meet tragedy’s memory with unity, love, and an unshakable commitment to one another."
+    },
+    {
+     "date": "2026-09-11",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvb3zacjps2x",
+     "text": "To everyone celebrating  Rosh Hashanah, I wish you and your loved ones a sweet, healthy, and peaceful new year. L’Shanah Tovah!"
+    },
+    {
+     "date": "2026-09-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvjfbzk3p22t",
+     "text": "My team will be holding Mobile Office Hours tomorrow from 10am to 1pm at Hudson County’s Resource Fair in Secaucus at the Mayor Michael Gonnelli Community Center."
+    },
+    {
+     "date": "2026-09-20",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mvxt2emzuk2c",
+     "text": "Trump just locked CNN out of the White House. Now his billionaire allies want to own it. State attorneys general: Don't settle. Hold the line. Block this merger."
+    },
+    {
+     "date": "2026-09-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw4qkewq5c2o",
+     "text": "This Gold Star Families Week, we honor the families who carry the weight of the ultimate sacrifice. Their loved ones gave everything for our freedom — and we can never repay that debt. \n\nI will keep fighting for the support, recognition, and dignity these families deserve."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw727rclvc2v",
+     "text": "These 190,000 New York caregivers do some of the most sacred work in America — tending to aging parents, disabled loved ones, and neighbors, often alone and for too little. They deserve a real voice, fair pay, and the dignity of a union.\n\nwww.nytimes.com/2026/09/22/n..."
+    },
+    {
+     "date": "2026-09-23",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mw7hvaeups2y",
+     "text": "Trump’s EPA let a major pesticide company pick what its regulations should be. Alarming proof that EPA is there to serve corporate interests, not protect the safety of Americans.\n\nwww.theguardian.com/us-news/2026..."
+    },
+    {
+     "date": "2026-09-25",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mwcnw3gxjc2e",
+     "text": "Governor Sherrill is absolutely right, the conduct described in the investigative report is totally unacceptable. For the sake of our state Lt governor caldwell should resign."
+    },
+    {
+     "date": "2026-09-30",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mwqei6jdbs2y",
+     "text": "My team will be holding Mobile Office Hours today at the Kenilworth Public Library from 10:00am to 12:00pm."
+    },
+    {
+     "date": "2026-10-05",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mx5w2w6gbc23",
+     "text": "My staff will be doing Mobile Office Hours tomorrow in Monmouth County with the Office of Senator Gopal, Assemblywoman Donlon, and Assemblywoman Peterpaul at the Freehold Public Library from 10:00–1:00."
+    },
+    {
+     "date": "2026-10-10",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxjmz5w6ts2m",
+     "text": "My team will be holding Mobile Office Hours today at the Linden 5th Annual Health & Wellness Fair at School #1 Gym from 11:00am to 2:00pm."
+    },
+    {
+     "date": "2026-10-12",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxplxxrxls2l",
+     "text": "On Indigenous Peoples’ Day, we honor the extraordinary history, cultures, and contributions of Native communities across our nation. We must also acknowledge the injustices they have endured—and continue to face—and do the work of pursuing real justice."
+    },
+    {
+     "date": "2026-10-15",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mxw5p6yob227",
+     "text": "My team will be holding Mobile Office Hours today with the Office of Senator Gopal, Assemblywoman Donlon and Assemblywoman Peterpaul at Asbury Park Senior Center from 10:00 - 1:00."
+    },
+    {
+     "date": "2026-10-19",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mya65h2bos2m",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm in the Town of Clinton’s Council Chamber."
+    },
+    {
+     "date": "2026-10-21",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myf4xjigas2l",
+     "text": "My team will be holding Mobile Office Hours today from 9:00am to 12:00pm at Hudson County’s Resource Fair at the Mary McLeod Bethune Center in Jersey City."
+    },
+    {
+     "date": "2026-10-22",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myhr47sfxk2t",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm at the Warren County Library - Northeast Branch."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myuhsgbrns2y",
+     "text": "My team will be holding Mobile Office Hours today from 12pm to 2pm at the Morristown & Morris Township Library."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myuowy3dqc2z",
+     "text": "My team will be holding Mobile Office Hours today from 2pm to 5pm at the Franklin Township Public Library, DeMott Lane Branch."
+    },
+    {
+     "date": "2026-10-27",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myvfh6jehs2d",
+     "text": "Eight years ago, 11 lives were tragically cut short in the antisemitic attack at the Tree of Life synagogue. As we honor their memories, we must reaffirm our collective commitment to protecting houses of worship and ending gun violence."
+    },
+    {
+     "date": "2026-10-28",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myxjy4ovyc26",
+     "text": "My team will be holding Mobile Office Hours today from 4pm to 6pm at the Boys & Girls Club of Clifton."
+    },
+    {
+     "date": "2026-10-29",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3myzlpsu5s223",
+     "text": "My team will be holding Mobile Office Hours today from 11:00am to 2:00pm at the B.E.A.T. Center in Toms River."
+    },
+    {
+     "date": "2026-11-02",
+     "source": "bluesky",
+     "url": "https://bsky.app/profile/booker.senate.gov/post/3mzdtd3mitc2w",
+     "text": "My team will be holding Mobile Office Hours today from 1:00pm to 3:00pm at the  Mercer County Library, Lawrence Headquarters Branch."
+    }
+   ]
   }
  ]
 }
