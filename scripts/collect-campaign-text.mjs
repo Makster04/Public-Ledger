@@ -150,21 +150,27 @@ export const indexPath=u=>{const p=new URL(u).pathname.replace(/\/$/,'');return 
 // ---------- The Wayback Machine ----------
 const stamp=d=>d.replace(/-/g,'');
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-// Requests to the Wayback Machine, about one a second, each given a minute to answer. A slow or busy answer (a timeout,
-// a dropped connection, a 429 or a 5xx) is tried again up to three times, waiting longer each time (5 seconds, 20,
-// then a minute). Its answers about saved copies are kept on this computer like the pages, so a second run asks only
-// for what the first didn't get.
-const RETRY=[5,20,60];
-export const retryable=e=>e?.statusCode===429||e?.statusCode>=500||e?.name==='TimeoutError'||e?.name==='AbortError'||
-  /timeout|timed out|fetch failed|ECONNRESET|ETIMEDOUT|socket|network/i.test(String(e?.message||''));
+// Requests to the Wayback Machine, about one a second, each given 30 seconds to answer. A slow or busy answer (a
+// timeout, a dropped connection, a 429 or a 5xx) is tried twice more, 5 then 30 seconds later. Its answers about saved
+// copies are kept on this computer like the pages, so a second run asks only for what the first didn't get. When five
+// requests in a row fail even after that, the Wayback Machine is down or refusing us: the run stops (WaybackDown) rather
+// than spend hours waiting, and running it later picks up from there.
+const RETRY=[5,30],DOWN_AFTER=5;
+export class WaybackDown extends Error{constructor(){super(`The Wayback Machine didn't answer ${DOWN_AFTER} requests in a row`);this.name='WaybackDown';}}
+export const retryable=e=>e?.name!=='WaybackDown'&&(e?.statusCode===429||e?.statusCode>=500||e?.name==='TimeoutError'||e?.name==='AbortError'||
+  /timeout|timed out|fetch failed|ECONNRESET|ETIMEDOUT|socket|network/i.test(String(e?.message||'')));
 const sha1=t=>crypto.createHash('sha1').update(t).digest('hex');
-export function wayback(env,{wait=1000,cache=CACHE,timeout=60000}={}){
-  let last=0;
+export function wayback(env,{wait=1000,cache=CACHE,timeout=30000}={}){
+  let last=0,failedInARow=0;const slowSites=new Set();
   const get=async(url,opts)=>{
     for(let i=0;;i++){
       const gap=last+wait-Date.now();if(gap>0)await sleep(gap);last=Date.now();
-      try{return await requestSource(url,env,{...opts,timeout});}
-      catch(e){if(!retryable(e)||i>=RETRY.length)throw e;await sleep(wait*RETRY[i]);}
+      try{const r=await requestSource(url,env,{...opts,timeout});failedInARow=0;return r;}
+      catch(e){
+        if(!retryable(e))throw e;
+        if(i>=RETRY.length){if(++failedInARow>=DOWN_AFTER)throw new WaybackDown();throw e;}
+        await sleep(wait*RETRY[i]);
+      }
     }
   };
   // A list of saved copies, kept on this computer once it has been answered.
@@ -183,10 +189,13 @@ export function wayback(env,{wait=1000,cache=CACHE,timeout=60000}={}){
       const row=Array.isArray(d)?d.slice(1).at(-1):null;
       return row&&/^\d{14}$/.test(row[0])?{ts:row[0],original:row[1]}:null;
     },
-    // Every page of a site saved from `from` through `to` whose address looks like it is about positions.
+    // Every page of a site saved from `from` through `to` whose address looks like it is about positions. This search of
+    // the whole site is the Wayback Machine's slowest answer; once it fails for a site, it isn't asked again for that site
+    // in this run (null: not read), and the pages linked from the homepage are still read.
     async issuePages(host,from,to){
+      if(slowSites.has(host))return null;
       const re='(?i).*(issue|priorit|platform|plan|agenda|position|stand|polic|vision|values|record|accomplish|commitment|promise|contract|fighting).*';
-      const t=await listing(`https://web.archive.org/cdx/search/cdx?url=${encodeURIComponent(host)}&matchType=domain&from=${stamp(from)}&to=${stamp(to)}&filter=statuscode:200&filter=${encodeURIComponent(`original:${re}`)}&fl=original&collapse=urlkey&output=json&limit=300`);
+      const t=await listing(`https://web.archive.org/cdx/search/cdx?url=${encodeURIComponent(host)}&matchType=domain&from=${stamp(from)}&to=${stamp(to)}&filter=statuscode:200&filter=${encodeURIComponent(`original:${re}`)}&fl=original&collapse=urlkey&output=json&limit=300`).catch(e=>{if(retryable(e))slowSites.add(host);throw e;});
       let d=null;try{d=t&&t.trim()?JSON.parse(t):null;}catch{d=null;}
       return Array.isArray(d)?d.slice(1).map(r=>r[0]).filter(Boolean):[];
     },
@@ -216,7 +225,8 @@ export async function readCampaign(wb,site,year,{pages:max=12}={}){
   // homepage is in hand, a page the Wayback Machine is too slow to send after its retries is listed as not read (a
   // second run tries it again), and the rest are still read.
   const unread=[];
-  let saved=[];try{saved=await wb.issuePages(site.host,`${year-1}-01-01`,day);}catch(e){if(!retryable(e))throw e;unread.push(`the list of ${site.host}'s saved pages`);}
+  let saved=[];try{saved=await wb.issuePages(site.host,`${year-1}-01-01`,day);}catch(e){if(!retryable(e))throw e;saved=null;}
+  if(saved===null){saved=[];unread.push(`the list of ${site.host}'s saved pages`);}
   const linked=issueLinks(html,home.original),listed=savedIssuePages(saved,home.original);
   const queue=[...(site.page&&!NOT_ISSUE.test(site.page)?[{url:site.page}]:[]),...linked,...listed.filter(l=>!linked.some(x=>pageKey(x.url)===pageKey(l.url)))],seen=new Set([pageKey(home.original)]),missing=[];
   while(queue.length&&pages.length<=max){
@@ -277,7 +287,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // A campaign read before (homepage and pages, or a sure answer that nothing was saved) is kept as it is; one that
   // failed or left pages unread is read again. --redo reads everything again.
   const redo=process.argv.includes('--redo'),tally={read:0,kept:0,failed:0,partial:0},failed=[];
-  for(const p of people){
+  let down=null;
+  people: for(const p of people){
     const fec=await fecFacts(p,env);
     const given=[p.campaignSite,...(p.campaignSites||[])].filter(Boolean),sites=new Map();
     for(const u of [...given,...(fec?.websites||[])]){const s=campaignSite(u);if(s&&!sites.has(s.host))sites.set(s.host,s);}
@@ -292,11 +303,14 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       for(const year of years){const ps=posts(year);if(ps.length)campaigns.push({year,electionDay:electionDay(year),site:null,saved:false,pages:[],posts:ps});}
       if(!campaigns.length)continue;
     }
+    const todo=years.flatMap(y=>[...sites.values()].filter(s=>!done.has(`${y} ${s.root}`)).map(s=>y));
+    if(todo.length)console.log(`  ${p.id.padEnd(14)} reading ${todo.join(', ')}…`);
     for(const year of years)for(const site of sites.values()){
       const was=done.get(`${year} ${site.root}`);
       if(was){campaigns.push({...was,posts:posts(year,was.posts)});tally.kept++;continue;}
       try{const c=await readCampaign(wb,site,year,{pages:max});if(c.saved||sites.size===1){c.posts=posts(year);campaigns.push(c);}tally.read++;if(c.unread){tally.partial++;failed.push(`${p.id} ${year} (${c.unread.length} page${c.unread.length===1?'':'s'})`);}}
-      catch(e){campaigns.push({year,electionDay:electionDay(year),site:site.root,saved:false,error:e.message,pages:[],posts:posts(year)});tally.failed++;failed.push(`${p.id} ${year}`);}
+      catch(e){if(e.name==='WaybackDown'){down=e;break people;}
+        campaigns.push({year,electionDay:electionDay(year),site:site.root,saved:false,error:e.message,pages:[],posts:posts(year)});tally.failed++;failed.push(`${p.id} ${year}`);}
     }
     const file={about:'What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.',
       person:p.id,name:p.name,built:new Date().toISOString().slice(0,10),sites:[...sites.values()].map(s=>s.root),years,campaigns};
@@ -311,6 +325,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   console.log(`\nWrote data/campaign-text/ (${files} people).`);
   if(noSite.length)console.log(`No campaign website found for ${noSite.length}: ${noSite.join(', ')}. Add one as "campaignSite" (or older ones as "campaignSites": [...]) in data/config.json${env.FEC_API_KEY?'':', or add FEC_API_KEY to .dev.vars so the FEC\'s can be used'}.`);
   if(skipped.length)console.log(`Not campaign sites, so not read (official .gov sites and social media pages): ${skipped.join('; ')}.`);
+  if(down)console.log(`\nStopped: ${down.message}, so it is down or busy. Everyone listed above is saved; run npm run campaign:collect again later and it carries on from there.`);
   console.log(`\nCampaigns: ${tally.read} read now, ${tally.kept} kept from before, ${tally.failed} failed${tally.partial?`, ${tally.partial} with pages not read yet`:''}.`);
   if(failed.length)console.log(`The Wayback Machine was too slow or busy for: ${failed.join('; ')}. Run npm run campaign:collect again later: it reads only these again.`);
   console.log('\nCommit and push data/campaign-text/ so the promises in it can be checked.');

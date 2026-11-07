@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts,scriptText,savedIssuePages,retryable} from '../scripts/collect-campaign-text.mjs';
+import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts,scriptText,savedIssuePages,retryable,WaybackDown} from '../scripts/collect-campaign-text.mjs';
 
 test('election days and the years someone was on the ballot',()=>{
   assert.deepEqual([2016,2018,2020,2022,2024,2026].map(electionDay),['2016-11-08','2018-11-06','2020-11-03','2022-11-08','2024-11-05','2026-11-03']);
@@ -151,5 +151,19 @@ test('a slow Wayback Machine: tried again, and a page it never sends is listed a
   assert.ok(asked.length&&asked.every(u=>u.includes('health-care')),asked.join('\n'));
   // What is tried again: timeouts, dropped connections, 429 and 5xx; not a 404 or a refused address.
   assert.deepEqual([slow(),new TypeError('fetch failed'),{statusCode:429},{statusCode:503},{statusCode:404},new Error('Unapproved data source')].map(retryable),[true,true,true,true,false,false]);
+  fs.rmSync(cache,{recursive:true,force:true});
+});
+
+test('a Wayback Machine that stops answering: the run stops instead of waiting for hours, and a slow site search is asked once',async()=>{
+  const cache=fs.mkdtempSync(path.join(os.tmpdir(),'wayback-'));
+  let calls=0;const wb=wayback({fetch:async()=>{calls++;throw Object.assign(new Error('timeout'),{name:'TimeoutError'});}},{wait:0,cache});
+  // A site search that fails isn't asked again for that site.
+  await assert.rejects(wb.issuePages('slow.com','2019-01-01','2020-11-03'));
+  assert.equal(await wb.issuePages('slow.com','2021-01-01','2022-11-08'),null);
+  assert.equal(calls,3);
+  // Each request is tried 3 times; after 5 failed requests in a row, WaybackDown.
+  for(let i=0;i<3;i++)await assert.rejects(wb.last(`https://slow.com/p${i}`,'2020-01-01','2020-11-03'),e=>e.name==='TimeoutError');
+  await assert.rejects(wb.last('https://slow.com/p9','2020-01-01','2020-11-03'),e=>e instanceof WaybackDown);
+  assert.equal(retryable(new WaybackDown()),false);
   fs.rmSync(cache,{recursive:true,force:true});
 });
