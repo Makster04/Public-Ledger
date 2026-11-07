@@ -394,7 +394,7 @@ function topSpenders(s,role,n){
 // ---------- routing ----------
 let homeCh='', cmpCh='S';
 // Older profile links (#id-record, #id-funding, ...) still work: each opens the tab that now holds that content, and the spot on it.
-const TAB_ALIAS={record:['ideology','m-record'],legislation:['ideology','legislation-lists'],match:['ideology','i-match'],align:['ideology','i-match'],statements:['word'],promises:['word'],ethics:['aboveboard'],integrity:['overview'],accountability:['overview'],finance:['unbought'],funding:['unbought'],superpacs:['unbought','f-out'],latest:['unbought','live-records'],connections:['unbought','u-connections'],history:['unbought','u-finance'],bills:['ideology','leg-sponsored'],funders:['unbought','rec-funders'],money:['unbought','rec-money'],pvp:['peoplefirst']};
+const TAB_ALIAS={record:['ideology','m-record'],legislation:['showsup','legislation-lists'],match:['ideology','i-match'],align:['ideology','i-match'],statements:['word'],promises:['word'],ethics:['aboveboard'],integrity:['overview'],accountability:['overview'],finance:['unbought'],funding:['unbought'],superpacs:['unbought','f-out'],latest:['unbought','live-records'],connections:['unbought','u-connections'],history:['unbought','u-finance'],bills:['showsup','leg-sponsored'],funders:['unbought','rec-funders'],money:['unbought','rec-money'],pvp:['peoplefirst']};
 function route(){
   resizers=[];tip.classList.remove('show');
   const h=(location.hash||'#home').slice(1);
@@ -824,14 +824,13 @@ function paneIdeology(s,pane){
     evidenceTitle:'Evidence: positions and outside ratings',
     evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs exactly as each group gives them, with the year and a link.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
-    shown:`<div id="rec-ideo">${ideoBlock(s,'ideo2')}<div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<div id="legislation-lists"></div><div id="legislation-record"></div>`,
+    shown:`<div id="rec-ideo">${ideoBlock(s,'ideo2')}<div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
     calc:`${stF('Issue lean = 100 × (conservative items − liberal items) ÷ all items')}${stF('Overall lean = average of the issue leans on the left–right issues (at least 3)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}
       <p class="small">An item is a vote, bill, cosponsorship or official act, one per bill; statements count only on an issue with no action. Letter grades convert A 100, B 75, C 50, D 25, F 0.</p>`,
     assumptions:['Votes, bills and cosponsorships set the issue positions.','Statements count half, and only when there are no votes on that issue.','Each vote\'s side on its issue is reviewed and cited; the issue says which side is the liberal one.','Issues that split both parties (tariffs, Ukraine aid, war powers, Jan. 6, infrastructure, ethics) are shown, not averaged into the overall lean.','Group ratings are read from each group\'s own site once a year and shown as published, with the year and a link. Groups whose sites block scripts or publish only images are left out rather than entered by hand. Vote Smart isn\'t used: its ratings cost $350 a month.','DW-NOMINATE comes from Voteview.'],
     method:'ideology'});
   alignInto(s,pane.querySelector('#m-al'));
   mountIdeo('ideo2',s);mountKV('kv2',s);
-  mountLegislation(pane.querySelector('#legislation-lists'),{person:s,data:DATA,recordLive:window.RecordLive});
   recordInto(s,pane.querySelector('#legislation-record'));
   pane.querySelectorAll('[data-issue]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=pane.querySelector('#m-al');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
   bindTips(pane);
@@ -865,10 +864,11 @@ function paneShowsUp(s,pane){
     needs:x.needs,
     notes:[['A fair comparison','uses the same definition of "advanced" and the same years for the member and their party.'],['Unknown is not zero.','Without a record, Shows Up says so rather than scoring it.']],
     evidenceTitle:'Evidence: votes missed and bills moved',
-    evidence:`<div id="showsup-evidence">${showingUpDetails(s,x.detail)}</div>`,
+    evidence:`<section class="st-sec" id="legislation-lists-sec"><h4 class="st-sub">Legislative Activity</h4><div id="legislation-lists"></div></section><div id="showsup-evidence">${showingUpDetails(s,x.detail)}</div>`,
     calc:`${stF('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')}${stF('Attendance = 100 − 5 × % of votes missed')}${stF('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')}${x.pct!=null&&g.value!=null?`<p class="small">0.75 × ${a.value} + 0.25 × ${g.value} = ${Math.round((0.75*a.value+0.25*g.value)*10)/10}, rounded to ${x.pct}.</p>`:x.pct!=null?`<p class="small">Get It Done isn't available, so Shows Up is Attendance alone: ${a.value}.</p>`:''}`,
     assumptions:['The same roll-call period (2018 on) counts for everyone compared.','"Not voting", paired and announced votes are missed; Present counts as there. A reviewed, cited medical leave, birth or adoption, death in the family or military duty is left out.','Bills and joint resolutions count; one advanced when a committee reported it, a chamber passed it, or it became law. At least 10 sponsored bills.','Get It Done is capped at 100 when they meet or beat their party\'s typical rate.','The record shows that a vote was missed, not why or where they were.'],
     method:'showsup'});
+  mountLegislation(pane.querySelector('#legislation-lists'),{person:s,data:DATA,recordLive:window.RecordLive});
 }
 
 // ----- Unbought (async: the gift sizes and the financial disclosure come from the refreshed official records) -----
@@ -1196,7 +1196,7 @@ const BASIC_INTRO='These update on their own from official sources. Nothing here
 function renderBasic(s,tab,focus){renderProfile(s,tab,focus);}
 function paneBasicContent(s,view,pane){
   // The score tabs map onto the official-record views a basic profile has.
-  view=({ideology:'legislation',word:'promises',showsup:'integrity',unbought:'finance',aboveboard:'ethics',peoplefirst:'pvp'})[view]||view;
+  view=({ideology:'legislation',word:'promises',showsup:'legislation',unbought:'finance',aboveboard:'ethics',peoplefirst:'pvp'})[view]||view;
   const person={id:s.id,name:s.name,chamber:'S',bioguide:s.bioguide};
   const head=(title,key)=>gradeHead(title,null,BASIC_GRADE[key],gradeRule(key));
   if(view==='integrity'){

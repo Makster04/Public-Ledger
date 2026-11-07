@@ -976,3 +976,19 @@ input, select { accent-color: var(--accent); }
 .st-items li > span:first-child { flex: 0 0 12px; color: var(--muted); }
 .st-items li.yes > span:first-child { color: var(--good); }
 .st-items li.no > span:first-child { color: var(--crit); }
+.legislation-panels { display: grid; gap: 22px; }
+.legislation-panel { padding: 20px 22px; }
+.legislation-panel-head { margin-bottom: 14px; }
+.legislation-panel-head h3 { display: flex; align-items: center; gap: 10px; font-size: 1.12rem; margin: 0; }
+.legislation-panel-head h3 svg { width: 18px; height: 18px; color: var(--ink-2); }
+.legislation-count { background: transparent; color: var(--ink); border-color: var(--line-2); font-size: .85rem; padding: 3px 10px; border-radius: 999px; }
+.legislation-list { gap: 10px; max-height: 520px; overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
+.legislation-bill { padding: 14px 16px; border: 0; border-radius: 10px; background: var(--surface-2); }
+.legislation-bill-head { margin-bottom: 4px; align-items: center; }
+.legislation-bill-head h4 { font-size: 1rem; margin: 0; }
+.legislation-status { color: var(--ink); background: var(--bg); border: 1px solid var(--line-2); border-radius: 999px; padding: 3px 12px; font-size: .78rem; font-weight: 600; white-space: nowrap; max-width: none; }
+.legislation-meta { font-size: .86rem; margin: 3px 0; color: var(--ink-2); }
+.legislation-tags { margin-top: 8px; gap: 12px; justify-content: flex-start; }
+.legislation-area { font-size: .8rem; font-weight: 600; color: var(--ink); background: var(--bg); border-radius: 6px; padding: 3px 10px; }
+.legislation-source { font-size: .84rem; margin-left: 0; width: auto; margin-top: 0; }
+.legislation-note { font-size: .8rem; color: var(--muted); margin: 10px 0 0; }

@@ -33,3 +33,13 @@ test('source reporting coverage and Congress totals remain separate from loaded 
   assert.match(text,/2 records supplied/);
   assert.equal(legislationCoverage(null),'');
 });
+
+test('a bill\'s stage: its recorded status, or else what its latest action says',async()=>{
+  const {billStage}=await import('../public/legislation.js');
+  assert.equal(billStage({status:'Became law'}),'Became law');
+  assert.equal(billStage({status:'Status not recorded',latestAction:'Referred to the House Committee on the Judiciary.'}),'In Committee');
+  assert.equal(billStage({status:'Status not recorded',latestAction:'Passed Senate without amendment by Unanimous Consent.'}),'Passed Senate');
+  assert.equal(billStage({status:'Status not recorded',latestAction:'Became Public Law No: 119-21.'}),'Became Law');
+  assert.equal(billStage({status:'Status not recorded',latestAction:'Introduced in House'}),'Introduced');
+  assert.equal(billStage({status:'Status not recorded'}),'Status not recorded');
+});
