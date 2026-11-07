@@ -62,14 +62,19 @@ export function savedPage(url,html,filed=null){
   const date=filed&&!/\bFiled\s+\d{1,2}\/\d{1,2}\/\d{4}/i.test(html)?`<p hidden>Filed ${filed.slice(5,7)}/${filed.slice(8,10)}/${filed.slice(0,4)} (from the search results)</p>\n`:'';
   return `<!-- saved from url=${url} -->\n${date}${html}`;
 }
-// A page that is a bot check, a captcha or a refusal, rather than the site: the reason, or null.
-export function blockedBy(status,html=''){
+// A page that is a bot check, a captcha or a refusal, rather than the site: the reason, or null. text: what a visitor
+// sees (the page's title and its visible words), never its code, where the same words can appear harmlessly.
+const BOT_CHECK=/captcha|are you a (human|robot)|verify you are (a )?human|unusual traffic|request rejected|access denied|just a moment\.\.\.|checking your browser/i;
+export function blockedBy(status,text=''){
   if(status===403||status===429)return `the site answered HTTP ${status}`;
   if(status>=500)return null;
-  const t=String(html);
-  if(/captcha|g-recaptcha|hcaptcha|cf-challenge|challenge-platform|are you a (human|robot)|verify you are (a )?human|unusual traffic|request rejected|access denied/i.test(t))return 'the site showed a bot check or refusal page';
-  return null;
+  const t=String(text).replace(/\s+/g,' '),m=t.match(BOT_CHECK);
+  if(!m)return null;
+  const at=Math.max(0,m.index-60);
+  return `the page showed a bot check or refusal ("…${t.slice(at,m.index+m[0].length+60).trim()}…")`;
 }
+// What a visitor sees on the page: its title and its visible words.
+const seen=async page=>`${await page.title()}\n${await page.evaluate(()=>document.body?document.body.innerText:'')}`;
 // The page answered is the terms page again (the session ended): agree once more.
 export const backAtTerms=html=>/prohibition_agreement|agree_statement/i.test(String(html))&&!/Assets|Liabilities|Transactions?/i.test(strip(html));
 // What a report page has to show to be the report.
@@ -94,8 +99,8 @@ async function main(argv){
   let saved=0,already=0,papers=0,failed=0;
   const open=async url=>{
     const res=await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
-    const html=await page.content(),why=blockedBy(res?.status()??0,html);
-    if(why)throw new Blocked(why);
+    const html=await page.content(),why=blockedBy(res?.status()??0,await seen(page));
+    if(why)throw new Blocked(`${why} at ${page.url()}`);
     return {status:res?.status()??0,html};
   };
   const agree=async()=>{
@@ -107,7 +112,7 @@ async function main(argv){
       const submit=page.locator('form button[type=submit], form input[type=submit]').first();
       if(await submit.count())await Promise.all([page.waitForURL(/\/search\/(?!home)/,{timeout:30000}).catch(()=>null),submit.click()]);
     }
-    const why=blockedBy(0,await page.content());if(why)throw new Blocked(why);
+    const why=blockedBy(0,await seen(page));if(why)throw new Blocked(`${why} at ${page.url()}`);
     if(/\/search\/home\/?$/.test(new URL(page.url()).pathname))throw new Blocked('agreeing to the terms didn\'t open the search page');
   };
   // The search, posted from the page itself with the session's own token, as the search page's script does.
@@ -119,7 +124,7 @@ async function main(argv){
         const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8','X-CSRFToken':csrf,'X-Requested-With':'XMLHttpRequest'},body:new URLSearchParams({...form,csrfmiddlewaretoken:csrf}).toString(),credentials:'same-origin'});
         return {status:res.status,text:await res.text()};
       },{form:searchForm(s,start,''),url:`${site}/search/report/data/`});
-      const why=blockedBy(r.status,r.status===200?'':r.text);if(why)throw new Blocked(why);
+      const why=blockedBy(r.status,r.status===200?'':strip(r.text));if(why)throw new Blocked(`${why} (the search)`);
       let d;try{d=JSON.parse(r.text);}catch{throw new Error(`the search didn't answer with results (HTTP ${r.status})`);}
       found.push(...reportsIn(d.data,s,site));
       if(start+100>=Number(d.recordsFiltered??d.recordsTotal??0))break;

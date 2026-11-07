@@ -38,8 +38,9 @@ test('a saved report carries its address (and a paper report its filing date), s
 
 test('a bot check, captcha or refusal stops it; the terms page again means agree again',()=>{
   assert.match(blockedBy(403),/HTTP 403/);assert.match(blockedBy(429),/HTTP 429/);
-  assert.match(blockedBy(200,'<div class="g-recaptcha"></div>'),/bot check/);
-  assert.match(blockedBy(200,'<h1>Request Rejected</h1>'),/bot check/);
+  assert.match(blockedBy(200,'Just a moment...\nVerify you are human by completing the action below.'),/bot check.*Verify you are human/);
+  assert.match(blockedBy(200,'Request Rejected\nThe requested URL was rejected.'),/bot check.*Request Rejected/);
+  assert.equal(blockedBy(200,'eFD: Search\nSearch Reports Filer Type Senator'),null,'the search page as a visitor sees it');
   assert.equal(blockedBy(200,'<h1>Periodic Transaction Report</h1>'),null);assert.equal(blockedBy(502,''),null,'a server error is not a block');
   assert.ok(backAtTerms('<form><input id="agree_statement" type="checkbox" name="prohibition_agreement"></form>'));
   assert.ok(!backAtTerms('<h3>Transactions</h3><table></table>'));
