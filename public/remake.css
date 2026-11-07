@@ -826,3 +826,28 @@ input, select { accent-color: var(--accent); }
 .integrity-components a{color:var(--ink-2)}
 .integrity-worker{margin-top:9px}
 @media(max-width:600px){.integrity-components{grid-template-columns:1fr}.integrity-components summary,.integrity-worker summary{align-items:flex-start;flex-direction:column;gap:3px}.integrity-components summary span,.integrity-worker summary span{text-align:left}}
+
+/* Money map (public/money-map.js): money in, the campaign, money out, and outside groups' own spending. */
+.mm { display: grid; gap: 12px; margin: 8px 0 28px; }
+.mm-diagram { max-width: 100%; overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 8px 8px; }
+.mm-diagram svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.mm-key { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.mm-key span { display: inline-flex; align-items: center; gap: 8px; }
+.mm-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--ink-2); display: inline-block; }
+.mm-line { width: 28px; border-top: 3px solid var(--ink-2); display: inline-block; }
+.mm-dash { width: 28px; border-top: 2px dashed var(--for-ink); display: inline-block; }
+.mm-books { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; }
+.mm-stack { display: grid; gap: 16px; align-content: start; min-width: 0; }
+@media (max-width: 820px) { .mm-books { grid-template-columns: minmax(0, 1fr); } }
+.mm-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.mm-panel h3 { margin: 0; font-size: 1.05rem; }
+.mm-panel p { margin: 0; }
+.mm-todo { border-style: dashed; }
+.mm-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+.mm .mm-sum td { font-weight: 700; }
+.mm-bars { display: grid; gap: 7px; }
+.mm-bar { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) 4.6rem; gap: 10px; align-items: center; font-size: .88rem; }
+.mm-bar .num { text-align: right; font-variant-numeric: tabular-nums; }
+.mm-track { height: 10px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+.mm-track span { display: block; height: 100%; background: var(--s2); border-radius: 5px; }
+@media (max-width: 480px) { .mm-bar { grid-template-columns: minmax(0, 1fr) 4.6rem; } .mm-track { grid-column: 1 / -1; grid-row: 2; } }
