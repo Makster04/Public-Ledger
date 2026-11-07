@@ -2,7 +2,7 @@
  "about": "What this person told voters in each campaign since 2016: their campaign website as saved by the Wayback Machine just before election day (the homepage and the pages about where they stand), as text, and their campaign-season Bluesky and Threads posts. From scripts/collect-campaign-text.mjs; the promises in it are found by step 2.",
  "person": "millermeeks",
  "name": "Mariannette Miller-Meeks",
- "built": "2026-11-06",
+ "built": "2026-11-07",
  "sites": [
   "https://millermeeks.com/",
   "https://drmillermeeks.com/"
@@ -18,9 +18,20 @@
    "year": 2020,
    "electionDay": "2020-11-03",
    "site": "https://millermeeks.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
+   "saved": true,
+   "capture": {
+    "date": "2020-10-08",
+    "url": "https://web.archive.org/web/20201008053316/https://millermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20201008053316/https://millermeeks.com/",
+     "original": "https://millermeeks.com/",
+     "date": "2020-10-08",
+     "title": "英亚体育app-英亚体育足球-亚英体育登录wx200 com",
+     "text": "Posted on 2020年8月12日 2020年8月11日 by admin\n【环球网报道 记者 徐璐明】印度近日将两架国产武装直升机部署至中印边境地区，而印媒却揭露这款直升机连武器都没有配全，将其部署至前线只是为了“展示信念”。据印度LiveFistDefence网站8月8日…\nPosted on 2020年8月12日 2020年8月11日 by admin\n中新社华盛顿8月10日电 (记者 沙晗汀)美国东部马里兰州巴尔的摩市一居民区当地时间10日发生燃气爆炸，至少造成1人身亡、7人受伤。\nPosted on 2020年8月12日 2020年8月11日 by admin"
+    }
+   ],
    "posts": []
   },
   {
@@ -89,26 +100,93 @@
    "year": 2024,
    "electionDay": "2024-11-05",
    "site": "https://millermeeks.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105152733/http://millermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105152733/http://millermeeks.com/",
+     "original": "http://millermeeks.com/",
+     "date": "2024-11-05",
+     "title": "NameBright - Domain Expired",
+     "text": "## WARNING!\nmillermeeks.com has expired.\nIf this is your domain name you must renew it immediately before it is deleted and permanently removed from your account. To renew this domain name visit NameBright.com"
+    }
+   ],
    "posts": []
   },
   {
    "year": 2024,
    "electionDay": "2024-11-05",
    "site": "https://drmillermeeks.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
+   "saved": true,
+   "capture": {
+    "date": "2024-11-05",
+    "url": "https://web.archive.org/web/20241105202341/https://drmillermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20241105202341/https://drmillermeeks.com/",
+     "original": "https://drmillermeeks.com/",
+     "date": "2024-11-05",
+     "title": "Miller-Meeks for Congress - Iowa's First Congressional District",
+     "text": "## Meet Mariannette\nI am Mariannette Miller-Meeks and I am running for re-election to Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a Congresswoman, state senator, military veteran, and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn’t so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman’s kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college.I later enlisted in the US Army at 18, going from Private to Lt. Colonel during my 24 years of service. I went into private medical practice in Ottumwa in 1997. My husband Curt and I have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate. In 2020, I was elected to congress by a six-vote margin, one of the closest races in United States election history. Then in 2022, the voters of southeastern Iowa elected me yet again to fight for our values in the U.S. House of Representatives. I am honored to go to work on their behalf every day.\nWe need your help.\nJune 6, 2024\nMay 6, 2024\nMay 4, 2024\nMiller-Meeks for Congress\nP.O. Box 33 Ottumwa, IA 52501"
+    },
+    {
+     "url": "https://web.archive.org/web/20240520060001/https://drmillermeeks.com/30-law-enforcement-officers-endorse-miller-meeks-who-calls-on-opponent-to-disavow-defund-police-movement/",
+     "original": "https://drmillermeeks.com/30-law-enforcement-officers-endorse-miller-meeks-who-calls-on-opponent-to-disavow-defund-police-movement/",
+     "date": "2024-05-20",
+     "title": "PRESS RELEASE: 30 LAW ENFORCEMENT OFFICERS ENDORSE MILLER-MEEKS, WHO CALLS ON OPPONENT TO DISAVOW ‘DEFUND POLICE’ MOVEMENT - Miller-Meeks for Congress",
+     "text": "August 31, 2020\nDAVENPORT – A coalition of law enforcement officials today endorsed Republican congressional candidate Mariannette Miller-Meeks, who called on opponent Rita Hart to end her silence about Democratic calls to defund police departments across the country.\n“Local law enforcement officers are the people who keep us safe in our homes, on the street and in our communities. They are the men and women we count on the most in emergency situations and I guarantee that they can count on me because I have tremendous respect for them,” said Miller-Meeks, an Ottumwa state senator. “My position is clear and that’s why voters deserve to know whether Rita Hart is going to go along with the ‘defund police’ movement. She seems to have plenty of time to tweet about nonexistent post office conspiracies but has remained strangely silent about supporting law enforcement. It’s time for her to speak up.”\nThe Miller-Meeks coalition includes 30 police officers, county sheriffs, chiefs of police and retired officials. Its endorsement comes after Miller-Meeks signed the Heritage Action’s Police Pledge, which states “A lawful society – free from mob rule and violent insurrection – is not possible without Law Enforcement. Police Officers have chosen a noble profession. They dedicate their lives to upholding the law and protecting the sacred rights of their fellow citizens. As a profession, they deserve support and respect. I stand with America’s Police and pledge to oppose any bill, resolution, or movement to ‘Defund the Police.”\nHart has not signed the pledge.\n“As a retired Army lieutenant colonel, Mariannette Miller-Meeks has demonstrated from the beginning her support and respect for law enforcement,” said Muscatine County Sheriff C.J. Ryan. “She has a deep and abiding commitment for the rule of law and she doesn’t waver in that support. It’s been disappointing to see Rita Hart stay quiet when her colleagues are proposing the dismantlement of police departments. We need leaders in Washington that have our back and that is why I am proud to support Mariannette Miller-Meeks.”\nKnoxville Police Chief Aaron Fuller said, “I consider myself apolitical. I am a registered independent. What’s important to me when I go to vote is knowing that a candidate supports police officers and law enforcement agencies everywhere. Now more than ever, police officers need a champion in Congress and I believe that Mariannette will be that champion.”\nCoalition members include: Appanoose County Sheriff Gary Anderson; Cedar County Sheriff Warren Wethington; Jefferson County Sheriff’s Department Chief Deputy Bart Richmond; Marion County Sheriff Jason Sandholdt; Knoxville Police Chief Aaron Fuller; Muscatine County Sheriff C.J. Ryan; Muscatine County Sheriff’s Department Capt. Quinn Riess; Scott County Sheriff Tim Lane; retired Davenport Officer Tim Brandenburg; retired Davenport Police Department Sgt. Jeanne Christensen; Davenport Police Department Sgt. Eric Gruenhagen; Washington County Sheriff Jared Schneider; Wayne County Sheriff Keith Davis; Clinton Deputy Police Chief Bill Grenwalt; Iowa State Patrol trooper/state Rep. Jon Thorup; Scott County Sheriff’s Department Reserve Deputy/state Sen. Chris Cournoyer; Wapello County Sheriff’s Deputy Jeff Layton; retired Ottumwa Police Department Lt. Mike McDonough, Ottumwa Police Department Officer Darren Batterson; LeClaire Police Department Sgt. Mike Gonzales, Princeton Police Chief Brian Carsten, Clinton Police Chief Kevin Gyrion; Muscatine County Sheriff’s Deputy Jim Ludman; Blue Grass Chief of Police Garret Jahns; Walcott Police Chief Jeff Blake; Muscatine County Sheriff’s Deputy Kenny Hora; retired Davenport Chief Steve Lynn; Muscatine County Sheriff’s Deputy Les Wegter; retired Broken Bow, Okla.,Chief of Police Rod Smith of Fairfield; and retired Phoenix police lieutenant, U.S. Marshal and current Clinton City Councilman Bill Schemers.\nMiller-Meeks is an ophthalmologist and a 24-year U.S. Army veteran representing Senate District 41 in the Iowa Senate, which includes Davis, Jefferson, Van Buren, and Wapello counties. She is seeking the seat vacated by U.S. Rep. Dave Loebsack, a seven-term Democratic congressman. After 14 years of Democrat control, Iowa’s 2nd Congressional District is now rated as a “toss-up,” according to national political forecasters. Of the 31 congressional districts won by Trump and held by Democrats, Iowa’s 2nd Congressional District is the only open seat."
+    },
+    {
+     "url": "https://web.archive.org/web/20240303161428/https://drmillermeeks.com/congresswoman-elect-miller-meeks-transition-team-issues-statement-on-rita-harts-attempt-to-overturn-the-will-of-iowa-voters/",
+     "original": "https://drmillermeeks.com/congresswoman-elect-miller-meeks-transition-team-issues-statement-on-rita-harts-attempt-to-overturn-the-will-of-iowa-voters/",
+     "date": "2024-03-03",
+     "title": "CONGRESSWOMAN-ELECT MILLER-MEEKS’ TRANSITION TEAM ISSUES STATEMENT ON RITA HART’S ATTEMPT TO OVERTURN THE WILL OF IOWA VOTERS - Miller-Meeks for Congress",
+     "text": "## CONGRESSWOMAN-ELECT MILLER-MEEKS’ TRANSITION TEAM ISSUES STATEMENT ON RITA HART’S ATTEMPT TO OVERTURN THE WILL OF IOWA VOTERS\nDecember 22, 2020\nOTTUMWA, Iowa – Congresswoman-elect Mariannette Miller-Meeks’ transition team issued the following statement today:\nRita Hart filed paperwork this morning with the U.S. House of Representatives to attempt to have Washington politicians overturn the will of Iowans in the 2nd Congressional District.\nAll votes in this election have been counted under Iowa law. Congresswoman-elect Mariannette Miller-Meeks won the vote on election night, won the 24-county county audit and official canvas, won the 24-county recount, and was unanimously certified by the State of Iowa as the winner of the election by a bipartisan council.\nThe Hart campaign could have followed Iowa law and asked Iowa judges to address any issue raised in this new filing to Congress.. But she knew her partisan political claims are baseless, and that a neutral court would reject them. Instead, Senator Hart has chosen a political process controlled by Nancy Pelosi to overturn the choice of Iowans in the Second Congressional District, disenfranchising hundreds of thousands of voters. There was plenty of time for Iowa judges to review the 22 votes cited in the Hart challenge as well as the 30 Scott County votes which the county auditor said Miller-Meeks should not have lost.\nThis election has been decided by Iowans. That decision should not be thrown into Washington’s hyper-partisan atmosphere. It is shameful that Rita Hart does not have faith in Iowans, and does not respect the decision of Iowa voters."
+    },
+    {
+     "url": "https://web.archive.org/web/20240424122054/https://drmillermeeks.com/issues/",
+     "original": "https://drmillermeeks.com/issues/",
+     "date": "2024-04-24",
+     "title": "Issues - Miller-Meeks for Congress",
+     "text": "## Issues"
+    },
+    {
+     "url": "https://web.archive.org/web/20240520061550/https://drmillermeeks.com/miller-meeks-displays-unique-credentials-shares-policy-platform-with-iowa-voters/",
+     "original": "https://drmillermeeks.com/miller-meeks-displays-unique-credentials-shares-policy-platform-with-iowa-voters/",
+     "date": "2024-05-20",
+     "title": "MILLER-MEEKS DISPLAYS UNIQUE CREDENTIALS; SHARES POLICY PLATFORM WITH IOWA VOTERS - Miller-Meeks for Congress",
+     "text": "## MILLER-MEEKS DISPLAYS UNIQUE CREDENTIALS; SHARES POLICY PLATFORM WITH IOWA VOTERS\nSeptember 24, 2020\nJOHNSTON, Iowa – State Sen. Mariannette Miller-Meeks, R-Ottumwa, emerged as the decisive victor in tonight’s Iowa Public Broadcasting debate, which was the first between general election contenders in Iowa’s 2nd Congressional District.\n“Senator Miller-Meeks is the clear winner based on her unmatched depth of professional experience on the issues that matter most to voters,” campaign manager Austin Harris said. “She very clearly demonstrated that she is the only candidate with the ability to competently legislate health care on behalf of Iowans and bring back an economy that was extraordinarily robust thanks to policies put in place by President Trump and Republicans in Washington, D.C. Mariannette Miller-Meeks was the only candidate tonight to offer real solutions to problems that Iowans face.”\nThe hour-long debate moderated by “Iowa Press” host David Yepsen covered a wide variety of topics from COVID-19, the resulting economic shutdown and its impact on southeast Iowa to the scope of policy differences between the two candidates on the Nov. 3 ballot in the district covering 24 counties in eastern and south central Iowa.\nMiller-Meeks thanked IPBS, Yepsen and the program’s other journalists for “giving us the opportunity to present our policy platform to Iowa voters.”\n“I feel confident that voters across the 2nd District respect, appreciate and support my message and see that my campaign favors the pre-pandemic economic growth policies and other approaches we need to create more jobs and income,” Miller-Meeks said. “We are offering real solutions to combat COVID-19 and future pandemics, increase employment opportunities, and safely reopen the U.S. economy.”\nMiller-Meeks is an ophthalmologist and a 24-year U.S. Army veteran representing Senate District 41 in the Iowa Senate, which includes Davis, Jefferson, Van Buren, and Wapello counties. She is seeking the seat vacated by U.S. Rep. Dave Loebsack, a seven-term Democratic congressman. After 14 years of Democrat control, Iowa’s 2nd Congressional District is now rated as a “toss-up,” according to national political forecasters. Of the 31 congressional districts won by Trump and held by Democrats, Iowa’s 2nd Congressional District is the only open seat."
+    },
+    {
+     "url": "https://web.archive.org/web/20240424131007/https://drmillermeeks.com/rep-joe-mitchell-endorses-miller-meeks-for-congress-she-never-quits-fighting-for-iowa/",
+     "original": "https://drmillermeeks.com/rep-joe-mitchell-endorses-miller-meeks-for-congress-she-never-quits-fighting-for-iowa/",
+     "date": "2024-04-24",
+     "title": "REP. JOE MITCHELL ENDORSES MILLER-MEEKS FOR CONGRESS: SHE NEVER QUITS FIGHTING FOR IOWA - Miller-Meeks for Congress",
+     "text": "## REP. JOE MITCHELL ENDORSES MILLER-MEEKS FOR CONGRESS: SHE NEVER QUITS FIGHTING FOR IOWA\nDecember 12, 2019\nFOR IMMEDIATE RELEASE\nTHURSDAY, DECEMBER 12, 2019\nOTTUMWA – Today, Iowa Republican Rep. Joe Mitchell announced his endorsement of Mariannette Miller-Meeks for Congress in the 2nd District.\n“In the legislature, I’ve witnessed Senator Miller-Meeks lead the charge on conservative issues. She has successfully fought to reform healthcare, protect innocent life and hold government bureaucrats accountable,” said Rep. Mitchell of Mount Pleasant. “Throughout her life, she has never quit fighting for the people of Iowa and the American dream. I want a fighter and a person who never quits representing me in Congress and that’s why I’m proud to support Mariannette for Congress!”\n“I am honored to receive the support and endorsement of Rep. Joe Mitchell,” said Miller-Meeks. “Being the youngest serving legislator in Iowa, Joe has shown his energy and passion for serving Iowans. As a Congresswoman, I’ll take that same energy and passion to Washington, D.C. to fight for healthcare reform, higher take home pay, and a government that is accountable.”\nRep. Mitchell was elected to office in 2018 as the youngest serving Iowa lawmaker. He recently graduated from Drake University shortly before serving in the Iowa legislature. In the House, Mitchell worked alongside Miller-Meeks to improve mental health accessibility and ensure Iowa’s Medicaid system remains sustainable into the future."
+    },
+    {
+     "url": "https://web.archive.org/web/20240520050514/https://drmillermeeks.com/rep-jon-thorup-endorses-miller-meeks-for-congress-shell-take-the-lead-on-key-issues/",
+     "original": "https://drmillermeeks.com/rep-jon-thorup-endorses-miller-meeks-for-congress-shell-take-the-lead-on-key-issues/",
+     "date": "2024-05-20",
+     "title": "REP. JON THORUP ENDORSES MILLER-MEEKS FOR CONGRESS: \"SHE'LL TAKE THE LEAD ON KEY ISSUES\" - Miller-Meeks for Congress",
+     "text": "## REP. JON THORUP ENDORSES MILLER-MEEKS FOR CONGRESS: “SHE’LL TAKE THE LEAD ON KEY ISSUES”\nMarch 20, 2020\nTHURSDAY, JANUARY 23, 2020\nOTTUMWA – State Rep. Jon Thorup of Knoxville announced his endorsement of state Sen. Mariannette Miller-Meeks for Congress in the 2 nd District today.\n“As a law enforcement officer, service to our community and country is important to me,” said Thorup, a former state fire marshal who is a senior trooper with the Iowa State Patrol. “That is why I’m proud to support a 24-year Army veteran for U.S. Congress. Mariannette will bring a desperately needed trait to Congress: leadership.”\nHe continued, “Southern Iowa needs someone who will never quit fighting for health care reform, fair trade deals and a growing economy. Serving with Mariannette in the legislature, I know she’ll take the lead on these issues and will never quit fighting for us because she’s respected for those very qualities at the Statehouse.”\nMiller-Meeks, an ophthalmologist, was appointed director of the Iowa Department of Public Health in 2010 by then-Gov. Terry Branstad where she served for three years. Thorup said Miller-Meeks continued to demonstrate her leadership and health care background in her role as the chair of the Human Resources committee during the 2019 session.\n“I am honored to have the support and confidence of Representative Thorup,” said Miller-Meeks. “Law enforcement officers like Jon put their lives on the line every day and work tirelessly to make our communities safe. They deserve federal partners who will work alongside them to make sure they have the resources and support they need to keep us and themselves safe. I’ll be that kind of representative.”"
+    }
+   ],
    "posts": []
   },
   {
    "year": 2026,
    "electionDay": "2026-11-03",
    "site": "https://millermeeks.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
+   "saved": true,
+   "capture": {
+    "date": "2026-05-16",
+    "url": "https://web.archive.org/web/20260516044546/http://millermeeks.com/"
+   },
    "pages": [],
    "posts": []
   },
@@ -116,9 +194,27 @@
    "year": 2026,
    "electionDay": "2026-11-03",
    "site": "https://drmillermeeks.com/",
-   "saved": false,
-   "error": "The operation was aborted due to timeout",
-   "pages": [],
+   "saved": true,
+   "capture": {
+    "date": "2026-11-02",
+    "url": "https://web.archive.org/web/20261102011812/https://drmillermeeks.com/"
+   },
+   "pages": [
+    {
+     "url": "https://web.archive.org/web/20261102011812/https://drmillermeeks.com/",
+     "original": "https://drmillermeeks.com/",
+     "date": "2026-11-02",
+     "title": "Home | Miller-Meeks for Congress",
+     "text": "## Proven Conservative\nBy entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms & privacy policy for auto dialed messages to the phone number you provide. Msg&data rates may apply. Msg frequency varies. Reply HELP for help or STOP to opt-out at any time. SMS information is not rented, sold, or shared. View Privacy Policy and Terms of Service.\n## Meet Mariannette\nI am Mariannette Miller-Meeks and I am running for re-election to Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a Congresswoman, state senator, military veteran, and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn't so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman's kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college. I later enlisted in the US Army at 18, going from Private to Lt. Colonel during my 24 years of service. I went into private medical practice in Ottumwa in 1997. My husband Curt and I have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate. In 2020, I was elected to congress by a six-vote margin, one of the closest races in United States election history. Then in 2022, the voters of southeastern Iowa elected me yet again to fight for our values in the U.S. House of Representatives. I am honored to go to work on their behalf every day.\nWe need your help.\n## Recount Confirms Miller-Meeks Victory\nDecember 6, 2024\n## Miller-Meeks Wins Third Term in Congress\nNovember 15, 2024\n## 20 Counties Certify Miller-Meeks Election Win\nNovember 15, 2024\n## Upcoming Events\nNo upcoming events are scheduled right now."
+    },
+    {
+     "url": "https://web.archive.org/web/20261003212239/https://drmillermeeks.com/.well-known/dnt-policy.txt",
+     "original": "https://drmillermeeks.com/.well-known/dnt-policy.txt",
+     "date": "2026-10-03",
+     "title": "Home | Miller-Meeks for Congress",
+     "text": "## Proven Conservative\nBy entering your phone number and selecting to opt in, you consent to join a recurring SMS/MMS text messaging program that will provide alerts, donation requests, updates, and other important information. By participating, you agree to the terms & privacy policy for auto dialed messages to the phone number you provide. Msg&data rates may apply. Msg frequency varies. Reply HELP for help or STOP to opt-out at any time. SMS information is not rented, sold, or shared. View Privacy Policy and Terms of Service.\n## Meet Mariannette\nI am Mariannette Miller-Meeks and I am running for re-election to Congress because the people of Iowa deserve someone who will never quit fighting for them, their future and the future of their American dream. As a Congresswoman, state senator, military veteran, and doctor, I have spent my entire life fighting to protect Iowa values. But getting here wasn't so easy.\nMy father was a Master Sergeant in the United States Air Force who often worked extra jobs, sometimes two or three, to support our family. My mother, who got her GED, also worked and raised our family.\nI originally dreamed of becoming a teacher because I loved school and wanted to share my passion for learning with others. However, in 10th grade, my younger brother and I were severely burned in a kitchen fire. While at the hospital, I was treated by a physical therapist who went out of her way to make sure I got better. This woman's kindness and selflessness inspired me to become a doctor so I could help others.\nI was the fourth of eight children with parents who did not have the means to pay for college. I left home at 16 and enrolled in community college. I later enlisted in the US Army at 18, going from Private to Lt. Colonel during my 24 years of service. I went into private medical practice in Ottumwa in 1997. My husband Curt and I have two grown children, Jonathon and Taylor. In 2018, the voters of Senate District 41 elected me to fight for them in the Iowa State Senate. In 2020, I was elected to congress by a six-vote margin, one of the closest races in United States election history. Then in 2022, the voters of southeastern Iowa elected me yet again to fight for our values in the U.S. House of Representatives. I am honored to go to work on their behalf every day.\nWe need your help.\n## Recount Confirms Miller-Meeks Victory\nDecember 6, 2024\n## Miller-Meeks Wins Third Term in Congress\nNovember 15, 2024\n## 20 Counties Certify Miller-Meeks Election Win\nNovember 15, 2024\n## Upcoming Events\nNo upcoming events are scheduled right now."
+    }
+   ],
    "posts": []
   }
  ]
