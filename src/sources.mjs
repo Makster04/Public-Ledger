@@ -106,8 +106,8 @@ export function describeFailure(error){
 // allow lists HTTP statuses that return null instead of failing (allow404 is the same as allow:[404]); a 3xx in allow
 // is returned rather than followed. follow allows up to 3 redirects, each to an approved https host; otherwise any
 // redirect fails. headers adds request headers (never a credential header); withHeaders returns {body, status,
-// headers} so a caller can read the response's cookies.
-export async function requestSource(url, env, {json=true,as=json?'json':'xml',allow404=false,allow=allow404?[404]:[],follow=false,body=null,form=null,headers:extra=null,withHeaders=false,maxChars=12_000_000}={}) {
+// headers} so a caller can read the response's cookies. timeout: milliseconds to wait for an answer (20 seconds).
+export async function requestSource(url, env, {json=true,as=json?'json':'xml',allow404=false,allow=allow404?[404]:[],follow=false,body=null,form=null,headers:extra=null,withHeaders=false,maxChars=12_000_000,timeout=20000}={}) {
   let u=new URL(url),h=hostRule(u.hostname); if(u.protocol!=='https:' || !h) throw new SourceError('Unapproved data source');
   const missing=missingKey(u.hostname,env);if(missing)throw new SourceError(`${missing} API key needed`);
   const headers={Accept:as==='json'?'application/json':as==='xml'?'application/rss+xml,application/atom+xml,application/xml,text/xml':'*/*'};
@@ -122,7 +122,7 @@ export async function requestSource(url, env, {json=true,as=json?'json':'xml',al
   const manual=follow||allow.some(s=>s>=300&&s<400);
   let response;
   for(let hop=0;;hop++){
-    response=await (env.fetch||fetch)(u,{method:payload?'POST':'GET',headers,body:payload,signal:AbortSignal.timeout(20000),redirect:manual?'manual':'error'});
+    response=await (env.fetch||fetch)(u,{method:payload?'POST':'GET',headers,body:payload,signal:AbortSignal.timeout(timeout),redirect:manual?'manual':'error'});
     if(!follow||response.status<300||response.status>=400||allow.includes(response.status))break;
     const to=response.headers.get('location');
     if(!to||hop>=3)throw new SourceError('Source redirected too many times');
