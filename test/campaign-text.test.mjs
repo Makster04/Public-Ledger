@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts,scriptText,savedIssuePages} from '../scripts/collect-campaign-text.mjs';
+import {electionDay,campaignSite,campaignYears,pageText,dropRepeated,issueLinks,indexPath,wayback,readCampaign,fecFacts,scriptText,savedIssuePages,retryable} from '../scripts/collect-campaign-text.mjs';
 
 test('election days and the years someone was on the ballot',()=>{
   assert.deepEqual([2016,2018,2020,2022,2024,2026].map(electionDay),['2016-11-08','2018-11-06','2020-11-03','2022-11-08','2024-11-05','2026-11-03']);
@@ -125,5 +125,31 @@ test('pages drawn by scripts, accordion headings, short points, and a splash pag
   });
   const c=await readCampaign(wayback({fetch:w.fetch},{wait:0,cache}),campaignSite('jonforsenate.com'),2020);
   assert.deepEqual(c.pages.map(p=>[p.date,new URL(p.original).pathname]),[['2020-10-05','/'],['2020-09-01','/where-jon-stands']]);
+  fs.rmSync(cache,{recursive:true,force:true});
+});
+
+test('a slow Wayback Machine: tried again, and a page it never sends is listed as not read while the rest are kept',async()=>{
+  const cache=fs.mkdtempSync(path.join(os.tmpdir(),'wayback-'));
+  const w=fakeWayback({
+    'jonforsenate.com':[{ts:'20201101120000',html:HOME}],
+    'jonforsenate.com/issues':[{ts:'20201020000000',html:ISSUES}],
+    'jonforsenate.com/issues/stock-trading':[{ts:'20200801000000',html:STOCKS}],
+  });
+  const slow=()=>Object.assign(new Error('The operation was aborted due to timeout'),{name:'TimeoutError'});
+  let homeTries=0;
+  const fetch=async u=>{const s=String(u);
+    // The homepage's list of copies times out twice before it answers; the health-care page never answers.
+    if(s.includes('/cdx/')&&!s.includes('matchType')&&/url=https%3A%2F%2Fjonforsenate\.com%2F&/.test(s)&&homeTries++<2)throw slow();
+    if(s.includes('health-care'))throw slow();
+    return w.fetch(u);};
+  const c=await readCampaign(wayback({fetch},{wait:0,cache}),campaignSite('jonforsenate.com'),2020);
+  assert.ok(homeTries>=3,`${homeTries}`);
+  assert.deepEqual(c.pages.map(p=>new URL(p.original).pathname),['/','/issues','/issues/stock-trading']);
+  assert.deepEqual(c.unread,['https://jonforsenate.com/issues/health-care']);
+  // The answers it did get are kept, so a second read asks only for the page it didn't get.
+  const asked=[];await readCampaign(wayback({fetch:async u=>{asked.push(String(u));return fetch(u);}},{wait:0,cache}),campaignSite('jonforsenate.com'),2020);
+  assert.ok(asked.length&&asked.every(u=>u.includes('health-care')),asked.join('\n'));
+  // What is tried again: timeouts, dropped connections, 429 and 5xx; not a 404 or a refused address.
+  assert.deepEqual([slow(),new TypeError('fetch failed'),{statusCode:429},{statusCode:503},{statusCode:404},new Error('Unapproved data source')].map(retryable),[true,true,true,true,false,false]);
   fs.rmSync(cache,{recursive:true,force:true});
 });
