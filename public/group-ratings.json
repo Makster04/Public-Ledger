@@ -1,0 +1,146 @@
+{
+ "about": "Interest groups' published ratings of the profiled members, exactly as each group gives them (scripts/collect-ratings.mjs). Shown on the Ideology tab; the Ratings lean is a check beside the issue leans, never part of a grade.",
+ "groups": {
+  "heritage": {
+   "org": "Heritage Action",
+   "lean": "conservative",
+   "issue": "Overall",
+   "url": "https://heritageaction.com/scorecard",
+   "status": "to-build"
+  },
+  "clubforgrowth": {
+   "org": "Club for Growth",
+   "lean": "conservative",
+   "issue": "Taxes & spending",
+   "url": "https://www.clubforgrowth.org/scorecards/",
+   "status": "to-build"
+  },
+  "afp": {
+   "org": "Americans for Prosperity",
+   "lean": "conservative",
+   "issue": "Taxes & spending",
+   "url": "https://americansforprosperity.org/national-scorecard/",
+   "status": "to-build"
+  },
+  "scf": {
+   "org": "Senate Conservatives Fund",
+   "lean": "conservative",
+   "issue": "Overall",
+   "url": "https://www.senateconservatives.com/",
+   "status": "none"
+  },
+  "nra": {
+   "org": "NRA",
+   "lean": "conservative",
+   "issue": "Guns",
+   "url": "https://www.nrapvf.org/grades/",
+   "status": "no-list"
+  },
+  "nrlc": {
+   "org": "National Right to Life",
+   "lean": "conservative",
+   "issue": "Abortion",
+   "url": "https://www.nrlc.org/federal/scorecard/",
+   "status": "blocked"
+  },
+  "chamber": {
+   "org": "U.S. Chamber of Commerce",
+   "lean": "conservative",
+   "issue": "Labor",
+   "url": "https://www.uschamber.com/how-they-voted",
+   "status": "to-build"
+  },
+  "nfib": {
+   "org": "NFIB",
+   "lean": "conservative",
+   "issue": "Labor",
+   "url": "https://www.nfib.com/advocacy/",
+   "status": "blocked"
+  },
+  "edf": {
+   "org": "Environmental Defense Fund",
+   "lean": "liberal",
+   "issue": "Environment",
+   "url": "https://www.edfaction.org/",
+   "status": "none"
+  },
+  "nrdc": {
+   "org": "NRDC",
+   "lean": "liberal",
+   "issue": "Environment",
+   "url": "https://www.nrdcactionfund.org/",
+   "status": "blocked"
+  },
+  "aflcio": {
+   "org": "AFL-CIO",
+   "lean": "liberal",
+   "issue": "Labor",
+   "url": "https://aflcio.org/scorecard",
+   "status": "blocked"
+  },
+  "seiu": {
+   "org": "SEIU",
+   "lean": "liberal",
+   "issue": "Labor",
+   "url": "https://www.seiu.org/",
+   "status": "none"
+  },
+  "afscme": {
+   "org": "AFSCME",
+   "lean": "liberal",
+   "issue": "Labor",
+   "url": "https://www.afscme.org/",
+   "status": "none"
+  },
+  "nea": {
+   "org": "NEA",
+   "lean": "liberal",
+   "issue": "Labor",
+   "url": "https://educationvotes.nea.org/",
+   "status": "none"
+  },
+  "aft": {
+   "org": "AFT",
+   "lean": "liberal",
+   "issue": "Labor",
+   "url": "https://www.aft.org/",
+   "status": "none"
+  },
+  "giffords": {
+   "org": "Giffords",
+   "lean": "liberal",
+   "issue": "Guns",
+   "url": "https://giffords.org/lawcenter/resources/scorecard/",
+   "status": "states"
+  },
+  "everytown": {
+   "org": "Everytown",
+   "lean": "liberal",
+   "issue": "Guns",
+   "url": "https://www.everytown.org/",
+   "status": "none"
+  },
+  "ppaction": {
+   "org": "Planned Parenthood Action",
+   "lean": "liberal",
+   "issue": "Abortion",
+   "url": "https://www.plannedparenthoodaction.org/congressional-scorecard",
+   "status": "to-build"
+  },
+  "hrc": {
+   "org": "Human Rights Campaign",
+   "lean": "liberal",
+   "issue": "Civil rights",
+   "url": "https://www.hrc.org/resources/congressional-scorecard",
+   "status": "permission"
+  },
+  "aclu": {
+   "org": "ACLU",
+   "lean": "liberal",
+   "issue": "Civil rights",
+   "url": "https://www.aclu.org/congressional-scorecards",
+   "status": "permission"
+  }
+ },
+ "people": {}
+}

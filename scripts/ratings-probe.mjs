@@ -18,14 +18,14 @@ const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; interest group scorecards)'
 // scorecard's home and, where known, the members list or a download. Some addresses are best guesses; the probe says
 // which answer.
 export const GROUPS=[
-  {key:'heritage',org:'Heritage Action for America',lean:'conservative',issue:'Overall',urls:['https://heritageaction.com/scorecard','https://heritageaction.com/scorecard/members/119']},
-  {key:'clubforgrowth',org:'Club for Growth',lean:'conservative',issue:'Taxes & spending',urls:['https://www.clubforgrowth.org/scorecards/','https://www.clubforgrowth.org/scorecards/2025-congressional-scorecard/']},
-  {key:'afp',org:'Americans for Prosperity',lean:'conservative',issue:'Taxes & spending',urls:['https://afpaction.com/scorecard/','https://americansforprosperity.org/scorecard/']},
+  {key:'heritage',org:'Heritage Action for America',lean:'conservative',issue:'Overall',urls:['https://heritageaction.com/scorecard','https://heritageaction.com/scorecard/members/119','https://heritageaction.com/api/scorecard/scores/member','https://heritageaction.com/api/scorecard/scores/states','https://heritageaction.com/api/scorecard/scores/averageforchamber','https://heritageaction.com/api/scorecard/scores/mostconservative']},
+  {key:'clubforgrowth',org:'Club for Growth',lean:'conservative',issue:'Taxes & spending',urls:['https://www.clubforgrowth.org/scorecards/','https://www.clubforgrowth.org/scorecards/app/?party=all&chamber=S&yr=2025&state=all&rep','https://www.clubforgrowth.org/scorecards/app/?party=all&chamber=H&yr=2025&state=all&rep']},
+  {key:'afp',org:'Americans for Prosperity',lean:'conservative',issue:'Taxes & spending',urls:['https://americansforprosperity.org/national-scorecard/','https://americansforprosperity.org/wp-json/']},
   {key:'scf',org:'Senate Conservatives Fund',lean:'conservative',issue:'Overall',urls:['https://senateconservatives.com/scorecard']},
   {key:'nra',org:'NRA',lean:'conservative',issue:'Guns',urls:['https://www.nrapvf.org/grades/','https://www.nrapvf.org/']},
   {key:'sba',org:'SBA Pro-Life America',lean:'conservative',issue:'Abortion',urls:['https://sbaprolife.org/scorecard','https://sbaprolife.org/national-pro-life-scorecard']},
   {key:'nrlc',org:'National Right to Life',lean:'conservative',issue:'Abortion',urls:['https://www.nrlc.org/federal/scorecard/','https://www.nrlc.org/federal/votingrecords/']},
-  {key:'chamber',org:'U.S. Chamber of Commerce',lean:'conservative',issue:'Labor',urls:['https://www.uschamber.com/how-they-voted','https://www.uschamber.com/how-they-voted/scorecard']},
+  {key:'chamber',org:'U.S. Chamber of Commerce',lean:'conservative',issue:'Labor',urls:['https://www.uschamber.com/how-they-voted','https://www.uschamber.com/how-they-voted-methodology']},
   {key:'nfib',org:'NFIB',lean:'conservative',issue:'Labor',urls:['https://www.nfib.com/advocacy/how-congress-voted/','https://www.nfib.com/advocacy/voting-records/']},
   {key:'lcv',org:'League of Conservation Voters',lean:'liberal',issue:'Environment',urls:['https://scorecard.lcv.org/','https://scorecard.lcv.org/members-of-congress']},
   {key:'edf',org:'Environmental Defense Fund',lean:'liberal',issue:'Environment',urls:['https://www.edfaction.org/scorecard']},
@@ -37,7 +37,7 @@ export const GROUPS=[
   {key:'aft',org:'AFT',lean:'liberal',issue:'Labor',urls:['https://www.aft.org/scorecard']},
   {key:'giffords',org:'Giffords',lean:'liberal',issue:'Guns',urls:['https://giffords.org/scorecard/']},
   {key:'everytown',org:'Everytown',lean:'liberal',issue:'Guns',urls:['https://www.everytown.org/scorecard/']},
-  {key:'ppaction',org:'Planned Parenthood Action',lean:'liberal',issue:'Abortion',urls:['https://www.plannedparenthoodaction.org/congressional-scorecard']},
+  {key:'ppaction',org:'Planned Parenthood Action',lean:'liberal',issue:'Abortion',urls:['https://www.plannedparenthoodaction.org/congressional-scorecard','https://www.plannedparenthoodaction.org/congressional-scorecard/senate','https://www.plannedparenthoodaction.org/congressional-scorecard/house']},
   {key:'rfa',org:'Reproductive Freedom for All',lean:'liberal',issue:'Abortion',urls:['https://reproductivefreedomforall.org/congressional-record/','https://reproductivefreedomforall.org/scorecard/']},
   // ACLU and HRC: probed only to see what they publish; their ratings wait on their permission (.03_Future_Goals.md).
   {key:'hrc',org:'Human Rights Campaign',lean:'liberal',issue:'Civil rights',permission:true,urls:['https://www.hrc.org/resources/congressional-scorecard']},
