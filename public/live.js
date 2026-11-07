@@ -218,7 +218,9 @@ export const RecordLive={
     const unread=(p?.merged?.tradesUnread||[]).length,ready=!!job&&job.status==='ready'&&!job.stale;
     const why=!sec?'Their stock trade reports haven\'t been read yet':sec.more?'Their older trade reports are still being read':unread?`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`:!ready?(job?.error||'The latest read of their trade reports hasn\'t finished'):null;
     const official=(p?.merged?.trades||[]).filter(t=>t.official);
+    const part=k=>p?.sections?.[k]||null;
     return {netWorth:p?.sections?.['net-worth-house']||p?.sections?.['net-worth-senate']||null,sizes:p?.sections?.['donor-sizes']||null,
+      money:{history:part('campaign-history'),pacs:part('pac-history'),efile:part('pac-efile'),states:part('donor-states'),jfc:part('joint-fundraising')},
       trades:{rows:official,covered:!why,why,checkedAt:sec?.checkedAt||null}};
   },
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},

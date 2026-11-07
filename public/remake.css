@@ -1014,3 +1014,13 @@ input, select { accent-color: var(--accent); }
 .st-kinds .mm-bar { grid-template-columns: minmax(0, 14rem) minmax(0, 1fr) 7.2rem; }
 @media (max-width: 480px) { .st-kinds .mm-bar { grid-template-columns: minmax(0, 1fr) 7.2rem; } }
 .st-assetyears .st-assets-tools { flex-wrap: wrap; }
+.st-period { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 14px; font-size: .88rem; }
+.st-period select { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-2); border-radius: 8px; padding: 6px 10px; margin-left: 6px; }
+.st-geo { margin: 8px 0 14px; }
+.st-geo-bar { display: flex; gap: 2px; height: 14px; border-radius: 7px; overflow: hidden; background: var(--surface-2); }
+.st-geo-bar span { display: block; height: 100%; }
+.st-geo-bar .in, .st-geo-key i.in { background: var(--s2); }
+.st-geo-bar .out, .st-geo-key i.out { background: var(--ink-2); opacity: .55; }
+.st-geo-key i.unk { background: var(--surface-2); border: 1px solid var(--line-2); }
+.st-geo-key { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; }
+.st-geo-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }

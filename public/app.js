@@ -10,7 +10,8 @@ import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRo
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
-import {pacTypeOf,pacKindTotals} from './pac-types.js';
+import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
+import {periodCycles,periodLabel,periodOptions,combinePeriod} from './fec-money.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
@@ -886,7 +887,7 @@ function unboughtBreakdown(x){
 function unboughtCalc(s,x){
   const W=UNBOUGHT[s.chamber==='S'?'S':'H'],ch=s.chamber==='S'?'Senate':'House';
   return `${stF('Unbought = 75 + Donor − PAC − PAC Reliance − Earmarks − Stocks − Trades + Bonuses + Pledges, never below 0')}
-    <p class="small"><b>${ch} weights.</b> Donor: share of receipts × ${W.donor.join(' · ')} for gifts ≤$200, $200–499, $500–999, $1,000–1,999 and $2,000+ (unitemized ${W.unitemized}, not yet sorted ${W.unsorted}, self-funding ${W.self}, joint fundraising ${W.joint}), up to ${W.donorCap}.
+    <p class="small"><b>${ch} weights.</b> Donor: share of receipts × ${W.donor.join(' · ')} for gifts ≤$200, $200–499, $500–999, $1,000–1,999 and $2,000+ (unitemized ${W.unitemized}, not yet sorted ${W.unsorted}, self-funding ${W.self}, joint fundraising ${W.joint}), up to ${W.donorCap}. Money a joint fundraising committee passed on is credited to the people who gave it, by the size of each share, when its records are read.${x?.period?` <b>Period:</b> ${esc(x.period)}.`:''}
     PAC: dollars × ${Object.entries(W.pac).filter(([k])=>k!=='ideological'&&k!=='other').map(([k,v])=>`${UNBOUGHT_PAC_LABEL[k].toLowerCase()} ${v}`).join(' · ')}, up to ${UNBOUGHT.pacFloor}.
     PAC Reliance: ${UNBOUGHT.reliance.max} × Hill(PAC share, ${UNBOUGHT.reliance.midpoint*100}%). Earmarks: dollars × ${UNBOUGHT.earmark} (not ActBlue or WinRed).
     Stocks: ${UNBOUGHT.stocks.max} × Hill(stock value, $${UNBOUGHT.stocks.midpoint.toLocaleString('en-US')}). Trades: ${UNBOUGHT.trades.countMax} × Hill(count, ${UNBOUGHT.trades.countMidpoint}) + ${UNBOUGHT.trades.valueMax} × Hill(value, $${UNBOUGHT.trades.valueMidpoint.toLocaleString('en-US')}).
@@ -958,21 +959,102 @@ function holdingsEvidence(s,d,x){
 function pledgesEvidence(s,pl){
   return `<section class="st-sec" id="u-pledges"><h4 class="st-sub">Pledges and reform bills</h4>${stTable(['Category','Points','How'],pl.map(p=>[esc(p.label),p.points?`+${p.points}`:'0',p.via==='pledge'?'Signed the pledge':p.via==='bill'?`Cosponsored ${esc(p.title||p.bill||'a reform bill')}`:p.via==='broken'?'Pledge reviewed as broken: no point':'No pledge or cosponsored bill on file']),'',[1])}<p class="small muted">The corporate-PAC pledge counts as its own +1 bonus. A broken pledge also counts as broken in Keeps Their Word.</p></section>`;
 }
+// The cycle the campaign's current totals are in (an election year).
+const curCycle=s=>{const y=Number(String(s.camp?.end||'').slice(0,4))||new Date().getFullYear();return y%2?y+1:y;};
+// ----- Unbought: periods, and the FEC money read beyond the cycle's totals (public/fec-money.js) -----
+// What each earlier cycle has on file, from the refreshed FEC records: the committee's totals, gift sizes, PAC lines,
+// joint fundraising, and (from research.json "bundled") gifts routed through groups.
+function unboughtPast(s,d){
+  const m=d?.money||{},camp={};
+  for(const r of m.history?.cycles||[]){
+    // A cycle read before the itemized and transfer totals were kept waits for the next refresh, rather than counting 0.
+    if(r.itemized===undefined)continue;
+    camp[r.cycle]={receipts:r.receipts,indiv:r.individual,itemized:r.itemized,unitemized:r.unitemized,pac:r.pac,transfers:r.transfers,self:r.self,start:r.start,end:r.end};
+  }
+  const jfc={};for(const [cy,j] of Object.entries(m.jfc?.cycles||{}))if(!j.partial)jfc[cy]=j;
+  const earmarks={};
+  for(const [group,r] of Object.entries(DATA.bundled?.people?.[s.id]||{}))for(const [cy,c] of Object.entries(r.byCycle||{}))(earmarks[cy]||=[]).push({group,amount:c.routed});
+  return {camp,sizes:d?.sizes?.cycles||{},pacs:m.pacs?.cycles||{},jfc,earmarks};
+}
+const pacKindOf=cid=>{const c=(DATA.pacCommittees||{})[cid];return c?pacKind(c):null;};
+// The Unbought result for a period: 'this' (the current cycle, as the grade is shown everywhere) or a span of cycles.
+function unboughtFor(s,inputs,d,period){
+  const current=curCycle(s),m=d?.money||{};
+  const curPacs=inputs.pacRows.length?inputs.pacRows:(m.pacs?.cycles?.[current]?.committees||[]).map(c=>({kind:c.kind||pacKindOf(c.cid),amount:c.amount})).filter(r=>r.kind);
+  const curJfc=m.jfc?.cycles?.[current]&&!m.jfc.cycles[current].partial?m.jfc.cycles[current]:null;
+  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:!!DATA.bundled?.discovered};
+  const past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
+  if(cycles.length===1&&cycles[0]===current)return unbought(s,{...common,pacRows:curPacs,earmarks:inputs.earmarks,sizes:d?.sizes||null,jfc:curJfc});
+  const label=periodLabel(period,current);
+  const unreadEarmarks=cycles.filter(cy=>cy!==current&&!(DATA.bundled?.cycles||[]).includes(cy));
+  const c=combinePeriod(cycles,current,{camp:s.camp,sizes:d?.sizes||null,pacRows:curPacs,earmarks:inputs.earmarks,jfc:curJfc},past,{typeOf:pacKindOf});
+  const wait=why=>({...unbought(s,{...common,pacRows:curPacs,earmarks:inputs.earmarks,sizes:d?.sizes||null,jfc:curJfc}),pct:null,raw:null,why,period:label});
+  if(c.missing.length)return wait(c.why);
+  const x={...unbought({...s,camp:c.camp},{...common,pacRows:c.pacRows,earmarks:c.earmarks,sizes:c.sizes,jfc:c.jfc}),period:label};
+  // The period's own numbers, with the earmarks of a cycle not read yet marked waiting, and no score.
+  if(unreadEarmarks.length){
+    const span=unreadEarmarks.map(cy=>`${cy-1}–${cy}`).join(', '),e=x.parts.find(q=>q.key==='earmarks');
+    if(e){e.points=null;e.note=`Not read yet for ${span} (npm run funders:bundled)`;}
+    return {...x,pct:null,raw:null,why:x.why||`Gifts routed through groups in ${span} aren't read yet`};
+  }
+  return x;
+}
+function unboughtPeriodBar(s,d){
+  const current=curCycle(s),past=Object.keys(unboughtPast(s,d).camp).map(Number);
+  const opts=periodOptions(current,past);
+  return `<div class="st-period" id="u-period"><label>Period <select data-unbought-period ${opts.length<2?'disabled':''}>${opts.map(o=>`<option value="${o.value}">${esc(o.label)}</option>`).join('')}</select></label>
+    <span class="small muted">${opts.length<2?'Earlier cycles appear here once the FEC refresh has read them.':'The money and trades over these cycles; stocks held are from the latest annual report. Everywhere else shows this cycle.'}</span></div>`;
+}
+
+// The money's geography: itemized gifts from individuals by the donor's state.
+function statesEvidence(s,x){
+  if(!x)return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from</h4><p class="small muted">Waiting for the FEC refresh to read their gifts by state.</p></section>`;
+  if(!(x.total>0))return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from</h4><p class="small">No itemized gifts from individuals this cycle.</p></section>`;
+  const pc=v=>`${Math.round(v/x.total*100)}%`,top=x.states.slice(0,10),max=Math.max(...top.map(r=>r.total),1),homeName=x.states.find(r=>r.state===x.home)?.name||x.home;
+  const home=x.home&&s.chamber!=='P'?`<div class="st-geo"><div class="st-geo-bar" role="img" aria-label="${pc(x.inState)} from ${esc(homeName)}, ${pc(x.outState)} from other states">
+      <span class="in" style="width:${(x.inState/x.total*100).toFixed(1)}%"></span><span class="out" style="width:${(x.outState/x.total*100).toFixed(1)}%"></span></div>
+    <div class="st-geo-key small"><span><i class="in"></i>From ${esc(homeName)} <b class="num">${fmtFull(x.inState)}</b> · ${pc(x.inState)}</span><span><i class="out"></i>From other states <b class="num">${fmtFull(x.outState)}</b> · ${pc(x.outState)}</span>${x.unknown>0?`<span><i class="unk"></i>No state given ${fmtFull(x.unknown)}</span>`:''}</div></div>`:'';
+  return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from <span class="muted small">· ${esc(x.cycle-1)}–${esc(x.cycle)}</span></h4>${home}
+    <div class="st-check"><h4>Top states</h4><div class="mm-bars st-kinds" role="list">${top.map(r=>`<div class="mm-bar" role="listitem" title="${esc(r.name)}: ${fmtFull(r.total)}, ${r.share}%"><span>${esc(r.name)}${r.state===x.home?' <span class="muted">· home</span>':''}</span><span class="mm-track"><span style="width:${(r.total/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(r.total)} · ${r.share}%</span></div>`).join('')}</div></div>
+    <p class="small muted">Itemized gifts from individuals only (a donor's gifts over $200 in the cycle), by the address on the report. The FEC has no address for smaller gifts. Shown only; no score uses it.${x.source?` <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</p></section>`;
+}
+// PAC money in reports the FEC hasn't processed yet, marked with a *.
+function efileEvidence(x){
+  if(!x)return '';
+  const head='<h4 class="st-sub">PAC money not yet processed by the FEC</h4>';
+  if(!x.count)return `<section class="st-sec" id="u-efile">${head}<p class="small">No PAC contributions in reports filed since ${esc(fmtDate(x.since))}, when the FEC's processed totals end.</p></section>`;
+  return `<section class="st-sec" id="u-efile">${head}<p class="small"><b class="num">${fmtFull(x.total)}</b> from ${x.count} PAC contribution${x.count===1?'':'s'} in ${x.files} report${x.files===1?'':'s'} filed since ${esc(fmtDate(x.since))}.</p>
+    ${stTable(['PAC','Date','Amount'],x.rows.slice(0,40).map(r=>[`${esc(r.name)}*${r.url?` <a class="small" href="${esc(r.url)}" target="_blank" rel="noopener">filing ↗</a>`:''}`,esc(fmtDate(r.date)),fmtFull(r.amount)]),'',[2])}
+    ${x.count>40?`<p class="small muted">${x.count-40} more in the filings.</p>`:''}
+    <p class="small muted">* From the reports as filed, before the FEC checks and processes them. They join the PAC totals, and the score, once the FEC processes them.${x.more?' More filings than were read this time; the rest come in the next refresh.':''}${x.source?` <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC raw filings ↗</a>`:''}</p></section>`;
+}
+// Joint fundraising, credited back to the people who gave it.
+function jfcEvidence(j,cycle){
+  const head='<h4 class="st-sub">Joint fundraising, credited to donors</h4>';
+  if(!j)return '';
+  if(j.partial)return `<section class="st-sec" id="u-jfc">${head}<p class="small">Too many joint fundraising records this cycle to read in full, so its money counts at the joint fundraising rate in the score rather than being credited back.</p></section>`;
+  if(!(j.transferred>0))return `<section class="st-sec" id="u-jfc">${head}<p class="small">No money from joint fundraising committees in ${esc(cycle-1)}–${esc(cycle)}.</p></section>`;
+  const max=Math.max(...j.bands,1),labels=['$200 and under','$200.01 – $499.99','$500 – $999.99','$1,000 – $1,999.99','$2,000 and over'];
+  return `<section class="st-sec" id="u-jfc">${head}<p class="small"><b class="num">${fmtFull(j.transferred)}</b> passed on by ${j.from.length} joint fundraising committee${j.from.length===1?'':'s'}${j.from.length?` (${j.from.slice(0,3).map(f=>esc(f.name)).join(', ')}${j.from.length>3?', …':''})`:''}. Credited back to the people who gave it, by the size of each one's share:</p>
+    <div class="st-check"><h4>Joint fundraising money by the size of each share</h4><div class="mm-bars st-kinds" role="list">${j.bands.map((b,i)=>`<div class="mm-bar" role="listitem" title="${labels[i]}: ${fmtFull(b)}"><span>${labels[i]}</span><span class="mm-track"><span style="width:${(b/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(b)} · ${Math.round(b/(j.people||1)*100)}%</span></div>`).join('')}</div></div>
+    <p class="small muted">${j.shares.toLocaleString('en-US')} people's shares are listed on the reports; ${fmtFull(j.unlisted)} isn't, which is people whose share was $200 or less, so it counts as small gifts. ${j.committees>0?`${fmtFull(j.committees)} came from PACs and other committees and stays committee money. `:''}${j.scaled?'The listed shares add up to more than was passed on (they are listed before the committee\'s costs), so each is scaled down to fit. ':''}The Donor part of the score uses these sizes.</p></section>`;
+}
 function paneUnbought(s,pane){
   const inputs=unboughtInputs(s);
   const draw=(x,d)=>stFrame(s,'unbought',{
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
-    notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],['Earmarks are partial.','Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
+    notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],DATA.bundled?.discovered?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.','Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
-    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
+    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}<div id="u-fec"></div>${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
-    assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
+    assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
     method:'unbought'});
   const first=s.office?unbought(s):unbought(s,{...inputs});
   pane.innerHTML=draw(s.office?first:{...first,pct:null,why:null,loading:'the FEC gift sizes and their financial disclosure'},null);
+  if(!s.office)pane.querySelector('.st-grid')?.insertAdjacentHTML('beforebegin',unboughtPeriodBar(s,null));
   const mountShown=()=>{
     const fin=pane.querySelector('#u-finance'),con=pane.querySelector('#u-connections');
     if(fin){(s.office?paneFinanceOffice:paneFinance)(s,fin);fin.querySelector('h2')?.remove();fin.querySelector('.intro')?.remove();fin.querySelector('.pts')?.remove();fin.querySelector('#f-map')?.remove();}
@@ -982,11 +1064,20 @@ function paneUnbought(s,pane){
   if(s.office)return;
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
     if(!pane.isConnected||!location.hash.startsWith('#'+s.id))return;
-    const x=unbought(s,{...inputs,sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
-    if(!d)x.why='The update service is offline, so their financial disclosure can\'t be read right now';
-    const card=pane.querySelector('.st-grid');if(card){const tmp=document.createElement('div');tmp.innerHTML=draw(x,d);card.replaceWith(tmp.querySelector('.st-grid'));}
+    const offline='The update service is offline, so their financial disclosure can\'t be read right now';
+    const x=unboughtFor(s,inputs,d,'this');
+    if(!d)x.why=offline;
+    // The score card and its calculation, for this cycle or the period picked.
+    const show=y=>{
+      const card=pane.querySelector('.st-grid');if(card){const tmp=document.createElement('div');tmp.innerHTML=draw(y,d);card.replaceWith(tmp.querySelector('.st-grid'));}
+      const calc=pane.querySelectorAll('.st-more .st-more-b')[1];if(calc)calc.innerHTML=unboughtCalc(s,y);
+    };
+    show(x);
+    const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);
+      nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
+    const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
+    if(fec&&d)fec.innerHTML=statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy);
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
-    const calc=pane.querySelectorAll('.st-more .st-more-b')[1];if(calc)calc.innerHTML=unboughtCalc(s,x);
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
   });
 }
@@ -1636,7 +1727,7 @@ function conduitBlock(s){
   if(B){
     const names=Object.keys(B.conduits||{}).map(k=>(GPBY[k]||{}).org||k);
     const hand=c.status==='measured'||c.status==='present';
-    const auto=mine.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Gifts forwarded</th><th class="r">Amount</th></tr></thead><tbody>${mine.map(([k,v])=>`<tr><td>${orgName((GPBY[k]||{}).org||k,ORGS.group(k))}<div class="small"><a href="${esc(v.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a>${v.direct?` · its PAC's own checks, ${fmtFull(v.direct)}, are in the PAC table above`:''}</div></td><td class="small">${esc(bundledCycle(s.id,k))}</td><td class="r">${v.n?v.n.toLocaleString():'—'}</td><td class="r"><b class="num">${fmtFull(v.routed)}</b></td></tr>`).join('')}</tbody></table></div>`
+    const auto=mine.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Gifts forwarded</th><th class="r">Amount</th></tr></thead><tbody>${mine.map(([k,v])=>`<tr><td>${orgName((GPBY[k]||{}).org||B.names?.[k]||k,ORGS.group(k))}<div class="small"><a href="${esc(v.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a>${v.direct?` · its PAC's own checks, ${fmtFull(v.direct)}, are in the PAC table above`:''}</div></td><td class="small">${esc(bundledCycle(s.id,k))}</td><td class="r">${v.n?v.n.toLocaleString():'—'}</td><td class="r"><b class="num">${fmtFull(v.routed)}</b></td></tr>`).join('')}</tbody></table></div>`
       :hand?'':`<div class="note">None of the groups tracked here (${esc(names.join(', '))}) forwarded donors' gifts to ${esc(s.short)}'s campaign, in the FEC's processed records as of ${esc(fmtDate(B.asOf))}.</div>`;
     const read=`From each group's PAC's own FEC reports, read ${esc(fmtDate(B.asOf))}. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.`;
     if(!mine.length&&hand)body=`${body}${note}<p class="small muted" style="margin:6px 0 0">The automatic reading of every campaign's bundled gifts (from each group's PAC's own FEC reports, ${esc(fmtDate(B.asOf))}) found none for ${esc(s.short)}, so the figure researched by hand above stands.</p>`;
