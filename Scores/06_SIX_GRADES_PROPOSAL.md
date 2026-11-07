@@ -1,22 +1,22 @@
-# Six grades: proposal for sign-off
+# Six scores: proposal for sign-off
 
 Status: proposed November 7, 2026. Nothing here runs yet. Until it's built, the formulas in the
 [score methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md) are what the site uses.
 
-The Integrity grade is retired and split into separate grades. Unbought uses
+The Integrity grade is retired and split into separate grades, and Your Match becomes part of a new Ideology tab. Unbought uses
 [IntegrityIndex.us](https://integrityindex.us/methodology)'s published formula, credited to them.
 
-| # | Grade | Definition in one line |
+| # | Score | Definition in one line |
 |---|---|---|
-| 1 | **Your Match** | How closely their record matches your views |
+| 1 | **Ideology** (a position, not a grade) | Where they stand from liberal to conservative, overall and on each issue |
 | 2 | **Keeps Their Word** | How often they did what they promised |
 | 3 | **Shows Up** | Whether they vote and get their bills moving |
 | 4 | **Unbought** | How independent their money is from special interests |
 | 5 | **Above Board** | Whether their money is tied to their office, whether they file on time, and whether they're in legal trouble |
 | 6 | **People First** | Whether their votes favor working people over business interests |
 
-**Rules for every grade:**
-- **Letter grades:** A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F below 60.
+**Rules for every score:**
+- **Letter grades** (scores 2–6): A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F below 60. Ideology uses its own liberal-to-conservative scale.
 - **Not enough evidence:** **Not graded**, never a zero.
 - **Missing data:** stays unknown, never a clean record.
 - **Rounding:** only the displayed grade is rounded.
@@ -32,23 +32,114 @@ Shares are fractions from 0 to 1 unless a formula says percent.
 
 ---
 
-## 1. Your Match
+## 1. Ideology
 
-**Definition:** how closely a politician's record matches the positions you choose, weighted by how much you care about
-each issue. It's personal to you. It doesn't measure honesty, ethics, or whether their policies help working people.
+**Definition:** where a politician stands from liberal to conservative, overall and issue by issue. It comes from their
+own record, the ratings interest groups on both sides give them, and Voteview's standard measure.
 
-**Formula:**
+**It's a position, not a grade.** Being liberal or conservative isn't good or bad, so it gets a scale instead of a
+letter:
 
 ```text
-Your Match = 100 × Σ(importance × matching evidence) ÷ Σ(importance × all evidence)
-
-importance  low 1 · medium 2 · high 3
-evidence    a vote, bill or official act 1 · a statement 0.5 (only on an issue with no action)
+−100 ───────── −60 ───────── −20 ───────── +20 ───────── +60 ───────── +100
+ Very liberal       Liberal        Moderate       Conservative     Very conservative
 ```
 
-**Rules:** each bill counts once.
+**What the tab shows:**
+1. **Overall lean:** one number on the scale, and a strip showing where they sit among their party and their chamber.
+2. **Lean on each issue:** health care, taxes, immigration, abortion, civil rights, guns, climate, labor, voting and
+   the rest, each on the same scale, with the votes and statements behind it.
+3. **Group ratings:** the grades interest groups give them, shown in opposing pairs, exactly as each group published
+   them, with the year and a link.
+4. **DW-NOMINATE:** Voteview's career score, as an independent check.
+5. **Your Match:** you set your own position on each issue, and the tab shows how close they are to you.
 
-**Minimum:** 3 issues with evidence, covering at least half the importance you chose.
+**Group ratings, in opposing pairs:**
+
+| Issue | Conservative side | Liberal side |
+|---|---|---|
+| Guns | NRA | Giffords, Everytown |
+| Abortion | SBA Pro-Life America, National Right to Life | Planned Parenthood Action, Reproductive Freedom for All |
+| Environment | (none tracked yet) | LCV, EDF, NRDC |
+| Labor | U.S. Chamber of Commerce, NFIB | AFL-CIO, SEIU, AFSCME, NEA, AFT |
+| Taxes and spending | Club for Growth, Americans for Prosperity | (none tracked yet) |
+| Civil rights | (none tracked yet) | HRC, ACLU |
+| Overall | Heritage Action, Senate Conservatives Fund | (none tracked yet) |
+
+**What it uses:**
+- **Their record:** votes, bills and cosponsorships, plus statements, campaign promises and posts. Statements count half,
+  and only on an issue with no votes or bills.
+- **Group positions:** the positions of the 36 groups already tracked (`groupPos`), to tell which side of each vote is
+  the conservative one.
+- **Group scorecards:** each group's own published scorecard for the ratings, read from its website by a script once a
+  year.
+  - A group whose site blocks scripts, or that publishes only images, is left out rather than entered by hand.
+  - ACLU and HRC are asked for permission first.
+  - Vote Smart has all these ratings in one place but costs $350 a month, so it isn't used.
+- **Voteview:** for DW-NOMINATE.
+
+**Formulas:**
+
+**Which side of a vote is conservative.** Group lean is +1 for a conservative group and −1 for a liberal one; group
+position is +1 if the group supported the bill and −1 if it opposed it.
+
+```text
+Side of a vote = sign of Σ (group lean × group position)
+```
+
+- **When no tracked group took a position:** the side most Republicans took counts as conservative, as long as most
+  Democrats took the other side.
+- **When there are no groups and no party split:** the vote doesn't count.
+- **Groups that don't decide sides:** industry groups (banks, hospitals, realtors, PhRMA, crypto), AIPAC and J Street.
+  Their positions aren't about left and right.
+
+**Lean on each issue.** C is the actions on the conservative side and L the actions on the liberal side. A vote, bill or
+cosponsorship counts 1 and a statement 0.5. It needs at least 3 actions on the issue.
+
+```text
+Issue lean = 100 × (C − L) ÷ (C + L)
+```
+
+**Overall lean.** It averages the left–right issues, each counting the same. It needs at least 3 issues.
+
+```text
+Overall lean = average of the issue leans
+```
+
+The issues that split both parties aren't averaged in: Ukraine, war powers, tariffs, Jan. 6 and ethics. They're still
+shown, with the note "the conservative side here is the one most Republicans took."
+
+**Group ratings, as one number.** Each score runs 0 to 100. Letter grades convert as A = 100, B = 75, C = 50, D = 25
+and F = 0.
+
+```text
+Ratings lean = average over the groups that rated them of:
+    a conservative group:  2 × score − 100
+    a liberal group:      −(2 × score − 100)
+```
+
+**DW-NOMINATE, on the same scale:**
+
+```text
+DW-NOMINATE lean = 100 × their first-dimension score
+```
+
+**Your Match.** You pick your position on each issue: liberal −100, lean liberal −50, moderate 0, lean conservative +50,
+conservative +100. Importance is low 1, medium 2 or high 3.
+
+```text
+Your Match = 100 − Σ (importance × |your position − their issue lean|) ÷ (2 × Σ importance)
+```
+
+**The headline number:** the overall lean comes from the issue leans alone. The ratings lean and DW-NOMINATE are shown
+beside it as two independent checks, so a gap between them shows up rather than being averaged away.
+
+**Example:**
+- **Issue leans:** guns +80, abortion +60, taxes +70, climate +40, labor +20. Overall lean **+54, Conservative**.
+- **Ratings lean:** NRA A (+100), LCV 20% (+60), AFL-CIO 30% (+40). **+67**.
+- **DW-NOMINATE:** 0.45. **+45**.
+
+The three agree, so the reading is solid.
 
 ---
 
@@ -335,8 +426,7 @@ People First = 75 · W ÷ (W + P) + 25 − 16.25 · min(1, Excess ÷ 25) − 8.7
 - the money map, receipts, outside spending and bundled gifts;
 - net worth, holdings and trades;
 - timing flags;
-- Donor Loyalty;
-- DW-NOMINATE.
+- Donor Loyalty.
 
 **Score history:** past Integrity, Ethics and Promises Delivered values stay in `public/score-log.json`, and the change
 is logged as a rule change.
@@ -347,7 +437,8 @@ is logged as a rule change.
 - **Vote Donor Alignment:** Donor Loyalty covers it.
 - **Statement–action consistency:** it needed a paid OpenAI key and produced no results; Keeps Their Word covers it.
   The code and the saved trial stay in the repo.
-- **Key-vote position:** DW-NOMINATE covers it.
+- **Key-vote position:** replaced by the issue leans on the Ideology tab.
+- **Your Match as a separate grade:** now part of the Ideology tab, built from the issue leans.
 
 **Dropped, as parts of other measures:**
 - **The CCI's money parts:** business PAC share and employee giving.
@@ -360,8 +451,10 @@ is logged as a rule change.
 
 **Build order:**
 1. **Campaign promises, steps 2–4,** so Keeps Their Word covers more than 13 of 59 profiles.
-2. **The grades.** The six grades, the renames, the methodology pages and the score-log entry, in one change.
-3. **Unbought's formula,** with the House and Senate weights and the labeled fill-ins.
-4. **Automatic House disclosures,** then the one-time Senate try.
-5. **The disclosure reader** for income, gifts and travel (task #13).
-6. **The email to IntegrityIndex.us** with the open questions.
+2. **The scores.** The Ideology tab and the five grades, the renames, the methodology pages and the score-log entry, in
+   one change.
+3. **Group scorecards:** a reader for each group's published scorecard, run once a year.
+4. **Unbought's formula,** with the House and Senate weights and the labeled fill-ins.
+5. **Automatic House disclosures,** then the one-time Senate try.
+6. **The disclosure reader** for income, gifts and travel (task #13).
+7. **The email to IntegrityIndex.us** with the open questions.
