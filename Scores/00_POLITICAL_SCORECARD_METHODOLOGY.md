@@ -6,7 +6,7 @@ This is the canonical guide to every score, index, and position measure currentl
 
 There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional.
 
-A proposal to replace Integrity with six separate grades (Your Match, Keeps Their Word, Shows Up, Unbought, Above Board and People First) is in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md). It isn't built; until it is, the formulas below are what the site uses.
+A proposal for six scores (an Ideology tab, which takes in Your Match, and five grades replacing Integrity: Keeps Their Word, Shows Up, Unbought, Above Board and People First) is in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md). It isn't built; until it is, the formulas below are what the site uses.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
@@ -144,4 +144,4 @@ Ethics and Promises Delivered are earlier published grades. Their past values st
 - [Integrity](03_INTEGRITY_SCORE.md), including the Promises Delivered, Insider Trading, Stock Disclosure Dodger and Legal Trouble indices, and the historical Ethics and Promises Delivered grades
 - [People First and the Corporation Compromised Index](04_PEOPLE_FIRST_SCORE.md)
 - [Money & Influence analysis](05_MONEY_&_INFLUENCE_ANALYSIS.md)
-- [Six grades: proposal for sign-off](06_SIX_GRADES_PROPOSAL.md)
+- [Six scores: proposal for sign-off](06_SIX_GRADES_PROPOSAL.md)
