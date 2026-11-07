@@ -740,7 +740,8 @@ function sectionSwitch(s,items,active){
 // ---------- The six score tabs (Scores/06_SIX_GRADES_PROPOSAL.md) ----------
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
-const SIX_CTX={attendance:window.ATTENDANCE||null,getItDone:window.GET_IT_DONE||null,conflicts:window.CONFLICTS||null};
+const SIX_CTX={attendance:window.ATTENDANCE||null,getItDone:window.GET_IT_DONE||null,conflicts:window.CONFLICTS||null,ratings:window.GROUP_RATINGS?.people||null};
+const GROUP_RATINGS=window.GROUP_RATINGS||{groups:{},people:{}};
 const sixCache=new Map();
 const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(s,SIX_CTX));return sixCache.get(s.id);};
 const SIX_BY=Object.fromEntries(SIX.map(x=>[x.key,x]));
@@ -783,6 +784,18 @@ const RATING_PAIRS=[['Guns',['NRA'],['Giffords','Everytown']],['Abortion',['SBA 
   ['Environment',[],['League of Conservation Voters','Environmental Defense Fund','NRDC']],['Labor',['U.S. Chamber of Commerce','NFIB'],['AFL-CIO','SEIU','AFSCME','NEA','AFT']],
   ['Taxes & spending',['Club for Growth','Americans for Prosperity'],[]],['Civil rights',[],['Human Rights Campaign','ACLU']],['Overall',['Heritage Action','Senate Conservatives Fund'],[]]];
 const leanPos=v=>((Math.max(-100,Math.min(100,v))+100)/2).toFixed(1);
+// What the probe found about a group without a reader yet (scripts/collect-ratings.mjs, PROBED).
+const RATING_WHY={blocked:'its site turns scripts away',none:'no congressional scorecard found',states:'rates states, not members of Congress',
+  'no-list':'grades are announced one at a time, not published as a list',permission:'waiting on their permission',
+  'to-build':'reader still to be written'};
+// One group's rating of this person, exactly as published, with the year and a link; or why there isn't one.
+function ratingCell(s,org){
+  const g=Object.entries(GROUP_RATINGS.groups||{}).find(([,x])=>x.org===org),key=g?.[0],grp=g?.[1];
+  const mine=(GROUP_RATINGS.people?.[s.id]||[]).find(r=>r.group===key);
+  if(mine){const v=mine.grade||`${mine.score}%`;return `<a href="${esc(mine.url)}" target="_blank" rel="noopener">${esc(org)}</a> <b>${esc(v)}</b> <span class="muted small">· ${esc(mine.year||grp?.year||'')}${mine.lifetime!=null?` · lifetime ${mine.lifetime}%`:''}</span>`;}
+  const why=grp?.read?'not rated by them':grp?.why?`not read: ${grp.why}`:grp?.status?RATING_WHY[grp.status]:'not read yet';
+  return `${grp?.url?`<a href="${esc(grp.url)}" target="_blank" rel="noopener">${esc(org)}</a>`:esc(org)} <span class="muted small">· ${esc(why)}</span>`;
+}
 function leanScale(s,x){
   const peers=ALL.filter(p=>p.id!==s.id&&p.chamber===s.chamber&&!p.office).map(p=>({p,l:sixOf(p).ideology.lean})).filter(r=>r.l!=null);
   return `<div class="st-scale" role="img" aria-label="${x.lean==null?'Not placed yet':`${esc(s.name)}: ${signed(x.lean)}, ${x.label}`}">
@@ -798,7 +811,7 @@ function paneIdeology(s,pane){
     const pos=i.cross?(i.n?`<span class="muted">Splits both parties</span>`:'—'):i.lean==null?'<span class="muted">No record yet</span>':`<b>${signed(i.lean)}</b> <span class="muted">${esc(leanLabel(i.lean))}</span>`;
     return [`<a href="#${s.id}-ideology" data-issue="${esc(i.id)}">${esc(i.label)}</a>${i.cross&&i.note?`<div class="small muted">${esc(i.note)}</div>`:''}`,pos,i.lean==null?'':`<span class="st-lean${i.lean<0?' neg':''}" style="--x:${leanPos(i.lean)}%" aria-hidden="true"><i></i></span>`,n];
   });
-  const ratings=stTable(['Issue','Conservative side','Liberal side'],RATING_PAIRS.map(([issue,con,lib])=>[esc(issue),con.length?con.map(o=>`${esc(o)} <span class="muted small">· not read yet</span>`).join('<br>'):'<span class="muted">Not tracked yet</span>',lib.length?lib.map(o=>`${esc(o)} <span class="muted small">· not read yet</span>`).join('<br>'):'<span class="muted">Not tracked yet</span>']),'st-pairs',[]);
+  const ratings=stTable(['Issue','Conservative side','Liberal side'],RATING_PAIRS.map(([issue,con,lib])=>[esc(issue),con.length?con.map(o=>ratingCell(s,o)).join('<br>'):'<span class="muted">Not tracked yet</span>',lib.length?lib.map(o=>ratingCell(s,o)).join('<br>'):'<span class="muted">Not tracked yet</span>']),'st-pairs',[]);
   const position=`<div class="st-ideo-pos"><div class="st-ideo-n">${x.lean==null?'<b>Not placed yet</b>':`<b>${signed(x.lean)}</b><span>${esc(x.label)}</span>`}</div>${leanScale(s,x)}${x.lean==null?`<p class="small">${esc(x.why)}.</p>`:''}</div>`;
   const checks=`<div class="st-checks"><div class="st-check"><h4>DW-NOMINATE <span class="muted small">(Voteview)</span></h4>${x.dw==null?'<p class="small muted">No score: it covers members of Congress, from their roll-call votes.</p>':`<div class="st-check-n">${s.ideo.dim1.toFixed(3)} → <b>${signed(x.dw)}</b></div><p class="small muted">Their career score, on the same scale. It rarely passes ±80, so it reads closer to the middle than the issue leans.</p>`}</div>
     <div class="st-check"><h4>Ratings lean</h4>${x.ratings.lean==null?'<p class="small muted">Not read yet: the groups\' scorecards are read from their own sites once a year.</p>':`<div class="st-check-n"><b>${signed(x.ratings.lean)}</b></div>`}</div></div>`;
@@ -809,7 +822,7 @@ function paneIdeology(s,pane){
     needs:x.needs,
     notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Unbought, Above Board and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
-    evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs exactly as each group gives them, with the year and a link, once read.</p>${ratings}
+    evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs exactly as each group gives them, with the year and a link.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
     shown:`<div id="rec-ideo">${ideoBlock(s,'ideo2')}<div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<div id="legislation-lists"></div><div id="legislation-record"></div>`,
     calc:`${stF('Issue lean = 100 × (conservative items − liberal items) ÷ all items')}${stF('Overall lean = average of the issue leans on the left–right issues (at least 3)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}

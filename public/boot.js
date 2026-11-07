@@ -14,6 +14,7 @@ try {
   const attendance=fetch('/attendance.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const getItDone=fetch('/get-it-done.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const conflicts=fetch('/conflicts.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const groupRatings=fetch('/group-ratings.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
   window.DATA=await response.json();
@@ -29,6 +30,7 @@ try {
   window.ATTENDANCE=await attendance;
   window.GET_IT_DONE=await getItDone;
   window.CONFLICTS=await conflicts;
+  window.GROUP_RATINGS=await groupRatings;
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
   await import('./app.js');
   await RecordLive.banner();
