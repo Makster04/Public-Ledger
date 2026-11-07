@@ -406,6 +406,71 @@ People First = 75 · W ÷ (W + P) + 25 − 16.25 · min(1, Excess ÷ 25) − 8.7
 
 ---
 
+## Profile tabs
+
+Each score gets its own tab with everything behind it, so the separate **Money & Influence**, **Legislative Activity**
+and **Integrity** tabs go away. Nothing is lost: every chart and list moves to the tab of the score it explains.
+
+Every tab follows the same order:
+1. **The score and its breakdown.** Each part has its points and links to the section that shows it.
+2. **The evidence it counts.**
+3. **"Shown, not counted."** Related records that don't change the score, each labeled that way.
+
+**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Unbought · Above Board · People First.
+
+### Overview
+- **All six scores at a glance:** the Ideology lean and the five letter grades, each linking to its tab.
+- **Three things to know.**
+- **Their race and election results.**
+- **History and source records:** when each source was last read, and the score log.
+
+### Ideology
+- **Counted:** the overall lean, then the lean on each issue, each opening to the votes, bills and statements behind it.
+  The full list of their votes and bills (from the Legislative Activity tab) lives here, sorted by issue.
+- **Checks:** DW-NOMINATE, and the group ratings in opposing pairs.
+- **Personal:** Your Match, with your own position on each issue.
+
+### Keeps Their Word
+- **Counted:** each promise with its verdict (kept, partly kept, changed, broken), the action that decided it, and where
+  the promise came from: campaign site, speech, post, press release or pledge. Automatic matches are labeled "matched
+  automatically."
+- **Shown, not counted:** promises still waiting on a vote, vague goals, and statements made in debate.
+
+### Shows Up
+- **Counted:** missed votes by year, with any reviewed absences left out; the bills they sponsored and how far each got,
+  against their party's typical rate.
+- **Shown, not counted:** Across the Aisle and Party Rebel, once built.
+
+### Unbought
+- **Counted, where the money comes from:**
+  - the money map;
+  - "The numbers" table;
+  - PACs by kind, which feeds the PAC penalty;
+  - bundled gifts, which feed Earmarks.
+- **Counted, stocks and trades:** the individual stocks held and their value (Stocks), and the number and value of their
+  trades (Trades). Their full trade list lives here.
+- **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they cosponsored.
+- **Shown, not counted:**
+  - outside spending for and against them;
+  - Donor Loyalty (whether their votes line up with their funders more than their party's do);
+  - timing flags (donations near related votes);
+  - donors by employer and industry;
+  - net worth over time.
+
+### Above Board
+- **Counted:**
+  - **Conflicts:** outside income, board seats and job deals; gifts and paid trips.
+  - **Trades:** the trades flagged as tied to their committees, votes or donors, each linking to the full trade list on
+    the Unbought tab.
+  - **Filings:** each trade report and annual report with its due date and filing date.
+  - **Legal Trouble:** each case.
+- **Shown, not counted:** committee assignments and the sectors they oversee, and lobbying aimed at their committees.
+
+### People First
+- **Counted:** each scored bill with its worker or profit strength and their action on it; business-funder voting
+  against their party; and the donor-lobbied bills (the CCI).
+- **Shown, not counted:** disputed bills.
+
 ## Decisions that go with these grades
 
 **Reading disclosures:**
@@ -451,8 +516,8 @@ is logged as a rule change.
 
 **Build order:**
 1. **Campaign promises, steps 2–4,** so Keeps Their Word covers more than 13 of 59 profiles.
-2. **The scores.** The Ideology tab and the five grades, the renames, the methodology pages and the score-log entry, in
-   one change.
+2. **The scores.** The Ideology tab and the five grades, the profile tabs above, the renames, the methodology pages
+   and the score-log entry, in one change.
 3. **Group scorecards:** a reader for each group's published scorecard, run once a year.
 4. **Unbought's formula,** with the House and Senate weights and the labeled fill-ins.
 5. **Automatic House disclosures,** then the one-time Senate try.
