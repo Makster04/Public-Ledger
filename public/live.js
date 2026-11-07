@@ -209,6 +209,18 @@ export const RecordLive={
   // The person's net-worth record, from whichever chamber's reports cover them.
   async netWorth(id){const p=await profileData(id);return p?.sections?.['net-worth-house']||p?.sections?.['net-worth-senate']||null;},
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},
+  // What the official disclosure reports read so far say, for the Unbought and Above Board grades: the latest annual
+  // report (assets), the gift sizes, and the trades (merged, with each company's industry) with whether the trade reports
+  // were read completely. null when the update service is offline.
+  async disclosure(id,chamber){
+    let p,st;try{[p,st]=await Promise.all([profileData(id),status()]);}catch{return null;}
+    const kind=chamber==='S'?'trades-senate':'trades-house',sec=p?.sections?.[kind]||null,job=st?.jobs?.find(j=>j.subject===id&&j.kind===kind)||null;
+    const unread=(p?.merged?.tradesUnread||[]).length,ready=!!job&&job.status==='ready'&&!job.stale;
+    const why=!sec?'Their stock trade reports haven\'t been read yet':sec.more?'Their older trade reports are still being read':unread?`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`:!ready?(job?.error||'The latest read of their trade reports hasn\'t finished'):null;
+    const official=(p?.merged?.trades||[]).filter(t=>t.official);
+    return {netWorth:p?.sections?.['net-worth-house']||p?.sections?.['net-worth-senate']||null,sizes:p?.sections?.['donor-sizes']||null,
+      trades:{rows:official,covered:!why,why,checkedAt:sec?.checkedAt||null}};
+  },
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},
   async standalone(host,id){
     host.innerHTML='<section class="section"><p>Loading candidate…</p></section>';

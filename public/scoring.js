@@ -4,6 +4,7 @@
 import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore,ownTrades,corporationCompromised,workersOverProfit} from './grades.js';
 import {tradesInDonors,businessLoyalty} from './influence.js';
 import {pacTypeOf} from './pac-types.js';
+import {ideology,keepsTheirWord,showsUp,aboveBoard,peopleFirst,behaviorCci} from './six-scores.js';
 
 export const voteBill=v=>billKeyFromText((v.bill||{}).measure);
 // A president's record entries on bills and orders ({bill: "119-hr-1" or "eo-14251", position: "Signed" or "Vetoed"}).
@@ -55,18 +56,42 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     const m=businessMoney(s),votes=s.funderPos?.length?businessLoyalty(s.funderPos,s.party,tallies):null;
     return Object.assign(corporationCompromised({businessPac:m?.businessPac??null,receipts:m?.receipts??null,businessVotes:votes}),{money:m,votes});
   };
+  // Their actions on scored bills: votes (newest first, so when two versions of a bill were voted on, the latest vote is
+  // the one counted), sponsorships, cosponsorships, a president's signatures, vetoes and orders, and cited statements.
+  const actionsOf=s=>{
+    const v=votes.filter(v=>v.pos&&s.id in v.pos).sort((x,y)=>String(y.date).localeCompare(String(x.date))).map(v=>({bill:voteBill(v),pos:v.pos[s.id],ref:v.id}));
+    const spons=(s.bills||[]).map((b,i)=>({bill:billKey(b.congress,b.num),kind:'sponsored',ref:`${s.id}:bill:${i}`}))
+      .concat((s.cosponsored||[]).map(b=>({bill:b.bill||billKey(b.congress,b.num),kind:'cosponsored'})))
+      .concat(executiveActions(s)).concat(billSpons.get(s.id)||[]);
+    return pvpActions(marks,v,spons,billStated.get(s.id)||[]);
+  };
+  // The reviewed trades in the research (with their sectors and near-vote flags), when someone reviewed them.
+  const reviewedTrades=s=>{
+    if(!coveredBy(s))return {rows:[],covered:false,why:s.office?'Not scored for a president':'These reports cover members of Congress only'};
+    if(!s.trades?.length)return {rows:[],covered:false,why:'Their stock trade reports haven\'t been read yet'};
+    return {rows:s.trades,covered:true,overseen:overseen(s),inDonors:trading(s).inDonors};
+  };
   return {
-    bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,cci,
+    bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,cci,actionsOf,
     promises:s=>promiseScore(s.statements,s.promiseTrackers),
     ethics:s=>ethicsScore(s.ethics,trading(s),{asOfYear}),
     pvp(s){
-      // Newest first, so when two versions of a bill were voted on, the latest vote is the one counted.
-      const v=votes.filter(v=>v.pos&&s.id in v.pos).sort((x,y)=>String(y.date).localeCompare(String(x.date))).map(v=>({bill:voteBill(v),pos:v.pos[s.id],ref:v.id}));
-      const spons=(s.bills||[]).map((b,i)=>({bill:billKey(b.congress,b.num),kind:'sponsored',ref:`${s.id}:bill:${i}`}))
-        .concat((s.cosponsored||[]).map(b=>({bill:b.bill||billKey(b.congress,b.num),kind:'cosponsored'})))
-        .concat(executiveActions(s)).concat(billSpons.get(s.id)||[]);
       // The grade: 75% these actions on scored bills + 25% (100 − the Corporation Compromised Index), once both exist.
-      return workersOverProfit(pvpScore(pvpActions(marks,v,spons,billStated.get(s.id)||[])),cci(s));
+      return workersOverProfit(pvpScore(actionsOf(s)),cci(s));
     },
+    // The six scores (public/six-scores.js) that need no refreshed records. Unbought, and Above Board's trading indexes,
+    // also use the official reports read by the refresh, so the page adds those (ctx.trades, ctx.snapshot …).
+    // ctx: {attendance, getItDone, conflicts, trades}.
+    six(s,ctx={}){
+      const v=pvpScore(actionsOf(s)),votes=s.office?null:(s.funderPos?.length?businessLoyalty(s.funderPos,s.party,tallies):null);
+      return {
+        ideology:ideology(s,data.issues,{ratings:ctx.ratings?.[s.id]||null}),
+        word:keepsTheirWord(s),
+        showsup:showsUp(s,{attendance:ctx.attendance,getItDone:ctx.getItDone,asOfYear}),
+        aboveboard:aboveBoard(s,{trades:ctx.trades||reviewedTrades(s),conflicts:ctx.conflicts,asOfYear}),
+        peoplefirst:peopleFirst(v,behaviorCci({businessVotes:votes})),
+      };
+    },
+    reviewedTrades:s=>reviewedTrades(s),
   };
 }

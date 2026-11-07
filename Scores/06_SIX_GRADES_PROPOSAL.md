@@ -1,7 +1,7 @@
-# Six scores: proposal for sign-off
+# Six scores
 
-Status: proposed November 7, 2026. Nothing here runs yet. Until it's built, the formulas in the
-[score methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md) are what the site uses.
+Status: built November 7, 2026 (`public/six-scores.js`, the profile tabs in `public/app.js`). Group scorecards, the
+disclosure reader for income, gifts and travel, and the one-time Senate eFD try are still to build.
 
 The Integrity grade is retired and split into separate grades, and Your Match becomes part of a new Ideology tab. Unbought uses
 [IntegrityIndex.us](https://integrityindex.us/methodology)'s published formula, credited to them.
@@ -69,8 +69,8 @@ letter:
 **What it uses:**
 - **Their record:** votes, bills and cosponsorships, plus statements, campaign promises and posts. Statements count half,
   and only on an issue with no votes or bills.
-- **Group positions:** the positions of the 36 groups already tracked (`groupPos`), to tell which side of each vote is
-  the conservative one.
+- **Each vote's side:** every vote and bill on file is coded, with a cited reason, as taking side A or B of its issue,
+  and each issue says which side is the liberal one (`liberalSide` in `public/research.json`).
 - **Group scorecards:** each group's own published scorecard for the ratings, read from its website by a script once a
   year.
   - A group whose site blocks scripts, or that publishes only images, is left out rather than entered by hand.
@@ -80,21 +80,14 @@ letter:
 
 **Formulas:**
 
-**Which side of a vote is conservative.** Group lean is +1 for a conservative group and −1 for a liberal one; group
-position is +1 if the group supported the bill and −1 if it opposed it.
+**Which side of a vote is conservative.** Each vote and bill is already coded as taking side A or B of its issue, with a
+cited reason, and each issue names its liberal side (for example, on guns side A, "stricter gun laws", is the liberal
+one). The conservative side is the other one. Issues whose sides don't map onto liberal and conservative have no
+liberal side marked: tariffs, Ukraine aid, war powers, Jan. 6, infrastructure, and money in politics.
 
-```text
-Side of a vote = sign of Σ (group lean × group position)
-```
-
-- **When no tracked group took a position:** the side most Republicans took counts as conservative, as long as most
-  Democrats took the other side.
-- **When there are no groups and no party split:** the vote doesn't count.
-- **Groups that don't decide sides:** industry groups (banks, hospitals, realtors, PhRMA, crypto), AIPAC and J Street.
-  Their positions aren't about left and right.
-
-**Lean on each issue.** C is the actions on the conservative side and L the actions on the liberal side. A vote, bill or
-cosponsorship counts 1 and a statement 0.5. It needs at least 3 actions on the issue.
+**Lean on each issue.** C is the items on the conservative side and L the items on the liberal side. An item is a
+vote, bill, cosponsorship or official act, one per bill; statements are used only on an issue with no action. The
+number of items is shown with each issue's lean.
 
 ```text
 Issue lean = 100 × (C − L) ÷ (C + L)
@@ -106,8 +99,8 @@ Issue lean = 100 × (C − L) ÷ (C + L)
 Overall lean = average of the issue leans
 ```
 
-The issues that split both parties aren't averaged in: Ukraine, war powers, tariffs, Jan. 6 and ethics. They're still
-shown, with the note "the conservative side here is the one most Republicans took."
+The issues that split both parties aren't averaged in: tariffs, Ukraine aid, war powers, Jan. 6, infrastructure and
+money in politics. They're still shown, with their counts and the reason they aren't placed.
 
 **Group ratings, as one number.** Each score runs 0 to 100. Letter grades convert as A = 100, B = 75, C = 50, D = 25
 and F = 0.
@@ -124,12 +117,15 @@ Ratings lean = average over the groups that rated them of:
 DW-NOMINATE lean = 100 × their first-dimension score
 ```
 
-**Your Match.** You pick your position on each issue: liberal −100, lean liberal −50, moderate 0, lean conservative +50,
-conservative +100. Importance is low 1, medium 2 or high 3.
+**Your Match** (unchanged, now on the Ideology tab). You pick a side on each issue and how much it matters (low 1,
+medium 2, high 3).
 
 ```text
-Your Match = 100 − Σ (importance × |your position − their issue lean|) ÷ (2 × Σ importance)
+Your Match = 100 × Σ(importance × share of their record on your side) ÷ Σ(importance)
 ```
+
+For a liberal or conservative pick this equals 100 − |your position − their issue lean| ÷ 2. Moderate picks (lean
+liberal, moderate, lean conservative) can be added later.
 
 **The headline number:** the overall lean comes from the issue leans alone. The ratings lean and DW-NOMINATE are shown
 beside it as two independent checks, so a gap between them shows up rather than being averaged away.
@@ -282,6 +278,11 @@ Unbought = 75 + 8.6 − 4.6 − 5.0 − 1.0 − 7.5 − 4.6 + 1.0 = 62 → D
 3. **The PAC Reliance midpoint:** 20%.
 4. **"avg_value" in the stock term:** read as the total of individual-stock range midpoints.
 5. **The trade-value maximum:** copied as published (0.00001), so trade value barely counts.
+6. **PAC money by type:** the itemized PAC lines read so far give each type's share, applied to the FEC's PAC total for
+   the period, so every PAC dollar counts.
+7. **Gift sizes:** when the FEC's gift-size split isn't read for the period, itemized gifts count at the not-yet-sorted
+   rate, as their formula scores gifts the FEC hasn't sorted.
+8. **Which trades:** those made during the campaign's reporting period.
 
 **One deliberate difference:** a pledge reviewed as broken earns no pledge point (a cosponsored bill still can), and it
 counts as broken in Keeps Their Word.
@@ -356,6 +357,8 @@ Above Board = clamp(100 − Legal − [25·Committee-sector + 16.67·Near-vote +
 
 **Minimum:**
 - **Trades:** 5 for Trade Conflicts. Verified coverage with no trades scores 0.
+- **Parts the records can't tell yet:** trades read automatically from the official reports carry no near-vote review,
+  and a stock whose company isn't matched to an industry is left out of the committee part; the other parts are rescaled.
 - **Filings:** 3 required filings for Stock Disclosure Dodger.
 - **The grade:** a sourced Legal Trouble review plus at least one of the four indexes.
 
