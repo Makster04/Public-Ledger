@@ -53,3 +53,14 @@ test('no map without an FEC report, and text from the records is escaped',()=>{
   const html=moneyMapBlock({camp:{receipts:100,unitemized:100,cmte:'<b>Friends</b> & Co',cmteId:'C9',start:'2025-01-01',end:'2026-06-30',disbursements:50,cash:50}});
   assert.match(html,/&lt;b&gt;Friends&lt;\/b&gt; &amp; Co/);assert.doesNotMatch(html,/<b>Friends/);
 });
+
+test('each PAC kind opens to its PACs, and the corporate card lists the PACs the FEC records as corporate',async()=>{
+  const {pacTypeOf}=await import('../public/pac-types.js');
+  const s=people.find(p=>p.id==='perry'),o={...opts(s),pacNames:research.pacNames,pacType:i=>pacTypeOf(research,i)};
+  const m=moneyMap(s,o);
+  for(const k of m.pacKinds){const sum=k.pacs.reduce((t,p)=>t+p.a,0);assert.ok(Math.abs(sum-k.a)<1,`${k.k}: ${sum} vs ${k.a}`);}
+  assert.ok(m.corporate.length>0);
+  assert.ok(m.corporate.every((p,i,a)=>!i||a[i-1].a>=p.a),'largest first');
+  const html=moneyMapBlock(s,o);
+  assert.match(html,/<details class="mm-kind">/);assert.match(html,/Corporate PAC donors/);assert.match(html,/from \d+ corporate PACs?/);
+});
