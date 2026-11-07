@@ -1,8 +1,8 @@
 // A portable view of the same reviewed scores shown on the profile. No scoring is done here.
 const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
-// The three primary grades, in the order the profile shows them.
-const LABELS=['Your Match','Integrity','People First'];
-const TILE={x:40,gap:16,width:296};
+// The five letter grades, in the order the profile shows them (Ideology is a position, not a grade).
+const LABELS=['Keeps Their Word','Shows Up','Unbought','Above Board','People First'];
+const TILE={x:40,gap:12,width:174};
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
 const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
@@ -29,19 +29,19 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
   const raw=Array.isArray(model.grades)?model.grades:[];
   const grades=LABELS.map((label,i)=>({label,...(raw[i]||{}),value:finite(raw[i]?.value)?Math.max(0,Math.min(100,raw[i].value)):null}));
   const panels=grades.map((grade,i)=>{
-    const x=TILE.x+i*(TILE.width+TILE.gap),y=694,personal=i===0&&model.matchConfigured===false,graded=grade.value!==null;
-    const display=graded?letter(grade.value):personal?'Set your priorities':'Not graded';
+    const x=TILE.x+i*(TILE.width+TILE.gap),y=694,personal=false,graded=grade.value!==null;
+    const display=graded?letter(grade.value):'Not graded yet';
     return `<rect x="${x}" y="${y}" width="${TILE.width}" height="330" rx="14" fill="url(#tile)" stroke="${p.accent}" stroke-opacity=".58"/>
       <path d="M${x+22} ${y+27}h32" stroke="${p.accent}" stroke-width="4"/>
-      ${text(grade.label.toUpperCase(),x+22,y+68,{size:17,color:p.accent,weight:700,width:24,max:2})}
-      ${text(display,x+22,y+155,{size:graded?76:25,color:graded?GRADE_COLORS[letter(grade.value)]:personal?'#eff2f8':'#a7b0be',weight:700,width:17,max:2})}
-      ${graded?text(`${Math.round(grade.value)} / 100`,x+22,y+208,{size:24,weight:700,width:14}):''}
-      ${text(grade.detail||(personal?'Personal to you':'Reviewed evidence required'),x+22,y+266,{size:17,color:'#b6c0cf',width:27,max:3})}`;
+      ${text(grade.label.toUpperCase(),x+18,y+68,{size:14,color:p.accent,weight:700,width:17,max:2})}
+      ${text(display,x+18,y+155,{size:graded?66:21,color:graded?GRADE_COLORS[letter(grade.value)]:'#a7b0be',weight:700,width:11,max:2})}
+      ${graded?text(`${Math.round(grade.value)} / 100`,x+18,y+208,{size:21,weight:700,width:12}):''}
+      ${text(grade.detail||'Evidence required',x+18,y+256,{size:14,color:'#b6c0cf',width:19,max:4})}`;
   }).join('');
   const nameLines=lines(name,20,3),nameSize=name.length>36?39:49;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1230" viewBox="0 0 1000 1230" role="img" aria-labelledby="title desc">
     <title id="title">${xml(name)} — Public Ledger report card</title>
-    <desc id="desc">${xml(grades.map((g,i)=>`${g.label}: ${g.value===null?(i===0&&model.matchConfigured===false?'Set priorities':'Not graded'):letter(g.value)+' '+g.value+' out of 100'}`).join('. '))}. Reporting periods and evidence coverage are shown below.</desc>
+    <desc id="desc">${xml(grades.map((g,i)=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+' out of 100'}`).join('. '))}. Reporting periods and evidence coverage are shown below.</desc>
     <defs><linearGradient id="tile" x2="1" y2="1"><stop stop-color="#1b2329"/><stop offset="1" stop-color="#151a22"/></linearGradient><clipPath id="photo"><rect x="60" y="166" width="340" height="452" rx="10"/></clipPath></defs>
     <rect width="1000" height="1230" fill="#0d1117"/>
     <path d="M42 41h40M46 50h32M49 59v26M62 59v26M75 59v26M42 88h40" fill="none" stroke="#d1d5db" stroke-width="5"/>
@@ -60,7 +60,7 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     ${text('Cash on hand',694,504,{size:17,color:'#b6c0cf',width:23})}
     ${text(amount(model.cash),694,543,{size:31,weight:700,width:15,max:2})}
     ${text(model.period||'Reporting period not available',432,596,{size:16,color:'#b6c0cf',width:49,max:2,lineHeight:20})}
-    ${text('THREE GRADES. FOLLOW THE EVIDENCE.',40,674,{size:17,color:'#b6c0cf',weight:700,width:75})}
+    ${text('FIVE GRADES. FOLLOW THE EVIDENCE.',40,674,{size:17,color:'#b6c0cf',weight:700,width:75})}
     ${panels}
     ${text('Based on reviewed records. Coverage varies.',40,1060,{size:19,color:'#b6c0cf',width:90})}
     <rect x="40" y="1090" width="920" height="110" rx="12" fill="#141b25" stroke="${p.accent}" stroke-opacity=".5"/>

@@ -1,13 +1,17 @@
 {
-  "about": "Dated presentation changes only. These entries do not recalculate historical grades or replace the separate monthly Integrity comparison log.",
-  "entries": [
-    {
-      "date": "2026-11-02",
-      "note": "Consolidated the current grading interface to Your Match, Integrity, and Workers > Profit. Ethics and Promises Delivered remain preserved in the official monthly history and their evidence is now grouped inside Integrity. No historical values or scoring formulas were recalculated by this presentation migration. Integrity remains provisional and uncalibrated; its monthly comparison log continues separately."
-    },
-    {
-      "date": "2026-11-03",
-      "note": "Renamed Workers > Profit to People First and rewrote the three grade descriptions (Your Match, Integrity, People First). The calculations are unchanged: People First is still 75% the legislative-action score plus 25% of (100 − the existing Corporation Compromised Index), and the proposed CCI revision stays a comparison preview until it is explicitly adopted. Historical values were not recalculated; earlier entries keep the old name."
-    }
-  ]
+ "about": "Dated presentation changes only. These entries do not recalculate historical grades or replace the separate monthly Integrity comparison log.",
+ "entries": [
+  {
+   "date": "2026-11-02",
+   "note": "Consolidated the current grading interface to Your Match, Integrity, and Workers > Profit. Ethics and Promises Delivered remain preserved in the official monthly history and their evidence is now grouped inside Integrity. No historical values or scoring formulas were recalculated by this presentation migration. Integrity remains provisional and uncalibrated; its monthly comparison log continues separately."
+  },
+  {
+   "date": "2026-11-03",
+   "note": "Renamed Workers > Profit to People First and rewrote the three grade descriptions (Your Match, Integrity, People First). The calculations are unchanged: People First is still 75% the legislative-action score plus 25% of (100 − the existing Corporation Compromised Index), and the proposed CCI revision stays a comparison preview until it is explicitly adopted. Historical values were not recalculated; earlier entries keep the old name."
+  },
+  {
+   "date": "2026-11-07",
+   "note": "Rule change: six scores replace Your Match, Integrity and People First on every profile (Scores/06_SIX_GRADES_PROPOSAL.md). Ideology is a position from liberal to conservative, not a grade, with Your Match inside it. The five grades are Keeps Their Word (Integrity's Honesty part), Shows Up (its Showing Up part), Unbought (IntegrityIndex.us's published formula, replacing Fundraising and Personal Finances), Above Board (Conflicts of Interest, the renamed Trade Conflicts Index without its single-stock activity part, Stock Disclosure Dodger and Legal Trouble) and People First (its Corporation Compromised Index now keeps only its behavior parts). Past Integrity, Ethics, Promises Delivered and People First values stay as recorded and are not recalculated."
+  }
+ ]
 }

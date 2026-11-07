@@ -1,7 +1,7 @@
-# Six scores: proposal for sign-off
+# Six scores
 
-Status: proposed November 7, 2026. Nothing here runs yet. Until it's built, the formulas in the
-[score methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md) are what the site uses.
+Status: built November 7, 2026 (`public/six-scores.js`, the profile tabs in `public/app.js`). Group scorecards, the
+disclosure reader for income, gifts and travel, and the one-time Senate eFD try are still to build.
 
 The Integrity grade is retired and split into separate grades, and Your Match becomes part of a new Ideology tab. Unbought uses
 [IntegrityIndex.us](https://integrityindex.us/methodology)'s published formula, credited to them.
@@ -69,8 +69,8 @@ letter:
 **What it uses:**
 - **Their record:** votes, bills and cosponsorships, plus statements, campaign promises and posts. Statements count half,
   and only on an issue with no votes or bills.
-- **Group positions:** the positions of the 36 groups already tracked (`groupPos`), to tell which side of each vote is
-  the conservative one.
+- **Each vote's side:** every vote and bill on file is coded, with a cited reason, as taking side A or B of its issue,
+  and each issue says which side is the liberal one (`liberalSide` in `public/research.json`).
 - **Group scorecards:** each group's own published scorecard for the ratings, read from its website by a script once a
   year.
   - A group whose site blocks scripts, or that publishes only images, is left out rather than entered by hand.
@@ -80,21 +80,14 @@ letter:
 
 **Formulas:**
 
-**Which side of a vote is conservative.** Group lean is +1 for a conservative group and −1 for a liberal one; group
-position is +1 if the group supported the bill and −1 if it opposed it.
+**Which side of a vote is conservative.** Each vote and bill is already coded as taking side A or B of its issue, with a
+cited reason, and each issue names its liberal side (for example, on guns side A, "stricter gun laws", is the liberal
+one). The conservative side is the other one. Issues whose sides don't map onto liberal and conservative have no
+liberal side marked: tariffs, Ukraine aid, war powers, Jan. 6, infrastructure, and money in politics.
 
-```text
-Side of a vote = sign of Σ (group lean × group position)
-```
-
-- **When no tracked group took a position:** the side most Republicans took counts as conservative, as long as most
-  Democrats took the other side.
-- **When there are no groups and no party split:** the vote doesn't count.
-- **Groups that don't decide sides:** industry groups (banks, hospitals, realtors, PhRMA, crypto), AIPAC and J Street.
-  Their positions aren't about left and right.
-
-**Lean on each issue.** C is the actions on the conservative side and L the actions on the liberal side. A vote, bill or
-cosponsorship counts 1 and a statement 0.5. It needs at least 3 actions on the issue.
+**Lean on each issue.** C is the items on the conservative side and L the items on the liberal side. An item is a
+vote, bill, cosponsorship or official act, one per bill; statements are used only on an issue with no action. The
+number of items is shown with each issue's lean.
 
 ```text
 Issue lean = 100 × (C − L) ÷ (C + L)
@@ -106,8 +99,8 @@ Issue lean = 100 × (C − L) ÷ (C + L)
 Overall lean = average of the issue leans
 ```
 
-The issues that split both parties aren't averaged in: Ukraine, war powers, tariffs, Jan. 6 and ethics. They're still
-shown, with the note "the conservative side here is the one most Republicans took."
+The issues that split both parties aren't averaged in: tariffs, Ukraine aid, war powers, Jan. 6, infrastructure and
+money in politics. They're still shown, with their counts and the reason they aren't placed.
 
 **Group ratings, as one number.** Each score runs 0 to 100. Letter grades convert as A = 100, B = 75, C = 50, D = 25
 and F = 0.
@@ -124,12 +117,15 @@ Ratings lean = average over the groups that rated them of:
 DW-NOMINATE lean = 100 × their first-dimension score
 ```
 
-**Your Match.** You pick your position on each issue: liberal −100, lean liberal −50, moderate 0, lean conservative +50,
-conservative +100. Importance is low 1, medium 2 or high 3.
+**Your Match** (unchanged, now on the Ideology tab). You pick a side on each issue and how much it matters (low 1,
+medium 2, high 3).
 
 ```text
-Your Match = 100 − Σ (importance × |your position − their issue lean|) ÷ (2 × Σ importance)
+Your Match = 100 × Σ(importance × share of their record on your side) ÷ Σ(importance)
 ```
+
+For a liberal or conservative pick this equals 100 − |your position − their issue lean| ÷ 2. Moderate picks (lean
+liberal, moderate, lean conservative) can be added later.
 
 **The headline number:** the overall lean comes from the issue leans alone. The ratings lean and DW-NOMINATE are shown
 beside it as two independent checks, so a gap between them shows up rather than being averaged away.
@@ -282,6 +278,11 @@ Unbought = 75 + 8.6 − 4.6 − 5.0 − 1.0 − 7.5 − 4.6 + 1.0 = 62 → D
 3. **The PAC Reliance midpoint:** 20%.
 4. **"avg_value" in the stock term:** read as the total of individual-stock range midpoints.
 5. **The trade-value maximum:** copied as published (0.00001), so trade value barely counts.
+6. **PAC money by type:** the itemized PAC lines read so far give each type's share, applied to the FEC's PAC total for
+   the period, so every PAC dollar counts.
+7. **Gift sizes:** when the FEC's gift-size split isn't read for the period, itemized gifts count at the not-yet-sorted
+   rate, as their formula scores gifts the FEC hasn't sorted.
+8. **Which trades:** those made during the campaign's reporting period.
 
 **One deliberate difference:** a pledge reviewed as broken earns no pledge point (a cosponsored bill still can), and it
 counts as broken in Keeps Their Word.
@@ -356,6 +357,8 @@ Above Board = clamp(100 − Legal − [25·Committee-sector + 16.67·Near-vote +
 
 **Minimum:**
 - **Trades:** 5 for Trade Conflicts. Verified coverage with no trades scores 0.
+- **Parts the records can't tell yet:** trades read automatically from the official reports carry no near-vote review,
+  and a stock whose company isn't matched to an industry is left out of the committee part; the other parts are rescaled.
 - **Filings:** 3 required filings for Stock Disclosure Dodger.
 - **The grade:** a sourced Legal Trouble review plus at least one of the four indexes.
 
@@ -406,6 +409,71 @@ People First = 75 · W ÷ (W + P) + 25 − 16.25 · min(1, Excess ÷ 25) − 8.7
 
 ---
 
+## Profile tabs
+
+Each score gets its own tab with everything behind it, so the separate **Money & Influence**, **Legislative Activity**
+and **Integrity** tabs go away. Nothing is lost: every chart and list moves to the tab of the score it explains.
+
+Every tab follows the same order:
+1. **The score and its breakdown.** Each part has its points and links to the section that shows it.
+2. **The evidence it counts.**
+3. **"Shown, not counted."** Related records that don't change the score, each labeled that way.
+
+**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Unbought · Above Board · People First.
+
+### Overview
+- **All six scores at a glance:** the Ideology lean and the five letter grades, each linking to its tab.
+- **Three things to know.**
+- **Their race and election results.**
+- **History and source records:** when each source was last read, and the score log.
+
+### Ideology
+- **Counted:** the overall lean, then the lean on each issue, each opening to the votes, bills and statements behind it.
+  The full list of their votes and bills (from the Legislative Activity tab) lives here, sorted by issue.
+- **Checks:** DW-NOMINATE, and the group ratings in opposing pairs.
+- **Personal:** Your Match, with your own position on each issue.
+
+### Keeps Their Word
+- **Counted:** each promise with its verdict (kept, partly kept, changed, broken), the action that decided it, and where
+  the promise came from: campaign site, speech, post, press release or pledge. Automatic matches are labeled "matched
+  automatically."
+- **Shown, not counted:** promises still waiting on a vote, vague goals, and statements made in debate.
+
+### Shows Up
+- **Counted:** missed votes by year, with any reviewed absences left out; the bills they sponsored and how far each got,
+  against their party's typical rate.
+- **Shown, not counted:** Across the Aisle and Party Rebel, once built.
+
+### Unbought
+- **Counted, where the money comes from:**
+  - the money map;
+  - "The numbers" table;
+  - PACs by kind, which feeds the PAC penalty;
+  - bundled gifts, which feed Earmarks.
+- **Counted, stocks and trades:** the individual stocks held and their value (Stocks), and the number and value of their
+  trades (Trades). Their full trade list lives here.
+- **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they cosponsored.
+- **Shown, not counted:**
+  - outside spending for and against them;
+  - Donor Loyalty (whether their votes line up with their funders more than their party's do);
+  - timing flags (donations near related votes);
+  - donors by employer and industry;
+  - net worth over time.
+
+### Above Board
+- **Counted:**
+  - **Conflicts:** outside income, board seats and job deals; gifts and paid trips.
+  - **Trades:** the trades flagged as tied to their committees, votes or donors, each linking to the full trade list on
+    the Unbought tab.
+  - **Filings:** each trade report and annual report with its due date and filing date.
+  - **Legal Trouble:** each case.
+- **Shown, not counted:** committee assignments and the sectors they oversee, and lobbying aimed at their committees.
+
+### People First
+- **Counted:** each scored bill with its worker or profit strength and their action on it; business-funder voting
+  against their party; and the donor-lobbied bills (the CCI).
+- **Shown, not counted:** disputed bills.
+
 ## Decisions that go with these grades
 
 **Reading disclosures:**
@@ -451,8 +519,8 @@ is logged as a rule change.
 
 **Build order:**
 1. **Campaign promises, steps 2–4,** so Keeps Their Word covers more than 13 of 59 profiles.
-2. **The scores.** The Ideology tab and the five grades, the renames, the methodology pages and the score-log entry, in
-   one change.
+2. **The scores.** The Ideology tab and the five grades, the profile tabs above, the renames, the methodology pages
+   and the score-log entry, in one change.
 3. **Group scorecards:** a reader for each group's published scorecard, run once a year.
 4. **Unbought's formula,** with the House and Senate weights and the labeled fill-ins.
 5. **Automatic House disclosures,** then the one-time Senate try.
