@@ -162,10 +162,11 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   // PAC: each type's dollars × its rate. The itemized PAC lines read so far give each type's share of PAC money, which
   // is applied to the FEC's PAC total for the period, so every PAC dollar counts.
   const pacTotal=Number(c.pac)||0,rows=(pacRows||[]).filter(r=>Number.isFinite(r.amount)&&r.amount>0),read=rows.reduce((t,r)=>t+r.amount,0);
-  let pac=0,pacBy={};
-  if(pacTotal>0&&!read)return {pct:null,why:'Their PAC money hasn\'t been sorted by type yet',parts:[],needs};
+  // PAC money not yet sorted by type leaves the PAC part (and the no-corporate-PAC bonus) waiting; the rest still shows.
+  const pacKnown=!(pacTotal>0&&!read);
+  let pac=null,pacBy={};
   for(const r of rows){const g=UNBOUGHT_PAC_GROUP[r.kind]||'other';pacBy[g]=(pacBy[g]||0)+r.amount/read*pacTotal;}
-  pac=Math.min(UNBOUGHT.pacFloor,Object.entries(pacBy).reduce((t,[g,amt])=>t+amt*W.pac[g],0));
+  if(pacKnown)pac=Math.min(UNBOUGHT.pacFloor,Object.entries(pacBy).reduce((t,[g,amt])=>t+amt*W.pac[g],0));
   const reliance=UNBOUGHT.reliance.max*(hill(pacTotal/R,UNBOUGHT.reliance.midpoint)||0);
   const earmarked=(earmarks||[]).filter(r=>Number.isFinite(r.amount)&&!/^(actblue|winred)$/i.test(String(r.group||''))).reduce((t,r)=>t+r.amount,0);
   const earmark=earmarked*UNBOUGHT.earmark;
@@ -176,25 +177,36 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const stocks=held.value==null?null:held.blindTrust?0:UNBOUGHT.stocks.max*(hill(held.value,UNBOUGHT.stocks.midpoint)||0);
   const tradePts=traded.count==null?null:UNBOUGHT.trades.countMax*(hill(traded.count,UNBOUGHT.trades.countMidpoint)||0)+UNBOUGHT.trades.valueMax*(hill(traded.value,UNBOUGHT.trades.valueMidpoint)||0);
   const corporate=pacBy.corporate||0;
-  const pl=pledges||[],corpPledge=pl.find(p=>p.kind==='corporate-pac'&&p.via==='pledge');
-  const bonusRows=[corporate===0?{label:'No corporate PAC money',points:UNBOUGHT.bonus.noCorporatePac}:null,corpPledge?{label:'Pledged not to take corporate PAC money',points:UNBOUGHT.bonus.corporatePacPledge}:null,
-    held.value!=null&&!held.blindTrust&&held.count===0?{label:'Holds no individual stocks',points:UNBOUGHT.bonus.noStocks}:null].filter(Boolean);
-  const bonus=bonusRows.reduce((t,b)=>t+b.points,0);
-  const pledgeRows=pl.filter(p=>p.kind!=='corporate-pac'),pledgePts=pledgeRows.reduce((t,p)=>t+p.points,0);
+  const pl=pledges||[],corp=pl.find(p=>p.kind==='corporate-pac');
+  // Every bonus is listed, earned or not, with why: status 'yes', 'no' or 'waiting' (on a record not read yet).
+  const bonusItems=[
+    {label:'No corporate PAC money',max:UNBOUGHT.bonus.noCorporatePac,status:!pacKnown?'waiting':corporate===0?'yes':'no',
+      why:!pacKnown?'their PAC money isn\'t sorted by type yet':corporate===0?(pacTotal?'none of their PAC money is from corporate PACs':'no PAC money at all'):`about $${Math.round(corporate).toLocaleString('en-US')} from corporate PACs`},
+    {label:'Pledged not to take corporate PAC money',max:UNBOUGHT.bonus.corporatePacPledge,status:corp?.via==='pledge'?'yes':'no',
+      why:corp?.via==='pledge'?'signed the pledge':corp?.via==='broken'?'pledge reviewed as broken':'no pledge on file'},
+    {label:'Holds no individual stocks',max:UNBOUGHT.bonus.noStocks,status:held.value==null?'waiting':!held.blindTrust&&held.count===0?'yes':'no',
+      why:held.value==null?'their annual disclosure isn\'t read yet':held.blindTrust?'holdings are in a blind trust':held.count===0?'none on their latest report':`${held.count} on their latest report`}];
+  for(const b of bonusItems)b.points=b.status==='yes'?b.max:0;
+  const bonus=bonusItems.reduce((t,b)=>t+b.points,0);
+  const pledgeItems=pl.filter(p=>p.kind!=='corporate-pac').map(p=>({...p,status:p.points?'yes':'no',why:p.via==='pledge'?'signed the pledge':p.via==='bill'?`cosponsored ${p.title||p.bill}`:p.via==='broken'?'pledge reviewed as broken, and no bill':'no pledge or cosponsored bill on file'}));
+  const pledgePts=pledgeItems.reduce((t,p)=>t+p.points,0);
+  const list=items=>items.map(b=>`${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'} ${b.label}${b.status==='yes'?` +${b.points}`:''} (${b.why})`).join(' · ');
   const parts=[
     {key:'donor',label:'Donor',points:round1(donor),note:donorNote},
-    {key:'pac',label:'PAC',points:-round1(pac),note:`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
+    {key:'pac',label:'PAC',points:pac==null?null:-round1(pac),note:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
     {key:'earmarks',label:'Earmarks',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups (partial: 5 groups collected so far)`},
     {key:'stocks',label:'Stocks',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
     {key:'trades',label:'Trades',points:tradePts==null?null:-round1(tradePts),note:traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
-    {key:'bonuses',label:'Bonuses',points:bonus,note:bonusRows.map(b=>b.label).join('; ')||'None'},
-    {key:'pledges',label:'Pledges and bills',points:pledgePts,note:pledgeRows.filter(p=>p.points).map(p=>`${p.label} (${p.via})`).join('; ')||'None'},
+    {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},
+    {key:'pledges',label:'Pledges and bills',points:pledgePts,note:list(pledgeItems),items:pledgeItems},
   ];
-  const raw=UNBOUGHT.base+donor-pac-reliance-earmark-(stocks||0)-(tradePts||0)+bonus+pledgePts;
-  if(!disclosed)return {pct:null,raw:null,parts,needs,pacBy,held,traded,why:held.value==null?held.why:traded.why};
+  const raw=UNBOUGHT.base+donor-(pac||0)-reliance-earmark-(stocks||0)-(tradePts||0)+bonus+pledgePts;
+  const base={parts,needs,pacBy,held,traded,bonusItems,pledgeItems};
+  if(!pacKnown)return {...base,pct:null,raw:null,why:'Their PAC money hasn\'t been sorted by type yet'};
+  if(!disclosed)return {...base,pct:null,raw:null,why:held.value==null?held.why:traded.why};
   const pct=Math.max(0,Math.round(raw));
-  return {pct,letter:letter(Math.min(100,pct)),raw,parts,needs,pacBy,held,traded,why:null};
+  return {...base,pct,letter:letter(Math.min(100,pct)),raw,why:null};
 }
 
 // ---------- 5. Above Board ----------

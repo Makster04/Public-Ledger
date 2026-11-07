@@ -971,3 +971,8 @@ input, select { accent-color: var(--accent); }
 .st-match-b { margin-top: 6px; }
 .st-mark.lft em { left: -4px; transform: none; }
 .st-mark.rgt em { left: auto; right: -4px; transform: none; }
+.st-items { list-style: none; margin: 4px 0 0; padding: 0; font-size: .8rem; line-height: 1.4; }
+.st-items li { display: flex; gap: 6px; padding: 2px 0; }
+.st-items li > span:first-child { flex: 0 0 12px; color: var(--muted); }
+.st-items li.yes > span:first-child { color: var(--good); }
+.st-items li.no > span:first-child { color: var(--crit); }
