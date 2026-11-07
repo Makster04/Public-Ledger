@@ -140,7 +140,873 @@
    "issue": "Civil rights",
    "url": "https://www.aclu.org/congressional-scorecards",
    "status": "permission"
+  },
+  "sba": {
+   "org": "SBA Pro-Life America",
+   "lean": "conservative",
+   "issue": "Abortion",
+   "url": "https://sbaprolife.org/scorecard",
+   "read": "2026-11-07",
+   "rated": 785,
+   "matched": 26,
+   "year": null
+  },
+  "lcv": {
+   "org": "League of Conservation Voters",
+   "lean": "liberal",
+   "issue": "Environment",
+   "url": "https://www.lcv.org/congressional-scorecard/members-of-congress/",
+   "read": "2026-11-07",
+   "rated": 547,
+   "matched": 24,
+   "year": 2025
+  },
+  "rfa": {
+   "org": "Reproductive Freedom for All",
+   "lean": "liberal",
+   "issue": "Abortion",
+   "url": "https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/",
+   "read": "2026-11-07",
+   "rated": 552,
+   "matched": 26,
+   "year": 2025
   }
  },
- "people": {}
+ "people": {
+  "booker": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/cory-booker/",
+    "name": "Cory Booker"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 94,
+    "lifetime": 95,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/cory-anthony-booker/",
+    "name": "Cory Booker"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/cory-booker/",
+    "name": "Cory Booker"
+   }
+  ],
+  "collins": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "D",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/susan-collins/",
+    "name": "Susan Collins"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 31,
+    "lifetime": 52,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/susan-m-collins/",
+    "name": "Susan Collins"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 18,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/susan-collins/",
+    "name": "Susan Collins"
+   }
+  ],
+  "hickenlooper": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/john-hickenlooper/",
+    "name": "John Hickenlooper"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 91,
+    "lifetime": 94,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/john-hickenlooper/",
+    "name": "John Hickenlooper"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 97,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/john-hickenlooper/",
+    "name": "John Hickenlooper"
+   }
+  ],
+  "marshall": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/roger-marshall/",
+    "name": "Roger Marshall"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 5,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/roger-marshall/",
+    "name": "Roger Marshall"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/roger-marshall/",
+    "name": "Roger Marshall"
+   }
+  ],
+  "ossoff": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/jon-ossoff/",
+    "name": "Jon Ossoff"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 94,
+    "lifetime": 96,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/jon-ossoff/",
+    "name": "Jon Ossoff"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 97,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/jon-ossoff/",
+    "name": "Jon Ossoff"
+   }
+  ],
+  "ricketts": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/pete-ricketts/",
+    "name": "Pete Ricketts"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 3,
+    "lifetime": 2,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/pete-ricketts/",
+    "name": "Pete Ricketts"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/pete-ricketts/",
+    "name": "Pete Ricketts"
+   }
+  ],
+  "sullivan": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "B",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/dan-sullivan/",
+    "name": "Dan Sullivan"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 3,
+    "lifetime": 8,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/dan-sullivan/",
+    "name": "Dan Sullivan"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/dan-sullivan/",
+    "name": "Dan Sullivan"
+   }
+  ],
+  "husted": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/jon-a-husted/",
+    "name": "Jon A. Husted"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 3,
+    "lifetime": 3,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/jon-husted/",
+    "name": "Jon Husted"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/jon-husted/",
+    "name": "Jon Husted"
+   }
+  ],
+  "brown": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/senator/sherrod-brown/",
+    "name": "Sherrod Brown"
+   },
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/shontel-brown/",
+    "name": "Shontel Brown"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 100,
+    "lifetime": 98,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/shontel-brown/",
+    "name": "Shontel Brown"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/shontel-brown/",
+    "name": "Shontel Brown"
+   }
+  ],
+  "evans": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/gabe-evans/",
+    "name": "Gabe Evans"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 6,
+    "lifetime": 6,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/gabe-evans/",
+    "name": "Gabe Evans"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/gabe-evans/",
+    "name": "Gabe Evans"
+   }
+  ],
+  "mgp": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/marie-gluesenkamp-perez/",
+    "name": "Marie Gluesenkamp Perez"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 48,
+    "lifetime": 57,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/marie-gluesenkamp-perez/",
+    "name": "Marie Gluesenkamp Perez"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/marie-gluesenkamp-perez/",
+    "name": "Marie Gluesenkamp Perez"
+   }
+  ],
+  "gonzalez": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/vicente-gonzalez/",
+    "name": "Vicente Gonzalez"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 55,
+    "lifetime": 75,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/vicente-gonzalez/",
+    "name": "Vicente Gonzalez"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 63,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/vicente-gonzalez/",
+    "name": "Vicente González"
+   }
+  ],
+  "hageman": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/harriet-hageman/",
+    "name": "Harriet Hageman"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 1,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/harriet-hageman/",
+    "name": "Harriet Hageman"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/harriet-hageman/",
+    "name": "Harriet Hageman"
+   }
+  ],
+  "hern": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/kevin-hern/",
+    "name": "Kevin Hern"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 1,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/kevin-hern/",
+    "name": "Kevin Hern"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/kevin-hern/",
+    "name": "Kevin Hern"
+   }
+  ],
+  "hinson": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/ashley-hinson/",
+    "name": "Ashley Hinson"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 8,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/ashley-hinson/",
+    "name": "Ashley Hinson"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/ashley-hinson/",
+    "name": "Ashley Hinson"
+   }
+  ],
+  "kaptur": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/marcy-kaptur/",
+    "name": "Marcy Kaptur"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 94,
+    "lifetime": 86,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/marcy-kaptur/",
+    "name": "Marcy Kaptur"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/marcy-kaptur/",
+    "name": "Marcy Kaptur"
+   }
+  ],
+  "lawler": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/mike-lawler/",
+    "name": "Mike Lawler"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 12,
+    "lifetime": 17,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/michael-lawler/",
+    "name": "Michael Lawler"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/mike-lawler/",
+    "name": "Mike Lawler"
+   }
+  ],
+  "letlow": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/julia-letlow/",
+    "name": "Julia Letlow"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 4,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/julia-letlow/",
+    "name": "Julia Letlow"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/julia-letlow/",
+    "name": "Julia Letlow"
+   }
+  ],
+  "millermeeks": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/mariannette-miller-meeks/",
+    "name": "Mariannette Miller-Meeks"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 6,
+    "lifetime": 9,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/mariannette-miller-meeks/",
+    "name": "Mariannette Miller-Meeks"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/mariannette-miller-meeks/",
+    "name": "Mariannette Miller-Meeks"
+   }
+  ],
+  "moore": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/barry-moore/",
+    "name": "Barry Moore"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 1,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/barry-moore/",
+    "name": "Barry Moore"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/barry-moore/",
+    "name": "Barry Moore"
+   }
+  ],
+  "pappas": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/chris-pappas/",
+    "name": "Chris Pappas"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 97,
+    "lifetime": 97,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/chris-pappas/",
+    "name": "Chris Pappas"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/chris-pappas/",
+    "name": "Chris Pappas"
+   }
+  ],
+  "perry": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/scott-perry/",
+    "name": "Scott Perry"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 3,
+    "lifetime": 2,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/scott-perry/",
+    "name": "Scott Perry"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/scott-perry/",
+    "name": "Scott Perry"
+   }
+  ],
+  "barr": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/andy-barr/",
+    "name": "Andy Barr"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/andy-barr/",
+    "name": "Andy Barr"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/andy-barr/",
+    "name": "Andy Barr"
+   }
+  ],
+  "mcollins": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "A+",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/mike-collins/",
+    "name": "Mike Collins"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 0,
+    "lifetime": 1,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/mike-collins/",
+    "name": "Mike Collins"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 0,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/mike-collins/",
+    "name": "Mike Collins"
+   }
+  ],
+  "castor": [
+   {
+    "group": "sba",
+    "org": "SBA Pro-Life America",
+    "lean": "conservative",
+    "issue": "Abortion",
+    "grade": "F",
+    "year": null,
+    "url": "https://sbaprolife.org/representative/kathy-castor/",
+    "name": "Kathy Castor"
+   },
+   {
+    "group": "lcv",
+    "org": "League of Conservation Voters",
+    "lean": "liberal",
+    "issue": "Environment",
+    "score": 100,
+    "lifetime": 95,
+    "year": 2025,
+    "url": "https://www.lcv.org/moc/kathy-castor/",
+    "name": "Kathy Castor"
+   },
+   {
+    "group": "rfa",
+    "org": "Reproductive Freedom for All",
+    "lean": "liberal",
+    "issue": "Abortion",
+    "score": 100,
+    "year": 2025,
+    "url": "https://reproductivefreedomforall.org/lawmaker/kathy-castor/",
+    "name": "Kathy Castor"
+   }
+  ]
+ },
+ "checked": "2026-11-07"
 }
