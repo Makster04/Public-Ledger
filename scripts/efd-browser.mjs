@@ -107,7 +107,9 @@ async function main(argv){
     await open(`${site}/search/home/`);
     const box=page.locator('#agree_statement, input[name="prohibition_agreement"]').first();
     if(!await box.count())throw new Blocked('the terms page has no agreement box (the site may have changed)');
-    await Promise.all([page.waitForURL(/\/search\/(?!home)/,{timeout:30000}).catch(()=>null),box.check()]);
+    // Ticking the box sends the form at once and the page moves on to the search, so it is clicked, not checked
+    // (a check waits for the box to read as ticked, and the box is gone by then).
+    await Promise.all([page.waitForURL(/\/search\/(?!home)/,{timeout:30000}).catch(()=>null),box.click()]);
     if(/\/search\/home\/?$/.test(new URL(page.url()).pathname)){
       const submit=page.locator('form button[type=submit], form input[type=submit]').first();
       if(await submit.count())await Promise.all([page.waitForURL(/\/search\/(?!home)/,{timeout:30000}).catch(()=>null),submit.click()]);
@@ -163,7 +165,9 @@ async function main(argv){
       console.log(`\nStopped: ${e.message}. This script doesn't try to get past a bot check.${saved?` The ${saved} report${saved===1?'':'s'} saved so far are kept.`:''}\nThe reports can still be saved by hand: npm run efd:import -- --list shows which ones.`);
       await browser.close();return saved?0:2;
     }
-    await browser.close();throw e;
+    // Anything else (a page that never loaded, a step that timed out): say which, briefly, keeping what was saved.
+    console.log(`\nStopped on an error: ${String(e?.message||e).split('\n')[0]}${saved?`\nThe ${saved} report${saved===1?'':'s'} saved so far are kept; run it again to continue.`:''}`);
+    await browser.close();return 1;
   }
   await browser.close();
   console.log(`\n${dryRun?'Dry run done.':`Saved ${saved} new report${saved===1?'':'s'}`}${already?`; ${already} already saved`:''}${papers?`; ${papers} paper reports left out (scanned images)`:''}${failed?`; ${failed} not saved (see above)`:''}.`);
