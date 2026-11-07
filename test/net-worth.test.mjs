@@ -95,9 +95,12 @@ test('annual reports over the years: the newest in full, one entry a year with i
   const s=annualSummary([r('a',2023,'2023-05-10',[fund]),r('b',2024,'2024-05-10',[fund,apple]),r('c',2024,'2024-08-01',[fund,apple,apple])]);
   assert.equal(s.id,'c','an amendment (filed later) over the original');assert.equal(s.assets.length,3);
   assert.deepEqual(s.history.map(h=>[h.year,h.id,h.low,h.stocks?.count??0]),[[2024,'c',130003,2],[2023,'a',100001,0]]);
-  assert.ok(!('assets' in s.history[0]),'history entries carry no asset list');
-  // Carried into the next read: the full newest and the other years; the same report read again replaces its entry.
-  const rows=annualRows(s);assert.deepEqual(rows.map(x=>[x.id,Array.isArray(x.assets)]),[['c',true],['a',false]]);
+  assert.ok(!('assets' in s.history[0]),'the newest year\'s assets are at the top, not repeated');
+  assert.deepEqual(s.history[1].assets,[fund],'each earlier year keeps its own asset list');
+  // Carried into the next read: the full newest and the other years, each with its assets; the same report read again replaces its entry.
+  const rows=annualRows(s);assert.deepEqual(rows.map(x=>[x.id,Array.isArray(x.assets)]),[['c',true],['a',true]]);
+  // A year saved before asset lists were kept stays a summary until it is read again.
+  assert.ok(!('assets' in annualSummary([r('c',2024,'2024-08-01',[fund]),{id:'z',year:2020,filed:'2020-05-01',low:1,high:2}]).history[1]));
   const again=annualSummary([...rows,r('c',2024,'2024-08-01',[fund])]);assert.equal(again.assets.length,3,'the carried full report and the same report read again: one of them, with its assets');
   assert.deepEqual(annualSummary([]),{});assert.deepEqual(annualRows(null),[]);
 });

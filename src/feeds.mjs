@@ -714,7 +714,7 @@ export const FEEDS={
   // over the original): a range, since every value on the form is one, so it can be followed over time. House reports are
   // PDFs from the disclosure index, each read once (later runs read only a new or amended report); senators' are eFD pages
   // (report type 7). Read weekly; a report filed on paper is listed for checking by hand. rereadOnUpgrade: when the
-  // version changes (here, to keep every year), read again at once.
+  // version changes (here, to keep every year's asset list), read again at once.
   'net-worth-house':{host:'disclosures-clerk.house.gov',label:'Net worth (House annual disclosures)',tab:'ethics',every:WEEK,rereadOnUpgrade:true,
     // House members, and the profiled House candidates, whose candidate reports ("C") the House Clerk keeps too.
     jobs:c=>profiled(c).filter(p=>p.chamber==='H').map(p=>({id:`net-worth-house:${p.id}`,subject:p.id,args:{}})),
@@ -728,7 +728,8 @@ export const FEEDS={
         const reports=all.filter((f,i)=>all.findIndex(g=>g.year===f.year)===i);
         need(reports.length,'No annual report in the House disclosure index yet');
         // The years read before are carried; a report not read yet (a new year, or an amendment) is read, newest first.
-        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.map(r=>String(r.id)));
+        // A year kept only as a summary (saved before every year's assets were kept) is read again for its asset list.
+        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.filter(r=>Array.isArray(r.assets)).map(r=>String(r.id)));
         const todo=reports.filter(f=>!done.has(String(f.id))).slice(0,12).map(({id,year,filed,url,type})=>({id,year,filed,url,type}));
         return {rows:before,next:todo.length?JSON.stringify({todo,i:0}):null};
       }
@@ -1203,7 +1204,8 @@ export function annualSummary(rows){
   const list=[...byYear.values()].sort((a,b)=>(Number(b.year)||0)-(Number(a.year)||0)||String(b.filed||'').localeCompare(String(a.filed||'')));
   if(!list.length)return {};
   const top=list[0];
-  return {...top,assets:top.assets||[],debts:top.debts||[],history:list.map(annualEntry)};
+  // Each earlier year keeps its own asset and debt lists, so any year's holdings can be shown; the newest year's are at the top.
+  return {...top,assets:top.assets||[],debts:top.debts||[],history:list.map((r,i)=>i||!Array.isArray(r.assets)?{...annualEntry(r),...(i&&Array.isArray(r.assets)?{assets:r.assets,debts:r.debts||[]}:{})}:annualEntry(r))};
 }
 // The reports in a saved snapshot, to carry into the next read: the newest in full, and the other years' entries.
 export function annualRows(payload){
@@ -1319,4 +1321,4 @@ export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k))
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
 // and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each).
-export const FEEDS_VERSION=4;
+export const FEEDS_VERSION=5;
