@@ -894,12 +894,37 @@ function unboughtCalc(s,x){
     Hill(x, m) = x<sup>0.745</sup> ÷ (m<sup>0.745</sup> + x<sup>0.745</sup>).</p>
     ${x?.pct!=null?`<p class="small">${x.parts.map(p=>`${p.label} ${pts1(p.points)}`).join(' · ')} → 75 ${x.parts.map(p=>p.points<0?`− ${Math.abs(p.points).toFixed(1)}`:`+ ${(p.points||0).toFixed(1)}`).join(' ')} = ${Math.round(x.raw*10)/10}, rounded to ${x.pct}.</p>`:''}`;
 }
+// The kinds of assets, as the annual report's codes and descriptions sort them (public/holdings.js, assetKind).
+const ASSET_KIND={stock:'Individual stock or option',fund:'Fund or retirement account',bond:'Bond',cash:'Bank account or cash',property:'Real estate or property',private:'Private business',managed:'Managed account',trust:'Trust',blind:'Qualified blind trust',other:'Other'};
+const OWNER={self:'Filer',SP:'Spouse',JT:'Joint',DC:'Dependent child',spouse:'Spouse',joint:'Joint',child:'Dependent child'};
+const assetMid=a=>/over|or more/i.test(String(a.value||''))?Infinity:amountMidOf(a.value);
+const amountMidOf=t=>{const n=String(t||'').replace(/,/g,'').match(/\$?\s*(\d+(?:\.\d+)?)(?:\s*[-–]\s*\$?\s*(\d+(?:\.\d+)?))?/);return n?(Number(n[1])+Number(n[2]??n[1]))/2:0;};
+// Their individual stocks, largest first.
+function topStocks(stocks,nw){
+  if(!stocks.length)return nw?.assets?'<div class="st-check"><h4>Top individual stocks held</h4><p class="small">No individual stocks on their latest report.</p></div>':'';
+  const top=stocks.slice().sort((a,b)=>assetMid(b)-assetMid(a)).slice(0,10);
+  return `<div class="st-check"><h4>Top individual stocks held${nw?.year?` <span class="muted small">· ${esc(nw.year)} report</span>`:''}</h4><ul class="st-topstocks">${top.map(a=>`<li><span>${esc(a.name||'')}</span><span class="num">${esc(a.value||'')}</span></li>`).join('')}</ul>${stocks.length>10?`<p class="small muted">${stocks.length-10} more in the table below.</p>`:''}</div>`;
+}
+// Every asset on their latest annual report, with its kind and owner, filterable by kind.
+function assetTable(nw){
+  const assets=nw?.assets||[];if(!assets.length)return '';
+  const kinds=[...new Set(assets.map(a=>assetKind(a)))];
+  const rows=assets.map(a=>({a,k:assetKind(a)})).sort((x,y)=>assetMid(y.a)-assetMid(x.a));
+  return `<details class="st-more st-assets"><summary>All ${assets.length} assets on their ${esc(nw.year||'latest')} report</summary><div class="st-more-b">
+    <div class="st-assets-tools"><label>Kind <select data-asset-kind><option value="">All kinds</option>${kinds.map(k=>`<option value="${k}">${esc(ASSET_KIND[k]||k)}</option>`).join('')}</select></label>${nw.url?`<a href="${esc(nw.url)}" target="_blank" rel="noopener">The report ↗</a>`:''}</div>
+    <div class="tablewrap"><table class="st-table"><thead><tr><th>Asset</th><th>Kind</th><th>Owner</th><th class="r">Value range</th></tr></thead><tbody>${rows.map(({a,k})=>`<tr data-kind="${k}"><td>${esc(a.name||'')}</td><td>${esc(ASSET_KIND[k]||k)}</td><td>${esc(OWNER[a.owner]||a.owner||'Filer')}</td><td class="r">${esc(a.value||'')}</td></tr>`).join('')}</tbody></table></div>
+    <p class="small muted">Read from the report's own asset codes and descriptions; a kind the report doesn't make clear shows as Other.</p></div></details>`;
+}
+// The asset table's kind filter.
+function bindAssetFilter(root){
+  root.querySelectorAll('[data-asset-kind]').forEach(sel=>sel.addEventListener('change',()=>{const t=sel.closest('.st-assets');t.querySelectorAll('tbody tr').forEach(r=>{r.hidden=!!sel.value&&r.dataset.kind!==sel.value;});}));
+}
 function holdingsEvidence(s,d,x){
   const nw=d?.netWorth,held=x?.held,tr=x?.traded;
   const stocks=(nw?.assets||[]).filter(a=>assetKind(a)==='stock');
   return `<section class="st-sec" id="u-holdings"><h4 class="st-sub">Stocks held and trades</h4>
     <p class="small">${held?.blindTrust?'Their holdings are in a qualified blind trust, so there is no stock penalty.':held?.value!=null?`Their ${nw?.year||'latest'} annual report lists ${held.count} individual stock${held.count===1?'':'s'} or option${held.count===1?'':'s'} worth ${fmtFull(Math.round(held.value))} (the middle of each range).${nw?.url?` <a href="${esc(nw.url)}" target="_blank" rel="noopener">Report ↗</a>`:''}`:esc(held?.why||'Their annual financial disclosure hasn\'t been read yet.')}</p>
-    ${stocks.length?`<details class="tv"><summary>${stocks.length} individual stock${stocks.length===1?'':'s'} on the report</summary>${stTable(['Asset','Value range'],stocks.slice(0,80).map(a=>[esc(a.name||''),esc(a.value||'')]),'',[1])}</details>`:''}
+    ${topStocks(stocks,nw)}${assetTable(nw)}
     <p class="small">${tr?.count!=null?`${tr.count} trade${tr.count===1?'':'s'} in the campaign's reporting period, worth ${fmtFull(Math.round(tr.value))} in all (the middle of each range).`:esc(tr?.why||'Their stock trade reports haven\'t been read yet.')} The full list of their trades, with filing dates and conflict checks, is on the <a href="#${s.id}-aboveboard">Above Board</a> tab.</p></section>`;
 }
 function pledgesEvidence(s,pl){
@@ -913,7 +938,7 @@ function paneUnbought(s,pane){
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],['Earmarks are partial.','Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
-    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{}})}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
+    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
     assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
@@ -932,7 +957,7 @@ function paneUnbought(s,pane){
     const x=unbought(s,{...inputs,sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
     if(!d)x.why='The update service is offline, so their financial disclosure can\'t be read right now';
     const card=pane.querySelector('.st-grid');if(card){const tmp=document.createElement('div');tmp.innerHTML=draw(x,d);card.replaceWith(tmp.querySelector('.st-grid'));}
-    const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);ev.replaceWith(tmp.firstElementChild);}
+    const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec);}
     const calc=pane.querySelectorAll('.st-more .st-more-b')[1];if(calc)calc.innerHTML=unboughtCalc(s,x);
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
   });
@@ -1617,7 +1642,7 @@ function paneFinance(s,pane){
   <h2>Money &amp; Influence</h2>
   <p class="intro">Where campaign receipts come from and what outside groups spend. Each keeps its own reporting period.</p>${points([['Campaign funds',`What ${esc(s.short)}'s own committee raised and reported to the FEC.`],['Outside spending','Money other groups spent on the race on their own. The campaign never receives it.']])}
   <nav class="jump small">${c.missing?'':'<a href="#f-map">Money map</a>'}<a href="#f-glance">Funding mix</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every filing</a></nav>
-  ${moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{}})}
+  ${moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}
   <div id="f-glance">${ovMoney(s,true)}</div>
   <details class="data-disclosure"><summary>Selected researched funders</summary>${researchedFunders(s)}</details>
   <details class="data-disclosure"><summary>Campaign and outside-money comparison charts</summary><div id="f-sum">${fundingPanels(s)}</div>${scaleChart(s,false)}</details>

@@ -24,7 +24,19 @@ export const SOURCES=[
 
 // What the map shows for one profile, or null when the campaign has no FEC report yet.
 // groups: {key: name} for the groups that bundle; categories: {key: label} for the PAC kinds.
-export function moneyMap(s,{bundled=null,groups={},categories={}}={}){
+// The PACs behind the lines read: [{name, a, n}] largest first, for one kind (this app's sector) or, with a type
+// function, the ones the FEC records as sponsored by a corporation. A PAC that gave more than once counts once, its gifts
+// added up. rows: s.pac.rows ([name index, amount, kind, …]); names: research.json "pacNames".
+export function pacsOf(s,kind,names=[],type=null){
+  const by=new Map();
+  for(const [i,amt,k] of s?.pac?.rows||[]){
+    if(type?type(i)?.kind!=='corporate':k!==kind)continue;
+    const name=names[i]||`PAC #${i}`,o=by.get(name)||{name,a:0,n:0};o.a+=num(amt);o.n++;by.set(name,o);
+  }
+  return [...by.values()].filter(x=>x.a>0).sort((a,b)=>b.a-a.a||a.name.localeCompare(b.name));
+}
+const initials=n=>String(n||'').replace(/\b(PAC|POLITICAL|ACTION|COMMITTEE|FUND|INC|CORP(ORATION)?|THE|OF|AND|FOR|EMPLOYEES?|GOOD GOVERNMENT|CO)\b/gi,' ').trim().split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||'·';
+export function moneyMap(s,{bundled=null,groups={},categories={},pacNames=[],pacType=null}={}){
   const c=s?.camp;if(!c||c.missing||!(num(c.receipts)>0))return null;
   const parts={small:num(c.unitemized),large:num(c.itemized),transfers:num(c.transfers),pac:num(c.pac),own:num(c.candidate)+num(c.loans),party:num(c.party),other:num(c.other)};
   const o=s.out||{};
@@ -37,7 +49,8 @@ export function moneyMap(s,{bundled=null,groups={},categories={}}={}){
     debts:num(c.debts),
     side:[{k:'for',label:'Outside groups for them',a:num(o.for?.total),color:'--for-ink'},{k:'against',label:'Outside groups against them',a:num(o.against?.total),color:'--against-ink'}].filter(x=>x.a>0),
     sideStart:o.start||null,sideEnd:o.end||null,
-    pacKinds:(s.pac?.byCat||[]).map(([k,a])=>({k,label:categories[k]||k,a:num(a)})).filter(x=>x.a>0),
+    pacKinds:(s.pac?.byCat||[]).map(([k,a])=>({k,label:categories[k]||k,a:num(a),pacs:pacsOf(s,k,pacNames)})).filter(x=>x.a>0),
+    corporate:pacsOf(s,null,pacNames,pacType),
     pacWindow:s.pac?.window||null,pacRead:num(s.pac?.retrieved),
     bundled:Object.entries(bundled||{}).map(([k,v])=>({k,who:groups[k]||k,routed:num(v?.routed),n:num(v?.n),src:v?.src||null})).filter(x=>x.routed>0).sort((a,b)=>b.routed-a.routed),
   };
@@ -103,7 +116,10 @@ export function moneyMapBlock(s,opts={}){
     +(m.side.length?`<thead><tr><th>Outside spending</th><th class="r">Amount</th><th></th></tr></thead><tbody>${m.side.map(n=>row('',n.label,n.a)).join('')}</tbody>`:'');
   const maxK=Math.max(1,...m.pacKinds.map(x=>x.a));
   const kinds=m.pacKinds.length?`<p class="small muted">From the PAC lines in the campaign's reports for ${esc(m.pacWindow||'the period on file')}: ${short$(m.pacRead)} read, of the ${short$(m.ins.find(n=>n.k==='pac')?.a||0)} the FEC counts for the whole period.</p>
-    <div class="mm-bars">${m.pacKinds.map(x=>`<div class="mm-bar"><span>${esc(x.label)}</span><span class="mm-track"><span style="width:${(x.a/maxK*100).toFixed(1)}%"></span></span><span class="num">${short$(x.a)}</span></div>`).join('')}</div>`:'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
+    <div class="mm-bars">${m.pacKinds.map(x=>`<details class="mm-kind"><summary class="mm-bar"><span>${esc(x.label)}</span><span class="mm-track"><span style="width:${(x.a/maxK*100).toFixed(1)}%"></span></span><span class="num">${short$(x.a)}</span><span class="mm-chev" aria-hidden="true"></span></summary>${x.pacs.length?`<ul class="mm-pacs">${x.pacs.map(p=>`<li><span>${esc(p.name)}</span><span class="num">${full$(p.a)}${p.n>1?` <span class="muted">· ${p.n} gifts</span>`:''}</span></li>`).join('')}</ul>`:'<p class="small muted">The PACs aren\'t listed for this kind.</p>'}</details>`).join('')}</div>
+    <p class="small muted">Open a kind to see its PACs.</p>`:'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
+  const corpTotal=m.corporate.reduce((t,p)=>t+p.a,0);
+  const corporate=`<div class="mm-panel mm-corp" id="f-corporate"><h3>Corporate PAC donors</h3>${m.corporate.length?`<p class="mm-corp-sum"><b class="num">${full$(corpTotal)}</b> from ${m.corporate.length} corporate PAC${m.corporate.length===1?'':'s'}</p><ul class="mm-pacs mm-corp-list">${m.corporate.map(p=>`<li><span><i class="mm-badge" aria-hidden="true">${esc(initials(p.name))}</i>${esc(p.name)}</span><span class="num">${full$(p.a)}</span></li>`).join('')}</ul><p class="small muted">PACs the FEC records as sponsored by a corporation, from the lines read.</p>`:m.pacRead?'<p class="small">None of the PAC lines read are from corporate PACs.</p>':'<p class="small muted">No PAC lines read yet.</p>'}</div>`;
   const bundled=m.bundled.length?`<div class="mm-panel"><h3>Bundled through groups</h3><p class="small muted">Gifts from individuals that a group collected and passed on. They are part of the donor money above, not extra money.</p><ul class="list small">${m.bundled.map(b=>`<li><b>${esc(b.who)}</b> passed on ${full$(b.routed)}${b.n?` from ${b.n.toLocaleString('en-US')} gifts`:''}${b.src?` · <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</li>`).join('')}</ul></div>`:'';
   return `<section class="mm" id="f-map">
     <h2>Money map</h2>
@@ -114,6 +130,7 @@ export function moneyMapBlock(s,opts={}){
       <div class="mm-panel"><h3>The numbers</h3><div class="tablewrap"><table>${money}</table></div></div>
       <div class="mm-stack">
         <div class="mm-panel"><h3>PACs by kind</h3>${kinds}</div>
+        ${corporate}
         ${bundled}
         <div class="mm-panel mm-todo"><h3>Not on the map yet</h3><p class="small muted"><b>Where the money went:</b> the FEC lists every payment a campaign makes (staff, ads, transfers to party committees, gifts to other candidates), but the site collects only the total spent so far. <b>Donors by employer and industry</b> would split the donor circles further.</p></div>
       </div>

@@ -992,3 +992,21 @@ input, select { accent-color: var(--accent); }
 .legislation-area { font-size: .8rem; font-weight: 600; color: var(--ink); background: var(--bg); border-radius: 6px; padding: 3px 10px; }
 .legislation-source { font-size: .84rem; margin-left: 0; width: auto; margin-top: 0; }
 .legislation-note { font-size: .8rem; color: var(--muted); margin: 10px 0 0; }
+.mm-kind > summary { list-style: none; cursor: pointer; }
+.mm-kind > summary::-webkit-details-marker { display: none; }
+.mm-kind .mm-chev::after { content: "⌄"; color: var(--muted); }
+.mm-kind[open] .mm-chev::after { content: "⌃"; }
+.mm-pacs { list-style: none; margin: 4px 0 10px; padding: 0 0 0 4px; font-size: .82rem; }
+.mm-pacs li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.mm-pacs li > span:first-child { min-width: 0; overflow-wrap: anywhere; display: flex; align-items: center; gap: 8px; }
+.mm-pacs .num { white-space: nowrap; }
+.mm-corp-sum { margin: 2px 0 8px; font-size: .9rem; }
+.mm-corp-sum b { color: var(--crit); }
+.mm-badge { flex: 0 0 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; font-style: normal; font-size: .62rem; font-weight: 700; background: var(--surface-2); border: 1px solid var(--line-2); color: var(--ink-2); }
+.st-topstocks { list-style: none; margin: 6px 0 12px; padding: 0; }
+.st-topstocks li { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: .88rem; }
+.st-topstocks li .num { white-space: nowrap; }
+.st-assets-tools { display: flex; gap: 10px; align-items: center; margin: 8px 0; font-size: .85rem; }
+.st-assets-tools select { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-2); border-radius: 8px; padding: 6px 10px; }
+.mm-kind > summary.mm-bar { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) 4.6rem 1rem; padding: 4px 0; }
+@media (max-width: 480px) { .mm-kind > summary.mm-bar { grid-template-columns: minmax(0, 1fr) 4.6rem 1rem; } }
