@@ -72,39 +72,48 @@ export function legislationCoverage(snapshot){
   return notes.join('. ');
 }
 
-function billCard(row,kind){
-  const source=row.source?`<a class="legislation-source" href="${escape(row.source)}" target="_blank" rel="noopener">${new URL(row.source).hostname==='www.congress.gov'?'Congress.gov':'Official record'} <span aria-hidden="true">↗</span></a>`:'';
-  return `<article class="legislation-bill"><div class="legislation-bill-head"><h4>${escape(row.title)}</h4><span class="legislation-status">${escape(row.status)}</span></div>
-    <p class="legislation-meta">${escape(row.measure)}${row.congress?' · '+escape(congressLabel(row.congress)):''}${row.date?' · '+escape(row.dateLabel)+' '+escape(displayDate(row.date)):''}</p>
-    ${row.actedOn?`<p class="legislation-meta">${kind==='sponsored'?'Sponsored':'Cosponsored'} ${escape(displayDate(row.actedOn))}</p>`:''}
-    ${row.latestAction?`<p class="legislation-meta"><b>Latest recorded action:</b> ${escape(row.latestAction)}${row.latestActionDate?' ('+escape(displayDate(row.latestActionDate))+')':''}</p>`:''}
-    <div class="legislation-tags">${row.area?`<span class="chip ghost">${escape(row.area)}</span>`:''}<span class="chip ${row.reviewed?'profile-reviewed':'ghost'}">${row.reviewed?'Reviewed selection':'Refreshed record · not reviewed'}</span>${row.reviewed&&row.refreshed?'<span class="chip ghost">Latest official update · not reviewed</span>':''}${source}</div></article>`;
+// The stage a bill reached, from its recorded status or, without one, its latest action on Congress.gov.
+export function billStage(row){
+  if(row.status&&row.status!=='Status not recorded')return /^not/i.test(row.status)?'Not enacted':row.status.replace(/^in committee$/i,'In Committee');
+  const a=String(row.latestAction||'');
+  if(/became public law|signed by (the )?president/i.test(a))return 'Became Law';
+  if(/passed (the )?senate|passed senate/i.test(a))return 'Passed Senate';
+  if(/passed (the )?house|passed\/agreed to in house|passed house/i.test(a))return 'Passed House';
+  if(/placed on (the )?.*calendar|reported (by|to)|ordered to be reported/i.test(a))return 'Reported';
+  if(/referred to/i.test(a))return 'In Committee';
+  return a?'Introduced':'Status not recorded';
+}
+function billCard(row){
+  const source=row.source?`<a class="legislation-source" href="${escape(row.source)}" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> ${new URL(row.source).hostname==='www.congress.gov'?'Congress.gov':'Official record'}</a>`:'';
+  const when=row.date||row.actedOn;
+  return `<article class="legislation-bill"><div class="legislation-bill-head"><h4>${escape(row.title)}</h4>${billStage(row)==='Status not recorded'?'':`<span class="legislation-status">${escape(billStage(row))}</span>`}</div>
+    <p class="legislation-meta">${escape(row.measure)}${row.congress?' · '+escape(congressLabel(row.congress)):''}${when?' · '+escape(displayDate(when)):''}</p>
+    ${row.latestAction?`<p class="legislation-meta">Latest: ${escape(row.latestAction)}${row.latestActionDate?' ('+escape(displayDate(row.latestActionDate))+')':''}</p>`:''}
+    ${row.area||source?`<div class="legislation-tags">${row.area?`<span class="legislation-area">${escape(row.area)}</span>`:''}${source}</div>`:''}</article>`;
 }
 
-/** Mount the two bill panels, then load only existing completed snapshots. */
+/** Two boxes, Sponsored Bills and Cosponsored Legislation, each with its count; the official records fill in as they load. */
 export function mountLegislation(host,{person,data={},recordLive}={}){
   if(!host||!person)return;
   const noCongress=!!person.office||person.chamber==='P';
-  const state={snapshots:{},loading:!noCongress,error:false,query:'',congress:''};
-  host.innerHTML=`<div class="legislation-toolbar"><label><span>Find a bill</span><input type="search" placeholder="Search title, measure or policy area" aria-label="Search legislative activity"></label><label><span>Congress</span><select aria-label="Filter legislative activity by Congress"><option value="">All available Congresses</option></select></label></div><div class="legislation-panels" aria-live="polite"></div>`;
-  const search=host.querySelector('input'),select=host.querySelector('select'),panels=host.querySelector('.legislation-panels');
+  const state={snapshots:{},loading:!noCongress,error:false};
+  host.innerHTML='<div class="legislation-panels" aria-live="polite"></div><p class="legislation-note"></p>';
+  const panels=host.querySelector('.legislation-panels'),note=host.querySelector('.legislation-note');
+  const ICON={sponsored:'<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5z M12 2.5v3h3 M7.5 9h5 M7.5 12h5 M7.5 15h3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>',
+    cosponsored:'<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-13z M6 16.5h8 M7 9.5l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>'};
   const draw=()=>{
-    const rows=collectLegislation(person,data,state.snapshots),congresses=[...new Set([...rows.sponsored,...rows.cosponsored].map(r=>r.congress).filter(Boolean))].sort((a,b)=>b-a);
-    select.innerHTML='<option value="">All available Congresses</option>'+congresses.map(c=>`<option value="${c}">${escape(congressLabel(c))}</option>`).join('');select.value=state.congress;
-    panels.innerHTML=[['sponsored','Sponsored Bills','legislation'],['cosponsored','Cosponsored Legislation','cosponsored']].map(([kind,title,key])=>{
-      const all=rows[kind],filtered=filterLegislation(all,state),snapshot=state.snapshots[key],reported=Number.isFinite(snapshot?.count)?snapshot.count:null;
-      const coverage=noCongress?'Presidents do not sponsor or cosponsor congressional bills. Executive orders and other official actions are listed below.':reported!==null?`Official snapshot reports ${reported.toLocaleString()} measures${snapshot.checkedAt?'; checked '+escape(displayDate(String(snapshot.checkedAt).slice(0,10))):''}. The cards show the records loaded here; reviewed selections may cover other periods.`
-        :state.loading?'Loading completed official records. Reviewed selections appear below.':state.error?'Official records are temporarily unavailable. Reviewed selections remain available.':'Waiting for an official refresh. The reviewed selections below are not a complete legislative history.';
-      const noMatch=state.query||state.congress;
-      const empty=noCongress?'Not applicable to the presidency.':noMatch?'No loaded bills match these filters.':state.loading?'Loading official records…':reported===0?'The completed official snapshot returned no measures for its covered period.':'No reviewed selections are on file here yet. Waiting for official records; this does not mean no bills exist.';
-      const career=kind==='sponsored'&&!noCongress&&(person.sponsoredCount!=null||person.sponsoredNote)?`<p class="legislation-meta">${person.sponsoredCount!=null?`<b>Reviewed career total:</b> ${escape(Number(person.sponsoredCount).toLocaleString('en-US'))} bills, resolutions and amendments sponsored. This total is separate from the loaded cards and official snapshot count. `:''}${escape(person.sponsoredNote||'')}</p>`:'';
-      return `<section class="legislation-panel" id="leg-${kind}"><div class="legislation-panel-head"><h3>${title}</h3><span class="legislation-count" aria-label="${noCongress?'Not applicable':filtered.length+' of '+all.length+' loaded records'}">${noCongress?'Not applicable':filtered.length+(noMatch?' / '+all.length:'')+' loaded'}</span></div>${career}<p class="legislation-meta">${coverage}</p>${snapshot?`<p class="legislation-meta">${escape(legislationCoverage(snapshot))}</p><p class="legislation-meta"><a href="#updates">Refresh status &amp; history ↗</a></p>`:''}<div class="legislation-list">${!noCongress&&filtered.length?filtered.map(row=>billCard(row,kind)).join(''):`<p class="legislation-empty">${empty}</p>`}</div></section>`;
+    const rows=collectLegislation(person,data,state.snapshots);
+    panels.innerHTML=[['sponsored','Sponsored Bills'],['cosponsored','Cosponsored Legislation']].map(([kind,title])=>{
+      const list=rows[kind];
+      const empty=noCongress?'Presidents don\'t sponsor or cosponsor bills in Congress.':state.loading?'Loading their bills…':'None on record yet.';
+      return `<section class="legislation-panel" id="leg-${kind}"><div class="legislation-panel-head"><h3>${ICON[kind]}${title}</h3><span class="legislation-count">${noCongress?'—':list.length}</span></div>
+        ${list.length?`<div class="legislation-list">${list.map(billCard).join('')}</div>`:`<p class="legislation-meta">${escape(empty)}</p>`}</section>`;
     }).join('');
+    const counts=['legislation','cosponsored'].map(k=>state.snapshots[k]).filter(Boolean);
+    note.textContent=noCongress?'':state.loading?'':state.error?'The latest official records are unavailable right now; the bills on file are shown.':counts.length?`From Congress.gov${counts[0].checkedAt?`, checked ${displayDate(String(counts[0].checkedAt).slice(0,10))}`:''}, and the reviewed research.`:'Waiting for the official refresh; the bills on file are shown, which may not be every bill.';
   };
-  search.addEventListener('input',()=>{state.query=search.value;draw();});
-  select.addEventListener('change',()=>{state.congress=select.value;draw();});
   draw();
-  if(noCongress){search.disabled=true;select.disabled=true;return;}
+  if(noCongress)return;
   Promise.allSettled(['legislation','cosponsored'].map(key=>recordLive?.section?recordLive.section(person.id,key):Promise.resolve(null))).then(results=>{
     if(!host.isConnected)return;
     state.loading=false;state.error=results.some(r=>r.status==='rejected');

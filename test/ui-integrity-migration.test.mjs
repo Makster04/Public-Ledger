@@ -9,7 +9,7 @@ const migration=JSON.parse(fs.readFileSync(new URL('../public/score-presentation
 
 test('profiles open on the Overview and a tab for each of the six scores; old links land on the tab that holds their content',()=>{
   assert.match(app,/const TABS=\[\['overview','Overview'\],\['ideology','Ideology'\],\['word','Keeps Their Word'\],\['showsup','Shows Up'\],\['unbought','Unbought'\],\['aboveboard','Above Board'\],\['peoplefirst','People First'\]\]/);
-  for(const [old,now] of [['promises','word'],['ethics','aboveboard'],['finance','unbought'],['legislation','ideology'],['match','ideology'],['pvp','peoplefirst'],['integrity','overview']])
+  for(const [old,now] of [['promises','word'],['ethics','aboveboard'],['finance','unbought'],['legislation','showsup'],['match','ideology'],['pvp','peoplefirst'],['integrity','overview']])
     assert.match(app,new RegExp(`\\b${old}:\\['${now}'`),`${old} → ${now}`);
   assert.match(app,/function reportCard\(s,links\)\{return sixTiles\(s,links\);\}/);
   assert.doesNotMatch(app,/\$\{gradeTile\('Promises delivered'/);
