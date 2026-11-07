@@ -905,19 +905,47 @@ function topStocks(stocks,nw){
   const top=stocks.slice().sort((a,b)=>assetMid(b)-assetMid(a)).slice(0,10);
   return `<div class="st-check"><h4>Top individual stocks held${nw?.year?` <span class="muted small">· ${esc(nw.year)} report</span>`:''}</h4><ul class="st-topstocks">${top.map(a=>`<li><span>${esc(a.name||'')}</span><span class="num">${esc(a.value||'')}</span></li>`).join('')}</ul>${stocks.length>10?`<p class="small muted">${stocks.length-10} more in the table below.</p>`:''}</div>`;
 }
-// Every asset on their latest annual report, with its kind and owner, filterable by kind.
-function assetTable(nw){
-  const assets=nw?.assets||[];if(!assets.length)return '';
-  const kinds=[...new Set(assets.map(a=>assetKind(a)))];
-  const rows=assets.map(a=>({a,k:assetKind(a)})).sort((x,y)=>assetMid(y.a)-assetMid(x.a));
-  return `<details class="st-more st-assets"><summary>All ${assets.length} assets on their ${esc(nw.year||'latest')} report</summary><div class="st-more-b">
-    <div class="st-assets-tools"><label>Kind <select data-asset-kind><option value="">All kinds</option>${kinds.map(k=>`<option value="${k}">${esc(ASSET_KIND[k]||k)}</option>`).join('')}</select></label>${nw.url?`<a href="${esc(nw.url)}" target="_blank" rel="noopener">The report ↗</a>`:''}</div>
+// The annual reports with an asset list: the newest, then each earlier year kept with it (one a year).
+function assetYears(nw){
+  if(!nw)return [];
+  const seen=new Set();
+  return [nw,...(nw.history||[]).filter(h=>String(h.id??'')!==String(nw.id??'')||h.year!==nw.year)]
+    .filter(y=>Array.isArray(y.assets)&&y.assets.length&&y.year!=null&&!seen.has(String(y.year))&&seen.add(String(y.year)));
+}
+// What one year's assets add up to, by kind: the middle of each value range (an open-ended range at its floor).
+function assetsByKind(assets){
+  const by=new Map();
+  for(const a of assets||[]){const k=assetKind(a),o=by.get(k)||{k,label:ASSET_KIND[k]||k,value:0,n:0};o.value+=amountMidOf(a.value);o.n++;by.set(k,o);}
+  const total=[...by.values()].reduce((t,x)=>t+x.value,0);
+  return {total,kinds:[...by.values()].map(x=>({...x,share:total?x.value/total:0})).sort((a,b)=>b.value-a.value||b.n-a.n)};
+}
+const shortMoney=n=>n>=1e9?`$${(n/1e9).toFixed(1)}B`:n>=1e6?`$${(n/1e6).toFixed(n>=1e7?0:1)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
+const pctText=f=>f>0&&f<0.005?'<1%':`${Math.round(f*100)}%`;
+// One year: the breakdown by kind, then every asset with its kind and owner, filterable by kind.
+function assetYearBody(y){
+  const {total,kinds}=assetsByKind(y.assets),max=Math.max(...kinds.map(x=>x.value),1);
+  const chart=`<div class="st-check"><h4>What they own, by kind <span class="muted small">· ${esc(y.year)} report</span></h4>
+    <div class="mm-bars st-kinds" role="list">${kinds.map(x=>`<div class="mm-bar" role="listitem" title="${esc(x.label)}: about ${fmtFull(x.value)}, ${pctText(x.share)} of the total, ${x.n} asset${x.n===1?'':'s'}"><span>${esc(x.label)} <span class="muted">· ${x.n}</span></span><span class="mm-track"><span style="width:${(x.value/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(x.value)} · ${pctText(x.share)}</span></div>`).join('')}</div>
+    <p class="small muted">About ${shortMoney(total)} in all: the middle of each asset's value range, added up by kind (an "over" range at its floor). The number after each kind is how many assets it has. Their home isn't on the form unless it earns income.</p></div>`;
+  const rows=y.assets.map(a=>({a,k:assetKind(a)})).sort((p,q)=>assetMid(q.a)-assetMid(p.a));
+  return `${chart}<details class="st-more st-assets"><summary>All ${y.assets.length} assets on their ${esc(y.year)} report</summary><div class="st-more-b">
+    <div class="st-assets-tools"><label>Kind <select data-asset-kind><option value="">All kinds</option>${kinds.map(x=>`<option value="${x.k}">${esc(x.label)}</option>`).join('')}</select></label>${y.url?`<a href="${esc(y.url)}" target="_blank" rel="noopener">The report ↗</a>`:''}</div>
     <div class="tablewrap"><table class="st-table"><thead><tr><th>Asset</th><th>Kind</th><th>Owner</th><th class="r">Value range</th></tr></thead><tbody>${rows.map(({a,k})=>`<tr data-kind="${k}"><td>${esc(a.name||'')}</td><td>${esc(ASSET_KIND[k]||k)}</td><td>${esc(OWNER[a.owner]||a.owner||'Filer')}</td><td class="r">${esc(a.value||'')}</td></tr>`).join('')}</tbody></table></div>
     <p class="small muted">Read from the report's own asset codes and descriptions; a kind the report doesn't make clear shows as Other.</p></div></details>`;
 }
-// The asset table's kind filter.
-function bindAssetFilter(root){
-  root.querySelectorAll('[data-asset-kind]').forEach(sel=>sel.addEventListener('change',()=>{const t=sel.closest('.st-assets');t.querySelectorAll('tbody tr').forEach(r=>{r.hidden=!!sel.value&&r.dataset.kind!==sel.value;});}));
+// Their assets, one annual report at a time: a year picker when more than one year's list is on file.
+function assetTable(nw){
+  const years=assetYears(nw);if(!years.length)return '';
+  return `<div class="st-assetyears">${years.length>1?`<div class="st-assets-tools"><label>Report year <select data-asset-year>${years.map((y,i)=>`<option value="${i}">${esc(y.year)}${i?'':' (latest)'}</option>`).join('')}</select></label><span class="small muted">${years.length} years of asset lists on file</span></div>`:''}<div data-asset-body>${assetYearBody(years[0])}</div></div>`;
+}
+// The year picker and the kind filter.
+function bindAssetFilter(root,nw){
+  const years=assetYears(nw);
+  root.querySelectorAll('.st-assetyears').forEach(box=>box.addEventListener('change',e=>{
+    const sel=e.target;
+    if(sel.matches('[data-asset-year]')){const y=years[Number(sel.value)];if(y)box.querySelector('[data-asset-body]').innerHTML=assetYearBody(y);}
+    else if(sel.matches('[data-asset-kind]'))sel.closest('.st-assets').querySelectorAll('tbody tr').forEach(r=>{r.hidden=!!sel.value&&r.dataset.kind!==sel.value;});
+  }));
 }
 function holdingsEvidence(s,d,x){
   const nw=d?.netWorth,held=x?.held,tr=x?.traded;
@@ -957,7 +985,7 @@ function paneUnbought(s,pane){
     const x=unbought(s,{...inputs,sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
     if(!d)x.why='The update service is offline, so their financial disclosure can\'t be read right now';
     const card=pane.querySelector('.st-grid');if(card){const tmp=document.createElement('div');tmp.innerHTML=draw(x,d);card.replaceWith(tmp.querySelector('.st-grid'));}
-    const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec);}
+    const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
     const calc=pane.querySelectorAll('.st-more .st-more-b')[1];if(calc)calc.innerHTML=unboughtCalc(s,x);
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
   });

@@ -22,8 +22,8 @@ import {openDatabase} from './sqlite.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const fold=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z]/g,'');
 // Sitting senators, and the profiled Senate candidates, who file their reports on Senate eFD too.
-const SENATORS=()=>config.people.filter(p=>p.chamber==='S'&&(p.inOffice||p.ids));
-const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|II|III|IV)$/i,'').trim().split(/\s+/).pop();
+export const SENATORS=()=>config.people.filter(p=>p.chamber==='S'&&(p.inOffice||p.ids));
+export const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|II|III|IV)$/i,'').trim().split(/\s+/).pop();
 
 // Whose report a saved page is: the folder it's in when that's a senator's id, otherwise the name on the page.
 export function senatorFor(file,report,people=SENATORS()){
