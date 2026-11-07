@@ -867,7 +867,8 @@ function unboughtInputs(s){
 }
 function unboughtBreakdown(x){
   const max=Math.max(1,...x.parts.map(p=>Math.abs(p.points||0)));
-  return stTable(['Part','Points',''],x.parts.map(p=>[`${esc(p.label)}<div class="small muted">${esc(p.note||'')}</div>`,p.points==null?'<span class="muted">waiting</span>':`<b class="${p.points<0?'st-neg':p.points>0?'st-pos':''}">${pts1(p.points)}</b>`,stBar(p.points,max)]),'st-unbought');
+  const items=p=>p.items?`<ul class="st-items">${p.items.map(b=>`<li class="${b.status}"><span aria-hidden="true">${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'}</span><span><b>${esc(b.label)}</b>${b.status==='yes'?` +${b.points}`:''} <span class="muted">${esc(b.status==='waiting'?'waiting: ':'')}${esc(b.why)}</span></span></li>`).join('')}</ul>`:`<div class="small muted">${esc(p.note||'')}</div>`;
+  return stTable(['Part','Points',''],x.parts.map(p=>[`${esc(p.label)}${items(p)}`,p.points==null?'<span class="muted">waiting</span>':`<b class="${p.points<0?'st-neg':p.points>0?'st-pos':''}">${pts1(p.points)}</b>`,stBar(p.points,max)]),'st-unbought');
 }
 function unboughtCalc(s,x){
   const W=UNBOUGHT[s.chamber==='S'?'S':'H'],ch=s.chamber==='S'?'Senate':'House';
