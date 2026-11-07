@@ -47,10 +47,15 @@ test('the refresh job reads the FEC\'s size groups and the committee\'s totals f
     throw new Error('unexpected '+u);}};
   const job={kind:'donor-sizes',subject:p.id,args:JSON.stringify(a),cursor:null,started_at:new Date().toISOString()};
   const r=await FEEDS['donor-sizes'].page(job,a,env,config);
-  assert.equal(r.next,null);
+  // The current cycle first, then each earlier cycle from historyFrom on.
+  assert.deepEqual(JSON.parse(r.next),{todo:[2026,2024,2022,2020,2018,2016],i:1,at:null});
   const u0=new URL(calls[0]);assert.equal(u0.pathname,'/v1/schedules/schedule_a/by_size/');assert.equal(u0.searchParams.get('committee_id'),a.committee);assert.equal(u0.searchParams.get('cycle'),'2026');
   assert.match(calls[1],new RegExp(`/v1/committee/${a.committee}/totals/\\?cycle=2026`));
-  const snap=FEEDS['donor-sizes'].summarize(r.rows,a,job,config);
+  // An earlier cycle with no report for this committee (before it existed) is left out, not an error.
+  const r2=await FEEDS['donor-sizes'].page({...job,cursor:r.next},a,env,config);
+  assert.ok(r2.rows.some(x=>x.none&&x.period===2024));
+  const snap=FEEDS['donor-sizes'].summarize([...r.rows,...r2.rows],a,job,config);
+  assert.deepEqual(snap.cycles,{},'no earlier cycle with a report');
   assert.equal(snap.brackets[0].total,5000,'unitemized $4,000 joins the $1,000 itemized in the first group');
   assert.equal(snap.brackets[2].total,0,'another committee\'s or cycle\'s rows are left out');
   assert.equal(snap.total,14000);assert.equal(snap.cycle,2026);assert.match(snap.source,/^https:\/\/www\.fec\.gov\/data\/committee\//);

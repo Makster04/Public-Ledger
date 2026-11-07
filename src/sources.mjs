@@ -202,7 +202,7 @@ export function normalizeCampaign(r,committee,cycle) {
   const end=day(r.coverage_end_date),start=day(r.coverage_start_date);
   if(!end||!start||end<start)throw new SourceError('Campaign reporting dates are missing or invalid');
   const receipts=money(r.receipts); if(receipts==null)throw new SourceError('Campaign receipts missing');
-  return {id:committee,committee,cycle,start,end,receipts,cash:money(r.last_cash_on_hand_end_period),debts:money(r.last_debts_owed_by_committee),disbursements:money(r.disbursements),individual:money(r.individual_contributions),pac:money(r.other_political_committee_contributions),party:money(r.political_party_committee_contributions),candidate:money(r.candidate_contribution),loans:money(r.loans),source:`https://www.fec.gov/data/committee/${committee}/?cycle=${cycle}`};
+  return {id:committee,committee,cycle,start,end,receipts,cash:money(r.last_cash_on_hand_end_period),debts:money(r.last_debts_owed_by_committee),disbursements:money(r.disbursements),individual:money(r.individual_contributions),itemized:money(r.individual_itemized_contributions),unitemized:money(r.individual_unitemized_contributions),transfers:money(r.transfers_from_other_authorized_committee),self:(money(r.candidate_contribution)||0)+(money(r.loans_made_by_candidate)||0),pac:money(r.other_political_committee_contributions),party:money(r.political_party_committee_contributions),candidate:money(r.candidate_contribution),loans:money(r.loans),source:`https://www.fec.gov/data/committee/${committee}/?cycle=${cycle}`};
 }
 
 export function normalizeTransaction(r,kind,args) {

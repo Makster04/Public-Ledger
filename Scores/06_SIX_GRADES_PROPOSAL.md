@@ -254,6 +254,19 @@ and the PAC rates 0.00001 · 0.000005 · 0.000001 · 0.0000005 · 0.00000025.
 - **`$` terms:** dollar amounts.
 - **`[ ]` terms:** 1 when true, 0 otherwise.
 - **Highest possible score:** 101 in the House, 99 in the Senate.
+- **Joint fundraising, credited back:** money a joint fundraising committee passed on (line 12) is credited to the
+  people who gave it, by the size of each one's share as the memo entries list it; the part no entry lists is people
+  whose share was $200 or less, so it counts as small gifts; committees' shares, and transfers from the candidate's
+  other committees, stay at the joint fundraising weight. A cycle with too many records to read in full isn't
+  credited back.
+- **Earmarks:** every committee the FEC's totals by recipient show sending more than a PAC may give directly (or many
+  checks, or memo entries) has its disbursements read for earmarked gifts, not just the 5 groups listed by hand.
+- **Periods:** the Unbought tab can show the score over earlier cycles too (2023–2026, 2021–2026, or one earlier cycle
+  alone). Each cycle's totals, gift sizes, PAC lines (each cycle's PAC shares applied to that cycle's PAC total),
+  earmarks and joint fundraising are added up; trades count over the whole span; stocks held are from the latest annual
+  report. A cycle missing a record leaves the score waiting. Everywhere else shows the current cycle.
+- **PAC money not yet processed by the FEC** (reports filed after the processed totals end) is shown with a * and
+  counts once the FEC processes it.
 
 **Minimum:** the cycle's FEC report, and the person's financial disclosure read (holdings and trades). Until then:
 *"Not graded yet: their financial disclosure hasn't been read."* The stock terms are never dropped to make a grade
@@ -449,11 +462,15 @@ Every tab follows the same order:
   - the money map;
   - "The numbers" table;
   - PACs by kind, which feeds the PAC penalty;
-  - bundled gifts, which feed Earmarks.
+  - bundled gifts, which feed Earmarks;
+  - joint fundraising, credited back to the people who gave it, which feeds Donor.
+- **Period picker:** this cycle, wider spans back to 2017, or one earlier cycle alone.
 - **Counted, stocks and trades:** the individual stocks held and their value (Stocks), and the number and value of their
   trades (Trades). Their full trade list lives here.
 - **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they cosponsored.
 - **Shown, not counted:**
+  - PAC money not yet processed by the FEC, marked with a *;
+  - where the itemized gifts come from: in-state, out-of-state and the top states;
   - outside spending for and against them;
   - Donor Loyalty (whether their votes line up with their funders more than their party's do);
   - timing flags (donations near related votes);

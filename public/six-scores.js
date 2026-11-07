@@ -138,7 +138,7 @@ export function tradesIn(trades,start,end){
 // sizes: the FEC's gift sizes for the cycle (public/donor-sizes.js); pacRows: [{kind, amount}] from the itemized PAC lines
 // with their FEC types; earmarks: [{group, amount}] gifts routed through conduit groups; snapshot: the latest annual
 // report; trades: {rows, covered, why}; pledges: unboughtPledges().
-export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[]}={}){
+export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false}={}){
   const c=person?.camp||{},R=c.receipts,W=UNBOUGHT[person?.chamber==='S'?'S':'H'];
   const needs=[['The cycle\'s FEC report',R>0&&!c.missing],['Their financial disclosure read (holdings and trades)',false]];
   if(person?.office)return {pct:null,why:'Not graded for a president: there is no 2026 campaign to compare',parts:[],needs};
@@ -157,7 +157,15 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
     donorRaw=share(c.unitemized)*W.unitemized+share(c.itemized)*W.unsorted;
     donorNote='the FEC\'s gift-size split isn\'t read for this period, so itemized gifts count at the not-yet-sorted rate';
   }
-  donorRaw+=share(c.self)*W.self+share(c.transfers)*W.joint;
+  // Joint fundraising: the money a joint fundraising committee passed on is credited back to the people who gave it, by
+  // the size of each one's share (public/fec-money.js, jfcCycleSummary); committees' shares, and transfers from other
+  // committees, stay at the joint fundraising weight. Without that read, every transfer counts at that weight.
+  const transfers=Number(c.transfers)||0,jt=jfc&&jfc.transferred>0&&transfers>0?Math.min(1,transfers/jfc.transferred):0;
+  if(jt){
+    donorRaw+=jfc.bands.reduce((t,b,i)=>t+share(b*jt)*W.donor[i],0)+share(transfers-jfc.people*jt)*W.joint;
+    donorNote+=`; $${Math.round(jfc.people*jt).toLocaleString('en-US')} through joint fundraising credited to the people who gave it`;
+  }else donorRaw+=share(transfers)*W.joint;
+  donorRaw+=share(c.self)*W.self;
   const donor=clamp(donorRaw,0,W.donorCap);
   // PAC: each type's dollars × its rate. The itemized PAC lines read so far give each type's share of PAC money, which
   // is applied to the FEC's PAC total for the period, so every PAC dollar counts.
@@ -195,7 +203,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
     {key:'donor',label:'Donor',points:round1(donor),note:donorNote},
     {key:'pac',label:'PAC',points:pac==null?null:-round1(pac),note:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
-    {key:'earmarks',label:'Earmarks',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups (partial: 5 groups collected so far)`},
+    {key:'earmarks',label:'Earmarks',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: 5 groups collected so far)'}`},
     {key:'stocks',label:'Stocks',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
     {key:'trades',label:'Trades',points:tradePts==null?null:-round1(tradePts),note:traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
     {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},

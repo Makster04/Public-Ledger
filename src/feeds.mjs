@@ -8,6 +8,7 @@ import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
 import {donorSizes} from '../public/donor-sizes.js';
+import {pacLine,pacCycleSummary,efileRows,efileSummary,stateSummary,jfcPage,jfcCycleSummary} from '../public/fec-money.js';
 import {netWorth} from '../public/net-worth.js';
 import {annualEntry} from '../public/holdings.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
@@ -131,6 +132,10 @@ export async function byPeriod(job,env,{periods,closed=ended,tag='',read}){
   return {rows,next:c.i+1<c.todo.length?JSON.stringify({todo:c.todo,i:c.i+1,at:null}):null};
 }
 const periodRows=rows=>rows.filter(r=>r.periodDone==null);
+// The cycles from historyFrom to the current one, newest first, so the current cycle is read first.
+const newestCycles=(config,cycle)=>cyclesFrom(SINCE(config),cycle).filter(c=>c<=cycle).sort((a,b)=>b-a);
+// A per-cycle feed's records, grouped by cycle.
+const byCycle=(rows,current)=>{const by={};for(const r of periodRows(rows))(by[r.period??current]||=[]).push(r);return by;};
 const countBy=(rows,key)=>{const o={};for(const r of rows){const k=key(r);o[k]=(o[k]||0)+1;}return o;};
 // A newest-first list read back to historyFrom: in full about once a month, and in between only its newest page, with
 // the older records carried over from the last run. read(cursor) returns {rows, next, oldest} (oldest: the date of the
@@ -852,23 +857,88 @@ export const FEEDS={
       return {rows:d.results.filter(r=>Number(r.cycle)>=SINCE(config)).map(ok).filter(Boolean),next:null};
     },
     summarize:rows=>({cycles:rows.sort((x,y)=>y.cycle-x.cycle)})},
-  // Money from individual donors in the current cycle, by the size of each gift: the FEC's five size groups for the
-  // campaign committee, checked against the committee's itemized and unitemized totals (public/donor-sizes.js).
+  // Money from individual donors, by the size of each gift: the FEC's five size groups for the campaign committee,
+  // checked against the committee's itemized and unitemized totals (public/donor-sizes.js). The current cycle is shown
+  // at the top; each earlier cycle from historyFrom on is kept by cycle (an ended cycle is read once), for the Unbought
+  // tab's periods. A cycle before the committee existed has no report and is left out.
   'donor-sizes':{host:'api.open.fec.gov',label:'Donors by gift size',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donor-sizes:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
-    async page(job,a,env){
-      const s=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_size/?committee_id=${a.committee}&cycle=${a.cycle}&per_page=100`,env);
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:newestCycles(config,a.cycle),read:async cycle=>{
+      const s=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_size/?committee_id=${a.committee}&cycle=${cycle}&per_page=100`,env);
       need(Array.isArray(s.results),'FEC gift-size totals missing');
-      const t=await requestSource(`https://api.open.fec.gov/v1/committee/${a.committee}/totals/?cycle=${a.cycle}&per_page=20`,env);
+      const t=await requestSource(`https://api.open.fec.gov/v1/committee/${a.committee}/totals/?cycle=${cycle}&per_page=20`,env);
       need(Array.isArray(t.results),'Campaign totals missing');
-      const tot=t.results.find(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(a.cycle));
-      need(tot,'No campaign report for this committee and cycle yet');
-      const rows=s.results.filter(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(a.cycle)).map(r=>({id:`size-${r.size}`,size:Number(r.size),total:Number(r.total)||0,count:Number(r.count)||0}));
-      return {rows:[...rows,{id:'totals',individual_itemized_contributions:tot.individual_itemized_contributions??null,individual_unitemized_contributions:tot.individual_unitemized_contributions??null,
+      const tot=t.results.find(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(cycle));
+      if(!tot){need(Number(cycle)!==Number(a.cycle),'No campaign report for this committee and cycle yet');return {rows:[{id:'none',none:true}],next:null};}
+      const rows=s.results.filter(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(cycle)).map(r=>({id:`size-${r.size}`,size:Number(r.size),total:Number(r.total)||0,count:Number(r.count)||0}));
+      return {rows:[...rows,{id:'totals',totals:true,individual_itemized_contributions:tot.individual_itemized_contributions??null,individual_unitemized_contributions:tot.individual_unitemized_contributions??null,
         coverage_start_date:day(tot.coverage_start_date),coverage_end_date:day(tot.coverage_end_date)}],next:null};
+    }}),
+    summarize:(rows,a)=>{
+      const by=byCycle(rows,a.cycle),one=(list,cy)=>({...donorSizes(list.filter(r=>r.size!=null),list.find(r=>r.totals)||{}),cycle:Number(cy),committee:a.committee,
+        source:`https://www.fec.gov/data/committee/${a.committee}/?cycle=${cy}&tab=raising`});
+      const past=Object.entries(by).filter(([cy,l])=>Number(cy)!==Number(a.cycle)&&!l.some(r=>r.none));
+      return {...(by[a.cycle]?one(by[a.cycle],a.cycle):{cycle:a.cycle,committee:a.committee}),cycles:Object.fromEntries(past.map(([cy,l])=>[cy,one(l,cy)]))};
+    }},
+  // Every PAC contribution the FEC has processed (Form 3, line 11C), each cycle from historyFrom on, with each PAC's type
+  // from the FEC's record of it (public/fec-money.js, pacLine). An ended cycle is read once and kept. For the Unbought
+  // tab's earlier periods; the current cycle's reviewed PAC table stays in public/research.json.
+  'pac-history':{host:'api.open.fec.gov',label:'PAC contributions by cycle',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`pac-history:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:newestCycles(config,a.cycle),read:async(cycle,cursor)=>{
+      const url=cursor||`https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=${a.committee}&two_year_transaction_period=${cycle}&line_number=F3-11C&per_page=100&sort=-contribution_receipt_date`;
+      const d=await requestSource(url,env);need(Array.isArray(d.results),'FEC PAC contributions missing');
+      return {rows:d.results.filter(r=>r.committee_id===a.committee).map(pacLine).filter(r=>r.id&&r.amount!=null),next:fecNext(url,d)};
+    }}),
+    summarize:(rows,a)=>({cycle:a.cycle,committee:a.committee,cycles:Object.fromEntries(Object.entries(byCycle(rows,a.cycle)).map(([cy,l])=>[cy,pacCycleSummary(l)]))})},
+  // PAC contributions the FEC hasn't processed yet: the raw e-filings (schedules/schedule_a/efile) dated after the
+  // processed totals end, line 11C only. Shown with a * until the FEC processes them; no grade counts them before then.
+  'pac-efile':{host:'api.open.fec.gov',label:'PAC contributions not yet processed',tab:'finance',
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`pac-efile:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
+    async page(job,a,env){
+      const c=state(job.cursor);
+      if(!c){
+        const t=await requestSource(`https://api.open.fec.gov/v1/committee/${a.committee}/totals/?cycle=${a.cycle}&per_page=20`,env);
+        need(Array.isArray(t.results),'Campaign totals missing');
+        const end=day(t.results.find(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(a.cycle))?.coverage_end_date);
+        const since=end?new Date(Date.parse(end)+DAY).toISOString().slice(0,10):`${a.cycle-1}-01-01`;
+        return {rows:[{id:'since',since}],next:JSON.stringify({since,page:1})};
+      }
+      const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/efile/?committee_id=${a.committee}&min_date=${c.since}&sort=-contribution_receipt_date&per_page=100&page=${c.page}`,env);
+      need(Array.isArray(d.results),'FEC e-filed receipts missing');
+      const pages=Number(d.pagination?.pages)||1,more=d.results.length>0&&c.page<pages;
+      const rows=efileRows(d.results.filter(r=>!r.committee_id||r.committee_id===a.committee),{since:c.since});
+      // At most 20 pages (2,000 receipts) a run; a longer list says so.
+      if(more&&c.page>=20)return {rows:[...rows,{id:'more',more:true}],next:null};
+      return {rows,next:more?JSON.stringify({...c,page:c.page+1}):null};
     },
-    summarize:(rows,a)=>({...donorSizes(rows.filter(r=>r.id!=='totals'),rows.find(r=>r.id==='totals')||{}),cycle:a.cycle,committee:a.committee,
-      source:`https://www.fec.gov/data/committee/${a.committee}/?cycle=${a.cycle}&tab=raising`})},
+    summarize:(rows,a)=>({...efileSummary(rows.filter(r=>r.amount>0),{since:rows.find(r=>r.id==='since')?.since,committee:a.committee}),cycle:a.cycle,more:rows.some(r=>r.more)})},
+  // Itemized gifts from individuals by the donor's state, each cycle from historyFrom on (schedules/schedule_a/by_state).
+  'donor-states':{host:'api.open.fec.gov',label:'Donors by state',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donor-states:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle,state:p.state||null}})),
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:newestCycles(config,a.cycle),read:async cycle=>{
+      const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/by_state/?committee_id=${a.committee}&cycle=${cycle}&per_page=100&sort=-total`,env);
+      need(Array.isArray(d.results),'FEC totals by state missing');
+      return {rows:d.results.filter(r=>r.committee_id===a.committee&&Number(r.cycle)===Number(cycle)).map(r=>({id:String(r.state||'none'),state:r.state||null,state_full:r.state_full||null,total:Number(r.total)||0,count:Number(r.count)||0})),next:null};
+    }}),
+    summarize:(rows,a)=>{const by=byCycle(rows,a.cycle);
+      return {...stateSummary(by[a.cycle]||[],a.state),cycle:a.cycle,source:`https://www.fec.gov/data/receipts/individual-contributions/?committee_id=${a.committee}&two_year_transaction_period=${a.cycle}`,
+        cycles:Object.fromEntries(Object.entries(by).filter(([cy])=>Number(cy)!==Number(a.cycle)).map(([cy,l])=>[cy,stateSummary(l,a.state)]))};}},
+  // Joint fundraising credited back to the people who gave it: line 12 (transfers from other authorized committees),
+  // with the memo entries listing each contributor's share under a joint fundraising committee's transfer
+  // (public/fec-money.js, jfcPage and jfcCycleSummary). Each cycle from historyFrom on; at most 60 pages (6,000 records)
+  // a cycle: a cycle with more is marked partial and not credited back, so nothing is guessed.
+  'joint-fundraising':{host:'api.open.fec.gov',label:'Joint fundraising, credited to donors',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`joint-fundraising:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:newestCycles(config,a.cycle),read:async(cycle,cursor)=>{
+      const at=cursor?JSON.parse(cursor):{u:`https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=${a.committee}&two_year_transaction_period=${cycle}&line_number=F3-12&per_page=100&sort=-contribution_receipt_date`,n:0};
+      const d=await requestSource(at.u,env);need(Array.isArray(d.results),'FEC transfers missing');
+      const rows=jfcPage(d.results.filter(r=>r.committee_id===a.committee)).map(r=>({...r,id:`${at.n}:${r.id}`})),next=fecNext(at.u,d);
+      if(next&&at.n+1>=60)return {rows:[...rows,{id:'capped',capped:true}],next:null};
+      return {rows,next:next?JSON.stringify({u:next,n:at.n+1}):null};
+    }}),
+    summarize:(rows,a)=>{const by=byCycle(rows,a.cycle);
+      return {cycle:a.cycle,committee:a.committee,cycles:Object.fromEntries(Object.entries(by).map(([cy,l])=>[cy,l.some(r=>r.capped)?{partial:true}:jfcCycleSummary(l)]))};}},
   // Each election cycle from historyFrom on (a cycle that has ended is read once and kept). The top organizations, and
   // the sources that follow them, are the current cycle's; the earlier cycles' top 10 are kept by cycle.
   donors:{host:'api.open.fec.gov',label:'Donors by employer',tab:'finance',
