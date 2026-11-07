@@ -1,5 +1,6 @@
 import {mountRankings,mountStocks} from './explore-finance.js';
 import {mountConsistency} from './consistency.js';
+import {moneyMapBlock} from './money-map.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
@@ -1322,7 +1323,8 @@ function paneFinance(s,pane){
   pane.innerHTML=`
   <h2>Money &amp; Influence</h2>
   <p class="intro">Where campaign receipts come from and what outside groups spend. Each keeps its own reporting period.</p>${points([['Campaign funds',`What ${esc(s.short)}'s own committee raised and reported to the FEC.`],['Outside spending','Money other groups spent on the race on their own. The campaign never receives it.']])}
-  <nav class="jump small"><a href="#f-glance">Funding mix</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every filing</a></nav>
+  <nav class="jump small">${c.missing?'':'<a href="#f-map">Money map</a>'}<a href="#f-glance">Funding mix</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every filing</a></nav>
+  ${moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{}})}
   <div id="f-glance">${ovMoney(s,true)}</div>
   <details class="data-disclosure"><summary>Selected researched funders</summary>${researchedFunders(s)}</details>
   <details class="data-disclosure"><summary>Campaign and outside-money comparison charts</summary><div id="f-sum">${fundingPanels(s)}</div>${scaleChart(s,false)}</details>
