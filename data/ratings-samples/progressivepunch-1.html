@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html lang="en">
   <head>
-    <title>ProgressivePunch - Error</title>
+    <title>ProgressivePunch</title>
 <meta name="" http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="robots" content="index,follow,archive">
 <meta name="description" content="ProgressivePunch is a searchable database of Congressional voting records, from a Progressive perspective." />
@@ -9,45 +9,675 @@
 <link rel="icon" type="image/ico" href="favicon.ico"/> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
 <link type="text/css" rel="stylesheet" href="styles/common.css">
+    <link type="text/css" rel="stylesheet" href="styles/home.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap-combobox.css">
   </head>
   <body>
     <div id="container">
       <div id="main">
-        <div style="width: 831px; margin: auto">
-          <div style="float:left; width: 618px;">
+        <div class="clear">&nbsp;</div>
     <div class="punch-title"> 
       <a href="/"><img src="images/logoBox.gif"/></a>
     </div>
-    <div class="punch-breadcrumbs">
-              <div>Server Error</div>
-    </div>
-          </div>
-          <div style="float:left; width: 203px; margin-left: 10px; margin-top: 10px">
-            <img src="images/boxer_l2.gif" alt="[POW!]">
-          </div>
-          <div class="clear">&nbsp;</div>
-        </div>
+            <div class="punch-description"><div>ProgressivePunch is a non-partisan searchable database of Congressional voting records, from a Progressive perspective. <span class="cat">This page is like Schrodinger's cat – it's both being updated and it isn't.</span>  How is this possible? The process described on the "What is a Progressive Score" page (<a href="/whatIsProgScore.htm">link</a>) continues to operate—the algorithm continues to function, scores are updated nightly when Congress is in session, and the Progressive Cohort is being updated annually. We will continue to do that in the future. However, detailed narrative vote descriptions were discontinued several years ago, so results under "Search by Issue" are not available for recent sessions of Congress.</div></div>
     <div class="punch-body">
-          <h1 class="title">Service Error</h1>
-          <p>We're sorry. An error has occurred while serving your request.</p> 
-          <p>We regret any inconvenience &amp; hope to have a speedy solution to your problem. Please retry your request later.</p>
-          <p>Thank you for visiting.</p>    
-          <p style="padding-top: 1em"><a href="javascript:window.history.back()">Go Back</a></p>
+          <div>
+            <table class="search-a">
+              <colgroup><col width="67px"><col width="120px"><col></colgroup>
+              <tbody>
+                <tr>
+                  <td class="radio-button radio"><input id="selectName" name="search" type="radio"></td>
+                  <td>
+                    <div class="select-type">SELECT BY NAME</div>
+                    <div class="select-type-info">to see where your Senator/Rep. is voting <span class="good">progressively</span> or <span class="bad">not</span></div>
+                  </td> 
+                  <td class="member-select">
+                    <form id="membersForm" method="GET" action="proto/record.jsp">
+                      <div class="form-group">
+                              <select  class="combobox input-large form-control" name="member" onchange="selectSearch('selectName');">
+                                <option value="">Select a member...</option>
+                                  <option value="412548">Adams, Alma</option>
+                                  <option value="400004">Aderholt, Robert</option>
+                                  <option value="412557">Aguilar, Pete</option>
+                                  <option value="412901">Alford, Mark</option>
+                                  <option value="412567">Allen, Rick</option>
+                                  <option value="413021">Alsobrooks, Angela</option>
+                                  <option value="412953">Amo, Gabe</option>
+                                  <option value="412447">Amodei, Mark</option>
+                                  <option value="412963">Ansari, Yassamin</option>
+                                  <option value="413036">Armstrong, Alan</option>
+                                  <option value="412665">Arrington , Jodey</option>
+                                  <option value="412819">Auchincloss, Jake</option>
+                                  <option value="412598">Babin, Brian</option>
+                                  <option value="412651">Bacon, Don</option>
+                                  <option value="412715">Baird, Jim</option>
+                                  <option value="412689">Balderson, Troy</option>
+                                  <option value="400013">Baldwin, Tammy</option>
+                                  <option value="412940">Balint, Becca</option>
+                                  <option value="412641">Banks, Jim</option>
+                                  <option value="412490">Barr, Andy</option>
+                                  <option value="412625">Barragán, Nanette</option>
+                                  <option value="412251">Barrasso, John</option>
+                                  <option value="412985">Barrett, Tom</option>
+                                  <option value="413018">Baumgartner, Michael</option>
+                                  <option value="412881">Bean, Aaron</option>
+                                  <option value="412510">Beatty, Joyce</option>
+                                  <option value="412961">Begich III, Nick</option>
+                                  <option value="412988">Bell, Wesley</option>
+                                  <option value="412330">Bennet, Michael</option>
+                                  <option value="412836">Bentz, Cliff</option>
+                                  <option value="412460">Bera, Ami</option>
+                                  <option value="412648">Bergman, Jack</option>
+                                  <option value="412600">Beyer, Don</option>
+                                  <option value="412835">Bice, Stephanie</option>
+                                  <option value="412621">Biggs, Andy</option>
+                                  <option value="413009">Biggs, Sheri</option>
+                                  <option value="412250">Bilirakis, Gus</option>
+                                  <option value="400030">Bishop, Sanford</option>
+                                  <option value="400032">Blackburn, Marsha</option>
+                                  <option value="413041">Blair, Everton</option>
+                                  <option value="412355">Blumenthal, Richard</option>
+                                  <option value="412627">Blunt Rochester, Lisa</option>
+                                  <option value="412799">Boebert, Lauren</option>
+                                  <option value="412449">Bonamici, Suzanne</option>
+                                  <option value="412540">Booker, Cory</option>
+                                  <option value="400040">Boozman, John</option>
+                                  <option value="412570">Bost, Mike</option>
+                                  <option value="412595">Boyle, Brendan</option>
+                                  <option value="412923">Brecheen, Josh</option>
+                                  <option value="413008">Bresnahan, Rob</option>
+                                  <option value="412944">Britt, Elizabeth</option>
+                                  <option value="412860">Brown, Shontel</option>
+                                  <option value="412464">Brownley, Julia</option>
+                                  <option value="412196">Buchanan, Vern</option>
+                                  <option value="412946">Budd, Ted</option>
+                                  <option value="412893">Budzinski, Nikki</option>
+                                  <option value="412758">Burchett, Tim</option>
+                                  <option value="412902">Burlison, Eric</option>
+                                  <option value="413006">Bynum, Janelle</option>
+                                  <option value="400057">Calvert, Ken</option>
+                                  <option value="412800">Cammack, Kat</option>
+                                  <option value="300018">Cantwell, Maria</option>
+                                  <option value="400061">Capito, Shelley</option>
+                                  <option value="412624">Carbajal, Salud</option>
+                                  <option value="412861">Carey, Mike</option>
+                                  <option value="412258">Carson, André</option>
+                                  <option value="412564">Carter, Buddy</option>
+                                  <option value="400068">Carter, John</option>
+                                  <option value="412857">Carter, Troy</option>
+                                  <option value="412937">Casar, Greg</option>
+                                  <option value="400069">Case, Ed</option>
+                                  <option value="412269">Cassidy, Bill</option>
+                                  <option value="412713">Casten, Sean</option>
+                                  <option value="412195">Castor, Kathy</option>
+                                  <option value="412520">Castro, Joaquin</option>
+                                  <option value="412334">Chu, Judy</option>
+                                  <option value="412873">Ciscomani, Juan</option>
+                                  <option value="412699">Cisneros, Gil</option>
+                                  <option value="412542">Clark, Katherine</option>
+                                  <option value="412221">Clarke, Yvette</option>
+                                  <option value="400639">Cleaver, Emanuel</option>
+                                  <option value="412773">Cline, Ben</option>
+                                  <option value="412688">Cloud, Michael</option>
+                                  <option value="400075">Clyburn, Jim</option>
+                                  <option value="412807">Clyde, Andrew</option>
+                                  <option value="412236">Cohen, Steve</option>
+                                  <option value="400077">Cole, Tom</option>
+                                  <option value="412888">Collins, Mike</option>
+                                  <option value="300025">Collins, Susan</option>
+                                  <option value="412618">Comer, James</option>
+                                  <option value="412992">Conaway, Herb</option>
+                                  <option value="412345">Coons, Chris</option>
+                                  <option value="300027">Cornyn, John</option>
+                                  <option value="412626">Correa, Lou</option>
+                                  <option value="412675">Cortez Masto, Catherine</option>
+                                  <option value="400618">Costa, Jim</option>
+                                  <option value="412456">Cotton, Tom</option>
+                                  <option value="412193">Courtney, Joe</option>
+                                  <option value="412730">Craig, Angie</option>
+                                  <option value="412501">Cramer, Kevin</option>
+                                  <option value="412872">Crane, Eli</option>
+                                  <option value="412974">Crank, Jeff</option>
+                                  <option value="300030">Crapo, Mike</option>
+                                  <option value="412438">Crawford, Rick</option>
+                                  <option value="412761">Crenshaw, Dan</option>
+                                  <option value="412936">Crockett, Jasmine</option>
+                                  <option value="412704">Crow, Jason</option>
+                                  <option value="412533">Cruz, Ted</option>
+                                  <option value="400657">Cuellar, Henry</option>
+                                  <option value="412682">Curtis, John</option>
+                                  <option value="412496">Daines, Steve</option>
+                                  <option value="412720">Davids, Sharice</option>
+                                  <option value="412617">Davidson, Warren</option>
+                                  <option value="400093">Davis, Danny</option>
+                                  <option value="412904">Davis, Don</option>
+                                  <option value="412935">De la Cruz-Hernandez, Monica</option>
+                                  <option value="412750">Dean, Madeleine</option>
+                                  <option value="400101">DeGette, Diana</option>
+                                  <option value="400103">DeLauro, Rosa</option>
+                                  <option value="412452">DelBene, Suzan</option>
+                                  <option value="412928">Deluzio, Chris</option>
+                                  <option value="412555">DeSaulnier, Mark</option>
+                                  <option value="412368">DesJarlais, Scott</option>
+                                  <option value="413005">Dexter, Maxine</option>
+                                  <option value="400108">Diaz-Balart, Mario</option>
+                                  <option value="412578">Dingell, Debbie</option>
+                                  <option value="400111">Doggett, Lloyd</option>
+                                  <option value="412802">Donalds, Byron</option>
+                                  <option value="412990">Downing, Troy</option>
+                                  <option value="412481">Duckworth, Tammy</option>
+                                  <option value="412629">Dunn, Neal</option>
+                                  <option value="300038">Durbin, Dick</option>
+                                  <option value="412906">Edwards, Chuck</option>
+                                  <option value="412983">Elfreth, Sarah</option>
+                                  <option value="412859">Ellzey, Jake</option>
+                                  <option value="412580">Emmer, Tom</option>
+                                  <option value="412610">Ernst, Joni</option>
+                                  <option value="412766">Escobar, Veronica</option>
+                                  <option value="412657">Espaillat, Adriano</option>
+                                  <option value="412677">Estes, Ron</option>
+                                  <option value="412619">Evans, Dwight</option>
+                                  <option value="412975">Evans, Gabe</option>
+                                  <option value="412903">Ezell, Mike</option>
+                                  <option value="412839">Fallon, Pat</option>
+                                  <option value="413003">Fedorchak, Julie</option>
+                                  <option value="412812">Feenstra, Randy</option>
+                                  <option value="412948">Fetterman, John</option>
+                                  <option value="404067">Fields, Cleo</option>
+                                  <option value="412962">Figures, Shomari</option>
+                                  <option value="413031">Fine, Randy</option>
+                                  <option value="412866">Finstad, Brad</option>
+                                  <option value="412822">Fischbach, Michelle</option>
+                                  <option value="412532">Fischer, Deb</option>
+                                  <option value="412849">Fitzgerald, Scott</option>
+                                  <option value="412661">Fitzpatrick, Brian</option>
+                                  <option value="412369">Fleischmann, Chuck</option>
+                                  <option value="412765">Fletcher , Lizzie</option>
+                                  <option value="412865">Flood, Mike</option>
+                                  <option value="412956">Fong, Vince</option>
+                                  <option value="412257">Foster, Bill</option>
+                                  <option value="412905">Foushee, Valerie</option>
+                                  <option value="400643">Foxx, Virginia</option>
+                                  <option value="412477">Frankel, Lois</option>
+                                  <option value="412801">Franklin, Scott</option>
+                                  <option value="412970">Friedman, Laura</option>
+                                  <option value="412883">Frost, Maxwell</option>
+                                  <option value="412930">Fry, Russell</option>
+                                  <option value="412711">Fulcher, Russ</option>
+                                  <option value="413037">Fuller, Clay</option>
+                                  <option value="412552">Gallego, Ruben</option>
+                                  <option value="412337">Garamendi, John</option>
+                                  <option value="412827">Garbarino, Andrew</option>
+                                  <option value="412712">Garcia, Jesús</option>
+                                  <option value="412878">Garcia, Robert</option>
+                                  <option value="412768">Garcia, Sylvia</option>
+                                  <option value="413012">Gill, Brandon</option>
+                                  <option value="412994">Gillen, Laura</option>
+                                  <option value="412223">Gillibrand, Kirsten</option>
+                                  <option value="412803">Giménez, Carlos</option>
+                                  <option value="412941">Gluesenkamp Perez, Marie</option>
+                                  <option value="412724">Golden, Jared</option>
+                                  <option value="413010">Goldman, Craig</option>
+                                  <option value="412915">Goldman, Dan</option>
+                                  <option value="412681">Gomez, Jimmy</option>
+                                  <option value="412664">González, Vicente</option>
+                                  <option value="412763">Gooden, Lance</option>
+                                  <option value="412991">Goodlander, Maggie</option>
+                                  <option value="412441">Gosar, Paul</option>
+                                  <option value="412655">Gottheimer, Josh</option>
+                                  <option value="413040">Graham, Darline</option>
+                                  <option value="300048">Grassley, Chuck</option>
+                                  <option value="400158">Graves, Sam</option>
+                                  <option value="412966">Gray, Adam</option>
+                                  <option value="400653">Green, Al</option>
+                                  <option value="412360">Griffith, Morgan</option>
+                                  <option value="413033">Grijalva, Adelita</option>
+                                  <option value="412605">Grothman, Glenn</option>
+                                  <option value="412734">Guest, Michael</option>
+                                  <option value="412278">Guthrie, Brett</option>
+                                  <option value="412943">Hageman, Harriet</option>
+                                  <option value="412852">Hagerty, Bill</option>
+                                  <option value="412964">Hamadeh, Abraham</option>
+                                  <option value="412696">Harder, Josh</option>
+                                  <option value="412977">Haridopolos, Mike</option>
+                                  <option value="413000">Harrigan, Pat</option>
+                                  <option value="412405">Harris, Andy</option>
+                                  <option value="412999">Harris, Mark</option>
+                                  <option value="412838">Harshbarger, Diana</option>
+                                  <option value="412674">Hassan, Maggie</option>
+                                  <option value="412781">Hawley, Josh</option>
+                                  <option value="412705">Hayes, Jahana</option>
+                                  <option value="412281">Heinrich, Martin</option>
+                                  <option value="412691">Hern, Kevin</option>
+                                  <option value="412851">Hickenlooper, John</option>
+                                  <option value="412644">Higgins, Clay</option>
+                                  <option value="412553">Hill, French</option>
+                                  <option value="412282">Himes, Jim</option>
+                                  <option value="412810">Hinson, Ashley</option>
+                                  <option value="412200">Hirono, Mazie</option>
+                                  <option value="412351">Hoeven, John</option>
+                                  <option value="412504">Horsford, Steven</option>
+                                  <option value="412895">Houchin, Erin</option>
+                                  <option value="412751">Houlahan, Chrissy</option>
+                                  <option value="400189">Hoyer, Steny</option>
+                                  <option value="412924">Hoyle, Val</option>
+                                  <option value="412497">Hudson, Richard</option>
+                                  <option value="412459">Huffman, Jared</option>
+                                  <option value="412402">Huizenga, Bill</option>
+                                  <option value="412938">Hunt, Wesley</option>
+                                  <option value="412973">Hurd, Jeff</option>
+                                  <option value="413029">Husted, Jon</option>
+                                  <option value="412686">Hyde-Smith, Cindy</option>
+                                  <option value="400196">Issa, Darrell</option>
+                                  <option value="412897">Ivey, Glenn</option>
+                                  <option value="412978">Jack, Brian</option>
+                                  <option value="412891">Jackson, Jonathan</option>
+                                  <option value="412841">Jackson, Ronny</option>
+                                  <option value="412798">Jacobs, Sara</option>
+                                  <option value="413039">James, Gallagher</option>
+                                  <option value="412899">James, John</option>
+                                  <option value="412669">Jayapal, Pramila</option>
+                                  <option value="412506">Jeffries, Hakeem</option>
+                                  <option value="412757">Johnson, Dusty</option>
+                                  <option value="412199">Johnson, Hank</option>
+                                  <option value="412645">Johnson, Mike</option>
+                                  <option value="413013">Johnson, Julie</option>
+                                  <option value="412349">Johnson, Ron</option>
+                                  <option value="412226">Jordan, Jim</option>
+                                  <option value="412511">Joyce, David</option>
+                                  <option value="412753">Joyce, John</option>
+                                  <option value="413025">Justice, Jim</option>
+                                  <option value="412534">Kaine, Tim</option>
+                                  <option value="412877">Kamlager-Dove, Sydney</option>
+                                  <option value="400211">Kaptur, Marcy</option>
+                                  <option value="412909">Kean Jr., Tom</option>
+                                  <option value="412404">Keating, Bill</option>
+                                  <option value="412791">Kelly, Mark</option>
+                                  <option value="412379">Kelly, Mike</option>
+                                  <option value="412537">Kelly, Robin</option>
+                                  <option value="412615">Kelly, Trent</option>
+                                  <option value="412673">Kennedy, John</option>
+                                  <option value="413014">Kennedy, Mike</option>
+                                  <option value="412955">Kennedy, Tim</option>
+                                  <option value="412622">Khanna, Ro</option>
+                                  <option value="412939">Kiggans, Jen</option>
+                                  <option value="412874">Kiley, Kevin</option>
+                                  <option value="412738">Kim, Andy</option>
+                                  <option value="412796">Kim, Young</option>
+                                  <option value="412530">King, Angus</option>
+                                  <option value="412242">Klobuchar, Amy</option>
+                                  <option value="413001">Knott, Brad</option>
+                                  <option value="412639">Krishnamoorthi, Raja</option>
+                                  <option value="412663">Kustoff, David</option>
+                                  <option value="412616">LaHood, Darin</option>
+                                  <option value="412912">LaLota, Nick</option>
+                                  <option value="412920">Landsman, Greg</option>
+                                  <option value="412919">Langworthy, Nick</option>
+                                  <option value="412380">Lankford, James</option>
+                                  <option value="400232">Larsen, Rick</option>
+                                  <option value="400233">Larson, John</option>
+                                  <option value="412995">Latimer, George</option>
+                                  <option value="412256">Latta, Bob</option>
+                                  <option value="412916">Lawler, Mike</option>
+                                  <option value="412885">Lee, Laurel</option>
+                                  <option value="412350">Lee, Mike</option>
+                                  <option value="412927">Lee, Summer</option>
+                                  <option value="412735">Lee, Susie</option>
+                                  <option value="412826">Leger Fernandez, Teresa</option>
+                                  <option value="412856">Letlow, Julia</option>
+                                  <option value="412702">Levin, Mike</option>
+                                  <option value="412967">Liccardo, Sam</option>
+                                  <option value="412558">Lieu, Ted</option>
+                                  <option value="400245">Lofgren, Zoe</option>
+                                  <option value="412566">Loudermilk, Barry</option>
+                                  <option value="400247">Lucas, Frank</option>
+                                  <option value="412293">Lujan, Ben</option>
+                                  <option value="412294">Lummis, Cynthia</option>
+                                  <option value="412884">Luna, Anna</option>
+                                  <option value="412934">Luttrell, Morgan</option>
+                                  <option value="400249">Lynch, Stephen</option>
+                                  <option value="412837">Mace, Nancy</option>
+                                  <option value="413007">Mackenzie, Ryan</option>
+                                  <option value="412929">Magaziner, Seth</option>
+                                  <option value="412828">Malliotakis, Nicole</option>
+                                  <option value="412954">Maloy, Celeste</option>
+                                  <option value="412817">Mann, Tracey</option>
+                                  <option value="412997">Mannion, John</option>
+                                  <option value="400253">Markey, Ed</option>
+                                  <option value="412643">Marshall, Roger</option>
+                                  <option value="412453">Massie, Thomas</option>
+                                  <option value="412636">Mast, Brian</option>
+                                  <option value="400663">Matsui, Doris</option>
+                                  <option value="412710">McBath, Lucy</option>
+                                  <option value="412976">McBride, Sarah</option>
+                                  <option value="400654">McCaul, Michael</option>
+                                  <option value="412821">McClain, Lisa</option>
+                                  <option value="412984">McClain-Delaney, April</option>
+                                  <option value="412951">McClellan, Jennifer</option>
+                                  <option value="412295">McClintock, Tom</option>
+                                  <option value="400259">McCollum, Betty</option>
+                                  <option value="300072">McConnell, Mitch</option>
+                                  <option value="413024">McCormick, Dave</option>
+                                  <option value="412887">McCormick, Rich</option>
+                                  <option value="412986">McDonald Rivet, Kristen</option>
+                                  <option value="412998">McDowell, Addison</option>
+                                  <option value="412896">McGarvey, Morgan</option>
+                                  <option value="400263">McGovern, Jim</option>
+                                  <option value="413015">McGuire, John</option>
+                                  <option value="412960">McIver, LaMonica</option>
+                                  <option value="400271">Meeks, Gregory</option>
+                                  <option value="413038">Mejia, Analilia</option>
+                                  <option value="413035">Menefee, Christian</option>
+                                  <option value="412910">Menendez Jr., Rob</option>
+                                  <option value="412505">Meng, Grace</option>
+                                  <option value="412325">Merkley, Jeff</option>
+                                  <option value="412980">Messmer, Mark</option>
+                                  <option value="412752">Meuser, Dan</option>
+                                  <option value="407672">Mfume, Kweisi</option>
+                                  <option value="412777">Miller, Carol</option>
+                                  <option value="412814">Miller, Mary</option>
+                                  <option value="412921">Miller, Max</option>
+                                  <option value="412811">Miller-Meeks, Mariannette</option>
+                                  <option value="412882">Mills, Cory</option>
+                                  <option value="412972">Min, Dave</option>
+                                  <option value="413028">Moody, Ashley</option>
+                                  <option value="412575">Moolenaar, John</option>
+                                  <option value="412845">Moore, Blake</option>
+                                  <option value="412794">Moore, Barry</option>
+                                  <option value="400661">Moore, Gwen</option>
+                                  <option value="413020">Moore, Riley</option>
+                                  <option value="413002">Moore, Tim</option>
+                                  <option value="400284">Moran, Jerry</option>
+                                  <option value="412932">Moran, Nathaniel</option>
+                                  <option value="412690">Morelle, Joseph</option>
+                                  <option value="413023">Moreno, Bernie</option>
+                                  <option value="412987">Morrison, Kelly</option>
+                                  <option value="412886">Moskowitz, Jared</option>
+                                  <option value="412574">Moulton, Seth</option>
+                                  <option value="412815">Mrvan, Frank</option>
+                                  <option value="412876">Mullin, Kevin</option>
+                                  <option value="300075">Murkowski, Lisa</option>
+                                  <option value="412194">Murphy, Chris</option>
+                                  <option value="412786">Murphy, Greg</option>
+                                  <option value="300076">Murray, Patty</option>
+                                  <option value="400289">Nadler, Jerry</option>
+                                  <option value="400291">Neal, Richard</option>
+                                  <option value="412703">Neguse, Joe</option>
+                                  <option value="412842">Nehls, Troy</option>
+                                  <option value="412602">Newhouse, Dan</option>
+                                  <option value="412547">Norcross, Donald</option>
+                                  <option value="412680">Norman, Ralph</option>
+                                  <option value="412890">Nunn, Zachary</option>
+                                  <option value="412795">Obernolte, Jay</option>
+                                  <option value="412744">Ocasio-Cortez, Alexandria</option>
+                                  <option value="412931">Ogles IV, Andy</option>
+                                  <option value="412982">Olszewski, Johnny</option>
+                                  <option value="412732">Omar, Ilhan</option>
+                                  <option value="412989">Onder, Bob</option>
+                                  <option value="412855">Ossoff, Jon</option>
+                                  <option value="412846">Owens, Burgess</option>
+                                  <option value="412853">Padilla, Alex</option>
+                                  <option value="400308">Pallone, Frank</option>
+                                  <option value="412550">Palmer, Gary</option>
+                                  <option value="412623">Panetta, Jimmy</option>
+                                  <option value="412736">Pappas, Chris</option>
+                                  <option value="413030">Patronis, Jimmy</option>
+                                  <option value="412353">Paul, Rand</option>
+                                  <option value="400314">Pelosi, Nancy</option>
+                                  <option value="412514">Perry, Scott</option>
+                                  <option value="412305">Peters, Gary</option>
+                                  <option value="412471">Peters, Scott</option>
+                                  <option value="412879">Pettersen, Brittany</option>
+                                  <option value="412840">Pfluger, August</option>
+                                  <option value="412307">Pingree, Chellie</option>
+                                  <option value="412528">Pocan, Mark</option>
+                                  <option value="412993">Pou, Nellie</option>
+                                  <option value="412723">Pressley, Ayanna</option>
+                                  <option value="412331">Quigley, Mike</option>
+                                  <option value="412892">Ramirez, Delia</option>
+                                  <option value="413019">Randall, Emily</option>
+                                  <option value="412647">Raskin, Jamie</option>
+                                  <option value="300081">Reed, Jack</option>
+                                  <option value="412754">Reschenthaler, Guy</option>
+                                  <option value="412950">Ricketts, Pete</option>
+                                  <option value="412996">Riley, Josh</option>
+                                  <option value="412322">Risch, James</option>
+                                  <option value="412969">Rivas, Luz</option>
+                                  <option value="400340">Rogers, Hal</option>
+                                  <option value="400341">Rogers, Mike</option>
+                                  <option value="412759">Rose, John</option>
+                                  <option value="412652">Rosen, Jacky</option>
+                                  <option value="412832">Ross, Deborah</option>
+                                  <option value="412613">Rounds, Mike</option>
+                                  <option value="412592">Rouzer, David</option>
+                                  <option value="412767">Roy, Chip</option>
+                                  <option value="412467">Ruiz, Raul</option>
+                                  <option value="412958">Rulli, Michael</option>
+                                  <option value="412630">Rutherford, John</option>
+                                  <option value="412867">Ryan, Pat</option>
+                                  <option value="412804">Salazar, Maria</option>
+                                  <option value="412926">Salinas, Andrea</option>
+                                  <option value="400355">Sanchez, Linda</option>
+                                  <option value="400357">Sanders, Bernie</option>
+                                  <option value="412261">Scalise, Steve</option>
+                                  <option value="412692">Scanlon, Mary Gay</option>
+                                  <option value="400360">Schakowsky, Jan</option>
+                                  <option value="412455">Schatz, Brian</option>
+                                  <option value="400361">Schiff, Adam</option>
+                                  <option value="412981">Schmidt, Derek</option>
+                                  <option value="412945">Schmitt, Stephen</option>
+                                  <option value="412482">Schneider, Brad</option>
+                                  <option value="412898">Scholten, Hilary</option>
+                                  <option value="412776">Schrier, Kim</option>
+                                  <option value="300087">Schumer, Chuck</option>
+                                  <option value="412439">Schweikert, Dave</option>
+                                  <option value="412421">Scott, Austin</option>
+                                  <option value="412779">Scott, Rick</option>
+                                  <option value="400364">Scott, Bobby</option>
+                                  <option value="412374">Scott, Tim</option>
+                                  <option value="412933">Self, Keith</option>
+                                  <option value="400367">Sessions, Pete</option>
+                                  <option value="412442">Sewell, Terri</option>
+                                  <option value="412323">Shaheen, Jeanne</option>
+                                  <option value="413022">Sheehy, Tim</option>
+                                  <option value="400371">Sherman, Brad</option>
+                                  <option value="412979">Shreve, Jefferson</option>
+                                  <option value="412965">Simon, Lateefah</option>
+                                  <option value="400376">Simpson, Mike</option>
+                                  <option value="412725">Slotkin, Elissa</option>
+                                  <option value="400379">Smith, Adam</option>
+                                  <option value="412217">Smith, Adrian</option>
+                                  <option value="400380">Smith, Chris</option>
+                                  <option value="412539">Smith, Jason</option>
+                                  <option value="412684">Smith, Tina</option>
+                                  <option value="412662">Smucker, Lloyd</option>
+                                  <option value="412894">Sorensen, Eric</option>
+                                  <option value="412633">Soto, Darren</option>
+                                  <option value="412816">Spartz, Victoria</option>
+                                  <option value="412858">Stansbury, Melanie</option>
+                                  <option value="412695">Stanton, Greg</option>
+                                  <option value="412733">Stauber, Pete</option>
+                                  <option value="412589">Stefanik, Elise</option>
+                                  <option value="412778">Steil, Bryan</option>
+                                  <option value="412707">Steube, Greg</option>
+                                  <option value="412727">Stevens, Haley</option>
+                                  <option value="412848">Strickland, Marilyn</option>
+                                  <option value="412871">Strong, Dale</option>
+                                  <option value="412347">Stutzman, Marlin</option>
+                                  <option value="413017">Subramanyam, Suhas</option>
+                                  <option value="412608">Sullivan, Dan</option>
+                                  <option value="412656">Suozzi, Thomas</option>
+                                  <option value="412922">Sykes, Emilia</option>
+                                  <option value="412468">Takano, Mark</option>
+                                  <option value="413004">Taylor, David</option>
+                                  <option value="412659">Tenney, Claudia</option>
+                                  <option value="412900">Thanedar, Shri</option>
+                                  <option value="400402">Thompson, Bennie</option>
+                                  <option value="412317">Thompson, Glenn</option>
+                                  <option value="400403">Thompson, Mike</option>
+                                  <option value="400546">Thune, John</option>
+                                  <option value="412789">Tiffany, Tom</option>
+                                  <option value="412612">Tillis, Thom</option>
+                                  <option value="412756">Timmons, William</option>
+                                  <option value="412318">Titus, Dina</option>
+                                  <option value="412728">Tlaib, Rashida</option>
+                                  <option value="412889">Tokuda, Jill</option>
+                                  <option value="412319">Tonko, Paul</option>
+                                  <option value="412559">Torres, Norma</option>
+                                  <option value="412829">Torres, Ritchie</option>
+                                  <option value="412722">Trahan, Lori</option>
+                                  <option value="412971">Tran, Derek</option>
+                                  <option value="412850">Tuberville, Tommy</option>
+                                  <option value="400411">Turner, Mike</option>
+                                  <option value="412714">Underwood, Lauren</option>
+                                  <option value="412463">Valadao, David</option>
+                                  <option value="412737">Van Drew, Jeff</option>
+                                  <option value="412844">Van Duyne, Beth</option>
+                                  <option value="413034">Van Epps, Matt</option>
+                                  <option value="400415">Van Hollen, Chris</option>
+                                  <option value="412942">Van Orden, Derrick</option>
+                                  <option value="412470">Vargas, Juan</option>
+                                  <option value="412911">Vasquez, Gabe</option>
+                                  <option value="412523">Veasey, Mark</option>
+                                  <option value="400416">Velazquez, Nydia</option>
+                                  <option value="413016">Vindman, Eugene</option>
+                                  <option value="412495">Wagner, Ann</option>
+                                  <option value="413042">Wahab, Aisha</option>
+                                  <option value="412213">Walberg, Timothy</option>
+                                  <option value="413032">Walkinshaw, James</option>
+                                  <option value="412321">Warner, Mark</option>
+                                  <option value="412854">Warnock, Raphael</option>
+                                  <option value="412529">Warren, Elizabeth</option>
+                                  <option value="400623">Wasserman Schultz, Debbie</option>
+                                  <option value="400422">Waters, Maxine</option>
+                                  <option value="412586">Watson Coleman, Bonnie</option>
+                                  <option value="412518">Weber, Randy</option>
+                                  <option value="412428">Webster, Dan</option>
+                                  <option value="412949">Welch, Peter</option>
+                                  <option value="412554">Westerman, Bruce</option>
+                                  <option value="412247">Whitehouse, Sheldon</option>
+                                  <option value="412968">Whitesides, George</option>
+                                  <option value="400432">Wicker, Roger</option>
+                                  <option value="413026">Wied, Tony</option>
+                                  <option value="412522">Williams, Roger</option>
+                                  <option value="412805">Williams, Nikema</option>
+                                  <option value="400433">Wilson, Joe</option>
+                                  <option value="412426">Wilson, Frederica</option>
+                                  <option value="412255">Wittman, Rob</option>
+                                  <option value="412436">Womack, Steve</option>
+                                  <option value="300100">Wyden, Ron</option>
+                                  <option value="412870">Yakym III, Rudy</option>
+                                  <option value="412411">Young, Todd</option>
+                                  <option value="412581">Zinke, Ryan</option>
+                              </select>
+                      </div>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="radio-button radio">
+                    <input id="selectScore" name="search" type="radio" onchange="clickScore()" checked>
+                  </td>
+                  <td class="select-type">SELECT BY SCORE</td>
+                  <td>
+                    <form id="scoresForm" method="GET" action="scores.htm">
+                      <div class="form-group">
+                        <div class="house-option"> 
+                          <input id="senateSelectScore" name="house" type="radio" value="senate" onchange="selectSearch('selectScore');">Senate
+                        </div>
+                        <div class="house-option"> 
+                          <input id="houseSelectscore" name="house" type="radio" value="house" onchange="selectSearch('selectScore');">House of Representatives
+                        </div>
+                      </div>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="radio-button radio"><input id="selectZip" name="search" type="radio"></td>
+                  <td valign="top" class="select-type">
+                    <div>FIND YOUR OFFICIAL</div>
+                  </td>
+                  <td valign="top">
+                    <form id="zipForm" method="GET" action="members.htm">
+                      <div class="form-group">
+                        <span class="enter-zip">
+                          Enter your address 
+                          <a data-toggle="tooltip" data-placement="auto bottom" title="You can use your street address or city (not just your ZIP). If your state only has one rep, you can enter just your state. For example, '123 1st St', 'Los Angeles, CA', 'Alaska' or '123 1st Street,Pretend City,OK'.">
+                            <i class='glyphicon glyphicon-info-sign'></i>
+                          </a>   
+                        </span>
+                        <input type="text" name="zip" maxlength="100" class="input-large form-control" onfocus="selectSearch('selectZip');">
+                      </div>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">&nbsp;</td>
+                   <td class="search-button "><input type="submit" class="btn btn-primary btn-small" value="Search" onclick="submitMembers();"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+      </div>
+      <div id="sidebar">
+        <div id="sidebar-logo"><img src="images/boxer.gif" alt="[POW!]"></div>
+        <div id="sidebar-kit">
+          <input type="hidden" name="submitType" value="partial"> 
+          <img src="images/title_keepInTouch.gif" alt="Keep in touch" width="105" height="20">
+          <div>
+            <iframe src="https://www.facebook.com/plugins/like.php?app_id=119850428099535&amp;href=http%3A%2F%2Fwww.facebook.com%2Fprogressivepunch&amp;send=false&amp;layout=standard&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=40" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90%; height:50px;" allowtransparency="true"></iframe>
+          </div>
           <p>
-            <span class="title">Request that failed: </span><code>/scores.htm</code>
+            Like our site? Enter your email address and ZIP to keep in touch with us. We will inform you of updates and new features.
           </p>
-          <p>
-            <span class="title">Status code: </span><code>500</code>
-          </p>
-          <p>
-            <span class="title">Servlet: </span><code>spring</code>
-          </p>
-          <p>
-            <span class="title">Exception: </span><code>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Bad value for house while getting grade breakpoint.</code>
-          </p>
+<div id="mc_embed_shell">
+<div id="mc_embed_signup">
+    <form action="https://progressivepunch.us4.list-manage.com/subscribe/post?u=aaaef48647fdec6c965d49eb1&amp;id=11202c4ce1&amp;f_id=003c0fe3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address </label><br><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+            <div id="mce-responses" class="clear foot">
         </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_aaaef48647fdec6c965d49eb1_11202c4ce1" tabindex="-1" value="">
+    </div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn" value="Subscribe">
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+        </div>
+        <div id="sidebar-gs">
+          <div class="punch-gs-title">
+            <img src="images/title_gettingStarted_greenB.gif" alt="Getting started">
+          </div>
+          <div class="punch-gs">
+            Step through an overview of this site. Learn how to find the voting records of your Senator or Representative. Also, see how to browse your issue of interest. 
+          </div>
+          <div class="punch-gs punch-overview-button">
+            <a href="gettingStarted.htm"><img src="images/btn_seeOverview_green.gif" alt="SEE OVERVIEW"></a>
+          </div>
+          <div class="punch-gs">You can now help us provide this free service by making a donation to help cover our costs.</div>
+          <div class="punch-gs">(Note: Donation is not tax-deductible.)</div>
+          <div class="punch-gs">    
+<form id="donationForm" name="donationForm" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="ZVYLC8KSX9DEJ">
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+          </div>
+        </div>
+      </div>
+      <div class="clear">&nbsp;</div>
     </div>
     <div id="footer" class="punch-footer"><div><a href="whatIsProgScore.htm"><font color="#FFFFFF">What is a Progressive score?</font></a> | <a href="gettingStarted.htm"><font color="#FFFFFF">Getting started</font></a> | <a href="aboutUs.htm"><font color="#FFFFFF">About us</font></a> | <a href="keepInTouch.htm"><font color="#FFFFFF">Keep in touch</font></a></div><div id="copyright">Copyright &copy; 2003 &mdash; 2026 ProgressivePunch, All rights reserved.</div></div>
-    </div>
   </body>
 </html>
