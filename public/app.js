@@ -807,11 +807,19 @@ const leanPos=v=>((Math.max(-100,Math.min(100,v))+100)/2).toFixed(1);
 const RATING_WHY={blocked:'its site turns scripts away',none:'no congressional scorecard found',states:'rates states, not members of Congress',
   'no-list':'grades are announced one at a time, not published as a list',permission:'waiting on their permission',
   'to-build':'reader still to be written'};
-// One group's rating of this person, exactly as published, with the year and a link; or why there isn't one.
+// A group's rating as a letter: its own letter grade as given, or its percent on this site's scale (grades.js letter:
+// A 90 and up, B 80, C 70, D 60, F below 60). Colored like the site's grades: how highly that group rates them.
+const ratingLetter=r=>r.grade?String(r.grade):Number.isFinite(r.score)?letter(r.score):null;
+const ratingGrade=(L,tip)=>`<b class="st-rg gr-${esc(String(L)[0].toUpperCase())}"${tip?` title="${esc(tip)}"`:''}>${esc(L)}</b>`;
+// One group's rating of this person, as a letter (with the group's own percent beside it), the year and a link; or why
+// there isn't one.
 function ratingCell(s,org){
   const g=Object.entries(GROUP_RATINGS.groups||{}).find(([,x])=>x.org===org),key=g?.[0],grp=g?.[1];
   const mine=(GROUP_RATINGS.people?.[s.id]||[]).find(r=>r.group===key);
-  if(mine){const v=mine.grade||`${mine.score}%`;return `<a href="${esc(mine.url)}" target="_blank" rel="noopener">${esc(org)}</a> <b>${esc(v)}</b> <span class="muted small">· ${esc(mine.year||grp?.year||'')}${mine.lifetime!=null?` · lifetime ${mine.lifetime}%`:''}</span>`;}
+  if(mine){const L=ratingLetter(mine),pct=mine.grade?null:`${mine.score}%`;
+    const tip=mine.grade?`${org}'s own grade`:`${org} rates them ${mine.score}%: ${L} on this site's scale`;
+    const life=mine.lifetime!=null?`lifetime ${ratingGrade(letter(mine.lifetime),`${org}'s lifetime rating, ${mine.lifetime}%`)} ${mine.lifetime}%`:null;
+    return `<a href="${esc(mine.url)}" target="_blank" rel="noopener">${esc(org)}</a> ${ratingGrade(L,tip)} <span class="muted small">${[pct&&esc(pct),esc(mine.year||grp?.year||''),life].filter(Boolean).map(x=>` · ${x}`).join('')}</span>`;}
   const why=grp?.read?'not rated by them':grp?.why?`not read: ${grp.why}`:grp?.status?RATING_WHY[grp.status]:'not read yet';
   return `${grp?.url?`<a href="${esc(grp.url)}" target="_blank" rel="noopener">${esc(org)}</a>`:esc(org)} <span class="muted small">· ${esc(why)}</span>`;
 }
@@ -841,7 +849,7 @@ function paneIdeology(s,pane){
     needs:x.needs,
     notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Unbought, Above Board and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
-    evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs exactly as each group gives them, with the year and a link.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why.</p>${ratings}
+    evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
     shown:`<div id="rec-ideo">${ideoBlock(s,'ideo2')}<div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
     calc:`${stF('Issue lean = 100 × (conservative items − liberal items) ÷ all items')}${stF('Overall lean = average of the issue leans on the left–right issues (at least 3)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}
