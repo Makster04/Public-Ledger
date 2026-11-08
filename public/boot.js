@@ -35,6 +35,12 @@ try {
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
   const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress}:null;
   await import('./app.js');
+  // The ticker under the top bar (public/ticker.js): race calls, rule changes, ratings, and the refresh's newest trades
+  // and disclosures. A person is named from the profiles and both chambers' directories.
+  import('./ticker.js').then(({mountTicker})=>{
+    const people=new Map();for(const p of [...(window.HOUSE||[]),...(window.SENATE||[]),...(window.DATA?.cands||[]),...(window.DATA?.members||[])])if(p?.id)people.set(p.id,p);
+    mountTicker(document.getElementById('ticker'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,people});
+  }).catch(()=>{});
   await RecordLive.banner();
   window.addEventListener('hashchange',()=>RecordLive.banner());
   setInterval(()=>RecordLive.banner(),60000);

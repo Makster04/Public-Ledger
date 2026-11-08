@@ -11,19 +11,27 @@
     },
     {
       "date": "2026-11-07",
+      "headline": "Six scores replace Your Match, Integrity and People First on every profile",
       "note": "Rule change: six scores replace Your Match, Integrity and People First on every profile (Scores/06_SIX_GRADES_PROPOSAL.md). Ideology is a position from liberal to conservative, not a grade, with Your Match inside it. The five grades are Keeps Their Word (Integrity's Honesty part), Shows Up (its Showing Up part), Unbought (IntegrityIndex.us's published formula, replacing Fundraising and Personal Finances), Above Board (Conflicts of Interest, the renamed Trade Conflicts Index without its single-stock activity part, Stock Disclosure Dodger and Legal Trouble) and People First (its Corporation Compromised Index now keeps only its behavior parts). Past Integrity, Ethics, Promises Delivered and People First values stay as recorded and are not recalculated."
     },
     {
       "date": "2026-11-07",
+      "headline": "Unbought: joint fundraising money is credited back to the people who gave it",
       "note": "Rule change (Unbought): money a joint fundraising committee passed on is credited back to the people who gave it, by the size of each one's share, where the FEC's records have been read; before, all of it counted at the joint fundraising weight. Earmarks cover every committee the FEC shows forwarding gifts to the campaign once npm run funders:bundled has run, not just 5 groups. When a profile has no reviewed PAC table, the PAC lines the FEC has processed for the cycle sort its PAC money by type. Earlier values stay as recorded."
     },
     {
       "date": "2026-11-08",
+      "headline": "Basic profiles, now every House member too, get Ideology, Shows Up and People First",
       "note": "Rule change: basic profiles (every senator and, new, every House member without a reviewed profile) now get Ideology, Shows Up and People First from official records alone, figured the same way as on the full profiles: their positions on the coded roll calls (filled in by scripts/fill-vote-positions.mjs), their attendance and their bills. Keeps Their Word, Unbought and Above Board still wait on reviewed research. Before, basic profiles showed no scores."
     },
     {
       "date": "2026-11-08",
+      "headline": "Interest-group ratings are shown as letter grades",
       "note": "Interest-group ratings on the Ideology tab are shown as letter grades: a group's percent becomes a letter on the site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with the group's percent beside it, and a group's own letter grades are shown as given. Each letter is colored like the site's grades, from green (the group rates them highly) to red (poorly). Display only: the ratings file still holds each rating exactly as published, and the Ratings lean is unchanged."
+    },
+    {
+      "date": "2026-11-09",
+      "note": "A ticker under the top bar shows the latest updates the site keeps, newest first: race calls and counts after an election, newly reported stock trades and annual disclosures from the refresh, interest-group ratings as they are read, and rule changes and site updates from this log. Each kind shows for a set number of days. It pauses when hovered or focused and stands still for visitors whose device asks for reduced motion. Display only: no score is calculated from it."
     }
   ]
 }
