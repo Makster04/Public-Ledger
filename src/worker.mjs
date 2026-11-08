@@ -1,4 +1,4 @@
-import {getStatus,getProfile,getCards,getBills,runRefresh,statement} from './refresh.mjs';
+import {getStatus,getProfile,getCards,getBills,getSuperPacs,runRefresh,statement} from './refresh.mjs';
 import {getFinanceOverview} from './finance.mjs';
 import {getConsistency} from './consistency.mjs';
 const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
@@ -9,6 +9,7 @@ export default {
     try{
       if(url.pathname==='/api/status'&&request.method==='GET')return json(await getStatus(env));
       if(url.pathname==='/api/cards'&&request.method==='GET')return json(await getCards(env));
+      if(url.pathname==='/api/superpacs'&&request.method==='GET')return json(await getSuperPacs(env));
       if(url.pathname==='/api/finance-overview'&&request.method==='GET')return json(await getFinanceOverview(env));
       if(url.pathname==='/api/consistency'&&request.method==='GET')return json(await getConsistency(env,url.searchParams.get('id'),url.origin));
       if(url.pathname==='/api/bills'&&request.method==='GET')return json(await getBills(env));

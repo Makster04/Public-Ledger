@@ -37,7 +37,21 @@ const byId=Object.fromEntries(ALL.concat(FEATURED).map(s=>[s.id,s]));
 // Every sitting senator (public/senate.json, from scripts/build-senate.mjs). Those without a reviewed profile get a basic
 // one: their place in the Senate, their committees and the records the daily refresh collects, without grades.
 const SENATE=(window.SENATE||[]).map(x=>({...x,chamber:'S',ideo:poolIdeo(DATA.pools?.S,x.bioguide,x.party)}));
-const BASIC=Object.fromEntries(SENATE.filter(x=>!byId[x.id]).map(x=>[x.id,Object.assign(x,{basic:true,evidence:{},statements:[],ethics:[],bills:[]})]));
+// Every member of the House (public/house.json, from scripts/build-house.mjs), the same way.
+const HOUSE=(window.HOUSE||[]).map(x=>({...x,chamber:'H',ideo:poolIdeo(DATA.pools?.H,x.bioguide,x.party)}));
+// The coded roll calls behind the full profiles' issue leans: each vote's issue, and the side a Yea takes. A basic
+// profile is placed from their own positions on the same roll calls (scripts/fill-vote-positions.mjs fills them in),
+// read exactly as the full profiles' are; no statements, sponsorships or reviewed notes, so it's their votes alone.
+const CODED=(()=>{const m=new Map();
+  for(const p of [...DATA.members,...DATA.cands,...(DATA.featured||[])])for(const [issue,items] of Object.entries(p.evidence||{}))for(const e of items)
+    if(/_vote$/.test(e.type)&&e.ref&&(e.yea==='A'||e.yea==='B')&&!m.has(e.ref+'|'+issue))m.set(e.ref+'|'+issue,{issue,type:e.type,ref:e.ref,title:e.title,date:e.date,yea:e.yea,why:e.why,src:e.src});
+  return [...m.values()];})();
+function basicEvidence(x){
+  const pos=new Map([...(DATA.votes||[]),...(DATA.hvotes||[])].map(v=>[v.id,v.pos?.[x.id]])),ev={};
+  for(const c of CODED){const p=pos.get(c.ref);if(p!=='Yea'&&p!=='Nay')continue;(ev[c.issue]||=[]).push({...c,pos:p,side:p==='Yea'?c.yea:c.yea==='A'?'B':'A'});}
+  return ev;
+}
+const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,Object.assign(x,{basic:true,evidence:basicEvidence(x),statements:[],ethics:[],bills:[]})]));
 const BASIC_LIST=Object.values(BASIC);
 // One ID per bill ("117-hr-1319"), so a vote and a sponsorship on the same bill count once.
 const VOTE_BY_ID=new Map(DATA.votes.concat(DATA.hvotes).map(v=>[v.id,v]));
@@ -408,7 +422,7 @@ function route(){
   document.body.dataset.view=current?(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview'):'';
   document.title=current?`${current.name} · Public Ledger`:'Public Ledger · Follow the record';
   document.querySelectorAll('.nav-more[open]').forEach(el=>el.open=false);
-  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&!!BASIC[m[1]])));
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&BASIC[m[1]]?.chamber==='S')||(a.dataset.route==='house'&&BASIC[m[1]]?.chamber==='H')));
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
@@ -417,6 +431,8 @@ function route(){
   else if(m[1]==='races'){renderRaces();}
   else if(m[1]==='bills'){renderBills(m[2]||'all');}
   else if(m[1]==='senate'){renderSenate();}
+  else if(m[1]==='house'){renderHouse();}
+  else if(m[1]==='superpacs'){renderSuperPacs();}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}
   else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}
   else if(m[1]==='scores'){renderScores(m[2]||'match');}
@@ -620,7 +636,7 @@ function renderHome(){
     <div class="page-eyebrow">PUBLIC RECORDS. PERSONAL PERSPECTIVE.</div>
     <h1>Follow the money.<br><span>Check the record.</span></h1>
     <p class="lede">Find your alignment. Explore the people, promises and public records behind ${DATA.races.length} key 2026 races.</p>
-    <div class="hero-stats"><a href="#races"><b>${DATA.races.length}</b><span>Key races</span></a><a href="#senate"><b>${SENATE.length}</b><span>Sitting senators</span></a><a href="#align"><b>${ISS.length}</b><span>Issues to explore</span></a></div>
+    <div class="hero-stats"><a href="#races"><b>${DATA.races.length}</b><span>Key races</span></a><a href="#senate"><b>${SENATE.length}</b><span>Sitting senators</span></a><a href="#house"><b>${HOUSE.length}</b><span>House members</span></a><a href="#align"><b>${ISS.length}</b><span>Issues to explore</span></a></div>
     <div class="row hero-actions"><a class="cta" href="#align">Set my priorities <span aria-hidden="true">→</span></a><a class="hero-secondary" href="#method">How the grades work ↗</a></div>
     <details class="coverage-details"><summary>About the research <span>Snapshot: ${esc(DATA.asof)}</span></summary>
     ${points([
@@ -629,7 +645,8 @@ function renderHome(){
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
       ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
-      SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`]],'lede-pts')}</details>
+      SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`],
+      HOUSE.length&&['Every House member',`<a href="#house">All ${HOUSE.length} members of the House</a>, the same way.`]],'lede-pts')}</details>
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
     <div class="toolbar">
@@ -680,9 +697,9 @@ const PANES={ideology:(...a)=>paneIdeology(...a),word:(...a)=>paneWord(...a),sho
 const profileAmount=n=>n==null?'Not available':Math.abs(n)>=1e6?'$'+(n/1e6).toFixed(2)+'M':fmtFull(n);
 function profileHeader(s,showFacts=false){
   const basic=!!s.basic,c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
-  const photo=portrait(s), office=basic?'U.S. Senate':s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House', res=!basic&&!s.office&&personResult(s);
+  const photo=portrait(s), office=basic?(s.chamber==='H'?(s.delegate?'U.S. House (delegate)':'U.S. House'):'U.S. Senate'):s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House', res=!basic&&!s.office&&personResult(s);
   const compareHref=s.office?'#home':s.chamber==='H'?'#compare-house':'#compare-senate';
-  const details=basic?`<div class="meta"><div><span>In the Senate since</span>${esc(monthYear(s.since))}</div><div><span>2026 ballot</span>${esc(ballotLine(s))}${offBallot(s)?` · next election ${s.nextElection}`:''}</div><div class="roles"><span>Committees / roles</span>${esc(committeesOf(s).map(x=>fullCommittee(x.id)).filter((x,i,a)=>a.indexOf(x)===i).map(id=>COMMITTEES.committees[id]?.name||id).join('; ')||'None listed')}</div><div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand)+' · ':''}Bioguide ${esc(s.bioguide)}${s.lis?' · LIS '+esc(s.lis):''}</div></div><div class="links row">${s.fecCand?`<a href="${fecCycleUrl(s.fecCand,s.nextElection)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}<a href="${cgUrl(s)}" target="_blank" rel="noopener">Congress.gov member page ↗</a>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">Official site ↗</a>`:''}<a href="#senate">All senators →</a></div>`:`
+  const details=basic?`<div class="meta"><div><span>In the ${s.chamber==='H'?'House':'Senate'} since</span>${esc(monthYear(s.since))}${s.chamber==='H'?` · ${esc(s.seat)}${s.delegate?' (non-voting delegate)':''}`:''}</div><div><span>2026 ballot</span>${esc(ballotLine(s))}${offBallot(s)?` · next election ${s.nextElection}`:''}</div><div class="roles"><span>Committees / roles</span>${esc(committeesOf(s).map(x=>fullCommittee(x.id)).filter((x,i,a)=>a.indexOf(x)===i).map(id=>COMMITTEES.committees[id]?.name||id).join('; ')||'None listed')}</div><div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand)+' · ':''}Bioguide ${esc(s.bioguide)}${s.lis?' · LIS '+esc(s.lis):''}</div></div><div class="links row">${s.fecCand?`<a href="${fecCycleUrl(s.fecCand,s.nextElection)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}<a href="${cgUrl(s)}" target="_blank" rel="noopener">Congress.gov member page ↗</a>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">Official site ↗</a>`:''}${s.chamber==='H'?'<a href="#house">All House members →</a>':'<a href="#senate">All senators →</a>'}</div>`:`
     <div class="meta">
       <div><span>${s.office?'In office':s.cand?'Current or most recent role':'In the '+CH[s.chamber].name+' since'}</span>${esc(s.since)}</div>
       ${s.office?`<div><span>2026 ballot</span>${esc(s.seat)}</div>`:`<div><span>2026 ${s.cand?'opponents':'opponent'}</span>${esc(s.opponent)} · <a href="#races">race view</a></div>`}
@@ -700,8 +717,8 @@ function profileHeader(s,showFacts=false){
   `;
   return `<header class="phead profile-hero" data-party="${esc(s.party)}">
     <div class="profile-main"><div class="profile-photo">${photo}</div><div class="profile-identity">
-      <div class="page-eyebrow">${basic?'SENATE DIRECTORY':'THE PUBLIC RECORD'}</div><h1>${esc(s.name)}</h1>
-      <p class="profile-office">${partyName(s.party)} · ${esc(s.stateName||s.state||'United States')}${s.chamber==='H'?' · '+esc(s.district):''} · ${office}</p>
+      <div class="page-eyebrow">${basic?(s.chamber==='H'?'HOUSE DIRECTORY':'SENATE DIRECTORY'):'THE PUBLIC RECORD'}</div><h1>${esc(s.name)}</h1>
+      <p class="profile-office">${partyName(s.party)} · ${esc(s.stateName||s.state||'United States')}${s.chamber==='H'?' · '+esc(s.basic?s.seat:s.district):''} · ${office}</p>
       <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(basic?'Term ends '+fmtDate(s.termEnd):termNow(s)||'')}</span></div>
       ${res?`<p class="small profile-result">${resultChip(res.o)} ${esc(res.after)} <span class="muted">(${esc(RESULTS_ASOF())})</span></p>`:''}
       ${s.cand?`<p class="small profile-background">${esc(s.status||s.background||'')}</p>`:''}
@@ -713,7 +730,7 @@ function profileHeader(s,showFacts=false){
   </header>`;
 }
 function profileReport(s){
-  return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Not graded until the research is reviewed.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
+  return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. The other scores wait on reviewed research.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
 }
 function evidenceStrip(s){
   return `<aside class="evidence-strip"><div><div class="page-eyebrow">FOLLOW THE EVIDENCE</div><h3>Every conclusion has a paper trail.</h3><p class="small muted">Research snapshot: ${esc(DATA.asof)} · Each source keeps its own reporting period.</p></div><div class="row"><a href="${s.basic?'#method-sources':'#'+s.id+'-sources'}">${s.basic?'Source guide':'Profile sources'} ↗</a><a href="#method">Methodology ↗</a><a href="#method-log">Score history ↗</a></div></aside>`;
@@ -1266,7 +1283,7 @@ function sixTiles(s,links){
   return `<div class="hc-rc hc-six">${ideo}
     ${tile('word',x.word,`${w.clear} counted checks`)}
     ${tile('showsup',u,u.parts[0].note||'')}
-    ${s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
+    ${s.basic?tile('unbought',{pct:null,why:'Research not reviewed yet'},''):s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
     ${tile('aboveboard',x.aboveboard,'')}
     ${tile('peoplefirst',pf,pf.v?.n?`${pf.v.nPeople} of ${pf.v.n} actions for working people`:'')}</div>`;
 }
@@ -1279,7 +1296,7 @@ function renderProfile(s,requested='overview',focus){
   pane.innerHTML='<div id="profile-content"></div>';
   const content=pane.querySelector('#profile-content');
   if(overview)paneOverview(s,content);
-  else if(s.basic)paneBasicContent(s,view,content);
+  else if(s.basic&&!BASIC_FULL.has(view))paneBasicContent(s,view,content);
   else (PANES[view]||paneOverview)(s,content,focus);
   simplifyDetailSections(content,view);
   if(overview&&s.basic)fillBasicHeader(s);
@@ -1329,7 +1346,7 @@ function renderSenate(){
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. Senate'}</div><h1>The Senate</h1>
     <p class="intro">All ${SENATE.length} sitting senators.</p>
     ${points([['Full profiles',`${full} senators on the 2026 ballot in the races this site covers: grades, campaign money, outside spending and statement checks.`],
-      ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). No grades until their research is reviewed.`],
+      ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Unbought and Above Board wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
       info.source&&['Source',`<a href="${esc(info.source)}" target="_blank" rel="noopener">congress-legislators</a>, checked ${fmtDate(info.checked)}.`]])}
     <div class="toolbar">
@@ -1360,11 +1377,97 @@ function renderSenate(){
   $('#sen-sort').addEventListener('change',e=>{senSort=e.target.value;draw();});
   draw();
 }
+// ---------- Super PACs: every super PAC's spending this cycle (refresh "super-pacs", public/super-pacs.js) ----------
+let spQ='',spSort='total';
+// A candidate's profile on this site, from their FEC candidate ID.
+const PROFILE_BY_FEC=(()=>{const m=new Map();for(const s of [...ALL,...BASIC_LIST])if(s.fecCand&&!m.has(s.fecCand))m.set(s.fecCand,s.id);return m;})();
+const officeOfCand=id=>({H:'House',S:'Senate',P:'President'})[String(id||'')[0]]||'';
+async function renderSuperPacs(){
+  app.innerHTML=`<section class="section"><div class="kicker">Outside money</div><h1>Super PACs</h1>
+    <p class="intro">Every super PAC that has reported spending for or against a federal candidate this cycle, from the FEC's own totals of independent expenditures.</p><div id="sp-body"><p class="small muted">Loading…</p></div></section>`;
+  let d=null;try{const r=await fetch('/api/superpacs',{cache:'no-store'});d=r.ok?await r.json():null;}catch{}
+  if(location.hash.slice(1).split('-')[0]!=='superpacs')return;
+  const body=$('#sp-body');
+  if(!d){body.innerHTML='<div class="note">The update service is offline, so the super PAC records can\'t be loaded right now.</div>';return;}
+  if(!d.superPacs){body.innerHTML='<div class="note"><b>Waiting for the FEC refresh.</b> The "Super PACs" check reads this cycle\'s spending; it shows on the API updates page while it runs.</div>';return;}
+  const cy=Number(d.cycle)||2026;
+  body.innerHTML=`${points([['This cycle',`${cy-1}–${cy}: ${d.count.toLocaleString('en-US')} super PACs spent <b class="num">${fmtFull(d.total)}</b>, <b class="num">${fmtFull(d.for)}</b> supporting candidates and <b class="num">${fmtFull(d.against)}</b> opposing them.`],
+      ['What counts','Independent expenditures: ads, mail and canvassing for or against a candidate, paid by the super PAC itself, never given to a campaign. Super PACs here are the FEC\'s committee types for independent expenditure-only and hybrid PACs.'],
+      ['Who funds them','For the 50 biggest, their largest gifts this cycle: companies, unions and other groups by name; people who gave are added up without names, as everywhere on this site.'],
+      d.others?.count&&['Other outside spenders',`${d.others.count.toLocaleString('en-US')} more committees (parties, ordinary PACs, groups filing on their own) spent ${fmtFull(d.others.total)}. They aren't super PACs, so they aren't listed here.`],
+      ['Source',`The FEC, checked ${fmtDate(String(d.checkedAt||'').slice(0,10))}. <a href="https://www.fec.gov/data/independent-expenditures/?cycle=${cy}" target="_blank" rel="noopener">FEC independent expenditures ↗</a>`]].filter(Boolean))}
+    <div class="toolbar">
+      <div class="search"><input id="sp-q" type="search" placeholder="Search by super PAC or candidate" aria-label="Search super PACs" value="${esc(spQ)}"></div>
+      <label class="small muted">Sort <select id="sp-sort" aria-label="Sort super PACs">${[['total','Most spent'],['for','Most supporting'],['against','Most opposing'],['name','Name']].map(([k,l])=>`<option value="${k}" ${spSort===k?'selected':''}>${l}</option>`).join('')}</select></label>
+    </div>
+    <p class="small" id="sp-n" style="margin:10px 0 8px"></p><div id="sp-list" class="sp-list"></div>`;
+  // The FEC writes names "LAST, FIRST": shown as the profile's name when there is one, else "First Last".
+  const nameOf=(c,id)=>{const p=id&&(byId[id]||BASIC[id]);if(p)return p.name;const m=String(c.name||'').match(/^([^,]+),\s*(.+)$/);
+    const t=w=>w.toLowerCase().replace(/(^|[\s'-])([a-z])/g,(x,a,b)=>a+b.toUpperCase());return m?t(`${m[2]} ${m[1]}`).replace(/\b(Mr|Mrs|Ms|Dr|Hon)\.?\s+/g,''):c.name||c.cand;};
+  const cand=c=>{const id=PROFILE_BY_FEC.get(c.cand),n=nameOf(c,id);return `${id?`<a href="#${esc(id)}">${esc(n)}</a>`:`<a href="https://www.fec.gov/data/candidate/${esc(c.cand)}/?cycle=${cy}" target="_blank" rel="noopener">${esc(n)}</a>`} <span class="muted small">${esc(officeOfCand(c.cand))}${String(c.cand).length>=4&&officeOfCand(c.cand)!=='President'?' · '+esc(String(c.cand).slice(2,4)):''}</span>`;};
+  const row=(o,i)=>`<details class="sp-row"><summary><span class="sp-rank num">${i+1}</span><span class="sp-name"><b>${esc(o.name)}</b><span class="small muted">${esc(TYPE_LABEL_SP[o.type]||'Super PAC')} · ${o.cands.length} candidate${o.cands.length===1?'':'s'}</span></span><span class="num sp-total">${fmtFull(o.total)}</span><span class="small sp-split"><span class="st-pos">+${shortMoney(o.for)}</span> <span class="st-neg">−${shortMoney(o.against)}</span></span></summary>
+    <div class="sp-body">${stTable(['Candidate','Supporting','Opposing'],o.cands.map(c=>[cand(c),c.for?`<span class="st-pos">+${fmtFull(c.for)}</span>`:'—',c.against?`<span class="st-neg">−${fmtFull(c.against)}</span>`:'—']),'',[1,2])}
+      ${o.donors?`<div class="st-check"><h4>Largest gifts this cycle</h4>${o.donors.orgs.length?`<ul class="st-ind-execs">${o.donors.orgs.map(g=>`<li><span>${esc(g.name)}</span><span class="num">${fmtFull(g.amount)}</span></li>`).join('')}</ul>`:'<p class="small">No gifts from companies, unions or other groups among its largest.</p>'}
+        <p class="small">${o.donors.indiv.n?`People: <b class="num">${fmtFull(o.donors.indiv.total)}</b> from ${o.donors.indiv.n} of its largest gifts, not named.`:'No gifts from people among its largest.'}</p>
+        <p class="small muted">From its ${o.donors.read} largest receipts on file this cycle.</p></div>`:''}
+      <p class="small"><a href="https://www.fec.gov/data/committee/${esc(o.id)}/?cycle=${cy}" target="_blank" rel="noopener">FEC committee page ↗</a></p></div></details>`;
+  const draw=()=>{
+    const q=spQ.trim().toLowerCase();
+    const L=d.superPacs.filter(o=>!q||o.name.toLowerCase().includes(q)||o.cands.some(c=>String(c.name||'').toLowerCase().includes(q)));
+    const by={total:(a,b)=>b.total-a.total,for:(a,b)=>b.for-a.for,against:(a,b)=>b.against-a.against,name:(a,b)=>a.name.localeCompare(b.name)}[spSort];
+    L.sort(by);
+    $('#sp-n').innerHTML=`<b class="num">${L.length}</b> of ${d.superPacs.length} super PACs${d.count>d.superPacs.length?` (the ${d.superPacs.length} that spent the most, of ${d.count})`:''}`;
+    $('#sp-list').innerHTML=L.map(row).join('')||'<p class="muted">No super PAC matches that search.</p>';
+  };
+  $('#sp-q').addEventListener('input',e=>{spQ=e.target.value;draw();});
+  $('#sp-sort').addEventListener('change',e=>{spSort=e.target.value;draw();});
+  draw();
+}
+const TYPE_LABEL_SP={O:'Super PAC',V:'Hybrid PAC',W:'Hybrid PAC'};
+// ---------- The House: every member, with a full profile (reviewed research) or a basic one ----------
+let houseQ='',houseParty='',houseSort='state';
+function renderHouse(){
+  const full=HOUSE.filter(x=>byId[x.id]).length,info=window.HOUSE_INFO||{},dels=HOUSE.filter(x=>x.delegate).length;
+  app.innerHTML=`<section class="section">
+    <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. House'}</div><h1>The House</h1>
+    <p class="intro">All ${HOUSE.length-dels} members of the House${dels?`, and its ${dels} non-voting delegates`:''}.</p>
+    ${points([['Full profiles',`${full} members in the races this site covers: every score, campaign money, outside spending and statement checks.`],
+      ['Basic profiles',`The other ${HOUSE.length-full}: their seat, their committees, and the records the refresh collects for them (their bills, their stock trades and annual disclosures, and their campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Unbought and Above Board wait on reviewed research.`],
+      ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
+      ['New Congress','The list follows the House as it is now. When the new Congress is sworn in on January 3, 2027, running npm run house:build swaps the departing members for the new ones.'],
+      info.source&&['Source',`<a href="${esc(info.source)}" target="_blank" rel="noopener">congress-legislators</a>, checked ${fmtDate(info.checked)}.`]])}
+    <div class="toolbar">
+      <div class="seg" id="house-party" role="group" aria-label="Party">${[['','All'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>`<button data-p="${k}" class="${houseParty===k?'active':''}">${l}</button>`).join('')}</div>
+      <div class="search"><input id="house-q" type="search" placeholder="Search by name, state or district" aria-label="Search House members" value="${esc(houseQ)}"></div>
+      <label class="small muted">Sort <select id="house-sort" aria-label="Sort House members">${[['state','State and district'],['name','Name'],['lib','Most liberal first'],['con','Most conservative first']].map(([k,l])=>`<option value="${k}" ${houseSort===k?'selected':''}>${l}</option>`).join('')}</select></label>
+    </div>
+    <p class="small" id="house-n" style="margin:10px 0 8px"></p>
+    <div class="tablewrap"><table><thead><tr><th>Member</th><th>Seat</th><th>Party</th><th>Ideology</th><th>Profile</th></tr></thead><tbody id="house-rows"></tbody></table></div>
+  </section>`;
+  const score=x=>x.ideo?x.ideo.dim1:null;
+  const draw=()=>{
+    const q=houseQ.toLowerCase();
+    const L=HOUSE.filter(x=>(!houseParty||x.party===houseParty)&&(!q||`${x.name} ${x.stateName} ${x.state} ${x.seat} ${x.state}${x.district}`.toLowerCase().includes(q)));
+    const by={state:(a,b)=>a.stateName.localeCompare(b.stateName)||a.district-b.district,name:(a,b)=>a.short.localeCompare(b.short)||a.name.localeCompare(b.name),
+      lib:(a,b)=>(score(a)??9)-(score(b)??9),con:(a,b)=>(score(b)??-9)-(score(a)??-9)}[houseSort];
+    L.sort(by);
+    $('#house-n').innerHTML=`<b class="num">${L.length}</b> of ${HOUSE.length} members`;
+    $('#house-rows').innerHTML=L.map(x=>`<tr><td><a href="#${esc(x.id)}">${esc(x.name)}</a></td><td>${esc(x.seat)}${x.delegate?' <span class="chip ghost">Delegate</span>':''}<div class="small muted">${esc(x.stateName)}</div></td><td><span class="chip ${esc(x.party)}">${partyName(x.party)}</span></td>
+      <td>${x.ideo?`<span class="mono">${x.ideo.dim1>0?'+':''}${x.ideo.dim1.toFixed(2)}</span><div class="small muted">${esc(ideoText(x).short)}</div>`:'<span class="small muted">No score yet</span>'}</td>
+      <td>${byId[x.id]?'<span class="chip good">Full</span>':'<span class="chip ghost">Basic</span>'}</td></tr>`).join('')||'<tr><td colspan="5">No members match.</td></tr>';
+  };
+  $('#house-party').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;houseParty=b.dataset.p;$('#house-party .active').classList.remove('active');b.classList.add('active');draw();});
+  $('#house-q').addEventListener('input',e=>{houseQ=e.target.value;draw();});
+  $('#house-sort').addEventListener('change',e=>{houseSort=e.target.value;draw();});
+  draw();
+}
 // Basic profiles: senators without reviewed research. They use the same header, tabs and cards as the full profiles;
 // every grade stays "Not graded" until the research is reviewed, and each tab shows the records the daily refresh
 // collects. Election boxes say whether the seat is on the 2026 ballot.
 // A senator's 2026 race: the results-only race they ran in, or, for a seat up in 2026, the state's Senate race.
 function seatRace(s){
+  // A House member with a basic profile: a covered race they ran in, if any (their seat is up every two years).
+  if(s.chamber==='H')return DATA.liteRaces.find(r=>r.chamber==='H'&&r.nominees.some(n=>nomineeKey(n)===s.id))||null;
   const ran=DATA.liteRaces.find(r=>r.chamber==='S'&&r.nominees.some(n=>nomineeKey(n)===s.id));if(ran)return ran;
   if(s.nextElection!==2026)return null;
   return DATA.races.find(r=>r.chamber==='S'&&r.state===s.state)||DATA.liteRaces.find(r=>r.chamber==='S'&&r.state===s.state)||null;
@@ -1377,6 +1480,7 @@ function senatorOutcome(x){
 }
 // The election box: their own result if they ran, else who won the seat they're leaving.
 function ballotLine(s){
+  if(s.chamber==='H'&&!seatRace(s))return s.delegate?'Delegate seat on the November 3, 2026 ballot · race not covered here':'Seat on the November 3, 2026 ballot · race not covered here';
   if(offBallot(s))return 'Not running for election in 2026';
   const r=seatRace(s);if(!r)return 'Seat up in 2026 · race not covered here';
   const res=raceResult(r),w=res&&res.winner,ran=(r.keys||r.nominees.map(nomineeKey)).includes(s.id);
@@ -1387,10 +1491,9 @@ function ballotLine(s){
 }
 const BASIC_GRADE={match:'No reviewed record of their votes and statements on the site\'s issues yet.',prom:'No statements checked against the record yet.',
   eth:'No cases reviewed yet. Leads from official records are on the Integrity tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
-function basicReport(s,links){
-  const h=k=>links?`#${s.id}-${k}`:'',d='Research not reviewed yet';
-  return `<div class="hc-rc hc-six">${SIX.map(m=>`<${links?'a':'div'} class="hc-gt"${links?` href="${h(m.key)}"`:''} title="${esc(m.q)}"><div class="hc-gl">${esc(m.name)}</div><div class="hc-gv"><span class="hc-ng">${m.grade?'Not graded yet':'Not placed yet'}</span></div><div class="hc-gd">${d}</div></${links?'a':'div'}>`).join('')}</div>`;
-}
+// A basic profile's tiles: Ideology, Shows Up and People First from official records alone (their positions on the coded
+// roll calls, their attendance and bills); Keeps Their Word, Unbought and Above Board wait on reviewed research.
+function basicReport(s,links){return sixTiles(s,links);}
 // Campaign and outside-money totals for everyone, loaded once (/api/cards) and reused by the cards and profiles.
 let cardsData=null,cardsTime=0;
 function loadCards(){if(!cardsData||Date.now()-cardsTime>60000){cardsTime=Date.now();cardsData=fetch('/api/cards',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>d?.people||null).catch(()=>null);}return cardsData;}
@@ -1407,8 +1510,8 @@ function basicMoney(s,c,{mini:withMini=true}={}){
 function basicCard(s){
   return `<article class="card sen-card hc" tabindex="0" data-id="${s.id}" data-party="${esc(s.party)}" role="link" aria-label="Open profile of ${esc(s.name)}">
     <div class="hc-top">${portrait(s)}<div class="hc-who">
-      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.state)}</span><span class="chip ch">Senate</span></div>
-      <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the Senate since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
+      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span><span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span></div>
+      <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
     <div class="hc-ideo">${esc(s.ideo?ideoText(s).short:'No voting score yet')}</div>
     ${hcHead('✓','rc','Report Card','Four A–F grades from the documented record and your own answers')}
     ${basicReport(s)}
@@ -1427,10 +1530,12 @@ const BASIC_LIVE={promises:['crec-day','hearings','statements','factcheck','news
   ethics:['netWorth','trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){renderProfile(s,tab,focus);}
+// The score tabs a basic profile shows in full, since they come from official records alone.
+const BASIC_FULL=new Set(['ideology','showsup','peoplefirst']);
 function paneBasicContent(s,view,pane){
   // The score tabs map onto the official-record views a basic profile has.
   view=({ideology:'legislation',word:'promises',showsup:'legislation',unbought:'finance',aboveboard:'ethics',peoplefirst:'pvp'})[view]||view;
-  const person={id:s.id,name:s.name,chamber:'S',bioguide:s.bioguide};
+  const person={id:s.id,name:s.name,chamber:s.chamber||'S',bioguide:s.bioguide};
   const head=(title,key)=>gradeHead(title,null,BASIC_GRADE[key],gradeRule(key));
   if(view==='integrity'){
     pane.innerHTML=`<h2>Integrity <span class="integrity-pill">Provisional</span></h2><div class="note"><b>Not graded.</b> This profile has no reviewed Honesty, Personal Finances, Fundraising, Showing Up or Conflicts of Interest components, and no sourced Legal Trouble coverage review. Missing current imports are not treated as zero activity or a clean score.</div><p class="small">Official records remain available below for review. IntegrityIndex.us inspired the provisional method; this profile does not yet meet its evidence requirements.</p><section id="integrity-live-records"></section><p class="small"><a href="#method-integrity">Formula, source credit and coverage rules</a> · <a href="#${s.id}-legislation">Legislation and votes</a></p>`;
@@ -3555,7 +3660,7 @@ function renderMethod(sub){
       <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their records, statements, ethics and campaign money are not shown yet.</li>
       <li><b>Challengers and open seats:</b> every opponent of those incumbents, and both major-party nominees in each open Senate race (plus independent Seth Bodnar in Montana). Nominees were confirmed from primary and runoff results.</li>
       <li><b>The rest of the 2026 Senate races:</b> the ${DATA.liteRaces.filter(r=>r.chamber==='S').length} other Senate races on the November 3 ballot, including Florida's special election, are on the Races page with results only: the nominees, each one's share of the vote, the reported turnout and the winner. Sitting senators link to their Senate page profile; their opponents don't have profiles yet.</li>
-      <li><b>Every other senator:</b> a basic profile for each sitting senator not in these races (see the <a href="#senate">Senate</a> page): their place in the Senate, their committees, and the records the daily refresh collects. No grades until their research is reviewed. The list comes from the congress-legislators project.</li>
+      <li><b>Every other senator and House member:</b> a basic profile for each sitting senator and member of the House not in these races (see the <a href="#senate">Senate</a> and <a href="#house">House</a> pages): their place in Congress, their committees, and the records the refresh collects. Ideology, Shows Up and People First are figured from official records alone, the same way as on the full profiles: their positions on the coded roll calls, their attendance and their bills. Keeps Their Word, Unbought and Above Board wait on reviewed research. House members with a basic profile get a lighter set of refresh checks (their bills, their House disclosures and their campaign totals). The lists come from the congress-legislators project.</li>
       <li><b>Ohio and Nebraska:</b> Sen. Jon Husted (appointed in January 2025) and Sen. Pete Ricketts are profiled with their opponents, Sherrod Brown and independent Dan Osborn. No Democrat is on the Nebraska ballot: the nominee withdrew in July 2026 and the state party named no replacement.</li>
     </ul>
     <h2>Competitive races</h2>

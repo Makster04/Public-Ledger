@@ -16,6 +16,10 @@
     {
       "date": "2026-11-07",
       "note": "Rule change (Unbought): money a joint fundraising committee passed on is credited back to the people who gave it, by the size of each one's share, where the FEC's records have been read; before, all of it counted at the joint fundraising weight. Earmarks cover every committee the FEC shows forwarding gifts to the campaign once npm run funders:bundled has run, not just 5 groups. When a profile has no reviewed PAC table, the PAC lines the FEC has processed for the cycle sort its PAC money by type. Earlier values stay as recorded."
+    },
+    {
+      "date": "2026-11-08",
+      "note": "Rule change: basic profiles (every senator and, new, every House member without a reviewed profile) now get Ideology, Shows Up and People First from official records alone, figured the same way as on the full profiles: their positions on the coded roll calls (filled in by scripts/fill-vote-positions.mjs), their attendance and their bills. Keeps Their Word, Unbought and Above Board still wait on reviewed research. Before, basic profiles showed no scores."
     }
   ]
 }

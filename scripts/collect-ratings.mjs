@@ -146,7 +146,11 @@ export async function collect(reader,people,{fetchPage=get,wait=2000}={}){
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const args=process.argv.slice(2),i=args.indexOf('--only'),only=i>=0?new Set(String(args[i+1]||'').split(',')):null;
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
-  const people=[...research.members,...research.cands].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,cand:!!p.cand}));
+  // The full profiles, and the basic ones (every other senator and House member, data/config.json), whose Ideology tab
+  // shows the same ratings.
+  const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
+  const full=[...research.members,...research.cands],have=new Set(full.map(p=>p.id));
+  const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,cand:!!p.cand}));
   const file=new URL('public/group-ratings.json',root);
   const out=await fs.readFile(file,'utf8').then(JSON.parse,()=>({groups:{},people:{}}));
   const checked=new Date().toISOString().slice(0,10);
