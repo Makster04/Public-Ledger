@@ -12,6 +12,7 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {botCheck} from './county-results.mjs';
+import {pdfText} from '../src/pdf.mjs';
 
 const root=new URL('../',import.meta.url);
 const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; interest group scorecards)';
@@ -121,6 +122,95 @@ export function cfgLatest(html){
   return year?{year,pages:[['S',at('S',year)],['H',at('H',year)]].filter(([,u])=>u).map(([chamber,u])=>({chamber,url:new URL(u,'https://www.clubforgrowth.org').href}))}:null;
 }
 
+// ---------- Readers added November 8, 2026 (from npm run ratings:probe and ratings:browse) ----------
+// VoterVoice, the advocacy platform some groups' scorecard pages draw from: a group's scorecards, then each member's score.
+export const VV='https://www.votervoice.net/Api';
+// The newest of a group's scorecards: the latest Congress or year in its name, else the first listed.
+export function newestScorecard(list){
+  const end=s=>{const t=String(s?.name||''),c=/(\d{3})(?:st|nd|rd|th)\s+Congress/i.exec(t);if(c)return 1788+2*Number(c[1]);const y=t.match(/\b20\d\d\b/g);return y?Math.max(...y.map(Number)):0;};
+  return [...(Array.isArray(list)?list:[])].map((s,i)=>({s,i})).sort((a,b)=>end(b.s)-end(a.s)||a.i-b.i)[0]?.s||null;
+}
+export function readVoterVoice(list,{year=null}={}){
+  const out=[];
+  for(const s of Array.isArray(list)?list:[]){
+    const o=s?.official,office=o?.office||{};if(!o||!Number.isFinite(s.score))continue;
+    const chamber=/senate/i.test(office.electedBody)?'S':/house/i.test(office.electedBody)?'H':null;if(!chamber)continue;
+    const d=String(office.electoralDistrict||'');
+    out.push({name:`${o.givenNames||''} ${o.surname||''}`.trim(),state:stateCode(office.state),chamber,party:o.party||null,district:chamber==='H'&&/^\d+$/.test(d)?Number(d):null,score:Math.round(s.score),year});
+  }
+  return out;
+}
+// Americans for Prosperity (americansforprosperity.org/national-scorecard): its page draws from its own data address,
+// every legislator with a score for each Congress; the newest Congress counts. The photo's file name is the Bioguide ID.
+export function readAfp(list){
+  const out=[];
+  for(const o of Array.isArray(list)?list:[]){
+    const sets=(o?.score_sets||[]).filter(s=>Number.isFinite(Number(s?.score))&&s.score!==null&&s.score!=='');if(!sets.length)continue;
+    const s=sets.reduce((a,b)=>Number(b.sessionid)>Number(a.sessionid)?b:a);
+    const chamber=/senate/i.test(o.chamber)?'S':/house/i.test(o.chamber)?'H':null;if(!chamber)continue;
+    out.push({name:`${o.first_name||''} ${o.last_name||''}`.trim(),state:stateCode(o.state),chamber,party:o.party||null,
+      district:chamber==='H'&&/^\d+$/.test(String(o.sub_district||''))?Number(o.sub_district):null,
+      bioguide:/\/([A-Z]\d{6})\.(?:jpe?g|png|webp)\b/i.exec(o.photo||'')?.[1]?.toUpperCase()||null,score:Math.round(Number(s.score)),
+      year:/^\d{3}(st|nd|rd|th)$/.test(s.niceTitle||'')?`${s.niceTitle} Congress`:(s.niceTitle||null),
+      url:o.id?`https://americansforprosperity.org/national-scorecard/#/legislator/${o.id}`:null});
+  }
+  return out;
+}
+// Gun Owners of America (gunowners.org/grades): its voter guide grades every candidate for Congress, A+ to F-, the
+// incumbents starred; the year is the guide's. Only the congressional entries count. Its districts are the election's,
+// drawn anew in some states, so they aren't matched against members' current seats (kept as `race`).
+export function readGoa(html){
+  const s=String(html),year=Number(/(\d{4})\s+Voter Guide/i.exec(s)?.[1])||null,out=[];
+  for(const b of s.split(/<div class="rating-item"/).slice(1)){
+    if(!/^\s*data-filter-group="[^"]*\bus-congress\b/.test(b))continue;
+    const m=/^(.+?)(\*)?\s*\(([A-Z])\)$/.exec(text(/<h3 class="blogPostTitle">([\s\S]*?)<\/h3>/.exec(b)?.[1]));if(!m)continue;
+    const grade=text(/<div class="ratingAlpha[^"]*">([\s\S]*?)<\/div>/.exec(b)?.[1]);if(!/^[A-F][+-]?$/.test(grade))continue;
+    const seat=text(/<div class="ratingTags">([\s\S]*?)<\/div>/.exec(b)?.[1]),chamber=/senate/i.test(seat)?'S':'H',d=/district\s+(\d+)/i.exec(seat)?.[1];
+    out.push({name:m[1].trim(),incumbent:!!m[2],party:m[3],state:stateCode(text(/<div class="postTags">([\s\S]*?)<\/div>/.exec(b)?.[1])),chamber,
+      race:chamber==='H'?(d?Number(d):/at.?large/i.test(seat)?0:null):null,grade,year});
+  }
+  return out;
+}
+// NumbersUSA (grades.numbersusa.com/search): every member's career grade on immigration, as a percent, with their seat;
+// former members are listed too and simply match no profile.
+export function readNumbersUsa(html){
+  const out=[];
+  for(const m of String(html).matchAll(/<row\b[^>]*go\('\/gradecard\/(\d+)\/'\)[^>]*>([\s\S]*?)<\/row>/g)){
+    const t=text(m[2]),pct=/(\d{1,3})%/.exec(t)?.[1];
+    const who=/(Representative|Senator|Delegate|Resident Commissioner)\s+(.+?)\s*\(([A-Z])-([A-Z]{2})(\d{1,2}|AL)?\)/.exec(t);if(pct==null||!who)continue;
+    const chamber=who[1]==='Senator'?'S':'H';
+    out.push({name:who[2],party:who[3],state:who[4],chamber,district:chamber==='H'&&who[5]?(who[5]==='AL'?0:Number(who[5])):null,score:Number(pct),year:'career',url:`https://grades.numbersusa.com/gradecard/${m[1]}/`});
+  }
+  return out;
+}
+// Alliance for Retired Americans (its yearly Congressional Voting Record, a PDF): by state, senators first, then House
+// members with their district; each member by last name and party, their votes, then the year's score and their lifetime
+// score. Matched on last name, state, chamber and district.
+const STATE_BY_NAME=Object.fromEntries(Object.entries(STATES).map(([k,v])=>[v,k]));
+export function readAra(pdfText){
+  const lines=String(pdfText).split('\n').map(l=>l.trim()).filter(Boolean),out=[];
+  const span=/January\s+(\d{4})\s*[—–-]\s*December\s+(\d{4})/.exec(lines.slice(0,40).join(' ')),year=span?Number(span[2]):null;
+  let state=null,house=false;
+  for(let i=0;i<lines.length;i++){
+    const l=lines[i];
+    if(STATE_BY_NAME[l]){state=STATE_BY_NAME[l];continue;}
+    const m=/^(?:(\d{1,2}|AL)\s+)?([A-Z][A-Za-z'’.\- ,]*?)\s+\(([DRI])\)$/.exec(l);if(!m||!state)continue;
+    const dist=m[1]??(/^(\d{1,2}|AL)$/.test(lines[i-1]||'')?lines[i-1]:null);
+    if(dist!=null)house=true;
+    let score=null,life=null;
+    for(let k=i+1;k<Math.min(lines.length,i+5);k++){
+      if(/\(([DRI])\)$/.test(lines[k])||STATE_BY_NAME[lines[k]])break;
+      const s=/^(?:\?\s+)?(\d{1,3})\s+(\d{1,3})$/.exec(lines[k]);if(s){score=Number(s[1]);life=Number(s[2]);break;}
+    }
+    if(score==null)continue;
+    out.push({name:m[2].trim(),lastOnly:true,party:m[3],state,chamber:house?'H':'S',district:house&&dist!=null?(dist==='AL'?0:Number(dist)):null,score,lifetime:life,year});
+  }
+  return out;
+}
+export const ARA_PDF='https://retiredamericans.org/wp-content/uploads/2026/03/2025-Congressional-Voting-Record.pdf';
+// The newest voting record its page links to (a PDF named for the year), else the one known.
+export const araLatest=html=>{const links=[...String(html).matchAll(/href="([^"]*?(\d{4})-Congressional-Voting-Record\.pdf)"/gi)].map(m=>({url:m[1],year:Number(m[2])})).sort((a,b)=>b.year-a.year);return links[0]?.url||ARA_PDF;};
+
 export const READERS=[
   {key:'sba',org:'SBA Pro-Life America',lean:'conservative',issue:'Abortion',url:'https://sbaprolife.org/scorecard',read:readSba},
   {key:'lcv',org:'League of Conservation Voters',lean:'liberal',issue:'Environment',url:'https://www.lcv.org/congressional-scorecard/members-of-congress/',read:readLcv},
@@ -135,6 +225,17 @@ export const READERS=[
     rows:async(fetchPage,{wait=2000}={})=>{const latest=cfgLatest(await fetchPage('https://www.clubforgrowth.org/scorecards/'));if(!latest)throw new Error('no scorecard year listed on its scorecards page');
       const rows=[];for(const p of latest.pages){await sleep(wait);rows.push(...readClubForGrowth(await fetchPage(p.url),{chamber:p.chamber,year:latest.year}));}
       return rows;}},
+  {key:'ppaction',org:'Planned Parenthood Action',lean:'liberal',issue:'Abortion',url:'https://www.plannedparenthoodaction.org/congressional-scorecard',
+    rows:async(fetchPage,{wait=2000}={})=>{const card=newestScorecard(JSON.parse(await fetchPage(`${VV}/Scorecards?association=PPFA&government=./USA&active=true`)));
+      if(!card?.id)throw new Error('no scorecard listed');await sleep(wait);
+      return readVoterVoice(JSON.parse(await fetchPage(`${VV}/Scorecards/${card.id}/Scorings`)),{year:card.name||null});}},
+  {key:'afp',org:'Americans for Prosperity',lean:'conservative',issue:'Taxes & spending',url:'https://americansforprosperity.org/national-scorecard/',
+    rows:async fetchPage=>readAfp(JSON.parse(await fetchPage('https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/legislators')))},
+  {key:'goa',org:'Gun Owners of America',lean:'conservative',issue:'Guns',url:'https://www.gunowners.org/grades/',read:readGoa},
+  {key:'numbersusa',org:'NumbersUSA',lean:'conservative',issue:'Immigration',url:'https://grades.numbersusa.com/search/',read:readNumbersUsa},
+  {key:'ara',org:'Alliance for Retired Americans',lean:'liberal',issue:'Seniors',url:'https://retiredamericans.org/voting-record/',
+    rows:async(fetchPage,{wait=2000,fetchBytes=getBytes}={})=>{let pdf=ARA_PDF;try{pdf=araLatest(await fetchPage('https://retiredamericans.org/voting-record/'));}catch{}
+      await sleep(wait);return readAra(await pdfText(await fetchBytes(pdf)));}},
 ];
 
 // The groups without a reader yet, and why, from the probe (data/ratings-probe.txt, November 7, 2026):
@@ -143,10 +244,13 @@ export const READERS=[
 //   states      the group rates states' laws, not members of Congress
 //   no-list     grades are given one at a time in announcements, not published as a list
 //   permission  waiting on the group's permission to show its ratings
-//   to-build    the ratings are drawn by the page's own scripts; npm run ratings:browse records what they load, and the
-//               reader is written from that
+//   to-build    the ratings are published but the reader is still to be written: drawn by the page's own scripts
+//               (npm run ratings:browse records what they load) or in a document the page links to (a second
+//               ratings:probe, -- --to-build, looks at it)
+//   old         its latest scorecard is from an earlier Congress
+//   image       its scorecard's member list is a picture, not text
+// A group marked none, states or old isn't shown on the profiles: it has no current ratings of members of Congress.
 export const PROBED={
-  afp:['Americans for Prosperity','conservative','Taxes & spending','to-build','https://americansforprosperity.org/national-scorecard/'],
   scf:['Senate Conservatives Fund','conservative','Overall','none','https://www.senateconservatives.com/'],
   nra:['NRA','conservative','Guns','no-list','https://www.nrapvf.org/grades/'],
   nrlc:['National Right to Life','conservative','Abortion','blocked','https://www.nrlc.org/federal/scorecard/'],
@@ -161,10 +265,44 @@ export const PROBED={
   aft:['AFT','liberal','Labor','none','https://www.aft.org/'],
   giffords:['Giffords','liberal','Guns','states','https://giffords.org/lawcenter/resources/scorecard/'],
   everytown:['Everytown','liberal','Guns','none','https://www.everytown.org/'],
-  ppaction:['Planned Parenthood Action','liberal','Abortion','to-build','https://www.plannedparenthoodaction.org/congressional-scorecard'],
   hrc:['Human Rights Campaign','liberal','Civil rights','permission','https://www.hrc.org/resources/congressional-scorecard'],
   aclu:['ACLU','liberal','Civil rights','permission','https://www.aclu.org/congressional-scorecards'],
+  // Added November 8, 2026 (data/ratings-probe.txt).
+  nssf:['National Shooting Sports Foundation','conservative','Guns','to-build','https://www.nssf.org/government-relations/report-card/'],
+  sfla:['Students for Life Action','conservative','Abortion','blocked','https://www.studentsforlifeaction.org/'],
+  aea:['American Energy Alliance','conservative','Environment','to-build','https://www.americanenergyalliance.org/american-energy-scorecard/'],
+  defenders:['Defenders of Wildlife','liberal','Environment','image','https://defenders.org/sites/default/files/2026-03/Conservation-Report-Card-2025.pdf'],
+  climatehawks:['Climate Hawks Vote','liberal','Environment','to-build','https://climatehawksvote.com/'],
+  cwa:['Communications Workers of America','liberal','Labor','to-build','https://scorecard.cwa-union.org/'],
+  teamsters:['Teamsters','liberal','Labor','old','https://teamster.org/political-legislative-scorecards/'],
+  apwu:['American Postal Workers Union','liberal','Labor','none','https://apwu.org/congressional-voting-records/'],
+  ntu:['National Taxpayers Union','conservative','Taxes & spending','to-build','https://www.ntu.org/ratecongress/'],
+  ccagw:['Council for Citizens Against Government Waste','conservative','Taxes & spending','to-build','https://ccagwratings.org/'],
+  network:['NETWORK Lobby for Catholic Social Justice','liberal','Taxes & spending','to-build','https://networklobby.org/news/11526-voting-record/'],
+  naacp:['NAACP','liberal','Civil rights','old','https://naacp.org/find-resources/legislative-report-cards'],
+  civilrights:['The Leadership Conference on Civil and Human Rights','liberal','Civil rights','to-build','https://civilrights.org/voting-record/'],
+  aauw:['AAUW','liberal','Civil rights','to-build','https://www.aauwaction.org/voter-education/congressional-voting-record/'],
+  cpac:['CPAC','conservative','Overall','to-build','https://www.cpac.org/foundation/ratings/us'],
+  jbs:['John Birch Society (Freedom Index)','conservative','Overall','to-build','https://freedomindex.us/us/'],
+  rlc:['Republican Liberty Caucus (Liberty Index)','conservative','Overall','to-build','https://rlc.org/'],
+  progressivepunch:['ProgressivePunch','liberal','Overall','to-build','https://www.progressivepunch.org/'],
+  ada:['Americans for Democratic Action','liberal','Overall','to-build','https://adaction.org/'],
+  frc:['FRC Action','conservative','Family & religion','to-build','https://www.frcaction.org/scorecard'],
+  ncpssm:['National Committee to Preserve Social Security and Medicare','liberal','Seniors','to-build','https://www.ncpssm.org/scorecard/'],
+  ecu:['End Citizens United','liberal','Money in politics','none','https://www.endcitizensunited.org/'],
+  commoncause:['Common Cause','liberal','Money in politics','to-build','https://democracyscorecard.org/'],
+  humane:['Humane World Action Fund','liberal','Animal welfare','to-build','https://humaneaction.org/current_scorecard'],
+  standwithcrypto:['Stand With Crypto','conservative','Crypto & tech','to-build','https://www.standwithcrypto.org/politicians'],
+  c4ip:['Council for Innovation Promotion','none','Crypto & tech','to-build','https://c4ip.org/resources/congressional-innovation-scorecard/'],
+  ajp:['AJP Action','liberal','Israel, Palestine & Iran','to-build','https://ajpaction.org/scorecard2026/'],
+  imeu:['IMEU Policy Project','liberal','Israel, Palestine & Iran','blocked','https://imeupolicyproject.org/scorecard'],
+  niac:['NIAC Action','liberal','Israel, Palestine & Iran','to-build','http://scorecard.niacaction.org/'],
+  napo:['National Association of Police Organizations','conservative','Policing','none','https://www.napo.org/'],
+  norml:['NORML','liberal','Marijuana','to-build','https://vote.norml.org/'],
+  lugar:['The Lugar Center (Bipartisan Index)','none','Bipartisanship','old','https://www.thelugarcenter.org/ourwork-Bipartisan-Index.html'],
 };
+// The statuses not shown on profiles.
+export const HIDDEN=new Set(['none','states','old']);
 export const probedGroups=()=>Object.fromEntries(Object.entries(PROBED).map(([k,[org,lean,issue,status,url]])=>[k,{org,lean,issue,url,status}]));
 
 // ---------- Matching a rating to a profile: the same last name, the same state, and the same first name or initial ----------
@@ -175,11 +313,28 @@ export function matchPerson(row,people){
   // A group that lists each member's Bioguide ID is matched on it.
   if(row.bioguide){const b=people.find(p=>p.bioguide===row.bioguide);if(b)return b;}
   const last=lastOf(row.name),first=firstOf(row.name);
-  const hits=people.filter(p=>lastOf(p.name)===last&&(!row.state||!p.state||row.state===p.state)&&(!row.chamber||!p.chamber||row.chamber===p.chamber||p.cand));
+  let hits=people.filter(p=>lastOf(p.name)===last&&(!row.state||!p.state||row.state===p.state)&&(!row.chamber||!p.chamber||row.chamber===p.chamber||p.cand));
+  // A House district, when both give one, must agree: it tells apart two members of one state with the same last name,
+  // and a former member from another district.
+  // An at-large seat is 0 here and 1 in some groups' lists; a state with one seat has no other.
+  const seat=d=>d===1?0:d,rd=row.chamber==='H'?districtOf(row.district):null;
+  if(rd!=null)hits=hits.filter(p=>p.district==null||seat(p.district)===seat(rd));
+  // A group that gives only last names is matched when exactly one profile fits.
+  if(row.lastOnly)return hits.length===1?hits[0]:null;
   if(hits.length<=1)return hits[0]&&(firstOf(hits[0].name)[0]===first[0]||firstOf(hits[0].short||'')[0]===first[0])?hits[0]:null;
   return hits.find(p=>firstOf(p.name)===first||firstOf(p.short||'')===first)||null;
 }
 
+// A House district as a number (0 at large), from 7, "PA-10" or "AK-AL".
+export const districtOf=d=>typeof d==='number'?d:/-AL$/i.test(String(d||''))?0:/-(\d{1,2})$/.test(String(d||''))?Number(/-(\d{1,2})$/.exec(d)[1]):null;
+// A document's bytes (a PDF), or why not.
+async function getBytes(url){
+  const res=await fetch(url,{headers:{'User-Agent':UA},redirect:'follow',signal:AbortSignal.timeout(120000)});
+  const bytes=new Uint8Array(await res.arrayBuffer());
+  if(botCheck(res.status,res.url,new TextDecoder().decode(bytes.subarray(0,4000))))throw new Error(`the site answered with a bot check (HTTP ${res.status}), so it is left out`);
+  if(!res.ok)throw new Error(`HTTP ${res.status}`);
+  return bytes;
+}
 async function get(url){
   const res=await fetch(url,{headers:{'User-Agent':UA},redirect:'follow',signal:AbortSignal.timeout(60000)});
   const html=await res.text();
@@ -188,13 +343,20 @@ async function get(url){
   return html;
 }
 // One group: every page, read and matched.
-export async function collect(reader,people,{fetchPage=get,wait=2000,today=new Date()}={}){
+export async function collect(reader,people,{fetchPage=get,fetchBytes=getBytes,wait=2000,today=new Date()}={}){
   const rows=[];
-  if(reader.rows)rows.push(...await reader.rows(fetchPage,{wait,today}));
+  if(reader.rows)rows.push(...await reader.rows(fetchPage,{wait,today,fetchBytes}));
   else if(reader.paged){for(let pg=0;pg<60;pg++){const html=await fetchPage(`${reader.url}?pg=${pg}`);const got=reader.read(html);rows.push(...got);if(!got.length||!rfaHasNext(html,pg))break;await sleep(wait);}}
   else rows.push(...reader.read(await fetchPage(reader.url)));
+  const found=new Map();
+  for(const r of rows){const p=matchPerson(r,people);if(p)(found.get(p.id)||found.set(p.id,[]).get(p.id)).push(r);}
+  // Several entries for one person (listed twice after a special election, or a former member with the same name): the
+  // incumbent's when one is marked, else the entry when they agree; when they disagree, none.
   const matched=[];
-  for(const r of rows){const p=matchPerson(r,people);if(p)matched.push({id:p.id,row:r});}
+  for(const [id,list] of found){
+    const inc=list.filter(r=>r.incumbent),pool=inc.length?inc:list;
+    if(new Set(pool.map(r=>`${r.score??''}|${r.grade??''}`)).size===1)matched.push({id,row:pool[0]});
+  }
   return {rows,matched};
 }
 
@@ -205,7 +367,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // shows the same ratings.
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const full=[...research.members,...research.cands],have=new Set(full.map(p=>p.id));
-  const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,bioguide:p.bioguide||null,cand:!!p.cand}));
+  const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,district:p.chamber==='H'?districtOf(p.district):null,bioguide:p.bioguide||null,cand:!!p.cand}));
   const file=new URL('public/group-ratings.json',root);
   const out=await fs.readFile(file,'utf8').then(JSON.parse,()=>({groups:{},people:{}}));
   const checked=new Date().toISOString().slice(0,10);
@@ -222,6 +384,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     await sleep(2000);
   }
   for(const [k,g] of Object.entries(probedGroups()))if(!READERS.some(r=>r.key===k))out.groups[k]=g;
+  // A group no longer listed (taken off the list) is dropped, with its ratings.
+  const listed=new Set([...READERS.map(r=>r.key),...Object.keys(PROBED)]);
+  for(const k of Object.keys(out.groups))if(!listed.has(k))delete out.groups[k];
+  for(const id of Object.keys(out.people))out.people[id]=out.people[id].filter(x=>listed.has(x.group));
   out.checked=checked;
   for(const id of Object.keys(out.people))if(!out.people[id].length)delete out.people[id];
   await fs.writeFile(file,JSON.stringify({about:'Interest groups\' published ratings of the profiled members, exactly as each group gives them (scripts/collect-ratings.mjs). Shown on the Ideology tab; the Ratings lean is a check beside the issue leans, never part of a grade.',...out},null,1)+'\n');
