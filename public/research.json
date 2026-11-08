@@ -204237,7 +204237,69 @@
       "fec:C00786830": "WELCOMEPAC",
       "fec:C00837021": "314 ACTION IMPACT SLATE"
     },
-    "discovered": false,
+    "discovered": true,
+    "listed": {
+      "collins": true,
+      "sullivan": true,
+      "marshall": true,
+      "ossoff": true,
+      "booker": true,
+      "hickenlooper": true,
+      "perry": true,
+      "lawler": true,
+      "evans": true,
+      "millermeeks": true,
+      "kaptur": true,
+      "mgp": true,
+      "castor": true,
+      "talarico": true,
+      "paxton": true,
+      "elsayed": true,
+      "rogers": true,
+      "cooper": true,
+      "whatley": true,
+      "turek": true,
+      "hinson": true,
+      "pappas": true,
+      "sununu": true,
+      "flanagan": true,
+      "tafoya": true,
+      "stratton": true,
+      "tracy": true,
+      "cbooker": true,
+      "barr": true,
+      "wess": true,
+      "moore": true,
+      "bankhead": true,
+      "alme": true,
+      "bodnar": true,
+      "byrd": true,
+      "hageman": true,
+      "thomas": true,
+      "hern": true,
+      "davis": true,
+      "letlow": true,
+      "husted": true,
+      "ricketts": true,
+      "osborn": true,
+      "jackson": true,
+      "peltola": true,
+      "hamilton": true,
+      "mcollins": true,
+      "murphy": true,
+      "baisley": true,
+      "stelson": true,
+      "conley": true,
+      "rutinel": true,
+      "bohannan": true,
+      "merrin": true,
+      "braun": true,
+      "flores": true,
+      "beltran": true,
+      "trump": true,
+      "gonzalez": true,
+      "brown": true
+    },
     "cycles": [
       2026,
       2024,
@@ -205425,10 +205487,6 @@
             "2018": {
               "routed": 788.36,
               "n": 49
-            },
-            "2024": {
-              "routed": 85.11,
-              "n": 1
             }
           },
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00630012&recipient_committee_id=C00592659&two_year_transaction_period=2026"
@@ -205512,10 +205570,6 @@
             "2022": {
               "routed": 45700,
               "n": 23
-            },
-            "2024": {
-              "routed": 47000,
-              "n": 26
             },
             "2026": {
               "routed": 59000,
