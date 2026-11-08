@@ -329,7 +329,10 @@
    "lean": "conservative",
    "issue": "Overall",
    "url": "https://rlc.org/",
-   "status": "to-build"
+   "read": "2026-11-08",
+   "rated": 270,
+   "matched": 265,
+   "year": 2025
   },
   "progressivepunch": {
    "org": "ProgressivePunch",
@@ -597,6 +600,16 @@
     "name": "Susan Collins"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Susan Collins"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -764,6 +777,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Roger Marshall"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Roger Marshall"
    },
    {
@@ -1022,6 +1045,16 @@
     "name": "Daniel S. Sullivan"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 30,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Dan Sullivan"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -1104,6 +1137,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Jon Husted"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Jon Husted"
    },
    {
@@ -1211,6 +1254,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Gabe Evans"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Gabe Evans"
    },
    {
@@ -1469,6 +1522,16 @@
     "name": "Harriet Hageman"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Harriet M. Hageman"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -1554,6 +1617,16 @@
     "name": "Kevin Hern"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Kevin Hern"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -1636,6 +1709,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Ashley Hinson"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Ashley Hinson"
    },
    {
@@ -1809,6 +1892,16 @@
     "name": "Michael Lawler"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michael Lawler"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -1891,6 +1984,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Julia Letlow"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Julia Letlow"
    },
    {
@@ -2064,6 +2167,16 @@
     "name": "Barry Moore"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 64,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Barry Moore"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -2234,6 +2347,16 @@
     "name": "Scott Perry"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 64,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Scott Perry"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -2305,6 +2428,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Andy Barr"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Andy Barr"
    },
    {
@@ -2401,6 +2534,16 @@
     "year": "career",
     "url": "https://grades.numbersusa.com/gradecard/212/",
     "name": "Mac Collins"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 59,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Collins"
    },
    {
     "group": "ara",
@@ -2713,6 +2856,16 @@
     "name": "Marsha Blackburn"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Marsha Blackburn"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -2927,6 +3080,16 @@
     "name": "John Boozman"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Boozman"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3002,6 +3165,16 @@
     "name": "Katie Boyd Britt"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "atie Britt"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3074,6 +3247,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/22011",
+    "name": "Ted Budd"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Ted Budd"
    },
    {
@@ -3237,6 +3420,16 @@
     "name": "Shelley Moore Capito"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Shelley Capito"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3309,6 +3502,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/16025",
+    "name": "Bill Cassidy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Bill Cassidy"
    },
    {
@@ -3472,6 +3675,16 @@
     "name": "John Cornyn"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Cornyn"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3632,6 +3845,16 @@
     "name": "Tom Cotton"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Tom Cotton"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3707,6 +3930,16 @@
     "name": "Kevin Cramer"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 32,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "evin Cramer"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3779,6 +4012,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15770",
+    "name": "Mike Crapo"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mike Crapo"
    },
    {
@@ -3857,6 +4100,16 @@
     "name": "Ted Cruz"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ted Cruz"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -3932,6 +4185,16 @@
     "name": "John Curtis"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Curtis"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -4004,6 +4267,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/17575",
+    "name": "Steve Daines"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Steve Daines"
    },
    {
@@ -4232,6 +4505,16 @@
     "name": "Joni Ernst"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 56,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Joni Ernst"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -4379,6 +4662,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/19156",
+    "name": "Deb Fischer"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Deb Fischer"
    },
    {
@@ -4607,6 +4900,16 @@
     "name": "Chuck Grassley"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Chuck Grassley"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -4689,6 +4992,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Bill Hagerty"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Bill Hagerty"
    },
    {
@@ -4839,6 +5152,16 @@
     "score": 83,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/23929",
+    "name": "Josh Hawley"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Josh Hawley"
    },
    {
@@ -5067,6 +5390,16 @@
     "name": "John Hoeven"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Hoeven"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -5152,6 +5485,16 @@
     "name": "Cindy Hyde-Smith"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Cindy Hyde-Smith"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -5214,6 +5557,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/16106",
+    "name": "Ron Johnson"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Ron Johnson"
    },
    {
@@ -5440,6 +5793,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/21767",
     "name": "John Neely Kennedy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John ennedy"
    },
    {
     "group": "ara",
@@ -5742,6 +6105,16 @@
     "name": "James Lankford"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "James Lankford"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -5814,6 +6187,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/16042",
+    "name": "Mike Lee"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 65,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mike Lee"
    },
    {
@@ -5977,6 +6360,16 @@
     "name": "Cynthia Lummis"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Cynthia Lummis"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -6137,6 +6530,16 @@
     "name": "Mitch McConnell"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mitch McConnell"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -6210,6 +6613,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/29791",
     "name": "David McCormick"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Dave McCormick"
    },
    {
     "group": "ara",
@@ -6382,6 +6795,16 @@
     "name": "Ashley Moody"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ashley Moody"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -6454,6 +6877,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/20583",
+    "name": "Jerry Moran"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Jerry Moran"
    },
    {
@@ -6532,6 +6965,16 @@
     "name": "Bernie Moreno"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Bernie Moreno"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -6604,6 +7047,16 @@
     "score": 67,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15799",
+    "name": "Lisa Murkowski"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 30,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Lisa Murkowski"
    },
    {
@@ -6907,6 +7360,16 @@
     "name": "Rand Paul"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 99,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Rand Paul"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -7152,6 +7615,16 @@
     "name": "Jim Risch"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 49,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "James Risch"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -7309,6 +7782,16 @@
     "grade": "B-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Mike Rounds"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mike Rounds"
    },
    {
@@ -7612,6 +8095,16 @@
     "name": "Eric Schmitt"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 53,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Eric Schmitt"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -7762,6 +8255,16 @@
     "name": "Rick Scott"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Rick Scott"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -7834,6 +8337,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/16045",
+    "name": "Tim Scott"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tim Scott"
    },
    {
@@ -7984,6 +8497,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/29543",
+    "name": "Tim Sheehy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tim Sheehy"
    },
    {
@@ -8212,6 +8735,16 @@
     "name": "John Thune"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Thune"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -8287,6 +8820,16 @@
     "name": "Thom Tillis"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Thom Tillis"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -8359,6 +8902,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/25668",
+    "name": "Tommy Tuberville"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 53,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tommy Tuberville"
    },
    {
@@ -8897,6 +9450,16 @@
     "name": "Roger Wicker"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Roger Wicker"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -9044,6 +9607,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/16066",
+    "name": "Todd Young"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Todd Young"
    },
    {
@@ -9197,6 +9770,16 @@
     "name": "Jim Banks"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jim Banks"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -9272,6 +9855,16 @@
     "name": "James Justice"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jim Justice"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -9344,6 +9937,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15954",
+    "name": "John Barrasso"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John Barrasso"
    },
    {
@@ -9429,6 +10032,16 @@
     "grade": "B-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tom Cole"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tom Cole"
    },
    {
@@ -9837,6 +10450,16 @@
     "name": "Warren Davidson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Warren Davidson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -10240,6 +10863,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Monica De La Cruz"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Monica De La Cruz"
    }
   ],
   "delauro": [
@@ -10571,6 +11204,16 @@
     "name": "Scott DesJarlais"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Scott DesJarlais"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -10741,6 +11384,16 @@
     "name": "Mario Diaz-Balart"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mario Diaz-Balart"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -10888,6 +11541,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27958",
+    "name": "Chuck Edwards"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Chuck Edwards"
    },
    {
@@ -11061,6 +11724,16 @@
     "name": "Jake Ellzey"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jake Ellzey"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -11143,6 +11816,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tom Emmer"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tom Emmer"
    },
    {
@@ -11391,6 +12074,16 @@
     "name": "Ron Estes"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ron Estes"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -11551,6 +12244,16 @@
     "name": "Mike Ezell"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Ezell"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -11633,6 +12336,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Pat Fallon"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Pat Fallon"
    },
    {
@@ -11721,6 +12434,16 @@
     "name": "Julie Fedorchak"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Julie Fedorchak"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -11793,6 +12516,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/5534",
+    "name": "Randy Feenstra"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Randy Feenstra"
    },
    {
@@ -12029,6 +12762,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Randy Fine"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 36,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Randy Fine"
    }
   ],
   "finstad": [
@@ -12102,6 +12845,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Brad Finstad"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 49,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Brad Finstad"
    },
    {
@@ -12190,6 +12943,16 @@
     "name": "Scott Fitzgerald"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Scott Fitzgerald"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -12273,6 +13036,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Charles J. Fleischmann"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Chuck Fleischmann"
    },
    {
     "group": "ara",
@@ -12445,6 +13218,16 @@
     "name": "Mike Flood"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Flood"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -12527,6 +13310,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Vince Fong"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Vince Fong"
    },
    {
@@ -12785,6 +13578,16 @@
     "name": "Virginia Foxx"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Virginia Foxx"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -12952,6 +13755,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Scott Franklin"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Scott Franklin"
    },
    {
@@ -13210,6 +14023,16 @@
     "name": "Russell Fry"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Russell Fry"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -13292,6 +14115,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Russ Fulcher"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 63,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Russ Fulcher"
    },
    {
@@ -13462,6 +14295,16 @@
     "grade": "B",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Andrew Garbarino"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Andrew Garbarino"
    },
    {
@@ -13774,6 +14617,16 @@
     "name": "Brandon Gill"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Brandon Gill"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -13944,6 +14797,16 @@
     "name": "Carlos Gimenez"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Carlos Gimenez"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -14101,6 +14964,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Craig Goldman"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Craig Goldman"
    },
    {
@@ -14338,6 +15211,16 @@
     "name": "Lance Gooden"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Lance Gooden"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -14508,6 +15391,16 @@
     "name": "Paul Gosar"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 72,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Paul Gosar"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -14654,6 +15547,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15839",
+    "name": "Sam Graves"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Sam Graves"
    },
    {
@@ -14827,6 +15730,16 @@
     "name": "Glenn Grothman"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Glenn Grothman"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -14909,6 +15822,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Michael Guest"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Michael Guest"
    },
    {
@@ -14997,6 +15920,16 @@
     "name": "Brett Guthrie"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Brett Guthrie"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -15079,6 +16012,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Abraham Hamadeh"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Abraham Hamadeh"
    },
    {
@@ -15252,6 +16195,16 @@
     "name": "Mike Haridopolos"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Haridopolos"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -15334,6 +16287,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Pat Harrigan"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Pat Harrigan"
    },
    {
@@ -15422,6 +16385,16 @@
     "name": "Andrew Harris"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 59,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Andy Harris"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -15507,6 +16480,16 @@
     "name": "Mark Harris"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mark Harris"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -15589,6 +16572,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Diana Harshbarger"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Diana Harshbarger"
    },
    {
@@ -15759,6 +16752,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Clay Higgins"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Clay Higgins"
    },
    {
@@ -16014,6 +17017,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Erin Houchin"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Erin Houchin"
    },
    {
@@ -16347,6 +17360,16 @@
     "name": "Richard Hudson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Richard Hudson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -16517,6 +17540,16 @@
     "name": "Bill Huizenga"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Bill Huizenga"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -16589,6 +17622,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27952",
+    "name": "Wesley Hunt"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 43,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Wesley Hunt"
    },
    {
@@ -16677,6 +17720,16 @@
     "name": "Jeff Hurd"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jeff Hurd"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -16749,6 +17802,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15886",
+    "name": "Darrell Issa"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Darrell Issa"
    },
    {
@@ -16922,6 +17985,16 @@
     "name": "Brian Jack"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Brian Jack"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -17092,6 +18165,16 @@
     "name": "Ronny L. Jackson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ronny Jackson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -17249,6 +18332,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27908",
+    "name": "John James"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John James"
    },
    {
@@ -17497,6 +18590,16 @@
     "name": "Dusty Johnson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Dusty Johnson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -17741,6 +18844,16 @@
     "name": "Mike Johnson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Johnson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -17823,6 +18936,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Jim Jordan"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Jim Jordan"
    },
    {
@@ -17911,6 +19034,16 @@
     "name": "David Joyce"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Joyce"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -17993,6 +19126,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "John Joyce"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John Joyce"
    },
    {
@@ -18249,6 +19392,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Mike Kelly"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Kelly"
    }
   ],
   "rkelly": [
@@ -18400,6 +19553,16 @@
     "name": "Trent Kelly"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Trent Kelly"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -18482,6 +19645,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Mike Kennedy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 63,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mike Kennedy"
    },
    {
@@ -18740,6 +19913,16 @@
     "name": "Jennifer Kiggans"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jennifer Kiggans"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -18822,6 +20005,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Kevin Kiley"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Kevin Kiley"
    },
    {
@@ -18910,6 +20103,16 @@
     "name": "Young Kim"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Young Kim"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -18992,6 +20195,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Brad Knott"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Brad Knott"
    },
    {
@@ -19155,6 +20368,16 @@
     "name": "David Kustoff"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Kustoff"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -19237,6 +20460,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Darin LaHood"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Darin LaHood"
    },
    {
@@ -19323,6 +20556,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Nicholas J. LaLota"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Nick LaLota"
    },
    {
     "group": "ara",
@@ -19493,6 +20736,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Nick Langworthy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Nicholas Langworthy"
    },
    {
     "group": "ara",
@@ -19823,6 +21076,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Laurel Lee"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Laurel M. Lee"
    },
    {
     "group": "ara",
@@ -20399,6 +21662,16 @@
     "name": "Barry Loudermilk"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Barry Loudermilk"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -20481,6 +21754,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Frank Lucas"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Frank Lucas"
    },
    {
@@ -20567,6 +21850,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Anna Paulina Luna"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 67,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Anna Paulina Luna"
    }
   ],
   "luttrell": [
@@ -20630,6 +21923,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27945",
+    "name": "Morgan Luttrell"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Morgan Luttrell"
    },
    {
@@ -20793,6 +22096,16 @@
     "name": "Nancy Mace"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 49,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Nancy Mace"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -20875,6 +22188,16 @@
     "grade": "B",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Ryan Mackenzie"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Ryan Mackenzie"
    },
    {
@@ -21048,6 +22371,16 @@
     "name": "Nicole Malliotakis"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Nicole Malliotakis"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -21133,6 +22466,16 @@
     "name": "Celeste Maloy"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Celeste Maloy"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -21215,6 +22558,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tracey Mann"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tracey Mann"
    },
    {
@@ -21378,6 +22731,16 @@
     "name": "Thomas Massie"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 101,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Thomas Massie"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -21460,6 +22823,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Brian Mast"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Brian Mast"
    },
    {
@@ -21793,6 +23166,16 @@
     "name": "Michael McCaul"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michael McCaul"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -21875,6 +23258,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Lisa McClain"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Lisa McClain"
    },
    {
@@ -22133,6 +23526,16 @@
     "name": "Tom McClintock"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Tom McClintock"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -22303,6 +23706,16 @@
     "name": "Rich McCormick"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Richard McCormick"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -22470,6 +23883,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Addison McDowell"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Addison McDowell"
    },
    {
@@ -22725,6 +24148,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "John McGuire"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 60,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John McGuire"
    },
    {
@@ -23153,6 +24586,16 @@
     "name": "Mark Messmer"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mark Messmer"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -23236,6 +24679,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Dan Meuser"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Daniel Meuser"
    },
    {
     "group": "ara",
@@ -23408,6 +24861,16 @@
     "name": "Carol Miller"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Carol Miller"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -23490,6 +24953,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Mary Miller"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 64,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mary Miller"
    },
    {
@@ -23578,6 +25051,16 @@
     "name": "Max Miller"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 39,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Max Miller"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -23650,6 +25133,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27912",
+    "name": "Cory Mills"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 58,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Cory Mills"
    },
    {
@@ -23823,6 +25316,16 @@
     "name": "John Moolenaar"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "John Moolenaar"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -23905,6 +25408,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Blake Moore"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Blake Moore"
    },
    {
@@ -24078,6 +25591,16 @@
     "name": "Riley Moore"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Riley Moore"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -24163,6 +25686,16 @@
     "name": "Timothy K. Moore"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Tim Moore"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -24245,6 +25778,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Nathaniel Moran"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Nathaniel Moran"
    },
    {
@@ -24812,6 +26355,16 @@
     "name": "Gregory Murphy"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Gregory F. Murphy"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -25142,6 +26695,16 @@
     "name": "Trever Nehls"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 49,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Troy Nehls"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -25214,6 +26777,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/20745",
+    "name": "Dan Newhouse"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Dan Newhouse"
    },
    {
@@ -25377,6 +26950,16 @@
     "name": "Ralph Norman"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 67,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ralph Norman"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -25462,6 +27045,16 @@
     "name": "Zach Nunn"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "achary Nunn"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -25544,6 +27137,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Jay Obernolte"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Jay Obernolte"
    },
    {
@@ -25694,6 +27297,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/27938",
     "name": "Andy Ogles"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 54,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Andrew Ogles"
    },
    {
     "group": "ara",
@@ -25941,6 +27554,16 @@
     "name": "Burgess Owens"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Burgess Owens"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -26111,6 +27734,16 @@
     "name": "Gary Palmer"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Gary Palmer"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -26268,6 +27901,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Jimmy Patronis"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 36,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Jimmy Patronis"
    }
   ],
@@ -26576,6 +28219,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "August Pfluger"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "August Pfluger"
    },
    {
@@ -27344,6 +28997,16 @@
     "name": "Guy Reschenthaler"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Guy Reschenthaler"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -27599,6 +29262,16 @@
     "name": "Hal Rogers"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Harold Rogers"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -27684,6 +29357,16 @@
     "name": "Mike Rogers"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Rogers"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -27756,6 +29439,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/23960",
+    "name": "John Rose"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 46,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John Rose"
    },
    {
@@ -27929,6 +29622,16 @@
     "name": "David Rouzer"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Rouzer"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -28001,6 +29704,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/23905",
+    "name": "Chip Roy"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 74,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Chip Roy"
    },
    {
@@ -28174,6 +29887,16 @@
     "name": "Michael Rulli"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 46,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michael Rulli"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -28256,6 +29979,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "John Rutherford"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John Rutherford"
    },
    {
@@ -28427,6 +30160,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Maria Elvira Salazar"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Maria Salazar"
    },
    {
     "group": "ara",
@@ -28673,6 +30416,16 @@
     "name": "Steve Scalise"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Steve Scalise"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -28915,6 +30668,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Derek Schmidt"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Derek Schmidt"
    },
    {
@@ -29248,6 +31011,16 @@
     "name": "David Schweikert"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Schweikert"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -29330,6 +31103,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Austin Scott"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Austin Scott"
    },
    {
@@ -29418,6 +31201,16 @@
     "name": "Keith Self"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 62,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Keith Self"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -29500,6 +31293,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Pete Sessions"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Pete Sessions"
    },
    {
@@ -29758,6 +31561,16 @@
     "name": "Jefferson Shreve"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jefferson Shreve"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -29928,6 +31741,16 @@
     "name": "Michael K. Simpson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Simpson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -30088,6 +31911,16 @@
     "name": "Adrian Smith"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Adrian Smith"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -30170,6 +32003,16 @@
     "grade": "D",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Chris Smith"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Chris Smith"
    },
    {
@@ -30256,6 +32099,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Jason Smith"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jason Smith"
    }
   ],
   "smucker": [
@@ -30329,6 +32182,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Lloyd Smucker"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Lloyd Smucker"
    },
    {
@@ -30587,6 +32450,16 @@
     "name": "Victoria Spartz"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 59,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Victoria Spartz"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -30842,6 +32715,16 @@
     "name": "Pete Stauber"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Pete Stauber"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -30914,6 +32797,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/20753",
+    "name": "Elise Stefanik"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 29,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Elise Stefanik"
    },
    {
@@ -30999,6 +32892,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Bryan Steil"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Bryan Steil"
    },
    {
@@ -31247,6 +33150,16 @@
     "name": "Dale Strong"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Dale W. Strong"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -31330,6 +33243,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Marlin A. Stutzman"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Marlin Stutzman"
    },
    {
     "group": "ara",
@@ -31757,6 +33680,16 @@
     "name": "David Taylor"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Taylor"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -31839,6 +33772,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Claudia Tenney"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Claudia Tenney"
    },
    {
@@ -32087,6 +34030,16 @@
     "name": "Glenn Thompson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Glenn Thompson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -32247,6 +34200,16 @@
     "name": "Tom Tiffany"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 67,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Thomas Tiffany"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -32329,6 +34292,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "William Timmons"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "William Timmons"
    },
    {
@@ -33097,6 +35070,16 @@
     "name": "Michael Turner"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michael Turner"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -33267,6 +35250,16 @@
     "name": "David G. Valadao"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "David Valadao"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -33350,6 +35343,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Jeff Van Drew"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jefferson Van Drew"
    },
    {
     "group": "ara",
@@ -33437,6 +35440,16 @@
     "name": "Beth Van Duyne"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Beth Van Duyne"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -33519,6 +35532,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Derrick Van Orden"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Derrick Van Orden"
    },
    {
@@ -34001,6 +36024,16 @@
     "name": "Ann Wagner"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ann Wagner"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -34083,6 +36116,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tim Walberg"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tim Walberg"
    },
    {
@@ -34416,6 +36459,16 @@
     "name": "Randy Weber"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 41,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Randy Weber"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -34488,6 +36541,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15811",
+    "name": "Daniel Webster"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Daniel Webster"
    },
    {
@@ -34573,6 +36636,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Bruce Westerman"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Bruce Westerman"
    },
    {
@@ -34733,6 +36806,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tony Wied"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 49,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tony Wied"
    },
    {
@@ -34906,6 +36989,16 @@
     "name": "Roger Williams"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Roger Williams"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35055,6 +37148,16 @@
     "name": "Joe Wilson"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Joe Wilson"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35138,6 +37241,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Robert J. Wittman"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Robert Wittman"
    },
    {
     "group": "ara",
@@ -35225,6 +37338,16 @@
     "name": "Steve Womack"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 29,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Steve Womack"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35307,6 +37430,16 @@
     "grade": "B",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Rudy Yakym"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Rudy Yakym"
    },
    {
@@ -35555,6 +37688,16 @@
     "name": "Mike Bost"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mike Bost"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35725,6 +37868,16 @@
     "name": "Ken Calvert"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ken Calvert"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35885,6 +38038,16 @@
     "name": "Vern Buchanan"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Vern Buchanan"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -35967,6 +38130,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Tim Burchett"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 79,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Tim Burchett"
    },
    {
@@ -36130,6 +38303,16 @@
     "name": "Don Bacon"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Don Bacon"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -36212,6 +38395,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Robert Aderholt"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Robert Aderholt"
    },
    {
@@ -36385,6 +38578,16 @@
     "name": "Brian Babin"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Brian Babin"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -36470,6 +38673,16 @@
     "name": "Rick Allen"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Rick Allen"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -36545,6 +38758,16 @@
     "name": "Jodey Arrington"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jodey Arrington"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -36617,6 +38840,16 @@
     "score": 90,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15850",
+    "name": "Mark Amodei"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mark Amodei"
    },
    {
@@ -36790,6 +39023,16 @@
     "name": "Tom Barrett"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Tom Barrett"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -36872,6 +39115,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Michael Baumgartner"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Michael Baumgartner"
    },
    {
@@ -36960,6 +39213,16 @@
     "name": "Jim Baird"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "James Baird"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -37042,6 +39305,16 @@
     "grade": "B+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Troy Balderson"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Troy Balderson"
    },
    {
@@ -37130,6 +39403,16 @@
     "name": "Aaron Bean"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Aaron Bean"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -37212,6 +39495,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Nicholas Begich"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Nicholas Begich"
    },
    {
@@ -37459,6 +39752,16 @@
     "name": "Jack Bergman"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 37,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jack Bergman"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -37542,6 +39845,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Gus M. Bilirakis"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 47,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Gus Bilirakis"
    },
    {
     "group": "ara",
@@ -37874,6 +40187,16 @@
     "name": "Kat Cammack"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Kat Cammack"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -37946,6 +40269,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/15082",
+    "name": "Andy Biggs"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 71,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Andy Biggs"
    },
    {
@@ -38031,6 +40364,16 @@
     "grade": "B-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "John Carter"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "John Carter"
    },
    {
@@ -38714,6 +41057,16 @@
     "name": "Juan Ciscomani"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 39,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Juan Ciscomani"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -39139,6 +41492,16 @@
     "name": "Michael Cloud"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 64,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michael Cloud"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -39469,6 +41832,16 @@
     "name": "Cliff Bentz"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Cliff Bentz"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -39551,6 +41924,16 @@
     "grade": "B",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Stephanie Bice"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Stephanie Bice"
    },
    {
@@ -39639,6 +42022,16 @@
     "name": "James Comer Jr."
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 45,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "James Comer"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -39721,6 +42114,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Sheri Biggs"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 69,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Sheri Biggs"
    },
    {
@@ -39979,6 +42382,16 @@
     "name": "Lauren Boebert"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 66,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Lauren Boebert"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -40061,6 +42474,16 @@
     "grade": "A+",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Eli Crane"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 74,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Eli Crane"
    },
    {
@@ -40149,6 +42572,16 @@
     "name": "Jeff Crank"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 55,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Jeff Crank"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -40231,6 +42664,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Josh Brecheen"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 74,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Josh Brecheen"
    },
    {
@@ -40317,6 +42760,16 @@
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
     "name": "Rob Bresnahan Jr."
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Robert Bresnahan Jr."
    },
    {
     "group": "ara",
@@ -40648,6 +43101,16 @@
     "name": "Eric Burlison"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 74,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Eric Burlison"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -40815,6 +43278,16 @@
     "grade": "A-",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Mike Carey"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mike Carey"
    },
    {
@@ -41403,6 +43876,16 @@
     "name": "Benjamin Lee Cline"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 64,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Ben Cline"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -41563,6 +44046,16 @@
     "name": "Al Green"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 57,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Mark Green"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -41648,6 +44141,16 @@
     "name": "Andrew Clyde"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 65,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Andrew Clyde"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -41720,6 +44223,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/23967",
+    "name": "Dan Crenshaw"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 44,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Dan Crenshaw"
    },
    {
@@ -41893,6 +44406,16 @@
     "name": "Michelle Fischbach"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Michelle Fischbach"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -41978,6 +44501,16 @@
     "name": "Troy Downing"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 50,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Troy Downing"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -42050,6 +44583,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/21849",
+    "name": "Neal Dunn"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Neal Dunn"
    },
    {
@@ -42126,6 +44669,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/21290",
     "name": "Byron Donalds"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 58,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Byron Donalds"
    }
   ],
   "alford": [
@@ -42199,6 +44752,16 @@
     "grade": "A",
     "year": 2026,
     "url": "https://www.gunowners.org/grades/",
+    "name": "Mark Alford"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "Mark Alford"
    },
    {
@@ -42446,6 +45009,16 @@
     "name": "Brian Fitzpatrick"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 27,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Brian Fitzpatrick"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -42625,6 +45198,16 @@
     "name": "Robert Onder"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 53,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Robert Onder"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -42801,6 +45384,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/19215",
     "name": "Rick Crawford"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 42,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Rick Crawford"
    }
   ],
   "armstrong": [
@@ -42848,6 +45441,16 @@
     "name": "Buddy Carter"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 39,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Buddy Carter"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -42869,6 +45472,16 @@
     "year": "119th Congress",
     "url": "https://heritageaction.com/scorecard/members/G000608",
     "name": "Darline Graham"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 35,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Lindsey Graham"
    },
    {
     "group": "ara",
@@ -42925,6 +45538,16 @@
     "name": "H. Morgan Griffith"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 52,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Morgan Griffith"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -42966,6 +45589,16 @@
     "score": 100,
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/20791",
+    "name": "French Hill"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
     "name": "French Hill"
    },
    {
@@ -43057,6 +45690,16 @@
     "name": "Bob Latta"
    },
    {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 40,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Robert Latta"
+   },
+   {
     "group": "ara",
     "org": "Alliance for Retired Americans",
     "lean": "liberal",
@@ -43099,6 +45742,16 @@
     "year": "119th Congress",
     "url": "https://americansforprosperity.org/national-scorecard/#/legislator/5956",
     "name": "Greg Steube"
+   },
+   {
+    "group": "rlc",
+    "org": "Republican Liberty Caucus (Liberty Index)",
+    "lean": "conservative",
+    "issue": "Overall",
+    "score": 77,
+    "year": 2025,
+    "url": "https://rlc.org/",
+    "name": "Gregory Steube"
    },
    {
     "group": "ara",
