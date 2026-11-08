@@ -117,6 +117,7 @@ async function removeDeparted(db){
     await statement(db,'DELETE FROM records WHERE run_id IN (SELECT run_id FROM snapshots WHERE job_id=?)',j.id).run();
     await statement(db,'DELETE FROM snapshots WHERE job_id=?',j.id).run();
     await statement(db,'DELETE FROM refresh_history WHERE job_id=?',j.id).run();
+    await statement(db,'DELETE FROM metadata WHERE key=?',`ticker:${j.id}`).run();
     await statement(db,'DELETE FROM jobs WHERE id=?',j.id).run();
   }
 }
@@ -225,6 +226,8 @@ export async function runRefresh(env,{steps=8}={}) {
           statement(db,'INSERT INTO refresh_history(job_id,status,at,message,row_count) VALUES(?,?,?,?,?)',job.id,'success',completed,'Validated and published',records.length)
         ]);
         if(oldRun&&oldRun!==job.run_id)await statement(db,'DELETE FROM records WHERE run_id=?',oldRun).run();
+        // The ticker's newest records from this check, kept small beside it (getTicker reads only these).
+        if(TICKER_KINDS.includes(job.kind))await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',`ticker:${job.id}`,JSON.stringify(tickerRecent(job.kind,job.subject,snapshot))).run();
         if(job.kind==='committee'){const p=config.people.find(p=>p.id===job.subject);await addFinance(db,p,snapshot.committee,config.cycle);}
         if(job.kind==='senate-index')for(const v of snapshot.rows){const a=JSON.parse(job.args);await addJob(db,`vote:S:${a.congress}:${a.session}:${v.number}`,'vote',`s-${a.congress}-${a.session}-${v.number}`,{chamber:'S',...a,number:v.number});}
         const after=FEEDS[job.kind]?.after||AFTER[job.kind];if(after)await after(snapshot,job,chainContext(db));
@@ -258,6 +261,31 @@ const isSite=(j,env)=>j.kind==='vote'&&/^vote:H:/.test(j.id)&&Number(j.id.split(
 // Campaign and outside-money totals for everyone, in one request: the home cards of people without reviewed research
 // (the basic senator profiles) show these instead of loading each full profile.
 // The Super PACs page's data: the site-wide super PAC check's latest snapshot, or null before its first read.
+// ---------- The ticker's newest records (public/ticker.js, /api/ticker) ----------
+// Stock trades reported in the last two weeks and annual disclosures filed in the last month, from each person's official
+// trade and disclosure checks. Each check keeps its own short list in metadata ("ticker:<job id>") when it publishes, so
+// the ticker never reads the full snapshots.
+export const TICKER_KINDS=['trades-house','trades-senate','net-worth-house','net-worth-senate'];
+export const TICKER_DAYS={trade:14,filing:30};
+const daysBefore=(now,d)=>new Date(now-d*864e5).toISOString().slice(0,10);
+export function tickerRecent(kind,subject,snapshot,{now=Date.now()}={}){
+  const today=new Date(now+864e5).toISOString().slice(0,10),out=[];
+  if(/^trades-/.test(kind)){
+    for(const x of snapshot?.rows||[])if(x?.disclosed&&x.disclosed>=daysBefore(now,TICKER_DAYS.trade)&&x.disclosed<=today)
+      out.push({kind:'trade',subject,id:x.id||null,disclosed:x.disclosed,type:x.type||null,ticker:x.ticker||null,asset:x.ticker?null:(x.asset||null),amount:x.amount||null,owner:x.owner||null});
+  }else if(snapshot?.filed){const f=String(snapshot.filed).slice(0,10);if(f>=daysBefore(now,TICKER_DAYS.filing)&&f<=today)out.push({kind:'filing',subject,filed:f,year:snapshot.year??null});}
+  return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,10);
+}
+// All the checks' lists, still within their windows, newest first, at most 40.
+export function tickerMerge(lists,{now=Date.now()}={}){
+  const fresh=x=>x.kind==='trade'?x.disclosed>=daysBefore(now,TICKER_DAYS.trade):x.filed>=daysBefore(now,TICKER_DAYS.filing);
+  return lists.flat().filter(x=>x&&fresh(x)).sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,40);
+}
+export async function getTicker(env){
+  await initialize(env.DB);
+  const rows=(await statement(env.DB,"SELECT value FROM metadata WHERE key LIKE 'ticker:%'").all()).results||[];
+  return {generatedAt:nowISO(),items:tickerMerge(rows.map(r=>{try{return JSON.parse(r.value);}catch{return [];}}))};
+}
 export async function getSuperPacs(env) {
   await initialize(env.DB);
   const r=await statement(env.DB,"SELECT s.payload,s.updated_at FROM snapshots s WHERE s.job_id='super-pacs'").first();
