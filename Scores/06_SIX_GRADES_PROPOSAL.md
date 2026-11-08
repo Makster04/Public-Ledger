@@ -216,17 +216,17 @@ special interests. It doesn't measure how they vote."*
 **Formula, with its parts:**
 
 ```text
-Unbought = max(0, 75 + Donor − PAC − PAC Reliance − Earmarks − Stocks − Trades + Bonuses + Pledges)
+Unbought = max(0, 75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges)
 ```
 
 | Part | House | Senate |
 |---|---|---|
 | **Donor:** Σ share of receipts × weight | ≤$200 and unitemized 16 · $200–499 12 · $500–999 6 · $1,000–1,999 3 · $2,000+ 2 · gifts the FEC hasn't sorted by size 4.04 · self-funding 1 · joint fundraising 1 | 14 · 10 · 6 · 3 · 2 · 5.2 · 1 · 1 |
-| **PAC:** Σ dollars × rate | corporate 0.000015 · lobbyist 0.000008 · trade 0.000002 · political and ideological 0.000001 · union and other 0.00000075 | 0.00001 · 0.000005 · 0.000001 · 0.0000005 · 0.00000025 |
+| **PAC Penalty:** Σ dollars × rate | corporate 0.000015 · lobbyist 0.000008 · trade 0.000002 · political and ideological 0.000001 · union and other 0.00000075 | 0.00001 · 0.000005 · 0.000001 · 0.0000005 · 0.00000025 |
 | **PAC Reliance** | 10 × H(PAC share of receipts, 0.20) | same |
-| **Earmarks** | earmarked dollars × 0.00002 (ActBlue and WinRed excluded) | same |
-| **Stocks** | 20 × H(individual-stock value, $400,000); 0 with a qualified blind trust or a full sell-off | same |
-| **Trades** | 20 × H(trade count, 50) + 0.00001 × H(trade value, $8,000) | same |
+| **Earmark Penalty** | earmarked dollars × 0.00002 (ActBlue and WinRed excluded) | same |
+| **Stock Penalty** | 20 × H(individual-stock value, $400,000); 0 with a qualified blind trust or a full sell-off | same |
+| **Trade Penalty** | 20 × H(trade count, 50) + 0.00001 × H(trade value, $8,000) | same |
 | **Bonuses** | +5 for no corporate PAC money · +1 for pledging not to take it · +1 for holding no individual stocks | same |
 | **Pledges and bills** | +1 each, for a pledge or a cosponsored bill: former-member lobbying ban · stock-trading ban · overturning Citizens United | same |
 
