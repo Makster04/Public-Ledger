@@ -873,11 +873,18 @@ function paneShowsUp(s,pane){
 }
 
 // ----- Unbought (async: the gift sizes and the financial disclosure come from the refreshed official records) -----
+// Earmarked gifts: the automatic FEC read (research.json "bundled"), and a total researched by hand only for a conduit
+// the automatic read has nothing for, so the same gifts never count twice (as scripts/build-funders.mjs does).
+function earmarkRows(s){
+  const mine=DATA.bundled?.people?.[s.id]||{},read=new Set();
+  for(const k of Object.keys(mine)){if(/^fec:/.test(k))read.add(k.slice(4));for(const c of (DATA.groupPos||[]).find(g=>g.key===k)?.conduits||[])read.add(c);}
+  const bundled=Object.entries(mine).map(([group,r])=>({id:`bundled:${group}`,group,amount:r.routed,src:r.src,period:bundledCycle(s.id,group)}));
+  const hand=(s.conduit?.rows||[]).filter(r=>!read.has(r.id)).map((r,i)=>({id:`conduit:${i}`,group:r.conduit,amount:r.amount,src:r.srcs?.[0],period:r.period}));
+  return bundled.concat(hand).filter(r=>Number.isFinite(r.amount));
+}
 function unboughtInputs(s){
   const pacRows=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(t&&amount>0)pacRows.push({kind:t.kind,amount});}
-  const bundled=Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([group,r])=>({group,amount:r.routed}));
-  const hand=(s.conduit?.rows||[]).map(r=>({group:r.conduit,amount:r.amount}));
-  return {pacRows,earmarks:bundled.concat(hand).filter(r=>Number.isFinite(r.amount)),pledges:unboughtPledges(s,DATA.billIndex||[])};
+  return {pacRows,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[])};
 }
 function unboughtBreakdown(x){
   const max=Math.max(1,...x.parts.map(p=>Math.abs(p.points||0)));
@@ -1643,9 +1650,7 @@ async function loadIntegrityPreview(s,pane,workers){
     const kind=({corporate:'corporate',lobbyist:'lobbyist',trade:'trade',membership:'membership',cooperative:'cooperative',leadership:'leadership',party:'party',candidate:'candidate',unconnected:'unconnected',labor:'labor',joint:'other',other:'other'})[t.kind]||'other';typed.push({amount,kind});}
   const typedTotal=typed.reduce((n,r)=>n+r.amount,0),campaign=s.camp||{};
   const pledge=fundraisingPledgePoints(DATA,s),ethics=personEthics(s);
-  const bundled=Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([group,r])=>({id:`bundled:${group}`,group,amount:r.routed,src:r.src,period:bundledCycle(s.id,group)}));
-  const hand=(s.conduit?.rows||[]).map((r,i)=>({id:`conduit:${i}`,group:r.conduit,amount:r.amount,src:r.srcs?.[0],period:r.period}));
-  const earmarkEvidence=bundled.concat(hand).filter(r=>Number.isFinite(r.amount)&&r.src);
+  const earmarkEvidence=earmarkRows(s).filter(r=>r.src);
   const preview=integrityPreview({...s,ethicsResult:ethics},{asOfYear,attendance:window.ATTENDANCE||null,getItDone:window.GET_IT_DONE||null,conflicts:window.CONFLICTS||null,finance:{netWorth:annual},sizes,
     pacRows:typed,pacReceipts:typedTotal,pacCoverage:campaign.pac!=null&&Math.abs(typedTotal-campaign.pac)<=.02,
     pacPeriodMatches:coversPeriod(s.pac?.filings,campaign.start,campaign.end),
