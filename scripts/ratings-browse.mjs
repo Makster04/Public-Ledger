@@ -20,12 +20,19 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const MAX=400000;
 
 export const PAGES=[
-  // Planned Parenthood Action, Americans for Prosperity: read (their pages' data addresses, found here, November 2026).
-  // The U.S. Chamber of Commerce: its How They Voted page drew no ratings and loaded none.
-  {key:'cpac',org:'CPAC',urls:['https://www.cpac.org/foundation/ratings/us']},
-  {key:'standwithcrypto',org:'Stand With Crypto',urls:['https://www.standwithcrypto.org/politicians']},
+  // Read already from what this found: Planned Parenthood Action, Americans for Prosperity, CPAC, Stand With Crypto and
+  // the Council for Innovation Promotion. The U.S. Chamber of Commerce's page drew no ratings and loaded none.
+  {key:'numbersusa',org:'NumbersUSA',urls:['https://www.numbersusa.org/grades/']},
+  {key:'ntu',org:'National Taxpayers Union',urls:['https://www.ntu.org/ratecongress/']},
+  {key:'ccagw',org:'Council for Citizens Against Government Waste',urls:['https://ccagwratings.org/']},
+  {key:'cwa',org:'Communications Workers of America',urls:['https://scorecard.cwa-union.org/']},
+  {key:'frc',org:'FRC Action',urls:['https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate']},
+  {key:'humane',org:'Humane World Action Fund',urls:['https://humaneaction.org/current_scorecard']},
+  {key:'commoncause',org:'Common Cause',urls:['https://democracyscorecard.org/']},
+  {key:'niac',org:'NIAC Action',urls:['https://scorecard.niacaction.org/']},
+  {key:'ada',org:'Americans for Democratic Action',urls:['https://adaction.org/']},
+  {key:'aea',org:'American Energy Alliance',urls:['https://www.americanenergyalliance.org/american-energy-scorecard/']},
   {key:'norml',org:'NORML',urls:['https://vote.norml.org/']},
-  {key:'c4ip',org:'Council for Innovation Promotion',urls:['https://c4ip.org/interactive-scorecard/']},
 ];
 
 // A bot check, from what the page shows (its title and visible text), not from words in its code.

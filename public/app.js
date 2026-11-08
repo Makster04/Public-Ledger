@@ -818,7 +818,8 @@ const leanPos=v=>((Math.max(-100,Math.min(100,v))+100)/2).toFixed(1);
 // What the probe found about a group without a reader yet (scripts/collect-ratings.mjs, PROBED).
 const RATING_WHY={blocked:'its site turns scripts away',none:'no congressional scorecard found',states:'rates states, not members of Congress',
   'no-list':'grades are announced one at a time, not published as a list',permission:'waiting on their permission',
-  'to-build':'reader still to be written',image:'its member list is published as a picture, not text'};
+  'to-build':'reader still to be written',image:'its member list is published as a picture, not text',
+  unreadable:'its scorecard\'s text can\'t be read back',  'not-found':'its scorecard page shows no ratings'};
 // A group's rating as a letter: its own letter grade as given, or its percent on this site's scale (grades.js letter:
 // A 90 and up, B 80, C 70, D 60, F below 60). Colored like the site's grades: how highly that group rates them.
 const ratingLetter=r=>r.grade?String(r.grade):Number.isFinite(r.score)?letter(r.score):null;
@@ -828,7 +829,7 @@ const ratingGrade=(L,tip)=>`<b class="st-rg gr-${esc(String(L)[0].toUpperCase())
 function ratingCell(s,org){
   const g=Object.entries(GROUP_RATINGS.groups||{}).find(([,x])=>x.org===org),key=g?.[0],grp=g?.[1];
   const mine=(GROUP_RATINGS.people?.[s.id]||[]).find(r=>r.group===key);
-  if(mine){const L=ratingLetter(mine),pct=mine.grade?null:`${mine.score}%`;
+  if(mine){const L=ratingLetter(mine),pct=Number.isFinite(mine.score)?`${mine.score}%`:null;
     const tip=mine.grade?`${org}'s own grade`:`${org} rates them ${mine.score}%: ${L} on this site's scale`;
     const life=mine.lifetime!=null?`lifetime ${ratingGrade(letter(mine.lifetime),`${org}'s lifetime rating, ${mine.lifetime}%`)} ${mine.lifetime}%`:null;
     return `<a href="${esc(mine.url)}" target="_blank" rel="noopener">${esc(org)}</a> ${ratingGrade(L,tip)} <span class="muted small">${[pct&&esc(pct),esc(mine.year||grp?.year||''),life].filter(Boolean).map(x=>` · ${x}`).join('')}</span>`;}
