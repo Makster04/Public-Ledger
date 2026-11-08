@@ -220,20 +220,26 @@ export const araLatest=html=>{const links=[...String(html).matchAll(/href="([^"]
 // Some pages get their data only with a session of their own: those are read by opening the page in a browser
 // (Playwright's Chromium as it comes, saying it is a headless Chrome), as a visitor does, and taking the data answers
 // whose address matches. A page that shows a bot check is left out. [{url, text}]
-export async function browserData(page,match,{settle=8000}={}){
+// need(got): keep the page open until it returns true (up to `timeout`); act(page, got): what a visitor does once it's
+// open (scroll a list). The answers carry the page's title and every matching address seen with its status (`seen`).
+export async function browserData(page,match,{settle=8000,need=null,act=null,timeout=90000}={}){
   let playwright;
   try{playwright=await import('playwright');}
   catch{throw new Error('this group is read in a browser: run npm install --no-save playwright && npx playwright install chromium once');}
   const browser=await playwright.chromium.launch();
   try{
-    const p=await browser.newPage(),got=[];
-    p.on('response',async res=>{try{if(match.test(res.url())&&res.ok())got.push({url:res.url(),text:await res.text()});}catch{}});
+    const p=await browser.newPage(),got=[],seen=[],pending=[];
+    p.on('response',res=>{const u=res.url();if(!match.test(u))return;seen.push(`${res.status()} ${u.split('?')[0]}`);
+      if(res.ok())pending.push(res.text().then(text=>got.push({url:u,text}),()=>{}));});
     await p.goto(page,{waitUntil:'networkidle',timeout:90000}).catch(()=>{});
     for(let k=0;k<12;k++){await p.mouse.wheel(0,5000).catch(()=>{});await sleep(500);}
-    await sleep(settle);
+    if(act)await act(p,got);
+    if(need){const end=Date.now()+timeout;while(Date.now()<end){await Promise.all(pending);if(need(got))break;await sleep(1000);}}
+    else await sleep(settle);
+    await Promise.all(pending);
     const title=await p.title().catch(()=>''),body=await p.evaluate(()=>document.body?.innerText||'').catch(()=>'');
     if(/just a moment|attention required|verify (that )?you are (a )?human|captcha|access denied/i.test(`${title} ${body.slice(0,2000)}`))throw new Error('the page showed a bot check, so it is left out');
-    return got;
+    got.title=title;got.seen=seen;return got;
   }finally{await browser.close();}
 }
 // "Collins, Susan M." -> "Susan M. Collins".
@@ -325,6 +331,89 @@ export function readCpac(items){
 // The items of every database answer a page loaded, one each (the same item may come in more than one answer).
 export const cloudItems=answers=>{const seen=new Map();for(const a of answers){let j;try{j=JSON.parse(a.text);}catch{continue;}for(const it of j?.dataItems||[])if(it?.id&&!seen.has(it.id))seen.set(it.id,it);}return [...seen.values()];};
 
+// ---------- Readers added November 9, 2026 (the third look, ratings:browse) ----------
+// A spreadsheet file's rows (CSV), quoted cells and line breaks inside them included.
+export function parseCsv(t){
+  const rows=[];let row=[],cell='',q=false;const s=String(t);
+  for(let i=0;i<s.length;i++){const c=s[i];
+    if(q){if(c==='"'){if(s[i+1]==='"'){cell+='"';i++;}else q=false;}else cell+=c;continue;}
+    if(c==='"')q=true;else if(c===','){row.push(cell);cell='';}else if(c==='\n'||c==='\r'){if(c==='\r'&&s[i+1]==='\n')i++;row.push(cell);rows.push(row);row=[];cell='';}else cell+=c;}
+  if(cell!==''||row.length){row.push(cell);rows.push(row);}
+  return rows;
+}
+// A data address asked for directly; if the site refuses a script (HTTP 401 or 403), the page that loads it is opened
+// in a browser and the same data taken from it.
+async function directOrBrowser(fetchPage,browse,url,page,match,opts){
+  try{return await fetchPage(url);}
+  catch(e){if(!/HTTP 40[13]/.test(e.message))throw e;const got=await browse(page,match,opts);if(!got.length)throw new Error(`refused a script, and its page loaded no ratings either`);return got[0].text;}
+}
+// NumbersUSA (the grades service its grade cards page draws from): every member of a Congress, grouped by grade, with
+// their seat ("CA05"), score, NumbersUSA's own letter grade and Bioguide ID.
+export function readNumbersUsa(json){
+  const out=[];
+  for(const list of Object.values(json?.brackets||{}))for(const m of list||[]){
+    if(!Number.isFinite(m?.current_score))continue;
+    const seat=/^([A-Z]{2})(\d{1,2}|AL)?$/.exec(String(m.state||'')),chamber=/^sen/i.test(m.title||'')?'S':'H';
+    out.push({name:m.name,state:seat?.[1]||null,chamber,party:m.party||null,district:chamber==='H'&&seat?.[2]!=null?(seat[2]==='AL'?0:Number(seat[2])):null,
+      bioguide:/^[A-Z]\d{6}$/.test(m.bioguide_id||'')?m.bioguide_id:null,score:Math.round(m.current_score),
+      ...(/^[A-F][+-]?$/.test(m.current_score_letter_grade||'')?{grade:m.current_score_letter_grade}:{}),year:m.congress_id?congressLabel(m.congress_id):null});
+  }
+  return out;
+}
+// NIAC Action (its scorecard's spreadsheet file): each member in office, their overall share (as a fraction) and grade.
+export function readNiac(csv,{year=null}={}){
+  const [h=[],...rows]=parseCsv(csv),c=n=>h.indexOf(n),out=[];
+  for(const r of rows){
+    if(r.length<h.length||r[c('in_office')]!=='1')continue;
+    const pct=Number(r[c('Percent')]),grade=String(r[c('Grade')]||'').trim();if(!Number.isFinite(pct)&&!/^[A-F][+-]?$/.test(grade))continue;
+    const chamber=/senate/i.test(r[c('chamber')])?'S':'H',d=String(r[c('district')]||'').trim();
+    out.push({name:firstLast(r[c('full_name')]),state:stateCode(r[c('state')]),chamber,party:String(r[c('party')]||'')[0]||null,
+      district:chamber==='H'&&/^\d+$/.test(d)?Number(d):null,bioguide:/^[A-Z]\d{6}$/.test(r[c('bioguide_id')]||'')?r[c('bioguide_id')]:null,
+      ...(String(r[c('Percent')]).trim()!==''&&Number.isFinite(pct)?{score:Math.round(pct*100)}:{}),...(/^[A-F][+-]?$/.test(grade)?{grade}:{}),year});
+  }
+  return out;
+}
+export const NIAC_CSV='https://scorecard.niacaction.org/data/scores_wide.csv';
+// Humane World Action Fund (the two sheets its current scorecard page loads, House and Senate): each member's state,
+// name, party, district, score ("100+" when they also led on a bill, counted 100) and lifetime score.
+export function readHumane(values,{year=null}={}){
+  const [h=[],...rows]=values||[],c=n=>h.findIndex(x=>String(x).trim().toLowerCase()===n),out=[];
+  const [iSt,iL,iF,iP,iD,iS,iLife]=['state','last','first','party','district','score','lifetime'].map(c);if(iL<0||iS<0)return out;
+  const house=rows.filter(r=>/^\d+$|^at.?large$|^AL$/i.test(String(r[iD]??'').trim())).length>rows.length/2;
+  for(const r of rows){
+    const sc=/^(\d{1,3})\+?$/.exec(String(r[iS]??'').trim());if(!sc)continue;
+    const d=String(r[iD]??'').trim(),life=/^\d{1,3}$/.test(String(r[iLife]??'').trim())?Number(r[iLife]):null;
+    out.push({name:`${r[iF]||''} ${r[iL]||''}`.replace(/\s+/g,' ').trim(),state:stateCode(r[iSt]),party:String(r[iP]||'')[0]||null,chamber:house?'H':'S',
+      district:house?(/^\d+$/.test(d)?Number(d):/at.?large|^AL$/i.test(d)?0:null):null,score:Math.min(100,Number(sc[1])),...(life!=null?{lifetime:life}:{}),year});
+  }
+  return out;
+}
+// FRC Action (its scorecard pages embed a public Quorum sheet, one a chamber): each member's votes with FRC Action and
+// against it; the score is the share with it, as the sheet's own Score (%) column figures it. Members-elect are left out.
+export function readFrcSheet(sheet){
+  const name=String(sheet?.name||''),chamber=/\(senate\)/i.test(name)?'S':/\(house\)/i.test(name)?'H':null,out=[];if(!chamber)return out;
+  const col=n=>(sheet.columns||[]).find(x=>String(x?.name||'').trim().toLowerCase()===n)?.data||{};
+  const withIt=col('# of votes with'),against=col('# of votes against'),year=Number(/\b(20\d\d)\b/.exec(name)?.[1])||null;
+  for(const p of sheet.row_data||[]){
+    if(/-elect\b/i.test(p?.name||''))continue;
+    const yes=Number(withIt[p.id]||0),no=Number(against[p.id]||0);if(!(yes+no>0))continue;
+    const m=/\(([DRI])-([A-Z]{2})(?:-(\d{1,2}|AL))?\)/.exec(p.name||'');
+    out.push({name:`${p.firstname||''} ${p.lastname||''}`.trim(),state:m?.[2]||null,party:m?.[1]||null,chamber,district:chamber==='H'&&m?.[3]?(m[3]==='AL'?0:Number(m[3])):null,
+      score:Math.round(100*yes/(yes+no)),year});
+  }
+  return out;
+}
+export const FRC_PAGES=['https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate','https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_house'];
+export const quorumSheet=slug=>`https://www.quorum.us/api/sheet/${slug}/?decode_enums=false&count=false&exclude=%7B%7D&fetch_cache=true`;
+// Scrolls every scrolling list on a page to its end, again and again, as a visitor reading down it would, so a list that
+// loads more as it's scrolled loads all of it.
+export async function scrollLists(p,{rounds=40,pause=1200}={}){
+  for(let k=0;k<rounds;k++){
+    await p.evaluate(()=>{for(const el of document.querySelectorAll('*')){const s=getComputedStyle(el);if(/(auto|scroll)/.test(s.overflowY)&&el.scrollHeight>el.clientHeight+20)el.scrollTop=el.scrollHeight;}window.scrollTo(0,document.body.scrollHeight);}).catch(()=>{});
+    await sleep(pause);
+  }
+}
+
 export const READERS=[
   {key:'sba',org:'SBA Pro-Life America',lean:'conservative',issue:'Abortion',url:'https://sbaprolife.org/scorecard',read:readSba},
   {key:'lcv',org:'League of Conservation Voters',lean:'liberal',issue:'Environment',url:'https://www.lcv.org/congressional-scorecard/members-of-congress/',read:readLcv},
@@ -342,8 +431,9 @@ export const READERS=[
   // VoterVoice answers only the page's own session (a script asking directly gets HTTP 401), so it's read in a browser.
   {key:'ppaction',org:'Planned Parenthood Action',lean:'liberal',issue:'Abortion',url:'https://www.plannedparenthoodaction.org/congressional-scorecard',
     rows:async(fetchPage,{browse=browserData}={})=>{
-      const got=await browse('https://www.plannedparenthoodaction.org/congressional-scorecard',/votervoice\.net\/Api\/Scorecards/i);
-      const scorings=got.find(a=>/\/Scorings\b/.test(a.url));if(!scorings)throw new Error('its page loaded no scorecard');
+      const got=await browse('https://www.plannedparenthoodaction.org/congressional-scorecard',/votervoice\.net\/Api\//i,{need:g=>g.some(a=>/\/Scorings\b/.test(a.url))});
+      const scorings=got.find(a=>/\/Scorings\b/.test(a.url));
+      if(!scorings)throw new Error(`its page loaded no scorecard${got.seen?.length?` (VoterVoice answered: ${[...new Set(got.seen)].slice(0,5).join('; ')})`:' (it asked VoterVoice for nothing)'}`);
       const id=/Scorecards\/([^/?]+)\/Scorings/.exec(scorings.url)?.[1];let name=null;
       for(const a of got)if(a!==scorings){try{name=(JSON.parse(a.text)||[]).find?.(c=>String(c.id)===id)?.name??name;}catch{}}
       return readVoterVoice(JSON.parse(scorings.text),{year:name});}},
@@ -370,13 +460,45 @@ export const READERS=[
       catch(e){if(!/HTTP 40[13]/.test(e.message))throw e;json=JSON.parse((await browse('https://www.standwithcrypto.org/politicians',/\/api\/us\/dtsi\/all-people/))[0]?.text||'{}');}
       return readStandWithCrypto(json);}},
   {key:'c4ip',org:'Council for Innovation Promotion',lean:'none',issue:'Crypto & tech',url:'https://c4ip.org/interactive-scorecard/',
-    rows:async(fetchPage,{wait=2000}={})=>{const rows=[];
-      for(let skip=0,total=Infinity;skip<total&&skip<3000;skip+=48){const j=JSON.parse(await fetchPage(`${C4IP_API}?skip=${skip}&limit=48&sort=score-desc`));
-        total=Number(j.total)||0;rows.push(...readC4ip(j,{year:C4IP_YEAR}));if(!(j.members||[]).length)break;await sleep(Math.min(wait,1000));}
-      return rows;}},
+    rows:async(fetchPage,{wait=2000,browse=browserData}={})=>{const rows=[];
+      try{
+        for(let skip=0,total=Infinity;skip<total&&skip<3000;skip+=48){const j=JSON.parse(await fetchPage(`${C4IP_API}?skip=${skip}&limit=48&sort=score-desc`));
+          total=Number(j.total)||0;rows.push(...readC4ip(j,{year:C4IP_YEAR}));if(!(j.members||[]).length)break;await sleep(Math.min(wait,1000));}
+        return rows;
+      }catch(e){
+        if(!/HTTP 40[13]/.test(e.message))throw e;
+        // Refused to a script: its page, in a browser, lists 48 at a time and loads more as the list is scrolled.
+        const pages=g=>g.map(a=>{try{return JSON.parse(a.text);}catch{return null;}}).filter(j=>j?.members);
+        const count=g=>new Set(pages(g).flatMap(j=>j.members.map(m=>m.bioguideId||m.member_name))).size,total=g=>Math.max(0,...pages(g).map(j=>Number(j.total)||0));
+        const got=await browse('https://c4ip.org/interactive-scorecard/',/cscp\.c4ip\.org\/public\/members\/browse/,{act:p=>scrollLists(p),need:g=>total(g)>0&&count(g)>=total(g),timeout:60000});
+        if(count(got)<total(got))throw new Error(`its page loaded ${count(got)} of its ${total(got)} members, so it isn't shown yet`);
+        const by=new Map();for(const j of pages(got))for(const r of readC4ip(j,{year:C4IP_YEAR}))by.set(r.bioguide||r.name,r);
+        return [...by.values()];
+      }}},
   // Its site's database answers only the page's own session, so it's read in a browser.
   {key:'cpac',org:'CPAC',lean:'conservative',issue:'Overall',url:'https://www.cpac.org/foundation/ratings/us',
     rows:async(fetchPage,{browse=browserData}={})=>readCpac(cloudItems(await browse('https://www.cpac.org/foundation/ratings/us',/\/_api\/cloud-data\/v2\/items\/query/)))},
+  // The sitting Congress's grades; early in a new Congress, before any are posted, the one before.
+  {key:'numbersusa',org:'NumbersUSA',lean:'conservative',issue:'Immigration',url:'https://www.numbersusa.org/grades/',
+    rows:async(fetchPage,{wait=2000,today=new Date(),browse=browserData}={})=>{const now=congressOf(today.getUTCFullYear());
+      for(const n of [now,now-1]){const json=JSON.parse(await directOrBrowser(fetchPage,browse,`https://grades.numbersusa.org/v1/grades/search/?congress=${n}`,'https://www.numbersusa.org/grades/',/grades\.numbersusa\.org\/v1\/grades\/search/));
+        const rows=readNumbersUsa(json);if(rows.length)return rows;await sleep(wait);}
+      return [];}},
+  {key:'niac',org:'NIAC Action',lean:'liberal',issue:'Israel, Palestine & Iran',url:'https://scorecard.niacaction.org/',
+    rows:async(fetchPage,{today=new Date(),browse=browserData}={})=>readNiac(await directOrBrowser(fetchPage,browse,NIAC_CSV,'https://scorecard.niacaction.org/',/scores_wide\.csv/),{year:congressLabel(congressOf(today.getUTCFullYear()))})},
+  // Its two sheets are loaded with the page's own key, so it's read in a browser; the year is the page title's.
+  {key:'humane',org:'Humane World Action Fund',lean:'liberal',issue:'Animal welfare',url:'https://humaneaction.org/current_scorecard',
+    rows:async(fetchPage,{browse=browserData}={})=>{
+      const got=await browse('https://humaneaction.org/current_scorecard',/sheets\.googleapis\.com\/v4\/spreadsheets\/[^/]+\/values\//,{need:g=>g.length>=2,timeout:60000});
+      const year=Number(/(\d{4})\s+Humane Scorecard/i.exec(got.title||'')?.[1])||null;
+      return got.flatMap(a=>{try{return readHumane(JSON.parse(a.text).values,{year});}catch{return [];}});}},
+  // Each chamber's page names its Quorum sheet; the sheet is public and read directly (in a browser, if refused).
+  {key:'frc',org:'FRC Action',lean:'conservative',issue:'Family & religion',url:'https://www.frcaction.org/scorecard',
+    rows:async(fetchPage,{wait=2000,browse=browserData}={})=>{const rows=[];
+      for(const page of FRC_PAGES){const slug=/quorum\.us\/spreadsheet\/external\/([A-Za-z0-9]+)/.exec(await fetchPage(page))?.[1];if(!slug)throw new Error('its scorecard page names no sheet');
+        await sleep(wait);
+        rows.push(...readFrcSheet(JSON.parse(await directOrBrowser(fetchPage,browse,quorumSheet(slug),`https://www.quorum.us/spreadsheet/external/${slug}/`,/quorum\.us\/api\/sheet\//))));await sleep(wait);}
+      return rows;}},
   {key:'ara',org:'Alliance for Retired Americans',lean:'liberal',issue:'Seniors',url:'https://retiredamericans.org/voting-record/',
     rows:async(fetchPage,{wait=2000,fetchBytes=getBytes}={})=>{let pdf=ARA_PDF;try{pdf=araLatest(await fetchPage('https://retiredamericans.org/voting-record/'));}catch{}
       await sleep(wait);return readAra(await pdfText(await fetchBytes(pdf)));}},
@@ -429,16 +551,12 @@ export const PROBED={
   civilrights:['The Leadership Conference on Civil and Human Rights','liberal','Civil rights','unreadable','https://civilrights.org/voting-record/'],
   aauw:['AAUW','liberal','Civil rights','image','https://www.aauwaction.org/voter-education/congressional-voting-record/'],
   ada:['Americans for Democratic Action','liberal','Overall','to-build','https://adaction.org/'],
-  frc:['FRC Action','conservative','Family & religion','to-build','https://www.frcaction.org/scorecard'],
   ncpssm:['National Committee to Preserve Social Security and Medicare','liberal','Seniors','to-build','https://www.ncpssm.org/scorecard/'],
   ecu:['End Citizens United','liberal','Money in politics','none','https://www.endcitizensunited.org/'],
   commoncause:['Common Cause','liberal','Money in politics','to-build','https://democracyscorecard.org/'],
-  humane:['Humane World Action Fund','liberal','Animal welfare','to-build','https://humaneaction.org/current_scorecard'],
   imeu:['IMEU Policy Project','liberal','Israel, Palestine & Iran','blocked','https://imeupolicyproject.org/scorecard'],
-  niac:['NIAC Action','liberal','Israel, Palestine & Iran','to-build','http://scorecard.niacaction.org/'],
   napo:['National Association of Police Organizations','conservative','Policing','none','https://www.napo.org/'],
   norml:['NORML','liberal','Marijuana','to-build','https://vote.norml.org/'],
-  numbersusa:['NumbersUSA','conservative','Immigration','to-build','https://www.numbersusa.org/grades/'],
   lugar:['The Lugar Center (Bipartisan Index)','none','Bipartisanship','old','https://www.thelugarcenter.org/ourwork-Bipartisan-Index.html'],
 };
 // The statuses not shown on profiles.
