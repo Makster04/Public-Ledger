@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {readSba,readLcv,readRfa,readHeritage,readClubForGrowth,cfgLatest,congressLabel,congressOf,matchPerson,stateCode,collect,READERS,probedGroups,HIDDEN,
-  readVoterVoice,newestScorecard,readAfp,readGoa,readNumbersUsa,readAra,araLatest,ARA_PDF,districtOf} from '../scripts/collect-ratings.mjs';
+  readVoterVoice,newestScorecard,readAfp,readGoa,readNumbersUsa,readAra,araLatest,ARA_PDF,districtOf,readRlc} from '../scripts/collect-ratings.mjs';
 import {ratingsLean} from '../public/six-scores.js';
 
 const sample=f=>fs.readFileSync(new URL(`../data/ratings-samples/${f}`,import.meta.url),'utf8');
@@ -80,7 +80,7 @@ test('the ratings become the Ratings lean; every group without a reader says why
   assert.deepEqual(ratingsLean([{org:'SBA',lean:'conservative',grade:'F'},{org:'LCV',lean:'liberal',score:94},{org:'RFA',lean:'liberal',score:100}]).lean,-96);
   const g=probedGroups();
   for(const [k,x] of Object.entries(g))assert.ok(['blocked','none','states','no-list','permission','to-build','old','image'].includes(x.status),k);
-  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'to-build');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','numbersusa','ara'])assert.ok(!g[k],`${k} has a reader`);
+  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'to-build');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','numbersusa','ara','rlc'])assert.ok(!g[k],`${k} has a reader`);
   assert.equal(g.giffords.status,'states');assert.ok(HIDDEN.has('states')&&HIDDEN.has('none')&&HIDDEN.has('old'),'groups with no current ratings of members are not shown');
   for(const r of READERS)assert.ok(!g[r.key],`${r.key} has a reader`);
 });
@@ -139,4 +139,16 @@ test('Alliance for Retired Americans: by state, senators then House members, las
   assert.equal(araLatest('<a href="/x/2024-Congressional-Voting-Record.pdf">a</a><a href="/x/2026-Congressional-Voting-Record.pdf">b</a>'),'/x/2026-Congressional-Voting-Record.pdf');
   assert.equal(araLatest('<p>none</p>'),ARA_PDF);
   assert.deepEqual(['PA-10','AK-AL',7,null].map(districtOf),[10,0,7,null]);
+});
+
+test('Republican Liberty Caucus: its Liberty Index PDFs, letters cut off and some old districts, matched on what\'s left',async()=>{
+  const sen=readRlc(sample('rlc-1.txt'),{chamber:'S',year:2025}),house=readRlc(sample('rlc-2.txt'),{chamber:'H',year:2025});
+  assert.equal(sen.length,53,'every Republican senator');assert.ok(house.length>=210);
+  assert.equal(sen.find(r=>r.name==='Rand Paul').score,99);assert.equal(house.find(r=>r.name==='Thomas Massie').score,101,'the bonus counted, as published');
+  const by=await matchedBy([...sen,...house]);
+  assert.ok(Object.keys(by).length>=255);
+  assert.deepEqual(['britt','rscott','tscott','collins','mcollins','ecarter','jcarter'].map(id=>by[id]?.score),[50,52,40,35,59,39,40]);
+  assert.ok(by.csmith,'a profile with the legal first name (Christopher)');
+  assert.equal(by.kennedy?.name,'John ennedy','a last name with its first letter cut off');
+  assert.equal(by.diazbalart?.name,'Mario Diaz-Balart','listed under his old district');
 });
