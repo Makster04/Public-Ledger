@@ -58,3 +58,28 @@ test('the groups added in November 2026 carry the sides chosen for them',()=>{
   assert.deepEqual(GROUPS.filter(g=>g.lean==='none').map(g=>g.key).sort(),['c4ip','lugar']);
   assert.equal(GROUPS.length,58);
 });
+
+test('a PDF with huge pictures: its text is read without inflating them, and an oversized stream is dropped, not held',async()=>{
+  const zlib=await import('node:zlib');const {pdfText,STREAM_CAP}=await import('../src/pdf.mjs');
+  const bomb=zlib.deflateSync(Buffer.alloc(256e6));      // 256 MB of picture, compressed to about 250 KB
+  const content='BT /F1 12 Tf 72 720 Td (Ossoff, Jon GA 97%) Tj ET';
+  const parts=['%PDF-1.4\n1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj\n2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj\n',
+    `3 0 obj << /Type /Page /Parent 2 0 R /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> /XObject << /Im1 6 0 R /Im2 7 0 R >> >> >> endobj\n4 0 obj << /Length ${content.length} >> stream\n${content}\nendstream endobj\n5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj\n`];
+  const chunks=[Buffer.from(parts.join(''),'latin1')];
+  for(const n of [6,7])chunks.push(Buffer.from(`${n} 0 obj << /Type /XObject /Subtype /Image /Width 8000 /Height 8000 /Filter /FlateDecode /Length ${bomb.length} >> stream\n`,'latin1'),bomb,Buffer.from('\nendstream endobj\n','latin1'));
+  // A content stream that would inflate past the cap is dropped (its text lost), never held in memory.
+  chunks.push(Buffer.from(`8 0 obj << /Filter /FlateDecode /Length ${bomb.length} >> stream\n`,'latin1'),bomb,Buffer.from('\nendstream endobj\ntrailer << /Root 1 0 R >>\n%%EOF','latin1'));
+  const pdf=new Uint8Array(Buffer.concat(chunks));
+  const before=process.memoryUsage().arrayBuffers,t0=Date.now();
+  assert.equal(await pdfText(pdf),'Ossoff, Jon GA 97%');
+  assert.ok(Date.now()-t0<15000,'quick');assert.ok(process.memoryUsage().arrayBuffers-before<STREAM_CAP*4,'the pictures were never inflated');
+});
+
+test('a PDF is read in a thread of its own, with a time limit',async()=>{
+  const {pdfTextLimited}=await import('../scripts/ratings-probe.mjs');
+  const content='BT /F1 12 Tf 72 720 Td (Collins, Susan ME 31%) Tj ET';
+  const pdf=new TextEncoder().encode(`%PDF-1.4\n1 0 obj << /Type /Page /Contents 2 0 R /Resources << /Font << /F1 3 0 R >> >> >> endobj\n2 0 obj << /Length ${content.length} >> stream\n${content}\nendstream endobj\n3 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj\n%%EOF`);
+  assert.deepEqual(await pdfTextLimited(pdf),{text:'Collins, Susan ME 31%'});
+  const slow=await pdfTextLimited(pdf,{timeout:1});
+  assert.equal(slow.text,'');assert.match(slow.why,/took longer than/);
+});
