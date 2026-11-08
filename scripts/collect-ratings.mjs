@@ -207,6 +207,22 @@ export function readAra(pdfText){
   }
   return out;
 }
+// Republican Liberty Caucus (its yearly Liberty Index, two PDFs, Senate and House; Republicans only): each member's
+// name, their state (its letters partly cut off in the PDF's text) or district, their votes, the count and share, and
+// on the next line the final score with any bonus. Letters of a name are sometimes cut off too, and some House members
+// are listed under their district before the 2022 redistricting, so it's matched on last name and chamber, the rest of
+// the first name and then the district settling two members with the same last name.
+export function readRlc(pdfText,{chamber,year=null}={}){
+  const lines=String(pdfText).split('\n').map(l=>l.trim()),out=[];
+  for(let i=0;i<lines.length;i++){
+    const m=/^([A-Za-z][A-Za-z.'’\- ]*?[a-z.])\s+(?:[A-Z]{1,2}\s+|([A-Z]{0,2})-(\d{1,2})\s+)?((?:[01N]\s+){12,})(\d{1,2})\s+(0?\.?\d{2,3})(?:\s+\d+)*$/.exec(lines[i]);
+    if(!m)continue;
+    const fin=/^(\d{1,3})$/.exec(lines[i+1]||'')?.[1];if(fin==null)continue;
+    out.push({name:m[1].trim(),lastOnly:true,clipped:true,staleDistrict:true,party:'R',state:null,chamber,district:chamber==='H'&&m[3]!=null?Number(m[3]):null,score:Number(fin),year});
+  }
+  return out;
+}
+export const RLC_PDFS=[['S','https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-Senate.pdf'],['H','https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-House.pdf']];
 export const ARA_PDF='https://retiredamericans.org/wp-content/uploads/2026/03/2025-Congressional-Voting-Record.pdf';
 // The newest voting record its page links to (a PDF named for the year), else the one known.
 export const araLatest=html=>{const links=[...String(html).matchAll(/href="([^"]*?(\d{4})-Congressional-Voting-Record\.pdf)"/gi)].map(m=>({url:m[1],year:Number(m[2])})).sort((a,b)=>b.year-a.year);return links[0]?.url||ARA_PDF;};
@@ -233,6 +249,10 @@ export const READERS=[
     rows:async fetchPage=>readAfp(JSON.parse(await fetchPage('https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/legislators')))},
   {key:'goa',org:'Gun Owners of America',lean:'conservative',issue:'Guns',url:'https://www.gunowners.org/grades/',read:readGoa},
   {key:'numbersusa',org:'NumbersUSA',lean:'conservative',issue:'Immigration',url:'https://grades.numbersusa.com/search/',read:readNumbersUsa},
+  {key:'rlc',org:'Republican Liberty Caucus (Liberty Index)',lean:'conservative',issue:'Overall',url:'https://rlc.org/',
+    rows:async(fetchPage,{wait=2000,fetchBytes=getBytes}={})=>{const rows=[];
+      for(const [chamber,pdf] of RLC_PDFS){const year=Number(/Liberty-Index-(\d{4})/.exec(pdf)?.[1])-1||null;rows.push(...readRlc(await pdfText(await fetchBytes(pdf)),{chamber,year}));await sleep(wait);}
+      return rows;}},
   {key:'ara',org:'Alliance for Retired Americans',lean:'liberal',issue:'Seniors',url:'https://retiredamericans.org/voting-record/',
     rows:async(fetchPage,{wait=2000,fetchBytes=getBytes}={})=>{let pdf=ARA_PDF;try{pdf=araLatest(await fetchPage('https://retiredamericans.org/voting-record/'));}catch{}
       await sleep(wait);return readAra(await pdfText(await fetchBytes(pdf)));}},
@@ -284,7 +304,6 @@ export const PROBED={
   aauw:['AAUW','liberal','Civil rights','to-build','https://www.aauwaction.org/voter-education/congressional-voting-record/'],
   cpac:['CPAC','conservative','Overall','to-build','https://www.cpac.org/foundation/ratings/us'],
   jbs:['John Birch Society (Freedom Index)','conservative','Overall','to-build','https://freedomindex.us/us/'],
-  rlc:['Republican Liberty Caucus (Liberty Index)','conservative','Overall','to-build','https://rlc.org/'],
   progressivepunch:['ProgressivePunch','liberal','Overall','to-build','https://www.progressivepunch.org/'],
   ada:['Americans for Democratic Action','liberal','Overall','to-build','https://adaction.org/'],
   frc:['FRC Action','conservative','Family & religion','to-build','https://www.frcaction.org/scorecard'],
@@ -313,14 +332,23 @@ export function matchPerson(row,people){
   // A group that lists each member's Bioguide ID is matched on it.
   if(row.bioguide){const b=people.find(p=>p.bioguide===row.bioguide);if(b)return b;}
   const last=lastOf(row.name),first=firstOf(row.name);
-  let hits=people.filter(p=>lastOf(p.name)===last&&(!row.state||!p.state||row.state===p.state)&&(!row.chamber||!p.chamber||row.chamber===p.chamber||p.cand));
+  // A list whose letters may be cut off (row.clipped) matches a last name of five or more letters on its end.
+  const sameLast=p=>{const l=lastOf(p.name);return l===last||!!row.clipped&&last.length>=5&&l.endsWith(last);};
+  let hits=people.filter(p=>sameLast(p)&&(!row.state||!p.state||row.state===p.state)&&(!row.chamber||!p.chamber||row.chamber===p.chamber||p.cand));
   // A House district, when both give one, must agree: it tells apart two members of one state with the same last name,
   // and a former member from another district.
   // An at-large seat is 0 here and 1 in some groups' lists; a state with one seat has no other.
   const seat=d=>d===1?0:d,rd=row.chamber==='H'?districtOf(row.district):null;
-  if(rd!=null)hits=hits.filter(p=>p.district==null||seat(p.district)===seat(rd));
-  // A group that gives only last names is matched when exactly one profile fits.
-  if(row.lastOnly)return hits.length===1?hits[0]:null;
+  // A list with some old district numbers (row.staleDistrict) uses its district only to break a tie, below.
+  if(rd!=null&&!row.staleDistrict)hits=hits.filter(p=>p.district==null||seat(p.district)===seat(rd));
+  // A group that gives only last names is matched when exactly one profile fits; one whose first names may have lost
+  // their first letters (row.clipped) settles two with the same last name on the rest of the first name.
+  if(row.lastOnly){
+    // Each tie-breaker is used only when it leaves someone (a profile may give the legal first name: Christopher, Earl).
+    if(row.clipped&&hits.length>1){const h=hits.filter(p=>[firstOf(p.name),firstOf(p.short||'')].some(f=>f&&f.endsWith(first)));if(h.length)hits=h;}
+    if(row.staleDistrict&&rd!=null&&hits.length>1){const h=hits.filter(p=>p.district!=null&&seat(p.district)===seat(rd));if(h.length)hits=h;}
+    return hits.length===1?hits[0]:null;
+  }
   if(hits.length<=1)return hits[0]&&(firstOf(hits[0].name)[0]===first[0]||firstOf(hits[0].short||'')[0]===first[0])?hits[0]:null;
   return hits.find(p=>firstOf(p.name)===first||firstOf(p.short||'')===first)||null;
 }
