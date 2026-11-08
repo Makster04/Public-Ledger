@@ -470,6 +470,8 @@ Every tab follows the same order:
 - **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they cosponsored.
 - **Shown, not counted:**
   - PAC money not yet processed by the FEC, marked with a *;
+  - the crypto and AI industry: the listed super PACs' spending for and against them, and gifts from the listed
+    companies' employees, with their executives by name;
   - where the itemized gifts come from: in-state, out-of-state and the top states;
   - outside spending for and against them;
   - Donor Loyalty (whether their votes line up with their funders more than their party's do);

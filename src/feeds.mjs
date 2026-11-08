@@ -9,6 +9,7 @@ import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
 import {donorSizes} from '../public/donor-sizes.js';
 import {pacLine,pacCycleSummary,efileRows,efileSummary,stateSummary,jfcPage,jfcCycleSummary} from '../public/fec-money.js';
+import {industryQueries,industryRow,industryGifts} from '../public/industries.js';
 import {netWorth} from '../public/net-worth.js';
 import {annualEntry} from '../public/holdings.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
@@ -939,6 +940,25 @@ export const FEEDS={
     }}),
     summarize:(rows,a)=>{const by=byCycle(rows,a.cycle);
       return {cycle:a.cycle,committee:a.committee,cycles:Object.fromEntries(Object.entries(by).map(([cy,l])=>[cy,l.some(r=>r.capped)?{partial:true}:jfcCycleSummary(l)]))};}},
+  // Gifts from the crypto and AI industry's people (public/industries.js): everyone who gives a listed company as their
+  // employer, and the listed executives by name, each cycle from historyFrom on (an ended cycle is read once). Only
+  // matching gifts are kept, as company, executive, amount and date; no other donor's name is saved.
+  'industry-gifts':{host:'api.open.fec.gov',label:'Gifts from crypto and AI companies\' people',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`industry-gifts:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
+    page:(job,a,env,config)=>byPeriod(job,env,{periods:newestCycles(config,a.cycle),read:async(cycle,cursor)=>{
+      const qs=industryQueries(),at=cursor?JSON.parse(cursor):{q:0,u:null};
+      let url=at.u;
+      if(!url){const u=new URL('https://api.open.fec.gov/v1/schedules/schedule_a/');
+        for(const[k,v]of Object.entries({committee_id:a.committee,two_year_transaction_period:cycle,is_individual:'true',per_page:100,sort:'-contribution_receipt_date'}))u.searchParams.set(k,v);
+        for(const v of qs[at.q].values)u.searchParams.append(qs[at.q].param,v);url=u.href;}
+      const d=await requestSource(url,env);need(Array.isArray(d.results),'FEC contributions missing');
+      const rows=d.results.filter(r=>r.committee_id===a.committee).map(industryRow).filter(Boolean),next=fecNext(url,d);
+      if(next)return {rows,next:JSON.stringify({q:at.q,u:next})};
+      return {rows,next:at.q+1<qs.length?JSON.stringify({q:at.q+1,u:null}):null};
+    }}),
+    summarize:(rows,a)=>{const by=byCycle(rows,a.cycle);
+      return {cycle:a.cycle,committee:a.committee,...industryGifts(by[a.cycle]||[]),
+        cycles:Object.fromEntries(Object.entries(by).filter(([cy])=>Number(cy)!==Number(a.cycle)).map(([cy,l])=>[cy,industryGifts(l)]))};}},
   // Each election cycle from historyFrom on (a cycle that has ended is read once and kept). The top organizations, and
   // the sources that follow them, are the current cycle's; the earlier cycles' top 10 are kept by cycle.
   donors:{host:'api.open.fec.gov',label:'Donors by employer',tab:'finance',

@@ -12,6 +12,7 @@ import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod} from './fec-money.js';
+import {INDUSTRY_LABEL,SUPER_PACS,COMPANIES,EXECUTIVES,industrySuperPacs} from './industries.js';
 import {rangeText} from './net-worth.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
@@ -1095,6 +1096,38 @@ function jfcEvidence(j,cycle){
     <div class="st-check"><h4>Joint fundraising money by the size of each share</h4><div class="mm-bars st-kinds" role="list">${j.bands.map((b,i)=>`<div class="mm-bar" role="listitem" title="${labels[i]}: ${fmtFull(b)}"><span>${labels[i]}</span><span class="mm-track"><span style="width:${(b/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(b)} · ${Math.round(b/(j.people||1)*100)}%</span></div>`).join('')}</div></div>
     <p class="small muted">${j.shares.toLocaleString('en-US')} people's shares are listed on the reports; ${fmtFull(j.unlisted)} isn't, which is people whose share was $200 or less, so it counts as small gifts. ${j.committees>0?`${fmtFull(j.committees)} came from PACs and other committees and stays committee money. `:''}${j.scaled?'The listed shares add up to more than was passed on (they are listed before the committee\'s costs), so each is scaled down to fit. ':''}The Donor part of the score uses these sizes.</p></section>`;
 }
+// The crypto and AI industry's money around this person (public/industries.js): the listed super PACs' spending for and
+// against them, from the outside-spending records on file, and gifts from the listed companies' people, with their
+// executives by name, from the refresh. Shown, not counted, as on IntegrityIndex.us's "Crypto & AI Industry" card.
+function industryCard(s,g,offline=false){
+  const sp=industrySuperPacs(s.out,DATA.ie?.cm),cy=curCycle(s),who=esc(s.short||s.name);
+  const money=(n,sign)=>n?`<b class="num ${sign>0?'st-pos':'st-neg'}">${sign<0?'−':'+'}${fmtFull(Math.abs(n))}</b>`:`<b class="num">$0</b>`;
+  const spBlock=sp.rows.length?`<div class="st-check"><h4>Super PAC spending</h4>
+      <div class="st-ind-totals"><span>${money(sp.for,1)} supporting</span><span>${money(sp.against,-1)} opposing</span></div>
+      ${stTable(['Super PAC','Industry','For them','Against them'],sp.rows.map(r=>[`<a href="https://www.fec.gov/data/committee/${esc(r.id)}/" target="_blank" rel="noopener">${esc(r.name)}</a><div class="small muted">${esc(r.network)}${r.network===r.name?'':' group'}</div>`,esc(INDUSTRY_LABEL[r.industry]),r.for?money(r.for,1):'—',r.against?money(r.against,-1):'—']),'',[2,3])}
+      <p class="small muted">Independent expenditures in the general election, through ${esc(fmtDate(s.out.end))}. This is the super PACs' own money, never given to the campaign.</p></div>`
+    :`<div class="st-check"><h4>Super PAC spending</h4><p class="small">None of the listed crypto or AI super PACs reported spending for or against ${who}${s.out?.end?` through ${esc(fmtDate(s.out.end))}`:''}.</p></div>`;
+  let gifts;
+  if(offline)gifts='<p class="small muted">The update service is offline, so the donations can\'t be shown right now.</p>';
+  else if(!g)gifts='<p class="small muted">Waiting for the FEC refresh to read gifts from these companies\' people.</p>';
+  else if(!g.n)gifts=`<p class="small">No gifts from the listed companies' employees or executives in ${cy-1}–${cy}.</p>`;
+  else gifts=['crypto','ai','both'].filter(k=>g.industries?.[k]).map(k=>{const ind=g.industries[k];
+    return `<div class="st-ind"><div class="st-ind-head"><b>${esc(ind.label)}</b><span><b class="num">${fmtFull(ind.total)}</b> <span class="muted">· ${ind.n} gift${ind.n===1?'':'s'}</span></span></div>
+      ${stTable(['Company','Employees\' gifts','of which executives'],ind.companies.map(c=>[esc(c.name),`${fmtFull(c.total)} <span class="muted small">· ${c.n}</span>`,c.exec?fmtFull(c.exec):'—']),'',[1,2])}
+      ${ind.executives.length?`<ul class="st-ind-execs">${ind.executives.map(e=>`<li><span><b>${esc(e.name)}</b> <span class="muted">${esc(e.role)}, ${esc(e.company)}</span></span><span class="num">${fmtFull(e.total)}${e.n>1?` <span class="muted small">· ${e.n} gifts</span>`:''}</span></li>`).join('')}</ul>`:''}</div>`;}).join('');
+  const groups=k=>SUPER_PACS.filter(p=>p.industry===k).map(p=>p.name).join(', ');
+  const cos=k=>COMPANIES.filter(c=>c.industry===k).map(c=>c.name).join(', ');
+  return `<section class="st-sec" id="u-industry"><h4 class="st-sub">Crypto &amp; AI industry <span class="muted small">· shown, not counted</span></h4>
+    <p class="small">Super PAC spending for and against ${who}, and donations to the campaign from the people of crypto and AI companies, with their executives by name.</p>
+    ${spBlock}
+    <div class="st-check"><h4>Donations to the campaign <span class="muted small">· ${cy-1}–${cy}</span></h4>${gifts}
+      <p class="small muted">From the FEC's itemized gifts: people who give one of these companies as their employer, and the executives listed above, matched by name and the employer they list. A donor who gave $200 or less in all isn't itemized, so carries no employer and isn't counted. Each executive's gifts are part of their company's total.</p></div>
+    <details class="st-more"><summary>Which groups, companies and executives are followed</summary><div class="st-more-b small">
+      <p><b>Crypto super PACs:</b> ${esc(groups('crypto'))}. <b>AI super PACs:</b> ${esc(groups('ai'))}.</p>
+      <p><b>Crypto companies:</b> ${esc(cos('crypto'))}. <b>AI companies:</b> ${esc(cos('ai'))}. <b>Both:</b> ${esc(cos('both'))}.</p>
+      <p><b>Executives:</b> ${esc(EXECUTIVES.map(e=>`${e.name} (${COMPANIES.find(c=>c.key===e.company)?.name})`).join(', '))}.</p>
+      <p class="muted">Big Tech companies (Google, Microsoft, Meta, Amazon, Apple) aren't counted as AI. Their PACs are in the Corporate PAC donors card.</p></div></details></section>`;
+}
 function paneUnbought(s,pane){
   const inputs=unboughtInputs(s);
   const draw=(x,d)=>stFrame(s,'unbought',{
@@ -1132,7 +1165,7 @@ function paneUnbought(s,pane){
     const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);
       nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
     const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
-    if(fec&&d)fec.innerHTML=statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy);
+    if(fec)fec.innerHTML=(d?statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
   });
