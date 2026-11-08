@@ -1058,3 +1058,13 @@ input, select { accent-color: var(--accent); }
 .st-ind-execs li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
 .st-ind-execs li > span:first-child { min-width: 0; overflow-wrap: anywhere; }
 .st-ind-execs .num { white-space: nowrap; }
+.sp-list { display: grid; gap: 8px; }
+.sp-row { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.sp-row > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) auto auto; gap: 6px 16px; align-items: center; padding: 12px 16px; }
+.sp-row > summary::-webkit-details-marker { display: none; }
+.sp-rank { color: var(--muted); }
+.sp-name { display: grid; gap: 2px; min-width: 0; overflow-wrap: anywhere; }
+.sp-total { font-weight: 700; white-space: nowrap; }
+.sp-split { white-space: nowrap; }
+.sp-body { padding: 0 16px 14px; }
+@media (max-width: 560px) { .sp-row > summary { grid-template-columns: 1.8rem minmax(0, 1fr) auto; } .sp-split { grid-column: 2 / -1; } }

@@ -25,7 +25,7 @@ export async function addJob(db,id,kind,subject,args,due=0) {
 }
 async function addFinance(db,p,committee,cycle) {
   await addJob(db,`campaign:${p.id}`,'campaign',p.id,{committee,cycle});
-  await addJob(db,`pac:${p.id}`,'pac',p.id,{committee,cycle});
+  if(!p.light)await addJob(db,`pac:${p.id}`,'pac',p.id,{committee,cycle});
 }
 export const seedScope=c=>({cycle:c.cycle,congress:c.congress,session:c.session,year:c.year});
 // A bundled seed lets a new database start from previously published snapshots instead of empty.
@@ -46,7 +46,11 @@ async function applySeed(db,seed) {
 }
 // The jobs the configured sources call for, and a signature of them: when a source, a person or a key bill is added,
 // the signature changes and the missing jobs are added, without touching existing ones.
-const feedJobs=()=>FEED_KINDS.flatMap(kind=>FEEDS[kind].jobs(config).map(j=>({...j,kind})));
+// House members with a basic profile (light: true, scripts/build-house.mjs) get the lighter set: their cosponsored
+// bills and their House disclosures here, and their sponsored bills and campaign committee and totals in addPerson.
+export const LIGHT_KINDS=new Set(['cosponsored','trades-house','net-worth-house']);
+const feedJobs=()=>{const light=new Set(config.people.filter(p=>p.light).map(p=>p.id));
+  return FEED_KINDS.flatMap(kind=>FEEDS[kind].jobs(config).filter(j=>!light.has(j.subject)||LIGHT_KINDS.has(kind)).map(j=>({...j,kind})));};
 const hash=text=>{let h=0;for(const c of text)h=(Math.imul(h,31)+c.charCodeAt(0))|0;return (h>>>0).toString(36);};
 // Whose positions each chamber's roll calls record: Senate votes match people by LIS ID, House votes by Bioguide ID.
 const voters=chamber=>hash(config.people.filter(p=>chamber==='S'?p.lis:p.bioguide&&p.chamber==='H').map(p=>p.id).sort().join('|'));
@@ -59,13 +63,14 @@ export function feedSignature(){
 async function addPerson(db,p,c){
   if(p.fecCmte)await addFinance(db,p,p.fecCmte,c.cycle);
   else if(p.fecCand)await addJob(db,`committee:${p.id}`,'committee',p.id,{candidate:p.fecCand,cycle:c.cycle});
-  if(p.fecCand)await addJob(db,`outside:${p.id}`,'outside',p.id,{candidate:p.fecCand,cycle:c.cycle});
+  if(p.fecCand&&!p.light)await addJob(db,`outside:${p.id}`,'outside',p.id,{candidate:p.fecCand,cycle:c.cycle});
   if(p.bioguide)await addJob(db,`legislation:${p.id}`,'legislation',p.id,{bioguide:p.bioguide,congress:c.congress,cycle:c.cycle});
 }
 async function ensureFeeds(db){
   const v=await statement(db,"SELECT value FROM metadata WHERE key='feeds'").first(),sig=feedSignature();
   if(v?.value===sig)return;
   await removeRetired(db);
+  await removeDeparted(db);
   for(const p of config.people)await addPerson(db,p,config);
   for(const j of feedJobs())await addJob(db,j.id,j.kind,j.subject,j.args);
   // Checks whose details come only from the config are brought up to date and run again; others keep theirs, since
@@ -97,6 +102,22 @@ async function removeRetired(db){
     await statement(db,'DELETE FROM snapshots WHERE job_id LIKE ?',like).run();
     await statement(db,'DELETE FROM refresh_history WHERE job_id LIKE ?',like).run();
     await statement(db,'DELETE FROM jobs WHERE kind=?',kind).run();
+  }
+}
+// Someone taken out of the config (a House member who left, when scripts/build-house.mjs runs after a new Congress is
+// sworn in): their own checks and results go, so the refresh stops reading for them. Only the kinds of checks that are
+// one per person are looked at, and only checks named "<kind>:<their id>".
+const PERSON_LEGACY=['campaign','committee','pac','outside','legislation'];
+async function removeDeparted(db){
+  const ids=new Set(config.people.map(p=>p.id));
+  const perPerson=new Set([...PERSON_LEGACY,...FEED_KINDS.filter(k=>!FEEDS[k].scope&&(()=>{const js=FEEDS[k].jobs(config);return js.length>0&&js.every(j=>ids.has(j.subject));})())]);
+  const {results}=await statement(db,'SELECT id,kind,subject FROM jobs').all();
+  for(const j of results||[]){
+    if(!perPerson.has(j.kind)||ids.has(j.subject)||j.id!==`${j.kind}:${j.subject}`)continue;
+    await statement(db,'DELETE FROM records WHERE run_id IN (SELECT run_id FROM snapshots WHERE job_id=?)',j.id).run();
+    await statement(db,'DELETE FROM snapshots WHERE job_id=?',j.id).run();
+    await statement(db,'DELETE FROM refresh_history WHERE job_id=?',j.id).run();
+    await statement(db,'DELETE FROM jobs WHERE id=?',j.id).run();
   }
 }
 export async function initialize(db,seed=null) {
@@ -236,6 +257,12 @@ async function registerHouse(db,vote,year) {await addJob(db,`vote:H:${year}:${vo
 const isSite=(j,env)=>j.kind==='vote'&&/^vote:H:/.test(j.id)&&Number(j.id.split(':')[2])>=2023&&env.CONGRESS_API_KEY?false:!!HOSTS[hostOf(j.kind)]?.site;
 // Campaign and outside-money totals for everyone, in one request: the home cards of people without reviewed research
 // (the basic senator profiles) show these instead of loading each full profile.
+// The Super PACs page's data: the site-wide super PAC check's latest snapshot, or null before its first read.
+export async function getSuperPacs(env) {
+  await initialize(env.DB);
+  const r=await statement(env.DB,"SELECT s.payload,s.updated_at FROM snapshots s WHERE s.job_id='super-pacs'").first();
+  return r?{...JSON.parse(r.payload),checkedAt:r.updated_at}:{superPacs:null};
+}
 export async function getCards(env) {
   await initialize(env.DB);
   const rows=(await statement(env.DB,"SELECT j.subject,j.kind,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN ('campaign','outside')").all()).results,people={};
@@ -270,7 +297,7 @@ export async function getBills(env){
 // thousands of them back to historyFrom, so a profile reads only the ones that name the person.
 const BY_PERSON=['crec-day','hearing','meeting'];
 // Index jobs list what to read (days of the Record, hearings, meetings, key bills' lobbying); a profile doesn't use them.
-const NOT_PROFILE=['meetings','crec-index','crec-archive','hearing-index','hearing-archive','bill-lobbying'];
+const NOT_PROFILE=['meetings','crec-index','crec-archive','hearing-index','hearing-archive','bill-lobbying','super-pacs'];
 const named=id=>`%"${String(id).replace(/[%_\\]/g,'')}":[%`;
 // The meetings and transcripts that share a jacket number with this person's (the number in a transcript's GovInfo ID,
 // which a meeting lists): a member's meeting can have a transcript that doesn't list them, and the other way round.

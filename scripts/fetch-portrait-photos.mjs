@@ -21,12 +21,15 @@ const AGENT='PublicLedger/1.0 (portrait lookup for a nonprofit scorecard; https:
 const letters=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim();
 const strip=s=>String(s||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#0?39;/g,"'").replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
 
-// Everyone on the site without a portrait: profiled people and the results-only nominees, with their state's name
+// Everyone on the site without a portrait: profiled people, the results-only nominees and the directory members, with their state's name
 // (written as a code or in full in research.json).
-export function missing(research,index,extra){
+// directory: the other sitting senators and members of the House (public/senate.json, public/house.json), for their basic
+// profiles' cards, when their official portrait isn't published yet.
+export function missing(research,index,extra,directory=[]){
   const out=[],seen=new Set(),add=(id,name,state)=>{if(!id||seen.has(id)||index.people?.[id]||(extra[id]&&(!extra[id].skip||extra[id].lookup===false)))return;seen.add(id);out.push({id,name,state:STATES[state]||state});};
   for(const p of [...research.members,...research.cands,...(research.featured||[])])add(p.id,p.name,p.state);
   for(const r of research.liteRaces)for(const n of r.nominees)add(n.fecCand||n.id,n.name,r.state);
+  for(const x of directory)add(x.id,x.name,x.state);
   return out;
 }
 // A Wikipedia title is the person's when, without a note in parentheses, it has their first and last names.
@@ -75,7 +78,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const args=process.argv.slice(2),dry=args.includes('--dry-run'),i=args.indexOf('--only'),only=i>=0?new Set(args[i+1].split(',')):null;
   const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
   const research=read('public/research.json'),index=read('public/portraits/index.json'),extraFile=new URL('scripts/portrait-extra.json',root),extra=read('scripts/portrait-extra.json');
-  const people=missing(research,index,extra).filter(p=>!only||only.has(p.id));
+  const dir=f=>{try{return JSON.parse(fs.readFileSync(new URL(`public/${f}.json`,root),'utf8'))[f==='senate'?'senators':'members']||[];}catch{return [];}};
+  const people=missing(research,index,extra,[...dir('senate'),...dir('house')]).filter(p=>!only||only.has(p.id));
   console.log(`Looking up ${people.length} ${people.length===1?'person':'people'} without a portrait on Wikipedia…`);
   let saved=0;
   for(const p of people){

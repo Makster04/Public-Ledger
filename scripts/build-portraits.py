@@ -4,7 +4,8 @@
 # Photos: official congressional portraits (public domain, U.S. government works) from
 # https://github.com/unitedstates/images, for everyone in research.json with a Bioguide ID (the toss-up nominees in
 # liteRaces too, keyed by their FEC candidate ID, as the Races page shows them) and every other sitting senator
-# in public/senate.json (from scripts/build-senate.mjs). Other photos, supplied
+# in public/senate.json (from scripts/build-senate.mjs) and every member of the House in public/house.json (from
+# scripts/build-house.mjs). Other photos, supplied
 # for use here, are kept in data/portraits/ and listed in scripts/portrait-extra.json, which takes precedence:
 #   {"<person id>": {"file": "data/portraits/<id>.jpg", "credit": "Photo: <who>, used with permission", "url": optional}}
 # For a photo whose cut-out keeps a halo of a light background, add "tighten": true (refit the edge to the photo's own
@@ -271,6 +272,10 @@ def main():
     senate = json.load(open(senate_path, encoding='utf8'))['senators'] if os.path.exists(senate_path) else []
     profiled = {s['id'] for s in D['members'] + D.get('cands', []) + D.get('featured', [])}
     basic = [{'id': x['id'], 'bioguide': x['bioguide']} for x in senate if x['id'] not in profiled]
+    # Every member of the House without a profile (public/house.json, from scripts/build-house.mjs), the same way.
+    house_path = os.path.join(ROOT, 'public', 'house.json')
+    house = json.load(open(house_path, encoding='utf8'))['members'] if os.path.exists(house_path) else []
+    basic += [{'id': x['id'], 'bioguide': x['bioguide']} for x in house if x['id'] not in profiled]
     # Toss-up nominees without profiles, for their tiles on the Races page: known by their FEC candidate ID.
     # Known by their FEC candidate ID, or "id" without one (a sitting senator's directory ID, whose portrait is the same).
     nominees = [{'id': n.get('fecCand') or n['id'], 'bioguide': n.get('bioguide')} for r in D.get('liteRaces', []) for n in r['nominees']]

@@ -10,6 +10,7 @@ import {sectorForSic} from '../public/sectors.js';
 import {donorSizes} from '../public/donor-sizes.js';
 import {pacLine,pacCycleSummary,efileRows,efileSummary,stateSummary,jfcPage,jfcCycleSummary} from '../public/fec-money.js';
 import {industryQueries,industryRow,industryGifts} from '../public/industries.js';
+import {SUPER_PAC_TYPES,ieRow,typeRow,donorRow,superPacSummary} from '../public/super-pacs.js';
 import {netWorth} from '../public/net-worth.js';
 import {annualEntry} from '../public/holdings.js';
 import COMMITTEES from '../public/committees.json' with {type:'json'};
@@ -959,6 +960,37 @@ export const FEEDS={
     summarize:(rows,a)=>{const by=byCycle(rows,a.cycle);
       return {cycle:a.cycle,committee:a.committee,...industryGifts(by[a.cycle]||[]),
         cycles:Object.fromEntries(Object.entries(by).filter(([cy])=>Number(cy)!==Number(a.cycle)).map(([cy,l])=>[cy,industryGifts(l)]))};}},
+  // Every super PAC's spending this cycle (public/super-pacs.js): the FEC's totals of independent expenditures by
+  // committee and candidate, page by page; then each spender's committee type, 100 a request; then the largest gifts to
+  // the 50 biggest super PACs, one page each. Read daily, the whole list each time. Shown on the Super PACs page.
+  'super-pacs':{host:'api.open.fec.gov',label:'Super PACs',tab:'finance',scope:'global',every:DAY,
+    jobs:c=>[{id:'super-pacs',subject:'Super PACs',args:{cycle:c.cycle}}],
+    async page(job,a,env){
+      const c=state(job.cursor)||{phase:'ie',page:1,totals:{}};
+      if(c.phase==='ie'){
+        const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_e/by_candidate/?cycle=${a.cycle}&per_page=100&sort=-total&page=${c.page}`,env);
+        need(Array.isArray(d.results),'FEC independent expenditure totals missing');
+        const rows=d.results.filter(r=>!r.cycle||Number(r.cycle)===Number(a.cycle)).map(ieRow).filter(Boolean);
+        for(const r of rows)c.totals[r.cmte]=Math.round(((c.totals[r.cmte]||0)+r.total)*100)/100;
+        if(c.page<(Number(d.pagination?.pages)||1)&&d.results.length&&c.page<200)return {rows,next:JSON.stringify({...c,page:c.page+1})};
+        const ids=Object.keys(c.totals).sort((x,y)=>c.totals[y]-c.totals[x]);
+        return {rows,next:ids.length?JSON.stringify({phase:'types',ids,i:0,types:{}}):null};
+      }
+      if(c.phase==='types'){
+        const u=new URL('https://api.open.fec.gov/v1/committees/');u.searchParams.set('per_page','100');
+        for(const id of c.ids.slice(c.i,c.i+100))u.searchParams.append('committee_id',id);
+        const d=await requestSource(u.href,env);need(Array.isArray(d.results),'FEC committee records missing');
+        const rows=d.results.map(typeRow).filter(Boolean);for(const r of rows)c.types[r.cmte]=r.type;
+        if(c.i+100<c.ids.length)return {rows,next:JSON.stringify({...c,i:c.i+100})};
+        const top=c.ids.filter(id=>SUPER_PAC_TYPES.has(c.types[id])).slice(0,50);
+        return {rows,next:top.length?JSON.stringify({phase:'donors',top,i:0}):null};
+      }
+      const cmte=c.top[c.i];
+      const d=await requestSource(`https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=${cmte}&two_year_transaction_period=${a.cycle}&sort=-contribution_receipt_amount&per_page=100`,env);
+      need(Array.isArray(d.results),'FEC receipts missing');
+      return {rows:[donorRow(cmte,d.results.filter(r=>r.committee_id===cmte))],next:c.i+1<c.top.length?JSON.stringify({...c,i:c.i+1}):null};
+    },
+    summarize:(rows,a)=>superPacSummary(rows,{cycle:a.cycle})},
   // Each election cycle from historyFrom on (a cycle that has ended is read once and kept). The top organizations, and
   // the sources that follow them, are the current cycle's; the earlier cycles' top 10 are kept by cycle.
   donors:{host:'api.open.fec.gov',label:'Donors by employer',tab:'finance',

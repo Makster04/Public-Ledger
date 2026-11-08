@@ -9,6 +9,7 @@ try {
   const integrityLog=fetch('/integrity-preview-log.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const presentationLog=fetch('/score-presentation-log.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const senate=fetch('/senate.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const house=fetch('/house.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const execTrades=fetch('/exec-trades.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const voteParty=fetch('/vote-party.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const attendance=fetch('/attendance.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
@@ -32,6 +33,7 @@ try {
   window.CONFLICTS=await conflicts;
   window.GROUP_RATINGS=await groupRatings;
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
+  const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress}:null;
   await import('./app.js');
   await RecordLive.banner();
   window.addEventListener('hashchange',()=>RecordLive.banner());

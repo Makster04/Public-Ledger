@@ -1,6 +1,7 @@
 // Positions on the saved roll calls (public/research.json "votes" and "hvotes") for the tracked people a vote doesn't
 // list yet (a newly added roll call): senators from Voteview's free files (Senate.gov turns scripts away), House members
 // from the House Clerk's official file for each vote. Both are matched by Bioguide ID. Run on your own computer.
+// The basic profiles in data/config.json (every other senator and House member) are filled in too.
 //   node scripts/fill-vote-positions.mjs           fill the missing positions and check every listed one
 //   node scripts/fill-vote-positions.mjs --check   only check: report positions that differ from Voteview
 // A position already in the research is never changed: a difference is reported for review. Each vote is matched by its
@@ -51,7 +52,11 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const file=new URL('../public/research.json',import.meta.url),research=JSON.parse(await fs.readFile(file,'utf8'));
   const people=[...research.members,...research.cands,...(research.featured||[])];
   const ids=[...new Set(research.votes.flatMap(v=>Object.keys(v.pos||{})))];
-  const tracked=ids.map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide);
+  // The basic profiles too (scripts/build-senate.mjs, scripts/build-house.mjs): their positions on these roll calls place
+  // them on each issue and count in People First, as the full profiles' do.
+  const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
+  const basic=ch=>config.people.filter(p=>p.basic&&p.chamber===ch&&p.bioguide).map(p=>({id:p.id,bioguide:p.bioguide}));
+  const tracked=[...ids.map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide),...basic('S').filter(p=>!ids.includes(p.id))];
   const check=process.argv.includes('--check'),byCongress=new Map();
   for(const v of research.votes)(byCongress.get(v.congress)||byCongress.set(v.congress,[]).get(v.congress)).push(v);
   let filled=0;const differ=[];
@@ -63,7 +68,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       for(const [person,p] of Object.entries(pos)){console.log(`${id} ${person}: ${p}${check?' (not saved: --check)':''}`);if(!check){v.pos[person]=p;filled++;}}}
   }
   // House: one Clerk file per vote, only for votes missing someone, plus a check of the listed positions on those.
-  const housePeople=[...new Set(research.hvotes.flatMap(v=>Object.keys(v.pos||{})))].map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide);
+  const listedH=[...new Set(research.hvotes.flatMap(v=>Object.keys(v.pos||{})))];
+  const housePeople=[...listedH.map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide),...basic('H').filter(p=>!listedH.includes(p.id))];
   for(const v of research.hvotes.filter(v=>housePeople.some(p=>!(p.id in (v.pos||{}))))){
     try{
       const args=voteArgs(v,'H'),r=houseVotePositions(normalizeVote(await requestSource(voteURL(args),{},{json:false}),args,housePeople),v,housePeople);

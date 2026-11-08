@@ -4,13 +4,14 @@ import fs from 'node:fs/promises';
 const root=new URL('../public/',import.meta.url);
 const data=JSON.parse(await fs.readFile(new URL('research.json',root),'utf8'));
 const index=JSON.parse(await fs.readFile(new URL('portraits/index.json',root),'utf8'));
-// Everyone profiled, plus every other sitting senator (their basic profiles' cards).
+// Everyone profiled, plus every other sitting senator and member of the House (their basic profiles' cards).
 const senate=JSON.parse(await fs.readFile(new URL('senate.json',root),'utf8')).senators;
+const house=JSON.parse(await fs.readFile(new URL('house.json',root),'utf8')).members;
 // Results-only nominees (liteRaces) are known by their FEC candidate ID, or by id without one.
-const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.fecCand||n.id))));
-test('every portrait belongs to a profiled person or a sitting senator, exists as a WebP, and says where it came from',async()=>{
+const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),house.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.fecCand||n.id))));
+test('every portrait belongs to a profiled person, a sitting senator or a House member, exists as a WebP, and says where it came from',async()=>{
   for(const [id,p] of Object.entries(index.people)){
-    assert.ok(ids.has(id),id+' is not in research.json or senate.json');
+    assert.ok(ids.has(id),id+' is not in research.json, senate.json or house.json');
     assert.equal(p.file,`portraits/${id}.webp`);
     const b=await fs.readFile(new URL(p.file,root));
     assert.equal(b.toString('latin1',0,4)+b.toString('latin1',8,12),'RIFFWEBP',id+' is not a WebP');
