@@ -5,7 +5,7 @@ import {moneyMap,mapSVG,moneyMapBlock,LAYOUT,short$,share} from '../public/money
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=[...research.members,...research.cands];
-const opts=s=>({bundled:research.bundled?.people?.[s.id],groups:Object.fromEntries((research.groupPos||[]).map(g=>[g.key,g.org])),categories:research.categories||{}});
+const opts=s=>({bundled:research.bundled?.people?.[s.id],groups:{...Object.fromEntries((research.groupPos||[]).map(g=>[g.key,g.org])),...(research.bundled?.names||{})},categories:research.categories||{}});
 
 test('every profile\'s map: the kinds of receipts add up to what was raised, and the drawing is complete',()=>{
   let drawn=0;
@@ -27,7 +27,9 @@ test('Ossoff: the example map',()=>{
   assert.deepEqual(m.ins.map(n=>[n.label,short$(n.a),share(n.a,m.receipts)]),[['Small donors','$55.3M','48%'],['Larger donors','$46.9M','40%'],['Joint fundraising','$11.6M','10%'],['PACs','$1.1M','<1%'],['Party committees','$11K','<1%'],['Other receipts','$954K','<1%']]);
   assert.deepEqual(m.outs.map(n=>[n.label,short$(n.a)]),[['Spent so far','$105.8M'],['Cash on hand','$15.1M']]);
   assert.deepEqual(m.side.map(n=>[n.label,short$(n.a)]),[['Outside groups for them','$6.0M'],['Outside groups against them','$11.7M']]);
-  assert.deepEqual(m.bundled.map(b=>[b.who,b.routed,b.n]),[['J Street',309639.01,768]]);
+  // J Street first (the largest); any other group the FEC shows forwarding gifts to the campaign is listed by its name.
+  assert.deepEqual([m.bundled[0].who,m.bundled[0].routed],['J Street',309639.01]);
+  for(const b of m.bundled){assert.ok(b.routed>0);assert.ok(!/^fec:/.test(b.who),`${b.who} is named`);}
   assert.equal(m.pacKinds[0].label,research.categories.lead);
   const html=moneyMapBlock(s,opts(s));
   assert.match(html,/id="f-map"/);assert.match(html,/\$115,904,486/);assert.match(html,/Bundled through groups/);assert.match(html,/Not on the map yet/);
