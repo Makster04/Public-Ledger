@@ -68,6 +68,35 @@ letter:
 | Civil rights | (none tracked yet) | HRC, ACLU |
 | Overall | Heritage Action, Senate Conservatives Fund | (none tracked yet) |
 
+**Groups being added (November 8, 2026),** each waiting on `npm run ratings:probe` to show whether its ratings can be
+read automatically:
+
+| Issue | Conservative side | Liberal side |
+|---|---|---|
+| Guns | National Shooting Sports Foundation, Gun Owners of America | |
+| Abortion | Students for Life Action | |
+| Environment | American Energy Alliance | Defenders of Wildlife, Climate Hawks Vote (Senate Democrats only) |
+| Labor | | Communications Workers of America, Teamsters, American Postal Workers Union |
+| Taxes and spending | National Taxpayers Union, Council for Citizens Against Government Waste | NETWORK |
+| Civil rights | | NAACP, The Leadership Conference on Civil and Human Rights, AAUW |
+| Overall | CPAC, John Birch Society (Freedom Index), Republican Liberty Caucus (Republicans only) | ProgressivePunch, Americans for Democratic Action |
+| Immigration (new) | NumbersUSA | |
+| Family and religion (new) | FRC Action | |
+| Seniors (new) | | National Committee to Preserve Social Security and Medicare, Alliance for Retired Americans |
+| Money in politics (new) | | End Citizens United, Common Cause |
+| Animal welfare (new) | | Humane World Action Fund |
+| Crypto and tech (new) | Stand With Crypto | (shown, not counted: Council for Innovation Promotion) |
+| Israel, Palestine and Iran (new) | | AJP Action, IMEU Policy Project (Senate, partial), NIAC Action |
+| Policing (new) | National Association of Police Organizations | |
+| Marijuana (new) | | NORML |
+| Bipartisanship (new) | (shown, not counted: the Lugar Center's Bipartisan Index) | |
+
+A group on a side counts in the Ratings lean like the others; one shown but not counted takes no side. Looked at and left
+out for now, with no current scorecard of members of Congress: Brady, U.S. PIRG, Public Citizen, Peace Action, FCNL,
+UnidosUS, LULAC, Concerned Women for America, Eagle Forum, Conservative Review's Liberty Score, veterans' groups (IAVA,
+DAV), the Farm Bureau (an award, not ratings), the National Farmers Union, the National Association for Gun Rights and
+FreedomWorks (closed).
+
 **What it uses:**
 - **Their record:** votes, bills and cosponsorships, plus statements, campaign promises and posts. Statements count half,
   and only on an issue with no votes or bills.

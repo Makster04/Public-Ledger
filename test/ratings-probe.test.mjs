@@ -32,9 +32,29 @@ test('a bot check is recorded and left alone; JSON is described by its keys',asy
 });
 
 test('every group has a side, an issue and addresses; ACLU and HRC wait on permission',()=>{
-  for(const g of GROUPS){assert.ok(['conservative','liberal'].includes(g.lean),g.key);assert.ok(g.issue&&g.urls.length,g.key);for(const u of g.urls)assert.match(u,/^https:\/\//);}
+  for(const g of GROUPS){assert.ok(['conservative','liberal','none'].includes(g.lean),g.key);assert.ok(g.issue&&g.urls.length,g.key);for(const u of g.urls)assert.match(u,/^https:\/\//);}
   assert.deepEqual(GROUPS.filter(g=>g.permission).map(g=>g.key).sort(),['aclu','hrc']);
   assert.equal(new Set(GROUPS.map(g=>g.key)).size,GROUPS.length);
   assert.deepEqual(tablesOf('<p>none</p>'),[]);
   assert.deepEqual(namesOn('Sen. Booker voted',['Booker','Lee']),['Booker']);
+});
+
+test('a PDF scorecard: its text is read and saved, and the members named in it counted',async()=>{
+  const content='BT /F1 12 Tf 72 720 Td (2025 Ratings) Tj 0 -14 Td (Ossoff, Jon GA 97%) Tj 0 -14 Td (Collins, Susan ME 31%) Tj ET';
+  const pdf=`%PDF-1.4\n1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj\n2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj\n3 0 obj << /Type /Page /Parent 2 0 R /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj\n4 0 obj << /Length ${content.length} >> stream\n${content}\nendstream endobj\n5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj\ntrailer << /Root 1 0 R >>\n%%EOF`;
+  const get=async()=>new Response(new TextEncoder().encode(pdf),{status:200,headers:{'content-type':'application/pdf'}});
+  const r=await probe('https://scorecard.example.org/2025.pdf',{get,surnames:['Ossoff','Collins','Booker']});
+  const text=r.lines.join('\n');
+  assert.match(text,/A PDF: .* profiled members named in it: 2 \(Collins, Ossoff\)|A PDF: .* profiled members named in it: 2 \(Ossoff, Collins\)/);
+  assert.equal(r.sample.ext,'txt');assert.match(r.sample.text,/Ossoff, Jon GA 97%/);
+  const scanned=await probe('https://scorecard.example.org/scan.pdf',{get:async()=>new Response('%PDF-1.4\n1 0 obj << /Type /XObject /Subtype /Image /Length 2 >> stream\nxx\nendstream endobj',{status:200,headers:{'content-type':'application/pdf'}})});
+  assert.match(scanned.lines.join('\n'),/A PDF with no text/);assert.equal(scanned.sample,null);
+});
+
+test('the groups added in November 2026 carry the sides chosen for them',()=>{
+  const lean=Object.fromEntries(GROUPS.map(g=>[g.key,g.lean]));
+  assert.equal(lean.norml,'liberal');assert.equal(lean.napo,'conservative');assert.equal(lean.standwithcrypto,'conservative');
+  assert.equal(lean.humane,'liberal');for(const k of ['imeu','ajp','niac'])assert.equal(lean[k],'liberal',k);
+  assert.deepEqual(GROUPS.filter(g=>g.lean==='none').map(g=>g.key).sort(),['c4ip','lugar']);
+  assert.equal(GROUPS.length,58);
 });
