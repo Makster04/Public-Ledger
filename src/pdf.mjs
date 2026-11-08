@@ -4,10 +4,18 @@
 // the text moves down the page. A scanned (paper) filing has no text and gives ''.
 const latin1=b=>new TextDecoder('latin1').decode(b);
 
-async function inflate(bytes){
-  try{return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer());}
-  catch{return null;}
+// A stream inflated, or null when it doesn't inflate or would pass `cap` bytes (a large picture, or a compression bomb).
+export const STREAM_CAP=16e6;
+async function inflate(bytes,cap=STREAM_CAP){
+  try{
+    const reader=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate')).getReader(),parts=[];let n=0;
+    for(;;){const {done,value}=await reader.read();if(done)break;n+=value.length;if(n>cap){await reader.cancel().catch(()=>{});return null;}parts.push(value);}
+    const out=new Uint8Array(n);let o=0;for(const x of parts){out.set(x,o);o+=x.length;}return out;
+  }catch{return null;}
 }
+// Streams that never hold text, so they're never inflated: pictures, embedded font programs, metadata, cross-reference
+// tables and attached files. Text is drawn by content streams (a page's, or a form's) through fonts' ToUnicode tables.
+export const NOT_TEXT=/\/Subtype\s*\/(Image|Type1C|CIDFontType0C|OpenType)\b|\/Type\s*\/(Metadata|XRef|EmbeddedFile)\b|\/Length[123]\s/;
 // Every indirect object: its number, its dictionary text, and its stream's bytes (inflated when FlateDecode).
 async function readObjects(bytes){
   const raw=latin1(bytes),objects=new Map();
@@ -18,8 +26,11 @@ async function readObjects(bytes){
     if(s>=0){
       const from=start+s+body.slice(s).match(/^stream\r?\n/)[0].length,to=raw.lastIndexOf('endstream',end);
       if(to>from){
-        const data=bytes.subarray(from,to).subarray(0,Math.max(0,to-from)).slice();
-        stream=/\/FlateDecode/.test(body.slice(0,s))?await inflate(trimEol(data)):/\/Filter/.test(body.slice(0,s))?null:data;
+        const dict=body.slice(0,s);
+        if(!NOT_TEXT.test(dict)){
+          const data=bytes.subarray(from,to);
+          stream=/\/FlateDecode/.test(dict)?await inflate(trimEol(data)):/\/Filter/.test(dict)?null:data.slice();
+        }
       }
       body=body.slice(0,s);
     }

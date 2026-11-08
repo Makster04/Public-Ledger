@@ -10,7 +10,7 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {sampleOf,scriptAddresses,botCheck} from './county-results.mjs';
-import {pdfText} from '../src/pdf.mjs';
+import {Worker} from 'node:worker_threads';
 
 const root=new URL('../',import.meta.url);
 const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; interest group scorecards)';
@@ -99,6 +99,19 @@ export function tablesOf(html){
 export function namesOn(text,surnames){
   const t=String(text).toLowerCase();return surnames.filter(n=>n.length>3&&new RegExp(`\\b${n.toLowerCase()}\\b`).test(t));
 }
+// A PDF's text, read in a thread of its own with a memory limit and a time limit, so one PDF can't stop the run:
+// {text} or {text: '', why}.
+export function pdfTextLimited(bytes,{memoryMb=1024,timeout=120000}={}){
+  return new Promise(resolve=>{
+    let w;
+    try{w=new Worker(new URL('./pdf-text-worker.mjs',import.meta.url),{workerData:bytes,resourceLimits:{maxOldGenerationSizeMb:memoryMb}});}
+    catch(e){resolve({text:'',why:e.message});return;}
+    const timer=setTimeout(()=>{resolve({text:'',why:`it took longer than ${Math.round(timeout/1000)} seconds`});w.terminate();},timeout);
+    w.once('message',text=>{clearTimeout(timer);resolve({text:String(text||'')});w.terminate();});
+    w.once('error',e=>{clearTimeout(timer);resolve({text:'',why:e.code==='ERR_WORKER_OUT_OF_MEMORY'?`it needed more than ${memoryMb} MB of memory`:e.message});});
+    w.once('exit',()=>{clearTimeout(timer);resolve({text:'',why:'the reader stopped'});});
+  });
+}
 // What one address serves.
 export async function probe(u,{get=fetch,surnames=[]}={}){
   let res;try{res=await get(u,{headers:{'User-Agent':UA},redirect:'follow',signal:AbortSignal.timeout(45000)});}
@@ -108,7 +121,8 @@ export async function probe(u,{get=fetch,surnames=[]}={}){
   if(botCheck(res.status,res.url,text.slice(0,4000))){lines.push('    A bot check, not the page: this site turns scripts away, so this group is left out.');return {lines,sample:null};}
   if(/pdf/i.test(type)||/^%PDF-/.test(text.slice(0,8))){
     // Its text, read the way the House trade reports are (src/pdf.mjs), saved so a reader can be written from it.
-    const t=await pdfText(bytes).catch(()=>'');
+    const {text:t,why}=await pdfTextLimited(bytes);
+    if(why){lines.push(`    A PDF that couldn't be read here: ${why}.`);return {lines,sample:null};}
     if(!t.trim()){lines.push('    A PDF with no text (a scanned image, or one this reader can\'t open).');return {lines,sample:null};}
     const names=namesOn(t,surnames);
     lines.push(`    A PDF: ${t.length.toLocaleString('en-US')} characters of text; profiled members named in it: ${names.length}${names.length?` (${names.slice(0,12).join(', ')}${names.length>12?' …':''})`:''}`);
@@ -149,13 +163,17 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const groups=GROUPS.filter(g=>!only||only.has(g.key));
   if(!groups.length){console.log(`No group with that key. The keys: ${GROUPS.map(g=>g.key).join(', ')}`);process.exit(1);}
   const samples=new URL('data/ratings-samples/',root);await fs.mkdir(samples,{recursive:true});
+  const file=new URL('data/ratings-probe.txt',root);
+  // A run for some groups keeps what earlier runs found for the others; the notes are saved after each group.
+  const kept=only?(await fs.readFile(file,'utf8').catch(()=>'')).trim().split('\n\n').slice(1).filter(x=>!groups.some(g=>x.startsWith(`${g.org} (${g.key})`))):[];
   const out=[`Interest group scorecards probe, ${new Date().toISOString()}: what each group's scorecard pages serve, for writing its reader.`];
+  const save=()=>fs.writeFile(file,[...out,...kept.flatMap(k=>['',k])].join('\n')+'\n');
   console.log(`Looking at ${groups.length} group${groups.length===1?"'s":"s'"} scorecard pages (about one page every two seconds)…`);
   for(const g of groups){
     out.push('',`${g.org} (${g.key}) · ${g.lean} · ${g.issue}${g.permission?' · shown only with their permission':''}`);console.log(`${g.org}…`);
     let n=0;for(const u of g.urls){const r=await probe(u,{surnames});out.push(...r.lines.map(l=>'  '+l));
       if(r.sample){n++;await fs.writeFile(new URL(`${g.key}-${n}.${r.sample.ext}`,samples),r.sample.text);}await sleep(2000);}
+    await save();
   }
-  await fs.writeFile(new URL('data/ratings-probe.txt',root),out.join('\n')+'\n');
   console.log(`\nSaved data/ratings-probe.txt and the pages in data/ratings-samples/. Commit and push them so each group's reader can be written from what its site serves.`);
 }
