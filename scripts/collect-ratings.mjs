@@ -405,6 +405,20 @@ export function readFrcSheet(sheet){
 }
 export const FRC_PAGES=['https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate','https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_house'];
 export const quorumSheet=slug=>`https://www.quorum.us/api/sheet/${slug}/?decode_enums=false&count=false&exclude=%7B%7D&fetch_cache=true`;
+// What a visitor does on the Council for Innovation Promotion's scorecard to see every member: open its "Browse
+// Legislators" tab, then press its load-more button (or scroll its list) until there's no more. Only buttons inside the
+// scorecard are pressed (the cookie notice has a "Show more" of its own).
+export async function c4ipVisit(p,{rounds=30,pause=1200}={}){
+  const root=p.locator('#c4ip-scorecard-root');
+  await root.getByRole('button',{name:/^\s*browse legislators\s*$/i}).first().click({timeout:10000}).catch(()=>{});
+  await sleep(pause*2);
+  for(let k=0;k<rounds;k++){
+    const more=root.getByRole('button',{name:/load more|show more|see more|view more|more legislators|next/i}).first();
+    if(await more.count().catch(()=>0)&&await more.isVisible().catch(()=>false)&&await more.isEnabled().catch(()=>false))await more.click({timeout:5000}).catch(()=>{});
+    else await scrollLists(p,{rounds:1,pause:0});
+    await sleep(pause);
+  }
+}
 // Scrolls every scrolling list on a page to its end, again and again, as a visitor reading down it would, so a list that
 // loads more as it's scrolled loads all of it.
 export async function scrollLists(p,{rounds=40,pause=1200}={}){
@@ -470,7 +484,7 @@ export const READERS=[
         // Refused to a script: its page, in a browser, lists 48 at a time and loads more as the list is scrolled.
         const pages=g=>g.map(a=>{try{return JSON.parse(a.text);}catch{return null;}}).filter(j=>j?.members);
         const count=g=>new Set(pages(g).flatMap(j=>j.members.map(m=>m.bioguideId||m.member_name))).size,total=g=>Math.max(0,...pages(g).map(j=>Number(j.total)||0));
-        const got=await browse('https://c4ip.org/interactive-scorecard/',/cscp\.c4ip\.org\/public\/members\/browse/,{act:p=>scrollLists(p),need:g=>total(g)>0&&count(g)>=total(g),timeout:60000});
+        const got=await browse('https://c4ip.org/interactive-scorecard/',/cscp\.c4ip\.org\/public\/members\/browse/,{act:p=>c4ipVisit(p),need:g=>total(g)>0&&count(g)>=total(g),timeout:60000});
         if(count(got)<total(got))throw new Error(`its page loaded ${count(got)} of its ${total(got)} members, so it isn't shown yet`);
         const by=new Map();for(const j of pages(got))for(const r of readC4ip(j,{year:C4IP_YEAR}))by.set(r.bioguide||r.name,r);
         return [...by.values()];
