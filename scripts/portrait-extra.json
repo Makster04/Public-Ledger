@@ -649,5 +649,55 @@
     "file": "data/portraits/va-mizusawa.jpg",
     "credit": "Photo: U.S. Army, public domain, via Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Mizusawa.jpg"
+  },
+  "grijalva": {
+    "file": "data/portraits/grijalva.jpg",
+    "credit": "Photo: Damien Salas, Office of the Clerk U.S.House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Congresswoman_Adelita_Grijalva_Official_Portrait.jpg"
+  },
+  "gallagher": {
+    "file": "data/portraits/gallagher.jpg",
+    "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:James_Gallagher,_official_portrait_(119th_Congress).jpg"
+  },
+  "wahab": {
+    "file": "data/portraits/wahab.jpg",
+    "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Aisha_Wahab,_official_portrait_-_2026.jpg"
+  },
+  "fuller": {
+    "file": "data/portraits/fuller.jpg",
+    "credit": "Photo: Brian Thorpe, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Clay_Fuller,_official_portrait_(119th_Congress).jpg"
+  },
+  "barrett": {
+    "file": "data/portraits/barrett.jpg",
+    "credit": "Photo: Brian Thorpe, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Tom_Barrett,_official_portrait_(119th_Congress).jpg"
+  },
+  "bell": {
+    "file": "data/portraits/bell.jpg",
+    "credit": "Photo: Brian Thorpe, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Wesley_Bell,_official_portrait_(119th_Congress).jpg"
+  },
+  "mejia": {
+    "file": "data/portraits/mejia.jpg",
+    "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Analilia_Mejia,_official_portrait_(119th_Congress).jpg"
+  },
+  "vanepps": {
+    "file": "data/portraits/vanepps.jpg",
+    "credit": "Photo: House Creative Services, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Rep._Matt_Van_Epps_official_portrait,_119th_Congress.jpg"
+  },
+  "menefee": {
+    "file": "data/portraits/menefee.jpg",
+    "credit": "Photo: Brendan O'Hara, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Christian_Menefee,_official_portrait_(119th_Congress)_(2).jpg"
+  },
+  "walkinshaw": {
+    "file": "data/portraits/walkinshaw.jpg",
+    "credit": "Photo: U.S House Office of Photography, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Congressman_Walkinshaw_Official_Portrait.jpg"
   }
 }
