@@ -20,6 +20,12 @@ test('FEC seek pagination preserves exact cursor values and rejects a repeated c
   const next=fecNext(url,page);assert.equal(new URL(next).searchParams.get('last_index'),'4010120269999999999');
   assert.throws(()=>fecNext(next,page),/stopped advancing/);
   assert.equal(fecNext(next,{results:[],pagination:{}}),null);
+  // A total split by recipient, size or state ends on its last numbered page even when that page is full; a list of
+  // transactions with a full page and no cursor is still an error.
+  const full=Array.from({length:100},(_,i)=>({committee_id:`C${String(i).padStart(8,'0')}`}));
+  assert.equal(fecNext('https://api.open.fec.gov/v1/schedules/schedule_b/by_recipient_id/?recipient_id=C00000001&cycle=2024&per_page=100',{results:full,pagination:{page:1,pages:1,count:100,per_page:100}}),null);
+  assert.match(fecNext('https://api.open.fec.gov/v1/schedules/schedule_b/by_recipient_id/?recipient_id=C00000001&cycle=2024&per_page=100',{results:full,pagination:{page:1,pages:2,count:150,per_page:100}}),/page=2/);
+  assert.throws(()=>fecNext('https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00000001&per_page=100',{results:full,pagination:{pages:1,count:100,per_page:100}}),/omitted a required pagination cursor/);
 });
 test('FEC numeric identifiers are parsed without precision loss',async()=>{
   const result=await requestSource('https://api.open.fec.gov/v1/test/',{FEC_API_KEY:'test',fetch:async()=>new Response('{"results":[{"sub_id":4010120269999999999}],"pagination":{"last_indexes":{"last_index":4010120269999999999}}}')});

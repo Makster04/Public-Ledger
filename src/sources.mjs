@@ -192,6 +192,9 @@ export function fecNext(url,data) {
     return u.href;
   }
   if(p.pages!=null && Number(p.page||1)<Number(p.pages)){u.searchParams.set('page',String(Number(p.page||1)+1));return u.href;}
+  // The FEC's totals (by_size, by_state, by_recipient_id and the like) page by number: on the last page by its own count,
+  // a full page is simply the end.
+  if(p.pages!=null && /\/by_[a-z_]+\/?$/.test(u.pathname) && Number(p.page||1)>=Number(p.pages)) return null;
   // Seek endpoints must supply a cursor for a full page; never publish an accidental partial result.
   if(/\/schedules\//.test(u.pathname)&&data.results.length>=Number(u.searchParams.get('per_page')||100)) throw new SourceError('FEC omitted a required pagination cursor');
   return null;
