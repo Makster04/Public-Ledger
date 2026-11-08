@@ -1,6 +1,5 @@
-// The interest groups whose scorecards are drawn by their pages' own scripts (Planned Parenthood Action, Americans for
-// Prosperity, the U.S. Chamber of Commerce: npm run ratings:probe finds no ratings in what their sites send), opened in a
-// browser so their readers can be written from the real thing. Nothing here is scored or shown on the site.
+// The interest groups whose scorecards are drawn by their pages' own scripts (npm run ratings:probe finds no ratings in
+// what their sites send), opened in a browser so their readers can be written from the real thing. Nothing here is scored or shown on the site.
 //   npm install --no-save playwright && npx playwright install chromium     (once; package.json is unchanged)
 //   npm run ratings:browse                                   every group below
 //   npm run ratings:browse -- --only afp                     one of them
@@ -21,9 +20,12 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const MAX=400000;
 
 export const PAGES=[
-  {key:'ppaction',org:'Planned Parenthood Action',urls:['https://www.plannedparenthoodaction.org/congressional-scorecard']},
-  {key:'afp',org:'Americans for Prosperity',urls:['https://americansforprosperity.org/national-scorecard/']},
-  {key:'chamber',org:'U.S. Chamber of Commerce',urls:['https://www.uschamber.com/how-they-voted','https://www.uschamber.com/htv']},
+  // Planned Parenthood Action, Americans for Prosperity: read (their pages' data addresses, found here, November 2026).
+  // The U.S. Chamber of Commerce: its How They Voted page drew no ratings and loaded none.
+  {key:'cpac',org:'CPAC',urls:['https://www.cpac.org/foundation/ratings/us']},
+  {key:'standwithcrypto',org:'Stand With Crypto',urls:['https://www.standwithcrypto.org/politicians']},
+  {key:'norml',org:'NORML',urls:['https://vote.norml.org/']},
+  {key:'c4ip',org:'Council for Innovation Promotion',urls:['https://c4ip.org/interactive-scorecard/']},
 ];
 
 // A bot check, from what the page shows (its title and visible text), not from words in its code.

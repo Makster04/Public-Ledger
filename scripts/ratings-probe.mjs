@@ -11,6 +11,8 @@ import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {sampleOf,scriptAddresses,botCheck} from './county-results.mjs';
 import {Worker} from 'node:worker_threads';
+import {xlsxText} from './xlsx.mjs';
+import {PROBED} from './collect-ratings.mjs';
 
 const root=new URL('../',import.meta.url);
 const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; interest group scorecards)';
@@ -41,41 +43,42 @@ export const GROUPS=[
   {key:'ppaction',org:'Planned Parenthood Action',lean:'liberal',issue:'Abortion',urls:['https://www.plannedparenthoodaction.org/congressional-scorecard','https://www.plannedparenthoodaction.org/congressional-scorecard/senate','https://www.plannedparenthoodaction.org/congressional-scorecard/house']},
   {key:'rfa',org:'Reproductive Freedom for All',lean:'liberal',issue:'Abortion',urls:['https://reproductivefreedomforall.org/congressional-record/','https://reproductivefreedomforall.org/scorecard/']},
   // Added November 8, 2026: every other group found publishing ratings of members of Congress, with the side and row
-  // chosen for each. lean 'none': shown beside the others, never counted in the Ratings lean.
-  {key:'nssf',org:'National Shooting Sports Foundation',lean:'conservative',issue:'Guns',urls:['https://www.nssf.org/articles/nssf-releases-2026-congressional-report-card/','https://www.nssf.org/download/nssf-congressional-report-card/']},
+  // chosen for each. lean 'none': shown beside the others, never counted in the Ratings lean. Where the first look found
+  // the ratings in a document its page links to (a PDF, a spreadsheet, a scorecard site), the addresses are those.
+  {key:'nssf',org:'National Shooting Sports Foundation',lean:'conservative',issue:'Guns',urls:['https://www.nssf.org/government-relations/report-card/','https://www.nssf.org/download/nssf-congressional-report-card/?wpdmdl=62675']},
   {key:'goa',org:'Gun Owners of America',lean:'conservative',issue:'Guns',urls:['https://www.gunowners.org/congressional-ratings/','https://www.gunowners.org/scorecard/']},
   {key:'sfla',org:'Students for Life Action',lean:'conservative',issue:'Abortion',urls:['https://www.studentsforlifeaction.org/pro-life-generation-report-card-update-know-the-bills-were-tracking-119th-congressional-session']},
-  {key:'aea',org:'American Energy Alliance',lean:'conservative',issue:'Environment',urls:['https://www.americanenergyalliance.org/category/congress','https://www.americanenergyalliance.org/?p=16915']},
+  {key:'aea',org:'American Energy Alliance',lean:'conservative',issue:'Environment',urls:['https://www.americanenergyalliance.org/american-energy-scorecard/','https://www.americanenergyalliance.org/energy-scorecard/','https://www.americanenergyalliance.org/2026/09/american-energy-alliance-releases-2026-american-energy-scorecard/']},
   {key:'defenders',org:'Defenders of Wildlife',lean:'liberal',issue:'Environment',urls:['https://defenders.org/conservation-report-card','https://defenders.org/sites/default/files/2026-03/Conservation-Report-Card-2025.pdf']},
-  {key:'climatehawks',org:'Climate Hawks Vote',lean:'liberal',issue:'Environment',urls:['https://climatehawksvote.com/','https://climatehawksvote.com/scorecard/ohio/']},
-  {key:'cwa',org:'Communications Workers of America',lean:'liberal',issue:'Labor',urls:['https://cwa-union.org/cwa-congressional-scorecard','https://cwapolitical.org/cwa-congressional-scorecard']},
+  {key:'climatehawks',org:'Climate Hawks Vote',lean:'liberal',issue:'Environment',urls:['https://climatehawksvote.com/scorecard/','https://climatehawksvote.com/scorecard/ohio/']},
+  {key:'cwa',org:'Communications Workers of America',lean:'liberal',issue:'Labor',urls:['https://scorecard.cwa-union.org/']},
   {key:'teamsters',org:'Teamsters',lean:'liberal',issue:'Labor',urls:['https://teamster.org/political-legislative-scorecards/']},
   {key:'apwu',org:'American Postal Workers Union',lean:'liberal',issue:'Labor',urls:['https://apwu.org/congressional-voting-records/']},
-  {key:'ntu',org:'National Taxpayers Union',lean:'conservative',issue:'Taxes & spending',urls:['https://www.ntu.org/ratescongress','https://www.ntu.org/library/doclib/2026/05/2025-NTURC.pdf']},
-  {key:'ccagw',org:'Council for Citizens Against Government Waste',lean:'conservative',issue:'Taxes & spending',urls:['https://ccagw.org/ccagw-releases-2025-congressional-ratings/']},
-  {key:'network',org:'NETWORK Lobby for Catholic Social Justice',lean:'liberal',issue:'Taxes & spending',urls:['https://networklobby.org/?p=45742']},
+  {key:'ntu',org:'National Taxpayers Union',lean:'conservative',issue:'Taxes & spending',urls:['https://www.ntu.org/ratecongress/legislator/SearchResult','https://www.ntu.org/library/doclib/2026/05/NTURC2025rollcalls.xlsx']},
+  {key:'ccagw',org:'Council for Citizens Against Government Waste',lean:'conservative',issue:'Taxes & spending',urls:['https://ccagwratings.org/']},
+  {key:'network',org:'NETWORK Lobby for Catholic Social Justice',lean:'liberal',issue:'Taxes & spending',urls:['https://media.networklobby.org/uploads/2026/01/2025-NETWORK-Voting-Record.pdf']},
   {key:'naacp',org:'NAACP',lean:'liberal',issue:'Civil rights',urls:['https://naacp.org/find-resources/legislative-report-cards']},
-  {key:'civilrights',org:'The Leadership Conference on Civil and Human Rights',lean:'liberal',issue:'Civil rights',urls:['https://civilrights.org/voting-record/']},
-  {key:'aauw',org:'AAUW',lean:'liberal',issue:'Civil rights',urls:['https://www.aauwaction.org/voter-education/congressional-voting-record/']},
-  {key:'cpac',org:'CPAC',lean:'conservative',issue:'Overall',urls:['https://www.cpac.org/foundation/ratings/us','https://www.cpac.org/us/ratings']},
-  {key:'jbs',org:'John Birch Society (Freedom Index)',lean:'conservative',issue:'Overall',urls:['https://thenewamerican.com/files/Freedom_Index_119-2.pdf','https://thenewamerican.com/freedom-index/report/scorecard-118-4']},
+  {key:'civilrights',org:'The Leadership Conference on Civil and Human Rights',lean:'liberal',issue:'Civil rights',urls:['https://civilrights.org/wp-content/uploads/2026/10/119th-Congress.pdf']},
+  {key:'aauw',org:'AAUW',lean:'liberal',issue:'Civil rights',urls:['https://act.aauw.org/CVR2026']},
+  {key:'cpac',org:'CPAC',lean:'conservative',issue:'Overall',urls:['https://dea0d469-c1d7-4068-bddd-0a3895cc096b.usrfiles.com/ugd/dea0d4_1fbfb19d94774b4a889fd895daf6b73c.pdf','https://ratings.conservative.org/']},
+  {key:'jbs',org:'John Birch Society (Freedom Index)',lean:'conservative',issue:'Overall',urls:['https://freedomindex.us/us/legislators/','https://freedomindex.us/us/report/255/','https://thenewamerican.com/files/Freedom_Index_119-3.pdf']},
   {key:'rlc',org:'Republican Liberty Caucus (Liberty Index)',lean:'conservative',issue:'Overall',urls:['https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-Senate.pdf','https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-House.pdf']},
-  {key:'progressivepunch',org:'ProgressivePunch',lean:'liberal',issue:'Overall',urls:['https://www.progressivepunch.org/scores.htm','https://progressivepunch.org/whatIsProgScore.htm']},
-  {key:'ada',org:'Americans for Democratic Action',lean:'liberal',issue:'Overall',urls:['https://adaction.org/','https://adaction.org/wp-content/uploads/2024/09/2023.pdf']},
+  {key:'progressivepunch',org:'ProgressivePunch',lean:'liberal',issue:'Overall',urls:['https://www.progressivepunch.org/','https://www.progressivepunch.org/scores.htm?house=house']},
+  {key:'ada',org:'Americans for Democratic Action',lean:'liberal',issue:'Overall',urls:['https://adaction.org/','https://adaction.org/voting-records/']},
   {key:'numbersusa',org:'NumbersUSA',lean:'conservative',issue:'Immigration',urls:['https://grades.numbersusa.com/','https://grades.numbersusa.com/search/']},
-  {key:'frc',org:'FRC Action',lean:'conservative',issue:'Family & religion',urls:['https://www.frcaction.org/scorecard']},
-  {key:'ncpssm',org:'National Committee to Preserve Social Security and Medicare',lean:'liberal',issue:'Seniors',urls:['https://www.ncpssm.org/scorecard/','https://www.ncpssm.org/wp-content/uploads/2026/08/Congressional-Scorecard-2026-final.pdf']},
+  {key:'frc',org:'FRC Action',lean:'conservative',issue:'Family & religion',urls:['https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate','https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_house']},
+  {key:'ncpssm',org:'National Committee to Preserve Social Security and Medicare',lean:'liberal',issue:'Seniors',urls:['https://www.ncpssm.org/119th-congress/','https://www.ncpssm.org/scorecard/vote-descriptions/']},
   {key:'ara',org:'Alliance for Retired Americans',lean:'liberal',issue:'Seniors',urls:['https://retiredamericans.org/voting-record/embed/','https://retiredamericans.org/wp-content/uploads/2026/03/2025-Congressional-Voting-Record.pdf']},
   {key:'ecu',org:'End Citizens United',lean:'liberal',issue:'Money in politics',urls:['https://www.endcitizensunited.org/end-citizens-united-action-fund-releases-anti-corruption-scorecard-for-119th-congress']},
-  {key:'commoncause',org:'Common Cause',lean:'liberal',issue:'Money in politics',urls:['https://www.commoncause.org/press/democracy-scorecard-tracks-lawmaker-support-for-pro-democracy-bills-in-118th-congress/']},
-  {key:'humane',org:'Humane World Action Fund',lean:'liberal',issue:'Animal welfare',urls:['https://humaneaction.org/humane-scorecard','https://humaneaction.org/sites/default/files/2026-02/FINAL%20humane-scorecard-2025.pdf']},
+  {key:'commoncause',org:'Common Cause',lean:'liberal',issue:'Money in politics',urls:['https://democracyscorecard.org/']},
+  {key:'humane',org:'Humane World Action Fund',lean:'liberal',issue:'Animal welfare',urls:['https://humaneaction.org/current_scorecard']},
   {key:'standwithcrypto',org:'Stand With Crypto',lean:'conservative',issue:'Crypto & tech',urls:['https://www.standwithcrypto.org/politicians']},
-  {key:'c4ip',org:'Council for Innovation Promotion',lean:'none',issue:'Crypto & tech',urls:['https://c4ip.org/resources/congressional-innovation-scorecard/','https://c4ip.org/wp-content/uploads/2026/05/C4IP-Congressional-Innovation-Scorecard-Third-Edition.pdf']},
-  {key:'ajp',org:'AJP Action',lean:'liberal',issue:'Israel, Palestine & Iran',urls:['https://ajpaction.org/scorecard2026/','https://ajpaction.org/wp-content/uploads/2026/05/2026-AJP-Action-Congressional-Scorecard.pdf']},
+  {key:'c4ip',org:'Council for Innovation Promotion',lean:'none',issue:'Crypto & tech',urls:['https://c4ip.org/interactive-scorecard/','https://c4ip.org/wp-content/uploads/2026/05/C4IP-Congressional-Innovation-Scorecard-Third-Edition.pdf']},
+  {key:'ajp',org:'AJP Action',lean:'liberal',issue:'Israel, Palestine & Iran',urls:['https://ajpaction.org/wp-content/uploads/2026/05/AJP-Action-Congressional-Scorecard-2026.xlsx','https://ajpaction.org/scorecard2026/']},
   {key:'imeu',org:'IMEU Policy Project',lean:'liberal',issue:'Israel, Palestine & Iran',urls:['https://imeupolicyproject.org/scorecard']},
-  {key:'niac',org:'NIAC Action',lean:'liberal',issue:'Israel, Palestine & Iran',urls:['https://niacouncil.org/homepage_carousel/niac-action-congressional-scorecard/']},
+  {key:'niac',org:'NIAC Action',lean:'liberal',issue:'Israel, Palestine & Iran',urls:['https://scorecard.niacaction.org/']},
   {key:'napo',org:'National Association of Police Organizations',lean:'conservative',issue:'Policing',urls:['https://www.napo.org/legislative-scorecard/']},
-  {key:'norml',org:'NORML',lean:'liberal',issue:'Marijuana',urls:['https://norml.org/congressional-scorecard/','https://norml.org/congressional-scorecard/mississippi']},
+  {key:'norml',org:'NORML',lean:'liberal',issue:'Marijuana',urls:['https://vote.norml.org/']},
   {key:'lugar',org:'The Lugar Center (Bipartisan Index)',lean:'none',issue:'Bipartisanship',urls:['https://www.thelugarcenter.org/ourwork-Bipartisan-Index.html']},
   // ACLU and HRC: probed only to see what they publish; their ratings wait on their permission (.03_Future_Goals.md).
   {key:'hrc',org:'Human Rights Campaign',lean:'liberal',issue:'Civil rights',permission:true,urls:['https://www.hrc.org/resources/congressional-scorecard']},
@@ -129,6 +132,15 @@ export async function probe(u,{get=fetch,surnames=[]}={}){
     lines.push(`    starts: ${t.slice(0,240).replace(/\s+/g,' ')}`);
     return {lines,sample:{ext:'txt',text:t.slice(0,150000)}};
   }
+  // A spreadsheet (.xlsx, a zip): its sheets as text.
+  if(bytes[0]===0x50&&bytes[1]===0x4b||/spreadsheetml|ms-excel/i.test(type)){
+    let t='';try{t=xlsxText(bytes);}catch{}
+    if(!t.trim()){lines.push('    A spreadsheet that couldn\'t be read.');return {lines,sample:null};}
+    const names=namesOn(t,surnames);
+    lines.push(`    A spreadsheet: ${t.split('\n').length.toLocaleString('en-US')} rows; profiled members named in it: ${names.length}${names.length?` (${names.slice(0,12).join(', ')}${names.length>12?' …':''})`:''}`);
+    lines.push(`    starts: ${t.slice(0,240).replace(/\s+/g,' ')}`);
+    return {lines,sample:{ext:'txt',text:t.slice(0,150000)}};
+  }
   if(/^\s*[{[]/.test(text.slice(0,200))){
     try{const j=JSON.parse(text),first=Array.isArray(j)?j[0]:j;lines.push(`    JSON: ${Array.isArray(j)?`a list of ${j.length}; first item's keys: `:'keys: '}${first&&typeof first==='object'?Object.keys(first).slice(0,20).join(', '):''}`);}
     catch{lines.push('    JSON that doesn\'t read (cut off?)');}
@@ -157,7 +169,9 @@ export async function probe(u,{get=fetch,surnames=[]}={}){
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
-  const args=process.argv.slice(2),i=args.indexOf('--only'),only=i>=0?new Set(String(args[i+1]||'').split(',')):null;
+  const args=process.argv.slice(2),i=args.indexOf('--only');
+  // --to-build: the groups whose reader is still to be written (PROBED in scripts/collect-ratings.mjs).
+  const only=i>=0?new Set(String(args[i+1]||'').split(',')):args.includes('--to-build')?new Set(Object.entries(PROBED).filter(([,x])=>x[3]==='to-build').map(([k])=>k)):null;
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
   const surnames=[...new Set([...research.members,...research.cands].map(p=>String(p.name).replace(/\b(Jr|Sr|III|II)\b\.?/g,'').trim().split(/\s+/).pop()))];
   const groups=GROUPS.filter(g=>!only||only.has(g.key));
