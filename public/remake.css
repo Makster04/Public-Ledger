@@ -946,6 +946,9 @@ input, select { accent-color: var(--accent); }
 .st-check-n { font-family: var(--font-mono); font-size: 1rem; }
 .st-check-n b { font-family: var(--font-display); font-size: 1.5rem; }
 .st-pairs td { font-size: .85rem; }
+.st-pairs .st-rg { display: inline-block; min-width: 1.7em; padding: 0 5px; border: 1px solid currentColor; border-radius: 6px; text-align: center; font-family: var(--font-mono); font-size: .9rem; line-height: 1.35; }
+@supports (background: color-mix(in srgb, currentColor 14%, transparent)) { .st-pairs .st-rg { background: color-mix(in srgb, currentColor 14%, transparent); } }
+.st-pairs .small .st-rg { font-size: .78rem; min-width: 1.5em; padding: 0 3px; }
 /* Report card: Ideology and the five grades */
 .hc-six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .profile-report .hc-rc.hc-six { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }

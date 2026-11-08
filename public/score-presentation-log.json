@@ -20,6 +20,10 @@
     {
       "date": "2026-11-08",
       "note": "Rule change: basic profiles (every senator and, new, every House member without a reviewed profile) now get Ideology, Shows Up and People First from official records alone, figured the same way as on the full profiles: their positions on the coded roll calls (filled in by scripts/fill-vote-positions.mjs), their attendance and their bills. Keeps Their Word, Unbought and Above Board still wait on reviewed research. Before, basic profiles showed no scores."
+    },
+    {
+      "date": "2026-11-08",
+      "note": "Interest-group ratings on the Ideology tab are shown as letter grades: a group's percent becomes a letter on the site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with the group's percent beside it, and a group's own letter grades are shown as given. Each letter is colored like the site's grades, from green (the group rates them highly) to red (poorly). Display only: the ratings file still holds each rating exactly as published, and the Ratings lean is unchanged."
     }
   ]
 }

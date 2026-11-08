@@ -49,8 +49,10 @@ letter:
 1. **Overall lean:** one number on the scale, and a strip showing where they sit among their party and their chamber.
 2. **Lean on each issue:** health care, taxes, immigration, abortion, civil rights, guns, climate, labor, voting and
    the rest, each on the same scale, with the votes and statements behind it.
-3. **Group ratings:** the grades interest groups give them, shown in opposing pairs, exactly as each group published
-   them, with the year and a link.
+3. **Group ratings:** the grades interest groups give them, shown in opposing pairs, with the year and a link. A group
+   that scores in percent is shown as a letter on the site's scale (A 90 and up, B 80, C 70, D 60, F below 60) with its
+   percent beside it; a group that gives letter grades is shown with its own. Each letter is colored like the site's
+   grades (green high to red low): how highly that group rates them, not a judgment of the group or the person.
 4. **DW-NOMINATE:** Voteview's career score, as an independent check.
 5. **Your Match:** you set your own position on each issue, and the tab shows how close they are to you.
 
