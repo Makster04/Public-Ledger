@@ -1,4 +1,4 @@
-Interest group scorecards probe, 2026-11-07T17:52:03.892Z: what each group's scorecard pages serve, for writing its reader.
+Interest group scorecards probe, 2026-11-08T22:16:16.787Z: what each group's scorecard pages serve, for writing its reader.
 
 Heritage Action for America (heritage) · conservative · Overall
   https://heritageaction.com/scorecard → HTTP 200, text/html, 43 KB
@@ -55,7 +55,7 @@ Club for Growth (clubforgrowth) · conservative · Taxes & spending
       link: House vote descriptions → https://www.clubforgrowth.org/wp-content/uploads/2023/09/2022-house-scorecard.pdf
       link: Senate → https://www.clubforgrowth.org/scorecards/app/?party=all&chamber=S&yr=2022&state=all&rep
       data addresses in its scripts: application/ld+json · //fonts.googleapis.com · application/json+oembed · https://www.clubforgrowth.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.clubforgrowth.org%2Fscorecards%2F · https://fonts.googleapis.com/css?family=Roboto+Condensed:400 · https://api.w.org/ · https://www.clubforgrowth.org/wp-json/ · application/json · https://www.clubforgrowth.org/wp-json/wp/v2/pages/708 · https://www.youtube.com/iframe_api · https://www.clubforgrowth.org/category/key-votes/ · https://www.clubforgrowth.org/wp-content/uploads/2019/02/2018-House-Scorecard-Vote-Description-for-Website.pdf · https://www.clubforgrowth.org/wp-content/uploads/2019/02/2018-Senate-Scorecard-Vote-Description-for-website.pdf · https://www.clubforgrowth.org/key-vote-alert-senate-yes-on-the-motion-to-invoke-cloture-on-the-motion-proceed-to-the-digital-asset-market-clarity-act/ · https://www.clubforgrowth.org/key-vote-alert-house-yes-on-hjres-1/ · https://www.clubforgrowth.org/key-vote-alert-house-senate-no-on-the-faster-labor-contracts-act/ · https://www.clubforgrowth.org/key-vote-alert-senate-yes-support-for-talking-filibuster-to-pass-the-save-america-act/ · /category/key-votes/
-  https://www.clubforgrowth.org/scorecards/app/?party=all&chamber=S&yr=2025&state=all&rep → HTTP 200, text/html, 200 KB
+  https://www.clubforgrowth.org/scorecards/app/?party=all&chamber=S&yr=2025&state=all&rep → HTTP 200, text/html, 199 KB
       title: Club for Growth Foundation Scorecard · 12,502 characters of text
       profiled members named on the page: 10 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Thomas, Husted, Ricketts, Murphy)
       link: Scorecards → https://www.clubforgrowth.org/scorecards/
@@ -122,13 +122,116 @@ Club for Growth (clubforgrowth) · conservative · Taxes & spending
 
 Americans for Prosperity (afp) · conservative · Taxes & spending
   https://americansforprosperity.org/national-scorecard/ → HTTP 200, text/html, 73 KB
-      title: Congress Voting Records: Track Lawmakers&#039; Key Votes · 1,082 characters of text
+      title: Congress Voting Records: Track Lawmakers&#039; Key Votes · 1,086 characters of text
       profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
       link: Scorecard → https://americansforprosperity.org/national-scorecard/
       link: Intelligence Report → https://americansforprosperity.org/newsroom/intelligence-report/
       data addresses in its scripts: application/ld+json · application/json+oembed · https://americansforprosperity.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Famericansforprosperity.org%2Fnational-scorecard%2F · https://api.w.org/ · https://americansforprosperity.org/wp-json/ · application/json · https://americansforprosperity.org/wp-json/wp/v2/pages/205238 · https://americansforprosperity.org/wp-content/themes/northstar/components/assets/vendor/d3/states-10m.json
   https://americansforprosperity.org/wp-json/ → HTTP 200, application/json, 463 KB
       JSON: keys: name, description, url, home, gmt_offset, timezone_string, page_for_posts, page_on_front, show_on_front, namespaces, authentication, routes, site_logo, site_icon, site_icon_url, multisite, _links
+
+Senate Conservatives Fund (scf) · conservative · Overall
+  https://senateconservatives.com/scorecard → HTTP 404 (now https://www.senateconservatives.com/scorecard), text/html, 1 KB
+      title: Error 404 · 74 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Go Back → https://www.senateconservatives.com/
+      data addresses in its scripts: https://fonts.googleapis.com/css?family=Abel
+
+NRA (nra) · conservative · Guns
+  https://www.nrapvf.org/grades/ → HTTP 200, text/html, 111 KB
+      title: NRA-PVF | Grades and Endorsements · 9,316 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Grades & Endorsements → https://www.nrapvf.org/grades/
+      link: Manage Your Membership → https://www.nramemberservices.org/
+      link: NRA Member Benefits → https://benefits.nra.org/
+      link: Manage Your Membership → https://www.nramemberservices.org/Home.aspx
+      link: NRA Whittington Center → https://www.nrawc.org/support-us/membership/
+      link: NRA Endorsed Member Insurance → https://www.nraapprovedservices.com/
+      link: NRA Membership Recruiting → https://recruiting.nra.org/
+      link: NRA Membership For Women → https://membership.nra.org/WomenOfNRA/Join
+      link: NRA Life Membership → https://membership.nra.org/Join/Life/Choose
+      link: Renew or Upgrade Your Membership → https://www.nra.org/redirects/nra/renew
+      link: NRA Junior Membership → https://joinnra.nra.org/join/Junior.aspx
+      link: Register To Vote → https://www.triggerthevote.org/register-to-vote/
+      link: Eddie Eagle Treehouse → https://www.eddieeagle.com/
+      link: Find Your Location Now → http://www.triggerthevote.org/find-polling-place/
+      link: Check Your Registration Status Now → http://www.triggerthevote.org/registered/
+      link: NRA-PVF Endorses and Issues “A+” Rating to Tom Tiffany for W → https://www.nrapvf.org/articles/20260713/nra-pvf-endorses-and-issues-aplus-rating-to-tom-tiffany-for-wisconsin-governor
+      link: NRA-PVF Endorses Sen. Marsha Blackburn for Tennessee Governo → https://www.nrapvf.org/articles/20260713/nra-pvf-endorses-sen-marsha-blackburn-for-tennessee-governor-issues-aplus-rating
+      link: NRA-PVF Issues “A+” Rating and Endorses Senator Ty Masterson → https://www.nrapvf.org/articles/20260708/nra-pvf-issues-aplus-rating-and-endorses-senator-ty-masterson-for-kansas-governor
+      link: NRA’s Political Victory Fund Endorses Lieutenant Governor Wi → https://www.nrapvf.org/articles/20250806/nra-s-political-victory-fund-endorses-lieutenant-governor-winsome-sears-attorney-general-jason-miyares-and-john-reid
+      link: NRA Political Victory Fund Endorses Brad Schimel for Electio → https://www.nrapvf.org/articles/20250213/nra-political-victory-fund-endorses-brad-schimel-for-election-to-the-wisconsin-supreme-court
+      data addresses in its scripts: https://www.triggerthevote.org/register-to-vote/ · http://www.triggerthevote.org/find-polling-place/ · http://www.triggerthevote.org/registered/ · https://www.triggerthevote.org/find-my-polling-place/
+  https://www.nrapvf.org/ → HTTP 200, text/html, 129 KB
+      title: NRA-PVF | EXPLORE NRA-PVF · 10,481 characters of text
+      profiled members named on the page: 1 (Talarico)
+      link: Grades & Endorsements → https://www.nrapvf.org/grades/
+      link: Manage Your Membership → https://www.nramemberservices.org/
+      link: NRA Member Benefits → https://benefits.nra.org/
+      link: Manage Your Membership → https://www.nramemberservices.org/Home.aspx
+      link: NRA Whittington Center → https://www.nrawc.org/support-us/membership/
+      link: NRA Endorsed Member Insurance → https://www.nraapprovedservices.com/
+      link: NRA Membership Recruiting → https://recruiting.nra.org/
+      link: NRA Membership For Women → https://membership.nra.org/WomenOfNRA/Join
+      link: NRA Life Membership → https://membership.nra.org/Join/Life/Choose
+      link: Renew or Upgrade Your Membership → https://www.nra.org/redirects/nra/renew
+      link: NRA Junior Membership → https://joinnra.nra.org/join/Junior.aspx
+      link: Register To Vote → https://www.triggerthevote.org/register-to-vote/
+      link: Eddie Eagle Treehouse → https://www.eddieeagle.com/
+      link: (no text) → https://www.nrapvf.org/campaigns/2026/defeat-talarico/
+      link: (no text) → https://www.nrapvf.org/articles/20260713/nra-pvf-endorses-and-issues-aplus-rating-to-tom-tiffany-for-wisconsin-governor
+      link: (no text) → https://www.nrapvf.org/articles/20260713/nra-pvf-endorses-sen-marsha-blackburn-for-tennessee-governor-issues-aplus-rating
+      link: (no text) → https://www.nrapvf.org/articles/20260708/nra-pvf-issues-aplus-rating-and-endorses-senator-ty-masterson-for-kansas-governor
+      link: Please Vote for NRA-PVF Endorsed Candidates in New Jersey → https://www.nrapvf.org/campaigns/2025/new-jersey-disclaimer/
+      link: (no text) → https://www.nrapvf.org/articles/20250806/nra-s-political-victory-fund-endorses-lieutenant-governor-winsome-sears-attorney-general-jason-miyares-and-john-reid
+      link: (no text) → https://www.nrapvf.org/articles/20250213/nra-political-victory-fund-endorses-brad-schimel-for-election-to-the-wisconsin-supreme-court
+      data addresses in its scripts: https://www.triggerthevote.org/register-to-vote/ · /campaigns/2024/votetrump/ · /campaigns/2024/voterobinson/ · https://www.triggerthevote.org/find-my-polling-place/
+
+SBA Pro-Life America (sba) · conservative · Abortion
+  https://sbaprolife.org/scorecard → HTTP 200, text/html, 946 KB
+      title: Scorecard - SBA Pro-Life America · 45,262 characters of text
+      profiled members named on the page: 32 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+      link: Voter Contact Program → https://sbaprolife.org/voter-contact-program
+      link: 2026 Election Report → https://sbaprolife.org/voter-contact-program/2026-election-report
+      link: Scorecard → https://sbaprolife.org/scorecard
+      link: See Their Ratings → https://sbaprolife.org/scorecard/
+      link: Learn More → https://sbaprolife.org/voter-contact-program/student-deployments
+      link: Election Report → https://sbaprolife.org/voter-contact-program/2024-election-report
+      link: SBA Releases Memo on 2026 Midterm Election Results → https://sbaprolife.org/newsroom/press-releases/sba-releases-memo-on-2026-midterm-election-results
+      link: Nation’s Largest Pro-Life Voter Contact Program Reaches 10.5 → https://sbaprolife.org/newsroom/press-releases/nations-largest-pro-life-voter-contact-program-reaches-10-5m-midterms-stop-democrat-extremists
+      link: Tammy Baldwin → https://sbaprolife.org/senator/tammy-baldwin/
+      link: Michael Bennet → https://sbaprolife.org/senator/michael-bennet/
+      link: Marsha Blackburn → https://sbaprolife.org/senator/marsha-blackburn/
+      link: Richard Blumenthal → https://sbaprolife.org/senator/richard-blumenthal/
+      link: Lisa Blunt Rochester → https://sbaprolife.org/senator/lisa-blunt-rochester/
+      link: Cory Booker → https://sbaprolife.org/senator/cory-booker/
+      link: John Boozman → https://sbaprolife.org/senator/john-boozman/
+      link: Katie Britt → https://sbaprolife.org/senator/katie-britt/
+      link: Ted Budd → https://sbaprolife.org/senator/ted-budd/
+      link: Maria Cantwell → https://sbaprolife.org/senator/maria-cantwell/
+      link: Shelley Moore Capito → https://sbaprolife.org/senator/shelley-moore-capito/
+      link: Bill Cassidy → https://sbaprolife.org/senator/bill-cassidy/
+      table: 132 rows; first: Senator | Party | State | Rating | Status; second: Tammy Baldwin | Democrat | Wisconsin | F | Current
+      table: 669 rows; first: Representative | Party | District | Rating | Status; second: Tom Cole | Republican | OK-04 | A+ | Current
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · application/json+oembed · https://sbaprolife.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsbaprolife.org%2Fscorecard · https://api.w.org/ · https://sbaprolife.org/wp-json/ · application/json · https://sbaprolife.org/wp-json/wp/v2/pages/8 · https://sbaprolife.org/voter-contact-program · https://sbaprolife.org/voter-contact-program/2026-election-report · /voter-contact-program/student-deployments · https://sbaprolife.org/voter-contact-program/2024-election-report · https://sbaprolife.org/newsroom/press-releases/nations-largest-pro-life-voter-contact-program-reaches-10-5m-midterms-stop-democrat-extremists · /voter-contact-program · /voter-contact-program/2026-election-report · https://sbaprolife.org/senator/shelley-moore-capito/ · https://scadmin.sbaprolife.org/api/images/house/rep-1269779.jpe · https://scadmin.sbaprolife.org/api/images/house/rep-412654.jpe · https://scadmin.sbaprolife.org/api/images/house/rep-1269799.jpe · https://scadmin.sbaprolife.org/api/images/house/rep-2849996.jpe · https://scadmin.sbaprolife.org/api/images/house/rep-2259312.jpe · https://sbaprolife.org/tracked-votes/ · https://sbaprolife.org/wp-json/pum/v1
+  https://sbaprolife.org/national-pro-life-scorecard → HTTP 200, text/html, 167 KB
+      title: National Pro-life Scorecard - SBA Pro-Life America · 11,489 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Voter Contact Program → https://sbaprolife.org/voter-contact-program
+      link: 2026 Election Report → https://sbaprolife.org/voter-contact-program/2026-election-report
+      link: Scorecard → https://sbaprolife.org/scorecard
+      link: See Their Ratings → https://sbaprolife.org/scorecard/
+      link: Learn More → https://sbaprolife.org/voter-contact-program/student-deployments
+      link: Election Report → https://sbaprolife.org/voter-contact-program/2024-election-report
+      link: SBA Releases Memo on 2026 Midterm Election Results → https://sbaprolife.org/newsroom/press-releases/sba-releases-memo-on-2026-midterm-election-results
+      link: Nation’s Largest Pro-Life Voter Contact Program Reaches 10.5 → https://sbaprolife.org/newsroom/press-releases/nations-largest-pro-life-voter-contact-program-reaches-10-5m-midterms-stop-democrat-extremists
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · https://sbaprolife.org/category/ewtn-pro-life-weekly/national-pro-life-scorecard/feed · https://api.w.org/ · https://sbaprolife.org/wp-json/ · application/json · https://sbaprolife.org/wp-json/wp/v2/categories/313 · https://sbaprolife.org/voter-contact-program · https://sbaprolife.org/voter-contact-program/2026-election-report · /voter-contact-program/student-deployments · https://sbaprolife.org/voter-contact-program/2024-election-report · https://sbaprolife.org/newsroom/press-releases/nations-largest-pro-life-voter-contact-program-reaches-10-5m-midterms-stop-democrat-extremists · /voter-contact-program · /voter-contact-program/2026-election-report · https://sbaprolife.org/wp-json/pum/v1
+
+National Right to Life (nrlc) · conservative · Abortion
+  https://www.nrlc.org/federal/scorecard/ → HTTP 403, text/html, 5 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
+  https://www.nrlc.org/federal/votingrecords/ → HTTP 403, text/html, 5 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
 
 U.S. Chamber of Commerce (chamber) · conservative · Labor
   https://www.uschamber.com/how-they-voted → HTTP 200, text/html, 73 KB
@@ -143,6 +246,185 @@ U.S. Chamber of Commerce (chamber) · conservative · Labor
       link: View the Chamber's Annual scorecard → https://www.uschamber.com/htv
       link: B20 USA 2026 → https://www.uschamber.com/major-initiative/b20-summit-2026
       data addresses in its scripts: https://www.uschamber.com/improving-government/how-they-voted-methodology · application/ld+json · application/json
+
+NFIB (nfib) · conservative · Labor
+  https://www.nfib.com/advocacy/how-congress-voted/ → HTTP 403, text/html, 0 KB
+      title: Error 403 Forbidden · 33 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+  https://www.nfib.com/advocacy/voting-records/ → HTTP 403, text/html, 0 KB
+      title: Error 403 Forbidden · 33 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+
+League of Conservation Voters (lcv) · liberal · Environment
+  https://scorecard.lcv.org/ → HTTP 200 (now https://www.lcv.org/congressional-scorecard/), text/html, 947 KB
+      title: LCV National Environmental Scorecard · 4,726 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Congressional Scorecard → https://www.lcv.org/congressional-scorecard/
+      link: Members of Congress → https://www.lcv.org/congressional-scorecard/members-of-congress/
+      link: Congressional Votes → https://www.lcv.org/congressional-scorecard/congressional-votes/
+      link: 2025 Scorecard Overview → https://www.lcv.org/congressional-scorecard/scorecard-overview/
+      link: 2025 Climate Champions of Color → https://www.lcv.org/congressional-scorecard/champions-of-color/
+      link: About the Scorecard → https://www.lcv.org/congressional-scorecard/about-the-scorecard/
+      link: Scorecard Archive → https://www.lcv.org/congressional-scorecard/scorecard-archive/
+      link: (no text) → https://bsky.app/intent/compose?text=Congressional+Scorecard+https%3A%2F%2Fwww.lcv.org%2Fcongressional-scorecard%2F
+      link: Raising Energy Costs and Providing Polluter Giveaways to Cut → https://www.lcv.org/roll-call-vote/raising-energy-costs-and-providing-polluter-giveaways-to-cut-taxes-for-billionaires/
+      link: Zeldin Confirmation (EPA Administrator) → https://www.lcv.org/roll-call-vote/zeldin-confirmation-epa-administrator/
+      link: Preventing Public Lands Sell Off → https://www.lcv.org/roll-call-vote/preventing-public-land-sell-off/
+      link: Blocking States’ Life-Saving Truck Pollution Limits → https://www.lcv.org/roll-call-vote/blocking-states-life-saving-truck-pollution-limits-2/
+      link: Raising Energy Costs and Providing Polluter Giveaways to Cut → https://www.lcv.org/roll-call-vote/raising-energy-costs-and-providing-polluter-giveaways-to-cut-taxes-for-billionaires-final-passage/
+      link: Making Voter Registration More Difficult → https://www.lcv.org/roll-call-vote/making-voter-registration-more-difficult/
+      link: Permission to Pollute Our Waters Act → https://www.lcv.org/roll-call-vote/permission-to-pollute-our-waters-act/
+      link: Removing Public Lands Protections on Culturally and Ecologic → https://www.lcv.org/roll-call-vote/removing-public-lands-protections-on-culturally-and-ecologically-significant-landscapes/
+      link: See All Scorecard Votes → https://www.lcv.org/congressional-scorecard/congressional-votes/?chamber=senate&show=scorecard&session_year=all&issue_filter=all&export-type=votes
+      link: Download the 2025 Scorecard → https://www.lcv.org/2025-scorecard-report
+      link: Rescinding Protections for the Boundary Waters → https://www.lcv.org/roll-call-vote/rescinding-protections-for-the-boundary-waters-2/
+      link: See More Recent Votes → https://www.lcv.org/congressional-scorecard/congressional-votes/?chamber=senate&show=recent&session_year=all&issue_filter=all&export-type=votesev/congressional-scorecard/congressional-votes/
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · //fonts.googleapis.com · application/json+oembed · https://api.w.org/ · https://www.lcv.org/wp-json/ · application/json · https://www.lcv.org/wp-json/wp/v2/pages/36297 · https://www.lcv.org/congressional-scorecard/congressional-votes/ · https://www.lcv.org/roll-call-vote/raising-energy-costs-and-providing-polluter-giveaways-to-cut-taxes-for-billionaires/ · https://www.lcv.org/roll-call-vote/zeldin-confirmation-epa-administrator/ · https://www.lcv.org/roll-call-vote/preventing-public-land-sell-off/ · https://www.lcv.org/roll-call-vote/blocking-states-life-saving-truck-pollution-limits-2/ · https://www.lcv.org/roll-call-vote/raising-energy-costs-and-providing-polluter-giveaways-to-cut-taxes-for-billionaires-final-passage/ · https://www.lcv.org/roll-call-vote/making-voter-registration-more-difficult/ · https://www.lcv.org/roll-call-vote/permission-to-pollute-our-waters-act/ · https://www.lcv.org/roll-call-vote/removing-public-lands-protections-on-culturally-and-ecologically-significant-landscapes/ · /congressional-scorecard/congressional-votes/?chamber=senate&show=scorecard&session_year=all&issue_filter=all&export-type=votes · https://www.lcv.org/wp-content/themes/lcv2022/assets/maps/mapdata/countries/us/custom/us-small.topo.json · https://www.lcv.org/roll-call-vote/rescinding-protections-for-the-boundary-waters-2/ · /congressional-scorecard/congressional-votes/?chamber=senate&show=recent&session_year=all&issue_filter=all&export-type=votesev/congressional-scorecard/congressional-votes/ · https://www.instagram.com/lcvoters/ · https://www.facebook.com/LCVoters · https://sheets.googleapis.com/v4/spreadsheets
+  https://scorecard.lcv.org/members-of-congress → HTTP 200 (now https://www.lcv.org/congressional-scorecard/members-of-congress/), text/html, 778 KB
+      title: Members of Congress Voting Records – LCV National Environmental Scorecard · 48,319 characters of text
+      profiled members named on the page: 29 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+      link: Congressional Scorecard → https://www.lcv.org/congressional-scorecard/
+      link: Members of Congress → https://www.lcv.org/congressional-scorecard/members-of-congress/
+      link: Congressional Votes → https://www.lcv.org/congressional-scorecard/congressional-votes/
+      link: 2025 Scorecard Overview → https://www.lcv.org/congressional-scorecard/scorecard-overview/
+      link: 2025 Climate Champions of Color → https://www.lcv.org/congressional-scorecard/champions-of-color/
+      link: About the Scorecard → https://www.lcv.org/congressional-scorecard/about-the-scorecard/
+      link: Scorecard Archive → https://www.lcv.org/congressional-scorecard/scorecard-archive/
+      link: (no text) → https://bsky.app/intent/compose?text=Members+of+Congress+https%3A%2F%2Fwww.lcv.org%2Fcongressional-scorecard%2Fmembers-of-congress%2F
+      link: Whitehouse, Sheldon → https://www.lcv.org/moc/sheldon-whitehouse/
+      link: Newhouse, Dan → https://www.lcv.org/moc/dan-newhouse/
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · //fonts.googleapis.com · application/json+oembed · https://api.w.org/ · https://www.lcv.org/wp-json/ · application/json · https://www.lcv.org/wp-json/wp/v2/pages/30431 · https://www.lcv.org/congressional-scorecard/congressional-votes/ · https://www.lcv.org/moc/shelley-moore-capito/ · https://www.instagram.com/lcvoters/ · https://www.facebook.com/LCVoters · //www.youtube.com/player_api · https://www.googleapis.com/civicinfo/v2/divisionsByAddress · /wp-json/voter-guide/v1/endorsees/
+
+Environmental Defense Fund (edf) · liberal · Environment
+  https://www.edfaction.org/scorecard → HTTP 404, text/html, 98 KB
+      title: Page not found - EDF Action · 1,432 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: EDF Action Votes → https://www.edfactionvotes.org/
+      data addresses in its scripts: application/ld+json · https://www.edfactionvotes.org/
+
+NRDC (nrdc) · liberal · Environment
+  https://www.nrdcactionfund.org/scorecard/ → HTTP 403, text/html, 5 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
+
+AFL-CIO (aflcio) · liberal · Labor
+  https://aflcio.org/scorecard → HTTP 403, text/html, 6 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
+  https://aflcio.org/scorecard/legislators → HTTP 403, text/html, 6 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
+
+SEIU (seiu) · liberal · Labor
+  https://www.seiu.org/scorecard → HTTP 200 (now https://www.seiu.org/error-page/404/), text/html, 238 KB
+      title: 404 - Service Employees International Union (SEIU) · 784 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Members → https://www.seiu.org/members
+      link: RESOURCES → https://www.seiu.org/members#resources
+      link: UNION DIFFERENCE → https://www.seiu.org/members#union-difference
+      link: MEMBER STORIES → https://www.seiu.org/members#member-stories
+      link: GROUPS → https://www.seiu.org/members#groups
+      link: LOCAL UNION LOCATOR → https://www.seiu.org/members#find_my_contract
+      data addresses in its scripts: application/ld+json · //maps.googleapis.com · https://maps.googleapis.com/maps/api/js?key=AIzaSyAzaGTtG_qoeclPPz4xpTseR7MW3pD7sgI
+
+AFSCME (afscme) · liberal · Labor
+  https://www.afscme.org/scorecard → HTTP 200 (now https://afscme.org/priorities/issues/), text/html, 157 KB
+      title: Our Issues - AFSCME · 5,051 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Legislative Reports → https://afscme.org/priorities/legislative-reports/
+      link: Member Resources → https://afscme.org/member-resources/
+      link: Student Debt Map → https://afscme.org/member-resources/student-debt/
+      link: AFSCME Advantage → https://afscme.org/member-resources/afscme-advantage/
+      link: Scholarships → https://afscme.org/member-resources/scholarships/
+      link: Education & Training → https://afscme.org/member-resources/education-training/
+      link: Member Card → https://afscme.org/member-resources/member-card/
+      link: Quality Public Services for All Public service isn’t just a  → https://afscme.org/issue/quality-public-services-for-all/
+      link: Democracy for All Labor rights are civil rights. From Dr. Ki → https://afscme.org/issue/democracy-for-all/
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://afscme.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fafscme.org%2Fpriorities%2Fissues%2F · https://api.w.org/ · https://afscme.org/wp-json/ · application/json · https://afscme.org/wp-json/wp/v2/pages/72 · https://www.youtube.com/iframe_api
+
+NEA (nea) · liberal · Labor
+  https://educationvotes.nea.org/report-card/ → HTTP 404, text/html, 44 KB
+      title: Page not found - Education Votes · 1,048 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: (no text) → https://educationvotes.nea.org/
+      link: Plan Your Vote → https://educationvotes.nea.org/plan-your-vote/
+      link: Make Your Vote Plan Today! → https://educationvotes.nea.org/plan-your-vote/vote-plan/
+      link: Our Recommended Candidates → https://educationvotes.nea.org/plan-your-vote/our-recommended-candidates/
+      link: Promote the Vote → https://educationvotes.nea.org/promote-the-vote/
+      link: Join the Empower Project → https://educationvotes.nea.org/empower-project/
+      link: Protect the Vote → https://educationvotes.nea.org/protect-the-vote/
+      link: Power the Polls → https://educationvotes.nea.org/protect-the-vote/power-the-polls/
+      link: Protect the Vote with VPAN → https://educationvotes.nea.org/protect-the-vote/vpan-voter-protection-course/
+      link: Run for Office → https://educationvotes.nea.org/run-for-office/
+      link: Apply Now for Training → https://educationvotes.nea.org/run-for-office/application/
+      link: Contact Us → https://educationvotes.nea.org/contact-us/
+      data addresses in its scripts: application/ld+json · https://educationvotes.nea.org/ · https://educationvotes.nea.org/plan-your-vote/ · https://educationvotes.nea.org/plan-your-vote/vote-plan/ · https://educationvotes.nea.org/plan-your-vote/our-recommended-candidates/ · https://educationvotes.nea.org/promote-the-vote/ · https://educationvotes.nea.org/empower-project/ · https://educationvotes.nea.org/protect-the-vote/ · https://educationvotes.nea.org/protect-the-vote/power-the-polls/ · https://educationvotes.nea.org/protect-the-vote/vpan-voter-protection-course/ · https://educationvotes.nea.org/run-for-office/ · https://educationvotes.nea.org/run-for-office/application/ · https://educationvotes.nea.org/donate/ · https://facebook.com/edvotes · https://educationvotes.nea.org/contact-us/
+  https://educationvotes.nea.org/scorecard/ → HTTP 404, text/html, 44 KB
+      title: Page not found - Education Votes · 1,048 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: (no text) → https://educationvotes.nea.org/
+      link: Plan Your Vote → https://educationvotes.nea.org/plan-your-vote/
+      link: Make Your Vote Plan Today! → https://educationvotes.nea.org/plan-your-vote/vote-plan/
+      link: Our Recommended Candidates → https://educationvotes.nea.org/plan-your-vote/our-recommended-candidates/
+      link: Promote the Vote → https://educationvotes.nea.org/promote-the-vote/
+      link: Join the Empower Project → https://educationvotes.nea.org/empower-project/
+      link: Protect the Vote → https://educationvotes.nea.org/protect-the-vote/
+      link: Power the Polls → https://educationvotes.nea.org/protect-the-vote/power-the-polls/
+      link: Protect the Vote with VPAN → https://educationvotes.nea.org/protect-the-vote/vpan-voter-protection-course/
+      link: Run for Office → https://educationvotes.nea.org/run-for-office/
+      link: Apply Now for Training → https://educationvotes.nea.org/run-for-office/application/
+      link: Contact Us → https://educationvotes.nea.org/contact-us/
+      data addresses in its scripts: application/ld+json · https://educationvotes.nea.org/ · https://educationvotes.nea.org/plan-your-vote/ · https://educationvotes.nea.org/plan-your-vote/vote-plan/ · https://educationvotes.nea.org/plan-your-vote/our-recommended-candidates/ · https://educationvotes.nea.org/promote-the-vote/ · https://educationvotes.nea.org/empower-project/ · https://educationvotes.nea.org/protect-the-vote/ · https://educationvotes.nea.org/protect-the-vote/power-the-polls/ · https://educationvotes.nea.org/protect-the-vote/vpan-voter-protection-course/ · https://educationvotes.nea.org/run-for-office/ · https://educationvotes.nea.org/run-for-office/application/ · https://educationvotes.nea.org/donate/ · https://facebook.com/edvotes · https://educationvotes.nea.org/contact-us/
+
+AFT (aft) · liberal · Labor
+  https://www.aft.org/scorecard → HTTP 404, text/html, 49 KB
+      title: Page not found | American Federation of Teachers · 3,644 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Member Benefits → https://www.aft.org/member-benefits
+      link: Find Your Local → https://members.aft.org/members/lookup
+      link: AFT Constitution → https://www.aft.org/sites/default/files/media/documents/2024/AFTconstitution2024.pdf
+      link: Our Members → https://www.aft.org/our-members
+      link: Early childhood educators → https://www.aft.org/our-members/early-childhood-educators
+      link: Public employees → https://www.aft.org/our-members/public-services
+      link: Retirees → https://www.aft.org/our-members/retirees
+      link: Disaster relief: 2025 California wildfires → https://www.aft.org/resources-wildfire-response-california
+      link: Member voices → https://www.aft.org/our-community/immigration/immigration-member-voices
+      link: Our partners on immigration → https://www.aft.org/sites/default/files/media/2015/im_partnersforcommonsenseimmigrationreform.pdf
+      link: Injury & Illness Reporting Requirements → https://www.aft.org/health-hub/injury-illness-reporting-requirements
+      link: Reports → https://www.aft.org/reports
+      data addresses in its scripts: application/json
+
+Giffords (giffords) · liberal · Guns
+  https://giffords.org/scorecard/ → HTTP 200 (now https://giffords.org/lawcenter/resources/scorecard/), text/html, 614 KB
+      title: Annual Gun Law Scorecard | GIFFORDS · 15,204 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Reports & Research → https://giffords.org/lawcenter/resources/reports/
+      link: Celebration of Courage → https://giffords.org/2026-new-york-celebration-of-courage/
+      link: Annual Gun Law Scorecard → https://giffords.org/lawcenter/report/annual-gun-law-scorecard/
+      link: WY → https://giffords.org/lawcenter/resources/scorecard/
+      link: Alabama → https://giffords.org/lawcenter/resources/scorecard/?scorecard=AL
+      link: Alaska → https://giffords.org/lawcenter/resources/scorecard/?scorecard=AK
+      link: Arizona → https://giffords.org/lawcenter/resources/scorecard/?scorecard=AZ
+      link: Arkansas → https://giffords.org/lawcenter/resources/scorecard/?scorecard=AR
+      link: California → https://giffords.org/lawcenter/resources/scorecard/?scorecard=CA
+      link: Colorado → https://giffords.org/lawcenter/resources/scorecard/?scorecard=CO
+      link: Connecticut → https://giffords.org/lawcenter/resources/scorecard/?scorecard=CT
+      link: Delaware → https://giffords.org/lawcenter/resources/scorecard/?scorecard=DE
+      link: Florida → https://giffords.org/lawcenter/resources/scorecard/?scorecard=FL
+      link: Georgia → https://giffords.org/lawcenter/resources/scorecard/?scorecard=GA
+      link: Hawaii → https://giffords.org/lawcenter/resources/scorecard/?scorecard=HI
+      link: Idaho → https://giffords.org/lawcenter/resources/scorecard/?scorecard=ID
+      link: Illinois → https://giffords.org/lawcenter/resources/scorecard/?scorecard=IL
+      link: Indiana → https://giffords.org/lawcenter/resources/scorecard/?scorecard=IN
+      link: Iowa → https://giffords.org/lawcenter/resources/scorecard/?scorecard=IA
+      link: Kansas → https://giffords.org/lawcenter/resources/scorecard/?scorecard=KS
+      table: 52 rows; first: Gun Law Strength (Ranked) | State | Grade | Gun Death Rate (Ranked) | Gun Death Rate (per 100K); second: 36 | Alabama | F | 4 | 23.7
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://giffords.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgiffords.org%2Flawcenter%2Fresources%2Fscorecard%2F · https://api.w.org/ · https://giffords.org/wp-json/ · application/json · https://giffords.org/wp-json/wp/v2/pages/88357
+
+Everytown (everytown) · liberal · Guns
+  https://www.everytown.org/scorecard/ → HTTP 404, text/html, 168 KB
+      title: 404 Not Found | Everytown · 3,225 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Multiple Cause of Death → https://everytownresearch.org/report/gun-violence-in-america/
+      link: Market Research Study #26602 → https://www.surveyusa.com/client/PollReport.aspx?g=c565a16d-93fe-4dfc-86dd-62f1cc60e507
+      data addresses in its scripts: application/ld+json · https://directory.cookieyes.com/api/v1/ip · https://www.everytown.org/wp-json/wcc/v1/ · application/json
 
 Planned Parenthood Action (ppaction) · liberal · Abortion
   https://www.plannedparenthoodaction.org/congressional-scorecard → HTTP 200, text/html, 112 KB
@@ -166,3 +448,777 @@ Planned Parenthood Action (ppaction) · liberal · Abortion
       link: 2026 Endorsements → https://www.plannedparenthoodaction.org/endorsements
       link: Congressional Scorecard → https://www.plannedparenthoodaction.org/congressional-scorecard
       data addresses in its scripts: /_vote-forms-submit · application/ld+json · https://www.youtube.com/user/PPVotes · API/noticeError/called · https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements · https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API · application/json · /health-center/api/_validate_location
+
+Reproductive Freedom for All (rfa) · liberal · Abortion
+  https://reproductivefreedomforall.org/congressional-record/ → HTTP 200 (now https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/), text/html, 144 KB
+      title: Congressional Record on Reproductive Freedom - Reproductive Freedom for All® · 8,131 characters of text
+      profiled members named on the page: 2 (Barr, Jackson)
+      link: Protect Birth Control → https://action.reproductivefreedomforall.org/a/sign-on-protect-the-right-to-contraception?ms=web_advo_medab_20260511megamenu
+      link: Demand Court Reform → https://action.reproductivefreedomforall.org/a/add-your-name-we-need-court-reform?refcode=web_cul_crtrf_20260511megamenu
+      link: Free Maria from ICE! → https://action.reproductivefreedomforall.org/a/freemaria?ms=web_advo_prgdis_20261023megamenu
+      link: Oppose Heidi Overton → https://action.reproductivefreedomforall.org/a/senate-oppose-overton-fda?ms=web_advo_snte_20260819megamenu
+      link: Protect Medication Abortion Petition → https://action.reproductivefreedomforall.org/a/protect-medication-abortion?ms=web_advo_medab_20261104megamenu
+      link: My Body. My Pod. Episode 34 → https://reproductivefreedomforall.org/resources/election-day-2026-troy-jackson-christina-hines-and-amish-shah-in-critical-races-to-flip-congress-my-body-my-pod-episode-34/
+      link: Check Your Registration → https://reproductivefreedomforall.org/get-ready-to-vote/check-your-registration/
+      link: Find Your Polling Place → https://reproductivefreedomforall.org/get-ready-to-vote/find-your-polling-place/
+      link: Make a Plan to Vote → https://reproductivefreedomforall.org/get-ready-to-vote/make-a-plan-to-vote/
+      link: What's On Your Ballot → https://reproductivefreedomforall.org/get-ready-to-vote/sample-ballot/
+      link: 2026 Midterm Elections Map → https://reproductivefreedomforall.org/resources/2026-midterm-elections-map-see-where-reproductive-freedom-is-on-the-ballot/
+      link: See All Voting Tools → https://reproductivefreedomforall.org/get-ready-to-vote/
+      link: Congressional Voting Record → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/
+      link: Tracking Project 2025 → https://reproductivefreedomforall.org/resources/tracking-project-2025-how-much-has-been-implemented-so-far/
+      link: Host a House Party → https://reproductivefreedomforall.org/resources/rights-nights-how-to-host-a-house-party/
+      link: Sign Up to Volunteer → https://action.reproductivefreedomforall.org/a/get-involved?ms=web_org_gen_20261104megamenu
+      link: Download Scorecards → https://reproductivefreedomforall.org/resources/congressional-records/
+      link: Previous → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=0
+      link: 1 → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=1
+      link: 2 → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=2
+      table: 20 rows; first: Alma Adams | NC | House | Democratic | NC-12 | 100 100 100 100 100 100 100 10; second: Robert Aderholt | AL | House | Republican | AL-04 | 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+      data addresses in its scripts: application/ld+json · //a.omappapi.com · /get-ready-to-vote/check-your-registration/ · https://reproductivefreedomforall.org/get-ready-to-vote/find-your-polling-place/ · https://reproductivefreedomforall.org/get-ready-to-vote/make-a-plan-to-vote/ · /get-ready-to-vote/sample-ballot/ · /get-ready-to-vote/ · //api.ipinfodb.com/v3/ip-country/?key={api_key}&format=json&callback={callback}
+  https://reproductivefreedomforall.org/scorecard/ → HTTP 200 (now https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/), text/html, 144 KB
+      title: Congressional Record on Reproductive Freedom - Reproductive Freedom for All® · 8,035 characters of text
+      profiled members named on the page: 2 (Barr, Jackson)
+      link: Protect Birth Control → https://action.reproductivefreedomforall.org/a/sign-on-protect-the-right-to-contraception?ms=web_advo_medab_20260511megamenu
+      link: Demand Court Reform → https://action.reproductivefreedomforall.org/a/add-your-name-we-need-court-reform?refcode=web_cul_crtrf_20260511megamenu
+      link: Free Maria from ICE! → https://action.reproductivefreedomforall.org/a/freemaria?ms=web_advo_prgdis_20261023megamenu
+      link: Oppose Heidi Overton → https://action.reproductivefreedomforall.org/a/senate-oppose-overton-fda?ms=web_advo_snte_20260819megamenu
+      link: Protect Medication Abortion Petition → https://action.reproductivefreedomforall.org/a/protect-medication-abortion?ms=web_advo_medab_20261104megamenu
+      link: My Body. My Pod. Episode 34 → https://reproductivefreedomforall.org/resources/election-day-2026-troy-jackson-christina-hines-and-amish-shah-in-critical-races-to-flip-congress-my-body-my-pod-episode-34/
+      link: Check Your Registration → https://reproductivefreedomforall.org/get-ready-to-vote/check-your-registration/
+      link: Find Your Polling Place → https://reproductivefreedomforall.org/get-ready-to-vote/find-your-polling-place/
+      link: Make a Plan to Vote → https://reproductivefreedomforall.org/get-ready-to-vote/make-a-plan-to-vote/
+      link: What's On Your Ballot → https://reproductivefreedomforall.org/get-ready-to-vote/sample-ballot/
+      link: 2026 Midterm Elections Map → https://reproductivefreedomforall.org/resources/2026-midterm-elections-map-see-where-reproductive-freedom-is-on-the-ballot/
+      link: See All Voting Tools → https://reproductivefreedomforall.org/get-ready-to-vote/
+      link: Congressional Voting Record → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/
+      link: Tracking Project 2025 → https://reproductivefreedomforall.org/resources/tracking-project-2025-how-much-has-been-implemented-so-far/
+      link: Host a House Party → https://reproductivefreedomforall.org/resources/rights-nights-how-to-host-a-house-party/
+      link: Sign Up to Volunteer → https://action.reproductivefreedomforall.org/a/get-involved?ms=web_org_gen_20261104megamenu
+      link: Download Scorecards → https://reproductivefreedomforall.org/resources/congressional-records/
+      link: Previous → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=0
+      link: 1 → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=1
+      link: 2 → https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/?pg=2
+      table: 20 rows; first: Alma Adams | NC | House | Democratic |  | 100 100 100 100 100 100 100 10; second: Robert Aderholt | AL | House | Republican |  | 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+      data addresses in its scripts: application/ld+json · //a.omappapi.com · /get-ready-to-vote/check-your-registration/ · https://reproductivefreedomforall.org/get-ready-to-vote/find-your-polling-place/ · https://reproductivefreedomforall.org/get-ready-to-vote/make-a-plan-to-vote/ · /get-ready-to-vote/sample-ballot/ · /get-ready-to-vote/ · //api.ipinfodb.com/v3/ip-country/?key={api_key}&format=json&callback={callback}
+
+National Shooting Sports Foundation (nssf) · conservative · Guns
+  https://www.nssf.org/articles/nssf-releases-2026-congressional-report-card/ → HTTP 200, text/html, 252 KB
+      title: NSSF Releases 2026 Congressional Report Card &#8226; NSSF · 11,193 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Join NSSF → https://www.nssf.org/membership
+      link: Member Login → http://portal.nssf.org/
+      link: Premium Retailer Membership → https://www.nssf.org/retailers/premium-retailer-membership/
+      link: Member Compliance Hotline (login req&#8217;d) → https://nssf.my.site.com/nssf/s/benefits-atf-compliance
+      link: SHOT University Online → https://www.nssf.org/membership/nssfs-shot-university-online/
+      link: Star Rating → https://www.nssf.org/ranges/range-star-rating/
+      link: Star Rating – How It Works → https://www.nssf.org/ranges/range-star-rating/range-star-rating-works/
+      link: Apply for Star Rating → https://www.nssf.org/ranges/range-star-rating/range-star-rating-apply/
+      link: Star-Rated Ranges → https://www.nssf.org/ranges/range-star-rating-star-rated-ranges/
+      link: Premium Range Membership → https://www.nssf.org/ranges/premium-range-membership/
+      link: Research Reports → https://www.nssf.org/research/
+      link: Customized Market Reports → https://www.nssf.org/research/customized-market-reports/
+      link: Industry Intelligence Reports → https://www.nssf.org/research/industry-intelligence-reports/
+      link: Economic Impact Report → https://www.nssf.org/government-relations/impact/
+      link: Membership → https://www.nssf.org/membership/
+      link: Read More → https://www.nssf.org/articles/everytown-13-million-voter-contacts-cant-guarantee-election-victories/
+      link: 2026 Congressional Report Card → https://www.nssf.org/government-relations/report-card/
+      link: here → https://www.nssf.org/download/?wpdmdl=62675
+      link: Read More → https://www.nssf.org/articles/brady-claims-midterm-gun-control-mandate-voter-polling-tells-a-different-story/
+      link: gunvote → https://www.nssf.org/articles/tag/gunvote/
+      data addresses in its scripts: application/ld+json · //fonts.googleapis.com · application/json+oembed · https://www.nssf.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nssf.org%2Farticles%2Fnssf-releases-2026-congressional-report-card%2F · https://api.w.org/ · https://www.nssf.org/wp-json/ · application/json · https://www.nssf.org/wp-json/wp/v2/posts/62751 · https://www.nssf.org/wp-json/wpdm/ · https://www.nssf.org/articles/everytown-13-million-voter-contacts-cant-guarantee-election-victories/ · https://www.nssf.org/articles/brady-claims-midterm-gun-control-mandate-voter-polling-tells-a-different-story/ · https://www.nssf.org/articles/tag/gunvote/
+  https://www.nssf.org/download/nssf-congressional-report-card/ → HTTP 200, text/html, 246 KB
+      title: NSSF Congressional Report Card &#8226; NSSF · 9,488 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Join NSSF → https://www.nssf.org/membership
+      link: Member Login → http://portal.nssf.org/
+      link: Premium Retailer Membership → https://www.nssf.org/retailers/premium-retailer-membership/
+      link: Member Compliance Hotline (login req&#8217;d) → https://nssf.my.site.com/nssf/s/benefits-atf-compliance
+      link: SHOT University Online → https://www.nssf.org/membership/nssfs-shot-university-online/
+      link: Star Rating → https://www.nssf.org/ranges/range-star-rating/
+      link: Star Rating – How It Works → https://www.nssf.org/ranges/range-star-rating/range-star-rating-works/
+      link: Apply for Star Rating → https://www.nssf.org/ranges/range-star-rating/range-star-rating-apply/
+      link: Star-Rated Ranges → https://www.nssf.org/ranges/range-star-rating-star-rated-ranges/
+      link: Premium Range Membership → https://www.nssf.org/ranges/premium-range-membership/
+      link: Research Reports → https://www.nssf.org/research/
+      link: Customized Market Reports → https://www.nssf.org/research/customized-market-reports/
+      link: Industry Intelligence Reports → https://www.nssf.org/research/industry-intelligence-reports/
+      link: Economic Impact Report → https://www.nssf.org/government-relations/impact/
+      link: Membership → https://www.nssf.org/membership/
+      link: Read More → https://www.nssf.org/articles/everytown-13-million-voter-contacts-cant-guarantee-election-victories/
+      link: Download → https://www.nssf.org/download/nssf-congressional-report-card/?wpdmdl=62675&refresh=6af0f34e1252d1794175822
+      link: Download → https://www.nssf.org/download/nssf-congressional-report-card/?wpdmdl=62675&amp;ind=1791480278771&amp;refresh=34e1202f&amp;filename=2026-NSSF-Congressional-Report-Card.pdf
+      link: congress → https://www.nssf.org/articles/document-tag/congress/
+      link: report card → https://www.nssf.org/articles/document-tag/report-card/
+      data addresses in its scripts: application/ld+json · //fonts.googleapis.com · application/json+oembed · https://www.nssf.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nssf.org%2Fdownload%2Fnssf-congressional-report-card%2F · https://api.w.org/ · https://www.nssf.org/wp-json/ · application/json · https://www.nssf.org/wp-json/wp/v2/wpdmpro/62675 · https://www.nssf.org/wp-json/wpdm/ · https://www.nssf.org/articles/everytown-13-million-voter-contacts-cant-guarantee-election-victories/ · https://www.nssf.org/articles/brady-claims-midterm-gun-control-mandate-voter-polling-tells-a-different-story/ · https://www.nssf.org/articles/tag/gunvote/
+
+Gun Owners of America (goa) · conservative · Guns
+  https://www.gunowners.org/congressional-ratings/ → HTTP 200 (now https://www.gunowners.org/grades/), text/html, 416 KB
+      title: 2026 Voter Guide | GOA · 43,815 characters of text
+      profiled members named on the page: 54 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+      link: Join → https://join.gunowners.org/f/membership
+      link: Member Dashboard → https://my.gunowners.org/
+      link: Congressional Scorecard → https://www.gunowners.org/scorecard
+      link: 2026 Voter Guide → https://www.gunowners.org/grades/
+      link: 2024 Voter Guide → https://www.gunowners.org/2024-grades/
+      link: Legislator Lookup → https://www.gunowners.org/legislator-lookup/
+      link: Click here → https://www.gunowners.org/scorecard/
+      data addresses in its scripts: application/json+oembed · https://www.gunowners.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gunowners.org%2Fgrades%2F · https://api.w.org/ · https://www.gunowners.org/wp-json/ · application/json · https://www.gunowners.org/wp-json/wp/v2/pages/780977
+  https://www.gunowners.org/scorecard/ → HTTP 200, text/html, 74 KB
+      title: Legislator Scorecard | GOA · 4,312 characters of text
+      profiled members named on the page: 1 (Beltran)
+      link: Join → https://join.gunowners.org/f/membership
+      link: Member Dashboard → https://my.gunowners.org/
+      link: Congressional Scorecard → https://www.gunowners.org/scorecard
+      link: 2026 Voter Guide → https://www.gunowners.org/grades/
+      link: 2024 Voter Guide → https://www.gunowners.org/2024-grades/
+      link: Legislator Lookup → https://www.gunowners.org/legislator-lookup/
+      link: (no text) → https://www.gunowners.org/oh11052026/
+      link: (no text) → https://www.gunowners.org/sc11042026/
+      link: (no text) → https://www.gunowners.org/pa11042026/
+      link: (no text) → https://www.gunowners.org/fl10302026b/
+      link: FL District 13: Vote Anna Paulina Luna—GOA Endorsed. A+ Rate → https://www.gunowners.org/fl10302926l/
+      data addresses in its scripts: application/json+oembed · https://www.gunowners.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gunowners.org%2Fscorecard%2F · https://api.w.org/ · https://www.gunowners.org/wp-json/ · application/json · https://www.gunowners.org/wp-json/wp/v2/pages/774991
+
+Students for Life Action (sfla) · conservative · Abortion
+  https://www.studentsforlifeaction.org/pro-life-generation-report-card-update-know-the-bills-were-tracking-119th-congressional-session → HTTP 403, text/html, 0 KB
+      title: Error 403 Forbidden · 33 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+
+American Energy Alliance (aea) · conservative · Environment
+  https://www.americanenergyalliance.org/category/congress → HTTP 200 (now https://www.americanenergyalliance.org/category/congress/), text/html, 230 KB
+      title: Congress Archives - American Energy Alliance · 8,608 characters of text
+      profiled members named on the page: 2 (Brown, Peltola)
+      link: 2026 American Energy Scorecard Results For Key Energy Produc → https://www.americanenergyalliance.org/?post_type=post&amp;p=18738
+      link: 425 Actions the Trump Administration and Congressional Repub → https://www.americanenergyalliance.org/?post_type=post&amp;p=18725
+      link: American Energy Scorecard → https://www.americanenergyalliance.org/american-energy-scorecard/
+      link: American Energy Scorecard → https://www.americanenergyalliance.org/energy-scorecard/
+      link: About the Energy Scorecard → https://www.americanenergyalliance.org/about-the-energy-scorecard/
+      link: Key Votes → https://www.americanenergyalliance.org/tag/key-vote/
+      link: American Energy Alliance Names Sherrod Brown “Energy Loser” → https://www.americanenergyalliance.org/2026/10/american-energy-alliance-names-sherrod-brown-energy-loser/
+      link: Sherrod Brown earned a dismal... → https://www.americanenergyalliance.org/2026/10/sherrod-brown-energy-loser/
+      link: American Energy Alliance Names Mary Peltola "Energy Loser" → https://www.americanenergyalliance.org/2026/10/american-energy-alliance-names-mary-peltola-energy-loser/
+      link: Mary Peltola earned a dismal 37% score → https://www.americanenergyalliance.org/2026/10/mary-peltola-energy-loser/
+      link: AEA Welcomes Rule to Reform CAFE Standards → https://www.americanenergyalliance.org/2026/09/america-energy-alliance-welcomes-rule-to-reform-cafe-standards/
+      link: American Energy Alliance Releases 2026 American Energy Score → https://www.americanenergyalliance.org/2026/09/american-energy-alliance-releases-2026-american-energy-scorecard/
+      link: 2026 American Energy Scorecard → https://us.list-manage.com/D9MqtsN2g4Z?e=5a5835a967&amp;c2id=224ba89f903dafcc72cfe76e4a0f90c1
+      link: Baseload is Back Thanks to Team Trump → https://www.americanenergyalliance.org/2026/09/baseload-is-back-thanks-to-team-trump/
+      link: American Energy Alliance Leads Coalition Letter Urging Congr → https://www.americanenergyalliance.org/2026/09/american-energy-alliance-leads-coalition-letter-urging-congress-to-reject-california-waivers/
+      link: sent a letter → https://www.americanenergyalliance.org/wp-content/uploads/2026/09/California-CRA-Coalition-Letter-9.4.2026.pdf
+      link: California Continues to Gouge Residents at the Pump to Pay f → https://www.americanenergyalliance.org/2026/07/california-continues-to-gouge-residents-at-the-pump-to-pay-for-poor-policies/
+      link: AEA Leads Coalition Letter Urging Congressional Action on th → https://www.americanenergyalliance.org/2026/06/aea-leads-coalition-letter-urging-congressional-action-on-the-renewable-fuel-standard/
+      link: a Congressional Review Act (CRA) resolution → https://us.list-manage.com/tAIgCAESp8p?e=5a5835a967&amp;c2id=224ba89f903dafcc72cfe76e4a0f90c1
+      link: AEA Leads Coalition Letter Urging Congress to Stop Foreign T → https://www.americanenergyalliance.org/2026/06/aea-leads-coalition-letter-urging-congress-to-stop-foreign-third-party-litigation-from-targeting-the-american-energy-industry/
+      data addresses in its scripts: API/logging/ · API/register/ · API/createTracer/called · application/ld+json · //fonts.googleapis.com · https://api.w.org/ · https://www.americanenergyalliance.org/wp-json/ · application/json · https://www.americanenergyalliance.org/wp-json/wp/v2/categories/1350 · /tag/key-vote/
+  https://www.americanenergyalliance.org/?p=16915 → HTTP 200 (now https://www.americanenergyalliance.org/2024/09/american-energy-alliance-unveils-2024-american-energy-scorecard-for-the-senate-and-the-house-of-representatives/), text/html, 248 KB
+      title: 2024 American Energy Scorecard Senate Results - American Energy Alliance · 6,125 characters of text
+      profiled members named on the page: 4 (Brown, Peltola, Murphy, Braun)
+      link: 2026 American Energy Scorecard Results For Key Energy Produc → https://www.americanenergyalliance.org/?post_type=post&amp;p=18738
+      link: 425 Actions the Trump Administration and Congressional Repub → https://www.americanenergyalliance.org/?post_type=post&amp;p=18725
+      link: American Energy Scorecard → https://www.americanenergyalliance.org/american-energy-scorecard/
+      link: American Energy Scorecard → https://www.americanenergyalliance.org/energy-scorecard/
+      link: About the Energy Scorecard → https://www.americanenergyalliance.org/about-the-energy-scorecard/
+      link: Key Votes → https://www.americanenergyalliance.org/tag/key-vote/
+      link: American Energy Scorecard → https://www.americanenergyalliance.org/tag/american-energy-scorecard/
+      link: Scorecard → https://www.americanenergyalliance.org/tag/scorecard/
+      link: Senate → https://www.americanenergyalliance.org/tag/senate/
+      link: visit this page → https://www.americanenergyalliance.org/2024/09/american-energy-alliance-unveils-2024-american-energy-scorecard-for-the-senate-and-the-house-of-representatives-2/
+      link: 2026 American Energy Scorecard Results For Key Energy Produc → https://www.americanenergyalliance.org/2026/10/2026-american-energy-scorecard-results-for-key-energy-producing-states/
+      link: 2026 Election → https://www.americanenergyalliance.org/tag/2026-election/
+      link: (no text) → https://www.americanenergyalliance.org/2026/10/mary-peltola-energy-loser/
+      link: (no text) → https://www.americanenergyalliance.org/2026/10/sherrod-brown-energy-loser/
+      data addresses in its scripts: API/logging/ · API/register/ · API/createTracer/called · application/ld+json · //fonts.googleapis.com · https://www.americanenergyalliance.org/2024/09/american-energy-alliance-unveils-2024-american-energy-scorecard-for-the-senate-and-the-house-of-representatives/feed/ · application/json+oembed · https://api.w.org/ · https://www.americanenergyalliance.org/wp-json/ · application/json · https://www.americanenergyalliance.org/wp-json/wp/v2/posts/16915 · /tag/key-vote/ · https://www.americanenergyalliance.org/2026/10/2026-american-energy-scorecard-results-for-key-energy-producing-states/
+
+Defenders of Wildlife (defenders) · liberal · Environment
+  https://defenders.org/conservation-report-card → HTTP 404, text/html, 88 KB
+      title: Page Not Found | Defenders of Wildlife · 4,619 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: The Locals Who Shape Us: Manatees of Florida → https://defenders.org/blog/2026/11/locals-who-shape-us-manatees-of-florida
+      link: 5 Scary Animals & Their Behaviors → https://defenders.org/blog/2026/10/5-scary-animals-their-behaviors
+      link: Animal Ghost Story? The Return of Endangered Indiana Bats to → https://defenders.org/blog/2026/10/animal-ghost-story-return-of-endangered-indiana-bats-north-carolina
+      link: The Locals Who Shape Us: Mexican Gray Wolves of Arizona → https://defenders.org/blog/2026/10/locals-who-shape-us-mexican-gray-wolves-of-arizona
+      link: LTE: Don&#039;t Roll Back These Protections → https://defenders.org/blog/2026/10/lte-dont-roll-back-these-protections
+      link: Current page 1 → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=0
+      link: Page 2 → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=1
+      link: Page 3 → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=2
+      link: Page 4 → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=3
+      link: Page 5 → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=4
+      link: Last page → https://defenders.org/conservation-report-card?destination=/&amp;_exception_statuscode=404&amp;page=753
+      data addresses in its scripts: application/json · /config.json?name= · /configs.json · https://api.coinmarketcap.com/v1/ticker/?limit=10
+  https://defenders.org/sites/default/files/2026-03/Conservation-Report-Card-2025.pdf → HTTP 200, application/pdf, 1522 KB
+      A PDF: 16,526 characters of text; profiled members named in it: 0
+      starts: CSERVATN PORTA 2025 D 202ConservatioRepor Cd S C I A S I2025S ES AESA DS I IC ACA C T ES A ESA D D I D 202D S 00 fenrs.org Covephoto GRAWOLAPHOTOGRAPHISTOCKPHOTO 3 1 CONFIRMINLEADINOIADVOCATAS INTERIORECRETA SDS I (Januar302025RolCalNo26) 2
+
+Climate Hawks Vote (climatehawks) · liberal · Environment
+  https://climatehawksvote.com/ → HTTP 200, text/html, 87 KB
+      title: Home - Climate Hawks Vote · 3,641 characters of text
+      profiled members named on the page: 3 (Hickenlooper, Flanagan, Peltola)
+      link: Are you registered to vote? Use our simple tool to check, up → https://www.voteamerica.com/am-i-registered-to-vote?utm_source=climatehawksvote&utm_medium=referral&utm_campaign=climatehawks
+      link: (no text) → https://climatehawksvote.com/
+      link: About → https://climatehawksvote.com/about/
+      link: 2026 Ballot guide → https://climatehawksvote.com/2026-ballot-guide/
+      link: Endorsements → https://climatehawksvote.com/endorsements/
+      link: 2026 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2026/
+      link: 2024 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2024/
+      link: 2023 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2023/
+      link: Act → https://climatehawksvote.com/act/
+      link: Learn More → https://climatehawksvote.com/about
+      link: Learn More → https://climatehawksvote.com/candidate/peggy-flanagan/
+      link: Learn More → https://climatehawksvote.com/candidate/mary-peltola/
+      link: Learn More → https://climatehawksvote.com/candidate/randy-villegas/
+      link: Candidate's Website → https://www.villegasforcongress.com/
+      link: Learn More → https://climatehawksvote.com/candidate/will-lawrence/
+      link: Candidate's Website → https://wewill2026.com/
+      link: More Candidates → https://climatehawksvote.com/endorsements
+      link: View More Petitions → https://climatehawksvote.com/act
+      link: (no text) → https://climatehawksvote.com/news/national-climate-groups-endorse-kamala-harris-for-president/
+      link: (no text) → https://climatehawksvote.com/news/tell-congress-to-ban-utilities-and-monopoly-corporations-from-making-political-contributions/
+      data addresses in its scripts: https://climatehawksvote.com/feed/ · https://climatehawksvote.com/feed/atom/ · https://climatehawksvote.com/ · https://www.facebook.com/ClimateHawksVote · application/ld+json · //ajax.googleapis.com · https://www.voteamerica.com/am-i-registered-to-vote?utm_source=climatehawksvote&utm_medium=referral&utm_campaign=climatehawks · https://climatehawksvote.com/about/ · https://climatehawksvote.com/2026-ballot-guide/ · https://climatehawksvote.com/endorsements/ · https://climatehawksvote.com/endorsements/endorsements-2026/ · https://climatehawksvote.com/endorsements/endorsements-2024/ · https://climatehawksvote.com/endorsements/endorsements-2023/ · https://climatehawksvote.com/act/ · https://facebook.com/ClimateHawksVote · https://twitter.com/ClimateHawkVote · https://climatehawksvote.com/candidate/peggy-flanagan/ · https://climatehawksvote.com/candidate/mary-peltola/ · https://climatehawksvote.com/candidate/randy-villegas/ · https://climatehawksvote.com/candidate/will-lawrence/ · https://climatehawksvote.com/scorecard/alabama/ · https://climatehawksvote.com/scorecard/alaska/ · https://climatehawksvote.com/scorecard/arizona/ · https://climatehawksvote.com/scorecard/arkansas/
+  https://climatehawksvote.com/scorecard/ohio/ → HTTP 200, text/html, 51 KB
+      title: Ohio - Climate Hawks Vote · 3,060 characters of text
+      profiled members named on the page: 1 (Brown)
+      link: Are you registered to vote? Use our simple tool to check, up → https://www.voteamerica.com/am-i-registered-to-vote?utm_source=climatehawksvote&utm_medium=referral&utm_campaign=climatehawks
+      link: (no text) → https://climatehawksvote.com/
+      link: About → https://climatehawksvote.com/about/
+      link: 2026 Ballot guide → https://climatehawksvote.com/2026-ballot-guide/
+      link: Endorsements → https://climatehawksvote.com/endorsements/
+      link: 2026 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2026/
+      link: 2024 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2024/
+      link: 2023 Endorsements → https://climatehawksvote.com/endorsements/endorsements-2023/
+      link: Act → https://climatehawksvote.com/act/
+      link: Click here to learn more about Sherrod → https://climatehawksvote.com/candidate/sherrod-brown/
+      link: Register to vote, check your registration, look up your poll → https://vote.gov/register/ohio
+      link: Build your ballot → https://app.climatehawksvote.civicengine.com/ec/
+      link: Photo Credits → https://climatehawksvote.com/credits
+      link: Intraocular pressure lowering effect of brinzolamide 1. Warn → http://climatehawksvote.com/anxiety-and-erection.html
+      link: What are the possible side effects of Epogen → http://climatehawksvote.com/anxiety-and-impotence.html
+      link: Paraneoplastic neurologic syndrome: A practical approach. Ab → http://climatehawksvote.com/community-pharmacy.html
+      link: Dexamethasone is a corticosteroid → http://climatehawksvote.com/depression-erection.html
+      link: Ocular effects of topical and systemic steroids. Commonly us → http://climatehawksvote.com/pharmacist-letter.html
+      link: What are the side effects of Dopram Injection 20ml? If you w → http://climatehawksvote.com/pharmacy-technician-letter.html
+      link: Patients were randomized 2:1 to receive cefiderocol or BAT.  → http://climatehawksvote.com/psychological-impotence-performance-anxiety.html
+      data addresses in its scripts: https://climatehawksvote.com/feed/ · https://climatehawksvote.com/feed/atom/ · https://climatehawksvote.com/scorecard/ohio/ · https://www.facebook.com/ClimateHawksVote · application/ld+json · //ajax.googleapis.com · https://www.voteamerica.com/am-i-registered-to-vote?utm_source=climatehawksvote&utm_medium=referral&utm_campaign=climatehawks · https://climatehawksvote.com/about/ · https://climatehawksvote.com/2026-ballot-guide/ · https://climatehawksvote.com/endorsements/ · https://climatehawksvote.com/endorsements/endorsements-2026/ · https://climatehawksvote.com/endorsements/endorsements-2024/ · https://climatehawksvote.com/endorsements/endorsements-2023/ · https://climatehawksvote.com/act/ · https://facebook.com/ClimateHawksVote · https://twitter.com/ClimateHawkVote · https://climatehawksvote.com/scorecard/alabama/ · https://climatehawksvote.com/scorecard/alaska/ · https://climatehawksvote.com/scorecard/arizona/ · https://climatehawksvote.com/scorecard/arkansas/ · https://climatehawksvote.com/scorecard/california/ · https://climatehawksvote.com/scorecard/colorado/ · https://climatehawksvote.com/scorecard/connecticut/ · https://climatehawksvote.com/scorecard/delaware/
+
+Communications Workers of America (cwa) · liberal · Labor
+  https://cwa-union.org/cwa-congressional-scorecard → HTTP 200, text/html, 37 KB
+      title: CWA Congressional Scorecard | Communications Workers of America · 1,872 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Find Your Local → https://cwa-union.org/members/find-your-local
+      link: For Members → https://cwa-union.org/for-members
+      link: Benefits, Scholarships & Training → https://cwa-union.org/members/cwa-member-benefits-scholarships-and-training
+      link: Retired Members Council → https://cwa-union.org/for-members/retired-members-council
+      link: Change or Update Address or Email → https://cwa-union.org/for-members/change-or-update-address-or-email
+      link: View the CWA Congressional Scorecard ⧉ → https://scorecard.cwa-union.org/
+      link: CWA Endorsements 2026 → https://cwa-union.org/national-issues/legislation-and-politics/cwa-political/candidates
+      link: CWA Congressional Scorecard → https://cwa-union.org/cwa-congressional-scorecard
+      data addresses in its scripts: application/ld+json · application/json
+  https://cwapolitical.org/cwa-congressional-scorecard → HTTP 200 (now https://cwa-union.org/cwa-congressional-scorecard), text/html, 37 KB
+      title: CWA Congressional Scorecard | Communications Workers of America · 1,872 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Find Your Local → https://cwa-union.org/members/find-your-local
+      link: For Members → https://cwa-union.org/for-members
+      link: Benefits, Scholarships & Training → https://cwa-union.org/members/cwa-member-benefits-scholarships-and-training
+      link: Retired Members Council → https://cwa-union.org/for-members/retired-members-council
+      link: Change or Update Address or Email → https://cwa-union.org/for-members/change-or-update-address-or-email
+      link: View the CWA Congressional Scorecard ⧉ → https://scorecard.cwa-union.org/
+      link: CWA Endorsements 2026 → https://cwa-union.org/national-issues/legislation-and-politics/cwa-political/candidates
+      link: CWA Congressional Scorecard → https://cwa-union.org/cwa-congressional-scorecard
+      data addresses in its scripts: application/ld+json · application/json
+
+Teamsters (teamsters) · liberal · Labor
+  https://teamster.org/political-legislative-scorecards/ → HTTP 200, text/html, 169 KB
+      title: Scorecards - International Brotherhood of Teamsters · 3,698 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Warehouse Division → https://teamster.org/divisions/warehouse-division/
+      link: IBT Constitution → https://teamster.org/wp-content/uploads/2022/03/2021IBTCONSTITUTIONBooklet.pdf
+      link: Guide to LU Officer Elections → https://teamster.org/wp-content/uploads/2024/10/1016242022TeamstersGuidelinesforConductingLUOfficerElections.pdf
+      link: 114th Senate Score Card → https://ibt.capwiz.com/ibt/scorecard.xc?chamber=S&amp;session=114
+      link: 114th House Score Card → https://ibt.capwiz.com/ibt/scorecard.xc?chamber=H&amp;session=114
+      link: 115th Senate Score Card → https://ibt.capwiz.com/ibt/scorecard.xc?chamber=S&amp;session=115
+      link: 115th House Score Card → https://ibt.capwiz.com/ibt/scorecard.xc?chamber=H&amp;session=115
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://teamster.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fteamster.org%2Fpolitical-legislative-scorecards%2F
+
+American Postal Workers Union (apwu) · liberal · Labor
+  https://apwu.org/congressional-voting-records/ → HTTP 200, text/html, 136 KB
+      title: Congressional Voting Records | American Postal Workers Union · 6,914 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Members Only → https://apwumembers.apwu.org/APWUMembers/MyAccount/Sign_In.aspx
+      link: Members Only → https://apwumembers.apwu.org/APWUMembers/MyAccount/Sign_In.aspx?WebsiteKey=a466025e-c3cc-405b-8c5f-e9ca2a32ee2d&#038;LoginRedirect=true&#038;returnurl=%2f%3f_gl%3d1*jojou3*_gcl_au*MTM0MTMzMDkyLjE3NTAwODU1MjE.*_ga*MjEwMTUxNjM3OC4xNzQxODgyMzQx*_ga_1H83RY4ZF3*czE3NTI3Nzc4MjEkbzIxNyRnMSR0MTc1Mjc3Nzg0MSRqNDAkbDAkaDA.
+      link: Report a safety hazard → https://apwu.org/how-to-report-hazards-unsafe-conditions-or-practices-with-ps-form-1767/
+      link: Joint Contract Interpretation Manual (JCIM) → https://apwu.org/contracts/jcim-2025-joint-contract-intepretation-manual-jcim/
+      link: encourage you to explore the AFL-CIO Legislative Scorecard → https://aflcio.org/scorecard?utm_source=apwu.org
+      link: House of Representatives → https://clerk.house.gov/Votes/2025190?Page=2&#038;RollCallNum=190
+      link: Senate → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm
+      link: House of Representatives → https://clerk.house.gov/Votes/2024456?Page=2&#038;RollCallNum=456
+      link: Senate → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00338.htm
+      link: House of Representatives → https://clerk.house.gov/Votes/202238
+      link: Senate → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00071.htm
+      link: (no text) → https://api.whatsapp.com/send?text=https%3A%2F%2Fapwu.org%2Fcongressional-voting-records%2F
+      link: Stay Involved as a Retiree Member → https://apwu.org/stay-involved-as-a-retiree-member/
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · //maps.googleapis.com · application/json+oembed · https://apwu.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fapwu.org%2Fcongressional-voting-records%2F · https://api.w.org/ · https://apwu.org/wp-json/ · application/json · https://apwu.org/wp-json/wp/v2/pages/17553 · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00338.htm · https://clerk.house.gov/Votes/202238 · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00071.htm · https://api.whatsapp.com/send?text=https%3A%2F%2Fapwu.org%2Fcongressional-voting-records%2F
+
+National Taxpayers Union (ntu) · conservative · Taxes & spending
+  https://www.ntu.org/ratescongress → HTTP 200 (now https://www.ntu.org/ratecongress/), text/html, 83 KB
+      title: Rates Congress - National Taxpayers Union · 7,625 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: View the 2025 Taxpayers' Friend Award Winners → https://www.ntu.org/ratecongress/page/2025-taxpayers-friend-award-winners
+      link: Click here → https://www.ntu.org/library/doclib/2026/05/2025-NTURC.pdf
+      link: click here → https://www.ntu.org/library/doclib/2026/05/NTURC2025rollcalls.xlsx
+      link: click here → https://www.ntu.org/ratecongress/page/past-congressional-ratings
+      link: Vote Alert → https://www.ntu.org/publications//type/vote-alert
+      link: Rates Congress → https://www.ntu.org/ratecongress/
+      link: Congress Pay and Perks → https://www.ntu.org/taxbasics/page/congress-pay-perks
+      data addresses in its scripts: https://www.ntu.org/ratecongress/legislator/SearchResult · https://www.ntu.org/publications//type/vote-alert
+  https://www.ntu.org/library/doclib/2026/05/2025-NTURC.pdf → HTTP 200, application/pdf, 8712 KB
+      A PDF: 10,719 characters of text; profiled members named in it: 6 (Ossoff, Booker, Perez, Gonzalez, Barr, Brown)
+      starts: Rs C r 2 Tyr e % Ave % % Mn % % % % L Pr ve % Ave ve % Ave % nve % Rs EvyrNTyUv wao or Senate votes on a few selected issues. Our scorecard includes every single vote that affects taxes, spending, ’vv amy affiliation. Our only constituency 
+
+Council for Citizens Against Government Waste (ccagw) · conservative · Taxes & spending
+  https://ccagw.org/ccagw-releases-2025-congressional-ratings/ → HTTP 200, text/html, 104 KB
+      title: CCAGW Releases 2025 Congressional Ratings · 3,671 characters of text
+      profiled members named on the page: 3 (Perry, Hageman, Hern)
+      link: CONGRESSIONAL RATINGS → https://ccagwratings.org/
+      link: Communications to Congress → https://ccagw.org/communications-to-congress/
+      link: Congress → https://ccagw.org/category/congress/
+      link: (no text) → https://pinterest.com/pin/create/link/?url=https://ccagw.org/ccagw-releases-2025-congressional-ratings/
+      link: Previous → https://ccagw.org/340b-abuse-spotlighted-at-house-ways-and-means-committee-hearing/
+      link: This Week In Waste – January 9, 2026 → https://ccagw.org/this-week-in-waste-january-9-2026/
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://ccagw.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fccagw.org%2Fccagw-releases-2025-congressional-ratings%2F · https://ccagw.org/wp-json/elementskit/v1/ · https://api.w.org/ · https://ccagw.org/wp-json/ · application/json · https://ccagw.org/wp-json/wp/v2/posts/61210
+
+NETWORK Lobby for Catholic Social Justice (network) · liberal · Taxes & spending
+  https://networklobby.org/?p=45742 → HTTP 200 (now https://networklobby.org/news/11526-voting-record/), text/html, 143 KB
+      title: NETWORK Releases 2025 Voting Record - NETWORK Lobby · 5,237 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Membership → https://networklobby.org/becomeamember/
+      link: Budget Reconciliation 2026 → https://networklobby.org/economy-for-all-agenda/budget2026/
+      link: Lent 2026 → http://x/
+      link: Crosses of Resistance — Voting Rights → https://networklobby.org/blog/lent-2026-voting-rights/
+      link: Stations of the Cross Facilitator Script → https://www.networkadvocates.org/wp-content/uploads/2026/03/Stations-of-the-Cross-2026-Script.pdf
+      link: Stations of the Cross Take Action Flyer → https://www.networkadvocates.org/wp-content/uploads/2026/03/Stations-of-the-Cross-2026-Half-page-Handout.pdf
+      link: Cross of Resistance Poster (front) → https://media.networklobby.org/uploads/2026/02/Rally-Poster-Lent-with-signs.pdf?_gl=1*ytrror*_ga*MjA0MDU3NjIyLjE3NzE0NDE0MzQ.*_ga_8M19BLVR1Z*czE3NzI2NTQzMjEkbzEyJGcxJHQxNzcyNjU0ODIyJGo2MCRsMCRoMA..
+      link: Cross of Resistance Poster (back) → https://media.networklobby.org/uploads/2026/02/Rally-Poster-Lent-BACK.pdf?_gl=1*okz984*_ga*MjA0MDU3NjIyLjE3NzE0NDE0MzQ.*_ga_8M19BLVR1Z*czE3NzI2NTQzMjEkbzEyJGcxJHQxNzcyNjU0ODQ2JGozNiRsMCRoMA..
+      link: 2024 Election Training Workshops → https://networkadvocates.org/election-2024-training-resources-for-faithful-voters/
+      link: National Voter Registration Day 2023 → https://networklobby.org/national-voter-registration-day-2023/
+      link: The 2025 Voting Record, scoring every Member of Congress, ca → https://media.networklobby.org/uploads/2026/01/2025-NETWORK-Voting-Record.pdf?_gl=1*hc8dpz*_ga*NDk2NzM0MjM1LjE3Njg1NzYxODI.*_ga_8M19BLVR1Z*czE3Njg1NzgzNjckbzIkZzEkdDE3Njg1NzgzODYkajQxJGwwJGgw
+      link: January 15, 2026 → https://networklobby.org/news/11526-voting-record/
+      link: MEMO: How the Trump Administration Exploited the American Pe → https://networklobby.org/news/how-the-trump-administration-exploited-the-american-people-and-failed-to-deliver-for-working-families-in-2025/
+      data addresses in its scripts: https://networklobby.org/wp-content/themes/network1/favicon/manifest.json · application/ld+json · //fonts.googleapis.com · application/json+oembed · https://networklobby.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnetworklobby.org%2Fnews%2F11526-voting-record%2F · https://api.w.org/ · https://networklobby.org/wp-json/ · https://networklobby.org/wp-json/tribe/events/v1/ · https://fonts.googleapis.com · https://fonts.googleapis.com/css2?family= · https://networkadvocates.org/election-2024-training-resources-for-faithful-voters/ · https://networklobby.org/national-voter-registration-day-2023/ · application/json · https://fonts.googleapis.com/css2
+
+NAACP (naacp) · liberal · Civil rights
+  https://naacp.org/find-resources/legislative-report-cards → HTTP 200, text/html, 125 KB
+      title: Legislative Report Cards | NAACP · 5,157 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Join a Local NAACP Unit → https://naacp.my.site.com/BecomeaMember/s/
+      link: Become a Member → https://naacp.org/take-action/become-member
+      link: Legislative Report Cards → https://naacp.org/find-resources/legislative-report-cards
+      link: Lines that Decide Our Lives: Redistricting, Power & Our Vote → https://naacp.org/find-resources/lines-decide-our-lives-redistricting-power-our-vote
+      link: Find out how your representatives voted → https://naacp.org/sites/default/files/documents/115th-Final-Report-Card.pdf
+      link: How Congress Voted 2015-2016 → https://naacp.org/sites/default/files/documents/114th-national-report-card.pdf
+      link: How Congress Voted 2013-2014 → https://naacp.org/sites/default/files/documents/113th-Report-Card.pdf
+      data addresses in its scripts: application/ld+json · /themes/custom/naacp/assets/pwa/manifest.json?v=20210428A · application/json · /find-resources/lines-decide-our-lives-redistricting-power-our-vote
+
+The Leadership Conference on Civil and Human Rights (civilrights) · liberal · Civil rights
+  https://civilrights.org/voting-record/ → HTTP 200, text/html, 172 KB
+      title: Voting Record - The Leadership Conference on Civil and Human Rights · 4,297 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Project 2025 → https://civilrights.org/project2025/
+      link: Reports → https://civilrights.org/type/reports/
+      link: 119th Congress → https://civilrights.org/wp-content/uploads/2026/10/119th-Congress.pdf
+      link: 118th Congress → https://civilrights.org/wp-content/uploads/2024/10/Voting-Record-118th-Congress.pdf
+      link: First Session → https://civilrights.org/wp-content/uploads/2024/03/Voting-Record-First-Session-118th-Congress.pdf
+      link: 117th Congress → https://civilrightsdocs.info/pdf/voting-record/VotingRecord-117thCongress-LeadershipConference-Report.pdf
+      link: First Session → http://civilrightsdocs.info/pdf/voting-record/VotingRecord-2021-LeadershipConference-Report.pdf
+      link: 116th Congress → http://civilrightsdocs.info/pdf/voting-record/VotingRecord-116thCongress-TheLeadershipConference-October2020.pdf
+      link: First session → http://civilrightsdocs.info/pdf/policy/letters/2020/2020_LCCHR_Voting_Record_FINAL02252020.pdf
+      link: 115th Congress → http://civilrightsdocs.info/pdf/voting-record/FINAL-2018-Voting-Record-10222018.pdf
+      link: First session → http://civilrightsdocs.info/pdf/voting-record/Voting-Record-115th-1st-Session.pdf
+      link: 114th Congress → http://civilrightsdocs.info/pdf/voting-record/Voting-Record-October2016.pdf
+      link: First session → https://civilrightsdocs.info/pdf/voting-record/2016-voting-record-fin.pdf
+      link: 113th Congress → http://civilrightsdocs.info/pdf/voting-record/Voting-Record-October2014-forweb.pdf
+      link: First session → https://civilrightsdocs.info/pdf/voting-record/civilrights-voting-record-113-congress-2013.pdf
+      link: 112th Congress → http://civilrightsdocs.info/pdf/voting-record/leadership-conference-voting-record-112-congress.pdf
+      link: First session → https://civilrightsdocs.info/pdf/voting-record/the-leadership-conference-voting-record-112th-congress.pdf
+      link: 111th Congress → http://civilrightsdocs.info/pdf/voting-record/leadership-conference-2010-voting-record.pdf
+      link: First session → https://civilrightsdocs.info/pdf/voting-record/voting-record-2009.pdf
+      link: 110th Congress → http://civilrightsdocs.info/pdf/voting-record/lccr_voting_record_110th_congress.pdf
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://civilrights.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcivilrights.org%2Fvoting-record%2F · https://api.w.org/ · https://civilrights.org/wp-json/ · application/json · https://civilrights.org/wp-json/wp/v2/pages/28440
+
+AAUW (aauw) · liberal · Civil rights
+  https://www.aauwaction.org/voter-education/congressional-voting-record/ → HTTP 200, text/html, 39 KB
+      title: AAUW Action Fund Congressional Voting Record : AAUW Action Fund · 3,522 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Voter Education → https://www.aauwaction.org/voter-education/
+      link: Voter Registration → https://www.vote411.org/register
+      link: Join → http://www.aauw.org/membership/
+      link: (no text) → https://act.aauw.org/CVR2026
+      link: January 2021 &#8211; December 2022 → https://www.aauwaction.org/wp-content/uploads/2023/07/117thCVR.pdf
+      link: January 2019 &#8211; December 2020 → https://www.aauwaction.org/wp-content/uploads/2020/10/AAUW-2020-116thCVR.pdf
+      link: January 2017 – December 2018 → https://www.aauwaction.org/wp-content/uploads/2018/10/115thCVR-Web.pdf
+      link: January 2015 – December 2016 → https://www.aauwaction.org/wp-content/uploads/2016/09/CVR-114congress-nsa.pdf
+      link: January 2013 – August 2014 → https://www.aauwaction.org/wp-content/uploads/2014/09/CVR-2013-14.pdf
+      link: January 2011 – December 2012 → https://www.aauwaction.org/wp-content/uploads/2012/09/CVR2012.pdf
+      link: January 2009 – December 2010 → https://www.aauwaction.org/wp-content/uploads/2011/10/VotingRecord_111.pdf
+      link: January 2009 – December 2010 → https://www.aauwaction.org/wp-content/uploads/2011/10/VotingRecord_111_EPS.pdf
+      link: January 2007 – December 2008 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_110.pdf
+      link: January 2005 – December 2006 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_109.pdf
+      link: January 2003 – December 2004 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_108.pdf
+      link: January 2001 – December 2002 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_107.pdf
+      link: January 1999 – December 2000 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_106.pdf
+      link: January 1997– December 1998 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_105.pdf
+      link: January 1995– December 1996 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_104.pdf
+      link: January 1993– December 1994 → https://www.aauwaction.org/wp-content/uploads/2011/10/votingRecord_103.pdf
+      data addresses in its scripts: https://www.aauwaction.org/voter-education/congressional-voting-record/ · application/json+oembed · https://www.aauwaction.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aauwaction.org%2Fvoter-education%2Fcongressional-voting-record%2F · https://api.w.org/ · https://www.aauwaction.org/wp-json/ · application/json · https://www.aauwaction.org/wp-json/wp/v2/pages/146 · https://www.aauwaction.org/voter-education/ · https://www.vote411.org/register · https://www.aauwaction.org/voter-education/voter-guides/ · https://www.aauwaction.org/voter-education/initiatives/
+
+CPAC (cpac) · conservative · Overall
+  https://www.cpac.org/foundation/ratings/us → HTTP 200, text/html, 1993 KB
+      title: Congress | CPAC Foundation Ratings · 3,439 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: (no text) → https://www.cpac.org/foundation/ratings/us
+      link: Ratings → https://www.cpac.org/foundation/ratings
+      link: Lawmakers Search → https://www.cpac.org/foundation/ratings/wy
+      link: Congress → https://cpac.org/foundation/ratings/us
+      link: States → https://cpac.org/foundation/ratings-states
+      link: Archives → http://ratings.conservative.org/
+      link: Home → https://cpac.org/foundation/ratings
+      link: View the Report → → https://dea0d469-c1d7-4068-bddd-0a3895cc096b.usrfiles.com/ugd/dea0d4_1fbfb19d94774b4a889fd895daf6b73c.pdf
+      data addresses in its scripts: application/json · /_api/v1/access-tokens · /_api/v2/dynamicmodel · /_api/one-app-session-web/v3/businesses · application/ld+json · https://panorama.wixapps.net/api/v1/bulklog · /api/
+  https://www.cpac.org/us/ratings → HTTP 200, text/html, 711 KB
+      title: (none) · 3 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      data addresses in its scripts: application/json · /_api/v1/access-tokens · /_api/v2/dynamicmodel · /_api/one-app-session-web/v3/businesses · https://panorama.wixapps.net/api/v1/bulklog · /api/
+
+John Birch Society (Freedom Index) (jbs) · conservative · Overall
+  https://thenewamerican.com/files/Freedom_Index_119-2.pdf → HTTP 200, application/pdf, 937 KB
+      A PDF with no text (a scanned image, or one this reader can't open).
+  https://thenewamerican.com/freedom-index/report/scorecard-118-4 → HTTP 200 (now https://freedomindex.us/us/reports/), text/html, 473 KB
+      title: Congressional Vote Reports | Freedom Index · 113,376 characters of text
+      profiled members named on the page: 4 (Hageman, Thomas, Brown, Jackson)
+      link: Login → https://freedomindex.us/account/?redirect_to=https%3A%2F%2Ffreedomindex.us%2Fus%2Freports%2F
+      link: U.S. Congress → https://freedomindex.us/us/
+      link: Legislators → https://freedomindex.us/us/legislators/
+      link: Votes → https://freedomindex.us/us/votes/
+      link: Scorecard 119-3 → https://freedomindex.us/us/report/255/
+      link: Appropriations → https://freedomindex.us/us/vote/3743/
+      link: Refugee-assistance Funding → https://freedomindex.us/us/vote/3744/
+      link: Foreign Aid → https://freedomindex.us/us/vote/3745/
+      link: War Powers → https://freedomindex.us/us/vote/3746/
+      link: VA Abortion-services Rule → https://freedomindex.us/us/vote/3748/
+      link: Law-enforcement Grants → https://freedomindex.us/us/vote/3751/
+      link: Appropriations → https://freedomindex.us/us/vote/3733/
+      link: Democracy Grants → https://freedomindex.us/us/vote/3735/
+      link: Ban Funding for “Kill-switch” Mandate → https://freedomindex.us/us/vote/3736/
+      link: War Powers → https://freedomindex.us/us/vote/3739/
+      link: Haiti “Temporary Protected Status” Designation → https://freedomindex.us/us/vote/3740/
+      link: Ukraine Aid → https://freedomindex.us/us/vote/3742/
+      link: Freedom Index 119-3 → https://freedomindex.us/us/report/254/
+      link: Download PDF → https://thenewamerican.com/files/Freedom_Index_119-3.pdf
+      link: Housing → https://freedomindex.us/us/vote/3747/
+      data addresses in its scripts: //fonts.googleapis.com · https://freedomindex.us/manifest.json · application/ld+json · https://freedomindex.us/us/votes/ · https://freedomindex.us/us/vote/3743/ · https://freedomindex.us/us/vote/3744/ · https://freedomindex.us/us/vote/3745/ · https://freedomindex.us/us/vote/3746/ · https://freedomindex.us/us/vote/3748/ · https://freedomindex.us/us/vote/3751/ · https://freedomindex.us/us/vote/3733/ · https://freedomindex.us/us/vote/3735/ · https://freedomindex.us/us/vote/3736/ · https://freedomindex.us/us/vote/3739/ · https://freedomindex.us/us/vote/3740/ · https://freedomindex.us/us/vote/3742/ · https://freedomindex.us/us/vote/3747/ · https://freedomindex.us/us/vote/3749/ · https://freedomindex.us/us/vote/3750/ · https://freedomindex.us/us/vote/3752/ · https://freedomindex.us/us/vote/3734/ · https://freedomindex.us/us/vote/3737/ · https://freedomindex.us/us/vote/3738/ · https://freedomindex.us/us/vote/3741/
+
+Republican Liberty Caucus (Liberty Index) (rlc) · conservative · Overall
+  https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-Senate.pdf → HTTP 200, application/pdf, 1160 KB
+      A PDF: 17,796 characters of text; profiled members named in it: 4 (Collins, Sullivan, Marshall, Husted)
+      starts: Liberty Index 2026 U.S. Senate L e g i s l a t i v e s c o r e c a r d f o r t h e U . S . S e n a t e d u r i n g t h e 2 0 2 5 c a l e n d a r y e a r L i b e r t y I n d e x O v e r v i e w C r e a t e d b y t h e R e p u b l i c a n L i
+  https://rlc.org/wp-content/uploads/2026/03/Liberty-Index-2026-US-House.pdf → HTTP 200, application/pdf, 2724 KB
+      A PDF: 32,619 characters of text; profiled members named in it: 15 (Collins, Perry, Lawler, Evans, Miller-Meeks, Rogers, Hinson, Barr, Moore, Hageman, Thomas, Hern …)
+      starts: Liberty Index 2026 U.S. House L e g i s l a t i v e s c o r e c a r d f o r t h e U . S . H o u s e d u r i n g t h e 2 0 2 5 c a l e n d a r y e a r L i b e r t y I n d e x O v e r v i e w C r e a t e d b y t h e R e p u b l i c a n L i b 
+
+ProgressivePunch (progressivepunch) · liberal · Overall
+  https://www.progressivepunch.org/scores.htm → HTTP 500, text/html, 4 KB
+      title: ProgressivePunch - Error · 662 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: What is a Progressive score? → https://www.progressivepunch.org/whatIsProgScore.htm
+  https://progressivepunch.org/whatIsProgScore.htm → HTTP 200, text/html, 20 KB
+      title: ProgressivePunch : What is a Progressive score? · 9,672 characters of text
+      profiled members named on the page: 1 (Davis)
+      link: What is a Progressive score? → https://progressivepunch.org/whatIsProgScore.htm
+      table: 12 rows; first: Senators; second: WI | Tammy Baldwin
+      table: 42 rows; first: Representatives; second: AZ | 3 | Yassamin Ansari
+
+Americans for Democratic Action (ada) · liberal · Overall
+  https://adaction.org/ → couldn't connect (ERR_HTTP2_STREAM_ERROR)
+  https://adaction.org/wp-content/uploads/2024/09/2023.pdf → couldn't connect (ERR_HTTP2_STREAM_ERROR)
+
+NumbersUSA (numbersusa) · conservative · Immigration
+  https://grades.numbersusa.com/ → HTTP 200 (now https://www.numbersusa.org/grades/), text/html, 170 KB
+      title: NumbersUSA - Immigration-Reduction Grade Cards (Congress) - NumbersUSA · 1,205 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Six Great Solutions → https://numbersusa.org/congress/six-great-immigration-solutions
+      link: Bill Tracker → https://numbersusa.org/congress/bills
+      link: Grades → https://numbersusa.com/grades
+      link: Browse All Members of Congress → https://www.numbersusa.org/grades
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://www.numbersusa.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.numbersusa.org%2Fgrades%2F · https://api.w.org/ · https://www.numbersusa.org/wp-json/ · application/json · https://www.numbersusa.org/wp-json/wp/v2/pages/27328 · /api/user/verify-email-resend
+  https://grades.numbersusa.com/search/ → HTTP 200, text/html, 1137 KB
+      title: NumbersUSA Congressional Grade Cards · 57,809 characters of text
+      profiled members named on the page: 19 (Collins, Sullivan, Marshall, Evans, Gonzalez, Cooper, Pappas, Flanagan, Barr, Moore, Byrd, Thomas …)
+      link: 6 Great Solutions → https://www.numbersusa.com/congress/six-great-immigration-solutions/
+      link: (no text) → https://grades.numbersusa.com/
+      data addresses in its scripts: https://fonts.googleapis.com · https://fonts.googleapis.com/css2?family=Anton
+
+FRC Action (frc) · conservative · Family & religion
+  https://www.frcaction.org/scorecard → HTTP 200, text/html, 29 KB
+      title: FRC Action · 5,578 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: VOTER RESOURCES → https://www.frcaction.org/vote
+      link: House → https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_house
+      link: Senate → https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate
+      link: 119TH - 1 st Session PDF → https://www.frcaction.org/index.cfm?i=LK26A02&f=PG21B08
+      link: 118TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK25D02&f=PG21B08
+      link: 118TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK24E05&amp;f=PG21B08
+      link: 117TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK23B02&amp;f=PG21B08
+      link: 117TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK21D01&amp;f=PG21B08
+      link: 116TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK20E03&f=PG21B08
+      link: 116TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK20B02&f=PG21B08
+      link: 115TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK19B01&f=PG21B08
+      link: 115TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK18A02&f=PG21B08
+      link: 114TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK18A01&f=PG21B08
+      link: 114TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK16J32&f=PG21B08
+      link: 113TH Congress → https://www.frcaction.org/index.cfm?i=LK14B06&f=PG21B08
+      link: 112TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK12I06&f=PG21B08
+      link: 112TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK11I04&f=PG21B08
+      link: 111TH Congress → https://www.frcaction.org/index.cfm?i=LK10J02&f=PG21B08
+      link: 110TH Congress → https://www.frcaction.org/index.cfm?i=LK10J09&f=PG21B08
+      link: 109TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK06J15&f=PG21B08
+      data addresses in its scripts: //fonts.googleapis.com/css?family=Open+Sans+Condensed:700 · https://www.frcaction.org/vote · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00012.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00072.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00060.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00097.htm · https://prayvotestand.org/ · /webjson/frc/script_generated/issue_code_url.json
+
+National Committee to Preserve Social Security and Medicare (ncpssm) · liberal · Seniors
+  https://www.ncpssm.org/scorecard/ → HTTP 200, text/html, 142 KB
+      title: Scorecard - NCPSSM · 5,246 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Scorecard → https://www.ncpssm.org/scorecard/
+      link: 119th Congress → https://www.ncpssm.org/119th-congress/
+      link: 118th Congress → https://www.ncpssm.org/118th-congress/
+      link: (no text) → https://www.ncpssm.org/scorecard/vote-descriptions/?utm_campaign=ScorecardVD&utm_source=ncpssm.org&utm_medium=ScorecardVD
+      link: (no text) → https://www.ncpssm.org/scorecard/vote-descriptions/?utm_campaign=ScorecardVD&amp;utm_source=ncpssm.org&amp;utm_medium=ScorecardVD
+      link: Download current scorecard that includes all states here → https://www.ncpssm.org/wp-content/uploads/2026/08/Congressional-Scorecard-2026-final.pdf
+      link: 2016 Congressional Scorecard → https://www.ncpssm.org/wp-content/uploads/2022/09/ncpssm_scorecard_2016.pdf
+      link: 2018 Congressional Scorecard → https://www.ncpssm.org/wp-content/uploads/2022/09/Scorecard-2018.pdf
+      link: 2020 Congressional Scorecard → https://www.ncpssm.org/wp-content/uploads/2020/08/ncpssm-2020-final-scorecard.pdf
+      link: 2022 Congressional Scorecard → https://www.ncpssm.org/wp-content/uploads/2022/09/2022-scorecard.pdf
+      link: 2024 Congressional Scorecard → https://www.ncpssm.org/wp-content/uploads/2024/10/scorecard-2024-full.pdf
+      link: RENEW → https://secure.ncpssm.org/secure/membership-renewal
+      data addresses in its scripts: https://www.addthis.com/help/api-spec · application/ld+json · application/json+oembed · https://www.ncpssm.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ncpssm.org%2Fscorecard%2F · https://api.w.org/ · https://www.ncpssm.org/wp-json/ · application/json · https://www.ncpssm.org/wp-json/wp/v2/pages/30058 · https://www.ncpssm.org/scorecard/vote-descriptions/?utm_campaign=ScorecardVD&utm_source=ncpssm.org&utm_medium=ScorecardVD
+  https://www.ncpssm.org/wp-content/uploads/2026/08/Congressional-Scorecard-2026-final.pdf → HTTP 200, application/pdf, 6409 KB
+      A PDF: 17,024 characters of text; profiled members named in it: 2 (Ossoff, Thomas)
+      starts: NATIONACOMMITTERESERV SOAL SECURITMEDICARE CONGSSIONALCOCA 119 th session of congress D TNCPSSM CRPDR Social Security. We are the nation’s leading advocacy group fighting to protect Social Security and Medicare. We are a nonpartisan, nonpro
+
+Alliance for Retired Americans (ara) · liberal · Seniors
+  https://retiredamericans.org/voting-record/embed/ → HTTP 200, text/html, 22 KB
+      title: Annual Congressional Voting Record - Retired Americans · 2,982 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Annual Congressional Voting Record → https://retiredamericans.org/voting-record/
+  https://retiredamericans.org/wp-content/uploads/2026/03/2025-Congressional-Voting-Record.pdf → HTTP 200, application/pdf, 1064 KB
+      A PDF: 40,585 characters of text; profiled members named in it: 28 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+      starts: Congressional Voting Record 119 th Congress, 1 st Session January 2025 — December 2025 A Special Report on Legislation Vital to American Retirees 815 16th Street, NW, 4th Floor F Washington, DC 20006 (202) 637-5399 F (888) 373-6497 www.reti
+
+End Citizens United (ecu) · liberal · Money in politics
+  https://www.endcitizensunited.org/end-citizens-united-action-fund-releases-anti-corruption-scorecard-for-119th-congress → HTTP 200 (now https://www.endcitizensunited.org/), text/html, 1093 KB
+      title: End Citizens United · 2,035 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      data addresses in its scripts: application/json
+
+Common Cause (commoncause) · liberal · Money in politics
+  https://www.commoncause.org/press/democracy-scorecard-tracks-lawmaker-support-for-pro-democracy-bills-in-118th-congress/ → HTTP 200, text/html, 141 KB
+      title: “Democracy Scorecard” Tracks Lawmaker Support for Pro-Democracy Bills in 118th Congress - Common Cause · 8,572 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Join Or Renew Your Membership → https://www.commoncause.org/join-or-renew-your-membership/
+      link: Close → https://www.commoncause.org/press/democracy-scorecard-tracks-lawmaker-support-for-pro-democracy-bills-in-118th-congress/?#
+      link: Stopping Voter Suppression → https://www.commoncause.org/issues/stopping-voter-suppression/
+      link: Democracy Scorecard → https://democracyscorecard.org/
+      link: DHS appropriations amendment → https://clerk.house.gov/Votes/2023447
+      link: Representative Santos expulsion vote → https://clerk.house.gov/Votes/2023691
+      link: Freedom to Vote Act → https://www.congress.gov/bill/118th-congress/house-bill/11
+      link: John R. Lewis Voting Rights Advancement Act → https://www.congress.gov/bill/118th-congress/house-bill/14
+      link: DC Statehood → https://www.congress.gov/bill/118th-congress/house-bill/51
+      link: DISCLOSE Act → https://www.congress.gov/bill/118th-congress/house-bill/1118
+      link: Supreme Court Ethics, Recusal, and Transparency Act → https://www.congress.gov/bill/118th-congress/house-bill/926
+      link: Judicial Ethics and Anti-Corruption Act → https://www.congress.gov/bill/118th-congress/house-bill/3973
+      link: Protecting Our Democracy Act → https://www.congress.gov/bill/118th-congress/house-bill/5048
+      link: Democracy for All Amendment → https://www.congress.gov/bill/118th-congress/house-joint-resolution/13
+      link: Sen. Budd amendment → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00279.htm
+      link: Sen. Hagerty amendment → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00083.htm
+      link: Sen. Schmitt amendment → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00109.htm
+      link: Freedom to Vote Act → https://www.congress.gov/bill/118th-congress/senate-bill/1
+      link: John R. Lewis Voting Rights Advancement Act → https://www.congress.gov/bill/118th-congress/senate-bill/4
+      link: DC Statehood → https://www.congress.gov/bill/118th-congress/senate-bill/51
+      data addresses in its scripts: API/logging/ · API/register/ · API/createTracer/called · application/ld+json · application/json+oembed · https://www.commoncause.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.commoncause.org%2Fpress%2Fdemocracy-scorecard-tracks-lawmaker-support-for-pro-democracy-bills-in-118th-congress%2F · https://api.w.org/ · https://www.commoncause.org/wp-json/ · application/json · https://www.commoncause.org/wp-json/wp/v2/press/15668 · https://www.commoncause.org/wp-content/themes/common-cause/_html/source/manifest.json?ver=1794159156 · https://www.commoncause.org/issues/stopping-voter-suppression/ · https://clerk.house.gov/Votes/2023447 · https://clerk.house.gov/Votes/2023691 · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00279.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00083.htm · https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00109.htm · https://www.commoncause.org/articles/5-things-common-cause-is-doing-to-protect-your-vote-in-2026/
+
+Humane World Action Fund (humane) · liberal · Animal welfare
+  https://humaneaction.org/humane-scorecard → HTTP 200, text/html, 78 KB
+      title: 2026 Humane Scorecard Preview | Humane World Action Fund · 2,194 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Humane Scorecard → https://humaneaction.org/humane-scorecard
+      link: Current Scorecard → https://humaneaction.org/current_scorecard
+      link: Methodology → https://humaneaction.org/humane-scorecard/methodology
+      link: Past Scorecards → https://humaneaction.org/past-scorecards
+      link: State Scorecards → https://humaneaction.org/state-scorecards
+      table: 0 rows; first: 
+      table: 0 rows; first: 
+      data addresses in its scripts: https://fonts.googleapis.com · https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${tab}?alt=json&key=${key}
+  https://humaneaction.org/sites/default/files/2026-02/FINAL%20humane-scorecard-2025.pdf → HTTP 200, application/pdf, 1327 KB
+      A PDF: 24,096 characters of text; profiled members named in it: 0
+      starts: ma Srerd r 2 2025 Humane Scorecard tpriiegtshroma Srecard for the first session of th119tCongressentere thisessioitnene nortioFn ofnentgohsn hngestritpro thesotoepossifo niithegistireno spporitherfontiootho nergrtef ersproohhopishe together
+
+Stand With Crypto (standwithcrypto) · conservative · Crypto & tech
+  https://www.standwithcrypto.org/politicians → HTTP 200, text/html, 262 KB
+      title: Find out where politicians stand on crypto | Stand With Crypto · 62 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      data addresses in its scripts: }/api/ · /api · /api/ · application/vnd.sentry.items.log+json · application/vnd.sentry.items.trace-metric+json · /:countryCode/action/share-voter-hub · /:countryCode/vote · /:countryCode/vote/activity · /au/vote · /br/action/share-voter-hub · /br/vote · /ca/vote · /gb/vote · /api/monitoring · maps/api/js
+
+Council for Innovation Promotion (c4ip) · none · Crypto & tech
+  https://c4ip.org/resources/congressional-innovation-scorecard/ → HTTP 200, text/html, 214 KB
+      title: Congressional Innovation Scorecard Archives | Council for Innovation Promotion (C4IP) · 4,947 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Congressional Innovation Scorecard → https://c4ip.org/resources/congressional-innovation-scorecard/
+      link: Reports → https://c4ip.org/resources/reports/
+      link: 2026 Interactive Scorecard​ → https://c4ip.org/interactive-scorecard/
+      link: (no text) → https://c4ip.org/wp-content/uploads/2026/05/C4IP-Congressional-Innovation-Scorecard-Third-Edition.pdf#new_tab
+      link: (no text) → https://c4ip.org/wp-content/uploads/2025/07/C4IP-Congressional-Innovation-Scorecard-Edition-2.pdf#new_tab
+      link: (no text) → https://c4ip.org/wp-content/uploads/2024/03/2024-Congressional-Innovation-Scorecard.pdf#new_tab
+      link: © 2026 Council for Innovation Promotion → https://c4ip.org/
+      table: 7 rows; first: Cookie | Duration | Description; second: cookielawinfo-checkbox-analyti | 11 months | This cookie is set by GDPR Coo
+      data addresses in its scripts: application/ld+json · //fonts.googleapis.com · https://fonts.googleapis.com · https://c4ip.org/resources/congressional-innovation-scorecard/feed/ · https://api.w.org/ · https://c4ip.org/wp-json/ · application/json · https://c4ip.org/wp-json/wp/v2/resource-types/71
+  https://c4ip.org/wp-content/uploads/2026/05/C4IP-Congressional-Innovation-Scorecard-Third-Edition.pdf → HTTP 200, application/pdf, 1718 KB
+      A PDF: 56,725 characters of text; profiled members named in it: 8 (Ossoff, Booker, Hickenlooper, Miller-Meeks, Perez, Gonzalez, Ricketts, Jackson)
+      starts: n Tablefontes AbouIP . 3 Execuvemy 4 Iovangorodayndheureheortce oIRightanIncentivetthU.SEconomand Globeadsp . 7 Tgressialnvaticecard (Third Edition) — Overall Scorecard Results . Different IP Rights, Different Results? Zooming In on Pesndop
+
+AJP Action (ajp) · liberal · Israel, Palestine & Iran
+  https://ajpaction.org/scorecard2026/ → HTTP 200, text/html, 936 KB
+      title: 2026 AJP Action Congressional Scorecard &#8211; AJP Action · 15,283 characters of text
+      profiled members named on the page: 3 (Lawler, Thomas, Murphy)
+      link: Palestine Advocacy Days 2026 → https://ajpaction.org/pad2026/
+      link: 2026 Endorsements → https://ajpaction.org/ajp-actions-2026-candidate-endorsements/
+      link: Scorecard → https://ajpaction.org/scorecard2026/
+      link: Palestine Congressional Scorecard → https://ajpaction.org/category/take-action/
+      link: DOWNLOAD 2026 SCORECARD HERE → https://ajpaction.org/wp-content/uploads/2026/05/2026-AJP-Action-Congressional-Scorecard.pdf
+      link: DOWNLOAD THE SCORECARD EXCEL SHEET HERE → https://ajpaction.org/wp-content/uploads/2026/05/AJP-Action-Congressional-Scorecard-2026.xlsx
+      table: 5 rows; first: A | 20 or higher (up to a theoreti; second: B | 12 to 19
+      table: 5 rows; first: A | 13 or higher (up to a theoreti; second: B | 10 to 12
+      table: 5 rows; first: A | 20 or higher (up to a theoreti; second: B | 13 to 19
+      table: 5 rows; first: A | 15 or higher (up to a theoreti; second: B | 11 to 14
+      data addresses in its scripts: //fonts-api.wp.com · application/json+oembed · https://ajpaction.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fajpaction.org%2Fscorecard2026%2F · application/ld+json · https://ajpaction.org/wp-json/give-api/v2/ · give-api/v2 · https://api.w.org/ · https://ajpaction.org/wp-json/ · application/json · https://ajpaction.org/wp-json/wp/v2/pages/13814 · https://ajpaction.org/wp-json/tribe/events/v1/ · https://fonts.googleapis.com · //fonts.googleapis.com/css2?family= · https://fonts.googleapis.com/css2 · https://www.youtube.com/iframe_api
+  https://ajpaction.org/wp-content/uploads/2026/05/2026-AJP-Action-Congressional-Scorecard.pdf → HTTP 200, application/pdf, 1385 KB
+      A PDF: 3,227 characters of text; profiled members named in it: 0
+      starts: 1 Cc CCD 2026 fg w C cfc Member of Congress has aligned on a comprehensive set of Palestine-focused bills, resolutions, votes, and public letters. Unlike the 2024 edition, which assessed only Democrats, the 2026 scorecard assesses both Demo
+
+IMEU Policy Project (imeu) · liberal · Israel, Palestine & Iran
+  https://imeupolicyproject.org/scorecard → HTTP 403, text/html, 5 KB
+      A bot check, not the page: this site turns scripts away, so this group is left out.
+
+NIAC Action (niac) · liberal · Israel, Palestine & Iran
+  https://niacouncil.org/homepage_carousel/niac-action-congressional-scorecard/ → HTTP 200, text/html, 92 KB
+      title: NIAC Action Congressional Scorecard &#8211; NIAC · 1,411 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Become a Member → https://niacouncil.org/get-involved/become-a-member
+      link: Congressional Scorecard → http://scorecard.niacaction.org/
+      data addresses in its scripts: https://api.w.org/ · https://niacouncil.org/wp-json/ · application/json · https://niacouncil.org/wp-json/wp/v2/homepage_carousel/55085
+
+National Association of Police Organizations (napo) · conservative · Policing
+  https://www.napo.org/legislative-scorecard/ → HTTP 200 (now https://www.napo.org/legislative-priorities-positions), text/html, 56 KB
+      title: Legislative Priorities & Positions · 3,025 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: The Washington Report → https://www.napo.org/washington-report
+      link: NAPO Membership → https://www.napo.org/membership
+      link:  download 119th Congress Mid-Term Legislative Scorecard → https://cdn.prod.website-files.com/68cd91c888b5c88574bad31c/696545e9e8bad807585fd1a8_NAPO%20119th%20Mid-Term%20Legislative%20Scorecard%202025.pdf
+      link:  download 119th Congress 2025-2027 legislative priorities b → https://cdn.prod.website-files.com/68cd91c888b5c88574bad31c/69398a69f6172896b0f293fb_Legislative-Priorities-119th-Congress-2025-2027.pdf
+      link:  download NAPO legislative positions: 119th Congress → https://cdn.prod.website-files.com/68cd91c888b5c88574bad31c/6abd351f48d9d8306ae6210a_NAPO-119th-Legislative-Positions_September-2026-deea53.pdf
+      data addresses in its scripts: https://fonts.googleapis.com · application/ld+json · https://cdn.prod.website-files.com/68cd91c888b5c88574bad31c/68e412a9d3006c3ab407b26d_NAPO-118th-Legislative-Scorecard-FINAL.pdf · https://cdn.prod.website-files.com/68cd91c888b5c88574bad31c/696545e9e8bad807585fd1a8_NAPO%20119th%20Mid-Term%20Legislative%20Scorecard%202025.pdf · https://www.youtube.com/iframe_api
+
+NORML (norml) · liberal · Marijuana
+  https://norml.org/congressional-scorecard/ → HTTP 200 (now https://vote.norml.org/), text/html, 10 KB
+      title: NORML's Smoke the Vote · 891 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Alabama → https://vote.norml.org/states/AL
+      link: Alaska → https://vote.norml.org/states/AK
+      link: Arizona → https://vote.norml.org/states/AZ
+      link: Arkansas → https://vote.norml.org/states/AR
+      link: California → https://vote.norml.org/states/CA
+      link: Colorado → https://vote.norml.org/states/CO
+      link: Connecticut → https://vote.norml.org/states/CT
+      link: District of Columbia → https://vote.norml.org/states/DC
+      link: Delaware → https://vote.norml.org/states/DE
+      link: Florida → https://vote.norml.org/states/FL
+      link: Georgia → https://vote.norml.org/states/GA
+      link: Hawaii → https://vote.norml.org/states/HI
+      link: Idaho → https://vote.norml.org/states/ID
+      link: Illinois → https://vote.norml.org/states/IL
+      link: Indiana → https://vote.norml.org/states/IN
+      link: Iowa → https://vote.norml.org/states/IA
+      link: Kansas → https://vote.norml.org/states/KS
+      link: Kentucky → https://vote.norml.org/states/KY
+      link: Louisiana → https://vote.norml.org/states/LA
+      link: Maine → https://vote.norml.org/states/ME
+      data addresses in its scripts: https://vote.norml.org · application/json · /api/address/
+  https://norml.org/congressional-scorecard/mississippi → HTTP 200 (now https://norml.org/us-governors/mississippi/), text/html, 126 KB
+      title: Mississippi - NORML · 4,994 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: (no text) → https://norml.org/blog/2026/11/04/congressional-shake-up-bolsters-prospects-for-future-federal-marijuana-policy-reforms/
+      link: (no text) → https://norml.org/blog/2026/11/04/idaho-voters-reject-effort-hjr-4-to-ban-future-voter-initiated-marijuana-legalization-campaigns/
+      link: (no text) → https://norml.org/blog/2026/11/04/massachusetts-voters-overwhelmingly-reject-ballot-proposal-seeking-to-repeal-marijuana-legalization/
+      link: US Governors Scorecard → https://norml.org/us-governors/
+      table: 2 rows; first: Took Office | 2020; second: Term Expires | 2023
+      data addresses in its scripts: application/ld+json · //fonts-api.wp.com · application/json+oembed · https://norml.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnorml.org%2Fus-governors%2Fmississippi%2F · https://api.w.org/ · https://norml.org/wp-json/ · application/json · https://norml.org/wp-json/wp/v2/pages/25568 · https://norml.org/us-capitol-green-flag/ · https://norml.org/blog/2026/11/04/idaho-voters-reject-effort-hjr-4-to-ban-future-voter-initiated-marijuana-legalization-campaigns/ · https://norml.org/idaho-marijuana-vote-2/ · https://norml.org/blog/2026/11/04/massachusetts-voters-overwhelmingly-reject-ballot-proposal-seeking-to-repeal-marijuana-legalization/ · https://norml.org/wp-json/wpcom/v2/comments/embed · https://norml.org/wp-json/wpcom/v2/comments/identity/connect · https://public-api.wordpress.com
+
+The Lugar Center (Bipartisan Index) (lugar) · none · Bipartisanship
+  https://www.thelugarcenter.org/ourwork-Bipartisan-Index.html → HTTP 200, text/html, 3271 KB
+      title: Our Work: The Lugar Center · 491,555 characters of text
+      profiled members named on the page: 35 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+      link: (no text) → http://www.flickr.com/photos/senatorlugar/
+      link: Senator Richard Lugar → https://www.thelugarcenter.org/about-lugar.html
+      link: 2023 House Scores → https://www.thelugarcenter.org/ourwork-86.html
+      link: 2023 Senate Scores → https://www.thelugarcenter.org/ourwork-85.html
+      link: 117th Congress Senate Scores → https://www.thelugarcenter.org/ourwork-84.html
+      link: 117th Congress House Scores → https://www.thelugarcenter.org/ourwork-83.html
+      link: 2021 Senate Scores → https://www.thelugarcenter.org/ourwork-82.html
+      link: 2021 House Scores → https://www.thelugarcenter.org/ourwork-81.html
+      link: 116th Congress Senate Scores → https://www.thelugarcenter.org/ourwork-80.html
+      link: 116th Congress House Scores → https://www.thelugarcenter.org/ourwork-79.html
+      link: 2019 Senate Scores → https://www.thelugarcenter.org/ourwork-72.html
+      link: 2019 House Scores → https://www.thelugarcenter.org/ourwork-71.html
+      link: Lifetime Senate Scores → https://www.thelugarcenter.org/ourwork-70.html
+      link: 115th Congress: Senate Scores → https://www.thelugarcenter.org/ourwork-69.html
+      link: 115th Congress: House Scores → https://www.thelugarcenter.org/ourwork-68.html
+      link: 2017 Senate Scores → https://www.thelugarcenter.org/ourwork-62.html
+      link: 2017 House Scores → https://www.thelugarcenter.org/ourwork-61.html
+      link: 114th Congress: Senate Scores → https://www.thelugarcenter.org/ourwork-54.html
+      link: 114th Congress: House Scores → https://www.thelugarcenter.org/ourwork-53.html
+      link: 2015 Senate Scores → https://www.thelugarcenter.org/ourwork-50.html
+      table: 1 rows; first:  |  |  | 
+      table: 1 rows; first:  |  |  | 
+      table: 438 rows; first: Representative (by score) |  | Representative (alphabetical); second: # | Name | State | Party | Score |  | # | Name | State | Party | Score
+      table: 10 rows; first:  |  |  |  |  |  |  |  |  |  |  |  | ; second: GovTrack data was used in the 
+      table: 1 rows; first:  |  |  | 
+      table: 1 rows; first:  |  |  | 
+      table: 100 rows; first: Senator (by score) |  | Senator (alphabetical); second: # | Name | State | Party | Score |  | # | Name | State | Party | Score
+      table: 10 rows; first:  |  |  |  |  |  |  |  |  |  |  |  | ; second: GovTrack data was used in the 
+      data addresses in its scripts: http://www.texasstandard.org/stories/texas-senators-rarely-cross-party-lines-but-rep-henry-cuellar-is-proud-of-bipartisan-rating/ · http://www.jsonline.com/news/opinion/bipartisan-shouldnt-be-a-dirty-word-for-members-of-congress-b99513102z1-306173001.html · http://www.journalgazette.net/opinion/sunday-centerpiece/Capitol-cooperation-6737500 · https://cookpolitical.com/introducing-2017-cook-political-report-partisan-voter-index · //www.youtube.com/iframe_api
+
+Human Rights Campaign (hrc) · liberal · Civil rights · shown only with their permission
+  https://www.hrc.org/resources/congressional-scorecard → HTTP 200, text/html, 169 KB
+      title: HRC | Congressional Scorecard · 4,871 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      link: Research & Polling Independent research, data-driven reports → https://www.hrc.org/resources/research
+      link: All Reports Explore our full catalog of Digital Reports. → https://reports.hrc.org/
+      link: Memberships Become a member or manage your existing membersh → https://www.hrc.org/get-involved/hrc-memberships
+      link: Bluesky → https://bsky.app/intent/compose?text=Congressional%20Scorecard%20via:%20https%3A%2F%2Fwww.hrc.org%2Fresources%2Fcongressional-scorecard
+      link: Threads → https://www.threads.net/intent/post?url=https%3A%2F%2Fwww.hrc.org%2Fresources%2Fcongressional-scorecard&amp;text=Congressional%20Scorecard
+      link: Congressional Scorecard for the 119th Congress Read the late → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/119th-Congressional-Scorecard.pdf
+      link: Federal Legislation Resources The Human Rights Campaign, alo → https://www.hrc.org/resources/legislation
+      link: 118th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/118th-Congressional-Scorecard-HRC-2024-Final.pdf
+      link: 117th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/assets/117th-Congressional-Scorecard_web.cleaned.pdf
+      link: 116th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/116th-Congressional-Scorecard-060921.pdf
+      link: 115th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/115thCongressionalScorecard-Report.pdf
+      link: 114th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/114thCongressionalScorecard.pdf
+      link: 113th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/113thCongressionalScorecard_web_REV.pdf
+      link: 112th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/112thCongressionalScorecard_2012.pdf
+      link: 111th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/111thCongressional_Scorecard.pdf
+      link: 110th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/Congress_Scorecard-110th.pdf
+      link: 109th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/HRC_congressional_scorecard_109th.pdf
+      link: 108th Congress → https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/2004ScoreCard.pdf
+      link: Manage Your Membership → https://www.hrc.org/get-involved/member-center
+      data addresses in its scripts: https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/119th-Congressional-Scorecard.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/118th-Congressional-Scorecard-HRC-2024-Final.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/assets/117th-Congressional-Scorecard_web.cleaned.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/116th-Congressional-Scorecard-060921.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/115thCongressionalScorecard-Report.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/114thCongressionalScorecard.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/113thCongressionalScorecard_web_REV.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/112thCongressionalScorecard_2012.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/111thCongressional_Scorecard.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/Congress_Scorecard-110th.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/assets/resources/HRC_congressional_scorecard_109th.pdf · https://hrc-prod-requests.s3-us-west-2.amazonaws.com/files/documents/2004ScoreCard.pdf · application/ld+json
+
+ACLU (aclu) · liberal · Civil rights · shown only with their permission
+  https://www.aclu.org/congressional-scorecards → HTTP 200, text/html, 266 KB
+      title: Congressional Scorecards | American Civil Liberties Union · 98 characters of text
+      profiled members named on the page: 0 (the ratings may be filled in by its scripts, or on another page)
+      data addresses in its scripts: application/ld+json · application/json+oembed · https://www.aclu.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aclu.org%2Fcongressional-scorecards · https://api.w.org/ · https://www.aclu.org/wp-json/ · application/json · https://www.aclu.org/wp-json/wp/v2/pages/216557 · https://www.aclu.org/wp-json/api/ · https://cdn.us.heap-api.com/config/
