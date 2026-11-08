@@ -17,7 +17,7 @@ import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
-import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod} from './integrity.js';
+import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
@@ -891,16 +891,63 @@ function unboughtBreakdown(x){
   const items=p=>p.items?`<ul class="st-items">${p.items.map(b=>`<li class="${b.status}"><span aria-hidden="true">${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'}</span><span><b>${esc(b.label)}</b>${b.status==='yes'?` +${b.points}`:''} <span class="muted">${esc(b.status==='waiting'?'waiting: ':'')}${esc(b.why)}</span></span></li>`).join('')}</ul>`:`<div class="small muted">${esc(p.note||'')}</div>`;
   return stTable(['Part','Points',''],x.parts.map(p=>[`${esc(p.label)}${items(p)}`,p.points==null?'<span class="muted">waiting</span>':`<b class="${p.points<0?'st-neg':p.points>0?'st-pos':''}">${pts1(p.points)}</b>`,stBar(p.points,max)]),'st-unbought');
 }
+// "How it's calculated" for Unbought, laid out as IntegrityIndex.us lays out its method: the formula, what goes in, the
+// weights for the House and the Senate, the curves, the bonuses, notes, this person's own numbers, and the sources.
+// Every number comes from UNBOUGHT (public/six-scores.js), so the page can't drift from what's counted.
+const rateText=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:10});
 function unboughtCalc(s,x){
-  const W=UNBOUGHT[s.chamber==='S'?'S':'H'],ch=s.chamber==='S'?'Senate':'House';
-  return `${stF('Unbought = 75 + Donor − PAC − PAC Reliance − Earmarks − Stocks − Trades + Bonuses + Pledges, never below 0')}
-    <p class="small"><b>${ch} weights.</b> Donor: share of receipts × ${W.donor.join(' · ')} for gifts ≤$200, $200–499, $500–999, $1,000–1,999 and $2,000+ (unitemized ${W.unitemized}, not yet sorted ${W.unsorted}, self-funding ${W.self}, joint fundraising ${W.joint}), up to ${W.donorCap}. Money a joint fundraising committee passed on is credited to the people who gave it, by the size of each share, when its records are read.${x?.period?` <b>Period:</b> ${esc(x.period)}.`:''}
-    PAC: dollars × ${Object.entries(W.pac).filter(([k])=>k!=='ideological'&&k!=='other').map(([k,v])=>`${UNBOUGHT_PAC_LABEL[k].toLowerCase()} ${v}`).join(' · ')}, up to ${UNBOUGHT.pacFloor}.
-    PAC Reliance: ${UNBOUGHT.reliance.max} × Hill(PAC share, ${UNBOUGHT.reliance.midpoint*100}%). Earmarks: dollars × ${UNBOUGHT.earmark} (not ActBlue or WinRed).
-    Stocks: ${UNBOUGHT.stocks.max} × Hill(stock value, $${UNBOUGHT.stocks.midpoint.toLocaleString('en-US')}). Trades: ${UNBOUGHT.trades.countMax} × Hill(count, ${UNBOUGHT.trades.countMidpoint}) + ${UNBOUGHT.trades.valueMax} × Hill(value, $${UNBOUGHT.trades.valueMidpoint.toLocaleString('en-US')}).
-    Bonuses: +${UNBOUGHT.bonus.noCorporatePac} no corporate PAC money · +${UNBOUGHT.bonus.corporatePacPledge} pledged not to take it · +${UNBOUGHT.bonus.noStocks} no individual stocks. Pledges and bills: +1 each for banning lobbying by former members, banning congressional stock trading, and overturning Citizens United.
-    Hill(x, m) = x<sup>0.745</sup> ÷ (m<sup>0.745</sup> + x<sup>0.745</sup>).</p>
-    ${x?.pct!=null?`<p class="small">${x.parts.map(p=>`${p.label} ${pts1(p.points)}`).join(' · ')} → 75 ${x.parts.map(p=>p.points<0?`− ${Math.abs(p.points).toFixed(1)}`:`+ ${(p.points||0).toFixed(1)}`).join(' ')} = ${Math.round(x.raw*10)/10}, rounded to ${x.pct}.</p>`:''}`;
+  const H=UNBOUGHT.H,S=UNBOUGHT.S,me=s.chamber==='S'?'S':'H',B=UNBOUGHT.bonus,T=UNBOUGHT.trades,K=UNBOUGHT.stocks,R=UNBOUGHT.reliance;
+  const f=(k,v,c='')=>`<span class="k">${k}</span><span>= ${v}${c?` <span class="c">${c}</span>`:''}</span>`;
+  const hill=`Hill(x, m) = x<sup>${HILL_POWER}</sup> ÷ (m<sup>${HILL_POWER}</sup> + x<sup>${HILL_POWER}</sup>)`;
+  const two=(rows,head=true)=>`<div class="st-calc-rows${head?'':' two'}">${head?`<span></span><span class="h${me==='H'?' me':''}">House</span><span class="h${me==='S'?' me':''}">Senate</span>`:''}${rows.join('')}</div>`;
+  const row=(label,h,sv,ours=false)=>`<span>${label}</span><span class="n${ours?' ours':''}">${h}</span><span class="n${ours?' ours':''}">${sv}</span>`;
+  const one=(label,v,ours=false)=>`<span>${label}</span><span class="n${ours?' ours':''}">${v}</span>`;
+  const pacRows=['corporate','lobbyist','trade','political','ideological','union','other'].map(k=>row(esc(UNBOUGHT_PAC_LABEL[k]),rateText(H.pac[k]),rateText(S.pac[k])));
+  const sizes=['Small ($200 and under)','Medium ($200–$499)','Large ($500–$999)','Extra large ($1,000–$1,999)','Largest ($2,000 and over)'];
+  const donorRows=[...sizes.map((l,i)=>row(l,H.donor[i],S.donor[i])),row('Reported only as a total',H.unitemized,S.unitemized),row('Not yet sorted by size',H.unsorted,S.unsorted),row('Self-funding',H.self,S.self),row('Joint fundraising (committees\' shares)',H.joint,S.joint)];
+  const sign=p=>p.points==null?`− … (${esc(p.label)})`:p.points<0?`− ${Math.abs(p.points).toFixed(1)} (${esc(p.label)})`:`+ ${(p.points||0).toFixed(1)} (${esc(p.label)})`;
+  const mine=x?.parts?.length?`<div class="st-calc-mine"><b>${esc(s.name)} · ${me==='S'?'Senate':'House'}${x.period?` · ${esc(x.period)}`:''}</b>
+    <div class="eq">75 ${x.parts.map(sign).join(' ')}${x.pct!=null?` = ${Math.round(x.raw*10)/10}, rounded to <b>${x.pct}</b>`:''}</div>
+    ${x.pct==null&&x.why?`<div class="key">Waiting on: ${esc(x.why.replace(/^Not graded yet:\s*/,'').replace(/^./,c=>c.toLowerCase()).replace(/\.$/,''))}.</div>`:''}</div>`:'';
+  return `<div class="st-calc">
+  <h4>The formula</h4>
+  <div class="st-calc-f">${f('Unbought','75 + components, never below 0')}${f('components','Donor − PAC − PAC Reliance − Earmarks − Stocks − Trades + Bonuses + Pledges')}<hr>
+    ${f('Donor','Σ (share of receipts × size weight)',`up to ${H.donorCap} (House), ${S.donorCap} (Senate)`)}${f('PAC','Σ (PAC $ × type rate)',`at most ${UNBOUGHT.pacFloor}`)}
+    ${f('PAC Reliance',`${R.max} × Hill(PAC share of receipts, ${R.midpoint*100}%)`)}${f('Earmarks',`earmarked $ × ${rateText(UNBOUGHT.earmark)}`,'[not ActBlue or WinRed]')}
+    ${f('Stocks',`${K.max} × Hill(individual-stock value, $${K.midpoint.toLocaleString('en-US')})`)}${f('Trades',`${T.countMax} × Hill(trade count, ${T.countMidpoint}) + ${rateText(T.valueMax)} × Hill(trade value, $${T.valueMidpoint.toLocaleString('en-US')})`)}
+    ${f('Bonuses',`+${B.noCorporatePac} no corporate PAC money · +${B.corporatePacPledge} pledged not to take it · +${B.noStocks} no individual stocks`)}${f('Pledges',`each reform: pledge → +${UNBOUGHT.pledge} · cosponsored bill → +${UNBOUGHT.pledge} · neither → 0`)}<hr>
+    <span class="k">Hill(x, m)</span><span>= x<sup>${HILL_POWER}</sup> ÷ (m<sup>${HILL_POWER}</sup> + x<sup>${HILL_POWER}</sup>) <span class="c">half the maximum at m</span></span></div>
+  <h4>What goes in</h4>
+  <ul><li>Individual stocks held, and the value of each</li><li>Number of stock trades, and their value</li><li>Share of receipts from PACs</li>
+    <li>PAC money by type (corporate, lobbyist, trade, political, ideological, union and labor, other)</li>
+    <li>Share of receipts from individuals, by gift size<ul>${sizes.map(l=>`<li>${l}</li>`).join('')}</ul></li>
+    <li>Gifts reported only as a total (under $200, on the summary page)</li><li>Itemized gifts the FEC hasn't sorted by size yet (from a newly filed report)</li>
+    <li>Joint fundraising, credited back to the people who gave it</li><li>Self-funding</li><li>Earmarked gifts routed through groups</li><li>Pledges signed and reform bills cosponsored</li></ul>
+  <h4>Weights</h4>
+  <div class="st-calc-grid">
+    <div class="st-calc-card"><b class="t">PAC penalty per dollar</b><div class="sub">Up to ${UNBOUGHT.pacFloor} points in all</div>${two(pacRows)}</div>
+    <div class="st-calc-card"><b class="t">Individual donation weight</b><div class="sub">Donor part: 0 to ${H.donorCap} (House), 0 to ${S.donorCap} (Senate)</div>${two(donorRows)}</div>
+  </div>
+  <div class="st-calc-card st-calc-consts">${two([one('Base score',UNBOUGHT.base),one('Earmark penalty per dollar',rateText(UNBOUGHT.earmark)),one('PAC Reliance maximum penalty',R.max),one('PAC Reliance midpoint',`${R.midpoint*100}%`,true),one('PAC penalty cap',UNBOUGHT.pacFloor,true),one('Donor part cap (House · Senate)',`${H.donorCap} · ${S.donorCap}`,true)],false)}
+    <div class="key"><i>Orange</i>: a number their page leaves out, filled in by us.</div></div>
+  <h4>Curves</h4>
+  <div class="st-calc-grid">
+    <div class="st-calc-card"><b class="t">Stocks held</b>${two([one('Maximum penalty',`−${K.max}`),one('Hill exponent',HILL_POWER),one('Hill midpoint',`$${K.midpoint.toLocaleString('en-US')}`)],false)}</div>
+    <div class="st-calc-card"><b class="t">Stock trading</b>${two([one('Maximum count penalty',`−${T.countMax}`),one('Trade count midpoint',T.countMidpoint),one('Maximum value penalty',`−${rateText(T.valueMax)}`),one('Trade value midpoint',`$${T.valueMidpoint.toLocaleString('en-US')}`),one('Hill exponent (both)',HILL_POWER)],false)}</div>
+  </div>
+  <h4>Bonuses</h4>
+  <ul><li>+${B.noCorporatePac} for taking no corporate PAC money</li><li>+${B.corporatePacPledge} for pledging not to take corporate PAC money</li><li>+${B.noStocks} for holding no individual stocks</li>
+    <li>+${UNBOUGHT.pledge} for pledging, or cosponsoring a bill, to ban lobbying by former members</li><li>+${UNBOUGHT.pledge} for pledging, or cosponsoring a bill, to ban congressional stock trading</li><li>+${UNBOUGHT.pledge} for pledging, or cosponsoring a bill, to overturn Citizens United</li></ul>
+  <h4>Notes</h4>
+  <ul><li>Selling off all individual stocks, or holding them in a qualified blind trust, removes the stock penalties.</li>
+    <li>All earmarked gifts are penalized equally, whichever group routed them: AIPAC, J Street, Club for Growth, EMILY's List and every other group the FEC shows forwarding gifts to the campaign.</li>
+    <li>Money a joint fundraising committee passed on is credited to the people who gave it, by the size of each person's share. Committees' shares stay at the joint fundraising weight.</li>
+    <li>A pledge reviewed as broken earns no point. A cosponsored bill on the same reform still can.</li>
+    <li>Missing records stay unknown, and the score waits. The stock terms are never dropped to make a score possible.</li></ul>
+  ${mine?`<h4>This person's score</h4>${mine}`:''}
+  <h4>Where the data comes from</h4>
+  <p class="lead">Fundraising: the FEC (gift sizes, PAC contributions, earmarked gifts, joint fundraising). Stocks held: members' annual financial disclosures (House Clerk, Senate eFD). Trades: their periodic transaction reports. Pledges: the pledge lists and Congress.gov cosponsors. Formula: <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us's published method ↗</a>, with House and Senate weights.</p>
+  </div>`;
 }
 // The kinds of assets, as the annual report's codes and descriptions sort them (public/holdings.js, assetKind).
 const ASSET_KIND={stock:'Individual stock or option',fund:'Fund or retirement account',bond:'Bond',cash:'Bank account or cash',property:'Real estate or property',private:'Private business',managed:'Managed account',trust:'Trust',blind:'Qualified blind trust',other:'Other'};
