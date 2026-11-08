@@ -63,8 +63,11 @@ function moneyCheck(data,s,x){
   const sum=l=>cents(l.reduce((t,r)=>t+r.amount,0));
   // Gifts a group forwarded from its donors (single-issue pledges): dated by month when the bundled run saved months.
   const bundled=[];
+  // Only the issue groups listed by hand (research.json groupPos) count here: the other committees the FEC shows
+  // forwarding gifts (keys "fec:C…") include party and leadership committees, which aren't single-issue PACs.
   if(kind==='single-issue-pac')for(const [g,v] of Object.entries(data.bundled?.people?.[s.id]||{})){
-    const org=(data.groupPos||[]).find(x=>x.key===g)?.org||g;
+    const grp=(data.groupPos||[]).find(x=>x.key===g);if(!grp)continue;
+    const org=grp.org||g;
     if(v.byMonth){const by={after:0,during:0,before:0};for(const [m,a] of Object.entries(v.byMonth)){const w=!since?'after':m>since.slice(0,7)?'after':m<since.slice(0,7)?'before':'during';by[w]+=a;}
       for(const w of ['after','during','before'])if(by[w]>0)bundled.push({org,when:w,amount:cents(by[w]),src:v.src});}
     else if(v.routed>0)bundled.push({org,when:since?'undated':'after',amount:v.routed,src:v.src});

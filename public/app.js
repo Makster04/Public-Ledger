@@ -1723,7 +1723,8 @@ function conduitBlock(s){
   }
   let note=c.status==='measured'&&c.note?`<p class="small" style="margin-top:8px;color:var(--ink-2)">${esc(c.note)} ${c.noteSrc?`<a href="${esc(c.noteSrc.u)}" target="_blank" rel="noopener">${esc(c.noteSrc.t)} ↗</a>`:''}</p>`:(c.status==='present'&&c.noteSrc?`<p class="small" style="margin-top:6px"><a href="${esc(c.noteSrc.u)}" target="_blank" rel="noopener">${esc(c.noteSrc.t)} ↗</a></p>`:'');
   // The groups whose bundled gifts are read for everyone (research.json "bundled", scripts/build-bundled.mjs), first.
-  const B=DATA.bundled,mine=Object.entries(B?.people?.[s.id]||{}).sort((a,b)=>b[1].routed-a[1].routed);
+  // This cycle's (a group that forwarded gifts only in earlier cycles shows on the Unbought tab's wider periods).
+  const B=DATA.bundled,mine=Object.entries(B?.people?.[s.id]||{}).filter(([,v])=>v.routed>0).sort((a,b)=>b[1].routed-a[1].routed);
   if(B){
     const names=Object.keys(B.conduits||{}).map(k=>(GPBY[k]||{}).org||k);
     const hand=c.status==='measured'||c.status==='present';
@@ -1761,7 +1762,7 @@ function paneFinance(s,pane){
   <h2>Money &amp; Influence</h2>
   <p class="intro">Where campaign receipts come from and what outside groups spend. Each keeps its own reporting period.</p>${points([['Campaign funds',`What ${esc(s.short)}'s own committee raised and reported to the FEC.`],['Outside spending','Money other groups spent on the race on their own. The campaign never receives it.']])}
   <nav class="jump small">${c.missing?'':'<a href="#f-map">Money map</a>'}<a href="#f-glance">Funding mix</a><a href="#f-pac">PAC contributions</a><a href="#f-out">Outside spending</a><a href="#f-items">Every filing</a></nav>
-  ${moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}
+  ${moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}
   <div id="f-glance">${ovMoney(s,true)}</div>
   <details class="data-disclosure"><summary>Selected researched funders</summary>${researchedFunders(s)}</details>
   <details class="data-disclosure"><summary>Campaign and outside-money comparison charts</summary><div id="f-sum">${fundingPanels(s)}</div>${scaleChart(s,false)}</details>
