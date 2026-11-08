@@ -1,0 +1,138 @@
+Interest group scorecards opened in a browser, 2026-11-08T21:51:46.705Z: what each page draws and the data its scripts load, for writing its reader.
+
+Planned Parenthood Action (ppaction)
+  https://www.plannedparenthoodaction.org/congressional-scorecard → HTTP 403
+    title: 403 Forbidden · 13 characters of text once drawn
+    profiled members named once drawn: 0
+    the drawn page: data/ratings-samples/ppaction-drawn-1.html
+    no data answers: the ratings, if any, are in the drawn page
+
+Americans for Prosperity (afp)
+  https://americansforprosperity.org/national-scorecard/ → HTTP ? (now https://americansforprosperity.org/national-scorecard/#/) (page.goto: Timeout 60000ms exceeded.; read what it had drawn)
+    title: Congress Voting Records: Track Lawmakers' Key Votes · 7,556 characters of text once drawn
+    profiled members named once drawn: 2 (Booker, Barr)
+    link: Skip to content → https://americansforprosperity.org/national-scorecard/#primary
+    link: (no text) → https://americansforprosperity.org/national-scorecard/
+    link: View Our Key Vote Alerts Here → https://americansforprosperity.org/category/key-vote-alert/
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/948
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/15577
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/20777
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/27966
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/20771
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/29845
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/29056
+    link: 90 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/15850
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/29646
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/21851
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/25658
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/20796
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/21788
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/6293
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/5449
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/15753
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/27964
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/6289
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/17552
+    link: 0 score D party → https://americansforprosperity.org/national-scorecard/#/legislator/21844
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/15954
+    link: 100 score R party → https://americansforprosperity.org/national-scorecard/#/legislator/20925
+    the drawn page: data/ratings-samples/afp-drawn-1.html
+    data: https://americansforprosperity.org/wp-content/themes/northstar/components/assets/img/logo.svg → HTTP 200, image/svg+xml, 10 KB · starts: <svg width="154" height="35" viewBox="0 0 154 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M40.9499 11.8296H42.582L41.7666 7 · profiled members named: 0
+    data: https://americansforprosperity.org/wp-content/themes/northstar/components/assets/img/down-arrow.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.61907 8.70711C8.00959 9.09763 8.64 · profiled members named: 0
+    data: https://cdn.segment.com/v1/projects/9fpUDwQm9wHp8HZOfjnlBJtmm1eIgDYX/settings → HTTP 200, application/json, 1 KB · keys: _lastModified, integrations, plan, edgeFunction, analyticsNextEnabled, middlewareSettings, enabledMiddleware, metrics, legacyVideoPluginsEnabled, remotePlugins, autoInstrumentationSettings · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&ae=g&auid=1803879928.1794174718&dt=Congress%20Voting%20Records%3A%20Track%20Lawmakers%27%20Key%20Votes&en=page_view&dl=https%3A%2F%2Famericansforprosperity.org%2Fnat → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://ad.doubleclick.net/ccm/s/collect?auid=1803879928.1794174718&gtm=45He6b41v72153556za200zd72153556xeaxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://tags.srv.stackadapt.com/saq_pxl?uid=uvn05zfhTu_uDQUvrZztWA&is_js=true&landing_url=https%3A%2F%2Famericansforprosperity.org%2Fnational-scorecard%2F%23%2F&t=Congress%20Voting%20Records%3A%20Track%20Lawmakers%27%20K → HTTP 200, text/plain, 0 KB · keys: conversion_tracker_uids, retargeting_tracker_uids, lookalike_tracker_uids; "retargeting_tracker_uids" is a list of 1, first item's keys: string · profiled members named: 0
+    data: https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest?pp=0&fields=kind%2Cname%2Cversion%2CrootUrl%2CservicePath%2Cresources%2Cparameters%2Cmethods%2CbatchPath%2Cid&key=hidden → HTTP 200, application/json, 154 KB · keys: servicePath, parameters, kind, version, batchPath, name, resources, id, rootUrl · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-J4SPPHS5JJ&cid=1084004182.1794174718&gtm=45je6b41v887335797za20ozb72153556zd72153556xf1&rcb=18&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~1159 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-J4SPPHS5JJ&gtm=45je6b41v887335797za20ozb72153556zd72153556xf1&_p=1794174717908&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&cid=1084004182.1794174718&frm=0&pscdl=noapi& → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/16735885026/?random=1794174718306&cv=11&fst=1794174718306&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b41v9216781360za208zd9216781360xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=1 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1803879928.1794174718&dt=Congress%20Voting%20Records%3A%20Track%20Lawmakers%27%20Key%20Votes&tid=AW-16735885026&en=page_view&dl=https%3A%2F%2Famericansforprospe → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=0&ae=g&auid=1803879928.1794174718&dt=Congress%20Voting%20Records%3A%20Track%20Lawmakers%27%20Key%20Votes&tid=AW-666501459&dl=https%3A%2F%2Famericansforprosperity.org%2 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/666501459/?random=1794174718361&cv=11&fst=1794174718361&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6b41v892703251z872153556za20gzb72153556zd72153556xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=1 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.googleadservices.com/pagead/conversion/16735885026/?random=1794174718316&cv=11&fst=1794174718316&fmt=7&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be6b41v9216781360za208zd9216781360xecxf1&gcd=13l3l3l3l1l1&dm → HTTP 200, application/json, 3 KB · starts: event: message data: {"fetch":["https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16735885026/?random=1690655780&cv=11&fst=17 · profiled members named: 0
+    data: https://www.google.com/pagead/1p-conversion/16735885026/?random=1690655780&cv=11&fst=1794174718316&fmt=8&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be6b41v9216781360za208zd9216781360xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_ex → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://api.segment.io/v1/t → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://api.segment.io/v1/p → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/localization-data → HTTP 200, application/json, 0 KB · keys: Bill, Date, Name, Vote, House, Score, Motion, Senate, Senator, Comments, Position, Reference, Sponsored, Categories, House Representative · profiled members named: 0
+    data: https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/styles → HTTP 200, application/json, 3 KB · keys: display_recent_wp_post, display_percent_sign, displayLegislatorBiographies, display_recent_bt50_bills, display_promo_sidebar, display_no_vote_sponsorships, display_find_your_rep, display_recent_activity_score, displayDistrictOffice, hideLegislatorAddress, displayAttendanceScore, hideMostRecent · profiled members named: 0
+    data: https://insight.adsrvr.org/track/realtimeconversion → HTTP 200, application/json, 0 KB · keys: Message, EventResponses · profiled members named: 0
+    data: https://insight.adsrvr.org/track/realtimeconversion → HTTP 200, application/json, 0 KB · keys: Message, EventResponses · profiled members named: 0
+    data: https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/legislators → HTTP 200, application/json, 965 KB · a list of 531; first item's keys: id, legislatorKey, legislatorKeySimple, first_name, last_name, score_sets, party, district, districtCode, sub_district, chamber, state, photo, offices, biography · profiled members named: 29
+      saved: data/ratings-samples/afp-data-1.json
+    data: https://analytics.google.com/g/collect?v=2&tid=G-J4SPPHS5JJ&gtm=45je6b41v887335797z872153556za20gzb72153556zd72153556xf1&_p=1794174717908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQ&cid=1084004182.1794174718&frm=0&pscdl=noa → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://americansforprosperity.org/wp-json/rds-bt50-scorecard/v1/bills → HTTP 200, application/json, 139 KB · keys: scorecards; "scorecards" is a list of 8, first item's keys: scorecard, bills · profiled members named: 1
+    data: https://tags.srv.stackadapt.com/js_tracking?url=https%3A%2F%2Famericansforprosperity.org%2Fnational-scorecard%2F%2F&uid=uvn05zfhTu_uDQUvrZztWA&v=1&host=https%3A%2F%2Famericansforprosperity.org&l_src=&l_src_d=&u_src=&u_sr → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://api.segment.io/v1/m → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://api.segment.io/v1/t → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://api.segment.io/v1/t → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://tags.srv.stackadapt.com/js_tracking?url=https%3A%2F%2Famericansforprosperity.org%2Fnational-scorecard%2F%2F&uid=uvn05zfhTu_uDQUvrZztWA&v=1&host=https%3A%2F%2Famericansforprosperity.org&l_src=&l_src_d=&u_src=&u_sr → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://api.segment.io/v1/m → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://api.segment.io/v1/t → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://api.segment.io/v1/t → HTTP 200, application/json, 0 KB · keys: success · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-J4SPPHS5JJ&gtm=45je6b41v887335797z872153556za20gzb72153556zd72153556xf1&_p=1794174717908&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQ&cid=1084004182.1794174718&frm=0&ps → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-J4SPPHS5JJ&gtm=45je6b41v887335797za20gzb72153556zd72153556xf1&_p=1794174717908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQ&ae=a&cid=1084004182.1794174718&frm=0&pscdl=noapi&rc → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-J4SPPHS5JJ&gtm=45je6b41v887335797z872153556za20gzb72153556zd72153556xf1&_p=1794174717908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQ&cid=1084004182.1794174718&frm=0&pscdl=noa → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+
+U.S. Chamber of Commerce (chamber)
+  https://www.uschamber.com/how-they-voted → HTTP 200
+    title: How They Voted | U.S. Chamber of Commerce · 1,034 characters of text once drawn
+    profiled members named once drawn: 0
+    link: Skip to content → https://www.uschamber.com/how-they-voted#main
+    link: Topics → https://www.uschamber.com/how-they-voted
+    link: (no text) → https://www.uschamber.com/major-initiative/b20-summit-2026
+    link: Leadership and Bipartisanship → https://www.uschamber.com/improving-government/how-they-voted-methodology
+    the drawn page: data/ratings-samples/chamber-drawn-1.html
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V7HPP6PE41&gtm=45je6b41v9176158725za20ozb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1202390685.1794174788&frm=0&ngs=1&pscdl=noapi&rcb=12 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/scripttemplates/202209.2.0/assets/otFlat.json → HTTP 200, application/json, 13 KB · keys: name, html, css · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/scripttemplates/202209.2.0/assets/v2/otPcTab.json → HTTP 200, application/json, 62 KB · keys: name, html, css · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/logos/static/ot_close.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" width="348.333" height="348.333" viewBox="0 0 348.333 348.334"><path fill="#565656" d="M336.559 68.6 · profiled members named: 0
+    data: https://ad.doubleclick.net/ccm/s/collect?auid=813540072.1794174789&gtm=45He6b41v834895392za200zd834895392xeaxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=813540072.1794174789&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&scrsrc=ww → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/logos/static/poweredBy_cp_logo.svg → HTTP 200, image/svg+xml, 5 KB · starts: <svg width="568" height="53" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_33262_44346)" fill="#000"><path d="M4.2 · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174788631&cv=11&fst=1794174788631&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6b41v873612770z8834895392za20gzb834895392zd834895392xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_ex → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&ae=g&auid=813540072.1794174789&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&scrs → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=813540072.1794174789&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-vo → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174788623&cv=11&fst=1794174788623&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b41v873612770za20ozb834895392zd834895392xecxf1&gcd=13l3l3l3l1l1&dma=0&ta → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://tags.srv.stackadapt.com/saq_pxl?uid=ksGuqQcYbN5qBDvkamT-VA&is_js=true&landing_url=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&t=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tip=u1KR_jxa_VrE-hT2r → HTTP 200, text/plain, 0 KB · keys: conversion_tracker_uids, retargeting_tracker_uids, lookalike_tracker_uids; "retargeting_tracker_uids" is a list of 1, first item's keys: string · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=813540072.1794174789&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-vo → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174788646&cv=11&fst=1794174788646&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b41v873612770za20ozb834895392zd834895392xecxf1&gcd=13l3l3l3l1l1&dma=0&ta → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V94JWP643H&gtm=45je6b41v879123860za20ozb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1202390685.1794174788&frm=0&ngs=1&pscdl=noapi&rcb=18& → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-JYLFZFS1C9&cid=1202390685.1794174788&gtm=45je6b41v879123860za20ozb834895392zd834895392xf1&rcb=18&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~11 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b41v879123860za20ozb834895392zd834895392xf1&_p=1794174788141&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1202390685.1794174788&frm=0&pscdl=noa → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b41v879123860z8834895392za20gzb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&cid=1202390685.1794174788&frm=0&pscdl → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V7HPP6PE41&gtm=45je6b41v9176158725za20gzb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=1202390685.1794174788&frm=0&ngs=1&p → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b41v879123860za20gzb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=1202390685.1794174788&frm=0&pscdl=noapi → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V94JWP643H&gtm=45je6b41v879123860za20gzb834895392zd834895392xf1&_p=1794174788141&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=1202390685.1794174788&frm=0&ngs=1&ps → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+  https://www.uschamber.com/htv → HTTP 200 (now https://www.uschamber.com/how-they-voted)
+    title: How They Voted | U.S. Chamber of Commerce · 1,034 characters of text once drawn
+    profiled members named once drawn: 0
+    link: Skip to content → https://www.uschamber.com/how-they-voted#main
+    link: Topics → https://www.uschamber.com/how-they-voted
+    link: (no text) → https://www.uschamber.com/major-initiative/b20-summit-2026
+    link: Leadership and Bipartisanship → https://www.uschamber.com/improving-government/how-they-voted-methodology
+    the drawn page: data/ratings-samples/chamber-drawn-2.html
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V7HPP6PE41&gtm=45je6b50h2v9176158725za20ozb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=86602128.1794174800&frm=0&ngs=1&pscdl=noapi&rcb=1& → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/scripttemplates/202209.2.0/assets/otFlat.json → HTTP 200, application/json, 13 KB · keys: name, html, css · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/scripttemplates/202209.2.0/assets/v2/otPcTab.json → HTTP 200, application/json, 62 KB · keys: name, html, css · profiled members named: 0
+    data: https://ad.doubleclick.net/ccm/s/collect?auid=756382107.1794174800&gtm=45He6b50h2v834895392za200zd834895392xeaxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&ae=g&auid=756382107.1794174800&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&scrsrc=w → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/logos/static/ot_close.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" width="348.333" height="348.333" viewBox="0 0 348.333 348.334"><path fill="#565656" d="M336.559 68.6 · profiled members named: 0
+    data: https://cookie-cdn.cookiepro.com/logos/static/poweredBy_cp_logo.svg → HTTP 200, image/svg+xml, 5 KB · starts: <svg width="568" height="53" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_33262_44346)" fill="#000"><path d="M4.2 · profiled members named: 0
+    data: https://tags.srv.stackadapt.com/saq_pxl?uid=ksGuqQcYbN5qBDvkamT-VA&is_js=true&landing_url=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&t=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tip=4gJxPx2Mht_vnFjZG → HTTP 200, text/plain, 0 KB · keys: conversion_tracker_uids, retargeting_tracker_uids, lookalike_tracker_uids; "retargeting_tracker_uids" is a list of 1, first item's keys: string · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=756382107.1794174800&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-vo → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174800327&cv=11&fst=1794174800327&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6b50h2v873612770z8834895392za20gzb834895392zd834895392xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_ → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174800319&cv=11&fst=1794174800319&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b50h2v873612770za20ozb834895392zd834895392xecxf1&gcd=13l3l3l3l1l1&dma=0& → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&ae=g&auid=756382107.1794174800&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-voted&scrs → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V94JWP643H&gtm=45je6b50h2v879123860za20ozb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=86602128.1794174800&frm=0&ngs=1&pscdl=noapi&rcb=1&s → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-JYLFZFS1C9&cid=86602128.1794174800&gtm=45je6b50h2v879123860za20ozb834895392zd834895392xf1&rcb=1&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938466~115 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b50h2v879123860za20ozb834895392zd834895392xf1&_p=1794174799913&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=86602128.1794174800&frm=0&pscdl=noa → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=756382107.1794174800&dt=How%20They%20Voted%20%7C%20U.S.%20Chamber%20of%20Commerce&tid=AW-950327711&en=page_view&dl=https%3A%2F%2Fwww.uschamber.com%2Fhow-they-vo → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/950327711/?random=1794174800398&cv=11&fst=1794174800398&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b50h2v873612770za20ozb834895392zd834895392xecxf1&gcd=13l3l3l3l1l1&dma=0& → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b50h2v879123860z8834895392za20gzb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&cid=86602128.1794174800&frm=0&pscdl → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-JYLFZFS1C9&gtm=45je6b50h2v879123860za20gzb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=86602128.1794174800&frm=0&pscdl=noapi → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V7HPP6PE41&gtm=45je6b50h2v9176158725za20gzb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=86602128.1794174800&frm=0&ngs=1&p → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-V94JWP643H&gtm=45je6b50h2v879123860za20gzb834895392zd834895392xf1&_p=1794174799913&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=86602128.1794174800&frm=0&ngs=1&ps → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
