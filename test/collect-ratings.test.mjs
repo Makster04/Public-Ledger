@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {readSba,readLcv,readRfa,readHeritage,readClubForGrowth,cfgLatest,congressLabel,congressOf,matchPerson,stateCode,collect,READERS,probedGroups,HIDDEN,
-  readVoterVoice,newestScorecard,readAfp,readGoa,readNumbersUsa,readAra,araLatest,ARA_PDF,districtOf,readRlc} from '../scripts/collect-ratings.mjs';
+  readVoterVoice,newestScorecard,readAfp,readGoa,readAra,araLatest,ARA_PDF,districtOf,readRlc,
+  readAjp,readFreedomIndex,readProgressivePunch,readStandWithCrypto,readC4ip,readCpac,cloudItems,C4IP_API} from '../scripts/collect-ratings.mjs';
 import {ratingsLean} from '../public/six-scores.js';
 
 const sample=f=>fs.readFileSync(new URL(`../data/ratings-samples/${f}`,import.meta.url),'utf8');
@@ -73,14 +74,18 @@ test('matching: the same last name and state, and the same first name or initial
   assert.equal(matchPerson({name:'Jon Ossoff',state:'GA',chamber:'S'},people)?.id,'ossoff');
   assert.equal(matchPerson({name:'Jon Ossoff',state:'TX',chamber:'S'},people),null);
   assert.equal(matchPerson({name:'Rick Scott',state:'FL',chamber:'S'},people)?.id,'rscott');assert.equal(matchPerson({name:'Zed Nobody',state:'FL',chamber:'S'},people),null);
+  // A House district must agree: a former member of the same name from another district never takes the rating.
+  assert.equal(matchPerson({name:'Barry Loudermilk',state:'GA',chamber:'H',district:11},people)?.id,'loudermilk');
+  assert.equal(matchPerson({name:'Barry Loudermilk',state:'GA',chamber:'H',district:3},people),null);
   assert.deepEqual(['GA','Georgia','OK-04','nowhere'].map(stateCode),['GA','GA','OK',null]);
 });
 
 test('the ratings become the Ratings lean; every group without a reader says why',()=>{
   assert.deepEqual(ratingsLean([{org:'SBA',lean:'conservative',grade:'F'},{org:'LCV',lean:'liberal',score:94},{org:'RFA',lean:'liberal',score:100}]).lean,-96);
   const g=probedGroups();
-  for(const [k,x] of Object.entries(g))assert.ok(['blocked','none','states','no-list','permission','to-build','old','image'].includes(x.status),k);
-  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'to-build');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','numbersusa','ara','rlc'])assert.ok(!g[k],`${k} has a reader`);
+  for(const [k,x] of Object.entries(g))assert.ok(['blocked','none','states','no-list','permission','to-build','old','image','unreadable','not-found'].includes(x.status),k);
+  assert.equal(g.numbersusa.status,'to-build','NumbersUSA\'s search page lists former members; its current one is still to be read');
+  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'not-found');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','ara','rlc','ajp','jbs','progressivepunch','standwithcrypto','c4ip','cpac'])assert.ok(!g[k],`${k} has a reader`);
   assert.equal(g.giffords.status,'states');assert.ok(HIDDEN.has('states')&&HIDDEN.has('none')&&HIDDEN.has('old'),'groups with no current ratings of members are not shown');
   for(const r of READERS)assert.ok(!g[r.key],`${r.key} has a reader`);
 });
@@ -94,8 +99,13 @@ test('Planned Parenthood Action: its newest VoterVoice scorecard, each member\'s
   const by=await matchedBy(rows);
   assert.equal(by.murkowski.score,56);assert.equal(by.collins.score,67);
   assert.ok(by.djohnson,'an at-large member listed as district 1');
-  const asked=[];const got=await collect(READERS.find(r=>r.key==='ppaction'),people,{wait:0,fetchPage:async u=>{asked.push(u);return /Scorings/.test(u)?JSON.stringify(items(sample('ppaction-data-2.json'))):JSON.stringify([{id:'4473-1848',name:'119th Congress'}]);}});
-  assert.match(asked[1],/Scorecards\/4473-1848\/Scorings$/);assert.ok(got.matched.length>=250);
+  // Read in a browser (VoterVoice answers only the page's own session): the scorings the page loaded, named from its list.
+  const opened=[];
+  const got=await collect(READERS.find(r=>r.key==='ppaction'),people,{wait:0,fetchPage:async()=>{throw new Error('not asked directly');},browse:async(page,match)=>{opened.push(page);
+    return [{url:'https://www.votervoice.net/Api/Scorecards?association=PPFA&government=./USA&active=true',text:JSON.stringify([{id:'4473-1848',name:'119th Congress'},{id:'x',name:'118th Congress'}])},
+      {url:'https://www.votervoice.net/Api/Scorecards/4473-1848/Scorings',text:JSON.stringify(items(sample('ppaction-data-2.json')))}].filter(a=>match.test(a.url));}});
+  assert.deepEqual(opened,['https://www.plannedparenthoodaction.org/congressional-scorecard']);
+  assert.ok(got.matched.length>=250);assert.equal(got.matched.find(m=>m.id==='murkowski').row.year,'119th Congress');
 });
 
 test('Americans for Prosperity: the newest Congress\'s score, matched on the Bioguide ID in each photo\'s name',async()=>{
@@ -118,14 +128,6 @@ test('Gun Owners of America: the voter guide\'s grades for Congress; an incumben
   assert.equal(clash.ossoff,undefined,'two entries that disagree: neither');
 });
 
-test('NumbersUSA: every member\'s career percent with their seat; a former member from another district never matches',async()=>{
-  const rows=readNumbersUsa(sample('numbersusa-2.html'));
-  assert.ok(rows.length>=150);
-  assert.deepEqual(rows.find(r=>r.name==='Bob Barr'),{name:'Bob Barr',party:'R',state:'GA',chamber:'H',district:7,score:94,year:'career',url:'https://grades.numbersusa.com/gradecard/219/'});
-  // A current member is matched; one who served the same state's other district, never.
-  const by=await matchedBy([{name:'Barry Loudermilk',state:'GA',chamber:'H',district:11,score:100},{name:'Barry Loudermilk',state:'GA',chamber:'H',district:3,score:10}]);
-  assert.equal(by.loudermilk?.score,100);
-});
 
 test('Alliance for Retired Americans: by state, senators then House members, last names matched with the district',async()=>{
   const rows=readAra(sample('ara-2.txt'));
@@ -151,4 +153,63 @@ test('Republican Liberty Caucus: its Liberty Index PDFs, letters cut off and som
   assert.ok(by.csmith,'a profile with the legal first name (Christopher)');
   assert.equal(by.kennedy?.name,'John ennedy','a last name with its first letter cut off');
   assert.equal(by.diazbalart?.name,'Mario Diaz-Balart','listed under his old district');
+});
+
+// The items of a JSON list in a saved answer (from the given key), even when it was cut short.
+const itemsAt=(t,key)=>items(t.slice(t.indexOf(`"${key}"`)));
+
+test('AJP Action: its spreadsheet\'s "All Members", AJP\'s own letter grade (its points are its own scale)',async()=>{
+  const sheets=sample('ajp-1.txt').split(/\n\n(?=# )/).map(b=>{const [h,...rows]=b.split('\n');return {name:h.replace(/^# /,''),rows:rows.map(r=>r.split('\t'))};});
+  const rows=readAjp(sheets,{year:2026});
+  assert.equal(rows.length,532,'members who left have no grade');
+  assert.deepEqual(rows.find(r=>r.name==='Susan M. Collins'),{name:'Susan M. Collins',state:'ME',party:'R',chamber:'S',district:null,grade:'F',year:2026});
+  assert.ok(rows.every(r=>r.score===undefined),'no points stored as a percent');
+  const by=await matchedBy(rows);assert.deepEqual([by.ossoff.grade,by.booker.grade,by.mcollins.grade],['C','C','D']);assert.ok(Object.keys(by).length>=520);
+});
+
+test('Freedom Index: each card\'s Freedom Index grade and percent, the Bioguide ID from the photo when it has one',async()=>{
+  const rows=readFreedomIndex(sample('jbs-1.html'));
+  assert.ok(rows.length>=100);
+  assert.deepEqual(rows.find(r=>r.name==='Susan M. Collins'),{name:'Susan M. Collins',state:'ME',party:'R',chamber:'S',district:null,bioguide:'C001035',score:38,grade:'F',year:'119th Congress',url:'https://freedomindex.us/legislator/994/'});
+  const by=await matchedBy(rows);assert.deepEqual([by.booker.score,by.begich.grade],[13,'B']);
+});
+
+test('ProgressivePunch: this Congress\'s and the career share of progressive votes, a chamber a page',async()=>{
+  const rows=readProgressivePunch(sample('progressivepunch-2.html'),{chamber:'H'});
+  const aoc=rows.find(r=>r.name==='Alexandria Ocasio-Cortez');
+  assert.deepEqual([aoc.state,aoc.district,aoc.score,aoc.lifetime,aoc.year],['NY',14,99,98,'2025–26']);
+  const by=await matchedBy(rows);assert.deepEqual([by.adams.score,by.adams.lifetime],[98,97]);
+  // The Senate's page, asked for by name, is read only if its title says Senate.
+  const pages={senate:sample('progressivepunch-2.html'),house:sample('progressivepunch-2.html')};
+  const got=await collect(READERS.find(r=>r.key==='progressivepunch'),people,{wait:0,fetchPage:async u=>pages[/house=(\w+)/.exec(u)[1]]});
+  assert.ok(got.rows.every(r=>r.chamber==='H'),'a House page served for the Senate is skipped');
+});
+
+test('Stand With Crypto: sitting members and candidates with a stance score; no score, no rating',async()=>{
+  const rows=readStandWithCrypto({people:itemsAt(sample('standwithcrypto-data-1.json'),'people')});
+  assert.ok(rows.length>=100&&rows.every(r=>Number.isFinite(r.score)));
+  const lummis=rows.find(r=>r.name==='Cynthia Lummis');assert.deepEqual([lummis.state,lummis.chamber,lummis.score,lummis.party],['WY','S',100,'R']);
+  const by=await matchedBy(rows);assert.equal(by.blackburn?.score,100);
+  // Refused directly: read from its page in a browser.
+  const got=await collect(READERS.find(r=>r.key==='standwithcrypto'),people,{wait:0,fetchPage:async()=>{throw new Error('HTTP 401');},
+    browse:async()=>[{url:'https://www.standwithcrypto.org/api/us/dtsi/all-people',text:JSON.stringify({people:itemsAt(sample('standwithcrypto-data-1.json'),'people')})}]});
+  assert.ok(got.matched.length>=100);
+});
+
+test('Council for Innovation Promotion: its member list page by page, grades and Bioguide IDs; on no side',async()=>{
+  const page=JSON.parse(sample('c4ip-data-1.json'));
+  assert.deepEqual(readC4ip(page,{year:2026})[0],{name:'Marsha Blackburn',state:'TN',chamber:'S',party:'R',bioguide:'B001243',grade:'A+',year:2026});
+  const asked=[];
+  const got=await collect(READERS.find(r=>r.key==='c4ip'),people,{wait:0,fetchPage:async u=>{asked.push(u);const skip=Number(new URL(u).searchParams.get('skip'));return JSON.stringify(skip<96?{...page,total:96,skip}:{members:[],total:96});}});
+  assert.deepEqual(asked.map(u=>new URL(u).searchParams.get('skip')),['0','48']);assert.ok(asked.every(u=>u.startsWith(C4IP_API)));
+  assert.equal(READERS.find(r=>r.key==='c4ip').lean,'none');assert.ok(got.matched.length>=40);
+});
+
+test('CPAC: its database\'s ratings of Congress, read in a browser, the latest year\'s and the lifetime rating by Bioguide ID',async()=>{
+  const answer={url:'https://www.cpac.org/_api/cloud-data/v2/items/query?.r=x',text:JSON.stringify({dataItems:itemsAt(sample('cpac-data-2.json'),'dataItems')})};
+  const list=cloudItems([answer,answer]);assert.ok(list.length>=400,'the same item twice counts once');
+  const rows=readCpac(list);
+  assert.deepEqual(rows[0],{name:'Alma Adams',state:'NC',chamber:'H',bioguide:'A000370',score:0,lifetime:2,year:2025,url:'https://www.cpac.org/bio/a000370'});
+  const got=await collect(READERS.find(r=>r.key==='cpac'),people,{wait:0,fetchPage:async()=>{throw new Error('not asked directly');},browse:async()=>[answer]});
+  const by=Object.fromEntries(got.matched.map(m=>[m.id,m.row]));assert.deepEqual([by.collins.score,by.collins.lifetime,by.mcollins.score],[50,43,90]);
 });
