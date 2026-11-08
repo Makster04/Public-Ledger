@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {readSba,readLcv,readRfa,readHeritage,readClubForGrowth,cfgLatest,congressLabel,congressOf,matchPerson,stateCode,collect,READERS,probedGroups,HIDDEN,
   readVoterVoice,newestScorecard,readAfp,readGoa,readAra,araLatest,ARA_PDF,districtOf,readRlc,
-  readAjp,readFreedomIndex,readProgressivePunch,readStandWithCrypto,readC4ip,readCpac,cloudItems,C4IP_API} from '../scripts/collect-ratings.mjs';
+  readAjp,readFreedomIndex,readProgressivePunch,readStandWithCrypto,readC4ip,readCpac,cloudItems,C4IP_API,
+  readNumbersUsa,readNiac,readHumane,readFrcSheet,parseCsv,FRC_PAGES,NIAC_CSV} from '../scripts/collect-ratings.mjs';
 import {ratingsLean} from '../public/six-scores.js';
 
 const sample=f=>fs.readFileSync(new URL(`../data/ratings-samples/${f}`,import.meta.url),'utf8');
@@ -84,8 +85,7 @@ test('the ratings become the Ratings lean; every group without a reader says why
   assert.deepEqual(ratingsLean([{org:'SBA',lean:'conservative',grade:'F'},{org:'LCV',lean:'liberal',score:94},{org:'RFA',lean:'liberal',score:100}]).lean,-96);
   const g=probedGroups();
   for(const [k,x] of Object.entries(g))assert.ok(['blocked','none','states','no-list','permission','to-build','old','image','unreadable','not-found'].includes(x.status),k);
-  assert.equal(g.numbersusa.status,'to-build','NumbersUSA\'s search page lists former members; its current one is still to be read');
-  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'not-found');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','ara','rlc','ajp','jbs','progressivepunch','standwithcrypto','c4ip','cpac'])assert.ok(!g[k],`${k} has a reader`);
+  assert.equal(g.aflcio.status,'blocked');assert.equal(g.hrc.status,'permission');assert.equal(g.chamber.status,'not-found');for(const k of ['heritage','clubforgrowth','ppaction','afp','goa','ara','rlc','ajp','jbs','progressivepunch','standwithcrypto','c4ip','cpac','numbersusa','niac','humane','frc'])assert.ok(!g[k],`${k} has a reader`);
   assert.equal(g.giffords.status,'states');assert.ok(HIDDEN.has('states')&&HIDDEN.has('none')&&HIDDEN.has('old'),'groups with no current ratings of members are not shown');
   for(const r of READERS)assert.ok(!g[r.key],`${r.key} has a reader`);
 });
@@ -106,6 +106,9 @@ test('Planned Parenthood Action: its newest VoterVoice scorecard, each member\'s
       {url:'https://www.votervoice.net/Api/Scorecards/4473-1848/Scorings',text:JSON.stringify(items(sample('ppaction-data-2.json')))}].filter(a=>match.test(a.url));}});
   assert.deepEqual(opened,['https://www.plannedparenthoodaction.org/congressional-scorecard']);
   assert.ok(got.matched.length>=250);assert.equal(got.matched.find(m=>m.id==='murkowski').row.year,'119th Congress');
+  // A page that never loads the scorecard: the reason names what VoterVoice answered.
+  const none=Object.assign([],{seen:['200 https://www.votervoice.net/Api/Users/GetRemembered','401 https://www.votervoice.net/Api/Scorecards/4473-1848/Scorings']});
+  await assert.rejects(collect(READERS.find(r=>r.key==='ppaction'),people,{wait:0,browse:async()=>none}),/loaded no scorecard \(VoterVoice answered: 200 .*GetRemembered; 401 .*Scorings\)/);
 });
 
 test('Americans for Prosperity: the newest Congress\'s score, matched on the Bioguide ID in each photo\'s name',async()=>{
@@ -203,6 +206,11 @@ test('Council for Innovation Promotion: its member list page by page, grades and
   const got=await collect(READERS.find(r=>r.key==='c4ip'),people,{wait:0,fetchPage:async u=>{asked.push(u);const skip=Number(new URL(u).searchParams.get('skip'));return JSON.stringify(skip<96?{...page,total:96,skip}:{members:[],total:96});}});
   assert.deepEqual(asked.map(u=>new URL(u).searchParams.get('skip')),['0','48']);assert.ok(asked.every(u=>u.startsWith(C4IP_API)));
   assert.equal(READERS.find(r=>r.key==='c4ip').lean,'none');assert.ok(got.matched.length>=40);
+  // Refused to a script: read from its page in a browser, scrolled until every member is loaded; part of them is no read.
+  const refused=async()=>{throw new Error('HTTP 403');},pg=skip=>({url:`${C4IP_API}?skip=${skip}`,text:JSON.stringify({...page,skip,total:96})});
+  const all=await collect(READERS.find(r=>r.key==='c4ip'),people,{wait:0,fetchPage:refused,browse:async()=>[pg(0),pg(48)].map((a,i)=>i?{...a,text:JSON.stringify({...JSON.parse(a.text),members:JSON.parse(a.text).members.map(m=>({...m,bioguideId:m.bioguideId+'x',member_name:m.member_name+' II'}))})}:a)});
+  assert.equal(all.rows.length,96);
+  await assert.rejects(collect(READERS.find(r=>r.key==='c4ip'),people,{wait:0,fetchPage:refused,browse:async()=>[pg(0)]}),/loaded 48 of its 96 members/);
 });
 
 test('CPAC: its database\'s ratings of Congress, read in a browser, the latest year\'s and the lifetime rating by Bioguide ID',async()=>{
@@ -212,4 +220,48 @@ test('CPAC: its database\'s ratings of Congress, read in a browser, the latest y
   assert.deepEqual(rows[0],{name:'Alma Adams',state:'NC',chamber:'H',bioguide:'A000370',score:0,lifetime:2,year:2025,url:'https://www.cpac.org/bio/a000370'});
   const got=await collect(READERS.find(r=>r.key==='cpac'),people,{wait:0,fetchPage:async()=>{throw new Error('not asked directly');},browse:async()=>[answer]});
   const by=Object.fromEntries(got.matched.map(m=>[m.id,m.row]));assert.deepEqual([by.collins.score,by.collins.lifetime,by.mcollins.score],[50,43,90]);
+});
+
+test('NumbersUSA: the grades service its grade cards page draws from, this Congress, by grade',async()=>{
+  const rows=readNumbersUsa(JSON.parse(sample('numbersusa-data-2.json')));
+  assert.ok(rows.length>=500);
+  assert.deepEqual(rows[0],{name:'Tom McClintock',state:'CA',chamber:'H',party:'R',district:5,bioguide:'M001177',score:100,grade:'A+',year:'119th Congress'});
+  const by=await matchedBy(rows);assert.deepEqual([by.collins.grade,by.collins.score,by.mcollins.grade],['C-',38,'A+']);assert.ok(Object.keys(by).length>=500);
+  // Refused to a script: the same answer, from its page in a browser.
+  const got=await collect(READERS.find(r=>r.key==='numbersusa'),people,{wait:0,today:new Date('2026-11-09'),fetchPage:async()=>{throw new Error('HTTP 403');},
+    browse:async(page)=>{assert.equal(page,'https://www.numbersusa.org/grades/');return [{url:'https://grades.numbersusa.org/v1/grades/search/?congress=119',text:sample('numbersusa-data-2.json')}];}});
+  assert.ok(got.matched.length>=500);
+});
+
+test('NIAC Action: its spreadsheet file, members in office, their overall percent and grade',async()=>{
+  assert.deepEqual(parseCsv('a,b\n"x, y","say ""hi""\nthere"\n'),[['a','b'],['x, y','say "hi"\nthere']]);
+  const rows=readNiac(sample('niac-data-3.txt'),{year:'119th Congress'});
+  assert.ok(rows.length>=400);
+  assert.deepEqual(rows.find(r=>r.bioguide==='B001288'),{name:'Cory A. Booker',state:'NJ',chamber:'S',party:'D',district:null,bioguide:'B001288',score:70,grade:'B',year:'119th Congress'});
+  const by=await matchedBy(rows);assert.deepEqual([by.collins.grade,by.mcollins.district??null,by.mcollins.score],['F',10,4]);
+  assert.ok(NIAC_CSV.endsWith('/scores_wide.csv'));
+});
+
+test('Humane World: its House and Senate sheets, read in a browser; "100+" counts 100; the year from the page title',async()=>{
+  const house=readHumane(JSON.parse(sample('humane-data-1.json')).values,{year:2026}),sen=readHumane(JSON.parse(sample('humane-data-2.json')).values,{year:2026});
+  assert.ok(house.length>=400&&house.every(r=>r.chamber==='H'));assert.ok(sen.length>=90&&sen.every(r=>r.chamber==='S'));
+  assert.deepEqual(sen.find(r=>r.name==='Cory A. Booker'),{name:'Cory A. Booker',state:'NJ',party:'D',chamber:'S',district:null,score:100,lifetime:105,year:2026});
+  const answers=Object.assign([{url:'https://sheets.googleapis.com/v4/spreadsheets/a/values/modded',text:sample('humane-data-1.json')},{url:'https://sheets.googleapis.com/v4/spreadsheets/b/values/modded',text:sample('humane-data-2.json')}],{title:'2026 Humane Scorecard Preview | Humane World Action Fund'});
+  const got=await collect(READERS.find(r=>r.key==='humane'),people,{wait:0,browse:async()=>answers});
+  const by=Object.fromEntries(got.matched.map(m=>[m.id,m.row]));assert.deepEqual([by.booker.score,by.booker.year,by.adams.score],[100,2026,71]);
+});
+
+test('FRC Action: each chamber\'s page names its public Quorum sheet; the share of votes with FRC; members-elect left out',async()=>{
+  const sheet=JSON.parse(sample('frc-data-2.json'));
+  const rows=readFrcSheet(sheet);
+  assert.ok(rows.length>=90&&rows.every(r=>r.chamber==='S'&&r.year===2026));
+  assert.deepEqual(rows.find(r=>r.name==='Josh Hawley'),{name:'Josh Hawley',state:'MO',party:'R',chamber:'S',district:null,score:100,year:2026});
+  assert.ok(!rows.some(r=>r.name==='Kurt Alme'),'a senator-elect');
+  const asked=[];
+  const got=await collect(READERS.find(r=>r.key==='frc'),people,{wait:0,fetchPage:async u=>{asked.push(u);
+    if(u===FRC_PAGES[0])return '<iframe src="https://www.quorum.us/spreadsheet/external/wxRyBnaMcQErlwGUCwFg/"></iframe>';
+    if(u===FRC_PAGES[1])return '<iframe src="https://www.quorum.us/spreadsheet/external/JOaiLNNYQtOvwaIrcaRi/"></iframe>';
+    return /wxRy/.test(u)?JSON.stringify(sheet):JSON.stringify({...sheet,name:'119th Congress, Second Session, 2026 (House)',row_data:[]});}});
+  assert.ok(asked.some(u=>/api\/sheet\/wxRyBnaMcQErlwGUCwFg\//.test(u))&&asked.some(u=>/api\/sheet\/JOaiLNNYQtOvwaIrcaRi\//.test(u)));
+  const by=Object.fromEntries(got.matched.map(m=>[m.id,m.row]));assert.deepEqual([by.collins.score,by.hawley.score],[50,100]);
 });
