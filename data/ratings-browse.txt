@@ -1,200 +1,301 @@
-Interest group scorecards opened in a browser, 2026-11-08T22:44:08.529Z: what each page draws and the data its scripts load, for writing its reader.
+Interest group scorecards opened in a browser, 2026-11-08T23:02:49.265Z: what each page draws and the data its scripts load, for writing its reader.
 
-CPAC (cpac)
-  https://www.cpac.org/foundation/ratings/us → HTTP ? (page.goto: Timeout 60000ms exceeded.; read what it had drawn)
-    title: Congress | CPAC Foundation Ratings · 114,898 characters of text once drawn
-    profiled members named once drawn: 31 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
-    link: (no text) → https://www.cpac.org/foundation/ratings/us
-    link: Ratings → https://www.cpac.org/foundation/ratings
-    link: Lawmakers Search → https://www.cpac.org/foundation/ratings/wy
-    link: Congress → https://cpac.org/foundation/ratings/us
-    link: States → https://cpac.org/foundation/ratings-states
-    link: Archives → http://ratings.conservative.org/
-    link: Home → https://cpac.org/foundation/ratings
-    link: View the Report → → https://dea0d469-c1d7-4068-bddd-0a3895cc096b.usrfiles.com/ugd/dea0d4_1fbfb19d94774b4a889fd895daf6b73c.pdf
-    link: Learn More → https://www.cpac.org/foundation-viewportal-externalalert-embed-a8f2km3pz6jr7qn9bt5wl1uv4xc8sy0eh2og7dp3mq9rk5t?vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489=https://dea0d469-c1d7-4068-bddd-0a3895cc096b.usrfiles.com/ugd/dea0d4_aff64d92529b4fa3b8b056dc71633acd.pdf&1r6b2p5f0m3v9xq8e7j4l8c1k5t0w6z3u9n7d2s5f0q3g8v6b1m9j7y4t2r6p0x8w3k7z9q5c1e8j2l4n7u9d0=View%20the%20PDF
-    link: Learn More → https://www.cpac.org/foundation-viewportal-externalalert-embed-a8f2km3pz6jr7qn9bt5wl1uv4xc8sy0eh2og7dp3mq9rk5t?vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489=https://dea0d469-c1d7-4068-bddd-0a3895cc096b.usrfiles.com/ugd/dea0d4_244fd8b57e104873853aac1e36a44cd4.pdf&1r6b2p5f0m3v9xq8e7j4l8c1k5t0w6z3u9n7d2s5f0q3g8v6b1m9j7y4t2r6p0x8w3k7z9q5c1e8j2l4n7u9d0=View%20the%20PDF
-    link: Learn More → https://www.cpac.org/foundation-viewportal-externalalert-embed-a8f2km3pz6jr7qn9bt5wl1uv4xc8sy0eh2og7dp3mq9rk5t?vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489=https://d32hywlkk6c0g5.cloudfront.net/ACU_Ratings_US-2022.pdf&1r6b2p5f0m3v9xq8e7j4l8c1k5t0w6z3u9n7d2s5f0q3g8v6b1m9j7y4t2r6p0x8w3k7z9q5c1e8j2l4n7u9d0=View%20the%20PDF
-    link: Learn More → https://www.cpac.org/foundation-viewportal-externalalert-embed-a8f2km3pz6jr7qn9bt5wl1uv4xc8sy0eh2og7dp3mq9rk5t?vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489=https://d32hywlkk6c0g5.cloudfront.net/ACU_Ratings_US-2021.pdf&1r6b2p5f0m3v9xq8e7j4l8c1k5t0w6z3u9n7d2s5f0q3g8v6b1m9j7y4t2r6p0x8w3k7z9q5c1e8j2l4n7u9d0=View%20the%20PDF
-    link: Learn More → https://www.cpac.org/foundation-viewportal-externalalert-embed-a8f2km3pz6jr7qn9bt5wl1uv4xc8sy0eh2og7dp3mq9rk5t?vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489vduygay8gbreq3ubyg8q7ogy3489=https://d32hywlkk6c0g5.cloudfront.net/ACU_Ratings_US-2020.pdf&1r6b2p5f0m3v9xq8e7j4l8c1k5t0w6z3u9n7d2s5f0q3g8v6b1m9j7y4t2r6p0x8w3k7z9q5c1e8j2l4n7u9d0=View%20the%20PDF
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/ush2025rc53
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc223
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/ush2025rc59
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc63
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/ush2025rc237
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc344
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/ush2025rc27
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc11
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc279
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc521
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/ush2025rc236
-    link: Read Full Description → https://cpac.org/foundation/ratings/bill/uss2025rc132
-    the drawn page: data/ratings-samples/cpac-drawn-1.html
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 218 KB · keys: stateRefs, structure, props, nicknameToCompIdMaps · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 218 KB · keys: stateRefs, structure, props, nicknameToCompIdMaps · profiled members named: 0
-    data: https://www.cpac.org/_api/v1/access-tokens?cacheBust=1794177848881-1391602716-1519529786 → HTTP 200, application/json, 99 KB · keys: hs, visitorId, svSession, ctToken, mediaAuthToken, metaSiteId, apps · profiled members named: 0
-    data: https://static.parastorage.com/services/editor-elements/1.15633.0/rb_dsgnsys.corvid.manifest.min.json → HTTP 200, application/json, 5 KB · keys: version, host, namespace, baseURL, model, statics, components, shared; "model" is a list of 1, first item's keys: string · profiled members named: 0
-    data: https://static.parastorage.com/services/editor-elements/1.15633.0/rb_wixui.corvid.manifest.min.json → HTTP 200, application/json, 12 KB · keys: version, host, namespace, baseURL, model, statics, components, batches, shared; "model" is a list of 1, first item's keys: string · profiled members named: 0
-    data: https://www.cpac.org/_api/dynamic-pages-router/v1/pages?.r=H4sIAAAAAAAAA6VUTW_bMAz9K4FOGxDFSezEdm5dtwI5dAuatZdhB1qiPWGO5cpy0yzIfx-lfHnrsKXYJXDER-rx8Ylb1ppyAQZWDZttWWGUvKrruWQzBgJGaTQNOU4x51GaZDxNJjGfJFEM02giYRKzPntSuL7VE → HTTP 200, application/json, 6 KB · keys: result · profiled members named: 0
-    data: https://static.parastorage.com/services/editor-elements/1.15633.0/rb_wixui.thunderbolt.manifest.min.json → HTTP 200, application/json, 43 KB · keys: version, host, namespace, baseURL, model, assets, components, batches, shared; "model" is a list of 2, first item's keys: string · profiled members named: 0
-    data: https://static.parastorage.com/services/editor-elements/1.15633.0/rb_dsgnsys.thunderbolt.manifest.min.json → HTTP 200, application/json, 4 KB · keys: version, host, namespace, baseURL, model, assets, components, shared; "model" is a list of 2, first item's keys: string · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 929 KB · keys: stateRefs, structure, props, nicknameToCompIdMaps · profiled members named: 0
-    data: https://panorama.wixapps.net/api/v1/bulklog → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_api/tag-manager/api/v1/tags/sites/05ddef10-84fd-45b3-b362-3b4bc2189226?wixSite=false&htmlsiteId=3e3cca9d-7c93-4484-ad6a-4fd83e93ea28&language=en → HTTP 200, application/json, 10 KB · keys: tags, errors, config; "tags" is a list of 6, first item's keys: id, name, content, config, position, loadOnce, category, domain, pages, appInfo · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 929 KB · keys: stateRefs, structure, props, nicknameToCompIdMaps · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/503ea4_03f061b6b3944722a159860b1852e4f6.svg → HTTP 200, image/svg+xml, 0 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="44 64 112 72" viewBox="0 0 200 200" height="200" width="200" xmlns="http://www.w3.or · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_42630ea376ec4ffeae8a639c17d26625.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.802 0.618 15.944 15.943" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" he · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_ceaaad16535c44e39024d37fe77b3aca.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.5 0.5 25 25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" height="26" wi · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_bd1c58e1f7c9403f9cf77eb9912d4d0f.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.959 0.026 16.104 16.104" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" he · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_791de7bbe2454acb8ff0553267b930f3.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.626 0.959 14.748 16.26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" hei · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/1d3a0b_97d72ad4c8dc4903bfb02b2baa7763ae.svg → HTTP 200, image/svg+xml, 0 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="65.35 65.35 69.3 69.3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" data · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_99a269beb4004ffca88f65cd1c2ac432.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.938 1.776 16.124 14.625" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" he · profiled members named: 0
-    data: https://static.wixstatic.com/shapes/bf42dd_76ca7cedfdfa435cb879e0e5ca1aa85c.svg → HTTP 200, image/svg+xml, 2 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg data-bbox="0.5 0.5 25 25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" height="26" wi · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 218 KB · keys: stateRefs, structure, props, nicknameToCompIdMaps · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 2 KB · keys: sdkData, isBuilderDocument, responsiveCompsInClassic, onLoadProperties, containersChildrenIds, compIdToRepeaterId, staticEvents, ghosts, slots, applications, connections, compIdConnections, orderedControllers, controllerConfigs, applicationsPublicData, hasTPAComponentOnPage, hasBlocksWidgetOnP · profiled members named: 0
-    data: https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214271d6f-b → HTTP 200, application/json, 167 KB · keys: sdkData, isBuilderDocument, responsiveCompsInClassic, onLoadProperties, containersChildrenIds, compIdToRepeaterId, staticEvents, ghosts, slots, applications, connections, compIdConnections, orderedControllers, controllerConfigs, applicationsPublicData, hasTPAComponentOnPage, hasBlocksWidgetOnP · profiled members named: 0
-    data: https://panorama.wixapps.net/api/v1/bulklog → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_serverless/cookie-consent-settings-serverless/v1/cookie-banner-settings?languageCode=en → HTTP 200, application/json, 0 KB · keys: settings, translations · profiled members named: 0
-    data: https://static.parastorage.com/services/auto-frontend-modules/1.6238.0/webworker/manifest-worker.min.json → HTTP 200, application/json, 0 KB · keys: auto-frontend-modules.js · profiled members named: 0
-    data: https://sentry-next.wixpress.com/api/68/envelope/?sentry_key=hidden&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.120.3 → HTTP 429, application/json, 0 KB · keys: detail · profiled members named: 0
-    data: https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=1833505486.1794177849&dt=Congress%20%7C%20CPAC%20Foundation%20Ratings&tid=AW-16777571152&en=user_id_update&dl=https%3A%2F%2Fwww.cpac.org%2Ffoundation%2Fratings% → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-DVMPVVNL3J&cid=1411749280.1794177849&gtm=45be6b41v9200310907za208zd9200310907xf1&rcb=13&aip=1&uid=4d7aafff-c5f9-44d1-8156-23bbbe2c896f&dma=0&gcs=G111&gcd=13t3t3t3t5l1&n → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&auid=1833505486.1794177849&dt=Congress%20%7C%20CPAC%20Foundation%20Ratings&tid=AW-16777571152&en=page_view&dl=https%3A%2F%2Fwww.cpac.org%2Ffoundation%2Fratings%2Fus& → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.google.com/rmkt/collect/16777571152/?random=1794177849281&cv=11&fst=1794177849281&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b41v9200310907za208zd9200310907xecxf1&gcd=13t3t3t3t5l1&dma=0&tag_exp=1 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://analytics.google.com/g/collect?v=2&tid=G-DVMPVVNL3J&gtm=45be6b41v9200310907za208zd9200310907xf1&_p=1794177849146&em=tv.1~em.kZrc2Lmxn9f3Po4jHpIlSQleJf7hE0MWduQ55F-YGXg&emd=tvd.1~i1.fem.ma.r21.n21.lA.s!b64!I2NvbXA → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://ad.doubleclick.net/ccm/s/collect?auid=1833505486.1794177849&gtm=45be6b41v9200310907za208zd9200310907xecxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://ad.doubleclick.net/ccm/s/collect?auid=1833505486.1794177849&gtm=45be6b41v9200310907za208zd9200310907xecxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://panorama.wixapps.net/api/v1/bulklog → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://panorama.wixapps.net/api/v1/bulklog → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://bundler-velo.parastorage.com/v3_metaSiteId_05ddef10-84fd-45b3-b362-3b4bc2189226/gridAppId_aca19463-e6ef-498b-9857-5847a645da57/filePath_public_delimiter_pages_delimiter_masterPage.js/fileType_js/compression_gzip/ → HTTP 200, no type, 14 KB · starts: !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define(["globals"] · profiled members named: 0
-    data: https://bundler-velo.parastorage.com/v3_metaSiteId_05ddef10-84fd-45b3-b362-3b4bc2189226/gridAppId_aca19463-e6ef-498b-9857-5847a645da57/filePath_public_delimiter_pages_delimiter_yf3mf.js/fileType_js/compression_gzip/depTo → HTTP 200, no type, 17 KB · starts: !function(e,a){"object"==typeof exports&&"object"==typeof module?module.exports=a():"function"==typeof define&&define.amd?define(["globals"] · profiled members named: 0
-    data: https://www.cpac.org/_api/wix-code-app-registry-global/v1/public-code-config → HTTP 200, application/json, 0 KB · keys: publicCodeConfig · profiled members named: 0
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiRm91bmRhdGlvbi1SZXBlYXRlcnMiLCJxdWVyeSI6eyJmaWx0ZXIiOnsic29ydCI6Im1lbnUtZm91bmRhdGlvbiJ9LCJzb3J0IjpbeyJmaWVsZE5hbWUiOiJzb3J0RGF0ZSIsIm9yZ → HTTP 200, application/json, 3 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 5, first item's keys: id, dataCollectionId, data · profiled members named: 0
-    data: https://frog.wix.com/bpm → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_api/wix-code-app-registry-global/v1/public-code-config → HTTP 200, application/json, 0 KB · keys: publicCodeConfig · profiled members named: 0
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUmVwZWF0ZXJzLUNQQUNEaWdpdGFsIiwicXVlcnkiOnsiZmlsdGVyIjp7InNvcnQxIjoibWVudS1jNCJ9LCJzb3J0IjpbeyJmaWVsZE5hbWUiOiJzb3J0RGF0ZSIsIm9yZGVyIjoiR → HTTP 200, application/json, 3 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 6, first item's keys: id, dataCollectionId, data · profiled members named: 0
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUmVwZWF0ZXJzLUNQQUNEaWdpdGFsIiwicXVlcnkiOnsiZmlsdGVyIjp7InNvcnQxIjoidG9wbmV3cy1mZWF0dXJlIiwicG9zdERhdGUiOnsiJGx0ZSI6eyIkZGF0ZSI6IjIwMjYtM → HTTP 200, application/json, 53 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 50, first item's keys: id, dataCollectionId, data · profiled members named: 3
-      saved: data/ratings-samples/cpac-data-1.json
-    data: https://sentry-next.wixpress.com/api/68/store/?sentry_key=hidden&sentry_version=7 → HTTP 429, application/json, 0 KB · keys: detail · profiled members named: 0
-    data: https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-Z4STJF4C9Z&cid=1411749280.1794177849&gtm=45je6b41v9101680676za200zb9200310907zd9200310907xf1&rcb=10&aip=1&uid=4d7aafff-c5f9-44d1-8156-23bbbe2c896f&dma=0&gcs → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://analytics.google.com/g/collect?v=2&tid=G-Z4STJF4C9Z&gtm=45je6b41v9101680676za200zb9200310907zd9200310907xf1&_p=1794177849146&_gaz=1&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&gdid=dODgyNj.dYzMzMD&_eu=AAAAACAC&cid=1411 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://www.google.com/rmkt/collect/16777571152/?random=1794177849694&cv=11&fst=1794177849694&fmt=8&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be6b41v9200310907za200zd9200310907xecxf1&gcd=13t3t3t3t5l1&dma=0&tag_exp=115 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://analytics.google.com/g/collect?v=2&tid=G-DVMPVVNL3J&gtm=45be6b41v9200310907za200zd9200310907xf1&_p=1794177849146&em=tv.1~em.kZrc2Lmxn9f3Po4jHpIlSQleJf7hE0MWduQ55F-YGXg&emd=tvd.1~i1.fem.ma.r21.n21.lA.s!b64!I2NvbXA → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=0&auid=1833505486.1794177849&dt=Congress%20%7C%20CPAC%20Foundation%20Ratings&tid=AW-16777571152&en=page_view&dl=https%3A%2F%2Fwww.cpac.org%2Ffoundation%2Fratings%2Fus& → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_serverless/analytics-reporter/facebook/event → HTTP 200, application/json, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUGVvcGxlRGF0YWJhc2UiLCJxdWVyeSI6eyJmaWx0ZXIiOnsicGVvcGxlU3RhdGUiOiJDb25ncmVzcyJ9LCJzb3J0IjpbeyJmaWVsZE5hbWUiOiJjdXJyZW50UmF0aW5nWWVhciIsI → HTTP 200, application/json, 577 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 629, first item's keys: id, dataCollectionId, data · profiled members named: 31
-      saved: data/ratings-samples/cpac-data-2.json
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUGVvcGxlRGF0YWJhc2UiLCJxdWVyeSI6eyJmaWx0ZXIiOnsiJGFuZCI6W3sicGVvcGxlU3RhdGUiOiJDb25ncmVzcyJ9LHsiY3VycmVudFJhdGluZ1llYXIiOjIwMjV9LHsiY3Vyc → HTTP 200, application/json, 214 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 234, first item's keys: id, dataCollectionId, data · profiled members named: 11
-      saved: data/ratings-samples/cpac-data-3.json
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUGVvcGxlRGF0YWJhc2UiLCJxdWVyeSI6eyJmaWx0ZXIiOnsiJGFuZCI6W3sicGVvcGxlU3RhdGUiOiJDb25ncmVzcyJ9LHsiY3VycmVudFJhdGluZ1llYXIiOjIwMjV9LHsiY3Vyc → HTTP 200, application/json, 48 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 52, first item's keys: id, dataCollectionId, data · profiled members named: 3
-      saved: data/ratings-samples/cpac-data-4.json
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiUGVvcGxlRGF0YWJhc2UiLCJxdWVyeSI6eyJmaWx0ZXIiOnsiJGFuZCI6W3sicGVvcGxlU3RhdGUiOiJDb25ncmVzcyJ9LHsiY3VycmVudFJhdGluZ1llYXIiOjIwMjV9LHsiY3Vyc → HTTP 200, application/json, 88 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 96, first item's keys: id, dataCollectionId, data · profiled members named: 8
-      saved: data/ratings-samples/cpac-data-5.json
-    data: https://panorama.wixapps.net/api/v1/bulklog → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://frog.wix.com/bolt-performance → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.cpac.org/_api/cloud-data/v2/items/query?.r=eyJkYXRhQ29sbGVjdGlvbklkIjoiQmlsbERhdGFiYXNlIiwicXVlcnkiOnsiZmlsdGVyIjp7ImJpbGxTdGF0ZSI6IkNvbmdyZXNzIn0sInNvcnQiOlt7ImZpZWxkTmFtZSI6ImJpbGxZZWFyIiwib3JkZXIiOiJERVNDI → HTTP 200, application/json, 180 KB · keys: dataItems, pagingMetadata; "dataItems" is a list of 100, first item's keys: id, dataCollectionId, data · profiled members named: 9
-      saved: data/ratings-samples/cpac-data-6.json
-    data: https://analytics.google.com/g/collect?v=2&tid=G-DVMPVVNL3J&gtm=45be6b41v9200310907za200zd9200310907xf1&_p=1794177849146&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&gdid=dODgyNj.dYzMzMD&ecid=302542599&_eu=AEAAAGQC&ae=a&cid=141 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://analytics.google.com/g/collect?v=2&tid=G-Z4STJF4C9Z&gtm=45je6b41v9101680676za200zb9200310907zd9200310907xf1&_p=1794177849146&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&gdid=dODgyNj.dYzMzMD&_eu=AEAAACQC&ae=a&cid=141174 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+NumbersUSA (numbersusa)
+  https://www.numbersusa.org/grades/ → HTTP 200
+    title: NumbersUSA - Immigration-Reduction Grade Cards (Congress) - NumbersUSA · 17,745 characters of text once drawn
+    profiled members named once drawn: 29 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+    link: (no text) → https://numbersusa.org/congress/six-great-immigration-solutions
+    link: (no text) → https://numbersusa.org/congress/bills
+    link: Grades → https://numbersusa.com/grades
+    link: Browse All Members of Congress → https://www.numbersusa.org/grades
+    the drawn page: data/ratings-samples/numbersusa-drawn-1.html
+    data: https://www.numbersusa.org/wp-content/themes/nusa-theme/public/images/search.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19.277 15.7721L15.8727 12.37C15.41 · profiled members named: 0
+    data: https://cdn.numbersusa.com/branding/logos/Nusa_Sensible_logo_R_260x44.svg → HTTP 200, image/svg+xml, 3 KB · starts: <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 43.386"><path d="M40.1,0H0v40.1h40.1V0 · profiled members named: 0
+    data: https://cdn.numbersusa.com/branding/third_party/social_logos/yt-white.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.714 25"><path id="b" d="M34.965,3.917c- · profiled members named: 0
+    data: https://cdn.numbersusa.com/branding/third_party/social_logos/x-white.svg → HTTP 200, image/svg+xml, 0 KB · starts: <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.01 25"><path d="M5.65,0h13.71c3.12,0,5. · profiled members named: 0
+    data: https://cdn.numbersusa.com/branding/third_party/social_logos/fb-white.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.01 25"><path d="M5.65,0h13.71c3.12,0,5. · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-QQ3GM2MYSK&cid=812189089.1794178970&gtm=45je6b41v9171187073za208zd9171187073xf1&rcb=15&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938469~118897920~11 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&auid=765098614.1794178970&dt=NumbersUSA%20-%20Immigration-Reduction%20Grade%20Cards%20(Congress)%20-%20NumbersUSA&tid=AW-18045151324&en=page_view&dl=https%3A%2F%2Fww → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/18045151324/?random=1794178970016&cv=11&fst=1794178970016&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6b41v9171187073za208zd9171187073xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=1 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-QQ3GM2MYSK&gtm=45je6b41v9171187073za208zd9171187073xf1&_p=1794178969869&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=278541056&_eu=AAAAAGAC&cid=812189089.1794178970&ec_mode=a& → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://ad.doubleclick.net/ccm/s/collect?auid=765098614.1794178970&gtm=45je6b41v9171187073za208zd9171187073xecxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.numbersusa.org/cdn-cgi/challenge-platform/h/b/jsd/oneshot/8340802ab0bb/0.3815118239592751:1794175827:A78VH5y1RUwdDpsK2SEPKG5v1pLogtQUI5VXFKnjvaQ/a578351ea915c502 → HTTP 200, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=0&auid=765098614.1794178970&dt=NumbersUSA%20-%20Immigration-Reduction%20Grade%20Cards%20(Congress)%20-%20NumbersUSA&tid=AW-16659341353&en=page_view&dl=https%3A%2F%2Fww → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/16659341353/?random=1794178970208&cv=11&fst=1794178970208&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b50h2v9207710764za20ozb9184095644zd9184095644xecxf1&gcd=13l3l3l3l1l1&d → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://grades.numbersusa.org/v1/grades/filter-options/ → HTTP 200, application/json, 5 KB · keys: states, subjects, congress_terms, parties, chambers, current_congress_id; "states" is a list of 50, first item's keys: id, abbreviation, name · profiled members named: 0
+    data: https://grades.numbersusa.org/v1/state-averages/current → HTTP 200, application/json, 115 KB · keys: state_averages; "state_averages" is a list of 50, first item's keys: state, average, congress_id, grade, color, districts · profiled members named: 22
+      saved: data/ratings-samples/numbersusa-data-1.json
+    data: https://www.numbersusa.org/cdn-cgi/rum? → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://grades.numbersusa.org/v1/grades/119/ranges/ → HTTP 200, application/json, 1 KB · keys: grade_ranges; "grade_ranges" is a list of 14, first item's keys: display_grade, lower_percentage, higher_percentage, color · profiled members named: 0
+    data: https://grades.numbersusa.org/v1/grades/search/?congress=119 → HTTP 200, application/json, 108 KB · keys: brackets · profiled members named: 29
+      saved: data/ratings-samples/numbersusa-data-2.json
+    data: https://analytics.google.com/g/collect?v=2&tid=G-QQ3GM2MYSK&gtm=45je6b41v9171187073za200zd9171187073xf1&_p=1794178969869&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=278541056&_eu=AEAAAGQC&ae=a&cid=812189089.1794178970&frm=0&pscdl= → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
 
-Stand With Crypto (standwithcrypto)
-  https://www.standwithcrypto.org/politicians → HTTP 200
-    title: Find out where politicians stand on crypto | Stand With Crypto · 1,842 characters of text once drawn
-    profiled members named once drawn: 1 (Marshall)
-    link: Politician Scores → https://www.standwithcrypto.org/politicians
-    table: 11 rows; first: Name | Stance on crypto | Role | State | Party; second: Cynthia Lummis | A Strongly supportive | Senator | Wyoming | Republican
-    the drawn page: data/ratings-samples/standwithcrypto-drawn-1.html
-    data: https://www.standwithcrypto.org/api/monitoring?o=4506490716422144&p=4506490717470720 → HTTP 200, application/json, 0 KB · keys:  · profiled members named: 0
-    data: https://www.standwithcrypto.org/logo/shield.svg?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.99953 0H0V14.3441C0.529429 21.89 · profiled members named: 0
-    data: https://www.standwithcrypto.org/api/identified-user/full-profile-info → HTTP 200, application/json, 0 KB · keys: user · profiled members named: 0
-    data: https://www.standwithcrypto.org/api/us/dtsi/all-people → HTTP 200, application/json, 1915 KB · keys: people; "people" is a list of 1557, first item's keys: id, slug, firstName, lastName, firstNickname, fullNickname, nameSuffix, politicalAffiliation, politicalAffiliationCategoryV2, computedStanceScore, computedSumStanceScoreWeight, profilePictureUrl, profilePictureUrlDimensions, promotedPositi · profiled members named: 57
-      saved: data/ratings-samples/standwithcrypto-data-1.json
-    data: https://www.standwithcrypto.org/races?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/about?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/bills?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://api.cdp.coinbase.com/platform/v2/embedded-wallet-api/projects/b5b93509-85d3-40f2-ae0d-b57ae848d54f/auth/mfa → HTTP 200, application/json, 0 KB · keys: createdAt, enabled, projectId, promptEnrollmentOnLogin, requireVerificationOnLogin, totpConfig, updatedAt, verificationScope, verificationWindowSeconds · profiled members named: 0
-    data: https://api.cdp.coinbase.com/platform/v2/embedded-wallet-api/projects/b5b93509-85d3-40f2-ae0d-b57ae848d54f/config → HTTP 200, application/json, 0 KB · keys: createdAt, delegatedSigningEnabled, gmailAutoLinkingEnabled, iCloudAutoLinkingEnabled, logos, name, projectId, updatedAt; "logos" is a list of 1, first item's keys: status, url · profiled members named: 0
+National Taxpayers Union (ntu)
+  https://www.ntu.org/ratecongress/ → HTTP 200
+    title: Rates Congress - National Taxpayers Union · 7,305 characters of text once drawn
+    profiled members named once drawn: 0
+    link: Skip to main content → https://www.ntu.org/ratecongress/#main-area
+    link: View the 2025 Taxpayers' Friend Award Winners → https://www.ntu.org/ratecongress/page/2025-taxpayers-friend-award-winners
+    link: Click here → https://www.ntu.org/library/doclib/2026/05/2025-NTURC.pdf
+    link: click here → https://www.ntu.org/library/doclib/2026/05/NTURC2025rollcalls.xlsx
+    link: click here → https://www.ntu.org/ratecongress/page/past-congressional-ratings
+    link: Vote Alert → https://www.ntu.org/publications//type/vote-alert
+    link: Rates Congress → https://www.ntu.org/ratecongress/
+    link: Congress Pay and Perks → https://www.ntu.org/taxbasics/page/congress-pay-perks
+    table: 10 rows; first: Full Name; second: 
+    the drawn page: data/ratings-samples/ntu-drawn-1.html
+    data: https://www.ntu.org/Content/public/images/icon_share_inline_x.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"> <path id="icon_share_inline_x" d="M21.517,5.928,26.72 · profiled members named: 0
+    data: https://www.ntu.org/Content/public/images/icon_share_footer_x.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <path id="icon_share_footer_x" d="M29.849,11.856,40.2 · profiled members named: 0
+    data: https://www.ntu.org/Content/public/images/icon_nav_x.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"> <path id="icon_nav_x" d="M26.873,9.739,35.435,0H33.40 · profiled members named: 0
+    data: https://www.google-analytics.com/j/collect?v=1&_v=j102&a=826792279&t=pageview&_s=1&dl=https%3A%2F%2Fwww.ntu.org%2Fratecongress%2F&ul=en-us&dt=Rates%20Congress%20-%20National%20Taxpayers%20Union&sr=1280x720&vp=1280x720&_u → HTTP 200, text/plain, 0 KB · starts: 2,cG-QYPNS745PP · profiled members named: 0
+    data: https://www.ntu.org/content/public/images/icons/ico-pin.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="-14528.508 -15104.904 19.398 27.64"><g id="map-pin-silhouette" transform="translate(-14600. · profiled members named: 0
+    data: https://www.ntu.org/content/public/images/icons/ico-phone.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="-14224.001 -15105.002 15.541 27.44"><path id="Forma_1" data-name="Forma 1" d="M1925.27 5903 · profiled members named: 0
+    data: https://www.ntu.org/content/public/images/icons/ico-envelope.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="-14027 -15101 25.688 18.349"><defs><style>.cls-1{fill:#ba1220}</style></defs><g id="close-e · profiled members named: 0
+    data: https://www.ntu.org/content/public/images/icons/ico-microphone.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="-13817 -15105 17 27.93"><path id="Forma_1" data-name="Forma 1" d="M2312.5 5924.23a4.968 4.9 · profiled members named: 0
+    data: https://forms.hscollectedforms.net/collected-forms/v1/config/json?portalId=8131947&utk= → HTTP 200, application/json, 0 KB · keys: portalId, submissionsApiDomain, reportScraperTest, formCaptureEnabled, token · profiled members named: 0
+    data: https://api.hubapi.com/hs-script-loader-public/v2/config/pixels-and-events/json?portalId=8131947 → HTTP 200, application/json, 0 KB · keys: pixels, enhancedConversionEventSettings · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-QYPNS745PP&gtm=45je6b50h2v9119717965za20gxf1&_p=1794178981550&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=EhAI&cid=1454962982.1794178982&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=12&sr=12 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-QYPNS745PP&gtm=45je6b50h2v9119717965za20gxf1&_p=1794178981550&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=ABgIAAQ&cid=1454962982.1794178982&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=12&sr → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+
+Council for Citizens Against Government Waste (ccagw)
+  https://ccagwratings.org/ → HTTP 200
+    title: CCAGW Ratings · 2,901 characters of text once drawn
+    profiled members named once drawn: 0
+    link: Skip to main content → https://ccagwratings.org/#brx-content
+    link: Skip to footer → https://ccagwratings.org/#brx-footer
+    link: (no text) → https://ccagwratings.org/
+    link: View by State → https://ccagwratings.org/state/
+    link: Legislators Ratings → https://ccagwratings.org/legislator-rating/
+    link: Vote Descriptions → https://ccagwratings.org/vote-description/
+    link: Summary → https://ccagwratings.org/2025-summary/
+    the drawn page: data/ratings-samples/ccagw-drawn-1.html
+    no data answers: the ratings, if any, are in the drawn page
+
+Communications Workers of America (cwa)
+  https://scorecard.cwa-union.org/ → HTTP 200
+    title: CWA Congressional Scorecard · 2,049 characters of text once drawn
+    profiled members named once drawn: 1 (Pappas)
+    link: Skip to main content → https://scorecard.cwa-union.org/#main-content
+    link: (no text) → https://scorecard.cwa-union.org/index.php/
+    link: PRO ACT → https://scorecard.cwa-union.org/index.php/pro-act
+    link: VOTES → https://scorecard.cwa-union.org/index.php/votes
+    link: LEGISLATORS → https://scorecard.cwa-union.org/index.php/legislators
+    link: here → https://scorecard.cwa-union.org/pro-act
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/A000370
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/M001234
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/P000614
+    link: See how your Rep. voted → https://scorecard.cwa-union.org/legislators
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/D000622
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/M001111
+    link: (no text) → https://scorecard.cwa-union.org/scorecard/legislators/D000563
+    link: Lower Health Care Premiums for All Americans Act → https://scorecard.cwa-union.org/scorecard/votes/86
+    link: The rule providing for consideration of S. 1071, the Nationa → https://scorecard.cwa-union.org/scorecard/votes/90
+    link: Budget Reconciliation → https://scorecard.cwa-union.org/scorecard/votes/85
+    link: See more key votes → https://scorecard.cwa-union.org/votes
+    table: 4 rows; first: Legislator Image | Name | Lifetime Score; second:  | Rep. Alma Adams | 100%
+    table: 4 rows; first: Legislator Image | Name | Lifetime Score; second:  | Sen. Tammy Duckworth | 100%
+    table: 4 rows; first: Date | Legislation | CWA Position; second: December 17, 2025 | Lower Health Care Premiums for | Font Awesome fontawesome.com -
+    the drawn page: data/ratings-samples/cwa-drawn-1.html
+    data: https://ka-p.fontawesome.com/releases/v5.15.4/svgs/brands/twitter.svg?token=hidden → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License · profiled members named: 0
+    data: https://ka-p.fontawesome.com/releases/v5.15.4/svgs/brands/facebook-f.svg?token=hidden → HTTP 200, image/svg+xml, 0 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License · profiled members named: 0
+    data: https://ka-p.fontawesome.com/releases/v5.15.4/svgs/brands/instagram.svg?token=hidden → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License · profiled members named: 0
+    data: https://ka-p.fontawesome.com/releases/v5.15.4/svgs/regular/thumbs-down.svg?token=hidden → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-BFGK02BP4W&cid=1192640601.1794179006&gtm=45je6b41v9104088739za20ozb839604218zd839604218xf1&rcb=19&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-BFGK02BP4W&gtm=45je6b41v9104088739za20ozb839604218zd839604218xf1&_p=1794179005755&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&cid=1192640601.1794179006&frm=0&ibt=1&ng → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-ZM5LMB4CZE&gtm=45je6b41v883993349za20ozb839604218zd839604218xf1&_p=1794179005755&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1192640601.1794179006&frm=0&pscdl=noapi&rcb=13&sr=128 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-BFGK02BP4W&gtm=45je6b41v9104088739za20gzb839604218zd839604218xf1&_p=1794179005755&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dMDhkMT&_eu=AEAAACQC&ae=a&cid=1192640601.1794179006&frm → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-ZM5LMB4CZE&gtm=45je6b41v883993349za20gzb839604218zd839604218xf1&_p=1794179005755&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dMDhkMT&_eu=AEAAAAQ&ae=a&cid=1192640601.1794179006&f → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+
+FRC Action (frc)
+  https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate → HTTP 200
+    title: FRC Action · 1,156 characters of text once drawn
+    profiled members named once drawn: 0
+    link: VOTER RESOURCES → https://www.frcaction.org/vote
+    link: House → https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_house
+    link: Senate → https://www.frcaction.org/get.cfm?c=FRCA_SCORECARD&scorecard=scorecard_senate
+    link: 119TH - 1st Session PDF → https://www.frcaction.org/index.cfm?i=LK26A02&f=PG21B08
+    link: 118TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK25D02&f=PG21B08
+    link: 118TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK24E05&f=PG21B08
+    link: 117TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK23B02&f=PG21B08
+    link: 117TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK21D01&f=PG21B08
+    link: 116TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK20E03&f=PG21B08
+    link: 116TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK20B02&f=PG21B08
+    link: 115TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK19B01&f=PG21B08
+    link: 115TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK18A02&f=PG21B08
+    link: 114TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK18A01&f=PG21B08
+    link: 114TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK16J32&f=PG21B08
+    link: 113TH Congress → https://www.frcaction.org/index.cfm?i=LK14B06&f=PG21B08
+    link: 112TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK12I06&f=PG21B08
+    link: 112TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK11I04&f=PG21B08
+    link: 111TH Congress → https://www.frcaction.org/index.cfm?i=LK10J02&f=PG21B08
+    link: 110TH Congress → https://www.frcaction.org/index.cfm?i=LK10J09&f=PG21B08
+    link: 109TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK06J15&f=PG21B08
+    link: 109TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK10J10&f=PG21B08
+    link: 108TH Congress Second Session → https://www.frcaction.org/index.cfm?i=LK10K10&f=PG21B08
+    link: 108TH Congress First Session → https://www.frcaction.org/index.cfm?i=LK10K11&f=PG21B08
+    link: 107TH Congress → https://www.frcaction.org/index.cfm?i=LK10K12&f=PG21B08
+    link: View the Final Vote Results → https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00012.htm
+    the drawn page: data/ratings-samples/frc-drawn-1.html
+    data: https://www.frcaction.org/includes/cross-domain-promo/img/wb_frc.svg → HTTP 200, image/svg+xml, 23 KB · starts: <?xml version="1.0" encoding="utf-8"?> <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg v · profiled members named: 0
+    data: https://www.frcaction.org/includes/cross-domain-promo/img/wb_pvs.svg → HTTP 200, image/svg+xml, 3 KB · starts: <?xml version="1.0" encoding="utf-8"?> <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg v · profiled members named: 0
+    data: https://www.frcaction.org/includes/cross-domain-promo/img/wb_tws.svg → HTTP 200, image/svg+xml, 2 KB · starts: <?xml version="1.0" encoding="utf-8"?> <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg v · profiled members named: 0
+    data: https://www.frcaction.org/img/domain/frcaction/frcapac_logo.svg → HTTP 200, image/svg+xml, 14 KB · starts: <svg enable-background="new 0 0 298 267.4" viewBox="0 0 298 267.4" xmlns="http://www.w3.org/2000/svg"><path d="m15.4 24.7c2.5 0 5.1-.2 6.3-. · profiled members named: 0
+    data: https://www.frcaction.org/img/domain/frcaction/ffffund_logo.svg → HTTP 200, image/svg+xml, 11 KB · starts: <svg enable-background="new 0 0 360 267.4" viewBox="0 0 360 267.4" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="m147.9 107.8 2 · profiled members named: 0
+    data: https://www.frcaction.org/includes/cross-domain-promo/img/wb_ww.svg → HTTP 200, image/svg+xml, 14 KB · starts: <?xml version="1.0" encoding="utf-8"?> <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg v · profiled members named: 0
+    data: https://www.frcaction.org/webjson/frc/script_generated/issue_code_url.json → HTTP 200, application/json, 7 KB · keys: CR, ED, MF, PN, PR, SL, FOUND, CM, LEGIS, HS, DIVORC, DF, MILIT, IMMIGT, MEDIA, ABORT, ABSTIN, AD, CLONE, EUTHAN · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-GLN8LGMP72&cid=1948563156.1794179017&gtm=45je6b41h1v9114814759za20oxf1&rcb=1&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616985~115938465~115938468~118897920~11 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-GLN8LGMP72&gtm=45je6b41h1v9114814759za20oxf1&_p=1794179017124&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAIAGA&cid=1948563156.1794179017&frm=0&pscdl=noapi&rcb=1&sr=1280x720 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://static.quorum.us/global/data/maps/us.static → HTTP 200, application/octet-stream, 641 KB · keys: type, objects, arcs, transform; "arcs" is a list of 10034, first item's keys: 0, 1, 2, 3, 4 · profiled members named: 0
+    data: https://static.quorum.us/global/data/maps/top_735_cities_0.static → HTTP 200, application/octet-stream, 93 KB · keys: WA, DE, VT, WI, WV, HI, FL, WY, NH, NJ, NM, TX, LA, NC, ND, NE, TN, NY, PA, AK; "WA" is a list of 22, first item's keys: city, location, population, zoom_level, placement · profiled members named: 7
+      saved: data/ratings-samples/frc-data-1.txt
+    data: https://static.quorum.us/global/data/maps/fips_mapping.static → HTTP 200, application/octet-stream, 1 KB · keys: WA, DE, DC, WI, WV, HI, FL, WY, NH, NJ, NM, TX, LA, NC, ND, NE, TN, NY, PA, CA · profiled members named: 0
+    data: https://static.quorum.us/global/data/maps/us-congress-113.static → HTTP 200, application/octet-stream, 277 KB · keys: type, objects, arcs, transform; "arcs" is a list of 6977, first item's keys: 0, 1 · profiled members named: 0
+    data: https://o19956.ingest.us.sentry.io/api/39808/envelope/?sentry_version=7&sentry_key=hidden&sentry_client=sentry.javascript.browser%2F8.55.0 → HTTP 200, application/json, 0 KB · keys:  · profiled members named: 0
+    data: https://www.quorum.us/api/sheet/wxRyBnaMcQErlwGUCwFg/get_stance_custom_labels/?&decode_enums=false&count=false&exclude=%7B%7D → HTTP 200, application/json, 0 KB · keys: meta, objects · profiled members named: 0
+    data: https://www.quorum.us/api/sheet/wxRyBnaMcQErlwGUCwFg/get_alignment_types/?archived=false&decode_enums=false&count=false&exclude=%7B%7D → HTTP 200, application/json, 1 KB · keys: meta, objects; "objects" is a list of 3, first item's keys: _extra, archived, created, icon, icon_family, id, label, resource_uri, updated, user, value · profiled members named: 0
+    data: https://www.quorum.us/api/sheet/wxRyBnaMcQErlwGUCwFg/?decode_enums=false&count=false&exclude=%7B%7D&fetch_cache=true → HTTP 200, application/json, 68 KB · keys: _extra, allow_index, allow_public_sheet_reorder_columns, archived, can_fit_in_memory, columns, created, data_type, datum_column_width, description, external_custom_region_selection, external_regions, first_name, id, is_favorite, is_limited_to_creator, is_locked, is_public, last_name, limited_t · profiled members named: 24
+      saved: data/ratings-samples/frc-data-2.json
+
+Humane World Action Fund (humane)
+  https://humaneaction.org/current_scorecard → HTTP 200
+    title: 2026 Scorecard Preview | Humane World Action Fund · 27,383 characters of text once drawn
+    profiled members named once drawn: 29 (Collins, Sullivan, Marshall, Ossoff, Booker, Hickenlooper, Perry, Lawler, Evans, Miller-Meeks, Kaptur, Perez …)
+    link: Skip to main content → https://humaneaction.org/current_scorecard#main-content
+    link: Humane Scorecard → https://humaneaction.org/humane-scorecard
+    link: Senate → https://humaneaction.org/current_scorecard#scorecard_senate
+    link: House → https://humaneaction.org/current_scorecard#scorecard_house
+    link: Download PDF → https://humaneaction.org/2026-scorecard-pdf
+    link: Scorecard Key → https://humaneaction.org/current_scorecard#key_wrap
+    link: Back to List → https://humaneaction.org/current_scorecard#
+    table: 153 rows; first:  |  |  | AWA enforcement co-sponsor | Leader; second: Alabama
+    table: 500 rows; first:  |  |  |  | AWA enforcement co-sponsor | Puppy mills co-sponsor | Horse slaughter co-sponsor | Farm Bill vote | USDA/FDA animal welfare letter | Horse slaughter defund letter | Animal Protection Caucus | Leader; second: Alabama
+    the drawn page: data/ratings-samples/humane-drawn-1.html
+    data: https://humaneaction.org/sites/default/files/logo_hwaf.svg → HTTP 200, image/svg+xml, 12 KB · starts: <svg width="205" height="71" viewBox="0 0 205 71" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.10704 27.7512C2.16874 25.5903  · profiled members named: 0
+    data: https://humaneaction.org/themes/custom/b5_subtheme_hwaf/img/logo_formerly-horiz.svg → HTTP 200, image/svg+xml, 36 KB · starts: <svg width="304" height="127" viewBox="0 0 304 127" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="eve · profiled members named: 0
+    data: https://humaneaction.org/themes/custom/b5_subtheme_hwaf/img/logo_formerly-mob-cent.svg → HTTP 200, image/svg+xml, 36 KB · starts: <svg width="130" height="158" viewBox="0 0 130 158" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="eve · profiled members named: 0
+    data: https://humaneaction.org/media/292 → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="114" height="92" viewBox="0 0 114 92" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M94.6582 22.4434C104.226 22.4434  · profiled members named: 0
+    data: https://ad.doubleclick.net/ccm/s/collect?auid=631691094.1794179031&gtm=45He6b41v9104148540za200zd9104148540xeaxf1&fmt=8 → HTTP 204, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&ae=g&auid=631691094.1794179031&dt=2026%20Scorecard%20Preview%20%7C%20Humane%20World%20Action%20Fund&en=page_view&dl=https%3A%2F%2Fhumaneaction.org%2Fcurrent_scorecar → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://humaneaction.org/media/291 → HTTP 200, image/svg+xml, 0 KB · starts: <svg width="116" height="89" viewBox="0 0 116 89" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_10550_414)"> <pat · profiled members named: 0
+    data: https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=0&auid=631691094.1794179031&dt=2026%20Scorecard%20Preview%20%7C%20Humane%20World%20Action%20Fund&tid=AW-657816346&en=page_view&dl=https%3A%2F%2Fhumaneaction.org%2Fcurr → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google.com/rmkt/collect/657816346/?random=1794179031335&cv=11&fst=1794179031335&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6b41v9104586238za20ozb9104148540zd9104148540xecxf1&gcd=13l3l3l3l1l1&dma=0 → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
+    data: https://stats.g.doubleclick.net/g/collect?v=2&tid=G-WB7ZQETB0Z&cid=1626199683.1794179031&gtm=45je6b41v895190661za20ozb9104148540zd9104148540xf1&rcb=2&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~1 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-WB7ZQETB0Z&gtm=45je6b41v895190661za20ozb9104148540zd9104148540xf1&_p=1794179031003&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&cid=1626199683.1794179031&frm=0&pscdl=n → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://sheets.googleapis.com/v4/spreadsheets/1LrOLUruO8VL2h_hxnsPq-UhPdT0qe2kEyTIZSN1RJKo/values/modded?alt=json&key=hidden → HTTP 200, application/json, 156 KB · keys: range, majorDimension, values; "values" is a list of 444, first item's keys: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 · profiled members named: 22
+      saved: data/ratings-samples/humane-data-1.json
+    data: https://sheets.googleapis.com/v4/spreadsheets/1LrOLUruO8VL2h_hxnsPq-UhPdT0qe2kEyTIZSN1RJKo/values/issues?alt=json&key=hidden → HTTP 200, application/json, 7 KB · keys: range, majorDimension, values; "values" is a list of 9, first item's keys: 0, 1, 2, 3 · profiled members named: 0
+    data: https://sheets.googleapis.com/v4/spreadsheets/1-NR-t0MAlPI0i4_D4OaknCpok4eS2JKH6vylnIpiJms/values/issues?alt=json&key=hidden → HTTP 200, application/json, 3 KB · keys: range, majorDimension, values; "values" is a list of 3, first item's keys: 0, 1, 2, 3 · profiled members named: 0
+    data: https://sheets.googleapis.com/v4/spreadsheets/1-NR-t0MAlPI0i4_D4OaknCpok4eS2JKH6vylnIpiJms/values/modded?alt=json&key=hidden → HTTP 200, application/json, 29 KB · keys: range, majorDimension, values; "values" is a list of 103, first item's keys: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 · profiled members named: 10
+      saved: data/ratings-samples/humane-data-2.json
+    data: https://sheets.googleapis.com/v4/spreadsheets/1zfK74l8BmIBQaCdABJEnoHt-zhWOIGbeBwkZBxQie9A/values/modded?alt=json&key=hidden → HTTP 200, application/json, 2056 KB · keys: range, majorDimension, values; "values" is a list of 41924, first item's keys: 0, 1, 2 · profiled members named: 0
+    data: https://analytics.google.com/g/collect?v=2&tid=G-WB7ZQETB0Z&gtm=45je6b41v895190661za20gzb9104148540zd9104148540xf1&_p=1794179031003&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&cid=1626199683.1794179031&frm=0&pscdl=noa → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+
+Common Cause (commoncause)
+  https://democracyscorecard.org/ → HTTP 200
+    title: Home - Democracy Scorecard · 1,583 characters of text once drawn
+    profiled members named once drawn: 0
+    link: Home → https://democracyscorecard.org/
+    link: About → https://democracyscorecard.org/about/
+    link: In Your State → https://democracyscorecard.org/by-state/
+    link: Browse by Party → https://democracyscorecard.org/by-party/
+    link: Explore Bills → https://democracyscorecard.org/explore-bills/
+    link: Donate → https://actionnetwork.org/fundraising/support-common-cause-scorecard/
+    link: DOWNLOAD SCORECARD (PDF) → https://democracyscorecard.org/wp-content/uploads/2024/09/DemocracyScorecard_2024v6.pdf
+    link: Click here → https://www.waybackmachinedownloads.com/
+    the drawn page: data/ratings-samples/commoncause-drawn-1.html
+    data: https://democracyscorecard.org/wp-content/themes/aer/images/scorecard.svg → HTTP 200, image/svg+xml, 2 KB · starts: <svg width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M69.23 35.38L64 15.16C63.88 14.69 6 · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-B5HBBVWXY3&gtm=45je6b41v9107111782za20oxf1&_p=1794179044211&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EAAI&cid=1224055140.1794179045&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=8&sr=1280x → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
     data: https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true → HTTP 200, application/json, 0 KB · keys:  · profiled members named: 0
-    data: https://www.standwithcrypto.org/races?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/races?_rsc=5rC-cXtq8ICGgy70 → HTTP 200, text/x-component, 77 KB · starts: 1:"$Sreact.fragment" 9:I[125423,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/api/identified-user/verify-session → HTTP 200, application/json, 0 KB · keys: ok · profiled members named: 0
-    data: https://api.cdp.coinbase.com/platform/v2/embedded-wallet-api/projects/b5b93509-85d3-40f2-ae0d-b57ae848d54f/auth/refresh → HTTP 401, application/json, 0 KB · keys: correlationId, errorLink, errorMessage, errorType · profiled members named: 0
-    data: https://www.standwithcrypto.org/races?_rsc=2diTqMBW4mrI86Hn → HTTP 200, text/x-component, 6 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/races?_rsc=fYN4XkWw0WRcmocG → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/about?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://api.cdp.coinbase.com/platform/v2/embedded-wallet-api/projects/b5b93509-85d3-40f2-ae0d-b57ae848d54f/auth/logout → HTTP 401, application/json, 0 KB · keys: correlationId, errorLink, errorMessage, errorType · profiled members named: 0
-    data: https://www.standwithcrypto.org/races?_rsc=7cYu2FGTGZpH93kF → HTTP 200, text/x-component, 776 KB · starts: 1:"$Sreact.fragment" 2:I[523476,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 57
-      saved: data/ratings-samples/standwithcrypto-data-2.txt
-    data: https://www.standwithcrypto.org/about?_rsc=f6geLt7aSiXpp4Ua → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/about?_rsc=RkZ9iHk2VwaQfmoZ → HTTP 200, text/x-component, 38 KB · starts: 1:"$Sreact.fragment" 9:I[125423,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://cca-lite.coinbase.com/amp → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://cca-lite.coinbase.com/amp → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://cca-lite.coinbase.com/amp → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://cca-lite.coinbase.com/amp → HTTP 200, no type, 0 KB · starts:  · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 6 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=t0_h4hdMjo38b5st → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/about?_rsc=m1CIHP5hrZsFQMtY → HTTP 200, text/x-component, 76 KB · starts: 1:"$Sreact.fragment" 2:I[841654,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/about?_rsc=B-VJbqwbrtiOrQxf → HTTP 200, text/x-component, 6 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=XICVD-COJbZiXUgl → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=3bJC9FHR_ffPcmHa → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/community/activity?_rsc=8kaIabrA8GYJsG3e → HTTP 200, text/x-component, 21 KB · starts: 1:"$Sreact.fragment" 2:I[303829,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/bills?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/bills?_rsc=rS6PqeZdGpOqc87B → HTTP 200, text/x-component, 155 KB · starts: 1:"$Sreact.fragment" 2:I[75718,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3.e · profiled members named: 0
-    data: https://www.standwithcrypto.org/bills?_rsc=RX08d6To_fegyc1h → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/politicians?_rsc=jePB59e-UqA6lxTX → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/politicians?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/politicians?_rsc=rgDvz7ZeT7kY5mrv → HTTP 200, text/x-component, 135 KB · starts: 1:"$Sreact.fragment" 2:I[593842,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 11
-      saved: data/ratings-samples/standwithcrypto-data-3.txt
-    data: https://www.standwithcrypto.org/?_rsc=axuP0xR76rk9pCsS → HTTP 200, text/x-component, 199 KB · starts: 1:"$Sreact.fragment" 2:I[806241,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 1
-    data: https://www.standwithcrypto.org/?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/privacy?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/press?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/terms-of-service?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/referrals?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/questionnaire?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/polls?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/events?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/partners?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/privacy?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/privacy?_rsc=AhyAlIgQhquj1tPJ → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/privacy?_rsc=8vwsLJ0728b-gDcW → HTTP 200, text/x-component, 79 KB · starts: 1:"$Sreact.fragment" 2:I[841654,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/donate?_rsc=InqCQXL4tuBkXLGy → HTTP 200, text/x-component, 1 KB · starts: :HL["/_next/static/chunks/0tmdx0savm2x5.css?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","style"] :HL["/_next/static/chunks/03551ccsxuic9.css?dpl=d · profiled members named: 0
-    data: https://www.standwithcrypto.org/terms-of-service?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/terms-of-service?_rsc=a17zrYwEscszxbiB → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/terms-of-service?_rsc=0CvSlAL9tyIOq_4U → HTTP 200, text/x-component, 91 KB · starts: 1:"$Sreact.fragment" 2:I[841654,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/press?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/press?_rsc=KwntzXZtJRKQWJxi → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/press?_rsc=O3OHp7Bf2V2ZB85W → HTTP 200, text/x-component, 66 KB · starts: 1:"$Sreact.fragment" 2:I[841654,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/donate?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/donate?_rsc=VgeDW2ck-hGSSEI2 → HTTP 200, text/x-component, 33 KB · starts: 1:"$Sreact.fragment" 2:I[993534,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/donate?_rsc=G9ovgfYFQ49MbWM6 → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/questionnaire?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/questionnaire?_rsc=96Qxn6N9co_rSdhN → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/polls?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/questionnaire?_rsc=KxgmrPH_zdsoYJ3h → HTTP 200, text/x-component, 15 KB · starts: 1:"$Sreact.fragment" 2:I[135968,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/polls?_rsc=_UpRaeSTcVTp5mPx → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/referrals?_rsc=sZZtOOXyeZAb0qs_ → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/referrals?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/polls?_rsc=DPzhXaf5YyexHX4J → HTTP 200, text/x-component, 788 KB · starts: 1:"$Sreact.fragment" 2:I[377859,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 3
-      saved: data/ratings-samples/standwithcrypto-data-4.txt
-    data: https://www.standwithcrypto.org/referrals?_rsc=rITz3zJRgWoQINq1 → HTTP 200, text/x-component, 61 KB · starts: 1:"$Sreact.fragment" 2:I[424268,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/referrals?_rsc=cknEuEBjktfLWKvc → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/partners?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/events?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 4 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/partners?_rsc=w7oC11LvVouCGgmP → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/events?_rsc=RqjpYrsvXvkkJjXi → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/partners?_rsc=KIbxUrVm2nP3pnfL → HTTP 200, text/x-component, 71 KB · starts: 1:"$Sreact.fragment" 2:I[841654,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 0
-    data: https://www.standwithcrypto.org/events?_rsc=nzSdjDPpEcHYQnVU → HTTP 200, text/x-component, 3244 KB · starts: 1:"$Sreact.fragment" 2:I[826476,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3. · profiled members named: 8
-      saved: data/ratings-samples/standwithcrypto-data-5.txt
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=4u8WgohiC6AKZgjb → HTTP 200, text/x-component, 3 KB · starts: 1:"$Sreact.fragment" 2:I[619862,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ViewportBoundary"] 3:I[61986 · profiled members named: 0
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=EQBbRFFXMQDTt0Mo → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=SysXXUwa2CiWGFZ2 → HTTP 200, text/x-component, 0 KB · starts: 1:"$Sreact.fragment" 2:I[933389,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"default"] 3:I[909290,["/_nex · profiled members named: 0
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=5kNuvJfs_yLnxQGw → HTTP 200, text/x-component, 205 KB · starts: 1:"$Sreact.fragment" 2:I[75718,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE","/_next/static/chunks/07c.ct3.e · profiled members named: 1
-    data: https://www.standwithcrypto.org/action/sign-up?_rsc=QDsiqojryZjXlVZp → HTTP 200, text/x-component, 5 KB · starts: 1:"$Sreact.fragment" 2:I[924294,["/_next/static/chunks/13oc9cd9~khfy.js?dpl=dpl_G7nG4HyzPpVWNeHU9fxXp1rhQ2FE"],"ClientPageRoot"] 3:I[478987, · profiled members named: 0
-    data: https://api-js.mixpanel.com/track/?verbose=1&ip=1&_=1794177924786 → HTTP 200, application/json, 0 KB · keys: error, status · profiled members named: 0
+    data: https://democracyscorecard.org/cdn-cgi/rum? → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+
+NIAC Action (niac)
+  https://scorecard.niacaction.org/ → HTTP 200
+    title: NIAC Action · 358 characters of text once drawn
+    profiled members named once drawn: 0
+    the drawn page: data/ratings-samples/niac-drawn-1.html
+    data: https://scorecard.niacaction.org/data/scores_wide.csv → HTTP 200, text/csv, 0 KB · starts:  · profiled members named: 0
+    data: https://scorecard.niacaction.org/data/graphic_sentences.csv → HTTP 200, text/csv, 2 KB · starts: chamber,columns,checkPositivePoints,goodText,badText,sponsorText,ending HOUSE,"H.Con.Res.38 — Iran War Powers Resolution (Preferred);H.Con.R · profiled members named: 0
+    data: https://scorecard.niacaction.org/data/scores_columns_meta.csv?v=1792510331441 → HTTP 200, text/csv, 30 KB · starts: column,type,bill_number,display_name,categories,action_types,short_title,notes,sponsor_bioguide_id,sponsor_name,position_to_score,preferred, · profiled members named: 6
+      saved: data/ratings-samples/niac-data-1.txt
+    data: https://scorecard.niacaction.org/data/manual_scoring_meta.csv?v=1792510331441 → HTTP 200, text/csv, 0 KB · starts: label,score,custom_scoring_description H.R.2619 — Travel to Iran Amendment,4.0,Supported amendment and opposed bill H.R.2619 — Travel to Ira · profiled members named: 0
+    data: https://scorecard.niacaction.org/data/pac_data.csv → HTTP 200, text/csv, 113 KB · starts: bioguide_id,full_name,aipac_featured,dmfi_website,dmfi_actblue_url,aipac_direct_amount_2022,aipac_earmark_amount_2022,aipac_ie_support_2022, · profiled members named: 29
+      saved: data/ratings-samples/niac-data-2.txt
+    data: https://scorecard.niacaction.org/data/scores_wide.csv?v=1792510331441 → HTTP 200, text/csv, 513 KB · starts: full_name,party,state,chamber,bioguide_id,photo_url,district,office_phone,office_address,district_offices,committees,reject_aipac_commitment · profiled members named: 29
+      saved: data/ratings-samples/niac-data-3.txt
+    data: https://scorecard.niacaction.org/data/pac_data.csv → HTTP 200, text/csv, 113 KB · starts: bioguide_id,full_name,aipac_featured,dmfi_website,dmfi_actblue_url,aipac_direct_amount_2022,aipac_earmark_amount_2022,aipac_ie_support_2022, · profiled members named: 29
+      saved: data/ratings-samples/niac-data-4.txt
+    data: https://cdn.jsdelivr.net/gh/PublicaMundi/MappingAPI@master/data/geojson/us-states.json → HTTP 200, application/json, 87 KB · keys: type, features; "features" is a list of 52, first item's keys: type, id, properties, geometry · profiled members named: 0
+    data: https://demotiles.maplibre.org/font/Open%20Sans%20Regular,Arial%20Unicode%20MS%20Regular/0-255.pbf → HTTP 200, application/octet-stream, 69 KB · starts:  �� Open Sans Regular0-255     ( 038�!�Qfrtttl[Cd�����pTo������|\o���Լ�|\m���ں�{[l���ٹ�yYj���׷�xXi���ֶ�vVg���Դ�tTe���ӳ�sSd���ѱ · profiled members named: 0
+
+Americans for Democratic Action (ada)
+  https://adaction.org/ → HTTP ? (page.goto: Timeout 60000ms exceeded.; read what it had drawn)
+    title: Americans for Democratic Action · 2,065 characters of text once drawn
+    profiled members named once drawn: 0
+    the drawn page: data/ratings-samples/ada-drawn-1.html
+    data: https://js.monitor.azure.com/scripts/b/ai.config.1.cfg.json → HTTP 200, application/json, 2 KB · keys: version, enabled, featureOptIn, config · profiled members named: 0
+    data: https://collector-pxsj1uzlsv.px-cloud.net/api/v2/collector → HTTP 200, application/json, 2 KB · keys: do, ob · profiled members named: 0
+    data: https://secure.ngpvan.com/v1/Forms/_xtbagcJOk6haiGBXRGwfQ2 → HTTP 200, application/json, 2 KB · keys: tenantDisplayName, submissionUrl, autoFastAction, created, formVersion, fastAction, form_elements, formId, metadata, status, title, name, type, updated, url, hideTitle, shortCode; "form_elements" is a list of 3, first item's keys: name, type, markup · profiled members named: 0
+    data: https://southcentralus-0.in.applicationinsights.azure.com/v2/track → HTTP 200, application/json, 0 KB · keys: itemsReceived, itemsAccepted, appId, errors · profiled members named: 0
+    data: https://googleads.g.doubleclick.net/pagead/id?slf_rd=1 → HTTP 200, application/json, 0 KB · starts: )]}' {"id":"ANyPxKq3aoyJvoJK9XXGC_5Px6fCM9QKHS68x6ht4kPflOjv2y6DoU_-xIFL-sPgAMr0ww-D02uv","type":4} · profiled members named: 0
+    data: https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT → HTTP 200, application/json+protobuf, 0 KB · a list of 3; first item's keys: string · profiled members named: 0
+    data: https://collector-pxsj1uzlsv.px-cloud.net/api/v2/collector → HTTP 200, application/json, 1 KB · keys: do, ob · profiled members named: 0
+    data: https://www.youtube.com/youtubei/v1/log_event?alt=json → HTTP 200, application/json, 0 KB · keys: responseContext · profiled members named: 0
+    data: https://southcentralus-0.in.applicationinsights.azure.com/v2/track → HTTP 200, application/json, 0 KB · keys: itemsReceived, itemsAccepted, appId, errors · profiled members named: 0
+    data: https://www.youtube.com/youtubei/v1/log_event?alt=json → HTTP 200, application/json, 0 KB · keys: responseContext · profiled members named: 0
+
+American Energy Alliance (aea)
+  https://www.americanenergyalliance.org/american-energy-scorecard/ → HTTP 200
+    title: Energy Scorecard - American Energy Alliance · 1,464 characters of text once drawn
+    profiled members named once drawn: 0
+    link: >> skip → https://www.americanenergyalliance.org/american-energy-scorecard/#
+    link: 2026 American Energy Scorecard Results For Key Energy Produc → https://www.americanenergyalliance.org/?post_type=post&p=18738
+    link: 425 Actions the Trump Administration and Congressional Repub → https://www.americanenergyalliance.org/?post_type=post&p=18725
+    link: American Energy Scorecard → https://www.americanenergyalliance.org/american-energy-scorecard/
+    link: American Energy Scorecard → https://www.americanenergyalliance.org/energy-scorecard/
+    link: About the Energy Scorecard → https://www.americanenergyalliance.org/about-the-energy-scorecard/
+    link: Key Votes → https://www.americanenergyalliance.org/tag/key-vote/
+    link: SEE ALL VOTES → https://www.americanenergyalliance.org/american-energy-scorecard?spage=overall&sw=votes
+    link: IN REPRESENTATIVE James Baird 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=B001307
+    link: WI REPRESENTATIVE Glenn Grothman 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=G000576
+    link: MN REPRESENTATIVE Brad Finstad 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=F000475
+    link: SEE ALL → https://www.americanenergyalliance.org/american-energy-scorecard/?spage=house
+    link: UT Senator Mike Lee 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=L000577
+    link: WV Senator James Justice 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=J000312
+    link: FL Senator Rick Scott 100% Current Congress Score → https://www.americanenergyalliance.org/american-energy-scorecard?spage=member&id=S001217
+    link: See All → https://www.americanenergyalliance.org/american-energy-scorecard/?spage=senate
+    link: H31-2026 Key Vote YES on H.R. 2988 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=273
+    link: H38-2026 Key Vote YES on H.J. Res. 140 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=272
+    link: H296-2025 Key Vote YES on S.J. Res. 80 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=271
+    link: H304-2025 Key Vote YES on H.R. 1949 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=270
+    link: H330-2025 Key Vote YES on the PERMIT Act → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=267
+    link: H294-2025 Key Votes YES on H.J. Res. 130 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=262
+    link: S96-2025 Key Vote YES on S.J. Res.12 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=261
+    link: S228-2025 Key Vote YES on H.J. Res. 75 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=260
+    link: S632-2025 Key Vote YES on H.J. Res. 131 → https://www.americanenergyalliance.org/american-energy-scorecard?spage=vote&id=256
+    table: 6 rows; first: S96-2025 | Key Vote YES on S.J. Res.12; second: S228-2025 | Key Vote YES on H.J. Res. 75
+    table: 6 rows; first: S96-2025 | Key Vote YES on S.J. Res.12; second: S228-2025 | Key Vote YES on H.J. Res. 75
+    the drawn page: data/ratings-samples/aea-drawn-1.html
+    data: https://www.americanenergyalliance.org/wp-content/plugins/15d21-aea-scorecard/front-end/images/aea-logo.svg → HTTP 200, image/svg+xml, 14 KB · starts: <svg width="275" height="35" viewBox="0 0 275 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/2023/icons/email-light.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1350_569)"> <path d · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/twitter-dark-ico.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_6759_2124)"> <path d="M0 18.5C0 8.5595 8.0595 0.5 18 0.5C27.94 · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/2023/icons/facebook-light.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1350_565)"> <path d · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/icon-tw-circle.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_6759_2124)"> <path  · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/2023/icons/email-dark-copy.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" versi · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/search-btn.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="6.89287" cy="6.89287" r="5.89287 · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/linkedin-dark-icon.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg"> <mask id="mask0_7026_3154" style="mask-type: · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/linkedin-white-icon.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg"> <mask id="mask0_7026_3161" style="mask-type: · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/themes/aea2017/images/2023/icons/facebook-dark-copy.svg → HTTP 200, image/svg+xml, 1 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" versi · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/plugins/15d21-aea-scorecard/front-end/images/icons/arrow-right.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd"  · profiled members named: 0
+    data: https://www.americanenergyalliance.org/wp-content/plugins/15d21-aea-scorecard/front-end/images/icons/polygon-down.svg → HTTP 200, image/svg+xml, 0 KB · starts: <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"> <path id="Polygon 1" d="M8 9L0.205772 0L15.794 · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-XLNZYVWCYW&gtm=45je6b41v888859735za208zd888859735xf1&_p=1794179140740&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&cid=763591590.1794179141&frm=0&ngs=1&pscdl=denied → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.facebook.com/x/oauth/status?client_id=196749420435782&input_token=hidden&origin=1&redirect_uri=https%3A%2F%2Fwww.americanenergyalliance.org%2Famerican-energy-scorecard%2F&sdk=joey&wants_cookie_data=false → HTTP 200, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://syndication.twitter.com/settings?session_id=hidden → HTTP 200, application/json, 1 KB · keys: should_obtain_cookie_consent, features · profiled members named: 0
+    data: https://api.onesignal.com/apps/b6645160-db13-43ac-92f6-7aa60cf3e27e/sdk/features/web/160700 → HTTP 200, application/json, 0 KB · keys: features; "features" is a list of 3, first item's keys: string · profiled members named: 0
+    data: https://api.marker.io/widget/ping → HTTP 403, application/json, 0 KB · keys: error, errorPhrase · profiled members named: 0
+    data: https://bam.nr-data.net/browser/connect/2/NRJS-caeefc7c80076b9cf60?a=1033886932&v=1.324.1&s=cd2eff7abd1df37a → HTTP 200, application/json, 0 KB · keys: config, app · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-XLNZYVWCYW&gtm=45je6b41v888859735za200zd888859735xf1&_p=1794179140740&gcs=G111&gcu=1&gcd=13r3r3r3r5l1&npa=0&dma=0&_eu=AAAAAAQ&cid=763591590.1794179141&frm=0&gcut=3&ngs → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-XLNZYVWCYW&gtm=45je6b41v888859735za200zd888859735xf1&_p=1794179140740&gcs=G111&gcd=13r3r3r3r5l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=763591590.1794179141&frm=0&ngs=1&pscdl → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
 
 NORML (norml)
   https://vote.norml.org/ → HTTP 200
@@ -226,30 +327,4 @@ NORML (norml)
     link: Minnesota → https://vote.norml.org/states/MN
     link: Mississippi → https://vote.norml.org/states/MS
     the drawn page: data/ratings-samples/norml-drawn-1.html
-    data: https://www.google-analytics.com/g/collect?v=2&tid=G-PY9VJED0Q6&gtm=45je6b41v9107948426za20oxf1&_p=1794177931560&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EAAI&cid=349850590.1794177932&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=3&sr=1280x7 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-
-Council for Innovation Promotion (c4ip)
-  https://c4ip.org/interactive-scorecard/ → HTTP 200
-    title: C4IP Interactive Congressional Scorecard | Council for Innovation Promotion (C4IP) · 2,394 characters of text once drawn
-    profiled members named once drawn: 2 (Thomas, Murphy)
-    link: Skip to content → https://c4ip.org/interactive-scorecard/#content
-    link: (no text) → https://c4ip.org/resources/congressional-innovation-scorecard/
-    link: (no text) → https://c4ip.org/interactive-scorecard/#elementor-action%3Aaction%3Doff_canvas%3Aopen%26settings%3DeyJpZCI6IjMxZDdmMWIiLCJkaXNwbGF5TW9kZSI6Im9wZW4ifQ%3D%3D
-    link: here → https://c4ip.org/wp-content/uploads/2024/03/2024-Congressional-Innovation-Scorecard.pdf
-    link: Download the 2026 Scorecard → https://c4ip.org/wp-content/uploads/2026/05/C4IP-Congressional-Innovation-Scorecard-Third-Edition.pdf
-    link: Download the 2025 Scorecard → https://c4ip.org/wp-content/uploads/2025/07/C4IP-Congressional-Innovation-Scorecard-Edition-2.pdf
-    link: © 2026 COUNCIL FOR INNOVATION PROMOTION → https://c4ip.org/
-    table: 7 rows; first: Cookie | Duration | Description; second: cookielawinfo-checkbox-analyti | 11 months | This cookie is set by GDPR Coo
-    the drawn page: data/ratings-samples/c4ip-drawn-1.html
-    data: https://c4ip.org/wp-content/uploads/2024/08/C4IP-Full-Logo-color.svg → HTTP 200, image/svg+xml, 14 KB · starts: <?xml version="1.0" encoding="UTF-8"?> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.o · profiled members named: 0
-    data: https://c4ip.org/wp-content/uploads/2022/04/header-background-gray.svg → HTTP 200, image/svg+xml, 1 KB · starts: <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 1188.9 297.2" s · profiled members named: 0
-    data: https://c4ip.org/cdn-cgi/challenge-platform/h/b/jsd/oneshot/8340802ab0bb/0.3815118239592751:1794175827:A78VH5y1RUwdDpsK2SEPKG5v1pLogtQUI5VXFKnjvaQ/a5781c0d4da87077 → HTTP 200, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://www.google-analytics.com/g/collect?v=2&tid=G-T9C5FHW4C6&gtm=45je6b41v9113325196za208zd9113325196xf1&_p=1794177942698&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=2089214472.1794177943&frm=0&ngs=1&pscdl=noapi&rcb=13&sr=1280x7 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
-    data: https://scorecard.c4ip.org/config.txt → HTTP 200, text/plain, 0 KB · starts: assets/index-CpXq1BaS.js assets/index-5sJuOCoW.css  · profiled members named: 0
-    data: https://cscp.c4ip.org/public/highlights → HTTP 200, application/json, 6 KB · keys: members, bills; "members" is a list of 6, first item's keys: state, party, chamber, score, member_name, bioguideId, in_congress, image_url, leadership_roles · profiled members named: 1
-    data: https://cscp.c4ip.org/public/members/browse?skip=0&limit=48&sort=score-desc → HTTP 200, application/json, 11 KB · keys: members, total, skip, limit; "members" is a list of 48, first item's keys: state, party, chamber, score, member_name, bioguideId, in_congress, image_url, leadership_roles · profiled members named: 6
-      saved: data/ratings-samples/c4ip-data-1.json
-    data: https://cscp.c4ip.org/public/congresses → HTTP 200, application/json, 0 KB · keys: congresses, current_congress, available_congresses; "congresses" is a list of 2, first item's keys: number · profiled members named: 0
-    data: https://cscp.c4ip.org/public/bills?skip=0&limit=40&sort_by=congress_number&sort_order=desc → HTTP 200, application/json, 25 KB · keys: bills, total, latest_congress_number; "bills" is a list of 40, first item's keys: id, identifier, title, introduced, relevant, key, priority, notes, status, summary, congress_number, bill_type, bill_number, ai_analysis, impact_on_score, is_published, is_analyzed, last_updated, congress_gov_url · profiled members named: 0
-    data: https://cscp.c4ip.org/public/congresses → HTTP 200, application/json, 0 KB · keys: congresses, current_congress, available_congresses; "congresses" is a list of 2, first item's keys: number · profiled members named: 0
-    data: https://www.google-analytics.com/g/collect?v=2&tid=G-T9C5FHW4C6&gtm=45je6b41v9113325196za200zd9113325196xf1&_p=1794177942698&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=2089214472.1794177943&frm=0&ngs=1&pscdl=noapi → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
+    data: https://www.google-analytics.com/g/collect?v=2&tid=G-PY9VJED0Q6&gtm=45je6b41v9107948426za20oxf1&_p=1794179152395&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EAAI&cid=1464107751.1794179153&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=14&sr=1280 → HTTP 204, text/plain, 0 KB · starts:  · profiled members named: 0
