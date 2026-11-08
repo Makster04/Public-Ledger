@@ -26,9 +26,11 @@ export const stateCode=v=>{const t=String(v||'').trim();const m=/^([A-Z]{2})(?:-
 
 // ---------- The readers: each takes a page's HTML and returns [{name, state, chamber?, party?, score?|grade?, year?, url?}] ----------
 // SBA Pro-Life America (sbaprolife.org/scorecard): two tables, Senate (Senator | Party | State | Rating | Status) and House
-// (Representative | Party | District | Rating | Status); the rating is a letter grade, A+ to F.
+// (Representative | Party | District | Rating | Status); the rating is a letter grade, A+ to F, for the Congress the page names.
 export function readSba(html){
   const out=[];
+  // The page says which Congress it covers ("…during the 119th Congress").
+  const n=/during the (\d{3})(?:st|nd|rd|th) Congress/i.exec(text(html))?.[1],year=n?congressLabel(Number(n)):null;
   // Each table runs to the next one (or the end of the page), so a page cut short still reads.
   const parts=String(html).split(/<table\b[^>]*id="sc_dt_/i).slice(1);
   for(const t of parts){
@@ -38,7 +40,7 @@ export function readSba(html){
       const cells=[...r[0].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(c=>c[1]);if(cells.length<4)continue;
       const link=/href="([^"]+)"/.exec(cells[0])?.[1]||null,grade=text(cells[3]);
       if(!/^[A-F][+-]?$/.test(grade))continue;
-      out.push({name:text(cells[0]),party:text(cells[1]),state:stateCode(text(cells[2])),chamber,grade,status:text(cells[4]||''),url:link});
+      out.push({name:text(cells[0]),party:text(cells[1]),state:stateCode(text(cells[2])),chamber,grade,status:text(cells[4]||''),url:link,...(year?{year}:{})});
     }
   }
   return out;
@@ -78,10 +80,61 @@ export function readRfa(html){
 // Whether a page has a next page of the RFA table.
 const rfaHasNext=(html,pg)=>new RegExp(`\\?pg=${pg+1}["']`).test(String(html));
 
+// "119th Congress" from 119.
+export const congressLabel=n=>{const k=n%100,s=k>=11&&k<=13?'th':({1:'st',2:'nd',3:'rd'})[n%10]||'th';return `${n}${s} Congress`;};
+// The Congress sitting in a year (the 119th in 2025 and 2026).
+export const congressOf=year=>Math.floor((year-1789)/2)+1;
+const unattr=s=>String(s).replace(/&quot;/g,'"').replace(/&#0?39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+
+// Heritage Action (heritageaction.com/scorecard/members/<Congress>): every member's score for that Congress so far, in the
+// page's members list (a data attribute its scripts read): name, Bioguide ID, chamber, state, district, party, score.
+// Each member is read on their own, so a page cut short still reads.
+export function readHeritage(html){
+  const s=String(html),i=s.indexOf(':members="');if(i<0)return [];
+  const out=[];
+  for(const m of unattr(s.slice(i+10)).matchAll(/\{"title"[^{}]*\}/g)){
+    let o;try{o=JSON.parse(m[0]);}catch{continue;}
+    const score=/^\d{1,3}$/.test(String(o.score??'').trim())?Number(o.score):null;if(score==null)continue;
+    out.push({name:o.name,state:stateCode(o.state),chamber:/senate/i.test(o.chamber)?'S':'H',party:o.party,district:o.district||null,bioguide:/^[A-Z]\d{6}$/.test(o.congId)?o.congId:null,score,url:o.url?new URL(o.url,'https://heritageaction.com').href:null});
+  }
+  return out;
+}
+// Club for Growth (clubforgrowth.org/scorecards/app/?chamber=S|H&yr=<year>): one table per chamber and year; each row
+// State | Dist | Party | Name (linked, with the Bioguide ID) | Rank | Score | Lifetime.
+export function readClubForGrowth(html,{chamber=null,year=null}={}){
+  const out=[];
+  for(const r of String(html).split(/<tr class="scorecard-row/).slice(1)){
+    const row=r.split(/<\/tr>/)[0],cells=[...row.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(c=>c[1]);if(cells.length<7)continue;
+    const link=/href="([^"]+)"/.exec(cells[3])?.[1]||null,pct=v=>/^(\d{1,3})%$/.exec(text(v))?.[1];
+    const score=pct(cells[5]),life=pct(cells[6]);if(score==null&&life==null)continue;
+    out.push({name:text(cells[3]),state:stateCode(text(cells[0])),chamber:chamber||(text(cells[1])==='00'?'S':'H'),party:text(cells[2]),bioguide:/\/legislator\/([A-Z]\d{6})\//.exec(link||'')?.[1]||null,
+      score:score==null?null:Number(score),lifetime:life==null?null:Number(life),year,url:link?new URL(link,'https://www.clubforgrowth.org').href:null});
+  }
+  return out;
+}
+// The newest year on Club for Growth's scorecards page, and its Senate and House tables' addresses.
+export function cfgLatest(html){
+  const links=[...String(html).matchAll(/href="([^"]*\/scorecards\/app\/\?[^"]*)"/g)].map(m=>unattr(m[1]));
+  const at=(c,y)=>links.find(u=>new RegExp(`[?&]chamber=${c}&`).test(u)&&new RegExp(`[?&]yr=${y}(&|$)`).test(u));
+  const years=[...new Set(links.map(u=>Number(/[?&]yr=(\d{4})/.exec(u)?.[1])).filter(Boolean))].sort((a,b)=>b-a);
+  const year=years.find(y=>at('S',y)||at('H',y));
+  return year?{year,pages:[['S',at('S',year)],['H',at('H',year)]].filter(([,u])=>u).map(([chamber,u])=>({chamber,url:new URL(u,'https://www.clubforgrowth.org').href}))}:null;
+}
+
 export const READERS=[
   {key:'sba',org:'SBA Pro-Life America',lean:'conservative',issue:'Abortion',url:'https://sbaprolife.org/scorecard',read:readSba},
   {key:'lcv',org:'League of Conservation Voters',lean:'liberal',issue:'Environment',url:'https://www.lcv.org/congressional-scorecard/members-of-congress/',read:readLcv},
   {key:'rfa',org:'Reproductive Freedom for All',lean:'liberal',issue:'Abortion',url:'https://reproductivefreedomforall.org/congressional-record-on-reproductive-freedom/',read:readRfa,paged:true},
+  // The sitting Congress's scores; early in a new Congress, before any are posted, the one before.
+  {key:'heritage',org:'Heritage Action',lean:'conservative',issue:'Overall',url:'https://heritageaction.com/scorecard',
+    rows:async(fetchPage,{wait=2000,today=new Date()}={})=>{const now=congressOf(today.getUTCFullYear());
+      for(const n of [now,now-1]){const got=readHeritage(await fetchPage(`https://heritageaction.com/scorecard/members/${n}`));if(got.length)return got.map(r=>({...r,year:congressLabel(n)}));await sleep(wait);}
+      return [];}},
+  // The newest year's Senate and House tables, as listed on the scorecards page.
+  {key:'clubforgrowth',org:'Club for Growth',lean:'conservative',issue:'Taxes & spending',url:'https://www.clubforgrowth.org/scorecards/',
+    rows:async(fetchPage,{wait=2000}={})=>{const latest=cfgLatest(await fetchPage('https://www.clubforgrowth.org/scorecards/'));if(!latest)throw new Error('no scorecard year listed on its scorecards page');
+      const rows=[];for(const p of latest.pages){await sleep(wait);rows.push(...readClubForGrowth(await fetchPage(p.url),{chamber:p.chamber,year:latest.year}));}
+      return rows;}},
 ];
 
 // The groups without a reader yet, and why, from the probe (data/ratings-probe.txt, November 7, 2026):
@@ -90,10 +143,9 @@ export const READERS=[
 //   states      the group rates states' laws, not members of Congress
 //   no-list     grades are given one at a time in announcements, not published as a list
 //   permission  waiting on the group's permission to show its ratings
-//   to-build    the ratings are filled in by the page's own scripts; the reader is still to be written
+//   to-build    the ratings are drawn by the page's own scripts; npm run ratings:browse records what they load, and the
+//               reader is written from that
 export const PROBED={
-  heritage:['Heritage Action','conservative','Overall','to-build','https://heritageaction.com/scorecard'],
-  clubforgrowth:['Club for Growth','conservative','Taxes & spending','to-build','https://www.clubforgrowth.org/scorecards/'],
   afp:['Americans for Prosperity','conservative','Taxes & spending','to-build','https://americansforprosperity.org/national-scorecard/'],
   scf:['Senate Conservatives Fund','conservative','Overall','none','https://www.senateconservatives.com/'],
   nra:['NRA','conservative','Guns','no-list','https://www.nrapvf.org/grades/'],
@@ -120,6 +172,8 @@ const plain=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase
 const lastOf=s=>{const w=plain(s).split(' ').filter(Boolean);return w.at(-1)||'';};
 const firstOf=s=>plain(s).split(' ').filter(Boolean)[0]||'';
 export function matchPerson(row,people){
+  // A group that lists each member's Bioguide ID is matched on it.
+  if(row.bioguide){const b=people.find(p=>p.bioguide===row.bioguide);if(b)return b;}
   const last=lastOf(row.name),first=firstOf(row.name);
   const hits=people.filter(p=>lastOf(p.name)===last&&(!row.state||!p.state||row.state===p.state)&&(!row.chamber||!p.chamber||row.chamber===p.chamber||p.cand));
   if(hits.length<=1)return hits[0]&&(firstOf(hits[0].name)[0]===first[0]||firstOf(hits[0].short||'')[0]===first[0])?hits[0]:null;
@@ -134,9 +188,10 @@ async function get(url){
   return html;
 }
 // One group: every page, read and matched.
-export async function collect(reader,people,{fetchPage=get,wait=2000}={}){
+export async function collect(reader,people,{fetchPage=get,wait=2000,today=new Date()}={}){
   const rows=[];
-  if(reader.paged){for(let pg=0;pg<60;pg++){const html=await fetchPage(`${reader.url}?pg=${pg}`);const got=reader.read(html);rows.push(...got);if(!got.length||!rfaHasNext(html,pg))break;await sleep(wait);}}
+  if(reader.rows)rows.push(...await reader.rows(fetchPage,{wait,today}));
+  else if(reader.paged){for(let pg=0;pg<60;pg++){const html=await fetchPage(`${reader.url}?pg=${pg}`);const got=reader.read(html);rows.push(...got);if(!got.length||!rfaHasNext(html,pg))break;await sleep(wait);}}
   else rows.push(...reader.read(await fetchPage(reader.url)));
   const matched=[];
   for(const r of rows){const p=matchPerson(r,people);if(p)matched.push({id:p.id,row:r});}
@@ -150,7 +205,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // shows the same ratings.
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const full=[...research.members,...research.cands],have=new Set(full.map(p=>p.id));
-  const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,cand:!!p.cand}));
+  const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,bioguide:p.bioguide||null,cand:!!p.cand}));
   const file=new URL('public/group-ratings.json',root);
   const out=await fs.readFile(file,'utf8').then(JSON.parse,()=>({groups:{},people:{}}));
   const checked=new Date().toISOString().slice(0,10);

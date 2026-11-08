@@ -30,6 +30,7 @@
     "promises:review": "node scripts/review-promises.mjs",
     "ratings:collect": "node --no-warnings=ExperimentalWarning scripts/collect-ratings.mjs",
     "ratings:probe": "node --no-warnings=ExperimentalWarning scripts/ratings-probe.mjs",
+    "ratings:browse": "node --no-warnings=ExperimentalWarning scripts/ratings-browse.mjs",
     "campaign:collect": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/collect-campaign-text.mjs",
     "review:holdings": "node --no-warnings=ExperimentalWarning scripts/review-holdings.mjs",
     "money:update": "node --env-file-if-exists=.dev.vars scripts/update-campaign-money.mjs",
