@@ -220,7 +220,7 @@ export const RecordLive={
     const official=(p?.merged?.trades||[]).filter(t=>t.official);
     const part=k=>p?.sections?.[k]||null;
     return {netWorth:p?.sections?.['net-worth-house']||p?.sections?.['net-worth-senate']||null,sizes:p?.sections?.['donor-sizes']||null,
-      money:{history:part('campaign-history'),pacs:part('pac-history'),efile:part('pac-efile'),states:part('donor-states'),jfc:part('joint-fundraising')},
+      money:{history:part('campaign-history'),pacs:part('pac-history'),efile:part('pac-efile'),states:part('donor-states'),jfc:part('joint-fundraising'),industry:part('industry-gifts')},
       trades:{rows:official,covered:!why,why,checkedAt:sec?.checkedAt||null}};
   },
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},
