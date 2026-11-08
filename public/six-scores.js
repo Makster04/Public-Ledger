@@ -203,7 +203,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
     {key:'donor',label:'Donor',points:round1(donor),note:donorNote},
     {key:'pac',label:'PAC',points:pac==null?null:-round1(pac),note:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
-    {key:'earmarks',label:'Earmarks',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: 5 groups collected so far)'}`},
+    {key:'earmarks',label:'Earmarks',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: not every group searched for yet)'}`},
     {key:'stocks',label:'Stocks',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
     {key:'trades',label:'Trades',points:tradePts==null?null:-round1(tradePts),note:traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
     {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},

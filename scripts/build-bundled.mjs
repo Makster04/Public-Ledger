@@ -15,12 +15,14 @@
 // disbursements read the same way (maybeConduits). Each cycle from historyFrom on is kept (byCycle), for the Unbought
 // tab's earlier periods; "routed" stays the current cycle's.
 //
-// Writes research.json "bundled": {asOf, conduits: {group: [committee ID]}, names: {"fec:C…": name}, discovered, cycles,
+// Writes research.json "bundled": {asOf, conduits: {group: [committee ID]}, names: {"fec:C…": name}, listed: {person: true
+// when searched completely}, discovered (everyone was), cycles,
 // people: {person: {group or "fec:C…": {routed, n, direct, byMonth, cycles, byCycle: {cycle: {routed, n}}, src}}}};
 // scripts/build-funders.mjs adds "routed" to each person's funders from it. Rerun build-funders after.
 //   npm run funders:bundled                     look up and rewrite public/research.json
 //   npm run funders:bundled -- --check          list what it found, without writing
 //   npm run funders:bundled -- --only ossoff    just these people (the others keep what's saved)
+//   npm run funders:bundled -- --mark-complete-except a,b   one time, for a file saved before "listed" was kept
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {requestSource,fecNext} from '../src/sources.mjs';
@@ -61,6 +63,21 @@ const people=data=>[...(data.members||[]),...(data.cands||[]),...(data.featured|
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const env=process.env;
+  // One time, for a file saved before each person's completeness was kept: every person with a campaign committee
+  // except these is marked complete (the run's own list of failed reads names the ones to leave out), with no FEC
+  // requests. Then run --only for the ones left out.
+  if(process.argv.includes('--mark-complete-except')){
+    const file=new URL('../public/research.json',import.meta.url),data=JSON.parse(await fs.readFile(file,'utf8'));
+    const skip=(process.argv[process.argv.indexOf('--mark-complete-except')+1]||'').split(',').map(x=>x.trim()).filter(Boolean);
+    if(!data.bundled?.names){console.log('The saved earmarks are from before every group was searched for; run npm run funders:bundled first.');process.exit(1);}
+    const all=people(data).filter(p=>p.fecCmte).map(p=>p.id),unknown=skip.filter(id=>!all.includes(id));
+    if(unknown.length){console.log(`No one with a campaign committee has the id ${unknown.join(', ')}; nothing changed.`);process.exit(1);}
+    data.bundled.listed=Object.fromEntries(all.filter(id=>!skip.includes(id)).map(id=>[id,true]));
+    data.bundled.discovered=all.every(id=>data.bundled.listed[id]);
+    await fs.writeFile(file,JSON.stringify(data,null,2));
+    console.log(`Marked ${Object.keys(data.bundled.listed).length} of ${all.length} complete.${skip.length?` Now run: npm run funders:bundled -- --only ${skip.join(',')}`:''}`);
+    process.exit(0);
+  }
   if(!env.FEC_API_KEY){console.error('Set FEC_API_KEY in .dev.vars first (see README, "Connect official data sources").');process.exit(1);}
   const file=new URL('../public/research.json',import.meta.url),data=JSON.parse(await fs.readFile(file,'utf8'));
   const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
@@ -76,16 +93,20 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const readAll=async(url,max=80)=>{const rows=[];for(let page=0;url&&page<max;page++){const d=await get(url);rows.push(...(d.results||[]));url=fecNext(url,d);}return rows;};
   const before=data.bundled?.people||{},kept=[],names={...(data.bundled?.names||{})};
   const groups=(data.groupPos||[]).filter(g=>g.conduits?.length),known=new Set(groups.flatMap(g=>g.conduits)),out={};
-  let listFailed=0,listed=0;
+  // Who was searched completely (every cycle's list of who gave read, and every group's gifts read): their Earmarks
+  // part isn't marked partial. A run with --only keeps everyone else's as it was.
+  const complete={...(data.bundled?.listed||{})},incomplete=[];
+  let listed=0;
   for(const p of people(data)){
     if(!p.fecCmte)continue;
     if(only&&!only.includes(p.id)){if(before[p.id])out[p.id]=before[p.id];continue;}
+    const failedBefore=kept.length;
     const cycles=cyclesOf(p).length?cyclesOf(p):[current];
     // First, who sent the campaign money in each cycle (null when that list couldn't be read).
     const gave={};
     for(const cycle of allCycles){
       try{gave[cycle]=givers(await readAll(recipientURL(p.fecCmte,cycle),5));listed++;}
-      catch(e){gave[cycle]=null;listFailed++;kept.push(`${p.id} · the committees that gave in ${cycle}: ${e.message}`);}
+      catch(e){gave[cycle]=null;kept.push(`${p.id} · the committees that gave in ${cycle}: ${e.message}`);}
     }
     // A committee's disbursements to the campaign are read for a cycle it gave in (every cycle when that list is
     // missing; the 5 groups always in the current cycle, as before).
@@ -113,19 +134,21 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       try{const r=await read([cmte],false);if(r){(out[p.id]||={})[key]=r;names[key]=name||cmte;}}
       catch(e){const prev=before[p.id]?.[key];kept.push(`${p.id} · ${name||cmte}: ${e.message}`);if(prev)(out[p.id]||={})[key]=prev;}
     }
+    if(kept.length===failedBefore)complete[p.id]=true;else{delete complete[p.id];incomplete.push(p.id);}
     const mine=out[p.id];if(mine)console.log(`${p.id}: ${Object.entries(mine).map(([k,v])=>`${names[k]||k} $${Math.round(v.routed).toLocaleString()} this cycle (${Object.keys(v.byCycle||{}).length} cycle${Object.keys(v.byCycle||{}).length===1?'':'s'})`).join(', ')}`);
   }
   // A check against the one total researched by hand (Booker through AIPAC's PAC, from Sludge's reading of the filings).
   const hand=people(data).find(p=>p.id==='booker')?.conduit?.rows?.find(r=>r.id==='C00797670');
   if(hand)console.log(`\nCheck: Booker through AIPAC PAC, researched by hand $${hand.amount.toLocaleString()} for ${hand.period}; found $${Math.round(out.booker?.aipac?.routed||0).toLocaleString()} for the whole cycle.`);
   if(kept.length)console.log(`\n${kept.length} read${kept.length===1?'':'s'} failed after three tries:\n  ${kept.slice(0,40).join('\n  ')}${kept.length>40?`\n  …and ${kept.length-40} more`:''}\nRun it again later to fill them in.`);
-  // Every group counts as found only when the FEC's totals by recipient were read for everyone.
-  const discovered=listed>0&&listFailed===0;
+  if(incomplete.length)console.log(`\nNot searched completely, so their Earmarks part stays marked partial: ${incomplete.join(', ')}.\nTo finish them: npm run funders:bundled -- --only ${incomplete.join(',')}`);
+  // Every group counts as found for everyone only when everyone with a campaign committee was searched completely.
+  const discovered=people(data).filter(p=>p.fecCmte).every(p=>complete[p.id]);
   if(!listed)console.log('\nThe FEC\'s totals by recipient couldn\'t be read, so only the 5 groups were read; the Earmarks part stays marked partial.');
   console.log(`\n${requests.toLocaleString()} FEC requests.`);
   if(!process.argv.includes('--check')){
     data.bundled={asOf:new Date().toISOString().slice(0,10),conduits:Object.fromEntries(groups.map(g=>[g.key,g.conduits])),names,
-      discovered:only?!!data.bundled?.discovered:discovered,cycles:allCycles,people:out};
+      discovered,listed:complete,cycles:allCycles,people:out};
     await fs.writeFile(file,JSON.stringify(data,null,2));
     console.log('\nWrote "bundled" to public/research.json. Now run node scripts/build-funders.mjs, review the changes, and commit.');
   }

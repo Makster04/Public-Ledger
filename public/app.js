@@ -976,13 +976,15 @@ function unboughtPast(s,d){
   for(const [group,r] of Object.entries(DATA.bundled?.people?.[s.id]||{}))for(const [cy,c] of Object.entries(r.byCycle||{}))(earmarks[cy]||=[]).push({group,amount:c.routed});
   return {camp,sizes:d?.sizes?.cycles||{},pacs:m.pacs?.cycles||{},jfc,earmarks};
 }
+// Whether every committee forwarding gifts to their campaign was searched for (scripts/build-bundled.mjs).
+const earmarksSearched=s=>!!(DATA.bundled?.listed?.[s.id]||DATA.bundled?.discovered);
 const pacKindOf=cid=>{const c=(DATA.pacCommittees||{})[cid];return c?pacKind(c):null;};
 // The Unbought result for a period: 'this' (the current cycle, as the grade is shown everywhere) or a span of cycles.
 function unboughtFor(s,inputs,d,period){
   const current=curCycle(s),m=d?.money||{};
   const curPacs=inputs.pacRows.length?inputs.pacRows:(m.pacs?.cycles?.[current]?.committees||[]).map(c=>({kind:c.kind||pacKindOf(c.cid),amount:c.amount})).filter(r=>r.kind);
   const curJfc=m.jfc?.cycles?.[current]&&!m.jfc.cycles[current].partial?m.jfc.cycles[current]:null;
-  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:!!DATA.bundled?.discovered};
+  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:earmarksSearched(s)};
   const past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
   if(cycles.length===1&&cycles[0]===current)return unbought(s,{...common,pacRows:curPacs,earmarks:inputs.earmarks,sizes:d?.sizes||null,jfc:curJfc});
   const label=periodLabel(period,current);
@@ -1045,7 +1047,7 @@ function paneUnbought(s,pane){
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
-    notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],DATA.bundled?.discovered?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.','Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
+    notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
     evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}<div id="u-fec"></div>${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
