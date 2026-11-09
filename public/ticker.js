@@ -1,11 +1,11 @@
 // The ticker under the top bar: the latest updates the site keeps, newest first, each with a tag, its date when known and
 // a link. Everything comes from records the site already has: race calls and counts (research.json "races", dated by
-// the election results' "asof"), rule changes and site updates (score-presentation-log.json), the interest-group ratings
+// the election results' "asof"), site updates (score-presentation-log.json; not rule changes), the interest-group ratings
 // (group-ratings.json "checked") and, from the refresh, newly reported stock trades and annual disclosures
 // (/api/ticker). Each kind is shown for a set number of days, so the strip never runs stale; with nothing recent, it
 // isn't shown at all. It scrolls slowly, stops while it's hovered or focused, and stands still for visitors whose device
 // asks for reduced motion.
-export const TICKER={limit:14,days:{race:45,trade:14,filing:30,rule:30,ratings:30},liveEvery:300000};
+export const TICKER={limit:14,days:{race:45,trade:14,filing:30,site:30,ratings:30},liveEvery:300000};
 const DAY=864e5;
 const t=d=>Date.parse(String(d||'').slice(0,10)+'T12:00:00Z');
 const recent=(date,days,now)=>{const x=t(date);return Number.isFinite(x)&&x<=now+DAY&&now-x<=days*DAY;};
@@ -37,11 +37,11 @@ export function raceItems(research,{now=Date.now(),people}={}){
   }
   return out;
 }
-// Rule changes and site updates: the presentation log's entries that carry a headline (one picked for the ticker; older
-// entries, about grades since replaced, have none), within a month.
-export function ruleItems(entries,{now=Date.now()}={}){
-  return (entries||[]).filter(e=>e?.headline&&recent(e.date,TICKER.days.rule,now)).map((e,i)=>({key:`log:${e.date}:${i}`,
-    kind:/^Rule change/i.test(e.note||'')?'rule':'site',tag:/^Rule change/i.test(e.note||'')?'Rule change':'Site update',date:e.date,order:3,href:'#method',parts:[e.headline]}));
+// Site updates: the presentation log's entries that carry a headline (one picked for the ticker; older entries, about
+// grades since replaced, have none), within a month. Rule changes stay in the log and on the methodology page only.
+export function siteItems(entries,{now=Date.now()}={}){
+  return (entries||[]).filter(e=>e?.headline&&!/^Rule change/i.test(e.note||'')&&recent(e.date,TICKER.days.site,now)).map((e,i)=>({key:`log:${e.date}:${i}`,
+    kind:'site',tag:'Site update',date:e.date,order:3,href:'#method',parts:[e.headline]}));
 }
 // The interest-group ratings: how many groups were read and how many profiles they rate.
 export function ratingItems(ratings,{now=Date.now()}={}){
@@ -67,7 +67,7 @@ export function liveItems(live,{now=Date.now(),people}={}){
 }
 // Everything, newest first (ties: still counting, then the closest races, then the rest), at most `limit`.
 export function tickerItems({research,log,ratings,live,people},{now=Date.now(),limit=TICKER.limit}={}){
-  const all=[...raceItems(research,{now,people}),...liveItems(live,{now,people}),...ratingItems(ratings,{now}),...ruleItems(log,{now})];
+  const all=[...raceItems(research,{now,people}),...liveItems(live,{now,people}),...ratingItems(ratings,{now}),...siteItems(log,{now})];
   const seen=new Set();
   return all.filter(x=>!seen.has(x.key)&&seen.add(x.key)).sort((a,b)=>(t(b.date)||0)-(t(a.date)||0)||a.order-b.order).slice(0,limit);
 }

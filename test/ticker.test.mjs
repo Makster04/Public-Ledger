@@ -6,7 +6,7 @@ import research from '../public/research.json' with {type:'json'};
 import log from '../public/score-presentation-log.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 import senate from '../public/senate.json' with {type:'json'};
-import {TICKER,raceItems,ruleItems,ratingItems,liveItems,tickerItems,tickerHTML,shortDate,mountTicker} from '../public/ticker.js';
+import {TICKER,raceItems,siteItems,ratingItems,liveItems,tickerItems,tickerHTML,shortDate,mountTicker} from '../public/ticker.js';
 import {tickerRecent,tickerMerge,TICKER_KINDS} from '../src/refresh.mjs';
 
 const people=new Map();for(const p of [...house.members,...senate.senators,...research.cands,...research.members])people.set(p.id,p);
@@ -23,11 +23,12 @@ test('races: each call and count from the election results, for a while after th
   assert.deepEqual(raceItems(research,{now:Date.parse('2027-01-15'),people}),[],'gone once the election is weeks past');
 });
 
-test('rule changes and site updates: the log\'s entries that carry a headline, within a month',()=>{
-  const items=ruleItems(log.entries,{now:NOV9});
+test('site updates: the log\'s entries that carry a headline, within a month; rule changes are left out',()=>{
+  const items=siteItems(log.entries,{now:NOV9});
   assert.ok(items.every(x=>Date.parse(x.date)>=NOV9-31*864e5));
-  assert.ok(items.some(x=>x.tag==='Rule change'&&text(x)==='Six scores replace Your Match, Integrity and People First on every profile'));
-  assert.ok(items.some(x=>x.tag==='Site update'&&text(x)==='Interest-group ratings are shown as letter grades'),'a display change is a site update');
+  assert.deepEqual(items.map(x=>[x.tag,text(x)]),[['Site update','Interest-group ratings are shown as letter grades']]);
+  const rule={date:'2026-11-08',headline:'A rule',note:'Rule change: something'};
+  assert.deepEqual(siteItems([rule],{now:NOV9}),[],'a rule change isn\'t shown, even with a headline');
   assert.ok(!items.some(x=>/Workers > Profit/.test(text(x))),'only entries with a headline: not the notes about grades since replaced');
   assert.ok(!items.some(x=>/ticker/i.test(text(x))),'the ticker doesn\'t announce itself');
 });
@@ -57,7 +58,7 @@ test('all of it, newest first, still counting ahead of the calls of the same day
 });
 
 test('the strip: escaped text, the loop\'s second copy hidden from screen readers and the keyboard; nothing to show, nothing drawn',()=>{
-  const items=[{key:'a',kind:'rule',tag:'Rule change',date:'2026-11-08',order:3,href:'#method',parts:['<script>x</script> & more']},{key:'b',kind:'call',tag:'Race called',date:'2026-11-04',order:1,href:'#ossoff',parts:['Georgia: ',{name:'Ossoff',party:'D'},' wins']}];
+  const items=[{key:'a',kind:'site',tag:'Site update',date:'2026-11-08',order:3,href:'#method',parts:['<script>x</script> & more']},{key:'b',kind:'call',tag:'Race called',date:'2026-11-04',order:1,href:'#ossoff',parts:['Georgia: ',{name:'Ossoff',party:'D'},' wins']}];
   const html=tickerHTML(items);
   assert.ok(!html.includes('<script>')&&html.includes('&lt;script&gt;x&lt;/script&gt; &amp; more'));
   assert.match(html,/<b class="tk-d">Ossoff \(D\)<\/b>/);

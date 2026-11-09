@@ -1093,7 +1093,6 @@ input, select { accent-color: var(--accent); }
 .tk-warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 50%, transparent); background: var(--warn-soft); }
 .tk-new { color: var(--dem); border-color: color-mix(in srgb, var(--dem) 45%, transparent); background: var(--dem-soft); }
 .tk-site { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); background: var(--good-soft); }
-.tk-rule { color: var(--muted); border-color: var(--line-2); background: transparent; }
 .tk-trade, .tk-filing { color: var(--serious); border-color: color-mix(in srgb, var(--serious) 45%, transparent); background: var(--serious-soft); }
 .tk-date { font-family: var(--font-mono); font-size: .74rem; color: var(--muted); }
 .tk-d { color: var(--dem); font-weight: 600; } .tk-r { color: var(--rep); font-weight: 600; } .tk-i { color: var(--ink); font-weight: 600; }
