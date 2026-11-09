@@ -5,10 +5,11 @@
 // About 15 requests in all. Every key in .dev.vars is replaced by [key] in what is printed. Run it while the refresh is
 // stopped, or an hour after other FEC scripts, so the FEC's hourly limit isn't the answer.
 //   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda|bargo)
+// 5. Bargo (--only bargo): what it lists for the Senate, and senators searched as the refresh searches them.
 import fs from 'node:fs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {HOSTS} from '../src/sources.mjs';
-import {billsInText} from '../src/feeds.mjs';
+import {billsInText,bargoKeeps,surname,firstName} from '../src/feeds.mjs';
 
 const env=process.env,root=new URL('../',import.meta.url);
 const config=JSON.parse(fs.readFileSync(new URL('data/config.json',root),'utf8'));
@@ -37,6 +38,27 @@ async function ask(label,url,{as='json'}={}){
     console.log(`\n• ${label}\n  ${shown}\n  → HTTP ${r.status}${r.ok?'':`: ${redact(text.replace(/\s+/g,' ')).slice(0,700)}`}`);
     return {status:r.status,json};
   }catch(e){console.log(`\n• ${label}\n  ${shown}\n  → no reply (${e.name}${e.cause?.code?` ${e.cause.code}`:''})`);return {status:0,json:null};}
+}
+
+// Bargo's replies, described: how many trades, anything else it sent, the fields of a trade, the dates covered, how the
+// chamber is written, who is listed (with their state as written), and how many profiled senators the refresh would find.
+export const bargoTrades=j=>Array.isArray(j?.trades)?j.trades:[];
+const nameArgs=p=>({last:surname(p),first:firstName(p),state:p.state});
+const tradeLine=t=>`member "${t.member}", state "${t.state}", chamber "${t.chamber??''}", traded ${t.transaction_date}, disclosed ${t.disclosure_date}, ${t.ticker||t.asset}`;
+export function bargoLines(j,senators=[]){
+  if(!j||typeof j!=='object')return ['  No JSON in the reply.'];
+  const trades=bargoTrades(j),other=Object.entries(j).filter(([k])=>k!=='trades').map(([k,v])=>`${k}: ${v&&typeof v==='object'?JSON.stringify(v).slice(0,160):v}`);
+  const out=[`  ${trades.length} trades${Array.isArray(j.trades)?'':' (no "trades" list in the reply)'}${other.length?`; also in the reply: ${other.join(', ')}`:''}`];
+  if(!trades.length)return out;
+  const span=k=>{const d=trades.map(t=>String(t[k]||'').slice(0,10)).filter(Boolean).sort();return d.length?`${d[0]} to ${d.at(-1)}`:'none given';};
+  const tally=f=>{const m=new Map();for(const t of trades){const k=f(t);m.set(k,(m.get(k)||0)+1);}return [...m].sort((a,b)=>b[1]-a[1]);};
+  const who=tally(t=>`${t.member} (${t.state??'no state'})`);
+  out.push(`  fields of a trade: ${Object.keys(trades[0]).join(', ')}`,`  traded ${span('transaction_date')}; disclosed ${span('disclosure_date')}`,
+    `  chamber written as: ${tally(t=>JSON.stringify(t.chamber??null)).map(([k,n])=>`${k} ×${n}`).join(', ')}`,
+    `  ${who.length} members: ${who.slice(0,15).map(([k,n])=>`${k} ×${n}`).join('; ')}${who.length>15?' …':''}`);
+  if(senators.length){const m=senators.filter(p=>trades.some(t=>bargoKeeps(t,nameArgs(p))));
+    out.push(`  profiled senators the refresh's name and state check finds here: ${m.length}${m.length?` (${m.slice(0,10).map(p=>p.name).join(', ')}${m.length>10?' …':''})`:''}`);}
+  return out;
 }
 
 const argPerson=process.argv.includes('--person')?process.argv[process.argv.indexOf('--person')+1]:null;
@@ -108,19 +130,32 @@ async function main(){
 
   }
   if(part('bargo')){
-  // 5. Bargo for senators' trades: what it returns for a last name, and how many trades the refresh's name and state
-  // check keeps (src/feeds.mjs trades-bargo).
-  const senators=['marshall','sullivan','collins'].map(person).filter(Boolean);
-  for(const p of senators){
-    const last=p.name.replace(/,?\s+(Jr\.?|Sr\.?|II|III|IV)$/i,'').trim().split(/\s+/).pop(),first=p.name.split(/\s+/)[0];
-    console.log(`\n=== 5. Bargo trades for ${p.name} (${p.state})`);
-    const r=await ask(`Search Bargo for "${last}" in the Senate`,`https://www.bargo.ai/free-apis/congress/v1/trades?member=${encodeURIComponent(last)}&chamber=senate&limit=250&page=0`);
-    const trades=Array.isArray(r.json?.trades)?r.json.trades:[];
-    const fold=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z]/g,'');
-    const kept=trades.filter(t=>fold(t.member).includes(fold(last))&&fold(t.member).includes(fold(first).slice(0,3))&&String(t.state||'').toUpperCase().startsWith(p.state));
+  // 5. Bargo for senators' trades. First what it has for the Senate with no name given (who, written how, and the dates
+  // it covers) and with no chamber either; then senators searched by last name as the refresh does (src/feeds.mjs
+  // trades-bargo): one it listed, if any, so a search that comes back empty is the search's doing, then Marshall, Sullivan
+  // and Collins. A search that finds nothing is tried again by full name and without the chamber. At most 14 requests
+  // (its free plan allows 100 a day).
+  const B='https://www.bargo.ai/free-apis/congress/v1/trades',senators=config.people.filter(p=>p.chamber==='S'&&p.inOffice);
+  console.log('\n=== 5a. Bargo: the Senate trades it has, no name given');
+  const all=await ask('Senate trades, no member',`${B}?chamber=senate&limit=250&page=0`);
+  for(const l of bargoLines(all.json,senators))console.log(l);
+  console.log('\n=== 5b. Bargo: trades from either chamber, no name given');
+  const any=await ask('Trades, no chamber or member',`${B}?limit=100&page=0`);
+  for(const l of bargoLines(any.json,senators))console.log(l);
+  const listed=senators.find(p=>bargoTrades(all.json).some(t=>bargoKeeps(t,nameArgs(p))));
+  for(const p of [...new Set([listed,...['marshall','sullivan','collins'].map(person)])].filter(Boolean)){
+    const a=nameArgs(p);
+    console.log(`\n=== 5c. Bargo trades for ${p.name} (${p.state})${p===listed?', one it listed in 5a':''}`);
+    const r=await ask(`Search for "${a.last}" in the Senate, as the refresh does`,`${B}?member=${encodeURIComponent(a.last)}&chamber=senate&limit=250&page=0`);
+    const trades=bargoTrades(r.json),kept=trades.filter(t=>bargoKeeps(t,a));
     console.log(`  ${trades.length} trades returned; ${kept.length} kept by the name and state check.`);
-    for(const t of trades.slice(0,3))console.log(`  - member "${t.member}", state "${t.state}", traded ${t.transaction_date}, disclosed ${t.disclosure_date}, ${t.ticker||t.asset}`);
+    for(const t of trades.slice(0,3))console.log(`  - ${tradeLine(t)}`);
     if(trades.length&&!kept.length)console.log('  (None kept: the name or state above is written differently from what the refresh expects.)');
+    if(trades.length)continue;
+    const full=`${a.first} ${a.last}`,r2=await ask(`Search for "${full}" in the Senate`,`${B}?member=${encodeURIComponent(full)}&chamber=senate&limit=250&page=0`);
+    console.log(`  ${bargoTrades(r2.json).length} trades returned.`);
+    const r3=await ask(`Search for "${a.last}" in either chamber`,`${B}?member=${encodeURIComponent(a.last)}&limit=250&page=0`),t3=bargoTrades(r3.json);
+    console.log(`  ${t3.length} trades returned${t3.length?`: ${[...new Set(t3.map(t=>`${t.member} (${t.chamber??'no chamber'}, ${t.state??'no state'})`))].slice(0,5).join('; ')}`:''}.`);
   }
   }
   console.log('\nDone. Copy everything above and send it; no keys are in it.');

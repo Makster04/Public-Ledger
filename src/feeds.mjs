@@ -21,8 +21,10 @@ const daysAgo=n=>new Date(Date.now()-n*DAY).toISOString().slice(0,10);
 const fold=v=>String(v||'').normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase();
 // SAM.gov answers are kept 30 days, by organization name (case and punctuation aside); see the sam source.
 const SAM_FRESH=30*DAY,samKey=org=>fold(org).replace(/[^a-z0-9]/g,'');
-const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/).at(-1);
-const firstName=p=>p.name.split(/\s+/)[0];
+export const surname=p=>p.name.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/).at(-1);
+export const firstName=p=>p.name.split(/\s+/)[0];
+// A Bargo trade is the member's when it names their last name and the start of their first name, in their state.
+export const bargoKeeps=(t,a)=>fold(t.member).includes(fold(a.last))&&fold(t.member).includes(fold(a.first).slice(0,3))&&String(t.state||'').toUpperCase().startsWith(a.state);
 // The person's full name appears in the text (first name or a listed nickname, and surname).
 export const namesPerson=(text,p)=>{const t=fold(text);return t.includes(fold(surname(p)))&&[firstName(p),...(p.nicknames||[])].some(f=>t.includes(fold(f)));};
 // First names written either way on official lists (the House disclosure index uses legal names: Michael, not Mike),
@@ -646,7 +648,7 @@ export const FEEDS={
       const page=Number(job.cursor||0);
       const d=await requestSource(`https://www.bargo.ai/free-apis/congress/v1/trades?member=${encodeURIComponent(a.last)}&chamber=${a.chamber==='S'?'senate':'house'}&limit=250&page=${page}`,env);
       need(Array.isArray(d.trades),'Bargo trades missing');
-      const rows=d.trades.filter(t=>fold(t.member).includes(fold(a.last))&&fold(t.member).includes(fold(a.first).slice(0,3))&&String(t.state||'').toUpperCase().startsWith(a.state))
+      const rows=d.trades.filter(t=>bargoKeeps(t,a))
         .map(t=>trade('Bargo',{traded:t.transaction_date,disclosed:t.disclosure_date,ticker:t.ticker,asset:t.asset,type:t.type,low:t.amount_low,high:t.amount_high,amount:t.amount_range,owner:null,link:t.filing_portal}));
       return {rows:numberTrades(rows),next:d.trades.length===250&&page<4?String(page+1):null};
     },
