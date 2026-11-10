@@ -1,4 +1,4 @@
-// Each person's three reviewed grades (Promises delivered, Ethics, People First) from the reviewed research, the
+// Each person's grades from the reviewed research (the six scores, and the retired Promises delivered, Ethics and People First), the
 // committee lists, the committee sectors and the roll calls' party totals. The page and the monthly recalculation (scripts/scores-monthly.mjs) both
 // use this, so they always agree. Your match is not here: it depends on each visitor's own choices.
 import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore,ownTrades,corporationCompromised,workersOverProfit} from './grades.js';
@@ -95,3 +95,23 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     reviewedTrades:s=>reviewedTrades(s),
   };
 }
+
+// ---------- Who is graded, and with what (shared with the monthly recalculation) ----------
+// A basic profile: a senator or House member (public/senate.json, public/house.json) without a reviewed one. It has no
+// reviewed statements, cases or bills, so those grades wait; the page also adds their issue evidence and their place on
+// the Voteview scale, which only Ideology uses.
+export const markBasic=x=>Object.assign(x,{basic:true,statements:[],ethics:[],bills:[]});
+// Everyone the site grades, each once: the reviewed profiles, the featured ones (the president), then a basic profile for
+// each senator and House member without a reviewed one. senate: senate.json "senators"; house: house.json "members".
+export function gradedPeople(data,{senate=[],house=[]}={}){
+  const reviewed=[...(data.members||[]),...(data.cands||[]),...(data.featured||[])],have=new Set(reviewed.map(s=>s.id));
+  const basic=[...senate.map(x=>({...x,chamber:'S'})),...house.map(x=>({...x,chamber:'H'}))].filter(x=>!have.has(x.id)&&have.add(x.id)).map(markBasic);
+  return [...reviewed,...basic];
+}
+// What the six scores read besides the profile, from the files the page loads (public/boot.js): attendance.json,
+// get-it-done.json, conflicts.json and group-ratings.json.
+export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null});
+// The grades the monthly change log records: those that come from the site's own files alone, so they're the same on
+// every page that shows them. Unbought, and Above Board once a profile has read the refresh's trade records, also use
+// the refresh's saved records, so the log leaves them out for now.
+export const LOGGED_GRADES=['word','showsup','peoplefirst'];
