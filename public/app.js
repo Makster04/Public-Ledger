@@ -5,7 +5,7 @@ import {mountLegislation} from './legislation.js';
 import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
-import {makeScorer,voteBill} from './scoring.js';
+import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
@@ -51,7 +51,7 @@ function basicEvidence(x){
   for(const c of CODED){const p=pos.get(c.ref);if(p!=='Yea'&&p!=='Nay')continue;(ev[c.issue]||=[]).push({...c,pos:p,side:p==='Yea'?c.yea:c.yea==='A'?'B':'A'});}
   return ev;
 }
-const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,Object.assign(x,{basic:true,evidence:basicEvidence(x),statements:[],ethics:[],bills:[]})]));
+const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,Object.assign(markBasic(x),{evidence:basicEvidence(x)})]));
 const BASIC_LIST=Object.values(BASIC);
 // One ID per bill ("117-hr-1319"), so a vote and a sponsorship on the same bill count once.
 const VOTE_BY_ID=new Map(DATA.votes.concat(DATA.hvotes).map(v=>[v.id,v]));
@@ -518,10 +518,10 @@ function gradeTile(label,pct,detail,tip,extra='',href='',emptyLabel='Not graded'
 function integritySnapshot(s){const entry=window.INTEGRITYLOG?.at(-1),record=entry?.scores?.[s.id]?.integrity;return {pct:Number.isFinite(record?.pct)?record.pct:null,entry,record};}
 // With links, each tile opens that grade's tab on the profile (not on the home cards, which are links themselves).
 function reportCard(s,links){return sixTiles(s,links);}
-// Promises, Ethics and People First are recalculated monthly after review (public/score-log.json). The tab says
-// when, and marks a grade that reviewed edits have changed since; the next monthly run logs it.
+// For the retired grades' own tabs, which old links no longer open (they land on the six-score tabs): when the monthly
+// log last recorded the grade (public/score-log.json), and a mark when reviewed edits have changed it since.
 function monthlyNote(s,key,pct){
-  const last=(window.SCORELOG||[]).at(-1);if(!last)return '';
+  const last=(window.SCORELOG||[]).filter(e=>Object.values(e.scores||{}).some(v=>v?.[key])).at(-1);if(!last)return '';
   const was=last.scores[s.id]?.[key];
   return `<p class="small muted gh-mo">Recalculated monthly; last on ${fmtDate(last.date)}.${was&&was.pct!==pct?` <b>Changed since then</b> (was ${was.pct==null?'not graded':was.pct+'%'}): the next monthly recalculation will log why.`:''} <a href="#method-log">Change log</a></p>`;
 }
@@ -759,7 +759,8 @@ function sectionSwitch(s,items,active){
 // ---------- The six score tabs (Scores/06_SIX_GRADES_PROPOSAL.md) ----------
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
-const SIX_CTX={attendance:window.ATTENDANCE||null,getItDone:window.GET_IT_DONE||null,conflicts:window.CONFLICTS||null,ratings:window.GROUP_RATINGS?.people||null};
+// The same context the monthly recalculation scores with (public/scoring.js sixContext).
+const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS});
 const GROUP_RATINGS=window.GROUP_RATINGS||{groups:{},people:{}};
 const sixCache=new Map();
 const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(s,SIX_CTX));return sixCache.get(s.id);};
@@ -2591,7 +2592,7 @@ function paneIntegrity(s,pane){
   loadIntegrityPreview(s,pane,personPvp(s));
 }
 function historicalIntegrityGrades(s){
-  const entries=(window.SCORELOG||[]).filter(e=>e.scores?.[s.id]).slice().reverse();
+  const entries=(window.SCORELOG||[]).filter(e=>e.formula!=='six'&&e.scores?.[s.id]).slice().reverse();
   if(!entries.length)return '<p class="small muted">No historical published grades recorded for this profile.</p>';
   return `<details><summary>Ethics and Promises Delivered history (${entries.length} monthly records)</summary><p class="small">Preserved published values; not recalculated or averaged into Integrity.</p><div class="tablewrap"><table><thead><tr><th>Date</th><th>Promises Delivered</th><th>Ethics</th></tr></thead><tbody>${entries.map(e=>{const v=e.scores[s.id],p=v.promises?.pct??null,eth=v.ethics?.pct??null;return `<tr><td>${fmtDate(e.date)}</td><td>${p==null?'Not graded':`${letter(p)} ${p}%`}</td><td>${eth==null?'Not graded':`${letter(eth)} ${eth}%`}</td></tr>`}).join('')}</tbody></table></div></details>`;
 }
@@ -3367,8 +3368,8 @@ function scoresIdeology(host){
 function methodLog(){
   const migrations=(window.SCOREMIGRATIONS||[]).map(e=>`<div class="note"><b>Presentation migration · ${fmtDate(e.date)}</b><p>${esc(e.note)}</p></div>`).join('');
   const L=(window.SCORELOG||[]).slice(-3).reverse();if(!L.length)return migrations+'<p class="small muted">No monthly recalculation has been recorded yet.</p>';
-  const G={promises:'Promises delivered',ethics:'Ethics',pvp:'People First',all:'All grades'},pc=v=>v==null?'Not graded':v+'%';
-  return migrations+L.map(e=>`<div class="chart"><h3>${fmtDate(e.date)}</h3><div class="sub">Research reviewed ${esc(e.reviewedAt)} · ${esc(e.note||'')}</div>${e.changes.length?`<div class="tablewrap"><table><thead><tr><th>Person</th><th>Grade</th><th>From</th><th>To</th><th>Why</th></tr></thead><tbody>${e.changes.slice(0,60).map(c=>`<tr><td>${byId[c.id]?`<a href="#${c.id}">${esc(byId[c.id].name)}</a>`:esc(c.id)}</td><td>${G[c.grade]||esc(c.grade)}</td><td>${c.from===undefined?'—':pc(c.from)}</td><td>${pc(c.to)}</td><td class="small">${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>${e.changes.length>60?`<p class="small muted">and ${e.changes.length-60} more in the log file.</p>`:''}`:'<p class="small muted">No grade changed.</p>'}</div>`).join('');
+  const G={word:'Keeps Their Word',showsup:'Shows Up',peoplefirst:'People First',promises:'Promises delivered (retired)',ethics:'Ethics (retired)',pvp:'People First (earlier formula)',all:'All grades'},pc=v=>v==null?'Not graded':v+'%';
+  return migrations+L.map(e=>`<div class="chart"><h3>${fmtDate(e.date)}</h3><div class="sub">Research reviewed ${esc(e.reviewedAt)} · ${esc(e.note||'')}${e.formula==='six'?'':' <b>Retired grades:</b> Promises delivered, Ethics and the earlier People First formula, kept as they were logged.'}</div>${e.changes.length?`<div class="tablewrap"><table><thead><tr><th>Person</th><th>Grade</th><th>From</th><th>To</th><th>Why</th></tr></thead><tbody>${e.changes.slice(0,60).map(c=>`<tr><td>${byId[c.id]?`<a href="#${c.id}">${esc(byId[c.id].name)}</a>`:esc(c.id)}</td><td>${G[c.grade]||esc(c.grade)}</td><td>${c.from===undefined?'—':pc(c.from)}</td><td>${pc(c.to)}</td><td class="small">${esc(c.why)}</td></tr>`).join('')}</tbody></table></div>${e.changes.length>60?`<p class="small muted">and ${e.changes.length-60} more in the log file.</p>`:''}`:'<p class="small muted">No grade changed.</p>'}</div>`).join('');
 }
 function integrityPreviewLog(){
   const entries=(window.INTEGRITYLOG||[]).slice(-3).reverse();
@@ -3431,7 +3432,7 @@ function renderMethod(sub){
       <li><b>New charts:</b> an Ethics case timeline, trading charts, a People First diverging bar and a donor tree map.</li>
       <li><b>More official sources:</b> many now refresh automatically (listed under "What refreshes" below), each with its own free key. Every key that is set is used at once, and a record found in several sources shows once.</li>
       <li><b>Committees and IDs:</b> committee seats and each member's IDs come from congress-legislators. Senate votes now match senators by their official LIS ID, not surname and state.</li>
-      <li><b>Monthly recalculation:</b> Promises, Ethics and People First are recalculated each month after review, with a change log (below).</li>
+      <li><b>Monthly recalculation:</b> Promises, Ethics and People First were recalculated each month after review, with a change log (below). Since November 10, 2026 it logs Keeps Their Word, Shows Up and People First instead.</li>
       <li><b>Press releases, Bluesky and Threads:</b> members' press releases now come from their official websites, Bluesky accounts are checked at each person's official and campaign website domains, and Threads posts that mention an issue can be collected once Meta approves access. See "What refreshes" below.</li>
     </ul></details>
     <details class="tv"><summary>Earlier changes (October 3, 2026)</summary>
@@ -3643,10 +3644,10 @@ function renderMethod(sub){
     </ul>
     <h2 id="method-log">Monthly recalculation and change log</h2>
     <ul class="list">
-      <li><b>What is recalculated:</b> Promises delivered, Ethics and People First, once a month after the month's review.</li>
+      <li><b>What is recalculated:</b> Keeps Their Word, Shows Up and People First, for every reviewed profile and every senator's and House member's basic profile, once a month after the month's review. The log uses the same code and files as the profiles, so a logged grade is the one the profile shows.</li>
+      <li><b>Earlier entries:</b> before the six scores, the log recorded Promises delivered, Ethics and an earlier People First formula. Those entries are kept as they were and marked as retired grades.</li>
       <li><b>How:</b> <span class="mono">npm run scores:monthly</span> records every change, and why, in <span class="mono">public/score-log.json</span>.</li>
-      <li><b>Not logged:</b> Your match, since it depends on your own choices.</li>
-      <li><b>On each grade tab:</b> when it was last recalculated, and a note if reviewed edits have changed the grade since.</li>
+      <li><b>Not logged:</b> Unbought, and Above Board once a profile has read the refresh's trade records, since both also use the refresh's saved records; Ideology, which is a position, not a grade; and Your match, since it depends on your own choices.</li>
     </ul>
     ${methodLog()}
     <h2>Key votes marked liberal or conservative</h2>

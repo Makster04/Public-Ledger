@@ -547,7 +547,8 @@ Every tab follows the same order:
 - Donor Loyalty.
 
 **Score history:** past Integrity, Ethics and Promises Delivered values stay in `public/score-log.json`, and the change
-is logged as a rule change.
+is logged as a rule change. Since November 10, 2026 the monthly log records Keeps Their Word, Shows Up and People
+First for every reviewed and basic profile, with the page's own code; the earlier entries are marked as retired grades.
 
 **Dropped, as measures:**
 - **Integrity:** split up as above.
