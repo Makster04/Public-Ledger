@@ -240,6 +240,10 @@ Shown beside the grades, never inside them. It shows timing and alignment, not p
 
 Outside spending is shown as a plain number, not a grade: the politician cannot legally coordinate with those groups, and the amounts mostly reflect how competitive the race was. Outside spenders have no industry code, so their sector is assigned by this app from each committee's name (unions People-aligned, industry and corporate groups Profit-aligned, party, ideological and candidate-aligned groups Other), the same way PAC sectors are, and is under review.
 
+## Annual reports: income, positions, agreements, gifts and travel
+
+The refresh's annual-report reads (`net-worth-house` from the House Clerk's PDFs, `net-worth-senate` from Senate eFD, and the eFD import, `npm run efd:import`) also read, since November 11, 2026, the parts of each report Plays by the Rules' Outside Income & Conflicts and Gifts & Travel use (`src/schedules.mjs`): earned income (who paid, the type, the amounts), positions held outside government, agreements, gifts and travel paid by others. House reports: Schedules C, E, F, G and H, from the PDF's text, a line an item (a long name the PDF wrapped joins its line); the newest report also keeps each schedule's text as read (`schedules.raw`, cut at 1,500 characters) so the reader can be checked against the form. Senate eFD: the report page's tables, found by their column headings. Each report on file is read once more for these parts (`FEEDS_VERSION` 6), then not again. They're on the Plays by the Rules tab ("From their latest annual report, read automatically"), shown only: whether an organization on them has business before their committees isn't checked yet, so none of it counts in the grade yet.
+
 ## Trackers
 
 Five lobbies whose money to each campaign is followed, in `public/trackers.js` (lists approved on November 11, 2026). Shown only; no grade uses them.

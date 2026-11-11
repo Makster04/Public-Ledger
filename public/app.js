@@ -1444,6 +1444,29 @@ function aboveBoardCalc(x){
     ${stF('Legal Trouble = each case: status (finding 20 · open 15 · closed 5) × kind (criminal 1.5 · ethics or civil 1 · technical 0.5), halved for a closed case over 10 years old')}
     <p class="small">A missing index drops out and the others are rescaled.${x?.pct!=null?` Here: ${x.parts.filter(p=>p.points!=null).map(p=>`${p.label} ${pts1(p.points)}`).join(', ')} → ${x.pct}.`:''}</p>`;
 }
+// What their latest annual report lists besides assets and debts, read automatically by the refresh (src/schedules.mjs):
+// earned income, positions held outside government, agreements, gifts and paid travel. Shown only: whether these
+// organizations have business before their committees isn't checked yet, so none of it counts in the grade yet.
+// d: the refresh's records (undefined while loading, null offline).
+function reportPartsHTML(s,d){
+  const head='<h5 class="tr-h">From their latest annual report, read automatically</h5>';
+  if(d===undefined)return head+'<p class="small muted">Reading their annual report…</p>';
+  if(!d)return head+'<p class="small muted">The update service is offline, so their annual report can\'t be read right now.</p>';
+  const nw=d.netWorth,sc=nw?.schedules,yr=esc(nw?.year??'');
+  if(!nw||nw.year==null)return head+'<p class="small muted">No annual report read yet.</p>';
+  if(!sc)return head+`<p class="small muted">The income, positions, agreements, gifts and travel on their ${yr} report are read on the refresh's next pass.</p>`;
+  if(!sc.read)return head+`<p class="small muted">Their ${yr} report was filed on paper or can't be read automatically.</p>`;
+  const money=n=>Number.isFinite(n)?fmtFull(n):'—';
+  const part=(title,rows,cols,cells,right=[])=>rows?.length?`<div class="st-check"><h4>${title} <span class="muted small">· ${rows.length}</span></h4>${stTable(cols,rows.slice(0,25).map(cells),'',right)}${rows.length>25?`<p class="small muted">And ${rows.length-25} more on the report.</p>`:''}</div>`
+    :`<p class="small"><b>${title}:</b> none listed.</p>`;
+  const t=v=>esc(v||'—');
+  return head+part('Earned income',sc.income,['From','Type','Amount'],x=>[x.source?t(x.source):`<span class="muted">${t(x.text)}</span>`,t(x.type),x.amounts?.some(Number.isFinite)?money(x.amounts.find(Number.isFinite)):'<span class="muted">not given</span>'],[2])
+    +part('Positions outside government',sc.positions,['Position','Organization'],x=>[t(x.position),t(x.org||x.text)])
+    +part('Agreements',sc.agreements,['Date','What the report says'],x=>[t(x.date),t(x.terms||x.text)])
+    +part('Gifts',sc.gifts,['From','Value'],x=>[t(x.source||x.text),money(x.value)],[1])
+    +part('Travel paid by others',sc.travel,['Paid by','Dates','Itinerary'],x=>[t(x.source||x.text),t([x.from,x.to].filter(Boolean).join(' – ')),t(x.itinerary)])
+    +`<p class="small muted">Read automatically from their ${yr} report${nw.url?` (<a href="${esc(nw.url)}" target="_blank" rel="noopener">report ↗</a>)`:''}, as the form lists it. Whether any of these organizations has business before their committees isn't checked yet, so none of this counts in the grade yet. Spouses' salaries are listed without amounts, as the rules allow.</p>`;
+}
 function paneAboveBoard(s,pane){
   const draw=(x)=>stFrame(s,'aboveboard',{
     res:x,breakdown:aboveBoardBreakdown(x),
@@ -1458,13 +1481,15 @@ function paneAboveBoard(s,pane){
   const start=aboveBoard(s,{trades:aboveBoardInputs(s,null),conflicts:SIX_CTX.conflicts,asOfYear:SCORER.asOfYear});
   pane.innerHTML=draw(start);
   const fill=x=>{
-    const coi=pane.querySelector('#ab-conflicts');if(coi)coi.innerHTML=`<section class="st-sec"><h4 class="st-sub">Outside income, gifts and travel</h4>${conflictsDetails(s,x.conflicts)}</section>`;
+    const coi=pane.querySelector('#ab-conflicts');if(coi)coi.innerHTML=`<section class="st-sec"><h4 class="st-sub">Outside income, gifts and travel</h4>${conflictsDetails(s,x.conflicts)}<div id="ab-report">${s.office||!s.bioguide?'':reportPartsHTML(s,undefined)}</div></section>`;
   };
   fill(start);
   const eth=pane.querySelector('#ab-ethics');paneEthics(s,eth,{embedded:true});eth.querySelector('#eth-indexes')?.remove();
   if(s.office||!s.bioguide)return;
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
-    if(!d||!pane.isConnected||!location.hash.startsWith('#'+s.id))return;
+    if(!pane.isConnected||!location.hash.startsWith('#'+s.id))return;
+    const rp=pane.querySelector('#ab-report');if(rp)rp.innerHTML=reportPartsHTML(s,d);
+    if(!d)return;
     const x=aboveBoard(s,{trades:aboveBoardInputs(s,d),conflicts:SIX_CTX.conflicts,asOfYear:SCORER.asOfYear});
     const grid=pane.querySelector('.st-grid');if(grid){const tmp=document.createElement('div');tmp.innerHTML=draw(x);grid.replaceWith(tmp.querySelector('.st-grid'));}
     const calc=pane.querySelectorAll('.st-more .st-more-b')[0];if(calc)calc.innerHTML=aboveBoardCalc(x);
