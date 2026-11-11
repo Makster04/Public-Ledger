@@ -185,11 +185,11 @@ input, select { font-family: inherit; }
 .profile-identity .profile-description { color: var(--ink-2); font-size: .95rem; max-width: 65ch; margin-top: 12px; }
 .profile-actions { display: flex; gap: 9px; flex-wrap: wrap; margin-left: auto; align-items: center; }
 .profile-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 23px; }
-.profile-fact { border: 1px solid var(--line-2); border-radius: 9px; padding: 12px 15px; min-width: 0; background: #10151ba8; }
-.profile-fact > span { display: block; color: var(--muted); font-size: .76rem; margin-bottom: 6px; }
+.profile-fact { border: 1px solid var(--line-2); border-radius: 9px; padding: 12px 15px; min-width: 0; background: #10151ba8; text-align: center; }
+.profile-fact > span { display: block; color: var(--muted); font-size: .76rem; font-weight: 700; margin-bottom: 6px; }
 .profile-fact > b { display: block; font-family: var(--font-mono); font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 700; line-height: 1.2; letter-spacing: -.045em; color: var(--ink); overflow-wrap: anywhere; }
 .profile-fact > small { display: block; font-size: .7rem; color: var(--muted); margin-top: 5px; }
-.profile-period { text-align: right; color: var(--muted); font-size: .73rem; margin-top: 8px; }
+.profile-period { text-align: center; color: var(--muted); font-size: .73rem; margin-top: 8px; }
 .profile-details { margin-top: 21px; padding-top: 16px; border-top: 1px solid var(--line); }
 .profile-details > summary, .profile-details summary { color: var(--person); cursor: pointer; font-size: .83rem; font-weight: 600; }
 .profile-details .meta { margin-top: 16px; gap: 15px 22px; font-size: .84rem; }
@@ -1194,13 +1194,11 @@ input, select { accent-color: var(--accent); }
 .tr-rank td:nth-child(2) { white-space: normal; }
 @media (max-width: 520px) { .tr-tabs, .tr-page-tabs { display: grid; grid-template-columns: 1fr 1fr; } .tr-tabs button, .tr-page-tabs a { justify-content: center; } }
 
-/* Net worth and Stocks under Raised / Cash on hand / Spent (the profile header): six columns with the row above's gap,
-   each box two, so it's exactly the size of one above; columns 2-3 and 4-5 center the pair. The value keeps the boxes'
-   own font size and is held to their line height (1.2em), so the height matches; only the text inside it shrinks, when
-   a range is too long for a narrow box (--n: its length in characters, about 0.6em each in the mono font). */
-.profile-hero .profile-facts.profile-wealth { grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 12px; }
-.profile-wealth .profile-fact:nth-child(1) { grid-column: 2 / span 2; }
-.profile-wealth .profile-fact:nth-child(2) { grid-column: 4 / span 2; }
+/* Net worth, Stocks held and Stock trades under Raised / Cash on hand / Spent (the profile header): the same three-column
+   grid and gap as the row above, so each box is exactly the size of the one above it. The value keeps the boxes' own font
+   size and is held to their line height (1.2em), so the height matches; only the text inside it shrinks, when a range is
+   too long for a narrow box (--n: its length in characters, about 0.6em each in the mono font). */
+.profile-hero .profile-facts.profile-wealth { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px; }
 .profile-wealth .profile-fact { container-type: inline-size; }
 .profile-wealth .profile-fact > b { height: 1.2em; white-space: nowrap; overflow-wrap: normal; overflow: hidden; text-overflow: ellipsis; }
 .profile-wealth .pw-v { font-size: min(1em, calc(100cqi / (var(--n, 11) * .6))); vertical-align: top; }

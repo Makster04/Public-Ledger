@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {wealthTimeline,latestWealth,tradeRange,tradeSize,tradeSide,tradeDelay,stocksHeld} from '../public/wealth-timeline.js';
+import {wealthTimeline,headerWealth,tradeRange,tradeSize,tradeSide,tradeDelay,stocksHeld} from '../public/wealth-timeline.js';
 import {annualSummary} from '../src/feeds.mjs';
 import {holdingsSnapshot} from '../src/feeds.mjs';
 import {drawNetWorthYears,drawStocksTrades,drawTradeStrip} from '../public/charts.js';
@@ -70,20 +70,33 @@ test('the charts draw every year, a paper report as a dashed box, open-ended top
   const none=el();drawTradeStrip(none,{...tl,trades:[]});assert.match(none.innerHTML,/No trades in the reports read so far/);
 });
 
-test('the profile header\'s Net worth and Stocks: the newest report read, as ranges, and never a guess',()=>{
-  assert.equal(latestWealth(null),null);assert.equal(latestWealth({}),null,'no report read yet');
+test('the profile header\'s Net worth, Stocks held and Stock trades: the timeline\'s own figures, never a guess',()=>{
+  assert.equal(headerWealth(null),null,'nothing read');
   const nw={year:2025,filed:'2026-05-15',url:'https://example.org/2025',low:-200000,high:3400000,assets:[],
-    history:[{year:2025,filed:'2026-05-15',url:'https://example.org/2025',low:-200000,high:3400000,stocks:{low:250000,high:null,count:23}},{year:2024,low:1,high:2,stocks:{low:5,high:6,count:1}}]};
-  assert.deepEqual(latestWealth(nw),{year:2025,filed:'2026-05-15',url:'https://example.org/2025',net:{low:-200000,high:3400000},stocks:{value:250000,low:250000,high:null,count:23,open:true}},'the newest year, with an open-ended stock range kept open');
-  assert.deepEqual(latestWealth({...nw,history:[{...nw.history[0],unreadable:true}]}),{year:2025,filed:'2026-05-15',url:'https://example.org/2025',unreadable:true});
-  const none=latestWealth({year:2025,low:1000,high:5000,assets:[{name:'Savings',kind:'cash',value:'$1,001 - $15,000'}],history:[{year:2025,low:1000,high:5000}]});
-  assert.deepEqual(none.stocks,{value:0,low:0,high:0,count:0,open:false},'a report listing no stocks holds none');
-  assert.equal(latestWealth({year:2025,low:1,high:2,history:[{year:2025,low:1,high:2}]}).stocks,null,'no asset list: not read, not zero');
-  // On the page: under the campaign boxes, the same size, linked to the timeline.
+    history:[{year:2025,filed:'2026-05-15',url:'https://example.org/2025',low:-200000,high:3400000,stocks:{low:250000,high:null,count:23}},{year:2019,low:1,high:2,stocks:{low:5,high:6,count:1}}]};
+  const trades=[{traded:'2019-03-01',filed:'2019-03-20',type:'purchase',low:1001,high:15000},{traded:'2024-06-01',filed:'2024-09-01',type:'sale',low:1001,high:15000},{traded:'2025-01-02',filed:'2025-01-10',type:'purchase',low:15001,high:50000}];
+  const tl=wealthTimeline(nw,trades),h=headerWealth(tl);
+  // The same as the boxes over the timeline: the latest readable report, its stocks, and every trade read.
+  assert.deepEqual(h.net,{low:tl.latest.low,high:tl.latest.high});assert.deepEqual(h.stocks,tl.latest.stocks);
+  assert.deepEqual([h.year,h.url,h.trades.trades,h.trades.buys,h.trades.sells,h.trades.late,h.trades.since,h.trades.partial],[2025,'https://example.org/2025',3,2,1,1,2019,false]);
+  assert.equal(h.stocks.open,true,'an open-ended stock range stays open (shown with a +)');
+  assert.equal(headerWealth(tl,{tradesWhy:'Their older trade reports are still being read'}).trades.partial,true);
+  // Only unreadable reports: no net worth or stocks, but the count of reports says one was read.
+  const bad=headerWealth(wealthTimeline({year:2025,history:[{year:2025,unreadable:true}]},[]));
+  assert.deepEqual([bad.net,bad.stocks,bad.reports],[null,null,1]);
+  // Trades but no annual report: trades counted, the rest not read.
+  const tOnly=headerWealth(wealthTimeline(null,trades));assert.deepEqual([tOnly.net,tOnly.trades.trades],[null,3]);
+  // On the page: three boxes under the campaign boxes, the same grid, "~" for the stocks' middle value, linked to the timeline.
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),css=fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8');
   assert.match(app,/\$\{s\.office\?'':wealthRowHTML\(s,'loading'\)\}/);
   assert.match(app,/if\(overview&&!s\.office\)fillWealthHeader\(s\);/);
+  assert.match(app,/headerWealth\(wealthTimeline\(d\.netWorth,timelineTrades\(s,d\)\)/,'from the timeline\'s own records');
+  assert.match(app,/box\('Net worth',[\s\S]*box\('Stocks held',[\s\S]*box\('Stock trades',/);
+  assert.match(app,/html:`~\$\{fmt\$\(k\.value\)\}/);assert.doesNotMatch(app.slice(app.indexOf('function wealthRowHTML'),app.indexOf('async function fillWealthHeader')),/about \$\{fmt/);
   assert.match(app,/timeline:\['unbought','u-timeline'\]/);
-  assert.match(css,/\.profile-hero \.profile-facts\.profile-wealth \{ grid-template-columns: repeat\(6, minmax\(0, 1fr\)\)/);
-  assert.match(css,/\.profile-wealth \.profile-fact:nth-child\(1\) \{ grid-column: 2 \/ span 2; \}/);
+  assert.match(css,/\.profile-hero \.profile-facts\.profile-wealth \{ grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/);
+  // All six boxes centered with bold titles (Raised, Cash on hand and Spent too), and the campaign filings line centered.
+  assert.match(css,/\.profile-fact \{ border: 1px solid var\(--line-2\);[^}]*text-align: center; \}/,'centered');
+  assert.match(css,/\.profile-fact > span \{ display: block;[^}]*font-weight: 700;/,'bold titles');
+  assert.match(css,/\.profile-period \{ text-align: center;/);
 });

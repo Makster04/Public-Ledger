@@ -15,7 +15,7 @@ import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './f
 import {COMPANIES,EXECUTIVES} from './industries.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
-import {wealthTimeline,latestWealth} from './wealth-timeline.js';
+import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
@@ -764,39 +764,44 @@ function profileHeader(s,showFacts=false){
     <details class="profile-details"><summary>Biography, committees & source links</summary>${s.cand?`<p class="small">${esc(s.status||'')}${s.statusSrc?` <a href="${esc(s.statusSrc.u)}" target="_blank" rel="noopener">${esc(s.statusSrc.t)} ↗</a>`:''}</p>${s.background?`<p class="small muted">${esc(s.background)}</p>`:''}`:''}${details}</details>
   </header>`;
 }
-// Net worth and Stocks, under Raised / Cash on hand / Spent: the latest annual financial disclosure the refresh has read
-// (public/wealth-timeline.js, latestWealth), as ranges, the way the forms give values. st: 'loading', 'offline', or what
-// latestWealth returned (null: no report read yet). Shown only; the Unbought tab's stock term reads the same report.
-const signedShort=n=>n<0?`−${shortMoney(-n)}`:shortMoney(n);
+// Net worth, Stocks held and Stock trades, under Raised / Cash on hand / Spent: the same figures as the boxes over the
+// Unbought tab's "Net worth, stocks and trades over time" (public/wealth-timeline.js: wealthTimeline, then headerWealth),
+// so the two always agree. st: 'loading', 'offline', or what headerWealth returned (null: nothing read yet). Shown only.
+const signedMoney=n=>n<0?`−${fmt$(-n)}`:fmt$(n);
 function wealthRange(low,high){
   if(low==null&&high==null)return null;
-  if(high==null)return {html:`${signedShort(low)}+`,title:`${fmtFull(low)} or more`};
-  if(low==null)return {html:`Up to ${signedShort(high)}`,title:`${fmtFull(high)} or less`};
-  if(low===high)return {html:signedShort(low),title:fmtFull(low)};
-  return {html:`${signedShort(low)}<span class="to">–</span>${signedShort(high)}`,title:`${fmtFull(low)} to ${fmtFull(high)}`};
+  if(high==null)return {html:`${signedMoney(low)}+`,title:`${fmtFull(low)} or more`};
+  if(low==null)return {html:`Up to ${signedMoney(high)}`,title:`${fmtFull(high)} or less`};
+  if(low===high)return {html:signedMoney(low),title:fmtFull(low)};
+  return {html:`${signedMoney(low)}<span class="to">–</span>${signedMoney(high)}`,title:`${fmtFull(low)} to ${fmtFull(high)}`};
 }
 function wealthRowHTML(s,st){
   // --n: the value's length, so its text can shrink to fit a narrow box (remake.css) while the box keeps its height.
   const box=(label,v,wait)=>{const html=v?.html??esc(v),n=html.replace(/<[^>]+>/g,'').replace(/&[a-z#0-9]+;/g,'x').length;
     return `<div class="profile-fact${wait?' pw-wait':''}"><span>${label}</span><b${v?.title?` title="${esc(v.title)}"`:''}><span class="pw-v" style="--n:${n}">${html}</span></b></div>`;};
-  const row=(a,b,note)=>`<div id="profile-wealth"><div class="profile-facts profile-wealth">${a}${b}</div><p class="profile-wealth-note">${note}</p></div>`;
-  const both=(text,note)=>row(box('Net worth',text,true),box('Stocks',text,true),note);
-  if(st==='loading')return both('…','Reading their financial disclosure…');
-  if(st==='offline')return both('Not available','The update service is offline, so their financial disclosure can\'t be read right now.');
-  if(!st)return both('Not read yet','Waiting for their annual financial disclosure.');
-  const report=st.url?` · <a href="${esc(st.url)}" target="_blank" rel="noopener">Report ↗</a>`:'';
-  if(st.unreadable)return both('Can\'t read',`Their ${esc(st.year??'latest')} annual report was filed on paper or can't be read automatically${report}`);
-  const net=wealthRange(st.net.low,st.net.high),k=st.stocks;
-  const stocks=!k?null:k.count===0||(k.low===0&&k.high===0)?{html:'$0',title:'No individual stocks'}:wealthRange(k.low,k.high);
-  const count=!k?'stocks not read from this report':k.count===0?'no individual stocks':k.count!=null?`${k.count} individual stock${k.count===1?'':'s'}`:'individual stocks only';
-  return row(net?box('Net worth',net):box('Net worth','Can\'t tell',true),stocks?box('Stocks',stocks):box('Stocks','Not read',true),
-    `${esc(st.year??'Latest')} annual financial disclosure: what they own minus what they owe · ${count} · <a href="#${esc(s.id)}-timeline">Trades →</a>${report}`);
+  const row=(boxes,note)=>`<div id="profile-wealth"><div class="profile-facts profile-wealth">${boxes.join('')}</div><p class="profile-wealth-note">${note}</p></div>`;
+  const all=(text,note)=>row([box('Net worth',text,true),box('Stocks held',text,true),box('Stock trades',text,true)],note);
+  if(st==='loading')return all('…','Reading their financial disclosures…');
+  if(st==='offline')return all('Not available','The update service is offline, so their financial disclosures can\'t be read right now.');
+  if(!st)return all('Not read yet','Waiting for their annual financial disclosure and stock trade reports.');
+  const L=st.net,k=st.stocks,t=st.trades,noReport=st.reports?'Can\'t read':'Not read yet';
+  const net=L?wealthRange(L.low,L.high):null;
+  const stocks=!L?null:!k?{html:'Can\'t read',wait:true}:k.count===0?{html:'None',title:'No individual stocks on the report'}:{html:`~${fmt$(k.value)}${k.open?'+':''}`,title:`About ${fmtFull(k.value)}${k.open?' or more':''}: the middle of each stock's range on the form`};
+  const trades=t.trades>0?{html:String(t.trades)}:t.partial?null:{html:'0'};
+  const notes=[L?`${esc(st.year)} annual financial disclosure`:st.reports?'Their annual report was filed on paper or can\'t be read automatically':'No annual report read yet',
+    k?.count?`${k.count} stock${k.count===1?'':'s'} or option${k.count===1?'':'s'}`:k?.count===0?'no individual stocks':'',
+    t.trades?`${t.trades} trade${t.trades===1?'':'s'} since ${esc(t.since)}: ${t.buys} buy${t.buys===1?'':'s'}, ${t.sells} sell${t.sells===1?'':'s'}${t.late?`, ${t.late} reported late`:''}${t.partial?' (not every trade report read yet)':''}`:t.partial?'stock trade reports not read yet':'no stock trades reported',
+    `<a href="#${esc(s.id)}-timeline">Trades →</a>`,st.url?`<a href="${esc(st.url)}" target="_blank" rel="noopener">Report ↗</a>`:''].filter(Boolean);
+  return row([net?box('Net worth',net):box('Net worth',L?'Can\'t tell':noReport,true),stocks?box('Stocks held',stocks,stocks.wait):box('Stocks held',noReport,true),trades?box('Stock trades',trades):box('Stock trades','Not read yet',true)],notes.join(' · '));
 }
 async function fillWealthHeader(s){
   if(!document.getElementById('profile-wealth'))return;
-  let nw,offline=false;try{nw=await window.RecordLive.netWorth(s.id);}catch{offline=true;}
+  const d=await window.RecordLive.disclosure(s.id,s.chamber);
   const el=document.getElementById('profile-wealth');if(!el||!location.hash.startsWith('#'+s.id))return;
-  el.outerHTML=wealthRowHTML(s,offline?'offline':latestWealth(nw));
+  if(!d){el.outerHTML=wealthRowHTML(s,'offline');return;}
+  // (as the timeline's own note: the trade reports' gap, unless the reviewed trades cover them)
+  const why=s.chamber&&d.trades?.why&&!SCORER.reviewedTrades(s).covered?d.trades.why:null;
+  el.outerHTML=wealthRowHTML(s,headerWealth(wealthTimeline(d.netWorth,timelineTrades(s,d)),{tradesWhy:why}));
 }
 function profileReport(s){
   return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. The other scores wait on reviewed research.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
