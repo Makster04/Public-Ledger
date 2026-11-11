@@ -181,3 +181,93 @@ export function sectorSpendBars(by,label,{fw='For',aw='Against'}={}){
   const bar=(side,name,total)=>`<div class="cx-row"><div class="cx-who">${esc(name)}<small>${money(total)}</small></div><div class="cx-track"><div class="cx-stack" style="width:${total/max*100}%">${side.map(x=>`<i style="flex:${x.amount};background:${ALIGN_COLOR[x.align]}" data-tip="${esc(`${name}: ${label(x.cat)} ${money(x.amount)}`)}"></i>`).join('')}</div></div><div class="cx-val"></div></div>`;
   return `<div class="cx-rows cx-sector">${bar(by.for,fw,F)}${bar(by.against,aw,A)}</div>`;
 }
+
+// ---------- Their own money over time (public/wealth-timeline.js), on the Unbought tab ----------
+// One band a year from tl.from to tl.to, the year under its band ('16 when the bands are narrow).
+function yearBands(tl,W,mL,mR){
+  const n=tl.to-tl.from+1,band=(W-mL-mR)/n,cx=y=>mL+band*(y-tl.from+.5);
+  return {band,cx,labels:H=>tl.years.map(({year})=>band<34&&(year-tl.from)%2?'':`<text class="cx-tick" x="${cx(year).toFixed(1)}" y="${H-6}" text-anchor="middle">${band<44?"'"+String(year).slice(2):year}</text>`).join('')};
+}
+// A bar with 4px rounded ends: a floating range (both ends) or a column from the baseline (top end only).
+function roundBar(x,w,yt,yb,fill,floating){
+  const h=yb-yt;if(!(h>0.5))return '';const r=Math.min(4,w/2,h/2);
+  if(floating)return `<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="${r}" style="fill:${fill}"></rect>`;
+  return `<path d="M${x.toFixed(1)},${yb.toFixed(1)} L${x.toFixed(1)},${(yt+r).toFixed(1)} Q${x.toFixed(1)},${yt.toFixed(1)} ${(x+r).toFixed(1)},${yt.toFixed(1)} L${(x+w-r).toFixed(1)},${yt.toFixed(1)} Q${(x+w).toFixed(1)},${yt.toFixed(1)} ${(x+w).toFixed(1)},${(yt+r).toFixed(1)} L${(x+w).toFixed(1)},${yb.toFixed(1)} Z" style="fill:${fill}"></path>`;
+}
+// A round step (1, 2, 2.5 or 5 times a power of ten) at least v.
+const niceStep=v=>{if(v<=0)return 1;const p=10**Math.floor(Math.log10(v)),n=v/p;return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p;};
+// The top of an axis in five round steps that holds v: $2.05M → $2.5M, $186K → $250K.
+const fiveSteps=v=>niceStep(v/5)*5;
+// Ticks from lo to hi in steps of a round size, about five of them.
+function moneyTicks(lo,hi){const step=niceStep(Math.max(Math.abs(lo),hi)/5||1),out=[];for(let v=Math.floor(lo/step)*step;v<hi+step*.999;v+=step)out.push(Math.round(v));return out;}
+const rangeTip=(lo,hi)=>lo==null&&hi==null?'can\'t be bounded from the form':hi==null?`${money(lo)} or more`:lo==null?`${money(hi)} or less`:`${money(lo)} to ${money(hi)}`;
+const yearHit=(x,band,top,bot,tip)=>`<rect class="cx-hit" x="${(x-band/2).toFixed(1)}" y="${top}" width="${band.toFixed(1)}" height="${bot-top}" data-tip="${esc(tip)}"></rect>`;
+
+// Net worth by year: each annual report's range, lowest to highest possible. An open-ended top runs to the top of the
+// chart with an arrow; a report filed on paper is an empty dashed box; a year without a report is left blank.
+export function drawNetWorthYears(el,tl){
+  if(!el)return;const W=Math.max(280,el.clientWidth),H=W<420?200:230,mL=48,mR=8,top=14,bot=H-24;
+  const vals=tl.years.map(y=>y.worth).filter(w=>w&&!w.unreadable).flatMap(w=>[w.low,w.high]).filter(Number.isFinite);
+  const ticks=moneyTicks(Math.min(0,...vals),Math.max(1,...vals)),yMin=ticks[0],yMax=ticks.at(-1);
+  const Y=v=>bot-(v-yMin)/(yMax-yMin)*(bot-top),{band,cx,labels}=yearBands(tl,W,mL,mR),bw=Math.min(22,band*.5);
+  let g='';
+  for(const v of ticks)g+=`<line class="${v===0?'cx-axis':'cx-grid'}" x1="${mL}" x2="${W-mR}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}"></line><text class="cx-tick" x="${mL-7}" y="${(Y(v)+4).toFixed(1)}" text-anchor="end">${v?money(v):'$0'}</text>`;
+  for(const {year,worth:w} of tl.years){const x=cx(year);
+    if(!w){g+=yearHit(x,band,top,bot,`${year}: no annual report on file`);continue;}
+    if(w.unreadable){const a=Y(yMin+(yMax-yMin)*.35),b=Y(yMin+(yMax-yMin)*.08);
+      g+=`<rect x="${(x-bw/2).toFixed(1)}" y="${a.toFixed(1)}" width="${bw.toFixed(1)}" height="${(b-a).toFixed(1)}" rx="4" class="cx-gapbox"></rect><text class="cx-tick" x="${x.toFixed(1)}" y="${(a-6).toFixed(1)}" text-anchor="middle">paper</text>`;
+      g+=yearHit(x,band,top,bot,`${year} annual report: filed on paper, so it can't be read automatically. Left blank, not guessed.`);continue;}
+    if(w.low==null&&w.high==null){g+=yearHit(x,band,top,bot,`${year} annual report: its net worth can't be bounded from the form`);continue;}
+    // An open-ended top fades out toward the top of the chart: its height isn't a value.
+    const yt=w.high==null?top:Y(w.high),yb=w.low==null?Y(yMin):Y(w.low);
+    g+=roundBar(x-bw/2,bw,yt,yb,w.high==null?'url(#wt-fade)':'var(--s1)',true);
+    if(w.high==null)g+=`<path class="cx-open" d="M${(x-5).toFixed(1)},${(yt+10).toFixed(1)} L${x.toFixed(1)},${(yt+4).toFixed(1)} L${(x+5).toFixed(1)},${(yt+10).toFixed(1)}"></path>`;
+    g+=yearHit(x,band,top,bot,`${year} annual report · net worth ${rangeTip(w.low,w.high)}${w.filed?` · filed ${when(w.filed)}`:''}`);
+  }
+  const last=tl.latest;if(last&&last.high!=null&&last.low!=null&&W>=360)g+=`<text class="cx-lab" x="${(cx(last.year)+bw/2).toFixed(1)}" y="${(Y(last.high)-7).toFixed(1)}" text-anchor="end">${money(last.low)}–${money(last.high)}</text>`;
+  const fade='<defs><linearGradient id="wt-fade" x1="0" y1="1" x2="0" y2="0"><stop offset="0" style="stop-color:var(--s1)"></stop><stop offset=".55" style="stop-color:var(--s1);stop-opacity:.75"></stop><stop offset="1" style="stop-color:var(--s1);stop-opacity:.08"></stop></linearGradient></defs>';
+  el.innerHTML=svgOpen(W,H,`Net worth by year, ${tl.from} to ${tl.to}: each annual report's range`)+fade+g+labels(H)+'</svg>';
+  hoverTips(el);
+}
+// Stocks held (left axis) and bought and sold each year (right axis): the line is the middle of the individual stocks'
+// added-up ranges on each annual report; the columns add up the middle of each trade's range. Both axes start at $0.
+export function drawStocksTrades(el,tl){
+  if(!el)return;const W=Math.max(280,el.clientWidth),H=W<420?200:230,mL=48,mR=48,top=14,bot=H-24;
+  const sv=tl.years.map(y=>y.worth?.stocks?.value).filter(Number.isFinite),tv=tl.years.flatMap(y=>[y.bought.mid,y.sold.mid]);
+  const sMax=fiveSteps(Math.max(10000,...sv)),tMax=fiveSteps(Math.max(10000,...tv)),Y=v=>bot-v/sMax*(bot-top),Y2=v=>bot-v/tMax*(bot-top);
+  const {band,cx,labels}=yearBands(tl,W,mL,mR),cw=Math.max(3,Math.min(12,band*.22));
+  let g='';
+  for(let k=0;k<=5;k++){const y=bot-k/5*(bot-top);
+    g+=`<line class="${k?'cx-grid':'cx-axis'}" x1="${mL}" x2="${W-mR}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}"></line><text class="cx-tick" x="${mL-7}" y="${(y+4).toFixed(1)}" text-anchor="end">${k?money(sMax*k/5):'$0'}</text><text class="cx-tick" x="${W-mR+7}" y="${(y+4).toFixed(1)}">${k?money(tMax*k/5):'$0'}</text>`;}
+  for(const y of tl.years){const x=cx(y.year);g+=roundBar(x-cw-1,cw,Y2(y.bought.mid),bot,'var(--s3)',false)+roundBar(x+1,cw,Y2(y.sold.mid),bot,'var(--s2)',false);}
+  // The stocks line, broken where a year's value isn't known.
+  let seg=[];const segs=[];for(const y of tl.years){const v=y.worth?.stocks?.value;if(!Number.isFinite(v)){if(seg.length)segs.push(seg);seg=[];continue;}seg.push([cx(y.year),Y(v)]);}if(seg.length)segs.push(seg);
+  for(const s of segs){if(s.length>1)g+=`<polyline class="cx-line" points="${s.map(p=>p.map(n=>n.toFixed(1)).join(',')).join(' ')}"></polyline>`;for(const [x,y] of s)g+=`<circle class="cx-dot held" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5"></circle>`;}
+  const part=(t,verb)=>t.n?`${verb} about ${money(t.mid)} in ${t.n} trade${t.n===1?'':'s'}${t.n>t.unread?` (${rangeTip(t.low,t.high)})`:''}${t.unread?`, ${t.unread} with an amount that can't be read`:''}`:`${verb} nothing reported`;
+  for(const y of tl.years){const w=y.worth,st=w?.stocks;
+    const held=!w?'no annual report on file':w.unreadable?'annual report filed on paper':st==null?'stocks held can\'t be read from the report':st.count===0?'no individual stocks':`stocks held about ${money(st.value)}${st.open?' or more':''}${st.count?` (${st.count} stock${st.count===1?'':'s'})`:''}`;
+    g+=yearHit(cx(y.year),band,top,bot,`${y.year} · ${held} · ${part(y.bought,'bought')} · ${part(y.sold,'sold')}${y.other?` · ${y.other} exchange${y.other===1?'':'s'}`:''}`);}
+  el.innerHTML=svgOpen(W,H,`Value of individual stocks held by year, with the amounts bought and sold each year, ${tl.from} to ${tl.to}`)+g+labels(H)+'</svg>';
+  hoverTips(el);
+}
+// Each trade on the date it was made: buys above the line, sells below, an exchange on it; bigger dots for bigger
+// amounts; a ring in the critical color for one reported late or never.
+export function drawTradeStrip(el,tl){
+  if(!el)return;const W=Math.max(280,el.clientWidth),mL=48,mR=10,R=[4,6,8.5];
+  if(!tl.trades.length){el.innerHTML='<p class="small muted">No trades in the reports read so far.</p>';return;}
+  const a=Date.UTC(tl.from,0,1),b=Date.UTC(tl.to+1,0,1),X=d=>mL+(Date.parse(d)-a)/(b-a)*(W-mL-mR),step=W<520?8:9;
+  const used={},pos=tl.trades.map(r=>{const x=X(r.traded),k=r.side+Math.round(x/(step+3));used[k]=(used[k]||0)+1;return {r,x,n:used[k]-1};});
+  const deep=Math.min(8,Math.max(1,...Object.values(used))),mid=24+deep*step+6,H=mid*2+22;
+  let g='';
+  for(let y=tl.from;y<=tl.to+1;y++){const x=X(`${y}-01-01`);g+=`<line class="cx-grid" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="4" y2="${H-22}"></line>`;}
+  const band=(W-mL-mR)/(tl.to-tl.from+1);
+  for(let y=tl.from;y<=tl.to;y++)if(!(band<34&&(y-tl.from)%2))g+=`<text class="cx-tick" x="${X(`${y}-07-02`).toFixed(1)}" y="${H-6}" text-anchor="middle">${band<44?"'"+String(y).slice(2):y}</text>`;
+  g+=`<line class="cx-axis" x1="${mL}" x2="${W-mR}" y1="${mid}" y2="${mid}"></line><text class="cx-cap" x="${mL-8}" y="${mid-14}" text-anchor="end">Buys</text><text class="cx-cap" x="${mL-8}" y="${mid+22}" text-anchor="end">Sells</text>`;
+  for(const {r,x,n} of pos){const rad=R[r.size??0],off=10+Math.min(n,8)*step+rad;
+    const y=r.side==='buy'?mid-off:r.side==='sell'?mid+off:mid,cls=r.side==='buy'?'buy':r.side==='sell'?'sell':'ontime';
+    const amt=r.range?(r.range[1]==null?`over ${money(r.range[0]-1)}`:`$${r.range[0].toLocaleString('en-US')}–$${r.range[1].toLocaleString('en-US')}`):'amount not readable';
+    const tip=`${when(r.traded)} · ${r.side==='buy'?'bought':r.side==='sell'?'sold':'exchanged'} ${r.name} · ${amt}${r.owner&&!/^self$/i.test(r.owner)?` · ${r.owner}`:''} · ${r.never?'never reported (late)':r.days!=null?`reported after ${r.days} days${r.late?' (late)':''}`:'report date unknown'}`;
+    g+=`<circle class="cx-dot ${cls}${r.late?' late-ring':''}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rad}" data-tip="${esc(tip)}"></circle>`;}
+  el.innerHTML=svgOpen(W,H,`${tl.trades.length} stock trades by date, ${tl.from} to ${tl.to}: buys above the line, sells below`)+g+'</svg>';
+  hoverTips(el);
+}

@@ -6,7 +6,7 @@ import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
-import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars} from './charts.js';
+import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
@@ -14,6 +14,7 @@ import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod} from './fec-money.js';
 import {INDUSTRY_LABEL,SUPER_PACS,COMPANIES,EXECUTIVES,industrySuperPacs} from './industries.js';
 import {rangeText} from './net-worth.js';
+import {wealthTimeline} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
@@ -1046,6 +1047,36 @@ function bindAssetFilter(root,nw){
     else if(sel.matches('[data-asset-kind]'))sel.closest('.st-assets').querySelectorAll('tbody tr').forEach(r=>{r.hidden=!!sel.value&&r.dataset.kind!==sel.value;});
   }));
 }
+// ----- Unbought: net worth, stocks held and trades over time (public/wealth-timeline.js) -----
+// The trades it draws: the reviewed ones when someone reviewed them, otherwise those read from the official reports.
+function timelineTrades(s,d){const r=SCORER.reviewedTrades(s);return r.covered?r.rows:(d?.trades?.rows||[]);}
+// d: the refresh's records (undefined while loading, null when the update service is offline); tl: wealthTimeline().
+function wealthTimelineHTML(s,d,tl){
+  const head='<section class="st-sec" id="u-timeline"><h4 class="st-sub">Net worth, stocks and trades over time</h4>';
+  if(d===undefined)return head+'<p class="small muted">Reading their financial disclosures…</p></section>';
+  if(!d)return head+'<p class="small muted">The update service is offline, so their financial disclosures can\'t be read right now.</p></section>';
+  if(!tl)return head+`<p class="small muted">No annual reports or stock trade reports read for ${esc(s.short)} yet. Unknown is not none: they show here once the refresh reads them${s.chamber==='S'?' (senators\' reports come from the Senate eFD import)':''}.</p></section>`;
+  const L=tl.latest,F=tl.first,st=L?.stocks,c=tl.counts,why=s.chamber&&d.trades?.why&&!SCORER.reviewedTrades(s).covered?d.trades.why:null;
+  const tile=(label,value,sub)=>`<div class="wt-stat"><div class="l">${label}</div><div class="v">${value}</div><div class="d">${sub}</div></div>`;
+  const stats=`<div class="wt-stats">${tile(`Net worth${L?`, ${L.year} report`:''}`,L?esc(rangeText(L,fmt$)):'Not readable',L&&F&&F.year<L.year?`${esc(rangeText(F,fmt$))} in ${F.year}`:L?'the latest annual report read':'no annual report read yet')}
+    ${tile(`Individual stocks held${L?` (${L.year})`:''}`,st==null?'Not readable':st.count===0?'None':`about ${fmt$(st.value)}${st.open?'+':''}`,st?.count?`${st.count} stock${st.count===1?'':'s'} or option${st.count===1?'':'s'}`:st?.count===0?'no individual stocks on the report':'its stock values can\'t be read')}
+    ${tile(c.trades?`Stock trades since ${tl.trades[0].year}`:'Stock trades',String(c.trades),`${c.buys} buys, ${c.sells} sells${c.late?` · ${c.late} reported late`:''}`)}</div>`;
+  const sw=(cls,label)=>`<span><i class="${cls}"></i>${label}</span>`;
+  const rows=tl.years.map(y=>{const w=y.worth,h=w?.stocks;return [String(y.year),!w?'No report':w.unreadable?'Filed on paper':esc(rangeText(w,fmt$)),!w||w.unreadable||h==null?'—':h.count===0?'None':`${fmt$(h.value)}${h.open?'+':''}`,
+    y.bought.n?`${fmt$(y.bought.mid)} (${y.bought.n})`:'—',y.sold.n?`${fmt$(y.sold.mid)} (${y.sold.n})`:'—'];});
+  return `${head}<p class="small">From their annual financial disclosures and stock trade reports, ${tl.from}–${tl.to}. Every value on the forms is a range.${why?` <b>Not complete:</b> ${esc(why)}.`:''}</p>${stats}
+    <div class="wt-pair">
+      <div class="wt-panel"><h5>Net worth</h5><p class="small muted">Each bar runs from the lowest to the highest value the report allows.</p><div class="wt-axes">${sw('wt-sw-bar','Net worth')}</div><div class="cx-plot" id="wt-worth"></div></div>
+      <div class="wt-panel"><h5>Stocks held, and buys and sells</h5><p class="small muted">The line is the value of their individual stocks; the columns, how much they bought and sold that year.</p><div class="wt-axes">${sw('wt-sw-line','Stocks held · left axis')}<span><i class="wt-sw-col buy"></i>Bought <i class="wt-sw-col sell"></i>Sold · per year, right axis</span></div><div class="cx-plot" id="wt-stocks"></div></div>
+    </div>
+    <div class="wt-panel wt-strip"><h5>Every trade</h5><div class="wt-axes">${sw('wt-sw-dot buy','Buy')}${sw('wt-sw-dot sell','Sell')}${sw('wt-sw-ring','Reported late or never')}<span class="muted">Dot size: $1K–15K · $15K–50K · over $50K</span></div><div class="cx-plot" id="wt-strip"></div></div>
+    ${tableView(['Year','Net worth','Stocks held','Bought (trades)','Sold (trades)'],rows)}
+    <p class="small muted">Trade amounts are ranges too, so a year's buys and sells are added up from the middle of each range; hover a year for the lowest and highest totals. Their home and a mortgage on it aren't on the form unless the home earns income. A report filed on paper can't be read automatically and is left blank, not guessed.</p></section>`;
+}
+function mountWealthTimeline(sec,tl){
+  const f=()=>{if(!sec.isConnected)return;drawNetWorthYears(sec.querySelector('#wt-worth'),tl);drawStocksTrades(sec.querySelector('#wt-stocks'),tl);drawTradeStrip(sec.querySelector('#wt-strip'),tl);};
+  f();resizers.push(f);
+}
 function holdingsEvidence(s,d,x){
   const nw=d?.netWorth,held=x?.held,tr=x?.traded;
   const stocks=(nw?.assets||[]).filter(a=>assetKind(a)==='stock');
@@ -1179,7 +1210,7 @@ function paneUnbought(s,pane){
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
-    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}<div id="u-fec"></div>${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
+    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
     assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
@@ -1209,6 +1240,7 @@ function paneUnbought(s,pane){
       nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
     const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
     if(fec)fec.innerHTML=(d?statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);
+    const wt=pane.querySelector('#u-timeline');if(wt){const tl=d?wealthTimeline(d.netWorth,timelineTrades(s,d)):null,tmp=document.createElement('div');tmp.innerHTML=wealthTimelineHTML(s,d,tl);const sec=tmp.firstElementChild;wt.replaceWith(sec);if(tl)mountWealthTimeline(sec,tl);}
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
   });
