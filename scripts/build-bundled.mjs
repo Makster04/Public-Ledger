@@ -16,8 +16,10 @@
 // tab's earlier periods; "routed" stays the current cycle's.
 //
 // Writes research.json "bundled": {asOf, conduits: {group: [committee ID]}, names: {"fec:C…": name}, listed: {person: true
-// when searched completely}, discovered (everyone was), cycles,
-// people: {person: {group or "fec:C…": {routed, n, direct, byMonth, cycles, byCycle: {cycle: {routed, n}}, src}}}};
+// when searched completely: no read failed and no limit in LIMITS cut a search short}, discovered (everyone was), cycles,
+// people: {person: {group or "fec:C…": {routed, n, direct, byMonth, cycles, byCycle: {cycle: {routed, n}}, src, partial?}}}};
+// "partial": a total a limit cut short with no earlier total saved, so it's a lower bound. A search a limit cut short
+// keeps the earlier saved total when there is one, as a failed read does.
 // scripts/build-funders.mjs adds "routed" to each person's funders from it. Rerun build-funders after.
 //   npm run funders:bundled                     look up and rewrite public/research.json
 //   npm run funders:bundled -- --check          list what it found, without writing
@@ -60,6 +62,84 @@ export function maybeConduits(list,skip=new Set()){
 }
 export const recipientURL=(cmte,cycle)=>`https://api.open.fec.gov/v1/schedules/schedule_b/by_recipient_id/?recipient_id=${cmte}&cycle=${cycle}&per_page=100&sort=-total`;
 const people=data=>[...(data.members||[]),...(data.cands||[]),...(data.featured||[])];
+const dollars=n=>`$${Math.round(n).toLocaleString('en-US')}`;
+
+// How far each search goes: pages of each cycle's list of who gave (100 committees a page), pages of one committee's
+// payments to the campaign in a cycle (100 a page), and how many other possible conduits are read from each list.
+export const LIMITS={recipients:5,conduit:200,found:10};
+// Every page of an FEC list, up to max pages: {rows, capped}. capped: the FEC had more after the last page read. A
+// cursor list (Schedule B) can only show it has ended with an empty page, so after max pages one more is asked for, and
+// it is capped only if that page has rows.
+export async function readPages(get,url,max){
+  const rows=[];let page=0;
+  for(;url&&page<max;page++){const d=await get(url);rows.push(...(d.results||[]));url=fecNext(url,d);}
+  if(!url)return {rows,capped:false};
+  const more=await get(url);if(!(more.results||[]).length)return {rows,capped:false};
+  return {rows:rows.concat(more.results),capped:true};
+}
+// The committees to read beyond the groups listed by hand: from each cycle's list of who gave, those that might be
+// forwarding gifts (maybeConduits), the largest `limit` of each list. skipped: the others, left unread.
+export function conduitsToRead(gave,known,limit=LIMITS.found){
+  const found=new Map(),skipped=new Map();
+  for(const list of Object.values(gave)){const m=maybeConduits(list,known);
+    for(const c of m.slice(0,limit))if(!found.has(c.committee))found.set(c.committee,c.name);
+    for(const c of m.slice(limit))skipped.set(c.committee,c.name);}
+  for(const k of found.keys())skipped.delete(k);
+  return {found,skipped};
+}
+// One person's search: each cycle's list of who gave to their campaign, each group's forwarded gifts, then every other
+// committee that might be forwarding them. Returns {entries (group or "fec:C…" → totals), failed, capped (what a limit cut
+// short), listed (cycle lists read), complete}. complete only when nothing failed and no limit cut anything short. A
+// read that failed or was cut short keeps the earlier saved total (prev); with none saved, a cut-short total is kept
+// marked partial (a lower bound). names gets the name of each committee found.
+export async function searchPerson(p,{get,groups,known,allCycles,current,prev={},names={},limits=LIMITS}){
+  const entries={},failed=[],capped=[];let listed=0;
+  const cycles=cyclesOf(p).length?cyclesOf(p):[current];
+  // First, who sent the campaign money in each cycle (null when that list couldn't be read).
+  const gave={};
+  for(const cycle of allCycles){
+    try{const r=await readPages(get,recipientURL(p.fecCmte,cycle),limits.recipients);gave[cycle]=givers(r.rows);listed++;
+      if(r.capped)capped.push(`the committees that gave in ${cycle}: more than ${limits.recipients*100}, the rest not read`);}
+    catch(e){gave[cycle]=null;failed.push(`the committees that gave in ${cycle}: ${e.message}`);}
+  }
+  // A committee's payments to the campaign are read for a cycle it gave in (every cycle when that list is missing; the
+  // groups always in the current cycle, as before).
+  const read=async(conduits,always)=>{
+    const byCycle={},rows=[];let cut=false;
+    for(const cycle of allCycles){
+      const list=gave[cycle],there=!list||conduits.some(c=>list.some(g=>g.committee===c));
+      if(!there&&!(always&&cycles.includes(cycle)))continue;
+      const got=[];
+      for(const conduit of conduits){const r=await readPages(get,conduitURL(conduit,p.fecCmte,cycle),limits.conduit);if(r.capped)cut=true;
+        got.push(...r.rows.filter(x=>x.recipient_committee_id==null||x.recipient_committee_id===p.fecCmte));}
+      const t=conduitTotals(got);if(t.routed>0)byCycle[cycle]={routed:t.routed,n:t.n};
+      if(cycles.includes(cycle))rows.push(...got);
+    }
+    const t=conduitTotals(rows);
+    return {result:Object.keys(byCycle).length?{...t,cycles,byCycle,src:conduitLink(conduits[0],p.fecCmte,cycles.at(-1))}:null,cut};
+  };
+  const save=(key,label,{result,cut})=>{
+    if(!cut){if(result)entries[key]=result;return;}
+    const was=prev[key];
+    capped.push(`${label}: more than ${limits.conduit*100} payments in a cycle, the rest not read${was?` (kept the earlier ${dollars(was.routed)})`:result?' (saved as a partial total)':''}`);
+    if(was)entries[key]=was;else if(result)entries[key]={...result,partial:true};
+  };
+  // A read that failed partway would save a partial total (or none), so the earlier saved total is kept instead.
+  const fail=(key,label,e)=>{const was=prev[key];failed.push(`${label}: ${e.message}${was?` (kept the earlier ${dollars(was.routed)})`:' (none saved before)'}`);if(was)entries[key]=was;};
+  for(const g of groups){try{save(g.key,g.org,await read(g.conduits,true));}catch(e){fail(g.key,g.org,e);}}
+  // Every other committee that might be forwarding gifts to the campaign, from those lists.
+  const {found,skipped}=conduitsToRead(gave,known,limits.found);
+  for(const [cmte,name] of found){
+    const key=`fec:${cmte}`;
+    try{const r=await read([cmte],false);save(key,name||cmte,r);if(entries[key])names[key]=name||cmte;}
+    catch(e){fail(key,name||cmte,e);}
+  }
+  if(skipped.size){
+    capped.push(`${skipped.size} more committee${skipped.size===1?'':'s'} that may forward gifts, past the ${limits.found} read from each cycle's list: ${[...skipped.values()].slice(0,5).join(', ')}${skipped.size>5?' …':''}`);
+    for(const cmte of skipped.keys()){const key=`fec:${cmte}`;if(prev[key])entries[key]=prev[key];}
+  }
+  return {entries,failed,capped,listed,complete:!failed.length&&!capped.length};
+}
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const env=process.env;
@@ -90,57 +170,26 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const get=async u=>{for(let k=0,limited=0;;){await sleep(250);try{requests++;return await requestSource(u,env);}catch(e){
     if((e?.statusCode===429||/429|rate limit/i.test(e?.message||''))&&limited<60){limited++;if(limited===1)console.log('  (the FEC key\'s hourly limit: waiting a minute at a time)');await sleep(60000);continue;}
     if(++k>2)throw e;await sleep(2000*3**k);}}};
-  const readAll=async(url,max=80)=>{const rows=[];for(let page=0;url&&page<max;page++){const d=await get(url);rows.push(...(d.results||[]));url=fecNext(url,d);}return rows;};
-  const before=data.bundled?.people||{},kept=[],names={...(data.bundled?.names||{})};
+  const before=data.bundled?.people||{},kept=[],cut=[],names={...(data.bundled?.names||{})};
   const groups=(data.groupPos||[]).filter(g=>g.conduits?.length),known=new Set(groups.flatMap(g=>g.conduits)),out={};
-  // Who was searched completely (every cycle's list of who gave read, and every group's gifts read): their Earmarks
-  // part isn't marked partial. A run with --only keeps everyone else's as it was.
+  // Who was searched completely (every cycle's list of who gave read in full, and every committee's gifts read in full):
+  // their Earmarks part isn't marked partial. A run with --only keeps everyone else's as it was.
   const complete={...(data.bundled?.listed||{})},incomplete=[];
   let listed=0;
   for(const p of people(data)){
     if(!p.fecCmte)continue;
     if(only&&!only.includes(p.id)){if(before[p.id])out[p.id]=before[p.id];continue;}
-    const failedBefore=kept.length;
-    const cycles=cyclesOf(p).length?cyclesOf(p):[current];
-    // First, who sent the campaign money in each cycle (null when that list couldn't be read).
-    const gave={};
-    for(const cycle of allCycles){
-      try{gave[cycle]=givers(await readAll(recipientURL(p.fecCmte,cycle),5));listed++;}
-      catch(e){gave[cycle]=null;kept.push(`${p.id} · the committees that gave in ${cycle}: ${e.message}`);}
-    }
-    // A committee's disbursements to the campaign are read for a cycle it gave in (every cycle when that list is
-    // missing; the 5 groups always in the current cycle, as before).
-    const read=async(conduits,always)=>{
-      const byCycle={},rows=[];
-      for(const cycle of allCycles){
-        const list=gave[cycle],there=!list||conduits.some(c=>list.some(g=>g.committee===c));
-        if(!there&&!(always&&cycles.includes(cycle)))continue;
-        const got=[];for(const conduit of conduits)got.push(...(await readAll(conduitURL(conduit,p.fecCmte,cycle))).filter(r=>r.recipient_committee_id==null||r.recipient_committee_id===p.fecCmte));
-        const t=conduitTotals(got);if(t.routed>0)byCycle[cycle]={routed:t.routed,n:t.n};
-        if(cycles.includes(cycle))rows.push(...got);
-      }
-      const t=conduitTotals(rows);
-      return Object.keys(byCycle).length?{...t,cycles,byCycle,src:conduitLink(conduits[0],p.fecCmte,cycles.at(-1))}:null;
-    };
-    for(const g of groups){
-      try{const r=await read(g.conduits,true);if(r)(out[p.id]||={})[g.key]=r;}
-      // A read that failed partway would save a partial total (or none), so the earlier saved total is kept instead.
-      catch(e){const prev=before[p.id]?.[g.key];kept.push(`${p.id} · ${g.org}: ${e.message}${prev?` (kept the earlier $${Math.round(prev.routed).toLocaleString()})`:' (none saved before)'}`);if(prev)(out[p.id]||={})[g.key]=prev;}
-    }
-    // Every other committee that might be forwarding gifts to the campaign, from those lists.
-    const found=new Map();for(const list of Object.values(gave))for(const c of maybeConduits(list,known).slice(0,10))if(!found.has(c.committee))found.set(c.committee,c.name);
-    for(const [cmte,name] of found){
-      const key=`fec:${cmte}`;
-      try{const r=await read([cmte],false);if(r){(out[p.id]||={})[key]=r;names[key]=name||cmte;}}
-      catch(e){const prev=before[p.id]?.[key];kept.push(`${p.id} · ${name||cmte}: ${e.message}`);if(prev)(out[p.id]||={})[key]=prev;}
-    }
-    if(kept.length===failedBefore)complete[p.id]=true;else{delete complete[p.id];incomplete.push(p.id);}
+    const r=await searchPerson(p,{get,groups,known,allCycles,current,prev:before[p.id]||{},names});
+    listed+=r.listed;if(Object.keys(r.entries).length)out[p.id]=r.entries;
+    kept.push(...r.failed.map(m=>`${p.id} · ${m}`));cut.push(...r.capped.map(m=>`${p.id} · ${m}`));
+    if(r.complete)complete[p.id]=true;else{delete complete[p.id];incomplete.push(p.id);}
     const mine=out[p.id];if(mine)console.log(`${p.id}: ${Object.entries(mine).map(([k,v])=>`${names[k]||k} $${Math.round(v.routed).toLocaleString()} this cycle (${Object.keys(v.byCycle||{}).length} cycle${Object.keys(v.byCycle||{}).length===1?'':'s'})`).join(', ')}`);
   }
   // A check against the one total researched by hand (Booker through AIPAC's PAC, from Sludge's reading of the filings).
   const hand=people(data).find(p=>p.id==='booker')?.conduit?.rows?.find(r=>r.id==='C00797670');
   if(hand)console.log(`\nCheck: Booker through AIPAC PAC, researched by hand $${hand.amount.toLocaleString()} for ${hand.period}; found $${Math.round(out.booker?.aipac?.routed||0).toLocaleString()} for the whole cycle.`);
   if(kept.length)console.log(`\n${kept.length} read${kept.length===1?'':'s'} failed after three tries:\n  ${kept.slice(0,40).join('\n  ')}${kept.length>40?`\n  …and ${kept.length-40} more`:''}\nRun it again later to fill them in.`);
+  if(cut.length)console.log(`\n${cut.length} search${cut.length===1?'':'es'} stopped at a limit (LIMITS in this script), so those people stay marked partial:\n  ${cut.slice(0,40).join('\n  ')}${cut.length>40?`\n  …and ${cut.length-40} more`:''}`);
   if(incomplete.length)console.log(`\nNot searched completely, so their Earmarks part stays marked partial: ${incomplete.join(', ')}.\nTo finish them: npm run funders:bundled -- --only ${incomplete.join(',')}`);
   // Every group counts as found for everyone only when everyone with a campaign committee was searched completely.
   const discovered=people(data).filter(p=>p.fecCmte).every(p=>complete[p.id]);

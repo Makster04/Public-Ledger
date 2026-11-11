@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {conduitTotals,conduitURL,conduitLink} from '../scripts/build-bundled.mjs';
+import {conduitTotals,conduitURL,conduitLink,readPages,conduitsToRead,searchPerson,LIMITS,recipientURL} from '../scripts/build-bundled.mjs';
 import {personFunders,funderChanges} from '../scripts/build-funders.mjs';
 import {donorLoyalty,voteDonorAlignment} from '../public/influence.js';
 import {groupInfo} from '../public/bills.js';
@@ -58,4 +58,62 @@ test('the Bills page adds up bundled gifts apart from PAC checks and outside spe
     cands:D.cands.map(m=>m.id==='booker'?{...m,funderPos:[{key:'aipac',org:'AIPAC',pac:5000,routed:900000,for:0,against:0,compared:[]}]}:m)};
   assert.ok(p);const g=groupInfo(data,'aipac');assert.ok(g.routed>=900000);assert.ok(g.people>=1);
   assert.ok(groupInfo(D,'aipac').routed>0,'the bundled gifts on file');
+});
+
+// A fake FEC for the earmark search: each cycle's list of who gave to the campaign (numbered pages, as the FEC's totals
+// page), and each committee's payments to it (cursor pages that end with an empty page, as Schedule B does).
+function fakeFec({givers={},payments={},fail=new Set()}={}){
+  const calls=[];
+  const get=async u=>{calls.push(u);const x=new URL(u);
+    if(/by_recipient_id/.test(x.pathname)){const pages=givers[x.searchParams.get('cycle')]||[[]],page=Number(x.searchParams.get('page')||1);
+      return {results:pages[page-1]||[],pagination:{page,pages:pages.length}};}
+    const c=x.searchParams.get('committee_id');if(fail.has(c))throw new Error('HTTP 500');
+    const pages=payments[`${c}:${x.searchParams.get('two_year_transaction_period')}`]||[],i=Number(x.searchParams.get('last_index')||0),rows=pages[i]||[];
+    return {results:rows,pagination:{last_indexes:rows.length?{last_index:String(i+1)}:null}};};
+  return {get,calls};
+}
+const CAMPAIGN='C00000099',AIPAC='C00000001';
+const gift=(amt,date='2026-03-01')=>({disbursement_amount:amt,disbursement_description:'EARMARKED CONTRIBUTION',disbursement_date:date,recipient_committee_id:CAMPAIGN});
+const gave=(id,name,total=50000,count=20)=>({committee_id:id,committee_name:name,total,count});
+const person={id:'x',fecCmte:CAMPAIGN},groups=[{key:'aipac',org:'AIPAC',conduits:[AIPAC]}];
+const search=(fec,o={})=>searchPerson(person,{get:fec.get,groups,known:new Set([AIPAC]),allCycles:[2026],current:2026,...o});
+
+test('a list read up to its page limit says whether the FEC had more, checking the page after a cursor list\'s last',async()=>{
+  const pages=n=>({payments:{[`${AIPAC}:2026`]:Array.from({length:n},(_,i)=>[gift(100+i)])}});
+  const url=conduitURL(AIPAC,CAMPAIGN,2026);
+  const exact=await readPages(fakeFec(pages(3)).get,url,3);
+  assert.equal(exact.capped,false,'exactly the limit: the page after it is empty, so nothing was cut');assert.equal(exact.rows.length,3);
+  const over=await readPages(fakeFec(pages(4)).get,url,3);
+  assert.equal(over.capped,true,'one page more than the limit');assert.equal(over.rows.length,4);
+  const under=fakeFec(pages(2));assert.deepEqual((await readPages(under.get,url,3)).capped,false);assert.equal(under.calls.length,3,'two pages and the empty one after');
+  const list=n=>fakeFec({givers:{2026:Array.from({length:n},(_,i)=>[gave(`C0000010${i}`,`PAC ${i}`,500,1)])}});
+  assert.equal((await readPages(list(5).get,recipientURL(CAMPAIGN,2026),5)).capped,false,'a numbered list of exactly 5 pages');
+  assert.equal((await readPages(list(7).get,recipientURL(CAMPAIGN,2026),5)).capped,true,'7 pages, 5 read');
+});
+
+test('a person is searched completely only when no read failed and no limit cut anything short',async()=>{
+  // Everything fits: complete.
+  const ok=await search(fakeFec({givers:{2026:[[gave(AIPAC,'AIPAC PAC')]]},payments:{[`${AIPAC}:2026`]:[[gift(1000),gift(2000)]]}}));
+  assert.equal(ok.complete,true);assert.equal(ok.entries.aipac.routed,3000);assert.deepEqual([ok.failed,ok.capped],[[],[]]);
+  // A group's payments past the page limit: cut short, so partial; the earlier saved total is kept.
+  const many={givers:{2026:[[gave(AIPAC,'AIPAC PAC')]]},payments:{[`${AIPAC}:2026`]:[[gift(1000)],[gift(1000)],[gift(1000)]]}},limits={...LIMITS,conduit:2};
+  const kept=await search(fakeFec(many),{limits,prev:{aipac:{routed:9999,n:9}}});
+  assert.equal(kept.complete,false);assert.deepEqual(kept.entries.aipac,{routed:9999,n:9});assert.match(kept.capped[0],/AIPAC: more than 200 payments.*kept the earlier \$9,999/);
+  const lower=await search(fakeFec(many),{limits});
+  assert.equal(lower.entries.aipac.partial,true,'nothing saved before: the total read so far, marked as a lower bound');assert.equal(lower.entries.aipac.routed,3000);
+  // More possible conduits than are read from a list: the rest are named, earlier totals for them kept, and it's partial.
+  const others={givers:{2026:[[gave(AIPAC,'AIPAC PAC'),gave('C00000011','Group One',90000),gave('C00000012','Group Two',80000),gave('C00000013','Group Three',70000)]]},
+    payments:{[`${AIPAC}:2026`]:[[gift(500)]],'C00000011:2026':[[gift(700)]],'C00000012:2026':[[gift(300)]]}};
+  const names={},past=await search(fakeFec(others),{limits:{...LIMITS,found:2},names,prev:{'fec:C00000013':{routed:4200,n:3}}});
+  assert.equal(past.complete,false);assert.deepEqual(Object.keys(past.entries).sort(),['aipac','fec:C00000011','fec:C00000012','fec:C00000013']);
+  assert.deepEqual(past.entries['fec:C00000013'],{routed:4200,n:3},'the one past the limit keeps its earlier total');
+  assert.match(past.capped.at(-1),/1 more committee that may forward gifts, past the 2 read.*Group Three/);assert.equal(names['fec:C00000011'],'Group One');
+  assert.deepEqual([...conduitsToRead({2026:[{committee:'C00000011',name:'A',total:20000,count:1,memoTotal:0,memoCount:0},{committee:'C00000012',name:'B',total:500,count:1,memoTotal:0,memoCount:0}]},new Set(),1).skipped.keys()],[],
+    'a committee that gave less than a PAC may give directly is not a possible conduit, so nothing is skipped');
+  // The list of who gave longer than its page limit: some committees may be missing, so partial.
+  const long=await search(fakeFec({givers:{2026:[[gave(AIPAC,'AIPAC PAC')],[gave('C00000021','Small PAC',1000,1)],[gave('C00000022','Small PAC 2',1000,1)]]},payments:{[`${AIPAC}:2026`]:[[gift(100)]]}}),{limits:{...LIMITS,recipients:2}});
+  assert.equal(long.complete,false);assert.match(long.capped[0],/committees that gave in 2026: more than 200/);
+  // A failed read: partial, earlier total kept, as before.
+  const failed=await search(fakeFec({givers:{2026:[[gave(AIPAC,'AIPAC PAC')]]},fail:new Set([AIPAC])}),{prev:{aipac:{routed:5000,n:4}}});
+  assert.equal(failed.complete,false);assert.deepEqual(failed.entries.aipac,{routed:5000,n:4});assert.match(failed.failed[0],/AIPAC: HTTP 500 \(kept the earlier \$5,000\)/);
 });
