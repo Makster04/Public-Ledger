@@ -627,6 +627,10 @@ const gradeHow=()=>`<section class="hc-how" aria-labelledby="hc-how-h"><h2 id="h
     <div><h3>Grade scale</h3>${points([['A','90–100'],['B','80–89'],['C','70–79'],['D','60–69'],['F','Below 60'],['Not graded','Too little evidence yet. It never means zero.']],'small')}<p class="small"><a href="#method">Full rules</a></p></div>
   </div></section>`;
 let homeSort='', homeParty='';
+// The home page's chamber filter: sitting senators (and senators running again), House members, or the challengers and
+// candidates who aren't in office; each choice with how many profiles it holds.
+const inChamber=(s,c)=>!c||(c==='C'?(s.cand&&!s.senInc):((!s.cand||s.senInc)&&s.chamber===c));
+function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
 // ---------- home ----------
 function renderHome(){
@@ -651,13 +655,15 @@ function renderHome(){
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
     <div class="toolbar">
-      <div class="seg" id="chs" role="group" aria-label="Chamber"><button data-c="" class="${homeCh===''?'active':''}">All ${ALL.length+BASIC_LIST.length}</button><button data-c="S" class="${homeCh==='S'?'active':''}">Senators</button><button data-c="H" class="${homeCh==='H'?'active':''}">House</button><button data-c="C" class="${homeCh==='C'?'active':''}">Challengers & candidates</button></div>
       <div class="search"><input id="q" type="search" placeholder="Search by name, state or district" aria-label="Search members"></div>
       <label class="small muted">Sort <select id="hsort" aria-label="Sort candidates"><option value="">Default</option><option value="out">Most outside money</option><option value="camp">Most campaign money</option><option value="name">Name</option></select></label>
     </div>
   </section>
   <div class="directory-heading"><div><div class="page-eyebrow">THE PEOPLE BEHIND THE RECORD</div><h2>Explore profiles</h2></div><span id="profile-count" class="small muted" role="status"></span></div>
+  <div class="directory-filters">
+  <div class="seg chamber-filter" id="chs" role="group" aria-label="Filter profiles by chamber">${chamberChoices().map(([k,l,n])=>`<button data-c="${k}" aria-pressed="${homeCh===k}" class="${homeCh===k?'active':''}">${l} <span class="seg-n">${n}</span></button>`).join('')}</div>
   <div class="seg party-filter" id="hparty" role="group" aria-label="Filter profiles by party">${[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>`<button data-p="${k}" aria-pressed="${homeParty===k}" class="${homeParty===k?'active':''}">${l}</button>`).join('')}</div>
+  </div>
   <div class="grid hc-grid" id="cards"></div>
   <details class="directory-method"><summary>How the three grades work</summary>${gradeHow()}</details>
   <section class="section">
@@ -670,7 +676,7 @@ function renderHome(){
   const cards=$('#cards');
   const draw=q=>{
     q=(q||'').trim().toLowerCase();
-    const list=ALL.concat(BASIC_LIST).filter(s=>(!homeCh||(homeCh==='C'?(s.cand&&!s.senInc):((!s.cand||s.senInc)&&s.chamber===homeCh)))&&(!homeParty||s.party===homeParty)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?'senate candidate open seat':'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
+    const list=ALL.concat(BASIC_LIST).filter(s=>inChamber(s,homeCh)&&(!homeParty||s.party===homeParty)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?'senate candidate open seat':'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
     // Basic profiles have no reviewed money, so they sort after everyone with it.
     const key={out:s=>s.basic?1:-(s.out.for.total+s.out.against.total),camp:s=>s.basic||s.camp.missing?1:-s.camp.receipts,name:s=>s.short+' '+s.name}[homeSort];
     if(key)list.sort((x,y)=>{const a=key(x),b=key(y);return typeof a==='number'?a-b:String(a).localeCompare(String(b))});
@@ -680,7 +686,7 @@ function renderHome(){
   draw('');fillBasic(cards);
   $('#q').addEventListener('input',e=>{draw(e.target.value);fillBasic(cards);});
   const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);});
-  $('#chs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;homeCh=b.dataset.c;$('#chs .active').classList.remove('active');b.classList.add('active');draw($('#q').value);fillBasic(cards);});
+  $('#chs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;homeCh=b.dataset.c;$('#chs').querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});draw($('#q').value);fillBasic(cards);});
   $('#hparty').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;homeParty=b.dataset.p;$('#hparty').querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});draw($('#q').value);fillBasic(cards);});
   fillFeatured();
   for(const host of [cards,$('.hero-side')].filter(Boolean)){
