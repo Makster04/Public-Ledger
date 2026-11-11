@@ -35,10 +35,12 @@ export function seatOrder(list,total,statusOf){
   return seated.slice(0,total);
 }
 
-// One chamber's chart: the SVG, the counts by status (and vacant seats), and the counts by party.
-export function seatChart(list,{total,rows,r0,r1,dot,label,statusOf}){
+// One chamber's chart: the SVG, the counts by status (and vacant seats), and the counts by party. says: what each
+// status means on hover.
+const SAYS={took:'took corporate PAC money this cycle',none:'took no corporate PAC money this cycle',waiting:'not read yet'};
+export function seatChart(list,{total,rows,r0,r1,dot,label,statusOf,says=SAYS}){
   const order=seatOrder(list,total,statusOf),pos=seatLayout(total,rows,r0,r1),W=Math.ceil(r1*2+dot*2+4),H=Math.ceil(r1+dot+4),cx=W/2,cy=r1+dot+2;
-  const say={took:'took corporate PAC money this cycle',none:'took no corporate PAC money this cycle',waiting:'not read yet'};
+  const say={...SAYS,...says};
   const dots=pos.map((p,i)=>{const m=order[i],x=(cx+p.x).toFixed(1),y=(cy+p.y).toFixed(1);
     if(!m)return `<circle cx="${x}" cy="${y}" r="${(dot-0.8).toFixed(1)}" fill="none" stroke="#8b95a5" stroke-width="1.2"><title>Vacant seat</title></circle>`;
     const st=statusOf(m);

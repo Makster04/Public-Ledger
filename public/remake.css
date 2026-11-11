@@ -1237,6 +1237,10 @@ input, select { accent-color: var(--accent); }
 
 /* Who takes corporate PAC money: the House and Senate as seating charts in the home hero (public/seats.js). */
 .seats { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+.seats-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.seats-head .page-eyebrow { margin: 0; }
+.seats-filter select { font: 700 12px ui-monospace, Menlo, Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); background: var(--bg-2, #1b1d21); border: 1px solid var(--line-2); border-radius: 8px; padding: 4px 10px; min-height: 34px; height: auto; cursor: pointer; }
+.seats-filter select:focus-visible { outline: 2px solid var(--ink-2); outline-offset: 2px; }
 .seats-charts { display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap; margin-top: 12px; }
 .seats-charts figure { margin: 0; display: flex; flex-direction: column; align-items: center; min-width: 0; }
 .seats-charts figcaption { font: 700 13px ui-monospace, Menlo, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 6px; }

@@ -661,28 +661,53 @@ const inChamber=(s,c)=>!c||(c==='C'?(s.cand&&!s.senInc):((!s.cand||s.senInc)&&s.
 function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
 // ---------- home ----------
-// Who takes corporate PAC money, as seating charts of the House and the Senate (public/seats.js): each member's status
-// from public/corporate-pacs.json (npm run corporate:pacs); for a member it doesn't cover, from the reviewed PAC lines
-// on file (research.json), else not read yet.
+// Who takes corporate PAC money, or money from one of the Trackers' groups, as seating charts of the House and the
+// Senate (public/seats.js), with a filter by the title. Each member's status from public/corporate-pacs.json (npm run
+// corporate:pacs: every member read from the FEC's bulk files); for a member it doesn't cover, from their profile (the
+// reviewed PAC lines, and for a tracker its Summary of Major Lookouts), else not read yet.
+const SEAT_BY=[['corporate','Corporate PACs'],...TRACKERS.map(t=>[t.key,t.name])];
+let seatBy='corporate';
 function corporateOf(m){
   const e=window.CORP_PACS?.people?.[m.id];if(e)return corporateStatus(e);
   const s=byId[m.id];if(!s?.pac?.rows)return 'waiting';
   return s.pac.rows.some(([i,amt])=>amt>0&&pacTypeOf(DATA,i)?.kind==='corporate')?'took':'none';
 }
-function seatsBlock(){
-  if(!SENATE.length&&!HOUSE.length)return '';
-  const cp=window.CORP_PACS,house=HOUSE.filter(m=>!TERRITORIES.has(m.state));
-  const charts=[house.length&&seatChart(house,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf:corporateOf}),
-    SENATE.length&&seatChart(SENATE,{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf:corporateOf})].filter(Boolean);
+const seatLookouts=new Map();
+function seatStatus(m,by){
+  if(by==='corporate')return corporateOf(m);
+  const cp=window.CORP_PACS;
+  if(cp?.people?.[m.id]){const e=cp.trackers?.[by]?.[m.id];return e&&(Number(e[0])>0||Number(e[2]||0)>0)?'took':'none';}
+  const s=byId[m.id];if(!s||s.basic||s.office)return 'waiting';
+  if(!seatLookouts.has(s.id))seatLookouts.set(s.id,Object.fromEntries(lookouts(lookoutInputs(s,null,'this')).map(x=>[x.key,x.status])));
+  return seatLookouts.get(s.id)[by]||'waiting';
+}
+function seatCharts(by){
+  const t=TRACKER[by],cp=window.CORP_PACS,house=HOUSE.filter(m=>!TERRITORIES.has(m.state));
+  const what=t?`money from ${t.name}`:'corporate PAC money';
+  const says={took:`took ${what} this cycle`,none:`took no ${what} this cycle`};
+  const statusOf=m=>seatStatus(m,by);
+  const charts=[house.length&&seatChart(house,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf,says}),
+    SENATE.length&&seatChart(SENATE,{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf,says})].filter(Boolean);
   const dot=k=>`<i class="seats-dot" style="background:${SEAT_COLORS[k]}"></i>`,party={D:'Democrats',I:'Independents',R:'Republicans'};
   const legend=c=>[c.took&&`<span>${dot('took')}${c.took} took</span>`,c.none&&`<span>${dot('none')}${c.none} none</span>`,c.waiting&&`<span>${dot('waiting')}${c.waiting} not read yet</span>`,c.vacant&&`<span><i class="seats-dot seats-vacant"></i>${c.vacant} vacant</span>`].filter(Boolean).join('');
-  const any=charts.some(x=>x.counts.waiting);
-  const said=cp?`PAC checks from groups a corporation sponsors, ${cp.cycle-1}–${cp.cycle}, from the FEC's bulk files${cp.through?` (through ${fmtDate(cp.through)})`:''}`:'PAC checks from groups a corporation sponsors, this cycle. The FEC bulk files haven\'t been read yet (npm run corporate:pacs), so only the reviewed profiles are colored';
-  return `<section class="seats" aria-labelledby="seats-h"><div class="page-eyebrow" id="seats-h">WHO TAKES CORPORATE PAC MONEY</div>
-    <div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
-      <p class="sr-only">${x.label}: ${x.counts.took} took corporate PAC money, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
-    <p class="seats-note">${dot('took')}Took corporate PAC money · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat. ${said}. Democrats on the left, Republicans on the right; each dot opens their profile.</p></section>`;
+  const any=charts.some(x=>x.counts.waiting),cyc=cp?`${cp.cycle-1}–${cp.cycle}`:'this cycle',thru=cp?.through?` (through ${fmtDate(cp.through)})`:'';
+  const counted=!t?'PAC checks from groups a corporation sponsors'
+    :t.routed.length?`Checks from ${t.name}'s PAC${cp&&!cp.routed?.[by]?'':`, and the gifts ${t.name} collected from donors and passed on to the campaign`}`
+    :`Checks from the PACs of ${t.name}'s companies and groups (its Tracker's list)`;
+  const said=cp?`${counted}, ${cyc}, from the FEC${thru}${t&&t.routed.length&&!cp.routed?.[by]?`. The gifts ${t.name} passed on aren't counted yet (they need the FEC key in .dev.vars)`:''}`
+    :`${counted}, this cycle. The FEC's files haven't been read yet (npm run corporate:pacs), so only the full profiles are colored`;
+  return `<div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
+      <p class="sr-only">${x.label}: ${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
+    <p class="seats-note">${dot('took')}Took ${esc(what)} · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat. ${esc(said)}. Democrats on the left, Republicans on the right; each dot opens their profile.</p>`;
 }
+function seatsBlock(){
+  if(!SENATE.length&&!HOUSE.length)return '';
+  return `<section class="seats" aria-labelledby="seats-h"><div class="seats-head"><div class="page-eyebrow" id="seats-h">WHO TAKES MONEY FROM</div>
+    <label class="seats-filter"><span class="sr-only">Whose money</span><select id="seats-by">${SEAT_BY.map(([k,n])=>`<option value="${k}"${k===seatBy?' selected':''}>${esc(n)}</option>`).join('')}</select></label></div>
+    <div id="seats-body" aria-live="polite">${seatCharts(seatBy)}</div></section>`;
+}
+document.addEventListener('change',e=>{if(e.target?.id!=='seats-by')return;seatBy=e.target.value;const b=document.getElementById('seats-body');if(b)b.innerHTML=seatCharts(seatBy);});
+
 function renderHome(){
   const nS=ALL.filter(s=>s.chamber==='S'&&(!s.cand||s.senInc)).length, nH=MEM.filter(s=>s.chamber==='H').length, nC=CANDS.filter(s=>!s.senInc).length, nComp=DATA.races.filter(r=>r.chamber==='S'&&r.competitive).length;
   app.innerHTML=`
