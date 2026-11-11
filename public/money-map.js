@@ -107,6 +107,13 @@ export function mapSVG(m){
   return out.join('');
 }
 
+// A long list shows its first SHOW_FIRST items (they come largest first), with the rest behind "Show all" under them.
+// items: each item's HTML; wrap: the list's container for a run of them; noun: what the items are, for the toggle.
+export const SHOW_FIRST=10;
+export function showFirst(items,wrap,noun){
+  if(items.length<=SHOW_FIRST)return wrap(items.join(''));
+  return wrap(items.slice(0,SHOW_FIRST).join(''))+`<details class="mm-more"><summary><span class="mm-more-all">Show all ${items.length} ${esc(noun)}</span><span class="mm-more-less">Show fewer</span></summary>${wrap(items.slice(SHOW_FIRST).join(''))}</details>`;
+}
 // The whole section: the diagram, its key, the numbers behind it, the PACs by kind and the bundled gifts.
 export function moneyMapBlock(s,opts={}){
   const m=moneyMap(s,opts);if(!m)return '';
@@ -116,10 +123,10 @@ export function moneyMapBlock(s,opts={}){
     +(m.side.length?`<thead><tr><th>Outside spending</th><th class="r">Amount</th><th></th></tr></thead><tbody>${m.side.map(n=>row('',n.label,n.a)).join('')}</tbody>`:'');
   const maxK=Math.max(1,...m.pacKinds.map(x=>x.a));
   const kinds=m.pacKinds.length?`<p class="small muted">From the PAC lines in the campaign's reports for ${esc(m.pacWindow||'the period on file')}: ${short$(m.pacRead)} read, of the ${short$(m.ins.find(n=>n.k==='pac')?.a||0)} the FEC counts for the whole period.</p>
-    <div class="mm-bars">${m.pacKinds.map(x=>`<details class="mm-kind"><summary class="mm-bar"><span>${esc(x.label)}</span><span class="mm-track"><span style="width:${(x.a/maxK*100).toFixed(1)}%"></span></span><span class="num">${short$(x.a)}</span><span class="mm-chev" aria-hidden="true"></span></summary>${x.pacs.length?`<ul class="mm-pacs">${x.pacs.map(p=>`<li><span>${esc(p.name)}</span><span class="num">${full$(p.a)}${p.n>1?` <span class="muted">· ${p.n} gifts</span>`:''}</span></li>`).join('')}</ul>`:'<p class="small muted">The PACs aren\'t listed for this kind.</p>'}</details>`).join('')}</div>
+    ${showFirst(m.pacKinds.map(x=>`<details class="mm-kind"><summary class="mm-bar"><span>${esc(x.label)}</span><span class="mm-track"><span style="width:${(x.a/maxK*100).toFixed(1)}%"></span></span><span class="num">${short$(x.a)}</span><span class="mm-chev" aria-hidden="true"></span></summary>${x.pacs.length?showFirst(x.pacs.map(p=>`<li><span>${esc(p.name)}</span><span class="num">${full$(p.a)}${p.n>1?` <span class="muted">· ${p.n} gifts</span>`:''}</span></li>`),h=>`<ul class="mm-pacs">${h}</ul>`,'PACs'):'<p class="small muted">The PACs aren\'t listed for this kind.</p>'}</details>`),h=>`<div class="mm-bars">${h}</div>`,'kinds')}
     <p class="small muted">Open a kind to see its PACs.</p>`:'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
   const corpTotal=m.corporate.reduce((t,p)=>t+p.a,0);
-  const corporate=`<div class="mm-panel mm-corp" id="f-corporate"><h3>Corporate PAC donors</h3>${m.corporate.length?`<p class="mm-corp-sum"><b class="num">${full$(corpTotal)}</b> from ${m.corporate.length} corporate PAC${m.corporate.length===1?'':'s'}</p><ul class="mm-pacs mm-corp-list">${m.corporate.map(p=>`<li><span><i class="mm-badge" aria-hidden="true">${esc(initials(p.name))}</i>${esc(p.name)}</span><span class="num">${full$(p.a)}</span></li>`).join('')}</ul><p class="small muted">PACs the FEC records as sponsored by a corporation, from the lines read.</p>`:m.pacRead?'<p class="small">None of the PAC lines read are from corporate PACs.</p>':'<p class="small muted">No PAC lines read yet.</p>'}</div>`;
+  const corporate=`<div class="mm-panel mm-corp" id="f-corporate"><h3>Corporate PAC donors</h3>${m.corporate.length?`<p class="mm-corp-sum"><b class="num">${full$(corpTotal)}</b> from ${m.corporate.length} corporate PAC${m.corporate.length===1?'':'s'}</p>${showFirst(m.corporate.map(p=>`<li><span><i class="mm-badge" aria-hidden="true">${esc(initials(p.name))}</i>${esc(p.name)}</span><span class="num">${full$(p.a)}</span></li>`),h=>`<ul class="mm-pacs mm-corp-list">${h}</ul>`,'corporate PACs')}<p class="small muted">PACs the FEC records as sponsored by a corporation, from the lines read.</p>`:m.pacRead?'<p class="small">None of the PAC lines read are from corporate PACs.</p>':'<p class="small muted">No PAC lines read yet.</p>'}</div>`;
   const bundled=m.bundled.length?`<div class="mm-panel"><h3>Bundled through groups</h3><p class="small muted">Gifts from individuals that a group collected and passed on. They are part of the donor money above, not extra money.</p><ul class="list small">${m.bundled.map(b=>`<li><b>${esc(b.who)}</b> passed on ${full$(b.routed)}${b.n?` from ${b.n.toLocaleString('en-US')} gifts`:''}${b.src?` · <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</li>`).join('')}</ul></div>`:'';
   return `<section class="mm" id="f-map">
     <h2>Money map</h2>

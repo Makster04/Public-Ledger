@@ -996,6 +996,17 @@ input, select { accent-color: var(--accent); }
 .legislation-source { font-size: .84rem; margin-left: 0; width: auto; margin-top: 0; }
 .legislation-note { font-size: .8rem; color: var(--muted); margin: 10px 0 0; }
 .mm-kind > summary { list-style: none; cursor: pointer; }
+.mm-more { margin: 0 0 10px; }
+.mm-more > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 6px 0 2px; font-size: .82rem; font-weight: 600; color: var(--ink-2); }
+.mm-more > summary::-webkit-details-marker { display: none; }
+.mm-more > summary::after { content: "⌄"; color: var(--muted); }
+.mm-more[open] > summary::after { content: "⌃"; }
+.mm-more > summary:hover { color: var(--ink); }
+.mm-more > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.mm-more .mm-more-less, .mm-more[open] .mm-more-all { display: none; }
+.mm-more[open] .mm-more-less { display: inline; }
+.mm-more > .mm-pacs { margin-top: 0; }
+.mm-more > .mm-bars { margin-top: 6px; }
 .mm-kind > summary::-webkit-details-marker { display: none; }
 .mm-kind .mm-chev::after { content: "⌄"; color: var(--muted); }
 .mm-kind[open] .mm-chev::after { content: "⌃"; }
