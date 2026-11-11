@@ -892,6 +892,12 @@ function ratingGroups(s){
   return by;
 }
 const leanPos=v=>((Math.max(-100,Math.min(100,v))+100)/2).toFixed(1);
+// The Ideology number in the color of its place on the bar (.st-scale-bar: the Democratic blue at −100, the Republican red
+// at +100): the same share of blue or red the bar has there, blended with the light text gray instead of the bar's dark
+// middle, so a moderate number stays readable. A position, not a grade: no grade colors.
+const leanColor=v=>{if(v==null||!Number.isFinite(Number(v)))return '';const n=Math.max(-100,Math.min(100,Number(v)));
+  return n===0?'var(--ink-2)':`color-mix(in oklab, var(${n<0?'--dem':'--rep'}) ${Math.abs(n)}%, var(--ink-2))`;};
+const leanStyle=v=>{const c=leanColor(v);return c?` style="color:${c}"`:'';};
 // What the probe found about a group without a reader yet (scripts/collect-ratings.mjs, PROBED).
 const RATING_WHY={blocked:'its site turns scripts away',none:'no congressional scorecard found',states:'rates states, not members of Congress',
   'no-list':'grades are announced one at a time, not published as a list',permission:'waiting on their permission',
@@ -933,7 +939,7 @@ function paneIdeology(s,pane){
   const noSide=Object.entries(byIssue).flatMap(([i,v])=>v.none.map(x=>`${ratingCell(s,x.g.org)} <span class="muted small">(${esc(i)})</span>`));
   const ratings=stTable(['Issue','Conservative side','Liberal side'],issues.map(i=>[esc(i),cells(byIssue[i].conservative),cells(byIssue[i].liberal)]),'st-pairs',[])
     +(noSide.length?`<p class="small muted">On neither side (shown, not counted in the Ratings lean): ${noSide.join(' · ')}</p>`:'');
-  const position=`<div class="st-ideo-pos"><div class="st-ideo-n">${x.lean==null?'<b>Not placed yet</b>':`<b>${signed(x.lean)}</b><span>${esc(x.label)}</span>`}</div>${leanScale(s,x)}${x.lean==null?`<p class="small">${esc(x.why)}.</p>`:''}</div>`;
+  const position=`<div class="st-ideo-pos"><div class="st-ideo-n">${x.lean==null?'<b>Not placed yet</b>':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b><span>${esc(x.label)}</span>`}</div>${leanScale(s,x)}${x.lean==null?`<p class="small">${esc(x.why)}.</p>`:''}</div>`;
   const checks=`<div class="st-checks"><div class="st-check"><h4>DW-NOMINATE <span class="muted small">(Voteview)</span></h4>${x.dw==null?'<p class="small muted">No score: it covers members of Congress, from their roll-call votes.</p>':`<div class="st-check-n">${s.ideo.dim1.toFixed(3)} → <b>${signed(x.dw)}</b></div><p class="small muted">Their career score, on the same scale. It rarely passes ±80, so it reads closer to the middle than the issue leans.</p>`}</div>
     <div class="st-check"><h4>Ratings lean</h4>${x.ratings.lean==null?'<p class="small muted">Not read yet: the groups\' scorecards are read from their own sites once a year.</p>':`<div class="st-check-n"><b>${signed(x.ratings.lean)}</b></div>`}</div></div>`;
   const measures=stTable(['Measure','Lean','Based on'],[['Issue leans (overall)',x.lean==null?'—':`<b>${signed(x.lean)}</b>`,`${x.scored} left–right issue${x.scored===1?'':'s'}`],['Ratings lean',x.ratings.lean==null?'<span class="muted">not read yet</span>':`<b>${signed(x.ratings.lean)}</b>`,`${x.ratings.rows.length} group rating${x.ratings.rows.length===1?'':'s'}`],['DW-NOMINATE',x.dw==null?'—':`<b>${signed(x.dw)}</b>`,'Voteview, career']],'st-measures');
@@ -1505,7 +1511,7 @@ function fillSixTile(tile,x){
 function sixTiles(s,links){
   const x=sixOf(s),h=k=>links?`#${s.id}-${k}`:'',i=x.ideology;
   const tip=k=>SIX_BY[k].q;
-  const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean">${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
+  const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean"${leanStyle(i.lean)}>${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
   const tile=(k,res,detail,empty='Not graded yet')=>{const t=links?'a':'div',g=res?.pct==null?null:letter(Math.min(100,res.pct));
     return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${res.pct}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
@@ -3507,7 +3513,7 @@ function scoresGrade(host,key,note){
 function scoresLean(host){
   const rows=ALL.map(s=>({s,x:sixOf(s).ideology})).sort((a,b)=>(a.x.lean??999)-(b.x.lean??999)||a.s.name.localeCompare(b.s.name));
   host.innerHTML=`<div class="chart"><h3>From most liberal to most conservative</h3><div class="sub">The overall lean from each record, −100 to +100. A position, not a grade. ${rows.filter(r=>r.x.lean!=null).length} of ${ALL.length} have enough issues to place.</div>
-    ${tableView(['Name','Lean','Issues','DW-NOMINATE'],rows.map(({s,x})=>[`<a href="#${s.id}-ideology">${esc(s.name)}</a>`,x.lean==null?'Not placed yet':`${signed(x.lean)} · ${esc(x.label)}`,x.scored,x.dw==null?'—':signed(x.dw)]))}</div><div id="sc-dw"></div>`;
+    ${tableView(['Name','Lean','Issues','DW-NOMINATE'],rows.map(({s,x})=>[`<a href="#${s.id}-ideology">${esc(s.name)}</a>`,x.lean==null?'Not placed yet':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b> · ${esc(x.label)}`,x.scored,x.dw==null?'—':signed(x.dw)]))}</div><div id="sc-dw"></div>`;
   scoresIdeology(host.querySelector('#sc-dw'));
 }
 // Big Money Independence reads each person's financial disclosure from the official records, so it is graded on the profile.
