@@ -163,3 +163,26 @@ test('an annual report\'s transactions table ("Transaction Type") is read, and a
   assert.match(text,/CHECK\s+ossoff\/annual-2024\.html: Senate report table changed/);
   assert.match(text,/OK\s+ossoff\/annual-2025\.html/);assert.match(text,/OK\s+ossoff\/ptr\.html/);
 });
+
+test('an annual report that mentions trade reports is still an annual report, and a re-import takes out trades misread from one',async()=>{
+  const AN_ID='9f8e7d6c-1111-2222-3333-444455556666';
+  const tx=`<p>Transactions are also reported on a Periodic Transaction Report.</p><table><thead><tr><th>#</th><th>Owner</th><th>Ticker</th><th>Asset Name</th><th>Transaction Type</th><th>Transaction Date</th><th>Amount</th></tr></thead>
+<tbody><tr><td>1</td><td>Self</td><td>AAPL</td><td>Apple Inc.</td><td>Sale (Full)</td><td>03/04/2025</td><td>$1,001 - $15,000</td></tr></tbody></table>`;
+  const page=(url=true)=>`${url?`<!-- saved from url=(0092)https://efdsearch.senate.gov/search/view/annual/${AN_ID}/ -->\n`:''}`+annual(2025).replace('</body>',tx+'</body>');
+  assert.equal(efdSavedReport(page()).kind,'annual','its eFD address says annual');
+  assert.equal(efdSavedReport(page(false)).kind,'annual','no address: its title, the first report name on the page');
+  assert.equal(efdSavedReport(ptr()).kind,'ptr');
+  // Saved before: the annual report's transaction imported as a trade (as the earlier import did).
+  const d=db(),now=new Date('2026-11-11T12:00:00Z');
+  await importEfd({dir:folder({'ossoff/ptr.html':ptr()}),db:d,now});
+  const before=await snap(d,'trades-senate:ossoff');
+  const bad={...before,rows:[...before.rows,{id:`Senate eFD:${AN_ID}:1`,doc:AN_ID,traded:'2025-03-04',type:'Sale (Full)',ticker:'AAPL',official:true}]};
+  await statement(d,'UPDATE snapshots SET payload=? WHERE job_id=?',JSON.stringify(bad),'trades-senate:ossoff').run();
+  const r=await importEfd({dir:folder({'ossoff/ptr.html':ptr(),'ossoff/annual.html':page()}),db:d,now});
+  const after=await snap(d,'trades-senate:ossoff');
+  assert.ok(!after.rows.some(x=>x.doc===AN_ID),'the annual report\'s transactions are no longer trades');
+  assert.equal(after.count,2,'the trade report\'s two trades');
+  assert.match(r.summary.join('\n'),/annual reports read as trade reports before were taken out/);
+  assert.match(r.lines.join('\n'),/annual report for 2025, 2 assets, 1 debts, 0 income, 0 positions, 0 agreements, 0 gifts, 0 trips/);
+  assert.ok((await snap(d,'net-worth-senate:ossoff')).year===2025,'and it is imported as the annual report');
+});
