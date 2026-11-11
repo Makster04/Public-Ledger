@@ -2,7 +2,7 @@ import {mountRankings,mountStocks} from './explore-finance.js';
 import {mountConsistency} from './consistency.js';
 import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
-import {openScorecard} from './scorecard.js';
+import {openScorecard,fundingParts} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
@@ -837,8 +837,14 @@ function bindProfileActions(s,pane){
     // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
     const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
     const u=s.basic?null:s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
+    // The funding overview: where the money came from, and the five trackers as the profile's Summary of Major Lookouts
+    // shows them this cycle, with their super PACs' spending (the refresh's records, else the file's).
+    const sp=s.basic||s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
+    const inp=s.basic||s.office?null:lookoutInputs(s,d,'this',sp||undefined);
     const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
-      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null};
+      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null,
+      funding:c?fundingParts(c,d?.sizes):null,
+      trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
     openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
