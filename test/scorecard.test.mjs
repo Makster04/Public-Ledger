@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {renderScorecardSvg} from '../public/scorecard.js';
+import {renderScorecardSvg,fundingParts} from '../public/scorecard.js';
 
 const model={id:'booker',name:'Cory Booker',party:'D',office:'U.S. Senate',state:'New Jersey',raised:18869341.39,cash:23060940.12,period:'Jan 2025–Jun 2026',reviewedAt:'Oct 2, 2026',matchConfigured:false,grades:[{label:'Keeps Their Word',value:null},{label:'Shows Up',value:67,detail:'From roll calls'},{label:'Big Money Independence',value:null},{label:'Plays by the Rules',value:null},{label:'People First',value:100}]};
 const tag=(t,attrs='')=>new RegExp(`${attrs}[^>]*><tspan[^>]*>${t}</tspan>`);
@@ -46,11 +46,11 @@ test('six money boxes: raised, cash on hand and spent, then net worth, stocks he
   for(const t of ['RAISED','CASH ON HAND','SPENT','NET WORTH','STOCKS HELD','STOCK TRADES','\\$12\\.50M','\\$1\\.15M–','\\$5\\.35M','~\\$250K','2025 annual report','2 stocks or options','Jan 2025 – Jun 2026','as of Jun 30, 2026'])assert.match(svg,tag(t));
   assert.match(svg,tag('Not read yet','fill="#b9b3a6"'),'a number not read yet is gray');
   assert.match(svg,/<desc[^>]*>Raised \$18\.87M, cash on hand \$23\.06M, spent \$12\.50M\. Net worth \$1\.15M–\$5\.35M, Stocks held ~\$250K, Stock trades Not read yet\./);
-  const boxes=[...svg.matchAll(/<rect x="([\d.]+)" y="(622|824)" width="([\d.]+)" height="186"/g)];
+  const boxes=[...svg.matchAll(/<rect x="([\d.]+)" y="(568|739)" width="([\d.]+)" height="155"/g)];
   assert.equal(boxes.length,6);assert.ok(boxes.every(b=>+b[1]>=416),'beside the checklist');
   // A president (no disclosures here): three boxes. A basic profile (no checklist): the boxes take the whole width.
-  assert.equal([...renderScorecardSvg({...model,lists}).matchAll(/height="186"/g)].length,3);
-  const basic=renderScorecardSvg({...model,wealth});assert.match(basic,/<rect x="28" y="622" width="[\d.]+" height="186"/);assert.doesNotMatch(basic,/BONUSES/);
+  assert.equal([...renderScorecardSvg({...model,lists}).matchAll(/height="155"/g)].length,3);
+  const basic=renderScorecardSvg({...model,wealth});assert.match(basic,/<rect x="28" y="568" width="[\d.]+" height="155"/);assert.doesNotMatch(basic,/BONUSES/);
 });
 
 test('bonuses and pledges and bills as a checklist: a mark for each, no points, no reasons',()=>{
@@ -72,4 +72,37 @@ test('a long name gets smaller, then two lines, inside its box; a card with more
   const h=+tall.match(/height="(\d+)"/)[1];assert.ok(h>1250,'the card grows');assert.match(tall,new RegExp(`<rect x="0" y="${h-54}" width="1000" height="54"`));
   const unreviewed=renderScorecardSvg({...model,reviewedAt:'Research not reviewed'});
   assert.match(unreviewed,/>Research not reviewed yet\. Based on/);assert.doesNotMatch(unreviewed,/Research snapshot: Research/);
+});
+
+const camp={receipts:22465217.83,indiv:15299978.61,pac:1593453.75,transfers:5371811.34,party:62000,candidate:0,self:0,other:137974.13};
+const sizes={brackets:[{total:4000000},{total:1000000},{total:1500000},{total:3000000},{total:5500000}],notSorted:299978.61};
+
+test('the funding overview\'s parts: each source\'s share, the rest as other, and the individuals\' money by gift size',()=>{
+  const f=fundingParts(camp,sizes);
+  assert.equal(f.total,22465217.83);
+  assert.deepEqual(f.parts.map(p=>[p.key,Math.round(p.share*1000)/10]),[['indiv',68.1],['pac',7.1],['transfers',23.9],['party',0.3],['self',0],['other',0.6]]);
+  assert.deepEqual(f.sizes.map(z=>z.label),['$200 & under','$200–499','$500–999','$1K–1,999','$2K+','not sorted yet']);
+  assert.ok(Math.abs(f.sizes.reduce((t,z)=>t+z.share,0)-1)<1e-9);
+  assert.equal(fundingParts(camp).sizes,null,'gift sizes not read yet');
+  assert.equal(fundingParts({receipts:5000000,cash:100}),null,'a total without its split by source (a basic profile) shows nothing');
+  assert.equal(fundingParts(null),null);assert.equal(fundingParts({receipts:0,indiv:0}),null);
+});
+
+const trackers=[{key:'aipac',name:'AIPAC',status:'took',total:3358020,superPac:{for:0,against:1250000}},{key:'pharma',name:'Big Pharma',status:'took',total:9500,superPac:null},
+  {key:'oil',name:'Big Oil',status:'none',total:0,superPac:null},{key:'tech',name:'Big Tech + AI',status:'took',total:12500,superPac:{for:400000,against:0}},{key:'crypto',name:'Crypto',status:'waiting',total:0,superPac:null}];
+
+test('the funding overview on the card: the shares, a donut, the total, and the five trackers, and the card stays 4:5',()=>{
+  const svg=renderScorecardSvg({...model,receipts:undefined,raised:camp.receipts,period:'Jan 1, 2025 – Oct 14, 2026',spent:22351644,wealth,lists,funding:fundingParts(camp,sizes),trackers});
+  assert.match(svg,/width="1000" height="1250"/);
+  for(const t of ['FUNDING OVERVIEW','68% INDIVIDUALS','7% PACS','24% TRANSFERS','&lt;1% PARTY','0% SELF-FUNDING','1% OTHER','\\$200 &amp; under 26%','\\$2K\\+ 36%','\\$22\\.47M','RAISED'])assert.match(svg,tag(t));
+  assert.match(svg,tag('WHERE THE \\$22\\.47M CAME FROM · Jan 2025 – Oct 2026 · FEC'));
+  assert.equal([...svg.matchAll(/<path d="M[^"]+A[^"]+Z" fill="#[0-9a-f]{6}" stroke="#121519" stroke-width="2"/g)].length,10,'a ring piece for each gift size and each other source with money');
+  // The trackers: ✕ took some, ✓ none, ? not read yet; super PAC spending under them; no evidence box, its words in the strip.
+  for(const t of ['MAJOR LOOKOUTS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE','AIPAC','\\$3\\.36M','\\$9,500','\\$0','\\$12,500','NOT READ YET','SUPER PAC: \\$1\\.25M AGAINST','SUPER PAC: \\$400,000 FOR'])assert.match(svg,tag(t));
+  assert.match(svg,tag('\\$3\\.36M','fill="#ff8a8a"'));assert.match(svg,tag('\\$0','fill="#5fe39a"'));
+  assert.doesNotMatch(svg,/SEE THE EVIDENCE/);assert.match(svg,tag('PUBLIC LEDGER · RESEARCH SNAPSHOT: OCT 2, 2026'));assert.match(svg,tag('A GRADE IS NOT A CLEARANCE\\. MISSING DATA IS NOT ZERO\\.'));
+  const noSizes=renderScorecardSvg({...model,funding:fundingParts(camp),trackers});assert.match(noSizes,tag('GIFT SIZES NOT READ YET'));
+  assert.equal([...noSizes.matchAll(/stroke="#121519" stroke-width="2" fill-rule/g)].length,5,'individuals in one piece');
+  // Without a campaign total (or its split), the evidence box as before.
+  const none=renderScorecardSvg({...model,trackers});assert.match(none,tag('SEE THE EVIDENCE, NOT JUST THE LETTER\\.'));assert.doesNotMatch(none,/FUNDING OVERVIEW|MAJOR LOOKOUTS/);
 });
