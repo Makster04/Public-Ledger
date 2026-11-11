@@ -3,6 +3,7 @@ import {mountConsistency} from './consistency.js';
 import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard,fundingParts} from './scorecard.js';
+import {seatChart,corporateStatus,TERRITORIES,SEAT_COLORS} from './seats.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
@@ -660,6 +661,28 @@ const inChamber=(s,c)=>!c||(c==='C'?(s.cand&&!s.senInc):((!s.cand||s.senInc)&&s.
 function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
 // ---------- home ----------
+// Who takes corporate PAC money, as seating charts of the House and the Senate (public/seats.js): each member's status
+// from public/corporate-pacs.json (npm run corporate:pacs); for a member it doesn't cover, from the reviewed PAC lines
+// on file (research.json), else not read yet.
+function corporateOf(m){
+  const e=window.CORP_PACS?.people?.[m.id];if(e)return corporateStatus(e);
+  const s=byId[m.id];if(!s?.pac?.rows)return 'waiting';
+  return s.pac.rows.some(([i,amt])=>amt>0&&pacTypeOf(DATA,i)?.kind==='corporate')?'took':'none';
+}
+function seatsBlock(){
+  if(!SENATE.length&&!HOUSE.length)return '';
+  const cp=window.CORP_PACS,house=HOUSE.filter(m=>!TERRITORIES.has(m.state));
+  const charts=[house.length&&seatChart(house,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf:corporateOf}),
+    SENATE.length&&seatChart(SENATE,{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf:corporateOf})].filter(Boolean);
+  const dot=k=>`<i class="seats-dot" style="background:${SEAT_COLORS[k]}"></i>`,party={D:'Democrats',I:'Independents',R:'Republicans'};
+  const legend=c=>[c.took&&`<span>${dot('took')}${c.took} took</span>`,c.none&&`<span>${dot('none')}${c.none} none</span>`,c.waiting&&`<span>${dot('waiting')}${c.waiting} not read yet</span>`,c.vacant&&`<span><i class="seats-dot seats-vacant"></i>${c.vacant} vacant</span>`].filter(Boolean).join('');
+  const any=charts.some(x=>x.counts.waiting);
+  const said=cp?`PAC checks from groups a corporation sponsors, ${cp.cycle-1}–${cp.cycle}, from the FEC's bulk files${cp.through?` (through ${fmtDate(cp.through)})`:''}`:'PAC checks from groups a corporation sponsors, this cycle. The FEC bulk files haven\'t been read yet (npm run corporate:pacs), so only the reviewed profiles are colored';
+  return `<section class="seats" aria-labelledby="seats-h"><div class="page-eyebrow" id="seats-h">WHO TAKES CORPORATE PAC MONEY</div>
+    <div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
+      <p class="sr-only">${x.label}: ${x.counts.took} took corporate PAC money, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
+    <p class="seats-note">${dot('took')}Took corporate PAC money · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat. ${said}. Democrats on the left, Republicans on the right; each dot opens their profile.</p></section>`;
+}
 function renderHome(){
   const nS=ALL.filter(s=>s.chamber==='S'&&(!s.cand||s.senInc)).length, nH=MEM.filter(s=>s.chamber==='H').length, nC=CANDS.filter(s=>!s.senInc).length, nComp=DATA.races.filter(r=>r.chamber==='S'&&r.competitive).length;
   app.innerHTML=`
@@ -679,6 +702,7 @@ function renderHome(){
       ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
       SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`],
       HOUSE.length&&['Every House member',`<a href="#house">All ${HOUSE.length} members of the House</a>, the same way.`]],'lede-pts')}</details>
+    ${seatsBlock()}
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
     <div class="toolbar">
