@@ -1101,3 +1101,42 @@ input, select { accent-color: var(--accent); }
 @media (max-width: 640px) { .tk-label span { display: none; } .tk-label { padding-right: 0; border-right: 0; } .tk-all { display: none; } .ticker { font-size: .8rem; } .ticker > .wrap { gap: 10px; } }
 @media (prefers-reduced-motion: reduce) { .tk-track { animation: none; } .tk-set[aria-hidden="true"] { display: none; } .tk-view { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .tk-dot { animation: none; } }
 @media print { .ticker { display: none !important; } }
+
+/* Net worth, stocks held and trades over time (Unbought tab; public/wealth-timeline.js, charts.js). */
+.wt-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 12px 0 14px; }
+.wt-stat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 10px 12px; min-width: 0; }
+.wt-stat .l, .wt-stat .d { color: var(--muted); font-size: .78rem; }
+.wt-stat .v { font: 700 1.08rem var(--font-display); letter-spacing: -.02em; margin-top: 2px; }
+.wt-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.wt-panel { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 14px 14px 8px; min-width: 0; }
+.wt-panel h5 { font: 700 .95rem var(--font-display); letter-spacing: -.02em; margin: 0; color: var(--ink); }
+.wt-panel > .small { margin: 2px 0 6px; }
+.wt-strip { margin-top: 14px; }
+.wt-axes { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 14px; font-size: .76rem; font-weight: 600; color: var(--ink-2); margin: 4px 0 0; }
+.wt-strip .wt-axes { justify-content: flex-start; }
+.wt-axes span { display: inline-flex; align-items: center; gap: 6px; }
+.wt-sw-bar { width: 9px; height: 14px; border-radius: 3px; background: var(--s1); }
+.wt-sw-line { width: 18px; height: 2px; background: var(--s4); position: relative; }
+.wt-sw-line::after { content: ""; position: absolute; left: 5px; top: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--s4); }
+.wt-sw-col { width: 7px; height: 12px; border-radius: 2px 2px 0 0; }
+.wt-sw-col.buy, .wt-sw-dot.buy { background: var(--s3); }
+.wt-sw-col.sell, .wt-sw-dot.sell { background: var(--s2); }
+.wt-sw-dot { width: 10px; height: 10px; border-radius: 50%; }
+.wt-sw-ring { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--crit); }
+.cx-hit { fill: transparent; }
+.cx-hit:hover, .cx-hit:focus { fill: rgba(255, 255, 255, .045); outline: none; }
+.cx-line { fill: none; stroke: var(--s4); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.wt-panel .cx-dot { stroke: var(--surface-2); }
+.cx-dot.held { fill: var(--s4); stroke: var(--surface-2); pointer-events: none; }
+.wt-panel .cx-dot.late-ring { stroke: var(--crit); }
+.cx-gapbox { fill: none; stroke: var(--line-2); stroke-dasharray: 3 3; }
+.cx-open { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+#u-timeline .tv { margin-top: 12px; }
+@media (max-width: 860px) { .wt-pair { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .wt-stats { grid-template-columns: 1fr; gap: 8px; }
+  .wt-stat { display: grid; grid-template-columns: 1fr auto; column-gap: 10px; align-items: baseline; }
+  .wt-stat .v { text-align: right; margin: 0; font-size: 1rem; }
+  .wt-stat .d { grid-column: 1 / -1; }
+  .wt-panel { padding: 12px 10px 6px; }
+}
