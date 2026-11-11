@@ -12,7 +12,7 @@ The Integrity grade is retired and split into separate grades, and Your Match be
 | 2 | **Keeps Their Word** | How often they did what they promised |
 | 3 | **Shows Up** | Whether they vote and get their bills moving |
 | 4 | **Big Money Independence** | How independent their money is from special interests |
-| 5 | **Above Board** | Whether their money is tied to their office, whether they file on time, and whether they're in legal trouble |
+| 5 | **Plays by the Rules (called Above Board until November 11, 2026)** | Whether their money is tied to their office, whether they file on time, and whether they're in legal trouble |
 | 6 | **People First** | Whether their votes favor working people over business interests |
 
 **Rules for every score:**
@@ -335,7 +335,7 @@ counts as broken in Keeps Their Word.
 
 ---
 
-## 5. Above Board
+## 5. Plays by the Rules
 
 **Definition:** whether a politician's own money is tied to the power of their office, whether they follow the
 disclosure rules, and whether they're in legal trouble. It counts:
@@ -349,7 +349,7 @@ It shows overlap and rule-following. It doesn't prove wrongdoing; a confirmed ca
 **Formula, with its indexes** (each index runs 0 to 100, higher is worse):
 
 ```text
-Above Board = clamp(100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel
+Plays by the Rules = clamp(100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel
                          + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble, 0, 100)
 
 Outside Income & Conflicts = 0.40 × I + 0.25 × Lobbyist Overlap + 0.20 × Contracts for Donors + 0.15 × Foreign Agent
@@ -373,7 +373,7 @@ Legal Trouble           = min(100, Σ Status × Kind × Age)
 **Merged:**
 
 ```text
-Above Board = clamp(100 − Legal − [
+Plays by the Rules = clamp(100 − Legal − [
     0.14  · min(100, 60·H($Interested income, 50,000) + min(40, 20·Board seats) + 40·[job or payment deal])
   + 8.75  · H(share of receipts from interested organizations, 0.25)
   + 7     · H(donor companies with contracts, 5)
@@ -395,7 +395,7 @@ Above Board = clamp(100 − Legal − [
 - **Today:** the disclosure reader for income, gifts and travel isn't built yet, so only the two trading indexes count:
 
 ```text
-Above Board = clamp(100 − Legal − [25·Committee-sector + 16.67·Near-vote + 13.89·Donor-company
+Plays by the Rules = clamp(100 − Legal − [25·Committee-sector + 16.67·Near-vote + 13.89·Donor-company
                                    + 31.11·Late trade reports + 13.33·Late annual reports], 0, 100)
 ```
 
@@ -463,7 +463,7 @@ Every tab follows the same order:
 2. **The evidence it counts.**
 3. **"Shown, not counted."** Related records that don't change the score, each labeled that way.
 
-**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Big Money Independence · Above Board · People First.
+**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Big Money Independence · Plays by the Rules · People First.
 
 ### Overview
 - **All six scores at a glance:** the Ideology lean and the five letter grades, each linking to its tab.
@@ -510,7 +510,7 @@ Every tab follows the same order:
   - donors by employer and industry;
   - net worth over time.
 
-### Above Board
+### Plays by the Rules
 - **Counted:**
   - **Conflicts:** outside income, board seats and job deals; gifts and paid trips.
   - **Trades:** the trades flagged as tied to their committees, votes or donors, each linking to the full trade list on
