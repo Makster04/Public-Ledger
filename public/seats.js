@@ -55,3 +55,11 @@ export function seatChart(list,{total,rows,r0,r1,dot,label,statusOf,says=SAYS}){
     <text x="${cx}" y="${(cy-6).toFixed(1)}" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-weight="700" font-size="${Math.round(r0*0.62)}" fill="#eef2f7">${total}</text></svg>`;
   return {svg,counts,parties,label};
 }
+
+// The share of the chamber's members who took it, for the title: of everyone when everyone has been read ("43%"),
+// else of those read so far, saying how many ("88% of 16 read"); nothing when no one has been. Vacant seats don't count.
+export function tookShare(c){
+  const read=(c?.took||0)+(c?.none||0);if(!read)return '';
+  const p=c.took/read*100,pct=c.took>0&&p<0.5?'<1%':Math.round(p)+'%';
+  return c.waiting?`${pct} of ${read} read`:pct;
+}
