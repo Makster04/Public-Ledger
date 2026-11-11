@@ -807,19 +807,20 @@ function wealthOf(s,d){
   const why=s.chamber&&d.trades?.why&&!SCORER.reviewedTrades(s).covered?d.trades.why:null;
   return headerWealth(wealthTimeline(d.netWorth,timelineTrades(s,d)),{tradesWhy:why});
 }
-// The same three numbers as the profile's top boxes (wealthRowHTML), as plain text for the share card.
+// The same three numbers as the profile's top boxes (wealthRowHTML), as plain text for the share card, each with a
+// short note under it.
 function wealthCard(st){
-  const all=(value,note)=>({items:['Net worth','Stocks held','Stock trades'].map(label=>({label,value,wait:true})),note});
-  if(st==='offline')return all('Not available','The update service was offline');
-  if(!st)return all('Not read yet','Their annual financial disclosure hasn\'t been read yet');
+  const all=(value,sub)=>({items:['Net worth','Stocks held','Stock trades'].map((label,i)=>({label,value,wait:true,sub:i?'':sub}))});
+  if(st==='offline')return all('Not available','update service offline');
+  if(!st)return all('Not read yet','no annual report read yet');
   const L=st.net,k=st.stocks,t=st.trades,noReport=st.reports?'Can\'t read':'Not read yet';
   const net=!L||L.low==null&&L.high==null?null:L.high==null?`${signedMoney(L.low)}+`:L.low==null?`Up to ${signedMoney(L.high)}`:L.low===L.high?signedMoney(L.low):`${signedMoney(L.low)}–${signedMoney(L.high)}`;
   const stocks=!L||!k?null:k.count===0?'None':`~${fmt$(k.value)}${k.open?'+':''}`;
   const trades=t.trades>0?String(t.trades):t.partial?null:'0';
-  const note=[L?`${st.year} annual report`:st.reports?'Their annual report can\'t be read automatically':'No annual report read yet',
-    k?.count?`${k.count} stock${k.count===1?'':'s'} or option${k.count===1?'':'s'}`:'',t.trades?`${t.trades} trade${t.trades===1?'':'s'} since ${t.since}`:''].filter(Boolean).join(' · ');
-  return {items:[{label:'Net worth',value:net||(L?'Can\'t tell':noReport),wait:!net},{label:'Stocks held',value:stocks||(L?'Can\'t read':noReport),wait:!stocks},
-    {label:'Stock trades',value:trades||'Not read yet',wait:!trades}],note};
+  return {items:[
+    {label:'Net worth',value:net||(L?'Can\'t tell':noReport),wait:!net,sub:L?`${st.year} annual report`:st.reports?'can\'t be read automatically':'no annual report read yet'},
+    {label:'Stocks held',value:stocks||(L?'Can\'t read':noReport),wait:!stocks,sub:k?.count?`${k.count} stock${k.count===1?'':'s'} or option${k.count===1?'':'s'}`:k?.count===0?'no individual stocks':''},
+    {label:'Stock trades',value:trades||'Not read yet',wait:!trades,sub:t.trades?`since ${t.since}`:t.partial?'trade reports not read yet':'none reported'}]};
 }
 function profileReport(s){
   return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. The other scores wait on reviewed research.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;

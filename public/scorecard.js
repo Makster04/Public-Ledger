@@ -2,12 +2,14 @@
 const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
 // The five letter grades, in the order the profile shows them (Ideology is a position, not a grade).
 const LABELS=['Keeps Their Word','Shows Up','Big Money Independence','Plays by the Rules','People First'];
-const TILE={x:40,gap:12,width:174};
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
 const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
 const letter=value=>value>=90?'A':value>=80?'B':value>=70?'C':value>=60?'D':'F';
-const GRADE_COLORS={A:'#28d17c',B:'#a4d65b',C:'#f0c35a',D:'#f0b84b',F:'#f17881'};
+// The card's two box colors (and the outline), the gray text on each, and the grade colors dark enough to read on paper.
+const INK='#121519',PAPER='#f3efe6',SUB='#4a525e',SUB_DARK='#b9b3a6';
+const GRADE_ON_PAPER={A:'#138a50',B:'#5f8f1e',C:'#a87708',D:'#bd6416',F:'#cc3d4a'};
+const MONO="ui-monospace, Menlo, Consolas, 'Courier New', monospace",SANS='Arial, Helvetica, sans-serif';
 const cleanImage=value=>/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=\s]+$/.test(value||'')?value:'';
 const initialName=name=>(String(name||'').trim().split(/\s+/).filter(Boolean).map(x=>x[0]).filter(Boolean).slice(0,2).join('')||'PL').toUpperCase();
 
@@ -23,81 +25,92 @@ function lines(value,width,max=5){
 }
 const text=(value,x,y,{size=20,color='#eff2f8',weight=400,width=44,max=5,lineHeight=size*1.3,anchor='start',family='Arial, sans-serif'}={})=>`<text x="${x}" y="${y}" fill="${color}" font-family="${family}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}">${lines(value,width,max).map((line,i)=>`<tspan x="${x}" dy="${i?lineHeight:0}">${xml(line)}</tspan>`).join('')}</text>`;
 
-/** Produce a standalone SVG containing no remote image links, scripts or foreignObject. model: name, party, state,
- * office, raised, cash, spent, period, wealth ({items: [{label, value, wait}] for net worth, stocks held and stock trades,
- * note}), lists ([{title, items: [{label, status: 'yes'|'no'|'waiting', why}], empty}] for Bonuses and Pledges and bills),
- * grades, reviewedAt. */
+/** Produce a standalone SVG containing no remote image links, scripts or foreignObject: a 1000 × 1250 card (an Instagram
+ * post's 4:5) on the party's color, in boxes. Row 1: the photo; the name with state, party and chamber; the five grades
+ * with bars. Row 2: Big Money Independence's Bonuses and Pledges and bills as a checklist; six money boxes (Raised, Cash
+ * on hand, Spent; Net worth, Stocks held, Stock trades). Then the evidence note. A card without a checklist (basic
+ * profiles) or without net worth (a president) closes up around what it has.
+ * model: name, party, state, office, raised, cash, spent, period, wealth ({items: [{label, value, wait, sub}]}), lists
+ * ([{title, items: [{label, status: 'yes'|'no'|'waiting'}], empty}]), grades, reviewedAt. */
 export function renderScorecardSvg(model,portraitDataUrl=''){
   const p=PALETTES[model.party]||PALETTES.I,portrait=cleanImage(portraitDataUrl),name=String(model.name||'Public Ledger profile');
   const raw=Array.isArray(model.grades)?model.grades:[];
   const grades=LABELS.map((label,i)=>({label,...(raw[i]||{}),value:finite(raw[i]?.value)?Math.max(0,Math.min(100,raw[i].value)):null}));
-  const nameLines=lines(name,20,3),nameSize=name.length>36?39:49,nameExtra=(nameLines.length-1)*nameSize*1.3;
-  // A value's size, so a long one (a net worth range) fits its column.
-  const fit=(v,w,max)=>Math.max(17,Math.min(max,Math.floor(w/(String(v).length*.58))));
-  // Below the name, in the same box: the campaign's money, then their net worth and stocks (the same three numbers as
-  // the top of their profile; none for a president). A long name moves it down and the box grows.
-  const top=Math.max(318,Math.round(286+nameExtra+34)),W=model.wealth&&Array.isArray(model.wealth.items)?model.wealth:null;
-  const col=(label,value,x,y,wait=false)=>`${text(label,x,y,{size:16,color:'#b6c0cf',width:23})}${text(value,x,y+36,{size:wait?19:fit(value,158,30),color:wait?'#a7b0be':'#eff2f8',weight:700,width:20,max:1})}`;
-  const money=`<path d="M432 ${top}H932" stroke="${p.accent}" stroke-opacity=".45"/>
-    ${text('CAMPAIGN SNAPSHOT',432,top+32,{size:15,color:'#a8b6c8',weight:700,width:40})}
-    ${[['Raised',model.raised],['Cash on hand',model.cash],['Spent',model.spent]].map(([label,v],i)=>{const a=amount(v);return col(label,a,[432,600,768][i],top+64,a==='Not available');}).join('')}
-    ${text(model.period||'Reporting period not available',432,top+128,{size:14,color:'#b6c0cf',width:60,max:1})}
-    ${W?`${text('NET WORTH AND STOCKS',432,top+170,{size:15,color:'#a8b6c8',weight:700,width:40})}
-    ${W.items.slice(0,3).map((x,i)=>col(x.label,x.value||'Not read yet',[432,600,768][i],top+202,!x.value||!!x.wait)).join('')}
-    ${text(W.note||'',432,top+266,{size:14,color:'#b6c0cf',width:60,max:1})}`:''}`;
-  const heroBottom=Math.max(644,top+(W?292:154));
-  // Below the box, side by side: Bonuses and Pledges and bills, each item with whether it's earned and why.
-  const MARK={yes:['✓','#28d17c'],no:['✕','#8b95a5'],waiting:['…','#f0c35a']};
-  const LW=(920-16)/2,listTop=heroBottom+20;
-  const layout=items=>{let y=74;return (items||[]).map(it=>{const l=lines(it.label,40,2),w=lines(it.why||'',54,2),at=y;y+=l.length*20+w.length*17+14;return {it,l,w,at};}).concat([{end:y}]);};
-  const lists=(Array.isArray(model.lists)?model.lists:[]).slice(0,2).map(x=>({...x,rows:layout(x.items)}));
-  const listH=Math.max(120,...lists.map(x=>x.rows.at(-1).end+4));
-  const listSvg=lists.map((x,i)=>{
-    const lx=40+i*(LW+16),rows=x.rows.slice(0,-1);
-    return `<rect x="${lx}" y="${listTop}" width="${LW}" height="${listH}" rx="14" fill="url(#tile)" stroke="${p.accent}" stroke-opacity=".58"/>
-      ${text(x.title.toUpperCase(),lx+22,listTop+36,{size:15,color:p.accent,weight:700,width:40,max:1})}
-      ${rows.length?rows.map(({it,l,w,at})=>{const [m,c]=MARK[it.status]||MARK.no,y=listTop+at;
-        return `${text(m,lx+22,y,{size:17,color:c,weight:700,width:2,max:1})}${text(it.label,lx+46,y,{size:16,color:it.status==='yes'?'#eff2f8':'#c2ccda',weight:it.status==='yes'?700:400,width:40,max:2,lineHeight:20})}
-          ${w.length?text(it.why,lx+46,y+l.length*20,{size:13,color:'#9aa5b5',width:54,max:2,lineHeight:17}):''}`;}).join('')
-        :text(x.empty||'None on file',lx+22,listTop+64,{size:15,color:'#a7b0be',width:50})}`;
+  const W=1000,L={x:28,w:372},R={x:416,w:556};
+  // Dark boxes hold light text; light boxes, dark text. Every box has the same dark outline.
+  const box=(x,y,w,h,fill)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="12" fill="${fill}" stroke="${INK}" stroke-width="3"/>`;
+  // Top strip: the site's name.
+  const top=`<rect x="0" y="0" width="${W}" height="56" fill="${PAPER}"/><path d="M0 56H${W}" stroke="${INK}" stroke-width="3"/>
+    <path d="M28 16h22M30 21h18M32 25v13M39 25v13M46 25v13M28 40h22" fill="none" stroke="${INK}" stroke-width="3"/>
+    ${text('PUBLIC LEDGER',62,37,{size:20,color:INK,weight:700,width:30,family:MONO})}
+    ${text('FOLLOW THE MONEY. CHECK THE RECORD.',972,36,{size:13,color:SUB,width:60,family:MONO,anchor:'end'})}`;
+  // Row 1: the photo; their name; the five grades.
+  const photo=`${box(L.x,76,L.w,530,INK)}
+    ${portrait?`<image href="${portrait}" x="${L.x}" y="76" width="${L.w}" height="530" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo)"/>${box(L.x,76,L.w,530,'none')}`:text(initialName(name),L.x+L.w/2,370,{size:106,color:SUB_DARK,weight:700,width:3,anchor:'middle'})}`;
+  // The name as big as fits the box (capitals are about 0.68 of the size wide): one line, else two smaller.
+  const upper=name.toUpperCase(),fitName=size=>({size,width:Math.floor((R.w-48)/(size*.68))});
+  const big=fitName(46),{size:ns,width:nw}=lines(upper,big.width,2).length===1?big:fitName(38),two=lines(upper,nw,2).length>1;
+  const who=`${box(R.x,76,R.w,170,INK)}
+    ${text(upper,R.x+26,two?138:160,{size:ns,color:PAPER,weight:700,width:nw,max:2,lineHeight:ns*1.08,family:SANS})}
+    ${text([model.state,p.party,model.office].filter(Boolean).join(' · ').toUpperCase(),R.x+26,222,{size:14,color:p.accent,weight:700,width:60,max:1,family:MONO})}`;
+  const gradeRows=grades.map((g,i)=>{
+    const y=340+i*52,graded=g.value!==null,l=graded?letter(g.value):null,c=graded?GRADE_ON_PAPER[l]:SUB;
+    return `${text(g.label.toUpperCase(),R.x+26,y,{size:15,color:INK,weight:700,width:26,max:1,family:SANS})}
+      <rect x="${R.x+250}" y="${y-13}" width="190" height="14" rx="3" fill="#d9d3c6"/>
+      ${graded?`<rect x="${R.x+250}" y="${y-13}" width="${Math.max(4,Math.round(190*g.value/100))}" height="14" rx="3" fill="${c}"/>
+      ${text(l,R.x+462,y+4,{size:30,color:c,weight:700,width:2,max:1,family:SANS})}${text(String(Math.round(g.value)),R.x+530,y,{size:15,color:SUB,weight:700,width:4,max:1,family:MONO,anchor:'end'})}`
+        :text('NOT GRADED',R.x+530,y,{size:12,color:SUB,weight:700,width:12,max:1,family:MONO,anchor:'end'})}`;
   }).join('');
-  const DY=(lists.length?listTop+listH:heroBottom)+30-674;
-  const panels=grades.map((grade,i)=>{
-    const x=TILE.x+i*(TILE.width+TILE.gap),y=694+DY,graded=grade.value!==null;
-    const display=graded?letter(grade.value):'Not graded yet';
-    return `<rect x="${x}" y="${y}" width="${TILE.width}" height="330" rx="14" fill="url(#tile)" stroke="${p.accent}" stroke-opacity=".58"/>
-      <path d="M${x+22} ${y+27}h32" stroke="${p.accent}" stroke-width="4"/>
-      ${text(grade.label.toUpperCase(),x+18,y+68,{size:14,color:p.accent,weight:700,width:17,max:2})}
-      ${text(display,x+18,y+155,{size:graded?66:21,color:graded?GRADE_COLORS[letter(grade.value)]:'#a7b0be',weight:700,width:11,max:2})}
-      ${graded?text(`${Math.round(grade.value)} / 100`,x+18,y+208,{size:21,weight:700,width:12}):''}
-      ${text(grade.detail||'Evidence required',x+18,y+256,{size:14,color:'#b6c0cf',width:19,max:4})}`;
+  const gradesBox=`${box(R.x,262,R.w,344,PAPER)}
+    ${text('FIVE GRADES',R.x+26,302,{size:24,color:INK,weight:700,width:30,family:SANS})}
+    ${text('0 TO 100 · FROM REVIEWED RECORDS',R.x+530,300,{size:11,color:SUB,width:40,family:MONO,anchor:'end'})}
+    ${gradeRows}`;
+  // Row 2, left: the bonuses and the pledges and bills, as a checklist (✓ earned, ✕ not, ? a record not read yet).
+  const MARK={yes:['#18a35f','M-5 0l3.5 3.5L5-4'],no:['#e0535f','M-4-4l8 8M4-4l-8 8'],waiting:['#8b95a5','']};
+  const lists=(Array.isArray(model.lists)?model.lists:[]).slice(0,2);
+  let ly=666;
+  const listSvg=lists.map(x=>{
+    const head=text(String(x.title||'').toUpperCase(),L.x+22,ly,{size:18,color:PAPER,weight:700,width:30,max:1,family:SANS});ly+=16;
+    const items=(Array.isArray(x.items)?x.items:[]);
+    const rows=items.length?items.map(it=>{
+      const [c,d]=MARK[it.status]||MARK.no,label=String(it.label||'').toUpperCase(),n=lines(label,30,2).length,y=ly+20;ly+=n*19+18;
+      return `<circle cx="${L.x+34}" cy="${y-5}" r="11" fill="${c}"/>${d?`<path d="${d}" transform="translate(${L.x+34} ${y-5})" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',L.x+34,y,{size:14,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
+        ${text(label,L.x+56,y,{size:13,color:it.status==='yes'?PAPER:SUB_DARK,weight:it.status==='yes'?700:400,width:30,max:2,lineHeight:19,family:MONO})}`;
+    }).join(''):(ly+=34,text(x.empty||'None on file',L.x+22,ly-8,{size:13,color:SUB_DARK,width:40,family:MONO}));
+    ly+=22;return head+rows;
   }).join('');
-  const H=1230+DY;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="${H}" viewBox="0 0 1000 ${H}" role="img" aria-labelledby="title desc">
+  // Row 2, right (the whole width without a checklist): the money boxes, a light strip with the label over the number.
+  const fitLines=(v,w)=>{const s=String(v);if(s.length*.6*32<=w)return {ls:[s],size:32};
+    if(s.includes('–')){const [a,b]=s.split('–');return {ls:[a+'–',b],size:Math.min(30,Math.floor(w/(Math.max(a.length+1,b.length)*.6)))};}
+    return {ls:[s],size:Math.max(17,Math.floor(w/(s.length*.6)))};};
+  const short=t=>String(t||'').replace(/([A-Z][a-z]{2}) \d{1,2}, (\d{4})/g,'$1 $2'),end=String(model.period||'').split(/\s*–\s*/)[1]||'';
+  const camp=[['Raised',model.raised,short(model.period)],['Cash on hand',model.cash,end?`as of ${end}`:''],['Spent',model.spent,short(model.period)]].map(([label,v,sub])=>{const a=amount(v);return {label,value:a,wait:a==='Not available',sub:a==='Not available'?'':sub};});
+  const wealth=model.wealth&&Array.isArray(model.wealth.items)?model.wealth.items.slice(0,3):[];
+  const cells=[...camp,...wealth],area=lists.length?R:{x:L.x,w:W-56},cw=(area.w-24)/3,ch=186;
+  const statsH=Math.ceil(cells.length/3)*(ch+16)-16;
+  const stats=cells.map((c,i)=>{
+    const x=area.x+(i%3)*(cw+12),y=622+Math.floor(i/3)*(ch+16),wait=!!c.wait||!c.value,{ls,size}=wait?{ls:[String(c.value||'Not read yet')],size:19}:fitLines(c.value,cw-28);
+    return `${box(x,y,cw,ch,INK)}<path d="M${x+12} ${y+1.5}h${cw-24}a10.5 10.5 0 0 1 10.5 10.5v32h-${cw-1}v-32a10.5 10.5 0 0 1 10.5-10.5z" fill="${PAPER}"/><path d="M${x+1.5} ${y+44}H${x+cw-1.5}" stroke="${INK}" stroke-width="3"/>
+      ${text(String(c.label).toUpperCase(),x+cw/2,y+29,{size:13,color:INK,weight:700,width:20,max:1,family:MONO,anchor:'middle'})}
+      ${ls.map((l,k)=>text(l,x+cw/2,y+(ls.length>1?96:110)+k*size*1.05,{size,color:wait?SUB_DARK:PAPER,weight:700,width:20,max:1,family:SANS,anchor:'middle'})).join('')}
+      ${text(c.sub||'',x+cw/2,y+160,{size:11,color:SUB_DARK,width:26,max:2,lineHeight:14,family:MONO,anchor:'middle'})}`;
+  }).join('');
+  const row2=Math.max(statsH,lists.length?ly-622+6:0),listBox=lists.length?`${box(L.x,622,L.w,row2,INK)}${listSvg}`:'';
+  // The evidence note across the card, then the bottom strip.
+  const ny=622+row2+16,H=Math.max(1250,ny+196),by=H-54;
+  const note=`${box(L.x,ny,W-56,Math.max(150,by-20-ny),PAPER)}
+    ${text('SEE THE EVIDENCE, NOT JUST THE LETTER.',L.x+24,ny+52,{size:24,color:INK,weight:700,width:60,family:SANS})}
+    ${text(`${!model.reviewedAt?'':/not reviewed/i.test(model.reviewedAt)?'Research not reviewed yet. ':'Research snapshot: '+model.reviewedAt+'. '}Based on reviewed records; coverage varies. A grade is not a clearance. Missing data is not zero.`,L.x+24,ny+92,{size:15,color:SUB,width:94,max:2,lineHeight:20,family:MONO})}`;
+  const bottom=`<rect x="0" y="${by}" width="${W}" height="54" fill="${PAPER}"/><path d="M0 ${by}H${W}" stroke="${INK}" stroke-width="3"/>
+    ${text('PUBLIC LEDGER',28,by+32,{size:13,color:INK,weight:700,width:30,family:MONO})}${text('FOLLOW THE EVIDENCE',972,by+32,{size:13,color:SUB,width:30,family:MONO,anchor:'end'})}`;
+  const desc=[`Raised ${amount(model.raised)}, cash on hand ${amount(model.cash)}, spent ${amount(model.spent)}`,...(wealth.length?[wealth.map(x=>`${x.label} ${x.value||'Not read yet'}`).join(', ')]:[]),
+    ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
+    ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+' out of 100'}`)].join('. ');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
     <title id="title">${xml(name)} — Public Ledger report card</title>
-    <desc id="desc">${xml([`Raised ${amount(model.raised)}, cash on hand ${amount(model.cash)}, spent ${amount(model.spent)}`,...(W?[W.items.slice(0,3).map(x=>`${x.label} ${x.value||'Not read yet'}`).join(', ')]:[]),
-      ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
-      ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+' out of 100'}`)].join('. '))}. Reporting periods and evidence coverage are shown below.</desc>
-    <defs><linearGradient id="tile" x2="1" y2="1"><stop stop-color="#1b2329"/><stop offset="1" stop-color="#151a22"/></linearGradient><clipPath id="photo"><rect x="60" y="166" width="340" height="452" rx="10"/></clipPath></defs>
-    <rect width="1000" height="${H}" fill="#0d1117"/>
-    <path d="M42 41h40M46 50h32M49 59v26M62 59v26M75 59v26M42 88h40" fill="none" stroke="#d1d5db" stroke-width="5"/>
-    ${text('PUBLIC LEDGER',103,70,{size:31,weight:700,width:35})}
-    ${text('FOLLOW THE MONEY. CHECK THE RECORD.',42,118,{size:17,color:'#a8b6c8',width:75})}
-    <rect x="40" y="146" width="920" height="${heroBottom-146}" rx="16" fill="url(#tile)" stroke="${p.accent}" stroke-width="2"/>
-    <rect x="60" y="166" width="340" height="452" rx="10" fill="#202932" stroke="${p.accent}" stroke-opacity=".55"/>
-    ${portrait?`<image href="${portrait}" x="60" y="166" width="340" height="452" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo)"/>`:text(initialName(name),230,421,{size:106,color:'#c2ccda',weight:700,width:3,anchor:'middle'})}
-    ${text(name,432,220,{size:nameSize,weight:700,width:20,max:3})}
-    ${text(`${p.party}${model.state?' · '+model.state:''}`,432,244+nameExtra,{size:21,color:p.accent,width:35,max:2})}
-    ${text(model.office||'Public profile',432,286+nameExtra,{size:21,color:'#c2ccda',width:35,max:2})}
-    ${money}
-    ${listSvg}
-    ${text('FIVE GRADES. FOLLOW THE EVIDENCE.',40,674+DY,{size:17,color:'#b6c0cf',weight:700,width:75})}
-    ${panels}
-    ${text('Based on reviewed records. Coverage varies.',40,1060+DY,{size:19,color:'#b6c0cf',width:90})}
-    <rect x="40" y="${1090+DY}" width="920" height="110" rx="12" fill="#141b25" stroke="${p.accent}" stroke-opacity=".5"/>
-    ${text('SEE THE EVIDENCE, NOT JUST THE LETTER.',62,1127+DY,{size:23,weight:700,width:70})}
-    ${text(`${model.reviewedAt?'Research snapshot: '+model.reviewedAt+'. ':''}Some methodology weights remain under review.`,62,1158+DY,{size:16,color:'#b6c0cf',width:102,max:2,lineHeight:20})}
-    ${text('An Integrity grade is not a clearance. Missing data is not zero.',62,1183+DY,{size:16,color:'#b6c0cf',width:102,max:1})}
+    <desc id="desc">${xml(desc)}. Reporting periods and evidence coverage are shown on the card.</desc>
+    <defs><clipPath id="photo"><rect x="${L.x}" y="76" width="${L.w}" height="530" rx="12"/></clipPath></defs>
+    <rect width="${W}" height="${H}" fill="${p.accent}"/>${top}${photo}${who}${gradesBox}${listBox}${stats}${note}${bottom}
   </svg>`;
 }
 
