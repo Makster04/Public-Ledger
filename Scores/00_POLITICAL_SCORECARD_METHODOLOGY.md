@@ -6,7 +6,7 @@ This is the canonical guide to every score, index, and position measure currentl
 
 There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional.
 
-**As of November 7, 2026, the site shows six scores** on each profile: Ideology (a position, with Your Match inside it) and five grades, Keeps Their Word, Shows Up, Unbought, Above Board and People First. Their definitions and formulas are in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md) and in `public/six-scores.js`. The sections below describe the parts they're built from and the earlier grades (Your Match, Integrity), kept for the score history.
+**As of November 7, 2026, the site shows six scores** on each profile: Ideology (a position, with Your Match inside it) and five grades, Keeps Their Word, Shows Up, Big Money Independence, Above Board and People First. Their definitions and formulas are in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md) and in `public/six-scores.js`. The sections below describe the parts they're built from and the earlier grades (Your Match, Integrity), kept for the score history.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|

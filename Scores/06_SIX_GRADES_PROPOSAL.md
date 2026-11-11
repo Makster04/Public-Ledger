@@ -3,7 +3,7 @@
 Status: built November 7, 2026 (`public/six-scores.js`, the profile tabs in `public/app.js`). Group scorecards, the
 disclosure reader for income, gifts and travel, and the one-time Senate eFD try are still to build.
 
-The Integrity grade is retired and split into separate grades, and Your Match becomes part of a new Ideology tab. Unbought uses
+The Integrity grade is retired and split into separate grades, and Your Match becomes part of a new Ideology tab. Big Money Independence (called Unbought until November 11, 2026) uses
 [IntegrityIndex.us](https://integrityindex.us/methodology)'s published formula, credited to them.
 
 | # | Score | Definition in one line |
@@ -11,7 +11,7 @@ The Integrity grade is retired and split into separate grades, and Your Match be
 | 1 | **Ideology** (a position, not a grade) | Where they stand from liberal to conservative, overall and on each issue |
 | 2 | **Keeps Their Word** | How often they did what they promised |
 | 3 | **Shows Up** | Whether they vote and get their bills moving |
-| 4 | **Unbought** | How independent their money is from special interests |
+| 4 | **Big Money Independence** | How independent their money is from special interests |
 | 5 | **Above Board** | Whether their money is tied to their office, whether they file on time, and whether they're in legal trouble |
 | 6 | **People First** | Whether their votes favor working people over business interests |
 
@@ -237,7 +237,7 @@ Shows Up = clamp(75 − 3.75 × missed %, 0, 75) + 25 × min(1, r ÷ m)
 
 ---
 
-## 4. Unbought
+## 4. Big Money Independence
 
 **Definition:** how independent a politician's money is from special interests: who funds their campaign (small
 donors versus PACs and earmarked gifts) and whether they own or trade individual stocks. It doesn't measure how they
@@ -247,7 +247,7 @@ special interests. It doesn't measure how they vote."*
 **Formula, with its parts:**
 
 ```text
-Unbought = max(0, 75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges)
+Big Money Independence = max(0, 75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges)
 ```
 
 | Part | House | Senate |
@@ -264,7 +264,7 @@ Unbought = max(0, 75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalt
 **Merged (House):**
 
 ```text
-Unbought = max(0, 75
+Big Money Independence = max(0, 75
   + min(16, 16·small + 12·s200 + 6·s500 + 3·s1000 + 2·s2000 + 16·unitemized + 4.04·unsorted + 1·self + 1·joint)
   − min(30, 0.000015·$Corporate + 0.000008·$Lobbyist + 0.000002·$Trade + 0.000001·($Political + $Ideological)
             + 0.00000075·($Union + $Other))
@@ -292,7 +292,7 @@ and the PAC rates 0.00001 · 0.000005 · 0.000001 · 0.0000005 · 0.00000025.
   credited back.
 - **Earmarks:** every committee the FEC's totals by recipient show sending more than a PAC may give directly (or many
   checks, or memo entries) has its disbursements read for earmarked gifts, not just the 5 groups listed by hand.
-- **Periods:** the Unbought tab can show the score over earlier cycles too (2023–2026, 2021–2026, or one earlier cycle
+- **Periods:** the Big Money Independence tab can show the score over earlier cycles too (2023–2026, 2021–2026, or one earlier cycle
   alone). Each cycle's totals, gift sizes, PAC lines (each cycle's PAC shares applied to that cycle's PAC total),
   earmarks and joint fundraising are added up; trades count over the whole span; stocks held are from the latest annual
   report. A cycle missing a record leaves the score waiting. Everywhere else shows the current cycle.
@@ -313,7 +313,7 @@ Earmarks:     $50K × 0.00002                                              = −
 Stocks:       $200K → 20 × H(200K, 400K)                                  = −7.5
 Trades:       10 trades → 20 × H(10, 50)                                  = −4.6
 Pledges:      cosponsored the stock-trading ban                           = +1.0
-Unbought = 75 + 8.6 − 4.6 − 5.0 − 1.0 − 7.5 − 4.6 + 1.0 = 62 → D
+Big Money Independence = 75 + 8.6 − 4.6 − 5.0 − 1.0 − 7.5 − 4.6 + 1.0 = 62 → D
 ```
 
 **Numbers their page leaves out** (we fill these in, label them on the page, and ask IntegrityIndex.us):
@@ -463,7 +463,7 @@ Every tab follows the same order:
 2. **The evidence it counts.**
 3. **"Shown, not counted."** Related records that don't change the score, each labeled that way.
 
-**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Unbought · Above Board · People First.
+**The tabs:** Overview · Ideology · Keeps Their Word · Shows Up · Big Money Independence · Above Board · People First.
 
 ### Overview
 - **All six scores at a glance:** the Ideology lean and the five letter grades, each linking to its tab.
@@ -488,7 +488,7 @@ Every tab follows the same order:
   against their party's typical rate.
 - **Shown, not counted:** Across the Aisle and Party Rebel, once built.
 
-### Unbought
+### Big Money Independence
 - **Counted, where the money comes from:**
   - the money map;
   - "The numbers" table;
@@ -514,7 +514,7 @@ Every tab follows the same order:
 - **Counted:**
   - **Conflicts:** outside income, board seats and job deals; gifts and paid trips.
   - **Trades:** the trades flagged as tied to their committees, votes or donors, each linking to the full trade list on
-    the Unbought tab.
+    the Big Money Independence tab.
   - **Filings:** each trade report and annual report with its due date and filing date.
   - **Legal Trouble:** each case.
 - **Shown, not counted:** committee assignments and the sectors they oversee, and lobbying aimed at their committees.
@@ -532,7 +532,7 @@ Every tab follows the same order:
   - Flagged instead, as Not graded yet: paper filings, open-ended ranges, and assets whose type can't be told.
 - **Senators:**
   - First: the headless-browser reader in the repo (`scripts/build-holdings.py`) is tried once from your computer.
-  - If Senate eFD blocks it: senators show "Not graded yet: Senate reports can't be read automatically" on Unbought.
+  - If Senate eFD blocks it: senators show "Not graded yet: Senate reports can't be read automatically" on Big Money Independence.
 - **No paid data:** Quiver Quantitative and Disclosed Capitol's API aren't used.
 
 **Renamed:**
@@ -552,7 +552,7 @@ First for every reviewed and basic profile, with the page's own code; the earlie
 
 **Dropped, as measures:**
 - **Integrity:** split up as above.
-- **Fundraising and Personal Finances:** now in Unbought.
+- **Fundraising and Personal Finances:** now in Big Money Independence.
 - **Vote Donor Alignment:** Donor Loyalty covers it.
 - **Statement–action consistency:** it needed a paid OpenAI key and produced no results; Keeps Their Word covers it.
   The code and the saved trial stay in the repo.
@@ -573,7 +573,7 @@ First for every reviewed and basic profile, with the page's own code; the earlie
 2. **The scores.** The Ideology tab and the five grades, the profile tabs above, the renames, the methodology pages
    and the score-log entry, in one change.
 3. **Group scorecards:** a reader for each group's published scorecard, run once a year.
-4. **Unbought's formula,** with the House and Senate weights and the labeled fill-ins.
+4. **Big Money Independence's formula,** with the House and Senate weights and the labeled fill-ins.
 5. **Automatic House disclosures,** then the one-time Senate try.
 6. **The disclosure reader** for income, gifts and travel (task #13).
 7. **The email to IntegrityIndex.us** with the open questions.

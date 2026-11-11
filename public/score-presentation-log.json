@@ -1,34 +1,39 @@
 {
-  "about": "Dated presentation changes only. These entries do not recalculate historical grades or replace the separate monthly Integrity comparison log.",
-  "entries": [
-    {
-      "date": "2026-11-02",
-      "note": "Consolidated the current grading interface to Your Match, Integrity, and Workers > Profit. Ethics and Promises Delivered remain preserved in the official monthly history and their evidence is now grouped inside Integrity. No historical values or scoring formulas were recalculated by this presentation migration. Integrity remains provisional and uncalibrated; its monthly comparison log continues separately."
-    },
-    {
-      "date": "2026-11-03",
-      "note": "Renamed Workers > Profit to People First and rewrote the three grade descriptions (Your Match, Integrity, People First). The calculations are unchanged: People First is still 75% the legislative-action score plus 25% of (100 − the existing Corporation Compromised Index), and the proposed CCI revision stays a comparison preview until it is explicitly adopted. Historical values were not recalculated; earlier entries keep the old name."
-    },
-    {
-      "date": "2026-11-07",
-      "note": "Rule change: six scores replace Your Match, Integrity and People First on every profile (Scores/06_SIX_GRADES_PROPOSAL.md). Ideology is a position from liberal to conservative, not a grade, with Your Match inside it. The five grades are Keeps Their Word (Integrity's Honesty part), Shows Up (its Showing Up part), Unbought (IntegrityIndex.us's published formula, replacing Fundraising and Personal Finances), Above Board (Conflicts of Interest, the renamed Trade Conflicts Index without its single-stock activity part, Stock Disclosure Dodger and Legal Trouble) and People First (its Corporation Compromised Index now keeps only its behavior parts). Past Integrity, Ethics, Promises Delivered and People First values stay as recorded and are not recalculated."
-    },
-    {
-      "date": "2026-11-07",
-      "note": "Rule change (Unbought): money a joint fundraising committee passed on is credited back to the people who gave it, by the size of each one's share, where the FEC's records have been read; before, all of it counted at the joint fundraising weight. Earmarks cover every committee the FEC shows forwarding gifts to the campaign once npm run funders:bundled has run, not just 5 groups. When a profile has no reviewed PAC table, the PAC lines the FEC has processed for the cycle sort its PAC money by type. Earlier values stay as recorded."
-    },
-    {
-      "date": "2026-11-08",
-      "note": "Rule change: basic profiles (every senator and, new, every House member without a reviewed profile) now get Ideology, Shows Up and People First from official records alone, figured the same way as on the full profiles: their positions on the coded roll calls (filled in by scripts/fill-vote-positions.mjs), their attendance and their bills. Keeps Their Word, Unbought and Above Board still wait on reviewed research. Before, basic profiles showed no scores."
-    },
-    {
-      "date": "2026-11-08",
-      "headline": "Interest-group ratings are shown as letter grades",
-      "note": "Interest-group ratings on the Ideology tab are shown as letter grades: a group's percent becomes a letter on the site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with the group's percent beside it, and a group's own letter grades are shown as given. Each letter is colored like the site's grades, from green (the group rates them highly) to red (poorly). Display only: the ratings file still holds each rating exactly as published, and the Ratings lean is unchanged."
-    },
-    {
-      "date": "2026-11-09",
-      "note": "A ticker under the top bar shows the latest updates the site keeps, newest first: race calls and counts after an election, newly reported stock trades and annual disclosures from the refresh, interest-group ratings as they are read, and rule changes and site updates from this log. Each kind shows for a set number of days. It pauses when hovered or focused and stands still for visitors whose device asks for reduced motion. Display only: no score is calculated from it."
-    }
-  ]
+ "about": "Dated presentation changes only. These entries do not recalculate historical grades or replace the separate monthly Integrity comparison log.",
+ "entries": [
+  {
+   "date": "2026-11-02",
+   "note": "Consolidated the current grading interface to Your Match, Integrity, and Workers > Profit. Ethics and Promises Delivered remain preserved in the official monthly history and their evidence is now grouped inside Integrity. No historical values or scoring formulas were recalculated by this presentation migration. Integrity remains provisional and uncalibrated; its monthly comparison log continues separately."
+  },
+  {
+   "date": "2026-11-03",
+   "note": "Renamed Workers > Profit to People First and rewrote the three grade descriptions (Your Match, Integrity, People First). The calculations are unchanged: People First is still 75% the legislative-action score plus 25% of (100 − the existing Corporation Compromised Index), and the proposed CCI revision stays a comparison preview until it is explicitly adopted. Historical values were not recalculated; earlier entries keep the old name."
+  },
+  {
+   "date": "2026-11-07",
+   "note": "Rule change: six scores replace Your Match, Integrity and People First on every profile (Scores/06_SIX_GRADES_PROPOSAL.md). Ideology is a position from liberal to conservative, not a grade, with Your Match inside it. The five grades are Keeps Their Word (Integrity's Honesty part), Shows Up (its Showing Up part), Unbought (IntegrityIndex.us's published formula, replacing Fundraising and Personal Finances), Above Board (Conflicts of Interest, the renamed Trade Conflicts Index without its single-stock activity part, Stock Disclosure Dodger and Legal Trouble) and People First (its Corporation Compromised Index now keeps only its behavior parts). Past Integrity, Ethics, Promises Delivered and People First values stay as recorded and are not recalculated."
+  },
+  {
+   "date": "2026-11-07",
+   "note": "Rule change (Unbought): money a joint fundraising committee passed on is credited back to the people who gave it, by the size of each one's share, where the FEC's records have been read; before, all of it counted at the joint fundraising weight. Earmarks cover every committee the FEC shows forwarding gifts to the campaign once npm run funders:bundled has run, not just 5 groups. When a profile has no reviewed PAC table, the PAC lines the FEC has processed for the cycle sort its PAC money by type. Earlier values stay as recorded."
+  },
+  {
+   "date": "2026-11-08",
+   "note": "Rule change: basic profiles (every senator and, new, every House member without a reviewed profile) now get Ideology, Shows Up and People First from official records alone, figured the same way as on the full profiles: their positions on the coded roll calls (filled in by scripts/fill-vote-positions.mjs), their attendance and their bills. Keeps Their Word, Unbought and Above Board still wait on reviewed research. Before, basic profiles showed no scores."
+  },
+  {
+   "date": "2026-11-08",
+   "headline": "Interest-group ratings are shown as letter grades",
+   "note": "Interest-group ratings on the Ideology tab are shown as letter grades: a group's percent becomes a letter on the site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with the group's percent beside it, and a group's own letter grades are shown as given. Each letter is colored like the site's grades, from green (the group rates them highly) to red (poorly). Display only: the ratings file still holds each rating exactly as published, and the Ratings lean is unchanged."
+  },
+  {
+   "date": "2026-11-09",
+   "note": "A ticker under the top bar shows the latest updates the site keeps, newest first: race calls and counts after an election, newly reported stock trades and annual disclosures from the refresh, interest-group ratings as they are read, and rule changes and site updates from this log. Each kind shows for a set number of days. It pauses when hovered or focused and stands still for visitors whose device asks for reduced motion. Display only: no score is calculated from it."
+  },
+  {
+   "date": "2026-11-11",
+   "headline": "Unbought is now called Big Money Independence",
+   "note": "The grade that was called Unbought is now called Big Money Independence, a plainer name for what it measures: how independent a campaign's money is from big donors, PACs and corporate money, and the stocks they hold and trade. The formula, the inputs and every grade are unchanged, and old links to the tab still work. Display only."
+  }
+ ]
 }

@@ -1124,7 +1124,7 @@ input, select { accent-color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .tk-track { animation: none; } .tk-set[aria-hidden="true"] { display: none; } .tk-view { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .tk-dot { animation: none; } }
 @media print { .ticker { display: none !important; } }
 
-/* Net worth, stocks held and trades over time (Unbought tab; public/wealth-timeline.js, charts.js). */
+/* Net worth, stocks held and trades over time (Big Money Independence tab; public/wealth-timeline.js, charts.js). */
 .wt-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 12px 0 14px; }
 .wt-stat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 10px 12px; min-width: 0; }
 .wt-stat .l, .wt-stat .d { color: var(--muted); font-size: .78rem; }
@@ -1163,7 +1163,7 @@ input, select { accent-color: var(--accent); }
   .wt-panel { padding: 12px 10px 6px; }
 }
 
-/* Trackers (public/trackers.js): the Summary of Major Lookouts beside the Unbought score, the Trackers section's tabs,
+/* Trackers (public/trackers.js): the Summary of Major Lookouts beside the Big Money Independence score, the Trackers section's tabs,
    and the Trackers page. */
 .lookouts .lk-list { list-style: none; margin: 0; padding: 0; }
 .lk-list li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); }

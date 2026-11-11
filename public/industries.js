@@ -1,4 +1,4 @@
-// The crypto and AI industry: the super PACs, companies and executives the "Crypto & AI industry" card on the Unbought
+// The crypto and AI industry: the super PACs, companies and executives the "Crypto & AI industry" card on the Big Money Independence
 // tab follows (approved 2026-11-08), and how FEC records are matched to them. Shared by the refresh (src/feeds.mjs,
 // "industry-gifts"), which reads the gifts, and the page, which shows them. Shown only; no score uses it.
 //

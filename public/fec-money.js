@@ -1,10 +1,10 @@
 // The campaign money read from the FEC beyond the cycle's totals, shared by the refresh (src/feeds.mjs), which reads and
-// sums it, and the pages, which show it and give it to the Unbought grade:
+// sums it, and the pages, which show it and give it to the Big Money Independence grade:
 //   PAC lines by cycle      every PAC contribution the FEC has processed (Form 3, line 11C), with each PAC's type
 //   not yet processed       PAC contributions in reports filed since the FEC's processed totals end (raw e-filings)
 //   by state                itemized gifts from individuals, by the donor's state
 //   joint fundraising       money a joint fundraising committee passed on (line 12), credited back to the people who gave it
-// and how the Unbought grade adds these up over more than one cycle.
+// and how the Big Money Independence grade adds these up over more than one cycle.
 import {SIZE_BRACKETS} from './donor-sizes.js';
 import {pacKind,PAC_KINDS} from './pac-types.js';
 
@@ -132,7 +132,7 @@ export function jfcCycleSummary(rows){
     from:[...from.values()].sort((a,b)=>b.amount-a.amount).slice(0,30)};
 }
 
-// ---------- Periods for the Unbought grade ----------
+// ---------- Periods for the Big Money Independence grade ----------
 // The cycles a period covers: 'this' (the current cycle) or 'since:YYYY' (each cycle from YYYY's on) or 'cycle:YYYY'.
 export function periodCycles(period,current,available=[]){
   const all=[...new Set([current,...available].map(Number))].filter(Number.isFinite).sort((a,b)=>b-a);
@@ -151,7 +151,7 @@ export function periodOptions(current,cycles){
   return [{value:'this',label:periodLabel('this',current)},...past.map(c=>({value:`since:${c}`,label:`${c-1}–${current}`})),...past.map(c=>({value:`cycle:${c}`,label:`${c-1}–${c} only`}))];
 }
 
-// The inputs the Unbought grade takes, added up over the period's cycles. cur: what the current cycle uses now
+// The inputs the Big Money Independence grade takes, added up over the period's cycles. cur: what the current cycle uses now
 // ({camp, sizes, pacRows, earmarks, jfc}); past: {camp: campaign-history cycles, sizes: donor-sizes cycles, pacs:
 // pac-history cycles, jfc: joint-fundraising cycles, earmarks: {cycle: [{group, amount}]}}. A cycle missing a record
 // leaves that part waiting (null), never zero.

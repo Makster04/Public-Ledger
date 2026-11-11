@@ -1,5 +1,5 @@
 // The six scores on each profile (Scores/06_SIX_GRADES_PROPOSAL.md): Ideology (a position from liberal to conservative,
-// not a grade) and five letter grades, Keeps Their Word, Shows Up, Unbought, Above Board and People First. Each returns
+// not a grade) and five letter grades, Keeps Their Word, Shows Up, Big Money Independence, Above Board and People First. Each returns
 // {pct or lean, parts, why, needs}: `parts` is the breakdown shown on the score card (one row per part, with its points or
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
@@ -85,7 +85,7 @@ export function showsUp(person,{attendance=null,getItDone=null,asOfYear=null}={}
     needs:[['Roll-call record from 2018 on (Voteview)',!!a.complete],['Sponsored bills and how far they got (Congress.gov)',!!d.complete]]};
 }
 
-// ---------- 4. Unbought (IntegrityIndex.us's published formula) ----------
+// ---------- 4. Big Money Independence (IntegrityIndex.us's published formula) ----------
 //   75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges, never below 0.
 // House and Senate weights differ. Numbers their page leaves out are filled in here and labeled on the page.
 export const UNBOUGHT={
@@ -226,7 +226,7 @@ const pctOf=(n,d)=>d?n/d*100:0;
 // A trade's kind: a reviewed trade's `asset` ('stock', 'fund' …), or an official report's `assetType`.
 const KINDS=new Set(['stock','option','fund','bond','other']);
 export const tradeKind=r=>r?.assetType||(KINDS.has(r?.asset)?r.asset:'stock');
-// Trade Conflicts (the Insider Trading Index without its single-stock activity part, since Unbought counts how much they
+// Trade Conflicts (the Insider Trading Index without its single-stock activity part, since Big Money Independence counts how much they
 // trade): the share of their individual-stock dollars in sectors their committees oversee, of trades within 30 days of
 // a related vote, and of trades in donors' companies. rows: tradeChecks() rows. A part the records can't tell yet is left
 // out and the others rescaled: trades read automatically from the official reports carry no near-vote review
@@ -301,7 +301,7 @@ export const SIX=[
   {key:'ideology',name:'Ideology',tag:'POLITICAL POSITION',q:'Where they stand from liberal to conservative, overall and issue by issue.',grade:false},
   {key:'word',name:'Keeps Their Word',tag:'PROMISES',q:'The share of their promises they kept, judged by what they did afterward.',grade:true},
   {key:'showsup',name:'Shows Up',tag:'JOB PERFORMANCE',q:'Whether they cast their votes and move the bills they sponsor.',grade:true},
-  {key:'unbought',name:'Unbought',tag:'MONEY & INDEPENDENCE',q:'How independent their money is from special interests. It doesn\'t measure how they vote.',grade:true},
+  {key:'unbought',name:'Big Money Independence',tag:'MONEY & INDEPENDENCE',q:'How independent their money is from special interests. It doesn\'t measure how they vote.',grade:true},
   {key:'aboveboard',name:'Above Board',tag:'CONFLICTS & DISCLOSURE',q:'Whether their own money is tied to the power of their office, whether they follow the disclosure rules, and whether they\'re in legal trouble.',grade:true},
   {key:'peoplefirst',name:'People First',tag:'VOTES & WORKERS',q:'Whether their votes and bills favor working people or business interests.',grade:true},
 ];

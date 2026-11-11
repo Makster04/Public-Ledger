@@ -133,7 +133,7 @@ export function mapSVG(m){
 
 // Gifts from individuals a group collected and passed on to the campaign (research.json "bundled"), as a box.
 const bundledPanel=m=>m.bundled.length?`<div class="mm-panel"><h3>Bundled through groups</h3><p class="small muted">Gifts from individuals that a group collected and passed on. They are part of the donor money above, not extra money.</p><ul class="list small">${m.bundled.map(b=>`<li><b>${esc(b.who)}</b> passed on ${full$(b.routed)}${b.n?` from ${b.n.toLocaleString('en-US')} gifts`:''}${b.src?` · <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</li>`).join('')}</ul></div>`:'';
-// The same box for another place on the page: the Unbought tab shows it under its Sources (moneyMapBlock with
+// The same box for another place on the page: the Big Money Independence tab shows it under its Sources (moneyMapBlock with
 // withBundled: false leaves it out of the map there).
 export function bundledBox(s,opts={}){const m=moneyMap(s,opts);return m?bundledPanel(m):'';}
 // A long list shows its first SHOW_FIRST items (they come largest first), with the rest behind "Show all" under them.

@@ -12,7 +12,7 @@
 //
 // Every other committee forwarding earmarked gifts is found too: the FEC's totals by recipient list every committee that
 // sent the campaign money in a cycle, and any that sent more than a PAC may give directly, or many checks, has its
-// disbursements read the same way (maybeConduits). Each cycle from historyFrom on is kept (byCycle), for the Unbought
+// disbursements read the same way (maybeConduits). Each cycle from historyFrom on is kept (byCycle), for the Big Money Independence
 // tab's earlier periods; "routed" stays the current cycle's.
 //
 // Writes research.json "bundled": {asOf, conduits: {group: [committee ID]}, names: {"fec:C…": name}, listed: {person: true

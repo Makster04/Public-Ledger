@@ -1,6 +1,6 @@
 // The FEC money read beyond the cycle's totals (public/fec-money.js, the refresh feeds in src/feeds.mjs, and the
 // earmark finder in scripts/build-bundled.mjs): PAC lines by cycle, PAC money not yet processed, gifts by state, joint
-// fundraising credited back to donors, and the Unbought grade over more than one cycle.
+// fundraising credited back to donors, and the Big Money Independence grade over more than one cycle.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import config from '../data/config.json' with {type:'json'};
@@ -79,7 +79,7 @@ test('joint fundraising: shares credited back by size, the unlisted remainder co
   assert.deepEqual([over.bands[4],over.committees,over.unlisted,over.scaled],[2250,750,0,true]);
 });
 
-test('Unbought: joint fundraising money credited to donors\' sizes instead of the joint fundraising rate',()=>{
+test('Big Money Independence: joint fundraising money credited to donors\' sizes instead of the joint fundraising rate',()=>{
   const p={id:'x',chamber:'S',camp:{receipts:100000,indiv:50000,itemized:30000,unitemized:20000,pac:0,transfers:50000,self:0,start:'2025-01-01',end:'2026-09-30'}};
   const a=unbought(p,{}),b=unbought(p,{jfc:{transferred:50000,people:50000,committees:0,bands:[50000,0,0,0,0]}});
   const donor=x=>x.parts.find(q=>q.key==='donor').points;
