@@ -107,6 +107,11 @@ export function mapSVG(m){
   return out.join('');
 }
 
+// Gifts from individuals a group collected and passed on to the campaign (research.json "bundled"), as a box.
+const bundledPanel=m=>m.bundled.length?`<div class="mm-panel"><h3>Bundled through groups</h3><p class="small muted">Gifts from individuals that a group collected and passed on. They are part of the donor money above, not extra money.</p><ul class="list small">${m.bundled.map(b=>`<li><b>${esc(b.who)}</b> passed on ${full$(b.routed)}${b.n?` from ${b.n.toLocaleString('en-US')} gifts`:''}${b.src?` · <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</li>`).join('')}</ul></div>`:'';
+// The same box for another place on the page: the Unbought tab shows it under its Sources (moneyMapBlock with
+// withBundled: false leaves it out of the map there).
+export function bundledBox(s,opts={}){const m=moneyMap(s,opts);return m?bundledPanel(m):'';}
 // A long list shows its first SHOW_FIRST items (they come largest first), with the rest behind "Show all" under them.
 // items: each item's HTML; wrap: the list's container for a run of them; noun: what the items are, for the toggle.
 export const SHOW_FIRST=10;
@@ -114,7 +119,8 @@ export function showFirst(items,wrap,noun){
   if(items.length<=SHOW_FIRST)return wrap(items.join(''));
   return wrap(items.slice(0,SHOW_FIRST).join(''))+`<details class="mm-more"><summary><span class="mm-more-all">Show all ${items.length} ${esc(noun)}</span><span class="mm-more-less">Show fewer</span></summary>${wrap(items.slice(SHOW_FIRST).join(''))}</details>`;
 }
-// The whole section: the diagram, its key, the numbers behind it, the PACs by kind and the bundled gifts.
+// The whole section: the diagram, its key, the numbers behind it, the PACs by kind and the bundled gifts. opts.under:
+// more under the numbers, in the same column; opts.withBundled: false leaves the bundled gifts' box out.
 export function moneyMapBlock(s,opts={}){
   const m=moneyMap(s,opts);if(!m)return '';
   const row=(sw,l,v,sh='')=>`<tr><td>${sw?`<i class="mm-swatch" style="background:var(${sw})"></i>`:''}${esc(l)}</td><td class="r num">${full$(v)}</td><td class="r num">${sh}</td></tr>`;
@@ -127,14 +133,14 @@ export function moneyMapBlock(s,opts={}){
     <p class="small muted">Open a kind to see its PACs.</p>`:'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
   const corpTotal=m.corporate.reduce((t,p)=>t+p.a,0);
   const corporate=`<div class="mm-panel mm-corp" id="f-corporate"><h3>Corporate PAC donors</h3>${m.corporate.length?`<p class="mm-corp-sum"><b class="num">${full$(corpTotal)}</b> from ${m.corporate.length} corporate PAC${m.corporate.length===1?'':'s'}</p>${showFirst(m.corporate.map(p=>`<li><span><i class="mm-badge" aria-hidden="true">${esc(initials(p.name))}</i>${esc(p.name)}</span><span class="num">${full$(p.a)}</span></li>`),h=>`<ul class="mm-pacs mm-corp-list">${h}</ul>`,'corporate PACs')}<p class="small muted">PACs the FEC records as sponsored by a corporation, from the lines read.</p>`:m.pacRead?'<p class="small">None of the PAC lines read are from corporate PACs.</p>':'<p class="small muted">No PAC lines read yet.</p>'}</div>`;
-  const bundled=m.bundled.length?`<div class="mm-panel"><h3>Bundled through groups</h3><p class="small muted">Gifts from individuals that a group collected and passed on. They are part of the donor money above, not extra money.</p><ul class="list small">${m.bundled.map(b=>`<li><b>${esc(b.who)}</b> passed on ${full$(b.routed)}${b.n?` from ${b.n.toLocaleString('en-US')} gifts`:''}${b.src?` · <a href="${esc(b.src)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</li>`).join('')}</ul></div>`:'';
+  const bundled=opts.withBundled===false?'':bundledPanel(m);
   return `<section class="mm" id="f-map">
     <h2>Money map</h2>
     <p class="small muted" style="margin:4px 0 10px">${esc(m.cmte)}${m.cmteId?` (${esc(m.cmteId)})`:''} · FEC committee totals, ${day(m.start)} – ${day(m.end)}${m.src?` · <a href="${esc(m.src)}" target="_blank" rel="noopener">source ↗</a>`:''}</p>
     <div class="mm-diagram">${mapSVG(m)}</div>
     <div class="mm-key small muted"><span><i class="mm-dot"></i>Circle area = dollars (amounts too small to see are drawn at the smallest size)</span><span><i class="mm-line"></i>Line width = dollars, in the direction the money moved</span>${m.side.length?'<span><i class="mm-dash"></i>Outside groups\' own spending, never given to the campaign</span>':''}</div>
     <div class="mm-books">
-      <div class="mm-panel"><h3>The numbers</h3><div class="tablewrap"><table>${money}</table></div></div>
+      <div class="mm-col"><div class="mm-panel"><h3>The numbers</h3><div class="tablewrap"><table>${money}</table></div></div>${opts.under||''}</div>
       <div class="mm-stack">
         <div class="mm-panel"><h3>PACs by kind</h3>${kinds}</div>
         ${corporate}

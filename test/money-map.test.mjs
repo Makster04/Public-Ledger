@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {moneyMap,mapSVG,moneyMapBlock,LAYOUT,short$,share,showFirst,SHOW_FIRST} from '../public/money-map.js';
+import {moneyMap,mapSVG,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST} from '../public/money-map.js';
 import {pacTypeOf} from '../public/pac-types.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
@@ -88,4 +88,15 @@ test('long lists show their first 10, largest first, with the rest behind "Show 
     assert.equal((corp.slice(0,corp.indexOf('mm-more')>0?corp.indexOf('mm-more'):undefined).match(/<li>/g)||[]).length,Math.min(10,m.corporate.length),'10 corporate PACs before the toggle');
   }
   assert.ok(people.find(p=>p.id==='collins').pac.byCat.filter(([,a])=>a>0).length>10,'a profile with more than 10 kinds, so the toggle is tested');
+});
+
+test('on the Unbought tab the map takes a card under its numbers, and the bundled box goes beside the score instead',()=>{
+  const s=people.find(p=>p.id==='lawler'),o=opts(s);
+  const full=moneyMapBlock(s,o),there=moneyMapBlock(s,{...o,withBundled:false,under:'<div id="u-states-slot"></div>'});
+  assert.match(full,/Bundled through groups/,'the Money & Influence tab keeps it in the map');
+  assert.doesNotMatch(there,/Bundled through groups/);
+  assert.match(there,/<div class="mm-col"><div class="mm-panel"><h3>The numbers<\/h3>[\s\S]*?<\/table><\/div><\/div><div id="u-states-slot"><\/div><\/div>/,'the card goes under the numbers, in their column');
+  const box=bundledBox(s,o);
+  assert.match(box,/^<div class="mm-panel"><h3>Bundled through groups<\/h3>/);assert.match(box,/AIPAC/);
+  assert.equal(bundledBox({camp:{missing:true}},{}),'','no campaign money: no box');
 });
