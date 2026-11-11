@@ -24,6 +24,8 @@
 //   npm run funders:bundled                     look up and rewrite public/research.json
 //   npm run funders:bundled -- --check          list what it found, without writing
 //   npm run funders:bundled -- --only ossoff    just these people (the others keep what's saved)
+//   npm run funders:bundled -- --only perry --max-found 20   read more of the other possible conduits on each cycle's
+//                                               list than the usual 10 (for a person a run says that limit cut short)
 //   npm run funders:bundled -- --mark-complete-except a,b   one time, for a file saved before "listed" was kept
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
@@ -163,6 +165,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
   const since=Number(config.historyFrom)||2016,current=Number(config.cycle)||2026,arg=k=>process.argv.includes(k)?process.argv[process.argv.indexOf(k)+1]:null;
   const only=arg('--only')?.split(',')||null,allCycles=[];for(let y=current;y>=since+since%2;y-=2)allCycles.push(y);
+  const limits={...LIMITS,found:Math.max(1,Math.floor(Number(arg('--max-found'))||LIMITS.found))};
   const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   // Each request is tried up to three times (the FEC turns away bursts and sometimes times out), with a pause between;
   // past the key's hourly limit (HTTP 429), it waits a minute at a time and goes on.
@@ -179,7 +182,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   for(const p of people(data)){
     if(!p.fecCmte)continue;
     if(only&&!only.includes(p.id)){if(before[p.id])out[p.id]=before[p.id];continue;}
-    const r=await searchPerson(p,{get,groups,known,allCycles,current,prev:before[p.id]||{},names});
+    const r=await searchPerson(p,{get,groups,known,allCycles,current,prev:before[p.id]||{},names,limits});
     listed+=r.listed;if(Object.keys(r.entries).length)out[p.id]=r.entries;
     kept.push(...r.failed.map(m=>`${p.id} · ${m}`));cut.push(...r.capped.map(m=>`${p.id} · ${m}`));
     if(r.complete)complete[p.id]=true;else{delete complete[p.id];incomplete.push(p.id);}
@@ -190,7 +193,9 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   if(hand)console.log(`\nCheck: Booker through AIPAC PAC, researched by hand $${hand.amount.toLocaleString()} for ${hand.period}; found $${Math.round(out.booker?.aipac?.routed||0).toLocaleString()} for the whole cycle.`);
   if(kept.length)console.log(`\n${kept.length} read${kept.length===1?'':'s'} failed after three tries:\n  ${kept.slice(0,40).join('\n  ')}${kept.length>40?`\n  …and ${kept.length-40} more`:''}\nRun it again later to fill them in.`);
   if(cut.length)console.log(`\n${cut.length} search${cut.length===1?'':'es'} stopped at a limit (LIMITS in this script), so those people stay marked partial:\n  ${cut.slice(0,40).join('\n  ')}${cut.length>40?`\n  …and ${cut.length-40} more`:''}`);
-  if(incomplete.length)console.log(`\nNot searched completely, so their Earmarks part stays marked partial: ${incomplete.join(', ')}.\nTo finish them: npm run funders:bundled -- --only ${incomplete.join(',')}`);
+  // The command to finish them: with a higher --max-found when that limit is what cut a search short.
+  const more=cut.some(m=>/may forward gifts, past the/.test(m))?` --max-found ${limits.found*2}`:'';
+  if(incomplete.length)console.log(`\nNot searched completely, so their Earmarks part stays marked partial: ${incomplete.join(', ')}.\nTo finish them: npm run funders:bundled -- --only ${incomplete.join(',')}${more}`);
   // Every group counts as found for everyone only when everyone with a campaign committee was searched completely.
   const discovered=people(data).filter(p=>p.fecCmte).every(p=>complete[p.id]);
   if(!listed)console.log('\nThe FEC\'s totals by recipient couldn\'t be read, so only the 5 groups were read; the Earmarks part stays marked partial.');
