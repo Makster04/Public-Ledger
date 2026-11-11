@@ -7,7 +7,10 @@
 //   routed              its groups whose routed ("bundled") gifts count (research.json "bundled", scripts/build-bundled.mjs)
 //   groupPacs           each such group's own PAC: the reader of routed gifts also adds up that PAC's own checks to the
 //                       campaign over the whole cycle ("direct"), which fills in a check the PAC lines read don't reach
-//   superPacs           its own super PACs, by name (their spending for and against a candidate)
+//   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
+//                       FEC committee IDs where known. superPacLine: the Summary of Major Lookouts shows their spending
+//                       as an extra line (approved 2026-11-11 for Crypto and Big Tech + AI, whose money mostly arrives
+//                       that way); it never changes the mark
 //   industries          the employee-gift groups the refresh reads for it (public/industries.js, "industry-gifts")
 //   companies, groups   who it follows, as listed on the page
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
@@ -43,14 +46,14 @@ export const TRACKERS=[
     pacIds:['C00428623','C00227546','C00360354','C00362707','C00328369','C00369751','C00125641','C00339085','C00498691','C00419036','C00375048','C00323048','C00502906','C00907683','C00416685'],
     patterns:['\\bGOOGLE\\b|\\bALPHABET\\b','\\bMICROSOFT\\b','\\bMETA PLATFORMS\\b|\\bFACEBOOK\\b','\\bAMAZON\\.?COM\\b|\\bAMAZON (SERVICES|WEB)','\\bAPPLE INC','\\bORACLE\\b','SALESFORCE','\\bIBM\\b|INTERNATIONAL BUSINESS MACHINES','\\bADOBE\\b','\\bINTEL CORP','QUALCOMM','ADVANCED MICRO DEVICES','CISCO SYSTEMS','\\bDELL\\b','\\bHP INC|HEWLETT','\\bUBER\\b','\\bNETFLIX\\b','\\bAIRBNB\\b','DOORDASH',
       'TECHNOLOGY NETWORK|\\bTECHNET\\b','INFORMATION TECHNOLOGY INDUSTRY COUNCIL','CONSUMER TECHNOLOGY ASSOCIATION','SEMICONDUCTOR INDUSTRY ASSOCIATION','SOFTWARE ALLIANCE','\\bNVIDIA\\b','PALANTIR','OPENAI','ANTHROPIC','ANDREESSEN'].map(P),
-    routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='ai').map(p=>p.name),industries:['ai','both'],
+    routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='ai').map(p=>p.name),superPacIds:SUPER_PACS.filter(p=>p.industry==='ai'&&p.id).map(p=>p.id),superPacLine:true,industries:['ai','both'],
     companies:['Alphabet (Google, YouTube)','Microsoft','Meta','Amazon','Apple','Oracle','Salesforce','IBM','Adobe','Intel','Qualcomm','AMD','Cisco','Dell','HP','Uber','Netflix','Airbnb','DoorDash','and the AI companies on the crypto and AI list'],
     groups:['TechNet','Information Technology Industry Council','Consumer Technology Association','Semiconductor Industry Association','BSA (The Software Alliance)']},
   {key:'crypto',name:'Crypto',long:'Crypto',
     about:'The crypto companies and the Fairshake and Fellowship super PACs, with the executives approved for naming.',
     pacIds:['C00804179','C00824896'],
     patterns:['COINBASE','\\bRIPPLE\\b','KRAKEN|PAYWARD','\\bGEMINI\\b','CIRCLE INTERNET','GALAXY DIGITAL','CONSENSYS','UNISWAP','PARADIGM OPERATIONS','JUMP TRADING','BLOCKCHAIN ASSOCIATION','ANDREESSEN','FAIRSHAKE'].map(P),
-    routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='crypto').map(p=>p.name),industries:['crypto','both'],
+    routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='crypto').map(p=>p.name),superPacIds:SUPER_PACS.filter(p=>p.industry==='crypto'&&p.id).map(p=>p.id),superPacLine:true,industries:['crypto','both'],
     companies:['the crypto companies on the crypto and AI list'],groups:['Blockchain Association']}];
 export const TRACKER=Object.fromEntries(TRACKERS.map(t=>[t.key,t]));
 
@@ -93,17 +96,41 @@ export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,dire
   return {key:t.key,name:t.name,pacs,pac,routed:rt,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
 }
 export const lookouts=inputs=>TRACKERS.map(t=>trackerMoney(t,inputs));
+// Is this super PAC (an FEC committee ID and name) one of the tracker's own? By ID, or by name, ignoring case and
+// punctuation (as public/industries.js matches them).
+const normName=x=>upper(x).replace(/[.,'"’]/g,'').replace(/\s+INC$/,'').replace(/\s+/g,' ').trim();
+export const isOwnSuperPac=(t,{id,name}={})=>!!((id&&(t.superPacIds||[]).includes(id))||(name&&t.superPacs.some(n=>normName(n)===normName(name))));
+// The tracker's own super PACs' spending for and against one person, from the outside-spending records on file
+// (research.json: the person's "out.cms" rows [committee index, for, against] into "ie.cm" [id, name, …]). null when
+// the person has no records on file.
+export function trackerOutside(t,out,cms){
+  if(!out)return null;
+  const rows=[];
+  for(const x of out.cms||[]){const c=(cms||[])[x[0]];if(!c||!isOwnSuperPac(t,{id:c[0],name:c[1]}))continue;rows.push({id:c[0],name:c[1],for:cents(Number(x[1])||0),against:cents(Number(x[2])||0)});}
+  return {rows,for:cents(rows.reduce((a,r)=>a+r.for,0)),against:cents(rows.reduce((a,r)=>a+r.against,0)),start:out.start||null,end:out.end||null};
+}
+// Its own super PACs' spending for and against one person this cycle: the refresh's super PAC records (sp, from
+// /api/superpacs) when they show some, else the records on file, else whichever was read (all zero). source: 'refresh'
+// or 'file'; null when neither has been read.
+export function ownSuperPacSpending(t,{sp=null,cand=null,out=null,cms=null}={}){
+  const live=sp?.superPacs?(()=>{const rows=trackerSuperPacs(t,sp,cand).named;return {rows,for:cents(rows.reduce((a,r)=>a+r.for,0)),against:cents(rows.reduce((a,r)=>a+r.against,0)),source:'refresh'};})():null;
+  const file=trackerOutside(t,out,cms),some=x=>x&&(x.for>0||x.against>0);
+  if(some(live))return live;
+  if(some(file))return {...file,source:'file'};
+  return live||(file?{...file,source:'file'}:null);
+}
 // Super PACs and a tracker, from the Super PACs page's data (/api/superpacs: each super PAC's spending for and against
 // each candidate, and its largest gifts, organizations by name): its own super PACs by name, and the super PACs its
 // companies and groups gave to (their gifts among the largest read), each with its spending for and against cand (an
 // FEC candidate ID).
 export function trackerSuperPacs(t,data,cand){
-  const own=new Set(t.superPacs.map(upper)),spent=o=>{const c=(o.cands||[]).find(x=>x.cand===cand);return {for:cents(c?.for||0),against:cents(c?.against||0)};};
+  const spent=o=>{const c=(o.cands||[]).find(x=>x.cand===cand);return {for:cents(c?.for||0),against:cents(c?.against||0)};};
   const named=[],funded=[];
   for(const o of data?.superPacs||[]){
-    if(own.has(upper(o.name)))named.push({id:o.id,name:o.name,total:o.total,...spent(o)});
+    const own=isOwnSuperPac(t,o);
+    if(own)named.push({id:o.id,name:o.name,total:o.total,...spent(o)});
     const orgs=(o.donors?.orgs||[]).filter(g=>t.patterns.some(r=>r.test(upper(g.name))));
-    if(orgs.length&&!own.has(upper(o.name)))funded.push({id:o.id,name:o.name,given:cents(orgs.reduce((s,g)=>s+g.amount,0)),givers:orgs.map(g=>g.name),read:o.donors.orgs.reduce((s,g)=>s+g.amount,0)+(o.donors.indiv?.total||0),...spent(o)});
+    if(orgs.length&&!own)funded.push({id:o.id,name:o.name,given:cents(orgs.reduce((s,g)=>s+g.amount,0)),givers:orgs.map(g=>g.name),read:o.donors.orgs.reduce((s,g)=>s+g.amount,0)+(o.donors.indiv?.total||0),...spent(o)});
   }
   return {named,funded:funded.sort((a,b)=>b.given-a.given)};
 }

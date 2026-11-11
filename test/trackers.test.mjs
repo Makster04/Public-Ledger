@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {TRACKERS,TRACKER,isTrackerPac,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs} from '../public/trackers.js';
+import {TRACKERS,TRACKER,isTrackerPac,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,isOwnSuperPac,trackerOutside,ownSuperPacSpending} from '../public/trackers.js';
 import {bundledBox} from '../public/money-map.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
@@ -128,4 +128,30 @@ test('where they show: the lookouts beside the score, the tracker tabs, the Trac
   const s=research.members.find(p=>p.id==='lawler');
   const box=bundledBox(s,{bundled:research.bundled.people.lawler,groups:{...Object.fromEntries((research.groupPos||[]).map(g=>[g.key,g.org])),...(research.bundled?.names||{})},categories:research.categories||{},pacNames:research.pacNames||[],pacType:()=>null});
   assert.match(box,/AIPAC/);
+});
+
+test('the super PAC line (Crypto and Big Tech + AI only): their own super PACs\' spending, refresh first, records on file until then',()=>{
+  assert.deepEqual(TRACKERS.filter(t=>t.superPacLine).map(t=>t.key),['tech','crypto'],'approved for these two');
+  assert.ok(isOwnSuperPac(TRACKER.crypto,{name:'FAIRSHAKE'})&&isOwnSuperPac(TRACKER.crypto,{name:'Defend American Jobs, Inc.'})&&isOwnSuperPac(TRACKER.crypto,{id:'C00836221',name:'?'}));
+  assert.ok(!isOwnSuperPac(TRACKER.crypto,{name:'Leading the Future'})&&isOwnSuperPac(TRACKER.tech,{name:'LEADING THE FUTURE'}));
+  assert.ok(!isOwnSuperPac(TRACKER.crypto,{name:'Fairshake Friends Fund'}),'never a look-alike');
+  // The records on file: Defend American Jobs in the Ohio Senate race, American Mission in Louisiana's.
+  const p=id=>[...research.members,...research.cands].find(x=>x.id===id);
+  const h=trackerOutside(TRACKER.crypto,p('husted').out,research.ie.cm);
+  assert.ok(h.for>0,'Husted: crypto super PAC spending for him');assert.equal(h.rows[0].name,'Defend American Jobs');
+  assert.ok(trackerOutside(TRACKER.crypto,p('brown').out,research.ie.cm).against>0,'and against his opponent');
+  assert.ok(trackerOutside(TRACKER.tech,p('letlow').out,research.ie.cm).for>0);
+  assert.deepEqual(trackerOutside(TRACKER.crypto,p('lawler').out,research.ie.cm).rows,[],'none on file for Lawler');
+  assert.equal(trackerOutside(TRACKER.crypto,null,research.ie.cm),null);
+  // Which source: the refresh when it shows some spending on them, else the records on file.
+  const out={start:'2025-01-01',end:'2026-09-30',cms:[[0,500,0]]},cms=[['C00836221','Defend American Jobs']];
+  const sp={superPacs:[{id:'C00836221',name:'DEFEND AMERICAN JOBS',cands:[{cand:'S0',for:900,against:0}]}]};
+  assert.deepEqual([ownSuperPacSpending(TRACKER.crypto,{sp,cand:'S0',out,cms}).source,ownSuperPacSpending(TRACKER.crypto,{sp,cand:'S0',out,cms}).for],['refresh',900]);
+  assert.deepEqual([ownSuperPacSpending(TRACKER.crypto,{sp,cand:'OTHER',out,cms}).source,ownSuperPacSpending(TRACKER.crypto,{sp,cand:'OTHER',out,cms}).for],['file',500],'the refresh shows none: the records on file');
+  assert.equal(ownSuperPacSpending(TRACKER.crypto,{}),null,'nothing read');
+  // It never changes the mark.
+  assert.equal(trackerMoney(TRACKER.crypto,{pacLines:[]}).status,'none');
+  const app=read('../public/app.js'),css=read('../public/remake.css');
+  assert.match(app,/class="lk-sp">Its super PAC spending/);assert.match(app,/t\.superPacLine\?inp\.superPac/);
+  assert.ok(css.includes('.lk-sp'));
 });

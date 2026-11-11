@@ -13,7 +13,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES} from './industries.js';
-import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs} from './trackers.js';
+import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,latestWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
@@ -1225,8 +1225,10 @@ function jfcEvidence(j,cycle){
 // The money behind a person's lookouts over a period (the Unbought tab's period picker): the PAC lines (this cycle: the
 // reviewed reports merged with the refresh's whole-cycle list; other cycles: the refresh's), the gifts routed through
 // groups and those groups' own PAC checks this cycle, and the employee gifts the refresh read (crypto and AI so far). A
-// cycle whose PAC lines aren't read leaves everything waiting. coverage: what the PAC lines cover, in words.
-function lookoutInputs(s,d,period='this'){
+// cycle whose PAC lines aren't read leaves everything waiting. coverage: what the PAC lines cover, in words. superPac: for
+// each tracker, its own super PACs' spending for and against them this cycle (sp: the Super PACs page's data, or the
+// records on file until it loads); shown, never counted.
+function lookoutInputs(s,d,period='this',sp=undefined){
   const current=curCycle(s),m=d?.money||{},past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
   const lists=[],said=[];let missing=false;
   for(const cy of cycles){
@@ -1244,17 +1246,24 @@ function lookoutInputs(s,d,period='this'){
   let employees=null;const ind=m.industry;
   if(ind){const per=cycles.map(cy=>Number(cy)===Number(ind.cycle)?ind:ind.cycles?.[cy]);
     if(per.every(Boolean)){employees={};for(const p of per)for(const [k,v] of Object.entries(p.industries||{}))employees[k]=(employees[k]||0)+(Number(v.total)||0);}}
-  return {pacLines:missing?null:mergePacLines(...lists),routed,routedKnown,direct,employees,cycles,label:periodLabel(period,current),coverage:said.join('; ')};
+  const superPac=Object.fromEntries(TRACKERS.filter(t=>t.superPacs.length).map(t=>[t.key,ownSuperPacSpending(t,{sp,cand:s.fecCand,out:s.out,cms:DATA.ie?.cm})]));
+  return {pacLines:missing?null:mergePacLines(...lists),routed,routedKnown,direct,employees,superPac,cycles,label:periodLabel(period,current),coverage:said.join('; ')};
 }
 // "Summary of Major Lookouts": one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
 // period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
-// the employees' own gifts as a smaller number under it. Each line opens its tracker below.
+// the employees' own gifts as a smaller number under it. For Crypto and Big Tech + AI, whose money mostly comes as super
+// PAC spending, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
+// mark. Each line opens its tracker below.
 function lookoutsBox(s,inp){
+  const spLine=x=>{const t=TRACKER[x.key],o=t.superPacLine?inp.superPac?.[x.key]:null;if(!o||!(o.for>0||o.against>0))return '';
+    const parts=[o.for>0?`<b class="num" title="${esc(fmtFull(o.for))}">${shortMoney(o.for)}</b> for them`:'',o.against>0?`<b class="num" title="${esc(fmtFull(o.against))}">${shortMoney(o.against)}</b> against them`:''].filter(Boolean);
+    const now=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
+    return `<span class="lk-sp">Its super PAC spending${now?'':' this cycle'}: ${parts.join(' · ')}</span>`;};
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}<span class="sr-only">: ${said}</span></button>
-      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span></li>`;};
+      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending is in each tracker below, since it isn't money the campaign took.</p></div>`;
+    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under Crypto and Big Tech + AI since most of their money arrives that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
@@ -1277,14 +1286,17 @@ function trackerPanel(s,d,inp,x,t,sp){
       return `${stTable(['Company','Employees\' gifts','of which executives'],cos.sort((a,b)=>b.total-a.total).map(c=>[esc(c.name),`${fmtFull(c.total)} <span class="muted small">· ${c.n}</span>`,c.exec?fmtFull(c.exec):'—']),'',[1,2])}
         ${ex.length?`<ul class="st-ind-execs">${ex.map(e=>`<li><span><b>${esc(e.name)}</b> <span class="muted">${esc(e.role)}, ${esc(e.company)}</span></span><span class="num">${fmtFull(e.total)}</span></li>`).join('')}</ul>`:''}
         <p class="small muted">${cy-1}–${cy}, from the FEC's itemized gifts: people who give one of these companies as their employer. Executives are named only where approved.</p>`;})();
-  const spBlock=sp===undefined?'<p class="small muted">Loading the super PAC records…</p>':sp===null?'<p class="small muted">The update service is offline, so the super PAC records can\'t be loaded right now.</p>'
-    :!sp.superPacs?'<p class="small muted">Waiting for the FEC refresh to read this cycle\'s super PACs.</p>'
-    :(()=>{const r=trackerSuperPacs(t,sp,s.fecCand),money=v=>v?fmtFull(v):'—';
-      const own=t.superPacs.length?(r.named.length?stTable(['Its super PAC','For them','Against them'],r.named.map(o=>[fecCmteLink(o.id,o.name),money(o.for),money(o.against)]),'',[1,2])
-        :`<p class="small">${esc(t.superPacs.join(', '))} ${t.superPacs.length===1?'isn\'t':'aren\'t'} among the super PACs that reported spending this cycle.</p>`):'';
-      const funded=r.funded.length?`${stTable(['Super PAC','Given by these companies and groups','For them','Against them'],r.funded.slice(0,12).map(o=>[`${fecCmteLink(o.id,o.name)}<div class="small muted">${esc(o.givers.slice(0,3).map(titleCase).join(', '))}${o.givers.length>3?' …':''}</div>`,`${fmtFull(o.given)}${o.read?` <span class="muted small">· ${Math.round(o.given/o.read*100)}% of the gifts read</span>`:''}`,money(o.for),money(o.against)]),'',[1,2,3])}`
-        :`<p class="small">None of these companies or groups is among the largest donors read for the ${sp.superPacs.length} biggest super PACs.</p>`;
-      return `${own}<h5 class="tr-h">Super PACs these companies and groups gave to</h5>${funded}<p class="small muted">This cycle. A super PAC's spending is its own money, never given to the campaign, and can be for or against ${who}. Largest gifts only, for the biggest super PACs.</p>`;})();
+  // Super PAC spending: its own super PACs (the refresh's records, or the records on file until they load), and the super
+  // PACs its companies and groups gave to (the refresh's records only).
+  const money=v=>v?fmtFull(v):'—',own=t.superPacs.length?inp.superPac?.[t.key]:null,spent=own?.rows?.filter(o=>o.for||o.against)||[];
+  const spWait=sp===undefined?'<p class="small muted">Loading the super PAC records…</p>':sp===null?'<p class="small muted">The update service is offline, so the super PAC records can\'t be loaded right now.</p>':'<p class="small muted">Waiting for the FEC refresh to read this cycle\'s super PACs.</p>';
+  const ownHTML=!t.superPacs.length?'':!own?spWait
+    :spent.length?`${stTable(['Its super PAC','For them','Against them'],spent.map(o=>[fecCmteLink(o.id,o.name),money(o.for),money(o.against)]),'',[1,2])}<p class="small muted">${own.source==='file'?`From the outside-spending records on file, ${esc(fmtDate(own.start))} to ${esc(fmtDate(own.end))}.`:'From the FEC refresh, this cycle.'}</p>`
+    :`<p class="small">${esc(t.superPacs.join(', '))} ${t.superPacs.length===1?'hasn\'t':'haven\'t'} reported spending for or against ${who}${own.source==='file'?' in the outside-spending records on file':' this cycle'}.</p>`;
+  const funded=!sp?.superPacs?spWait:(()=>{const r=trackerSuperPacs(t,sp,s.fecCand);
+    return r.funded.length?stTable(['Super PAC','Given by these companies and groups','For them','Against them'],r.funded.slice(0,12).map(o=>[`${fecCmteLink(o.id,o.name)}<div class="small muted">${esc(o.givers.slice(0,3).map(titleCase).join(', '))}${o.givers.length>3?' …':''}</div>`,`${fmtFull(o.given)}${o.read?` <span class="muted small">· ${Math.round(o.given/o.read*100)}% of the gifts read</span>`:''}`,money(o.for),money(o.against)]),'',[1,2,3])
+      :`<p class="small">None of these companies or groups is among the largest donors read for the ${sp.superPacs.length} biggest super PACs.</p>`;})();
+  const spBlock=`${ownHTML}<h5 class="tr-h">Super PACs these companies and groups gave to</h5>${funded}<p class="small muted">This cycle. A super PAC's spending is its own money, never given to the campaign, and can be for or against ${who}. Largest gifts only, for the biggest super PACs.</p>`;
   const followed=`<details class="st-more"><summary>Who is followed</summary><div class="st-more-b small">
     ${t.companies.length?`<p><b>Companies:</b> ${esc(t.companies.join(', '))}.</p>`:''}${t.key==='tech'||t.key==='crypto'?`<p><b>From the crypto and AI list:</b> ${esc(COMPANIES.filter(c=>t.industries.includes(c.industry)).map(c=>c.name).join(', '))}. <b>Executives named:</b> ${esc(EXECUTIVES.filter(e=>t.industries.includes(COMPANIES.find(c=>c.key===e.company)?.industry)).map(e=>e.name).join(', '))}.</p>`:''}
     ${t.groups.length?`<p><b>Groups:</b> ${esc(t.groups.join(', '))}.</p>`:''}${t.superPacs.length?`<p><b>Its super PACs:</b> ${esc(t.superPacs.join(', '))}.</p>`:''}</div></details>`;
@@ -1321,11 +1333,12 @@ function paneUnbought(s,pane){
   const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
   // Under the Sources: the bundled gifts, then the Summary of Major Lookouts for the period picked.
   let period='this',live=undefined,sp=undefined;
-  const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period));
+  const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period,sp));
+  const fillLookouts=()=>{const el=pane.querySelector('#u-lookouts');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=lookoutsBox(s,lookoutInputs(s,live,period,sp));el.replaceWith(tmp.firstElementChild);};
   // Opened from the header's "Trades" link (#id-timeline): the sections above the timeline fill in as their records
   // arrive and push it down, so it's brought back into view after each, for the first few seconds only.
   const opened=Date.now(),keepTimeline=()=>{if(Date.now()-opened<4000&&location.hash===`#${s.id}-timeline`)pane.querySelector('#u-timeline')?.scrollIntoView({block:'start'});};
-  const fillTrackers=()=>{const el=pane.querySelector('#u-trackers');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=trackersHTML(s,live,lookoutInputs(s,live,period),sp);el.replaceWith(tmp.firstElementChild);keepTimeline();};
+  const fillTrackers=()=>{const el=pane.querySelector('#u-trackers');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=trackersHTML(s,live,lookoutInputs(s,live,period,sp),sp);el.replaceWith(tmp.firstElementChild);keepTimeline();};
   const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
@@ -1348,7 +1361,7 @@ function paneUnbought(s,pane){
   mountShown();
   if(s.office)return;
   bindTrackers(pane);fillTrackers();
-  loadSuperPacs().then(d=>{sp=d;if(pane.isConnected&&location.hash.startsWith('#'+s.id))fillTrackers();});
+  loadSuperPacs().then(d=>{sp=d;if(pane.isConnected&&location.hash.startsWith('#'+s.id)){fillTrackers();fillLookouts();}});
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
     if(!pane.isConnected||!location.hash.startsWith('#'+s.id))return;
     live=d;
