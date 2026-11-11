@@ -48,6 +48,16 @@ function total(list){
 }
 // netWorth: the refresh's net-worth snapshot (its newest report, with "history", one entry a year); trades: the trades
 // read from their reports ({traded, filed, type, low, high or amount, ticker, asset}). Returns null with nothing to show.
+// The newest annual report the refresh has read ("net-worth-house" / "net-worth-senate"), for the profile header's Net
+// worth and Stocks boxes: its year, filing date and link, the net worth range, and the individual stocks held (null when
+// the report doesn't say). null when no report has been read; unreadable: filed on paper or couldn't be read.
+export function latestWealth(netWorth){
+  const top=netWorth?.history?.[0]||(netWorth?.year!=null?netWorth:null);
+  if(!top)return null;
+  const year=top.year??netWorth.year??null,filed=top.filed??netWorth.filed??null,url=top.url??netWorth.url??null;
+  if(top.unreadable||netWorth.unreadable)return {year,filed,url,unreadable:true};
+  return {year,filed,url,net:{low:top.low??netWorth.low??null,high:top.high??netWorth.high??null},stocks:stocksHeld(top,netWorth.assets)};
+}
 export function wealthTimeline(netWorth,trades,{lateDays=LATE_DAYS}={}){
   const hist=netWorth?.history?.length?netWorth.history:netWorth?.year!=null?[netWorth]:[];
   const reports=new Map();

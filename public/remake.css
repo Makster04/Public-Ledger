@@ -1177,6 +1177,8 @@ input, select { accent-color: var(--accent); }
 .lk-name:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 .lk-amt { text-align: right; white-space: nowrap; font-size: .88rem; }
 .lk-amt small { display: block; color: var(--muted); font-size: .74rem; }
+.lk-sp { grid-column: 2 / -1; color: var(--muted); font-size: .78rem; margin-top: -2px; }
+.lk-sp b { color: var(--ink-2); font-weight: 700; }
 .tr-tabs { display: flex; flex-wrap: wrap; margin: 6px 0 12px; }
 .tr-tabs button { display: inline-flex; align-items: center; gap: 6px; }
 .tr-tabs .lk-mark { font-size: .78rem; }
@@ -1191,3 +1193,46 @@ input, select { accent-color: var(--accent); }
 .tr-rank td, .tr-rank th { white-space: nowrap; }
 .tr-rank td:nth-child(2) { white-space: normal; }
 @media (max-width: 520px) { .tr-tabs, .tr-page-tabs { display: grid; grid-template-columns: 1fr 1fr; } .tr-tabs button, .tr-page-tabs a { justify-content: center; } }
+
+/* Net worth and Stocks under Raised / Cash on hand / Spent (the profile header): six columns with the row above's gap,
+   each box two, so it's exactly the size of one above; columns 2-3 and 4-5 center the pair. The value keeps the boxes'
+   own font size and is held to their line height (1.2em), so the height matches; only the text inside it shrinks, when
+   a range is too long for a narrow box (--n: its length in characters, about 0.6em each in the mono font). */
+.profile-hero .profile-facts.profile-wealth { grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 12px; }
+.profile-wealth .profile-fact:nth-child(1) { grid-column: 2 / span 2; }
+.profile-wealth .profile-fact:nth-child(2) { grid-column: 4 / span 2; }
+.profile-wealth .profile-fact { container-type: inline-size; }
+.profile-wealth .profile-fact > b { height: 1.2em; white-space: nowrap; overflow-wrap: normal; overflow: hidden; text-overflow: ellipsis; }
+.profile-wealth .pw-v { font-size: min(1em, calc(100cqi / (var(--n, 11) * .6))); vertical-align: top; }
+.profile-wealth .to { color: var(--muted); font-weight: 500; margin: 0 .12em; }
+.profile-wealth .pw-wait > b { color: var(--muted); }
+.profile-wealth-note { text-align: center; color: var(--muted); font-size: .73rem; margin-top: 8px; }
+.profile-wealth-note a { color: var(--person); }
+@media (max-width: 520px) { .profile-hero .profile-facts.profile-wealth { margin-top: 7px; } }
+
+/* "PACs by kind" as a tree map (public/money-map.js, laid out by public/app.js): no leadership PACs or politicians'
+   committees in it (their total is in the note), the total without them above it, and an open/close tab under it with
+   the PACs of the kind picked. */
+.pk-excl { margin: -4px 0 10px; color: var(--ink-2); font-size: .86rem; }
+.pk-excl b { font-family: var(--font-mono); color: var(--ink); }
+.pk-tm { position: relative; margin: 4px 0 8px; min-height: 220px; }
+.pk-tile { position: absolute; display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; border: 0; border-radius: 4px; padding: 6px 7px; margin: 0; overflow: hidden; text-align: left; font: inherit; line-height: 1.2; cursor: pointer; box-sizing: border-box; }
+.pk-tile.people { background: var(--s1); color: var(--cx-ink-people); }
+.pk-tile.profit { background: var(--s5); color: var(--cx-ink-profit); }
+.pk-tile.other { background: var(--cx-other); color: var(--cx-ink-other); }
+.pk-tile span { display: block; font-size: .7rem; font-weight: 600; overflow-wrap: normal; hyphens: none; }
+.pk-tile b { display: block; font-family: var(--font-mono); font-size: .78rem; font-weight: 600; }
+.pk-tile.pk-bare > * { visibility: hidden; }
+.pk-tile.pk-tiny { padding: 0; }
+.pk-tile.sel { outline: 2px solid var(--ink); outline-offset: -2px; }
+.pk-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.pk-list { margin: 6px 0 12px; border: 1px solid var(--line-2); border-radius: 8px; background: #ffffff05; }
+.pk-list > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; font-size: .86rem; }
+.pk-list > summary::-webkit-details-marker { display: none; }
+.pk-list > summary::after { content: "⌄"; color: var(--muted); font-size: 1rem; line-height: 1; transform: translateY(-3px); }
+.pk-list[open] > summary::after { content: "⌃"; transform: translateY(3px); }
+.pk-list > summary .muted { font-weight: 500; }
+.pk-list-b { padding: 0 12px 10px; border-top: 1px solid var(--line); }
+.pk-key { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .74rem; color: var(--muted); margin: 0 0 10px; }
+.pk-sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.pk-sw.people { background: var(--s1); } .pk-sw.profit { background: var(--s5); } .pk-sw.other { background: var(--cx-other); }

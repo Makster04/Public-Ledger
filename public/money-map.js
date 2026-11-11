@@ -1,9 +1,10 @@
 // The money map at the top of each profile's Money & Influence tab: where the campaign's money came from (each kind of
 // receipt the FEC counts), what it has spent and has left, and what outside groups spent for and against the person
 // on their own. Circle area and line width are to scale. Everything comes from records the site already keeps: the FEC
-// committee totals ("camp"), the PAC lines by kind ("pac.byCat"), the gifts groups bundled ("bundled") and the outside
+// committee totals ("camp"), the PAC lines and their kinds ("pac.rows"), the gifts groups bundled ("bundled") and the outside
 // spending ("out"). Where the campaign's spending went (staff, ads, transfers to party committees) isn't collected yet,
 // so the map shows the total spent and the cash left.
+import {categoryAlign} from './influence.js';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const short$=n=>{const a=Math.abs(n);if(a>=1e9)return '$'+(n/1e9).toFixed(1)+'B';if(a>=1e6)return '$'+(n/1e6).toFixed(1)+'M';if(a>=1e4)return '$'+Math.round(n/1e3)+'K';if(a>=1e3)return '$'+(n/1e3).toFixed(1)+'K';return '$'+Math.round(n).toLocaleString('en-US');};
 const full$=n=>'$'+Math.round(n).toLocaleString('en-US');
@@ -35,6 +36,28 @@ export function pacsOf(s,kind,names=[],type=null){
   }
   return [...by.values()].filter(x=>x.a>0).sort((a,b)=>b.a-a.a||a.name.localeCompare(b.name));
 }
+// PAC money by kind for the "PACs by kind" tree map (approved 2026-11-11): the research's kinds (this app's sectors),
+// except that every committee the FEC lists as a leadership PAC or a candidate's committee (public/pac-types.js:
+// "leadership", "candidate") counts with "lead", Leadership PACs & politician-affiliated committees, wherever the
+// research filed it. "lead" is kept apart: the tree map and the total above it leave it out. Each kind: {k, label,
+// align (People, Profit or Other, public/influence.js), a, pacs: [{name, a, n}] largest first}.
+export const POLITICIAN_KINDS=new Set(['leadership','candidate']);
+export function pacKindsFor(s,{categories={},pacNames=[],pacType=null}={}){
+  const by=new Map();
+  for(const [i,amt,k] of s?.pac?.rows||[]){
+    const a=num(amt);if(!(a>0))continue;
+    const t=pacType?pacType(i):null,kind=POLITICIAN_KINDS.has(t?.kind)?'lead':(k||'other');
+    const o=by.get(kind)||{k:kind,label:categories[kind]||kind,align:categoryAlign(kind),a:0,pacs:new Map()};
+    // One line a committee: by its FEC ID when known (a name can be saved whole and cut short), with the longest name.
+    const name=pacNames[i]||`PAC #${i}`,key=t?.id||`name:${name}`,pc=o.pacs.get(key)||{name,a:0,n:0};
+    if(name.length>pc.name.length)pc.name=name;pc.a+=a;pc.n++;o.pacs.set(key,pc);o.a+=a;by.set(kind,o);
+  }
+  const list=[...by.values()].map(o=>({...o,a:Math.round(o.a*100)/100,pacs:[...o.pacs.values()].sort((x,y)=>y.a-x.a||x.name.localeCompare(y.name))})).sort((x,y)=>y.a-x.a||x.label.localeCompare(y.label));
+  const lead=list.find(x=>x.k==='lead');
+  return {kinds:list.filter(x=>x.k!=='lead'),lead:lead?lead.a:0,leadPacs:lead?lead.pacs:[],total:Math.round(list.reduce((t,x)=>t+x.a,0)*100)/100};
+}
+// Short names for the tree map's boxes (the full name is on hover, and on the list it opens).
+export const SHORT_KIND={labor:'Labor unions',health:'Health care providers',pharma:'Drugs, biotech & devices',insur:'Insurance & health plans',finance:'Banking & finance',oil:'Oil, gas & mining',utility:'Utilities & energy',defense:'Defense & aerospace',ag:'Agriculture & food',tech:'Tech, telecom & media',transport:'Transportation',realestate:'Real estate & construction',retail:'Retail & consumer brands',law:'Law & lobbying',prof:'Professional services',manuf:'Manufacturing',biz:'Business associations',ideo:'Ideological & advocacy',tribal:'Tribal governments',other:'Unclassified'};
 const initials=n=>String(n||'').replace(/\b(PAC|POLITICAL|ACTION|COMMITTEE|FUND|INC|CORP(ORATION)?|THE|OF|AND|FOR|EMPLOYEES?|GOOD GOVERNMENT|CO)\b/gi,' ').trim().split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||'·';
 export function moneyMap(s,{bundled=null,groups={},categories={},pacNames=[],pacType=null}={}){
   const c=s?.camp;if(!c||c.missing||!(num(c.receipts)>0))return null;
@@ -49,7 +72,8 @@ export function moneyMap(s,{bundled=null,groups={},categories={},pacNames=[],pac
     debts:num(c.debts),
     side:[{k:'for',label:'Outside groups for them',a:num(o.for?.total),color:'--for-ink'},{k:'against',label:'Outside groups against them',a:num(o.against?.total),color:'--against-ink'}].filter(x=>x.a>0),
     sideStart:o.start||null,sideEnd:o.end||null,
-    pacKinds:(s.pac?.byCat||[]).map(([k,a])=>({k,label:categories[k]||k,a:num(a),pacs:pacsOf(s,k,pacNames)})).filter(x=>x.a>0),
+    // (the kinds without Leadership PACs & politician-affiliated committees, which are pacLead)
+    ...(()=>{const pk=pacKindsFor(s,{categories,pacNames,pacType});return {pacKinds:pk.kinds,pacLead:pk.lead,pacTotal:pk.total};})(),
     corporate:pacsOf(s,null,pacNames,pacType),
     pacWindow:s.pac?.window||null,pacRead:num(s.pac?.retrieved),
     bundled:Object.entries(bundled||{}).map(([k,v])=>({k,who:groups[k]||k,routed:num(v?.routed),n:num(v?.n),src:v?.src||null})).filter(x=>x.routed>0).sort((a,b)=>b.routed-a.routed),
@@ -127,10 +151,23 @@ export function moneyMapBlock(s,opts={}){
   const money=`<thead><tr><th>Money in</th><th class="r">Amount</th><th class="r">Share</th></tr></thead><tbody>${m.ins.map(n=>row(n.color,n.label,n.a,share(n.a,m.receipts))).join('')}${m.unsorted>=1?row('','Not sorted by the FEC',m.unsorted,share(m.unsorted,m.receipts)):''}<tr class="mm-sum"><td>Raised</td><td class="r num">${full$(m.receipts)}</td><td class="r num">100%</td></tr></tbody>`
     +`<thead><tr><th>Money out</th><th class="r">Amount</th><th></th></tr></thead><tbody>${m.outs.map(n=>row('',n.label,n.a)).join('')}${m.debts?row('','Debts owed',m.debts):''}</tbody>`
     +(m.side.length?`<thead><tr><th>Outside spending</th><th class="r">Amount</th><th></th></tr></thead><tbody>${m.side.map(n=>row('',n.label,n.a)).join('')}</tbody>`:'');
-  const maxK=Math.max(1,...m.pacKinds.map(x=>x.a));
-  const kinds=m.pacKinds.length?`<p class="small muted">From the PAC lines in the campaign's reports for ${esc(m.pacWindow||'the period on file')}: ${short$(m.pacRead)} read, of the ${short$(m.ins.find(n=>n.k==='pac')?.a||0)} the FEC counts for the whole period.</p>
-    ${showFirst(m.pacKinds.map(x=>`<details class="mm-kind"><summary class="mm-bar"><span>${esc(x.label)}</span><span class="mm-track"><span style="width:${(x.a/maxK*100).toFixed(1)}%"></span></span><span class="num">${short$(x.a)}</span><span class="mm-chev" aria-hidden="true"></span></summary>${x.pacs.length?showFirst(x.pacs.map(p=>`<li><span>${esc(p.name)}</span><span class="num">${full$(p.a)}${p.n>1?` <span class="muted">· ${p.n} gifts</span>`:''}</span></li>`),h=>`<ul class="mm-pacs">${h}</ul>`,'PACs'):'<p class="small muted">The PACs aren\'t listed for this kind.</p>'}</details>`),h=>`<div class="mm-bars">${h}</div>`,'kinds')}
-    <p class="small muted">Open a kind to see its PACs.</p>`:'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
+  // PACs by kind: a tree map of the kinds (public/app.js lays it out to the box's width and fits the labels), the total
+  // without Leadership PACs & politician-affiliated committees above it, and under it an open/close tab with the PACs of
+  // the kind picked (the largest at first; tapping a box picks another).
+  const pkSum=m.pacKinds.reduce((t,x)=>t+x.a,0),pkFed=m.ins.find(n=>n.k==='pac')?.a||0;
+  const pkTile=x=>`<button type="button" class="pk-tile ${esc(x.align)}" data-k="${esc(x.k)}" data-a="${x.a}" title="${esc(`${x.label}: ${full$(x.a)}`)}" aria-label="${esc(`${x.label}: ${full$(x.a)}`)}"><span>${esc(SHORT_KIND[x.k]||x.label)}</span><b>${short$(x.a)}</b></button>`;
+  const pkMeta=x=>`${full$(x.a)} · ${x.pacs.length} PAC${x.pacs.length===1?'':'s'}`;
+  const pkKind=(x,i)=>`<div class="pk-kind" data-k="${esc(x.k)}" data-label="${esc(x.label)}" data-meta="${esc(pkMeta(x))}"${i?' hidden':''}>${x.pacs.length?showFirst(x.pacs.map(p=>`<li><span>${esc(p.name)}</span><span class="num">${full$(p.a)}${p.n>1?` <span class="muted">· ${p.n} gifts</span>`:''}</span></li>`),h=>`<ul class="mm-pacs">${h}</ul>`,'PACs'):'<p class="small muted">The PACs aren\'t listed for this kind.</p>'}</div>`;
+  const pkKey=['people','profit','other'].map(a=>[a,m.pacKinds.filter(x=>x.align===a).reduce((t,x)=>t+x.a,0)]).filter(([,v])=>v>0)
+    .map(([a,v])=>`<span><i class="pk-sw ${a}"></i>${({people:'People-aligned',profit:'Profit-aligned',other:'Other'})[a]} ${short$(v)}</span>`).join('');
+  const pkNote=`From the PAC lines in the campaign's reports for ${esc(m.pacWindow||'the period on file')}: ${full$(m.pacTotal)} read, of the ${short$(pkFed)} the FEC counts for the whole period.${m.pacLead>0?` Left out: ${full$(m.pacLead)} from leadership PACs and politicians' committees (the ones the research files there, and every committee the FEC lists as a leadership PAC or a candidate's campaign).`:''}`;
+  const kinds=m.pacKinds.length?`<p class="pk-excl">(Excluding Leadership PACs &amp; politician-affiliated committees: <b class="num">${full$(pkSum)}</b>)</p>
+    <div class="pk-tm" role="group" aria-label="PAC money by kind, without leadership PACs and politicians' committees">${m.pacKinds.map(pkTile).join('')}</div>
+    <details class="pk-list"><summary><span><b class="pk-sum-label">${esc(m.pacKinds[0].label)}</b> <span class="muted pk-sum-meta">· ${esc(pkMeta(m.pacKinds[0]))}</span></span></summary><div class="pk-list-b">${m.pacKinds.map(pkKind).join('')}</div></details>
+    <div class="pk-key">${pkKey}</div>
+    <p class="small muted">Box size is the amount; tap a box to open its PACs. ${pkNote}</p>`
+    :m.pacLead>0?`<p class="small">All ${full$(m.pacLead)} of the PAC money read came from leadership PACs and politicians' committees, which this box leaves out.</p><p class="small muted">${pkNote}</p>`
+    :'<p class="small muted">No PAC lines read from this campaign\'s reports yet.</p>';
   const corpTotal=m.corporate.reduce((t,p)=>t+p.a,0);
   const corporate=`<div class="mm-panel mm-corp" id="f-corporate"><h3>Corporate PAC donors</h3>${m.corporate.length?`<p class="mm-corp-sum"><b class="num">${full$(corpTotal)}</b> from ${m.corporate.length} corporate PAC${m.corporate.length===1?'':'s'}</p>${showFirst(m.corporate.map(p=>`<li><span><i class="mm-badge" aria-hidden="true">${esc(initials(p.name))}</i>${esc(p.name)}</span><span class="num">${full$(p.a)}</span></li>`),h=>`<ul class="mm-pacs mm-corp-list">${h}</ul>`,'corporate PACs')}<p class="small muted">PACs the FEC records as sponsored by a corporation, from the lines read.</p>`:m.pacRead?'<p class="small">None of the PAC lines read are from corporate PACs.</p>':'<p class="small muted">No PAC lines read yet.</p>'}</div>`;
   const bundled=opts.withBundled===false?'':bundledPanel(m);
@@ -142,7 +179,7 @@ export function moneyMapBlock(s,opts={}){
     <div class="mm-books">
       <div class="mm-col"><div class="mm-panel"><h3>The numbers</h3><div class="tablewrap"><table>${money}</table></div></div>${opts.under||''}</div>
       <div class="mm-stack">
-        <div class="mm-panel"><h3>PACs by kind</h3>${kinds}</div>
+        <div class="mm-panel mm-pk" id="f-kinds"><h3>PACs by kind</h3>${kinds}</div>
         ${corporate}
         ${bundled}
         <div class="mm-panel mm-todo"><h3>Not on the map yet</h3><p class="small muted"><b>Where the money went:</b> the FEC lists every payment a campaign makes (staff, ads, transfers to party committees, gifts to other candidates), but the site collects only the total spent so far. <b>Donors by employer and industry</b> would split the donor circles further.</p></div>

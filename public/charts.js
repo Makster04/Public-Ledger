@@ -128,7 +128,7 @@ export function drawCaseTimeline(el,cases,colors){
 }
 
 // Tree map: tile area is the amount; squarified so tiles stay close to square. Labels only where they fit.
-function squarify(items,x,y,w,h){
+export function squarify(items,x,y,w,h){
   const out=[],total=items.reduce((t,i)=>t+i.value,0);if(!total)return out;
   const scale=w*h/total;let rest=items.map(i=>({...i,area:i.value*scale}));
   while(rest.length){
