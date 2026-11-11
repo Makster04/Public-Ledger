@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {renderScorecardSvg} from '../public/scorecard.js';
 
-const model={id:'booker',name:'Cory Booker',party:'D',office:'U.S. Senate',state:'New Jersey',raised:18869341.39,cash:23060940.12,period:'Jan 2025–Jun 2026',reviewedAt:'Oct 2, 2026',matchConfigured:false,grades:[{label:'Keeps Their Word',value:null},{label:'Shows Up',value:67,detail:'From roll calls'},{label:'Big Money Independence',value:null},{label:'Above Board',value:null},{label:'People First',value:100}]};
+const model={id:'booker',name:'Cory Booker',party:'D',office:'U.S. Senate',state:'New Jersey',raised:18869341.39,cash:23060940.12,period:'Jan 2025–Jun 2026',reviewedAt:'Oct 2, 2026',matchConfigured:false,grades:[{label:'Keeps Their Word',value:null},{label:'Shows Up',value:67,detail:'From roll calls'},{label:'Big Money Independence',value:null},{label:'Plays by the Rules',value:null},{label:'People First',value:100}]};
 
 test('portable scorecard uses real supplied scores, party colors and missing-data states',()=>{
   const dem=renderScorecardSvg(model),rep=renderScorecardSvg({...model,party:'R',raised:null,cash:null});
@@ -35,9 +35,10 @@ test('party outlines do not replace the semantic grade palette or neutral missin
 });
 
 test('the image has exactly the five grades, each once, side by side',()=>{
-  const svg=renderScorecardSvg({...model,grades:[{label:'Keeps Their Word',value:null},{label:'Shows Up',value:null},{label:'Big Money Independence',value:null},{label:'Above Board',value:null},{label:'People First',value:100}]});
-  const labels=[...svg.matchAll(/font-weight="700"[^>]*><tspan[^>]*>(KEEPS THEIR WORD|SHOWS UP|BIG MONEY|ABOVE BOARD|PEOPLE FIRST)<\/tspan>/g)].map(m=>m[1]);
-  assert.deepEqual(labels,['KEEPS THEIR WORD','SHOWS UP','BIG MONEY','ABOVE BOARD','PEOPLE FIRST']);
+  const svg=renderScorecardSvg({...model,grades:[{label:'Keeps Their Word',value:null},{label:'Shows Up',value:null},{label:'Big Money Independence',value:null},{label:'Plays by the Rules',value:null},{label:'People First',value:100}]});
+  const labels=[...svg.matchAll(/font-weight="700"[^>]*><tspan[^>]*>(KEEPS THEIR WORD|SHOWS UP|BIG MONEY|PLAYS BY THE|PEOPLE FIRST)<\/tspan>/g)].map(m=>m[1]);
+  assert.deepEqual(labels,['KEEPS THEIR WORD','SHOWS UP','BIG MONEY','PLAYS BY THE','PEOPLE FIRST']);
+  assert.match(svg,/>PLAYS BY THE<\/tspan><tspan[^>]*>RULES<\/tspan>/);
   assert.match(svg,/>BIG MONEY<\/tspan><tspan[^>]*>INDEPENDENCE<\/tspan>/,'the long name on two lines in its tile');
   assert.match(svg,/FIVE GRADES/);assert.doesNotMatch(svg,/FOUR MEASURES|Promises delivered|Ethics/);
   const tiles=[...svg.matchAll(/<rect x="(\d+)" y="694" width="(\d+)"/g)].map(m=>[+m[1],+m[2]]);

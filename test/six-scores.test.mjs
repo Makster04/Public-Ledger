@@ -67,7 +67,7 @@ test('Big Money Independence: their published formula, with the House weights',(
   assert.match(unbought({...member,office:'President'}).why,/president/);
 });
 
-test('Above Board: the four indexes, rescaled over the ones available, minus Legal Trouble',()=>{
+test('Plays by the Rules: the four indexes, rescaled over the ones available, minus Legal Trouble',()=>{
   const rows=Array.from({length:20},(_,i)=>({traded:'2025-03-01',filed:i<5?'2025-05-01':'2025-03-20',asset:'stock',amount:'$1,001 - $15,000',sector:i<10?'Energy':'Tech',flag:i<8?'near a vote':null}));
   const person={id:'p',ethicsSearched:'Searched court, ethics and DOJ records, 2026-11-01',ethics:[{status:'investigation',stage:'closed',kind:'ethics'}]};
   const a=aboveBoard(person,{trades:{rows,covered:true,overseen:['Energy'],inDonors:4}});

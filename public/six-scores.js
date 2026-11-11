@@ -1,5 +1,5 @@
 // The six scores on each profile (Scores/06_SIX_GRADES_PROPOSAL.md): Ideology (a position from liberal to conservative,
-// not a grade) and five letter grades, Keeps Their Word, Shows Up, Big Money Independence, Above Board and People First. Each returns
+// not a grade) and five letter grades, Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First. Each returns
 // {pct or lean, parts, why, needs}: `parts` is the breakdown shown on the score card (one row per part, with its points or
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
@@ -217,7 +217,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   return {...base,pct,letter:letter(Math.min(100,pct)),raw,why:null};
 }
 
-// ---------- 5. Above Board ----------
+// ---------- 5. Plays by the Rules ----------
 //   100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts
 //          + 0.20 × Stock Disclosure Dodger) − Legal Trouble, with missing indexes left out and the rest rescaled.
 export const ABOVE_BOARD={weights:{outside:0.35,gifts:0.20,tradeConflicts:0.25,dodger:0.20}};
@@ -302,7 +302,7 @@ export const SIX=[
   {key:'word',name:'Keeps Their Word',tag:'PROMISES',q:'The share of their promises they kept, judged by what they did afterward.',grade:true},
   {key:'showsup',name:'Shows Up',tag:'JOB PERFORMANCE',q:'Whether they cast their votes and move the bills they sponsor.',grade:true},
   {key:'unbought',name:'Big Money Independence',tag:'MONEY & INDEPENDENCE',q:'How independent their money is from special interests. It doesn\'t measure how they vote.',grade:true},
-  {key:'aboveboard',name:'Above Board',tag:'CONFLICTS & DISCLOSURE',q:'Whether their own money is tied to the power of their office, whether they follow the disclosure rules, and whether they\'re in legal trouble.',grade:true},
+  {key:'aboveboard',name:'Plays by the Rules',tag:'CONFLICTS & DISCLOSURE',q:'Whether their own money is tied to the power of their office, whether they follow the disclosure rules, and whether they\'re in legal trouble.',grade:true},
   {key:'peoplefirst',name:'People First',tag:'VOTES & WORKERS',q:'Whether their votes and bills favor working people or business interests.',grade:true},
 ];
 export {HOLDINGS};

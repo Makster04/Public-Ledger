@@ -724,7 +724,7 @@ function renderHome(){
 
 // ---------- profile ----------
 // Overview, then one tab per home-card grade, then the money.
-const TABS=[['overview','Overview'],['ideology','Ideology'],['word','Keeps Their Word'],['showsup','Shows Up'],['unbought','Big Money Independence'],['aboveboard','Above Board'],['peoplefirst','People First']];
+const TABS=[['overview','Overview'],['ideology','Ideology'],['word','Keeps Their Word'],['showsup','Shows Up'],['unbought','Big Money Independence'],['aboveboard','Plays by the Rules'],['peoplefirst','People First']];
 const tabsFor=s=>TABS;
 const PANES={ideology:(...a)=>paneIdeology(...a),word:(...a)=>paneWord(...a),showsup:(...a)=>paneShowsUp(...a),unbought:(...a)=>paneUnbought(...a),aboveboard:(...a)=>paneAboveBoard(...a),peoplefirst:(...a)=>panePeopleFirst(...a),overview:(...a)=>paneOverview(...a),integrity:(...a)=>paneIntegrity(...a),match:(...a)=>paneMatch(...a),promises:(...a)=>panePromises(...a),ethics:(...a)=>paneEthics(...a),pvp:(...a)=>panePvp(...a),finance:(...a)=>paneFinance(...a),legislation:(...a)=>paneLegislation(...a),sources:(...a)=>paneSources(...a)};
 // Shared profile presentation. The evidence panes and scorer remain the source of truth.
@@ -814,7 +814,7 @@ function bindProfileActions(s,pane){
     let c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
     if(s.basic||s.office){try{const records=await loadCards();c=records?.[s.id]?.campaign||null;}catch{}}
     const m=scoreFor(s), i=s.basic?null:integritySnapshot(s), v=s.basic?null:personPvp(s);
-    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Above Board',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
+    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
     if(!pane.querySelector('#'+b.dataset.section)){b.hidden=true;return;}
@@ -941,7 +941,7 @@ function paneIdeology(s,pane){
     res:{position,badge:x.lean==null?'Not placed yet':`${signed(x.lean)} · ${x.label}`},breakdown:measures,needsTitle:'What we need to place them',
     sources:['<b>Votes:</b> roll calls in Congress, and state votes for state legislators.','<b>Bills:</b> bills they sponsored and cosponsored.','<b>Statements:</b> speeches, press releases and campaign positions, counted half and only on issues with no votes.','<b>Each vote\'s side:</b> reviewed and cited on each issue (which side of the question a Yea takes).','<b>Voteview:</b> DW-NOMINATE.','<b>Group scorecards:</b> each group\'s own published ratings.'],
     needs:x.needs,
-    notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Big Money Independence, Above Board and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
+    notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
     evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
@@ -1158,7 +1158,7 @@ function holdingsEvidence(s,d,x){
   return `<section class="st-sec" id="u-holdings"><h4 class="st-sub">Stocks held and trades</h4>
     <p class="small">${held?.blindTrust?'Their holdings are in a qualified blind trust, so there is no stock penalty.':held?.value!=null?`Their ${nw?.year||'latest'} annual report lists ${held.count} individual stock${held.count===1?'':'s'} or option${held.count===1?'':'s'} worth ${fmtFull(Math.round(held.value))} (the middle of each range).${nw?.url?` <a href="${esc(nw.url)}" target="_blank" rel="noopener">Report ↗</a>`:''}`:esc(held?.why||'Their annual financial disclosure hasn\'t been read yet.')}</p>
     ${topStocks(stocks,nw)}${assetTable(nw)}
-    <p class="small">${tr?.count!=null?`${tr.count} trade${tr.count===1?'':'s'} in the campaign's reporting period, worth ${fmtFull(Math.round(tr.value))} in all (the middle of each range).`:esc(tr?.why||'Their stock trade reports haven\'t been read yet.')} The full list of their trades, with filing dates and conflict checks, is on the <a href="#${s.id}-aboveboard">Above Board</a> tab.</p></section>`;
+    <p class="small">${tr?.count!=null?`${tr.count} trade${tr.count===1?'':'s'} in the campaign's reporting period, worth ${fmtFull(Math.round(tr.value))} in all (the middle of each range).`:esc(tr?.why||'Their stock trade reports haven\'t been read yet.')} The full list of their trades, with filing dates and conflict checks, is on the <a href="#${s.id}-aboveboard">Plays by the Rules</a> tab.</p></section>`;
 }
 function pledgesEvidence(s,pl){
   return `<section class="st-sec" id="u-pledges"><h4 class="st-sub">Pledges and reform bills</h4>${stTable(['Category','Points','How'],pl.map(p=>[esc(p.label),p.points?`+${p.points}`:'0',p.via==='pledge'?'Signed the pledge':p.via==='bill'?`Cosponsored ${esc(p.title||p.bill||'a reform bill')}`:p.via==='broken'?'Pledge reviewed as broken: no point':'No pledge or cosponsored bill on file']),'',[1])}<p class="small muted">The corporate-PAC pledge counts as its own +1 bonus. A broken pledge also counts as broken in Keeps Their Word.</p></section>`;
@@ -1417,7 +1417,7 @@ function paneUnbought(s,pane){
   });
 }
 
-// ----- Above Board (async: trades from the official reports) -----
+// ----- Plays by the Rules (async: trades from the official reports) -----
 function aboveBoardInputs(s,d){
   const reviewed=SCORER.reviewedTrades(s);
   if(reviewed.covered)return {...reviewed,known:{nearVotes:true,donors:true}};
@@ -1427,10 +1427,10 @@ function aboveBoardInputs(s,d){
   return {rows,covered:t.covered,why:t.why,overseen:overseenSectors(s),inDonors:new Set(tradesInDonors(rows,donors).map(x=>x.trade)).size,known:{nearVotes:false,donors:true}};
 }
 function aboveBoardBreakdown(x){
-  return stTable(['Part','Index','Points'],x.parts.map(p=>[`${esc(p.label)}${p.note?`<div class="small muted">${esc(p.note)}</div>`:''}`,p.index==null?'<span class="muted">waiting</span>':`${Math.round(p.index*10)/10}${p.key==='legal'?'':' / 100'}`,p.points==null?'—':`<b class="st-neg">${pts1(p.points)}</b>`]).concat(x.pct==null?[]:[['<b>Above Board score</b>','',`<b>${x.pct} / 100</b>`]]),'st-ab');
+  return stTable(['Part','Index','Points'],x.parts.map(p=>[`${esc(p.label)}${p.note?`<div class="small muted">${esc(p.note)}</div>`:''}`,p.index==null?'<span class="muted">waiting</span>':`${Math.round(p.index*10)/10}${p.key==='legal'?'':' / 100'}`,p.points==null?'—':`<b class="st-neg">${pts1(p.points)}</b>`]).concat(x.pct==null?[]:[['<b>Plays by the Rules score</b>','',`<b>${x.pct} / 100</b>`]]),'st-ab');
 }
 function aboveBoardCalc(x){
-  return `${stF('Above Board = 100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')}
+  return `${stF('Plays by the Rules = 100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')}
     ${stF('Outside Income & Conflicts = 0.40 × outside pay, board seats and job deals from interested organizations + 0.25 × Lobbyist Overlap + 0.20 × Contracts for Donors + 0.15 × Foreign Agent')}
     ${stF('Gifts & Travel = 60 × Hill(value of gifts and paid trips from interested organizations, $10,000) + 10 per gift or trip (up to 40)')}
     ${stF('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')}
@@ -1485,7 +1485,7 @@ function panePeopleFirst(s,pane){
   const f=pane.querySelector('#pf-funders');if(f&&!s.office){f.innerHTML=`${fundersBlock(s)}${moneyVotesBlock(s)}`;mountFundTL(f);}
   hoverTips(pane);bindTips(pane);
 }
-// On a profile's Overview, Big Money Independence and Above Board use the official records read by the refresh.
+// On a profile's Overview, Big Money Independence and Plays by the Rules use the official records read by the refresh.
 function fillProfileTiles(s){
   if(s.office){const t=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(t)fillSixTile(t,unbought(s));return;}
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
@@ -1577,7 +1577,7 @@ function renderSenate(){
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. Senate'}</div><h1>The Senate</h1>
     <p class="intro">All ${SENATE.length} sitting senators.</p>
     ${points([['Full profiles',`${full} senators on the 2026 ballot in the races this site covers: grades, campaign money, outside spending and statement checks.`],
-      ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Above Board wait on reviewed research.`],
+      ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
       info.source&&['Source',`<a href="${esc(info.source)}" target="_blank" rel="noopener">congress-legislators</a>, checked ${fmtDate(info.checked)}.`]])}
     <div class="toolbar">
@@ -1684,7 +1684,7 @@ function renderHouse(){
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. House'}</div><h1>The House</h1>
     <p class="intro">All ${HOUSE.length-dels} members of the House${dels?`, and its ${dels} non-voting delegates`:''}.</p>
     ${points([['Full profiles',`${full} members in the races this site covers: every score, campaign money, outside spending and statement checks.`],
-      ['Basic profiles',`The other ${HOUSE.length-full}: their seat, their committees, and the records the refresh collects for them (their bills, their stock trades and annual disclosures, and their campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Above Board wait on reviewed research.`],
+      ['Basic profiles',`The other ${HOUSE.length-full}: their seat, their committees, and the records the refresh collects for them (their bills, their stock trades and annual disclosures, and their campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
       ['New Congress','The list follows the House as it is now. When the new Congress is sworn in on January 3, 2027, running npm run house:build swaps the departing members for the new ones.'],
       info.source&&['Source',`<a href="${esc(info.source)}" target="_blank" rel="noopener">congress-legislators</a>, checked ${fmtDate(info.checked)}.`]])}
@@ -1744,7 +1744,7 @@ function ballotLine(s){
 const BASIC_GRADE={match:'No reviewed record of their votes and statements on the site\'s issues yet.',prom:'No statements checked against the record yet.',
   eth:'No cases reviewed yet. Leads from official records are on the Integrity tab.',pvp:'No scored votes or sponsorships reviewed yet.'};
 // A basic profile's tiles: Ideology, Shows Up and People First from official records alone (their positions on the coded
-// roll calls, their attendance and bills); Keeps Their Word, Big Money Independence and Above Board wait on reviewed research.
+// roll calls, their attendance and bills); Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.
 function basicReport(s,links){return sixTiles(s,links);}
 // Campaign and outside-money totals for everyone, loaded once (/api/cards) and reused by the cards and profiles.
 let cardsData=null,cardsTime=0;
@@ -1800,7 +1800,7 @@ function paneBasicContent(s,view,pane){
     pane.innerHTML=`${head('Your match','match')}<p class="intro">No reviewed issue evidence yet. <a href="#${s.id}-legislation">Open bills and votes</a>.</p>${s.ideo?ideoBlock(s,'ideo-b'):'<p class="note">No comparable career ideology score is available.</p>'}`;
     if(s.ideo)mountIdeo('ideo-b',s);
   }else if(['promises','ethics','pvp'].includes(view)){
-    const [title,key]=({promises:['Keeps Their Word','prom'],ethics:['Above Board','eth'],pvp:['People First','pvp']})[view];
+    const [title,key]=({promises:['Keeps Their Word','prom'],ethics:['Plays by the Rules','eth'],pvp:['People First','pvp']})[view];
     pane.innerHTML=`${head(title,key)}<section id="live-records"></section>`;
     window.RecordLive.profile(person,pane.querySelector('#live-records'),BASIC_LIVE[view],{intro:BASIC_INTRO});
   }else if(view==='sources')pane.innerHTML=`<h2>Sources & coverage</h2><p>No reviewed research yet. Official records are under Legislative Activity and Accountability.</p><a href="#method-sources">Source guide</a>`;
@@ -2062,7 +2062,7 @@ function paneOverview(s,pane){
   ]:[
     ['Keeps Their Word',pr.clear?`${pr.clear} counted checks: ${pr.kept} supported${pr.half?`, ${pr.half} partial or changed`:''}${pr.broken?`, ${pr.broken} contradicted`:''}. ${pr.notCounted+pr.vague+(pr.debate||0)} excluded or pending.`:'No reviewed statement checks are available yet.','word','Read the promises and checks'],
     ['Votes and bills',`${v.n} scored actions for People First. ${evidenceOf(s).label}.`,'ideology','Positions, votes and bills'],
-    ['Above Board',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'aboveboard','Conflicts, disclosures and legal records']
+    ['Plays by the Rules',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'aboveboard','Conflicts, disclosures and legal records']
   ];
   pane.innerHTML=`<div class="overview-summary-head"><h2>Three things to know</h2><p class="intro">A quick summary. Open a finding or a grade for its evidence.</p></div><div class="overview-highlights">${highlights.map(([title,body,route,label])=>`<article class="overview-highlight"><h3>${title}</h3><p>${esc(body)}</p><a href="#${s.id}-${route}">${label} →</a></article>`).join('')}</div><div class="overview-links"><a href="#${s.id}-unbought">Campaign money and the money map</a><a href="#${s.id}-ideology">Issue positions & Your Match</a><a href="#${s.id}-showsup">Votes missed and bills moved</a>${s.basic?'':`<a href="#${s.id}-sources">Sources & coverage</a>`}<a href="#method">Methodology</a><a href="#method-log">Score history</a></div><p class="small muted overview-asof">Research snapshot: ${esc(DATA.asof)}. Financial records and source updates keep their own dates.</p>`;
 }
@@ -3484,7 +3484,7 @@ function outsideSectorBlock(s){
 }
 
 // ---------- score pages: each grade ranks everyone; people who are "Not graded" stay as grey rows ----------
-const SCORE_PAGES=[['ideology','Ideology'],['word','Keeps Their Word'],['showsup','Shows Up'],['unbought','Big Money Independence'],['aboveboard','Above Board'],['peoplefirst','People First'],['match','Your Match']];
+const SCORE_PAGES=[['ideology','Ideology'],['word','Keeps Their Word'],['showsup','Shows Up'],['unbought','Big Money Independence'],['aboveboard','Plays by the Rules'],['peoplefirst','People First'],['match','Your Match']];
 const GRADE_FILL={A:'var(--good)',B:'var(--grade-b)',C:'var(--warn)',D:'var(--serious)',F:'var(--crit)'};
 const gradeFill=p=>GRADE_FILL[letter(p)];
 const whoSub=s=>`${partyName(s.party)} · ${chipCh(s)} · ${seatLabel(s)}`;
@@ -3615,8 +3615,8 @@ function methodSix(){
       f('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')+f('Attendance = 100 − 5 × % of votes missed')+f('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')+'<p class="small">At least 50 votes; Attendance alone with fewer than 10 sponsored bills.</p>'],
     ['unbought','Big Money Independence',SIX_BY.unbought.q,'FEC reports (gift sizes, PAC money by type, gifts routed through groups); their financial disclosure (stocks held, trades); pledges and reform bills. <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, credited to them.',
       f('Big Money Independence = 75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges, never below 0')+`<p class="small">House: donor weights ${W.H.donor.join(' · ')} (≤$200 to $2,000+), unitemized ${W.H.unitemized}, not yet sorted ${W.H.unsorted}; PAC Penalty per dollar: corporate ${W.H.pac.corporate}, lobbyist ${W.H.pac.lobbyist}, trade ${W.H.pac.trade}, political and ideological ${W.H.pac.political}, union and other ${W.H.pac.union}. Senate: donor weights ${W.S.donor.join(' · ')}, unitemized ${W.S.unitemized}, not yet sorted ${W.S.unsorted}; PAC Penalty per dollar ${W.S.pac.corporate} · ${W.S.pac.lobbyist} · ${W.S.pac.trade} · ${W.S.pac.political} · ${W.S.pac.union}. Earmark Penalty ${W.earmark} per dollar (not ActBlue or WinRed). PAC Reliance ${W.reliance.max} × Hill(PAC share, 20%). Stock Penalty ${W.stocks.max} × Hill(value, $400,000). Trade Penalty ${W.trades.countMax} × Hill(count, 50) + ${W.trades.valueMax} × Hill(value, $8,000). Bonuses +5 no corporate PAC money, +1 pledged not to take it, +1 no individual stocks; +1 each for a pledge or cosponsored bill to ban lobbying by former members, ban congressional stock trading, overturn Citizens United. Filled in where their page gives no number: PAC penalty at most 30, donor score 0–16 (House) or 0–14 (Senate), PAC Reliance midpoint 20%, stock value as the total of range midpoints. A broken pledge earns no point. No grade until their financial disclosure is read.</p>`],
-    ['aboveboard','Above Board',SIX_BY.aboveboard.q,'Financial disclosures (outside pay, board seats, job deals, gifts, paid trips, trades and filing dates); lobbying reports, federal contracts, foreign-agent filings, committees and votes; court, ethics and enforcement cases.',
-      f('Above Board = 100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')+f('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')+f('Stock Disclosure Dodger = 0.70 × share of trade reports late or missing + 0.30 × share of annual reports late')+f('Legal Trouble = Σ status (20 · 15 · 5) × kind (1.5 · 1 · 0.5), halved when closed over 10 years ago')+'<p class="small">A missing index drops out and the others are rescaled. It needs the legal review and at least one index. Trade Conflicts was the Insider Trading Index, without its single-stock activity part. It shows overlap, not proof of wrongdoing.</p>'],
+    ['aboveboard','Plays by the Rules',SIX_BY.aboveboard.q,'Financial disclosures (outside pay, board seats, job deals, gifts, paid trips, trades and filing dates); lobbying reports, federal contracts, foreign-agent filings, committees and votes; court, ethics and enforcement cases.',
+      f('Plays by the Rules = 100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')+f('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')+f('Stock Disclosure Dodger = 0.70 × share of trade reports late or missing + 0.30 × share of annual reports late')+f('Legal Trouble = Σ status (20 · 15 · 5) × kind (1.5 · 1 · 0.5), halved when closed over 10 years ago')+'<p class="small">A missing index drops out and the others are rescaled. It needs the legal review and at least one index. Trade Conflicts was the Insider Trading Index, without its single-stock activity part. It shows overlap, not proof of wrongdoing.</p>'],
     ['peoplefirst','People First',SIX_BY.peoplefirst.q,'Their votes and bills, each scored by who gains and which worker and business groups took sides; their business funders\' positions and lobbying.',
       f('People First = 0.75 × Legislative Action + 0.25 × (100 − CCI)')+f('Legislative Action = 100 × worker-side points ÷ (worker-side + profit-side points)')+f('CCI = 0.65 × voting with business funders beyond their party + 0.35 × profit side on donor-lobbied bills')+`<p class="small">The Corporation Compromised Index keeps only how they act; Big Money Independence counts where the money comes from. At least ${MIN_PVP_ACTIONS} scored actions.</p>`],
   ];
@@ -3873,7 +3873,7 @@ function renderMethod(sub){
       <li><b>What is recalculated:</b> Keeps Their Word, Shows Up and People First, for every reviewed profile and every senator's and House member's basic profile, once a month after the month's review. The log uses the same code and files as the profiles, so a logged grade is the one the profile shows.</li>
       <li><b>Earlier entries:</b> before the six scores, the log recorded Promises delivered, Ethics and an earlier People First formula. Those entries are kept as they were and marked as retired grades.</li>
       <li><b>How:</b> <span class="mono">npm run scores:monthly</span> records every change, and why, in <span class="mono">public/score-log.json</span>.</li>
-      <li><b>Not logged:</b> Big Money Independence, and Above Board once a profile has read the refresh's trade records, since both also use the refresh's saved records; Ideology, which is a position, not a grade; and Your match, since it depends on your own choices.</li>
+      <li><b>Not logged:</b> Big Money Independence, and Plays by the Rules once a profile has read the refresh's trade records, since both also use the refresh's saved records; Ideology, which is a position, not a grade; and Your match, since it depends on your own choices.</li>
     </ul>
     ${methodLog()}
     <h2>Key votes marked liberal or conservative</h2>
@@ -3912,7 +3912,7 @@ function renderMethod(sub){
       <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their records, statements, ethics and campaign money are not shown yet.</li>
       <li><b>Challengers and open seats:</b> every opponent of those incumbents, and both major-party nominees in each open Senate race (plus independent Seth Bodnar in Montana). Nominees were confirmed from primary and runoff results.</li>
       <li><b>The rest of the 2026 Senate races:</b> the ${DATA.liteRaces.filter(r=>r.chamber==='S').length} other Senate races on the November 3 ballot, including Florida's special election, are on the Races page with results only: the nominees, each one's share of the vote, the reported turnout and the winner. Sitting senators link to their Senate page profile; their opponents don't have profiles yet.</li>
-      <li><b>Every other senator and House member:</b> a basic profile for each sitting senator and member of the House not in these races (see the <a href="#senate">Senate</a> and <a href="#house">House</a> pages): their place in Congress, their committees, and the records the refresh collects. Ideology, Shows Up and People First are figured from official records alone, the same way as on the full profiles: their positions on the coded roll calls, their attendance and their bills. Keeps Their Word, Big Money Independence and Above Board wait on reviewed research. House members with a basic profile get a lighter set of refresh checks (their bills, their House disclosures and their campaign totals). The lists come from the congress-legislators project.</li>
+      <li><b>Every other senator and House member:</b> a basic profile for each sitting senator and member of the House not in these races (see the <a href="#senate">Senate</a> and <a href="#house">House</a> pages): their place in Congress, their committees, and the records the refresh collects. Ideology, Shows Up and People First are figured from official records alone, the same way as on the full profiles: their positions on the coded roll calls, their attendance and their bills. Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research. House members with a basic profile get a lighter set of refresh checks (their bills, their House disclosures and their campaign totals). The lists come from the congress-legislators project.</li>
       <li><b>Ohio and Nebraska:</b> Sen. Jon Husted (appointed in January 2025) and Sen. Pete Ricketts are profiled with their opponents, Sherrod Brown and independent Dan Osborn. No Democrat is on the Nebraska ballot: the nominee withdrew in July 2026 and the state party named no replacement.</li>
     </ul>
     <h2>Competitive races</h2>
