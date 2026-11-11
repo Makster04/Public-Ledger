@@ -1,6 +1,6 @@
 import {mountRankings,mountStocks} from './explore-finance.js';
 import {mountConsistency} from './consistency.js';
-import {moneyMapBlock} from './money-map.js';
+import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
@@ -790,8 +790,10 @@ function stSide(sources,needs,notes=[],needsTitle='What we need before grading')
     <h4>${esc(needsTitle)}</h4><ul class="st-needs">${needs.map(([t,ok])=>`<li class="${ok?'ok':'no'}"><span class="st-tick" aria-hidden="true">${ok?'✓':'○'}</span><span>${esc(t)}<span class="sr-only">${ok?': in hand':': not yet'}</span></span></li>`).join('')}</ul>
     ${notes.map(([h,t])=>`<p class="st-note"><span aria-hidden="true">ⓘ</span><span><b>${h}</b> ${t}</span></p>`).join('')}</aside>`;
 }
-function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method}){
-  return `<div class="st" data-score="${key}">${stHead(s,key)}<div class="st-grid">${stCard(key,res,breakdown)}${stSide(sources,needs,notes,needsTitle)}</div>
+// side: more boxes under the Sources panel, beside the score card.
+function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method,side=''}){
+  const aside=stSide(sources,needs,notes,needsTitle);
+  return `<div class="st" data-score="${key}">${stHead(s,key)}<div class="st-grid">${stCard(key,res,breakdown)}${side?`<div class="st-sidecol">${aside}${side}</div>`:aside}</div>
     <h3 class="st-evh">${evidenceTitle}</h3><div class="st-evidence">${evidence}</div>
     ${shown?`<details class="st-more st-shown"><summary>Shown, not counted in ${esc(SIX_BY[key].name)}</summary><div class="st-more-b">${shown}</div></details>`:''}
     <details class="st-more"><summary>How it's calculated</summary><div class="st-more-b">${calc}</div></details>
@@ -1137,14 +1139,15 @@ function unboughtPeriodBar(s,d){
     <span class="small muted">${opts.length<2?'Earlier cycles appear here once the FEC refresh has read them.':'The money and trades over these cycles; stocks held are from the latest annual report. Everywhere else shows this cycle.'}</span></div>`;
 }
 
-// The money's geography: itemized gifts from individuals by the donor's state, as a pie (public/fec-money.js statePie):
+// The money's geography: itemized gifts from individuals by the donor's state, as a pie (public/fec-money.js statePie),
+// in a card under the money map's numbers:
 // the home state, the five largest other states, the rest of the states together, and gifts with no state given.
 const PIE_COLORS=['var(--s1)','var(--s3)','var(--s4)','var(--s5)','var(--s6)','var(--pink)'];
 function statesEvidence(s,x){
   const title=x?.total>0?`Where the itemized gifts come from <span class="muted small">· ${esc(x.cycle-1)}–${esc(x.cycle)}</span>`:'Where the itemized gifts come from';
-  const head=`<section class="st-sec" id="u-states"><h4 class="st-sub">${title}</h4>`;
-  if(!x)return head+'<p class="small muted">Waiting for the FEC refresh to read their gifts by state.</p></section>';
-  if(!(x.total>0))return head+'<p class="small">No itemized gifts from individuals this cycle.</p></section>';
+  const head=`<div class="mm-panel st-states" id="u-states"><h3>${title}</h3>`;
+  if(!x)return head+'<p class="small muted">Waiting for the FEC refresh to read their gifts by state.</p></div>';
+  if(!(x.total>0))return head+'<p class="small">No itemized gifts from individuals this cycle.</p></div>';
   const pc=v=>`${Math.round(v/x.total*100)}%`,slices=statePie(x);let i=0;
   for(const sl of slices)sl.color=sl.home?'var(--s2)':sl.key==='other'?'var(--cx-other)':sl.key==='none'?'var(--line-2)':PIE_COLORS[i++%PIE_COLORS.length];
   const home=slices.find(sl=>sl.home);
@@ -1152,7 +1155,7 @@ function statesEvidence(s,x){
   const pie=pieSVG(slices,{size:196,label:`Itemized gifts by the donor's state: ${slices.map(sl=>`${sl.label} ${sl.share}%`).join(', ')}`,tip:sl=>`${sl.label}${sl.home?' (home state)':''}: ${fmtFull(sl.total)} · ${sl.share}%`});
   const key=`<ul class="st-pie-key">${slices.map(sl=>`<li><i style="background:${sl.color}"></i><span>${esc(sl.label)}${sl.home?' <span class="muted">· home</span>':''}</span><b class="num">${fmtFull(sl.total)}</b><span class="num muted">${sl.share}%</span></li>`).join('')}</ul>`;
   return `${head}${lead}<div class="st-pie"><div class="st-pie-c">${pie}</div>${key}</div>
-    <p class="small muted">Itemized gifts from individuals only (a donor's gifts over $200 in the cycle), by the address on the report. The FEC has no address for smaller gifts. Shown only; no score uses it.${x.source?` <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</p></section>`;
+    <p class="small muted">Itemized gifts from individuals only (a donor's gifts over $200 in the cycle), by the address on the report. The FEC has no address for smaller gifts. Shown only; no score uses it.${x.source?` <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</p></div>`;
 }
 // PAC money in reports the FEC hasn't processed yet, marked with a *.
 function efileEvidence(x){
@@ -1209,13 +1212,17 @@ function industryCard(s,g,offline=false){
 }
 function paneUnbought(s,pane){
   const inputs=unboughtInputs(s);
-  const draw=(x,d)=>stFrame(s,'unbought',{
+  // The money map here: the pie of where the itemized gifts come from goes under its numbers (filled once the refresh's
+  // records arrive), and the bundled gifts' box sits under the Sources, beside the score card.
+  const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
+  const side=s.office?'':bundledBox(s,mm);
+  const draw=(x,d)=>stFrame(s,'unbought',{side,
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
-    evidence:`${s.office?'':moneyMapBlock(s,{bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)})}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
+    evidence:`${s.office?'':moneyMapBlock(s,{...mm,withBundled:false,under:'<div id="u-states-slot"></div>'})}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
     assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
@@ -1244,7 +1251,8 @@ function paneUnbought(s,pane){
     const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);
       nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
     const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
-    if(fec){fec.innerHTML=(d?statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);hoverTips(fec);}
+    if(fec)fec.innerHTML=(d?efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);
+    const slot=pane.querySelector('#u-states-slot');if(slot&&d){slot.innerHTML=statesEvidence(s,m.states);hoverTips(slot);}
     const wt=pane.querySelector('#u-timeline');if(wt){const tl=d?wealthTimeline(d.netWorth,timelineTrades(s,d)):null,tmp=document.createElement('div');tmp.innerHTML=wealthTimelineHTML(s,d,tl);const sec=tmp.firstElementChild;wt.replaceWith(sec);if(tl)mountWealthTimeline(sec,tl);}
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);
