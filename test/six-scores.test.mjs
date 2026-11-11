@@ -106,3 +106,22 @@ test('every profile: the six scores compute without errors and say why one isn\'
   }
   assert.deepEqual(SIX.map(x=>x.key),['ideology','word','showsup','unbought','aboveboard','peoplefirst']);
 });
+
+test('the Ideology number is in the color of its place on the bar, wherever it shows',async()=>{
+  const fs=await import('node:fs');
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),css=fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8');
+  // The bar: blue at −100, its dark middle at 0, red at +100. The number: the same share of blue or red, with the light
+  // text gray in place of the dark middle so it stays readable.
+  assert.match(css,/\.st-scale-bar \{[^}]*linear-gradient\(90deg, var\(--dem\), var\(--surface-2\) 50%, var\(--rep\)\)/);
+  const leanColor=new Function(`${app.match(/const leanColor=[\s\S]*?\};/)[0]};return leanColor;`)();
+  assert.equal(leanColor(-100),'color-mix(in oklab, var(--dem) 100%, var(--ink-2))');
+  assert.equal(leanColor(-14),'color-mix(in oklab, var(--dem) 14%, var(--ink-2))');
+  assert.equal(leanColor(0),'var(--ink-2)');
+  assert.equal(leanColor(67),'color-mix(in oklab, var(--rep) 67%, var(--ink-2))');
+  assert.equal(leanColor(250),'color-mix(in oklab, var(--rep) 100%, var(--ink-2))');
+  assert.equal(leanColor(null),'');
+  // The home cards and profile tiles, the Ideology tab, and the Scores ranking.
+  assert.match(app,/<b class="lean"\$\{leanStyle\(i\.lean\)\}>/);
+  assert.match(app,/<b\$\{leanStyle\(x\.lean\)\}>\$\{signed\(x\.lean\)\}<\/b><span>/);
+  assert.match(app,/'Not placed yet':`<b\$\{leanStyle\(x\.lean\)\}>\$\{signed\(x\.lean\)\} ?<\/b> · /);
+});
