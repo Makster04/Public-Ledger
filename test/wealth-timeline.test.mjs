@@ -95,6 +95,8 @@ test('the profile header\'s Net worth, Stocks held and Stock trades: the timelin
   assert.match(app,/html:`~\$\{fmt\$\(k\.value\)\}/);assert.doesNotMatch(app.slice(app.indexOf('function wealthRowHTML'),app.indexOf('async function fillWealthHeader')),/about \$\{fmt/);
   assert.match(app,/timeline:\['unbought','u-timeline'\]/);
   assert.match(css,/\.profile-hero \.profile-facts\.profile-wealth \{ grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/);
-  assert.match(css,/\.profile-wealth \.profile-fact \{ container-type: inline-size; text-align: center; \}/,'centered');
-  assert.match(css,/\.profile-wealth \.profile-fact > span \{ font-weight: 700; \}/,'bold titles');
+  // All six boxes centered with bold titles (Raised, Cash on hand and Spent too), and the campaign filings line centered.
+  assert.match(css,/\.profile-fact \{ border: 1px solid var\(--line-2\);[^}]*text-align: center; \}/,'centered');
+  assert.match(css,/\.profile-fact > span \{ display: block;[^}]*font-weight: 700;/,'bold titles');
+  assert.match(css,/\.profile-period \{ text-align: center;/);
 });
