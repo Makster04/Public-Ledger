@@ -12,7 +12,8 @@ import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
-import {INDUSTRY_LABEL,SUPER_PACS,COMPANIES,EXECUTIVES,industrySuperPacs} from './industries.js';
+import {COMPANIES,EXECUTIVES} from './industries.js';
+import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
@@ -434,6 +435,7 @@ function route(){
   else if(m[1]==='senate'){renderSenate();}
   else if(m[1]==='house'){renderHouse();}
   else if(m[1]==='superpacs'){renderSuperPacs();}
+  else if(m[1]==='trackers'){renderTrackers(m[2]||'aipac');}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}
   else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}
   else if(m[1]==='scores'){renderScores(m[2]||'match');}
@@ -1184,51 +1186,114 @@ function jfcEvidence(j,cycle){
     <div class="st-check"><h4>Joint fundraising money by the size of each share</h4><div class="mm-bars st-kinds" role="list">${j.bands.map((b,i)=>`<div class="mm-bar" role="listitem" title="${labels[i]}: ${fmtFull(b)}"><span>${labels[i]}</span><span class="mm-track"><span style="width:${(b/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(b)} · ${Math.round(b/(j.people||1)*100)}%</span></div>`).join('')}</div></div>
     <p class="small muted">${j.shares.toLocaleString('en-US')} people's shares are listed on the reports; ${fmtFull(j.unlisted)} isn't, which is people whose share was $200 or less, so it counts as small gifts. ${j.committees>0?`${fmtFull(j.committees)} came from PACs and other committees and stays committee money. `:''}${j.scaled?'The listed shares add up to more than was passed on (they are listed before the committee\'s costs), so each is scaled down to fit. ':''}The Donor part of the score uses these sizes.</p></section>`;
 }
-// The crypto and AI industry's money around this person (public/industries.js): the listed super PACs' spending for and
-// against them, from the outside-spending records on file, and gifts from the listed companies' people, with their
-// executives by name, from the refresh. Shown, not counted, as on IntegrityIndex.us's "Crypto & AI Industry" card.
-function industryCard(s,g,offline=false){
-  const sp=industrySuperPacs(s.out,DATA.ie?.cm),cy=curCycle(s),who=esc(s.short||s.name);
-  const money=(n,sign)=>n?`<b class="num ${sign>0?'st-pos':'st-neg'}">${sign<0?'−':'+'}${fmtFull(Math.abs(n))}</b>`:`<b class="num">$0</b>`;
-  const spBlock=sp.rows.length?`<div class="st-check"><h4>Super PAC spending</h4>
-      <div class="st-ind-totals"><span>${money(sp.for,1)} supporting</span><span>${money(sp.against,-1)} opposing</span></div>
-      ${stTable(['Super PAC','Industry','For them','Against them'],sp.rows.map(r=>[`<a href="https://www.fec.gov/data/committee/${esc(r.id)}/" target="_blank" rel="noopener">${esc(r.name)}</a><div class="small muted">${esc(r.network)}${r.network===r.name?'':' group'}</div>`,esc(INDUSTRY_LABEL[r.industry]),r.for?money(r.for,1):'—',r.against?money(r.against,-1):'—']),'',[2,3])}
-      <p class="small muted">Independent expenditures in the general election, through ${esc(fmtDate(s.out.end))}. This is the super PACs' own money, never given to the campaign.</p></div>`
-    :`<div class="st-check"><h4>Super PAC spending</h4><p class="small">None of the listed crypto or AI super PACs reported spending for or against ${who}${s.out?.end?` through ${esc(fmtDate(s.out.end))}`:''}.</p></div>`;
-  let gifts;
-  if(offline)gifts='<p class="small muted">The update service is offline, so the donations can\'t be shown right now.</p>';
-  else if(!g)gifts='<p class="small muted">Waiting for the FEC refresh to read gifts from these companies\' people.</p>';
-  else if(!g.n)gifts=`<p class="small">No gifts from the listed companies' employees or executives in ${cy-1}–${cy}.</p>`;
-  else gifts=['crypto','ai','both'].filter(k=>g.industries?.[k]).map(k=>{const ind=g.industries[k];
-    return `<div class="st-ind"><div class="st-ind-head"><b>${esc(ind.label)}</b><span><b class="num">${fmtFull(ind.total)}</b> <span class="muted">· ${ind.n} gift${ind.n===1?'':'s'}</span></span></div>
-      ${stTable(['Company','Employees\' gifts','of which executives'],ind.companies.map(c=>[esc(c.name),`${fmtFull(c.total)} <span class="muted small">· ${c.n}</span>`,c.exec?fmtFull(c.exec):'—']),'',[1,2])}
-      ${ind.executives.length?`<ul class="st-ind-execs">${ind.executives.map(e=>`<li><span><b>${esc(e.name)}</b> <span class="muted">${esc(e.role)}, ${esc(e.company)}</span></span><span class="num">${fmtFull(e.total)}${e.n>1?` <span class="muted small">· ${e.n} gifts</span>`:''}</span></li>`).join('')}</ul>`:''}</div>`;}).join('');
-  const groups=k=>SUPER_PACS.filter(p=>p.industry===k).map(p=>p.name).join(', ');
-  const cos=k=>COMPANIES.filter(c=>c.industry===k).map(c=>c.name).join(', ');
-  return `<section class="st-sec" id="u-industry"><h4 class="st-sub">Crypto &amp; AI industry <span class="muted small">· shown, not counted</span></h4>
-    <p class="small">Super PAC spending for and against ${who}, and donations to the campaign from the people of crypto and AI companies, with their executives by name.</p>
-    ${spBlock}
-    <div class="st-check"><h4>Donations to the campaign <span class="muted small">· ${cy-1}–${cy}</span></h4>${gifts}
-      <p class="small muted">From the FEC's itemized gifts: people who give one of these companies as their employer, and the executives listed above, matched by name and the employer they list. A donor who gave $200 or less in all isn't itemized, so carries no employer and isn't counted. Each executive's gifts are part of their company's total.</p></div>
-    <details class="st-more"><summary>Which groups, companies and executives are followed</summary><div class="st-more-b small">
-      <p><b>Crypto super PACs:</b> ${esc(groups('crypto'))}. <b>AI super PACs:</b> ${esc(groups('ai'))}.</p>
-      <p><b>Crypto companies:</b> ${esc(cos('crypto'))}. <b>AI companies:</b> ${esc(cos('ai'))}. <b>Both:</b> ${esc(cos('both'))}.</p>
-      <p><b>Executives:</b> ${esc(EXECUTIVES.map(e=>`${e.name} (${COMPANIES.find(c=>c.key===e.company)?.name})`).join(', '))}.</p>
-      <p class="muted">Big Tech companies (Google, Microsoft, Meta, Amazon, Apple) aren't counted as AI. Their PACs are in the Corporate PAC donors card.</p></div></details></section>`;
+// ----- Trackers: AIPAC, Big Pharma, Big Oil, Big Tech + AI and Crypto (public/trackers.js) -----
+// The money behind a person's lookouts over a period (the Unbought tab's period picker): the PAC lines (this cycle: the
+// reviewed reports merged with the refresh's whole-cycle list; other cycles: the refresh's), the gifts routed through
+// groups and those groups' own PAC checks this cycle, and the employee gifts the refresh read (crypto and AI so far). A
+// cycle whose PAC lines aren't read leaves everything waiting. coverage: what the PAC lines cover, in words.
+function lookoutInputs(s,d,period='this'){
+  const current=curCycle(s),m=d?.money||{},past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
+  const lists=[],said=[];let missing=false;
+  for(const cy of cycles){
+    const c=m.pacs?.cycles?.[cy],span=`${cy-1}–${cy}`,cut=c?.more>0?`the ${(c.committees||[]).length} largest PAC givers for ${span}`:`every PAC check the FEC has processed for ${span}`;
+    const read=(c?.committees||[]).map(x=>({cid:x.cid||null,name:x.name||'',amount:Number(x.amount)||0}));
+    if(cy===current&&s.pac){lists.push(researchPacLines(DATA,s),read);said.push(c?`${cut}, and every PAC line in the reports reviewed for ${s.pac.window||span}`:`the PAC lines in the reports reviewed for ${s.pac.window||span}`);continue;}
+    if(c){lists.push(read);said.push(cut);}else missing=true;
+  }
+  const routed={},direct={};
+  for(const [g,v] of Object.entries(DATA.bundled?.people?.[s.id]||{})){
+    routed[g]=cycles.reduce((t,cy)=>t+(Number(v.byCycle?.[cy]?.routed??(cy===current?v.routed:0))||0),0);
+    if(cycles.includes(current)&&v.direct>0)direct[g]=v.direct;
+  }
+  const routedKnown=earmarksSearched(s)&&cycles.every(cy=>cy===current||(DATA.bundled?.cycles||[]).includes(cy));
+  let employees=null;const ind=m.industry;
+  if(ind){const per=cycles.map(cy=>Number(cy)===Number(ind.cycle)?ind:ind.cycles?.[cy]);
+    if(per.every(Boolean)){employees={};for(const p of per)for(const [k,v] of Object.entries(p.industries||{}))employees[k]=(employees[k]||0)+(Number(v.total)||0);}}
+  return {pacLines:missing?null:mergePacLines(...lists),routed,routedKnown,direct,employees,cycles,label:periodLabel(period,current),coverage:said.join('; ')};
 }
+// "Summary of Major Lookouts": one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
+// period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
+// the employees' own gifts as a smaller number under it. Each line opens its tracker below.
+function lookoutsBox(s,inp){
+  const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
+    return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}<span class="sr-only">: ${said}</span></button>
+      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span></li>`;};
+  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
+    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending is in each tracker below, since it isn't money the campaign took.</p></div>`;
+}
+let trackerTab='aipac';
+const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
+const titleCase=n=>String(n||'').toLowerCase().replace(/(^|[\s(/&-])([a-z])/g,(x,a,b)=>a+b.toUpperCase()).replace(/\b(Pac|Llc|Inc|Usa|Us|Gp|Lp|Ii)\b/g,w=>w.toUpperCase());
+// One tracker's panel: its PAC checks, the gifts it routed, its people's gifts, and super PAC spending.
+function trackerPanel(s,d,inp,x,t,sp){
+  const who=esc(s.short||s.name),cy=curCycle(s);
+  const pacs=x.status==='waiting'&&inp.pacLines==null?`<p class="small muted">The PAC lines for ${esc(inp.label)} haven't been read yet.</p>`
+    :`${x.pacs.length?`${stTable(['PAC','Gave'],x.pacs.map(p=>[fecCmteLink(p.cid,titleCase(p.name))+(p.own?'<div class="small muted">From its own reports, this cycle</div>':'')+(p.cid?'':`<div class="small muted">Listed under this name on the campaign's report, with no FEC committee ID${t.routed.length?`; it may be gifts ${esc(t.name)} passed on`:''}</div>`),`${fmtFull(p.amount)}${p.n>1?` <span class="muted small">· ${p.n}</span>`:''}`]),'',[1])}<p class="small"><b class="num">${fmtFull(x.pac)}</b> in PAC checks, ${esc(inp.label)}.</p>`
+      :`<p class="small">No checks from ${esc(t.name)}'s PACs, ${esc(inp.label)}.</p>`}${inp.coverage?`<p class="small muted">Read: ${esc(inp.coverage)}.</p>`:''}`;
+  const routed=t.routed.length?(()=>{const b=DATA.bundled?.people?.[s.id]||{},rows=t.routed.map(g=>b[g]).filter(Boolean);
+    if(x.routed>0)return `<p class="small"><b class="num">${fmtFull(x.routed)}</b> in gifts ${esc(t.name)} collected from donors and passed on to the campaign, ${esc(inp.label)}${rows[0]?.n&&inp.cycles.length===1?` (${rows[0].n.toLocaleString('en-US')} gifts)`:''}.${rows[0]?.src?` <a href="${esc(rows[0].src)}" target="_blank" rel="noopener">FEC ↗</a>`:''} They also show under "Bundled through groups".</p>`;
+    return inp.routedKnown?`<p class="small">No gifts routed through ${esc(t.name)}, ${esc(inp.label)}.</p>`:'<p class="small muted">Not every record of gifts routed to this campaign has been read yet.</p>';})():'';
+  const ind=d?.money?.industry,emp=!t.industries.length?`<p class="small muted">Gifts from these companies' employees aren't read yet; they're next for the refresh.</p>`
+    :d===undefined?'<p class="small muted">Reading their gifts…</p>':!d?'<p class="small muted">The update service is offline, so the gifts can\'t be shown right now.</p>'
+    :!ind?'<p class="small muted">Waiting for the FEC refresh to read gifts from these companies\' people.</p>'
+    :(()=>{const parts=t.industries.map(k=>ind.industries?.[k]).filter(Boolean),cos=parts.flatMap(p=>p.companies),ex=parts.flatMap(p=>p.executives);
+      if(!cos.length)return `<p class="small">No gifts from these companies' employees or executives in ${cy-1}–${cy}.</p>`;
+      return `${stTable(['Company','Employees\' gifts','of which executives'],cos.sort((a,b)=>b.total-a.total).map(c=>[esc(c.name),`${fmtFull(c.total)} <span class="muted small">· ${c.n}</span>`,c.exec?fmtFull(c.exec):'—']),'',[1,2])}
+        ${ex.length?`<ul class="st-ind-execs">${ex.map(e=>`<li><span><b>${esc(e.name)}</b> <span class="muted">${esc(e.role)}, ${esc(e.company)}</span></span><span class="num">${fmtFull(e.total)}</span></li>`).join('')}</ul>`:''}
+        <p class="small muted">${cy-1}–${cy}, from the FEC's itemized gifts: people who give one of these companies as their employer. Executives are named only where approved.</p>`;})();
+  const spBlock=sp===undefined?'<p class="small muted">Loading the super PAC records…</p>':sp===null?'<p class="small muted">The update service is offline, so the super PAC records can\'t be loaded right now.</p>'
+    :!sp.superPacs?'<p class="small muted">Waiting for the FEC refresh to read this cycle\'s super PACs.</p>'
+    :(()=>{const r=trackerSuperPacs(t,sp,s.fecCand),money=v=>v?fmtFull(v):'—';
+      const own=t.superPacs.length?(r.named.length?stTable(['Its super PAC','For them','Against them'],r.named.map(o=>[fecCmteLink(o.id,o.name),money(o.for),money(o.against)]),'',[1,2])
+        :`<p class="small">${esc(t.superPacs.join(', '))} ${t.superPacs.length===1?'isn\'t':'aren\'t'} among the super PACs that reported spending this cycle.</p>`):'';
+      const funded=r.funded.length?`${stTable(['Super PAC','Given by these companies and groups','For them','Against them'],r.funded.slice(0,12).map(o=>[`${fecCmteLink(o.id,o.name)}<div class="small muted">${esc(o.givers.slice(0,3).map(titleCase).join(', '))}${o.givers.length>3?' …':''}</div>`,`${fmtFull(o.given)}${o.read?` <span class="muted small">· ${Math.round(o.given/o.read*100)}% of the gifts read</span>`:''}`,money(o.for),money(o.against)]),'',[1,2,3])}`
+        :`<p class="small">None of these companies or groups is among the largest donors read for the ${sp.superPacs.length} biggest super PACs.</p>`;
+      return `${own}<h5 class="tr-h">Super PACs these companies and groups gave to</h5>${funded}<p class="small muted">This cycle. A super PAC's spending is its own money, never given to the campaign, and can be for or against ${who}. Largest gifts only, for the biggest super PACs.</p>`;})();
+  const followed=`<details class="st-more"><summary>Who is followed</summary><div class="st-more-b small">
+    ${t.companies.length?`<p><b>Companies:</b> ${esc(t.companies.join(', '))}.</p>`:''}${t.key==='tech'||t.key==='crypto'?`<p><b>From the crypto and AI list:</b> ${esc(COMPANIES.filter(c=>t.industries.includes(c.industry)).map(c=>c.name).join(', '))}. <b>Executives named:</b> ${esc(EXECUTIVES.filter(e=>t.industries.includes(COMPANIES.find(c=>c.key===e.company)?.industry)).map(e=>e.name).join(', '))}.</p>`:''}
+    ${t.groups.length?`<p><b>Groups:</b> ${esc(t.groups.join(', '))}.</p>`:''}${t.superPacs.length?`<p><b>Its super PACs:</b> ${esc(t.superPacs.join(', '))}.</p>`:''}</div></details>`;
+  return `<div class="tr-panel" data-panel="${t.key}" role="tabpanel"${t.key===trackerTab?'':' hidden'}>
+    <p class="small">${esc(t.about)}</p>
+    <div class="st-check"><h4>PAC checks to the campaign</h4>${pacs}</div>
+    ${routed?`<div class="st-check"><h4>Gifts routed through ${esc(t.name)}</h4>${routed}</div>`:''}
+    <div class="st-check"><h4>Gifts from their employees</h4>${emp}</div>
+    <div class="st-check"><h4>Super PAC spending</h4>${spBlock}</div>${followed}</div>`;
+}
+// The Trackers section on the Unbought tab: a tab a tracker. d: the refresh's records (undefined while loading, null
+// offline); sp: the Super PACs page's data (undefined while loading, null offline).
+function trackersHTML(s,d,inp,sp){
+  const L=lookouts(inp);
+  return `<section class="st-sec" id="u-trackers"><h4 class="st-sub">Trackers <span class="muted small">· shown, not counted</span></h4>
+    <p class="small">Money from five lobbies, ${esc(inp.label)}. <a href="#trackers">See everyone on the Trackers page</a>.</p>
+    <div class="seg tr-tabs" role="tablist" aria-label="Trackers">${TRACKERS.map((t,i)=>`<button type="button" role="tab" data-tracker="${t.key}" aria-selected="${t.key===trackerTab}" class="${t.key===trackerTab?'active':''}"><span class="lk-mark lk-${L[i].status}" aria-hidden="true">${L[i].status==='took'?'✕':L[i].status==='none'?'✓':'…'}</span>${esc(t.name)}</button>`).join('')}</div>
+    ${TRACKERS.map((t,i)=>trackerPanel(s,d,inp,L[i],t,sp)).join('')}</section>`;
+}
+// Tabs and the lookouts' links, for the whole pane (set once).
+function bindTrackers(pane){
+  pane.addEventListener('click',e=>{const b=e.target.closest('[data-tracker],[data-tracker-open]');if(!b)return;
+    const k=b.dataset.tracker||b.dataset.trackerOpen;trackerTab=k;const sec=pane.querySelector('#u-trackers');if(!sec)return;
+    sec.querySelectorAll('[data-tracker]').forEach(x=>{const on=x.dataset.tracker===k;x.classList.toggle('active',on);x.setAttribute('aria-selected',String(on));});
+    sec.querySelectorAll('.tr-panel').forEach(p=>{p.hidden=p.dataset.panel!==k;});
+    if(b.dataset.trackerOpen)sec.scrollIntoView({behavior:'smooth',block:'start'});});
+}
+let superPacCache=null;
+const loadSuperPacs=()=>superPacCache||(superPacCache=fetch('/api/superpacs',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{if(!d)superPacCache=null;return d;}));
 function paneUnbought(s,pane){
   const inputs=unboughtInputs(s);
   // The money map here: the pie of where the itemized gifts come from goes under its numbers (filled once the refresh's
   // records arrive), and the bundled gifts' box sits under the Sources, beside the score card.
   const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
-  const side=s.office?'':bundledBox(s,mm);
-  const draw=(x,d)=>stFrame(s,'unbought',{side,
+  // Under the Sources: the bundled gifts, then the Summary of Major Lookouts for the period picked.
+  let period='this',live=undefined,sp=undefined;
+  const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period));
+  const fillTrackers=()=>{const el=pane.querySelector('#u-trackers');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=trackersHTML(s,live,lookoutInputs(s,live,period),sp);el.replaceWith(tmp.firstElementChild);};
+  const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
-    evidence:`${s.office?'':moneyMapBlock(s,{...mm,withBundled:false,under:'<div id="u-states-slot"></div>'})}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
+    evidence:`${s.office?'':moneyMapBlock(s,{...mm,withBundled:false,under:'<div id="u-states-slot"></div>'})}${s.office?'':'<div id="u-trackers"></div>'}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
     assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
@@ -1243,8 +1308,11 @@ function paneUnbought(s,pane){
   };
   mountShown();
   if(s.office)return;
+  bindTrackers(pane);fillTrackers();
+  loadSuperPacs().then(d=>{sp=d;if(pane.isConnected&&location.hash.startsWith('#'+s.id))fillTrackers();});
   window.RecordLive.disclosure(s.id,s.chamber).then(d=>{
     if(!pane.isConnected||!location.hash.startsWith('#'+s.id))return;
+    live=d;
     const offline='The update service is offline, so their financial disclosure can\'t be read right now';
     const x=unboughtFor(s,inputs,d,'this');
     if(!d)x.why=offline;
@@ -1255,9 +1323,10 @@ function paneUnbought(s,pane){
     };
     show(x);
     const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);
-      nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
+      nb.querySelector('select')?.addEventListener('change',e=>{period=e.target.value;const y=unboughtFor(s,inputs,d,period);if(!d)y.why=offline;show(y);fillTrackers();});}
     const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
-    if(fec)fec.innerHTML=(d?efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);
+    if(fec)fec.innerHTML=d?efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'';
+    fillTrackers();
     const slot=pane.querySelector('#u-states-slot');if(slot&&d){slot.innerHTML=statesEvidence(s,m.states);hoverTips(slot);}
     const wt=pane.querySelector('#u-timeline');if(wt){const tl=d?wealthTimeline(d.netWorth,timelineTrades(s,d)):null,tmp=document.createElement('div');tmp.innerHTML=wealthTimelineHTML(s,d,tl);const sec=tmp.firstElementChild;wt.replaceWith(sec);if(tl)mountWealthTimeline(sec,tl);}
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
@@ -1453,6 +1522,26 @@ function renderSenate(){
   $('#sen-year').addEventListener('change',e=>{senYear=e.target.value;draw();});
   $('#sen-sort').addEventListener('change',e=>{senSort=e.target.value;draw();});
   draw();
+}
+// ---------- Trackers: every reviewed profile ranked by money from each lobby (public/trackers.js) ----------
+function renderTrackers(key){
+  const t=TRACKER[key]||TRACKERS[0];
+  const routedNow=s=>Object.fromEntries(Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([g,v])=>[g,Number(v.routed)||0]));
+  const directNow=s=>Object.fromEntries(Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([g,v])=>[g,Number(v.direct)||0]));
+  const rows=ALL.filter(s=>s.fecCand).map(s=>({s,x:trackerMoney(t,{pacLines:s.pac?researchPacLines(DATA,s):null,routed:routedNow(s),routedKnown:earmarksSearched(s),direct:directNow(s)})}));
+  const took=rows.filter(r=>r.x.status==='took').sort((a,b)=>b.x.total-a.x.total||a.s.name.localeCompare(b.s.name)),none=rows.filter(r=>r.x.status==='none'),waiting=rows.filter(r=>r.x.status==='waiting');
+  const sum=took.reduce((n,r)=>n+r.x.total,0),routedCol=t.routed.length>0;
+  const who=s=>`<a href="#${esc(s.id)}-unbought">${esc(s.name)}</a> <span class="chip ${esc(s.party)}">${esc(s.party)} · ${esc(s.chamber==='H'?s.district||s.state:s.state)}</span>${s.pac?.window?`<div class="small muted">PAC lines read: ${esc(s.pac.window)}</div>`:''}`;
+  app.innerHTML=`<section class="section"><div class="kicker">Lobby money</div><h1>Trackers</h1>
+    <p class="intro">How much each profiled campaign took from five lobbies this cycle: checks from the lobby's PACs, and gifts the lobby collected from donors and passed on. Super PAC spending, which no campaign takes, is on each person's Unbought tab. Shown only; no grade uses it.</p>
+    <nav class="seg tr-tabs tr-page-tabs" aria-label="Trackers">${TRACKERS.map(x=>`<a href="#trackers-${x.key}" class="${x.key===t.key?'active':''}"${x.key===t.key?' aria-current="page"':''}>${esc(x.name)}</a>`).join('')}</nav>
+    <p class="small" style="margin:12px 0 4px">${esc(t.about)}</p>
+    <p class="tr-sum"><b class="num">${took.length}</b> of ${rows.length} profiled campaigns took money from ${esc(t.name)} this cycle, <b class="num">${fmtFull(sum)}</b> in all.</p>
+    ${took.length?`<div class="tablewrap"><table class="tr-rank"><thead><tr><th>#</th><th>Campaign</th><th class="r">PAC checks</th>${routedCol?'<th class="r">Gifts routed</th>':''}<th class="r">Total</th></tr></thead><tbody>${took.map((r,i)=>`<tr><td class="num">${i+1}</td><td>${who(r.s)}</td><td class="r num">${r.x.pac?fmtFull(r.x.pac)+(r.x.pacs.some(p=>!p.cid)?'<sup>*</sup>':''):'—'}</td>${routedCol?`<td class="r num">${r.x.routed?fmtFull(r.x.routed):'—'}</td>`:''}<td class="r num"><b>${fmtFull(r.x.total)}</b></td></tr>`).join('')}</tbody></table></div>`:''}
+    ${none.length?`<details class="st-more"><summary>✓ Took none: ${none.length} campaign${none.length===1?'':'s'}</summary><div class="st-more-b small">${none.sort((a,b)=>a.s.name.localeCompare(b.s.name)).map(r=>`<a href="#${esc(r.s.id)}-unbought">${esc(r.s.name)}</a>`).join(', ')}</div></details>`:''}
+    ${took.some(r=>r.x.pacs.some(p=>!p.cid))?`<p class="small muted">* Includes lines the campaign's report lists under ${esc(t.name)}'s name with no FEC committee ID${t.routed.length?`, which may be gifts ${esc(t.name)} passed on rather than its PAC's own checks`:''}.</p>`:''}
+    ${waiting.length?`<p class="small muted">Not read yet for ${waiting.length}: ${waiting.map(r=>esc(r.s.name)).join(', ')}.</p>`:''}
+    <p class="small muted">From the FEC: the PAC lines in each reviewed profile's reports (the dates are under their name)${t.groupPacs?`, ${esc(t.name)}'s own PAC checks for the whole cycle from its reports,`:''}${t.routed.length?' and the gifts routed to them':''}. Each person's Unbought tab adds the refresh's whole-cycle PAC list, so its amount can be larger. Senators and House members with basic profiles show theirs on their own Unbought tab once the refresh has read them.</p></section>`;
 }
 // ---------- Super PACs: every super PAC's spending this cycle (refresh "super-pacs", public/super-pacs.js) ----------
 let spQ='',spSort='total';
