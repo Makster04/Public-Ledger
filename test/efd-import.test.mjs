@@ -146,3 +146,20 @@ test('the list reads who is already saved from the local database itself',async(
     assert.ok(!toSave(have).some(x=>x.id==='ossoff'));
   }finally{d.close();}
 });
+
+test('an annual report\'s transactions table ("Transaction Type") is read, and a page no reader can read is listed to check',async()=>{
+  // The transactions part of an annual report names its column "Transaction Type", where a trade report says "Type".
+  const tx=`<table><thead><tr><th>#</th><th>Owner</th><th>Ticker</th><th>Asset Name</th><th>Transaction Type</th><th>Transaction Date</th><th>Amount</th><th>Comment</th></tr></thead>
+<tbody><tr><td>1</td><td>Self</td><td>AAPL</td><td>Apple Inc.</td><td>Sale (Full)</td><td>03/04/2025</td><td>$1,001 - $15,000</td><td>--</td></tr></tbody></table>`;
+  const withTx=annual(2025).replace('</body>',tx+'</body>');
+  const a=efdSavedReport(withTx);assert.equal(a.kind,'annual');assert.equal(a.trades.length,1);assert.equal(a.trades[0].type,'Sale (Full)');
+  // A table with a transaction date but no type or amount column: the error names its columns.
+  const odd=annual(2024).replace('</body>','<table><thead><tr><th>Transaction Date</th><th>Note</th></tr></thead><tbody><tr><td>01/02/2024</td><td>x</td></tr></tbody></table></body>');
+  assert.throws(()=>efdSavedReport(odd),/Senate report table changed \(its columns: transaction date, note\)/);
+  // The import lists that page to check and still reads the others.
+  const dir=folder({'ossoff/annual-2025.html':withTx,'ossoff/annual-2024.html':odd,'ossoff/ptr.html':ptr()});
+  const r=await importEfd({dir,db:null,dryRun:true});
+  const text=r.lines.join('\n');
+  assert.match(text,/CHECK\s+ossoff\/annual-2024\.html: Senate report table changed/);
+  assert.match(text,/OK\s+ossoff\/annual-2025\.html/);assert.match(text,/OK\s+ossoff\/ptr\.html/);
+});

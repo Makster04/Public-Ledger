@@ -59,7 +59,8 @@ export async function importEfd({dir,db,dryRun=false,now=new Date()}){
     const rel=path.relative(dir,file),ext=path.extname(file).toLowerCase();
     if(ext==='.webarchive'){lines.push(`SKIP  ${rel}: a Safari web archive; save it again with Format "Page Source"`);continue;}
     if(!['.html','.htm'].includes(ext)){lines.push(`SKIP  ${rel}: not a saved web page (.html)`);continue;}
-    const report=efdSavedReport(fs.readFileSync(file,'utf8'));
+    // One page the readers can't make sense of is listed to check; the other files are still read.
+    let report;try{report=efdSavedReport(fs.readFileSync(file,'utf8'));}catch(e){lines.push(`CHECK ${rel}: ${e.message}`);continue;}
     if(!report.kind){lines.push(`SKIP  ${rel}: no trade table or annual report found; is it a report page?`);continue;}
     const {person,warn}=senatorFor(file,report);
     if(!person){lines.push(`SKIP  ${rel}: ${warn}`);continue;}

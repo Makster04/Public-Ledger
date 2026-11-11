@@ -1273,8 +1273,9 @@ export function efdTrades(html){
     if(!/Transaction\s*Date/i.test(table))continue;
     const heads=[...(table.match(/<thead[\s\S]*?<\/thead>/i)?.[0]||'').matchAll(/<th[^>]*>([\s\S]*?)<\/th>/gi)].map(m=>fold(strip(m[1])));
     const at=name=>heads.findIndex(h=>h===name||h.startsWith(name+' '));
-    const ci={traded:at('transaction date'),owner:at('owner'),ticker:at('ticker'),asset:at('asset name'),assetType:at('asset type'),type:at('type'),amount:at('amount')};
-    need(ci.traded>=0&&ci.type>=0&&ci.amount>=0,'Senate report table changed');
+    // (a trade report's column is "Type"; the transactions table on an annual report calls it "Transaction Type")
+    const ci={traded:at('transaction date'),owner:at('owner'),ticker:at('ticker'),asset:at('asset name'),assetType:at('asset type'),type:at('type')>=0?at('type'):at('transaction type'),amount:at('amount')};
+    need(ci.traded>=0&&ci.type>=0&&ci.amount>=0,`Senate report table changed (its columns: ${heads.join(', ')||'none found'})`);
     for(const [,row] of (table.match(/<tbody[\s\S]*?<\/tbody>/i)?.[0]||'').matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)){
       const cells=[...row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m=>m[1]),cell=i=>i>=0&&cells[i]!=null?strip(cells[i]):'';
       const amount=cell(ci.amount),[low,high]=amountRange(amount),ticker=cell(ci.ticker);
