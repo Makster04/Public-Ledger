@@ -119,6 +119,8 @@ test('where they show: the lookouts beside the score, the tracker tabs, the Trac
   assert.match(app,/No PAC money or gifts from \$\{esc\(x\.name\)\}/);
   assert.match(app,/bundledBox\(s,mm\)\+lookoutsBox\(/,'the lookouts go right under "Bundled through groups"');
   assert.match(app,/else if\(m\[1\]==='trackers'\)\{renderTrackers\(/);
+  assert.match(app,/<th class="r">PAC checks<\/th><th class="r">Gifts routed<\/th>/,'every tracker has the Gifts routed column');
+  assert.match(app,/'<span class="muted small">Not updated yet<\/span>'/,'blank, saying so, where routed gifts aren\'t read yet');
   assert.doesNotMatch(app,/function industryCard\(/,'the old crypto and AI card is replaced by the Crypto and Tech + AI trackers');
   assert.match(html,/<a href="#trackers" data-route="trackers">Trackers<\/a>/);
   for(const c of ['.lk-list','.lk-took','.lk-none','.lk-waiting','.tr-tabs','.tr-panel','.tr-page-tabs'])assert.ok(css.includes(c),c);
