@@ -1162,3 +1162,32 @@ input, select { accent-color: var(--accent); }
   .wt-stat .d { grid-column: 1 / -1; }
   .wt-panel { padding: 12px 10px 6px; }
 }
+
+/* Trackers (public/trackers.js): the Summary of Major Lookouts beside the Unbought score, the Trackers section's tabs,
+   and the Trackers page. */
+.lookouts .lk-list { list-style: none; margin: 0; padding: 0; }
+.lk-list li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.lk-list li:last-child { border-bottom: 0; }
+.lk-mark { font-weight: 800; text-align: center; }
+.lk-took .lk-mark, .lk-mark.lk-took { color: var(--crit); }
+.lk-none .lk-mark, .lk-mark.lk-none { color: var(--good); }
+.lk-waiting .lk-mark, .lk-mark.lk-waiting { color: var(--muted); }
+.lk-name { background: none; border: 0; padding: 0; color: var(--ink); font: inherit; font-size: .88rem; text-align: left; cursor: pointer; }
+.lk-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+.lk-name:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.lk-amt { text-align: right; white-space: nowrap; font-size: .88rem; }
+.lk-amt small { display: block; color: var(--muted); font-size: .74rem; }
+.tr-tabs { display: flex; flex-wrap: wrap; margin: 6px 0 12px; }
+.tr-tabs button { display: inline-flex; align-items: center; gap: 6px; }
+.tr-tabs .lk-mark { font-size: .78rem; }
+.tr-panel { display: grid; gap: 12px; }
+.tr-panel[hidden] { display: none; }
+.tr-panel > p.small { margin: 0; }
+.tr-h { margin: 12px 0 6px; font-size: .86rem; }
+.tr-page-tabs a { border-radius: 6px; padding: 8px 14px; min-height: 36px; display: inline-flex; align-items: center; font-weight: 700; font-size: .84rem; color: var(--ink-2); text-decoration: none; }
+.tr-page-tabs a.active { background: var(--accent-soft); color: var(--accent); }
+.tr-page-tabs a:not(.active):hover { background: var(--surface-2); color: var(--ink); }
+.tr-sum { margin: 6px 0 12px; }
+.tr-rank td, .tr-rank th { white-space: nowrap; }
+.tr-rank td:nth-child(2) { white-space: normal; }
+@media (max-width: 520px) { .tr-tabs, .tr-page-tabs { display: grid; grid-template-columns: 1fr 1fr; } .tr-tabs button, .tr-page-tabs a { justify-content: center; } }
