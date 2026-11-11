@@ -4,6 +4,7 @@
 // Response formats follow each source's published documentation; live responses need your keys and are not verified
 // here. Every adapter checks the identity and shape of what comes back and refuses to publish anything else.
 import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader,partyTally,normalizeCampaign} from './sources.mjs';
+import {houseAnnualSchedules,efdAnnualSchedules} from './schedules.mjs';
 import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
@@ -738,12 +739,13 @@ export const FEEDS={
         need(reports.length,'No annual report in the House disclosure index yet');
         // The years read before are carried; a report not read yet (a new year, or an amendment) is read, newest first.
         // A year kept only as a summary (saved before every year's assets were kept) is read again for its asset list.
-        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.filter(r=>Array.isArray(r.assets)).map(r=>String(r.id)));
+        // A report read before its income, positions, agreements, gifts and travel were read (src/schedules.mjs) is read again.
+        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.filter(r=>Array.isArray(r.assets)&&r.schedules).map(r=>String(r.id)));
         const todo=reports.filter(f=>!done.has(String(f.id))).slice(0,12).map(({id,year,filed,url,type})=>({id,year,filed,url,type}));
         return {rows:before,next:todo.length?JSON.stringify({todo,i:0}):null};
       }
-      const f=c.todo[c.i];
-      return {rows:[{id:f.id,...holdingsSnapshot(f,houseAnnualHoldings(await pdfText(await requestSource(f.url,env,{as:'bytes'}))))}],
+      const f=c.todo[c.i],text=await pdfText(await requestSource(f.url,env,{as:'bytes'}));
+      return {rows:[{id:f.id,...holdingsSnapshot(f,{...houseAnnualHoldings(text),schedules:houseAnnualSchedules(text)})}],
         next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
     summarize:annualSummary},
@@ -757,7 +759,7 @@ export const FEEDS={
       const before=annualRows(await lastPayload(env,job.id)).filter(r=>String(r.id)!==String(doc.id));
       if(f.paper)return {rows:[...before,{id:doc.id,...holdingsSnapshot(doc,{assets:[],debts:[]})}],next:null};
       const html=await efdGet(env,session.jar,f.url,/Assets|Liabilities/i);need(html!==null,'Senate eFD annual report could not be opened');
-      return {rows:[...before,{id:doc.id,...holdingsSnapshot(doc,efdAnnualHoldings(html))}],next:null};
+      return {rows:[...before,{id:doc.id,...holdingsSnapshot(doc,{...efdAnnualHoldings(html),schedules:efdAnnualSchedules(html)})}],next:null};
     },
     summarize:annualSummary},
   // The House Clerk's yearly index of every financial disclosure filing (each year from historyFrom): the official record
@@ -1323,7 +1325,8 @@ export function annualSummary(rows){
   for(const r of rows||[]){
     if(!r||r.year==null&&!r.filed)continue;
     const k=String(r.year??String(r.filed).slice(0,4)),o=byYear.get(k),f=String(r.filed||''),g=String(o?.filed||'');
-    if(!o||f>g||f===g&&Array.isArray(r.assets)&&!Array.isArray(o.assets))byYear.set(k,r);
+    // The same report twice (carried, and read again): the one with its asset list, then the one with its other parts.
+    if(!o||f>g||f===g&&(Array.isArray(r.assets)&&!Array.isArray(o.assets)||Array.isArray(r.assets)===Array.isArray(o.assets)&&r.schedules&&!o.schedules))byYear.set(k,r);
   }
   const list=[...byYear.values()].sort((a,b)=>(Number(b.year)||0)-(Number(a.year)||0)||String(b.filed||'').localeCompare(String(a.filed||'')));
   if(!list.length)return {};
@@ -1342,14 +1345,14 @@ async function lastPayload(env,jobId){
   return r?JSON.parse(r.payload):null;
 }
 export const holdingsSnapshot=(f,h)=>({year:f.year||null,filed:f.filed||null,url:f.url,type:f.type||null,...netWorth(h.assets,h.debts),
-  unreadable:!h.assets.length&&!h.debts.length,assets:h.assets.slice(0,400),debts:h.debts.slice(0,100)});
+  unreadable:!h.assets.length&&!h.debts.length,assets:h.assets.slice(0,400),debts:h.debts.slice(0,100),schedules:h.schedules||null});
 // A Senate eFD report page saved from a browser (scripts/import-efd.mjs): whose report it is, what kind, when it was
 // filed, and its eFD address when the saved page carries it (browsers often note it at the top, and the page links to
 // itself). The kind comes from the title, or else from which table the page has. A page with neither is not a report.
 export function efdSavedReport(html){
   const raw=String(html||''),text=strip(raw);
   const at=raw.match(/(?:https:\/\/efdsearch\.senate\.gov)?\/search\/view\/(ptr|annual|paper)\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\/?/i);
-  const trades=efdTrades(raw),holdings=efdAnnualHoldings(raw);
+  const trades=efdTrades(raw),holdings={...efdAnnualHoldings(raw),schedules:efdAnnualSchedules(raw)};
   // A candidate's report (Candidate Report, or a New Filer Report) lists assets and debts as an annual report does.
   const titled=/Periodic Transaction Report/i.test(text)?'ptr':/Annual Report|Candidate Report|New Filer Report/i.test(text)?'annual':null;
   const kind=at?.[1].toLowerCase()==='paper'?'paper':titled||(trades.length?'ptr':holdings.assets.length||holdings.debts.length?'annual':null);
@@ -1445,4 +1448,4 @@ export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k))
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
 // and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each).
-export const FEEDS_VERSION=5;
+export const FEEDS_VERSION=6;

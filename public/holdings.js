@@ -83,5 +83,7 @@ export function stockRange(report){
 export function annualEntry(r){
   return {id:r.id??r.doc??null,year:r.year??null,filed:r.filed??null,url:r.url??null,type:r.type??null,low:r.low??null,high:r.high??null,
     assetsLow:r.assetsLow??null,assetsHigh:r.assetsHigh??null,debtsLow:r.debtsLow??null,debtsHigh:r.debtsHigh??null,
-    nAssets:r.nAssets??0,nDebts:r.nDebts??0,unread:r.unread??0,unreadable:!!r.unreadable,stocks:stockRange(r)};
+    nAssets:r.nAssets??0,nDebts:r.nDebts??0,unread:r.unread??0,unreadable:!!r.unreadable,stocks:stockRange(r),
+    // (its income, positions, agreements, gifts and travel, without the raw text kept with the newest report)
+    schedules:r.schedules?(({raw,...rest})=>rest)(r.schedules):null};
 }
