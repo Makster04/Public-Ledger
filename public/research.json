@@ -30712,8 +30712,8 @@
           "status": "done",
           "pac": 0,
           "pacN": 0,
-          "routed": 59165,
-          "routedN": 162,
+          "routed": 66046,
+          "routedN": 218,
           "for": 333998.59,
           "against": 0,
           "spenders": [
@@ -218980,7 +218980,7 @@
     }
   ],
   "bundled": {
-    "asOf": "2026-11-08",
+    "asOf": "2026-11-11",
     "conduits": {
       "cfg": [
         "C00432260"
@@ -219025,7 +219025,7 @@
       "fec:C00786830": "WELCOMEPAC",
       "fec:C00837021": "314 ACTION IMPACT SLATE"
     },
-    "discovered": true,
+    "discovered": false,
     "listed": {
       "collins": true,
       "sullivan": true,
@@ -219033,7 +219033,6 @@
       "ossoff": true,
       "booker": true,
       "hickenlooper": true,
-      "perry": true,
       "lawler": true,
       "evans": true,
       "millermeeks": true,
@@ -219544,8 +219543,8 @@
       },
       "perry": {
         "cfg": {
-          "routed": 59165,
-          "n": 162,
+          "routed": 66046,
+          "n": 218,
           "direct": 0,
           "byMonth": {
             "2025-03": 1577,
@@ -219560,7 +219559,8 @@
             "2026-05": 825,
             "2026-06": 2020,
             "2026-07": 11512,
-            "2026-08": 3912
+            "2026-08": 3912,
+            "2026-09": 6881
           },
           "cycles": [
             2026
@@ -219575,8 +219575,8 @@
               "n": 242
             },
             "2026": {
-              "routed": 59165,
-              "n": 162
+              "routed": 66046,
+              "n": 218
             }
           },
           "src": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00432260&recipient_committee_id=C00510164&two_year_transaction_period=2026"
@@ -219679,12 +219679,12 @@
               "n": 4906
             },
             "2020": {
-              "routed": 468871.94,
-              "n": 7906
+              "routed": 476186.44,
+              "n": 8055
             },
             "2022": {
-              "routed": 367562.5,
-              "n": 7936
+              "routed": 694059.1,
+              "n": 17049
             },
             "2024": {
               "routed": 410207.08,
@@ -219700,7 +219700,7 @@
         "fec:C00520841": {
           "routed": 0,
           "n": 0,
-          "direct": 0,
+          "direct": 5000,
           "byMonth": {},
           "cycles": [
             2026
