@@ -16,6 +16,7 @@ import crypto from 'node:crypto';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import config from '../data/config.json' with {type:'json'};
 import {FEEDS,efdSavedReport,officialRows,officialSummary,holdingsSnapshot,annualSummary,annualRows} from '../src/feeds.mjs';
+import {scheduleCounts} from '../src/schedules.mjs';
 import {addJob,statement} from '../src/refresh.mjs';
 import {openDatabase} from './sqlite.mjs';
 
@@ -72,19 +73,24 @@ export async function importEfd({dir,db,dryRun=false,now=new Date()}){
     // The same report saved twice (two files, one report) is read once.
     if(list.some(x=>x.f.doc===doc)){lines.push(`SAME  ${rel}: the same report as another file; read once`);continue;}
     list.push({f,report});
-    const what=report.kind==='annual'?`annual report${report.year?` for ${report.year}`:''}, ${report.holdings.assets.length} assets, ${report.holdings.debts.length} debts`:report.kind==='paper'?'paper report (a scanned image; check it by hand)':`trade report, ${report.trades.length} trade${report.trades.length===1?'':'s'}`;
+    const sc=scheduleCounts(report.holdings.schedules);
+    const what=report.kind==='annual'?`annual report${report.year?` for ${report.year}`:''}, ${report.holdings.assets.length} assets, ${report.holdings.debts.length} debts${sc?`, ${sc.income} income, ${sc.positions} positions, ${sc.agreements} agreements, ${sc.gifts} gifts, ${sc.travel} trips`:''}`:report.kind==='paper'?'paper report (a scanned image; check it by hand)':`trade report, ${report.trades.length} trade${report.trades.length===1?'':'s'}`;
     lines.push(`OK    ${rel}: ${person.name}, ${what}, filed ${report.filed||'(date not found)'}${report.doc?'':' (no eFD address on the page)'}${warn?` — ${warn}`:''}`);
   }
   const stamp=now.toISOString(),runId=`import-${stamp}`,later=now.getTime()+7*86400000,summary=[];
   for(const {person,ptr,annual} of bySenator.values()){
-    if(ptr.length){
-      const id=`trades-senate:${person.id}`,old=dryRun?null:await statement(db,'SELECT payload FROM snapshots WHERE job_id=?',id).first();
-      const last=old?JSON.parse(old.payload):null,fresh=new Set(ptr.map(x=>x.f.doc));
-      const kept=[...(last?.rows||[]),...(last?.unread||[]).map(u=>({id:`unread:${u.doc}`,doc:u.doc,unread:u}))].filter(r=>!fresh.has(r.doc));
+    // An annual report imported as a trade report before (when its kind was read from the words on the page) is dropped
+    // from the trades: its transactions list repeats the trade reports.
+    const id=`trades-senate:${person.id}`,old=dryRun?null:await statement(db,'SELECT payload FROM snapshots WHERE job_id=?',id).first();
+    const last=old?JSON.parse(old.payload):null,annualDocs=new Set(annual.map(x=>x.f.doc));
+    const misfiled=(last?.rows||[]).some(r=>annualDocs.has(r.doc));
+    if(ptr.length||misfiled){
+      const fresh=new Set(ptr.map(x=>x.f.doc));
+      const kept=[...(last?.rows||[]),...(last?.unread||[]).map(u=>({id:`unread:${u.doc}`,doc:u.doc,unread:u}))].filter(r=>!fresh.has(r.doc)&&!annualDocs.has(r.doc));
       const rows=[...kept,...ptr.flatMap(({f,report})=>f.paper?[{id:`unread:${f.doc}`,doc:f.doc,unread:{doc:f.doc,filed:f.filed,url:f.url,why:'Filed on paper (a scanned image); check the report'}}]
         :officialRows('Senate eFD',f,report.trades,'No trades could be read from this report; check the report'))];
       const snap={...officialSummary(rows),imported:stamp};
-      summary.push(`${person.name}: ${ptr.length} trade report${ptr.length===1?'':'s'} imported, ${snap.count} trades on file${snap.unread.length?`, ${snap.unread.length} to check by hand`:''}`);
+      summary.push(`${person.name}: ${ptr.length} trade report${ptr.length===1?'':'s'} imported, ${snap.count} trades on file${snap.unread.length?`, ${snap.unread.length} to check by hand`:''}${misfiled?' (annual reports read as trade reports before were taken out)':''}`);
       if(!dryRun)await save(db,id,'trades-senate',person,snap,runId,stamp,later,`Imported ${ptr.length} report${ptr.length===1?'':'s'} saved by hand`);
     }
     if(annual.length){

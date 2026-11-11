@@ -1355,8 +1355,11 @@ export function efdSavedReport(html){
   const at=raw.match(/(?:https:\/\/efdsearch\.senate\.gov)?\/search\/view\/(ptr|annual|paper)\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\/?/i);
   const trades=efdTrades(raw),holdings={...efdAnnualHoldings(raw),schedules:efdAnnualSchedules(raw)};
   // A candidate's report (Candidate Report, or a New Filer Report) lists assets and debts as an annual report does.
-  const titled=/Periodic Transaction Report/i.test(text)?'ptr':/Annual Report|Candidate Report|New Filer Report/i.test(text)?'annual':null;
-  const kind=at?.[1].toLowerCase()==='paper'?'paper':titled||(trades.length?'ptr':holdings.assets.length||holdings.debts.length?'annual':null);
+  // The kind: from the report's eFD address when the page has it (/view/ptr/, /view/annual/, /view/paper/), else from its
+  // title (the first report name on the page: an annual report mentions trade reports further down), else from its tables.
+  const named=(strip(raw.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]||'')||text).match(/Periodic Transaction Report|Annual Report|Candidate Report|New Filer Report/i)?.[0];
+  const titled=!named?null:/Periodic/i.test(named)?'ptr':'annual';
+  const kind=at?at[1].toLowerCase():titled||(trades.length?'ptr':holdings.assets.length||holdings.debts.length?'annual':null);
   // The filer: "The Honorable Jon Ossoff (Ossoff, Jon)", or a candidate's heading without the title.
   const who=text.match(/The Honorable\s+([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i)
     ||strip(raw.match(/class=["'][^"']*filedReport[^"']*["'][^>]*>([\s\S]*?)<\//i)?.[1]||'').match(/^(?:(?:Mr|Ms|Mrs|Dr)\.?\s+)?([^()]{2,80}?)\s*\(\s*([^,()]{2,40}),\s*([^()]{2,40})\)/i);
