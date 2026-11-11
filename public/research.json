@@ -219025,7 +219025,7 @@
       "fec:C00786830": "WELCOMEPAC",
       "fec:C00837021": "314 ACTION IMPACT SLATE"
     },
-    "discovered": false,
+    "discovered": true,
     "listed": {
       "collins": true,
       "sullivan": true,
@@ -219085,7 +219085,8 @@
       "beltran": true,
       "trump": true,
       "gonzalez": true,
-      "brown": true
+      "brown": true,
+      "perry": true
     },
     "cycles": [
       2026,
