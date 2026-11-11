@@ -798,10 +798,28 @@ async function fillWealthHeader(s){
   if(!document.getElementById('profile-wealth'))return;
   const d=await window.RecordLive.disclosure(s.id,s.chamber);
   const el=document.getElementById('profile-wealth');if(!el||!location.hash.startsWith('#'+s.id))return;
-  if(!d){el.outerHTML=wealthRowHTML(s,'offline');return;}
-  // (as the timeline's own note: the trade reports' gap, unless the reviewed trades cover them)
+  el.outerHTML=wealthRowHTML(s,d?wealthOf(s,d):'offline');
+}
+// Net worth, stocks held and trades from their disclosures (d: RecordLive.disclosure), for the profile's top and the
+// share card. The trades carry the trade reports' gap, as the timeline's own note does, unless the reviewed trades
+// cover them.
+function wealthOf(s,d){
   const why=s.chamber&&d.trades?.why&&!SCORER.reviewedTrades(s).covered?d.trades.why:null;
-  el.outerHTML=wealthRowHTML(s,headerWealth(wealthTimeline(d.netWorth,timelineTrades(s,d)),{tradesWhy:why}));
+  return headerWealth(wealthTimeline(d.netWorth,timelineTrades(s,d)),{tradesWhy:why});
+}
+// The same three numbers as the profile's top boxes (wealthRowHTML), as plain text for the share card.
+function wealthCard(st){
+  const all=(value,note)=>({items:['Net worth','Stocks held','Stock trades'].map(label=>({label,value,wait:true})),note});
+  if(st==='offline')return all('Not available','The update service was offline');
+  if(!st)return all('Not read yet','Their annual financial disclosure hasn\'t been read yet');
+  const L=st.net,k=st.stocks,t=st.trades,noReport=st.reports?'Can\'t read':'Not read yet';
+  const net=!L||L.low==null&&L.high==null?null:L.high==null?`${signedMoney(L.low)}+`:L.low==null?`Up to ${signedMoney(L.high)}`:L.low===L.high?signedMoney(L.low):`${signedMoney(L.low)}–${signedMoney(L.high)}`;
+  const stocks=!L||!k?null:k.count===0?'None':`~${fmt$(k.value)}${k.open?'+':''}`;
+  const trades=t.trades>0?String(t.trades):t.partial?null:'0';
+  const note=[L?`${st.year} annual report`:st.reports?'Their annual report can\'t be read automatically':'No annual report read yet',
+    k?.count?`${k.count} stock${k.count===1?'':'s'} or option${k.count===1?'':'s'}`:'',t.trades?`${t.trades} trade${t.trades===1?'':'s'} since ${t.since}`:''].filter(Boolean).join(' · ');
+  return {items:[{label:'Net worth',value:net||(L?'Can\'t tell':noReport),wait:!net},{label:'Stocks held',value:stocks||(L?'Can\'t read':noReport),wait:!stocks},
+    {label:'Stock trades',value:trades||'Not read yet',wait:!trades}],note};
 }
 function profileReport(s){
   return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. The other scores wait on reviewed research.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
@@ -814,7 +832,13 @@ function bindProfileActions(s,pane){
     let c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
     if(s.basic||s.office){try{const records=await loadCards();c=records?.[s.id]?.campaign||null;}catch{}}
     const m=scoreFor(s), i=s.basic?null:integritySnapshot(s), v=s.basic?null:personPvp(s);
-    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
+    // Their disclosures, as the top of the profile reads them (5 seconds at most; the card says when they couldn't be
+    // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
+    const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
+    const u=s.basic?null:s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
+    const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
+      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null};
+    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
     if(!pane.querySelector('#'+b.dataset.section)){b.hidden=true;return;}
