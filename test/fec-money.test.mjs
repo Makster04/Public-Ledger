@@ -4,7 +4,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import config from '../data/config.json' with {type:'json'};
-import {sizeBand,pacLine,pacCycleSummary,efileRows,efileSummary,stateSummary,jfcPage,jfcCycleSummary,periodCycles,periodOptions,periodLabel,combinePeriod} from '../public/fec-money.js';
+import {sizeBand,pacLine,pacCycleSummary,efileRows,efileSummary,stateSummary,statePie,jfcPage,jfcCycleSummary,periodCycles,periodOptions,periodLabel,combinePeriod} from '../public/fec-money.js';
 import {FEEDS} from '../src/feeds.mjs';
 import {unbought} from '../public/six-scores.js';
 import {givers,maybeConduits,recipientURL} from '../scripts/build-bundled.mjs';
@@ -43,6 +43,25 @@ test('by state: in the home state, from other states, and with no state given',(
   const s=stateSummary([{state:'GA',state_full:'Georgia',total:600,count:6},{state:'NY',state_full:'New York',total:300,count:3},{state:null,total:100,count:1}],'GA');
   assert.deepEqual([s.total,s.inState,s.outState,s.unknown],[1000,600,300,100]);
   assert.equal(s.states[0].share,60);
+});
+
+test('the pie of where gifts come from: home state, the five largest others, the rest together, and no state given',()=>{
+  const rows=[['TX','Texas',900],['GA','Georgia',2000],['NY','New York',1200],['CA','California',1000],['FL','Florida',700],['IL','Illinois',500],['OH','Ohio',300],['VT','Vermont',100],[null,null,300]]
+    .map(([state,state_full,total])=>({state,state_full,total,count:1}));
+  const x=stateSummary(rows,'GA'),pie=statePie(x);
+  assert.deepEqual(pie.map(p=>p.label),['Georgia','New York','California','Texas','Florida','Illinois','All other states','No state given']);
+  assert.equal(pie[0].home,true,'the home state first, marked');
+  assert.deepEqual(pie.map(p=>p.total),[2000,1200,1000,900,700,500,400,300]);
+  assert.equal(pie.reduce((t,p)=>t+p.total,0),x.total,'every dollar in exactly one slice');
+  assert.equal(pie[0].share,Math.round(2000/7000*1000)/10);
+  // No more states than fit: no "All other states" slice; none without a state: no such slice.
+  const few=statePie(stateSummary(rows.slice(0,3),'GA'));
+  assert.deepEqual(few.map(p=>p.key),['GA','NY','TX']);
+  // Home state with no gifts from it: the six largest others aren't pushed out by an empty home slice.
+  const away=statePie(stateSummary(rows,'WY'));
+  assert.equal(away.some(p=>p.home),false);assert.deepEqual(away.slice(0,5).map(p=>p.key),['GA','NY','CA','TX','FL']);
+  assert.equal(away.reduce((t,p)=>t+p.total,0),7000);
+  assert.deepEqual(statePie(stateSummary([],'GA')),[],'nothing given: no pie');
 });
 
 test('joint fundraising: shares credited back by size, the unlisted remainder counted as small gifts, no names kept',()=>{

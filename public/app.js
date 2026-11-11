@@ -6,12 +6,12 @@ import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
-import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip} from './charts.js';
+import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
-import {periodCycles,periodLabel,periodOptions,combinePeriod} from './fec-money.js';
+import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {INDUSTRY_LABEL,SUPER_PACS,COMPANIES,EXECUTIVES,industrySuperPacs} from './industries.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline} from './wealth-timeline.js';
@@ -1137,16 +1137,21 @@ function unboughtPeriodBar(s,d){
     <span class="small muted">${opts.length<2?'Earlier cycles appear here once the FEC refresh has read them.':'The money and trades over these cycles; stocks held are from the latest annual report. Everywhere else shows this cycle.'}</span></div>`;
 }
 
-// The money's geography: itemized gifts from individuals by the donor's state.
+// The money's geography: itemized gifts from individuals by the donor's state, as a pie (public/fec-money.js statePie):
+// the home state, the five largest other states, the rest of the states together, and gifts with no state given.
+const PIE_COLORS=['var(--s1)','var(--s3)','var(--s4)','var(--s5)','var(--s6)','var(--pink)'];
 function statesEvidence(s,x){
-  if(!x)return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from</h4><p class="small muted">Waiting for the FEC refresh to read their gifts by state.</p></section>`;
-  if(!(x.total>0))return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from</h4><p class="small">No itemized gifts from individuals this cycle.</p></section>`;
-  const pc=v=>`${Math.round(v/x.total*100)}%`,top=x.states.slice(0,10),max=Math.max(...top.map(r=>r.total),1),homeName=x.states.find(r=>r.state===x.home)?.name||x.home;
-  const home=x.home&&s.chamber!=='P'?`<div class="st-geo"><div class="st-geo-bar" role="img" aria-label="${pc(x.inState)} from ${esc(homeName)}, ${pc(x.outState)} from other states">
-      <span class="in" style="width:${(x.inState/x.total*100).toFixed(1)}%"></span><span class="out" style="width:${(x.outState/x.total*100).toFixed(1)}%"></span></div>
-    <div class="st-geo-key small"><span><i class="in"></i>From ${esc(homeName)} <b class="num">${fmtFull(x.inState)}</b> · ${pc(x.inState)}</span><span><i class="out"></i>From other states <b class="num">${fmtFull(x.outState)}</b> · ${pc(x.outState)}</span>${x.unknown>0?`<span><i class="unk"></i>No state given ${fmtFull(x.unknown)}</span>`:''}</div></div>`:'';
-  return `<section class="st-sec" id="u-states"><h4 class="st-sub">Where the itemized gifts come from <span class="muted small">· ${esc(x.cycle-1)}–${esc(x.cycle)}</span></h4>${home}
-    <div class="st-check"><h4>Top states</h4><div class="mm-bars st-kinds" role="list">${top.map(r=>`<div class="mm-bar" role="listitem" title="${esc(r.name)}: ${fmtFull(r.total)}, ${r.share}%"><span>${esc(r.name)}${r.state===x.home?' <span class="muted">· home</span>':''}</span><span class="mm-track"><span style="width:${(r.total/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(r.total)} · ${r.share}%</span></div>`).join('')}</div></div>
+  const title=x?.total>0?`Where the itemized gifts come from <span class="muted small">· ${esc(x.cycle-1)}–${esc(x.cycle)}</span>`:'Where the itemized gifts come from';
+  const head=`<section class="st-sec" id="u-states"><h4 class="st-sub">${title}</h4>`;
+  if(!x)return head+'<p class="small muted">Waiting for the FEC refresh to read their gifts by state.</p></section>';
+  if(!(x.total>0))return head+'<p class="small">No itemized gifts from individuals this cycle.</p></section>';
+  const pc=v=>`${Math.round(v/x.total*100)}%`,slices=statePie(x);let i=0;
+  for(const sl of slices)sl.color=sl.home?'var(--s2)':sl.key==='other'?'var(--cx-other)':sl.key==='none'?'var(--line-2)':PIE_COLORS[i++%PIE_COLORS.length];
+  const home=slices.find(sl=>sl.home);
+  const lead=x.home&&s.chamber!=='P'?`<p class="small">${pc(x.inState)} from ${esc(home?.label||x.home)}, ${pc(x.outState)} from other states${x.unknown>0?`, ${pc(x.unknown)} with no state given`:''}.</p>`:'';
+  const pie=pieSVG(slices,{size:196,label:`Itemized gifts by the donor's state: ${slices.map(sl=>`${sl.label} ${sl.share}%`).join(', ')}`,tip:sl=>`${sl.label}${sl.home?' (home state)':''}: ${fmtFull(sl.total)} · ${sl.share}%`});
+  const key=`<ul class="st-pie-key">${slices.map(sl=>`<li><i style="background:${sl.color}"></i><span>${esc(sl.label)}${sl.home?' <span class="muted">· home</span>':''}</span><b class="num">${fmtFull(sl.total)}</b><span class="num muted">${sl.share}%</span></li>`).join('')}</ul>`;
+  return `${head}${lead}<div class="st-pie"><div class="st-pie-c">${pie}</div>${key}</div>
     <p class="small muted">Itemized gifts from individuals only (a donor's gifts over $200 in the cycle), by the address on the report. The FEC has no address for smaller gifts. Shown only; no score uses it.${x.source?` <a href="${esc(x.source)}" target="_blank" rel="noopener">FEC ↗</a>`:''}</p></section>`;
 }
 // PAC money in reports the FEC hasn't processed yet, marked with a *.
@@ -1239,7 +1244,7 @@ function paneUnbought(s,pane){
     const bar=pane.querySelector('#u-period');if(bar){const tmp=document.createElement('div');tmp.innerHTML=unboughtPeriodBar(s,d);const nb=tmp.firstElementChild;bar.replaceWith(nb);
       nb.querySelector('select')?.addEventListener('change',e=>{const y=unboughtFor(s,inputs,d,e.target.value);if(!d)y.why=offline;show(y);});}
     const fec=pane.querySelector('#u-fec'),m=d?.money||{},cy=curCycle(s);
-    if(fec)fec.innerHTML=(d?statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);
+    if(fec){fec.innerHTML=(d?statesEvidence(s,m.states)+efileEvidence(m.efile)+jfcEvidence(m.jfc?.cycles?.[cy],cy):'')+industryCard(s,m.industry||null,!d);hoverTips(fec);}
     const wt=pane.querySelector('#u-timeline');if(wt){const tl=d?wealthTimeline(d.netWorth,timelineTrades(s,d)):null,tmp=document.createElement('div');tmp.innerHTML=wealthTimelineHTML(s,d,tl);const sec=tmp.firstElementChild;wt.replaceWith(sec);if(tl)mountWealthTimeline(sec,tl);}
     const ev=pane.querySelector('#u-holdings');if(ev){const tmp=document.createElement('div');tmp.innerHTML=holdingsEvidence(s,d,x);const sec=tmp.firstElementChild;ev.replaceWith(sec);bindAssetFilter(sec,d?.netWorth);}
     const tile=document.querySelector(`[data-six-tile="unbought"][href="#${s.id}-unbought"]`);if(tile)fillSixTile(tile,x);

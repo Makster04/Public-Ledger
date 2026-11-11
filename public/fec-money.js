@@ -77,6 +77,22 @@ export function stateSummary(rows,home){
   return {home:home||null,total,inState,outState:cents(total-inState-unknown),unknown,
     states:states.sort((a,b)=>b.total-a.total).slice(0,60).map(r=>({...r,share:total?Math.round(r.total/total*1000)/10:0}))};
 }
+// The pie of where the itemized gifts come from (x: stateSummary()): the home state first, then the largest other states
+// (up to `others`), then the rest of the states together, then gifts with no state given. Each slice: {key, label,
+// total, share (0-100), home?}. Every dollar is in exactly one slice.
+export function statePie(x,{others=5}={}){
+  if(!(x?.total>0))return [];
+  const known=(x.states||[]).filter(r=>/^[A-Z]{2}$/.test(r.state||'')),home=x.home?known.find(r=>r.state===x.home):null;
+  const top=known.filter(r=>r.state!==x.home).slice(0,x.home?others:others+1);
+  const slice=(key,label,total,extra={})=>({key,label,total:cents(total),share:Math.round(total/x.total*1000)/10,...extra});
+  const out=[];
+  if(home&&x.inState>0)out.push(slice(home.state,home.name,x.inState,{home:true}));
+  for(const r of top)out.push(slice(r.state,r.name,r.total));
+  const rest=cents((x.home?x.outState:x.total-x.unknown)-top.reduce((t,r)=>t+r.total,0));
+  if(rest>=0.01)out.push(slice('other','All other states',rest));
+  if(x.unknown>=0.01)out.push(slice('none','No state given',x.unknown));
+  return out;
+}
 
 // ---------- Joint fundraising ----------
 // Line 12, transfers from other authorized committees: a joint fundraising committee's transfer is one line, and the
