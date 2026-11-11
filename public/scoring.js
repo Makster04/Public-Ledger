@@ -79,7 +79,7 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
       // The grade: 75% these actions on scored bills + 25% (100 − the Corporation Compromised Index), once both exist.
       return workersOverProfit(pvpScore(actionsOf(s)),cci(s));
     },
-    // The six scores (public/six-scores.js) that need no refreshed records. Unbought, and Above Board's trading indexes,
+    // The six scores (public/six-scores.js) that need no refreshed records. Big Money Independence, and Above Board's trading indexes,
     // also use the official reports read by the refresh, so the page adds those (ctx.trades, ctx.snapshot …).
     // ctx: {attendance, getItDone, conflicts, trades}.
     six(s,ctx={}){
@@ -112,6 +112,6 @@ export function gradedPeople(data,{senate=[],house=[]}={}){
 // get-it-done.json, conflicts.json and group-ratings.json.
 export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null});
 // The grades the monthly change log records: those that come from the site's own files alone, so they're the same on
-// every page that shows them. Unbought, and Above Board once a profile has read the refresh's trade records, also use
+// every page that shows them. Big Money Independence, and Above Board once a profile has read the refresh's trade records, also use
 // the refresh's saved records, so the log leaves them out for now.
 export const LOGGED_GRADES=['word','showsup','peoplefirst'];

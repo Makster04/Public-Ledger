@@ -1,4 +1,4 @@
-// Net worth, stocks held and trades over time on the Unbought tab (public/wealth-timeline.js and its charts in
+// Net worth, stocks held and trades over time on the Big Money Independence tab (public/wealth-timeline.js and its charts in
 // public/charts.js).
 import test from 'node:test';
 import assert from 'node:assert/strict';

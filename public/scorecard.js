@@ -1,7 +1,7 @@
 // A portable view of the same reviewed scores shown on the profile. No scoring is done here.
 const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:'Republican'},I:{accent:'#bbc2cc',party:'Independent'}};
 // The five letter grades, in the order the profile shows them (Ideology is a position, not a grade).
-const LABELS=['Keeps Their Word','Shows Up','Unbought','Above Board','People First'];
+const LABELS=['Keeps Their Word','Shows Up','Big Money Independence','Above Board','People First'];
 const TILE={x:40,gap:12,width:174};
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);

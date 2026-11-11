@@ -863,7 +863,7 @@ export const FEEDS={
     summarize:rows=>({cycles:rows.sort((x,y)=>y.cycle-x.cycle)})},
   // Money from individual donors, by the size of each gift: the FEC's five size groups for the campaign committee,
   // checked against the committee's itemized and unitemized totals (public/donor-sizes.js). The current cycle is shown
-  // at the top; each earlier cycle from historyFrom on is kept by cycle (an ended cycle is read once), for the Unbought
+  // at the top; each earlier cycle from historyFrom on is kept by cycle (an ended cycle is read once), for the Big Money Independence
   // tab's periods. A cycle before the committee existed has no report and is left out.
   'donor-sizes':{host:'api.open.fec.gov',label:'Donors by gift size',tab:'finance',
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`donor-sizes:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),
@@ -885,7 +885,7 @@ export const FEEDS={
       return {...(by[a.cycle]?one(by[a.cycle],a.cycle):{cycle:a.cycle,committee:a.committee}),cycles:Object.fromEntries(past.map(([cy,l])=>[cy,one(l,cy)]))};
     }},
   // Every PAC contribution the FEC has processed (Form 3, line 11C), each cycle from historyFrom on, with each PAC's type
-  // from the FEC's record of it (public/fec-money.js, pacLine). An ended cycle is read once and kept. For the Unbought
+  // from the FEC's record of it (public/fec-money.js, pacLine). An ended cycle is read once and kept. For the Big Money Independence
   // tab's earlier periods; the current cycle's reviewed PAC table stays in public/research.json.
   'pac-history':{host:'api.open.fec.gov',label:'PAC contributions by cycle',tab:'finance',every:WEEK,
     jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`pac-history:${p.id}`,subject:p.id,args:{committee:p.fecCmte,cycle:c.cycle}})),

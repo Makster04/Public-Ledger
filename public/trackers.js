@@ -1,4 +1,4 @@
-// The trackers: five lobbies whose money the site follows on each profile (the Unbought tab's "Trackers" and its
+// The trackers: five lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
 // "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11.
 //
 // For each tracker:

@@ -5,7 +5,7 @@
 // attendance.json, get-it-done.json, conflicts.json, group-ratings.json, the committee files and vote-party.json), so a
 // logged grade is the one the page shows. It reruns the Money & Influence timing flags too, and adds an entry to
 // public/score-log.json saying which grade moved, by how much and why.
-// Not logged: Unbought, and Above Board once a profile has read the refresh's trade records, since both also use the
+// Not logged: Big Money Independence, and Above Board once a profile has read the refresh's trade records, since both also use the
 // refresh's saved records; Ideology, which is a position, not a grade; and Your match, which depends on each visitor.
 // Entries marked formula "retired" logged the grades the six scores replaced (Promises delivered, Ethics and the earlier
 // People First formula). They are kept as they were, and a new entry is compared only with the last one of its formula.

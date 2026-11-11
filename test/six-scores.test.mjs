@@ -40,13 +40,13 @@ test('Keeps Their Word and Shows Up: the examples in the proposal',()=>{
   assert.equal(showsUp({id:'y'},{attendance,getItDone,asOfYear:2026}).pct,null);
 });
 
-// The proposal's Unbought example: a House member who raised $2 million.
+// The proposal's Big Money Independence example: a House member who raised $2 million.
 const member={id:'m',chamber:'H',statements:[],camp:{receipts:2_000_000,indiv:1_600_000,unitemized:1_000_000,itemized:600_000,pac:400_000,self:0,transfers:0,start:'2025-01-01',end:'2026-10-14'}};
 const sizes={start:'2025-01-01',end:'2026-10-14',notSorted:0,brackets:[{size:0,total:1_000_000},{size:200,total:0},{size:500,total:0},{size:1000,total:0},{size:2000,total:600_000}]};
 const snapshot={year:2025,url:'https://disclosures-clerk.house.gov/x.pdf',assets:[{name:'Acme Corp',type:'Stock',value:'$200,000'},{name:'Index fund',type:'Mutual fund',value:'$1,001 - $15,000'}]};
 const trades={covered:true,rows:Array.from({length:10},(_,i)=>({traded:`2025-0${1+(i%9)}-15`,low:1001,high:15000}))};
 const bills=[{id:'119-hr-1',reform:['stock-trading'],cosponsors:[{person:'m'}]}];
-test('Unbought: their published formula, with the House weights',()=>{
+test('Big Money Independence: their published formula, with the House weights',()=>{
   const pledges=unboughtPledges(member,bills);
   assert.deepEqual(pledges.map(p=>[p.kind,p.points,p.via]),[['corporate-pac',0,null],['lobbying',0,null],['stock-trading',1,'bill'],['citizens-united',0,null]]);
   const u=unbought(member,{sizes,pacRows:[{kind:'corporate',amount:300_000},{kind:'labor',amount:100_000}],earmarks:[{group:'J Street',amount:50_000},{group:'ActBlue',amount:9e6}],snapshot,trades,pledges});

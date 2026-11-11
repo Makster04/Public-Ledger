@@ -91,7 +91,7 @@ test('long lists show their first 10, largest first, with the rest behind "Show 
   assert.ok(people.find(p=>p.id==='collins').pac.byCat.filter(([,a])=>a>0).length>10,'a profile with more than 10 kinds, so the toggle is tested');
 });
 
-test('on the Unbought tab the map takes a card under its numbers, and the bundled box goes beside the score instead',()=>{
+test('on the Big Money Independence tab the map takes a card under its numbers, and the bundled box goes beside the score instead',()=>{
   const s=people.find(p=>p.id==='lawler'),o=opts(s);
   const full=moneyMapBlock(s,o),there=moneyMapBlock(s,{...o,withBundled:false,under:'<div id="u-states-slot"></div>'});
   assert.match(full,/Bundled through groups/,'the Money & Influence tab keeps it in the map');

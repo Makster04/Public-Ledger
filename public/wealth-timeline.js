@@ -1,4 +1,4 @@
-// The Unbought tab's timeline of a member's own money, from their official disclosures as the refresh reads them:
+// The Big Money Independence tab's timeline of a member's own money, from their official disclosures as the refresh reads them:
 //   - net worth by year: each annual report's range (public/net-worth.js), lowest to highest possible;
 //   - the value of their individual stocks by year: the middle of the added-up ranges on that report;
 //   - how much they bought and sold each year, added up from the middle of each trade's range;
@@ -48,7 +48,7 @@ function total(list){
 }
 // netWorth: the refresh's net-worth snapshot (its newest report, with "history", one entry a year); trades: the trades
 // read from their reports ({traded, filed, type, low, high or amount, ticker, asset}). Returns null with nothing to show.
-// The profile header's Net worth, Stocks held and Stock trades: the same figures as the boxes over the Unbought tab's
+// The profile header's Net worth, Stocks held and Stock trades: the same figures as the boxes over the Big Money Independence tab's
 // timeline (tl: wealthTimeline()), so the two always agree. null when nothing has been read. net: the latest readable
 // report's range (null when none can be read; reports: how many were read at all); stocks: stocksHeld() for it (null
 // when its stock values can't be read); trades: the counts, the first year, and partial when the refresh says not every

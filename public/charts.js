@@ -182,7 +182,7 @@ export function sectorSpendBars(by,label,{fw='For',aw='Against'}={}){
   return `<div class="cx-rows cx-sector">${bar(by.for,fw,F)}${bar(by.against,aw,A)}</div>`;
 }
 
-// ---------- Their own money over time (public/wealth-timeline.js), on the Unbought tab ----------
+// ---------- Their own money over time (public/wealth-timeline.js), on the Big Money Independence tab ----------
 // One band a year from tl.from to tl.to, the year under its band ('16 when the bands are narrow).
 function yearBands(tl,W,mL,mR){
   const n=tl.to-tl.from+1,band=(W-mL-mR)/n,cx=y=>mL+band*(y-tl.from+.5);
