@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {moneyMap,mapSVG,moneyMapBlock,LAYOUT,short$,share} from '../public/money-map.js';
+import {moneyMap,mapSVG,moneyMapBlock,LAYOUT,short$,share,showFirst,SHOW_FIRST} from '../public/money-map.js';
+import {pacTypeOf} from '../public/pac-types.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=[...research.members,...research.cands];
@@ -65,4 +66,26 @@ test('each PAC kind opens to its PACs, and the corporate card lists the PACs the
   assert.ok(m.corporate.every((p,i,a)=>!i||a[i-1].a>=p.a),'largest first');
   const html=moneyMapBlock(s,o);
   assert.match(html,/<details class="mm-kind">/);assert.match(html,/Corporate PAC donors/);assert.match(html,/from \d+ corporate PACs?/);
+});
+
+test('long lists show their first 10, largest first, with the rest behind "Show all" under them',()=>{
+  const li=n=>Array.from({length:n},(_,i)=>`<li>${i+1}</li>`),wrap=h=>`<ul>${h}</ul>`;
+  assert.equal(showFirst(li(10),wrap,'PACs'),`<ul>${li(10).join('')}</ul>`,'10 or fewer: all of them, no toggle');
+  const twelve=showFirst(li(12),wrap,'PACs');
+  assert.ok(twelve.startsWith(`<ul>${li(10).join('')}</ul><details class="mm-more"><summary>`),'the first 10, then the toggle');
+  assert.match(twelve,/Show all 12 PACs/);assert.match(twelve,/<\/summary><ul><li>11<\/li><li>12<\/li><\/ul><\/details>$/,'the other 2 open under it');
+  assert.equal(SHOW_FIRST,10);
+  // The profiles with the longest lists: Collins has 20 kinds of PACs; Sullivan, a kind with 71 PACs.
+  const o=s=>({...opts(s),pacNames:research.pacNames||[],pacType:i=>pacTypeOf(research,i)});
+  for(const id of ['collins','sullivan']){
+    const s=people.find(p=>p.id===id),m=moneyMap(s,o(s)),html=moneyMapBlock(s,o(s));
+    const kinds=m.pacKinds.length;
+    assert.equal((html.match(/<details class="mm-kind">/g)||[]).length,kinds,'every kind is still on the page');
+    if(kinds>10)assert.match(html,new RegExp(`Show all ${kinds} kinds`));
+    for(const k of m.pacKinds.filter(x=>x.pacs.length>10))assert.match(html,new RegExp(`Show all ${k.pacs.length} PACs`));
+    if(m.corporate.length>10)assert.match(html,new RegExp(`Show all ${m.corporate.length} corporate PACs`));
+    const corp=html.slice(html.indexOf('id="f-corporate"'));
+    assert.equal((corp.slice(0,corp.indexOf('mm-more')>0?corp.indexOf('mm-more'):undefined).match(/<li>/g)||[]).length,Math.min(10,m.corporate.length),'10 corporate PACs before the toggle');
+  }
+  assert.ok(people.find(p=>p.id==='collins').pac.byCat.filter(([,a])=>a>0).length>10,'a profile with more than 10 kinds, so the toggle is tested');
 });
