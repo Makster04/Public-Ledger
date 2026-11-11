@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {searchesFor,searchForm,reportsIn,fileFor,savedPage,blockedBy,backAtTerms,looksRight,EFD} from '../scripts/efd-browser.mjs';
+import {searchesFor,searchForm,reportsIn,fileFor,savedPage,blockedBy,backAtTerms,looksRight,EFD,allSenators,remember,remembered,fromYear,sharedSearch,searchDone,newestAnnual,pageBudget,BatchFull} from '../scripts/efd-browser.mjs';
 import {efdSavedReport} from '../src/feeds.mjs';
 
 const senator={id:'ossoff',name:'Jon Ossoff',state:'GA',chamber:'S',inOffice:true};
@@ -45,4 +45,49 @@ test('a bot check, captcha or refusal stops it; the terms page again means agree
   assert.ok(backAtTerms('<form><input id="agree_statement" type="checkbox" name="prohibition_agreement"></form>'));
   assert.ok(!backAtTerms('<h3>Transactions</h3><table></table>'));
   assert.ok(looksRight('ptr','<h3>Transactions</h3>'));assert.ok(looksRight('annual','<h3>Part 3. Assets</h3>'));assert.ok(!looksRight('ptr','<h1>Search</h1>'));
+});
+
+test('annual reports only (--annual); all senators searched together, with no name',()=>{
+  assert.deepEqual(searchesFor(senator,2020,{annual:true}).map(s=>s.label),['annual']);
+  assert.deepEqual(searchesFor(candidate,2020,{annual:true}).map(s=>s.label),['candidate'],'a candidate\'s one search has their candidate report');
+  const f=searchForm(allSenators('trade',2020),200,'tok');
+  assert.deepEqual([f.start,f.report_types,f.filer_types,f.last_name,f.submitted_start_date],['200','[11]','[1]','','01/01/2020 00:00:00']);
+  // Their reports out of all senators' results are the same as from a search of their own.
+  const rows=[['Jon','Ossoff','Senator',`<a href="/search/view/annual/${PTR}/">Annual Report for CY 2024</a>`,'05/15/2025'],['Susan M','Collins','Senator',`<a href="/search/view/annual/${PAPER}/">Annual Report for CY 2024</a>`,'05/15/2025']];
+  assert.deepEqual(reportsIn(rows,searchesFor(senator,2020)[0]).map(r=>r.doc),[PTR]);
+});
+
+test('searches are remembered for a week, for the year asked or a later one',()=>{
+  const s=searchesFor(senator,2020)[0],now=new Date('2026-11-11T12:00:00Z');
+  const reports=[{kind:'annual',doc:PTR,url:`${EFD}/search/view/annual/${PTR}/`,title:'Annual Report for CY 2018',filed:'2019-05-15',skip:false},
+    {kind:'annual',doc:PAPER,url:`${EFD}/search/view/annual/${PAPER}/`,title:'Annual Report for CY 2024',filed:'2025-05-15',skip:false}];
+  const memory=remember({},{...s,since:2016},reports,now);
+  assert.equal(memory.annual.reports[0].url,undefined,'the address is made again from the site asked of');
+  assert.deepEqual(remembered(memory,s,{now,base:'http://mock'}).map(r=>[r.doc,r.url]),[[PAPER,`http://mock/search/view/annual/${PAPER}/`]],'searched since 2016, asked since 2020');
+  assert.equal(remembered(memory,{...s,since:2010},{now}),null,'a search from a later year than asked isn\'t enough');
+  assert.equal(remembered(memory,s,{now:new Date('2026-11-19T12:00:00Z')}),null,'a week later, searched again');
+  assert.equal(remembered(memory,searchesFor(senator,2020)[1],{now}),null,'the trade search wasn\'t made');
+  assert.deepEqual(fromYear(reports,2020).map(r=>r.doc),[PAPER]);
+  // All senators' search, page by page: kept within the week, so a batch that ended partway through goes on.
+  const st={at:'2026-11-10T12:00:00Z',since:2020,rows:[['a']],next:100,total:850};
+  assert.equal(sharedSearch(st,2020,now),st);assert.ok(!searchDone(st));
+  assert.deepEqual(sharedSearch(st,2020,new Date('2026-11-18T12:00:00Z')).rows,[],'past its week');
+  assert.deepEqual(sharedSearch(st,2016,now).next,0,'asked for earlier years');
+  assert.ok(searchDone({total:850,next:900}));assert.ok(searchDone({total:0,next:100}),'no results');
+});
+
+test('everyone\'s newest annual report first: the latest year (an amendment over the original), not a trade report',()=>{
+  const r=(kind,title,filed,skip=false)=>({kind,doc:title+filed,title,filed,skip});
+  const list=[r('annual','Annual Report for CY 2023','2024-05-15'),r('annual','Annual Report for CY 2024','2025-05-14'),r('annual','Annual Report for CY 2024 (Amendment 1)','2025-08-01'),
+    r('annual','Annual Report for CY 2022 (Amendment)','2025-09-01'),r('ptr','Periodic Transaction Report for 01/02/2026','2026-01-20'),r('annual','Annual Report for CY 2025','2026-05-15',true)];
+  assert.equal(newestAnnual(list).title,'Annual Report for CY 2024 (Amendment 1)','the scanned 2025 report isn\'t saved');
+  assert.equal(newestAnnual([r('annual','Candidate Report','2026-06-01'),r('annual','Candidate Report','2024-06-01')]).filed,'2026-06-01','a candidate report goes by its filing date');
+  assert.equal(newestAnnual([r('ptr','Periodic Transaction Report','2026-01-20')]),null);
+});
+
+test('a batch counts every page asked of eFD, and its first page always goes',()=>{
+  const b=pageBudget(5);b.spend();b.spend(2);b.spend(2);assert.equal(b.asked,5);
+  assert.throws(()=>b.spend(),BatchFull);assert.equal(b.asked,5,'the page that didn\'t fit wasn\'t asked for');
+  b.reset();b.spend(8);assert.equal(b.asked,8,'a batch\'s first step goes even when bigger');
+  const all=pageBudget(Infinity);for(let i=0;i<1000;i++)all.spend();assert.equal(all.asked,1000);
 });
