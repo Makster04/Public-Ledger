@@ -463,10 +463,13 @@ body[data-party] #pane a:not(.cta):not(.hc-gt) { color: var(--person); }
 .coverage-details[open] summary { margin-bottom: 15px; }
 .hero-actions { gap: 20px; margin-top: 24px; }
 .hero-secondary { font-weight: 600; color: var(--ink-2); font-size: .86rem; }
-.party-filter { margin-bottom: 5px; }
+.directory-filters { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 5px; }
+.directory-filters .seg { margin: 0; }
+.seg-n { color: var(--muted); font-weight: 500; margin-left: 2px; }
+.seg button.active .seg-n { color: inherit; opacity: .75; }
 @media (max-width: 520px) {
-  .party-filter { display: flex; flex-wrap: wrap; width: 100%; }
-  .party-filter button { flex: 1 1 calc(50% - 4px); }
+  .party-filter, .chamber-filter { display: flex; flex-wrap: wrap; width: 100%; }
+  .party-filter button, .chamber-filter button { flex: 1 1 calc(50% - 4px); }
 }
 /* Legislative activity preserves each bill's dates, status and source. */
 .legislation-toolbar { display: flex; gap: 15px; align-items: end; margin: 22px 0 25px; }
