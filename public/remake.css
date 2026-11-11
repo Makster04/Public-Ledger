@@ -1030,14 +1030,17 @@ input, select { accent-color: var(--accent); }
 .st-assetyears .st-assets-tools { flex-wrap: wrap; }
 .st-period { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 14px; font-size: .88rem; }
 .st-period select { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-2); border-radius: 8px; padding: 6px 10px; margin-left: 6px; }
-.st-geo { margin: 8px 0 14px; }
-.st-geo-bar { display: flex; gap: 2px; height: 14px; border-radius: 7px; overflow: hidden; background: var(--surface-2); }
-.st-geo-bar span { display: block; height: 100%; }
-.st-geo-bar .in, .st-geo-key i.in { background: var(--s2); }
-.st-geo-bar .out, .st-geo-key i.out { background: var(--ink-2); opacity: .55; }
-.st-geo-key i.unk { background: var(--surface-2); border: 1px solid var(--line-2); }
-.st-geo-key { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; }
-.st-geo-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+/* Where the itemized gifts come from: a pie with its key (each slice's state, dollars and share). */
+.st-pie { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin: 8px 0 12px; }
+.st-pie-c { flex: 0 0 auto; }
+.st-pie-c svg { display: block; }
+.cx-slice { stroke: var(--bg); stroke-width: 2; stroke-linejoin: round; }
+.cx-slice:hover, .cx-slice:focus { filter: brightness(1.15); outline: none; }
+.st-pie-key { list-style: none; margin: 0; padding: 0; flex: 1 1 260px; max-width: 520px; min-width: 0; font-size: .86rem; }
+.st-pie-key li { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto 3.2rem; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.st-pie-key i { width: 10px; height: 10px; border-radius: 3px; align-self: center; }
+.st-pie-key .num { text-align: right; white-space: nowrap; }
+@media (max-width: 520px) { .st-pie { justify-content: center; } }
 .st-calc { font-size: .92rem; color: var(--ink); }
 .st-calc h4 { font-family: var(--font-display); font-size: 1.05rem; margin: 22px 0 10px; color: var(--ink); }
 .st-calc h4:first-child { margin-top: 4px; }

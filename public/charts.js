@@ -271,3 +271,20 @@ export function drawTradeStrip(el,tl){
   el.innerHTML=svgOpen(W,H,`${tl.trades.length} stock trades by date, ${tl.from} to ${tl.to}: buys above the line, sells below`)+g+'</svg>';
   hoverTips(el);
 }
+
+// A pie: slices [{label, total, share (0-100), color}] clockwise from the top, largest first as given, each with a hover
+// tip; a 2px surface gap between slices. One slice of everything is a whole circle. Returns the SVG.
+export function pieSVG(slices,{size=200,label='Pie chart',tip=s=>`${s.label}: ${money(s.total)} · ${s.share}%`}={}){
+  const r=size/2-2,c=size/2,sum=slices.reduce((t,s)=>t+s.total,0);
+  if(!(sum>0))return '';
+  const pt=a=>`${(c+r*Math.sin(a)).toFixed(2)},${(c-r*Math.cos(a)).toFixed(2)}`;
+  let a=0,g='';
+  for(const s of slices){
+    const sweep=s.total/sum*2*Math.PI;if(sweep<=0)continue;
+    const attrs=`class="cx-slice" style="fill:${s.color}" data-tip="${esc(tip(s))}"`;
+    g+=sweep>=2*Math.PI-1e-6?`<circle cx="${c}" cy="${c}" r="${r}" ${attrs}></circle>`
+      :`<path d="M${c},${c} L${pt(a)} A${r},${r} 0 ${sweep>Math.PI?1:0} 1 ${pt(a+sweep)} Z" ${attrs}></path>`;
+    a+=sweep;
+  }
+  return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="${esc(label)}">${g}</svg>`;
+}
