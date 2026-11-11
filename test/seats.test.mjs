@@ -2,7 +2,7 @@
 // them (scripts/build-corporate-pacs.mjs).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {seatLayout,seatOrder,seatChart,corporateStatus,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
+import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
 import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals} from '../scripts/build-corporate-pacs.mjs';
 import senate from '../public/senate.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
@@ -81,4 +81,11 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, and AIPAC\'s 
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
   assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto']);
   assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250]},'routed gifts alone count');
+});
+
+test('the title\'s share: of everyone once all are read, else of those read so far, saying how many',()=>{
+  assert.equal(tookShare({took:188,none:245,waiting:0,vacant:2}),'43%','vacant seats don\'t count');
+  assert.equal(tookShare({took:14,none:2,waiting:417,vacant:2}),'88% of 16 read');
+  assert.equal(tookShare({took:0,none:98,waiting:2}),'0% of 98 read');assert.equal(tookShare({took:1,none:432,waiting:0}),'<1%');
+  assert.equal(tookShare({took:0,none:0,waiting:100}),'','no one read yet: nothing');
 });

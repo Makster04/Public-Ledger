@@ -3,7 +3,7 @@ import {mountConsistency} from './consistency.js';
 import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard,fundingParts} from './scorecard.js';
-import {seatChart,corporateStatus,TERRITORIES,SEAT_COLORS} from './seats.js';
+import {seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from './seats.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
@@ -696,8 +696,8 @@ function seatCharts(by){
     :`Checks from the PACs of ${t.name}'s companies and groups (its Tracker's list)`;
   const said=cp?`${counted}, ${cyc}, from the FEC${thru}${t&&t.routed.length&&!cp.routed?.[by]?`. The gifts ${t.name} passed on aren't counted yet (they need the FEC key in .dev.vars)`:''}`
     :`${counted}, this cycle. The FEC's files haven't been read yet (npm run corporate:pacs), so only the full profiles are colored`;
-  return `<div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
-      <p class="sr-only">${x.label}: ${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
+  return `<div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}${tookShare(x.counts)?` <span class="seats-share" title="Of the members read, the share who ${esc(says.took)}">(${tookShare(x.counts)})</span>`:''}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
+      <p class="sr-only">${x.label}: ${tookShare(x.counts)?`${tookShare(x.counts)} took ${what}; `:''}${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
     <p class="seats-note">${dot('took')}Took ${esc(what)} · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat. ${esc(said)}. Democrats on the left, Republicans on the right; each dot opens their profile.</p>`;
 }
 function seatsBlock(){
