@@ -10,7 +10,7 @@
 //   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
 //                       FEC committee IDs where known. superPacLine: the Summary of Major Lookouts shows their spending
 //                       as an extra line (approved 2026-11-11 for Crypto and Big Tech + AI, whose money mostly arrives
-//                       that way); it never changes the mark
+//                       that way, and then for AIPAC's United Democracy Project); it never changes the mark
 //   industries          the employee-gift groups the refresh reads for it (public/industries.js, "industry-gifts")
 //   companies, groups   who it follows, as listed on the page
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
@@ -22,7 +22,7 @@ export const TRACKERS=[
   {key:'aipac',name:'AIPAC',long:'AIPAC (American Israel Public Affairs Committee)',
     about:'The American Israel Public Affairs Committee: its PAC\'s checks, the gifts it collects from donors and passes on to campaigns, and its super PAC, United Democracy Project.',
     pacIds:['C00797670'],patterns:[P('^AMERICAN ISRAEL PUBLIC AFFAIRS'),P('^AIPAC\\b')],routed:['aipac'],
-    groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},superPacs:['United Democracy Project'],industries:[],
+    groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},superPacs:['United Democracy Project'],superPacLine:true,industries:[],
     companies:[],groups:['AIPAC PAC']},
   {key:'pharma',name:'Big Pharma',long:'Big Pharma (drugmakers)',
     about:'Drugmakers and their trade groups. Medical device makers, distributors, pharmacy benefit managers and pharmacies aren\'t included.',
@@ -96,9 +96,9 @@ export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,dire
   return {key:t.key,name:t.name,pacs,pac,routed:rt,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
 }
 export const lookouts=inputs=>TRACKERS.map(t=>trackerMoney(t,inputs));
-// Is this super PAC (an FEC committee ID and name) one of the tracker's own? By ID, or by name, ignoring case and
-// punctuation (as public/industries.js matches them).
-const normName=x=>upper(x).replace(/[.,'"’]/g,'').replace(/\s+INC$/,'').replace(/\s+/g,' ').trim();
+// Is this super PAC (an FEC committee ID and name) one of the tracker's own? By ID, or by name, ignoring case,
+// punctuation and a short tag in brackets at the end ("United Democracy Project ('UDP')").
+const normName=x=>upper(x).replace(/[.,'"’]/g,'').replace(/\s*\([A-Z0-9 &-]{1,12}\)$/,'').replace(/\s+INC$/,'').replace(/\s+/g,' ').trim();
 export const isOwnSuperPac=(t,{id,name}={})=>!!((id&&(t.superPacIds||[]).includes(id))||(name&&t.superPacs.some(n=>normName(n)===normName(name))));
 // The tracker's own super PACs' spending for and against one person, from the outside-spending records on file
 // (research.json: the person's "out.cms" rows [committee index, for, against] into "ie.cm" [id, name, …]). null when

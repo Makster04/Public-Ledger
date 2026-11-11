@@ -1251,8 +1251,8 @@ function lookoutInputs(s,d,period='this',sp=undefined){
 }
 // "Summary of Major Lookouts": one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
 // period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
-// the employees' own gifts as a smaller number under it. For Crypto and Big Tech + AI, whose money mostly comes as super
-// PAC spending, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
+// the employees' own gifts as a smaller number under it. For AIPAC, Crypto and Big Tech + AI, which spend heavily through
+// super PACs, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
 // mark. Each line opens its tracker below.
 function lookoutsBox(s,inp){
   const spLine=x=>{const t=TRACKER[x.key],o=t.superPacLine?inp.superPac?.[x.key]:null;if(!o||!(o.for>0||o.against>0))return '';
@@ -1263,7 +1263,7 @@ function lookoutsBox(s,inp){
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under Crypto and Big Tech + AI since most of their money arrives that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
+    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under AIPAC, Crypto and Big Tech + AI since they spend heavily that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);

@@ -130,8 +130,10 @@ test('where they show: the lookouts beside the score, the tracker tabs, the Trac
   assert.match(box,/AIPAC/);
 });
 
-test('the super PAC line (Crypto and Big Tech + AI only): their own super PACs\' spending, refresh first, records on file until then',()=>{
-  assert.deepEqual(TRACKERS.filter(t=>t.superPacLine).map(t=>t.key),['tech','crypto'],'approved for these two');
+test('the super PAC line (AIPAC, Big Tech + AI and Crypto): their own super PACs\' spending, refresh first, records on file until then',()=>{
+  assert.deepEqual(TRACKERS.filter(t=>t.superPacLine).map(t=>t.key),['aipac','tech','crypto'],'approved for these three');
+  assert.ok(isOwnSuperPac(TRACKER.aipac,{name:"UNITED DEMOCRACY PROJECT ('UDP')"})&&isOwnSuperPac(TRACKER.aipac,{name:'United Democracy Project'}),'with or without its short tag');
+  assert.ok(!isOwnSuperPac(TRACKER.aipac,{name:'United Democracy Project Action Fund'}));
   assert.ok(isOwnSuperPac(TRACKER.crypto,{name:'FAIRSHAKE'})&&isOwnSuperPac(TRACKER.crypto,{name:'Defend American Jobs, Inc.'})&&isOwnSuperPac(TRACKER.crypto,{id:'C00836221',name:'?'}));
   assert.ok(!isOwnSuperPac(TRACKER.crypto,{name:'Leading the Future'})&&isOwnSuperPac(TRACKER.tech,{name:'LEADING THE FUTURE'}));
   assert.ok(!isOwnSuperPac(TRACKER.crypto,{name:'Fairshake Friends Fund'}),'never a look-alike');
