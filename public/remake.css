@@ -1191,3 +1191,19 @@ input, select { accent-color: var(--accent); }
 .tr-rank td, .tr-rank th { white-space: nowrap; }
 .tr-rank td:nth-child(2) { white-space: normal; }
 @media (max-width: 520px) { .tr-tabs, .tr-page-tabs { display: grid; grid-template-columns: 1fr 1fr; } .tr-tabs button, .tr-page-tabs a { justify-content: center; } }
+
+/* Net worth and Stocks under Raised / Cash on hand / Spent (the profile header): six columns with the row above's gap,
+   each box two, so it's exactly the size of one above; columns 2-3 and 4-5 center the pair. The value keeps the boxes'
+   own font size and is held to their line height (1.2em), so the height matches; only the text inside it shrinks, when
+   a range is too long for a narrow box (--n: its length in characters, about 0.6em each in the mono font). */
+.profile-hero .profile-facts.profile-wealth { grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 12px; }
+.profile-wealth .profile-fact:nth-child(1) { grid-column: 2 / span 2; }
+.profile-wealth .profile-fact:nth-child(2) { grid-column: 4 / span 2; }
+.profile-wealth .profile-fact { container-type: inline-size; }
+.profile-wealth .profile-fact > b { height: 1.2em; white-space: nowrap; overflow-wrap: normal; overflow: hidden; text-overflow: ellipsis; }
+.profile-wealth .pw-v { font-size: min(1em, calc(100cqi / (var(--n, 11) * .6))); vertical-align: top; }
+.profile-wealth .to { color: var(--muted); font-weight: 500; margin: 0 .12em; }
+.profile-wealth .pw-wait > b { color: var(--muted); }
+.profile-wealth-note { text-align: center; color: var(--muted); font-size: .73rem; margin-top: 8px; }
+.profile-wealth-note a { color: var(--person); }
+@media (max-width: 520px) { .profile-hero .profile-facts.profile-wealth { margin-top: 7px; } }

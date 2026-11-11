@@ -2,7 +2,8 @@
 // public/charts.js).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {wealthTimeline,tradeRange,tradeSize,tradeSide,tradeDelay,stocksHeld} from '../public/wealth-timeline.js';
+import fs from 'node:fs';
+import {wealthTimeline,latestWealth,tradeRange,tradeSize,tradeSide,tradeDelay,stocksHeld} from '../public/wealth-timeline.js';
 import {annualSummary} from '../src/feeds.mjs';
 import {holdingsSnapshot} from '../src/feeds.mjs';
 import {drawNetWorthYears,drawStocksTrades,drawTradeStrip} from '../public/charts.js';
@@ -67,4 +68,22 @@ test('the charts draw every year, a paper report as a dashed box, open-ended top
   assert.match(b.innerHTML,/class="cx-line"|class="cx-dot held"/);assert.match(b.innerHTML,/bought about \$8\.0K in 1 trade/);assert.match(b.innerHTML,/annual report filed on paper/);
   assert.match(c.innerHTML,/cx-dot buy late-ring/);assert.match(c.innerHTML,/reported after 122 days \(late\)/);assert.match(c.innerHTML,/cx-dot sell"/);
   const none=el();drawTradeStrip(none,{...tl,trades:[]});assert.match(none.innerHTML,/No trades in the reports read so far/);
+});
+
+test('the profile header\'s Net worth and Stocks: the newest report read, as ranges, and never a guess',()=>{
+  assert.equal(latestWealth(null),null);assert.equal(latestWealth({}),null,'no report read yet');
+  const nw={year:2025,filed:'2026-05-15',url:'https://example.org/2025',low:-200000,high:3400000,assets:[],
+    history:[{year:2025,filed:'2026-05-15',url:'https://example.org/2025',low:-200000,high:3400000,stocks:{low:250000,high:null,count:23}},{year:2024,low:1,high:2,stocks:{low:5,high:6,count:1}}]};
+  assert.deepEqual(latestWealth(nw),{year:2025,filed:'2026-05-15',url:'https://example.org/2025',net:{low:-200000,high:3400000},stocks:{value:250000,low:250000,high:null,count:23,open:true}},'the newest year, with an open-ended stock range kept open');
+  assert.deepEqual(latestWealth({...nw,history:[{...nw.history[0],unreadable:true}]}),{year:2025,filed:'2026-05-15',url:'https://example.org/2025',unreadable:true});
+  const none=latestWealth({year:2025,low:1000,high:5000,assets:[{name:'Savings',kind:'cash',value:'$1,001 - $15,000'}],history:[{year:2025,low:1000,high:5000}]});
+  assert.deepEqual(none.stocks,{value:0,low:0,high:0,count:0,open:false},'a report listing no stocks holds none');
+  assert.equal(latestWealth({year:2025,low:1,high:2,history:[{year:2025,low:1,high:2}]}).stocks,null,'no asset list: not read, not zero');
+  // On the page: under the campaign boxes, the same size, linked to the timeline.
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),css=fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8');
+  assert.match(app,/\$\{s\.office\?'':wealthRowHTML\(s,'loading'\)\}/);
+  assert.match(app,/if\(overview&&!s\.office\)fillWealthHeader\(s\);/);
+  assert.match(app,/timeline:\['unbought','u-timeline'\]/);
+  assert.match(css,/\.profile-hero \.profile-facts\.profile-wealth \{ grid-template-columns: repeat\(6, minmax\(0, 1fr\)\)/);
+  assert.match(css,/\.profile-wealth \.profile-fact:nth-child\(1\) \{ grid-column: 2 \/ span 2; \}/);
 });
