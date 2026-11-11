@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {moneyMap,mapSVG,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST} from '../public/money-map.js';
+import {moneyMap,mapSVG,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST,pacKindsFor,SHORT_KIND} from '../public/money-map.js';
 import {pacTypeOf} from '../public/pac-types.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
@@ -31,7 +31,8 @@ test('Ossoff: the example map',()=>{
   // J Street first (the largest); any other group the FEC shows forwarding gifts to the campaign is listed by its name.
   assert.deepEqual([m.bundled[0].who,m.bundled[0].routed],['J Street',309639.01]);
   for(const b of m.bundled){assert.ok(b.routed>0);assert.ok(!/^fec:/.test(b.who),`${b.who} is named`);}
-  assert.equal(m.pacKinds[0].label,research.categories.lead);
+  assert.ok(m.pacKinds.length&&m.pacKinds.every(x=>x.k!=='lead'),'leadership PACs are kept out of the kinds');
+  assert.equal(m.pacLead,s.pac.byCat.find(([k])=>k==='lead')[1],'without FEC types, the research\'s own leadership kind');
   const html=moneyMapBlock(s,opts(s));
   assert.match(html,/id="f-map"/);assert.match(html,/\$115,904,486/);assert.match(html,/Bundled through groups/);assert.match(html,/Not on the map yet/);
 });
@@ -65,7 +66,7 @@ test('each PAC kind opens to its PACs, and the corporate card lists the PACs the
   assert.ok(m.corporate.length>0);
   assert.ok(m.corporate.every((p,i,a)=>!i||a[i-1].a>=p.a),'largest first');
   const html=moneyMapBlock(s,o);
-  assert.match(html,/<details class="mm-kind">/);assert.match(html,/Corporate PAC donors/);assert.match(html,/from \d+ corporate PACs?/);
+  assert.match(html,/<button type="button" class="pk-tile /);assert.match(html,/<details class="pk-list">/);assert.match(html,/Corporate PAC donors/);assert.match(html,/from \d+ corporate PACs?/);
 });
 
 test('long lists show their first 10, largest first, with the rest behind "Show all" under them',()=>{
@@ -80,8 +81,8 @@ test('long lists show their first 10, largest first, with the rest behind "Show 
   for(const id of ['collins','sullivan']){
     const s=people.find(p=>p.id===id),m=moneyMap(s,o(s)),html=moneyMapBlock(s,o(s));
     const kinds=m.pacKinds.length;
-    assert.equal((html.match(/<details class="mm-kind">/g)||[]).length,kinds,'every kind is still on the page');
-    if(kinds>10)assert.match(html,new RegExp(`Show all ${kinds} kinds`));
+    assert.equal((html.match(/<button type="button" class="pk-tile /g)||[]).length,kinds,'a box for every kind');
+    assert.equal((html.match(/<div class="pk-kind" /g)||[]).length,kinds,'and a list for every kind');
     for(const k of m.pacKinds.filter(x=>x.pacs.length>10))assert.match(html,new RegExp(`Show all ${k.pacs.length} PACs`));
     if(m.corporate.length>10)assert.match(html,new RegExp(`Show all ${m.corporate.length} corporate PACs`));
     const corp=html.slice(html.indexOf('id="f-corporate"'));
@@ -99,4 +100,41 @@ test('on the Unbought tab the map takes a card under its numbers, and the bundle
   const box=bundledBox(s,o);
   assert.match(box,/^<div class="mm-panel"><h3>Bundled through groups<\/h3>/);assert.match(box,/AIPAC/);
   assert.equal(bundledBox({camp:{missing:true}},{}),'','no campaign money: no box');
+});
+
+test('PACs by kind: a tree map without leadership PACs and politicians\' committees, their total above it, and a tab of PACs under it',()=>{
+  const s=people.find(p=>p.id==='lawler'),o={...opts(s),pacNames:research.pacNames,pacType:i=>pacTypeOf(research,i)};
+  const pk=pacKindsFor(s,o),m=moneyMap(s,o);
+  // Lawler: $91,200 in the research's leadership kind, and $157,000 more from committees the FEC lists as leadership PACs
+  // or candidates' campaigns (most filed as Unclassified), so $478,000 of the $726,200 read is left in the tree map.
+  assert.equal(pk.total,726200);assert.equal(pk.lead,248200);
+  assert.equal(pk.kinds.reduce((t,x)=>t+x.a,0),478000);
+  assert.ok(pk.kinds.every(x=>x.k!=='lead'));
+  assert.ok(pk.leadPacs.every(p=>p.a>0));
+  for(const k of pk.kinds){assert.ok(Math.abs(k.pacs.reduce((t,p)=>t+p.a,0)-k.a)<1,k.k);assert.ok(['people','profit','other'].includes(k.align));}
+  assert.equal(pk.kinds.find(x=>x.k==='labor').align,'people');assert.equal(pk.kinds.find(x=>x.k==='finance').align,'profit');
+  assert.ok(pk.kinds.every((x,i,a)=>!i||a[i-1].a>=x.a),'largest first');
+  // One line a committee: Morgan Stanley's PAC is saved under its whole name and a cut-off one, and is listed once.
+  const fin=pk.kinds.find(x=>x.k==='finance');
+  assert.deepEqual(fin.pacs.filter(p=>/^Morgan Stanley/.test(p.name)).map(p=>p.name),['Morgan Stanley Political Action Committee']);
+  assert.equal(fin.pacs.length,50);
+  // Every leadership PAC or candidate committee by the FEC's record is in the left-out part.
+  const isPol=([i,,k])=>k==='lead'||['leadership','candidate'].includes(pacTypeOf(research,i)?.kind);
+  assert.ok(s.pac.rows.some(([i,,k])=>k!=='lead'&&isPol([i,,k])),'some filed under other kinds');
+  assert.equal(s.pac.rows.filter(isPol).reduce((t,r)=>t+r[1],0),pk.lead);
+  const html=moneyMapBlock(s,o);
+  assert.match(html,/<p class="pk-excl">\(Excluding Leadership PACs &amp; politician-affiliated committees: <b class="num">\$478,000<\/b>\)<\/p>/);
+  assert.equal((html.match(/class="pk-tile /g)||[]).length,pk.kinds.length);
+  assert.doesNotMatch(html,/data-k="lead"/,'no box or list for them');
+  assert.match(html,/<details class="pk-list"><summary><span><b class="pk-sum-label">Banking, finance &amp; investment<\/b>/,'the tab starts on the largest kind, closed');
+  assert.match(html,/Left out: \$248,200 from leadership PACs/);
+  assert.match(html,/>Banking &amp; finance<\/span><b>\$145K<\/b>/,'short names in the boxes');
+  assert.ok(Object.keys(SHORT_KIND).every(k=>research.categories[k]),'a short name for real kinds only');
+  // A campaign whose PAC money all came from politicians: no tree map, said so.
+  const only={...s,pac:{...s.pac,rows:[[0,5000,'lead']]}};
+  assert.match(moneyMapBlock(only,{...o,pacType:null}),/All \$5,000 of the PAC money read came from leadership PACs/);
+  // The page lays it out and opens a kind's PACs on a tap.
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),css=fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8');
+  assert.match(app,/function mountPacKinds\(root\)/);assert.match(app,/mountPacKinds\(content\);/);
+  for(const c of ['.pk-tile','.pk-list','.pk-bare','.pk-excl'])assert.ok(css.includes(c),c);
 });

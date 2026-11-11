@@ -6,7 +6,7 @@ import {openScorecard} from './scorecard.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
-import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG} from './charts.js';
+import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
@@ -381,6 +381,31 @@ function pacKinds(s){
     ${tableView(['FEC type','Amount','Share','Contributions'],k.map(x=>[esc(x.label),fmtFull(x.total),pct(x.total,p.retrieved)+'%',String(x.n)]))}</div>`;
 }
 const pacSectorTiles=s=>s.pac.byCat.map(([k,v])=>{const align=categoryAlign(k);return {label:DATA.categories[k]||k,value:v,align,alignLabel:ALIGN_LABEL[align],about:`${pct(v,s.pac.retrieved)}% of the itemized PAC money`};});
+// "PACs by kind" (public/money-map.js): lay the boxes out to the tree map's width (squarified, as the site's other tree
+// maps), show a box's name only where it fits whole, and let a tap on a box open its PACs in the tab under the tree map.
+function layoutPacKinds(el){
+  const tiles=[...el.querySelectorAll('.pk-tile')],W=el.clientWidth;if(!tiles.length||!W)return;
+  const H=Math.round(Math.min(340,Math.max(220,W*.62)));el.style.height=H+'px';
+  for(const r of squarify(tiles.map(t=>({t,value:Number(t.dataset.a)||0})).filter(x=>x.value>0),0,0,W,H)){
+    Object.assign(r.t.style,{left:`${r.x+1}px`,top:`${r.y+1}px`,width:`${Math.max(0,r.w-2)}px`,height:`${Math.max(0,r.h-2)}px`});
+    // A box too small for its padding gets none, so it stays inside its space.
+    r.t.classList.toggle('pk-tiny',r.w<30||r.h<26);
+    r.t.classList.remove('pk-bare');if(r.t.scrollWidth>r.t.clientWidth+1||r.t.scrollHeight>r.t.clientHeight+1)r.t.classList.add('pk-bare');
+  }
+}
+function mountPacKinds(root){
+  for(const el of root.querySelectorAll('.pk-tm:not([data-mounted])')){
+    el.dataset.mounted='1';const panel=el.closest('.mm-pk'),list=panel?.querySelector('.pk-list');
+    const pick=(k,open)=>{if(!list)return;let shown=null;
+      for(const b of list.querySelectorAll('.pk-kind')){const on=b.dataset.k===k;b.hidden=!on;if(on)shown=b;}
+      if(!shown)return;list.querySelector('.pk-sum-label').textContent=shown.dataset.label;list.querySelector('.pk-sum-meta').textContent=`· ${shown.dataset.meta}`;
+      for(const t of el.querySelectorAll('.pk-tile')){const on=t.dataset.k===k;t.classList.toggle('sel',on);t.setAttribute('aria-pressed',String(on));}
+      if(open)list.open=true;};
+    el.addEventListener('click',e=>{const t=e.target.closest('.pk-tile');if(t)pick(t.dataset.k,true);});
+    pick(el.querySelector('.pk-tile')?.dataset.k,false);
+    const f=()=>layoutPacKinds(el);f();resizers.push(f);
+  }
+}
 function mountPacSectors(s){if(!s.pac?.byCat?.length)return;const tiles=pacSectorTiles(s),f=()=>drawTreemap(document.getElementById('pac-tm'),tiles);f();resizers.push(f);}
 function pacTable(s,host){
   const p=s.pac;if(!p.rows.length){host.innerHTML='';return}
@@ -1498,6 +1523,7 @@ function renderProfile(s,requested='overview',focus){
   else if(s.basic&&!BASIC_FULL.has(view))paneBasicContent(s,view,content);
   else (PANES[view]||paneOverview)(s,content,focus);
   simplifyDetailSections(content,view);
+  mountPacKinds(content);
   if(overview&&s.basic)fillBasicHeader(s);
   if(overview&&!s.basic)fillProfileTiles(s);
   if(overview&&!s.office)fillWealthHeader(s);
