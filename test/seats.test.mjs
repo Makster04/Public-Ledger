@@ -3,7 +3,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
-import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals,kindTotals,conduitList,earmarkTotals} from '../scripts/build-corporate-pacs.mjs';
+import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,trackerTotals,kindTotals,conduitList,earmarkTotals,paymentTotals,keptEarmarks,conduitPayments,slimPayment} from '../scripts/build-corporate-pacs.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import senate from '../public/senate.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 
@@ -65,17 +68,14 @@ test('the bulk files: a corporation\'s PAC, its direct and in-kind checks to eac
   assert.deepEqual(t,{collins:[6500,2],begich:[0,0],quiet:[0,0]},'net of refunds; a check refunded in full is none; someone not in Congress is left out');
 });
 
-test('each tracker\'s checks, matched as its Tracker matches PACs, and AIPAC\'s routed gifts from its payments by recipient',()=>{
+test('each tracker\'s checks, matched as its Tracker matches PACs, with AIPAC\'s forwarded gifts',()=>{
   assert.deepEqual(trackersOf('C00797670','AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'),['aipac'],'by committee ID');
   assert.deepEqual(trackersOf('C09999999','PFIZER INC. PAC'),['pharma'],'by name');
   assert.deepEqual(trackersOf('C09999998','EXXON MOBIL CORPORATION POLITICAL ACTION COMMITTEE'),['oil']);
   assert.deepEqual(trackersOf('C09999997','COINBASE INC PAC'),['crypto']);
   assert.deepEqual(trackersOf('C09999996','LOCAL BAKERY PAC'),[]);
   const byCand=new Map([['S6ME00159','collins'],['S8GA00180','ossoff'],['H2AK01083','begich']]);
-  const cmteCand=new Map([['C00314575','S6ME00159'],['C00740001','S8GA00180']]);
-  // Collins: gifts listed as memo entries; Ossoff: a payment beyond AIPAC's PAC's own $5,000 check; a committee not in Congress.
-  const routed=routedByMember([{recipient_id:'C00314575',total:10000,memo_total:3348020.18},{recipient_id:'C00740001',total:5000,memo_total:0},{recipient_id:'C00999999',total:900,memo_total:900}],cmteCand,byCand,new Map([['ossoff',5000]]));
-  assert.deepEqual(routed,{collins:3348020.18},'Ossoff\'s $5,000 is the PAC\'s own check, not routed');
+  const routed={collins:3348020.18};
   const checks=[{cand:'S6ME00159',cmte:'C00797670',amount:10000,keys:['aipac']},{cand:'S8GA00180',cmte:'C09999999',amount:2500,keys:['pharma']},{cand:'S8GA00180',cmte:'C09999999',amount:-2500,keys:['pharma']},{cand:'H2AK01083',cmte:'C09999998',amount:1000,keys:['oil']}];
   const t=trackerTotals(checks,byCand,routed);
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
@@ -87,14 +87,54 @@ test('every group\'s forwarded gifts: the reviewed profiles\' conduits and the o
   const list=conduitList({conduits:{aipac:['C00797670'],cfg:['C00432260'],bad:['x']},names:{'fec:C00247403':'NORPAC','fec:C00432260':'CLUB FOR GROWTH PAC','other':'?'}});
   assert.deepEqual(list,[{key:'aipac',cmte:'C00797670'},{key:'cfg',cmte:'C00432260'},{key:'fec:C00247403',cmte:'C00247403'}]);
   assert.deepEqual(conduitList(undefined),[]);
+});
+
+test('a group\'s payments read as the reviewed profiles read them, added up by member',()=>{
   const byCand=new Map([['S6ME00159','collins'],['H2AK01083','begich']]),cmteCand=new Map([['C00314575','S6ME00159'],['C00700001','H2AK01083'],['C00700002','H2AK01083']]);
-  const rows=[{recipient_id:'C00314575',total:9000,memo_total:0},{recipient_id:'C00700001',total:400,memo_total:400},{recipient_id:'C00700002',total:1500,memo_total:1500}];
-  const recipients={};
-  assert.deepEqual(routedByMember(rows,cmteCand,byCand,new Map([['collins',5000]]),{recipients}),{collins:4000,begich:1900},'beyond its own $5,000 check; two committees add up');
-  assert.deepEqual(recipients,{collins:'C00314575',begich:'C00700002'},'the committee that got the most');
-  assert.deepEqual(routedByMember(rows,cmteCand,byCand,new Map(),{memoOnly:true}),{begich:1900},'a party committee: memo entries only');
-  const e=earmarkTotals([{key:'aipac',byMember:{collins:3348020.18},recipients:{collins:'C00314575'}},{key:'cfg',byMember:{collins:0,begich:250}},{key:'aipac',byMember:{collins:0.1},recipients:{collins:'C9'}}]);
-  assert.deepEqual(e,{collins:{aipac:[3348020.28,'C00314575']},begich:{cfg:[250,null]}},'a group with two committees adds up; none is left out');
+  const pay=(to,amt,desc,memo)=>({recipient_committee_id:to,disbursement_amount:amt,disbursement_description:desc,memo_code:memo?'X':null,disbursement_date:'2026-03-01'});
+  const rows=[
+    // Collins: forwarded gifts listed as memo entries, and the PAC's own $5,000 check (not forwarded)
+    pay('C00314575',2500,'EARMARKED CONTRIBUTION',true),pay('C00314575',1000,'EARMARK',true),pay('C00314575',5000,'CONTRIBUTION',false),
+    // Begich, two committees: one total line with its gifts as memos below it (the line counts, not both); memos only
+    pay('C00700001',300,'EARMARKED CONTRIBUTIONS',false),pay('C00700001',200,'EARMARK',true),pay('C00700001',100,'EARMARK',true),pay('C00700002',800,'EARMARK',true),
+    // someone not in Congress, a payment with no committee, an operating expense
+    pay('C00999999',900,'EARMARK',true),pay(null,50,'EARMARK',true),{recipient_committee_id:null,disbursement_amount:1200,disbursement_description:'RENT'}];
+  assert.deepEqual(paymentTotals(rows,cmteCand,byCand),{collins:{routed:3500,n:2,cmte:'C00314575'},begich:{routed:1100,n:3,cmte:'C00700002'}});
+  assert.deepEqual(slimPayment({...rows[0],committee:{name:'x'},pdf_url:'u'}),{recipient_committee_id:'C00314575',disbursement_amount:2500,disbursement_date:'2026-03-01',disbursement_description:'EARMARKED CONTRIBUTION',memo_text:null,memo_code:'X',memoed_subtotal:null});
+  const got=[{key:'aipac',byMember:{collins:{routed:3348020.18,n:2136,cmte:'C00314575'}}},{key:'cfg',byMember:{collins:{routed:0,n:0},begich:{routed:250,n:2,cmte:'C00700001'}}},{key:'aipac',byMember:{collins:{routed:0.1,n:1,cmte:'C9'}}}];
+  assert.deepEqual(earmarkTotals(got),{collins:{aipac:[3348020.28,2137,'C00314575']},begich:{cfg:[250,2,'C00700001']}},'a group with two committees adds up; none is left out');
+  // A group that couldn't be read keeps the last file's totals, only when that file was read from the payments.
+  const prev={routed:{method:'payments',groups:['jstreet','scf']},earmarks:{ossoff:{jstreet:[309639.01,800,'C00740001'],aipac:[1,1,'C1']},collins:{cfg:[5,1,'C2']}}};
+  assert.deepEqual(keptEarmarks(prev,['jstreet','scf','emily']),{jstreet:{ossoff:{jstreet:[309639.01,800,'C00740001']}},scf:{}},'read before with none: kept as none; never read: not kept');
+  assert.deepEqual(keptEarmarks({routed:{aipac:true},earmarks:prev.earmarks},['jstreet']),{},'a file from the FEC\'s totals by recipient is never kept');
+  assert.deepEqual(earmarkTotals([],keptEarmarks(prev,['jstreet'])),{ossoff:{jstreet:[309639.01,800,'C00740001']}});
+});
+
+test('a group\'s payments: page after page, saved so a stopped run picks up where it left off, waiting out the FEC\'s hourly limit',async()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'conduits-'));
+  const pages=[[{recipient_committee_id:'C1',disbursement_amount:5,disbursement_description:'EARMARK',memo_code:'X'}],[{recipient_committee_id:'C2',disbursement_amount:7,disbursement_description:'EARMARK',memo_code:'X'}],[]];
+  const page=url=>Number(new URL(url).searchParams.get('last_index')||0);
+  const reply=i=>({results:pages[i],pagination:{last_indexes:pages[i].length?{last_index:String(i+1),last_disbursement_date:'2026-01-01'}:null}});
+  // The first run reads one page, then the FEC refuses (not the hourly limit): it stops, keeping that page.
+  let calls=[];const fail=async url=>{calls.push(page(url));if(page(url)===1){const e=new Error('api.open.fec.gov returned HTTP 500');e.statusCode=500;throw e;}return reply(page(url));};
+  await assert.rejects(conduitPayments('C00797670',2026,{dir,get:fail,log:()=>{}}),/HTTP 500/);
+  const saved=JSON.parse(fs.readFileSync(path.join(dir,'C00797670.json'),'utf8'));
+  assert.equal(saved.pages,1);assert.equal(saved.done,false);assert.ok(!/api_key/.test(saved.next),'no key in the saved link');
+  // The next run picks up at page 2; the hourly limit once, waited out.
+  calls=[];let waited=[],limited=false;
+  const get=async url=>{calls.push(page(url));if(!limited&&page(url)===1){limited=true;const e=new Error('api.open.fec.gov returned HTTP 429');e.statusCode=429;e.retryAfter=0;throw e;}return reply(page(url));};
+  const rows=await conduitPayments('C00797670',2026,{dir,get,wait:async ms=>{waited.push(ms);},log:()=>{}});
+  assert.deepEqual(calls,[1,1,2],'resumed at page 2, which was asked for again after the wait');
+  assert.deepEqual(waited,[600000],'no wait given: 10 minutes');
+  assert.deepEqual(rows.map(r=>r.disbursement_amount),[5,7]);
+  // Done and under a week old: from the saved file, no requests; over a week old, or with refresh: read again.
+  calls=[];await conduitPayments('C00797670',2026,{dir,get,log:()=>{}});assert.deepEqual(calls,[]);
+  await conduitPayments('C00797670',2026,{dir,get,refresh:true,log:()=>{}});assert.deepEqual(calls,[0,1,2]);
+  calls=[];await conduitPayments('C00797670',2026,{dir,get,now:Date.now()+8*86400000,log:()=>{}});assert.deepEqual(calls,[0,1,2]);
+  // The hourly limit more than 7 times in a row: it stops.
+  const always=async()=>{const e=new Error('api.open.fec.gov returned HTTP 429');e.statusCode=429;throw e;};
+  await assert.rejects(conduitPayments('C00432260',2026,{dir,get:always,wait:async()=>{},log:()=>{}}),/429/);
+  fs.rmSync(dir,{recursive:true,force:true});
 });
 
 test('each member\'s PAC checks by kind of PAC, for Big Money Independence on every profile',()=>{
