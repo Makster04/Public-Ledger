@@ -12,16 +12,24 @@
 // Tracker matches them (public/trackers.js isTrackerPac: by committee ID or name).
 // Some groups also forward their donors' gifts to campaigns (earmarked, "routed"): AIPAC, Club for Growth, EMILY's List,
 // J Street, the Senate Conservatives Fund, and every other group the reviewed profiles' search found doing it
-// (public/research.json "bundled": conduits and names, from scripts/build-bundled.mjs). For each, the FEC's totals of
-// its PAC's payments to each campaign committee this cycle (schedules/schedule_b/by_recipient_id, a few requests a
-// group): the memo entries, which list each forwarded gift, else what's beyond its PAC's own checks in pas2 (for a party
-// committee, the memo entries only). Read when FEC_API_KEY is in .dev.vars. Writes public/corporate-pacs.json:
+// (public/research.json "bundled": conduits and names, from scripts/build-bundled.mjs). For each, every payment its PAC
+// made this cycle (FEC Schedule B, 100 a page), read the way the reviewed profiles' search reads them
+// (scripts/build-bundled.mjs conduitTotals: a payment that says "earmark" is a forwarded gift, the total line when there
+// is one, else the memo entries), and added up by the campaign committee it went to. The FEC's totals by recipient
+// leave most forwarded gifts out, so they aren't used. Read when FEC_API_KEY is in .dev.vars: several hundred requests
+// in all (AIPAC's and the Senate Conservatives Fund's run to tens of thousands of payments), so a run can pass the FEC's
+// hourly limit; it then waits and goes on. The pages read are saved in .local/fec-conduits/ (re-read when over a week
+// old, or with --refresh), so a run that stops picks up where it left off, and a group that still can't be read keeps
+// the totals of the last file. Writes public/corporate-pacs.json:
 //   people: {id: [corporate PAC dollars, number of corporate PACs]} for every member whose candidate ID is known; a
 //   member who isn't listed hasn't been read.
 //   trackers: {key: {id: [PAC dollars, number of its PACs, routed dollars (AIPAC)]}}, only members who took some;
-//   routed: {aipac: true when its routed gifts were read, groups: [the groups read], failed: [groups that couldn't be]}.
-//   earmarks: {id: {group: [routed dollars, the campaign committee they went to]}}, only members some group forwarded
-//   gifts to; group is research.json's key ("aipac", "cfg", …) or "fec:" and the committee ID, as on the full profiles.
+//   routed: {method: "payments", aipac: true when its forwarded gifts are in, groups: [the groups read], kept: [groups
+//   that couldn't be read this time, with the last file's totals], failed: [groups that couldn't be, with none kept]}.
+//   earmarks: {id: {group: [forwarded dollars, gifts, the campaign committee they went to]}}, only members some group
+//   forwarded gifts to; group is research.json's key ("aipac", "cfg", …) or "fec:" and the committee ID, as on the full
+//   profiles. (A file without method "payments" was made from the FEC's totals by recipient, and the page ignores its
+//   forwarded gifts.)
 //   kinds: {id: {kind: dollars}}, each member's PAC checks by the kind of PAC that gave (public/pac-types.js pacKind;
 //   party committees left out, as the FEC's PAC total leaves them out), so Big Money Independence can weigh PAC money by
 //   type for every member, not only the profiles with reviewed PAC lines.
@@ -29,7 +37,7 @@
 //   npm run corporate:pacs               downloads into .local/fec-bulk/ (the pas2 file is shared with
 //                                        scripts/build-funder-history.mjs) and writes the file; files over a week old
 //                                        are downloaded again
-//   npm run corporate:pacs -- --refresh  downloads them again now
+//   npm run corporate:pacs -- --refresh  downloads them again now, and reads every group's payments again
 //   FEC_BULK_BASE=<url> npm run ...      a mirror of https://www.fec.gov/files/bulk-downloads
 import fs from 'node:fs';
 import path from 'node:path';
@@ -39,6 +47,7 @@ import {fileURLToPath} from 'node:url';
 import {pacKind} from '../public/pac-types.js';
 import {TRACKERS,isTrackerPac} from '../public/trackers.js';
 import {requestSource,fecNext} from '../src/sources.mjs';
+import {conduitTotals} from './build-bundled.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const BASE=process.env.FEC_BULK_BASE||'https://www.fec.gov/files/bulk-downloads';
@@ -65,20 +74,6 @@ export function committeeCheck(line){
 export function corporateCheck(line,kinds){const x=committeeCheck(line);return x&&kinds.get(x.cmte)==='corporate'?x:null;}
 // The trackers a giving committee belongs to (by its ID or its name, as each Tracker matches its PACs).
 export const trackersOf=(cmte,name)=>TRACKERS.filter(t=>isTrackerPac(t,{cid:cmte,name})).map(t=>t.key);
-// AIPAC's routed gifts by member, from its PAC's payments by recipient committee (the FEC's totals: total, and
-// memo_total for gifts listed as memo entries): the memo entries when there are some, else what's beyond its PAC's own
-// checks to them (direct: member id -> dollars). cmteCand: campaign committee -> candidate ID.
-// memoOnly: the memo entries alone (a party committee, whose other payments aren't forwarded gifts). recipients, when
-// given, gets each member's campaign committee that got the most.
-export function routedByMember(results,cmteCand,byCand,direct=new Map(),{memoOnly=false,recipients=null}={}){
-  const out={},best={};
-  for(const r of results||[]){
-    const id=byCand.get(cmteCand.get(r.recipient_id));if(!id)continue;
-    const memo=Number(r.memo_total)||0,total=Number(r.total)||0,routed=memo>0||memoOnly?memo:Math.max(0,total-(direct.get(id)||0));
-    if(routed>0){out[id]=Math.round(((out[id]||0)+routed)*100)/100;if(!(best[id]>=routed)){best[id]=routed;if(recipients)recipients[id]=r.recipient_id;}}
-  }
-  return out;
-}
 // The groups whose forwarded gifts are read: research.json "bundled" conduits ({group: [committee IDs]}) and the other
 // committees its search found forwarding gifts (names: {"fec:C…": name}). [{key, cmte}], each committee once.
 export function conduitList(bundled){
@@ -87,11 +82,38 @@ export function conduitList(bundled){
   for(const key of Object.keys(bundled?.names||{}))if(key.startsWith('fec:'))add(key,key.slice(4));
   return out;
 }
-// Each member's routed dollars from each group, with the campaign committee that got the most (for the FEC link):
-// got: [{key, byMember: {id: dollars}, recipients: {id: committee}}].
-export function earmarkTotals(got){
+// One group's payments (FEC Schedule B rows) added up by member: each campaign committee's rows read as the reviewed
+// profiles' search reads them (conduitTotals), then a member's committees together. {id: {routed, n, cmte: the committee
+// that got the most}}. cmteCand: campaign committee -> candidate ID.
+export function paymentTotals(rows,cmteCand,byCand){
+  const byCmte=new Map();
+  for(const r of rows||[]){const c=r.recipient_committee_id;if(!c||!byCand.has(cmteCand.get(c)))continue;if(!byCmte.has(c))byCmte.set(c,[]);byCmte.get(c).push(r);}
   const out={};
-  for(const g of got)for(const [id,v] of Object.entries(g.byMember||{})){if(!(v>0))continue;const o=out[id]||(out[id]={}),prev=o[g.key];o[g.key]=[Math.round(((prev?.[0]||0)+v)*100)/100,prev?.[1]||g.recipients?.[id]||null];}
+  for(const [c,list] of byCmte){
+    const t=conduitTotals(list);if(!(t.routed>0))continue;
+    const id=byCand.get(cmteCand.get(c)),o=out[id];
+    out[id]=o?{routed:Math.round((o.routed+t.routed)*100)/100,n:o.n+t.n,cmte:t.routed>o.best?c:o.cmte,best:Math.max(o.best,t.routed)}:{routed:t.routed,n:t.n,cmte:c,best:t.routed};
+  }
+  for(const o of Object.values(out))delete o.best;
+  return out;
+}
+// The fields of a payment that are kept in the page cache (the rest of a Schedule B row isn't needed).
+export const slimPayment=r=>({recipient_committee_id:r.recipient_committee_id??null,disbursement_amount:r.disbursement_amount,disbursement_date:r.disbursement_date,
+  disbursement_description:r.disbursement_description??null,memo_text:r.memo_text??null,memo_code:r.memo_code??null,memoed_subtotal:r.memoed_subtotal??null});
+// Each member's forwarded gifts from each group: got [{key, byMember: paymentTotals}] -> {id: {group: [dollars, gifts,
+// committee]}}; a group with two committees adds up. kept: {group: the last file's earmarks}, for a group that couldn't
+// be read this time.
+export function earmarkTotals(got,kept={}){
+  const out={};
+  const add=(id,key,routed,n,cmte)=>{if(!(routed>0))return;const o=out[id]||(out[id]={}),p=o[key];o[key]=[Math.round(((p?.[0]||0)+routed)*100)/100,(p?.[1]||0)+(n||0),p?.[2]||cmte||null];};
+  for(const g of got)for(const [id,v] of Object.entries(g.byMember||{}))add(id,g.key,v.routed,v.n,v.cmte);
+  for(const [key,prev] of Object.entries(kept))for(const [id,groups] of Object.entries(prev||{})){const v=groups?.[key];if(v)add(id,key,v[0],v[1],v[2]);}
+  return out;
+}
+// The last file's forwarded gifts for these groups ({group: {id: {group: [...]}}}), when it was read from the payments.
+export function keptEarmarks(prev,groups){
+  if(prev?.routed?.method!=='payments')return {};
+  const out={};for(const key of groups){const by={};for(const [id,g] of Object.entries(prev.earmarks||{}))if(g?.[key])by[id]={[key]:g[key]};if(Object.keys(by).length||(prev.routed.groups||[]).includes(key))out[key]=by;}
   return out;
 }
 // Each member's PAC checks by kind of PAC (checks: {cand, kind, amount}), refunds subtracted, party committees left out.
@@ -149,6 +171,32 @@ async function* lines(zip,inner){
   if(code)throw new Error(`unzip failed for ${zip}: ${err}`);
 }
 
+// Every payment one committee made in a cycle (Schedule B, 100 a page, newest first), with each page saved in dir so a
+// run that stops picks up where it left off; a saved read over a week old (or with refresh) is read again. When the
+// FEC's hourly limit is reached (HTTP 429), it waits (what the FEC says, else 10 minutes) and goes on, up to 7 times.
+export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,get=url=>requestSource(url,process.env),wait=ms=>new Promise(r=>setTimeout(r,ms)),now=Date.now(),log=console.log}={}){
+  const file=path.join(dir,`${cmte}.json`);
+  let saved=null;try{saved=JSON.parse(fs.readFileSync(file,'utf8'));}catch{}
+  if(saved&&(refresh||!(now-Date.parse(saved.started)<=WEEK)))saved=null;
+  if(saved?.done)return saved.rows;
+  const st=saved||{cmte,cycle,started:new Date(now).toISOString(),rows:[],next:`https://api.open.fec.gov/v1/schedules/schedule_b/?committee_id=${cmte}&two_year_transaction_period=${cycle}&per_page=100&sort=-disbursement_date`,pages:0,done:false};
+  log(`Reading ${label}'s payments${st.pages?` (picking up at page ${st.pages+1})`:''}…`);
+  let tries=0;
+  while(st.next){
+    let d;
+    try{d=await get(st.next);tries=0;}
+    catch(e){
+      if(e.statusCode!==429||++tries>7)throw e;
+      const ms=e.retryAfter||600000;log(`  The FEC's hourly limit was reached reading ${label} (page ${st.pages+1}); waiting ${Math.round(ms/60000)} minutes, then going on.`);
+      await wait(ms);continue;
+    }
+    st.rows.push(...(d.results||[]).map(slimPayment));st.next=fecNext(st.next,d);st.pages++;st.done=!st.next;
+    fs.writeFileSync(file,JSON.stringify(st));
+    if(st.pages%25===0)log(`  ${label}: ${st.pages} pages, ${st.rows.length} payments so far…`);
+  }
+  return st.rows;
+}
+
 async function main(argv){
   const config=JSON.parse(fs.readFileSync(path.join(ROOT,'data','config.json'),'utf8'));
   const cycle=Number(argv[argv.indexOf('--cycle')+1])||Number(config.cycle)||2026,yy=String(cycle).slice(2),refresh=argv.includes('--refresh');
@@ -158,41 +206,40 @@ async function main(argv){
   const cm=await download(`cm${yy}.zip`,cycle,dir,refresh),pas2=await download(`pas2${yy}.zip`,cycle,dir,refresh);
   const kinds=new Map(),names=new Map(),cmteCand=new Map();
   for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;kinds.set(k[0],k[1]);names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
-  const conduits=conduitList(read('research.json').bundled),conduitIds=new Set(conduits.map(c=>c.cmte));
-  const checks=[],tracked=[],byKind=[],fromConduits=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
+  const conduits=conduitList(read('research.json').bundled);
+  const checks=[],tracked=[],byKind=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
   for await(const line of lines(pas2.file,'itpas2.txt')){
     const x=committeeCheck(line);if(!x||!byCand.has(x.cand))continue;
     if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
-    const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';byKind.push({cand:x.cand,kind:kinds.get(x.cmte)||'other',amount:x.amount});if(conduitIds.has(x.cmte))fromConduits.push(x);if(!corp&&!keys.length)continue;
+    const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';byKind.push({cand:x.cand,kind:kinds.get(x.cmte)||'other',amount:x.amount});if(!corp&&!keys.length)continue;
     if(corp)checks.push(x);if(keys.length)tracked.push({...x,keys});
     const d=iso(x.date);if(d>through&&d<=today)through=d;
   }
   const people=corporateTotals(checks,byCand),vals=Object.values(people);
-  // Each group's forwarded gifts, with the FEC key; without it, the groups' PAC checks alone (and the page says so).
-  let routed={},routedRead=false;const got=[],groupsRead=new Set(),groupsFailed=new Set();
+  // Each group's forwarded gifts, from every payment its PAC made this cycle, with the FEC key; without it, the
+  // groups' PAC checks alone (and the page says so).
+  let routed={};const got=[],readOk=new Set(),failed=new Set(),keys=[...new Set(conduits.map(c=>c.key))];
+  let prev=null;try{prev=JSON.parse(fs.readFileSync(path.join(ROOT,'public','corporate-pacs.json'),'utf8'));}catch{}
   if(process.env.FEC_API_KEY){
+    const cacheDir=path.join(ROOT,'.local','fec-conduits',String(cycle));fs.mkdirSync(cacheDir,{recursive:true});
     for(const c of conduits){
       try{
-        const rows=[];let url=`https://api.open.fec.gov/v1/schedules/schedule_b/by_recipient_id/?committee_id=${c.cmte}&cycle=${cycle}&per_page=100&sort=-total`,i=0;
-        for(;url&&i<50;i++){const d=await requestSource(url,process.env);rows.push(...(d.results||[]));url=fecNext(url,d);}
-        if(url)throw new Error('more than 50 pages');
-        const direct=new Map(Object.entries(corporateTotals(fromConduits.filter(x=>x.cmte===c.cmte),byCand)).map(([id,v])=>[id,v[0]]));
-        const recipients={},byMember=routedByMember(rows,cmteCand,byCand,direct,{memoOnly:kinds.get(c.cmte)==='party',recipients});
-        got.push({key:c.key,byMember,recipients});groupsRead.add(c.key);
-        if(c.key==='aipac'){for(const [id,v] of Object.entries(byMember))routed[id]=Math.round(((routed[id]||0)+v)*100)/100;routedRead=true;}
-      }catch(e){groupsFailed.add(c.key);console.log(`${names.get(c.cmte)||c.key}'s forwarded gifts couldn't be read (${e.message}).`);}
+        const rows=await conduitPayments(c.cmte,cycle,{dir:cacheDir,refresh,label:names.get(c.cmte)||c.key});
+        got.push({key:c.key,byMember:paymentTotals(rows,cmteCand,byCand)});
+      }catch(e){failed.add(c.key);console.log(`${names.get(c.cmte)||c.key}'s payments couldn't all be read (${e.message}); the pages read so far are saved for the next run.`);}
     }
-    // (a group with two committees is read only when both were)
-    for(const k of groupsFailed)groupsRead.delete(k);
-    if(groupsFailed.has('aipac')){routed={};routedRead=false;}
-    console.log(`Forwarded gifts: ${groupsRead.size} of ${new Set(conduits.map(c=>c.key)).size} groups read; ${Object.keys(earmarkTotals(got.filter(g=>groupsRead.has(g.key)))).length} members got some.`);
+    for(const k of keys)if(!failed.has(k))readOk.add(k);
   }else console.log('No FEC_API_KEY in .dev.vars: gifts forwarded by groups (AIPAC and others) aren\'t read, only their PAC checks.');
+  // (a group with two committees counts only when both were read; one that wasn't keeps the last file's totals)
+  const kept=keptEarmarks(prev,[...failed]),earmarks=earmarkTotals(got.filter(g=>readOk.has(g.key)),kept);
+  for(const [id,g] of Object.entries(earmarks))if(g.aipac)routed[id]=g.aipac[0];
+  const aipacIn=readOk.has('aipac')||'aipac' in kept;
+  if(process.env.FEC_API_KEY)console.log(`Forwarded gifts: ${readOk.size} of ${keys.length} groups read${Object.keys(kept).length?`, ${Object.keys(kept).length} kept from the last file`:''}; ${Object.keys(earmarks).length} members got some.`);
   const trackers=trackerTotals(tracked,byCand,routed);
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,
     sources:[{file:path.basename(cm.file),downloaded:cm.downloaded,url:`${BASE}/${cycle}/cm${yy}.zip`},{file:path.basename(pas2.file),downloaded:pas2.downloaded,url:`${BASE}/${cycle}/pas2${yy}.zip`}],
-    people,trackers,routed:{aipac:routedRead,groups:[...groupsRead],failed:[...groupsFailed]},kinds:kindTotals(byKind,byCand),
-    earmarks:earmarkTotals(got.filter(g=>groupsRead.has(g.key)))};
+    people,trackers,routed:{method:'payments',aipac:aipacIn,groups:[...readOk],kept:Object.keys(kept),failed:[...failed].filter(k=>!(k in kept))},kinds:kindTotals(byKind,byCand),earmarks};
   fs.writeFileSync(path.join(ROOT,'public','corporate-pacs.json'),JSON.stringify(out));
   console.log(`Wrote public/corporate-pacs.json: ${vals.length} members read, ${vals.filter(v=>v[0]>0).length} took corporate PAC money, ${vals.filter(v=>!v[0]).length} took none (${checks.length} checks, through ${through||'?'}).`);
   for(const t of TRACKERS)console.log(`  ${t.name}: ${Object.keys(trackers[t.key]).length} took some`);
