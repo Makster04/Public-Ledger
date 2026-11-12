@@ -1,0 +1,97 @@
+// The bill index behind the alignment questions: every bill and resolution in Congress from the 113th (2013) on, from
+// GovInfo's BILLSTATUS bulk files (no key; https://www.govinfo.gov/bulkdata/BILLSTATUS). For each one: its titles,
+// policy area, legislative subjects, the Congressional Research Service's latest summary, its sponsor and cosponsors
+// (with the dates they signed on and any withdrawal), its recorded votes (chamber, roll call, date), and whether it
+// became law. The questions' bills are found and coded from it (scripts/question-bills.mjs); nothing here decides a side.
+//
+// Writes .local/bills/<congress>-<type>.jsonl, one bill a line:
+//   {id: "119-hr-1", c: 119, t: "hr", n: 1, title, short: [short titles], intro: "2025-05-20", area: policy area,
+//    subjects: [...], summary: plain text (at most SUMMARY_MAX characters), sponsor: {id: bioguide, party, state},
+//    cosponsors: [{id, date, orig: true when an original cosponsor, out: withdrawal date}], votes: [{ch: "H"|"S",
+//    roll, date, session}], law: true when enacted, latest: {date, text}}
+//
+//   npm run bills:index                          the 113th Congress through the current one (zips cached in
+//                                                .local/billstatus/; the current Congress's re-read when over a day old)
+//   npm run bills:index -- --from 118 --to 119   just these Congresses
+//   npm run bills:index -- --types hr,s          just these kinds (default: hr, s, hjres, sjres, hconres, sconres, hres, sres)
+//   npm run bills:index -- --refresh             download every zip again
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import {XMLParser} from 'fast-xml-parser';
+
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+export const TYPES=['hr','s','hjres','sjres','hconres','sconres','hres','sres'];
+export const SUMMARY_MAX=2000;
+const BASE='https://www.govinfo.gov/bulkdata/BILLSTATUS';
+const DAY=86400000;
+const parser=new XMLParser({ignoreAttributes:true,parseTagValue:false,trimValues:true,
+  isArray:name=>['item','recordedVote','summary'].includes(name)});
+
+const list=v=>v==null?[]:Array.isArray(v)?v:[v];
+const items=v=>list(v?.item);
+const day=v=>/^\d{4}-\d{2}-\d{2}/.test(String(v||''))?String(v).slice(0,10):null;
+// Plain text from a summary's HTML.
+export function plainText(html){
+  return String(html||'').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim();
+}
+
+// One BILLSTATUS XML file -> the index's record for it (null when it isn't a bill status file).
+export function billRecord(xml){
+  const b=parser.parse(xml)?.billStatus?.bill;if(!b)return null;
+  const c=Number(b.congress),t=String(b.type||'').toLowerCase(),n=Number(b.number);if(!c||!t||!n)return null;
+  const titles=items(b.titles);
+  const short=[...new Set(titles.filter(x=>/short title/i.test(x.titleType||'')).map(x=>String(x.title||'').trim()).filter(Boolean))];
+  // the latest summary (by its action date, then update date)
+  const sums=list(b.summaries?.summary).map(s=>({d:day(s.actionDate)||day(s.updateDate)||'',u:String(s.updateDate||''),text:plainText(s.text)})).filter(s=>s.text);
+  sums.sort((x,y)=>x.d.localeCompare(y.d)||x.u.localeCompare(y.u));
+  const summary=sums.at(-1)?.text||null;
+  const sp=items(b.sponsors)[0];
+  const cosponsors=items(b.cosponsors).filter(x=>x.bioguideId).map(x=>({id:String(x.bioguideId),date:day(x.sponsorshipDate),...(String(x.isOriginalCosponsor)==='True'||String(x.isOriginalCosponsor)==='true'?{orig:true}:{}),...(day(x.sponsorshipWithdrawnDate)?{out:day(x.sponsorshipWithdrawnDate)}:{})}));
+  const seen=new Set(),votes=[];
+  for(const a of items(b.actions))for(const v of list(a.recordedVotes?.recordedVote)){
+    const ch=/senate/i.test(v.chamber||'')?'S':/house/i.test(v.chamber||'')?'H':null,roll=Number(v.rollNumber),k=`${ch}-${v.congress}-${v.sessionNumber}-${roll}`;
+    if(!ch||!roll||seen.has(k))continue;seen.add(k);votes.push({ch,roll,date:day(v.date),session:Number(v.sessionNumber)||null,c:Number(v.congress)||c});
+  }
+  votes.sort((x,y)=>String(x.date).localeCompare(String(y.date))||x.roll-y.roll);
+  const latest=b.latestAction?{date:day(b.latestAction.actionDate),text:String(b.latestAction.text||'').slice(0,300)}:null;
+  return {id:`${c}-${t}-${n}`,c,t,n,title:String(b.title||'').trim(),short,intro:day(b.introducedDate),area:b.policyArea?.name||null,
+    subjects:items(b.subjects?.legislativeSubjects).map(x=>String(x.name||'').trim()).filter(Boolean),
+    summary:summary&&summary.length>SUMMARY_MAX?summary.slice(0,SUMMARY_MAX).replace(/\s+\S*$/,'')+' …':summary,
+    sponsor:sp?.bioguideId?{id:String(sp.bioguideId),party:sp.party||null,state:sp.state||null}:null,
+    cosponsors,votes,...(items(b.laws).length?{law:true}:{}),latest};
+}
+
+// The current Congress for a date: the 119th runs 2025–2026.
+export const congressOf=(d=new Date())=>Math.floor((d.getUTCFullYear()-1789)/2)+1;
+
+async function download(url,file,{maxAge,refresh}){
+  if(!refresh&&fs.existsSync(file)&&(maxAge==null||Date.now()-fs.statSync(file).mtimeMs<maxAge))return false;
+  const r=await fetch(url);if(r.status===404)return null;if(!r.ok)throw new Error(`${url}: HTTP ${r.status}`);
+  const tmp=file+'.part';fs.writeFileSync(tmp,Buffer.from(await r.arrayBuffer()));fs.renameSync(tmp,file);return true;
+}
+
+async function main(argv){
+  const arg=k=>{const i=argv.indexOf(k);return i>=0?argv[i+1]:null;};
+  const now=congressOf(),from=Number(arg('--from'))||113,to=Number(arg('--to'))||now,types=(arg('--types')||TYPES.join(',')).split(',').filter(t=>TYPES.includes(t)),refresh=argv.includes('--refresh');
+  const zips=path.join(ROOT,'.local','billstatus'),out=path.join(ROOT,'.local','bills');fs.mkdirSync(zips,{recursive:true});fs.mkdirSync(out,{recursive:true});
+  for(let c=from;c<=to;c++)for(const t of types){
+    const name=`BILLSTATUS-${c}-${t}.zip`,zip=path.join(zips,name);
+    const got=await download(`${BASE}/${c}/${t}/${name}`,zip,{maxAge:c===now?DAY:null,refresh});
+    if(got===null){console.log(`${c} ${t}: no file`);continue;}
+    const dest=path.join(out,`${c}-${t}.jsonl`);
+    if(got===false&&fs.existsSync(dest)&&fs.statSync(dest).mtimeMs>=fs.statSync(zip).mtimeMs){console.log(`${c} ${t}: up to date`);continue;}
+    const dir=fs.mkdtempSync(path.join(zips,'x-'));
+    try{
+      const u=spawnSync('unzip',['-q','-o',zip,'-d',dir]);if(u.status)throw new Error(`unzip failed for ${name}: ${u.stderr}`);
+      const files=[];const walk=d=>{for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);if(e.isDirectory())walk(p);else if(/\.xml$/i.test(e.name))files.push(p);}};walk(dir);
+      const lines=[];let bad=0;
+      for(const f of files){try{const r=billRecord(fs.readFileSync(f,'utf8'));if(r)lines.push(JSON.stringify(r));else bad++;}catch{bad++;}}
+      lines.sort((a,b)=>{const x=JSON.parse(a).n,y=JSON.parse(b).n;return x-y;});
+      fs.writeFileSync(dest,lines.join('\n')+'\n');
+      console.log(`${c} ${t}: ${lines.length} bills${bad?`, ${bad} files not read`:''}`);
+    }finally{fs.rmSync(dir,{recursive:true,force:true});}
+  }
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main(process.argv.slice(2)).catch(e=>{console.error(e.message);process.exit(1);});
