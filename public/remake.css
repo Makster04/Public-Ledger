@@ -879,6 +879,38 @@ input, select { accent-color: var(--accent); }
 .st-place { color: var(--ink-2); font-size: .92rem; }
 .st-grid { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 .st-sidecol { display: grid; gap: 16px; align-content: start; min-width: 0; }
+/* The Ideology tab's top (stFrame lead): the political compass and DW-NOMINATE on the left, the position card and its
+   sources on the right, both columns ending on the same line (the compass is sized to fit: app.js mountCompass;
+   "fitting" while it's measured). */
+.st-lead { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.st-lead-l, .st-lead-r { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.st-lead-l > .cmp-dw, .st-lead-r > .st-side { flex: 1; margin: 0; }
+.st-lead.fitting { align-items: start; }
+.st-lead.fitting .st-lead-l > .cmp-dw, .st-lead.fitting .st-lead-r > .st-side { flex: none; }
+.cmp-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+.cmp-card h2 { margin: 0; }
+.cmp-nums { margin: 4px 0 12px; font-size: .92rem; color: var(--ink-2); }
+.cmp-k { letter-spacing: .04em; color: var(--ink-2); }
+.cmp-box { width: 100%; }
+.cmp-svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+.cmp-qtl { fill: #3a262b; } .cmp-qtr { fill: #262c3f; } .cmp-qbl { fill: #22362b; } .cmp-qbr { fill: #30283d; }
+.cmp-grid path { stroke: #fff; stroke-opacity: .06; }
+.cmp-axis { fill: none; stroke: var(--ink-2); stroke-opacity: .55; stroke-width: 1.4; }
+.cmp-frame { fill: none; stroke: var(--ink-2); stroke-opacity: .5; }
+.cmp-lab { font: 700 12.5px var(--font-body); fill: var(--ink); }
+.cmp-b { stroke-width: 1; }
+.cmp-b.cmp-D { fill: var(--dem); stroke: var(--dem); } .cmp-b.cmp-R { fill: var(--rep); stroke: var(--rep); } .cmp-b.cmp-I { fill: #b7a3ff; stroke: #b7a3ff; }
+.cmp-svg a .cmp-b:hover { fill-opacity: .95; }
+.cmp-count { font: 700 11px var(--font-mono); fill: var(--ink); stroke: var(--bg); stroke-width: 3; paint-order: stroke; pointer-events: none; }
+.cmp-me-ring { fill: var(--bg); stroke-width: 3; } .cmp-me-ring.cmp-D { stroke: var(--dem); } .cmp-me-ring.cmp-R { stroke: var(--rep); } .cmp-me-ring.cmp-I { stroke: #b7a3ff; }
+.cmp-me-name { font: 700 12.5px var(--font-body); fill: var(--ink); stroke: var(--bg); stroke-width: 4; paint-order: stroke; }
+.cmp-me-here { font: 600 11px var(--font-body); fill: var(--ink-2); stroke: var(--bg); stroke-width: 4; paint-order: stroke; }
+.cmp-legend { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; color: var(--ink-2); margin-top: 8px; }
+.cmp-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.cmp-dot.cmp-D { background: var(--dem); } .cmp-dot.cmp-R { background: var(--rep); } .cmp-dot.cmp-I { background: #b7a3ff; }
+/* DW-NOMINATE under the compass: smaller type so the left column fits beside the right one. */
+.cmp-dw .ideo-head .big, .cmp-dw > .big { font-size: 1.08rem; margin-top: 2px !important; }
+.cmp-dw > p.small, .cmp-dw > p, .cmp-dw > .sub, .cmp-dw .legend { font-size: 12.5px; line-height: 1.45; }
 .st-sidecol > .mm-panel { border-radius: 14px; }
 .st-card, .st-side { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; min-width: 0; }
 .st-card-h { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--surface-2); border-radius: 14px 14px 0 0; }
@@ -964,7 +996,12 @@ input, select { accent-color: var(--accent); }
 .profile-report .hc-six .hc-gv b { font-size: 3rem; }
 .hc-six .hc-gv b.lean { font-family: var(--font-display); color: var(--ink); }
 @media (max-width: 1080px) { .profile-report .hc-rc.hc-six { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1000px) {
+  .st-lead { grid-template-columns: minmax(0, 1fr); }
+}
 @media (max-width: 820px) {
+  .cmp-nums > span { display: block; }
+  .cmp-nums > .cmp-sep { display: none; }
   .st-head { grid-template-columns: minmax(0, 1fr); }
   .st-grid { grid-template-columns: minmax(0, 1fr); }
   .st-card-b { grid-template-columns: minmax(0, 1fr); }
