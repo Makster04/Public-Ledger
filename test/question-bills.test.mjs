@@ -29,3 +29,14 @@ test('candidates: became law first, then recorded votes, then cosponsors; alread
   assert.deepEqual(list.map(c=>c.id),['118-hr-9','118-hr-8','118-hr-7']);
   assert.deepEqual(list[1].coded,[0,'Raises it to $17.']);assert.equal(list[0].law,true);assert.equal(list[2].cosponsors,2);
 });
+
+import {decidesBill,castSide,billItems} from '../scripts/build-question-record.mjs';
+test('the votes that decide a bill count; procedure doesn\'t',()=>{
+  for(const q of ['On Passage','On Motion to Suspend the Rules and Pass, as Amended','On the Cloture Motion','On Agreeing to the Conference Report','On Motion to Concur in the Senate Amendment','On the Joint Resolution','On Overriding the Veto','Passage, Objections of the President Notwithstanding','On the Motion to Proceed','On Agreeing to the Resolution'])assert.ok(decidesBill(q),q);
+  for(const q of ['On Motion to Recommit with Instructions','On Agreeing to the Amendment','On Ordering the Previous Question','On Motion to Table','On the Motion to Table the Motion to Reconsider','Election of the Speaker','',null])assert.ok(!decidesBill(q),String(q));
+});
+test('a Yea takes the bill\'s side, a Nay the other, anything else nothing; sponsors and cosponsors (not withdrawn) take the bill\'s side',()=>{
+  assert.equal(castSide(1,0),0);assert.equal(castSide(6,0),1);assert.equal(castSide(6,1),0);for(const c of [2,3,4,5,7,8,9,0])assert.equal(castSide(c,0),null);
+  const items=billItems({intro:'2019-01-16',sponsor:{id:'S000522'},cosponsors:[{id:'A1',date:'2019-01-16'},{id:'B2',date:'2019-02-01',out:'2019-03-01'}]},0);
+  assert.deepEqual(items,[{id:'S000522',kind:'s',date:'2019-01-16',side:0},{id:'A1',kind:'c',date:'2019-01-16',side:0}]);
+});

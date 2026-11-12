@@ -48,6 +48,8 @@ test('no summary, a law, a long summary cut at a word; anything else isn\'t a bi
   const long='word '.repeat(SUMMARY_MAX);const s=billRecord(xml({summaries:`<summaries><summary><actionDate>2021-01-01</actionDate><text>${long}</text></summary></summaries>`})).summary;
   assert.ok(s.length<=SUMMARY_MAX+2&&s.endsWith(' …'));
   assert.equal(billRecord('<other/>'),null);
+  // the older layout: billNumber and billType
+  assert.equal(billRecord('<billStatus><bill><billNumber>9</billNumber><billType>HR</billType><congress>117</congress><title>Reserved</title></bill></billStatus>').id,'117-hr-9');
 });
 
 test('plain text from summary HTML; the Congress for a date',()=>{

@@ -40,7 +40,8 @@ export function plainText(html){
 // One BILLSTATUS XML file -> the index's record for it (null when it isn't a bill status file).
 export function billRecord(xml){
   const b=parser.parse(xml)?.billStatus?.bill;if(!b)return null;
-  const c=Number(b.congress),t=String(b.type||'').toLowerCase(),n=Number(b.number);if(!c||!t||!n)return null;
+  // (a few files use the older layout: billNumber and billType)
+  const c=Number(b.congress),t=String(b.type??b.billType??'').toLowerCase(),n=Number(b.number??b.billNumber);if(!c||!t||!n)return null;
   const titles=items(b.titles);
   const short=[...new Set(titles.filter(x=>/short title/i.test(x.titleType||'')).map(x=>String(x.title||'').trim()).filter(Boolean))];
   // the latest summary (by its action date, then update date)
