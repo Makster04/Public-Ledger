@@ -6,6 +6,7 @@
 // vouchers, immigration enforcement, voter ID). Issues with no liberal side (the ones that split both parties) are on
 // neither axis. An axis needs a lean on at least COMPASS_MIN_ISSUES issues; how many it has is shown.
 import {issueLeans} from './six-scores.js';
+import {compassFrom} from './question-scores.js';
 
 export const COMPASS_GROUPS={econ:['econ','env'],social:['rights','imm']};
 export const COMPASS_MIN_ISSUES=1;
@@ -18,9 +19,12 @@ export function compassAxes(issues){
   return {econ:of(COMPASS_GROUPS.econ),social:of(COMPASS_GROUPS.social)};
 }
 
+// With the alignment questions (a list of questions, each with an axis), the axes average the question leans on each
+// (public/question-scores.js compassFrom), from person.qst; the questions with no liberal side are on neither axis.
 // A person's place: {x (economic), y (social), nx, ny (issues with a lean on each), econ, social (those issues)}; x or y is
 // null when that axis has too few issues.
 export function compassOf(person,issues){
+  if((issues||[]).some(q=>'axis' in q&&'sides' in q))return compassFrom(person?.qst||{},issues);
   const leans=issueLeans(person,issues),axes=compassAxes(issues);
   const axis=ids=>{const L=leans.filter(x=>ids.includes(x.id)&&x.lean!=null);
     return {value:L.length>=COMPASS_MIN_ISSUES?Math.round(L.reduce((t,x)=>t+x.lean,0)/L.length):null,issues:L.map(x=>({id:x.id,label:x.label,lean:x.lean,n:x.n}))};};

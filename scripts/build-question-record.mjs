@@ -18,12 +18,18 @@
 // only to vote it down (as with the 2019 Senate vote on the Green New Deal), so the sponsorship doesn't count.
 // Writes .local/question-record.json: {built, questions: {question: {bills: {bill: {side, why, title}}}},
 // people: {bioguide: {question: [[bill, kind, date, side]]}}}, and prints how many sitting members each question reaches.
+// For the site, for everyone it shows (both chambers and the reviewed profiles), it also writes:
+//   public/question-stances.json   each person's points on each question, one credit per bill
+//                                  (public/question-scores.js recordPoints): [a, b, firstA, lastA, firstB, lastB]
+//   public/question-evidence/<bioguide>.json   their items on each question, [[bill, kind, date, side]]
+//   public/question-meta.json      each coded bill's side, reason and title, by question
 //   npm run bills:record
 import fs from 'node:fs';
 import path from 'node:path';
 import readline from 'node:readline';
 import {fileURLToPath} from 'node:url';
 import {voteviewFiles} from '../src/voteview.mjs';
+import {recordPoints,QFORMULA} from '../public/question-scores.js';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 // The votes that decide a bill, by Voteview's vote_question.
@@ -109,7 +115,9 @@ async function main(){
       }
     }
   }
-  fs.writeFileSync(path.join(ROOT,'.local','question-record.json'),JSON.stringify({built:new Date().toISOString().slice(0,10),questions,people}));
+  const built=new Date().toISOString().slice(0,10);
+  fs.writeFileSync(path.join(ROOT,'.local','question-record.json'),JSON.stringify({built,questions,people}));
+  writePublic({built,questions,people,read});
   // How far each question reaches among sitting members.
   const sitting=[...read('public/senate.json').senators,...read('public/house.json').members].map(m=>m.bioguide).filter(Boolean);
   console.log(`${votesUsed} deciding votes used, ${votesSkipped} procedural votes left out.`);
@@ -119,5 +127,25 @@ async function main(){
     const sides=Q.questions.find(x=>x.id===q)?.sides||['A','B'];
     console.log(`${q}: ${Object.keys(questions[q].bills).length} bills; ${reached.length} of ${sitting.length} sitting members have a record (${a} lean ${sides[0]}, ${b} lean ${sides[1]}).`);
   }
+}
+// The site's files (see the top of this file), for the people it shows.
+function writePublic({built,questions,people,read}){
+  const R=read('public/research.json'),shown=new Set(),profiled=new Set([...R.members,...(R.cands||[]),...(R.featured||[])].map(p=>p?.bioguide).filter(Boolean));
+  for(const p of [...read('public/senate.json').senators,...read('public/house.json').members,...R.members,...(R.cands||[]),...(R.featured||[])])if(p?.bioguide)shown.add(p.bioguide);
+  const dir=path.join(ROOT,'public','question-evidence');fs.rmSync(dir,{recursive:true,force:true});fs.mkdirSync(dir,{recursive:true});
+  const stances={};let files=0;
+  for(const bg of [...shown].sort()){const pq=people[bg];if(!pq)continue;const st={},ev={};
+    for(const [q,items] of Object.entries(pq)){
+      const p=recordPoints(items.map(([ref,kind,date,side])=>({ref,kind,date,side})));
+      // (the vote dates only for the reviewed profiles, whose statements the contradiction rule checks)
+      if(p.a||p.b)st[q]=profiled.has(bg)?[p.a,p.b,p.firstA,p.lastA,p.firstB,p.lastB]:[p.a,p.b];
+      ev[q]=items.slice().sort((x,y)=>String(y[2]).localeCompare(String(x[2])));
+    }
+    stances[bg]=st;fs.writeFileSync(path.join(dir,`${bg}.json`),JSON.stringify(ev));files++;}
+  const coded=Object.fromEntries(Object.keys(questions).map(q=>[q,Object.keys(questions[q].bills).length]).filter(([,n])=>n));
+  fs.writeFileSync(path.join(ROOT,'public','question-stances.json'),JSON.stringify({about:'Each person\'s points on each alignment question from the bills, amendments and roll calls coded to it (data/question-bills.json), one credit per bill: {bioguide: {question: [points for sides[0], points for sides[1], and, for the reviewed profiles, the first and latest vote toward sides[0] and toward sides[1]]}}. coded: how many bills, amendments and roll calls are coded to each question. Written by scripts/build-question-record.mjs; the stances, leans and matches are worked out in public/question-scores.js.',formula:QFORMULA,built,coded,people:stances}));
+  const meta={};for(const [q,{bills}] of Object.entries(questions))meta[q]=Object.fromEntries(Object.entries(bills).map(([id,b])=>[id,[b.side,b.why,b.title]]));
+  fs.writeFileSync(path.join(ROOT,'public','question-meta.json'),JSON.stringify({about:'Each coded bill, amendment or roll call on each alignment question: [side, why, title]. Written by scripts/build-question-record.mjs.',built,questions:meta}));
+  console.log(`Site files: stances for ${Object.keys(stances).length} people, ${files} evidence files, ${Object.keys(coded).length} coded questions.`);
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e.message);process.exit(1);});

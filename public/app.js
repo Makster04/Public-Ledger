@@ -21,6 +21,7 @@ import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
+import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
@@ -38,6 +39,20 @@ const toneAttrs=(value,direction='neutral')=>{
 // filters, races, comparisons and score pages, which cover the 2026 ballot.
 const FEATURED=DATA.featured||[];
 const byId=Object.fromEntries(ALL.concat(FEATURED).map(s=>[s.id,s]));
+// The alignment questions (public/questions.json) and everyone's points on them (public/question-stances.json), behind
+// the Ideology lean, the compass and Your match. QISS has each question in the shape the alignment code reads: A and B
+// are its two sides, group its category.
+const QUESTIONS=window.QUESTIONS||{questions:[],categories:[]},QSTANCES=window.QSTANCES||{people:{},coded:{}};
+const QCTX={list:QUESTIONS.questions,categories:QUESTIONS.categories};
+const QISS=QUESTIONS.questions.map(q=>({...q,label:q.q,A:q.sides[0],B:q.sides[1],statement:q.q,group:q.cat})),QISSBY=Object.fromEntries(QISS.map(i=>[i.id,i]));
+const QCODED=QSTANCES.coded&&!Array.isArray(QSTANCES.coded)?QSTANCES.coded:{};
+// A person's stance on every question (public/question-scores.js personStances), worked out once.
+const qstOf=p=>{if(!p)return {};if(!p.qst)p.qst=personStances(QSTANCES.people?.[p.bioguide]||null,p.evidence);return p.qst;};
+const withQ=p=>{qstOf(p);return p;};
+// Their items on each question and what each bill is, read when a tab shows them.
+const QEV={};let QMETA=null;
+const qEvidence=s=>!s?.bioguide||!QSTANCES.people?.[s.bioguide]?Promise.resolve(null):(QEV[s.bioguide]||=fetch(`/question-evidence/${s.bioguide}.json`,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null));
+const qMeta=()=>QMETA||=fetch('/question-meta.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(j=>j?.questions||{}).catch(()=>({}));
 // Every sitting senator (public/senate.json, from scripts/build-senate.mjs). Those without a reviewed profile get a basic
 // one: their place in the Senate, their committees and the records the daily refresh collects, without grades.
 const SENATE=(window.SENATE||[]).map(x=>({...x,chamber:'S',ideo:poolIdeo(DATA.pools?.S,x.bioguide,x.party)}));
@@ -951,10 +966,10 @@ function sectionSwitch(s,items,active){
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
 // The same context the monthly recalculation scores with (public/scoring.js sixContext).
-const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS});
+const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS,questions:QCTX});
 const GROUP_RATINGS=window.GROUP_RATINGS||{groups:{},people:{}};
 const sixCache=new Map();
-const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(s,SIX_CTX));return sixCache.get(s.id);};
+const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(withQ(s),SIX_CTX));return sixCache.get(s.id);};
 const SIX_BY=Object.fromEntries(SIX.map(x=>[x.key,x]));
 const officeLabel=s=>s.office?'PRESIDENT':s.cand?(s.chamber==='H'?'HOUSE CANDIDATE':'SENATE CANDIDATE'):s.chamber==='S'?'SENATOR':'REPRESENTATIVE';
 const placeLabel=s=>s.chamber==='H'&&s.district?`${s.stateName||s.state} · ${s.district}`:(s.stateName||s.state||'United States');
@@ -1051,24 +1066,24 @@ function leanScale(s,x){
 // Everyone in a chamber, placed once a visit: their full profile when there is one, else their basic profile.
 const COMPASS_BY={};
 function chamberCompass(ch){
-  if(!COMPASS_BY[ch])COMPASS_BY[ch]=(ch==='H'?HOUSE:ch==='S'?SENATE:[]).map(x=>{const c=compassOf(byId[x.id]||BASIC[x.id]||x,DATA.issues);return {id:x.id,name:x.name,short:x.short,party:x.party,state:x.state,x:c.x,y:c.y};});
+  if(!COMPASS_BY[ch])COMPASS_BY[ch]=(ch==='H'?HOUSE:ch==='S'?SENATE:[]).map(x=>{const c=compassOf(withQ(byId[x.id]||BASIC[x.id]||x),QUESTIONS.questions);return {id:x.id,name:x.name,short:x.short,party:x.party,state:x.state,x:c.x,y:c.y};});
   return COMPASS_BY[ch];
 }
 function compassBlock(s){
-  const c=compassOf(s,DATA.issues),placed=c.x!=null&&c.y!=null;
-  const line=(label,v,n,axis)=>`<span><b class="cmp-k">${label}:</b> ${v==null?`<span class="muted">${compassWord(v,axis)}</span>`:`<b class="num"${leanStyle(v)}>${signedLean(v)}</b> ${compassWord(v,axis)}`} <span class="muted">(${n} issue${n===1?'':'s'})</span></span>`;
+  const c=compassOf(withQ(s),QUESTIONS.questions),placed=c.x!=null&&c.y!=null;
+  const line=(label,v,n,axis)=>`<span><b class="cmp-k">${label}:</b> ${v==null?`<span class="muted">${compassWord(v,axis)}</span>`:`<b class="num"${leanStyle(v)}>${signedLean(v)}</b> ${compassWord(v,axis)}`} <span class="muted">(${n} question${n===1?'':'s'})</span></span>`;
   const chamber=s.chamber==='H'||s.chamber==='S';
   return `<section class="cmp-card" id="i-compass"><h2>Political compass</h2>
     <p class="cmp-nums">${line('ECONOMIC',c.x,c.nx,'econ')}<span class="cmp-sep"> · </span>${line('SOCIAL',c.y,c.ny,'social')}</p>
     <div class="cmp-box"></div>
-    ${placed?'':`<p class="small muted" style="margin:6px 0 0">Not on the compass yet: it needs a lean on at least one economic and one social issue.</p>`}
+    ${placed?'':`<p class="small muted" style="margin:6px 0 0">Not on the compass yet: it needs a lean on at least one economic and one social question.</p>`}
     ${chamber?`<div class="cmp-legend small"><span><i class="cmp-dot cmp-D"></i>Democrats</span><span><i class="cmp-dot cmp-R"></i>Republicans</span><span><i class="cmp-dot cmp-I"></i>Independents</span><span class="muted">Bigger bubble = more members</span></div>`:''}</section>`;
 }
 // Drawn at the size it's shown. Beside the position card, it's sized so the left column (the compass and DW-NOMINATE)
 // ends where the right one (the position card and its sources) does, never under 400 pixels; stacked, the column's width.
 function mountCompass(pane,s){
   const card=pane.querySelector('#i-compass'),box=card?.querySelector('.cmp-box');if(!box)return;
-  const place=compassOf(s,DATA.issues),list=chamberCompass(s.chamber),portrait=PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'';
+  const place=compassOf(withQ(s),QUESTIONS.questions),list=chamberCompass(s.chamber),portrait=PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'';
   const draw=size=>{box.innerHTML=compassSvg({me:s,place,list,size,portrait});};
   const fit=()=>{
     if(!box.isConnected)return;
@@ -1080,12 +1095,31 @@ function mountCompass(pane,s){
   };
   fit();resizers.push(fit);document.fonts?.ready?.then(fit);
 }
+function qRecordHTML(s,q,ev,meta,want){
+  const st=qstOf(s)[q.id]||null,rows=recordRows(ev?.[q.id]||[],meta?.[q.id]||{}),mark=side=>want==null?'·':side===want?'✓':'✕';
+  const cls=side=>want==null?'':side===want?'yes':'no';
+  const li=r=>`<li class="evi"><span class="mk ${cls(r.side)}">${mark(r.side)}</span><div><div><span class="chip ghost">${esc(r.what)}</span> <b>${esc(r.title)}</b> <span class="mono muted">${esc(r.date||'date not given')}</span></div>
+    <div class="small">Counts toward "${esc(q.sides[r.side])}"${r.credited?`: <b>${r.pts} point${r.pts===1?'':'s'}</b>`:': counted once, under another item on the same bill'}</div>
+    <div class="small muted">${r.why?`<b>What it does:</b> ${esc(r.why)} `:''}${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>`:''}${r.rollUrl?` · <a href="${esc(r.rollUrl)}" target="_blank" rel="noopener">roll call ↗</a>`:''}</div></div></li>`;
+  const carried=(st?.carried?.items||[]).map(it=>`<li class="evi"><span class="mk ${cls(it.side)}">${mark(it.side)}</span><div><div><span class="chip ghost">${esc(TYPEL[{state:'state_vote',act:'official_act',vote:'vote',s:'sponsored',c:'cosponsored'}[it.kind]]||it.kind)}</span> <b>${esc(it.title||'')}</b> <span class="mono muted">${esc(it.date||'date not given')}</span></div><div class="small">Counts toward "${esc(q.sides[it.side])}": <b>${it.pts} point${it.pts===1?'':'s'}</b></div><div class="small muted">${esc(it.why||'')} ${it.src?.u?`<a href="${esc(it.src.u)}" target="_blank" rel="noopener">${esc(it.src.t||'source')} ↗</a>`:''}</div></div></li>`);
+  const stmts=(st?.statements||[]).map(x=>`<li class="evi"><span class="mk ${x.status==='cancelled'?'':cls(x.side)}">${x.status==='cancelled'?'–':mark(x.side)}</span><div><div><span class="chip ghost">Statement</span> <b>${esc(x.title||'')}</b> <span class="mono muted">${esc(x.date||'date not given')}</span></div><div class="small">${x.status==='cancelled'?`<b>Not counted:</b> said "${esc(q.sides[x.side])}", then a later vote on this question went the other way.`:x.status==='changed'?`<b>Changed position:</b> an earlier vote went the other way; this statement counts toward "${esc(q.sides[x.side])}": 3 points.`:`Counts toward "${esc(q.sides[x.side])}": 3 points`}</div><div class="small muted">${esc(x.why||'')} ${x.src?.u?`<a href="${esc(x.src.u)}" target="_blank" rel="noopener">${esc(x.src.t||'source')} ↗</a>`:''}</div></div></li>`);
+  const all=[...stmts,...carried,...rows.map(li)];
+  return all.length?`<ul class="evl">${all.join('')}</ul>`:`<p class="small muted" style="margin:4px 0 0">No vote, bill or statement on this question was found for ${esc(s.short||s.name)}.</p>`;
+}
+function qLine(q,st){const s=st?.s??null;return `<b>${esc(stanceWord(s,q.sides))}</b>${st?.total?` <span class="muted small">· ${st.a} point${st.a===1?'':'s'} for "${esc(q.sides[0])}", ${st.b} for "${esc(q.sides[1])}"${s==null?` (a stance needs ${MIN_POINTS})`:''}</span>`:''}`;}
+function mountQCats(s,host,x){
+  if(!host)return;const st=qstOf(s);
+  host.innerHTML=`<p class="small muted">Open a category for its questions, the stance on each and every item behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary><b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${c.questions.filter(q=>q.s!=null||st[q.id]?.total).map(q=>`<div class="alissue" data-q="${esc(q.id)}"><div class="row" style="justify-content:space-between"><div><b>${esc(q.q)}</b></div><div>${qLine(q,st[q.id])}${q.lean==null?'':` <span class="muted small">· lean ${signed(q.lean)}</span>`}</div></div><div class="q-ev small muted">Loading the record…</div></div>`).join('')}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
+  const fill=async d=>{if(d.dataset.done)return;d.dataset.done='1';const [ev,meta]=await Promise.all([qEvidence(s),qMeta()]);
+    d.querySelectorAll('.alissue[data-q]').forEach(el=>{const q=QISSBY[el.dataset.q];el.querySelector('.q-ev').outerHTML=qRecordHTML(s,q,ev,meta,null);});bindTips(d);};
+  host.querySelectorAll('details.q-cat').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)fill(d);}));
+}
 function paneIdeology(s,pane){
   const x=sixOf(s).ideology,max=100;
-  const issueRows=x.issues.map(i=>{
-    const n=i.n?`${i.n} ${i.basis==='statements'?`statement${i.n===1?'':'s'} (half weight)`:`vote${i.n===1?'':'s'} or bill${i.n===1?'':'s'}`}`:'No record yet';
-    const pos=i.cross?(i.n?`<span class="muted">Splits both parties</span>`:'—'):i.lean==null?'<span class="muted">No record yet</span>':`<b>${signed(i.lean)}</b> <span class="muted">${esc(leanLabel(i.lean))}</span>`;
-    return [`<a href="#${s.id}-ideology" data-issue="${esc(i.id)}">${esc(i.label)}</a>${i.cross&&i.note?`<div class="small muted">${esc(i.note)}</div>`:''}`,pos,i.lean==null?'':`<span class="st-lean${i.lean<0?' neg':''}" style="--x:${leanPos(i.lean)}%" aria-hidden="true"><i></i></span>`,n];
+  const issueRows=x.issues.map(c=>{
+    const n=c.onRecord?`${c.n} of ${c.questions.length} question${c.questions.length===1?'':'s'} placed${c.onRecord>c.n?` (and ${c.onRecord-c.n} with no left–right side)`:''}`:'No record yet';
+    const pos=c.lean==null?(c.onRecord?'<span class="muted">No left–right question on record</span>':'<span class="muted">No record yet</span>'):`<b>${signed(c.lean)}</b> <span class="muted">${esc(leanLabel(c.lean))}</span>`;
+    return [`<a href="#${s.id}-ideology" data-qcat="${esc(c.id)}">${esc(c.label)}</a>`,pos,c.lean==null?'':`<span class="st-lean${c.lean<0?' neg':''}" style="--x:${leanPos(c.lean)}%" aria-hidden="true"><i></i></span>`,n];
   });
   const byIssue=ratingGroups(s),cells=list=>list.length?list.map(x=>ratingCell(s,x.g.org)).join('<br>'):'<span class="muted">None tracked</span>';
   const issues=[...RATING_ISSUES,...Object.keys(byIssue).filter(i=>!RATING_ISSUES.includes(i))].filter(i=>byIssue[i]&&(byIssue[i].conservative.length||byIssue[i].liberal.length));
@@ -1095,25 +1129,26 @@ function paneIdeology(s,pane){
   const position=`<div class="st-ideo-pos"><div class="st-ideo-n">${x.lean==null?'<b>Not placed yet</b>':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b><span>${esc(x.label)}</span>`}</div>${leanScale(s,x)}${x.lean==null?`<p class="small">${esc(x.why)}.</p>`:''}</div>`;
   const checks=`<div class="st-checks"><div class="st-check"><h4>DW-NOMINATE <span class="muted small">(Voteview)</span></h4>${x.dw==null?'<p class="small muted">No score: it covers members of Congress, from their roll-call votes.</p>':`<div class="st-check-n">${s.ideo.dim1.toFixed(3)} → <b>${signed(x.dw)}</b></div><p class="small muted">Their career score, on the same scale. It rarely passes ±80, so it reads closer to the middle than the issue leans.</p>`}</div>
     <div class="st-check"><h4>Ratings lean</h4>${x.ratings.lean==null?'<p class="small muted">Not read yet: the groups\' scorecards are read from their own sites once a year.</p>':`<div class="st-check-n"><b>${signed(x.ratings.lean)}</b></div>`}</div></div>`;
-  const measures=stTable(['Measure','Lean','Based on'],[['Issue leans (overall)',x.lean==null?'—':`<b>${signed(x.lean)}</b>`,`${x.scored} left–right issue${x.scored===1?'':'s'}`],['Ratings lean',x.ratings.lean==null?'<span class="muted">not read yet</span>':`<b>${signed(x.ratings.lean)}</b>`,`${x.ratings.rows.length} group rating${x.ratings.rows.length===1?'':'s'}`],['DW-NOMINATE',x.dw==null?'—':`<b>${signed(x.dw)}</b>`,'Voteview, career']],'st-measures');
+  const measures=stTable(['Measure','Lean','Based on'],[['Category leans (overall)',x.lean==null?'—':`<b>${signed(x.lean)}</b>`,`${x.scored} categor${x.scored===1?'y':'ies'} of questions`],['Ratings lean',x.ratings.lean==null?'<span class="muted">not read yet</span>':`<b>${signed(x.ratings.lean)}</b>`,`${x.ratings.rows.length} group rating${x.ratings.rows.length===1?'':'s'}`],['DW-NOMINATE',x.dw==null?'—':`<b>${signed(x.dw)}</b>`,'Voteview, career']],'st-measures');
   pane.innerHTML=stFrame(s,'ideology',{
     res:{position,badge:x.lean==null?'Not placed yet':`${signed(x.lean)} · ${x.label}`},breakdown:measures,needsTitle:'What we need to place them',
-    sources:['<b>Votes:</b> roll calls in Congress, and state votes for state legislators.','<b>Bills:</b> bills they sponsored and cosponsored.','<b>Statements:</b> speeches, press releases and campaign positions, counted half and only on issues with no votes.','<b>Each vote\'s side:</b> reviewed and cited on each issue (which side of the question a Yea takes).','<b>Voteview:</b> DW-NOMINATE.','<b>Group scorecards:</b> each group\'s own published ratings.'],
+    sources:['<b>Votes:</b> roll calls in Congress, and state votes for state legislators.','<b>Bills:</b> bills they sponsored and cosponsored.','<b>Statements:</b> speeches, press releases and campaign positions, 3 points each, cancelled when a later vote on the question went the other way.','<b>Each vote\'s side:</b> coded and cited on each question (which side of the question a Yea takes).','<b>Voteview:</b> DW-NOMINATE.','<b>Group scorecards:</b> each group\'s own published ratings.'],
     needs:x.needs,
     notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
-    evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed.</p>${ratings}
-      <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
+    evidence:`<h4 class="st-sub">Lean on each category</h4>${stTable(['Category','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}<div class="q-cats" id="q-cats"><p class="small muted">Open a category for its questions and the record behind each.</p></div>${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed.</p>${ratings}
+      <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each question with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
     lead:`${compassBlock(s)}${ideoBlock(s,'ideo2',{compact:true})}`,
     shown:`<div id="rec-ideo"><div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
-    calc:`${stF('Issue lean = 100 × (conservative items − liberal items) ÷ all items')}${stF('Overall lean = average of the issue leans on the left–right issues (at least 3)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}
-      <p class="small">An item is a vote, bill, cosponsorship or official act, one per bill; statements count only on an issue with no action. Letter grades convert A 100, B 75, C 50, D 25, F 0.</p>`,
-    assumptions:['Votes, bills and cosponsorships set the issue positions.','Statements count half, and only when there are no votes on that issue.','Each vote\'s side on its issue is reviewed and cited; the issue says which side is the liberal one.','Issues that split both parties (tariffs, Ukraine aid, war powers, Jan. 6, infrastructure, ethics) are shown, not averaged into the overall lean.','Group ratings are read from each group\'s own site once a year and shown as published, with the year and a link. Groups whose sites block scripts or publish only images are left out rather than entered by hand. Vote Smart isn\'t used: its ratings cost $350 a month.','DW-NOMINATE comes from Voteview.'],
+    calc:`${stF('Stance on a question = (points for one side − points for the other) ÷ all points, from at least 3 points')}${stF('Question lean = 100 × the stance, with the conservative side as plus')}${stF('Category lean = average of its question leans')}${stF('Overall lean = average of the category leans (at least 3 categories)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}
+      <p class="small">Points: a statement 3, a sponsored bill or amendment or an official act 1.5, a cosponsorship or a vote 1, and one credit per bill (the higher value, once). With fewer than 3 points a question reads "Not on record". Letter grades convert A 100, B 75, C 50, D 25, F 0.</p>`,
+    assumptions:['Votes, bills, amendments and cosponsorships set the stance on each question.','A statement counts 3 points, unless a later vote on the question went the other way.','Each vote\'s side on its issue is reviewed and cited; the issue says which side is the liberal one.','Questions with no liberal side (they split both parties, or have no left–right side) are shown and count in Your match, but not in the lean.','Group ratings are read from each group\'s own site once a year and shown as published, with the year and a link. Groups whose sites block scripts or publish only images are left out rather than entered by hand. Vote Smart isn\'t used: its ratings cost $350 a month.','DW-NOMINATE comes from Voteview.'],
     method:'ideology'});
   alignInto(s,pane.querySelector('#m-al'));
   mountIdeo('ideo2',s);mountKV('kv2',s);mountCompass(pane,s);
   recordInto(s,pane.querySelector('#legislation-record'));
-  pane.querySelectorAll('[data-issue]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=pane.querySelector('#m-al');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
+  mountQCats(s,pane.querySelector('#q-cats'),x);
+  pane.querySelectorAll('[data-qcat]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const d=pane.querySelector(`#q-cats details[data-cat="${a.dataset.qcat}"]`);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}}));
   bindTips(pane);
 }
 
@@ -2079,19 +2114,15 @@ function ovOutside(s,here,wide=false){
 // 3. issue by issue against the viewer's own choices; no evidence is left blank, never scored as a mismatch
 function ovAlign(s){
   const r=scoreFor(s), T='How they compare with your choices';
-  if(!r.nChosen)return ovCard('Your issues',T,'Issue by issue, never a single score',`<p class="small" style="margin:0 0 6px">Pick your positions on up to ${ISS.length} issues in My alignment to see where ${esc(s.short)}'s record matches you.</p>${points([['Evidence available',esc(evidenceMix(s))]],'small')}<a class="cta" href="#align" style="margin-top:10px">Choose my issues</a>`,'');
-  const kind=x=>x.status==='none'?'none':x.agree===1?'match':x.agree===0?'differ':'mixed';
+  if(!r.nChosen)return ovCard('Your positions',T,'Question by question, never a single score',`<p class="small" style="margin:0 0 6px">Answer any of the ${QISS.length} questions in My alignment to see where ${esc(s.short)}'s record matches you.</p>${points([['On record',esc(evidenceMix(s))]],'small')}<a class="cta" href="#align" style="margin-top:10px">Choose my positions</a>`,'');
+  const kind=x=>x.status==='none'?'none':x.agree>=0.8?'match':x.agree<=0.2?'differ':'mixed';
   const SYM={match:'✓',differ:'✕',mixed:'◐',none:''};
   const rows=r.rows.map(x=>({x,k:kind(x)}));
   const n=k=>rows.filter(y=>y.k===k).length;
-  const txt=({x,k})=>{
-    if(k==='none')return 'No evidence';
-    const lead=k==='match'?'Matches you':k==='differ'?'Doesn’t match':`Mixed: ${x.match} of ${x.n} match`;
-    return lead+(x.status==='stated'?' <span class="muted">(stated position only)</span>':'');
-  };
-  const body=`<div class="row" style="margin-bottom:6px"><span class="chip good">✓ ${n('match')} match</span><span class="chip crit">✕ ${n('differ')} differ</span>${n('mixed')?`<span class="chip warn">◐ ${n('mixed')} mixed</span>`:''}<span class="chip ghost">${n('none')} no evidence</span></div>
-    <ul class="ov-iss">${rows.map(y=>`<li class="${y.k}"><span class="ov-mk ${y.k}" aria-hidden="true">${SYM[y.k]}</span><span>${esc(y.x.i.label)}</span><span class="r">${txt(y)}</span></li>`).join('')}</ul>`;
-  return ovCard('Your issues',T,`Your ${r.nChosen} chosen issue${r.nChosen===1?'':'s'}. An issue with no evidence is left blank, not counted as a mismatch.`,body,`Not a rating of the candidate. <a href="#${s.id}-match">Evidence for every issue →</a>`);
+  const txt=({x,k})=>k==='none'?'Not on record':k==='match'?`Matches you (${esc(x.word)})`:k==='differ'?`Doesn’t match (${esc(x.word)})`:`Mixed: ${esc(x.word)}`;
+  const body=`<div class="row" style="margin-bottom:6px"><span class="chip good">✓ ${n('match')} match</span><span class="chip crit">✕ ${n('differ')} differ</span>${n('mixed')?`<span class="chip warn">◐ ${n('mixed')} mixed</span>`:''}<span class="chip ghost">${n('none')} not on record</span></div>
+    <ul class="ov-iss">${rows.map(y=>`<li class="${y.k}"><span class="ov-mk ${y.k}" aria-hidden="true">${SYM[y.k]}</span><span>${esc(y.x.q.q)}</span><span class="r">${txt(y)}</span></li>`).join('')}</ul>`;
+  return ovCard('Your positions',T,`Your ${r.nChosen} answered question${r.nChosen===1?'':'s'}. A question not on their record is left blank, not counted as a mismatch.`,body,`Not a rating of the candidate. <a href="#${s.id}-match">Evidence for every question →</a>`);
 }
 // ---------- key-vote ideology: bills marked liberal or conservative, scored from how each person voted ----------
 const kvCache=new Map();
@@ -2530,40 +2561,51 @@ function recordKicker(s){
 const ISS=DATA.issues, ISSBY=Object.fromEntries(ISS.map(i=>[i.id,i]));
 const RECT=ACTION_TYPES;
 const TYPEL=DATA.typeLabel;
-const WLAB={1:'Low',2:'Medium',3:'High'};
-const ALKEY='crc-align-v1';
-let PROF=(()=>{try{const v=JSON.parse(localStorage.getItem(ALKEY)||'null');if(v&&v.issues)return v}catch(e){}return {issues:{}}})();
+const WLAB=Object.fromEntries(IMPORTANCE);
+const ALKEY='crc-align-v2';
+// Your answers, by question: {side: 'A' (sides[0]) or 'B', w: importance 1–5} or {neutral: true} (skipped). Answers
+// saved before the questions replaced the 16 issues carry over to the question that took each one over (importance
+// Low 2, Medium 3, High 5).
+let PROF=(()=>{try{const v=JSON.parse(localStorage.getItem(ALKEY)||'null');if(v&&v.issues)return v}catch(e){}
+  try{const old=JSON.parse(localStorage.getItem('crc-align-v1')||'null'),out={issues:{}};
+    for(const [k,p] of Object.entries(old?.issues||{})){const m=LEGACY_ISSUES[k];if(!m||!p?.side||!QISSBY[m[0]])continue;out.issues[m[0]]={side:(p.side==='A'?m[1]:1-m[1])===0?'A':'B',w:({1:2,2:3,3:5})[p.w]||3};}
+    return out;}catch(e){}return {issues:{}}})();
 function saveProf(){try{localStorage.setItem(ALKEY,JSON.stringify(PROF))}catch(e){}}
-const chosenIssues=()=>ISS.filter(i=>PROF.issues[i.id]&&PROF.issues[i.id].side&&PROF.issues[i.id].w>0);
+const chosenIssues=()=>QISS.filter(i=>PROF.issues[i.id]&&PROF.issues[i.id].side&&PROF.issues[i.id].w>0);
 // Example starting points: labeled by their content only. Every choice can be changed.
 const EXAMPLES=[
-  {name:'Health coverage, abortion access, climate',set:{health:['A',3],abortion:['A',3],climate:['A',2],labor:['A',1],tariffs:['B',1]}},
-  {name:'Lower taxes, immigration enforcement, gun rights',set:{taxes:['B',3],immigration:['A',3],guns:['B',2],voting:['A',2],vouchers:['A',1]}},
-  {name:'Ukraine aid, war-powers limits, ending Canada tariffs',set:{ukraine:['A',3],warpowers:['A',2],tariffs:['B',2],jan6:['A',1],infra:['A',1]}},
+  {name:'Health coverage, abortion access, climate',set:{'affordable-care-act':['A',5],abortion:['B',5],'climate-regulations':['A',3],'union-rights':['A',2],tariffs:['B',2]}},
+  {name:'Lower taxes, border security, gun rights',set:{'tax-the-rich':['B',5],'border-security':['A',5],'gun-purchase-limits':['B',3],'voter-id':['A',3],'school-vouchers':['A',2]}},
+  {name:'Ukraine aid, war-powers limits, fewer tariffs',set:{'ukraine-aid':['A',5],'war-powers':['A',3],tariffs:['B',3],'reject-electoral-votes':['B',2],'chips-industry':['A',2]}},
 ];
+// Your match with one record (public/question-scores.js matchFrom): agreement on each question you answered that is on
+// their record, weighted by its importance. rows: [{q, i (the question), pr (your answer), s, word, agree, status}].
 function scoreFor(s){
   const ch=chosenIssues();
-  const r=matchScore(ch.map(i=>({id:i.id,side:PROF.issues[i.id].side,w:PROF.issues[i.id].w})),s.evidence);
-  r.rows.forEach((x,k)=>{x.i=ch[k];x.pr=PROF.issues[ch[k].id];});
+  const r=matchFrom(Object.fromEntries(ch.map(i=>[i.id,{side:PROF.issues[i.id].side==='A'?0:1,w:PROF.issues[i.id].w}])),qstOf(s),QUESTIONS.questions);
+  r.rows.forEach(x=>{x.i=QISSBY[x.q.id];x.pr=PROF.issues[x.q.id];});
   return r;
 }
 function scoreBadge(r){
   if(!r.nChosen)return '<span class="muted">Set your priorities</span>';
-  if(r.score==null)return `<span class="chip ghost" data-tip="Evidence covers ${r.nCov} of your ${r.nChosen} issues (${Math.round(r.covW/r.totW*100)||0}% of your weight). A score needs at least ${r.need} issues and half your weight.">Insufficient data</span>`;
+  if(r.score==null)return `<span class="chip ghost" data-tip="Their record covers ${r.nCov} of your ${r.nChosen} answered questions (${Math.round(r.covW/r.totW*100)||0}% of your importance). A match needs at least ${r.need} and half your importance.">Not on record</span>`;
   return `<span class="alscore"><b>${r.score}%</b> match</span>`;
 }
 function evidenceMix(s){
-  const c={};Object.values(s.evidence||{}).flat().forEach(e=>{const k=RECT.has(e.type)?(e.type==='senate_vote'||e.type==='house_vote'||e.type==='vote'?'votes':e.type==='state_vote'?'state votes':e.type==='sponsored'?'bills sponsored':e.type==='cosponsored'?'bills cosponsored':'official actions'):'statements';c[k]=(c[k]||0)+1});
-  return Object.entries(c).map(([k,n])=>`${n} ${k}`).join(', ')||'no coded evidence';
+  const n=Object.values(qstOf(s)).filter(x=>x.s!=null).length;
+  return n?`a stance on ${n} of the ${QISS.length} questions`:'no stance on the questions yet';
 }
 function sideLabel(i,side){return side==='A'?ISSBY[i].A:ISSBY[i].B}
+function qSide(i,side){const q=QISSBY[i];return q?(side==='A'?q.A:q.B):'';}
+// Your positions, on the questions with coded bills and votes (the rest are in My alignment).
 function builderHTML(){
   return `<div class="albuild">
     <div class="row" style="margin-bottom:10px"><span class="small muted">Start from an example (you can change every choice):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
-    ${ISS.map(i=>{const pr=PROF.issues[i.id]||{};return `<div class="alrow" data-i="${i.id}">
-      <div class="alq"><b>${esc(i.label)}</b><small>${esc(i.q)}</small></div>
-      <div class="seg alside" role="group" aria-label="${esc(i.label)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button><button data-s="" class="${!pr.side?'active':''}">Skip</button></div>
-      <label class="alw small">Importance <select data-w aria-label="${esc(i.label)}: importance">${[1,2,3].map(w=>`<option value="${w}" ${(pr.w||2)===w?'selected':''}>${WLAB[w]}</option>`).join('')}</select></label>
+    <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>.</p>
+    ${QISS.filter(i=>QCODED[i.id]).map(i=>{const pr=PROF.issues[i.id]||{};return `<div class="alrow" data-i="${i.id}">
+      <div class="alq"><b>${esc(i.q)}</b></div>
+      <div class="seg alside" role="group" aria-label="${esc(i.q)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button><button data-s="" class="${!pr.side?'active':''}">Skip</button></div>
+      <label class="alw small">Importance <select data-w aria-label="${esc(i.q)}: importance">${IMPORTANCE.map(([w,l])=>`<option value="${w}" ${(pr.w||3)===w?'selected':''}>${l}</option>`).join('')}</select></label>
     </div>`}).join('')}
   </div>`;
 }
@@ -2575,29 +2617,33 @@ function bindBuilder(root,onChange){
   });
   root.querySelectorAll('[data-ex]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.ex;PROF={issues:{}};if(k!=='clear')Object.entries(EXAMPLES[+k].set).forEach(([i,[s,w]])=>PROF.issues[i]={side:s,w});saveProf();onChange(true);}));
 }
-const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What this is','A comparison between the positions <i>you</i> pick and each candidate\'s documented record.'],['What it is not','A rating of how good a candidate is. It covers only issues with documented evidence.'],['Evidence used','Recorded votes, bills and official acts come first. Stated positions are used only for an issue with no recorded action, and they are labeled.'],['When a score shows','Evidence must cover at least three of your issues and half of your total importance. Otherwise you see "Insufficient data", never a zero.']])}<p style="margin:6px 0 0"><a href="#method">How it is calculated</a></p></div>`;
+const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What this is','A comparison between the positions <i>you</i> pick and each candidate\'s documented record.'],['What it is not','A rating of how good a candidate is. It covers only the questions on their record.'],['Evidence used','Votes, bills, amendments and cosponsorships on each question, and statements (3 points each, not counted when a later vote went the other way), one credit per bill.'],['When a score shows','Their record has to cover at least three of the questions you answered (all of them, if you answered fewer) and at least half of your total importance; a question is on their record with at least 3 points on it. Otherwise you see "Not on record", never a zero.']])}<p style="margin:6px 0 0"><a href="#method">How it is calculated</a></p></div>`;
 // ---------- My alignment: a five-point quiz over the issue list. Each answer is saved as a side and an importance:
 // strongly agree/disagree = importance 3, agree/disagree = 2, neutral = answered but not counted. ----------
-const AL_GROUPS=[['econ','Economy & health','$'],['rights','Rights & social','♥'],['imm','Immigration & elections','⛨'],['foreign','Foreign policy','◍'],['env','Environment','❦'],['gov','Ethics & money in politics','⚖']];
+// The categories (public/questions.json), with a color from the earlier groups and an icon.
+const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:'econ',transportation:'econ',social:'rights',criminal:'rights',education:'rights',domestic:'rights',immigration:'imm',electoral:'imm',foreign:'foreign','national-security':'foreign',environmental:'env',science:'env',technology:'gov',governance:'gov'};
+const AL_ICON={economic:'$',healthcare:'✚',housing:'⌂',infrastructure:'⛫',transportation:'⛟',social:'♥',criminal:'⚑',education:'✎',domestic:'⌂',immigration:'⛯',electoral:'☑',foreign:'◍','national-security':'⛨',environmental:'❦',science:'⚗',technology:'⌁',governance:'⚖'};
+const AL_GROUPS=QUESTIONS.categories.map(c=>[c.id,c.name,AL_ICON[c.id]||'•']);
 const AL_GBY=Object.fromEntries(AL_GROUPS.map(g=>[g[0],g]));
 // mixed order for "All questions": one from each category in turn
-const AL_ORDER=(()=>{const by=AL_GROUPS.map(([g])=>ISS.filter(i=>i.group===g)),out=[];for(let k=0;out.length<ISS.length&&k<ISS.length;k++)by.forEach(l=>{if(l[k])out.push(l[k])});ISS.forEach(i=>{if(!out.includes(i))out.push(i)});return out})();
-const AL_OPTS=[['B',3,'Strongly disagree'],['B',2,'Disagree'],['',0,'Neutral'],['A',2,'Agree'],['A',3,'Strongly agree']];
+const AL_ORDER=(()=>{const by=AL_GROUPS.map(([g])=>QISS.filter(i=>i.group===g)),out=[];for(let k=0;out.length<QISS.length&&k<QISS.length;k++)by.forEach(l=>{if(l[k])out.push(l[k])});QISS.forEach(i=>{if(!out.includes(i))out.push(i)});return out})();
+const AL_OPTS=[['A'],['B'],['']];
 const AL_PAGE=5;
 let alView={g:'',page:0};
-const alPick=id=>{const p=PROF.issues[id];if(!p)return -1;if(p.neutral)return 2;if(p.side==='B')return p.w>=3?0:1;if(p.side==='A')return p.w>=3?4:3;return -1};
-const alAnswered=()=>ISS.filter(i=>alPick(i.id)>=0).length;
-const AL_VOTES=Object.fromEntries(ISS.map(i=>[i.id,DATA.votes.map(v=>['Senate',v]).concat(DATA.hvotes.map(v=>['House',v])).filter(([,v])=>(v.codes||[]).some(c=>c.issue===i.id)).sort((a,b)=>b[1].date.localeCompare(a[1].date))]));
+const alPick=id=>{const p=PROF.issues[id];if(!p)return -1;if(p.neutral)return 2;return p.side==='A'?0:p.side==='B'?1:-1};
+const alAnswered=()=>QISS.filter(i=>alPick(i.id)>=0).length;
+// (how many bills, amendments and roll calls are coded to each question: public/question-stances.json "coded")
 function alTied(i){
-  const V=AL_VOTES[i.id];
-  if(!V.length)return 'No key congressional vote on this yet; compared with state records, official actions and statements where they exist.';
-  return 'Compared with: '+V.slice(0,2).map(([c,v])=>`${esc(v.short)} (${c}, ${v.date.slice(0,4)})`).join(' · ')+(V.length>2?` · ${V.length-2} more`:'');
+  const n=QCODED[i.id]||0;
+  return n?`Compared with ${n} coded bill${n===1?'':'s'}, amendment${n===1?'':'s'} and roll call${n===1?'':'s'}, and statements where they exist.`:'No bills or votes coded to this question yet; compared with statements where they exist, so most records read "Not on record" for now.';
 }
 function alCard(i){
-  const [g,label,icon]=AL_GBY[i.group]||['econ','Other','•'], n=AL_ORDER.indexOf(i)+1, k=alPick(i.id);
-  return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${g}" aria-hidden="true">${icon}</span><span class="al-tag al-${g}">${label}</span><span class="al-qn">Question ${n} of ${ISS.length}</span></div>
-    <h3 id="alq-${i.id}">${esc(i.statement||i.A)}</h3><p class="al-tied">${alTied(i)}</p>
-    <div class="al-opts" role="radiogroup" aria-labelledby="alq-${i.id}">${AL_OPTS.map((o,j)=>`<button type="button" role="radio" aria-checked="${k===j}" data-k="${j}" class="${k===j?'on':''}"><span class="al-r" aria-hidden="true"></span>${o[2]}</button>`).join('')}</div></article>`;
+  const [g,label,icon]=AL_GBY[i.group]||['','Other','•'],cls=AL_CLASS[g]||'econ',n=AL_ORDER.indexOf(i)+1,k=alPick(i.id),p=PROF.issues[i.id]||{};
+  const opts=[[0,i.A],[1,i.B],[2,'Skip']];
+  return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${cls}" aria-hidden="true">${icon}</span><span class="al-tag al-${cls}">${esc(label)}</span><span class="al-qn">Question ${n} of ${QISS.length}</span></div>
+    <h3 id="alq-${i.id}">${esc(i.q)}</h3><p class="al-tied">${alTied(i)}</p>
+    <div class="al-opts" role="radiogroup" aria-labelledby="alq-${i.id}">${opts.map(([j,l])=>`<button type="button" role="radio" aria-checked="${k===j}" data-k="${j}" class="${k===j?'on':''}"><span class="al-r" aria-hidden="true"></span>${esc(l)}</button>`).join('')}</div>
+    ${k===0||k===1?`<div class="al-opts al-imp" role="radiogroup" aria-label="How important is this question to you?"><span class="small muted" style="align-self:center">How important?</span>${IMPORTANCE.map(([w,l])=>`<button type="button" role="radio" aria-checked="${p.w===w}" data-w="${w}" class="${p.w===w?'on':''}"><span class="al-r" aria-hidden="true"></span>${l}</button>`).join('')}</div>`:''}</article>`;
 }
 function alList(){return alView.g?AL_ORDER.filter(i=>i.group===alView.g):AL_ORDER.slice(alView.page*AL_PAGE,alView.page*AL_PAGE+AL_PAGE);}
 // "Your matches so far": the closest records to your answers, or flipped to the furthest ("mismatches").
@@ -2607,7 +2653,7 @@ function alLive(){
   const sw=`<div class="seg al-seg" role="group" aria-label="Show matches or mismatches"><button type="button" data-m="match" class="${mis?'':'active'}" aria-pressed="${!mis}">Top matches</button><button type="button" data-m="mismatch" class="${mis?'active':''}" aria-pressed="${mis}">Top mismatches</button></div>`;
   const sw2=`<div class="seg al-seg" role="group" aria-label="Which races">${[['','All'],['S','Senate'],['H','House']].map(([c,l])=>`<button type="button" data-c="${c}" class="${alLiveCh===c?'active':''}" aria-pressed="${alLiveCh===c}">${l}</button>`).join('')}</div>`;
   const counted=chosenIssues().length;
-  if(!counted)return `<h4>${title}</h4>${sw}${sw2}<p class="small muted" style="margin:0">Answer a few questions${alAnswered()?' (Neutral answers are not counted)':''} to see how every candidate compares.</p>`;
+  if(!counted)return `<h4>${title}</h4>${sw}${sw2}<p class="small muted" style="margin:0">Answer a few questions${alAnswered()?' (skipped ones are not counted)':''} to see how every candidate compares.</p>`;
   const rows=ALL.filter(s=>!alLiveCh||s.chamber===alLiveCh).map(s=>({s,r:scoreFor(s)})), graded=rows.filter(x=>x.r.score!=null);
   // matches are records at 50% or more of your answers, mismatches below 50%, so neither list borrows from the other
   const pool=graded.filter(x=>mis?x.r.score<50:x.r.score>=50).sort((a,b)=>(mis?a.r.score-b.r.score:b.r.score-a.r.score)||a.s.name.localeCompare(b.s.name));
@@ -2615,24 +2661,24 @@ function alLive(){
   const where=chName?` in ${chName} races`:'';
   const empty=!graded.length?`No one${where} has enough evidence on your issues yet.`:mis?`No one${where} is below 50% on your answers yet.`:`No one${where} reaches 50% on your answers yet.`;
   return `<h4>${title}</h4>${sw}${sw2}${list||`<p class="small muted" style="margin:0">${empty}</p>`}
-    <p class="al-foot">${pool.length?`${mis?'Lowest':'Top'} ${Math.min(6,pool.length)} of ${pool.length} ${mis?'below 50%, furthest from your answers first':'at 50% or more'} · `:''}${graded.length} graded${where}, ${rows.length-graded.length} not graded yet.${chName?` ${chName} races include challengers${DATA.races.some(r=>r.chamber===alLiveCh&&r.open)?' and nominees for open seats':''}.`:''} Based on your ${counted} answer${counted===1?'':'s'} that ${counted===1?"isn't":"aren't"} Neutral. A grade needs evidence on 3 of your issues. <button type="button" class="al-link" id="al-all">See every candidate ↓</button></p>`;
+    <p class="al-foot">${pool.length?`${mis?'Lowest':'Top'} ${Math.min(6,pool.length)} of ${pool.length} ${mis?'below 50%, furthest from your answers first':'at 50% or more'} · `:''}${graded.length} graded${where}, ${rows.length-graded.length} not graded yet.${chName?` ${chName} races include challengers${DATA.races.some(r=>r.chamber===alLiveCh&&r.open)?' and nominees for open seats':''}.`:''} Based on your ${counted} answer${counted===1?'':'s'} (skipped questions aren't counted). A match needs their record on at least 3 of your answers and half your importance. <button type="button" class="al-link" id="al-all">See every candidate ↓</button></p>`;
 }
 function alResults(){
   const ch=chosenIssues();
-  if(!ch.length)return '<div class="note">Answer at least one question (other than Neutral) to see how every candidate compares, race by race.</div>';
-  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} issue${ch.length===1?'':'s'}. Open a candidate for the issue-by-issue breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
+  if(!ch.length)return '<div class="note">Answer at least one question (other than Skip) to see how every candidate compares, race by race.</div>';
+  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
     <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span> ${decidedChip(outcomeOf(r,s.id))}</td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
     ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}</article>`}).join('');
 }
 function renderAlign(){
-  const pages=Math.ceil(ISS.length/AL_PAGE);
+  const pages=Math.ceil(QISS.length/AL_PAGE);
   app.innerHTML=`
   <section class="al-hero">
     <svg class="al-dome" width="300" height="172" viewBox="0 0 330 190" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M165 10v22M158 32h14M150 60c0-14 7-26 15-28 8 2 15 14 15 28"/><path d="M118 96c0-24 21-40 47-40s47 16 47 40"/><path d="M108 96h114v10H108zM112 106v34M124 106v34M136 106v34M148 106v34M160 106v34M172 106v34M184 106v34M196 106v34M208 106v34M218 106v34"/><path d="M30 140h270v10H30zM40 150v30M290 150v30M30 180h270"/><path d="M60 150v30M80 150v30M100 150v30M230 150v30M250 150v30M270 150v30"/><path d="M95 140V122h140v18"/></svg>
     <h1>My <em>alignment</em></h1>
-    <p class="al-lede">Say how strongly you agree or disagree with each statement. There are no right or wrong answers. Your answers are compared with every candidate's real votes, bills and statements, issue by issue.</p>
+    <p class="al-lede">Pick your side on each question and how important it is to you. There are no right or wrong answers. Your answers are compared with every candidate's real votes, bills and statements, question by question.</p>
     <div class="al-feats">
-      <div><span class="al-fi" aria-hidden="true">▤</span><div><b>${ISS.length} issues, tied to real votes</b><small>Each question lists the roll calls behind it</small></div></div>
+      <div><span class="al-fi" aria-hidden="true">▤</span><div><b>${QISS.length} questions, tied to real votes</b><small>Each says how many bills and roll calls are coded to it</small></div></div>
       <div><span class="al-fi" aria-hidden="true">🔒</span><div><b>Your answers stay with you</b><small>Saved only in this browser</small></div></div>
       <div><span class="al-fi" aria-hidden="true">⚖</span><div><b>Not a rating of candidates</b><small>Same questions and rules for everyone</small></div></div>
     </div>
@@ -2647,14 +2693,14 @@ function renderAlign(){
       <div class="al-ex"><span class="small muted">Or start from an example (you can change every answer):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
     </div>
     <aside class="al-box al-live" id="al-live" aria-live="polite"></aside>
-    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Strongly','Counts three times as much as a plain agree or disagree.'],['Neutral','Skips the issue. It never counts against anyone.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
+    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Importance','From Least to Most: a question set to Most counts five times as much as one set to Least.'],['Skip','Leaves the question out. It never counts against anyone.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
   </div>
   <section class="section" id="al-results" style="padding-top:8px"><h2>Every candidate, race by race</h2>${ALNOTE}<div id="alr"></div></section>`;
-  const drawCats=()=>{$('#al-cats').innerHTML=[['','All questions','☰',ISS.length]].concat(AL_GROUPS.map(([g,l,ic])=>[g,l,ic,ISS.filter(i=>i.group===g).length])).map(([g,l,ic,n])=>{const done=(g?ISS.filter(i=>i.group===g):ISS).filter(i=>alPick(i.id)>=0).length;return `<button type="button" class="al-cat${alView.g===g?' on':''}" data-g="${g}" aria-pressed="${alView.g===g}"><span class="al-ic${g?' al-'+g:''}" aria-hidden="true">${ic}</span><span class="al-cl">${l}</span><span class="al-cn" title="${done} of ${n} answered">${n}</span></button>`}).join('');};
+  const drawCats=()=>{$('#al-cats').innerHTML=[['','All questions','☰',QISS.length]].concat(AL_GROUPS.map(([g,l,ic])=>[g,l,ic,QISS.filter(i=>i.group===g).length])).map(([g,l,ic,n])=>{const done=(g?QISS.filter(i=>i.group===g):QISS).filter(i=>alPick(i.id)>=0).length;return `<button type="button" class="al-cat${alView.g===g?' on':''}" data-g="${g}" aria-pressed="${alView.g===g}"><span class="al-ic${g?' al-'+(AL_CLASS[g]||'econ'):''}" aria-hidden="true">${ic}</span><span class="al-cl">${l}</span><span class="al-cn" title="${done} of ${n} answered">${n}</span></button>`}).join('');};
   const drawTop=()=>{const L=alList(),a=alAnswered();
-    $('#al-pos').textContent=alView.g?`${AL_GBY[alView.g][1]} · ${L.length} question${L.length===1?'':'s'}`:`Questions ${alView.page*AL_PAGE+1}–${alView.page*AL_PAGE+L.length} of ${ISS.length}`;
-    $('#al-pct').textContent=`${a} of ${ISS.length} answered · ${Math.round(a/ISS.length*100)}% complete`;
-    $('#al-bar').style.width=(a/ISS.length*100)+'%';
+    $('#al-pos').textContent=alView.g?`${AL_GBY[alView.g][1]} · ${L.length} question${L.length===1?'':'s'}`:`Questions ${alView.page*AL_PAGE+1}–${alView.page*AL_PAGE+L.length} of ${QISS.length}`;
+    $('#al-pct').textContent=`${a} of ${QISS.length} answered · ${Math.round(a/QISS.length*100)}% complete`;
+    $('#al-bar').style.width=(a/QISS.length*100)+'%';
     const gi=AL_GROUPS.findIndex(g=>g[0]===alView.g);
     $('#al-prev').disabled=alView.g?false:alView.page===0;
     $('#al-next').textContent=alView.g?(gi<AL_GROUPS.length-1?`Next: ${AL_GROUPS[gi+1][1]} →`:'See my results ↓'):(alView.page<pages-1?'Next →':'See my results ↓');};
@@ -2666,12 +2712,13 @@ function renderAlign(){
     else if(c&&c.dataset.c!==alLiveCh){alLiveCh=c.dataset.c;drawBox(`[data-c="${alLiveCh}"]`);}});
   const all=()=>{drawCats();drawTop();drawQs();drawLive();};
   $('#al-qs').addEventListener('click',e=>{
-    const b=e.target.closest('button[data-k]');if(!b)return;
-    const id=b.closest('.al-q').dataset.i, k=+b.dataset.k, was=alPick(id);
-    if(was===k)delete PROF.issues[id];
-    else{const [side,w]=AL_OPTS[k];PROF.issues[id]=side?{side,w}:{side:'',w:0,neutral:true};}
+    const b=e.target.closest('button[data-k],button[data-w]');if(!b)return;
+    const card=b.closest('.al-q'),id=card.dataset.i,p=PROF.issues[id];
+    if(b.dataset.w){if(!p||!p.side)return;p.w=+b.dataset.w;}
+    else{const k=+b.dataset.k;if(alPick(id)===k)delete PROF.issues[id];else{const [side]=AL_OPTS[k];PROF.issues[id]=side?{side,w:p?.w||3}:{side:'',w:0,neutral:true};}}
     saveProf();
-    b.closest('.al-opts').querySelectorAll('button').forEach(x=>{const on=+x.dataset.k===alPick(id);x.classList.toggle('on',on);x.setAttribute('aria-checked',on);});
+    const key=b.dataset.w?'w':'k',val=b.dataset.w||b.dataset.k;card.outerHTML=alCard(QISSBY[id]);
+    $(`.al-q[data-i="${id}"] button[data-${key}="${val}"]`)?.focus();
     drawCats();drawTop();drawLive();
   });
   $('#al-cats').addEventListener('click',e=>{const b=e.target.closest('button[data-g]');if(!b)return;alView={g:b.dataset.g,page:0};all();});
@@ -2706,26 +2753,22 @@ function paneLegislation(s,pane){
 function alignInto(s,host){
   const draw=()=>{
     const r=scoreFor(s);
-    const ev=s.evidence||{};
-    const all=ISS.filter(i=>(ev[i.id]||[]).length);
-    const md=!r.nChosen?'You have not chosen any positions yet.':r.score==null?`Evidence on ${r.nCov} of your ${r.nChosen} issues, too few for a grade.`:`Based on ${r.nCov} of your ${r.nChosen} issues.`;
+    const md=!r.nChosen?'You have not answered any questions yet.':r.score==null?`${r.nCov} of your ${r.nChosen} questions on ${s.short||s.name}'s record, too few for a match.`:`Based on ${r.nCov} of your ${r.nChosen} answers.`;
     host.innerHTML=`${gradeHead('Your match',r.score,md,gradeRule('match'))}
-    <p class="intro">How ${esc(s.short)}'s record compares with the positions you pick below. <b>Evidence available:</b> ${esc(evidenceOf(s).label)}.</p>
+    <p class="intro">How ${esc(s.short)}'s record compares with the positions you pick below. <b>On record:</b> ${esc(evidenceMix(s))}.</p>
     ${ALNOTE}
     <div class="chart"><div class="kicker">How the match is calculated</div>
-      ${r.nChosen?(r.score==null?points([['Evidence found',`${r.nCov} of your ${r.nChosen} issues (${Math.round(r.covW/r.totW*100)||0}% of your total importance).`],['Needed for a score',`At least ${r.need} issue${r.need===1?'':'s'} with evidence, and at least half of your total importance.`]],'small'):points([['How it works',`For each issue, the share of ${esc(s.short)}'s items that match your side, times the issue's importance. An issue backed only by statements counts at half its importance.`],['The math',`${r.rows.filter(x=>x.status!=='none').map(x=>`${esc(x.i.label)} ${x.match}/${x.n} × ${+x.iw.toFixed(2)}${x.status==='stated'?' (statements only)':''}`).join(' + ')} = ${(r.num).toFixed(2)}. Divided by the importance counted, ${+r.effW.toFixed(2)}, that gives <b>${r.score}%</b>.`],['Counted once','A sponsorship and a vote on the same bill.'],r.nChosen>r.nCov&&['Left out',`${r.nChosen-r.nCov} issue${r.nChosen-r.nCov===1?'':'s'} without evidence. They are not scored as zero.`]],'small')):`<p class="small" style="margin:6px 0 0">Choose positions below, or on the <a href="#align">My alignment</a> page.</p>`}
+      ${r.nChosen?(r.score==null?points([['On their record',`${r.nCov} of your ${r.nChosen} questions.`],['Needed for a score',`At least ${r.need} of the questions you answered on their record (${MIN_POINTS} or more points on each), and at least half of your total importance.`]],'small'):points([['How it works',`On each question, agreement = (1 + your side × their stance) ÷ 2, where their stance runs from −1 (all on the other side) to +1 (all on yours). Each question counts by the importance you set, from Least (1) to Most (5).`],['The math',`(${r.rows.filter(x=>x.agree!=null).map(x=>`${Math.round(x.agree*100)}% × ${x.pr.w}`).join(' + ')}) ÷ ${r.covW} = ${r.score}%`]],'small')):'<p class="small muted" style="margin:0">Answer questions below or in <a href="#align">My alignment</a>.</p>'}
     </div>
-    ${r.nChosen?`<h3 style="margin-top:18px">Issue by issue</h3>${r.rows.map(x=>`<div class="alissue">
-      <div class="row" style="justify-content:space-between"><div><b>${esc(x.i.label)}</b> <span class="small muted">· you: ${esc(sideLabel(x.i.id,x.pr.side))} · importance ${WLAB[x.pr.w]}</span></div>
-      <div>${x.status==='none'?'<span class="chip ghost">Insufficient data</span>':`<span class="chip ${x.agree>=.5?'dfor':'dag'}">${x.match} of ${x.n} ${x.status==='record'?'recorded actions':'statements'} match</span>`}</div></div>
-      ${x.status==='stated'?'<p class="small" style="margin:4px 0 0;color:var(--warn)"><b>Statements only:</b> no recorded vote, bill or official action on this issue. It counts at half its importance.</p>':''}
-      ${x.status==='record'&&x.st.length?`<p class="small muted" style="margin:4px 0 0"><b>Stated positions:</b> ${x.stMatch} of ${x.st.length} match. Shown but not scored, because recorded actions exist.</p>`:''}
-      ${(x.rec.concat(x.st)).length?`<ul class="evl">${x.rec.concat(x.st).map(e=>evRow(Object.assign({issue:x.i.id},e),x.pr.side)).join('')}</ul>`:`<p class="small muted" style="margin:4px 0 0">No vote, bill, official action or statement on this issue was found for ${esc(s.short)}.${(s.notVoted||{})[x.i.id]?' <b>Did not vote on:</b> '+s.notVoted[x.i.id].map(n=>esc(n.title)).join('; ')+'.':''}</p>`}
-    </div>`).join('')}`:''}
-    <details class="tv" ${r.nChosen?'':'open'}><summary>${r.nChosen?'Change your choices':'Choose your positions'}</summary><div id="alb2" style="margin-top:10px">${builderHTML()}</div></details>
-    ${all.length?`<h3 style="margin-top:22px">All coded evidence for ${esc(s.short)}</h3><p class="small muted">Every item used for the match, by issue. Shown whatever you picked.</p>${all.map(i=>`<div class="alissue"><b>${esc(i.label)}</b><ul class="evl">${ev[i.id].map(e=>evRow(Object.assign({issue:i.id},e),null)).join('')}</ul></div>`).join('')}`:`<div class="note" style="margin-top:16px">No action or statement by ${esc(s.short)} fits the issue list, so there is nothing to compare. ${s.recordType==='none'||s.recordType==='executive'?esc(s.short)+' has no legislative voting record.':''}</div>`}`;
-    bindBuilder(host.querySelector('#alb2'),rebuild=>{draw();});
+    ${r.nChosen?`<h3 style="margin-top:18px">Question by question</h3>${r.rows.map(x=>`<div class="alissue" data-q="${esc(x.q.id)}">
+      <div class="row" style="justify-content:space-between"><div><b>${esc(x.q.q)}</b> <span class="small muted">· you: ${esc(qSide(x.q.id,x.pr.side))} · importance ${WLAB[x.pr.w]}</span></div>
+      <div>${x.status==='none'?'<span class="chip ghost">Not on record</span>':`<span class="chip ${x.agree>=.5?'dfor':'dag'}">${esc(x.word)} · ${Math.round(x.agree*100)}% agreement</span>`}</div></div>
+      <div class="q-ev small muted">Loading the record…</div></div>`).join('')}`:''}
+    <details class="tv" ${r.nChosen?'':'open'}><summary>${r.nChosen?'Change your choices':'Choose your positions'}</summary><div id="alb2" style="margin-top:10px">${builderHTML()}</div></details>`;
+    bindBuilder(host.querySelector('#alb2'),()=>{draw();});
     bindTips(host);
+    if(r.nChosen)Promise.all([qEvidence(s),qMeta()]).then(([ev,meta])=>{
+      host.querySelectorAll('.alissue[data-q]').forEach(el=>{const q=QISSBY[el.dataset.q],slot=el.querySelector('.q-ev');if(q&&slot)slot.outerHTML=qRecordHTML(s,q,ev,meta,PROF.issues[q.id]?.side==='A'?0:1);});bindTips(host);});
   };
   draw();
 }
@@ -3129,21 +3172,15 @@ function committeeBlock(s){
 // Position by issue: where the record sits between liberal and conservative in each category (public/lean.js).
 // Context only, never part of a grade.
 function positionBlock(s){
-  const cats=positionByCategory(ISS,s.evidence),shown=cats.filter(c=>c.status==='placed'||c.status==='none');
-  const names=st=>cats.filter(c=>c.status===st).map(c=>c.label);
-  const kind=c=>c.record?(c.stated?'actions and statements':c.n===1?'action':'actions'):c.n===1?'statement':'statements';
-  const value=c=>c.lean===0?'Even':`${Math.max(c.lib,c.con)} of ${c.n}`,side=c=>c.lean===0?`${c.lib} each side`:c.lean>0?'liberal':'conservative';
-  // The issues behind each category, unless the only one has the category's own name.
-  const sub=c=>{const t=c.issues.map(i=>i.label).join(' · ');return t.toLowerCase()===c.label.toLowerCase()?'':t;};
-  const rows=shown.map(c=>c.status==='none'?{label:c.label,sub:sub(c),lean:null,empty:'No record yet'}:
-    {label:c.label,sub:sub(c),lean:c.lean,value:value(c),note:side(c),light:!c.record,
-      tip:`${c.label}: of ${c.n} ${kind(c)}, ${c.lib} on the liberal side and ${c.con} on the conservative side${c.record?'':' (statements only, counted at half)'}`});
-  if(!shown.some(c=>c.status==='placed'))return `<section class="recsec" id="rec-pos"><div class="kicker">Issue by issue</div><h3 style="margin-top:4px">Position by issue</h3><p class="small muted">No votes, bills or statements on the tracked issues yet for ${esc(s.short)}.</p></section>`;
-  return `<section class="recsec" id="rec-pos"><div class="kicker">Issue by issue</div><h3 style="margin-top:4px">Position by issue</h3>
-    ${points([['How to read it','A bar to the left means more of the record is on the liberal side of that issue, and to the right the conservative side. The longer the bar, the more consistent the record. A short bar near the center means a mixed record.'],['Based on','Votes, sponsored bills and official acts on each issue, one credit per bill. Statements count at half, and only where there is no recorded action (paler bars).'],['Context only','Never part of a grade. Which side of each issue counts as liberal is listed on the <a href="#method">Methodology</a> page.']],'small')}
+  const cats=sixOf(s).ideology.categories||[],placed=cats.filter(c=>c.lean!=null);
+  if(!placed.length)return `<section class="recsec" id="rec-pos"><div class="kicker">Category by category</div><h3 style="margin-top:4px">Position by category</h3><p class="small muted">No votes, bills or statements on the coded questions yet for ${esc(s.short)}.</p></section>`;
+  // (leanRows draws a positive lean to the liberal side)
+  const rows=cats.map(c=>c.lean==null?{label:c.label,sub:'',lean:null,empty:c.onRecord?'No left–right question on record':'No record yet'}:
+    {label:c.label,sub:c.questions.filter(q=>q.lean!=null).map(q=>q.q).join(' · '),lean:-c.lean,value:signed(c.lean),note:leanLabel(c.lean),tip:`${c.label}: ${signed(c.lean)}, the average of ${c.n} question${c.n===1?'':'s'}`});
+  return `<section class="recsec" id="rec-pos"><div class="kicker">Category by category</div><h3 style="margin-top:4px">Position by category</h3>
+    ${points([['How to read it','A bar to the left means the record leans liberal in that category, and to the right conservative. The longer the bar, the stronger the lean; a short bar near the center means a mixed record.'],['Based on','The questions in each category with a liberal side: votes, bills, amendments, cosponsorships and statements, one credit per bill.']],'small')}
     ${leanRows(rows)}
-    ${points([names('unsided').length&&['Not on the scale',`${esc(names('unsided').join(', '))}. Their issues split both parties, so they aren't marked liberal or conservative.`],names('untracked').length&&['Not tracked yet',esc(names('untracked').join(', '))+'.']],'small')}
-    ${tableView(['Category','Liberal side','Conservative side','Based on'],shown.map(c=>[esc(c.label),c.status==='placed'?c.lib:'—',c.status==='placed'?c.con:'—',c.status==='placed'?`${c.n} ${kind(c)}`:'No record yet']))}</section>`;
+    ${tableView(['Category','Lean','Questions placed'],cats.map(c=>[esc(c.label),c.lean==null?'—':signed(c.lean),`${c.n} of ${c.questions.length}`]))}</section>`;
 }
 function recordInto(s,host){
   const inc=!s.cand;
@@ -3716,8 +3753,8 @@ function scoresGrade(host,key,note){
 // Ideology: everyone from most liberal to most conservative, and Voteview's chamber chart.
 function scoresLean(host){
   const rows=ALL.map(s=>({s,x:sixOf(s).ideology})).sort((a,b)=>(a.x.lean??999)-(b.x.lean??999)||a.s.name.localeCompare(b.s.name));
-  host.innerHTML=`<div class="chart"><h3>From most liberal to most conservative</h3><div class="sub">The overall lean from each record, −100 to +100. A position, not a grade. ${rows.filter(r=>r.x.lean!=null).length} of ${ALL.length} have enough issues to place.</div>
-    ${tableView(['Name','Lean','Issues','DW-NOMINATE'],rows.map(({s,x})=>[`<a href="#${s.id}-ideology">${esc(s.name)}</a>`,x.lean==null?'Not placed yet':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b> · ${esc(x.label)}`,x.scored,x.dw==null?'—':signed(x.dw)]))}</div><div id="sc-dw"></div>`;
+  host.innerHTML=`<div class="chart"><h3>From most liberal to most conservative</h3><div class="sub">The overall lean from each record, −100 to +100. A position, not a grade. ${rows.filter(r=>r.x.lean!=null).length} of ${ALL.length} have enough categories to place.</div>
+    ${tableView(['Name','Lean','Categories','DW-NOMINATE'],rows.map(({s,x})=>[`<a href="#${s.id}-ideology">${esc(s.name)}</a>`,x.lean==null?'Not placed yet':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b> · ${esc(x.label)}`,x.scored,x.dw==null?'—':signed(x.dw)]))}</div><div id="sc-dw"></div>`;
   scoresIdeology(host.querySelector('#sc-dw'));
 }
 // Big Money Independence reads each person's financial disclosure from the official records, so it is graded on the profile.
@@ -3740,17 +3777,17 @@ function scoresMatch(host){
   const ch=chosenIssues();
   const rows=ALL.map(s=>({s,r:scoreFor(s)})).sort((a,b)=>(b.r.score??-1)-(a.r.score??-1)||b.r.nCov-a.r.nCov||a.s.name.localeCompare(b.s.name));
   const bars=rankBars(rows.map(({s,r})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-match`,value:r.score,color:r.score==null?null:gradeFill(r.score),cls:r.score==null?'':'gr-'+letter(r.score),display:r.score==null?'':`${letter(r.score)} ${r.score}%`,
-    note:!ch.length?'choose your issues':`${r.nCov} of ${r.nChosen} issues`,tip:r.score==null?'':`${s.name}: ${r.score}% match on ${r.nCov} of your ${r.nChosen} issues`})));
+    note:!ch.length?'answer questions':`${r.nCov} of ${r.nChosen} questions`,tip:r.score==null?'':`${s.name}: ${r.score}% match on ${r.nCov} of your ${r.nChosen} questions`})));
   const graded=rows.filter(x=>x.r.score!=null);
-  host.innerHTML=`${ch.length?'':`<div class="note" style="margin-bottom:12px"><b>Choose your positions first.</b> This ranking compares each record with the positions you pick in <a href="#align">My alignment</a>, weighted by how important you say each issue is. Your choices stay in this browser.</div>`}
-    <div class="chart"><h3>Match with your positions</h3><div class="sub">${ch.length?`${graded.length} of ${ALL.length} have evidence on enough of your ${ch.length} issues for a grade. <b>Bar color:</b> the grade. <b>Note under each value:</b> how many of your issues have evidence.`:'Everyone shows as Not graded until you choose issues.'}</div>${bars}
-    ${tableView(['Name','Score','Issues with evidence'],rows.map(({s,r})=>[`<a href="#${s.id}-match">${esc(s.name)}</a>`,r.score==null?'Not graded':`${letter(r.score)} ${r.score}%`,`${r.nCov} of ${r.nChosen}`]))}</div>
-    ${ch.length?`<div class="chart"><h3>Issue by issue</h3><div class="sub">For one person: how much of their record matches your side on each issue. Most important issues first.</div>
+  host.innerHTML=`${ch.length?'':`<div class="note" style="margin-bottom:12px"><b>Choose your positions first.</b> This ranking compares each record with the positions you pick in <a href="#align">My alignment</a>, weighted by how important you say each question is. Your choices stay in this browser.</div>`}
+    <div class="chart"><h3>Match with your positions</h3><div class="sub">${ch.length?`${graded.length} of ${ALL.length} have a stance on at least one of your ${ch.length} questions. <b>Bar color:</b> the grade. <b>Note under each value:</b> how many of your questions are on their record.`:'Everyone shows as Not graded until you answer questions.'}</div>${bars}
+    ${tableView(['Name','Score','Questions on record'],rows.map(({s,r})=>[`<a href="#${s.id}-match">${esc(s.name)}</a>`,r.score==null?'Not graded':`${letter(r.score)} ${r.score}%`,`${r.nCov} of ${r.nChosen}`]))}</div>
+    ${ch.length?`<div class="chart"><h3>Question by question</h3><div class="sub">For one person: how close their stance is to your side on each question. Most important questions first.</div>
       <label class="small">Person <select id="sc-person">${rows.map(({s})=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select></label><div id="sc-issues"></div></div>`:''}`;
   const sel=host.querySelector('#sc-person');
   const drawIssues=()=>{const s=byId[sel.value],r=scoreFor(s);const list=r.rows.slice().sort((a,b)=>b.pr.w-a.pr.w);
-    host.querySelector('#sc-issues').innerHTML=rankBars(list.map(x=>({label:x.i.label,sub:`you: ${sideLabel(x.i.id,x.pr.side)} · importance ${WLAB[x.pr.w]}`,value:x.status==='none'?null:Math.round(x.agree*100),color:'var(--s1)',
-      display:x.status==='none'?'':`${Math.round(x.agree*100)}%`,note:x.status==='none'?'no evidence':`${x.match} of ${x.n} ${x.status==='record'?'actions':'statements'}`,tip:x.status==='none'?'':`${x.i.label}: ${x.match} of ${x.n} match your side`})));
+    host.querySelector('#sc-issues').innerHTML=rankBars(list.map(x=>({label:x.i.label,sub:`you: ${qSide(x.i.id,x.pr.side)} · importance ${WLAB[x.pr.w]}`,value:x.status==='none'?null:Math.round(x.agree*100),color:'var(--s1)',
+      display:x.status==='none'?'':`${Math.round(x.agree*100)}%`,note:x.status==='none'?'not on record':`their stance: ${x.word}`,tip:x.status==='none'?'':`${x.i.label}: ${Math.round(x.agree*100)}% agreement`})));
     hoverTips(host);};
   if(sel){sel.addEventListener('change',drawIssues);drawIssues();}
 }
@@ -3818,7 +3855,7 @@ function methodSix(){
   const f=t=>`<div class="st-formula">${t}</div>`;
   const rows=[
     ['ideology','Ideology',SIX_BY.ideology.q,'Votes, bills, cosponsorships and official acts on each issue; statements (half, only with no action); each vote\'s reviewed side; Voteview\'s DW-NOMINATE; each interest group\'s published scorecard.',
-      f('Issue lean = 100 × (conservative items − liberal items) ÷ all items')+f('Overall lean = average of the left–right issue leans (at least 3)')+f('Ratings lean = average of ±(2 × score − 100)')+f('DW-NOMINATE lean = 100 × first-dimension score')+'<p class="small">Scale: −100 most liberal to +100 most conservative; very liberal below −60, liberal to −20, moderate to +20, conservative to +60, very conservative above. Issues that split both parties are shown, not averaged. Your Match, on this tab, compares your positions with their record.</p>'],
+      f('Stance on a question = (points for one side − points for the other) ÷ all points (at least 3 points)')+f('Question lean = 100 × the stance, conservative side as plus; category lean = average of its questions')+f('Overall lean = average of the category leans (at least 3 categories)')+f('Ratings lean = average of ±(2 × score − 100)')+f('DW-NOMINATE lean = 100 × first-dimension score')+'<p class="small">Scale: −100 most liberal to +100 most conservative; very liberal below −60, liberal to −20, moderate to +20, conservative to +60, very conservative above. Questions with no liberal side are shown and count in Your Match, but not in the lean. Points: a statement 3, a sponsored bill or amendment or an official act 1.5, a cosponsorship or vote 1, one credit per bill; a statement is not counted when a later vote on the question went the other way. Formula: ${QFORMULA}. Your Match, on this tab, compares your positions with their record.</p>'],
     ['word','Keeps Their Word',SIX_BY.word.q,'Promises from campaign sites and posts, speeches, press releases and signed pledges, each checked against the action that decided it; PolitiFact\'s tracker for a president.',
       f('Keeps Their Word = 100 × (kept + ½ × (partly kept + changed)) ÷ counted checks')+`<p class="small">At least ${MIN_CHECKS} counted checks. Vague goals, promises with no related bill yet and statements made in debate the day of the vote or the day before are shown, not counted.</p>`],
     ['showsup','Shows Up',SIX_BY.showsup.q,'Every roll call from 2018 on (Voteview); the bills they sponsored and how far each got (Congress.gov).',
@@ -3873,7 +3910,7 @@ function renderMethod(sub){
     </ul></details>
     <details class="tv"><summary>Earlier changes (October 3, 2026)</summary>
     <ul class="list">
-      <li><b>Voter alignment:</b> choose a side and an importance on ${ISS.length} issues ("My alignment" in the top menu, or the Voter alignment tab on any profile). See how each candidate's record compares, issue by issue, with every piece of evidence, its date, its type and the math. Candidates without enough evidence show "Insufficient data".</li>
+      <li><b>Voter alignment:</b> choose a side and an importance (Least to Most) on any of ${QISS.length} questions in ${QUESTIONS.categories.length} categories ("My alignment" in the top menu, or Your Match on any profile's Ideology tab). See how each candidate's record compares, question by question, with every piece of evidence, its date, its type and the math. Agreement on a question = (1 + your side × their stance) ÷ 2, weighted by importance. A record that covers too few of your answers shows "Not on record".</li>
       <li><b>Money and votes side by side:</b> each Legislative record tab now lists, issue by issue, the candidate's recorded actions next to the PACs and outside groups with a stake in that issue. These are shown as links only.</li>
       <li><b>Bill details:</b> every key vote now opens to the measure's official title, a cited summary, the recorded question and result, and why it is filed under its issue (or why it is not used for alignment).</li>
       <li><b>All 22 House toss-up races</b> (Cook, Sept. 25, 2026) are on the Races page: 8 with full profiles and 14 with verified nominees, campaign funds and outside spending.</li>
@@ -4245,10 +4282,10 @@ function renderMethod(sub){
     </ul>
     <h2>Voter alignment</h2>
     <ul class="list">
-      <li><b>Issues:</b> ${ISS.length} issues, each with two sides written neutrally: ${ISS.map(i=>esc(i.label)).join('; ')}. The list covers only issues where records could be documented, so many topics voters care about are left out.</li>
-      <li><b>Answering:</b> on My alignment, each issue is one statement. Agreeing takes the issue's first side, and disagreeing the second.</li>
-      <li><b>Importance:</b> strongly agree or disagree counts as high (3). Agree or disagree counts as medium (2). Neutral is recorded but left out of every score.</li>
-      <li><b>Same answers everywhere:</b> each question lists the key votes it is compared with. Your answers are also used on each Your match tab and in the home-page "Your match" grade.</li>
+      <li><b>Questions:</b> ${QISS.length} questions in ${QUESTIONS.categories.length} categories, each with two sides written neutrally, modeled on the topics of iSideWith.com's quiz in our own wording. Bills, amendments and roll calls are coded to ${Object.keys(QCODED).length} of them so far; the rest read "Not on record" until they are.</li>
+      <li><b>Answering:</b> on My alignment, pick one of each question's two sides, or Skip.</li>
+      <li><b>Importance:</b> Least (1), Less (2), Somewhat (3), More (4) or Most (5); a question counts by its importance. Skip is recorded but left out of every score.</li>
+      <li><b>Same answers everywhere:</b> each question says how many bills, amendments and roll calls are coded to it. Your answers are also used on each Your match tab and in the home-page "Your match" grade.</li>
       <li><b>Evidence from votes:</b> a key vote is assigned to an issue only when the measure's content makes the direction clear, with the reason shown under "Bill details". Nominations, stopgap spending bills, bundled packages and lopsided votes are not used; each shows why. When a member voted more than once on a bill, only the final vote counts.</li>
       <li><b>Other evidence:</b> state votes, sponsored bills, official actions and statements are coded only when the item's own words make the side clear, and each shows the reason. Coding was proposed item by item, then reviewed. Two items coded from a bill title alone were removed. No vote is inferred, and absences never count.</li>
       <li><b>Score per issue:</b> the share of recorded actions (votes, bills, official actions) on your side. Stated positions are used only for an issue with no recorded action, and are labeled.</li>

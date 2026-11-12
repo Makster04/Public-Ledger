@@ -5,6 +5,7 @@
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
 // Shared by the profile tabs (public/app.js) and the tests; nothing here fetches.
 import {promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter} from './grades.js';
+import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA} from './question-scores.js';
 import {hill,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent} from './integrity.js';
 import {assetKind} from './holdings.js';
 import {SIZE_BRACKETS} from './donor-sizes.js';
@@ -53,7 +54,18 @@ export function ratingsLean(ratings){
 }
 // DW-NOMINATE's first dimension (about −1 to +1, Voteview) on the same scale.
 export const dwLean=ideo=>Number.isFinite(ideo?.dim1)?Math.round(100*ideo.dim1):null;
-export function ideology(person,issues,{ratings=null}={}){
+// With the alignment questions (questions: {list, categories}, public/questions.json, and person.qst, their stances from
+// public/question-scores.js personStances), the lean comes from the questions: each question's lean (its stance, with
+// the conservative side as plus), each category's lean (the average of its questions'), and the overall lean (the
+// average of the categories', at least IDEOLOGY_MIN_CATEGORIES). "issues" then lists the categories.
+export function ideology(person,issues,{ratings=null,questions=null}={}){
+  if(questions){
+    const L=ideologyLeans(person?.qst||{},questions.list,questions.categories),r=ratingsLean(ratings),dw=dwLean(person?.ideo);
+    const cats=L.categories.map(c=>({...c,cross:false,basis:c.n?'record':'none'}));
+    return {lean:L.lean,label:leanLabel(L.lean),issues:cats,categories:cats,scored:L.scored,ratings:r,dw,formula:QFORMULA,
+      why:L.lean==null?`Needs a lean in at least ${IDEOLOGY_MIN_CATEGORIES} categories of questions (${L.scored} so far)`:null,
+      needs:[['Their record by question',L.scored>=IDEOLOGY_MIN_CATEGORIES],['DW-NOMINATE (Voteview)',dw!=null],['Group scorecards',r.rows.length>0]]};
+  }
   const leans=issueLeans(person,issues),scored=leans.filter(x=>x.lean!=null);
   const overall=scored.length>=IDEOLOGY.minIssues?Math.round(scored.reduce((t,x)=>t+x.lean,0)/scored.length):null;
   const r=ratingsLean(ratings),dw=dwLean(person?.ideo);
@@ -298,7 +310,7 @@ export function peopleFirst(v,cci){
 }
 
 export const SIX=[
-  {key:'ideology',name:'Ideology',tag:'POLITICAL POSITION',q:'Where they stand from liberal to conservative, overall and issue by issue.',grade:false},
+  {key:'ideology',name:'Ideology',tag:'POLITICAL POSITION',q:'Where they stand from liberal to conservative, overall and category by category.',grade:false},
   {key:'word',name:'Keeps Their Word',tag:'PROMISES',q:'The share of their promises they kept, judged by what they did afterward.',grade:true},
   {key:'showsup',name:'Shows Up',tag:'JOB PERFORMANCE',q:'Whether they cast their votes and move the bills they sponsor.',grade:true},
   {key:'unbought',name:'Big Money Independence',tag:'MONEY & INDEPENDENCE',q:'How independent their money is from special interests. It doesn\'t measure how they vote.',grade:true},
