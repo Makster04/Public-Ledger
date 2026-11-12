@@ -55,3 +55,21 @@ test('a roll call coded on its own: "vote:" then chamber, Congress and Voteview 
   assert.deepEqual(voteKey('vote:H117-9'),{k:'H117',roll:9});assert.deepEqual(voteKey('vote:S117-2'),{k:'S117',roll:2});
   for(const x of ['117-hr-1','vote:X117-9','vote:H117','H117-9'])assert.equal(voteKey(x),null,x);
 });
+
+import fs from 'node:fs';
+test('the coded bills file: every question exists, every entry is [side, why, optional {votes}] on a real bill or roll call id',()=>{
+  const B=JSON.parse(fs.readFileSync(new URL('../data/question-bills.json',import.meta.url),'utf8'));
+  const S=JSON.parse(fs.readFileSync(new URL('../data/question-search.json',import.meta.url),'utf8'));
+  const Q=JSON.parse(fs.readFileSync(new URL('../public/questions.json',import.meta.url),'utf8'));
+  const ids=new Set(Q.questions.map(q=>q.id));
+  assert.equal(typeof B.about,'string');
+  for(const [q,list] of Object.entries(B)){if(q==='about')continue;
+    assert.ok(ids.has(q),`unknown question ${q}`);assert.ok(S[q],`${q} has a search`);
+    for(const [id,v] of Object.entries(list)){
+      assert.ok(/^\d{3}-(hr|s|hjres|sjres|hconres|sconres|hres|sres)-\d+$/.test(id)||voteKey(id),`${q}: bad id ${id}`);
+      assert.ok(Array.isArray(v)&&(v.length===2||v.length===3),`${q} ${id}`);
+      assert.ok(v[0]===0||v[0]===1,`${q} ${id}: side`);assert.ok(typeof v[1]==='string'&&v[1].length>10,`${q} ${id}: why`);
+      if(v.length===3){assert.ok(Array.isArray(v[2].votes),`${q} ${id}: votes`);for(const r of v[2].votes)assert.match(r,/^[HS]\d+-\d+$/,`${q} ${id}`);}
+    }}
+  for(const [q,s] of Object.entries(S)){if(q==='about')continue;assert.ok(ids.has(q),`search for unknown question ${q}`);assert.ok(Array.isArray(s.any)&&s.any.length,q);}
+});
