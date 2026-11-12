@@ -848,7 +848,7 @@ function profileHeader(s,showFacts=false){
   </header>`;
 }
 // Net worth, Stocks held and Stock trades, under Raised / Cash on hand / Spent: the same figures as the boxes over the
-// Big Money Independence tab's "Net worth, stocks and trades over time" (public/wealth-timeline.js: wealthTimeline, then headerWealth),
+// Big Money Independence tab's "Net Worth & Stocks History Over Time" (public/wealth-timeline.js: wealthTimeline, then headerWealth),
 // so the two always agree. st: 'loading', 'offline', or what headerWealth returned (null: nothing read yet). Shown only.
 const signedMoney=n=>n<0?`−${fmt$(-n)}`:fmt$(n);
 function wealthRange(low,high){
@@ -1264,7 +1264,7 @@ function bindAssetFilter(root,nw){
 function timelineTrades(s,d){const r=SCORER.reviewedTrades(s);return r.covered?r.rows:(d?.trades?.rows||[]);}
 // d: the refresh's records (undefined while loading, null when the update service is offline); tl: wealthTimeline().
 function wealthTimelineHTML(s,d,tl){
-  const head='<section class="st-sec" id="u-timeline"><h4 class="st-sub">Net worth, stocks and trades over time</h4>';
+  const head='<section class="st-sec" id="u-timeline"><h2 class="wt-title">Net Worth &amp; Stocks History Over Time</h2>';
   if(d===undefined)return head+'<p class="small muted">Reading their financial disclosures…</p></section>';
   if(!d)return head+'<p class="small muted">The update service is offline, so their financial disclosures can\'t be read right now.</p></section>';
   if(!tl)return head+`<p class="small muted">No annual reports or stock trade reports read for ${esc(s.short)} yet. Unknown is not none: they show here once the refresh reads them${s.chamber==='S'?' (senators\' reports come from the Senate eFD import)':''}.</p></section>`;
