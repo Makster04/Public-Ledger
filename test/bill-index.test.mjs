@@ -56,3 +56,32 @@ test('plain text from summary HTML; the Congress for a date',()=>{
   assert.equal(plainText('<p>A&nbsp;&amp; B</p><ul><li>C</li></ul>'),'A & B C');
   assert.equal(congressOf(new Date('2025-01-04')),119);assert.equal(congressOf(new Date('2026-11-12')),119);assert.equal(congressOf(new Date('2013-06-01')),113);
 });
+
+import {amendmentRecords,amendmentYea} from '../scripts/build-bill-index.mjs';
+test('an amendment\'s recorded votes: which way a Yea points, from the action\'s text',()=>{
+  for(const t of ['On agreeing to the Rohrabacher amendment (A059) Agreed to by recorded vote: 219 - 189 (Roll no. 258).',
+    'On agreeing to the Ellison amendment (A070) Failed by recorded vote: 196 - 211 (Roll no. 270).',
+    'Amendment SA 2885 not agreed to in Senate by Yea-Nay Vote. 48 - 52. Record Vote Number: 314.',
+    'Amendment SA 2915, under the order of 12/3/15, not having achieved 60 votes in the affirmative, was not agreed to in Senate by Yea-Nay Vote. 54 - 45.',
+    'Motion to waive all applicable budgetary discipline with respect to amendment SA 2910 rejected in Senate by Yea-Nay Vote. 45 - 54.',
+    'Cloture on amendment SA 4720 not invoked in Senate by Yea-Nay Vote. 47 - 53.'])assert.equal(amendmentYea(t),true,t);
+  assert.equal(amendmentYea('Motion to table amendment SA 1234 agreed to in Senate by Yea-Nay Vote. 54 - 46.'),false);
+  for(const t of ['Motion to table the motion to reconsider the vote on amendment SA 1 agreed to.','Point of order raised against amendment SA 2 well taken.','Motion to recommit with instructions failed.','Amendment offered.'])assert.equal(amendmentYea(t),null,t);
+});
+test('the amendments a bill\'s status file lists: sponsor, cosponsors, the bill they amend, each roll call once',()=>{
+  const vote=(roll,text,d='2015-12-03')=>`<item><actionDate>${d}</actionDate><text>${text}</text><recordedVotes><recordedVote><rollNumber>${roll}</rollNumber><chamber>Senate</chamber><congress>114</congress><date>${d}T20:00:00Z</date><sessionNumber>1</sessionNumber></recordedVote></recordedVotes></item>`;
+  const xml=`<billStatus><bill><number>3762</number><type>HR</type><congress>114</congress><title>T</title><amendments>
+    <amendment><number>2910</number><congress>114</congress><type>SAMDT</type><purpose>To deny  firearms to suspected terrorists.</purpose>
+      <sponsors><item><bioguideId>F000062</bioguideId><party>D</party><state>CA</state></item></sponsors>
+      <cosponsors><item><bioguideId>W000802</bioguideId><sponsorshipDate>2015-12-03</sponsorshipDate></item></cosponsors>
+      <submittedDate>2015-12-03T05:00:00Z</submittedDate><amendedAmendment><number>2874</number><congress>114</congress><type>SAMDT</type></amendedAmendment>
+      <actions><count>3</count><actions>${vote(319,'Motion to waive all applicable budgetary discipline with respect to amendment SA 2910 rejected in Senate by Yea-Nay Vote. 45 - 54.')}${vote(319,'Roll call votes on amendments in Senate: Motion to waive all applicable budgetary discipline with respect to amendment SA 2910 rejected.')}<item><text>Amendment SA 2910 proposed.</text></item></actions></actions></amendment>
+    <amendment><number>9</number><congress>114</congress><type>HAMDT</type><description>An amendment to strike section 2.</description><amendedBill><congress>114</congress><type>HR</type><number>5</number></amendedBill></amendment>
+    <amendment><type>SAMDT</type></amendment></amendments></bill></billStatus>`;
+  const [a,b,...rest]=amendmentRecords(xml);assert.equal(rest.length,0,'an amendment with no number is skipped');
+  assert.equal(a.id,'114-samdt-2910');assert.equal(a.bill,'114-hr-3762');assert.equal(a.of,'114-samdt-2874');assert.equal(a.purpose,'To deny firearms to suspected terrorists.');
+  assert.deepEqual(a.sponsor,{id:'F000062',party:'D',state:'CA'});assert.deepEqual(a.cosponsors,[{id:'W000802',date:'2015-12-03'}]);assert.equal(a.intro,'2015-12-03');
+  assert.equal(a.votes.length,1);assert.deepEqual({...a.votes[0],text:undefined},{ch:'S',roll:319,date:'2015-12-03',session:1,c:114,yea:true,text:undefined});
+  assert.equal(b.id,'114-hamdt-9');assert.equal(b.bill,'114-hr-5');assert.equal(b.purpose,'An amendment to strike section 2.');assert.deepEqual(b.votes,[]);assert.equal(b.sponsor,null);
+  assert.deepEqual(amendmentRecords('<other/>'),[]);
+});

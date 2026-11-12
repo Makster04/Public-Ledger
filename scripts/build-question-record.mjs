@@ -8,10 +8,14 @@
 //                                   amendments, tabling and other procedure don't count (what a Yea means there varies).
 //                                   The votes come from the bill's own actions and from Voteview's roll calls that name
 //                                   the bill (Voteview's bill_number), each roll call once.
+// A question may also code an amendment ("113-hamdt-748", from .local/amendments/): its sponsor and cosponsors take
+// its side, and so does each recorded vote on it whose direction the index could tell: a Yea on agreeing to it, waiving
+// a point of order against it or cloture on it takes its side, a Yea on tabling it the other side (Nays the reverse).
 // A question may also code a roll call that belongs to no bill ("vote:H117-9", e.g. an objection to a state's electoral
 // votes): a Yea takes the coded side, a Nay the other.
 // A coded bill may name the only roll calls that count for it ([side, why, {votes: ["H117-549"]}]), for a bill number
-// that was later reused as the vehicle for something else.
+// that was later reused as the vehicle for something else; and {sponsor: false} when the sponsor brought the measure up
+// only to vote it down (as with the 2019 Senate vote on the Green New Deal), so the sponsorship doesn't count.
 // Writes .local/question-record.json: {built, questions: {question: {bills: {bill: {side, why, title}}}},
 // people: {bioguide: {question: [[bill, kind, date, side]]}}}, and prints how many sitting members each question reaches.
 //   npm run bills:record
@@ -30,6 +34,7 @@ export const castSide=(cast,side)=>Number(cast)===1?side:Number(cast)===6?1-side
 // How Voteview names a bill in its roll calls: "HR842", "SJRES8", "HRES1096".
 // "vote:H117-9" -> {k: "H117", roll: 9}; anything else -> null.
 export function voteKey(id){const m=/^vote:([HS]\d+)-(\d+)$/.exec(String(id));return m?{k:m[1],roll:Number(m[2])}:null;}
+export const isAmendment=id=>/^\d+-[hs]amdt-\d+$/.test(String(id));
 export const voteviewBill=b=>`${String(b.t).toUpperCase()}${b.n}`;
 // A bill's roll calls, each once: those its actions list (matched by session and clerk roll number) and those Voteview
 // files under the bill. vv: {"H117": {roll: Map("session-clerk" -> roll call), byBill: Map(bill -> [roll calls])}}.
@@ -40,10 +45,18 @@ export function billRollcalls(bill,vv,only=null){
   return out;
 }
 
+// An amendment's recorded votes whose direction is known, each once: [{k: "H113", r: roll call, yea: true|false}].
+export function amendmentRollcalls(a,vv,only=null){
+  const out=[],seen=new Set();
+  for(const v of a.votes||[]){if(v.yea==null)continue;const k=`${v.ch}${v.c}`,r=vv[k]?.roll.get(`${v.session}-${v.roll}`);if(!r)continue;
+    const key=`${k}-${r.rollnumber}`;if(seen.has(key)||(only&&!only.includes(key)))continue;seen.add(key);out.push({k,r,yea:v.yea});}
+  return out;
+}
+
 // One member's items from one coded bill: their sponsorship or cosponsorship. (Votes are added from Voteview.)
-export function billItems(bill,side){
+export function billItems(bill,side,opt={}){
   const out=[];
-  if(bill.sponsor?.id)out.push([bill.sponsor.id,'s',bill.intro]);
+  if(bill.sponsor?.id&&opt?.sponsor!==false)out.push([bill.sponsor.id,'s',bill.intro]);
   for(const c of bill.cosponsors||[])if(!c.out)out.push([c.id,'c',c.date||bill.intro]);
   return out.map(([id,kind,date])=>({id,kind,date,side}));
 }
@@ -53,11 +66,12 @@ async function main(){
   const coded=read('data/question-bills.json'),Q=read('public/questions.json');
   const want=new Set();const voteKeys=new Set();
   for(const [q,bills] of Object.entries(coded))if(q!=='about')for(const id of Object.keys(bills)){const v=voteKey(id);if(v)voteKeys.add(v.k);else want.add(id);}
-  const bills=new Map(),dir=path.join(ROOT,'.local','bills');
-  for(const f of fs.readdirSync(dir).filter(f=>f.endsWith('.jsonl')))
-    for await(const line of readline.createInterface({input:fs.createReadStream(path.join(dir,f)),crlfDelay:Infinity})){
-      if(!line)continue;const id=line.slice(7,line.indexOf('"',7));if(want.has(id))bills.set(id,JSON.parse(line));
-    }
+  const bills=new Map();
+  for(const sub of ['bills','amendments']){const dir=path.join(ROOT,'.local',sub);if(!fs.existsSync(dir))continue;
+    for(const f of fs.readdirSync(dir).filter(f=>f.endsWith('.jsonl')))
+      for await(const line of readline.createInterface({input:fs.createReadStream(path.join(dir,f)),crlfDelay:Infinity})){
+        if(!line)continue;const id=line.slice(7,line.indexOf('"',7));if(want.has(id)&&!bills.has(id))bills.set(id,JSON.parse(line));
+      }}
   const missing=[...want].filter(id=>!bills.has(id));if(missing.length)console.log(`Not in the bill index: ${missing.join(', ')}`);
   // Voteview: each needed Congress and chamber once.
   const need=new Set();for(const b of bills.values()){need.add(`H${b.c}`);need.add(`S${b.c}`);for(const v of b.votes||[])need.add(`${v.ch}${v.c}`);}
@@ -82,8 +96,13 @@ async function main(){
         questions[q].bills[id]={side,why,title:r.vote_desc||why};votesUsed++;
         for(const [icpsr,code] of f.cast.get(r.rollnumber)||[]){const s=castSide(code,side),bg=f.bio.get(Number(icpsr));if(s==null||!bg)continue;add(bg,q,[id,Number(code)===1?'y':'n',r.date,s]);}
         continue;}
-      const b=bills.get(id);if(!b)continue;questions[q].bills[id]={side,why,title:b.short?.[0]||b.title};
-      for(const it of billItems(b,side))add(it.id,q,[id,it.kind,it.date,it.side]);
+      const b=bills.get(id);if(!b)continue;questions[q].bills[id]={side,why,title:isAmendment(id)?b.purpose||why:b.short?.[0]||b.title};
+      for(const it of billItems(b,side,opt))add(it.id,q,[id,it.kind,it.date,it.side]);
+      if(isAmendment(id)){
+        for(const {k,r,yea} of amendmentRollcalls(b,vv,opt?.votes||null)){votesUsed++;const f=vv[k],s0=yea?side:1-side;
+          for(const [icpsr,code] of f.cast.get(r.rollnumber)||[]){const s=castSide(code,s0),bg=f.bio.get(Number(icpsr));if(s==null||!bg)continue;add(bg,q,[`${id}#${k}-${r.rollnumber}`,Number(code)===1?'y':'n',r.date,s]);}
+        }
+        continue;}
       for(const {k,r} of billRollcalls(b,vv,opt?.votes||null)){
         if(!decidesBill(r.vote_question)){votesSkipped++;continue;}votesUsed++;const f=vv[k];
         for(const [icpsr,code] of f.cast.get(r.rollnumber)||[]){const s=castSide(code,side),bg=f.bio.get(Number(icpsr));if(s==null||!bg)continue;add(bg,q,[`${id}#${k}-${r.rollnumber}`,Number(code)===1?'y':'n',r.date,s]);}

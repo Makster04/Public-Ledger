@@ -585,15 +585,16 @@
    "axis": null
   },
   {
-   "id": "assault-weapon-buyback",
+   "id": "assault-weapons",
    "cat": "social",
-   "q": "Should the federal government require a buyback of assault weapons?",
+   "q": "Should the federal government ban assault weapons or buy them back?",
    "sides": [
     "Yes",
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "social",
+   "note": "Widens the quiz's buyback question: Congress has had no bill to require a buyback, so bans on assault weapons and large magazines count, and so do paid buyback programs."
   },
   {
    "id": "sensitivity-training",
