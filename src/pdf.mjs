@@ -6,6 +6,8 @@ const latin1=b=>new TextDecoder('latin1').decode(b);
 
 // A stream inflated, or null when it doesn't inflate or would pass `cap` bytes (a large picture, or a compression bomb).
 export const STREAM_CAP=16e6;
+// The most one PDF's streams may inflate to in all (a long scanned report's pages), so one file can't use up memory.
+export const PDF_CAP=64e6;
 async function inflate(bytes,cap=STREAM_CAP){
   try{
     const reader=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate')).getReader(),parts=[];let n=0;
@@ -18,7 +20,7 @@ async function inflate(bytes,cap=STREAM_CAP){
 export const NOT_TEXT=/\/Subtype\s*\/(Image|Type1C|CIDFontType0C|OpenType)\b|\/Type\s*\/(Metadata|XRef|EmbeddedFile)\b|\/Length[123]\s/;
 // Every indirect object: its number, its dictionary text, and its stream's bytes (inflated when FlateDecode).
 async function readObjects(bytes){
-  const raw=latin1(bytes),objects=new Map();
+  const raw=latin1(bytes),objects=new Map();let left=PDF_CAP;
   for(const m of raw.matchAll(/(\d+)\s+\d+\s+obj\b/g)){
     const start=m.index+m[0].length,end=raw.indexOf('endobj',start);if(end<0)continue;
     let body=raw.slice(start,end),stream=null;
@@ -29,7 +31,8 @@ async function readObjects(bytes){
         const dict=body.slice(0,s);
         if(!NOT_TEXT.test(dict)){
           const data=bytes.subarray(from,to);
-          stream=/\/FlateDecode/.test(dict)?await inflate(trimEol(data)):/\/Filter/.test(dict)?null:data.slice();
+          stream=/\/FlateDecode/.test(dict)?(left>0?await inflate(trimEol(data),Math.min(STREAM_CAP,left)):null):/\/Filter/.test(dict)?null:data.slice();
+          if(stream)left-=stream.length;
         }
       }
       body=body.slice(0,s);
@@ -93,7 +96,9 @@ function tokens(text){
       out.push({str:s});continue;
     }
     if(c==='<'&&text[i+1]!=='<'){
-      const e=text.indexOf('>',i);let h=text.slice(i+1,e).replace(/\s/g,'');if(h.length%2)h+='0';
+      // (no closing ">": the stream is damaged or isn't text; it ends here rather than being read again from the start)
+      const e=text.indexOf('>',i);if(e<0)break;
+      let h=text.slice(i+1,e).replace(/\s/g,'');if(h.length%2)h+='0';
       let s='';for(let k=0;k<h.length;k+=2)s+=String.fromCharCode(parseInt(h.slice(k,k+2),16));
       out.push({str:s});i=e+1;continue;
     }
@@ -105,9 +110,14 @@ function tokens(text){
     else if(/^[+-]?(\d+\.?\d*|\.\d+)$/.test(w))out.push({num:Number(w)});
     else out.push({op:w});
     i=j;
+    // An inline picture (BI … ID <bytes> EI): its bytes are skipped, up to the EI that ends it.
+    if(w==='ID'&&c!=='/'){const end=/\sEI(?=[\s/\[<(]|$)/g;end.lastIndex=j+1;const m=end.exec(text);i=m?m.index+m[0].length:n;}
+    if(out.length>MAX_TOKENS)break;
   }
   return out;
 }
+// Enough for any page of words; a stream with more isn't text.
+const MAX_TOKENS=2e6;
 
 // Windows-1252 characters a simple font may use in the 0x80-0x9F range.
 const WIN={0x91:'‘',0x92:'’',0x93:'“',0x94:'”',0x96:'–',0x97:'—',0x95:'•',0x85:'…'};

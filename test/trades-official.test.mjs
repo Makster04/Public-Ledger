@@ -38,6 +38,16 @@ test('PDF text: compressed streams, kerning, ToUnicode fonts and object streams;
   assert.equal(await pdfText(new TextEncoder().encode('<html>not a pdf</html>')),'');
 });
 
+test('PDF text: an inline picture\'s bytes are skipped, and a "<" with no ">" ends the page instead of looping (a long scanned report ran the local server out of memory)',async()=>{
+  // A page with words and an inline picture whose bytes would read as words, strings and hex strings.
+  const picture='BI /W 40 /H 40 /BPC 8 /CS /G ID '+'(junk) Tj <4A 4B> Tj [ /x '.repeat(2000)+'\x00\xff\n EI';
+  const c=`BT /F1 10 Tf 50 700 Td (Hello) Tj ET q ${picture} Q BT /F1 10 Tf 50 680 Td (World) Tj ET`;
+  assert.equal(await pdfText(makePdf(c)),'Hello\nWorld','the picture adds nothing');
+  // A hex string never closed: the page so far is read, and the reader stops (it used to start over, forever).
+  const t0=Date.now(),text=await pdfText(makePdf('BT /F1 10 Tf 50 700 Td (Hello) Tj <41 42'));
+  assert.equal(text,'Hello');assert.ok(Date.now()-t0<2000,'quickly');
+});
+
 test('House trade report text: each row by its type, dates and amount, with the asset before it or wrapped after it',async()=>{
   const rows=housePtrTrades(await pdfText(makePdf(PTR_CONTENT)));
   assert.deepEqual(rows.map(r=>[r.owner,r.ticker,r.asset,r.assetType,r.type,r.traded,r.low,r.high]),[
