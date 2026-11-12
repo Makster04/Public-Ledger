@@ -48,4 +48,5 @@ test('a bill\'s roll calls: from its own actions and from Voteview\'s bill_numbe
   assert.equal(voteviewBill(bill),'HRES1096');
   assert.deepEqual(billRollcalls(bill,vv).map(x=>`${x.k}-${x.r.rollnumber}`),['H117-590','H117-619','S117-40']);
   assert.deepEqual(billRollcalls({c:118,t:'hr',n:1,votes:[]},vv),[],'a Congress not loaded: nothing');
+  assert.deepEqual(billRollcalls(bill,vv,['H117-619']).map(x=>x.r.rollnumber),[619],'only the roll calls named for a reused bill number');
 });

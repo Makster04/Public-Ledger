@@ -8,6 +8,8 @@
 //                                   amendments, tabling and other procedure don't count (what a Yea means there varies).
 //                                   The votes come from the bill's own actions and from Voteview's roll calls that name
 //                                   the bill (Voteview's bill_number), each roll call once.
+// A coded bill may name the only roll calls that count for it ([side, why, {votes: ["H117-549"]}]), for a bill number
+// that was later reused as the vehicle for something else.
 // Writes .local/question-record.json: {built, questions: {question: {bills: {bill: {side, why, title}}}},
 // people: {bioguide: {question: [[bill, kind, date, side]]}}}, and prints how many sitting members each question reaches.
 //   npm run bills:record
@@ -27,8 +29,8 @@ export const castSide=(cast,side)=>Number(cast)===1?side:Number(cast)===6?1-side
 export const voteviewBill=b=>`${String(b.t).toUpperCase()}${b.n}`;
 // A bill's roll calls, each once: those its actions list (matched by session and clerk roll number) and those Voteview
 // files under the bill. vv: {"H117": {roll: Map("session-clerk" -> roll call), byBill: Map(bill -> [roll calls])}}.
-export function billRollcalls(bill,vv){
-  const out=[],seen=new Set(),take=(k,r)=>{const key=`${k}-${r.rollnumber}`;if(seen.has(key))return;seen.add(key);out.push({k,r});};
+export function billRollcalls(bill,vv,only=null){
+  const out=[],seen=new Set(),take=(k,r)=>{const key=`${k}-${r.rollnumber}`;if(seen.has(key)||(only&&!only.includes(key)))return;seen.add(key);out.push({k,r});};
   for(const v of bill.votes||[]){const k=`${v.ch}${v.c}`,r=vv[k]?.roll.get(`${v.session}-${v.roll}`);if(r)take(k,r);}
   for(const ch of ['H','S']){const k=`${ch}${bill.c}`;for(const r of vv[k]?.byBill?.get(voteviewBill(bill))||[])take(k,r);}
   return out;
@@ -68,10 +70,10 @@ async function main(){
   const add=(id,q,item)=>{((people[id]||={})[q]||=[]).push(item);};
   for(const [q,list] of Object.entries(coded)){
     if(q==='about')continue;questions[q]={bills:{}};
-    for(const [id,[side,why]] of Object.entries(list)){
+    for(const [id,[side,why,opt]] of Object.entries(list)){
       const b=bills.get(id);if(!b)continue;questions[q].bills[id]={side,why,title:b.short?.[0]||b.title};
       for(const it of billItems(b,side))add(it.id,q,[id,it.kind,it.date,it.side]);
-      for(const {k,r} of billRollcalls(b,vv)){
+      for(const {k,r} of billRollcalls(b,vv,opt?.votes||null)){
         if(!decidesBill(r.vote_question)){votesSkipped++;continue;}votesUsed++;const f=vv[k];
         for(const [icpsr,code] of f.cast.get(r.rollnumber)||[]){const s=castSide(code,side),bg=f.bio.get(Number(icpsr));if(s==null||!bg)continue;add(bg,q,[`${id}#${k}-${r.rollnumber}`,Number(code)===1?'y':'n',r.date,s]);}
       }
