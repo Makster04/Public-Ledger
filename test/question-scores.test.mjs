@@ -1,7 +1,9 @@
 // Stances on the alignment questions and what's built from them (public/question-scores.js).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {creditItems,recordPoints,applyStatements,ratingPoints,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
+import {creditItems,recordPoints,applyStatements,ratingPoints,ratingScore,ratingItems,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
+import QFILE from '../public/questions.json' with {type:'json'};
+import GR from '../public/group-ratings.json' with {type:'json'};
 
 test('one credit per bill: the higher value once, and several votes on a bill count once (the latest)',()=>{
   const c=creditItems([
@@ -69,4 +71,29 @@ test('carried-over evidence: statements, state votes and official acts; congress
   assert.equal(p.abortion.statements[0].status,'cancelled');assert.deepEqual([p.abortion.a,p.abortion.b],[4,0]);assert.equal(p.abortion.s,1);
   const q=personStances(null,{guns:[{type:'stated',side:'A',date:'2020-01-01'},{type:'state_vote',side:'A',ref:'s1',date:'2019-01-01'}]});
   assert.equal(q['gun-purchase-limits'].a,4);assert.equal(q['gun-purchase-limits'].s,1);
+});
+
+test('group ratings: a topic group counts on its question, toward its side above 50 and the other side below, up to 3',()=>{
+  const qs=[{id:'ab',sides:['Pro-life','Pro-choice'],groups:{sba:0,rfa:1}},{id:'clim',sides:['Yes','No'],groups:{lcv:0}},{id:'none',sides:['Yes','No']}];
+  assert.equal(ratingScore({grade:'A+'}),100);assert.equal(ratingScore({grade:'F-',score:12}),12);assert.equal(ratingScore({grade:'?'}),null);
+  const r=ratingItems([{group:'sba',org:'SBA',grade:'F'},{group:'rfa',org:'RFA',score:100,year:2025},{group:'lcv',org:'LCV',score:75},
+    {group:'lcv',org:'LCV',score:50},{group:'heritage',org:'Heritage',score:0},{group:'humane',org:'Humane',score:105}],qs);
+  assert.deepEqual(Object.keys(r).sort(),['ab','clim'],'an overall group is on no question; a 50 counts nothing');
+  assert.deepEqual(r.ab.map(x=>[x.group,x.side,x.pts]),[['sba',1,3],['rfa',1,3]],'an F from a pro-life group counts toward Pro-choice');
+  assert.deepEqual(r.clim.map(x=>[x.side,x.pts]),[[0,1.5]]);
+  // with the record: points add to the record's, and a question with only ratings gets a stance too
+  const p=personStances({ab:[0,1]},null,{ratings:[{group:'sba',org:'SBA',grade:'A'},{group:'lcv',org:'LCV',score:90}],questions:qs});
+  assert.deepEqual([p.ab.a,p.ab.b],[3,1]);assert.equal(p.ab.ratings.length,1);assert.deepEqual(p.ab.ratingPoints,{a:3,b:0});
+  assert.equal(p.clim.a,2.4);assert.equal(p.clim.s,null,'2.4 points is under the 3 a stance needs');
+  assert.deepEqual(Object.keys(personStances(null,null)),[],'no ratings, no record: nothing');
+});
+
+test('the questions name only groups that are read, each once, with a side; overall groups are on no question',()=>{
+  const seen=new Map();
+  for(const q of QFILE.questions)for(const [g,side] of Object.entries(q.groups||{})){
+    assert.ok(GR.groups[g],`${q.id}: ${g} is a known group`);assert.ok([0,1].includes(side),q.id);
+    assert.notEqual(GR.groups[g].issue,'Overall',`${g} rates across topics`);seen.set(g,(seen.get(g)||0)+1);}
+  for(const [g,n] of seen)assert.equal(n,1,`${g} counts on one question`);
+  const side=(id,g)=>QFILE.questions.find(q=>q.id===id).groups[g];
+  assert.equal(side('abortion','sba'),0);assert.equal(side('abortion','rfa'),1);assert.equal(side('gun-purchase-limits','goa'),1);assert.equal(side('climate-regulations','lcv'),0);
 });

@@ -1,5 +1,5 @@
 {
- "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the lean or the compass); axis is the compass axis it counts on (econ: across, social: up and down), or null. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
+ "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the lean or the compass); axis is the compass axis it counts on (econ: across, social: up and down), or null. groups names the interest groups whose scorecard is about the question, each with the side a high rating from it favors (public/question-scores.js ratingItems); groups that rate across many topics are on no question. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
  "credit": "Questions modeled on the topics of iSideWith.com's political quiz (https://www.isidewith.com/political-quiz), in our own wording, with questions added for votes the quiz doesn't cover.",
  "left_out": {
   "local": [
@@ -207,7 +207,10 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "groups": {
+    "standwithcrypto": 1
+   }
   },
   {
    "id": "algorithm-liability",
@@ -416,7 +419,12 @@
     "Pro-choice"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "social",
+   "groups": {
+    "sba": 0,
+    "rfa": 1,
+    "ppaction": 1
+   }
   },
   {
    "id": "contraception",
@@ -727,7 +735,10 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "econ"
+   "axis": "econ",
+   "groups": {
+    "lcv": 0
+   }
   },
   {
    "id": "animal-testing",
@@ -981,7 +992,11 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "econ"
+   "axis": "econ",
+   "groups": {
+    "clubforgrowth": 0,
+    "afp": 0
+   }
   },
   {
    "id": "tariffs",
@@ -1115,7 +1130,10 @@
     "No"
    ],
    "liberal": 0,
-   "axis": "social"
+   "axis": "social",
+   "groups": {
+    "goa": 1
+   }
   },
   {
    "id": "decriminalize-drugs",
@@ -2066,7 +2084,10 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": null,
+   "groups": {
+    "ajp": 1
+   }
   },
   {
    "id": "military-spending",
@@ -2099,7 +2120,10 @@
     "No"
    ],
    "liberal": null,
-   "axis": null
+   "axis": null,
+   "groups": {
+    "niac": 1
+   }
   },
   {
    "id": "drone-strikes",
@@ -2375,7 +2399,10 @@
     "No"
    ],
    "liberal": 1,
-   "axis": "social"
+   "axis": "social",
+   "groups": {
+    "numbersusa": 0
+   }
   },
   {
    "id": "work-amnesty",
