@@ -32,10 +32,10 @@ export const fromYear=argv=>{const i=argv.indexOf('--from'),y=i>=0?Number(argv[i
 export function tally({rollcalls,members,votes},chamber,ids,from,out={days:{S:{},H:{}},people:{}}){
   const date=new Map(rollcalls.map(r=>[String(r.rollnumber),String(r.date||'').slice(0,10)]));
   // Members of the chamber only (Voteview's lists also carry the President, whose positions aren't votes).
-  const who=new Map(members.filter(m=>ids.has(m.bioguide_id)&&!/president/i.test(m.chamber||'')).map(m=>[String(m.icpsr),ids.get(m.bioguide_id)]));
+  const who=new Map(members.filter(m=>ids.has(m.bioguide_id)&&!/president/i.test(m.chamber||'')).map(m=>[String(Number(m.icpsr)),ids.get(m.bioguide_id)]));
   for(const d of date.values())if(Number(d.slice(0,4))>=from)out.days[chamber][d]=(out.days[chamber][d]||0)+1;
   for(const v of votes){
-    const id=who.get(String(v.icpsr)),d=date.get(String(v.rollnumber)),code=String(v.cast_code).trim();
+    const id=who.get(String(Number(v.icpsr))),d=date.get(String(v.rollnumber)),code=String(v.cast_code).trim();
     if(!id||!d||Number(d.slice(0,4))<from||!(MISSED.has(code)||CAST.has(code)))continue;
     const p=out.people[id]||(out.people[id]={years:{},missed:{},spans:[]}),y=p.years[d.slice(0,4)]||(p.years[d.slice(0,4)]={votes:0,missed:0});
     y.votes++;

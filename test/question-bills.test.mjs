@@ -30,7 +30,7 @@ test('candidates: became law first, then recorded votes, then cosponsors; alread
   assert.deepEqual(list[1].coded,[0,'Raises it to $17.']);assert.equal(list[0].law,true);assert.equal(list[2].cosponsors,2);
 });
 
-import {decidesBill,castSide,billItems} from '../scripts/build-question-record.mjs';
+import {decidesBill,castSide,billItems,billRollcalls,voteviewBill} from '../scripts/build-question-record.mjs';
 test('the votes that decide a bill count; procedure doesn\'t',()=>{
   for(const q of ['On Passage','On Motion to Suspend the Rules and Pass, as Amended','On the Cloture Motion','On Agreeing to the Conference Report','On Motion to Concur in the Senate Amendment','On the Joint Resolution','On Overriding the Veto','Passage, Objections of the President Notwithstanding','On the Motion to Proceed','On Agreeing to the Resolution'])assert.ok(decidesBill(q),q);
   for(const q of ['On Motion to Recommit with Instructions','On Agreeing to the Amendment','On Ordering the Previous Question','On Motion to Table','On the Motion to Table the Motion to Reconsider','Election of the Speaker','',null])assert.ok(!decidesBill(q),String(q));
@@ -39,4 +39,13 @@ test('a Yea takes the bill\'s side, a Nay the other, anything else nothing; spon
   assert.equal(castSide(1,0),0);assert.equal(castSide(6,0),1);assert.equal(castSide(6,1),0);for(const c of [2,3,4,5,7,8,9,0])assert.equal(castSide(c,0),null);
   const items=billItems({intro:'2019-01-16',sponsor:{id:'S000522'},cosponsors:[{id:'A1',date:'2019-01-16'},{id:'B2',date:'2019-02-01',out:'2019-03-01'}]},0);
   assert.deepEqual(items,[{id:'S000522',kind:'s',date:'2019-01-16',side:0},{id:'A1',kind:'c',date:'2019-01-16',side:0}]);
+});
+
+test('a bill\'s roll calls: from its own actions and from Voteview\'s bill_number, each once',()=>{
+  const r1={rollnumber:590,clerk_rollnumber:'143',session:'2'},r2={rollnumber:619,clerk_rollnumber:'172',session:'2'},r3={rollnumber:40,clerk_rollnumber:'40',session:'2'};
+  const vv={H117:{roll:new Map([['2-143',r1],['2-172',r2]]),byBill:new Map([['HRES1096',[r2]]])},S117:{roll:new Map(),byBill:new Map([['HRES1096',[r3]]])}};
+  const bill={c:117,t:'hres',n:1096,votes:[{ch:'H',c:117,session:2,roll:143},{ch:'H',c:117,session:2,roll:999}]};
+  assert.equal(voteviewBill(bill),'HRES1096');
+  assert.deepEqual(billRollcalls(bill,vv).map(x=>`${x.k}-${x.r.rollnumber}`),['H117-590','H117-619','S117-40']);
+  assert.deepEqual(billRollcalls({c:118,t:'hr',n:1,votes:[]},vv),[],'a Congress not loaded: nothing');
 });
