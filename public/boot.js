@@ -16,6 +16,10 @@ try {
   const getItDone=fetch('/get-it-done.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const conflicts=fetch('/conflicts.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const groupRatings=fetch('/group-ratings.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // The alignment questions and everyone's points on them (scripts/build-question-record.mjs), for the Ideology lean,
+  // the compass and Your match.
+  const questions=fetch('/questions.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const questionStances=fetch('/question-stances.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const corporatePacs=fetch('/corporate-pacs.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
@@ -34,6 +38,8 @@ try {
   window.CONFLICTS=await conflicts;
   window.GROUP_RATINGS=await groupRatings;
   window.CORP_PACS=await corporatePacs;
+  window.QUESTIONS=(await questions)||{questions:[],categories:[]};
+  window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
   const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress}:null;
   await import('./app.js');

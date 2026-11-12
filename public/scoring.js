@@ -85,7 +85,7 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     six(s,ctx={}){
       const v=pvpScore(actionsOf(s)),votes=s.office?null:(s.funderPos?.length?businessLoyalty(s.funderPos,s.party,tallies):null);
       return {
-        ideology:ideology(s,data.issues,{ratings:ctx.ratings?.[s.id]||null}),
+        ideology:ideology(s,data.issues,{ratings:ctx.ratings?.[s.id]||null,questions:ctx.questions||null}),
         word:keepsTheirWord(s),
         showsup:showsUp(s,{attendance:ctx.attendance,getItDone:ctx.getItDone,asOfYear}),
         aboveboard:aboveBoard(s,{trades:ctx.trades||reviewedTrades(s),conflicts:ctx.conflicts,asOfYear}),
@@ -110,7 +110,8 @@ export function gradedPeople(data,{senate=[],house=[]}={}){
 }
 // What the six scores read besides the profile, from the files the page loads (public/boot.js): attendance.json,
 // get-it-done.json, conflicts.json and group-ratings.json.
-export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null});
+// questions: {list, categories} from public/questions.json, for the Ideology lean (each person's stances are person.qst).
+export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null,questions=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null,questions:questions||null});
 // The grades the monthly change log records: those that come from the site's own files alone, so they're the same on
 // every page that shows them. Big Money Independence, and Plays by the Rules once a profile has read the refresh's trade records, also use
 // the refresh's saved records, so the log leaves them out for now.
