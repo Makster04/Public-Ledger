@@ -44,7 +44,9 @@ test('the page scores the same way: its scorer, context and basic profiles come 
   assert.match(app,/const SCORER=makeScorer\(DATA,COMMITTEES,COMMITTEE_SECTORS,window\.VOTE_PARTY\);/);
   assert.match(app,/const SIX_CTX=sixContext\(\{attendance:window\.ATTENDANCE,getItDone:window\.GET_IT_DONE,conflicts:window\.CONFLICTS,ratings:window\.GROUP_RATINGS\}\);/);
   assert.match(app,/const sixOf=s=>\{if\(!sixCache\.has\(s\.id\)\)sixCache\.set\(s\.id,SCORER\.six\(s,SIX_CTX\)\)/);
-  assert.match(app,/\[\.\.\.SENATE,\.\.\.HOUSE\]\.filter\(x=>!byId\[x\.id\]\)\.map\(x=>\[x\.id,Object\.assign\(markBasic\(x\)/);
+  assert.match(app,/\[\.\.\.SENATE,\.\.\.HOUSE\]\.filter\(x=>!byId\[x\.id\]\)\.map\(x=>\[x\.id,basicShape\(Object\.assign\(markBasic\(x\)/);
+  // (basicShape only adds empty money parts, so the full design's tabs can draw; it changes no scored input)
+  assert.match(app,/function basicShape\(x\)\{/);
   for(const f of ['research','committees','committee-sectors','vote-party','senate','house','attendance','get-it-done','conflicts','group-ratings'])assert.ok(boot.includes(`'/${f}.json'`),f);
   assert.match(boot,/window\.COMMITTEE_SECTORS=\(await sectors\)\?\.committees/);assert.match(boot,/window\.VOTE_PARTY=\(await voteParty\)\?\.votes/);
   assert.match(boot,/window\.SENATE=sen\?\.senators/);assert.match(boot,/window\.HOUSE=hs\?\.members/);

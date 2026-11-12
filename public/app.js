@@ -54,7 +54,40 @@ function basicEvidence(x){
   for(const c of CODED){const p=pos.get(c.ref);if(p!=='Yea'&&p!=='Nay')continue;(ev[c.issue]||=[]).push({...c,pos:p,side:p==='Yea'?c.yea:c.yea==='A'?'B':'A'});}
   return ev;
 }
-const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,Object.assign(markBasic(x),{evidence:basicEvidence(x)})]));
+// A basic profile has the full profiles' fields, so every tab draws the same design: empty (and marked not read yet)
+// until the refresh's official records fill them in (hydrateBasic), never a made-up zero.
+function basicShape(x){
+  const none={super_pac:0,other:0,party:0,total:0},by=()=>({super_pac:0,other:0,party:0});
+  return Object.assign(x,{camp:x.camp||{missing:true,pending:true,note:'Their campaign totals come from the FEC through the refresh; they show here once read.'},
+    out:x.out||{start:null,end:null,multi:false,incomplete:[],for:{...none},against:{...none},parts:{S:by(),O:by(),OO:by(),SO:by(),X:by()},rivals:[],others:[],excludedPre:{n:0,amount:0},
+      n:0,uncertain:0,cms:[],same:null,dupRemoved:{n:0,amount:0},possibleRepeat:0,pinned:0,unread:true},
+    // (no reviewed PAC lines: basic marks it, so the FEC bulk files' totals are used where those lines would be)
+    pac:x.pac||{basic:true,window:'2025–26',filings:[],rows:[],subtotal:0,retrieved:null,coverage:null,periodTotal:null,byCat:[],nPacs:0},
+    funderPos:x.funderPos||[],assoc:x.assoc||{},notVoted:x.notVoted||{},stateLeg:x.stateLeg||[],cycleLabel:x.cycleLabel||'2025–26',cycleNote:x.cycleNote||'two-year period (2025–26)',
+    cmteName:x.cmteName||'Their campaign committee'});
+}
+const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,basicShape(Object.assign(markBasic(x),{evidence:basicEvidence(x)}))]));
+// A basic profile's campaign totals and outside spending from the refresh's records (the FEC's committee totals, and its
+// independent expenditures for and against them), in the shape the full profiles' research uses; read once a visit.
+// true when something was filled in.
+async function hydrateBasic(s){
+  const [k,o]=await Promise.all([window.RecordLive.section(s.id,'campaign').catch(()=>null),window.RecordLive.section(s.id,'outside').catch(()=>null)]);
+  const n=v=>Number(v)||0;let changed=false;
+  if(k&&Number(k.receipts)>=0&&k.start&&k.end){
+    const self=k.self!=null?n(k.self):n(k.candidate);
+    s.camp={receipts:k.receipts,indiv:k.individual??null,itemized:k.itemized??null,unitemized:k.unitemized??null,party:k.party??null,pac:k.pac??null,transfers:k.transfers??null,
+      candidate:k.candidate??null,loans:k.loans??null,loansKnown:k.loans!=null,self,selfShare:k.receipts>0?self/k.receipts:0,
+      other:Math.max(0,k.receipts-n(k.individual)-n(k.pac)-n(k.party)-n(k.transfers)-self),disbursements:k.disbursements??null,cash:k.cash??null,debts:k.debts??null,
+      start:k.start,end:k.end,cmteId:k.committee,cmte:s.cmteName,src:k.source,missing:false,live:true,note:'Figures from the FEC\'s committee totals, read by the refresh.'};
+    s.cycleLabel=`${fmtDate(k.start)} – ${fmtDate(k.end)}`;changed=true;
+  }
+  if(o&&Number.isFinite(Number(o.total))){
+    const side=v=>({super_pac:0,other:n(v),party:0,total:n(v)});
+    // (the refresh doesn't tell super PACs from other spenders, so it's all under "other")
+    s.out={...s.out,start:o.start,end:o.through,for:side(o.support),against:side(o.oppose),parts:{...s.out.parts,S:{super_pac:0,other:n(o.support),party:0},O:{super_pac:0,other:n(o.oppose),party:0}},n:n(o.count),unread:false,live:true};changed=true;
+  }
+  return changed;
+}
 const BASIC_LIST=Object.values(BASIC);
 // One ID per bill ("117-hr-1319"), so a vote and a sponsorship on the same bill count once.
 const VOTE_BY_ID=new Map(DATA.votes.concat(DATA.hvotes).map(v=>[v.id,v]));
@@ -91,7 +124,8 @@ const REC_SHORT={senator:'Senator',member_of_congress:'House member',former_memb
 const REC_LABEL={senator:'Sitting U.S. senator',member_of_congress:'Sitting U.S. House member',former_member_of_congress:'Former member of Congress',state_legislator:'State legislator',executive:'Executive / appointed office',none:'No prior elected office'};
 const fmtDate=d=>{if(!d)return'—';const m=d.match(/^(\d{4})-(\d{2})-(\d{2})$/);if(!m)return d;return new Date(+m[1],+m[2]-1,+m[3]).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
 const cgUrl=s=>`https://www.congress.gov/member/${s.name.toLowerCase().replace(/-/g,' ').replace(/[^a-z ]/g,'').trim().split(/\s+/).filter(w=>w.length>1).join('-')}/${s.bioguide}`;
-const fecCandUrl=id=>id[0]==='P'?`https://www.fec.gov/data/candidate/${id}/`:`https://www.fec.gov/data/candidate/${id}/?cycle=2026&election_full=true`;
+// (no FEC candidate ID on file, such as a newly appointed senator: the FEC's candidate search)
+const fecCandUrl=id=>!id?'https://www.fec.gov/data/candidates/':id[0]==='P'?`https://www.fec.gov/data/candidate/${id}/`:`https://www.fec.gov/data/candidate/${id}/?cycle=2026&election_full=true`;
 const fecCmteUrl=id=>`https://www.fec.gov/data/committee/${id}/?cycle=2026`;
 const fecIeUrl=id=>`https://www.fec.gov/data/independent-expenditures/?data_type=processed&cycle=2026&candidate_id=${id}`;
 let resizers=[];
@@ -872,7 +906,7 @@ function wealthCard(st){
     {label:'Stock trades',value:trades||'Not read yet',wait:!trades,sub:t.trades?`since ${t.since}`:t.partial?'trade reports not read yet':'none reported'}]};
 }
 function profileReport(s){
-  return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. The other scores wait on reviewed research.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
+  return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. Big Money Independence comes from their FEC reports and financial disclosures as the refresh reads them. Plays by the Rules also needs their legal record reviewed, and Keeps Their Word their statements.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
 }
 function evidenceStrip(s){
   return `<aside class="evidence-strip"><div><div class="page-eyebrow">FOLLOW THE EVIDENCE</div><h3>Every conclusion has a paper trail.</h3><p class="small muted">Research snapshot: ${esc(DATA.asof)} · Each source keeps its own reporting period.</p></div><div class="row"><a href="${s.basic?'#method-sources':'#'+s.id+'-sources'}">${s.basic?'Source guide':'Profile sources'} ↗</a><a href="#method">Methodology ↗</a><a href="#method-log">Score history ↗</a></div></aside>`;
@@ -880,21 +914,21 @@ function evidenceStrip(s){
 function bindProfileActions(s,pane){
   $('.profile-share')?.addEventListener('click',async()=>{
     let c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
-    if(s.basic||s.office){try{const records=await loadCards();c=records?.[s.id]?.campaign||null;}catch{}}
-    const m=scoreFor(s), i=s.basic?null:integritySnapshot(s), v=s.basic?null:personPvp(s);
+    if(!c&&(s.basic||s.office)){try{const records=await loadCards();c=records?.[s.id]?.campaign||null;}catch{}}
+    const m=scoreFor(s), i=integritySnapshot(s), v=personPvp(s);
     // Their disclosures, as the top of the profile reads them (5 seconds at most; the card says when they couldn't be
     // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
     const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
-    const u=s.basic?null:s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
+    const u=s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
     // The funding overview: where the money came from, and the five trackers as the profile's Summary of Major Lookouts
     // shows them this cycle, with their super PACs' spending (the refresh's records, else the file's).
-    const sp=s.basic||s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
-    const inp=s.basic||s.office?null:lookoutInputs(s,d,'this',sp||undefined);
+    const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
+    const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
     const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
       lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null,
       funding:c?fundingParts(c,d?.sizes):null,
       trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
-    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:s.basic?SIX.filter(x=>x.grade).map(x=>({label:x.name,value:null,detail:'Research not reviewed'})):(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
+    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
     if(!pane.querySelector('#'+b.dataset.section)){b.hidden=true;return;}
@@ -1081,7 +1115,20 @@ function paneShowsUp(s,pane){
 // ----- Big Money Independence (async: the gift sizes and the financial disclosure come from the refreshed official records) -----
 // Earmarked gifts: the automatic FEC read (research.json "bundled"), and a total researched by hand only for a conduit
 // the automatic read has nothing for, so the same gifts never count twice (as scripts/build-funders.mjs does).
+// A basic profile's: each group's forwarded gifts this cycle from the FEC bulk-file script (public/corporate-pacs.json
+// "earmarks"; an older file has AIPAC's alone, in its tracker line).
+function bulkEarmarkRows(s){
+  const cp=window.CORP_PACS;if(!cp)return [];
+  const mine=cp.earmarks?cp.earmarks[s.id]||{}:cp.routed?.aipac&&cp.trackers?.aipac?.[s.id]?.[2]>0?{aipac:[cp.trackers.aipac[s.id][2],null]}:{};
+  const cycle=Number(cp.cycle)||2026;
+  return Object.entries(mine).filter(([,v])=>v?.[0]>0).sort((a,b)=>b[1][0]-a[1][0]).map(([group,[amount,to]])=>{
+    const cid=group.startsWith('fec:')?group.slice(4):DATA.bundled?.conduits?.[group]?.[0];
+    return {id:`bulk:${group}`,group,amount,period:`${cycle-1}–${String(cycle).slice(2)} cycle`,
+      src:cid?`https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=${cid}${to||s.camp?.cmteId?`&recipient_committee_id=${to||s.camp.cmteId}`:''}&two_year_transaction_period=${cycle}`:null};
+  });
+}
 function earmarkRows(s){
+  if(s.basic)return bulkEarmarkRows(s);
   const mine=DATA.bundled?.people?.[s.id]||{},read=new Set();
   for(const k of Object.keys(mine)){if(/^fec:/.test(k))read.add(k.slice(4));for(const c of (DATA.groupPos||[]).find(g=>g.key===k)?.conduits||[])read.add(c);}
   const bundled=Object.entries(mine).map(([group,r])=>({id:`bundled:${group}`,group,amount:r.routed,src:r.src,period:bundledCycle(s.id,group)}));
@@ -1090,6 +1137,8 @@ function earmarkRows(s){
 }
 function unboughtInputs(s){
   const pacRows=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(t&&amount>0)pacRows.push({kind:t.kind,amount});}
+  // Without reviewed PAC lines (a basic profile), each kind's share from the FEC bulk files (public/corporate-pacs.json).
+  if(!pacRows.length&&(!s.pac||s.pac.basic))for(const [kind,amount] of Object.entries(window.CORP_PACS?.kinds?.[s.id]||{}))if(amount>0)pacRows.push({kind,amount});
   return {pacRows,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[])};
 }
 function unboughtBreakdown(x){
@@ -1267,7 +1316,8 @@ function unboughtPast(s,d){
   return {camp,sizes:d?.sizes?.cycles||{},pacs:m.pacs?.cycles||{},jfc,earmarks};
 }
 // Whether every committee forwarding gifts to their campaign was searched for (scripts/build-bundled.mjs).
-const earmarksSearched=s=>!!(DATA.bundled?.listed?.[s.id]||DATA.bundled?.discovered);
+// ("discovered" covers the profiles the search ran for; a basic profile's routed gifts were never searched)
+const earmarksSearched=s=>!s.basic&&!!(DATA.bundled?.listed?.[s.id]||DATA.bundled?.discovered);
 const pacKindOf=cid=>{const c=(DATA.pacCommittees||{})[cid];return c?pacKind(c):null;};
 // The Big Money Independence result for a period: 'this' (the current cycle, as the grade is shown everywhere) or a span of cycles.
 function unboughtFor(s,inputs,d,period){
@@ -1350,7 +1400,10 @@ function lookoutInputs(s,d,period='this',sp=undefined){
   for(const cy of cycles){
     const c=m.pacs?.cycles?.[cy],span=`${cy-1}–${cy}`,cut=c?.more>0?`the ${(c.committees||[]).length} largest PAC givers for ${span}`:`every PAC check the FEC has processed for ${span}`;
     const read=(c?.committees||[]).map(x=>({cid:x.cid||null,name:x.name||'',amount:Number(x.amount)||0}));
-    if(cy===current&&s.pac){lists.push(researchPacLines(DATA,s),read);said.push(c?`${cut}, and every PAC line in the reports reviewed for ${s.pac.window||span}`:`the PAC lines in the reports reviewed for ${s.pac.window||span}`);continue;}
+    // A basic profile's checks from each tracker's PACs this cycle: the FEC bulk files' totals (npm run corporate:pacs).
+    const bulk=cy===current&&s.pac?.basic&&window.CORP_PACS?.people?.[s.id]?TRACKERS.map(t=>{const e=window.CORP_PACS.trackers?.[t.key]?.[s.id];return e&&e[0]>0?{cid:t.pacIds[0]||null,name:t.name,amount:e[0]}:null;}).filter(Boolean):null;
+    if(bulk){lists.push(bulk);said.push(`every PAC check to them in the FEC's bulk files for ${span}`);continue;}
+    if(cy===current&&s.pac&&!s.pac.basic){lists.push(researchPacLines(DATA,s),read);said.push(c?`${cut}, and every PAC line in the reports reviewed for ${s.pac.window||span}`:`the PAC lines in the reports reviewed for ${s.pac.window||span}`);continue;}
     if(c){lists.push(read);said.push(cut);}else missing=true;
   }
   const routed={},direct={};
@@ -1358,7 +1411,10 @@ function lookoutInputs(s,d,period='this',sp=undefined){
     routed[g]=cycles.reduce((t,cy)=>t+(Number(v.byCycle?.[cy]?.routed??(cy===current?v.routed:0))||0),0);
     if(cycles.includes(current)&&v.direct>0)direct[g]=v.direct;
   }
-  const routedKnown=earmarksSearched(s)&&cycles.every(cy=>cy===current||(DATA.bundled?.cycles||[]).includes(cy));
+  // A basic profile this cycle: the gifts AIPAC routed, from the FEC's totals the bulk-file script reads (when it did).
+  const bulkRouted=s.pac?.basic&&window.CORP_PACS?.people?.[s.id]&&cycles.length===1&&Number(cycles[0])===Number(current);
+  if(bulkRouted&&window.CORP_PACS.routed?.aipac)routed.aipac=Number(window.CORP_PACS.trackers?.aipac?.[s.id]?.[2])||0;
+  const routedKnown=bulkRouted?window.CORP_PACS.routed?.aipac===true:earmarksSearched(s)&&cycles.every(cy=>cy===current||(DATA.bundled?.cycles||[]).includes(cy));
   let employees=null;const ind=m.industry;
   if(ind){const per=cycles.map(cy=>Number(cy)===Number(ind.cycle)?ind:ind.cycles?.[cy]);
     if(per.every(Boolean)){employees={};for(const p of per)for(const [k,v] of Object.entries(p.industries||{}))employees[k]=(employees[k]||0)+(Number(v.total)||0);}}
@@ -1623,12 +1679,13 @@ function sixTiles(s,links){
   return `<div class="hc-rc hc-six">${ideo}
     ${tile('word',x.word,`${w.clear} counted checks`)}
     ${tile('showsup',u,u.parts[0].note||'')}
-    ${s.basic?tile('unbought',{pct:null,why:'Research not reviewed yet'},''):s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
+    ${s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
     ${tile('aboveboard',x.aboveboard,'')}
     ${tile('peoplefirst',pf,pf.v?.n?`${pf.v.nPeople} of ${pf.v.n} actions for working people`:'')}</div>`;
 }
 
 function renderProfile(s,requested='overview',focus){
+  if(s.basic&&!s.hydrated){s.hydrated='reading';hydrateBasic(s).then(changed=>{s.hydrated=true;if(changed&&location.hash.startsWith('#'+s.id))route();}).catch(()=>{s.hydrated=true;});}
   const {primary,view}=profileLocation(requested),overview=view==='overview',scoreTab=!!SIX_BY[view];
   app.innerHTML=`${scoreTab?'':profileHeader(s,overview)}${overview?profileReport(s):''}<nav class="tabs${scoreTab?' tabs-top':''}" aria-label="Profile"><div class="wrap" style="padding-inline:0" id="tabs">${TABS.map(([key,label])=>`<button type="button" data-tab="${key}" class="${key===primary?'active':''}" aria-current="${key===primary?'page':'false'}">${label}</button>`).join('')}</div></nav><section class="section" id="pane"${s.basic?' data-basic="1"':''}></section>`;
   $('#tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=`${s.id}-${b.dataset.tab}`;});
@@ -1640,8 +1697,7 @@ function renderProfile(s,requested='overview',focus){
   else (PANES[view]||paneOverview)(s,content,focus);
   simplifyDetailSections(content,view);
   mountPacKinds(content);
-  if(overview&&s.basic)fillBasicHeader(s);
-  if(overview&&!s.basic)fillProfileTiles(s);
+  if(overview)fillProfileTiles(s);
   if(overview&&!s.office)fillWealthHeader(s);
   if(!overview)content.insertAdjacentHTML('beforeend',evidenceStrip(s));
   bindProfileActions(s,pane);
@@ -1669,13 +1725,6 @@ function simplifyDetailSections(root,view){
   }
   if(view==='legislation')fold(root.querySelector('#legislation-record'),'Full voting record, committees & official actions');
   if(view==='finance')fold(root.querySelector('#live-records'),'Latest official filings & source coverage');
-}
-async function fillBasicHeader(s){
-  let c;try{c=await window.RecordLive.section(s.id,'campaign');}catch{return;}
-  if(!c||document.body.dataset.view!=='overview'||!location.hash.startsWith('#'+s.id))return;
-  const facts=document.querySelector('.profile-facts'),label=document.querySelector('.profile-period');if(!facts||!label)return;
-  facts.innerHTML=[['Raised',c.receipts],['Cash on hand',c.cash],['Spent',c.disbursements]].map(([title,n])=>`<div class="profile-fact"><span>${title}</span><b>${profileAmount(n)}</b></div>`).join('');
-  label.textContent=`Official campaign snapshot: ${period(c.start,c.end)} · Not reviewed for a grade`;
 }
 // ---------- The Senate: every sitting senator, with a full profile (reviewed research) or a basic one ----------
 const monthYear=d=>{const m=/^(\d{4})-(\d{2})/.exec(d||'');return m?new Date(+m[1],+m[2]-1,1).toLocaleDateString('en-US',{month:'long',year:'numeric'}):'—';};
@@ -1893,8 +1942,8 @@ const BASIC_LIVE={promises:['crec-day','hearings','statements','factcheck','news
   ethics:['netWorth','trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){renderProfile(s,tab,focus);}
-// The score tabs a basic profile shows in full, since they come from official records alone.
-const BASIC_FULL=new Set(['ideology','showsup','peoplefirst']);
+// The score tabs a basic profile shows in the full design: all of them, filled from the official records it has.
+const BASIC_FULL=new Set(Object.keys(SIX_BY));
 function paneBasicContent(s,view,pane){
   // The score tabs map onto the official-record views a basic profile has.
   view=({ideology:'legislation',word:'promises',showsup:'legislation',unbought:'finance',aboveboard:'ethics',peoplefirst:'pvp'})[view]||view;
@@ -2165,12 +2214,8 @@ function ovOffice(s){
   return ovCard('Not on the ballot','No 2026 race to show',esc(s.term),`<div class="big">${esc(s.seat)}</div>${points([['Nothing to compare','No 2026 campaign totals, outside spending or opponents.'],['Left out of','The filters, races, comparisons and score pages.'],['Grades','From the official acts and the ethics record.'],['Campaign committee',`${esc(s.cmteName||'The 2024 committee')} (${esc(s.fecCmte)}) still files with the FEC. Its latest totals are on the Money &amp; Influence tab.`]],'small')}`,`<a href="${fecCmteUrl(s.fecCmte)}" target="_blank" rel="noopener">FEC committee page ↗</a> · <a href="#${s.id}-finance">Money &amp; Influence →</a>`);
 }
 function paneOverview(s,pane){
-  const pr=s.basic?null:SCORER.promises(s),v=s.basic?null:personPvp(s),e=s.basic?null:personEthics(s);
-  const highlights=s.basic?[
-    ['Office & election',`In the Senate since ${monthYear(s.since)}. Class ${s.class}; term ends ${fmtDate(s.termEnd)}. ${ballotLine(s)}.`, 'legislation','View official records'],
-    ['Reviewed coverage','Research is not yet reviewed. Missing grades do not mean a zero or a clean record.','ethics','See disclosure coverage'],
-    ['Find your alignment','Choose your priorities; this profile needs reviewed issue evidence before it can be compared.','match','Your match']
-  ]:[
+  const pr=SCORER.promises(s),v=personPvp(s),e=personEthics(s);
+  const highlights=[
     ['Keeps Their Word',pr.clear?`${pr.clear} counted checks: ${pr.kept} supported${pr.half?`, ${pr.half} partial or changed`:''}${pr.broken?`, ${pr.broken} contradicted`:''}. ${pr.notCounted+pr.vague+(pr.debate||0)} excluded or pending.`:'No reviewed statement checks are available yet.','word','Read the promises and checks'],
     ['Votes and bills',`${v.n} scored actions for People First. ${evidenceOf(s).label}.`,'ideology','Positions, votes and bills'],
     ['Plays by the Rules',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'aboveboard','Conflicts, disclosures and legal records']
@@ -2268,6 +2313,18 @@ function conduitBlock(s){
   const dsum=direct.reduce((a,b)=>a+b.amount,0);
   const head=`<h3 style="margin:22px 0 6px">${term('earmarked','Money routed through PACs on donors\' behalf')}</h3>
   <div style="margin-bottom:10px">${points([['PAC limit','A PAC can give a candidate at most $5,000 per election from its own account.'],['Conduits','Some groups also collect checks from their members and forward them ("earmarked" contributions).'],['Where it shows','The FEC counts that money as individual contributions. It is already in campaign funds raised, but not in the PAC table above, even though the group directed it.']],'small')}</div>`;
+  // A basic profile: each group's forwarded gifts from the FEC bulk-file script (no search ran for them, so the reviewed
+  // profiles' wording about it doesn't apply).
+  if(s.basic){
+    const cp=window.CORP_PACS,rows=bulkEarmarkRows(s),groups=cp?.routed?.groups||(cp?.routed?.aipac?['aipac']:[]);
+    const nameOf=k=>(GPBY[k]||{}).org||DATA.bundled?.names?.[k]||k;
+    const list=groups.map(nameOf),shown=list.slice(0,6).join(', ')+(list.length>6?`, and ${list.length-6} more`:'');
+    const body=rows.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Amount</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${orgName(nameOf(r.group),ORGS.group(r.group))}${r.src?`<div class="small"><a href="${esc(r.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a></div>`:''}</td><td class="small">${esc(r.period)}</td><td class="r"><b class="num">${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`
+      :groups.length?`<div class="note">None of the ${groups.length} groups read (${esc(shown)}) forwarded donors' gifts to ${esc(s.short)}'s campaign this cycle, in the FEC's processed records as of ${esc(fmtDate(cp.built))}.</div>`
+      :`<div class="note"><b>Not read yet for ${esc(s.short)}.</b> Gifts that groups forward to campaigns are read from each group's own FEC reports once the FEC bulk-file read has run with an FEC key. This does not mean ${esc(s.short)} received none.</div>`;
+    const about=groups.length?`<p class="small muted" style="margin:6px 0 0">From each group's PAC's payments to every campaign this cycle, in the FEC's totals (read ${esc(fmtDate(cp.built))}): the groups the reviewed profiles' search found forwarding gifts. Another group could forward gifts too, so this is the least they got. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.${cp.routed?.failed?.length?` ${cp.routed.failed.length} group${cp.routed.failed.length===1?'':'s'} couldn't be read this time.`:''}</p>`:'';
+    return head+body+about;
+  }
   let body='';
   if(c.status==='measured'){
     body=`<div class="tablewrap"><table><thead><tr><th>Conduit</th><th>Period</th><th class="r">Amount</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td>${orgName(r.conduit,ORGS.about(r.conduit),`<a href="${fecCmteUrl(r.id)}" target="_blank" rel="noopener">${esc(r.conduit)}</a>`)}<div class="small" style="color:var(--ink-2);margin-top:4px">${esc(r.detail)}</div><div class="small" style="margin-top:4px">${r.srcs.map(x=>`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a>`).join(' · ')}</div></td><td class="mono" style="white-space:nowrap">${esc(r.period)}</td><td class="r"><b>${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`;
