@@ -30,7 +30,7 @@ test('candidates: became law first, then recorded votes, then cosponsors; alread
   assert.deepEqual(list[1].coded,[0,'Raises it to $17.']);assert.equal(list[0].law,true);assert.equal(list[2].cosponsors,2);
 });
 
-import {decidesBill,castSide,billItems,billRollcalls,voteviewBill,voteKey} from '../scripts/build-question-record.mjs';
+import {decidesBill,castSide,billItems,billRollcalls,voteviewBill,voteKey,isAmendment,amendmentRollcalls} from '../scripts/build-question-record.mjs';
 test('the votes that decide a bill count; procedure doesn\'t',()=>{
   for(const q of ['On Passage','On Motion to Suspend the Rules and Pass, as Amended','On the Cloture Motion','On Agreeing to the Conference Report','On Motion to Concur in the Senate Amendment','On the Joint Resolution','On Overriding the Veto','Passage, Objections of the President Notwithstanding','On the Motion to Proceed','On Agreeing to the Resolution'])assert.ok(decidesBill(q),q);
   for(const q of ['On Motion to Recommit with Instructions','On Agreeing to the Amendment','On Ordering the Previous Question','On Motion to Table','On the Motion to Table the Motion to Reconsider','Election of the Speaker','',null])assert.ok(!decidesBill(q),String(q));
@@ -39,6 +39,7 @@ test('a Yea takes the bill\'s side, a Nay the other, anything else nothing; spon
   assert.equal(castSide(1,0),0);assert.equal(castSide(6,0),1);assert.equal(castSide(6,1),0);for(const c of [2,3,4,5,7,8,9,0])assert.equal(castSide(c,0),null);
   const items=billItems({intro:'2019-01-16',sponsor:{id:'S000522'},cosponsors:[{id:'A1',date:'2019-01-16'},{id:'B2',date:'2019-02-01',out:'2019-03-01'}]},0);
   assert.deepEqual(items,[{id:'S000522',kind:'s',date:'2019-01-16',side:0},{id:'A1',kind:'c',date:'2019-01-16',side:0}]);
+  assert.deepEqual(billItems({intro:'2019-02-25',sponsor:{id:'M000355'},cosponsors:[]},0,{sponsor:false}),[],'a sponsor who brought it up only to vote it down');
 });
 
 test('a bill\'s roll calls: from its own actions and from Voteview\'s bill_number, each once',()=>{
@@ -56,6 +57,15 @@ test('a roll call coded on its own: "vote:" then chamber, Congress and Voteview 
   for(const x of ['117-hr-1','vote:X117-9','vote:H117','H117-9'])assert.equal(voteKey(x),null,x);
 });
 
+test('an amendment\'s roll calls: only those whose direction is known, each once, matched by session and clerk number',()=>{
+  const r1={rollnumber:258,clerk_rollnumber:'258',session:'2'},r2={rollnumber:300,clerk_rollnumber:'42',session:'1'};
+  const vv={H113:{roll:new Map([['2-258',r1],['1-42',r2]])}};
+  const a={votes:[{ch:'H',c:113,session:2,roll:258,yea:true},{ch:'H',c:113,session:2,roll:258,yea:true},{ch:'H',c:113,session:1,roll:42,yea:false},{ch:'H',c:113,session:1,roll:43,yea:null},{ch:'S',c:113,session:1,roll:7,yea:true}]};
+  assert.deepEqual(amendmentRollcalls(a,vv).map(x=>[x.k,x.r.rollnumber,x.yea]),[['H113',258,true],['H113',300,false]]);
+  assert.deepEqual(amendmentRollcalls(a,vv,['H113-300']).map(x=>x.r.rollnumber),[300]);
+  assert.ok(isAmendment('113-hamdt-748'));assert.ok(isAmendment('114-samdt-2910'));for(const x of ['113-hr-748','vote:H113-1','113-amdt-1'])assert.ok(!isAmendment(x),x);
+});
+
 import fs from 'node:fs';
 test('the coded bills file: every question exists, every entry is [side, why, optional {votes}] on a real bill or roll call id',()=>{
   const B=JSON.parse(fs.readFileSync(new URL('../data/question-bills.json',import.meta.url),'utf8'));
@@ -66,10 +76,12 @@ test('the coded bills file: every question exists, every entry is [side, why, op
   for(const [q,list] of Object.entries(B)){if(q==='about')continue;
     assert.ok(ids.has(q),`unknown question ${q}`);assert.ok(S[q],`${q} has a search`);
     for(const [id,v] of Object.entries(list)){
-      assert.ok(/^\d{3}-(hr|s|hjres|sjres|hconres|sconres|hres|sres)-\d+$/.test(id)||voteKey(id),`${q}: bad id ${id}`);
+      assert.ok(/^\d{3}-(hr|s|hjres|sjres|hconres|sconres|hres|sres|hamdt|samdt)-\d+$/.test(id)||voteKey(id),`${q}: bad id ${id}`);
       assert.ok(Array.isArray(v)&&(v.length===2||v.length===3),`${q} ${id}`);
       assert.ok(v[0]===0||v[0]===1,`${q} ${id}: side`);assert.ok(typeof v[1]==='string'&&v[1].length>10,`${q} ${id}: why`);
-      if(v.length===3){assert.ok(Array.isArray(v[2].votes),`${q} ${id}: votes`);for(const r of v[2].votes)assert.match(r,/^[HS]\d+-\d+$/,`${q} ${id}`);}
+      if(v.length===3){const o=v[2];assert.ok(o&&typeof o==='object'&&Object.keys(o).length&&Object.keys(o).every(k=>['votes','sponsor'].includes(k)),`${q} ${id}: options`);
+        if('votes' in o){assert.ok(Array.isArray(o.votes),`${q} ${id}: votes`);for(const r of o.votes)assert.match(r,/^[HS]\d+-\d+$/,`${q} ${id}`);}
+        if('sponsor' in o)assert.equal(o.sponsor,false,`${q} ${id}: sponsor`);}
     }}
   for(const [q,s] of Object.entries(S)){if(q==='about')continue;assert.ok(ids.has(q),`search for unknown question ${q}`);assert.ok(Array.isArray(s.any)&&s.any.length,q);}
 });
