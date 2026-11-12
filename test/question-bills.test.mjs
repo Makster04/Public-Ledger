@@ -30,7 +30,7 @@ test('candidates: became law first, then recorded votes, then cosponsors; alread
   assert.deepEqual(list[1].coded,[0,'Raises it to $17.']);assert.equal(list[0].law,true);assert.equal(list[2].cosponsors,2);
 });
 
-import {decidesBill,castSide,billItems,billRollcalls,voteviewBill} from '../scripts/build-question-record.mjs';
+import {decidesBill,castSide,billItems,billRollcalls,voteviewBill,voteKey} from '../scripts/build-question-record.mjs';
 test('the votes that decide a bill count; procedure doesn\'t',()=>{
   for(const q of ['On Passage','On Motion to Suspend the Rules and Pass, as Amended','On the Cloture Motion','On Agreeing to the Conference Report','On Motion to Concur in the Senate Amendment','On the Joint Resolution','On Overriding the Veto','Passage, Objections of the President Notwithstanding','On the Motion to Proceed','On Agreeing to the Resolution'])assert.ok(decidesBill(q),q);
   for(const q of ['On Motion to Recommit with Instructions','On Agreeing to the Amendment','On Ordering the Previous Question','On Motion to Table','On the Motion to Table the Motion to Reconsider','Election of the Speaker','',null])assert.ok(!decidesBill(q),String(q));
@@ -49,4 +49,9 @@ test('a bill\'s roll calls: from its own actions and from Voteview\'s bill_numbe
   assert.deepEqual(billRollcalls(bill,vv).map(x=>`${x.k}-${x.r.rollnumber}`),['H117-590','H117-619','S117-40']);
   assert.deepEqual(billRollcalls({c:118,t:'hr',n:1,votes:[]},vv),[],'a Congress not loaded: nothing');
   assert.deepEqual(billRollcalls(bill,vv,['H117-619']).map(x=>x.r.rollnumber),[619],'only the roll calls named for a reused bill number');
+});
+
+test('a roll call coded on its own: "vote:" then chamber, Congress and Voteview roll number',()=>{
+  assert.deepEqual(voteKey('vote:H117-9'),{k:'H117',roll:9});assert.deepEqual(voteKey('vote:S117-2'),{k:'S117',roll:2});
+  for(const x of ['117-hr-1','vote:X117-9','vote:H117','H117-9'])assert.equal(voteKey(x),null,x);
 });

@@ -8,6 +8,8 @@
 //                                   amendments, tabling and other procedure don't count (what a Yea means there varies).
 //                                   The votes come from the bill's own actions and from Voteview's roll calls that name
 //                                   the bill (Voteview's bill_number), each roll call once.
+// A question may also code a roll call that belongs to no bill ("vote:H117-9", e.g. an objection to a state's electoral
+// votes): a Yea takes the coded side, a Nay the other.
 // A coded bill may name the only roll calls that count for it ([side, why, {votes: ["H117-549"]}]), for a bill number
 // that was later reused as the vehicle for something else.
 // Writes .local/question-record.json: {built, questions: {question: {bills: {bill: {side, why, title}}}},
@@ -26,6 +28,8 @@ const PROCEDURE=/recommit|table|previous question|agreeing to the amendment|the 
 export const decidesBill=q=>DECIDES.test(String(q||'').trim())&&!PROCEDURE.test(String(q||''));
 export const castSide=(cast,side)=>Number(cast)===1?side:Number(cast)===6?1-side:null;
 // How Voteview names a bill in its roll calls: "HR842", "SJRES8", "HRES1096".
+// "vote:H117-9" -> {k: "H117", roll: 9}; anything else -> null.
+export function voteKey(id){const m=/^vote:([HS]\d+)-(\d+)$/.exec(String(id));return m?{k:m[1],roll:Number(m[2])}:null;}
 export const voteviewBill=b=>`${String(b.t).toUpperCase()}${b.n}`;
 // A bill's roll calls, each once: those its actions list (matched by session and clerk roll number) and those Voteview
 // files under the bill. vv: {"H117": {roll: Map("session-clerk" -> roll call), byBill: Map(bill -> [roll calls])}}.
@@ -47,7 +51,8 @@ export function billItems(bill,side){
 async function main(){
   const read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));
   const coded=read('data/question-bills.json'),Q=read('public/questions.json');
-  const want=new Set();for(const [q,bills] of Object.entries(coded))if(q!=='about')for(const id of Object.keys(bills))want.add(id);
+  const want=new Set();const voteKeys=new Set();
+  for(const [q,bills] of Object.entries(coded))if(q!=='about')for(const id of Object.keys(bills)){const v=voteKey(id);if(v)voteKeys.add(v.k);else want.add(id);}
   const bills=new Map(),dir=path.join(ROOT,'.local','bills');
   for(const f of fs.readdirSync(dir).filter(f=>f.endsWith('.jsonl')))
     for await(const line of readline.createInterface({input:fs.createReadStream(path.join(dir,f)),crlfDelay:Infinity})){
@@ -56,21 +61,27 @@ async function main(){
   const missing=[...want].filter(id=>!bills.has(id));if(missing.length)console.log(`Not in the bill index: ${missing.join(', ')}`);
   // Voteview: each needed Congress and chamber once.
   const need=new Set();for(const b of bills.values()){need.add(`H${b.c}`);need.add(`S${b.c}`);for(const v of b.votes||[])need.add(`${v.ch}${v.c}`);}
+  for(const k of voteKeys)need.add(k);
   const vv={};
   for(const k of need){
     const f=await voteviewFiles(Number(k.slice(1)),process.env,k[0]);
     // (some years' vote files write member IDs as "14009.0", so they're matched as numbers)
-    const roll=new Map(),byBill=new Map(),bio=new Map(),cast=new Map();
-    for(const r of f.rollcalls){roll.set(`${r.session}-${r.clerk_rollnumber}`,r);if(r.bill_number){const a=byBill.get(r.bill_number)||[];a.push(r);byBill.set(r.bill_number,a);}}
+    const roll=new Map(),byBill=new Map(),byNumber=new Map(),bio=new Map(),cast=new Map();
+    for(const r of f.rollcalls){byNumber.set(Number(r.rollnumber),r);roll.set(`${r.session}-${r.clerk_rollnumber}`,r);if(r.bill_number){const a=byBill.get(r.bill_number)||[];a.push(r);byBill.set(r.bill_number,a);}}
     for(const m of f.members)if(m.bioguide_id)bio.set(Number(m.icpsr),m.bioguide_id);
     for(const v of f.votes){const a=cast.get(v.rollnumber)||[];a.push([v.icpsr,v.cast_code]);cast.set(v.rollnumber,a);}
-    vv[k]={roll,byBill,bio,cast};console.log(`Voteview ${k}: ${f.rollcalls.length} roll calls`);
+    vv[k]={roll,byBill,byNumber,bio,cast};console.log(`Voteview ${k}: ${f.rollcalls.length} roll calls`);
   }
   const people={},questions={};let votesUsed=0,votesSkipped=0;
   const add=(id,q,item)=>{((people[id]||={})[q]||=[]).push(item);};
   for(const [q,list] of Object.entries(coded)){
     if(q==='about')continue;questions[q]={bills:{}};
     for(const [id,[side,why,opt]] of Object.entries(list)){
+      const vk=voteKey(id);
+      if(vk){const f=vv[vk.k],r=f?.byNumber.get(vk.roll);if(!r){console.log(`Roll call not found: ${id}`);continue;}
+        questions[q].bills[id]={side,why,title:r.vote_desc||why};votesUsed++;
+        for(const [icpsr,code] of f.cast.get(r.rollnumber)||[]){const s=castSide(code,side),bg=f.bio.get(Number(icpsr));if(s==null||!bg)continue;add(bg,q,[id,Number(code)===1?'y':'n',r.date,s]);}
+        continue;}
       const b=bills.get(id);if(!b)continue;questions[q].bills[id]={side,why,title:b.short?.[0]||b.title};
       for(const it of billItems(b,side))add(it.id,q,[id,it.kind,it.date,it.side]);
       for(const {k,r} of billRollcalls(b,vv,opt?.votes||null)){
