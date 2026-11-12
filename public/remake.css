@@ -1125,6 +1125,8 @@ input, select { accent-color: var(--accent); }
 @media print { .ticker { display: none !important; } }
 
 /* Net worth, stocks held and trades over time (Big Money Independence tab; public/wealth-timeline.js, charts.js). */
+/* The timeline's title: the size of the Money map's (an h2), with room above it to set it off from the PAC sections. */
+.wt-title { margin: 34px 0 6px; }
 .wt-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 12px 0 14px; }
 .wt-stat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 10px 12px; min-width: 0; }
 .wt-stat .l, .wt-stat .d { color: var(--muted); font-size: .78rem; }
