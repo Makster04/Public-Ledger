@@ -4,6 +4,7 @@ import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
 import {openScorecard,fundingParts} from './scorecard.js';
 import {seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from './seats.js';
+import {compassOf,compassSvg,compassWord,signedLean} from './compass.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
@@ -151,7 +152,7 @@ function ideoText(s){
   return {head,within,short};
 }
 const hasStateLeg=s=>s.recordType==='state_legislator'||!!(s.stateLeg&&s.stateLeg.length);
-function noIdeoBlock(s){
+function noIdeoBlock(s,{compact=false}={}){
   const t=ideoText(s);
   let body;
   if(s.ideoKind==='former_text') body=`<p style="margin:8px 0 0">${esc(s.short)} served in Congress (see offices held above). Voteview's own summary: <b>${esc((s.ideoNote||'').replace(/^.*?It says: /,'').replace(/^Voteview: /,''))}</b> <a href="${esc((s.ideoSrc||{}).u||'#')}" target="_blank" rel="noopener">Voteview ↗</a></p><p class="small muted" style="margin:6px 0 0">That comparison is with colleagues in that Congress, not today's, so it is not placed on the current-chamber chart used for sitting members.</p>`;
@@ -159,18 +160,20 @@ function noIdeoBlock(s){
   else if(s.ideoKind==='former_noscore') body=`<p style="margin:8px 0 0">${esc(s.short)} served in Congress, but Voteview's page did not show an ideology score or comparison for ${esc(s.short)} when this release was built, so no percentile is shown. ${esc(s.short)}'s congressional votes are listed below. ${s.ideoSrc?`<a href="${esc(s.ideoSrc.u)}" target="_blank" rel="noopener">Voteview record ↗</a>`:''}</p>`;
   else if(hasStateLeg(s)) body=`<p style="margin:8px 0 0">${esc(s.short)}'s legislative votes were cast in a state legislature, which has no published score comparable with congressional DW-NOMINATE. The record below lists ${s.recordType==='state_legislator'?esc(s.short)+"'s recorded votes and bills on major issues":'major official actions'+(s.recordType==='executive'?' in executive office':'')} instead.</p>`;
   else body=`<p style="margin:8px 0 0">${esc(s.short)} has not served in a legislature, so there is no roll-call record to score. The record below lists ${esc(s.short)}'s documented official actions and public commitments instead.</p>`;
-  return `<div class="chart"><div class="kicker">Voting ideology</div><div class="big" style="margin-top:4px">${esc(t.head)}</div>${body}</div>`;
+  return `<div class="chart${compact?' cmp-dw':''}"><div class="kicker">Voting ideology</div><div class="big" style="margin-top:4px">${esc(t.head)}</div>${body}</div>`;
 }
-function ideoBlock(s,id){
-  if(!s.ideo)return noIdeoBlock(s);
+// compact: under the political compass on the Ideology tab (public/compass.js): no score line (the chart labels it),
+// smaller type and a shorter source note, so it fits beside the position card.
+function ideoBlock(s,id,{compact=false}={}){
+  if(!s.ideo)return noIdeoBlock(s,{compact});
   const t=ideoText(s), i=s.ideo, C=icH(s);
-  return `<div class="chart">
+  return `<div class="chart${compact?' cmp-dw':''}">
     <div class="ideo-head"><div><div class="kicker">Voting ideology · DW-NOMINATE</div><div class="big" style="margin-top:4px">${esc(t.head)}</div></div>
-    <div class="mono muted">Score ${i.dim1>0?'+':''}${i.dim1.toFixed(3)} on a −1 (liberal) to +1 (conservative) scale</div></div>
+    ${compact?'':`<div class="mono muted">Score ${i.dim1>0?'+':''}${i.dim1.toFixed(3)} on a −1 (liberal) to +1 (conservative) scale</div>`}</div>
     <p class="small" style="margin:8px 0 0;color:var(--ink-2)">Within the party: ${esc(t.within)}.${i.unity!=null?` Party unity: votes with the ${s.party==='R'?'Republican':'Democratic'} majority on <b class="num">${i.unity}%</b> of party-line votes${i.partyVotes?` (${i.withParty} of ${i.partyVotes} in the 119th Congress)`:''}.`:''}</p>
     <div class="ideo" id="${id}" style="margin-top:10px"></div>
     <div class="legend"><span><i style="background:var(--dem)"></i>Democrats</span><span><i style="background:var(--rep)"></i>Republicans</span>${C==='S'?'<span><i style="background:var(--muted)"></i>Independents</span>':''}<span><i style="background:var(--ink);border-radius:50%"></i>${esc(s.short)}</span></div>
-    <div class="sub" style="margin:8px 0 0">${s.ideoKind==='house'?esc(s.short)+' is a sitting House member, so the comparison is with the current House. ':''}Each dot is one current ${CH[C].noun} with at least 100 scored votes (${i.n+1} in all). Hover a dot for the name. Source: Voteview DW-NOMINATE first dimension, which scores a member's whole career of roll-call votes. <a href="https://voteview.com/person/${esc(i.icpsr)}" target="_blank" rel="noopener">Voteview record ↗</a></div>
+    <div class="sub" style="margin:8px 0 0">${s.ideoKind==='house'?esc(s.short)+' is a sitting House member, so the comparison is with the current House. ':''}${compact?`Each dot is one current ${CH[C].noun} (${i.n+1}). Voteview DW-NOMINATE, whole career. `:`Each dot is one current ${CH[C].noun} with at least 100 scored votes (${i.n+1} in all). Hover a dot for the name. Source: Voteview DW-NOMINATE first dimension, which scores a member's whole career of roll-call votes. `}<a href="https://voteview.com/person/${esc(i.icpsr)}" target="_blank" rel="noopener">Voteview record ↗</a></div>
   </div>`;
 }
 function drawIdeo(el,s){
@@ -978,9 +981,12 @@ function stSide(sources,needs,notes=[],needsTitle='What we need before grading')
     ${notes.map(([h,t])=>`<p class="st-note"><span aria-hidden="true">ⓘ</span><span><b>${h}</b> ${t}</span></p>`).join('')}</aside>`;
 }
 // side: more boxes under the Sources panel, beside the score card.
-function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method,side=''}){
+// lead: a column on the left of the position card and its sources (the Ideology tab's compass and DW-NOMINATE).
+function stFrame(s,key,{res,breakdown,sources,needs,notes,needsTitle,evidenceTitle,evidence='',shown='',calc,assumptions,method,side='',lead=''}){
   const aside=stSide(sources,needs,notes,needsTitle);
-  return `<div class="st" data-score="${key}">${stHead(s,key)}<div class="st-grid">${stCard(key,res,breakdown)}${side?`<div class="st-sidecol">${aside}${side}</div>`:aside}</div>
+  const top=lead?`<div class="st-lead"><div class="st-lead-l">${lead}</div><div class="st-lead-r">${stCard(key,res,breakdown)}${aside}${side}</div></div>`
+    :`<div class="st-grid">${stCard(key,res,breakdown)}${side?`<div class="st-sidecol">${aside}${side}</div>`:aside}</div>`;
+  return `<div class="st" data-score="${key}">${stHead(s,key)}${top}
     <h3 class="st-evh">${evidenceTitle}</h3><div class="st-evidence">${evidence}</div>
     ${shown?`<details class="st-more st-shown"><summary>Shown, not counted in ${esc(SIX_BY[key].name)}</summary><div class="st-more-b">${shown}</div></details>`:''}
     <details class="st-more"><summary>How it's calculated</summary><div class="st-more-b">${calc}</div></details>
@@ -1041,6 +1047,39 @@ function leanScale(s,x){
     <div class="st-scale-ticks">${[-100,-60,-20,20,60,100].map(t=>`<span style="left:${leanPos(t)}%">${signed(t)}</span>`).join('')}</div>
     <p class="small muted">${peers.length?`Small marks: the other ${peers.length} ${s.chamber==='S'?'Senate':'House'} profiles with a lean, by party.`:''} Bands: very liberal below −60, liberal to −20, moderate to +20, conservative to +60, very conservative above.</p></div>`;
 }
+// ----- The political compass (public/compass.js) -----
+// Everyone in a chamber, placed once a visit: their full profile when there is one, else their basic profile.
+const COMPASS_BY={};
+function chamberCompass(ch){
+  if(!COMPASS_BY[ch])COMPASS_BY[ch]=(ch==='H'?HOUSE:ch==='S'?SENATE:[]).map(x=>{const c=compassOf(byId[x.id]||BASIC[x.id]||x,DATA.issues);return {id:x.id,name:x.name,short:x.short,party:x.party,state:x.state,x:c.x,y:c.y};});
+  return COMPASS_BY[ch];
+}
+function compassBlock(s){
+  const c=compassOf(s,DATA.issues),placed=c.x!=null&&c.y!=null;
+  const line=(label,v,n,axis)=>`<span><b class="cmp-k">${label}:</b> ${v==null?`<span class="muted">${compassWord(v,axis)}</span>`:`<b class="num"${leanStyle(v)}>${signedLean(v)}</b> ${compassWord(v,axis)}`} <span class="muted">(${n} issue${n===1?'':'s'})</span></span>`;
+  const chamber=s.chamber==='H'||s.chamber==='S';
+  return `<section class="cmp-card" id="i-compass"><h2>Political compass</h2>
+    <p class="cmp-nums">${line('ECONOMIC',c.x,c.nx,'econ')}<span class="cmp-sep"> · </span>${line('SOCIAL',c.y,c.ny,'social')}</p>
+    <div class="cmp-box"></div>
+    ${placed?'':`<p class="small muted" style="margin:6px 0 0">Not on the compass yet: it needs a lean on at least one economic and one social issue.</p>`}
+    ${chamber?`<div class="cmp-legend small"><span><i class="cmp-dot cmp-D"></i>Democrats</span><span><i class="cmp-dot cmp-R"></i>Republicans</span><span><i class="cmp-dot cmp-I"></i>Independents</span><span class="muted">Bigger bubble = more members</span></div>`:''}</section>`;
+}
+// Drawn at the size it's shown. Beside the position card, it's sized so the left column (the compass and DW-NOMINATE)
+// ends where the right one (the position card and its sources) does, never under 400 pixels; stacked, the column's width.
+function mountCompass(pane,s){
+  const card=pane.querySelector('#i-compass'),box=card?.querySelector('.cmp-box');if(!box)return;
+  const place=compassOf(s,DATA.issues),list=chamberCompass(s.chamber),portrait=PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'';
+  const draw=size=>{box.innerHTML=compassSvg({me:s,place,list,size,portrait});};
+  const fit=()=>{
+    if(!box.isConnected)return;
+    const lead=card.closest('.st-lead'),w=Math.min(520,box.clientWidth);if(!(w>0))return;
+    if(!lead||getComputedStyle(lead).gridTemplateColumns.split(' ').length<2){draw(w);return;}
+    lead.classList.add('fitting');draw(w);
+    const extra=lead.querySelector('.st-lead-l').getBoundingClientRect().height-lead.querySelector('.st-lead-r').getBoundingClientRect().height;
+    draw(Math.min(w,Math.max(Math.min(400,w),w-extra)));lead.classList.remove('fitting');
+  };
+  fit();resizers.push(fit);document.fonts?.ready?.then(fit);
+}
 function paneIdeology(s,pane){
   const x=sixOf(s).ideology,max=100;
   const issueRows=x.issues.map(i=>{
@@ -1065,13 +1104,14 @@ function paneIdeology(s,pane){
     evidenceTitle:'Evidence: positions and outside ratings',
     evidence:`<h4 class="st-sub">Lean on each issue</h4>${stTable(['Issue','Position (−100 to +100)','','Based on'],issueRows,'st-issues',[])}${checks}<h4 class="st-sub">Interest-group ratings</h4><p class="small muted">Published ratings, shown in opposing pairs, with the year and a link. A group that scores in percent is shown as a letter on this site's scale (A 90 and up, B 80, C 70, D 60, F below 60), with its percent beside it; a group that gives letter grades is shown with its own. The color is how highly that group rates them, green high to red low, not a judgment of the group or the person.${GROUP_RATINGS.checked?` Read ${esc(fmtDate(GROUP_RATINGS.checked))}.`:''} A group without a rating says why; groups with no current ratings of members of Congress aren't listed.</p>${ratings}
       <section class="st-match" id="i-match"><h4 class="st-sub">Your Match</h4><p class="small muted">Compare your positions on each issue with ${esc(s.short||s.name)}'s record. Saved only in this browser.</p><details class="st-more st-match-b"><summary>Set your issue positions</summary><div class="st-more-b"><div id="m-al"></div></div></details></section>`,
-    shown:`<div id="rec-ideo">${ideoBlock(s,'ideo2')}<div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
+    lead:`${compassBlock(s)}${ideoBlock(s,'ideo2',{compact:true})}`,
+    shown:`<div id="rec-ideo"><div class="chart">${kvBlock(s,'kv2',true)}</div></div>${positionBlock(s)}<p class="small">The bills ${esc(s.short||s.name)} sponsored and cosponsored are on the <a href="#${s.id}-showsup">Shows Up</a> tab.</p><div id="legislation-record"></div>`,
     calc:`${stF('Issue lean = 100 × (conservative items − liberal items) ÷ all items')}${stF('Overall lean = average of the issue leans on the left–right issues (at least 3)')}${stF('Ratings lean = average of (2 × score − 100) for conservative groups and −(2 × score − 100) for liberal groups')}${stF('DW-NOMINATE lean = 100 × their first-dimension score')}${stF('Your Match = share of their record on your side, by issue, weighted by how much each issue matters to you')}
       <p class="small">An item is a vote, bill, cosponsorship or official act, one per bill; statements count only on an issue with no action. Letter grades convert A 100, B 75, C 50, D 25, F 0.</p>`,
     assumptions:['Votes, bills and cosponsorships set the issue positions.','Statements count half, and only when there are no votes on that issue.','Each vote\'s side on its issue is reviewed and cited; the issue says which side is the liberal one.','Issues that split both parties (tariffs, Ukraine aid, war powers, Jan. 6, infrastructure, ethics) are shown, not averaged into the overall lean.','Group ratings are read from each group\'s own site once a year and shown as published, with the year and a link. Groups whose sites block scripts or publish only images are left out rather than entered by hand. Vote Smart isn\'t used: its ratings cost $350 a month.','DW-NOMINATE comes from Voteview.'],
     method:'ideology'});
   alignInto(s,pane.querySelector('#m-al'));
-  mountIdeo('ideo2',s);mountKV('kv2',s);
+  mountIdeo('ideo2',s);mountKV('kv2',s);mountCompass(pane,s);
   recordInto(s,pane.querySelector('#legislation-record'));
   pane.querySelectorAll('[data-issue]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=pane.querySelector('#m-al');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
   bindTips(pane);
