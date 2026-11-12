@@ -4,7 +4,8 @@
 //
 // Points toward a question's side (sides[0] or sides[1]):
 //   a statement that takes a side            3 (see the contradiction rule below)
-//   a group rating on the topic              up to 3: 3 × |2 × score − 100| ÷ 100, toward the group's side (not read yet)
+//   a group rating on the topic              up to 3: 3 × |2 × score − 100| ÷ 100, toward the side the group favors when
+//                                            the score is above 50, the other side when below (see ratingItems)
 //   sponsoring a coded bill or amendment     1.5     an official act (executive office)    1.5
 //   cosponsoring it                          1
 //   a vote that decides it                   1       (Yea takes the bill's side, Nay the other)
@@ -14,7 +15,7 @@
 // points; with fewer it reads "Not on record". Unknown never counts as either side.
 // Contradiction rule: a statement is cancelled when a vote on the question taken after it went the other way. A
 // statement made after an opposite vote counts, as a changed position, and the old vote still counts too.
-export const QFORMULA='questions-1';
+export const QFORMULA='questions-2';
 export const QPOINTS={statement:3,ratingMax:3,s:1.5,act:1.5,c:1,y:1,n:1,vote:1,state:1};
 export const MIN_POINTS=3;
 export const IDEOLOGY_MIN_CATEGORIES=3;
@@ -63,6 +64,30 @@ export function applyStatements(statements,rec={}){
 }
 // A group rating's points: 3 × |2s − 100| ÷ 100 toward the side the group favors (side: 0 or 1, score 0–100).
 export const ratingPoints=score=>Number.isFinite(score)?QPOINTS.ratingMax*Math.abs(2*score-100)/100:0;
+// A rating as a score from 0 to 100: the group's own percent, or its letter grade as A 100, B 75, C 50, D 25, F 0.
+const LETTER_SCORE={A:100,B:75,C:50,D:25,F:0};
+export function ratingScore(r){
+  if(Number.isFinite(r?.score))return r.score;
+  const m=/^([ABCDF])/i.exec(String(r?.grade||''));return m?LETTER_SCORE[m[1].toUpperCase()]:null;
+}
+// Group ratings on the questions. A question in public/questions.json can name the groups whose scorecard is about it,
+// groups: {group key: the side a high rating from that group favors}; groups that rate across many topics (Heritage
+// Action, CPAC, ProgressivePunch and the like) are on no question and count only in the Ideology tab's Ratings lean.
+// A rating above 50 counts ratingPoints toward the group's side, one below 50 toward the other side, and 50 counts
+// nothing (a score past 100, from bonus points, counts as 100). ratings: one person's rows in public/group-ratings.json
+// ([{group, org, score?, grade?, year, url}]). Returns {question id: [{group, org, score, grade, year, url, favors, side,
+// pts}]}.
+export function ratingItems(ratings,questions){
+  const by={};for(const q of questions||[])for(const [g,side] of Object.entries(q.groups||{}))(by[g]||=[]).push([q.id,side]);
+  const out={};
+  for(const r of ratings||[]){
+    const on=by[r?.group];if(!on)continue;const raw=ratingScore(r);if(raw==null)continue;
+    const sc=Math.max(0,Math.min(100,raw)),pts=Math.round(ratingPoints(sc)*10)/10;if(!pts)continue;
+    for(const [qid,favors] of on)(out[qid]||=[]).push({group:r.group,org:r.org||r.group,score:Number.isFinite(r.score)?r.score:null,
+      grade:r.grade||null,year:r.year??null,url:r.url||null,favors,side:sc>50?favors:1-favors,pts});
+  }
+  return out;
+}
 
 // Stance from the points: s from −1 (all sides[1]) to +1 (all sides[0]); null under MIN_POINTS.
 export function stanceOf(a,b){
@@ -145,17 +170,20 @@ export function legacyEvidence(evidence,{hasRecord=false}={}){
   return out;
 }
 // One person's stance on every question: their row in public/question-stances.json (rec: {question: [a, b, firstA,
-// lastA, firstB, lastB]}) plus their carried-over evidence (statements under the contradiction rule).
-export function personStances(rec,evidence){
-  const legacy=legacyEvidence(evidence,{hasRecord:!!rec}),out={};
-  for(const qid of new Set([...Object.keys(rec||{}),...Object.keys(legacy)])){
+// lastA, firstB, lastB]}), their carried-over evidence (statements under the contradiction rule) and the group ratings
+// on each question (ratings: their rows in public/group-ratings.json; questions: public/questions.json's list).
+export function personStances(rec,evidence,{ratings=null,questions=null}={}){
+  const legacy=legacyEvidence(evidence,{hasRecord:!!rec}),rated=ratingItems(ratings,questions),out={};
+  for(const qid of new Set([...Object.keys(rec||{}),...Object.keys(legacy),...Object.keys(rated)])){
     const r=rec?.[qid],L=legacy[qid]||{items:[],statements:[]};
     const base=r?{a:r[0],b:r[1],firstA:r[2]||'',lastA:r[3]||'',firstB:r[4]||'',lastB:r[5]||''}:{a:0,b:0,firstA:'',lastA:'',firstB:'',lastB:''};
     const lp=recordPoints(L.items),dates={firstA:[base.firstA,lp.firstA].filter(Boolean).sort()[0]||'',lastA:[base.lastA,lp.lastA].filter(Boolean).sort().at(-1)||'',
       firstB:[base.firstB,lp.firstB].filter(Boolean).sort()[0]||'',lastB:[base.lastB,lp.lastB].filter(Boolean).sort().at(-1)||''};
-    const st=applyStatements(L.statements,dates);
-    const a=Math.round((base.a+lp.a+st.a)*10)/10,b=Math.round((base.b+lp.b+st.b)*10)/10;
-    out[qid]={...stanceOf(a,b),record:{a:base.a,b:base.b},carried:{items:creditItems(L.items),points:{a:lp.a,b:lp.b}},statements:st.rows,dates};
+    const st=applyStatements(L.statements,dates),R=rated[qid]||[];
+    const ra=R.filter(x=>x.side===0).reduce((t,x)=>t+x.pts,0),rb=R.filter(x=>x.side===1).reduce((t,x)=>t+x.pts,0);
+    const a=Math.round((base.a+lp.a+st.a+ra)*10)/10,b=Math.round((base.b+lp.b+st.b+rb)*10)/10;
+    out[qid]={...stanceOf(a,b),record:{a:base.a,b:base.b},carried:{items:creditItems(L.items),points:{a:lp.a,b:lp.b}},statements:st.rows,
+      ratings:R,ratingPoints:{a:Math.round(ra*10)/10,b:Math.round(rb*10)/10},dates};
   }
   return out;
 }

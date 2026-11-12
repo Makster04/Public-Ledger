@@ -5,7 +5,7 @@
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
 // Shared by the profile tabs (public/app.js) and the tests; nothing here fetches.
 import {promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter} from './grades.js';
-import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA} from './question-scores.js';
+import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA,ratingScore} from './question-scores.js';
 import {hill,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent} from './integrity.js';
 import {assetKind} from './holdings.js';
 import {SIZE_BRACKETS} from './donor-sizes.js';
@@ -43,11 +43,8 @@ export function issueLeans(person,issues){
 }
 // Group ratings, as one number: a conservative group's score s (0–100) counts 2s − 100, a liberal group's −(2s − 100).
 // Letter grades convert A 100, B 75, C 50, D 25, F 0. ratings: [{org, lean: 'conservative'|'liberal', score}].
-const LETTER_SCORE={A:100,B:75,C:50,D:25,F:0};
-export function ratingScore(r){
-  if(Number.isFinite(r?.score))return r.score;
-  const m=/^([ABCDF])/i.exec(String(r?.grade||''));return m?LETTER_SCORE[m[1].toUpperCase()]:null;
-}
+// (ratingScore lives in public/question-scores.js, which the questions' group ratings share.)
+export {ratingScore};
 export function ratingsLean(ratings){
   const rows=(ratings||[]).map(r=>{const s=ratingScore(r);return s==null||!['conservative','liberal'].includes(r.lean)?null:{...r,points:(r.lean==='conservative'?1:-1)*(2*s-100)};}).filter(Boolean);
   return rows.length?{lean:Math.round(rows.reduce((t,r)=>t+r.points,0)/rows.length),rows}:{lean:null,rows:[]};
