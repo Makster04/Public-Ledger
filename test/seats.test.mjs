@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
-import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals,kindTotals} from '../scripts/build-corporate-pacs.mjs';
+import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals,kindTotals,conduitList,earmarkTotals} from '../scripts/build-corporate-pacs.mjs';
 import senate from '../public/senate.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 
@@ -81,6 +81,20 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, and AIPAC\'s 
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
   assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto']);
   assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250]},'routed gifts alone count');
+});
+
+test('every group\'s forwarded gifts: the reviewed profiles\' conduits and the others their search found, each committee once',()=>{
+  const list=conduitList({conduits:{aipac:['C00797670'],cfg:['C00432260'],bad:['x']},names:{'fec:C00247403':'NORPAC','fec:C00432260':'CLUB FOR GROWTH PAC','other':'?'}});
+  assert.deepEqual(list,[{key:'aipac',cmte:'C00797670'},{key:'cfg',cmte:'C00432260'},{key:'fec:C00247403',cmte:'C00247403'}]);
+  assert.deepEqual(conduitList(undefined),[]);
+  const byCand=new Map([['S6ME00159','collins'],['H2AK01083','begich']]),cmteCand=new Map([['C00314575','S6ME00159'],['C00700001','H2AK01083'],['C00700002','H2AK01083']]);
+  const rows=[{recipient_id:'C00314575',total:9000,memo_total:0},{recipient_id:'C00700001',total:400,memo_total:400},{recipient_id:'C00700002',total:1500,memo_total:1500}];
+  const recipients={};
+  assert.deepEqual(routedByMember(rows,cmteCand,byCand,new Map([['collins',5000]]),{recipients}),{collins:4000,begich:1900},'beyond its own $5,000 check; two committees add up');
+  assert.deepEqual(recipients,{collins:'C00314575',begich:'C00700002'},'the committee that got the most');
+  assert.deepEqual(routedByMember(rows,cmteCand,byCand,new Map(),{memoOnly:true}),{begich:1900},'a party committee: memo entries only');
+  const e=earmarkTotals([{key:'aipac',byMember:{collins:3348020.18},recipients:{collins:'C00314575'}},{key:'cfg',byMember:{collins:0,begich:250}},{key:'aipac',byMember:{collins:0.1},recipients:{collins:'C9'}}]);
+  assert.deepEqual(e,{collins:{aipac:[3348020.28,'C00314575']},begich:{cfg:[250,null]}},'a group with two committees adds up; none is left out');
 });
 
 test('each member\'s PAC checks by kind of PAC, for Big Money Independence on every profile',()=>{

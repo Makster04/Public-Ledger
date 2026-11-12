@@ -1115,7 +1115,20 @@ function paneShowsUp(s,pane){
 // ----- Big Money Independence (async: the gift sizes and the financial disclosure come from the refreshed official records) -----
 // Earmarked gifts: the automatic FEC read (research.json "bundled"), and a total researched by hand only for a conduit
 // the automatic read has nothing for, so the same gifts never count twice (as scripts/build-funders.mjs does).
+// A basic profile's: each group's forwarded gifts this cycle from the FEC bulk-file script (public/corporate-pacs.json
+// "earmarks"; an older file has AIPAC's alone, in its tracker line).
+function bulkEarmarkRows(s){
+  const cp=window.CORP_PACS;if(!cp)return [];
+  const mine=cp.earmarks?cp.earmarks[s.id]||{}:cp.routed?.aipac&&cp.trackers?.aipac?.[s.id]?.[2]>0?{aipac:[cp.trackers.aipac[s.id][2],null]}:{};
+  const cycle=Number(cp.cycle)||2026;
+  return Object.entries(mine).filter(([,v])=>v?.[0]>0).sort((a,b)=>b[1][0]-a[1][0]).map(([group,[amount,to]])=>{
+    const cid=group.startsWith('fec:')?group.slice(4):DATA.bundled?.conduits?.[group]?.[0];
+    return {id:`bulk:${group}`,group,amount,period:`${cycle-1}–${String(cycle).slice(2)} cycle`,
+      src:cid?`https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=${cid}${to||s.camp?.cmteId?`&recipient_committee_id=${to||s.camp.cmteId}`:''}&two_year_transaction_period=${cycle}`:null};
+  });
+}
 function earmarkRows(s){
+  if(s.basic)return bulkEarmarkRows(s);
   const mine=DATA.bundled?.people?.[s.id]||{},read=new Set();
   for(const k of Object.keys(mine)){if(/^fec:/.test(k))read.add(k.slice(4));for(const c of (DATA.groupPos||[]).find(g=>g.key===k)?.conduits||[])read.add(c);}
   const bundled=Object.entries(mine).map(([group,r])=>({id:`bundled:${group}`,group,amount:r.routed,src:r.src,period:bundledCycle(s.id,group)}));
@@ -1126,9 +1139,7 @@ function unboughtInputs(s){
   const pacRows=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(t&&amount>0)pacRows.push({kind:t.kind,amount});}
   // Without reviewed PAC lines (a basic profile), each kind's share from the FEC bulk files (public/corporate-pacs.json).
   if(!pacRows.length&&(!s.pac||s.pac.basic))for(const [kind,amount] of Object.entries(window.CORP_PACS?.kinds?.[s.id]||{}))if(amount>0)pacRows.push({kind,amount});
-  // (a basic profile's routed gifts: AIPAC's, from the FEC's totals the bulk-file script reads, when it read them)
-  const bulkAipac=s.pac?.basic&&window.CORP_PACS?.routed?.aipac?Number(window.CORP_PACS.trackers?.aipac?.[s.id]?.[2])||0:0;
-  return {pacRows,earmarks:bulkAipac>0?[{group:'aipac',amount:bulkAipac}]:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[])};
+  return {pacRows,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[])};
 }
 function unboughtBreakdown(x){
   const max=Math.max(1,...x.parts.map(p=>Math.abs(p.points||0)));
@@ -2302,6 +2313,18 @@ function conduitBlock(s){
   const dsum=direct.reduce((a,b)=>a+b.amount,0);
   const head=`<h3 style="margin:22px 0 6px">${term('earmarked','Money routed through PACs on donors\' behalf')}</h3>
   <div style="margin-bottom:10px">${points([['PAC limit','A PAC can give a candidate at most $5,000 per election from its own account.'],['Conduits','Some groups also collect checks from their members and forward them ("earmarked" contributions).'],['Where it shows','The FEC counts that money as individual contributions. It is already in campaign funds raised, but not in the PAC table above, even though the group directed it.']],'small')}</div>`;
+  // A basic profile: each group's forwarded gifts from the FEC bulk-file script (no search ran for them, so the reviewed
+  // profiles' wording about it doesn't apply).
+  if(s.basic){
+    const cp=window.CORP_PACS,rows=bulkEarmarkRows(s),groups=cp?.routed?.groups||(cp?.routed?.aipac?['aipac']:[]);
+    const nameOf=k=>(GPBY[k]||{}).org||DATA.bundled?.names?.[k]||k;
+    const list=groups.map(nameOf),shown=list.slice(0,6).join(', ')+(list.length>6?`, and ${list.length-6} more`:'');
+    const body=rows.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Amount</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${orgName(nameOf(r.group),ORGS.group(r.group))}${r.src?`<div class="small"><a href="${esc(r.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a></div>`:''}</td><td class="small">${esc(r.period)}</td><td class="r"><b class="num">${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`
+      :groups.length?`<div class="note">None of the ${groups.length} groups read (${esc(shown)}) forwarded donors' gifts to ${esc(s.short)}'s campaign this cycle, in the FEC's processed records as of ${esc(fmtDate(cp.built))}.</div>`
+      :`<div class="note"><b>Not read yet for ${esc(s.short)}.</b> Gifts that groups forward to campaigns are read from each group's own FEC reports once the FEC bulk-file read has run with an FEC key. This does not mean ${esc(s.short)} received none.</div>`;
+    const about=groups.length?`<p class="small muted" style="margin:6px 0 0">From each group's PAC's payments to every campaign this cycle, in the FEC's totals (read ${esc(fmtDate(cp.built))}): the groups the reviewed profiles' search found forwarding gifts. Another group could forward gifts too, so this is the least they got. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.${cp.routed?.failed?.length?` ${cp.routed.failed.length} group${cp.routed.failed.length===1?'':'s'} couldn't be read this time.`:''}</p>`:'';
+    return head+body+about;
+  }
   let body='';
   if(c.status==='measured'){
     body=`<div class="tablewrap"><table><thead><tr><th>Conduit</th><th>Period</th><th class="r">Amount</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td>${orgName(r.conduit,ORGS.about(r.conduit),`<a href="${fecCmteUrl(r.id)}" target="_blank" rel="noopener">${esc(r.conduit)}</a>`)}<div class="small" style="color:var(--ink-2);margin-top:4px">${esc(r.detail)}</div><div class="small" style="margin-top:4px">${r.srcs.map(x=>`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a>`).join(' · ')}</div></td><td class="mono" style="white-space:nowrap">${esc(r.period)}</td><td class="r"><b>${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`;
