@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
-import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals} from '../scripts/build-corporate-pacs.mjs';
+import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,routedByMember,trackerTotals,kindTotals} from '../scripts/build-corporate-pacs.mjs';
 import senate from '../public/senate.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 
@@ -81,6 +81,13 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, and AIPAC\'s 
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
   assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto']);
   assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250]},'routed gifts alone count');
+});
+
+test('each member\'s PAC checks by kind of PAC, for Big Money Independence on every profile',()=>{
+  const byCand=new Map([['S6ME00159','collins'],['H2AK01083','begich']]);
+  const k=kindTotals([{cand:'S6ME00159',kind:'corporate',amount:5000},{cand:'S6ME00159',kind:'labor',amount:2500},{cand:'S6ME00159',kind:'corporate',amount:-1000},
+    {cand:'S6ME00159',kind:'party',amount:5000},{cand:'H2AK01083',kind:'trade',amount:1000},{cand:'H2AK01083',kind:'trade',amount:-1000},{cand:'H2AK01083',kind:null,amount:0.1+0.2},{cand:'S9ZZ00000',kind:'corporate',amount:1}],byCand);
+  assert.deepEqual(k,{collins:{corporate:4000,labor:2500},begich:{other:0.3}},'net of refunds; party committees and kinds refunded in full left out; an unknown committee is "other"; someone not in Congress is left out');
 });
 
 test('the title\'s share: of everyone once all are read, else of those read so far, saying how many',()=>{

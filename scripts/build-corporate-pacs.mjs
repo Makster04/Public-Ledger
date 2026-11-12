@@ -17,6 +17,9 @@
 //   member who isn't listed hasn't been read.
 //   trackers: {key: {id: [PAC dollars, number of its PACs, routed dollars (AIPAC)]}}, only members who took some;
 //   routed: {aipac: true when its routed gifts were read}.
+//   kinds: {id: {kind: dollars}}, each member's PAC checks by the kind of PAC that gave (public/pac-types.js pacKind;
+//   party committees left out, as the FEC's PAC total leaves them out), so Big Money Independence can weigh PAC money by
+//   type for every member, not only the profiles with reviewed PAC lines.
 //
 //   npm run corporate:pacs               downloads into .local/fec-bulk/ (the pas2 file is shared with
 //                                        scripts/build-funder-history.mjs) and writes the file; files over a week old
@@ -67,6 +70,13 @@ export function routedByMember(results,cmteCand,byCand,direct=new Map()){
     const memo=Number(r.memo_total)||0,total=Number(r.total)||0,routed=memo>0?memo:Math.max(0,total-(direct.get(id)||0));
     if(routed>0)out[id]=Math.round(((out[id]||0)+routed)*100)/100;
   }
+  return out;
+}
+// Each member's PAC checks by kind of PAC (checks: {cand, kind, amount}), refunds subtracted, party committees left out.
+export function kindTotals(checks,byCand){
+  const out={};
+  for(const x of checks){const id=byCand.get(x.cand);if(!id||x.kind==='party')continue;const k=x.kind||'other',o=out[id]||(out[id]={});o[k]=(o[k]||0)+x.amount;}
+  for(const o of Object.values(out))for(const k of Object.keys(o)){o[k]=Math.round(o[k]*100)/100;if(!(o[k]>0))delete o[k];}
   return out;
 }
 // Each tracker's totals, only for members who took some: [PAC dollars, its PACs that gave, routed dollars].
@@ -126,11 +136,11 @@ async function main(argv){
   const cm=await download(`cm${yy}.zip`,cycle,dir,refresh),pas2=await download(`pas2${yy}.zip`,cycle,dir,refresh);
   const kinds=new Map(),names=new Map(),cmteCand=new Map();
   for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;kinds.set(k[0],k[1]);names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
-  const checks=[],tracked=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
+  const checks=[],tracked=[],byKind=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
   for await(const line of lines(pas2.file,'itpas2.txt')){
     const x=committeeCheck(line);if(!x||!byCand.has(x.cand))continue;
     if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
-    const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';if(!corp&&!keys.length)continue;
+    const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';byKind.push({cand:x.cand,kind:kinds.get(x.cmte)||'other',amount:x.amount});if(!corp&&!keys.length)continue;
     if(corp)checks.push(x);if(keys.length)tracked.push({...x,keys});
     const d=iso(x.date);if(d>through&&d<=today)through=d;
   }
@@ -150,7 +160,7 @@ async function main(argv){
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,
     sources:[{file:path.basename(cm.file),downloaded:cm.downloaded,url:`${BASE}/${cycle}/cm${yy}.zip`},{file:path.basename(pas2.file),downloaded:pas2.downloaded,url:`${BASE}/${cycle}/pas2${yy}.zip`}],
-    people,trackers,routed:{aipac:routedRead}};
+    people,trackers,routed:{aipac:routedRead},kinds:kindTotals(byKind,byCand)};
   fs.writeFileSync(path.join(ROOT,'public','corporate-pacs.json'),JSON.stringify(out));
   console.log(`Wrote public/corporate-pacs.json: ${vals.length} members read, ${vals.filter(v=>v[0]>0).length} took corporate PAC money, ${vals.filter(v=>!v[0]).length} took none (${checks.length} checks, through ${through||'?'}).`);
   for(const t of TRACKERS)console.log(`  ${t.name}: ${Object.keys(trackers[t.key]).length} took some`);
