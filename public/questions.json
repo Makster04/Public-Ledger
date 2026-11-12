@@ -1,0 +1,2854 @@
+{
+ "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the lean or the compass); axis is the compass axis it counts on (econ: across, social: up and down), or null. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
+ "credit": "Questions modeled on the topics of iSideWith.com's political quiz (https://www.isidewith.com/political-quiz), in our own wording, with questions added for votes the quiz doesn't cover.",
+ "left_out": {
+  "local": [
+   "City economic incentives to relocate companies",
+   "City drug \"safe havens\"",
+   "City protected bike lanes and bike-sharing",
+   "City lanes for self-driving cars",
+   "City downtown congestion fees",
+   "Local police surveillance of Muslim neighborhoods",
+   "Local police use of armed robots",
+   "In-state college tuition for undocumented immigrants"
+  ],
+  "dropped": [
+   "Has the government done enough to lower inflation? (an opinion of whoever is in power, not a policy stance)",
+   "The Trending questions (which ideology you identify with; whether and for whom you will vote)"
+  ]
+ },
+ "categories": [
+  {
+   "id": "technology",
+   "name": "Technology"
+  },
+  {
+   "id": "national-security",
+   "name": "National Security"
+  },
+  {
+   "id": "social",
+   "name": "Social"
+  },
+  {
+   "id": "governance",
+   "name": "Governance"
+  },
+  {
+   "id": "environmental",
+   "name": "Environmental"
+  },
+  {
+   "id": "economic",
+   "name": "Economic"
+  },
+  {
+   "id": "domestic",
+   "name": "Domestic Policy"
+  },
+  {
+   "id": "healthcare",
+   "name": "Healthcare"
+  },
+  {
+   "id": "infrastructure",
+   "name": "Infrastructure"
+  },
+  {
+   "id": "education",
+   "name": "Education"
+  },
+  {
+   "id": "electoral",
+   "name": "Electoral"
+  },
+  {
+   "id": "criminal",
+   "name": "Criminal"
+  },
+  {
+   "id": "foreign",
+   "name": "Foreign Policy"
+  },
+  {
+   "id": "immigration",
+   "name": "Immigration"
+  },
+  {
+   "id": "transportation",
+   "name": "Transportation"
+  },
+  {
+   "id": "science",
+   "name": "Science"
+  },
+  {
+   "id": "housing",
+   "name": "Housing"
+  }
+ ],
+ "questions": [
+  {
+   "id": "ai-regulation",
+   "cat": "technology",
+   "q": "Should the federal government regulate artificial intelligence to make sure it is used ethically?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "algorithm-disclosure",
+   "cat": "technology",
+   "q": "Should large tech companies have to share how their algorithms work with government regulators?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "data-privacy",
+   "cat": "technology",
+   "q": "Should there be stricter rules on how tech companies collect and use people's personal data?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "deepfake-ads",
+   "cat": "technology",
+   "q": "Should it be illegal to use AI-generated deepfakes in political campaign ads?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "right-to-delete",
+   "cat": "technology",
+   "q": "Should people have a legal right to make search engines delete old personal information about them?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "social-media-under-16",
+   "cat": "technology",
+   "q": "Should children under 16 be banned from using social media?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "robot-tax",
+   "cat": "technology",
+   "q": "Should companies that replace workers with AI or robots pay a special tax?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "social-media-real-id",
+   "cat": "technology",
+   "q": "Should social media users have to verify their identity with a government ID?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "social-media-age-id",
+   "cat": "technology",
+   "q": "Should social media users have to prove their age with an electronic ID?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "break-up-big-tech",
+   "cat": "technology",
+   "q": "Should the government break up tech giants like Amazon, Google and Meta?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "crypto-regulation",
+   "cat": "technology",
+   "q": "Should cryptocurrencies face stricter government regulation?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "algorithm-liability",
+   "cat": "technology",
+   "q": "Should tech companies be legally responsible for the content their algorithms promote?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "self-custody-wallets",
+   "cat": "technology",
+   "q": "Should people be allowed to hold money in self-hosted digital wallets the government can monitor but not control?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "art-sale-reporting",
+   "cat": "technology",
+   "q": "Should people selling artwork face the same reporting and disclosure rules as investment funds and public companies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ai-pay-creators",
+   "cat": "technology",
+   "q": "Should AI companies have to pay creators whose work they use to train their models?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "right-to-repair",
+   "cat": "technology",
+   "q": "Should companies have to provide the parts and manuals people need to repair their own products?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "loot-boxes",
+   "cat": "technology",
+   "q": "Should \"loot boxes\" in video games be legally treated as gambling?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "facial-recognition",
+   "cat": "national-security",
+   "q": "Should the government use facial recognition for mass surveillance to improve public safety?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "target-terrorists-abroad",
+   "cat": "national-security",
+   "q": "Should the U.S. kill suspected terrorists in other countries?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ai-weapons",
+   "cat": "national-security",
+   "q": "Should the military use weapons guided by artificial intelligence?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ai-defense",
+   "cat": "national-security",
+   "q": "Should the government invest in artificial intelligence for national defense?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "women-draft",
+   "cat": "national-security",
+   "q": "Should 18-year-old women have to register for the military draft?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "force-without-congress",
+   "cat": "national-security",
+   "q": "Should the President be able to use military force against al-Qaeda without Congress's approval?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "military-vs-cartels",
+   "cat": "national-security",
+   "q": "Should the President use the U.S. military against Mexican drug cartels?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": null
+  },
+  {
+   "id": "foreign-farmland",
+   "cat": "national-security",
+   "q": "Should foreign governments and companies be banned from buying U.S. farmland?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "encryption-backdoor",
+   "cat": "national-security",
+   "q": "Should tech companies have to give the government a way into encrypted messaging apps?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "cancel-f35",
+   "cat": "national-security",
+   "q": "Should the government cancel the F-35 fighter jet program?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ufo-records",
+   "cat": "national-security",
+   "q": "Should the government release all of its classified records on UFOs (unidentified anomalous phenomena)?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "crypto-sanctioned",
+   "cat": "national-security",
+   "q": "Should people be banned from using cryptocurrency to send money to relatives in heavily sanctioned countries?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "abortion",
+   "cat": "social",
+   "q": "Where do you stand on abortion?",
+   "sides": [
+    "Pro-life",
+    "Pro-choice"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "contraception",
+   "cat": "social",
+   "q": "Should the right to use birth control be protected in federal law?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social",
+   "added": true
+  },
+  {
+   "id": "gender-identity-protections",
+   "cat": "social",
+   "q": "Should gender identity be protected under anti-discrimination laws?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "assisted-dying",
+   "cat": "social",
+   "q": "Should terminally ill patients be allowed to end their lives with a doctor's help?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "marital-rape",
+   "cat": "social",
+   "q": "Should rape within a marriage be punished as severely as any other rape?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "school-bathrooms",
+   "cat": "social",
+   "q": "Should public schools let students use the bathroom that matches their gender identity?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "same-sex-adoption",
+   "cat": "social",
+   "q": "Should same-sex couples have the same adoption rights as other couples?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "minors-transition-care",
+   "cat": "social",
+   "q": "Should people under 18 be able to receive gender-transition treatment?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "religious-refusal",
+   "cat": "social",
+   "q": "Should businesses be able to refuse a customer's request that conflicts with the owner's religious beliefs?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "women-combat",
+   "cat": "social",
+   "q": "Should women be allowed to serve in military combat roles?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "same-sex-marriage",
+   "cat": "social",
+   "q": "Should same-sex marriage be legal?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "sex-work",
+   "cat": "social",
+   "q": "Should consensual sex work be decriminalized?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "hate-speech",
+   "cat": "social",
+   "q": "Should hate speech be protected by the First Amendment?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "planned-parenthood",
+   "cat": "social",
+   "q": "Should Planned Parenthood keep receiving federal funding?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "end-dei-hiring",
+   "cat": "social",
+   "q": "Should government agencies end diversity, equity and inclusion (DEI) hiring programs in favor of merit-only hiring?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "face-veils",
+   "cat": "social",
+   "q": "Should women be allowed to wear a face veil (niqab) at civic ceremonies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "assault-weapon-buyback",
+   "cat": "social",
+   "q": "Should the federal government require a buyback of assault weapons?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "sensitivity-training",
+   "cat": "social",
+   "q": "Should federal employees be required to take racial sensitivity training?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "women-on-boards",
+   "cat": "social",
+   "q": "Should companies be required to have women on their boards of directors?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "epstein-files",
+   "cat": "governance",
+   "q": "Should the federal government release all of its Jeffrey Epstein files, including the client list, without redactions?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "expand-house",
+   "cat": "governance",
+   "q": "Should the House of Representatives add seats to keep up with population growth?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "presidential-immunity",
+   "cat": "governance",
+   "q": "Should former presidents have absolute immunity from prosecution for official acts in office?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": null
+  },
+  {
+   "id": "justice-ethics",
+   "cat": "governance",
+   "q": "Should Supreme Court justices be banned from financial dealings with people who have an interest in their cases?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "end-filibuster",
+   "cat": "governance",
+   "q": "Should the Senate end the filibuster so a simple majority can pass laws?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "fire-civil-servants",
+   "cat": "governance",
+   "q": "Should the President be able to fire career (nonpolitical) federal employees more easily?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": null
+  },
+  {
+   "id": "national-id",
+   "cat": "governance",
+   "q": "Should the U.S. create a national ID system to improve security and prevent fraud?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "foreign-agent-lobbyists",
+   "cat": "governance",
+   "q": "Should lobbyists for foreign governments have to register as foreign agents?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "reject-electoral-votes",
+   "cat": "governance",
+   "q": "Should Congress be able to reject a state's certified electoral votes?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": null,
+   "added": true
+  },
+  {
+   "id": "climate-regulations",
+   "cat": "environmental",
+   "q": "Should the government tighten environmental rules to fight climate change?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "animal-testing",
+   "cat": "environmental",
+   "q": "Should researchers be allowed to test drugs, vaccines, medical devices and cosmetics on animals?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "disposables-ban",
+   "cat": "environmental",
+   "q": "Should disposable products made of less than half biodegradable material, like plastic cups and cutlery, be banned?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "geoengineering",
+   "cat": "environmental",
+   "q": "Should the government fund geoengineering research to fight climate change?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "fracking",
+   "cat": "environmental",
+   "q": "Should fracking for oil and natural gas be allowed?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "wind-subsidies",
+   "cat": "environmental",
+   "q": "Should the wind power industry get tax credits and subsidies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "arctic-drilling",
+   "cat": "environmental",
+   "q": "Should oil drilling be allowed in Alaska's Arctic National Wildlife Refuge?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "ev-support",
+   "cat": "environmental",
+   "q": "Should the federal government help people buy electric vehicles and pay for charging stations?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ",
+   "note": "Merges the quiz's two EV questions (charging network; EV subsidies)."
+  },
+  {
+   "id": "food-waste",
+   "cat": "environmental",
+   "q": "Should the government fund programs to reduce food waste?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "factory-farming",
+   "cat": "environmental",
+   "q": "Should the federal government ban factory farming to protect animals and the environment?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "offshore-drilling",
+   "cat": "environmental",
+   "q": "Should the U.S. expand offshore oil drilling?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "paris-agreement",
+   "cat": "environmental",
+   "q": "Should the U.S. leave the Paris climate agreement?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "dakota-access",
+   "cat": "environmental",
+   "q": "Should the government stop the Dakota Access oil pipeline?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "carbon-capture",
+   "cat": "environmental",
+   "q": "Should companies developing carbon-capture technology get government subsidies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "deep-sea-mining",
+   "cat": "environmental",
+   "q": "Should deep-sea mining be allowed in U.S. waters to get minerals for green technology?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "gas-stoves",
+   "cat": "environmental",
+   "q": "Should the sale of new gas stoves be banned?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "equal-pay",
+   "cat": "economic",
+   "q": "Should employers have to pay men and women the same for the same job?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "welfare-restrictions",
+   "cat": "economic",
+   "q": "Should welfare benefits come with more or fewer restrictions?",
+   "sides": [
+    "More restrictions",
+    "Fewer restrictions"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "company-tax-breaks",
+   "cat": "economic",
+   "q": "Should the President give individual companies tax breaks to keep jobs in the U.S.?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "tax-the-rich",
+   "cat": "economic",
+   "q": "Should taxes on the wealthy go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "postal-banking",
+   "cat": "economic",
+   "q": "Should the Postal Service offer basic banking services?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "audit-the-fed",
+   "cat": "economic",
+   "q": "Should Congress audit the Federal Reserve?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "minimum-wage",
+   "cat": "economic",
+   "q": "Should the federal minimum wage go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "cut-spending-debt",
+   "cat": "economic",
+   "q": "Should the government cut spending to reduce the national debt?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "tariffs",
+   "cat": "economic",
+   "q": "Should the U.S. add or raise tariffs on imported goods?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "licensing-reform",
+   "cat": "economic",
+   "q": "Should licensing requirements be dropped for low-risk jobs like hair braiding or flower arranging?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "paid-leave",
+   "cat": "economic",
+   "q": "Should employers have to give full-time workers paid leave for a new child or a sick family member?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "data-center-ban",
+   "cat": "economic",
+   "q": "Should the government ban building new data centers?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "universal-basic-income",
+   "cat": "economic",
+   "q": "Should the U.S. have a universal basic income?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "block-mega-mergers",
+   "cat": "economic",
+   "q": "Should the government block \"mega mergers\" that would give one company a large share of its industry?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "corporate-tax",
+   "cat": "economic",
+   "q": "Should the tax rate on corporations go up or down?",
+   "sides": [
+    "Raise",
+    "Lower"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "public-pensions",
+   "cat": "economic",
+   "q": "Should pensions for retired government workers go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "usmca",
+   "cat": "economic",
+   "q": "Should the U.S. stay in its trade agreement with Canada and Mexico (the USMCA, which replaced NAFTA)?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "union-rights",
+   "cat": "economic",
+   "q": "Should workers have stronger legal protections to form unions and bargain collectively?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ",
+   "added": true
+  },
+  {
+   "id": "chips-industry",
+   "cat": "economic",
+   "q": "Should the federal government fund U.S. manufacturing of computer chips and other key industries?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "added": true
+  },
+  {
+   "id": "gun-purchase-limits",
+   "cat": "domestic",
+   "q": "Should buying a gun come with more restrictions than it does now?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "decriminalize-drugs",
+   "cat": "domestic",
+   "q": "Should drug use be decriminalized?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "retirement-age",
+   "cat": "domestic",
+   "q": "Should the retirement age for Social Security go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "gun-age-21",
+   "cat": "domestic",
+   "q": "Should the minimum age to buy any gun be raised to 21?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "eminent-domain",
+   "cat": "domestic",
+   "q": "Should the government be able to take private property for public use if it pays fair compensation?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "congress-stock-trading",
+   "cat": "domestic",
+   "q": "Should members of Congress be allowed to trade stocks while in office?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "armed-teachers",
+   "cat": "domestic",
+   "q": "Should teachers be allowed to carry guns at school?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "misinformation-rules",
+   "cat": "domestic",
+   "q": "Should social media sites be regulated to curb fake news and misinformation?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "term-limits",
+   "cat": "domestic",
+   "q": "Should members of Congress have term limits?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "court-reform",
+   "cat": "domestic",
+   "q": "Should the Supreme Court get more seats and term limits for justices?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "nsa-metadata",
+   "cat": "domestic",
+   "q": "Should the NSA be allowed to collect records of people's phone calls, such as numbers, times and lengths?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "flag-burning",
+   "cat": "domestic",
+   "q": "Should burning the American flag be illegal?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "permanent-dst",
+   "cat": "domestic",
+   "q": "Should the U.S. stop changing the clocks and make Daylight Saving Time permanent?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "net-neutrality",
+   "cat": "domestic",
+   "q": "Should internet providers be allowed to speed up websites that pay more and slow down those that pay less?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "no-fly-no-buy",
+   "cat": "domestic",
+   "q": "Should people on the no-fly list be banned from buying guns and ammunition?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "snowden-immunity",
+   "cat": "domestic",
+   "q": "Should the U.S. grant Edward Snowden immunity?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "whistleblowers",
+   "cat": "domestic",
+   "q": "Should there be stronger legal protections for whistleblowers?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ai-diagnosis",
+   "cat": "healthcare",
+   "q": "Should AI be allowed to diagnose patients and prescribe medicine without a doctor's supervision?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "youth-unhealthy-ads",
+   "cat": "healthcare",
+   "q": "Should the government ban marketing products like vaping and junk food to young people?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "marijuana",
+   "cat": "healthcare",
+   "q": "Should marijuana be legal?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "drug-prices",
+   "cat": "healthcare",
+   "q": "Should the government cap or regulate the prices of prescription drugs?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ",
+   "note": "Merges the quiz's two drug-price questions (regulate prices of life-saving drugs; cap prescription prices)."
+  },
+  {
+   "id": "mental-health-funding",
+   "cat": "healthcare",
+   "q": "Should the government spend more on mental health research and treatment?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "pre-existing-conditions",
+   "cat": "healthcare",
+   "q": "Should health insurers be allowed to deny coverage for pre-existing conditions?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "medical-debt",
+   "cat": "healthcare",
+   "q": "Should the government forgive all medical debt for necessary, non-elective care?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "medicaid-funding",
+   "cat": "healthcare",
+   "q": "Should federal funding for Medicaid go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "single-payer",
+   "cat": "healthcare",
+   "q": "Should the U.S. have a single-payer health care system?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "medicaid-work",
+   "cat": "healthcare",
+   "q": "Should people have to work to receive Medicaid?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "va-privatization",
+   "cat": "healthcare",
+   "q": "Should veterans' health care be more or less privatized?",
+   "sides": [
+    "More",
+    "Less"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "food-dyes",
+   "cat": "healthcare",
+   "q": "Should the U.S. ban food ingredients and dyes that are banned in Europe?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "fund-who",
+   "cat": "healthcare",
+   "q": "Should the U.S. fund the World Health Organization?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "affordable-care-act",
+   "cat": "healthcare",
+   "q": "Do you support the Affordable Care Act (Obamacare)?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "drug-ads",
+   "cat": "healthcare",
+   "q": "Should drug companies be banned from advertising prescription drugs to consumers?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "doctor-misinformation",
+   "cat": "healthcare",
+   "q": "Should medical boards discipline doctors who give health advice that goes against scientific consensus?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "fix-it-first",
+   "cat": "infrastructure",
+   "q": "Should fixing existing roads and bridges come before building new infrastructure?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "highways-to-transit",
+   "cat": "infrastructure",
+   "q": "Should building new highway lanes be stopped, with the money going to public transit?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "nationalize-grid",
+   "cat": "infrastructure",
+   "q": "Should the federal government take over the electric grid to upgrade it and prevent blackouts?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "free-school-meals",
+   "cat": "education",
+   "q": "Should the federal government provide free breakfast and lunch to all public school students?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ",
+   "note": "Merges the quiz's two school-meal questions."
+  },
+  {
+   "id": "free-college",
+   "cat": "education",
+   "q": "Should the federal government pay tuition at four-year colleges and universities?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "tax-rich-student-loans",
+   "cat": "education",
+   "q": "Should taxes on the wealthy go up to lower interest rates on student loans?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "corporal-punishment",
+   "cat": "education",
+   "q": "Should teachers be allowed to physically discipline students?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "school-vouchers",
+   "cat": "education",
+   "q": "Should students get public vouchers to pay for private schools?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "universal-preschool",
+   "cat": "education",
+   "q": "Should the federal government fund universal preschool?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "abolish-education-dept",
+   "cat": "education",
+   "q": "Should the U.S. Department of Education be abolished?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "common-core",
+   "cat": "education",
+   "q": "Do you support Common Core national education standards?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "remove-library-books",
+   "cat": "education",
+   "q": "Should public schools be able to remove library books that parents find inappropriate?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "school-phone-ban",
+   "cat": "education",
+   "q": "Should students be banned from using phones during the school day?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "note": "Merges the quiz's two school-phone questions."
+  },
+  {
+   "id": "critical-race-theory",
+   "cat": "education",
+   "q": "Should critical race theory be taught in K-12 schools?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "charter-schools",
+   "cat": "education",
+   "q": "Do you support charter schools?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "sex-ed-opt-out",
+   "cat": "education",
+   "q": "Should parents be able to take their children out of sex-education classes on LGBTQ+ relationships and gender identity?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "college-loan-accountability",
+   "cat": "education",
+   "q": "Should colleges pay a price when graduates with low-paying degrees default on their student loans?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "truancy-penalties",
+   "cat": "education",
+   "q": "Should parents face criminal penalties when their children chronically skip school?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "legacy-admissions",
+   "cat": "education",
+   "q": "Should colleges be banned from giving preference to children of alumni?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "competency-tests",
+   "cat": "electoral",
+   "q": "Should politicians over 75 have to pass a mental competency test?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "mail-ballots",
+   "cat": "electoral",
+   "q": "Should every voter automatically be mailed a ballot?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "convicted-candidates",
+   "cat": "electoral",
+   "q": "Should people convicted of a crime be allowed to run for office?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "noncitizen-voting",
+   "cat": "electoral",
+   "q": "Should non-citizens living in the U.S. be allowed to vote?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "electoral-college",
+   "cat": "electoral",
+   "q": "Should the Electoral College be abolished?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "group-donations",
+   "cat": "electoral",
+   "q": "Should corporations, unions and nonprofits be allowed to donate to political parties?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": null
+  },
+  {
+   "id": "foreign-lobbyist-fundraising",
+   "cat": "electoral",
+   "q": "Should foreign lobbyists be allowed to raise money for U.S. elections?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "automatic-registration",
+   "cat": "electoral",
+   "q": "Should every eligible citizen be registered to vote automatically?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "proportional-representation",
+   "cat": "electoral",
+   "q": "Should the U.S. switch to proportional representation so third parties can win seats in Congress?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "note": "Merges the quiz's two proportional-representation questions."
+  },
+  {
+   "id": "donation-limits",
+   "cat": "electoral",
+   "q": "Should there be a limit on how much one donor can give a candidate?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "candidate-tax-returns",
+   "cat": "electoral",
+   "q": "Should political candidates have to release their recent tax returns?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "lobbying-ban",
+   "cat": "electoral",
+   "q": "Should former White House and congressional officials be banned from lobbying for five years after they leave?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "voter-id",
+   "cat": "electoral",
+   "q": "Should voters have to show a photo ID?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "ranked-choice",
+   "cat": "electoral",
+   "q": "Should ranked-choice voting be required in all congressional elections?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "voting-age",
+   "cat": "electoral",
+   "q": "Should the voting age be lowered?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "fine-nonvoters",
+   "cat": "electoral",
+   "q": "Should people who don't vote be fined?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "social-media-political-ads",
+   "cat": "electoral",
+   "q": "Should social media companies ban political ads?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "election-day-holiday",
+   "cat": "electoral",
+   "q": "Should federal Election Day be a national holiday?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "body-cameras",
+   "cat": "criminal",
+   "q": "Should police officers be required to wear body cameras?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "release-nonviolent",
+   "cat": "criminal",
+   "q": "Should nonviolent prisoners be released to reduce prison overcrowding?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "ai-justice",
+   "cat": "criminal",
+   "q": "Should AI be used to make decisions in the criminal justice system?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "juvenile-solitary",
+   "cat": "criminal",
+   "q": "Should solitary confinement be banned for juveniles?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "death-penalty-traffickers",
+   "cat": "criminal",
+   "q": "Should drug traffickers face the death penalty?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "military-equipment-police",
+   "cat": "criminal",
+   "q": "Should police departments be allowed to use military-grade equipment?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "qualified-immunity",
+   "cat": "criminal",
+   "q": "Do you support qualified immunity for police officers?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "private-prisons",
+   "cat": "criminal",
+   "q": "Should the government hire private companies to run prisons?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "civil-forfeiture",
+   "cat": "criminal",
+   "q": "Should police be able to seize cash and property from people who haven't been convicted of a crime?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "note": "Merges the quiz's three property-seizure questions (one from National Security, two from Criminal)."
+  },
+  {
+   "id": "police-funding-shift",
+   "cat": "criminal",
+   "q": "Should some police funding be moved to social and community programs?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "mandatory-minimums",
+   "cat": "criminal",
+   "q": "Should drug possession carry mandatory minimum prison sentences?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "felon-voting",
+   "cat": "criminal",
+   "q": "Should people convicted of crimes have the right to vote?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "restorative-justice",
+   "cat": "criminal",
+   "q": "Should restorative justice programs be used as an alternative to prison?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "genealogy-searches",
+   "cat": "criminal",
+   "q": "Should police be able to search commercial DNA genealogy databases without a warrant?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "license-plate-readers",
+   "cat": "criminal",
+   "q": "Should police use automatic license plate readers to track vehicles?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "police-union-limits",
+   "cat": "criminal",
+   "q": "Should police unions' bargaining power be limited in misconduct cases?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "support-israel",
+   "cat": "foreign",
+   "q": "Should the U.S. keep supporting Israel?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "military-spending",
+   "cat": "foreign",
+   "q": "Should military spending go up or down?",
+   "sides": [
+    "Increase",
+    "Decrease"
+   ],
+   "liberal": 1,
+   "axis": null
+  },
+  {
+   "id": "national-service",
+   "cat": "foreign",
+   "q": "Should every 18-year-old have to serve at least one year in the military?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "war-with-iran",
+   "cat": "foreign",
+   "q": "Should the U.S. go to war with Iran?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "drone-strikes",
+   "cat": "foreign",
+   "q": "Should the military fly drones over other countries to gather intelligence and kill suspected terrorists?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "arms-to-india",
+   "cat": "foreign",
+   "q": "Should the U.S. sell weapons to India to counter Chinese and Russian influence?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "stay-in-nato",
+   "cat": "foreign",
+   "q": "Should the U.S. stay in NATO?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "terror-suspect-rights",
+   "cat": "foreign",
+   "q": "Should foreign terrorism suspects have constitutional rights?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "strike-north-korea",
+   "cat": "foreign",
+   "q": "Should the U.S. strike North Korea to destroy its long-range missiles and nuclear weapons?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "stay-in-un",
+   "cat": "foreign",
+   "q": "Should the U.S. stay in the United Nations?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "defend-low-spending-allies",
+   "cat": "foreign",
+   "q": "Should the U.S. defend NATO allies that spend little on their own defense?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "foreign-election-influence",
+   "cat": "foreign",
+   "q": "Should the U.S. government try to influence elections in other countries?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "arms-human-rights",
+   "cat": "foreign",
+   "q": "Should arms sales be restricted to countries accused of human rights abuses?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "foreign-aid",
+   "cat": "foreign",
+   "q": "Should foreign aid spending go up or down?",
+   "sides": [
+    "Increase",
+    "Decrease"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "spy-on-allies",
+   "cat": "foreign",
+   "q": "Should the NSA keep spying on U.S. allies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "enhanced-interrogation",
+   "cat": "foreign",
+   "q": "Should the military be allowed to use enhanced interrogation, like waterboarding, on suspected terrorists?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "ukraine-aid",
+   "cat": "foreign",
+   "q": "Should the U.S. give Ukraine military aid and funding?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "jerusalem-capital",
+   "cat": "foreign",
+   "q": "Should the U.S. recognize Jerusalem as Israel's capital?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "war-powers",
+   "cat": "foreign",
+   "q": "Should the President need Congress's approval before using military force abroad, except to respond to an attack?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "added": true
+  },
+  {
+   "id": "abolish-ice",
+   "cat": "immigration",
+   "q": "Should the federal government abolish Immigration and Customs Enforcement (ICE)?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "high-risk-entry-ban",
+   "cat": "immigration",
+   "q": "Should immigrants from high-risk countries be barred until screening for potential terrorists improves?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "citizenship-test",
+   "cat": "immigration",
+   "q": "Should immigrants have to pass a test on the country's language, history and government to become citizens?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "birthright-citizenship",
+   "cat": "immigration",
+   "q": "Should children born in the U.S. to non-citizen parents automatically be citizens?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "learn-english",
+   "cat": "immigration",
+   "q": "Should immigrants be expected to learn English?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "local-police-ice",
+   "cat": "immigration",
+   "q": "Should local police be able to hold undocumented immigrants arrested for minor crimes and hand them to federal immigration authorities?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "sanctuary-funding",
+   "cat": "immigration",
+   "q": "Should sanctuary cities receive federal funding?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "dual-citizenship",
+   "cat": "immigration",
+   "q": "Should immigrants be allowed to hold dual citizenship?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "deport-serious-crime",
+   "cat": "immigration",
+   "q": "Should immigrants who commit a serious crime be deported?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "border-security",
+   "cat": "immigration",
+   "q": "Should border security be tightened?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "work-amnesty",
+   "cat": "immigration",
+   "q": "Should undocumented immigrants who are working get temporary legal status?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "undocumented-healthcare",
+   "cat": "immigration",
+   "q": "Should undocumented immigrants have access to government-funded health care?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "skilled-visas",
+   "cat": "immigration",
+   "q": "Should the number of temporary visas for high-skilled workers go up or down?",
+   "sides": [
+    "Increase",
+    "Decrease"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "dreamers-citizenship",
+   "cat": "immigration",
+   "q": "Should children of undocumented immigrants be given legal citizenship?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "border-wall",
+   "cat": "immigration",
+   "q": "Should the U.S. build a wall along the southern border?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "remain-in-mexico",
+   "cat": "immigration",
+   "q": "Should asylum seekers at the southern border have to wait in Mexico while their cases are decided?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "e-verify",
+   "cat": "immigration",
+   "q": "Should all employers have to check new hires' immigration status with E-Verify?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "no-traffic-laws",
+   "cat": "transportation",
+   "q": "Should the government eliminate traffic laws and rely on voluntary compliance?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "diesel-emissions",
+   "cat": "transportation",
+   "q": "Should diesel vehicles face stricter emissions standards?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "transit-spending",
+   "cat": "transportation",
+   "q": "Should the government spend more on public transportation?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "accessible-transit",
+   "cat": "transportation",
+   "q": "Should all public transportation have to be fully accessible to people with disabilities?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "fuel-efficiency",
+   "cat": "transportation",
+   "q": "Should vehicles face stricter fuel efficiency standards?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "gps-tracking",
+   "cat": "transportation",
+   "q": "Should GPS tracking be required in all vehicles to monitor driving and enforce traffic laws?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "ev-mandate",
+   "cat": "transportation",
+   "q": "Should all new cars have to be electric or hybrid by a set date?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "carpool-incentives",
+   "cat": "transportation",
+   "q": "Should commuters get financial incentives for carpooling or shared rides?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "distracted-driving",
+   "cat": "transportation",
+   "q": "Should penalties for distracted driving go up?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "self-driving-rules",
+   "cat": "transportation",
+   "q": "Should the testing and use of self-driving cars on public roads be strictly regulated?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null,
+   "note": "Merges the quiz's two self-driving questions (one from Technology)."
+  },
+  {
+   "id": "rideshare-subsidies",
+   "cat": "transportation",
+   "q": "Should the government subsidize ride-sharing for low-income people?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "smart-roads",
+   "cat": "transportation",
+   "q": "Should the government invest in smart transportation, like AI-managed traffic systems and connected highways?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "high-speed-rail",
+   "cat": "transportation",
+   "q": "Should the government heavily subsidize high-speed rail?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "frequent-flier-rules",
+   "cat": "transportation",
+   "q": "Should airline frequent-flier programs be regulated to protect customers from sudden devaluations and hidden fees?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "classic-car-design",
+   "cat": "transportation",
+   "q": "Should new vehicles be required to keep classic car designs?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "child-vaccines",
+   "cat": "science",
+   "q": "Should children be required to get vaccines for preventable diseases?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "space-funding",
+   "cat": "science",
+   "q": "Should the government fund space travel?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "nuclear-energy",
+   "cat": "science",
+   "q": "Do you support nuclear energy?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "genetic-research",
+   "cat": "science",
+   "q": "Should the government fund genetic engineering research to prevent and cure diseases?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "crispr-rules",
+   "cat": "science",
+   "q": "Should the use of CRISPR to modify human genes be regulated?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "lab-grown-meat",
+   "cat": "science",
+   "q": "Should lab-grown meat be allowed to be sold?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": null
+  },
+  {
+   "id": "gmo-labels",
+   "cat": "science",
+   "q": "Should genetically engineered foods (GMOs) have to be labeled?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "homeless-funding",
+   "cat": "housing",
+   "q": "Should the government spend more on homeless shelters and services?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "rent-algorithms",
+   "cat": "housing",
+   "q": "Should landlords be banned from using software that coordinates rent prices?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "rent-control",
+   "cat": "housing",
+   "q": "Should the government limit how much landlords can charge (rent control)?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "affordable-housing",
+   "cat": "housing",
+   "q": "Should the government give incentives to build affordable housing?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "dense-housing",
+   "cat": "housing",
+   "q": "Should the government give incentives to build high-density housing?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "homeless-encampments",
+   "cat": "housing",
+   "q": "Should homeless people who have turned down available shelter be allowed to sleep or camp on public property?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "social"
+  },
+  {
+   "id": "squatter-removal",
+   "cat": "housing",
+   "q": "Should police be able to remove squatters from a home without a court order?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "social"
+  },
+  {
+   "id": "national-sales-tax",
+   "cat": "housing",
+   "q": "Should the federal income tax be abolished and replaced with a national sales tax?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 1,
+   "axis": "econ"
+  },
+  {
+   "id": "first-time-buyers",
+   "cat": "housing",
+   "q": "Should first-time homebuyers get government subsidies?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "investor-home-buying",
+   "cat": "housing",
+   "q": "Should large investment funds be banned from buying apartment buildings and single-family homes?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "foreign-home-buyers",
+   "cat": "housing",
+   "q": "Should foreign investors be restricted from buying homes in the U.S.?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "green-spaces",
+   "cat": "housing",
+   "q": "Should new housing developments have to include green spaces and parks?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  },
+  {
+   "id": "foreclosure-help",
+   "cat": "housing",
+   "q": "Should homeowners facing foreclosure get government financial help?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": 0,
+   "axis": "econ"
+  },
+  {
+   "id": "backyard-cottages",
+   "cat": "housing",
+   "q": "Should homeowners be able to build a small backyard cottage (ADU) without a permit?",
+   "sides": [
+    "Yes",
+    "No"
+   ],
+   "liberal": null,
+   "axis": null
+  }
+ ]
+}
