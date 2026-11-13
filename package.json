@@ -54,7 +54,8 @@
     "bills:candidates": "node scripts/question-bills.mjs",
     "bills:record": "node scripts/build-question-record.mjs",
     "statements:find": "node scripts/question-statements.mjs --find",
-    "statements:record": "node scripts/question-statements.mjs"
+    "statements:record": "node scripts/question-statements.mjs",
+    "statements:export": "node --env-file-if-exists=.dev.vars --no-warnings=ExperimentalWarning scripts/export-statements.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.0.0"

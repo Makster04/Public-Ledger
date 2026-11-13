@@ -1,13 +1,14 @@
 // What politicians said, tagged to the alignment questions (public/questions.json) with the side it takes and its date.
 //
 // The statements come from what they told voters in each campaign (data/campaign-text/<id>.json: their campaign
-// website's pages saved by the Wayback Machine, and their campaign-season Bluesky and Threads posts) and from the
-// reviewed statements in public/research.json. Each one is tagged by hand in data/question-statements.json:
+// website's pages saved by the Wayback Machine, and their campaign-season Bluesky and Threads posts), from the floor
+// speeches, press releases and posts the local refresh collected (data/collected-statements/<id>.json, exported by npm
+// run statements:export) and from the reviewed statements in public/research.json. Each one is tagged by hand in data/question-statements.json:
 //   {person id: {question id: [[side index, "the quote", "YYYY-MM-DD", "link", "where it was said"], ...]}}
 // A tag is only made when the words clearly take one side of the question; a statement that only explains a vote
 // isn't a separate position, and anything unclear is left out. At most one statement per question per campaign (the
 // clearest one), so a position repeated across a site's pages counts once; a later campaign that says it again is a new
-// statement with its own date. Each counts 3 points (public/question-scores.js), cancelled when a later vote on the
+// statement with its own date. A statement outside a campaign site belongs to the election its date leads up to. Each counts 3 points (public/question-scores.js), cancelled when a later vote on the
 // question went the other way. The same words on several pages count once, at the latest date they were seen.
 //
 //   npm run statements:find                      candidates for everyone with campaign text
@@ -38,23 +39,40 @@ export function campaignDocs(c){
   }
   return out;
 }
+// Statements the local refresh collected (data/collected-statements/<id>.json, npm run statements:export): floor
+// speeches, press releases and posts, as documents of their kept sentences. Their campaign is the election they lead up
+// to (campaignOf).
+export function collectedDocs(c){
+  return (c?.statements||[]).filter(x=>x.sentences?.length).map(x=>({text:x.sentences.join('\n'),date:x.date,url:x.url,where:x.where,year:Number(cycleOf(x.date))}));
+}
+// Each question's search as tests: its phrases (data/question-search.json "any" and "said") and the ones that rule a
+// sentence out ("not").
+export const searchTests=searches=>Object.entries(searches||{}).filter(([q])=>q!=='about').map(([q,s])=>({q,re:[...(s.any||[]),...(s.said||[])].map(phraseRe),not:(s.not||[]).map(phraseRe)}));
+// The sentences of a text that name a question's phrases: [{text, questions}] (30 to 700 characters each).
+export function topicSentences(text,tests){
+  const out=[];
+  for(const line of String(text||'').split(/\n+/))for(const sen of sentences(line)){
+    if(sen.length<30||sen.length>700)continue;const t=lower(sen);
+    const qs=tests.filter(x=>x.re.some(r=>r.test(t))&&!x.not.some(r=>r.test(t))).map(x=>x.q);if(qs.length)out.push({text:sen.trim(),questions:qs});
+  }
+  return out;
+}
 // The sentences of a person's documents that name a question's phrases, once per wording: [{text, questions, seen:
 // [{date, url, where, year}]}], newest sighting first.
 export function statementCandidates(docs,searches){
-  const tests=Object.entries(searches).map(([q,s])=>({q,re:[...(s.any||[]),...(s.said||[])].map(phraseRe),not:(s.not||[]).map(phraseRe)}));
-  const by=new Map();
-  for(const d of docs)for(const line of String(d.text).split(/\n+/))for(const sen of sentences(line)){
-    if(sen.length<30||sen.length>700)continue;const t=lower(sen);
-    const qs=tests.filter(x=>x.re.some(r=>r.test(t))&&!x.not.some(r=>r.test(t))).map(x=>x.q);if(!qs.length)continue;
-    const k=norm(sen),c=by.get(k)||by.set(k,{text:sen.trim(),questions:qs,seen:[]}).get(k);
+  const tests=searchTests(searches),by=new Map();
+  for(const d of docs)for(const {text:sen,questions:qs} of topicSentences(d.text,tests)){
+    const k=norm(sen),c=by.get(k)||by.set(k,{text:sen,questions:qs,seen:[]}).get(k);
     if(!c.seen.some(s=>s.url===d.url))c.seen.push({date:d.date,url:d.url,where:d.where,year:d.year});
   }
   const out=[...by.values()];for(const c of out)c.seen.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
   return out;
 }
-// The campaign a statement belongs to: the year its source names ("Campaign website, 2020", "Bluesky post, 2026
-// campaign"), else the year it was said.
-export const campaignOf=(where,date)=>/\b(?:19|20)\d{2}\b/.exec(String(where||''))?.[0]||String(date||'').slice(0,4);
+// The election a date leads up to: the year itself when even, else the next ("2025-03-01" -> "2026").
+export const cycleOf=date=>{const y=Number(String(date||'').slice(0,4));return y?String(y%2?y+1:y):'';};
+// The campaign a statement belongs to: the one its source names ("Campaign website, 2020", "Bluesky post, 2026
+// campaign"), else the election its date leads up to.
+export const campaignOf=(where,date)=>/^Campaign website, (\d{4})\b/.exec(String(where||''))?.[1]||/, (\d{4}) campaign\b/.exec(String(where||''))?.[1]||cycleOf(date);
 // The coded statements, checked: problems as text, and the site's copy {person: {question: [[side, date, quote, link,
 // where]]}}.
 export function checkStatements(coded,{people,questions}){
@@ -87,11 +105,14 @@ function main(){
     const searches=read('data/question-search.json');delete searches.about;
     const dir=path.join(ROOT,'.local','statement-candidates');fs.mkdirSync(dir,{recursive:true});
     const coded=fs.existsSync(path.join(ROOT,'data','question-statements.json'))?read('data/question-statements.json'):{};
-    for(const f of fs.readdirSync(path.join(ROOT,'data','campaign-text')).filter(f=>f.endsWith('.json'))){
-      const id=f.replace(/\.json$/,'');if(only.length&&!only.includes(id))continue;
-      const c=read(`data/campaign-text/${f}`),cands=statementCandidates(campaignDocs(c),searches);
+    const files=dir=>fs.existsSync(path.join(ROOT,'data',dir))?fs.readdirSync(path.join(ROOT,'data',dir)).filter(f=>f.endsWith('.json')).map(f=>f.replace(/\.json$/,'')):[];
+    const campaign=new Set(files('campaign-text')),collected=new Set(files('collected-statements'));
+    for(const id of [...new Set([...campaign,...collected])].sort()){
+      if(only.length&&!only.includes(id))continue;
+      const c=campaign.has(id)?read(`data/campaign-text/${id}.json`):null,k=collected.has(id)?read(`data/collected-statements/${id}.json`):null;
+      const cands=statementCandidates([...campaignDocs(c),...collectedDocs(k)],searches);
       if(!cands.length)continue;
-      fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,name:c.name,built:new Date().toISOString().slice(0,10),candidates:cands}));
+      fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,name:c?.name||k?.name||id,built:new Date().toISOString().slice(0,10),candidates:cands}));
       const done=Object.keys(coded[id]||{}).length;
       console.log(`${id}: ${cands.length} sentences on ${new Set(cands.flatMap(x=>x.questions)).size} questions${done?` (${done} questions tagged)`:''}`);
       if(print)for(const [i,x] of cands.entries())console.log(`  ${i} [${x.questions.join(',')}] ${x.seen.map(s=>s.year).filter((v,j,a)=>a.indexOf(v)===j).join('/')} ${x.text.slice(0,300)}`);
