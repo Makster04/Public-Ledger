@@ -1427,32 +1427,44 @@ input, select { accent-color: var(--accent); }
 .tr-pick .hdd-menu { font-size: 1rem; font-weight: 400; min-width: 300px; }
 .ti-ctl { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 12px; }
 .ti-note { font-size: .86rem; color: var(--ink-2); max-width: 980px; margin: 0 0 16px; }
-.ti-row { display: grid; grid-template-columns: 190px minmax(0, 1fr); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 12px; overflow: hidden; background: var(--surface); }
-.ti-l { padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; border-left: 6px solid var(--line); }
-.ti-l b { font-size: 1.1rem; }
-.ti-l span { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-2); }
-.ti-l em { font-style: normal; font-size: .8rem; color: var(--muted); }
-.ti-row.far .ti-l { background: var(--crit-soft); border-left-color: var(--crit); } .ti-row.far .ti-l b, .ti-row.far .ti-ca { color: var(--crit); }
-.ti-row.above .ti-l { background: var(--serious-soft); border-left-color: var(--serious); } .ti-row.above .ti-l b, .ti-row.above .ti-ca { color: var(--serious); }
-.ti-row.about .ti-l { background: var(--warn-soft); border-left-color: var(--warn); } .ti-row.about .ti-l b, .ti-row.about .ti-ca { color: var(--warn); }
-.ti-row.below .ti-l { background: var(--neutral-soft); border-left-color: var(--neutral); } .ti-row.below .ti-l b, .ti-row.below .ti-ca { color: var(--neutral); }
-.ti-row.none .ti-l { background: var(--good-soft); border-left-color: var(--good); } .ti-row.none .ti-l b, .ti-row.none .ti-ca { color: var(--good); }
-.ti-g { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 8px; padding: 12px; align-content: start; }
-.ti-chip { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 8px; align-items: center; background: var(--surface-2); border: 1px solid var(--line); border-left: 3px solid var(--neutral); border-radius: 10px; padding: 5px 9px 5px 5px; color: var(--ink); text-decoration: none; }
-.ti-chip.R { border-left-color: var(--rep); } .ti-chip.D { border-left-color: var(--dem); }
-.ti-chip:hover, .ti-chip:focus-visible { border-color: var(--ink-2); }
 .ti-ph { width: 40px; height: 40px; display: block; }
 .ti-ph .hc-pv { position: relative; width: 40px; height: 40px; margin: 0; clip-path: none; border-radius: 8px; overflow: hidden; background: var(--person-soft); }
 .ti-ph .hc-pv::before { display: none; }
 .ti-ph .hc-pv img { position: absolute; inset: auto 0 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; filter: none; }
 .ti-ph .hc-pv span { position: absolute; inset: 0; display: grid; place-items: center; font-size: .85rem; font-weight: 700; color: var(--person); }
-.ti-cn { min-width: 0; }
-.ti-cn b { display: block; font-size: .86rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ti-cn small { font-size: .72rem; color: var(--muted); }
-.ti-ca { font-family: var(--font-mono); font-weight: 700; font-size: .8rem; }
+/* Career Totals (approved 2026-11-13, in place of the Tiers): dollar clubs, ranked */
+.cc-band { border: 1px solid var(--line); border-radius: 14px; margin: 0 0 14px; overflow: hidden; background: var(--surface); }
+.cc-band header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 12px 16px; border-bottom: 1px solid var(--line); border-left: 6px solid var(--line); }
+.cc-band header b { font-size: 1.15rem; }
+.cc-band header span { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-2); }
+.cc-band header em { font-style: normal; font-size: .8rem; color: var(--muted); margin-left: auto; }
+.cc-band.club header { background: var(--crit-soft); border-left-color: var(--crit); } .cc-band.club header b { color: var(--crit); font-size: 1.6rem; letter-spacing: .01em; text-transform: uppercase; font-weight: 900; }
+.cc-band.half header { background: var(--serious-soft); border-left-color: var(--serious); } .cc-band.half header b { color: var(--serious); }
+.cc-band.six header { background: var(--warn-soft); border-left-color: var(--warn); } .cc-band.six header b { color: var(--warn); }
+.cc-band.under header { background: var(--neutral-soft); border-left-color: var(--neutral); } .cc-band.under header b { color: var(--neutral); }
+.cc-band.none header { background: var(--good-soft); border-left-color: var(--good); } .cc-band.none header b { color: var(--good); }
+.cc-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; padding: 12px; align-content: start; }
+.cc-list.big { grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); }
+.cc-row { display: grid; grid-template-columns: auto 40px minmax(0, 1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px 6px 6px; color: inherit; text-decoration: none; }
+.cc-row.none { grid-template-columns: 40px minmax(0, 1fr) auto; }
+.cc-row:hover, .cc-row:focus-visible { border-color: var(--ink-2); }
+.cc-rk { min-width: 34px; height: 34px; padding: 0 4px; display: grid; place-items: center; border-radius: 8px; font-weight: 800; font-size: .9rem; background: var(--surface); color: var(--ink-2); }
+.cc-row.club .cc-rk { background: var(--crit); color: #1a1012; } .cc-row.half .cc-rk { background: var(--serious); color: #1a1210; }
+.cc-nm { min-width: 0; }
+.cc-nm b { display: block; font-size: .9rem; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cc-nm small { font-size: .72rem; color: var(--muted); }
+.cc-amt { font-family: var(--font-mono); font-weight: 800; font-size: .85rem; }
+.cc-list.big .cc-amt { font-size: 1.05rem; padding: 4px 12px; border-radius: 6px; transform: skewX(-12deg); }
+.cc-row.club .cc-amt { color: var(--crit); } .cc-list.big .cc-row.club .cc-amt { background: var(--crit); color: #1a1012; }
+.cc-row.half .cc-amt { color: var(--serious); } .cc-list.big .cc-row.half .cc-amt { background: var(--serious); color: #1a1210; }
+.cc-row.six .cc-amt { color: var(--warn); } .cc-row.under .cc-amt { color: var(--neutral); } .cc-row.none .cc-amt { color: var(--good); }
+/* (on a profile, over the party color its links take) */
+.ti-tag.club, body[data-party] #pane a.ti-tag.ti-tag.club { background: var(--crit-soft); color: var(--crit); }
+.ti-tag.half, body[data-party] #pane a.ti-tag.ti-tag.half { background: var(--serious-soft); color: var(--serious); }
+.ti-tag.six, body[data-party] #pane a.ti-tag.ti-tag.six { background: var(--warn-soft); color: var(--warn); }
+.ti-tag.under, body[data-party] #pane a.ti-tag.ti-tag.under { background: var(--neutral-soft); color: var(--neutral); }
+.ti-tag.none, body[data-party] #pane a.ti-tag.ti-tag.none { background: var(--good-soft); color: var(--good); }
+@media (max-width: 700px) { .cc-list, .cc-list.big { grid-template-columns: minmax(0, 1fr); } .cc-band header em { margin-left: 0; } .cc-band.club header b { font-size: 1.3rem; } }
 .ti-more { grid-column: 1 / -1; justify-self: start; background: none; border: 0; color: var(--accent); padding: 2px 4px; cursor: pointer; font: inherit; font-size: .84rem; }
 .ti-more:hover { text-decoration: underline; }
 .ti-tag { grid-column: 2; justify-self: start; font-size: .7rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; text-decoration: none; margin-top: -2px; }
-.ti-tag.far { background: var(--crit-soft); color: var(--crit); } .ti-tag.above { background: var(--serious-soft); color: var(--serious); } .ti-tag.about { background: var(--warn-soft); color: var(--warn); }
-.ti-tag.below { background: var(--neutral-soft); color: var(--neutral); } .ti-tag.none { background: var(--good-soft); color: var(--good); }
-@media (max-width: 700px) { .ti-row { grid-template-columns: 1fr; } .ti-l { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; border-left-width: 0; border-top: 4px solid; border-top-color: inherit; } .ti-row.far .ti-l { border-top-color: var(--crit); } .ti-row.above .ti-l { border-top-color: var(--serious); } .ti-row.about .ti-l { border-top-color: var(--warn); } .ti-row.below .ti-l { border-top-color: var(--neutral); } .ti-row.none .ti-l { border-top-color: var(--good); } }
