@@ -180,7 +180,7 @@ promise.
 **Formula** (as of November 13, 2026):
 
 ```text
-Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × (Compromises + Partially kept)) ÷ (Kept + First steps + Compromises + Partially kept + Broken + Allegedly broken)
+Keeps Their Word = 100 × (Kept + ½ × Partially kept) ÷ (Kept + Partially kept + Broken + Allegedly broken)
 ```
 
 **How a promise is checked** (`scripts/build-promises.mjs`, written to `public/promises.json`):
@@ -191,20 +191,23 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × (Compromises + Parti
 2. **Made checkable:** each promise is tied to the question its votes and bills decide.
 3. **What they did afterward:** their votes and (co)sponsorships on that question dated after the promise. Earlier ones
    are background. A bill failing doesn't count against them; only their own vote or (co)sponsorship does.
-4. **The verdict:**
-   - **Kept (1):** every action after the promise went its way.
-   - **First step (¾):** they voted for part of what they promised (for example $12 when they promised $15). A reviewer
-     records it.
-   - **Compromise (½):** they introduced or (co)sponsored a compromised version. A reviewer records it.
-   - **Partially kept (½):** a reviewed check where part of what they said holds up (for example, they launched the
-     program they claim credit for, but it erased a fraction of the amount they cite), or they changed position and
-     nothing they did since goes against what they say now.
-   - **Broken (0):** their own votes went against it: every action went against it, or a reversal (after acting its
-     way, at least 2 later bills went against it and none its way since).
-   - **Allegedly broken (0, counted the same as broken):** a promise to act with no bill introduced, (co)sponsored or
-     voted on within 6 months in office, counted from the promise, or from taking office for a promise made as a
-     candidate, while other members of their chamber acted on the question in that time (they had something to join).
-     The reason says whether they have said anything on it since.
+4. **The verdict,** one of four (approved November 13, 2026):
+   - **Kept (1):** they acted on it in office: they voted for, introduced or (co)sponsored a bill that does what they
+     promised, and nothing they did afterward went against it. *Example: they promised Medicare for All, and in office
+     they cosponsored the Medicare for All Act each time it was reintroduced.*
+   - **Partially kept (½):** they acted on part of it: they introduced, (co)sponsored or voted for a bill that goes only
+     partway (or a compromised version), or only part of what they said holds up. A reviewer records it. *Example: they
+     promised a $15 minimum wage, then cosponsored a bill raising it to $12.* (This replaces the earlier "first step",
+     ¾, and "compromise", ½.)
+   - **Allegedly broken (0, counted the same as broken):** they promised to act, then introduced, (co)sponsored or voted
+     on nothing about it for 6 months or more in office (counted from the promise, or from taking office for a promise
+     made as a candidate), while other members of their chamber were acting on it. "Alleged" because it rests on what's
+     missing from the record, not on a vote against it. A speech doesn't stop it, but the reason says whether they have
+     said anything on it since. *Example: they campaigned on stronger antitrust laws, but years into their term they
+     haven't introduced, cosponsored or voted on an antitrust bill, while colleagues acted on the issue dozens of times.*
+   - **Broken (0):** they voted against what they promised (every action after the promise went against it), or backed
+     it at first and then voted against it (at least 2 later bills against it and none its way since). *Example: they
+     promised to support capping insulin prices, then voted no when the cap came to the floor.*
    - **Unclear (not counted until reviewed):** actions both ways, often because a bill mixed the promise with other
      things; or no action from them when nobody else in their chamber acted on the question in that time either in the
      records read (there may have been no bill to join). A reviewer decides in `data/promise-reviews.json`, and the
@@ -215,15 +218,15 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × (Compromises + Parti
      they take office), or a promise to oppose or defend against something that hasn't come up.
 
 **Also counted:** reviewed checks and pledges (consistent is kept; partial, partly supported, and changed, a changed
-position, are partially kept, ½; contradiction, what they did went against what they said, is broken) and, for a president, PolitiFact's tracker: Kept 1, Compromise ½, Broken
-0; Stalled and In the Works wait.
+position, are partially kept, ½; contradiction, what they did went against what they said, is broken) and, for a
+president, PolitiFact's tracker: Kept 1, Compromise ½ (as partially kept), Broken 0; Stalled and In the Works wait.
 
 **Left out:** vague goals, unclear promises until reviewed, no action yet, not tested yet, and statements made in debate
 the day of the vote or the day before. Those are shown, not scored.
 
 **Minimum:** 3 decided promises.
 
-**Example:** 4 kept, 1 first step, 1 compromise, 1 broken. `100 × (4 + 0.75 + 0.5) ÷ 7 = 75`, a **C**.
+**Example:** 4 kept, 2 partially kept, 1 broken. `100 × (4 + 0.5 + 0.5) ÷ 7 = 71`, a **C**.
 
 ---
 

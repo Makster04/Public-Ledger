@@ -8,7 +8,7 @@ const st=(...a)=>a.map(assessment=>({assessment}));
 test('letter grades use the usual 90/80/70/60 cut-offs',()=>{
   assert.deepEqual([100,90,89.9,80,79,70,69,60,59,0].map(letter),['A','A','B','B','C','C','D','D','F','F']);
 });
-test('promises: kept 1, partly supported or changed position (partially kept) 1/2, a compromise 1/2, contradicted 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
+test('promises: kept 1, partly supported, a compromise or a changed position (partially kept) 1/2, contradicted 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
   assert.equal(promiseScore(st('consistent','consistent','contradiction')).pct,67);
   assert.equal(promiseScore(st('consistent','partial','changed','outcome','unclear')).pct,67,'(1 + 1/2 + 1/2) / 3');
   assert.equal(promiseScore(st('consistent','compromise','contradiction')).pct,50,'(1 + 1/2 + 0) / 3');
@@ -202,8 +202,9 @@ test('Ethics grade: 100 − Legal Trouble − a tenth of each trading index; an 
   assert.equal(s.legal.index,35);assert.equal(s.dodger.index,40);assert.equal(s.insider.index,0);assert.equal(s.pct,Math.round(100-35-0-4));
   assert.equal(ethicsScore(legal,{rows,covered:false},{asOfYear:2026}).pct,65,'not covered: no trading deductions');
 });
-test('promises: a president\'s PolitiFact tracker tallies count kept 1, compromise 1/2, broken 0; stalled and in the works wait',()=>{
+test('promises: a president\'s PolitiFact tracker tallies count kept 1, compromise 1/2 (as partially kept), broken 0; stalled and in the works wait',()=>{
   const p=promiseScore([],[{counts:{kept:3,compromise:2,broken:1,stalled:4,inTheWorks:5}}]);
+  assert.equal(p.partly,2,'PolitiFact\'s Compromise counts as partially kept');
   assert.equal(p.clear,6);assert.equal(p.pct,Math.round((3+1)/6*100));assert.equal(p.notCounted,9);assert.equal(p.total,15);
   assert.equal(promiseScore(st('consistent'),[{counts:{kept:1,broken:1}}]).clear,3,'tracker tallies add to any checked statements');
   for(const s of people)for(const t of s.promiseTrackers||[]){
