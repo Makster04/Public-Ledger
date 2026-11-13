@@ -8,7 +8,8 @@
 // A check counts when it's a direct or in-kind contribution (24K, 24Z; memo lines left out, refunds subtracted) from a
 // committee public/pac-types.js calls a corporate PAC (sponsored by a corporation, or a corporation without capital
 // stock), the same rule as the site's "Corporate PAC" label. Members are matched by their FEC candidate ID
-// (public/senate.json and public/house.json fecCand). A tracker's checks are those from its PACs, matched as its
+// (public/senate.json and public/house.json fecCand) and their other candidate IDs (linkedCandidates: a House member now
+// in the Senate, or running for it in 2026, files under a new ID). A tracker's checks are those from its PACs, matched as its
 // Tracker matches them (public/trackers.js isTrackerPac: by committee ID or name).
 // Some groups also forward their donors' gifts to campaigns (earmarked, "routed"): AIPAC, Club for Growth, EMILY's List,
 // J Street, the Senate Conservatives Fund, and every other group the reviewed profiles' search found doing it
@@ -240,13 +241,20 @@ export function pastCandidates(rows,byCand,from=0){
 // The Tiers page's six years: the last three cycles' PAC checks from each tracker, read the way this cycle's are, with
 // each member's other candidate IDs. Each cycle's files are downloaded into dir (this cycle's are already there).
 export const HISTORY_CYCLES=3;
-export async function trackerHistory({cycle,dir,refresh=false,byCand,through=''}){
-  const cycles=Array.from({length:HISTORY_CYCLES},(_,i)=>cycle-2*(HISTORY_CYCLES-1-i)),all=[];let last=through;
-  // Each member's earlier candidate IDs, from every cycle's candidate file; their checks count too.
-  const rows=[];
+export const historyCycles=cycle=>Array.from({length:HISTORY_CYCLES},(_,i)=>cycle-2*(HISTORY_CYCLES-1-i));
+// Each member's other candidate IDs, from the candidate files of the six years' cycles: {linked: {member id: [IDs]},
+// both: byCand with those IDs added}. Used for this cycle's totals (a House member running for the Senate in 2026
+// files under a new ID) and the six years'.
+export async function linkedCandidates({cycle,dir,refresh=false,byCand}){
+  const cycles=historyCycles(cycle),rows=[];
   for(const cy of cycles){const cn=await download(`cn${String(cy).slice(2)}.zip`,cy,dir,refresh);for await(const line of lines(cn.file,'cn.txt')){const r=candidateRow(line);if(r)rows.push(r);}}
   const linked=pastCandidates(rows,byCand,cycles[0]),both=new Map(byCand);
   for(const [id,ids] of Object.entries(linked))for(const c of ids)both.set(c,id);
+  return {linked,both};
+}
+export async function trackerHistory({cycle,dir,refresh=false,byCand,through='',links=null}){
+  const cycles=historyCycles(cycle),all=[];let last=through;
+  const {linked,both}=links||await linkedCandidates({cycle,dir,refresh,byCand});
   for(const cy of cycles){
     const yy=String(cy).slice(2),cm=await download(`cm${yy}.zip`,cy,dir,refresh),pas2=await download(`pas2${yy}.zip`,cy,dir,refresh),names=new Map(),keysOf=new Map();
     for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(k)names.set(k[0],k[2]);}
@@ -268,7 +276,11 @@ async function main(argv){
   const cycle=Number(argv[argv.indexOf('--cycle')+1])||Number(config.cycle)||2026,yy=String(cycle).slice(2),refresh=argv.includes('--refresh');
   const dir=process.env.FEC_BULK_DIR||path.join(ROOT,'.local','fec-bulk');fs.mkdirSync(dir,{recursive:true});
   const read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,'public',f),'utf8'));
-  const byCand=membersByCandidate(read('senate.json'),read('house.json'));
+  const members=membersByCandidate(read('senate.json'),read('house.json'));
+  // Each member's other candidate IDs count this cycle too (a House member running for the Senate in 2026 files under a
+  // new ID): byCand has them; the six years use the same links.
+  const links=await linkedCandidates({cycle,dir,refresh,byCand:members}),byCand=links.both;
+  if(Object.keys(links.linked).length)console.log(`Other candidate IDs linked for ${Object.keys(links.linked).length} members (a House member now in the Senate, or running for it).`);
   const cm=await download(`cm${yy}.zip`,cycle,dir,refresh),pas2=await download(`pas2${yy}.zip`,cycle,dir,refresh);
   const kinds=new Map(),names=new Map(),cmteCand=new Map();
   for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;kinds.set(k[0],k[1]);names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
@@ -302,7 +314,7 @@ async function main(argv){
   const aipacIn=readOk.has('aipac')||'aipac' in kept;
   if(process.env.FEC_API_KEY)console.log(`Forwarded gifts: ${readOk.size} of ${keys.length} groups read${Object.keys(kept).length?`, ${Object.keys(kept).length} kept from the last file`:''}; ${Object.keys(earmarks).length} members got some.`);
   const trackers=trackerTotals(tracked,byCand,routed);
-  const history=await trackerHistory({cycle,dir,refresh,byCand,through});
+  const history=await trackerHistory({cycle,dir,refresh,byCand:members,through,links});
   fs.writeFileSync(path.join(ROOT,'public','tracker-history.json'),JSON.stringify(history));
   console.log(`Wrote public/tracker-history.json: ${history.cycles[0]-1}–${cycle}, through ${history.through}.`);
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
