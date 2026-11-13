@@ -78,6 +78,9 @@ test('the anti-corruption bills count in Your match under their issue, through t
   const ev=issueEvidence(data),o=ev.get('ossoff');
   assert.equal(o.length,1);assert.equal(o[0].issue,'ethics');assert.equal(o[0].entry.type,'sponsored');assert.equal(o[0].entry.side,'A');
   assert.match(o[0].entry.src.u,/congress\.gov\/bill\/119th-congress\/senate-bill\/1879$/);assert.match(o[0].entry.title,/^S\. 1879: /);
+  // A bill they introduced counts even when the bill's own sponsor list doesn't have them yet: from their own list.
+  const mine=issueEvidence({...data,members:data.members.map(m=>m.id==='ossoff'?{...m,bills:[{congress:119,num:'S. 1498',date:'2025-04-30'}]}:m)}).get('ossoff');
+  assert.deepEqual(mine.map(x=>[x.entry.bill,x.entry.type]).sort(),[['119-s-1498','sponsored'],['119-s-1879','sponsored']]);
   // In Your match it is an action, so it is used instead of the stated position on file.
   const p=D.members.concat(D.cands).find(x=>x.id==='ossoff'),evidence={...p.evidence,ethics:[...(p.evidence.ethics||[]),o[0].entry]};
   const r=matchScore([{id:'ethics',side:'A',w:2}],evidence).rows[0];

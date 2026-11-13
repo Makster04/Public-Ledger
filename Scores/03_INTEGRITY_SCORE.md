@@ -129,7 +129,7 @@ Every monetary share is divided by total campaign receipts for the same reportin
 
 **Earmark penalty E:** `min(30, eligible earmarked dollars / receipts × 100 × 4)`. Bundling groups use the same rate; ActBlue and WinRed are excluded. Duplicate receipts and direct-PAC/routed-gift duplication must be removed. Current selected-group conduit collection is partial and cannot establish complete earmark coverage or a zero total.
 
-**Pledge points:** corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge but qualifying bill cosponsorship +1; neither or awaiting review 0. A pending pledge cannot use the no-pledge fallback. There are no no-corporate-PAC or no-stocks abstention bonuses.
+**Pledge points:** corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge but a qualifying bill they sponsored or cosponsored +1; neither or awaiting review 0. A pending pledge cannot use the no-pledge fallback. There are no no-corporate-PAC or no-stocks abstention bonuses.
 
 ## Legal Trouble Index 🚨 (deducted at full strength)
 

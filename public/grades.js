@@ -29,6 +29,14 @@ export function billKey(congress,measure){
   if(!m||!BILL_TYPES.has(m[1])||!(+congress>0))return null;
   return `${+congress}-${m[1].toLowerCase()}-${+m[2]}`;
 }
+// The bill a person sponsored (introduced), from their own list ("bills": [{congress, num}]), when it is one of keys
+// (a bill on file and its versions in other Congresses). A bill's own sponsor and cosponsor list (npm run
+// bills:cosponsors) may not have them yet, so everything that reads that list checks this too: a bill they introduced
+// always counts wherever a bill they cosponsored does.
+export function ownSponsorship(person,keys){
+  const ks=keys instanceof Set?keys:new Set(keys);
+  return (person?.bills||[]).find(b=>ks.has(billKey(b.congress,b.num)))||null;
+}
 export function billKeyFromText(text){
   const m=String(text||'').match(/^((?:H|S)\.?\s?(?:J\.?\s?Res|Con\.?\s?Res|Res|R|Amdt)?\.?)\s*(\d+)\s*\((\d+)(?:st|nd|rd|th) Congress\)/i);
   return m?billKey(m[3],m[1]+m[2]):null;
