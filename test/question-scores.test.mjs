@@ -1,7 +1,7 @@
 // Stances on the alignment questions and what's built from them (public/question-scores.js).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {stanceNet,creditItems,recordPoints,applyStatements,ratingPoints,ratingScore,ratingItems,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
+import {stanceNet,familyOf,recordRows,creditItems,recordPoints,applyStatements,ratingPoints,ratingScore,ratingItems,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
 import QFILE from '../public/questions.json' with {type:'json'};
 import GR from '../public/group-ratings.json' with {type:'json'};
 
@@ -70,7 +70,10 @@ test('carried-over evidence: statements, state votes and official acts; congress
   const p=personStances({abortion:[4,0,'2022-03-01','2022-03-01','','']},{abortion:[{type:'stated',side:'A',date:'2020-01-01',title:'Speech'}]});
   assert.equal(p.abortion.statements[0].status,'cancelled');assert.deepEqual([p.abortion.a,p.abortion.b],[4,0]);assert.equal(p.abortion.s,1);
   const q=personStances(null,{guns:[{type:'stated',side:'A',date:'2020-01-01'},{type:'state_vote',side:'A',ref:'s1',date:'2019-01-01'}]});
-  assert.equal(q['gun-purchase-limits'].a,4);assert.equal(q['gun-purchase-limits'].s,1);
+  assert.equal(q['gun-purchase-limits'].a,2,'a statement beside a state vote counts 1');assert.equal(q['gun-purchase-limits'].statementPoints,1);
+  // with nothing done on the question, a statement counts 3 and the stance reads as from statements only
+  const r=personStances(null,{guns:[{type:'stated',side:'A',date:'2020-01-01'}]});
+  assert.deepEqual([r['gun-purchase-limits'].a,r['gun-purchase-limits'].s,r['gun-purchase-limits'].statementsOnly],[3,1,true]);
 });
 
 test('group ratings: a topic group counts on its question, toward its side above 50 and the other side below, up to 3',()=>{
@@ -104,4 +107,22 @@ test('the net points beside a stance: + toward the liberal side, − toward the 
   assert.deepEqual(stanceNet({a:95.5,b:0},ab),{lead:0,net:96,sign:'−'});
   assert.deepEqual(stanceNet({a:6,b:5},yes),{lead:0,net:1,sign:'+'});assert.deepEqual(stanceNet({a:2,b:12},yes),{lead:1,net:10,sign:'−'});
   assert.deepEqual(stanceNet({a:16,b:0},isr),{lead:0,net:16,sign:''});assert.equal(stanceNet({a:3,b:3},yes).sign,'','even');
+});
+
+test('repeats count once: a reintroduced bill (co)sponsored again, and votes on one bill family in one Congress',()=>{
+  assert.equal(familyOf('117-hr-5','Equality Act of 2021'),familyOf('118-hr-15','Equality Act'));assert.equal(familyOf('118-s-5','Equality Act'),familyOf('118-hr-15','Equality Act'));
+  assert.notEqual(familyOf('118-hr-15','Equality Act'),familyOf('118-hr-16','Fairness for All Act'));
+  assert.equal(familyOf('113-hamdt-748','Amendment to cut funds'),'113-hamdt-748','an amendment is its own family');assert.equal(familyOf('117-hr-9',''),'117-hr-9');
+  const titles={'116-hr-5':'Equality Act','117-hr-5':'Equality Act of 2021','118-hr-15':'Equality Act','117-s-393':'Equality Act','117-hjres-1':'Some resolution'};
+  const family=id=>familyOf(id,titles[id]);
+  const items=[{ref:'116-hr-5',kind:'c',date:'2019-03-01',side:0},{ref:'117-hr-5',kind:'c',date:'2021-02-01',side:0},{ref:'118-hr-15',kind:'s',date:'2023-06-01',side:0},
+    {ref:'117-hr-5#H117-39',kind:'y',date:'2021-02-25',side:0},{ref:'117-s-393#S117-90',kind:'y',date:'2021-09-01',side:0},{ref:'118-hr-15#H118-5',kind:'y',date:'2023-07-01',side:0},
+    {ref:'117-hjres-1#H117-2',kind:'n',date:'2021-03-01',side:1}];
+  const c=creditItems(items,{family});
+  assert.deepEqual(c.map(x=>x.ref).sort(),['117-hjres-1#H117-2','117-s-393#S117-90','118-hr-15'].sort(),
+    'the (co)sponsorships are one, at the sponsorship; the 117th Congress votes on the House and Senate bills are one, the later; the 118th vote is on the sponsored bill');
+  assert.equal(creditItems(items).length,5,'without families: one per bill, as before');
+  const rows=recordRows(items.map(x=>[x.ref,x.kind,x.date,x.side]),Object.fromEntries(Object.entries(titles).map(([k,t])=>[k,[0,'why',t]])));
+  const why=Object.fromEntries(rows.map(r=>[r.ref,r.repeat]));
+  assert.equal(why['116-hr-5'],'reintroduced');assert.equal(why['117-hr-5#H117-39'],'congress');assert.equal(why['118-hr-15#H118-5'],'bill');assert.equal(why['118-hr-15'],null);
 });

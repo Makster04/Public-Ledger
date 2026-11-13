@@ -27,14 +27,14 @@ test('the tags are checked: a known person and question, a side, a quote, a date
   assert.equal(bad.problems.length,8,"an unknown person and question, a bad side, quote, date and link, and two more from the 2020 campaign");
 });
 
-test('a tagged statement counts 3 toward its side, falls under the contradiction rule, and counts once beside a carried-over copy',()=>{
+test('a tagged statement counts toward its side (1 beside a record), falls under the contradiction rule, and counts once beside a carried-over copy',()=>{
   const said={'minimum-wage':[[0,'2026-10-01','I will raise the minimum wage.','https://w/2','Campaign website, 2026']],abortion:[[1,'2020-10-01','I support the right to choose.','https://w/1','Campaign website, 2020']]};
   const t=taggedStatements(said);assert.equal(t.abortion[0].src.t,'The saved campaign page');assert.equal(t.abortion[0].why,'"I support the right to choose."');
   // a 2022 vote toward Pro-life after the 2020 statement cancels it; the carried-over statement with the same link counts once
   const p=personStances({abortion:[0,1,'2022-03-01','2022-03-01','',''],'minimum-wage':[1,0,'2019-01-01','2019-01-01','','']},
     {abortion:[{type:'stated',side:'A',date:'2020-10-01',title:'Same page',src:{u:'https://w/1'}}]},{said});
   assert.equal(p.abortion.statements.length,1);assert.equal(p.abortion.statements[0].status,'cancelled');assert.deepEqual([p.abortion.a,p.abortion.b],[0,1]);
-  assert.equal(p['minimum-wage'].statements[0].status,'counted');assert.equal(p['minimum-wage'].a,4);
+  assert.equal(p['minimum-wage'].statements[0].status,'counted');assert.equal(p['minimum-wage'].a,2,'1 point beside a vote');
 });
 
 test('the coded statements on file pass the checks',()=>{

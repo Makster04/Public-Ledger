@@ -20,7 +20,8 @@
 // people: {bioguide: {question: [[bill, kind, date, side]]}}}, and prints how many sitting members each question reaches.
 // For the site, for everyone it shows (both chambers and the reviewed profiles), it also writes:
 //   public/question-stances.json   each person's points on each question, one credit per bill
-//                                  (public/question-scores.js recordPoints): [a, b, firstA, lastA, firstB, lastB]
+//                                  and repeats once (public/question-scores.js recordPoints): [a, b, firstA, lastA,
+//                                  firstB, lastB]
 //   public/question-evidence/<bioguide>.json   their items on each question, [[bill, kind, date, side]]
 //   public/question-meta.json      each coded bill's side, reason and title, by question
 //   npm run bills:record
@@ -29,7 +30,7 @@ import path from 'node:path';
 import readline from 'node:readline';
 import {fileURLToPath} from 'node:url';
 import {voteviewFiles} from '../src/voteview.mjs';
-import {recordPoints,QFORMULA} from '../public/question-scores.js';
+import {recordPoints,familyOf,QFORMULA} from '../public/question-scores.js';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 // The votes that decide a bill, by Voteview's vote_question.
@@ -136,14 +137,15 @@ function writePublic({built,questions,people,read}){
   const stances={};let files=0;
   for(const bg of [...shown].sort()){const pq=people[bg];if(!pq)continue;const st={},ev={};
     for(const [q,items] of Object.entries(pq)){
-      const p=recordPoints(items.map(([ref,kind,date,side])=>({ref,kind,date,side})));
+      // (repeats count once: a bill's family from the same title the page shows, public/question-meta.json)
+      const p=recordPoints(items.map(([ref,kind,date,side])=>({ref,kind,date,side})),{family:id=>familyOf(id,questions[q]?.bills?.[id]?.title)});
       // (the vote dates only for the reviewed profiles, whose statements the contradiction rule checks)
       if(p.a||p.b)st[q]=profiled.has(bg)?[p.a,p.b,p.firstA,p.lastA,p.firstB,p.lastB]:[p.a,p.b];
       ev[q]=items.slice().sort((x,y)=>String(y[2]).localeCompare(String(x[2])));
     }
     stances[bg]=st;fs.writeFileSync(path.join(dir,`${bg}.json`),JSON.stringify(ev));files++;}
   const coded=Object.fromEntries(Object.keys(questions).map(q=>[q,Object.keys(questions[q].bills).length]).filter(([,n])=>n));
-  fs.writeFileSync(path.join(ROOT,'public','question-stances.json'),JSON.stringify({about:'Each person\'s points on each alignment question from the bills, amendments and roll calls coded to it (data/question-bills.json), one credit per bill: {bioguide: {question: [points for sides[0], points for sides[1], and, for the reviewed profiles, the first and latest vote toward sides[0] and toward sides[1]]}}. coded: how many bills, amendments and roll calls are coded to each question. Written by scripts/build-question-record.mjs; the stances, leans and matches are worked out in public/question-scores.js.',formula:QFORMULA,built,coded,people:stances}));
+  fs.writeFileSync(path.join(ROOT,'public','question-stances.json'),JSON.stringify({about:'Each person\'s points on each alignment question from the bills, amendments and roll calls coded to it (data/question-bills.json), one credit per bill and repeats once (a reintroduced bill\'s (co)sponsorship, votes on one bill in one Congress): {bioguide: {question: [points for sides[0], points for sides[1], and, for the reviewed profiles, the first and latest vote toward sides[0] and toward sides[1]]}}. coded: how many bills, amendments and roll calls are coded to each question. Written by scripts/build-question-record.mjs; the stances, leans and matches are worked out in public/question-scores.js.',formula:QFORMULA,built,coded,people:stances}));
   const meta={};for(const [q,{bills}] of Object.entries(questions))meta[q]=Object.fromEntries(Object.entries(bills).map(([id,b])=>[id,[b.side,b.why,b.title]]));
   fs.writeFileSync(path.join(ROOT,'public','question-meta.json'),JSON.stringify({about:'Each coded bill, amendment or roll call on each alignment question: [side, why, title]. Written by scripts/build-question-record.mjs.',built,questions:meta}));
   console.log(`Site files: stances for ${Object.keys(stances).length} people, ${files} evidence files, ${Object.keys(coded).length} coded questions.`);
