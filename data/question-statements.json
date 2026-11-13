@@ -1,0 +1,200 @@
+{
+ "about": "What each reviewed profile said, tagged by hand to the alignment questions (public/questions.json): {person id: {question id: [[side index, \"the quote\", \"YYYY-MM-DD\", \"link\", \"where it was said\"]]}}. A tag is made only when the words clearly take one side; a statement that only explains a vote isn't a separate position; at most one statement per question per campaign. Checked and copied to public/question-statements.json by npm run statements:record (scripts/question-statements.mjs).",
+ "booker": {
+  "abortion": [
+   [1, "We must protect the constitutional right to abortion and ensure everyone has real access to reproductive health care.","2020-01-13","https://web.archive.org/web/20200113193030/https://corybooker.com/issues/reproductive-rights/","Campaign website, 2020: Reproductive Rights — Cory 2020"]
+  ],
+  "affordable-care-act": [
+   [0, "As president, Cory will fight for access to quality, affordable and universal health care, end attacks on the Affordable Care Act, and act to bring down prescription drug costs:","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/health-care/","Campaign website, 2020: Health Care — Cory 2020"]
+  ],
+  "animal-testing": [
+   [1, "- Immediately end all animal testing for cosmetics and develop scientifically reliable alternative methods in order to end all animal testing by 2025","2020-01-13","https://web.archive.org/web/20200113193026/https://corybooker.com/issues/animal-welfare/","Campaign website, 2020: Animal Welfare — Cory 2020"]
+  ],
+  "assault-weapons": [
+   [0, "- Ban assault weapons, high-capacity magazines, and bump stocks.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/gun-violence/","Campaign website, 2020: Gun Violence — Cory 2020"]
+  ],
+  "automatic-registration": [
+   [0, "- Ensure universal automatic voter registration and vote by mail.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/democracy-and-voting-rights/","Campaign website, 2020: Democracy and Voting Rights — Cory 2020"]
+  ],
+  "contraception": [
+   [0, "- Guarantee access to employer-provided contraceptive care.","2020-01-13","https://web.archive.org/web/20200113193030/https://corybooker.com/issues/reproductive-rights/","Campaign website, 2020: Reproductive Rights — Cory 2020"]
+  ],
+  "dreamers-citizenship": [
+   [0, "- Fight for a pathway to citizenship for the millions of undocumented immigrants living in the United States.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/","Campaign website, 2020: Immigration — Cory 2020"]
+  ],
+  "drug-prices": [
+   [0, "- Lower prescription drug costs by allowing Medicare to negotiate lower prices and import drugs from Canada and other countries.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/health-care/","Campaign website, 2020: Health Care — Cory 2020"]
+  ],
+  "election-day-holiday": [
+   [0, "- Make Election Day a national holiday.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/democracy-and-voting-rights/","Campaign website, 2020: Democracy and Voting Rights — Cory 2020"]
+  ],
+  "equal-pay": [
+   [0, "- Pass the Paycheck Fairness Act and hold businesses and employers responsible for pay discrimination.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/","Campaign website, 2020: Economic Security and Opportunity — Cory 2020"]
+  ],
+  "felon-voting": [
+   [0, "- Reinstate the right to vote in federal elections for formerly incarcerated individuals.","2020-01-13","https://web.archive.org/web/20200113193029/https://corybooker.com/issues/criminal-justice/","Campaign website, 2020: Criminal Justice — Cory 2020"]
+  ],
+  "gender-identity-protections": [
+   [0, "- Champion the Equality Act, which ensures that federal civil rights laws prohibit discrimination based on sexual orientation and gender identity.","2020-01-13","https://web.archive.org/web/20200113193026/https://corybooker.com/issues/equality-for-lgbtq-people/","Campaign website, 2020: Equality for LGBTQ People — Cory 2020"]
+  ],
+  "gun-purchase-limits": [
+   [0, "- Pass universal background checks, ban assault weapons, and close the loopholes that allow people who should never have a gun to get one.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/gun-violence/","Campaign website, 2020: Gun Violence — Cory 2020"]
+  ],
+  "mandatory-minimums": [
+   [1, "- End harsh mandatory minimums for nonviolent drug offenses.","2020-01-13","https://web.archive.org/web/20200113193029/https://corybooker.com/issues/criminal-justice/","Campaign website, 2020: Criminal Justice — Cory 2020"]
+  ],
+  "minimum-wage": [
+   [0, "- Raise the minimum wage to $15/hour.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/","Campaign website, 2020: Economic Security and Opportunity — Cory 2020"]
+  ],
+  "paid-leave": [
+   [0, "- Implement universal paid family and medical leave.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/health-care/","Campaign website, 2020: Health Care — Cory 2020"]
+  ],
+  "private-prisons": [
+   [1, "End family separation and ensure that our immigration system is humane, fair, and respects immigrants’ rights by ending private detention facilities","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/","Campaign website, 2020: Immigration — Cory 2020"]
+  ],
+  "release-nonviolent": [
+   [0, "- Extend clemency to individuals serving excessive sentences for nonviolent drug offenses.","2020-01-13","https://web.archive.org/web/20200113193029/https://corybooker.com/issues/criminal-justice/","Campaign website, 2020: Criminal Justice — Cory 2020"]
+  ],
+  "union-rights": [
+   [0, "They deserve a real voice, fair pay, and the dignity of a union.","2026-09-23","https://bsky.app/profile/booker.senate.gov/post/3mw727rclvc2v","Bluesky post, 2026 campaign"],
+   [0, "- Make it easier for workers to join a union and strengthen the rights of workers.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/","Campaign website, 2020: Economic Security and Opportunity — Cory 2020"]
+  ],
+  "work-amnesty": [
+   [0, "- Fight for a pathway to citizenship for the millions of undocumented immigrants living in the United States.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/","Campaign website, 2020: Immigration — Cory 2020"]
+  ]
+ },
+ "collins": {
+  "abortion": [
+   [1, "Senator Collins has taken over 50 votes throughout her career in support of women's reproductive rights.","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"]
+  ],
+  "climate-regulations": [
+   [0, "In August 2018, Senator Collins was the first Republican to come out in opposition to the Trump Administration’s proposed rollback of EPA’s Clean Power Plan.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
+  ],
+  "drug-prices": [
+   [0, "Senator Collins has supported lifting the prohibition on the Secretary of Health and Human Services' ability to negotiate drug prices in the past","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"]
+  ],
+  "fuel-efficiency": [
+   [0, "Senator Collins was an original cosponsor of Sen. Feinstein’s Ten-in-Ten Fuel Economy Act in 2007, which was incorporated into the Energy Independence and Security Act of 2007.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
+  ],
+  "paris-agreement": [
+   [1, "In 2017, Senator Collins joined Sen. Cardin in sending a letter to then-Secretary Tillerson encouraging him to keep the U.S. party to the Paris Agreement.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
+  ],
+  "pre-existing-conditions": [
+   [1, "Collins’ plan would reduce health care premiums for Mainers by 40% while continuing to protect those with preexisting conditions.","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"]
+  ],
+  "public-pensions": [
+   [0, "As the author of the Social Security Fairness Act which was signed into law in 2025, Susan is the leader in the Senate for Social Security.","2026-10-25","https://web.archive.org/web/20261025202710/https://susancollins.com/track-record/","Campaign website, 2026: Track Record - Susan Collins for Maine"]
+  ],
+  "wind-subsidies": [
+   [0, "Senator Collins is the lead Republican cosponsor of Senator Carper’s Incentivizing Offshore Wind Power Act , which would create an Investment Tax Credit for the first 3,000 megawatts of offshore wind facilities placed into service.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
+  ]
+ },
+ "ossoff": {
+  "abolish-ice": [
+   [1, "We must reform the horrifically dysfunctional Department of Homeland Security and U.S. Immigration and Customs Enforcement so that these agencies carry out their duties with competence and humanity.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "abortion": [
+   [1, "Jon will defend women’s access to contraception and a woman’s right to choose and fight any legislation or executive action that would allow insurance companies to discriminate against women.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "affordable-care-act": [
+   [0, "For those with private insurance, I’ll vote to strengthen the Affordable Care Act’s protections for Americans with pre-existing conditions, women, and young people.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "assault-weapons": [
+   [0, "I support a ban on the sale of semi-automatic rifles (“assault weapons”) and high-capacity magazines to the general public.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "block-mega-mergers": [
+   [0, "I’ll support strong antitrust enforcement and I’ll attack anti-competitive special interest subsidies secured by dominant firms with lobbying power at the expense of smaller competitors and startups.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "border-security": [
+   [0, "Our country, like any country, must know and control who crosses our borders, and strong border security doesn’t require us to sacrifice our moral principles, our commitment to human rights, or our American identity as a haven for people fleeing persecution and striving for opportunity.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "climate-regulations": [
+   [0, "I’ll work to reverse the Trump Administration’s rollbacks of clean air, clean water, and fuel economy standards — and then to strengthen them.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "contraception": [
+   [0, "Jon will defend women’s access to contraception and a woman’s right to choose and fight any legislation or executive action that would allow insurance companies to discriminate against women.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "deport-serious-crime": [
+   [0, "The President should pause these operations, de-escalate the situation, and reset the federal government’s focus on truly criminal illegal immigrants.","2026-07-14","https://web.archive.org/web/20260714201405/https://electjon.com/ossoff-republican-senate-candidates-must-fight-for-civil-liberties-stand-with-american-people/","Campaign website, 2026: Ossoff: Republican Senate Candidates Must Fight for Civil Liberties, Stand with American People - Jon Ossoff for U.S. Senate"]
+  ],
+  "disposables-ban": [
+   [0, "I’ll push for fast advances in sustainability — including a rapidly phased-in ban on single-use plastics, strongly enforced treaties to protect oceans and fisheries, aggressive protection of endangered species and habitats, increased fines for spills and contamination, and stricter controls on toxic chemicals.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "drug-prices": [
+   [0, "He has consistently delivered for Georgia—fighting to cap insulin costs for seniors at $35 a month, lower housing costs, upgrade health care for pregnant women, babies, and children, and crack down on the online exploitation of children.","2026-11-03","https://web.archive.org/web/20261103210458/https://electjon.com/","Campaign website, 2026: Jon Ossoff – Official Campaign Website"],
+   [0, "I’ll vote to crack down on price gouging by drug companies and make more generic medicine available.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "encryption-backdoor": [
+   [1, "Jon will oppose legislation or executive action that undermines Americans’ access to private communications and strong encryption.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "enhanced-interrogation": [
+   [1, "Jon will vigorously oppose the torture of detainees and prisoners of war in US custody.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "equal-pay": [
+   [0, "Jon will defend equal pay for equal work and fight any effort to allow wage discrimination against women or minorities.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "fuel-efficiency": [
+   [0, "I’ll work to reverse the Trump Administration’s rollbacks of clean air, clean water, and fuel economy standards — and then to strengthen them.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "gender-identity-protections": [
+   [0, "I will support the Equality Act and vote to expand Federal anti-discrimination statutes to prohibit discrimination on the basis of gender or sexual orientation.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "gun-purchase-limits": [
+   [0, "I support universal criminal history checks for gun purchases, red flag laws to protect family members and domestic partners concerned about the mental health of their loved ones, and closing the gun show loophole.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "mandatory-minimums": [
+   [1, "Mandatory minimum sentencing, the drug war, and the misguided use of criminal enforcement as a response to addiction, mental illness, and poverty have contributed to mass incarceration that is a blight on our country.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "marijuana": [
+   [0, "legalize cannabis","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "medicaid-funding": [
+   [0, "Medicaid expansion and auto-enrollment of the uninsured will ensure all Americans are covered regardless of wealth.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "military-equipment-police": [
+   [1, "I will work to reverse the militarization of local police forces","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "minimum-wage": [
+   [0, "He will support an increase in the federal minimum wage indexed to cost of living and implemented at a pace that allows employers to adapt their business plans.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "paris-agreement": [
+   [1, "I’ll push for America to immediately re-enter the Paris Climate Accords — and then to lead negotiation of an even more ambitious climate treaty.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "planned-parenthood": [
+   [0, "Jon will defend Planned Parenthood in Congress.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "pre-existing-conditions": [
+   [1, "For those with private insurance, I’ll vote to strengthen the Affordable Care Act’s protections for Americans with pre-existing conditions, women, and young people.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "private-prisons": [
+   [1, "ban private prisons","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "release-nonviolent": [
+   [0, "end incarceration for nonviolent drug offenses","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "same-sex-adoption": [
+   [0, "I will defend marriage equality and the right of gay couples to adopt children.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "same-sex-marriage": [
+   [0, "I will defend marriage equality and the right of gay couples to adopt children.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "single-payer": [
+   [1, "Ossoff outlines his support for a public option that is optional for all and instantly available to the uninsured, while vowing to protect private and employer-based insurance for those who prefer it","2020-10-30","https://web.archive.org/web/20201030222509/https://electjon.com/new-ossoff-releases-health-care-plan-vows-to-fight-for-affordable-accessible-health-care-for-all-georgians/","Campaign website, 2020: NEW: Ossoff Releases Health Care Plan, Vows to Fight for Affordable, Accessible Health Care for All Georgians - Jon Ossoff for U.S. Senate"]
+  ],
+  "stay-in-nato": [
+   [0, "Jon will investigate Russian interference in American politics and defend the NATO alliance, which remains essential to our national security.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "support-israel": [
+   [0, "Jon is committed to Israel’s security as a homeland for the Jewish people and to strengthening the historic, unbreakable bond between the United States and Israel.","2019-08-21","https://web.archive.org/web/20190821195320/https://electjon.com/priorities/","Campaign website, 2020: Priorities - Jon Ossoff for Congress"]
+  ],
+  "transit-spending": [
+   [0, "I’ll push for an unprecedented American infrastructure program that includes big, overdue investments in transportation and transit, clean energy, energy efficiency, public health, communications, research and development, emergency response, and environmental cleanup.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ],
+  "war-with-iran": [
+   [1, "Atlanta, Ga. — New reporting in the AJC highlights Senator Jon Ossoff’s challenge for GOP U.S. Senate candidate Mike Collins to stand up to Donald Trump and demand an end to the war in Iran.","2026-10-07","https://web.archive.org/web/20261007175230/https://electjon.com/ajc-iran-war-emerges-as-pocketbook-issue-in-u-s-senate-race/","Campaign website, 2026: AJC: Iran War Emerges As Pocketbook Issue In U.S. Senate Race - Jon Ossoff for U.S. Senate"]
+  ],
+  "work-amnesty": [
+   [0, "I’ll support an immigration policy that strengthens our borders, puts American workers first, respects human rights, and creates a path to legal status for undocumented immigrants who are already here and otherwise follow the law, especially those brought here as children.","2020-11-03","https://web.archive.org/web/20201103162954/https://electjon.com/policy/","Campaign website, 2020: Policy - Jon Ossoff for U.S. Senate"]
+  ]
+ }
+}

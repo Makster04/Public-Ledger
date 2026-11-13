@@ -47,8 +47,9 @@ const QCTX={list:QUESTIONS.questions,categories:QUESTIONS.categories};
 const QISS=QUESTIONS.questions.map(q=>({...q,label:q.q,A:q.sides[0],B:q.sides[1],statement:q.q,group:q.cat})),QISSBY=Object.fromEntries(QISS.map(i=>[i.id,i]));
 const QCODED=QSTANCES.coded&&!Array.isArray(QSTANCES.coded)?QSTANCES.coded:{};
 // A person's stance on every question (public/question-scores.js personStances), worked out once: their record, their
-// carried-over evidence and the topic groups' ratings of them (public/group-ratings.json, by profile id).
-const qstOf=p=>{if(!p)return {};if(!p.qst)p.qst=personStances(QSTANCES.people?.[p.bioguide]||null,p.evidence,{ratings:window.GROUP_RATINGS?.people?.[p.id]||null,questions:QUESTIONS.questions});return p.qst;};
+// carried-over evidence, what they said (public/question-statements.json) and the topic groups' ratings of them
+// (public/group-ratings.json), the last two by profile id.
+const qstOf=p=>{if(!p)return {};if(!p.qst)p.qst=personStances(QSTANCES.people?.[p.bioguide]||null,p.evidence,{ratings:window.GROUP_RATINGS?.people?.[p.id]||null,questions:QUESTIONS.questions,said:window.QSTATEMENTS?.people?.[p.id]||null});return p.qst;};
 const withQ=p=>{qstOf(p);return p;};
 // Their items on each question and what each bill is, read when a tab shows them.
 const QEV={};let QMETA=null;
@@ -1137,7 +1138,7 @@ function paneIdeology(s,pane){
   const measures=stTable(['Measure','Lean','Based on'],[['Category leans (overall)',x.lean==null?'—':`<b>${signed(x.lean)}</b>`,`${x.scored} categor${x.scored===1?'y':'ies'} of questions`],['Ratings lean',x.ratings.lean==null?'<span class="muted">not read yet</span>':`<b>${signed(x.ratings.lean)}</b>`,`${x.ratings.rows.length} group rating${x.ratings.rows.length===1?'':'s'}`],['DW-NOMINATE',x.dw==null?'—':`<b>${signed(x.dw)}</b>`,'Voteview, career']],'st-measures');
   pane.innerHTML=stFrame(s,'ideology',{
     res:{position,badge:x.lean==null?'Not placed yet':`${signed(x.lean)} · ${x.label}`},breakdown:measures,needsTitle:'What we need to place them',
-    sources:['<b>Votes:</b> roll calls in Congress, and state votes for state legislators.','<b>Bills:</b> bills they sponsored and cosponsored.','<b>Statements:</b> speeches, press releases and campaign positions, 3 points each, cancelled when a later vote on the question went the other way.','<b>Each vote\'s side:</b> coded and cited on each question (which side of the question a Yea takes).','<b>Voteview:</b> DW-NOMINATE.','<b>Group scorecards:</b> each group\'s own published ratings.'],
+    sources:['<b>Votes:</b> roll calls in Congress, and state votes for state legislators.','<b>Bills:</b> bills they sponsored and cosponsored.','<b>Statements:</b> what they told voters on their campaign websites and in campaign posts, and reviewed speeches and press statements, each tagged by hand to a question with its quote, date and link: 3 points each, at most one per question per campaign, cancelled when a later vote on the question went the other way.','<b>Each vote\'s side:</b> coded and cited on each question (which side of the question a Yea takes).','<b>Voteview:</b> DW-NOMINATE.','<b>Group scorecards:</b> each group\'s own published ratings.'],
     needs:x.needs,
     notes:[['A position, not a grade.','Liberal and conservative are shown neutrally. Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First are the grades.'],['When the measures disagree,','the gap is shown, not averaged away.']],
     evidenceTitle:'Evidence: positions and outside ratings',
@@ -3859,7 +3860,7 @@ function methodSix(){
   const W=UNBOUGHT;
   const f=t=>`<div class="st-formula">${t}</div>`;
   const rows=[
-    ['ideology','Ideology',SIX_BY.ideology.q,'Votes, bills, cosponsorships and official acts on each issue; statements (half, only with no action); each vote\'s reviewed side; Voteview\'s DW-NOMINATE; each interest group\'s published scorecard.',
+    ['ideology','Ideology',SIX_BY.ideology.q,'Votes, bills, amendments, cosponsorships and official acts on each question; statements tagged to each question (campaign websites and posts, reviewed speeches and press statements); each vote\'s reviewed side; topic groups\' ratings; Voteview\'s DW-NOMINATE; each interest group\'s published scorecard.',
       f('Stance on a question = (points for one side − points for the other) ÷ all points (at least 3 points)')+f('Question lean = 100 × the stance, conservative side as plus; category lean = average of its questions')+f('Overall lean = average of the category leans (at least 3 categories)')+f('Ratings lean = average of ±(2 × score − 100)')+f('DW-NOMINATE lean = 100 × first-dimension score')+'<p class="small">Scale: −100 most liberal to +100 most conservative; very liberal below −60, liberal to −20, moderate to +20, conservative to +60, very conservative above. Questions with no liberal side are shown and count in Your Match, but not in the lean. Points: a statement 3, a group rating on the question\'s topic up to 3 (3 × |2 × score − 100| ÷ 100, toward the group\'s side above 50%, the other side below), a sponsored bill or amendment or an official act 1.5, a cosponsorship or vote 1, one credit per bill; a statement is not counted when a later vote on the question went the other way. Groups that rate across many topics count only in the Ratings lean. Formula: ${QFORMULA}. Your Match, on this tab, compares your positions with their record.</p>'],
     ['word','Keeps Their Word',SIX_BY.word.q,'Promises from campaign sites and posts, speeches, press releases and signed pledges, each checked against the action that decided it; PolitiFact\'s tracker for a president.',
       f('Keeps Their Word = 100 × (kept + ½ × (partly kept + changed)) ÷ counted checks')+`<p class="small">At least ${MIN_CHECKS} counted checks. Vague goals, promises with no related bill yet and statements made in debate the day of the vote or the day before are shown, not counted.</p>`],
