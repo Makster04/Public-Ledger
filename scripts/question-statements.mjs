@@ -8,8 +8,9 @@
 // A tag is only made when the words clearly take one side of the question; a statement that only explains a vote
 // isn't a separate position, and anything unclear is left out. At most one statement per question per campaign (the
 // clearest one), so a position repeated across a site's pages counts once; a later campaign that says it again is a new
-// statement with its own date. A statement outside a campaign site belongs to the election its date leads up to. Each counts 3 points (public/question-scores.js), cancelled when a later vote on the
-// question went the other way. The same words on several pages count once, at the latest date they were seen.
+// statement with its own date. A statement outside a campaign site belongs to the election its date leads up to. Each counts 1 point beside votes,
+// bills or official acts on the question and 3 where there are none (public/question-scores.js, formula questions-3),
+// cancelled when a later vote on the question went the other way. The same words on several pages count once, at the latest date they were seen.
 //
 //   npm run statements:find                      candidates for everyone with campaign text
 //   npm run statements:find -- ossoff collins    just these people
@@ -122,7 +123,7 @@ function main(){
   const {problems,out}=checkStatements(read('data/question-statements.json'),{people,questions:Q});
   if(problems.length){console.error(problems.join('\n'));process.exit(1);}
   const n=Object.values(out).reduce((t,b)=>t+Object.values(b).reduce((u,l)=>u+l.length,0),0);
-  fs.writeFileSync(path.join(ROOT,'public','question-statements.json'),JSON.stringify({about:'What each reviewed profile said, tagged to the alignment questions: {person id: {question id: [[side index, date, quote, link, where it was said]]}}, newest first. Each counts 3 points toward its side unless a later vote on the question went the other way (public/question-scores.js). Tagged by hand in data/question-statements.json; written by scripts/question-statements.mjs.',
+  fs.writeFileSync(path.join(ROOT,'public','question-statements.json'),JSON.stringify({about:'What each reviewed profile said, tagged to the alignment questions: {person id: {question id: [[side index, date, quote, link, where it was said]]}}, newest first. Each counts toward its side (1 point beside votes, bills or official acts on the question, 3 where there are none) unless a later vote on the question went the other way (public/question-scores.js). Tagged by hand in data/question-statements.json; written by scripts/question-statements.mjs.',
     built:new Date().toISOString().slice(0,10),people:out}));
   console.log(`${n} statements for ${Object.keys(out).length} people on ${new Set(Object.values(out).flatMap(Object.keys)).size} questions.`);
 }

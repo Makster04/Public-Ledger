@@ -2,21 +2,25 @@
 // political compass and Your match. Shared by the page, the build script (scripts/build-question-record.mjs) and the
 // tests, so the numbers are worked out the same way everywhere.
 //
-// Points toward a question's side (sides[0] or sides[1]):
-//   a statement that takes a side            3 (see the contradiction rule below)
+// Points toward a question's side (sides[0] or sides[1]). What they did weighs most; what they said fills the gaps:
+//   a statement that takes a side            1 when they have votes, bills or official acts on the question, 3 when they
+//                                            have none (see the contradiction rule below)
 //   a group rating on the topic              up to 3: 3 × |2 × score − 100| ÷ 100, toward the side the group favors when
 //                                            the score is above 50, the other side when below (see ratingItems)
 //   sponsoring a coded bill or amendment     1.5     an official act (executive office)    1.5
 //   cosponsoring it                          1
 //   a vote that decides it                   1       (Yea takes the bill's side, Nay the other)
 // One credit per bill: a member who sponsored a bill and voted on it gets the higher value once, and several votes on
-// one bill count once (the latest when they differ).
+// one bill count once (the latest when they differ). Repeats count once too (familyOf: a bill's title without its
+// year): sponsoring or cosponsoring a bill reintroduced in later Congresses counts once, at its highest value and
+// latest date, and votes on one bill family in one two-year Congress (the House and Senate versions, say) count once;
+// a vote on it in a later Congress counts again.
 // Stance = (points for sides[0] − points for sides[1]) ÷ all points, from −1 to +1, shown once there are at least 3
 // points; with fewer it reads "Not on record". Unknown never counts as either side.
 // Contradiction rule: a statement is cancelled when a vote on the question taken after it went the other way. A
 // statement made after an opposite vote counts, as a changed position, and the old vote still counts too.
-export const QFORMULA='questions-2';
-export const QPOINTS={statement:3,ratingMax:3,s:1.5,act:1.5,c:1,y:1,n:1,vote:1,state:1};
+export const QFORMULA='questions-3';
+export const QPOINTS={statement:3,statementWithRecord:1,ratingMax:3,s:1.5,act:1.5,c:1,y:1,n:1,vote:1,state:1};
 export const MIN_POINTS=3;
 export const IDEOLOGY_MIN_CATEGORIES=3;
 export const IMPORTANCE=[[1,'Least'],[2,'Less'],[3,'Somewhat'],[4,'More'],[5,'Most']];
@@ -26,21 +30,39 @@ const day=d=>String(d||'').slice(0,10);
 
 // A record item's bill: "117-hr-1280#H117-123" -> "117-hr-1280".
 export const billOf=ref=>String(ref||'').split('#')[0];
-// One credit per bill: the highest-value item, and the latest of equal value. items: [{ref, kind, date, side}].
-export function creditItems(items){
+const BILL=/^\d+-(?:hr|s|hjres|sjres|hres|sres|hconres|sconres)-\d+$/;
+// A bill's family: its title without the year and punctuation ("Equality Act of 2021" -> "equality act"), so the same
+// bill reintroduced in a later Congress, and its House and Senate companions, are one family. An amendment, a roll call
+// or a bill without a title is its own family.
+export function familyOf(id,title){
+  const b=billOf(id);if(!BILL.test(b))return b;
+  const t=String(title||'').toLowerCase().replace(/\b(?:of|for)\s+(?:19|20)\d\d\b/g,' ').replace(/\b(?:19|20)\d\d\b/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+  return t?`t:${t}`:b;
+}
+const congressOf=id=>/^(\d+)-/.exec(billOf(id))?.[1]||/^vote:[HS](\d+)-/.exec(billOf(id))?.[1]||'';
+const better=(x,b)=>!b||x.pts>b.pts||(x.pts===b.pts&&day(x.date)>day(b.date));
+// The credited items: one credit per bill (the highest-value item, the latest of equal value), then, with family
+// (bill id -> its family, familyOf), one per repeat: (co)sponsorships of one family once, votes on one family once per
+// Congress. items: [{ref, kind, date, side}].
+export function creditItems(items,{family=null}={}){
   const best=new Map();
   for(const it of items||[]){
     const k=billOf(it.ref),pts=QPOINTS[it.kind]??0;if(!pts)continue;
-    const b=best.get(k);
-    if(!b||pts>b.pts||(pts===b.pts&&day(it.date)>day(b.date)))best.set(k,{...it,pts});
+    const x={...it,pts};if(better(x,best.get(k)))best.set(k,x);
   }
-  return [...best.values()];
+  if(!family)return [...best.values()];
+  const once=new Map();
+  for(const x of best.values()){
+    const b=billOf(x.ref),f=family(b)||b,k=isVoteKind(x.kind)?`v|${congressOf(b)}|${f}|${x.side}`:`b|${f}|${x.side}`;
+    if(better(x,once.get(k)))once.set(k,x);
+  }
+  return [...once.values()];
 }
-// Points for each side from record items (after one credit per bill), and the first and latest date of a credited vote
-// toward each side, which the contradiction rule needs.
-export function recordPoints(items){
+// Points for each side from record items (after creditItems), and the first and latest date of a credited vote toward
+// each side, which the contradiction rule needs.
+export function recordPoints(items,{family=null}={}){
   const out={a:0,b:0,firstA:'',lastA:'',firstB:'',lastB:''};
-  for(const it of creditItems(items)){
+  for(const it of creditItems(items,{family})){
     const A=it.side===0;out[A?'a':'b']+=it.pts;
     if(!isVoteKind(it.kind))continue;const d=day(it.date);if(!d)continue;
     const f=A?'firstA':'firstB',l=A?'lastA':'lastB';
@@ -51,13 +73,14 @@ export function recordPoints(items){
 }
 // The contradiction rule for statements ([{side, date}]) against the votes (rec: recordPoints's dates). Each statement
 // gets a status: "counted", "cancelled" (a later vote went the other way) or "changed" (counted; an earlier vote went
-// the other way).
-export function applyStatements(statements,rec={}){
+// the other way). Each counted statement adds weight points (QPOINTS.statement, or statementWithRecord when they have a
+// record on the question).
+export function applyStatements(statements,rec={},weight=QPOINTS.statement){
   let a=0,b=0;
   const rows=(statements||[]).map(st=>{
     const d=day(st.date),A=st.side===0,laterOpp=A?rec.lastB:rec.lastA,earlierOpp=A?rec.firstB:rec.firstA;
     const status=d&&laterOpp&&laterOpp>d?'cancelled':d&&earlierOpp&&earlierOpp<d?'changed':'counted';
-    if(status!=='cancelled'){if(A)a+=QPOINTS.statement;else b+=QPOINTS.statement;}
+    if(status!=='cancelled'){if(A)a+=weight;else b+=weight;}
     return {...st,status};
   });
   return {a,b,rows};
@@ -197,10 +220,13 @@ export function personStances(rec,evidence,{ratings=null,questions=null,said=nul
     const base=r?{a:r[0],b:r[1],firstA:r[2]||'',lastA:r[3]||'',firstB:r[4]||'',lastB:r[5]||''}:{a:0,b:0,firstA:'',lastA:'',firstB:'',lastB:''};
     const lp=recordPoints(L.items),dates={firstA:[base.firstA,lp.firstA].filter(Boolean).sort()[0]||'',lastA:[base.lastA,lp.lastA].filter(Boolean).sort().at(-1)||'',
       firstB:[base.firstB,lp.firstB].filter(Boolean).sort()[0]||'',lastB:[base.lastB,lp.lastB].filter(Boolean).sort().at(-1)||''};
-    const st=applyStatements(L.statements,dates),R=rated[qid]||[];
+    // What they said counts 1 point beside a record of votes, bills or official acts on the question, 3 without one.
+    const acts=base.a+base.b+lp.a+lp.b>0,weight=acts?QPOINTS.statementWithRecord:QPOINTS.statement;
+    const st=applyStatements(L.statements,dates,weight),R=rated[qid]||[];
     const ra=R.filter(x=>x.side===0).reduce((t,x)=>t+x.pts,0),rb=R.filter(x=>x.side===1).reduce((t,x)=>t+x.pts,0);
     const a=Math.round((base.a+lp.a+st.a+ra)*10)/10,b=Math.round((base.b+lp.b+st.b+rb)*10)/10;
     out[qid]={...stanceOf(a,b),record:{a:base.a,b:base.b},carried:{items:creditItems(L.items),points:{a:lp.a,b:lp.b}},statements:st.rows,
+      statementPoints:weight,statementsOnly:!acts&&st.rows.some(x=>x.status!=='cancelled'),
       ratings:R,ratingPoints:{a:Math.round(ra*10)/10,b:Math.round(rb*10)/10},dates};
   }
   return out;
@@ -219,10 +245,13 @@ export function billLink(id){
   return {label:`${TYPE_LABEL[t]} ${n} (${c}th Congress)`,url:`https://www.congress.gov/${/amdt$/.test(t)?'amendment':'bill'}/${c}th-congress/${TYPE_PATH[t]}/${n}`};
 }
 // One person's items on one question ([[ref, kind, date, side]], public/question-evidence), with what each bill is
-// (metaQ: {bill: [side, why, title]}, public/question-meta.json) and which item gets the bill's one credit.
+// (metaQ: {bill: [side, why, title]}, public/question-meta.json), which items get a credit (creditItems, with the
+// families from the titles) and, for one that doesn't, why: "bill" (another item on the same bill counts), "reintroduced"
+// (the same bill from another Congress counts) or "congress" (a vote on the same bill this Congress counts).
 export function recordRows(items,metaQ={}){
-  const list=(items||[]).map(([ref,kind,date,side])=>({ref,kind,date,side})),credited=new Set(creditItems(list).map(x=>x.ref));
-  return list.map(x=>{const bill=billOf(x.ref),m=metaQ[bill]||[],roll=String(x.ref).split('#')[1]||null,link=billLink(bill);
-    return {...x,bill,credited:credited.has(x.ref),pts:credited.has(x.ref)?QPOINTS[x.kind]||0:0,what:KIND_LABEL[x.kind]||x.kind,
+  const list=(items||[]).map(([ref,kind,date,side])=>({ref,kind,date,side})),family=id=>familyOf(id,metaQ[id]?.[2]);
+  const perBill=new Set(creditItems(list).map(x=>x.ref)),credited=new Set(creditItems(list,{family}).map(x=>x.ref));
+  return list.map(x=>{const bill=billOf(x.ref),m=metaQ[bill]||[],roll=String(x.ref).split('#')[1]||null,link=billLink(bill),c=credited.has(x.ref);
+    return {...x,bill,credited:c,pts:c?QPOINTS[x.kind]||0:0,repeat:c?null:!perBill.has(x.ref)?'bill':isVoteKind(x.kind)?'congress':'reintroduced',what:KIND_LABEL[x.kind]||x.kind,
       billSide:m[0]??null,why:m[1]||null,title:m[2]||link.label,label:link.label,url:link.url,rollUrl:roll?rollUrl(roll):null};});
 }
