@@ -16,6 +16,7 @@ import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES} from './industries.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
+import {TIER_KEYS,TIER_LABEL,TIER_ABOVE,TIER_BELOW,chamberTiers} from './tiers.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
@@ -522,7 +523,7 @@ function route(){
   document.body.dataset.view=current?(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview'):'';
   document.title=current?`${current.name} · Public Ledger`:'Public Ledger · Follow the record';
   document.querySelectorAll('.nav-more[open]').forEach(el=>el.open=false);
-  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&BASIC[m[1]]?.chamber==='S')||(a.dataset.route==='house'&&BASIC[m[1]]?.chamber==='H')));
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='trackers'&&m[1]==='tiers')||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&BASIC[m[1]]?.chamber==='S')||(a.dataset.route==='house'&&BASIC[m[1]]?.chamber==='H')));
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
@@ -534,6 +535,7 @@ function route(){
   else if(m[1]==='house'){renderHouse();}
   else if(m[1]==='superpacs'){renderSuperPacs();}
   else if(m[1]==='trackers'){renderTrackers(m[2]||'aipac');}
+  else if(m[1]==='tiers'){renderTiers(m[2]);}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}
   else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}
   else if(m[1]==='scores'){renderScores(m[2]||'match');}
@@ -877,6 +879,10 @@ function homeDropdowns(){
     ['c','Political Position',homeCh,pos.map(([k,l])=>[k,l,(['new','lost'].includes(homeStatus)&&{S:'Ran for the Senate in 2026',H:'Ran for the House in 2026'}[k])||POS_NOTE[k],n(k,homeParty,homeStatus)])],
     ['p','Party',homeParty,parties.map(([k,l])=>[k,l,'',n(homeCh,k,homeStatus)])],
     ['s','Status',homeStatus,STATUS_CHOICES.map(([k,l,d])=>[k,l,d,n(homeCh,homeParty,k)])]];
+  return ddMenus(menus);
+}
+// Dropdowns: [[key, label, current value, [[value, label, note, count]]]], one menu each (bindDropdowns opens them).
+function ddMenus(menus){
   return menus.map(([k,label,cur,opts])=>{const pick=opts.find(o=>o[0]===cur)||opts[0];
     return `<div class="hdd" data-k="${k}"><button type="button" class="hdd-b${cur?' on':''}" aria-haspopup="listbox" aria-expanded="false"><span class="hdd-k">${esc(label)}:</span> ${esc(pick[1])}${cur?` <span class="seg-n">${pick[3]}</span>`:''} <span class="hdd-car" aria-hidden="true">▾</span></button>
       <div class="hdd-menu" role="listbox" aria-label="${esc(label)}" hidden>${opts.map(([v,l,d,n])=>`<button type="button" role="option" class="hdd-opt" data-v="${esc(v)}" aria-selected="${v===cur}"><span class="hdd-ck" aria-hidden="true">${v===cur?'✓':''}</span><span>${esc(l)}${d?`<small>${esc(d)}</small>`:''}</span><span class="hdd-n">${n}</span></button>`).join('')}</div></div>`;}).join('');
@@ -1742,9 +1748,12 @@ function lookoutsBox(s,inp){
     const parts=[o.for>0?`<b class="num" title="${esc(fmtFull(o.for))}">${shortMoney(o.for)}</b> for them`:'',o.against>0?`<b class="num" title="${esc(fmtFull(o.against))}">${shortMoney(o.against)}</b> against them`:''].filter(Boolean);
     const now=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
     return `<span class="lk-sp">Its super PAC spending${now?'':' this cycle'}: ${parts.join(' · ')}</span>`;};
+  const thisCycle=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
+  const tierTag=x=>{const r=thisCycle&&memberTier(s,x.key);if(!r)return '';const chs=r.chamber==='S'?'senators':'House members';
+    return `<a class="ti-tag ${r.tier}" href="#tiers-${x.key}" data-ch="${r.chamber}" title="${esc(`Among ${chs}, against the typical ${fmtFull(r.typical||0)} from ${x.name} this cycle (FEC bulk files)`)}">${TIER_LABEL[r.tier]}</a>`;};
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
-      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${spLine(x)}</li>`;};
+      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
     <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under AIPAC, Crypto and Big Tech + AI since they spend heavily that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
 }
@@ -2079,6 +2088,58 @@ function renderSenate(){
   $('#sen-sort').addEventListener('change',e=>{senSort=e.target.value;draw();});
   draw();
 }
+// ---------- Tiers: each sitting member's money from one tracker against the typical member of their chamber (public/tiers.js) ----------
+const trackerViews=v=>`<nav class="seg tr-page-tabs tr-views" aria-label="Lobby money">${[['trackers','Trackers'],['tiers','Tiers']].map(([k,l])=>`<a href="#${k}"${k===v?' class="active" aria-current="page"':''}>${l}</a>`).join('')}</nav>`;
+let tierCh='H',tierParty='',tierStatus='';const tierOpen=new Set();
+const TIER_STATUS=[['','All','Every sitting member'],['lost','Lost','Lost a 2026 race']];
+const tierMembers=c=>c==='S'?SENATE:HOUSE.filter(x=>!x.delegate);
+const TIER_CACHE=new Map();
+function tiersOf(key,c){const k=`${key}:${c}`;if(!TIER_CACHE.has(k))TIER_CACHE.set(k,chamberTiers(window.CORP_PACS,key,tierMembers(c)));return TIER_CACHE.get(k);}
+// A sitting member's tier for a tracker this cycle: {tier, chamber, typical}, or null (not a sitting member, or not read).
+function memberTier(s,key){
+  // AIPAC's tier waits for its passed-on gifts, which are most of its money (the Tiers page says so).
+  if(!window.CORP_PACS?.trackers||(key==='aipac'&&!window.CORP_PACS.routed?.aipac))return null;
+  const c=SENATE.some(x=>x.id===s.id)?'S':HOUSE.some(x=>x.id===s.id&&!x.delegate)?'H':null;if(!c)return null;
+  const T=tiersOf(key,c),tier=T.byId[s.id];return tier?{tier,chamber:c,typical:T.typical}:null;
+}
+const tierWho=m=>byId[m.id]||BASIC[m.id]||m;
+const TIER_SHOWN={above:12,about:12,below:12,none:8};
+function renderTiers(key){
+  const cp=window.CORP_PACS,head=`<section class="section" id="tiers"><div class="kicker">Lobby money</div>${trackerViews('tiers')}`;
+  if(!cp?.trackers){app.innerHTML=`${head}<h1>Tiers</h1><div class="note">The FEC bulk-file totals (npm run corporate:pacs) aren't on file yet, so the tiers can't be drawn.</div></section>`;return;}
+  // AIPAC's money is mostly the gifts it passes on; until the file has them, the first tracker with its money complete opens.
+  const aipacDone=!!cp.routed?.aipac,t=TRACKER[key]||TRACKERS.find(x=>x.key!=='aipac'||aipacDone)||TRACKERS[0];
+  const pick=`<div class="hdd tr-pick" data-k="t"><button type="button" class="hdd-b" aria-haspopup="listbox" aria-expanded="false"><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)} <span class="hdd-car" aria-hidden="true">▾</span></button>
+    <div class="hdd-menu" role="listbox" aria-label="Tracker" hidden>${TRACKERS.map(x=>`<button type="button" role="option" class="hdd-opt" data-v="${x.key}" aria-selected="${x.key===t.key}"><span class="hdd-ck" aria-hidden="true">${x.key===t.key?'✓':''}</span><span><span aria-hidden="true">${x.emoji}</span> ${esc(x.name)}</span><span class="hdd-n">${tiersOf(x.key,tierCh).took} took some</span></button>`).join('')}</div></div>`;
+  app.innerHTML=`${head}<h1 class="ti-h">How highly bought &amp; paid for by ${pick}</h1>
+    <div class="ti-ctl" id="ti-ctl"></div>${t.key==='aipac'&&!aipacDone?`<div class="note small" style="margin:0 0 12px"><b>AIPAC's passed-on gifts aren't read yet</b> (npm run corporate:pacs reads them from its payments), so these tiers count only its PAC's own checks, which the law caps at a few thousand dollars an election. Most of AIPAC's money arrives as those gifts.</div>`:''}
+    <p class="ti-note" id="ti-note"></p><div id="ti-body"></div><p class="small muted" id="ti-foot"></p></section>`;
+  const host=$('#tiers');
+  const draw=()=>{
+    const T=tiersOf(t.key,tierCh),CH=tierCh==='S'?'senator':'House member',CHS=tierCh==='S'?'senators':'House members';
+    const keep=r=>(!tierParty||r.m.party===tierParty)&&(!tierStatus||statusOf(tierWho(r.m)).has(tierStatus));
+    const all=TIER_KEYS.flatMap(k=>T.tiers[k]),cnt=(p,st)=>all.filter(r=>(!p||r.m.party===p)&&(!st||statusOf(tierWho(r.m)).has(st))).length;
+    $('#ti-ctl').innerHTML=`<div class="seg ti-ch" role="group" aria-label="Chamber">${[['H','House'],['S','Senate']].map(([c,l])=>`<button type="button" data-ch="${c}" class="${c===tierCh?'active':''}" aria-pressed="${c===tierCh}">${l} <span class="seg-n">${tiersOf(t.key,c).read}</span></button>`).join('')}</div>
+      ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])],['s','Status',tierStatus,TIER_STATUS.map(([k,l,d])=>[k,l,d,cnt(tierParty,k)])]])}`;
+    $('#ti-note').innerHTML=T.typical?`Each ${CH} is compared with the typical ${CH} who took money from ${esc(t.name)} this cycle: <b class="num">${fmtFull(T.typical)}</b> (the middle of the ${T.took} who took some). PAC checks${t.routed.length?' and the gifts it collected from donors and passed on':''}, ${cp.cycle-1}–${cp.cycle}, from the FEC's bulk files${cp.through?` (through ${esc(fmtDate(cp.through))})`:''}. ${tierCh==='S'?'Senators are compared with senators, House members with House members':'House members are compared with House members, senators with senators'}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`
+      :`No ${CH} took money from ${esc(t.name)} this cycle in the FEC's bulk files.`;
+    const bound={above:`Over ${fmtFull(TIER_ABOVE*T.typical)}`,about:`${fmtFull(TIER_BELOW*T.typical)} – ${fmtFull(TIER_ABOVE*T.typical)}`,below:`Under ${fmtFull(TIER_BELOW*T.typical)}`,none:'$0 this cycle'};
+    const chip=r=>{const s=tierWho(r.m);return `<a class="ti-chip ${esc(r.m.party)}" href="#${esc(r.m.id)}-unbought"><span class="ti-ph">${portrait(s)}</span><span class="ti-cn"><b>${esc(r.m.short||r.m.name)}</b><small>${esc(r.m.party)} · ${esc(r.m.seat||r.m.state)}</small></span><span class="ti-ca num">${fmtFull(r.amount)}</span></a>`;};
+    $('#ti-body').innerHTML=TIER_KEYS.map(k=>{
+      const list=T.tiers[k].filter(keep),open=tierOpen.has(k),show=open?list:list.slice(0,TIER_SHOWN[k]);
+      const more=list.length>TIER_SHOWN[k]?`<button type="button" class="ti-more" data-tier="${k}" aria-expanded="${open}">${open?'Show fewer':`Show all ${list.length} →`}</button>`:'';
+      return `<section class="ti-row ${k}" aria-label="${TIER_LABEL[k]}"><div class="ti-l"><b>${TIER_LABEL[k]}</b>${T.typical||k==='none'?`<span>${bound[k]}</span>`:''}<em>${list.length} ${list.length===1?CH:CHS}</em></div>
+        <div class="ti-g">${show.map(chip).join('')||'<p class="small muted" style="margin:4px">Nobody here.</p>'}${more}</div></section>`;}).join('');
+    $('#ti-foot').textContent=T.notRead.length?`Not read in the FEC's bulk files yet: ${T.notRead.map(m=>m.name).join(', ')}.`:'';
+  };
+  draw();
+  bindDropdowns(host,(k,v)=>{if(k==='t'){if(v!==t.key){tierOpen.clear();location.hash=`tiers-${v}`;}return;}if(k==='p')tierParty=v;else tierStatus=v;draw();});
+  host.addEventListener('click',e=>{
+    const ch=e.target.closest('[data-ch]');if(ch&&ch.dataset.ch!==tierCh){tierCh=ch.dataset.ch;tierOpen.clear();draw();return;}
+    const m=e.target.closest('.ti-more');if(m){const k=m.dataset.tier;tierOpen.has(k)?tierOpen.delete(k):tierOpen.add(k);draw();}});
+}
+// A profile's tier tag opens Tiers on its chamber.
+document.addEventListener('click',e=>{const a=e.target.closest('a.ti-tag');if(a?.dataset.ch)tierCh=a.dataset.ch;});
 // ---------- Trackers: every reviewed profile ranked by money from each lobby (public/trackers.js) ----------
 function renderTrackers(key){
   const t=TRACKER[key]||TRACKERS[0];
@@ -2088,7 +2149,7 @@ function renderTrackers(key){
   const took=rows.filter(r=>r.x.status==='took').sort((a,b)=>b.x.total-a.x.total||a.s.name.localeCompare(b.s.name)),none=rows.filter(r=>r.x.status==='none'),waiting=rows.filter(r=>r.x.status==='waiting');
   const sum=took.reduce((n,r)=>n+r.x.total,0),routedRead=t.routed.length>0;
   const who=s=>`<a href="#${esc(s.id)}-unbought">${esc(s.name)}</a> <span class="chip ${esc(s.party)}">${esc(s.party)} · ${esc(s.chamber==='H'?s.district||s.state:s.state)}</span>${s.pac?.window?`<div class="small muted">PAC lines read: ${esc(s.pac.window)}</div>`:''}`;
-  app.innerHTML=`<section class="section"><div class="kicker">Lobby money</div><h1>Trackers</h1>
+  app.innerHTML=`<section class="section"><div class="kicker">Lobby money</div>${trackerViews('trackers')}<h1>Trackers</h1>
     <p class="intro">How much each profiled campaign took from seven lobbies this cycle: checks from the lobby's PACs, and gifts the lobby collected from donors and passed on. Super PAC spending, which no campaign takes, is on each person's Big Money Independence tab. Shown only; no grade uses it.</p>
     <nav class="seg tr-tabs tr-page-tabs" aria-label="Trackers">${TRACKERS.map(x=>`<a href="#trackers-${x.key}" class="${x.key===t.key?'active':''}"${x.key===t.key?' aria-current="page"':''}>${esc(x.name)}</a>`).join('')}</nav>
     <p class="small" style="margin:12px 0 4px">${esc(t.about)}</p>
