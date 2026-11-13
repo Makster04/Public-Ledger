@@ -60,6 +60,9 @@ const qMeta=()=>QMETA||=fetch('/question-meta.json',{cache:'no-cache'}).then(r=>
 const SENATE=(window.SENATE||[]).map(x=>({...x,chamber:'S',ideo:poolIdeo(DATA.pools?.S,x.bioguide,x.party)}));
 // Every member of the House (public/house.json, from scripts/build-house.mjs), the same way.
 const HOUSE=(window.HOUSE||[]).map(x=>({...x,chamber:'H',ideo:poolIdeo(DATA.pools?.H,x.bioguide,x.party)}));
+// The House members-elect without a profile yet (public/members-elect.json, scripts/build-members-elect.mjs): a basic
+// profile each, marked "elect", and the races they won (with the races of winners profiled after the election).
+const ELECT=(window.MEMBERS_ELECT||[]).map(x=>({...x,chamber:'H'})),ELECT_RACES=window.ELECT_RACES||[];
 // The coded roll calls behind the full profiles' issue leans: each vote's issue, and the side a Yea takes. A basic
 // profile is placed from their own positions on the same roll calls (scripts/fill-vote-positions.mjs fills them in),
 // read exactly as the full profiles' are; no statements, sponsorships or reviewed notes, so it's their votes alone.
@@ -84,7 +87,7 @@ function basicShape(x){
     funderPos:x.funderPos||[],assoc:x.assoc||{},notVoted:x.notVoted||{},stateLeg:x.stateLeg||[],cycleLabel:x.cycleLabel||'2025–26',cycleNote:x.cycleNote||'two-year period (2025–26)',
     cmteName:x.cmteName||'Their campaign committee'});
 }
-const BASIC=Object.fromEntries([...SENATE,...HOUSE].filter(x=>!byId[x.id]).map(x=>[x.id,basicShape(Object.assign(markBasic(x),{evidence:basicEvidence(x)}))]));
+const BASIC=Object.fromEntries([...SENATE,...HOUSE,...ELECT].filter(x=>!byId[x.id]).map(x=>[x.id,basicShape(Object.assign(markBasic(x),{evidence:basicEvidence(x)}))]));
 // A basic profile's campaign totals and outside spending from the refresh's records (the FEC's committee totals, and its
 // independent expenditures for and against them), in the shape the full profiles' research uses; read once a visit.
 // true when something was filled in.
@@ -257,7 +260,7 @@ const orgName=(name,about,inner)=>about?`<span class="org" data-tip="${esc(`${na
 const candName=id=>IE.cands[id]||id;
 const flag=(t,why)=>`<span class="flag" ${why?`data-tip="${esc(why)}" tabindex="0"`:''}>${t}</span>`;
 // A profile's 2026 race: the profiled race they ran in, or the results-only race whose nominee names their profile.
-function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))||DATA.liteRaces.find(r=>r.nominees.some(n=>n.profile===s.id))}
+function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))||DATA.liteRaces.find(r=>r.nominees.some(n=>n.profile===s.id))||ELECT_RACES.find(r=>r.nominees.some(n=>n.profile===s.id))}
 // Their key in that race: their profile ID in a profiled race; in a results-only race, the key the race knows them by.
 const raceKey=(r,s)=>r&&!r.keys?nomineeKey(r.nominees.find(n=>n.profile===s.id)||{})||s.id:s.id;
 // Who a key in a race is: their full or basic profile (a House nominee's basic profile found by their Bioguide ID), or
@@ -842,13 +845,22 @@ function renderHome(){
 const TABS=[['overview','Overview'],['ideology','Ideology'],['word','Keeps Their Word'],['showsup','Shows Up'],['unbought','Big Money Independence'],['aboveboard','Plays by the Rules'],['peoplefirst','People First']];
 const tabsFor=s=>TABS;
 const PANES={ideology:(...a)=>paneIdeology(...a),word:(...a)=>paneWord(...a),showsup:(...a)=>paneShowsUp(...a),unbought:(...a)=>paneUnbought(...a),aboveboard:(...a)=>paneAboveBoard(...a),peoplefirst:(...a)=>panePeopleFirst(...a),overview:(...a)=>paneOverview(...a),integrity:(...a)=>paneIntegrity(...a),match:(...a)=>paneMatch(...a),promises:(...a)=>panePromises(...a),ethics:(...a)=>paneEthics(...a),pvp:(...a)=>panePvp(...a),finance:(...a)=>paneFinance(...a),legislation:(...a)=>paneLegislation(...a),sources:(...a)=>paneSources(...a)};
+// A member-elect's details (a basic profile marked "elect"): when they take office, the race they won and the report of
+// it, their background, and the links.
+function electDetails(s){
+  return `<div class="meta"><div><span>Takes office</span>${esc(fmtDate(s.takesOffice))} · ${esc(s.seat)}</div>
+    <div><span>November 3, 2026 result</span>${esc(ballotLine(s))}${s.how?' · '+esc(s.how):''} ${resultSrc(s.call)}</div>
+    <div class="roles"><span>Background</span>${esc(s.background||'Not listed')}${s.born?` · born ${esc(s.born)}`:''}</div>
+    <div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand):'Not found in the FEC\'s files'}</div></div>
+    <div class="links row">${s.fecCand?`<a href="${fecCandUrl(s.fecCand)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}${s.list?`<a href="${esc(s.list.u)}" target="_blank" rel="noopener">Wikipedia's list of new members ↗</a>`:''}<a href="#house">All House members →</a></div>`;
+}
 // Shared profile presentation. The evidence panes and scorer remain the source of truth.
 const profileAmount=n=>n==null?'Not available':Math.abs(n)>=1e6?'$'+(n/1e6).toFixed(2)+'M':fmtFull(n);
 function profileHeader(s,showFacts=false){
   const basic=!!s.basic,c=s.camp&&!s.camp.missing&&!s.office?s.camp:null;
-  const photo=portrait(s), office=basic?(s.chamber==='H'?(s.delegate?'U.S. House (delegate)':'U.S. House'):'U.S. Senate'):s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House', res=!basic&&!s.office&&personResult(s);
+  const photo=portrait(s), office=s.elect?'U.S. House (member-elect)':basic?(s.chamber==='H'?(s.delegate?'U.S. House (delegate)':'U.S. House'):'U.S. Senate'):s.office?'President':s.chamber==='S'?'U.S. Senate':'U.S. House', res=!basic&&!s.office&&personResult(s);
   const compareHref=s.office?'#home':s.chamber==='H'?'#compare-house':'#compare-senate';
-  const details=basic?`<div class="meta"><div><span>In the ${s.chamber==='H'?'House':'Senate'} since</span>${esc(monthYear(s.since))}${s.chamber==='H'?` · ${esc(s.seat)}${s.delegate?' (non-voting delegate)':''}`:''}</div><div><span>2026 ballot</span>${esc(ballotLine(s))}${offBallot(s)?` · next election ${s.nextElection}`:''}</div><div class="roles"><span>Committees / roles</span>${esc(committeesOf(s).map(x=>fullCommittee(x.id)).filter((x,i,a)=>a.indexOf(x)===i).map(id=>COMMITTEES.committees[id]?.name||id).join('; ')||'None listed')}</div><div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand)+' · ':''}Bioguide ${esc(s.bioguide)}${s.lis?' · LIS '+esc(s.lis):''}</div></div><div class="links row">${s.fecCand?`<a href="${fecCycleUrl(s.fecCand,s.nextElection)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}<a href="${cgUrl(s)}" target="_blank" rel="noopener">Congress.gov member page ↗</a>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">Official site ↗</a>`:''}${s.chamber==='H'?'<a href="#house">All House members →</a>':'<a href="#senate">All senators →</a>'}</div>`:`
+  const details=s.elect?electDetails(s):basic?`<div class="meta"><div><span>In the ${s.chamber==='H'?'House':'Senate'} since</span>${esc(monthYear(s.since))}${s.chamber==='H'?` · ${esc(s.seat)}${s.delegate?' (non-voting delegate)':''}`:''}</div><div><span>2026 ballot</span>${esc(ballotLine(s))}${offBallot(s)?` · next election ${s.nextElection}`:''}</div><div class="roles"><span>Committees / roles</span>${esc(committeesOf(s).map(x=>fullCommittee(x.id)).filter((x,i,a)=>a.indexOf(x)===i).map(id=>COMMITTEES.committees[id]?.name||id).join('; ')||'None listed')}</div><div><span>Identifiers</span>${s.fecCand?'FEC '+esc(s.fecCand)+' · ':''}Bioguide ${esc(s.bioguide)}${s.lis?' · LIS '+esc(s.lis):''}</div></div><div class="links row">${s.fecCand?`<a href="${fecCycleUrl(s.fecCand,s.nextElection)}" target="_blank" rel="noopener">FEC candidate summary ↗</a>`:''}<a href="${cgUrl(s)}" target="_blank" rel="noopener">Congress.gov member page ↗</a>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">Official site ↗</a>`:''}${s.chamber==='H'?'<a href="#house">All House members →</a>':'<a href="#senate">All senators →</a>'}</div>`:`
     <div class="meta">
       <div><span>${s.office?'In office':s.cand?'Current or most recent role':'In the '+CH[s.chamber].name+' since'}</span>${esc(s.since)}</div>
       ${s.office?`<div><span>2026 ballot</span>${esc(s.seat)}</div>`:`<div><span>2026 ${s.cand?'opponents':'opponent'}</span>${esc(s.opponent)} · <a href="#races">race view</a></div>`}
@@ -866,9 +878,9 @@ function profileHeader(s,showFacts=false){
   `;
   return `<header class="phead profile-hero" data-party="${esc(s.party)}">
     <div class="profile-main"><div class="profile-photo">${photo}</div><div class="profile-identity">
-      <div class="page-eyebrow">${basic?(s.chamber==='H'?'HOUSE DIRECTORY':'SENATE DIRECTORY'):'THE PUBLIC RECORD'}</div><h1>${esc(s.name)}</h1>
+      <div class="page-eyebrow">${s.elect?'HOUSE · MEMBER-ELECT':basic?(s.chamber==='H'?'HOUSE DIRECTORY':'SENATE DIRECTORY'):'THE PUBLIC RECORD'}</div><h1>${esc(s.name)}</h1>
       <p class="profile-office">${partyName(s.party)} · ${esc(s.stateName||s.state||'United States')}${s.chamber==='H'?' · '+esc(s.basic?s.seat:s.district):''} · ${office}</p>
-      <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(basic?'Term ends '+fmtDate(s.termEnd):termNow(s)||'')}</span></div>
+      <div class="row"><span class="chip ${basic?'ghost':'profile-reviewed'}">${basic?'Basic profile · not yet reviewed':'Reviewed research'}</span><span class="small muted">${esc(s.elect?'Takes office '+fmtDate(s.takesOffice):basic?'Term ends '+fmtDate(s.termEnd):termNow(s)||'')}</span></div>
       ${res?`<p class="small profile-result">${resultChip(res.o)} ${esc(res.after)} <span class="muted">(${esc(RESULTS_ASOF())})</span></p>`:''}
       ${s.cand?`<p class="small profile-background">${esc(s.status||s.background||'')}</p>`:''}
     </div><div class="profile-actions"><a class="profile-compare" href="${compareHref}">${s.office?'Explore people':'Compare'}</a><button class="profile-share" type="button">Share scorecard <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 3h6v6M17 3l-8 8M8 4H4v12h12v-4"/></svg></button></div></div>
@@ -1993,6 +2005,20 @@ async function renderSuperPacs(){
 const TYPE_LABEL_SP={O:'Super PAC',V:'Hybrid PAC',W:'Hybrid PAC'};
 // ---------- The House: every member, with a full profile (reviewed research) or a basic one ----------
 let houseQ='',houseParty='',houseSort='state';
+// The House members-elect: everyone the November 3, 2026 election sent to the House who isn't a member now, by state and
+// district, with a full profile (a winner of a race this site covers) or a basic one (public/members-elect.json).
+function electList(){
+  const full=CANDS.filter(c=>c.chamber==='H'&&personResult(c)?.o==='won').map(c=>({s:c,seat:String(c.district||'').replace(/-0(\d)$/,'-$1'),how:termNow(c),full:true}));
+  const basic=ELECT.filter(x=>BASIC[x.id]).map(x=>({s:BASIC[x.id],seat:x.seat,how:x.how,full:false}));
+  return [...full,...basic].sort((a,b)=>String(a.s.stateName).localeCompare(String(b.s.stateName))||String(a.seat).localeCompare(String(b.seat),undefined,{numeric:true}));
+}
+function electBlock(){
+  const L=electList();if(!L.length)return '';
+  const flips=ELECT_RACES.filter(r=>{const w=r.nominees.find(n=>nomineeKey(n)===r.result.winner);return w?.id&&BASIC[w.id]&&seatChange(r,w.party)?.flip;}).length;
+  return `<details class="elect-list" open><summary><h2 style="display:inline">Members-elect (${L.length})</h2></summary>
+    <p class="small muted" style="max-width:80ch">Everyone the November 3, 2026 election sent to the House who isn't a member now. They take office January 3, 2027. ${L.filter(x=>x.full).length} won races this site covers and have full profiles; the other ${L.filter(x=>!x.full).length} have basic profiles, not reviewed yet: who they are, the race and their campaign money${flips?`, ${flips} of them in seats that flipped`:''}. Races not called yet aren't listed. ${window.ELECT_INFO?`From <a href="${esc(window.ELECT_INFO.source.list)}" target="_blank" rel="noopener">Wikipedia's list of new members</a>, the news reports it cites, and the FEC's bulk files, read ${fmtDate(window.ELECT_INFO.built)}.`:''}</p>
+    <div class="tablewrap"><table><thead><tr><th>Member-elect</th><th>Seat</th><th>Party</th><th>How they won</th><th>Profile</th></tr></thead><tbody>${L.map(x=>`<tr><td><a href="#${esc(x.s.id)}">${esc(x.s.name)}</a></td><td>${esc(x.seat)}<div class="small muted">${esc(x.s.stateName||'')}</div></td><td><span class="chip ${esc(x.s.party)}">${esc(x.s.party)}</span></td><td class="small">${esc(x.how||'')}</td><td>${x.full?'<span class="chip good">Full</span>':'<span class="chip ghost">Basic</span>'}</td></tr>`).join('')}</tbody></table></div></details>`;
+}
 function renderHouse(){
   const full=HOUSE.filter(x=>byId[x.id]).length,info=window.HOUSE_INFO||{},dels=HOUSE.filter(x=>x.delegate).length;
   app.innerHTML=`<section class="section">
@@ -2003,6 +2029,8 @@ function renderHouse(){
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
       ['New Congress','The list follows the House as it is now. When the new Congress is sworn in on January 3, 2027, running npm run house:build swaps the departing members for the new ones.'],
       info.source&&['Source',`<a href="${esc(info.source)}" target="_blank" rel="noopener">congress-legislators</a>, checked ${fmtDate(info.checked)}.`]])}
+    ${electBlock()}
+    <h2 style="margin-top:22px">Members now</h2>
     <div class="toolbar">
       <div class="seg" id="house-party" role="group" aria-label="Party">${[['','All'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>`<button data-p="${k}" class="${houseParty===k?'active':''}">${l}</button>`).join('')}</div>
       <div class="search"><input id="house-q" type="search" placeholder="Search by name, state or district" aria-label="Search House members" value="${esc(houseQ)}"></div>
@@ -2034,7 +2062,7 @@ function renderHouse(){
 // A senator's 2026 race: the results-only race they ran in, or, for a seat up in 2026, the state's Senate race.
 function seatRace(s){
   // A House member with a basic profile: a covered race they ran in, if any (their seat is up every two years).
-  if(s.chamber==='H')return DATA.liteRaces.find(r=>r.chamber==='H'&&r.nominees.some(n=>nomineeKey(n)===s.id))||null;
+  if(s.chamber==='H')return DATA.liteRaces.find(r=>r.chamber==='H'&&r.nominees.some(n=>nomineeKey(n)===s.id))||ELECT_RACES.find(r=>r.nominees.some(n=>nomineeKey(n)===s.id))||null;
   const ran=DATA.liteRaces.find(r=>r.chamber==='S'&&r.nominees.some(n=>nomineeKey(n)===s.id));if(ran)return ran;
   if(s.nextElection!==2026)return null;
   return DATA.races.find(r=>r.chamber==='S'&&r.state===s.state)||DATA.liteRaces.find(r=>r.chamber==='S'&&r.state===s.state)||null;
@@ -2053,7 +2081,7 @@ function ballotLine(s){
   const res=raceResult(r),w=res&&res.winner,ran=(r.keys||r.nominees.map(nomineeKey)).includes(s.id);
   const name=w&&(byId[w]?.name||r.nominees?.find(n=>nomineeKey(n)===w)?.name);
   if(ran){const o=outcomeOf(r,s.id);
-    return o==='won'?(res.special?'Won the November 3, 2026 special election':'Re-elected November 3, 2026'):o==='lost'?`Lost to ${name} on November 3, 2026`:'On the November 3, 2026 ballot · not called yet';}
+    return o==='won'?(s.elect?'Elected November 3, 2026; takes office January 3, 2027':res.special?'Won the November 3, 2026 special election':'Re-elected November 3, 2026'):o==='lost'?`Lost to ${name} on November 3, 2026`:'On the November 3, 2026 ballot · not called yet';}
   return res?.decided?`Not running in 2026 · ${name} won the seat`:'Not running in 2026 · the race for the seat is not called yet';
 }
 const BASIC_GRADE={match:'No reviewed record of their votes and statements on the site\'s issues yet.',prom:'No statements checked against the record yet.',
@@ -3415,7 +3443,7 @@ function resultCard(r,county=null){
   const turnout=!t?'not reported yet':[t.total!=null?`${numFmt(t.total)} votes counted`:'',t.counted].filter(Boolean).map(esc).join(' · ')||'not given in this source';
   // Between the candidates and the map: whether the seat flipped, in the winner's color.
   const ch=res&&res.decided?seatChange(r,who(res.winner)?.party):null;
-  const change=ch?`<div class="rc-change ${ch.flip?'flip':'hold'} ${esc(ch.to)}" title="${esc(`Held before the election by ${r.held.by} (${r.held.party})`)}"><b>${esc(ch.label)}</b><span>${esc(ch.detail)}</span></div>`:'';
+  const change=ch?`<div class="rc-change ${ch.flip?'flip':'hold'} ${esc(ch.to)}" title="${esc(r.held.by?`Held before the election by ${r.held.by} (${r.held.party})`:`Held before the election by ${({D:'Democrats',R:'Republicans'})[r.held.party]||r.held.party}`)}"><b>${esc(ch.label)}</b><span>${esc(ch.detail)}</span></div>`:'';
   return `<article class="race rc">
     <div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open||lite&&!r.nominees.some(n=>n.incumbent)?'Open seat':'Incumbent ran'}</span></div>
     ${res&&!res.decided?`<p class="small rc-status"><span class="chip warn">Not called yet</span> ${esc(res.how)}</p>`:res?`<p class="small muted rc-status">${esc(res.how||'Race called')} · <a href="${esc(res.src.u)}" target="_blank" rel="noopener">${esc(res.src.t)} ↗</a></p>`:''}
@@ -3510,21 +3538,23 @@ function renderRaces(){
   const S=DATA.races.filter(r=>r.chamber==='S'), H=DATA.races.filter(r=>r.chamber==='H');
   // Results-only races (no profiles): the other 2026 Senate races and the other House toss-ups.
   const lite=ch=>DATA.liteRaces.filter(r=>(r.chamber||'H')===ch),LS=lite('S'),LH=lite('H');
+  // The other House races that elected a new member (public/members-elect.json), by state and district.
+  const ER=ELECT_RACES.slice().sort((a,b)=>a.state.localeCompare(b.state)||a.district.localeCompare(b.district));
   app.innerHTML=`
   <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''}</div><h1 style="margin-top:8px">The races</h1>
   <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them, with how much of the vote was counted: most from election night or the morning after, and a race called later with the count from its call. They change as counting finishes.']].filter(Boolean),'lede-pts')}
-  <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length+LS.length})</button><button data-c="H">House (${H.length+LH.length})</button></div>
-  <label class="small muted">Jump to <select id="rj">${S.concat(LS,H,LH).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
+  <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length+LS.length})</button><button data-c="H">House (${H.length+LH.length+ER.length})</button></div>
+  <label class="small muted">Jump to <select id="rj">${S.concat(LS,H,LH,ER).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
   const draw=ch=>{const L=DATA.races.filter(r=>r.chamber===ch),card=r=>`<div id="r-${r.id}">${resultCard(r)}</div>`;
     $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Rated Toss-up, Tilt or Lean by at least one forecaster (Cook, Inside Elections or Sabato's Crystal Ball, Sept. 2026).</p>${L.filter(r=>r.competitive).map(card).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(card).join('')}
         <h2 style="margin-top:26px">The rest of the 2026 Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LS.length} Senate races on the November 3 ballot, with results only. Open a sitting senator for their Senate profile, or a winner who has a profile now; the other nominees don't have profiles yet.</p>${LS.map(card).join('')}`
       :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+LH.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
-        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Open a winner for their profile, or a sitting member for their House profile; the other nominees don't have profiles yet.</p>${LH.map(card).join('')}`;
+        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Open a winner for their profile, or a sitting member for their House profile; the other nominees don't have profiles yet.</p>${LH.map(card).join('')}${ER.length?`<h2 style="margin-top:26px">Other House races with a new member</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The ${ER.length} other races that elected someone new to the House, by state: the winner, their main opponent and the count as Wikipedia's state pages list it. Open a winner for their profile (a basic one, not reviewed yet, unless it says otherwise).</p>${ER.map(card).join('')}`:''}`;
     bindTips(app);fillMaps($('#rlist'));};
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
-  $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||DATA.liteRaces.find(x=>x.id===e.target.value);const want=r.chamber||'H';const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
+  $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||DATA.liteRaces.find(x=>x.id===e.target.value)||ER.find(x=>x.id===e.target.value);const want=r.chamber||'H';const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
 }
 
 // ---------- bills ----------

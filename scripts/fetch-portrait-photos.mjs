@@ -23,8 +23,8 @@ const strip=s=>String(s||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').repla
 
 // Everyone on the site without a portrait: profiled people, the results-only nominees and the directory members, with their state's name
 // (written as a code or in full in research.json).
-// directory: the other sitting senators and members of the House (public/senate.json, public/house.json), for their basic
-// profiles' cards, when their official portrait isn't published yet.
+// directory: the other sitting senators and members of the House (public/senate.json, public/house.json), and the House
+// members-elect (public/members-elect.json), for their basic profiles' cards, when no official portrait is published yet.
 export function missing(research,index,extra,directory=[]){
   const out=[],seen=new Set(),add=(id,name,state)=>{if(!id||seen.has(id)||index.people?.[id]||(extra[id]&&(!extra[id].skip||extra[id].lookup===false)))return;seen.add(id);out.push({id,name,state:STATES[state]||state});};
   for(const p of [...research.members,...research.cands,...(research.featured||[])])add(p.id,p.name,p.state);
@@ -79,7 +79,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
   const research=read('public/research.json'),index=read('public/portraits/index.json'),extraFile=new URL('scripts/portrait-extra.json',root),extra=read('scripts/portrait-extra.json');
   const dir=f=>{try{return JSON.parse(fs.readFileSync(new URL(`public/${f}.json`,root),'utf8'))[f==='senate'?'senators':'members']||[];}catch{return [];}};
-  const people=missing(research,index,extra,[...dir('senate'),...dir('house')]).filter(p=>!only||only.has(p.id));
+  const people=missing(research,index,extra,[...dir('senate'),...dir('house'),...dir('members-elect')]).filter(p=>!only||only.has(p.id));
   console.log(`Looking up ${people.length} ${people.length===1?'person':'people'} without a portrait on Wikipedia…`);
   let saved=0;
   for(const p of people){

@@ -276,6 +276,11 @@ def main():
     house_path = os.path.join(ROOT, 'public', 'house.json')
     house = json.load(open(house_path, encoding='utf8'))['members'] if os.path.exists(house_path) else []
     basic += [{'id': x['id'], 'bioguide': x['bioguide']} for x in house if x['id'] not in profiled]
+    # The House members-elect (public/members-elect.json, from scripts/build-members-elect.mjs): a former member by their
+    # official portrait, the others by the photo scripts/fetch-portrait-photos.mjs found for them.
+    elect_path = os.path.join(ROOT, 'public', 'members-elect.json')
+    elect = json.load(open(elect_path, encoding='utf8'))['members'] if os.path.exists(elect_path) else []
+    basic += [{'id': x['id'], 'bioguide': x.get('bioguide')} for x in elect if x['id'] not in profiled]
     # Results-only nominees, for their tiles on the Races page: known by "id" when they have one (a sitting senator's
     # directory ID, whose portrait is the same), else by their FEC candidate ID (public/results.js nomineeKey).
     nominees = [{'id': n.get('id') or n['fecCand'], 'bioguide': n.get('bioguide')} for r in D.get('liteRaces', []) for n in r['nominees']]

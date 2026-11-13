@@ -24037,6 +24037,30 @@
       "stateLeg": null,
       "official": null,
       "stateLegYears": null
+    },
+    {
+      "id": "ojeda",
+      "name": "Richard Ojeda",
+      "short": "Ojeda",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6NC09218",
+      "fecCmte": "C00896357",
+      "chamber": "H",
+      "state": "NC",
+      "race": "H-NC-09",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://ojedafornc.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
     }
   ],
   "selectedVotes": [
