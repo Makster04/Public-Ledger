@@ -152261,6 +152261,284 @@
         }
       ],
       "resultsOnly": true
+    },
+    {
+      "id": "ojeda",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "hudson",
+      "district": "NC-09",
+      "name": "Richard Ojeda",
+      "short": "Ojeda",
+      "party": "D",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "race": "H-NC-09",
+      "status": "Democratic nominee; won the March 3, 2026 primary with 41.8% over Nigel Bristow, Lent Carr and Loren Bibler",
+      "statusSrc": {
+        "t": "Wikipedia: Richard Ojeda",
+        "u": "https://en.wikipedia.org/wiki/Richard_Ojeda"
+      },
+      "opponent": "Richard Hudson (R)",
+      "born": 1970,
+      "since": "Retired Army major and former West Virginia state senator (2016–2019); no current office",
+      "roles": "West Virginia Senate, District 7, December 2016–January 2019 (resigned); Democratic nominee for West Virginia's 3rd District, 2018 (lost to Carol Miller, 43.6% to 56.4%); U.S. Army, 1989–2014, retired as a major (two tours in Iraq; two Bronze Stars); JROTC instructor, Chapmanville Regional High School, 2013–2017; Candidate for president (2018–2019) and for the U.S. Senate in West Virginia (2020 primary, second)",
+      "background": "Born in Rochester, Minnesota, in 1970 and raised in Logan, West Virginia; a bachelor's degree from West Virginia State University and a master's from Webster University. As a state senator he sponsored West Virginia's medical cannabis law, signed in April 2017. In May 2016 he was beaten at a campaign event by a man with ties to his primary opponent, who was later sentenced. He moved back to North Carolina, where he had lived during his Army career, in 2020, and unseated Rep. Richard Hudson, chair of House Republicans' campaign committee.",
+      "site": "https://ojedafornc.com/",
+      "fecCand": "H6NC09218",
+      "fecCmte": "C00896357",
+      "cmteName": "Ojeda For NC",
+      "bioguide": null,
+      "recordType": "state_legislator",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care",
+          "detail": "His platform says \"Expand Medicaid in North Carolina and stop federal sabotage by corrupt politicians,\" \"Cap prescription drug costs and hold Big Pharma accountable\" and \"I will codify Roe v. Wade, protect the right to choose.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Richard Ojeda for NC09: Ensuring Quality Healthcare",
+            "u": "https://ojedafornc.com/ensuring-quality-healthcare/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: Social Security",
+          "detail": "He says \"Oppose raising the retirement age or privatizing the system\" and \"Make billionaires pay their fair share to keep the program strong.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Richard Ojeda for NC09: Saving Social Security",
+            "u": "https://ojedafornc.com/saving-social-security-2/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: wages and unions",
+          "detail": "He backs \"Raise wages so full-time work means security, not poverty\" and \"Repeal \"Right to Work\" laws that weaken unions and keep pay low.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Richard Ojeda for NC09: Standing Up for Working Families",
+            "u": "https://ojedafornc.com/standing-up-for-working-families/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: veterans and immigration",
+          "detail": "He says \"Protect pensions and benefits veterans have already earned,\" \"Prioritize mental health care for veterans and families\" and \"Replace ICE with an accountable and lawful immigration enforcement system.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Immigration",
+          "src": {
+            "t": "Richard Ojeda for NC09: Immigration",
+            "u": "https://ojedafornc.com/immigration/"
+          }
+        },
+        {
+          "date": "2017-04-19",
+          "title": "West Virginia Medical Cannabis Act",
+          "detail": "As a state senator, he sponsored West Virginia's Medical Cannabis Act, which Gov. Jim Justice signed into law on April 19, 2017 (as Wikipedia describes it; the bill record itself was not read).",
+          "position": "Sponsored (state law)",
+          "area": "Health care",
+          "src": {
+            "t": "Wikipedia: Richard Ojeda",
+            "u": "https://en.wikipedia.org/wiki/Richard_Ojeda"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Refusing corporate PAC money",
+          "said": {
+            "text": "\"This campaign doesn't take a dime from corporate PACs or lobbyists.\" (his campaign homepage); on election night he said he would \"get corporate money out of our politics.\"",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Richard Ojeda for NC09",
+              "u": "https://ojedafornc.com/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027. Whether any corporate PAC gave to his campaign is checked against the FEC's records of each PAC once its contributions are read.",
+            "date": "2026-11-04",
+            "src": {
+              "t": "WFAE / NC Newsroom: Ojeda defeats Republican campaign chairman Hudson in NC's 9th Congressional District (Nov. 4, 2026)",
+              "u": "https://www.wfae.org/2026-11-04/richard-ojeda-defeats-republican-hudson-9th-district"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A pledge the records can check; not reviewed yet.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and NC Newsroom (WFAE/WUNC) coverage for ethics complaints, lawsuits and investigations involving Ojeda; none were found. Not ethics matters: his January 2019 resignation from the West Virginia Senate (citing frustration; he later asked to rescind it) and his profane 2019 remarks about politicians and the NRA. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his Wikipedia profile, campaign website and NC Newsroom (WFAE/WUNC) coverage for ethics complaints, lawsuits and investigations involving Ojeda; none were found. Not ethics matters: his January 2019 resignation from the West Virginia Senate (citing frustration; he later asked to rescind it) and his profane 2019 remarks about politicians and the NRA. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 2930069.22,
+        "indiv": 2895423.47,
+        "itemized": 846549.99,
+        "unitemized": 2048873.48,
+        "party": 1003.53,
+        "pac": 33342.22,
+        "transfers": 0,
+        "disbursements": 2941847.53,
+        "cash": 45572.22,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Ojeda For Nc (C00896357), 2025-01-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jan 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 2930069.22,
+        "indiv": 2895423.47,
+        "itemized": 846549.99,
+        "unitemized": 2048873.48,
+        "party": 1003.53,
+        "pac": 33342.22,
+        "transfers": 0,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 2941847.53,
+        "cash": 45572.22,
+        "debts": 0,
+        "cmte": "Ojeda For NC",
+        "cmteId": "C00896357",
+        "start": "2025-01-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00896357/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 300,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 365945.4,
+          "other": 0,
+          "party": 0,
+          "total": 365945.4
+        },
+        "against": {
+          "super_pac": 0,
+          "other": 0,
+          "party": 0,
+          "total": 0
+        },
+        "parts": {
+          "S": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 365945.4,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 13,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            35,
+            365945.4,
+            0,
+            0,
+            0,
+            13,
+            "2026-07-14",
+            "2026-09-01"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [],
+      "resultsOnly": true
     }
   ],
   "ie": {
@@ -154506,7 +154784,8 @@
       "YARD SIGNS, GRAPHIC DESIGN (ESTIMATE)",
       "RADIO ADS FOR VOTER REGISTRATION AND FOR CLIFF JOHNSON AND SCOTT COLOM (APPORTIONED 1/2) 8/17-8/30",
       "BILLBOARDS FOR DEMOCRATIC NOMINEES CLIFF JOHNSON AND SCOTT COLOM (APPORTIONED 1/2)",
-      "ESTIMATE: EMAIL SERVICES"
+      "ESTIMATE: EMAIL SERVICES",
+      "DIGITAL ADVERTISING- ACTUAL COST"
     ],
     "cands": {
       "S6ME00159": "Susan M. Collins",
@@ -154607,7 +154886,9 @@
       "S6MS00133": "Scott Colom",
       "S4MS00187": "Ty Pinkins",
       "S6SC04437": "Darline Graham",
-      "S6SC04239": "Annie Andrews"
+      "S6SC04239": "Annie Andrews",
+      "H6NC09218": "Richard Ojeda",
+      "H2NC08185": "Richard Hudson"
     },
     "rows": {
       "S-ME": [
@@ -215196,6 +215477,151 @@
           "",
           "2026-10-05"
         ]
+      ],
+      "H-NC-09": [
+        [
+          "2026-07-14",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          601,
+          "1998588",
+          "",
+          "2026-07-16"
+        ],
+        [
+          "2026-07-14",
+          35,
+          "H2NC08185",
+          "O",
+          21505,
+          602,
+          "1998588",
+          "",
+          "2026-07-16"
+        ],
+        [
+          "2026-07-14",
+          35,
+          "H2NC08185",
+          "O",
+          2922.5,
+          602,
+          "1998588",
+          "",
+          "2026-07-16"
+        ],
+        [
+          "2026-07-21",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          622,
+          "2009567",
+          "",
+          "2026-08-24"
+        ],
+        [
+          "2026-07-28",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          601,
+          "2002862",
+          "",
+          "2026-07-30"
+        ],
+        [
+          "2026-08-04",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          601,
+          "2004534",
+          "",
+          "2026-08-06"
+        ],
+        [
+          "2026-08-07",
+          35,
+          "H2NC08185",
+          "O",
+          1822.5,
+          602,
+          "2005235",
+          "",
+          "2026-08-09"
+        ],
+        [
+          "2026-08-07",
+          35,
+          "H2NC08185",
+          "O",
+          42300,
+          602,
+          "2005235",
+          "",
+          "2026-08-09"
+        ],
+        [
+          "2026-08-11",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          601,
+          "2006098",
+          "",
+          "2026-08-13"
+        ],
+        [
+          "2026-08-18",
+          35,
+          "H2NC08185",
+          "O",
+          38000,
+          601,
+          "2008152",
+          "",
+          "2026-08-20"
+        ],
+        [
+          "2026-08-19",
+          35,
+          "H2NC08185",
+          "O",
+          23131.8,
+          600,
+          "2008152",
+          "",
+          "2026-08-20"
+        ],
+        [
+          "2026-08-25",
+          35,
+          "H2NC08185",
+          "O",
+          23131.8,
+          600,
+          "2009885",
+          "",
+          "2026-08-27"
+        ],
+        [
+          "2026-09-01",
+          35,
+          "H2NC08185",
+          "O",
+          23131.8,
+          600,
+          "2010712",
+          "",
+          "2026-09-03"
+        ]
       ]
     },
     "raceTotal": {
@@ -215243,7 +215669,8 @@
       "H-FL-22": 293348.86,
       "H-FL-25": 6209588.11,
       "S-MS": 3248067.98,
-      "S-SC": 859103.81
+      "S-SC": 859103.81,
+      "H-NC-09": 365945.4
     },
     "source": "FEC Schedule E independent expenditures (bulk file plus processed and e-filed data), compiled and deduplicated by the Follow the Money 2026 project; general-election designations only."
   },

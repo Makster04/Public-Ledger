@@ -1,0 +1,19 @@
+{
+  "about": "House districts left out of public/members-elect.json (scripts/build-members-elect.mjs): a race not called yet, or a result no source on file confirms. Remove a district once its race is called, then run npm run house:elect again.",
+  "skip": {
+    "AK-AL": "Not called yet (Quorum, Nov. 12, 2026)",
+    "CA-04": "Not called yet (Quorum, Nov. 12, 2026)",
+    "CA-23": "Not called yet (Quorum, Nov. 12, 2026)",
+    "CO-04": "Not called yet (Quorum, Nov. 12, 2026)",
+    "LA-05": "Runoff Dec. 12, 2026",
+    "LA-06": "Runoff Dec. 12, 2026",
+    "ME-02": "Not called yet (Quorum, Nov. 12, 2026)",
+    "MN-01": "Not called yet (Quorum, Nov. 12, 2026)",
+    "NC-03": "Not called yet (Quorum, Nov. 12, 2026)",
+    "NC-05": "Not called yet (Quorum, Nov. 12, 2026)",
+    "NC-07": "Not called yet (Quorum, Nov. 12, 2026)",
+    "NC-10": "Not called yet (Quorum, Nov. 12, 2026)",
+    "TN-04": "Not called yet (Quorum, Nov. 12, 2026)",
+    "TX-38": "No source on file confirms the result yet"
+  }
+}

@@ -46,7 +46,7 @@ test('the page scores the same way: its scorer, context and basic profiles come 
   // (the Ideology lean comes from the alignment questions: each person's stances are worked out once, before scoring)
   assert.match(app,/const QCTX=\{list:QUESTIONS\.questions,categories:QUESTIONS\.categories\};/);
   assert.match(app,/const sixOf=s=>\{if\(!sixCache\.has\(s\.id\)\)sixCache\.set\(s\.id,SCORER\.six\(withQ\(s\),SIX_CTX\)\)/);
-  assert.match(app,/\[\.\.\.SENATE,\.\.\.HOUSE\]\.filter\(x=>!byId\[x\.id\]\)\.map\(x=>\[x\.id,basicShape\(Object\.assign\(markBasic\(x\)/);
+  assert.match(app,/\[\.\.\.SENATE,\.\.\.HOUSE,\.\.\.ELECT\]\.filter\(x=>!byId\[x\.id\]\)\.map\(x=>\[x\.id,basicShape\(Object\.assign\(markBasic\(x\)/);
   // (basicShape only adds empty money parts, so the full design's tabs can draw; it changes no scored input)
   assert.match(app,/function basicShape\(x\)\{/);
   for(const f of ['research','committees','committee-sectors','vote-party','senate','house','attendance','get-it-done','conflicts','group-ratings','questions','question-stances'])assert.ok(boot.includes(`'/${f}.json'`),f);

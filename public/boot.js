@@ -10,6 +10,7 @@ try {
   const presentationLog=fetch('/score-presentation-log.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const senate=fetch('/senate.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const house=fetch('/house.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const elect=fetch('/members-elect.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const execTrades=fetch('/exec-trades.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const voteParty=fetch('/vote-party.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const attendance=fetch('/attendance.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
@@ -45,6 +46,8 @@ try {
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
   const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress}:null;
+  // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).
+  const el=await elect;window.MEMBERS_ELECT=el?.members||[];window.ELECT_RACES=el?.races||[];window.ELECT_INFO=el?{built:el.built,source:el.source}:null;
   await import('./app.js');
   // The ticker under the top bar (public/ticker.js): race calls, rule changes, ratings, and the refresh's newest trades
   // and disclosures. A person is named from the profiles and both chambers' directories.
