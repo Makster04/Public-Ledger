@@ -25,6 +25,7 @@
     "bills:cosponsors": "node --env-file-if-exists=.dev.vars scripts/fill-bill-cosponsors.mjs",
     "pacs:types": "node --env-file-if-exists=.dev.vars scripts/build-pac-types.mjs",
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
+    "superpacs:races": "node scripts/build-super-pac-races.mjs",
     "funders:bundled": "node --env-file-if-exists=.dev.vars scripts/build-bundled.mjs",
     "review:money": "node scripts/review-money.mjs",
     "review:pledges": "node scripts/review-pledges.mjs",

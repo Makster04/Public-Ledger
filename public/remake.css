@@ -1219,6 +1219,10 @@ input, select { accent-color: var(--accent); }
 .lk-amt small { display: block; color: var(--muted); font-size: .74rem; }
 .lk-sp { grid-column: 2 / -1; color: var(--muted); font-size: .78rem; margin-top: -2px; }
 .lk-sp b { color: var(--ink-2); font-weight: 700; }
+.lk-sp + .lk-sp { margin-top: 0; }
+.lk-help { color: var(--ink-2); }
+.sp-others { margin: 0 0 6px; padding-left: 18px; }
+.sp-others li { margin: 2px 0; }
 .tr-tabs { display: flex; flex-wrap: wrap; margin: 6px 0 12px; }
 .tr-tabs button { display: inline-flex; align-items: center; gap: 6px; }
 .tr-tabs .lk-mark { font-size: .78rem; }

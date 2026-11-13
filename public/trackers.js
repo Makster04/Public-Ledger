@@ -163,3 +163,55 @@ export function trackerSuperPacs(t,data,cand){
   }
   return {named,funded:funded.sort((a,b)=>b.given-a.given)};
 }
+
+// ---------- Spent to help them win (approved 2026-11-13) ----------
+// What a tracker's own super PACs spent to help one candidate win this cycle, from public/super-pac-races.json (the FEC's
+// independent expenditures, primaries and generals; scripts/build-super-pac-races.mjs). Each super PAC is judged on its
+// own (a tracker can hold super PACs on both sides of a race, as Big Tech + AI does): what it spent for them, plus what it
+// spent against their opponents in an election they were in, when it spent nothing against them there and either spent
+// for them or the election was a two-way contest (two candidates with outside spending). In a primary or a runoff, only
+// their own party's candidates are their opponents (except in the top-two and top-four states, where everyone runs in
+// one primary); in a general, special or other election, every other candidate for the seat is. A candidate the FEC lists
+// under two IDs in one seat (the same name) is one person. Spending against them is kept apart; spending for or against
+// the race's other candidates that doesn't count is listed. ids: their FEC candidate IDs (their own and any other
+// campaign's). null without the file or without any spending in their races.
+export const ELECTION_LABEL={P:'Primary',G:'General',R:'Runoff',S:'Special',O:'Other',C:'Convention'};
+const OPEN_PRIMARY=new Set(['CA','WA','AK']);
+const personKey=c=>{const [last,first]=String(c?.[0]||'').toUpperCase().split(',');return `${(last||'').replace(/[^A-Z]/g,'')}|${String(first||'').trim().split(/\s+/)[0].replace(/[^A-Z]/g,'')}|${c?.[1]}`;};
+export function helpToWin(t,races,ids){
+  if(!races?.rows||!t?.superPacs?.length)return null;
+  const C=races.cands||{},who=Object.fromEntries(Object.entries(C).map(([id,c])=>[id,personKey(c)]));
+  const mine=new Set((ids||[]).filter(id=>C[id]).map(id=>who[id]));if(!mine.size)return null;
+  // Each person in these seats: their seat, party and the elections they were in (all their IDs together).
+  const people={};
+  for(const [id,c] of Object.entries(C)){const k=who[id],p=people[k]||(people[k]={name:c[0],seat:c[1],party:'',ele:''});if(!p.party&&c[2])p.party=c[2];for(const e of String(c[3]))if(!p.ele.includes(e))p.ele+=e;}
+  const seats=new Set([...mine].map(k=>people[k].seat));
+  // The candidates in one election of a seat, from one candidate's view: their opponents are their party's in a primary.
+  const field=(me,ele)=>Object.entries(people).filter(([k,p])=>p.seat===me.seat&&p.ele.includes(ele)&&(!['P','R'].includes(ele)||OPEN_PRIMARY.has(me.seat.split('-')[1])||!me.party||!p.party||p.party===me.party)).map(([k])=>k);
+  // Each super PAC's spending in these seats: by super PAC, election, person and side.
+  const by=new Map(),key=(sp,ele,k,so)=>`${sp}|${ele}|${k}|${so}`,get=(...a)=>by.get(key(...a))||0;
+  const lines=[];
+  for(const [sp,cand,so,ele,amount] of races.rows){
+    if(races.spenders?.[sp]?.[1]!==t.key||!C[cand]||!seats.has(C[cand][1]))continue;
+    const k=who[cand],a=Number(amount)||0;by.set(key(sp,ele,k,so),get(sp,ele,k,so)+a);
+    lines.push({sp,spName:races.spenders[sp][0],person:k,cand,name:people[k].name,party:people[k].party,so,ele,amount:a});
+  }
+  if(!lines.length)return null;
+  const forThem=[],againstThem=[],rivals=[],others=[];
+  for(const l of lines){
+    if(mine.has(l.person)){(l.so==='O'?againstThem:forThem).push(l);continue;}
+    // Against an opponent: counts when this super PAC backed one of their candidates there and didn't go after them.
+    const me=[...mine].map(k=>({k,...people[k]})).find(m=>m.seat===people[l.person].seat&&m.ele.includes(l.ele));
+    const f=me&&field(me,l.ele),rival=me&&l.so==='O'&&f.includes(l.person)&&f.includes(me.k);
+    const counts=rival&&!get(l.sp,l.ele,me.k,'O')&&(get(l.sp,l.ele,me.k,'S')>0||(f.length===2&&!get(l.sp,l.ele,l.person,'S')));
+    (counts?rivals:others).push(l);
+  }
+  const sum=list=>cents(list.reduce((a,r)=>a+r.amount,0)),f=sum(forThem),a=sum(rivals);
+  return {help:cents(f+a),forThem:f,againstRivals:a,againstThem:sum(againstThem),rows:{forThem,againstThem,rivals,others}};
+}
+// "EL-SAYED, ABDUL" / "Massie, Thomas" -> "Abdul El-Sayed" / "Thomas Massie".
+export function fecName(n){
+  const [last,first]=String(n||'').split(',').map(x=>x.trim());
+  const cap=w=>w.toLowerCase().replace(/(^|[\s'-])([a-z])/g,(x,a,b)=>a+b.toUpperCase());
+  return first?`${cap(first)} ${cap(last)}`:cap(String(n||''));
+}

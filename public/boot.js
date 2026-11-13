@@ -28,6 +28,8 @@ try {
   const corporatePacs=fetch('/corporate-pacs.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // Each member's tracker money over the last three cycles, for the Tiers page's "Last 6 years" (scripts/build-corporate-pacs.mjs).
   const trackerHistory=fetch('/tracker-history.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // The trackers' super PACs in this cycle's races, primaries and generals (scripts/build-super-pac-races.mjs).
+  const superPacRaces=fetch('/super-pac-races.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
   window.DATA=await response.json();
@@ -46,6 +48,7 @@ try {
   window.GROUP_RATINGS=await groupRatings;
   window.CORP_PACS=await corporatePacs;
   window.TRACKER_HISTORY=await trackerHistory;
+  window.SUPER_PAC_RACES=await superPacRaces;
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
