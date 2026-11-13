@@ -131,6 +131,16 @@ test('a group\'s payments: page after page, saved so a stopped run picks up wher
   calls=[];await conduitPayments('C00797670',2026,{dir,get,log:()=>{}});assert.deepEqual(calls,[]);
   await conduitPayments('C00797670',2026,{dir,get,refresh:true,log:()=>{}});assert.deepEqual(calls,[0,1,2]);
   calls=[];await conduitPayments('C00797670',2026,{dir,get,now:Date.now()+8*86400000,log:()=>{}});assert.deepEqual(calls,[0,1,2]);
+  // The FEC timing out (HTTP 504): asked again after 30 seconds, 1 minute and 2 minutes, then it stops.
+  const d2=fs.mkdtempSync(path.join(os.tmpdir(),'conduits-'));let slowWaits=[],timeouts=0;
+  const flaky=async url=>{if(page(url)===1&&timeouts<2){timeouts++;const e=new Error('api.open.fec.gov returned HTTP 504');e.statusCode=504;throw e;}return reply(page(url));};
+  assert.deepEqual((await conduitPayments('C00797670',2026,{dir:d2,get:flaky,wait:async ms=>{slowWaits.push(ms);},log:()=>{}})).map(r=>r.disbursement_amount),[5,7]);
+  assert.deepEqual(slowWaits,[30000,60000],'two timeouts, then the page came through');
+  const d3=fs.mkdtempSync(path.join(os.tmpdir(),'conduits-'));slowWaits=[];
+  const down=async url=>{if(page(url)===1){const e=new Error('api.open.fec.gov returned HTTP 504');e.statusCode=504;throw e;}return reply(page(url));};
+  await assert.rejects(conduitPayments('C00797670',2026,{dir:d3,get:down,wait:async ms=>{slowWaits.push(ms);},log:()=>{}}),/HTTP 504/);
+  assert.deepEqual(slowWaits,[30000,60000,120000],'three tries, then it stops, keeping the pages read');
+  assert.equal(JSON.parse(fs.readFileSync(path.join(d3,'C00797670.json'),'utf8')).pages,1);
   // The hourly limit more than 7 times in a row: it stops.
   const always=async()=>{const e=new Error('api.open.fec.gov returned HTTP 429');e.statusCode=429;throw e;};
   await assert.rejects(conduitPayments('C00432260',2026,{dir,get:always,wait:async()=>{},log:()=>{}}),/429/);

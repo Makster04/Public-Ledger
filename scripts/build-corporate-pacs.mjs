@@ -174,6 +174,8 @@ async function* lines(zip,inner){
 // Every payment one committee made in a cycle (Schedule B, 100 a page, newest first), with each page saved in dir so a
 // run that stops picks up where it left off; a saved read over a week old (or with refresh) is read again. When the
 // FEC's hourly limit is reached (HTTP 429), it waits (what the FEC says, else 10 minutes) and goes on, up to 7 times.
+// When the FEC times out (HTTP 502, 503 or 504, common on a big committee's later pages), it asks again after 30
+// seconds, then 1 and 2 minutes, before stopping; any other error stops it at once.
 export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,get=url=>requestSource(url,process.env),wait=ms=>new Promise(r=>setTimeout(r,ms)),now=Date.now(),log=console.log}={}){
   const file=path.join(dir,`${cmte}.json`);
   let saved=null;try{saved=JSON.parse(fs.readFileSync(file,'utf8'));}catch{}
@@ -181,11 +183,15 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
   if(saved?.done)return saved.rows;
   const st=saved||{cmte,cycle,started:new Date(now).toISOString(),rows:[],next:`https://api.open.fec.gov/v1/schedules/schedule_b/?committee_id=${cmte}&two_year_transaction_period=${cycle}&per_page=100&sort=-disbursement_date`,pages:0,done:false};
   log(`Reading ${label}'s payments${st.pages?` (picking up at page ${st.pages+1})`:''}…`);
-  let tries=0;
+  let tries=0,slow=0;
   while(st.next){
     let d;
-    try{d=await get(st.next);tries=0;}
+    try{d=await get(st.next);tries=0;slow=0;}
     catch(e){
+      if([502,503,504].includes(e.statusCode)&&++slow<=3){
+        const ms=30000*2**(slow-1);log(`  The FEC timed out reading ${label} (page ${st.pages+1}); asking again in ${ms<60000?`${ms/1000} seconds`:`${ms/60000} minute${ms===60000?'':'s'}`}.`);
+        await wait(ms);continue;
+      }
       if(e.statusCode!==429||++tries>7)throw e;
       const ms=e.retryAfter||600000;log(`  The FEC's hourly limit was reached reading ${label} (page ${st.pages+1}); waiting ${Math.round(ms/60000)} minutes, then going on.`);
       await wait(ms);continue;
