@@ -26,6 +26,8 @@ try {
   // Each profile's promises to voters and whether they kept them (scripts/build-promises.mjs), for Keeps Their Word.
   const promises=fetch('/promises.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const corporatePacs=fetch('/corporate-pacs.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // Each member's tracker money over the last three cycles, for the Tiers page's "Last 6 years" (scripts/build-corporate-pacs.mjs).
+  const trackerHistory=fetch('/tracker-history.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
   window.DATA=await response.json();
@@ -43,6 +45,7 @@ try {
   window.CONFLICTS=await conflicts;
   window.GROUP_RATINGS=await groupRatings;
   window.CORP_PACS=await corporatePacs;
+  window.TRACKER_HISTORY=await trackerHistory;
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};

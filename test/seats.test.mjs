@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
-import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,trackerTotals,kindTotals,conduitList,earmarkTotals,paymentTotals,keptEarmarks,conduitPayments,slimPayment} from '../scripts/build-corporate-pacs.mjs';
+import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,trackerTotals,kindTotals,conduitList,earmarkTotals,paymentTotals,keptEarmarks,conduitPayments,slimPayment,candidateRow,pastCandidates} from '../scripts/build-corporate-pacs.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -159,4 +159,17 @@ test('the title\'s share: of everyone once all are read, else of those read so f
   assert.equal(tookShare({took:14,none:2,waiting:417,vacant:2}),'88% of 16 read');
   assert.equal(tookShare({took:0,none:98,waiting:2}),'0% of 98 read');assert.equal(tookShare({took:1,none:432,waiting:0}),'<1%');
   assert.equal(tookShare({took:0,none:0,waiting:100}),'','no one read yet: nothing');
+});
+
+test('a member\'s other candidate IDs for the six years: the same committee in the same state, or a House incumbent of the same name; not a namesake\'s',()=>{
+  const rows=[
+    'S4NJ00466|KIM, ANDY|DEM|2024|NJ|S|00|O|C|C00648220','H8NJ03206|KIM, ANDY|DEM|2024|NJ|H|03|I|C|C00648220',
+    'S4MI00470|SLOTKIN, ELISSA|DEM|2024|MI|S|00|O|C|C00834218','H8MI08102|SLOTKIN, ELISSA|DEM|2024|MI|H|07|I|C|C00650150',
+    'H2NJ08232|MENENDEZ, ROBERT J.|DEM|2026|NJ|H|08|I|C|C00799767','H2NJ13075|MENENDEZ, ROBERT|DEM|2026|NJ|H|08|C|C|C00799767','S6NJ00289|MENENDEZ, ROBERT|IND|2024|NJ|S|00|I|C|C00264564',
+    'H2OR06100|SALINAS, ANDREA|DEM|2024|OR|H|06|I|C|C00800000','H2NC07146|SOMEONE, ELSE|REP|2022|NC|H|07|C|C|C00800000',
+    'H6NH01990|PAPPAS, CHRIS|DEM|2026|NH|H|01|I|C|C00630012','S6NH00141|PAPPAS, CHRIS|DEM|2026|NH|S|00|O|C|C00630012'].map(candidateRow);
+  assert.deepEqual(rows[0],{cand:'S4NJ00466',name:'KIM, ANDY',year:2024,state:'NJ',office:'S',ici:'O',pcc:'C00648220'});
+  const byCand=new Map([['S4NJ00466','kim'],['S4MI00470','slotkin'],['H2NJ08232','menendez'],['H2OR06100','salinas'],['H6NH01990','pappas']]);
+  assert.deepEqual(pastCandidates(rows,byCand,2022),{kim:['H8NJ03206'],slotkin:['H8MI08102'],menendez:['H2NJ13075'],pappas:['S6NH00141']},
+    'Kim by his committee, Slotkin by name as the sitting House member, Menendez Jr. by his own committee (not his father\'s Senate ID), Pappas\'s 2026 Senate run; not the other state\'s filing that lists Salinas\'s committee');
 });

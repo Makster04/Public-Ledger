@@ -39,3 +39,16 @@ test('the real file: every sitting member read is placed once, each chamber on i
   }
   const d=chamberTiers(cp,'defense',H);assert.ok(TIER_KEYS.every(k=>d.tiers[k].length),'Big Defense spreads across all five in the House');
 });
+
+test('the six years (tracker-history.json): three cycles of PAC checks, the same members and trackers, at least this cycle\'s money',()=>{
+  const h=read('../public/tracker-history.json'),cp=read('../public/corporate-pacs.json');
+  assert.deepEqual(h.cycles,[cp.cycle-4,cp.cycle-2,cp.cycle]);assert.equal(h.from,`${cp.cycle-5}-01-01`);
+  assert.deepEqual(Object.keys(h.trackers).sort(),Object.keys(cp.trackers).sort());
+  assert.deepEqual(Object.keys(h.people).sort(),Object.keys(cp.people).sort(),'the same members read');
+  let n=0,lower=0;
+  for(const [key,list] of Object.entries(cp.trackers))for(const [id,v] of Object.entries(list)){n++;const six=trackerAmount(h,key,id);if(six<v[0])lower++;}
+  assert.ok(lower/n<0.02,`six years at least this cycle's PAC checks for nearly everyone (${lower} of ${n} lower, from refunds of earlier gifts)`);
+  for(const list of Object.values(h.trackers))for(const v of Object.values(list))assert.equal(v.length,2,'PAC dollars and PACs only: no passed-on gifts');
+  const H=read('../public/house.json').members.filter(x=>!x.delegate);
+  assert.ok(chamberTiers(h,'wallstreet',H).typical>chamberTiers(cp,'wallstreet',H).typical,'six years\' typical amount is larger');
+});

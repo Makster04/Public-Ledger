@@ -34,6 +34,16 @@
 //   party committees left out, as the FEC's PAC total leaves them out), so Big Money Independence can weigh PAC money by
 //   type for every member, not only the profiles with reviewed PAC lines.
 //
+// It also writes public/tracker-history.json, each member's money from each tracker over the last three cycles
+// (2021–22, 2023–24 and this one: six years, one full Senate term), for the Tiers page's "Last 6 years": the same PAC
+// checks from each cycle's pas2 and cm files, matched to the members the same way, and to each member's earlier
+// candidate IDs too, found in the FEC's candidate files (cn): a House member now in the Senate files under a new ID, so
+// an ID counts as theirs when it names the same principal campaign committee as their current one in the same state, or
+// is a House ID with the same name and state that ran as an incumbent in these cycles (pastCandidates). Forwarded gifts aren't in it (AIPAC's PAC checks only, for now):
+//   {about, built, cycles: [2022, 2024, 2026], from, through, people: {id: 1} for every member read,
+//    trackers: {key: {id: [PAC dollars, number of its PACs]}}, only members who took some,
+//    linked: {id: [earlier candidate IDs]}}
+//
 //   npm run corporate:pacs               downloads into .local/fec-bulk/ (the pas2 file is shared with
 //                                        scripts/build-funder-history.mjs) and writes the file; files over a week old
 //                                        are downloaded again
@@ -203,6 +213,56 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
   return st.rows;
 }
 
+// One cn.txt line (the FEC's candidate file) -> {cand, name, year, state, office, ici, pcc}, or null.
+export function candidateRow(line){
+  const c=String(line).split('|');if(c.length<10||!/^[HSP]\d[A-Z0-9]+$/.test(c[0]))return null;
+  return {cand:c[0],name:c[1],year:Number(c[3])||0,state:c[4],office:c[5],ici:c[7],pcc:c[9]||null};
+}
+// "BUDD, THEODORE P." -> "BUDD|THEODORE": the last name and the first word of the first.
+const nameKey=n=>{const [last,first]=String(n||'').toUpperCase().split(',');return `${(last||'').replace(/[^A-Z]/g,'')}|${String(first||'').trim().split(/\s+/)[0].replace(/[^A-Z]/g,'')}`;};
+// Each member's other candidate IDs: those naming the same principal campaign committee as a current ID of theirs, in
+// the same state (a House member now in the Senate, or running for it), or House IDs with the same name and state that
+// ran as an incumbent from the first of these cycles on (one who opened a new committee for the Senate). The rules leave
+// out a namesake's IDs (Rob Menendez Jr. and his father's Senate and old House IDs) and a filing that lists another
+// state's committee. rows: candidate rows from every cycle read; byCand: current candidate ID -> member; from: the
+// first cycle. {member id: [other IDs]}.
+export function pastCandidates(rows,byCand,from=0){
+  const pcc=new Map(),who=new Map();
+  for(const r of rows){if(byCand.has(r.cand)){const id=byCand.get(r.cand);if(r.pcc)pcc.set(`${r.pcc}|${r.state}`,id);who.set(`${nameKey(r.name)}|${r.state}`,id);}}
+  const out={};
+  for(const r of rows){
+    if(byCand.has(r.cand)||!['H','S'].includes(r.office))continue;
+    const id=(r.pcc&&pcc.get(`${r.pcc}|${r.state}`))||(r.office==='H'&&r.ici==='I'&&r.year>=from?who.get(`${nameKey(r.name)}|${r.state}`):null);
+    if(id&&!(out[id]||=[]).includes(r.cand))out[id].push(r.cand);
+  }
+  return out;
+}
+// The Tiers page's six years: the last three cycles' PAC checks from each tracker, read the way this cycle's are, with
+// each member's other candidate IDs. Each cycle's files are downloaded into dir (this cycle's are already there).
+export const HISTORY_CYCLES=3;
+export async function trackerHistory({cycle,dir,refresh=false,byCand,through=''}){
+  const cycles=Array.from({length:HISTORY_CYCLES},(_,i)=>cycle-2*(HISTORY_CYCLES-1-i)),all=[];let last=through;
+  // Each member's earlier candidate IDs, from every cycle's candidate file; their checks count too.
+  const rows=[];
+  for(const cy of cycles){const cn=await download(`cn${String(cy).slice(2)}.zip`,cy,dir,refresh);for await(const line of lines(cn.file,'cn.txt')){const r=candidateRow(line);if(r)rows.push(r);}}
+  const linked=pastCandidates(rows,byCand,cycles[0]),both=new Map(byCand);
+  for(const [id,ids] of Object.entries(linked))for(const c of ids)both.set(c,id);
+  for(const cy of cycles){
+    const yy=String(cy).slice(2),cm=await download(`cm${yy}.zip`,cy,dir,refresh),pas2=await download(`pas2${yy}.zip`,cy,dir,refresh),names=new Map(),keysOf=new Map();
+    for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(k)names.set(k[0],k[2]);}
+    for await(const line of lines(pas2.file,'itpas2.txt')){
+      const x=committeeCheck(line);if(!x||!both.has(x.cand))continue;
+      if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
+      const keys=keysOf.get(x.cmte);if(keys.length)all.push({...x,keys});
+    }
+  }
+  for(const x of all){const d=iso(x.date);if(d>last&&d<=new Date().toISOString().slice(0,10))last=d;}
+  const trackers=Object.fromEntries(Object.entries(trackerTotals(all,both)).map(([k,v])=>[k,Object.fromEntries(Object.entries(v).map(([id,x])=>[id,x.slice(0,2)]))]));
+  return {about:'Each sitting member\'s PAC money from each tracker over the last three cycles (six years, one full Senate term), from FEC bulk files, for the Tiers page. Forwarded gifts are not included. See scripts/build-corporate-pacs.mjs.',
+    built:new Date().toISOString().slice(0,10),cycles,from:`${cycles[0]-1}-01-01`,through:last||null,
+    people:Object.fromEntries([...new Set(byCand.values())].map(id=>[id,1])),trackers,linked};
+}
+
 async function main(argv){
   const config=JSON.parse(fs.readFileSync(path.join(ROOT,'data','config.json'),'utf8'));
   const cycle=Number(argv[argv.indexOf('--cycle')+1])||Number(config.cycle)||2026,yy=String(cycle).slice(2),refresh=argv.includes('--refresh');
@@ -242,6 +302,9 @@ async function main(argv){
   const aipacIn=readOk.has('aipac')||'aipac' in kept;
   if(process.env.FEC_API_KEY)console.log(`Forwarded gifts: ${readOk.size} of ${keys.length} groups read${Object.keys(kept).length?`, ${Object.keys(kept).length} kept from the last file`:''}; ${Object.keys(earmarks).length} members got some.`);
   const trackers=trackerTotals(tracked,byCand,routed);
+  const history=await trackerHistory({cycle,dir,refresh,byCand,through});
+  fs.writeFileSync(path.join(ROOT,'public','tracker-history.json'),JSON.stringify(history));
+  console.log(`Wrote public/tracker-history.json: ${history.cycles[0]-1}–${cycle}, through ${history.through}.`);
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,
     sources:[{file:path.basename(cm.file),downloaded:cm.downloaded,url:`${BASE}/${cycle}/cm${yy}.zip`},{file:path.basename(pas2.file),downloaded:pas2.downloaded,url:`${BASE}/${cycle}/pas2${yy}.zip`}],
