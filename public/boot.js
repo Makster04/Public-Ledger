@@ -23,6 +23,8 @@ try {
   const questionStances=fetch('/question-stances.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // What the reviewed profiles said, tagged to the questions (scripts/question-statements.mjs).
   const questionStatements=fetch('/question-statements.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // Each profile's promises to voters and whether they kept them (scripts/build-promises.mjs), for Keeps Their Word.
+  const promises=fetch('/promises.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const corporatePacs=fetch('/corporate-pacs.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
@@ -44,6 +46,8 @@ try {
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
+  window.PROMISES=(await promises)||{people:{}};
+  for(const p of [...(DATA.members||[]),...(DATA.cands||[]),...(DATA.featured||[])])p.promises=window.PROMISES.people?.[p.id]||[];
   const sen=await senate;window.SENATE=sen?.senators||[];window.SENATE_INFO=sen?{checked:sen.checked,source:sen.source,congress:sen.congress}:null;
   const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress}:null;
   // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).

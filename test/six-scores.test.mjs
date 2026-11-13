@@ -28,7 +28,8 @@ test('Ideology: a lean on each left–right issue, the overall average, and the 
 
 test('Keeps Their Word and Shows Up: the examples in the proposal',()=>{
   const st=a=>({assessment:a});
-  const w=keepsTheirWord({statements:[st('consistent'),st('consistent'),st('consistent'),st('consistent'),st('partial'),st('contradiction'),{assessment:'consistent',debate:true}]});
+  // 4 kept, 1 first step, 1 compromise, 1 broken: 100 × (4 + 0.75 + 0.5) ÷ 7 = 75.
+  const w=keepsTheirWord({statements:[st('consistent'),st('consistent'),st('consistent'),st('consistent'),st('partial'),st('compromise'),st('contradiction'),{assessment:'consistent',debate:true}]});
   assert.deepEqual([w.pct,w.letter],[75,'C']);
   assert.equal(keepsTheirWord({statements:[st('consistent')]}).pct,null);
   const attendance={source:'https://voteview.com/data',people:{x:{years:{2025:{votes:100,missed:2}},spans:[],missed:{}}},days:{}};

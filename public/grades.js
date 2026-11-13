@@ -66,25 +66,37 @@ export function matchScore(choices,evidence){
   return {score:enough?Math.round(num/effW*100):null,covW,totW,effW,nCov,nChosen:choices.length,need,rows,num};
 }
 
-// Promises delivered: each counted check is 1 if the record supports it, 1/2 if partly supported or the position changed,
-// 0 if contradicted (including a promise left unacted at the end of the term, recorded as a contradiction with `unacted`).
-// Left out: ambiguous and outcome checks, promises with no related bill yet ("pending"), vague goals (`vague: true`), and
-// statements made in debate the day of the vote or the day before (`debate: true`), which nearly always match the vote
-// that follows and so say little about keeping a promise; both are listed on the profile, not scored.
-const COUNTED=new Set(['consistent','partial','changed','contradiction']);
-// trackers: published promise-tracker tallies (PolitiFact's Trump-O-Meter and MAGA-Meter, for a president), counted like
-// checked statements: Promise Kept 1, Compromise ½, Promise Broken 0. Stalled and In the Works wait, like a promise with
-// no related bill yet. [{counts:{kept, compromise, broken, stalled, inTheWorks}}]
-export function promiseScore(statements,trackers){
-  const list=(statements||[]).filter(x=>!x.vague&&!x.debate), c={};
-  for(const x of list)c[x.assessment]=(c[x.assessment]||0)+1;
-  let kept=c.consistent||0, half=(c.partial||0)+(c.changed||0), broken=c.contradiction||0, waiting=0, rated=0;
-  for(const t of trackers||[]){const n=t.counts||{};kept+=n.kept||0;half+=n.compromise||0;broken+=n.broken||0;
-    const w=(n.stalled||0)+(n.inTheWorks||0);waiting+=w;rated+=(n.kept||0)+(n.compromise||0)+(n.broken||0)+w;}
-  const clear=kept+half+broken;
-  return {pct:clear>=MIN_CHECKS?Math.round((kept+half/2)/clear*100):null,kept,half,broken,clear,total:list.length+rated,
-    notCounted:list.filter(x=>!COUNTED.has(x.assessment)).length+waiting,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
-    unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated};
+// Keeps Their Word. Each counted promise or reviewed check is worth: kept 1; a first step toward it (they voted for
+// part of what they promised, such as $12 when they promised $15) 3/4; a compromised version of it that they introduced
+// or (co)sponsored 1/2; broken 0. Broken includes a reversal (a change of position) and a promise to act with no bill
+// introduced, (co)sponsored or voted on within 6 months in office (scripts/build-promises.mjs).
+// Reviewed checks (person.statements): consistent is kept, partial a first step, compromise a compromise, changed and
+// contradiction broken (including a promise left unacted at the end of the term, recorded with `unacted`). Left out:
+// ambiguous and outcome checks, promises with no related bill yet ("pending"), vague goals (`vague: true`), and statements
+// made in debate the day of the vote or the day before (`debate: true`), which nearly always match the vote that follows.
+// promises: public/promises.json for the person: kept, step, compromise and broken count; unclear, no-action (until its
+// deadline passes, then broken) and not-tested wait. A promise on the question of a reviewed pledge (stock trading) is
+// left to the reviewed check.
+// trackers: published promise-tracker tallies (PolitiFact's Trump-O-Meter and MAGA-Meter, for a president): Promise Kept
+// 1, Compromise 1/2, Promise Broken 0. Stalled and In the Works wait. [{counts:{kept, compromise, broken, stalled, inTheWorks}}]
+export const PROMISE_WEIGHT={kept:1,step:0.75,compromise:0.5,broken:0};
+const CHECK_STATUS={consistent:'kept',partial:'step',compromise:'compromise',changed:'broken',contradiction:'broken'};
+const PLEDGE_QUESTION={'stock-trading':'congress-stock-trading'};
+// A promise's status on a day: "no action yet" past its deadline is broken.
+export const promiseStatus=(p,today)=>p?.status==='no-action'&&p.deadline&&today&&p.deadline<=today?'broken':p?.status;
+export function promiseScore(statements,trackers,promises=[],today=null){
+  const list=(statements||[]).filter(x=>!x.vague&&!x.debate), n={kept:0,step:0,compromise:0,broken:0};
+  for(const x of list){const k=CHECK_STATUS[x.assessment];if(k)n[k]++;}
+  let waiting=0,rated=0;
+  for(const t of trackers||[]){const c=t.counts||{};n.kept+=c.kept||0;n.compromise+=c.compromise||0;n.broken+=c.broken||0;
+    const w=(c.stalled||0)+(c.inTheWorks||0);waiting+=w;rated+=(c.kept||0)+(c.compromise||0)+(c.broken||0)+w;}
+  const pledged=new Set(list.map(x=>PLEDGE_QUESTION[x.pledge?.kind]).filter(Boolean));
+  const own=(promises||[]).filter(p=>!(p.qs||[]).some(([q])=>pledged.has(q)));let open=0;
+  for(const p of own){const st=promiseStatus(p,today);if(st in n)n[st]++;else open++;}
+  const clear=n.kept+n.step+n.compromise+n.broken,points=n.kept+PROMISE_WEIGHT.step*n.step+PROMISE_WEIGHT.compromise*n.compromise;
+  return {pct:clear>=MIN_CHECKS?Math.round(points/clear*100):null,...n,half:n.step+n.compromise,points,clear,total:list.length+rated+own.length,
+    notCounted:list.filter(x=>!CHECK_STATUS[x.assessment]).length+waiting+open,open,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
+    unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated+own.length};
 }
 
 // Stock trading: which reviewed trades were disclosed late (or not at all) and which were individual stocks in a sector

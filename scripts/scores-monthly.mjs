@@ -73,9 +73,10 @@ export function compare(before,after){
   for(const id of Object.keys(before||{}))if(!after[id])changes.push({id,grade:'all',from:null,to:null,why:'No longer profiled'});
   return changes.filter(c=>!(c.from===undefined&&c.to===null&&c.why==='First recorded score'));
 }
-// files: the parsed senate.json, house.json, attendance.json, get-it-done.json, conflicts.json and group-ratings.json.
+// files: the parsed senate.json, house.json, attendance.json, get-it-done.json, conflicts.json, group-ratings.json and
+// promises.json.
 export function buildEntry(research,committees,sectors,history,config,date,tallies=null,files={}){
-  const scorer=makeScorer(research,committees,sectors.committees||{},tallies),ctx=sixContext(files);
+  const scorer=makeScorer(research,committees,sectors.committees||{},tallies),ctx=sixContext({...files,today:date});
   const people=gradedPeople(research,{senate:files.senate?.senators||[],house:files.house?.members||[]});
   const scores=Object.fromEntries(people.map(s=>[s.id,personScores(s,scorer,history,ctx)]));
   return {date,formula:SIX,grades:LOGGED_GRADES,reviewedAt:config.reviewedAt,research:crypto.createHash('sha256').update(JSON.stringify(research)).digest('hex').slice(0,12),
@@ -83,7 +84,7 @@ export function buildEntry(research,committees,sectors,history,config,date,talli
 }
 // The files the page scores with, as buildEntry takes them (a missing one is null, as on the page).
 export const sixFiles=()=>({senate:readIf('public/senate.json'),house:readIf('public/house.json'),attendance:readIf('public/attendance.json'),
-  getItDone:readIf('public/get-it-done.json'),conflicts:readIf('public/conflicts.json'),ratings:readIf('public/group-ratings.json')});
+  getItDone:readIf('public/get-it-done.json'),conflicts:readIf('public/conflicts.json'),ratings:readIf('public/group-ratings.json'),promises:readIf('public/promises.json')});
 // The entry before this one to compare with: the latest of the same formula, not from today.
 export const previousOf=(entries,entry)=>entries.filter(e=>e.date!==entry.date&&formulaOf(e)===formulaOf(entry)).at(-1)||null;
 export const ABOUT='Monthly recalculations, after review, of the grades the profiles show from the site\'s own files (Keeps Their Word, Shows Up and People First), for the reviewed profiles and every senator\'s and House member\'s basic profile, with every change and why. Entries marked "retired" logged the grades the six scores replaced (Promises delivered, Ethics and the earlier People First formula) and are kept as they were. Written by scripts/scores-monthly.mjs; newest last.';

@@ -1,0 +1,17 @@
+{
+  "about": "Reviewed verdicts for the promises in public/promises.json (scripts/build-promises.mjs), by person and promise key (\"<first question>@<date>\"). status: kept, step (voted for a first step toward it: counts 3/4), compromise (introduced or (co)sponsored a compromised version: counts 1/2), broken, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed). why is shown on the profile; date is when it was reviewed.",
+  "people": {
+    "ossoff": {
+      "paris-agreement@2020-11-03": {"status": "not-tested", "why": "The President rejoined the Paris Agreement on Jan. 20, 2021, the day Ossoff took office, so there was nothing left to push for; the U.S. left again by executive order in 2025, and neither step came to a Senate vote.", "date": "2026-11-13"}
+    },
+    "kaptur": {
+      "tariffs@2024-11-05": {"status": "unclear", "why": "She promised tariffs that protect Ohio factories. The votes against were to end the 2025 national emergency behind the tariffs on Canadian goods, a broad tariff rather than a targeted one, so whether they go against the promise depends on how it is read.", "date": "2026-11-13"}
+    },
+    "stelson": {
+      "national-sales-tax@2024-11-05": {"status": "not-a-promise", "why": "About her opponent's positions, not a promise of hers.", "date": "2026-11-13"}
+    },
+    "rogers": {
+      "ev-mandate@2024-07-24": {"status": "not-a-promise", "why": "A warning, not a commitment.", "date": "2026-11-13"}
+    }
+  }
+}

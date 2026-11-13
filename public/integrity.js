@@ -29,9 +29,9 @@ export function integrityOverall({honesty=null,personalFinances=null,fundraising
   return {pct:Math.round(raw),raw,weighted,used,missing:Object.keys(values).filter(k=>!used.includes(k)),legalTrouble:legal,why:null};
 }
 
-export function honestyComponent(person){
-  const score=promiseScore(person?.statements,person?.promiseTrackers);
-  const value=score.clear>=3?(score.kept+score.half/2)/score.clear*100:null;
+export function honestyComponent(person,{promises=null,today=null}={}){
+  const score=promiseScore(person?.statements,person?.promiseTrackers,promises??person?.promises??[],today);
+  const value=score.clear>=3?score.points/score.clear*100:null;
   return {value,complete:value!=null,score,why:value==null?'Needs at least three counted, reviewed checks':null,
     sources:[...(person?.statements||[]).flatMap(x=>x.sources||[]),...(person?.promiseTrackers||[]).map(x=>x.src).filter(Boolean)]};
 }

@@ -73,7 +73,7 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
   };
   return {
     bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,cci,actionsOf,
-    promises:s=>promiseScore(s.statements,s.promiseTrackers),
+    promises:(s,today=null)=>promiseScore(s.statements,s.promiseTrackers,s.promises||[],today),
     ethics:s=>ethicsScore(s.ethics,trading(s),{asOfYear}),
     pvp(s){
       // The grade: 75% these actions on scored bills + 25% (100 − the Corporation Compromised Index), once both exist.
@@ -81,12 +81,12 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     },
     // The six scores (public/six-scores.js) that need no refreshed records. Big Money Independence, and Plays by the Rules's trading indexes,
     // also use the official reports read by the refresh, so the page adds those (ctx.trades, ctx.snapshot …).
-    // ctx: {attendance, getItDone, conflicts, trades}.
+    // ctx: {attendance, getItDone, conflicts, trades, promises, today}.
     six(s,ctx={}){
       const v=pvpScore(actionsOf(s)),votes=s.office?null:(s.funderPos?.length?businessLoyalty(s.funderPos,s.party,tallies):null);
       return {
         ideology:ideology(s,data.issues,{ratings:ctx.ratings?.[s.id]||null,questions:ctx.questions||null}),
-        word:keepsTheirWord(s),
+        word:keepsTheirWord(s,{promises:ctx.promises?.[s.id]||null,today:ctx.today||null}),
         showsup:showsUp(s,{attendance:ctx.attendance,getItDone:ctx.getItDone,asOfYear}),
         aboveboard:aboveBoard(s,{trades:ctx.trades||reviewedTrades(s),conflicts:ctx.conflicts,asOfYear}),
         peoplefirst:peopleFirst(v,behaviorCci({businessVotes:votes})),
@@ -111,7 +111,9 @@ export function gradedPeople(data,{senate=[],house=[]}={}){
 // What the six scores read besides the profile, from the files the page loads (public/boot.js): attendance.json,
 // get-it-done.json, conflicts.json and group-ratings.json.
 // questions: {list, categories} from public/questions.json, for the Ideology lean (each person's stances are person.qst).
-export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null,questions=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null,questions:questions||null});
+// promises: public/promises.json (each profile's promises and verdicts); today: the day its "no action yet" deadlines are
+// checked against (default: today).
+export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null,questions=null,promises=null,today=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null,questions:questions||null,promises:promises?.people||null,today:today||new Date().toISOString().slice(0,10)});
 // The grades the monthly change log records: those that come from the site's own files alone, so they're the same on
 // every page that shows them. Big Money Independence, and Plays by the Rules once a profile has read the refresh's trade records, also use
 // the refresh's saved records, so the log leaves them out for now.

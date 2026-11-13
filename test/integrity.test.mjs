@@ -24,7 +24,7 @@ test('overall Integrity normalizes available weights, requires two components an
 
 test('Honesty reuses Promise calculation, its minimum, pending exclusion, and tracker handling',()=>{
   const a=honestyComponent({statements:[{assessment:'consistent'},{assessment:'partial'},{assessment:'contradiction'},{assessment:'pending'},{assessment:'unclear'}]});
-  assert.equal(a.value,50);assert.equal(a.complete,true);assert.equal(a.score.clear,3);
+  assert.equal(a.value,(1+0.75)/3*100,'kept 1, a first step 3/4, broken 0');assert.equal(a.complete,true);assert.equal(a.score.clear,3);
   const fractional=honestyComponent({statements:[{assessment:'consistent'},{assessment:'consistent'},{assessment:'contradiction'}]});
   assert.ok(Math.abs(fractional.value-200/3)<1e-10,'component keeps fractional precision for the weighted overall grade');
   assert.equal(honestyComponent({statements:[{assessment:'consistent'},{assessment:'partial'}]}).value,null);
