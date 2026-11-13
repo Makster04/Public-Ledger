@@ -174,7 +174,7 @@ export function legacyEvidence(evidence,{hasRecord=false}={}){
 export function taggedStatements(said){
   const out={};
   for(const [qid,list] of Object.entries(said||{}))out[qid]=(list||[]).filter(x=>x?.[0]===0||x?.[0]===1).map(([side,date,quote,url,where])=>({side,date:date||null,
-    title:where||'Statement',why:`"${quote}"`,src:url?{u:url,t:/^Campaign website/.test(where||'')?'The saved campaign page':/post/i.test(where||'')?'The post':'Source'}:null,tagged:true}));
+    title:where||'Statement',why:`"${String(quote).replace(/^[\s"“”]+|[\s"“”]+$/g,'')}"`,src:url?{u:url,t:/^Campaign website/.test(where||'')?'The saved campaign page':/post/i.test(where||'')?'The post':'Source'}:null,tagged:true}));
   return out;
 }
 // One person's stance on every question: their row in public/question-stances.json (rec: {question: [a, b, firstA,
