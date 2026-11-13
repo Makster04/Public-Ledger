@@ -509,7 +509,7 @@ Every tab follows the same order:
 - **Personal:** Your Match, with your own position on each issue.
 
 ### Keeps Their Word
-- **Counted:** each promise with its verdict (kept, partly kept, changed, broken), the action that decided it, and where
+- **Counted:** each promise with its verdict (Kept, Partially kept, Broken, Allegedly broken), the action that decided it, and where
   the promise came from: campaign site, speech, post, press release or pledge. Automatic matches are labeled "matched
   automatically."
 - **Shown, not counted:** promises still waiting on a vote, vague goals, and statements made in debate.
@@ -532,8 +532,11 @@ Every tab follows the same order:
 - **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they sponsored or cosponsored.
 - **Shown, not counted:**
   - PAC money not yet processed by the FEC, marked with a *;
-  - the crypto and AI industry: the listed super PACs' spending for and against them, and gifts from the listed
-    companies' employees, with their executives by name;
+  - the Summary of Major Lookouts: for each of the seven trackers (AIPAC, Big Pharma + Insurance, Big Oil, Big Tech + AI,
+    Crypto, Big Defense, Wall Street), whether the campaign took its PAC money or passed-on gifts, with the person's
+    Career Totals club and rank; under AIPAC, Crypto and Big Tech + AI, what their super PACs spent to help them win and
+    against them; and each tracker's panel, with gifts from the listed crypto and AI companies' employees and their
+    executives by name;
   - where the itemized gifts come from: in-state, out-of-state and the top states;
   - outside spending for and against them;
   - Donor Loyalty (whether their votes line up with their funders more than their party's do);

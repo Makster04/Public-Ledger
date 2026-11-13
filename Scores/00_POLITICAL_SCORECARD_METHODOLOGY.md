@@ -4,16 +4,14 @@ This is the canonical guide to every score, index, and position measure currentl
 
 ## At a glance
 
-There are three primary grades: Your Match, Integrity, and People First. Integrity's parameters are provisional.
-
-**As of November 7, 2026, the site shows six scores** on each profile: Ideology (a position, with Your Match inside it) and five grades, Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First. Their definitions and formulas are in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md) and in `public/six-scores.js`. The sections below describe the parts they're built from and the earlier grades (Your Match, Integrity), kept for the score history.
+**Since November 7, 2026, the site shows six scores** on each profile: Ideology (a position, with Your Match inside it) and five grades, Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First. Their definitions and formulas are in [06_SIX_GRADES_PROPOSAL.md](06_SIX_GRADES_PROPOSAL.md) and in `public/six-scores.js`. The sections below describe the parts they're built from and the earlier grades (Your Match, Integrity), kept for the score history.
 
 | Output | Status | What it measures | Evidence minimum |
 |---|---|---|---|
-| Your Match | Published grade | How closely does this politician's record align with your views? Personalized to your answers; it does not measure honesty, ethics, or whether their policies benefit working people | At least 3 issues with evidence and at least 50% of selected issue importance covered |
-| Integrity | Current primary grade; provisional and uncalibrated | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (20%), Personal Finances (20%), Fundraising (25%), Showing Up (15%) and Conflicts of Interest (20%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
+| Your Match | Inside Ideology since November 7, 2026 (a personal comparison) | How closely does this politician's record align with your views? Personalized to your answers; it does not measure honesty, ethics, or whether their policies benefit working people | At least 3 issues with evidence and at least 50% of selected issue importance covered |
+| Integrity | Retired November 7, 2026 (split into Keeps Their Word, Big Money Independence and Plays by the Rules); provisional and uncalibrated when it was shown | How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards? Honesty (20%), Personal Finances (20%), Fundraising (25%), Showing Up (15%) and Conflicts of Interest (20%), less the Legal Trouble Index | At least 2 complete components and a dated, sourced Legal Trouble review |
 | People First | Published grade | How consistently do this politician's legislative actions prioritize working people? 75% legislative-action score + 25% (100 − CCI) | At least 3 scored actions |
-| Statement–action consistency | Per-statement analysis, not a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
+| Statement–action consistency | Dropped (Keeps Their Word covers it); per-statement analysis, never a politician grade | Share of resolved relevant actions classified consistent with a particular statement | At least 1 resolved relevant action by default; configurable |
 
 Letter thresholds are A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F < 60. Each grade rounds its final displayed percentage to a whole number. An insufficient-evidence result is **Not graded**, never an imputed zero.
 
@@ -127,7 +125,8 @@ For each statement independently: `consistent ÷ (consistent + inconsistent) × 
 - **Key-vote position:** share of selected votes on marked bills on which the person took the conservative side; at least three marked votes are required. House and Senate sets differ, so compare within a chamber.
 - **Issue-position bars:** direction and balance of available evidence by issue. Context only; no single overall score.
 - **Campaign receipts, outside spending, donor shares, net-worth ranges, stock holdings/trades, timing flags, and donor-employer figures:** descriptive financial data or review leads, not grades unless explicitly included in a formula above. Outside spending is not treated as money controlled by the candidate.
-- **Get It Done, No-Show, Across the Aisle, Party Rebel, Worker Backed, Grassroots, Super PAC Dependence, Lobbyist Overlap, Contracts for Donors, and Foreign Agent Flag:** proposed measures, not calculated. See [Future goals](../.03_Future_Goals.md#proposed-indices).
+- **The Trackers** (since November 11, 2026; `public/trackers.js`): money to each campaign from seven lobbies, AIPAC, Big Pharma + Insurance, Big Oil, Big Tech + AI, Crypto, Big Defense and Wall Street, shown on each profile's Summary of Major Lookouts, the Trackers page and the seating charts' filter. Their **Career Totals** (every cycle since 1979–80, in dollar clubs) and **Spent to help them win** (the lobbies' super PAC spending for a candidate and against their opponents) are described in [Money & Influence](05_MONEY_&_INFLUENCE_ANALYSIS.md#trackers). None of it changes a grade.
+- **Get It Done and missed votes** are now part of Shows Up. **Across the Aisle** and **Party Rebel** are planned for the Shows Up tab, shown and not counted. **Worker Backed, Grassroots and Super PAC Dependence** won't be built ([Scores/06](06_SIX_GRADES_PROPOSAL.md#decisions-that-go-with-these-grades)). **Lobbyist Overlap, Contracts for Donors and Foreign Agent Flag** are proposed, not calculated. See [Future goals](../.03_Future_Goals.md#proposed-indices).
 
 ## Missing data, sources and history
 

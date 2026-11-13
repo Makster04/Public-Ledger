@@ -1,6 +1,6 @@
 # Money & Influence: descriptive analysis
 
-Money & Influence is not an overall grade. Campaign receipts, PACs, outside spending, donations, holdings, trades, and timing comparisons describe records or identify topics for review. Association and timing do not establish that money caused a decision. Only the explicitly named CCI is an index used in a published grade (People First); Integrity's Fundraising component is a separate preview calculation.
+Money & Influence is not an overall grade. Campaign receipts, PACs, outside spending, donations, holdings, trades, and timing comparisons describe records or identify topics for review. Association and timing do not establish that money caused a decision. Only what a grade's formula names counts: Big Money Independence's donor, PAC, earmark, stock and trade parts and the CCI in People First (see [Scores/06](06_SIX_GRADES_PROPOSAL.md)). Everything else here, the Trackers included, is shown, not graded.
 
 ## Vote Donor Alignment
 
@@ -27,6 +27,43 @@ The index is higher when donor alignment is greater. It is a distinct measure fr
 - **Monthly donation series, donor-company trading, lobbyist overlap, employer giving, contracts, and flags:** shown as data or review leads only unless a guide explicitly says an implemented score consumes that field. No proposed “Super PAC Dependence,” “Lobbyist Overlap,” “Contracts for Donors,” or “Foreign Agent” measure is currently a graded index.
 - **Net worth and holdings:** sourced annual disclosure ranges and asset descriptions are shown, but net worth is not part of any grade. Individual stock holding values enter only Integrity's Personal Finances component when a reviewed snapshot has complete coverage and readable individual-stock ranges.
 
+## Trackers
+
+Seven lobbies whose money to each campaign is followed (`public/trackers.js`; the lists and what each leaves out are in the README's Trackers section): **AIPAC** 🇮🇱, **Big Pharma + Insurance** 💊, **Big Oil** 🛢️, **Big Tech + AI** 🤖, **Crypto** 🤑, **Big Defense** 🪖 and **Wall Street** 💰. A tracker's PACs are matched by FEC committee ID (each checked by hand) or by name; for AIPAC, the gifts it collected from donors and passed on to the campaign count too. None of it changes a grade, and money taken isn't treated as proof that a vote was bought.
+
+### Summary of Major Lookouts
+
+On each profile's Big Money Independence tab, one line per tracker: ✕ when the campaign took PAC checks or passed-on gifts from it in the period picked, ✓ when it took none, and … while a record it needs isn't read yet (never ✓ on missing records). Employees' own gifts show as a smaller number and don't change the mark. Each line also shows the person's Career Totals club and rank.
+
+### Career Totals
+
+Since November 13, 2026 (the Trackers page's second tab, `public/career.js`): every sitting member ranked within their chamber by what their campaigns have taken from a tracker over their whole career, in five dollar clubs.
+
+```text
+career total = Σ over every cycle since 1979–80, under every candidate ID they've had:
+                 checks from the tracker's PACs (refunds subtracted)
+               + for AIPAC: the gifts it passed on (since its PAC began giving, 2021–22)
+club:  ≥ $1,000,000 Million Dollar Club · ≥ $500,000 Half-Million Club · ≥ $100,000 Six-Figure Club
+       · > $0 Under $100,000 · $0 None, ever
+```
+
+Members with the same total share a rank. A member's candidate IDs are those congress-legislators lists for them plus the links found in the FEC's candidate files (the same campaign committee in the same state, a House incumbent's ID with the same name and state, or this cycle's Senate run with the same name, state and party), so a senator's House races count. The FEC's bulk files start with the 1979–80 cycle, so a career that began earlier is counted from then. Until AIPAC's passed-on gifts are read for every cycle since 2021–22, its page says which are missing and the profiles' AIPAC tag waits.
+
+### Spent to help them win
+
+Since November 13, 2026, under AIPAC, Crypto and Big Tech + AI, which spend heavily through their own super PACs (`helpToWin` in `public/trackers.js`, from `public/super-pac-races.json`, built from the FEC's independent-expenditure file):
+
+```text
+Spent to help them win = Σ over the tracker's super PACs:
+    what it spent for them
+  + what it spent against an opponent in an election they were in,
+      when that super PAC spent nothing against them in that election
+      and either spent for them there or the race had just two candidates with outside spending
+Spent against them = what the tracker's super PACs spent against them
+```
+
+Each super PAC is judged on its own, since a tracker can have super PACs on both sides of one race. In a primary or runoff only their own party's candidates are opponents (except in California, Washington and Alaska, where every party runs in one primary). One person filed under two IDs in one seat counts once. Spending in their races that doesn't qualify is listed, not counted. None of this money goes to the campaign, so it doesn't change the ✕ or ✓, a grade or a career total. This cycle only.
+
 ## Data limits
 
-FEC rows, conduit records, outside spending, and official filing imports retain their own source periods. Do not combine numerator and denominator periods. A missing donor-size fetch does not mean unsorted gifts. An absent selected conduit is not proof of zero earmarks. Detailed current limitations are in [Integrity](03_INTEGRITY_SCORE.md) and the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).
+FEC rows, conduit records, outside spending, and official filing imports retain their own source periods. Do not combine numerator and denominator periods. A missing donor-size fetch does not mean unsorted gifts. An absent selected conduit is not proof of zero earmarks. Career Totals count PAC checks and AIPAC's passed-on gifts only: not individual donors, whom the FEC doesn't label by industry. (OpenSecrets' industry totals add individual donors by its own labeling, so its figures run higher; its API closed to new sign-ups in 2025, and its data isn't used here.) Super PAC spending is counted only for the trackers' own super PACs, this cycle. Detailed current limitations are in [Integrity](03_INTEGRITY_SCORE.md) and the [canonical methodology](00_POLITICAL_SCORECARD_METHODOLOGY.md).
