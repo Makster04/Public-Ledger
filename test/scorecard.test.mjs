@@ -106,3 +106,16 @@ test('the funding overview on the card: the shares, a donut, the total, and the 
   // Without a campaign total (or its split), the evidence box as before.
   const none=renderScorecardSvg({...model,trackers});assert.match(none,tag('SEE THE EVIDENCE, NOT JUST THE LETTER\\.'));assert.doesNotMatch(none,/FUNDING OVERVIEW|MAJOR LOOKOUTS/);
 });
+
+test('the card\'s emojis: each tracker\'s as its icon with the mark as a badge, and the reform pledges\' issue emojis; still 4:5',()=>{
+  const seven=['aipac','pharma','oil','tech','crypto','defense','wallstreet'].map((key,i)=>({key,name:key,card:key==='pharma'?'Pharma + Ins.':null,emoji:['🇮🇱','💊','🛢️','🤖','🤑','🪖','💰'][i],status:i===4?'none':i===6?'waiting':'took',total:i===4?0:1000*(i+1),superPac:null}));
+  const pledged=[{title:'Bonuses',items:[{label:'No corporate PAC money',status:'no'}]},{title:'Pledges and bills',items:[{label:'Ban lobbying by former members',status:'no',emoji:'🏛️'},{label:'Ban congressional stock trading',status:'yes',emoji:'🇺🇸'},{label:'Overturn Citizens United',status:'no',emoji:'🗳️'}]}];
+  const svg=renderScorecardSvg({...model,raised:camp.receipts,funding:fundingParts(camp,sizes),trackers:seven,lists:pledged});
+  assert.match(svg,/width="1000" height="1250"/);
+  for(const e of ['🇮🇱','💊','🛢️','🤖','🤑','🪖','💰'])assert.match(svg,new RegExp(`>${e}</tspan>`),e);
+  assert.equal([...svg.matchAll(/<circle [^>]*r="6"[^>]*stroke="#121519"/g)].length,7,'a small badge on each tracker\'s emoji');
+  for(const t of ['🏛️ BAN LOBBYING BY FORMER MEMBERS','🗳️ OVERTURN CITIZENS UNITED'])assert.match(svg,new RegExp(`>${t}</tspan>`),t+' on one line');
+  assert.match(svg,tag('PHARMA \\+ INS\\.'));
+  // Without an emoji, the mark alone, as before.
+  assert.doesNotMatch(renderScorecardSvg({...model,raised:camp.receipts,funding:fundingParts(camp,sizes),trackers}),/r="6"[^>]*stroke="#121519"/);
+});

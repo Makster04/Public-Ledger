@@ -15,18 +15,19 @@
 //   industries          the employee-gift groups the refresh reads for it (public/industries.js, "industry-gifts")
 //   companies, groups   who it follows, as listed on the page
 //   icon                its emoji, after its name on the Summary of Major Lookouts (approved 2026-11-13)
+//   emoji               the one the report card shows as its icon, without the 🎁 (the row's heading says "gifts")
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
 // beside it, and super PAC spending only in the tracker: a super PAC spends on its own, often against the candidate.
 import {SUPER_PACS} from './industries.js';
 
 const P=s=>new RegExp(s);
 export const TRACKERS=[
-  {key:'aipac',icon:'🇮🇱🎁',name:'AIPAC',long:'AIPAC (American Israel Public Affairs Committee)',
+  {key:'aipac',icon:'🇮🇱🎁',emoji:'🇮🇱',name:'AIPAC',long:'AIPAC (American Israel Public Affairs Committee)',
     about:'The American Israel Public Affairs Committee: its PAC\'s checks, the gifts it collects from donors and passes on to campaigns, and its super PAC, United Democracy Project.',
     pacIds:['C00797670'],patterns:[P('^AMERICAN ISRAEL PUBLIC AFFAIRS'),P('^AIPAC\\b')],routed:['aipac'],
     groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},superPacs:['United Democracy Project'],superPacLine:true,industries:[],
     companies:[],groups:['AIPAC PAC']},
-  {key:'pharma',icon:'💊🎁',name:'Big Pharma + Insurance',card:'Pharma + Ins.',long:'Big Pharma + Insurance (drugmakers, health insurers and PBMs)',
+  {key:'pharma',icon:'💊🎁',emoji:'💊',name:'Big Pharma + Insurance',card:'Pharma + Ins.',long:'Big Pharma + Insurance (drugmakers, health insurers and PBMs)',
     about:'Drugmakers, health insurers and the pharmacy benefit managers (PBMs) the biggest insurers own, and their trade groups. Drugmakers and insurers often lobby against each other on drug prices; both give most to the health committees. Medical device makers, distributors, hospitals and drugstore chains aren\'t included.',
     pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345',
       'C00084061','C00085316','C00161141','C00194746','C00197228','C00199711','C00271007','C00274431','C00276311','C00384818','C00388819','C00397851','C00430256','C00450056','C00457242'],
@@ -37,7 +38,7 @@ export const TRACKERS=[
     routed:[],superPacs:[],industries:[],
     companies:['Pfizer','Merck','Johnson & Johnson','AbbVie','Eli Lilly','Bristol Myers Squibb','Amgen','Gilead','Regeneron','Vertex','Biogen','Moderna','Novartis','Sanofi','GSK','AstraZeneca','Novo Nordisk','Genentech (Roche)','Bayer','Boehringer Ingelheim','Takeda','Teva','Viatris','Organon','UnitedHealth Group (Optum Rx)','CVS Health (Aetna, Caremark)','Cigna (Express Scripts)','Elevance Health (Anthem)','Humana','Centene','Molina Healthcare','the Blue Cross Blue Shield plans','Prime Therapeutics'],
     groups:['PhRMA','BIO (Biotechnology Innovation Organization)','Association for Accessible Medicines','AHIP (America\'s Health Insurance Plans)','Blue Cross Blue Shield Association','PCMA (the PBMs\' trade group)']},
-  {key:'oil',icon:'🛢️🎁',name:'Big Oil',long:'Big Oil (oil and gas)',
+  {key:'oil',icon:'🛢️🎁',emoji:'🛢️',name:'Big Oil',long:'Big Oil (oil and gas)',
     about:'Oil and gas producers, refiners, pipelines and LNG, oilfield services, and their trade groups. Koch Industries, coal and mining, and gas utilities aren\'t included.',
     pacIds:['C00035006','C00513549','C00121368','C00040394','C00755454','C00551184','C00109546','C00354753','C00342766','C00246306','C00035204','C00483677','C00430157','C00496307','C00112896','C00429662','C00039503','C00525055','C00035691','C00431932','C00686287','C00083857','C00116145','C00426569','C00415026','C00736421','C00488080','C00510016','C00721647','C00215384','C00135855','C00486779','C00151175','C00438754','C00705996','C00279224','C00496752','C00567081'],
     patterns:['\\bEXXON','\\bCHEVRON\\b','CONOCOPHILLIPS','OCCIDENTAL PETROLEUM','\\bEOG RESOURCES','DEVON ENERGY','DIAMONDBACK ENERGY','CONTINENTAL RESOURCES','COTERRA','OVINTIV','\\bAPACHE CORP','\\bAPA CORP','\\bEQT CORP','EXPAND ENERGY','CHESAPEAKE ENERGY','ANTERO RESOURCES','DIVERSIFIED (GAS|ENERGY)','HILCORP','\\bSHELL (OIL|USA|EMPLOYEE|PETROLEUM)','\\bBP (AMERICA|CORPORATION NORTH)',
@@ -47,7 +48,7 @@ export const TRACKERS=[
     companies:['ExxonMobil','Chevron','ConocoPhillips','Occidental Petroleum','EOG Resources','Devon Energy','Diamondback Energy','Continental Resources','Coterra Energy','Ovintiv','APA (Apache)','EQT','Expand Energy (Chesapeake)','Antero Resources','Diversified Energy','Hilcorp','Shell USA','BP America',
       'Marathon Petroleum','Valero','Phillips 66','HF Sinclair','Delek US','PBF Energy','Energy Transfer','Kinder Morgan','Williams Companies','Enterprise Products','ONEOK','Targa Resources','Plains All American','Enbridge','TC Energy (TransCanada)','Cheniere','Venture Global','NextDecade','Halliburton','SLB (Schlumberger)','Baker Hughes'],
     groups:['American Petroleum Institute','Independent Petroleum Association of America (Wildcatters Fund)','American Exploration & Production Council (US Energy PAC)','American Fuel & Petrochemical Manufacturers','Interstate Natural Gas Association of America','Liquid Energy Pipeline Association','Western Energy Alliance','Energy Marketers of America','National Stripper Well Association','Energy Infrastructure Council']},
-  {key:'tech',icon:'🤖🎁',name:'Big Tech + AI',long:'Big Tech and AI',
+  {key:'tech',icon:'🤖🎁',emoji:'🤖',name:'Big Tech + AI',long:'Big Tech and AI',
     about:'The largest tech platforms, chip and hardware makers and app companies, the AI companies and AI super PACs, and their trade groups. Telecom and cable aren\'t included.',
     pacIds:['C00428623','C00227546','C00360354','C00362707','C00328369','C00369751','C00125641','C00339085','C00498691','C00419036','C00375048','C00323048','C00502906','C00907683','C00416685'],
     patterns:['\\bGOOGLE\\b|\\bALPHABET\\b','\\bMICROSOFT\\b','\\bMETA PLATFORMS\\b|\\bFACEBOOK\\b','\\bAMAZON\\.?COM\\b|\\bAMAZON (SERVICES|WEB)','\\bAPPLE INC','\\bORACLE\\b','SALESFORCE','\\bIBM\\b|INTERNATIONAL BUSINESS MACHINES','\\bADOBE\\b','\\bINTEL CORP','QUALCOMM','ADVANCED MICRO DEVICES','CISCO SYSTEMS','\\bDELL\\b','\\bHP INC|HEWLETT','\\bUBER\\b','\\bNETFLIX\\b','\\bAIRBNB\\b','DOORDASH',
@@ -55,13 +56,13 @@ export const TRACKERS=[
     routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='ai').map(p=>p.name),superPacIds:SUPER_PACS.filter(p=>p.industry==='ai'&&p.id).map(p=>p.id),superPacLine:true,industries:['ai','both'],
     companies:['Alphabet (Google, YouTube)','Microsoft','Meta','Amazon','Apple','Oracle','Salesforce','IBM','Adobe','Intel','Qualcomm','AMD','Cisco','Dell','HP','Uber','Netflix','Airbnb','DoorDash','and the AI companies on the crypto and AI list'],
     groups:['TechNet','Information Technology Industry Council','Consumer Technology Association','Semiconductor Industry Association','BSA (The Software Alliance)']},
-  {key:'crypto',icon:'🤑🎁',name:'Crypto',long:'Crypto',
+  {key:'crypto',icon:'🤑🎁',emoji:'🤑',name:'Crypto',long:'Crypto',
     about:'The crypto companies and the Fairshake and Fellowship super PACs, with the executives approved for naming.',
     pacIds:['C00804179','C00824896'],
     patterns:['COINBASE','\\bRIPPLE\\b','KRAKEN|PAYWARD','\\bGEMINI\\b','CIRCLE INTERNET','GALAXY DIGITAL','CONSENSYS','UNISWAP','PARADIGM OPERATIONS','JUMP TRADING','BLOCKCHAIN ASSOCIATION','ANDREESSEN','FAIRSHAKE'].map(P),
     routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='crypto').map(p=>p.name),superPacIds:SUPER_PACS.filter(p=>p.industry==='crypto'&&p.id).map(p=>p.id),superPacLine:true,industries:['crypto','both'],
     companies:['the crypto companies on the crypto and AI list'],groups:['Blockchain Association']},
-  {key:'defense',icon:'🪖🎁',name:'Big Defense',long:'Big Defense (defense contractors)',
+  {key:'defense',icon:'🪖🎁',emoji:'🪖',name:'Big Defense',long:'Big Defense (defense contractors)',
     about:'Defense contractors: the makers of weapons, warships, military aircraft and engines, munitions and drones, and military services and IT. Commercial-only aerospace, space launch companies, and the rest of GE and Honeywell aren\'t included. The defense trade groups (the Aerospace Industries Association, the National Defense Industrial Association) have no PACs. Palantir also counts in Big Tech + AI.',
     // Approved 2026-11-13. Palantir's PAC (C00498691) is Big Tech + AI's by ID and counts here by name.
     pacIds:['C00303024','C00097568','C00078451','C00088591','C00142711','C00100321','C00129122','C00281212','C00546234','C00709816','C00208983','C00383992','C00731414','C00760710','C00215285','C00123612','C00367995','C00365502','C00686709','C00797530','C00516864','C00763623','C00782532','C00919555','C00275123','C00890830','C00437566','C00024869'],
@@ -71,7 +72,7 @@ export const TRACKERS=[
     routed:[],superPacs:[],industries:[],
     companies:['Lockheed Martin','RTX (Raytheon)','General Dynamics','Northrop Grumman','Boeing','L3Harris (and Aerojet Rocketdyne)','BAE Systems','Huntington Ingalls','Leidos','SAIC','Booz Allen Hamilton','CACI','KBR','ManTech','Peraton','Amentum','V2X','Parsons','General Atomics','Textron','Sierra Nevada','BWX Technologies','Curtiss-Wright','Mercury Systems','Kratos','AeroVironment','Oshkosh','Austal USA','Anduril','Palantir','Shield AI','Epirus','Saronic','Leonardo DRS','Rheinmetall','Elbit America','Saab','Thales USA','Nammo','GE Aerospace','Honeywell Aerospace'],
     groups:[]},
-  {key:'wallstreet',icon:'💰🎁',name:'Wall Street',long:'Wall Street (big banks, investment firms and private equity)',
+  {key:'wallstreet',icon:'💰🎁',emoji:'💰',name:'Wall Street',long:'Wall Street (big banks, investment firms and private equity)',
     about:'The big banks, investment banks and asset managers, private equity, trading firms, the stock and futures exchanges, the card companies and brokerages, and their national trade groups. Community banks and the state bankers associations, credit unions, and insurance companies aren\'t included.',
     // Approved 2026-11-13.
     pacIds:['C00004275','C00008474','C00017558','C00034595','C00035519','C00035535','C00040535','C00072751','C00076299','C00104299','C00105981','C00133389','C00186064','C00253369','C00300178','C00306894','C00326595','C00327072','C00337626','C00350744','C00364778','C00365122','C00366013','C00380550','C00386524','C00410266','C00410274','C00410407','C00431312','C00479246','C00486217','C00488882','C00494534','C00495002','C00515148','C00579540','C00589119','C00689091'],

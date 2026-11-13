@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {ISSUE_ICON,topicCategory} from '../public/issue-icons.js';
+import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from '../public/issue-icons.js';
 import {TRACKERS} from '../public/trackers.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(f,import.meta.url),'utf8'));
@@ -25,4 +25,6 @@ test('every reviewed check\'s topic gets a category, the way the questions file 
 
 test('each tracker has its emojis, shown after its name',()=>{
   assert.deepEqual(Object.fromEntries(TRACKERS.map(t=>[t.key,t.icon])),{aipac:'🇮🇱🎁',pharma:'💊🎁',oil:'🛢️🎁',tech:'🤖🎁',crypto:'🤑🎁',defense:'🪖🎁',wallstreet:'💰🎁'});
+  for(const t of TRACKERS)assert.equal(t.emoji+'🎁',t.icon,`${t.key}: the report card's emoji is its icon without the 🎁`);
+  assert.deepEqual(Object.fromEntries(Object.entries(PLEDGE_CATEGORY).map(([k,c])=>[k,ISSUE_ICON[c]])),{lobbying:'🏛️','stock-trading':'🇺🇸','citizens-united':'🗳️'});
 });
