@@ -180,7 +180,7 @@ promise.
 **Formula** (as of November 13, 2026):
 
 ```text
-Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kept + First steps + Compromises + Broken)
+Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kept + First steps + Compromises + Broken + Allegedly broken)
 ```
 
 **How a promise is checked** (`scripts/build-promises.mjs`, written to `public/promises.json`):
@@ -196,10 +196,12 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kep
    - **First step (¾):** they voted for part of what they promised (for example $12 when they promised $15). A reviewer
      records it.
    - **Compromise (½):** they introduced or (co)sponsored a compromised version. A reviewer records it.
-   - **Broken (0):** every action went against it; or a reversal (after acting its way, at least 2 later bills went
-     against it and none its way since); or a promise to act with no bill introduced, (co)sponsored or voted on within
-     6 months in office, counted from the promise, or from taking office for a promise made as a candidate, while other
-     members of their chamber acted on the question in that time (they had something to join).
+   - **Broken (0):** their own votes went against it: every action went against it, or a reversal (after acting its
+     way, at least 2 later bills went against it and none its way since).
+   - **Allegedly broken (0, counted the same as broken):** a promise to act with no bill introduced, (co)sponsored or
+     voted on within 6 months in office, counted from the promise, or from taking office for a promise made as a
+     candidate, while other members of their chamber acted on the question in that time (they had something to join).
+     The reason says whether they have said anything on it since.
    - **Unclear (not counted until reviewed):** actions both ways, often because a bill mixed the promise with other
      things; or no action from them when nobody else in their chamber acted on the question in that time either in the
      records read (there may have been no bill to join). A reviewer decides in `data/promise-reviews.json`, and the

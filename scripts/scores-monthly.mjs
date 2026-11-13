@@ -36,7 +36,7 @@ export function personScores(s,scorer,history,ctx={}){
     for(const g of s.funderPos||[]){const series={};for(const [m,v] of (h[g.key]||{}).c||[])series[m]=(series[m]||0)+v;
       flags+=timingFlags(g.org,series,(g.compared||[]).map(c=>({date:c.date,match:c.match})),through).length;}}
   return {
-    word:{pct:x.word.pct,kept:w.kept,half:w.half,broken:w.broken,counted:w.clear},
+    word:{pct:x.word.pct,kept:w.kept,half:w.half,broken:w.broken+(w.alleged||0),counted:w.clear},
     showsup:{pct:u.pct,missed:a.complete?a.missed:null,votes:a.complete?a.votes:null,getItDone:d.complete?round1(d.value):null},
     // Counts of actions on each side (each one is weighted by its bill's strength in the grade itself).
     peoplefirst:{pct:pf.pct,people:pf.v?.nPeople??0,profit:pf.v?.nProfit??0,actions:pf.v?.n??0,cci:pf.cci?.index??null},

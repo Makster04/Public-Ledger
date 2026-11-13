@@ -46,10 +46,11 @@ test('verdicts: kept, broken, a reversal, unclear when actions go both ways; ear
   assert.deepEqual([one.forN,one.acts.length],[1,2]);
 });
 
-test('no action: broken after 6 months in office; within them "no action yet"; candidates and promises to oppose are not tested',()=>{
+test('no action: allegedly broken after 6 months in office while others acted; within them "no action yet"; candidates and promises to oppose are not tested',()=>{
   assert.equal(GRACE_MONTHS,6);
   const none=judge(promise,[],office,{today,activity:()=>12});
-  assert.deepEqual([none.status,none.rule],['broken','no-action']);assert.match(none.why,/other members of the Senate acted on it 12 times/);
+  assert.deepEqual([none.status,none.rule],['alleged','no-action']);assert.match(none.why,/other members of the Senate acted on it 12 times\. Nothing they said on it since is on file\./);
+  assert.match(judge(promise,[],office,{today,activity:()=>3,spoke:'2024-05-01'}).why,/They last spoke on it on May 1, 2024\./);
   // Nobody else in their chamber acted on it either: the records may have no bill on it then, so a reviewer decides.
   const quiet=judge(promise,[],office,{today,activity:()=>0});
   assert.deepEqual([quiet.status,quiet.rule],['unclear','no-record']);
@@ -57,7 +58,7 @@ test('no action: broken after 6 months in office; within them "no action yet"; c
   assert.deepEqual([fresh.status,fresh.deadline],['no-action','2027-02-01']);
   assert.equal(judge({...promise,date:'2026-10-01'},[],{from:null,to:null,current:false,takes:true},{today}).status,'not-tested','a member-elect');
   // A 2026 winner who served before is still checked on promises made while they served.
-  assert.equal(judge({...promise,date:'2021-02-01'},[],{from:'2007-01-03',to:'2024-12-20',current:false,takes:true,chamber:'S'},{today,activity:()=>3}).status,'broken');
+  assert.equal(judge({...promise,date:'2021-02-01'},[],{from:'2007-01-03',to:'2024-12-20',current:false,takes:true,chamber:'S'},{today,activity:()=>3}).status,'alleged');
   assert.match(judge({...promise,date:'2026-02-01'},[],{from:'2007-01-03',to:'2024-12-20',current:false,takes:true},{today}).why,/Won in 2026/);
   assert.equal(judge(promise,[],{from:null,to:null,current:false},{today}).status,'not-tested','never in Congress');
   assert.equal(judge({...promise,date:'2026-05-01'},[],{from:'2019-01-03',to:'2025-01-03',current:false},{today}).status,'not-tested','made after leaving');
@@ -82,12 +83,15 @@ test('office window: sitting members from the directory, former members from the
   assert.deepEqual([act(['q'],'S','2025-01-01','2026-01-01'),act(['q'],'S','2025-01-01','2026-01-01','A'),act(['q'],'H','2025-01-01','2026-01-01'),act(['q'],'S','2025-03-15','2026-01-01')],[2,1,1,1]);
 });
 
-test('the grade: kept 1, first step 3/4, compromise 1/2, broken 0; waiting promises aren\'t counted; a passed deadline is broken',()=>{
-  assert.deepEqual(PROMISE_WEIGHT,{kept:1,step:0.75,compromise:0.5,broken:0});
+test('the grade: kept 1, first step 3/4, compromise 1/2, broken and allegedly broken 0; waiting promises aren\'t counted; a passed deadline is allegedly broken',()=>{
+  assert.deepEqual(PROMISE_WEIGHT,{kept:1,step:0.75,compromise:0.5,broken:0,alleged:0});
   const P=(status,extra={})=>({status,qs:[['q',0]],...extra});
-  const s=promiseScore([],[],[P('kept'),P('kept'),P('step'),P('compromise'),P('broken'),P('unclear'),P('not-tested'),P('no-action',{deadline:'2027-01-01'})],today);
-  assert.deepEqual([s.kept,s.step,s.compromise,s.broken,s.clear,s.open,s.pct],[2,1,1,1,5,3,Math.round((2+0.75+0.5)/5*100)]);
-  assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01'}),today),'broken');
+  const s=promiseScore([],[],[P('kept'),P('kept'),P('step'),P('compromise'),P('broken'),P('alleged'),P('unclear'),P('not-tested'),P('no-action',{deadline:'2027-01-01'})],today);
+  assert.deepEqual([s.kept,s.step,s.compromise,s.broken,s.alleged,s.clear,s.open,s.pct],[2,1,1,1,1,6,3,Math.round((2+0.75+0.5)/6*100)]);
+  assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01'}),today),'alleged');
+  // A reviewed check left unacted at the end of the term is allegedly broken; a plain contradiction is broken.
+  const c=promiseScore([{assessment:'contradiction',unacted:{reason:'x'}},{assessment:'contradiction'},{assessment:'changed'}]);
+  assert.deepEqual([c.alleged,c.broken],[1,2]);
   assert.equal(promiseStatus(P('no-action',{deadline:'2027-11-01'}),today),'no-action');
   // A promise on the question of a reviewed stock-trading pledge is left to the reviewed check.
   const dup=promiseScore([{assessment:'unclear',pledge:{kind:'stock-trading'}}],[],[{status:'broken',qs:[['congress-stock-trading',1]]}],today);
