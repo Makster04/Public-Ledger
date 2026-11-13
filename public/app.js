@@ -724,10 +724,37 @@ const gradeHow=()=>`<section class="hc-how" aria-labelledby="hc-how-h"><h2 id="h
     <div><h3>People First</h3>${gradeRule('pvp')}</div>
     <div><h3>Grade scale</h3>${points([['A','90–100'],['B','80–89'],['C','70–79'],['D','60–69'],['F','Below 60'],['Not graded','Too little evidence yet. It never means zero.']],'small')}<p class="small"><a href="#method">Full rules</a></p></div>
   </div></section>`;
-let homeSort='', homeParty='';
+let homeSort='', homeParty='', homeStatus='';
 // The home page's chamber filter: sitting senators (and senators running again), House members, or the challengers and
 // candidates who aren't in office; each choice with how many profiles it holds.
 const inChamber=(s,c)=>!c||(c==='C'?(s.cand&&!s.senInc):((!s.cand||s.senInc)&&s.chamber===c));
+// Where someone stands after the 2026 election: current (in office now: a sitting senator or House member, including those
+// who lost and serve until January), newly elected (won a 2026 race for a seat they don't hold now) or lost (lost a
+// 2026 race). Someone can be both: a House member who won a Senate seat is current and newly elected.
+const SITTING={S:new Set(SENATE.map(m=>m.bioguide).filter(Boolean)),H:new Set(HOUSE.map(m=>m.bioguide).filter(Boolean))};
+// Their 2026 race and their key in it: a profiled race, or a results-only race or member-elect race that lists them by
+// profile, ID, Bioguide ID or FEC candidate ID (raceOf finds only the first two kinds).
+function raceFor(s){
+  const r=raceOf(s);if(r)return [r,raceKey(r,s)];
+  const me=n=>n.profile===s.id||n.id===s.id||(s.bioguide&&n.bioguide===s.bioguide)||(s.fecCand&&n.fecCand===s.fecCand);
+  for(const x of [...DATA.liteRaces,...ELECT_RACES]){const n=(x.nominees||[]).find(me);if(n)return [x,nomineeKey(n)];}
+  return [null,null];
+}
+const STATUS_CACHE=new Map();
+function statusOf(s){
+  if(STATUS_CACHE.has(s.id))return STATUS_CACHE.get(s.id);
+  const out=new Set(),[race,key]=s.office?[null,null]:raceFor(s),o=race&&outcomeOf(race,key);
+  const sits=c=>!s.elect&&(s.bioguide?SITTING[c].has(s.bioguide):(!s.cand||s.senInc)&&s.chamber===c);
+  if(sits('S')||sits('H'))out.add('current');
+  if(o==='won'&&!sits(race.chamber))out.add('new');
+  if(o==='lost')out.add('lost');
+  out.chamber=race?.chamber||null;STATUS_CACHE.set(s.id,out);
+  return out;
+}
+// Political Position with a Status picked: for Newly elected and Lost, Senate and House mean the seat they ran for.
+const inPosition=(s,c,st)=>!c||c==='C'||!['new','lost'].includes(st)?inChamber(s,c):statusOf(s).chamber===c;
+const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet'],['lost','Lost','Lost a 2026 race']];
+const inStatus=(s,k)=>!k||statusOf(s).has(k);
 function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
 // ---------- home ----------
@@ -806,10 +833,7 @@ function renderHome(){
     </div>
   </section>
   <div class="directory-heading"><div><div class="page-eyebrow">THE PEOPLE BEHIND THE RECORD</div><h2>Explore profiles</h2></div><span id="profile-count" class="small muted" role="status"></span></div>
-  <div class="directory-filters">
-  <div class="seg chamber-filter" id="chs" role="group" aria-label="Filter profiles by chamber">${chamberChoices().map(([k,l,n])=>`<button data-c="${k}" aria-pressed="${homeCh===k}" class="${homeCh===k?'active':''}">${l} <span class="seg-n">${n}</span></button>`).join('')}</div>
-  <div class="seg party-filter" id="hparty" role="group" aria-label="Filter profiles by party">${[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>`<button data-p="${k}" aria-pressed="${homeParty===k}" class="${homeParty===k?'active':''}">${l}</button>`).join('')}</div>
-  </div>
+  <div class="directory-filters" id="hfilters">${homeDropdowns()}</div>
   <div class="grid hc-grid" id="cards"></div>
   <details class="directory-method"><summary>How the three grades work</summary>${gradeHow()}</details>
   <section class="section">
@@ -822,7 +846,7 @@ function renderHome(){
   const cards=$('#cards');
   const draw=q=>{
     q=(q||'').trim().toLowerCase();
-    const list=ALL.concat(BASIC_LIST).filter(s=>inChamber(s,homeCh)&&(!homeParty||s.party===homeParty)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?`${s.chamber==='S'?'senate':'house'} candidate open seat`:'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
+    const list=ALL.concat(BASIC_LIST).filter(s=>inPosition(s,homeCh,homeStatus)&&(!homeParty||s.party===homeParty)&&inStatus(s,homeStatus)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?`${s.chamber==='S'?'senate':'house'} candidate open seat`:'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
     // Basic profiles have no reviewed money, so they sort after everyone with it.
     const key={out:s=>s.basic?1:-(s.out.for.total+s.out.against.total),camp:s=>s.basic||s.camp.missing?1:-s.camp.receipts,name:s=>s.short+' '+s.name}[homeSort];
     if(key)list.sort((x,y)=>{const a=key(x),b=key(y);return typeof a==='number'?a-b:String(a).localeCompare(String(b))});
@@ -832,13 +856,39 @@ function renderHome(){
   draw('');fillBasic(cards);
   $('#q').addEventListener('input',e=>{draw(e.target.value);fillBasic(cards);});
   const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);});
-  $('#chs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;homeCh=b.dataset.c;$('#chs').querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});draw($('#q').value);fillBasic(cards);});
-  $('#hparty').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;homeParty=b.dataset.p;$('#hparty').querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});draw($('#q').value);fillBasic(cards);});
+  bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);fillBasic(cards);});
   fillFeatured();
   for(const host of [cards,$('.hero-side')].filter(Boolean)){
     host.addEventListener('click',e=>{const c=e.target.closest('.sen-card');if(c)location.hash=c.dataset.id;});
     host.addEventListener('keydown',e=>{const c=e.target.closest('.sen-card');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();location.hash=c.dataset.id;}});
   }
+}
+
+// The home page's three filters, each a dropdown: Political Position, Party and Status, with each choice's count.
+function homeDropdowns(){
+  const every=ALL.concat(BASIC_LIST),pos=chamberChoices(),POS_NOTE={'':'Everyone on the site',S:'Sitting senators',H:'Sitting House members and members-elect',C:'Running for Congress, not in it now'};
+  const parties=[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']];
+  // Each choice's count, with the other two filters as they are.
+  const n=(c,p,st)=>every.filter(s=>inPosition(s,c,st)&&(!p||s.party===p)&&inStatus(s,st)).length;
+  const menus=[
+    ['c','Political Position',homeCh,pos.map(([k,l])=>[k,l,(['new','lost'].includes(homeStatus)&&{S:'Ran for the Senate in 2026',H:'Ran for the House in 2026'}[k])||POS_NOTE[k],n(k,homeParty,homeStatus)])],
+    ['p','Party',homeParty,parties.map(([k,l])=>[k,l,'',n(homeCh,k,homeStatus)])],
+    ['s','Status',homeStatus,STATUS_CHOICES.map(([k,l,d])=>[k,l,d,n(homeCh,homeParty,k)])]];
+  return menus.map(([k,label,cur,opts])=>{const pick=opts.find(o=>o[0]===cur)||opts[0];
+    return `<div class="hdd" data-k="${k}"><button type="button" class="hdd-b${cur?' on':''}" aria-haspopup="listbox" aria-expanded="false"><span class="hdd-k">${esc(label)}:</span> ${esc(pick[1])}${cur?` <span class="seg-n">${pick[3]}</span>`:''} <span class="hdd-car" aria-hidden="true">▾</span></button>
+      <div class="hdd-menu" role="listbox" aria-label="${esc(label)}" hidden>${opts.map(([v,l,d,n])=>`<button type="button" role="option" class="hdd-opt" data-v="${esc(v)}" aria-selected="${v===cur}"><span class="hdd-ck" aria-hidden="true">${v===cur?'✓':''}</span><span>${esc(l)}${d?`<small>${esc(d)}</small>`:''}</span><span class="hdd-n">${n}</span></button>`).join('')}</div></div>`;}).join('');
+}
+// Opens one dropdown at a time; a choice calls pick(key, value). Escape or a click outside closes it.
+function bindDropdowns(host,pick){
+  const close=()=>host.querySelectorAll('.hdd').forEach(d=>{d.querySelector('.hdd-menu').hidden=true;d.querySelector('.hdd-b').setAttribute('aria-expanded','false');});
+  host.addEventListener('click',e=>{
+    const opt=e.target.closest('.hdd-opt');if(opt){const d=opt.closest('.hdd');close();pick(d.dataset.k,opt.dataset.v);host.querySelector(`.hdd[data-k="${d.dataset.k}"] .hdd-b`)?.focus();return;}
+    const b=e.target.closest('.hdd-b');if(!b)return;const m=b.nextElementSibling,open=m.hidden;close();
+    if(open){m.hidden=false;b.setAttribute('aria-expanded','true');(m.querySelector('[aria-selected="true"]')||m.querySelector('.hdd-opt'))?.focus();}});
+  host.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){const d=e.target.closest('.hdd');close();d?.querySelector('.hdd-b')?.focus();return;}
+    if((e.key==='ArrowDown'||e.key==='ArrowUp')&&e.target.closest('.hdd-menu')){e.preventDefault();const o=[...e.target.closest('.hdd-menu').querySelectorAll('.hdd-opt')],i=o.indexOf(e.target);o[(i+(e.key==='ArrowDown'?1:-1)+o.length)%o.length]?.focus();}});
+  document.addEventListener('click',e=>{if(!host.isConnected)return;if(!e.target.closest('#'+host.id))close();});
 }
 
 // ---------- profile ----------
