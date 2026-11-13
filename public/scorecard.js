@@ -59,10 +59,13 @@ function lookoutRow(items,fx,y0,fw){
     ${text('MAJOR LOOKOUTS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE',fx+26,y0+22,{size:11,color:SUB_DARK,width:90,max:1,family:MONO})}
     ${items.map((x,i)=>{const X=fx+26+i*cw,[c,d]=MARK[x.status]||MARK.waiting,o=x.superPac;
       const sp=o&&(o.for>0||o.against>0)?['SUPER PAC:',o.for>0?money(o.for)+' FOR':'',o.against>0?money(o.against)+' AGAINST':''].filter(Boolean).join(' '):'';
-      return `<circle cx="${X+8}" cy="${y0+44}" r="8" fill="${c}"/>${d?`<path d="${d}" transform="translate(${X+8} ${y0+44})" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',X+8,y0+48,{size:11,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
-        ${text(String(x.card||x.name).toUpperCase(),X+22,y0+49,{size:12,color:PAPER,weight:700,width:20,max:1,family:MONO})}
-        ${text(x.status==='waiting'?'NOT READ YET':money(x.total),X+22,y0+71,{size:x.status==='waiting'?11:18,color:x.status==='waiting'?SUB_DARK:x.status==='took'?'#ff8a8a':'#5fe39a',weight:700,width:20,max:1,family:x.status==='waiting'?MONO:SANS})}
-        ${sp?text(sp,X+22,y0+88,{size:9,color:SUB_DARK,width:spW,max:2,lineHeight:11,family:MONO}):''}`;}).join('')}`;
+      const e=x.emoji,tx=X+(e?26:22);
+      const icon=e?`${text(e,X+9,y0+51,{size:19,width:4,anchor:'middle',family:SANS})}<circle cx="${X+16}" cy="${y0+52}" r="6" fill="${c}" stroke="#121519" stroke-width="1.5"/>${d?`<path d="${d}" transform="translate(${X+16} ${y0+52}) scale(.62)" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',X+16,y0+55,{size:8,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}`
+        :`<circle cx="${X+8}" cy="${y0+44}" r="8" fill="${c}"/>${d?`<path d="${d}" transform="translate(${X+8} ${y0+44})" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',X+8,y0+48,{size:11,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}`;
+      return `${icon}
+        ${text(String(x.card||x.name).toUpperCase(),tx,y0+49,{size:e?11:12,color:PAPER,weight:700,width:20,max:1,family:MONO})}
+        ${text(x.status==='waiting'?'NOT READ YET':money(x.total),tx,y0+71,{size:x.status==='waiting'?11:18,color:x.status==='waiting'?SUB_DARK:x.status==='took'?'#ff8a8a':'#5fe39a',weight:700,width:20,max:1,family:x.status==='waiting'?MONO:SANS})}
+        ${sp?text(sp,tx,y0+88,{size:9,color:SUB_DARK,width:spW,max:2,lineHeight:11,family:MONO}):''}`;}).join('')}`;
 }
 /** Produce a standalone SVG containing no remote image links, scripts or foreignObject: a 1000 × 1250 card (an Instagram
  * post's 4:5) on the party's color, in boxes. Row 1: the photo; the name with state, party and chamber; the five grades
@@ -73,8 +76,9 @@ function lookoutRow(items,fx,y0,fw){
  * note takes row 3's place. A card without a checklist (basic profiles) or without net worth (a president) closes up
  * around what it has.
  * model: name, party, state, office, raised, cash, spent, period, wealth ({items: [{label, value, wait, sub}]}), lists
- * ([{title, items: [{label, status: 'yes'|'no'|'waiting'}], empty}]), funding (fundingParts), trackers ([{key, name, card
- * (a shorter label for the card, when the name is long), status: 'took'|'none'|'waiting', total, superPac: {for, against}|null}]), grades, reviewedAt. */
+ * ([{title, items: [{label, status: 'yes'|'no'|'waiting', emoji?: shown before the label}], empty}]), funding (fundingParts),
+ * trackers ([{key, name, card (a shorter label for the card, when the name is long), emoji (its icon, with the mark as a
+ * small badge; without it, the mark alone), status: 'took'|'none'|'waiting', total, superPac: {for, against}|null}]), grades, reviewedAt. */
 export function renderScorecardSvg(model,portraitDataUrl=''){
   const p=PALETTES[model.party]||PALETTES.I,portrait=cleanImage(portraitDataUrl),name=String(model.name||'Public Ledger profile');
   const raw=Array.isArray(model.grades)?model.grades:[];
@@ -116,9 +120,9 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     const head=text(String(x.title||'').toUpperCase(),L.x+22,ly,{size:18,color:PAPER,weight:700,width:30,max:1,family:SANS});ly+=16;
     const items=(Array.isArray(x.items)?x.items:[]);
     const rows=items.length?items.map(it=>{
-      const [c,d]=MARK[it.status]||MARK.no,label=String(it.label||'').toUpperCase(),n=lines(label,30,2).length,y=ly+18;ly+=n*17+10;
+      const [c,d]=MARK[it.status]||MARK.no,label=(it.emoji?it.emoji+' ':'')+String(it.label||'').toUpperCase(),LW=it.emoji?34:30,n=lines(label,LW,2).length,y=ly+18;ly+=n*17+10;
       return `<circle cx="${L.x+34}" cy="${y-5}" r="11" fill="${c}"/>${d?`<path d="${d}" transform="translate(${L.x+34} ${y-5})" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',L.x+34,y,{size:14,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
-        ${text(label,L.x+56,y,{size:13,color:it.status==='yes'?PAPER:SUB_DARK,weight:it.status==='yes'?700:400,width:30,max:2,lineHeight:17,family:MONO})}`;
+        ${text(label,L.x+56,y,{size:13,color:it.status==='yes'?PAPER:SUB_DARK,weight:it.status==='yes'?700:400,width:LW,max:2,lineHeight:17,family:MONO})}`;
     }).join(''):(ly+=34,text(x.empty||'None on file',L.x+22,ly-8,{size:13,color:SUB_DARK,width:40,family:MONO}));
     ly+=24;return head+rows;
   }).join('');

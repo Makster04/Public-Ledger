@@ -26,6 +26,8 @@ const TOPIC_RULES=[
   ['economic',/tax|tariff|trade|budget|deficit|debt|spending|wage|worker|bank|auto|farm|\bsalt\b|big beautiful|seafood|econom|poverty|income|costs?\b/i],
   ['governance',/ethic|scandal|gift|gaming board|shutdown|impeach|disclosure|leadership|infighting|bipartisan|working across|power of the purse|fraud|congress/i],
   ['social',/abortion|dobbs|lgbtq|transgender|church|religio|indigenous/i]];
+// The reform pledges' categories, for their emoji on the report card.
+export const PLEDGE_CATEGORY={lobbying:'governance','stock-trading':'domestic','citizens-united':'electoral'};
 export function topicCategory(topic){
   const t=String(topic||'');
   for(const [cat,re] of TOPIC_RULES)if(re.test(t))return cat;

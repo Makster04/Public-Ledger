@@ -15,7 +15,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES} from './industries.js';
-import {ISSUE_ICON,topicCategory} from './issue-icons.js';
+import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
@@ -1023,9 +1023,9 @@ function bindProfileActions(s,pane){
     const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
     const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
     const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
-      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null,
+      lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:(u.pledgeItems||[]).map(p=>({...p,emoji:ISSUE_ICON[PLEDGE_CATEGORY[p.kind]]||null})),empty:'No pledges or bills on file'}]:null,
       funding:c?fundingParts(c,d?.sizes):null,
-      trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,card:TRACKER[x.key].card||null,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
+      trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,card:TRACKER[x.key].card||null,emoji:TRACKER[x.key].emoji||null,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
     openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
@@ -1824,7 +1824,7 @@ function paneUnbought(s,pane){
   const fillTrackers=()=>{const el=pane.querySelector('#u-trackers');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=trackersHTML(s,live,lookoutInputs(s,live,period,sp),sp);el.replaceWith(tmp.firstElementChild);keepTimeline();};
   const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
-    sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they cosponsored.'],
+    sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they sponsored or cosponsored.'],
     needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
