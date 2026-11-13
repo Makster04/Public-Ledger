@@ -83,11 +83,14 @@ test('a stock-trading pledge is checked against the bans\' sponsors, cosponsors 
 
 test('the money pledges on file are tagged, checked, and never change the Promise score',()=>{
   const all=allPledges(D);
-  assert.equal(all.length,12);
+  assert.equal(all.length,29);
   for(const {statement:x,check:c} of all){assert.ok(PLEDGE_KINDS[x.pledge.kind]);assert.ok(c.outcomeLabel);}
   const by=Object.fromEntries(all.map(({person,statement,check})=>[`${person.id}:${statement.pledge.kind}`,check]));
-  assert.deepEqual(Object.keys(by).sort(),['booker:corporate-pac','booker:single-issue-pac','conley:corporate-pac','elsayed:corporate-pac','hinson:stock-trading','marshall:stock-trading',
-    'mgp:stock-trading','ossoff:corporate-pac','ossoff:stock-trading','pappas:stock-trading','ricketts:stock-trading','stratton:corporate-pac']);
+  assert.deepEqual(Object.keys(by).sort(),['ager:stock-trading','andrews:corporate-pac','andrews:stock-trading','booker:corporate-pac','booker:single-issue-pac','brooks:stock-trading',
+    'cognetti:corporate-pac','cognetti:stock-trading','colom:citizens-united','colom:stock-trading','conley:corporate-pac','cooke:citizens-united',
+    'cooke:stock-trading','dandiya:stock-trading','elsayed:corporate-pac','hinson:stock-trading','lawrence:corporate-pac','luria:stock-trading',
+    'marshall:stock-trading','mgp:stock-trading','ossoff:corporate-pac','ossoff:stock-trading','pappas:stock-trading','ricketts:stock-trading',
+    'stratton:corporate-pac','tronegarriott:citizens-united','tronegarriott:corporate-pac','tronegarriott:stock-trading','villegas:corporate-pac']);
   assert.equal(by['ossoff:stock-trading'].outcome,'mixed','sponsored bans, and voted against the Stop Insider Trading Act');
   assert.ok(by['ossoff:stock-trading'].actions.some(a=>a.measure==='S. 3494'),'his 2022 ban counts as a version of S. 1879');
   for(const k of ['mgp','hinson','pappas','ricketts'])assert.equal(by[`${k}:stock-trading`].outcome,'kept',k);

@@ -124,7 +124,7 @@ const SCORER=makeScorer(DATA,COMMITTEES,COMMITTEE_SECTORS,window.VOTE_PARTY);
 const PVP_MARKS=SCORER.marks, PVP_BILLS=SCORER.bills, committeesOf=SCORER.committeesOf, fullCommittee=SCORER.fullCommittee, overseenSectors=SCORER.overseen;
 const personPvp=SCORER.pvp, personTrading=SCORER.trading, personEthics=SCORER.ethics;
 const icH=s=>s.ideoKind==='house'?'H':s.chamber;
-const chipCh=s=>s.office?CH[s.chamber].member:s.senInc?'Senate':s.cand?(s.openSeat?'Senate candidate':(s.chamber==='S'?'Senate challenger':'House challenger')):CH[s.chamber].name;
+const chipCh=s=>s.office?CH[s.chamber].member:s.senInc?'Senate':s.cand?(s.openSeat?`${CH[s.chamber].name} candidate`:(s.chamber==='S'?'Senate challenger':'House challenger')):CH[s.chamber].name;
 const CH={S:{name:'Senate',noun:'senator',nouns:'senators',votes:DATA.votes,member:'Senate'},H:{name:'House',noun:'representative',nouns:'representatives',votes:DATA.hvotes,member:'House'},P:{name:'Presidency',noun:'president',nouns:'presidents',votes:[],member:'President'}};
 const fmt$=n=>{if(n==null)return'—';const a=Math.abs(n);if(a>=1e6)return'$'+(n/1e6).toFixed(a>=1e7?1:2)+'M';if(a>=1e3)return'$'+(n/1e3).toFixed(a>=1e5?0:1)+'K';return'$'+n.toFixed(0)};
 const fmtFull=n=>n==null?'—':'$'+Math.round(n).toLocaleString('en-US');
@@ -256,22 +256,34 @@ const ORGS=makeOrgs(DATA);
 const orgName=(name,about,inner)=>about?`<span class="org" data-tip="${esc(`${name}: ${about}`)}">${inner??esc(name)}</span>`:(inner??esc(name));
 const candName=id=>IE.cands[id]||id;
 const flag=(t,why)=>`<span class="flag" ${why?`data-tip="${esc(why)}" tabindex="0"`:''}>${t}</span>`;
-function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))}
-function rivalsOf(s){const r=raceOf(s);return r?r.keys.filter(k=>k!==s.id).map(k=>byId[k]):[]}
+// A profile's 2026 race: the profiled race they ran in, or the results-only race whose nominee names their profile.
+function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))||DATA.liteRaces.find(r=>r.nominees.some(n=>n.profile===s.id))}
+// Their key in that race: their profile ID in a profiled race; in a results-only race, the key the race knows them by.
+const raceKey=(r,s)=>r&&!r.keys?nomineeKey(r.nominees.find(n=>n.profile===s.id)||{})||s.id:s.id;
+// Who a key in a race is: their full or basic profile (a House nominee's basic profile found by their Bioguide ID), or
+// the nominee as a results-only race lists them.
+function racePerson(r,k){
+  if(r?.keys)return byId[k]||null;
+  const n=r?.nominees?.find(x=>nomineeKey(x)===k);if(!n)return byId[k]||BASIC[k]||null;
+  const p=byId[n.profile]||BASIC[k]||(n.bioguide?BASIC_LIST.find(x=>x.bioguide===n.bioguide):null);
+  return p?{...p,fecCand:p.fecCand||n.fecCand||null}:{id:k,name:n.name,short:String(n.name||'').split(/\s+/).pop(),party:n.party,fecCand:n.fecCand||null};
+}
+function rivalsOf(s){const r=raceOf(s);if(!r)return [];const me=raceKey(r,s);return (r.keys||r.nominees.map(nomineeKey)).filter(k=>k!==me).map(k=>racePerson(r,k)).filter(Boolean)}
 // ---------- November 3, 2026 results (public/results.js) ----------
 const resultChip=o=>o?`<span class="chip ${OUTCOME[o].cls}">${OUTCOME[o].label}</span>`:'';
 const decidedChip=o=>o==='pending'?'':resultChip(o);
 const resultSrc=x=>x&&x.u?`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a>`:'';
 const RESULTS_ASOF=()=>DATA.election?`unofficial results as of ${fmtDate(DATA.election.asof)}`:'';
 // Their 2026 line ("Seeking a 6th term") in the past tense once their race is decided.
-const termNow=s=>{const r=raceOf(s);return termAfter(s.term,r?outcomeOf(r,s.id):null)};
+const termNow=s=>{const r=raceOf(s);return termAfter(s.term,r?outcomeOf(r,raceKey(r,s)):null)};
 // One profiled person's result: their outcome, and a line saying how the race was decided and what it means for the seat.
 function personResult(s){
   const race=raceOf(s),r=raceResult(race);if(!r)return null;
-  const o=outcomeOf(race,s.id),w=r.winner&&byId[r.winner];
+  const key=raceKey(race,s),o=outcomeOf(race,key),w=r.winner&&racePerson(race,r.winner);
+  const incumbent=race.keys?race.inc===s.id:!!race.nominees.find(n=>nomineeKey(n)===key)?.incumbent;
   const to=o==='lost'?`to ${w?w.name:'another candidate'}`:'';
   const line=parts=>parts.filter(Boolean).map(x=>x.replace(/\.$/,'')).join('. ')+'.';
-  const rest=[r.how||(r.decided?'Race called':''),seatNote(race,s.id,{incumbent:race.inc===s.id,winner:w&&w.name})];
+  const rest=[r.how||(r.decided?'Race called':''),seatNote(race,key,{incumbent,winner:w&&w.name})];
   // text: the whole sentence ("Lost to Jon Ossoff. Called by …"); after: what follows the Won, Lost or Not called yet label.
   return {o,src:r.src,text:line([OUTCOME[o].label+(to?' '+to:''),...rest]),after:line([to,...rest])};
 }
@@ -774,7 +786,7 @@ function renderHome(){
     <div class="row hero-actions"><a class="cta" href="#align">Set my priorities <span aria-hidden="true">→</span></a><a class="hero-secondary" href="#method">How the grades work ↗</a></div>
     <details class="coverage-details"><summary>About the research <span>Snapshot: ${esc(DATA.asof)}</span></summary>
     ${points([
-      ['Who is covered',`${nS} senators and ${nH} House members on the November 3, 2026 ballot, their ${CANDS.filter(c=>!c.openSeat&&!c.senInc).length} opponents, and ${CANDS.filter(c=>c.openSeat).length} nominees for ${DATA.races.filter(r=>r.open).length} open Senate seats. That includes all ${nComp} Senate races rated competitive by Cook, Inside Elections or Sabato.`],
+      ['Who is covered',`${nS} senators and ${nH} House members on the November 3, 2026 ballot, their ${CANDS.filter(c=>!c.openSeat&&!c.senInc&&!c.resultsOnly).length} opponents, and ${CANDS.filter(c=>c.openSeat&&!c.resultsOnly).length} nominees for ${DATA.races.filter(r=>r.open).length} open Senate seats.${CANDS.some(c=>c.resultsOnly)?` Since the election, ${CANDS.filter(c=>c.resultsOnly).length} winners of races shown with results only have profiles too.`:''} That includes all ${nComp} Senate races rated competitive by Cook, Inside Elections or Sabato.`],
       DATA.election&&['November 3 results',resultsLine()],
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
@@ -806,7 +818,7 @@ function renderHome(){
   const cards=$('#cards');
   const draw=q=>{
     q=(q||'').trim().toLowerCase();
-    const list=ALL.concat(BASIC_LIST).filter(s=>inChamber(s,homeCh)&&(!homeParty||s.party===homeParty)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?'senate candidate open seat':'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
+    const list=ALL.concat(BASIC_LIST).filter(s=>inChamber(s,homeCh)&&(!homeParty||s.party===homeParty)&&(!q||[s.name,s.state,s.stateName,s.district||'',s.cand?(s.openSeat?`${s.chamber==='S'?'senate':'house'} candidate open seat`:'challenger '+(s.chamber==='S'?'senate':'house')):s.chamber==='S'?'senate senator':'house representative',partyName(s.party)].join(' ').toLowerCase().includes(q)));
     // Basic profiles have no reviewed money, so they sort after everyone with it.
     const key={out:s=>s.basic?1:-(s.out.for.total+s.out.against.total),camp:s=>s.basic||s.camp.missing?1:-s.camp.receipts,name:s=>s.short+' '+s.name}[homeSort];
     if(key)list.sort((x,y)=>{const a=key(x),b=key(y);return typeof a==='number'?a-b:String(a).localeCompare(String(b))});
@@ -3390,8 +3402,9 @@ const numFmt=n=>Number(n).toLocaleString('en-US');
 // county: the state's own count (countyTally), shown instead of the count on file when it is as recent or newer.
 function resultCard(r,county=null){
   const lite=!r.keys,res=raceResult(r),t=county||tallyOf(r);
-  // A results-only nominee who is a sitting senator opens their basic profile; others have no profile yet.
-  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k);return {id:k,name:n.name,party:n.party,href:BASIC[k]||byId[k]?'#'+k:''};};
+  // A results-only nominee opens their profile: a winner's full profile, or a sitting member's basic one.
+  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k),p=racePerson(r,k);
+    return {id:byId[n.profile]?n.profile:k,name:n.name,party:n.party,href:p&&(byId[p.id]||BASIC[p.id])?'#'+p.id:''};};
   const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(nomineeKey));
   const tile=k=>{const p=who(k),row=t&&t.rows.find(x=>x.key===k),o=outcomeOf(r,k),tag=p.href?'a':'div';
     return `<${tag} class="rc-c${o==='won'?' won':''}"${p.href?` href="${p.href}"`:''}>${portrait(p)}
@@ -3499,15 +3512,15 @@ function renderRaces(){
   const lite=ch=>DATA.liteRaces.filter(r=>(r.chamber||'H')===ch),LS=lite('S'),LH=lite('H');
   app.innerHTML=`
   <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''}</div><h1 style="margin-top:8px">The races</h1>
-  <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them on election night or the morning after, with how much of the vote was counted. They change as counting finishes.']].filter(Boolean),'lede-pts')}
+  <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them, with how much of the vote was counted: most from election night or the morning after, and a race called later with the count from its call. They change as counting finishes.']].filter(Boolean),'lede-pts')}
   <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length+LS.length})</button><button data-c="H">House (${H.length+LH.length})</button></div>
   <label class="small muted">Jump to <select id="rj">${S.concat(LS,H,LH).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
   const draw=ch=>{const L=DATA.races.filter(r=>r.chamber===ch),card=r=>`<div id="r-${r.id}">${resultCard(r)}</div>`;
     $('#rlist').innerHTML=ch==='S'?`<h2 style="margin-top:8px">Competitive Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Rated Toss-up, Tilt or Lean by at least one forecaster (Cook, Inside Elections or Sabato's Crystal Ball, Sept. 2026).</p>${L.filter(r=>r.competitive).map(card).join('')}<h2 style="margin-top:26px">Other Senate races covered</h2>${L.filter(r=>!r.competitive).map(card).join('')}
-        <h2 style="margin-top:26px">The rest of the 2026 Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LS.length} Senate races on the November 3 ballot, with results only. Open a sitting senator for their Senate profile; their opponents don't have profiles yet.</p>${LS.map(card).join('')}`
+        <h2 style="margin-top:26px">The rest of the 2026 Senate races</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LS.length} Senate races on the November 3 ballot, with results only. Open a sitting senator for their Senate profile, or a winner who has a profile now; the other nominees don't have profiles yet.</p>${LS.map(card).join('')}`
       :`<h2 style="margin-top:8px">House toss-ups with full profiles</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">Eight of the ${L.length+LH.length} House races the Cook Political Report rated Toss-up (Sept. 25, 2026). Open a candidate for their profile.</p>${L.map(card).join('')}
-        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Their nominees don't have profiles yet.</p>${LH.map(card).join('')}`;
+        <h2 style="margin-top:26px">Other House toss-ups</h2><p class="small muted" style="margin:4px 0 0;max-width:80ch">The other ${LH.length} Cook toss-ups. Open a winner for their profile, or a sitting member for their House profile; the other nominees don't have profiles yet.</p>${LH.map(card).join('')}`;
     bindTips(app);fillMaps($('#rlist'));};
   draw('S');
   $('#rs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#rs .active').classList.remove('active');b.classList.add('active');draw(b.dataset.c);});
@@ -4222,9 +4235,9 @@ function renderMethod(sub){
     <h2>Who is covered</h2>
     <ul class="list">
       <li><b>Senate incumbents:</b> six senators on the November 3, 2026 ballot, three Republicans and three Democrats, as a bipartisan mix of competitive and safe seats. Two senators first picked were replaced because they won't be on the ballot: Sen. Lindsey Graham (R-SC) died in July 2026, and Sen. Markwayne Mullin (R-OK) left the Senate for an administration post.</li>
-      <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their records, statements, ethics and campaign money are not shown yet.</li>
+      <li><b>House:</b> the Cook Political Report rates 22 House races Toss-up (Sept. 25, 2026). Eight have full profiles of both nominees, four seats held by each party. The other 14 are on the Races page with their nominees (verified from results or news reports) and the November 3 results. Their nominees' records, statements, ethics and campaign money are not shown, except the winners who weren't already in the House: each has a full profile, added after the election (${CANDS.filter(c=>c.resultsOnly&&c.chamber==='H').length} of them).</li>
       <li><b>Challengers and open seats:</b> every opponent of those incumbents, and both major-party nominees in each open Senate race (plus independent Seth Bodnar in Montana). Nominees were confirmed from primary and runoff results.</li>
-      <li><b>The rest of the 2026 Senate races:</b> the ${DATA.liteRaces.filter(r=>r.chamber==='S').length} other Senate races on the November 3 ballot, including Florida's special election, are on the Races page with results only: the nominees, each one's share of the vote, the reported turnout and the winner. Sitting senators link to their Senate page profile; their opponents don't have profiles yet.</li>
+      <li><b>The rest of the 2026 Senate races:</b> the ${DATA.liteRaces.filter(r=>r.chamber==='S').length} other Senate races on the November 3 ballot, including Florida's special election, are on the Races page with results only: the nominees, each one's share of the vote, the reported turnout and the winner. Sitting senators link to their Senate page profile. Winners who weren't already in the Senate have full profiles, added after the election (${CANDS.filter(c=>c.resultsOnly&&c.chamber==='S').map(c=>esc(c.name)).join(' and ')||'none yet'}); the other nominees don't have profiles yet.</li>
       <li><b>Every other senator and House member:</b> a basic profile for each sitting senator and member of the House not in these races (see the <a href="#senate">Senate</a> and <a href="#house">House</a> pages): their place in Congress, their committees, and the records the refresh collects. Ideology, Shows Up and People First are figured from official records alone, the same way as on the full profiles: their positions on the coded roll calls, their attendance and their bills. Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research. House members with a basic profile get a lighter set of refresh checks (their bills, their House disclosures and their campaign totals). The lists come from the congress-legislators project.</li>
       <li><b>Ohio and Nebraska:</b> Sen. Jon Husted (appointed in January 2025) and Sen. Pete Ricketts are profiled with their opponents, Sherrod Brown and independent Dan Osborn. No Democrat is on the Nebraska ballot: the nominee withdrew in July 2026 and the state party named no replacement.</li>
     </ul>

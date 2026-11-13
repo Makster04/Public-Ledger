@@ -173,7 +173,7 @@ test('the saved county results fit their race and map, and add up',()=>{
   assert.match(C.about,/Unofficial/);
   for(const [id,r] of Object.entries(C.races)){
     const race=D.races.find(x=>x.id===id)||D.liteRaces.find(x=>x.id===id);assert.ok(race,id);assert.equal(r.state,race.state,id);
-    const m=map(r.state),fips=new Set(m.counties.map(c=>c.fips)),keys=new Set([...(race.keys||race.nominees.map(n=>n.fecCand||n.id)),'other']);
+    const m=map(r.state),fips=new Set(m.counties.map(c=>c.fips)),keys=new Set([...(race.keys||race.nominees.map(n=>n.id||n.fecCand)),'other']);
     assert.deepEqual(r.candidates.map(c=>c.key).filter(k=>!keys.has(k)),[],id);
     let sum=0;for(const [f,v] of Object.entries(r.counties)){assert.ok(fips.has(f),`${id}: ${f} is on the map`);for(const [k,n] of Object.entries(v)){assert.ok(keys.has(k),`${id}: ${k}`);assert.ok(Number.isInteger(n)&&n>=0);sum+=n;}}
     assert.equal(sum,r.total,id);assert.match(r.source.u,/^https:\/\//);assert.match(r.fetched,/^\d{4}-\d{2}-\d{2}T/);

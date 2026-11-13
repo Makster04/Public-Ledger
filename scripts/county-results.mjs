@@ -775,7 +775,7 @@ export function raceCandidates(research,id){
   const race=research.races.find(r=>r.id===id),people=[...research.members,...research.cands];
   if(race)return race.keys.map(k=>{const p=people.find(x=>x.id===k);return {key:k,name:p.name,party:p.party};});
   const lite=research.liteRaces.find(r=>r.id===id);if(!lite)throw new Error('no race '+id);
-  return lite.nominees.map(n=>({key:n.fecCand||n.id,name:n.name,party:n.party}));
+  return lite.nominees.map(n=>({key:n.id||n.fecCand,name:n.name,party:n.party}));
 }
 // Rows → votes by county FIPS and candidate key. map: the state's outlines (public/maps/<ST>.json).
 export function byCounty(rows,cands,map){

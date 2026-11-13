@@ -28,7 +28,7 @@ const strip=s=>String(s||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').repla
 export function missing(research,index,extra,directory=[]){
   const out=[],seen=new Set(),add=(id,name,state)=>{if(!id||seen.has(id)||index.people?.[id]||(extra[id]&&(!extra[id].skip||extra[id].lookup===false)))return;seen.add(id);out.push({id,name,state:STATES[state]||state});};
   for(const p of [...research.members,...research.cands,...(research.featured||[])])add(p.id,p.name,p.state);
-  for(const r of research.liteRaces)for(const n of r.nominees)add(n.fecCand||n.id,n.name,r.state);
+  for(const r of research.liteRaces)for(const n of r.nominees)add(n.id||n.fecCand,n.name,r.state);
   for(const x of directory)add(x.id,x.name,x.state);
   return out;
 }

@@ -7,8 +7,8 @@ const index=JSON.parse(await fs.readFile(new URL('portraits/index.json',root),'u
 // Everyone profiled, plus every other sitting senator and member of the House (their basic profiles' cards).
 const senate=JSON.parse(await fs.readFile(new URL('senate.json',root),'utf8')).senators;
 const house=JSON.parse(await fs.readFile(new URL('house.json',root),'utf8')).members;
-// Results-only nominees (liteRaces) are known by their FEC candidate ID, or by id without one.
-const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),house.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.fecCand||n.id))));
+// Results-only nominees (liteRaces) are known by their id, or by their FEC candidate ID without one.
+const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),house.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.id||n.fecCand))));
 test('every portrait belongs to a profiled person, a sitting senator or a House member, exists as a WebP, and says where it came from',async()=>{
   for(const [id,p] of Object.entries(index.people)){
     assert.ok(ids.has(id),id+' is not in research.json, senate.json or house.json');

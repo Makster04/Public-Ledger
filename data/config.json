@@ -23665,6 +23665,378 @@
       "campaignSite": null,
       "openstates": null,
       "legiscan": null
+    },
+    {
+      "id": "colom",
+      "name": "Scott Colom",
+      "short": "Colom",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "S6MS00133",
+      "fecCmte": "C00918359",
+      "chamber": "S",
+      "state": "MS",
+      "race": "S-MS",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://www.scottcolom.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "andrews",
+      "name": "Annie Andrews",
+      "short": "Andrews",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "S6SC04239",
+      "fecCmte": "C00906024",
+      "chamber": "S",
+      "state": "SC",
+      "race": "S-SC",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://drannieandrews.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "mendoza",
+      "name": "JoAnna Mendoza",
+      "short": "Mendoza",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6AZ06099",
+      "fecCmte": "C00897090",
+      "chamber": "H",
+      "state": "AZ",
+      "race": "H-AZ-06",
+      "ids": {},
+      "social": {
+        "bluesky": [
+          "joannamendoza.com"
+        ],
+        "threads": []
+      },
+      "campaignSite": "https://www.joannamendoza.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "villegas",
+      "name": "Randy Villegas",
+      "short": "Villegas",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6CA22190",
+      "fecCmte": "C00902379",
+      "chamber": "H",
+      "state": "CA",
+      "race": "H-CA-22",
+      "ids": {},
+      "social": {
+        "bluesky": [
+          "villegas4congress.bsky.social"
+        ],
+        "threads": []
+      },
+      "campaignSite": "https://villegasforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "dandiya",
+      "name": "Pia Dandiya",
+      "short": "Dandiya",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6FL21059",
+      "fecCmte": "C00906883",
+      "chamber": "H",
+      "state": "FL",
+      "race": "H-FL-22",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://www.piaforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "tronegarriott",
+      "name": "Sarah Trone Garriott",
+      "short": "Trone Garriott",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6IA03268",
+      "fecCmte": "C00904086",
+      "chamber": "H",
+      "state": "IA",
+      "race": "H-IA-03",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://sarahforiowa.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "lawrence",
+      "name": "William Lawrence",
+      "short": "Lawrence",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6MI07298",
+      "fecCmte": "C00916809",
+      "chamber": "H",
+      "state": "MI",
+      "race": "H-MI-07",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://wewill2026.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "hines",
+      "name": "Christina Hines",
+      "short": "Hines",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6MI10276",
+      "fecCmte": "C00901678",
+      "chamber": "H",
+      "state": "MI",
+      "race": "H-MI-10",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": null,
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "ager",
+      "name": "Jamie Ager",
+      "short": "Ager",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6NC11248",
+      "fecCmte": "C00914119",
+      "chamber": "H",
+      "state": "NC",
+      "race": "H-NC-11",
+      "ids": {},
+      "social": {
+        "bluesky": [
+          "jamie.agerforcongress.com"
+        ],
+        "threads": [
+          "jamieagernc"
+        ]
+      },
+      "campaignSite": "https://agerforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "poindexter",
+      "name": "Brian Poindexter",
+      "short": "Poindexter",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6OH07168",
+      "fecCmte": "C00933366",
+      "chamber": "H",
+      "state": "OH",
+      "race": "H-OH-07",
+      "ids": {},
+      "social": {
+        "bluesky": [
+          "poindexterforcongress.com"
+        ],
+        "threads": [
+          "poindexterforcongress"
+        ]
+      },
+      "campaignSite": "https://poindexterforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "brooks",
+      "name": "Bob Brooks",
+      "short": "Brooks",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6PA07188",
+      "fecCmte": "C00917096",
+      "chamber": "H",
+      "state": "PA",
+      "race": "H-PA-07",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://brooksforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "cognetti",
+      "name": "Paige Cognetti",
+      "short": "Cognetti",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6PA08293",
+      "fecCmte": "C00918151",
+      "chamber": "H",
+      "state": "PA",
+      "race": "H-PA-08",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://paigeforpa.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "pulido",
+      "name": "Bobby Pulido",
+      "short": "Pulido",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6TX15246",
+      "fecCmte": "C00919985",
+      "chamber": "H",
+      "state": "TX",
+      "race": "H-TX-15",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://bobbypulidofortexas.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "luria",
+      "name": "Elaine Luria",
+      "short": "Luria",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H6VA02198",
+      "fecCmte": "C00926303",
+      "chamber": "H",
+      "state": "VA",
+      "race": "H-VA-02",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://elaineforcongress.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "cooke",
+      "name": "Rebecca Cooke",
+      "short": "Cooke",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "H4WI03169",
+      "fecCmte": "C00844993",
+      "chamber": "H",
+      "state": "WI",
+      "race": "H-WI-03",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://cookeforwisconsin.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
     }
   ],
   "selectedVotes": [
