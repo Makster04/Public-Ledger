@@ -5,12 +5,22 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 11,
+  "floor": 30,
   "press": 0,
   "bluesky": 0,
   "threads": 0
  },
  "statements": [
+  {
+   "date": "2026-02-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Small Business Artificial Intelligence Advancement Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-23/CREC-2026-02-23-pt1-PgH2244",
+   "sentences": [
+    "Mr. Speaker, today, I rise to speak for consideration of H.R. 3679, the Small Business Artificial Intelligence Advancement Act.",
+    "America has seen great innovation in its 250 years, from the lightbulb to the internet and now artificial intelligence."
+   ]
+  },
   {
    "date": "2025-01-22",
    "source": "floor",
@@ -37,6 +47,15 @@
    ]
   },
   {
+   "date": "2024-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Moment of Silence in Memory of the Victims of the Apalachee High School Shooting",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-11/CREC-2024-09-11-pt1-PgH5187",
+   "sentences": [
+    "We started out the year with the brutal and heinous murder of Laken Riley over at the University of Georgia, and then last Wednesday, at the Apalachee High School in Barrow County, we had an active shooter enter the school."
+   ]
+  },
+  {
    "date": "2024-03-07",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Laken Riley Act",
@@ -54,6 +73,26 @@
     "I thank my colleagues for rallying alongside me to highlight Laken Riley's life these past 2 weeks.",
     "Mr. Speaker, I urge my colleagues to join me in voting ``yes'' on the Laken Riley Act, and when it passes, I also urge my colleagues in the Senate to take this up immediately.",
     "Let's ensure justice for Laken Riley."
+   ]
+  },
+  {
+   "date": "2023-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Testing, Rapid Analysis, and Narcotic Quality Research Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-12-04/CREC-2023-12-04-pt1-PgH6087",
+   "sentences": [
+    "As you will recall, the TRANQ Research Act directs the National Institute of Standards and Technology to study dangerous fentanyl additives like xylazine that are putting the public and law enforcement at risk.",
+    "Exposure--and that is right, just exposure--to these drugs, whether you are taking them or not, can be deadly, and that means that law enforcement officers who are finding these drugs are in danger.",
+    "By understanding what these additives are, how to test for them, and how to safely handle them, we can better protect our first responders and our Border Patrol agents."
+   ]
+  },
+  {
+   "date": "2023-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: What We Can Take to the American People",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-12-01/CREC-2023-12-01-pt1-PgH6055-3",
+   "sentences": [
+    "We have passed bills to unleash our energy sector, secure our border, and cut spending."
    ]
   },
   {
@@ -142,6 +181,138 @@
    ]
   },
   {
+   "date": "2023-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Address the Threat in Our Own Backyard",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-26/CREC-2023-07-26-pt1-PgH3962-2",
+   "sentences": [
+    "Mr. Speaker, since I was a little boy I have been told that a dog that won't bark in his own backyard ain't much of a dog.",
+    "Well, China owns $870 billion in U.S. Treasuries that finance our debt.",
+    "On another alarming note, they own 384,000 acres of American agricultural land.",
+    "Mr. Speaker, this dog is barking, and Congress needs to address the threat right here in our own backyard. ____________________"
+   ]
+  },
+  {
+   "date": "2023-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relaying Information to Our Constituents Over the August Recess",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-26/CREC-2023-07-26-pt1-PgH4016-5",
+   "sentences": [
+    "This bill will prevent the purchase of land--U.S. land--by foreign adversaries, countries like China, Russia, North Korea, and Iran.",
+    "China owns 384,000 acres of American agricultural land."
+   ]
+  },
+  {
+   "date": "2023-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Power of the Purse",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-25/CREC-2023-07-25-pt1-PgH3904-2",
+   "sentences": [
+    "We owe our veterans a debt of gratitude that we can't ever repay.",
+    "See, we are going to cut out of our military DEI and CRT, which are hurting recruitment and killing morale."
+   ]
+  },
+  {
+   "date": "2023-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: The American People Deserve Truth, Transparency, and Answers",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-20/CREC-2023-07-20-pt1-PgH3875-6",
+   "sentences": [
+    "Yesterday, House Oversight heard from two credible IRS whistleblowers with knowledge of the Biden criminal investigation.",
+    "According to the whistleblower, Hunter Biden and his associates raked in a total of $17 million from China, Romania, and other sources between 2014 and 2019."
+   ]
+  },
+  {
+   "date": "2023-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Putting the Safety and Success of Children First",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-18/CREC-2023-07-18-pt1-PgH3649-4",
+   "sentences": [
+    "We have seen Democrat-run States, such as New York, that announce plans to house illegal immigrants in public schools and college dorms.",
+    "H.R. 3941 prohibits public schools that receive Federal funds from sheltering illegal aliens, which compromises schools' safety."
+   ]
+  },
+  {
+   "date": "2023-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fight to Pass the Ndaa",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-14/CREC-2023-07-14-pt1-PgH3580-6",
+   "sentences": [
+    "We also are protecting the citizens of the unborn.",
+    "We got rid of abortions that are paid for by taxpayers in our military."
+   ]
+  },
+  {
+   "date": "2023-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: The Anti-American Energy Agenda",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-13/CREC-2023-07-13-pt1-PgH3486",
+   "sentences": [
+    "It is this war on American energy that all started when the Biden administration revoked the permits for the Keystone pipeline and then halted all permits on new oil and gas drilling in the U.S. It is this government overreach, these excess regulations, that are hurting the American families out there, let alone harming our national security."
+   ]
+  },
+  {
+   "date": "2023-07-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tranq, the \"Zombie Drug\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-12/CREC-2023-07-12-pt1-PgH3214-2",
+   "sentences": [
+    "Fentanyl and other deadly substances are being seized at record levels by our law enforcement officers.",
+    "So far, in fiscal year 2023, the Border Patrol has intercepted 20,000 pounds of fentanyl.",
+    "It is also putting our law enforcement at risk.",
+    "Our Federal law enforcement officers are working hard to keep our communities safe and are doing it at great personal risk.",
+    "Detection capabilities will extend to police officers, Border Patrol agents, and other first responders so they are better equipped to stem the flow of this deadly drug that is coming into our country and also keep them safe while they are doing it."
+   ]
+  },
+  {
+   "date": "2023-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: The Concerns of Sheriff Janis Mangum of Jackson County, Georgia",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-17/CREC-2023-05-17-pt1-PgH2387-4",
+   "sentences": [
+    "She was very open about her concerns to protect her citizens out there with the defund the police, the disrespect, and just the disdain for law in general.",
+    "Anthony D'Esposito is quoted several times from the National Police Memorial this week: It is not how they died, but it is how they lived."
+   ]
+  },
+  {
+   "date": "2023-05-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Back the Blue: National Police Week",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-10/CREC-2023-05-10-pt1-PgH2237-2",
+   "sentences": [
+    "Mr. Speaker, I thank Representatives Cammack and Rutherford for leading this Special Order hour to honor America's law enforcement in advance of National Police Week.",
+    "The brave men and women of law enforcement put their lives on the line for our safety each and every day.",
+    "Even as Monday-morning quarterbacks in politics and the media lob accusations and insults at police officers, they continue to serve and protect with integrity and professionalism.",
+    "Let's talk about what law enforcement does.",
+    "I think about stories like this when police officers are smeared in the press and accused of evil intent when tragedy strikes.",
+    "I also think about these stories when I see leftwing politicians in cities across America implementing criminal-first policies that put our citizens and police officers in harm's way.",
+    "Unlike my colleagues on the other side of the aisle who have chosen not to speak in support of police tonight, we will always remember, honor, and support our heroes in blue."
+   ]
+  },
+  {
+   "date": "2023-05-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Testing, Rapid Analysis, and Narcotic Quality Research Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-09/CREC-2023-05-09-pt1-PgH2149",
+   "sentences": [
+    "It is also a frequent partner of law enforcement, providing analytical services when they come across new substances.",
+    "NIST has also helped create drug handling practices that have become the gold standard for keeping law enforcement officers safe when they have to handle fentanyl and other drugs."
+   ]
+  },
+  {
+   "date": "2023-04-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Revenue Neutral Personal Consumption Tax",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-04-18/CREC-2023-04-18-pt1-PgH1790-7",
+   "sentences": [
+    "So today I rise in support of H.R. 25, the FairTax Act.",
+    "The FairTax Act will eliminate payroll and income taxes and greatly reduce compliance costs on small businesses by replacing all of these with a consumption tax on new goods and services.",
+    "The FairTax Act does just that.",
+    "The way we get them on board is we need to hold hearings across this country to explain the ideas and the details of the FairTax Act.",
+    "Once they hear about it though, I am confident that they will support the concept of the FairTax Act."
+   ]
+  },
+  {
    "date": "2023-03-28",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
@@ -149,6 +320,39 @@
    "sentences": [
     "Mr. Chairman, it was just this morning we were having a hearing and talking about Biden's bloated $1.2 trillion infrastructure Green New Deal.",
     "This crucial piece of legislation will finally end the Biden administration's war on American energy production by prohibiting President Biden from banning fracking, repealing restrictions on the import and export of natural gas, and stopping Biden's $6 billion natural gas tax."
+   ]
+  },
+  {
+   "date": "2023-03-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fighting Dangerous Fentanyl Additives",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-23/CREC-2023-03-23-pt1-PgH1335-4",
+   "sentences": [
+    "Now, we are witnessing dangerous cartels adding even more harmful chemicals, like tranq, to an already deadly substance."
+   ]
+  },
+  {
+   "date": "2023-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Secretary Buttigieg Should Resign",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-08/CREC-2023-03-08-pt1-PgH1156-2",
+   "sentences": [
+    "From his first day in office, he has been more focused on diversity training and identity politics than on building and maintaining America's transportation system.",
+    "He has abandoned his Department's mission of improving safety, technology, and efficiency of our infrastructure in favor of promoting diversity, equity, and inclusion initiatives.",
+    "After seeing another Norfolk Southern train derail this weekend, I was reminded of the fact that the company wrote to shareholders stating that it is focused on DEI.",
+    "This administration's focus on DEI is forcing private companies to rethink their goals, and one has to wonder, if Norfolk Southern's DEI policies are directing resources away from the important things, like greasing wheel bearings."
+   ]
+  },
+  {
+   "date": "2023-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A Missed Opportunity",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-08/CREC-2023-02-08-pt1-PgH770",
+   "sentences": [
+    "Mr. Speaker, last night, we heard President Biden's fairy tale version of the state of our union.",
+    "Our border is in a mess, and the whole time, our government is over trying to secure Ukraine's border.",
+    "More spending and debt, that definitely will not lower inflation.",
+    "It is time to let Americans run with the ball by letting them keep more of their hard-earned money, getting government off their backs, paying down our national debt, and promoting self-reliance and personal responsibility again in this country."
    ]
   }
  ]

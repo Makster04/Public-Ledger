@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 9,
+  "floor": 12,
   "press": 3,
   "bluesky": 0,
   "threads": 0
@@ -78,6 +78,19 @@
    ]
   },
   {
+   "date": "2022-09-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Social Security Fairness",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-21/CREC-2022-09-21-pt1-PgH8016-2",
+   "sentences": [
+    "Mr. Speaker, I rise today to express disappointment and frustration of thousands of my constituents after our effort to bring H.R. 82, the Social Security Fairness Act, to the floor for a vote, which was delayed this week.",
+    "The Windfall Elimination Provision and the Government Pension Offset are unfair, bureaucratic deductions that cheat nearly 2 million Americans out of their earned Social Security benefits.",
+    "These rules impact our public servants--the teachers who educate our children, firefighters and police officers who keep our communities safe.",
+    "I want to be clear, we are not trying to create new entitlement programs or forgive debt.",
+    "However, due to WEP and GPO, she is ineligible to receive his Social Security survivor benefits simply because she was a teacher."
+   ]
+  },
+  {
    "date": "2022-03-28",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Covid-19 American History Project Act",
@@ -139,6 +152,27 @@
     "The Hyde amendment, which explicitly spelled this policy out, has been included in every single appropriations bill since 1976, including those passed under the Clinton and Obama administrations.",
     "When I arrived in Congress a few months ago, one of my first actions was to sign on to H.R. 18, the No Taxpayer Funding for Abortion Act.",
     "Taxpayer dollars should not be used to fund abortions."
+   ]
+  },
+  {
+   "date": "2021-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pregnant Workers Fairness Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-14/CREC-2021-05-14-pt1-PgH2321-3",
+   "sentences": [
+    "For example, a faith-based employer could be deemed in violation of this bill if it does not accommodate an employee's request for paid time off to undergo an abortion.",
+    "When it comes to religious freedom and pro-life issues, we should not allow bureaucrats and potentially the judicial system to make decisions by reading between the lines."
+   ]
+  },
+  {
+   "date": "2021-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Police Week",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-13/CREC-2021-05-13-pt1-PgH2298-4",
+   "sentences": [
+    "Mr. Speaker, I rise today during National Police Week to honor the 394 law enforcement officers whose names have been forever engraved into the National Law Enforcement Officers Memorial here in Washington, D.C. I am honored to join Congressman Michael Guest and 90 of my Republican colleagues in introducing a resolution to recognize these brave men and women who made the ultimate sacrifice.",
+    "Fifteen law enforcement officers from Louisiana were killed in the line of duty in 2020, including four from the Fifth Congressional District: Kejuana Artez Bates with the Vidalia Police Department; Kietrell Michael Pitts with the Tangipahoa Sheriff's Office; Randy Michael Vallot with the Richland Parish Sheriff's Office; and Marshal Lee Walter, Jr., with the Mangham Police Department.",
+    "We thank all law enforcement officers and their families for their sacrifice, and ask God to bless each and every one of you."
    ]
   }
  ]

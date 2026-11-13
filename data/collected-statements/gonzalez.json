@@ -5,12 +5,50 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 3,
+  "floor": 22,
   "press": 2,
   "bluesky": 0,
   "threads": 0
  },
  "statements": [
+  {
+   "date": "2026-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Defending American Property Abroad Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-06/CREC-2026-04-06-pt1-PgE301-2",
+   "sentences": [
+    "Mexico's ongoing efforts to control a deep-water port owned by U.S.- based Vulcan Material Company not only puts American jobs at risk, but it is a direct violation of the United States-Mexico-Canada Agreement (USMCA)."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Gratitude to the City of Brownsville'S Engineering and Public Works Department for Their Service to Our Community",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-10-08/CREC-2025-10-08-pt1-PgE943-3",
+   "sentences": [
+    "The Brownsville Police Department served more than 600 hot meals to affected families at Laureles County Park."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Don'T Call It Beautiful",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-22/CREC-2025-07-22-pt1-PgH3538-2",
+   "sentences": [
+    "It wrapped its cruelty in buzz words like ``efficiency,'' ``modernization,'' and ``fiscal responsibility.'' However, beneath the surface, it is a cold and calculated attempt to strip millions of Americans of the dignity they have earned over a lifetime of work.",
+    "All of this was done at the behest of their master, their master who wants tax breaks for the ultra-wealthy billionaires and multinational corporations, with empty slogans for the rest of Americans."
+   ]
+  },
+  {
+   "date": "2025-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Wiping Out History",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-31/CREC-2025-03-31-pt1-PgH1342",
+   "sentences": [
+    "This administration's appalling efforts to erase history under the disguise of eliminating DEI has seen no boundaries, prompting indiscriminate removals of Latinos, women, and other minorities from our Nation's archives.",
+    "This is not about eliminating DEI."
+   ]
+  },
   {
    "date": "2025-01-24",
    "source": "press",
@@ -46,6 +84,74 @@
    ]
   },
   {
+   "date": "2022-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Three Critical Pieces of Legislation",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-12/CREC-2022-05-12-pt1-PgH4875",
+   "sentences": [
+    "I proudly endorsed and cosponsored all three of them to keep our promise to essential workers and support communities across the country.",
+    "These hazards include diesel emissions, carbon monoxide, and other cancer-causing chemicals released by fires that they combat on a regular basis.",
+    "Finally, Madam Speaker, I urge the passage of H.R. 5129, the Community Services Block Grant Modernization Act of 2022."
+   ]
+  },
+  {
+   "date": "2022-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Refuse to Accept the Status Quo",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-06/CREC-2022-04-06-pt1-PgH4203-5",
+   "sentences": [
+    "Mr. Speaker, I rise today to celebrate House Democrats' efforts to pass the Affordable Insulin Now Act, which would cap the cost of insulin at $35 a month.",
+    "The stark reality is that the skyrocketing cost of insulin is crushing south Texans and people across our country.",
+    "One in four Americans who rely on insulin have been forced to ration or skip a dose or choose between buying groceries and filling prescription drugs.",
+    "Pharmaceutical companies manufacture insulin for less than $10 yet sell it to the American people for more than 10 times that.",
+    "This long-overdue legislation is an important step to lower healthcare costs for families and hold Big Pharma accountable.",
+    "I urge my Senate colleagues to pass the Affordable Insulin Now Act and send it to the President's desk to sign today. ____________________"
+   ]
+  },
+  {
+   "date": "2022-03-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Mrs. Teresa Vera Perez",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-15/CREC-2022-03-15-pt1-PgE255-4",
+   "sentences": [
+    "She served a total of three terms, becoming a lifelong member of the Texas Justices of the Peace and Constables Association and Chaplain for the South Texas Association of Justices of the Peace and Constables."
+   ]
+  },
+  {
+   "date": "2021-05-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Police Week",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-12/CREC-2021-05-12-pt1-PgH2249-4",
+   "sentences": [
+    "Madam Speaker, I rise today to honor our brave and selfless law enforcement officers who have fallen in the line of duty in south Texas this past year: Jorge Cabrera, Ismael Chavez, Edelmiro Garza, Jr. Let us not forget those who stood guard at our border and kept us safe: Carlos Mendoza, Juan Ollervidez, Christopher Carney, Roel De La Fuente, and Enrique Rositas.",
+    "Madam Speaker, I would like to take a brief moment of silence to pay my respects to those law enforcement officers who paid the ultimate sacrifice to keep our community safe.",
+    "I thank them, and may God bless and watch over our law enforcement officers, their families, and the United States of America."
+   ]
+  },
+  {
+   "date": "2020-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Missing Persons and Unidentified Remains Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-12-16/CREC-2020-12-16-pt1-PgH7217",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of S. 2174, the Missing Persons and Unidentified Remains Act, which gives local law enforcement the tools they need to address a devastating issue that is draining resources in rural communities in south Texas and across the southwest border.",
+    "Border communities are currently shouldering the cost of identifying and recovering the remains of migrants who tragically perished while migrating to the United States.",
+    "The Missing Persons and Unidentified Remains Act is a bipartisan, bicameral effort that will give local law enforcement access to Federal dollars and will help free up local resources for rural healthcare, education, broadband, and other key services that are, tragically, needed in these areas.",
+    "Unless we invest time and resources to address the root cause of migration from Central America, we will continue to witness these tragic deaths in our border region.",
+    "I also acknowledge the Southern Border Communities Coalition, the Church World Services, and the Texas Civil Rights Project for their work to raise awareness about this issue and help build support for this bill."
+   ]
+  },
+  {
+   "date": "2019-12-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Mexico-Canada Agreement Implementation Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-12-19/CREC-2019-12-19-pt1-PgH12221",
+   "sentences": [
+    "Madam Speaker, I rise today to express my support for the United States-Mexico-Canada Agreement and also to sound the alarm of an issue that should concern us all: violence.",
+    "Just in the last 3 years, the number of homicides exceeded the number of soldiers lost in Korea and Vietnam combined, all while we act as if nothing is happening in our own backyard."
+   ]
+  },
+  {
    "date": "2019-12-18",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
@@ -63,6 +169,114 @@
     "This problem is in the backyard of every south Texan or any resident along the border.",
     "The problem is an immigration system that is ill- equipped to process immigrants on our southern border.",
     "The number now is 876,000 cases waiting for asylum in this country."
+   ]
+  },
+  {
+   "date": "2019-03-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Welcoming Rabbi Claudio J. Kogan",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-03-12/CREC-2019-03-12-pt1-PgH2654-7",
+   "sentences": [
+    "Previously, he served as rabbi at Temple Emanuel in my district in McAllen, Texas, and continues to serve as a chaplain for various law enforcement agencies and hospital systems in the area."
+   ]
+  },
+  {
+   "date": "2018-06-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tearing Immigrant Children Away From Their Parents",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-13/CREC-2018-06-13-pt1-PgH5142",
+   "sentences": [
+    "How can you explain family separation when it comes to asylum seekers?",
+    "They have not crossed the border illegally, and yet they are being detained and their families separated as if they were here illegally.",
+    "Asylum seekers are not criminals and are not here illegally.",
+    "I represent an area along the border where crime is at record lows, yet the administration keeps saying the opposite."
+   ]
+  },
+  {
+   "date": "2018-01-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendments to H.R. 695, Child Protection Improvements Act of 2017",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-01-30/CREC-2018-01-30-pt1-PgH690-5",
+   "sentences": [
+    "Mr. Speaker, I ask my colleagues to vote ``no'' on the previous question so that we can immediately bring the Dream Act to the floor.",
+    "This is the 19th time that we have requested a vote on the Dream Act.",
+    "We are a nation of immigrants, refugees, and asylum seekers.",
+    "Compare George Washington's words to President Trump's, who said: ``I do business with the Mexican people, but you have people coming through the border that are from all over."
+   ]
+  },
+  {
+   "date": "2017-10-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Municipal Finance Support Act of 2017",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-10-04/CREC-2017-10-04-pt1-PgE1327",
+   "sentences": [
+    "Currently HQLAs are defined as U.S. Treasuries, Government Debt, Investment Grade Corporate Debt, and Excess Reserves held by the Fed.",
+    "Simply put, high quality liquid municipal bonds (issued by U.S. states and local governments) should not be viewed as inferior to that of foreign sovereign debt.",
+    "Various former governors of the Federal Reserve have already suggested that some local and state debt is comparable to that of very liquid corporate bonds."
+   ]
+  },
+  {
+   "date": "2017-10-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nicaraguan Investment Conditionality Act (Nica) of 2017",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-10-03/CREC-2017-10-03-pt1-PgH7700",
+   "sentences": [
+    "NICA could strain our alliance with Nicaragua, and it could lead to instability, irregular immigration to the United States, to my border district, and an increase in criminal activity.",
+    "Nicaragua has its economic and political challenges, but it has taken steps to address poverty, climate change, and to grow its economy.",
+    "Moreover, Nicaragua stands with America and our allies against the rogue nation of North Korea.",
+    "We cannot compare Nicaragua to Venezuela."
+   ]
+  },
+  {
+   "date": "2017-09-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Naismith Memorial Basketball Hall of Fame Commemorative Coin Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-25/CREC-2017-09-25-pt1-PgH7450",
+   "sentences": [
+    "More than 6 million visitors have educated themselves through the enjoyment of exploring the rich history."
+   ]
+  },
+  {
+   "date": "2017-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Wasteful Spending on Border Wall",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-27/CREC-2017-07-27-pt1-PgH6478-5",
+   "sentences": [
+    "Mr. Speaker, I rise today to speak out against the wasteful spending of $1.6 billion of taxpayers' money.",
+    "These funds will be used to construct unnecessary barriers along our Southern border, destroying wildlife habitats, and violating property rights of Americans.",
+    "If we want to be more secure, we should appropriately fund to address CBP staffing issues, to maintain and upgrade aerostats and other technology, and to provide CBP with the resources it actually needs to continue maintaining a safe and secure border.",
+    "Building a wall along our Southern border will put us on the wrong side of history."
+   ]
+  },
+  {
+   "date": "2017-07-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Promoting Cross-Border Energy Infrastructure Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-19/CREC-2017-07-19-pt1-PgH6010",
+   "sentences": [
+    "Mr. Chairman, I rise in support of H.R. 2883, the Promoting Cross-Border Energy Infrastructure Act.",
+    "Unfortunately, the existing process has politicized vital cross-border energy infrastructure.",
+    "The bill will create a process at the Federal Energy Regulatory Commission, State Department, and the Department of Energy to permit cross-border infrastructure projects.",
+    "Energy security, targeted regulatory reforms, and smart infrastructure investments are things we can all support, and we should all support."
+   ]
+  },
+  {
+   "date": "2017-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Anti-Border Corruption Reauthorization Act of 2017",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-06-07/CREC-2017-06-07-pt1-PgH4676",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 2213, the Anti-Border Corruption Reauthorization Act of 2017.",
+    "This legislation aims to address a staffing issue that has plagued the United States Customs and Border Patrol for many years.",
+    "These individuals are veterans, members of our Armed Forces, or law enforcement officers with clean records and years of honorable service.",
+    "A veteran with secret clearance and an honorable discharge, 3 years of service, and a tier 5 background check is someone I would hold in high regard and exempt from an unnecessary polygraph.",
+    "This is a special group--our veterans and our law enforcement.",
+    "This legislation would not change the United States Customs and Border Patrol requirements for background checks or interviews.",
+    "Customs and Border Patrol would still have their candidates undergo the regular battery of tests and checks.",
+    "Customs and Border Patrol would still ask a candidate who waived the polygraph under these proposed changes to take the examination.",
+    "Mr. Speaker, I would like to reaffirm that this legislation exclusively applies to Customs and Border Patrol, and it will not change the hiring procedures for Immigration and Customs Enforcement.",
+    "This bill is about providing employment and advancement opportunities for our servicemembers and law enforcement and creating job opportunities for those living in our border communities and border States.",
+    "Mr. Speaker, I also live in a border community, and I support this bill."
    ]
   }
  ]

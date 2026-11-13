@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 6,
+  "floor": 22,
   "press": 2,
   "bluesky": 27,
   "threads": 0
@@ -157,6 +157,17 @@
    ]
   },
   {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Preventing Child Trafficking Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-16/CREC-2025-12-16-pt1-PgS8753",
+   "sentences": [
+    "That is why Senator Grassley and I, together, have authored the Preventing Child Trafficking Act to strengthen prevention, investigation, and prosecution of child trafficking crimes and to ensure that prosecutors and law enforcement officials work together with those who provide supportive services to victims and survivors because too often the children who have endured this crime and this trauma fall through the cracks and are targeted and victimized again.",
+    "We have also found, through congressional investigations, that something that sounds simple--law enforcement working with those who serve victims--is essential to protecting children.",
+    "Mr. President, notwithstanding rule XXII, I ask unanimous consent that the Senate Committee on the Judiciary be discharged from further consideration of S. 1049 and the Senate proceed to its immediate consideration."
+   ]
+  },
+  {
    "date": "2025-12-15",
    "source": "bluesky",
    "where": "Bluesky post",
@@ -181,6 +192,16 @@
    "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m7q4bxqdxc2i",
    "sentences": [
     "Sen. Ossoff on the Senate Floor urging Republicans to put politics aside and extend ACA tax credits: \"This is life or death.\""
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-11/CREC-2025-12-11-pt1-PgS8643-5",
+   "sentences": [
+    "If Republicans allow these Affordable Care Act benefits to expire, her premiums will go up by hundreds of dollars, and she says she will have to cancel her health coverage.",
+    "The whole conversation about these Affordable Care Act tax credits in this town, in this building, has been focused on the politics of this issue."
    ]
   },
   {
@@ -284,6 +305,28 @@
    ]
   },
   {
+   "date": "2025-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Appropriations (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-23/CREC-2025-07-23-pt1-PgS4584",
+   "sentences": [
+    "Asserting our constitutional power of the purse, this bill mandates specific funding levels for rural health, women's health, caregivers, research, and veteran homelessness prevention programs, in some cases, including required spending levels for those programs for the first time in legislative history."
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-30/CREC-2025-06-30-pt1-PgS4037-6",
+   "sentences": [
+    "Madam President, instead of adding trillions to the debt in tax cuts to the rich while destroying Medicaid and renewable energy, I propose we help our constituents afford health insurance.",
+    "If we allow Affordable Care Act benefits to expire, as this bill would, more than a million Georgians will pay more for health insurance next year.",
+    "And that is on top of the cuts to Medicaid and hospitals.",
+    "A vote against this amendment is a vote to gut the Affordable Care Act and raise health insurance premiums.",
+    "A vote against this amendment will repeal the Affordable Care Act benefits for your constituents and raise their healthcare premium."
+   ]
+  },
+  {
    "date": "2025-06-27",
    "source": "floor",
    "where": "Floor speech, Congressional Record: S.J. Res. 59",
@@ -311,6 +354,41 @@
    "sentences": [
     "NEW REPORT: Georgia OBGYNs Report Observing Cases Where Georgia Abortion Ban Led Women to Suffer Health Complications or Die.",
     "Atlanta, Ga.&#160;— U.S. Senator Jon Ossoff today released a new report in which over a dozen Georgia OBGYNs say they’ve personally observed cases where Georgia’s abortion ban led to injury or even the death of pregnant women."
+   ]
+  },
+  {
+   "date": "2025-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendment No. 1646 to Amendment No. 1717",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-04-04/CREC-2025-04-04-pt1-PgS2350",
+   "sentences": [
+    "Mr. President, this amendment will reverse Elon Musk's cuts to the Social Security Administration.",
+    "Mr. Musk calls Social Security a Ponzi scheme but refuses to testify before Congress.",
+    "Secretary Lutnick said his mother-in-law wouldn't complain if she missed a Social Security check.",
+    "Maybe that is because her son-in-law is a billionaire."
+   ]
+  },
+  {
+   "date": "2025-02-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-20/CREC-2025-02-20-pt1-PgS1075-2",
+   "sentences": [
+    "Mr. President, the momentum that is growing in Washington to gut the Medicaid program is alarming my constituents in Georgia, and I call up my amendment No. 407 and ask it to be reported by number.",
+    "The sheer number of people affected: In Georgia 5 out of 7 seniors in nursing homes are covered by Medicaid; nearly 50 percent of all births are covered by Medicaid; two out of five children in Georgia are covered by Medicaid.",
+    "I was disappointed to see just moments ago the majority adopt an amendment to lay the foundation for deep cuts to Medicaid.",
+    "I hope we can build bipartisan support for my amendment to ensure that maternal and children's healthcare through Medicaid is protected.",
+    "Mr. President, the vote is whether to protect maternal and pediatric healthcare through Medicaid."
+   ]
+  },
+  {
+   "date": "2025-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Robert F. Kennedy, Jr.",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-12/CREC-2025-02-12-pt1-PgS955",
+   "sentences": [
+    "He is going to run the whole public health system--Medicare, Medicaid, the CDC, the NIH, all of it.",
+    "My constituent continues: This morning, I was placed on the DEI watch list web site and publicly identified as a target."
    ]
   },
   {
@@ -346,6 +424,112 @@
    ]
   },
   {
+   "date": "2024-07-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Federal Prison Oversight Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-10/CREC-2024-07-10-pt1-PgS4334-2",
+   "sentences": [
+    "Pretrial detainees sleeping in paper pajamas were denied access to counsel, denied access to hygiene products, denied access to fresh air--pretrial, presumptively innocent Federal detainees."
+   ]
+  },
+  {
+   "date": "2024-05-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Act of 2024 (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-22/CREC-2024-05-22-pt1-PgS3838-4",
+   "sentences": [
+    "Madam President, for years, too many Democrats have been in denial about the national security risks at our southern border.",
+    "There are more than enough Democratic Senators ready and willing to pass a strong bipartisan border security bill--a border security bill coauthored by a conservative Republican Senator, Senator Lankford of Oklahoma, who has done extraordinary work in crafting this legislation; a bill that would surge enforcement resources to the southern border; that would tighten asylum standards; that would expedite the removal of those who abuse asylum to enter our country unlawfully; that would hire urgently needed Border Patrol officers and take the fight to the drug cartels flooding our communities with fentanyl.",
+    "This is a bipartisan bill to help defend the Nation against terrorists who would exploit weakness at our southern border to enter our country and kill Americans.",
+    "And now it is Republican Senators who have already once blocked and this week are threatening again to block bipartisan border security legislation.",
+    "Why, the American people ask, would Republicans in Congress block border security legislation amidst a national security crisis?",
+    "Asked recently on FOX News why Senate Republicans were blocking the Border Act, Senator Lankford, the Republican coauthor of the bill, put it very simply: President Trump said: Don't fix anything during the Presidential election.",
+    "The former President would rather wield the border as an election issue than see Congress secure it, and Republicans in Congress appear to be falling in line even though it leaves the country at grave risk.",
+    "Just as I have criticized Democrats who for years buried their heads in the sand about the threat at the southern border, just as I have criticized the Biden administration for its failures at the southern border, this is a time for Republican Senators to stand up to President Trump and say: No, we will not obey your command to leave the country at risk.",
+    "The threat of terrorism associated with unlawful entry at the southern border is real; it is pressing.",
+    "If the Senate fails to pass border security legislation, refuses to tighten asylum standards, refuses to hire more Border Patrol officers, refuses to expedite the removal of those who abuse our asylum system to enter the country unlawfully, our Nation faces a grave national security risk.",
+    "The first vote we will take later this week on the Border Act will not even be a vote on the passage of the bill."
+   ]
+  },
+  {
+   "date": "2024-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendment No. 1623",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-08/CREC-2024-03-08-pt1-PgS2330",
+   "sentences": [
+    "However, adoption of Senator Lee's amendment would necessitate that the Senate, having passed the budget measure, send it back to the House for reconsideration and further votes, with mere hours until a partial government shutdown that would have a devastating impact on our economy.",
+    "Therefore, at this time, I cannot support Senator Lee's amendment, as its adoption would ensure a partial shutdown of the Federal Government. ____________________"
+   ]
+  },
+  {
+   "date": "2024-01-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S. Res. 504",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-25/CREC-2024-01-25-pt1-PgS266-4",
+   "sentences": [
+    "Mr. President, the Senator from Vermont last week proposed to discharge the Foreign Relations Committee of S. Res. 504, his resolution to require the production by the Department of State of a report on Israel's human rights practices.",
+    "Senator Sanders' resolution is intended to serve the important purpose of ensuring robust Senate oversight of how U.S. security assistance has been deployed by the State of Israel in Gaza, where humanitarian conditions are catastrophic.",
+    "Beyond its reporting requirements with respect to ongoing Israeli operations in Gaza, Senator Sanders' resolution requires within 30 days the affirmative certification by the Secretary of State that no individual unit of the Israel Defense Forces receiving U.S. security assistance over the past 5 years has committed any gross violations of human rights.",
+    "The Department of State would therefore, in my view, be unable to comply with the reporting requirements in Senator Sanders' resolution, potentially triggering a mandatory cessation of U.S. security assistance to Israel before the Senate even had the opportunity to review its report."
+   ]
+  },
+  {
+   "date": "2023-11-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Armenian Protection Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-15/CREC-2023-11-15-pt1-PgS5531",
+   "sentences": [
+    "Mr. President, when Hamas gunmen stormed into towns and kibbutzim in southern Israel and massacred over 1,000 Israeli civilians--killing families, raping women, abducting babies, torturing and beheading Jews--in the very state that was established after the Holocaust to be their sanctuary, the overwhelming majority of Americans were and still are united in our grief, outrage, and solidarity with the Israeli people.",
+    "Salt in those wounds was the minimization and even celebration of this massacre by a few, including a few in the United States who attempted to excuse such atrocities as a righteous comeuppance for Israeli policies or the inevitable consequence of Israel's very existence.",
+    "No matter one's objections to Israeli policy or one's perspective on history, there is no justification and can be no apology for the deliberate massacre and torture and abduction of civilians.",
+    "It is clear that under such circumstances, Israel has an obligation to protect its citizens and a right to do so with force, and this, too, requires moral clarity.",
+    "Mr. President, now 5 weeks since the October 7 massacre, Israel's military response, which is substantially armed by the United States, directly impacts the lives of millions of people, the future of the Middle East, and America's national security, and it is therefore a necessary subject of scrutiny by the U.S. Senate.",
+    "But the depraved tactics of Hamas do not relieve Israeli leaders of their obligations to protect innocent life, nor should they harden our hearts against the innocent people who live under their rule.",
+    "Clean water, food, and medicine are scarce, and the continued obstruction of aid necessary for sanitation and healthcare will worsen suffering, disease, and death.",
+    "With the use of force, no matter how judicious, facing an enemy hiding behind civilians, there will be civilian casualties.",
+    "Concern for the innocent, especially when fighting an enemy unbound by any morality, demonstrates the values for which the United States should stand and which Israel proclaims--the same values meant to be the bedrock of our alliance.",
+    "It damages the credibility of the United States and our allies as champions of a future defined by humanitarian values--the same values at stake in Ukraine, where Russia would push dictatorship into Europe, and in Asia, where China threatens the future of human freedom.",
+    "If, in 6 months, Gaza is rubble, with tens of thousands of civilians dead and millions of desperate refugees, with no viable plan to govern its ruins, that would be a disaster not just for all those killed and wounded and immiserated, but also for Israel, for the region, and for the United States.",
+    "The United States has stood with Israel since October 7 and still does.",
+    "He flew to Israel while Israel was under fire.",
+    "He rushed supplies to the IDF and sent powerful military assets to deter Iran and its proxies.",
+    "Nevertheless, requests by the United States that the Israel leadership conduct a more targeted campaign, that they permit and provide safe passage for aid essential to the sustenance of innocent life, that they clearly define objectives, that they prevent extrajudicial killings by extremists in the West Bank, and that they present a credible plan for Gaza's future governance have mostly been ignored.",
+    "I fervently want Israel to succeed, both in defeating the threat posed by Hamas and as a historic effort to secure a safe homeland for Jews.",
+    "But I do not accept that the total deprivation of millions of innocent civilians is necessary for Israel to secure its objectives or in the national interest of the United States.",
+    "Mr. President, I urge Israel's political leaders to act with wisdom, to listen to Israel's greatest friend and ally, the United States.",
+    "Just as I pray for the freedom of hostages taken so cruelly from their families, as a pro-Israel Jewish American, I urge mercy for the innocent civilians in Gaza."
+   ]
+  },
+  {
+   "date": "2023-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supreme Court Ethics, Recusal, and Transparency Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-27/CREC-2023-07-27-pt1-PgS3743",
+   "sentences": [
+    "Mr. President, last week, I voted to advance the Supreme Courts Ethics, Recusal, and Transparency Act out of the Judiciary Committee, as I believe that strong judicial ethics are critical to maintaining public trust in our judiciary."
+   ]
+  },
+  {
+   "date": "2022-05-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-26/CREC-2022-05-26-pt1-PgS2713-9",
+   "sentences": [
+    "This legislative process must ensure that Federal law enforcement is transparent, accountable, and apolitical.",
+    "Any time we establish or codify Federal law enforcement offices tasked with investigating and prosecuting crimes committed by Americans or collecting and analyzing intelligence related to American citizens, we must ensure safeguards are sufficiently robust to protect civil rights and civil liberties."
+   ]
+  },
+  {
+   "date": "2022-05-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Philip S. Goldberg",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-05/CREC-2022-05-05-pt1-PgS2366-9",
+   "sentences": [
+    "We saw, just yesterday, North Korea test a ballistic missile.",
+    "We have seen North Korea continue to develop and test ballistic missiles that threaten not just South Korea, not just our allies in the region but the United States and the entire world."
+   ]
+  },
+  {
    "date": "2022-02-28",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Women'S Health Protection Act",
@@ -353,6 +537,17 @@
    "sentences": [
     "Madam President; today, I voted that the Senate should proceed to consider H.R. 3755, the Womens Health Protection Act, which would codify in Federal law the privacy of women's reproductive healthcare established by the Supreme Court's Roe v. Wade decision.",
     "I support the privacy of women's healthcare, codification of Roe v. Wade, and proceeding to consideration of this measure."
+   ]
+  },
+  {
+   "date": "2022-01-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-19/CREC-2022-01-19-pt1-PgS277-6",
+   "sentences": [
+    "Forbidding voter registration for run-off elections, driving down the early vote period during divisive runoffs to drive up lines at majority Black precincts.",
+    "The Supreme Court, in fact, invited us to carry out that obligation, and the Committee on the Judiciary, under Senator Durbin's leadership, carefully crafted legislation that we believed responded to the Supreme Court's invitation to do just that.",
+    "What I was respectfully noting, Senator Collins, without any implications with respect to your motives or integrity, was what I believed to be an inconsistency, an inconsistency between voting consistently to reauthorize the Voting Rights Act of 1965 and lauding it as a signature civil rights achievement, but then voting not even to allow debate in this body on the legislation that was created to respond to the Supreme Court's invitation to uphold its preclearance provision."
    ]
   }
  ]

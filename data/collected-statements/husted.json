@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 4,
+  "floor": 13,
   "press": 0,
   "bluesky": 0,
   "threads": 0
@@ -53,6 +53,83 @@
    ]
   },
   {
+   "date": "2026-05-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Police Week",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-11/CREC-2026-05-11-pt1-PgS2193-2",
+   "sentences": [
+    "Mr. President, I come today to the floor for a moment of reflection and remembrance of four courageous law enforcement officers in Ohio that we lost in 2025.",
+    "As those in this Chamber and across our Nation may know, it is National Police Week, a dedicated time to honor the service and sacrifice of these heroes who protect us every day.",
+    "Each of them will be added to the National Law Enforcement Officers Memorial wall to honor their lives and dedication to protecting and serving.",
+    "Officer Wagner had served with the Lorain Police Department for 4 years and previously with the Sheffield Village Police Department, also for 4 years.",
+    "Deputy Sherrer had not only the desire to work in law enforcement but also the courage and temperament.",
+    "His ability to connect with people fueled his successful career in law enforcement."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Homeland Security Appropriations Act, 2026--Motion to Proceed--Resumed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-26/CREC-2026-03-26-pt1-PgS1648",
+   "sentences": [
+    "They said that they don't object to photo ID--only the other provisions of the SAVE America Act.",
+    "To quote minority leader Chuck Schumer: You know what our objection is--our objection, as Democrats, is not to a photo ID.",
+    "You'd have to define it clearly and properly and easily, but not to a photo ID when you show up to vote.",
+    "In just a few minutes, the Senate will take a rollcall vote on a clean, simple, straightforward amendment of mine to require a photo ID to vote in American elections--nothing more.",
+    "No prohibition on absentee voting.",
+    "The SAVE America Act restrictions you have been opposed to are not in there, and don't say that they are.",
+    "It is simply, straightforward, photo ID.",
+    "Thirty-six States already have some form of voter ID law in place.",
+    "This photo ID legislation has proven the test of elections across the Nation.",
+    "Georgia, Wisconsin, and New Hampshire, along with my home State of Ohio, have photo ID requirements, just to name a few.",
+    "Roughly 80-20 Americans support requiring a photo ID to vote.",
+    "Americans are required to show a photo ID when they rent a car, when they start a job, when they board a plane.",
+    "It is common sense, and it is a commonsense requirement for Americans to show a photo ID when they vote.",
+    "If you oppose this amendment, then let's be honest--it is not the other provisions in the SAVE America Act that you oppose; you object to photo ID itself, because that is what this vote is: simply, straightforward, photo ID.",
+    "Americans deserve confidence in elections, supported by integrity measures like photo ID.",
+    "It is time to set a nationwide standard for election integrity, and a ``yes'' vote on this amendment will do that.",
+    "This isn't the SAVE America Act.",
+    "This is, frankly, me listening to the minority leader, what he said, and how he supports--he doesn't object to photo ID.",
+    "So all that is in this amendment is five forms of photo ID that people can list to vote, which people have.",
+    "And then the misrepresentation about what this does on mail-in ballots, clearly some people don't know how it works.",
+    "When you have a mail-in ballot process, you have the ballot.",
+    "You put the information, whether that is a photo of your passport or the last four digits of your Social Security, on the outside of that envelope where no one can see your ballot."
+   ]
+  },
+  {
+   "date": "2026-03-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Safeguard American Voter Eligibility Act--Resumed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-19/CREC-2026-03-19-pt1-PgS1314",
+   "sentences": [
+    "I enforced voter roll maintenance, the voter roll maintenance standards in all 88 counties, to make sure that no one could nefariously or accidentally cast a ballot, and this standard was upheld in the case before the U.S. Supreme Court of Husted v. A. Philip Randolph Institute.",
+    "And I can tell you, it is a chore to make sure that only legally registered citizens are on the voter rolls because there are millions of people in this country who can get driver's licenses, who get Social Security numbers, who are not citizens of the United States of America.",
+    "They may be here on a visa, a green card, a refugee, someone here on a TPS--temporary protected status.",
+    "They all get the things that you need to register to vote in many States.",
+    "I also launched an annual voter fraud and suppression report, which was a postmortem on each election cycle, and we found cases every election of fraud and attempted fraud, even with all those safeguards in place.",
+    "Ohio then implemented a required photo ID law at the polls, and with these reforms, there has been no evidence of voter suppression.",
+    "So when we talk about the SAVE America Act, it is trying to solve a simple problem--at least the provision I am here to talk about tonight--that we need to make sure that we know who is coming to the polls to cast their vote because election integrity matters.",
+    "But there are 14 States that do not have voter ID laws, even though 80 percent of Americans think it is a good idea.",
+    "This is one of those issues that, whether you talk to Democrats, Republicans, or Independents, they say: Yes, photo ID makes sense.",
+    "I heard my Democrat colleagues say that they don't oppose photo ID laws.",
+    "I heard Senator Schumer say our objection as Democrats is not to a photo ID.",
+    "I heard Senator Fetterman say he supports a photo ID law.",
+    "The voter, under this legislation, could present a photo ID of any of the following: a State- issued driver's license that includes a photo and an expiration date, State ID that has a photo of the individual and an expiration date, a valid U.S. passport, a valid military ID, or a valid ID issued by a Tribal government that includes a photo of the individual and an expiration date.",
+    "I will add that it is also easier to administer when you have a photo ID and you are an election official because we have our neighbors show up every 2 or 4 years to work at the polls.",
+    "When you have a photo ID, it is simple.",
+    "So I hope my colleagues on the other side of the aisle realize or really do support a photo ID law because this legislation is the simple, easy, proven way to do it.",
+    "So showing a photo ID is common sense.",
+    "And as I have been saying for more than a decade and a half, it is possible to make it both easy to vote and hard to cheat, and we should make that a national standard with the photo ID law that is easy to implement and is proven effective.",
+    "Passing voter ID requirements is common sense and passing this provision that I offer tonight as part of the SAVE America Act is right for election integrity and it is the right thing to do for voter confidence and I urge a ``yes'' vote.",
+    "The amendment that I am proposing has nothing to do with citizenship; it has to do with photo ID--five simple ways that have been proven successful in many States to determine if the person showing up to vote is, indeed, the person who is registered to vote.",
+    "This particular amendment is not about citizenship; it is about photo ID.",
+    "That envelope determines if the individual is eligible, in which they could put their--inside that envelope put their copy of their photo ID or their Social Security number on the form you would have them fill out.",
+    "Now, to the substance of the gentleman's amendment, there are many reasons that I could object to this, but I will take one, because this is the Freedom to Vote by Mail Act.",
+    "It is a very large amendment in which it authorizes unsolicited mail-in ballots--let me repeat: unsolicited mail-in ballots--meaning I didn't ask for it; you just sent me a ballot.",
+    "Because Bowling Green State University is there, and every 4 years when you are a swing State, people really, really try to get every single student to register to vote on that campus."
+   ]
+  },
+  {
    "date": "2026-01-14",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
@@ -64,6 +141,133 @@
     "Second, unborn children cannot march.",
     "And, third, the pro-life movement is not just about opposing abortion.",
     "The Senator from Oklahoma. 50th Anniversary of the Hyde Amendment"
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Appointees Win Again. Eight of the Ten Least Partisan Judges Were Nominated by President Trump.",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-20/CREC-2025-11-20-pt1-PgS8250",
+   "sentences": [
+    "In some small way, the difficult time proved that we can work together to do tangible things to reduce healthcare costs in this country.",
+    "The bill aims to make lowering the cost of over-the-counter drugs more accessible to patients by eliminating the redtape at the FDA.",
+    "We know that when you can take a prescription drug and make it an over-the-counter drug, prices go down.",
+    "It is an example of how we can attack affordability with commonsense reforms without adding the debt burden to future generations.",
+    "I wasn't here when Congress passed ObamaCare or the Biden COVID subsidies that have been used to prop up the ACA exchanges.",
+    "The ACA exchange system is too expensive and too complicated, and it has failed to reduce the underlying cost of healthcare.",
+    "But if you look here around the time that ObamaCare was enacted and went into law, you see the disparity growing.",
+    "As a matter of fact, the ACA made care less affordable.",
+    "And this problem will not be solved by pouring more taxpayer dollars into the coffers of big insurance companies, which has been the path of how ObamaCare has been operated since its enactment.",
+    "You do this paired with a short extension of the premium subsidies, and we can address the shortcomings of the ACA, lower healthcare costs, and provide the American people with something we can actually implement.",
+    "Requiring everyone receiving a premium tax credit to pay a small amount--at least a small amount--toward their health insurance will help realign the incentives and reduce fraud.",
+    "The ACA required insurers to lower deductibles, copays, and out-of- pocket costs for enrollees making between 100 percent and 250 percent of the poverty line.",
+    "Additionally, because the premium tax credits are calculated against the second lowest cost silver plan, silver loading also supercharged the Federal subsidy spending of this.",
+    "There has been a bipartisan appetite to lower the cost of prescription drugs by addressing the role that the middlemen play in increasing these costs: bipartisan PBM reform, something we know can reduce costs.",
+    "There are two things we need to do: protect families from the inflationary costs that the ACA has created, but also protect the taxpayer.",
+    "We have a chance right now to do better, help families afford coverage, pass bipartisan reforms to cut costs, and refuse to add another $350 billion to the national debt."
+   ]
+  },
+  {
+   "date": "2025-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-08/CREC-2025-11-08-pt1-PgS8009-9",
+   "sentences": [
+    "But really what it was, was a bailout of a failed ObamaCare system.",
+    "Healthcare inflation in this country is double of what consumer inflation has been since ObamaCare got enacted.",
+    "Healthcare has increased since ObamaCare started by 6 percent a year while overall inflation has been 3 percent or less.",
+    "This is what ObamaCare and the COVID bonuses have done for the insurance companies: Record profits.",
+    "But that absolves nobody--no one--of the responsibility to continue to work on resolving the inflationary costs of healthcare to the American consumer that have come since ObamaCare was implemented.",
+    "We both have proposed clean CRs, take out the stuff that we disagree on, keep working on it, pay the American people, pay the people who work here, get the flights going, and then let's get back to work on doing what we should have been doing for the last 39 days, which is having some constructive discussions about how we fix ObamaCare, how we drive down the cost of healthcare in this country, and how we make it affordable again for the American people."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-07/CREC-2025-11-07-pt1-PgS7969-7",
+   "sentences": [
+    "The Capitol Police that protect this place and all of you, they are part of paying the price for this.",
+    "If you want to defend Biden's COVID-era bonuses that prop up a broken ObamaCare system, then keep fighting, if that is what you believe.",
+    "I wasn't here, neither was the Presiding Officer, when all the ObamaCare legislation was passed, nor was I here when the Democrats voted to set an expiration date of 2025 for the subsidies that they now say they want to renew.",
+    "But those policies, those ObamaCare policies, have contributed to increasing healthcare costs that are the biggest driver of inflation in the 21st century.",
+    "Healthcare inflation is the most dramatic form of inflation that this Nation has experienced in the 21st century, and it is due to ObamaCare policies.",
+    "I want to work with anyone in this Chamber that will change that, to eliminate the fraud that has filled up this ACA system, to target the benefits to those who truly need them, and to create an insurance market that doesn't rely on endless taxpayer subsidies--create something that works, reduce the cost of providing healthcare in this country."
+   ]
+  },
+  {
+   "date": "2025-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: One Big Beautiful Bill Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-22/CREC-2025-07-22-pt1-PgS4521-5",
+   "sentences": [
+    "It also made important investments in national defense and border security.",
+    "The tax cuts that were cemented for workers and job creators will leave the average Ohio household with an estimated $7,000 more in take-home pay.",
+    "We also made the standard deduction permanent--$31,500 for couples and $15,700 for single filers.",
+    "That is 842,000 Ohio job creators who would have lost that deduction if we had not passed the bill.",
+    "To that end, we made sure that this legislation gave job creators the freedom to immediately expense investments in new factories, capital investments in machinery and equipment and in research and development.",
+    "We want to help people earn the credentials that lead to jobs without their having the cost or the debt that oftentimes college creates.",
+    "This creates a school choice tax credit that will help create more scholarship opportunities for parents and children to attend the school of their choice.",
+    "Then, finally--something that is very near and dear to me--the Big Beautiful Bill supports Ohio families and vulnerable children by making the adoption tax credit partially refundable up to $5,000.",
+    "I want to start with Medicaid.",
+    "There are some whoppers of a lie being told about Medicaid right now.",
+    "This bill supports strengthening Medicaid to make sure those services are there for you--the people the program was originally designed to serve.",
+    "Let me explain this because there is a lot of misinformation out there.",
+    "This package is sending more Medicaid dollars and more support to rural hospitals in Ohio than ever before.",
+    "Ohio has historically been one of the more responsible States in its approach to Medicaid.",
+    "We haven't maxed out some of the tools that States have available to them to draw down funding on Medicaid.",
+    "That means that Ohio taxpayers have been subsidizing States like California, which has been drawing down the maximum amount of Federal dollars and, frankly, has been using them to pay for healthcare for people who aren't even citizens of the United States--in many cases, even for illegal immigrants.",
+    "Not only do I want to share with you the facts about how Medicaid is being supported but how.",
+    "In doing so, they are going to be able to draw down 60 percent more Medicaid funding as a result of that provision.",
+    "As a result, Ohio will be, frankly, taking in more Medicaid money than ever to serve those populations.",
+    "People who have depended on Medicaid should know it is going to be there for them.",
+    "Nationally, even though Ohio will be getting an additional amount of funding for Medicaid, the whole country--every State--will be receiving additional funding because the Medicaid budget increases by 3 percent a year long into the future.",
+    "But I want Ohioans to know that they are protected and that their hard-earned money that they have been using to fund Medicaid will no longer go to things that I know they don't approve of, which is paying for healthcare services for people who are in this country illegally.",
+    "I know that according to CMS, of all the projected Federal taxpayer losses under the provider tax that happen across the country, 95 percent of those losses come from four States: California, Michigan, Massachusetts, and New York, which have been maxing out the credit card of this country through the way that they operate their Medicaid Programs.",
+    "We need to have a system that protects the long-term interests of our Medicaid Program.",
+    "I want to reemphasize that Medicaid for children living in poverty, those with disabilities, caretakers, and elderly Ohioans is protected.",
+    "The truth is that no one that Medicaid was designed to serve will see benefit cuts.",
+    "It shows that we have 2.8 million people-- 2.8 million people--in this country who are dually enrolled in Medicaid; meaning, they are in one State and another, which means: What are we doing?",
+    "We are paying Medicaid premiums for the same individual in multiple States.",
+    "Frankly, it is hard to believe that this has not been cracked down on before, because this money that we are talking about is hard-earned tax dollars in a country that has a $37 trillion national debt, and here we see it wasted in this program.",
+    "I know when the Federal Government, under ObamaCare, put in place the Medicaid expansion provision, it provided free healthcare, provided free benefits, generously provided by the hard- working people of this Nation, for healthy adults who are able-bodied who didn't have children.",
+    "This bill says that if you are a healthy adult who is able-bodied, without young children, that now you are going to have to work 20 hours a week in return for your benefits.",
+    "I also want to add that in the bill we made communities across this country and Ohio much safer by securing the border--big investments in making sure that we secure the southern border, we don't let drugs and people who are not legally allowed to be in this country come across.",
+    "But we also did it at the northern border.",
+    "Ohio has a northern border, Lake Erie.",
+    "There is money in there to prevent some of the things that we have seen even at our northern border.",
+    "But this failure at our southern border has led to millions of people coming into this country illegally, people like Luis Naula-Candelario.",
+    "He was a criminal alien from Ecuador.",
+    "We have people all across this country who are here illegally, and there is money in this bill to find them, arrest them, and deport them, particularly those who have committed crimes either in their home country or in ours.",
+    "And this will help support law enforcement to protect more communities around our Nation and, certainly, in our State.",
+    "We face threats from China, Iran, Russia, and North Korea.",
+    "I actually toured, recently, a company in Ohio, late last year, that makes the bunker-busting bombs that were dropped in the very successful endeavor into Iran recently by our brave Air Force pilots and crew.",
+    "I will say, I was concerned, as the bill moved through the process, about what was being said about it, about how it was going to exacerbate and add to our deficit, because we were hearing a lot of people quoting the Congressional Budget Office, saying that it was going to add $3.4 trillion to the national debt.",
+    "Right now, the U.S. taxpayer is shelling out $1 trillion a year to pay interest on our debt, which also drives up our inflation.",
+    "To help pay for our current debt and the benefits we protect, we need laws, we need legislators, we need leaders who are going to make sure that this is top of mind."
+   ]
+  },
+  {
+   "date": "2025-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Rural Broadband Protection Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-26/CREC-2025-06-26-pt1-PgS3570-2",
+   "sentences": [
+    "The senior assistant legislative clerk read as follows: A bill (S. 98) to require the Federal Communications Commission to establish a vetting process for prospective applicants for high-cost universal service program funding."
+   ]
+  },
+  {
+   "date": "2025-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Maiden Speech (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-24/CREC-2025-06-24-pt1-PgS3499-2",
+   "sentences": [
+    "At Valley Forge, liberty nearly froze to death, but those who endured did so ``to form a more perfect Union.'' They fought not just for freedom but for justice, peace, and the blessings of liberty, for their posterity--that is us.",
+    "All the while, our national debt kept rising.",
+    "In 1967, when I was born, the national debt stood at $330 billion.",
+    "A baby born in America today inherits $106,000 as their share of the national debt on day one.",
+    "The question isn't just ``How did America's financial and cultural debt get so deep?'' It is ``How can we claw our way out of this financial and cultural hole?'' The answer comes down to identifying what we value and what we believe is worth the sacrifice.",
+    "But every generation is supposed to put in the sweat and tears to form a more perfect Union."
    ]
   }
  ]

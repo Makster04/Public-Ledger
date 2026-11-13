@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 5,
+  "floor": 12,
   "press": 3,
   "bluesky": 14,
   "threads": 0
@@ -160,6 +160,22 @@
    ]
   },
   {
+   "date": "2025-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Raising a Question of the Privileges of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-17/CREC-2025-11-17-pt1-PgH4692-2",
+   "sentences": [
+    "Mr. Speaker, I rise today with humility, fear, and conviction, conviction that American citizens have a right to choose their elected Representatives, fear that my convictions will be dismissed as naive, and humility that I am as liable to deceive myself about my first duties, where my strength comes from, and to whom I owe my loyalty as anyone else on this floor today.",
+    "I am asking the body to consider a set of facts laid before us tonight about how he chose his successor and deprived Americans the right to choose their elected Representative.",
+    "Mr. Speaker, true love persists in a confidence, not in your supremacy in making a choice for your voters, but in your service and humility that they have the right to choose.",
+    "It is long work to remain committed to the primacy of Americans' right to choose their elected representatives.",
+    "The question is: Do you have the right to choose your successor?",
+    "We do not dutifully serve the long work of building a self-determining country by turning our constituents into petitioners who would only demand free things from us, a relief from this pressure of the consolidation of corporate power.",
+    "I would argue that there is a very loud demand, a fervent, clear call by Americans right now for accountability and transparency, and it is not just about the Epstein files.",
+    "Nothing gives him the right to choose his successor."
+   ]
+  },
+  {
    "date": "2025-10-31",
    "source": "bluesky",
    "where": "Bluesky post",
@@ -178,6 +194,39 @@
    ]
   },
   {
+   "date": "2025-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Gratitude for the Fbi Investigation in Kelso",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-10/CREC-2025-06-10-pt1-PgH2573-4",
+   "sentences": [
+    "Mr. Speaker, I rise today to express my profound and deep gratitude to the Kelso Police Department, the FBI, and Columbia County Sheriff's Office.",
+    "An investigation was immediately launched in coordination with local partners, and law enforcement was able to identify the teenage suspect the next day.",
+    "During the investigation, law enforcement had discovered the suspect had shared heinous, detailed plans for a mass shooting in online chat rooms and had the intent and means to carry out a horrific attack.",
+    "I think it is incredibly important that we pause and recognize the skill, dedication, intelligence, and the bravery that these officers and law enforcement agents exemplified in preventing what would have been a horrifying event.",
+    "After assaulting the man who found them with both a hammer and a knife, they fled with about $14,000 worth of stolen military equipment and weapons."
+   ]
+  },
+  {
+   "date": "2024-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Dylan Jude Harrell Community Center",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-10/CREC-2024-04-10-pt1-PgH2256",
+   "sentences": [
+    "This community center will strengthen the foundations of Ilwaco by addressing the childcare crisis working families are facing and bringing together folks for recreational activities and community-led events.",
+    "Community centers like this one are key at a time when the average cost of childcare in the U.S. has risen by 220 percent in the last 30 years.",
+    "Deputy Kennison embodies the best of southwest Washington and our law enforcement community, and we extend our heartfelt gratitude for his service and the inspiration he provides to us all."
+   ]
+  },
+  {
+   "date": "2024-03-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Utilizing Space Efficiently and Improving Technologies Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-12/CREC-2024-03-12-pt1-PgH1116",
+   "sentences": [
+    "Mr. Chair, I rise today in support of my amendment with Representative Edwards for the USE IT Act which would incorporate our bipartisan bill, the FULL Act, to inform how Federal office leases are renewed and ensure unused government office space can be effectively repurposed."
+   ]
+  },
+  {
    "date": "2023-09-26",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2024",
@@ -185,6 +234,15 @@
    "sentences": [
     "My first amendment supports farmers and healthy soils by asking the USDA to conduct research on the amount of microplastics in farmland.",
     "My second amendment is the idea that the USDA should be able to fix its own stuff."
+   ]
+  },
+  {
+   "date": "2023-09-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Treating Tribes and Counties As Good Neighbors Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-12/CREC-2023-09-12-pt1-PgH4251",
+   "sentences": [
+    "However, Tribes and counties were not afforded the same authority as States to retain the receipts from these GNA project revenues to reinvest in conservation."
    ]
   },
   {
@@ -197,12 +255,40 @@
    ]
   },
   {
+   "date": "2023-06-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Removing Threats to Salmon",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-14/CREC-2023-06-14-pt1-PgH2892-2",
+   "sentences": [
+    "When the traditional currency collapsed during the Great Depression, they invented their own wooden currency.",
+    "Rust's dedication to our community is further demonstrated by his use of pandemic funding to bolster the district's mental health staff, proactively addressing this growing crisis and ensuring access in schools to a safe and supportive environment."
+   ]
+  },
+  {
    "date": "2023-03-29",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
    "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
    "sentences": [
     "In sector after sector of our economy, market consolidation is squeezing America's small businesses and harming consumers."
+   ]
+  },
+  {
+   "date": "2023-03-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Thank You to the Line Workers",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-28/CREC-2023-03-28-pt1-PgH1471-2",
+   "sentences": [
+    "But transmission is critical for grid resiliency and clean energy.",
+    "I look forward to working with my colleagues on both sides of the aisle to pass Federal legislation that will ensure all Americans have access to clean energy.",
+    "Prescription Drug Shortages Mr. Speaker, I rise today to bring attention to the drug shortages happening across the country.",
+    "No surprise, Big Pharma can find the capacity to manufacture the expensive on-brand drugs, and they are actively stonewalling efforts to produce the generic drugs that working families can actually afford.",
+    "In Support of Law Enforcement Mr. Speaker, I rise today in support of law enforcement officers in my district and across the Nation.",
+    "The national starting wage for police officers is $67,000 annually.",
+    "As a result, no surprise, recruitment and retention of good officers is the top issue facing law enforcement agencies across the country.",
+    "So while the cost of living is going up and up and up, we are funding, I kid you not, body cameras for dogs.",
+    "In my district, one of my local sheriff's offices received Federal funding for dog body cameras at a time when their deputy wages are struggling to keep up with the cost of living.",
+    "Mr. Speaker, I urge my colleagues to join me in working to realign our Federal spending to reflect the real issues facing law enforcement."
    ]
   },
   {

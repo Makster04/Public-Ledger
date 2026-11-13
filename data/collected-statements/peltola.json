@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 4,
+  "floor": 10,
   "press": 0,
   "bluesky": 20,
   "threads": 0
@@ -212,6 +212,38 @@
    ]
   },
   {
+   "date": "2024-01-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Albertsons-Kroger Merger",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-17/CREC-2024-01-17-pt1-PgH154-4",
+   "sentences": [
+    "Mr. Speaker, I rise today to defend Alaska's rights to affordable groceries, which are under threat from a corporate mega- merger.",
+    "The Albertsons-Kroger merger would combine Alaska's two largest grocery stores.",
+    "We know what happened in the 1999 Carrs-Safeway merger, when a new operator had to close its stores after barely a year.",
+    "We are asking the Federal Trade Commission to listen to our voices, stop this merger, and protect our access to food and jobs."
+   ]
+  },
+  {
+   "date": "2023-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nahasda Reauthorization",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-07/CREC-2023-11-07-pt1-PgH5482-5",
+   "sentences": [
+    "Madam Speaker, I have heard stories from people across Alaska, some of the most rural and distant parts of our country, of about 20 people sharing a house with only three bedrooms and one bathroom.",
+    "The Native American Housing Assistance and Self-Determination Act, or NAHASDA, is called the backbone of Indian housing for the essential support block grants and financing it guarantees in order to develop critical affordable housing and community facilities."
+   ]
+  },
+  {
+   "date": "2023-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Alaska Railroad Corporation Centennial 1923-2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-13/CREC-2023-07-13-pt1-PgE671-2",
+   "sentences": [
+    "Simultaneously, the Railroad initiated a program to reduce diesel emissions and noise.",
+    "Today, the ARRC operates a regularly scheduled public transportation service extending from Seward north through the traditional lands of the Alutiiq and the lands of the Athabascan groups: the Dena'ina, Ahtna, and Lower Tanana people."
+   ]
+  },
+  {
    "date": "2023-03-08",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 140, Protecting Speech From Government Interference Act; Providing for Consideration of H.J. Res.",
@@ -248,10 +280,51 @@
   {
    "date": "2022-12-21",
    "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the Not Invisible Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-21/CREC-2022-12-21-pt1-PgH9954",
+   "sentences": [
+    "It also created a point person within the Bureau of Indian Affairs charged with improving the coordination of violent crime prevention efforts across Federal agencies.",
+    "S. 5087 will extend the duration of the commission and includes additional support for functions of the commission so they can continue to do their important work for Indian Country."
+   ]
+  },
+  {
+   "date": "2022-12-21",
+   "source": "floor",
    "where": "Floor speech, Congressional Record: Native American Language Resource Center Act of 2022",
    "url": "https://www.govinfo.gov/app/details/CREC-2022-12-21/CREC-2022-12-21-pt1-PgH9955",
    "sentences": [
     "Specifically, this bill will create a center that will provide support for Native American language programs in schools serving students of all ages and at all levels of learning from pre-K to Ph.D.; serve as a resource to Federal, Tribal, State, local governments, and other organizations to spread best practices for the development of Native American language teaching and learning; and support teacher preparation programs that prepare teachers to teach Native American languages."
+   ]
+  },
+  {
+   "date": "2022-12-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the Bill Emerson Good Samaritan Food Donation Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-21/CREC-2022-12-21-pt1-PgH9958",
+   "sentences": [
+    "Madam Speaker, I move to suspend the rules and pass the bill (S. 5329) to amend the Bill Emerson Good Samaritan Food Donation Act to improve the program, and for other purposes.",
+    "Madam Speaker, I ask unanimous consent that all Members may have 5 legislative days in which to revise and extend their remarks and include extraneous material on S. 5329, a bill to amend the Bill Emerson Good Samaritan Food Donation Act to improve the program, and for other purposes.",
+    "Madam Speaker, I rise in strong support of S. 5329, the Food Donation Improvement Act of 2021, championed by Mr. McGovern of Massachusetts, Mr. Newhouse of Washington, Ms. Pingree of Maine, and the late Mrs. Walorski of Indiana.",
+    "The Food Donation Improvement Act of 2021 addresses food insecurity by tackling food waste.",
+    "Specifically, the bill makes improvements to the Bill Emerson Good Samaritan Food Donation Act by expanding liability protections that will encourage food donation, including by protecting direct donation to needy individuals.",
+    "Madam Speaker, simply put, the Food Donation Improvement Act of 2021 makes it easier to donate food that might otherwise go to waste.",
+    "Madam Speaker, I urge my colleagues to join me in tackling food waste and insecurity and vote ``yes'' on S. 5329.",
+    "Madam Speaker, if you go out behind almost any restaurant, hotel, grocery store, catering company, or even at some farms in America, you will find a dirty little secret that is as offensive as it is solvable; food waste.",
+    "This bill, the Food Donation Improvement Act, has a simple goal: Make it easier for people with extra food to donate it to people in need.",
+    "All we are doing here is expanding protections to increase the quantity and efficiency of food donation efforts.",
+    "The Biden administration has released a National Strategy on Hunger, Nutrition, and Health, identifying the need to reduce barriers to food recovery as part of their whole-of-government response.",
+    "The Food Donation Improvement Act is an important step toward making that goal a reality.",
+    "Madam Speaker, food waste is unacceptable as millions of children and families face food insecurity.",
+    "By encouraging retailers and organizations to donate food, the Food Donation Improvement Act of 2021 will make it easier to donate food and, ultimately, crack down on food waste."
+   ]
+  },
+  {
+   "date": "2022-09-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Welcoming the Honorable Mary Peltola to the House of Representatives",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-13/CREC-2022-09-13-pt1-PgH7775-3",
+   "sentences": [
+    "I promised Alaskans I would fight for our families, to lower the cost of living that is pushing too many of us to the brink, to invest in high-quality childcare and early education, and to grow Alaska's economy with good jobs that pay a fair wage."
    ]
   }
  ]

@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 18,
+  "floor": 31,
   "press": 0,
   "bluesky": 0,
   "threads": 0
@@ -60,12 +60,43 @@
    ]
   },
   {
+   "date": "2025-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Rescissions Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-12/CREC-2025-06-12-pt1-PgH2796-3",
+   "sentences": [
+    "President Trump's rescissions package cuts $9.4 billion, including $3 million for Iraqi ``Sesame Street'', $6 million for net-zero cities in Mexico, and $1 million for voter ID in Haiti, not here in the United States.",
+    "It has pushed biased narratives and forced inappropriate content on children, like a movie celebrating the sex change of a child, and a feature on the racial origins of fat phobia."
+   ]
+  },
+  {
+   "date": "2024-12-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting American Industry and Labor From International Trade Crimes Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-03/CREC-2024-12-03-pt1-PgH6216",
+   "sentences": [
+    "For decades, companies operating under the control of the Chinese Communist Party in the People's Republic of China have systematically violated U.S. trade laws.",
+    "Sunsong was using transshipment to evade U.S. tariffs, forcing an Illinois company to lay off a quarter of their workforce.",
+    "While tariffs are one tool in our toolkit to level that playing field, we also must enforce our trade laws and hold China accountable for repeated violations that have a catastrophic impact on American workers and American industry.",
+    "This will help to reshore domestic manufacturing and provide opportunities for our American workers."
+   ]
+  },
+  {
    "date": "2024-09-11",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Protecting American Agriculture From Foreign Adversaries Act of 2024",
    "url": "https://www.govinfo.gov/app/details/CREC-2024-09-11/CREC-2024-09-11-pt1-PgH5168",
    "sentences": [
     "China does continue to buy up American farmland at an alarming rate."
+   ]
+  },
+  {
+   "date": "2024-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: The Great State of Iowa",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-17/CREC-2024-05-17-pt1-PgH3334-2",
+   "sentences": [
+    "While President Biden opened our borders and allowed countless illegal immigrants to invade, Iowa is working to deport illegal immigrants who endanger our communities."
    ]
   },
   {
@@ -102,6 +133,16 @@
     "Our bill also protects Iowa farmers from onerous regulations like the SEC's climate disclosure rule and the expansive Scope 3 emissions disclosure requirement.",
     "We are also taking strong steps to ensure that we are bolstering national security against threats from our adversaries, like the Chinese Communist Party.",
     "I also serve on the Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party."
+   ]
+  },
+  {
+   "date": "2023-10-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Raising a Question of the Privileges of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-03/CREC-2023-10-03-pt1-PgH4969",
+   "sentences": [
+    "His policies have created a horrific border crisis--10,000 illegal immigrants a day surging across our border.",
+    "Under Speaker McCarthy, Republicans have passed legislation to secure our border."
    ]
   },
   {
@@ -211,6 +252,18 @@
    ]
   },
   {
+   "date": "2021-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Request to Consider H.R. 18, No Taxpayer Funding for Abortion Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-24/CREC-2021-06-24-pt1-PgH3119-2",
+   "sentences": [
+    "Mr. Speaker, I rise today to call on my colleagues to consider the No Taxpayer Funding for Abortion Act, legislation that would preserve the longstanding Hyde amendment.",
+    "For the first time in over 40 years, the administration's proposed budget does not include Hyde protections, protections that have long ensured taxpayer dollars are not used to fund abortions.",
+    "Reversing this longstanding pro-life policy is wrong.",
+    "I will always lend my voice to the voiceless and fight to ensure that Iowa taxpayers are never forced to fund abortions against their will."
+   ]
+  },
+  {
    "date": "2021-06-14",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 256, Repealing the Authorization for Use of Military Force Against Iraq Resolution of 2002; Providing for Consideration of H.R. 1187, Esg Disclosure...",
@@ -247,6 +300,107 @@
     "Never mind that Vice President Harris represented California as a United States Senator, which is a border State.",
     "Never mind that she just went to Central America because people are coming to our border from places like El Salvador, Honduras, and Guatemala.",
     "Our solution is you either go and do a photo op at the border or we are going to withhold your travel budget."
+   ]
+  },
+  {
+   "date": "2021-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sgt. Ketchum Rural Veterans Mental Health Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-17/CREC-2021-05-17-pt1-PgH2375",
+   "sentences": [
+    "Madam Speaker, today, I rise in support of H.R. 2441, the Sgt. Ketchum Rural Veterans Mental Health Act.",
+    "Many veterans struggle when they come home with serious mental health challenges.",
+    "Our legislation, named in honor of Sergeant Ketchum, will improve access to mental health services for veterans in rural areas.",
+    "I am proud to work alongside my colleagues in Iowa to improve access to mental health services for veterans in rural areas and to help ensure that no veteran is denied the care that they deserve.",
+    "I urge all of our colleagues to support the Sgt. Ketchum Rural Veterans Mental Health Act."
+   ]
+  },
+  {
+   "date": "2021-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 842, Protecting the Right to\nOrganize Act of 2021; Providing for Consideration of H.R. 8, Bipartisan \n  Background Checks Act of 2021; Providing for...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-08/CREC-2021-03-08-pt1-PgH1086-8",
+   "sentences": [
+    "But these bills do nothing to stop the bad guys from illegally purchasing guns or reduce gun violence meaningfully.",
+    "Instead, they punish law-abiding gun owners and arbitrarily deny Iowans their Second Amendment rights.",
+    "H.R. 8 infringes on the rights of law- abiding gun owners, criminalizing everyday transfers of guns between friends, family, and neighbors, including lending of weapons that were obtained lawfully.",
+    "The bill doesn't say indefinitely for the background checks.",
+    "In Iowa, our Governor has put students' education, their mental health, and their safety first.",
+    "My kids got on a school bus this morning and went to a classroom, and they rode that same school bus home.",
+    "The mental health toll of long-term school closures on our students is staggering.",
+    "Enrollment is dropping, especially in rural areas in States like Iowa."
+   ]
+  },
+  {
+   "date": "2021-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1319, American Rescue Plan Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-26/CREC-2021-02-26-pt1-PgH762-3",
+   "sentences": [
+    "It includes a $15 minimum wage hike, which would decimate the rural economy in Iowa and destroy the very livelihoods this bill claims to be saving.",
+    "It opens the door for taxpayer funding for abortions."
+   ]
+  },
+  {
+   "date": "2021-02-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Be It Enacted by the Senate and House of Representatives of the United States of America in Congress Assembled,",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-26/CREC-2021-02-26-pt1-PgH773-2",
+   "sentences": [
+    "Mr. Speaker, Americans are crying out tonight for targeted relief; and, instead, this bill sends money straight to Speaker Pelosi's pet project in California, the Bay Area Rapid Transit Silicon Valley phase 2.",
+    "How insulting to the frontline workers who still have not received a COVID-19 vaccine, and to the mom trying to pay rent while her small business is in danger.",
+    "And what about the ER docs and nurses treating kids rushed in for a mental health crisis?",
+    "My amendment tonight would take away the Speaker's $140 million subway carve-out and instead redirect that money to a truly essential cause: Supporting mental health programs for students.",
+    "We have seen increasing rates of depression, anxiety, and other mental health challenges among our kids, who have been trapped behind screens for a year now.",
+    "If we adopt the motion to recommit tonight, we will instruct the Budget Committee to reconsider my amendment, which would put students over subways and reject this $140 million Speaker set-aside in favor of getting kids the mental health help they need right now, before it is too late."
+   ]
+  },
+  {
+   "date": "2021-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 803, Colorado Wilderness Act of 2021, and Providing for Consideration of H.R. 5, Equality Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-24/CREC-2021-02-24-pt1-PgH602-2",
+   "sentences": [
+    "But the toll on mental health is what is most concerning to me.",
+    "From increased stress and anxiety, depression, even suicidal thoughts or attempts, our youngest generation is facing a mental health crisis.",
+    "Hospitals have seen a staggering increase in mental health emergencies among young children.",
+    "And the longer the goal posts continue to be moved on reopening schools, the worse this mental health crisis for our young people will become.",
+    "My home State of Iowa is leading the way to put students' education and mental health first.",
+    "My two sons got on the school bus this morning in Iowa."
+   ]
+  },
+  {
+   "date": "2021-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Concurrent Resolution on the Budget for Fiscal Year 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-03/CREC-2021-02-03-pt1-PgH284-2",
+   "sentences": [
+    "It is about jamming through a liberal agenda, including a $15 minimum wage mandate.",
+    "The Congressional Budget Office estimates that a $15 minimum wage would kill at least 1.3 million jobs.",
+    "The owner built his business from the ground up, and he told us that a $15 Federal minimum wage would make it hard to expand his business at all.",
+    "He is just one of my many constituents who have told me they would have to lay off workers, raise prices, or even shut down permanently if a $15 minimum wage becomes a reality.",
+    "This might be right for California and New York, but one-size-fits-all Federal minimum wage mandates would destroy small businesses and rural communities in my district."
+   ]
+  },
+  {
+   "date": "2021-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Roe V. Wade",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-03/CREC-2021-02-03-pt1-PgH315",
+   "sentences": [
+    "Since Roe v. Wade was enacted by the Supreme Court decision 48 years ago, 62 million abortions have been performed--62 million.",
+    "We must stand up for the unborn, those who cannot stand up for themselves.",
+    "I am inspired by the growing pro-life community and movement in our country."
+   ]
+  },
+  {
+   "date": "2021-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 447, National Apprenticeship Act of 2021; Providing for Consideration of H. Con. Res. 11, Concurrent Resolution on the Budget for Fiscal Year 2021; and for Other...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-02-02/CREC-2021-02-02-pt1-PgH266-3",
+   "sentences": [
+    "Students have been out of the classroom for far too long, and the costs of at-home learning are far greater than we could have ever imagined, especially when it comes to mental health for our kids.",
+    "Child depression, anxiety, and other mental health challenges are surging."
    ]
   }
  ]

@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 19,
+  "floor": 57,
   "press": 6,
   "bluesky": 0,
   "threads": 0
@@ -87,12 +87,54 @@
    ]
   },
   {
+   "date": "2025-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Holy Trinity Greek Orthodox Church Centennial Celebration",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-01/CREC-2025-05-01-pt1-PgE373-4",
+   "sentences": [
+    "The rich traditions of the Orthodox Church extend back to the earliest days of Christianity, established in the lands surrounding the Mediterranean, where the first Christian communities lived and worshipped."
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Concurrent Resolution on the Budget for Fiscal Year 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-04-09/CREC-2025-04-09-pt1-PgH1533-2",
+   "sentences": [
+    "In passing this budget framework, we are unlocking the process to deliver on unleashing American energy production, permanently securing our southern and northern borders, and making tax cuts permanent for small businesses and working families.",
+    "President Trump has fully secured our border and eliminated over $100 billion in government spending on waste, fraud, and abuse.",
+    "President Trump's new proposal on tax cuts is for those making tips, not the wealthy; those on overtime, not the wealthy; and reducing the tax burden on those receiving Social Security, our seniors, not the wealthy.",
+    "The President has talked about giving tax credits or deductibility for interest on automobiles made in America so our great union workers in America can have better jobs and continue to see jobs grow in America, not the wealthy."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Concurrent Resolution on the Budget for Fiscal Year 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-25/CREC-2025-02-25-pt1-PgH791-3",
+   "sentences": [
+    "This budget resolution commits us to investing in strong border security and strengthening our national defense.",
+    "The budget resolution calls for historic spending cuts as Congress works with the President to eliminate waste, fraud, and abuse, something that every single one of us, regardless of party, should applaud, all in one, big, beautiful bill.",
+    "Failure to unite on this vote may very well result in breaking up the President's agenda."
+   ]
+  },
+  {
    "date": "2025-01-15",
    "source": "floor",
    "where": "Floor speech, Congressional Record: United States-Taiwan Expedited Double-Tax Relief Act",
    "url": "https://www.govinfo.gov/app/details/CREC-2025-01-15/CREC-2025-01-15-pt1-PgH160-6",
    "sentences": [
     "They have increased investment in domestic research and development to improve their own deterrence capabilities and are invested heavily in the semiconductor industry here in the United States of America."
+   ]
+  },
+  {
+   "date": "2024-10-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Spina Bifida Awareness Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-10-29/CREC-2024-10-29-pt1-PgE1091-2",
+   "sentences": [
+    "Adults living with Spina Bifida face myriad physical health, mental health, and other challenges, such as unemployment and limited access to quality primary and specialty care.",
+    "The only place in the Federal Government that is specifically studying this complex condition for children and adults is the Spina Bifida Program at the National Center on Birth Defects and Developmental Disabilities at the CDC through the National Spina Bifida Patient Registry and the Spina Bifida Collaborative Care Network."
    ]
   },
   {
@@ -131,12 +173,32 @@
    ]
   },
   {
+   "date": "2023-06-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Custom Health Option and Individual Care Expense Arrangement Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-21/CREC-2023-06-21-pt1-PgH3022",
+   "sentences": [
+    "I came to Congress 4 years ago, and the reason I came was because of the burden that this Congress over the years has put on job creators across America.",
+    "I find it ironic that the gentleman across the aisle identifies the ACA requirements as junk because the CHOICE Arrangement Act follows the ACA guidelines.",
+    "It follows the rules on preexisting conditions."
+   ]
+  },
+  {
    "date": "2023-01-09",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Family and Small Business Taxpayer Protection Act",
    "url": "https://www.govinfo.gov/app/details/CREC-2023-01-09/CREC-2023-01-09-pt1-PgH76",
    "sentences": [
     "Mr. Speaker, on March 1, 2022, President Biden made a promise to the American people during the State of the Union Address before a joint session of Congress."
+   ]
+  },
+  {
+   "date": "2022-10-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Spina Bifida Awareness Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-10-25/CREC-2022-10-25-pt1-PgE1084",
+   "sentences": [
+    "To correct this, the child must undergo dozens of surgeries before they become adults, and even then, they face a myriad of physical and mental health issues."
    ]
   },
   {
@@ -192,6 +254,48 @@
    ]
   },
   {
+   "date": "2022-06-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Republican Study Committee'S Blueprint to Save America",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-21/CREC-2022-06-21-pt1-PgH5720-5",
+   "sentences": [
+    "Drugs, weapons, and all other manner of contraband, along with hundreds of thousands of unvetted migrants, are pouring over our southern border with almost no resistance.",
+    "Our national debt is over $30 trillion, a sum of money that most people cannot even begin to comprehend.",
+    "However, the so-called budget that the President produced a few months ago never balances and adds trillions of dollars to our national debt over the next 10 years.",
+    "If Congress continues down this path, we will add $15.1 trillion to the debt this decade, $24.2 trillion in the 2030s, and $41.8 trillion in the 2040s.",
+    "It is the most pro-life budget that the RSC has ever produced.",
+    "It solidifies our national security and secures our southern border.",
+    "It saves Medicare and Social Security from insolvency.",
+    "We need to not be running up $30 trillion debts and another $15 trillion on the horizon with the President's budget, the only Democrat budget that has been put out, that increases the debt to $45 trillion in the next 10 years, assuming he can get $7 trillion in additional taxes out of small businesses and individuals in America by allowing the Tax Cuts and Jobs Act's tax cuts to expire.",
+    "Some 203 pieces of legislation by some 82 Members of the Republican Party have been included in this budget to design and develop and produce a balanced budget for all Americans.",
+    "If we cared, we would sit down and work together to produce a balanced budget, one like we haven't seen in over 20 years.",
+    "It is so refreshing to hear your conservative values about something as simple as a balanced budget.",
+    "He is from another State where we always assume that nobody cares about fiscal responsibility in America.",
+    "Mr. Speaker, I appreciate Mr. Hern's strong effort in helping shepherd our budget concept through the RSC to get back to fiscal responsibility and make sure it is on the front burner.",
+    "You have California and New York, and if you throw in Illinois, you don't see a whole lot of conversation coming out that you want the country to emulate as far as fiscal responsibility.",
+    "This is the American people's debt.",
+    "Unfortunately, we are just adding debt to it.",
+    "When you couple that with the inflation that we are dealing with now, when we are looking at interest rates that are edging up in order to basically try, essentially, to put the brakes on government spending, that is what has driven this.",
+    "The higher numbers for interest rates, for payments on American debt, are going to devour our ability to budget on things that we actually do want to do and care about around here.",
+    "My farmers--I am a farmer myself in my real life--we are not seeing a mere 8 percent on fertilizer, diesel, parts, tires, service calls, on everything.",
+    "The President has said time and time again, and he said it just in the last week, that the high gas prices in America, and that Americans are suffering, are part of the grand transition plan off of fossil fuels to electric vehicles and others.",
+    "I just saw a recent interview with a major figure with a major car manufacturer introducing and talking about their electric vehicles.",
+    "They were questioned at that press conference: Where is the power coming from to charge this electric car?",
+    "The people I know, the regular folks, haven't been asked if they want to transition to electric vehicles or an electric stove or anything else.",
+    "They want to just stick with what they have because you are looking at the price of electric vehicles, which are $50,000, $60,000, $70,000.",
+    "If we are going to service more and more debt at a higher interest rate, and we keep adding the numbers, as my colleague from New York was talking about--if the Biden plan calls for $73 trillion of increased spending over what we are already doing at a deficit over the next 10 years, we have big trouble.",
+    "Inflation drives higher prices to the end-users, driven by government spending.",
+    "The blueprint for this would be back in the mid-1990s when we achieved a balanced budget, I believe it was 4 years in a row, with President Clinton coming to the table and working with Newt Gingrich and Senator Dole and others on actually passing four balanced budgets in a row.",
+    "He was ridiculed by many Members over his time in the Senate because he always pushed for fiscal conservatism, fiscal responsibility for American taxpayer dollars.",
+    "In 2004, when he ran for Senate, and he spoke about this on the campaign trail, the national debt was $7.3 trillion.",
+    "As you just alluded to, there should be no pride in either one of the parties taking this acknowledgment of having a balanced budget.",
+    "We should produce a balanced budget, as we did under Newt Gingrich's leadership.",
+    "Our Nation is under attack by the debt load that we are having.",
+    "The interest on our debt, much of which we will pay to China because that is who we are getting our money from, is overtaking us.",
+    "In the next 4 years, the spending on our mandatory interest on our debt will surpass what we spend on protecting this great Nation and the support of our men and women in uniform."
+   ]
+  },
+  {
    "date": "2022-03-31",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 3617, Marijuana Opportunity Reinvestment and Expungement Act; Providing for Consideration of H.R.",
@@ -201,6 +305,24 @@
     "While Putin continues to wage war on Ukraine, exposing our dependence on Russian energy, Biden continues to wage war on our domestic oil and gas industry that provides sustainable, reliable energy to the American people.",
     "Oil and gas are essential to power our homes and, yes, provide the energy to power electric vehicles.",
     "Today's political climate will directly influence future investment decisions, especially in heavily regulated industries like energy."
+   ]
+  },
+  {
+   "date": "2022-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Calling Attention to the Energy Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-08/CREC-2022-03-08-pt1-PgH1359",
+   "sentences": [
+    "Yes, we are experiencing some added pressure thanks to Putin's evil attack on Ukraine, but our energy problems go much farther back than that."
+   ]
+  },
+  {
+   "date": "2022-01-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: America'S Lumber Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-19/CREC-2022-01-19-pt1-PgH221-4",
+   "sentences": [
+    "The resulting supply and demand inversion caused a nationwide lumber shortage."
    ]
   },
   {
@@ -233,6 +355,17 @@
    "url": "https://www.govinfo.gov/app/details/CREC-2021-11-17/CREC-2021-11-17-pt1-PgH6360",
    "sentences": [
     "Earlier today, OSHA announced that it will suspend enforcement of Biden's immoral and unconstitutional vaccine mandate after being blocked by the Fifth Circuit Court."
+   ]
+  },
+  {
+   "date": "2021-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Support for Small Business",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-02/CREC-2021-11-02-pt1-PgH6082-4",
+   "sentences": [
+    "They say they support small businesses, but Democrats proudly support increases on small businesses and job creators.",
+    "They are actively disrupting the labor market by keeping workers out of the workforce with never-ending handouts to able-bodied Americans.",
+    "They are expanding credits for childcare without any work requirements for the parents."
    ]
   },
   {
@@ -280,6 +413,352 @@
     "Provisions in H.R. 3755 include the elimination of laws requiring parental involvement in a minor's decision to abort a baby, laws preventing abortions based on a baby's sex or diagnosis with a mental disability, as well as laws preventing dismemberment abortions.",
     "It is clear that this bill has nothing to do with protecting women's health; rather, it is the result of Democrats bending the knee to the unethical abortion industry.",
     "I urge my colleagues to vote ``no'' on the abortion on demand act. ____________________"
+   ]
+  },
+  {
+   "date": "2021-09-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Debt Ceiling",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-21/CREC-2021-09-21-pt1-PgH4564-4",
+   "sentences": [
+    "The national debt exceeds $28.7 trillion, and it is growing fast.",
+    "Secretary Treasurer Janet Yellen recently said that failing to raise the debt ceiling risked ``irreparable harm to the U.S. economy and the livelihoods of all Americans.'' Ignoring their own Treasury Secretary's warning, Democrats decided to leave the debt ceiling increase out of their partisan budget reconciliation bill, risking financial disaster for the entire Nation.",
+    "While the Democrats want to wave a magic wand and pretend the debt doesn't exist, our debts are very real."
+   ]
+  },
+  {
+   "date": "2021-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Labor, Health and Human Services, Education, Agriculture, Rural Development, Energy and Water Development, Financial Services and General Government, Interior, Environment, Military Construction...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-27/CREC-2021-07-27-pt1-PgH3933",
+   "sentences": [
+    "Madam Speaker, last year we lost Senator Tom Coburn, a dear friend of mine, and a legend in both this Chamber and across the Capitol for his consistency and dedication to the fiscal responsibility of our country.",
+    "I have with me today Senator Tom Coburn's black book, an outline of his deficit reduction plan in 2011 to get the United States on track to eliminate our debt and balance the budget.",
+    "Our interest costs on the debt alone are expected to nearly triple in the next 10 years, making interest costs the third largest Federal expense behind Social Security and Medicare.",
+    "When I came to Congress at the end of 2018, our national debt was $19 trillion.",
+    "Our debt has grown some 58 percent.",
+    "Meanwhile, our economic growth has been somewhere around 2 percent.",
+    "What we are looking at today is a drastic expansion of Federal spending across the board.",
+    "HHS is getting a 23 percent expansion, including $110 million to research the impacts of climate change and $400 million in Title X funding, which Planned Parenthood is now eligible for since Democrats are eliminating the Hyde amendment.",
+    "I want to thank my colleagues who have talked about these amendments, who have joined me in these amendments, who are wanting to speak today, and I urge adoption of this en bloc to rein in Democrats' reckless spending and ensure a fiscally secure future for generations of Americans to come.",
+    "The amendment would cut funding for important programs and services that provide opportunities for working families.",
+    "That leads to tens of thousands of children losing access to high- quality early learning programs.",
+    "It cuts the Child Care and Development Block Grant by $1.5 billion, at a time when parents want to return to work, but there is no one available to care for their children.",
+    "It cuts $2 billion from mental health and substance use disorder."
+   ]
+  },
+  {
+   "date": "2021-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: July Veteran of the Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-26/CREC-2021-07-26-pt1-PgE804-2",
+   "sentences": [
+    "Upon retirement, Mr. Bell continued to serve and protect his community as a member of law enforcement.",
+    "As a member of law enforcement, Michael goes above and beyond to serve his community.",
+    "He served as chairman of the Jackson County Tobacco Education Committee and President of the Fraternal Order of Police Lodge 120.",
+    "Michael currently serves as Chief of Police in Coweta, OK.",
+    "He is a life member of Veterans of Foreign Wars and American Legion along with several law enforcement organizations."
+   ]
+  },
+  {
+   "date": "2021-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Request to Consider H.R. 18, No Taxpayer Funding for Abortion Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-21/CREC-2021-07-21-pt1-PgH3792-3",
+   "sentences": [
+    "Madam Speaker, I rise today in support of our most vulnerable Americans; the unborn.",
+    "They are actively destroying decades of progress and protections for the unborn, which is why it is essential to pass the No Taxpayer Funding for Abortion Act."
+   ]
+  },
+  {
+   "date": "2021-06-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reclaiming Our Fiscal Future",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-15/CREC-2021-06-15-pt1-PgH2803-2",
+   "sentences": [
+    "I am here tonight with some of the greatest minds in Congress to talk about our floor-ready plan to tackle wasteful spending and restore fiscal responsibility to the Federal Government.",
+    "The second is due to pro-growth policies like the Tax Cuts and Jobs Act.",
+    "We are shielding the middle class from capital gains taxes, eliminating the death taxes, and repealing market-distorting tax carve- outs.",
+    "Our budget is the most pro-life budget ever introduced, with 17 pieces of pro-life legislation included.",
+    "We are protecting your Second Amendment rights.",
+    "We are supporting our police officers and ensuring our communities remain safe for everyone.",
+    "Our budget includes over 30 specific deregulation bills ensuring liberty for American job creators and workers alike.",
+    "We are putting Medicare and Social Security on a path to solvency without cutting immediate benefits.",
+    "Madam Speaker, I yield to the gentleman from Texas (Mr. Babin), the co-chair of the Border Caucus from the 36th Congressional District.",
+    "We see our defense budget being cut below the inflation rate.",
+    "Fiscal responsibility does not have to be partisan, which is why I am calling on my colleagues on both sides of the aisle to help us bring this budget to the floor for a vote."
+   ]
+  },
+  {
+   "date": "2021-04-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Voicing Concern About Southern Border",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-04-21/CREC-2021-04-21-pt1-PgH2034",
+   "sentences": [
+    "Madam Speaker, today, I rise to give voice to the concern of millions of Americans, the crisis at our southern border.",
+    "Biden revoked Trump's effective border policies and put nothing in place to make up for it, creating the current crisis that is spiraling out of control.",
+    "We need to send immediate aid to our Border Patrol."
+   ]
+  },
+  {
+   "date": "2021-03-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Managing the Crisis on the Southern Border",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-17/CREC-2021-03-17-pt1-PgH1489",
+   "sentences": [
+    "The longer Joe Biden and his White House ignore the crisis on our border, the more challenging it becomes to get it under control.",
+    "Under President Trump, border security was a top priority.",
+    "Illegal entries plummeted under President Trump, and over 450 miles of border wall were built at the fighting and scratching every single way against our Democrat colleagues' desires.",
+    "On day one of his Presidency, he unconstitutionally halted congressionally appropriated funds meant to secure and strengthen our southern border.",
+    "He indicated a complete reversal on border policies, refusing to condemn Democrats who call for open borders.",
+    "Mr. Speaker, it has been less than 2 months since Biden took office and already the situation at our southern border has reached unprecedented levels, levels like we haven't seen in 20 years.",
+    "Border agents are reporting the number of illegal entries, especially children, is higher than we have seen in decades.",
+    "Children are being sent to Dallas, hundreds of miles away from the border, to be held at the convention center.",
+    "My amendments asked that known gang members not be eligible for amnesty.",
+    "That we create a tax credit for employers who want to do the right thing and implement E-Verify in their companies to make sure they are hiring legal American workers, and that illegal immigrants who have committed crimes in our country not be eligible for amnesty.",
+    "These are all commonsense ideas that a vast majority of Americans support, but Democrats would rather have open borders with no consequences for those who break the laws in our country.",
+    "Just this week, four people on the terrorist watch list were caught attempting to illegally entered our country.",
+    "If we lower the standards and restrictions on our border, we know we never would have caught them.",
+    "Mr. Speaker, I and many of my Republican colleagues have been to the border to see this terrible situation firsthand."
+   ]
+  },
+  {
+   "date": "2021-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Taking Away Employee Choice",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-10/CREC-2021-03-10-pt1-PgH1193-8",
+   "sentences": [
+    "Mr. Speaker, last year, I stood right here and argued against the many concerns I have with the PRO Act.",
+    "The PRO Act is a dangerous example of power for union leaders without necessary protections for union members.",
+    "One of the biggest glaring failures of this legislation is taking away employee choice, effectively repeating right-to-work laws across the country, like in my home State of Oklahoma, where we choose to empower employees and employers alike.",
+    "Where workers have previously had the freedom to choose whether or not to pay fees and join unions, they will now be forced to pay membership fees or lose their job.",
+    "If my colleagues insist on moving forward with legislation that empowers union bosses and strips independence from our workers, we will lose to countries like China, who profit from sweatshops and child labor."
+   ]
+  },
+  {
+   "date": "2020-10-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Spina Bifida Awareness Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-10-20/CREC-2020-10-20-pt1-PgE972-2",
+   "sentences": [
+    "Adults living with Spina Bifida face myriad physical health, mental health, and other challenges, such as unemployment and limited access to quality primary and specialty care.",
+    "The only place in the federal government that is specifically studying this complex condition for children and adults is the Spina Bifida Program at the National Center on Birth Defects and Developmental Disabilities at the CDC through the National Spina Bifida Patient Registry and the Spina Bifida Collaborative Care Network People with Spina Bifida deserve no less than the rest of us as we age."
+   ]
+  },
+  {
+   "date": "2020-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Taxpayer First Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-22/CREC-2020-07-22-pt1-PgH3642-3",
+   "sentences": [
+    "We have already saddled the next generation with unthinkable debt."
+   ]
+  },
+  {
+   "date": "2020-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: July Veteran of the Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-16/CREC-2020-07-16-pt1-PgE641-4",
+   "sentences": [
+    "Major Wilson flew unarmed reconnaissance missions in Korea."
+   ]
+  },
+  {
+   "date": "2020-05-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commemorating the 102nd Anniversary of the Azerbaijan Democratic Republic",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-05-28/CREC-2020-05-28-pt1-PgE499",
+   "sentences": [
+    "A friend of Israel, they provide 40 percent of Israel's oil consumption."
+   ]
+  },
+  {
+   "date": "2020-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Health and Economic Recovery Omnibus Emergency Solutions Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-05-15/CREC-2020-05-15-pt1-PgH2042",
+   "sentences": [
+    "I see a mortgage on our children's future, financed by China, the very foreign adversary responsible for the crisis in the first place."
+   ]
+  },
+  {
+   "date": "2020-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: February Veteran of the Month",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-03-04/CREC-2020-03-04-pt1-PgE262",
+   "sentences": [
+    "A Military Police Officer in the United States Marine Corps, Ms. Lowry honorably served our nation for three years."
+   ]
+  },
+  {
+   "date": "2020-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting the Right to Organize Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-02-06/CREC-2020-02-06-pt1-PgH879",
+   "sentences": [
+    "This amendment ensures that labor unions are not using illegal foreign labor to expand their region to the American workplaces and collect more union dues.",
+    "Under current law, an employee can sign a union authorization card to count toward the showing of interest in union elections regardless of whether that worker is authorized to work in the United States.",
+    "Illegal immigrants should not be working at American companies, let alone used by labor unions to organize workplaces.",
+    "This motion to recommit ensures that unions cannot communicate with employees for organizing purposes if the employee is not legally authorized to work in the United States.",
+    "We are asking that unions be barred from contacting individuals who are not eligible to work in this country.",
+    "If an employer cannot hire someone in our country illegally, a union should not be allowed to organize those individuals.",
+    "If my colleagues insist on moving forward with legislation that empowers union bosses and strips independence from our workers, they should not do it in a way that encourages illegal immigration.",
+    "This motion to recommit would make the PRO Act pro-American worker, rather than just pro-union bosses.",
+    "I have dealt with union issues for longer than some of my colleagues have been alive.",
+    "One of the biggest glaring failures of this legislation is taking away employee choice; effectively repealing right-to-work laws all across this country, like in my home State, where we choose to empower employers and employees alike.",
+    "Where workers have previously had the freedom to choose whether or not to pay fees and join a union, they will now be forced to pay membership fees or lose their job.",
+    "This will put immeasurable power in the hands of union bosses.",
+    "Privacy provisions--that have been in place for decades--barring unions from accessing private information about employees, will be eradicated under this bill.",
+    "Unions will be able to access employees' private information, even those that are not members of the union.",
+    "Over 750,000 franchise locations that employ more than 8 million people are at risk because of the joint employer provisions in the bill.",
+    "The expanded joint employer standard has cost franchise businesses $33.3 billion per year; resulting in 376,000 lost job opportunities and 93 percent more lawsuits.",
+    "I urge my friends across the aisle to support the motion to recommit on behalf of the American worker and their right to choose."
+   ]
+  },
+  {
+   "date": "2019-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tribal Coastal Resiliency Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-12-10/CREC-2019-12-10-pt1-PgH9969-2",
+   "sentences": [
+    "Madam Chair, as we heard in the Rules Committee debate yesterday, this package of bills before us is the first major package put forth by House Democrats to solve the climate crisis that we hear about daily.",
+    "Section 106 authorizes coastal climate change adaptation planning and preparedness grants.",
+    "Subtitle A of title II authorizes the National Fish Habitat Conservation Through Partnerships program, at a cost to American taxpayers of nearly $40 million.",
+    "Ultimately, this package is a deceitful attempt to act on climate policy."
+   ]
+  },
+  {
+   "date": "2019-10-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A Burden on Small Business",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-10-22/CREC-2019-10-22-pt1-PgH8303-3",
+   "sentences": [
+    "This bill would require America's small business owners--those with 20 or fewer employees--to register their confidential information with a Federal law enforcement and intelligence agency they have never heard of and allow that agency to surveil them without a subpoena or a warrant."
+   ]
+  },
+  {
+   "date": "2019-09-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Arctic Cultural and Coastal Plain Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-09-12/CREC-2019-09-12-pt1-PgH7671",
+   "sentences": [
+    "The truth is, oil and gas production in ANWR benefits our country as a whole, but it is also a key industry for the people of Alaska.",
+    "Instead, they consulted a Tribe 350 miles away that has nothing to do with oil and gas in ANWR."
+   ]
+  },
+  {
+   "date": "2019-06-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sandy Oxford",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-20/CREC-2019-06-20-pt1-PgE805-5",
+   "sentences": [
+    "She has worked tirelessly to improve the lives of veterans, including work on suicide prevention initiatives and Vietnam Veteran commemoration ceremonies."
+   ]
+  },
+  {
+   "date": "2019-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Landslide Preparedness Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-03/CREC-2019-06-03-pt1-PgH4198",
+   "sentences": [
+    "Mr. Speaker, I urge adoption of the measure, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2019-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Police Week/Operation Smack Dragon",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-05-20/CREC-2019-05-20-pt1-PgE630-3",
+   "sentences": [
+    "Madam Speaker, our local law enforcement stand in the gap between our families and danger.",
+    "This National Law Enforcement Week, I want to extend my deepest gratitude to the many police officers in my district and across our country who protect our families.",
+    "In Tulsa, just this week, local police caught and arrested 24 individuals in connection to a drug trafficking cartel from Mexico.",
+    "It is perhaps more dangerous to be a police officer today than at any other period in history and congressional inaction on key issues has resulted in increased burdens on the police force.",
+    "I stand with our law enforcement officers today and every day. ____________________"
+   ]
+  },
+  {
+   "date": "2019-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Republican Study Committee Budget",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-05-15/CREC-2019-05-15-pt1-PgH3830",
+   "sentences": [
+    "My colleagues across the aisle like to use the 12 years left hyperbole to talk about the necessity to act on climate change, but they ignore the fiscal cliff we are standing on, a much more imminent threat to the well-being of our country and our people.",
+    "Instead of addressing the debt crisis, the Democrat majority chose not to draft a budget at all this year.",
+    "Forty-nine out of the 50 United States are required to have a balanced budget, but the Federal Government does not have that requirement.",
+    "In fact, several people in this building believe that the best way to address our debt is to ignore its existence entirely.",
+    "The former Secretary of Defense, General James Mattis, testified that our national debt is the greatest threat to our democracy.",
+    "I find it interesting that Democrats only seem to care about our debt after we start putting taxpayer dollars back in people's pockets."
+   ]
+  },
+  {
+   "date": "2019-05-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Americans with Preexisting Conditions Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-05-09/CREC-2019-05-09-pt1-PgH3519-2",
+   "sentences": [
+    "This bill will do nothing to help people with preexisting conditions.",
+    "Daniel will have an incredible story to tell about his life because his great-grandmother and his grandmother did not seek abortions to terminate the lives of their ``less than perfect'' children.",
+    "These preexisting conditions have had a massive impact on my life and the lives of my family.",
+    "The aim of H.R. 986 is not to protect Americans with preexisting conditions, but to interfere with the President's ability to govern."
+   ]
+  },
+  {
+   "date": "2019-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Climate Action Now Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-05-01/CREC-2019-05-01-pt1-PgH3363-3",
+   "sentences": [
+    "Mr. Chairman, I rise in opposition to H.R. 9, the Climate Action Now Act.",
+    "In reality, we lead the world in reducing greenhouse gas emissions, while other countries are growing emissions; yet America is paying the lion's share in the Paris Climate Accord.",
+    "This poorly negotiated deal will do nothing to address the growing emissions from China and other industrial countries.",
+    "These are people who are hurt by the continuation of the Paris Climate accord.",
+    "I applaud President Trump's leadership on this issue and support his authority to remove us from the Paris climate accord."
+   ]
+  },
+  {
+   "date": "2019-04-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Budget",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-04-04/CREC-2019-04-04-pt1-PgH3071-8",
+   "sentences": [
+    "Madam Speaker, I rise today to discuss our Nation's ballooning debt and the lack of interest across the aisle to address this crisis.",
+    "We currently face a national debt that exceeds $22 trillion and a deficit reaching $1 trillion.",
+    "The failure to produce this budget begs the question: Are our friends across the aisle concerned about our national debt?"
+   ]
+  },
+  {
+   "date": "2019-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-02-07/CREC-2019-02-07-pt1-PgH1432-5",
+   "sentences": [
+    "They tell me to stand with our President to get the funding our Customs and Border agents have asked for.",
+    "I got a call from a police recruit in Tulsa just this week who has seen firsthand the impact that illegal immigration has on the safety of our citizens.",
+    "It places a huge burden on our law enforcement agents who are already putting themselves in harm's way for our safety every day.",
+    "In December, Tulsa law enforcement officers found 2 pounds of heroin and 16 pounds of methamphetamines in connection in the Sinaloa drug cartel smuggled into the States from Mexico.",
+    "There is a fix for all of this: Build the wall.",
+    "A physical barrier--which I might add, most of my friends from the other side of the aisle have historically supported--will stop illegal entry in its tracks.",
+    "There is no replacement for a physical barrier."
+   ]
+  },
+  {
+   "date": "2019-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Backpay for Federal Employees",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-23/CREC-2019-01-23-pt1-PgH1160-5",
+   "sentences": [
+    "In return, he wants the funding to solve the crisis at our border."
+   ]
+  },
+  {
+   "date": "2018-12-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Budget Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-12-12/CREC-2018-12-12-pt1-PgH10115",
+   "sentences": [
+    "Mr. Speaker, in the last 10 years, our country's national debt has grown from $10 trillion to nearly $22 trillion.",
+    "With the national debt growing every day, we cannot continue to kick the can down the road."
    ]
   }
  ]

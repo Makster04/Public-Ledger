@@ -5,7 +5,7 @@
  "built": "2026-11-13",
  "since": 2016,
  "counts": {
-  "floor": 41,
+  "floor": 65,
   "press": 3,
   "bluesky": 0,
   "threads": 0
@@ -94,6 +94,47 @@
    ]
   },
   {
+   "date": "2026-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Paying Tribute to Brett Kelly",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-14/CREC-2026-05-14-pt1-PgH3460-2",
+   "sentences": [
+    "Recognizing Robert Gebbia Mr. Speaker, I rise today to recognize Robert Gebbia from Cross River on his retirement after nearly 30 years of distinguished leadership and service to suicide prevention.",
+    "Bob has led the American Foundation for Suicide Prevention, building it into the Nation's leading new suicide prevention organization.",
+    "He has served as a founding member of the National Council for Suicide Prevention and on the executive committee of the National Action Alliance for Suicide Prevention, helping elevate mental health as a national priority."
+   ]
+  },
+  {
+   "date": "2026-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Enhanced Iran Sanctions Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-16/CREC-2026-03-16-pt1-PgH2500",
+   "sentences": [
+    "Stability in the Middle East and freedoms for all who live there is something that all of us should be able to agree on, and almost everyone also agrees that Iran cannot have a nuclear weapon and that Iran is the greatest state sponsor of terrorism.",
+    "Unfortunately, 53 of my colleagues from across the aisle last week chose not to support that belief by voting against a resolution that declared Iran the greatest state sponsor of terrorism.",
+    "For the first year of this term, President Trump has prioritized putting in place maximum pressure on the Iranian regime and prioritizing negotiations to stop their uranium enrichment, to stop their nuclear ambitions, to stop their ballistic missiles program, and to stop their financing of terrorism.",
+    "They are opposed to a nuclear Iran.",
+    "They are opposed to an Iranian regime that possesses dangerous intercontinental ballistic missiles, and they support the United States maximum pressure campaign.",
+    "The fact is Iran has been at war with the United States for 47 years.",
+    "This comes after the regime funded Hamas' attack on Israel on October 7.",
+    "They get it from the illicit oil trade, the oil trade in which China is the biggest purchaser of Iranian petroleum.",
+    "I was proud last Congress working alongside then-Senator and now- Secretary of State Marco Rubio in passing the SHIP Act so that we could actually enforce sanctions against the Iranian regime and their illicit oil trade.",
+    "It comes on the heels of a regime in Iran that has sought to destroy the United States and Israel and our partners.",
+    "My bill, the Enhanced Iran Sanctions Act, builds on the Trump administration's existing sanctions regime to give them more tools to cripple the illicit oil trade and to cripple this unholy alliance between China, Russia, Iran, Venezuela, Cuba, North Korea, and other bad actors.",
+    "Now, it does so by authorizing the administration to place secondary sanctions on enablers of Iran's illicit oil trade that have financed their proxies, that have financed their missiles program, and that have financed their nuclear ambitions and their uranium enrichment.",
+    "This includes essentially any company that has engaged in a transaction involving the processing, refining, export, or transfer of Iranian oil.",
+    "If someone is knowingly providing financial support to the Iranian regime's largest influx of cash, we should know about it, and we should stop it.",
+    "This bill expands the authorities to cripple this oil network, to stop the financing of ballistic missiles, to stop the financing of uranium enrichment, to stop the financing of Iran's nuclear ambitions, and to stop their financing of terrorism.",
+    "We saw under the Biden administration an administration that not only did not enforce sanctions against Iran, but it also allowed the illicit oil trade to explode to the tune of hundreds of billions of dollars.",
+    "We saw under the Obama Administration an attempt to appease the Iranian regime, to drop off pallets of cash in the hopes that somehow that would stop them from pursuing nuclear weapons, that that would somehow stop them from possessing enriched uranium, and that that would somehow stop them from financing terrorism.",
+    "Republicans and Democrats have said ad nauseam that Iran cannot get a nuclear weapon.",
+    "Some of my colleagues hate Donald Trump so much that they care more about the fact that he is President than they do about the fact that he is stopping the Iranian regime's 47-year reign of terror.",
+    "They have completely reversed their positions on so many issues, including 53 who just last Congress voted to say that Iran is the greatest state sponsor of terrorism but now no longer believe that.",
+    "That is precisely what we are doing through military action and through a sanctions regime that has crippled Iran's capabilities.",
+    "We should be giving this administration and future administrations every tool necessary to ensure that Iran never gets a nuclear weapon."
+   ]
+  },
+  {
    "date": "2026-03-04",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Directing the President Pursuant to Section 5(C) of the War Powers Resolution to Remove United States Armed Forces From Unauthorized Hostilities in the Islamic Republic of Iran",
@@ -139,6 +180,18 @@
    ]
   },
   {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Aca Premium Subsidy Extension",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-16/CREC-2025-12-16-pt1-PgH5908",
+   "sentences": [
+    "Mr. Speaker, for 43 days, the Democrats shut down the government, and they said it was over the issue of the ACA premium tax credits.",
+    "When the government finally opened, I and a number of my Republican and Democratic colleagues sat down in good faith to negotiate an extension of the ACA premium tax credits with reforms because we recognized that this system, as designed, is not working, that ObamaCare is not actually reducing healthcare costs in America.",
+    "In fact, since it took effect, healthcare premiums have risen by 96 percent, but we understood that to allow the premium tax credits to expire would hurt the American people.",
+    "There is failure of Members on both sides of the aisle who know it needs to get done, but they just want the issue or they don't want to do it because they hate ObamaCare."
+   ]
+  },
+  {
    "date": "2025-12-11",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Protect America'S Workforce Act",
@@ -147,6 +200,16 @@
     "Earlier this year, an executive order changed the collective bargaining status of tens of thousands of Federal workers.",
     "Ensuring collective bargaining rights strengthens our Federal workforce and helps deliver more effective, accountable service to the American people.",
     "We must ensure that collective bargaining agreements already in place remain, as well as ensuring that good government goes hand in hand with that."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sheriff Adrian \"Butch\" Anderson Post Office Building",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-09/CREC-2025-12-09-pt1-PgH5094",
+   "sentences": [
+    "Sheriff Anderson's law enforcement career began in 1970, when he was appointed a deputy sheriff in the Dutchess County Sheriff's Office.",
+    "Butch's commitment extended beyond law enforcement."
    ]
   },
   {
@@ -271,6 +334,65 @@
    ]
   },
   {
+   "date": "2024-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A Shameful Display",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-10/CREC-2024-04-10-pt1-PgH2275-5",
+   "sentences": [
+    "Mr. Speaker, over the last few weeks, we have seen a shameful display by Members of the Democratic Party, including the Senate majority leader, who attacked and undermined the State of Israel and the special relationship that we have.",
+    "The United States recognized Israel 11 minutes after its founding.",
+    "They are our closest ally in the world, and at a time of war the Senate majority leader, the Senator from New York, took the opportunity to call for a regime change.",
+    "At a time when the Democratic Party talks about protecting democracy, rails against foreign interference in elections, the Senator from New York thought it was his opportunity and in his interest politically to undermine the State of Israel and Prime Minister Benjamin Netanyahu."
+   ]
+  },
+  {
+   "date": "2024-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Igo Anti-Boycott Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-13/CREC-2024-02-13-pt1-PgH558",
+   "sentences": [
+    "After Hamas' October 7 massacre of over 1,200 innocent people in Israel, including Americans, we need to do everything we can to stand with our friend and ally.",
+    "In the south, Israel is fighting a war to dismantle Hamas, whose leader said that October 7 was just a rehearsal.",
+    "In the north, Israel is defending itself from missiles and rockets from Iran's deadly proxy Hezbollah.",
+    "However, there are many in the world who want to fault Israel, blame Israel, and delegitimize Israel for doing what is necessary to protect its citizens and its sovereignty.",
+    "One of the most egregious bastions of anti-Israel bias and bigotry is the United Nations.",
+    "We are deeply concerned that the U.N. could weaponize its institutions against Israel.",
+    "Years ago, the U.N. Human Rights Council authorized the creation of a database of companies doing business beyond Israel's 1949 armistice lines.",
+    "These laws were passed in response to the Arab League's boycott of Israel.",
+    "Now, the good news is that today, many fewer countries in the Arab League are adhering to the boycott of Israel.",
+    "In fact, some of them have normalized relations with Israel, opening trade as well as diplomatic ties.",
+    "We are faced with the potential that U.S. companies might be pressured to cooperate with this U.N. list and subsequent boycott of Israel.",
+    "This bill adds four words, ``or international governmental organizations,'' to existing anti-boycott law to include organizations like the U.N. It is my sincere hope that the U.N. will not foster such a boycott against Israel as Israel is responding to the deadliest attack on Jews since the Holocaust.",
+    "This bill is especially necessary with the constant anti-Israel bias emanating from the U.N. Just recently, we confirmed that UNRWA, the U.N. Relief and Works Agency for Palestinian Refugees, has deep ties to Hamas in the Gaza Strip.",
+    "Israeli intelligence recently released reports that many UNRWA workers actually worked as Hamas operatives and assisted in the October 7 attacks.",
+    "I urge my colleagues to join me in voting for this bill today so that we can take a stand against the U.N. and other IGOs and the anti-Israel bias present at UNHRC and UNRWA.",
+    "The American people stand with Israel.",
+    "The bill is not discriminatory against proponents of the BDS movement, rather it prevents discriminatory actions against Israel and other countries friendly to the United States so as not to undermine U.S. foreign policy.",
+    "IGOs, like the United Nations, continue to impose one-sided and biased policies against the State of Israel.",
+    "Madam Speaker, you can't wait until after the fact to protect Israel and the Jewish people, as we saw on October 7.",
+    "The BDS is one tactic in a long history of campaigns and efforts to delegitimize and isolate the State of Israel.",
+    "It also applies a double standard to Israel.",
+    "The BDS campaign does not support constructive measures to build Israeli-Palestinian engagement, nor does it promote peace negotiations or a mutually negotiated two-state solution to the conflict.",
+    "Rather, BDS presents a biased and simplistic approach to the complex Israeli-Palestinian conflict positioning this dispute over territorial and nationalist claims as the fault of only one party, the State of Israel, while ignoring other actors and dynamics such as Palestinian-shared responsibility for the continuation of the conflict.",
+    "The BDS movement uses divisive and inaccurate terms like ``apartheid,'' ``genocide,'' ``settler colonialists,'' and ``supremacists'' to refer to aspects of Israeli action or policy they criticize.",
+    "This language serves to demonize the Jewish State and those who support its very existence.",
+    "Madam Speaker, I thank my Democratic co-lead, Congressman Josh Gottheimer of New Jersey, who is the co-chair of the Problem Solvers Caucus, and all of our bipartisan cosponsors for working with me on this important bill to update our anti-boycott laws and to respond to potential threats facing the United States and our ally, Israel.",
+    "We must stand with our ally Israel and not allow rampant, institutionalized anti-Israel bias and bigotry at the United Nations to delegitimize the State of Israel."
+   ]
+  },
+  {
+   "date": "2024-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Igo Anti-Boycott Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-13/CREC-2024-02-13-pt1-PgH560",
+   "sentences": [
+    "This is a regime that, with support from Russia, Iran, and Hezbollah, tortures men, women, and children at an unthinkable scale.",
+    "That is why, today, we are considering this bill to ensure there is justice for the Syrian people who continue to suffer under the Assad regime and his Russian and Iranian backers.",
+    "We have seen the consequences of this play out in Ukraine at devastating cost.",
+    "We must hold the regime and its Russian and Iranian backers accountable, and that is exactly what this bill will do."
+   ]
+  },
+  {
    "date": "2024-02-06",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
@@ -286,6 +408,26 @@
     "It is a clean bill supporting the State of Israel.",
     "Why would you ever want to be on the record, on a clean bill, opposing aid to the State of Israel?",
     "Mr. Speaker, it is my sincere hope that all of my colleagues will find the moral courage to support this funding package and support Israel at her time of need while providing critical resources to our troops overseas."
+   ]
+  },
+  {
+   "date": "2024-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: In Honor and Remembrance of Tom Diana",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-09/CREC-2024-01-09-pt1-PgH7-5",
+   "sentences": [
+    "Tom's career in law enforcement spanned several decades and included stints with the Putnam County Sheriff's Office, the Yorktown Police Department, the Cortlandt Police Department, and finally, the Westchester County Police Department."
+   ]
+  },
+  {
+   "date": "2023-12-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Raising a Question of the Privileges of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-12-06/CREC-2023-12-06-pt1-PgH6189",
+   "sentences": [
+    "He then proceeded to throw the other sign on the ground, and he ran past seven--one, two, three, four, five, six, seven--Capitol Police officers and did not utter one word about accidently and embarrassingly pulling a fire alarm.",
+    "In fact, when the BOLO went out and the Capitol Police came to question him about it, he lawyered up.",
+    "I said to him: I will not do anything until I hear from the Capitol Police as to what happened."
    ]
   },
   {
@@ -336,6 +478,15 @@
    ]
   },
   {
+   "date": "2023-11-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Support for the Diplomatic Relations Required to Encourage the Government of Mexico to Fulfill Its Water Deliveries on an Annual Basis to the United States Under the Treaty Between the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-28/CREC-2023-11-28-pt1-PgH5926",
+   "sentences": [
+    "Mr. Speaker, stretching from the mountains of Colorado to the Gulf of Mexico, the Rio Grande River also forms over 1,200 miles of the international border between the United States and Mexico."
+   ]
+  },
+  {
    "date": "2023-11-14",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2024",
@@ -361,6 +512,22 @@
    ]
   },
   {
+   "date": "2023-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Raising a Question of the Privileges of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-07/CREC-2023-11-07-pt1-PgH5494",
+   "sentences": [
+    "Chanting ``from the river to the sea'' is calling for the eradication of Israel.",
+    "My colleague Representative Rashida Tlaib has parroted the talking points and the message of Hamas, a terrorist organization whose sworn mission is the destruction of Israel and the eradication of the Jewish people.",
+    "Israel is our strongest ally in the Middle East, a beacon of hope, peace, and liberty in the region.",
+    "My colleague repeated a vile and disgusting lie that Israel bombed a hospital knowing full well that was factually inaccurate and knowing full well that this administration, the Biden administration, advised her it was inaccurate, gave her a private briefing, and still she continued to repeat this vile and disgusting lie.",
+    "It was intended to turn the world against Israel.",
+    "Mr. Speaker, she believes Israel should be eradicated because otherwise you would never, ever repeat that vile, vile statement.",
+    "Paul Kessler was killed for holding an Israeli flag in the United States of America.",
+    "We are losing respect for the sanctity of life, the rule of law, and the important role of faith."
+   ]
+  },
+  {
    "date": "2023-11-02",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
@@ -379,6 +546,82 @@
     "We cannot allow Israel to lose.",
     "We have a debt that is approaching $34 trillion.",
     "Mr. Speaker, on September 29, the gentleman who just spoke voted for a billion-dollar cut to Israel."
+   ]
+  },
+  {
+   "date": "2023-11-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Harboring Iranian Petroleum Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-01/CREC-2023-11-01-pt1-PgH5193",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 3774) to impose additional sanctions with respect to the importation or facilitation of the importation of petroleum products from Iran, and for other purposes, as amended.",
+    "Mr. Speaker, it is an honor to be here today as we gather to pass the Stop Harboring Iranian Petroleum Act, or the SHIP Act, which I introduced earlier this year with my colleague from Florida, Congressman Jared Moskowitz.",
+    "In the wake of the appalling terrorist attacks against Israel on October 7, it is clear that we must work to confront Iran and its proxies in the region with a strong sanctions regime.",
+    "Iran is the largest state sponsor of terrorism in the world and, unfortunately, has the coffers to back this up.",
+    "Iran spends its money on terror, on developing nuclear capabilities, on taking hostages to use for bargaining purposes, and on funding the criminal IRGC.",
+    "We must cut off Iran's funding and stop these illicit activities at their source, and that is where Iranian oil comes in.",
+    "Iran currently engages in a massive global oil trade, exporting its blood-stained petroleum in exchange for money and influence abroad.",
+    "In the past year alone, Iran has made tens of billions off of their illicit oil trade, and this August, China imported a staggering 1.5 million barrels per day.",
+    "China is the largest importer of Iranian oil and, in doing so, has become complicit in the nefarious acts carried out with that funding.",
+    "While the U.S. already sanctions Iranian petroleum, it is absolutely critical that we expand our sanctions regime to not only target Iran but Iran's enablers that are complicit in the nefarious acts committed with that money.",
+    "The SHIP Act specifically expands these sanctions to cover foreign ports and refineries that process Iranian oil.",
+    "Individuals and entities that knowingly accept shipments of Iranian oil, refine Iranian oil, transport or offload Iranian oil, or otherwise transact with Iranian oil should be held accountable for their actions, for their willingness to pay for Iranian-backed terrorism.",
+    "The SHIP Act has been bipartisan from the start and continues to show a united front between Republicans and Democrats to limit Iran's global influence and protect those the Iranian regime seeks to harm, such as our Jewish and Israeli friends.",
+    "The SHIP Act sends a message to those who trade in Iranian oil that they will have the United States to deal with if they continue to do so.",
+    "They can't pretend to separate Iranian oil from the very terrorism it supports.",
+    "Now, we are putting it in writing that they are going to be held accountable if they keep enabling Iran.",
+    "It has over 230 bipartisan cosponsors because Congress recognizes the need to sanction Iranian petroleum even further.",
+    "Since President Biden took office, relaxed enforcement of oil sanctions has contributed to increased Iranian oil revenues worth approximately $25.9 billion.",
+    "In 2019, Iran's oil exports fell below 500,000 barrels per day as a result of the prior administration's oil sanctions pressure.",
+    "As of September 2023, Iranian oil exports had increased to nearly 1.5 million barrels per day.",
+    "On October 11, 2023, NSC Coordinator for Strategic Communications, John Kirby, responded to a question about the weak enforcement of sanctions on Iranian oil by stating, quote, ``The President has been concerned about making sure we have a viable global market for oil, working hard to keep the prices of gasoline down here in the United States.",
+    "First of all, the United States doesn't get Iranian petroleum.",
+    "This administration has prohibited U.S. oil and gas development more strenuously than it has Iranian.",
+    "Given that policy objectives did not target Russian oil flows even at the height of the Russian- Ukraine conflict, we do not expect Iranian oil exports to be constrained either.'' Now, there are Members of this body that are going to oppose this legislation because it is too strenuous, doesn't give enough wiggle room to the administration.",
+    "It is because they have been incapable of enforcing the sanctions against Iran and Iranian petroleum, which has been used as the funding source for the greatest state sponsor of terrorism in the world.",
+    "Lest anyone think otherwise, the attacks by Hamas, by Hezbollah over the course of time have been funded by Iran.",
+    "When you look at what is happening in the world and the unholy alliance that has been brought about by Iran, North Korea, China, and Russia to undermine and destabilize the free world, to undermine the United States and our allies, we must enforce these sanctions, which is why it is critically important that we pass H.R. 3774 so that we can enact sanctions on the buyer.",
+    "China has been the largest buyer of Iranian petroleum."
+   ]
+  },
+  {
+   "date": "2023-11-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Urging the European Union to Designate Hizballah in Its Entirety As a Terrorist Organization",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-01/CREC-2023-11-01-pt1-PgH5197",
+   "sentences": [
+    "Mr. Speaker, 3 weeks ago, Hamas launched a brutal and unprovoked terrorist attack on our ally, Israel, from its perch in the Gaza Strip.",
+    "Now Israel is engaged in a major military operation in response to the pressing threat posed by this Iran-backed terrorist group.",
+    "Right now, Hezbollah is launching near daily attacks on Israel's northern borders with rockets, mortars, and antitank missiles.",
+    "Yet, the EU's continued recognition of this arbitrary distinction between political and military wings allows Hezbollah to continue to operate throughout Europe, even while causing casualties in Israel.",
+    "We must make clear to these terrorist proxies that we are not fooled about their true intention: the destruction of Israel.",
+    "We must make clear to Iran that it cannot hide behind its terrorist proxies.",
+    "Mr. Speaker, every day that passes risks further escalation from Hezbollah on Israel's northern border."
+   ]
+  },
+  {
+   "date": "2023-11-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Peace and Tolerance in Palestinian Education Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-01/CREC-2023-11-01-pt1-PgH5199",
+   "sentences": [
+    "I thank my colleague, Mr. Sherman, for introducing this important legislation to prevent the spread of anti-Israel and anti-Semitic hatred.",
+    "We have known for decades that Palestinian children are taught from a young age to hate Israel and the Jewish people.",
+    "Look at the brutal attack that over 2,500 Hamas terrorists carried out against Israel on October 7.",
+    "Since Hamas' attack, we have seen an appalling number of anti-Semitic and anti-Israel riots around the world and right here at home.",
+    "That is why, earlier this year, I introduced legislation to combat the rise in anti-Semitism on college campuses, the Stop Anti-Semitism on College Campuses Act, which would defund institutions of higher learning that allow, promote, or sanction anti-Semitic events on their campuses.",
+    "That is why, just last week, Josh Gottheimer and I introduced the Antisemitism Awareness Act, which would amend the education law to require the Department of Education to use the IHRA definition of anti- Semitism on its enforcement actions of discrimination laws.",
+    "We must continue to stand against anti-Semitism and anti-Israel bias."
+   ]
+  },
+  {
+   "date": "2023-11-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Raising a Question of the Privileges of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-01/CREC-2023-11-01-pt1-PgH5214",
+   "sentences": [
+    "This is a gentleman who couldn't even condemn the New York City DSA in an op-ed and, in fact, was more upset that I introduced a resolution condemning them than the actions of those individuals within the New York City DSA that supported the Hamas terrorist attack on Israel.",
+    "There is not enough time to go through the litany of lies that Mr. Santos has engaged in during his campaign and during his time in Congress, including just recently a claim that his 5-year-old niece was kidnapped by Chinese Communist Party spies."
    ]
   },
   {
@@ -442,6 +685,15 @@
    ]
   },
   {
+   "date": "2023-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hudson Valley Seeks Major Disaster Relief",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-17/CREC-2023-07-17-pt1-PgH3629-4",
+   "sentences": [
+    "Thanks to the heroic efforts of our first responders, including the Piermont Fire Department's Dive Team and High Angle Rescue Team, Carmel Police Department, Putnam County Sheriff's Office, the Yorktown Police Department, among many, many more, thankfully no other lives were lost."
+   ]
+  },
+  {
    "date": "2023-06-13",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Gas Stove Protection and Freedom Act",
@@ -473,6 +725,48 @@
     "Israeli airlines can now use Saudi Arabia's airspace, and the kingdom recently agreed to respect freedom of navigation in the Strait of Tiran for Israeli ships.",
     "As a leader in the Arab world, Saudi Arabia joining the Abraham Accords would make serious inroads for Israel's relationships not only in the Middle East but across the globe.",
     "Additionally, strengthening ties between Israel and Saudi Arabia would create immense pushback against Iran."
+   ]
+  },
+  {
+   "date": "2023-05-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stopping the Influx of Fentanyl",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-22/CREC-2023-05-22-pt1-PgH2485-4",
+   "sentences": [
+    "I am fully committed to doing everything I can to stop the inflow of fentanyl at our southern border and points of entry and hold the cartels and those trafficking fentanyl-laced drugs accountable.",
+    "I am also dedicated to doing everything I can to assist organizations that play a critical role in the treatment, recovery, and education of those in the Hudson Valley struggling with substance use disorders, which is why I am supporting H.R. 467, the HALT Fentanyl Act."
+   ]
+  },
+  {
+   "date": "2023-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Issues of the Day",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-17/CREC-2023-05-17-pt1-PgH2412",
+   "sentences": [
+    "Madam Speaker, this week, we commemorate National Police Week.",
+    "Just last week, I joined my colleagues in placing wreaths at the names of fallen police officers all along the National Law Enforcement Officers Memorial.",
+    "I placed a wreath by the names of Sergeant Edward O'Grady and Police Officer Waverly Brown, who, along with security guard Peter Paige, lost their lives protecting Rockland County during the Brinks robbery in 1981.",
+    "Placing that wreath served as a solemn reminder to me that our police officers stand on the front lines of our society, never knowing if they will make it home while working to keep our communities safe, which is why our support must transcend beyond mere words.",
+    "It must reflect in our actions as a Conference and as a House, which is why House Republicans just passed H.R. 2494, the POLICE Act.",
+    "Under this bill, noncitizens found guilty of assaulting a police officer would face deportation.",
+    "In the face of increasing challenges, the POLICE Act is a crucial step toward ensuring that our police officers are afforded the respect and protection they deserve.",
+    "Another important bill we are voting on tomorrow is H. Con. Res. 40, which expresses support for law enforcement officers all across the country and condemns calls to disband or defund the police.",
+    "There are colleagues on the other side of the aisle who spend days assailing the brave men and women in law enforcement, and this resolution will very quickly weed out those who back the blue and those who don't.",
+    "As we honor police officers and law enforcement everywhere during National Police Week, let's make a commitment to act at a Federal level, at a State level, at a local level.",
+    "Let's stand up and support the men and women in law enforcement.",
+    "I thank the chairman for hosting this Special Order hour tonight, and I encourage all of my colleagues to stand in support of the men and women in law enforcement."
+   ]
+  },
+  {
+   "date": "2023-05-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Secure Borders",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-11/CREC-2023-05-11-pt1-PgH2296-5",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge the Senate to take up the bill we just passed, H.R. 2, the Secure the Border Act.",
+    "With title 42 having expired, we are seeing a surge of migrants approaching our border that will add to a crisis in New York State that has seen New York City take in over 60,000 migrants so far.",
+    "Having spoken with the President yesterday in my district, I know he understands the need to act on our border.",
+    "We have to work together to secure our border, end this broken system, and ensure the safety of our residents. ____________________"
    ]
   },
   {
@@ -521,6 +815,18 @@
    ]
   },
   {
+   "date": "2023-03-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Preserving Social Security and Medicare",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-07/CREC-2023-03-07-pt1-PgH1133-6",
+   "sentences": [
+    "Mr. Speaker, I rise today to call on this body to work in a bipartisan way to preserve Social Security and Medicare.",
+    "As I have said time and again when meeting with constituents, I am fully committed not only to protecting Social Security and Medicare for current and near retirees but also strengthening and preserving these programs for future generations.",
+    "I was proud to sign on to H. Res. 109, which reaffirms this commitment, and to cosponsor H.R. 82, the Social Security Fairness Act, another important measure.",
+    "Those who have paid into Social Security should not have their benefits reduced, especially given the affordability crisis impacting so many families across my district and the country, including our seniors, who are among the hardest hit by inflation and rising costs."
+   ]
+  },
+  {
    "date": "2023-02-09",
    "source": "floor",
    "where": "Floor speech, Congressional Record: Disapproving the Action of the District of Columbia Council in Approving the Revised Criminal Code Act of 2022",
@@ -553,6 +859,53 @@
     "Comments made by Members of this body about support for Israel being ``all about the Benjamins,'' or that the State of Israel is engaging in apartheid are appalling, wrong, and disqualifying.",
     "Or to equate the United States and Israel, both democratic nations, to the Taliban and Hamas, and those who promote the anti-Semitic BDS movement--you are damn right they need to be held accountable.",
     "I will stand up to anti-Semitism and defend Israel's right to exist and the right of Jews everywhere to practice their faith peacefully and safely."
+   ]
+  },
+  {
+   "date": "2023-02-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Covid National Emergency Must End",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-01/CREC-2023-02-01-pt1-PgH613-5",
+   "sentences": [
+    "I was in the New York State Assembly when the COVID vaccine mandate was passed, and I argued vociferously against it."
+   ]
+  },
+  {
+   "date": "2023-01-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introducing Freshman Republican Members",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-25/CREC-2023-01-25-pt1-PgH315-4",
+   "sentences": [
+    "Madam Speaker, I rise today to talk with respect to School Choice Week here in the United States and to address the dire need for education reform across our country.",
+    "As I think about education and the impact that it has on our communities and our children, I believe in school choice.",
+    "Whether that is a public school education or a private school education, a charter school or a vocational school, those options must be available to every child.",
+    "She is part of the teachers union.",
+    "I respect and admire our teachers across America who provide a valuable education to our children, but we must ensure, number one, that every child has access to a quality education and, number two, that parents, not bureaucrats, certainly not the teachers union, have a say over their child's education.",
+    "As we recognize School Choice Week, I think it is important to recognize the quality education that is provided in our public schools, yes, but also in our private schools, our religious schools, our parochial schools, and yeshivas.",
+    "In the two decades since school choice programs were enacted in Florida, fourth grade reading performance rose 26 percent among African-American students, 27 percent among Hispanic students, and 29 percent among students from low-income households.",
+    "In my State of New York, charter schools have made a big difference in some of the same students that struggle.",
+    "According to 2019 test scores, 63 percent of charter school students in grades three through eight passed the State math exam compared to 46 percent for traditional public school students.",
+    "Additionally, 57 percent of charter school students in the same grade levels were proficient in English language arts while the percentage for traditional public school students was 47 percent.",
+    "Any discussion on education reform must include school choice and support for it and support for our vocational schools, parochial schools, traditional private schools, and charter schools."
+   ]
+  },
+  {
+   "date": "2023-01-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Opposing New York'S Congestion Pricing Tax",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-24/CREC-2023-01-24-pt1-PgH268-4",
+   "sentences": [
+    "Many folks choose not to take the subway anymore because of the rise in crime."
+   ]
+  },
+  {
+   "date": "2023-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Natural Gas Plays a Critical Role",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-12/CREC-2023-01-12-pt1-PgH220-4",
+   "sentences": [
+    "Madam Speaker, earlier this week the Biden administration announced plans to ban gas stoves.",
+    "While we absolutely embrace the move to reduce carbon emissions, the reality is natural gas has reduced carbon emissions far greater than renewables over the last two decades."
    ]
   },
   {
