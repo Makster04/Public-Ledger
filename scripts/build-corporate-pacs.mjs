@@ -1,5 +1,5 @@
-// Who took corporate PAC money this cycle, and money from each tracker (AIPAC, Big Pharma, Big Oil, Big Tech + AI,
-// Crypto, Big Defense): every sitting member of the House and the Senate, for the home page's seating charts (public/seats.js) and
+// Who took corporate PAC money this cycle, and money from each tracker (AIPAC, Big Pharma + Insurance, Big Oil, Big
+// Tech + AI, Crypto, Big Defense, Wall Street): every sitting member of the House and the Senate, for the home page's seating charts (public/seats.js) and
 // their filter. From two FEC bulk files for the cycle (no API key):
 //   pas2  "Contributions from committees to candidates & independent expenditures": each PAC check, with the committee
 //         that gave it and the candidate it went to

@@ -79,7 +79,7 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, with AIPAC\'s
   const checks=[{cand:'S6ME00159',cmte:'C00797670',amount:10000,keys:['aipac']},{cand:'S8GA00180',cmte:'C09999999',amount:2500,keys:['pharma']},{cand:'S8GA00180',cmte:'C09999999',amount:-2500,keys:['pharma']},{cand:'H2AK01083',cmte:'C09999998',amount:1000,keys:['oil']}];
   const t=trackerTotals(checks,byCand,routed);
   assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
-  assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto','defense']);
+  assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto','defense','wallstreet']);
   assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250]},'routed gifts alone count');
 });
 
