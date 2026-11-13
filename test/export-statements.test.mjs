@@ -7,7 +7,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
-import {exportStatements,whereOf} from '../scripts/export-statements.mjs';
+import {exportStatements,whereOf,readSpeeches,HOUR} from '../scripts/export-statements.mjs';
 import {searchTests,collectedDocs,statementCandidates,campaignOf,cycleOf} from '../scripts/question-statements.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -59,4 +59,28 @@ test('npm run statements:export: a whole run on a small database, without readin
   assert.deepEqual(perry.statements[0].sentences,['Mr. Speaker, this bill is not about the minimum wage at all, I yield back.'],'only the speaker\'s own words');
   assert.deepEqual(lawler.statements.map(s=>s.sentences[0]),['Mr. Speaker, a higher minimum wage helps families in the Hudson Valley.']);
   fs.rmSync(dir,{recursive:true,force:true});
+});
+
+test('--wait: when GovInfo says to slow down, save, pause (an hour unless it says) and go on; without it, stop there',async()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'speeches-')),people=new Map([['perry',{name:'Scott Perry',stateName:'Pennsylvania'}]]);
+  const page=w=>`<pre>  Mr. PERRY. Mr. Speaker, ${w}\n  The SPEAKER pro tempore. The gentleman yields back.\n</pre>`;
+  const floor=()=>[{person:'perry',source:'floor',title:'Raise The Wage',granule:'CREC-2025-11-17-pt1-PgH1',date:'2025-11-17',url:'https://x/1'},
+    {person:'perry',source:'floor',title:'Prayer',granule:'CREC-2025-11-17-pt1-PgH0',date:'2025-11-17',url:'https://x/0'},
+    {person:'perry',source:'floor',title:'Ukraine',granule:'CREC-2025-11-16-pt1-PgH2',date:'2025-11-16',url:'https://x/2'}];
+  const govinfo=answers=>{let i=0;return async()=>{const a=answers[i++]||{status:200,body:page('more.')};return new Response(a.body||'',{status:a.status,headers:a.headers||{}});};};
+  const pauses=[],saved=[];
+  const f1=floor(),r1=await readSpeeches(f1,{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:govinfo([{status:200,body:page('raise the minimum wage now.')},{status:429},{status:200,body:page('no more aid to Ukraine.')}])},
+    people,maxRead:10,wait:true,gap:0,pause:async ms=>{if(ms)pauses.push(ms);},onPause:(ms,n)=>saved.push(n)});
+  assert.deepEqual(r1,{fetched:2,waiting:0,stopped:null,pauses:1});assert.deepEqual(pauses,[HOUR],'an hour when GovInfo doesn\'t say');assert.deepEqual(saved,[1],'saved after the first read');
+  assert.equal(f1[0].text,'Mr. Speaker, raise the minimum wage now.');assert.equal(f1[1].text,'','a routine page is skipped');assert.equal(f1[2].text,'Mr. Speaker, no more aid to Ukraine.');
+  // the pages are saved: a second run reads nothing new
+  const f2=floor(),r2=await readSpeeches(f2,{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:async()=>{throw new Error('no reads');}},people,maxRead:10,gap:0,pause:async()=>{}});
+  assert.equal(r2.fetched,0);assert.equal(f2[2].text,'Mr. Speaker, no more aid to Ukraine.');
+  // without --wait, a slow-down stops the reading; GovInfo's own Retry-After sets the pause
+  const dir2=fs.mkdtempSync(path.join(os.tmpdir(),'speeches-'));
+  const r3=await readSpeeches(floor(),{cache:dir2,key:'k',env:{CONGRESS_API_KEY:'k',fetch:govinfo([{status:429}])},people,maxRead:10,gap:0,pause:async()=>{}});
+  assert.deepEqual([r3.fetched,r3.waiting,r3.stopped],[0,2,'GovInfo asked to slow down (HTTP 429)']);
+  const waits=[];await readSpeeches(floor(),{cache:dir2,key:'k',env:{CONGRESS_API_KEY:'k',fetch:govinfo([{status:429,headers:{'retry-after':'120'}}])},people,maxRead:10,wait:true,gap:0,pause:async ms=>{if(ms)waits.push(ms);}});
+  assert.deepEqual(waits,[120000]);
+  fs.rmSync(dir,{recursive:true,force:true});fs.rmSync(dir2,{recursive:true,force:true});
 });
