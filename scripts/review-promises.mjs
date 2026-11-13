@@ -9,7 +9,8 @@
 //   npm run promises:review -- --skip-debate  leave out what was said in debate (shown on the profile, not scored)
 //   npm run promises:review -- --only high  only the surest items (the bill named, a final vote): --only medium adds
 //                                           subject links with a final vote and matching procedural votes
-// The keys: Enter takes the draft verdict; k kept, p partly kept, b broken, c changed position, w waiting (no vote on it
+// The keys: Enter takes the draft verdict; k kept, p partly kept (½), b broken (what they did went against what they
+// said), c changed position (partially kept, ½: they changed position and nothing since goes against what they say now), w waiting (no vote on it
 // yet: listed, not counted), u unclear (listed, not counted), n not a promise or the wrong bill (left out), s skip for
 // now, q stop. Commit and push public/research.json and data/promise-decisions.json afterward.
 import fs from 'node:fs';

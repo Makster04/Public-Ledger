@@ -76,27 +76,30 @@ export function matchScore(choices,evidence){
 
 // Keeps Their Word. Each counted promise or reviewed check is worth: kept 1; a first step toward it (they voted for
 // part of what they promised, such as $12 when they promised $15) 3/4; a compromised version of it that they introduced
-// or (co)sponsored 1/2; broken 0 (their own votes went against it, or a reversal) and allegedly broken 0 (a promise to
+// or (co)sponsored 1/2; partially kept 1/2 (a reviewed check where part of what they said holds up, or they changed
+// position and nothing they did since goes against what they say now); broken 0 (their own votes or actions went
+// against it, or a reversal) and allegedly broken 0 (a promise to
 // act with no bill introduced, (co)sponsored or voted on within 6 months in office while others acted on it; see
 // scripts/build-promises.mjs). The two are counted the same and shown apart.
-// Reviewed checks (person.statements): consistent is kept, partial a first step, compromise a compromise, changed and
-// contradiction broken (a promise left unacted at the end of the term, recorded with `unacted`, is allegedly broken). Left out:
+// Reviewed checks (person.statements): consistent is kept, partial (partly supported) and changed (a changed position)
+// partially kept, compromise a compromise, contradiction (what they did went against what they said) broken (a promise
+// left unacted at the end of the term, recorded with `unacted`, is allegedly broken). Left out:
 // ambiguous and outcome checks, promises with no related bill yet ("pending"), vague goals (`vague: true`), and statements
 // made in debate the day of the vote or the day before (`debate: true`), which nearly always match the vote that follows.
-// promises: public/promises.json for the person: kept, step, compromise, broken and alleged count; unclear, no-action (until
+// promises: public/promises.json for the person: kept, step, compromise, partly, broken and alleged count; unclear, no-action (until
 // its deadline passes, then allegedly broken) and not-tested wait. A promise on the question of a reviewed pledge (stock trading) is
 // left to the reviewed check.
 // trackers: published promise-tracker tallies (PolitiFact's Trump-O-Meter and MAGA-Meter, for a president): Promise Kept
 // 1, Compromise 1/2, Promise Broken 0. Stalled and In the Works wait. [{counts:{kept, compromise, broken, stalled, inTheWorks}}]
-export const PROMISE_WEIGHT={kept:1,step:0.75,compromise:0.5,broken:0,alleged:0};
-const CHECK_STATUS={consistent:'kept',partial:'step',compromise:'compromise',changed:'broken',contradiction:'broken'};
+export const PROMISE_WEIGHT={kept:1,step:0.75,compromise:0.5,partly:0.5,broken:0,alleged:0};
+const CHECK_STATUS={consistent:'kept',partial:'partly',compromise:'compromise',changed:'partly',contradiction:'broken'};
 const PLEDGE_QUESTION={'stock-trading':'congress-stock-trading'};
 // A promise's status on a day: "no action yet" past its deadline is allegedly broken.
 export const promiseStatus=(p,today)=>p?.status==='no-action'&&p.deadline&&today&&p.deadline<=today?'alleged':p?.status;
 // A reviewed check's status: an unacted contradiction is allegedly broken.
 export const checkStatus=x=>x?.assessment==='contradiction'&&x.unacted?'alleged':CHECK_STATUS[x?.assessment];
 export function promiseScore(statements,trackers,promises=[],today=null){
-  const list=(statements||[]).filter(x=>!x.vague&&!x.debate), n={kept:0,step:0,compromise:0,broken:0,alleged:0};
+  const list=(statements||[]).filter(x=>!x.vague&&!x.debate), n={kept:0,step:0,compromise:0,partly:0,broken:0,alleged:0};
   for(const x of list){const k=checkStatus(x);if(k)n[k]++;}
   let waiting=0,rated=0;
   for(const t of trackers||[]){const c=t.counts||{};n.kept+=c.kept||0;n.compromise+=c.compromise||0;n.broken+=c.broken||0;
@@ -104,8 +107,8 @@ export function promiseScore(statements,trackers,promises=[],today=null){
   const pledged=new Set(list.map(x=>PLEDGE_QUESTION[x.pledge?.kind]).filter(Boolean));
   const own=(promises||[]).filter(p=>!(p.qs||[]).some(([q])=>pledged.has(q)));let open=0;
   for(const p of own){const st=promiseStatus(p,today);if(st in n)n[st]++;else open++;}
-  const clear=n.kept+n.step+n.compromise+n.broken+n.alleged,points=n.kept+PROMISE_WEIGHT.step*n.step+PROMISE_WEIGHT.compromise*n.compromise;
-  return {pct:clear>=MIN_CHECKS?Math.round(points/clear*100):null,...n,half:n.step+n.compromise,points,clear,total:list.length+rated+own.length,
+  const clear=n.kept+n.step+n.compromise+n.partly+n.broken+n.alleged,points=n.kept+PROMISE_WEIGHT.step*n.step+PROMISE_WEIGHT.compromise*n.compromise+PROMISE_WEIGHT.partly*n.partly;
+  return {pct:clear>=MIN_CHECKS?Math.round(points/clear*100):null,...n,half:n.step+n.compromise+n.partly,points,clear,total:list.length+rated+own.length,
     notCounted:list.filter(x=>!CHECK_STATUS[x.assessment]).length+waiting+open,open,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
     unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated+own.length};
 }
