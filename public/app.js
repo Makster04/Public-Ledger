@@ -1017,14 +1017,14 @@ function bindProfileActions(s,pane){
     // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
     const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
     const u=s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
-    // The funding overview: where the money came from, and the six trackers as the profile's Summary of Major Lookouts
+    // The funding overview: where the money came from, and the seven trackers as the profile's Summary of Major Lookouts
     // shows them this cycle, with their super PACs' spending (the refresh's records, else the file's).
     const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
     const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
     const extras={spent:c?.disbursements,wealth:s.office?null:wealthCard(d?wealthOf(s,d):'offline'),
       lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:u.pledgeItems||[],empty:'No pledges or bills on file'}]:null,
       funding:c?fundingParts(c,d?.sizes):null,
-      trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
+      trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,card:TRACKER[x.key].card||null,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
     openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
@@ -1690,7 +1690,7 @@ function jfcEvidence(j,cycle){
     <div class="st-check"><h4>Joint fundraising money by the size of each share</h4><div class="mm-bars st-kinds" role="list">${j.bands.map((b,i)=>`<div class="mm-bar" role="listitem" title="${labels[i]}: ${fmtFull(b)}"><span>${labels[i]}</span><span class="mm-track"><span style="width:${(b/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(b)} · ${Math.round(b/(j.people||1)*100)}%</span></div>`).join('')}</div></div>
     <p class="small muted">${j.shares.toLocaleString('en-US')} people's shares are listed on the reports; ${fmtFull(j.unlisted)} isn't, which is people whose share was $200 or less, so it counts as small gifts. ${j.committees>0?`${fmtFull(j.committees)} came from PACs and other committees and stays committee money. `:''}${j.scaled?'The listed shares add up to more than was passed on (they are listed before the committee\'s costs), so each is scaled down to fit. ':''}The Donor part of the score uses these sizes.</p></section>`;
 }
-// ----- Trackers: AIPAC, Big Pharma, Big Oil, Big Tech + AI, Crypto and Big Defense (public/trackers.js) -----
+// ----- Trackers: AIPAC, Big Pharma + Insurance, Big Oil, Big Tech + AI, Crypto, Big Defense and Wall Street (public/trackers.js) -----
 // The money behind a person's lookouts over a period (the Big Money Independence tab's period picker): the PAC lines (this cycle: the
 // reviewed reports merged with the refresh's whole-cycle list; other cycles: the refresh's), the gifts routed through
 // groups and those groups' own PAC checks this cycle, and the employee gifts the refresh read (crypto and AI so far). A
@@ -1787,7 +1787,7 @@ function trackerPanel(s,d,inp,x,t,sp){
 function trackersHTML(s,d,inp,sp){
   const L=lookouts(inp);
   return `<section class="st-sec" id="u-trackers"><h4 class="st-sub">Trackers <span class="muted small">· shown, not counted</span></h4>
-    <p class="small">Money from six lobbies, ${esc(inp.label)}. <a href="#trackers">See everyone on the Trackers page</a>.</p>
+    <p class="small">Money from seven lobbies, ${esc(inp.label)}. <a href="#trackers">See everyone on the Trackers page</a>.</p>
     <div class="seg tr-tabs" role="tablist" aria-label="Trackers">${TRACKERS.map((t,i)=>`<button type="button" role="tab" data-tracker="${t.key}" aria-selected="${t.key===trackerTab}" class="${t.key===trackerTab?'active':''}"><span class="lk-mark lk-${L[i].status}" aria-hidden="true">${L[i].status==='took'?'✕':L[i].status==='none'?'✓':'…'}</span>${esc(t.name)}</button>`).join('')}</div>
     ${TRACKERS.map((t,i)=>trackerPanel(s,d,inp,L[i],t,sp)).join('')}</section>`;
 }
@@ -2081,7 +2081,7 @@ function renderTrackers(key){
   const sum=took.reduce((n,r)=>n+r.x.total,0),routedRead=t.routed.length>0;
   const who=s=>`<a href="#${esc(s.id)}-unbought">${esc(s.name)}</a> <span class="chip ${esc(s.party)}">${esc(s.party)} · ${esc(s.chamber==='H'?s.district||s.state:s.state)}</span>${s.pac?.window?`<div class="small muted">PAC lines read: ${esc(s.pac.window)}</div>`:''}`;
   app.innerHTML=`<section class="section"><div class="kicker">Lobby money</div><h1>Trackers</h1>
-    <p class="intro">How much each profiled campaign took from six lobbies this cycle: checks from the lobby's PACs, and gifts the lobby collected from donors and passed on. Super PAC spending, which no campaign takes, is on each person's Big Money Independence tab. Shown only; no grade uses it.</p>
+    <p class="intro">How much each profiled campaign took from seven lobbies this cycle: checks from the lobby's PACs, and gifts the lobby collected from donors and passed on. Super PAC spending, which no campaign takes, is on each person's Big Money Independence tab. Shown only; no grade uses it.</p>
     <nav class="seg tr-tabs tr-page-tabs" aria-label="Trackers">${TRACKERS.map(x=>`<a href="#trackers-${x.key}" class="${x.key===t.key?'active':''}"${x.key===t.key?' aria-current="page"':''}>${esc(x.name)}</a>`).join('')}</nav>
     <p class="small" style="margin:12px 0 4px">${esc(t.about)}</p>
     <p class="tr-sum"><b class="num">${took.length}</b> of ${rows.length} profiled campaigns took money from ${esc(t.name)} this cycle, <b class="num">${fmtFull(sum)}</b> in all.</p>

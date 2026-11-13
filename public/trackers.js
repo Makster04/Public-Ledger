@@ -1,6 +1,6 @@
-// The trackers: six lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
-// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense
-// 2026-11-13).
+// The trackers: seven lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
+// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
+// Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13).
 //
 // For each tracker:
 //   pacIds / patterns   its PACs: the FEC committee IDs on file (checked by hand), and name patterns for committees not on
@@ -25,13 +25,17 @@ export const TRACKERS=[
     pacIds:['C00797670'],patterns:[P('^AMERICAN ISRAEL PUBLIC AFFAIRS'),P('^AIPAC\\b')],routed:['aipac'],
     groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},superPacs:['United Democracy Project'],superPacLine:true,industries:[],
     companies:[],groups:['AIPAC PAC']},
-  {key:'pharma',name:'Big Pharma',long:'Big Pharma (drugmakers)',
-    about:'Drugmakers and their trade groups. Medical device makers, distributors, pharmacy benefit managers and pharmacies aren\'t included.',
-    pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345'],
-    patterns:['\\bPFIZER\\b','\\bMERCK\\b','JOHNSON (AND|&) JOHNSON','\\bABBVIE\\b','ELI LILLY','BRISTOL[- ]MYERS','\\bAMGEN\\b','\\bGILEAD\\b','\\bREGENERON\\b','\\bVERTEX PHARM','\\bBIOGEN\\b','\\bMODERNA\\b','\\bNOVARTIS\\b','\\bSANOFI\\b','GLAXOSMITHKLINE|\\bGSK\\b','ASTRAZENECA','NOVO NORDISK','\\bGENENTECH\\b','\\bBAYER\\b','BOEHRINGER','\\bTAKEDA\\b','\\bTEVA\\b','\\bVIATRIS\\b','\\bORGANON\\b','PHARMACEUTICAL RESEARCH (AND|&) MANUFACTURERS|\\bPHRMA\\b','BIOTECHNOLOGY INNOVATION ORGANIZATION','ASSOCIATION FOR ACCESSIBLE MEDICINES'].map(P),
+  {key:'pharma',name:'Big Pharma + Insurance',card:'Pharma + Ins.',long:'Big Pharma + Insurance (drugmakers, health insurers and PBMs)',
+    about:'Drugmakers, health insurers and the pharmacy benefit managers (PBMs) the biggest insurers own, and their trade groups. Drugmakers and insurers often lobby against each other on drug prices; both give most to the health committees. Medical device makers, distributors, hospitals and drugstore chains aren\'t included.',
+    pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345',
+      'C00084061','C00085316','C00161141','C00194746','C00197228','C00199711','C00271007','C00274431','C00276311','C00384818','C00388819','C00397851','C00430256','C00450056','C00457242'],
+    patterns:['\\bPFIZER\\b','\\bMERCK\\b','JOHNSON (AND|&) JOHNSON','\\bABBVIE\\b','ELI LILLY','BRISTOL[- ]MYERS','\\bAMGEN\\b','\\bGILEAD\\b','\\bREGENERON\\b','\\bVERTEX PHARM','\\bBIOGEN\\b','\\bMODERNA\\b','\\bNOVARTIS\\b','\\bSANOFI\\b','GLAXOSMITHKLINE|\\bGSK\\b','ASTRAZENECA','NOVO NORDISK','\\bGENENTECH\\b','\\bBAYER\\b','BOEHRINGER','\\bTAKEDA\\b','\\bTEVA\\b','\\bVIATRIS\\b','\\bORGANON\\b','PHARMACEUTICAL RESEARCH (AND|&) MANUFACTURERS|\\bPHRMA\\b','BIOTECHNOLOGY INNOVATION ORGANIZATION','ASSOCIATION FOR ACCESSIBLE MEDICINES',
+      // Health insurers and PBMs (added 2026-11-13).
+      'UNITEDHEALTH|\\bOPTUM\\b','ELEVANCE HEALTH|\\bANTHEM\\b','\\bCIGNA\\b','EXPRESS SCRIPTS','\\bHUMANA\\b','\\bCENTENE\\b','CVS HEALTH|\\bAETNA\\b|CAREMARK','MOLINA HEALTHCARE','BLUE ?CROSS|BLUE ?SHIELD|\\bBLUEPAC\\b','HEALTH CARE SERVICE CORP',
+      '\\bHIGHMARK\\b','GUIDEWELL','PREMERA','HORIZON HEALTHCARE SERVICES','CAREFIRST','AMERICA\'?S HEALTH INSURANCE PLANS|\\bAHIP\\b','PHARMACEUTICAL CARE MANAGEMENT|\\bPCMA\\b','PRIME THERAPEUTICS'].map(P),
     routed:[],superPacs:[],industries:[],
-    companies:['Pfizer','Merck','Johnson & Johnson','AbbVie','Eli Lilly','Bristol Myers Squibb','Amgen','Gilead','Regeneron','Vertex','Biogen','Moderna','Novartis','Sanofi','GSK','AstraZeneca','Novo Nordisk','Genentech (Roche)','Bayer','Boehringer Ingelheim','Takeda','Teva','Viatris','Organon'],
-    groups:['PhRMA','BIO (Biotechnology Innovation Organization)','Association for Accessible Medicines']},
+    companies:['Pfizer','Merck','Johnson & Johnson','AbbVie','Eli Lilly','Bristol Myers Squibb','Amgen','Gilead','Regeneron','Vertex','Biogen','Moderna','Novartis','Sanofi','GSK','AstraZeneca','Novo Nordisk','Genentech (Roche)','Bayer','Boehringer Ingelheim','Takeda','Teva','Viatris','Organon','UnitedHealth Group (Optum Rx)','CVS Health (Aetna, Caremark)','Cigna (Express Scripts)','Elevance Health (Anthem)','Humana','Centene','Molina Healthcare','the Blue Cross Blue Shield plans','Prime Therapeutics'],
+    groups:['PhRMA','BIO (Biotechnology Innovation Organization)','Association for Accessible Medicines','AHIP (America\'s Health Insurance Plans)','Blue Cross Blue Shield Association','PCMA (the PBMs\' trade group)']},
   {key:'oil',name:'Big Oil',long:'Big Oil (oil and gas)',
     about:'Oil and gas producers, refiners, pipelines and LNG, oilfield services, and their trade groups. Koch Industries, coal and mining, and gas utilities aren\'t included.',
     pacIds:['C00035006','C00513549','C00121368','C00040394','C00755454','C00551184','C00109546','C00354753','C00342766','C00246306','C00035204','C00483677','C00430157','C00496307','C00112896','C00429662','C00039503','C00525055','C00035691','C00431932','C00686287','C00083857','C00116145','C00426569','C00415026','C00736421','C00488080','C00510016','C00721647','C00215384','C00135855','C00486779','C00151175','C00438754','C00705996','C00279224','C00496752','C00567081'],
@@ -65,7 +69,19 @@ export const TRACKERS=[
       'LEONARDO DRS|\\bDRS TECHNOLOGIES','RHEINMETALL','ELBIT SYSTEMS','^SAAB\\b','THALES','\\bNAMMO\\b','GE AEROSPACE|GENERAL ELECTRIC COMPANY AEROSPACE','HONEYWELL AEROSPACE'].map(P),
     routed:[],superPacs:[],industries:[],
     companies:['Lockheed Martin','RTX (Raytheon)','General Dynamics','Northrop Grumman','Boeing','L3Harris (and Aerojet Rocketdyne)','BAE Systems','Huntington Ingalls','Leidos','SAIC','Booz Allen Hamilton','CACI','KBR','ManTech','Peraton','Amentum','V2X','Parsons','General Atomics','Textron','Sierra Nevada','BWX Technologies','Curtiss-Wright','Mercury Systems','Kratos','AeroVironment','Oshkosh','Austal USA','Anduril','Palantir','Shield AI','Epirus','Saronic','Leonardo DRS','Rheinmetall','Elbit America','Saab','Thales USA','Nammo','GE Aerospace','Honeywell Aerospace'],
-    groups:[]}];
+    groups:[]},
+  {key:'wallstreet',name:'Wall Street',long:'Wall Street (big banks, investment firms and private equity)',
+    about:'The big banks, investment banks and asset managers, private equity, trading firms, the stock and futures exchanges, the card companies and brokerages, and their national trade groups. Community banks and the state bankers associations, credit unions, and insurance companies aren\'t included.',
+    // Approved 2026-11-13.
+    pacIds:['C00004275','C00008474','C00017558','C00034595','C00035519','C00035535','C00040535','C00072751','C00076299','C00104299','C00105981','C00133389','C00186064','C00253369','C00300178','C00306894','C00326595','C00327072','C00337626','C00350744','C00364778','C00365122','C00366013','C00380550','C00386524','C00410266','C00410274','C00410407','C00431312','C00479246','C00486217','C00488882','C00494534','C00495002','C00515148','C00579540','C00589119','C00689091'],
+    patterns:['JPMORGAN|J\\.? ?P\\.? MORGAN','GOLDMAN SACHS','MORGAN STANLEY','BANK OF AMERICA','CITIGROUP|\\bCITI PAC','WELLS FARGO','U\\.?S\\.? BANCORP','PNC FINANCIAL','\\bTRUIST\\b','CAPITAL ONE','BANK OF NEW YORK MELLON|\\bBNY (BIPAC|FEDPAC)','STATE STREET (BANK|CORP)','NORTHERN TRUST','SANTANDER',
+      'BLACKROCK','VANGUARD GROUP','FMR LLC|\\(FIDELITY PAC\\)','\\bINVESCO\\b','CHARLES SCHWAB','EDWARD JONES|EDJ HOLDING','LPL FINANCIAL','RAYMOND JAMES','ROBINHOOD',
+      'BLACKSTONE','\\bKKR\\b|KOHLBERG KRAVIS','CARLYLE (GROUP|PAC)','APOLLO (GLOBAL|MANAGEMENT)','\\bARES MANAGEMENT','CITADEL','ELLIOTT MANAGEMENT',
+      'NASDAQ','INTERCONTINENTAL EXCHANGE|NEW YORK STOCK EXCHANGE','CME GROUP','\\bCBOE\\b','\\bVISA,? INC','MASTERCARD','AMERICAN EXPRESS','DISCOVER FINANCIAL','SYNCHRONY','ALLY FINANCIAL',
+      'AMERICAN BANKERS ASSOC','BANK POLICY INSTITUTE','CONSUMER BANKERS ASSOC','SECURITIES INDUSTRY AND FINANCIAL MARKETS|\\bSIFMA\\b','INVESTMENT COMPANY INSTITUTE','AMERICAN INVESTMENT COUNCIL','MANAGED FUNDS ASSOC','FUTURES INDUSTRY'].map(P),
+    routed:[],superPacs:[],industries:[],
+    companies:['JPMorgan Chase','Goldman Sachs','Morgan Stanley','Bank of America','Citigroup','Wells Fargo','U.S. Bancorp','PNC','Truist','Capital One','BNY','State Street','Northern Trust','Santander US','BlackRock','Vanguard','Fidelity','Invesco','Edward Jones','LPL Financial','Robinhood','Carlyle','Citadel Securities','Nasdaq','Intercontinental Exchange (NYSE)','CME Group','Cboe','Visa','Mastercard','American Express','Discover','Synchrony','Ally'],
+    groups:['American Bankers Association (BankPAC)','Bank Policy Institute','Consumer Bankers Association','SIFMA','Investment Company Institute','American Investment Council (private equity)','Managed Funds Association (hedge funds)','Futures Industry Association']}];
 export const TRACKER=Object.fromEntries(TRACKERS.map(t=>[t.key,t]));
 
 const cents=n=>Math.round(n*100)/100;

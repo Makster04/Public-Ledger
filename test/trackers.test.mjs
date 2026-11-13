@@ -1,4 +1,4 @@
-// The trackers (public/trackers.js): the six approved lobbies, how a campaign's money from each is counted for the
+// The trackers (public/trackers.js): the seven approved lobbies, how a campaign's money from each is counted for the
 // Summary of Major Lookouts (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -11,9 +11,9 @@ const read=f=>fs.readFileSync(new URL(f,import.meta.url),'utf8');
 const line=(name,amount,cid=null)=>({cid,name,amount});
 const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});
 
-test('six trackers in the approved order, each with its PACs on file and none shared',()=>{
-  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto','defense']);
-  assert.deepEqual(TRACKERS.map(t=>t.name),['AIPAC','Big Pharma','Big Oil','Big Tech + AI','Crypto','Big Defense']);
+test('seven trackers in the approved order, each with its PACs on file and none shared',()=>{
+  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto','defense','wallstreet']);
+  assert.deepEqual(TRACKERS.map(t=>t.name),['AIPAC','Big Pharma + Insurance','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
   const ids=TRACKERS.flatMap(t=>t.pacIds);
   assert.equal(new Set(ids).size,ids.length,'no committee counts for two trackers by ID');
   for(const t of TRACKERS)for(const id of t.pacIds){
@@ -29,9 +29,19 @@ test('who is in and who is out, as approved',()=>{
   // Oil: Koch, coal and mining, and gas utilities are out.
   for(const n of ['EXXON MOBIL CORPORATION POLITICAL ACTION COMMITTEE','CHEVRON EMPLOYEES POLITICAL ACTION COMMITTEE','AMERICAN PETROLEUM INSTITUTE PAC','VALERO ENERGY CORPORATION PAC'])assert.ok(caught('oil',n),n);
   for(const n of ['KOCH INDUSTRIES INC POLITICAL ACTION COMMITTEE (KOCHPAC)','PEABODY ENERGY PAC','NATIONAL MINING ASSOCIATION PAC','ATMOS ENERGY CORPORATION PAC','SHELLEY FOR CONGRESS'])assert.ok(!caught('oil',n),n);
-  // Pharma: drugmakers and their groups; devices, distributors, PBMs and pharmacies are out.
-  for(const n of ['PFIZER INC. PAC','AMGEN INC. POLITICAL ACTION COMMITTEE','PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA PAC'])assert.ok(caught('pharma',n),n);
-  for(const n of ['MEDTRONIC INC PAC','MCKESSON CORPORATION EMPLOYEES POLITICAL FUND','CVS HEALTH CORPORATION PAC','WALGREEN CO PAC'])assert.ok(!caught('pharma',n),n);
+  // Pharma + Insurance: drugmakers, health insurers, the PBMs and their groups; devices, distributors, hospitals and
+  // drugstore chains are out (CVS Health is in, as Aetna's and Caremark's owner).
+  for(const n of ['PFIZER INC. PAC','AMGEN INC. POLITICAL ACTION COMMITTEE','PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA PAC','UNITEDHEALTH GROUP INCORPORATED PAC (UNITEDHEALTH GROUP PAC)','CVS HEALTH PAC',
+    'THE CIGNA GROUP EMPLOYEE POLITICAL ACTION COMMITTEE','BLUEPAC - BLUE CROSS BLUE SHIELD ASSOCIATION PAC','CAREFIRST BLUECROSS BLUESHIELD ASSOCIATES FEDERAL PAC','AMERICA\'S HEALTH INSURANCE PLANS, INC. PAC (AHIP PAC)',
+    'PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (PCMA PAC)','MOLINA HEALTHCARE, INC. PAC'])assert.ok(caught('pharma',n),n);
+  for(const n of ['MEDTRONIC INC PAC','MCKESSON CORPORATION EMPLOYEES POLITICAL FUND','WALGREEN CO PAC','AMERICAN HOSPITAL ASSOCIATION PAC','HCA HEALTHCARE PAC','MOLINARO VICTORY COMMITTEE','SHIELD AI POLITICAL ACTION COMMITTEE (SAIPAC)'])assert.ok(!caught('pharma',n),n);
+  assert.equal(TRACKER.pharma.card,'Pharma + Ins.','the report card\'s shorter label');
+  // Wall Street: big banks, investment firms, private equity, exchanges, card companies and their national groups; community
+  // banks, state bankers associations, credit unions and insurers are out.
+  for(const n of ['JPMORGAN CHASE & CO. FEDERAL POLITICAL ACTION COMMITTEE','THE GOLDMAN SACHS GROUP, INC. POLITICAL ACTION COMMITTEE','AMERICAN BANKERS ASSOCIATION PAC (BANKPAC)','THE CARLYLE GROUP INC. PAC (AKA \'CARLYLE PAC\')',
+    'CITADEL SECURITIES POLITICAL ACTION COMMITTEE (CITADEL SECURITIES PAC)','VISA, INC. POLITICAL ACTION COMMITTEE','FMR LLC POLITICAL ACTION COMMITTEE - FEDERAL (FIDELITY PAC)','THE VANGUARD GROUP COMMITTEE FOR RESPONSIBLE GOVERNMENT'])assert.ok(caught('wallstreet',n),n);
+  for(const n of ['WISCONSIN BANKERS ASSOCIATION (WISBANKPAC)','INDEPENDENT COMMUNITY BANKERS OF AMERICA PAC','AMERICA\'S CREDIT UNIONS PAC','MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE',
+    'FIDELITY NATIONAL FINANCIAL INC PAC 2001','HINMAN STRAUB PAC (STATE STREET ASSOCIATES PAC)','AMERICA FIRST BLACK VANGUARDS'])assert.ok(!caught('wallstreet',n),n);
   // Tech + AI: platforms, chips, Nvidia and Palantir; telecom and cable are out.
   for(const n of ['MICROSOFT CORPORATION POLITICAL ACTION COMMITTEE','GOOGLE LLC NETPAC','NVIDIA CORPORATION PAC','PALANTIR TECHNOLOGIES INC. PAC'])assert.ok(caught('tech',n),n);
   for(const n of ['AT&T INC. EMPLOYEE FEDERAL POLITICAL ACTION COMMITTEE','VERIZON COMMUNICATIONS INC. GOOD GOVERNMENT CLUB','COMCAST CORPORATION POLITICAL ACTION COMMITTEE'])assert.ok(!caught('tech',n),n);
@@ -77,7 +87,7 @@ test('AIPAC: routed gifts count, its own PAC checks fill in missing PAC lines on
 
 test('lookouts: one line a tracker, in order',()=>{
   const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true});
-  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500]]);
+  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500],['wallstreet','none',0]]);
 });
 
 test('PAC lines: research.json\'s with full committee names, merged with the refresh\'s at the larger amount',()=>{

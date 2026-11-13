@@ -54,13 +54,13 @@ function arc(cx,cy,ro,ri,a0,a1){
 // (✕ took some, ✓ none, ? not read yet), and its super PACs' spending for or against them when there is some.
 const money=n=>n>=1e6?'$'+(n/1e6).toFixed(n>=1e7?1:2).replace(/\.0+$/,'')+'M':'$'+Math.round(n).toLocaleString('en-US');
 function lookoutRow(items,fx,y0,fw){
-  const MARK={took:['#e0535f','M-3.5-3.5l7 7M3.5-3.5l-7 7'],none:['#18a35f','M-4 0l3 3L4-3.5'],waiting:['#8b95a5','']},cw=(fw-52)/items.length,spW=items.length>5?23:28;
+  const MARK={took:['#e0535f','M-3.5-3.5l7 7M3.5-3.5l-7 7'],none:['#18a35f','M-4 0l3 3L4-3.5'],waiting:['#8b95a5','']},cw=(fw-52)/items.length,spW=items.length>6?18:items.length>5?23:28;
   return `<path d="M${fx+1.5} ${y0}H${fx+fw-1.5}" stroke="#3a4250" stroke-width="1.5"/>
     ${text('MAJOR LOOKOUTS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE',fx+26,y0+22,{size:11,color:SUB_DARK,width:90,max:1,family:MONO})}
     ${items.map((x,i)=>{const X=fx+26+i*cw,[c,d]=MARK[x.status]||MARK.waiting,o=x.superPac;
       const sp=o&&(o.for>0||o.against>0)?['SUPER PAC:',o.for>0?money(o.for)+' FOR':'',o.against>0?money(o.against)+' AGAINST':''].filter(Boolean).join(' '):'';
       return `<circle cx="${X+8}" cy="${y0+44}" r="8" fill="${c}"/>${d?`<path d="${d}" transform="translate(${X+8} ${y0+44})" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`:text('?',X+8,y0+48,{size:11,color:'#fff',weight:700,width:2,anchor:'middle',family:SANS})}
-        ${text(String(x.name).toUpperCase(),X+22,y0+49,{size:12,color:PAPER,weight:700,width:20,max:1,family:MONO})}
+        ${text(String(x.card||x.name).toUpperCase(),X+22,y0+49,{size:12,color:PAPER,weight:700,width:20,max:1,family:MONO})}
         ${text(x.status==='waiting'?'NOT READ YET':money(x.total),X+22,y0+71,{size:x.status==='waiting'?11:18,color:x.status==='waiting'?SUB_DARK:x.status==='took'?'#ff8a8a':'#5fe39a',weight:700,width:20,max:1,family:x.status==='waiting'?MONO:SANS})}
         ${sp?text(sp,X+22,y0+88,{size:9,color:SUB_DARK,width:spW,max:2,lineHeight:11,family:MONO}):''}`;}).join('')}`;
 }
@@ -73,8 +73,8 @@ function lookoutRow(items,fx,y0,fw){
  * note takes row 3's place. A card without a checklist (basic profiles) or without net worth (a president) closes up
  * around what it has.
  * model: name, party, state, office, raised, cash, spent, period, wealth ({items: [{label, value, wait, sub}]}), lists
- * ([{title, items: [{label, status: 'yes'|'no'|'waiting'}], empty}]), funding (fundingParts), trackers ([{key, name,
- * status: 'took'|'none'|'waiting', total, superPac: {for, against}|null}]), grades, reviewedAt. */
+ * ([{title, items: [{label, status: 'yes'|'no'|'waiting'}], empty}]), funding (fundingParts), trackers ([{key, name, card
+ * (a shorter label for the card, when the name is long), status: 'took'|'none'|'waiting', total, superPac: {for, against}|null}]), grades, reviewedAt. */
 export function renderScorecardSvg(model,portraitDataUrl=''){
   const p=PALETTES[model.party]||PALETTES.I,portrait=cleanImage(portraitDataUrl),name=String(model.name||'Public Ledger profile');
   const raw=Array.isArray(model.grades)?model.grades:[];
