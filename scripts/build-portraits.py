@@ -47,8 +47,6 @@ OFFICIAL = 'Official congressional portrait (public domain), via the unitedstate
 
 # Output canvas: 3x the card's 88 x 104 px portrait box. Eyes are centered at EYE_Y, EYE_GAP px apart.
 W, H, EYE_Y, EYE_GAP = 264, 312, 124, 50
-# The card's circle (public/index.html .hc-pv), in output pixels: centered at 44, 66 with radius 38 in the card's units.
-CX, CY, R = W / 2, 198, 114
 
 
 def fetch(bioguide, size):
@@ -90,19 +88,14 @@ def extend(rgba, pad_b, pad_s, k):
     h = f.shape[0]
     bottom = cv2.GaussianBlur(solid[h - 6:].mean(axis=0, keepdims=True), (2 * k + 1, 1), 0)
     # Below the photo, the carried-on clothing blends toward its average color, so stripes such as a shirt and tie fade into
-    # the fabric instead of running on, and then fades out into the card's circle. It keeps the clothing's own brightness:
-    # no shading toward the bottom, and no flat band of color on a tightly cropped photo.
+    # the fabric instead of running on, down to the bottom of the frame (the portrait box is a rectangle, so the shoulders
+    # run to its edge). It keeps the clothing's own brightness: no shading toward the bottom.
     t = np.minimum(1, np.arange(pad_b, dtype=np.float32) / max(1, 0.9 * k))[:, None, None]
     a = bottom[..., 3:4]
     avg = bottom[..., :3].sum(axis=1, keepdims=True) / max(1e-3, a.sum()) * a  # the average color, at each column's opacity
     edge = solid[h - 3:].mean(axis=0, keepdims=True)  # the photo's own last rows, unblurred, so there is no seam
     below = np.repeat(bottom, pad_b, axis=0)
     below[..., :3] = (1 - t) * edge[..., :3] + t * avg
-    # The fade starts a little above the photo's last row (only seen when the photo ends inside the frame) and ends soon
-    # below it, so the clothing dissolves into the circle instead of leaving a band.
-    r = min(h, max(2, int(0.6 * k)))
-    f[h - r:] *= np.linspace(1, 0.55, r, dtype=np.float32)[:, None, None]
-    below *= np.clip(0.55 * (1 - np.arange(pad_b, dtype=np.float32) / max(1, 1.2 * k)), 0, 1)[:, None, None]
     f = np.vstack([f, below])
     solid = np.vstack([solid, below])
     left = cv2.GaussianBlur(solid[:, :4].mean(axis=1, keepdims=True), (1, k), 0)
@@ -227,27 +220,15 @@ def cutout(m, segmenter, opts):
     rgb = defringe(rgb, alpha, max(1.5, m['gap'] / 30))
     (rx, ry), (lx, ly) = m['eyes']
     cx, cy = (rx + lx) / 2, (ry + ly) / 2
-    # A tightly cropped photo ends before the frame does: carry its clothing on to the edge. That part sits inside
-    # the bottom of the card's circle, so it reads as more of the jacket rather than a cut-off line.
+    # A tightly cropped photo ends before the frame does: carry its clothing on to the frame's bottom and side edges, so
+    # it reads as more of the jacket rather than a cut-off line.
     pad = int(H / s)
     k = int(m['gap'] * 0.35) | 1
     rgba = extend(np.dstack([rgb, (alpha * 255).astype(np.uint8)]), pad, pad, k)
     t = np.float32([[s, 0, W / 2 + opts.get('nudge', 0) - (cx + pad) * s], [0, s, EYE_Y - cy * s]])
     out = cv2.warpAffine(rgba, t, (W, H), flags=cv2.INTER_AREA if s < 1 else cv2.INTER_CUBIC,
                          borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0, 0))
-    return Image.fromarray(trim(out), 'RGBA')
-
-
-def trim(rgba):
-    """The card shows the whole frame above the circle's middle, so a head can rise above the circle. Clothing that reaches
-    past the circle there (high shoulders in a tightly framed photo) would show outside it: fade out anything outside the
-    circle from just below the eyes, over a few pixels so hair beside the face is not cut along a hard line."""
-    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-    inside = np.clip((R - np.hypot(xx - CX, yy - CY)) / 1.5 + 0.5, 0, 1)
-    below = np.clip((yy - (EYE_Y + 30)) / 12, 0, 1)
-    out = rgba.copy()
-    out[..., 3] = (out[..., 3] * np.maximum(inside, 1 - below)).astype(np.uint8)
-    return out
+    return Image.fromarray(out, 'RGBA')
 
 
 def visible(img):

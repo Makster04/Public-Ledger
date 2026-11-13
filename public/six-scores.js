@@ -72,13 +72,14 @@ export function ideology(person,issues,{ratings=null,questions=null}={}){
 }
 
 // ---------- 2. Keeps Their Word ----------
-//   100 × (kept + ¾ × first steps + ½ × compromises) ÷ (kept + first steps + compromises + broken), at least 3.
+//   100 × (kept + ¾ × first steps + ½ × compromises) ÷ (kept + first steps + compromises + broken + allegedly broken),
+//   at least 3.
 // promises: the person's entries in public/promises.json; today: the day "no action yet" deadlines are checked against.
 export function keepsTheirWord(person,{promises=null,today=null}={}){
   const p=promiseScore(person?.statements,person?.promiseTrackers,promises??person?.promises??[],today);
   const g=graded(p.pct);
   return {...g,pct:g?.pct??null,score:p,
-    parts:[{key:'kept',label:'Kept',value:p.kept},{key:'step',label:'First step (¾)',value:p.step},{key:'compromise',label:'Compromise (½)',value:p.compromise},{key:'broken',label:'Broken',value:p.broken},{key:'clear',label:'Counted',value:p.clear}],
+    parts:[{key:'kept',label:'Kept',value:p.kept},{key:'step',label:'First step (¾)',value:p.step},{key:'compromise',label:'Compromise (½)',value:p.compromise},{key:'broken',label:'Broken',value:p.broken},{key:'alleged',label:'Allegedly broken',value:p.alleged},{key:'clear',label:'Counted',value:p.clear}],
     why:g?null:`Needs at least ${MIN_CHECKS} counted promises (${p.clear} so far)`,
     needs:[[`At least ${MIN_CHECKS} promises the record can decide`,p.clear>=MIN_CHECKS]]};
 }

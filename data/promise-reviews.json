@@ -1,5 +1,5 @@
 {
- "about": "Reviewed verdicts for the promises in public/promises.json (scripts/build-promises.mjs), by person and promise key (\"<first question>@<date>\"). status: kept, step (voted for a first step toward it: counts 3/4), compromise (introduced or (co)sponsored a compromised version: counts 1/2), broken, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed). why is shown on the profile; date is when it was reviewed.",
+ "about": "Reviewed verdicts for the promises in public/promises.json (scripts/build-promises.mjs), by person and promise key (\"<first question>@<date>\"). status: kept, step (voted for a first step toward it: counts 3/4), compromise (introduced or (co)sponsored a compromised version: counts 1/2), broken (their own votes went against it), alleged (allegedly broken: no action on it in office while others acted, counted the same as broken), unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed). why is shown on the profile; date is when it was reviewed.",
  "people": {
   "booker": {
    "decriminalize-drugs@2021-04-21": {"status": "compromise", "why": "He introduced the Cannabis Administration and Opportunity Act (2022, 2024 and 2026), which ends the federal ban on marijuana: a narrower version of the promise. No bill from him decriminalizes small amounts of other drugs.", "date": "2026-11-13"},
@@ -24,7 +24,7 @@
   },
   "ossoff": {
    "paris-agreement@2020-11-03": {"status": "not-tested", "why": "The President rejoined the Paris Agreement on Jan. 20, 2021, the day Ossoff took office, so there was nothing left to push for; the U.S. left again by executive order in 2025, and neither step came to a Senate vote.", "date": "2026-11-13"},
-   "private-prisons@2020-11-03": {"status": "broken", "why": "There was no Senate bill to ban private prisons in these years, and he didn't introduce one. He also didn't join the related bills: the Private Prison Information Act (2021 and 2023, 15 cosponsors each) and the 2026 Private Detention Accountability Act.", "date": "2026-11-13"}
+   "private-prisons@2020-11-03": {"status": "alleged", "why": "There was no Senate bill to ban private prisons in these years, and he didn't introduce one. He also didn't join the related bills: the Private Prison Information Act (2021 and 2023, 15 cosponsors each) and the 2026 Private Detention Accountability Act.", "date": "2026-11-13"}
   },
   "perry": {
    "gun-purchase-limits@2018-10-24": {"status": "kept", "why": "22 of his 23 actions after the promise went its way. The exception is one vote on an amendment to the 2019 background-check bill, which he then voted against.", "date": "2026-11-13"}
