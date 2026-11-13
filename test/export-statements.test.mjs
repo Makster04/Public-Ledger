@@ -7,7 +7,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
-import {exportStatements,whereOf,readSpeeches,HOUR} from '../scripts/export-statements.mjs';
+import {exportStatements,whereOf,readSpeeches,HOUR,RETRY_WAITS,MAX_SKIPPED} from '../scripts/export-statements.mjs';
 import {searchTests,collectedDocs,statementCandidates,campaignOf,cycleOf} from '../scripts/question-statements.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -71,7 +71,7 @@ test('--wait: when GovInfo says to slow down, save, pause (an hour unless it say
   const pauses=[],saved=[];
   const f1=floor(),r1=await readSpeeches(f1,{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:govinfo([{status:200,body:page('raise the minimum wage now.')},{status:429},{status:200,body:page('no more aid to Ukraine.')}])},
     people,maxRead:10,wait:true,gap:0,pause:async ms=>{if(ms)pauses.push(ms);},onPause:(ms,n)=>saved.push(n)});
-  assert.deepEqual(r1,{fetched:2,waiting:0,stopped:null,pauses:1});assert.deepEqual(pauses,[HOUR],'an hour when GovInfo doesn\'t say');assert.deepEqual(saved,[1],'saved after the first read');
+  assert.deepEqual(r1,{fetched:2,waiting:0,stopped:null,pauses:1,skipped:0});assert.deepEqual(pauses,[HOUR],'an hour when GovInfo doesn\'t say');assert.deepEqual(saved,[1],'saved after the first read');
   assert.equal(f1[0].text,'Mr. Speaker, raise the minimum wage now.');assert.equal(f1[1].text,'','a routine page is skipped');assert.equal(f1[2].text,'Mr. Speaker, no more aid to Ukraine.');
   // the pages are saved: a second run reads nothing new
   const f2=floor(),r2=await readSpeeches(f2,{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:async()=>{throw new Error('no reads');}},people,maxRead:10,gap:0,pause:async()=>{}});
@@ -83,4 +83,28 @@ test('--wait: when GovInfo says to slow down, save, pause (an hour unless it say
   const waits=[];await readSpeeches(floor(),{cache:dir2,key:'k',env:{CONGRESS_API_KEY:'k',fetch:govinfo([{status:429,headers:{'retry-after':'120'}}])},people,maxRead:10,wait:true,gap:0,pause:async ms=>{if(ms)waits.push(ms);}});
   assert.deepEqual(waits,[120000]);
   fs.rmSync(dir,{recursive:true,force:true});fs.rmSync(dir2,{recursive:true,force:true});
+});
+
+test('a page that times out is tried again, then skipped for the next run; GovInfo not answering at all pauses or stops',async()=>{
+  const people=new Map([['perry',{name:'Scott Perry',stateName:'Pennsylvania'}]]);
+  const page=w=>`<pre>  Mr. PERRY. Mr. Speaker, ${w}\n  The SPEAKER pro tempore. The gentleman yields back.\n</pre>`;
+  const floor=n=>Array.from({length:n},(_,i)=>({person:'perry',source:'floor',title:'Raise The Wage '+i,granule:`CREC-2025-11-${String(20-i).padStart(2,'0')}-pt1-PgH${i}`,date:`2025-11-${String(20-i).padStart(2,'0')}`,url:'https://x/'+i}));
+  const timeout=()=>{throw new DOMException('The operation was aborted due to timeout','TimeoutError');};
+  const answers=list=>{let i=0;return async()=>{const a=list[i++]||'ok';if(a==='timeout')timeout();if(a==='503')return new Response('',{status:503});return new Response(page('raise the minimum wage now.'),{status:200});};};
+  // one timeout, then the page answers: read, after one short wait
+  let dir=fs.mkdtempSync(path.join(os.tmpdir(),'speeches-')),waits=[];
+  let r=await readSpeeches(floor(2),{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:answers(['timeout'])},people,maxRead:10,gap:0,pause:async ms=>{if(ms)waits.push(ms);}});
+  assert.deepEqual([r.fetched,r.skipped,r.stopped],[2,0,null]);assert.deepEqual(waits,[RETRY_WAITS[0]]);
+  // a page that never answers (timeouts and a 503) is skipped, and the next one is read; it's still waiting for the next run
+  dir=fs.mkdtempSync(path.join(os.tmpdir(),'speeches-'));waits=[];
+  r=await readSpeeches(floor(2),{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:answers(['timeout','503','timeout','timeout'])},people,maxRead:10,gap:0,pause:async ms=>{if(ms)waits.push(ms);}});
+  assert.deepEqual([r.fetched,r.skipped,r.waiting,r.stopped],[1,1,1,null]);assert.deepEqual(waits,RETRY_WAITS);
+  // nothing answers: without --wait it stops after MAX_SKIPPED pages; with --wait it pauses an hour and goes on
+  dir=fs.mkdtempSync(path.join(os.tmpdir(),'speeches-'));
+  r=await readSpeeches(floor(MAX_SKIPPED+1),{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:async()=>timeout()},people,maxRead:20,gap:0,pause:async()=>{}});
+  assert.equal(r.skipped,MAX_SKIPPED);assert.match(r.stopped,/stopped answering/);
+  const down=Array((RETRY_WAITS.length+1)*MAX_SKIPPED).fill('timeout');waits=[];
+  r=await readSpeeches(floor(MAX_SKIPPED+1),{cache:dir,key:'k',env:{CONGRESS_API_KEY:'k',fetch:answers(down)},people,maxRead:20,wait:true,gap:0,pause:async ms=>{if(ms)waits.push(ms);},onPause:()=>{}});
+  assert.deepEqual([r.pauses,r.stopped,r.skipped,r.fetched],[1,null,MAX_SKIPPED-1,2],'after an hour\'s pause, the page it stopped on is tried again and the rest are read');assert.ok(waits.includes(HOUR));
+  fs.rmSync(dir,{recursive:true,force:true});
 });
