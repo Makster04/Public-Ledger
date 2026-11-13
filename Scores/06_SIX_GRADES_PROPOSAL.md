@@ -198,9 +198,12 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kep
    - **Compromise (½):** they introduced or (co)sponsored a compromised version. A reviewer records it.
    - **Broken (0):** every action went against it; or a reversal (after acting its way, at least 2 later bills went
      against it and none its way since); or a promise to act with no bill introduced, (co)sponsored or voted on within
-     6 months in office, counted from the promise, or from taking office for a promise made as a candidate.
+     6 months in office, counted from the promise, or from taking office for a promise made as a candidate, while other
+     members of their chamber acted on the question in that time (they had something to join).
    - **Unclear (not counted until reviewed):** actions both ways, often because a bill mixed the promise with other
-     things. A reviewer decides in `data/promise-reviews.json`, and the reason is shown.
+     things; or no action from them when nobody else in their chamber acted on the question in that time either in the
+     records read (there may have been no bill to join). A reviewer decides in `data/promise-reviews.json`, and the
+     reason is shown.
    - **No action yet (not counted):** in office, nothing on it yet, and the 6 months haven't run out. The date they do
      is shown; after it, the promise counts as broken.
    - **Not tested yet (not counted):** not in Congress while it could be acted on (a candidate, or a member-elect until

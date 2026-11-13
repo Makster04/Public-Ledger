@@ -66,6 +66,14 @@
    [1, "She’s on record against the war in Iran (“I am completely opposed to this war”)","2026-10-30","https://web.archive.org/web/20261030174236/https://alaniformt.com/rumors","Campaign website, 2026: Rumors About Alani Bankhead, Answered · Alani Bankhead for Senate"]
   ]
  },
+ "barr": {
+  "police-funding-shift": [
+   [1, "I will always defend and fight against defunding the police.","2021-06-23","https://www.govinfo.gov/app/details/CREC-2021-06-23/CREC-2021-06-23-pt1-PgH3014","Floor speech, Congressional Record: Public-Private Partnerships Can Rebuild Infrastructure Effectively for Less Money"]
+  ],
+  "tax-the-rich": [
+   [1, "I hope that we will pass a repeal of the estate tax to honor entrepreneurs, job creators, and philanthropists like Rick Corman.","2017-11-07","https://www.govinfo.gov/app/details/CREC-2017-11-07/CREC-2017-11-07-pt1-PgH8531","Floor speech, Congressional Record: The Estate Tax"]
+  ]
+ },
  "beltran": {
   "police-funding-shift": [
    [1, "I never voted to defund the police. In fact, I voted for bills that prohibited municipalities and counties from defunding the police","2026-08-14","https://www.fox13news.com/news/mike-beltran-sues-political-group-over-doctored-campaign-image","FOX 13 Tampa Bay: Mike Beltran sues political group over doctored campaign image (Aug. 14, 2026): Police funding"]
@@ -137,6 +145,9 @@
   "contraception": [
    [0, "- Guarantee access to employer-provided contraceptive care.","2020-01-13","https://web.archive.org/web/20200113193030/https://corybooker.com/issues/reproductive-rights/","Campaign website, 2020: Reproductive Rights — Cory 2020"]
   ],
+  "decriminalize-drugs": [
+   [0, "I don't support the legalization of all drugs, but I do support the decriminalization of small amounts of drugs and getting people help","2021-04-21","https://www.govinfo.gov/app/details/CREC-2021-04-21/CREC-2021-04-21-pt1-PgS2094-2","Floor speech, Congressional Record: Nomination of Vanita Gupta (Executive Session)"]
+  ],
   "dreamers-citizenship": [
    [0, "- Fight for a pathway to citizenship for the millions of undocumented immigrants living in the United States.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/","Campaign website, 2020: Immigration — Cory 2020"]
   ],
@@ -156,16 +167,29 @@
    [0, "- Champion the Equality Act, which ensures that federal civil rights laws prohibit discrimination based on sexual orientation and gender identity.","2020-01-13","https://web.archive.org/web/20200113193026/https://corybooker.com/issues/equality-for-lgbtq-people/","Campaign website, 2020: Equality for LGBTQ People — Cory 2020"]
   ],
   "gun-purchase-limits": [
-   [0, "- Pass universal background checks, ban assault weapons, and close the loopholes that allow people who should never have a gun to get one.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/gun-violence/","Campaign website, 2020: Gun Violence — Cory 2020"]
+   [0, "- Pass universal background checks, ban assault weapons, and close the loopholes that allow people who should never have a gun to get one.","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/gun-violence/","Campaign website, 2020: Gun Violence — Cory 2020"],
+   [0, "No business as usual; we are going to stop, and we are going to push for two commonsense amendments that cannot end gun violence in America, cannot stop terrorist activity here and abroad, but they can take a step--a constructive step--toward beginning to choke the flow of commonality of these incidents on American soil.","2016-06-15","https://www.govinfo.gov/app/details/CREC-2016-06-15/CREC-2016-06-15-pt1-PgS3880-3","Floor speech, Congressional Record: Commerce, Justice, Science, and Related Agencies Appropriations Act, 2016"]
   ],
   "mandatory-minimums": [
    [1, "- End harsh mandatory minimums for nonviolent drug offenses.","2020-01-13","https://web.archive.org/web/20200113193029/https://corybooker.com/issues/criminal-justice/","Campaign website, 2020: Criminal Justice — Cory 2020"]
   ],
+  "marijuana": [
+   [0, "I know this is not a matter of if but a matter of when we will have sane marijuana policies in this country and end the prohibition that is destroying neighborhoods.","2018-01-04","https://www.govinfo.gov/app/details/CREC-2018-01-04/CREC-2018-01-04-pt1-PgS39","Floor speech, Congressional Record: Rescinding the Cole Memo (Executive Calendar)"]
+  ],
   "minimum-wage": [
    [0, "- Raise the minimum wage to $15/hour.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/","Campaign website, 2020: Economic Security and Opportunity — Cory 2020"]
   ],
+  "no-fly-no-buy": [
+   [0, "we agree that someone on the terrorist no-fly list should not be able to go to a gun show and go to a casual seller and buy weapons.","2020-03-03","https://www.govinfo.gov/app/details/CREC-2020-03-03/CREC-2020-03-03-pt1-PgS1274-3","Floor speech, Congressional Record: Legislative Session"]
+  ],
   "paid-leave": [
    [0, "- Implement universal paid family and medical leave.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/health-care/","Campaign website, 2020: Health Care — Cory 2020"]
+  ],
+  "police-funding-shift": [
+   [1, "I support improving officer training programs, hiring more officers in underresourced departments, and updating the outdated equipment law enforcement agencies are often left using.","2022-08-02","https://www.govinfo.gov/app/details/CREC-2022-08-02/CREC-2022-08-02-pt1-PgS3863","Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions"]
+  ],
+  "presidential-immunity": [
+   [1, "So I will conclude by saying that there is urgency in our country to uphold an ideal and a principle that no one, not a Congress person, not a Senator, not a mayor, not a Governor, not the President of the United States--no one in this country is above the law.","2018-11-14","https://www.govinfo.gov/app/details/CREC-2018-11-14/CREC-2018-11-14-pt1-PgS6944-2","Floor speech, Congressional Record: Special Counsel Independence and Integrity Act (Executive Calendar)"]
   ],
   "private-prisons": [
    [1, "End family separation and ensure that our immigration system is humane, fair, and respects immigrants’ rights by ending private detention facilities","2020-01-13","https://web.archive.org/web/20200113193027/https://corybooker.com/issues/immigration/","Campaign website, 2020: Immigration — Cory 2020"]
@@ -176,9 +200,15 @@
   "tariffs": [
    [1, "The Trump administration's tariffs on imported produce are driving up prices for everyday staples like fresh tomatoes.","2026-04-21","https://bsky.app/profile/booker.senate.gov/post/3mjzpcz4b322p","Bluesky post"]
   ],
+  "transit-spending": [
+   [0, "We should all agree on funding for our transit systems--like Amtrak-- that are going to make sure to keep our country connected, that those systems don't fail and fall, especially when we will need them switched on and running vibrantly when our economy gets going.","2020-03-20","https://www.govinfo.gov/app/details/CREC-2020-03-20/CREC-2020-03-20-pt1-PgS1867","Floor speech, Congressional Record: Coronavirus"]
+  ],
   "union-rights": [
    [0, "They deserve a real voice, fair pay, and the dignity of a union.","2026-09-23","https://bsky.app/profile/booker.senate.gov/post/3mw727rclvc2v","Bluesky post, 2026 campaign"],
    [0, "- Make it easier for workers to join a union and strengthen the rights of workers.","2020-01-13","https://web.archive.org/web/20200113193032/https://corybooker.com/issues/economic-security-and-opportunity/","Campaign website, 2020: Economic Security and Opportunity — Cory 2020"]
+  ],
+  "war-powers": [
+   [0, "So we bring War Powers Resolutions, and we will bring more.","2026-03-24","https://www.govinfo.gov/app/details/CREC-2026-03-24/CREC-2026-03-24-pt1-PgS1570","Floor speech, Congressional Record: Department of Homeland Security Appropriations Act, 2026--Motion to Proceed"]
   ],
   "war-with-iran": [
    [1, "Proud to stand alongside my colleagues today as we confront a hard truth: this reckless war in Iran is putting lives at risk, destabilizing our world, and testing the very principles of our democracy.","2026-05-01","https://bsky.app/profile/booker.senate.gov/post/3mksws4qr5k2s","Bluesky post"]
@@ -237,14 +267,36 @@
   ]
  },
  "brown": {
+  "affordable-care-act": [
+   [0, "consumer protections built in by Obama, built in by the Affordable Care Act so insurance companies can't deny you coverage","2019-07-09","https://www.govinfo.gov/app/details/CREC-2019-07-09/CREC-2019-07-09-pt1-PgS4717","Floor speech, Congressional Record: Affordable Care Act (Executive Calendar)"]
+  ],
+  "border-security": [
+   [0, "We can do this with agents, technology, helicopters, and all the things we need to do to protect the border because that is what we want to do.","2019-01-09","https://www.govinfo.gov/app/details/CREC-2019-01-09/CREC-2019-01-09-pt1-PgS87-4","Floor speech, Congressional Record: Strengthening America'S Security in the Middle East Act of 2019--Motion to Proceed--Continued"]
+  ],
   "congress-stock-trading": [
    [1, "It’s time to ban Congressional stock trading and end the corruption.","2026-10-26","https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysfsm4jie26","Bluesky post"]
   ],
   "drug-prices": [
-   [0, "Ohioans shouldn't have to pay more for prescription drugs made in America than folks do overseas.","2026-10-28","https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxni6w5ki2p","Bluesky post"]
+   [0, "Ohioans shouldn't have to pay more for prescription drugs made in America than folks do overseas.","2026-10-28","https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxni6w5ki2p","Bluesky post"],
+   [0, "We are going to stand with people who need prescription drugs--of all ages--and we are going to negotiate on their behalf directly with the drug companies, cutting the price.","2021-11-04","https://www.govinfo.gov/app/details/CREC-2021-11-04/CREC-2021-11-04-pt1-PgS7780","Floor speech, Congressional Record: Build Back Better Agenda (Executive Session)"]
   ],
   "epstein-files": [
    [0, "Jon Husted voted against the release of the Epstein files just weeks after receiving a maximum campaign contribution from an Epstein co-conspirator.","2026-10-26","https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysch5firi2g","Bluesky post"]
+  ],
+  "gender-identity-protections": [
+   [0, "the basic premise that LGBTQ people seeking shelter should be treated with the same dignity and respect as every other American.","2020-09-23","https://www.govinfo.gov/app/details/CREC-2020-09-23/CREC-2020-09-23-pt1-PgS5807","Floor speech, Congressional Record: Housing Report (Executive Session)"]
+  ],
+  "homeless-funding": [
+   [0, "I will continue to fight for the assistance people experiencing homelessness, renters, and homeowners need to stay in their homes.","2021-03-11","https://www.govinfo.gov/app/details/CREC-2021-03-11/CREC-2021-03-11-pt1-PgS1496-2","Floor speech, Congressional Record: American Rescue Plan Act of 2021"]
+  ],
+  "net-neutrality": [
+   [1, "Rolling back these net neutrality rules will hurt the very people all of us claim we want to help--small businesses, startups, students, Americans looking for jobs.","2018-05-09","https://www.govinfo.gov/app/details/CREC-2018-05-09/CREC-2018-05-09-pt1-PgS2586-2","Floor speech, Congressional Record: Net Neutrality (Executive Calendar)"]
+  ],
+  "transit-spending": [
+   [0, "As chair of the Banking and Housing Committee beginning tomorrow, I am committed to keeping a roof over people's heads, giving a lifeline to small businesses, keeping our buses and subways running, keeping workers on the job, and giving President Biden every tool possible through the Defense Production Act to get more vaccines to more people.","2021-02-03","https://www.govinfo.gov/app/details/CREC-2021-02-03/CREC-2021-02-03-pt1-PgS273-7","Floor speech, Congressional Record: Legislative Session"]
+  ],
+  "union-rights": [
+   [0, "It is why I will never stop fighting to pass the PRO Act to finally level the playing field between workers and corporations in union organizing.","2022-09-07","https://www.govinfo.gov/app/details/CREC-2022-09-07/CREC-2022-09-07-pt1-PgS4466","Floor speech, Congressional Record: Labor Day (Executive Calendar)"]
   ],
   "usmca": [
    [0, "this will be the first trade agreement I've ever voted for","2019-12-13","https://www.finance.senate.gov/ranking-members-news/wyden-brown-announce-support-for-renegotiated-nafta-update","Senate Finance Committee: Wyden, Brown Announce Support for Renegotiated NAFTA Update: Trade agreements"]
@@ -259,8 +311,21 @@
   ]
  },
  "castor": {
+  "affordable-care-act": [
+   [0, "We want to cancel the cuts of the ACA.","2025-09-18","https://www.govinfo.gov/app/details/CREC-2025-09-18/CREC-2025-09-18-pt1-PgH4433","Floor speech, Congressional Record: Guaranteeing Reliability Through the Interconnection of Dispatchable Power Act"],
+   [0, "We are going to start this Congress off by standing up for our families and rejecting any attempts to repeal and replace the Affordable Care Act.","2017-01-04","https://www.govinfo.gov/app/details/CREC-2017-01-04/CREC-2017-01-04-pt1-PgH74","Floor speech, Congressional Record: Midnight Rules Relief Act of 2017"]
+  ],
+  "climate-regulations": [
+   [0, "That is why I strongly support S.J. Res. 14 which will get America back on track in controlling methane pollution and leaks.","2021-06-28","https://www.govinfo.gov/app/details/CREC-2021-06-28/CREC-2021-06-28-pt1-PgE703-2","Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Environmental Protection Agency Relating to ``Oil and Natural Gas Sector: Emission Standards for New, Reconstructed, and..."]
+  ],
+  "ev-support": [
+   [0, "We want to make sure that that charging infrastructure goes coast to coast in every community.","2021-06-16","https://www.govinfo.gov/app/details/CREC-2021-06-16/CREC-2021-06-16-pt1-PgH2874","Floor speech, Congressional Record: Climate Crisis"]
+  ],
   "offshore-drilling": [
    [1, "She authored the Florida Coastal Protection Act, which would make the 235-mile drilling ban off of Florida’s west coast permanent, and in June 2010, she secured $10 million from BP to support Florida college and university marine research, including the University of South Florida College of Marine Sciences and related endeavors.","2023-06-14","https://web.archive.org/web/20230614105939/https://www.castorforcongress.com/issues","Campaign website, 2024: Issues | Castor for Congress"]
+  ],
+  "pre-existing-conditions": [
+   [1, "Second, we also want to put everyone on notice that Democrats intend to fight tooth and nail to keep the vital consumer protection, one of the bedrocks of the Affordable Care Act, that bars health insurance companies from refusing to cover you or charge you more because you have a preexisting condition or charge women more than men.","2017-01-04","https://www.govinfo.gov/app/details/CREC-2017-01-04/CREC-2017-01-04-pt1-PgH74","Floor speech, Congressional Record: Midnight Rules Relief Act of 2017"]
   ]
  },
  "cbooker": {
@@ -356,7 +421,15 @@
  },
  "collins": {
   "abortion": [
+   [1, "I support a woman's right to have an abortion, and I believe that the threshold question of whether abortion is legal needs to be consistent at the national level.","2023-02-09","https://www.govinfo.gov/app/details/CREC-2023-02-09/CREC-2023-02-09-pt1-PgS314-2","Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions"],
+   [1, "I support a woman's right to have an abortion, and I believe that the threshold question of whether or not abortion is legal needs to be consistent at the national level.","2022-08-01","https://www.govinfo.gov/app/details/CREC-2022-08-01/CREC-2022-08-01-pt1-PgS3806","Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions"],
    [1, "Senator Collins has taken over 50 votes throughout her career in support of women's reproductive rights.","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"]
+  ],
+  "affordable-care-act": [
+   [0, "So, as I have said from the beginning, I support an extension of the ACA tax credits, but they need reform.","2025-11-10","https://www.govinfo.gov/app/details/CREC-2025-11-10/CREC-2025-11-10-pt1-PgS8122","Floor speech, Congressional Record: Order of Procedure"]
+  ],
+  "border-security": [
+   [0, "I support funding for better border security, including physical barriers where they make sense.","2019-02-28","https://www.govinfo.gov/app/details/CREC-2019-02-28/CREC-2019-02-28-pt1-PgS1595-2","Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions"]
   ],
   "climate-regulations": [
    [0, "In August 2018, Senator Collins was the first Republican to come out in opposition to the Trump Administration’s proposed rollback of EPA’s Clean Power Plan.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
@@ -371,7 +444,8 @@
    [1, "In 2017, Senator Collins joined Sen. Cardin in sending a letter to then-Secretary Tillerson encouraging him to keep the U.S. party to the Paris Agreement.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
   ],
   "pre-existing-conditions": [
-   [1, "Collins’ plan would reduce health care premiums for Mainers by 40% while continuing to protect those with preexisting conditions.","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"]
+   [1, "Collins’ plan would reduce health care premiums for Mainers by 40% while continuing to protect those with preexisting conditions.","2020-10-22","https://web.archive.org/web/20201022144721/https://www.susancollins.com/sara_gideon_s_health_care_plan_would_devastate_rural_hospitals_increase_taxes_and_harm_patients","Campaign website, 2020: Sara Gideon’s Health Care ‘Plan’ Would Devastate Rural Hospitals, Increase Taxes, and Harm Patients - Susan Collins for Senator"],
+   [1, "the preexisting condition protections that we strongly support and that are codified in our bill in section 101(b).","2017-01-23","https://www.govinfo.gov/app/details/CREC-2017-01-23/CREC-2017-01-23-pt1-PgS400","Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions"]
   ],
   "public-pensions": [
    [0, "As the author of the Social Security Fairness Act which was signed into law in 2025, Susan is the leader in the Senate for Social Security.","2026-10-25","https://web.archive.org/web/20261025202710/https://susancollins.com/track-record/","Campaign website, 2026: Track Record - Susan Collins for Maine"]
@@ -914,11 +988,20 @@
  "hines": {
  },
  "hinson": {
+  "abortion": [
+   [0, "I will always lend my voice to the voiceless and fight to ensure that Iowa taxpayers are never forced to fund abortions against their will.","2021-06-24","https://www.govinfo.gov/app/details/CREC-2021-06-24/CREC-2021-06-24-pt1-PgH3119-2","Floor speech, Congressional Record: Request to Consider H.R. 18, No Taxpayer Funding for Abortion Act"]
+  ],
   "war-with-iran": [
    [1, "successful and immediate end","2026-09-23","https://www.kcrg.com/2026/09/23/hinson-calls-immediate-end-iran-war-after-previous-votes-against-ending-us-involvement/","KCRG: Hinson calls for 'immediate end' to Iran war after previous votes against ending U.S. involvement: Iran war"]
   ]
  },
  "husted": {
+  "affordable-care-act": [
+   [1, "I want to work with anyone in this Chamber that will change that, to eliminate the fraud that has filled up this ACA system, to target the benefits to those who truly need them, and to create an insurance market that doesn't rely on endless taxpayer subsidies--create something that works, reduce the cost of providing healthcare in this country.","2025-11-07","https://www.govinfo.gov/app/details/CREC-2025-11-07/CREC-2025-11-07-pt1-PgS7969-7","Floor speech, Congressional Record: Legislative Session"]
+  ],
+  "border-security": [
+   [0, "I also want to add that in the bill we made communities across this country and Ohio much safer by securing the border--big investments in making sure that we secure the southern border, we don't let drugs and people who are not legally allowed to be in this country come across.","2025-07-22","https://www.govinfo.gov/app/details/CREC-2025-07-22/CREC-2025-07-22-pt1-PgS4521-5","Floor speech, Congressional Record: One Big Beautiful Bill Act (Executive Calendar)"]
+  ],
   "voter-id": [
    [0, "I made my mission clear in that role to make Ohio a place where it is easy to vote and hard to cheat.","2026-03-20","https://www.husted.senate.gov/?p=12030","Sen. Husted press release (March 20, 2026): Voter identification"]
   ]
@@ -940,6 +1023,9 @@
    [0, "That’s why she has backed bipartisan and Republican-led legislation to strengthen border security, hire more than 10,000 Border Patrol agents, and secured funding for the Border Patrol station in Ottawa County and the 180th Fighter Wing’s Northern Border mission.","2026-10-26","https://web.archive.org/web/20261026010027/https://marcykaptur.com/priorities/","Campaign website, 2026: Marcy’s Priorities - Marcy Kaptur"],
    [0, "She has voted to improve and expand border security, to hire more than 10,000 border agents, and to enable military presence at the border if needed.","2024-11-05","https://web.archive.org/web/20241105135634/https://marcykaptur.com/priorities/","Campaign website, 2024: Marcy’s Priorities - Marcy Kaptur"]
   ],
+  "border-wall": [
+   [1, "We cannot allow the President to ask those who have sacrificed already to sacrifice even more--especially for an expensive border wall few think will even work.","2019-02-28","https://www.govinfo.gov/app/details/CREC-2019-02-28/CREC-2019-02-28-pt1-PgE230","Floor speech, Congressional Record: Termination of National Emergency Declared by the President on February 15, 2019"]
+  ],
   "congress-stock-trading": [
    [1, "Marcy will work to end the special privileges politicians give themselves — banning members of Congress and their families from trading stocks and stopping Congressional pay raises.","2026-10-26","https://web.archive.org/web/20261026010027/https://marcykaptur.com/priorities/","Campaign website, 2026: Marcy’s Priorities - Marcy Kaptur"]
   ],
@@ -952,13 +1038,20 @@
   "medicaid-funding": [
    [0, "She is fighting to fully fund Medicare and Medicaid, restore Affordable Care Act tax credits, lower prescription drug prices, and protect families from surprise medical bills.","2026-10-26","https://web.archive.org/web/20261026010027/https://marcykaptur.com/priorities/","Campaign website, 2026: Marcy’s Priorities - Marcy Kaptur"]
   ],
+  "retirement-age": [
+   [1, "I promise to oppose any changes to the retirement age for these vital, national retirement, disability, and insurance programs.","2026-02-10","https://www.govinfo.gov/app/details/CREC-2026-02-10/CREC-2026-02-10-pt1-PgH2105-2","Floor speech, Congressional Record: Protecting Social Security"]
+  ],
   "tariffs": [
    [0, "She is fighting to bring jobs home, take away tax breaks from companies that ship jobs overseas, and for tariffs that protect Ohio-based factories and companies.","2024-11-05","https://web.archive.org/web/20241105135634/https://marcykaptur.com/priorities/","Campaign website, 2024: Marcy’s Priorities - Marcy Kaptur"]
+  ],
+  "ukraine-aid": [
+   [0, "We stand with them, and we stand with Ukraine.","2022-03-08","https://www.govinfo.gov/app/details/CREC-2022-03-08/CREC-2022-03-08-pt1-PgH1364","Floor speech, Congressional Record: No Flowers for Ukrainian Women on International Women'S Day"]
   ]
  },
  "lawler": {
   "support-israel": [
-   [0, "Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel.","2026-10-07","https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6589","Press release: Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel"]
+   [0, "Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel.","2026-10-07","https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6589","Press release: Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel"],
+   [0, "I support Israel's right to defend itself and denounce the ludicrous calls for a cease-fire.","2023-11-13","https://www.govinfo.gov/app/details/CREC-2023-11-13/CREC-2023-11-13-pt1-PgH5714-2","Floor speech, Congressional Record: Hamas Must Be Defeated"]
   ]
  },
  "lawrence": {
@@ -987,16 +1080,21 @@
  },
  "marshall": {
   "abortion": [
+   [0, "As an obstetrician, I had the honor and privilege to deliver over 5,000 babies, and I want all those who stood tall in the March for Life last Friday to know that, just like I fought for those babies in the delivery room, I am going to continue the fight beside you to protect the sanctity of life and to show our Nation that Congress values these precious lives as well.","2023-01-24","https://www.govinfo.gov/app/details/CREC-2023-01-24/CREC-2023-01-24-pt1-PgS69","Floor speech, Congressional Record: March for Life"],
+   [0, "I promise I will work as hard in this Chamber to protect the lives of the unborn and our children as I did in the delivery room all those years.","2021-04-14","https://www.govinfo.gov/app/details/CREC-2021-04-14/CREC-2021-04-14-pt1-PgS1909-4","Floor speech, Congressional Record: Maiden Speech (Executive Session)"],
    [0, "Congressman Marshall is staunchly pro-life and opposes all efforts to use taxpayer funding for abortions.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"],
    [0, "In Congress, Dr. Marshall co-sponsored bills that would eliminate all taxpayer funding for abortions, defunds Planned Parenthood, the “Heartbeat Bill”, and that would make any abortion after 20 weeks illegal nationwide.","2018-10-23","https://web.archive.org/web/20181023204427/http://www.kansansformarshall.com/issues","Campaign website, 2018: Issues - Kansans for Marshall"],
    [0, "Roger Marshall is staunchly pro-life and will oppose any efforts to ever use taxpayer funding for abortions.","2016-10-28","https://web.archive.org/web/20161028235507/http://www.kansansformarshall.com/issues","Campaign website, 2016: Issues - Kansans for Marshall"]
   ],
   "affordable-care-act": [
+   [1, "I want to remind everyone, though, that the ACA ended up being not so affordable as well.","2025-11-08","https://www.govinfo.gov/app/details/CREC-2025-11-08/CREC-2025-11-08-pt1-PgS8009-9","Floor speech, Congressional Record: Legislative Session"],
    [1, "Obamacare, and now, government-controlled socialized medicine are some of the most egregious examples of what Doc has fought against.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"],
    [1, "The Affordable Care Act is the most egregious example of government interfering in the delivery of health care.","2018-10-23","https://web.archive.org/web/20181023204427/http://www.kansansformarshall.com/issues","Campaign website, 2018: Issues - Kansans for Marshall"],
    [1, "Obamacare, or the so-called Affordable Care Act, is neither affordable nor caring – it must be repealed and replaced.","2016-10-28","https://web.archive.org/web/20161028235507/http://www.kansansformarshall.com/issues","Campaign website, 2016: Issues - Kansans for Marshall"]
   ],
   "border-security": [
+   [0, "I want to make it clear tonight that I am for border security.","2022-02-02","https://www.govinfo.gov/app/details/CREC-2022-02-02/CREC-2022-02-02-pt1-PgS485","Floor speech, Congressional Record: Border Security (Executive Calendar)"],
+   [0, "I will continue to stand for a secure America and hope my colleagues choose an open government over open borders.","2019-01-08","https://www.govinfo.gov/app/details/CREC-2019-01-08/CREC-2019-01-08-pt1-PgH233","Floor speech, Congressional Record: The Crisis on Our Southern Border"],
    [0, "Protecting Americans includes spending the resources necessary to secure our southern border.","2016-10-28","https://web.archive.org/web/20161028235507/http://www.kansansformarshall.com/issues","Campaign website, 2016: Issues - Kansans for Marshall"]
   ],
   "border-wall": [
@@ -1012,6 +1110,9 @@
   "deport-serious-crime": [
    [0, "The Laken Riley Act (S. 5) — which Doc cosponsored and President Trump signed into law on January 29, 2025 — was the first major bill of the 119th Congress: it requires ICE detention of unauthorized immigrants who commit certain crimes, including burglary, theft, assault on a law enforcement officer, or any offense causing death or serious injury.","2026-10-25","https://web.archive.org/web/20261025202232/https://kansansformarshall.com/record/border-security/","Campaign website, 2026: Border & Security — the record · Doc Marshall"]
   ],
+  "end-filibuster": [
+   [1, "Without the filibuster, we will see tax laws, immigration rules, and more major policy go up and down like a roller coaster, negatively impacting our economy, creating uncertainty, and making it impossible for long-term business planning.","2022-01-11","https://www.govinfo.gov/app/details/CREC-2022-01-11/CREC-2022-01-11-pt1-PgS139-2","Floor speech, Congressional Record: Filibuster (Executive Calendar)"]
+  ],
   "gun-purchase-limits": [
    [1, "In Congress, Dr. Marshall has always made sure that your 2nd Amendment rights are never infringed upon.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"],
    [1, "Dr. Marshall will make sure that your 2nd Amendment rights are never infringed upon.","2016-10-28","https://web.archive.org/web/20161028235507/http://www.kansansformarshall.com/issues","Campaign website, 2016: Issues - Kansans for Marshall"]
@@ -1023,10 +1124,17 @@
    [1, "In Congress, Dr. Marshall co-sponsored bills that would: eliminate all taxpayer funding for abortions, defund Planned Parenthood, and make any abortion after 20 weeks illegal nationwide.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"]
   ],
   "pre-existing-conditions": [
+   [1, "So I want to make sure everyone's preexisting conditions are covered.","2025-12-09","https://www.govinfo.gov/app/details/CREC-2025-12-09/CREC-2025-12-09-pt1-PgS8557-2","Floor speech, Congressional Record: Healthcare (Executive Calendar)"],
    [1, "Dr. Marshall supports covering individuals with pre-existing conditions.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"]
+  ],
+  "support-israel": [
+   [0, "I support Israel, and I understand and encourage their need to fight fire with fire when it comes to decimating this threat.","2023-10-18","https://www.govinfo.gov/app/details/CREC-2023-10-18/CREC-2023-10-18-pt1-PgS5064-2","Floor speech, Congressional Record: Israel"]
   ],
   "usmca": [
    [0, "Since then, the new USMCA trade deal has been revealed, and must be passed.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"]
+  ],
+  "war-with-iran": [
+   [1, "I support any effort to bring Iran to the table for a deal that addresses both of these important goals.","2019-07-24","https://www.govinfo.gov/app/details/CREC-2019-07-24/CREC-2019-07-24-pt1-PgH7248","Floor speech, Congressional Record: Kansans Want Congress to Solve Problems"]
   ],
   "welfare-restrictions": [
    [0, "Congressman Marshall also supported a food stamp work requirement that would require able-bodied adults without children to work or work training for 20 hours per week in order to receive welfare benefits.","2020-10-18","https://web.archive.org/web/20201018013743/https://kansansformarshall.com/issues/","Campaign website, 2020: Issues | Kansans for Marshall"]
@@ -1035,6 +1143,9 @@
  "mcollins": {
   "deport-serious-crime": [
    [0, "I hope to see the same level of bipartisan support for this bill in the Senate, and I urge my Senate counterparts to put this on President Trump's desk and save lives.","2025-01-08","https://collins.house.gov/media/press-releases/laken-riley-act-passes-house-bipartisan-support","Rep. Mike Collins press release: The Laken Riley Act Passes the House with Bipartisan Support: Laken Riley Act"]
+  ],
+  "end-dei-hiring": [
+   [0, "See, we are going to cut out of our military DEI and CRT, which are hurting recruitment and killing morale.","2023-07-25","https://www.govinfo.gov/app/details/CREC-2023-07-25/CREC-2023-07-25-pt1-PgH3904-2","Floor speech, Congressional Record: Power of the Purse"]
   ]
  },
  "mendoza": {
@@ -1133,11 +1244,20 @@
   ]
  },
  "millermeeks": {
+  "border-security": [
+   [0, "Under President Trump's leadership, we will restore safety by securing our borders and putting American citizens first--no more open borders or out-of-control illegal immigration.","2025-01-22","https://www.govinfo.gov/app/details/CREC-2025-01-22/CREC-2025-01-22-pt1-PgH262-2","Floor speech, Congressional Record: Beginning a New Era in American History"],
+   [0, "I will not ignore the mounting crisis, and I urge my colleagues to join me and work to keep our communities safe from the Biden border crisis and the fentanyl and illegal drugs that are crossing our border.","2024-03-11","https://www.govinfo.gov/app/details/CREC-2024-03-11/CREC-2024-03-11-pt1-PgH1062","Floor speech, Congressional Record: Broken Immigration System"],
+   [0, "Moreover, we will continue to see the border crisis of varying scales until we institute policies that will deter illegal immigration.","2021-09-22","https://www.govinfo.gov/app/details/CREC-2021-09-22/CREC-2021-09-22-pt1-PgH4870-2","Floor speech, Congressional Record: Biden'S Border Crisis"]
+  ],
+  "climate-regulations": [
+   [1, "While we may accept the seriousness of climate change, we do not accept that U.S. energy transmission and restructuring of the entire industrial base is the solution.","2023-01-26","https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2","Floor speech, Congressional Record: Strategic Production Response Act"]
+  ],
   "medicaid-work": [
    [0, "Medicaid is for the most vulnerable low-income families, pregnant women, kids, seniors and the disabled — not illegal immigrants or able-bodied men who choose not to work.","2025-05-16","https://iowacapitaldispatch.com/2025/05/16/d-c-dispatch-iowas-u-s-representatives-support-bills-that-cut-medicaid-and-snap/","Iowa Capital Dispatch: Medicaid"]
   ],
   "police-funding-shift": [
-   [1, "I stand with America’s Police and pledge to oppose any bill, resolution, or movement to ‘Defund the Police.”","2024-05-20","https://web.archive.org/web/20240520060001/https://drmillermeeks.com/30-law-enforcement-officers-endorse-miller-meeks-who-calls-on-opponent-to-disavow-defund-police-movement/","Campaign website, 2024: PRESS RELEASE: 30 LAW ENFORCEMENT OFFICERS ENDORSE MILLER-MEEKS, WHO CALLS ON OPPONENT TO DISAVOW ‘DEFUND POLICE’ MOVEMENT - Miller-Meeks for Congress"]
+   [1, "I stand with America’s Police and pledge to oppose any bill, resolution, or movement to ‘Defund the Police.”","2024-05-20","https://web.archive.org/web/20240520060001/https://drmillermeeks.com/30-law-enforcement-officers-endorse-miller-meeks-who-calls-on-opponent-to-disavow-defund-police-movement/","Campaign website, 2024: PRESS RELEASE: 30 LAW ENFORCEMENT OFFICERS ENDORSE MILLER-MEEKS, WHO CALLS ON OPPONENT TO DISAVOW ‘DEFUND POLICE’ MOVEMENT - Miller-Meeks for Congress"],
+   [1, "While I do believe that our policing system is in need of serious bipartisan and commonsense reforms, I will never support defunding or abolishing the police.","2021-05-13","https://www.govinfo.gov/app/details/CREC-2021-05-13/CREC-2021-05-13-pt1-PgH2300-6","Floor speech, Congressional Record: Commemorating National Police Week"]
   ]
  },
  "moore": {
@@ -1145,6 +1265,7 @@
    [0, "Rep. Barry Moore Calls on VA to Rescind Illegal Abortion Rule.","2022-09-16","https://barrymoore.house.gov/media/press-releases/rep-barry-moore-calls-va-rescind-illegal-abortion-rule","Press release: Rep. Barry Moore Calls on VA to Rescind Illegal Abortion Rule"]
   ],
   "border-security": [
+   [0, "Let me say this to the administration: You can either close our border or we will close the government. ____________________","2023-09-19","https://www.govinfo.gov/app/details/CREC-2023-09-19/CREC-2023-09-19-pt1-PgH4391-6","Floor speech, Congressional Record: We Must End the Disastrous Border Policies"],
    [0, "Rep. Barry Moore introduces bill to send new IRS agents to southern border.","2022-09-02","https://barrymoore.house.gov/media/press-releases/rep-barry-moore-introduces-bill-send-new-irs-agents-southern-border","Press release: Rep. Barry Moore introduces bill to send new IRS agents to southern border"]
   ],
   "cut-spending-debt": [
@@ -1152,6 +1273,9 @@
   ],
   "deport-serious-crime": [
    [0, "Today, we consider a simple common-sense bill that says if you're a guest in our country and you drive drunk, you should in fact be deported.","2025-07-01","https://barrymoore.house.gov/media/press-releases/rep-barry-moores-bill-deport-illegals-who-drive-impaired-passes-us-house","Rep. Barry Moore press release: Deporting noncitizens convicted of impaired driving"]
+  ],
+  "support-israel": [
+   [0, "To those who blame Israel and accuse them of terrorism, I will say what I have always told my children: Don't be the first ones who start a fight, but you must be willing to finish it.","2021-05-19","https://www.govinfo.gov/app/details/CREC-2021-05-19/CREC-2021-05-19-pt1-PgH2596","Floor speech, Congressional Record: Three Major Crises"]
   ]
  },
  "murphy": {
@@ -1502,7 +1626,8 @@
    [1, "I seek to replace the ACA with a system that emphasizes quality, accessibility and affordability, and I will work with my colleagues to initiate common-sense reforms that don’t interfere with individual choice, threaten jobs due to rising costs on employers, or increase our already unsustainable debt.","2016-10-29","https://web.archive.org/web/20161029010435/http://www.patriotsforperry.com/the_issues/real-health-care-reform/","Campaign website, 2016: Real Health Care Reform &laquo; Scott Perry"]
   ],
   "border-security": [
-   [0, "- Providing Border Patrol agents with the resources to do their jobs.","2026-11-01","https://web.archive.org/web/20261101165845/https://patriotsforperry.com/issues/","Campaign website, 2026: Issues - Patriots for Perry Website"]
+   [0, "- Providing Border Patrol agents with the resources to do their jobs.","2026-11-01","https://web.archive.org/web/20261101165845/https://patriotsforperry.com/issues/","Campaign website, 2026: Issues - Patriots for Perry Website"],
+   [0, "We will talk about national security because border security is national security.","2022-04-27","https://www.govinfo.gov/app/details/CREC-2022-04-27/CREC-2022-04-27-pt1-PgH4570","Floor speech, Congressional Record: Crisis At Our Southern Border Continues"]
   ],
   "congress-stock-trading": [
    [1, "– Forced a vote to end insider Congressional stock trading","2026-11-03","https://web.archive.org/web/20261103121957/https://patriotsforperry.com/","Campaign website, 2026: Home - Patriots for Perry Website"]
@@ -1511,6 +1636,9 @@
    [0, "I’ve supported many efforts to responsibly reduce spending, balance the federal budget and make government more accountable to hard-working American taxpayers.","2022-11-07","https://web.archive.org/web/20221107232052/https://patriotsforperry.com/issues/","Campaign website, 2022: ISSUES for SCOTT PERRY U.S. CONGRESS | BUSINESSMAN | SOLDIER | LEADER"],
    [0, "We also need to reduce federal spending.","2018-10-24","https://web.archive.org/web/20181024090041/https://www.patriotsforperry.com/programs/","Campaign website, 2018: Issues — Scott Perry - U.S. Congress"],
    [0, "I’ve introduced a balanced budget amendment to the Constitution and voted for budgets that balanced the federal budget in ten years by controlling spending and not through higher taxes.","2016-10-29","https://web.archive.org/web/20161029010424/http://www.patriotsforperry.com/the_issues/controlling-government-spending/","Campaign website, 2016: Controlling Government Spending &laquo; Scott Perry"]
+  ],
+  "end-filibuster": [
+   [0, "If they can't get the vote, then they need to find a way to break the filibuster and make sure that we stand up for Americans.","2026-01-13","https://www.govinfo.gov/app/details/CREC-2026-01-13/CREC-2026-01-13-pt1-PgH705","Floor speech, Congressional Record: Ice Under Attack"]
   ],
   "gun-purchase-limits": [
    [1, "Scott Perry remains a staunch advocate of our Constitution’s Second Amendment, and the rights of all Americans to protect themselves and their families.","2026-11-03","https://web.archive.org/web/20261103121957/https://patriotsforperry.com/","Campaign website, 2026: Home - Patriots for Perry Website"],
@@ -1566,8 +1694,18 @@
   ]
  },
  "ricketts": {
+  "border-security": [
+   [0, "I will continue to work with President Trump to secure our border to give some relief to our law enforcement officers across this country so that they don't have to continue to see stories and tragedies like Taryn Lee Griffith.","2025-05-14","https://www.govinfo.gov/app/details/CREC-2025-05-14/CREC-2025-05-14-pt1-PgS2913","Floor speech, Congressional Record: National Police Week (Executive Calendar)"],
+   [0, "So as we consider a bill--perhaps a supplemental bill where we are going to have border security in it--it must contain policy changes.","2023-11-29","https://www.govinfo.gov/app/details/CREC-2023-11-29/CREC-2023-11-29-pt1-PgS5653-2","Floor speech, Congressional Record: Border Security (Executive Session)"]
+  ],
   "foreign-farmland": [
    [0, "We cannot let them use American ag land to weaken U.S. national security.","2026-03-27","https://nebraskapublicmedia.org/en/news/news-articles/ricketts-introduces-bill-to-increase-tracking-of-foreign-land-purchases/","Nebraska Public Media: Ricketts introduces bill to increase tracking of foreign land purchases: Foreign ownership of farmland"]
+  ],
+  "police-funding-shift": [
+   [1, "I am proud that in Nebraska, while other communities are trying to defund the police, we support the police.","2024-05-15","https://www.govinfo.gov/app/details/CREC-2024-05-15/CREC-2024-05-15-pt1-PgS3698","Floor speech, Congressional Record: Legislative Session"]
+  ],
+  "support-israel": [
+   [0, "I am proud to say I stand with Israel.","2024-03-21","https://www.govinfo.gov/app/details/CREC-2024-03-21/CREC-2024-03-21-pt1-PgS2492","Floor speech, Congressional Record: Israel (Executive Session)"]
   ]
  },
  "rogers": {
@@ -1616,18 +1754,30 @@
   "arctic-drilling": [
    [0, "- Leading the fight to unleash Alaska’s energy potential by opening ANWR and reopening the NPR-A for development","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"]
   ],
+  "border-security": [
+   [0, "Before I get to that, I want to talk a little bit about the partial government shutdown itself and make clear that I believe the Trump administration's effort to secure the border should be part of the solution.","2019-01-15","https://www.govinfo.gov/app/details/CREC-2019-01-15/CREC-2019-01-15-pt1-PgS202","Floor speech, Congressional Record: Disapproving the President'S Proposal to Take an Action Relating to the Application of Certain Sanctions with Respect to the Russian Federation"]
+  ],
   "climate-regulations": [
    [1, "- Fighting back against socialist policies like the Green New Deal, which will destroy Alaska’s economy, and opening up access to our lands","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"]
+  ],
+  "end-filibuster": [
+   [1, "The irony is--and I am going to talk about it--until very recently, the vast majority of my colleagues, Republican and Democratic, were in agreement on this topic in that getting rid of the legislative filibuster was not a wise move for the Senate and not a wise move for America.","2021-03-23","https://www.govinfo.gov/app/details/CREC-2021-03-23/CREC-2021-03-23-pt1-PgS1719","Floor speech, Congressional Record: Filibuster"]
   ],
   "gun-purchase-limits": [
    [1, "- Protecting our Second Amendment right to bear arms","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"],
    [1, "- Preventing expansion of background checks","2020-11-01","https://web.archive.org/web/20201101020546/https://dansullivanforalaska.com/nra-recognizes-sullivans-pro-second-amendment-record-in-reelection-endorsement/","Campaign website, 2020: NRA Recognizes Sullivan’s Pro-Second Amendment Record in Reelection Endorsement – Dan Sullivan for Alaska"]
+  ],
+  "military-spending": [
+   [0, "We are going to cut defense spending by a 5-percent real cut, and if you are a soldier struggling because of high inflation to actually put food on the table, you can go get food stamps.","2022-09-21","https://www.govinfo.gov/app/details/CREC-2022-09-21/CREC-2022-09-21-pt1-PgS4885","Floor speech, Congressional Record: Biden Administration (Executive Session)"]
   ],
   "pre-existing-conditions": [
    [1, "He’s fought hard to protect patients with pre-existing conditions, repeal the negative aspects of Obamacare, and reform the VA healthcare system in Alaska to drastically improve the quality of care for our nation’s veterans and their families.","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"]
   ],
   "single-payer": [
    [1, "- Fighting against Medicare-for-All, a radical policy that would drastically increase taxes, prevent Alaskans from choosing their own healthcare, confiscate health coverage from two-thirds of Alaskans and Americans who are currently covered by their employer-based plans","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"]
+  ],
+  "stay-in-nato": [
+   [0, "I think this NATO summit sent a strong message that we are going to stand together for decades more to come.","2018-07-12","https://www.govinfo.gov/app/details/CREC-2018-07-12/CREC-2018-07-12-pt1-PgS4934-2","Floor speech, Congressional Record: Nato Summit"]
   ],
   "va-privatization": [
    [0, "- Strengthening access through the VA MISSION Act to provide quality, timely care to veterans and to expand coverage eligibility to veterans of all generations","2025-08-18","https://web.archive.org/web/20250818181230/https://dansullivanforalaska.com/issues/","Campaign website, 2026: The Issues - Dan Sullivan for Alaska"]
