@@ -1,4 +1,4 @@
-// The trackers (public/trackers.js): the five approved lobbies, how a campaign's money from each is counted for the
+// The trackers (public/trackers.js): the six approved lobbies, how a campaign's money from each is counted for the
 // Summary of Major Lookouts (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -11,9 +11,9 @@ const read=f=>fs.readFileSync(new URL(f,import.meta.url),'utf8');
 const line=(name,amount,cid=null)=>({cid,name,amount});
 const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});
 
-test('five trackers in the approved order, each with its PACs on file and none shared',()=>{
-  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto']);
-  assert.deepEqual(TRACKERS.map(t=>t.name),['AIPAC','Big Pharma','Big Oil','Big Tech + AI','Crypto']);
+test('six trackers in the approved order, each with its PACs on file and none shared',()=>{
+  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto','defense']);
+  assert.deepEqual(TRACKERS.map(t=>t.name),['AIPAC','Big Pharma','Big Oil','Big Tech + AI','Crypto','Big Defense']);
   const ids=TRACKERS.flatMap(t=>t.pacIds);
   assert.equal(new Set(ids).size,ids.length,'no committee counts for two trackers by ID');
   for(const t of TRACKERS)for(const id of t.pacIds){
@@ -38,6 +38,15 @@ test('who is in and who is out, as approved',()=>{
   // Andreessen Horowitz counts for both Tech + AI and Crypto.
   assert.ok(caught('tech','ANDREESSEN HOROWITZ PAC')&&caught('crypto','ANDREESSEN HOROWITZ PAC'));
   assert.ok(caught('crypto','COINBASE INC. PAC')&&caught('crypto','BLOCKCHAIN ASSOCIATION POLITICAL ACTION COMMITTEE (BA PAC)'));
+  // Big Defense: the contractors, and GE's and Honeywell's aerospace PACs; the rest of GE and Honeywell, space launch,
+  // commercial-only aerospace and a brewery named Sierra Nevada are out. Palantir counts for both Big Defense and Tech + AI.
+  for(const n of ['LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE','EMPLOYEES OF RTX CORPORATION POLITICAL ACTION COMMITTEE','THE BOEING COMPANY PAC','HUNTINGTON INGALLS INDUSTRIES, INC. EMPLOYEES POLITICAL ACTION COMMITTEE (HIIPAC)',
+    'ANDURIL INDUSTRIES, INC. POLITICAL ACTION COMMITTEE (ANDURIL PAC)','SIERRA NEVADA COMPANY, LLC POLITICAL ACTION COMMITTEE','AEROJET ROCKETDYNE AN L3HARRIS TECHNOLOGIES COMPANY PAC','CRITICAL MISSION SOLUTIONS PAC OF AMENTUM HOLDINGS INC.',
+    'GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)','HONEYWELL AEROSPACE US LLC PUBLIC AFFAIRS COUNCIL (HONA PAC)','SAAB, INC. EMPLOYEES POLITICAL ACTION COMMITTEE (SAAB PAC)'])assert.ok(caught('defense',n),n);
+  for(const n of ['HONEYWELL INTERNATIONAL INC. TECHNOLOGIES PUBLIC AFFAIRS COUNCIL (HONPAC)','GENERAL ELECTRIC COMPANY POLITICAL ACTION COMMITTEE','SPACE EXPLORATION TECHNOLOGIES CORP. PAC','BLUE ORIGIN LLC POLITICAL ACTION COMMITTEE (BLUE ORIGIN PAC)',
+    'AIRBUS AMERICAS, INC. POLITICAL ACTION COMMITTEE','SPIRIT AEROSYSTEMS, INC. PAC','SIERRA NEVADA BREWING CO. PAC','BOEING EMPLOYEES CREDIT UNION PAC'])assert.ok(!caught('defense',n),n);
+  assert.ok(caught('defense','EMPLOYEES OF PALANTIR TECHNOLOGIES INC. PAC')&&caught('tech','EMPLOYEES OF PALANTIR TECHNOLOGIES INC. PAC'));
+  assert.equal(TRACKER.defense.superPacs.length,0);assert.equal(TRACKER.defense.groups.length,0,'the defense trade groups have no PACs');
 });
 
 test('a lookout: PAC checks and routed gifts take it; employees\' gifts are shown but don\'t',()=>{
@@ -67,8 +76,8 @@ test('AIPAC: routed gifts count, its own PAC checks fill in missing PAC lines on
 });
 
 test('lookouts: one line a tracker, in order',()=>{
-  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000)],routed:{aipac:100},routedKnown:true});
-  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0]]);
+  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true});
+  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500]]);
 });
 
 test('PAC lines: research.json\'s with full committee names, merged with the refresh\'s at the larger amount',()=>{

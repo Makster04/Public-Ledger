@@ -1,5 +1,6 @@
-// The trackers: five lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
-// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11.
+// The trackers: six lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
+// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense
+// 2026-11-13).
 //
 // For each tracker:
 //   pacIds / patterns   its PACs: the FEC committee IDs on file (checked by hand), and name patterns for committees not on
@@ -54,7 +55,17 @@ export const TRACKERS=[
     pacIds:['C00804179','C00824896'],
     patterns:['COINBASE','\\bRIPPLE\\b','KRAKEN|PAYWARD','\\bGEMINI\\b','CIRCLE INTERNET','GALAXY DIGITAL','CONSENSYS','UNISWAP','PARADIGM OPERATIONS','JUMP TRADING','BLOCKCHAIN ASSOCIATION','ANDREESSEN','FAIRSHAKE'].map(P),
     routed:[],superPacs:SUPER_PACS.filter(p=>p.industry==='crypto').map(p=>p.name),superPacIds:SUPER_PACS.filter(p=>p.industry==='crypto'&&p.id).map(p=>p.id),superPacLine:true,industries:['crypto','both'],
-    companies:['the crypto companies on the crypto and AI list'],groups:['Blockchain Association']}];
+    companies:['the crypto companies on the crypto and AI list'],groups:['Blockchain Association']},
+  {key:'defense',name:'Big Defense',long:'Big Defense (defense contractors)',
+    about:'Defense contractors: the makers of weapons, warships, military aircraft and engines, munitions and drones, and military services and IT. Commercial-only aerospace, space launch companies, and the rest of GE and Honeywell aren\'t included. The defense trade groups (the Aerospace Industries Association, the National Defense Industrial Association) have no PACs. Palantir also counts in Big Tech + AI.',
+    // Approved 2026-11-13. Palantir's PAC (C00498691) is Big Tech + AI's by ID and counts here by name.
+    pacIds:['C00303024','C00097568','C00078451','C00088591','C00142711','C00100321','C00129122','C00281212','C00546234','C00709816','C00208983','C00383992','C00731414','C00760710','C00215285','C00123612','C00367995','C00365502','C00686709','C00797530','C00516864','C00763623','C00782532','C00919555','C00275123','C00890830','C00437566','C00024869'],
+    patterns:['LOCKHEED','RAYTHEON|\\bRTX\\b','GENERAL DYNAMICS','NORTHROP','\\bBOEING\\b(?!.*CREDIT UNION)','L3HARRIS|AEROJET','\\bBAE SYSTEMS','HUNTINGTON INGALLS','\\bLEIDOS\\b','SCIENCE APPLICATIONS INTERNATIONAL','BOOZ ALLEN','\\bCACI\\b','\\bKBR\\b','MANTECH','PERATON','AMENTUM|CRITICAL MISSION SOLUTIONS','\\bV2X\\b|VECTRUS','PARSONS CORP',
+      'GENERAL ATOMICS','TEXTRON','SIERRA NEVADA (CORPORATION|COMPANY)','BWX TECHNOLOGIES','CURTISS[- ]WRIGHT','MERCURY SYSTEMS','KRATOS DEFENSE','AEROVIRONMENT','OSHKOSH CORP','AUSTAL','ANDURIL','PALANTIR','SHIELD AI','EPIRUS','SARONIC',
+      'LEONARDO DRS|\\bDRS TECHNOLOGIES','RHEINMETALL','ELBIT SYSTEMS','^SAAB\\b','THALES','\\bNAMMO\\b','GE AEROSPACE|GENERAL ELECTRIC COMPANY AEROSPACE','HONEYWELL AEROSPACE'].map(P),
+    routed:[],superPacs:[],industries:[],
+    companies:['Lockheed Martin','RTX (Raytheon)','General Dynamics','Northrop Grumman','Boeing','L3Harris (and Aerojet Rocketdyne)','BAE Systems','Huntington Ingalls','Leidos','SAIC','Booz Allen Hamilton','CACI','KBR','ManTech','Peraton','Amentum','V2X','Parsons','General Atomics','Textron','Sierra Nevada','BWX Technologies','Curtiss-Wright','Mercury Systems','Kratos','AeroVironment','Oshkosh','Austal USA','Anduril','Palantir','Shield AI','Epirus','Saronic','Leonardo DRS','Rheinmetall','Elbit America','Saab','Thales USA','Nammo','GE Aerospace','Honeywell Aerospace'],
+    groups:[]}];
 export const TRACKER=Object.fromEntries(TRACKERS.map(t=>[t.key,t]));
 
 const cents=n=>Math.round(n*100)/100;
