@@ -63,7 +63,7 @@ Stock value is the sum of individual-stock position range midpoints in one revie
 - `P = min(30, sum(PAC category share in percentage points × rate))`. Rates: corporate 2; lobbyist 1; trade/membership/cooperative 0.2; political/leadership/party/candidate and ideological/nonconnected 0.1; union/other 0.05. PAC categories must reconcile to the reviewed same-period PAC total.
 - `R = 10 × Hill(PAC receipts share, 20%)`.
 - `E = min(30, eligible earmarked dollars ÷ receipts × 100 × 4)`. Bundling groups share the same rate. ActBlue and WinRed are excluded. Duplicate receipts and direct-PAC/routed-gift duplication are excluded. The currently selected conduit collection is partial and cannot prove complete earmark coverage or a zero total.
-- Pledges are corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge plus qualifying bill cosponsorship +1; otherwise 0. Pending pledges cannot use the no-pledge fallback. No abstention bonuses are awarded.
+- Pledges are corporate PAC refusal, congressional stock-trading ban, former-member lobbying ban, and overturning Citizens United. Each category contributes once: reviewed kept +1; reviewed broken −1; no pledge plus a qualifying bill they sponsored or cosponsored +1; otherwise 0. Pending pledges cannot use the no-pledge fallback. No abstention bonuses are awarded.
 
 The $20 million reference campaign used to convert IntegrityIndex.us's per-dollar weights into shares is explanatory context, not an extra multiplier in the share-based equations.
 

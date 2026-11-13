@@ -50,6 +50,9 @@ const bills=[{id:'119-hr-1',reform:['stock-trading'],cosponsors:[{person:'m'}]}]
 test('Big Money Independence: their published formula, with the House weights',()=>{
   const pledges=unboughtPledges(member,bills);
   assert.deepEqual(pledges.map(p=>[p.kind,p.points,p.via]),[['corporate-pac',0,null],['lobbying',0,null],['stock-trading',1,'bill'],['citizens-united',0,null]]);
+  // A reform bill they introduced counts like one they cosponsored, even when the bill's own sponsor list doesn't have them.
+  const own=unboughtPledges({...member,bills:[{congress:118,num:'H.R. 7'}]},[{id:'119-hr-2',versions:['118-hr-7'],reform:['lobbying']}]);
+  assert.deepEqual([own[1].points,own[1].via,own[1].how],[1,'bill','sponsored']);
   const u=unbought(member,{sizes,pacRows:[{kind:'corporate',amount:300_000},{kind:'labor',amount:100_000}],earmarks:[{group:'J Street',amount:50_000},{group:'ActBlue',amount:9e6}],snapshot,trades,pledges});
   assert.deepEqual(Object.fromEntries(u.parts.map(p=>[p.key,p.points])),{donor:8.6,pac:-4.6,reliance:-5,earmarks:-1,stocks:-7.5,trades:-4.6,bonuses:0,pledges:1});
   assert.deepEqual([u.pct,u.letter],[62,'D']);

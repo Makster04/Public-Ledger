@@ -284,7 +284,7 @@ Big Money Independence = max(0, 75 + Donor − PAC Penalty − PAC Reliance − 
 | **Stock Penalty** | 20 × H(individual-stock value, $400,000); 0 with a qualified blind trust or a full sell-off | same |
 | **Trade Penalty** | 20 × H(trade count, 50) + 0.00001 × H(trade value, $8,000) | same |
 | **Bonuses** | +5 for no corporate PAC money · +1 for pledging not to take it · +1 for holding no individual stocks | same |
-| **Pledges and bills** | +1 each, for a pledge or a cosponsored bill: former-member lobbying ban · stock-trading ban · overturning Citizens United | same |
+| **Pledges and bills** | +1 each, for a pledge or a bill they sponsored or cosponsored: former-member lobbying ban · stock-trading ban · overturning Citizens United | same |
 
 **Merged (House):**
 
@@ -353,7 +353,7 @@ Big Money Independence = 75 + 8.6 − 4.6 − 5.0 − 1.0 − 7.5 − 4.6 + 1.0 
    rate, as their formula scores gifts the FEC hasn't sorted.
 8. **Which trades:** those made during the campaign's reporting period.
 
-**One deliberate difference:** a pledge reviewed as broken earns no pledge point (a cosponsored bill still can), and it
+**One deliberate difference:** a pledge reviewed as broken earns no pledge point (a bill they sponsored or cosponsored still can), and it
 counts as broken in Keeps Their Word.
 
 **Earmark data:** earmarks come from 5 conduit groups so far, so the page labels the earmark penalty "partial."
@@ -523,7 +523,7 @@ Every tab follows the same order:
 - **Period picker:** this cycle, wider spans back to 2017, or one earlier cycle alone.
 - **Counted, stocks and trades:** the individual stocks held and their value (Stocks), and the number and value of their
   trades (Trades). Their full trade list lives here.
-- **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they cosponsored.
+- **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they sponsored or cosponsored.
 - **Shown, not counted:**
   - PAC money not yet processed by the FEC, marked with a *;
   - the crypto and AI industry: the listed super PACs' spending for and against them, and gifts from the listed

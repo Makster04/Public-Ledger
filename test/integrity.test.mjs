@@ -114,6 +114,8 @@ test('Pledge scoring is one point per reviewed category and never falls back whi
   assert.equal(r.points,1);
   const fallback=fundraisingPledgePoints({billIndex:[{id:'119-hr-123',reform:['stock-trading'],cosponsors:[{person:'x'}]}]},{id:'x',statements:[]});
   assert.equal(fallback.points,1);assert.equal(fallback.rows.find(x=>x.category==='stock-trading').source,'https://www.congress.gov/bill/119th-congress/house-bill/123');
+  // A bill they introduced counts the same, from their own list of sponsored bills.
+  assert.equal(fundraisingPledgePoints({billIndex:[{id:'119-hr-123',reform:['stock-trading']}]},{id:'x',statements:[],bills:[{congress:119,num:'H.R. 123'}]}).points,1);
 });
 
 test('Preview CCI drops direct PAC share, renormalizes implemented parts, and does not alter published grade calculation',()=>{

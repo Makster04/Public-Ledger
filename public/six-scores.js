@@ -4,7 +4,7 @@
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
 // Shared by the profile tabs (public/app.js) and the tests; nothing here fetches.
-import {promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter} from './grades.js';
+import {ownSponsorship,promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter} from './grades.js';
 import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA,ratingScore} from './question-scores.js';
 import {hill,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent} from './integrity.js';
 import {assetKind} from './holdings.js';
@@ -119,13 +119,14 @@ export const UNBOUGHT_PAC_GROUP={corporate:'corporate',lobbyist:'lobbyist',trade
 export const UNBOUGHT_PAC_LABEL={corporate:'Corporate',lobbyist:'Lobbyist',trade:'Trade, membership and cooperative',political:'Political (leadership, party, candidate)',ideological:'Ideological',union:'Union and labor',other:'Other and unclassified'};
 const PLEDGE_KINDS=[['corporate-pac','No corporate PAC money'],['lobbying','Ban lobbying by former members'],['stock-trading','Ban congressional stock trading'],['citizens-united','Overturn Citizens United']];
 // Their pledge and bill points: per category, a pledge counts (one reviewed as broken doesn't; it counts as broken in
-// Keeps Their Word), otherwise a cosponsored bill on it, otherwise nothing. The corporate-PAC pledge is its own +1 bonus.
+// Keeps Their Word), otherwise a bill on it they sponsored or cosponsored, otherwise nothing. The corporate-PAC pledge is its own +1 bonus.
 export function unboughtPledges(person,billIndex=[]){
   return PLEDGE_KINDS.map(([kind,label])=>{
     const items=(person?.statements||[]).filter(s=>s.pledge?.kind===kind),broken=items.some(s=>s.assessment==='contradiction'),took=items.some(s=>s.assessment!=='contradiction');
-    const bill=kind==='corporate-pac'?null:(billIndex||[]).find(b=>(b.reform||[]).includes(kind)&&(b.cosponsors||[]).some(c=>c.person===person?.id));
+    const onBill=b=>(b.cosponsors||[]).find(c=>c.person===person?.id)||(ownSponsorship(person,[b.id,...(b.versions||[])])?{sponsor:true}:null);
+    const bill=kind==='corporate-pac'?null:(billIndex||[]).find(b=>(b.reform||[]).includes(kind)&&onBill(b));
     const points=took?1:bill?1:0;
-    return {kind,label,points,via:took?'pledge':bill?'bill':broken?'broken':null,bill:bill?.id||null,title:bill?.title||null};
+    return {kind,label,points,via:took?'pledge':bill?'bill':broken?'broken':null,bill:bill?.id||null,title:bill?.title||null,how:bill?(onBill(bill).sponsor?'sponsored':'cosponsored'):null};
   });
 }
 // Stocks held: the total of the value-range midpoints of the individual stocks and options on their latest annual
@@ -207,7 +208,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
       why:held.value==null?'their annual disclosure isn\'t read yet':held.blindTrust?'holdings are in a blind trust':held.count===0?'none on their latest report':`${held.count} on their latest report`}];
   for(const b of bonusItems)b.points=b.status==='yes'?b.max:0;
   const bonus=bonusItems.reduce((t,b)=>t+b.points,0);
-  const pledgeItems=pl.filter(p=>p.kind!=='corporate-pac').map(p=>({...p,status:p.points?'yes':'no',why:p.via==='pledge'?'signed the pledge':p.via==='bill'?`cosponsored ${p.title||p.bill}`:p.via==='broken'?'pledge reviewed as broken, and no bill':'no pledge or cosponsored bill on file'}));
+  const pledgeItems=pl.filter(p=>p.kind!=='corporate-pac').map(p=>({...p,status:p.points?'yes':'no',why:p.via==='pledge'?'signed the pledge':p.via==='bill'?`${p.how||'cosponsored'} ${p.title||p.bill}`:p.via==='broken'?'pledge reviewed as broken, and no bill':'no pledge or (co)sponsored bill on file'}));
   const pledgePts=pledgeItems.reduce((t,p)=>t+p.points,0);
   const list=items=>items.map(b=>`${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'} ${b.label}${b.status==='yes'?` +${b.points}`:''} (${b.why})`).join(' · ');
   const parts=[

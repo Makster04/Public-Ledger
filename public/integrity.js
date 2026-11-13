@@ -1,5 +1,5 @@
 // Preview-only Integrity calculations. Kept separate from the published grade scorer.
-import {promiseScore,legalTrouble,ownTrades,tradeChecks,amountMid} from './grades.js';
+import {ownSponsorship,promiseScore,legalTrouble,ownTrades,tradeChecks,amountMid} from './grades.js';
 import {assetKind} from './holdings.js';
 import {SIZE_BRACKETS} from './donor-sizes.js';
 
@@ -158,7 +158,7 @@ function qualifyingCosponsor(data,person,category){
   const reform=category==='stock-trading'?'stock-trading':category==='lobbying'?'lobbying':category==='citizens-united'?'citizens-united':null;
   if(!reform)return null;
   for(const bill of data.billIndex||[]){
-    const action=(bill.cosponsors||[]).find(c=>c.person===person.id);if(!action||!(bill.reform||[]).includes(reform))continue;
+    const action=(bill.cosponsors||[]).find(c=>c.person===person.id)||(ownSponsorship(person,[bill.id,...(bill.versions||[])])?{person:person.id,sponsor:true}:null);if(!action||!(bill.reform||[]).includes(reform))continue;
     const match=/^(\d+)-([a-z]+)-(\d+)$/.exec(bill.id||''),paths={hr:'house-bill',s:'senate-bill',hjres:'house-joint-resolution',sjres:'senate-joint-resolution'};
     if(match&&paths[match[2]])return {bill,action,url:`https://www.congress.gov/bill/${match[1]}th-congress/${paths[match[2]]}/${match[3]}`};
   }

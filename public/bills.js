@@ -1,7 +1,7 @@
 // The Bills page's list (research.json "billIndex"): every bill behind a saved roll call or on file for People First,
 // one entry per bill family (a bill, its versions in other Congresses and its companion measures), with the saved votes on
 // it and every group position on file for it. Kept apart from app.js so the tests can check it against the research.
-import {BILL_GROUPS} from './grades.js';
+import {BILL_GROUPS,billKey,ownSponsorship} from './grades.js';
 import {voteBill} from './scoring.js';
 import {GROUP_ABOUT} from './orgs.js';
 
@@ -75,8 +75,8 @@ export function unlisted(data){
 }
 
 // Evidence for Your match from the bills on this list that count there (entries with an "issue" and a "side"): each
-// profiled sponsor or cosponsor (their "cosponsors", from scripts/fill-bill-cosponsors.mjs) gets one action on that
-// issue, toward the bill's side. Returns Map person -> [{issue, entry}], entries in the shape of research.json evidence.
+// profiled sponsor or cosponsor (their "cosponsors", from scripts/fill-bill-cosponsors.mjs, or a bill on their own list
+// of sponsored bills) gets one action on that issue, toward the bill's side. Returns Map person -> [{issue, entry}], entries in the shape of research.json evidence.
 const TYPE_LABEL={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hres:'H.Res.',sres:'S.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.'};
 const TYPE_PATH={hr:'house-bill',s:'senate-bill',hjres:'house-joint-resolution',sjres:'senate-joint-resolution',hres:'house-resolution',sres:'senate-resolution',hconres:'house-concurrent-resolution',sconres:'senate-concurrent-resolution'};
 export function issueEvidence(data){
@@ -86,12 +86,18 @@ export function issueEvidence(data){
     // One entry per person and bill: the current version when they sponsored or cosponsored it, otherwise the latest
     // earlier version (a bill counts once across its versions in different Congresses).
     const rows=[...(b.cosponsors||[])].sort((x,y)=>((y.bill||b.id)===b.id)-((x.bill||b.id)===b.id)||String(y.date||'').localeCompare(String(x.date||''))),seen=new Set();
-    for(const r of rows){
-      if(seen.has(r.person))continue;seen.add(r.person);
+    const add=r=>{
+      if(seen.has(r.person))return;seen.add(r.person);
       const [c,t,n]=String(r.bill||b.id).split('-'),label=`${TYPE_LABEL[t]||t.toUpperCase()} ${n}`;
       const entry={type:r.sponsor?'sponsored':'cosponsored',ref:`${b.id}:${r.person}`,bill:b.id,title:`${label}: ${b.title}`,date:r.date||null,
         pos:r.sponsor?'Sponsored':'Cosponsored',side:b.side,why:b.why,src:{t:`${label} on Congress.gov`,u:`https://www.congress.gov/bill/${c}th-congress/${TYPE_PATH[t]}/${n}`}};
       (out.get(r.person)||out.set(r.person,[]).get(r.person)).push({issue:b.issue,entry});
+    };
+    rows.forEach(add);
+    const keys=new Set([b.id,...(b.versions||[])]);
+    for(const s of [...(data.members||[]),...(data.cands||[]),...(data.featured||[])]){
+      const own=!seen.has(s.id)&&ownSponsorship(s,keys);
+      if(own)add({person:s.id,bill:billKey(own.congress,own.num),sponsor:true,date:own.date||null});
     }
   }
   return out;
