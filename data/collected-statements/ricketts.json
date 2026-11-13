@@ -1,0 +1,486 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "ricketts",
+ "name": "Pete Ricketts",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 30,
+  "press": 1,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Insider Trading Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-30/CREC-2026-09-30-pt1-PgS5194",
+   "sentences": [
+    "Mr. President, I rise today to urge my colleagues to vote for the Stop Insider Trading Act that will be voted on a little bit later today.",
+    "My Stop Insider Trading Act would help address that.",
+    "My Stop Insider Trading Act will help to be able to do this, by letting Americans know that their elected representatives are not using this position for profit but for public service.",
+    "Let's work together to restore Americans' faith, which is to vote for the Stop Insider Trading Act."
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hemp (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-05/CREC-2026-08-05-pt1-PgS4469-3",
+   "sentences": [
+    "Now, this is the psychoactive ingredient that you find in marijuana.",
+    "In 2018, we passed a farm bill, and at the time, there were those who wanted to separate hemp--a plant that has some THC in it--from cannabis, which is a marijuana plant.",
+    "For those of you who say this is going to impact agriculture, I will tell you right now, hemp production in the United States probably presents about 0.0056 percent of all the farmland--49,000 acres--and only 17,000 are using it to grow the kind of hemp that would go into these kinds of products.",
+    "Let's stop this right now because we know when THC gets into young people's minds, it can reduce their IQs, lead to mental health issues, such as suicidal ideation, anxiety, depression."
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing the Sense of the Senate That Ghislaine Maxwell Should Not Be Granted a Presidential Pardon Or Any Form of Clemency for Her Crimes with Jeffrey Epstein Relating to the Sexual Exploitation...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-29/CREC-2026-07-29-pt1-PgS4311",
+   "sentences": [
+    "We can do that with a bill that I have introduced called the Stop Insider Trading Act.",
+    "Now, it is well known that Members of this body and the House have bought individual stocks.",
+    "In fact, we have seen that people will post on social media the stock trades of the former Speaker of the House and trade off of her trades.",
+    "We need to stop people from being able to buy individual stocks in the Senate and in the House.",
+    "We need my Stop Insider Trading Act because that is exactly what it does.",
+    "Let's ban people's ability to use insider information to buy stocks and make sure, if they are going to sell any, that they have got to tell everybody well in advance so that Americans and the market can know.",
+    "Democrats blocked my Stop Insider Trading Act, which would have helped restore confidence in this body.",
+    "And 13 Democrats and 2 Democratic cosponsors are on the Stop Insider Trading Act in the House, which the House was able to pass.",
+    "My Stop Insider Trading Act does just that.",
+    "I encourage all of my colleagues to get on board this commonsense proposal to be able to restore integrity and confidence in the U.S. Senate and prevent insider trading from getting between us and the American people."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Insider Trading Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-21/CREC-2026-07-21-pt1-PgS4169-2",
+   "sentences": [
+    "My Stop Insider Trading Act would go beyond our current disclosure laws.",
+    "What it would say is that if you become elected to the Congress--either the House or the Senate--that you would not be allowed to buy any more stocks.",
+    "You would not be able to sell until the public knew well in advance, and, of course, you would be prohibited from buying stocks as well.",
+    "The Stop Insider Trading Act has real teeth in it to back up the policy.",
+    "The Stop Insider Trading Act is the solution to be able to help restore that credibility, to let the American people know that we are not financially benefiting from inside information."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Working Families Tax Cuts Act (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-24/CREC-2026-06-24-pt1-PgS3172",
+   "sentences": [
+    "One of the ways that we have done that with my Senate Republican colleagues is in the Working Families Tax Cut that we passed last year.",
+    "The Working Families Tax Cut invests in American families and in American children."
+   ]
+  },
+  {
+   "date": "2026-06-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 21st Century Road to Housing Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-16/CREC-2026-06-16-pt1-PgS2804-2",
+   "sentences": [
+    "I was talking to an apartment builder in Omaha, and he described to me how when he first got into building apartment buildings, he could build an apartment for about $15,000 and now the cost is well over $200,000."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agriculture (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-10/CREC-2026-06-10-pt1-PgS2709-4",
+   "sentences": [
+    "This is why Mexico is taking the steps to prevent all livestock from coming across the border, including pet dogs.",
+    "I would also point out that all of these investments are in addition to what the Senate Republicans did in the Working Families Tax Cut last year, wherein we added to the programs with regard to animal biosecurity and parasite mitigation.",
+    "In addition, in the Working Families Tax Cut, I mentioned the money that we are putting toward biosecurity.",
+    "We were able to make the death tax exemption permanent.",
+    "But the death tax could get in the way of being able to do that.",
+    "By making that death tax exemption permanent, we are assisting farmers and ranchers in being able to pass along that ranch.",
+    "This will assist them, and that was all done in the Working Families Tax Cut.",
+    "That was an important thing we got done in the Working Families Tax Cut.",
+    "These were all great things that we did in the Working Families Tax Cut, and there are actually many, many more things that we did for agriculture in there.",
+    "There is my AFIDA Improvements Act, which would help us deter communist China from buying farmland around our sensitive military installations, like at Grand Forks Air Force Base in North Dakota and Fort Bragg in North Carolina."
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Secure America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-03/CREC-2026-06-03-pt1-PgS2510",
+   "sentences": [
+    "Border Security Mr. President, I have another matter I am going to talk about--the work that needs to be done on the Senate floor today.",
+    "To protect Americans and our national security, we must fund Border Patrol and ICE.",
+    "Our bill only funds Border Patrol and ICE.",
+    "They are falling back on the typical ``defund the police'' agenda and lack of support for law enforcement.",
+    "Democrats stood by while President Biden and his open border policies allowed every State to become a border State, putting communities across America, including Nebraska, at risk.",
+    "They released at least 99 illegal aliens on the Terrorist Watchlist into American communities, including 3 with potential ISIS ties.",
+    "They have prioritized the care of illegal immigrants over Americans.",
+    "Let me give you two examples: When Laken Riley a 22-year-old college student was murdered by an illegal immigrant, Republicans introduced legislation to make sure no other families have to live through the same tragedy as Laken's family had to live through.",
+    "Maduro is a narcoterrorist responsible for the deaths of countless Americans.",
+    "He was a puppet of our adversaries, like Communist China, Russia, and Iran.",
+    "The reality, though, is that President Trump campaigned on securing the border.",
+    "Republicans have worked with this administration to secure their border and deliver for the American people.",
+    "To maintain this strong national security, we need to fund ICE and Border Patrol."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Support for the Designation of May 2026 As \"Renewable Fuels Month\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-21/CREC-2026-05-21-pt1-PgS2435",
+   "sentences": [
+    "It reduces carbon emissions and particulate emissions, NOX emissions."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-19/CREC-2026-05-19-pt1-PgS2375",
+   "sentences": [
+    "Last year, in the Working Families Tax Cut, we put in an additional $285 million--doubling the amount of money for trade promotion--to be able to find new markets for our farmers and ranchers."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 4560",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-19/CREC-2026-05-19-pt1-PgS2375-2",
+   "sentences": [
+    "Last year, in the Working Families Tax Cut, we put in an additional $285 million--doubling the amount of money for trade promotion--to be able to find new markets for our farmers and ranchers."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Housing for the 21st Century Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-04/CREC-2026-03-04-pt1-PgS773",
+   "sentences": [
+    "Noah Tietjens was killed by the Islamic Republic of Iran in Operation Epic Fury.",
+    "Iran Mr. President, the Islamic Republic of Iran is a terrorist nation.",
+    "When we had American troops deployed in Iraq and Afghanistan, 2,000 were killed by IEDs, and we know that Iran funded these weapons.",
+    "We cannot let a nation that embraces terror in the way Iran does have a nuclear weapon.",
+    "This has, again, been the policy of Presidents, as the administrations have changed--that Iran cannot be allowed to have a nuclear weapon.",
+    "Iran had been in negotiations with numerous administrations and had always refused to give up their nuclear ambitions.",
+    "The goal is to make sure Iran cannot threaten us or their neighbors.",
+    "We have learned the lessons from North Korea that, once a nation has nuclear weapons and a missile system, they are not going back.",
+    "Iran can already reach allies of ours right now with their ballistic missiles.",
+    "War Powers Resolution Mr. McCONNELL.",
+    "The Islamic Republic of Iran was, quite literally, founded on the premise of existential war against America and against Israel.",
+    "From President Reagan's strikes on Libya to President Biden's strikes on the Houthis, to President Trump's use of force to end Iran's war of terror, it is squarely within his inherent authorities as Commander in Chief.",
+    "When it came to Iran policy, President Obama did not take this responsibility to heart, and it is little surprise that his unilateral deal did not survive for long after his Presidency.",
+    "Likewise, despite my urging, President Biden failed to speak clearly to the American people about our national interest in helping Ukraine resist aggression.",
+    "After all, we don't have to look far into the past to find Senate Democrats voicing support for keeping the military option on the table in America's dealings with Iran or supporting President Biden's unilateral military force against Iran's proxies in the absence of explicit congressional authorization.",
+    "The consequences of successfully ending Iran's decades-long war against us and our allies and partners could reach far beyond the Middle East.",
+    "This is evident in the way Russian and Chinese officials quickly--very quickly--condemned U.S. and Israeli operations and in their unwillingness or inability to come to Tehran's aid in a meaningful way.",
+    "Two observations at this point: First, one of the reasons U.S. operations have enjoyed such freedom of maneuver in the Western Hemisphere and the Middle East is that Russia is bogged down in its war in Ukraine--a war whose battlefield innovations are already shaping operations over in the Gulf.",
+    "If Russia were more unencumbered, it could have provided more materiel assistance to its partners in Venezuela and Iran.",
+    "The price of peace in Ukraine matters, and we should be careful not to compel an outcome that allows Russia to reassert itself in regions of critical importance to the United States.",
+    "At the same time, there is tremendous value globally to destroying Iran's ability to produce the drones that rain down death in Europe and the Middle East alike.",
+    "And, now, America faces Russia's war against Ukraine and China's determined military modernization with shallower magazines of critical munitions."
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Internal Revenue Service Relating to \"Interim Guidance Simplifying Application...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-10/CREC-2026-02-10-pt1-PgS543",
+   "sentences": [
+    "Mr. President, in the last several weeks, we have witnessed some terrible tragedies in Minnesota that involved law enforcement operations and the loss of life.",
+    "I also know that as a former Governor and having had the State patrol of Nebraska report to me, that our law enforcement officers are dedicated professionals, women and men who put their lives on the line to keep us safe, and they will do a great job for us in investigating what could be done better.",
+    "One of the areas I think they will define is that there could be better cooperation with the local law enforcement.",
+    "However, this is not the fault of ICE or Customs and Border Protection; this is the fault of the mayor who is not allowing his administration to work with ICE, for example, to apprehend criminal illegal aliens who are in their jails and forcing them to go out on the streets to apprehend these folks.",
+    "And they are not providing the sort of crowd control that would allow protestors to exercise their rights and keep them safe and stop them from interfering with law enforcement operations.",
+    "For example, they want body cameras.",
+    "There is actually funding for body cameras in the Homeland Security bill if the Democrats would join us in passing it.",
+    "They have some demands, like better cooperation with local law enforcement.",
+    "We would like to see it in sanctuary cities that are blocking our Federal law enforcement officers from apprehending illegal immigrant criminals who are in their jails.",
+    "I see it in my home State, that our local law enforcement, our county sheriffs, they don't do ICE's job for them, but they do cooperate to be able to get criminal illegal aliens into the custody of ICE and also provide security to make sure that law enforcement is not interfered with and that protesters can have their ability to exercise their rights in a safe way.",
+    "And again, talking to local law enforcement in Nebraska and my own experience with Nebraska State Patrol, I know that typically our law enforcement officers wear a badge, a name, but in special operations, that is not always the case, that we see that masks are necessary to protect the identities of our law enforcement officers.",
+    "Far-left radical people are using face recognition software or use that to identify law enforcement officials and then dox them.",
+    "I know that when we have drug interdiction programs, we want our officers to wear masks because, again, the cartels want to intimidate our law enforcement officers into not doing their jobs.",
+    "If the left continues to villainize our law enforcement officers who are there to keep us safe, it will make the job less attractive.",
+    "It will be hard for us to track the right kind of people we want to be able to fill those positions in law enforcement.",
+    "If we are having our law enforcement officers, for example, go into a residence where they know there is a criminal and they are using, say, an ordinance to do that, the mask actually helps protect them.",
+    "Certainly, protecting our law enforcement officers from malicious actors who want to intimidate them is important.",
+    "It is a time to make sure we are keeping our law enforcement officers safe and making sure we continue to have people--brave women and men--who want to step up and do that job.",
+    "Getting away from that would bring our law enforcement operations with regard to illegal immigrants in this country to a halt.",
+    "This is an important way that we actually get to deport the people who are here illegally.",
+    "Yet we just saw under the Biden administration an open border policy and 10.5 million illegal entry attempts into the United States.",
+    "The President has now brought those down 95 percent and, since April 2025, has stopped releasing illegal immigrants into our country.",
+    "So we need to give the right tools to our law enforcement officers to be successful."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations and Extensions Act, 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-07/CREC-2025-11-07-pt1-PgS7977",
+   "sentences": [
+    "With my growing family and medical bills for my family, it gets harder every time.",
+    "But it is the people--the air traffic controllers and our law enforcement and everybody else who is working in a Federal job who is not getting paid--who are paying the price for the minority leader's shutdown."
+   ]
+  },
+  {
+   "date": "2025-10-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-10-02/CREC-2025-10-02-pt1-PgS6909-9",
+   "sentences": [
+    "They want money for illegal immigrants to get healthcare.",
+    "It could mean that, for example, Social Security offices may be understaffed--Social Security checks are going to go out, but services may be diminished."
+   ]
+  },
+  {
+   "date": "2025-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Laken Riley Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-01-08/CREC-2025-01-08-pt1-PgS46-3",
+   "sentences": [
+    "With our Green Sheets, which is what we used in our Department of Transportation to be able to make sure that our contractors were doing the right things with regard to the environment or antiquities or whatever--making sure they were following all the rules--we were able to cut that from 16 days down to 3 days so that those contractors could get into the field faster and get our projects moving faster."
+   ]
+  },
+  {
+   "date": "2024-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fire Grants and Safety Act of 2023--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-18/CREC-2024-06-18-pt1-PgS4126-2",
+   "sentences": [
+    "The Supreme Court made a decision last week he didn't like.",
+    "A 6- to-3 majority Supreme Court ruled the Bureau of Alcohol, Tobacco, Firearms and Explosives overstepped their authority when they tried to reclassify bump stocks as machineguns.",
+    "The Supreme Court made the right decision.",
+    "In January, I joined Senator Lummis and other colleagues filing an amicus brief urging the Supreme Court to do what they did.",
+    "He claims this bill will ban bump stocks.",
+    "The BUMP Act targets common firearm accessories, not just bump stocks.",
+    "The bill bans ``any manual, power-driven, or electronic device primarily designed, or redesigned, so that when the device is attached to a semiautomatic firearm, the device--[i] materially increases the rate of fire on the firearm.'' In short, this doesn't ban bump stocks.",
+    "We are also talking about items that reduce the distance between a shooter's hand or trigger, like certain firearm stocks and grips.",
+    "It is not just about bump stocks.",
+    "The Constitution protects their right to do so through the Second Amendment.",
+    "So either this ``rate of fire'' section was written by someone who had no idea what they are talking about, or it is a cynical attempt to include more firearm accessories than just bump stocks.",
+    "Does anyone seriously believe this lawless Biden administration would interpret this law in a way that respects law- abiding gun owners?",
+    "On this and other issues, the Biden administration has repeatedly expanded previous interpretations of our laws in ways that go far beyond what even the Obama administration was coupled with, and they were no friends of the Second Amendment.",
+    "So this bill may be called the BUMP Act, but it is not really about bump stocks.",
+    "It is an unconstitutional attack on law-abiding gun owners.",
+    "For safety, we ought to better enforce existing gun laws and address mental health issues.",
+    "In fact, it doesn't do anything to address the root causes of gun violence.",
+    "We are not addressing mental health or cultural issues driving men and women to commit these horrible crimes--the failed family structures, the depression, the division and glorification of violence on social media.",
+    "If Democrats really cared about gun violence, they would be trying to build support for a bill that could actually pass.",
+    "Instead, we have a show vote on a bill that uses vague language to ban as many firearms accessories as possible and limit the Second Amendment rights of disabled and elderly Americans who may need certain accessories to use a firearm safely."
+   ]
+  },
+  {
+   "date": "2024-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing Growth and Robust Leadership in American Aviation Act-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-08/CREC-2024-05-08-pt1-PgS3575-2",
+   "sentences": [
+    "From the EV mandate to the so-called Clean Power Plan 2.0, the Biden administration's war on American energy threatens the livelihoods of millions of Americans and American families.",
+    "Let's start with the EPA's delusional and reckless electric vehicle mandate.",
+    "It requires up to two-thirds of all cars and light trucks being sold in 2032 to be electric vehicles.",
+    "It is also delusional because this EV mandate will make us more dependent on the Chinese Communist Party, which controls about 60 to 80 percent of all the critical minerals that are necessary to be able to make the batteries for EVs, and they are leading us in this EV battery technology.",
+    "Another thing that makes no sense is an EV mandate that requires dramatically increasing our energy production and transmission on the one hand, and then, on the other hand, we have the Clean Power Plan 2.0, which is going to attack our energy production.",
+    "It is a classic example of ``bureaucrats gone wild.'' It forces coal- or gas-generating electric plants to reduce up to 90 percent of their carbon emissions by the year 2039.",
+    "First, the Clean Power Plan 2.0 is illegal, explicitly countering the Supreme Court's decision in West Virginia v. EPA.",
+    "Fossil fuel plants generate about 60 percent of U.S. electricity nationwide, and coal contributes about 16.2 percent of all the electricity in this country.",
+    "Instead of supporting high-skilled, high-waged jobs, this administration has prioritized the interests of coastal elites and radical environmentalists."
+   ]
+  },
+  {
+   "date": "2024-04-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Prohibiting the Use of Funds to Implement, Administer, Or Enforce Certain Rules of the Environmental Protection Agency",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-18/CREC-2024-04-18-pt1-PgS2838-2",
+   "sentences": [
+    "Madam President, I am joining my colleagues today in resisting the EV mandate and commend them for attempting to defund this EV mandate.",
+    "This mandate would require two-thirds of all new vehicles being sold in the United States in 2032 to be electric vehicles.",
+    "If you are in some of our cities like Bloomfield or Alliance or Valentine, you are 45 minutes from the nearest charging station.",
+    "So not only will you not be able to find a charging station, you won't have very much charge to be able to get there.",
+    "I want to compliment the senior Senators from Idaho and from West Virginia for bringing this attempt to defund this EV mandate."
+   ]
+  },
+  {
+   "date": "2024-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-10/CREC-2024-04-10-pt1-PgS2686-2",
+   "sentences": [
+    "Madam President, the fundamental purpose of our Federal Government is to protect Americans, to keep Americans safe.",
+    "What we have seen happen on our southern border has put Americans at risk.",
+    "And the people responsible for this open border policy are Joe Biden and the Secretary of the Department of Homeland Security, Alejandro Mayorkas.",
+    "Since the Biden administration has been in power, we have seen a flood of drugs coming across our border.",
+    "The cartels are making billions.",
+    "We have seen the number of people on the Terrorist Watchlist skyrocket as well.",
+    "Under the Trump administration, a total of 11 people on the FBI Terrorist Watchlist were caught trying to cross the border during 4 years of President Trump.",
+    "In the last fiscal year, 169 people on the FBI Terrorist Watchlist were trying to cross the border illegally.",
+    "He is culpable in what is going on at our southern border.",
+    "According to news accounts, Secretary Mayorkas issued a memorandum to Immigration and Customs Enforcement officials saying: The fact an individual is a removable noncitizen therefore should not alone be the basis of an enforcement action against them.",
+    "We need to hold accountable the people who have opened our southern border.",
+    "We have seen an open border policy from this administration.",
+    "Well, perhaps because they are afraid of the American public hearing again how bad the situation at the southern border is, the 9.2 million people coming in here.",
+    "This administration is also abusing the asylum system, and Secretary Mayorkas is overseeing the Department of Homeland Security with both this new policy in parole and what is going on in asylum.",
+    "And think about this: Say you are somebody who comes across that border, and you were granted parole to get to this country, like Jose Ibarra, the Venezuelan accused of killing Laken Riley, and you get into this country.",
+    "Or perhaps the Democrats know how bad this is and don't want to defend the catastrophe that is going on at the southern border."
+   ]
+  },
+  {
+   "date": "2024-03-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Udall Foundation Reauthorization Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-22/CREC-2024-03-22-pt1-PgS2558-4",
+   "sentences": [
+    "We knew that UNRWA was using schools to store weapons and launch attacks on Israel.",
+    "We knew that their textbooks preached hate toward Jews and Israel and glorified martyrdom.",
+    "This Chamber's ultimate goal should be to permanently defund UNRWA--defund it the way the Trump administration did."
+   ]
+  },
+  {
+   "date": "2024-01-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the Permanent Electronic Duck Stamp Act of 2013--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-17/CREC-2024-01-17-pt1-PgS130-2",
+   "sentences": [
+    "I want to thank all of our first responders, whether they were snowplow drivers, law enforcement, firefighters, EMTs, other emergency personnel--all the folks who demonstrated their grit and service this last week to be able to help people out.",
+    "As we all know, the EPA has a mandate that they want all new cars and trucks sold by the year 2032--I shouldn't say all; two-thirds of all cars and trucks sold by the year 2032--to be electric vehicles.",
+    "They reported that ``public charging stations have turned into car graveyards over the past couple of days.'' The story goes on to describe ``dozens of [EV] owners trying desperately to power up their cars at the . . . supercharging station in Oak Brook.",
+    "It was a scene mirrored with long lines and abandoned cars at scores of other charging stations around the Chicago area.'' Also in the story there was a driver who referred to all these stalled electric vehicles as ``dead robots.'' ``Car graveyards'' and ``dead robots''--is that the future we want?",
+    "And this happened in Chicago, where there are a lot of EV charging stations.",
+    "There is not a charging station within 65 miles of Mullen, NE.",
+    "Many rural communities are more than an hour's drive away from a charging station in towns like Hyannis, Cody, Merriman, Kilgore, and Thedford.",
+    "And the thing about not being able to charge at all--imagine EV ambulances that break down trying to get to a rural hospital or EV buses breaking down trying to connect people to their jobs."
+   ]
+  },
+  {
+   "date": "2023-11-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-29/CREC-2023-11-29-pt1-PgS5653-2",
+   "sentences": [
+    "Madam President, we have a humanitarian and national security crisis at our southern border.",
+    "Just last month, Customs and Border Protection encountered 241,000 contacts, people coming across that southern border.",
+    "Since Joe Biden has been President, there have been 6.6 million border contacts and 1.8 million ``got-aways.'' And the ``got-aways''-- those are the folks whom Customs and Border Protection, CBP, saw but couldn't encounter, couldn't get to.",
+    "Children are being trafficked; people are dying; and the cartels are profiting.",
+    "And my colleague from Iowa just referenced the southern border.",
+    "In total, we have seen 172 people on the Terrorist Watchlist try to enter our country in the last year--169 at the southern border.",
+    "We are encountering more people on the FBI's Terrorist Watchlist in 1 month than we used to get in an entire year.",
+    "Border security is national security.",
+    "Certainly, the events in Israel should bring home to us the danger of a border that is not properly protected.",
+    "Now, I have been down to the southern border four times, just recently as well, and I have talked to the folks at CBP, and, yes, they need some resources.",
+    "Things like the aerostat blimps have been hugely successful in being able to counter the cartel's drones to monitor people trying to come across the border.",
+    "So there are resources that we can provide to our southern border to help strengthen.",
+    "Well, now the Senate is going to take up border security, and President Biden's solution is to ask for more money to help process all the people coming across the border.",
+    "If you are just processing them more efficiently coming across the border, you are not deterring anybody from coming across our border.",
+    "So as we consider a bill--perhaps a supplemental bill where we are going to have border security in it--it must contain policy changes.",
+    "We see that we have an asylum system and a parole system that are broken.",
+    "Well, if you are seeking asylum and you are fleeing your home country, what this policy says is you stop in the first safe country and you apply for asylum in the United States from there, not from within our own country.",
+    "So, for example, if you are traveling from Mexico through the United States to get to Canada and you want to seek asylum in Canada, you have to remain in the United States.",
+    "It means that if you are coming to our southern border, you must remain in Mexico.",
+    "We must bring back ``Remain in Mexico.'' President Biden has direct responsibility for the humanitarian crisis on our southern border.",
+    "The cartels are profiting off of all of this.",
+    "My Republican colleagues and I have put forward commonsense solutions on how to address the issues at our southern border."
+   ]
+  },
+  {
+   "date": "2023-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding and Border Security (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-08/CREC-2023-11-08-pt1-PgS5415",
+   "sentences": [
+    "We have a national debt that is almost $34 trillion.",
+    "We also have a humanitarian and security crisis at our southern border.",
+    "Record numbers of illegal immigrants are crossing the border.",
+    "A record number of encounters with individuals on the Terror Watchlist has gone on when that number used to be in the single digits just in the past few years.",
+    "Instead, he has played games with the Senate's calendar to try and force a false choice between a shutdown and more Big Government spending.",
+    "We should be voting on legislation to fund the government and secure our border right now.",
+    "We should remain in DC until we complete our work of funding the government and securing the border.",
+    "It is not a radical idea to suggest that we should have an open government and a closed border."
+   ]
+  },
+  {
+   "date": "2023-09-21",
+   "source": "press",
+   "where": "Press release: TEST 6 LEGISLATION CHAMPIONED BY CORTEZ MASTO TO BUILD MORE AFFORDABLE HOUSING FOR TRIBES IN NEVADA PASSES SENATE",
+   "url": "https://www.ricketts.senate.gov/test-6-legislation-championed-by-cortez-masto-to-build-more-affordable-housing-for-tribes-in-nevada-passes-senate/",
+   "sentences": [
+    "TEST 6 LEGISLATION CHAMPIONED BY CORTEZ MASTO TO BUILD MORE AFFORDABLE HOUSING FOR TRIBES IN NEVADA PASSES SENATE.",
+    "The post TEST 6 LEGISLATION CHAMPIONED BY CORTEZ MASTO TO BUILD MORE AFFORDABLE HOUSING FOR TRIBES IN NEVADA PASSES SENATE appeared first on Senator Pete Ricketts ."
+   ]
+  },
+  {
+   "date": "2023-05-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Nancy G. Abudu (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-18/CREC-2023-05-18-pt1-PgS1732",
+   "sentences": [
+    "I appointed four of the current Nebraska Supreme Court justices and many more to lower courts.",
+    "Ms. Abudu is the kind of soft-on-crime, anti-police, activist we actually must keep off of the bench.",
+    "Senator Grassley questioned Abudu about a 2016 article where she advocated for laws that ``would allow noncitizens to vote in local elections'' and suggested that opponents of such legislation are ``trying to incite hysteria that undocumented immigrants are also taking over the ballot box in addition to our country.'' When asked which election she thought noncitizens should be permitted to vote in, Abudu declined to substantively respond, saying: In the article, I noted that some cities allow noncitizens to vote in local elections.",
+    "With respect to the privatization of schools, she said: [W]e are not in an environment or a culture where we want to rely on our State legislators to do the right thing by our children, especially if they are Black or Brown.",
+    "In 2023, an FBI whistleblower revealed the Bureau issued an internal memo--now rescinded--on ``radical-traditionalist Christian ideology,'' citing the SPLC."
+   ]
+  },
+  {
+   "date": "2023-05-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the United States Fish and Wildlife Service Relating to \"Endangered and Threatened...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-03/CREC-2023-05-03-pt1-PgS1478-5",
+   "sentences": [
+    "These are the sheets we give to contractors to make sure they are complying with things like environmental regulations, antiquities, endangered species, erosion control, and also things such as hazardous waste disposal."
+   ]
+  },
+  {
+   "date": "2023-04-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Department of Veterans Affairs Relating to \"Reproductive Health Services...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-04-19/CREC-2023-04-19-pt1-PgS1227",
+   "sentences": [
+    "Fentanyl is a drug that is coming to us from across the border.",
+    "The precursors of it are manufactured in China and shipped to Mexico, where the cartels then, in illegal labs, create the fentanyl that they ship across the border.",
+    "When it comes across the border, it does not stay there; it goes all across our country.",
+    "In 2019, Nebraska law enforcement confiscated 46 pills--46.",
+    "Well, first of all, we can address the southern border.",
+    "This Congress needs to provide Customs and Border Protection the resources they need to be able to stop the flow of drugs coming into this country."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Department of the Army, Corps of Engineers, Department of Defense and the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgS1017-2",
+   "sentences": [
+    "We provided billions of dollars in tax relief, including to our veterans and our seniors, by phasing out the taxes on their retirement income and Social Security.",
+    "We honor our law enforcement and our military.",
+    "Massive and reckless spending to fund bigger programs has seriously weakened our economy.",
+    "It is the Federal Government's most important responsibility, but the Biden administration has turned a blind eye to the humanitarian and security crisis at our southern border.",
+    "Vulnerable people are dying, victims of the cartels.",
+    "So are suspects on our terrorist watch list.",
+    "And what comes across the border, whether it is the drugs, the criminals, or the human trafficking victims, they don't stay there.",
+    "She was out with friends when she took a pill she thought was a prescription drug.",
+    "This administration's incompetence on the southern border is matched by its foreign policy blunders.",
+    "And, even worse, the bad guys, our adversaries--like the Chinese Communist Party, regimes in Russia, Iran, and North Korea--they are questioning our resolve."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on March 13, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgS1028",
+   "sentences": [
+    "The 1972 Clean Water Act said ``navigable waters'' 50 times."
+   ]
+  },
+  {
+   "date": "2023-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disapproving the Action of the District of Columbia Council in Approving the Revised Criminal Code Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-08/CREC-2023-03-08-pt1-PgS680-5",
+   "sentences": [
+    "Crime, year over year, in DC is up 22 percent, and the DC police chief has said, when they arrest a homicide suspect, that suspect, on average, has been arrested 11 times previously.",
+    "Rather than reduce the penalties for violent crimes, the city of DC should look at what Omaha, NE--my home city--has done and how they have used community engagement with the police force to reduce homicides.",
+    "We need to stand with law enforcement and respect their work to put criminals behind bars.",
+    "In Nebraska, we back the blue.",
+    "We stand with law enforcement officers as they work to identify, investigate, and arrest criminals."
+   ]
+  }
+ ]
+}

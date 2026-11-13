@@ -1,0 +1,253 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "hinson",
+ "name": "Ashley Hinson",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 18,
+  "press": 0,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-08-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting American Industry and Labor From International Trade Crimes Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-31/CREC-2026-08-31-pt1-PgH5273",
+   "sentences": [
+    "Sunsong was using transnational shipment to evade our U.S. tariffs, forcing an Illinois company to lay off a quarter of its workforce.",
+    "This is a bipartisan opportunity to support American industry, reshore domestic manufacturing, and champion American workers.",
+    "We have seen good progress on reshoring domestic manufacturing, but it is clear that current enforcement mechanisms aren't strong enough.",
+    "Mr. Speaker, I support this bill, and I urge my colleagues to support this bipartisan legislation supported by union workers, steelworkers, and American workers."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Defense Authorization Act for Fiscal Year 2027",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-22/CREC-2026-07-22-pt1-PgH5029-6",
+   "sentences": [
+    "Mr. Chair, this amendment would prohibit foreign nationals from designated countries of concern from accessing nonpublic areas of any national laboratory.",
+    "For years, we know that the Chinese Communist Party has executed sweeping, coordinated campaigns to acquire American tech and innovation by any means necessary.",
+    "Congress passed a law 2 years ago which prohibited foreign nationals from China, Russia, Iran, and North Korea from accessing our weapons labs.",
+    "These are labs where sensitive but unclassified work on artificial intelligence, quantum technologies, and advanced computing are performed.",
+    "Our adversaries are running sophisticated espionage campaigns while we are rolling out the red carpet for thousands of these foreign nationals from proven countries of concern.",
+    "It prohibits foreign nationals from countries of concern from accessing any nonpublic area of a national laboratory that receives Defense funding."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-13/CREC-2026-05-13-pt1-PgH3421",
+   "sentences": [
+    "Year-round E15 would lower costs across the board for working families across the country, saving drivers up to 30 cents per gallon and reducing those prices along the supply chain.",
+    "Full E15 adoption would also help to support 128,000 full-time jobs."
+   ]
+  },
+  {
+   "date": "2026-01-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pregnant Students' Rights Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-22/CREC-2026-01-22-pt1-PgH1325",
+   "sentences": [
+    "This is a commonsense piece of legislation because when Roe v. Wade was rightfully overturned in 2022, the next chapter of the pro- life movement began.",
+    "We were all given the opportunity to help strengthen our support for unborn babies and for new moms.",
+    "It has been inspiring to me to see all of the pro-life community spring into action to really help our expecting mothers and their babies to thrive because that is what this movement is all about.",
+    "It is troubling that some of my colleagues on the other side of the aisle are so dug in on their pro-abortion stances and agenda that they would oppose providing pregnant students with information on their rights and resources available to them to continue their education and have a healthy pregnancy."
+   ]
+  },
+  {
+   "date": "2024-09-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting American Agriculture From Foreign Adversaries Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-11/CREC-2024-09-11-pt1-PgH5168",
+   "sentences": [
+    "China does continue to buy up American farmland at an alarming rate."
+   ]
+  },
+  {
+   "date": "2024-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Maternal and Child Health Stillbirth Prevention Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-14/CREC-2024-05-14-pt1-PgH3028",
+   "sentences": [
+    "In a report published by the World Health Organization comparing progress in improving stillbirth rates, the United States ranked 183 out of 195 countries.",
+    "Congress must use every tool at our disposable to end stillbirth and support stillbirth prevention, awareness, and research."
+   ]
+  },
+  {
+   "date": "2024-01-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pregnant Students' Rights Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-18/CREC-2024-01-18-pt1-PgH210",
+   "sentences": [
+    "When Roe v. Wade was rightfully overturned last year, the next chapter of the pro-life movement began, and we were all given a new opportunity to strengthen our support for unborn babies and new moms.",
+    "Unfortunately, many women on college campuses are pressured into having an abortion and told they must choose between having their baby and continuing their education, despite Title IX protections in place.",
+    "It has been inspiring to me to see the pro-life community spring into action to help expecting moms and their babies to thrive.",
+    "Being able to complete your education as a mother is not only empowering for the student, but it is vital to ensuring that the unborn child has the best possible future ahead.",
+    "It is deeply troubling to me that the Biden administration is so dug in on their pro-abortion agenda that they would oppose providing pregnant women on college campuses with resources to continue their education and have a healthy pregnancy.",
+    "They don't even want them to have this information or know that they have options other than abortion."
+   ]
+  },
+  {
+   "date": "2023-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-08/CREC-2023-11-08-pt1-PgH5550-5",
+   "sentences": [
+    "Additionally, as the chairman mentioned, we are prioritizing national security against our foreign adversaries, both in dealing with the border and also in dealing with adversaries like China.",
+    "Our bill also protects Iowa farmers from onerous regulations like the SEC's climate disclosure rule and the expansive Scope 3 emissions disclosure requirement.",
+    "We are also taking strong steps to ensure that we are bolstering national security against threats from our adversaries, like the Chinese Communist Party.",
+    "I also serve on the Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party."
+   ]
+  },
+  {
+   "date": "2023-09-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Homeland Security Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-27/CREC-2023-09-27-pt1-PgH4628",
+   "sentences": [
+    "Mr. Chair, I rise in support of the fiscal year 2024 Homeland Security Appropriations bill that will help to secure our border.",
+    "Since President Biden took office, there have been over 6 million illegal immigrant encounters at our southern border, and because of President Biden's open-border policies, we have seen countless illegal immigrants, including known people on the terror watch list, violent gang members and sex offenders released into the homeland.",
+    "My colleagues and I have been to the border, something the President hasn't bothered to do.",
+    "We have spoken with law enforcement on the front lines.",
+    "These brave men and women told us directly that this administration has undercut them at every turn and that they needed more resources to deter illegal immigration rather than incentivize it.",
+    "In this bill, we deliver for them and for every State that, as a result of these policies, has become a border State.",
+    "We are restoring border security technology funding to its highest level.",
+    "We are funding the 22,000 Border Patrol agents that CBP requested, and we are finally restarting border wall construction instead of letting those materials that taxpayers paid for rust away on the side of the road.",
+    "We are fully funding ICE detention capacity as a deterrent, and we are providing funding to deport illegal immigrants.",
+    "Our southern border is a lawless free-for-all under the Biden administration, undermining the safety and security of Iowans and every American.",
+    "This bill delivers on our promise to secure the border and keep America safe, so let's shut down our border, and let's keep our government open and move this bill forward."
+   ]
+  },
+  {
+   "date": "2022-08-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-08-12/CREC-2022-08-12-pt1-PgH7577-2",
+   "sentences": [
+    "Now, Speaker Pelosi is arguing for yet another tax-and-spending spree, wasting hundreds of billions of taxpayer dollars on Green New Deal priorities and raising taxes on middle-class families.",
+    "So the wealthy can get a discount on their electric vehicles?"
+   ]
+  },
+  {
+   "date": "2022-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Right to Contraception Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-21/CREC-2022-07-21-pt1-PgH6927-2",
+   "sentences": [
+    "Madam Speaker, I rise today to present a reasonable solution to a challenge that millions of American women face: access to birth control.",
+    "Seventy percent of women aged 18 to 64 reported using oral contraceptives throughout their lifetime.",
+    "A majority of women also support making birth control available over the counter without a prescription.",
+    "Women should be able to access their preferred birth control method conveniently.",
+    "That means taking a day off of work, finding additional childcare, spending hours in a car, and paying expensive gas prices to get there.",
+    "This is unreasonable when we have safe and effective birth control options that have been FDA-approved that still aren't available over the counter.",
+    "My amendment would require the FDA to give priority review for over- the-counter access to routine-use oral contraceptives that the agency has already deemed safe for women aged 18 and up.",
+    "I want to emphasize that this is for regular birth control pills, not emergency contraceptives like Plan B. Making birth control available over the counter would have a significant impact on women's lives.",
+    "Madam Speaker, I am proposing a solution today that the overwhelming majority of American women agree with, making their regular birth control pill available at their local pharmacy.",
+    "Their bill attacks conscience protections for providers, expands access to abortion pills, and risks women's health.",
+    "We should work together to make oral contraceptives more accessible.",
+    "I ask my colleagues to vote ``yes'' on the motion to recommit today, adopt my amendment, and give women an over-the-counter option for birth control."
+   ]
+  },
+  {
+   "date": "2022-05-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Infant Formula Supplemental Appropriations Act, 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-18/CREC-2022-05-18-pt1-PgH5158",
+   "sentences": [
+    "Mr. Speaker, I will say to my colleague who just spoke that, in fact, I just talked about what FEMA has in terms of stocks, which would take care of infants for about 1 week, but I would call her attention to the article that appeared on May 10, ``Military stores scrambling to get baby formula: What new parents need to know.'' Military families are dealing with the same shortage of baby formula."
+   ]
+  },
+  {
+   "date": "2022-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to the Consideration of House Report 117-284 and an Accompanying Resolution",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-06/CREC-2022-04-06-pt1-PgH4216",
+   "sentences": [
+    "Madam Speaker, I ask unanimous consent to call up H.R. 471, the PAUSE Act, to protect all Americans from Biden's border crisis."
+   ]
+  },
+  {
+   "date": "2022-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 3076, Postal Service Reform Act of 2021; Providing for Consideration of H.R. 6617, Further Additional Continuing Appropriations Act, 2022; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-08/CREC-2022-02-08-pt1-PgH1024-5",
+   "sentences": [
+    "They should be empowered to make choices that impact their children's physical and mental health, their development, and their future."
+   ]
+  },
+  {
+   "date": "2022-01-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1836, Guard and Reserve Gi Bill Parity Act of 2021; Providing for Consideration of H.R. 4673, Ensuring Veterans' Smooth Transition Act; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-11/CREC-2022-01-11-pt1-PgH23",
+   "sentences": [
+    "It would help combat the ongoing youth mental health crisis spurred by school closures.",
+    "This is about supporting working families."
+   ]
+  },
+  {
+   "date": "2021-11-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 5376, Build Back Better Act; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-05/CREC-2021-11-05-pt1-PgH6213",
+   "sentences": [
+    "Working families in Iowa sit around their kitchen tables, they talk about what is important to them, they build a budget that fits within their means and they stick to it."
+   ]
+  },
+  {
+   "date": "2021-10-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to the Consideration of House Report 117-152 and an Accompanying Resolution",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-21/CREC-2021-10-21-pt1-PgH5738-3",
+   "sentences": [
+    "This proposal would give the IRS unprecedented access to sensitive personal information and unprecedented power to target working families across Iowa and across America.",
+    "And it will hurt rural communities and working families hardest of all.",
+    "This proposal, by design, will hit normal working families' bank accounts."
+   ]
+  },
+  {
+   "date": "2021-06-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 256, Repealing the Authorization for Use of Military Force Against Iraq Resolution of 2002; Providing for Consideration of H.R. 1187, Esg Disclosure...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-14/CREC-2021-06-14-pt1-PgH2716",
+   "sentences": [
+    "This legislation would prevent Vice President Kamala Harris from using taxpayer dollars to travel internationally before seeing the southern border crisis firsthand.",
+    "Vice President Harris was named as the administration's point person on the illegal immigration crisis at our southern border 80 days ago, and this crisis is worsening by the day.",
+    "Yet the Vice President has refused to go to the border herself and talk to the brave law enforcement officers, the men and women who are fighting this on the front lines.",
+    "On day one of this administration, President Biden stopped construction of the border wall.",
+    "Now, this turned on the green light at our border.",
+    "It incentivized the historic surge of illegal immigration that we are currently experiencing in this country.",
+    "Open border policies are music to the ears of the cartels, the drug smugglers, and the traffickers who make their living on human suffering.",
+    "Make no mistake, business is good for cartels and drug smugglers under this administration right now.",
+    "This sends a pretty clear message to the cartels that the U.S. Government doesn't think it is a priority to stop them.",
+    "Madam Speaker, I recently visited the border to see the crisis for myself, hear what those on the front lines are facing every day.",
+    "There are major vulnerabilities along our border.",
+    "These are vulnerabilities that the cartels and the drug smugglers are exploiting every day.",
+    "Border Patrol officers are apprehending sex offenders, gang members, even people on the terrorist watch list trying to come into our country illegally, and these are just the people that they are catching.",
+    "Deadly drugs are pouring across the border in droves.",
+    "Fentanyl seizures at the border have increased by 233 percent this year. 233 percent.",
+    "When I was at the border I heard from both Democratic sheriffs and Republican sheriffs about these devastating realities and the damage that is being inflicted on our communities.",
+    "But apparently, even as the administration's point person on the illegal immigration crisis, hearing from those on the ground is too much to ask for the Vice President.",
+    "She has been the border czar for 80 days.",
+    "She has been to yarn shops, she has been to bakeries, and she just flew right over the crisis at our southern border to meet with foreign countries, with the taxpayers' checkbook in hand.",
+    "When asked why she hasn't visited the southern border, she laughed.",
+    "The border crisis impacts the safety and security of every Iowan, of every American.",
+    "Every State is a border State right now.",
+    "She is failing law enforcement at the border.",
+    "She is failing the families who will suffer because of the drugs coming across our border and falling into the wrong hands.",
+    "This bill will prevent the Vice President from traveling internationally on the taxpayers' dime until she visits the southern border and reports back to the American people on how the administration will secure our border.",
+    "Madam Speaker, I urge my colleagues on both sides of the aisle tonight to join me in defeating the previous question and holding this administration accountable for the border crisis.",
+    "The response to the situation at our border and to the people who are fleeing their countries in Central America to try to seek refugee in the United States, the response that the Republicans just came up with basically is saying we are going to withhold any money for Vice President Harris' travel budget unless she goes to the border and does a photo op.",
+    "We are supposed to be the most serious, most deliberative legislative body in the world, and my friends say we are going to withhold her travel budget unless she goes to the border and does a photo op.",
+    "Never mind that Vice President Harris represented California as a United States Senator, which is a border State.",
+    "Never mind that she just went to Central America because people are coming to our border from places like El Salvador, Honduras, and Guatemala.",
+    "Our solution is you either go and do a photo op at the border or we are going to withhold your travel budget."
+   ]
+  }
+ ]
+}

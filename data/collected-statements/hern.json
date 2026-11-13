@@ -1,0 +1,286 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "hern",
+ "name": "Kevin Hern",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 19,
+  "press": 6,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-06-09",
+   "source": "press",
+   "where": "Press release: Hern Votes to Fund ICE and CBP",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4185",
+   "sentences": [
+    "WASHINGTON, D.C. – Congressman Kevin Hern (OK-01) today voted in support of the second reconciliation package to fully fund Immigration and Customs Enforcement (ICE) and Customs and Border Protection (CBP)."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "press",
+   "where": "Press release: Hern Applauds Passage of Budget Resolution to Fund ICE & CBP",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4171",
+   "sentences": [
+    "WASHINGTON, D.C. – Congressman Kevin Hern (OK-01) today voted in favor of the Fiscal Year 2026 (FY26) Budget Resolution, which lays the budget framework for the reconciliation process to fund Immigrations and Customs Enforcement (ICE) and Customs and Border Protection (CBP)."
+   ]
+  },
+  {
+   "date": "2026-02-28",
+   "source": "press",
+   "where": "Press release: Hern Statement on U.S. Strikes on Iran",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4166",
+   "sentences": [
+    "Hern Statement on U.S. Strikes on Iran.",
+    "WASHINGTON, D.C. – Congressman Kevin Hern (OK-01) released the following statement on the U.S. strikes carried out on Iran: \"As the world’s largest state sponsor of terrorism, the Iranian regime is an active threat to the United States, our allies, and stability across the Middle East."
+   ]
+  },
+  {
+   "date": "2026-02-28",
+   "source": "press",
+   "where": "Press release: Hern Releases Statement Following the Elimination of Ayatollah Khamenei",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4167",
+   "sentences": [
+    "WASHINGTON, D.C. – Congressman Kevin Hern (OK-01) released the following statement after confirmation that Iran's Supreme Leader, Ayatollah Khamenei, was eliminated by American and Israeli forces: \"Ayatollah Khamenei led a regime committed to the destruction of the United States and was responsible…"
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "press",
+   "where": "Press release: Hern Statement on President Trump’s State of the Union Address",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4165",
+   "sentences": [
+    "Hern Statement on President Trump’s State of the Union Address.",
+    "WASHINGTON, D.C. – Congressman Kevin Hern released the following statement after President Trump’s State of the Union address: “Tonight, President Trump reaffirmed that when we put America first, America wins."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "press",
+   "where": "Press release: Hern Votes to Restore Election Integrity",
+   "url": "https://hern.house.gov/news/documentsingle.aspx?DocumentID=4164",
+   "sentences": [
+    "Hern Votes to Restore Election Integrity.",
+    "WASHINGTON, D.C. – Congressman Kevin Hern (OK-01) voted today in support of the SAVE America Act , which protects the voice of every lawful American voter by requiring proof of citizenship for voter registration and photo ID when voting in federal elections, and ordering states to remove noncitizen…"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Health Care Premiums for All Americans Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-17/CREC-2025-12-17-pt1-PgH5956-3",
+   "sentences": [
+    "We should be focused on making healthcare affordable for all Americans and include those on the exchange, employer-sponsored plans, Medicare, and Medicaid."
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Promoting Responsible Oversight to Eliminate Communist Teachings for Our Kids Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-04/CREC-2025-12-04-pt1-PgH5032-2",
+   "sentences": [
+    "Through the Belt and Road Initiative, the Chinese Communist Party has been spreading its malign influence for over a decade."
+   ]
+  },
+  {
+   "date": "2025-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Taiwan Expedited Double-Tax Relief Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-01-15/CREC-2025-01-15-pt1-PgH160-6",
+   "sentences": [
+    "They have increased investment in domestic research and development to improve their own deterrence capabilities and are invested heavily in the semiconductor industry here in the United States of America."
+   ]
+  },
+  {
+   "date": "2024-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Alaska'S Right to Produce Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-01/CREC-2024-05-01-pt1-PgH2804",
+   "sentences": [
+    "We get it from Russia, Venezuela, and other bad actors around the globe.",
+    "Let's be clear: Halting domestic production of oil and gas does absolutely nothing to lower our dependence on oil and gas, as the climate lobby wants you to believe.",
+    "It just increases our dependence on people like Vladimir Putin.",
+    "I don't want the United States to rely on anything from Vladimir Putin.",
+    "In a future where America is energy dominant, the only loser is Vladimir Putin, and others like him.",
+    "It helps our allies when we can provide them with oil and gas so that they are not reliant on Putin, either."
+   ]
+  },
+  {
+   "date": "2024-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under the Rule Submitted by the National Labor Relations Board Relating to \"Standard for Determining Joint Employer Status\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-12/CREC-2024-01-12-pt1-PgH112-7",
+   "sentences": [
+    "Under the Obama administration, the joint employer rule was expanded, and the data shows that franchises lost $33.3 billion each year, 376,000 jobs were lost, and losses increased by 93 percent."
+   ]
+  },
+  {
+   "date": "2023-11-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-14/CREC-2023-11-14-pt2-PgH5809-2",
+   "sentences": [
+    "Madam Chair, through the Belt and Road Initiative, the BRI, the Chinese Communist Party has been spreading its malign influence over the last decade.",
+    "It seems to me that what is happening here with the amendment is that it seems to incite misinformation and fear.",
+    "We see enough of what is coming across the southern border and not knowing who is here.",
+    "Almost 3 years ago, Congress passed the No Surprises Act to protect patients from surprise medical bills."
+   ]
+  },
+  {
+   "date": "2023-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Family and Small Business Taxpayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-09/CREC-2023-01-09-pt1-PgH76",
+   "sentences": [
+    "Mr. Speaker, on March 1, 2022, President Biden made a promise to the American people during the State of the Union Address before a joint session of Congress."
+   ]
+  },
+  {
+   "date": "2022-08-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-08-12/CREC-2022-08-12-pt1-PgH7577-2",
+   "sentences": [
+    "They are hailing it as a climate and tax plan."
+   ]
+  },
+  {
+   "date": "2022-07-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Branch Appropriations Act, 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-28/CREC-2022-07-28-pt1-PgH7273-2",
+   "sentences": [
+    "Even Obama's economic advisers agree that wasteful government spending is what got us into this mess.",
+    "We should not pass one more bill on this floor until we see a bill than reins in government spending, lowers taxes, unleashes American energy, and gets Americans back to work."
+   ]
+  },
+  {
+   "date": "2022-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Advancing Telehealth Beyond Covid-19 Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-27/CREC-2022-07-27-pt1-PgH7189",
+   "sentences": [
+    "I am proud to see my bill, the Protecting Mental Health Services Act, included in this legislation to ensure seniors have virtual access to mental health and substance abuse treatment."
+   ]
+  },
+  {
+   "date": "2022-07-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-19/CREC-2022-07-19-pt1-PgH6733",
+   "sentences": [
+    "Instead, my colleagues across the aisle have doubled down on their reckless spending and continue to make each bill bigger than the last.",
+    "I urge every Member of this Chamber to support my amendments, which will cut wasteful spending from government programs.",
+    "Mr. Chair, I urge adoption of my amendments from both sides of the aisle.",
+    "The spending is crushing the future of our American kids and our grandkids and future generations, with over $30 trillion in debt.",
+    "The same inflation that the Feds right now are raising interest rates, they are going to drive up our mandatory spending on the interest on our debt.",
+    "Let's look at the cost of inflation and why we have inflation and take a look at what the oil companies are doing with price gouging."
+   ]
+  },
+  {
+   "date": "2022-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-15/CREC-2022-07-15-pt1-PgH6631",
+   "sentences": [
+    "Last month, our Constitution was upheld at the Supreme Court, and States like Oklahoma took immediate action to protect the lives of the unborn.",
+    "Our allies and like-minded nations around the world do not allow abortions up to the moment of birth, as this bill would do."
+   ]
+  },
+  {
+   "date": "2022-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 3617, Marijuana Opportunity Reinvestment and Expungement Act; Providing for Consideration of H.R.",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-31/CREC-2022-03-31-pt1-PgH4023-2",
+   "sentences": [
+    "This administration has sent desperate requests for oil from oppressive regimes like Iran and Venezuela.",
+    "While Putin continues to wage war on Ukraine, exposing our dependence on Russian energy, Biden continues to wage war on our domestic oil and gas industry that provides sustainable, reliable energy to the American people.",
+    "Oil and gas are essential to power our homes and, yes, provide the energy to power electric vehicles.",
+    "Today's political climate will directly influence future investment decisions, especially in heavily regulated industries like energy."
+   ]
+  },
+  {
+   "date": "2022-01-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1836, Guard and Reserve Gi Bill Parity Act of 2021; Providing for Consideration of H.R. 4673, Ensuring Veterans' Smooth Transition Act; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-11/CREC-2022-01-11-pt1-PgH23",
+   "sentences": [
+    "Children from preschool age through college have been barred from their classrooms for the better part of 2 years now.",
+    "Still, some teachers' unions refuse to work.",
+    "The President of the United States repeatedly caved to the teachers' unions, ignoring the needs of our students to the detriment of our children across the country.",
+    "Mental health problems are on the rise among kids of all ages."
+   ]
+  },
+  {
+   "date": "2021-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-18/CREC-2021-11-18-pt1-PgH6375-4",
+   "sentences": [
+    "Generational debt or deficit reduction.",
+    "American energy independence or pro-China Green New Deal.",
+    "Mass amnesty or secure border."
+   ]
+  },
+  {
+   "date": "2021-11-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Vaccine Mandates Need to Stop",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-17/CREC-2021-11-17-pt1-PgH6360",
+   "sentences": [
+    "Earlier today, OSHA announced that it will suspend enforcement of Biden's immoral and unconstitutional vaccine mandate after being blocked by the Fifth Circuit Court."
+   ]
+  },
+  {
+   "date": "2021-10-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Democrats' Plan to Put Mass Amnesty in Reconciliation Package",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-21/CREC-2021-10-21-pt1-PgH5774",
+   "sentences": [
+    "Mr. Speaker, I thank the gentleman, the co-chair of the Border Security Caucus for holding this Special Order tonight.",
+    "This time, it is effectively creating an open U.S. border.",
+    "This summer and fall, we have seen record numbers of illegal border crossings, reaching over 200,000 apprehensions in July and August each.",
+    "More than 16,000 migrants tested positive for coronavirus and were released into the United States without vaccination requirements and without any trace of where they are traveling, who they were coming in contact with.",
+    "We no longer have detention centers at our borders, we have border distribution centers where we are sending people all over this country.",
+    "So my question for Joe Biden is this: How many children were flown out from the border and who is paying for it?",
+    "What we have on our hands is equivalent to an invasion of our southern border.",
+    "Biden stripped away all the policies that President Trump put in place to limit illegal crossings and to keep our borders safe, and now our Border Patrol has all but surrendered to the cartels.",
+    "Free college for illegal immigrants; enhanced child tax credits for illegal immigrants; amnesty for 10 million illegal immigrants to the tune of $100 billion at taxpayers' expense; incentivizing illegal entry by waiving provisions for inadmissibility, meaning that illegal immigrants will practically be guaranteed amnesty; they are removing convictions for illegal immigrants to increase their chance for amnesty.",
+    "Let me say that again: The Federal Government is going to drop charges against drug traffickers and others who break our laws just so they don't have to deport them.",
+    "Democrats who hold the majority in both the House and the Senate and thereby have a stranglehold on power in the United States, must take immediate action to secure our border and protect our American people.",
+    "Instead of putting Americans first, they are ensuring that illegal immigrants are protected and prioritized above the American people, which is an absolute abandonment of their sworn duty as a Member of Congress."
+   ]
+  },
+  {
+   "date": "2021-10-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: In Opposition to Democrats' Reconciliation Package",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-19/CREC-2021-10-19-pt1-PgH5665",
+   "sentences": [
+    "Biden's failed leadership has created an America where grocery stores' shelves are empty, gas stations are running out of gas, and crime is skyrocketing, our schools are failing, and our borders are wide open so that cartels can have complete control of what is going on at our southern border.",
+    "Madam Speaker, I yield to the gentleman from Wisconsin's Sixth District (Mr. Grothman), who serves on the Budget Committee and is an advocate for workforce development and welfare reform.",
+    "My dear friend, Chip Roy, has extraordinary passion about constitutional accountability and fiscal responsibility.",
+    "Our number one priority should be empowering job creators to grow and succeed and growing their local economies with them.",
+    "It is time to give fiscal responsibility a serious try."
+   ]
+  },
+  {
+   "date": "2021-09-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Say No to Abortion on Demand",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-23/CREC-2021-09-23-pt1-PgH5105-3",
+   "sentences": [
+    "Mr. Speaker, in what is, no doubt, a knee-jerk reaction to the recent legislative victory to protect unborn life in the State of Texas, Democrats have introduced the Women's Health Protection Act.",
+    "However, we know what this piece of legislation really should be called, the abortion on demand act.",
+    "H.R. 3755 completely strips State legislatures of their autonomy to write the laws of their own State and will, in effect, make all 50 States late-term abortion States.",
+    "Provisions in H.R. 3755 include the elimination of laws requiring parental involvement in a minor's decision to abort a baby, laws preventing abortions based on a baby's sex or diagnosis with a mental disability, as well as laws preventing dismemberment abortions.",
+    "It is clear that this bill has nothing to do with protecting women's health; rather, it is the result of Democrats bending the knee to the unethical abortion industry.",
+    "I urge my colleagues to vote ``no'' on the abortion on demand act. ____________________"
+   ]
+  }
+ ]
+}

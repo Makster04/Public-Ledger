@@ -1,0 +1,359 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "ossoff",
+ "name": "Jon Ossoff",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 6,
+  "press": 2,
+  "bluesky": 27,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 2347",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-11-09/CREC-2026-11-09-pt1-PgS5345-5",
+   "sentences": [
+    "The bill intends to accelerate construction of energy transmission and clean energy infrastructure in order to lower energy prices for American families and accelerate the transition to renewable energy."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mramlej3v22a",
+   "sentences": [
+    "WATCH: Sen. Ossoff presses Secretary Hegseth on the accuracy of his past statements on the Iran War."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mqn7ugky4226",
+   "sentences": [
+    "Donald Trump tried to commit voter fraud in Georgia when he badgered Brad Raffensperger to \"find\" him the exact number of votes he needed to win in a state he had lost."
+   ]
+  },
+  {
+   "date": "2026-07-06",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mpyusmjyos2e",
+   "sentences": [
+    "Georgians are delaying necessary care and paying thousands more for health insurance after ACA tax credits expired, a new report today from Sen. Ossoff found."
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mp52sdew522c",
+   "sentences": [
+    "Sen. Ossoff tried to ban Senators from trading stocks and crypto."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3moyg2b4stc2y",
+   "sentences": [
+    "WATCH: Republicans blocked Sen. Ossoff's resolution to ban Senators from trading crypto and stocks."
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mnuw7neork2u",
+   "sentences": [
+    "Sen. Ossoff on Republicans letting ACA tax credits expire: \"In the last five months in Georgia, more than 300,000 people have lost their insurance altogether.\""
+   ]
+  },
+  {
+   "date": "2026-05-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mmhjip3f5k2x",
+   "sentences": [
+    "Sen. Ossoff: We need to expand Medicaid in Georgia."
+   ]
+  },
+  {
+   "date": "2026-05-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3ml4rq6gbec2x",
+   "sentences": [
+    "Sen. Ossoff: Medicaid was gutted to cut taxes for the rich."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mkpp7yynzs24",
+   "sentences": [
+    "Sen. Ossoff on Supreme Court Decision"
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendment 4732 to S. 1383",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-26/CREC-2026-03-26-pt1-PgS1665",
+   "sentences": [
+    "Mr. President, I support voter ID.",
+    "Indeed, the State of Georgia has voter ID."
+   ]
+  },
+  {
+   "date": "2026-03-09",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mgnpdlxems2x",
+   "sentences": [
+    "Sen. Ossoff: \"In the wealthiest country in the world, no one should go without care for lack of money.\""
+   ]
+  },
+  {
+   "date": "2026-03-06",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mgfykvqnjs2o",
+   "sentences": [
+    "Sen. Ossoff on the need to ban large corporations from buying up single-family homes in Georgia."
+   ]
+  },
+  {
+   "date": "2026-03-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mgdnajsk4c22",
+   "sentences": [
+    "Sen. Ossoff: \"We've now seen massive cuts to Medicaid in order to fund tax cuts for the wealthiest people\""
+   ]
+  },
+  {
+   "date": "2026-02-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3mfxbshfjrs24",
+   "sentences": [
+    "Sen. Ossoff Statement on Iran."
+   ]
+  },
+  {
+   "date": "2026-02-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3me567klmfs2c",
+   "sentences": [
+    "WATCH: Sen. Ossoff is delivering new bipartisan funding to hire mental health counselors for Sumter County students."
+   ]
+  },
+  {
+   "date": "2025-12-15",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3ma2dqgijt22r",
+   "sentences": [
+    "Sen. Ossoff and @hankjohnson.house.gov, alongside @warnock.senate.gov, @bishop.house.gov, @repnikema.bsky.social, @mcbath.house.gov, and Rep. David Scott, are urging Speaker Johnson and House Republicans to reverse Trump’s tariffs as families suffer from higher prices this holiday season."
+   ]
+  },
+  {
+   "date": "2025-12-12",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m7sgvn2hvk26",
+   "sentences": [
+    "Sen. Ossoff: \"The whole conversation about these Affordable Care Act tax credits in this town and this building has been focused on the politics of this issue."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m7q4bxqdxc2i",
+   "sentences": [
+    "Sen. Ossoff on the Senate Floor urging Republicans to put politics aside and extend ACA tax credits: \"This is life or death.\""
+   ]
+  },
+  {
+   "date": "2025-12-08",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m7izwa7g6k2y",
+   "sentences": [
+    "Sen. Ossoff: \"The Trump Administration should reverse its chaotic, incompetent, and harmful trade policies and tariff wars that are driving up prices and damaging businesses.\""
+   ]
+  },
+  {
+   "date": "2025-11-11",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m5enh2qgxc2d",
+   "sentences": [
+    "It’s a day for us to reflect on our shared debt to those who have worn the uniform & served our Nation & to their families, their spouses, their children & dependents, who, along with servicemembers, make such extraordinary sacrifices.\" - Sen. Ossoff"
+   ]
+  },
+  {
+   "date": "2025-10-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m3uit2f76s2b",
+   "sentences": [
+    "If ACA tax credits expire at the end of the year, Victoria and hundreds of thousands of Georgians could be forced off their health insurance."
+   ]
+  },
+  {
+   "date": "2025-10-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S. 3012",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-10-23/CREC-2025-10-23-pt1-PgS7728",
+   "sentences": [
+    "Mr. President, the Senate remains at an impasse over the renewal of soon-to-expire health insurance premium tax credits under the Affordable Care Act.",
+    "The enrollment period for next year's insurance plans opens in just 9 days."
+   ]
+  },
+  {
+   "date": "2025-10-17",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m3fticnu5c2w",
+   "sentences": [
+    "But the Medicaid cuts in Trump's budget law could put Harper and other Georgia kids' care at risk."
+   ]
+  },
+  {
+   "date": "2025-10-14",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m36gmotihk2x",
+   "sentences": [
+    "If ACA tax credits expire, Georgians like Javoris and Alexis could see their premiums skyrocket next year — or lose coverage altogether."
+   ]
+  },
+  {
+   "date": "2025-10-08",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3m2pjiwyvi227",
+   "sentences": [
+    "1.4 million Georgians could see their premiums skyrocket next year if ACA tax credits expire."
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3lz26u2bzkk2c",
+   "sentences": [
+    "\"Hospital administrators say the bill, which included a $1 trillion cut to Medicaid funding, contributed to their decision to consolidate OB/GYN services.\""
+   ]
+  },
+  {
+   "date": "2025-09-17",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3lz2pittsoc25",
+   "sentences": [
+    "“Trump’s tariff chaos is driving up prices for Georgia families, as expected, while making jobs harder to find as businesses are paralyzed,” U.S. Sen. Jon Ossoff said in a statement."
+   ]
+  },
+  {
+   "date": "2025-09-15",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3lyvgexlols26",
+   "sentences": [
+    "Sen. Ossoff on rural Georgia hospitals ending health care services due to Medicaid cuts in the Trump budget law."
+   ]
+  },
+  {
+   "date": "2025-08-26",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/ossoff.senate.gov/post/3lxd5m2ofl22z",
+   "sentences": [
+    "Sen. Ossoff on Trump Administration's tariff war: “We are alienating key international partners while paralyzing much of the business community.”"
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. Res. 59",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-27/CREC-2025-06-27-pt1-PgS3595-3",
+   "sentences": [
+    "Mr. President, on Saturday, June 21, 2025, at President Trump's direction, U.S. forces struck certain nuclear facilities in Iran.",
+    "Most of the Congress is united in our conviction that Iran must not build or acquire a nuclear weapon.",
+    "Such discharge would require the Senate to debate whether congressional authorization should be required for any further offensive military action against Iran."
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "press",
+   "where": "Press release: Sen. Ossoff, Georgia’s Congressional Delegation Urging Trump Administration to Help Georgia Growers Export More Pecans",
+   "url": "https://www.ossoff.senate.gov/sen-ossoff-georgias-congressional-delegation-urging-trump-administration-to-help-georgia-growers-export-more-pecans/",
+   "sentences": [
+    "In 2023,&#160;following Sen. Ossoff’s push, the Republic of India announced a major 70% cut to tariffs on U.S. pecan exports — helping growers sell more products Atlanta, Ga. —&#160;U.S. Senator Jon Ossoff is continuing his work to help Georgia pecan growers sell more pecans abroad."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "press",
+   "where": "Press release: NEW REPORT: Georgia OBGYNs Report Observing Cases Where Georgia Abortion Ban Led Women to Suffer Health Complications or Die",
+   "url": "https://www.ossoff.senate.gov/new-report-georgia-obgyns-report-observing-cases-where-georgia-abortion-ban-led-women-to-suffer-health-complications-or-die/",
+   "sentences": [
+    "NEW REPORT: Georgia OBGYNs Report Observing Cases Where Georgia Abortion Ban Led Women to Suffer Health Complications or Die.",
+    "Atlanta, Ga.&#160;— U.S. Senator Jon Ossoff today released a new report in which over a dozen Georgia OBGYNs say they’ve personally observed cases where Georgia’s abortion ban led to injury or even the death of pregnant women."
+   ]
+  },
+  {
+   "date": "2024-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to the Disapproval of the Presidential Report with Respect to the Indebtedness of the Government of Ukraine--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-11-20/CREC-2024-11-20-pt1-PgS6666",
+   "sentences": [
+    "In 1982, as Israeli forces pursued the PLO deep into Lebanon, President Reagan was angered by what he viewed as excessive civilian casualties resulting from the Israeli bombardment of Beirut.",
+    "Concerned by the suffering of innocent civilians and its impact on American diplomacy, not only did President Reagan personally call Israeli Prime Minister Begin and demand a halt to the bombing--and the bombing reportedly stopped within hours--but the American President then blocked the provision of cluster munitions to Israel out of concern that their use by the IDF was killing too many innocent people.",
+    "And Israel, faced by President Reagan's ultimatum, adjusted its policy to accommodate America's demands.",
+    "The United States remained Israel's closest ally, and the world kept turning.",
+    "Today, Israel faces a multifront assault by Iran and its proxies while the war in Gaza has devastated the territories and civilian population.",
+    "The United States is and will remain Israel's closest ally.",
+    "Our commitment to Israel's security is ironclad.",
+    "In November of last year, I addressed the Senate on the war in Gaza in the aftermath of the October 7 attack, affirming Israel's right to defend itself, to wage war against and defeat its enemies.",
+    "I also urged that Israel respect American requests to reduce unnecessary civilian casualties in Gaza, to provide safe passage for food and essential medical supplies, to clearly define Israeli objectives to present a credible plan for Gaza's future governance, and to prevent atrocities by Israeli extremists in the West Bank.",
+    "These requests of the Israeli political leadership have been made not just by me and many others in the Senate but repeatedly by the Secretary of State, the Secretary of Defense, and the President over the past year.",
+    "That Israel take these reasonable and necessary steps has been and remains in America's national interests.",
+    "No one in this body or the American Government has suggested that Israel lay down its arms and be overrun or that Israel does not have a right and, indeed, an obligation to defeat its enemies and defend its people.",
+    "Rather, the United States has insisted that Israel's conduct of the war respect our interests and our values--the interests and values of Israel's closest ally.",
+    "The United States has been ignored, in part, because the Israeli Prime Minister is beholden to Cabinet Ministers in Mr. Smotrich and Ben-Gvir, who insist there be no deviation from policies that are gratuitously brutal, even over American objections.",
+    "We should be disgusted by the spectacle of Israeli extremists running amuck in the West Bank, sometimes with the protection of Israeli security forces, shooting and maiming goat herders and olive farmers and burning and seizing their land.",
+    "Tragically, horribly, fighting terrorists in a dense urban environment makes civilian casualties inevitable.",
+    "Judging by his actions 40 years ago, I think he would judiciously use the power that comes with our provision of weapons in order to shape Israel's conduct.",
+    "Some have taken to the floor tonight to argue that holding up two or three arms sales today would have been an abandonment of our ally, leaving Israel naked and undefended in the face of Iranian aggression.",
+    "The question on the floor today was not whether to shut off military support for Israel.",
+    "The resolutions we debated accounted for less than 5 percent of American arms that will likely flow to Israel over the next 3 years, and most of the shipments debated will not even arrive until 2026 or 2027.",
+    "Bipartisan American support for Israel's nonnegotiable right to exist and to defend itself is rock solid.",
+    "Had these resolutions passed, however, perhaps Israeli politicians would have received the necessary message that has so far been disregarded, which is, yes, defend yourself; yes, defeat your enemies, but have mercy for the innocent, retrain your own extremists, and respect the interests of the United States.",
+    "The realization that every shipment is not simply available on an unlimited basis with no strings attached might have resulted in changes to Israeli policy that would reduce civilian suffering and support America's regional and global interests as he believed it would when President Reagan used American power in 1982.",
+    "I remain steadfastly committed to the United States-Israel alliance."
+   ]
+  },
+  {
+   "date": "2022-02-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-28/CREC-2022-02-28-pt1-PgS832-3",
+   "sentences": [
+    "Madam President; today, I voted that the Senate should proceed to consider H.R. 3755, the Womens Health Protection Act, which would codify in Federal law the privacy of women's reproductive healthcare established by the Supreme Court's Roe v. Wade decision.",
+    "I support the privacy of women's healthcare, codification of Roe v. Wade, and proceeding to consideration of this measure."
+   ]
+  }
+ ]
+}

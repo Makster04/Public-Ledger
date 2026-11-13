@@ -1,0 +1,234 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "pappas",
+ "name": "Chris Pappas",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 15,
+  "press": 6,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Veterans' Transition to Trucking Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-19/CREC-2026-05-19-pt1-PgH3576",
+   "sentences": [
+    "Some companies opt out of offering apprenticeships due to the bureaucratic hurdles of obtaining approval from more than 20 different State approving agencies."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendment to H.R. 1, One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-02/CREC-2025-07-02-pt1-PgH3039-8",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Calling for Permanent Scheduling for Fentanyl Analogues",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-11/CREC-2025-06-11-pt1-PgH2649-5",
+   "sentences": [
+    "Mr. Speaker, I rise today to urge my colleagues to support the HALT Fentanyl Act when it comes to the floor tomorrow.",
+    "For the past 5 years, I have engaged with law enforcement, public health experts, and colleagues across the aisle to ensure the scheduling of fentanyl analogues doesn't lapse and is finally made permanent.",
+    "Permanent scheduling will ensure that law enforcement retains important tools they need to tackle the opioid crisis and hold traffickers accountable."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "press",
+   "where": "Press release: Pappas Reintroduces Bipartisan Legislation to Help Small Police Departments Strengthen Community-Oriented Policing",
+   "url": "https://pappas.house.gov/node/3299",
+   "sentences": [
+    "Pappas Reintroduces Bipartisan Legislation to Help Small Police Departments Strengthen Community-Oriented Policing.",
+    "Pappas Reintroduces Bipartisan Legislation to Help Small Police Departments Strengthen Community-Oriented Policing Image or Video Image Caitlin.Fitz-R…"
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "press",
+   "where": "Press release: Pappas Helps Re-introduce Landmark Equality Act",
+   "url": "https://pappas.house.gov/node/3301",
+   "sentences": [
+    "Pappas Helps Re-introduce Landmark Equality Act.",
+    "Pappas Helps Re-introduce Landmark Equality Act Image or Video Image Caitlin.Fitz-R…"
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "press",
+   "where": "Press release: WATCH: Pappas Speaks in Opposition to Republicans’ Proposal to Gut Medicaid",
+   "url": "https://pappas.house.gov/node/3303",
+   "sentences": [
+    "WATCH: Pappas Speaks in Opposition to Republicans’ Proposal to Gut Medicaid.",
+    "WATCH: Pappas Speaks in Opposition to Republicans’ Proposal to Gut Medicaid Image or Video Image Caitlin.Fitz-R…"
+   ]
+  },
+  {
+   "date": "2025-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Food Assistance for Working Families At Risk",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-05/CREC-2025-06-05-pt1-PgH2496-4",
+   "sentences": [
+    "Mr. Speaker, I rise today because the Republicans' budget scheme pushed through in the middle of the night last month is putting school meals for hungry kids and food assistance for working families at risk.",
+    "It is a betrayal of working families for Republicans to take away food so they can give tax breaks to billionaires."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1, One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-21/CREC-2025-05-21-pt2-PgH2220-2",
+   "sentences": [
+    "The phones in my office won't stop ringing because people I represent are beyond angry about the proposal to slash Medicaid.",
+    "Thanks to Medicaid, she receives skilled nursing, transportation, and employment support.",
+    "Without Medicaid, he is not sure where he would go.",
+    "We know it is all being ripped away in order to give big tax breaks to billionaires and the biggest corporations."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Cuts to Medicaid",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-27/CREC-2025-03-27-pt1-PgH1321",
+   "sentences": [
+    "Mr. Speaker, I rise today because healthcare through Medicaid, covering more than 10 percent of residents and more than 30 percent of all kids in New Hampshire, is on the line.",
+    "Their access to lifesaving preventative care, long-term care, and mental health and addiction treatment will be put at risk by the cruel and fiscally reckless budget being proposed by Republicans in the House.",
+    "In addition, New Hampshire's Medicaid expansion, established on a bipartisan basis, would end with any decrease in Federal funds, leaving 68,000 Granite Staters uninsured and devastating our hospitals and community health centers.",
+    "I have heard from literally thousands of Granite Staters on this issue, including a woman who contacted my office and shared her fears that cuts to Medicaid would leave her family homeless.",
+    "I urge my colleagues to stand up against this betrayal of working families and instead focus on how we can work together to make life safer, healthier, and more affordable for all Americans. ____________________"
+   ]
+  },
+  {
+   "date": "2024-03-19",
+   "source": "press",
+   "where": "Press release: Pappas Secures Funding for Fifteen First District Projects",
+   "url": "https://pappas.house.gov/node/2637",
+   "sentences": [
+    "Tue, 03/19/2024 - 16:45 Summary Through our community-driven process, I am proud to secure funding in this legislation that will return federal dollars to New Hampshire to support our law enforcement and…"
+   ]
+  },
+  {
+   "date": "2024-03-19",
+   "source": "press",
+   "where": "Press release: Pappas Slams Trump’s Tariffs on Costs for Small Businesses and Housing Construction, Meets with Forest Products Industry Leaders",
+   "url": "https://pappas.house.gov/node/2639",
+   "sentences": [
+    "Pappas Slams Trump’s Tariffs on Costs for Small Businesses and Housing Construction, Meets with Forest Products Industry Leaders.",
+    "Pappas Slams Trump’s Tariffs on Costs for Small Businesses and Housing Construction, Meets with Forest Products Industry Leaders Image or Video Image Collin.Gately@…"
+   ]
+  },
+  {
+   "date": "2023-10-10",
+   "source": "press",
+   "where": "Press release: Pappas Helps Introduce Bipartisan Resolution Supporting Israel and Condemning Hamas Terror Attacks",
+   "url": "https://pappas.house.gov/node/2439",
+   "sentences": [
+    "Pappas Helps Introduce Bipartisan Resolution Supporting Israel and Condemning Hamas Terror Attacks.",
+    "Pappas Helps Introduce Bipartisan Resolution Supporting Israel and Condemning Hamas Terror Attacks Image or Video Image Collin.Gately@…"
+   ]
+  },
+  {
+   "date": "2023-05-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Veterans' Compensation Cost-of-Living Adjustment Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-22/CREC-2023-05-22-pt1-PgH2479",
+   "sentences": [
+    "This legislation would increase the rates of VA benefits equal to the cost-of-living increase provided for Social Security benefits for veterans with service-connected disabilities, as well as the rates of dependency and indemnity compensation for their survivors and families.",
+    "We owe our veterans and their families a tremendous debt of gratitude, and the legislation we propose today is another way that we can all work to honor their sacrifice and work to pay down that debt that we all bear."
+   ]
+  },
+  {
+   "date": "2022-12-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Respect for Marriage Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-08/CREC-2022-12-08-pt1-PgH8827-3",
+   "sentences": [
+    "Madam Speaker, I rise today in support of the Respect for Marriage Act.",
+    "It is unthinkable that if the Supreme Court heeds Justice Thomas' call that our marriage might be recognized in New Hampshire where we live but not across the country.",
+    "I hope my colleagues will heed the calls of their constituents and the call of history and cast a vote in favor of the Respect for Marriage Act to say that love is love and to respect people's individual freedoms in this country."
+   ]
+  },
+  {
+   "date": "2021-11-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hazard Eligibility and Local Projects Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-03/CREC-2021-11-03-pt1-PgH6136",
+   "sentences": [
+    "Just last week, the Transportation and Infrastructure Committee marked up the Resilient AMERICA Act which would align the calculation used to fund the Federal Emergency Management Agency's pre-disaster mitigation program with the agency's post-disaster mitigation program.",
+    "This bill will help disaster-impacted communities complete the land acquisition and simple construction projects that would otherwise be categorically exempt from a NEPA review, streamlining the process with FEMA."
+   ]
+  },
+  {
+   "date": "2021-11-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Advanced Air Mobility Coordination and Leadership Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-03/CREC-2021-11-03-pt1-PgH6138",
+   "sentences": [
+    "H.R. 1339, the Advanced Air Mobility Coordination and Leadership Act, would establish an interagency working group, bringing together the Federal Government, States and localities, the aerospace industry, labor unions, and other key stakeholders to plan and coordinate efforts to safely integrate AAM operations in our national airspace system.",
+    "Madam Speaker, I urge adoption of this commonsense legislation, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2021-11-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Modifying Purchase Treatment of Certain Bargain-Price Options",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-03/CREC-2021-11-03-pt1-PgH6144",
+   "sentences": [
+    "I urge adoption of this bill, and I reserve the balance of my time.",
+    "Madam Speaker, I urge adoption of this legislation, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2021-11-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect Older Job Applicants Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-03/CREC-2021-11-03-pt1-PgH6158",
+   "sentences": [
+    "As a State with an aging workforce, New Hampshire businesses are concerned about both how to attract talent and how to ensure that the institutional knowledge and experience of workers reaching retirement age is passed down."
+   ]
+  },
+  {
+   "date": "2021-09-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-24/CREC-2021-09-24-pt1-PgH5139-4",
+   "sentences": [
+    "Madam Speaker, for 48 years the right to choose has been the law of the land, and it is time that Congress protects that right and access to the full range of reproductive care.",
+    "States are passing dangerous bans on abortion that harm patients and criminalize doctors, and anti-choice legislators are erecting barriers that are ever more onerous for women.",
+    "This has even happened in my home State of New Hampshire where the legislature passed an abortion ban and forced ultrasounds for women seeking an abortion.",
+    "If the Supreme Court won't protect Roe v. Wade, then Congress must pass the Women's Health Protection Act."
+   ]
+  },
+  {
+   "date": "2021-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pfas Action Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-21/CREC-2021-07-21-pt1-PgH3770",
+   "sentences": [
+    "This legislation includes my bill, the Clean Water Standards for PFAS Act, which addresses toxic PFAS discharges and invests in local infrastructure.",
+    "PFAS should be handled like other toxic substances that have been regulated through the Clean Water Act.",
+    "How many more years are we going to let these people wait for clean water?"
+   ]
+  },
+  {
+   "date": "2020-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-30/CREC-2020-07-30-pt1-PgH3994-4",
+   "sentences": [
+    "Their counterparts in Israel are making groundbreaking advancements as well.",
+    "Just days ago, an Israeli study indicated that low levels of vitamin D increase the risk of contracting COVID.",
+    "Israeli scientists are developing six different vaccine candidates and more than a dozen different treatment options for the deadly lung inflammation caused by COVID-19.",
+    "That is why I am asking my colleagues to support this bipartisan amendment which will fund a new partnership between the U.S. and Israel to bring leading researchers together to defeat this devastating disease.",
+    "Madam Speaker, I urge adoption of this provision."
+   ]
+  }
+ ]
+}

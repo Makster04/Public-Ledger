@@ -1,0 +1,1701 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "kaptur",
+ "name": "Marcy Kaptur",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 109,
+  "press": 1,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-11-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Triumphal Arch Casts a Shadow on Arlington National Cemetery",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-11-10/CREC-2026-11-10-pt1-PgH6135-5",
+   "sentences": [
+    "The proposed 250-foot-tall arch would break up the beauty and carefully constructed site lines from the Lincoln Memorial to Arlington National Cemetery.",
+    "It would also impose shadows over the President John F. Kennedy Memorial, the Military Women's Memorial, and the grave sites of three Supreme Court Justices."
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introduction of the U.S. Swine Health Improvement Plan Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-10-26/CREC-2026-10-26-pt1-PgE1127-2",
+   "sentences": [
+    "The House of Delegates, composed of producers appointed by their State pork producer associations and of State animal health officials, votes each year on updates to the program's standards, which are then reviewed by the U.S. Department of Agriculture for adoption."
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reigniting the Call to Hold Jeffrey Epstein and Les Wexner Accountable",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-10-26/CREC-2026-10-26-pt1-PgE1130",
+   "sentences": [
+    "On Saturday, October 17, 2026, I hosted a roundtable in Toledo, Ohio alongside the Democratic Women's Caucus and Chair Teresa Leger Fernandez to shed light on the corruption and abuse perpetrated by Jeffrey Epstein and Leslie Wexner.",
+    "Wexner employed Epstein as his financial advisor, thus entrusting him with his entire estate and granting him permission to buy and sell properties and other holdings on his behalf.",
+    "This status propelled Epstein into wealth and bankrolled his trafficking ring.",
+    "Without Wexner, there is no Epstein.",
+    "Epstein survivors Wendy Pesante, Marina Lacerda, and Jena-Lisa Jones participated in the roundtable to share their unique perspectives, as did local Toledo sex trafficking survivors Angela Navarro and Marie Fitzpatrick."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tariffs on Canada",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5827-3",
+   "sentences": [
+    "The administration has now imposed more huge tariffs on the American people.",
+    "Tariffs are taxes on the American people.",
+    "Tariffs have already cost Ohioans in industry, agriculture, consumer goods, and tourism over $11 billion more in rising prices due to these tariffs since January of last year.",
+    "Consumers and producers must stand up against these destructive tariffs.",
+    "Let's get rid of these crippling tariffs, protect hardworking Americans, and preserve our valued friendships with our closest, reliable, fair trading partner in Canada. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Affordable Care Act Healthcare Enrollment Drops",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-21/CREC-2026-07-21-pt1-PgH5020-4",
+   "sentences": [
+    "Mr. Speaker, reckless changes to the Affordable Care Act by this administration already have ripped away affordable healthcare coverage for 2 million Americans.",
+    "Between the cuts included in the big bonanza bill for billionaires and its refusal to extend the enhanced premium tax credits, it is clear the GOP's majority is intent on worsening this health insurance crisis for our relatives and neighbors."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Troop Deaths in Jordan and Iraq",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-20/CREC-2026-07-20-pt1-PgH4673-2",
+   "sentences": [
+    "Last February, President Trump told us his undeclared war of choice on Iran was only supposed to last 4 days.",
+    "Curiously, in June, President Trump said: ``It is a little bit unfair for [Iran] not to have some'' ballistic missiles.",
+    "Billions of tax dollars are being spent and shifted by the Trump administration, ballooning our gaping Federal debt, without an approval vote by Congress."
+   ]
+  },
+  {
+   "date": "2026-07-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Justice for Northwest Ohio Ratepayers",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-16/CREC-2026-07-16-pt1-PgH4617-4",
+   "sentences": [
+    "They were wronged for decades by the largest nuclear power corruption scandal in both American and Ohio history.",
+    "Nuclear power executives must be held accountable.",
+    "The Ratepayer Justice Act I just introduced yesterday would do just that."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Iran, Hormuz, Inflation",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-14/CREC-2026-07-14-pt1-PgH4465-3",
+   "sentences": [
+    "Mr. Speaker, today marks the 137th day of President Trump's undeclared war of choice on Iran.",
+    "The cost of this war is being borne by hardworking families all across our country, already costing them over $100 billion or more added to the U.S. debt.",
+    "He has turned the U.S. Navy into a traffic cop for the strait as his blockade resumed, and the Navy is charged with charging vessels 20 percent, a 20 percent tariff for passing through, which means prices are going up."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Defense Innovation with Ukraine",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-30/CREC-2026-06-30-pt1-PgH4357",
+   "sentences": [
+    "Mr. Speaker, I rise tonight to spotlight the urgent need for deepened cooperation between the United States and Ukraine in defense innovation.",
+    "After over 10 years of Russia's brutal, unprovoked invasion of Ukraine, Ukraine has given the world a master class in the future of warfare.",
+    "Ukraine has pioneered drone tactics and technology.",
+    "Russia has 3.5 times as many people as Ukraine, but Ukraine fights on nobly.",
+    "Ukraine's ecosystem of innovation is a model that the free world can't afford to ignore.",
+    "This companion legislation to its Senate counterpart introduced by Senators Rosen and Rounds would establish a landmark strategic defense innovation working group with Ukraine and NATO.",
+    "Remember, Iran just killed American troops with the same weapons it tested with Russia.",
+    "Iran and Russia have a relationship, and then they used the technologies against Ukraine.",
+    "But it was Ukraine that came to our defense with its innovation in the Middle East.",
+    "Our sustained engagement now has attracted one of the leading manufacturers of unmanned systems: Ukrainian defense drones, the U.S. arm of Ukraine's F-Drones, to stand up assembly in Northwestern Ohio.",
+    "Already, our State of Ohio is well recognized as the home of aviation, of space exploration, and defense industrial base manufacturing.",
+    "Its systems have been battle-tested on the frontlines of liberty, defending the free people of Ukraine from Dictator Vladimir Putin's merciless and unprovoked invasion.",
+    "We helped defeat fascism in World War II, Soviet communism in the last century, and remain committed to liberty and to sustaining our NATO alliance against all enemies.",
+    "Our region stands ready to stay vigilant at creating a future to ensure jobs and industry leadership for Northwest Ohio's manufacturing workforce and making sure that China and other countries like Iran do not have the most sophisticated technology that is known to the world.",
+    "These include introducing today, my bipartisan Strategic Unmanned Systems Partnership Act to ensure America continues working with our Ukrainian allies on these vital issues."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: $1.8 Billion Slush Fund",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-24/CREC-2026-06-24-pt1-PgH4229-3",
+   "sentences": [
+    "Mr. Speaker, the billionaire bonanza bill that I didn't vote for has resulted in the slashing of health insurance for millions of our fellow citizens.",
+    "Moreover, that bill gave huge new tax breaks to billionaires.",
+    "I must ask President Trump why he unilaterally decided to give $1.8 billion in reparations to the bullies who attacked the Capitol on January 6.",
+    "Meanwhile, his Iran war is costing us about a billion dollars a day.",
+    "We are now into day 117, and the flimsy Iran deal seems to have fallen apart.",
+    "Who proposed $324 billion to Iran?",
+    "Congress should end these giveaways to billionaires and give tax refunds to the hardworking people of our country."
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Inflation and Secret Plan to Cut Social Security, Medicare, and Medicaid",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-11/CREC-2026-06-11-pt1-PgH4105-3",
+   "sentences": [
+    "Mr. Speaker, earlier this week news broke that ``you'' have a secret plan to cut Social Security, Medicare, and Medicaid.",
+    "The following day, as new numbers were released showing core inflation rose to 4.2 percent on everything, the President said he loves inflation.",
+    "I am sorry, but where I come from, our retired workers know that Social Security and Medicare are hard-earned benefits we all pay into.",
+    "Also, we know Medicaid is a lifeline for the most at-risk seniors to access healthcare or pay for long-term nursing care for those who can't afford it in their golden years.",
+    "I don't agree with Speaker Johnson's notion to cut Social Security, Medicare, and Medicaid."
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Moment of Silence for Toledo'S Old West End Community",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-08/CREC-2026-06-08-pt1-PgH3976",
+   "sentences": [
+    "Mr. Speaker, I rise tonight because, over this weekend, my beloved hometown of Toledo, Ohio, suffered tragic and senseless gun violence in our storied Old West End community.",
+    "The Toledo Police and Fire Departments and all first responders proved their courage and utter devotion to duty and restored civil order.",
+    "Our community owes them a profound debt of gratitude for their selfless service.",
+    "I join our local law enforcement partners in asking anyone who might have footage or firsthand information to share that confidentially so that we can locate those perpetrators by calling Crime Stoppers at 419- 255-1111."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ukraine Support Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-04/CREC-2026-06-04-pt1-PgH3879",
+   "sentences": [
+    "Mr. Speaker, I thank the fine ranking member from the State of New York, who has worked so very hard on this for the time this evening, and to all of our colleagues who support H.R. 2913, the Ukraine Support Act.",
+    "In 2014, without provocation, Russian dictator Vladimir Putin first invaded the sovereign nation of Ukraine.",
+    "The war-torn people of Ukraine are not asking us for charity.",
+    "We must not turn our backs on Ukraine's long-suffering people, especially over 20,000 children of Ukraine maliciously abducted by Russia and being inhumanely reprogrammed on Russian soil.",
+    "Now, Iran, in cahoots with Putin's Russia, makes the drones killing American soldiers in the Middle East.",
+    "It is Iranian-made suicide drones that Russia launches to murder thousands of Ukrainians in their homes and its soldiers at the front.",
+    "Ukraine has come to America's defense with its cutting-edge interceptor drones.",
+    "Now, will we come to Ukraine's aid?",
+    "The people of Ukraine fully know their fate is intertwined with our own.",
+    "A ``yes'' vote sanctions Putin's Russia, that dictatorship."
+   ]
+  },
+  {
+   "date": "2026-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sailors Answered Every Call",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-21/CREC-2026-05-21-pt1-PgH3714-5",
+   "sentences": [
+    "This deployment was repeatedly extended to support illegal and unconstitutional operations in Venezuela and Iran.",
+    "We must swiftly end this expensive war of choice in Iran while honoring the service of the men and women of the Gerald R. Ford."
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ending the Trump Tariff on Canada",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-11/CREC-2026-02-11-pt1-PgH2175-3",
+   "sentences": [
+    "Mr. Speaker, I was privileged to join colleagues from both sides of the aisle this week in the House vote that was overwhelming in bipartisan fashion to end the damaging Trump tariff regime on Canada."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Manufacturing Jobs Lost Due to Trump Tariffs",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-14/CREC-2026-01-14-pt1-PgH803-3",
+   "sentences": [
+    "Mr. Speaker, I rise today to draw attention to the 68,000 manufacturing jobs lost across our country in 2025 as a direct result of President Trump's reckless tariffs and DOGE cuts.",
+    "Why did he visit Detroit yesterday when his insistence on continuing these tariffs actually cuts investment in American manufacturing?",
+    "In December, manufacturing jobs continued an 8-month decline that began after President Trump falsely promised these new tariffs would lead to an economic resurgence for American workers.",
+    "Instead, his broad across-the-board tariffs have driven prices up for everyday goods and all supply chains.",
+    "Tariffs create uncertainty in the job market, leaving hardworking families worse off."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-08/CREC-2026-01-08-pt1-PgH151",
+   "sentences": [
+    "Our bill aims to help address significantly rising energy and water bills coast to coast for families, as well as climate-caused water shortages in the West and across our Nation, with crop losses from coast to coast and increasing flooding across our beloved country.",
+    "We must also assure technologies like artificial intelligence and data centers don't bankrupt the ability of families to afford to live, nor take our society down dangerous roads without a roadmap.",
+    "Every dollar counts to make ends meet nowadays in an era marred by ill- considered Trump-inflicted tariffs that make living in America more expensive as prices rise.",
+    "In the past, we have had some--like fracking, for example, that unleashed the gas deposits of this country, but we want those investments inside our borders."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reflecting on Impact of Illegal Action in Venezuela",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-08/CREC-2026-01-08-pt1-PgH246",
+   "sentences": [
+    "Mr. Speaker, this past weekend, I prayed, and thanks to God for saving the lives of every single one of our precious soldiers, sailors, airmen, marines, and intelligence officers who were deployed secretly to Venezuela by the President of the United States without consent of Congress.",
+    "He calls it a law enforcement action.",
+    "This operation was much more than a law enforcement action.",
+    "It was an action of war and regime change in another nation.",
+    "Can Secretaries Hegseth and Rubio give us examples of other so-called law enforcement actions that have cost U.S. taxpayers billions and billions of dollars?",
+    "So now the simple question: How much did it cost to capture the dictator of Venezuela, Maduro, and his wife?",
+    "Secretary Hegseth, Secretary Rubio and perhaps OMB Director Russell Vought, their chief budget manager, it is your sworn constitutional duty to provide the American people which Defense or other Federal department and agency accounts have been shorted because you transferred untold billions of dollars to depose Venezuela's dictator Maduro and his wife.",
+    "Do you know that our own citizens can't get through to the Social Security office because you have cut the staffing back so much?",
+    "No one in this Chamber is a fan of Maduro, and the people of Venezuela have a humongous, difficult task of building their country forward now, but why behave deceitfully when you swore an oath to the Constitution of the United States.",
+    "Now, based on President Trump's press conference this past weekend, it seems that this lengthy and costly deployment of U.S. military into the Gulf and the Atlantic aims to reclaim very dirty crude oil deposits with out-of-date refineries in Venezuela.",
+    "U.S. energy prices are rising and even doubling across Ohio, our Buckeye State, and many other localities across our country due to the rise of data centers.",
+    "Historically, the human lust for crude oil--and Venezuela's crude is very dirty--is legendary.",
+    "Over the last century, time and again, in war after war, excepting for World War II, but for the China-Burma-India theater, our most precious U.S. military has rendered hundreds of thousands of selfless Americans, men and women, who have been ordered to battle and sacrificed their lives to gain access to the world's crude oil deposits.",
+    "The discovery of natural gas in the Utica and Marcellus shale deposits at the border in Ohio and Pennsylvania is absolutely enormous, the largest on our entire continent.",
+    "That was only made possible by the Department of Energy's invention of fracking technology since President Jimmy Carter first founded the Department when he was President of the United States in the 1970s.",
+    "We have got to replace our 50-year-old nuclear power plants across this country.",
+    "How President Trump is going to run Venezuela remains a mystery.",
+    "He has already expended billions, without the approval of Congress, to decapitate the corrupt leaders of Venezuela; but the White House can't even tell Congress how much has been expended, nor which accounts their budget director, Russell Vought, moved money out of to cover the billions and billions spent on this Venezuelan operation.",
+    "Operating dilapidated oil platforms in Venezuela is really not the President's job.",
+    "Though the President does not like wind power, in some remote and coastal locations they do make sense.",
+    "The administration's Venezuela obsession is going to prove to be, I am sad to say, very expensive.",
+    "Forces of sabotage may lurk in an impoverished nation of over 30 million people, and its institutions are run down.",
+    "That could add billions and even trillions to our debt.",
+    "The Secretary of State calls this Venezuelan deployment ``a law enforcement action.'' I have never seen--and please anyone listening to this, if you have seen a law enforcement action that has cost multiple billions of dollars, please let me know.",
+    "I would prefer any funds be rebated to our American people for the rapidly rising costs of energy because of the emergence of AI and data centers.",
+    "The operation executed by our military that the administration has just perpetrated is not a law enforcement action by any stretch of reasonable consideration.",
+    "The American people have an absolute right to know account by account how much this U.S.-Venezuela military oil operation has cost over the last several months.",
+    "Rebuilding Venezuela is not the top priority for the people of the district I represent in northwestern Ohio.",
+    "The U.S. Department of Commerce, for example, canceled all Federal assistance for manufacturing extension long relied upon in Ohio and across our country, especially in manufacturing areas that were depleted after the passage of NAFTA to help spur business extensions for small- and medium-sized manufacturers.",
+    "When we get the tax refunds from oil that is going to be spent in Venezuela, let's help some of these companies that need to build the future for our communities."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Venezuelan Strikes and Congressional War Powers",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-11/CREC-2025-12-11-pt1-PgH5805-2",
+   "sentences": [
+    "Lethal strikes against vessels off the coast of Venezuela are increasing."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations and Extensions Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-12/CREC-2025-11-12-pt1-PgH4609-2",
+   "sentences": [
+    "I say: No more tax breaks to billionaires and no payoffs to U.S. Senators."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-04/CREC-2025-09-04-pt1-PgH3835-2",
+   "sentences": [
+    "It is important to understand what the Bureau of Reclamation does and the fact that places like I represent have enormous environmental debt because we had to self-finance our water systems and so forth.",
+    "When you look at the environmental debt of these cities and what they are trying to do and what has happened to production, as NAFTA, CAFTA, all these trade agreements, the Korean agreement, is that they outsourced our jobs to cheap labor, and these communities are trying to restore themselves."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-03/CREC-2025-09-03-pt1-PgH3796",
+   "sentences": [
+    "Let me be clear: No matter how much Members on the other side of the aisle want to pretend that climate change is not happening, for the record, the last 10 years are the 10 hottest in recorded history.",
+    "Unchecked growth in data centers alone could raise average U.S. electricity generation costs by roughly 8 percent by 2030.",
+    "In Ohio, rapid demand growth from Big Tech data centers pushes electricity prices dramatically higher every month.",
+    "This cost of energy increase is not sustainable for working families.",
+    "We must build an abundant clean energy future.",
+    "This bill eliminates funding for the Office of Clean Energy Demonstrations, which means building the future.",
+    "It revokes $5.1 billion of bipartisan infrastructure law resources from the Department of Energy, which will cede the U.S. global lead in hydrogen, direct air capture, battery recycling, and consequent energy savings possible in every public and private structure.",
+    "Over 64,000 jobs have already been lost or stalled in the clean energy sector.",
+    "All of those cuts are a big gift for Iran, Russia, China, and North Korea.",
+    "Mr. Chairman, I yield 1 minute to the gentlewoman from Florida (Ms. Castor), who works so hard on all climate issues.",
+    "Each is a significant place in the union.",
+    "Given the Commission's statutory mission, it analyzed the risks to water resources posed by high-volume hydraulic fracturing and horizontal drilling techniques.",
+    "Through a public rulemaking process, the Commission developed regulations related to high-volume hydraulic fracturing within the Delaware River Basin.",
+    "The community project funding process allows Members of Congress to request funding for their community to meet urgent needs that they identify, and there is a rigorous process for the vetting and inclusion of community project funding including strict transparency and accountability rules.",
+    "This program is currently responsible for carefully vetting and conducting oversight of more than $30 billion in loans that are either active or have conditional commitments.",
+    "Madam Chair, the gentleman's amendment reduces funding for the Northern Border Regional Commission by $13 million.",
+    "The Northern Border Regional Commission is a Federal-State partnership focused on economic and community development within the most distressed counties in Maine, New Hampshire, Vermont, and New York.",
+    "The Northern Border Commission really does focus on places that often get ignored simply because those States don't have enough people in them to warrant the kind of attention maybe Pennsylvania gets because of its number of people, or California.",
+    "I can guarantee where there has been deindustrialization because of the outsourcing of production, there ought to be a whole separate set of activities that occur in those areas of the country, whether it is Kenosha, Wisconsin, whether it is Toledo, Ohio, or Flint, Michigan.",
+    "Mr. Chairman, this amendment reduces funding for the Southwest Border Regional Commission by $2 million.",
+    "The Southwest Border Regional Commission was established by Congress in 2008 to address economic distress along the southern border regions of some pretty important places--Arizona, California, New Mexico, and Texas.",
+    "Mr. Chair, I also wanted to mention the gentleman voted for the big billionaire bonanza bill that added $4 trillion to the U.S. debt."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-17/CREC-2025-07-17-pt1-PgH3434",
+   "sentences": [
+    "We must prioritize investments that rebuild our domestic manufacturing capabilities.",
+    "Furthermore, by cutting all funding for Ukraine, this bill dangerously ignores history at our own peril.",
+    "Mr. Chair, these quotes and sacrificial deeds of our forebears explain why I rise to express my deep opposition to this bill's irresponsible and shortsighted exclusion of any funding for the Ukraine Security Assistance Initiative.",
+    "Ensuring that the Ukraine Security Assistance Initiative is properly funded is essential to fulfilling our charge in defense of liberty on our watch.",
+    "If you haven't noticed Ukraine's struggle against the spiderweb of tyranny fostered by Russia, China, Iran, Belarus, and North Korea, it is real, and it is lethal.",
+    "Ukraine is in a historic fight now, not of her own choosing but for her very survival.",
+    "The poorest nation in Europe has fought back mightily against the third largest military in the world after Putin's murderous aggression that began in 2014.",
+    "Russia and its spiderweb of tyranny are a threat to liberty everywhere, and Ukraine stands on the front line.",
+    "If support for Ukraine is withdrawn, Russia and its allies' assault on fundamental freedoms will spread.",
+    "It supports our NATO partners.",
+    "It is our privilege and, yes, duty to support our allies and the brave people of Ukraine by appropriating funds for the Ukraine Security Assistance Initiative.",
+    "My amendment would reinstate funding for the Ukraine Security Assistance Initiative."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendment to H.R. 1, One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-02/CREC-2025-07-02-pt1-PgH3039-8",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-02/CREC-2025-07-02-pt1-PgH3059",
+   "sentences": [
+    "This big bonanza bill for billionaires will make life harder for the people of northwest Ohio and America.",
+    "Grocery prices are up 2 percent, yet the bill freezes SNAP, a cut for 45,000 families in my district, which is an $18 million monthly blow to local grocers.",
+    "The bill ensures billionaires get $300,000 in tax breaks every year while seniors and working people lose Medicaid and SNAP in the largest cut to healthcare in American history, cutting over $1 trillion.",
+    "The bill recklessly adds $3.4 trillion to the U.S. debt, and interest rates will climb.",
+    "Congress can create a much brighter future for America by defeating this big, bloated bonanza bill for billionaires."
+   ]
+  },
+  {
+   "date": "2025-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introduction of the Appropriations Compliance and Training Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-27/CREC-2025-06-27-pt1-PgE629-4",
+   "sentences": [
+    "That is established quite clearly in the Constitution, and it has been repeatedly affirmed by the Supreme Court."
+   ]
+  },
+  {
+   "date": "2025-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-25/CREC-2025-06-25-pt1-PgH2937",
+   "sentences": [
+    "It promotes premature retirements, and it paves the way for private equity takeovers, leaving care delayed, denied, and diminished.",
+    "I also can't support a bill that paves the road to VA privatization."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-21/CREC-2025-05-21-pt2-PgH2235-2",
+   "sentences": [
+    "This budget is a bonanza for billionaires.",
+    "It is paid for by cutting healthcare and food for millions of working families and seniors.",
+    "The U.S. national debt stands at $36 trillion, and this bill will raise it to over $40 trillion.",
+    "Historically, Republican administrations have ballooned the debt--Reagan, both Bushes, and Trump--through tax cuts to the very rich coupled with endless wars.",
+    "It is clear where the debt has come from.",
+    "President Trump has already added $8.4 trillion to the debt from his last tax cuts.",
+    "Meanwhile, his billionaires use their tax refunds to do stock buybacks.",
+    "Mr. Speaker, 40,000 people across the district I represent and nearly 14 million people nationwide will lose coverage for healthcare to pay for these bonanzas for billionaires."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Medicaid and Snap",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-20/CREC-2025-05-20-pt1-PgH2184-6",
+   "sentences": [
+    "Mr. Speaker, please let me share the story of two of my constituents who will be hurt by the cruel bonanza for billionaires budget bill.",
+    "For years, Bonnie has been his primary support so he can live independently, manage complex health needs, and navigate programs like Medicaid, Medicare, SNAP, and subsidized housing.",
+    "Michael has relied on Medicaid for hearing aids, surgeries, dental work, housing, and more.",
+    "This is just one of many examples of who will be harmed by unreliable and onerous work requirements.",
+    "Mr. Speaker, I think it is absolutely morally wrong that millionaires and billionaires will be given $4 billion plus $4 trillion."
+   ]
+  },
+  {
+   "date": "2025-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Tariffs",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-04-10/CREC-2025-04-10-pt1-PgH1593-2",
+   "sentences": [
+    "Mr. Speaker, I rise today out of deep concern for the manufacturing workers and families of northern Ohio, from Toledo Jeep to our numerous parts suppliers and union shops across the Great Lakes in both the United States and Canada.",
+    "The Trump administration's reckless and arbitrary tariff policy is putting their jobs and livelihoods at risk.",
+    "While yesterday President Trump claimed to pause all tariffs, he left in place a 10 percent across-the-board tariff on all global trade entering the United States, even in places like our region where we have a very wonderful relationship with companies in Canada.",
+    "We don't need any tariffs, not at our end of the country.",
+    "If not wisely applied, jobs hang in the balance on both sides of our border between the United States and Canada.",
+    "A part in a car or truck, in a steel mill, all of this that happens in our area can cross over the border six times.",
+    "Is it going to be a 10 percent tariff put on every time it crosses the border?",
+    "Tariffs threaten good-paying jobs.",
+    "Instead of a blunt Trump instrument, we need a targeted approach that brings real investment to American manufacturing and in the communities hollowed out by decades of bad and broken trade deals and outsourcing.",
+    "Work with Congress to craft smart, strategic reciprocity agreements with each country.",
+    "For too long, what has been happening is billionaire companies and corporate executives have been taking our production and outsourcing it to penny-wage nations.",
+    "As the proud daughter of union workers, I know that the road to rebuilding American manufacturing runs straight through our heartland, through the working class, the people who work hard, the spine of America's industrial economy in our Great Lakes region and the Midwest.",
+    "America's enemies around the world today are applauding the self- inflicted tariff chaos that has been exacted on our people.",
+    "A record of trillions of dollars in U.S. wealth was just lost this past week due to chaotic moves on tariffs arbitrarily imposed by the Trump administration.",
+    "None of the tariffs that the President has proposed and implemented have ever had a single vote in this Congress.",
+    "I spent too much of my time in this House and in this Chamber trying to repair the economic damage to our economy from trade deals like NAFTA, CAFTA, China PNTR.",
+    "They said USMCA was going to fix everything.",
+    "As a private businessman and billionaire, Donald Trump never lifted a finger to help us.",
+    "He didn't stop the outsourcing of jobs during his first term.",
+    "We had family farm after family farm collapse across this country through consolidation.",
+    "Huge trade deficits translate into growing U.S. debt.",
+    "We hear a lot on the other side of the aisle about the debt.",
+    "The Great Lakes folks get along on both sides of the border, so why disrupt something that is working?",
+    "Tariffs can be a tool to create jobs and wealth, as well as bring back jobs to our country, and we ought to head in that direction.",
+    "At the same time, we must carefully ensure that we grow jobs here through our trade policies and prevent price gouging by adversaries that benefit from protection in the marketplace.",
+    "Mr. Speaker, let's stop the chaos of trade wars, arbitrary pauses, crazy tariffs, and threats.",
+    "They don't need more tariffs that are really taxes on their cost of living.",
+    "America must achieve free trade among free people, not more tariff chaos.",
+    "Imagine, when their relatives are fighting and dying in another country, and they are here trying to hold their family together in some minimal way, them receiving a letter saying that they would be able to self-deport before it was claimed to be sent in error.",
+    "This week, our district staff took a call from a senior citizen who has ordered her prescription drugs from Canada for many years.",
+    "She is deeply worried that, with the new 10 percent Trump tariffs across the board, the price of her medicine will go up beyond her ability to afford it.",
+    "Our President has even threatened higher tariffs on all imported medicine.",
+    "Those just lost enormous value in the financial markets as the Trump tariffs traded away the value of their earnings.",
+    "I have heard from mothers worried their daughters and granddaughters will lose their Medicaid coverage for mental health care and treatment.",
+    "A wife called worried her husband going through chemo for cancer treatment would lose his Medicaid because of the cuts that are being proposed here just 3 years before he becomes Medicare eligible.",
+    "If families are denied access to Medicaid without the finances to cover care, what will happen to them?",
+    "Who will speak up for these people while they are painted as worthless or not worthy of a place in our country by those who just want to slash and burn and tax and deport and destroy?",
+    "Some of us must ask during Passover and Easter week who is being forsaken in this wild rush to endow the billionaire class with more, more vast infusions of money taken out of the hides and hearts of the American people?"
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tariffs Are Taxes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-04-09/CREC-2025-04-09-pt1-PgH1555-4",
+   "sentences": [
+    "Balancing U.S. trade accounts is an imperative and a worthy objective, but Trump administration tariffs on the American people's purchases are taxes that cost them more money on everything, a lot more: a lot more for food, for gas, for building materials, for cars, for trucks, for everything.",
+    "Today, after the market bled off nearly $10 trillion in lost U.S. wealth last week, the President adjusted some tariffs, but nothing he did is reshoring American reinvestment here in our country.",
+    "NAFTA caused the cataclysmic outsourcing of U.S. manufacturing in autos and trucks.",
+    "The American people need economic growth, not any more tourniquets around their necks because of tariffs. ____________________"
+   ]
+  },
+  {
+   "date": "2025-04-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Administration Lies About Social Security",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-04-01/CREC-2025-04-01-pt1-PgH1400-4",
+   "sentences": [
+    "Mr. Speaker, I rise today to highlight this administration's lies to the American people about Social Security.",
+    "On the campaign trail, President Trump promised to protect your hard- earned Social Security benefits.",
+    "However, now he has sent trickster Elon Musk and his flimflam government agency, DOGE, after the Social Security database.",
+    "Michelle King was the deputy commissioner for operations at the Social Security Administration for only 28 days before stepping down because she refused to grant the fraudsters at DOGE access to the Social Security database and all the sensitive personal data it holds on everyday Americans.",
+    "I am concerned Elon Musk wants to privatize Social Security and, through his new computer company he just bought, is going to try to be paid by the government to manage those accounts.",
+    "Americans should pay attention to their Social Security."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Full-Year Continuing Appropriations and Extensions Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-11/CREC-2025-03-11-pt1-PgH1102",
+   "sentences": [
+    "To extract the largest transfer of wealth from money they are taking from these bills from middle-class and working-class people and put it in the pockets of the top 1 percent, who already own half of this country, a handful of people who are so very wealthy.",
+    "The top 1 percent of billionaires now own as much wealth as the bottom half of our population.",
+    "Elon Musk and his DOGE boys don't need Medicaid, Social Security, and veterans benefits.",
+    "Our Constitution assigns our legislative branch the responsibility to direct Federal spending, not unelected billionaires and the 1 percent.",
+    "The greed machine wants to steal assets from America's people and put them in the pockets of billionaires at places like moolah-lago.",
+    "Finally, the greed machine is cutting a total of nearly $600 million in support for local law enforcement.",
+    "That is nearly $600 million in cuts for local police, leaving the kitty dry.",
+    "The greed machine is underfunding our local police.",
+    "In opposing the bill, I stand with our people, not with the billionaires and their greed machine.",
+    "Why rob Main Street to dole out even bigger tax breaks and more contracts for the moolah-lago crowd and billionaires whose crew haven't got a clue what working life is like for American men and women?",
+    "It is over time for them to pay their fair share."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Three-Year Anniversary of Russia'S Brutal Attack on Ukraine",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-25/CREC-2025-02-25-pt1-PgH831",
+   "sentences": [
+    "He named Russia and North Korea as the ``axis of evil.'' We could add Iran and other countries.",
+    "For the United States to stand beside Russia, North Korea, and Belarus at the United Nations, it is appalling.",
+    "During World War II on the soils of Ukraine, 14 million people were murdered.",
+    "This is the tradition of Putin.",
+    "Ukraine is the scrimmage line for liberty on the Continent of Europe today, and no President of the United States should cavort with dictators.",
+    "The actions to vote with them and against Ukraine is a blotch on America's record as a champion for a free world.",
+    "I also just wanted to place on the record a reminder that when Ukraine was beginning to be free after the collapse of the Soviet Union in 1991, a great man, Viktor Yushchenko, was President of the young Ukraine.",
+    "Putin had just killed Alexei Navalny in a terrible Arctic prison because he wanted to run against Putin."
+   ]
+  },
+  {
+   "date": "2025-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Draconian Doge Cuts",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-24/CREC-2025-02-24-pt1-PgH750-3",
+   "sentences": [
+    "A young farmer with a newborn daughter and a single mother with two children just back from maternity leave were hired to help citizens understand how to save money through the Centers for Medicare and Medicaid Services."
+   ]
+  },
+  {
+   "date": "2025-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tariffs and Trade",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-04/CREC-2025-02-04-pt1-PgH440-2",
+   "sentences": [
+    "Mr. Speaker, the people of northwest Ohio and the Great Lakes region, which is heavily industrial and agricultural, overwhelmingly oppose the Trump administration's ill-conceived trade war with Canada, Ohio's top fair trade partner and our largest fair trade partner.",
+    "Apparently there is a plan for a 1-month pause with this tariff relationship with Canada, but remember, Canada has been critical to the automotive industry, the lumber industry, the oil industry, the truck industry, every single industry you can think of, and now we are not sure what is going to happen in 1 month.",
+    "The administration's imposition of tariffs across our Great Lakes region adds up to a big lollapalooza-sized mistake.",
+    "Rising tariffs will put a brake on our region's economy and strong, two-way trade partnership.",
+    "They put a 25 percent tariff at the northern border, right, but with China it is 10 percent.",
+    "All those billionaires simply love shipping our jobs to penny-wage nations, and I am truly surprised President Trump has joined them.",
+    "Great Lakes region economic growth across the U.S.-Canadian border has been hard-fought, not exploitative.",
+    "Middle-class jobs have grown here, albeit far too slowly, and tariffs will cause a downdraft on economic growth, rising prices, and lost jobs.",
+    "Imposing tariffs on North American companies that are struggling to meet penny- wage global competition is driving our economy backwards.",
+    "As a result of Trump's tariffs, the prices and costs of doing business already are rising.",
+    "Across our Great Lakes States of Pennsylvania, Ohio, Michigan, Indiana, Wisconsin, Illinois, New York, and Minnesota, let our people remember President Trump's ill-conceived tariff edict.",
+    "Our region will work with any President and Prime Minister to reinvest in our Nation's industrial and agricultural base.",
+    "Why not focus tariffs on China where the trade gap is enormous and there is no fair trade, or Mexico where the wages and the gap of wages is horrendous compared to our country?",
+    "Rising tariffs will only cripple economic growth here, and the Trump administration has just shot itself in the foot again."
+   ]
+  },
+  {
+   "date": "2024-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations and Other Matters Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-18/CREC-2024-09-18-pt1-PgH5358",
+   "sentences": [
+    "House extreme Republicans risk the livelihoods of our border agents.",
+    "What about those who answer the phones as Social Security recipients have questions about enrollment and difficulties that they are facing in their lives?",
+    "Let the American people know--hear me--illegal immigrants are rightfully barred from voting.",
+    "Illegal immigrants are rightfully barred from voting.",
+    "If our colleagues were actually serious about bolstering our border security, then they would advance Senator Lankford's bipartisan border bill here.",
+    "We must pass that bill to provide the necessary resources to pay and equip our Customs and Border Protection agents instead of touting a resolution here that jeopardizes our national security."
+   ]
+  },
+  {
+   "date": "2024-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-23/CREC-2024-07-23-pt1-PgH4743-2",
+   "sentences": [
+    "We all know he will find a way to keep fighting for a more perfect and greater Union, and we thank him for his public service and his meritorious efforts to meet the needs of the American people.",
+    "Their bill slow-walks our Nation's obligation to ensure modern, dependable, affordable energy and clean water for millions of our citizens.",
+    "A cut of this size would immediately constrict the Department of Energy's ability to spur American manufacturing and innovation in this new climate age.",
+    "In this new century marked by extreme weather events and increased natural disasters, this bill endangers efforts to address the climate crisis.",
+    "During 2023, there were 28 separate billion-dollar weather and climate disasters in this country.",
+    "We can either continue to pay more for disaster response, or we can invest now in climate mitigation and adaptation that will also lower costs for consumers, create jobs, and increase our global competitiveness.",
+    "Thus, I oppose the Republicans' cuts to vital energy and climate programs.",
+    "Shortchanging these advances pushes our Nation backward by slow-walking energy innovation, failing to modernize our Nation's electric grids, failing to advance innovation relative to our global competitors in materials and manufacturing, and failing to build domestic end-to-end supply chains for jobs in the new energy economy, American jobs.",
+    "I rise out of a concern for the future my children will inherent, a future with extreme weather, continuously rising sea levels, and the detrimental impacts that climate change will have on the habitation of this planet.",
+    "At a time when we must double down on our efforts to address climate change, this bill slashes funding for the Department of Energy's efficiency and renewable energy programs by $1.5 billion, hampering our ability to decarbonize the energy, transportation, industrial, and agricultural sectors, undermining programs that not only improve and modernize our electricity infrastructure but lower costs, because energy efficiency programs are the easiest, quickest way not only to reduce our carbon footprint but to lower energy costs.",
+    "This is a real chance to ensure America's resiliency in the face of a changing climate and shifting global economy.",
+    "Instead, the majority has cut domestic investments in this bill by over 5 percent, and, with it, they will increase energy costs, jeopardize our energy independence and national security, hurt our global competitiveness, fail to confront the climate crisis, and put tens of thousands of good-paying manufacturing jobs at risk.",
+    "Even if some Members of this body may choose to refuse the overwhelming evidence, deny the scientific consensus, and ignore the worsening natural disasters that have become more severe and more common in each of our districts, we must aggressively transform our energy sector to adapt to our climate reality.",
+    "The best path and the only path that addresses climate change, reduces our dependence on fossil fuels, and ends reliance on foreign energy is to diversify how we produce and store energy at home.",
+    "However, instead of ensuring America leads the world in the development and transition to a global clean energy economy, the majority's bill strips $1.5 billion from the Department of Energy for energy efficiency and renewable energy.",
+    "It says, further, in Project 2025 that we must end the focus on climate change and green subsidies, we must eliminate appliance energy efficiency standards, and energy efficiency and renewable energy should be entirely eliminated.",
+    "This goes beyond climate denial.",
+    "This bill fails to create a sustainable future, and it fails to ensure Americans have equitable access to resilient, secure, and clean energy sources.",
+    "Democrats are ready to pass legislation that lowers energy costs for the American people and ensures America leads the global transition to a clean energy economy.",
+    "The amendment purports to prohibit funding for what is termed ``lab- grown meat'' at the Department of Energy.",
+    "However, the actual amendment text prohibits funds to be ``used for or to advance the research, development, demonstration, processing, or promotion of alternative proteins.'' The term ``alternative proteins,'' without getting too deep into the scientific weeds, is very broad, and this would likely have an impact largely beyond the purported intent related to lab-grown meat.",
+    "His situation was as a mechanic on heavy duty equipment, garbage trucks, fire trucks, and police cars, working in garages where the people ingested the fumes.",
+    "Particularly with what is happening to air quality because of the climate crisis, our efforts are even more needed to make the industrial sector more efficient, to position it to be a global leader in innovation as well as clean air and clean circumstances that people work in and to be competitive in the future global clean energy economy.",
+    "While it is clear that we need an all-of-the-above energy strategy that taps domestic oil and gas and invests in clean energy, we must also continue to promote energy innovation in all sectors of our economy.",
+    "I live along the Great Lakes, and I see what is happening with our shorelines and the changing climate conditions that are impacting life.",
+    "Madam Chair, I rise in strong opposition to this amendment which would prohibit the use of funds for the consideration of the social cost of greenhouse gases in the development and implementation of budgets, Federal procurement processes, and environmental reviews.",
+    "As I have said, it is undeniable that we are witnessing growing weather events stemming from climate change occurring in real time before our very eyes.",
+    "During 2023, there were 28 separate billion- dollar weather events and climate disasters, costing over $92 billion.",
+    "There have already been 15 confirmed billion-dollar weather and climate disasters so far this year.",
+    "We do not have the luxury to pretend that climate change isn't impacting us or that our actions aren't causing it.",
+    "Tell American citizens who have lost businesses, homes, and loved ones or have lived in structures that have collapsed or disappeared from hurricanes, wildfires, and other recent natural disasters, that there are no costs from climate change.",
+    "It is already past time for aggressive action to address climate change and its impacts.",
+    "It is critical for us to analyze and account for the potential impacts of government actions on the climate, and it is just as important to use that information for positive actions to help heal.",
+    "The truth is that climate change is having catastrophic social and economic impacts here and across the globe, and they are real.",
+    "Pretending that climate change doesn't exist won't make it go away.",
+    "Madam Chair, I rise in opposition to this amendment which prohibits funding for the American Climate Corps.",
+    "I have long been a champion of engaging young people in the climate corps to teach practical skills, to get them out of their narrow worlds, and to provide more open opportunities as happened many years ago with the Works Progress Administration.",
+    "The whole intent of the climate corps is to create capable people and give them skills to move into ultimately middle-class jobs focused on weatherizing homes in this country, installing solar and other energy infrastructure.",
+    "Madam Chair, this amendment would prohibit funds for the Interagency Working Group on the Social Cost of Greenhouse Gases.",
+    "We have areas where methane belches out of old landfills and dumps.",
+    "We are not the only place in America that has these places, and this amendment would prohibit funds for the Interagency Working Group on the Social Cost of Greenhouse Gases.",
+    "It is very clear that in urban areas coast to coast, there are places that are not healthy to live, and I don't think the countryside should be a dumping ground for waste from industry or any other place, but that has happened in many States in our Union.",
+    "The work that is being done by the department is crucial to making sure that the government accounts for the potential impacts of government actions on climate.",
+    "The Clean Water Act was passed, and you couldn't dump DDT into the water anymore.",
+    "It is critical to analyze and account for the potential impacts of private as well as governmental actions on climate, and it is important to use that information to better ourselves.",
+    "This amendment prohibits the use of funds for the Department of Energy's Office of Science's Scientific Workforce Diversity, Equity, and Inclusion.",
+    "The underlying bill includes a provision that prohibits funds related to advancing racial equity and supporting underserved communities--I represent some of those--and related to diversity, equity, and inclusion and accessibility in the Federal workforce.",
+    "In addition, the bill includes a provision that prohibits any activities related to critical race theory that, as we heard during markups last year, none of my Republican colleagues could even define.",
+    "How many times do my Republican colleagues need to emphasize that they do not like diversity, equity, and inclusion?",
+    "Given the commission's statutory mission, it analyzed the risks to water resources posed by high-volume hydraulic fracturing and horizontal drilling techniques.",
+    "Through a public rulemaking process, the commission developed regulations on high-volume hydraulic fracturing in rock formations within the Delaware River Basin.",
+    "I don't think the all-electric vehicle is as popular.",
+    "There is a $2.5 billion loan that just closed in November to support 6,000 construction jobs and an estimated 5,100 permanent jobs at three newly constructed lithium-ion battery cell manufacturing facilities in Spring Hill, Tennessee, not that far from Pennsylvania and Ohio; also, Lansing, Michigan; and Lordstown in my home State of Ohio near the Pennsylvania border.",
+    "The Ford Motor Company and their future Ford and Lincoln electric vehicles are estimated to support 5,000 construction jobs and 7,500 operation jobs in Kentucky and Tennessee once the plants are opened and running.",
+    "To maintain a reliable electric grid and ensure that we meet our growing clean energy demands, studies show we may need to expand transmission by 60 percent by 2030.",
+    "A resilient and reliable energy grid is also critical in confronting extreme weather and climate events that will only increase in severity.",
+    "During 2023, just last year, there were 28 separate billion-dollar weather and climate disasters costing over $92 billion.",
+    "These incidents are severe, and there have already been 15 confirmed billion-dollar weather and climate disasters this year.",
+    "Tell the American citizens who lost businesses, homes, and loved ones from hurricanes, wildfires, and other natural disasters that there are no costs from climate change.",
+    "We must maintain American leadership also in the clean energy field because otherwise we cede it to China and to other places, and we are weakened by that as a country.",
+    "Wind energy, you have more of that.",
+    "During this war in Ukraine that we are experiencing now, what does Russia do?",
+    "The Office of Clean Energy Demonstrations was established in order to scale up emerging technologies.",
+    "This office focuses on advanced nuclear, for example.",
+    "It focuses on carbon capture and energy improvements, both in rural or remote areas as well as the reclaiming of former mine lands.",
+    "We are looking at smaller nuclear reactors in some of those places, industrial demonstrations, working with the steel industry."
+   ]
+  },
+  {
+   "date": "2024-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ukraine Security Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-20/CREC-2024-04-20-pt1-PgH2593",
+   "sentences": [
+    "Mr. Chair, I thank the distinguished ranking member of the full committee for yielding me the time, and I rise to support liberty for Ukraine.",
+    "Let us defeat the spiderweb of tyranny between Putin's regime, Iran, China, and North Korea.",
+    "Ukraine does not ask us to fight for her, only to arm her valiant soldiers to push Russia back inside its own borders.",
+    "Ukraine's soldiers have recaptured half of its stolen territory.",
+    "There is no killing field on Earth like Ukraine.",
+    "Millions upon millions upon millions of innocent people have died at the hands of deadly dictators--Lenin, Stalin, and now Putin.",
+    "If Putin is permitted to conquer Ukraine, he will not stop there.",
+    "Support from the American people will ensure victory for Ukraine, with the free world girding liberty's shield.",
+    "Let's recall the ancient words of Ukraine's poet laureate, Taras Shevchenko, who died almost two centuries ago in a ghastly prison just like Alexander Navalny died a few weeks ago in a ghastly Russia prison.",
+    "The time is near when on Ukraine's plains, A shackled folk will burst its chains.",
+    "Blessed be your children in these lands, By touch of your toil-hardened hands, Then shall our day of hope arrive, Ukrainian glory shall revive.",
+    "Let's support liberty for Ukraine and defeat Russian tyranny.",
+    "Mr. Chair, I rise in full support of the Ukraine Security Supplemental Appropriations Act of 2024.",
+    "Allow the American people to help free Ukraine from Vladimir Putin's illegal, unprovoked, and brutal invasion of its sovereign territory.",
+    "Ukraine--the poorest country in Europe--is not asking us to fight for her, ONLY to help arm her.",
+    "Let's help free Ukraine from Putin's unprovoked, illegal, brutal invasion of its sovereign territory.",
+    "What liberty-loving person can watch the valiant people of Ukraine confront the 3rd largest military in the world in this grueling war and not rise to Ukraine's defense?",
+    "Ukraine's soldiers endured through 2 brutal winters and have recaptured over half the land Russia stole.",
+    "Bravo to the people of Ukraine, for their miraculous defense of their Homeland.",
+    "Today, the increasingly destructive coalition of Russia, Iran, North Korea, China, and allied terrorist organizations are uniting as enemies of liberty.",
+    "With Ukraine, liberty faces not a new enemy, but an old one.",
+    "Putin's unprovoked invasion of Ukraine tells us exactly where this rerun is headed.",
+    "As a percent of GDP, 15 European countries have so far provided a higher level of aid to Ukraine than the United States.",
+    "Putin is not counting the number of Russian lives he is throwing into this conflict, nor the rubles he is earning off barrels of oil he is selling to fund this war.",
+    "What he is counting are the number of votes FOR Ukraine that will be tallied in the U.S. Congress.",
+    "He knows that American support will decide Ukraine's victory in this conflict.",
+    "Putin has made his intentions clear as Russian troops already are concentrated at the borders of the Baltic states and Finland, with Russia's consistent violations of NATO airspace and territorial waters.",
+    "If Putin succeeds in Ukraine, or if liberty's alliance grows tired of a forever war, Putin is more likely to test our resolve over smaller, much harder to defend NATO member nations.",
+    "This Congress must pass support for Ukraine to secure liberty for Ukraine.",
+    "We bow to the valorous, persevering, industrious people of Ukraine.",
+    "The support of the American people will ensure victory for Ukraine, victory for the Free world, and strengthen liberty's shield in this new, dangerous era of hybrid warfare.",
+    "Ukraine's revered poet laureate Taras Shevchenko--who was a clarion, sacrificial voice for liberty--was tortured and died in a ghastly Russian prison in St. Petersburg in 1861.",
+    "To the dead, the living, to those yet in Ukraine, My country must tell all who live in Ukraine Then in your own house you will see justice, strength, and liberty.",
+    "Military Personnel, Marine Corps For an additional amount for ``Military Personnel, Marine Corps'', $3,538,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Military Personnel, Air Force For an additional amount for ``Military Personnel, Air Force'', $23,302,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Military Personnel, Space Force For an additional amount for ``Military Personnel, Space Force'', $4,192,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "OPERATION AND MAINTENANCE Operation and Maintenance, Army For an additional amount for ``Operation and Maintenance, Army'', $4,887,581,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Operation and Maintenance, Navy For an additional amount for ``Operation and Maintenance, Navy'', $976,405,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Operation and Maintenance, Marine Corps For an additional amount for ``Operation and Maintenance, Marine Corps'', $69,045,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Operation and Maintenance, Air Force For an additional amount for ``Operation and Maintenance, Air Force'', $371,475,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Operation and Maintenance, Space Force For an additional amount for ``Operation and Maintenance, Space Force'', $8,443,000, to remain available until December 31, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "PROCUREMENT Missile Procurement, Army For an additional amount for ``Missile Procurement, Army'', $2,742,757,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Procurement of Ammunition, Army For an additional amount for ``Procurement of Ammunition, Army'', $5,612,900,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Other Procurement, Army For an additional amount for ``Other Procurement, Army'', $308,991,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Weapons Procurement, Navy For an additional amount for ``Weapons Procurement, Navy'', $706,976,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Other Procurement, Navy For an additional amount for ``Other Procurement, Navy'', $26,000,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Procurement, Marine Corps For an additional amount for ``Procurement, Marine Corps'', $212,443,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Missile Procurement, Air Force For an additional amount for ``Missile Procurement, Air Force'', $366,001,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Other Procurement, Air Force For an additional amount for ``Other Procurement, Air Force'', $3,284,072,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for other expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Procurement, Defense-Wide For an additional amount for ``Procurement, Defense-Wide'', $46,780,000, to remain available until September 30, 2026, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "RESEARCH, DEVELOPMENT, TEST AND EVALUATION Research, Development, Test and Evaluation, Army For an additional amount for ``Research, Development, Test and Evaluation, Army'', $18,594,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Research, Development, Test and Evaluation, Navy For an additional amount for ``Research, Development, Test and Evaluation, Navy'', $13,825,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Research, Development, Test and Evaluation, Air Force For an additional amount for ``Research, Development, Test and Evaluation, Air Force'', $406,834,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Research, Development, Test and Evaluation, Defense-Wide For an additional amount for ``Research, Development, Test and Evaluation, Defense-Wide'', $194,125,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "RELATED AGENCIES Intelligence Community Management Account For an additional amount for ``Intelligence Community Management Account'', $2,000,000, to remain available until September 30, 2024, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "TITLE II DEPARTMENT OF ENERGY ENERGY PROGRAMS Science For an additional amount for ``Science'', $98,000,000, to remain available until expended, for acquisition, distribution, and equipment for development and production of medical, stable, and radioactive isotopes: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "ATOMIC ENERGY DEFENSE ACTIVITIES NATIONAL NUCLEAR SECURITY ADMINISTRATION Defense Nuclear Nonproliferation For an additional amount for ``Defense Nuclear Nonproliferation'', $143,915,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Federal Salaries and Expenses For an additional amount for ``Federal Salaries and Expenses'', $5,540,000, to remain available until September 30, 2025, to respond to the situation in Ukraine and for related expenses: Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "Section 401(a)(1)(A) of the Additional Ukraine Supplemental Appropriations Act, 2022 (Public Law 117-128) is amended by striking ``September 30, 2023'' and inserting ``September 30, 2024'': Provided, That such amount is designated by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+    "During fiscal year 2024, section 506(a)(1) of the Foreign Assistance Act of 1961 (22 U.S.C. 2318(a)(1)) shall be applied by substituting ``$7,800,000,000'' for ``$100,000,000''.",
+    "During fiscal year 2024, section 506(a)(2)(B) of the Foreign Assistance Act of 1961 (22 U.S.C. 2318(a)(2)(B)) shall be applied by substituting ``$400,000,000'' for ``$200,000,000'' in the matter preceding clause (i), and by substituting ``$150,000,000'' for ``$75,000,000'' in clause (i).",
+    "During fiscal year 2024, section 552(c)(2) of the Foreign Assistance Act of 1961 (22 U.S.C. 2348a(c)(2)) shall be applied by substituting ``$50,000,000'' for ``$25,000,000''.",
+    "Section 1705 of the Additional Ukraine Supplemental Appropriations Act, 2023 (division M of Public Law 117-328) shall apply to funds appropriated by this Act under the heading ``Economic Support Fund'' for assistance for Ukraine.",
+    "Upon completion of the congressional review process set forth in section 508, such cancellation shall be final and irrevocable. (3) The President may, subject to congressional review provided by section 508, cancel any remaining indebtedness to the government of Ukraine under this section at any time after January 1, 2026.",
+    "The previous question shall be considered as ordered on the motion to its adoption without intervening motion.",
+    "Thereafter, notwithstanding Rule XXII of the Standing Rules of the Senate, it is in order, during the periods described in subparagraph (B) (even though a previous motion to the same effect has been disagreed to), for any Senator to move to proceed to the consideration of the joint resolution, and all points of order against the joint resolution (and against consideration of the joint resolution) are waived.",
+    "Funds appropriated by this Act for foreign assistance (including foreign military sales), for the Department of State, for broadcasting subject to supervision of United States Agency for Global Media, and for intelligence or intelligence related activities are deemed to be specifically authorized by the Congress for the purposes of section 10 of Public Law 91-672 (22 U.S.C. 2412), section 15 of the State Department Basic Authorities Act of 1956 (22 U.S.C. 2680), section 313 of the Foreign Relations Authorization Act, Fiscal Years 1994 and 1995 (22 U.S.C. 6212), and section 504(a)(1) of the National Security Act of 1947 (50 U.S.C. 3094(a)(1)).",
+    "Each amount designated in this Act by the Congress as being for an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985 shall be available (or repurposed or rescinded, if applicable) only if the President subsequently so designates all such amounts and transmits such designations to the Congress.",
+    "Any amount appropriated by this Act, designated by the Congress as an emergency requirement pursuant to section 251(b)(2)(A)(i) of the Balanced Budget and Emergency Deficit Control Act of 1985, and subsequently so designated by the President, and transferred pursuant to transfer authorities provided by this Act shall retain such designation. spending reduction account Sec. 512. $0.",
+    "This Act may be cited as the ``Ukraine Security Supplemental Appropriations Act, 2024''."
+   ]
+  },
+  {
+   "date": "2024-04-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: A Stronger Workforce for America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-09/CREC-2024-04-09-pt1-PgH2191",
+   "sentences": [
+    "The A Stronger Workforce for America Act legislation is a pivotal measure for workers across America.",
+    "Particularly in regions like mine, the outsourcing of manufacturing jobs has left profound scars, especially the loss of real American wealth within our borders.",
+    "In the heartland region, where NAFTA dealt a body blow to manufacturing jobs, I have committed a great deal of my service to help create new jobs for northwest and northern Ohio in steel, automotive, agriculture, food processing, technology, and so much more."
+   ]
+  },
+  {
+   "date": "2024-02-09",
+   "source": "press",
+   "where": "Press release: Fighting to Protect and Expand Social Security",
+   "url": "https://kaptur.house.gov/node/2713",
+   "sentences": [
+    "Fighting to Protect and Expand Social Security.",
+    "Fighting to Protect and Expand Social Security Image or Video Image Jessica.Creigl…"
+   ]
+  },
+  {
+   "date": "2024-01-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect and Enhance Social Security",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-10/CREC-2024-01-10-pt1-PgH44",
+   "sentences": [
+    "Mr. Speaker, I thank Ranking Member Larson for yielding time and for his noble, tireless work safeguarding Social Security for the benefit of all Americans.",
+    "Social Security promises a safe and secure retirement for tens of millions of Americans during their golden years.",
+    "I hear from thousands of retirees across Northwestern Ohio who want to see a responsible solution to refinance Social Security going forward.",
+    "One in five Social Security beneficiaries are veterans.",
+    "Let me observe that the billionaire class must join the vast majority of Americans in paying their fair share into the system itself.",
+    "By making that happen, the Social Security 2100 Act, championed by Congressman Larson and all of us, will increase benefits for current and new beneficiaries, protect retirees against inflation, and repeal the Windfall Elimination Provision.",
+    "The Social Security 2100 Act is one of the most important bills before this Congress.",
+    "Social Security is an earned benefit, and America made a promise to workers, and Democrats are committed to making good on that promise.",
+    "They simply could not have existed if it were not for Social Security.",
+    "You see, Social Security is not just a program.",
+    "I may be the only Member here in this Chamber tonight who was present in the 98th Congress in April of 1983 after I was first elected to Congress and soon after became a deciding vote in April of that year for the refinancing of Social Security for the next generation.",
+    "That close, eventful vote, so extremely important to refinancing Social Security for the first time in a generation, passed.",
+    "There had been a commission to preserve Social Security and Medicare before I became a Member of Congress.",
+    "We were able to move passage of the refinancing of Social Security for the next generation, and I knew that I had helped do that as a younger Member.",
+    "At that time, the country was also in a deep recession, and we knew that Social Security as an earned benefit was paid through hard work, and it deserved to be lifted again.",
+    "Two- thirds of families in my district rely on Social Security or Medicare benefits, and they are truly lifelines for millions of people.",
+    "We know the Social Security insurance program is something America can renew for all our families.",
+    "From an economic standpoint, to pull the rug out from under Social Security would cause not only harm to individuals but economic harm in every Congressional district in this country.",
+    "People use Social Security to buy food, to pay their utility bills, to pay copays on their medical services, and for the basics of life.",
+    "We in Ohio want to express a special thanks to Congressman Larson for including in the bill the Windfall Elimination Provision, which harms our working families so very much.",
+    "Again, I thank my colleagues for being here tonight with us who championed protecting this earned benefit and social safety net, and I and all of us here stand with America's working people and retirees to protect and improve Social Security.",
+    "We know that with the unwavering leadership of Congressman John Larson, he will lead us to a day where Social Security 2100 is the law of the land."
+   ]
+  },
+  {
+   "date": "2023-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-02/CREC-2023-11-02-pt1-PgH5297",
+   "sentences": [
+    "Mr. Speaker, I rise in support of military assistance for Israel and Ukraine and the Indo-Pacific, all regions in which our Nation has forged critical strategic alliances.",
+    "The largest land war since the Second World War is raging on Europe's continent at the eastern edge in Ukraine following Russia's initial brutal invasion in 2014.",
+    "We are not being asked to fight, but only to aid Ukraine's valiant soldiers to drive Russia, the third largest military in the world, out of their homeland.",
+    "Few believed Ukraine could shoulder this wretched war beyond a few weeks, but Ukraine's will to win inspires us and subjugated people everywhere.",
+    "Over centuries, Ukrainians survived the absolute butchery of Lenin, Stalin, and now Putin, all tyrannical mass murderers.",
+    "No place on Earth lost more lives to mass murder and forced starvation than did Ukraine during the 20th century, 10 million to 14 million people, only God knows.",
+    "The necessity for America, the leader of the free world, to defend liberty, will prevent the blood of Putin's tyranny running across not just more of Ukraine, but of Europe and likely other places, including the Middle East.",
+    "Putin has refused to condemn Hamas and has gone as far as comparing Israel's defensive actions to Nazi Germany's seize of Leningrad."
+   ]
+  },
+  {
+   "date": "2023-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-26/CREC-2023-10-26-pt1-PgH5110-5",
+   "sentences": [
+    "Mr. Chairman, I thank the gentleman for yielding, and I share the gentleman's strong passion for making sure that America has the very best deterrent on the face of the Earth in view of what we are facing not only in the Middle East, but obviously, as you stated, in Ukraine and with what is happening on the high seas around the globe.",
+    "Mr. Chair, I invite the gentlewoman to come into any pulmonary ward in this country and see the cancers that attend to people who have suffered from carbon ingestion in their careers.",
+    "The industrial sector represents 30 percent of energy-related carbon dioxide emissions in the United States.",
+    "To address the climate crisis, we must address these emissions.",
+    "In addressing these emissions, we will also dramatically improve air quality and reduce millions of early deaths in our country and around the world.",
+    "Again, I invite you to come with me into the hospitals of this country and meet the families of workers who have died and the people suffering because of carbon ingestion.",
+    "While it is clear we need an all-of-the-above energy strategy that taps domestic oil and gas and invests in clean energy, we must continue to promote energy innovation, a cleaner workplace in all sectors of the economy, and in the American home as well.",
+    "The Department of Energy initially launched the SuperTruck initiative in 2009 to improve heavy-duty truck freight efficiency by 50 percent.",
+    "The second iteration, SuperTruck 2, sought to double fuel efficiency for 18-wheeler trucks.",
+    "SuperTruck 3 is currently working to improve medium-and heavy-duty truck efficiencies and reduce emissions of freight transportation, that is underway.",
+    "Within 7 years, four truck makers exceeded the SuperTruck 1 goals and the five SuperTruck 2 projects are on track to more than double their fuel efficiency.",
+    "Madam Chair, as I understand it, this amendment prohibits the use of funds for the Department of Energy's Office of Scientific Workforce Diversity, Equity, and Inclusion.",
+    "During our full committee markup--I remember it well--Republicans added a provision that prohibits funds for any diversity, equity, and inclusion office, program, or training.",
+    "In addition, section 605 of the underlying bill prohibits any activities related to ``critical race theory'' that, as we heard during the markups when I asked the question, none of my Republican colleagues could even define.",
+    "How many times do the individuals on the other side of the aisle need to emphasize that they do not like the words ``diversity, equity, and inclusion?'' I know when we were educated, we were always taught about ``e pluribus unum,'' out of many, one.",
+    "Madam Chair, this amendment would prohibit funds for the Interagency Working Group on the Social Cost of Greenhouse Gases.",
+    "In my part of the country, we recognize what greenhouse gases are.",
+    "We have to contain methane at many landfills that have let that stuff belch out into the atmosphere.",
+    "The satellites that take photos of the Earth from a distance can show us that when we weren't conscious of greenhouse gases, we were breaking through the ozone layer, and we have been able to heal that over time with concerted effort.",
+    "Those who care to know about greenhouse gases have plenty of evidence around us.",
+    "We know that the work of this particular group is crucial to making sure the government accounts for the potential impacts of government actions on the climate.",
+    "As I have said, it is undeniable that we are witnessing growing weather events stemming from climate change occurring in real time, even to the point where we can see it with our own eyes.",
+    "We don't have the luxury to pretend that climate change isn't impacting us--whatever name you call it--or that our actions aren't somehow related to it.",
+    "Tell the American citizens who lost businesses or homes and loved ones from hurricanes, wildfires, and other recent natural disasters, and those who continue to face unrelenting flooding in the Midwest, that there are no costs from climate change because there sure are.",
+    "It is already past time for aggressive action to address climate change and its impacts.",
+    "The gentleman's amendment would prohibit funding for the American Climate Corps.",
+    "The whole intent of the American Climate Corps is to engage young Americans in helping our Nation build forward, whether they would be weatherizing homes, planting trees, installing solar infrastructure, mitigating coastal erosion, permitting fires and flooding--the gentleman talked about some of the needs of our national forests-- constructing and maintaining public trails, and so much more.",
+    "From the western Great Plains to the coast and Great Lakes, we are witnessing the wreckage brought about by changing climate with a ferocity that knows no bounds.",
+    "Last month when the President announced the American Climate Corps, he talked about training young people in high-demand skills for jobs in the clean energy economy, as well.",
+    "But most of America wants to defeat Vladimir Putin's unconscionable invasion, unprovoked to the adjoining nation of Ukraine.",
+    "Don't try to tell American citizens who have lost businesses or homes and loved ones from hurricanes, wildfires, other natural disasters and who continue to face unrelenting flooding in the middle part of the country that there are no costs from climate change.",
+    "It is already past time for aggressive action to address climate change and its impacts, and pretending that it doesn't exist won't make it go away.",
+    "We must maintain American leadership for our clean energy future and not cede all the economic opportunity, which Congresswoman Castor just talked about when she was here on the floor, to China and other countries who surely want to be right at our ankles and try to dump product into this country."
+   ]
+  },
+  {
+   "date": "2023-10-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-25/CREC-2023-10-25-pt1-PgH5066",
+   "sentences": [
+    "Indeed, this gross domestic product/debt chart clearly illustrates as a result of robust economic growth, our Nation has bent the debt curve as a percentage of GDP for the first time in modern history.",
+    "We are beginning to pay down our Nation's accumulated debt, largely amassed from the costs of past wars, the old debts that were not paid for by those that conducted them at the time.",
+    "Then we had the pandemic and, sadly, over several decades, the tax cuts that were enacted allowed the wealthiest and most productive powerful corporations in our country not to carry their fair share of the tax load.",
+    "News outlets are correctly reporting that Russia's unprovoked war on Ukraine is being waged on more than one front, surely including energy.",
+    "The sharp escalation in geopolitical risk in the Middle East from the brutal Hamas terror attack in Israel has oil markets on edge.",
+    "Energy also allows our private sector and its workforce the ability to flourish in a modern economy with millions and millions upon millions of living wage jobs in energy production and conservation, across all sectors: natural gas, ethanol and biodiesel, nuclear, fossil fuels, thermal heat recovery, renewables, advancing sectors of hydrogen and fusion energy, and advanced nuclear platforms.",
+    "It does not meet our country's needs in this new era of climate change.",
+    "Mr. Chairman, last year, the Energy and Water Development Appropriations bill lowered energy costs for families, created good-paying jobs by growing and supporting a robust clean energy sector and rebuilding water infrastructure, promoted American energy independence, strengthened our national security, and ensured American energy outcompeted China.",
+    "As much as my Republican colleagues may refuse overwhelming evidence, deny scientific consensus, and ignore the catastrophic natural disasters becoming more severe and more common in their districts and across the country, we have no choice but to transform our energy sector to reflect our climate reality.",
+    "The only path that addresses climate change, reduces our dependence on fossil fuels, and curbs our reliance on foreign energy is to diversify how we produce and store energy: wind, solar, hydroelectric, hydrogen, and geothermal.",
+    "When it comes to addressing climate and driving a robust energy sector, our answer to the question of ``how'' must be ``everything under the sun.'' The Department of Energy's clean energy programs drive down energy costs, making it cheaper to expand domestic energy sources.",
+    "That is nearly half a billion dollars that will not be invested in our economic, energy, and climate future.",
+    "There is a $1 billion cut from the Assistance for Latest and Zero Building Energy Code Adoption, and $200 million from the State-based Home Energy Efficiency Contractor Training Grants.",
+    "It means that if American families want to reduce their home energy consumption and lower their monthly bills, my Republican colleagues say ``no.'' We must be innovative, creative, and aggressive in fighting for a clean energy future to make America resilient in the face of climate change, which is why it is irresponsible to cut $15 billion from the Department of Energy's Innovative Technology Loan Guarantee Program.",
+    "The Federal debt, as a percent of our economic prowess right now, is decreasing because we are growing the economy.",
+    "What the other side is not talking about is that there are a lot of free riders in our country, and they are not paying their fair share of revenues into the Treasury.",
+    "Some of the richest people in this country and some of the biggest corporations aren't paying their fair share of the load.",
+    "It will be a most interesting discussion as we move forward with the new debt commission that has been formed.",
+    "As our chart shows, the Federal debt, as a percent of GDP, is going down for the first time in modern history.",
+    "We better not do anything that stops that because it is one of the answers, as well as getting those who are free riders to pay their fair share.",
+    "Mr. Chairman, Congress needs to write bills that meet our country's needs, and I reiterate my disappointment that the energy and water bill before us today does not adhere to the agreed to levels in the bipartisan Fiscal Responsibility Act of 2023.",
+    "There is a rigorous process for vetting and inclusion of community project funding, including strict transparency and accountability rules.",
+    "This leadership is critical for ensuring that one in five Western farmers has irrigation water for 10 million acres of farmland that produce 60 percent of our Nation's vegetables and 25 percent of its fruits and nuts.",
+    "This funding provides for clean, affordable, and secure energy and ensures American leadership in the transition to a global clean energy economy.",
+    "The world is set to invest a record $1.8 trillion in clean energy in 2023, and that is expected to climb to $4.5 trillion by the year 2030.",
+    "Texas has been a leader in so many ways; certainly in wind energy, but not just that.",
+    "A whole lot more people who aren't paying their fair share of taxes should be, and that would help.",
+    "We learned a whole lot about nuclear energy at that point, but part of it was uncontrollable.",
+    "Our fracking technologies, our drilling technologies for natural gas, those came through not the private sector initially, they came through the Government of the United States because there wasn't any private sector company willing to invest.",
+    "In 2012, before the Bush tax cuts, the Congressional Budget Office showed revenues exceeding primary spending for the next 65 years and that debt as a percentage of GDP, our gross domestic product, everything that we make in a year, would decline indefinitely.",
+    "Since then, tax cut extensions and the Trump tax cuts have added $10 trillion to the debt to date, and their cost will increase enough over time to account for the entire long-term growth in debt ratio.",
+    "If we truly want to protect the American taxpayer, we should be marking up bills at levels agreed to between the President, Speaker McCarthy, and signed into law in the Fiscal Responsibility Act rather than bringing the government to the verge of a shutdown and now marking up bills that don't just break the deal but obliterate it by cutting critical domestic investments.",
+    "I can't wait for the Debt Commission to actually get the facts out there for the American people, because I have been listening to this all evening.",
+    "If you are driving a car, it is nice to know how many miles per gallon the car is going to get."
+   ]
+  },
+  {
+   "date": "2023-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ukraine Security Assistance and Oversight Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-28/CREC-2023-09-28-pt2-PgH4823-2",
+   "sentences": [
+    "Mr. Speaker, this bill provides military support for Ukraine.",
+    "I firmly stand on the side of Ukraine, on the side of liberty, and against Russian tyranny.",
+    "Such support to Ukraine is both necessary and noble.",
+    "Given the immensity of the ongoing onslaught by Russia to do less is acquiescence to Vladimir Putin and his expansionist lethal ambitions.",
+    "America's commitment to delivering aid to Ukraine is rooted in the enduring U.S.-Ukraine relationship, a partnership that dates back to Ukraine's Declaration of Independence as a captive nation from the clutches of the Soviet Union when it collapsed in 1991.",
+    "Since that pivotal moment, the United States has consistently backed Ukraine, providing vital support for sovereignty, security, and development through foreign assistance.",
+    "The urgency of our cultural, political, and economic ties with Ukraine has gained even greater significance in the face of Vladimir Putin's unprovoked aggression.",
+    "The free world cannot turn a blind eye to the consequences of failing to deter Putin's expansionist ambitions after his 2014 annexation of Crimea.",
+    "The world's inaction then led to the horrifying events of February 24 last year when Russian tanks rolled into Kyiv, Ukraine, to impose foreign tyranny over 40 million people.",
+    "In response to Ukraine's brave resistance, Putin has unleashed a calculated campaign of terror.",
+    "He invaded, bombed cities, kidnapped children, and committed grievous war crimes with the intent of erasing Ukraine's very identity as a free nation.",
+    "More than 120,000 lives have been lost; 170,000 troops have been injured on the scrimmage line of liberty in Europe; 20,000 wounded amputees are a grim reminder of Putin's butchery.",
+    "Valiantly, Ukraine has not surrendered.",
+    "Ukraine's heroic defenses serve as a beacon of hope.",
+    "There are implications for global security far beyond Ukraine.",
+    "Ukraine's plight is not just about its liberty; it is about freedom everywhere.",
+    "Let me be clear: Funding for the Ukraine Security Assistance Initiative is not just about financial aid, it is a testament to our full-fledged commitment to a free, sovereign, and democratic nation.",
+    "Liberty's allies stand by the brave people of Ukraine.",
+    "With our help, the Ukrainians will defeat Putin's aggression."
+   ]
+  },
+  {
+   "date": "2023-09-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-27/CREC-2023-09-27-pt1-PgH4567-8",
+   "sentences": [
+    "Global challenges include real enemies, as well as the unpredictability of nature and climate change, and we now see artificial intelligence threatening to further destabilize the world that we rely on for liberty and prosperity.",
+    "Instead, this legislation focuses on divisive policies never seen in a Defense Appropriations bill, like banning diversity and inclusion programs in this diverse Nation, targeting women and LGBTQ and servicemembers, and preventing the Department of Defense from addressing the very real dangers of disinformation campaigns and extremist rhetoric in our military.",
+    "While the legislation maintains funding for many key security commitments to our crucial allies by fully funding key regional security initiatives, it fails to innovate or provide expansion of funding necessary to meet the moment, which is newly defined by the largest war for liberty since World War II, being fought as we speak in the Nation of Ukraine.",
+    "The Ukrainian people and their east European neighbors---- Might I ask for an additional 10 seconds."
+   ]
+  },
+  {
+   "date": "2023-09-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-26/CREC-2023-09-26-pt2-PgH4505-2",
+   "sentences": [
+    "One of the many dangerous provisions in this bill is rolling back protections for farmers that prevent megacorporations from imposing debt servitude on farmers.",
+    "Mr. Chair, lack of enforcement of the 1921 Packers and Stockyards Act, along with unchecked corporate mergers, has allowed megacorporations, even foreign corporations, extreme power at the expense of our livestock producers and contract growers."
+   ]
+  },
+  {
+   "date": "2023-05-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Debt Ceiling, Budget, and Economic Growth",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-24/CREC-2023-05-24-pt1-PgH2555-3",
+   "sentences": [
+    "Let me remind folks, America's debt, which has to be paid, didn't begin to accumulate in the last 2 years.",
+    "The chart I brought to the floor today shows the rising debt of our country as a percent of GDP, which is how you have to measure it, and from the Biden administration the first time that we begin to move that line down.",
+    "This would hurt working families, stifle job growth, and impact millions of Americans who need care in our hospitals and depend on secure retirement income.",
+    "Extremist cuts will raise costs of childcare, pre-K and kindergarten spots for millions of children nationwide, forcing working parents to choose between expensive childcare costs or staying home and losing wages, deflating economic growth.",
+    "What if megacorporations and billionaires begin to pay their fair share of taxes?"
+   ]
+  },
+  {
+   "date": "2023-03-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-09/CREC-2023-03-09-pt1-PgH1221",
+   "sentences": [
+    "Before us is H.J. Res. 27, another desperate attempt to weaken the Clean Water Act.",
+    "After decades of reckless pollution, a fire on the Cuyahoga River in Cleveland, OH helped spark an environmental movement that brought us to the passage of the visionary Clean Water Act in 1972.",
+    "Even with a strong Clean Water Act, much remains to be done to ensure clean drinking water for all; the 2014 Toledo water crisis was the direct result of toxins in the water."
+   ]
+  },
+  {
+   "date": "2023-02-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Social Security and Medicare",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-01/CREC-2023-02-01-pt1-PgH584-2",
+   "sentences": [
+    "Mr. Speaker, Social Security coverage is an earned benefit.",
+    "In January, Social Security beneficiaries began to see an 8.7 percent cost-of-living increase, the largest since 1981.",
+    "Yes, this historic cost-of-living adjustment will help Americans manage their cost of living to pay bills and put food on the table.",
+    "In addition, millions of Medicare users will now only pay $35 per month for insulin.",
+    "The Social Security COLA along with affordable insulin are being championed by congressional Democrats.",
+    "Respecting their lives and their work, Democrats will always honor Social Security and vote to protect it and to strengthen Medicare.",
+    "Finally, the wealth of the region has allowed for an array of educational and corporate institutions, as well, which now can be mobilized together to reboot and repurpose the region's recovery from massive job outsourcing and, frankly, outright neglect that has damaged its potential for far too long."
+   ]
+  },
+  {
+   "date": "2023-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting America'S Strategic Petroleum Reserve",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-12/CREC-2023-01-12-pt1-PgH221-4",
+   "sentences": [
+    "In 2015, it was the Republican-controlled Congress that voted to begin exporting oil to all of our biggest adversaries: Iran, North Korea, Russia, and China included."
+   ]
+  },
+  {
+   "date": "2023-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Family and Small Business Taxpayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-09/CREC-2023-01-09-pt1-PgH76",
+   "sentences": [
+    "Mr. Speaker, I rise in opposition to this Republican green light to tax cheaters, billionaires, and giant corporations that do not pay their fair share of taxes.",
+    "Billionaires pay under 5 percent.",
+    "Every citizen and corporation should take a pledge of allegiance to pay their fair share of taxes.",
+    "In what world is it fair that those in the top brackets can cheat the system while hardworking Americans pay their fair share every day?",
+    "Properly funding the IRS will help to reduce the deficit, average Americans will get answers and help, and tax cheaters will finally pay their fair share."
+   ]
+  },
+  {
+   "date": "2022-12-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-23/CREC-2022-12-23-pt1-PgH10076-2",
+   "sentences": [
+    "It provides $54.65 billion in critical investments in our nation's water infrastructure and to combat climate change.",
+    "The bill invests $15.3 billion, $1.2 billion over FY22, in clean energy innovation to respond to the climate crisis.",
+    "In addition, the Disaster Supplemental includes $1 billion for the Department of Energy to strengthen Puerto Rico's electric grid and assist vulnerable and disadvantaged communities in purchasing and installing clean energy technologies.",
+    "In addition, the Ukraine supplemental provides $126 million to prepare for and respond to potential nuclear and radiological incidents in Ukraine.",
+    "This funding is part of the omnibus' $45 billion in additional American funding for Ukraine as she fights for Liberty."
+   ]
+  },
+  {
+   "date": "2022-12-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 8404, Respect for Marriage Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-07/CREC-2022-12-07-pt1-PgH8807-8",
+   "sentences": [
+    "Madam Speaker, today is day number 286 of Russia's unprovoked, illegal terrorist war on Ukraine.",
+    "Our Nation, in alliance with the free nations of the world, cannot miss a beat in ensuring NATO remains the strongest defender of global liberty.",
+    "Vladimir Putin's criminal war on its innocent neighbor began in 2014.",
+    "By crossing Ukraine's sovereign border, Putin violated every tenet of international law that has existed since World War II.",
+    "Putin's war machine must be defeated.",
+    "The people of Ukraine are fighting valiantly for their own freedom."
+   ]
+  },
+  {
+   "date": "2022-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Affordable Insulin Now Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-30/CREC-2022-09-30-pt1-PgH8330-3",
+   "sentences": [
+    "I also appreciate the inclusion of $1 billion for the Low-Income Home Energy Assistance Program to help address pressure on low-income households' pocketbooks due to inflation caused by pandemic-related supply chain backups and global energy disruption due to Russia's war on Ukraine.",
+    "As Co-Chair of the bipartisan Congressional Ukraine Caucus, I am grateful for the inclusion of a new U.S. funding package that will deliver urgently-needed weapons, equipment, aid, and support to America's friend and ally Ukraine in her valiant battle for Liberty against Putin's tyranny."
+   ]
+  },
+  {
+   "date": "2022-07-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Assault Weapons Ban of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-29/CREC-2022-07-29-pt1-PgH7499",
+   "sentences": [
+    "An experienced Ohio sheriff says it well: Assault weapons and large- capacity magazines should only be utilized by the military and law enforcement.",
+    "One of the most experienced chiefs of police I represent says the following: The connection between guns and illicit drugs is 100 percent.",
+    "So let's take the two most important steps, remove large-capacity assault weapons from our streets and arrest the drug dealers who are creating death and destruction across our country."
+   ]
+  },
+  {
+   "date": "2022-07-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-19/CREC-2022-07-19-pt1-PgH6733",
+   "sentences": [
+    "In addition, Putin's unjust war against Ukraine crystalizes how essential having a comprehensive energy independence strategy is for our Nation, for our economy, and surely for our security.",
+    "We are diversifying across many energy sectors that hold promise and are climate-friendly: advanced nuclear, hydrogen, solar, and wind, but also thermal heat recapture, conservation, and so much more.",
+    "The new Defense Production Act Domestic Clean Energy Accelerator receives $100 million to expand domestic manufacturing and help America lead in solar and other clean energy industries that are being hacked every day by, frankly, our political enemies."
+   ]
+  },
+  {
+   "date": "2022-06-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Passage of the Restoring Hope for Mental Health and Well-Being Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-22/CREC-2022-06-22-pt1-PgH5810-3",
+   "sentences": [
+    "Madam Speaker, I rise today to applaud the passage of the Restoring Hope for Mental Health and Well-Being Act.",
+    "Millions of Americans live with a very serious mental health or substance abuse disorder.",
+    "By increasing resources for proper diagnosis and recovery services, telehealth, mental health screenings, suicide prevention, we will improve lives and save lives all across our country.",
+    "As a member of the Mental Health Caucus and the Bipartisan Addiction and Mental Health Task Force, I thank the Committee on Energy and Commerce for their steadfast work to assure wellness for millions of Americans. ____________________"
+   ]
+  },
+  {
+   "date": "2022-05-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Additional Ukraine Supplemental Appropriations Act, 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-10/CREC-2022-05-10-pt1-PgH4775",
+   "sentences": [
+    "I rise tonight to urge passage of this essential $40 billion supplemental security package for Ukraine.",
+    "The battle for Ukraine and what it is waging, for liberty, is not one for her to fight alone.",
+    "Ukraine is the scrimmage line for liberty on the Continent of Europe today.",
+    "Untethered to reason or humanity, Putin will not stop his brutal slaughter of innocents.",
+    "What Ukraine needs most of all is reinforcement; it needs arms, ammunition, combat vehicles, and air and sea defense.",
+    "Putin's Russia will never win this war.",
+    "The courage and resolve of the Ukrainian people is already legendary, but to hasten the demise of Putin's murderous rampage, America must act without delay.",
+    "Ukraine's fight for liberty is the world's fight for liberty in this modern era.",
+    "Let us arm Ukraine with the tools for the fight and put an end, sooner rather than later, to the bloodshed Putin's madness has unleashed. ``Glory to Ukraine, ``Slava Ukraini.'' Mr. Speaker, I thank Chairwoman DeLauro for uniting all of the subcommittees of Appropriations to bring this critical bill forward."
+   ]
+  },
+  {
+   "date": "2022-03-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Affordable Insulin Now",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-31/CREC-2022-03-31-pt1-PgH4056-3",
+   "sentences": [
+    "Mr. Speaker, I rise today to applaud the passage of the Affordable Insulin Now Act and urge the other body to swiftly take up the bill.",
+    "Millions of Americans depend upon insulin every single day, but too many are forced to ration or cut back on their other essential needs just to pay for the medication that keeps them alive.",
+    "In Ohio, the cost of insulin can cost hundreds of dollars a month, and the pens that are used can cost between $45 and $600.",
+    "Capping the price of insulin at $35 a month means no longer will families have to choose between grocery and rent or their own lives.",
+    "Congress must act to pass the Affordable Insulin Now Act."
+   ]
+  },
+  {
+   "date": "2022-03-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Suspending Energy Imports From Russia Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-09/CREC-2022-03-09-pt1-PgH1394",
+   "sentences": [
+    "Mr. Speaker, I thank Chairman Neal and Congressman Lloyd Doggett for allowing me this time tonight to rise in strong support of liberty by suspending energy imports from Russia to help crush Putin for his crimes against humanity.",
+    "Putin is murdering innocent men, pregnant women, children, and the elderly.",
+    "The brutal savagery unleashed by Putin and allowed by his treacherous oligarchs requires crushing and unflinching retribution.",
+    "And let us sanction Putin and his enablers as far into the pits of hell as we possibly can.",
+    "Hit Putin and his enablers where it hurts."
+   ]
+  },
+  {
+   "date": "2022-03-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Haiti Development, Accountability, and Institutional Transparency Initiative Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-09/CREC-2022-03-09-pt1-PgH1405-2",
+   "sentences": [
+    "Finally, as chair of the Congressional Ukraine Caucus, I want to highlight the Congress' swift and essential support for Ukraine.",
+    "On a bipartisan basis, it is this House, as Article 1 of the Constitution, that has always led on providing aid to Ukraine.",
+    "The $13.6 billion in emergency funding includes vital resources for Ukraine and her brave people to meet their urgent economic and humanitarian needs."
+   ]
+  },
+  {
+   "date": "2022-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ending Russian Oil Imports",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-08/CREC-2022-03-08-pt1-PgH1358-3",
+   "sentences": [
+    "As Vladimir Putin unleashes his murderous fury on the people of Ukraine, we have a responsibility to stand up for liberty's defense, to inflict further pain on Putin and his war-related price hikes."
+   ]
+  },
+  {
+   "date": "2022-03-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supporting the Pact Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-02/CREC-2022-03-02-pt1-PgH1258-3",
+   "sentences": [
+    "Madam Speaker, to shift to a different subject, as we watch the slaughter in Ukraine, I would urge the Government of the United States and the President of the United States to mobilize our National Guard Partnership for Peace programs across the various States.",
+    "There are ways for us as a country to use idle aircraft, like C-130 sitting on the ground in this country, where the American people want to donate blankets and bandages in ways of caring for those who are being killed and injured, who are hungry in the Nation of Ukraine.",
+    "Madam Speaker, I ask the President to help us help Ukraine. ____________________"
+   ]
+  },
+  {
+   "date": "2022-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Additional Continuing Appropriations Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-08/CREC-2022-02-08-pt1-PgH1051",
+   "sentences": [
+    "The bill will invest in clean energy technology."
+   ]
+  },
+  {
+   "date": "2022-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Guard and Reserve Gi Bill Parity Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-12/CREC-2022-01-12-pt1-PgH50",
+   "sentences": [
+    "They set up COVID-19 testing clinics and traveled the State to keep our communities safe.",
+    "While the debt we owe them cannot be fully repaid, the legislation before us ensures that these honorable men and women will receive the proper access to the educational benefits they so rightly deserve."
+   ]
+  },
+  {
+   "date": "2021-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Extending Government Funding Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-02/CREC-2021-12-02-pt1-PgH6872",
+   "sentences": [
+    "It invests new resources to meet America's needs and create good jobs in clean energy and water technologies allowing us to secure our Nation's energy independence, create good-paying jobs, and confront the climate crisis that is impacting every coast in every region and, frankly, continent."
+   ]
+  },
+  {
+   "date": "2021-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-19/CREC-2021-11-19-pt1-PgH6659-6",
+   "sentences": [
+    "Over the last several decades, the rich have gotten richer, only for the Middle Class to pay the price as America's working families and our physical and social infrastructure have suffered the death of a thousand cuts.",
+    "The Build Back Better Act sets our Nation on a new course--lowering the cost of health care, family care, and senior care, improving infrastructure, combating climate change, and creating good-paying jobs in every sector and community in our nation.",
+    "Seniors will benefit from new federal negotiating powers to lower the price of prescription drugs, a $2,000 cap on their out-of-pocket drug expenses on Medicare Part D, and the inclusion of hearing care in Medicare for the first time.",
+    "Americans with diabetes will no longer pay more than $35 per month for insulin.",
+    "The vast majority of families will pay no more than 7 percent of their income for childcare.",
+    "There will be new universal preschool for all 3- and 4-year-olds, and the Child Tax Credit will cut taxes for hardworking families.",
+    "The Civilian Climate Corps will help preserve and protect our environment while combating climate change.",
+    "Under-resourced neighborhoods will finally have the resources for new, quality, affordable housing.",
+    "The American people will do all this by finally requiring the wealthiest, the biggest corporations, and the tax cheats to pay their fair share."
+   ]
+  },
+  {
+   "date": "2021-11-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 5376, Build Back Better Act; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-05/CREC-2021-11-05-pt1-PgH6213",
+   "sentences": [
+    "Rebuilding our nation's infrastructure will create millions of living wage jobs for the American people coast to coast.",
+    "The motor vehicle industry, new carbon free energy systems, modern highways, airports, bridges, ports, rail grade separations, broadband, and so much more.",
+    "And, the environmental provisions to heal our earth in an era of climate change will restore clean water, clean air, healthy forests, and regenerative soils.",
+    "The cost of the related bills is paid for and, as more jobs are created, and the overall wealth of our nation increases, not only the annual deficit but also the accumulated national debt will begin to be repaid."
+   ]
+  },
+  {
+   "date": "2021-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Extending Government Funding and Delivering Emergency Assistance Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-30/CREC-2021-09-30-pt1-PgH5568",
+   "sentences": [
+    "When I talk to hardworking families, seniors, and veterans that I represent, not once did I hear a single person say they want their parks shut down, their Social Security offices closed and employees furloughed, or their VA benefits and healthcare services delayed."
+   ]
+  },
+  {
+   "date": "2021-09-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Extending Government Funding and Delivering Emergency Assistance Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-21/CREC-2021-09-21-pt1-PgH4577",
+   "sentences": [
+    "Once again, we need the means to keep the Federal Government's lights on, make certain Social Security offices function, and ensure national parks remain open to all.",
+    "One bright spot in this bill is the inclusion of critical funding to respond to Hurricane Ida and other devastations wrought by climate change.",
+    "The energy and water portion also contains commonsense, necessary extensions to keep essential programs operating for the next several weeks, and I support key provisions to responsibly lift the debt ceiling.",
+    "Our Nation is still reeling from the GOP tax scam that blew up the deficit while giving away billions of dollars to the top 1 percent."
+   ]
+  },
+  {
+   "date": "2021-06-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Climate Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-16/CREC-2021-06-16-pt1-PgH2874",
+   "sentences": [
+    "Mr. Speaker, I want to thank my very able colleague, Congressman Casten, for the opportunity to join him and Congresswoman Castor, the leaders of this marvelous committee on climate change.",
+    "Let us all help our country and world meet the challenges as we face the dawn of this new climate change era.",
+    "The clean energy future of our Nation and our ability to reboot and reenergize the domestic manufacturing economy depends on climate- related infrastructure programs for inventing that new future.",
+    "Addressing climate change will create and even bring back good paying jobs right here at home.",
+    "Addressing climate change is our portal to sustain life on Earth for generations to come.",
+    "A first simple step is to plant a tree to capture the carbon that is already in the air, and the tree will produce oxygen to help you breathe, and to help your children breathe and your neighbors.",
+    "Addressing climate change will help human health.",
+    "As America stands at a crossroads in this new energy age, we must ensure that infrastructure includes strategic investments in energy, clean energy, climate, and water resources innovation.",
+    "Technologies and innovation driven by the Department of Energy are already helping to address climate change.",
+    "Reversing the impacts of climate change will create good paying jobs like these across every State in our country.",
+    "The Biden administration has been clear from day one about the need to urgently address the climate crisis, and I am excited that the President's American Jobs Plan will create new jobs by reinvesting in areas and workers too often left behind, and they will help save our planet and sustain all of us and those who will follow us.",
+    "We cannot lose sight of the importance of including climate-related and job-creating proposals in any infrastructure package.",
+    "Climate change can be addressed by every community across our country."
+   ]
+  },
+  {
+   "date": "2021-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Emergency Security Supplemental to Respond to January 6th Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-20/CREC-2021-05-20-pt1-PgH2617-2",
+   "sentences": [
+    "We owe it to our law enforcement community, and indeed everyone who works in or visits our Capitol, to respond with means to recover and rebuild from the insurrection, The U.S. Capitol holds national and international significance as the temple of liberty and representational democracy.",
+    "It provides resources to the United States Capitol Police for officer salaries, equipment, training, and mental health counseling."
+   ]
+  },
+  {
+   "date": "2021-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-13/CREC-2021-01-13-pt1-PgH165",
+   "sentences": [
+    "I frequently reflect on the incalculable bravery and sacrifice of those Americans who came before us, who, from the battlefields of Antietam to the beaches of Normandy, fought and died to ensure that not only would freedom and liberty live on in these lands, but so too would our Union itself.",
+    "Members, staff, and the Vice President, who were working to certify the election results of the 2020 Presidential Election, were forced to flee for their lives as a mob of violent insurrectionists broke through the doors and windows of the Capitol, desecrated the halls, and violently attacked Capitol Police, killing one and injuring over 50.",
+    "Some carried law-enforcement style handcuffs, bear spray, and firearms, while others erected gallows outside and placed pipe-bombs nearby.",
+    "President Trump is guilty of inciting a violent insurrection against the United States in its most sacred home of liberty."
+   ]
+  },
+  {
+   "date": "2020-09-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations Act, 2021 and Other Extensions Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-09-22/CREC-2020-09-22-pt1-PgH4689-2",
+   "sentences": [
+    "The lack of action from our Senate colleagues, for the second year in a row, who deep-sixed their fiscal responsibility and leadership brought us here today.",
+    "While Senate Republican strategists are squeezed in rooms over there thinking about a Supreme Court nominee before election day, they ignore their top responsibility of Congress' funding responsibility."
+   ]
+  },
+  {
+   "date": "2020-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-30/CREC-2020-07-30-pt1-PgH3994-4",
+   "sentences": [
+    "Our bill lays the foundation for critical investments to combat climate change.",
+    "It is poised to pass today as the most important funded climate change bill the 116th Congress will pass.",
+    "Finally, this bill prohibits the diversion of essential Army Corps funds to be used for a border wall.",
+    "I cannot thank our chair more for her efforts to make sure this occurs, including $17 billion to accelerate backlogged Army Corps of Engineers projects across this Nation; $3 billion to accelerate work on authorized reclamation projects; and $25.3 billion for the Department of Energy to modernize infrastructure and deploy technologies for our Nation's future clean energy."
+   ]
+  },
+  {
+   "date": "2020-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-23/CREC-2020-07-23-pt1-PgH3715-4",
+   "sentences": [
+    "It takes valuable steps to combat Russian aggression, it demonstrates our unwavering support for liberty in Ukraine, funds diplomatic exchanges between the U.S. and Poland, and protects Radio Free Europe's longstanding editorial independence.",
+    "Then with acute food insecurity exposed in the pandemic, this bill advances sustainable agriculture in this era of climate change.",
+    "This bill says thank you to America's veterans, from general healthcare and mental health services, to suicide prevention and homeless assistance.",
+    "Someday, future generations of Americans will look back on us and wonder how and why a society that prided itself on its commitment to human rights, precluded virtually all protection to the weakest and most vulnerable--unborn children.",
+    "The bill before us today, Mr. Speaker, reverses several modest but important pro-life polices including the Protecting Life in Global Health Assistance Policy--which is a reiteration and expansion of President Ronald Reagan's Mexico City Policy.",
+    "Announced by Reagan at the United Nations Conference on Population Control in Mexico City in 1984--hence its name--the policy was and is designed to ensure that U.S. taxpayer money is not funneled to foreign non-governmental organizations (NGOs) that perform or promote abortion as a method of family planning.",
+    "For years--under Presidents Clinton and Obama--foreign non- governmental organizations (NGOs) had been empowered by U.S. taxpayer grant money--to weaken, undermine, or reverse prolife laws in other nations and to destroy the precious lives of unborn children.",
+    "Many countries throughout the world have been besieged by aggressive and well-funded campaigns to overturn their pro-life laws and policies.",
+    "The Protecting Life in Global Health Assistance Policy mitigates U.S. taxpayer complicity in global abortion.",
+    "U.S. foreign policy--and the foreign entities we fund with billions of dollars in grant money--should consistently affirm, care for, and tangibly assist women and children--including unborn baby girls and boys.",
+    "When the Senate failed to act on my comprehensive bill, I asked USAID's Kent Hill to initiate a fistula repair program by administrative action.",
+    "BLM has a duty to continue the research, production, and use of proven contraception such as PZP-22, while also pursuing other efforts toward their goal of a vaccine that can be administered quickly and cost effectively.",
+    "I urge adoption of the Cohen Amendment.",
+    "Mr. Speaker, the Chinese Communist Party's aggression and malign conduct grows more severe each day.",
+    "They conduct militarized territorial aggression against most countries that border China.",
+    "The CCP is pioneering a new form of colonialism, degrading the sovereignty of developing nations through debt and corruption, extracting resources and military outposts."
+   ]
+  },
+  {
+   "date": "2020-04-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-04-23/CREC-2020-04-23-pt1-PgH1920-3",
+   "sentences": [
+    "It seems little went to those who need it most, while those with access had their takings.",
+    "We must question why little help was provided to those who need it most, while those with access had their takings."
+   ]
+  },
+  {
+   "date": "2020-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Emergency Supplemental Appropriations for Disaster Relief and Puerto Rico Disaster Tax Relief Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-02-07/CREC-2020-02-07-pt1-PgH941-3",
+   "sentences": [
+    "We never know when it will hit our own backyard."
+   ]
+  },
+  {
+   "date": "2020-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Iran War Powers Resolution",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-09/CREC-2020-01-09-pt1-PgH92-2",
+   "sentences": [
+    "Mr. Speaker, I thank the gentleman for yielding, and I rise in support of the War Powers Resolution as an original cosponsor.",
+    "One reckless military strike can incentivize countermeasures, not just in the immediate region, but thousands of miles away by Iran's proxies.",
+    "Without congressional authorization, and in defiance of our Constitution, this President ordered an unprecedented strike on Iran's top generals.",
+    "However, this Lone Ranger attack by the President risks all-out war, greater instability in Iraq and Iran, losing the edge we have gained at such great cost; and some of those names have been put on the Record today.",
+    "Let us rigorously pursue, with our allies, turning back Iran's development of nuclear weapons."
+   ]
+  },
+  {
+   "date": "2019-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-12-18/CREC-2019-12-18-pt1-PgH12130",
+   "sentences": [
+    "Vladimir Putin has coordinated murders, election hacking, propaganda, the entrapment of willing fools and greedy underlings who put their own selfish interests over liberty.",
+    "Putin seeks to sow disarray and destabilize democracies and the NATO alliance.",
+    "At Putin's direction, Russia illegally invaded Ukraine in 2014.",
+    "As Ukrainians defend Europe's eastern flank, 14,000 people have been killed at Putin's hand, with over 2 million displaced.",
+    "Rather than stand up to Putin, President Trump and his minions aided Putin, first in hastening Russian interference in our 2016 elections, and then more recently withholding vital military aid from Ukraine to coerce its interference in our 2020 elections for Mr. Trump's personal gain."
+   ]
+  },
+  {
+   "date": "2019-11-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, Agriculture, Rural Development, Food and Drug Administration, Interior, Environment, Military Construction, Veterans Affairs, Transportation, and Housing and Urban...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-11-19/CREC-2019-11-19-pt1-PgH8972",
+   "sentences": [
+    "The United States must remain at the forefront of energy innovation to address climate change, so vital to people across the globe."
+   ]
+  },
+  {
+   "date": "2019-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations Act, 2020, and Health Extenders Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-09-19/CREC-2019-09-19-pt1-PgH7786",
+   "sentences": [
+    "But it is the lack of action from our Senate Republican colleagues who deep-sixed their fiscal responsibility and their leadership that brought us here today."
+   ]
+  },
+  {
+   "date": "2019-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Emergency Supplemental Appropriations for Humanitarian Assistance and Security At the Southern Border Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-25/CREC-2019-06-25-pt1-PgH5147",
+   "sentences": [
+    "I come to the floor to urge my colleagues to support this emergency supplemental request to address the humanitarian cry on our southern border.",
+    "A record number of desperate families and unaccompanied children have crossed into the United States, and our Border Patrol, Immigration and Customs Enforcement, and Office of Refugee Resettlement are simply overwhelmed.",
+    "Just this week, we learned that four toddlers being held in a Border Patrol station in McAllen, Texas, had to be hospitalized because of dangerous neglect.",
+    "The AP reported last week that children have been locked up in Border Patrol facilities for as many as 27 days without adequate food, water, and sanitation, for heaven's sake.",
+    "Five children have died in Customs and Border Protection custody since late last year."
+   ]
+  },
+  {
+   "date": "2019-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-25/CREC-2019-06-25-pt1-PgH5159",
+   "sentences": [
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Ms. DeGette) having assumed the chair, Ms. Shalala, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 3351) making appropriations for financial services and general government for the fiscal year ending September 30, 2020, and for other purposes, had come to no resolution thereon. ____________________"
+   ]
+  },
+  {
+   "date": "2019-06-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-20/CREC-2019-06-20-pt1-PgH4929-2",
+   "sentences": [
+    "But under Secretary Sonny Perdue's reorganization of the Department of Agriculture and consolidation plan, GIPSA was moved deep within the Agricultural Marketing Service--some fear, buried.",
+    "This consolidation will increase difficulty for farmers who seek relief from unfair and abusive practices common--unfortunately--in the livestock and poultry sectors."
+   ]
+  },
+  {
+   "date": "2019-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-18/CREC-2019-06-18-pt1-PgE789-2",
+   "sentences": [
+    "The Great Lakes Fishery Commission has a long history of controlling invasive species across the American-Canadian border."
+   ]
+  },
+  {
+   "date": "2019-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-18/CREC-2019-06-18-pt1-PgH4732",
+   "sentences": [
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Mr. Higgins of New York) having assumed the chair, Ms. Underwood, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 2740) making appropriations for the Departments of Labor, Health and Human Services, and Education, and related agencies for the fiscal year ending September 30, 2020, and for other purposes, had come to no resolution thereon. ____________________"
+   ]
+  },
+  {
+   "date": "2019-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-18/CREC-2019-06-18-pt1-PgH4738",
+   "sentences": [
+    "Section 108 prevents the President from siphoning off funds from critical Army Corps projects to build a border wall.",
+    "Without this language, the President can raid funding from any Corps water infrastructure project he wants and divert those funds to a border wall.",
+    "Earlier this year, when it became public that the President was considering using the Corps' Civil Works fund to pay for a border wall, the backlash was swift and strong, with bipartisan opposition.",
+    "So I remind my colleagues that a ``yes'' vote on this amendment is a vote signaling that they are fine with the President raiding Corps water infrastructure projects in their district to build a border wall.",
+    "The President, on hundreds of occasions, may I remind you, promised that Mexico would pay for any border security necessary to restore order at our shared border.",
+    "Madam Chair, the amendment offered by my colleague from Oklahoma prohibits the use of funds to prepare, to propose, or to promulgate any regulation or guidance that references or relies on analysis of the cost of social carbon.",
+    "This amendment tells the agencies funded in this bill to ignore the latest climate change science.",
+    "Astoundingly, the amendment denies that carbon pollution is harmful.",
+    "According to this amendment, there is zero cost of carbon pollution.",
+    "Ask any power plant operator who is retired who contracted emphysema because of their work on those power plants--and these people exist in our society if they haven't died already--or heavy truck diesel mechanics who worked on retooling engines when those fumes were in the garages when they gave their lives to the public sector and they now have COPD, pulmonary disease.",
+    "This amendment is tantamount to saying that pollution caused climate change, has no cost, and no one will ever get hurt.",
+    "Tell the American citizens who lost businesses, homes, and loved ones to hurricanes, wildfires, and other recent natural disasters, and those who continue to face unrelenting flooding in the Midwest that there are no costs from climate change.",
+    "In the latest National Climate Assessment, our Nation's leading climate scientists reiterated what we have known for years: Climate change is real.",
+    "It is evidenced by the climate-related indicators we have observed, including longer seasons, extreme drought, flooding, sea level rise, and more violent storms.",
+    "The truth is that climate change is having catastrophic social and economic impacts here in the United States and across our globe.",
+    "Before the Trump administration abandoned common sense, the social cost of carbon was a very conservative calculation.",
+    "The full costs of a rapidly changing climate are almost certainly significantly higher, but measuring the social cost of carbon is a much better way than believing the costs are zero.",
+    "Unfortunately, that is what this amendment would require the government to assume: zero harm and zero cost from carbon pollution and climate change.",
+    "Pretending that climate change doesn't exist won't make it go away.",
+    "I think it is an understatement to say that the Army Corps today has its hands full, and I don't think we need to add any confusion by trying to tinker around breaking up agencies and so forth at this moment.",
+    "Section 106 of the underlying bill was included in the bill after the administration proposed breaking up the Army Corps and transferring parts of it--arms, legs, heads--to other Federal agencies.",
+    "Instead of trying to break up and fragment the agency's responsibilities, I would suggest that the administration focus on how it can make the Corps successful in its current organizational structure, including deferring to the technical judgment of the Corps instead of the constant interference from OMB bureaucrats who have never laid a foundation, nor operated spillways along the Mississippi or the Missouri, and so many other responsibilities that the Corps holds across this country.",
+    "Climate change, whether one wishes to admit it or not, is going to require a change in our way of life.",
+    "There are other ways to do that--some of the giveaways to the billionaire class in this country who have had the privilege of living a good life and earning a great deal of money in this country.",
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Ms. DeGette) having assumed the chair, Ms. Shalala, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 2740) making appropriations for the Departments of Labor, Health and Human Services, and Education, and related agencies for the fiscal year ending September 30, 2020, and for other purposes, had come to no resolution thereon. ____________________"
+   ]
+  },
+  {
+   "date": "2019-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-12/CREC-2019-06-12-pt1-PgH4452",
+   "sentences": [
+    "Our Energy and Water bill makes critical investments in energy and water systems to sustain life on Earth by combating climate change, advancing energy science to yield innovation, building water infrastructure and flood control systems, and investing in necessary nuclear security programs.",
+    "We recognize the difficulties of serving a rising population with all of the climate change challenges facing this and the next generation.",
+    "The National Nuclear Security Administration receives $15.9 billion, a $666 million increase above 2019.",
+    "And, finally, this bill ensures the executive branch cannot divert essential Army Corps funding for a border wall.",
+    "Our bill prepares our country to mitigate and adapt to climate change, with challenges like the desertization of the West, as well as coastal resiliency on the Atlantic, Pacific, Gulf, and Great Lakes coasts."
+   ]
+  },
+  {
+   "date": "2019-05-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supplemental Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-05-10/CREC-2019-05-10-pt1-PgH3687-4",
+   "sentences": [
+    "The Missouri and Mississippi River systems are absolutely clogged from the Canadian border all the way down to the mouth at New Orleans.",
+    "Imagine looking out your window and seeing this in your backyard.",
+    "Many of these communities are still underwater, but here we provide an initial downpayment.",
+    "The bill comprehensively aids devastated communities with nutrition and Medicaid assistance, crop and livestock aid to farmers, and aid to upended rural populations."
+   ]
+  },
+  {
+   "date": "2019-02-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Termination of National Emergency Declared by the President on February 15, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-02-28/CREC-2019-02-28-pt1-PgE230",
+   "sentences": [
+    "We cannot allow the President to ask those who have sacrificed already to sacrifice even more--especially for an expensive border wall few think will even work."
+   ]
+  },
+  {
+   "date": "2019-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supplemental Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-16/CREC-2019-01-16-pt1-PgH626-3",
+   "sentences": [
+    "This Nation needs a better strategy to mitigate damage in future disasters, especially as year after year we see accelerating numbers and severity of national disasters due to climate change.",
+    "We must help all communities recover from disasters, as we never know when it will hit our own backyard."
+   ]
+  },
+  {
+   "date": "2019-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Additional Continuing Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-15/CREC-2019-01-15-pt1-PgH556-4",
+   "sentences": [
+    "They dug tunnels under the 650 miles of border that already exists.",
+    "And they have been flying contraband material over our border.",
+    "To secure our Nation and our border, our Nation first needs to open all our government agencies for the American people who are paying the bills, open those departments and pay the men and women who dedicate their lives to protecting our borders and protecting us.",
+    "But most importantly, we need a President who understands you don't stop the drug trade or undocumented migration of individuals by shuttering the entire Department of Homeland Security or furloughing the border agents or making them go to work with no pay.",
+    "He has got the wrong answer for what America needs to address in border security."
+   ]
+  },
+  {
+   "date": "2018-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-18/CREC-2018-07-18-pt1-PgH6501-3",
+   "sentences": [
+    "I represent not only countless letter carriers, but thousands of Ohioans who rely on the Postal Service for timely delivery of their Social Security checks, electric bills, and birthday cards from loved ones.",
+    "For example, in my home State, 18.6 percent of Cleveland households have no checking or savings account, and 24.1 percent of households are under-banked, forced to use costly payday and auto title firms or currency exchange stores to cash paychecks or make consumer loans."
+   ]
+  },
+  {
+   "date": "2018-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-17/CREC-2018-07-17-pt1-PgH6344-2",
+   "sentences": [
+    "First, on election security, a day after President Trump told the whole world he believes Russian President Putin over our intelligence community, while claiming Russia didn't hack our 2016 election, this Republican bill provides zero election security grants to help our States prepare against likely cyber interference.",
+    "Just months away from our 2018 elections, President Trump essentially green-lit Putin's ongoing attacks.",
+    "Further, this bill attacks clean water access by repealing the waters of the United States rule without any public input regarding a replacement.",
+    "I strongly oppose the rider that would block the Environmental Protection Agency from addressing waste from animal feeding operations under the Solid Waste Disposal Act."
+   ]
+  },
+  {
+   "date": "2018-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-26/CREC-2018-06-26-pt1-PgH5706-5",
+   "sentences": [
+    "The funds will go a long way to strengthen troop levels, bolster cybersecurity and space operations capability, gird our commitment to our allies and partners in NATO, check sovereign threats to nations like Ukraine, and numerous other priorities.",
+    "It increases funding for defense health research in the areas of mental health, traumatic brain injury, opioid abuse and pain management, and a host of other critical health research efforts.",
+    "This legislation provides funds for much-needed technological advancements; strengthens the physical and mental health of our servicemembers; and reinforces our military strength for the future through major investments in readiness, force, and defense medicine."
+   ]
+  },
+  {
+   "date": "2018-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-07/CREC-2018-06-07-pt1-PgH4884",
+   "sentences": [
+    "All projects are job creators and benefit future economic growth and environmental improvement.",
+    "Think about this: Nearly 3.2 million Americans now work in clean energy industries alone.",
+    "In our country today, there are 12 wind projects in various stages of development, spanning 10 States off the east, west, and Texas coasts and, of course, in the Great Lakes as well.",
+    "We know we will need workers to do these clean energy jobs.",
+    "The Department of Energy already has workforce training grants for solar, and, therefore, I would very much wish to carry over that effort as well to the Wind Power Technologies Office.",
+    "It really is not just the moonshot; it is the Mars-shot.",
+    "Mr. Chair, I rise to support my good colleague, Congressman Keating, and his amendment dealing with spent nuclear fuel.",
+    "We need a solution all across our country to spent nuclear fuel stored on dozens and dozens of sites across our country.",
+    "We thought we had a solution. $14 billion has been invested in the Yucca Mountain facility, and yet because of opposition from those who were not consulted in Nevada before that site was constructed, our Nation has been at a standstill.",
+    "Northern Ohio, a vast region that I and other Ohio Members represent, has more than one nuclear power plant that is faced with spent nuclear fuel onsite.",
+    "This amendment would build on the work that DOE has been doing to continue to invest in such a critically important area as spent nuclear fuel and its permanent storage."
+   ]
+  },
+  {
+   "date": "2018-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-07/CREC-2018-06-07-pt1-PgH4938-2",
+   "sentences": [
+    "I am not willing to take the money out of this budget, which I consider critical to America's security at home and abroad, and meanwhile, in other fora, to give trillions of dollars to the top 1 percent in this country who aren't really interested in what we are doing here much, don't appreciate it sometimes.",
+    "I want to inform him that the Department of Energy has said it does not have plans to purchase additional heavy water from Iran.",
+    "Frankly, I would rather that the United States take whatever Iran has rather than letting them sell it to Russia or somebody else.",
+    "But the Department of Energy has clearly said they don't have plans to purchase additional heavy water from Iran.",
+    "Adding trillions of dollars to our trade deficit every year is making it harder to fund Social Security and Medicare, programs that are essential to social stability in this country."
+   ]
+  },
+  {
+   "date": "2018-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-07/CREC-2018-06-07-pt1-PgH4964-2",
+   "sentences": [
+    "The amendment makes a significant change to the Clean Water Act regulations, one that deserves thoughtful consideration.",
+    "The Clean Water Act explicitly exempts certain activities from regulation, including normal agricultural activities like plowing fields, planting and harvesting crops, and maintaining irrigation and drainage ditches.",
+    "In his view, wetlands should be able to be filled, even when prior converted farmland has had no action or indication of actual agricultural use for 5 consecutive years; that is, there has been no cropping, no management, no maintenance activities related to agricultural production.",
+    "I would also like to point out that this specific regulation has been on the books for 35 years; yet this amendment would overturn at least 35 years of policy to create a ``once exempted, always exempted'' standard for any land that was ever used as farmland.",
+    "Every intent of Congress, and even the Clinton administration, worked to clarify that you cannot use the Clean Water Act.",
+    "The gentleman actually wants to prohibit funds from being used to implement any activities regarding the social costs of carbon.",
+    "And the amendment denies that carbon pollution is harmful.",
+    "According to this amendment, the cost of carbon pollution is zero.",
+    "So we know that carbon has impacts.",
+    "This amendment is tantamount to saying that weather changes and climate change have no cost and no one will get hurt.",
+    "House Republicans can vote for this amendment, they can try to block the Department of Energy from recognizing the damage caused by climate changes, but they can't overturn the laws of nature.",
+    "So, in the National Climate Assessment, our Nation's leading climate scientists reiterated what we have known for years: Climate change is real, evidenced by the climate-related indicators we have observed, including longer seasons, extreme droughts, and sea level rise.",
+    "The truth is that unchecked climate change would have catastrophic impacts here in the United States and across the globe.",
+    "While claiming that climate change has no cost, House Republicans and the Trump administration seem to be arguing that they are the champions of the working class, decrying the critical EPA safeguards and their alleged impacts on working-class Americans and their access to healthcare.",
+    "I think it is outrageous that the opposition party has the nerve to pose as the defenders of working-class Americans because, actually, you have a pretty poor record of defending those who are the poorest, ranging from dropping food stamps, to the GOP tax scam selling out Medicare and Medicaid to pay for corporate tax breaks, to Republican Governors deciding not to approve the expansion of Medicaid under the Affordable Care Act and now trying to get rid of people on insurance who have preexisting conditions, to failing to quickly provide funding resources and the necessary leadership to help the victims of last fall's hurricanes.",
+    "And the answer certainly isn't pretending that climate change won't have real costs to all Americans.",
+    "So it is time to stop denying the science and accept reality: Climate change is occurring, it is caused by humans, and it is already causing serious damage.",
+    "Before the Trump administration abandoned common sense, the social cost of carbon was a very conservative calculation.",
+    "The full costs of a rapidly changing climate are almost certainly significantly higher, but the social cost of carbon is a much, much better estimate than assuming the costs are zero.",
+    "Unfortunately, that is what this amendment would require the government to assume: zero harm and zero cost from carbon pollution and climate change.",
+    "Pretending climate change doesn't exist won't make it go away."
+   ]
+  },
+  {
+   "date": "2018-04-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Proposing a Balanced Budget Amendment to the Constitution",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-04-12/CREC-2018-04-12-pt1-PgH3162",
+   "sentences": [
+    "This phony balanced budget amendment is an old, sad Republican rerun.",
+    "America doesn't need this phony constitutional amendment meant to cover up Presidents' and congressional Republicans' failure to produce a balanced budget, even for 1 year when they hold all the reins of power.",
+    "If Republicans actually cared about the national debt, they wouldn't have passed their tax giveaway last year that will add more than $1.8 trillion to the deficit over the next decade.",
+    "Whoa, $1.8 trillion more debt held by the public will approach 100 percent of gross domestic product by 2028.",
+    "Our country hasn't seen this level of debt since just after World War II, when the debt-to-GDP ratio hit an all-time high.",
+    "Sadly, the Republican pattern of tax giveaways to the rich while racking up huge Federal deficits is not new.",
+    "Mr. Speaker, the balanced budget amendment is a ridiculous sham."
+   ]
+  },
+  {
+   "date": "2018-01-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the White Mountain Apache Tribe Water Rights Quantification Act of 2010",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-01-10/CREC-2018-01-10-pt1-PgH114-2",
+   "sentences": [
+    "It was in 1935 that this body enacted the National Labor Relations Act.",
+    "It guaranteed basic rights to private sector workers to organize into trade unions, to engage in contractual bargaining for decent wages and better conditions at work, and to take joint action, if necessary.",
+    "Let me remind my colleagues though, throughout our National Labor Relations Board's history, it has never and will not assert jurisdiction where it would interfere with a Tribe's internal governance rights in purely intramural matters.",
+    "Re United Steelworkers oppose inclusion of anti-worker H.R. 986, Tribal Labor Sovereignty Act of 2017 in S. 140."
+   ]
+  },
+  {
+   "date": "2017-12-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Continuing Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-12-07/CREC-2017-12-07-pt1-PgH9732",
+   "sentences": [
+    "Rather than pass a tax bill that rewards the wealthiest in our country and wreaks havoc on America's hardworking middle class families, they ought to do the dutiful work of managing the funds to operate the departments that serve the people of the United States."
+   ]
+  },
+  {
+   "date": "2017-09-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-06/CREC-2017-09-06-pt1-PgH6695",
+   "sentences": [
+    "It doesn't serve America's future if money is pulled from developing engine technologies to increase fuel economy of cars, expand domestic manufacturing, and create good-paying American jobs.",
+    "Unless you live under a rock, you know these initiatives are both popular and effective and necessary: 61 percent of Republicans in Ohio support the requirement of getting to an average of 40 miles per gallon in new cars by 2025, with 73 percent of the public, overall, supporting that.",
+    "Advanced Vehicle Research supported the development of all-electric vehicles, from Nissan's Leaf in Tennessee to Tesla's Model S in California."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6335",
+   "sentences": [
+    "The single fastest growing job in America is wind turbine technician.",
+    "An investment in clean energy is an investment in American jobs and our future.",
+    "An 83 percent cut from the Vehicle Technologies Office--now that is a backwards move; A 60 percent cut to the Advanced Manufacturing Office--and this Member is unwilling to see that turn to the Chinese; A 57 percent cut to solar energy--one of the fastest growing job sectors in our country; A 65 percent cut to wind energy; and ARPA-E, the most complex new energy technologies, zero; the program is eliminated.",
+    "Beginning back in the old 1970s and eighties when this all got started, it took 30 years of Department of Energy support in concert with the private sector to unleash the fracking revolution that has helped change our world dramatically.",
+    "The next revolution will be the clean energy revolution.",
+    "Exempting the repeal of the Clean Water Rule from the Administrative Procedure Act cedes far too much authority to the executive branch and is something that I cannot support.",
+    "For that reason, and for the draconian cuts to clean energy, I must urge my colleagues to oppose the Energy and Water portion of this spending package.",
+    "When those concerns are rolled together with busting the spending caps and building an expensive border wall that doesn't keep us safe or solve our immigration needs, I believe that there is no excuse for any Democrat to support the overall bill before us.",
+    "So as we consider this bill today--there were particular amendments on subjects that range as far afield as the Soo Locks and the Energy Information Administration, which we will get into in a moment, water projects that are some of the biggest job creators across this country--let's not lose sight of the big frame.",
+    "All of our ports and all of our water infrastructure that is so vital not just west of the Mississippi, but the Great Lakes region and our coasts, some of the challenges we face in the Everglades, these are issues that all of America cares about, particularly when it is in your own backyard.",
+    "We are now looking at wind energy, the fastest growing job sector in America.",
+    "As I mentioned, the natural gas discovery that has really been responsible for leading us toward energy independence was made possible by the fracking technology developed over many years at the U.S. Department of Energy.",
+    "Some are retired and some are still in place, but we owe them a deep debt of gratitude for serving the American people so nobly."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6428-2",
+   "sentences": [
+    "Unfortunately, Republican insistence on the inclusion of poison pill riders like this one has derailed several important pieces of legislation over the last few years, especially clean water rural riders.",
+    "This rider would exempt the repeal of the clean water rule from laws that would otherwise apply, including the Administrative Procedure Act, essentially allowing the President to act unilaterally, the executive branch to act unilaterally without any input from the public.",
+    "Exempting this action on clean water is a very slippery slope toward government by fiat, by an administration which deserves more scrutiny, I might add, on that front than any in our history.",
+    "Mr. Chairman, I would just like to comment, in asking my colleagues to support this amendment, that the amendment itself is intended to address the two Supreme Court decisions.",
+    "Ten percent of the jobs produced in the energy sector are in renewables, and we actually employ more people in solar and in wind energy than we do in coal extraction.",
+    "India is going to double its consumption in that same timeframe."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6437-2",
+   "sentences": [
+    "It would stifle innovation and punish companies that have invested in domestic manufacturing."
+   ]
+  },
+  {
+   "date": "2017-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sanctions on the Russian Federation",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-25/CREC-2017-07-25-pt1-PgH6280",
+   "sentences": [
+    "The bill also holds Iran, North Korea, as well as Russia accountable.",
+    "Specifically, Russia for interference in our Democratic Republic, but also for its ongoing human rights violations, its illegal invasion and occupation of Crimea, and continued military violence in eastern Ukraine with over 10,000 dead due to Russian aggression.",
+    "But what a sad day we have reached when there is doubt whether sanctions against Putin's Russia, liberty's proven adversary, will be even signed by this President of the United States. ____________________"
+   ]
+  },
+  {
+   "date": "2017-02-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disapproving Rule Submitted by Department of Labor Relating to Savings Arrangements by States for Non-Governmental Employees",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-15/CREC-2017-02-15-pt1-PgH1206",
+   "sentences": [
+    "Their attempt to roll back President Obama's Department of Labor rules, which expanded working families' abilities to save their own retirement money through State- and large-city-administered retirement savings programs.",
+    "For years, Republicans have hawked a false crisis about Social Security solvency; meanwhile, now they are proposing a very real retirement security crisis for America's seniors.",
+    "With 10,000 American seniors reaching retirement age every day, enormous strain on the Federal budget is mounting to make up the difference.",
+    "This leads to overreliance on Social Security and other State and Federal assistance programs."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,666 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "barr",
+ "name": "Andy Barr",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 41,
+  "press": 0,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Main Street Capital Access Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-21/CREC-2026-07-21-pt1-PgH4707",
+   "sentences": [
+    "That means higher costs, fewer loans, more forced consolidation."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Privacy in Purchases Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-14/CREC-2026-07-14-pt1-PgH4441-2",
+   "sentences": [
+    "At its core, this bill is about protecting privacy and preventing government surveillance on citizens simply for exercising their constitutionally enshrined Second Amendment rights.",
+    "Despite what those on the other side of the aisle may say, this bill does nothing to prevent law enforcement or regulators from investigating criminal activity, nor does it change the stringent requirements on financial institutions to comply with existing anti- money laundering laws or suspicious activity reporting requirements.",
+    "However, what my friend from California who just spoke doesn't say, but it needs to be said, is that the lawful purchase of a firearm protected by the Second Amendment is not in and of itself suspicious activity, nor should it be surveilled by the government.",
+    "This is about preventing government actors from using financial data to target Americans who are engaged in conduct expressly protected by the Second Amendment's right to keep and bear arms, a fundamental liberty for Americans.",
+    "My friend, the ranking member from California, cited statistics about annual and daily deaths that she says are the result of gun violence.",
+    "Rather than blaming gun violence, Congress would be more productive focusing on the root causes of homicide: the breakdown of the family, lack of active parenting, mental illness, open-border policies, policies to defund the police, soft-on-crime policies like no cash bail, and politically motivated violence, like the kind that was behind the murder of Charlie Kirk."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Housing for the 21st Century Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-23/CREC-2026-06-23-pt1-PgH4151-3",
+   "sentences": [
+    "The 21st Century ROAD to Housing Act is exactly the kind of commonsense housing reform needed to increase housing supply and help lower costs for American families."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Directing the President Pursuant to Section 5(C) of the War Powers Resolution to Remove United States Armed Forces From Unauthorized Hostilities in the Islamic Republic of Iran",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-04/CREC-2026-03-04-pt1-PgH2395",
+   "sentences": [
+    "Mr. Speaker, I rise in strong opposition to this dangerous and misguided War Powers Resolution that would weaken our country and serve as a gift to our enemies.",
+    "The United States, Israel, and all of our allies are safer because the Ayatollah is dead.",
+    "Since the taking of our hostages from our embassy in 1979 to the infamous 1983 Beirut barracks bombing that killed 241 U.S. Marines, to the attack on the USS Cole that left 37 Navy sailors dead, to the maiming and killing of thousands of U.S. military members during the global war on terrorism, the Iranian terrorist regime has always posed a grievous threat to the United States.",
+    "President Trump promised that Iran can never obtain a nuclear weapon.",
+    "He is acting on that promise to make the world a safer place, and he is complying with the law in doing so, not just in complying with the notification requirements of the War Powers Resolution, not only through the consultation provisions, and not only with routinely updating Congress, but also under the Commander in Chief powers.",
+    "The NDAA is the policy of this Congress, which identifies Iran as a threat to our country.",
+    "The Constitution was clear that Congress has the sole authority to declare war, which changes the legal status of the country."
+   ]
+  },
+  {
+   "date": "2025-09-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Chinese Fentanyl Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-02/CREC-2025-09-02-pt1-PgH3728",
+   "sentences": [
+    "Unfortunately, this scourge has spread with the help of our greatest strategic adversary, the People's Republic of China and the Chinese Communist Party.",
+    "As a member of the Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party, we conducted an investigation, and that investigation in the last Congress established that the PRC Government, under the control of the Chinese Communist Party, directly subsidizes the manufacturing and export of illicit fentanyl materials and other synthetic narcotics through tax rebates."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Guiding and Establishing National Innovation for U.S. Stablecoins Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-17/CREC-2025-07-17-pt1-PgH3405",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of the passage of the GENIUS Act, and I thank Chairman Hill for his extraordinary leadership, not just in this Congress, but for a long time advocating for this moment.",
+    "Yet, I would argue, with all respect, that, arguably, the most important and most transformational pieces of legislation in this Congress are these bills that we are talking about here today, the GENIUS Act and the CLARITY Act.",
+    "It is paramount that we send this historic piece of legislation, the GENIUS Act, to the President's desk because this bill is the first of its kind in creating a regulatory framework for the future of stablecoin issuance in the United States to revolutionize finance and payments in this country and around the globe.",
+    "Not only will this cement us, the United States, for decades to come as leaders and innovators in the digital asset space, but it will, importantly, protect the U.S. dollar's dominance and increase demand in our Treasury market.",
+    "In the GENIUS Act, stablecoins become pegged to the U.S. dollar and backed by high-quality liquid assets.",
+    "Mr. Speaker, in stark contrast to what my friend, the gentleman from Illinois (Mr. Casten), was arguing, this actually prevents these other so-called stablecoins from actually thriving in the marketplace.",
+    "You are going to have stablecoins that actually are stable.",
+    "He is making the argument for why he should support the GENIUS Act.",
+    "It is because of unstable stablecoins that are out there.",
+    "Those products will lose ground in the marketplace after we pass the GENIUS Act.",
+    "It will ensure that consumers are protected while reaping the benefits of blockchain technology.",
+    "The GENIUS Act will allow for scalability to occur in the stablecoin marketplace, ensuring American consumers and businesses have access to this innovative product.",
+    "Both banks and nonbanks can issue stablecoins under the GENIUS Act, bringing together the best actors in both the traditional finance space and the new era of digital finance.",
+    "The GENIUS Act provides that all appropriately regulated banks, including the U.S. operations of foreign banking organizations, which are supervised by the Federal Reserve, are treated equally to their U.S. peers.",
+    "This is particularly important with respect to the issuance, reserve and custody services, and bank capital requirements irrespective of whether they are deposit insured since the act prohibits stablecoins from being covered by FDI insurance.",
+    "A robust, well-regulated stablecoin market eliminates any justification for a government controlled Central Bank Digital Currency, or CBDC, which jeopardizes Americans' access to freedom, privacy, and apolitical private capital.",
+    "This is an important point for all of my colleagues on my side of the aisle who share my concern and opposition to a CBDC.",
+    "If you want to put a dagger in the heart of this crazy surveillance state idea of a Central Bank Digital Currency, pass this bill.",
+    "I urge all Members to vote for this bill, vote for the GENIUS Act, which will eliminate all arguments for a CBDC.",
+    "With the GENIUS Act, we will increase the speed and decrease the cost of payments.",
+    "If all Americans see housing their deposits via a CBDC at the Federal Reserve as a risk-free proposition, they would be incentivized to pull their money out of private-sector banks.",
+    "The GENIUS Act will not erode the deposit base.",
+    "It will allow banks to issue and custody stablecoins and participate in this emerging crypto economy cementing the dollar as the world's reserve currency, protecting consumers and the deposit base, and supercharging the Treasury market."
+   ]
+  },
+  {
+   "date": "2025-07-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Anti-Cbdc Surveillance State Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-17/CREC-2025-07-17-pt1-PgH3427",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of my friend from Minnesota, Whip Emmer's bill, the Anti-CBDC Surveillance State Act, a bill I am proud to cosponsor.",
+    "This bill would prohibit the Federal Reserve from issuing a central bank digital currency, or a CBDC, to anyone.",
+    "In fact, a cursory, simple review of the Federal Reserve Act shows that the Federal Reserve does not have the legal authority to issue a CBDC to individuals absent explicit authorizing legislation from Congress.",
+    "The Supreme Court has also recognized Congress' power to coin money and regulate the value thereof, implicitly denying to the executive branch or to the Fed the ability to do this without congressional authority.",
+    "The argument for a CBDC that Beijing is doing this, so we should do it, too, why on Earth would we want to imitate, emulate, or copy Beijing's surveillance-state authoritarianism?",
+    "We do it the way to honor Americans' privacy through the GENIUS Act and through private stablecoins.",
+    "Surveillance of Americans' individual financial transactions through a CBDC does raise serious privacy concerns and concerns about government control and politicization of loans, online payments, credit scores, tax compliance, Federal contracts, monetary policy, and the like.",
+    "In addition to these privacy concerns, a central bank digital currency would centralize Americans' finances, eroding the banking deposit base.",
+    "This is a big concern that I have, that a CBDC would substantially decrease the availability of credit and increase the cost of financial services and products for consumers, destroying our conventional, traditional banking system.",
+    "We don't want to erode the deposit base with a CBDC.",
+    "I heard them lecture us about a CBDC, and it made me more convinced than ever that we don't want to be like Europe.",
+    "We must disintermediate our banking system and allow for the creation of a CBDC.",
+    "If my Republican colleagues really don't like a CBDC, then vote for the GENIUS Act, which takes away all the arguments for it."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendment to H.R. 1, One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-02/CREC-2025-07-02-pt1-PgH3039-8",
+   "sentences": [
+    "He promised he would make the Tax Cuts and Jobs Act permanent.",
+    "He promised he would deliver the largest tax cut for hardworking taxpayers in American history, and he promised to eliminate taxes on tips, overtime, and Social Security benefits.",
+    "He is delivering much-needed relief for the American people, and this will produce an investment surge, driving real median incomes up by $10,000 relative to the scenario in which the Tax Cuts and Jobs Act is allowed to expire.",
+    "To my friend from California, if he cares about fiscal responsibility, stopping a $4.5 trillion tax increase stops a recession.",
+    "It pushes more families into hunger, and it leaves seniors stranded all so billionaires can keep more of what they will never spend.",
+    "If you can't afford groceries or insulin, figure it out."
+   ]
+  },
+  {
+   "date": "2025-05-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Office of the Comptroller of the Currency of the Department of the Treasury Relating to the Review of Applications Under the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-20/CREC-2025-05-20-pt1-PgH2168-2",
+   "sentences": [
+    "Mr. Speaker, pursuant to House Resolution 426, I call up the joint resolution (S.J. Res. 13) providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Comptroller of the Currency of the Department of the Treasury relating to the review of applications under the Bank Merger Act, and ask for its immediate consideration in the House.",
+    "Mr. Speaker, I rise in support of this joint resolution of disapproval that would nullify the Office of the Comptroller of the Currency's final rule that makes it more difficult for banks to merge and merge in a healthy way.",
+    "Today, we have the opportunity to prevent future administrations from issuing arbitrary rules on mergers and acquisitions that lack robust cost-benefit analysis and would make it significantly harder for financial institutions to grow and compete.",
+    "Mergers often present the only viable path for these institutions to keep up with these regulatory and technological costs and continue serving their local communities.",
+    "Instead of making it harder for banks to merge, we should be eliminating outside obstacles to mergers, enhancing competition and innovation, and ensuring that Americans, especially those in rural and underserved communities, retain access to physical branches with employees who understand their local economies.",
+    "That is why I introduced H.R. 1900, the Bank Failure Prevention Act, which includes a shot clock to ensure timely decisions on merger applications.",
+    "Congress should care about the shot clock on merger applications, as well.",
+    "The Bank Failure Prevention Act will help community banks and regional banks thrive in today's competitive environment, providing for a shot clock on the review of those merger applications and providing better outcomes for consumers.",
+    "The OCC's merger rule under the Biden administration would have taken us in the exact opposite direction.",
+    "It would have upended decades of precedent by shifting the burden onto banks to prove their merger should be approved rather than requiring the OCC to demonstrate how the merger conflicts with statutory factors.",
+    "Additionally, the rule would have abandoned expedited review for mergers for small, well-capitalized banks.",
+    "Before the Biden-era regulation, there was an opportunity for expedited review of healthy mergers when there were small and well-capitalized institutions involved.",
+    "Expedited reviews are essential to avoid prolonged, costly merger review processes that hinder banks from maintaining their employee base or investing in technology.",
+    "At the end of the day, Mr. Speaker, consumers are the ones who are hurt most when their banks are caught in limbo and forced to devote resources to navigate the merger process instead of enhancing their own products and services.",
+    "The Democratic-led OCC rule was driven more by a progressive ideology against mergers in all sectors of all kinds in the economy rather than sound, rational policymaking.",
+    "Creating different merger rules for banks with different charters would add significant ambiguity for both banks and their customers.",
+    "However, without this Congressional Review Act resolution, there is nothing to prevent a future administration from reintroducing this damaging rule that would prevent healthy, beneficial mergers from occurring.",
+    "They are supporting mergers of big, bad banks, and that hurts Americans.",
+    "Allowing healthy mergers to prevent bank failures allows for healthy financial institutions to compete with the big Wall Street banks.",
+    "We obviously know that there are bad regulators from the prior administration that prevented healthy mergers that would have prevented bank failures.",
+    "Now I will address this assertion that bank merger applications are just rubber-stamped by regulators.",
+    "Mr. Speaker, as to our Democratic colleagues' concern that this legislation and allowing for healthy mergers to happen in the banking sector would somehow diminish financial services or that customer service would somehow be lost, it is actually the opposite.",
+    "When you have healthy mergers among, especially, community banks or a small regional bank acquiring a community bank, that allows them to add scale.",
+    "The merger review process is a very involved process.",
+    "There is quite a bit of scrutiny that goes into approving these mergers.",
+    "The problem we have seen, especially in the previous administration, is not necessarily that they disapproved a merger.",
+    "If it is in the interest of financial stability to reject a bank merger, then that very well could be a legitimate regulatory decision, but make the decision.",
+    "Mr. Speaker, if the gentlewoman is concerned about layoffs and employees of banks losing their jobs, the surest way that you will have massive layoffs and workers losing their jobs is for a bank merger application to be presented to the agencies and have literally no decision because guess where the acquisition target employees are going to go.",
+    "What we are saying is: Give the merger applicant a decision one way or the other.",
+    "In 2025, the advent of all kinds of nonbank financial services has to be taken into account when you look at the merger landscape in banking.",
+    "There are all kinds of payment systems, movement to stablecoins and the blockchain.",
+    "Mr. Speaker, when you are doing an analysis of the propriety of a bank merger, you can't just look at whether or not this leads to some level of consolidation in the banking sector.",
+    "In order to achieve the scale, to provide the same level of services, to provide the same level of technological convenience, and to provide the same level of underwriting and access to capital that consumers are being accustomed to now in this very competitive landscape, healthy mergers are needed for banks to compete with all of the financial technology that is happening in the economic landscape.",
+    "They give us a global visibility that we wouldn't have if we didn't have large globally important financial institutions that were forward positioned in other continents that allowed us visibility into financial flows and helped our law enforcement and our intelligence agencies find bad actors.",
+    "That is why we want healthy mergers.",
+    "We want de novo charters to backfill, but we want healthy mergers so that we have a constantly dynamic and healthy banking system.",
+    "There were, but it is not because there are healthy mergers in this country that that happened.",
+    "Maybe they didn't have enough competition, Mr. Speaker, because we had regulators that prevented healthy mergers to enter into their market space and actually compete and take customers who are unsatisfied with that cross-selling.",
+    "That is not consumer protection, but healthy mergers that allow for greater competition of the big banks.",
+    "When we say that large banks are not inherently bad, what we mean by that is that when you allow for a merger, let's say, of two regional banks, and you allow that scale, that economies of scale to take place, and where there are investments in technology, not only do you give the customers of that larger institution, that successor merged institution with greater resources to provide lower cost services, more technological advancements, but, yes, you allow them to invest in what?",
+    "Mr. Speaker, let me give you an example of where a merger that was recently approved certainly doesn't hurt consumers but helps consumers and creates more competition.",
+    "The gentlewoman cites the approval of the Capital One-Discover merger.",
+    "Do you know what that merger did?",
+    "This is a very formidable competitor to MasterCard and Visa now that there is an approved merger between Capital One, a substantial credit card business, a substantial payment business, and Discover with their substantial network.",
+    "It eliminated expedited procedures for approval of community bank mergers, small noncomplex mergers that would allow those community banks to serve those small communities better.",
+    "For example, in instances where two community banks within the same market attempt to merge, and the merger does not pose significant financial stability, consumer protection, competition or safety, and soundness concerns, the OCC should treat the transaction as noncomplex and permit for review under streamlined procedures.'' It makes sense to me that we would have streamlined, expedited procedures so that we can make sure community banks can continue to compete.",
+    "It is about small banks and the survival of small banks under the avalanche of red tape that came at them after Dodd-Frank, after the avalanche of competition from nonbanks and credit unions and fintechs and blockchain companies.",
+    "Delaying approvals of healthy mergers is very dangerous for financial stability.",
+    "We need this legislation so that we never have a bad regulation that would prevent regulators from allowing expedited approval of mergers that help save the system.",
+    "Mr. Speaker, former Federal Reserve Governor and now-Vice Chair for Supervision Michelle Bowman, who talked about the procompetition benefits of healthy mergers, said: ``Reducing the efficiency of bank M&A can be a deterrent to healthy bank transactions.",
+    "I noticed that the CEO of a successor institution that was formed by the merger of two regional banks was sitting right next to the CEO of one of the largest banks on planet Earth, so I said to the CEO of one of the largest banks on planet Earth: This gentleman who is now the CEO of a big regional bank is sitting next to you.",
+    "There are a lot of mergers that help create more competition.",
+    "That is why we want to make sure that mergers are allowed to allow for distressed banks to sell themselves instead of failing, thereby insulating the Deposit Insurance Fund from losses.",
+    "I urge all of my colleagues, for the reasons that we have outlined today, to help us invalidate this bad regulation and to make sure that no regulator in the future can pass another bad regulation like this that would prevent healthy mergers.",
+    "For goodness' sake, if you want dynamism and competition in a diverse banking system, support our agenda that not only allows for healthy mergers but also provides for regulatory tailoring so that we provide relief to small community banks so that they can compete, relief to the regional banks so that they can compete, and, for goodness sake, clear the way for de novo charters, new banks, to come into the system.",
+    "I don't know, for the life of me, why my friends on the other side of the aisle who complain about big banks won't allow for healthy mergers to compete with them, won't allow for new banks to come into the system by overregulating the heck out of the sector, and won't allow there to be a dynamic, diverse banking system."
+   ]
+  },
+  {
+   "date": "2024-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Countering the Prc Malign Influence Fund Authorization Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-09/CREC-2024-09-09-pt1-PgH5066",
+   "sentences": [
+    "The Chinese Communist Party is the most dangerous threat America has faced in decades, and Beijing has been spreading its malign influence across the world.",
+    "Among other things, their disruptive tools include predatory lending, coercive economic practices, misinformation, taking advantage of foreign corruption, and legitimizing authoritarianism.",
+    "The Countering the PRC Malign Influence Fund was originally created by an appropriation intended to address China's pernicious and growing influence, but for too long it has been used as a slush fund for the State Department's vanity projects, for example: $6 million for expanding Pacific Island weather and ocean data collection, $5 million for English language training in Angola, $2.5 million for scooter charging stations in Vietnam.",
+    "While some may argue that funding for these types of activities can counter the PRC by meeting the wish lists of our partners experiencing PRC pressure, there are other organizations like the Development Finance Corporation and USAID that are already able to meet these types of needs with their own appropriated and authorized funding.",
+    "We need to support USAID where it can help and the Peace Corps where it can help with soft power.",
+    "We have a $35 trillion national debt, Mr. Speaker."
+   ]
+  },
+  {
+   "date": "2024-09-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hong Kong Economic and Trade Office (Hketo) Certification Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-09/CREC-2024-09-09-pt1-PgH5068",
+   "sentences": [
+    "Tragically, this ended when the Chinese Communist Party crushed democracy and free enterprise in Hong Kong.",
+    "Both Secretary of State Pompeo and Secretary Blinken have certified that because of the Chinese Communist Party's control over Hong Kong's legislature, judicial system, and police force, Hong Kong can no longer be considered a separate entity from the People's Republic of China.",
+    "The tragedy that has unfolded in Hong Kong and the ripping up of an international treaty by the Chinese Communist Party is a stark lesson that Beijing cannot be trusted, which we have to learn, especially when it comes to deterrence in Taiwan.",
+    "We also cannot allow the Chinese Communist Party to use Hong Kong's economic and trade offices as a back door into the United States."
+   ]
+  },
+  {
+   "date": "2024-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Securities and Exchange Commission Relating to \"Staff Accounting Bulletin No. 121\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-08/CREC-2024-05-08-pt1-PgH2950",
+   "sentences": [
+    "Mr. Speaker, I stand in front of you today to support my friend and colleague from Nebraska (Mr. Flood) and his CRA resolution to nullify the SEC's Staff Accounting Bulletin Number 121 which would eviscerate financial institutions' ability to provide custodial services for digital asset firms.",
+    "In theory, under SAB 121, a bank could custody digital assets.",
+    "If a bank decides to custody digital assets and adhere to SAB 121, then the on-balance-sheet requirement would have significant capital, liquidity, and other prudential consequences.",
+    "This makes it difficult, at best, for regulated institutions to safeguard digital assets.",
+    "The fact of the matter is to the extent there is concern about a lack of regulation, if there is concern about a lack of regulatory clarity or risk with crypto, then we should not make it impossible, as a practical matter, for well-regulated banks to protect Americans who own digital assets with custody services.",
+    "Mr. Speaker, if you want to protect customers and if you want to protect investors in digital assets, then we shouldn't be pushing crypto transactions into less transparent and more opaque, riskier offshore places, but that is exactly what SAB 121 would do.",
+    "It had nothing to do with the fact that many of its customers were technology firms or worked in the blockchain space.",
+    "Re Prudential Impact of Staff Accounting Bulletin 121.",
+    "Mr. Michael Hsu, Acting Comptroller, Office of the Comptroller of the Currency, Washington, DC.",
+    "Office of the Comptroller of the Currency, April 6, 2023.",
+    "Dear Senator Lummis and Chairman McHenry: Thank you for your letter dated March 2, 2023, concerning the impact of the Securities and Exchange Commission (SEC) Staff Accounting Bulletin Number 121 (SAB 121) on institutions regulated by the Office of the Comptroller of the Currency (OCC).",
+    "If a bank determines that it is appropriate to follow SAB for financial reporting purposes, the bank should also prepare its Consolidated Reports of Condition and Income in the same manner. (5) Does SAB 121 conflict with your agency's input regarding the Basel Committee on Bank Supervision's Prudential Treatment for Crypto Asset exposures, in so far as the definition of ``digital asset'' under SAB 121 also encompasses Group 1a, Group 1b, and Group 2 digital assets under the Prudential Treatment framework?",
+    "The Basel Committee on Banking Supervision (BCBS) defines cryptoassets as ``private digital assets that depend on cryptography and distributed ledger technologies (DLT) or similar technologies.",
+    "Digital assets are a digital representation of value, which can be used for payment or investment purposes or to access a good or service.'' While the final BCBS cryptoasset standard applies different capital treatments to Group 1 and Group 2 cryptoasset exposures, the standard states that custodial service activities are not considered ``exposures'' for the purposes of the standard. (6) Do you agree that the capital charge for banks, credit unions, and other financial institutions under SAB 121 is prohibitive?",
+    "Sincerely, Michael J. Hsu, Acting Comptroller of the Currency."
+   ]
+  },
+  {
+   "date": "2024-04-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 8034, Israel Security Supplemental Appropriations Act, 2024; Providing for Consideration of H.R. 8035, Ukraine Security Supplemental Appropriations Act, 2024...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-19/CREC-2024-04-19-pt1-PgH2526-5",
+   "sentences": [
+    "This license has now been renewed eight times since the start of Russia's full-scale, unprovoked invasion of Ukraine, and it continues to undermine measures designed to curtail Russia's energy revenues.",
+    "This license, which is the architecture of the Biden foreign policy on Ukraine has become a lifeline for Vladimir Putin.",
+    "It is the most prominent example of how the Biden administration's radical climate agenda has collided with its stated policy to counter Russian aggression, and it shows how the Biden administration's climate policy conflicts with our national security.",
+    "My very timely amendment would prevent this renewal and would erode the energy profits that are refilling Putin's coffers and funding his war in Ukraine.",
+    "Russia's oil and gas revenues have been rising, and countries like India and China have been buying Russian oil well above the price cap put in place.",
+    "The Biden administration's refusal to implement strong sanctions against the pipeline not only removed deterrents before the full-scale invasion and invited Putin's invasion of Ukraine, but also allowed parts of Europe's dangerous reliance on Russian energy to continue until Putin's tanks had already rolled across Ukraine's borders.",
+    "It makes no sense to fund a needed resistance against Russia's unprovoked war against Ukraine while also allowing Russia to fill its war machine coffers through its sale of energy to the rest of the world.",
+    "He cannot pursue a radical anti-fossil energy climate crusade at home and hope to keep energy prices low.",
+    "The only way to truly punish Moscow and deprive Putin of the financial support he needs to materially--to prosecute the war is by removing the general license on the energy-related transactions facilitated by sanctioned Russian banks."
+   ]
+  },
+  {
+   "date": "2023-12-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Bureau of Consumer Financial Protection Relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-12-01/CREC-2023-12-01-pt1-PgH6055-5",
+   "sentences": [
+    "Then, I want everyone here in this Chamber to recognize that this week, in the Committee on Financial Services, I asked Director Chopra if he recognizes that if a small business owner fails to understand why demographic information--irrelevant, by the way, to creditworthiness of the borrower--demographic data is being collected, it could lead to confusion and misunderstanding and potential liability for the financial institution."
+   ]
+  },
+  {
+   "date": "2023-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-08/CREC-2023-11-08-pt1-PgH5550-5",
+   "sentences": [
+    "It represents a fundamental policy shift in our approach to Russia and ending its aggression against Ukraine.",
+    "Russian oil is trading well above the cap, funneling billions of dollars and, in fact, trillions of rubles into Putin's war machine.",
+    "It is also a recognition that President Biden and Climate Czar John Kerry's climate agenda and war on American energy has come in direct conflict with our national security and our efforts to counter Russian aggression.",
+    "Their climate policies have limited the tools available to them and pushed our country into pursuing a woefully ineffective price cap strategy in lieu of closing the huge loophole they created for energy-related transactions in their sanctions on Russian banks.",
+    "That is the Biden policy, to create a huge loophole for energy-related transactions that allows Putin to finance this war.",
+    "License number 8H is an extension of authorizations by this administration going back to the very start of the war in Ukraine.",
+    "Why this administration punishes American energy but rewards Putin's energy is beyond comprehension.",
+    "On the one hand, the Biden administration is greenlighting Russia's efforts to earn hard currency for its war machine even as it asks Congress for billions of dollars to defend and reconstruct Ukraine.",
+    "If we really want to help the Ukrainian freedom fighters, we have to end Russia's ability to wage war.",
+    "These revenues are bolstering Moscow's abilities to threaten Ukraine with the government planning to increase military spending by 70 percent next year.",
+    "Moreover, with Urals crude prices rising, the World Bank recently concluded that the price cap ``appears increasingly unenforceable.'' The only way to counteract this trend will be to acknowledge once and for all that the war in Ukraine will not end until Russian energy dries up.",
+    "If you want to get tough on Putin, stop his energy exports.",
+    "Mr. Chair, I appreciate the sentiment, and I am with Mr. Hoyer on providing support for Ukraine, but the 8H license is actually the loophole.",
+    "To the administration's credit, they are trying to solve this difficult question: How do we impose sanctions on Russia and Putin without hurting our allies?",
+    "This is where the administration's climate agenda is in conflict with our national security.",
+    "If they repealed the general license and did what Treasury does all the time on sanctions and to help our allies in case-by-case scenarios with a special license--let's say, for Germany in a particular case, okay, that is fine; they retain that authority, Treasury would--but a general license that says Putin can sell all of his energy with no ramifications whatsoever through a general license is not tough on Russia.",
+    "Mr. Chair, my amendment prohibits funds from being used to implement the Biden administration's January 2021 executive order titled ``Tackling the Climate Crisis at Home and Abroad.'' The Biden administration issued this executive order under the guise of protecting United States' national security and foreign policy, yet Republicans see right through this.",
+    "We should block misguided ESG initiatives where the ultimate goal is to politicize the allocation of capital and steer investments into the Democrats' desired climate transition.",
+    "Instead, unsurprisingly, the Biden administration releases this executive order that calls for the U.S. to rejoin the Paris Agreement, creates a National Climate Task Force consisting of members from multiple Federal agencies, including the Secretary of the Treasury and the Secretary of Defense, which will result in agencies taking their eye off the ball of real systemic risks in our financial system and global stability to focus on political initiatives and calls for a government-wide approach to the climate crisis.",
+    "What might be the most egregious is the executive order's call to tamper with financial flows to align with a pathway toward low greenhouse gas emissions and climate-resilient development.",
+    "The Biden administration is calling for the government to put its thumb on the scale of free-flowing capital, pick winners and losers, and pursue an agenda to starve energy companies of the financing that they need and redirect capital into speculative green energy technologies that, frankly, are unproven and will not actually fix the climate."
+   ]
+  },
+  {
+   "date": "2023-10-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Standing with Israel As It Defends Itself Against the Barbaric War Launched by Hamas and Other Terrorists",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-25/CREC-2023-10-25-pt1-PgH5053-10",
+   "sentences": [
+    "Mr. Speaker, I rise in support of this important resolution affirming Israel's right to self-defense against this savage war perpetrated by Hamas and other Iranian-backed terrorists.",
+    "While it was Hamas terrorists who invaded peaceful communities across Israel, decapitating babies, burning elderly women alive, kidnapping innocent civilians, including Holocaust survivors, it was Iran that was working behind the scenes to fund these acts of terror.",
+    "Our government designated Iran as a state sponsor of terror, yet the Biden administration pursued a policy of weakness and appeasement toward Tehran.",
+    "Since the Biden administration took office, Iran has generated approximately $80 billion in revenue from oil sales, and that is because this administration rolled back the Trump administration's successful maximum pressure campaign.",
+    "In 2021, the administration lifted oil sanctions on Iran.",
+    "The sanctions relief was so helpful to the regime that the deputy chief of the Central Bank of Iran said that Iran's foreign currency reserves were growing due to the growth of oil and other exports.",
+    "Now we see the administration effectively incentivize Hamas to take American hostages by facilitating the transfer of $6 billion from South Korea to Iranian banks in Qatar, a deal that this administration claims it has frozen for now but Qatar and Iran say is available to them today."
+   ]
+  },
+  {
+   "date": "2023-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Taiwan International Solidarity Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-25/CREC-2023-07-25-pt1-PgH3913",
+   "sentences": [
+    "Mr. Speaker, Taiwan, an island of democracy and stability, is a key U.S. partner facing an increasingly aggressive Chinese Communist Party.",
+    "The Chinese Communist Party has undermined Taiwan and spread propaganda about that democracy's ability to participate in international organizations.",
+    "There is no clearer example of the Chinese Communist Party's nefarious tactics than their manipulation of U.N. Resolution 2758.",
+    "Taiwan is a vibrant and thriving democracy rooted in freedom, pushing the envelope on advanced technology like semiconductors.",
+    "The Taiwan Relations Act holds that it is United States policy to maintain their capacity ``to resist any resort to force or other forms of coercion. . . .'' That policy must include the stance we are taking today, to resist the Chinese Communist Party's coercive tactics at international organizations.",
+    "But Taiwan cannot participate in organizations that are key to transnational issues, such as the World Health Organization, the International Civil Aviation Organization, or INTERPOL, as has been pointed out.",
+    "This was a major topic of discussion, Taiwan's systematic exclusion from international organizations, and the coercive actions of the Chinese Communist Party in working against Taiwan being a participant in the international community."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "The demand for these minerals will steadily increase as the global economy adopts new technologies, placing the United States and its allies at a growing disadvantage unless steps are taken to shift production and sourcing away from Chinese Communist Party-controlled entities.",
+    "This amendment works to jump-start American critical mineral, rare- earth element, and carbon production to make our supply chains more resilient while creating opportunities for coal and coal byproducts to be used in new, clean, and innovative ways.",
+    "Specifically, this amendment would include projects related to extraction, recovery, or processing of critical minerals, rare earth elements, or carbon from coal, coal waste, coal processing waste, or pre- or post-combustion coal byproducts, or acid mine drainage from coal mines as covered projects eligible for FAST-41 permitting for the purposes of securing the economic and national security of the United States.",
+    "Mr. Chair, whether you are like me, a member of the Congressional Coal Caucus or a member of the Sustainable Energy Caucus or a national security hawk or a member of the Select Committee on Strategic Competition between the United States and the Chinese Communist Party, every Member of Congress should be for this win-win-win solution, a win to reclaim these abandoned mine sites and fix an environmental problem, a win for the coal industry and the workers in the coal industry who need alternatives to combustion of coal now that we are in the transition phase of our energy development in our country, and certainly a win for national security.",
+    "This is a way for us to end overdependence on the Chinese Communist Party for critical, national security sensitive supply chain needs.",
+    "The United States must innovate and secure its supply chain of sensitive strategic materials in order to reduce reliance on Chinese Communist Party-controlled materials overseas."
+   ]
+  },
+  {
+   "date": "2023-02-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of Labor Relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-28/CREC-2023-02-28-pt1-PgH932",
+   "sentences": [
+    "When you discriminate against energy stocks, and you are heavy in tech, when you are in a tech sell-off, and when energy underperforms the market, who loses?",
+    "Even if you don't have a retirement account, this radical ESG movement is hitting your wallet.",
+    "Gas prices are up 40 percent, and diesel prices are almost double.",
+    "If you want an alternative, if you want to subordinate financial returns to the environment, to climate change, to social justice, to whatever, and you really don't care about your retirement security, then you can choose that."
+   ]
+  },
+  {
+   "date": "2023-01-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Strategic Production Response Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2",
+   "sentences": [
+    "But we know that in a move to placate radical environmentalists, President Biden blocked the Keystone XL pipeline at the beginning of this administration.",
+    "For example, initiatives by the Federal Reserve working with a Network of Central Banks and Supervisors for Greening the Financial System, otherwise known as NGFS; the Securities and Exchange Commission's proposed Rules to Enhance and Standardize Climate-Related Disclosures for Investors; the Financial Stability Oversight Council's report and recommendation on climate-related financial risk; the FDIC's principles for climate-related financial risk management for large financial institutions; and the Office of the Comptroller of the Currency's principles for climate-related financial risk management for large banks.",
+    "My amendment would simply pause any and all of these climate-related financial regulations so that financial institutions can provide the capital and the financing for the oil and gas producers so that we can, in fact, replenish the petroleum reserve."
+   ]
+  },
+  {
+   "date": "2023-01-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-10/CREC-2023-01-10-pt1-PgH121-6",
+   "sentences": [
+    "Mr. Speaker, the Chinese Communist Party is intent on replacing the United States as the world's preeminent economic, military, and technological power.",
+    "This select committee will examine the threats from the Chinese Communist Party with a fine-tooth comb and expose them for the American people and for the whole world to fully understand.",
+    "Last year and the year before, the threat from the CCP came into focus when the CCP silenced doctors and corrupted the World Health Organization to spread disinformation and cover up substandard biosecurity at the Wuhan Institute of Virology, leading to a deadly virus becoming a global pandemic, killing millions, devastating the global economy, and giving the CCP the opportunity to weaponize the global supply chain against the West."
+   ]
+  },
+  {
+   "date": "2022-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 302, Preventing a Patronage System Act of 2021; Providing for Consideration of H.R. 2988, Whistleblower Protection Improvement Act of 2021; Providing for...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-14/CREC-2022-09-14-pt1-PgH7804",
+   "sentences": [
+    "I rise to oppose the previous question so that we can immediately consider Representative French Hill's H.R. 8589 to prohibit the Securities and Exchange Commission from trading its independence and statutory authority away in the name of alarmist climate advocacy.",
+    "The proposed climate change rule from the Securities and Exchange Commission will further crush our fragile economy, and struggling families will ultimately pay the price.",
+    "Today, the average gas price in America is $3.72 per gallon, and stubbornly, diesel prices are much, much higher.",
+    "We all know that the Biden administration killed the Keystone XL pipeline and other critical energy infrastructure projects.",
+    "Throughout the executive branch, at the Treasury Department, the Securities and Exchange Commission, the Federal Reserve, the OCC, and other financial regulators, Biden has installed or nominated unelected climate alarmists and given them free rein to attack American energy businesses, all in the name of climate change.",
+    "The sad irony, Mr. Speaker, is that if we want to innovate and actually solve climate change, we wouldn't be denying American energy companies and the scientists there access to financing.",
+    "Perhaps the most dangerous regulation issued by the Biden administration to destroy American energy is the SEC's climate risk disclosure rule proposed in March.",
+    "It is definitively not to reduce carbon emissions or solve climate change, but the SEC is wading into environmental policy debates like climate change with its top-down, government-directed, one-size-fits-all mandatory environmental, social, and governance disclosure regulation, or ESG.",
+    "SEC Chair Gary Gensler claims that the requirements in the proposal are material because institutional investors are demanding this information.",
+    "They are tech-heavy, and in a market where tech stocks are in a massive sell-off and are vastly underperforming non-ESG funds that contain investments in energy, who are the losers?",
+    "In short, the government is redirecting capital away from energy, and it is costing retail investors, which include teachers, police officers, and other ordinary Americans saving for retirement, extraordinary amounts of money.",
+    "Mr. Speaker, finally, he blames Vladimir Putin.",
+    "Gas prices on the day Vladimir Putin invaded Ukraine were the highest in 40 years.",
+    "Inflation was over 8 percent on the CPI, the highest in 40 years, the highest since 1981 on the day Vladimir Putin invaded Ukraine.",
+    "This is not about Vladimir Putin.",
+    "And why do we want this particular legislation, the legislation to block the SEC's climate disclosure rule?",
+    "Mr. Speaker, I would argue to my friend from Maryland, also, if the obsession on the other side with the climate, if that is the concern, if that is why we have this SEC rule, if that is why we have weaponized financial regulators to go after the American energy sector and redirect capital and financing away from the American energy sector, if that is the solution to climate change, I want the gentleman to explain that to me.",
+    "Because the best scientists in the world working on the issue of carbon capturing, carbon sequestration, and harnessing the carbon cycle, they work at American energy companies.",
+    "The answer to climate change is not to centralize power in Washington and add a thousand pages to the Federal Register.",
+    "What will solve climate change is to solve that problem the American way.",
+    "That is the Republican solution to climate.",
+    "We may have found a point of bipartisan agreement that we all dislike Vladimir Putin.",
+    "But one of the main reasons why Vladimir Putin was able to invade Ukraine was the removal of deterrence: unilaterally waiving sanctions on Nord Stream 2, refusing to respond for a full year of a buildup, inviting aggression by retreating from Afghanistan, and signaling to our allies that we are not coming to help you.",
+    "That might be one of the reasons why we have a problem with Vladimir Putin right now.",
+    "Charlie from Fleming County says that he can't afford to fill up his tractor as a farmer because diesel prices are where they are."
+   ]
+  },
+  {
+   "date": "2022-06-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Federal Reserve Racial and Economic Equity Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-15/CREC-2022-06-15-pt1-PgH5556-5",
+   "sentences": [
+    "Now, President Biden ridiculously and falsely refers to rising prices as Putin's price hike.",
+    "Instead of addressing the cause of inflation, such as Big Government spending, radical energy policies, and politicization of access to capital, they continue to push partisan packages that will do absolutely nothing to correct historic inflation that is plaguing the middle class.",
+    "Case in point is this bill, the Racial Equity, Inclusion, and Economic Justice Act."
+   ]
+  },
+  {
+   "date": "2022-04-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Assessing Xi'S Interference and Subversion Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-27/CREC-2022-04-27-pt1-PgH4525",
+   "sentences": [
+    "Mr. Speaker, I thank the gentleman from South Carolina for his leadership on the Foreign Affairs Committee, his leadership in the Congress, and his advocacy for the free people of Ukraine.",
+    "Mr. Speaker, as the United States, our NATO allies, and other allies respond to Vladimir Putin's unprovoked and brutal attack on the free, sovereign, and independent nation of Ukraine, we must assess the many ways in which Russia is seeking to evade sanctions.",
+    "Mr. Speaker, the unholy alliance between the Chinese Communist Party and the authoritarian oligarchs running the Kremlin is a serious threat to the United States and our allies.",
+    "It is enabling this illegal aggression against Ukraine.",
+    "On February 4, Russia and the CCP released a joint statement following a meeting with Vladimir Putin and Xi Jinping outlining a strategic partnership with ``no limits.'' Following Russia's illegal invasion of Ukraine, China refused to condemn Russia's gross violation of international law.",
+    "China has continued to be silent while Russia targets and kills innocent women, children, and civilians in Ukraine.",
+    "Instead of condemning Putin's war crimes, the CCP is rewarding them.",
+    "My legislation, the Assessing Xi's Interference and Subversion Act, or the AXIS Act, requires the U.S. State Department to submit an ongoing report to Congress detailing the CCP's support for Russia before and since the invasion of Ukraine."
+   ]
+  },
+  {
+   "date": "2022-01-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Willie O'Ree Congressional Gold Medal Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-01-19/CREC-2022-01-19-pt1-PgH235",
+   "sentences": [
+    "When he was 3, Willie fashioned skates out of wooden blocks with metal blades attached to the bottom and took to his frozen lawn in the backyard."
+   ]
+  },
+  {
+   "date": "2021-12-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Combating International Islamophobia Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-14/CREC-2021-12-14-pt1-PgH7794-2",
+   "sentences": [
+    "We don't need nuance or political correctness or silencing debate or censorship on the issue of radical Islamic terrorism.",
+    "Is it Islamophobia to criticize rejoining the Joint Comprehensive Plan of Action when talking about the malign, theocratic Islamic Republic of Iran, the leaders of which chant, ``Death to America,'' and promise the destruction of the State of Israel?",
+    "However, we are voting shortly on a bill that actually does combat Islamophobia, real Islamophobia, a bipartisan bill to combat the forced labor of Uyghur people and the systemic genocide of peaceful Muslim minorities by the Chinese Communist Party."
+   ]
+  },
+  {
+   "date": "2021-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Local Business Taxes, Regulations, and Reduced Workforce",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-11-02/CREC-2021-11-02-pt1-PgH6104-5",
+   "sentences": [
+    "This year the Consumer Price Index is up 5.4 percent, the highest in 13 years, but the Personal Consumption Expenditure Index, less food and energy costs, is up 3.6 percent, well above the Fed's 2 percent target and the highest in over 30 years.",
+    "This multitrillion-dollar Big Government socialist tax-borrow-and-spend bill will bury American entrepreneurs in taxes and debt.",
+    "But one interest group that will be happy with this Big Government socialist bill, if it passes, are the unions that fund the Democratic Party.",
+    "Tucked inside of this bill is a proposal to provide a $4,500 additional incentive exclusively for union-built electric vehicles.",
+    "This provision runs counter to the Democrats' purported goal of reducing carbon emissions and getting more electric vehicles on the road.",
+    "That is because nearly half of all U.S. automotive production comes from automakers with workforces who have chosen to not unionize.",
+    "In fact, of the 60 automakers in the United States who build electric vehicles, only 2 are unionized.",
+    "So Democrats are effectively pitting American autoworkers at union plants against the autoworkers who work in my congressional district at the Toyota manufacturing plant in Georgetown, Kentucky, the largest Toyota manufacturing plant in the world.",
+    "So let me be clear: There is no environmental benefit or additional carbon reduction achieved by favoring union-made vehicles over nonunion-made vehicles.",
+    "While Democrats lecture about the need to provide alternatives to the combustion engine, to gas-powered vehicles, the irony here is that this bill greatly restricts the ability for tax credits to actually reach consumers.",
+    "This is because Democrats are limiting the tax credit to union-built, U.S.-assembled vehicles and applying these proposed limitations to the current EV market.",
+    "Estimates indicate that only 2 of over 50 electric vehicles would qualify for the full tax credit.",
+    "Nearly half of all U.S. automotive production comes from automakers with workforces that have chosen to not unionize.",
+    "Why are we punishing these manufacturers of electric vehicles?",
+    "It is not about promoting electric vehicles.",
+    "It is about a political payoff to union supporters of these campaigns.",
+    "This provision is nothing more than that; a payoff to the union bosses who control Democrat politicians in Congress and the Democrat in the White House."
+   ]
+  },
+  {
+   "date": "2021-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Office of the Comptroller of Currency Relating to \"National Banks and Federal Savings Associations As Lenders\"",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-24/CREC-2021-06-24-pt1-PgH3099",
+   "sentences": [
+    "Madam Speaker, I rise today also in opposition to S.J. Resolution 15, the Congressional Review Act repeal of the Office of the Comptroller of the Currency's true lender rule.",
+    "Office of the Comptroller of the Currency, Washington, DC, April 14, 2021.",
+    "Dear Chairwoman Waters and Ranking Member McHenry: On March 26, 2021, H.J. Res. 35 was introduced, providing for Congressional disapproval under the Congressional Review Act of the Office of the Comptroller of the Currency's (OCC) final rule, entitled ``National Banks and Federal Savings Associations as Lenders,'' commonly referred to as the ``True Lender'' rule.",
+    "Our rulemaking prevents potential arrangements in which a bank receives a fee to ``rent'' its charter and unique legal status to a third party with the intent of evading state and local laws, while disclaiming any compliance responsibility for the loan.",
+    "Sincerely, Blake J. Paulson, Acting Comptroller of the Currency."
+   ]
+  },
+  {
+   "date": "2021-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Public-Private Partnerships Can Rebuild Infrastructure Effectively for Less Money",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-23/CREC-2021-06-23-pt1-PgH3014",
+   "sentences": [
+    "As a member of the House Financial Services Committee, I hear routinely from the private sector, the financial services industry, banks, insurance companies, asset managers, pension funds, private equity firms, life insurance firms, and the like that trillions of dollars of private capital is readily available to efficiently rebuild our Nation's infrastructure without undermining American competitiveness through higher taxes.",
+    "Recognizing Our Nation's Police Officers Mr. Speaker, I rise today to recognize our Nation's police officers and honor the sacrifices that many brave men and women of law enforcement make every single day.",
+    "We mourn for Detective James Kirk, Officer Martez Hughes, and Special Deputy Sheriff Lee Daniel Manns from Kentucky, as well as the hundreds of other law enforcement officers from across the country who have given their lives in the line of duty over the last year.",
+    "Beginning in 1962, President John F. Kennedy signed into law a proclamation designating May 15 as Peace Officers Memorial Day, and the week in which that date falls as National Police Week.",
+    "Sadly, Mr. Speaker, President Biden broke this tradition in his proclamation on May 7 and politicized this year's National Police Week and Peace Officers Memorial Day by criticizing police for the distrust that some Americans have of law enforcement.",
+    "Mr. Speaker, blaming the police for the increase in antipolice sentiment is not how we honor those who swear an oath to uphold public trust, even though the officers may become targets for senseless acts of violence.",
+    "According to the FBI's Law Enforcement Officers Killed and Assaulted database, fatal felony attacks on officers spiked 31.6 percent in early 2021.",
+    "This comes on the heels of our Nation's major cities, Chicago, New York, and Los Angeles, all vowing to defund their police departments.",
+    "This is what you get when you call for defunding the police.",
+    "To our brave law enforcement officers who protect and serve our communities, I stand with you, and I am grateful for all you do to keep us safe.",
+    "I will always defend and fight against defunding the police."
+   ]
+  },
+  {
+   "date": "2021-06-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Esg Disclosure Simplification Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-16/CREC-2021-06-16-pt1-PgH2830-4",
+   "sentences": [
+    "Its mission, though, is not to reduce carbon emissions.",
+    "Its mission is not to solve climate change.",
+    "Congressional Democrats and the Biden administration know that they cannot pass the Green New Deal and other extreme far-left policy priorities through a Democrat-majority Congress, so they are corrupting an independent Federal financial regulator to do their bidding.",
+    "The majority claims that this bill is an effort to improve corporate governance when, in reality, it is a thinly veiled attempt to open a back door to achieve their socialist wish list and cut off financing to legal but politically unfashionable industries that they despise.",
+    "But the seminal Supreme Court case that defines the materiality standard was TSC Industries v. Northway.",
+    "In that majority opinion, Justice Thurgood Marshall wrote, and it bears repeating: ``If the standard of materiality is unnecessarily low, not only may the corporation and its management be subjected to liability for insignificant omissions or misstatements, but also management's fear of exposing itself to substantial liability may cause it simply to bury the shareholders in an avalanche of trivial information, a result that is hardly conducive to informed decisionmaking.'' So, this is not about investor protection.",
+    "And many low-ranked ESG stocks not only outperformed top-ranked ESG stocks, they outperformed the market overall.",
+    "We must not harm American retirement savers by subordinating investor returns to promote nonpecuniary policy objectives like social justice, diversity quotas, and lower carbon emissions.",
+    "Perhaps the gravest of these problems is represented by the goals of the Chinese Communist Party, which is perpetrating the great crime of our age against the Uighurs and other minorities in China."
+   ]
+  },
+  {
+   "date": "2021-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Awarding Three Congressional Medals to United States Capitol Police and Those Who Protected the U.S. Capitol on January 6, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-16/CREC-2021-03-16-pt1-PgH1371-5",
+   "sentences": [
+    "Mr. Speaker, I rise in support of H.R. 1085, a bill to award Congressional Gold Medals to the United States Capitol Police and those who protected the Capitol on January 6, 2021.",
+    "What happened to this institution on January 6 was horrific.",
+    "Mr. Speaker, the brave men and women who stood and faced danger on January 6 deserve to be recognized for their actions.",
+    "Once H.R. 1085 is enacted, a Congressional Gold Medal will be displayed at the U.S. Capitol Police headquarters, another will be displayed at the D.C. Metropolitan Police headquarters, and the third will be given to the Smithsonian Institution, so everyone who visits D.C. will be reminded of the bravery shown that day.",
+    "We have seen bravery from the Capitol Police many times before.",
+    "They put their lives in danger, and January 6 was certainly no exception to that.",
+    "Thank you to each and every officer who was here on January 6.",
+    "The U.S. Capitol Police and those who protected us on January 6 deserve Congressional Gold Medals.",
+    "Madam Speaker, once again, we are reminded of the dangers that law enforcement face every single day, and January 6 was one of those days.",
+    "Our thoughts and prayers continue to go out to the family of Brian Sicknick, a true hero to our country, a great emblem of the bravery and heroism of the Capitol Hill Police.",
+    "I, too, urge my colleagues to support this legislation and to award the Capitol Police with the Congressional Medal of Honor."
+   ]
+  },
+  {
+   "date": "2020-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-23/CREC-2020-07-23-pt1-PgH3715-4",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of my amendment to this appropriations package that highlights the need to use all the tools in America's tool kit to counter the Chinese Communist Party and the totalitarian government in Beijing.",
+    "My amendment shows bipartisan support for the United States International Development Finance Corporation and its important work to counter China's Belt and Road Initiative.",
+    "While we will never match China dollar for dollar in government subsidies, agencies like DFC can leverage the unlimited potential of the private sector to counter China's model of debt-trap diplomacy and colonialism."
+   ]
+  },
+  {
+   "date": "2019-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-12-18/CREC-2019-12-18-pt1-PgH12130",
+   "sentences": [
+    "No less than five times in the last 6 years, bipartisan Congresses imposed on the executive branch an affirmative duty to ensure that the Government of Ukraine was countering corruption.",
+    "And for good reason: Ukraine is the third-most corrupt nation on Earth.",
+    "So the President not only had the legal authority to temporarily pause security assistance to Ukraine, he had a mandate from Congress to do it.",
+    "As a result, President Zelensky's government made historic anticorruption reforms, making Ukraine a more reliable ally, countering Russian aggression."
+   ]
+  },
+  {
+   "date": "2019-07-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expanding Investment in Small Business Act of 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-07-09/CREC-2019-07-09-pt1-PgH5283",
+   "sentences": [
+    "Declining mutual fund interest in small IPOs also materially weakens the trading environment for small-cap stocks and likely deters small, private firms from joining our public markets, something we should not be discouraging."
+   ]
+  },
+  {
+   "date": "2019-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-12/CREC-2019-06-12-pt1-PgH4452",
+   "sentences": [
+    "He was hooked on methamphetamines, heroin, and alcohol and was homeless."
+   ]
+  },
+  {
+   "date": "2018-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-07/CREC-2018-06-07-pt1-PgH4964-2",
+   "sentences": [
+    "Increased funding for equine-assisted therapy will greatly improve mental health treatment for our veterans."
+   ]
+  },
+  {
+   "date": "2018-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by Bureau of Consumer Financial Protection",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-05-08/CREC-2018-05-08-pt1-PgH3815",
+   "sentences": [
+    "However, this did not deter former Director of the Bureau Richard Cordray from trying to regulate this industry, circumventing the legislative intent of Congress through a backdoor guidance."
+   ]
+  },
+  {
+   "date": "2018-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lexington Va Health Care System",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-02-13/CREC-2018-02-13-pt1-PgH1081-4",
+   "sentences": [
+    "Mr. Speaker, I thank Chairman Roe for his tireless leadership as a veteran himself, as a physician, and for his exceptional leadership on veterans issues as chairman of the committee."
+   ]
+  },
+  {
+   "date": "2017-09-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-13/CREC-2017-09-13-pt1-PgH7334-3",
+   "sentences": [
+    "The gentleman has shown great leadership on this issue prohibiting the Office of Foreign Assets Control from using funds to issue a license allowing U.S.-made aircraft to be sold to Iran, and also prohibiting OFAC from using funds to authorize U.S. financial institutions to finance the purchase of military fungible aircraft to Iran.",
+    "At a hearing in April, the Committee on Financial Services heard testimony that Iran Air's role in the Syrian conflict continues.",
+    "What we know is that there is significant evidence suggesting that Iran Air flights are now being used to transport personnel and material supporting the IRGC and its efforts to assist the Assad regime and Hezbollah.",
+    "Again, consumer protection is not denying people access to affordable housing, and that is what the gentleman's amendment would do.",
+    "He had an 8 percent down payment.",
+    "Those harmed include those who currently live in and those who seek to purchase a manufactured home: retirees, veterans, working families, et cetera.",
+    "Consumers have been shut out of the market for quality affordable housing because regulations have caused financing to be less available for manufactured homes.",
+    "Defeat this amendment, preserve access to rural affordable housing, be pro-consumer, and oppose this amendment.",
+    "Members of my Sixth Congressional District of Kentucky Drug Abuse Task Force, which is comprised of local, State, and Federal experts in the fields of law enforcement, drug treatment, recovery, education, and prevention efforts, recommended increased funding for HIDTA initiatives to help fight this crisis."
+   ]
+  },
+  {
+   "date": "2017-09-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-06/CREC-2017-09-06-pt1-PgH6695",
+   "sentences": [
+    "As the primary regulator of manufactured housing, HUD should work with the industry, not against it, to ensure regulations are streamlined, cost-effective, and applied fairly and transparently, while also working to keep manufactured housing as an affordable housing alternative for all American families.",
+    "For the life of me, I do not understand why the Federal agency charged with the responsibility of providing affordable housing would be limiting choices and access to this very affordable and very good option for housing for many rural Americans.",
+    "Addressing these issues will help mitigate the ongoing negative impact that these regulations are having on access to affordable housing across America.",
+    "I urge my colleagues to support this important work where Congress can work together to eliminate impediments to the manufactured housing market so that all Americans can have access to affordable housing.",
+    "It is certainly not consumer protection to say to rural Americans looking for access to affordable housing: You can't have access to a manufactured home.",
+    "So, again, I would urge my colleagues to join us in a bipartisan amendment to fix a bureaucratic overreach, which denies low-income Americans with access to affordable housing.",
+    "Why in the world would we tolerate the agency that is supposed to be the advocates of poor and low-income Americans denying them access to affordable housing?"
+   ]
+  },
+  {
+   "date": "2017-02-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by the Securities and Exchange Commission",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-01/CREC-2017-02-01-pt1-PgH848",
+   "sentences": [
+    "This will lead to a consolidation in the industry, to a reduction in competition, and to higher prices for American consumers."
+   ]
+  }
+ ]
+}

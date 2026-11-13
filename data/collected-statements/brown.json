@@ -1,0 +1,1018 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "brown",
+ "name": "Sherrod Brown",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 46,
+  "press": 0,
+  "bluesky": 27,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-11-03",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzen77ufuw23",
+   "sentences": [
+    "One of the largest data centers in the world is being built in Ohio and we’re paying for it."
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mzbw2gxutc2c",
+   "sentences": [
+    "If you can’t agree to not trade stocks, if you can’t pledge to not become a lobbyist, you have no business serving in public office."
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzd3mo6ve26",
+   "sentences": [
+    "Vote early in person, drop your mail ballot off at your county Board of Elections, or make a plan to vote on Election Day."
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzo53thvv2m",
+   "sentences": [
+    "From Elon Musk to Donald Trump, billionaires are spending hundreds of millions of dollars against me because they know they can buy Jon Husted’s votes.",
+    "I’ll never vote on behalf of billionaires because, for me, Ohio workers always come first."
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myzx7h7w3a2x",
+   "sentences": [
+    "Jon Husted voted to cut Medicaid for 500,000 Ohioans, including seniors, children, and hardworking families just trying to get by."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mywpwhdfrk2b",
+   "sentences": [
+    "Ohioans want an economy that puts workers before billionaires and they're showing up to vote for it."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mywvvm6wqh2q",
+   "sentences": [
+    "Jon Husted had 14 opportunities to lower costs for Ohioans by ending this costly war in Iran but he voted against it every single time."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxau3b7ac2w",
+   "sentences": [
+    "I’m proud to fight for working families in Youngstown and across the state."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myxni6w5ki2p",
+   "sentences": [
+    "Ohioans shouldn't have to pay more for prescription drugs made in America than folks do overseas.",
+    "We can ban Big Pharma from ripping off Ohioans and I’m ready to fight for that in the Senate."
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myukr52djc2n",
+   "sentences": [
+    "John Legend came home to join our fight for an Ohio that puts workers over billionaires."
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myuulgq64h26",
+   "sentences": [
+    "Make a plan to vote early or drop off your absentee ballot at your county board of elections TODAY."
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myvcbeaj6n2k",
+   "sentences": [
+    "Jon Husted voted once to hide the Epstein files, 9 times to cut your health care, and 14 times to continue the Iran War."
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysch5firi2g",
+   "sentences": [
+    "Jon Husted voted against the release of the Epstein files just weeks after receiving a maximum campaign contribution from an Epstein co-conspirator."
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysfsm4jie26",
+   "sentences": [
+    "It’s time to ban Congressional stock trading and end the corruption."
+   ]
+  },
+  {
+   "date": "2026-10-24",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mymvrhs2vo2k",
+   "sentences": [
+    "Jon Husted gave data center corporations $2.5 billion in sweetheart tax breaks to bring over 220 data centers to our state.",
+    "In return, data center interests have donated over $630,000 to the Husted campaign."
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mykgxcyojq2o",
+   "sentences": [
+    "- Epstein Co-Conspirators: $116,000",
+    "- Data center industry: $636,000"
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myklzteljb2s",
+   "sentences": [
+    "It’s time for Washington to put workers over billionaires."
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mygg2bsnw22h",
+   "sentences": [
+    "I’m proud to fight for Ohio workers, to fight for an economy that puts working families before billionaires."
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myhrignmuw22",
+   "sentences": [
+    "If you’re a billionaire looking for more tax breaks, I promise I’m not your guy."
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myighabbez2r",
+   "sentences": [
+    "When Jon Husted cast the deciding vote to cut Medicaid for half a million Ohioans, he betrayed families like Sarah and Audrey's."
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydvgwbweq2n",
+   "sentences": [
+    "Jon Husted gave data centers $2.5 billion in out-of-control tax breaks; Ohioans got higher utility bills."
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myfbua3ci727",
+   "sentences": [
+    "No one should profit off backroom deals and insider trading while they’re supposed to be serving the public.",
+    "It’s time to ban congressional stock trading and stop the corruption."
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydo4cag432j",
+   "sentences": [
+    "Jon Husted’s Big Oil donors are profiting from the Iran war that Husted voted 14 times to continue."
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mydqwpzpdg2x",
+   "sentences": [
+    "I’m proud to join labor leaders in Cincinnati as we fight for a government that puts workers before billionaires."
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3myaccx7jy22k",
+   "sentences": [
+    "Vote in-person at your county Board of Elections or send in your absentee ballot today."
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my62cv3nh22u",
+   "sentences": [
+    "Workers in Toledo are tired of seeing “leaders” in Washington put billionaires before hardworking Ohioans."
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3my6cfvwpwa2l",
+   "sentences": [
+    "It’s time to ban Congressional stock trading and make sure members of Congress are looking out for your checking account, not their investment account."
+   ]
+  },
+  {
+   "date": "2024-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Social Security Fairness Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-18/CREC-2024-12-18-pt1-PgS7134-3",
+   "sentences": [
+    "Social Security, we know, is a bedrock of our middle class.",
+    "These restrictions right now, though, prevent some 3 million Americans--nearly 250,000 people in my State alone, many of whom are law enforcement, first responders, teachers, schoolbus drivers, school cafeteria workers, public servants--it means that many will not get their full Social Security benefit.",
+    "They pay into Social Security just like everyone else.",
+    "She drives a special needs bus for Fairland Local Schools in, I believe, Lawrence County, on the Ohio River.",
+    "Her husband served our country in the Navy Seabees, building our naval bases, and paying into Social Security with every paycheck.",
+    "After he passed away 10 years ago, Barb started receiving his Social Security survivors benefits, until Barb retired with her school pension, when her Social Security benefit dropped from $2,100 a month to 500 a month.",
+    "He earned that Social Security benefit, and she should have it.",
+    "They earned that Social Security.",
+    "We need to restore those workers' Social Security.",
+    "Whether it is restoring workers' Social Security or saving workers' pensions or fighting for overtime pay, for supporting unions, so much of what I fought for in the Senate has one thing in common: It is about hard work paying off.",
+    "Restore the Social Security that people who protect us and serve us have earned over a lifetime of work.",
+    "I have heard him talk about his trips to the grocery store and how some people in this body blame inflation on government spending, which, of course, doesn't hold economic water.",
+    "You are paying for those higher prices by stock buybacks and exorbitant profits."
+   ]
+  },
+  {
+   "date": "2024-07-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tax Relief for American Families and Workers Act of 2024 (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-31/CREC-2024-07-31-pt1-PgS5640",
+   "sentences": [
+    "He knows it from his experience, and he knows it--as he travels the State of Pennsylvania, from Philadelphia to the Ohio border, he talks to a lot of families and children and sees what this means.",
+    "The interest groups that are always looking for tax cuts for the rich and for their large corporate interests frankly have too much influence in this body.",
+    "But if this company didn't pay good wages, so workers got food stamps and workers got Medicaid and workers got housing tax breaks--housing breaks--if the company wasn't paying good enough wages and the taxpayers had to step up, they paid another rate.",
+    "We should come together and cut taxes for working families."
+   ]
+  },
+  {
+   "date": "2024-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reforming Intelligence and Securing America Act--Motion to Proceed-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-16/CREC-2024-04-16-pt1-PgS2765-2",
+   "sentences": [
+    "The dignity of work has guided D. Taylor through his whole career as he fought to unionize industries that have long been overlooked with workers who have long been underpaid and ignored.",
+    "For the past 12 years, D. served as President of UNITE HERE, a union that represents workers across the hospitality industry.",
+    "So often, where we have seen unprecedented union growth, D. and his members have been on the frontlines organizing, invigorating, calling for change.",
+    "Under D., UNITE HERE has become one of the fastest growing trade unions in the country.",
+    "He focused on southern States and right-to-work States--much harder States to organize than the Presiding Officer's State of Maine or mine in Ohio-- not that it is easy in those States with Federal law but even harder in those southern States.",
+    "During his time as president, D. oversaw the union's organizing of 140,000 service and hospitality workers in over 1,000 workplaces across the country.",
+    "Because of D. and UNITE HERE, these workers now have a union card.",
+    "I remember being in Nevada at the Culinary Workers Union Local 226, which D. built into a powerhouse.",
+    "That union is an inspiration for workers everywhere.",
+    "He quietly moved up through the ranks, eventually leading the union in a 7-year--the famous 7-year Frontier Casino strike, one of the longest successful strikes in labor history.",
+    "As a head of the Culinary Union, he built a coalition of service workers.",
+    "He went on to be the general vice president of UNITE HERE before being elected as union president.",
+    "One man I met when I was involved in this actually lived and worked here all day and lived and worked at a homeless shelter all night.",
+    "They served the Senate during a pandemic, during a violent insurrection.",
+    "In retirement, D., of course, will keep fighting for workers as chair of UNITE HERE Health, and he will support the union and gaming industry.",
+    "I look forward to working with his successor, Gwen Mills, the current secretary treasurer of UNITE HERE, the first-ever woman president in this union's history to be elected to an international union; the first-ever woman in this union's history to ever be elected international union president in a union that has a huge number of women, as you know."
+   ]
+  },
+  {
+   "date": "2023-09-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing Growth and Robust Leadership in American Aviation Act--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-27/CREC-2023-09-27-pt1-PgS4709",
+   "sentences": [
+    "Steelworkers in Ohio knew what those bad trade deals--from NAFTA to PNTR with China, to TPP, to CAFTA--all the issues that, frankly, are a big part of the reasons my State has struggled with so many lost jobs.",
+    "He saw the potential in this union to grow.",
+    "He knew that, if more people carried a union card, their lives would be better.",
+    "That is what carrying a union card means.",
+    "My wife will say that her dad's union card saved her life.",
+    "Her dad could afford that care, that ambulance, that time in Cleveland Clinic because he carried a union card, and they negotiated for healthcare benefits.",
+    "He knew that he didn't have a union strong enough or a government that cared enough to protect him.",
+    "Balancing those scales is what unions are all about.",
+    "Dave and I have been in the trenches together for the better part of our entire careers, walking picket lines, talking to Ohio workers at union halls and fighting against bad trade policy that this body far too often falls for because corporate lobbyists swarm this place and push these bad trade agreements, always, always, always at the expense of workers."
+   ]
+  },
+  {
+   "date": "2023-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-14/CREC-2023-09-14-pt1-PgS4503",
+   "sentences": [
+    "She, first of all, credits her dad's union card with saving her life.",
+    "She was 16 years old and had an asthma attack, I believe at school, and was picked up in an ambulance and taken to the Cleveland Clinic and spent more than a week there-- something she could not afford without her dad's union card and her dad's healthcare benefits from the utility workers union and from that company.",
+    "She also said that, twice during her growing up, the union struck because their backs were against the wall; they thought they had no choice.",
+    "A union card means workers can stand together for fair pay and benefits, for better working conditions, for safer workplaces, for control over their schedules, for a voice in their company, and a voice in their community--because, to be clear, autoworkers surely are the engines behind these companies' success.",
+    "Now that times are good, all that workers are asking for is their fair share.",
+    "These companies plan to be overwhelmingly making batteries, making electric vehicles.",
+    "But I don't want those--because some politicians whine about, ``Well, we don't want electric vehicles''--these are the companies' decisions, the companies' plans, the companies' futures.",
+    "But I don't want those jobs--those politicians that whine, if they get their way, they are going to see these electric vehicles made in Japan and China and Taiwan and overseas.",
+    "They were gone because companies, always looking for lower wages, wanted to go to non-union States.",
+    "So then they jammed, and I mean ``jammed''--sorry to say it this way--by buying off a whole lot of politicians--they jammed these trade agreements, like NAFTA, through the Congress, and then it got worse.",
+    "I always hope, and I know the Presiding Officer thinks the same way, that people buy union-made cars made in the United States.",
+    "My party was almost as guilty as Republicans on this--the push for NAFTA--which sent thousands of jobs overseas.",
+    "Now, today, for anyone who doubts that autoworkers in Ohio are the future of this industry, for anyone who wants to give up on these plants or force workers to settle for less, we will fight the way I fought NAFTA my first year in Congress, the way I fought permanent normal trade relations, the giveaway to the Chinese--not Chinese workers, but giveaway to Chinese Communist Party officials and corrupt leaders--a different kind of corruption from American leaders who sold them short, but nonetheless.",
+    "I don't know what they are going to look like 20 or 50 or 100 years from now, but I do know this: Ohio autoworkers, American innovation will be leading it, if we let them, if we reward these workers and don't let companies searching for cheap labor and going to anti-union States, moving overseas--as long as we don't let them run the show.",
+    "I have been to that union, I don't know, 50 times in my life, with my friend Dave Green, a UAW superstar who came up through that plant.",
+    "They voted for a union, by the way, the UAW there, just recently, by a 90-plus percent vote.",
+    "We were able--partly by shining a light on General Motors and what they had done and what their history is--we were able to get a $4- to $5-an-hour raise working with Dave Green of UAW Local 1112 and getting thousands of dollars in stock buybacks for those workers that had been there a year or more.",
+    "Here is what happens when an auto company uses its prowess and its power and its anti-union fervor, when they do that and take away healthcare."
+   ]
+  },
+  {
+   "date": "2023-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Rachel Bloomekatz (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-18/CREC-2023-07-18-pt1-PgS2976",
+   "sentences": [
+    "She clerked for highly respected judges on the State supreme court, in the Federal district, and in circuit levels, and she clerked on the U.S. Supreme Court.",
+    "Twenty fellow Supreme Court clerks, including several Scalia clerks and Kavanaugh clerks, wrote to the Judiciary Committee saying: We hold diverse opinions on many areas of law."
+   ]
+  },
+  {
+   "date": "2023-05-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the United States Fish and Wildlife Service Relating to \"Endangered and Threatened...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-03/CREC-2023-05-03-pt1-PgS1478-5",
+   "sentences": [
+    "Actually, we who engage in nonviolent direct action are not the creators of tension.",
+    "Think about who he was talking to--a union, Sanitation Workers Local 1613, AFSCME.",
+    "It means paying all workers a living wage.",
+    "It means letting them, if they so choose, organize a union.",
+    "All workers get a fair share of the wealth they create."
+   ]
+  },
+  {
+   "date": "2022-12-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Martin J. Gruenberg (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-19/CREC-2022-12-19-pt1-PgS7281",
+   "sentences": [
+    "Its priorities are housing; its priorities are public transit; its priorities are making the banking system safer, not just to do the bidding of Wall Street.",
+    "He is reviewing the FDIC's bank merger process to ensure it assesses the impact bank mergers have on competition and on access to financial services in communities across the country.",
+    "Under his leadership, the FDIC evaluates the risk posed by cryptocurrencies and digital assets to consumers and to the overall safety and soundness of the banking system."
+   ]
+  },
+  {
+   "date": "2022-11-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Respect for Marriage Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-11-14/CREC-2022-11-14-pt1-PgS6642-2",
+   "sentences": [
+    "We will never forget the debt we owe."
+   ]
+  },
+  {
+   "date": "2022-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Affordable Insulin Act--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-28/CREC-2022-09-28-pt1-PgS5144",
+   "sentences": [
+    "Max and Ben were loving husbands and fathers, proud union steelworkers with Local 1-346, and lifelong Ohioans.",
+    "They spent their lives serving their families, their community, their union, and their country through their dedication to their jobs and through Max Morrissey's distinguished service in the U.S. Navy.",
+    "He had no union strong enough in those days to protect him and no government that cared enough to protect him.",
+    "A strong union changed that because of worker safety laws and because of the labor movement."
+   ]
+  },
+  {
+   "date": "2022-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pact Act of 2022--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-25/CREC-2022-07-25-pt1-PgS3627-2",
+   "sentences": [
+    "It brought back to me the memories of standing shoulder to shoulder--he in his second term, I in my first--against the North American Free Trade Agreement and then a few years later standing shoulder to shoulder with him in opposition to PNTR, Permanent Normal Trade Relations, with China.",
+    "As a kid growing up in Ohio, I walked the halls of Johnny Appleseed Junior High School with the sons and daughters of union workers: electricians, electrical workers at Westinghouse, sons and daughters of autoworkers from General Motors and machinists from Ohio Brass and carpenters and pipefitters and electricians who built our city and service these large companies.",
+    "First, they went to anti-union States in the South.",
+    "They went to anti-union States.",
+    "They went to anti-union States with low wages.",
+    "So then they shut down a lot of these factories in the anti-union, right-to-work South, and they moved to Mexico.",
+    "They wanted NAFTA to pass--the North American Free Trade Agreement--so they could do it.",
+    "They wanted PNTR--the Permanent Normal Trade Relations with China--to pass so they could go to China; always in the name of efficiency, always in the name of we have just got to be more efficient, always in the name of efficiency.",
+    "They lobbied Congress to make outsourcing easier, and politicians were all too happy to do their bidding; first, with NAFTA, as I said, then Permanent Normal Trade Relations with China.",
+    "A big reason for the inflation we see today is decades of offshoring our supply chains.",
+    "That is what this bill is all about--investing more in America, making more in America, particularly the most critical inputs that cause the most problems right now, like semiconductors.",
+    "Today, semiconductors that were invented in the United States, 90 percent of them are made overseas.",
+    "We only make 10 percent of semiconductors in this country.",
+    "We make 10 percent of semiconductors, but we make zero percent of the highest end semiconductors because these companies all thought, Well, there are more profits overseas.",
+    "Over the past year, Ohio manufacturers have faced severe shortages and long waits for semiconductors.",
+    "Ohio manufacturers rely on semiconductors.",
+    "I believe I have been in every one of these factories or these companies: Ford in Lima, OH, a city just like Mansfield where I grew up; Ford in Avon Lake, I used to live 3 miles from that plant; Jeep in Toledo, my wife and I drive a Jeep made in America with union workers; Navistar in Springfield; Whirlpool in Clyde, I have been to that plant maybe five or six times, fought alongside them on enforcing trade rules; Kenworth in Chillicothe; GE in Evandale, near Cincinnati; STERIS in Mentor; Nucor in Marion; ArcelorMittal in Cleveland; Cleveland-Cliffs in Toledo, in Coshocton, right across the river from Steubenville in Weirton, WV.",
+    "The United States invented the semiconductor.",
+    "The CHIPS Act is about reshoring those supply chains, investing in Ohio manufacturing, and bringing down prices for every American.",
+    "Take a look at the label on a phone, on any smartphone.",
+    "Our national security and our economic competitiveness depend on having a vibrant domestic manufacturing sector, not just a tech development sector on the coasts."
+   ]
+  },
+  {
+   "date": "2022-07-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Steven M. Dettelbach (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-12/CREC-2022-07-12-pt1-PgS3224-5",
+   "sentences": [
+    "The bipartisan gun safety bill was important--long overdue progress, finally.",
+    "There is no better person for this role than Steve Dettelbach, a son of Ohio, a career public servant, with the experience and the record to combat violent crime and keep Americans safe.",
+    "As U.S. attorney for the Northern District of Ohio, Steve worked with law enforcement, including ATF, to prosecute tough cases.",
+    "I have watched him tackle some of the Department of Justice's most sensitive cases--cases at the intersection of law enforcement and civil rights.",
+    "That is why he has broad support from across the ideological spectrum, including prosecutors, including law enforcement officials who understand what it takes to do this job.",
+    "This includes law enforcement groups like NOBLE, the National Organization of Black Law Enforcement Executives; the Hispanic American Police Command Officers Association; Women in Federal Law Enforcement; the International Association of Chiefs of Police; the Major County Sheriffs' Association; the National Sheriffs' Association.",
+    "It includes more than 140 former Federal prosecutors, 8 former ATF Directors, the Federal Law Enforcement Officers Association, the association representing the men and women of the ATF.",
+    "They understand that Steve is the right person to lead this vital law enforcement Agency.",
+    "Following the horrific shooting in Highland Park, local law enforcement was able to capture the murderer so quickly because of the help provided by the heroes--the men and women of the ATF.",
+    "Every single law enforcement officer who has to combat gun crimes on a daily basis.",
+    "Abolishing the ATF, these law enforcement officers argue, rightly-- abolishing the ATF would make our communities less safe.",
+    "In their letter endorsing Mr. Dettelbach, the National Sheriffs' Association said that he would work to bring ``people together by working closely with state and local law enforcement to ensure that resources are adequately allocated to combat violent crime.'' The sheriffs went on to write they appreciated Steve's ``goal of being a value-add to local law enforcement by not only adding resources to urban areas, but rural as well.'' Rural crime and rural terrorism and rural--abuses like that are just as likely in rural areas as cities.",
+    "Mr. Dettelbach has emphasized the importance of ``boots on the ground'' task forces and pledged to provide forensic help to local law enforcement at crime scenes.",
+    "Sadly, our local law enforcement personnel need this help.",
+    "I can think of no better way to support law enforcement, to reject hate, to keep Americans safe from violent crime than for the Senate to confirm Steve Dettelbach ATF Director."
+   ]
+  },
+  {
+   "date": "2022-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Joseph Woodrow Hatchett United States Courthouse and Federal Building-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-23/CREC-2022-06-23-pt1-PgS3110",
+   "sentences": [
+    "Colin's many, many accomplishments with the Banking and Housing Committee include his instrumental work on the Joint Comprehensive Plan of Action--the Obama administration's diplomatic success to limit Iran's nuclear program--the bipartisan Countering America's Adversaries Through Sanctions Act in 2017, and the historic Anti-Money Laundering Act and the Corporate Transparency Act in 2020.",
+    "Today, its passage is giving law enforcement new, modern tools to stop human traffickers and other criminals and root out shell companies.",
+    "He worked toward big-picture goals--from mental health parity to international sanctions--but he never lost sight of the individuals: the people whom he worked with and the people whom we serve."
+   ]
+  },
+  {
+   "date": "2022-05-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Samuel R. Bagenstos (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-25/CREC-2022-05-25-pt1-PgS2695",
+   "sentences": [
+    "I always enjoy following my friend from Oregon who has done such important work on tax and trade law and Medicare and Medicaid and everything since his career began as a young Gray Panther."
+   ]
+  },
+  {
+   "date": "2022-04-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Lael Brainard (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-26/CREC-2022-04-26-pt1-PgS2142-3",
+   "sentences": [
+    "Madam President, as America faces rising prices caused by corporate greed in a global pandemic and Putin's war, having a full Fed Board has never been more vital."
+   ]
+  },
+  {
+   "date": "2022-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Ketanji Brown Jackson (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-06/CREC-2022-04-06-pt1-PgS2004-2",
+   "sentences": [
+    "It was so clear she has the experience, she has the character, she has the commitment to justice needed to be an excellent Supreme Court Justice.",
+    "People think of the Supreme Court as something like an ivory tower detached from people's everyday lives, and we know that decisions these Justices make affect America's workplaces and their paychecks and their safety on the job.",
+    "She went to public schools herself--not that common, frankly, on the U.S. Supreme Court--and she is a former public defender.",
+    "Over the coming months and years, the Supreme Court is set to make decisions on everything from Ohioans' healthcare to workplace safety to their right to vote."
+   ]
+  },
+  {
+   "date": "2022-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Reta Jo Lewis (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-08/CREC-2022-02-08-pt1-PgS554",
+   "sentences": [
+    "It is not a coincidence that for the first time in my lifetime, we have a President who leads by talking about workers, who leads by talking about unions.",
+    "Again, that is because we have a President of the United States who puts workers at the center of our economic policy, who understands that carrying a union card means better wages, better benefits, and more control over your work schedule."
+   ]
+  },
+  {
+   "date": "2021-12-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to Increasing the Debt Limit--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-14/CREC-2021-12-14-pt1-PgS9134-5",
+   "sentences": [
+    "I want to thank Senator Warnock, who is one of the principals in our legislation, Senator Bennet, Senator Booker, and Senator Kaine for their leadership and their work to deliver what is, pure and simple, the largest tax cut for working families ever.",
+    "Of course, one of the biggest, if not the biggest expense for so many families is childcare.",
+    "They have to put their money right back into childcare.",
+    "Courtney from Southeast Ohio in Athens: [S]lightly more than half the cost of part time daycare tuition per month here in Athens--much appreciated help getting kiddo back into childcare . . . keeping me and my husband in the workforce.",
+    "Caitlin: Pay for preschool for my son.",
+    "Fern: It will pay for preschool for both of them and the rest is going in a savings account for them.",
+    "They are working a whole lot harder than the CEOs and the hedge fund managers who it looks like, under Build Back Better, may continue to get some of their tax cuts--their tax preference, if you will.",
+    "It is a lot harder for these workers than the CEOs and the hedge fund managers and the Swiss bank account holders who are always getting tax cuts from politicians in this building.",
+    "We have done that before and seen the lobbyists line up in front of Leader McConnell's office and line up in front of the politicians who always do their bidding with their tax cuts for the wealthy and for corporations that outsource jobs.",
+    "You know what they told us 4 years ago, when those tax cuts for the rich passed.",
+    "Of course, they spent it--no surprise here--with stock buybacks, and they are still at it today.",
+    "Do you want tax cuts for billionaires and corporations or tax cuts for working families?",
+    "We want tax cuts for working families, Americans from all over the country, from all kinds of backgrounds.",
+    "Let's keep the largest tax cut for working families ever so that parents can have that peace of mind, can relieve some of their anxiety they face every month to pay the rent and pay the bills."
+   ]
+  },
+  {
+   "date": "2021-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Rohit Chopra (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-30/CREC-2021-09-30-pt1-PgS6817",
+   "sentences": [
+    "You hear reports about billionaires not paying taxes.",
+    "Meanwhile, we know the cost of housing, the cost of childcare, the cost of higher ed, the cost of prescription drugs--they all go up--and 40 percent of Americans aren't able to come up with $400 in an emergency.",
+    "Millions of homeowners now have fallen behind in their mortgages and are at risk of foreclosure--one in six Latino homeowners, one in five African-American homeowners.",
+    "Record numbers of consumers complained about errors in their credit reports or harassment by debt collectors.",
+    "My colleague Senator Portman from Ohio--he and I worked together to strengthen, in the bipartisan infrastructure bill, the ``Buy American'' provisions--stronger than they have ever been--so that we won't see a project like the Bay Bridge in California, Northern California, made entirely with steel produced by Chinese companies--all part of the Chinese Communist Party.",
+    "He worked with State attorneys general of both parties to bring enforcement actions against scammers who preyed on students who were drowning in student loan debt.",
+    "They certainly don't have a super PAC.",
+    "They are not able to unleash tens of millions of dollars of dark money to win elections."
+   ]
+  },
+  {
+   "date": "2021-05-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Office of the Comptroller of Currency Relating to \"National Banks and Federal...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-05-11/CREC-2021-05-11-pt1-PgS2430-3",
+   "sentences": [
+    "In the late 1990s, payday lenders were desperate to find a way to evade State laws that limited them from charging exorbitant interest rates that trap people in a cycle of debt they can't get out of, no matter how hard they work.",
+    "They came up with what the Comptroller of the Currency called ``rent-a-charter''--what we now know as a ``rent-a- bank'' scheme.",
+    "Under both President Bush and President Obama, the Office of Comptroller of the Currency and the Federal Deposit Insurance Corporation--OCC and FDIC--shut down a series of these schemes by payday lenders and banks.",
+    "So three-fourths of the voters going to the polls in a popular vote wanted to cap interest rates on payday loans in those two States.",
+    "That coalition wrote to Congress: Predatory payday and auto title lenders are notorious for exploiting loopholes in order to offer debt-trap loans to families struggling to make ends meet."
+   ]
+  },
+  {
+   "date": "2021-03-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Martin Joseph Walsh (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-22/CREC-2021-03-22-pt1-PgS1665-2",
+   "sentences": [
+    "It is their job to make sure workers' rights are protected, that people are safe on the job, that everyone can organize a union and get the overtime pay they have earned.",
+    "In fact, the Secretary of Labor was a corporate lawyer who made millions of dollars in court attacking labor unions and getting very well paid for it.",
+    "He can defend workers' rights to organize to give them power in their workplace and crack down on corporate union busting.",
+    "They don't understand collective bargaining and the power that a union card gives you over your career and your finances and your future.",
+    "At the age of 21, he joined the Laborers' Union Local 223 in Massachusetts.",
+    "He knows what a union means to workers.",
+    "Like President Biden, he is not afraid to talk about the labor movement, and he doesn't recoil from using the word ``union.'' He is not afraid to take on corporations that exploit their workers.",
+    "Mayor Walsh understands that when work has dignity, people have power over their lives and their schedules--and they are paid a living wage.",
+    "When work has dignity, everyone can afford healthcare and housing and childcare.",
+    "He successfully helped push his State to raise the minimum wage to $15.",
+    "He fought for paid family leave.",
+    "He understands that we can put hundreds of thousands of tradespeople to work building houses and schools and public transit, retrofitting homes and offices and schools."
+   ]
+  },
+  {
+   "date": "2021-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Marcia Louise Fudge (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-10/CREC-2021-03-10-pt1-PgS1442",
+   "sentences": [
+    "Congresswoman Fudge will lead an Agency that supports families and communities, provides housing and safety to people experiencing homelessness, and it helps communities rebuild.",
+    "The affordable housing crisis is the product of decades of conscious policy decisions by Wall Street, corporations, and too often by government.",
+    "That ZIP Code, in 2007, the first half of that year, had more foreclosures than any city in the United States of America.",
+    "I still see the residue, the remains of what has happened because of all those foreclosures."
+   ]
+  },
+  {
+   "date": "2021-03-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Marcia Louise Fudge (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-09/CREC-2021-03-09-pt1-PgS1414",
+   "sentences": [
+    "She saw up close how lenders preyed on families and the foreclosure crisis that followed.",
+    "My colleagues have heard me talk about ZIP code 44105, where Connie and I live, which had more foreclosures in the first half of 2007 than any ZIP code in the United States At the time, Congresswoman Fudge was serving as mayor of a city fewer than 20 miles away."
+   ]
+  },
+  {
+   "date": "2020-10-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Office of the Comptroller of the Currency Relating to \"Community Reinvestment...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-10-19/CREC-2020-10-19-pt1-PgS6052",
+   "sentences": [
+    "H.J. Res. 90 Mr. President, I rise to speak in support of H.J. Res. 90, the joint resolution of disapproval of the Office of the Comptroller of the Currency's Community Reinvestment Act rule.",
+    "It is about listening to what the communities need and making it happen, like helping to finance a new affordable housing development or offering small loans so that people don't have to turn to payday lenders.",
+    "The three entities that oversee our banking system--the Comptroller of the Currency, the Federal Reserve, the FDIC--acted together over those 40 years so that there was one CRA for all banks to follow and one set of expectations about serving customers in communities.",
+    "The day after they announced they were ignoring the rest of the country and plowing ahead, Comptroller of the Currency Otting announced he would resign.",
+    "Before yielding the floor, I ask unanimous consent that the letters from the National Urban League, the Center for Responsible Lending, and 45 civil rights organizations, consumer advocates, and unions in support of H.J. Res. 90 and opposing OCC's CRA rule be printed in the Record."
+   ]
+  },
+  {
+   "date": "2020-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Justin Reed Walker (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-06-17/CREC-2020-06-17-pt1-PgS3046",
+   "sentences": [
+    "In the Senate, we have plans to get help and protections to workers; we have plans to fund a scale-up of testing that gets us closer to the level we need; we have plans to work to hold police accountable; we have begun to tackle the systemic racism in our justice system.",
+    "In the middle of a pandemic, this President continues his lawsuit to try to overturn the Affordable Care Act, even though the voters have ratified it through a number of elections in 2012 and 2014 and 2016 and 2018.",
+    "They are trying to sneak ACA repeal through the courts since they couldn't do it in Congress.",
+    "Before his nomination to the district court, Walker praised then- Judge Kavanaugh for providing a roadmap the Supreme Court could use to strike down the ACA.",
+    "What it is all about is putting another vote in a key place to overturn the Affordable Care Act.",
+    "He is calling upholding the ACA indefensible and catastrophic.",
+    "In March 2020, at his formal swearing-in ceremony as district judge, Judge Walker said the worst words he heard while clerking for Justice Kennedy on the Supreme Court were the Chief Justice's rationale for upholding the ACA.",
+    "The worst words he heard from the man for whom he was working were his words to uphold the ACA, the Affordable Care Act.",
+    "He stopped us from doing our jobs so he could fly back, be with Supreme Court Justice Kavanaugh, to remind the voters in Kentucky that he is the strong man who got Judge Kavanaugh on the Supreme Court and then to celebrate the swearing-in of just another young judge to a Federal district court.",
+    "Chad Readler, from my State, who is now serving on the Sixth Circuit, led the Trump administration's efforts to dismantle the entire Affordable Care Act, and David Porter, who holds a Pennsylvania seat on the Third Circuit, wrote that the ACA ``violates the Framers' constitutional design.'' What kind of law training do you have, and what kind of upbringing do you have--what kind of way do you think?--that you would think that providing healthcare to citizens is a violation of the Framers' constitutional design?"
+   ]
+  },
+  {
+   "date": "2020-03-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Department of Education Relating to Borrower Defense Institutional...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-03-10/CREC-2020-03-10-pt1-PgS1660-3",
+   "sentences": [
+    "This is an example where the Senate stood up to the President, stood up to the billionaire Secretary of Education whose mission in that job is to privatize public education and turn profits for her and her friends and her allies.",
+    "They spend millions on marketing, and they trick students into taking out huge loans, only to close up shop and leave them with meaningless degrees or, worse yet, just credits but always mountains of debt.",
+    "Its legal fine print that for- profit schools sneak into their enrollment agreements deny students their day in court.",
+    "She ended up $100,000 in debt.",
+    "She ended up $100,000 in debt with a degree that, unfortunately, employers didn't take seriously.",
+    "Now she has lost her shot at using the GI benefit she earned, and she is drowning in debt.",
+    "She continues to yield to her billionaire friend in the Cabinet, Secretary DeVos, who is a billionaire friend of the billionaire President and has no interest in making him accountable."
+   ]
+  },
+  {
+   "date": "2020-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Advanced Geothermal Innovation Leadership Act of 2019--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-03-03/CREC-2020-03-03-pt1-PgS1280-2",
+   "sentences": [
+    "Essentially, he and another Senator in the U.S. Senate and President Roosevelt created collective bargaining.",
+    "Even by the low standards--and, my gosh, they are low--we have come to expect from Senator McConnell and the majority in always, always supporting the rich, always fighting for the largest corporations, always fighting for the people who have privilege against struggling families, against workers--40 percent of people in this country don't have $400 to their name if they have an emergency to meet.",
+    "Instead of dealing with that issue, it is more tax cuts for the rich.",
+    "It is more cuts to Medicaid or to food stamps or to the SNAP program or any of these things.",
+    "In one sentence, he wants to abolish Social Security--not scale back the cost of living, not throw a few people off Social Security disability, not eliminate survivors' benefits; he wants to abolish Social Security.",
+    "President Trump, on the stump--he came to Ohio many times, my State, and around the country--promised he would protect Social Security, but now he puts Stephen Schwartz on the bench, a judge who wants to abolish it.",
+    "Stephen Schwartz wrote that Social Security benefits were intended to prevent ``outright starvation.'' He wasn't sitting at this desk, to be sure, in the 1930s when Social Security was started.",
+    "Obviously, he didn't understand that Social Security was one of three legs of the stool: Social Security, private pension--we don't have too many of those anymore--and then savings that workers were able to accrue.",
+    "He says that Social Security was there to prevent ``outright starvation,'' that Social Security has ``become a standard component of most retirement programs.'' That is kind of the point, to make sure that every single American who works her whole life and pays into the system can have a decent retirement.",
+    "I would love to hear him listen to the retired machinist or the retired teacher and say to them that this gentleman wants to serve in the Federal Government, appointed by the President of the United States, and thinks that Social Security should be eliminated.",
+    "I want him to talk to Americans who have paid into Social Security for their whole lives.",
+    "Social Security is called social insurance.",
+    "Social Security--you pay in every paycheck unless you are really rich.",
+    "After his tax handouts to billionaires and corporations blew up the deficit, President Trump said he wants to pay for those tax cuts--remember, 70 percent of the Trump tax cuts went to the richest 1 percent.",
+    "He wants to pay for all that--the President said he wants to pay for it by cutting Social Security and Medicare.",
+    "All these people pay into Social Security and pay into Medicare every day of their working lives--people starting at 16 or 15 or 17--they pay that throughout their working lives, and then the President says he wants to cut Medicare and Social Security in order to pay for tax cuts for rich people.",
+    "People see Trump's tax scam for what it really was: a giveaway to corporations and the wealthiest tiny sliver, the 1 percent of this country.",
+    "He promised that somehow these massive corporate tax cuts, these giveaways to companies, would end up in workers' pockets.",
+    "He did say, though, after signing the bill, when he went to Mar-a-Lago and hung around with his millionaire and billionaire friends: I made you a lot richer today when I signed that tax cut.",
+    "He has worked to put Social Security out of business."
+   ]
+  },
+  {
+   "date": "2020-03-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Advanced Geothermal Innovation Leadership Act of 2019--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-03-02/CREC-2020-03-02-pt1-PgS1239-6",
+   "sentences": [
+    "Wages are flat, the cost of everything is up: healthcare, childcare, college, prescription drugs, and especially housing.",
+    "Dignity of work means living with dignity, whether you write a rent check or pay a mortgage, whether you are saving for a down payment or just looking for a safe place to lay down your head at night, whether you live in a city or a suburb, in Hamilton County where my colleague, Senator Portman, who is in the Chamber, lives, in Richland County, where I grew up, a medium-sized city or a rural community.",
+    "People also talked about how up-front costs aren't just an issue about the down payment you make on buying a home to get a mortgage, but if you rent, you often have to have the first month's rent, last month's rent, and a security deposit.",
+    "More than 50 years after we passed the Fair Housing Act to prohibit discrimination in housing, African Americans make up 13 percent of the population, and 21 percent of the people experiencing poverty in this country are African American, but 40 percent of the people experiencing homelessness are African American.",
+    "There are 21 percent of people who are experiencing poverty, but there are 40 percent of people who are experiencing homelessness.",
+    "We have talked to people who are homeless, but none of us gets out as much as we should, as President Lincoln said, to get our public opinion bath.",
+    "We don't talk to people like that enough, but when we do, we learn that so many people who are homeless have jobs.",
+    "People may also cobble together two jobs, but they are still homeless.",
+    "President Trump's budget will only make the affordable housing crisis worse for families who are struggling in every community in this country.",
+    "The administration would eliminate the funds that communities use to create and preserve affordable housing and that make homeownership possible for working families.",
+    "The Community Development Block Grant is an example, as is the HOME Investment Partnership Program.",
+    "It wants to get rid of the funding for the housing trust fund and capital magnet fund--even though this funding comes from the GSEs, the government-sponsored enterprises, and not the Federal budget--to make it still harder to build homes and apartments that people can actually afford.",
+    "To add insult to injury, the Trump administration proposes to make mortgages more expensive for working families in order to reduce the deficit that it created.",
+    "We know we have trillion-dollar deficits now, even in times of growth with the economy, because of the tax cut that went overwhelmingly to the rich.",
+    "The administration made these mortgages more expensive for working families in order to reduce the deficit it created and to supposedly level the playing field for Wall Street, as if Wall Street doesn't have enough advantages without our continuing to shovel money to it."
+   ]
+  },
+  {
+   "date": "2020-02-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Directing the Removal of United States Armed Forces From Hostilities Against the Islamic Republic of Iran That Have Not Been Authorized by Congress--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-02-12/CREC-2020-02-12-pt1-PgS1006-3",
+   "sentences": [
+    "He grew up speaking Ukrainian, and his English was damn near perfect when I have listened to him, but he had a bit of a Ukrainian accent.",
+    "No one--no one--should be above the law."
+   ]
+  },
+  {
+   "date": "2020-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Mexico-Canada Trade Agreement",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-14/CREC-2020-01-14-pt1-PgS185",
+   "sentences": [
+    "In fact, I helped to lead the opposition to the original NAFTA among freshmen Members of Congress because I recognized that every single one of these trade agreements basically had the template of corporate interests at the center of them.",
+    "In other words, these trade agreements--whether it was NAFTA, or the North American Free Trade Agreement, whether a half generation later it was the Central America Free Trade Agreement, whether it was the free trade agreement with South Korea, or whether it was the Permanent Normal Trade Relations with China--all of them were written by corporate interests serving the profitability of the executives and the major stockholders of these companies.",
+    "That became the business model for company after company after company since the North American Free Trade Agreement, where corporations outsourced jobs in order to save money, always at the expense of communities, particularly in the industrial Midwest, always at the expense of workers, and always at the expense of the middle class.",
+    "It was welcome news to me when Candidate Trump, with whom I agree with on almost nothing, said he would renegotiate the North American Free Trade Agreement.",
+    "He refused to raise the minimum wage.",
+    "So a Mexican worker, where the company has broken the law by paying them a sub-minimum wage, where the company has broken the law by refusing them to organize or to allow unions to attempt to organize, where a company breaks the law on worker safety--a worker at that company, anonymously, at that worksite, can file a complaint and set off the clock of the process so we can actually challenge when they break the law.",
+    "Republicans opposed the fix but are now voting for it because they still want USMCA, but it will not fix the rest of President Trump's economic policies that put corporations over workers.",
+    "If you are a company in Dayton, OH, you pay a 21-percent corporate tax rate.",
+    "If you move to Mexico or you move to France or you move to China, you pay only a 10.5-percent corporate tax rate."
+   ]
+  },
+  {
+   "date": "2020-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Mexico-Canada Agreement (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-09/CREC-2020-01-09-pt1-PgS116-3",
+   "sentences": [
+    "Mr. President, in the fall of 2016, just 4 years ago, I heard Candidate Trump repeatedly promise to get rid of the North American Free Trade Agreement--to pull out of it, to renegotiate it, or to fix it so that it worked better than it did.",
+    "The point was that I liked what he said about getting out of NAFTA.",
+    "I know what NAFTA did to the Presiding Officer's home State of Indiana.",
+    "I voted against NAFTA, and I voted against the Central American Free Trade Agreement.",
+    "I voted against permanent normal trade relations with China--one after another after another--because I saw that these trade agreements were written for corporate interests and that they betrayed workers.",
+    "Then, about a year ago, the President presented the new NAFTA.",
+    "He called it the United States-Mexico-Canada Agreement, the USMCA.",
+    "The President's bill, the President's USMCA, was again a giveaway to corporate interests.",
+    "The President presented this USMCA to us, and it was the same ol, same ol.",
+    "Because of his USMCA, even more companies would shut down in Lima or in Zanesville or in Gallipolis or in Portsmouth or in Chillicothe and move overseas to look for cheap labor and weaker labor laws so they would make more money.",
+    "Yet, this year, a number of us--Senator Wyden of Oregon, Speaker Pelosi, Congresswoman DeLauro of Connecticut, and organized labor-- banded together and said: No, Mr. President.",
+    "Then we said: We will support your USMCA only if you include strong language for workers.",
+    "If we don't do this, we will never get another USMCA.",
+    "I have always opposed NAFTA and CAFTA and PRT with China."
+   ]
+  },
+  {
+   "date": "2020-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Mexico-Canada Trade Agreement",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-07/CREC-2020-01-07-pt1-PgS60-3",
+   "sentences": [
+    "I heard Candidate Trump repeatedly talking about renegotiating NAFTA or getting rid of the North America Free Trade Agreement.",
+    "While I did not support his candidacy and have generally disagreed with most of what he has said and done, it was a bit of music to my ears to hear Candidate Trump talk about renegotiating or getting rid of NAFTA.",
+    "I know what they have done to my adoptive city of Cleveland, OH, and I know what they have done to the entire industrial Midwest--well beyond that, too, in places like Arizona and elsewhere.",
+    "He then says he is going to do away, back out, or renegotiate NAFTA.",
+    "I offered my assistance, and then, lo and behold, about a year ago, the President came out with a renegotiated NAFTA.",
+    "Under the President's new NAFTA--he called it USMCA--United States- Mexico-Canada Trade Agreement--under the President's new NAFTA, it was the same corporate template, the same corporate trade agreement that helps corporate investors, that undermines workers, that gives incentives to companies to shut down production in Zanesville, in Gallipolis, in Marietta, in Cleveland, in Lima, in Toledo, and in Bryan and move their jobs to Mexico.",
+    "Instead, initially, I continued to talk to the U.S. Trade Representative, as did some of my colleagues, knowing this first NAFTA draft was unacceptable and was not nearly what the President said he would do for workers.",
+    "This same President has betrayed low-income workers by refusing to raise the minimum wage.",
+    "It has taken us months and months and months of fighting alongside Speaker Pelosi and Senator Wyden--the senior Democrat of the Finance Committee--and unions and organized labor to secure the Brown-Wyden provisions that now, with USMCA, amount to the strongest labor enforcement in a U.S. trade agreement ever.",
+    "I didn't vote for NAFTA, the Central American Free Trade Agreement, PNTR with China and South Korea, and all these other trade agreements.",
+    "I would not have voted against the Trump USMCA because it didn't look out for workers."
+   ]
+  },
+  {
+   "date": "2020-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: United States-Mexico-Canada Trade Agreement",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-06/CREC-2020-01-06-pt1-PgS22",
+   "sentences": [
+    "Tomorrow in the Senate Finance Committee, we are going to take up the renegotiated North American Free Trade Agreement.",
+    "One of my proudest votes as a Member of the House a long time ago was to vote against the North American Free Trade Agreement, to vote against NAFTA.",
+    "They maximize profits always--every one of these trade agreements--CAFTA, NAFTA, PNTR with China, which is not technically a trade agreement, but it quacks like a duck and walks like a duck.",
+    "Often, they can't join a union, and the middle class continues to shrink.",
+    "Then-Candidate Trump said that he was going to renegotiate NAFTA.",
+    "His economic policies overall have been that, but his renegotiated NAFTA, which he brought to this Congress originally--the negotiation that he made with Mexico and Canada--was another corporate trade agreement written for corporate interests.",
+    "Then, last year, as he has done one betrayal of workers after another, squeezing the middle class even more--last year, when we got the initial draft of this agreement from the administration, the renegotiated NAFTA was another betrayal.",
+    "His first NAFTA draft was nowhere near the good deal for workers that President Trump promised.",
+    "It took us months of fighting alongside Speaker Pelosi and Senator Wyden and trade unions to improve this deal and take the real and important steps toward putting workers at the center of our trade policies.",
+    "Instead of building the economy from the middle out so that the middle class grows and America overwhelmingly prospers, just like the tax cuts--the tax cuts for the rich that may, they tell us, trickle down and help the middle class--that is the way this trade agreement was written.",
+    "It took months of fighting alongside Senator Wyden and organized labor and Speaker Pelosi.",
+    "He knew he wasn't going to get a renegotiated NAFTA unless he followed what we said on workers.",
+    "They can keep unions from organizing.",
+    "If corporations are forced to pay workers a living wage and treat them with dignity no matter where the workers are, we take away the incentive for those companies to move jobs abroad.",
+    "When Mexican workers have the power to form real unions and negotiate for higher wages, it helps our workers.",
+    "This deal will not stop outsourcing when we have President Trump's tax plan that gives companies a tax break to send American jobs to Mexico.",
+    "Here is how the President's tax bill that was rammed through this Senate a year or so ago works: If you are in Springfield, OH, your corporate tax rate is 21 percent.",
+    "Even with this good trade agreement, we cannot stop that kind of outsourcing because the President insists on helping his corporate buddies."
+   ]
+  },
+  {
+   "date": "2019-10-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, Agriculture, Rural Development, Food and Drug Administration, Interior, Environment, Military Construction, Veterans Affairs, Transportation, and Housing and Urban...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-10-29/CREC-2019-10-29-pt1-PgS6206-5",
+   "sentences": [
+    "Missing a paycheck--you know, a lot of people in this country can absorb missing a paycheck if they are in the 1 percent or the 2 percent or the 5 percent or the 10 percent wealthiest people, certainly the billionaire President and his multimillionaire--except for those Cabinet members who are billionaires--Cabinet with their massive investment portfolios.",
+    "Some of them--many, many of them--are still dealing with the debt.",
+    "The same President puts people in the Supreme Court who put their thumb on the scale of justice always to support corporations over workers, always to support Wall Street over consumers, and always to support health insurance companies over patients.",
+    "Put on top of that the Trump tax cuts--a massive giveaway to the wealthiest 1 percent.",
+    "I spoke to a group of union members today.",
+    "I have to say, we got no money because of this tax cut that my friends over here voted for, most of which went to the wealthiest 1 percent."
+   ]
+  },
+  {
+   "date": "2019-04-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Mark Anthony Calabria (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-04-03/CREC-2019-04-03-pt1-PgS2227-2",
+   "sentences": [
+    "Mr. President, as you know and as we know, our Nation is facing an affordable housing crisis.",
+    "Dr. Calabria has called for repealing the affordable housing goals.",
+    "You would think making housing affordable would be one of Dr. Calabria's top priorities, but he doesn't think we need the current affordable housing goals.",
+    "The house becomes devalued because of the neighborhood, because of other foreclosures, because of other people being evicted, and your home is worth less than what you owe the bank for your mortgage.",
+    "Because of circumstances in this global economy where wages are flat, where the rich are getting richer, where most of America is treading water, Dr. Calabria calls these people deadbeats for something they didn't even do.",
+    "That means nothing to anybody who is listening, but the ZIP Code in which we lived in the first half of 2007 had more foreclosures than had any ZIP Code in the United States.",
+    "In that year, Dr. Calabria criticized one of the most important tools that States like Ohio had in trying to help homeowners--the Hardest Hit Fund.",
+    "The Hardest Hit Fund helps States like Ohio and Indiana and Arizona and Florida.",
+    "The Hardest Hit Fund helped more than 25,000 struggling homeowners.",
+    "Dr. Calabria said the Hardest Hit Fund was just subsidizing States because their housing markets were getting more affordable.",
+    "My colleagues who plan to support his nomination today or tomorrow or whenever the vote comes should not act surprised if he raises costs for borrowers, if he makes it more difficult to develop affordable housing, or if he cuts off access to homeownership for American families.",
+    "It is not enough that Senator McConnell blocked a Supreme Court Justice for over a year.",
+    "It is not enough that Senator McConnell supports all of the dark money in politics or that billionaires can put money into political campaigns and nobody knows exactly where the money comes from.",
+    "It is not enough that the Supreme Court is now controlled by the corporate elite in this country."
+   ]
+  },
+  {
+   "date": "2019-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on February 15, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-03-14/CREC-2019-03-14-pt1-PgS1857-3",
+   "sentences": [
+    "In the first half of 2007, that ZIP Code had more foreclosures than any ZIP Code in the United States."
+   ]
+  },
+  {
+   "date": "2018-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Interior, Environment, Financial Services, and General Government Appropriations Act, 2019--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-25/CREC-2018-07-25-pt2-PgS5320",
+   "sentences": [
+    "They make sure that Social Security checks go out and Medicare is taking care of seniors.",
+    "They are in Social Security offices in most of our States.",
+    "This President has brought in lots of very ideologically charged political appointees who have retaliated against nonpartisan career public service--people who make sure that Social Security checks go out, who serve veterans, who make sure we do public health the way we should as a nation.",
+    "These decisions create an atmosphere where whistleblowers who report fraud fear being punished and fear being fired for shining a light on abuse.",
+    "An attack on public service unions is an attack on all unions, and an attack on unions is an attack on all workers--and I mean all workers."
+   ]
+  },
+  {
+   "date": "2018-07-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Interior, Environment, Financial Services, and General Government Appropriations Act, 2019--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-24/CREC-2018-07-24-pt1-PgS5240-2",
+   "sentences": [
+    "Mr. President, this is a big deal for Americans making $15,000, $20,000, $30,000, or $40,000 a year.",
+    "It will matter to so many working families in Mansfield, Toledo, Sandusky, and all over Ohio."
+   ]
+  },
+  {
+   "date": "2018-06-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water, Legislative Branch, and Military Construction and Veterans Affairs Appropriations Act, 2019--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-20/CREC-2018-06-20-pt1-PgS4261",
+   "sentences": [
+    "I am glad that he is signing something, putting a stop to his administration's cruel, pointless, and heartless policy of separating children from their parents at the border.",
+    "Yesterday, the administration reported that some 2,300 children were taken from their parents at the border in just a single month.",
+    "Now think of these 2,300 children who were taken from their parents at the border in a single month--from May 5 to June 9.",
+    "Some of these parents are seeking asylum in America.",
+    "Then they were separated from their parents at the border.",
+    "We need to come together, and we need to work on a bipartisan solution that recognizes we aren't going to deport 13 million people who are already here.",
+    "He had heard the tragic story of a 10-year-old with Down syndrome who was reportedly separated from her parents at the border.",
+    "Mr. Powers brought to my attention a problem he was having with the VA's accounting mistakes, and our conversation led to a bill I introduced with Senator Tester, a Montana Democrat, and Senator Boozman, an Arkansas Republican, the bipartisan Veteran Debt Fairness Act.",
+    "Both Senators know how VA overpayment and debt affect veterans every day.",
+    "Instead, we have an amendment to the MILCON-VA bill to require the VA to track down these overpayments and report to Congress on the scope of VA debt.",
+    "We will continue to push for the Tester-Boozman bill, but I hope all of my colleagues will join me in supporting this bipartisan, commonsense step toward fixing VA overpayment and debt for America's veterans."
+   ]
+  },
+  {
+   "date": "2018-06-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Committee on Foreign Investment in the United States",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-05/CREC-2018-06-05-pt1-PgS2998-6",
+   "sentences": [
+    "In just 3 years, from 2013 to 2015--from the beginning of 2013 to the end of 2015--the number of Chinese acquisitions coming under CFIUS review jumped 38 percent.",
+    "Or some foreign investors also might, for instance, decide to enter into a joint venture with an American company instead, giving them access to all of the technology and data and know-how but bypassing the CFIUS review process."
+   ]
+  },
+  {
+   "date": "2018-04-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by Bureau of Consumer Financial Protection",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-04-17/CREC-2018-04-17-pt1-PgS2200-3",
+   "sentences": [
+    "They mostly do corporate buybacks and stock buybacks.",
+    "I have said this in the Banking Committee before, and Senator Crapo has heard me say this many times: The ZIP Code where my wife and I live in Cleveland, OH, had more foreclosures than any ZIP Code in the United States of America.",
+    "It ensured that women had the right to choose their own healthcare provider regardless of their form of insurance.",
+    "Think of the progress we have made in this country because of consumer protection, because of strong safe drinking water laws, and because of strong clean air laws."
+   ]
+  },
+  {
+   "date": "2018-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the White Mountain Apache Tribe Water Rights Quantification Act of 2010",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-04-16/CREC-2018-04-16-pt1-PgS2131-6",
+   "sentences": [
+    "This bill strips away the rights of 600,000 employees at Tribal casinos, so 600,000 employees at casinos on Tribal lands will lose their right to collective bargaining.",
+    "So when these casinos all over the country, on reservations, these casinos on Indian lands--most of the 600,000 employees at the Tribal casinos have the right to collectively bargain, to form unions if they choose, to collectively bargain if they choose, and to get better wages and benefits if that is what brings them to it.",
+    "The Fair Labor Standards Act, the Occupational Safety and Health Act, the Employment Retirement Income Security Act--so-called ERISA--and title III of the Americans with Disabilities Act all apply on Tribal lands, but this bill only goes after collective bargaining rights, only goes after those workers.",
+    "We don't have to take rights away from these workers--the right to organize and bargain collectively--in order to protect Tribal sovereignty.",
+    "Some of my colleagues will say they want to make sure that Tribes have the same rights as States, whose workers are carved out of the National Labor Relations Act, but Tribal government employees are already exempted from the National Labor Relations Act.",
+    "The national chamber of commerce wants to go after unions every chance they get and take away collective bargaining rights.",
+    "Of course these companies want to take away collective bargaining rights and put unions out of business.",
+    "They will make more money if you take away the collective bargaining rights of employees.",
+    "Supporters of the bill will say it is necessary to prevent overreach by the National Labor Relations Board.",
+    "I wish all of us here supported American workers' right to organize just as strongly.",
+    "So it strips collective bargaining rights from 600,000 people.",
+    "They can file grievances under union contracts to enforce their rights.",
+    "All of the collective bargaining agreements in these workplaces would expire at the end of their terms, and the union-won protections against harassment would simply disappear along with all of them.",
+    "So if this bill passes, we are going to make sure that 600,000 fewer Americans have the right to organize and bargain collectively.",
+    "Just like this bill is not for Tribal sovereignty--it is to help put labor unions out of business and depress wages.",
+    "Just look how private, for-profit charter schools have failed children in my State.",
+    "The owners of the private, for-profit charter schools have done well, while taxpayers have been fleeced and students have been betrayed.",
+    "We know that privatization of the prison system or privatization of Social Security or privatization of Medicare or privatization of the Veterans' Administration all works the same way.",
+    "Study after study in my State shows these for-profit charter schools don't give Ohio students an adequate education and cost taxpayers more.",
+    "According to a report from Stanford University's Center for Research on Education Outcomes, students at Ohio's charter schools lose 43 days of math instruction and 14 days of reading instruction, compared with traditional public schools in the State.",
+    "Dr. Jackson will have to commit to oppose any VA privatization efforts to earn my vote.",
+    "I know veterans service organizations, some of the best groups and civic organizations in our country--to name a few, knowing I will leave some out: the Disabled American Veterans, the American Legion, the AMVETS, the Veterans of Foreign Wars, the Paralyzed Veterans of America, the Polish American Veterans--all these organizations have said: We don't want to privatize the VA.",
+    "We need to redouble our efforts to strengthen the VA, not tear it down and not privatize it."
+   ]
+  },
+  {
+   "date": "2017-10-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by Bureau of Consumer Financial Protection",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-10-24/CREC-2017-10-24-pt1-PgS6738-2",
+   "sentences": [
+    "In early September, we learned it compromised the personal data of more than 145 million Americans'--5 million in my State, probably twice that in the Presiding Officer's State--names, dates of birth, addresses, Social Security numbers, driver's licenses, more than half the adult population of the United States of America.",
+    "My ZIP Code had more foreclosures in 2007 than any ZIP Code in the United States of America, and I see what these banks did to my neighborhood, and I see what they do to Wells Fargo accountholders, and I see what they are doing to the 145 million whom Equifax has scammed.",
+    "Forced arbitration hurts the 145 million Americans who had their personal data put at risk by Equifax.",
+    "Forced arbitration hurts millions of Americans with student loan debt and credit cards.",
+    "The Vice President only shows up in this body when the rich and the powerful need him.",
+    "This vote will make the rich richer.",
+    "It hurts the millions of Americans with student loan debt and credit cards."
+   ]
+  },
+  {
+   "date": "2017-03-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disapproving a Rule Submitted by the Department of Labor",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-03-22/CREC-2017-03-22-pt1-PgS1900-6",
+   "sentences": [
+    "Go to union halls, go to workplaces, listen to what workers are saying, listen to what union members are saying, and listen to what nonunion members are saying about what these workplace safety rules mean.",
+    "Earlier this month, at the Glenn School in Columbus--which is named after my good friend, the late Senator John Glenn--I rolled out a plan to reinvest in the American worker, but instead of coming together to work on solutions, the Senate today is going in the wrong direction."
+   ]
+  },
+  {
+   "date": "2017-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by the Securities and Exchange Commission",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-02/CREC-2017-02-02-pt1-PgS634-6",
+   "sentences": [
+    "As Senator Lugar said: Paradoxically, history shows that rather than a blessing, energy reserves can be a bane for many poor countries, leading to fraud, corruption, wasteful spending, military adventurism and instability.",
+    "Too often, oil money that should go to a nation's poor ends up in the pockets of the rich or is squandered on the trappings of power and massive showcase projects instead of being invested productively and equitably.",
+    "For example, oil-rich Venezuela is running out of food and medicine.",
+    "This includes telling us what taxes the companies pay, which is key to ensuring citizens know what benefits they get--from Venezuela or Nigeria or Congo--from their own natural resources.",
+    "In Nigeria, again according to Global Witness, a major oil deal struck by--surprise--ExxonMobil with the Nigerian Government is being investigated by Nigeria's Economic and Financial Crimes Commission, a law enforcement agency that investigates high-level corruption.",
+    "We don't know quite enough about the connections between our President and President Putin because we can't get the President's tax returns.",
+    "Autocrats in Iran, where Advisor Flynn made some interesting and provocative comments today, autocrats in Venezuela, autocrats in Africa with oil wells, gasfields, or copper mines who want to keep their payments a secret.",
+    "Oil, gas, and mining workers unions, such as United Steelworkers, back the rule.",
+    "Notice who doesn't back the rule: Exxon, the American Petroleum Institute, and autocrats in Iran, Russia, and Venezuela.",
+    "Republicans in the House, Republicans in the Senate, the President of the United States, ExxonMobil, the Secretary of State, who used to be CEO of ExxonMobil, and autocrats in Iran and Venezuela.",
+    "And on that side for this bill--against the rule--we have autocrats in places like Russia, Iran, Venezuela.",
+    "You can bet on this vote tomorrow morning, if 7 a.m. comes out the way it looks like it will, you can bet there will be celebrations in Russia, in Iran, and Venezuela, in all these countries where these kleptocrats, where these leaders who are so corrupt, where they benefited so much.",
+    "It is just incredible how they moved so quickly to side with the autocrats, to side with the Russians, to side with Big Oil, to side with ExxonMobil and these autocrats in places like Iran and Russia."
+   ]
+  },
+  {
+   "date": "2017-01-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Prescription Drug Prices",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-01-10/CREC-2017-01-10-pt1-PgS220-6",
+   "sentences": [
+    "Mr. President, skyrocketing drug prices are crippling far too many American families.",
+    "The Kaiser Family Foundation found that nearly 8 in 10 Americans believe the cost of their prescription drugs is too high and that Congress should work to lower the price of medication that people need.",
+    "This should be our top health priority for 2017, lowering drug costs for families, not taking health care away from Americans with no plan to replace it.",
+    "Keep that in mind while we hear the generally specious arguments against the Affordable Care Act.",
+    "Instead, lowering drug prices should be something we can come together on.",
+    "There are concrete actions we can take right now to lower the cost of prescription drugs.",
+    "Senator Franken and I led 18 of our colleagues in outlining 5 of them in a letter to the President-elect in December, including putting an end to abusive price gouging, requiring more transparency from drug companies, boosting competition and innovation in the market, and allowing the Secretary of Health and Human Services to negotiate better prices for seniors.",
+    "Senator Klobuchar and I worked with several colleagues to reintroduce the Medicare Prescription Drug Price Negotiation Act.",
+    "On the one hand, Congress will not do anything about drug prices because the pharmaceutical industry, frankly, gave too much money to far too many of my colleagues.",
+    "We must fight against these attempts to decrease coverage and increase costs for working families.",
+    "Whether you support the Affordable Care Act or not, we all agree you can't ask people to change horses midstream without giving them a second horse.",
+    "Before 2010, insurance companies denied Kathy and her family the family coverage she needed because her husband's cancer was a preexisting condition.",
+    "Thankfully, the Affordable Care Act stopped insurance companies from abusive practices like this.",
+    "Imagine 900,000 Ohioans with insurance and, like that--because of partisan politics here, because so many of my colleagues ran for President, in some cases, or ran for the Senate or ran for the House by saying they are going to get rid of the Affordable Care Act, and they are going to get rid of it and not replace it for a couple of years maybe.",
+    "Governor Kasich, Republican Governor in my State--also in the Presidential race with my friend in the Presiding Officer's chair--has said to the Senate and House, to Ohio's Republican Members: Don't cancel the Affordable Care Act.",
+    "Don't throw people off insurance unless you are going to replace it with something right now that will take care of those people; 700,000 people on Medicaid expansion, another 200,000 people, 26-year-olds, on their parents' plan, people on the exchanges, people getting insurance in other ways.",
+    "He said he thinks what this Republican Congress is going to do in the Affordable Care Act is morally reprehensible.",
+    "Because we will not have the resources if the Affordable Care Act is repealed and the insurance is canceled and the Medicaid expansion is gone and hospitals can't take care of everybody like they are pretty much now.",
+    "Instead of kicking people off their insurance with no plan to replace it and handing billions of dollars in tax breaks to the drug companies, let us make our first priority lowering drug costs for the people whom we say we are serving."
+   ]
+  }
+ ]
+}

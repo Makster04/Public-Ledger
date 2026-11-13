@@ -1,0 +1,219 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "mgp",
+ "name": "Marie Gluesenkamp Perez",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 5,
+  "press": 3,
+  "bluesky": 14,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-10-28",
+   "source": "press",
+   "where": "Press release: Rep. Gluesenkamp Perez Introduces Legislation to Ban the Import of Russian Oil",
+   "url": "https://gluesenkampperez.house.gov/posts/rep-gluesenkamp-perez-introduces-legislation-to-ban-the-import-of-russian-oil",
+   "sentences": [
+    "Marie Gluesenkamp Perez (WA-03), Brian Fitzpatrick (PA-01), and Don Bacon (NE-02) introduced the Ronald Reagan Peace Through Strength Act to block the President’s deal to buy Russian oil and affirm support for Ukraine."
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "source": "press",
+   "where": "Press release: Statement on Russia Sanctions Waiver",
+   "url": "https://gluesenkampperez.house.gov/posts/statement-on-russia-sanctions-waiver",
+   "sentences": [
+    "VANCOUVER, WA – Rep. Gluesenkamp Perez (WA-03) issued the following statement on the President’s decision to sign an Executive Order yesterday waiving the sanctions on the sale of Russian oil Congress passed in the bipartisan Lindsay O. Graham Sanctioning Russia and Iran Act of 2026: “The President…"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "source": "press",
+   "where": "Press release: Rep. Gluesenkamp Perez Introduces Legislation to Target Scammers who Prey on Older Americans",
+   "url": "https://gluesenkampperez.house.gov/posts/rep-gluesenkamp-perez-introduces-legislation-to-target-scammers-who-prey-on-older-americans",
+   "sentences": [
+    "This bill will create an inter-agency framework to give law enforcement and prose…"
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mnryrdxsjs2g",
+   "sentences": [
+    "Trust in congress is at an all time low, and it’s no secret why: This is becoming a body where unelected staff are running the show."
+   ]
+  },
+  {
+   "date": "2026-05-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mmfpccnrvc2x",
+   "sentences": [
+    "Republicans pulled the war powers resolution today because they knew it would succeed.",
+    "Pulling a vote against the war in Iran because you know your community opposes it?"
+   ]
+  },
+  {
+   "date": "2026-05-04",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mkzx7vqnnc2s",
+   "sentences": [
+    "Vote-by-mail is the gold standard for election security and access to representation."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Farm, Food, and National Security Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-29/CREC-2026-04-29-pt1-PgH3169",
+   "sentences": [
+    "That is what has happened through a lack of respect and regard for people who actually work in childcare, through, candidly, an establishment that is so old that they don't have kids in daycare or so rich that they had nannies instead of ordinary daycare.",
+    "Let's post these on a website somewhere, and let's say that States who are taking money for childcare will not negatively impact the licenses of daycare centers based on their provision of these foods to children given a handwashing sink is available.",
+    "We need to bring down the cost of childcare, and that is what this legislation does.",
+    "Mr. Chairman, I think we all agree that childcare is underfunded."
+   ]
+  },
+  {
+   "date": "2026-04-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mkj3t6xhxs2e",
+   "sentences": [
+    "We can advocate for you with federal agencies – on things like getting veterans benefits, passports, or your Social Security check."
+   ]
+  },
+  {
+   "date": "2026-04-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mk6wurg5p22c",
+   "sentences": [
+    "As foreign investors buy up more of our forest land, our community continues to be boxed out of the woods we had access to for generations."
+   ]
+  },
+  {
+   "date": "2026-04-03",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3miluhrummk2j",
+   "sentences": [
+    "I get no joy from seeing another secretary sent to the glue factory—Bondi’s dismissal doesn’t change the fact that the Epstein files remain redacted & pedophiles run free"
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mfmu6myt4k2x",
+   "sentences": [
+    "So come see us in Rainier if you're getting the runaround from federal agencies like the VA or Social Security Administration."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3mbwzhxyrak23",
+   "sentences": [
+    "Nearly 25,000 Southwest Washingtonians have been dealing with skyrocketing healthcare costs since the enhanced ACA subsidies expired at the end of last year."
+   ]
+  },
+  {
+   "date": "2025-12-13",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m7veh35pes2y",
+   "sentences": [
+    "My bipartisan Right to Repair bills would right that wrong and affirm that America is a nation of people who know how to make things."
+   ]
+  },
+  {
+   "date": "2025-12-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m7bii46wik2i",
+   "sentences": [
+    "If you're getting the runaround from a federal agency like the VA or Social Security Administration, stop by!"
+   ]
+  },
+  {
+   "date": "2025-11-25",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m6iaqwgqts2q",
+   "sentences": [
+    "In a 5:7 vote they’ve pushed us further into a false choice between more consolidation of timber land and environmental ideals."
+   ]
+  },
+  {
+   "date": "2025-11-18",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m5wrvlzk7c2o",
+   "sentences": [
+    "I voted to release the Epstein Files."
+   ]
+  },
+  {
+   "date": "2025-10-31",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m4jhsi34fk2e",
+   "sentences": [
+    "A lot of hard working families have spent the last few weeks stressed out, squeezing pennies because politicians have been playing chicken with their food security."
+   ]
+  },
+  {
+   "date": "2025-10-10",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/gluesenkampperez.house.gov/post/3m2ujmyfwdc2i",
+   "sentences": [
+    "Did you know my team can assist with delayed or missing Social Security checks, tax refunds, passports, or veterans benefits?"
+   ]
+  },
+  {
+   "date": "2023-09-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-26/CREC-2023-09-26-pt2-PgH4505-2",
+   "sentences": [
+    "My first amendment supports farmers and healthy soils by asking the USDA to conduct research on the amount of microplastics in farmland.",
+    "My second amendment is the idea that the USDA should be able to fix its own stuff."
+   ]
+  },
+  {
+   "date": "2023-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-26/CREC-2023-07-26-pt1-PgH3976-3",
+   "sentences": [
+    "In rural communities with sparse specialty and mental health care options to begin with, the closure of a full CBOC has put lifesaving care out of reach of our veterans."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "In sector after sector of our economy, market consolidation is squeezing America's small businesses and harming consumers."
+   ]
+  },
+  {
+   "date": "2023-01-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Strategic Production Response Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2",
+   "sentences": [
+    "Preventing offshore drilling not only protects the environment, it also protects the economies of the communities where people work for a living.",
+    "That is why I support this amendment that prevents offshore drilling."
+   ]
+  }
+ ]
+}

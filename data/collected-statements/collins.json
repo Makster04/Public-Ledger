@@ -1,0 +1,633 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "collins",
+ "name": "Susan M. Collins",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 44,
+  "press": 0,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-08-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-07/CREC-2026-08-07-pt1-PgS4542-3",
+   "sentences": [
+    "It includes language to counter emergent cyber security threats, and it would help Federal law enforcement handle and plan for national security events."
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Kay Hagan Tick Reauthorization Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-06/CREC-2026-08-06-pt1-PgS4494-3",
+   "sentences": [
+    "Mr. President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of Calendar No. 154, S. 2398."
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Statements on Introduced Bills and Joint Resolutions",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-05/CREC-2026-08-05-pt1-PgS4477",
+   "sentences": [
+    "Home healthcare not only improves patients' quality of life but also helps avoid unnecessary hospitalizations and nursing home admissions, producing substantial savings for Medicare, Medicaid, and families alike.",
+    "The California State auditor reported that one office building housed the corporate offices of more than 100 hospice agencies and dozens of home health agencies--a striking example of how organized fraud can exploit weaknesses in Medicare hospice enrollment and oversight.",
+    "Even though only 2 percent of the Nation's Medicare fee-for-service beneficiaries live in Los Angeles County, that 2 percent generates 9 percent of all Medicare fee-for-service home health expenditures in the entire Nation--roughly 4\\1/2\\ times the expected share.",
+    "The bill accomplishes this goal by enhancing enrollment screening for owners and managers of agencies operating in objectively high-risk markets, requiring more rigorous oversight of new and high-risk providers through targeted surveys, strengthening oversight of accrediting organizations, and improving verification that Medicare beneficiaries actually received the services billed to the program.",
+    "A bill to amend title 49, United States Code, to set requirements for certain operator workstations for fixed route buses, and for other purposes; to the Committee on Banking, Housing, and Urban Affairs."
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 5250",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-05/CREC-2026-08-05-pt1-PgS4477-2",
+   "sentences": [
+    "Home healthcare not only improves patients' quality of life but also helps avoid unnecessary hospitalizations and nursing home admissions, producing substantial savings for Medicare, Medicaid, and families alike.",
+    "The California State auditor reported that one office building housed the corporate offices of more than 100 hospice agencies and dozens of home health agencies--a striking example of how organized fraud can exploit weaknesses in Medicare hospice enrollment and oversight.",
+    "Even though only 2 percent of the Nation's Medicare fee-for-service beneficiaries live in Los Angeles County, that 2 percent generates 9 percent of all Medicare fee-for-service home health expenditures in the entire Nation--roughly 4\\1/2\\ times the expected share.",
+    "The bill accomplishes this goal by enhancing enrollment screening for owners and managers of agencies operating in objectively high-risk markets, requiring more rigorous oversight of new and high-risk providers through targeted surveys, strengthening oversight of accrediting organizations, and improving verification that Medicare beneficiaries actually received the services billed to the program."
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing the Sense of the Senate That Ghislaine Maxwell Should Not Be Granted a Presidential Pardon Or Any Form of Clemency for Her Crimes with Jeffrey Epstein Relating to the Sexual Exploitation...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-29/CREC-2026-07-29-pt1-PgS4311",
+   "sentences": [
+    "How telling it is that the Prime Minister of Israel and the President of Ukraine both made the long voyage to attend his memorial service yesterday at the National Cathedral.",
+    "Whether he was leading a congressional trip to Israel in the wake of the October 7 massacre to demonstrate America's solidarity with Israel or his many trips to Ukraine to show the Senate's unwavering opposition to Russia's unprovoked invasion, Lindsey time and again demonstrated strong, effective leadership."
+   ]
+  },
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 4291",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-14/CREC-2026-04-14-pt1-PgS1741-2",
+   "sentences": [
+    "In fact, an EBRI survey found that one-quarter of caregivers have less than $1,000 in savings and investments (compared with 15% of non-caregivers), and caregivers are more likely (64%) than non-caregivers (52%) to say that debt is a problem.",
+    "A 2022 survey by the Transamerica Institute asked caregiving and non-caregiving workers whether they agree with the statement ``Debt is interfering with my ability to save for retirement.\"",
+    "WISER also creates a variety of consumer publications including fact sheets, resource guides and newsletters that explain in easy-to-understand language the complex financial issues surrounding Social Security, pay equity, retirement plans and pensions, savings and investments, caregiving, divorce and widowhood, health and long-term care, and financial elder abuse.",
+    "And because of that, caregivers often run up debt and frequently are unable to save for retirement."
+   ]
+  },
+  {
+   "date": "2026-01-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-15/CREC-2026-01-15-pt1-PgS262-3",
+   "sentences": [
+    "These bills support State and local law enforcement, invest in vital scientific research, promote economic development, help protect our national security, and assist our coastal communities."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026--Motion to Proceed--Resumed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-12/CREC-2026-01-12-pt1-PgS121-6",
+   "sentences": [
+    "It supports our State and local law enforcement, including through the Byrne Formula Program that supports a range of law enforcement activities, from prosecution to crime prevention.",
+    "It funds space exploration and research in critical scientific and technological fields.",
+    "It supports Tribal programs across the country; helps ensure that Americans have clean air, water, and soil; and provides Federal firefighters with the tools that they need to prepare for and suppress wildfires."
+   ]
+  },
+  {
+   "date": "2026-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Venezuela",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-08/CREC-2026-01-08-pt1-PgS99",
+   "sentences": [
+    "Mr. President, I rise today in support of the War Powers Resolution before the Senate regarding recent U.S. actions related to Venezuela.",
+    "Nicolas Maduro is a narcoterrorist and international drug trafficker whose actions led to the addiction and deaths of many Americans.",
+    "He was an illegitimate dictator who held power through stolen elections and horrific violence against the people of Venezuela.",
+    "While I support the operation to seize Nicolas Maduro, which was extraordinary in its precision and complexity, I do not support committing additional U.S. forces or entering into any long-term military involvement in Venezuela or Greenland without specific congressional authorization.",
+    "Rather, it reaffirms Congress' ability to authorize or limit any future sustained military activity in Venezuela, while preserving the President's inherent article II authority to defend the United States from an armed attack or imminent threat.",
+    "I believe invoking the War Powers Act at this moment is necessary, given the President's comments about the possibility of ``boots on the ground'' and a sustained engagement ``running'' Venezuela, with which I do not agree.",
+    "The long-term success of this operation will depend on Venezuelans having the opportunity to run Venezuela, with the support of international and private sector partners. ____________________"
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 3267",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-20/CREC-2025-11-20-pt1-PgS8270-12",
+   "sentences": [
+    "This bill would require the Centers for Medicare & Medicaid Services to cover FDA-approved blood-based biomarker tests for Alzheimer's disease, expanding access to earlier and more accurate diagnoses for millions of Americans."
+   ]
+  },
+  {
+   "date": "2025-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations and Extensions Act, 2026--Motion to Proceed-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-09/CREC-2025-11-09-pt1-PgS8040-2",
+   "sentences": [
+    "Under our legislation, all Federal employees, including members of our military and Coast Guard, the Capitol Police officers, Border Patrol agents, TSA screeners, air traffic controllers--all will receive their back wages."
+   ]
+  },
+  {
+   "date": "2025-10-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Terminating the National Emergency Declared to Impose Global Tariffs",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-10-30/CREC-2025-10-30-pt1-PgS7842-2",
+   "sentences": [
+    "Josh is admitted to practice in multiple U.S. courts of appeal and the U.S. Supreme Court.",
+    "He has also assisted special masters in three original jurisdiction proceedings before the Supreme Court."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-14/CREC-2025-03-14-pt1-PgS1759",
+   "sentences": [
+    "They inevitably require certain government employees, such as Border Patrol agents, members of our military and Coast Guard, TSA screeners, and air traffic controllers, to report to work with no certainty at all on when they will receive their next paycheck.",
+    "At our borders, the men and women performing vital law enforcement activities would have to do so without pay and without the assistance of support staff, putting more pressure on frontline operators."
+   ]
+  },
+  {
+   "date": "2025-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: District of Columbia Local Funds Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-14/CREC-2025-03-14-pt1-PgS1772",
+   "sentences": [
+    "As a result, unless this bill is passed, DC would have to operate under its fiscal year 2024 budget for the remainder of 2025, potentially requiring $1.1 billion in local spending cuts."
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 830",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-04/CREC-2025-03-04-pt1-PgS1498-2",
+   "sentences": [
+    "This funding can be used to assist caregivers in finding available respite services, to train and recruit volunteers to provide temporary caregiving, and to provide financial support through vouchers so that caregivers can better afford respite services."
+   ]
+  },
+  {
+   "date": "2024-12-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: American Relief Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-20/CREC-2024-12-20-pt1-PgS7306",
+   "sentences": [
+    "Social Security Fairness Act Finally, Madam President, I do want to say that it is a great accomplishment that tonight the Senate passed the Social Security Fairness Act, which will be sent to the President for his signature.",
+    "I want to share with my colleagues one really important fact, and that is that 83 percent of those who are affected by the government pension offset, which we repealed tonight, are lower income women.",
+    "So this is a great accomplishment to eliminate these two inequitable, unfair provisions of the Social Security Act."
+   ]
+  },
+  {
+   "date": "2024-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Social Security Fairness Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-18/CREC-2024-12-18-pt1-PgS7134-3",
+   "sentences": [
+    "I rise today in strong support of the long overdue Social Security Fairness Act.",
+    "This bipartisan bill would repeal two Social Security provisions that unfairly penalize many public servants in Maine and across the country.",
+    "In fact, we have been debating this inequity in the Social Security System for decades--for decades.",
+    "In 2005, the late Senator Dianne Feinstein and I introduced the first Social Security Fairness Act.",
+    "Social Security is the foundation of retirement income for most Americans.",
+    "Yet many teachers, firefighters, police officers, and other public servants often see their earned Social Security benefits unfairly reduced by two provisions: the so-called windfall elimination provision and the government pension offset.",
+    "The windfall elimination provision, or WEP, affects public servants who receive a pension from a job not covered by Social Security but who also worked long enough in another job to qualify for Social Security benefits.",
+    "They have worked the 40 quarters, the 10 years, under a job that pays into Social Security.",
+    "Due to the WEP, however, their Social Security benefits are calculated using a different formula, which reduces their monthly benefits.",
+    "The government pension offset, or just GPO, affects public servants who receive a pension from a job not covered by Social Security but who are also eligible to receive a Social Security spousal or widow's benefit.",
+    "The GPO, however, reduces the Social Security spousal or widow's benefits by an amount equal to two-thirds of the noncovered pension.",
+    "This issue is extraordinarily important to people in my State of Maine because the State's pension system does not include a Social Security component.",
+    "Many are women, often retired from teaching, whose spouses worked full time in the private sector, but when they become widowed, their retirement security is often jeopardized because they don't receive the standard amount from their late spouse's Social Security.",
+    "According to the Social Security Administration, in November 2024, more than 2 million people--including more than 20,000 in Maine--had their Social Security benefits reduced by the WEP.",
+    "Her husband, a Navy veteran, paid into Social Security for 40 years.",
+    "Our dedicated public servants, such as our teachers who help prepare our children for future success and our police officers and firefighters who help keep our communities safe, should receive the full Social Security benefit that they have earned.",
+    "I urge my colleagues to support the Social Security Fairness Act and end this inequity once and for all."
+   ]
+  },
+  {
+   "date": "2024-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Stacey D. Neumann (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-30/CREC-2024-07-30-pt1-PgS5566-5",
+   "sentences": [
+    "I have decided to support this nominee based on her extensive legal experience--including as a Federal prosecutor--her in-depth interview with me, and her hearing testimony and background check.",
+    "Notably, a group of former Federal prosecutors from the District of Maine signed a letter stating that, in their view, Ms. Neumann has ``distinguished herself by virtue of a keen legal mind, tireless work ethic, and balanced and measured professional demeanor.'' Earlier in her career, Ms. Neumann served as the law clerk to a justice of the Vermont Supreme Court as well as for a judge on the U.S. Court of Appeals for the Second Circuit."
+   ]
+  },
+  {
+   "date": "2024-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fire Grants and Safety Act of 2023--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-18/CREC-2024-06-18-pt1-PgS4126-2",
+   "sentences": [
+    "These examples underscore how important these grant programs are for fire departments across the Nation to safely provide lifesaving services and keep our communities safe."
+   ]
+  },
+  {
+   "date": "2024-03-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Udall Foundation Reauthorization Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-22/CREC-2024-03-22-pt1-PgS2558-4",
+   "sentences": [
+    "This legislation also supports America's working families while providing funding to better secure our borders and combat the transnational criminal organizations that are flooding our communities with fentanyl.",
+    "As part of the effort to address the crisis at the border--and it is a crisis--this package includes funding for additional detention beds and more Border Patrol agents and port-of-entry officers.",
+    "Putin refuses to end his war in Ukraine.",
+    "Hamas conducted its heinous, brutal attack on Israel on October 7.",
+    "Iran continues to fan the flame of violence and terrorism throughout the Middle East, including against American forces.",
+    "It fully funds the 5.2-percent pay raise for servicemembers--the largest pay raise in more than 20 years.",
+    "Surely, that has been one of the lessons that we have learned from Ukraine: how important it is that we have modernized an adequate stockpile.",
+    "Finally, in the area of defense, this bill also includes $500 million for Iron Dome and David's Sling and Arrow--the cooperative missile defense programs that are consistent with the 10-year memorandum of understanding signed between the United States and our close ally Israel.",
+    "This will provide much needed assistance to Israel in its fight against terrorism.",
+    "I would note that it also increases funding for mental health, which is so important--an area that has been neglected somewhat in the past.",
+    "And I want to note for my Republican colleagues that the legacy riders that we have traditionally included, such as the Hyde amendment, are included in this bill.",
+    "It is clear that it has been infiltrated by Hamas, and indeed Israeli intelligence indicates that specific employees--employees--of UNRWA were involved in the brutal atrocities of October 7 when Hamas attacked Israel.",
+    "As my friend from Nebraska has mentioned, we know that far too many of the schools UNRWA is running in Gaza teach hatred in their textbooks--teach hatred not only of Israel but of Jews in general.",
+    "In the bill that is incorporated and before us today--the State, Foreign Ops bill, which is part of the six-bill package--we also defund UNRWA, and we extended it beyond the end of this fiscal year.",
+    "There being no objection, the material was ordered to be printed in the Record, as follows: Intelligence Reveals Details of U.N. Agency Staff's Links to Oct. 7 Attack (By Carrie Keller-Lynn and David Luhnow) Tel Aviv.--At least 12 employees of the U.N.'s Palestinian refugee agency had connections to Hamas's Oct. 7 attack on Israel and around 10% of all of its Gaza staff have ties to Islamist militant groups, according to intelligence reports reviewed by The Wall Street Journal.",
+    "Two others were tracked to sites where scores of Israeli civilians were shot and killed.",
+    "The information in the intelligence reports--based on what an official described as very sensitive signals intelligence as well as cellphone tracking data, interrogations of captured Hamas fighters and documents recovered from dead militants, among other things--were part of a briefing given by Israel to U.S. officials that led Washington and others to suspend aid to Unrwa.",
+    "Hamas has run Gaza since a 2007 coup. ``Unrwa's problem is not just `a few bad apples' involved in the October 7 massacre,'' said a senior Israeli government official. ``The institution as a whole is a haven for Hamas' radical ideology.'' An Unrwa spokesperson on Monday declined to comment, saying an internal U.N. investigation into the agency was under way.",
+    "In the aftermath of Oct. 7, as Israel has waged war against Hamas in Gaza, Unrwa has emerged as one of the loudest voices decrying the impact of the fierce fighting on Palestinians in the enclave, where authorities say more than 26,000 people have been killed.",
+    "The vast majority of Unrwa's 30,000 staff across the Middle East are Palestinian, and Israel and some in the U.S. have long accused it of nurturing anti-Israeli sentiment in crowded refugee camps that have been important recruiting grounds for militant groups, including Hamas.",
+    "Another Unrwa employee, described in the dossier as an Unrwa social worker, played a role in absconding with the body of a dead Israeli soldier, which was taken to Gaza, the reports said.",
+    "Unrwa commissioner-general Philippe Lazzarini criticized Western nations for pausing aid at a time when Gaza is facing a humanitarian crisis as the war between Hamas and Israel rages.",
+    "Israel says it has documented deepening ties between Unrwa and Hamas since the militant group cemented its hold on Gaza in 2007.",
+    "Unrwa has admitted to finding Hamas weapons stored in schools and Israel has repeatedly said Hamas tunnels run under and through Unrwa buildings as well as other civilian facilities.",
+    "The former head of Unrwa's union in Gaza was fired in 2017 after Israel found out he had been elected to Hamas' top political leadership.",
+    "Three other employees, including another Arabic teacher at an Unrwa school, received a text from Hamas to arm themselves at a staging area close to the border the night before the attack.",
+    "A different elementary school teacher did cross into Israel and went to Reim, a district where a kibbutz, an army base and a music festival were attacked.",
+    "One of the intelligence reports seen by the Journal said a 13th Unrwa employee, who didn't have a discernible affiliation with a terror group, also entered Israel.",
+    "Hundreds of Gazan civilians flooded across the border as part of the Hamas-led attack, Israel says.",
+    "Unrwa schools, which use textbooks approved by the Palestinian Authority, have come under fire for using materials that allegedly glorify terrorists and promote hatred of Israel.",
+    "The final point I will make is that we have adhered to the Fiscal Responsibility Act caps on spending in this bill, the final six-bill package, and the overall bills we have brought forth."
+   ]
+  },
+  {
+   "date": "2024-03-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-06/CREC-2024-03-06-pt1-PgS2232",
+   "sentences": [
+    "This package fully funds veterans' medical care; supports our farmers, fishermen, and ranchers; protects our Nation's food and drug supply; provides critical resources for law enforcement; helps us better compete with China; advances American energy independence; and invests in our Nation's infrastructure and public lands.",
+    "This legislation also complies with the Fiscal Responsibility Act, as well as the top-line spending agreement reached between Speaker Johnson and Senator Schumer.",
+    "That is not easy to do, particularly given the impact of inflation and the 5.2 percent Federal employment pay raise, which many of these Agencies are going to have to absorb."
+   ]
+  },
+  {
+   "date": "2023-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs and Related Agencies Appropriations Act, 2024--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-26/CREC-2023-10-26-pt1-PgS5205",
+   "sentences": [
+    "What we are talking about is whether the legislative branch of government should make decisions about government spending or whether that decisionmaking should be given entirely to the executive branch when it comes to specific projects."
+   ]
+  },
+  {
+   "date": "2022-11-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Respect for Marriage Act--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-11-29/CREC-2022-11-29-pt1-PgS6833-2",
+   "sentences": [
+    "I rise today in support of the Respect for Marriage Act, which would ensure that all married couples--including same-sex and interracial couples--are entitled to the rights and responsibilities of marriage, regardless of the State in which they live.",
+    "I am proud to have stood--and I will continue to stand--with them in the efforts to secure their rights, while also steadfastly protecting and respecting religious liberty.",
+    "With regard to marriage equality, the Respect for Marriage Act accomplishes two primary goals.",
+    "Our bill is also noteworthy, however, for the way that it advances the cause of religious liberty.",
+    "Indeed, the substitute amendment that Senator Baldwin and I introduced with Senators Portman, Sinema, and Tillis, unambiguously adds significant religious liberty and conscience protections to the legislation.",
+    "These include the Church of Jesus Christ of Latter-day Saints, the Seventh-day Adventist Church, the National Association of Evangelicals, the Union of Orthodox Jewish Congregations, the Council for Christian Colleges and Universities, the AND Campaign, the Institutional Religious Freedom Alliance, the Center for Public Justice, and the 1st Amendment Partnership.",
+    "They support the religious liberty provisions in the substitute because these provisions provide important safeguards against government retaliation, as well as meaningful recognition of their beliefs embodied in public policy.",
+    "In a letter led by Professor Douglas Laycock of the University of Virginia School of Law, four constitutional scholars who have long advocated for religious liberty have concluded that the substitute amendment is ``an advance for religious liberty.'' They call it a ``good and important step for the liberty of believers to follow their traditional views of marriage.'' Now, let me address some of the unfounded criticisms of our amendment.",
+    "It has been suggested by some that the amended Respect for Marriage Act would somehow demean individuals who have traditional views on marriage.",
+    "As Professor Laycock and his colleagues explained, ``explicit congressional affirmation that the traditional male-female definition of marriage is `reasonable' and `honorable' would counter the analogy to racism and weaken the grounds for relying on Bob Jones''--that is a Supreme Court case--``to justify rejecting traditionalist believers' religious-freedom claims.'' Despite this strong policy statement, some have continued to argue that the Respect for Marriage Act, with the substitute amendment, could still somehow be used to deprive religious organizations of their tax- exempt status.",
+    "Government actors are already required to recognize same-sex marriages under the Supreme Court's decision in Obergefell, and the enforcement provisions in our amendment do not apply to individuals or religious organizations who are not government actors.",
+    "As the 1st Amendment Partnership, an organization dedicated to protecting religious freedom for Americans of all faiths, wrote in its analysis, ``if you cannot be sued now under Obergefell, then you still can't be sued under the'' Respect for Marriage Act.",
+    "The amendment offered by our colleague from Utah, Senator Lee, ironically would empower individuals to bring lawsuits even on the basis of ``threatened violation[s].'' Notably, not only would the amended Respect for Marriage Act not diminish or abrogate any religious liberty or conscience protection, it also would provide affirmative protections and litigation defenses for people and organizations of faith that do not exist under current law.",
+    "The leader of one religious group recently wrote that our legislation, as amended, ``sends a strong bipartisan message to Congress, the administration, and the public that LGBTQ rights can co- exist with religious freedom protections, and that the rights of both groups can be advanced in a way that is prudent and practical.'' I agree, and that is what our bill does.",
+    "It advances the rights of couples--same-sex and interracial couples--who are married to one another, and it advances religious liberty.",
+    "I ask my colleagues to join me in supporting this important and historic step forward for religious liberty and for ensuring the dignity and respect for all Americans.",
+    "Mr. President, shortly, we will have the opportunity to make history by passing important legislation that will advance two goals: one, the goal of marriage equality for same-sex and interracial couples, and second, the goal of strengthening religious liberty and conscience protections.",
+    "I want to thank my colleagues on both sides of the aisle who have worked so hard on this legislation, and I also want to thank the broad array of faith-based groups who worked with us on the religious liberty provisions of our bill."
+   ]
+  },
+  {
+   "date": "2022-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Joseph Woodrow Hatchett United States Courthouse and Federal Building-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-23/CREC-2022-06-23-pt1-PgS3110",
+   "sentences": [
+    "Mr. President, I rise today in strong support of the Bipartisan Safer Communities Act.",
+    "Twelve of us have come together to develop the bipartisan proposal before us to help address the gun violence that is plaguing our country.",
+    "Our commonsense plan increases needed mental health resources, improves school safety and support for students, and helps ensure that dangerous criminals and those who are adjudicated as suffering from mental illness cannot purchase firearms.",
+    "At the same time, it steadfastly protects the Second Amendment rights of law-abiding gun owners.",
+    "It is not hyperbole to say that this legislation represents the most significant gun safety legislation in decades.",
+    "First, our bill will fund crisis intervention programs, like Maine's yellow flag law, which our State supreme court just upheld as constitutional this very week.",
+    "It will help connect law enforcement, medical professionals, and people in crisis through telehealth services, as well as provide additional financial help to ensure that the law can be efficiently and effectively utilized when necessary.",
+    "Straw purchasers--individuals who purchase guns for other people who are prohibited by law from receiving such weapons--are the linchpin of most firearms trafficking operations, which are responsible for funneling firearms into our cities and across our southern border.",
+    "Instead, prosecutors rely primarily on paperwork violations that prohibit making false statements in connection with the purchase of a firearm.",
+    "What we have seen are gang members from Connecticut coming to Maine with heroin and swapping heroin for guns.",
+    "Gun trafficking is also a border security issue.",
+    "Law enforcement has long been concerned about the flow of firearms from the United States into Mexico.",
+    "Our bill provides additional tools to law enforcement and prosecutors to prevent and prosecute these crimes.",
+    "This is meaningful legislation that reflects input from gun safety advocates, gun rights groups, the U.S. Department of Justice, law enforcement officers, and others.",
+    "Thus, in addition to helping keep our schools safe and our communities safer, this bill will help to address the gun violence and drug problems that are plaguing our communities, more generally.",
+    "It is worth my emphasizing one more time that we are able to make these significant improvements without infringing on the rights of law-abiding gun owners."
+   ]
+  },
+  {
+   "date": "2022-04-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Ketanji Brown Jackson (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-07/CREC-2022-04-07-pt1-PgS2063-4",
+   "sentences": [
+    "Mr. President, I rise today in support of the nomination of Ketanji Brown Jackson to be an Associate Justice on the U.S. Supreme Court.",
+    "Based on my careful review of her record and experience, as well as my assessment of her character and judicial philosophy, I believe that she warrants confirmation to the High Court.",
+    "Evaluating a nominee to serve a lifetime appointment on the Supreme Court is one of the most consequential responsibilities of any Senator.",
+    "There is no question that Judge Jackson is qualified to be a Supreme Court Justice.",
+    "She has been a Supreme Court clerk, an attorney in private practice, a Federal public defender, a member of the U.S. Sentencing Commission, and a Federal district court judge for more than 8 years.",
+    "Having determined that Judge Jackson possesses the requisite qualifications and experience, my consideration of her nomination then turned to whether she has the judgment and approach to deciding cases that are necessary to serve on the Supreme Court.",
+    "Words that I spoke--years ago--when announcing my decision to vote to confirm Justice Elena Kagan to the Supreme Court remain my standard today: ``I believe it is . . . critical for nominees to have a judicial philosophy that is devoid of prejudgment, partisanship, and preference.",
+    "That is particularly important for Supreme Court Justices, who issue rulings from which there is no further opportunity for appeal.",
+    "For instance, a 2021 report by the U.S. Sentencing Commission explained that ``[l]ess than one-third (30.0%) of non-production child pornography offenders received a sentence within the guideline range in fiscal year 2019.'' The recent surge in crime, exacerbated by the vilification of law enforcement, is causing tremendous harm in cities across America.",
+    "Thus, in evaluating Judge Jackson's approach to criminal cases, I appreciate the input from the Fraternal Order of Police, which concluded that she ``has considered the facts and applied the law consistently and fairly on a range of issues.'' That organization explained that it is ``reassured that, should she be confirmed, she would approach her future cases with an open mind and treat issues related to law enforcement fairly and justly.'' Just as I have disagreed with some of her decisions to date, I have no doubt that, if Judge Jackson is confirmed, I will not agree with every vote that she casts as a Justice.",
+    "Indeed, that statement applies to all six Justices, nominated by both Republican and Democratic Presidents, whom I have voted to confirm.",
+    "I have concluded that Judge Jackson possesses the experience, judicial philosophy, and character to serve our country honorably as an Associate Justice of the U.S. Supreme Court.",
+    "Today, calls to ``pack'' the Supreme Court in an apparent effort to dictate the outcome of cases are dangerous and undermine the public's confidence in our judiciary.",
+    "Part of the reason for this politicization is that, in recent years, the process has increasingly moved away from what I believe to be appropriate for evaluating a Supreme Court nominee.",
+    "And this is the approach that I plan to continue to use for Supreme Court nominations because it runs counter to the disturbing trend of politicizing the judicial nomination process.",
+    "The perception held by some, whether fair or not, that Supreme Court Justices are guided by their personal views undermines respect for the law, posing a threat to the principle that holds us together as Americans.",
+    "Thus, I think it is essential that the Justices endeavor to reach consensus, especially on matters with the greatest potential to cause conflict.",
+    "To state this point in simpler terms, at times when our country is deeply divided along political and ideological lines, the Supreme Court is uniquely positioned to ensure that we adhere to the ties that bind us.",
+    "I will cast my vote to confirm Judge Ketanji Brown Jackson to the U.S. Supreme Court."
+   ]
+  },
+  {
+   "date": "2022-02-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 3713",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-28/CREC-2022-02-28-pt1-PgS838-4",
+   "sentences": [
+    "Mr. President, I rise today to introduce the Reproductive Choice Act with my colleague and friend Senator Lisa Murkowski, which would codify the protections for reproductive rights established by the Supreme Court's decisions in Roe v. Wade in 1973 and affirmed by Planned Parenthood v. Casey in 1992.",
+    "We are introducing the Reproductive Choice Act as a substitute amendment to the Women's Health Protection Act before us today and as a standalone bill for future consideration.",
+    "Unfortunately, the Women's Health Protection Act goes far beyond codifying Roe and Casey.",
+    "Among other issues, this legislation would severely weaken protections afforded to healthcare providers who refuse to perform abortions on religious grounds.",
+    "Rather than just codifying Roe's protections, the bill would undercut Federal and State laws that have been in place for decades and call into question basic conscience protections.",
+    "The Reproductive Choice Act that Senator Murkowski and I are introducing today would simply codify the essential holdings of the U.S. Supreme Court's 1973 decision in Roe v. Wade and 1992 decision in Planned Parenthood of Southeastern Pennsylvania v. Casey.",
+    "Our bill carefully tracks the Supreme Court's language and would provide reassurance to women that the reproductive rights they have relied on for nearly 50 years will continue to be the law of the land.",
+    "It would still allow States to enact regulations to further the health or safety of a woman seeking to terminate a pregnancy, while stating that regulations that have the purpose or effect of presenting a ``substantial obstacle'' to a woman seeking to terminate a pregnancy would be considered an ``undue burden.'' As is currently permitted under Roe and Casey, our legislation would allow individual States to impose restrictions on terminating a pregnancy after fetal viability, except when necessary to preserve the life or health of the woman.",
+    "Notably, unlike the Women's Health Protection Act, our bill would not restrict laws regarding conscience protections, including laws that protect healthcare providers who refuse to provide pregnancy termination services for moral or religious reasons.",
+    "Women should be assured privacy in making their reproductive choices, and I oppose efforts to overturn the U.S. Supreme Court's decision in Roe v. Wade.",
+    "It is my hope that the Reproductive Choice Act will be enacted to ensure that women in this country are able to make their own reproductive choices as established in the landmark Roe decision. ____________________"
+   ]
+  },
+  {
+   "date": "2021-12-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to Increasing the Debt Limit--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-14/CREC-2021-12-14-pt1-PgS9134-5",
+   "sentences": [
+    "Milk, eggs, baby food, furniture, and many other necessities all cost more, and those prices are simply unsustainable for many working families.",
+    "Given the clear link between recent extraordinary government spending and rampant inflation, we should not be adding more fuel to the fire.",
+    "It does not discriminate among the rich and the poor.",
+    "What we should not do is pass trillions of dollars in additional spending in the administration's Build Back Better bill that would exacerbate the toll that inflation imposes on seniors, working families, and small businesses."
+   ]
+  },
+  {
+   "date": "2021-03-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Preventing Across-the-Board Direct Spending Cuts",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-03-25/CREC-2021-03-25-pt1-PgS1800",
+   "sentences": [
+    "Congress twice last year suspended the 2-percent Medicare sequester in bipartisan COVID relief packages, and I hope we can do so once again.",
+    "According to Northern Light Health in Maine, relief from the Medicare sequester amounts to $1 million per month.",
+    "The Shaheen-Collins amendment will extend the current sequester moratorium until the end of the year."
+   ]
+  },
+  {
+   "date": "2021-01-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Janet Louise Yellen (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-25/CREC-2021-01-25-pt1-PgS122",
+   "sentences": [
+    "Through subsequent negotiations in November and December on an additional $900 billion package, we secured a second round of Paycheck Protection Program forgivable loans for the hardest hit small businesses and extended unemployment programs, assistance for schools, vaccine delivery, and more."
+   ]
+  },
+  {
+   "date": "2021-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Objection to Counting of Pennsylvania Electoral Votes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-06/CREC-2021-01-06-pt1-PgS32-2",
+   "sentences": [
+    "Mr. President, let me begin my remarks tonight by expressing my heartfelt gratitude to the members of the law enforcement community and the National Guard whose hard work and courage made it possible for us to resume our deliberations tonight.",
+    "The process the Constitution sets forth for electing Presidents through the electoral college is straightforward.",
+    "We should not attempt to usurp the roles of the voters, the States, or the electoral college.",
+    "In fact, the Supreme Court has twice refused to hear their election challenges.",
+    "Altering the results of the electoral college would set a terrible precedent in which the party in control of Congress could override the will of the voters and overrule our courts to unilaterally choose the next President.",
+    "And I will reject these challenges to the electoral college."
+   ]
+  },
+  {
+   "date": "2020-09-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations Act, 2021 and Other Extensions Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-09-24/CREC-2020-09-24-pt1-PgS5850-2",
+   "sentences": [
+    "Now we need to do a second round of PPP for the hardest hit businesses, those for whom the first PPP loan was the lifeline but they need additional help.",
+    "They are adding additional bus routes in order to safely separate the children.",
+    "That is two firefighters, a police officer, and three public works employees."
+   ]
+  },
+  {
+   "date": "2020-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Advanced Geothermal Innovation Leadership Act of 2019--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-03-03/CREC-2020-03-03-pt1-PgS1280-2",
+   "sentences": [
+    "The American Energy Innovation Act includes several bills that I either authored or cosponsored, including the Better Energy Storage Technology Act, known as the BEST Act, which supports energy storage research and development; the Weatherization Enhancement and Local Energy Efficiency Investment and Accountability Act, which reauthorizes the Weatherization Assistance Program; the Wind Energy Research and Development Act, which supports targeted investments in wind energy; and the Energy Savings and Industrial Competitiveness Act, as well as the Streamlining Energy Efficiency for Schools Act, which both promote energy efficiency.",
+    "Federal investments in the research, development, and deployment of energy storage technologies would enable the expansion of renewable energy sources that are essential in combating climate change.",
+    "Right now, if the wind is not blowing, obviously we are not producing wind energy.",
+    "Off the coast of Maine, offshore wind turbines can produce electricity almost 50 percent of the time due to our relatively persistent offshore winds, but with next-generation energy storage technology, we could utilize this wind power closer to 100 percent of the time by storing the electricity that is produced so that it may be used when the wind is not blowing.",
+    "Encouraging the adoption of energy efficiency measures is one of the easiest, yet effective mechanisms for reducing energy consumption, lessening pollution, and ultimately saving money for families, businesses, communities, and governments at all levels.",
+    "In addition to weatherization, this comprehensive package supports crucial investments in renewable energy, including the Wind Energy Research and Development Act that I introduced with Senator Smith.",
+    "This bill would reauthorize the Department of Energy's Office of Wind Energy.",
+    "It would support grants in order to improve the efficiency, reliability, and capacity of wind energy generation.",
+    "The Aqua Ventus program, which aims to be the first floating, deepwater, offshore wind project in the United States, has been under development by the University of Maine and a consortium of both public and private partners for many years now.",
+    "That consortium and the University of Maine, in particular, could benefit from these targeted investments in offshore wind energy.",
+    "Again, I want to thank the committee leaders for their excellent work on this package of energy legislation, and I would urge all of my colleagues to join me in supporting the adoption of the American Energy Innovation Act.",
+    "Let's get on with the adoption of this very worthwhile package of energy bills."
+   ]
+  },
+  {
+   "date": "2019-10-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, Agriculture, Rural Development, Food and Drug Administration, Interior, Environment, Military Construction, Veterans Affairs, Transportation, and Housing and Urban...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-10-30/CREC-2019-10-30-pt1-PgS6281-2",
+   "sentences": [
+    "It is significant that her very first speech on the Senate floor that January was in support of the Lilly Ledbetter Fair Pay Act to strengthen protections for women against wage discrimination.",
+    "It was so refreshing to hear her assert that neither party had a monopoly on good ideas.",
+    "Mr. President, I ask unanimous consent that notwithstanding rule XXII, following the disposition of the Jones amendment, the postcloture time on amendment No. 948 expire, the pending McConnell amendment be withdrawn, and amendment No. 948, as amended, be agreed to; further, that the cloture motion on H.R. 3055 be withdrawn, the bill be read a third time, and there be 2 minutes of debate equally divided; and that following the use or yielding back of that time, the Senate vote on passage of the bill, as amended, with a 60-affirmative-vote threshold required for passage."
+   ]
+  },
+  {
+   "date": "2019-10-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, Agriculture, Rural Development, Food and Drug Administration, Interior, Environment, Military Construction, Veterans Affairs, Transportation, and Housing and Urban...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-10-29/CREC-2019-10-29-pt1-PgS6206-5",
+   "sentences": [
+    "The lobster men and women of Maine care deeply about our lobster stocks and about ensuring that lobsters are there for generations to come.",
+    "So those conflicting conservation measures between American and Canadian fisheries have caused Mainers to grow increasingly concerned that their Canadian counterparts are threatening the sustainability of critical fishing stocks, as well as that fragile right whale population.",
+    "It is only our national efforts that can go after a call center that is located in India, for example, as some of them have been.",
+    "The bill also provides increased investments to law enforcement at all levels--partnerships that are especially critical to preventing the heroin and opioid epidemic that plagues my State of Maine and many others.",
+    "There are also important investments supporting the FIRST STEP Act, which we passed late last year.",
+    "Mr. President, I want to associate myself with the comments that were just made by the Senator from Texas on the important issue of lowering the cost of prescription drugs.",
+    "Not only the Finance Committee and the Judiciary Committee but also the Senate Health, Education, Labor, and Pensions Committee have all reported good bills that would help provide relief from the ever-escalating costs of prescription drugs.",
+    "Ninety percent of our seniors take at least 1 prescription drug, and 36 percent of them take 4 or more in a month's time, and they are particularly burdened by the high cost of prescription drugs."
+   ]
+  },
+  {
+   "date": "2019-03-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on February 15, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-03-14/CREC-2019-03-14-pt1-PgS1857-3",
+   "sentences": [
+    "We will vote on a resolution to reverse the President's ill-advised national emergency declaration that funds the construction of a border wall using money that Congress has appropriated and the President has signed into law for other purposes, such as military construction.",
+    "That is why this issue is not about strengthening our border security, a goal that I support and have voted to advance.",
+    "Throughout our history the courts have consistently held that ``only Congress is empowered by the Constitution to adopt laws directing monies to be spent from the U.S. treasury.'' For the past 65 years, the courts have determined the boundary of Presidential authority vis-a-vis Congress under the doctrine of Youngstown Sheet & Tube, the 1952 Supreme Court case that reversed President Truman's seizure of U.S. steel companies during the Korean war.",
+    "Whether one agrees with President Trump that more should be done to secure our southern border--and I do agree with him on that goal--his decision to fund a border wall through a national emergency declaration would never pass all of this five-part test.",
+    "Let me emphasize, once again, that the question presented by this resolution is not whether you are for a border wall or against a border wall; it is not whether you believe that border security should be strengthened or whether it is sufficient; it is not whether we support or oppose President Trump; rather, the question is a far more fundamental and significant one."
+   ]
+  },
+  {
+   "date": "2019-01-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supplemental Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-24/CREC-2019-01-24-pt1-PgS557",
+   "sentences": [
+    "Let us compromise to reopen government, address border security, and get on with the business of this country."
+   ]
+  },
+  {
+   "date": "2018-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Substance Use-Disorder Prevention That Promotes Opioid Recovery and Treatment for Patients and Communities Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-09-17/CREC-2018-09-17-pt1-PgS6159-6",
+   "sentences": [
+    "Madam President, I rise in support of the Patient Right to Know Drug Prices Act, which is legislation that I have introduced with Senators McCaskill, Barrasso, Stabenow, and Cassidy.",
+    "This legislation is action that we can take right now to help lower the costs of prescription drugs for some consumers.",
+    "More than half of Americans, as well as more than 90 percent of seniors who are, say, 65 or older, take at least one prescription drug each month.",
+    "Americans have been estimated to spend nearly $45 billion out-of-pocket each year for prescription drugs.",
+    "Our bill would ensure that pharmacists could volunteer information to customers on how to lower their costs for prescription drugs.",
+    "Who would think that using your debit card rather than your insurance card to purchase a prescription drug would be less expensive?",
+    "They prohibit them from telling patients how to obtain the lowest prescription drug prices.",
+    "By prohibiting gag clauses, our legislation takes concrete action to lower the cost of prescription drugs, saving consumers money and improving healthcare.",
+    "The Patient Right to Know Drug Prices Act prohibits gag clauses from being used by health plans that are sponsored by employers or offered in the individual market.",
+    "The bottom line is this: Pharmacists should not be restricted from telling customers if there are other ways for them to purchase needed prescription drugs less expensively.",
+    "Today the Senate can go on record taking a concrete step to help reduce prescription drug prices for some consumers.",
+    "Reducing prescription drug prices must be a national priority.",
+    "We have the support of 40 medical and consumer groups for this bill, and this legislation is action we can take right now to help lower the cost of prescription drugs for some consumers."
+   ]
+  },
+  {
+   "date": "2018-08-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-08-22/CREC-2018-08-22-pt1-PgS5793-2",
+   "sentences": [
+    "Sometimes it is merely a matter of renovating a bathroom or putting up grab bars, installing sensors to make sure the refrigerator door is being opened regularly so you know the older American is eating properly.",
+    "Community health centers will only continue to play a larger role in healthcare delivery as we seek to reduce overall healthcare costs, as well as provide greater access to behavioral health and substance use disorder prevention and treatment services."
+   ]
+  },
+  {
+   "date": "2018-08-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2019--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-08-21/CREC-2018-08-21-pt1-PgS5741-2",
+   "sentences": [
+    "Our legislation invests in cutting edge, fifth generation aircraft by funding 89 F-35 aircraft."
+   ]
+  },
+  {
+   "date": "2018-07-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Interior, Environment, Financial Services, and General Government Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-24/CREC-2018-07-24-pt1-PgS5230",
+   "sentences": [
+    "This bill continues the significant infrastructure investments provided in fiscal year 2018 for our Nation's highways, bridges, airports, transit, and rail networks.",
+    "In addition, the bill provides $255 million for the Consolidated Rail Infrastructure and Safety Improvement Grants Program and $300 million for the Federal-State partnership for the State of Good Repair Grants Program.",
+    "In the area of housing, our priority is to ensure that our Nation's most vulnerable families and individuals do not lose the assistance they are now receiving, which prevents many of them from being at risk of homelessness.",
+    "Therefore, the bill provides the necessary funding to keep pace with the rising costs of housing these families in order to avoid their becoming homeless.",
+    "Senator Reed and I share a strong commitment to reducing, and someday ending, homelessness.",
+    "We have therefore included $2.6 billion for homeless assistance grants.",
+    "Specifically, to assist our homeless youth, we have provided $80 million for grants targeting this underserved population.",
+    "I was so impressed with the work they were doing with teenagers, in particular, many of whom had been exiled from their homes--as much as I hate to say it--or abused or otherwise found themselves homeless.",
+    "Yet, I will tell you, this is the only shelter in the State of Maine that is devoted solely to the needs of homeless youth.",
+    "To better support youth who are exiting the foster care system, the bill includes $20 million for family unification vouchers.",
+    "What happens--and I know that many Members share my concern--is young people ``age out'' of the foster care program, and they may have nowhere safe to go.",
+    "What we have learned is, oftentimes, upgrading and putting grab bars in a bathroom, widening door openings, putting sensors on the refrigerator door--doing modifications like that can allow our seniors to stay where they want to be, in the comfort, security, and privacy of their own homes.",
+    "The bill supports local development efforts by providing $3.3 billion through the Community Development Block Grant Program.",
+    "The CDBG and the HOME Program support the development of infrastructure projects, community development, affordable housing, economic development, and job creation."
+   ]
+  },
+  {
+   "date": "2017-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tax Cuts and Jobs Bill (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-12-18/CREC-2017-12-18-pt1-PgS8058",
+   "sentences": [
+    "This legislation will provide tax relief to working families, encourage the creation of jobs right here in America, and spur economic growth that will benefit all Americans.",
+    "Throughout this debate, I have emphasized that reforms to our outdated Tax Code must help working families.",
+    "My second amendment included in the conference agreement is a very important one.",
+    "That is why AARP and 44 other consumer groups strongly endorsed my amendments, stating: ``It provides important tax relief which helps offset the costs of acute and chronic medical conditions for older Americans, children, pregnant women, disabled individuals and other adults, as well as the costs associated with long-term care and assisted living.'' At a time when we need to be encouraging Americans to save more for their retirement, I am encouraged that the final agreement preserves the pretax contribution limits for retirement savings plans.",
+    "For this reason, I am pleased that the final bill will include my third amendment, which struck the original Senate language eliminating the ability of public employees, such as firefighters, schoolteachers, and police officers, as well as clergy and those employed by charities and nonprofit organizations, to make what are called catch-up contributions to their retirement accounts.",
+    "The conference agreement benefits lower and middle-income taxpayers significantly, while simplifying the tasks that no one relishes of completing their tax returns.",
+    "I am also pleased that private activity bonds, which are vital to many hospitals and institutions of higher education, are continued, as are the affordable housing and new markets tax credits.",
+    "How this legislation treats employers has also been the subject of much debate, but the reality is the United States cannot continue to have the highest corporate tax rate in the developed world at 35 percent.",
+    "Small businesses make an outsized contribution to our Nation's economy; yet they face a tax burden that can reach nearly 40 percent at the Federal level and can be significantly higher than the corporate tax rates paid by larger firms.",
+    "With a lower tax burden, small businesses in all industries can continue to grow, creating more jobs.'' Moreover, a family-owned business in southern Maine described for me how the bill would benefit Maine companies and the people who work for them: ``When [companies] become more profitable, they reinvest faster, grow faster, and increase profit-sharing.",
+    "This would result in our public debt exceeding 90 percent of GDP by 2027, just as our obligations to the baby boom generation begin to crest.",
+    "I am also concerned about the inclusion of the repeal of the individual mandate of the Affordable Care Act as part of this tax bill.",
+    "I don't think the two issues should have been combined, but let me be very clear: I have never supported the individual mandate.",
+    "Those bills also would have made sweeping cuts in the Medicaid Program.",
+    "The financial penalty under the individual mandate for failing to comply with it falls disproportionately on lower-income Americans.",
+    "For many of these individuals, the cost of insurance under the ACA is simply unaffordable.",
+    "Any Senator, Democratic or Republican, could have offered an amendment on the Senate floor to strike the repeal of the individual mandate.",
+    "Nevertheless, repealing the individual mandate without other healthcare reforms will almost certainly lead to further increases in the costs of health insurance premiums that are already too expensive under the ACA.",
+    "The first bill, the Bipartisan Healthcare Stabilization Act, sponsored by Senators Alexander and Murray, will provide vital funding to help low-income families pay their out-of-pocket costs, including deductibles and copays associated with certain ACA health insurance.",
+    "It would protect people with preexisting conditions while lowering the cost of health insurance through the use of high-risk pools.",
+    "According to analysis by experts at Oliver Wyman, the passage of these bills will more than offset the premium increases caused by the repeal of the individual mandate.",
+    "In fact, Oliver Wyman suggests in its estimate that the $5 billion in funding would be sufficient to allow States to leverage more than $15 billion in reinsurance coverage, and it would result in premiums that were more than 20 percent lower than if the individual mandate were repealed and the package of provisions were not implemented.",
+    "Furthermore, analysis by experts at Avalere project that ``in combination, CSR funding and $5B in annual reinsurance could lower 2019 premiums by 18% and increase enrollment by 1.3M people.'' The National Association of Insurance Commissioners wrote that these two bills would significantly reduce health insurance premiums and help promote more stability in insurance markets.",
+    "Madam President, I will cast my vote in support of the conference agreement on the Tax Cuts and Jobs Act."
+   ]
+  },
+  {
+   "date": "2017-12-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tax Cuts and Jobs Bill (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-12-05/CREC-2017-12-05-pt1-PgS7832-2",
+   "sentences": [
+    "Mr. President, I ask unanimous consent that notwithstanding rule XXII, the postcloture time on Executive Calendar No. 495 expire at 4 p.m. today, December 5; and that if confirmed, the motion to reconsider be considered made and laid upon the table and the President be immediately notified of the Senate's action."
+   ]
+  },
+  {
+   "date": "2017-02-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by the Social Security Administration",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-15/CREC-2017-02-15-pt1-PgS1167-2",
+   "sentences": [
+    "Mr. President, I rise in support of H.J. Res. 40, a resolution of disapproval of the rule submitted by the Social Security Administration relating to the implementation of the NICS Improvement Amendments Act of 2007.",
+    "The rule in question would require the Social Security Administration to send to the Attorney General the names of certain beneficiaries for inclusion in the NICS background check database and would make it illegal for these beneficiaries to own or possess a firearm.",
+    "I am concerned that this rule targets individuals with mental illness without requiring the Social Security Administration to determine that the individuals whose rights are being limited are dangerous either to themselves or others.",
+    "Under the rule, two individuals could present the exact same condition and symptoms, but if one of them required assistance with their financial affairs, that person would be reported to the NICS background check system, while the other would not.",
+    "I hope that the Social Security Administration will consider these suggestions as well as the comments from my good friend from Pennsylvania, Senator Toomey, and others, and promulgate a new rule."
+   ]
+  },
+  {
+   "date": "2017-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for an Exception to a Limitation Against Appointment of Persons As Secretary of Defense Within Seven Years of Relief From Active Duty As a Regular Commissioned Officer of the Armed Forces",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-01-12/CREC-2017-01-12-pt1-PgS299-2",
+   "sentences": [
+    "The combination of the threat from terrorist organizations like ISIS and al Qaeda, as well as the threats emanating from countries such as Iran, North Korea, Russia, and China, has heightened tensions around the globe.",
+    "In 2010, I supported Gen. Mattis's nomination to serve as commander of U.S. Central Command, where he oversaw the wars in Iraq and Afghanistan and was responsible for an area which includes Syria, Iran, and Yemen."
+   ]
+  }
+ ]
+}

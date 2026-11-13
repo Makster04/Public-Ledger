@@ -1,0 +1,570 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "lawler",
+ "name": "Mike Lawler",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 41,
+  "press": 3,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-10-14",
+   "source": "press",
+   "where": "Press release: Lawler to Introduce Bill Cracking Down on Candidate Coordination With Super PACs",
+   "url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6616",
+   "sentences": [
+    "Lawler to Introduce Bill Cracking Down on Candidate Coordination With Super PACs.",
+    "Today, Congressman Mike Lawler (NY-17) announced the Stop Illegal Super PAC Coordination Act, legislation to crack down on coordination between congressional candidates and super PACs to prohibit joint fundraising committees (JFC) from placing political advertising exp…"
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "source": "press",
+   "where": "Press release: Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel",
+   "url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6589",
+   "sentences": [
+    "Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel.",
+    "Today, Congressman Mike Lawler (NY-17), Chairman of the House Foreign Affairs Subcommittee on the Middle East and North Africa, released the following statement marking the anniversary of the October 7, 2023 terrorist attacks against Israel: “Three years ago today, the …"
+   ]
+  },
+  {
+   "date": "2026-10-01",
+   "source": "press",
+   "where": "Press release: Lawler Releases Statement on Restoration of 988 Press 3 Option for LGBTQ+ Youth",
+   "url": "https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6577",
+   "sentences": [
+    "Lawler Releases Statement on Restoration of 988 Press 3 Option for LGBTQ+ Youth.",
+    "Today, Congressman Mike Lawler (NY-17) released the following statement regarding the restoration of the Press 3 option on the 988 Suicide & Crisis Lifeline, which allows LGBTQ+ youth experiencing a mental health crisis to connect with counselors trained to address their…"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Foreign Service Modernization Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-16/CREC-2026-09-16-pt1-PgH5913",
+   "sentences": [
+    "In 1980, no one had a cell phone, and the internet didn't exist."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ratepayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5656-3",
+   "sentences": [
+    "At the same time, data centers seeking to connect to New York's electric grid are reportedly requesting more than 9,000 megawatts of additional electricity.",
+    "We are already seeing communities and policymakers grappling with how to manage the rapid growth of large-scale data centers and the demands that they place on our energy infrastructure.",
+    "I will continue working to ensure that New Yorkers have access to reliable and affordable energy while making sure that large energy users pay their fair share."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Insider Trading Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-22/CREC-2026-07-22-pt1-PgH5143",
+   "sentences": [
+    "Mr. Speaker, I rise today in strong support of H.R. 7008, the Stop Insider Trading Act, to end stock trading by Members of Congress, because trust in our democracy cannot be a luxury item.",
+    "For too long, the public has watched the headlines that read like a civic lesson gone wrong: elected officials buying and selling stocks in industries they regulate, profiting from information the public will never see.",
+    "Banning congressional stock trading is a simple proposition.",
+    "The fact is this bill bans stock trading.",
+    "And, yes, it requires photo ID, something 80 percent of Americans agree with.",
+    "Voter ID ensures the sanctity of our elections and ensures confidence by the American people in our elections."
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Housing for the 21st Century Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-23/CREC-2026-06-23-pt1-PgH4151-3",
+   "sentences": [
+    "The average age of a first-time home buyer is 40 years old."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 25th Anniversary of 9/11 Commemorative Coin Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-19/CREC-2026-05-19-pt1-PgH3579",
+   "sentences": [
+    "I know my colleagues in Congress support this legislation, and I look forward to its unanimous adoption."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Directing the President Pursuant to Section 5(C) of the War Powers Resolution to Remove United States Armed Forces From Unauthorized Hostilities in the Islamic Republic of Iran",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-04/CREC-2026-03-04-pt1-PgH2395",
+   "sentences": [
+    "Mr. Speaker, this past weekend, President Trump launched military operations against the terrorist Iranian regime, alongside our ally, Israel, killing the Ayatollah and many of his top lieutenants in the IRGC and the council of clerics.",
+    "This operation came after almost a year of negotiations to reach a diplomatic solution to end Iran's nuclear ambitions, ballistic missiles program, and funding of terrorism.",
+    "The Iranian regime has been at war with America for 47 years.",
+    "As far as the War Powers Act goes, the President is fully compliant.",
+    "Iran is belligerently striking Arab partners as we speak.",
+    "In fact, when a War Powers Resolution was on this floor, many opposed it, including Chuck Schumer, the Senate minority leader.",
+    "Vote ``no'' on this War Powers Resolution."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Remote Access Security Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-12/CREC-2026-01-12-pt1-PgH621-5",
+   "sentences": [
+    "We all recognize the threats we face around the globe and in particular from China, Russia, Iran, North Korea, among many other bad actors.",
+    "However, when our laws were established, they did not take into account the ever-changing technology, and so it is imperative that we as a Congress act with urgency to update our laws and ensure that China, Russia, Iran, and others do not have access to sensitive technology remotely."
+   ]
+  },
+  {
+   "date": "2026-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Haiti Economic Lift Program Extension Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-12/CREC-2026-01-12-pt1-PgH642",
+   "sentences": [
+    "As we see this administration prioritize our hemisphere and focus on the challenges throughout, in Venezuela, in Cuba, and in Colombia, it is imperative to have a strong partnership with Haiti."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1834, Breaking the Gridlock Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-07/CREC-2026-01-07-pt1-PgH122-2",
+   "sentences": [
+    "Mr. Speaker, after the 43-day Democratic-led shutdown, I agreed to sit down with my Democratic and Republican colleagues to negotiate in good faith to extend the ACA enhanced premium tax credit with reforms.",
+    "The fact is that health insurance premiums have risen 96 percent since ObamaCare took effect in 2010, with insurance companies' profits increasing by 2,000 percent.",
+    "To me, this is two-pronged: deal with the immediacy of the enhanced premium tax credit, and deal with the larger healthcare reform issues that have to take effect."
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect America'S Workforce Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-11/CREC-2025-12-11-pt1-PgH5795",
+   "sentences": [
+    "Earlier this year, an executive order changed the collective bargaining status of tens of thousands of Federal workers.",
+    "Ensuring collective bargaining rights strengthens our Federal workforce and helps deliver more effective, accountable service to the American people.",
+    "We must ensure that collective bargaining agreements already in place remain, as well as ensuring that good government goes hand in hand with that."
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendment to H.R. 5371, Continuing Appropriations and Extensions Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-12/CREC-2025-11-12-pt1-PgH4595-3",
+   "sentences": [
+    "They have held the American people hostage, trying to extract insane things, like free healthcare for illegal immigrants.",
+    "If they were serious about tackling the healthcare affordability crisis in this country, then they would address the fundamental problem with ObamaCare.",
+    "Since ObamaCare took effect, healthcare premiums have risen by 96 percent and on the open market by 114 percent.",
+    "When I asked Leader Jeffries to sign on to the 1-year extension of the premium tax credit, he refused."
+   ]
+  },
+  {
+   "date": "2025-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Full-Year Continuing Appropriations and Extensions Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-11/CREC-2025-03-11-pt1-PgH1102",
+   "sentences": [
+    "The reality is this bill does not touch Social Security, it does not touch Medicare, and it does not touch Medicaid."
+   ]
+  },
+  {
+   "date": "2025-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Illegitimate Court Counteraction Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-01-09/CREC-2025-01-09-pt1-PgH67-6",
+   "sentences": [
+    "This institution has continually abused its authority and demonstrated blatant hostility toward our allies and American values, as Israel has continued to defend itself against terrorists in the Middle East, over the objections of this administration, by the way.",
+    "The ICC has joined the U.N. in showing a clear bias against Israel."
+   ]
+  },
+  {
+   "date": "2024-12-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Continuing Appropriations and Disaster Relief Supplemental Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-19/CREC-2024-12-19-pt1-PgH7365-8",
+   "sentences": [
+    "One of my colleagues, I think it was Congressman Neal, said this: The only currency we have in this body is our word."
+   ]
+  },
+  {
+   "date": "2024-09-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Enhanced Presidential Security Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-19/CREC-2024-09-19-pt1-PgH5505-2",
+   "sentences": [
+    "Mr. Speaker, on the issue of gun violence in America, I think about New York and the disastrous cashless bail law, which was put into effect and supported by the ranking member and continues to be supported by the ranking member, in which more than 80 percent of perps who are carrying and using a gun are released back out onto the street.",
+    "They talk about gun violence, but they have no problem allowing a criminal using guns in the commission of a crime to be put back on the street to do it again and again.",
+    "If you want to crack down on gun violence in America, then prosecute criminals who use guns in the commission of a crime, but no, we don't want to do that.",
+    "Let's get serious about gun violence in America."
+   ]
+  },
+  {
+   "date": "2024-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-26/CREC-2024-06-26-pt1-PgH4262-2",
+   "sentences": [
+    "We are constrained by the Fiscal Responsibility Act.",
+    "We are trying to stay within the confines of the law and make sure that our spending is in line with the Fiscal Responsibility Act.",
+    "Mr. Chairman, we are supporting a critical program while staying within the confines of the Fiscal Responsibility Act, which this body, this Congress, and this President agreed to."
+   ]
+  },
+  {
+   "date": "2024-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Antisemitism Awareness Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-01/CREC-2024-05-01-pt1-PgH2790",
+   "sentences": [
+    "The gentleman from New York is a graduate of Columbia University, and yet couldn't muster the courage to take the subway north to stop by and call out the anti-Semitism that is running rampant at Columbia University.",
+    "Mr. Speaker, I rise in support of my bill, the Antisemitism Awareness Act, and I thank my colleague, Congressman Josh Gottheimer from New Jersey, for his courage in leading on this issue.",
+    "We see Jewish students being physically prevented from going to class, rioters chanting ``death to Israel'' and ``death to America,'' and so much more.",
+    "In the U.S., Jews account for only 2.4 percent of the population, and globally they make up 0.2 percent of the world's population.",
+    "The Antisemitism Awareness Act requires the Department of Education to use the IHRA working definition of anti-Semitism and its contemporary examples when enforcing title VI violations of the Civil Rights Act of 1964.",
+    "My bill has bipartisan support: 59 cosponsors, dozens of Jewish advocacy groups, including the ADL, the AJC, and Agudath Israel."
+   ]
+  },
+  {
+   "date": "2024-04-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 615, Protecting Access for Hunters and Anglers Act of 2023; Providing for Consideration of H.R. 2925, Mining Regulatory Clarity Act of 2024; Providing for...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-30/CREC-2024-04-30-pt1-PgH2704-2",
+   "sentences": [
+    "Madam Speaker, today, I rise in support of the rule to bring my Antisemitism Awareness Act to the floor.",
+    "We have seen folks at these encampments telling Jews to go back to Poland, as if they weren't kicked out of their homes, murdered in cold blood, and sent to death camps less than a century ago.",
+    "These are illegal encampments where demonstrators engage in harassment and urge violence against Jewish students, Jewish Americans, the U.S. Government, the Israeli Government, and more.",
+    "I unequivocally condemn the college administrators who haven't acted to quell these encampments and who have enabled their campuses to become unsafe environments for Jewish students.",
+    "When people engage in harassment or bullying of Jewish individuals, where they justify the killing of Jews or use blood libel or hold Jews collectively responsible for actions of the Israeli Government, that is anti-Semitic.",
+    "Burning down a police station in Minneapolis was wrong."
+   ]
+  },
+  {
+   "date": "2024-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: 21st Century Peace Through Strength Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-20/CREC-2024-04-20-pt1-PgH2561-10",
+   "sentences": [
+    "This bill reverses the Biden administration's relaxed stance toward Iran and China and starts to hold these bad actors accountable.",
+    "Two of my bills, the SHIP Act and the Iran-China Energy Sanctions Act, are included in this package.",
+    "Both of these bills target the illicit oil trade between Iran and China.",
+    "One of my bills imposes sanctions on foreign ports and refineries that process Iranian oil, many of which are located in China.",
+    "My other bill imposes sanctions on Chinese financial institutions that process transactions involving Iranian oil as well as anyone involved in Iran's missile and drone program.",
+    "Iran is exporting millions of barrels of petroleum every day.",
+    "Iran has taken in over $88 billion from their illicit oil trade since President Biden took office, and they must not earn a cent more.",
+    "To be clear, these illicit funds are used to fund Iran's regime of terror, including backing Hamas, Hezbollah, the Houthis, and other terrorist groups, as well as their direct assault on Israel last weekend.",
+    "Madam Chair, I rise in support of this amendment, and I am proud to be a cosponsor of Representative Nunn's legislation, the Revoke Iranian Funding Act, that this came out of.",
+    "In the wake of the appalling terrorist attack against Israel, it is clear that we must work to confront Iran and its surrogates in the region with a strong sanctions regime.",
+    "Iran is the largest state sponsor of terrorism in the world, spending its money on terror, on developing nuclear capabilities, on taking hostages to use for bargaining purposes, and on funding the criminal IRGC.",
+    "Among other provisions, this commonsense measure would provide transparency on which sanctions authorities the President is failing to exercise and where we can continue to cut off Iran's funding."
+   ]
+  },
+  {
+   "date": "2024-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-20/CREC-2024-04-20-pt1-PgH2607",
+   "sentences": [
+    "The legislation we are debating today has the potential to turn the tide in Ukraine, protect our ally Israel, and deter China from attacking Taiwan.",
+    "China, Russia, and Iran are engaged in an unholy alliance seeking to undermine and destabilize the U.S., Israel, and the free world."
+   ]
+  },
+  {
+   "date": "2024-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-06/CREC-2024-02-06-pt1-PgH476-2",
+   "sentences": [
+    "Mr. Speaker, today I rise to show my strong support for this aid package that will support our closest ally, Israel.",
+    "Providing much-needed assistance for Israel and for U.S. forces in the Middle East region reaffirms our unwavering commitment to democracy, security, and peace in the Middle East.",
+    "This is a funding package that will enhance Israel's defense capabilities, specifically in the area of missile and rocket defense, with significant allocations for the Iron Dome and David's Sling systems and the innovative Iron Beam system designed to counteract shorter-range threats.",
+    "All of these are made even more necessary due to Iran's investment in weapons for terrorists around the region, including Hamas, the Houthis, Hezbollah, and others.",
+    "It is about more than supporting Israel's right to defend itself.",
+    "It is about securing our strategic interests and showing support for our closest ally, Israel.",
+    "That is why I was shocked to see that President Biden swore to veto this legislation, which provides our ally, Israel, with essential aid.",
+    "It is a clean bill supporting the State of Israel.",
+    "Why would you ever want to be on the record, on a clean bill, opposing aid to the State of Israel?",
+    "Mr. Speaker, it is my sincere hope that all of my colleagues will find the moral courage to support this funding package and support Israel at her time of need while providing critical resources to our troops overseas."
+   ]
+  },
+  {
+   "date": "2023-11-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Calling on Hamas to Immediately Release Hostages Taken During October 2023 Attack on Israel",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-28/CREC-2023-11-28-pt1-PgH5921",
+   "sentences": [
+    "Mr. Speaker, 2 weeks ago, I was in Israel with Chairman McCaul, Ranking Member Meeks, and a bipartisan delegation.",
+    "The United States must do everything it can to stand by its greatest ally in the Middle East and, indeed, across the world, the State of Israel.",
+    "We will vote on a resolution that makes it clear that not only does Israel have a right to exist, but they have a right to defend themselves, and the only way that this ends peacefully is for Hamas to surrender."
+   ]
+  },
+  {
+   "date": "2023-11-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reaffirming the State of Israel'S Right to Exist",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-28/CREC-2023-11-28-pt1-PgH5923",
+   "sentences": [
+    "Mr. Speaker, I move to suspend the rules and agree to the resolution (H. Res. 888) reaffirming the State of Israel's right to exist.",
+    "Mr. Speaker, today I rise to urge the House to agree to my resolution that reaffirms Israel's fundamental right to exist.",
+    "The American people should see very clearly whether or not the Members of Congress affirm Israel's right to exist.",
+    "President Harry Truman recognized Israel 11 minutes after its founding.",
+    "America was the first country to recognize the State of Israel, and for good reason.",
+    "Over the last 75 years, Israel has become the greatest ally of the United States--our shared values, shared heritage.",
+    "I fundamentally believe that the terrorist attacks of October 7 perpetrated by Hamas are about one thing: Hamas does not believe Israel has the right to exist.",
+    "Iran, the greatest state sponsor of terrorism in the world, the backer and funder of Hamas, has been calling for the eradication of the State of Israel for millennia.",
+    "This resolution seeks to reaffirm the commitment made by President Truman upon Israel's founding.",
+    "We not only recognize Israel, we reaffirm Israel's fundamental right to exist.",
+    "In the wake of the horrific October 7 attacks on Israel, we saw Members of this body and other opponents of Israel call for the elimination of Israel.",
+    "When they chant: ``From the river to the sea, Palestine shall be free,'' they mean that Israel will not exist.",
+    "As Israel prosecutes this war against this terrorist organization, Hamas uses Palestinians as human shields, camping out in hospitals and schools, launching missiles, shooting innocent civilians.",
+    "Nearly half of Congress chose not to come, including some of the Members who have made it clear that they don't support Israel's right to exist.",
+    "On college campuses and city streets, we see people calling for an intifada, actively promoting the destruction of the Jewish state.",
+    "Everyone has a right to say what they want about a foreign government, to say what they want about war, but they don't have the right to delegitimize the very existence of the Jewish state to justify terror.",
+    "The State of Israel was created 75 years ago to reestablish the native homeland of the Jewish people.",
+    "Yet, still today, many Jews view Israel as the safest place for them to live, even as rockets and missiles come from all sides.",
+    "Denying Israel's right to exist is denying the Jewish people the right to self-determination.",
+    "I urge all of my colleagues to support this commonsense resolution that makes one thing fundamentally clear: Israel has a right to exist.",
+    "Congress must never stop pushing back against Israel's opponents, and we must reject biased attempts to destroy our greatest ally.",
+    "It should be clear by now to each and every Member of this body on both sides of the aisle and every American that Israel has a right to exist.",
+    "Harry Truman recognized the State of Israel 11 minutes after its founding.",
+    "For 75 years, the United States and Israel have had a special bond.",
+    "Israel is the only multiracial, multiethnic, multireligious democracy in the Middle East.",
+    "This is a simple vote, and every Member should be on record in support of Israel's right to exist.",
+    "If they cannot muster the courage to support Israel's right to exist at this moment, they don't belong in Congress, period.",
+    "This is a simple vote, and I encourage all of my colleagues to stand with Israel, to defend and reaffirm their very right to exist, and to defend the right of the Jewish people to practice their faith."
+   ]
+  },
+  {
+   "date": "2023-11-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-14/CREC-2023-11-14-pt2-PgH5809-2",
+   "sentences": [
+    "In the wake of the horrific October 7 attack on Israel, we have seen a startling rise of anti-Semitism in our country and across the globe.",
+    "On college campuses, we have seen students carrying signs, pins, or flags supporting Israel be violently attacked.",
+    "It is a simple concept: If you want to maintain your Federal funding or student aid, don't hold events that peddle in the same anti-Semitic tropes embraced by the enemies of Israel and America throughout the world who want nothing short of the destruction of both.",
+    "Chanting ``from the river to the sea'' is calling for the eradication of Israel.",
+    "Here in the United States of America, college campuses, universities are teaching that anti-Semitism is okay, that calling for the eradication of Israel is okay."
+   ]
+  },
+  {
+   "date": "2023-11-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hamas Must Be Defeated",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-13/CREC-2023-11-13-pt1-PgH5714-2",
+   "sentences": [
+    "Mr. Speaker, I just returned from a bipartisan delegation trip to Israel, where we met with Prime Minister Netanyahu, Defense Minister Gallant, and U.S. Ambassador Jack Lew.",
+    "Mr. Speaker, let's be clear: Hamas is a terrorist organization that not only wants to wipe Israel off the face of the Earth, they want to eliminate the Jewish people.",
+    "I support Israel's right to defend itself and denounce the ludicrous calls for a cease-fire.",
+    "No one in this room would have called for a cease-fire after September 11, and no one should hold Israel to a standard we would not hold ourselves."
+   ]
+  },
+  {
+   "date": "2023-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Israel Security Supplemental Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-02/CREC-2023-11-02-pt1-PgH5297",
+   "sentences": [
+    "Mr. Speaker, we must stand with Israel in its time of need.",
+    "This funding will go a long way toward ensuring that Israel has the ability to defend itself from the horrific campaign of terror waged by Hamas, Hezbollah, Iran, and other terrorists organizations.",
+    "Israel has a right to defend itself and fight back against those who would see them eradicated from the face of the Earth.",
+    "The perpetrators of this attack on Israel are an insidious organization that has attacked their country.",
+    "Hamas' stated goal is the elimination of the State of Israel, and by extension, the genocide of the Jewish population living in it.",
+    "We have Members in this body who have voted against condemning Hamas and voted against holding Iran accountable.",
+    "This legislation before us today would provide $14.3 billion in aid to Israel.",
+    "This is a significant defense supplemental that includes $801.4 million in extra funding for ammunition procurement, $3.5 billion in funding for foreign military financing, $50 million in evacuation assistance support for the U.S. Embassy in Israel, $4 billion for Iron Dome and David's Sling defense systems and other Defense-wide procurement, and $38.6 million for Air Force procurement.",
+    "This bill is necessary for our closest ally in the Middle East, which is why I urge my colleagues on the other side of the aisle to join us in passing this critical aid for Israel to show our support for this beacon of hope and freedom in the Middle East.",
+    "We cannot allow the bright candle of democracy in the Middle East to be extinguished by Hamas, Hezbollah, and Iran.",
+    "We cannot allow Israel to lose.",
+    "We have a debt that is approaching $34 trillion.",
+    "Mr. Speaker, on September 29, the gentleman who just spoke voted for a billion-dollar cut to Israel."
+   ]
+  },
+  {
+   "date": "2023-10-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Standing with Israel As It Defends Itself Against the Barbaric War Launched by Hamas and Other Terrorists",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-25/CREC-2023-10-25-pt1-PgH5053-10",
+   "sentences": [
+    "Israel has a right to exist, a right to defend itself.",
+    "We have Members in this body that cannot muster the courage or the strength to condemn the slaughtering of babies but have the audacity to repeat a vile and disgusting lie that Israel bombed a hospital.",
+    "If you cannot stand with Israel, our greatest ally in the Middle East, a beacon of democracy and hope and freedom, you do not belong in this body."
+   ]
+  },
+  {
+   "date": "2023-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations Act, 2024 and Other Extensions Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-30/CREC-2023-09-30-pt1-PgH4915-9",
+   "sentences": [
+    "The difference between the Senate version and this version is that this version does not include Ukraine funding.",
+    "Are you telling me that you would shut down the government if there is not Ukraine funding?",
+    "This bill doesn't extend the authority to help Ukrainian refugees.",
+    "Whether it is Ukraine funding, securing the border, or reducing spending, all of which I support, it will have to be negotiated during the appropriations process.",
+    "If you are saying that you support the Senate CR but you don't support this one, the only difference is Ukraine.",
+    "If you are telling the American people with a straight face that you will shut the American government down over Ukraine, shame on you."
+   ]
+  },
+  {
+   "date": "2023-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 5525, Continuing Appropriations and Border Security Enhancement Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-29/CREC-2023-09-29-pt1-PgH4861-4",
+   "sentences": [
+    "There are real challenges in this country, starting with our economy: our reckless out-of-control spending; the cost of living; our long-term debt crossing $33 trillion; the fact that if we do nothing, Social Security and Medicare will both go broke within the next decade; and then, of course, immigration and the crisis at our southern border.",
+    "Since Joe Biden took office, 6 million migrants have crossed our southern border, many of them illegally.",
+    "Asylum cases are taking 2 to 3 years at a minimum to be heard.",
+    "This administration has failed to combat the malign influence of the cartels trafficking women and children, trafficking drugs, and fentanyl pouring into our communities, killing 70,000 Americans just last year.",
+    "Here is what you never hear from them: They don't want to deal with the border, they don't want to shut down the border.",
+    "They don't want to deal with spending cuts.",
+    "They don't want to deal with our long-term debt.",
+    "When Eric Adams, the mayor of New York City, is saying the migrant crisis is destroying New York City, that it is going to cost them more than $12 billion; when Kathy Hochul, the Governor of New York says there is no more room at the inn, despite sanctuary city policies, right to shelter, the use of taxpayer money to give free housing, healthcare, education, clothing, and food to illegal immigrants, and a refusal to cooperate with ICE and law enforcement, spare me your righteous indignation."
+   ]
+  },
+  {
+   "date": "2023-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on October 27, 2006",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-18/CREC-2023-07-18-pt1-PgH3659",
+   "sentences": [
+    "The forced termination of that emergency would lead to the rescission of sanctions and immediate release of millions of dollars to more than 60 currently sanctioned malicious foreign actors, including notorious arms dealer Viktor Bout, Russia's ``Merchant of Death,'' whose freedom Vladimir Putin demanded in exchange for American hostage Brittney Griner."
+   ]
+  },
+  {
+   "date": "2023-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on February 25, 2011",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-18/CREC-2023-07-18-pt1-PgH3662",
+   "sentences": [
+    "Again, this money would empower Putin's regime and secure Russia's interests in Libya, a strategically important country along NATO's southern flank.",
+    "Amidst Russia's invasion of Ukraine, the Wagner Group's continued war crimes across the globe, and the ongoing instability in Libya, we must keep this state of emergency and associated sanctions in place."
+   ]
+  },
+  {
+   "date": "2023-06-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Gas Stove Protection and Freedom Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-13/CREC-2023-06-13-pt1-PgH2844",
+   "sentences": [
+    "Mr. Chair, I rise today in strong support of H.R. 1615, the Gas Stove Protection and Freedom Act.",
+    "This bipartisan legislation is pragmatic policymaking, one that safeguards the availability, use, and affordability of gas stoves.",
+    "By placing restrictions on the actions of the Consumer Product Safety Commission, an important Federal regulatory agency, this act will help preserve access to traditional gas stoves for all Americans.",
+    "My colleagues on the other side of the aisle will stand here and say till they are blue in the face that they don't want to ban gas stoves and that it is ridiculous that anyone would dare claim that it is happening.",
+    "In New York State, most new construction starting in 2026 will ban gas stoves.",
+    "Over the past two decades, natural gas has reduced carbon emissions 60 percent more than renewables.",
+    "In short, the Gas Stove Protection and Freedom Act is prudent legislation, one that values consumer choice and maintains the availability of essential household appliances."
+   ]
+  },
+  {
+   "date": "2023-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Special Envoy for the Abraham Accords Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-12/CREC-2023-06-12-pt1-PgH2800",
+   "sentences": [
+    "While this bill seeks to hold the Biden administration accountable to ensure they are advancing the Abraham Accords, it does so with strong support from both sides of the aisle, making clear that the United States Government prioritizes our relationship with Israel and the advancement of peace and prosperity, regardless of any other policy differences we may have.",
+    "For 75 years, Israel has been and remains our staunchest ally and a pivotal partner in the Middle East.",
+    "The Abraham Accords, a series of normalization agreements between Israel and other Muslim-majority countries in the Middle East, were a monumental step that has provided a roadmap for the future of diplomacy in the Middle East and beyond.",
+    "They also showcased that the real center of instability in the region is Iran.",
+    "Many countries were finally ready to work together with the United States and Israel to counter Iran's state-sponsored terrorism, pursuit of nuclear weapons, and consistent violation of the human rights of the Iranian people.",
+    "Morocco joined the following December after normalizing ties with Israel.",
+    "While Israeli officials are taking meaningful steps to bring other countries into the Abraham Accords, none have joined since 2020 or the beginning of 2021.",
+    "Having a special envoy entirely dedicated to the Abraham Accords would underscore the United States' commitment to nurturing the growth of these historic agreements, and it sends a clear message to our allies and, indeed, to the entire world about the immense value we place on normalized relations with Israel and increased cooperation and stability in the Middle East.",
+    "Israeli airlines can now use Saudi Arabia's airspace, and the kingdom recently agreed to respect freedom of navigation in the Strait of Tiran for Israeli ships.",
+    "As a leader in the Arab world, Saudi Arabia joining the Abraham Accords would make serious inroads for Israel's relationships not only in the Middle East but across the globe.",
+    "Additionally, strengthening ties between Israel and Saudi Arabia would create immense pushback against Iran."
+   ]
+  },
+  {
+   "date": "2023-04-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Limit, Save, Grow Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-04-26/CREC-2023-04-26-pt1-PgH1979",
+   "sentences": [
+    "The American people elected a House Republican majority to serve as a check and balance on the reckless, out-of-control spending that was the hallmark of the last 2 years: $5 trillion in new spending, $10 trillion total, a 41-year record high on inflation, skyrocketing energy costs, America saddled with over $31 trillion in debt and counting.",
+    "It would restore work requirements on able- bodied Americans, requirements previously championed by President Joe Biden and President Bill Clinton.",
+    "Republicans and Democrats must come together to rein in spending, protect vital programs like Social Security and Medicare, reduce inflation, and avoid default."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "Making America more dependent on foreign energy adds more pollution, not less, to our climate.",
+    "We have had a 60 percent reduction in greenhouse gases because of natural gas, greater than renewables."
+   ]
+  },
+  {
+   "date": "2023-03-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Parents Bill of Rights Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-23/CREC-2023-03-23-pt1-PgH1348",
+   "sentences": [
+    "First, let me say I have been a strong supporter of the Parents Bill of Rights Act, and I believe this bill gives much-needed certainty to parents that they will have transparency in their child's education.",
+    "In addition, when it comes to their child's health and well-being, parents have a right to know if a school employee acts to treat, advise, or address issues of cyberbullying, bullying, hazing, mental health, suicidal ideation or self-harm, possession or use of drugs, an eating disorder, or if a child brings a gun to school.",
+    "Now, there are also protections included in this bill that require parents to be informed if their school takes action to change their child's gender markers, pronouns, preferred name, or make sex-based accommodations for locker rooms or bathrooms.",
+    "Mr. Chair, I recently met with constituents from the LGBTQ+ community in my district, including trans youth and parents.",
+    "They raised several concerns about this language, concerns primarily focused on the safety and well-being of these youth, especially trans youth.",
+    "Does the bill require teachers or school officials to disclose the sexual orientation of a student or statements made by the student about his or her gender identity?"
+   ]
+  },
+  {
+   "date": "2023-03-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Parents Bill of Rights Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-23/CREC-2023-03-23-pt1-PgH1386",
+   "sentences": [
+    "Mr. Chair, I rise today to offer an amendment to H.R. 5, the Parents Bill of Rights Act.",
+    "In my district and in districts across the country, our education system is a balance of public schools, private schools, charter schools, parochial schools, vocational schools, and home schools."
+   ]
+  },
+  {
+   "date": "2023-02-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disapproving the Action of the District of Columbia Council in Approving the Revised Criminal Code Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-09/CREC-2023-02-09-pt1-PgH784-6",
+   "sentences": [
+    "So far, year to date, according to the D.C. Metropolitan Police Department, Washington, D.C., has seen a 90 percent increase in auto theft, a 143 percent increase in sex abuse, and a 29 percent increase in homicides.",
+    "That doesn't sound like a recipe for doing away with mandatory minimums, lowering maximum sentences, and increasing rehearings for violent criminals.",
+    "There is a radical defund the police movement.",
+    "We are putting our citizens and law enforcement at risk."
+   ]
+  },
+  {
+   "date": "2023-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Denouncing the Horrors of Socialism",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-02/CREC-2023-02-02-pt1-PgH635",
+   "sentences": [
+    "To be clear, this resolution is not about Social Security or Medicare, two programs with broad bipartisan support.",
+    "This is not about Social Security or Medicare."
+   ]
+  },
+  {
+   "date": "2023-02-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Removing a Certain Member From a Certain Standing Committee of the House",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-02/CREC-2023-02-02-pt1-PgH643",
+   "sentences": [
+    "No one who peddles in anti-Semitic activity, behavior, or language should have any right to serve on the House Foreign Affairs Committee, which has an incredibly important role to play in partnering with our strongest ally, the State of Israel.",
+    "Israel's continued existence as a beacon of liberty, democracy, and peace in the Middle East serves as a model for other nations in the region and is something we should be celebrating, not demeaning.",
+    "Comments made by Members of this body about support for Israel being ``all about the Benjamins,'' or that the State of Israel is engaging in apartheid are appalling, wrong, and disqualifying.",
+    "Or to equate the United States and Israel, both democratic nations, to the Taliban and Hamas, and those who promote the anti-Semitic BDS movement--you are damn right they need to be held accountable.",
+    "I will stand up to anti-Semitism and defend Israel's right to exist and the right of Jews everywhere to practice their faith peacefully and safely."
+   ]
+  },
+  {
+   "date": "2023-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Family and Small Business Taxpayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-09/CREC-2023-01-09-pt1-PgH76",
+   "sentences": [
+    "According to my friends across the aisle, that is a good thing because the billionaires and the millionaires don't pay their fair share.",
+    "How else will the Democrats fund their out-of-control and reckless spending?",
+    "There aren't enough billionaires and millionaires in the United States to pay for it."
+   ]
+  }
+ ]
+}

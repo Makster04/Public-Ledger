@@ -1,0 +1,991 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "castor",
+ "name": "Kathy Castor",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 63,
+  "press": 3,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-11-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Energy Nuclear Transparency Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-11-09/CREC-2026-11-09-pt1-PgH6099",
+   "sentences": [
+    "Mr. Speaker, this is a bipartisan bill to ensure that Congress can provide critical oversight over the Department of Energy's nuclear programs and ensure that DOE maintains the highest safety standards for nuclear power.",
+    "Nuclear energy provides reliable, clean power across America.",
+    "For example, in the State of Florida, my home State, nuclear energy provides 10 percent of our electricity generation.",
+    "The Department of Energy plays a crucial role in safeguarding nuclear power as directed by Congress, and in the Atomic Energy Act, Congress specifically gave DOE the authority to conduct research and development of nuclear reactors.",
+    "The development of nuclear reactors for research purposes at DOE is separate and apart from the Nuclear Regulatory Commission's approval process for new reactors for commercial use.",
+    "Recently, the Department of Energy has undertaken new efforts to research and fast-track advanced nuclear test reactors.",
+    "Done wrong, it could be dangerous and shatter public confidence in nuclear power for a generation.",
+    "Mr. Speaker, the Congress, through the Energy and Commerce Committee, sought information from the Department of Energy on their new fast- tracking process, and despite repeated requests for information and clarity on DOE's fast-tracked nuclear reactor efforts, the Department provided Congress with very little information about how the Department will preserve safety and transparency.",
+    "Mr. Speaker, Congress and the public needs greater transparency on DOE nuclear reactor research and fast-tracking, particularly as DOE has lost a lot of professional staff and technical expertise over the past year.",
+    "Nuclear energy cannot succeed in the United States without public trust in the industry.",
+    "With responsible leadership and the right policy support, nuclear energy can safely power the U.S. economy with clean, reliable energy."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "press",
+   "where": "Press release: Castor Champions Passage of Bipartisan Ratepayer Protection Act to Shield Neighbors from Higher Electric Bills Tied to Data Centers",
+   "url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=405289",
+   "sentences": [
+    "Castor Champions Passage of Bipartisan Ratepayer Protection Act to Shield Neighbors from Higher Electric Bills Tied to Data Centers.",
+    "Kathy Castor (FL-14) and Gabe Evans (CO-08) celebrated the passage of their bipartisan Ratepayer Protection Act , which protects American families and small businesses from the costs of energy and grid upgrades required for new hyperscale data centers."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ratepayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5656-3",
+   "sentences": [
+    "I am proud to lead this bipartisan bill with Congressman Evans to protect my neighbors from unfairly paying for the energy needs of large AI data centers.",
+    "Too many are struggling under the weight of soul-crushing energy bills, and it comes at a time especially where everything costs more--your groceries, gas, diesel, healthcare, and housing.",
+    "But now there is a new stressor: massive hyperscale data centers are connecting to the grid.",
+    "When a data center or other large load comes online, it can trigger massive upgrades--new power plants, transmission lines, local transformers--and typically those costs are passed along to ratepayers, and that is not fair.",
+    "Our neighbors should not be stuck paying for the energy infrastructure of the wealthiest countries in the world.",
+    "The Ratepayer Protection Act says that the data center pays for its own upgrades, not the rest of us.",
+    "These monumental hyperscale data centers can span hundreds of thousands of square feet.",
+    "Massive hyperscale data centers can continuously consume over 100 megawatts, with the largest facilities consuming over 650 megawatts.",
+    "According to the U.S. Department of Energy, right now data centers consume about 4.4 percent of all electricity in America, but they predict that that will go up to 12 percent of the total electricity consumption in America by just 2028.",
+    "Mr. Speaker, hyperscale data centers are being constructed by the wealthiest Big Tech corporations on the planet.",
+    "As hardworking Americans are just trying to make ends meet, they shouldn't carry Big Tech's data center load as well.",
+    "That is why we hammered out the bipartisan Ratepayer Protection Act, to ensure that data centers pay the full cost of their energy demand and upgrades.",
+    "It says that if a company wants to build a data center, they should pay for the power and grid upgrades they need, not the rest of us.",
+    "This bill will require those data centers to cover all the costs.",
+    "We should incentivize data centers to be empowered by clean energy and prioritize projects that can reduce demand during peak hours.",
+    "For example, States can require that data centers are powered by clean energy and don't damage local water supplies.",
+    "States can even require that data centers fund weatherization initiatives or deployment of energy-saving batteries, rooftop solar, and heat pumps.",
+    "For example, Virginia is requiring data centers to cover new transmission and distribution capacity costs.",
+    "Minnesota requires data centers to pay into an energy conservation and weatherization fund to benefit working-class neighbors.",
+    "Kansas incentivized data centers to participate in demand response programs to reduce peak demand.",
+    "This bill also empowers local communities to make decisions on the siting and building of data centers.",
+    "For example, in Florida, at least 20 counties and municipalities passed or discussed very strict guardrails on data centers.",
+    "In my home county, Hillsborough County, many say that is not the appropriate place for a data center because we don't have the water resources and we don't have the electricity yet to do that.",
+    "These are the wealthiest corporations in America."
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "source": "press",
+   "where": "Press release: U.S. Rep. Kathy Castor Opposes Data Centers in Hillsborough County",
+   "url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=405285",
+   "sentences": [
+    "U.S. Rep. Kathy Castor Opposes Data Centers in Hillsborough County.",
+    "TAMPA, Fla. – U.S. Rep. Kathy Castor (FL-14) today expressed strong opposition to data centers in Hillsborough County in a letter to the Hillsborough County Board of County Commissioners.",
+    "Castor highlighted the significant strains on pocketbooks and local resources associated with data center devel…"
+   ]
+  },
+  {
+   "date": "2026-08-31",
+   "source": "press",
+   "where": "Press release: Castor, Soto Demand Federal Investigation, Accountability After Grand Jury Finds Taxpayer Dollars Were Abused for Corrupt Political Purposes",
+   "url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=405273",
+   "sentences": [
+    "Kathy Castor (FL-14) and Darren Soto (FL-09) are demanding a federal investigation and full transparency following new reporting that $10 million in taxpayer funds from a Medicaid-related settlement were misappropriated and routed through the Hope Florida Foundation, with $…"
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Kids Internet and Digital Safety Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-29/CREC-2026-06-29-pt1-PgH4280-2",
+   "sentences": [
+    "I have submitted their stories, reports, and research for the Record as we update the Children's Online Privacy Protection Act, a law that is outdated, that now will cover teens and provide much greater safety and privacy for young people."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy Emergency Leadership Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-29/CREC-2026-06-29-pt1-PgH4297",
+   "sentences": [
+    "It is becoming increasingly obvious that our energy system faces numerous threats, whether it is from skyrocketing demand, climate change, or cyberattacks, and it is undeniable that our systems need support to continue delivering reliable and affordable power for Americans."
+   ]
+  },
+  {
+   "date": "2026-04-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reliable Federal Infrastructure Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-22/CREC-2026-04-22-pt1-PgH3057-2",
+   "sentences": [
+    "Trump's war in Iran has sent energy shocks not just across America, including households, but it is rippling throughout the economy with huge price spikes.",
+    "Americans are grappling with these wildly higher gas and diesel prices, and diesel is very expensive because that is how consumer goods are transported across the country with trucks running on diesel fuel.",
+    "Consumer goods are already expensive because of Trump's arbitrary and illegal tariffs.",
+    "After the Supreme Court ruled that those were illegal, big companies are able to apply for refunds.",
+    "It rolled back many of the clean energy incentives that were included in the Inflation Reduction Act that help consumers save on their energy costs.",
+    "They eliminated tax credits for cleaner, cheaper energy like solar and wind, electric vehicles, and home efficiency upgrades.",
+    "According to The Wall Street Journal, Trump's war in Iran is yielding a windfall for some of America's top oil executives, particularly CEOs."
+   ]
+  },
+  {
+   "date": "2026-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Homeowner Energy Freedom Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-25/CREC-2026-02-25-pt1-PgH2301-2",
+   "sentences": [
+    "Mr. Speaker, it is just a real head-scratcher as to why Republicans are bringing this bill in the midst of an affordability crisis, but I think if you listened to the State of the Union Address last night, that is a little bit illuminating because the President said that everything is great in America.",
+    "Then, these illegal, arbitrary tariffs have added to this affordability squeeze.",
+    "Many analyses have it that the average household is paying $1,700 more per year because of the Trump tariffs, and Republicans in Congress have been supportive the entire way along.",
+    "Even after the United States Supreme Court ruled last week that the tariffs--these high import taxes, the highest in 100 years on households, making their groceries, their appliances, and everything else cost more--are illegal and that the President doesn't have the authority to do that, the President doubles down and says that he does.",
+    "Do you know what tariffs have done to the cost of appliances?",
+    "Tariffs have driven a steady rise in appliance pricing, hitting American consumers with higher costs for essentials like refrigerators, washers, dryers, and dishwashers.",
+    "Since most appliances rely on imported steel, aluminum, and foreign- made components, such as motors and control boards, tariffs on both finished goods and parts have pushed up production and import costs.",
+    "Now that the President thumbs his nose at what the Supreme Court has told him and is now inflicting new pain and new taxes on Americans, new tariffs, that is going to keep the prices of appliances elevated at a time when people are really under the gun and feeling the squeeze.",
+    "That doesn't make up for the tariffs, the pain inflicted and the higher costs that people are paying, but it will sure help.",
+    "Every dollar will help working families right now.",
+    "Tariffs, higher electric bills, the cost of housing, and the cost of groceries, you can't turn a blind eye to it, and you shouldn't."
+   ]
+  },
+  {
+   "date": "2026-02-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: (1420) Don'T Mess with My Home Appliances Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-24/CREC-2026-02-24-pt1-PgH2279",
+   "sentences": [
+    "Mr. Speaker, we are here at a time when later today we are going to hear the State of the Union Address.",
+    "Based upon everything we know with the state of the Union, things are very expensive.",
+    "Much of that is because of these arbitrary tariffs, the highest import taxes in about 100 years that Americans are paying for.",
+    "Even the Supreme Court said we can't do that.",
+    "People really deserve to get some money back from the illegal tariffs.",
+    "My guest for the State of the Union Address tonight is a small business owner from Tampa, Linda Misner.",
+    "With the benefit of the Affordable Care Act tax credits, they were paying about $300 per month.",
+    "What bills do the Republicans bring to the floor of the House today, the day of the State of the Union Address?",
+    "Karim Marshall, Director, Climate and Energy, Consumer Federation of America, Washington, DC.",
+    "People are already suffering, paying more because of tariffs on some household appliances and supplies.",
+    "If we really want to help consumers save money, why don't we do something to get the tariff revenue back to hardworking Americans?",
+    "A lot of the big businesses now are saying to the Trump administration that they want that tariff money back.",
+    "What would really be fair is to get that tariff money back to the hardworking Americans who paid those import taxes, those illegal tariffs and arbitrary tariffs, imposed by a President who would like to wield them for retribution, creating--let's get back to the state of the Union-- creating chaos and instability at a time when American families really need policymakers looking out for them and their wallets.",
+    "Why in the world, especially on the day of the State of the Union Address, in the middle of an affordability squeeze, would the Republicans bring another bill to the floor that is going to increase the cost of living for our neighbors back home?"
+   ]
+  },
+  {
+   "date": "2026-02-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing America'S Critical Minerals Supply Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-02-11/CREC-2026-02-11-pt1-PgH2150",
+   "sentences": [
+    "We have seen just the sabotage of affordable, reliable, clean, and cheaper energy coming onto the grid, and now this.",
+    "I have gained a little bit of knowledge not just from the Energy and Commerce Committee, but I serve on the bipartisan Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party.",
+    "That is why Democrats leaned into it and passed important policies in the bipartisan infrastructure law and the Inflation Reduction Act to spur domestic manufacturing and policies that enabled us to work with our partners and allies across the globe to counter China.",
+    "We thought it was important to work together to counter all of the coercion from the Chinese Communist Party.",
+    "The International Energy Agency estimates that mineral demand for clean energy technology will almost triple by 2030 and quadruple by 2024.",
+    "Therefore, the development of diverse, resilient, and sustainable critical mineral supply chains, free from Chinese Communist Party influence, will be fundamental.",
+    "It is about everything that this administration has done to serve the fossil fuel industry, the dirty fuel industry, from canceling clean energy projects that would help lower electric bills that would bring cleaner and cheaper resources onto the grid, projects like offshore wind that is fully permitted and ready to go and provide resources we can rely on during winter storms.",
+    "We cannot afford the Republicans continuing to sabotage cleaner, cheaper energy in America.",
+    "This kind of sneaky maneuver reminds me of what they have done on tariffs this entire Congress that we finally overcame.",
+    "Everyone kind of understands now that they are paying more at the grocery store because of the President's arbitrary tariffs.",
+    "I know he likes to say: Oh, other countries are going to pay these tariffs, but all of the experts, everyone knows, prices are higher because of these import taxes.",
+    "In fact, tariffs are at their highest level in about 100 years.",
+    "The Budget Lab at Yale says on average households are paying probably $1,700 more than they would have without these crazy tariffs that the President wields like a tool of retribution and fear.",
+    "He is going to insult Canada and put tariffs on Canada.",
+    "They actually said: We are not going to be able to debate a removal of tariffs in the House of Representatives, the people's House."
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1834, Breaking the Gridlock Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-07/CREC-2026-01-07-pt1-PgH122-2",
+   "sentences": [
+    "On behalf of the over half a million hardworking neighbors back home and across the Tampa Bay area, I rise in strong support of the extension of the lifesaving and cost-saving ACA tax credits.",
+    "Families are being crushed by inflation and high healthcare costs, and they need the savings that the ACA tax credits provide.",
+    "Mr. Speaker, 4.7 million Floridians, one in five who live in the Sunshine State, depend on the ACA."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Health Care Premiums for All Americans Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-17/CREC-2025-12-17-pt1-PgH5956-3",
+   "sentences": [
+    "It is unconscionable that Republicans are ripping away coverage to fund their tax breaks for billionaires, the wealthy, and the well- connected."
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reliable Power Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-17/CREC-2025-12-17-pt1-PgH6000",
+   "sentences": [
+    "Now that the discharge petition has the necessary number of votes to come to the floor and extend those lifesaving and cost-saving ACA tax credits, we should be doing that instead.",
+    "Also, these arbitrary Trump tariffs are at the highest levels since the 1930s.",
+    "This polluter-friendly bill is a way to sabotage cleaner and cheaper energy, however, and energy storage."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Power Plant Reliability Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-16/CREC-2025-12-16-pt1-PgH5927",
+   "sentences": [
+    "First, there are the arbitrary Trump tariffs.",
+    "Estimates are that the average household is going to pay at least $1,000 more because of tariffs.",
+    "The big, ugly bill is estimated to raise electricity prices by a staggering 61 percent over the next decade, particularly as a result of Republicans declaring war on clean, cheap energy and crippling the American clean energy industry.",
+    "A lot of that goes back to the big, ugly bill and what the Trump administration has done over the past year in canceling clean energy projects.",
+    "An offshore wind project might be approved, permitted, and ready to come online.",
+    "Everyone knows that solar power with storage and wind power with storage is the cheapest energy online.",
+    "In Florida, 4.7 million of my neighbors rely on the Affordable Care Act tax credits.",
+    "We talked about the impact of the arbitrary tariffs that are raising the cost of living on everyone.",
+    "Part of that is because the Trump administration went into this year saying that we don't believe in solar power and wind power and storage and everything that makes your power more efficient.",
+    "But everything that they have done, whether it is arbitrary tariffs, canceling projects, killing jobs, now trying to pass bills that heap costs on our families back home, everything they have done has raised the cost of living.",
+    "American families have each spent $1,200 more this year to fund Trump's tariffs."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: State Planning for Reliability and Affordability Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-10/CREC-2025-12-10-pt1-PgH5522",
+   "sentences": [
+    "Then when we add on the arbitrary tariffs of the Trump administration, that has a significant cost.",
+    "Congress has only one more week to act to reinstitute the ACA tax credits.",
+    "Madam Speaker, we need to lower electric bills by speeding cleaner and cheaper energy to the grid, especially to meet rising demand, and to do it while we protect clean air and clean water.",
+    "We need to speed up clean energy and not throw a wrench in it and make people pay more back home."
+   ]
+  },
+  {
+   "date": "2025-11-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Unlocking Our Domestic Lng Potential Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-20/CREC-2025-11-20-pt1-PgH4841-2",
+   "sentences": [
+    "The November 13, 2025 Wall Street Journal story ``Natural Gas Prices Hit Highest Level Since Invasion of Ukraine'' reported that natural gas prices reached their highest levels since December 2022, with December futures settling Thursday at $4.646 per million British thermal units, up 67 percent from a year ago.",
+    "It is raising costs on all of us in more insidious ways too because we do have a climate crisis across the world.",
+    "Mr. Speaker, when you are paying more to address climate-fueled disasters caused by hurricanes, such as repairing your home, emergency response, and property insurance, then that is an additional cost.",
+    "Given that large methane and carbon dioxide emissions are emitted during fracking, pipeline transport, liquefaction, overseas shipping, and combustion, costs go up, and so do pollution and health risks, especially along the Gulf Coast.",
+    "Republicans and the industry want to eliminate that important review, that even if the gas goes to the Chinese Communist Party and other foreign adversaries that is okay, there is no need to look and no need to review that.",
+    "Aren't Republicans in Congress concerned that shipping American energy overseas to China to power their AI data centers and their manufacturing is a risk, an economic risk, and a military risk?",
+    "I also serve on the House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party.",
+    "Republicans have also enacted policies that wave a white flag to China on cleaner and cheaper energy, on electric vehicles, and on the next generation of energy manufacturing and technology, all evidenced by what they have done in gutting clean energy tax credits in manufacturing, in jobs, and in cost savings in their big, ugly bill."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Promoting Cross-Border Energy Infrastructure Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-18/CREC-2025-09-18-pt1-PgH4423-7",
+   "sentences": [
+    "They have already gutted a lot of the tools that make energy more affordable, like clean energy tax credits, like trying to save on energy efficiency and things like that.",
+    "However, what also adds insult to injury is--and I don't know why, but if Republicans are talking about they believe in fairness, they believe in permitting, they believe that we need all of the power generation we possibly can make, why do they stand idly by while the Trump administration wages war on a clean energy power source?",
+    "In April, the administration issued a stop-work order for the Empire Wind offshore wind project surrounding New York.",
+    "Just last week, the Interior Department asked a judge to cancel approval of the Maryland Offshore Wind project, a project over a decade in the making that had received all of its final permits from multiple Federal agencies and was expected to power over 700,000 homes."
+   ]
+  },
+  {
+   "date": "2025-09-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Coal Council Reestablishment Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-18/CREC-2025-09-18-pt1-PgH4428",
+   "sentences": [
+    "As a result, this bill will make it more expensive to meet growing demand in the next 5 critical years in the global artificial intelligence race damaging U.S. competitiveness.",
+    "We won't even talk about how the Trump administration has pulled permits of fully permitted and almost fully constructed offshore wind projects.",
+    "If you add what they are doing by enforcing uneconomical plants to stay online so consumers pay the cost, with the big, ugly bill, you are taking away clean energy incentives, cheaper and cheaper energy, and you are asking consumers to pay the cost of what utilities are.",
+    "Everyone is grappling with these arbitrary Trump tariffs.",
+    "This is not fair, and Republicans say we need to keep coal plants online so that the so-called dispatchable resources to meet growing electricity demands will help with the artificial intelligence race with China.",
+    "As noted by the North American Electric Reliability Corporation, large voltage-sensitive loads like data centers require flexible, responsible grid solutions, not slow-ramping generators that can take up to 12 or more hours to come online.",
+    "If Republicans were serious about meeting energy demand and keeping customer bills low, empowering artificial intelligence, then they would look to real solutions, energy efficiency, virtual power plants, grid-enhancing technologies, batteries, and more."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-03/CREC-2025-09-03-pt1-PgH3796",
+   "sentences": [
+    "In some places, they have more than doubled, driven by Trump's tariffs; new demand from Big Tech AI data centers; and expensive, old, polluting plants.",
+    "Their big, ugly bill, which was passed in July, already is projected to crush working families with higher costs, and now their spending bill adds insult to injury by slashing home improvement weatherization savings.",
+    "Their big, ugly bill, which was passed in July, already is projected to crush working families with higher costs."
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of Senate Amendment to H.R. 1, One Big Beautiful Bill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-07-02/CREC-2025-07-02-pt1-PgH3039-8",
+   "sentences": [
+    "Mr. Speaker, I ask unanimous consent to amend the rule to make in order the amendment at the desk that protects against any cuts to Medicaid and SNAP."
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Environmental Protection Agency Relating to \"Review of Final Rule Reclassification of Major Sources As Area Sources Under...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-21/CREC-2025-05-21-pt1-PgH2212-7",
+   "sentences": [
+    "What is worse, it comes at a time when Republicans are ripping healthcare away from at least 13.7 million Americans in their billionaire boondoggle bill.",
+    "Instead, they are consumed by this tax giveaway for billionaires.",
+    "This is the priority, to gut the Clean Air Act, to give polluting industrial plants the right to pollute more, to pollute our air with toxins that cause cancer, neurological damage, and death.",
+    "It is especially troubling because--and I think Mr. Pallone would agree that this hasn't gotten a lot of play--in that billionaire boondoggle bill, the big tax giveaway package that is ruminating here in the Rules Committee right now, the American people need to know what else was included in that bill.",
+    "This is in addition to gutting Medicaid and the Affordable Care Act.",
+    "While Americans struggle with the high cost of living and watch this billionaire boondoggle bill try to get through the House, just know what else is going on at the same time.",
+    "They are gutting the Clean Air Act, the bipartisan piece of legislation that has stood us well for years and years."
+   ]
+  },
+  {
+   "date": "2025-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Gulf of America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-08/CREC-2025-05-08-pt1-PgH1914-3",
+   "sentences": [
+    "In fact, what the Republicans have been focusing on is a massive tax giveaway to billionaires like Elon Musk while they rip away healthcare from millions of Americans.",
+    "In Florida, we have about 4.6 million Floridians who rely on the Affordable Care Act for their healthcare and about 3.9 million Floridians who rely on Medicaid.",
+    "We need the hurricane hunters out in the Gulf telling us how severe the storms are going to be, but the Trump administration and Republicans in Congress seem to be turning away from the people along the Gulf Coast and all across America to understand the threat of a warming climate."
+   ]
+  },
+  {
+   "date": "2025-03-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of Energy Relating to \"Energy Conservation Program: Energy Conservation Standards for Walk-in Coolers and Walk-in...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-27/CREC-2025-03-27-pt1-PgH1307-2",
+   "sentences": [
+    "Instead, Republicans have been singularly focused on crafting a massive tax giveaway for billionaires like Elon Musk that is paid for by ripping away health coverage from the people we love the most: kids, our parents, our neighbors who rely on skilled nursing, and people with disabilities who especially rely on Medicaid.",
+    "At my townhall last week in St. Petersburg, people wanted to know why the administration and Republicans want to make it more difficult to receive Social Security rather than strengthen Social Security.",
+    "Instead of a wasteful, time-consuming, silly bill like this, why don't we work together and bring to the floor a bill that will strengthen Social Security?"
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Office of Energy Efficiency and Renewable Energy, Department of Energy Relating to \"Energy Conservation Program: Energy...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-26/CREC-2025-03-26-pt1-PgH1284-7",
+   "sentences": [
+    "Instead, Republicans in Congress have stood idly by while American families and small business owners are left to twist in the wind, making life harder for people back home, more expensive, more difficult to receive the Social Security they rely on, adding taxes through tariffs.",
+    "It gets worse because Republicans in Congress are barreling toward a massive tax giveaway to billionaires paid for by targeting the family members we love the most: our parents who rely on skilled nursing, children, pregnant women, and our neighbors with disabilities.",
+    "Mr. Speaker, have you ever been in a crowd where you are getting jostled, and then you reach back and your wallet is gone?",
+    "I hope that Republicans are going to stand up to Elon Musk as he takes a chain saw to Social Security, but no.",
+    "Social Security was a topic of conversation in my townhall.",
+    "Lo and behold, yesterday, there was a press report about the backdoor cuts to Social Security.",
+    "It says: ``The Social Security Administration website crashed four times in 10 days this month because the servers were overloaded, blocking millions of retirees and disabled Americans from logging in to their online accounts.",
+    "And ringing.'' ``The turmoil is leaving many retirees, disabled claimants, and legal immigrants needing Social Security cards with less access or shut out of the system altogether.'' Mr. Speaker, I include in the Record the article titled: ``Long waits, waves of calls, website crisis: Social Security is breaking down.'' Long Waits, Waves of Calls, Website Crashes: Social Security is Breaking Down (By Lisa Rein and Hannah Natanson, Mar. 25, 2025) A flood of cuts led by Elon Musk has sent the agency into chaos as a new commissioner prepares to take charge.",
+    "The Social Security Administration website crashed four times in 10 days this month because the servers were overloaded, blocking millions of retirees and disabled Americans from logging in to their online accounts.",
+    "The federal agency that delivers $1.5 trillion a year in earned benefits to 73 million retired workers, their survivors, and poor and disabled Americans is engulfed in crisis--further undermining the already struggling organization's ability to provide reliable and quick service to vulnerable customers, according to internal documents and more than two dozen current and former agency employees and officials, customers and others who interact with Social Security.",
+    "The turmoil is leaving many retirees, disabled claimants, and legal immigrants needing Social Security cards with less access or shut out of the system altogether, according to those familiar with the problems. ``What's going on is the destruction of the agency from the inside out, and it's accelerating,'' Sen. Angus King (I- Maine) said in an interview. ``I have people approaching me all the time in their 70s and 80s, and they're beside themselves.",
+    "Under pressure from the secretive Musk team, Dudek has pushed out dozens of officials with years of expertise in running Social Security's complex benefit and information technology systems.",
+    "Social Security is the primary source of income for about 40 percent of older Americans.",
+    "Trump has said repeatedly that the administration ``won't touch'' Social Security, a promise that aides say applies to benefit levels that can be adjusted only by Congress.",
+    "But in just six weeks, the cuts to staffing and offices have already taken a toll on access to benefits, officials and advocates say. `creating a fire' With aging technology systems and a $15 billion budget that has stayed relatively flat over a decade, Social Security was already struggling to serve the public amid an explosion of retiring baby boomers.",
+    "But current and former officials, advocates and others who interact with the agency--many of whom spoke on the condition of anonymity for fear of retribution--said Social Security has been damaged even further by the rapid cuts and chaos of Trump's first two months in office.",
+    "Many current and former officials fear the push is part of a long-sought effort by conservatives to privatize all or part of the agency. ``They're creating a fire to require them to come and put it out,'' said one high-ranking official who took early retirement this month.",
+    "The 10 regional offices that oversee field operations were slashed to four. ``I do not want to destroy the agency,'' he said in an interview Monday. ``The president wants it to succeed by cutting out the red tape to improve service while improving security.'' Musk's Department of Government Efficiency team began poring through Social Security's massive trove of private data on millions of Americans, working in a fourth-floor conference room at the Woodlawn, Maryland, headquarters, with blackout curtains on the windows and an armed security guard posted outside.",
+    "A change announced internally last week will require legal immigrants with authorization to work in the United States and newly naturalized citizens to apply for or update their Social Security cards in person, eliminating a long-standing practice that sent the cards automatically through the mail. ``We realize this is a significant change and there will be a significant impact to customers,'' Doris Diaz, deputy commissioner of operations, told the field staff Monday during a briefing on the changes, a recording of which was obtained by The Washington Post.",
+    "She said the agency was ``working on a process'' for homeless and homebound customers who cannot use computers or come into an office--and acknowledged that service levels will decline.",
+    "In the weeks before that briefing, phone calls to Social Security surged--with questions from anxious customers wondering whether their benefits had been or would be cut and desperate to get an in-person field office appointment.",
+    "But will there still be a phone system?'' `not acceptable' Aging, inefficient phone systems have dogged Social Security for years.",
+    "Asked about worsening phone service, Dudek told reporters in a call last week that ``a 24 percent answer rate is not acceptable.'' ``I want people who want to get to a person to get to a person,'' he said, adding that ``all options are on the table'' to improve phone service, including outsourcing some call center work.",
+    "That worker, who like others spoke on the condition of anonymity for fear of retribution, said the questions have become predictable: What is the U.S. DOGE Service doing to Social Security?",
+    "Last week, employees in several offices were warned that seniors were reporting receiving emails from accounts pretending to be linked to Social Security.",
+    "The messages asked recipients to verify their identity to keep receiving benefits. ``Sounds like scammers are jumping on this press release to trick the elderly,'' one Social Security staffer wrote to colleagues Thursday, referring to the agency's announcement of the in-person verification program.",
+    "Many of them are homeless. ``The attrition rates in Portland are off the charts,'' Stowell said. ``They just don't pick up the phone.",
+    "Hundreds of Maryland residents turned out for a town hall meeting last week hosted by Baltimore County Council member Pat Young about a mile from Social Security headquarters.",
+    "Asked by one retiree in the audience to provide ``a little bit of hope'' that his Social Security benefits would not be cut, Sen. Angela Alsobrooks (D-Maryland) conceded, ``The truth of the matter is that we don't know what they intend.'' Mr. Speaker, this is a real cry for help, and we need Republicans and Congress focused on Americans' pocketbooks, not trying to distract from the massive tax giveaway to billionaires and special interests."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of Energy Relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-05/CREC-2025-03-05-pt1-PgH991",
+   "sentences": [
+    "Meanwhile, the Trump administration's illegal shutdown of grants, loans, and partnership funds to our local communities and nonprofits; the firing of public servants, like the inspector general at the Department of Energy, whose job it is to root out waste, fraud, and abuse; the firing of experts that oversee the nuclear enterprise and our nuclear weapons; and tariffs, which are, in essence, new taxes on American families and businesses, is really socking it to the pocketbooks of American families and businessowners, except for billionaires like Elon Musk, who stand to win big from the tax breaks for billionaires that Republicans are moving through the House.",
+    "I mean, right now laying people off, public servants who provide essential services, the illegal pause in funding--thank goodness the United States Supreme Court just announced this morning that they were turning back one of the illegal actions to, in essence, rob money that has been congressionally mandated to fund essential services.",
+    "I am not talking about prescription drugs and the cap on insulin.",
+    "So many of them are grappling now with the twists and turns of new taxes through tariffs on their products.",
+    "They are scared to talk about the real problems facing working families across the country: affordability, the escalating costs of the overheating climate, what that is doing, higher insurance costs, and higher electric bills because their summers are longer and more intense.",
+    "The changing climate isn't just about the weather.",
+    "It was very long because the President campaigned on reducing costs and making government more efficient, and instead, all he has proposed is a major tax giveaway to billionaires like Elon Musk, paid for by hardworking folks, children who rely on Medicaid, our neighbors with disabilities, and our older neighbors in skilled nursing, saying to Social Security recipients it is going to be harder for you to get your payment because we are going to slash the people who ensure that that happens, repealing affordable healthcare, repealing these initiatives that lower your electric bills, and other actions that make us less safe."
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of Energy Relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Gas-Fired...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-27/CREC-2025-02-27-pt1-PgH884-6",
+   "sentences": [
+    "Instead, they bring this silly bill to the floor, a bill to force to working families to spend more money, to use more energy, and to sell out American manufacturers.",
+    "It gets worse because Republicans now are barreling toward a massive tax giveaway to billionaires paid for on the backs of American families, children, our neighbors with disabilities, our older neighbors, and grandparents in nursing homes.",
+    "Meanwhile, an unelected billionaire who has made his vast fortune on government contracts should not be able to unilaterally stop and take money out of the pockets of American families, of the Americans who need it most.",
+    "Republicans shouldn't gaslight us and Americans if the majority is concerned about a major tax giveaway so that billionaires can have more money and Americans are going to have less healthcare for their grandparents and their children.",
+    "It is the American Gas Association who will get to sell more polluting fossil gas to power inefficient appliances and pass the costs on to working families.",
+    "It does nothing to lower costs for working families.",
+    "It is a hold-on-to-your-wallet moment because the unelected billionaires who are calling the shots, who are reaching into citizens' wallets, and who are going to take away our healthcare want to rule the day.",
+    "We do not countenance unfairness and trying to steal from our kids, loading them up with massive debt and saying that their health doesn't matter in this country."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Halt All Lethal Trafficking of Fentanyl Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-06/CREC-2025-02-06-pt1-PgH520-3",
+   "sentences": [
+    "This is window dressing to distract us from the incursion into Treasury and Medicare payment systems by an unelected billionaire, Elon Musk, and based on some fake, made-up agency, a so-called Department of Government Efficiency.",
+    "This is a distraction from the illegal and dangerous purge of law enforcement officers and intelligence agents in other agencies.",
+    "Mr. Speaker, this is a way to distract and spin your wheels at a time when Elon Musk has just decided to ride into a congressionally appropriated agency in USAID and just say that we are closed for business, which runs completely counter to the United States Constitution.",
+    "It required Medicaid to cover medications for opioid use disorder.",
+    "In the end, though, they said, if you are not going to allow us to offer real amendments to fix the bill, they recommend not passing the HALT Fentanyl Act.",
+    "Mr. Speaker, I include in the Record another letter from 190 national, State, and local public health, criminal justice, and civil rights organizations that also write today to urge us to reject and vote ``no'' on the HALT Fentanyl Act.",
+    "RE Vote NO on the HALT Fentanyl Act (H.R. 27/S. 331) ACLU of Nevada (NV), ACR Health (NY), AIDS Alabama (AL), AIDS Foundation Chicago (IL), AIDS United, Alianza for Opportunity, Alliance for Positive Change (NY), Alliance for Positive Health (NY), American Civil Liberties Union, American Friends Service Committee, Appalachian Learning Initiative (WV), Association of Black Social Workers (Virginia Union University) (VA), Autistic Self Advocacy Network.",
+    "Community Catalyst, Community Health Project Los Angeles (CA), Cosmovisiones Ancestrales (CA), CURE (Citizens United for Rehabilitation of Errants), Dream.org, Drug Policy Alliance, Drug Policy Forum of Hawai`i (HI), Due Process Institute, E5 Enterprise (NY/PA), Elephant Circle (CO), EngageWell IPA (NY), Equal Justice USA, Evergreen Health (NY), Exchanging Pathways (MS).",
+    "Fair and Just Prosecution, Faith in Harm Reduction, Family Services Network of New York (NY), FAMM, Federal Public & Community Defenders, Feed Louisville (KY), Filling The Gaps Outreach, Inc. (GA), Florida Harm Reduction Collective (FL), Freedom BLOC (OH), Fruit of Labor Action Research & Technical Assistance, LLC (NC), Full Circle Youth Empowerment, Inc. (CT), FWD.us.",
+    "G. Williams & Associates, Inc. (IL), Giving Others Dreams G.O.D. Inc (IL), GLIDE (CA), Hawai`i Health & Harm Reduction Center (HI), HEAL Ohio (OH), Hepatitis C Mentor and Support Group (HCMSG) (NY), Hep Free Hawai`i (HI), Hey Joe Media (AZ), Hip Hop Caucus, HIPS (DC), HomeRise (CA), Hoosier Action (IN), Housing Works (NY), Human Rights Watch.",
+    "Illinois Alliance for Reentry and Justice (IL), Illinois Harm Reduction & Recovery Coalition (IL), Immigrant Legal Resource Center, Interfaith Action for Human Rights (IAHR) (DC) (MD) (VA), Indiana Recovery Alliance (IN), IOAD NC Raleigh Memorial Event (NC), Isaiah House Inc (KY), Interfaith Action for Human Rights, Justice Strategies, JustLeadershipUSA, Juvenile Law Center.",
+    "Lacey's Legacy (KY), LatinoJustice PRLDEF, Law Enforcement Action Partnership, Law Office of the Cook County Public Defender (IL), The Leadership Conference on Civil and Human Rights, Legal Action Center, Life Coach Each One Teach One Reentry Fellowship (KY), Lighthouse Consultants Colorado, LLC (CO), Local Progress, Los Angeles Community Action Network (CA), Michigan People's Campaign (MI), Minorities for Medical Marijuana, Mississippi Prison Reform Coalition (MS), Moms for All Paths to Recovery (CA), Monetwork (MO), My Brothers Keeper NEO (OH), My Meta ReEntry Services, Inc. (NC).",
+    "NASTAD, National Association of Criminal Defense Lawyers, National Coalition for the Homeless, National Council of Churches, National Council on Alcoholism and Drug Dependence- Maryland Chapter (MD), National Employment Law Project, National Harm Reduction Coalition, National Health Law Program, National Homelessness Law Center, National Immigrant Justice Center, National Immigration Project (NIPNLG), National Legal Aid & Defender Association, National Organization for Women, National Pain Advocacy Center (CO), NC Harm Reduction Coalition (NC).",
+    "Nelsonville Voices/Showing Up for Racial Justice (OH), NETWORK Lobby for Catholic Social Justice, New Jersey Organizing Project (NJ), New York State Harm Reduction Association (NY), NEXT Distro, OhioCAN/Newark Homeless Outreach (OH), On The Bright Side LLC (NC), ONE Northside (IL), Overdose Crisis Response Fund, PA Stands Up (PA), Parabola Center for Law and Policy, Parole Preparation Project, Pennsylvania Harm Reduction Network (PA), People Advocating Recovery (KY), People's Action, Progressive Leadership Alliance of Nevada (NV), Progressive Maryland (MD), Psychotherapy Services DBA (KY).",
+    "QLatinx (FL), R Street Institute, REACH-NEO (OH), Reentry Advocacy Project (TX), Reframe Health and Justice, Renew A New, Inc (CA), Revolve Impact, Rights & Democracy (NH/VT), River Valley Organizing (OH), Sana Healing Collective (IL), Smoky Mountain Harm Reduction (NC), Sojourners, Source Corp LLC (OH), South Carolina For Restorative Justice (SC), South Louisville Community Ministries (KY), Southern Tier AIDS Program (NY).",
+    "StoptheDrugWar.org, Students for Sensible Drug Policy, Sunita Jain Anti-Trafficking Policy Initiative, Loyola Law School, T'ruah: The Rabbinic Call for Human Rights, Tacoma Healing Awareness Community (WA), TakeAction Minnesota (MN), TCRC Community Healing Center (PA), Texas Harm Reduction Alliance (TX), The Action Lab, Center for Health Policy and Law, Northeastern University School of Law (MA), The Advocates for Human Rights (MN), The AIDS Institute (TAI), The Daniel Initiative.",
+    "United Vision for Idaho (ID), Vera Institute of Justice, Vilomah Foundation (PA), Vital Strategies, Vivent Health, VOCAL-KY (KY), VOCAL-NY (NY), VOCAL-WA (WA), VT Citizens United for the Rehabilitation of Errant(s) (VT), Washington Office on Latin America, Why Not Prosper (PA), Wilkes Recovery Revolution, Inc. (NC), Women on the Rise (GA), Worth Rises, Young People in Recovery.",
+    "Additionally, it imposes mandatory minimums and fails to provide an offramp for removing inert or harmless substances from the drug schedule.",
+    "Mr. Coleman was sentenced to a mandatory minimum of 10 years for selling 30 grams of cocaine--about two tablespoons--because a local lab said that they were laced with three illegal fentanyl analogues.",
+    "Moreover, the HALT Fentanyl Act enshrines mandatory minimums for distribution of FRS under the Controlled Substances Act, which could criminalize inert or harmless substances.",
+    "This bill expands mandatory minimums for both foreign importation crimes and domestic drug distribution offenses, including nonviolent drug distribution involving small quantities of drugs.",
+    "As mandatory minimums eliminate judicial discretion, judges are prevented from tailoring punishment to a particular defendant by taking into account an individual's background and the circumstances of their offenses when determining the sentence.",
+    "Mandatory minimums instead place more power in the hands of prosecutors and their charging decisions, which is particularly concerning given that prosecutors are more likely to charge Black people with a crime that carries a mandatory minimum than a White person.",
+    "The HALT Fentanyl Act threats to replicate this pattern and deepen these disparities.",
+    "Beginning in the 1980s, draconian drug laws with harsh mandatory minimums and their resulting enforcement under the banner of the ``war on drugs'' fueled skyrocketing prison populations.",
+    "In the ensuing decades, Black people have been disproportionately incarcerated and sentenced to mandatory minimum sentences for small amounts of crack cocaine, despite the fact that White people are more likely than Black people to use crack cocaine in their lifetimes.",
+    "Any further extension of the classwide scheduling policy threatens to repeat past missteps with crack cocaine that policymakers are still working to rectify.",
+    "Harsh federal drug laws and mandatory minimums have caused the federal prison population to explode.",
+    "We share your concerns about fentanyl-related deaths and support effective health-based approaches to mitigating this public health crisis, but classwide scheduling and mandatory minimums merely repeat the mistakes of the past by exacerbating our incarceration problem.",
+    "However, we must reiterate our firm opposition to classwide emergency scheduling and to mandatory minimum sentencing.",
+    "For this reason, we ask you to vote NO on the HALT Fentanyl Act.",
+    "The majority has to do something and stand up for their Article I constitutional duty and say: We are going to protect Medicaid; We are not going to listen to billionaires; We are going to bring the SUPPORT Act; and We are not going to pull the rug out from under the counselors and providers back home who are doing it."
+   ]
+  },
+  {
+   "date": "2024-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Liberty in Laundry Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-12-10/CREC-2024-12-10-pt1-PgH6558-2",
+   "sentences": [
+    "To them, I say great work and thank you because over time Americans will save big on their energy and water bills while also reducing tons of dangerous carbon dioxide pollution."
+   ]
+  },
+  {
+   "date": "2024-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 8997, Energy and Water Development and Related Agencies Appropriations Act, 2025; and Providing for Consideration of H.R. 8998, Department of the Interior...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-23/CREC-2024-07-23-pt1-PgH4735",
+   "sentences": [
+    "The bills will stunt the incredible growth in clean energy manufacturing, providing a gift to China especially.",
+    "In less than 2 years since the Democrats in Congress passed the infrastructure law and the Inflation Reduction Act, private-sector companies in the United States have announced a more than $360 billion investment in 600 clean energy projects that have created about 300,000 new jobs in America.",
+    "We should lead in building the batteries, the electric vehicles, the solar panels, and all of the new technologies we need to lower costs and to help solve the climate crisis that is also heaping costs on my neighbors back home in Florida.",
+    "That way is investing in cleaner, cheaper energy, creating jobs in America, building the middle class, solving the climate crisis, putting people over politics, putting people over polluters, putting people over this radical 2025 agenda."
+   ]
+  },
+  {
+   "date": "2024-07-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Unaffordable Dishwasher Standards Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-09/CREC-2024-07-09-pt1-PgH4497",
+   "sentences": [
+    "That is our historic clean energy and climate resilience law."
+   ]
+  },
+  {
+   "date": "2024-07-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Refrigerator Freedom Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-09/CREC-2024-07-09-pt1-PgH4503",
+   "sentences": [
+    "We are about 2 years from passage of the Inflation Reduction Act, and I know a lot of folks said that they are still getting pinched by the affordability crisis, but that is the historic bill passed by a Democratic-led Congress and signed by President Biden that finally put a cap on insulin at $35 per month.",
+    "It was the first time that we beat Big Pharma by directing Medicare to negotiate drug prices.",
+    "It puts a $2,000 cap on out-of-pocket expenses for seniors who rely on prescription drugs.",
+    "Today, we are able to announce a $24 million grant for my local transit agency back in St. Petersburg and Pinellas County that is going to upgrade their buses, expand service, and create workforce development initiatives to train people who are interested in these good-paying jobs.",
+    "The Democratic-led Congress passed the Bipartisan Safer Communities Act in a country now where death by firearm is the leading cause of death for children aged 0-18.",
+    "We also passed the historic Inflation Reduction Act, the historic law that, yes, capped the price of insulin at $35 if you are on Medicare and finally directed Medicare to negotiate drug prices, standing up to Big Pharma for a change.",
+    "It is estimated that over 106,000 of my neighbors will save over $500 if they rely on the Affordable Care Act for their health insurance.",
+    "How about we get back to working on reproductive freedom, lowering costs for families, working on safer communities, good-paying jobs, and delivering for people rather than the special interests that have all too much influence here in Washington, D.C. Please vote ``no'' on this bill."
+   ]
+  },
+  {
+   "date": "2024-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Hands Off Our Home Appliances Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-07/CREC-2024-05-07-pt1-PgH2896",
+   "sentences": [
+    "We focused on bringing down the cost of living and putting more money back into the pockets of working families by passing the PACT Act that expands VA healthcare and benefits for veterans exposed to burn pits, Agent Orange, and other toxic substances, to provide generations of veterans and their survivors with the care and the benefits that they have earned.",
+    "We passed a historic infrastructure law that is rebuilding our roads and bridges, delivering clean water, cleaning up pollution, and expanding access to high-speed internet.",
+    "We passed the Bipartisan Safer Communities Act, and we passed the very important historic Inflation Reduction Act that truly is putting money back into the pockets of families back home.",
+    "Remember, that is the law that capped insulin at $35 a month.",
+    "Over 100,000 of my neighbors will save about $520 in premiums this year under the ACA.",
+    "That is the law that now allows Medicare to negotiate drug prices for the highest drugs.",
+    "The IRA is also lowering the cost of energy and reducing pollution to unleash a major clean energy manufacturing boom across America.",
+    "Over 500 new clean energy projects all across the country, creating well over 250,000 new jobs."
+   ]
+  },
+  {
+   "date": "2024-05-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Alaska'S Right to Produce Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-01/CREC-2024-05-01-pt1-PgH2804",
+   "sentences": [
+    "Whether we are talking about the Arctic refuge or my beautiful part of the country along the Gulf of Mexico, Republicans simply are aiming to sell out America's public lands and waters to their friends in Big Oil and the NRA.",
+    "The bill currently before us would threaten millions of acres of wildlands by mandating unfettered oil and gas development in the Arctic National Wildlife Refuge, regardless of the impacts on wildlife and nearby communities or what it will do to increase the costs of the overheating planet.",
+    "Then, President Biden announced the creation of the American Climate Corps, kind of modeled after the Conservation Corps of decades ago.",
+    "It is a groundbreaking initiative that will put more than 20,000 young Americans to work, protecting our communities, building environmental infrastructure, and helping us to lower costs and be more resilient to the rising costs of the overheating climate.",
+    "Banning offshore oil drilling off of the beautiful Florida coast is where we should start."
+   ]
+  },
+  {
+   "date": "2024-03-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Repealing of Greenhouse Gas Reduction Fund",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-22/CREC-2024-03-22-pt1-PgH1358-4",
+   "sentences": [
+    "The good news is that the historic clean energy law passed by Democrats and signed by President Biden in the last Congress is working.",
+    "Already since we passed that new Inflation Reduction Act, which is our historic clean energy and climate law, there have been enormous job gains across the country, with over 523 clean energy projects across America.",
+    "It has created about 210 clean energy jobs.",
+    "It has motivated over $300 billion in private capital to come and boost communities and boost clean energy manufacturing.",
+    "I know that we are on track to meeting our clean energy goals so that we can avoid the very costly impacts of our climate crisis.",
+    "From the Arctic Refuge to the Gulf of Mexico, where I live, Republicans have made clear their intent to sell out America's public lands and wildlife refuges to the shareholders of Big Oil.",
+    "On Wednesday, they passed a resolution that did nothing but celebrate fracking on public lands.",
+    "Today, Republicans' polluters over people agenda continues the debate because they want to rescind our new green climate bank, our Greenhouse Gas Reduction Fund, which is an historic important element of the Inflation Reduction Act and everything we want to do on clean energy.",
+    "These clean energy projects will support families and businesses across America who are eager to find relief from exorbitant electric bills.",
+    "It is because community-led clean energy projects aren't on the balance sheet for fossil fuel donors.",
+    "I urge you to protect the Greenhouse Gas Reduction Fund, our historic clean energy green climate bank, and ensure that all Americans can reap the savings and the benefits of clean air and cleaner, cheaper energy."
+   ]
+  },
+  {
+   "date": "2024-02-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Unlocking Our Domestic Lng Potential Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-15/CREC-2024-02-15-pt1-PgH649-3",
+   "sentences": [
+    "This Republican bill is a giant handout to Big Oil and Gas that will enrich our adversaries, including the Chinese Communist Party, and force middle-class families to pay more on their home electric bills.",
+    "The Biden administration is right to study how unfettered gas and methane pollution costs my neighbors more.",
+    "Are we going to do a tough, bipartisan border security bill?",
+    "I am angry like the Kansas City police chief said she is angry.",
+    "It is outrageous that extreme MAGA Republicans are siding with Putin and blocking a national security bill.",
+    "They put Putin over the people."
+   ]
+  },
+  {
+   "date": "2023-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-26/CREC-2023-10-26-pt1-PgH5110-5",
+   "sentences": [
+    "Over the past year since Democrats passed and President Biden signed historic laws investing in infrastructure and clean energy and American workers, the American economy has been booming and our neighbors are enjoying some lower costs, good-paying jobs are being created, and folks back home are building safer, healthier, more resilient communities.",
+    "Infrastructure and clean energy are reducing pollution."
+   ]
+  },
+  {
+   "date": "2023-05-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Debt Ceiling Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-25/CREC-2023-05-25-pt1-PgH2622-7",
+   "sentences": [
+    "Meanwhile, back home in Tampa, I know that one of my neighbors is expecting their Social Security check at the end of next week, and that is at risk."
+   ]
+  },
+  {
+   "date": "2023-05-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Environmental Protection Agency Relating to \"Control of Air Pollution From New Motor Vehicles: Heavy-Duty Engine and Vehicle...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-23/CREC-2023-05-23-pt1-PgH2523",
+   "sentences": [
+    "What my Republican colleagues are trying to do here is roll back a very important Environmental Protection Act rule that was developed to tackle air pollution across America under the Clean Air Act, air pollution specifically that comes from heavy-duty trucks and buses.",
+    "For over 50 years, the Clean Air Act has served us well.",
+    "What the Clean Air Act has brought us over the past 50 years has been consistent improvement in the air that we breathe.",
+    "It is important to tackle the problem of heavy-duty trucks and buses.",
+    "The last time that EPA updated their rule relating to heavy-duty trucks and buses was 20 years ago.",
+    "Back home in the Tampa Bay area, I can think of many communities along the interstate highways and along our industrial centers where there is a lot of traffic, especially from heavy-duty trucks and buses that are really weighing on the air quality in those neighborhoods.",
+    "This is a way, thankfully, for EPA to continue its mission to clean up the air under the Clean Air Act and make sure they are doing it in a scientifically sound manner."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "It would raise costs for American families by repealing household energy rebates and rolling back historic investments to increase access to cost-lowering clean energy technologies.",
+    "In fact, a number of America's leading health organizations, like the American Lung Association, the Children's Environmental Health Network, and others wrote to Congress to say they oppose H.R. 1 and its attempt to weaken the Clean Air Act to allow additional polluting energy sources.",
+    "They say, ``Years of scientific research has clearly established that pollution is a threat to human health at every stage of life--from inside the womb to adulthood.'' Burning fossil fuels not only contributes to a warming climate, but higher levels of dangerous--and deadly--pollution.",
+    "Earlier this month, the International Energy Agency said it has been the jump in renewables, not frack gas--it has been the jump in renewables that has helped blunt a feared runaway in carbon emissions.",
+    "In the end, they say, global energy-related emissions are still on an unsustainable growth trajectory, but--and this is thanks to the outstanding wealth of renewable energy, electric vehicles, heat pumps, energy efficient technologies--that we still have a fighting chance.",
+    "For the first time in 2022 renewable energy in America surpassed coal burning in America, and it is now outpacing nuclear energy, as well.",
+    "With the Inflation Reduction Act, the bipartisan infrastructure law, the CHIPS and Science Act, we are about to lower energy bills substantially for our neighbors back home.",
+    "Since we have adopted the IRA, the infrastructure law, we have also seen $200 billion of private sector investments in the manufacturing sector in America, in clean energy, electric vehicles, batteries, and other manufacturing processes."
+   ]
+  },
+  {
+   "date": "2023-03-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 1, Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-28/CREC-2023-03-28-pt1-PgH1474-2",
+   "sentences": [
+    "This bill would reward the price gouging of the big oil and gas companies.",
+    "This bill would roll back our bedrock environmental protections for clean air, clean water, and lower-cost clean energy."
+   ]
+  },
+  {
+   "date": "2023-01-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Strategic Production Response Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2",
+   "sentences": [
+    "Clean water, clean air, clean beaches are central to our way of life, and are the cornerstone of our economy.",
+    "The eastern Gulf of Mexico also is an important military testing range.",
+    "We are about to unleash the clean energy economy to create jobs, to lower costs for families, to build safer, healthier, and more resilient communities."
+   ]
+  },
+  {
+   "date": "2023-01-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting America'S Strategic Petroleum Reserve From China Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-12/CREC-2023-01-12-pt1-PgH209-2",
+   "sentences": [
+    "Last year, in response to soaring gasoline prices caused by Putin's unprovoked attack on Ukraine, President Biden successfully used the Strategic Petroleum Reserve to lower prices at the pump and provide relief to American families.",
+    "In addition to China, it would ban crude oil exports to all of our adversaries, including Iran and North Korea.",
+    "In the end, America's future is in clean energy."
+   ]
+  },
+  {
+   "date": "2022-08-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-08-12/CREC-2022-08-12-pt1-PgH7577-2",
+   "sentences": [
+    "Madam Speaker, as chair of the Select Committee on the Climate Crisis and as a mom, I am proud to say the Inflation Reduction Act is a big climate deal.",
+    "This is the largest investment in clean energy and climate solutions ever in U.S. history, and it comes at a crucial time.",
+    "We must urgently slash climate pollution to avoid the worst impacts and to lower costs, create good-paying jobs, and build safer, more resilient communities.",
+    "Today, I am optimistic that America will lead the world in solving the climate crisis, and I thank the young people all across this country who pushed us to take this historic step.",
+    "The Inflation Reduction Act is also good news for Floridians, as Democrats will lower the costs of prescription drugs, empower Medicare to negotiate drug prices, institute a $2,000 cap, and much more.",
+    "It is a big deal for the 2.8 million Floridians who purchase high- quality health coverage under the Affordable Care Act.",
+    "I thank Speaker Pelosi for her vision for the Select Committee on the Climate Crisis, and I also thank Chairman Frank Pallone and my colleagues for their inspiring work."
+   ]
+  },
+  {
+   "date": "2022-07-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Big Cat Public Safety Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-28/CREC-2022-07-28-pt1-PgH7388",
+   "sentences": [
+    "We have seen numerous law enforcement and emergency calls due to the irresponsible private ownership of big cats fueled by those who are making money off of their suffering."
+   ]
+  },
+  {
+   "date": "2022-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Right to Contraception Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-21/CREC-2022-07-21-pt1-PgH6927-2",
+   "sentences": [
+    "Madam Speaker, we are at a perilous time where an extremist Supreme Court and the GOP are rolling back our rights.",
+    "In States like mine in Florida, the Governor has already instituted a cruel 15-week abortion ban, and recently struck a plan to provide contraceptive care to working-class women and girls for the second year in a row.",
+    "I have served in Congress for enough years to watch the GOP over time fight to eliminate birth control and family planning funds.",
+    "They fought to eliminate the no-cost birth control under the Affordable Care Act, in addition to the Democrats fighting to establish this right to contraceptives.",
+    "This bill also would ensure that doctors can continue to do their jobs and provide contraceptives without being turned into criminals.",
+    "Contraceptive use is crucial to preventing unintended pregnancies, preventing and treating countless medical conditions, and decreasing the risk of certain cancers.",
+    "On behalf of the women in the State of Florida and America, I urge my colleagues to support the right to contraceptives and the right of women to control their own bodies."
+   ]
+  },
+  {
+   "date": "2022-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Joseph Woodrow Hatchett United States Courthouse and Federal Building",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-17/CREC-2022-05-17-pt1-PgH5089",
+   "sentences": [
+    "Then he was tapped as the first African-American supreme court justice in the history of the State of Florida, and then on the circuit court of appeals, where he then served as chief judge."
+   ]
+  },
+  {
+   "date": "2021-09-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-24/CREC-2021-09-24-pt1-PgH5139-4",
+   "sentences": [
+    "Madam Speaker, I rise in strong support of H.R. 3755, the Women's Health Protection Act.",
+    "I want to thank my colleague Rep. Judy Chu for leading the charge on this important legislation to protect the full range of health care, including abortion.",
+    "Every American deserves to live a safe and healthy life, and that means ensuring that everyone has access to the health services they need including contraceptives, checkups, abortion care, cancer screenings, pre-natal visits and more.",
+    "I'm really proud of what Democrats have done over the decades to improve the lives of American families and improve their health care, Medicare, Medicaid, the Affordable Care Act and children's health insurance, but we're in a moment in time where there's a radical fringe trying to take over these decisions.",
+    "I have to say it is so alarming to see this radical move by Republicans in Congress and in the recent extreme new law in Texas that would effectively ban abortion.",
+    "For too long, we have seen Republicans across this country attack family planning and reproductive health care, including abortion and contraceptives.",
+    "We've got to ensure that all people no matter who they are, where they live and how much they make and the color of their skin, have access to reproductive health care--including abortion--that they need, and they deserve."
+   ]
+  },
+  {
+   "date": "2021-08-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: John R. Lewis Voting Rights Advancement Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-08-24/CREC-2021-08-24-pt1-PgH4384",
+   "sentences": [
+    "But, unfortunately, the U.S. Supreme Court gutted the Voting Rights Act and after that State officials moved to enact other discriminatory practices to keep certain people and people of color from casting ballots."
+   ]
+  },
+  {
+   "date": "2021-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pfas Action Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-21/CREC-2021-07-21-pt1-PgH3770",
+   "sentences": [
+    "The Agency for Toxic Substances and Disease Registry has determined that PFAS exposure is associated with low birth weight babies, an increased rate of cancer, lower fertility rates, and developmental issues in young children and infants.",
+    "This bill will help us rely on the science, provide some safeguards, make sure we are gathering the scientific data we need to keep our communities safe back home."
+   ]
+  },
+  {
+   "date": "2021-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Consumer Protection and Recovery Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-20/CREC-2021-07-20-pt1-PgH3730-2",
+   "sentences": [
+    "Now the FTC is one of our most important consumer watchdog agencies, and for 40 years the FTC has been able to recover ill-gotten gains and restitution for consumers, but a recent Supreme Court decision kind of threw it back to Congress for us to clarify the FTC's authority.",
+    "And this is especially important for seniors, folks in the Active Duty military, veterans, and others because they are often targeted by scams like telemarketer credit card scams, those scam artists that claim that we are working for a charitable organization that is going to help disabled police officers or disabled military, these false, fake cures that say, pay us this money and you are going to be cured of your Type 2 diabetes or you won't be in pain anymore."
+   ]
+  },
+  {
+   "date": "2021-06-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amendments 87 and 89 to the Invest in America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-30/CREC-2021-06-30-pt1-PgH3315-2",
+   "sentences": [
+    "It also comes one year after the House Select Committee on the Climate Crisis made landmark recommendations to solve the climate crisis and expand clean energy through a clean energy action plan to cut greenhouse gas pollution, to reach net zero as soon as possible, follow the science, improve our health, and make our communities more resilient to costly climate fuel disasters.",
+    "But now we are going to build on that progress through the INVEST in America Act.",
+    "It is the most climate-forward transportation bill in the history of the Congress with record investment in public transit and rail; investments to make roads and bridges more resilient; record investment in electric vehicle charging stations, pedestrian and bicycle trails; progress on environmental justice, clean air, and clean water."
+   ]
+  },
+  {
+   "date": "2021-06-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Environmental Protection Agency Relating to ``Oil and Natural Gas Sector: Emission Standards for New, Reconstructed, and...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-28/CREC-2021-06-28-pt1-PgE703-2",
+   "sentences": [
+    "Mr. Speaker, it is imperative that we work together to reduce harmful methane pollution as soon as possible.",
+    "That is why I strongly support S.J. Res. 14 which will get America back on track in controlling methane pollution and leaks.",
+    "Methane is a highly potent gas that, pound for pound, traps more than 80 times as much heat on our planet in the short term as carbon dioxide.",
+    "Plugging methane pollution leaks is good for our public health, as it can reduce the risk of asthma, heart attacks, and premature deaths.",
+    "Reducing methane pollution is good for the climate, it's good for business, and it will create thousands and thousands of jobs across America.",
+    "That's why there is broad consensus from energy companies, local communities, the tourism industry, labor groups, environmental organizations, environmental justice leaders, and faith leaders on methane pollution control.",
+    "In fact, in 2019, when my Select Committee on the Climate Crisis was doing our broad outreach to develop recommendations for solving the climate crisis, this was an area where we reached broad consensus, as a wide range of stakeholders and scientists told us reducing methane pollution would be needed to help save our planet.",
+    "Adopting today's resolution will restore common-sense safeguards to limit methane pollution from oil and gas production, as we reverse the Trump Administration's misguided efforts that stopped them.",
+    "Restoring these safeguards is one of the recommendations we included in the Select Committee's Climate Crisis Action Plan.",
+    "Controlling dangerous methane pollution has broad support.",
+    "A recent Morning Consult poll found that an overwhelming majority of Americans-- including 81 percent of Republicans--support congressional actions requiring oil and gas companies to regulate, check for, and fix methane leaks.",
+    "This year, the National Oceanic and Atmospheric Administration announced that, despite the COVID-19 pandemic and the various shutdowns around the globe, carbon dioxide and methane emissions surged in 2020, including the largest increase in methane emissions recorded since record-keeping began nearly four decades ago.",
+    "According to an analysis published by scientists from NASA and Stanford last year, fossil fuel-related methane emissions in the United States contributed approximately 80 percent of the total increase of methane for North America from 2006 to 2017.",
+    "Stopping methane and other pollution from oil and gas production is an important step in solving the climate crisis.",
+    "Even major oil companies--from BP America to Shell to ExxonMobil--support federal regulation of methane pollution.",
+    "Let's be clear: We must cut methane pollution to prevent catastrophic climate change."
+   ]
+  },
+  {
+   "date": "2021-06-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Climate Crisis",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-16/CREC-2021-06-16-pt1-PgH2874",
+   "sentences": [
+    "Mr. Speaker, we are in a climate crisis, and it is going to take American leadership and ingenuity to solve it.",
+    "But we think we can create jobs and a lot of opportunity when we solve the climate crisis.",
+    "But what we are seeing right now are devastating health and economic consequences of climate change here all across America, whether it is wildfires out West, flooding in the midsection.",
+    "We have got to act urgently, guided by the science, working in concert with our allies across the globe to provide a livable climate for all Americans, especially for future generations.",
+    "Because I believe that, working together, we will be able to avert the worst impacts of this climate emergency and build a stronger, healthier, fairer America.",
+    "Carbon dioxide in the atmosphere is at record levels.",
+    "People thought that, during the pandemic, greenhouse gases would dip and that might provide some salvation from the worst impacts of climate.",
+    "In fact, NOAA, the National Oceanic and Atmospheric Administration, has said no, despite the pandemic, carbon dioxide in the atmosphere is at a record high.",
+    "In fact, last year alone, we suffered through about $100 billion, $96 billion, in damages from weather and climate disasters.",
+    "We don't have any more time for half measures, so we intend now to hammer out the most ambitious climate legislation that we have ever seen in order to answer the moral call that we have to future generations to make sure we give them a livable planet.",
+    "Mr. Speaker, I thank my good friend, Congressman Casten, for bringing his intellect and his passion for solving the climate crisis to this Congress.",
+    "Mr. Speaker, hearing my colleague speak with such passion and such intellect really does give me hope that we have the tools necessary to tackle the climate crisis.",
+    "But I think we also need to think about climate as a climate opportunity, and there are a few of these.",
+    "Back home in Tampa, Florida, I see it; I understand that now the climate crisis presents us with a generational opportunity to rebuild our country and our infrastructure, so we are not leaving communities behind and we are not leaving any American behind.",
+    "We are going to have to create these new opportunities in solving the climate crisis, creating good paying jobs, but also lifting up Americans and American communities that have carried the burden of pollution.",
+    "Mr. Speaker, I think that is one of the reasons why President Biden's American Jobs Plan targets 40 percent of the benefits of our clean energy and clean infrastructure investments to disadvantaged communities.",
+    "Right now, as we move into our clean energy future, President Biden has the goal of really helping communities that need revitalization.",
+    "When you think about the hard work in a coal mine or out in the field, we owe such a debt of gratitude to our coal miners and the energy workers who have powered America.",
+    "With all of the opportunities that clean energy and greater and stronger and healthier communities can provide, we have got to hammer this out through the American Jobs Plan and make sure that we protect our economy, we protect our national security, our health, our beautiful natural resources from sea to shining sea, and the air that we breathe.",
+    "We can double down on the status quo, even as these climate-fueled disasters claim more lives and they hurt the pocketbooks of folks.",
+    "We know what President Biden has proposed will help revitalize those communities; plug those abandoned coal mines; plug the abandoned wells; just plain plug the leaks of methane gas that are so damaging to the climate.",
+    "We think we can create millions and millions of jobs through a new CCC, a Climate Conservation Corps.",
+    "Representative Casten, that is going to create an enormous amount of jobs in the Midwest because a lot of the renewable resources, your solar power, wind power, it is largely in the Midwest.",
+    "People lost their lives because of the strange, climate-fueled winter storm in Texas.",
+    "And I haven't even gotten to the wind power, offshore wind, wind in the Midwest.",
+    "This is why I like to think of it not just in the terms of a climate crisis, but a climate opportunity.",
+    "And I think that is why President Biden says that every time he hears people talk climate, he hears jobs, jobs, jobs.",
+    "They are building those electric vehicles.",
+    "We want to build the electric vehicles that the world drives.",
+    "We want to make sure that that charging infrastructure goes coast to coast in every community.",
+    "And the good news is, all Americans--I don't care if you are a Democrat or Republican or Independent, or what, they understand that clean energy is the future; and that if we do it right, we can lift communities that need it; and we can create millions and millions of jobs.",
+    "But there was one witness at one of our early hearings, Dr. Abdelhadi, who is an expert, who has been focused on climate for many years, and I want to just remind what he said.",
+    "He said: The limited actions to address this climate crisis have resulted in lost opportunity and have produced a challenge that is even greater than it was even a few years ago.",
+    "With political and society will, and with strategic and scientifically informed action that considers all of the dimensions of climate change, the dangerous trajectory we are on can be altered, such that our generation's story can be one of success and not failure."
+   ]
+  },
+  {
+   "date": "2021-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H. Res. 24, Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-13/CREC-2021-01-13-pt1-PgH151-8",
+   "sentences": [
+    "The traitorous incitement of an insurrection demands not just impeachment but removal from office immediately.",
+    "We must act with the same resoluteness we showed in the early morning hours after the insurrection, where we ensured the will of the voters was effectuated."
+   ]
+  },
+  {
+   "date": "2020-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Disapproval of the Trump Administration'S Harmful Actions Towards Medicaid",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-02-06/CREC-2020-02-06-pt1-PgH870",
+   "sentences": [
+    "Now, they are proposing again to shrink, block, or eliminate health services under Medicaid.",
+    "For over 50 years, Medicaid has provided a coverage guarantee.",
+    "It is particularly harmful to my home State of Florida, and it will complicate our ability to expand Medicaid health services to families who need it.",
+    "Patient advocates, doctors, and hospitals overwhelmingly oppose block grant waivers because they will weaken access to care.",
+    "Now, they are in the courts to take away that coverage for preexisting conditions."
+   ]
+  },
+  {
+   "date": "2019-06-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-26/CREC-2019-06-26-pt1-PgH5177-3",
+   "sentences": [
+    "Mr. Chair, the Federal Trade Commission (FTC) has broad authority to protect consumers and is tasked specifically with targeting fraud, deceptive advertising, robocalls, identity theft, and online privacy.",
+    "FTC needs more resources to protect our personal online data, but I remain concerned that the FTC will still struggle to fulfill its mission and hold companies accountable for violations of the law, data breaches and particularly our children's online privacy.",
+    "Every week there is a new report of companies skirting the Children's Online Privacy Protection Act.",
+    "On the Energy and Commerce Committee, my colleagues and I are working to improve children's online privacy protections.",
+    "Recently, as part of that work, FTC Chairman Simons testified that a FTC $5.7 million settlement with a company that illegally collected information on children, in violation of the Children's Online Privacy Protection Act, was the largest civil penalty in an children's online privacy case.",
+    "The video social networking app Musical.ly, now known as TikTok, settled very serious case where TikTok was collecting location data on children that was discernible to people in the neighborhood.",
+    "The FTC also has launched a probe of You Tube for potential violations of COPPA and a broad consensus has emerged that many other bad actors violate the law on a regular basis."
+   ]
+  },
+  {
+   "date": "2019-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-12/CREC-2019-06-12-pt1-PgH4452",
+   "sentences": [
+    "My amendment takes aim at a proposed rule by the Trump administration that encourages insurance companies to issue junk insurance plans.",
+    "Everyone calls them junk insurance plans because they often don't cover vital health services.",
+    "They may not cover prescription drugs.",
+    "They may not cover mental health services that you need.",
+    "This is not in question because in committee, I asked the HHS Secretary Azar point blank, I said: ``These short-term, limited- duration plans known as junk plans, they allow insurance companies to discriminate against you if you have a preexisting health condition; right, Mr. Secretary?'' He said: ``Yes.'' The law of the land after we passed the Affordable Care Act says that no longer are we going to allow insurance companies to discriminate against our neighbors who have preexisting health conditions.",
+    "That is not a short-term, limited-duration plan.",
+    "Just over a month ago, Democrats here in the House stood up for our neighbors back home and passed a bill, H.R. 1010, that would halt the Trump administration's dangerous expansion of junk health plans that weaken the protection for Americans who have a preexisting condition.",
+    "Today, we are building on H.R. 1010 by offering this amendment with my colleagues, Representatives Underwood, Barragan, DeSaulnier, Spanberger, Moore, and Slotkin, to prohibit any funds from being used to implement, administer, or enforce the administration's expansion of junk plans.",
+    "We are going to safeguard families from Republican attempts to push them into junk insurance plans that don't cover the essential healthcare services that they need.",
+    "They value affordable healthcare and the bedrock protection of the Affordable Care Act that prohibits discrimination based upon a preexisting health condition.",
+    "Madam Chair, instead of ripping affordable coverage away, my Republican colleagues and the administration should be working with the Democrats to lower healthcare costs for American families and protect coverage for preexisting conditions.",
+    "This is just another attempt by the administration to sabotage the Affordable Care Act.",
+    "The level of uninsured in this Nation has gone up, and they want to bring us back to a time when those folks with a preexisting condition could no longer get healthcare coverage.",
+    "Short-term plans do not have to cover the ACA's essential health benefits.",
+    "They frequently do not include maternity services, prescription drugs, mental healthcare, or substance use disorder treatment.",
+    "Short-term plans can deny coverage to or charge higher prices for people with preexisting conditions.",
+    "As I said a moment ago, remember those days when even being a woman was a preexisting condition.",
+    "If a child had asthma, Madam Chair, it was a preexisting condition, and they couldn't get any help.",
+    "They often will not cover medical services associated with preexisting conditions.",
+    "We reiterate: They are junk plans.",
+    "Every American deserves affordable, high-quality health coverage, which is why we need to block these junk plans that provide the opposite."
+   ]
+  },
+  {
+   "date": "2019-01-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Constituents Affected by the Government Shutdown",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-16/CREC-2019-01-16-pt1-PgE53-5",
+   "sentences": [
+    "It is unwananted and wrong to force our Coast Guard, our Customs and Border, TSA officers, air traffic controllers and others to work without getting paid.",
+    "The officers in Tampa are trying to hang in there because as they shared, `We do believe in the Oath we took to protect the flying public and guard against threats.' But many are trying to figure out how to pay for gas, child care services, and groceries before rent, bills and medical care.'' I also spoke with Admiral Karl Schultz who leads the Coast Guard this morning regarding our shared deep concern that our frontline Coast Guard service members are not being paid.",
+    "These people should not have to suffer for others just trying to make a vote.'' I urge the White House and GOP Senators to take up the bills to reopen America's government along with the detailed plan we have negotiated for modern border security--and do it today."
+   ]
+  },
+  {
+   "date": "2018-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supporting United States Immigration and Customs Enforcement",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-18/CREC-2018-07-18-pt1-PgH6486-2",
+   "sentences": [
+    "As to the resolution's language that states ``supports the efforts of all Federal agencies, State law enforcement, and military personnel who bring law and order . . .'', I strongly support that and the important agency missions including of money laundering, narcotics investigations, cyber crimes, terrorism prevention, and customs enforcement.",
+    "If present, I would have inquired of my Republican colleagues if they could get the same statement of support of Federal law enforcement agencies from President Trump, given his behavior and statements in Helsinki and the same disdain he has expressed for Federal law enforcement and intelligence agencies."
+   ]
+  },
+  {
+   "date": "2018-06-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Individuals in Medicaid Deserve Care That Is Appropriate and Responsible in Its Execution Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-20/CREC-2018-06-20-pt1-PgH5335",
+   "sentences": [
+    "Just last week, the Trump administration launched a new attack on Americans with preexisting conditions, and that includes families struggling with opioid addiction.",
+    "President Trump and the GOP asked a Federal court to strike down the protection that prevents insurance companies from denying coverage or charging more for a preexisting condition.",
+    "President Trump and the GOP were not successful last year in ripping health coverage away from families across this country through legislation, so now they are trying to do this through the court system: take away the guarantee of health coverage for millions of Americans with preexisting conditions.",
+    "My amendment, most importantly, makes the 5-year limited repeal of the IMD exclusion for individuals with substance use disorders contingent on the State expanding Medicaid.",
+    "It is based on the most up-to-date research and everything we know about how important Medicaid and Medicaid expansion is to treating opioid addiction.",
+    "Mr. Speaker, Medicaid is central to treating addiction, because families can get early intervention and treatment, including the important medical-assisted treatment.",
+    "In fact, Medicaid serves four out of ten of nonelderly adults with opioid addiction.",
+    "According to a 2016 study by the National Council on Behavioral Health, about 1.6 million people with substance use disorders now have coverage because they live in one of the 31 States at the time that expanded Medicaid.",
+    "The Agency for Healthcare Research and Quality highlighted the importance of Medicaid expansion in increasing insurance coverage among people with opioid use disorders just recently.",
+    "They found that the share of hospitalizations in which the patient was uninsured fell dramatically in States that had expanded Medicaid, from over 13 percent in 2013 to just 2.9 percent 2 years later after those States expanded Medicaid.",
+    "The steep decline indicates that many uninsured people coping with opioid addiction gained coverage through Medicaid expansion.",
+    "Medicaid is part of the solution to the opioid crisis, and Republicans should not irresponsibly press to cut millions of Americans, take away their lifeline as they propose massive cuts again to Medicaid."
+   ]
+  },
+  {
+   "date": "2018-04-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supporting Efforts to Bring the 2026 Fifa World Cup Competition to Canada, Mexico, and the United States",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-04-24/CREC-2018-04-24-pt1-PgH3474",
+   "sentences": [
+    "Mr. Speaker, the United States of America and our North American neighbors of Canada and Mexico have a wonderful opportunity to host the 2026 FIFA World Cup soccer tournament.",
+    "We think now for 2026 it is going to be bigger and better than ever because we are going to combine efforts with our North American neighbors of Canada and Mexico, where they will also host many of the tournament matches."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6428-2",
+   "sentences": [
+    "Mr. Chairman, this Republican bill weakens America's commitment to clean energy.",
+    "We have a very diverse energy portfolio and a growing clean energy and efficiency sector.",
+    "This is especially important as we tackle the costs and challenges of the changing climate.",
+    "Instead, we should work together and face the challenges of the changing climate head-on and not bury our heads in the sand.",
+    "The rising costs of the changing climate are a real threat to everyone, especially to the families I represent back home in Florida, which is why I filed another amendment that was not ruled in order, an amendment that would limit the Department of Energy from removing the term ``climate change'' from their publications.",
+    "That is right, the Trump administration has already removed mention of climate change from government websites, and has deleted a sentence linking climate change to sea level rise in a press release.",
+    "Ignoring or trying to hide the cost of the changing climate will simply cost us more in the long run.",
+    "We should be working together on investing in a clean energy future, but that, unfortunately, seems farther away today, unless we adopt an amendment like mine and begin to understand the realities that we are facing.",
+    "Don't hamstring them by cutting back on our investments in clean energy and energy efficiency."
+   ]
+  },
+  {
+   "date": "2017-04-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Further Continuing Appropriations Act, 2017",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-04-28/CREC-2017-04-28-pt1-PgH2947-3",
+   "sentences": [
+    "But, no, that debate hasn't been brought There is going to be a big march in Washington again this weekend on the changing climate.",
+    "We could discuss and debate the cost of the changing climate, extreme weather events.",
+    "Boy, my folks back home in the State of Florida are having to look at increased insurance costs, property insurance costs, infrastructure costs because of the changing climate, but that debate hasn't been had.",
+    "Instead the Congress has been consumed with a healthcare bill that rips coverage away from families, harms Medicare, raises cost on everyone, and they were stuck in a debate this week about ending the guaranteed protection that families now have if they have a preexisting condition.",
+    "Remember, under the Affordable Care Act, you can no longer be discriminated against if you have a preexisting condition like cancer or diabetes.",
+    "He is consumed with conflicts of interest and how he doesn't want to be transparent, whether it is his tax returns or the emoluments under the Constitution."
+   ]
+  },
+  {
+   "date": "2017-03-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Waiving Requirement of Clause 6(a) of Rule Xiii with Respect to Consideration of Certain Resolutions Reported From the Committee on Rules, and Providing for Consideration of Motions to Suspend the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-03-23/CREC-2017-03-23-pt1-PgH2353-2",
+   "sentences": [
+    "It breaks the fundamental guarantee we have with our neighbors back home who are Alzheimer's patients, children with complex conditions, the disabled, under Medicaid, all to give a massive tax break to the wealthiest people in America."
+   ]
+  },
+  {
+   "date": "2017-02-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of Final Rule by Secretary of Health and Human Services",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-16/CREC-2017-02-16-pt1-PgH1268",
+   "sentences": [
+    "For almost 50 years, a law called title X has ensured that women across America, no matter their station in life, can receive expert advice on how and when to plan their families, on contraceptives, and also receive breast and cervical cancer screenings.",
+    "Title X is critical for many of my neighbors in Florida, and it should be protected.",
+    "So it is sad to see my Republican colleagues target working families and young women to restrict access to contraceptives, family planning, and other health services."
+   ]
+  }
+ ]
+}

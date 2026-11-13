@@ -1,0 +1,549 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "millermeeks",
+ "name": "Mariannette Miller-Meeks",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 42,
+  "press": 2,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-28",
+   "source": "press",
+   "where": "Press release: President Trump, Miller-Meeks Announce Historic $15 Billion Steel Plant Coming to Lee County",
+   "url": "https://millermeeks.house.gov/node/2553",
+   "sentences": [
+    "President Trump, Miller-Meeks Announce Historic $15 Billion Steel Plant Coming to Lee County.",
+    "President Trump, Miller-Meeks Announce Historic $15 Billion Steel Plant Coming to Lee County Image or Video Image Anthony.Fakhou…",
+    "Mon, 09/28/2026 - 15:25 Summary Congresswoman Mariannette Miller-Meeks joined President Donald Trump in the Oval Office for the announcement of a historic $15 billion in…"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Battery Recycling for America'S Competitive Economy Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5678",
+   "sentences": [
+    "Demand for lithium-ion batteries has grown exponentially, driven by electric vehicles, energy storage, communication, and consumer products."
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Billion Dollar Boondoggle Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-20/CREC-2026-07-20-pt1-PgH4663",
+   "sentences": [
+    "Washington should be held to that very same standard, especially at a time when our national debt is inching toward $400 trillion.",
+    "Take Governor Newsom's high-speed rail in California."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Kids Internet and Digital Safety Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-29/CREC-2026-06-29-pt1-PgH4280-2",
+   "sentences": [
+    "My bill, the SPY Kids Act, included in title II of the KIDS Act, takes an important step toward that goal by prohibiting online platforms from conducting market research or product-focused research on children under 13 and by requiring verifiable parental consent before such research can be conducted on teenagers.",
+    "The bill applies to user-generated content platforms that use engagement-driven design features and personal data to tailor ads or recommendations, such as social media companies and social gaming platforms."
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Rural and Municipal Utility Cybersecurity Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-29/CREC-2026-06-29-pt1-PgH4299",
+   "sentences": [
+    "By reauthorizing the Rural and Municipal Utility Advanced Cybersecurity Grant and Technical Assistance Program at DOE and authorizing $250 million over 5 years to deploy advanced cybersecurity technologies and support participation in information-sharing programs, this bill ensures rural electric cooperatives, public power, and other small utilities have access to advanced cybersecurity tools, technical assistance, and grant funding to protect, detect, respond to, and recover from cyber threats."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-13/CREC-2026-05-13-pt1-PgH3421",
+   "sentences": [
+    "Nationwide E15 adoption would save drivers nearly $27 billion annually, but this debate is about much more than fuel.",
+    "Let's clear up some misinformation being pushed about this bill."
+   ]
+  },
+  {
+   "date": "2026-01-29",
+   "source": "press",
+   "where": "Press release: A Winning Tax Season: How the Working Families Tax Cuts Are Putting More Money Back in Your Pocket",
+   "url": "https://millermeeks.house.gov/node/2345",
+   "sentences": [
+    "A Winning Tax Season: How the Working Families Tax Cuts Are Putting More Money Back in Your Pocket.",
+    "A Winning Tax Season: How the Working Families Tax Cuts Are Putting More Money Back in Your Pocket Image or Video Image Anthony.Fakhou…"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Health Care Premiums for All Americans Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-17/CREC-2025-12-17-pt1-PgH5956-3",
+   "sentences": [
+    "Republicans want to lower healthcare costs and premiums for all Americans, all the Americans on commercial insurance, all the small businesses, all the people on the ACA exchanges, and all the self- insured, not just a select few, and not subsidizing profitable insurance companies.",
+    "It brings transparency transparent to drug pricing.",
+    "We responsibly fund cost-sharing reduction payments, lowering ACA premium costs for all in the marketplace by 11 percent.",
+    "This policy alone results in an average premium savings of $900 nationally, while reducing Federal spending, saving taxpayers $36 billion.",
+    "Contrary to what we hear from my colleagues on the other side of the aisle, the premium tax credits continue and revert back to their 2021 levels."
+   ]
+  },
+  {
+   "date": "2025-05-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Myths of Medicaid Reform",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-06/CREC-2025-05-06-pt1-PgH1857-5",
+   "sentences": [
+    "Mr. Speaker, I will respond that, once again, we hear myth after myth when we talk about reforms to Medicaid, which its greatest threat is $37 trillion in debt.",
+    "Yet, when we talk about reforms to a Medicaid program, it is to preserve Medicaid, and children, the disabled, and nursing homes would not be impacted.",
+    "Chief Kimball represents the very best of law enforcement: steadfast, compassionate, and committed to making a difference.",
+    "In President Trump's first term, Congress passed the Tax Cuts and Jobs Act, giving small businesses the relief that they needed to grow and hire.",
+    "Let's extend the Tax Cuts and Jobs Act, protect small business owners and farmers, and keep the American Dream alive in Iowa and across the country."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Halt All Lethal Trafficking of Fentanyl Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-06/CREC-2025-02-06-pt1-PgH520-3",
+   "sentences": [
+    "That is why we must pass the HALT Fentanyl Act.",
+    "This bill would make the temporary classwide scheduling order for fentanyl-related substances permanent, ensuring law enforcement has the authority to seize these deadly drugs before they destroy more lives."
+   ]
+  },
+  {
+   "date": "2024-11-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-11-18/CREC-2024-11-18-pt1-PgH6038",
+   "sentences": [
+    "Access to mental health services remains inconsistent, leaving many caregivers struggling to find the support they desperately need.",
+    "This bill would also improve the timeliness and quality of care for veterans under community care, ensuring that medical records are returned more quickly, and veterans receive the care they need in a timely manner."
+   ]
+  },
+  {
+   "date": "2024-07-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Refrigerator Freedom Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-09/CREC-2024-07-09-pt1-PgH4503",
+   "sentences": [
+    "They started imposing draconian rules such as the tailpipe emission rule, not leasing for oil and gas drilling on Federal lands or public lands, and forcing automakers to have less efficient vehicles that Americans do not want and even vehicles that can't hold a charge in the winter such as in a State like Iowa.",
+    "If it truly is feasible, if it is economically justified, if it is technologically feasible, and if it helps to lower emissions and lead to a better environment, they already have the authority to do that."
+   ]
+  },
+  {
+   "date": "2024-05-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Critical Infrastructure Manufacturing Feasibility Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-14/CREC-2024-05-14-pt1-PgH3034",
+   "sentences": [
+    "The concentration of supply chains in the hands of nations like China or the Chinese Communist Party leaves us exposed to the whims of geopolitical forces beyond our control.",
+    "By investing in domestic manufacturing, we can revitalize communities, create good-paying jobs, and unleash the innovative potential of the American workforce."
+   ]
+  },
+  {
+   "date": "2024-03-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Broken Immigration System",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-03-11/CREC-2024-03-11-pt1-PgH1062",
+   "sentences": [
+    "There have been over 7.2 million illegal crossings of our southern border.",
+    "The total number of illegal immigrants who have entered through our southern border is greater than the population of 36 States, including Iowa.",
+    "Last week, the Republican-led House took a stand and passed the Laken Riley Act, legislation introduced by Representative Mike Collins.",
+    "This is in addition to having passed H.R. 2, a border security and immigration bill.",
+    "This legislation honors the life and memory of Laken Riley and other victims of the Biden administration's open-border policies and endorses immigration laws.",
+    "I voted for the Laken Riley Act to honor Laken Riley and protect our communities.",
+    "I also voted in honor of the countless victims of the border crisis, the angel families, like Mollie Tibbetts, a 20-year-old University of Iowa student who was killed by an illegal immigrant from Mexico, who lived in the United States for several years before murdering Mollie.",
+    "Like Laken Riley, Mollie was out for a jog.",
+    "These heartbreaking stories of both Laken and Mollie are a constant reminder that our immigration system is broken and that the Biden border crisis is worsening by the minute.",
+    "Remember, it was President Obama's Secretary of Homeland Security, Jeh Johnson, who said more than a thousand immigrants crossing the border is a crisis.",
+    "Yet, during the President's State of the Union Address last week, he delivered a lackluster campaign speech masked as a State of the Union Address that was divisive, touted empty policies, and swept the chaos at our southern border under the rug, all while putting blame on somebody else instead of where it resides, and that is with President Biden and his administration.",
+    "I am not surprised that the President failed to mention the decline of our Nation during his State of the Union Address, but I am disappointed.",
+    "We cannot continue to ignore this aggressive overreach of the Biden administration and the mounting border crisis due to his overturning of policies and not enforcing immigration laws.",
+    "I will not ignore the mounting crisis, and I urge my colleagues to join me and work to keep our communities safe from the Biden border crisis and the fentanyl and illegal drugs that are crossing our border."
+   ]
+  },
+  {
+   "date": "2024-02-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Health Care for All Patients Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-07/CREC-2024-02-07-pt1-PgH509",
+   "sentences": [
+    "I remember a former President, in advocating for the Affordable Care Act, said if someone has a broken hip, and they are elderly, they are just going to have to deal with it.",
+    "It is interesting to hear the other side of the aisle concerned about cost after advancing the Affordable Care Act when they knew it would lead to increased costs, increased premiums, which it has done, and patients losing their doctors and their healthcare plans."
+   ]
+  },
+  {
+   "date": "2023-11-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Our Communities From Failure to Secure the Border Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-29/CREC-2023-11-29-pt1-PgH5957",
+   "sentences": [
+    "Mr. Chair, I rise today in support of H.R. 5283 by Representative Malliotakis, the Protecting our Communities from Failure to Secure our Border Act of 2023.",
+    "They should not be used as a cover-up for President Biden's failed border policies.",
+    "Since President Biden took office, there have been over 6.4 million illegal crossings of our southern border, including 169 on the terrorist watch list.",
+    "Yet, instead of implementing more border security and reinstating the policies that worked, this administration is housing migrants in our schools and now in our national parks.",
+    "Mr. Chair, I urge my colleagues to stop this lawlessness at our southern border and protect our national parks from becoming tent cities for illegal immigrants."
+   ]
+  },
+  {
+   "date": "2023-11-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-14/CREC-2023-11-14-pt2-PgH5809-2",
+   "sentences": [
+    "There are multiple agencies that collect data on gun violence and also intervention strategy and research."
+   ]
+  },
+  {
+   "date": "2023-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations Act, 2024 and Other Extensions Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-30/CREC-2023-09-30-pt1-PgH4915-9",
+   "sentences": [
+    "To our nearly 10,000 hardworking Iowans in our district that work for the Federal Government and are out of work, from heads of departments to law enforcement officers to cafeteria workers to the Iowa National Guard men and women who are protecting our southern border, I assure you that I will remain steadfastly committed to keeping the government open because at the end of the day I know your bills are still due."
+   ]
+  },
+  {
+   "date": "2023-07-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Funding the Department of Veterans Affairs",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-25/CREC-2023-07-25-pt1-PgH3900-3",
+   "sentences": [
+    "Mr. Speaker, I wish a happy anniversary to my district representative John Kaufmann and his wife Rachel on their second wedding anniversary on July 31.",
+    "Happy 40th wedding anniversary to my very good friends Kurt and Kathy Haller on August 13.",
+    "Happy 44th wedding anniversary to Mary and Kirk Ferentz this August."
+   ]
+  },
+  {
+   "date": "2023-06-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Condemning the Use of Elementary and Secondary School Facilities to Provide Shelter for Aliens Who Are Not Admitted to the United States",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-22/CREC-2023-06-22-pt1-PgH3088",
+   "sentences": [
+    "I rise today in support of my resolution, H. Res. 461, which bans the Biden administration from using schools to house illegal aliens.",
+    "Using school facilities as shelter for illegal aliens, instead of as schools, as they were intended, creates a host of issues ranging from safety hazards for young children to a free fall of security issues as a result of not providing adequate accommodations or security screenings.",
+    "Municipalities such as New York City are using school gymnasiums as overflow housing for illegal aliens and setting troubling precedents for the future.",
+    "It is easy to be a sanctuary city when you are not affected by the border until the Biden administration opens those borders.",
+    "Diverting educational resources to illegal aliens, or any demographic, and not in a natural disaster--and in most cases we have little or no background information upon these individuals--provides an avoidable and incredible security risk.",
+    "The Biden administration's open border policies have turned every State into a border State.",
+    "And a broken immigration system, paired with the lack of responsibilities and execution of border security, is simply not good enough.",
+    "H. Res. 461 sends the Biden administration a clear message that their open borders and broken immigration system will not stand, and I urge all of my colleagues to support this legislation."
+   ]
+  },
+  {
+   "date": "2023-05-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Halt All Lethal Trafficking of Fentanyl Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-24/CREC-2023-05-24-pt1-PgH2579-3",
+   "sentences": [
+    "Madam Chair, I rise today in support of HALT Fentanyl Act introduced by my friends and colleagues, Morgan Griffith and Bob Latta.",
+    "The HALT Fentanyl Act would permanently schedule fentanyl-related substances and provide law enforcement with the tools needed to keep these lethal drugs off our streets.",
+    "At our border, U.S. Customs and Border Protection would lose the authority to seize these substances, and the amount of drugs coming into our country would skyrocket.",
+    "It is hard to imagine the border crisis becoming worse than it already is, but should this scheduling expire, I am afraid the crisis would escalate even further."
+   ]
+  },
+  {
+   "date": "2023-05-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Environmental Protection Agency Relating to \"Control of Air Pollution From New Motor Vehicles: Heavy-Duty Engine and Vehicle...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-23/CREC-2023-05-23-pt1-PgH2523",
+   "sentences": [
+    "I rise in strong support of S.J. Res. 11, which repeals EPA's rulemaking on heavy-duty engines and vehicle standards for trucks.",
+    "Today's new trucks have reduced nitrogen oxide emissions by more than 98 percent since 1988, and the EPA's recent rulemaking requires reductions that are 80 percent more stringent.",
+    "The EPA's nitrogen oxide rulemaking for heavy-duty trucks would dramatically increase the cost of new trucks.",
+    "Additionally, the EPA's rulemaking potentially encourages trucking companies to retain older fleets with greater nitrogen oxide emissions, meaning the rulemaking may result in increased emissions from heavy- duty trucks."
+   ]
+  },
+  {
+   "date": "2023-05-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Vet-Tec Authorization Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-05-22/CREC-2023-05-22-pt1-PgH2474",
+   "sentences": [
+    "In addition to this, employment may help prevent and treat homelessness.",
+    "As a physician, it is no small aside that the dignity of working and having a purpose in life may also help improve mental health, which may also help improve homelessness."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "He went to Saudi Arabia and Venezuela to ask them to produce more oil, and then released oil from the Strategic Petroleum Reserve so prices could go down just in time for the elections.",
+    "Ensuring we mine critical minerals in the U.S. and process those minerals domestically is critical to securing our Nation's global competitiveness and supporting many clean energy technologies as well as supporting a cleaner environment from China.",
+    "As fiscal conservatives, we also take pride in the fact that responsible permitting reform has the opportunity to lower emissions while also costing zero taxpayer dollars and lowering the costs of energy for consumers."
+   ]
+  },
+  {
+   "date": "2023-03-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Institutes of Higher Education Must Counsel Students Regarding Student Loan Debt",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-01/CREC-2023-03-01-pt1-PgH976",
+   "sentences": [
+    "Mr. Speaker, I rise today to address the growing student loan debt in our Nation.",
+    "If we can help our students understand the process by which they receive Federal students loans and the interest, we will be one step closer to helping to relieve them of their debt through their career choices--unlike President Biden's loan which claims to erase these loans.",
+    "Erasing would only transfer the debt to other hardworking taxpayers. ____________________"
+   ]
+  },
+  {
+   "date": "2023-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Terminating Cdc Requirement for Proof of Covid-19 Vaccination for Foreign Travelers",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-08/CREC-2023-02-08-pt1-PgH747-4",
+   "sentences": [
+    "I rise in strong support of H.R. 185 to end the international travel COVID vaccine mandate.",
+    "There is no recognition of natural immunity by continuing the COVID-19 vaccine mandate for travelers into the United States.",
+    "This timely measure nullifies the CDC's order that restricts noncitizen entry into the United States unless the traveler can prove they are vaccinated against COVID-19."
+   ]
+  },
+  {
+   "date": "2023-01-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Pandemic Is Over Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-31/CREC-2023-01-31-pt1-PgH531",
+   "sentences": [
+    "From mask mandates and vaccine mandates to extending Medicaid expansion to previously ineligible participants and student loan forgiveness, the President and this administration are using the public health emergency to expand government overreach."
+   ]
+  },
+  {
+   "date": "2023-01-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Freedom for Health Care Workers Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-31/CREC-2023-01-31-pt1-PgH539",
+   "sentences": [
+    "Mr. Speaker, before I acknowledge my support for the Freedom for Health Care Workers Act, H.R. 497, I want to respond that as a physician, as a mother, as a working woman my entire life, and as a former director of public health, let me just say unequivocally that the care of ectopic pregnancy is not an abortion.",
+    "This overdue legislation repeals the Biden administration's invasive vaccine mandate for America's healthcare workers who have borne a significant brunt of the COVID-19 pandemic.",
+    "Existing challenges were exacerbated by the pandemic, which were then compounded by the vaccine mandates.",
+    "We also have further data after the delta variant that the COVID-19 vaccine does not prevent transmission.",
+    "This vaccine mandate is almost malpractice."
+   ]
+  },
+  {
+   "date": "2023-01-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Strategic Production Response Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2",
+   "sentences": [
+    "In releasing oil from the SPR, it may have helped to lower gasoline prices; however, it uncloaked the lie that it was price gouging from oil companies that caused prices to rise to begin with.",
+    "While we may accept the seriousness of climate change, we do not accept that U.S. energy transmission and restructuring of the entire industrial base is the solution."
+   ]
+  },
+  {
+   "date": "2023-01-11",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Born-Alive Abortion Survivors Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-11/CREC-2023-01-11-pt1-PgH178",
+   "sentences": [
+    "In fact, the first healthy baby I delivered as a doctor was to a young teenager who put the baby up for adoption.",
+    "There is no clause in the Constitution to exempt newborns who survive an abortion procedure from these rights.",
+    "This legislation isn't about abortions but saving the lives of living and breathing innocent newborns.",
+    "Why should infants who survive an abortion be treated any differently?"
+   ]
+  },
+  {
+   "date": "2022-08-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Build Back Better Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-08-12/CREC-2022-08-12-pt1-PgH7577-2",
+   "sentences": [
+    "Interestingly, I just heard my colleague talk about how families may be kicked off their healthcare, and it doesn't seem to me that my colleagues on the other side of the aisle cared about that when they passed the Affordable Care Act and premiums rose dramatically.",
+    "Allowing the Federal Government to set limits on drug pricing will limit competition and drastically reduce innovation within the pharmaceutical industry.",
+    "Additionally, narrowing the drug formulary by drug pricing through Medicare and negotiations will end up taking medications that you may already be prescribed and taking successfully, taking them off of the formulary and not being covered.",
+    "Additionally, this bill will extend ObamaCare subsidies enacted in the American Rescue Plan, which do not have income restrictions.",
+    "Rather than helping those who are most in need, the wealthiest Americans will continue to receive the largest average benefit."
+   ]
+  },
+  {
+   "date": "2022-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: South Asian Heart Health Awareness and Research Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-27/CREC-2022-07-27-pt1-PgH7185",
+   "sentences": [
+    "This report would include the total number of days schools were closed, the impact that school closures had on our most vulnerable population--which includes both academic achievement and mental health--and the amount of classroom instruction time that was lost.",
+    "Unfortunately, throughout the COVID-19 pandemic, many schools had vaccine mandates, masking requirements, and virtual-only learning which has resulted in students paying the price through learning loss.",
+    "By using transparent data from the CDC, we can make the best decisions for students when it comes to in-person instruction, vaccine and masking mandates, and their mental health, given the startling rise in youth suicide."
+   ]
+  },
+  {
+   "date": "2022-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Right to Contraception Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-21/CREC-2022-07-21-pt1-PgH6927-2",
+   "sentences": [
+    "Madam Speaker, I rise today in support of the Allowing Greater Access to Safe and Effective Contraception Act and against H.R. 8373.",
+    "This bill would make FDA-approved oral contraceptives available for over-the- counter use.",
+    "In 2019, I championed similar legislation as a member of the Iowa State Senate that would allow women over the age of 18 to access over- the-counter oral contraceptives.",
+    "As a physician, a former director of the Iowa Department of Public Health, and a mother, I understand how important it is for women to have increased access to oral contraceptives.",
+    "Madam Speaker, over the past month, the issue of abortion has been a prevalent topic in the news in light of the Supreme Court's Dobbs decision.",
+    "But regardless of our stance, we can all agree that we should enact policies to reduce the number of women who feel the need to seek an abortion.",
+    "One of the best ways we can prevent abortions is to increase access to contraception.",
+    "Research has shown us time and time again that if you make it easier for women to access oral contraceptives, you lower the rate of unplanned pregnancies.",
+    "Providing over-the-counter contraceptives is safe and effective for women.",
+    "Oral contraceptives were first approved by the Food and Drug Administration in 1960 and have been on the market since.",
+    "Oral contraceptives are one of the most popular methods for preventing conception and avoiding pregnancy.",
+    "In addition, women use birth control pills or oral contraceptives for a variety of other reasons.",
+    "Making oral contraceptives available over the counter will also provide benefits to populations that have historically faced challenges in accessing healthcare, such as low-income, rural, and young women.",
+    "The NIH conducted a study that compared women receiving oral contraceptives through a prescription to women who were able to get oral contraceptives over the counter.",
+    "The results of this study indicated that women were more likely to continue taking oral contraceptives if they are able to buy them over the counter.",
+    "We can ensure that young women who are statistically less likely to seek regular care at a primary care provider OB/GYN have access to oral contraceptives, and we can ensure that low-income women who may face financial challenges in taking time off their job to attend a doctor's appointment still have access to oral contraceptives.",
+    "If oral contraceptives are approved for over-the-counter use, then women should continue to meet with their primary care provider, and they should continue to see their OB/GYN.",
+    "It is imperative that women are fully apprised of any potential side effects of contraceptives and advised if they are at increased risk of potential side effects, but that is not what H.R. 8373 does.",
+    "Our oral contraception bill is pro-family, pro- women, and pro-life."
+   ]
+  },
+  {
+   "date": "2022-07-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-15/CREC-2022-07-15-pt1-PgH6631",
+   "sentences": [
+    "The Supreme Court recently took the important and correct step to return the power to regulate abortion back to State legislators and voters within the individual States while recognizing the sanctity of life.",
+    "This concept is so novel and repugnant to the Democrats that they would put forward a radical and extreme abortion bill that would permit abortion even up until birth for any reason.",
+    "Only seven countries, including China and North Korea, are this extreme.",
+    "As a doctor, I am knowledgeable that mid- to late-term abortion is a barbaric procedure which can include dismemberment of the baby and crushing of the skull.",
+    "Madam Speaker, I ask all my colleagues on every seat in every aisle of this Chamber to vote against this extreme, radical, and cruel abortion bill, H.R. 8296."
+   ]
+  },
+  {
+   "date": "2022-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Campus Prevention and Recovery Services for Students Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-23/CREC-2022-06-23-pt1-PgH5842",
+   "sentences": [
+    "As we are coming out of a two-year pandemic, taking care of individuals with mental health and substance use disorders, especially college students, is crucial."
+   ]
+  },
+  {
+   "date": "2022-06-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Restoring Hope for Mental Health and Well-Being Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-22/CREC-2022-06-22-pt1-PgH5752",
+   "sentences": [
+    "Mr. Speaker, I rise today in support of H.R. 7666, the Restoring Hope for Mental Health and Well-Being Act.",
+    "This bill takes serious action to address mental health and substance use disorder, especially as we are coming out of the COVID-19 pandemic.",
+    "I also thank Ms. Schrier for partnering with me as we introduced the Supporting Children's Mental Health Care Access Act, which is included in this bipartisan package.",
+    "This bill reauthorizes two grant programs that support pediatric mental and behavioral health services and interventions.",
+    "Reauthorizing the pediatric mental health care access grant program is an important step in ensuring that our students have equal access to quality mental health care.",
+    "I strongly encourage all of my colleagues to join me in supporting H.R. 7666, the bipartisan, results driven, and commonsense Restoring Hope for Mental Health and Well-Being Act."
+   ]
+  },
+  {
+   "date": "2022-06-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: National Computer Forensics Institute Reauthorization Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-21/CREC-2022-06-21-pt1-PgH5691",
+   "sentences": [
+    "Previous cyberattacks have highlighted the need for preventive measures and law enforcement support at every level, including Federal, State, local, Tribal, and territorial.",
+    "Adding to this, with the ongoing war in Ukraine, the intelligence community is warning of a heightened cyber threat from Russia.",
+    "NCFI provides essential education and training to State, local, Tribal, and territorial law enforcement, prosecutors, and judges on how to mitigate, detect, and respond to cyber threats.",
+    "Now, more than ever, as we are facing cyberattacks from malicious actors like Russia, China, and Iran, in addition to other criminal behavior online like child pornography, bolstering cyber training and tools for our law enforcement partners is imperative.",
+    "Cybersecurity has never been more important to homeland security, and it is pivotal that we train our State and local law enforcement to address this threat and other online nefarious activities head-on."
+   ]
+  },
+  {
+   "date": "2022-06-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Prevent Exposure to Narcotics and Toxics Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-21/CREC-2022-06-21-pt1-PgH5693",
+   "sentences": [
+    "This bill addresses the important issue of protecting our frontline Customs and Border Protection personnel from the dangerous and illicit drugs they encounter every day.",
+    "This is especially important as the situation at our southern border continues to worsen by the day under this administration.",
+    "In fiscal year 2021, Customs and Border Protection officers and agents seized more than 914,000 pounds of illicit narcotics, and so far this fiscal year, CBP is on track to seize a similar amount of illegal drugs.",
+    "Madam Speaker, I strongly encourage all Members to support this bill to protect our dedicated frontline law enforcement at the border, and I reserve the balance of my time.",
+    "Madam Speaker, certainly, H.R. 5274 is a small step that we can take in managing the crisis at our southern border, in addition to emphasizing border security.",
+    "I thank Representative Joyce for his very astute observation that our law enforcement is at risk and for his bill to help protect those who protect and serve us."
+   ]
+  },
+  {
+   "date": "2022-05-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Workforce Innovation and Opportunity Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-17/CREC-2022-05-17-pt1-PgHnull-14",
+   "sentences": [
+    "We also bring greater accountability to the Reentry Employment Opportunities program so we can build on President Trump's historic criminal justice reform and use this program to help formerly incarcerated Americans establish firm economic foundations for their new lives."
+   ]
+  },
+  {
+   "date": "2022-04-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 3807, Restaurant Revitalization Fund Replenishment Act of 2021, and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-04-06/CREC-2022-04-06-pt1-PgH4229-2",
+   "sentences": [
+    "Rather than promoting policies that hamper U.S. energy production and ceding security to adversarial nations like Russia, Iran, and Venezuela, we should promote exploration here at home and unleash our potential.",
+    "This comes on top of other disastrous decisions over the past year and a half such as those that halt the Keystone XL pipeline and the current delay over the 5-year program for offshore energy leasing in the Gulf of Mexico.",
+    "The American Independence from Russia Act would immediately approve the Keystone XL pipeline, remove restrictions on U.S. LNG exports, restart oil and gas leasing on Federal lands and waters, and protect energy and mineral development."
+   ]
+  },
+  {
+   "date": "2022-02-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 3076, Postal Service Reform Act of 2021; Providing for Consideration of H.R. 6617, Further Additional Continuing Appropriations Act, 2022; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-08/CREC-2022-02-08-pt1-PgH1024-5",
+   "sentences": [
+    "As we have seen across the Nation, mental health has been a big part of this pandemic, and students are not immune to this impact."
+   ]
+  },
+  {
+   "date": "2022-02-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Bioeconomy Research and Development Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-04/CREC-2022-02-04-pt1-PgH951-4",
+   "sentences": [
+    "China is the world's leading producer of carbon emissions.",
+    "For years, China has been one of the largest emitters of carbon dioxide in the world.",
+    "In 2019, China emitted 10.1 billion metric tons of carbon dioxide, almost twice as much as the U.S., representing nearly 28 percent of global emissions.",
+    "For years, the U.S. has set ambitious goals to cut down our carbon emissions.",
+    "Meanwhile, China stated their annual CO2 emissions are expected to continue to grow and will not peak until 2030.",
+    "The Steel amendment would make it the official policy of the U.S. to require the Chinese Communist Party to match emission-cutting standards established by the U.S. This amendment is so simple and easy to support, I cannot think of a reason it would be opposed.",
+    "The Chinese Communist Party has shown us countless times that we cannot trust them on their word alone."
+   ]
+  },
+  {
+   "date": "2021-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of S. 1301, Promoting Physical Activity for Americans Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-29/CREC-2021-09-29-pt1-PgH5518-4",
+   "sentences": [
+    "My commonsense legislation would require the Department of Homeland Security to test all migrants illegally crossing our border who they plan to release into our communities for COVID-19.",
+    "I have traveled to the U.S.-Mexico border twice this year.",
+    "On both trips, I have spoken with the brave men and women serving in Customs and Border Protection and also the physicians who are stationed there.",
+    "Earlier this month, the DHS Office of Inspector General called for the Department to improve COVID-19 detection and prevention measures at the U.S.-Mexico border amid record-setting migrant arrivals.",
+    "However, to quote directly from the report, ``CBP does not conduct COVID-19 for migrants who enter CBP custody and is not required to do so.'' The report further stated that: ``We recommended DHS reassess its COVID-19 response framework to identify areas for improvement to mitigate the spread of COVID-19 while balancing its primary mission of securing the border.'' Currently, everyone legally entering the United States by plane is required to display a negative test for COVID-19.",
+    "Numerous public health officials--and I am one--have stated that the failure of the U.S. authorities to test adult migrants for the coronavirus in jam-packed border processing centers is creating a potential for new transmissions, including among migrants who may have arrived healthy at America's door.",
+    "The administration has correctly recognized the need to test individuals arriving from Afghanistan--and not only are they tested, they are vaccinated for COVID-19 and other childhood illnesses--but it does not seem to understand the importance of doing the same to those crossing our border illegally.",
+    "In August, more than 208,000 migrants were encountered along the southwest border.",
+    "The current lack of testing at our border is completely unacceptable and irresponsible.",
+    "It puts the health and safety of CBP border communities, migrants, and all Americans at risk."
+   ]
+  },
+  {
+   "date": "2021-07-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 4346, Legislative Branch Appropriations Act, 2022; Providing for Consideration of H.R. 4373, Department of State, Foreign Operations, and Related Programs...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-28/CREC-2021-07-28-pt1-PgH4095-4",
+   "sentences": [
+    "This legislation would prohibit the Federal Government from ceasing or lessening the implementation of COVID-19 border health provisions until the COVID-19 public health emergency is no longer in effect, both at the Federal level and all 50 States.",
+    "At the start of the pandemic last year, through the Centers for Disease Control, President Trump implemented Title 42 border health restrictions.",
+    "These commonsense restrictions ensure that people crossing our northern and southern border do not present a public health risk to our country.",
+    "Now, the Biden administration is considering eliminating Title 42 border health restrictions and allowing individuals who pose a health risk to enter into our country.",
+    "Yet, while this administration is considering more COVID restrictions for American citizens on one hand, it is planning to loosen restrictions on migrants at the border on the other.",
+    "This administration is considering ending Title 42 restrictions in the middle of a public health crisis at our southern border.",
+    "Last month alone, over 188,000 migrants were encountered at the border, and 105,000 of those were turned away under Title 42 restrictions.",
+    "If we are going to eradicate COVID, we cannot afford to repeal Title 42.",
+    "Our Border Patrol agents and CBP officers are already dealing with migration surges, they support the continuance of Title 42, and we must ensure that they have the tools and processes needed to protect themselves and our country.",
+    "This includes the ability to process migrants under Title 42 health restrictions until the public health emergency ends.",
+    "Eliminating Title 42 would only exacerbate the current administration's crisis at our southern border and likely lead to an increased public health crisis.",
+    "Failure to either close the border or continue Title 42 puts all American lives at risk, both vaccinated and unvaccinated.",
+    "I urge the President not to repeal Title 42 restrictions.",
+    "And I urge my colleagues to defeat the previous question so we can bring the PAUSE Act to the floor and keep Title 42 border health restrictions in place until the end of the COVID-19 public health emergency."
+   ]
+  }
+ ]
+}

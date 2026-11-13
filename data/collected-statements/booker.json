@@ -1,0 +1,587 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "booker",
+ "name": "Cory A. Booker",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 23,
+  "press": 0,
+  "bluesky": 21,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-10-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3myvfh6jehs2d",
+   "sentences": [
+    "As we honor their memories, we must reaffirm our collective commitment to protecting houses of worship and ending gun violence."
+   ]
+  },
+  {
+   "date": "2026-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-28/CREC-2026-09-28-pt1-PgS5021-7",
+   "sentences": [
+    "That is why the lobbyists and millionaires were down here lobbying.",
+    "Section 118 gives the NCAA sweeping immunity from antitrust liability-- a sweeping immunity we scarcely have ever given any other industry.",
+    "It is so exceedingly rare for Congress to grant exemptions from the Nation's antitrust laws, and it is rarer still for Congress to do so for an organization with the NCAA's track record of antitrust violations.",
+    "The NCAA has violated antitrust laws and the trust of college athletes over and over again, and yet they are the big winners here.",
+    "It is fundamentally unfair to put all of this on the college athlete and for this body to hand over permanent antitrust exemptions and give no enforcement mechanism than to trust the institution that has been violating athletes' rights for decades.",
+    "Fifth, this bill offers only temporary protections for women's and Olympic sports while permanent antitrust exemptions for the NCAA.",
+    "The NCAA's antitrust exemption is permanent.",
+    "At a time when college athletes are beginning to exercise their collective power, we should not be putting new barriers in their path toward collective bargaining.",
+    "I offered a simple amendment to strike the sunset provision and make those provisions permanent just like the NCAA's antitrust exemption.",
+    "We know firsthand the consequences when institutions are allowed to police themselves, when reports of abuse or dangerous practices remain inside the institution, and when victims are left without meaningful accountability after harm is done.",
+    "Listen to former senior Justice Department officials, including a former principal Deputy Assistant Attorney General, a former Acting Associate Attorney General, and a former Acting Assistant Attorney General for the Antitrust Division.",
+    "Listen to what they write: The Protect College Sports Act includes a broad antitrust exemption that would immunize the NCAA from any Federal or State enforcement for weaponizing its enormous power over college athletes to cap pay, limit eligibility and transfers, or otherwise impose burdens or restrictions on players.",
+    "This would constitute the most sweeping antitrust exemption granted by Congress since the McCarran-Ferguson Act of 1945.",
+    "These former attorneys general continue: Traditionally, antitrust immunity is granted only when the parties agree to rules through a collective bargaining process--and only for so long as a bargaining relationship is in place--or when rules are conditioned on state or federal regulatory oversight.",
+    "Diesel costs are at a record high.",
+    "I urge my colleagues to hold hearings and actually listen to survivors of sexual assault, parents of dead college athletes, to the kids who have serious, debilitating injuries right now and are paying their own medical bills.",
+    "But, no, billionaires and millionaires and lobbyists and funding has poured into this place, and suddenly, right before we leave, the last thing we are doing is a bill that is going to hurt so many.",
+    "This bill gives permanent antitrust exemptions to this organization, and it does not create permanent protections for Olympic athletes, no permanent protections for women's sports, and this bill undermines the ability for athletes to sue for privacy violations and civil rights violations."
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mw727rclvc2v",
+   "sentences": [
+    "They deserve a real voice, fair pay, and the dignity of a union."
+   ]
+  },
+  {
+   "date": "2026-09-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mw4qkewq5c2o",
+   "sentences": [
+    "Their loved ones gave everything for our freedom — and we can never repay that debt."
+   ]
+  },
+  {
+   "date": "2026-09-20",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mvxt2emzuk2c",
+   "sentences": [
+    "Now his billionaire allies want to own it."
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Legislative Session",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-17/CREC-2026-09-17-pt1-PgS4765-6",
+   "sentences": [
+    "They all know this bill undermines their rights, undermines their collective bargaining, undermines their health and safety, creates an unequal playing field for them relative to the other money interests in this bill, including the coaches.",
+    "What this bill actually does is, it takes away rights for them to legally challenge anything that the cartel of the NCAA does.",
+    "You are giving permanent antitrust exemptions to one of the most notorious monopolistic cartel organizations that has actually hurt women athletes, and you are allowing the protections for Olympic sports and the protections for women athletes to expire.",
+    "Permanent antitrust exemptions?",
+    "Time and time again, even to the Supreme Court, when conservative Justices joined with Justices appointed by Democrats, they have affirmed college athletes' power.",
+    "For years and years and years, I have watched my own image on Madden's video game--my own image--and never got paid for that.",
+    "It is because it is going to make sure that the future lawsuits are cut off, that they have all the antitrust exemptions.",
+    "Why does that expire and not the permanent antitrust exemptions we are giving a cartel--a monopolistic organization--that is violating the rights of women consistently?",
+    "We are giving a permanent antitrust exemption that, as conservative Justices have said, is not seen in other areas of enterprise in the United States of America--rarely seen--and we are giving few rights to athletes but that of ``Oh, you can sue.'' Well, as a guy who played and who was competing for a starting tight end position, am I going to sue my school?",
+    "Hey, I would actually respect it if they said ``You know what, we are going to give a 10-year antitrust exemption and come back and revisit this,'' but, no, they are giving it permanently.",
+    "Artificial Intelligence Mr. President, article II, section 3 of the Constitution gives the President power, on ``extraordinary occasions,'' to convene both Houses of Congress.",
+    "The safety of artificial intelligence systems demands urgent attention.",
+    "Artificial intelligence will not recess.",
+    "I think, in addition, which I talked about, we should establish whistleblower protections for lab employees, strengthen requirements for securing frontier model weights, establish a National Transportation Safety Board-like entity for investigating AI incidents, prepare for the potential emergence of AI systems capable of autonomously improving themselves, preserve States' ability to protect their own people in the absence of meaningful Federal standards, reject antitrust exemptions that hurt customers and competition, and, yes, put the brakes on the development of capabilities whose risks outrun our ability to manage them.",
+    "But we will only unlock the promise of this technology if it is done in a democratic fashion wherein the people decide, not tech billionaires or trillionaires and not Donald Trump."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgS4709",
+   "sentences": [
+    "It is a serial monopolist, controlling an industry over $15 billion strong and rapidly growing.",
+    "And now the NCAA is coming here to the U.S. Senate, asking for sweeping powers that exempt our antitrust laws.",
+    "I am going to submit for the Record a full list, but let me just read some of them: every College Athletes Players Association; the College Football Players Association; the United College Athletes Association; all the associations of college sports; all of our major unions, the AFL-CIO, the United Steelworkers; all of our major civil rights organizations, the NAACP, the Urban League; all of our major legal think tanks that protect the health, well-being, and justice like the Center for Law and Policy.",
+    "It is creating a cartel for them, a monopoly for them, and inadequate protections for college athletes and undermining their ability--should they even choose to sue, undermining their ability to have a fair day in court.",
+    "But those protections expire while the antitrust protections do not.",
+    "Permanent antitrust exemption, temporary protection for college athletes competing in Olympic sports.",
+    "The SAFE Act didn't give the NCAA and conferences sweeping new antitrust shields; this bill does.",
+    "There being no objection, the material was ordered to be printed in the Record, as follows: Committee to Support Antitrust Laws, September 14, 2026.",
+    "While there is much talk in the media about the need for federal legislation, a much better approach to ``protecting college sports'' would be for the NCAA and the Conferences to work with athletes to develop fair rules that don't violate antitrust and other laws, and then to enforce them in a process where students are given the ability to stand up for themselves and be treated fairly.",
+    "Dear Chairman Cruz and Ranking Member Cantwell: As organizations and former antitrust enforcers committed to building a robust, fair economy and fighting against abuses of corporate power, we write to express our serious concerns with S. 4668, the Protect College Sports Act (PCSA), as currently drafted.",
+    "The broad antitrust exemption in Title I, the expansion of the Sports Broadcasting Act in Title II, and the absence of any meaningful enforcement mechanisms will grant the NCAA unprecedented power exempt from the state and federal oversight and laws that apply to all other business enterprises in America.",
+    "The PCSA Would Codify the Most Sweeping Antitrust Exemption in More Than 80 Years The PCSA includes a broad antitrust exemption that would immunize the NCAA from any federal or state enforcement for weaponizing its enormous power over college athletes to cap pay, limit eligibility and transfers, or otherwise impose burdens or restrictions on players.",
+    "This would constitute the most sweeping antitrust exemption granted by Congress since the McCarren-Ferguson Act of 1945.",
+    "Traditionally, antitrust immunity is granted only when the parties agree to rules through a collective bargaining process--and only for so long as a bargaining relationship is in place--or when rules are conditioned on state or federal regulatory oversight.",
+    "An antitrust exemption would be particularly harmful to college athletes, as it is the only tool they have to protect themselves from the predatory and exploitative behavior the NCAA and its member schools are known for.",
+    "That means, in many cases, courts will apply the PCSA's antitrust exemption retroactively to lawsuits that were brought before the law was passed, insulating the NCAA from accountability in ongoing matters.",
+    "First, the remedy in the legislation is limited to ``actual damages.'' The antitrust laws, by contrast, provide for treble damages to encourage victims to bring suit, punish perpetrators, and create a disincentive to bad conduct.",
+    "This divergence from other antitrust laws matters because actual damages in these cases are fairly low.",
+    "This will leave all but the wealthiest athletes without the ability to pay their lawyers at the end of meritorious cases.",
+    "The PCSA Grants the NCAA--a Serial Law Violator--Unprecedented Antitrust Immunity Congress rarely grants immunity from the antitrust laws, and for good reason.",
+    "The NCAA has used its power to violate our antitrust laws for decades and is now demanding that Congress remove athletes' only effective tool for holding it accountable.",
+    "It even gives the NCAA the ability to exclude conferences and schools from championships and tournaments--like the College Football Playoffs, March Madness, and the College World Series--free of the antitrust laws' restrictions.",
+    "Unless these sweeping antitrust exemptions and broken, unworkable enforcement structure are significantly improved, we urge you to oppose this legislation.",
+    "Sincerely, Organizations American Economic Liberties Project, American Family Voices, Center for Law and Social Policy, Committee to Support the Antitrust Laws, Consumer Federation of America, Courage California, Demand Progress, Economic Security Project Action, Groundwork Collaborative, Open Market Institute, P Street, Service Employees International Union, United College Athletes Association.",
+    "Enforcers Roger Alford, Former Principal Deputy Assistant Attorney General Antitrust Division U.S. Department of Justice; William Baer, Former Acting Associate Attorney General Former Assistant Attorney General Antitrust Division U.S. Department of Justice; John M. Newman, Herff Chair of Excellence University of Memphis School of Law Former Deputy Director Bureau of Competition Federal Trade Commission; Richard Powers, Former Acting Assistant Attorney General Antitrust Division U.S. Department of Justice. __________ September 9, 2026.",
+    "College Athlete Sexual-Abuse Survivors and University Whistleblowers, Amy Leclair, Survivor, Caitlin Mackey, Survivor, Chrissy Ball, Survivor, Patric Scott, Former faculty of 20 years, Filmmaker, Whistleblower, Sage Hopkins, Head Women's Swimming and Diving Coach, Whistleblower; Families of College Athletes Who Died Following Athletics Activities, Don Mazza, Father of Michael Mazza, Deceased, Joanne Atkins-Ingram, Mother of Braeden Bradforth, Deceased, Ken and Kristen Sheely, Parents of Derek Sheely, Deceased, Martin ``Marty'' McNair, Father of Jordan McNair, Deceased; College Athlete Safety Organizations, The Derek Sheely Foundation, The Jordan McNair Foundation."
+   ]
+  },
+  {
+   "date": "2026-08-27",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mu2x4t2uhs2l",
+   "sentences": [
+    "From the Food Pantry serving hundreds each month, to their upcoming Birthing Center tackling maternal health deserts, to the new Restorative Justice Hub where Street Teams mentor our youth."
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3msdxgkt6vc2j",
+   "sentences": [
+    "Instead of meeting with Epstein survivors, what did Todd Blanche do?"
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agoa Extension Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-30/CREC-2026-07-30-pt1-PgS4360-3",
+   "sentences": [
+    "Congress came together in a bipartisan way to pass the Epstein Files Transparency Act because survivors deserved answers, they deserved justice, and the American people deserved transparency.",
+    "And there was a release after the date and deadline prescribed by Congress that was so careless that sensitive information belonging to Epstein's survivors was exposed by the very Department that was supposed to protect them--their phone numbers, addresses, images, personal details.",
+    "Even then, when the survivors pleaded for continued investigation into the Jeffrey Epstein coconspirators, Mr. Blanche once again hid behind claims that the law prevented him from answering.",
+    "We heard from a courageous Epstein survivor.",
+    "No one--not even the President of the United States--is above the law.",
+    "A woman traveling home to Texas for her father's funeral was detained at an airport while she was pursuing her asylum claim.",
+    "Right now, today in America, roughly 70 percent of the people in immigration detention--often for-profit private companies--have never been convicted of a criminal offense--70 percent.",
+    "These, unfortunately, are indiscriminate arrests, not the result of focused law enforcement.",
+    "Undocumented immigrants alone paid nearly $100 billion in Federal, State, and local taxes in a single year.",
+    "They contribute to Social Security and Medicare.",
+    "How could a nation of decency take people with temporary protected status and send them to the very country our Nation warns us not to go to because of the violence and destitution?",
+    "Temporary protected status exists for precisely this kind of moment.",
+    "We are a moral nation, but forcing people here on temporary protected status back into countries where there is such violence and destitution violates our morals, our values.",
+    "Yet this administration has canceled temporary protected status for more than 330,000 Haitians.",
+    "We need laws that reflect our values, laws that are orderly, laws that keep us safe and secure, laws that protect the border, laws that affirm our values.",
+    "The question before us is so much larger than immigration; it is about whom we are becoming as a society when we turn our back on our neighbors being thrown in private detention facilities that are profiting off of their pain, who we are as a nation when we want to rip people away from their families and their children and send them to modern-day's hell, who we are as a nation when we take those people that are good enough to work in our hospitals to take care of our elderly, but then we want to turn our back on them and let them be dragged out of our country even though they have been here for years, followed our laws, and are working toward a pathway to citizenship.",
+    "That is why we have laws like temporary protected status in the first place."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Sudan",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-22/CREC-2026-07-22-pt1-PgS4238",
+   "sentences": [
+    "I traveled to the Chad-Sudan border."
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Iran",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-21/CREC-2026-07-21-pt1-PgS4200-5",
+   "sentences": [
+    "Now we are learning that, in the last 2 weeks alone, more than 100 more American servicemembers have been injured in spiraling strikes between the United States and Iran.",
+    "I find it unconscionable that the stakes are so high in this country where we are spending tens of billions of dollars--that factually could be going to our schools, tens of billions of dollars could be going to our healthcare, tens of billions of dollars that could be paying down our national debt, tens of billions of dollars that don't just come out of nowhere, but they come from hard-working taxpayers who pay their taxes into a system that they put faith and trust in."
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Democracy",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-14/CREC-2026-07-14-pt1-PgS4087-6",
+   "sentences": [
+    "He was authorized to work in our country, has a Social Security number.",
+    "The highest law enforcement officers in the land shut down an investigation into those murders.",
+    "Every police officer--and I have worked closely with many of them-- every police officer knows that when deadly force is used, there must be scrutiny, not because we assume any guilt but because accountability protects everyone in our democracy.",
+    "No badge and no police officer I know fear transparency.",
+    "In fact, those incredible officers demand it because accountability is not the enemy of law enforcement.",
+    "It is what gives law enforcement its strength and its true moral authority.",
+    "Think about this: We have appropriated to this one law enforcement Agency over $200 billion, more than the FBI, the ATF, the DEA, the Marshals Service, the Bureau of Prisons, Secret Service, TSA, and the Coast Guard combined.",
+    "ICE in America has a bigger budget than those eight law enforcement organizations, billions upon billions of dollars, over $200 billion.",
+    "We get body cameras still absent, as we saw in these last two murders, as if we can't afford them.",
+    "The fiscal conservatives on both sides understand that you don't shovel money toward an organization, outstripping most law enforcement Agencies in the entire United States of America, whether those that are investigating drug trafficking or insurance fraud or illegal arms smuggling.",
+    "We are not a monarchy where we have Kings and Queens above question, above accountability, and above the law.",
+    "No person, not a President, not Senators, not judges, no person is above the law--not a Federal agent in an unmarked car and undistinguished uniform with a gun in their hands firing through a window and killing someone.",
+    "We are a nation of laws; that no one, be they the President, be they a Senator, be they an officer in the street, no one is above the law. ____________________"
+   ]
+  },
+  {
+   "date": "2026-07-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Iran",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-14/CREC-2026-07-14-pt1-PgS4089",
+   "sentences": [
+    "On April 8, Pete Hegseth, the Secretary, said we had ``achieved every single objective on plan, on schedule, exactly as laid out from day one.'' In June, Secretary Rubio came to the Senate Foreign Relations Committee, upon which I sit, and testified under oath declaring that ``the war is over.'' Yet that same day, we had kinetic exchanges with Iran.",
+    "June 18, Donald Trump said the United States had ``defeated'' Iran ``totally militarily'' and that the memorandum of understanding ``probably is unconditional surrender.'' Let's fast-forward to July 14: Missiles and drones are still flying.",
+    "I know what has happened though is that we lifted sanctions on Iran.",
+    "The President said he wanted regime change.",
+    "A bunch of us are trying to force more oversight votes or--excuse me--war powers votes.",
+    "Nothing to check a President that is clearly out of control, who is clearly out of his depth, who is clearly not the great dealmaker because he failed in making deals with Iran before this deal and--even though he claimed to have one--it clearly fell apart."
+   ]
+  },
+  {
+   "date": "2026-06-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mpjbqoe53c2g",
+   "sentences": [
+    "The American people have made clear they want big money out of politics, but the Supreme Court just took a hammer to what few guardrails remain."
+   ]
+  },
+  {
+   "date": "2026-06-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Farm Bill (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-18/CREC-2026-06-18-pt1-PgS2926",
+   "sentences": [
+    "We see this President's reckless tariff policies have driven up costs for farmers; President Trump's reckless war in Iran, which closed the Strait of Hormuz, drove up costs for our farmers; USDA's decision to cancel critical programs that farmers were relying upon such as local food purchasing programs for schools and food banks--these are all things that have severely hurt our farmers.",
+    "Farmers are now being squeezed by monopolies on all sides."
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3modhktpo342t",
+   "sentences": [
+    "Thanks to investments in people and technology the changes at Camden County Police are stunning.",
+    "I’ll keep fighting to make our communities safer, supporting law enforcement, and investing in technology that saves lives."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mnhwdj2kvs2l",
+   "sentences": [
+    "@warnock.senate.gov lays it plain: This administration’s economic plan is crystal clear—massive tax breaks for billionaires, tariffs that punish working families, and higher prices on your kitchen table."
+   ]
+  },
+  {
+   "date": "2026-06-02",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mndcqavxop23",
+   "sentences": [
+    "Rubio and Trump keep telling us the war in Iran is over, and we're winning - the truth is their recklessness and failures are costing Americans every day."
+   ]
+  },
+  {
+   "date": "2026-05-31",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mn6hybmq622k",
+   "sentences": [
+    "Working families shouldn’t shoulder the burden while the ultra-wealthy play by different rules."
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mmcb4j3m2k2w",
+   "sentences": [
+    "Barney Frank was a fearless champion for working families, and a pioneering trailblazer for LGBTQ+ rights whose courage opened doors for so many."
+   ]
+  },
+  {
+   "date": "2026-05-19",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mmaiplngxk2w",
+   "sentences": [
+    "BREAKING: Senate finally advances resolution to end war with Iran."
+   ]
+  },
+  {
+   "date": "2026-05-04",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3ml2g4nh7gs2s",
+   "sentences": [
+    "This AANHPI Heritage Month, we celebrate the rich cultures, remarkable contributions, and enduring spirit that continue to enrich our nation."
+   ]
+  },
+  {
+   "date": "2026-05-01",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mksws4qr5k2s",
+   "sentences": [
+    "Proud to stand alongside my colleagues today as we confront a hard truth: this reckless war in Iran is putting lives at risk, destabilizing our world, and testing the very principles of our democracy."
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mkq27anp7k2u",
+   "sentences": [
+    "Trump’s rule to lift speed limits is going to make this work more dangerous and debilitating, and also risk contamination of meat."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mknwhhyans2d",
+   "sentences": [
+    "Today, I introduced legislation to unwind these anticompetitive mergers."
+   ]
+  },
+  {
+   "date": "2026-04-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mk6qy7dffk27",
+   "sentences": [
+    "This merger is far from a done deal—federal and international regulators still need to sign off, state attorneys general have to review, and those of us in the Senate who want to protect Americans from the crush of corporate consolidation will continue to press for answers."
+   ]
+  },
+  {
+   "date": "2026-04-21",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mjzpcz4b322p",
+   "sentences": [
+    "The Trump administration's tariffs on imported produce are driving up prices for everyday staples like fresh tomatoes."
+   ]
+  },
+  {
+   "date": "2026-04-15",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3mjkhcmkiqc2x",
+   "sentences": [
+    "Another large corporate merger tightening its grip on the food system."
+   ]
+  },
+  {
+   "date": "2026-04-07",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/booker.senate.gov/post/3miwfracn7k2o",
+   "sentences": [
+    "Trump’s escalation in Iran is reckless."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Directing the Removal of United States Armed Forces From Hostilities Within Or Against the Islamic Republic of Iran That Have Not Been Authorized by Congress--Motion to Discharge",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-18/CREC-2026-03-18-pt1-PgS1194",
+   "sentences": [
+    "Mr. President, in an effort to uphold the Constitution and pursuant to section 601(b) of the International Security Assistance and Arms Export Control Act, I move to discharge the Committee on Foreign Relations from further consideration of S.J. Res. 118, to direct the removal of United States Armed Forces from hostilities against the Islamic Republic of Iran that have not been authorized, as is by the Constitution necessary, by Congress."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-14/CREC-2026-01-14-pt1-PgS186-2",
+   "sentences": [
+    "Since the Citizens United decision, I have watched as to how this body has seen clearly corrupt forces beginning to overrun the common sense and the will of the people in policy.",
+    "More and more are being bent to the whim and the will of the wealthiest of the wealthy in our country and the world, as well as to corporations--many of them, multinational corporations.",
+    "We know that the decision that was made by a conservative majority of five Justices--three of whom are still on the Court--permitted those billionaires and corporations to pour unlimited, unchecked money into our elections, drowning out the collective voices of the people.",
+    "Individuals like Elon Musk and other billionaires are exercising an outsized influence on our party, threatening people in this body and other bodies to drop millions and millions of dollars against them.",
+    "Unlimited corporate cash literally buys policies that put even more money in the pockets of the wealthiest, allows them to rig the system to benefit them, while working-class Americans more and more get a raw deal.",
+    "We are seeing a virtual welfare state for the wealthiest of the wealthy in our policies that benefits and protects the wealthiest, that serves the largest corporations, that is designed to line the pockets further and further of the wealthy.",
+    "Citizens United has created a system where Presidential pardons are pay-to-play, where environmental regulations that keep us safe and healthy are slashed, where corporate mergers are rubberstamped by Federal regulators.",
+    "We have seen how folks who pay the price get outsized influence, that a small group of billionaires and corporations wield enormous power over elections and, in turn, over the policies that all Americans have to live under.",
+    "Ending Citizens United is wildly popular on both sides of the aisle.",
+    "I believe this body should come together in a bipartisan way to end the nightmare that has been unleashed on America by Citizens United.",
+    "I am proud to cosponsor bills that would end this nightmare like Democracy for All, the amendment to overturn this misguided decision.",
+    "I am proud to champion commonsense reforms like the Freedom to Vote Act and--God--the DISCLOSE Act, which would ensure that the dark money pouring into our elections, the cancerous resources unleashed by the wealthiest of the wealthy--that at least they could not pour that money in and then hide their identity."
+   ]
+  },
+  {
+   "date": "2025-06-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 1",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-28/CREC-2025-06-28-pt1-PgS3679",
+   "sentences": [
+    "Mr. President, I ask unanimous consent that the following motions to commit for the bill H.R. 1 be placed in the Congressional Record: A motion to commit the bill H.R. 1 to the Committee on Finance of the Senate with instructions to report the same back to the Senate in 3 days, not counting any day on which the Senate is not in session, with changes that-- (1) are within the jurisdiction of such committee; and (2) would-- (A) provide medical debt relief for the over 100,000,000 people in the United States affected by medical debt by reducing the tax breaks for the ultra-wealthy within this legislation; and (B) ensure big corporations and the ultra-wealthy pay a fair share in taxes.",
+    "A motion moves to commit the bill H.R. 1 to the Committee on Finance of the Senate with instructions to report the same back to the Senate in 3 days, not counting any day on which the Senate is not in session, with changes that-- (1) are within the jurisdiction of such committee; and (2) would-- (A) disallow lower coverage rates, reduced benefits or decreased affordability for children and pregnant women receiving coverage through the Medicaid Program, the Children's Health Insurance Program, or the private insurance markets established under the Patient Protection and Affordable Care Act; and (B) ensure big corporations and the ultra-wealthy pay a fair share in taxes.",
+    "A motion moves to commit the bill H.R. 1 to the Committee on Finance of the Senate with instructions to report the same back to the Senate in 3 days, not counting any day on which the Senate is not in session, with changes that-- (1) are within the jurisdiction of such committee; and (2) would strike any provision that cuts Medicaid payments for mental health care; and (3) would ensure big corporations and the ultra-wealthy pay a fair share in taxes. ____________________"
+   ]
+  },
+  {
+   "date": "2025-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Consumer Financial Protection Bureau (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-26/CREC-2025-03-26-pt1-PgS1848-4",
+   "sentences": [
+    "To rescind this rule in order to further enrich a small handful of abusive banks and their shareholders that allow this to happen at the expense of working families, at the expense of veterans, at the expense of servicemembers, is despicable.",
+    "The CFPB has returned to the American consumers $19.7 billion in compensation, canceled debt, and other relief--$19.7 billion."
+   ]
+  },
+  {
+   "date": "2025-02-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Bureau of Ocean Energy Management Relating to \"Protection of Marine...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-25/CREC-2025-02-25-pt1-PgS1322-4",
+   "sentences": [
+    "For years, it has been temporarily scheduled, and what has happened to opioid deaths in America when we have used this that law enforcement has called for, ``Schedule.",
+    "We just had a painful hearing of law enforcement leaders and other Republican witnesses who told us the scourges of fentanyl that we all know.",
+    "Give law enforcement officers naloxone to reduce overdoses; education for fifth and sixth graders; ensure the continuity of care and successful reintegration of people who are returning to the community from the scourge of these drugs.",
+    "Witness after witness--from law enforcement to scientists to doctors--have offered up bipartisan supportive ideas so that our response to one of the biggest scourges of our country isn't just to do what we have been doing for the last half decade or more.",
+    "Harsher penalties for drugs, like those for the HALT Fentanyl Act, do not deter drug use.",
+    "I oversaw a police department that had to answer the calls with children dying on floors.",
+    "They had these law enforcement tools.",
+    "The HALT Fentanyl Act will get passed.",
+    "So, God, I am sorry that my friend who is truly a great American leader and one of the smarter people in here--I am sorry that he objected to my bill, but I will stand up in our committee meeting on Thursday and make this same plea; that we don't just pass the HALT Fentanyl Act but that we actually put things in it that aren't partisan ideas.",
+    "They are the ones that law enforcement is calling for.",
+    "Because, as I have read, law enforcement, scientists, doctors, and parents are not just asking for the HALT Fentanyl Act; they are asking for us to do more to save lives."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-05/CREC-2025-02-05-pt2-PgS710",
+   "sentences": [
+    "What we saw over the last week or so was a direct assault on a bipartisan congressional intent: USAID, the United States Agency for International Development.",
+    "Without any thought, without any strategy, without any understanding of the Agency's vital functions, the President of the United States took an Agency funded in a bipartisan manner where colleagues of mine--I serve on the Foreign Relations Committee--know so much of the work done on both sides of the aisle to support the critical mission of USAID.",
+    "Many of them were put into volatile situations because a lot of our great USAID government officials work in unstable environments; and, suddenly, their cell phones are not working, and they can't access their e-mail.",
+    "There are 50,000 private sector jobs here in the United States, people who contract with the government, that are connected to this Agency USAID, created by Congress in a bipartisan fashion, year after year funded in a bipartisan agreement, bicameral.",
+    "Congress had a vote on welfare reform.",
+    "Congress voted on Bill Clinton's vision for public safety to put 100,000 police officers on the street.",
+    "And for USAID, they shut it down.",
+    "This was a backdoor way to try to go around the law.",
+    "But Vought kept pushing to employ the same strategy the following year, to try to freeze foreign aid--this is 2018; the past is prologue, folks--and in doing so, he wanted to do it again, ignoring the 2018 GAO legal decision.",
+    "And the GAO, in its earlier decision, previously signaled that the consequence of an unenacted rescission proposal should be the full prudent obligation of budget authority.",
+    "If he decided with foreign policy that, hey, there is this thing called the Hyde amendment; I am going to ignore it--if Barack Obama did that, not one of them would normalize it or excuse it or look the other way.",
+    "Stopping USAID's work without any plan or strategy has now endangered every American because there are things we get to go to bed at night and not have to think about because we have a government full of officials, scientists, hard-working people who, every day, make it their life mission to focus on things so that we, the people, do not have to think about them.",
+    "We have police officers that stand on the frontline.",
+    "Well, that goes for USAID too.",
+    "You see, in the wisdom of this body, as I have worked in a bipartisan way on the Foreign Relations Committee, we fund the USAID to do things to protect us.",
+    "USAID officials are around the globe.",
+    "And one of the reasons why we, in the wisdom of Congress that this President is trying to violate--one of the things that we know, because we have got engineers in this place, we have got doctors in this place, we have got dedicated public servants in this place, we have got a few big, bald nerds like me in this place--what we know is that the USAID does work that is vital to keep Americans who are sleeping at night safe.",
+    "I saw one of the most courageous things done, that Chris Coons here flew to Africa to support the efforts that the United States of America through USAID was doing to stop Ebola in its tracks in Africa so it didn't visit us here.",
+    "But here is something that USAID has been working on that is terrifying to me--truly is, and I have been talking about it for a long time in Congress--we are beginning to see bugs around this planet that are resistant to antibiotics.",
+    "Right now--I shouldn't say that because Trump has stopped it, but there were some of the best scientists in the world that happened to be ours, Americans, working for USAID on the frontlines of treatment-resistant tuberculosis, not just Ebola, in Uganda.",
+    "USAID workers were trying to figure out what kind of treatments and regimes could be put into place to stop the spread of resistant tuberculosis because of the virulently viral nature of that awful disease.",
+    "How irresponsible for a President whose No. 1 responsibility is to protect Americans to tear down the Agency, stop the Agency workers--cut off their cell phones, cut off their emails, cut off their access to files, leave them not even knowing how they would get home--on the frontlines of an infectious disease that they are trying to stop so it does not show up in America.",
+    "Biden and Trump 1 didn't tear down USAID infectious disease work.",
+    "There seemed to be a bipartisan commitment to that idea in Congress, and it is one of the reasons why, with past Presidents, we have funded USAID to do this vital work with some of the best scientists on the globe who are willing to put their lives at risk, to step into an Ebola outbreak, a tuberculosis outbreak, an avian flu outbreak, and say ``I will do what I can to protect my country,'' like firefighters do and soldiers do and police officers do.",
+    "The President of the United States, in an act of cowardice, did not come to Congress to give a vision for how we would protect our Nation from infectious diseases, how we would do the vital work of USAID--no.",
+    "You shop in your supermarket and don't think about ``Does this food have some disease or worm in it?'' because these government workers at USAID are inspecting that food and are making it safe.",
+    "We have government workers that are doing suicide prevention work for our veterans, when we were seeing veteran after veteran die day after day after day.",
+    "There were civil service protections which I abided by.",
+    "He said we could be spending less and have higher capabilities if we only started to root out the wasteful spending and the corruption in that institution.",
+    "He brought in an unelected billionaire that everybody in this body knows is so conflicted, a guy who has so many government contracts, a guy whose net worth has been deeply affected by this government.",
+    "I have met with police officers this week.",
+    "You see, in that, one person--Tilden-- won the popular vote, but Hayes seemed to have won the electoral college.",
+    "No matter if you are a billionaire or a President, if you are a teacher, if you are a cop, if you are a plumber, this Nation says that our voices matter."
+   ]
+  },
+  {
+   "date": "2023-03-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Introductory Statement on S. 851",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-16/CREC-2023-03-16-pt1-PgS829-2",
+   "sentences": [
+    "Madam President, this Saturday, March 18, will mark the 60th anniversary of the unanimous and landmark Supreme Court decision in Gideon v. Wainwright, which held that every American has the constitutional right in criminal cases, regardless of their wealth and where they were born--they have a right, fundamentally, to the public defense system that we know today.",
+    "The court denied his request, saying that only indigent defenders facing the death penalty are entitled to a lawyer.",
+    "Determined to prove his innocence, Gideon penciled a five-page, handwritten petition asking the nine Justices of the Supreme Court to consider his case.",
+    "Against all odds, the Supreme Court granted Gideon's petition.",
+    "Gideon would tell the Supreme Court: It makes no difference how old I am or what color I am or which church I belong to, if any."
+   ]
+  },
+  {
+   "date": "2022-03-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Centers for Medicare & Medicaid Services Relating to \"Medicare and Medicaid...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-02/CREC-2022-03-02-pt1-PgS924",
+   "sentences": [
+    "I carry a picture in my wallet of someone who died from an overdose--it was given to me as I crisscrossed this country--so as to never forget the everyday emergency."
+   ]
+  },
+  {
+   "date": "2021-12-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to Increasing the Debt Limit--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-14/CREC-2021-12-14-pt1-PgS9134-5",
+   "sentences": [
+    "Children above the poverty line are less likely to go to the hospital, less likely to get in trouble with the police.",
+    "She hasn't been able to return to work without reliable childcare, and the child tax credit is helping her family.",
+    "She was indefinitely furloughed, and Stacey used those payments to send her two daughters back to preschool.",
+    "Sending her two daughters back to preschool means her children will do better in school, are more likely to go to college, have higher lifetime earnings, more success that inures to the benefit of us all in society.",
+    "In a nation where we have seen the tax cuts of the last decade inure overwhelmingly to the richest of the rich, this was the first tax cut in my lifetime--the biggest of the tax cuts in my lifetime that went overwhelmingly to middle-class families, working- class families, low-income families."
+   ]
+  },
+  {
+   "date": "2021-10-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Equal Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-27/CREC-2021-10-27-pt1-PgS7411",
+   "sentences": [
+    "The incredible friend I have in the Senator from Illinois--he has been leading on issues from immigration reform and fighting for Dreamers all the way to being the principal leader on the Democratic side for the passage of the First Step Act.",
+    "He said, very specifically, one of the things it did was create a massive sentencing disparity between crack and powder cocaine.",
+    "The bill made it so that five grams of crack cocaine--the example that my colleague gave--carried the same mandatory minimum prison sentence as 500 grams of powder cocaine.",
+    "It wasn't necessarily based on law enforcement evidence.",
+    "I want to quote: Despite harsher ADAA penalties for crack compared to powder cocaine, there was no decrease in crack use following implementation of sentencing policies . . . although both powder cocaine use and misuse of prescription drugs (the negative control) decreased.",
+    "The report concluded that ``these findings suggest that mandatory minimum sentencing may not be an effective method of deterring cocaine use.'' This has been the growing consensus about the War on Drugs on both sides of the aisle.",
+    "So we saw the 2018 passage of the First Step Act, a bill which was made retroactive, and we saw thousands of people liberated from Federal prison who were unjustly sentenced under that 1986 law.",
+    "The bill Senator Durbin and I wrote and introduced, the EQUAL Act--this is again Senator Durbin's leadership--is now our opportunity to do better.",
+    "It must feel good for everyone who understands the good intentions but disastrous results of the crack cocaine-powder cocaine disparity.",
+    "Together, we can make this a more perfect Union."
+   ]
+  },
+  {
+   "date": "2021-08-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Setting Forth the Congressional Budget for the United States Government for Fiscal Year 2022 and Setting Forth the Appropriate Budgetary Levels for Fiscal Years 2023 Through 2031",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-08-10/CREC-2021-08-10-pt1-PgS6204",
+   "sentences": [
+    "And I will tell you right now--thank God--because there are some people who have said that there are Members of this deliberative body that want to defund the police, to my horror.",
+    "And now this Member has given us the gift that finally--once and for all--we can put to bed this scurrilous accusation that somebody in this great, esteemed body would want to defund the police.",
+    "I am sure I will see no political ads attacking anybody here over ``defund the police.'' And I would ask unanimous consent to add something else to this obvious bill.",
+    "Can we add also that every Senator here wants to fund the police, believes in God, country, and apple pie."
+   ]
+  },
+  {
+   "date": "2021-06-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Julien Xavier Neals (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-07/CREC-2021-06-07-pt1-PgS3952",
+   "sentences": [
+    "He created the first community court in the State of New Jersey, the first youth court, and the first veterans court."
+   ]
+  },
+  {
+   "date": "2018-06-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water, Legislative Branch, and Military Construction and Veterans Affairs Appropriations Act, 2019--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-19/CREC-2018-06-19-pt1-PgS4021-2",
+   "sentences": [
+    "A little over 2 months ago, Attorney General Jeff Sessions, Secretary of Homeland Security Kirstjen Nielsen, and President Donald Trump made the decision to institute what they are calling a zero tolerance policy when it comes to individuals and families who cross the southern border without documentation or authorization.",
+    "The policy dictates that any adult who illegally crosses the southern border will be subject to Federal prosecution and therefore placed in Federal custody.",
+    "I am proud to see Democrats and Republicans, progressives and conservatives speaking out against the moral vandalism that is not just degrading the dignity and humanity of the migrants at our border, but it is assaulting the dignity and humanity of America--the people of this country speaking out in one voice, one people understanding that we have one destiny, understanding that we share common values, and understanding that this is a time when we can't be silent.",
+    "They will look to see whether we fought for the ideals that made this Nation what I believe it is, which is, as Elijah called for the State of Israel, to be a light unto nations.",
+    "They will look back at America to see if we are called to be a nation, truly, that works to defend human rights at home and abroad, not violate them in our own backyard.",
+    "We must do something; we must stand for something or the dignity and the humanity that will be assaulted will not be those of children on our border."
+   ]
+  },
+  {
+   "date": "2018-04-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by Bureau of Consumer Financial Protection",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-04-18/CREC-2018-04-18-pt1-PgS2227-6",
+   "sentences": [
+    "Auto lending is the third most common source of debt for all Americans.",
+    "Unfortunately, and surprisingly--or maybe not to some--in most cases the applicant who was a person of color, despite having better credit and less debt, was offered higher cost financing options than the less-qualified White applicant.",
+    "We have people--courageous police officers, courageous activists, and police leadership--talking about the presence of implicit racial bias.",
+    "When an American goes in to buy a car and gets that car financed, the loan terms they get should be based on their creditworthiness--the amount of debt they have--not the color of their skin."
+   ]
+  }
+ ]
+}

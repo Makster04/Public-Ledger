@@ -1,0 +1,145 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "letlow",
+ "name": "Julia Letlow",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 9,
+  "press": 3,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-04-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Emergency Conservation Program Improvement Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-14/CREC-2026-04-14-pt1-PgH2844-4",
+   "sentences": [
+    "It includes restoring farmland, rehabilitating conservation structures, and stabilizing land after devastating events."
+   ]
+  },
+  {
+   "date": "2025-02-03",
+   "source": "press",
+   "where": "Press release: Double Mastectomy Made Breast Cancer Bill Personal for Letlow",
+   "url": "https://letlow.house.gov/node/311",
+   "sentences": [
+    "Mon, 02/03/2025 - 12:37 Summary \"Rep. Julia Letlow (R-La.) is putting forward a new bill Tuesday that would put in place a universal breast cancer risk assessment tool to help women better evaluate th…"
+   ]
+  },
+  {
+   "date": "2025-01-05",
+   "source": "press",
+   "where": "Press release: Social Security Fairness Act Signed Into Law",
+   "url": "https://letlow.house.gov/media/press-releases/social-security-fairness-act-signed-law",
+   "sentences": [
+    "Social Security Fairness Act Signed Into Law.",
+    "Social Security Fairness Act Signed Into Law Letlow was original cosponsor of H.R. 82 Matt.Smith1@ma…",
+    "Sun, 01/05/2025 - 16:09 Image WASHINGTON, D.C. – Legislation championed by Rep. Julia Letlow to ensure retirement security for teachers, police officers, and other public servants has been signed i…"
+   ]
+  },
+  {
+   "date": "2024-09-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Enhanced Presidential Security Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-09-20/CREC-2024-09-20-pt1-PgH5541",
+   "sentences": [
+    "Mr. Speaker, I was unavoidably detained today during roll call votes on the Motion to Recommit and passage, H.R. 5717, No Bailout for Sanctuary Cities Act; H.J. Res. 136, Tailpipe Emissions Rule CRA; and H.R. 9106, Enhanced Presidential Security Act of 2024."
+   ]
+  },
+  {
+   "date": "2024-05-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Luke Letlow Post Office Building",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-06/CREC-2024-05-06-pt1-PgH2855-3",
+   "sentences": [
+    "Throughout his career, I saw so many times when he would spend hours on the phone talking to local mayors and police jurors about the problems in their communities, showing them the same care and attention that he would give if it had been the Governor of Louisiana or the Speaker of the House on the other end of the line."
+   ]
+  },
+  {
+   "date": "2023-11-02",
+   "source": "press",
+   "where": "Press release: Windfall Elimination Provision/Government Pension Offset",
+   "url": "https://letlow.house.gov/WEPGPO",
+   "sentences": [
+    "Windfall Elimination Provision/Government Pension Offset.",
+    "Windfall Elimination Provision/Government Pension Offset Repealing the unfair, bureaucratic Windfall Elimination Provision and Government Pension Offset are among my top priorities for the 118th Congress."
+   ]
+  },
+  {
+   "date": "2023-03-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Parents Bill of Rights Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-23/CREC-2023-03-23-pt1-PgH1348",
+   "sentences": [
+    "Mr. Chair, I rise today to join my voice with millions of American parents as the House considers H.R. 5, the Parents Bill of Rights Act."
+   ]
+  },
+  {
+   "date": "2022-03-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Covid-19 American History Project Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-28/CREC-2022-03-28-pt1-PgH3883",
+   "sentences": [
+    "For families like mine, that loss means an empty chair at the dinner table, a son who won't be able to go fishing with his dad anymore, and a daughter who won't be able to dance with her father on her wedding day."
+   ]
+  },
+  {
+   "date": "2021-12-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 6119, Further Extending Government Funding Act; and for Other Purposes",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-12-02/CREC-2021-12-02-pt1-PgH6865-5",
+   "sentences": [
+    "Mr. Speaker, I rise to oppose the previous question so we can immediately take up H.R. 6056, the Parents Bill of Rights Act.",
+    "Parents should not have a system of values and beliefs forced on their children or send them to school while fearing indoctrination by a political agenda.",
+    "The Parents Bill of Rights Act puts safeguards in place that ensure that the foundation of education is built on a meaningful dialogue between a family and their child's school.",
+    "In my home State of Louisiana, a similar parents bill of rights passed with broad support from both Republicans and Democrats, and I hope we can follow suit here in Congress."
+   ]
+  },
+  {
+   "date": "2021-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Family Violence Prevention and Services Improvement Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-26/CREC-2021-10-26-pt1-PgH5885-4",
+   "sentences": [
+    "First, this bill opens the door for entities to spend taxpayer dollars on abortions.",
+    "Secondly, it forces an unnecessary conversation about sexual orientation and gender identity when these issues have never been a part of this bill before and should not be a barrier between people and the services they need.",
+    "That is why my amendment also rejects a change included in the Democrats' proposal that could lead to violence prevention dollars going to support abortion services.",
+    "The amendment makes clear that Federal law should not support abortions.",
+    "Upholding the sanctity of every human life is of utmost importance, and it is critical to ensure that no taxpayer dollars pay for abortions.",
+    "Countless religious organizations work tirelessly to help protect victims of domestic violence, but the Democrats' radical abortion agenda risks denying victims' access to these providers.",
+    "Furthermore, it is a pro-life amendment strongly opposed by Planned Parenthood."
+   ]
+  },
+  {
+   "date": "2021-09-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-09-24/CREC-2021-09-24-pt1-PgH5139-4",
+   "sentences": [
+    "However, before I talk about the amendment, I think it is important for the House to note that the legislation before us is perhaps the most extreme abortion measure that Congress has ever considered.",
+    "It will overturn countless protections for the unborn that States have already put into place, including those in my home State of Louisiana.",
+    "Intimately knowing the special bond that grows between a mother and a child over those 9 months, I do not understand how we can pass this bill, a law that will allow an abortion to be performed up until the actual moment of birth, despite the fact that the child has a fully developed heart and can feel pain.",
+    "The amendment I am bringing forward is the text of the Born-Alive Abortion Survivors Protection Act in which my distinguished colleague from Missouri, Ann Wagner, has been an outstanding leader.",
+    "It would ensure that newborn children who survive an abortion are given the same crucial, lifesaving medical care that any infant would receive.",
+    "I have always considered myself to be pro-life, but I never truly understood the sanctity of life until that moment."
+   ]
+  },
+  {
+   "date": "2021-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 2062, Protecting Older Workers Against Discrimination Act of 2021; Providing for Consideration of H.R.",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-23/CREC-2021-06-23-pt1-PgH3017-6",
+   "sentences": [
+    "Madam Speaker, I rise to oppose the previous question so that we can amend the rule to allow the consideration of H.R. 18, the No Taxpayer Funding for Abortion Act.",
+    "This critical bill will finally codify the Hyde amendment and uphold the longstanding bipartisan agreement that prevents taxpayer dollars from funding abortions.",
+    "While Republicans and Democrats have engaged in heated debates over abortion in the past 40 years, we were always able to agree on the simple principle that public funding should not be used for abortions.",
+    "The Hyde amendment, which explicitly spelled this policy out, has been included in every single appropriations bill since 1976, including those passed under the Clinton and Obama administrations.",
+    "When I arrived in Congress a few months ago, one of my first actions was to sign on to H.R. 18, the No Taxpayer Funding for Abortion Act.",
+    "Taxpayer dollars should not be used to fund abortions."
+   ]
+  }
+ ]
+}

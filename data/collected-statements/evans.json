@@ -1,0 +1,149 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "evans",
+ "name": "Gabe Evans",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 10,
+  "press": 1,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ratepayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5656-3",
+   "sentences": [
+    "With that growth, our demand for energy is also skyrocketing, and some people have very understandable reservations and questions about data centers.",
+    "The future, however, is binary: Either we build out our power systems to meet that demand, or we become dependent on other countries, like Communist China, for our daily needs, to include digital infrastructure that stores Americans' consumer data, financial data, healthcare data, and personal data.",
+    "Hardworking Coloradans in my district do want economic growth, and they do not want the Chinese Communist Party handling their sensitive information.",
+    "Large-load data centers must cover the full costs of any system upgrades they require, not families or small businesses."
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stop Pills That Kill Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-15/CREC-2026-09-15-pt1-PgH5674",
+   "sentences": [
+    "My bill, the Stop Pills That Kill Act, is commonsense legislation that will help save American lives by cracking down on criminals who traffic poison disguised as prescription drugs.",
+    "Under Republican leadership, the United States has thankfully seen a steep decline in monthly synthetic opioid deaths, driven by policies that strengthen border security and target cartels and drug dealers."
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Elo Realignment and Strategic Engagement Reform Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-13/CREC-2026-07-13-pt1-PgH4398-2",
+   "sentences": [
+    "DHS' Office of Intelligence and Analysis, also known as I&A, is the only entity in the U.S. intelligence community responsible for delivering intelligence directly to State and local law enforcement agencies.",
+    "As a former cop for over a decade in the Denver metro area, I know there is nothing more critical to law enforcement operations than open communication between local, State, and Federal agencies.",
+    "Information sharing between the men and women on the front lines and Federal intelligence counterparts ensures that bad actors, often tied to international criminal organizations like cartels and terrorist groups, are removed from our streets as quickly as possible.",
+    "From my own experience, I know that State and local law enforcement often face national and international threats: terrorists, cartels, cyberattacks, and foreign enemy regimes.",
+    "This bill supports State and local law enforcement when they encounter those national or those international threats.",
+    "Unfortunately, in my home State of Colorado, Denver Democrats are often more concerned about finding ways to weaken law enforcement operations and attacking our brave officers rather than prioritizing public safety.",
+    "Defund-the-police antics create public safety conflicts and confusion for law enforcement officers who are trying to serve and protect their communities.",
+    "By reorganizing the ELO Office and realigning its essential functions within I&A's partner engagement directorate, this bill streamlines coordination between law enforcement agencies, enhances information- sharing mechanisms, and reduces duplicative actions.",
+    "This ensures responsible stewardship of taxpayer dollars, and it makes sure that State and local law enforcement agencies have the information that they need when they are facing those national or international threats.",
+    "This bill takes the fight to the streets, and it makes sure that we are preventively getting these resources to our State and local law enforcement agencies, because no single law enforcement agency can effectively address the full spectrum of threats without that combined resource.",
+    "Madam Speaker, I strongly urge support for this bipartisan piece of legislation and support for the millions of State and local law enforcement officers across our country."
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expediting Federal Broad- Band Deployment Reviews Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-20/CREC-2026-04-20-pt1-PgH2971-2",
+   "sentences": [
+    "As a cop for 10 years, I also know that law enforcement and public safety rely on broadband access to promptly identify and interdict threats in our communities and respond to natural disasters."
+   ]
+  },
+  {
+   "date": "2026-03-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing the Support of the House of Representatives for the Department of Homeland Security",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-26/CREC-2026-03-26-pt1-PgH2723-6",
+   "sentences": [
+    "As someone who spent 12 years in the Army and another 10 years as a police officer, I know this is the furthest from the truth you can be.",
+    "In fact, I left law enforcement and serve now in Congress because for years Democrats pushed to defund the police.",
+    "They championed defunding the police knowing the consequences that it has on public safety.",
+    "The Coast Guard, essential in combating drug trafficking that killed 400,000 Americans under the open-border policies of my colleagues across the aisle, is weakened.",
+    "The Federal Law Enforcement Training Center, which provides the training to our Federal agents, is impaired."
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Power Plant Reliability Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-16/CREC-2025-12-16-pt1-PgH5927",
+   "sentences": [
+    "In recent years, ruling Democrats have been pushing to shut down all coal-fired power plants in Colorado by 2030, including two by the end of this year, to meet arbitrary climate goals and without regard for reliability or affordability.",
+    "House Republicans are committed to lowering energy costs for working families by championing policies that ensure energy dominance."
+   ]
+  },
+  {
+   "date": "2025-12-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: State Planning for Reliability and Affordability Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-10/CREC-2025-12-10-pt1-PgH5522",
+   "sentences": [
+    "A nonpartisan report from earlier this year found the following: ``Driven by State policy mandates to reduce greenhouse gas emissions, electricity prices are projected to grow at more than three times the rate of inflation and nearly 13 times the growth rate from 2010 to 2020.'' That report goes on to project that by 2030, the average Colorado household will spend $390 to $504 more annually due to rates outpacing inflation and historic trends, all Colorado households combined will spend between $970 million and $1.25 billion more in electricity costs."
+   ]
+  },
+  {
+   "date": "2025-06-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Denouncing the Antisemitic Terrorist Attack in Boulder, Colorado",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-09/CREC-2025-06-09-pt1-PgH2542",
+   "sentences": [
+    "I also served as a police officer on the honor guard who has stood with our colleagues in Boulder when they lost an officer in 2021 in an active shooter event.",
+    "Unfortunately, in sanctuary States like Colorado, local law enforcement is prohibited from sharing information with their Federal counterparts, Mr. Speaker.",
+    "This terror attack in Boulder is an example of why these sanctuary policies are dangerous to the safety and well-being of Americans.",
+    "As a former police officer, I know that law enforcement must be able to work with authorities to keep Coloradans and Americans safe.",
+    "He had multiple contacts with law enforcement prior to the attack, most notably when he tried to buy a gun and failed a background check.",
+    "Colorado's refusal to allow law enforcement to share basic information with Federal immigration authorities highlights the danger of these policies, and it is a contributing factor to the rise in crime rates which are impacting the life and safety of all Coloradans.",
+    "Without Colorado's sanctuary laws, this attack might have been prevented."
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Dhs Restrictions on Confucius Institutes and Chinese Entities of Concern Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-07/CREC-2025-05-07-pt1-PgH1891-2",
+   "sentences": [
+    "My 12 years of service in the Army provided me with a deep understanding of the criminal transnational activities of the Chinese Communist Party.",
+    "In my district, where energy production, manufacturing, and agriculture are paramount, we know the looming threat of the Chinese Communist Party on jobs and national security.",
+    "They have, unfortunately, opened the doors for our biggest foreign adversary to exploit breakthroughs for Chinese strategic advantage.",
+    "My bill, the bipartisan Countering Transnational Repression Act, continues this important work by stopping Chinese Communist Party surveillance and intimidating Chinese nationals on U.S. soil.",
+    "We must now come together to restrict the infiltration of the Chinese Communist Party onto our college campuses by passing the DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act."
+   ]
+  },
+  {
+   "date": "2025-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Halt All Lethal Trafficking of Fentanyl Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-06/CREC-2025-02-06-pt1-PgH520-3",
+   "sentences": [
+    "Mr. Speaker, I rise in strong support of the HALT Fentanyl Act.",
+    "This critical bill would enable law enforcement to get dangerous drug traffickers off of our streets by permanently and responsibly classifying fentanyl analogues as schedule I narcotics.",
+    "We must do more to stop this drug from infiltrating our communities, and that starts with empowering law enforcement.",
+    "As a Colorado cop for 10 years, I witnessed firsthand how not supporting law enforcement enables traffickers and the flow of fentanyl into our communities."
+   ]
+  },
+  {
+   "date": "2025-01-07",
+   "source": "press",
+   "where": "Press release: Rep. Evans Votes to Crack Down on Illegal Immigration",
+   "url": "https://gabeevans.house.gov/media/press-releases/rep-evans-votes-crack-down-illegal-immigration",
+   "sentences": [
+    "Rep. Evans Votes to Crack Down on Illegal Immigration.",
+    "Rep. Evans Votes to Crack Down on Illegal Immigration Delanie.Bomar@…",
+    "Tue, 01/07/2025 - 15:40 WASHINGTON – Today Congressman Gabe Evans voted to prioritize arresting illegal immigrants who commit crimes by supporting the Laken Riley Act.",
+    "“As the grandson of an immigrant and a former police officer,…"
+   ]
+  }
+ ]
+}

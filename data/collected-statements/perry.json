@@ -1,0 +1,1145 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "perry",
+ "name": "Scott Perry",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 64,
+  "press": 6,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Stopping Political Discrimination in Disaster Assistance Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-16/CREC-2026-09-16-pt1-PgH5893",
+   "sentences": [
+    "Mr. Speaker, I urge passage and adoption, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "press",
+   "where": "Press release: Perry Votes to Stop Congressional Insider Trading",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=404500",
+   "sentences": [
+    "Perry Votes to Stop Congressional Insider Trading.",
+    "Perry Votes to Stop Congressional Insider Trading WASHINGTON, DC – Today, Congressman Scott Perry (R-PA) voted to stop congressional insider trading of stocks.",
+    "Perry, an original cosponsor of the “Stop Insider Trading Act,” has been a longtime advocate for holding Members of Congress accountable fo…"
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "source": "press",
+   "where": "Press release: Rep. Perry Targeting Surrogacy by Foreign Nationals and Sex Offenders",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=404495",
+   "sentences": [
+    "Rep. Perry Targeting Surrogacy by Foreign Nationals and Sex Offenders.",
+    "Congressman Perry Introduces Bills Targeting Surrogacy by Foreign Nationals and Sex Offenders Washington, D.C. – Congressman Scott Perry (R-PA), joined by Congressman Tim Burchett (R-TN), and Congressman Randy Fine (R-FL), introduced two landmark bills at a press conference outside the U.S. Capitol…"
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reaffirm the Principles of Liberty by Dismantling the Surveillance State",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-03/CREC-2026-06-03-pt1-PgH3823-2",
+   "sentences": [
+    "We will talk about facial recognition software, the kill switch in your car, automatic license plate reader cameras, central bank digital currency, and data centers.",
+    "The people who violated it, whether they were on the court, whether they were in law enforcement, somehow, someway, the piece of paper couldn't stop the violations to the American people and their personal effect.",
+    "What Americans do, what American law enforcement does, what the American intelligence services do to keep us safe regarding foreigners, God bless them, go do it.",
+    "You couple FISA with facial recognition software, think about the limits of power there.",
+    "But when law enforcement, when the awesome, irresistible power of the government has these things, what are you going to do about it?",
+    "Now, recently, under the guise of safety, this government mandated that every new car in 2027 and beyond will have a kill switch put in it, not because you ordered it, not because you have a family member that you worry is going to drive impaired and you want to make sure you protect them and your fellow citizens.",
+    "You're going to get the kill switch whether you want it or not.",
+    "She thinks, boy, I either better get home to my father or my husband, or maybe I want to get to the police station.",
+    "Again, hook this up with facial recognition software before an intelligence surveillance act, and you can see the whole world caving in on you and your privacy.",
+    "It is one thing for a business to do it, but now law enforcement is also accessing it.",
+    "And we found out that automatic license plate readers are being installed near gun stores, being installed near gun shows.",
+    "Now, I will say this: Myself; Representative Biggs, who is going to be the next Governor of Arizona; Representative Self, trying to save Texas, you won't find any Members more supportive of law enforcement than those three individuals and the people that come up and talk about these issues.",
+    "We want a robust law enforcement to go after criminals, to be armed with every single tool necessary for their success and their safety, but--people say: ``Well, you can't say but''--myself, Representative Self, Representative Biggs, and all of those law enforcement officers raised our hands to take an oath to defend this piece of paper that says you will not have your rights violated for expedience because it is easy, because it makes the job easier.",
+    "Finally, the Central Bank Digital Currency, I hear people in my office say to me: Nobody knows what you are talking about.",
+    "CBDC, Central Bank Digital Currency, no one knows what you are talking about, so quit ranting about it.",
+    "The Central Bank Digital Currency means you will no longer be exchanging dollars, 20s, 50s, 100s.",
+    "That will be done with a phone, and it will be monitored by the Federal Government at a central bank, digital, card, phone, currency, how you pay for things.",
+    "Why should I care about the kill switch?",
+    "Why should I care about Central Bank Digital Currency?",
+    "Well, I don't know, there are a lot of people in this country that subscribe and ascribe to climate change theory and theology.",
+    "Well, Mr. Self, I don't know, maybe you want to drive a 1978 F-250 with lots of carbon emissions.",
+    "Mr. Self, I have got facial recognition software.",
+    "I can see you in that old truck, and now I have got a license plate reader.",
+    "It doesn't have a kill switch in it, but I think you are exceeding your carbon credits for the day, Representative Self.",
+    "And maybe I can't shut it off, but now I will send the police out to pull you over.",
+    "Well, my goodness, you are exceeding your carbon credits for the day, Representative Self.",
+    "Then, finally, I want to talk to you about something that we see happening all across the country now: Data centers.",
+    "It is really important that we win this race on artificial intelligence, which requires the use of data centers.",
+    "But the question is: Where all of these data centers are popping up, is this about the race against China for these data centers, or are we putting a data center up so that we can conglomerate data from automatic license plate reading cameras that are at this store or at that store so that that data can be bought so the other store can say: Well, how can I get this customer from going to that store to this store?",
+    "We are pretty sure the violations continue to happen if whistleblowers aren't lying to us.",
+    "On occasion, we all fall short, and this Constitution exists so that we have a remedy for the times when somebody misuses the awesome power that is provided at the government level, with the use of law enforcement as the enforcer.",
+    "Facial recognition software is available.",
+    "The kill switch is still being mandated for your car.",
+    "Automatic license plate readers are being installed by the thousands and tens of thousands.",
+    "We are on the edge--as a matter of fact, we just passed a bill about 1\\1/ 2\\ weeks ago with a go-live date for a central bank digital currency.",
+    "Every single Republican Member here already voted in favor of limiting the government's ability to install a central bank digital currency."
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2027",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-15/CREC-2026-05-15-pt1-PgH3537",
+   "sentences": [
+    "Mr. Chairman, I urge adoption."
+   ]
+  },
+  {
+   "date": "2026-05-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-05-13/CREC-2026-05-13-pt1-PgH3421",
+   "sentences": [
+    "You get less miles per gallon.",
+    "First of all, you pay more, subsidize it, and then get less miles per gallon when you put it in your tank.",
+    "As the price of fuel goes up because of Iran--not because of President Trump, but because of Iran--we are actually going to increase prices in this House if this bill is voted in favor of."
+   ]
+  },
+  {
+   "date": "2026-03-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Proposing an Amendment to the Constitution of the United States Requiring a Balanced Budget for the Federal Government",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-18/CREC-2026-03-18-pt1-PgH2560-8",
+   "sentences": [
+    "Mr. Speaker, I am fascinated by my good friend on the other side of the aisle telling me that they are the party of fiscal responsibility.",
+    "However, the Republicans are using a handcart on this railroad and the Democrats are on some kind of bullet train on this train to hell.",
+    "When I got here, I think the individual debt per person was like about $40,000."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-14/CREC-2026-01-14-pt1-PgH734",
+   "sentences": [
+    "Mr. Chairman, I support this amendment because you think about the National Endowment for Democracy, you think the United States is working productively in places like Iran, Cuba, and Venezuela."
+   ]
+  },
+  {
+   "date": "2025-09-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-04/CREC-2025-09-04-pt1-PgH3835-2",
+   "sentences": [
+    "Mr. Chairman, I might sound like a little bit of a broken record here, but, unfortunately, the broken record of $37 trillion in debt and climbing continues as well, so we have just got to keep at it.",
+    "With that level of bipartisan criticism of existing commissions, I don't see why we need to dig ourselves even deeper with another one, more debt, more projects that are supposed to be done by others, and no Federal nexus, but here we go.",
+    "This amendment is offered because we simply cannot continue to fund the destruction--and that is what it is--of the U.S. energy grid to satisfy a climate cult.",
+    "While the underlying bill cuts funding down to $1.9 billion, we need to defund it entirely.",
+    "This office's mission under the last administration was to ``equitably transition America to net-zero greenhouse gas emissions economy-wide by no later than 2050.'' What does that mean, net zero?",
+    "What that means is everything that you see--the clothing you are wearing, the car you are driving, the cell phone you use--disappears in America because we can't make any of that stuff because it requires emissions.",
+    "It actively promotes divisive concepts like energy equity and environmental justice, which allocate tax dollars based on immutable characteristics.",
+    "Mr. Chair, I still urge adoption of this amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2025-09-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-09-03/CREC-2025-09-03-pt1-PgH3796",
+   "sentences": [
+    "Mr. Chair, this amendment prohibits the use of funds to implement or enforce the Delaware River Basin Commission's rule to ban hydraulic fracturing within the Delaware River Basin.",
+    "Unfortunately, unelected and unaccountable bureaucrats at the Delaware River Basin Commission have instituted a hydraulic fracturing ban for a portion of the State of the Commonwealth of Pennsylvania, stripping away property and mineral rights from Pennsylvanians in contravention of the will of the State's own legislature.",
+    "To be clear, this amendment simply prohibits the Delaware River Basin Commission from implementing or enforcing its hydraulic fracturing ban but does not impact the ability of the States in the Delaware River Basin Commission to regulate hydraulic fracturing as they see fit.",
+    "The safety of hydraulic fracturing has been demonstrated through its extensive use across the Commonwealth of Pennsylvania and across the country for decades now.",
+    "Opposition to this amendment is support for the hydraulic fracturing ban and for higher energy, in particular, natural gas prices for our constituents.",
+    "The unelected, unaccountable bureaucrats at the DRBC have unilaterally instituted a hydraulic fracturing ban for a portion of the Commonwealth of Pennsylvania, stripping away property and mineral rights from Pennsylvanians in direct contravention of the will of the Pennsylvania Commonwealth's legislature.",
+    "Yet now we are going to pay three-quarters of a million dollars from the Federal Government when we are $37 trillion in debt.",
+    "Oh, by the way, there have been no cases of any issue where hydraulic fracturing caused some effluent issue that I know of or that I imagine my counterpart on the other side of the aisle can speak to.",
+    "Despite a purported goal to identify and promote revolutionary advances in energy, the agency is more focused on misguided, ineffective climate and so-called green priorities.",
+    "Among recent awards, ARPA-E has supported the Net-Zero Game Changers Initiative, which is subsidizing climate-warming refrigerants and Jetsons-style electrification of aviation.",
+    "Despite the massive amount of subsidies provided through this program and others to electric vehicles, it is clear that the majority of the American people do not want them.",
+    "According to McKinsey & Company, the place where the last Secretary of Transportation worked, 46 percent of current battery electric vehicle owners are likely going back to internal combustion engine vehicles for their next purchase.",
+    "It is long past time to finally bring an end to the green new scam and defund this misguided program, as well as all the other DOE loan programs that pick winners and losers based on politics rather than markets.",
+    "I don't care whether you drive a hybrid, an electric vehicle, or a traditionally powered vehicle, including diesel.",
+    "Yet, this picks the winner and says: You are going to drive an electric vehicle, subsidizes it, subsidizes the manufacture of it, and then subsidizes the purchase of it.",
+    "Madam Chair, I urge adoption, and I yield back the balance of my time.",
+    "Madam Chair, I urge adoption, and I reserve the balance of my time.",
+    "Madam Chair, I rise to offer this amendment to reduce funding for the Northern Border Regional Commission, or the NBRC, to fiscal year 2019 levels.",
+    "We are looking for ways to reduce spending so the American people can keep their money, so we don't have to go further into debt.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "Mr. Chairman, I rise to offer this amendment to halve the funding for the Southwest Border Regional Commission, again trying to save some money by not spending money on redundant things.",
+    "Yet again, this commission serves as a duplicative slush fund for parochial interests, this time for projects in the southern border regions of Arizona, California, New Mexico, and Texas.",
+    "Look, I know folks on this side of the aisle care about the border.",
+    "I imagine and hope that folks on the other side of the aisle care about the border.",
+    "However, the answer to solving the border problems is to actually enforce our Nation's immigration laws, not to give $4 million to a commission that does not even appear to have an operational website.",
+    "By the way, this current administration, the Trump administration, is handling the border, so we don't need to waste another $4 million on this commission.",
+    "Mr. Chairman, of course, all these States--Arizona, California, New Mexico, and Texas--are on the border.",
+    "If we are funding this organization to deal with the border, I don't know what to say other than it is duplicative.",
+    "Mr. Chairman, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "There is absolutely no reason for that dramatic increase in funding, especially when funding projects with no national nexus, like electric vehicle charging stations, stormwater management, and green infrastructure, according to their own 2023-2027 strategic plan.",
+    "There is a charging station down the street from me.",
+    "I don't own an electric vehicle.",
+    "Mr. Chairman, I urge adoption, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2025-08-26",
+   "source": "press",
+   "where": "Press release: Congressman Scott Perry Introduces the Freedom from Union Violence Act",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=404430",
+   "sentences": [
+    "Congressman Scott Perry Introduces the Freedom from Union Violence Act.",
+    "Congressman Scott Perry Introduces the Freedom from Union Violence Act Washington, D.C . - Congressman Scott Perry (PA-10) just introduced the Freedom from Union Violence Act, to rectify a deadly loophole in the 1946 Hobbs Anti-Extortion Act that enables union officials to perpetrate violence, exto…"
+   ]
+  },
+  {
+   "date": "2025-06-30",
+   "source": "press",
+   "where": "Press release: Congressman Scott Perry Leads GOP Effort to Save Pennsylvania’s Chocolate",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=404321",
+   "sentences": [
+    "But confectioners of all sizes are under significant threat if we don’t revise the looming tariffs on our chocolate manufacturing industry, ” said Congressman Scott Perry. “ With the support of my…"
+   ]
+  },
+  {
+   "date": "2025-06-10",
+   "source": "press",
+   "where": "Press release: Congressman Scott Perry Introduces the \"No Desire for Streetcars Act\"",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=403280",
+   "sentences": [
+    "Congressman Scott Perry Introduces \"No Desire for Streetcars Act\" Washington, D.C. – Today, Congressman Scott Perry (PA-10) introduced the No Desire for Streetcars Act, a bill prohibiting mass transit pet projects masquerading as legitimate public infrastructure. “ Beauty is in the eye of the behol…"
+   ]
+  },
+  {
+   "date": "2025-05-21",
+   "source": "press",
+   "where": "Press release: Congressman Scott Perry Introduces the Taiwan PLUS Act",
+   "url": "https://perry.house.gov/news/documentsingle.aspx?DocumentID=403234",
+   "sentences": [
+    "Today, Congressman Scott Perry (PA-10), with Senator Rick Scott (FL), and co-sponsored by Congressman Tom Tiffany (WI-07), introduced the Taiwan PLUS Act to strengthen U.S.–Taiwan defense cooperation and ensure peak efficiency in delivering vital weapons systems to deter the Chinese Communist Party…"
+   ]
+  },
+  {
+   "date": "2025-05-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Cleaning Up Medicaid Rolls",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-05-07/CREC-2025-05-07-pt1-PgH1897-6",
+   "sentences": [
+    "Mr. Speaker, evidently, this is what gutting Medicaid looks like.",
+    "This only happens in Washington, D.C. Mr. Speaker, the difference between the last administration and the current one is the last administration restricted the States from cleaning up the Medicaid rolls and verifying eligibility."
+   ]
+  },
+  {
+   "date": "2025-01-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fix Our Forests Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-01-23/CREC-2025-01-23-pt1-PgH312-6",
+   "sentences": [
+    "This amendment, which I think the chairman agrees with, strikes the prioritization of carbon sequestration and ecosystem services in the biochar demonstration projects in this bill.",
+    "It is by prioritizing projects based on their impact on carbon sequestration and the impact on ecosystems rather than the impact on forest health and forest fire reduction that we risk throwing more money at the problem while failing to improve the situation on the ground.",
+    "Let's remember, Mr. Chairman, we are $36 trillion in debt."
+   ]
+  },
+  {
+   "date": "2024-07-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-24/CREC-2024-07-24-pt1-PgH4881-5",
+   "sentences": [
+    "Mr. Chairman, this amendment prohibits the EPA from using funds for actions pursuant to section 115 of the Clean Air Act.",
+    "To be clear, section 115 of the Clean Air Act allows the EPA to mandate State emissions levels to whatever level the agency deems appropriate if they find U.S. emissions endanger a foreign nation and the endangered nation has a reciprocal agreement to prevent or control these emissions in their own nation, such as the Paris climate accord.",
+    "This backdoor provision allows the EPA to vastly expand its regulatory authority and encroach on the right of the States to regulate their own energy sectors based on the actions solely of a foreign nation.",
+    "I urge adoption, and I reserve the balance of my time.",
+    "It allows a backdoor access to doing so through a reciprocal agreement, not even a treaty, such as the Paris climate accord.",
+    "As I said, Mr. Chairman, in the past, this amendment has been accepted on this very bill, this very same amendment, and so I would urge adoption once again this time.",
+    "I don't know that back a long time ago when section 115 was written it was written with the idea that the Paris climate accord, not a treaty, but with the force of a treaty would occur, but in the case that it is and that that has now happened, we must make sure that we speak loudly and that any regulations and any regulatory authority come through the elected bodies of the United States of America, not through bureaucracies and certainly not through would-be treaties or agreements from foreign countries.",
+    "Mr. Chair, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "This 2010 power grab, known as the Chesapeake Bay TMDL, total maximum daily load, directly contradicts the intent of the Clean Water Act.",
+    "The Clean Water Act clearly acknowledges State authority in water quality and requires cooperation, which is happening through the Chesapeake Bay Commission rather than coercion between the States and the Federal Government.",
+    "This administration has tasked the CEQ with developing policies on climate change, environmental justice, and Federal sustainability, all while creating more paperwork under NEPA that the previous administration actually worked to reverse.",
+    "As written, the Department of Energy's own estimate for their gas stove rule shows that only 4 percent of gas stoves available on the market today meet the new standard, essentially forcing Americans to choose electric stoves without any--it is not based on science.",
+    "In rural America, the energy industry generates high-paying jobs for working families and is the driver of the Texas and New Mexico economies.",
+    "In May of this year, Representative Pfluger hosted the Region 6 Administrator to see the impacts of a potential redesignation and the actions producers are already taking to reduce emissions to record levels.",
+    "Since 1990, ozone concentration has decreased by 25 percent and emissions of ozone precursors like VOCs and nitrogen oxides have dropped by 47 percent and 65 percent.",
+    "The EPA sets a level through the Clean Air Act, they attain it, and then the EPA just keeps lowering it and lowering it and lowering it.",
+    "Do you think Iran is doing that?",
+    "Biden's Justice40 Initiative directs 40 percent of Federal clean energy and energy efficiency spending based on ethnicity, migrant status, and income status.",
+    "Environmental justice is just another way for this administration to funnel dollars, your tax dollars, to radical leftwing groups, including anti-Israel groups.",
+    "Fifty million dollars went to the Climate Justice Alliance, which organized anti- Israel protests in the Capitol rotunda last year.",
+    "Climate Justice Alliance's website has a ``Free Palestine'' web page that states: ``The path to climate justice travels through a free Palestine. . . . '' I am sorry.",
+    "Will my Democrat colleagues vote to send money to these groups, Iran's useful idiots, by opposing this amendment on the day that the Prime Minister of Israel came and addressed a joint session?",
+    "They are struggling to pay their electricity bills, and I doubt that they have gotten $50 million or part of what the Climate Justice Alliance got.",
+    "Most of my constituents don't have time to run around protesting with ``Free Palestine'' signs the day that the Prime Minister of Israel was addressing Congress."
+   ]
+  },
+  {
+   "date": "2024-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-23/CREC-2024-07-23-pt1-PgH4743-2",
+   "sentences": [
+    "Madam Chairman, this amendment prohibits the use of funds to implement or enforce the DRBC's rule to ban hydraulic fracturing within the Delaware River Basin.",
+    "In places like my home, the Commonwealth of Pennsylvania, the second largest natural gas producer in the Nation, it is unfortunate that unelected, unaccountable bureaucrats at the Delaware River Basin Commission have instituted a hydraulic fracturing ban for a portion of our State, our Commonwealth, stripping away, at the stroke of a pen, property and mineral rights from Pennsylvanians in contravention of the will of their own legislature.",
+    "To be clear, this amendment simply prohibits the DRBC from implementing or enforcing this hydraulic fracturing ban, but it does not impact the ability of the States in the river basin to regulate hydraulic fracturing as they see fit.",
+    "The safety of hydraulic fracturing has been demonstrated through its extensive use across the Commonwealth of Pennsylvania and across the country, not only over the past two decades but for multiple decades.",
+    "Opposition to this amendment essentially is saying my colleagues support a ban on hydraulic fracturing and for higher natural gas prices for Members' constituents.",
+    "Madam Chair, I urge adoption, and I yield back the balance of my time.",
+    "Madam Chair, this amendment would eliminate funding for administrative expenses necessary for the Advanced Technology Vehicles Manufacturing Loan Program, which provides loans to companies that make Green New Deal cars, and to manufacture so-called advanced technology vehicles and qualifying components, like car manufacturers in this country need an infusion of cash from taxpayers that are buying their cars.",
+    "This law recklessly spends over $1 trillion, ignoring the fact that the national debt is now $35 trillion and will likely be $36 trillion by the end of this year.",
+    "The package also includes almost $8 billion in subsidies for electric vehicle chargers, even though profit incentives have driven private actors in the auto industry, independent startups, and utilities across the country to rush to build charging stations on their own.",
+    "Car dealerships are having trouble moving electric vehicles.",
+    "There is no need to continue throwing good money after bad, coercing private companies to manufacture Green New Deal vehicles that our citizens do not want.",
+    "It has opened up the program not just to light-duty vehicle manufacturers, but to medium- and heavy-duty vehicles, trains, and maritime vessels.",
+    "You go from $35 trillion to $36 trillion, and the debt just keeps on climbing a trillion dollars every 100 days.",
+    "Madam Chair, I urge adoption, and I reserve the balance of my time.",
+    "I urge adoption, and I yield back the balance of my time.",
+    "We are $35 trillion in debt, Mr. Chair.",
+    "We wonder how did we get to $35 trillion in debt?",
+    "This is actually an amendment that does reduce spending.",
+    "Mr. Chairman, at a bare minimum, we should pass this amendment just to keep the Denali Commission where it is, at its pre COVID-19 level, and not allow for its continued growth in the face of trillions of dollars of debt while our people can't afford gas, groceries, daycare, their electricity bills.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "There is absolutely no reason for that dramatic increase in funding-- well, there is one, but you are probably not going to like it-- especially when these projects fund both projects with no national nexus, like electric vehicle charging stations.",
+    "In addition to the charging stations, they also fund stormwater management and green infrastructure.",
+    "Somebody invested in that, and we bought gasoline, and that paid for it, but in this case, we are going to pay for electric vehicle charging stations through our taxes, whether or not we have an electric vehicle.",
+    "Mr. Chairman, I rise to offer this amendment to reduce funding for the Northern Border Regional Commission, or the NBRC, to prepandemic fiscal year 2019 levels.",
+    "This amendment would halve the funding of the Southwest Border Regional Commission.",
+    "This commission, which only had its first chairman confirmed in 2022 and was funded only starting in fiscal year 2021, funds projects in the southern border regions of Arizona, California, New Mexico, and Texas.",
+    "Look, I know folks on the other side of the aisle care about the border.",
+    "However, the answer to solving border problems is to actually enforce our Nation's immigration laws, not to give $5 million to a commission that has not published a strategic plan and does not even appear to have a website.",
+    "We are going to give $5 million to them to fix the border.",
+    "If they are there to fix the border, I would argue they have done a pretty poor job, but we are going from $250,000 to $5 million.",
+    "I suspect we are going to hear from some of my colleagues from Texas about how they want to use this opportunity to fix the border, but this regional commission isn't the answer."
+   ]
+  },
+  {
+   "date": "2024-07-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Safeguard American Voter Eligibility Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-07-10/CREC-2024-07-10-pt1-PgH4556",
+   "sentences": [
+    "My friends on the other side of the aisle say: Well, it is against the law for people here illegally to register to vote.",
+    "Do you know how to register to vote?",
+    "Mr. Speaker, let me tell you who we are providing the honor system to: people who human traffic, drug dealers, cartel members, people on the terrorist watch list."
+   ]
+  },
+  {
+   "date": "2024-06-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-27/CREC-2024-06-27-pt1-PgH4326-5",
+   "sentences": [
+    "Everyday Americans across our Nation, like the folks that I have the honor to represent in Pennsylvania in the Tenth Congressional District, just a few hours from this place, are still suffering the impacts of this administration's reckless spending.",
+    "Our constituents simply can't afford yet another line item on their tab while they are already bearing the brunt of reckless spending by President Biden.",
+    "Madam Chair, I urge adoption, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2024-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Falun Gong Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-25/CREC-2024-06-25-pt1-PgH4133",
+   "sentences": [
+    "Since the early 1990s, the Falun Gong has been targeted by the Chinese Communist Party.",
+    "In 1999, the Chinese Communist Party estimated that 70 to 100 million people were practicing Falun Gong, the equivalent of 5 to 7 percent of the Chinese population today.",
+    "Mr. Speaker, Falun Gong's popularity quickly initiated violent persecution, including illegal detentions, forced labor, torture, and, yes, forced organ harvesting, which is a form of mass murder.",
+    "On July 20, 1999, the Chinese Communist Party detained hundreds of thousands of Falun Gong practitioners and banned any further practice of this religion.",
+    "Since this date, the Chinese Communist Party has continued to escalate its systematic oppression against Falun Gong practitioners.",
+    "Through its repressive control of information, the CCP has created the infrastructure and resources needed to persecute millions of its own citizens, not only Falun Gong practitioners, but also Uyghurs, Tibetans, Christians, and any other the Chinese Communist Party chooses to target.",
+    "Mr. Speaker, I urge adoption of this bill, and I thank my friends on both sides of the aisle for their support."
+   ]
+  },
+  {
+   "date": "2024-06-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-06-14/CREC-2024-06-14-pt1-PgH4067-5",
+   "sentences": [
+    "It just requires the Secretary of Defense to report on the use of taxpayer-funded union time by DOD employees.",
+    "For those who may be unfamiliar, Congress granted certain employees the ability to perform certain tasks for labor unions while on duty.",
+    "To be clear, that means that these employees are being paid by our constituents to work for union activities instead of doing the job that they were hired to perform.",
+    "I think maybe it would be fine if we said in the job description that your job is to do organized labor activities, but that is not what is in the job description.",
+    "Unacceptably, the statistics on the use of official time are very few and far between.",
+    "According to the data from the Department of Veterans Affairs, 346 employees spent 100 percent of their time on official union activities instead of taking care of our Nation's veterans.",
+    "Now, the Trump administration took some steps to improve transparency, including actually reporting the use and the cost of official time by agencies.",
+    "A VA registered nurse, who was elected as a local union official, spent 100 percent of her time doing organized labor activities.",
+    "That might be fine if the job description was organized labor activities, but the job description is registered nurse.",
+    "To use examples from the Department of Defense, the most recent available data or estimates of the data from the Trump administration's final report was that 3,235 DOD employees used official time in FY19 for a total of 526,990 hours at a cost of millions upon tens of millions of dollars, not to mention the equipment.",
+    "However, I would say this: Yesterday I received an email from the AFL-CIO from someone working on official time."
+   ]
+  },
+  {
+   "date": "2024-05-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Cbdc Anti-Surveillance State Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-23/CREC-2024-05-23-pt1-PgH3496",
+   "sentences": [
+    "A central bank digital currency would be infinitely worse."
+   ]
+  },
+  {
+   "date": "2024-05-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Innovation and Technology for the 21st Century Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-22/CREC-2024-05-22-pt1-PgH3419",
+   "sentences": [
+    "While the underlying legislation allows the Commodity Futures Trading Commission the authority to regulate digital asset spot markets, nothing in the bill should be construed as giving the CFTC power beyond digital assets.",
+    "Again, this amendment simply aims to combat mission creep, if you want to call it that, somewhere outside the strike zone and makes clear that Congress' intent is to only address digital asset spot markets in this bill and no more."
+   ]
+  },
+  {
+   "date": "2024-04-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: End the Border Catastrophe Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-19/CREC-2024-04-19-pt1-PgH2533-2",
+   "sentences": [
+    "We told everybody that we are going to do border security and attach it to this bill, that this is all going to go to the Senate, and then the President is going to sign it.",
+    "Border security is not in here.",
+    "You are getting a box sent to you in the mail that says, ``border security.'' If you are Laken Riley's parents, if you are Kate Steinle's parents, you are getting a box that says, ``border security.'' You open it up, and there is nothing in it."
+   ]
+  },
+  {
+   "date": "2024-01-31",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Tax Relief for American Families and Workers Act of 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-01-31/CREC-2024-01-31-pt1-PgH343-2",
+   "sentences": [
+    "Now, we are getting ready to flood more because, Mr. Speaker, regardless of what anybody thinks, if you are here illegally with a Social Security number, you are going to get the money.",
+    "I have a news flash for you: Little kids don't get the checks sent to them, even though they got a Social Security number, but their parents, who are here illegally, do, and it is going to happen by the millions."
+   ]
+  },
+  {
+   "date": "2023-11-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-14/CREC-2023-11-14-pt2-PgH5809-2",
+   "sentences": [
+    "Mr. Chairman, this amendment halves the funding for the taxpayer-funded activists at the National Labor Relations Board.",
+    "The National Labor Relations Board is supposed to act to prevent and remedy unfair labor practices committed by private-sector employers and unions.",
+    "Unfortunately, under the Biden administration, the NLRB has been filled with labor activists who seek only to empower union bosses at the expense of employees, employers, and consumers.",
+    "Moreover, their recent actions represent substantial executive overreach to implement a radical agenda so toxic that it could not be achieved by this administration when they had both Chambers of Congress or by the Obama administration with a filibuster-proof majority.",
+    "Instead, the Biden administration seeks, through executive fiat, to impose the PRO Act that failed to pass legislatively.",
+    "Just this year, the Biden NLRB has issued the following PRO Act provision by fiat: Joint employers standard, which destroys the franchise model and eliminates independent contractors; ambush elections, which shortens the timelines for elections to prevent employees from making fully informed decisions about whether to unionize or not; and card check, which eliminates secret ballot elections and ensures union bosses can intimidate and lie their way into certification.",
+    "This radical acting official rescinded pro-employee memos that: protected employee's rights not to fund union activity; provided injured workers with remedies when they were injured due to union malfeasance; and challenged neutrality agreements as improper efforts by employers to support a union and eliminate the right of its employees to decide whether or not to organize.",
+    "I don't believe that the Republican majority cares much about the goals; that is, about dealing with worker complaints, dealing with basic, fundamental, collective bargaining rights.",
+    "I know it is a news flash to everybody in this town, but next month in December we are going to be $34 trillion in debt.",
+    "It used to be a great coal mining State, but not only is that happening, the opposition--my friends on the other side of the aisle--is demanding everybody electrify their lives, electric vehicles only.",
+    "Mr. Chairman, this amendment prohibits the use of funds for the National Labor Relations Board to implement, administer, or enforce its representation case procedures rule, which imposes ambush elections for unionization.",
+    "This rule imposes ambush elections, which significantly shorten the times between the filing of a petition for a union election and the election itself.",
+    "Among the concerning provisions that would return is a requirement that within 2 days of the issuance of a direction of election, employers provide personal contact information of prospective voters to the unions.",
+    "This requirement that employers provide employee information to the union subjects the employees and their families to intimidation, coercion, and threats.",
+    "The unions are going to get it.",
+    "These provisions were also included in the PRO Act, a bill that failed legislatively when Democrats had the White House and control of both Chambers, and like the Obama administration, this administration seeks an end around, to end around the legislative branch and impose an agenda too unpopular to become law.",
+    "Mr. Chairman, as I said, the ambush election simply shortens the time between the filing of a petition for a union election and the election itself.",
+    "Nobody on this side of the aisle has any issue or problem with collective bargaining or the ability to unionize, but unfortunately, my friends on the other side of the aisle just want to move more quickly.",
+    "The people should decide, not the union bosses, and certainly not this place jamming it down their throat.",
+    "Unions are associated with creating the middle class, and they have done a great job at doing that.",
+    "People have every right in the United States of America to unionize.",
+    "Mr. Chair, I think it was the National Labor Relations Act, and I think it may have been Franklin Roosevelt who dealt with the National Labor Relations Board.",
+    "Do you know how many union elections--I will tell you about one in the city of New Haven.",
+    "The graduate students at Yale University, who I worked with for several years, were shot down by the NLRB year after year after year, maybe for 6 or 7 years, until finally last year, they were able to be able to form the union.",
+    "It has been a slow walk to get unions recognized and give people the opportunity to be represented by a labor union.",
+    "It only takes grit and tenacity to get through it in order to be able to get the opportunity to be represented by a union.",
+    "But because they want those union dues--let's get right down to it.",
+    "Because my friends on the other side of the aisle want those union dues so they can funnel them into campaigns for elections, they are going to try and force these elections, these ambush elections, on our employers to increase union participation where it is not needed, it is not wanted, and it is not helping anything.",
+    "Mr. Chair, this amendment prohibits the use of funds for the National Labor Relations Board to implement or enforce the Cemex decision, which imposes a backdoor card-check scheme.",
+    "This ruling threatens to take away secret ballot elections for unionization, including requiring an employer to recognize a union if the NLRB alleges unfair labor practices in the lead-up to the election.",
+    "Card check allows for a union to be certified once a certain number of employees sign cards in favor of petitioning for a union election.",
+    "Rarely do unions garner as much support in secret ballot elections as they do with signature cards.",
+    "Secret ballots insulate employees from these despicable tactics and allow them to express their true desire regarding the union question without concerns for the safety of themselves and their families.",
+    "For whatever reason, the minority feels it is important to exempt their special interests in the unions from this fundamental truth to rig the game in their favor to make up for plummeting unionization rates around the country.",
+    "Democrats have attempted and failed to pursue card check legislatively because they can't win it.",
+    "Rejected by the elected representatives, the unions and their lackeys on the NLRB are attempting to pursue this by executive fiat.",
+    "Mr. Chair, allowing for secret ballot union elections free of coercion, intimidation, and threats should be a pretty easy concept to support, regardless of your party or union status.",
+    "Unions are sometimes being elected in businesses and sometimes are not.",
+    "Americans understand secret ballot, because it preserves the anonymity and saves them from the coercive tactics that we saw in the unions back in the 1970s.",
+    "I think one has to try to take a look at the labor history in our country in a very serious way to understand that the birthing of the unions, the struggle for workers' rights, and the violence against workers who have tried to form unions in this country.",
+    "It has been not an acceptance of the collective bargaining rights of workers in this Nation.",
+    "Some sacrificed their lives to get the creation of a union in this Nation.",
+    "The delays and the delays and the delays to recognize workers' rights; to study labor history in this Nation and what a difficult time it has been for workers to be able to be represented by a union of their choice and not have to fight over and over and over again for their rights.",
+    "It can't be that my colleagues on the other side of the aisle don't understand the labor history and what has happened, and the forces that have tried to keep labor unions from forming.",
+    "Labor unions created the middle class of this Nation.",
+    "Mr. Chair, the chairwoman talks about the violence against workers from trying to form unions.",
+    "Mr. Chairman, for goodness' sake, do all the States that have right- to-work laws--are all those people so miserable that they are leaving those States for States that force almost unionization unilaterally?",
+    "Oh, by the way, if you know labor law, you know that labor unions are actually allowed to break the law with impunity.",
+    "There is no reason that we can't have a secret ballot to unionize.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-11-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Financial Services and General Government Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-08/CREC-2023-11-08-pt1-PgH5550-5",
+   "sentences": [
+    "Its unconstitutional, unaccountable leadership structure has been litigated before the Supreme Court.",
+    "Much like other Biden administration approaches to financial services regulation, the FTC policies under Chair Lina Khan threaten to disrupt entire sectors of the American economy by moving away from the consumer welfare standard toward arbitrary metrics that aim to break up companies--or stop them from merging--simply because they are too big.",
+    "Other FTC concerns include the use of noncompete clauses in contracts, and the idea that mergers themselves--rather than downstream effects on consumers--negatively impact consumers.",
+    "I don't need to tell everybody here, I hope, but we are $33.7 trillion in debt--the last time I checked the debt clock, 2 days ago--and there ain't no end in sight.",
+    "As my young daughter told me when she looked at the debt clock for the first time, she said, Well, it doesn't stop.",
+    "I do know the difference between gasoline and diesel and kerosene because I have a nose, and I can read.",
+    "Do people put gasoline in diesel and diesel in gasoline?",
+    "We don't need the government wiping our rear end every time we go to the bathroom, but that is what you would have us believe, that that is what we need, that Americans are so dumb, they can't do it without the Federal Government.",
+    "I urge adoption, and I yield the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-07/CREC-2023-11-07-pt1-PgH5503-2",
+   "sentences": [
+    "Mr. Chair, this amendment prohibits the use of any funds in this act for so-called transit-oriented development.",
+    "Contrary to the claims of proponents of such communities, they do not increase ridership on transit lines.",
+    "Moreover, like transit investment generally, they do not create economic growth.",
+    "This is a giveaway to developers in large urban areas, as most areas do not have the population density to support these communities.",
+    "It does not address the more fundamental issue plaguing our Nation's transit systems than driving down ridership, which is the problem.",
+    "Let me be clear: We are not talking about the transit lines themselves.",
+    "This is transit-oriented development.",
+    "There is a transit line running somewhere.",
+    "What that means is that we are going to subsidize some developer to build housing or whatever other development adjacent to the line to hope that those people will then get on that transit line.",
+    "Then, the people who get into that development take their cars to wherever they are going and don't ride on the transit line.",
+    "If you have to have transit lines, God bless you.",
+    "There is no reason whatsoever that this is a Federal requirement or a Federal nexus at all to build developments next to transit lines.",
+    "They should do that, but people in Pennsylvania shouldn't be supporting transit-related development in California any more than people in California should be supporting it in Illinois.",
+    "We shouldn't require every taxpayer in the country to pay for transit-oriented development to boost ridership on the lines that don't have any so that we can justify the lines and then build more lines without any ridership.",
+    "I have no interest in riding mass transit.",
+    "My daughters get on the bus every morning, and I remind them, as they are standing up there at the bus stop in the freezing cold waiting for the bus, that I hope they enjoy their mass transit.",
+    "I hope they enjoy their public transportation because it is inefficient.",
+    "Riding in America's cities on mass transit, my colleague said it is safer.",
+    "It is not safe here in the Nation's Capital to ride on transit.",
+    "This is about subsidies and boondoggles and things that we can't afford while we are $33 trillion in debt.",
+    "If somebody wants to build, if some developer wants to build next to the transit line because they think it will help them sell their properties in their development more quickly, they should do that.",
+    "Mr. Chair, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "The IIJA, the Infrastructure Investment and Jobs Act, required the Department of Transportation to issue a mandate for heavy-duty trucks to be equipped with automatic emergency braking systems.",
+    "I urge adoption of this amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-11-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-06/CREC-2023-11-06-pt1-PgH5427-2",
+   "sentences": [
+    "I know I am going to be a broken record, but we are going to hear the broken record of $33 trillion in debt and climbing every single day at exponential rates unseen before in history.",
+    "We don't need this, and I urge adoption.",
+    "Mr. Chair, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "Take some of the grant projects being funded in this bill using transit infrastructure grants: $1.05 million for the rehabilitation of the Baldwin Park Train Station in Baldwin Park, California.",
+    "I haven't used the microtransit project, but I get to pay for it, and so do all my bosses. $850,000 for the Norwalk Transit System bus stop equity project in Norwalk, California.",
+    "I bet nearly all of them are already eligible for some form of Federal transit spending anyhow.",
+    "By overextending their resources in search of Federal grant funding, transit agencies fail to consider the impact this will have on their ability to provide existing services.",
+    "FDA data shows 2023 ridership came in a little over 50 percent of 2019 levels, so there is little need to build out additions to the transit system before we can ascertain the long-term impact of the pandemic and the interest in public transportation generally on ridership.",
+    "Congress now has provided in excess of $100 billion in annual and emergency spending to public transit agencies over the pandemic era period.",
+    "It is how we ended up $33 trillion in debt, for things like this.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "Mr. Chairman, this amendment strikes $150 million in grants from the Washington Metropolitan Area Transit Authority, known as WMATA.",
+    "Like many transit agencies, even before the pandemic, WMATA had an unsustainable budget outlook and operation, getting 53 percent of its budget through State and local subsidies--not through fares of all the well-to-do folks around the area riding, but through subsidies.",
+    "Not only are they paying for a building nobody is in, but they are paying for a transit system that is taking no one to work in these places.",
+    "WMATA's leadership says that the deficit results from inflation, collective bargaining agreements, and, importantly, $288 million from decreased ridership.",
+    "We just heard from the gentleman right before me about how dangerous it is to ride in the National Capital's transit system.",
+    "People come here and it is dangerous to ride on the transit system of their Capital.",
+    "This transit system is expecting to get this $150 million in grants, and they are still going to lose $750 million in 2025 and $830 million in 2026.",
+    "They keep on getting bailed out by the good people from around the country who can't even go to their Nation's Capital and be sure that they won't be beaten up, robbed, or worse on the transit system.",
+    "Mr. Chairman, I urge adoption of this amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-02/CREC-2023-11-02-pt1-PgH5243",
+   "sentences": [
+    "This amendment strikes the $28 million in this bill to the Bureau of Ocean Energy Management renewable energy program that promotes the administration's reckless goal of creating 30 gigawatts of offshore wind production by 2030.",
+    "The promotion of the rapid expansion of offshore wind is particularly misguided considering offshore wind's high levelized cost, the significant lack of reliability, the impact on flight safety and national defense, and the threat to endangered ocean wildlife from offshore wind activity.",
+    "Offshore wind is one of the most expensive energy sources available.",
+    "The Energy Information Administration estimates the levelized cost of energy for offshore wind at $136.51 per megawatt hour, which is three times as much as even onshore wind, which is still way more expensive than the traditional forms of energy that are clean and that we rely on to turn these very lights on in this Chamber.",
+    "The heavy reliance on offshore wind is a contributing factor to the United Kingdom having one of the highest electricity prices in the world.",
+    "In addition to being expensive, wind power is notoriously unreliable.",
+    "Intermittency is a fact of life for wind power and one that cannot be overcome or ignored.",
+    "One of the significant contributors to the European energy crisis in 2021 and 2022 is a flatlining of offshore wind production.",
+    "Investing Federal resources in this expensive and unreliable technology is economically ill-advised and unaffordable as we are $33 trillion in debt.",
+    "Beyond the economic problems with offshore wind, these projects actively threaten national security, maritime safety, and flight safety.",
+    "The Department of Defense has identified most of the eastern Atlantic Coast as a wind exclusion zone for defense and defense training, including active and currently leased wind farm areas.",
+    "The interagency Wind Turbine Radar Interference Mitigation Working Group has raised concerns that these offshore wind farms will create radar interference that will impede air traffic control, homeland security, national defense, and weather forecasting.",
+    "Despite these concerns and the grave implications of radar interference on the military and the maritime and aviation industries, the Bureau of Ocean Energy Management has recklessly pursued these offshore wind projects without addressing any of these issues.",
+    "The Bureau's renewable energy program is recklessly green-lighting wind energy projects without accounting for any of the concerns I just raised.",
+    "The Biden administration has weaponized this CEQ with developing policies on climate change, environmental justice, and Federal sustainability, all while creating more paperwork under NEPA that the previous administration tried to reverse.",
+    "Finally, we want to remind everybody--in case no one else knows it--we are $33 trillion in debt and in the next 18 months we will probably be $36 trillion in debt.",
+    "Mr. Chairman, I urge adoption, and I yield back the balance of my time.",
+    "However, again, we are $33 trillion in debt.",
+    "I will say, yet again, since people in Washington don't seem to care, we are over $33 trillion in debt.",
+    "I know the good gentleman from Idaho talked about we are reducing spending, we continue to reduce spending, and we try to do that.",
+    "We keep on talking about reducing spending, but somehow--I don't know how it is--when I watch that clock one of my colleagues wears on his lapel, the numbers on the national debt clock continue to get larger.",
+    "I showed the national debt clock to my daughter one time, and she said, ``What is that?'' I pulled it up online, and I showed it to her.",
+    "Here are some more projects: $60,000 to incorporate diversity, equity, and inclusion concepts and content into humanities general education courses at Thomas Edison State University in Trenton, New Jersey; a wonderful place; Over $360,000 for diversity, equity, and inclusion programs at the University of Central Oklahoma; $215,000 to California State University for 25 middle and high school English teachers to study climate futurism, which is storytelling that uses climate science as a catalyst to imagine possible climate futures.",
+    "Now, the President has just asked for a supplemental of over $100 billion for wars in Ukraine, Israel, and to process more illegal migrants across our border.",
+    "This 2010 power grab, known as the Chesapeake Bay TMDL, directly contradicts the intent of the Clean Water Act, directly contradicts it.",
+    "The Clean Water Act clearly acknowledges State authority in water quality and requires cooperation, not coercion, between the States and the Federal Government."
+   ]
+  },
+  {
+   "date": "2023-11-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-02/CREC-2023-11-02-pt1-PgH5315",
+   "sentences": [
+    "Mr. Chair, this amendment prohibits the EPA from using funds for actions pursuant to section 115 of the Clean Air Act.",
+    "Section 115 of the Clean Air Act allows the EPA to mandate State emissions levels to whatever level the agency deems appropriate if they find the following: U.S. emissions endanger a foreign nation, and the endangered nation has a reciprocal agreement to prevent or control these emissions in their own nation.",
+    "This is a backdoor provision that allows the EPA to vastly expand its regulatory authority and encroach on the rights of the States to regulate their own energy sectors based on the actions of a foreign nation and a determination of the executive branch solely without any input from this branch.",
+    "Mr. Chairman, this goes exactly to the Paris climate accord.",
+    "When section 115 was written, along with the rest of the Clean Air Act, that Paris climate accord did not exist.",
+    "I think that they had good intentions, and I agreed with those good intentions at the time, but since the Paris climate accord has been agreed to by this administration, this is a dangerous precedent to set."
+   ]
+  },
+  {
+   "date": "2023-10-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Energy and Water Development and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-25/CREC-2023-10-25-pt1-PgH5066",
+   "sentences": [
+    "Unfortunately, this bill provides nearly three quarters of a million dollars to the Delaware River Basin Commission, meaning that since 1998, the Federal Government has provided funding of some sort to this commission full of unelected, unaccountable bureaucrats that have unilaterally, in this case, instituted a hydraulic fracturing ban for a portion of the Commonwealth of Pennsylvania, literally stripping away the property and mineral rights from Pennsylvanians in direct contravention of the will of the legislature.",
+    "This amendment that I am offering would rescind this money and move it to the spending reduction account, ensuring that we do not further incentivize this commission to attack American energy and the rights of Pennsylvania while trying to pay off some of our $33 trillion of debt.",
+    "Hydraulic fracturing; banned it in contravention of the will and the wishes of the elected members of the Pennsylvania legislature.",
+    "Mr. Chairman, this amendment strikes $35 million in funding for the Office of Clean Energy Demonstrations.",
+    "For those unfamiliar with this office, according to its website, it accelerates the market adoption of clean energy technologies and fills a critical innovation gap on the path to 100 percent clean energy by 2035 and net zero emissions by 2050.",
+    "It funds projects like long-duration energy storage and distributed energy systems to support the electric grid for electric vehicles, which are also being subsidized by your Federal Government under force of penalty of you not paying your taxes.",
+    "The Democrats continue to push this technology when the drawbacks of this so-called clean energy technology are clear.",
+    "The actual grid is being powered by solar and wind energy sources that are inherently unreliable and don't work when the Sun is not shining and the wind is not blowing.",
+    "This office that I am talking about is also managing $2.5 billion for carbon capture facilities and greenhouse gas monitoring technology.",
+    "Oh, by the way, the good gentleman from Tennessee, much of the home of nuclear fission and nuclear energy is in the United States of America.",
+    "When have we built a nuclear reactor in the United States of America?",
+    "If it was building nuclear reactors, maybe I could see it, but it seems to me we are paying for it and putting the research on the shelf, or worse yet, giving it to France.",
+    "I urge adoption of my amendment, and I yield back the balance of my time.",
+    "However, we are spending money above the authorization, and I do dispute that because we are $30-some trillion in debt with nothing in sight except more debt.",
+    "Mr. Chair, I urge adoption of this amendment, and I yield back the balance of my time.",
+    "I don't know if you looked at the economics and the financials of just the last couple of months, how much more we have gone into debt in just the last couple of months.",
+    "Mr. Chair, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "I am just saying, let's save a little money here because we have this debt we can't afford.",
+    "Mr. Chairman, I have been to places where the country could no longer afford the debt that it had.",
+    "At a time when our growing national debt has surpassed $33 trillion, we cannot continue to use taxpayer dollars to fund wasteful, unnecessary, and duplicative programs.",
+    "Mr. Chair, I thank the kind gentleman from Tennessee for averring or implying that I am the reasonable one in the debate here, and I would, on behalf of the gentleman from South Carolina, urge adoption.",
+    "Mr. Chair, I rise to offer this amendment to reduce funding for the Northern Border Regional Commission, or the NBRC, to fiscal year 2019 levels.",
+    "I just don't understand why people in Ohio, Tennessee, Pennsylvania, Texas, California, Georgia--you name it--are paying for this, especially when they can't afford the bills they already have as evidenced by a $33 trillion debt and a $2.2 trillion deficit this year.",
+    "Furthermore, the Biden administration's aim to inject their misguided diversity, equity, inclusion and accessibility, and climate-related goals into these projects are not only unaffordable, they are just completely unnecessary.",
+    "I just want to rely on everybody's integrity here, but there is absolutely no reason for the dramatic increase in funding, especially when these projects fund both projects with no national nexus like electric vehicle charging stations.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "This amendment would be to have the funding for the Southwest Border Regional Commission.",
+    "Now, this Commission, which only had its first chairman confirmed in 2022 and only was funded starting in fiscal year 2021, funds projects in the southern border regions of Arizona, California, New Mexico, and Texas.",
+    "I know that folks on both sides of the aisle care about the border.",
+    "However, the answer to solving border problems is to actually enforce our Nation's immigration laws, not to give $5 million to a commission that has not published a strategic plan and does not even appear to have a website.",
+    "To the gentleman from Arizona's point, he is absolutely right, their States are being ravaged and destroyed by the Federal Government's refusal and obstinance to follow the law and allowing people to flow across the border illegally into their communities and destroy their communities.",
+    "We are not going to quit putting our country in debt and bankrupting it.",
+    "Mr. Chairman, I urge adoption of this amendment, and I yield back the balance of my time.",
+    "Again, I would just remind everybody that we are just a little bit in debt--just a little bit--$2.2 trillion this year, $33 trillion overall.",
+    "Mr. Chair, I urge adoption of my amendment, and I reserve the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-28/CREC-2023-09-28-pt1-PgH4719-3",
+   "sentences": [
+    "Mr. Chairman, I rise in support of this amendment, which eliminates $230,599,000--a lot of money whether you are in Arizona, Pennsylvania, or Washington, D.C.--in funding to the U.S. Agency for International Development, funds appropriated to the President capital investment fund.",
+    "I once again bring up the amendment to address the massive spending that is appropriated to USAID.",
+    "We have massive debt right now.",
+    "Mr. Chairman, our country is now $33 trillion in debt.",
+    "If we are going to use USAID to do that, well, that is all well and good, too, but let's enumerate how we are actually going to use this money to counter China.",
+    "People wonder, how do we get $33 trillion in debt?",
+    "That is awesome because other than our one ally there, there is not much scientific collaboration that I am interested in participating in-- certainly not with Iran.",
+    "Furthermore, during the debate on the Homeland Security funding bill this week, many of my colleagues on this side of the aisle rightfully pointed out the disaster occurring at our southern border to the tune of thousands of people every single day coming in.",
+    "In my district just in the last week, half a dozen people died from fentanyl that came across the southern border into my town thousands of miles away from the border.",
+    "One of the refrains of the Biden administration and border czar Harris seems to be that the only way to solve this is to address the root causes instead of simply enforcing our own border."
+   ]
+  },
+  {
+   "date": "2023-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-28/CREC-2023-09-28-pt2-PgH4826",
+   "sentences": [
+    "Further, and almost maybe even more disturbing, the curriculum of UNRWA's schools, which uses the textbooks of the host government or authorities, has long contained materials that are anti-American, anti- Israel, anti-Semitic, and supportive of violence--direct violence.",
+    "Not one more dime of our taxpayer money should go toward an agency that has continuously promoted hatred toward this country, toward our taxpayers, toward the things we believe in, and toward our allies--in particular Israel.",
+    "Mr. Chair, I urge adoption of the amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-09-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of H.R. 4365, Department of Defense Appropriations Act, 2024; Providing for Consideration of H.R. 4367, Department of Homeland Security Appropriations Act, 2024...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-26/CREC-2023-09-26-pt1-PgH4480",
+   "sentences": [
+    "The last time Congress actually passed all the bills was 1996, when the U.S. national debt was a staggering $5.2 trillion.",
+    "Just last week the debt hit $33 trillion.",
+    "In 1996, we were $5 trillion in debt.",
+    "Now we are $33 trillion in debt.",
+    "Madam Speaker, we should pass this rule so we can pass the 12 bills and so we can reject the nongermane Senate bill that hooks the FAA with Ukraine spending."
+   ]
+  },
+  {
+   "date": "2023-09-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-26/CREC-2023-09-26-pt2-PgH4505-2",
+   "sentences": [
+    "Remember your healthcare costs, how they were going to go down when we socialized medicine with the Affordable Care Act, and now you can't afford medicine?"
+   ]
+  },
+  {
+   "date": "2023-07-20",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing Growth and Robust Leadership in American Aviation Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-20/CREC-2023-07-20-pt1-PgH3863-4",
+   "sentences": [
+    "Mr. Chair, I urge adoption of this amendment.",
+    "Congressional staff spend hours helping constituents just get a human being on the telephone to get answers from agencies like Social Security or the IRS."
+   ]
+  },
+  {
+   "date": "2023-07-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing Growth and Robust Leadership in American Aviation Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-07-19/CREC-2023-07-19-pt1-PgH3823-2",
+   "sentences": [
+    "Mr. Chairman, I urge adoption.",
+    "Now, as a reminder, in the CLEEN Program, the FAA provides awards to industry to develop and integrate technology that will reduce noise, emissions, and fuel burn.",
+    "Surely, if they improve fuel efficiency, that is a clear profit- driven motive to invest in new technologies.",
+    "The program also funds the development of ``alternative'' jet fuels which is just another facet of the left's crusade to reduce greenhouse gas emissions to meet completely arbitrary and unscientific targets.",
+    "The administration aims to achieve ``net zero'' greenhouse gas emissions from the aviation sector by 2050.",
+    "The engine still emits carbon dioxide.",
+    "Instead, emissions are actually produced out of waste products cooking oil and agricultural waste instead of fossil fuels, and then the engine burns that.",
+    "Somehow this country figured out and invented the internal combustion engine, the lightbulb, the airplane, and went to space.",
+    "The third phase of the CLEEN Program is awarding more than $100 million for aircraft and engine companies to develop and demonstrate aircraft technologies that reduce fuel use, emissions, and noise.",
+    "We have already reduced emissions more than all the other countries combined.",
+    "We already met the Paris climate accords requirements without being in the accord.",
+    "Now, other barriers to adoption include risks related to adoption, including safety.",
+    "Mr. Chair, we don't need to provide more subsidies to support this climate smart agriculture practice and production of aviation biofuel feedstocks.",
+    "Mr. Chairman, I urge adoption of my amendment, and I yield back the balance of my time.",
+    "Our national debt is out of control, and it is this mindless, rapid growth of spending in Washington that has put our Nation on the brink of catastrophe.",
+    "You can see the electric vehicles burning at the charger, burning people's garages, burning and burning and burning.",
+    "We can do that, but we can't find any way to charge and make sure they are paying their fair share into the fund that they are going to use the infrastructure of, right?",
+    "This is how you can't afford things that you need to do, like pay for your highways, filled now with electric vehicles that are not paying into the system, paying nothing for the roads that they are on, weighing thousands of pounds in excess of most of the regular cars that are using the road now and are paying the fee.",
+    "Mr. Chairman, I urge adoption of the amendment, and I yield back the balance of my time.",
+    "Accordingly, the Committee rose; and the Speaker pro tempore (Mr. Graves of Missouri) having assumed the chair, Mr. Flood, Acting Chair of the Committee of the Whole House on the state of the Union, reported that that Committee, having had under consideration the bill (H.R. 3935) to amend title 49, United States Code, to reauthorize and improve the Federal Aviation Administration and other civil aviation programs, and for other purposes, had come to no resolution thereon. ____________________"
+   ]
+  },
+  {
+   "date": "2023-04-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of a Rule Submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency--Veto Message From the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-04-18/CREC-2023-04-18-pt1-PgH1782-2",
+   "sentences": [
+    "We are not talking about the Clean Water Act."
+   ]
+  },
+  {
+   "date": "2023-03-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-30/CREC-2023-03-30-pt1-PgH1662-5",
+   "sentences": [
+    "Mr. Chair, this amendment simply ensures that no undue influence can be wielded by the Chinese Communist Party using an existing provision, which I think reflects the overall sentiment behind this anti-CCP and forced labor provision of the entire bill.",
+    "Mr. Chair, I urge support and adoption of this amendment, and I reserve the balance of my time.",
+    "Mr. Chair, I urge adoption of the amendment, and I reserve the balance of my time.",
+    "Mr. Chair, I urge adoption, and I yield back the balance of my time.",
+    "Worse yet, the projects empower the Chinese Communist Party and exploit their regime of slave labor."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Lower Energy Costs Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgH1542",
+   "sentences": [
+    "Mr. Chair, this amendment prohibits the unelected and unaccountable Delaware River Basin Commission, the Susquehanna River Basin Commission, and the Interstate Commission on the Potomac River from improving hydraulic fracturing regulations more stringent, more stringent than those passed by the duly-elected State representatives and Senate in which the regulation is to be implemented or enforced.",
+    "Unfortunately, again, unelected, unaccountable bureaucrats at the Delaware River Basin Commission have instituted a hydraulic fracturing ban for a portion of the Commonwealth of Pennsylvania, stripping away property rights and mineral rights from Pennsylvanians in contravention of the will of their very own legislature.",
+    "Using this playbook, radical environmentalists and unelected bureaucrats will next prevent hydraulic fracturing in the Susquehanna River Basin and the Potomac River Basin, as well.",
+    "It makes no changes to the ability of States to regulate hydraulic fracturing as they see fit, as their legislatures see fit, as their citizens see fit.",
+    "Opposition to this amendment is support for a hydraulic fracturing ban and for higher natural gas prices for your constituents and your citizens.",
+    "Mr. Chairman, this amendment repeals section 115 of the Clean Air Act.",
+    "This vital amendment protects the autonomy of the States over their own energy sectors by ensuring that unelected, unaccountable EPA bureaucrats cannot seize control over these vital industries under the guise of emissions reductions.",
+    "The administrator determines that that country will lower their emissions a commensurate amount.",
+    "Since President Biden reentered the Paris climate agreement, it can be argued that these conditions have been met and EPA can immediately impose devastating requirements as it was argued when the Obama administration first entered the agreement.",
+    "Language to prevent the use of section 115 of the Clean Air Act has passed the House three times under Republican majorities: Twice in the 115th Congress and once in the 114th.",
+    "I didn't think they would actually defund the police.",
+    "Heaven forbid, I didn't believe they would actually try and ban my gas stove.",
+    "The League of Conservation Voters: ``While there has been limited use of section 115, numerous scholars have advocated for its use as a pathway to reduce greenhouse gas emissions, particularly since the Paris Agreement.'' How about Foreign Policy for America: This amendment would undermine EPA's authority for ``its potential future applications to greenhouse gases.'' Yeah, we want to undermine their authority and make the authority of the States preeminent."
+   ]
+  },
+  {
+   "date": "2023-03-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of the Rule Submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-09/CREC-2023-03-09-pt1-PgH1221",
+   "sentences": [
+    "Now, the ranking member, a good gentleman, and I can agree that we all want clean water.",
+    "This isn't about the Clean Water Act because the Clean Water Act still exists.",
+    "This is about a rule made by bureaucrats down the street to control the water in your backyard."
+   ]
+  },
+  {
+   "date": "2023-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protecting Speech From Government Interference Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-08/CREC-2023-03-08-pt1-PgH1180",
+   "sentences": [
+    "Mr. Chair, I rise to offer Dr. Foxx' amendment to prohibit censorship while acting as an employee performing activities under taxpayer-funded time.",
+    "We want to prohibit censorship while you are acting as an agent of the Federal Government using taxpayer dollars.",
+    "Public-sector unions already make liberal use of the so-called official time policy--in my opinion, to the detriment of the American people.",
+    "In fiscal year 2019--going back a few years--employees spent nearly 350,000 hours receiving taxpayer funds while doing and conducting union activities.",
+    "Mr. Chair, that is the equivalent of 40 years of time in 1 year conducting union activities.",
+    "VA employees spent over 500,000 hours in 1 year wheeling and dealing for their own union interests while our Nation's veterans stood in line.",
+    "We are here to talk about censorship being conducted while on official government time.",
+    "While I object to the entire practice, I hope even my colleagues who support taxpayer-funded lobbying can agree that those employees should be expressly prohibited from censoring the American people while on official time.",
+    "Mr. Chairman, I urge adoption of the amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-03-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reduce Exacerbated Inflation Negatively Impacting the Nation Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-01/CREC-2023-03-01-pt1-PgH976-4",
+   "sentences": [
+    "This amendment seeks to provide that transparency so that they know the effect of executive orders coming out of the White House, how it affects their wallet.",
+    "With that, Mr. Chairman, I urge adoption of this amendment, and I reserve the balance of my time.",
+    "Mr. Chairman, I urge adoption of the amendment, and I yield back the balance of my time."
+   ]
+  },
+  {
+   "date": "2023-02-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on March 13, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-02-01/CREC-2023-02-01-pt1-PgH607",
+   "sentences": [
+    "For anybody that is concerned about title 42, the statute governing title 42 does not make any mention of the emergency declaration."
+   ]
+  },
+  {
+   "date": "2023-01-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Strategic Production Response Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-26/CREC-2023-01-26-pt1-PgH351-2",
+   "sentences": [
+    "It is about trust because we have been told--the American people have been told--that the President is doing all he can to make sure that gas prices are low, that your diesel prices are low.",
+    "This administration tells us all the time they are doing all they can, but they are not doing all they can when they tell you they are going to outlaw your gas stove and require you to buy an electric vehicle, by the way, which they can't support charging, but that is another story."
+   ]
+  },
+  {
+   "date": "2023-01-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Select Subcommittee on the Weaponization of the Federal Government",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-01-10/CREC-2023-01-10-pt1-PgH129",
+   "sentences": [
+    "We just had Social Security numbers of the targets of the so-called J6 investigation released to the public."
+   ]
+  },
+  {
+   "date": "2022-12-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Consideration of the Senate Amendment to House Amendment to Senate Amendment to H.R. 2617, Agriculture, Rural Development, Food and Drug Administration, and Related Agencies...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-23/CREC-2022-12-23-pt1-PgH10063-7",
+   "sentences": [
+    "Somebody wrote in there that we are going to protect Tunisia and Egypt's border, but we are not going to do anything to protect our border.",
+    "This does absolutely nothing to fix our border."
+   ]
+  },
+  {
+   "date": "2022-09-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Merger Filing Fee Modernization Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-29/CREC-2022-09-29-pt1-PgH8252",
+   "sentences": [
+    "He used that to forgive the loans of all these people that incurred student debt."
+   ]
+  },
+  {
+   "date": "2022-07-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Further Consideration of H.R. 7900, National Defense Authorization Act for Fiscal Year 2023--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-07-13/CREC-2022-07-13-pt2-PgH6339-2",
+   "sentences": [
+    "This is about political ideology and using the National Defense Authorization Act for more bureaucracy, a climate change officer at embassies, consulates, diplomatic missions, et cetera.",
+    "It is alleged to provide expertise on climate change in the State Department, and it stipulates that this must be done in an equitable, inclusive, and just manner.",
+    "Sending State Department officials around the globe to tell other countries trying to emerge in their world, in their economies, by adopting ineffective, destabilizing green energy just so that John Kerry can fly around in his private jet and rub elbows with billionaires in Davos.",
+    "This amendment also contains the sense of Congress that would affirm climate change as one of the core tenets of foreign policy priorities.",
+    "They just overthrew their government because they can't eat because of these policies, these policies imposed on them by the United States of America in the accolades of this Green New Deal garbage.",
+    "Our military, our national defense, needs to focus on real enemies, enemies like China, Iran, terrorism, and potentially Russia, but not in a proxy war in Ukraine.",
+    "Climate change can be handled by other agencies and should be handled by other agencies.",
+    "Mr. Speaker, this amendment, as has been stated, establishes an office of climate resilience in the White House and a climate resilience equity advisory board, including outside stakeholders, to develop a national climate resilience action plan.",
+    "The stakeholders should be the American people, outside stakeholders developing a national climate resilience action plan.",
+    "It is just another level of Federal bureaucracy in the name of climate that does nothing to improve the readiness of our military or support the warfighter.",
+    "But I guess we are going to do this social justice climate fearmongering.",
+    "Unelected bureaucrats at the DRBC have usurped the authority of the Pennsylvania legislature, which my colleague on the other side of the aisle and I served in, and have deprived Pennsylvanians of their property rights by instituting a ban on hydraulic fracturing.",
+    "Maybe there is a national security nexus because preventing the responsible development of Pennsylvania's wealth of natural gas has enriched the Putin regime.",
+    "It has funded its aggression in Ukraine and continued European dependence on Russian gas."
+   ]
+  },
+  {
+   "date": "2022-06-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supreme Court Police Parity Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-14/CREC-2022-06-14-pt1-PgH5495-4",
+   "sentences": [
+    "Madam Speaker, Supreme Court Justices are already protected.",
+    "On the very day of the assassination attempt, in violation of the law, protesters are at the very house of the Supreme Court Justice being intimidated by protesters."
+   ]
+  },
+  {
+   "date": "2022-02-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Bioeconomy Research and Development Act of 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-02-03/CREC-2022-02-03-pt1-PgH934-3",
+   "sentences": [
+    "Madam Speaker, I urge my colleagues to please join me in protecting American workers by terminating U.S. participation in the United Nations Framework Convention on Climate Change.",
+    "The UNFCCC charges signatories to work to stabilize greenhouse gas concentrations in the atmosphere at a level that will prevent dangerous human interference with the climate system.",
+    "The institution's mission to prevent dangerous human interference with the climate system precludes the body from investigating potential natural causes of climate variation and binds member states to act in the interest of human safety even in the face of scientific uncertainty.",
+    "Even if our GHG emissions could be eliminated completely overnight, it would have no impact globally.",
+    "Chinese emissions would make up the difference, and the result is the U.S. economy would be unnecessarily crippled, while the CCP's economy would grow unencumbered.",
+    "The UNFCCC further requires that industrialized nations support climate change action in developing countries on top of aid already provided to these countries.",
+    "Put plainly, remaining party to a treaty requiring our Nation to fund the offshoring of manufacturing jobs, our very own jobs, should be met with contempt across this political spectrum.",
+    "Madam Speaker, if we adopt the motion to recommit, we will instruct the Committee on Science to consider my amendment to ensure that this bill will not fund the Chinese Communist Party."
+   ]
+  },
+  {
+   "date": "2021-10-21",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Democrats' Plan to Put Mass Amnesty in Reconciliation Package",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-10-21/CREC-2021-10-21-pt1-PgH5774",
+   "sentences": [
+    "Since January, we haven't witnessed migration, Mr. Speaker, we have witnessed an invasion; a 200 percent increase over FY 2020, hundreds of thousands of people coming across our border in July and August.",
+    "You would think that amid what is definitively an open border crisis, replete with numerous cases of sexual assault, rape, human and drug trafficking, proliferation of gang and cartel activity, that the United States would be working to stop criminal activity and protect its citizens.",
+    "At the beginning of this reconciliation process, we saw Democrats try to provide amnesty for literally millions of illegal aliens.",
+    "When the Parliamentarian wouldn't let them, they went to plan B. Yet more, millions of illegal immigrants, just by moving a date.",
+    "Now, they are on plan C, amnesty, again, telling them to break our laws, to millions of illegal aliens, millions of people in our country illegally.",
+    "Ron Dasilva, murdered by a known gang member and an illegal immigrant.",
+    "The people in this building take an oath to uphold and defend the Constitution of American citizens, not illegal aliens."
+   ]
+  },
+  {
+   "date": "2021-01-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-13/CREC-2021-01-13-pt1-PgH165",
+   "sentences": [
+    "The FBI knew about a number of individuals that were planning a war on the Capitol, including killing police officers, and they shared the information.",
+    "Now, I know my colleagues on the left want America to believe that the President incited a spontaneous riot that they would like to call an insurrection, but the facts are stubborn things, even if you choose to ignore them.",
+    "The truth is the multiple lawless and violent events last summer, including a months-long siege of a Federal courthouse, burning, looting, physical violence in so-called sanctuary cities, more closely fits the definition of insurrection than anything the President said last week."
+   ]
+  },
+  {
+   "date": "2021-01-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Counting Electoral Votes--Joint Session of the House and Senate Held Pursuant to the Provisions of Senate Concurrent Resolution 1",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-01-06/CREC-2021-01-06-pt1-PgH76-4",
+   "sentences": [
+    "In Pennsylvania, the supreme court unilaterally extended the deadline for ballots to 3 days after the election.",
+    "The supreme court is not the legislature.",
+    "The supreme court mandated un- postmarked ballots to be received, destroying the validity of all the votes that were cast timely.",
+    "The supreme court action defied the law, the legislature, and the will of the people.",
+    "The supreme court authorized the use of drop boxes, where ballot harvesting could occur.",
+    "Responding to the secretary of state, Kathy Boockvar, the supreme court ruled that mail-in ballots need not authenticate signatures.",
+    "And the U.S. Supreme Court has refused to hear the case, denying the evidence and denying the demands for justice from the people of Pennsylvania and America.",
+    "Six days before the election, guidance emailed from the secretary of state required that the counties shall not pre-canvass or canvass any mail-in or civilian absentee ballots received between 8 o'clock Tuesday and 5 o'clock Friday and that they must be kept separately.",
+    "Madam Speaker, 2 days before the election, counties received new guidance from the secretary of state, informing counties that they shall canvass segregated absentee and mail-in ballots as soon as possible upon receipt.",
+    "In defiance of a U.S. Supreme Court order that all ballots received after election day be segregated, the secretary of state knew, once they were canvassed, that is opened and commingled with all the other ballots, they would be counted with all the rest.",
+    "In Pennsylvania, we use the Statewide Uniform Registry of Electors, or SURE, system as the basis of determining who can vote.",
+    "Unfortunately, a recent attempted audit by the Democrat State auditor general concluded that he was unable to establish with any degree of reasonable assurance that the SURE system is secure and that Pennsylvania voter registration records are complete and accurate.",
+    "This is the very same system used to certify the election in the contest for President of the United States."
+   ]
+  },
+  {
+   "date": "2020-07-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of State, Foreign Operations, and Related Programs Appropriations Act, 2021",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-07-23/CREC-2020-07-23-pt1-PgH3715-4",
+   "sentences": [
+    "In 2018, President Trump made the correct decision to defund UNRWA.",
+    "The second amendment prohibits the EPA from using funds in this bill to take retaliatory actions against States that fall short of the EPA- mandated Chesapeake Bay TMDL.",
+    "The final one prohibits the EPA from using funds pursuant to Section 115 of the Clean Air Act.",
+    "Section 115 of the Clean Air Act allows the EPA to mandate State emissions levels to whatever level the agency deems appropriate: if they find emissions endanger a foreign nation; and the endangered nation has a reciprocal agreement to prevent or control these emissions in their own nation.",
+    "I urge adoption of these amendments."
+   ]
+  },
+  {
+   "date": "2020-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Iran War Powers Resolution",
+   "url": "https://www.govinfo.gov/app/details/CREC-2020-01-09/CREC-2020-01-09-pt1-PgH92-2",
+   "sentences": [
+    "The President does not desire war with Iran or anyone else, but Iran has been fighting us since 1979.",
+    "Washington has been appeasing Iran, and the policy of appeasement has been getting Americans killed since 1979. 542, that is the number of drone attacks under the Obama administration in places like Yemen, Somalia, Pakistan.",
+    "The terrorist state of Iran cannot continue killing Americans and cannot have a nuclear bomb."
+   ]
+  },
+  {
+   "date": "2019-06-12",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-12/CREC-2019-06-12-pt2-PgH4584",
+   "sentences": [
+    "Now we are finally at a place where we have reduced that dramatically, and now we are going to tell the whole rest of the country, well, let's all start smoking marijuana instead.",
+    "Some little girl on the border of Texas, they don't know where to put her; they don't have a bed for her."
+   ]
+  },
+  {
+   "date": "2019-02-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Removal of United States Armed Forces From Hostilities in Yemen That Have Not Been Authorized by Congress",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-02-13/CREC-2019-02-13-pt1-PgH1543",
+   "sentences": [
+    "In order to force a privileged measure in the Senate, my colleagues had to expand and distort the definitions in the War Powers Resolution to achieve their goals.",
+    "The misuse of this privileged tool endangers U.S. security cooperation with over 100 partners around the world, to include Israel, NATO, and many antiterror allies.",
+    "Iran's own IRGC commander openly admitted that Iran provides military assistance to the Houthis in Yemen.",
+    "In this body, we can choose to stand with Iran or the Houthis or, as I suggest, to stand with Israel and Saudi Arabia."
+   ]
+  },
+  {
+   "date": "2019-02-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: International Day of Zero Tolerance for Female Genital Mutilation",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-02-06/CREC-2019-02-06-pt1-PgH1383",
+   "sentences": [
+    "The World Health Organization says this practice has no health benefit for women and girls and, instead, can have severe short- and long-term impacts on the physical, psychological, sexual, and reproductive health of these innocent, helpless girls.",
+    "In the long term, a girl may experience cysts, infections, septicemia, painful and difficult urination and menstruation, and increased risk of death during childbirth for both the mother and the unborn child.",
+    "It often serves as an ongoing torture throughout the woman's life, for her whole life.",
+    "The World Health Organization warns that growing migration has increased the number of girls and women living outside their country of origin who have undergone FGM or who are at risk in Europe, Australia, Latin America, and North America.",
+    "Before I yield to my good friend from Florida (Ms. Frankel), I just want to tell folks who might be listening or watching that one of the things that we hear when we go to the States--because law enforcement typically happens at the State level--and we say, ``Would you please consider a law for this so that this doesn't happen, so that this is illegal, so that people aren't encouraged to practice it but are discouraged from practicing?'' they will say, ``Well, it doesn't happen here."
+   ]
+  },
+  {
+   "date": "2019-01-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing Sense of House That Government Shutdowns Are Detrimental to Nation and Should Not Occur",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-01-30/CREC-2019-01-30-pt1-PgH1307",
+   "sentences": [
+    "We wanted to keep the government open and fund border security.",
+    "Oh, no, we are not going to do any of that border security stuff.",
+    "We would like to get to the task at hand, which is solving this issue of border security.",
+    "Forget this charade, this theater, and let's get to negotiating on border security and making sure that the American people are safe."
+   ]
+  },
+  {
+   "date": "2018-07-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2019",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-18/CREC-2018-07-18-pt1-PgH6501-3",
+   "sentences": [
+    "Mr. Chairman, the EPA has imposed these substantial competitive barriers, despite the industry's significant reduction in methane emissions through their own initiatives and innovation.",
+    "What is not known is that through the EPA's own analysis, it shows that methane emissions from hydraulically fractured gas wells have actually fallen dramatically.",
+    "According to EPA data--not my data, but EPA data--methane emissions from oil and gas production declined by 38 percent from 2005 to 2012, and methane emissions from hydraulically fractured natural gas wells have plummeted 73 percent since 2011.",
+    "Total methane emissions from natural gas systems actually are down 11 percent since 2005, despite the significant production increases over this time period.",
+    "American producers developed innovative means of capturing additional methane because doing so means they have more product to sell.",
+    "Profitability, rather than a top-down Washington regulation, drove this unprecedented emissions reduction.",
+    "In fact, in 2012 alone, voluntary methane emission reductions activities by the U.S. oil and gas industry generated $364 million in additional revenue.",
+    "Unfortunately, the methane rule represents the kind of one-size-fits- all policy that will actually stifle innovation and discourage further investment in emission reduction technology.",
+    "Actually, as a result, the EPA's methane rule, if allowed to stand, will not only lead to economic harm, but environmental harm as well.",
+    "This 2010 power grab, known as the Chesapeake Bay TMDL, directly contradicts the intent of the Clean Water Act.",
+    "The Clean Water Act clearly acknowledges State authority in water quality and requires cooperation rather than coercion between the States and the Federal Government.",
+    "Mr. Chair, this amendment prohibits the EPA from using funds for actions pursuant to section 115 of the Clean Air Act.",
+    "Section 115 of the Clean Air Act allows the agency to mandate State emissions levels to whatever level the agency deems appropriate if, in collaboration with a foreign government, they determine endangerment and if the other government has a reciprocal agreement to prevent or control these emissions in their own nation.",
+    "Now, this is a backdoor provision that allows the agency to vastly expand its regulatory authority and encroach on the constitutional rights of the States to regulate their own energy sectors, based on the actions of a foreign nation and the whims of the executive branch.",
+    "But what we do take issue with is other nations working with, potentially, this administration, any administration, that comes up with an agreement not ratified by the American people, not ratified by this body or the body on the other side of the Capitol to encroach upon the constitutional rights of States to regulate their own environmental emissions, as provided.",
+    "So it is not a question of whether we think that the climate isn't changing, man has something to do with it, or whether it should be regulated or how it should be regulated.",
+    "The President got us out of the Paris climate agreement, but that doesn't mean that some other administration in the future might make another agreement that, yet again, the American people had no part in; neither did this body."
+   ]
+  },
+  {
+   "date": "2018-01-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Supporting the Rights of the People of Iran to Free Expression",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-01-09/CREC-2018-01-09-pt1-PgH51",
+   "sentences": [
+    "That is why I, too, stand in support of H. Res. 676, which sends a clear message that the United States strongly condemns the arrest of peaceful protestors by the rogue Iranian regime.",
+    "Mr. Speaker, the Iranian people deserve to be free.",
+    "The world saw that America turned their back on the freedom effort and movement in Iran.",
+    "The current administration has noticed immediately and recognized immediately, and we are here today to say that no longer will terrorism be appeased; no longer should we help pay for the funding of Hezbollah and Hamas through payments in the Iran nuclear deal.",
+    "Simple things mean a lot, and simple things like this resolution, Mr. Speaker, mean that we stand with the Iranian people who breathe and live to be free, just like we do."
+   ]
+  },
+  {
+   "date": "2017-09-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-08/CREC-2017-09-08-pt1-PgH7201-2",
+   "sentences": [
+    "The U.S. oil and gas system represents only 3\\1/2\\ percent of overall domestic greenhouse gas emissions.",
+    "The temperature impact of this emissions reduction is miniscule, at a mere .0047 degrees Celsius by the year 2100, and, of course, that is a model and that is predicted.",
+    "EPA's own research shows that combined oil and gas methane emissions have fallen 19 percent since 1990."
+   ]
+  },
+  {
+   "date": "2017-09-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-07/CREC-2017-09-07-pt1-PgH7125-2",
+   "sentences": [
+    "The question is: Do we need a State Department doing it at the cost of billions of dollars and then this other organization doing the exact same work at a cost of another $35 million annually when we are $20 trillion in debt and more, maybe up to $200 trillion in unfunded liabilities?",
+    "I wrote the Institute a letter in that regard inquiring as to her status, whether there would be punitive measures taken for this obvious partisan and vicious attack on the Republican Party and the candidate that was then leading, and, of course, I didn't hear back until, oh, I don't know, 2 days ago, when we saw that there was an amendment to defund the U.S. Institute of Peace."
+   ]
+  },
+  {
+   "date": "2017-09-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-07/CREC-2017-09-07-pt1-PgH7172-2",
+   "sentences": [
+    "This amendment would prevent funds from being used to expand EPA authority pursuant to section 115 of the Clean Air Act.",
+    "Now, this isn't an amendment to assail the Clean Air Act, but there is a flaw with it, which is section 115.",
+    "That section of the Clean Air Act allows the EPA to mandate State emissions levels to whatever amount the agency deems appropriate if they find two things.",
+    "They have to find that U.S. emissions endanger a foreign nation; and the endangered nation has a reciprocal agreement to prevent or control emissions in their own nation.",
+    "Now, it was previously argued that the Paris climate agreement met those requirements.",
+    "When they wrote the Clean Air Act back in the 1970s, they never foresaw the Paris Agreement.",
+    "And the Paris Agreement is not a treaty.",
+    "Despite the temporary relief, the fact remains that section 115 of the Clean Air Act is just simply bad policy.",
+    "And then you said you were worried about the administration using section 115 of the Clean Air Act to impose regulations.",
+    "It has been my experience, from my point of view, representing my constituents, we were disappointed about the withdrawal from the Paris climate agreement, and we haven't seen this administration be aggressive on clean air.",
+    "So could you please explain to me your concerns about the Trump administration and section 115 of the Clean Air Act?",
+    "Because, if they are doing things that you are concerned about, maybe I need to take a fresher look at what the Trump administration is doing, because I have seen them do nothing but block, cut back, and deny the ability to move forward on the clean air agreement.",
+    "The Obama administration is gone, and the Trump administration has removed almost everything I care passionately about with clean air.",
+    "It is a long line of Republican amendments on the attack of the clean air and the EPA's authority."
+   ]
+  },
+  {
+   "date": "2017-09-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of the Interior, Environment, and Related Agencies Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-09-06/CREC-2017-09-06-pt1-PgH6695",
+   "sentences": [
+    "This amendment would prohibit the use of funds for FMCSA and NHTSA-- two agencies--to finalize their joint notice of proposed rulemaking mandating the use of speed limiting devices on heavy-duty trucks and buses.",
+    "Bus-involved fatal crash rate per 100 million miles has dropped 71 percent since 1980 without the Federal Government's involvement in speed limiting device.",
+    "According to the FMCSA reports, 74.1 percent of truck-involved fatal crashes occur on noninterstates with speed limits lower than the proposed levels.",
+    "So they are going to put the speed limiter on, but it is not even going to apply where the accidents happen.",
+    "Speed limiters will result in lost productivity, necessitating more heavy-duty vehicles on the road to support current demand because they won't be able to get the product where they want to get it to because they are all going to be going slower, mandated by the Federal Government.",
+    "Finally, this proposal disregards the authority of States to determine speed limits within their borders.",
+    "Again, thank goodness the Federal Government is here to tell all 50 States how to run their railroads and run their highways and their speed limits.",
+    "Bus- involved fatal crashes per 100 million miles has dropped 71 percent since 1980, before all this happened."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6335",
+   "sentences": [
+    "Mr. Chairman, our Nation is $20 trillion in debt, and there might be $100 trillion or $200 trillion in unfunded liabilities.",
+    "This amendment reduces the CBO's fiscal year '18 appropriations by 50.4 percent which just happens to be the exact same percentage that the CBO was off when it predicted the enrollment numbers for the Affordable Care Act exchanges in 2016.",
+    "The actual enrollment was about 10.4 million people.",
+    "Now, maybe the CBO's projections would have improved as the ACA continued to take shape after 2010, and that seems reasonable.",
+    "However, the actual 2016 enrollment in the ACA exchanges was 10.4 million people.",
+    "I also want to highlight the failure of the CBO to forecast the cost of the Medicaid expansion.",
+    "In 2013, the CBO projected that 34 million people would be on Medicaid or CHIP in 2016; however, in 2016, the CBO doubled, once again, they doubled their earlier estimates to 68 million people.",
+    "As a result, in March of 2016, the CBO increased its projection of Federal spending for Medicaid by $146 billion."
+   ]
+  },
+  {
+   "date": "2017-07-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Department of Defense Appropriations Act, 2018",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-07-26/CREC-2017-07-26-pt1-PgH6437-2",
+   "sentences": [
+    "This amendment simply increases funding for hydroelectric through the EERE by $15 million and decreases funding to the bureaucracy.",
+    "Harnessing this energy will create a truly and absolutely renewable and green source of energy without any emissions and with little fanfare to everybody involved.",
+    "Hydropower facilities are quiet, unobtrusive, while many people report that considerable noise is generated by wind power and that land is taken up by huge solar farms."
+   ]
+  }
+ ]
+}

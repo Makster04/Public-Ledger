@@ -1,0 +1,719 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "hickenlooper",
+ "name": "John W. Hickenlooper",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 19,
+  "press": 0,
+  "bluesky": 44,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-11-12",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3n23jkahpys2h",
+   "sentences": [
+    "We owe all of our veterans an enormous debt of gratitude."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mzw43ccjuk26",
+   "sentences": [
+    "Democrats across the country ran on lowering costs, holding Big Tech accountable, and stopping the Trump administration’s attacks on clean energy."
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mzjbfyodi22z",
+   "sentences": [
+    "→ Make Big Tech foot the bill for data centers"
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mzc7omczg225",
+   "sentences": [
+    "A big step forward for affordable housing in Colorado!"
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mzbxjmyycc2x",
+   "sentences": [
+    "We’re the wealthiest country in the history of the world."
+   ]
+  },
+  {
+   "date": "2026-10-31",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mz6wcvfnvs2m",
+   "sentences": [
+    "While he’s making billions on crypto scams and more than 28,000 stocks trades, YOU are paying extra for gas, groceries, healthcare, and housing."
+   ]
+  },
+  {
+   "date": "2026-10-31",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mz7gye42fc2p",
+   "sentences": [
+    "We need to end the war and lower diesel costs."
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mz2kfvbxsk2x",
+   "sentences": [
+    "It’s time for serious leadership that delivers affordable housing to American families, because right now it’s out of reach for too many Coloradans."
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mz4jiq2zsk2p",
+   "sentences": [
+    "We’re in a cost-of-living emergency that won’t end until we end Trump’s tariffs and his illegal war in Iran."
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mz4qhzzc2c2m",
+   "sentences": [
+    "Trump said his illegal war in Iran would last four weeks.",
+    "Nine months later, diesel prices have doubled."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myxpr5bnoc22",
+   "sentences": [
+    "Trump’s war in Iran has cost taxpayers more than $47 billion."
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myxxdheozs2b",
+   "sentences": [
+    "Glad to join the Protect Our Care Sick of It Bus Tour to raise awareness of the impacts of MAGA’s cruel cuts to our healthcare system."
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mypt4e643k2z",
+   "sentences": [
+    "As a former small business owner, I can’t imagine trying to build a business with Trump’s tariffs and diesel prices having doubled because of his war with Iran."
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myqbkip45c2x",
+   "sentences": [
+    "Building data centers isn’t the responsibility of communities.",
+    "If Big Tech wants data centers, they foot the bill for them."
+   ]
+  },
+  {
+   "date": "2026-10-24",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myn3m3odfs2t",
+   "sentences": [
+    "Trump will try anything to pump his flailing approval rating even if that means selling you out and cutting a deal with Putin.",
+    "He’s using your taxpayer dollars to pay for Russian diesel, money that Putin will use in his war against Ukraine."
+   ]
+  },
+  {
+   "date": "2026-10-24",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mynowrgyfk2u",
+   "sentences": [
+    "Before President Trump’s illegal war in Iran, diesel was at $3.27/gallon.",
+    "We met with truckers and other Coloradans impacted by diesel prices in Commerce City that have DOUBLED here in the past year."
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myl5pozauk2e",
+   "sentences": [
+    "We need to end the tariffs, end the Iran war, and put a stop to an admin that prioritizes billionaires over families."
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myiak3adqc22",
+   "sentences": [
+    "Being able to predict extreme weather saves lives and this ability is crucial to combat the impacts of a changing climate."
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mydrirlj6k2v",
+   "sentences": [
+    "Colorado diesel prices have doubled in a year.",
+    "Here's who's paying for Trump's war in Iran."
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myamdvv7sk27",
+   "sentences": [
+    "→ End Trump’s illegal war with Iran",
+    "→ End Trump’s reckless tariffs"
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3myb5wfzbos27",
+   "sentences": [
+    "Science is the key to understanding climate change and our new water future in the West."
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3my64f4vur227",
+   "sentences": [
+    "Here are few things we could afford with the billions spent on Trump’s illegal war with Iran:"
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3my6flapo7k27",
+   "sentences": [
+    "Coloradans have paid $2 BILLION more on gas since Trump started his illegal war with Iran.",
+    "We need to end the Iran War NOW."
+   ]
+  },
+  {
+   "date": "2026-10-17",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3my3opikik222",
+   "sentences": [
+    "Trump’s sweetheart deal with Putin is as backwards and corrupt as it gets."
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxzokwzdxk22",
+   "sentences": [
+    "We need a healthcare system that’s affordable, universal, and actually WORKS for working families."
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxui2sw6fk2q",
+   "sentences": [
+    "While President Trump is focused on ballrooms, bombs, and billionaires, here’s what we’re doing to make life more affordable for Coloradans:"
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxrrk7gccs2r",
+   "sentences": [
+    "As working families are struggling to pay for groceries and gas, Trump is focused on enriching himself to the tune of BILLIONS of dollars and selling out our country."
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxryfxagfc2a",
+   "sentences": [
+    "A diesel deal with Putin and threatening the temporary protected status of 100,000 Ukrainians we welcomed to safety here in the United States."
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxs7bhwjls2a",
+   "sentences": [
+    "Every day Trump’s illegal war in Iran drags on: billions more of your tax dollars burned, servicemembers in harm’s way, and prices rising on everything from diesel to groceries."
+   ]
+  },
+  {
+   "date": "2026-10-11",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxks6bwkmc2p",
+   "sentences": [
+    "We’re the wealthiest country in the world.",
+    "It’s simple: our healthcare system should be affordable, accessible, and universal for working families."
+   ]
+  },
+  {
+   "date": "2026-10-11",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxmkhxkebk2y",
+   "sentences": [
+    "YOU and your family are the ones footing the bill for Trump’s reckless tariffs while he’s obsessing over vanity projects and illegal wars."
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxk6e6gpfk2r",
+   "sentences": [
+    "➳ End Trump’s illegal war in Iran",
+    "➳ Make Big Tech foot the bill for their data centers, not Colorado families"
+   ]
+  },
+  {
+   "date": "2026-10-08",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxfiubozxk2o",
+   "sentences": [
+    "Today is Latina Equal Pay Day.",
+    "We're committed to closing the gap and making equal pay for equal work a reality."
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxabkhum5s27",
+   "sentences": [
+    "Diesel and fertilizer prices need to come down now.",
+    "That means ending the Iran war NOW to give our farmers a break."
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mxaiwrp6mc2k",
+   "sentences": [
+    "Cutting off clean energy projects means YOUR energy bills exploding in cost."
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mx5fjqho5k2c",
+   "sentences": [
+    "We need an approach that uplifts clean energy and brings down costs for everyone."
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mx5ywfown22u",
+   "sentences": [
+    "Looking for Congress’ declaration of war against Iran?"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mx3eoemuhs2v",
+   "sentences": [
+    "We’re entering a new era of artificial intelligence."
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwybqladrc2i",
+   "sentences": [
+    "He thinks everything is going perfectly because, for him and his billionaire friends, it is."
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwvv7trd3k2u",
+   "sentences": [
+    "When a vacancy opened on the Colorado Supreme Court in 2017, Melissa Hart was a clear choice."
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwwbpydf4c2u",
+   "sentences": [
+    "Most folks get a nice coffee machine as a wedding present.",
+    "Donald Trump Jr. got an extravagant wedding paid for by a Russian oligarch."
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwwkes35ac2i",
+   "sentences": [
+    "The only people profiting off this administration are the Trump family, their billionaire friends, and the ultra-wealthy."
+   ]
+  },
+  {
+   "date": "2026-10-01",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwtbvewx4k2k",
+   "sentences": [
+    "More than 7 months into Trump’s illegal war with Iran…"
+   ]
+  },
+  {
+   "date": "2026-10-01",
+   "source": "bluesky",
+   "where": "Bluesky post",
+   "url": "https://bsky.app/profile/hickenlooper.senate.gov/post/3mwtl63tvds2v",
+   "sentences": [
+    "This is the reality of skyrocketing diesel prices caused by Trump’s war with Iran:"
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-23/CREC-2026-09-23-pt1-PgS4902-2",
+   "sentences": [
+    "Iran Mr. President, $43.6 billion and counting--that is the Pentagon's estimate for how much it has spent on this illegal war in Iran.",
+    "Every interceptor we fire in Iran is one that we don't have protecting this country in the future.",
+    "Iranian strikes have damaged or destroyed hundreds of buildings and structures on U.S. bases, along with our relationships with the allies and partners who agreed to host them as a bulwark against the aggressions of Iran.",
+    "At the same time, we have shown Iran that it can seize control of one of the world's most critical waterways and literally bring global trade to a stop, bring it to its knees.",
+    "Every dollar we spend on Iran is a dollar we are not spending modernizing our military to protect against the threat of an ascendant China.",
+    "Before the war, the national average for diesel was $3.72 per gallon.",
+    "This week, it is over $6.50 per gallon for diesel.",
+    "That means that a small farmer using 1,000 gallons of diesel during a harvest is paying roughly $2,800 more just to do the same work as before the war.",
+    "You shouldn't have to be a millionaire to drive to the grocery store and feed your family.",
+    "Before the Iran war, the average 30-year mortgage rate was hovering right around 6 percent--still too high for many families.",
+    "That is real money that could go to childcare, to a child's college savings, or just their lifetime savings.",
+    "James Madison once wrote to his friend Thomas Jefferson that ``the Executive is the branch of power most interested in war, and most prone to it.'' That is why the Founders gave Congress the power to declare war--not the President, not the Supreme Court; Congress.",
+    "Yet, so far, not a single Senator has introduced a legislative measure to formally declare war on Iran."
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act of 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-16/CREC-2026-09-16-pt1-PgS4747",
+   "sentences": [
+    "Is it for billionaires or for Mar-a-Lago members, for the President's friends and cronies?",
+    "It is not a golden age for the farmers on the Western Slope of Colorado or small business owners in Colorado Springs or working families in Denver.",
+    "Instead of building more affordable housing here, the extended Trump family is building more housing in Saudi Arabia.",
+    "While Americans are shelling out over $100 billion in energy costs since President Trump started his illegal war with Iran, he has raked in millions of dollars off of investments in oil and gas publicly traded stocks.",
+    "The President has spent more than $1 billion of your taxpayer money, our taxpayer money, to cancel clean energy projects, all while his neighbors in Palm Beach stand to cash in on massive payouts.",
+    "That pattern of self-dealing extends to artificial intelligence.",
+    "One of the United Arab Emirates' most powerful royals has invested half a billion dollars in the Trump family's cryptocurrency venture--half a billion dollars.",
+    "So, even as your energy bills are spiking, even when you are worried that your job could be the one that gets cut next, even as you worry your farm is already facing a water shortage in many parts of this country, billionaires who have turned AI into a horserace focused pretty much solely on who is winning with too little thought for who gets left behind.",
+    "When we passed the most consequential housing bill in decades, opening the door for home ownership for millions of Americans and stopping Wall Street from buying up homes that belong to working families, the President refused to sign it.",
+    "When we made a once-in-a-generation investment to address climate change and try to preserve a better future for our kids, the President and his Administration canceled tens of billions of dollars in grant funding that would have helped our environment while at the same time creating good-paying jobs.",
+    "President Trump has started what could become a forever war with Iran that is already costing American lives, sent prices climbing; it has drained our military stockpiles, and made us less secure.",
+    "President Trump has imposed crippling illegal tariffs that are driving up costs for families and small businesses alike."
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Deondra Dixon Include Project Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-06/CREC-2026-08-06-pt1-PgS4495",
+   "sentences": [
+    "Mr. President, as if in legislative session and notwithstanding rule XXII, I ask unanimous consent that the Committee on Health, Education, Labor, and Pensions be discharged and the Senate proceed to the immediate consideration of S. 1838."
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Todd Blanche (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-05/CREC-2026-08-05-pt1-PgS4469-2",
+   "sentences": [
+    "At a time when working families are struggling with rising costs, the last people the Federal Government should seek to reward, to subsidize are those who assault our elections, people like convicted election criminal Tina Peters, who tried to undermine Colorado's free and fair elections; people like the January 6 rioters--my first full day of work in this position--the rioters who stormed this very Chamber in an attempt to tear apart our democracy.",
+    "When he says behind closed doors that he wants the Dobbs v. Jackson decision to become, in his words, ``permanent in every state,'' we should believe him.",
+    "Whether it is abortion access or access to the ballot box, we should have little confidence that this new Attorney General will not target Colorado or other blue States because that is exactly what his boss wants."
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Colorado Wildfires (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-30/CREC-2026-07-30-pt1-PgS4359",
+   "sentences": [
+    "As the Knowles fire rolled along the Colorado- Utah border, the Rifle Helitack team put on their uniforms and rushed toward danger.",
+    "First, we need to treat climate change like the emergency it is, and that is a long-term horizon but an important one.",
+    "Not every wildfire is caused by climate change, but scientists widely agree that climate change is making the problem far worse.",
+    "Heat, drought, a moisture-starved atmosphere all increase wildfire risk, and each of these factors can be connected back to climate change.",
+    "That is why we passed the Inflation Reduction Act, which included the largest climate investment in American history.",
+    "For years, NCAR has given weather, climate, and wildfire forecasts that firefighters and emergency managers rely on to fight disasters."
+   ]
+  },
+  {
+   "date": "2026-06-24",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Administration (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-24/CREC-2026-06-24-pt1-PgS3181",
+   "sentences": [
+    "He is not building affordable housing in Denver, Durango; he is building a ballroom for himself and his rich friends to enjoy.",
+    "President Trump isn't working to extend the Affordable Care Act subsidies or reverse the Medicaid cuts that will kick 240,000 Coloradans off of their healthcare.",
+    "While planning this project, he unilaterally, on his own volition, went to war with Iran, promising immediate victory, total and complete.",
+    "We have got to end the illegal war, end the disastrous tariffs.",
+    "A moment when the consequences of climate change are increasingly impossible to ignore with unprecedented wildfires, drought, destruction; a moment when wealth is flowing to the wealthiest Americans at an unprecedented rate.",
+    "We worked with Senator Warren to diminish Wall Street from buying single-family homes and to limit their influence in disturbing the housing markets.",
+    "The Coloradans I meet on the Front Range or the West Slope aren't looking for more attacks on mail-in voting; they aren't looking for more ballrooms, bombs, and billionaires."
+   ]
+  },
+  {
+   "date": "2026-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Inflation",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-17/CREC-2026-06-17-pt1-PgS2878",
+   "sentences": [
+    "Does he love the increase in measles cases, screwworm infecting our cattle, record credit card debt?",
+    "That is $416 more on rent and mortgage payments; $310 more for groceries at the checkout line, as everything from ground beef to coffee has spiked; and $1,000 more in average deductibles for people on the Affordable Care Act insurance plans.",
+    "In total, Coloradans have spent over $780 million more on gas since the beginning of President Trump's illegal war with Iran.",
+    "Now, we are almost 14 months into an illegal war--a war of choice--in Iran.",
+    "What is clear is that the deal he is pitching comes nowhere close to limiting Iran's ability to obtain a nuclear weapon.",
+    "It is clearly nowhere near the deal President Obama secured over a decade ago that meaningfully curbed Iran's nuclear ambitions--that is, until Trump ripped it up.",
+    "It is also hard to explain to Americans why the Iranian regime would get hundreds of billions of dollars in this settlement and sanctions relief, as well, all to restore access to a waterway that was free and open to all before Trump took us to war in the first place.",
+    "Right before Trump bombed Iran, farmers and ranchers in Colorado and across this country were preparing to plant for this season.",
+    "Trump's tariffs increased the cost of farming equipment, while retaliatory tariffs from other countries reduced access to international markets that bought better prices for American farmers.",
+    "The climate change- driven megadrought in the West made matters even worse.",
+    "As the war stretched on, farmers and ranchers reckoned with a new hurdle--diesel and fertilizer costs.",
+    "Yet President Trump's agenda can be better summed up in just three letters: A, B, C--anything but costs--the cost of diesel, the cost of fertilizer, the cost of food, housing, healthcare.",
+    "He has been unrelenting in his desire for a Department of Justice slush fund for election criminals like Tina Peters and the January 6 rioters.",
+    "He sued the IRS so he wouldn't have to pay taxes again, while teachers, police officers, and nurses pay their taxes every year.",
+    "While working families worry about the cost of groceries, housing, and healthcare, this administration is focused on ballrooms, bombs, and billionaires.",
+    "Working families don't ``love'' inflation.",
+    "They don't think affordability is a ``hoax.'' They are desperate for a country that works for them--a country where Washington focuses on lowering costs and improving their lives, not giving record tax breaks to the Epstein class; a country where healthcare is a right and not a privilege; and a country where every family can afford to buy a home, instead of getting outbid by Wall Street."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Trump Administration",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-10/CREC-2026-06-10-pt1-PgS2715-3",
+   "sentences": [
+    "Instead, we are stuck with a war in Iran with no exit, no strategy, no end in sight."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Recognition of the Majority Leader",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-04/CREC-2026-06-04-pt1-PgS2545-8",
+   "sentences": [
+    "I don't believe she deserved clemency, but wherever you stand on her release, taxpayers should never be forced to pay people who illegally undermine our elections.",
+    "They believe people like Tina Peters and the January 6 rioters should get cash payouts while American families struggle to afford groceries, housing, and healthcare."
+   ]
+  },
+  {
+   "date": "2026-06-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Secure America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-04/CREC-2026-06-04-pt1-PgS2572",
+   "sentences": [
+    "Mr. President, when the Senate considers the reconciliation bill, S. 2, it is my intention to make the following motions to the bill: A motion to commit the bill to the Committee on the Judiciary with instructions to report the same back to the Senate in 3 day, not counting any day on which the Senate is not in session, with changes that are within the jurisdiction of such committee; and would extend the enhanced premium tax credit under section 36B of the Internal Revenue Code of 1986, as in effect for 2025, for two years. ____________________"
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Secure America Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-03/CREC-2026-06-03-pt1-PgS2510",
+   "sentences": [
+    "President Trump plans to hand out nearly $2 billion of your tax money, taxpayer dollars, to January 6 rioters, to wealthy business partners, and people who have attacked democracy.",
+    "The only promises this administration has seemed to keep are to billionaires and President Trump's cronies.",
+    "They are spending literally trillions of dollars, when you add it up, trillions of dollars on bombs and tax breaks for billionaires.",
+    "The President's war in Iran--his war of choice--is sending costs through the roof.",
+    "Americans now carry a record $1.25 trillion in credit card debt.",
+    "And there is a clear explanation for this: The President doled out roughly $4 trillion in tax breaks--so that is over 10 years--but roughly $4 trillion in tax breaks to the wealthiest Americans so that the largest corporations, so the wealthiest individuals like him, can skip their taxes.",
+    "Trump's tariffs generated $133 billion.",
+    "Now, the Supreme Court ruled that these tariffs were illegal, and a Federal court ordered the administration to repay American businesses.",
+    "Even worse, just yesterday, President Trump announced new tariffs on 59 countries, in addition to the European Union.",
+    "This year, Leah's income will be cut by 40 percent as a direct result of this administration's Medicaid cuts.",
+    "The Trump administration claims these Medicaid cuts were about preventing graft and fraud, but there is clearly no fraud whatsoever in a mother doing everything she can, trying to keep her child alive.",
+    "The Trump administration made it a reality because they chose these tax breaks for the wealthiest people in this country, many of whom--if not most of whom--don't even want the tax breaks.",
+    "But they chose tax breaks for these billionaires over healthcare for working people."
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: S.J. Res. 139",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-04-29/CREC-2026-04-29-pt1-PgS2103",
+   "sentences": [
+    "We have access to incredible green spaces, and if you look west, you can lose yourself in the best view in America--the Rocky Mountains.",
+    "In 1970, a Democratic Congress passed the Clean Air Act.",
+    "It is a reminder that clean air has never been a partisan issue.",
+    "The Clean Air Act helped to propel States like Colorado and others to turn things around, to look at that pollution in a different light.",
+    "Emissions testing and fuel standards soon followed, and guess what happened.",
+    "We also brought environmentalists and the energy industry together to create the first methane regulations in the world in 2014.",
+    "I think those regulations--again, the first methane regulations in the world were in Colorado--helped in the years leading up to 2017 to reduce methane emissions from Colorado's oil and gas sector by 70 percent.",
+    "Despite all that success, the Trump administration is now threatening to turn back the clock and reduce and diminish the success of Colorado's clean air efforts.",
+    "The Trump administration seems to think we must choose between clean air and affordable energy, which is nonsense.",
+    "Time and time again, we have brought communities and utilities and regulators together to protect our clean air supply without hurting our economy or our energy supply."
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Housing for the 21st Century Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-03-04/CREC-2026-03-04-pt1-PgS773",
+   "sentences": [
+    "Fast-forward 1 year, and now, it is this administration dragging the United States into an illegal war with Iran, one that has already taken American lives and spread chaos and destruction to an entire region.",
+    "Iran's authoritarian regime is brutal, corrupt, oppressive, but the President's approach leaves us facing profound, unanswered questions about new dangers that may be unleashed.",
+    "Iran is only the latest in a long line of distractions.",
+    "Right now, the United States and Israel are hitting targets all across Iran.",
+    "And, now, the killing of Iran's Supreme Leader has left that country facing a dangerous, uncertain future.",
+    "Iran is retaliating by launching missiles at U.S. bases and partner countries across the Middle East.",
+    "All the chaos serves a purpose and distracts from the President's failures at home; the rising prices, the violence of ICE against American citizens, and the unreleased Epstein files.",
+    "Over the last year, the President's disastrous illegal tariffs have crushed small businesses in Colorado and across the country.",
+    "Tariffs clearly are a tax on Americans.",
+    "Just this week, gas prices reached an 8-month high in the response to the war in Iran.",
+    "In 85 of the country's largest metro areas, childcare for two kids costs more than rent.",
+    "While working families struggle to get by, the President has given an extra boost to the powerful and well-connected.",
+    "The Trump family themselves have made $4 billion off the Presidency, and his administration helped pass $4 trillion in tax cuts for the wealthiest Americans and for the largest corporations.",
+    "We have seen the President and his Department of Justice delay and deny the release of the Epstein files--the full Epstein files.",
+    "Every trip to the grocery store and the doctor, every bill for rent, energy, or childcare is never quite enough."
+   ]
+  },
+  {
+   "date": "2025-11-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Continuing Appropriations and Extensions Act, 2026--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-11-07/CREC-2025-11-07-pt1-PgS7977",
+   "sentences": [
+    "So I hope that we can come together and move forward with this clean CR with the extension of the subsidized tax credit for the ACA."
+   ]
+  },
+  {
+   "date": "2025-06-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: H.R. 1",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-28/CREC-2025-06-28-pt1-PgS3680",
+   "sentences": [
+    "A motion to commit the bill H.R. 1 to the Committee on Finance of the Senate with instructions to report the same back to the Senate in 3 days, not counting any day on which the Senate is not in session, with changes that-- (1) are within the jurisdiction of such committee; and (2) would strike any provision that cuts funding for Medicaid which covers care for 60 percent of all nursing home residents.",
+    "A motion to commit the bill H.R. 1 to the Committee on Finance of the Senate with instructions to report the same back to the Senate in 3 days, not counting any day on which the Senate is not in session, with changes that-- (1) are within the jurisdiction of such committee; and (2) would strike any provision that cuts funding for Medicaid and the Affordable Care Act which-- (A) protects access for the 7,000,000 small businesses workers who depend on Medicaid coverage; and (B) protects access for the 4,000,000 small businesses who depend on the Affordable Care Act exchanges."
+   ]
+  },
+  {
+   "date": "2025-06-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: One Big Beautiful Bill (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-06-17/CREC-2025-06-17-pt1-PgS3414-3",
+   "sentences": [
+    "Their plans are going to dramatically reduce--even gut--services like Medicaid and SNAP, which give food to hungry, low-income workers.",
+    "If Republicans could focus on extending tax cuts for working families rather than on the wealthiest--that one effort, in and of itself, that one initiative-- they could avoid ripping away healthcare from more than 15 or 16 million Americans; gutting our much needed investments in climate change--in fighting climate change--and making sure we have lower energy prices.",
+    "I want to focus today on another dangerous part of this plan: how it explodes our national debt and really risks our economic future.",
+    "So I know something about fiscal responsibility, and it is not partisan.",
+    "At its best, fiscal responsibility should be bipartisan.",
+    "I can definitely say this bill that we are looking at is the opposite of fiscal responsibility.",
+    "This is a massive spending bill that is going to create the largest national debt in American history.",
+    "The Penn Wharton model, which includes something like north of $500 billion in additional interest payments from that accumulated debt year after year after year, over 10 years, suggests it would add up to not just $2.7 trillion but more like $3.2 trillion or $3.3 trillion.",
+    "You know, under this tax plan that is coming over to us right now, those tax cuts for the very wealthy are coming instead of expanding access to healthcare or building roads or improving our schools, and more tax dollars would go to paying off the massive debt-- to paying the interest on the massive debt--than all of our defense spending combined.",
+    "It will become more than 25 percent of our Federal budget just to pay the interest on the debt.",
+    "Those investors who buy those tenured bonds and help pay for our national debt are demanding higher returns because they view it as a riskier investment; that they will need a higher return if they are going to hold U.S. debt.",
+    "This could all become a one-two punch to working families, all the while the wealthiest families will end up being better off.",
+    "We can help working families, and we can cut the deficit.",
+    "We also did this with the Inflation Reduction Act, which will reduce the deficit by over $175 billion over the next 10 years.",
+    "It has already, dramatically, lowered a number of prescription drug costs, has expanded healthcare access, and in the process, has created hundreds of thousands of good jobs.",
+    "We also can't forget that this budget comes in the midst of the Trump administration's efforts around tariffs and what our good friend, the Senator from Washington, was just talking about when she described the consequences of Smoot-Hawley and how those tariffs, just at 20 percent, led to a global slowdown in the overall economy.",
+    "We all know that these tariff taxes are really not so hidden; they are taxes on the American people.",
+    "We can't borrow millions, we can't borrow billions, we can't borrow trillions just to hand out tax cuts to the top when working families are struggling to afford everyday goods.",
+    "There are many issues that may be partisan but being financially responsible doesn't need to be one of them, neither should good, strong economies, neither should economic fairness, neither should protecting working families.",
+    "I would suggest that we write a budget that reflects our values and puts tax cuts toward working families first, a budget that strengthens the middle class, one that keeps our economy strong and will keep it growing for generations to come."
+   ]
+  },
+  {
+   "date": "2025-03-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Consumer Financial Protection Bureau (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-03-05/CREC-2025-03-05-pt1-PgS1508",
+   "sentences": [
+    "Mr. President, the Consumer Financial Protection Bureau is at its core a law enforcement agency.",
+    "Six million households lost their homes to foreclosure, and a quarter of our families lost 75 percent of their wealth.",
+    "The Bureau cleaned up mortgage markets, debt collection, student loans, and much, much more."
+   ]
+  },
+  {
+   "date": "2025-02-05",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Russell Vought (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-02-05/CREC-2025-02-05-pt2-PgS710",
+   "sentences": [
+    "These are career civil servants, many of whom have devoted their lives to keeping our government running--from processing Social Security checks; keeping our weather systems afloat; or helping to stop waste, fraud, and abuse.",
+    "Deep in Project 2025 are plans to heavily restrict access to contraceptives and abortion medication, denying women and families the freedom to make their own reproductive decisions; plans to make healthcare more expensive by repealing policies that empower Medicare to negotiate prescription drug prices and drive down the cost for healthcare seniors; plans to make Colorado less resilient to these increasing frequent disasters caused by extreme weather.",
+    "They are already reinstating cruel immigration policies and threatening to come after the LGBTQ community.",
+    "We are talking about hundreds of millions of dollars--Federal spending for a staggering number of programs, programs that provide America's healthcare, food, nutrition, housing, childcare, and so much else.",
+    "The memo stemmed from an Executive order calling on Federal Agencies to review and eliminate spending on ``woke'' ideologies or the ``Green New Deal''--both things that aren't clearly defined and don't, in any specific way, exist.",
+    "The Trump administration tried to walk back the original memo to clarify that the freeze wouldn't affect individual payments like Social Security or food stamp benefits, but that didn't clear up too much.",
+    "It certainly didn't help that the White House Press Secretary couldn't answer specific questions, like pertaining to critical government programs like Medicaid, whether they were going to be affected.",
+    "Our public safety and law enforcement would be weakened.",
+    "It would cut resources for community-based suicide prevention efforts, organizations that provide care for veterans experiencing homelessness, and services for veterans living with disabilities, many of them taken in the defense of our Nation.",
+    "These medical providers are on the frontlines in dealing with our Nation's mental health and opioid crisis, and we are cutting their ability to provide these services?",
+    "These folks in rural Colorado and in suburbs around every city in Colorado are watching their friends, family, and neighbors struggle with mental health issues that rose up after the pandemic."
+   ]
+  },
+  {
+   "date": "2022-06-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Joseph Woodrow Hatchett United States Courthouse and Federal Building-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-06-23/CREC-2022-06-23-pt1-PgS3110",
+   "sentences": [
+    "I arrived the next morning at the scene and walked into the command center that the FBI and the police were using.",
+    "Aurora Police Chief Dan Oates showed us a video of the crime scene that had been taken by police shortly before, using a hand-held camera.",
+    "We became the first purple State to successfully pass gun safety laws.",
+    "Coloradans, including the vast majority of gun owners, wanted to get something done.",
+    "That led to universal background checks and a ban on high-capacity magazines; not everything--not everything--that we wanted but steps that made a real difference.",
+    "Many assume passing new laws like background checks or magazine limits wouldn't work because crooks don't buy guns from legal dealers."
+   ]
+  }
+ ]
+}

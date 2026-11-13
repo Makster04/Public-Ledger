@@ -1,0 +1,70 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "husted",
+ "name": "Jon Husted",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 4,
+  "press": 0,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Ratepayer Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-30/CREC-2026-09-30-pt1-PgS5192-2",
+   "sentences": [
+    "Americans are increasingly realigned on the computing power of data centers in nearly every part of their daily lives--from medicine and manufacturing to agriculture, education, national defense, and the delivery of basic services.",
+    "As our reliance on this technology grows, so does the demand for data centers across the country.",
+    "But more computing power requires more electricity, and when larger data centers come online, the cost of providing that power cannot be pushed onto everyone else.",
+    "We have to make sure that the growth of these data centers does not mean higher electric bills for working families, for senior citizens, or for small businesses.",
+    "That is what we are talking about today: making the data centers accountable, not the American ratepayer.",
+    "We need to win the global race for artificial intelligence--I don't think that anyone is disputing that fact--and we should not do it, though, by forcing American families and businesses to subsidize Big Tech.",
+    "My bill ensures that large data centers pay their fair share of electricity costs, infrastructure costs that they require, requiring them to own the responsibility for those costs, rather than shifting them to other ratepayers.",
+    "The Ratepayer Protection Act outlines a standard for data centers to pay their own way for electricity and the grid and the infrastructure, and it requires State utility regulators to consider this standard to ensure that large-load customers pay the full incremental costs of the infrastructure needed to serve them--pay for it all."
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Amending the Help America Vote Act of 2002 to Require Voters to Provide Photo Identification--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-08-07/CREC-2026-08-07-pt1-PgS4556-2",
+   "sentences": [
+    "Madam President, using a photo ID to vote is common sense.",
+    "So tonight, this early morning, I am offering a clean, simple straightforward bill to require a photo ID to vote in America.",
+    "No prohibitions on absentee voting.",
+    "Thirty-six States require some form of photo ID.",
+    "Photo ID laws have been tested in elections across this country, and they work.",
+    "I urge my colleagues to vote yes on this bill to establish nationwide photo ID standards and give Americans better-run and honest and fair elections."
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Agoa Extension Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-30/CREC-2026-07-30-pt1-PgS4360-3",
+   "sentences": [
+    "It is just farmland as far as you can see.",
+    "Following Japan's surrender, Sergeant Phillips quickly rose through the ranks and earned the rank of technician fourth grade, becoming the youngest man in charge of a motor pool servicing trucks and military equipment.",
+    "We owe an enduring debt of gratitude to our veterans and more than 400,000 Americans who made the ultimate sacrifice during World War II."
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-01-14/CREC-2026-01-14-pt1-PgS186-2",
+   "sentences": [
+    "And she soon found herself being pressured to have an abortion.",
+    "Fortunately, she chose life and the path of adoption for me, which was just an amazing blessing.",
+    "After a brief stay in foster care, I received the greatest blessing of my life.",
+    "Second, unborn children cannot march.",
+    "And, third, the pro-life movement is not just about opposing abortion.",
+    "The Senator from Oklahoma. 50th Anniversary of the Hyde Amendment"
+   ]
+  }
+ ]
+}

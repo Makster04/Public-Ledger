@@ -1,0 +1,513 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "marshall",
+ "name": "Roger W. Marshall",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 31,
+  "press": 0,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2026-09-23",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Protect College Sports Act of 2026",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-09-23/CREC-2026-09-23-pt1-PgS4892-2",
+   "sentences": [
+    "If you are trying to balance the budget, if we could get the cost of healthcare under control, that would help us get toward a balanced budget.",
+    "A hip replacement in one facility might be $15,000 but $150,000 in another location.",
+    "Mr. President, notwithstanding rule XXII, I ask unanimous consent that the Senate proceed to the immediate consideration of Calendar No. 522, S. 2355; further, that the committee-reported substitute amendment be agreed to, the bill as amended, be considered read a third time and passed, and that the motion to reconsider be considered made and laid upon the table.",
+    "A real example: Getting a hip replaced at a surgical hospital might cost $15,000 or $20,000, but at the hospital down the street, it might be $150,000."
+   ]
+  },
+  {
+   "date": "2026-07-22",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Assisting Small Businesses Not Fraudsters Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-07-22/CREC-2026-07-22-pt1-PgS4218",
+   "sentences": [
+    "Mr. President, just 2 years ago, we were a land of open borders, crime was surging across the country, and fraud was rampant.",
+    "That is money that should be strengthening our military, supporting our veterans, protecting Medicare and Social Security, or reducing the debt we are leaving to our children and our grandchildren.",
+    "In one of the largest healthcare fraud takedowns in our Nation's history, Federal prosecutors charged hundreds of defendants accused of submitting more than $6 billion in fraudulent claims to Medicare, Medicaid, and other taxpayer-funded health programs.",
+    "Investigators uncovered transnational criminal organizations, fraudulent medical equipment schemes, and providers accused of billing the government for services that were never provided.",
+    "It combats emerging AI- generated fraud and gives law enforcement stronger tools to hold criminals accountable.",
+    "Congress should build on that momentum by giving law enforcement and Federal Agencies the tools they need to keep fraudsters out of our programs and behind bars where they belong."
+   ]
+  },
+  {
+   "date": "2026-06-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Order of Business (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2026-06-10/CREC-2026-06-10-pt1-PgS2715",
+   "sentences": [
+    "Mr. President, I ask unanimous consent that, notwithstanding rule XXII, the postcloture time with respect to Executive Calendar No. 765 be expired and the Senate vote on confirmation of the nomination at a time to be determined by the majority leader, in consultation with the Democratic leader, tomorrow; finally, that if the nomination is confirmed, the motion to reconsider be considered made and laid upon the table and the President be immediately notified of the Senate's action."
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Healthcare (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-12-09/CREC-2025-12-09-pt1-PgS8557-2",
+   "sentences": [
+    "They were calling it the Affordable Care Act--ObamaCare, as we now know it by-- the ``Not So Affordable Care Act.'' So the doctors and I scrambled, and we said: We better see what is in this bill.",
+    "We said that this overregulation was going to lead to consolidation of industry.",
+    "We have three PBMs controlling 85 percent of prescription drugs.",
+    "We are trying to reform, to fix the ``Not So Affordable Care Act,'' ObamaCare.",
+    "But when fraud really spiked is when we added these enhanced premium tax credits--the Biden enhanced premium tax credits.",
+    "And just like the original ACA, these enhanced premium tax credits were voted for only with Democrat votes.",
+    "They enrolled them in ObamaCare, and the patient never even knew they were on it.",
+    "In fact, one out of three people on ObamaCare, in a given year, never makes an insurance claim.",
+    "One out of three people on ObamaCare never makes an insurance claim.",
+    "That is what is happening in ObamaCare.",
+    "So the first thing that we want to do is to stop the fraud in the Affordable Care Act, and we do that in several ways.",
+    "I can't get a hotel room tonight-- when you apply for Medicare, for Social Security, you need an ID.",
+    "Probably, a third of that $150 billion a year we are spending on ObamaCare right now is in fraud, waste, and/or abuse.",
+    "It is the only industry in America where we don't allow consumerism, and the ACA is just complicating this.",
+    "Remember, your deductibles under ObamaCare went from $1,000 a year to $15,000 a year.",
+    "Certainly, ObamaCare did some good things, and one of them was to protect people with preexisting conditions.",
+    "And the most common preexisting condition that wasn't covered was pregnancy.",
+    "So I want to make sure everyone's preexisting conditions are covered.",
+    "For every business I talk to, every union I talk to, every self-employed person I talk to, the cost of healthcare is a top-three issue.",
+    "In fact, it was 2018 that now-Speaker Mike Johnson and I put together a comprehensive replacement bill for the ACA.",
+    "And by the way, again, a $15,000 deductible for a family making $120,000 a year--that $15,000 deductible is not the same as access to care."
+   ]
+  },
+  {
+   "date": "2025-10-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Government Funding (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-10-02/CREC-2025-10-02-pt1-PgS6909-9",
+   "sentences": [
+    "If it wasn't for healthcare inflation, we would probably be down closer to 2 percent.",
+    "You think about heart disease and hypertension, obesity, diabetes, Alzheimer's, cancer, and mental health issues.",
+    "Twenty percent of our youth are on a prescription drug, 30 percent are obese, and 40 percent of our youth have a chronic disease.",
+    "We have a mental health epidemic in our youth as well.",
+    "They think that Medicaid is going to save the day.",
+    "Let me tell you something about Medicaid.",
+    "Only 5 percent of Medicaid funding goes to rural America.",
+    "Five percent of Medicaid funding goes to rural America.",
+    "Hospitals and doctors lose money on every Medicaid patient we see.",
+    "But certainly, running a private OB practice and running a hospital, I realized that we lose money on every Medicaid patient we see.",
+    "Having Medicaid is not the same as access to healthcare.",
+    "Talk to any doctor, talk to any patient that has Medicaid.",
+    "So, in reality, probably less than half of the doctors, in a true measure, participate in Medicaid.",
+    "There are better solutions out there than Medicaid.",
+    "Again, the ACA has been the rule of the land for 15 years now.",
+    "If there are any hospitals failing today, and there are, it is because of the overregulation of the ACA.",
+    "Let's talk about these COVID-era subsidies for the ACA plans.",
+    "So think back to the original ACA.",
+    "The ACA sets up funding to help supplement insurance premiums for a group of people based upon their ability to pay.",
+    "When the ACA was first written, they thought we would be spending maybe $25, $50 billion a year on those subsidies.",
+    "When these subsidies go up for the people with an ACA plan, guess what?",
+    "It was supposed to be for COVID, and, like all the other COVID subsidies that drove us into massive debt, there was a sunset on it.",
+    "You know, there is a fight about healthcare for illegal aliens.",
+    "I don't think anyone can argue that before our working-families tax-cut bill--our signature bill that is going to grow the economy--that before that legislation, that illegal aliens were getting healthcare.",
+    "Even the CBO--and I hate to pick and choose when I use the CBO numbers--but the CBO said that 2 million illegal aliens were getting healthcare subsidies or free healthcare because of the loose, just unfettered process that States were using to verify who was eligible for Medicare.",
+    "That is not me; that is not a Republican; the CBO said 2 million illegal aliens were getting care each year on the backs of American taxpayers.",
+    "I don't know if that number is perfectly accurate, but if it is 1 million, 2 million, or 3 million, certainly illegal aliens were getting free healthcare on the backs of American taxpayers."
+   ]
+  },
+  {
+   "date": "2025-01-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Laken Riley Act--Motion to Proceed",
+   "url": "https://www.govinfo.gov/app/details/CREC-2025-01-08/CREC-2025-01-08-pt1-PgS46-3",
+   "sentences": [
+    "Mr. President, as you know, most every January, hard- working families across this country gather together at their kitchen tables, and they work on a budget.",
+    "That is why, today, this country faces a national debt of over $36 trillion--$36 trillion.",
+    "I believe that debt is the greatest threat we have to our long-term national security and to the future of America in so many ways.",
+    "How did we get to $36 trillion in national debt?",
+    "We have a national debt of $36 trillion.",
+    "The Federal Government spent more on interest payments--on interest alone--on the debt than it did on funding the national defense or Medicare.",
+    "We take a peek again at 2023 and the Biden-Harris administration's open border policies.",
+    "Think about the costs of taking on these 10 million--maybe more--illegal immigrants.",
+    "Our Department of Education spent over $1 billion in promoting DEI initiatives in schools.",
+    "Let me say it again--$1 billion in promoting the DEI initiatives in schools, but our kids can't read and write and do math.",
+    "Meanwhile, the U.S. Government adds $6 billion of debt daily.",
+    "By the time you wake up in the morning, go to bed, and wake up the next day, we have added another $6 billion of debt.",
+    "The total debt now, as I said earlier, is over $36 trillion.",
+    "Next, I would implement term limits for political appointees as well as long-term employees.",
+    "We could roll back energy mandates, EPA limits, methane emission rules.",
+    "For instance, taxpayer-funded electric vehicle subsidies could be done away with."
+   ]
+  },
+  {
+   "date": "2024-05-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Securing Growth and Robust Leadership in American Aviation Act-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-05-08/CREC-2024-05-08-pt1-PgS3575-2",
+   "sentences": [
+    "Madam President, I rise today to ask this body for unanimous consent to call up and make pending our amendment to add the Credit Card Competition Act to the substitute amendment for the FAA reauthorization bill."
+   ]
+  },
+  {
+   "date": "2024-04-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Reforming Intelligence and Securing America Act--Motion to Proceed-- Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-16/CREC-2024-04-16-pt1-PgS2765-2",
+   "sentences": [
+    "Yet here we are, 3 years later, with the worst border crisis our Nation has ever seen.",
+    "Now with over 11 million border crossings, including 2 million unvetted ``got-aways'' now living here on U.S. soil--and amongst those are an unknown number of terrorists, violent gang members and drug cartels--Mayorkas has broken his oath, resulting in this dangerous and deadly invasion of our country.",
+    "All you have to do is read your hometown news, and you are going to find a person in your community who has died from fentanyl or who has been physically abused or murdered by one of these unvetted illegal aliens.",
+    "From the moment Secretary Mayorkas took office, he has skirted the Constitution and broken the law as outlined in the Secure Fence Act of 2006, which clearly states he must maintain ``operational control'' and ``prevent unlawful entries into the United States.'' In the past 3 years alone, we have had nearly 2 million known ``got- aways'' successfully evade capture and enter our country--a number that includes hundreds of violent gang members and terrorists.",
+    "Maybe that is why law enforcement officers recently told me back home that we cannot arrest ourselves out of this crisis; that they are so overwhelmed by crime now related to these illegal crossings that we cannot arrest ourselves out of this predicament.",
+    "Secretary Mayorkas has given free rein to drug cartels to smuggle in illegal aliens and deadly drugs like fentanyl, resulting in the deaths of 300 Americans every day, with a total of over 250,000 fentanyl- related poisoning murders--deaths--occurring under his watch.",
+    "The Secretary has turned a blind eye to the exploitation of our borders by terrorists, Chinese nationals, and other high-risk individuals, causing the largest influx of terrorist border crossings in our Nation's history.",
+    "And let us not forget the abuse and weaponization of parole and asylum.",
+    "Instead of fulfilling his obligation to the American people, Secretary Mayorkas has unraveled our national security, unleashed our border into chaos, and launched an unmitigated disaster and culture of lawlessness that has left Lady Liberty vulnerable to exploitation."
+   ]
+  },
+  {
+   "date": "2024-04-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the National Labor Relations Board Relating to \"Standard for Determining Joint...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-04-10/CREC-2024-04-10-pt1-PgS2695-3",
+   "sentences": [
+    "The joint employer rule from the NLRB will crush the franchise model as we know it.",
+    "This rule attempts to trigger joint employer status if two employers share the essential terms and conditions of employment but then talks about indirect control as one of these terms and conditions.",
+    "So instead of making overly broad and burdensome rules, we should pass bills like our own Save Local Business Act, which provides clear and consistent standards for treating joint employment status."
+   ]
+  },
+  {
+   "date": "2024-02-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Extension of Continuing Appropriations and Other Matters Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2024-02-29/CREC-2024-02-29-pt1-PgS1068",
+   "sentences": [
+    "And, finally, our amendment also funds Israel at the White House's request, thus showing the world once again America stands besides Israel."
+   ]
+  },
+  {
+   "date": "2023-11-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Border Security (Executive Session)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-11-29/CREC-2023-11-29-pt1-PgS5656-2",
+   "sentences": [
+    "Madam President, ``border, border, border''--I just had lunch with Speaker Mike Johnson.",
+    "He said he wishes he could get all of us a T-shirt that said ``border, border, border.'' In my office, this week, no matter what the question is, the answer is ``Secure the border.'' In fact, I think Speaker Johnson has been talking to some of the same people I have been talking to.",
+    "Since Joe Biden was sworn into office, over 10 million immigrants have come into our border, and over 1.5 million ``got-aways'' have occurred--10 million people crossing our border illegally, 1.5 million ``got-aways.'' This crisis at our Nation's border is the No. 1 most immediate threat to our safety and security.",
+    "Nearly 300 young Americans are dying every day from fentanyl poisoning, not to mention what is going on with human trafficking, the growth of the cartel, and the violence.",
+    "As my dad the police officer taught me, the violence always follows the drug trafficking.",
+    "These look like they are all going to be record-setting months for the number of people crossing our border illegally in these months.",
+    "But yet, for some unknown reason, the White House wants to take border security off the table in the supplemental bill.",
+    "Under this administration, we have seen 279 known terrorists try to cross our border, more than 24,000 Chinese nationals, not to mention some 80,000 aliens of interest from countries like Afghanistan, Iran, Iraq, and Syria who have breached our border.",
+    "This is indeed an invasion of our border, and every American is now paying for it.",
+    "As a matter of fact, it is now costing Americans nearly $500 billion a year--let me say that again, $500 billion a year--to house and take care of these illegal immigrants.",
+    "Can you imagine how many Border Patrol officers, how much technology, how many drug dogs, and, yes, how much fence we could build for half a trillion dollars a year?",
+    "I am grateful, I am proud, and the American people are glad to hear that the leadership on this side of the aisle are saying we will deny cloture on this supplemental bill if there is not meaningful border security.",
+    "I am certainly willing to do just that, to work hard to get to border security.",
+    "This is a once-in-a-generation opportunity to secure our border and to get this right for once.",
+    "I urge every Republican to vote down cloture of this outrageous supplemental package unless we see true, meaningful border security included.",
+    "Changing the asylum policy alone can result in as many as 75 percent less people entering our Nation illegally--75 percent.",
+    "If we just turn off the siren of asylum, we can cut back on those crossing our borders some 75 percent.",
+    "That would free up the Border Patrol officers to do the job that they were hired to do: catching the bad guys, stopping the fentanyl, stopping the human trafficking, rather than playing a nursemaid to nearly 10,000 illegal people every day.",
+    "It is a must that any supplemental bill include provisions to address these border issues.",
+    "This is why I urge every Republican in this body to vote no on cloture on any bill that does not, at a minimum, include policy changes that meaningfully address the flood of illegal immigration at our southern border."
+   ]
+  },
+  {
+   "date": "2023-10-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Food and Nutrition Service Relating to \"Application of Bostock V. Clayton...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-10-26/CREC-2023-10-26-pt1-PgS5206",
+   "sentences": [
+    "This administration is using school lunches to attack our youth, to implement their transgender policies.",
+    "After 3 years, I thought I had seen it all when it came to what this current administration is willing to do in order to force its radical transgender agenda on the American people.",
+    "Right now, as I stand here in this Chamber, the Biden administration is threatening food assistance for low-income kids unless the schools they attend carry out their transgender agenda, putting children's access to lunch at risk.",
+    "This includes, but is not limited to, requiring biological boys to be given access to girls' bathrooms and locker rooms or allowing biological boys to compete in girls' sports.",
+    "Children, including LGBTQ families, had their Federal funding for their lunches taken away.",
+    "We must protect these children's food security, their privacy, and their safety at all costs.",
+    "The USDA has no authority to force this on our children or the schools they attend; to adhere to woke mandate such as requiring boys to be given access to girls' bathrooms and locker rooms or allowing boys to compete against girls in girls' sports."
+   ]
+  },
+  {
+   "date": "2023-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the United States Fish and Wildlife Service Relating to \"Endangered and Threatened...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-28/CREC-2023-09-28-pt1-PgS4739",
+   "sentences": [
+    "Less than 2 percent of all listed species have been removed from ESA protection since 1973.",
+    "No oil producer, rancher, farmer, wind energy producer--none of us wants the demise of the prairie-chicken.",
+    "Whether it is gas, diesel, wind, or solar energy, a listing now will only increase the cost of energy for Kansans.",
+    "An attempt to protect a species by an Agency which has only successfully recovered 2 percent of species it has listed."
+   ]
+  },
+  {
+   "date": "2023-09-14",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2024",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-09-14/CREC-2023-09-14-pt1-PgS4503",
+   "sentences": [
+    "I am not sure what Senator Sanders would talk about some of his, but what I saw was this meeting patients where they are a concept, integrating all the different elements of primary care--not just your blood pressure, not just your Accu-Chek, but also your mental health.",
+    "And then we had multiple Zooms and meetings with folks back home: How do we solve this primary care problem and, again, this mental health epidemic slapping us in the face every time we go back?",
+    "At the end of the day, you cannot overestimate how much money this will save in programs like Medicare and Medicaid and the health insurance back home and help drive the cost of healthcare down for people."
+   ]
+  },
+  {
+   "date": "2023-06-01",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Fiscal Responsibility Act of 2023",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-06-01/CREC-2023-06-01-pt1-PgS1882",
+   "sentences": [
+    "Madam President, I rise in support of Marshall amendment No. 110 to put an end to the culture of lawlessness at our southern border embraced by our President.",
+    "I cannot in good conscience support this debt limit deal and saddle my grandchildren with this $4 trillion in additional debt.",
+    "This bill misses the mark, and, perhaps, what is more frustrating is that it does not give a single cent to securing our border--zero dollars to addressing the greatest, most immediate national security threat to our Nation.",
+    "This past weekend alone, the Border Patrol made over 13,000 apprehensions.",
+    "There were over 4,000 ``got-aways''; and they seized 118 pounds of meth, 14 pounds of fentanyl, and apprehended 6 sex offenders and 5 gang members.",
+    "We have a crisis unfolding at our southern border, and it is happening right now in plain sight."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Department of the Army, Corps of Engineers, Department of Defense and the...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgS1017-2",
+   "sentences": [
+    "It is important to note that my colleagues and I requested the administration suspend the rulemaking until the Supreme Court completes its consideration of Sackett v. EPA.",
+    "Agriculture, oil and gas, energy, the housing industry, road builders, bridge builders, construction workers, and municipalities have all voiced their disapproval of the rule and the costs of the negative impacts that its adoption will have on American industries and consumers."
+   ]
+  },
+  {
+   "date": "2023-03-29",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on March 13, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-29/CREC-2023-03-29-pt1-PgS1028",
+   "sentences": [
+    "Under this national emergency, we have seen a massive increase in government spending across the board.",
+    "The gross Federal debt has increased by $3.7 trillion--$3.7 trillion--since this President took office, an increase of 12 percent.",
+    "We sadly watched as interest rate hikes, combined with skyrocketing inflation, have raised the amount of debt many Americans hold and made almost everything cost more.",
+    "On top of all of this, the authority granted to the President by this emergency declaration has been the direct justification for the White House's efforts to cancel as much as $20,000 in debt for Federal student loan holders--a plan that would cost taxpayers an additional $400 billion."
+   ]
+  },
+  {
+   "date": "2023-03-08",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Disapproving the Action of the District of Columbia Council in Approving the Revised Criminal Code Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2023-03-08/CREC-2023-03-08-pt1-PgS680-5",
+   "sentences": [
+    "This culture of lawlessness--the same that is on display at our southern border, where just yesterday we learned that two of the four Americans kidnapped by the Gulf Cartel were brutally murdered--is a product of cashless bail laws and efforts to defund the police.",
+    "In DC, these efforts have come in the form of major cuts to the city's police department.",
+    "In 2020, the council implemented a $15 million cut to their own police force--$15 million.",
+    "Shockingly, despite these staggering numbers, the DC Council, over the objections of the city's police chief and chief prosecutor, moved in November of last year to eliminate mandatory minimum sentences and reduce maximum penalties for these very crimes.",
+    "Lawlessness runs deep in the Democratic Party, and no matter how they vote today, much more must be done to turn back the harm they have done to our inner cities and at our southern border."
+   ]
+  },
+  {
+   "date": "2022-09-28",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Affordable Insulin Now Act--Motion to Proceed--Continued",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-09-28/CREC-2022-09-28-pt1-PgS5126-2",
+   "sentences": [
+    "If you include natural immunity, immunity gained through natural infection, the CDC stated just last month that approximately 95 percent of Americans over the age of 16 have some acquired level of immunity.",
+    "Because it is the fearmongering and the robust authorities provided by the emergency declaration that allow this administration to justify infringing upon your rights and validates their continued expansion of inflationary government spending and social programs.",
+    "The Biden administration is keeping Americans under the strain of the national emergency declaration as if we are not living in a time of peace, as if we are living in a time of war that requires the full force of the Federal Government--rights and fiscal responsibility be damned--in order to respond to this crisis.",
+    "But the difference is, I don't think that the government is the solution to the problem; I think that the government has created the problem, that physicians and nurses are so tired of dealing with all the redtape, all the continuing burden that the ACA has put on us.",
+    "Why are there still vaccine mandates out there?"
+   ]
+  },
+  {
+   "date": "2022-05-26",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Department of Justice and the Department of Homeland Security Relating to...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-26/CREC-2022-05-26-pt1-PgS2721",
+   "sentences": [
+    "Reserving the right to object, USAID awarded a $200 million grant for a 10-year viral emergence early warning project known as PREDICT.",
+    "We have uncovered evidence of possible embezzlement, possible money laundering, and insider threats, as well as other concerns related to the PREDICT and other USAID grant awards.",
+    "USAID and NIH both awarded multimillion dollar grants to EcoHealth Alliance during the same 5-year period leading up to and immediately preceding the COVID-19 outbreak.",
+    "EcoHealth is unable to produce to NIH proof of its research, such as lab notebooks and virus samples, so we are simply asking USAID for proof of the EcoHealth research they funded.",
+    "We requested records from USAID that grant recipients are legally required to maintain.",
+    "At this point, we believe either the USAID staff is withholding the records from Congress or they have failed to access them through the UC Davis and EcoHealth Alliance."
+   ]
+  },
+  {
+   "date": "2022-05-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Women'S Health Protection Act (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-05-10/CREC-2022-05-10-pt1-PgS2395-2",
+   "sentences": [
+    "Mr. President, late last Monday, an unprecedented leak of a draft Supreme Court document opinion in the case of Dobbs v. Jackson Women's Health was published.",
+    "In reaction, SCOTUSblog, a leading Supreme Court blog stated: This leak is the gravest, most unforgivable sin.",
+    "We have all seen the disgusting multitude of images of pro-life offices being vandalized and bombed, and we all bear witness of Catholic masses disrupted on Mother's Day--on Mother's Day, of all days.",
+    "We have seen the threatening violence at the personal homes of Supreme Court Justices.",
+    "Listen, these threatening so-called protests at the Justices' homes are a violation of the law of this land.",
+    "I have to note, Americans understand the majority leader has provided no such condemnation but, rather, has decided to once again bring back his ``Abortion on Demand Act'' to the Senate floor.",
+    "This bill is the most egregious, the most horrific attack on the lives of unborn children and the health of moms in American history.",
+    "The overturning of Roe v. Wade simply returns this emotional issue back to the States, to the elected voices of the people--no more, no less.",
+    "The Mississippi Dobbs case simply protects life after 15 weeks, when a baby can feel pain, when a baby can recognize its mom's voice, when a baby can recognize the voice of its sibling.",
+    "But let me tell you exactly what the Democrats' extreme ``Abortion on Demand Act'' would do.",
+    "It goes far beyond Roe v. Wade.",
+    "This bill invalidates any and all State laws that protect not just the unborn child but the health and well-being of the mom as well.",
+    "It likely leads to American taxpayer dollars funding abortions at home and around the world.",
+    "This bill will tie up faith-based hospitals in courts for not offering abortion services.",
+    "This bill allows sex-based abortions.",
+    "It eliminates the requirement for informed consent of the patient or parental consent.",
+    "This bill is an attack on my faith and an attack on the faith of many doctors and nurses who refuse to take part in abortions.",
+    "Shockingly, it provides the right to provide abortions to any healthcare provider--not necessarily a physician but to certified nurse-midwives, nurse practitioners, a physician assistant.",
+    "Finally and more specifically, this bill strikes down State laws that restrict telehealth abortions.",
+    "These are chemical abortions, and they would become a common means of birth control--again, leading to many, many more visits to the emergency rooms for these women who are taking medicines unsupervised.",
+    "He stated that we from the pro-life community would not treat women with ectopic pregnancies.",
+    "This case of Roe v. Wade has nothing to do with treating ectopic pregnancies."
+   ]
+  },
+  {
+   "date": "2022-03-03",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Relating to a National Emergency Declared by the President on March 13, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-03/CREC-2022-03-03-pt1-PgS965",
+   "sentences": [
+    "Two days prior, following an alarming rate of transmission, the World Health Organization had declared COVID-19 as a global pandemic.",
+    "A recent study from Johns Hopkins University found lockdowns only reduced the COVID-19 death rate by 0.2 percent--0.2 percent--2 out of 1,000.",
+    "Symptoms of anxiety or depressive disorder and the use of mental health care among adults increased by 36 percent from August 2020 to February of 2021.",
+    "The CDC found between March and October 2020, emergency department visits for mental health emergencies rose by 24 percent for children ages 5 through 11 and 31 percent for children ages 12 to 17 years.",
+    "These societal ills have been compounded by mask mandates, vaccine mandates, and isolation orders.",
+    "The Democrats' COVID obsession has also resulted in out-of-control spending and massive debt.",
+    "This means Federal spending to combat the pandemic has well surpassed the $4.1 trillion the United States spent waging World War II.",
+    "With hundreds of billions of dollars of funds for schools and State governments unspent, the President announced during his State of the Union that he plans to send a supplemental COVID relief funding request to Congress.",
+    "Our Nation's emergency posture to this virus is driving out-of-control spending, fueling inflation, and strapping our children and, again, our grandchildren, with more than $30 trillion in debt.",
+    "Indeed, at this time, our national debt is a greater threat to our Nation than COVID.",
+    "First, terminating this emergency declaration will not impact the title 42 order currently in place and being exercised at our southern border that allows border officials to expel illegal aliens.",
+    "Again, this will not impact title 42.",
+    "The crisis at the United States-Mexico border has been fueled by this administration's decision to resume catch-and-release, halt construction of the border wall, and promise half a million dollars to immigrant families who broke our laws.",
+    "As a result, the number of illegal aliens crossing our southern border is at the highest level in more than 20 years under President Biden.",
+    "I can assure you, Republicans' intention is not to take away the only tool being utilized at our southern border to stem the tide of illegal immigrants pouring in.",
+    "The most recent internal review of title 42 submitted by CDC Director Walensky on February 2 found that the order needed to remain in place.",
+    "Republicans agree--we agree--that the external threat of COVID coming across the border unchecked from other nations preserves the need for this order to remain in place and for us to pass legislation outside of these emergency declarations to further secure our porous border.",
+    "While President Biden claimed during his State of the Union Address that--and I will quote him--``we are moving forward safely, back to . . . normal routines,'' his actions don't match his words.",
+    "The administration has only withdrawn one of their vaccine mandates, the OSHA mandate on employers with more than 100 employees, after--only after--the Supreme Court struck it down.",
+    "Just yesterday, on this floor, 44 Senate Democrats voted to keep the mandate in place despite its constitutional violation of State police powers, harm to an already weak healthcare workforce, and outdated science that guided the promulgation of the rule.",
+    "We meet them in the Crypt, and we go through the Old Supreme Court, and we walk up the back steps into the Capitol's Rotunda."
+   ]
+  },
+  {
+   "date": "2022-03-02",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval Under Chapter 8 of Title 5, United States Code, of the Rule Submitted by the Centers for Medicare & Medicaid Services Relating to \"Medicare and Medicaid...",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-03-02/CREC-2022-03-02-pt1-PgS924",
+   "sentences": [
+    "Between burnout and suicide, the pandemic took a heavy toll on their physical and mental health-- doctors, nurses, all the supporting staffs in these hospitals, in the nursing homes, in the emergency rooms.",
+    "The Centers for Medicare and Medicaid Services acknowledges there are currently ``endemic staff shortages for all categories of employees at almost all kinds of healthcare providers and suppliers.'' Despite this acknowledgement, President Biden and his public health officials went forward with this vaccine mandate, knowing it could and would lead to more firings--firings like those we saw in New York, where 33,000 healthcare workers were fired--33,000.",
+    "Labor shortages at healthcare facilities will impede access for the elderly and the poor--those who are supposed to be cared for under Medicare and Medicaid.",
+    "Follow-on guidance issued by CMS recently also required State surveyors to enforce the Federal Government's vaccine mandate by verifying compliance at healthcare facilities.",
+    "Make no mistake, this Federal vaccine mandate is not about public health or science and fails to account for changes in data and the circumstances of the virus.",
+    "These examples just show how flawed the science is behind the CMS vaccine mandate.",
+    "As previously stated, that is because this vaccine mandate is not about public health or science.",
+    "Now, I know some here will say that the Supreme Court ruled to uphold this mandate earlier this year and this is settled, but that is not the full story here.",
+    "The Supreme Court opinion which lifted the stay on the rule focused primarily on the Secretary of HHS's statutory authority to impose conditions upon healthcare facilities participating in Medicare and Medicaid.",
+    "We have seen mental health issues skyrocket, suicides on the rise, and substance abuse increase.",
+    "Frontline workers in hospitals, doctors' offices, community health centers, and beyond will fight even harder; that is if we remove the burden of the vaccine mandate and our healthcare heroes aren't forced to leave their jobs.",
+    "Just this week, England terminated their COVID vaccination requirement for all health and social services.",
+    "I urge my colleagues to support this resolution of disapproval to invalidate President Biden's overreaching and harmful vaccine mandate for our healthcare workers.",
+    "The Supreme Court's ruling was not a ruling on merit.",
+    "The Medicare and Medicaid vaccine mandate will impact every family, every person across this great Nation.",
+    "We already have a dire shortage of doctors, nurses, ultrasound techs, custodians, housekeepers, kitchen staff in all these hospitals and nursing homes.",
+    "Last night, during the State of the Union Address, President Biden said: Let's stop looking at the COVID-19 as a partisan dividing line."
+   ]
+  },
+  {
+   "date": "2021-08-10",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Setting Forth the Congressional Budget for the United States Government for Fiscal Year 2022 and Setting Forth the Appropriate Budgetary Levels for Fiscal Years 2023 Through 2031",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-08-10/CREC-2021-08-10-pt1-PgS6204",
+   "sentences": [
+    "Mr. President, as we all work to address vaccine hesitancy and anxiously await full approval of the COVID-19 vaccines, open border policies undermine these efforts.",
+    "Americans can travel to Mexico City but not return to America without a COVID test, while an illegal immigrant has no test requirements, and in just a few days, it will be easier to illegally cross our southern border than go to a restaurant or a bar in New York City.",
+    "Some estimates would suggest hundreds or, perhaps, even thousands of COVID-positive illegal immigrants enter our Republic every day.",
+    "That means we have a superspreader event at our southern border every single day, and Americans are watching this public healthcare crisis.",
+    "There is a healthcare crisis at our southern border, and it is unacceptable for the government to be transporting illegal migrants who pose a grave risk of transmitting COVID across our Nation.",
+    "My amendment would ensure resources are provided for testing and treatment of migrants at the border and for quarantining those who test positive for COVID as well as prohibiting the transportation of migrants who have not received a negative test."
+   ]
+  },
+  {
+   "date": "2021-07-27",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Nomination of Tracy Stone-Manning (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-07-27/CREC-2021-07-27-pt1-PgS5085-2",
+   "sentences": [
+    "Since Ms. Stone-Manning's first hearing in the beginning of June, members of the Energy and Natural Resources Committee have gathered copious amounts of information regarding a number of controversies that disqualify her for this important role within our Federal Government."
+   ]
+  },
+  {
+   "date": "2021-06-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: For the People Act of 2021 (Executive Calendar)",
+   "url": "https://www.govinfo.gov/app/details/CREC-2021-06-16/CREC-2021-06-16-pt1-PgS4565",
+   "sentences": [
+    "Let's talk about ballot harvesting to begin with.",
+    "Most Americans believe that ballot harvesting is wrought with fraud and wrong.",
+    "Let's talk about voter ID for a second.",
+    "I think most Americans--maybe at least 80 percent of Americans--believe that voter ID brings integrity to the election process.",
+    "Certainly voter ID has worked for Kansas for years and brings about integrity to our election process.",
+    "And I think the value of voting is even more than any of those and thus the need for some type of voter identification.",
+    "Ballot harvesting makes it easier to cheat.",
+    "Getting rid of voter ID makes it easier to cheat."
+   ]
+  },
+  {
+   "date": "2018-07-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Expressing the Sense of Congress That a Carbon Tax Would Be Detrimental to the United States Economy",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-07-19/CREC-2018-07-19-pt1-PgH6563",
+   "sentences": [
+    "This anti- carbon tax resolution expresses the sense of Congress that a carbon tax will be detrimental to the United States economy and certainly is not a waste of anyone's time.",
+    "A carbon tax would raise costs on everything Americans buy, from electricity and gasoline to food and everyday household products, with little or any benefit.",
+    "That single mom will be impacted by this carbon tax.",
+    "This resolution will put Congress on record against a carbon tax, which would result in massive job losses, lead to higher prices for American families and small businesses, and jeopardize America's energy security.",
+    "Mr. Speaker, this President and this Congress have been fighting for American energy dominance, and a carbon tax would undermine that goal.",
+    "This resolution will affirm the position of Congress that a carbon tax would counter the goals of American energy dominance, economic growth, and national security."
+   ]
+  },
+  {
+   "date": "2018-06-25",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Compassionate, Comprehensive Immigration Reform",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-06-25/CREC-2018-06-25-pt1-PgH5584",
+   "sentences": [
+    "Mr. Speaker, this week we plan on voting on a very strong bill known as the Border Security and Immigration Reform Act.",
+    "To better assess our immigration system and the security of our border, I went to the United States-Mexico border near El Paso, Texas, this weekend.",
+    "I rise today to share some of the stories I heard from our Customs and Border Patrol officers and the compassion they had for these families and children they interact with.",
+    "These agents and officers had the highest on-the-job injury rate among all law enforcement groups across the country.",
+    "These officers have huge hearts, and they are often given a tough task at the border.",
+    "No one is denying that the situation on our Nation's border is terrible, and our agents at the border see this tragedy daily.",
+    "But it is imperative that we recognize and honor our Border Patrol agents' hard work, and do our part in Congress to pass compassionate, comprehensive immigration reform that still secures our borders and helps alleviate the situation of crisis which now exists. ____________________"
+   ]
+  },
+  {
+   "date": "2018-01-17",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Born-Alive Abortions",
+   "url": "https://www.govinfo.gov/app/details/CREC-2018-01-17/CREC-2018-01-17-pt1-PgH421-6",
+   "sentences": [
+    "But what I can't really believe, Mr. Speaker, is that an abortion clinic across town where botched abortions occur and babies born this same gestational age are executed in inhumane fashion.",
+    "Mr. Speaker, we have a chance Friday to pass the Born-Alive Abortion Survivors Protection Act, and I look forward to passing that legislation. ____________________"
+   ]
+  },
+  {
+   "date": "2017-06-13",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Veterans Affairs Accountability and Whistleblower Protection Act",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-06-13/CREC-2017-06-13-pt1-PgH4858",
+   "sentences": [
+    "Mr. Speaker, I would like to take a moment and recognize an important piece of legislation that is scheduled for a vote on the House floor today, the Veterans Affairs Accountability and Whistleblower Protection Act.",
+    "This bipartisan legislation will reform the VA by allowing the Secretary to fire underperforming employees, ensure appropriate protections for whistleblowers, and authorize the Secretary to directly appoint folks to critically important positions that need filled quickly.",
+    "Like those programs in communities in my district and around the country, these folks serve free breakfast and lunch, and the program is sponsored by the school district."
+   ]
+  },
+  {
+   "date": "2017-02-16",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Providing for Congressional Disapproval of Final Rule by Secretary of Health and Human Services",
+   "url": "https://www.govinfo.gov/app/details/CREC-2017-02-16/CREC-2017-02-16-pt1-PgH1268",
+   "sentences": [
+    "Madam Speaker, this past December, our past President finalized a rule requiring States to fund Planned Parenthood through title X funding.",
+    "Today I rise as a cosponsor of and in support of this joint resolution, H.J. Res. 43, which repeals this Obama rule and allows States like mine, Kansas, to choose how to best allocate title X funds.",
+    "The Obama rule is yet another example of government overreach that tries to force my State to fund Planned Parenthood.",
+    "Redirecting Federal funds away from abortion providers does not reduce funds for other title X programs.",
+    "Instead, this will allow even more funding available for county health departments and other public health clinics for family planning, sexually transmitted disease testing, and lifestyle choices education.",
+    "While Planned Parenthood remains a political organization that spent tens of thousands of dollars in the last election to oppose pro-life candidates, let me stop and salute the nurses and social workers back home at the Barton County Health Department where I worked for years, and salute my fellow doctors, Dr. Perry Smith and Dr. Bill King, and everyone's favorite nurse practitioner, Sheila Hein, who dedicated themselves to helping women."
+   ]
+  }
+ ]
+}

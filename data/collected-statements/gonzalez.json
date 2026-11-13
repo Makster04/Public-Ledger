@@ -1,0 +1,69 @@
+{
+ "about": "What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question's search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.",
+ "person": "gonzalez",
+ "name": "Vicente Gonzalez",
+ "built": "2026-11-13",
+ "since": 2016,
+ "counts": {
+  "floor": 3,
+  "press": 2,
+  "bluesky": 0,
+  "threads": 0
+ },
+ "statements": [
+  {
+   "date": "2025-01-24",
+   "source": "press",
+   "where": "Press release: Social Security Fairness Act FAQ",
+   "url": "https://gonzalez.house.gov/node/4627",
+   "sentences": [
+    "Social Security Fairness Act FAQ.",
+    "Social Security Fairness Act FAQ Image or Video Image Mauricio.Armaz…",
+    "Fri, 01/24/2025 - 16:51 Link https://www.ssa.gov/benefits/retirement/social-security-fairness-act.html"
+   ]
+  },
+  {
+   "date": "2023-06-27",
+   "source": "press",
+   "where": "Press release: INCREASING HEALTH CARE ACCESS IN SOUTH TEXAS",
+   "url": "https://gonzalez.house.gov/node/4369",
+   "sentences": [
+    "INCREASING HEALTH CARE ACCESS IN SOUTH TEXAS Image or Video Image admin Tue, 06/27/2023 - 11:25 Summary Congressman Gonzalez has a strong track record of fighting for affordable health care coverage, lower drug prices, and investments into our health care system in South Texas."
+   ]
+  },
+  {
+   "date": "2022-12-06",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Veteran Service Recognition Act of 2022",
+   "url": "https://www.govinfo.gov/app/details/CREC-2022-12-06/CREC-2022-12-06-pt1-PgH8763-3",
+   "sentences": [
+    "This gave them a pathway to citizenship.",
+    "I can't think of anything more shameful than to deport an American veteran, someone who has worn our uniform and fought for our freedom.",
+    "I have spoken time and again to my constituents in South Texas, to veterans across my border, and to people across this country, and the consensus is clear: Congress must fix this and bring every last veteran home.",
+    "I urge my colleagues on both sides of the aisle to vote in favor of the underlying bill, the Veteran Service Recognition Act, to ensure these servicemembers can come home, and that we will never, ever deport a single veteran again.",
+    "This amendment sets 90 days as the deadline for promulgating regulations to implement this bill, a bill that overrides the laws governing deportation of aliens who commit crimes in our country if they have enlisted in the Armed Forces.",
+    "As I said earlier, we tried to get into the bill a provision that would allow the victims of these criminal aliens to testify as to the impact of the crimes on their lives, and the Democrats rejected it."
+   ]
+  },
+  {
+   "date": "2019-12-18",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Impeaching Donald John Trump, President of the United States, for High Crimes and Misdemeanors",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-12-18/CREC-2019-12-18-pt1-PgH12130",
+   "sentences": [
+    "I came to Congress to lower the costs of prescription drugs, fight for a debt-free education, and improve the care of special-needs children, our seniors, and our veterans."
+   ]
+  },
+  {
+   "date": "2019-06-19",
+   "source": "floor",
+   "where": "Floor speech, Congressional Record: Commerce, Justice, Science, and Related Agencies Appropriations Act, 2020",
+   "url": "https://www.govinfo.gov/app/details/CREC-2019-06-19/CREC-2019-06-19-pt1-PgH4797-2",
+   "sentences": [
+    "This problem is in the backyard of every south Texan or any resident along the border.",
+    "The problem is an immigration system that is ill- equipped to process immigrants on our southern border.",
+    "The number now is 876,000 cases waiting for asylum in this country."
+   ]
+  }
+ ]
+}
