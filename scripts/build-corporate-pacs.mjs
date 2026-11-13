@@ -56,6 +56,7 @@ import readline from 'node:readline';
 import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {pacKind} from '../public/pac-types.js';
+import {writeSuperPacRaces} from './build-super-pac-races.mjs';
 import {TRACKERS,isTrackerPac} from '../public/trackers.js';
 import {requestSource,fecNext} from '../src/sources.mjs';
 import {conduitTotals} from './build-bundled.mjs';
@@ -214,26 +215,28 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
   return st.rows;
 }
 
-// One cn.txt line (the FEC's candidate file) -> {cand, name, year, state, office, ici, pcc}, or null.
+// One cn.txt line (the FEC's candidate file) -> {cand, name, party, year, state, office, ici, pcc}, or null.
 export function candidateRow(line){
   const c=String(line).split('|');if(c.length<10||!/^[HSP]\d[A-Z0-9]+$/.test(c[0]))return null;
-  return {cand:c[0],name:c[1],year:Number(c[3])||0,state:c[4],office:c[5],ici:c[7],pcc:c[9]||null};
+  return {cand:c[0],name:c[1],party:c[2],year:Number(c[3])||0,state:c[4],office:c[5],ici:c[7],pcc:c[9]||null};
 }
 // "BUDD, THEODORE P." -> "BUDD|THEODORE": the last name and the first word of the first.
 const nameKey=n=>{const [last,first]=String(n||'').toUpperCase().split(',');return `${(last||'').replace(/[^A-Z]/g,'')}|${String(first||'').trim().split(/\s+/)[0].replace(/[^A-Z]/g,'')}`;};
 // Each member's other candidate IDs: those naming the same principal campaign committee as a current ID of theirs, in
-// the same state (a House member now in the Senate, or running for it), or House IDs with the same name and state that
-// ran as an incumbent from the first of these cycles on (one who opened a new committee for the Senate). The rules leave
-// out a namesake's IDs (Rob Menendez Jr. and his father's Senate and old House IDs) and a filing that lists another
-// state's committee. rows: candidate rows from every cycle read; byCand: current candidate ID -> member; from: the
-// first cycle. {member id: [other IDs]}.
-export function pastCandidates(rows,byCand,from=0){
+// the same state (a House member now in the Senate, or running for it); House IDs with the same name and state that
+// ran as an incumbent from the first of these cycles on (one who opened a new committee for the Senate); and Senate IDs
+// in the latest cycle with the same name, state and party that aren't the incumbent's (a House member running for the
+// Senate under a new committee, like Haley Stevens). The rules leave out a namesake's IDs (Rob Menendez Jr. and his
+// father's Senate and old House IDs) and a filing that lists another state's committee. rows: candidate rows from every
+// cycle read; byCand: current candidate ID -> member; from, latest: the first and last cycles. {member id: [other IDs]}.
+export function pastCandidates(rows,byCand,from=0,latest=Infinity){
   const pcc=new Map(),who=new Map();
-  for(const r of rows){if(byCand.has(r.cand)){const id=byCand.get(r.cand);if(r.pcc)pcc.set(`${r.pcc}|${r.state}`,id);who.set(`${nameKey(r.name)}|${r.state}`,id);}}
+  for(const r of rows){if(byCand.has(r.cand)){const id=byCand.get(r.cand);if(r.pcc)pcc.set(`${r.pcc}|${r.state}`,id);who.set(`${nameKey(r.name)}|${r.state}`,id);who.set(`${nameKey(r.name)}|${r.state}|${r.party}`,id);}}
   const out={};
   for(const r of rows){
     if(byCand.has(r.cand)||!['H','S'].includes(r.office))continue;
-    const id=(r.pcc&&pcc.get(`${r.pcc}|${r.state}`))||(r.office==='H'&&r.ici==='I'&&r.year>=from?who.get(`${nameKey(r.name)}|${r.state}`):null);
+    const id=(r.pcc&&pcc.get(`${r.pcc}|${r.state}`))||(r.office==='H'&&r.ici==='I'&&r.year>=from?who.get(`${nameKey(r.name)}|${r.state}`):null)
+      ||(r.office==='S'&&r.ici!=='I'&&r.year>=latest&&r.party?who.get(`${nameKey(r.name)}|${r.state}|${r.party}`):null);
     if(id&&!(out[id]||=[]).includes(r.cand))out[id].push(r.cand);
   }
   return out;
@@ -248,7 +251,7 @@ export const historyCycles=cycle=>Array.from({length:HISTORY_CYCLES},(_,i)=>cycl
 export async function linkedCandidates({cycle,dir,refresh=false,byCand}){
   const cycles=historyCycles(cycle),rows=[];
   for(const cy of cycles){const cn=await download(`cn${String(cy).slice(2)}.zip`,cy,dir,refresh);for await(const line of lines(cn.file,'cn.txt')){const r=candidateRow(line);if(r)rows.push(r);}}
-  const linked=pastCandidates(rows,byCand,cycles[0]),both=new Map(byCand);
+  const linked=pastCandidates(rows,byCand,cycles[0],cycles.at(-1)),both=new Map(byCand);
   for(const [id,ids] of Object.entries(linked))for(const c of ids)both.set(c,id);
   return {linked,both};
 }
@@ -317,6 +320,10 @@ async function main(argv){
   const history=await trackerHistory({cycle,dir,refresh,byCand:members,through,links});
   fs.writeFileSync(path.join(ROOT,'public','tracker-history.json'),JSON.stringify(history));
   console.log(`Wrote public/tracker-history.json: ${history.cycles[0]-1}–${cycle}, through ${history.through}.`);
+  // The trackers' super PACs in this cycle's races, primaries and generals (scripts/build-super-pac-races.mjs). A failed
+  // download keeps the last file and doesn't stop the rest.
+  try{await writeSuperPacRaces({cycle,dir,refresh});}
+  catch(e){console.warn(`Couldn't build public/super-pac-races.json (${e.message}); the last file is kept. Try again with npm run superpacs:races.`);}
   const out={about:'Corporate PAC money to each sitting member of Congress this cycle, from FEC bulk files. See scripts/build-corporate-pacs.mjs.',
     built:new Date().toISOString().slice(0,10),cycle,through:through||null,
     sources:[{file:path.basename(cm.file),downloaded:cm.downloaded,url:`${BASE}/${cycle}/cm${yy}.zip`},{file:path.basename(pas2.file),downloaded:pas2.downloaded,url:`${BASE}/${cycle}/pas2${yy}.zip`}],

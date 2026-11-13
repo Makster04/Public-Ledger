@@ -14,10 +14,10 @@ import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
-import {COMPANIES,EXECUTIVES} from './industries.js';
+import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {TIER_KEYS,TIER_LABEL,TIER_FAR,TIER_ABOVE,TIER_BELOW,chamberTiers} from './tiers.js';
-import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
+import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending,helpToWin,fecName,ELECTION_LABEL} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
@@ -1743,6 +1743,14 @@ function lookoutInputs(s,d,period='this',sp=undefined){
 // the employees' own gifts as a smaller number under it. For AIPAC, Crypto and Big Tech + AI, which spend heavily through
 // super PACs, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
 // mark. Each line opens its tracker below.
+// What a tracker's super PACs spent to help them win this cycle (public/super-pac-races.json): their candidate IDs, their
+// other campaigns' too (a House member's Senate run), and each opponent by the name the site knows them by.
+const raceIds=s=>[s.fecCand,...(window.TRACKER_HISTORY?.linked?.[s.id]||[]),...(s.fecCandPast||[])].filter(Boolean);
+const helpOf=(s,t)=>t.superPacs.length?helpToWin(t,window.SUPER_PAC_RACES,raceIds(s)):null;
+const raceName=l=>{const id=PROFILE_BY_FEC.get(l.cand),p=id&&(byId[id]||BASIC[id]);return p?.name||fecName(l.name);};
+// One line per opponent and election, largest first.
+const spName=(id,name)=>{const n=String(name||'');return SUPER_PACS.find(p=>p.id===id||p.name.toLowerCase()===n.toLowerCase())?.name||(/^UNITED DEMOCRACY PROJECT/i.test(n)?'United Democracy Project':titleCase(n));};
+const helpRivals=list=>{const m=new Map();for(const l of list){const k=`${l.person}|${l.ele}`,o=m.get(k)||{name:raceName(l),ele:l.ele,party:l.party,amount:0};o.amount+=l.amount;m.set(k,o);}return [...m.values()].sort((a,b)=>b.amount-a.amount);};
 function lookoutsBox(s,inp){
   const spLine=x=>{const t=TRACKER[x.key],o=t.superPacLine?inp.superPac?.[x.key]:null;if(!o||!(o.for>0||o.against>0))return '';
     const parts=[o.for>0?`<b class="num" title="${esc(fmtFull(o.for))}">${shortMoney(o.for)}</b> for them`:'',o.against>0?`<b class="num" title="${esc(fmtFull(o.against))}">${shortMoney(o.against)}</b> against them`:''].filter(Boolean);
@@ -1751,11 +1759,15 @@ function lookoutsBox(s,inp){
   const thisCycle=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
   const tierTag=x=>{const r=thisCycle&&memberTier(s,x.key);if(!r)return '';const chs=r.chamber==='S'?'senators':'House members';
     return `<a class="ti-tag ${r.tier}" href="#tiers-${x.key}" data-ch="${r.chamber}" title="${esc(`Among ${chs}, against the typical ${fmtFull(r.typical||0)} from ${x.name} this cycle (FEC bulk files)`)}">${TIER_LABEL[r.tier]}</a>`;};
+  const helpLine=x=>{const t=TRACKER[x.key],h=thisCycle&&helpOf(s,t);if(!h)return null;if(!(h.help>0)&&!(h.againstThem>0))return '';
+    const m=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
+    const riv=helpRivals(h.rows.rivals),parts=[h.forThem>0?`${m(h.forThem)} for them`:'',...riv.slice(0,2).map(r=>`${m(r.amount)} against ${esc(r.name)} (${(ELECTION_LABEL[r.ele]||r.ele).toLowerCase()})`)].filter(Boolean);
+    return `${h.help>0?`<span class="lk-sp lk-help">Spent to help them win: <b class="num" title="${esc(fmtFull(h.help))}">${m(h.help)}</b> — ${parts.join(' + ')}${riv.length>2?` + ${riv.length-2} more`:''}</span>`:''}${h.againstThem>0?`<span class="lk-sp">Spent against them: <b class="num" title="${esc(fmtFull(h.againstThem))}">${m(h.againstThem)}</b></span>`:''}`;};
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
-      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${spLine(x)}</li>`;};
+      <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under AIPAC, Crypto and Big Tech + AI since they spend heavily that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
+    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Under AIPAC, Crypto and Big Tech + AI, since they spend heavily that way: what their super PACs spent to help them win this cycle (for them, plus against their opponents in a race they were in) and what they spent against them. It never changes the mark: the campaign doesn't take it. More in each tracker below.</p></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
@@ -1785,10 +1797,25 @@ function trackerPanel(s,d,inp,x,t,sp){
   const ownHTML=!t.superPacs.length?'':!own?spWait
     :spent.length?`${stTable(['Its super PAC','For them','Against them'],spent.map(o=>[fecCmteLink(o.id,o.name),money(o.for),money(o.against)]),'',[1,2])}<p class="small muted">${own.source==='file'?`From the outside-spending records on file, ${esc(fmtDate(own.start))} to ${esc(fmtDate(own.end))}.`:'From the FEC refresh, this cycle.'}</p>`
     :`<p class="small">${esc(t.superPacs.join(', '))} ${t.superPacs.length===1?'hasn\'t':'haven\'t'} reported spending for or against ${who}${own.source==='file'?' in the outside-spending records on file':' this cycle'}.</p>`;
+  // This cycle, from the races file: what its super PACs spent to help them win, and against them (in place of the table
+  // above when the file has their races).
+  const now=inp.cycles.length===1&&Number(inp.cycles[0])===Number(cy),h=now&&helpOf(s,t),R=window.SUPER_PAC_RACES;
+  const eleOf=e=>ELECTION_LABEL[e]||e,group=(list,f)=>{const m=new Map();for(const l of list){const k=f(l),o=m.get(k)||{...l,amount:0};o.amount+=l.amount;m.set(k,o);}return [...m.values()].sort((a,b)=>b.amount-a.amount);};
+  const spCell=l=>fecCmteLink(l.sp,spName(l.sp,l.spName));
+  const helpHTML=!h?null:(()=>{
+    const help=[...group(h.rows.forThem,l=>`${l.sp}|${l.ele}`).map(l=>[spCell(l),eleOf(l.ele),'For them',fmtFull(l.amount)]),
+      ...group(h.rows.rivals,l=>`${l.sp}|${l.ele}|${l.person}`).map(l=>[spCell(l),eleOf(l.ele),`Against ${esc(raceName(l))}${l.party?` <span class="muted small">(${esc(l.party)})</span>`:''}`,fmtFull(l.amount)])];
+    const against=group(h.rows.againstThem,l=>`${l.sp}|${l.ele}`).map(l=>[spCell(l),eleOf(l.ele),fmtFull(l.amount)]);
+    const others=group(h.rows.others,l=>`${l.sp}|${l.ele}|${l.person}|${l.so}`);
+    return `<h5 class="tr-h">To help them win: <span class="num">${fmtFull(h.help)}</span></h5>${help.length?stTable(['Super PAC','Election','Spent','Amount'],help,'',[3]):`<p class="small">${esc(t.superPacs.join(', '))} didn't spend to help ${who} win this cycle.</p>`}
+      <h5 class="tr-h">Against them: <span class="num">${fmtFull(h.againstThem)}</span></h5>${against.length?stTable(['Super PAC','Election','Amount'],against,'',[2]):`<p class="small">None this cycle.</p>`}
+      ${others.length?`<details class="st-more"><summary>Also spent in their races, not counted (${others.length})</summary><div class="st-more-b small"><ul class="sp-others">${others.map(l=>`<li>${fmtFull(l.amount)} ${l.so==='O'?'against':'for'} ${esc(raceName(l))}${l.party?` (${esc(l.party)})`:''}, ${esc(eleOf(l.ele).toLowerCase())}, by ${esc(spName(l.sp,l.spName))}</li>`).join('')}</ul>
+        <p class="muted">Spending against an opponent counts only in an election ${who} was in (in a primary, their own party's), when the same super PAC spent nothing against ${who} there and either spent for them or the race had just two candidates with outside spending.</p></div></details>`:''}
+      <p class="small muted">Its super PACs' own ads, mail and canvassing, from the FEC's independent-expenditure filings (primaries and generals) through ${esc(fmtDate(R?.through))}. None of it goes to the campaign, so it isn't in the ✕ or ✓ above or the tiers.</p>`;})();
   const funded=!sp?.superPacs?spWait:(()=>{const r=trackerSuperPacs(t,sp,s.fecCand);
     return r.funded.length?stTable(['Super PAC','Given by these companies and groups','For them','Against them'],r.funded.slice(0,12).map(o=>[`${fecCmteLink(o.id,o.name)}<div class="small muted">${esc(o.givers.slice(0,3).map(titleCase).join(', '))}${o.givers.length>3?' …':''}</div>`,`${fmtFull(o.given)}${o.read?` <span class="muted small">· ${Math.round(o.given/o.read*100)}% of the gifts read</span>`:''}`,money(o.for),money(o.against)]),'',[1,2,3])
       :`<p class="small">None of these companies or groups is among the largest donors read for the ${sp.superPacs.length} biggest super PACs.</p>`;})();
-  const spBlock=`${ownHTML}<h5 class="tr-h">Super PACs these companies and groups gave to</h5>${funded}<p class="small muted">This cycle. A super PAC's spending is its own money, never given to the campaign, and can be for or against ${who}. Largest gifts only, for the biggest super PACs.</p>`;
+  const spBlock=`${helpHTML??ownHTML}<h5 class="tr-h">Super PACs these companies and groups gave to</h5>${funded}<p class="small muted">This cycle. A super PAC's spending is its own money, never given to the campaign, and can be for or against ${who}. Largest gifts only, for the biggest super PACs.</p>`;
   const followed=`<details class="st-more"><summary>Who is followed</summary><div class="st-more-b small">
     ${t.companies.length?`<p><b>Companies:</b> ${esc(t.companies.join(', '))}.</p>`:''}${t.key==='tech'||t.key==='crypto'?`<p><b>From the crypto and AI list:</b> ${esc(COMPANIES.filter(c=>t.industries.includes(c.industry)).map(c=>c.name).join(', '))}. <b>Executives named:</b> ${esc(EXECUTIVES.filter(e=>t.industries.includes(COMPANIES.find(c=>c.key===e.company)?.industry)).map(e=>e.name).join(', '))}.</p>`:''}
     ${t.groups.length?`<p><b>Groups:</b> ${esc(t.groups.join(', '))}.</p>`:''}${t.superPacs.length?`<p><b>Its super PACs:</b> ${esc(t.superPacs.join(', '))}.</p>`:''}</div></details>`;
