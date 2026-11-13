@@ -8,9 +8,10 @@ const st=(...a)=>a.map(assessment=>({assessment}));
 test('letter grades use the usual 90/80/70/60 cut-offs',()=>{
   assert.deepEqual([100,90,89.9,80,79,70,69,60,59,0].map(letter),['A','A','B','B','C','C','D','D','F','F']);
 });
-test('promises: kept 1, partly or changed 1/2, broken 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
+test('promises: kept 1, a first step 3/4, a compromise 1/2, broken or changed 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
   assert.equal(promiseScore(st('consistent','consistent','contradiction')).pct,67);
-  assert.equal(promiseScore(st('consistent','partial','changed','outcome','unclear')).pct,67);
+  assert.equal(promiseScore(st('consistent','partial','changed','outcome','unclear')).pct,58,'(1 + 3/4 + 0) / 3');
+  assert.equal(promiseScore(st('consistent','compromise','contradiction')).pct,50,'(1 + 1/2 + 0) / 3');
   assert.equal(promiseScore(st('consistent','consistent','outcome')).pct,null);
   assert.equal(promiseScore([]).pct,null);
   assert.equal(MIN_CHECKS,3);

@@ -172,30 +172,50 @@ The three agree, so the reading is solid.
 
 ## 2. Keeps Their Word
 
-**Definition:** of the promises they made, the share they kept, judged by what they did afterward. A promise counts
-whether it was made on the campaign trail, in a speech or post, or as a signed pledge. It measures follow-through, not
-whether you agree with the promise.
+**Definition:** of the promises they made to voters, the share they kept, judged by what they did afterward. A promise
+is something they said they would do ("I will raise the minimum wage to $15"), on a campaign website, in a campaign
+post, speech, press release or debate, or as a signed pledge. It measures follow-through, not whether you agree with the
+promise.
 
-**Formula** (the Promises Delivered Index):
+**Formula** (as of November 13, 2026):
 
 ```text
-Keeps Their Word = 100 × (Kept + ½ × (Partly kept + Changed)) ÷ (Kept + Partly kept + Changed + Broken)
+Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kept + First steps + Compromises + Broken)
 ```
 
-**What counts:**
-- **Checks:** hand-checked promises, reviewed promise-finder checks, and automatic campaign-promise matches (labeled
-  "matched automatically").
-- **Pledges:** reviewed pledges, each counted as kept or broken: no corporate PAC money, a congressional stock-trading
-  ban, a former-member lobbying ban, overturning Citizens United.
-- **A president:** PolitiFact's tracker counts. Kept is 1, Compromise ½, Broken 0; Stalled and In the Works wait.
-- **Unacted:** a promise left unacted at the end of a term counts as broken.
+**How a promise is checked** (`scripts/build-promises.mjs`, written to `public/promises.json`):
+1. **What they promised:** statements tagged to the alignment questions (`data/question-statements.json`) whose words
+   commit them: "I will…", "I'll vote to…", "I support a ban on…", or the campaign writing about them ("Jon will…").
+   A short quote cut from a list is read in its full sentence, which has to make the commitment. Descriptions of their
+   record ("has fought for…") and calls on others aren't promises.
+2. **Made checkable:** each promise is tied to the question its votes and bills decide.
+3. **What they did afterward:** their votes and (co)sponsorships on that question dated after the promise. Earlier ones
+   are background. A bill failing doesn't count against them; only their own vote or (co)sponsorship does.
+4. **The verdict:**
+   - **Kept (1):** every action after the promise went its way.
+   - **First step (¾):** they voted for part of what they promised (for example $12 when they promised $15). A reviewer
+     records it.
+   - **Compromise (½):** they introduced or (co)sponsored a compromised version. A reviewer records it.
+   - **Broken (0):** every action went against it; or a reversal (after acting its way, at least 2 later bills went
+     against it and none its way since); or a promise to act with no bill introduced, (co)sponsored or voted on within
+     6 months in office, counted from the promise, or from taking office for a promise made as a candidate.
+   - **Unclear (not counted until reviewed):** actions both ways, often because a bill mixed the promise with other
+     things. A reviewer decides in `data/promise-reviews.json`, and the reason is shown.
+   - **No action yet (not counted):** in office, nothing on it yet, and the 6 months haven't run out. The date they do
+     is shown; after it, the promise counts as broken.
+   - **Not tested yet (not counted):** not in Congress while it could be acted on (a candidate, or a member-elect until
+     they take office), or a promise to oppose or defend against something that hasn't come up.
 
-**Left out:** vague goals, promises with no related bill yet, unclear checks, and statements made in debate the day of
-the vote or the day before. Those are shown, not scored.
+**Also counted:** reviewed checks and pledges (consistent is kept, partial a first step, changed and contradiction
+broken: a change of position counts as broken) and, for a president, PolitiFact's tracker: Kept 1, Compromise ½, Broken
+0; Stalled and In the Works wait.
 
-**Minimum:** 3 counted checks.
+**Left out:** vague goals, unclear promises until reviewed, no action yet, not tested yet, and statements made in debate
+the day of the vote or the day before. Those are shown, not scored.
 
-**Example:** 4 kept, 1 partly kept, 1 broken. `100 × 4.5 ÷ 6 = 75`, a **C**.
+**Minimum:** 3 decided promises.
+
+**Example:** 4 kept, 1 first step, 1 compromise, 1 broken. `100 × (4 + 0.75 + 0.5) ÷ 7 = 75`, a **C**.
 
 ---
 

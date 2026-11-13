@@ -6,7 +6,7 @@ import {openScorecard,fundingParts} from './scorecard.js';
 import {seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from './seats.js';
 import {compassOf,compassSvg,compassWord,signedLean} from './compass.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
-import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
+import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,billKey,matchScore,promiseScore,promiseStatus,PROMISE_WEIGHT,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
@@ -21,7 +21,7 @@ import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
-import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean} from './question-scores.js';
+import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
@@ -570,12 +570,13 @@ const GRADE={
     ['Not graded','Until at least two components are complete and the Legal Trouble review is sourced. Honesty needs at least 3 counted promise checks. Missing evidence is never treated as a clean record.'],
     ['Provisional','The parameters still need calibration. Flip-Flop and Pants on Fire are planned additions to Honesty.']]},
   prom:{q:'Did they do what they said they would?',pts:[
-    ['Kept','1 point. The record supports the promise.'],
-    ['Partly kept or changed','½ point.'],
-    ['Broken','0 points, including a promise never acted on by the end of the term.'],
-    ['Left out','Unclear checks, promises with no related bill yet, vague goals, and statements made in debate the day of the vote or the day before.'],
-    ['For a president',"PolitiFact's ratings count the same way: Promise Kept 1, Compromise ½, Promise Broken 0."],
-    ['Not graded',`Until there are at least ${MIN_CHECKS} counted checks.`]]},
+    ['Kept','1 point. Every vote and (co)sponsorship after the promise went its way.'],
+    ['First step','¾ point. They voted for part of it, like $12 when they promised $15.'],
+    ['Compromise','½ point. They introduced or (co)sponsored a compromised version.'],
+    ['Broken','0 points: the votes went against it, they reversed, or a promise to act got no bill or vote in 6 months in office.'],
+    ['Left out','Unclear promises (a reviewer decides), no action yet, not tested yet (not in office), vague goals, and statements made in debate the day of the vote or the day before.'],
+    ['For a president',"PolitiFact's ratings: Promise Kept 1, Compromise ½, Promise Broken 0."],
+    ['Not graded',`Until at least ${MIN_CHECKS} promises can be decided.`]]},
   eth:{q:'Have they gotten into legal or ethical trouble?',pts:[
     ['Starting score','Everyone starts at 100.'],
     ['Legal Trouble Index 🚨',`Minus all of it. Each case: ${ETHICS_COST.finding} for a confirmed finding, ${ETHICS_COST.open} for an open investigation, ${ETHICS_COST.closed} for one closed without a finding. Criminal cases count × ${CASE_KIND.criminal}, technical ones × ${CASE_KIND.technical}, and a case decided over ${CASE_AGE.years} years ago × ${CASE_AGE.factor}.`],
@@ -992,7 +993,7 @@ function sectionSwitch(s,items,active){
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
 // The same context the monthly recalculation scores with (public/scoring.js sixContext).
-const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS,questions:QCTX});
+const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS,questions:QCTX,promises:window.PROMISES});
 const GROUP_RATINGS=window.GROUP_RATINGS||{groups:{},people:{}};
 const sixCache=new Map();
 const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(withQ(s),SIX_CTX));return sixCache.get(s.id);};
@@ -1243,20 +1244,100 @@ function paneIdeology(s,pane){
 }
 
 // ----- Keeps Their Word -----
+// Each promise (public/promises.json, scripts/build-promises.mjs) and each reviewed check (research statements), with
+// what they did afterward and the verdict. Status: [class, icon, label].
+const PSTAT={broken:['b','✕','Broken'],unclear:['u','?','Unclear · needs review'],step:['s','◑','First step (¾)'],compromise:['c','◐','Compromise (½)'],kept:['k','✓','Kept'],'no-action':['n','○','No action yet'],'not-tested':['t','⧗','Not tested yet'],'not-counted':['t','–','Listed, not scored']};
+const PORDER=['broken','unclear','step','compromise','kept','no-action','not-tested','not-counted'];
+// A reviewed check's status: consistent is kept, partial a first step, changed and contradiction broken.
+const CHECK_STATUS={consistent:'kept',partial:'step',compromise:'compromise',changed:'broken',contradiction:'broken',unclear:'unclear',outcome:'unclear',pending:'not-tested'};
+const PKIND={campaign:'Campaign',office:'In office',check:'Reviewed check'};
+const pPill=st=>{const [c,i,l]=PSTAT[st]||PSTAT['not-tested'];return `<span class="kw-pill kw-${c}">${i} ${esc(l)}</span>`;};
+const PACT={s:'Sponsored',c:'Cosponsored',y:'Voted Yes',n:'Voted No'};
+function wordItems(s){
+  const today=SIX_CTX.today,pledged=new Set((s.statements||[]).filter(x=>x.pledge?.kind==='stock-trading').map(()=>'congress-stock-trading'));
+  // A promise on a reviewed pledge's question (stock trading) is left to the reviewed check, as in the grade.
+  const promises=(s.promises||[]).filter(p=>!p.qs.some(([q])=>pledged.has(q))).map(p=>({type:'promise',p,status:promiseStatus(p,today),kind:p.kind,date:p.date}));
+  const checks=(s.statements||[]).map(x=>({type:'check',x,status:x.vague||x.debate?'not-counted':CHECK_STATUS[x.assessment]||'unclear',kind:'check',date:String(x.said?.date||'').slice(0,10)}));
+  return [...promises,...checks].sort((a,b)=>PORDER.indexOf(a.status)-PORDER.indexOf(b.status)||String(b.date).localeCompare(String(a.date)));
+}
+// One action after (or before) a promise: [question, bill, kind, date, side].
+function pActRow(a,side,meta){
+  const [q,ref,kind,date,aside]=a,bill=ref.split('#')[0],roll=ref.split('#')[1],m=meta?.[q]?.[bill]||[],L=billLink(bill),ok=aside===side;
+  const title=m[2]&&String(m[2]).length<=90?m[2]:(m[1]?String(m[1]).replace(/\.$/,''):L.label),sub=m[2]&&String(m[2]).length<=90&&m[1]?m[1]:'';
+  const ru=roll?rollUrl(roll):null;
+  return `<div class="kw-a"><span class="ic ${ok?'y':'x'}" aria-label="${ok?'goes the promise\'s way':'goes against the promise'}">${ok?'✓':'✕'}</span><span class="what">${esc(PACT[kind]||kind)}</span>
+    <span class="bill">${L.url?`<a href="${esc(L.url)}" target="_blank" rel="noopener">${esc(title)}</a>`:esc(title)} <span class="muted small">${esc(L.label.replace(/ \(\d+th Congress\)/,''))}</span>${sub?`<small>${esc(sub)}</small>`:''}</span>
+    <span class="d">${esc(fmtDate(date))}</span><span class="o">${ru?`<a href="${esc(ru)}" target="_blank" rel="noopener">roll call ↗</a>`:''}</span></div>`;
+}
+function promiseCard(s,it,meta,open){
+  const p=it.p,sides=new Map(p.qs.map(([q,v])=>[q,v])),qs=p.qs.map(([q])=>QISSBY[q]).filter(Boolean);
+  const cat=qs[0]?(QUESTIONS.categories.find(c=>c.id===qs[0].cat)?.name||''):'';
+  const quote=p.sentence?`…${esc(p.quote)}…`:esc(p.quote),from=p.sentence?`<p class="kw-from">From the sentence: “${esc(p.sentence).replace(esc(p.quote),`<mark>${esc(p.quote)}</mark>`)}”</p>`:'';
+  const acts=[...p.acts].sort((a,b)=>b[3].localeCompare(a[3])),shown=4,sideOf=a=>sides.get(a[0]);
+  const actsHTML=acts.length?`<div class="kw-acts"><h6>What ${esc(s.short)} did after the promise (${acts.length})</h6>${acts.map((a,i)=>i<shown?pActRow(a,sideOf(a),meta):`<div class="kw-extra" hidden>${pActRow(a,sideOf(a),meta)}</div>`).join('')}${acts.length>shown?`<button type="button" class="qt-more kw-more" data-n="${acts.length}">Show all ${acts.length} →</button>`:''}</div>`:'';
+  const before=p.beforeN?`<details class="kw-bg"><summary>Before the promise: ${p.beforeN} action${p.beforeN===1?'':'s'} (background, not counted)</summary>${p.before.map(a=>pActRow(a,sideOf(a),meta)).join('')}${p.beforeN>p.before.length?`<p class="small muted">The latest ${p.before.length} shown.</p>`:''}</details>`:'';
+  const label=PSTAT[it.status]?.[2]||it.status,why=it.status==='broken'&&p.status==='no-action'?`No bill or vote on it by ${fmtDate(p.deadline)}, ${GRACE_TEXT} after the promise.`:p.why;
+  return `<details class="kw-p ${PSTAT[it.status]?.[0]||'t'}" data-status="${it.status}" data-kind="${p.kind}"${open?' open':''}><summary>
+    <div class="kw-ph">${pPill(it.status)}<span class="kw-topic">${esc(cat)}${PKIND[p.kind]?` · ${esc(PKIND[p.kind])}`:''}</span></div>
+    <p class="kw-q">“${quote}”</p>${from}
+    <p class="kw-meta">${esc(p.where)} · ${esc(fmtDate(p.date))}${p.url?` · <a href="${esc(p.url)}" target="_blank" rel="noopener">source ↗</a>`:''}</p>
+    <p class="kw-why"><b>${esc(label)}.</b> ${esc(why)}${p.reviewed?` <span class="muted small">Reviewed ${esc(fmtDate(p.reviewed))}.</span>`:''}</p></summary>
+    <p class="kw-check"><b>Checked against</b> ${qs.map(q=>`“${esc(q.q)}” <span class="muted">(the promise takes the ${esc(q.sides[sides.get(q.id)])} side)</span>`).join('; ')}</p>
+    ${actsHTML}${before}</details>`;
+}
+function checkCard(s,it,open){
+  const x=it.x,src=o=>o?.u?` · <a href="${esc(o.u)}" target="_blank" rel="noopener">${esc(o.t||'source')} ↗</a>`:o?.t?` · ${esc(o.t)}`:'';
+  const note=x.vague?'A vague goal: listed, not scored.':x.debate?'Said in debate the day of the vote or the day before: listed, not scored.':x.note||'';
+  return `<details class="kw-p ${PSTAT[it.status]?.[0]||'t'}" data-status="${it.status}" data-kind="check"${open?' open':''}><summary>
+    <div class="kw-ph">${pPill(it.status)}<span class="kw-topic">${esc(x.topic||'')} · ${x.pledge?'Signed pledge':'Reviewed check'}</span></div>
+    <p class="kw-q">“${esc(String(x.said?.text||'').replace(/^"|"$/g,''))}”</p>
+    <p class="kw-meta">${esc(fmtDate(String(x.said?.date||'').slice(0,10)))}${src(x.said?.src)}</p>
+    <p class="kw-why"><b>${esc(PSTAT[it.status]?.[2]||'')}.</b> ${esc(note)}</p></summary>
+    <div class="kw-acts"><h6>What the record shows</h6><p class="small" style="margin:0">${esc(x.did?.text||'')}</p><p class="kw-meta" style="margin:6px 0 0">${esc(String(x.did?.date||''))}${src(x.did?.src)}</p>${x.record?`<p class="small muted" style="margin:6px 0 0">Context: ${esc(x.record)}${src(x.recordSrc)}</p>`:''}${x.pledge?pledgeBlock(s,x):''}</div></details>`;
+}
+const GRACE_TEXT=`${window.PROMISES?.graceMonths||6} months in office`;
 function paneWord(s,pane){
-  const x=sixOf(s).word,p=x.score;
+  const x=sixOf(s).word,p=x.score,items=wordItems(s),n={};for(const it of items)n[it.status]=(n[it.status]||0)+1;
+  // A president's PolitiFact ratings count too (shown in their own block below): Kept, Compromise, Broken; Stalled and In
+  // the Works wait.
+  let rated=0;for(const t of s.promiseTrackers||[]){const c=t.counts||{};for(const [k,v] of [['kept',c.kept],['compromise',c.compromise],['broken',c.broken],['not-tested',(c.stalled||0)+(c.inTheWorks||0)]])if(v){n[k]=(n[k]||0)+v;rated+=v;}}
+  const total=items.length+rated,bar=PORDER.filter(k=>n[k]).map(k=>`<i class="kw-bar-${PSTAT[k][0]}" style="flex:${n[k]}" title="${esc(PSTAT[k][2])}: ${n[k]}"></i>`).join('');
+  const leg=[['kept','Counted'],['step','Counted ¾'],['compromise','Counted ½'],['broken','Counted'],['unclear','Waiting on a reviewer'],['no-action',`Broken after ${GRACE_TEXT} with none`],['not-tested','Nothing to check yet'],['not-counted','Vague, or said in debate']]
+    .filter(([k])=>n[k]||k==='kept'||k==='broken').map(([k,t])=>`<li><span class="kw-sw kw-bar-${PSTAT[k][0]}"></span><span><b>${n[k]||0}</b> ${esc(PSTAT[k][2].replace(/ · needs review| \([¾½]\)/g,''))}<small>${esc(t)}</small></span></li>`).join('');
+  const breakdown=total?`<p class="small" style="margin:0 0 6px">${items.length?`${items.length} promise${items.length===1?'':'s'} and reviewed check${items.length===1?'':'s'} found`:''}${rated?`${items.length?'; ':''}${rated} promises rated by PolitiFact`:''}${p.clear?`; ${p.clear} decided`:''}.</p><div class="kw-bar" aria-hidden="true">${bar}</div><ul class="kw-leg">${leg}</ul>
+    <p class="small muted" style="margin:0">Kept counts 1, a first step ¾, a compromise ½, broken 0. A bill failing doesn't count against them; only their own vote or (co)sponsorship does.</p>`
+    :`<p class="small muted" style="margin:0">No promises found yet: their campaign sites, posts and statements are read for "I will…" commitments.</p>`;
+  const steps=`<div class="kw-steps">
+    <div class="kw-step"><span class="n">Step 1</span><h5>What they promised</h5><p>Each "I will…" to voters: campaign sites, posts, speeches, press releases and pledges, with the quote, date and link.</p></div>
+    <div class="kw-step"><span class="n">Step 2</span><h5>Made checkable</h5><p>Each promise is tied to the question its votes and bills decide: "raise the minimum wage" → the minimum-wage bills.</p></div>
+    <div class="kw-step"><span class="n">Step 3</span><h5>What they did afterward</h5><p>Their votes and (co)sponsorships on those bills after the promise. Earlier ones are background.</p></div>
+    <div class="kw-step"><span class="n">Step 4</span><h5>The verdict</h5><p>Kept, a first step, a compromise, broken, unclear (a reviewer decides), no action yet, or not tested yet.</p></div></div>`;
+  const kinds=['campaign','office','check'].map(k=>[k,items.filter(i=>i.kind===k).length]).filter(([,c])=>c);
+  const m={};for(const it of items)m[it.status]=(m[it.status]||0)+1;
+  const filters=items.length>1?`<div class="kw-filters" role="group" aria-label="Show promises"><button type="button" class="kw-chip on" data-f="all" aria-pressed="true">All ${items.length}</button>${PORDER.filter(k=>m[k]).map(k=>`<button type="button" class="kw-chip" data-f="${k}" aria-pressed="false">${PSTAT[k][1]} ${esc(PSTAT[k][2].replace(/ · needs review/,''))} ${m[k]}</button>`).join('')}${kinds.length>1?`<span class="kw-sep" aria-hidden="true"></span>${kinds.map(([k,c])=>`<button type="button" class="kw-chip" data-k="${k}" aria-pressed="false">${esc(PKIND[k])} ${c}</button>`).join('')}`:''}</div>`:'';
   pane.innerHTML=stFrame(s,'word',{
-    res:x,
-    breakdown:stTable(['Outcome','Count'],[['Kept',p.kept],['Partly kept or changed',p.half],['Broken',p.broken],['<b>Counted checks</b>',`<b>${p.clear}</b>`]])+(p.notCounted+p.vague+(p.debate||0)?`<p class="small muted">${p.notCounted+p.vague+(p.debate||0)} more listed below but not counted (waiting on a vote, vague, or said in debate).</p>`:''),
-    sources:['Campaign websites and posts.','Speeches.','Press releases.','Signed pledges.','Later votes and bills.',s.office?'PolitiFact\'s promise tracker.':null].filter(Boolean),
+    res:x,breakdown,
+    sources:['<b>Promises:</b> campaign websites (archived copies, dated), campaign posts, speeches, press releases and signed pledges.','<b>Checked against:</b> roll-call votes, and the bills and amendments they sponsored or cosponsored.','<b>Money pledges:</b> FEC filings.',s.office?'<b>A president:</b> PolitiFact\'s promise tracker.':null].filter(Boolean),
     needs:x.needs,
-    notes:[['PolitiFact\'s tracker','applies to presidents only.'],['Unknown is not broken.','A promise without enough follow-up evidence is shown as waiting, not counted as broken.']],
-    evidenceTitle:'Evidence: promises and what they did afterward',
-    evidence:'<div id="word-evidence"></div>',
-    calc:`${stF('Keeps Their Word = 100 × (kept + ½ × (partly kept + changed)) ÷ (kept + partly kept + changed + broken)')}${p.clear?`<p class="small">${x.pct==null?'Not graded yet':''}${p.clear?`(${p.kept} + ½ × ${p.half}) ÷ ${p.clear} = ${p.clear?Math.round((p.kept+p.half/2)/p.clear*1000)/10:0}%`:''}.</p>`:''}<p class="small">At least ${MIN_CHECKS} counted checks are needed. A promise left unacted at the end of a term counts as broken.</p>`,
-    assumptions:['Each promise is checked against the action that decided it: the final vote, a sponsorship, or a signature.','Promises found automatically on campaign sites are labeled "matched automatically"; "no action found" isn\'t counted.','Vague goals, promises with no related bill yet, unclear checks and statements made in debate the day of the vote or the day before are shown, not scored.','A reviewed pledge counts as a promise kept or broken.','For a president, PolitiFact\'s ratings count: Promise Kept 1, Compromise ½, Promise Broken 0; Stalled and In the Works wait.'],
+    notes:[['A bill failing','doesn\'t count against them; only their own vote or (co)sponsorship does.'],['Doing nothing','on a promise to act counts as broken after '+GRACE_TEXT+'. A promise to oppose something waits until something comes up to oppose.'],['Not in Congress yet?','Their promises read "Not tested yet" until they take office.']],
+    evidenceTitle:`Every promise, and what ${esc(s.short||s.name)} did afterward`,
+    evidence:`${steps}${trackerBlock(s)}${filters}<div id="word-list">${items.length?'<p class="small muted">Loading the record…</p>':rated?'':'<p class="small muted">No promises found yet.</p>'}</div><section id="live-records" style="margin-top:28px"></section>`,
+    calc:`${stF('Keeps Their Word = 100 × (kept + ¾ × first steps + ½ × compromises) ÷ (kept + first steps + compromises + broken)')}${p.clear?`<p class="small">(${p.kept} + ¾ × ${p.step} + ½ × ${p.compromise}) ÷ ${p.clear} = ${Math.round(p.points/p.clear*1000)/10}%${x.pct==null?` (not graded yet: at least ${MIN_CHECKS} are needed)`:''}.</p>`:''}<p class="small">At least ${MIN_CHECKS} promises the record can decide are needed. Unclear promises, those with no action yet and those not tested yet aren't counted.</p>`,
+    assumptions:['A promise is something they told voters they would do: "I will…", "I\'ll vote to…", "I support a ban on…", or the campaign writing about them ("Jon will…"). A description of their record ("has fought for…") or a call on others isn\'t one.','Each promise is tied by hand to the question it is about; the votes and bills on that question after the promise are what they did. Earlier ones are shown as background.','Kept: every action after the promise went its way. Broken: every one went against it; or a reversal (after acting its way, at least 2 later bills went against it and none its way since); or a promise to act with no bill introduced, (co)sponsored or voted on within '+GRACE_TEXT+' (counted from the promise, or from taking office for a promise made as a candidate).','Unclear: actions both ways, often because a bill mixed the promise with other things; a reviewer decides, and the reason is shown.','A reviewer can also record a first step (they voted for part of it, like $12 when they promised $15: counts ¾) or a compromise (they introduced or (co)sponsored a compromised version: counts ½).','A bill failing doesn\'t count against them.','For a president, PolitiFact\'s ratings count: Promise Kept 1, Compromise ½, Promise Broken 0; Stalled and In the Works wait.'],
     method:'word'});
-  panePromises(s,pane.querySelector('#word-evidence'),{embedded:true,bare:true});
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['crec-day','hearings','statements','wayback','factcheck','news']);
+  const list=pane.querySelector('#word-list');if(!items.length)return;
+  const draw=meta=>{
+    list.innerHTML=items.map((it,i)=>it.type==='promise'?promiseCard(s,it,meta,i<5):checkCard(s,it,i<5)).join('');
+    list.querySelectorAll('.kw-more').forEach(b=>b.addEventListener('click',()=>{const box=b.closest('.kw-acts'),open=b.dataset.open!=='1';
+      box.querySelectorAll('.kw-extra').forEach(e=>{e.hidden=!open;});b.dataset.open=open?'1':'0';b.textContent=open?'Show fewer':`Show all ${b.dataset.n} →`;}));
+  };
+  qMeta().then(draw).catch(()=>draw({}));
+  pane.querySelectorAll('.kw-chip').forEach(b=>b.addEventListener('click',()=>{
+    pane.querySelectorAll('.kw-chip').forEach(c=>{const on=c===b;c.classList.toggle('on',on);c.setAttribute('aria-pressed',on?'true':'false');});
+    const f=b.dataset.f,k=b.dataset.k;
+    list.querySelectorAll('.kw-p').forEach(c=>{c.hidden=!(f==='all'||(f&&c.dataset.status===f)||(k&&c.dataset.kind===k));});
+  }));
 }
 
 // ----- Shows Up -----
@@ -1844,7 +1925,7 @@ function sixTiles(s,links){
     return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${res.pct}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
   return `<div class="hc-rc hc-six">${ideo}
-    ${tile('word',x.word,`${w.clear} counted checks`)}
+    ${tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`)}
     ${tile('showsup',u,u.parts[0].note||'')}
     ${s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
     ${tile('aboveboard',x.aboveboard,'')}
@@ -2395,7 +2476,7 @@ function ovOffice(s){
 function paneOverview(s,pane){
   const pr=SCORER.promises(s),v=personPvp(s),e=personEthics(s);
   const highlights=[
-    ['Keeps Their Word',pr.clear?`${pr.clear} counted checks: ${pr.kept} supported${pr.half?`, ${pr.half} partial or changed`:''}${pr.broken?`, ${pr.broken} contradicted`:''}. ${pr.notCounted+pr.vague+(pr.debate||0)} excluded or pending.`:'No reviewed statement checks are available yet.','word','Read the promises and checks'],
+    ['Keeps Their Word',pr.clear?`${pr.clear} promises decided: ${pr.kept} kept${pr.step?`, ${pr.step} first step${pr.step===1?'':'s'}`:''}${pr.compromise?`, ${pr.compromise} compromise${pr.compromise===1?'':'s'}`:''}${pr.broken?`, ${pr.broken} broken`:''}. ${pr.notCounted+pr.vague+(pr.debate||0)} waiting or not scored.`:'No reviewed statement checks are available yet.','word','Read the promises and checks'],
     ['Votes and bills',`${v.n} scored actions for People First. ${evidenceOf(s).label}.`,'ideology','Positions, votes and bills'],
     ['Plays by the Rules',e.finding||e.open||e.closed?`${e.finding} findings, ${e.open} open and ${e.closed} closed investigations in checked records.`:`${e.allegation?e.allegation+' allegations listed; ':''}No confirmed findings located in checked sources. This is not a clearance.`,'aboveboard','Conflicts, disclosures and legal records']
   ];
@@ -2431,7 +2512,7 @@ async function loadIntegrityPreview(s,pane,workers){
   const cci=previewCci({businessVotes:SCORER.cci(s)?.votes?.index??null}),workerPreview=workersPreview(workers?.billsPct??null,cci);
   const o=preview.overall,grade=o.pct==null?'Not graded':`${o.pct}% · ${letter(o.pct)}`;
   const overallWhy=o.why?`${o.why}${preview.legal.value==null?`; ${preview.legal.why||'Sourced Legal Trouble review is missing'}`:''}`:`${o.used.length} components, weights normalized; Legal Trouble deducted at full strength.`;
-  const formula=preview.honesty.value==null?'Promise data needs three counted checks':`(${preview.honesty.score.kept} + 0.5 × ${preview.honesty.score.half}) ÷ ${preview.honesty.score.clear} counted checks × 100 = ${Number(preview.honesty.value.toFixed(4))}%`;
+  const hs=preview.honesty.score,formula=preview.honesty.value==null?'Promise data needs three counted checks':`(${hs.kept} + ¾ × ${hs.step} + ½ × ${hs.compromise}) ÷ ${hs.clear} counted × 100 = ${Number(preview.honesty.value.toFixed(4))}%`;
   const workText=workerPreview.pct==null?workerPreview.why:`${workerPreview.pct}%${workerPreview.blended?' · 75% legislative actions + 25% (100 − preview CCI)':' · legislative actions only; preview CCI unavailable'}`;
   const fin=preview.personalFinances,finMath=fin.complete?`S = ${fin.stockPenalty.toFixed(2)}; T = ${fin.tradeCountPenalty.toFixed(2)} + ${fin.tradeValuePenalty.toFixed(2)}; index deductions = ${fin.insiderPenalty.toFixed(2)} + ${fin.dodgerPenalty.toFixed(2)}. Holdings year ${esc(fin.holdingsYear)}; trades ${esc(fin.tradePeriod?.start)} – ${esc(fin.tradePeriod?.end)}.`:'S, T, and index deductions are shown only when the reviewed holdings and trade coverage are complete.';
   const fund=preview.fundraising,fundMath=[fund.D!=null?`D ${fund.D.toFixed(2)}`:'D unavailable',fund.P!=null?`P ${fund.P.toFixed(2)}`:'P unavailable',fund.R!=null?`R ${fund.R.toFixed(2)}`:'R unavailable',fund.E!=null?`E ${fund.E.toFixed(2)}`:'E unavailable',`pledges ${pledge.points>0?'+':''}${pledge.points}`].join(' · ');
@@ -3365,10 +3446,10 @@ function pledgeBlock(s,x){
 }
 function panePromises(s,pane,{embedded=false,bare=false}={}){
   const pr=SCORER.promises(s), out=pr.notCounted, pf=!!(s.promiseTrackers||[]).length;
-  const detail=pf&&pr.pct!=null?`${pr.kept} of ${pr.clear} promises with a final PolitiFact rating kept, ${pr.half} compromises, ${pr.broken} broken.`:pr.pct!=null?`${pr.kept} of ${pr.clear} clear checks kept${pr.half?`, ${pr.half} partly kept or changed over time`:''}${pr.broken?`, ${pr.broken} contradicted by the record`:''}.`:pr.total?`${pr.clear} clear check${pr.clear===1?'':'s'} so far; a grade needs ${MIN_CHECKS}.`:'No statements checked yet.';
+  const detail=pf&&pr.pct!=null?`${pr.kept} of ${pr.clear} promises with a final PolitiFact rating kept, ${pr.half} compromises, ${pr.broken} broken.`:pr.pct!=null?`${pr.kept} of ${pr.clear} decided promises kept${pr.step?`, ${pr.step} first step${pr.step===1?'':'s'}`:''}${pr.compromise?`, ${pr.compromise} compromise${pr.compromise===1?'':'s'}`:''}${pr.broken?`, ${pr.broken} broken`:''}.`:pr.total?`${pr.clear} clear check${pr.clear===1?'':'s'} so far; a grade needs ${MIN_CHECKS}.`:'No statements checked yet.';
   const bar=pr.pct!=null?`<div class="hc-seg gh-bar" aria-hidden="true">${pr.kept?`<i style="flex:${pr.kept};background:var(--good)"></i>`:''}${pr.half?`<i style="flex:${pr.half};background:var(--warn)"></i>`:''}${pr.broken?`<i style="flex:${pr.broken};background:var(--crit)"></i>`:''}</div>`:'';
   const math=pf&&pr.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> (${pr.kept} kept + ${pr.half} × ½ compromise) ÷ ${pr.clear} promises with a final rating = <b>${pr.pct}%</b>.${out?` ${out} Stalled or In the Works ${out===1?'is':'are'} not counted yet.`:''}</p>`
-    :pr.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> (${pr.kept} kept${pr.half?` + ${pr.half} × ½ partly kept or changed`:''}) ÷ ${pr.clear} clear checks = <b>${pr.pct}%</b>.${out?` ${out} ambiguous or outcome check${out===1?' is':'s are'} listed below but not counted.`:''}</p>`:'';
+    :pr.pct!=null?`<p class="small gh-m"><b>How it was calculated:</b> (${pr.kept} kept${pr.step?` + ¾ × ${pr.step} first steps`:''}${pr.compromise?` + ½ × ${pr.compromise} compromises`:''}) ÷ ${pr.clear} decided = <b>${pr.pct}%</b>.${out?` ${out} ambiguous or outcome check${out===1?' is':'s are'} listed below but not counted.`:''}</p>`:'';
   pane.innerHTML=`
   ${bare?'':embedded?`<div class="chart"><h3>Promise index · Honesty</h3><p class="small">${esc(detail)} ${pr.pct==null?'Not graded until at least three checks count.':`Honesty: ${pr.pct}%.`}</p>${bar}${math}</div>`:gradeHead('Promises Delivered',pr.pct,detail,gradeRule('prom'),bar+math+monthlyNote(s,'promises',pr.pct))}<div class="page-eyebrow">WHAT WAS SAID → WHAT THE RECORD SHOWS</div>
   ${trackerBlock(s)}
@@ -3846,11 +3927,12 @@ const gradeFill=p=>GRADE_FILL[letter(p)];
 const whoSub=s=>`${partyName(s.party)} · ${chipCh(s)} · ${seatLabel(s)}`;
 // Points lost on the Ethics grade, by kind, in the palette's fixed order.
 const ETH_SEGS=[{key:'finding',label:'Legal Trouble: confirmed findings',color:'var(--s1)'},{key:'open',label:'Legal Trouble: open investigations',color:'var(--s2)'},{key:'closed',label:'Legal Trouble: closed without a finding',color:'var(--s3)'},{key:'insider',label:'Insider Trading (a tenth)',color:'var(--s4)'},{key:'dodger',label:'Stock Disclosure Dodger (a tenth)',color:'var(--s5)'}];
-const PROM_SEGS=[{key:'consistent',label:'Supported',color:'var(--good)'},{key:'partial',label:'Partly supported',color:'var(--warn)'},{key:'changed',label:'Changed position',color:'var(--warn)',cls:'cx-hatch'},{key:'contradiction',label:'Contradicted',color:'var(--crit)'}];
+const PROM_SEGS=[{key:'kept',label:'Kept',color:'var(--good)'},{key:'step',label:'First step (¾)',color:'var(--grade-b)'},{key:'compromise',label:'Compromise (½)',color:'var(--warn)'},{key:'broken',label:'Broken',color:'var(--crit)'}];
 // The points each part took off. Legal Trouble is split by status, scaled down when its total is capped at 100.
 function ethicsPoints(s){const e=personEthics(s),L=e.legal,k=L.total?L.index/L.total:0,by=st=>Math.round(L.rows.filter(r=>r.status===st).reduce((t,r)=>t+r.points,0)*k*10)/10;
   return {e,parts:{finding:by('finding'),open:by('open'),closed:by('closed'),insider:Math.round(e.insiderCost*10)/10,dodger:Math.round(e.dodgerCost*10)/10}};}
-function promiseCounts(s){const c={consistent:0,partial:0,changed:0,contradiction:0};for(const x of s.statements||[])if(!x.vague&&!x.debate&&x.assessment in c)c[x.assessment]++;return c;}
+// Their decided promises by verdict (the same count the grade uses).
+function promiseCounts(s){const p=SCORER.promises(s,SIX_CTX.today);return {kept:p.kept,step:p.step,compromise:p.compromise,broken:p.broken};}
 // One letter grade for everyone, highest first; the people not graded yet follow, with why.
 function scoresGrade(host,key,note){
   const rows=ALL.map(s=>({s,x:sixOf(s)[key]})).sort((a,b)=>(b.x.pct??-1)-(a.x.pct??-1)||a.s.name.localeCompare(b.s.name));
@@ -3906,12 +3988,12 @@ function scoresIntegrity(host){
   host.innerHTML=`<div class="note"><b>Provisional and uncalibrated.</b> Latest separate monthly comparison snapshot${entry?` · ${fmtDate(entry.date)}`:''}. The published Ethics and Promises Delivered history remains preserved. At least two complete components and a sourced Legal Trouble review are required.</div><div class="chart"><h3>Integrity and evidence coverage</h3><p class="sub">${graded} of ${rows.length} have an overall score. Available component results remain visible on each profile when the overall score is Not graded; missing evidence never means a clean result.</p>${rankBars(rows.map(({s,r,c})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-integrity`,value:r?.pct??null,color:r?.pct==null?null:gradeFill(r.pct),cls:r?.pct==null?'':'gr-'+letter(r.pct),display:r?.pct==null?'':`${letter(r.pct)} ${r.pct}%`,note:r?.why||`${['honesty','personalFinances','fundraising'].filter(k=>c[k]).length} complete components`,empty:'Not graded',tip:r?.why||'Latest monthly comparison'})))}${tableView(['Name','Integrity','Components','Explanation'],rows.map(({s,r,c})=>[`<a href="#${s.id}-integrity">${esc(s.name)}</a>`,r?.pct==null?'Not graded':`${letter(r.pct)} ${r.pct}%`,['honesty','personalFinances','fundraising','legal'].filter(k=>c[k]).join(', ')||'None complete',esc(r?.why||'Sourced legal review and two components recorded')]))}</div><p class="small muted">Open a profile’s <a href="#${rows[0]?.s.id||''}-integrity">Integrity section</a> for formulas, sources, dates, missing-data reasons and historical published scores.</p>`;
 }
 function scoresPromises(host){
-  const rows=ALL.map(s=>({s,p:SCORER.promises(s),c:promiseCounts(s)})).sort((a,b)=>(b.p.pct??-1)-(a.p.pct??-1)||b.p.clear-a.p.clear||a.s.name.localeCompare(b.s.name));
+  const rows=ALL.map(s=>({s,p:SCORER.promises(s,SIX_CTX.today),c:promiseCounts(s)})).sort((a,b)=>(b.p.pct??-1)-(a.p.pct??-1)||b.p.clear-a.p.clear||a.s.name.localeCompare(b.s.name));
   const graded=rows.filter(x=>x.p.pct!=null).length;
-  host.innerHTML=`<div class="chart"><h3>Promises and stated positions checked against the record</h3><div class="sub">${points([['Raw counts','A grade built on 3 checks looks different from one built on 20.'],['Graded',`${graded} of ${ALL.length} have the ${MIN_CHECKS} counted checks a grade needs.`],['Not counted','Ambiguous checks, outcome checks, promises with no related bill yet, vague goals, and statements made in debate the day of the vote or the day before.']],'small')}</div>
+  host.innerHTML=`<div class="chart"><h3>Promises checked against what they did afterward</h3><div class="sub">${points([['Raw counts','A grade built on 3 promises looks different from one built on 20.'],['Graded',`${graded} of ${ALL.length} have the ${MIN_CHECKS} decided promises a grade needs.`],['Not counted','Unclear promises waiting on a reviewer, no action yet, not tested yet (not in Congress), vague goals, and statements made in debate.']],'small')}</div>
     ${legend(PROM_SEGS.map(x=>[x.color,x.label,x.cls]))}
-    ${stackRows(rows.map(({s,p,c})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-promises`,parts:c,grey:p.pct==null,value:p.pct==null?'Not graded':`${letter(p.pct)} ${p.pct}%`,cls:p.pct==null?'':'gr-'+letter(p.pct),note:`${p.clear} counted check${p.clear===1?'':'s'}`,empty:'No counted checks'})),PROM_SEGS,{unit:''})}
-    ${tableView(['Name','Score','Kept','Half','Contradicted','Not counted'],rows.map(({s,p,c})=>[`<a href="#${s.id}-promises">${esc(s.name)}</a>`,p.pct==null?'Not graded':`${letter(p.pct)} ${p.pct}%`,c.consistent,`${c.partial} partly, ${c.changed} changed`,c.contradiction,p.notCounted+p.vague+(p.debate||0)]))}</div>`;
+    ${stackRows(rows.map(({s,p,c})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-word`,parts:c,grey:p.pct==null,value:p.pct==null?'Not graded':`${letter(p.pct)} ${p.pct}%`,cls:p.pct==null?'':'gr-'+letter(p.pct),note:`${p.clear} decided`,empty:'No decided promises'})),PROM_SEGS,{unit:''})}
+    ${tableView(['Name','Score','Kept','First step','Compromise','Broken','Not counted'],rows.map(({s,p,c})=>[`<a href="#${s.id}-word">${esc(s.name)}</a>`,p.pct==null?'Not graded':`${letter(p.pct)} ${p.pct}%`,c.kept,c.step,c.compromise,c.broken,p.notCounted+p.vague+(p.debate||0)]))}</div>`;
 }
 function scoresEthics(host){
   const rows=ALL.map(s=>({s,...ethicsPoints(s)}));
@@ -3965,8 +4047,8 @@ function methodSix(){
   const rows=[
     ['ideology','Ideology',SIX_BY.ideology.q,'Votes, bills, amendments, cosponsorships and official acts on each question; statements tagged to each question (campaign websites and posts, reviewed speeches and press statements); each vote\'s reviewed side; topic groups\' ratings; Voteview\'s DW-NOMINATE; each interest group\'s published scorecard.',
       f('Stance on a question = (points for one side − points for the other) ÷ all points (at least 3 points)')+f('Question lean = 100 × the stance, conservative side as plus; category lean = average of its questions')+f('Overall lean = average of the category leans (at least 3 categories)')+f('Ratings lean = average of ±(2 × score − 100)')+f('DW-NOMINATE lean = 100 × first-dimension score')+'<p class="small">Scale: −100 most liberal to +100 most conservative; very liberal below −60, liberal to −20, moderate to +20, conservative to +60, very conservative above. Questions with no liberal side are shown and count in Your Match, but not in the lean. Points: a vote or cosponsorship 1, a sponsored bill or amendment or an official act 1.5, a group rating on the question\'s topic up to 3 (3 × |2 × score − 100| ÷ 100, toward the group\'s side above 50%, the other side below), a statement 1 beside a record of votes or bills on the question and 3 where there is none; one credit per bill, a reintroduced bill (co)sponsored again counts once, votes on one bill in one Congress count once; a statement is not counted when a later vote on the question went the other way. Groups that rate across many topics count only in the Ratings lean. Formula: ${QFORMULA}. Your Match, on this tab, compares your positions with their record.</p>'],
-    ['word','Keeps Their Word',SIX_BY.word.q,'Promises from campaign sites and posts, speeches, press releases and signed pledges, each checked against the action that decided it; PolitiFact\'s tracker for a president.',
-      f('Keeps Their Word = 100 × (kept + ½ × (partly kept + changed)) ÷ counted checks')+`<p class="small">At least ${MIN_CHECKS} counted checks. Vague goals, promises with no related bill yet and statements made in debate the day of the vote or the day before are shown, not counted.</p>`],
+    ['word','Keeps Their Word',SIX_BY.word.q,'Promises from campaign sites and posts, speeches, press releases and signed pledges, each checked against their votes and (co)sponsorships afterward; FEC filings for money pledges; PolitiFact\'s tracker for a president.',
+      f('Keeps Their Word = 100 × (kept + ¾ × first steps + ½ × compromises) ÷ (kept + first steps + compromises + broken)')+`<p class="small">A promise is something they told voters they would do ("I will…"), tied to the question its votes and bills decide. Kept: every vote and (co)sponsorship after it went its way. Broken: they all went against it; a reversal (at least 2 later bills against it and none its way since); or a promise to act with no bill introduced, (co)sponsored or voted on within ${window.PROMISES?.graceMonths||6} months in office. A bill failing doesn't count against them. Unclear promises (actions both ways, often a bill that mixed several things) wait for a reviewer, who can also record a first step (¾) or a compromise (½). Not counted: not tested yet (not in Congress), no action yet, vague goals and statements made in debate. At least ${MIN_CHECKS} decided promises.</p>`],
     ['showsup','Shows Up',SIX_BY.showsup.q,'Every roll call from 2018 on (Voteview); the bills they sponsored and how far each got (Congress.gov).',
       f('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')+f('Attendance = 100 − 5 × % of votes missed')+f('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')+'<p class="small">At least 50 votes; Attendance alone with fewer than 10 sponsored bills.</p>'],
     ['unbought','Big Money Independence',SIX_BY.unbought.q,'FEC reports (gift sizes, PAC money by type, gifts routed through groups); their financial disclosure (stocks held, trades); pledges and reform bills. <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, credited to them.',
