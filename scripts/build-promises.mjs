@@ -20,9 +20,8 @@
 //   no-action    in office, nothing on it yet, and the grace months haven't run out (the date they do is shown)
 //   not-tested   not in Congress (a candidate, a member-elect, or out of office) while the promise could be acted on
 // A reviewer can settle any promise in data/promise-reviews.json, keyed "<first question>@<date>":
-//   kept, step (voted for a first step toward it, ¾), compromise (introduced or (co)sponsored a compromised version, ½),
-//   partly (partially kept: part of it holds up, ½),
-//   broken, alleged, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed);
+//   kept, partly (partially kept, ½: they acted on part of it, like a bill for $12 when they promised $15, or a
+//   compromised version; "step" and "compromise" from before are read as partly), broken, alleged, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed);
 //   each with "why", shown on the profile, and the date it was reviewed.
 // Writes public/promises.json. Run after npm run statements:record and npm run bills:record.
 //   npm run promises:build
@@ -34,8 +33,9 @@ import {sentences,commitmentIn} from '../src/promise-finder.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const GRACE_MONTHS=6;
-export const STATUSES=['kept','step','compromise','partly','broken','alleged','unclear','no-action','not-tested'];
-const REVIEWABLE=new Set([...STATUSES,'not-a-promise','promise']);
+export const STATUSES=['kept','partly','broken','alleged','unclear','no-action','not-tested'];
+const MERGED={step:'partly',compromise:'partly'};
+const REVIEWABLE=new Set([...STATUSES,...Object.keys(MERGED),'not-a-promise','promise']);
 const norm=s=>String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[“”]/g,'"').replace(/[^a-z0-9' ]+/g,' ').replace(/\s+/g,' ').trim();
 const fmt=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).replace(/^(\w{3}) /,(m,a)=>a==='May'?'May ':`${a}. `).replace(/^Jun\. /,'June ').replace(/^Jul\. /,'July ').replace(/^Sep\. /,'Sept. ');
 export const addMonths=(d,n)=>{const t=new Date(d+'T12:00:00Z');const day=t.getUTCDate();t.setUTCDate(1);t.setUTCMonth(t.getUTCMonth()+n);
@@ -101,7 +101,8 @@ export function judge(promise,acts,office,{today,grace=GRACE_MONTHS,review=null,
   const seen=new Map();for(const a of after){const k=`${a[1].split('#')[0]}|${a[4]===sideOf.get(a[0])?1:0}`;if(!seen.has(k))seen.set(k,a);}
   const counted=[...seen.values()],yes=counted.filter(a=>a[4]===sideOf.get(a[0])),no=counted.filter(a=>a[4]!==sideOf.get(a[0]));
   const base={acts:after,before,forN:yes.length,againstN:no.length};
-  if(review&&STATUSES.includes(review.status))return {...base,status:review.status,rule:'reviewed',why:review.why||'',reviewed:review.date||null};
+  const reviewed=MERGED[review?.status]||review?.status;
+  if(review&&STATUSES.includes(reviewed))return {...base,status:reviewed,rule:'reviewed',why:review.why||'',reviewed:review.date||null};
   if(counted.length){
     // "All 12 actions after the promise, on 9 bills, went its way": a bill's roll calls and (co)sponsorship count once.
     const all=w=>`${after.length===1?'The one action':`All ${after.length} actions`} after the promise${counted.length<after.length?`, on ${plural(counted.length,'bill')},`:''} went ${w}.`;
@@ -183,7 +184,7 @@ function main(){
     evidence:bg=>has(`public/question-evidence/${bg}.json`)?read(`public/question-evidence/${bg}.json`):null,
     campaign:id=>has(`data/campaign-text/${id}.json`)?read(`data/campaign-text/${id}.json`):null,
     elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)});
-  fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, step, compromise, broken, alleged (allegedly broken: no action while others acted), unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
+  fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, partly (partially kept), broken, alleged (allegedly broken: no action while others acted), unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
     built:today,graceMonths:GRACE_MONTHS,people:out}));
   const all=Object.values(out).flat(),n={};for(const p of all)n[p.status]=(n[p.status]||0)+1;
   console.log(`${all.length} promises for ${Object.keys(out).length} people: ${STATUSES.filter(s=>n[s]).map(s=>`${n[s]} ${s}`).join(', ')}.`);
