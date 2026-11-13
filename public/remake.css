@@ -1402,4 +1402,7 @@ input, select { accent-color: var(--accent); }
 /* Allegedly broken: the broken color, with a dashed edge so it reads apart from broken. */
 .kw-al { background: var(--crit-soft); color: var(--crit); border: 1px dashed color-mix(in srgb, var(--crit) 60%, transparent); }
 .kw-p.al { border-left-color: var(--crit); border-left-style: dashed; }
+.kw-pk { background: var(--serious-soft); color: var(--serious); border-color: color-mix(in srgb, var(--serious) 35%, transparent); }
+.kw-p.pk { border-left-color: var(--serious); }
+.kw-bar-pk { background: var(--serious); }
 .kw-bar-al { background: repeating-linear-gradient(135deg, var(--crit) 0 4px, color-mix(in srgb, var(--crit) 45%, transparent) 4px 8px); }

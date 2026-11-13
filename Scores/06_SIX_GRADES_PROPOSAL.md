@@ -180,7 +180,7 @@ promise.
 **Formula** (as of November 13, 2026):
 
 ```text
-Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kept + First steps + Compromises + Broken + Allegedly broken)
+Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × (Compromises + Partially kept)) ÷ (Kept + First steps + Compromises + Partially kept + Broken + Allegedly broken)
 ```
 
 **How a promise is checked** (`scripts/build-promises.mjs`, written to `public/promises.json`):
@@ -196,6 +196,9 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kep
    - **First step (¾):** they voted for part of what they promised (for example $12 when they promised $15). A reviewer
      records it.
    - **Compromise (½):** they introduced or (co)sponsored a compromised version. A reviewer records it.
+   - **Partially kept (½):** a reviewed check where part of what they said holds up (for example, they launched the
+     program they claim credit for, but it erased a fraction of the amount they cite), or they changed position and
+     nothing they did since goes against what they say now.
    - **Broken (0):** their own votes went against it: every action went against it, or a reversal (after acting its
      way, at least 2 later bills went against it and none its way since).
    - **Allegedly broken (0, counted the same as broken):** a promise to act with no bill introduced, (co)sponsored or
@@ -211,8 +214,8 @@ Keeps Their Word = 100 × (Kept + ¾ × First steps + ½ × Compromises) ÷ (Kep
    - **Not tested yet (not counted):** not in Congress while it could be acted on (a candidate, or a member-elect until
      they take office), or a promise to oppose or defend against something that hasn't come up.
 
-**Also counted:** reviewed checks and pledges (consistent is kept, partial a first step, changed and contradiction
-broken: a change of position counts as broken) and, for a president, PolitiFact's tracker: Kept 1, Compromise ½, Broken
+**Also counted:** reviewed checks and pledges (consistent is kept; partial, partly supported, and changed, a changed
+position, are partially kept, ½; contradiction, what they did went against what they said, is broken) and, for a president, PolitiFact's tracker: Kept 1, Compromise ½, Broken
 0; Stalled and In the Works wait.
 
 **Left out:** vague goals, unclear promises until reviewed, no action yet, not tested yet, and statements made in debate

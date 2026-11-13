@@ -83,15 +83,16 @@ test('office window: sitting members from the directory, former members from the
   assert.deepEqual([act(['q'],'S','2025-01-01','2026-01-01'),act(['q'],'S','2025-01-01','2026-01-01','A'),act(['q'],'H','2025-01-01','2026-01-01'),act(['q'],'S','2025-03-15','2026-01-01')],[2,1,1,1]);
 });
 
-test('the grade: kept 1, first step 3/4, compromise 1/2, broken and allegedly broken 0; waiting promises aren\'t counted; a passed deadline is allegedly broken',()=>{
-  assert.deepEqual(PROMISE_WEIGHT,{kept:1,step:0.75,compromise:0.5,broken:0,alleged:0});
+test('the grade: kept 1, first step 3/4, compromise and partially kept 1/2, broken and allegedly broken 0; waiting promises aren\'t counted; a passed deadline is allegedly broken',()=>{
+  assert.deepEqual(PROMISE_WEIGHT,{kept:1,step:0.75,compromise:0.5,partly:0.5,broken:0,alleged:0});
   const P=(status,extra={})=>({status,qs:[['q',0]],...extra});
   const s=promiseScore([],[],[P('kept'),P('kept'),P('step'),P('compromise'),P('broken'),P('alleged'),P('unclear'),P('not-tested'),P('no-action',{deadline:'2027-01-01'})],today);
   assert.deepEqual([s.kept,s.step,s.compromise,s.broken,s.alleged,s.clear,s.open,s.pct],[2,1,1,1,1,6,3,Math.round((2+0.75+0.5)/6*100)]);
   assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01'}),today),'alleged');
-  // A reviewed check left unacted at the end of the term is allegedly broken; a plain contradiction is broken.
-  const c=promiseScore([{assessment:'contradiction',unacted:{reason:'x'}},{assessment:'contradiction'},{assessment:'changed'}]);
-  assert.deepEqual([c.alleged,c.broken],[1,2]);
+  // A reviewed check left unacted at the end of the term is allegedly broken; a plain contradiction is broken; a partly
+  // supported check or a changed position is partially kept (1/2).
+  const c=promiseScore([{assessment:'contradiction',unacted:{reason:'x'}},{assessment:'contradiction'},{assessment:'changed'},{assessment:'partial'}]);
+  assert.deepEqual([c.alleged,c.broken,c.partly,c.step,c.clear,c.points],[1,1,2,0,4,1]);
   assert.equal(promiseStatus(P('no-action',{deadline:'2027-11-01'}),today),'no-action');
   // A promise on the question of a reviewed stock-trading pledge is left to the reviewed check.
   const dup=promiseScore([{assessment:'unclear',pledge:{kind:'stock-trading'}}],[],[{status:'broken',qs:[['congress-stock-trading',1]]}],today);

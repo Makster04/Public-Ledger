@@ -21,6 +21,7 @@
 //   not-tested   not in Congress (a candidate, a member-elect, or out of office) while the promise could be acted on
 // A reviewer can settle any promise in data/promise-reviews.json, keyed "<first question>@<date>":
 //   kept, step (voted for a first step toward it, ¾), compromise (introduced or (co)sponsored a compromised version, ½),
+//   partly (partially kept: part of it holds up, ½),
 //   broken, alleged, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed);
 //   each with "why", shown on the profile, and the date it was reviewed.
 // Writes public/promises.json. Run after npm run statements:record and npm run bills:record.
@@ -33,7 +34,7 @@ import {sentences,commitmentIn} from '../src/promise-finder.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const GRACE_MONTHS=6;
-export const STATUSES=['kept','step','compromise','broken','alleged','unclear','no-action','not-tested'];
+export const STATUSES=['kept','step','compromise','partly','broken','alleged','unclear','no-action','not-tested'];
 const REVIEWABLE=new Set([...STATUSES,'not-a-promise','promise']);
 const norm=s=>String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[“”]/g,'"').replace(/[^a-z0-9' ]+/g,' ').replace(/\s+/g,' ').trim();
 const fmt=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).replace(/^(\w{3}) /,(m,a)=>a==='May'?'May ':`${a}. `).replace(/^Jun\. /,'June ').replace(/^Jul\. /,'July ').replace(/^Sep\. /,'Sept. ');
