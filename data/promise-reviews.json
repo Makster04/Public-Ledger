@@ -18,6 +18,8 @@
    "tariffs@2024-11-05": {"status": "unclear", "why": "She promised tariffs that protect Ohio factories. The votes against were to end the 2025 national emergency behind the tariffs on Canadian goods, a broad tariff rather than a targeted one, so whether they go against the promise depends on how it is read.", "date": "2026-11-13"}
   },
   "marshall": {
+   "border-security@2019-01-08": {"status": "kept", "why": "Every border action after the promise went its way (border amendments in 2019 and 2021–22, cosponsoring the Secure the Border Act in 2023 and voting for the 2026 Secure America Act) except one vote against cloture on the 2024 Border Act.", "date": "2026-11-13"},
+   "border-security@2022-02-02": {"status": "kept", "why": "Every border action after the promise went its way (a 2022 border amendment, cosponsoring the Secure the Border Act in 2023 and voting for the 2026 Secure America Act) except one vote against cloture on the 2024 Border Act.", "date": "2026-11-13"},
    "pre-existing-conditions@2025-12-09": {"status": "not-tested", "why": "A promise to keep protections that already exist. Nothing to change them has come up in the Senate since, and his own health bill that day (S. 3389, the Lowering Health Care Costs for Americans Act) leaves them in place.", "date": "2026-11-13"}
   },
   "ossoff": {
@@ -35,6 +37,9 @@
   },
   "stelson": {
    "national-sales-tax@2024-11-05": {"status": "not-a-promise", "why": "About her opponent's positions, not a promise of hers.", "date": "2026-11-13"}
+  },
+  "sullivan": {
+   "border-security@2019-01-15": {"status": "kept", "why": "Every border action after the promise went its way (the 2021–22 border amendments, cosponsoring the Secure the Border Act in 2023 and voting for the 2026 Secure America Act) except one vote against cloture on the 2024 Border Act.", "date": "2026-11-13"}
   }
  }
 }
