@@ -1,5 +1,25 @@
 {
  "about": "What each reviewed profile said, tagged by hand to the alignment questions (public/questions.json): {person id: {question id: [[side index, \"the quote\", \"YYYY-MM-DD\", \"link\", \"where it was said\"]]}}. A tag is made only when the words clearly take one side; a statement that only explains a vote isn't a separate position; at most one statement per question per campaign. Checked and copied to public/question-statements.json by npm run statements:record (scripts/question-statements.mjs).",
+ "ager": {
+  "border-security": [
+   [0, "I support a strong border and a focus on deporting criminals","2026-10-15","https://wlos.com/news/election/north-carolina-11th-district-jamie-ager-democrat-2026-candidate-questions","WLOS candidate questionnaire"]
+  ],
+  "congress-stock-trading": [
+   [1, "I’ll fight to ban members of Congress from stock trading, so no one is using insider knowledge for personal gain.","2026-11-13","https://agerforcongress.com/platform","Campaign website, 2026: Platform"]
+  ],
+  "deport-serious-crime": [
+   [0, "I support a strong border and a focus on deporting criminals","2026-10-15","https://wlos.com/news/election/north-carolina-11th-district-jamie-ager-democrat-2026-candidate-questions","WLOS candidate questionnaire"]
+  ],
+  "drug-prices": [
+   [0, "I’ll defend Medicare’s power to negotiate drug prices and keep capping insulin and other essentials.","2026-11-13","https://agerforcongress.com/platform","Campaign website, 2026: Platform"]
+  ],
+  "tax-the-rich": [
+   [0, "I’ll push both parties to reform the tax code so the folks at the top pay their fair share.","2026-11-13","https://agerforcongress.com/platform","Campaign website, 2026: Platform"]
+  ],
+  "war-with-iran": [
+   [1, "When Americans are already struggling to make ends meet, you should not needlessly go to war with Iran.","2026-10-15","https://wlos.com/news/election/north-carolina-11th-district-jamie-ager-democrat-2026-candidate-questions","WLOS candidate questionnaire"]
+  ]
+ },
  "andrews": {
   "abortion": [
    [1, "Restore the protections of Roe v. Wade","2026-07-12","https://drannieandrews.com/issue/reproductive-freedom-trust-women/","Campaign website, 2026: Reproductive Freedom: Trust Women"]
@@ -190,6 +210,32 @@
    [1, "Back police, prosecute fentanyl dealers, protect communities from rising crime.","2026-10-29","https://web.archive.org/web/20261029104932/https://www.votebraun.com/","Campaign website, 2026: John Braun for Congress | Run a Tight Ship"]
   ]
  },
+ "brooks": {
+  "abortion": [
+   [1, "We need to codify Roe v. Wade and pass legislation to overturn Trump abortion bans in red states.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "congress-stock-trading": [
+   [1, "No stock trading in Congress. If you want to get rich, don't run for office.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "gun-purchase-limits": [
+   [0, "We need common-sense laws: universal background checks, closing the gun show loophole, and enforcing waiting periods","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "medicaid-funding": [
+   [0, "Restore the cuts to Medicaid and provide Medicare for All.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "single-payer": [
+   [0, "Because of this, I support Medicare for All.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "tax-the-rich": [
+   [0, "We need to pass a billionaire minimum tax: a baseline tax rate the ultra-wealthy can't dodge.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "term-limits": [
+   [0, "Term limits. No more lifetime politicians.","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ],
+  "union-rights": [
+   [0, "I'll make it easier to join a union by passing the PRO Act","2026-11-13","https://brooksforcongress.com/on-the-issues/","Campaign website, 2026: Bob's Platform"]
+  ]
+ },
  "brown": {
   "congress-stock-trading": [
    [1, "It’s time to ban Congressional stock trading and end the corruption.","2026-10-26","https://bsky.app/profile/sherrodbrownoh.bsky.social/post/3mysfsm4jie26","Bluesky post"]
@@ -292,6 +338,20 @@
   ],
   "universal-basic-income": [
    [0, "We will pass a universal basic income so every American has the financial security and freedom to build their future.","2026-05-20","https://web.archive.org/web/20260520063748/https://charlesbooker.org/issues/","Campaign website, 2026: Issues - Charles Booker For U.S. Senate 2026"]
+  ]
+ },
+ "cognetti": {
+  "congress-stock-trading": [
+   [1, "A Ban on Congressional Stock Trading. No one should be able to use their public office to enrich themselves.","2026-10-05","https://paigeforpa.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "paid-leave": [
+   [0, "Fight for paid family leave and affordable childcare.","2026-10-05","https://paigeforpa.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "tariffs": [
+   [1, "Stop broad tariffs that help the big guys and hurt families","2026-10-05","https://paigeforpa.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "union-rights": [
+   [0, "Strengthen unions; make it easier to join and start a union.","2026-10-05","https://paigeforpa.com/priorities/","Campaign website, 2026: Priorities"]
   ]
  },
  "collins": {
@@ -414,9 +474,46 @@
    [0, "- Creating a pathway to citizenship for the millions of undocumented immigrants and Dreamers who are already part of our communities, paying taxes, and contributing to our economy.","2026-11-03","https://web.archive.org/web/20261103072516/https://caitconley.com/policy/","Campaign website, 2026: Policy - Cait Conley for Congress"]
   ]
  },
+ "cooke": {
+  "abortion": [
+   [1, "Unabashedly support the upholding of Roe vs. Wade.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "affordable-care-act": [
+   [0, "Reverse Medicaid and Affordable Care Act cuts and fund rural hospitals.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "congress-stock-trading": [
+   [1, "Ban stock trading for members of Congress and the White House.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "drug-prices": [
+   [0, "Cap out-of-pocket costs on essential drugs like insulin, asthma inhalers, and cancer medications at $30/month.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "foreign-farmland": [
+   [0, "Protect our farmland from being bought by foreign nationals.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "medicaid-funding": [
+   [0, "Reverse Medicaid and Affordable Care Act cuts and fund rural hospitals.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "minimum-wage": [
+   [0, "Raise the federal minimum wage to $15/hour.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "tariffs": [
+   [1, "End the use of tariffs that have created trade tensions globally and cut off agricultural marketplaces.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "term-limits": [
+   [0, "Enforce term limits for members of Congress.","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ],
+  "war-with-iran": [
+   [1, "End the costly Iran War, which is costing taxpayers $2 billion per day","2026-11-13","https://cookeforwisconsin.com/priorities/","Campaign website, 2026: Priorities"]
+  ]
+ },
  "cooper": {
   "medicaid-funding": [
    [0, "We have to accept Medicaid expansion that is being offered to our state","2017-01-04","https://www.cbsnews.com/amp/news/n-c-governor-pledges-to-immediately-expand-medicaid-under-obamacare","CBS News/AP: N.C. governor pledges to immediately expand Medicaid under Obamacare: Medicaid expansion"]
+  ]
+ },
+ "dandiya": {
+  "congress-stock-trading": [
+   [1, "I'll fight to ban members of Congress from trading individual stocks","2026-09-05","https://news.ballotpedia.org/2026/09/05/competitive-race-expected-in-floridas-22nd-congressional-district-which-biden-won-in-2020-and-trump-won-in-2024/","Campaign website, 2026, as quoted by Ballotpedia News"]
   ]
  },
  "davis": {
@@ -814,6 +911,8 @@
    [0, "These individuals are enmeshed in our communities, they have families and pay taxes, and they deserve a pathway to citizenship.","2020-10-31","https://web.archive.org/web/20201031233612/https://hickenlooper.com/issues/equity-for-all/","Campaign website, 2020: Equity for All - John Hickenlooper for U.S. Senate"]
   ]
  },
+ "hines": {
+ },
  "hinson": {
   "war-with-iran": [
    [1, "successful and immediate end","2026-09-23","https://www.kcrg.com/2026/09/23/hinson-calls-immediate-end-iran-war-after-previous-votes-against-ending-us-involvement/","KCRG: Hinson calls for 'immediate end' to Iran war after previous votes against ending U.S. involvement: Iran war"]
@@ -862,9 +961,28 @@
    [0, "Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel.","2026-10-07","https://lawler.house.gov/news/documentsingle.aspx?DocumentID=6589","Press release: Chairman Lawler Remembers October 7 Attacks, Reaffirms Commitment to Jewish Security and Israel"]
   ]
  },
+ "lawrence": {
+ },
  "letlow": {
   "public-pensions": [
    [0, "Windfall Elimination Provision/Government Pension Offset Repealing the unfair, bureaucratic Windfall Elimination Provision and Government Pension Offset are among my top priorities for the 118th Congress.","2023-11-02","https://letlow.house.gov/WEPGPO","Press release: Windfall Elimination Provision/Government Pension Offset"]
+  ]
+ },
+ "luria": {
+  "affordable-care-act": [
+   [0, "Cut health care costs for the middle class by restoring ACA premium subsidies.","2026-11-13","https://elaineforcongress.com/issues/","Campaign website, 2026: Priorities"]
+  ],
+  "congress-stock-trading": [
+   [1, "I support banning members of Congress and their families from trading individual stocks while holding office.","2026-11-13","https://elaineforcongress.com/issues/","Campaign website, 2026: Priorities"]
+  ],
+  "drug-prices": [
+   [0, "Cut health care costs for seniors by expanding the number of drugs Medicare can negotiate on","2026-11-13","https://elaineforcongress.com/issues/","Campaign website, 2026: Priorities"]
+  ],
+  "medicaid-funding": [
+   [0, "Help rural hospitals stay open by restoring the $1 trillion Jen Kiggans and Donald Trump cut from Medicaid","2026-11-13","https://elaineforcongress.com/issues/","Campaign website, 2026: Priorities"]
+  ],
+  "tariffs": [
+   [1, "fight to repeal the tariffs, and reverse legislation and policy decisions that have increased energy costs.","2026-11-13","https://elaineforcongress.com/issues/","Campaign website, 2026: Priorities"]
   ]
  },
  "marshall": {
@@ -917,6 +1035,17 @@
  "mcollins": {
   "deport-serious-crime": [
    [0, "I hope to see the same level of bipartisan support for this bill in the Senate, and I urge my Senate counterparts to put this on President Trump's desk and save lives.","2025-01-08","https://collins.house.gov/media/press-releases/laken-riley-act-passes-house-bipartisan-support","Rep. Mike Collins press release: The Laken Riley Act Passes the House with Bipartisan Support: Laken Riley Act"]
+  ]
+ },
+ "mendoza": {
+  "medicaid-funding": [
+   [0, "JoAnna will work to reverse disastrous cuts to healthcare, including to AHCCCS","2026-11-13","https://www.joannamendoza.com/issues/healthcare/","Campaign website, 2026: Strengthening our Healthcare System"]
+  ],
+  "pre-existing-conditions": [
+   [1, "fight to protect healthcare for people with pre-existing conditions","2026-11-13","https://www.joannamendoza.com/issues/healthcare/","Campaign website, 2026: Strengthening our Healthcare System"]
+  ],
+  "tariffs": [
+   [1, "oppose reckless tariffs that drive up costs","2026-11-13","https://www.joannamendoza.com/issues/mendoza-lower-costs-and-protecting-seniors/","Campaign website, 2026: Lowering Costs & Protecting Our Families and Seniors"]
   ]
  },
  "merrin": {
@@ -1382,6 +1511,34 @@
    [1, "Congressman Scott Perry Introduces \"No Desire for Streetcars Act\" Washington, D.C. – Today, Congressman Scott Perry (PA-10) introduced the No Desire for Streetcars Act, a bill prohibiting mass transit pet projects masquerading as legitimate public infrastructure. “ Beauty is in the eye of the behol…","2025-06-10","https://perry.house.gov/news/documentsingle.aspx?DocumentID=403280","Press release: Congressman Scott Perry Introduces the \"No Desire for Streetcars Act\""]
   ]
  },
+ "poindexter": {
+  "drug-prices": [
+   [0, "I support bringing down the cost of prescription drugs by letting Medicare negotiate with drug companies.","2026-11-13","https://poindexterforcongress.com/healthcare-that-makes-sense/","Campaign website, 2026: Healthcare that Makes Sense"]
+  ],
+  "minimum-wage": [
+   [0, "I support raising the minimum wage and strengthening unions","2026-11-13","https://poindexterforcongress.com/priority-1-cost-of-living/","Campaign website, 2026: Priority #1: Cost of Living"]
+  ],
+  "retirement-age": [
+   [1, "I also oppose raising the retirement age.","2026-11-13","https://poindexterforcongress.com/social-security-and-medicare/","Campaign website, 2026: Social Security and Medicare"]
+  ],
+  "tariffs": [
+   [1, "I want to end the blanket tariffs that have made everything we buy more expensive.","2026-11-13","https://poindexterforcongress.com/priority-1-cost-of-living/","Campaign website, 2026: Priority #1: Cost of Living"]
+  ],
+  "union-rights": [
+   [0, "I will sign on to the PRO Act to strengthen unions","2026-11-13","https://poindexterforcongress.com/priority-1-cost-of-living/","Campaign website, 2026: Priority #1: Cost of Living"]
+  ],
+  "war-with-iran": [
+   [1, "Step one is bringing down the cost of gas by ending the war in Iran.","2026-11-13","https://poindexterforcongress.com/priority-1-cost-of-living/","Campaign website, 2026: Priority #1: Cost of Living"]
+  ]
+ },
+ "pulido": {
+  "school-vouchers": [
+   [1, "I oppose voucher schemes that drain money from our classrooms and send it to private schools.","2026-11-13","https://bobbypulidofortexas.com/issues/","Campaign website, 2026: Issues"]
+  ],
+  "tariffs": [
+   [1, "Tariffs and trade wars are driving up costs and closing off opportunities","2026-11-13","https://bobbypulidofortexas.com/issues/","Campaign website, 2026: Issues"]
+  ]
+ },
  "ricketts": {
   "foreign-farmland": [
    [0, "We cannot let them use American ag land to weaken U.S. national security.","2026-03-27","https://nebraskapublicmedia.org/en/news/news-articles/ricketts-introduces-bill-to-increase-tracking-of-foreign-land-purchases/","Nebraska Public Media: Ricketts introduces bill to increase tracking of foreign land purchases: Foreign ownership of farmland"]
@@ -1472,9 +1629,34 @@
    [0, "There is no excuse for not protecting our democracy with voter ID and paper ballots.","2026-10-26","https://web.archive.org/web/20261026195511/https://micheletafoya.com/issues/","Campaign website, 2026: Issues - Michele Tafoya for U.S. Senate"]
   ]
  },
+ "tronegarriott": {
+  "affordable-care-act": [
+   [0, "We also need to extend the ACA tax credits to keep insurance affordable for working families.","2026-11-13","https://sarahforiowa.com/issue/health-care-thats-affordable-and-there-when-you-need-it/","Campaign website, 2026: Health care that’s affordable and there when you need it"]
+  ],
+  "congress-stock-trading": [
+   [1, "I support a full ban on stock trading by any member of Congress, the White House, and their staff","2026-11-13","https://sarahforiowa.com/issue/higher-standard/","Campaign website, 2026: A Higher Standard for Washington"]
+  ],
+  "drug-prices": [
+   [0, "allowing Medicare to negotiate prescription drug prices to lower costs","2026-11-13","https://sarahforiowa.com/issue/health-care-thats-affordable-and-there-when-you-need-it/","Campaign website, 2026: Health care that’s affordable and there when you need it"]
+  ],
+  "medicaid-funding": [
+   [0, "we need to roll back the massive Medicaid cuts Zach Nunn voted for this year","2026-11-13","https://sarahforiowa.com/issue/health-care-thats-affordable-and-there-when-you-need-it/","Campaign website, 2026: Health care that’s affordable and there when you need it"]
+  ],
+  "term-limits": [
+   [0, "a 12-year cap: six House terms or two Senate terms","2026-11-13","https://sarahforiowa.com/issue/higher-standard/","Campaign website, 2026: A Higher Standard for Washington"]
+  ]
+ },
  "turek": {
   "work-amnesty": [
    [0, "we can also recognize (that) these aren't mutual, exclusive ideas, that we need to have safe and secure borders, but we also need to have a far easier pathway to citizenship","2026-05-05","https://iowacapitaldispatch.com/2026/05/05/democratic-u-s-senate-candidates-debate-immigration-votes-outside-money/","Iowa Capital Dispatch, May 5, 2026: Immigration and border security"]
+  ]
+ },
+ "villegas": {
+  "minimum-wage": [
+   [0, "It’s time to raise the wage so everyone who works hard can have their basic needs met","2026-11-13","https://villegasforcongress.com/issues/healthcare","Campaign website, 2026: Cost of living"]
+  ],
+  "paid-leave": [
+   [0, "it’s time we joined other major countries in guaranteeing paid parental leave.","2026-11-13","https://villegasforcongress.com/issues/healthcare","Campaign website, 2026: Cost of living"]
   ]
  }
 }

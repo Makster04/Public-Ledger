@@ -146738,6 +146738,5529 @@
       "assoc": {},
       "funderPos": [],
       "resultsOnly": true
+    },
+    {
+      "id": "mendoza",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "ciscomani",
+      "district": "AZ-06",
+      "name": "JoAnna Mendoza",
+      "short": "Mendoza",
+      "party": "D",
+      "state": "AZ",
+      "stateName": "Arizona",
+      "race": "H-AZ-06",
+      "status": "Democratic nominee; won the July 21, 2026 Democratic primary",
+      "statusSrc": {
+        "t": "KJZZ - Juan Ciscomani to face JoAnna Mendoza in Arizona CD6 race (July 21, 2026)",
+        "u": "https://www.kjzz.org/elections/2026-07-21/juan-ciscomani-to-face-joanna-mendoza-in-arizona-cd6-race"
+      },
+      "opponent": "Juan Ciscomani (R)",
+      "born": null,
+      "since": "Veteran and nonprofit leader; no elected office (appointed to a Red Rock-area school district governing board)",
+      "roles": "U.S. Marine Corps, 1998–2016 (gunnery sergeant, drill instructor; two deployments to Iraq, one to Afghanistan); U.S. Navy, 1994–1997; Veteran services representative for Rep. Tom O'Halleran, 2018–2019; Executive director, Arizona Center for Economic Progress (after 2022); Democratic nominee for Arizona Senate District 11, 2020 (lost to Vince Leach)",
+      "background": "Born in Eloy, Arizona, and lives in Red Rock. A Navy and Marine Corps veteran of 21 years, with a BA in intelligence studies from American Military University (2013) and an MS in leadership from Grand Canyon University (2019). A former Republican, a Democrat since 2018.",
+      "site": "https://www.joannamendoza.com/",
+      "fecCand": "H6AZ06099",
+      "fecCmte": "C00897090",
+      "cmteName": "Mendoza For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. Juan Ciscomani",
+      "seat": "AZ-06 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care",
+          "detail": "Her platform says \"JoAnna will work to reverse disastrous cuts to healthcare, including to AHCCCS\" (Arizona's Medicaid program) and \"She opposes privatizing Medicare, which would lead to higher prices and worse care for patients.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "JoAnna Mendoza for Congress: Strengthening our Healthcare System",
+            "u": "https://www.joannamendoza.com/issues/healthcare/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: costs, tariffs and seniors",
+          "detail": "Her platform says she will \"oppose reckless tariffs that drive up costs,\" that \"JoAnna will oppose any efforts to cut seniors’ hard-earned benefits,\" that \"She strongly supports strengthening Social Security and exploring ways to increase benefits\" and that \"She will work to modernize the Child Tax Credit to deliver relief to working families.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "JoAnna Mendoza for Congress: Lowering Costs & Protecting Our Families and Seniors",
+            "u": "https://www.joannamendoza.com/issues/mendoza-lower-costs-and-protecting-seniors/"
+          }
+        }
+      ],
+      "statements": [],
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Mendoza; none were found. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Mendoza; none were found. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 11242473.21,
+        "indiv": 9269440.83,
+        "itemized": 5401861.49,
+        "unitemized": 3867579.34,
+        "party": 5872.24,
+        "pac": 797608.85,
+        "transfers": 1168700.99,
+        "disbursements": 10434573.97,
+        "cash": 807899.24,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Mendoza For Congress (C00897090), 2025-01-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jan 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 11242473.21,
+        "indiv": 9269440.83,
+        "itemized": 5401861.49,
+        "unitemized": 3867579.34,
+        "party": 5872.24,
+        "pac": 797608.85,
+        "transfers": 1168700.99,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 10434573.97,
+        "cash": 807899.24,
+        "debts": 0,
+        "cmte": "Mendoza For Congress",
+        "cmteId": "C00897090",
+        "start": "2025-01-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00897090/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 850.3,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2207038.93,
+          "other": 40302,
+          "party": 0,
+          "total": 2247340.93
+        },
+        "against": {
+          "super_pac": 3002487.7,
+          "other": 33050,
+          "party": 0,
+          "total": 3035537.7
+        },
+        "parts": {
+          "S": {
+            "super_pac": 175459.95,
+            "other": 40302,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 2092800.61,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 2031578.98,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 909687.09,
+            "other": 33050,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 1,
+          "amount": 9456
+        },
+        "n": 104,
+        "uncertain": 4,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 2,
+        "cms": [
+          [
+            77,
+            1824246.08,
+            0,
+            0,
+            0,
+            29,
+            "2026-09-01",
+            "2026-09-25"
+          ],
+          [
+            76,
+            0,
+            1703331.97,
+            0,
+            0,
+            11,
+            "2026-09-02",
+            "2026-09-23"
+          ],
+          [
+            36,
+            0,
+            386189,
+            0,
+            0,
+            10,
+            "2026-09-25",
+            "2026-09-29"
+          ],
+          [
+            75,
+            0,
+            356297.37,
+            0,
+            0,
+            3,
+            "2026-09-05",
+            "2026-09-16"
+          ],
+          [
+            19,
+            0,
+            199785.8,
+            0,
+            0,
+            5,
+            "2026-09-03",
+            "2026-09-25"
+          ],
+          [
+            42,
+            0,
+            144026.12,
+            0,
+            0,
+            12,
+            "2026-09-05",
+            "2026-09-29"
+          ],
+          [
+            22,
+            133495.92,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-10",
+            "2026-09-23"
+          ],
+          [
+            175,
+            0,
+            123257.32,
+            0,
+            0,
+            3,
+            "2026-09-22",
+            "2026-09-30"
+          ],
+          [
+            1,
+            111702.67,
+            0,
+            0,
+            0,
+            5,
+            "2026-07-05",
+            "2026-08-10"
+          ],
+          [
+            28,
+            99403.87,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-06",
+            "2026-09-26"
+          ],
+          [
+            174,
+            0,
+            49200.12,
+            0,
+            0,
+            5,
+            "2026-09-14",
+            "2026-09-25"
+          ],
+          [
+            105,
+            0,
+            40400,
+            0,
+            0,
+            4,
+            "2026-08-28",
+            "2026-09-24"
+          ],
+          [
+            176,
+            40302,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-25",
+            "2026-09-25"
+          ],
+          [
+            27,
+            0,
+            33050,
+            0,
+            0,
+            1,
+            "2026-09-17",
+            "2026-09-17"
+          ],
+          [
+            147,
+            20300,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-21",
+            "2026-09-30"
+          ],
+          [
+            82,
+            16477.96,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            13,
+            1412.43,
+            0,
+            0,
+            0,
+            1,
+            "2025-04-14",
+            "2025-04-14"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "afp",
+          "org": "Americans for Prosperity",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 386189,
+          "spenders": [
+            "Americans for Prosperity Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 133495.92,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 111702.67,
+          "against": 0,
+          "spenders": [
+            "Planned Parenthood Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 16477.96,
+          "against": 0,
+          "spenders": [
+            "Retired Americans Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "villegas",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "valadao",
+      "district": "CA-22",
+      "name": "Randy Villegas",
+      "short": "Villegas",
+      "party": "D",
+      "state": "CA",
+      "stateName": "California",
+      "race": "H-CA-22",
+      "status": "Democratic nominee; advanced from the June 2, 2026 top-two primary",
+      "statusSrc": {
+        "t": "Ballotpedia News - Valadao (R) and Randy Villegas (D) advanced from the top-two primary for CA-22 (June 12, 2026)",
+        "u": "https://news.ballotpedia.org/2026/06/12/incumbent-david-valadao-r-and-randy-villegas-d-advanced-from-the-top-two-primary-for-californias-22nd-congressional-district-on-june-2-2026/"
+      },
+      "opponent": "David Valadao (R)",
+      "born": 1994,
+      "since": "Political science professor at College of the Sequoias; Visalia Unified School District board trustee (appointed December 2021, elected 2022)",
+      "roles": "Trustee, Visalia Unified School District Board, Trustee Area 6 (appointed December 2021; elected November 2022); Professor of political science, College of the Sequoias, Visalia; Co-owner of his family's auto body shop",
+      "background": "Born in 1994 and raised in Bakersfield, California, the son of Mexican immigrants. Associate degree from Bakersfield College, BA from CSU Bakersfield, and an MA and PhD in politics from UC Santa Cruz (2022). Earlier a journalist and community organizer in Bakersfield.",
+      "site": "https://villegasforcongress.com/",
+      "fecCand": "H6CA22190",
+      "fecCmte": "C00902379",
+      "cmteName": "Villegas For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. David Valadao",
+      "seat": "CA-22 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: cost of living, wages and paid leave",
+          "detail": "His cost-of-living page says \"it’s time we joined other major countries in guaranteeing paid parental leave\" and \"It’s time to raise the wage so everyone who works hard can have their basic needs met.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Randy Villegas for Congress: Cost of living",
+            "u": "https://villegasforcongress.com/issues/healthcare"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Refusing corporate PAC money",
+          "said": {
+            "text": "\"No Corporate PACs. Just People Like You.\" (his campaign homepage)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Randy Villegas for Congress",
+              "u": "https://villegasforcongress.com/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Randy Villegas for Congress",
+              "u": "https://villegasforcongress.com/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A pledge the records can check; not reviewed yet.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed his Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Villegas; none were found. Intra-party disputes (the DCCC first backing his primary rival) and outside spending against him are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Villegas; none were found. Intra-party disputes (the DCCC first backing his primary rival) and outside spending against him are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 5942030.17,
+        "indiv": 5082726,
+        "itemized": 3585337.3,
+        "unitemized": 1497388.7,
+        "party": 8148.53,
+        "pac": 518758.54,
+        "transfers": 329934.22,
+        "disbursements": 4979678.4,
+        "cash": 962351.77,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Villegas For Congress (C00902379), 2025-04-14 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Apr 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 5942030.17,
+        "indiv": 5082726,
+        "itemized": 3585337.3,
+        "unitemized": 1497388.7,
+        "party": 8148.53,
+        "pac": 518758.54,
+        "transfers": 329934.22,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 4979678.4,
+        "cash": 962351.77,
+        "debts": 0,
+        "cmte": "Villegas For Congress",
+        "cmteId": "C00902379",
+        "start": "2025-04-14",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00902379/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 2462.88,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 3853530.52,
+          "other": 682509.2,
+          "party": 0,
+          "total": 4536039.72
+        },
+        "against": {
+          "super_pac": 3031420.29,
+          "other": 0,
+          "party": 0,
+          "total": 3031420.29
+        },
+        "parts": {
+          "S": {
+            "super_pac": 628800.85,
+            "other": 578900,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 2867431.94,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 3224729.67,
+            "other": 103609.2,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 163988.35,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 17500
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 114,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            76,
+            0,
+            2524896.26,
+            0,
+            0,
+            10,
+            "2026-09-09",
+            "2026-09-23"
+          ],
+          [
+            77,
+            2255455.47,
+            0,
+            0,
+            0,
+            17,
+            "2026-09-01",
+            "2026-09-22"
+          ],
+          [
+            137,
+            796213,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-25",
+            "2026-09-25"
+          ],
+          [
+            95,
+            578900,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            30,
+            400000,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-13",
+            "2026-09-13"
+          ],
+          [
+            89,
+            0,
+            301406.32,
+            0,
+            0,
+            11,
+            "2026-09-08",
+            "2026-09-29"
+          ],
+          [
+            19,
+            0,
+            125212.99,
+            0,
+            0,
+            5,
+            "2026-09-03",
+            "2026-09-24"
+          ],
+          [
+            183,
+            110000,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            179,
+            104468.26,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            184,
+            103609.2,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-22",
+            "2026-09-25"
+          ],
+          [
+            181,
+            76802.04,
+            0,
+            0,
+            0,
+            8,
+            "2026-09-16",
+            "2026-09-26"
+          ],
+          [
+            177,
+            66104.03,
+            0,
+            0,
+            0,
+            6,
+            "2026-08-25",
+            "2026-09-20"
+          ],
+          [
+            182,
+            0,
+            54389.72,
+            0,
+            0,
+            8,
+            "2026-09-16",
+            "2026-09-23"
+          ],
+          [
+            2,
+            0,
+            25515,
+            0,
+            0,
+            1,
+            "2026-07-27",
+            "2026-07-27"
+          ],
+          [
+            180,
+            24685.59,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            178,
+            10851.27,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-14",
+            "2026-09-25"
+          ],
+          [
+            13,
+            7297.5,
+            0,
+            0,
+            0,
+            24,
+            "2025-03-11",
+            "2026-06-30"
+          ],
+          [
+            69,
+            1500,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-19",
+            "2026-09-19"
+          ],
+          [
+            22,
+            153.36,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-10",
+            "2026-09-11"
+          ],
+          [
+            85,
+            0,
+            0,
+            0,
+            17500,
+            1,
+            "2026-05-28",
+            "2026-05-28"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 796213,
+          "against": 0,
+          "spenders": [
+            "Giffords PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 578900,
+          "against": 0,
+          "spenders": [
+            "American Federation of State County & Municipal Employees PEOPLE"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 153.36,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "dandiya",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": true,
+      "incumbent": null,
+      "district": "FL-22",
+      "name": "Pia Dandiya",
+      "short": "Dandiya",
+      "party": "D",
+      "state": "FL",
+      "stateName": "Florida",
+      "race": "H-FL-22",
+      "status": "Democratic nominee; won the Aug 18, 2026 Democratic primary",
+      "statusSrc": {
+        "t": "Local 10 (WPLG) - Florida primary: Coverage of U.S. House races for the 22nd Congressional District (Aug 18, 2026)",
+        "u": "https://www.local10.com/news/politics/2026/08/18/florida-primary-coverage-of-us-house-races-for-the-22nd-congressional-district/"
+      },
+      "opponent": "Casey Askar (R)",
+      "born": 1987,
+      "since": "Education and technology executive (Apple, leading public-sector partnerships, since January 2022); no public office",
+      "roles": "White House Fellow, U.S. Department of Education, 2020–2021; Founding principal, Democracy Prep Endurance High School, Harlem; Teach For America teacher (Boston) and teacher-leadership manager (New York)",
+      "background": "Born in 1987 and raised in Palm Beach County, Florida; lives in Palm Beach Gardens. BA in government from Harvard and an MEd from Boston University. Registered as a Republican until 2020, per state records reported by Wikipedia.",
+      "site": "https://www.piaforcongress.com/",
+      "fecCand": "H6FL21059",
+      "fecCmte": "C00906883",
+      "cmteName": "Pia Dandiya For Congress",
+      "bioguide": null,
+      "term": "Running for an open House seat",
+      "seat": "FL-22 · open House seat",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-09-05",
+          "title": "Platform: cost of living and stock trading",
+          "detail": "Ballotpedia News quoted her campaign website: \"Bringing down the cost of living will be my first priority\" and \"I'll fight to ban members of Congress from trading individual stocks.\" (Her own site could not be read; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Ballotpedia News: Competitive race expected in Florida's 22nd Congressional District (Sept. 5, 2026)",
+            "u": "https://news.ballotpedia.org/2026/09/05/competitive-race-expected-in-floridas-22nd-congressional-district-which-biden-won-in-2020-and-trump-won-in-2024/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"I'll fight to ban members of Congress from trading individual stocks\" (her campaign website, as quoted by Ballotpedia News)",
+            "date": "2026-09-05",
+            "src": {
+              "t": "Ballotpedia News: Competitive race expected in Florida's 22nd Congressional District (Sept. 5, 2026)",
+              "u": "https://news.ballotpedia.org/2026/09/05/competitive-race-expected-in-floridas-22nd-congressional-district-which-biden-won-in-2020-and-trump-won-in-2024/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-09-05",
+            "src": {
+              "t": "Ballotpedia News: Competitive race expected in Florida's 22nd Congressional District (Sept. 5, 2026)",
+              "u": "https://news.ballotpedia.org/2026/09/05/competitive-race-expected-in-floridas-22nd-congressional-district-which-biden-won-in-2020-and-trump-won-in-2024/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed her Wikipedia profile and Ballotpedia News coverage for ethics complaints, lawsuits and investigations involving Dandiya; none were found. Her campaign website could not be read (it returned an empty page). Her 2020 change of party registration and her move from the 21st to the 22nd District after redistricting are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile and Ballotpedia News coverage for ethics complaints, lawsuits and investigations involving Dandiya; none were found. Her campaign website could not be read (it returned an empty page). Her 2020 change of party registration and her move from the 21st to the 22nd District after redistricting are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 4619822.46,
+        "indiv": 3600518.96,
+        "itemized": 3016125.73,
+        "unitemized": 584393.23,
+        "party": 5656.48,
+        "pac": 339872,
+        "transfers": 425315,
+        "disbursements": 3884717.23,
+        "cash": 735105.23,
+        "debts": 247000,
+        "candidate": 0,
+        "loans": 247000,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Pia Dandiya For Congress (C00906883), 2025-04-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Apr 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 4619822.46,
+        "indiv": 3600518.96,
+        "itemized": 3016125.73,
+        "unitemized": 584393.23,
+        "party": 5656.48,
+        "pac": 339872,
+        "transfers": 425315,
+        "candidate": 0,
+        "loans": 247000,
+        "disbursements": 3884717.23,
+        "cash": 735105.23,
+        "debts": 247000,
+        "cmte": "Pia Dandiya For Congress",
+        "cmteId": "C00906883",
+        "start": "2025-04-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00906883/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 1460.02,
+        "loansKnown": true,
+        "self": 247000,
+        "selfShare": 5.3
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 26953.97,
+          "other": 12.5,
+          "party": 0,
+          "total": 26966.47
+        },
+        "against": {
+          "super_pac": 266382.39,
+          "other": 0,
+          "party": 0,
+          "total": 266382.39
+        },
+        "parts": {
+          "S": {
+            "super_pac": 26953.97,
+            "other": 12.5,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 155932.16,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 110450.23,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 18,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            42,
+            0,
+            232438.39,
+            0,
+            0,
+            12,
+            "2026-09-15",
+            "2026-09-29"
+          ],
+          [
+            195,
+            0,
+            33944,
+            0,
+            0,
+            2,
+            "2026-09-25",
+            "2026-09-28"
+          ],
+          [
+            28,
+            25053.97,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-18",
+            "2026-09-26"
+          ],
+          [
+            72,
+            1900,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-14",
+            "2026-09-14"
+          ],
+          [
+            110,
+            12.5,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-14",
+            "2026-09-14"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [],
+      "resultsOnly": true
+    },
+    {
+      "id": "tronegarriott",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "nunn",
+      "district": "IA-03",
+      "name": "Sarah Trone Garriott",
+      "short": "Trone Garriott",
+      "party": "D",
+      "state": "IA",
+      "stateName": "Iowa",
+      "race": "H-IA-03",
+      "status": "Democratic nominee; uncontested in the June 2, 2026 Democratic primary (other Democrats suspended campaigns)",
+      "statusSrc": {
+        "t": "270toWin - 2026 Iowa Primary (race preview: 'neither primary is contested')",
+        "u": "https://www.270towin.com/2026-election-results-live/state/iowa/primary/"
+      },
+      "opponent": "Zach Nunn (R)",
+      "born": 1978,
+      "since": "Iowa state senator since January 2021 (District 22, then District 14); Senate minority whip in the 90th General Assembly",
+      "roles": "Iowa Senate, District 22, 2021–2023, and District 14, since 2023 (won 2022 with 51.5%; re-elected 2024 by 29 votes after a recount); Senate minority whip, 90th General Assembly; Coordinator of interfaith engagement, Des Moines Area Religious Council, since 2017; Lutheran pastor and hospital chaplain",
+      "background": "Born in Minneapolis in 1978; lives in West Des Moines. BA in history from the College of St. Scholastica, a Master of Theological Studies from Harvard Divinity School and an MDiv from the Lutheran School of Theology at Chicago.",
+      "site": "https://sarahforiowa.com/",
+      "fecCand": "H6IA03268",
+      "fecCmte": "C00904086",
+      "cmteName": "Sarah For Iowa",
+      "bioguide": null,
+      "term": "Challenging Rep. Zach Nunn",
+      "seat": "IA-03 · on the ballot November 3, 2026",
+      "recordType": "state_legislator",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care",
+          "detail": "Her platform says \"we need to roll back the massive Medicaid cuts Zach Nunn voted for this year,\" \"We also need to extend the ACA tax credits to keep insurance affordable for working families\" and backs \"allowing Medicare to negotiate prescription drug prices to lower costs.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Sarah for Iowa: Health care that’s affordable and there when you need it",
+            "u": "https://sarahforiowa.com/issue/health-care-thats-affordable-and-there-when-you-need-it/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: a higher standard for Washington",
+          "detail": "She says \"I support a full ban on stock trading by any member of Congress, the White House, and their staff,\" \"I haven’t taken a dime from corporate PACs in this race, and I’ll work to ban them outright,\" backs \"a 12-year cap: six House terms or two Senate terms\" and says \"I’ll work to ban super PACs and overturn Citizens United.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Sarah for Iowa: A Higher Standard for Washington",
+            "u": "https://sarahforiowa.com/issue/higher-standard/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Refusing corporate PAC money",
+          "said": {
+            "text": "\"I haven’t taken a dime from corporate PACs in this race, and I’ll work to ban them outright.\" (her campaign website)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A pledge the records can check; not reviewed yet.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
+        },
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"I support a full ban on stock trading by any member of Congress, the White House, and their staff\" (her campaign website)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        },
+        {
+          "topic": "Overturning Citizens United",
+          "said": {
+            "text": "\"I’ll work to ban super PACs and overturn Citizens United\" (her campaign website)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Sarah for Iowa: A Higher Standard for Washington",
+              "u": "https://sarahforiowa.com/issue/higher-standard/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "citizens-united"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Trone Garriott; none were found. Her 29-vote 2024 state Senate win after a recount is an election result, not an ethics matter. Her Iowa Senate votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Trone Garriott; none were found. Her 29-vote 2024 state Senate win after a recount is an election result, not an ethics matter. Her Iowa Senate votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 8070401.51,
+        "indiv": 7230292.81,
+        "itemized": 5824370.45,
+        "unitemized": 1405922.36,
+        "party": 19284.65,
+        "pac": 638188.36,
+        "transfers": 133456.2,
+        "disbursements": 6916812.01,
+        "cash": 1153589.5,
+        "debts": 0,
+        "candidate": 120,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Sarah For Iowa (C00904086), 2025-04-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Apr 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 8070401.51,
+        "indiv": 7230292.81,
+        "itemized": 5824370.45,
+        "unitemized": 1405922.36,
+        "party": 19284.65,
+        "pac": 638188.36,
+        "transfers": 133456.2,
+        "candidate": 120,
+        "loans": 0,
+        "disbursements": 6916812.01,
+        "cash": 1153589.5,
+        "debts": 0,
+        "cmte": "Sarah For Iowa",
+        "cmteId": "C00904086",
+        "start": "2025-04-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00904086/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 49059.49,
+        "loansKnown": true,
+        "self": 120,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 1031273,
+          "other": 618488,
+          "party": 68448,
+          "total": 1718209
+        },
+        "against": {
+          "super_pac": 2125602.81,
+          "other": 38921.02,
+          "party": 0,
+          "total": 2164523.83
+        },
+        "parts": {
+          "S": {
+            "super_pac": 141424.81,
+            "other": 0,
+            "party": 68448
+          },
+          "O": {
+            "super_pac": 2084455.15,
+            "other": 22305.21,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 889848.19,
+            "other": 618488,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 41147.66,
+            "other": 16615.81,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 88,
+        "uncertain": 1,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 2,
+        "cms": [
+          [
+            76,
+            0,
+            1777913.05,
+            0,
+            0,
+            13,
+            "2026-09-02",
+            "2026-09-26"
+          ],
+          [
+            77,
+            753923.89,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-08",
+            "2026-09-23"
+          ],
+          [
+            95,
+            604500,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-10",
+            "2026-09-10"
+          ],
+          [
+            42,
+            0,
+            230028,
+            0,
+            0,
+            8,
+            "2026-09-08",
+            "2026-09-28"
+          ],
+          [
+            22,
+            133342.56,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-22",
+            "2026-09-23"
+          ],
+          [
+            19,
+            0,
+            93190.17,
+            0,
+            0,
+            5,
+            "2026-09-08",
+            "2026-09-30"
+          ],
+          [
+            17,
+            85849.57,
+            0,
+            0,
+            0,
+            11,
+            "2026-09-01",
+            "2026-09-22"
+          ],
+          [
+            154,
+            68448,
+            0,
+            0,
+            0,
+            1,
+            "2026-08-26",
+            "2026-08-26"
+          ],
+          [
+            11,
+            0,
+            38921.02,
+            0,
+            0,
+            23,
+            "2026-06-20",
+            "2026-07-29"
+          ],
+          [
+            72,
+            35145.24,
+            0,
+            0,
+            0,
+            4,
+            "2026-07-08",
+            "2026-09-14"
+          ],
+          [
+            185,
+            0,
+            23814.76,
+            0,
+            0,
+            1,
+            "2026-09-28",
+            "2026-09-28"
+          ],
+          [
+            28,
+            20350,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-18",
+            "2026-09-26"
+          ],
+          [
+            111,
+            13988,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            13,
+            2393.74,
+            0,
+            0,
+            0,
+            1,
+            "2025-05-13",
+            "2025-05-13"
+          ],
+          [
+            83,
+            0,
+            656.83,
+            0,
+            0,
+            3,
+            "2026-09-11",
+            "2026-09-11"
+          ],
+          [
+            100,
+            268,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-24",
+            "2026-09-24"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 604500,
+          "against": 0,
+          "spenders": [
+            "American Federation of State County & Municipal Employees PEOPLE"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 133342.56,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 85849.57,
+          "against": 0,
+          "spenders": [
+            "CFFE PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 656.83,
+          "spenders": [
+            "NRA Victory Fund, Inc."
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "lawrence",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "barrett",
+      "district": "MI-07",
+      "name": "William Lawrence",
+      "short": "Lawrence",
+      "party": "D",
+      "state": "MI",
+      "stateName": "Michigan",
+      "race": "H-MI-07",
+      "status": "Democratic nominee; won the Aug 4, 2026 Democratic primary over Bridget Brink and Matt Maasdam",
+      "statusSrc": {
+        "t": "Ballotpedia News - William Lawrence (D) defeated Bridget Brink (D) and Matt Maasdam (D) in the MI-07 Democratic primary (Aug 5, 2026)",
+        "u": "https://news.ballotpedia.org/2026/08/05/william-lawrence-d-defeated-bridget-brink-d-and-matt-maasdam-d-in-the-democratic-primary-for-michigans-7th-congressional-district-on-august-4-2026/"
+      },
+      "opponent": "Tom Barrett (R); Shane Dedrick (G) also running",
+      "born": 1990,
+      "since": "Housing organizer; no public office (founder of the Mid-Michigan Tenant Resource Center, 2020)",
+      "roles": "Co-founder, Sunrise Movement (left in 2020); Founder, Mid-Michigan Tenant Resource Center (2020); Coordinator, Michigan Rent Is Too Damn High coalition",
+      "background": "Born in Madison, Wisconsin, in 1990 and raised in East Lansing; lives in Lansing. BA in sociology and anthropology from Swarthmore College. In 2013 he was arrested at a pipeline protest in Stockbridge and pleaded guilty to a felony (resisting or obstructing a police officer); the conviction was later expunged.",
+      "site": "https://wewill2026.com/",
+      "fecCand": "H6MI07298",
+      "fecCmte": "C00916809",
+      "cmteName": "Friends Of William Lawrence",
+      "bioguide": null,
+      "term": "Challenging Rep. Tom Barrett",
+      "seat": "MI-07 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-08-05",
+          "title": "Reported positions: data centers and corporate PAC money",
+          "detail": "Michigan Public reported that he \"ran to the left of Brink and Maasdam with a campaign focused on regulating data centers and rejecting corporate PAC money.\" (Reporting, not his own words; his campaign website could not be read.)",
+          "position": "Reported position",
+          "area": "Government reform",
+          "src": {
+            "t": "Michigan Public: William Lawrence wins Democratic primary for Michigan's 7th Congressional District (Aug. 5, 2026)",
+            "u": "https://www.michiganpublic.org/politics-government/2026-08-05/william-lawrence-wins-democratic-primary-for-michigans-7th-congressional-district"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Refusing corporate PAC money",
+          "said": {
+            "text": "He ran on \"rejecting corporate PAC money,\" as Michigan Public described his primary campaign (the reporter's words, not his).",
+            "date": "2026-08-05",
+            "src": {
+              "t": "Michigan Public: William Lawrence wins Democratic primary for Michigan's 7th Congressional District (Aug. 5, 2026)",
+              "u": "https://www.michiganpublic.org/politics-government/2026-08-05/william-lawrence-wins-democratic-primary-for-michigans-7th-congressional-district"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-08-05",
+            "src": {
+              "t": "Michigan Public: William Lawrence wins Democratic primary for Michigan's 7th Congressional District (Aug. 5, 2026)",
+              "u": "https://www.michiganpublic.org/politics-government/2026-08-05/william-lawrence-wins-democratic-primary-for-michigans-7th-congressional-district"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A pledge the records can check; not reviewed yet.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed his Wikipedia profile and Michigan Public coverage. Found: a 2013 felony plea (resisting or obstructing a police officer) from a pipeline protest, later expunged, which he defended in 2026 (\"I stand by the righteousness of that action\"); criticism in July 2026 of 2024 podcast remarks, which he called \"clumsy\"; and CNN KFile's September 2026 report that he deleted posts from 2020–2022. No ethics complaint, lawsuit or investigation was found. His campaign website returned an error. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "Felony plea from a 2013 pipeline protest, later expunged",
+          "type": "Criminal record",
+          "date": "2013",
+          "summary": "Arrested at a 2013 pipeline protest in Stockbridge (Ingham County), he pleaded guilty to a felony charge of resisting or obstructing a police officer; a trespass charge was dismissed, and he received fines and probation. The conviction was later expunged. In 2026 he said, \"I stand by the righteousness of that action.\"",
+          "outcome": "Resolved by a guilty plea in the 2013 case (fines and probation); the conviction was later expunged (year not given in the source).",
+          "sources": [
+            {
+              "t": "Wikipedia: William Lawrence (Michigan politician)",
+              "u": "https://en.wikipedia.org/wiki/William_Lawrence_(Michigan_politician)"
+            }
+          ],
+          "sev": "warn",
+          "status": "finding",
+          "kind": "criminal",
+          "decided": 2013
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 4160041.27,
+        "indiv": 3804135.29,
+        "itemized": 2887755.27,
+        "unitemized": 916380.02,
+        "party": 5000,
+        "pac": 294850.94,
+        "transfers": 41187.22,
+        "disbursements": 3531075.28,
+        "cash": 628965.99,
+        "debts": 10000,
+        "candidate": 3071.73,
+        "loans": 10000,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Friends Of William Lawrence (C00916809), 2025-07-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jul 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 4160041.27,
+        "indiv": 3804135.29,
+        "itemized": 2887755.27,
+        "unitemized": 916380.02,
+        "party": 5000,
+        "pac": 294850.94,
+        "transfers": 41187.22,
+        "candidate": 3071.73,
+        "loans": 10000,
+        "disbursements": 3531075.28,
+        "cash": 628965.99,
+        "debts": 10000,
+        "cmte": "Friends Of William Lawrence",
+        "cmteId": "C00916809",
+        "start": "2025-07-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00916809/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 1796.09,
+        "loansKnown": true,
+        "self": 13071.73,
+        "selfShare": 0.3
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2418853.12,
+          "other": 12485.65,
+          "party": 0,
+          "total": 2431338.77
+        },
+        "against": {
+          "super_pac": 3671985.24,
+          "other": 32175,
+          "party": 0,
+          "total": 3704160.24
+        },
+        "parts": {
+          "S": {
+            "super_pac": 647876.78,
+            "other": 6085.65,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 2888146.02,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 1770976.34,
+            "other": 6400,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 783839.22,
+            "other": 32175,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 136,
+        "uncertain": 8,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            76,
+            0,
+            2066791.18,
+            0,
+            0,
+            10,
+            "2026-09-09",
+            "2026-09-26"
+          ],
+          [
+            77,
+            1284179.79,
+            0,
+            0,
+            0,
+            12,
+            "2026-09-15",
+            "2026-09-27"
+          ],
+          [
+            43,
+            0,
+            597505.86,
+            0,
+            0,
+            7,
+            "2026-09-04",
+            "2026-09-04"
+          ],
+          [
+            36,
+            0,
+            435995.8,
+            0,
+            0,
+            26,
+            "2026-08-19",
+            "2026-09-29"
+          ],
+          [
+            30,
+            400000,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-21",
+            "2026-09-21"
+          ],
+          [
+            75,
+            0,
+            358678.9,
+            0,
+            0,
+            3,
+            "2026-09-05",
+            "2026-09-14"
+          ],
+          [
+            152,
+            250000,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            22,
+            157268.41,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-04",
+            "2026-09-23"
+          ],
+          [
+            42,
+            0,
+            144411.64,
+            0,
+            0,
+            11,
+            "2026-09-04",
+            "2026-09-24"
+          ],
+          [
+            183,
+            139820.34,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-19",
+            "2026-09-22"
+          ],
+          [
+            19,
+            0,
+            68201.87,
+            0,
+            0,
+            9,
+            "2026-09-08",
+            "2026-09-27"
+          ],
+          [
+            17,
+            57443.76,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-04",
+            "2026-09-22"
+          ],
+          [
+            1,
+            32331.99,
+            0,
+            0,
+            0,
+            3,
+            "2026-08-19",
+            "2026-09-16"
+          ],
+          [
+            27,
+            0,
+            32175,
+            0,
+            0,
+            1,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            99,
+            25311.56,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-24",
+            "2026-09-24"
+          ],
+          [
+            135,
+            25000,
+            0,
+            0,
+            0,
+            1,
+            "2026-08-19",
+            "2026-08-19"
+          ],
+          [
+            139,
+            22500,
+            0,
+            0,
+            0,
+            2,
+            "2026-08-18",
+            "2026-09-08"
+          ],
+          [
+            63,
+            14985.6,
+            0,
+            0,
+            0,
+            5,
+            "2026-08-27",
+            "2026-09-25"
+          ],
+          [
+            92,
+            12485.65,
+            0,
+            0,
+            0,
+            20,
+            "2026-08-10",
+            "2026-09-15"
+          ],
+          [
+            28,
+            10011.67,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            83,
+            0,
+            399.99,
+            0,
+            0,
+            4,
+            "2026-09-16",
+            "2026-09-20"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "cfg",
+          "org": "Club for Growth",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 597505.86,
+          "spenders": [
+            "Club for Growth Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afp",
+          "org": "Americans for Prosperity",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 435995.8,
+          "spenders": [
+            "Americans for Prosperity Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 250000,
+          "against": 0,
+          "spenders": [
+            "NRDC Action Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 157268.41,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 57443.76,
+          "against": 0,
+          "spenders": [
+            "CFFE PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 32331.99,
+          "against": 0,
+          "spenders": [
+            "Planned Parenthood Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 399.99,
+          "spenders": [
+            "NRA Victory Fund, Inc."
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "hines",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": true,
+      "incumbent": null,
+      "district": "MI-10",
+      "name": "Christina Hines",
+      "short": "Hines",
+      "party": "D",
+      "state": "MI",
+      "stateName": "Michigan",
+      "race": "H-MI-10",
+      "status": "Democratic nominee; won the Aug 4, 2026 Democratic primary (47%)",
+      "statusSrc": {
+        "t": "FOX 2 Detroit - Michigan primary results: Bouchard takes on Hines for open John James House seat (Aug 2026)",
+        "u": "https://www.fox2detroit.com/news/michigan-primary-results-bouchard-takes-hines-open-john-james-house-seat"
+      },
+      "opponent": "Michael Bouchard (R); Andrea Kirby (WCP), Mike Saliba (L), Kwabena Nkromo (G) also running",
+      "born": 1989,
+      "since": "Prosecutor; no elected office (chief of the special victims unit, Washtenaw County Prosecutor's Office)",
+      "roles": "Chief of the special victims unit, Washtenaw County Prosecutor's Office; Assistant prosecutor, Wayne County Prosecutor's Office (General Trials Unit); Democratic nominee for Macomb County Prosecutor, 2024 (lost to Peter Lucido, 43%)",
+      "background": "Born in Detroit in 1989 and raised in Macomb County. BA from the University of Michigan and JD from Wayne State University Law School.",
+      "site": null,
+      "fecCand": "H6MI10276",
+      "fecCmte": "C00901678",
+      "cmteName": "Christina For Congress",
+      "bioguide": null,
+      "term": "Running for an open House seat",
+      "seat": "MI-10 · open House seat",
+      "recordType": "none",
+      "record": [],
+      "statements": [],
+      "ethicsSearched": "Reviewed her Wikipedia profile and the 10th District's page; no ethics complaints, lawsuits or investigations were found. No campaign website could be found or read, so no platform or tagged statements are on file yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile and the 10th District's page; no ethics complaints, lawsuits or investigations were found. No campaign website could be found or read, so no platform or tagged statements are on file yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 4159692.85,
+        "indiv": 3380348.82,
+        "itemized": 2640163.03,
+        "unitemized": 740185.79,
+        "party": 2961.04,
+        "pac": 402909.64,
+        "transfers": 372405.24,
+        "disbursements": 3152065.09,
+        "cash": 1007627.76,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Christina For Congress (C00901678), 2025-04-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Apr 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 4159692.85,
+        "indiv": 3380348.82,
+        "itemized": 2640163.03,
+        "unitemized": 740185.79,
+        "party": 2961.04,
+        "pac": 402909.64,
+        "transfers": 372405.24,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 3152065.09,
+        "cash": 1007627.76,
+        "debts": 0,
+        "cmte": "Christina For Congress",
+        "cmteId": "C00901678",
+        "start": "2025-04-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00901678/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 1068.11,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 949502.38,
+          "other": 459500,
+          "party": 0,
+          "total": 1409002.38
+        },
+        "against": {
+          "super_pac": 1518568.97,
+          "other": 0,
+          "party": 0,
+          "total": 1518568.97
+        },
+        "parts": {
+          "S": {
+            "super_pac": 298947.32,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 1406648.18,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 650555.06,
+            "other": 459500,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 111920.79,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 74,
+        "uncertain": 2,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            76,
+            0,
+            1304641.57,
+            0,
+            0,
+            3,
+            "2026-09-23",
+            "2026-09-23"
+          ],
+          [
+            95,
+            459500,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            77,
+            430015.56,
+            0,
+            0,
+            0,
+            10,
+            "2026-09-15",
+            "2026-09-25"
+          ],
+          [
+            35,
+            314815.04,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-08",
+            "2026-09-23"
+          ],
+          [
+            42,
+            0,
+            128657.96,
+            0,
+            0,
+            13,
+            "2026-09-04",
+            "2026-09-25"
+          ],
+          [
+            17,
+            57443.76,
+            0,
+            0,
+            0,
+            7,
+            "2026-09-04",
+            "2026-09-22"
+          ],
+          [
+            99,
+            49562.55,
+            0,
+            0,
+            0,
+            8,
+            "2026-09-08",
+            "2026-09-24"
+          ],
+          [
+            19,
+            0,
+            48567.47,
+            0,
+            0,
+            9,
+            "2026-09-08",
+            "2026-09-27"
+          ],
+          [
+            28,
+            40049.44,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-18",
+            "2026-09-26"
+          ],
+          [
+            187,
+            0,
+            26472.96,
+            0,
+            0,
+            1,
+            "2026-09-25",
+            "2026-09-25"
+          ],
+          [
+            22,
+            23925.85,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-04",
+            "2026-09-23"
+          ],
+          [
+            63,
+            16882.72,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-02",
+            "2026-09-25"
+          ],
+          [
+            142,
+            16807.46,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-16",
+            "2026-09-24"
+          ],
+          [
+            186,
+            0,
+            10229.01,
+            0,
+            0,
+            1,
+            "2026-09-23",
+            "2026-09-23"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 459500,
+          "against": 0,
+          "spenders": [
+            "American Federation of State County & Municipal Employees PEOPLE"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 57443.76,
+          "against": 0,
+          "spenders": [
+            "CFFE PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 23925.85,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "ager",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": true,
+      "incumbent": null,
+      "district": "NC-11",
+      "name": "Jamie Ager",
+      "short": "Ager",
+      "party": "D",
+      "state": "NC",
+      "stateName": "North Carolina",
+      "race": "H-NC-11",
+      "status": "Democratic nominee; won the March 3, 2026 Democratic primary",
+      "statusSrc": {
+        "t": "WUNC - Democrats choose Ager in NC-11 primary race; Edwards wins GOP nod (Mar 3, 2026)",
+        "u": "https://www.wunc.org/2026-03-03/democrats-choose-ager-in-nc-11-primary-race-edwards-wins-gop-nod"
+      },
+      "opponent": "Jennifer Balkcom (R)",
+      "born": 1977,
+      "since": "Co-founder and CEO of Hickory Nut Gap, a farm and meat company in Fairview; no public office",
+      "roles": "Co-founder and CEO, Hickory Nut Gap (Fairview, North Carolina)",
+      "background": "Born in 1977 and raised on Hickory Nut Gap Farm in Fairview, Buncombe County; degrees in environmental studies and history from Warren Wilson College. His grandfather James McClure Clarke represented the district (1983–85, 1987–91). His Republican opponent changed after Rep. Chuck Edwards withdrew in August 2026; the party chose state Rep. Jennifer Balkcom.",
+      "site": "https://agerforcongress.com/",
+      "fecCand": "H6NC11248",
+      "fecCmte": "C00914119",
+      "cmteName": "Ager For Congress",
+      "bioguide": null,
+      "term": "Running for an open House seat",
+      "seat": "NC-11 · open House seat",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care, taxes and costs",
+          "detail": "His platform says \"I’ll push for a public option so everyone has access to quality affordable health care,\" \"I’ll defend Medicare’s power to negotiate drug prices and keep capping insulin and other essentials\" and \"I’ll push both parties to reform the tax code so the folks at the top pay their fair share.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Ager for Congress: Platform",
+            "u": "https://agerforcongress.com/platform"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: stock trading and public lands",
+          "detail": "He says \"I’ll fight to ban members of Congress from stock trading, so no one is using insider knowledge for personal gain,\" and of public lands, \"I’ll never allow them to be sold off.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Ager for Congress: Platform",
+            "u": "https://agerforcongress.com/platform"
+          }
+        },
+        {
+          "date": "2026-10-15",
+          "title": "Questionnaire: Iran and immigration",
+          "detail": "Asked by WLOS, he said \"you should not needlessly go to war with Iran,\" \"I want comprehensive immigration reform, which is long overdue\" and \"I support a strong border and a focus on deporting criminals.\"",
+          "position": "Platform commitment",
+          "area": "Foreign policy",
+          "src": {
+            "t": "WLOS: Know your candidate: Jamie Ager (Oct. 15, 2026)",
+            "u": "https://wlos.com/news/election/north-carolina-11th-district-jamie-ager-democrat-2026-candidate-questions"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"I’ll fight to ban members of Congress from stock trading, so no one is using insider knowledge for personal gain.\" (his platform)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Ager for Congress: Platform",
+              "u": "https://agerforcongress.com/platform"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Ager for Congress: Platform",
+              "u": "https://agerforcongress.com/platform"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and WLOS coverage for ethics complaints, lawsuits and investigations involving Ager; none were found. His company losing a school beef contract in 2025, when a pandemic-era program ended, is a business matter, not an ethics one. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his Wikipedia profile, campaign website and WLOS coverage for ethics complaints, lawsuits and investigations involving Ager; none were found. His company losing a school beef contract in 2025, when a pandemic-era program ended, is a business matter, not an ethics one. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 5869452.65,
+        "indiv": 5040487.66,
+        "itemized": 3907243.71,
+        "unitemized": 1133243.95,
+        "party": 8231.65,
+        "pac": 370869.78,
+        "transfers": 441342.03,
+        "disbursements": 5249294.71,
+        "cash": 620157.94,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Ager For Congress (C00914119), 2025-07-31 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jul 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 5869452.65,
+        "indiv": 5040487.66,
+        "itemized": 3907243.71,
+        "unitemized": 1133243.95,
+        "party": 8231.65,
+        "pac": 370869.78,
+        "transfers": 441342.03,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 5249294.71,
+        "cash": 620157.94,
+        "debts": 0,
+        "cmte": "Ager For Congress",
+        "cmteId": "C00914119",
+        "start": "2025-07-31",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00914119/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 8521.53,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2541526.66,
+          "other": 0,
+          "party": 0,
+          "total": 2541526.66
+        },
+        "against": {
+          "super_pac": 2098683.53,
+          "other": 0,
+          "party": 0,
+          "total": 2098683.53
+        },
+        "parts": {
+          "S": {
+            "super_pac": 680955.42,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 1801247.26,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 1860571.24,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 297436.27,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 692976.09,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 70,
+        "uncertain": 8,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 0,
+        "cms": [
+          [
+            42,
+            0,
+            1816982.58,
+            0,
+            0,
+            11,
+            "2026-09-11",
+            "2026-09-23"
+          ],
+          [
+            77,
+            1399255.24,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-15",
+            "2026-09-22"
+          ],
+          [
+            97,
+            370000,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            72,
+            352189.83,
+            0,
+            0,
+            0,
+            6,
+            "2026-07-08",
+            "2026-09-14"
+          ],
+          [
+            36,
+            0,
+            270300,
+            0,
+            0,
+            5,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            17,
+            106268.75,
+            0,
+            0,
+            0,
+            5,
+            "2026-09-01",
+            "2026-09-01"
+          ],
+          [
+            131,
+            106000,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            188,
+            100000,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-16",
+            "2026-09-16"
+          ],
+          [
+            28,
+            65256.84,
+            0,
+            0,
+            0,
+            6,
+            "2026-08-12",
+            "2026-09-26"
+          ],
+          [
+            78,
+            42556,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-28",
+            "2026-09-28"
+          ],
+          [
+            189,
+            0,
+            11400.95,
+            0,
+            0,
+            4,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            515360.09,
+            14,
+            "2026-06-12",
+            "2026-08-04"
+          ],
+          [
+            35,
+            0,
+            0,
+            0,
+            177616,
+            5,
+            "2026-07-14",
+            "2026-07-28"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "afp",
+          "org": "Americans for Prosperity",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 270300,
+          "spenders": [
+            "Americans for Prosperity Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 106268.75,
+          "against": 0,
+          "spenders": [
+            "CFFE PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 42556,
+          "against": 0,
+          "spenders": [
+            "EDF Action Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "poindexter",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "milleroh",
+      "district": "OH-07",
+      "name": "Brian Poindexter",
+      "short": "Poindexter",
+      "party": "D",
+      "state": "OH",
+      "stateName": "Ohio",
+      "race": "H-OH-07",
+      "status": "Democratic nominee; his opponent, Rep. Max Miller, stayed on the ballot after the August 2026 deadline to replace him passed",
+      "statusSrc": {
+        "t": "Cleveland 19 / AP - Deadline passes for Rep. Max Miller to be replaced on Ohio ballot as he faces domestic abuse claims (Aug 11, 2026)",
+        "u": "https://www.cleveland19.com/2026/08/11/deadline-passes-rep-max-miller-be-replaced-ohio-ballot-he-faces-domestic-abuse-claims/"
+      },
+      "opponent": "Max Miller (R)",
+      "born": 1979,
+      "since": "Brook Park City Council member (at large) since January 2018; union ironworker and apprenticeship instructor, Ironworkers Local 17",
+      "roles": "Brook Park City Council, at large, elected 2017 (term began January 2018; current term ends January 2027); Ironworker since 2007 and apprenticeship instructor, Ironworkers Local 17; Union organizer, 2012–2014",
+      "background": "Born in 1979, grew up in Cleveland and lives in Brook Park. Worked in kitchens, factories and the moving industry before joining the Iron Workers union in 2007; associate degree in applied industrial technology from Cuyahoga Community College.",
+      "site": "https://poindexterforcongress.com/",
+      "fecCand": "H6OH07168",
+      "fecCmte": "C00933366",
+      "cmteName": "Poindexter For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. Max Miller",
+      "seat": "OH-07 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: cost of living",
+          "detail": "His platform says \"I want to immediately bring down the cost of gas, groceries, and health care,\" \"Step one is bringing down the cost of gas by ending the war in Iran\" and \"I want to end the blanket tariffs that have made everything we buy more expensive.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Poindexter for Congress: Priority #1: Cost of Living",
+            "u": "https://poindexterforcongress.com/priority-1-cost-of-living/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care, Social Security and Medicare",
+          "detail": "He says \"I support bringing down the cost of prescription drugs by letting Medicare negotiate with drug companies,\" \"I will fight to keep rural hospitals open\" and \"I also oppose raising the retirement age.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Poindexter for Congress: Healthcare that Makes Sense",
+            "u": "https://poindexterforcongress.com/healthcare-that-makes-sense/"
+          }
+        }
+      ],
+      "statements": [],
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Cleveland 19 coverage. Cleveland 19 reported he acknowledged a marijuana possession arrest in the late 1990s (his opponent's ads alleged more, which he denies); Wikipedia notes teenage misdemeanor charges. No ethics complaint, lawsuit or investigation was found. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his Wikipedia profile, campaign website and Cleveland 19 coverage. Cleveland 19 reported he acknowledged a marijuana possession arrest in the late 1990s (his opponent's ads alleged more, which he denies); Wikipedia notes teenage misdemeanor charges. No ethics complaint, lawsuit or investigation was found. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 3720150.35,
+        "indiv": 3301196.18,
+        "itemized": 2384519.05,
+        "unitemized": 916677.13,
+        "party": 322.02,
+        "pac": 401350.84,
+        "transfers": 7400,
+        "disbursements": 2926975.15,
+        "cash": 793675.2,
+        "debts": 0,
+        "candidate": 1420.6,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Poindexter For Congress (C00933366), 2025-11-17 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Nov 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 3720150.35,
+        "indiv": 3301196.18,
+        "itemized": 2384519.05,
+        "unitemized": 916677.13,
+        "party": 322.02,
+        "pac": 401350.84,
+        "transfers": 7400,
+        "candidate": 1420.6,
+        "loans": 0,
+        "disbursements": 2926975.15,
+        "cash": 793675.2,
+        "debts": 0,
+        "cmte": "Poindexter For Congress",
+        "cmteId": "C00933366",
+        "start": "2025-11-17",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00933366/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 8460.71,
+        "loansKnown": true,
+        "self": 1420.6,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2451095.71,
+          "other": 97423.21,
+          "party": 0,
+          "total": 2548518.92
+        },
+        "against": {
+          "super_pac": 340157.27,
+          "other": 0,
+          "party": 0,
+          "total": 340157.27
+        },
+        "parts": {
+          "S": {
+            "super_pac": 97697.52,
+            "other": 83123.21,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 276108.77,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 2353398.19,
+            "other": 14300,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 64048.5,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 40,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 1,
+        "cms": [
+          [
+            98,
+            1248595,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-16",
+            "2026-09-24"
+          ],
+          [
+            192,
+            739386.07,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            35,
+            345417.12,
+            0,
+            0,
+            0,
+            9,
+            "2026-08-06",
+            "2026-09-10"
+          ],
+          [
+            190,
+            0,
+            208968.2,
+            0,
+            0,
+            4,
+            "2026-07-07",
+            "2026-09-24"
+          ],
+          [
+            75,
+            0,
+            106397.4,
+            0,
+            0,
+            3,
+            "2026-09-23",
+            "2026-09-26"
+          ],
+          [
+            28,
+            97697.52,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-01",
+            "2026-09-26"
+          ],
+          [
+            102,
+            74015,
+            0,
+            0,
+            0,
+            5,
+            "2026-08-21",
+            "2026-08-28"
+          ],
+          [
+            19,
+            0,
+            24791.67,
+            0,
+            0,
+            4,
+            "2026-09-08",
+            "2026-09-30"
+          ],
+          [
+            191,
+            20000,
+            0,
+            0,
+            0,
+            1,
+            "2026-08-21",
+            "2026-08-21"
+          ],
+          [
+            27,
+            14300,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            104,
+            9108.21,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-04",
+            "2026-09-18"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [],
+      "resultsOnly": true
+    },
+    {
+      "id": "brooks",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "mackenzie",
+      "district": "PA-07",
+      "name": "Bob Brooks",
+      "short": "Brooks",
+      "party": "D",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "race": "H-PA-07",
+      "status": "Democratic nominee; won the May 19, 2026 Democratic primary (~40%; AP call)",
+      "statusSrc": {
+        "t": "Roll Call - Matchups for 4 battleground House races are set in Pennsylvania (May 20, 2026)",
+        "u": "https://rollcall.com/2026/05/20/matchups-for-4-battleground-house-races-are-set-in-pennsylvania/"
+      },
+      "opponent": "Ryan Mackenzie (R)",
+      "born": null,
+      "since": "President, Pennsylvania Professional Fire Fighters Association (since 2021); retired Bethlehem firefighter",
+      "roles": "President, Pennsylvania Professional Fire Fighters Association, elected 2021; Bethlehem firefighter for 20 years; Officer of IAFF Local 735 (president, vice president, secretary-treasurer, trustee)",
+      "background": "A Bethlehem firefighter for 20 years and leader of the state firefighters' union, which represents more than 8,000 firefighters. His campaign says he has also worked as a bartender, landscaper, baseball coach and Teamster.",
+      "site": "https://brooksforcongress.com/",
+      "fecCand": "H6PA07188",
+      "fecCmte": "C00917096",
+      "cmteName": "Bob Brooks For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. Ryan Mackenzie",
+      "seat": "PA-07 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care",
+          "detail": "His platform says \"Because of this, I support Medicare for All\" and \"Restore the cuts to Medicaid and provide Medicare for All.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Bob Brooks for Congress: Bob's Platform",
+            "u": "https://brooksforcongress.com/on-the-issues/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: stock trading, term limits and PAC money",
+          "detail": "He backs \"No stock trading in Congress. If you want to get rich, don't run for office,\" \"Term limits. No more lifetime politicians\" and \"Ban corporate PAC money from politics, period.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Bob Brooks for Congress: Bob's Platform",
+            "u": "https://brooksforcongress.com/on-the-issues/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: workers, taxes, abortion and guns",
+          "detail": "He says \"I'll make it easier to join a union by passing the PRO Act,\" \"We need to pass a billionaire minimum tax,\" \"We need to codify Roe v. Wade\" and \"We need common-sense laws: universal background checks, closing the gun show loophole, and enforcing waiting periods.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Bob Brooks for Congress: Bob's Platform",
+            "u": "https://brooksforcongress.com/on-the-issues/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"No stock trading in Congress. If you want to get rich, don't run for office.\" (his platform)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Bob Brooks for Congress: Bob's Platform",
+              "u": "https://brooksforcongress.com/on-the-issues/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Bob Brooks for Congress: Bob's Platform",
+              "u": "https://brooksforcongress.com/on-the-issues/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed his campaign website and IAFF coverage for ethics complaints, lawsuits and investigations involving Brooks; none were found. No Wikipedia article was found for him. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his campaign website and IAFF coverage for ethics complaints, lawsuits and investigations involving Brooks; none were found. No Wikipedia article was found for him. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 5347353.38,
+        "indiv": 4181508.28,
+        "itemized": 3013669.38,
+        "unitemized": 1167838.9,
+        "party": 6090.07,
+        "pac": 634750.03,
+        "transfers": 508989.33,
+        "disbursements": 4605774.87,
+        "cash": 741578.51,
+        "debts": 15000,
+        "candidate": 3500,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Bob Brooks For Congress (C00917096), 2025-07-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jul 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 5347353.38,
+        "indiv": 4181508.28,
+        "itemized": 3013669.38,
+        "unitemized": 1167838.9,
+        "party": 6090.07,
+        "pac": 634750.03,
+        "transfers": 508989.33,
+        "candidate": 3500,
+        "loans": 0,
+        "disbursements": 4605774.87,
+        "cash": 741578.51,
+        "debts": 15000,
+        "cmte": "Bob Brooks For Congress",
+        "cmteId": "C00917096",
+        "start": "2025-07-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00917096/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 12515.67,
+        "loansKnown": true,
+        "self": 3500,
+        "selfShare": 0.1
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 708359.21,
+          "other": 17033.91,
+          "party": 100000,
+          "total": 825393.12
+        },
+        "against": {
+          "super_pac": 1710815.45,
+          "other": 0,
+          "party": 0,
+          "total": 1710815.45
+        },
+        "parts": {
+          "S": {
+            "super_pac": 196991.87,
+            "other": 11254.79,
+            "party": 100000
+          },
+          "O": {
+            "super_pac": 1393291.12,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 511367.34,
+            "other": 5779.12,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 317524.33,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 4,
+          "amount": 67806.72
+        },
+        "n": 93,
+        "uncertain": 3,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 3,
+        "cms": [
+          [
+            76,
+            0,
+            1125416.15,
+            0,
+            0,
+            3,
+            "2026-09-23",
+            "2026-09-23"
+          ],
+          [
+            77,
+            424224.17,
+            0,
+            0,
+            0,
+            11,
+            "2026-09-10",
+            "2026-09-24"
+          ],
+          [
+            75,
+            0,
+            239076.28,
+            0,
+            0,
+            2,
+            "2026-09-17",
+            "2026-09-17"
+          ],
+          [
+            42,
+            0,
+            197943,
+            0,
+            0,
+            8,
+            "2026-09-08",
+            "2026-09-28"
+          ],
+          [
+            19,
+            0,
+            147931.02,
+            0,
+            0,
+            9,
+            "2026-09-01",
+            "2026-09-30"
+          ],
+          [
+            85,
+            100000,
+            0,
+            0,
+            0,
+            2,
+            "2026-05-12",
+            "2026-05-12"
+          ],
+          [
+            18,
+            64620.01,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-15",
+            "2026-09-29"
+          ],
+          [
+            80,
+            59950,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            68,
+            32096.91,
+            0,
+            0,
+            0,
+            5,
+            "2026-03-06",
+            "2026-09-21"
+          ],
+          [
+            99,
+            26382.22,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-24",
+            "2026-09-24"
+          ],
+          [
+            28,
+            23285.26,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            138,
+            21906.53,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            84,
+            21092.37,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-30",
+            "2026-09-30"
+          ],
+          [
+            82,
+            16477.97,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            63,
+            15865,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-15",
+            "2026-09-25"
+          ],
+          [
+            92,
+            10693.11,
+            0,
+            0,
+            0,
+            28,
+            "2026-07-17",
+            "2026-09-15"
+          ],
+          [
+            62,
+            6340.8,
+            0,
+            0,
+            0,
+            2,
+            "2026-08-16",
+            "2026-08-23"
+          ],
+          [
+            13,
+            2458.77,
+            0,
+            0,
+            0,
+            5,
+            "2025-04-14",
+            "2026-07-07"
+          ],
+          [
+            83,
+            0,
+            449,
+            0,
+            0,
+            3,
+            "2026-09-28",
+            "2026-09-28"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 64620.01,
+          "against": 0,
+          "spenders": [
+            "Reproductive Freedom For All Freedom Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 16477.97,
+          "against": 0,
+          "spenders": [
+            "Retired Americans Action"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 449,
+          "spenders": [
+            "NRA Victory Fund, Inc."
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "cognetti",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "bresnahan",
+      "district": "PA-08",
+      "name": "Paige Cognetti",
+      "short": "Cognetti",
+      "party": "D",
+      "state": "PA",
+      "stateName": "Pennsylvania",
+      "race": "H-PA-08",
+      "status": "Democratic nominee; unopposed in the May 19, 2026 Democratic primary",
+      "statusSrc": {
+        "t": "Roll Call - Matchups for 4 battleground House races are set in Pennsylvania (May 20, 2026)",
+        "u": "https://rollcall.com/2026/05/20/matchups-for-4-battleground-house-races-are-set-in-pennsylvania/"
+      },
+      "opponent": "Rob Bresnahan (R)",
+      "born": 1980,
+      "since": "Mayor of Scranton since January 2020 (won a 2019 special election; re-elected 2021 and 2025)",
+      "roles": "Mayor of Scranton, since January 6, 2020; Special assistant to Pennsylvania Auditor General Eugene DePasquale, 2018–2019; Scranton School Board (appointed 2017, resigned December 2018); Advisor, U.S. Department of the Treasury (Obama administration); USTR Advisory Committee for Trade Policy and Negotiations (appointed 2024)",
+      "background": "Born in Eugene, Oregon, in 1980. BA in English literature and Romance languages from the University of Oregon (summa cum laude) and an MBA from Harvard; taught English in Japan through the JET Programme. Elected Scranton mayor as an independent in 2019 and re-elected as a Democrat.",
+      "site": "https://paigeforpa.com/",
+      "fecCand": "H6PA08293",
+      "fecCmte": "C00918151",
+      "cmteName": "Paige For PA",
+      "bioguide": null,
+      "term": "Challenging Rep. Rob Bresnahan",
+      "seat": "PA-08 · on the ballot November 3, 2026",
+      "recordType": "executive",
+      "record": [
+        {
+          "date": "2026-10-05",
+          "title": "Platform: stock trading and PAC money",
+          "detail": "Her priorities include \"A Ban on Congressional Stock Trading. No one should be able to use their public office to enrich themselves\" and \"No Corporate PAC Money. As a candidate and member of Congress I will reject the influence of special interests.\" (Campaign website, Oct. 5, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Paige Cognetti for Congress: Priorities",
+            "u": "https://paigeforpa.com/priorities/"
+          }
+        },
+        {
+          "date": "2026-10-05",
+          "title": "Platform: workers, families and tariffs",
+          "detail": "She backs \"Strengthen unions; make it easier to join and start a union,\" \"Fight for paid family leave and affordable childcare,\" \"Stop broad tariffs that help the big guys and hurt families\" and \"No tax breaks for wealthy corporations.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Paige Cognetti for Congress: Priorities",
+            "u": "https://paigeforpa.com/priorities/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Refusing corporate PAC money",
+          "said": {
+            "text": "\"No Corporate PAC Money. As a candidate and member of Congress I will reject the influence of special interests.\" (her priorities page)",
+            "date": "2026-10-05",
+            "src": {
+              "t": "Paige Cognetti for Congress: Priorities",
+              "u": "https://paigeforpa.com/priorities/"
+            }
+          },
+          "did": {
+            "text": "NOTUS, via Spotlight PA, reported that her campaign took $5,000 from Blue Hen Federal PAC and money from leadership PACs that corporate PACs fund; her campaign said she \"does not accept donations from corporate PACs.\"",
+            "date": "2026-07-30",
+            "src": {
+              "t": "Spotlight PA / NOTUS: Paige Cognetti refuses corporate PAC money. But some is arriving indirectly. (July 30, 2026)",
+              "u": "https://www.spotlightpa.org/news/2026/07/pennsylvania-cognetti-corporate-pac-money-campaign-finance-federal-government/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "No direct corporate PAC contributions were reported; part of her PAC money came through committees funded partly by corporate PACs, which the pledge does not explicitly cover.",
+          "pledge": {
+            "kind": "corporate-pac"
+          }
+        },
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"A Ban on Congressional Stock Trading. No one should be able to use their public office to enrich themselves.\" (her priorities page)",
+            "date": "2026-10-05",
+            "src": {
+              "t": "Paige Cognetti for Congress: Priorities",
+              "u": "https://paigeforpa.com/priorities/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-10-05",
+            "src": {
+              "t": "Paige Cognetti for Congress: Priorities",
+              "u": "https://paigeforpa.com/priorities/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Spotlight PA/NOTUS coverage for ethics complaints, lawsuits and investigations involving Cognetti; none were found. The reporting on PAC money reaching her campaign through other committees is under Keeps Their Word. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile, campaign website and Spotlight PA/NOTUS coverage for ethics complaints, lawsuits and investigations involving Cognetti; none were found. The reporting on PAC money reaching her campaign through other committees is under Keeps Their Word. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 7502359.43,
+        "indiv": 6295019.69,
+        "itemized": 5191481.36,
+        "unitemized": 1103538.33,
+        "party": 9700.24,
+        "pac": 657602.49,
+        "transfers": 496023.01,
+        "disbursements": 7258687.42,
+        "cash": 243672.01,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Paige For Pa (C00918151), 2025-09-02 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Sep 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 7502359.43,
+        "indiv": 6295019.69,
+        "itemized": 5191481.36,
+        "unitemized": 1103538.33,
+        "party": 9700.24,
+        "pac": 657602.49,
+        "transfers": 496023.01,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 7258687.42,
+        "cash": 243672.01,
+        "debts": 0,
+        "cmte": "Paige For PA",
+        "cmteId": "C00918151",
+        "start": "2025-09-02",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00918151/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 44014,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 3277514.95,
+          "other": 0,
+          "party": 261161,
+          "total": 3538675.95
+        },
+        "against": {
+          "super_pac": 2369666.54,
+          "other": 0,
+          "party": 0,
+          "total": 2369666.54
+        },
+        "parts": {
+          "S": {
+            "super_pac": 566742.29,
+            "other": 0,
+            "party": 261161
+          },
+          "O": {
+            "super_pac": 1871187.86,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 2710772.66,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 498478.68,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 95,
+        "uncertain": 4,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 2,
+        "cms": [
+          [
+            76,
+            0,
+            1646930.01,
+            0,
+            0,
+            8,
+            "2026-09-09",
+            "2026-09-23"
+          ],
+          [
+            77,
+            1215902.23,
+            0,
+            0,
+            0,
+            13,
+            "2026-09-08",
+            "2026-09-24"
+          ],
+          [
+            137,
+            860274,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-25",
+            "2026-09-25"
+          ],
+          [
+            17,
+            425000,
+            0,
+            0,
+            0,
+            5,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            35,
+            368113.56,
+            0,
+            0,
+            0,
+            11,
+            "2026-07-21",
+            "2026-09-03"
+          ],
+          [
+            75,
+            0,
+            359606.04,
+            0,
+            0,
+            3,
+            "2026-09-05",
+            "2026-09-16"
+          ],
+          [
+            172,
+            261161,
+            0,
+            0,
+            0,
+            11,
+            "2026-07-24",
+            "2026-08-19"
+          ],
+          [
+            152,
+            250000,
+            0,
+            0,
+            0,
+            1,
+            "2026-07-23",
+            "2026-07-23"
+          ],
+          [
+            19,
+            0,
+            159992.05,
+            0,
+            0,
+            9,
+            "2026-09-01",
+            "2026-09-30"
+          ],
+          [
+            42,
+            0,
+            146649.19,
+            0,
+            0,
+            6,
+            "2026-09-14",
+            "2026-09-25"
+          ],
+          [
+            89,
+            0,
+            56040.25,
+            0,
+            0,
+            2,
+            "2026-09-16",
+            "2026-09-25"
+          ],
+          [
+            28,
+            41302.96,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-26",
+            "2026-09-26"
+          ],
+          [
+            72,
+            35145.24,
+            0,
+            0,
+            0,
+            4,
+            "2026-07-08",
+            "2026-09-14"
+          ],
+          [
+            68,
+            32500.38,
+            0,
+            0,
+            0,
+            6,
+            "2026-07-13",
+            "2026-09-21"
+          ],
+          [
+            63,
+            22249,
+            0,
+            0,
+            0,
+            2,
+            "2026-09-15",
+            "2026-09-25"
+          ],
+          [
+            173,
+            14313,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-29",
+            "2026-09-29"
+          ],
+          [
+            84,
+            10359.41,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-30",
+            "2026-09-30"
+          ],
+          [
+            13,
+            2355.17,
+            0,
+            0,
+            0,
+            6,
+            "2025-04-14",
+            "2026-07-31"
+          ],
+          [
+            83,
+            0,
+            449,
+            0,
+            0,
+            3,
+            "2026-09-28",
+            "2026-09-28"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 860274,
+          "against": 0,
+          "spenders": [
+            "Giffords PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 425000,
+          "against": 0,
+          "spenders": [
+            "CFFE PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 250000,
+          "against": 0,
+          "spenders": [
+            "NRDC Action Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 449,
+          "spenders": [
+            "NRA Victory Fund, Inc."
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "pulido",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "delacruz",
+      "district": "TX-15",
+      "name": "Bobby Pulido",
+      "short": "Pulido",
+      "party": "D",
+      "state": "TX",
+      "stateName": "Texas",
+      "race": "H-TX-15",
+      "status": "Democratic nominee; won the March 3, 2026 Democratic primary over Ada Cuellar",
+      "statusSrc": {
+        "t": "ABC13 / AP - Latin Grammy winner Bobby Pulido wins Democratic primary for Texas' 15th Congressional District (Mar 2026)",
+        "u": "https://abc13.com/post/tejano-singer-bobby-pulido-wins-democratic-nomination-us-house-texas-15th-congressional-district/18676665/"
+      },
+      "opponent": "Monica De La Cruz (R)",
+      "born": 1973,
+      "since": "Tejano singer and small business owner; no public office (announced his retirement from music in November 2024)",
+      "roles": "Tejano recording artist for three decades; small business owner",
+      "background": "José Roberto \"Bobby\" Pulido Jr. was born in 1973 in Edinburg, Texas, where he still lives. After Edinburg High School he studied political science before his music career. He was criticized during the campaign for old social media posts the AP called \"crude and sexist jokes,\" and said his humor \"doesn't translate.\"",
+      "site": "https://bobbypulidofortexas.com/",
+      "fecCand": "H6TX15246",
+      "fecCmte": "C00919985",
+      "cmteName": "Bobby Pulido For Texas",
+      "bioguide": null,
+      "term": "Challenging Rep. Monica De La Cruz",
+      "seat": "TX-15 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: costs, schools and water",
+          "detail": "His issues page says \"Tariffs and trade wars are driving up costs and closing off opportunities,\" \"I oppose voucher schemes that drain money from our classrooms and send it to private schools,\" \"Medicare is a promise and a critical safety net that we have to keep and make stronger\" and \"We need to fight for bold investments in desalination, modern irrigation and infrastructure.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Bobby Pulido for Congress: Issues",
+            "u": "https://bobbypulidofortexas.com/issues/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: the border",
+          "detail": "He says \"I believe we can secure the border without destroying families and our local economy in the process.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Immigration",
+          "src": {
+            "t": "Bobby Pulido for Congress: Issues",
+            "u": "https://bobbypulidofortexas.com/issues/"
+          }
+        }
+      ],
+      "statements": [],
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Texas Tribune coverage for ethics complaints, lawsuits and investigations involving Pulido; none were found. Criticism of his old social media posts is a campaign controversy, not an ethics matter. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed his Wikipedia profile, campaign website and Texas Tribune coverage for ethics complaints, lawsuits and investigations involving Pulido; none were found. Criticism of his old social media posts is a campaign controversy, not an ethics matter. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 6819246.79,
+        "indiv": 4891187.48,
+        "itemized": 3646290.78,
+        "unitemized": 1244896.7,
+        "party": 3110.74,
+        "pac": 421500.01,
+        "transfers": 1336918.87,
+        "disbursements": 5549792.34,
+        "cash": 1269454.45,
+        "debts": 0,
+        "candidate": 150300,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Bobby Pulido For Texas (C00919985), 2025-07-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jul 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 6819246.79,
+        "indiv": 4891187.48,
+        "itemized": 3646290.78,
+        "unitemized": 1244896.7,
+        "party": 3110.74,
+        "pac": 421500.01,
+        "transfers": 1336918.87,
+        "candidate": 150300,
+        "loans": 0,
+        "disbursements": 5549792.34,
+        "cash": 1269454.45,
+        "debts": 0,
+        "cmte": "Bobby Pulido For Texas",
+        "cmteId": "C00919985",
+        "start": "2025-07-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00919985/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 16229.69,
+        "loansKnown": true,
+        "self": 150300,
+        "selfShare": 2.2
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2117893.33,
+          "other": 0,
+          "party": 0,
+          "total": 2117893.33
+        },
+        "against": {
+          "super_pac": 2051202.91,
+          "other": 32175,
+          "party": 0,
+          "total": 2083377.91
+        },
+        "parts": {
+          "S": {
+            "super_pac": 175026.83,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 1962056.49,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 1942866.5,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 89146.42,
+            "other": 32175,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 95,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 2,
+        "cms": [
+          [
+            42,
+            0,
+            1909567.47,
+            0,
+            0,
+            14,
+            "2026-09-08",
+            "2026-09-29"
+          ],
+          [
+            77,
+            1605272.62,
+            0,
+            0,
+            0,
+            11,
+            "2026-09-01",
+            "2026-09-22"
+          ],
+          [
+            35,
+            215000,
+            0,
+            0,
+            0,
+            5,
+            "2026-07-28",
+            "2026-08-18"
+          ],
+          [
+            19,
+            0,
+            141635.44,
+            0,
+            0,
+            9,
+            "2026-09-08",
+            "2026-09-30"
+          ],
+          [
+            78,
+            122593.88,
+            0,
+            0,
+            0,
+            5,
+            "2026-09-16",
+            "2026-09-23"
+          ],
+          [
+            72,
+            78838.84,
+            0,
+            0,
+            0,
+            4,
+            "2026-07-08",
+            "2026-09-14"
+          ],
+          [
+            28,
+            53099.88,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-10",
+            "2026-09-26"
+          ],
+          [
+            27,
+            0,
+            32175,
+            0,
+            0,
+            1,
+            "2026-09-17",
+            "2026-09-17"
+          ],
+          [
+            126,
+            32073.32,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-15",
+            "2026-09-15"
+          ],
+          [
+            108,
+            9389.79,
+            0,
+            0,
+            0,
+            39,
+            "2026-09-21",
+            "2026-09-21"
+          ],
+          [
+            193,
+            1625,
+            0,
+            0,
+            0,
+            1,
+            "2026-04-02",
+            "2026-04-02"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 122593.88,
+          "against": 0,
+          "spenders": [
+            "EDF Action Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "luria",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "kiggans",
+      "district": "VA-02",
+      "name": "Elaine Luria",
+      "short": "Luria",
+      "party": "D",
+      "state": "VA",
+      "stateName": "Virginia",
+      "race": "H-VA-02",
+      "status": "Democratic nominee; won the Democratic primary (~80%) over Nila Devanath, Bill Fleming and Patrick B. Mosolf (reported Aug 5, 2026)",
+      "statusSrc": {
+        "t": "WHRO - Luria to face Kiggans again after Democratic primary win (Aug 5, 2026)",
+        "u": "https://www.whro.org/elections/2026-08-05/luria-to-face-kiggans-again-after-democratic-primary-win"
+      },
+      "opponent": "Jen Kiggans (R); Matt Baker (I), Bishop Staten (I) also running",
+      "born": 1975,
+      "since": "Former U.S. Representative for Virginia's 2nd District (2019–2023); retired Navy commander; small business owner",
+      "roles": "U.S. House, Virginia's 2nd District, 2019–2023 (Armed Services Committee, vice chair in the 117th Congress; Veterans' Affairs Committee, chair of the Disability Assistance and Memorial Affairs subcommittee; Homeland Security Committee; Select Committee on the January 6 Attack); U.S. Navy, 1997–2017, retired as a commander (commanded Assault Craft Unit Two, 2014–2017)",
+      "background": "Born in Birmingham, Alabama, in 1975. BS from the U.S. Naval Academy (1997), Naval Nuclear Power School, and an MS in engineering management from Old Dominion University (2004). A nuclear-trained surface warfare officer for 20 years, she then grew the Mermaid Factory into a family business in Hampton Roads. She lost the seat to Jen Kiggans in 2022 and won it back in 2026.",
+      "site": "https://elaineforcongress.com/",
+      "fecCand": "H6VA02198",
+      "fecCmte": "C00926303",
+      "cmteName": "Elaine Luria For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. Jen Kiggans",
+      "seat": "VA-02 · on the ballot November 3, 2026",
+      "recordType": "former_member_of_congress",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care",
+          "detail": "Her priorities say \"Cut health care costs for the middle class by restoring ACA premium subsidies,\" \"Help rural hospitals stay open by restoring the $1 trillion Jen Kiggans and Donald Trump cut from Medicaid\" and \"Cut health care costs for seniors by expanding the number of drugs Medicare can negotiate on.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Elaine for Congress: Priorities",
+            "u": "https://elaineforcongress.com/issues/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: tariffs, veterans and stock trading",
+          "detail": "She says she will \"fight to repeal the tariffs,\" \"continue to fight for my fellow veterans to reverse the devastating DOGE cuts,\" and \"I support banning members of Congress and their families from trading individual stocks while holding office.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Elaine for Congress: Priorities",
+            "u": "https://elaineforcongress.com/issues/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"I support banning members of Congress and their families from trading individual stocks while holding office.\" (her campaign website)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Elaine for Congress: Priorities",
+              "u": "https://elaineforcongress.com/issues/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Elaine for Congress: Priorities",
+              "u": "https://elaineforcongress.com/issues/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Luria; none were found. Her 2019–2023 House votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Luria; none were found. Her 2019–2023 House votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 8044063.94,
+        "indiv": 6209590.1,
+        "itemized": 4885890.12,
+        "unitemized": 1323699.98,
+        "party": 6010.87,
+        "pac": 642205.11,
+        "transfers": 1177915.22,
+        "disbursements": 7565201.72,
+        "cash": 478862.22,
+        "debts": 0,
+        "candidate": 8010.13,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Elaine Luria For Congress (C00926303), 2025-11-12 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Nov 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 8044063.94,
+        "indiv": 6209590.1,
+        "itemized": 4885890.12,
+        "unitemized": 1323699.98,
+        "party": 6010.87,
+        "pac": 642205.11,
+        "transfers": 1177915.22,
+        "candidate": 8010.13,
+        "loans": 0,
+        "disbursements": 7565201.72,
+        "cash": 478862.22,
+        "debts": 0,
+        "cmte": "Elaine Luria For Congress",
+        "cmteId": "C00926303",
+        "start": "2025-11-12",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00926303/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 332.51,
+        "loansKnown": true,
+        "self": 8010.13,
+        "selfShare": 0.1
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2591300.33,
+          "other": 0,
+          "party": 0,
+          "total": 2591300.33
+        },
+        "against": {
+          "super_pac": 1749580.72,
+          "other": 0,
+          "party": 0,
+          "total": 1749580.72
+        },
+        "parts": {
+          "S": {
+            "super_pac": 210256.75,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 1383041.34,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 2381043.58,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 366539.38,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 63,
+        "uncertain": 2,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 2,
+        "cms": [
+          [
+            77,
+            1234798.72,
+            0,
+            0,
+            0,
+            10,
+            "2026-09-08",
+            "2026-09-25"
+          ],
+          [
+            76,
+            0,
+            1003062.42,
+            0,
+            0,
+            6,
+            "2026-09-16",
+            "2026-09-26"
+          ],
+          [
+            137,
+            921966.56,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-08",
+            "2026-09-19"
+          ],
+          [
+            42,
+            0,
+            275887.46,
+            0,
+            0,
+            13,
+            "2026-09-09",
+            "2026-09-25"
+          ],
+          [
+            19,
+            0,
+            274904.13,
+            0,
+            0,
+            14,
+            "2026-09-01",
+            "2026-09-30"
+          ],
+          [
+            96,
+            224278.3,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-18",
+            "2026-09-30"
+          ],
+          [
+            28,
+            210256.75,
+            0,
+            0,
+            0,
+            6,
+            "2026-08-29",
+            "2026-09-26"
+          ],
+          [
+            75,
+            0,
+            120861.09,
+            0,
+            0,
+            2,
+            "2026-09-05",
+            "2026-09-05"
+          ],
+          [
+            105,
+            0,
+            40400,
+            0,
+            0,
+            4,
+            "2026-08-28",
+            "2026-09-24"
+          ],
+          [
+            89,
+            0,
+            34465.62,
+            0,
+            0,
+            2,
+            "2026-09-23",
+            "2026-09-30"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 921966.56,
+          "against": 0,
+          "spenders": [
+            "Giffords PAC"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
+    },
+    {
+      "id": "cooke",
+      "chamber": "H",
+      "cand": true,
+      "openSeat": false,
+      "incumbent": "vanorden",
+      "district": "WI-03",
+      "name": "Rebecca Cooke",
+      "short": "Cooke",
+      "party": "D",
+      "state": "WI",
+      "stateName": "Wisconsin",
+      "race": "H-WI-03",
+      "status": "Democratic nominee; won the Aug 11, 2026 Democratic primary (rematch of 2024)",
+      "statusSrc": {
+        "t": "Civic Media - Cooke wins Democratic primary, Third Congressional District (Aug 12, 2026)",
+        "u": "https://civicmedia.us/news/2026/08/12/cooke-wins-democratic-primary-third-congressional-district"
+      },
+      "opponent": "Derrick Van Orden (R)",
+      "born": 1987,
+      "since": "Small business owner and consultant; no elected office (Democratic nominee for this seat in 2024)",
+      "roles": "Owner, Red's Mercantile, Eau Claire, 2014–2022; Political and small-business consultant, until 2025; Board member, Wisconsin Economic Development Corporation (appointed by Gov. Tony Evers, 2019; resigned November 2021); Democratic nominee for Wisconsin's 3rd District, 2024 (lost to Derrick Van Orden, 48.6% to 51.3%)",
+      "background": "Born in Eau Claire, Wisconsin, in 1987; lives in Colfax. BA from the University of St. Thomas. A fundraiser for national campaigns after college, she opened a store in 2014 and founded a nonprofit for women business owners in 2016. Critics in both parties questioned her income from political consulting.",
+      "site": "https://cookeforwisconsin.com/",
+      "fecCand": "H4WI03169",
+      "fecCmte": "C00844993",
+      "cmteName": "Cooke For Congress",
+      "bioguide": null,
+      "term": "Challenging Rep. Derrick Van Orden",
+      "seat": "WI-03 · on the ballot November 3, 2026",
+      "recordType": "none",
+      "record": [
+        {
+          "date": "2026-11-13",
+          "title": "Platform: health care and abortion",
+          "detail": "Her priorities include \"Reverse Medicaid and Affordable Care Act cuts and fund rural hospitals,\" \"Cap out-of-pocket costs on essential drugs like insulin, asthma inhalers, and cancer medications at $30/month\" and \"Unabashedly support the upholding of Roe vs. Wade.\" (Campaign website, read Nov. 13, 2026; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Health care",
+          "src": {
+            "t": "Rebecca Cooke: Priorities",
+            "u": "https://cookeforwisconsin.com/priorities/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: wages, farms and trade",
+          "detail": "She backs \"Raise the federal minimum wage to $15/hour,\" \"End the use of tariffs that have created trade tensions globally and cut off agricultural marketplaces\" and \"Protect our farmland from being bought by foreign nationals.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Economy",
+          "src": {
+            "t": "Rebecca Cooke: Priorities",
+            "u": "https://cookeforwisconsin.com/priorities/"
+          }
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Platform: stock trading, term limits and Iran",
+          "detail": "She backs \"Ban stock trading for members of Congress and the White House,\" \"Enforce term limits for members of Congress,\" \"End Citizens United and get corporate and dark money out of politics\" and \"End the costly Iran War.\" (Campaign website; not an official act.)",
+          "position": "Platform commitment",
+          "area": "Government reform",
+          "src": {
+            "t": "Rebecca Cooke: Priorities",
+            "u": "https://cookeforwisconsin.com/priorities/"
+          }
+        }
+      ],
+      "statements": [
+        {
+          "topic": "Banning stock trading by members of Congress",
+          "said": {
+            "text": "\"Ban stock trading for members of Congress and the White House.\" (her priorities page)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Rebecca Cooke: Priorities",
+              "u": "https://cookeforwisconsin.com/priorities/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Rebecca Cooke: Priorities",
+              "u": "https://cookeforwisconsin.com/priorities/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "stock-trading"
+          }
+        },
+        {
+          "topic": "Overturning Citizens United",
+          "said": {
+            "text": "\"End Citizens United and get corporate and dark money out of politics.\" (her priorities page)",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Rebecca Cooke: Priorities",
+              "u": "https://cookeforwisconsin.com/priorities/"
+            }
+          },
+          "did": {
+            "text": "Takes office Jan. 3, 2027: no votes, bills or filings in office to check this against yet.",
+            "date": "2026-11-13",
+            "src": {
+              "t": "Rebecca Cooke: Priorities",
+              "u": "https://cookeforwisconsin.com/priorities/"
+            }
+          },
+          "record": "",
+          "recordSrc": null,
+          "assessment": "unclear",
+          "note": "A campaign commitment; there is no record in office to check it against until they take their seat.",
+          "pledge": {
+            "kind": "citizens-united"
+          }
+        }
+      ],
+      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Civic Media coverage for ethics complaints, lawsuits and investigations involving Cooke; none were found. Criticism of her political consulting income (Milwaukee Journal Sentinel, 2024 and 2026) is a campaign controversy, not a finding of wrongdoing. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "stateIdeology": null,
+      "bills": [],
+      "sponsoredCount": null,
+      "sponsoredNote": "",
+      "ethics": [
+        {
+          "title": "No documented violations found",
+          "type": "Disclosure & ethics check",
+          "date": "Checked Nov 2026",
+          "summary": "Reviewed her Wikipedia profile, campaign website and Civic Media coverage for ethics complaints, lawsuits and investigations involving Cooke; none were found. Criticism of her political consulting income (Milwaukee Journal Sentinel, 2024 and 2026) is a campaign controversy, not a finding of wrongdoing. The FEC enforcement (MUR) database and court records were not searched directly.",
+          "outcome": "None found",
+          "sources": [],
+          "sev": "good"
+        }
+      ],
+      "fecMissing": false,
+      "fec": {
+        "receipts": 12675996.72,
+        "indiv": 10940401.91,
+        "itemized": 7210159.87,
+        "unitemized": 3730242.04,
+        "party": 5624.87,
+        "pac": 789321.31,
+        "transfers": 939697.28,
+        "disbursements": 12238748.98,
+        "cash": 447387.26,
+        "debts": 0,
+        "candidate": 0,
+        "loans": 0,
+        "asof": "2026-10-14"
+      },
+      "fecNotes": "From the FEC's committee summary file for Cooke For Congress (C00844993), 2025-01-01 to 2026-10-14. Outside spending from the FEC's independent-expenditure file, general election, through Sept. 30, 2026, like every profile.",
+      "cycleLabel": "Jan 2025 – Oct 2026",
+      "cycleNote": "two-year cycle (2025–26)",
+      "ideo": null,
+      "ideoKind": "none",
+      "ideoNote": null,
+      "ideoSrc": null,
+      "conduit": {
+        "status": "not_measured",
+        "rows": [],
+        "note": "",
+        "noteSrc": null,
+        "aipacDirect": []
+      },
+      "stateLeg": [],
+      "camp": {
+        "receipts": 12675996.72,
+        "indiv": 10940401.91,
+        "itemized": 7210159.87,
+        "unitemized": 3730242.04,
+        "party": 5624.87,
+        "pac": 789321.31,
+        "transfers": 939697.28,
+        "candidate": 0,
+        "loans": 0,
+        "disbursements": 12238748.98,
+        "cash": 447387.26,
+        "debts": 0,
+        "cmte": "Cooke For Congress",
+        "cmteId": "C00844993",
+        "start": "2025-01-01",
+        "end": "2026-10-14",
+        "missing": false,
+        "src": "https://www.fec.gov/data/committee/C00844993/?cycle=2026",
+        "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14; npm run money:update keeps them current.",
+        "other": 951.35,
+        "loansKnown": true,
+        "self": 0,
+        "selfShare": 0
+      },
+      "pac": {
+        "basic": true,
+        "window": "2025–26",
+        "filings": [],
+        "rows": [],
+        "subtotal": 0,
+        "retrieved": null,
+        "coverage": null,
+        "periodTotal": null,
+        "byCat": [],
+        "nPacs": 0
+      },
+      "out": {
+        "start": "2025-01-01",
+        "end": "2026-09-30",
+        "multi": false,
+        "incomplete": [],
+        "for": {
+          "super_pac": 2945867.58,
+          "other": 0,
+          "party": 0,
+          "total": 2945867.58
+        },
+        "against": {
+          "super_pac": 1500011.45,
+          "other": 0,
+          "party": 0,
+          "total": 1500011.45
+        },
+        "parts": {
+          "S": {
+            "super_pac": 342169.64,
+            "other": 0,
+            "party": 0
+          },
+          "O": {
+            "super_pac": 1004011.73,
+            "other": 0,
+            "party": 0
+          },
+          "OO": {
+            "super_pac": 2603697.94,
+            "other": 0,
+            "party": 0
+          },
+          "SO": {
+            "super_pac": 495999.72,
+            "other": 0,
+            "party": 0
+          },
+          "X": {
+            "super_pac": 0,
+            "other": 0,
+            "party": 0
+          }
+        },
+        "rivals": [],
+        "others": [],
+        "excludedPre": {
+          "n": 0,
+          "amount": 0
+        },
+        "n": 99,
+        "uncertain": 0,
+        "same": null,
+        "dupRemoved": {
+          "n": 0,
+          "amount": 0
+        },
+        "possibleRepeat": 0,
+        "pinned": 3,
+        "cms": [
+          [
+            77,
+            1238467.77,
+            0,
+            0,
+            0,
+            8,
+            "2026-09-15",
+            "2026-09-22"
+          ],
+          [
+            76,
+            0,
+            851415.64,
+            0,
+            0,
+            3,
+            "2026-09-23",
+            "2026-09-23"
+          ],
+          [
+            78,
+            746580.25,
+            0,
+            0,
+            0,
+            4,
+            "2026-09-22",
+            "2026-09-22"
+          ],
+          [
+            22,
+            470613.77,
+            0,
+            0,
+            0,
+            14,
+            "2026-09-08",
+            "2026-09-23"
+          ],
+          [
+            194,
+            313514.99,
+            0,
+            0,
+            0,
+            23,
+            "2026-03-05",
+            "2026-09-22"
+          ],
+          [
+            75,
+            0,
+            284927.36,
+            0,
+            0,
+            3,
+            "2026-09-05",
+            "2026-09-16"
+          ],
+          [
+            19,
+            0,
+            149736.86,
+            0,
+            0,
+            10,
+            "2026-09-01",
+            "2026-09-30"
+          ],
+          [
+            42,
+            0,
+            148414.63,
+            0,
+            0,
+            14,
+            "2026-09-11",
+            "2026-09-29"
+          ],
+          [
+            28,
+            88699.98,
+            0,
+            0,
+            0,
+            3,
+            "2026-09-10",
+            "2026-09-26"
+          ],
+          [
+            99,
+            67584.41,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-24",
+            "2026-09-24"
+          ],
+          [
+            105,
+            0,
+            65000,
+            0,
+            0,
+            2,
+            "2026-08-28",
+            "2026-09-08"
+          ],
+          [
+            147,
+            10150,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-30",
+            "2026-09-30"
+          ],
+          [
+            72,
+            7323.81,
+            0,
+            0,
+            0,
+            1,
+            "2026-09-14",
+            "2026-09-14"
+          ],
+          [
+            13,
+            2932.6,
+            0,
+            0,
+            0,
+            9,
+            "2025-05-14",
+            "2026-02-20"
+          ],
+          [
+            83,
+            0,
+            516.96,
+            0,
+            0,
+            3,
+            "2026-09-13",
+            "2026-09-13"
+          ]
+        ]
+      },
+      "senateVotes": false,
+      "stateRecord": null,
+      "evidence": {},
+      "notVoted": {},
+      "assoc": {},
+      "funderPos": [
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 746580.25,
+          "against": 0,
+          "spenders": [
+            "EDF Action Votes"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 470613.77,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 516.96,
+          "spenders": [
+            "NRA Victory Fund, Inc."
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        }
+      ],
+      "resultsOnly": true
     }
   ],
   "ie": {
@@ -213202,7 +218725,8 @@
             },
             "possibleRepeat": 0,
             "n": 104
-          }
+          },
+          "profile": "mendoza"
         }
       ],
       "ieTotal": 5282878.63,
@@ -213337,7 +218861,8 @@
             },
             "possibleRepeat": 0,
             "n": 114
-          }
+          },
+          "profile": "villegas"
         }
       ],
       "ieTotal": 7584960.01,
@@ -213419,7 +218944,8 @@
             },
             "possibleRepeat": 0,
             "n": 18
-          }
+          },
+          "profile": "dandiya"
         },
         {
           "name": "Casey Askar",
@@ -213720,7 +219246,8 @@
             },
             "possibleRepeat": 0,
             "n": 88
-          }
+          },
+          "profile": "tronegarriott"
         }
       ],
       "ieTotal": 3882732.83,
@@ -213843,7 +219370,8 @@
             },
             "possibleRepeat": 0,
             "n": 136
-          }
+          },
+          "profile": "lawrence"
         }
       ],
       "ieTotal": 6135499.01,
@@ -213976,7 +219504,8 @@
             },
             "possibleRepeat": 0,
             "n": 74
-          }
+          },
+          "profile": "hines"
         }
       ],
       "ieTotal": 2927571.35,
@@ -214131,7 +219660,8 @@
             },
             "possibleRepeat": 0,
             "n": 70
-          }
+          },
+          "profile": "ager"
         }
       ],
       "ieTotal": 5333186.28,
@@ -214254,7 +219784,8 @@
             },
             "possibleRepeat": 0,
             "n": 40
-          }
+          },
+          "profile": "poindexter"
         }
       ],
       "ieTotal": 2888676.19,
@@ -214378,7 +219909,8 @@
             },
             "possibleRepeat": 0,
             "n": 93
-          }
+          },
+          "profile": "brooks"
         }
       ],
       "ieTotal": 2536208.57,
@@ -214505,7 +220037,8 @@
             },
             "possibleRepeat": 0,
             "n": 95
-          }
+          },
+          "profile": "cognetti"
         }
       ],
       "ieTotal": 5908342.49,
@@ -214632,7 +220165,8 @@
             },
             "possibleRepeat": 0,
             "n": 95
-          }
+          },
+          "profile": "pulido"
         }
       ],
       "ieTotal": 4201271.24,
@@ -214768,7 +220302,8 @@
             "possibleRepeat": 0,
             "n": 63
           },
-          "bioguide": "L000591"
+          "bioguide": "L000591",
+          "profile": "luria"
         }
       ],
       "ieTotal": 4340881.05,
@@ -214904,7 +220439,8 @@
             },
             "possibleRepeat": 0,
             "n": 99
-          }
+          },
+          "profile": "cooke"
         }
       ],
       "ieTotal": 4445879.03,

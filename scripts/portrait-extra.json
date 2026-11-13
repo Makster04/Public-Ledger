@@ -709,5 +709,42 @@
     "file": "data/portraits/sc-andrews.png",
     "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
     "url": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
+  },
+  "mendoza": {
+    "skip": "Her Wikipedia photo is a distant shot of a Marine training field, too small to cut out; initials until a portrait is supplied",
+    "lookup": false
+  },
+  "villegas": {
+    "file": "data/portraits/H6CA22190.jpg",
+    "credit": "Photo: Maremoto Fund, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Randy_Villegas_at_Vota_Palooza_in_2024_(cropped).jpg"
+  },
+  "dandiya": {
+    "skip": "Her Wikipedia photo is too small to cut out; initials until a larger photo is supplied",
+    "lookup": false
+  },
+  "lawrence": {
+    "file": "data/portraits/H6MI07298.jpg",
+    "credit": "Photo: Sabio117, CC0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:William_Lawrence_2026.jpg"
+  },
+  "cognetti": {
+    "file": "data/portraits/H6PA08293.jpg",
+    "credit": "Photo: US Department of Labor, CC BY 2.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Paige_Cognetti_(52165104986)_(3x4a).jpg"
+  },
+  "pulido": {
+    "skip": "His Wikipedia photo is a tight close-up with the hat cut off at its edge and his chin behind a microphone, so the cut-out doesn't work; initials until a portrait is supplied",
+    "lookup": false
+  },
+  "luria": {
+    "file": "data/portraits/H6VA02198.jpg",
+    "credit": "Photo: U.S. House of Representatives, public domain, via Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Rep._Elaine_Luria_official_photo,_117th_Congress.jpg"
+  },
+  "cooke": {
+    "file": "data/portraits/H4WI03169.jpg",
+    "credit": "Photo: UpNorthNews, CC BY 3.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Rebecca_Cooke_on_UpNorthNews_March_2025_(cropped).jpg"
   }
 }
