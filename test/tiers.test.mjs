@@ -1,5 +1,5 @@
 // Tiers (public/tiers.js): each sitting member's money from a tracker against the typical member of their chamber who
-// took some (the median): above 1.5 ×, about half to 1.5 ×, below half, none.
+// took some (the median): far above 3 ×, above 1.5 to 3 ×, about half to 1.5 ×, below half, none.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,11 +7,11 @@ import {TIER_KEYS,TIER_LABEL,trackerAmount,median,tierOf,chamberTiers} from '../
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(f,import.meta.url),'utf8'));
 
-test('the four tiers and their lines',()=>{
-  assert.deepEqual(TIER_KEYS.map(k=>TIER_LABEL[k]),['Above Average','About Average','Below Average','None']);
+test('the five tiers and their lines',()=>{
+  assert.deepEqual(TIER_KEYS.map(k=>TIER_LABEL[k]),['Far Above Average','Above Average','About Average','Below Average','None']);
   assert.equal(median([3,1,2]),2);assert.equal(median([4,1,2,3]),2.5);assert.equal(median([]),null);
   const t=16500;
-  assert.deepEqual([30000,24751,24750,16500,8250,8249,1,0].map(a=>tierOf(a,t)),['above','above','about','about','about','below','below','none']);
+  assert.deepEqual([241200,49501,49500,30000,24751,24750,16500,8250,8249,1,0].map(a=>tierOf(a,t)),['far','far','above','above','above','about','about','about','below','below','none']);
   assert.equal(tierOf(null,t),null,'not read: not placed');assert.equal(tierOf(500,null),'about','nobody else took any');
 });
 
@@ -21,11 +21,11 @@ test('a member\'s amount: PAC checks plus, for AIPAC, the gifts it passed on; no
 });
 
 test('one chamber: the typical amount is the median of those who took some; tiers largest first; not read left out',()=>{
-  const cp={people:{a:[],b:[],c:[],d:[],e:[]},trackers:{oil:{a:[40000,3],b:[10000,1],c:[3000,1],d:[0,0]}}};
-  const m=['a','b','c','d','e','f'].map(id=>({id,name:id.toUpperCase()}));
+  const cp={people:{a:[],b:[],c:[],d:[],e:[],g:[]},trackers:{oil:{a:[40000,3],b:[10000,1],c:[3000,1],d:[0,0],g:[20000,2]}}};
+  const m=['a','b','c','d','e','f','g'].map(id=>({id,name:id.toUpperCase()}));
   const T=chamberTiers(cp,'oil',m);
-  assert.equal(T.typical,10000);assert.equal(T.took,3);assert.equal(T.read,5);
-  assert.deepEqual(Object.fromEntries(TIER_KEYS.map(k=>[k,T.tiers[k].map(r=>r.m.id)])),{above:['a'],about:['b'],below:['c'],none:['d','e']});
+  assert.equal(T.typical,15000);assert.equal(T.took,4);assert.equal(T.read,6);
+  assert.deepEqual(Object.fromEntries(TIER_KEYS.map(k=>[k,T.tiers[k].map(r=>r.m.id)])),{far:[],above:['a'],about:['g','b'],below:['c'],none:['d','e']});
   assert.deepEqual(T.notRead.map(x=>x.id),['f']);assert.equal(T.byId.a,'above');assert.equal(T.byId.f,undefined);
 });
 
@@ -37,5 +37,5 @@ test('the real file: every sitting member read is placed once, each chamber on i
     assert.equal(T.read+T.notRead.length,list.length,key);
     for(const r of T.tiers.none)assert.equal(r.amount,0);
   }
-  const d=chamberTiers(cp,'defense',H);assert.ok(d.tiers.above.length&&d.tiers.about.length&&d.tiers.below.length&&d.tiers.none.length,'Big Defense spreads across all four in the House');
+  const d=chamberTiers(cp,'defense',H);assert.ok(TIER_KEYS.every(k=>d.tiers[k].length),'Big Defense spreads across all five in the House');
 });
