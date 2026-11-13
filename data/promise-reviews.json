@@ -1,17 +1,40 @@
 {
-  "about": "Reviewed verdicts for the promises in public/promises.json (scripts/build-promises.mjs), by person and promise key (\"<first question>@<date>\"). status: kept, step (voted for a first step toward it: counts 3/4), compromise (introduced or (co)sponsored a compromised version: counts 1/2), broken, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed). why is shown on the profile; date is when it was reviewed.",
-  "people": {
-    "ossoff": {
-      "paris-agreement@2020-11-03": {"status": "not-tested", "why": "The President rejoined the Paris Agreement on Jan. 20, 2021, the day Ossoff took office, so there was nothing left to push for; the U.S. left again by executive order in 2025, and neither step came to a Senate vote.", "date": "2026-11-13"}
-    },
-    "kaptur": {
-      "tariffs@2024-11-05": {"status": "unclear", "why": "She promised tariffs that protect Ohio factories. The votes against were to end the 2025 national emergency behind the tariffs on Canadian goods, a broad tariff rather than a targeted one, so whether they go against the promise depends on how it is read.", "date": "2026-11-13"}
-    },
-    "stelson": {
-      "national-sales-tax@2024-11-05": {"status": "not-a-promise", "why": "About her opponent's positions, not a promise of hers.", "date": "2026-11-13"}
-    },
-    "rogers": {
-      "ev-mandate@2024-07-24": {"status": "not-a-promise", "why": "A warning, not a commitment.", "date": "2026-11-13"}
-    }
+ "about": "Reviewed verdicts for the promises in public/promises.json (scripts/build-promises.mjs), by person and promise key (\"<first question>@<date>\"). status: kept, step (voted for a first step toward it: counts 3/4), compromise (introduced or (co)sponsored a compromised version: counts 1/2), broken, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed). why is shown on the profile; date is when it was reviewed.",
+ "people": {
+  "booker": {
+   "decriminalize-drugs@2021-04-21": {"status": "compromise", "why": "He introduced the Cannabis Administration and Opportunity Act (2022, 2024 and 2026), which ends the federal ban on marijuana: a narrower version of the promise. No bill from him decriminalizes small amounts of other drugs.", "date": "2026-11-13"},
+   "police-funding-shift@2022-08-02": {"status": "kept", "why": "He cosponsored the COPS on the Beat Grant Program Parity Act (2023), on the grants that pay for hiring police officers, sponsored the Law Enforcement Officers Parity Act (2023) and cosponsored the National Police Week resolutions.", "date": "2026-11-13"}
+  },
+  "brown": {
+   "border-security@2019-01-09": {"status": "kept", "why": "He named agents and technology rather than a wall, and voted for both bipartisan border bills in 2024 that funded them. Four of his five votes the other way were on amendments to keep building the border wall; the fifth was a party-line budget amendment in February 2021.", "date": "2026-11-13"}
+  },
+  "collins": {
+   "abortion@2022-08-01": {"status": "kept", "why": "She cosponsored the Reproductive Freedom for All Act (2023), voted for the Reproductive Freedom for Women Act (2024) and voted against extending the ban on Medicaid payments to abortion providers (2026). Her one vote the other way, on the Born-Alive Abortion Survivors Protection Act (2025), sets care rules for infants born alive after an attempted abortion rather than limiting the right itself.", "date": "2026-11-13"},
+   "abortion@2023-02-09": {"status": "kept", "why": "She voted for the Reproductive Freedom for Women Act (2024) and against extending the ban on Medicaid payments to abortion providers (2026). Her one vote the other way, on the Born-Alive Abortion Survivors Protection Act (2025), sets care rules for infants born alive after an attempted abortion rather than limiting the right itself.", "date": "2026-11-13"},
+   "affordable-care-act@2025-11-10": {"status": "kept", "why": "She voted to extend the enhanced premium tax credits (Dec. 11, 2025). Her vote the other way (Jan. 13, 2026) was on the 2025 marketplace enrollment rules, not the credits, and in September 2026 she voted to take up a resolution overturning those rules.", "date": "2026-11-13"},
+   "border-security@2019-02-28": {"status": "kept", "why": "She voted for 5 of the 6 border-security amendments in 2021–22 and for the 2026 Secure America Act. The votes the other way were a February 2021 budget amendment and cloture on the 2024 Border Act.", "date": "2026-11-13"}
+  },
+  "kaptur": {
+   "tariffs@2024-11-05": {"status": "unclear", "why": "She promised tariffs that protect Ohio factories. The votes against were to end the 2025 national emergency behind the tariffs on Canadian goods, a broad tariff rather than a targeted one, so whether they go against the promise depends on how it is read.", "date": "2026-11-13"}
+  },
+  "marshall": {
+   "pre-existing-conditions@2025-12-09": {"status": "not-tested", "why": "A promise to keep protections that already exist. Nothing to change them has come up in the Senate since, and his own health bill that day (S. 3389, the Lowering Health Care Costs for Americans Act) leaves them in place.", "date": "2026-11-13"}
+  },
+  "ossoff": {
+   "paris-agreement@2020-11-03": {"status": "not-tested", "why": "The President rejoined the Paris Agreement on Jan. 20, 2021, the day Ossoff took office, so there was nothing left to push for; the U.S. left again by executive order in 2025, and neither step came to a Senate vote.", "date": "2026-11-13"},
+   "private-prisons@2020-11-03": {"status": "broken", "why": "There was no Senate bill to ban private prisons in these years, and he didn't introduce one. He also didn't join the related bills: the Private Prison Information Act (2021 and 2023, 15 cosponsors each) and the 2026 Private Detention Accountability Act.", "date": "2026-11-13"}
+  },
+  "perry": {
+   "gun-purchase-limits@2018-10-24": {"status": "kept", "why": "22 of his 23 actions after the promise went its way. The exception is one vote on an amendment to the 2019 background-check bill, which he then voted against.", "date": "2026-11-13"}
+  },
+  "ricketts": {
+   "police-funding-shift@2024-05-15": {"status": "kept", "why": "He cosponsored the Back the Blue Act of 2025, the Federal Law Enforcement Officer Service Weapon Purchase Act (2026) and the National Police Week resolutions.", "date": "2026-11-13"}
+  },
+  "rogers": {
+   "ev-mandate@2024-07-24": {"status": "not-a-promise", "why": "A warning, not a commitment.", "date": "2026-11-13"}
+  },
+  "stelson": {
+   "national-sales-tax@2024-11-05": {"status": "not-a-promise", "why": "About her opponent's positions, not a promise of hers.", "date": "2026-11-13"}
   }
+ }
 }
