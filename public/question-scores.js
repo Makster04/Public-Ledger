@@ -100,6 +100,13 @@ export function stanceWord(s,sides=['Yes','No']){
   const lc=x=>x.charAt(0).toLowerCase()+x.slice(1);
   return s>=0.6?sides[0]:s>=0.2?`Leans ${lc(sides[0])}`:s>-0.2?'Mixed':s>-0.6?`Leans ${lc(sides[1])}`:sides[1];
 }
+// The net points behind a stance, as the Ideology tab shows it beside the stance ("YES (+16)"): the points for the side
+// they lean to minus the other side's, rounded; sign + when that side is the question's liberal one, − when it's the
+// conservative one, '' when the question has no liberal side or it's even. st: {a, b}.
+export function stanceNet(st,q){
+  const a=st?.a||0,b=st?.b||0,lead=a>=b?0:1,net=Math.round(Math.abs(a-b));
+  return {lead,net,sign:q?.liberal==null||!net?'':lead===q.liberal?'+':'−'};
+}
 // A question's lean, −100 (liberal) to +100 (conservative), when it has a liberal side; null otherwise.
 export function questionLean(s,q){
   if(s==null||q?.liberal==null)return null;

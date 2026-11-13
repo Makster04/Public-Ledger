@@ -1292,3 +1292,30 @@ input, select { accent-color: var(--accent); }
 .seats-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; vertical-align: 0; }
 .seats-vacant { border: 1.2px solid #8b95a5; width: 7px; height: 7px; }
 .seats-note { font-size: 12px; line-height: 1.5; color: var(--ink-2); margin-top: 12px; max-width: 72ch; }
+
+/* The questions of a category on the Ideology tab (app.js qTableHTML): the question and their stance on the left, the
+   statements, ratings and votes behind it on the right; stacked on a phone. */
+.qt { width: 100%; border-collapse: collapse; font-size: .95rem; line-height: 1.45; margin-top: 4px; }
+.qt th { text-align: left; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); padding: 8px 10px; font-weight: 700; }
+.qt td { vertical-align: top; border-bottom: 1px solid var(--line); padding: 12px 10px; }
+.qt tr:last-child td { border-bottom: none; }
+.qt-q { width: 34%; }
+.qt-word { font-weight: 800; font-size: 1.3rem; line-height: 1.2; margin-bottom: 4px; letter-spacing: .01em; }
+.qt-word.qt-none { color: var(--muted); font-size: 1rem; }
+.qt-net { font-weight: 700; }
+.qt-text { font-weight: 600; color: var(--ink); }
+.qt-pts { color: var(--muted); font-size: .82rem; margin-top: 4px; }
+.qt-list { margin: 0; padding-left: 18px; }
+.qt-list li { margin: 3px 0; }
+.qt-k { font-weight: 700; }
+.qt-src, .qt-src a { color: var(--muted); font-size: .85rem; }
+.qt-pill { display: inline-block; font-size: .76rem; font-weight: 700; padding: 0 7px; border-radius: 999px; border: 1px solid var(--qt-c, var(--line-2)); color: var(--qt-c, var(--ink-2)); white-space: nowrap; line-height: 1.6; }
+@supports (border-color: color-mix(in oklab, red 50%, transparent)) { .qt-pill { border-color: color-mix(in oklab, var(--qt-c, var(--ink-2)) 55%, transparent); } }
+.qt-pill.qt-off { --qt-c: var(--muted); font-weight: 500; }
+.qt-more { margin-top: 6px; background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: .88rem; cursor: pointer; }
+.qt-more:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .qt thead { display: none; }
+  .qt tr, .qt td { display: block; width: auto; }
+  .qt td.qt-q { border-bottom: none; padding-bottom: 4px; }
+}
