@@ -5,6 +5,7 @@
 // name who is leading, but nobody is marked as having won or lost. All of it is unofficial until each state certifies.
 //   {"winner":"ossoff","how":"Called by NBC News and CBS News","src":{"t":"…","u":"https://…"}}
 //   {"winner":null,"leader":"peltola","how":"Mary Peltola led by 626 votes …","src":{…}}
+// "date": the day of the call, or of the count on file while a race is still counting.
 // "special": a special election, whose winner takes the seat once the state certifies the result, not on Jan. 3.
 // A results-only race (liteRaces, chamber "S" or "H") lists its nominees; each is known by their FEC candidate ID, or,
 // without one, by "id": a sitting senator's directory ID (their basic profile and portrait) or "state-lastname".

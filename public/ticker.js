@@ -1,5 +1,6 @@
 // The ticker under the top bar: the site's updates from the last 24 hours, newest first, each with a tag, its date and a
-// link: race calls (research.json "races", dated by the election results' "asof"), site updates
+// link: race calls (research.json "races" and "liteRaces", each dated by its result's "date", else the election results'
+// "asof"), site updates
 // (score-presentation-log.json; not rule changes), the interest-group ratings (group-ratings.json "checked") and, from
 // the refresh, newly reported stock trades and annual disclosures (/api/ticker), dated by when the refresh first read
 // them. Older updates drop off. Races still counting stay on, whatever their date, while the results are recent. With
@@ -20,23 +21,28 @@ export const shortDate=d=>{const x=new Date(t(d));return Number.isFinite(x.getTi
 // A person as the ticker names them: short name and party, from the profiles and directories.
 export function nameOf(id,people){const p=people?.get?.(id);return p?{name:p.short||String(p.name||'').split(/\s+/).pop(),party:p.party||null}:null;}
 
-// Races: one item a race the site follows: a call within 24 hours of the results it's in; a race still counting for as
-// long as it's counting (and the results are under TICKER.countingDays old).
+// Races: one item a race the site follows: a call within 24 hours of its date (the result's "date", else the results'
+// "asof"); a race still counting for as long as it's counting (and the results are under TICKER.countingDays old). A
+// results-only race names its nominees from their profiles when they have one, else as the race lists them. href: the
+// profile, by the person's ID or (a House nominee known by FEC ID) the profile with that FEC ID; the Races page without one.
 export function raceItems(research,{now=Date.now(),people}={}){
   const asof=research?.election?.asof||research?.election?.date;if(!withinDays(asof,TICKER.countingDays,now))return [];
-  const out=[],called=isFresh(asof,now);
-  for(const r of research?.races||[]){
+  const out=[],profile=k=>people?.get?.(k)?k:[...(people?.values?.()||[])].find(p=>p?.fecCand===k)?.id||null;
+  for(const r of [...(research?.races||[]),...(research?.liteRaces||[])]){
     const res=r?.result;if(!res)continue;
+    const date=res.date||asof,n=k=>r.nominees?.find(x=>(x.fecCand||x.id)===k);
+    const who=k=>{const id=profile(k);if(id)return nameOf(id,people);const x=n(k);return x?{name:String(x.name||'').split(/\s+/).pop(),party:x.party||null}:null;};
+    const link=k=>{const id=profile(k);return id?`#${id}`:'#races';};
     if(res.winner){
-      if(!called)continue;
-      const w=nameOf(res.winner,people);if(!w)continue;
+      if(!isFresh(date,now))continue;
+      const w=who(res.winner);if(!w)continue;
       const how=String(res.how||'').trim();
-      out.push({key:`race:${r.id}`,kind:'call',tag:'Race called',date:asof,order:r.competitive?1:2,href:`#${res.winner}`,
+      out.push({key:`race:${r.id}`,kind:'call',tag:'Race called',date,order:r.competitive?1:2,href:link(res.winner),
         parts:[`${r.label}: `,w,' wins',...(how&&how.length<=70?[` · ${lowerFirst(how)}`]:[])]});
     }else if(res.leader){
-      const l=nameOf(res.leader,people);if(!l)continue;
-      const other=(r.keys||[]).find(k=>k!==res.leader),o=other&&nameOf(other,people),by=/by ([\d,]+) votes/.exec(res.how||'')?.[1];
-      out.push({key:`race:${r.id}`,kind:'warn',tag:'Still counting',date:asof,order:0,href:`#${res.leader}`,
+      const l=who(res.leader);if(!l)continue;
+      const other=(r.keys||r.nominees?.map(x=>x.fecCand||x.id)||[]).find(k=>k!==res.leader),o=other&&who(other),by=/by ([\d,]+) votes/.exec(res.how||'')?.[1];
+      out.push({key:`race:${r.id}`,kind:'warn',tag:'Still counting',date,order:0,href:link(res.leader),
         parts:[`${r.label}: `,l,' leads',...(o?[' ',o]:[]),...(by?[` by ${by} votes`]:[])]});
     }
   }

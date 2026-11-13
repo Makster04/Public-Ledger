@@ -2,8 +2,8 @@
   "asof": "October 2, 2026",
   "election": {
     "date": "2026-11-03",
-    "asof": "2026-11-04",
-    "note": "Unofficial results, from news organizations' race calls and candidates' concessions on election night and the day after. Each state certifies its official results in the following weeks."
+    "asof": "2026-11-13",
+    "note": "Unofficial results, from news organizations' race calls and candidates' concessions, with the count each source reported. Each state certifies its official results in the following weeks."
   },
   "members": [
     {
@@ -78113,25 +78113,39 @@
       "result": {
         "winner": null,
         "leader": "peltola",
-        "how": "Mary Peltola led Dan Sullivan by 626 votes when the election-night count finished, with more than 98% of precincts in. Thousands of absentee and early ballots are still to be counted; Alaska accepts mailed ballots for 10 days (15 from overseas), and a ranked-choice count is likely, since neither has a majority.",
+        "date": "2026-11-11",
+        "how": "Mary Peltola led Dan Sullivan by 3,975 votes in the Division of Elections' count on Wednesday evening, Nov. 11, with tens of thousands of ballots still to count. The last ballots are counted Nov. 18; if nobody has a majority then, Alaska's ranked-choice count decides it. The state certifies by Nov. 25.",
         "src": {
-          "t": "Alaska Beacon, Nov. 4, 2026",
-          "u": "https://alaskabeacon.com/2026/11/03/democratic-candidate-mary-peltola-leads-in-early-vote-counts-for-alaskas-us-senate-election/"
+          "t": "Anchorage Daily News, Nov. 11, 2026",
+          "u": "https://www.adn.com/politics/2026/11/11/peltola-jkt-begich-maintain-leads-in-alaskas-latest-ballot-counts/"
         },
         "tally": {
-          "asof": "2026-11-04",
+          "asof": "2026-11-11",
           "shares": {
-            "peltola": 48,
-            "sullivan": 47.7
+            "peltola": 48.9,
+            "sullivan": 47.3
           },
           "votes": {
-            "peltola": 102701,
-            "sullivan": 102075
+            "peltola": 121487,
+            "sullivan": 117512
           },
-          "counted": "More than 98% of precincts reporting; absentee and early ballots still being counted",
+          "others": [
+            {
+              "name": "Gerald Heikes",
+              "party": "R",
+              "pct": 2.2,
+              "votes": 5426
+            },
+            {
+              "name": "Dan J. Sullivan",
+              "pct": 1.6,
+              "votes": 4100
+            }
+          ],
+          "counted": "More than 250,000 ballots counted; tens of thousands still to count",
           "src": {
-            "t": "Anchorage Daily News, Nov. 4, 2026",
-            "u": "https://www.adn.com/politics/2026/11/03/peltola-leads-sullivan-in-limited-early-results-in-hard-fought-us-senate-race/"
+            "t": "Anchorage Daily News, Nov. 11, 2026",
+            "u": "https://www.adn.com/politics/2026/11/11/peltola-jkt-begich-maintain-leads-in-alaskas-latest-ballot-counts/"
           }
         }
       },
@@ -78181,7 +78195,8 @@
             "t": "NBC News, Georgia Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/georgia-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -78242,7 +78257,8 @@
             "t": "Breitbart News, Nov. 3, 2026, from the AP count",
             "u": "https://www.breitbart.com/politics/2026/11/03/iasen/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78303,7 +78319,8 @@
             "marshall": 503230
           },
           "counted": "98.5% of ballots counted"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78356,7 +78373,8 @@
             "t": "ABC News, Nov. 4, 2026",
             "u": "https://abcnews.com/Politics/maine-2026-live-midterm-election-results/story?id=136761571"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78409,7 +78427,8 @@
             "t": "Patch, Nov. 4, 2026",
             "u": "https://patch.com/michigan/across-mi/michigan-u-s-senate-election-results-2026-el-sayed-vs-rogers-live-updates"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -78465,7 +78484,8 @@
             "t": "NBC News, New Hampshire Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/new-hampshire-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -78533,7 +78553,8 @@
             "t": "North Carolina State Board of Elections, precinct results file",
             "u": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/results_pct_20261103.zip"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78587,7 +78608,8 @@
             "t": "Fox 8 Cleveland, Nov. 4, 2026",
             "u": "https://fox8.com/news/who-is-going-to-win-the-us-senate-race-in-ohio/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78648,7 +78670,8 @@
           ],
           "total": 9885131,
           "counted": "Count as of 10:39 a.m. Nov. 4"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78700,7 +78723,8 @@
             "t": "Alabama Reporter, 2026 election results",
             "u": "https://www.alreporter.com/election-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78749,7 +78773,8 @@
             "t": "NBC News, Colorado Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/colorado-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -78801,7 +78826,8 @@
             "t": "Decision Desk HQ, Illinois Senate results",
             "u": "https://votes.decisiondeskhq.com/races/2026-11-03/illinois-us-senate-general-election"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -78857,7 +78883,8 @@
             "t": "NBC News, Kentucky Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/kentucky-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78906,7 +78933,8 @@
             "t": "Louisiana Illuminator, Nov. 3, 2026",
             "u": "https://lailluminator.com/2026/11/03/letlow-senate-5/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -78966,7 +78994,8 @@
             "t": "KNSI, Nov. 4, 2026",
             "u": "https://knsiradio.com/2026/11/04/election-results/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -79024,7 +79053,8 @@
             "t": "Montana Free Press, Nov. 4, 2026",
             "u": "https://montanafreepress.org/2026/11/04/alme-wins-montana-us-senate-seat/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79073,7 +79103,8 @@
             "u": "https://www.washingtonexaminer.com/news/campaigns/4770721/nebraska-senate-race-pete-ricketts-dan-osborn/"
           },
           "counted": "87% of the vote counted, when the AP called the race"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79134,7 +79165,8 @@
             "t": "NBC News, New Jersey Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/new-jersey-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -79190,7 +79222,8 @@
             "t": "NBC News, Oklahoma Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/oklahoma-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79239,7 +79272,8 @@
             "t": "NBC News, Wyoming Senate results",
             "u": "https://www.nbcnews.com/politics/2026-elections/wyoming-senate-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79300,7 +79334,8 @@
             "t": "Denver Gazette, Nov. 4, 2026",
             "u": "https://www.denvergazette.com/2026/11/03/gabe-evans-manny-rutinel-colorado-cd8-election-results/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79349,7 +79384,8 @@
             "t": "Bay News 9, Nov. 3, 2026",
             "u": "https://baynews9.com/fl/tampa/news/2026/11/03/castor-belran-make-final-push-for-floridas-newly-redrawn-1th-congressional-district"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -79397,7 +79433,8 @@
             "t": "NBC News, Iowa District 1 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/iowa-us-house-district-1-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79450,7 +79487,8 @@
             "t": "NBC New York, Nov. 4, 2026",
             "u": "https://www.nbcnewyork.com/elections/live-results-2026-ny-nj-ct-midterm-elections/6563336/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79499,7 +79537,8 @@
             "t": "WTOL, Nov. 4, 2026",
             "u": "https://www.wtol.com/article/news/politics/elections/ohio-9th-district-election-results-kaptur-merrin-2026/512-2feb38cb-61b0-45c0-a3be-5a410a54d8a8"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -79551,7 +79590,8 @@
             "t": "ABC27, Nov. 3, 2026",
             "u": "https://www.abc27.com/local-news/pa-10-election-results-live-updates-on-the-scott-perry-janelle-stelson-race/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -79600,7 +79640,8 @@
             "t": "NBC News, Texas District 34 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/texas-us-house-district-34-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -79653,7 +79694,8 @@
             "t": "Fox 13 Seattle, Nov. 4, 2026",
             "u": "https://www.fox13seattle.com/news/wa-03-election-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -211540,7 +211582,8 @@
             "t": "KJZZ, Nov. 4, 2026",
             "u": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-district-6-results-elex"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -211674,7 +211717,8 @@
             "t": "NBC News, California District 22 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/california-us-house-district-22-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -211799,7 +211843,8 @@
             "t": "NBC 6 South Florida, Nov. 4, 2026",
             "u": "https://www.nbcmiami.com/elections/pia-dandiya-wins-newly-drawn-district-becomes-floridas-first-south-asian-u-s-rep/3883335/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -211932,7 +211977,8 @@
             "t": "NBC News, Florida District 25 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/florida-us-house-district-25-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212054,7 +212100,8 @@
             "t": "Iowa Capital Dispatch, Nov. 3, 2026",
             "u": "https://iowacapitaldispatch.com/2026/11/03/democrat-sarah-trone-garriott-defeats-incumbent-zach-nunn-in-iowas-3rd-district/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212187,7 +212234,8 @@
             "t": "WDIV ClickOnDetroit (AP count), Nov. 4, 2026",
             "u": "https://www.clickondetroit.com/decision-2026/2026/11/04/william-lawrence-wins-michigan-us-house-district-7-ap-projects/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212329,7 +212377,8 @@
             "t": "Michigan Advance, Nov. 4, 2026",
             "u": "https://michiganadvance.com/2026/11/04/in-michigans-10th-congressional-district-hines-claims-victory/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212462,7 +212511,8 @@
             "t": "Blue Ridge Public Radio, Nov. 3, 2026",
             "u": "https://www.bpr.org/politics-government/2026-11-03/cooper-ager-and-roney-are-some-of-the-victors-in-the-2026-midterm-election-read-the-results-here"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212585,7 +212635,8 @@
             "t": "NBC News, Ohio District 7 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-7-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212711,7 +212762,8 @@
             "t": "NBC News, Pennsylvania District 7 results",
             "u": "https://www.nbcnews.com/politics/2026-elections/pennsylvania-us-house-district-7-results"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212837,7 +212889,8 @@
             "t": "WVIA, Nov. 3, 2026",
             "u": "https://www.wvia.org/news/local/2026-11-03/cnn-other-networks-project-cognetti-to-beat-bresnahan-in-8th-congressional-district-race"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -212959,7 +213012,8 @@
             "t": "Texas Public Radio, Nov. 3, 2026",
             "u": "https://www.tpr.org/government-politics/2026-11-03/bobby-pulido-declares-victory-over-monica-de-la-cruz-in-south-texas-congressional-race"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -213107,7 +213161,8 @@
           },
           "total": 303901,
           "counted": "Votes tallied by 11:55 p.m. Nov. 3"
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -213233,7 +213288,8 @@
             "t": "Wisconsin Examiner, Nov. 4, 2026",
             "u": "https://wisconsinexaminer.com/2026/11/04/rebecca-cooke-flips-wisconsins-3rd-congressional-district-for-democrats/"
           }
-        }
+        },
+        "date": "2026-11-04"
       },
       "chamber": "H",
       "held": {
@@ -213285,7 +213341,8 @@
             "u": "https://www.breitbart.com/politics/2026/11/03/republican-tom-cotton-wins-third-term-arkansas-senate-race/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213333,7 +213390,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/delaware-senate-results"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213390,7 +213448,8 @@
             "u": "https://www.winknews.com/news/politics/republican-ashley-moody-wins-florida-u-s-senate-special-election/article_b0fd8fb4-7d0a-466d-b885-2fbaefc53ce2.html"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213449,7 +213508,8 @@
             "u": "https://www.spokesman.com/elections/2026/idaho-general-election-nov-3/results/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213511,7 +213571,8 @@
             "u": "https://newslinklive.com/2026/11/04/2026-massachusetts-midterm-election-results/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213538,21 +213599,18 @@
         }
       ],
       "result": {
-        "winner": null,
-        "leader": "ms-colom",
-        "how": "Still too close to call on Wednesday: Scott Colom led Cindy Hyde-Smith by 43 votes with more than 90% of the vote counted. The Colom campaign says up to 15,000 affidavit ballots are uncounted, and voters whose affidavit ballots lacked a photo ID have until Nov. 10 to show one. Mississippi has no runoff.",
+        "winner": "ms-colom",
+        "date": "2026-11-11",
+        "how": "Called by the AP on Nov. 11; Cindy Hyde-Smith conceded",
         "src": {
-          "t": "Mississippi Free Press, Nov. 4, 2026",
-          "u": "https://www.mississippifreepress.org/democrat-scott-colom-leads-mississippi-us-senate-race-by-28-votes-against-republican-cindy-hyde-smith/"
+          "t": "CNBC, Nov. 11, 2026",
+          "u": "https://www.cnbc.com/2026/11/11/democrat-scott-colom-projected-to-win-mississippi-senate-election-over-incumbent-hyde-smith.html"
         },
         "tally": {
+          "asof": "2026-11-11",
           "shares": {
-            "ms-colom": 49.06,
-            "hydesmith": 48.83
-          },
-          "votes": {
-            "ms-colom": 461370,
-            "hydesmith": 459201
+            "ms-colom": 49.2,
+            "hydesmith": 48.7
           },
           "others": [
             {
@@ -213561,11 +213619,11 @@
               "pct": 2.1
             }
           ],
+          "counted": "An estimated 99% of ballots counted, after more than a week of counting absentee and affidavit ballots (AP count)",
           "src": {
-            "t": "Decision Desk HQ, Mississippi Senate results",
-            "u": "https://votes.decisiondeskhq.com/races/2026-11-03/mississippi-us-senate-general-election"
-          },
-          "asof": "2026-11-04"
+            "t": "CNBC, Nov. 11, 2026, from the AP count",
+            "u": "https://www.cnbc.com/2026/11/11/democrat-scott-colom-projected-to-win-mississippi-senate-election-over-incumbent-hyde-smith.html"
+          }
         }
       },
       "held": {
@@ -213611,7 +213669,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/new-mexico-senate-results"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213660,7 +213719,8 @@
             "u": "https://kobi5.com/elections-coverage/oregon/us-senator/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213715,7 +213775,8 @@
             "u": "https://www.newsfromthestates.com/article/jack-reed-wins-sixth-term-us-senate"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213775,7 +213836,8 @@
             "u": "https://www.wltx.com/elections"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213823,7 +213885,8 @@
             "u": "https://www.dakotanewsnow.com/politics/election-results/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213871,7 +213934,8 @@
             "u": "https://www.actionnews5.com/politics/election-results/"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",
@@ -213922,7 +213986,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/virginia-senate-results"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "D",
@@ -213973,7 +214038,8 @@
             "u": "https://www.nbcnews.com/politics/2026-elections/west-virginia-senate-results"
           },
           "asof": "2026-11-04"
-        }
+        },
+        "date": "2026-11-04"
       },
       "held": {
         "party": "R",

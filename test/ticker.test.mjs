@@ -21,15 +21,23 @@ test('only the last 24 hours: a timestamp exactly, a date alone counted from noo
   assert.equal(isFresh('2026-11-12',NOV9),false,'a date to come');assert.equal(isFresh('2026-11-09',Date.parse('2026-11-09T01:00:00Z')),true,'today, early in the day');assert.equal(isFresh('',NOV9),false);
 });
 
-test('races: a race still counting stays on; a call only within 24 hours of the results it\'s in',()=>{
-  const items=raceItems(research,{now:NOV9,people});
+test('races: a race still counting stays on; a call only within 24 hours of its own date',()=>{
+  const NOV13=Date.parse('2026-11-13T15:00:00Z'),items=raceItems(research,{now:NOV13,people});
   const ak=items.find(x=>x.key==='race:S-AK');
-  assert.deepEqual([ak.tag,ak.date,text(ak)],['Still counting','2026-11-04','Alaska Senate: Peltola (D) leads Sullivan (R) by 626 votes']);
-  assert.ok(items.length&&items.every(x=>x.tag==='Still counting'),'five days on, only the races still counting');
-  const fresh=raceItems(research,{now:Date.parse('2026-11-04T20:00:00Z'),people});
-  const ga=fresh.find(x=>x.key==='race:S-GA');
+  assert.deepEqual([ak.tag,ak.date,text(ak),ak.href],['Still counting','2026-11-11','Alaska Senate: Peltola (D) leads Sullivan (R) by 3,975 votes','#peltola']);
+  assert.ok(items.length&&items.every(x=>x.tag==='Still counting'),'two days after the last call, only the races still counting');
+  // On the day of a call, that call (a results-only race too); the calls of election night stay off.
+  const nov11={...research,election:{...research.election,asof:'2026-11-11'}};
+  const fresh=raceItems(nov11,{now:Date.parse('2026-11-11T20:00:00Z'),people});
+  const ms=fresh.find(x=>x.key==='race:S-MS');
+  assert.equal(text(ms),'Mississippi Senate: Colom (D) wins · called by the AP on Nov. 11; Cindy Hyde-Smith conceded');
+  assert.ok(!fresh.some(x=>x.key==='race:S-GA'),'a call from Nov. 4 isn\'t news on Nov. 11');
+  const nov4={...research,election:{...research.election,asof:'2026-11-04'}};
+  const night=raceItems(nov4,{now:Date.parse('2026-11-04T20:00:00Z'),people});
+  const ga=night.find(x=>x.key==='race:S-GA');
   assert.deepEqual([ga.tag,text(ga),ga.href],['Race called','Georgia Senate: Ossoff (D) wins · called by NBC News and CBS News','#ossoff']);
-  assert.ok(fresh.length>items.length,'on the day of the results, the calls too');
+  const az=night.find(x=>x.key==='race:H-AZ-06');
+  assert.ok(az&&/^Arizona AZ-06: Mendoza \(D\) wins/.test(text(az)),'a House toss-up names its winner as the race lists them');
   assert.deepEqual(raceItems(research,{now:Date.parse('2027-01-15'),people}),[],'gone once the results are weeks old, even still counting');
 });
 

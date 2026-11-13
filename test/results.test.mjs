@@ -81,7 +81,7 @@ test('the count of called races names the ones not called yet',()=>{
   const c=resultCounts([...D.races,...D.liteRaces]);
   const n=D.races.length+D.liteRaces.length;
   assert.equal(c.total,n);assert.equal(c.missing,0);assert.equal(c.decided+c.pending.length,n);
-  assert.deepEqual(c.pending.map(r=>r.id).sort(),['S-AK','S-MS']);
+  assert.deepEqual(c.pending.map(r=>r.id).sort(),['S-AK']);
 });
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{

@@ -3499,7 +3499,7 @@ function renderRaces(){
   const lite=ch=>DATA.liteRaces.filter(r=>(r.chamber||'H')===ch),LS=lite('S'),LH=lite('H');
   app.innerHTML=`
   <section class="hero" style="padding-bottom:10px"><div class="asof">2026 general election${DATA.election?' · '+RESULTS_ASOF():''}</div><h1 style="margin-top:8px">The races</h1>
-  <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them on election night or the morning after, with how much of the vote was counted. They change as counting finishes.']].filter(Boolean),'lede-pts')}
+  <p class="lede">How the vote went on November 3 in every race this site covers: each candidate's share and the reported turnout. Competitive races come first.</p>${points([DATA.election&&['Results',resultsLine()],['Shares','As each source reported them, with how much of the vote was counted: most from election night or the morning after, and a race called later with the count from its call. They change as counting finishes.']].filter(Boolean),'lede-pts')}
   <div class="toolbar"><div class="seg" id="rs"><button data-c="S" class="active">Senate (${S.length+LS.length})</button><button data-c="H">House (${H.length+LH.length})</button></div>
   <label class="small muted">Jump to <select id="rj">${S.concat(LS,H,LH).map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join('')}</select></label></div></section>
   <div id="rlist"></div>`;
