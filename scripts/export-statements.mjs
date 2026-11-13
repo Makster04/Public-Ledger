@@ -4,6 +4,10 @@
 //   npm run statements:export                  everyone with a profile, from config historyFrom on
 //   npm run statements:export -- --read 500    read up to 500 more floor speeches in full this run (default 200)
 //   npm run statements:export -- --since 2020  only statements from 2020 on
+//   npm run statements:export -- --read 4000 --wait
+//                                              when GovInfo says to slow down (about 1,000 reads an hour), save what's
+//                                              read so far, wait an hour (or as long as GovInfo says) and go on, until
+//                                              4,000 are read or none are left; without --wait the run stops there
 // Writes data/collected-statements/<id>.json: {about, person, name, built, since, counts, statements: [{date, source,
 // where, url, sentences}]}, newest first. Only the sentences that name one of a question's search phrases are kept
 // (data/question-search.json "any" and "said", without the "not" ones; scripts/question-statements.mjs topicSentences),
@@ -25,6 +29,7 @@ import {searchTests,topicSentences} from './question-statements.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const KINDS=['crec-day','press','bluesky','threads'];
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+export const HOUR=60*60_000,MAX_PAUSES=24;
 // Where a statement was said, as the tagged statement shows it.
 export const whereOf=s=>s.source==='floor'?`Floor speech, Congressional Record: ${s.title||''}`.trim():s.source==='press'?`Press release: ${String(s.title||'').slice(0,140)}`:
   s.source==='threads'?'Threads post':'Bluesky post';
@@ -43,11 +48,38 @@ export function exportStatements(statements,tests){
   return out;
 }
 
+// Floor speeches in the speaker's own words (s.text): from the saved Record pages in cache, else read from GovInfo, newest
+// first, up to maxRead this run, with a pause of gap between reads. A "slow down" (HTTP 429) ends the reading, or with
+// wait pauses for as long as GovInfo asks (an hour when it doesn't say, at most MAX_PAUSES times) and reading goes on;
+// onPause(ms, fetched) runs first, so what's read so far can be saved. A page GovInfo doesn't have is kept as empty, so it
+// isn't asked for again. people: profile id -> {name, stateName}. Returns {fetched, waiting, stopped, pauses}.
+export async function readSpeeches(floor,{cache,key,env,people,maxRead,wait=false,pause=sleep,onPause=null,gap=400}){
+  const fileOf=g=>path.join(cache,`${String(g).replace(/[^\w.-]/g,'_')}.txt`);
+  const fill=s=>{const f=fileOf(s.granule);s.text=fs.existsSync(f)?speakerText(fs.readFileSync(f,'utf8'),people.get(s.person))||'':null;};
+  const missing=[];
+  for(const s of floor){if(ROUTINE.test(s.title||'')){s.text='';continue;}fill(s);if(s.text==null&&!missing.includes(s.granule))missing.push(s.granule);}
+  let fetched=0,stopped=null,pauses=0;
+  for(const g of missing){
+    if(!key||fetched>=maxRead)break;
+    for(;;){
+      try{fs.writeFileSync(fileOf(g),recordText(await requestSource(`https://api.govinfo.gov/packages/${g.slice(0,15)}/granules/${g}/htm`,env,{as:'text'})));fetched++;await pause(gap);break;}
+      catch(e){
+        if(e.statusCode===404){fs.writeFileSync(fileOf(g),'');break;}
+        if(e.statusCode===429&&wait&&pauses<MAX_PAUSES){const ms=e.retryAfter>0?e.retryAfter:HOUR;pauses++;if(onPause)await onPause(ms,fetched);await pause(ms);continue;}
+        stopped=e.statusCode===429?'GovInfo asked to slow down (HTTP 429)':e.message;break;
+      }
+    }
+    if(stopped)break;
+    for(const s of floor)if(s.granule===g)fill(s);
+  }
+  return {fetched,waiting:floor.filter(s=>s.text==null).length,stopped,pauses};
+}
+
 async function main(){
   const arg=(name,d)=>{const i=process.argv.indexOf(name);return i>=0?process.argv[i+1]:d;};
   const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
   const config=read('data/config.json'),research=read('public/research.json'),searches=read('data/question-search.json');
-  const since=Number(arg('--since',config.historyFrom||2016)),maxRead=Number(arg('--read',200)),env=process.env;
+  const since=Number(arg('--since',config.historyFrom||2016)),maxRead=Number(arg('--read',200)),wait=process.argv.includes('--wait'),env=process.env;
   const dbFile=path.resolve(arg('--db',path.join(root,'.local','records.sqlite')));
   const outDir=path.resolve(arg('--out',path.join(root,'data','collected-statements'))),cache=path.resolve(arg('--speeches',path.join(path.dirname(dbFile),'speeches')));
   if(!fs.existsSync(dbFile)){console.log('No local database yet (.local/records.sqlite). Run npm start once (it collects the statements), then run this again.');process.exit(1);}
@@ -61,36 +93,29 @@ async function main(){
   db.close();
   const all=rows.flatMap(x=>statementsOf(x.kind,x.subject,JSON.parse(x.payload))).filter(s=>ids.has(s.person)&&Number(s.date.slice(0,4))>=since);
 
+  // What's been read so far, written out: each person's statements with their kept sentences.
+  const built=new Date().toISOString().slice(0,10),tests=searchTests(searches);
+  const write=()=>{
+    const out=exportStatements(all.map(s=>({...s,text:s.text??''})),tests);fs.mkdirSync(outDir,{recursive:true});let files=0,n=0,bytes=0;
+    for(const [id,x] of Object.entries(out)){
+      if(!x.statements.length)continue;
+      const body=JSON.stringify({about:'What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question\'s search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.',
+        person:id,name:people.get(id)?.name||id,built,since,counts:x.counts,statements:x.statements},null,1)+'\n';
+      fs.writeFileSync(path.join(outDir,`${id}.json`),body);files++;n+=x.statements.length;bytes+=body.length;
+    }
+    return {files,n,bytes};
+  };
   // Floor speeches: the speaker's own words, from the saved text or read now (newest first).
   fs.mkdirSync(cache,{recursive:true});
-  const key=env.GOVINFO_API_KEY||env.CONGRESS_API_KEY;let fetched=0,stopped=null,waiting=0;
-  const floor=all.filter(s=>s.source==='floor').sort((a,b)=>b.date.localeCompare(a.date)),pages=new Map();
-  for(const s of floor){
-    if(ROUTINE.test(s.title||'')){s.text='';continue;}
-    const file=path.join(cache,`${String(s.granule).replace(/[^\w.-]/g,'_')}.txt`);
-    if(!pages.has(s.granule)){
-      if(fs.existsSync(file))pages.set(s.granule,fs.readFileSync(file,'utf8'));
-      else if(key&&!stopped&&fetched<maxRead){
-        try{const t=recordText(await requestSource(`https://api.govinfo.gov/packages/${s.granule.slice(0,15)}/granules/${s.granule}/htm`,env,{as:'text'}));fs.writeFileSync(file,t);pages.set(s.granule,t);fetched++;await sleep(400);}
-        // A page GovInfo doesn't have is kept as empty, so it isn't asked for again.
-        catch(e){if(e.statusCode===404){fs.writeFileSync(file,'');pages.set(s.granule,'');}else stopped=e.statusCode===429?'GovInfo asked to slow down (HTTP 429)':e.message;}
-      }
-    }
-    const t=pages.get(s.granule);if(t==null){waiting++;s.text='';continue;}
-    s.text=t?speakerText(t,people.get(s.person)):'';
-  }
-
-  const out=exportStatements(all,searchTests(searches)),built=new Date().toISOString().slice(0,10);
-  fs.mkdirSync(outDir,{recursive:true});let files=0,n=0,bytes=0;
-  for(const [id,x] of Object.entries(out)){
-    if(!x.statements.length)continue;
-    const body=JSON.stringify({about:'What this person said that the local refresh collected (floor speeches in their own words, press releases, Bluesky and Threads posts), keeping only the sentences that name an alignment question\'s search phrases, for tagging to the questions (data/question-statements.json). From scripts/export-statements.mjs.',
-      person:id,name:people.get(id)?.name||id,built,since,counts:x.counts,statements:x.statements},null,1)+'\n';
-    fs.writeFileSync(path.join(outDir,`${id}.json`),body);files++;n+=x.statements.length;bytes+=body.length;
-  }
+  const key=env.GOVINFO_API_KEY||env.CONGRESS_API_KEY;
+  const floor=all.filter(s=>s.source==='floor').sort((a,b)=>b.date.localeCompare(a.date));
+  const onPause=(ms,fetched)=>{const w=write(),until=new Date(Date.now()+ms).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
+    console.log(`GovInfo asked to slow down after ${fetched.toLocaleString()} read this run. Saved ${w.n.toLocaleString()} statements so far; going on at ${until}.`);};
+  const {fetched,waiting,stopped,pauses}=await readSpeeches(floor,{cache,key,env,people,maxRead,wait,onPause});
+  const {files,n,bytes}=write();
   const by={};for(const s of all)by[s.source]=(by[s.source]||0)+1;
   console.log(`Collected from ${since} on: ${Object.entries(by).map(([k,v])=>`${k==='floor'?'floor speeches':k==='press'?'press releases':`${k} posts`} ${v.toLocaleString()}`).join(', ')||'nothing yet'}.`);
-  console.log(`Floor speeches read now: ${fetched}${waiting?`; ${waiting} still to read (run again${key?'':': needs CONGRESS_API_KEY in .dev.vars'})`:''}.${stopped?` Stopped reading: ${stopped}.`:''}`);
+  console.log(`Floor speeches read now: ${fetched.toLocaleString()}${pauses?` (after ${pauses} pause${pauses===1?'':'s'})`:''}${waiting?`; ${waiting.toLocaleString()} still to read (run again${key?'':': needs CONGRESS_API_KEY in .dev.vars'})`:'; none left to read'}.${stopped?` Stopped reading: ${stopped}.`:''}`);
   console.log(`Wrote ${n.toLocaleString()} statements on the questions' topics for ${files} people to ${path.relative(root,outDir)||outDir} (${Math.round(bytes/1024).toLocaleString()} KB).`);
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)main().catch(e=>{console.error(e.message);process.exit(1);});
