@@ -11,8 +11,10 @@
 //   kept         every action after the promise went its way
 //   broken       every action went against it; or a reversal: after acting its way, at least 2 later bills went against
 //                it and none its way since; or no bill introduced, (co)sponsored or voted on in the GRACE_MONTHS they
-//                held office after the promise (or after taking office, for a promise made as a candidate)
-//   unclear      some actions each way (often a bill that mixed several things): a reviewer decides
+//                held office after the promise (or after taking office, for a promise made as a candidate), while
+//                others in their chamber acted on the question (activityIndex: every member's question evidence)
+//   unclear      some actions each way (often a bill that mixed several things); or no action from them when nobody
+//                else in their chamber acted on it either in the records read: a reviewer decides
 //   no-action    in office, nothing on it yet, and the grace months haven't run out (the date they do is shown)
 //   not-tested   not in Congress (a candidate, a member-elect, or out of office) while the promise could be acted on
 // A reviewer can settle any promise in data/promise-reviews.json, keyed "<first question>@<date>":
@@ -68,20 +70,27 @@ export function fullSentence(quote,docs){
 }
 const campaignDocs=c=>(c?.campaigns||[]).flatMap(k=>[...(k.pages||[]),...(k.posts||[])]).filter(p=>p.text);
 
-// When they could act: the time they've held a seat in Congress, from the House and Senate directories (sitting members)
-// or their record (a former member: their first to last action on file). dirs: Map bioguide -> since.
+// Which chamber an action was in: a Senate bill, resolution or amendment, or a Senate roll call ("…#S117-74"), or else
+// the House.
+export const chamberOfRef=ref=>/#S|^\d+-s(?:j?res|conres|amdt)?-/.test(String(ref))?'S':'H';
+// When they could act, and where: the time they've held a seat in Congress, from the House and Senate directories
+// (sitting members) or their record (a former member: their first to last action on file, in the chamber most of them
+// were in). dirs: Map bioguide -> {since, chamber}. elect: true for a 2026 winner who hasn't taken office yet (a former
+// member keeps their old window too, for promises made while they served).
 export function officeWindow(person,{dirs,evidence,elect,today}){
-  const dates=Object.values(evidence||{}).flat().map(a=>a[2]).filter(Boolean).sort();
-  const since=person?.bioguide&&dirs?.get(person.bioguide);
-  if(since)return {from:[since,dates[0]].filter(Boolean).sort()[0],to:today,current:true};
-  if(elect)return {from:null,to:null,current:false,takes:elect};
-  if(dates.length)return {from:dates[0],to:dates.at(-1),current:false};
-  return {from:null,to:null,current:false};
+  const acts=Object.values(evidence||{}).flat(),dates=acts.map(a=>a[2]).filter(Boolean).sort();
+  const dir=person?.bioguide&&dirs?.get(person.bioguide),takes=elect?{takes:true}:{};
+  if(dir)return {from:[dir.since,dates[0]].filter(Boolean).sort()[0],to:today,current:true,chamber:dir.chamber||person.chamber||null};
+  if(dates.length){const s=acts.filter(a=>chamberOfRef(a[0])==='S').length;return {from:dates[0],to:dates.at(-1),current:false,chamber:s>acts.length/2?'S':'H',...takes};}
+  return {from:null,to:null,current:false,chamber:null,...takes};
 }
 
 // One promise's verdict. promise: {date, qs: [[question, side]]}; acts: [[question, bill, kind, date, side]] on its
-// questions; office: officeWindow(); coded: how many bills, amendments and roll calls are coded to its questions.
-export function judge(promise,acts,office,{today,grace=GRACE_MONTHS,review=null,who='They',coded=0}={}){
+// questions; office: officeWindow().
+// activity(questions, chamber, from, to): how many actions others in that chamber took on those questions in that time
+// (all members' question evidence); with none, a promise with no action of theirs goes to a reviewer instead of counting
+// as broken, since the records read may simply have no bill on it for that time.
+export function judge(promise,acts,office,{today,grace=GRACE_MONTHS,review=null,activity=null}={}){
   const sideOf=new Map(promise.qs.map(([q,s])=>[q,s]));
   const after=acts.filter(a=>a[3]>promise.date).sort((a,b)=>a[3].localeCompare(b[3])),before=acts.filter(a=>a[3]<=promise.date);
   // One count per bill (its key without the roll call) and side: a cosponsorship and the vote on the same bill are one.
@@ -98,22 +107,32 @@ export function judge(promise,acts,office,{today,grace=GRACE_MONTHS,review=null,
     if(later.length>=2&&later.length===no.length)return {...base,status:'broken',rule:'reversal',why:`Their actions on ${plural(yes.length,'bill')} went its way until ${fmt(lastYes)}; then ${plural(later.length,'bill')} went against it and none its way since: a reversal.`};
     return {...base,status:'unclear',rule:'mixed',why:`Their actions on ${plural(yes.length,'bill')} went its way and on ${no.length} against it. A reviewer decides, often because a bill mixed it with other things.`};
   }
-  if(office.takes)return {...base,status:'not-tested',rule:'not-in-office',why:`Takes office ${fmt(office.takes)}; checked from then on.`};
-  if(!office.from)return {...base,status:'not-tested',rule:'not-in-office',why:'Not in Congress, so there is no vote or bill of theirs to check yet.'};
+  const won='Won in 2026; checked once they take office.';
+  if(!office.from)return {...base,status:'not-tested',rule:'not-in-office',why:office.takes?won:'Not in Congress, so there is no vote or bill of theirs to check yet.'};
   const start=promise.date>office.from?promise.date:office.from,end=office.current?today:office.to;
-  if(start>end)return {...base,status:'not-tested',rule:'not-in-office',why:`Made after they left Congress (their last action on file is from ${fmt(office.to)}).`};
+  if(start>end)return {...base,status:'not-tested',rule:'not-in-office',why:office.takes?won:`Made after they left Congress (their last action on file is from ${fmt(office.to)}).`};
   if(promise.reactive)return {...base,status:'not-tested',rule:'nothing-to-oppose',why:'A promise to oppose or defend against something, and nothing on it has come up for them to act on.'};
-  const deadline=addMonths(start,grace),bills=coded?` (${coded.toLocaleString('en-US')} bills and votes on ${promise.qs.length>1?'these questions':'this question'} in the records read)`:'';
-  if(deadline<=end){const m=monthsBetween(start,end);
-    return {...base,status:'broken',rule:'no-action',why:`No bill on it introduced, sponsored or cosponsored, and no vote on it, in ${m>=24?`${Math.floor(m/12)} years`:plural(m,'month')} in office after the promise${bills}.`};}
+  const deadline=addMonths(start,grace),house=office.chamber==='S'?'Senate':'House';
+  if(deadline<=end){const m=monthsBetween(start,end),span=m>=24?`${Math.floor(m/12)} years`:plural(m,'month');
+    const others=activity?activity(promise.qs.map(([q])=>q),office.chamber,start,end):null;
+    if(others===0)return {...base,status:'unclear',rule:'no-record',why:`No bill or vote on it from them in ${span} in office after the promise, but none from anyone else in the ${house} either in the records read, so whether there was a bill to join is for a reviewer.`};
+    return {...base,status:'broken',rule:'no-action',why:`No bill on it introduced, sponsored or cosponsored, and no vote on it, in ${span} in office after the promise${others?`, while other members of the ${house} acted on it ${others===1?'once':`${others.toLocaleString('en-US')} times`}`:''}.`};}
   if(office.current)return {...base,status:'no-action',rule:'grace',deadline,why:`Nothing on it yet. Counted as broken if there's still no bill or vote on it by ${fmt(deadline)}.`};
-  return {...base,status:'not-tested',rule:'left-office',why:`They left Congress within ${grace} months of the promise.`};
+  return {...base,status:'not-tested',rule:'left-office',why:office.takes?won:`They left Congress within ${grace} months of the promise.`};
 }
 
+// Every member's actions on each question by chamber, sorted by date: activity(questions, chamber, from, to, except)
+// counts those after `from` and up to `to`, leaving out the person themself. all: {bioguide: question evidence}.
+export function activityIndex(all){
+  const by={};for(const [bg,E] of Object.entries(all))for(const [q,list] of Object.entries(E||{}))for(const [ref,,date] of list)((by[q]||={})[chamberOfRef(ref)]||=[]).push([date,bg]);
+  for(const q of Object.values(by))for(const l of Object.values(q))l.sort((a,b)=>a[0].localeCompare(b[0]));
+  return (qs,chamber,from,to,except)=>qs.reduce((t,q)=>t+(by[q]?.[chamber]||[]).filter(([d,bg])=>d>from&&d<=to&&bg!==except).length,0);
+}
 const kindOf=where=>/campaign|candidate questionnaire/i.test(where||'')?'campaign':'office';
 // Every profiled person's promises. statements: data/question-statements.json; people: the profiles; evidence(bioguide)
-// -> their question evidence; campaign(id) -> their campaign text; coded: {question: count}.
-export function buildPromises({statements,people,evidence,campaign,dirs,elect,reviews={},coded={},today}){
+// -> their question evidence; campaign(id) -> their campaign text; activity(questions, chamber, from, to, except bioguide)
+// -> how many actions other members took on them (activityIndex).
+export function buildPromises({statements,people,evidence,campaign,dirs,elect,reviews={},activity=null,today}){
   const out={},queue=[];
   for(const person of people){
     const tags=statements[person.id];if(!tags)continue;
@@ -130,7 +149,8 @@ export function buildPromises({statements,people,evidence,campaign,dirs,elect,re
       const sentence=fullSentence(g.quote,docs),words=promiseWords(sentence||g.quote,names);
       if(!words&&review?.status!=='promise')continue;
       const acts=g.qs.flatMap(([q])=>(ev[q]||[]).map(a=>[q,...a]));
-      const v=judge({...g,reactive:!!words?.reactive},acts,office,{today,review:review?.status==='promise'?null:review,coded:g.qs.reduce((t,[q])=>t+(coded[q]||0),0)});
+      const others=activity&&((qs,chamber,from,to)=>activity(qs,chamber,from,to,person.bioguide));
+      const v=judge({...g,reactive:!!words?.reactive},acts,office,{today,review:review?.status==='promise'?null:review,activity:others});
       const p={key,qs:g.qs,quote:g.quote,...(sentence?{sentence}:{}),date:g.date,url:g.url,where:g.where,kind:kindOf(g.where),
         status:v.status,rule:v.rule,why:v.why,...(v.deadline?{deadline:v.deadline}:{}),...(v.reviewed?{reviewed:v.reviewed}:{}),
         forN:v.forN,againstN:v.againstN,acts:v.acts,before:v.before.sort((a,b)=>b[3].localeCompare(a[3])).slice(0,3),beforeN:v.before.length};
@@ -147,16 +167,16 @@ function main(){
   const read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8')),has=f=>fs.existsSync(path.join(ROOT,f));
   const R=read('public/research.json'),statements=read('data/question-statements.json');delete statements.about;
   const people=[...R.members,...(R.cands||[]),...(R.featured||[])];
-  const dirs=new Map([...read('public/senate.json').senators,...read('public/house.json').members].filter(m=>m.bioguide&&m.since).map(m=>[m.bioguide,m.since]));
+  const dirs=new Map([...read('public/senate.json').senators.map(m=>({...m,chamber:'S'})),...read('public/house.json').members.map(m=>({...m,chamber:'H'}))].filter(m=>m.bioguide&&m.since).map(m=>[m.bioguide,{since:m.since,chamber:m.chamber}]));
   // Who won a 2026 race and takes office in January: the race's winner, by profile.
   const winners=new Set();
   for(const r of [...R.races,...(R.liteRaces||[])]){const w=r.result?.winner;if(!w)continue;winners.add(w);for(const n of r.nominees||[])if((n.id||n.fecCand)===w&&n.profile)winners.add(n.profile);}
   const reviews=has('data/promise-reviews.json')?read('data/promise-reviews.json').people||{}:{};
-  const coded=read('public/question-stances.json').coded||{};
-  const {people:out,queue}=buildPromises({statements,people,dirs,reviews,coded,today,
+  const evDir=path.join(ROOT,'public','question-evidence'),everyone=Object.fromEntries(fs.readdirSync(evDir).filter(f=>f.endsWith('.json')).map(f=>[f.slice(0,-5),JSON.parse(fs.readFileSync(path.join(evDir,f),'utf8'))]));
+  const {people:out,queue}=buildPromises({statements,people,dirs,reviews,today,activity:activityIndex(everyone),
     evidence:bg=>has(`public/question-evidence/${bg}.json`)?read(`public/question-evidence/${bg}.json`):null,
     campaign:id=>has(`data/campaign-text/${id}.json`)?read(`data/campaign-text/${id}.json`):null,
-    elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)?'2027-01-03':null});
+    elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)});
   fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, step, compromise, broken, unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
     built:today,graceMonths:GRACE_MONTHS,people:out}));
   const all=Object.values(out).flat(),n={};for(const p of all)n[p.status]=(n[p.status]||0)+1;

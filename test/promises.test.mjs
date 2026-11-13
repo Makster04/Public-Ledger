@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {promiseWords,fullSentence,officeWindow,judge,buildPromises,addMonths,GRACE_MONTHS,STATUSES} from '../scripts/build-promises.mjs';
+import {promiseWords,fullSentence,officeWindow,judge,buildPromises,addMonths,activityIndex,chamberOfRef,GRACE_MONTHS,STATUSES} from '../scripts/build-promises.mjs';
 import {promiseScore,promiseStatus,PROMISE_WEIGHT} from '../public/grades.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf8'));
@@ -11,7 +11,7 @@ const today='2026-11-13';
 // An action: [question, bill, kind, date, side].
 const act=(date,side,bill='119-s-1',kind='c',q='minimum-wage')=>[q,bill,kind,date,side];
 const promise={date:'2020-11-03',qs:[['minimum-wage',0]]};
-const office={from:'2021-01-03',to:today,current:true};
+const office={from:'2021-01-03',to:today,current:true,chamber:'S'};
 
 test('promise wording: "I will", "I\'ll", "I support", the campaign about them; not their record or others',()=>{
   for(const t of ['I will support the Equality Act.','I’ll vote to crack down on price gouging by drug companies.','I support a ban on the sale of semi-automatic rifles.',
@@ -48,11 +48,17 @@ test('verdicts: kept, broken, a reversal, unclear when actions go both ways; ear
 
 test('no action: broken after 6 months in office; within them "no action yet"; candidates and promises to oppose are not tested',()=>{
   assert.equal(GRACE_MONTHS,6);
-  const none=judge(promise,[],office,{today,coded:12});
-  assert.deepEqual([none.status,none.rule],['broken','no-action']);assert.match(none.why,/12 bills and votes/);
+  const none=judge(promise,[],office,{today,activity:()=>12});
+  assert.deepEqual([none.status,none.rule],['broken','no-action']);assert.match(none.why,/other members of the Senate acted on it 12 times/);
+  // Nobody else in their chamber acted on it either: the records may have no bill on it then, so a reviewer decides.
+  const quiet=judge(promise,[],office,{today,activity:()=>0});
+  assert.deepEqual([quiet.status,quiet.rule],['unclear','no-record']);
   const fresh=judge({date:'2026-08-01',qs:promise.qs},[],office,{today});
   assert.deepEqual([fresh.status,fresh.deadline],['no-action','2027-02-01']);
-  assert.equal(judge({...promise,date:'2026-10-01'},[],{from:'2027-01-03',to:null,current:false,takes:'2027-01-03'},{today}).status,'not-tested','a member-elect');
+  assert.equal(judge({...promise,date:'2026-10-01'},[],{from:null,to:null,current:false,takes:true},{today}).status,'not-tested','a member-elect');
+  // A 2026 winner who served before is still checked on promises made while they served.
+  assert.equal(judge({...promise,date:'2021-02-01'},[],{from:'2007-01-03',to:'2024-12-20',current:false,takes:true,chamber:'S'},{today,activity:()=>3}).status,'broken');
+  assert.match(judge({...promise,date:'2026-02-01'},[],{from:'2007-01-03',to:'2024-12-20',current:false,takes:true},{today}).why,/Won in 2026/);
   assert.equal(judge(promise,[],{from:null,to:null,current:false},{today}).status,'not-tested','never in Congress');
   assert.equal(judge({...promise,date:'2026-05-01'},[],{from:'2019-01-03',to:'2025-01-03',current:false},{today}).status,'not-tested','made after leaving');
   assert.equal(judge({...promise,reactive:true},[],office,{today}).rule,'nothing-to-oppose');
@@ -67,10 +73,13 @@ test('a reviewer settles a promise: first step, compromise, or any other verdict
 });
 
 test('office window: sitting members from the directory, former members from their record, members-elect from January',()=>{
-  const ev={q:[['119-s-1','c','2019-04-01',0],['119-s-2','y','2024-06-01',0]]};
-  assert.deepEqual(officeWindow({bioguide:'X'},{dirs:new Map([['X','2021-01-03']]),evidence:ev,today}),{from:'2019-04-01',to:today,current:true});
-  assert.deepEqual(officeWindow({bioguide:'Y'},{dirs:new Map(),evidence:ev,today}),{from:'2019-04-01',to:'2024-06-01',current:false});
-  assert.equal(officeWindow({},{dirs:new Map(),evidence:{},elect:'2027-01-03',today}).takes,'2027-01-03');
+  const ev={q:[['119-s-1','c','2019-04-01',0],['119-hr-2#S119-5','y','2024-06-01',0]]};
+  assert.deepEqual(officeWindow({bioguide:'X'},{dirs:new Map([['X',{since:'2021-01-03',chamber:'S'}]]),evidence:ev,today}),{from:'2019-04-01',to:today,current:true,chamber:'S'});
+  assert.deepEqual(officeWindow({bioguide:'Y'},{dirs:new Map(),evidence:ev,today}),{from:'2019-04-01',to:'2024-06-01',current:false,chamber:'S'});
+  assert.equal(officeWindow({},{dirs:new Map(),evidence:{},elect:true,today}).takes,true);
+  assert.deepEqual(['117-s-53','117-samdt-972','117-hr-5376#S117-853','117-hr-5376','118-hres-9#H118-4','119-sjres-1'].map(chamberOfRef),['S','S','S','H','H','S']);
+  const act=activityIndex({A:{q:[['119-s-1','c','2025-02-01',0],['119-hr-1','c','2025-03-01',0]]},B:{q:[['119-s-2','c','2025-04-01',1]]}});
+  assert.deepEqual([act(['q'],'S','2025-01-01','2026-01-01'),act(['q'],'S','2025-01-01','2026-01-01','A'),act(['q'],'H','2025-01-01','2026-01-01'),act(['q'],'S','2025-03-15','2026-01-01')],[2,1,1,1]);
 });
 
 test('the grade: kept 1, first step 3/4, compromise 1/2, broken 0; waiting promises aren\'t counted; a passed deadline is broken',()=>{
@@ -109,7 +118,7 @@ test('public/promises.json: every promise has a known status, a reason, a dated 
 test('buildPromises: one promise per quote and date, tagged to several questions; not-a-promise reviews leave it out',()=>{
   const statements={x:{'minimum-wage':[[0,'I will raise the minimum wage.','2020-11-03','u','Campaign website, 2020']],'paid-leave':[[0,'I will raise the minimum wage.','2020-11-03','u','Campaign website, 2020'],[0,'He has fought for paid leave.','2020-11-03','u','Campaign website, 2020']],
     'tariffs':[[1,'I will end the tariffs.','2020-11-03','u','Campaign website, 2020']]}};
-  const out=buildPromises({statements,people:[{id:'x',name:'Pat X',short:'X',bioguide:'B1'}],dirs:new Map([['B1','2021-01-03']]),today,coded:{},
+  const out=buildPromises({statements,people:[{id:'x',name:'Pat X',short:'X',bioguide:'B1'}],dirs:new Map([['B1',{since:'2021-01-03',chamber:'S'}]]),today,
     evidence:()=>({'minimum-wage':[['117-s-53','c','2021-01-26',0]]}),campaign:()=>null,elect:()=>null,reviews:{x:{'tariffs@2020-11-03':{status:'not-a-promise',why:'x'}}}});
   const l=out.people.x;
   assert.equal(l.length,1);assert.deepEqual(l[0].qs,[['minimum-wage',0],['paid-leave',0]]);assert.equal(l[0].status,'kept');assert.equal(l[0].kind,'campaign');
