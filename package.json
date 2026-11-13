@@ -52,7 +52,9 @@
     "test:consistency": "python3 -m unittest discover -s test/consistency -v",
     "bills:index": "node scripts/build-bill-index.mjs",
     "bills:candidates": "node scripts/question-bills.mjs",
-    "bills:record": "node scripts/build-question-record.mjs"
+    "bills:record": "node scripts/build-question-record.mjs",
+    "statements:find": "node scripts/question-statements.mjs --find",
+    "statements:record": "node scripts/question-statements.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.0.0"
