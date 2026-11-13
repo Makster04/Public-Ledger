@@ -15,6 +15,7 @@ import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES} from './industries.js';
+import {ISSUE_ICON,topicCategory} from './issue-icons.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
@@ -44,6 +45,8 @@ const byId=Object.fromEntries(ALL.concat(FEATURED).map(s=>[s.id,s]));
 // are its two sides, group its category.
 const QUESTIONS=window.QUESTIONS||{questions:[],categories:[]},QSTANCES=window.QSTANCES||{people:{},coded:{}};
 const QCTX={list:QUESTIONS.questions,categories:QUESTIONS.categories};
+// An issue category's emoji at the start of a sentence about it (public/issue-icons.js); hidden from screen readers.
+const issIcon=cat=>ISSUE_ICON[cat]?`<span class="iss-ic" aria-hidden="true">${ISSUE_ICON[cat]}</span> `:'';
 const QISS=QUESTIONS.questions.map(q=>({...q,label:q.q,A:q.sides[0],B:q.sides[1],statement:q.q,group:q.cat})),QISSBY=Object.fromEntries(QISS.map(i=>[i.id,i]));
 const QCODED=QSTANCES.coded&&!Array.isArray(QSTANCES.coded)?QSTANCES.coded:{};
 // A person's stance on every question (public/question-scores.js personStances), worked out once: their record, their
@@ -1242,12 +1245,12 @@ function qItemsHTML(items){
 function qTableHTML(s,c){
   const st=qstOf(s),qs=c.questions.filter(q=>q.s!=null||st[q.id]?.total).sort((a,b)=>(st[b.id]?.total||0)-(st[a.id]?.total||0));
   return `<table class="qt"><thead><tr><th scope="col">Question and their stance</th><th scope="col">Based on: statements, ratings and votes</th></tr></thead><tbody>${qs.map(q=>{const x=st[q.id]||{a:0,b:0};
-    return `<tr data-q="${esc(q.id)}"><td class="qt-q">${qStanceHead(q,x)}<div class="qt-text">${esc(q.q)}</div><div class="qt-pts">${x.a} pts for "${esc(q.sides[0])}" · ${x.b} for "${esc(q.sides[1])}"${x.s==null?` · a stance needs ${MIN_POINTS}`:''}${x.statementsOnly?' · from statements only, no votes or bills on it':''}</div></td>
+    return `<tr data-q="${esc(q.id)}"><td class="qt-q">${qStanceHead(q,x)}<div class="qt-text">${issIcon(q.cat||c.id)}${esc(q.q)}</div><div class="qt-pts">${x.a} pts for "${esc(q.sides[0])}" · ${x.b} for "${esc(q.sides[1])}"${x.s==null?` · a stance needs ${MIN_POINTS}`:''}${x.statementsOnly?' · from statements only, no votes or bills on it':''}</div></td>
       <td class="qt-items"><p class="small muted" style="margin:0">Loading the record…</p></td></tr>`;}).join('')}</tbody></table>`;
 }
 function mountQCats(s,host,x){
   if(!host)return;
-  host.innerHTML=`<p class="small muted">Open a category for its questions, their stance on each, and the statements, ratings and votes behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary><b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${qTableHTML(s,c)}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
+  host.innerHTML=`<p class="small muted">Open a category for its questions, their stance on each, and the statements, ratings and votes behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary>${issIcon(c.id)}<b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${qTableHTML(s,c)}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
   const fill=async d=>{if(d.dataset.done)return;d.dataset.done='1';const [ev,meta]=await Promise.all([qEvidence(s),qMeta()]);
     d.querySelectorAll('tr[data-q]').forEach(tr=>{const q=QISSBY[tr.dataset.q];if(q)tr.querySelector('.qt-items').innerHTML=qItemsHTML(qItems(s,q,ev,meta));});
     d.querySelectorAll('.qt-more').forEach(b=>b.addEventListener('click',()=>{const cell=b.closest('.qt-items'),open=b.dataset.open!=='1';
@@ -1330,7 +1333,7 @@ function pActRow(a,side,meta){
 }
 function promiseCard(s,it,meta,open){
   const p=it.p,sides=new Map(p.qs.map(([q,v])=>[q,v])),qs=p.qs.map(([q])=>QISSBY[q]).filter(Boolean);
-  const cat=qs[0]?(QUESTIONS.categories.find(c=>c.id===qs[0].cat)?.name||''):'';
+  const cat=qs[0]?(QUESTIONS.categories.find(c=>c.id===qs[0].cat)?.name||''):'',catId=qs[0]?.cat||null;
   const quote=p.sentence?`…${esc(p.quote)}…`:esc(p.quote),from=p.sentence?`<p class="kw-from">From the sentence: “${esc(p.sentence).replace(esc(p.quote),`<mark>${esc(p.quote)}</mark>`)}”</p>`:'';
   const acts=[...p.acts].sort((a,b)=>b[3].localeCompare(a[3])),shown=4,sideOf=a=>sides.get(a[0]);
   const actsHTML=acts.length?`<div class="kw-acts"><h6>What ${esc(s.short)} did after the promise (${acts.length})</h6>${acts.map((a,i)=>i<shown?pActRow(a,sideOf(a),meta):`<div class="kw-extra" hidden>${pActRow(a,sideOf(a),meta)}</div>`).join('')}${acts.length>shown?`<button type="button" class="qt-more kw-more" data-n="${acts.length}">Show all ${acts.length} →</button>`:''}</div>`:'';
@@ -1338,7 +1341,7 @@ function promiseCard(s,it,meta,open){
   const label=PSTAT[it.status]?.[2]||it.status,why=it.status==='alleged'&&p.status==='no-action'?`No bill or vote on it by ${fmtDate(p.deadline)}, ${GRACE_TEXT} after the promise.`:p.why;
   return `<details class="kw-p ${PSTAT[it.status]?.[0]||'t'}" data-status="${it.status}" data-kind="${p.kind}"${open?' open':''}><summary>
     <div class="kw-ph">${pPill(it.status)}<span class="kw-topic">${esc(cat)}${PKIND[p.kind]?` · ${esc(PKIND[p.kind])}`:''}</span></div>
-    <p class="kw-q">“${quote}”</p>${from}
+    <p class="kw-q">${issIcon(catId)}“${quote}”</p>${from}
     <p class="kw-meta">${esc(p.where)} · ${esc(fmtDate(p.date))}${p.url?` · <a href="${esc(p.url)}" target="_blank" rel="noopener">source ↗</a>`:''}</p>
     <p class="kw-why"><b>${esc(label)}.</b> ${esc(why)}${p.reviewed?` <span class="muted small">Reviewed ${esc(fmtDate(p.reviewed))}.</span>`:''}</p></summary>
     <p class="kw-check"><b>Checked against</b> ${qs.map(q=>`“${esc(q.q)}” <span class="muted">(the promise takes the ${esc(q.sides[sides.get(q.id)])} side)</span>`).join('; ')}</p>
@@ -1349,7 +1352,7 @@ function checkCard(s,it,open){
   const note=x.vague?'A vague goal: listed, not scored.':x.debate?'Said in debate the day of the vote or the day before: listed, not scored.':x.note||'';
   return `<details class="kw-p ${PSTAT[it.status]?.[0]||'t'}" data-status="${it.status}" data-kind="check"${open?' open':''}><summary>
     <div class="kw-ph">${pPill(it.status)}<span class="kw-topic">${esc(x.topic||'')} · ${x.pledge?'Signed pledge':'Reviewed check'}</span></div>
-    <p class="kw-q">“${esc(String(x.said?.text||'').replace(/^"|"$/g,''))}”</p>
+    <p class="kw-q">${issIcon(topicCategory(x.topic))}“${esc(String(x.said?.text||'').replace(/^"|"$/g,''))}”</p>
     <p class="kw-meta">${esc(fmtDate(String(x.said?.date||'').slice(0,10)))}${src(x.said?.src)}</p>
     <p class="kw-why"><b>${esc(PSTAT[it.status]?.[2]||'')}.</b> ${esc(note)}</p></summary>
     <div class="kw-acts"><h6>What the record shows</h6><p class="small" style="margin:0">${esc(x.did?.text||'')}</p><p class="kw-meta" style="margin:6px 0 0">${esc(String(x.did?.date||''))}${src(x.did?.src)}</p>${x.record?`<p class="small muted" style="margin:6px 0 0">Context: ${esc(x.record)}${src(x.recordSrc)}</p>`:''}${x.pledge?pledgeBlock(s,x):''}</div></details>`;
@@ -1740,7 +1743,7 @@ function lookoutsBox(s,inp){
     const now=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
     return `<span class="lk-sp">Its super PAC spending${now?'':' this cycle'}: ${parts.join(' · ')}</span>`;};
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
-    return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}<span class="sr-only">: ${said}</span></button>
+    return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
     <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Super PAC spending, shown under AIPAC, Crypto and Big Tech + AI since they spend heavily that way, never changes the mark: the campaign doesn't take it, and it can be for or against them. More in each tracker below.</p></div>`;
@@ -2368,7 +2371,7 @@ function ovAlign(s){
   const n=k=>rows.filter(y=>y.k===k).length;
   const txt=({x,k})=>k==='none'?'Not on record':k==='match'?`Matches you (${esc(x.word)})`:k==='differ'?`Doesn’t match (${esc(x.word)})`:`Mixed: ${esc(x.word)}`;
   const body=`<div class="row" style="margin-bottom:6px"><span class="chip good">✓ ${n('match')} match</span><span class="chip crit">✕ ${n('differ')} differ</span>${n('mixed')?`<span class="chip warn">◐ ${n('mixed')} mixed</span>`:''}<span class="chip ghost">${n('none')} not on record</span></div>
-    <ul class="ov-iss">${rows.map(y=>`<li class="${y.k}"><span class="ov-mk ${y.k}" aria-hidden="true">${SYM[y.k]}</span><span>${esc(y.x.q.q)}</span><span class="r">${txt(y)}</span></li>`).join('')}</ul>`;
+    <ul class="ov-iss">${rows.map(y=>`<li class="${y.k}"><span class="ov-mk ${y.k}" aria-hidden="true">${SYM[y.k]}</span><span>${issIcon(y.x.q.cat)}${esc(y.x.q.q)}</span><span class="r">${txt(y)}</span></li>`).join('')}</ul>`;
   return ovCard('Your positions',T,`Your ${r.nChosen} answered question${r.nChosen===1?'':'s'}. A question not on their record is left blank, not counted as a mismatch.`,body,`Not a rating of the candidate. <a href="#${s.id}-match">Evidence for every question →</a>`);
 }
 // ---------- key-vote ideology: bills marked liberal or conservative, scored from how each person voted ----------
@@ -2850,7 +2853,7 @@ function builderHTML(){
     <div class="row" style="margin-bottom:10px"><span class="small muted">Start from an example (you can change every choice):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
     <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>.</p>
     ${QISS.filter(i=>QCODED[i.id]).map(i=>{const pr=PROF.issues[i.id]||{};return `<div class="alrow" data-i="${i.id}">
-      <div class="alq"><b>${esc(i.q)}</b></div>
+      <div class="alq"><b>${issIcon(i.cat)}${esc(i.q)}</b></div>
       <div class="seg alside" role="group" aria-label="${esc(i.q)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button><button data-s="" class="${!pr.side?'active':''}">Skip</button></div>
       <label class="alw small">Importance <select data-w aria-label="${esc(i.q)}: importance">${IMPORTANCE.map(([w,l])=>`<option value="${w}" ${(pr.w||3)===w?'selected':''}>${l}</option>`).join('')}</select></label>
     </div>`}).join('')}
@@ -2869,7 +2872,7 @@ const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What thi
 // strongly agree/disagree = importance 3, agree/disagree = 2, neutral = answered but not counted. ----------
 // The categories (public/questions.json), with a color from the earlier groups and an icon.
 const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:'econ',transportation:'econ',social:'rights',criminal:'rights',education:'rights',domestic:'rights',immigration:'imm',electoral:'imm',foreign:'foreign','national-security':'foreign',environmental:'env',science:'env',technology:'gov',governance:'gov'};
-const AL_ICON={economic:'$',healthcare:'✚',housing:'⌂',infrastructure:'⛫',transportation:'⛟',social:'♥',criminal:'⚑',education:'✎',domestic:'⌂',immigration:'⛯',electoral:'☑',foreign:'◍','national-security':'⛨',environmental:'❦',science:'⚗',technology:'⌁',governance:'⚖'};
+const AL_ICON=ISSUE_ICON;
 const AL_GROUPS=QUESTIONS.categories.map(c=>[c.id,c.name,AL_ICON[c.id]||'•']);
 const AL_GBY=Object.fromEntries(AL_GROUPS.map(g=>[g[0],g]));
 // mixed order for "All questions": one from each category in turn
@@ -2888,7 +2891,7 @@ function alCard(i){
   const [g,label,icon]=AL_GBY[i.group]||['','Other','•'],cls=AL_CLASS[g]||'econ',n=AL_ORDER.indexOf(i)+1,k=alPick(i.id),p=PROF.issues[i.id]||{};
   const opts=[[0,i.A],[1,i.B],[2,'Skip']];
   return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${cls}" aria-hidden="true">${icon}</span><span class="al-tag al-${cls}">${esc(label)}</span><span class="al-qn">Question ${n} of ${QISS.length}</span></div>
-    <h3 id="alq-${i.id}">${esc(i.q)}</h3><p class="al-tied">${alTied(i)}</p>
+    <h3 id="alq-${i.id}">${issIcon(i.cat)}${esc(i.q)}</h3><p class="al-tied">${alTied(i)}</p>
     <div class="al-opts" role="radiogroup" aria-labelledby="alq-${i.id}">${opts.map(([j,l])=>`<button type="button" role="radio" aria-checked="${k===j}" data-k="${j}" class="${k===j?'on':''}"><span class="al-r" aria-hidden="true"></span>${esc(l)}</button>`).join('')}</div>
     ${k===0||k===1?`<div class="al-opts al-imp" role="radiogroup" aria-label="How important is this question to you?"><span class="small muted" style="align-self:center">How important?</span>${IMPORTANCE.map(([w,l])=>`<button type="button" role="radio" aria-checked="${p.w===w}" data-w="${w}" class="${p.w===w?'on':''}"><span class="al-r" aria-hidden="true"></span>${l}</button>`).join('')}</div>`:''}</article>`;
 }
@@ -3008,7 +3011,7 @@ function alignInto(s,host){
       ${r.nChosen?(r.score==null?points([['On their record',`${r.nCov} of your ${r.nChosen} questions.`],['Needed for a score',`At least ${r.need} of the questions you answered on their record (${MIN_POINTS} or more points on each), and at least half of your total importance.`]],'small'):points([['How it works',`On each question, agreement = (1 + your side × their stance) ÷ 2, where their stance runs from −1 (all on the other side) to +1 (all on yours). Each question counts by the importance you set, from Least (1) to Most (5).`],['The math',`(${r.rows.filter(x=>x.agree!=null).map(x=>`${Math.round(x.agree*100)}% × ${x.pr.w}`).join(' + ')}) ÷ ${r.covW} = ${r.score}%`]],'small')):'<p class="small muted" style="margin:0">Answer questions below or in <a href="#align">My alignment</a>.</p>'}
     </div>
     ${r.nChosen?`<h3 style="margin-top:18px">Question by question</h3>${r.rows.map(x=>`<div class="alissue" data-q="${esc(x.q.id)}">
-      <div class="row" style="justify-content:space-between"><div><b>${esc(x.q.q)}</b> <span class="small muted">· you: ${esc(qSide(x.q.id,x.pr.side))} · importance ${WLAB[x.pr.w]}</span></div>
+      <div class="row" style="justify-content:space-between"><div><b>${issIcon(x.q.cat)}${esc(x.q.q)}</b> <span class="small muted">· you: ${esc(qSide(x.q.id,x.pr.side))} · importance ${WLAB[x.pr.w]}</span></div>
       <div>${x.status==='none'?'<span class="chip ghost">Not on record</span>':`<span class="chip ${x.agree>=.5?'dfor':'dag'}">${esc(x.word)} · ${Math.round(x.agree*100)}% agreement</span>`}</div></div>
       <div class="q-ev small muted">Loading the record…</div></div>`).join('')}`:''}
     <details class="tv" ${r.nChosen?'':'open'}><summary>${r.nChosen?'Change your choices':'Choose your positions'}</summary><div id="alb2" style="margin-top:10px">${builderHTML()}</div></details>`;

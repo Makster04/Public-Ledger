@@ -1205,6 +1205,7 @@ input, select { accent-color: var(--accent); }
 /* Trackers (public/trackers.js): the Summary of Major Lookouts beside the Big Money Independence score, the Trackers section's tabs,
    and the Trackers page. */
 .lookouts .lk-list { list-style: none; margin: 0; padding: 0; }
+.lookouts .lk-ic { white-space: nowrap; }
 .lk-list li { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .lk-list li:last-child { border-bottom: 0; }
 .lk-mark { font-weight: 800; text-align: center; }
