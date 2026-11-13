@@ -7,7 +7,8 @@
 //   npm run statements:export -- --read 4000 --wait
 //                                              when GovInfo says to slow down (about 1,000 reads an hour), save what's
 //                                              read so far, wait an hour (or as long as GovInfo says) and go on, until
-//                                              4,000 are read or none are left; without --wait the run stops there
+//                                              4,000 are read or none are left; without --wait the run stops there.
+//                                              A page that times out is tried again and then skipped (read next run).
 // Writes data/collected-statements/<id>.json: {about, person, name, built, since, counts, statements: [{date, source,
 // where, url, sentences}]}, newest first. Only the sentences that name one of a question's search phrases are kept
 // (data/question-search.json "any" and "said", without the "not" ones; scripts/question-statements.mjs topicSentences),
@@ -30,6 +31,11 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 const KINDS=['crec-day','press','bluesky','threads'];
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 export const HOUR=60*60_000,MAX_PAUSES=24;
+// A page that times out or fails on GovInfo's side (a 5xx, or no answer) is asked for again after these waits; one that
+// still fails is skipped and read on the next run. This many skipped in a row means GovInfo isn't answering: with --wait
+// the reading pauses (an hour) and goes on, without it it stops.
+export const RETRY_WAITS=[15_000,60_000,300_000],MAX_SKIPPED=5,PAGE_TIMEOUT=60_000;
+const passing=e=>e?.name==='TimeoutError'||e?.name==='AbortError'||/timeout|fetch failed|ECONNRESET|ETIMEDOUT|ENOTFOUND|EAI_AGAIN|socket/i.test(String(e?.message||e?.cause?.code||''))||(e?.statusCode>=500&&e?.statusCode<600);
 // Where a statement was said, as the tagged statement shows it.
 export const whereOf=s=>s.source==='floor'?`Floor speech, Congressional Record: ${s.title||''}`.trim():s.source==='press'?`Press release: ${String(s.title||'').slice(0,140)}`:
   s.source==='threads'?'Threads post':'Bluesky post';
@@ -51,28 +57,37 @@ export function exportStatements(statements,tests){
 // Floor speeches in the speaker's own words (s.text): from the saved Record pages in cache, else read from GovInfo, newest
 // first, up to maxRead this run, with a pause of gap between reads. A "slow down" (HTTP 429) ends the reading, or with
 // wait pauses for as long as GovInfo asks (an hour when it doesn't say, at most MAX_PAUSES times) and reading goes on;
-// onPause(ms, fetched) runs first, so what's read so far can be saved. A page GovInfo doesn't have is kept as empty, so it
-// isn't asked for again. people: profile id -> {name, stateName}. Returns {fetched, waiting, stopped, pauses}.
+// onPause(ms, fetched) runs first, so what's read so far can be saved. A page that times out or fails on GovInfo's side is
+// tried again (RETRY_WAITS) and then skipped for this run; MAX_SKIPPED skipped in a row is treated like a slow-down. A
+// page GovInfo doesn't have is kept as empty, so it isn't asked for again. people: profile id -> {name, stateName}.
+// Returns {fetched, waiting, stopped, pauses, skipped}.
 export async function readSpeeches(floor,{cache,key,env,people,maxRead,wait=false,pause=sleep,onPause=null,gap=400}){
   const fileOf=g=>path.join(cache,`${String(g).replace(/[^\w.-]/g,'_')}.txt`);
   const fill=s=>{const f=fileOf(s.granule);s.text=fs.existsSync(f)?speakerText(fs.readFileSync(f,'utf8'),people.get(s.person))||'':null;};
   const missing=[];
   for(const s of floor){if(ROUTINE.test(s.title||'')){s.text='';continue;}fill(s);if(s.text==null&&!missing.includes(s.granule))missing.push(s.granule);}
-  let fetched=0,stopped=null,pauses=0;
+  let fetched=0,stopped=null,pauses=0,skipped=0,inARow=0;
+  const slowDown=async ms=>{if(!wait||pauses>=MAX_PAUSES)return false;pauses++;if(onPause)await onPause(ms,fetched);await pause(ms);return true;};
   for(const g of missing){
     if(!key||fetched>=maxRead)break;
+    let tries=0;
     for(;;){
-      try{fs.writeFileSync(fileOf(g),recordText(await requestSource(`https://api.govinfo.gov/packages/${g.slice(0,15)}/granules/${g}/htm`,env,{as:'text'})));fetched++;await pause(gap);break;}
+      try{fs.writeFileSync(fileOf(g),recordText(await requestSource(`https://api.govinfo.gov/packages/${g.slice(0,15)}/granules/${g}/htm`,env,{as:'text',timeout:PAGE_TIMEOUT})));fetched++;inARow=0;await pause(gap);break;}
       catch(e){
-        if(e.statusCode===404){fs.writeFileSync(fileOf(g),'');break;}
-        if(e.statusCode===429&&wait&&pauses<MAX_PAUSES){const ms=e.retryAfter>0?e.retryAfter:HOUR;pauses++;if(onPause)await onPause(ms,fetched);await pause(ms);continue;}
-        stopped=e.statusCode===429?'GovInfo asked to slow down (HTTP 429)':e.message;break;
+        if(e.statusCode===404){fs.writeFileSync(fileOf(g),'');inARow=0;break;}
+        if(e.statusCode===429){if(await slowDown(e.retryAfter>0?e.retryAfter:HOUR))continue;stopped='GovInfo asked to slow down (HTTP 429)';break;}
+        if(!passing(e)){stopped=e.message;break;}
+        if(tries<RETRY_WAITS.length){await pause(RETRY_WAITS[tries++]);continue;}
+        // Still failing: skip it for this run, unless GovInfo has stopped answering altogether.
+        skipped++;inARow++;
+        if(inARow>=MAX_SKIPPED){if(await slowDown(HOUR)){skipped--;inARow=0;tries=0;continue;}stopped=`GovInfo stopped answering (${inARow} pages in a row timed out or failed: ${e.message})`;}
+        break;
       }
     }
     if(stopped)break;
     for(const s of floor)if(s.granule===g)fill(s);
   }
-  return {fetched,waiting:floor.filter(s=>s.text==null).length,stopped,pauses};
+  return {fetched,waiting:floor.filter(s=>s.text==null).length,stopped,pauses,skipped};
 }
 
 async function main(){
@@ -110,12 +125,12 @@ async function main(){
   const key=env.GOVINFO_API_KEY||env.CONGRESS_API_KEY;
   const floor=all.filter(s=>s.source==='floor').sort((a,b)=>b.date.localeCompare(a.date));
   const onPause=(ms,fetched)=>{const w=write(),until=new Date(Date.now()+ms).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
-    console.log(`GovInfo asked to slow down after ${fetched.toLocaleString()} read this run. Saved ${w.n.toLocaleString()} statements so far; going on at ${until}.`);};
-  const {fetched,waiting,stopped,pauses}=await readSpeeches(floor,{cache,key,env,people,maxRead,wait,onPause});
+    console.log(`GovInfo asked to slow down or stopped answering after ${fetched.toLocaleString()} read this run. Saved ${w.n.toLocaleString()} statements so far; going on at ${until}.`);};
+  const {fetched,waiting,stopped,pauses,skipped}=await readSpeeches(floor,{cache,key,env,people,maxRead,wait,onPause});
   const {files,n,bytes}=write();
   const by={};for(const s of all)by[s.source]=(by[s.source]||0)+1;
   console.log(`Collected from ${since} on: ${Object.entries(by).map(([k,v])=>`${k==='floor'?'floor speeches':k==='press'?'press releases':`${k} posts`} ${v.toLocaleString()}`).join(', ')||'nothing yet'}.`);
-  console.log(`Floor speeches read now: ${fetched.toLocaleString()}${pauses?` (after ${pauses} pause${pauses===1?'':'s'})`:''}${waiting?`; ${waiting.toLocaleString()} still to read (run again${key?'':': needs CONGRESS_API_KEY in .dev.vars'})`:'; none left to read'}.${stopped?` Stopped reading: ${stopped}.`:''}`);
+  console.log(`Floor speeches read now: ${fetched.toLocaleString()}${pauses?` (after ${pauses} pause${pauses===1?'':'s'})`:''}${skipped?`; ${skipped.toLocaleString()} skipped because GovInfo didn't answer (read next run)`:''}${waiting?`; ${waiting.toLocaleString()} still to read (run again${key?'':': needs CONGRESS_API_KEY in .dev.vars'})`:'; none left to read'}.${stopped?` Stopped reading: ${stopped}.`:''}`);
   console.log(`Wrote ${n.toLocaleString()} statements on the questions' topics for ${files} people to ${path.relative(root,outDir)||outDir} (${Math.round(bytes/1024).toLocaleString()} KB).`);
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)main().catch(e=>{console.error(e.message);process.exit(1);});
