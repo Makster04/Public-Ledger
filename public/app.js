@@ -16,7 +16,7 @@ import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
 import {COMPANIES,EXECUTIVES} from './industries.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
-import {TIER_KEYS,TIER_LABEL,TIER_ABOVE,TIER_BELOW,chamberTiers} from './tiers.js';
+import {TIER_KEYS,TIER_LABEL,TIER_FAR,TIER_ABOVE,TIER_BELOW,chamberTiers} from './tiers.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
@@ -2103,7 +2103,7 @@ function memberTier(s,key){
   const T=tiersOf(key,c),tier=T.byId[s.id];return tier?{tier,chamber:c,typical:T.typical}:null;
 }
 const tierWho=m=>byId[m.id]||BASIC[m.id]||m;
-const TIER_SHOWN={above:12,about:12,below:12,none:8};
+const TIER_SHOWN={far:12,above:12,about:12,below:12,none:8};
 function renderTiers(key){
   const cp=window.CORP_PACS,head=`<section class="section" id="tiers"><div class="kicker">Lobby money</div>${trackerViews('tiers')}`;
   if(!cp?.trackers){app.innerHTML=`${head}<h1>Tiers</h1><div class="note">The FEC bulk-file totals (npm run corporate:pacs) aren't on file yet, so the tiers can't be drawn.</div></section>`;return;}
@@ -2123,7 +2123,7 @@ function renderTiers(key){
       ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])],['s','Status',tierStatus,TIER_STATUS.map(([k,l,d])=>[k,l,d,cnt(tierParty,k)])]])}`;
     $('#ti-note').innerHTML=T.typical?`Each ${CH} is compared with the typical ${CH} who took money from ${esc(t.name)} this cycle: <b class="num">${fmtFull(T.typical)}</b> (the middle of the ${T.took} who took some). PAC checks${t.routed.length?' and the gifts it collected from donors and passed on':''}, ${cp.cycle-1}–${cp.cycle}, from the FEC's bulk files${cp.through?` (through ${esc(fmtDate(cp.through))})`:''}. ${tierCh==='S'?'Senators are compared with senators, House members with House members':'House members are compared with House members, senators with senators'}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`
       :`No ${CH} took money from ${esc(t.name)} this cycle in the FEC's bulk files.`;
-    const bound={above:`Over ${fmtFull(TIER_ABOVE*T.typical)}`,about:`${fmtFull(TIER_BELOW*T.typical)} – ${fmtFull(TIER_ABOVE*T.typical)}`,below:`Under ${fmtFull(TIER_BELOW*T.typical)}`,none:'$0 this cycle'};
+    const bound={far:`Over ${fmtFull(TIER_FAR*T.typical)}`,above:`${fmtFull(TIER_ABOVE*T.typical)} – ${fmtFull(TIER_FAR*T.typical)}`,about:`${fmtFull(TIER_BELOW*T.typical)} – ${fmtFull(TIER_ABOVE*T.typical)}`,below:`Under ${fmtFull(TIER_BELOW*T.typical)}`,none:'$0 this cycle'};
     const chip=r=>{const s=tierWho(r.m);return `<a class="ti-chip ${esc(r.m.party)}" href="#${esc(r.m.id)}-unbought"><span class="ti-ph">${portrait(s)}</span><span class="ti-cn"><b>${esc(r.m.short||r.m.name)}</b><small>${esc(r.m.party)} · ${esc(r.m.seat||r.m.state)}</small></span><span class="ti-ca num">${fmtFull(r.amount)}</span></a>`;};
     $('#ti-body').innerHTML=TIER_KEYS.map(k=>{
       const list=T.tiers[k].filter(keep),open=tierOpen.has(k),show=open?list:list.slice(0,TIER_SHOWN[k]);
