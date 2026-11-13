@@ -21,7 +21,7 @@ import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
-import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows} from './question-scores.js';
+import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
@@ -1113,11 +1113,69 @@ function qRecordHTML(s,q,ev,meta,want){
   return all.length?`<ul class="evl">${all.join('')}</ul>`:`<p class="small muted" style="margin:4px 0 0">No vote, bill, statement or group rating on this question was found for ${esc(s.short||s.name)}.</p>`;
 }
 function qLine(q,st){const s=st?.s??null;return `<b>${esc(stanceWord(s,q.sides))}</b>${st?.total?` <span class="muted small">· ${st.a} point${st.a===1?'':'s'} for "${esc(q.sides[0])}", ${st.b} for "${esc(q.sides[1])}"${s==null?` (a stance needs ${MIN_POINTS})`:''}</span>`:''}`;}
+// ----- The questions of a category, as a table: each question with their stance, and everything behind it -----
+// The stance and its net points, e.g. "YES (+16)": the points for the side they lean to minus the other side's, rounded,
+// with + when that side is the question's liberal one, − when it's the conservative one, and no sign when the question
+// has no liberal side. Colored like the lean (blue liberal, red conservative, gray neither); the question stays white.
+const Q_SHOWN=6;
+function qStanceHead(q,st){
+  const s=st?.s??null,word=stanceWord(s,q.sides);
+  if(s==null)return `<div class="qt-word qt-none">${esc(word.toUpperCase())}</div>`;
+  const {net,sign}=stanceNet(st,q),lean=questionLean(s,q);
+  return `<div class="qt-word"${lean==null?'':leanStyle(lean)}>${esc(word.toUpperCase())} <span class="qt-net">(${sign}${net})</span></div>`;
+}
+// The side an item counts toward, with its points: blue for the liberal side, red for the conservative one.
+const qSideVar=(q,side)=>q.liberal==null?'--ink-2':side===q.liberal?'--dem':'--rep';
+const qPill=(q,side,pts)=>`<span class="qt-pill" style="--qt-c:var(${qSideVar(q,side)})">${esc(q.sides[side])}${pts==null?'':` · ${pts} pt${pts===1?'':'s'}`}</span>`;
+const qOff=t=>`<span class="qt-pill qt-off">${esc(t)}</span>`;
+const qYear=d=>String(d||'').slice(0,4);
+// Where a statement was said, short: "Campaign website, 2020", "Bluesky post, 2026 campaign", "Press release, 2025".
+function qSaidWhere(x){
+  const t=x.tagged?String(x.title||''):String(x.src?.t||x.title||'');
+  const m=/^Campaign website, (\d{4})/.exec(t);if(m)return `Campaign website, ${m[1]}`;
+  if(/ post, \d{4} campaign$/.test(t))return t;
+  const head=t.split(':')[0].trim()||'Statement';return /\b\d{4}\b/.test(head)?head:`${head}${x.date?`, ${qYear(x.date)}`:''}`;
+}
+// Every item behind a question, in order: statements, group ratings, carried-over acts, votes, then bills.
+function qItems(s,q,ev,meta){
+  const st=qstOf(s)[q.id]||{},out=[],link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`:t;
+  for(const x of st.statements||[]){
+    const quote=String(x.why||'').replace(/\s+/g,' ').trim(),where=link(x.src?.u,esc(qSaidWhere(x)));
+    const tail=x.status==='cancelled'?qOff('not counted: a later vote went the other way'):`${qPill(q,x.side,QPOINTS.statement)}${x.status==='changed'?` ${qOff('changed position')}`:''}`;
+    out.push(`<span class="qt-k">Said</span> ${quote?`<i>${esc(quote)}</i> `:''}<span class="qt-src">${where}</span> ${tail}`);
+  }
+  for(const r of st.ratings||[])out.push(`<span class="qt-k">Rated</span> ${esc(r.grade||`${r.score}%`)} by ${link(r.url,esc(r.org))}${r.year?`, ${esc(String(r.year))}`:''} ${qPill(q,r.side,r.pts)}`);
+  for(const it of st.carried?.items||[]){
+    const label=TYPEL[{state:'state_vote',act:'official_act',vote:'vote',s:'sponsored',c:'cosponsored'}[it.kind]]||it.kind;
+    out.push(`<span class="qt-k">${esc(label)}</span> ${link(it.src?.u,esc(it.title||''))}${it.date?`, ${qYear(it.date)}`:''} ${qPill(q,it.side,it.pts)}`);
+  }
+  const rows=recordRows(ev?.[q.id]||[],meta?.[q.id]||{}),rank=r=>r.kind==='s'||r.kind==='c'?1:0;
+  for(const r of [...rows].sort((a,b)=>rank(a)-rank(b))){
+    const what=r.what==='Voted Yea'?'Voted YES on':r.what==='Voted Nay'?'Voted NO on':r.what==='Voted'?'Voted on':r.what;
+    const title=String(r.title||'').length>80&&r.why?r.why.replace(/\.$/,''):r.title;
+    out.push(`<span class="qt-k">${esc(what)}</span> ${link(r.url,esc(title))}${r.date?`, ${qYear(r.date)}`:''}${r.rollUrl?` <a class="qt-src" href="${esc(r.rollUrl)}" target="_blank" rel="noopener">roll call</a>`:''} ${r.credited?qPill(q,r.side,r.pts):qOff(`${q.sides[r.side]} · counted once on this bill`)}`);
+  }
+  return out;
+}
+function qItemsHTML(items){
+  if(!items.length)return '<p class="small muted" style="margin:0">Nothing on record behind this yet.</p>';
+  const more=items.length-Q_SHOWN;
+  return `<ul class="qt-list">${items.map((h,i)=>`<li${i>=Q_SHOWN?' class="qt-extra" hidden':''}>${h}</li>`).join('')}</ul>${more>0?`<button type="button" class="qt-more" data-n="${items.length}">Show all ${items.length} →</button>`:''}`;
+}
+function qTableHTML(s,c){
+  const st=qstOf(s),qs=c.questions.filter(q=>q.s!=null||st[q.id]?.total).sort((a,b)=>(st[b.id]?.total||0)-(st[a.id]?.total||0));
+  return `<table class="qt"><thead><tr><th scope="col">Question and their stance</th><th scope="col">Based on: statements, ratings and votes</th></tr></thead><tbody>${qs.map(q=>{const x=st[q.id]||{a:0,b:0};
+    return `<tr data-q="${esc(q.id)}"><td class="qt-q">${qStanceHead(q,x)}<div class="qt-text">${esc(q.q)}</div><div class="qt-pts">${x.a} pts for "${esc(q.sides[0])}" · ${x.b} for "${esc(q.sides[1])}"${x.s==null?` · a stance needs ${MIN_POINTS}`:''}</div></td>
+      <td class="qt-items"><p class="small muted" style="margin:0">Loading the record…</p></td></tr>`;}).join('')}</tbody></table>`;
+}
 function mountQCats(s,host,x){
-  if(!host)return;const st=qstOf(s);
-  host.innerHTML=`<p class="small muted">Open a category for its questions, the stance on each and every item behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary><b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${c.questions.filter(q=>q.s!=null||st[q.id]?.total).map(q=>`<div class="alissue" data-q="${esc(q.id)}"><div class="row" style="justify-content:space-between"><div><b>${esc(q.q)}</b></div><div>${qLine(q,st[q.id])}${q.lean==null?'':` <span class="muted small">· lean ${signed(q.lean)}</span>`}</div></div><div class="q-ev small muted">Loading the record…</div></div>`).join('')}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
+  if(!host)return;
+  host.innerHTML=`<p class="small muted">Open a category for its questions, their stance on each, and the statements, ratings and votes behind it.</p>${(x.categories||[]).filter(c=>c.onRecord).map(c=>`<details class="st-more q-cat" data-cat="${esc(c.id)}"><summary><b>${esc(c.label)}</b> <span class="muted small">· ${c.onRecord} question${c.onRecord===1?'':'s'} on record${c.lean==null?'':` · lean ${signed(c.lean)}`}</span></summary><div class="st-more-b">${qTableHTML(s,c)}</div></details>`).join('')||'<p class="small muted">No question on record yet.</p>'}`;
   const fill=async d=>{if(d.dataset.done)return;d.dataset.done='1';const [ev,meta]=await Promise.all([qEvidence(s),qMeta()]);
-    d.querySelectorAll('.alissue[data-q]').forEach(el=>{const q=QISSBY[el.dataset.q];el.querySelector('.q-ev').outerHTML=qRecordHTML(s,q,ev,meta,null);});bindTips(d);};
+    d.querySelectorAll('tr[data-q]').forEach(tr=>{const q=QISSBY[tr.dataset.q];if(q)tr.querySelector('.qt-items').innerHTML=qItemsHTML(qItems(s,q,ev,meta));});
+    d.querySelectorAll('.qt-more').forEach(b=>b.addEventListener('click',()=>{const cell=b.closest('.qt-items'),open=b.dataset.open!=='1';
+      cell.querySelectorAll('.qt-extra').forEach(li=>{li.hidden=!open;});b.dataset.open=open?'1':'0';b.textContent=open?'Show fewer':`Show all ${b.dataset.n} →`;}));
+    bindTips(d);};
   host.querySelectorAll('details.q-cat').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)fill(d);}));
 }
 function paneIdeology(s,pane){

@@ -1,7 +1,7 @@
 // Stances on the alignment questions and what's built from them (public/question-scores.js).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {creditItems,recordPoints,applyStatements,ratingPoints,ratingScore,ratingItems,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
+import {stanceNet,creditItems,recordPoints,applyStatements,ratingPoints,ratingScore,ratingItems,stanceOf,stanceWord,questionLean,ideologyLeans,compassFrom,matchFrom,legacyEvidence,personStances,MIN_POINTS} from '../public/question-scores.js';
 import QFILE from '../public/questions.json' with {type:'json'};
 import GR from '../public/group-ratings.json' with {type:'json'};
 
@@ -96,4 +96,12 @@ test('the questions name only groups that are read, each once, with a side; over
   for(const [g,n] of seen)assert.equal(n,1,`${g} counts on one question`);
   const side=(id,g)=>QFILE.questions.find(q=>q.id===id).groups[g];
   assert.equal(side('abortion','sba'),0);assert.equal(side('abortion','rfa'),1);assert.equal(side('gun-purchase-limits','goa'),1);assert.equal(side('climate-regulations','lcv'),0);
+});
+
+test('the net points beside a stance: + toward the liberal side, − toward the conservative side, no sign without one',()=>{
+  const ab={sides:['Pro-life','Pro-choice'],liberal:1},yes={sides:['Yes','No'],liberal:0},isr={sides:['Yes','No'],liberal:null};
+  assert.deepEqual(stanceNet({a:0,b:30.8},ab),{lead:1,net:31,sign:'+'},'Pro-choice is the liberal side');
+  assert.deepEqual(stanceNet({a:95.5,b:0},ab),{lead:0,net:96,sign:'−'});
+  assert.deepEqual(stanceNet({a:6,b:5},yes),{lead:0,net:1,sign:'+'});assert.deepEqual(stanceNet({a:2,b:12},yes),{lead:1,net:10,sign:'−'});
+  assert.deepEqual(stanceNet({a:16,b:0},isr),{lead:0,net:16,sign:''});assert.equal(stanceNet({a:3,b:3},yes).sign,'','even');
 });
