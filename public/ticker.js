@@ -24,13 +24,16 @@ export function nameOf(id,people){const p=people?.get?.(id);return p?{name:p.sho
 // Races: one item a race the site follows: a call within 24 hours of its date (the result's "date", else the results'
 // "asof"); a race still counting for as long as it's counting (and the results are under TICKER.countingDays old). A
 // results-only race names its nominees from their profiles when they have one, else as the race lists them. href: the
-// profile, by the person's ID or (a House nominee known by FEC ID) the profile with that FEC ID; the Races page without one.
+// profile: the one a results-only nominee names, the person's own, or (a House member known by FEC ID) the one with that
+// FEC ID; the Races page without one.
 export function raceItems(research,{now=Date.now(),people}={}){
   const asof=research?.election?.asof||research?.election?.date;if(!withinDays(asof,TICKER.countingDays,now))return [];
-  const out=[],profile=k=>people?.get?.(k)?k:[...(people?.values?.()||[])].find(p=>p?.fecCand===k)?.id||null;
+  const out=[];
   for(const r of [...(research?.races||[]),...(research?.liteRaces||[])]){
     const res=r?.result;if(!res)continue;
-    const date=res.date||asof,n=k=>r.nominees?.find(x=>(x.fecCand||x.id)===k);
+    const date=res.date||asof,n=k=>r.nominees?.find(x=>(x.id||x.fecCand)===k);
+    // A key's profile: the person's own ID, the profile a results-only nominee names, or (a House member known by FEC ID) theirs.
+    const profile=k=>{const x=n(k);if(x?.profile&&people?.get?.(x.profile))return x.profile;if(people?.get?.(k))return k;return [...(people?.values?.()||[])].find(p=>p?.fecCand===k)?.id||null;};
     const who=k=>{const id=profile(k);if(id)return nameOf(id,people);const x=n(k);return x?{name:String(x.name||'').split(/\s+/).pop(),party:x.party||null}:null;};
     const link=k=>{const id=profile(k);return id?`#${id}`:'#races';};
     if(res.winner){
@@ -41,7 +44,7 @@ export function raceItems(research,{now=Date.now(),people}={}){
         parts:[`${r.label}: `,w,' wins',...(how&&how.length<=70?[` · ${lowerFirst(how)}`]:[])]});
     }else if(res.leader){
       const l=who(res.leader);if(!l)continue;
-      const other=(r.keys||r.nominees?.map(x=>x.fecCand||x.id)||[]).find(k=>k!==res.leader),o=other&&who(other),by=/by ([\d,]+) votes/.exec(res.how||'')?.[1];
+      const other=(r.keys||r.nominees?.map(x=>x.id||x.fecCand)||[]).find(k=>k!==res.leader),o=other&&who(other),by=/by ([\d,]+) votes/.exec(res.how||'')?.[1];
       out.push({key:`race:${r.id}`,kind:'warn',tag:'Still counting',date,order:0,href:link(res.leader),
         parts:[`${r.label}: `,l,' leads',...(o?[' ',o]:[]),...(by?[` by ${by} votes`]:[])]});
     }

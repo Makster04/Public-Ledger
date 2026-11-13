@@ -699,5 +699,15 @@
     "file": "data/portraits/walkinshaw.jpg",
     "credit": "Photo: U.S House Office of Photography, public domain, via Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Congressman_Walkinshaw_Official_Portrait.jpg"
+  },
+  "colom": {
+    "file": "data/portraits/ms-colom.jpg",
+    "credit": "Photo: Editor13443, CC0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Scott_Colom.jpg"
+  },
+  "andrews": {
+    "file": "data/portraits/sc-andrews.png",
+    "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
+    "url": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
   }
 }

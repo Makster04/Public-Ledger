@@ -23665,6 +23665,54 @@
       "campaignSite": null,
       "openstates": null,
       "legiscan": null
+    },
+    {
+      "id": "colom",
+      "name": "Scott Colom",
+      "short": "Colom",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "S6MS00133",
+      "fecCmte": "C00918359",
+      "chamber": "S",
+      "state": "MS",
+      "race": "S-MS",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://www.scottcolom.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
+    },
+    {
+      "id": "andrews",
+      "name": "Annie Andrews",
+      "short": "Andrews",
+      "bioguide": null,
+      "lis": null,
+      "fecCand": "S6SC04239",
+      "fecCmte": "C00906024",
+      "chamber": "S",
+      "state": "SC",
+      "race": "S-SC",
+      "ids": {},
+      "social": {
+        "bluesky": [],
+        "threads": []
+      },
+      "campaignSite": "https://drannieandrews.com/",
+      "openstates": null,
+      "legiscan": null,
+      "inOffice": false,
+      "stateLeg": null,
+      "official": null,
+      "stateLegYears": null
     }
   ],
   "selectedVotes": [

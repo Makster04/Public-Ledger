@@ -1,5 +1,34 @@
 {
  "about": "What each reviewed profile said, tagged by hand to the alignment questions (public/questions.json): {person id: {question id: [[side index, \"the quote\", \"YYYY-MM-DD\", \"link\", \"where it was said\"]]}}. A tag is made only when the words clearly take one side; a statement that only explains a vote isn't a separate position; at most one statement per question per campaign. Checked and copied to public/question-statements.json by npm run statements:record (scripts/question-statements.mjs).",
+ "andrews": {
+  "abortion": [
+   [1, "Restore the protections of Roe v. Wade","2026-07-12","https://drannieandrews.com/issue/reproductive-freedom-trust-women/","Campaign website, 2026: Reproductive Freedom: Trust Women"]
+  ],
+  "assault-weapons": [
+   [0, "Banning weapons of war from our streets","2026-07-12","https://drannieandrews.com/issue/an-end-to-gun-violence/","Campaign website, 2026: An End to Gun Violence"]
+  ],
+  "congress-stock-trading": [
+   [1, "Barring members of congress from trading stocks and getting rich off of insider information","2026-07-12","https://drannieandrews.com/issue/fighting-political-corruption/","Campaign website, 2026: Fighting Political Corruption"]
+  ],
+  "contraception": [
+   [0, "Guarantee access to contraception and infertility care","2026-07-12","https://drannieandrews.com/issue/reproductive-freedom-trust-women/","Campaign website, 2026: Reproductive Freedom: Trust Women"]
+  ],
+  "gun-purchase-limits": [
+   [0, "Universal background checks","2026-07-12","https://drannieandrews.com/issue/an-end-to-gun-violence/","Campaign website, 2026: An End to Gun Violence"]
+  ],
+  "medicaid-funding": [
+   [0, "Protect and expand Medicaid and Medicare","2026-07-12","https://drannieandrews.com/issue/healthcare-is-a-right-not-a-privilege/","Campaign website, 2026: Healthcare is a Right, Not a Privilege"]
+  ],
+  "paid-leave": [
+   [0, "Expand affordable child care and paid family leave","2026-08-28","https://drannieandrews.com/issue/an-economy-that-works-for-working-people/","Campaign website, 2026: An Economy That Works for Working People"]
+  ],
+  "tax-the-rich": [
+   [0, "End tax breaks for the ultra-wealthy and corporate polluters","2026-08-28","https://drannieandrews.com/issue/an-economy-that-works-for-working-people/","Campaign website, 2026: An Economy That Works for Working People"]
+  ],
+  "term-limits": [
+   [0, "Supporting term limits and stronger ethics rules","2026-07-12","https://drannieandrews.com/issue/fighting-political-corruption/","Campaign website, 2026: Fighting Political Corruption"]
+  ]
+ },
  "bankhead": {
   "abortion": [
    [1, "She supports the Women’s Health Protection Act and a constitutional amendment protecting abortion rights, and she opposes any federal abortion ban. [32] NOW PAC and the National Women’s Political Caucus endorsed her, [34][36] and she answered yes to all 13 of Montanans for Choice’s questions. [39] She also answered the ERA Coalition’s Equal Rights Amendment survey, and its Elect Equality guide lists her as a supporter.","2026-10-30","https://web.archive.org/web/20261030174236/https://alaniformt.com/rumors","Campaign website, 2026: Rumors About Alani Bankhead, Answered · Alani Bankhead for Senate"]
@@ -289,6 +318,26 @@
   ],
   "wind-subsidies": [
    [0, "Senator Collins is the lead Republican cosponsor of Senator Carper’s Incentivizing Offshore Wind Power Act , which would create an Investment Tax Credit for the first 3,000 megawatts of offshore wind facilities placed into service.","2020-10-22","https://web.archive.org/web/20201022142742/https://www.susancollins.com/gideon_s_real_climate_change_plan_raise_taxes_on_hardworking_mainers","Campaign website, 2020: Gideon’s Real Climate Change Plan: Raise Taxes on Hardworking Mainers - Susan Collins for Senator"]
+  ]
+ },
+ "colom": {
+  "affordable-care-act": [
+   [0, "Restore the ACA tax credits that lower insurance premiums","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
+  ],
+  "border-security": [
+   [0, "Work to secure the border and enforce our immigration laws","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
+  ],
+  "congress-stock-trading": [
+   [1, "Ban members of Congress, their spouses and their dependent children from trading stocks, with no loopholes","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
+  ],
+  "medicaid-funding": [
+   [0, "Vote to cancel the Medicaid cuts to help keep rural Mississippi’s emergency rooms and delivery rooms open","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
+  ],
+  "minimum-wage": [
+   [0, "Fight to raise the minimum wage and tie it to the cost of living, so workers never wait years and years for a raise again","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
+  ],
+  "war-powers": [
+   [0, "Require a vote of Congress before America goes to war","2026-10-07","https://scottcolom.com/priorities/","Campaign website, 2026: Where Scott Stands"]
   ]
  },
  "conley": {
