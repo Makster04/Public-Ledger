@@ -219058,6 +219058,50 @@
       "leanNote": "Stock-trading and lobbying bans draw sponsors from both parties; only the Citizens United amendment splits mostly by party, so the issue is not marked liberal or conservative.",
       "group": "gov",
       "statement": "Congress should ban members from trading stocks and from lobbying after they leave, and overturn Citizens United."
+    },
+    {
+      "id": "civlib",
+      "label": "Flag burning and surveillance",
+      "q": "Whether Congress may ban flag burning, and whether the government may use facial recognition for surveillance",
+      "A": "Keep flag burning legal as free speech and stop government use of facial recognition",
+      "B": "Let Congress ban flag burning and allow government use of facial recognition",
+      "liberalSide": "A",
+      "leanNote": null,
+      "group": "rights",
+      "statement": "Flag burning should stay legal as free speech, and the government shouldn't use facial recognition for surveillance."
+    },
+    {
+      "id": "policing",
+      "label": "Police accountability and punishment",
+      "q": "Qualified immunity for police, private prisons, and the death penalty for drug dealing",
+      "A": "End qualified immunity and federal private prisons, and don't extend the death penalty to drug dealing",
+      "B": "Keep qualified immunity and make dealing deadly fentanyl punishable by death",
+      "liberalSide": "A",
+      "leanNote": null,
+      "group": "rights",
+      "statement": "Police shouldn't have qualified immunity, the federal government shouldn't use private prisons, and drug dealing shouldn't carry the death penalty."
+    },
+    {
+      "id": "housing",
+      "label": "Housing and homelessness",
+      "q": "Federal money for housing and homeless services, and landlords' rent-setting software",
+      "A": "Spend more federal money on housing and homeless services, and ban landlords' rent-setting software",
+      "B": "Don't expand federal housing spending or ban rent-setting software",
+      "liberalSide": "A",
+      "leanNote": null,
+      "group": "econ",
+      "statement": "The federal government should spend more on housing and homeless services, and landlords shouldn't use software that coordinates rents."
+    },
+    {
+      "id": "socsec",
+      "label": "Social Security retirement age",
+      "q": "Whether to raise the Social Security full retirement age",
+      "A": "Keep the full retirement age where it is",
+      "B": "Raise the full retirement age",
+      "liberalSide": "A",
+      "leanNote": null,
+      "group": "econ",
+      "statement": "The Social Security retirement age shouldn't go up."
     }
   ],
   "typeLabel": {
@@ -226716,6 +226760,455 @@
       "reform": [
         "citizens-united"
       ]
+    },
+    {
+      "id": "119-hr-10563",
+      "title": "Facial Recognition and Biometric Technology Moratorium Act",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Civil liberties",
+      "issue": "civlib",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Keep flag burning legal as free speech and stop government use of facial recognition.\"",
+      "stage": "Introduced Sept. 24, 2026 by Rep. Pramila Jayapal (D-WA), with 8 cosponsors; latest action: referred to the Committee on the Judiciary, and in addition to the Committee on Oversight and Government Reform. Introduced 8 times since 2020 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Facial Recognition and Biometric Technology Moratorium Act: bans federal use of facial recognition and other biometric surveillance and cuts funds to police who use it.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 10563 (Facial Recognition and Biometric Technology Moratorium Act of 2026)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hr10563ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Pramila Jayapal (D-WA) on Sept. 24, 2026.",
+          "src": {
+            "t": "GovInfo: H.R. 10563 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr10563ih"
+          }
+        }
+      ],
+      "versions": [
+        "119-s-5544",
+        "118-hr-1404",
+        "118-s-681",
+        "117-hr-3907",
+        "117-s-2052",
+        "116-hr-7356",
+        "116-s-4084"
+      ],
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "117-s-2052",
+          "date": "2022-07-11"
+        },
+        {
+          "person": "booker",
+          "bill": "118-s-681",
+          "date": "2023-07-10"
+        }
+      ]
+    },
+    {
+      "id": "119-hjres-101",
+      "title": "Flag desecration amendment (lets Congress ban burning the flag)",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Civil liberties",
+      "issue": "civlib",
+      "side": "B",
+      "why": "Sponsoring or cosponsoring it counts toward \"Let Congress ban flag burning and allow government use of facial recognition.\"",
+      "stage": "Introduced June 13, 2025 by Rep. Steve Womack (R-AR), with 24 cosponsors; latest action: referred to the House Committee on the Judiciary. Introduced 16 times since 2013 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Constitutional amendment or law letting Congress ban burning or desecrating the American flag.",
+      "summarySrc": {
+        "t": "GovInfo: H.J.Res. 101 (Proposing an amendment to the Constitution of the United States giving Congress power to prohibit the physical desecration of the flag of the United States.)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hjres101ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Steve Womack (R-AR) on June 13, 2025.",
+          "src": {
+            "t": "GovInfo: H.J.Res. 101 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hjres101ih"
+          }
+        }
+      ],
+      "versions": [
+        "119-sjres-58",
+        "118-hjres-73",
+        "118-sjres-34",
+        "117-hjres-51",
+        "117-sjres-20",
+        "116-hjres-65",
+        "116-sjres-49",
+        "115-hjres-61",
+        "115-sjres-46",
+        "114-hjres-9",
+        "114-hr-6433",
+        "114-sjres-21",
+        "113-hjres-19",
+        "113-hjres-47",
+        "113-sjres-17"
+      ],
+      "cosponsors": [
+        {
+          "person": "collins",
+          "bill": "113-sjres-17",
+          "date": "2013-06-13"
+        },
+        {
+          "person": "hinson",
+          "bill": "119-hjres-101",
+          "date": "2025-06-13"
+        },
+        {
+          "person": "letlow",
+          "bill": "119-hjres-101",
+          "date": "2025-06-25"
+        },
+        {
+          "person": "marshall",
+          "bill": "115-hjres-61",
+          "date": "2018-03-05"
+        },
+        {
+          "person": "marshall",
+          "bill": "119-sjres-58",
+          "date": "2025-12-17"
+        },
+        {
+          "person": "mcollins",
+          "bill": "119-hjres-101",
+          "date": "2025-06-13"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-5361",
+      "title": "George Floyd Justice in Policing Act",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Criminal justice & policing",
+      "issue": "policing",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"End qualified immunity and federal private prisons, and don't extend the death penalty to drug dealing.\"",
+      "stage": "Introduced Sept. 15, 2025 by Rep. Glenn Ivey (D-MD), with 136 cosponsors; latest action: referred to the Committee on the Judiciary, and in addition to the Committees on Armed Services, and Energy and Commerce. Introduced 6 times since 2020 (counting Senate companions). H.R. 1280 (117th Congress) passed the House on March 3, 2021 but not the Senate. H.R. 7120 (116th Congress) passed the House on June 25, 2020 but not the Senate.",
+      "summary": "George Floyd Justice in Policing Act: ends qualified immunity for police in civil rights suits, among other police reforms.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 5361 (George Floyd Justice in Policing Act of 2025)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hr5361ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Glenn Ivey (D-MD) on Sept. 15, 2025.",
+          "src": {
+            "t": "GovInfo: H.R. 5361 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr5361ih"
+          }
+        },
+        {
+          "text": "H.R. 1280 (117th Congress) passed the House on March 3, 2021.",
+          "src": {
+            "t": "GovInfo: H.R. 1280 as passed by the House",
+            "u": "https://www.govinfo.gov/app/details/BILLS-117hr1280eh"
+          }
+        },
+        {
+          "text": "H.R. 7120 (116th Congress) passed the House on June 25, 2020.",
+          "src": {
+            "t": "GovInfo: H.R. 7120 as passed by the House",
+            "u": "https://www.govinfo.gov/app/details/BILLS-116hr7120eh"
+          }
+        }
+      ],
+      "versions": [
+        "118-hr-8525",
+        "118-s-4991",
+        "117-hr-1280",
+        "116-hr-7120",
+        "116-s-3912"
+      ],
+      "cosponsors": [
+        {
+          "person": "booker",
+          "bill": "116-s-3912",
+          "sponsor": true,
+          "date": "2020-06-08"
+        },
+        {
+          "person": "booker",
+          "bill": "118-s-4991",
+          "sponsor": true,
+          "date": "2024-08-01"
+        },
+        {
+          "person": "brown",
+          "bill": "116-s-3912",
+          "date": "2020-06-08"
+        },
+        {
+          "person": "castor",
+          "bill": "116-hr-7120",
+          "date": "2020-06-08"
+        },
+        {
+          "person": "castor",
+          "bill": "117-hr-1280",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "castor",
+          "bill": "118-hr-8525",
+          "date": "2024-05-23"
+        },
+        {
+          "person": "castor",
+          "bill": "119-hr-5361",
+          "date": "2025-09-15"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "116-hr-7120",
+          "date": "2020-06-08"
+        },
+        {
+          "person": "kaptur",
+          "bill": "116-hr-7120",
+          "date": "2020-06-08"
+        },
+        {
+          "person": "kaptur",
+          "bill": "117-hr-1280",
+          "date": "2021-02-24"
+        },
+        {
+          "person": "pappas",
+          "bill": "116-hr-7120",
+          "date": "2020-06-15"
+        }
+      ]
+    },
+    {
+      "id": "117-hr-994",
+      "title": "Justice Is Not For Sale Act (ends federal private prisons)",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Criminal justice & policing",
+      "issue": "policing",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"End qualified immunity and federal private prisons, and don't extend the death penalty to drug dealing.\"",
+      "stage": "Introduced Feb. 11, 2021 by Rep. Raúl Grijalva (D-AZ), with 38 cosponsors; latest action: referred to the Subcommittee on Crime, Terrorism, and Homeland Security. Introduced 5 times since 2015 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Justice Is Not For Sale Act: ends federal contracts with private prisons and detention centers.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 994 (Justice is Not For Sale Act of 2021)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-117hr994ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Raúl Grijalva (D-AZ) on Feb. 11, 2021.",
+          "src": {
+            "t": "GovInfo: H.R. 994 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-117hr994ih"
+          }
+        }
+      ],
+      "versions": [
+        "116-hr-8008",
+        "115-hr-3227",
+        "114-hr-3543",
+        "114-s-2054"
+      ],
+      "cosponsors": [
+        {
+          "person": "kaptur",
+          "bill": "114-hr-3543",
+          "date": "2015-09-22"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-3764",
+      "title": "Death Penalty for Dealing Fentanyl Act",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Criminal justice & policing",
+      "issue": "policing",
+      "side": "B",
+      "why": "Sponsoring or cosponsoring it counts toward \"Keep qualified immunity and make dealing deadly fentanyl punishable by death.\"",
+      "stage": "Introduced June 5, 2025 by Rep. Paul Gosar (R-AZ), with 9 cosponsors; latest action: referred to the Committee on the Judiciary, and in addition to the Committee on Energy and Commerce. Introduced 3 times since 2022 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Death Penalty for Dealing Fentanyl Act: makes dealing fentanyl that kills someone punishable by death.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 3764 (Death Penalty for Dealing Fentanyl Act of 2025)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hr3764ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Paul Gosar (R-AZ) on June 5, 2025.",
+          "src": {
+            "t": "GovInfo: H.R. 3764 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr3764ih"
+          }
+        }
+      ],
+      "versions": [
+        "118-hr-1212",
+        "117-hr-8228"
+      ],
+      "cosponsors": [
+        {
+          "person": "moore",
+          "bill": "119-hr-3764",
+          "date": "2025-06-05"
+        }
+      ]
+    },
+    {
+      "id": "119-hr-4872",
+      "title": "Ending Homelessness Act",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Housing",
+      "issue": "housing",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Spend more federal money on housing and homeless services, and ban landlords' rent-setting software.\"",
+      "stage": "Introduced Aug. 5, 2025 by Rep. Maxine Waters (D-CA), with 26 cosponsors; latest action: referred to the Committee on Financial Services, and in addition to the Committee on the Judiciary. Introduced 7 times since 2016 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Ending Homelessness Act: billions for homeless services and housing vouchers for all who qualify.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 4872 (Ending Homelessness Act of 2025)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hr4872ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Maxine Waters (D-CA) on Aug. 5, 2025.",
+          "src": {
+            "t": "GovInfo: H.R. 4872 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hr4872ih"
+          }
+        }
+      ],
+      "versions": [
+        "118-hr-4232",
+        "117-hr-4496",
+        "116-hr-1856",
+        "116-s-2613",
+        "115-hr-2076",
+        "114-hr-4888"
+      ],
+      "cosponsors": [
+        {
+          "person": "castor",
+          "bill": "116-hr-1856",
+          "date": "2019-03-25"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "116-hr-1856",
+          "date": "2019-03-25"
+        },
+        {
+          "person": "gonzalez",
+          "bill": "117-hr-4496",
+          "date": "2021-07-16"
+        },
+        {
+          "person": "kaptur",
+          "bill": "116-hr-1856",
+          "date": "2019-03-25"
+        }
+      ]
+    },
+    {
+      "id": "118-hr-8622",
+      "title": "Preventing the Algorithmic Facilitation of Rental Housing Cartels Act (bans rent-setting software)",
+      "status": "not",
+      "reintroduced": true,
+      "area": "Housing",
+      "issue": "housing",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Spend more federal money on housing and homeless services, and ban landlords' rent-setting software.\"",
+      "stage": "Introduced June 5, 2024 by Rep. Becca Balint (D-VT), with 21 cosponsors; latest action: referred to the House Committee on the Judiciary. Introduced 2 times since 2024 (counting Senate companions). No version has had a floor vote.",
+      "summary": "Bans landlords from using rent-setting software that coordinates prices.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 8622 (Preventing the Algorithmic Facilitation of Rental Housing Cartels Act of 2024)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-118hr8622ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Becca Balint (D-VT) on June 5, 2024.",
+          "src": {
+            "t": "GovInfo: H.R. 8622 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-118hr8622ih"
+          }
+        }
+      ],
+      "versions": [
+        "118-s-3692"
+      ],
+      "cosponsors": []
+    },
+    {
+      "id": "119-hres-657",
+      "title": "Resolution affirming the promise not to raise the Social Security and Medicare retirement age",
+      "status": "not",
+      "reintroduced": false,
+      "area": "Social Security & Medicare",
+      "issue": "socsec",
+      "side": "A",
+      "why": "Sponsoring or cosponsoring it counts toward \"Keep the full retirement age where it is.\"",
+      "stage": "Introduced Aug. 15, 2025 by Rep. Marcy Kaptur (D-OH), with 12 cosponsors; latest action: referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce. No version has had a floor vote.",
+      "summary": "Affirms the promise not to raise the Social Security and Medicare retirement age.",
+      "summarySrc": {
+        "t": "GovInfo: H.Res. 657 (Affirming the President's promise not to raise the Social Security and Medicare retirement age.)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-119hres657ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Marcy Kaptur (D-OH) on Aug. 15, 2025.",
+          "src": {
+            "t": "GovInfo: H.Res. 657 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-119hres657ih"
+          }
+        }
+      ],
+      "versions": [],
+      "cosponsors": [
+        {
+          "person": "gonzalez",
+          "bill": "119-hres-657",
+          "date": "2025-08-15"
+        },
+        {
+          "person": "kaptur",
+          "bill": "119-hres-657",
+          "sponsor": true,
+          "date": "2025-08-15"
+        }
+      ]
+    },
+    {
+      "id": "114-hr-6489",
+      "title": "Social Security Reform Act of 2016 (raises the retirement age to 69)",
+      "status": "not",
+      "reintroduced": false,
+      "area": "Social Security & Medicare",
+      "issue": "socsec",
+      "side": "B",
+      "why": "Sponsoring or cosponsoring it counts toward \"Raise the full retirement age.\"",
+      "stage": "Introduced Dec. 8, 2016 by Rep. Sam Johnson (R-TX), with 0 cosponsors; latest action: referred to the House Committee on Ways and Means. No version has had a floor vote.",
+      "summary": "Social Security Reform Act (2016): raises the full retirement age to 69 over time.",
+      "summarySrc": {
+        "t": "GovInfo: H.R. 6489 (Social Security Reform Act of 2016)",
+        "u": "https://www.govinfo.gov/app/details/BILLS-114hr6489ih"
+      },
+      "steps": [
+        {
+          "text": "Introduced by Rep. Sam Johnson (R-TX) on Dec. 8, 2016.",
+          "src": {
+            "t": "GovInfo: H.R. 6489 as introduced",
+            "u": "https://www.govinfo.gov/app/details/BILLS-114hr6489ih"
+          }
+        }
+      ],
+      "versions": [],
+      "cosponsors": []
     }
   ],
   "bundled": {

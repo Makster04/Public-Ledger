@@ -6,7 +6,7 @@ import fs from 'node:fs/promises';
 import {billFamilies,groupInfo,unlisted,EXTRA_GROUPS} from '../public/bills.js';
 import {makeScorer} from '../public/scoring.js';
 const D=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
-const KEY=/^\d{3}-(hr|s|hjres|sjres|hconres|sconres|samdt|hamdt)-\d+$/;
+const KEY=/^\d{3}-(hr|s|hjres|sjres|hres|sres|hconres|sconres|samdt|hamdt)-\d+$/;
 
 test('each listed bill has a valid number, a status, and cited positions from known groups',()=>{
   const ids=new Set();
@@ -68,7 +68,7 @@ test('group details: advocacy groups have no PAC; PAC money and outside spending
 test('the anti-corruption bills count in Your match under their issue, through their sponsors and cosponsors',async()=>{
   const {issueEvidence}=await import('../public/bills.js');
   const {matchScore}=await import('../public/grades.js');
-  const issues=new Set(D.issues.map(i=>i.id)),tagged=D.billIndex.filter(b=>b.issue);
+  const issues=new Set(D.issues.map(i=>i.id)),tagged=D.billIndex.filter(b=>b.issue==='ethics');
   assert.ok(issues.has('ethics'));
   assert.deepEqual(tagged.map(b=>b.id).sort(),['119-hr-3554','119-hr-358','119-hr-5106','119-s-1498','119-s-1879','119-sjres-43']);
   for(const b of tagged){assert.ok(issues.has(b.issue),b.id);assert.ok(['A','B'].includes(b.side),b.id);assert.ok(b.why&&b.summarySrc?.u&&b.steps?.length,b.id);}
@@ -93,4 +93,25 @@ test('the anti-corruption bills count in Your match under their issue, through t
   assert.equal(real.get('ossoff').filter(x=>x.entry.bill==='119-s-1879').length,1);
   for(const [id,list] of real){assert.ok(ids.has(id));assert.equal(new Set(list.map(x=>x.entry.bill)).size,list.length,id);}
   assert.deepEqual(real.get('ossoff').map(x=>x.entry.bill).sort(),['119-s-1498','119-s-1879']);
+});
+
+test('the four issues added Nov. 14, 2026 count through the bills marked for them, and place each category',async()=>{
+  const {issueEvidence}=await import('../public/bills.js');
+  const {POSITION_CATEGORIES,positionByCategory}=await import('../public/lean.js');
+  const NEW={civlib:'Civil liberties',policing:'Criminal justice and policing',housing:'Housing',socsec:'Social Security and Medicare'};
+  for(const [id,cat] of Object.entries(NEW)){
+    const i=D.issues.find(x=>x.id===id);assert.ok(i&&i.liberalSide==='A'&&i.A&&i.B&&i.statement,id);
+    assert.deepEqual(POSITION_CATEGORIES.find(([l])=>l===cat)[1],[id],cat);
+    const bills=D.billIndex.filter(b=>b.issue===id);assert.ok(bills.length,id);
+    for(const b of bills){assert.ok(['A','B'].includes(b.side)&&b.why&&b.summarySrc?.u&&b.steps?.length&&b.stage,b.id);
+      for(const c of b.cosponsors||[])assert.ok(c.person&&[b.id,...(b.versions||[])].includes(c.bill),`${b.id}: ${c.bill}`);}
+  }
+  // Housing has no conservative-side bill yet; the others have both sides.
+  assert.deepEqual(['civlib','policing','socsec'].map(id=>[...new Set(D.billIndex.filter(b=>b.issue===id).map(b=>b.side))].sort()),[['A','B'],['A','B'],['A','B']]);
+  const ev=new Map([...issueEvidence(D)].map(([p,l])=>[p,l]));
+  const of=(p,issue)=>(ev.get(p)||[]).filter(x=>x.issue===issue).map(x=>x.entry.side);
+  assert.ok(of('collins','civlib').includes('B'),'Collins cosponsored the flag-burning amendment');
+  assert.ok(of('booker','policing').includes('A'),'Booker sponsors the Justice in Policing Act');
+  const placed=positionByCategory(D.issues,{civlib:(ev.get('collins')||[]).filter(x=>x.issue==='civlib').map(x=>x.entry)}).find(c=>c.label==='Civil liberties');
+  assert.equal(placed.status,'placed');assert.ok(placed.lean<0,'conservative');
 });
