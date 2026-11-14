@@ -8,7 +8,8 @@
 // A check counts when it's a direct or in-kind contribution (24K, 24Z; memo lines left out, refunds subtracted) from a
 // committee public/pac-types.js calls a corporate PAC (sponsored by a corporation, or a corporation without capital
 // stock), the same rule as the site's "Corporate PAC" label. Members are matched by their FEC candidate ID
-// (public/senate.json and public/house.json fecCand) and their other candidate IDs (linkedCandidates: a House member now
+// (public/senate.json and public/house.json fecCand; a check whose giver left the candidate ID blank goes by the campaign
+// committee it was sent to, whose candidate the cm file names) and their other candidate IDs (linkedCandidates: a House member now
 // in the Senate, or running for it in 2026, files under a new ID). A tracker's checks are those from its PACs, matched as its
 // Tracker matches them (public/trackers.js isTrackerPac: by committee ID or name).
 // Some groups also forward their donors' gifts to campaigns (earmarked, "routed"): AIPAC, Club for Growth, EMILY's List,
@@ -79,18 +80,20 @@ export function committeeKind(line){
   return [c[0],pacKind([c[1],c[9],c[8],c[12]]),c[1],['P','A'].includes(c[8])&&/^[HSP]\d[A-Z0-9]+$/.test(c[14]||'')?c[14]:null];
 }
 // One itpas2.txt line -> {cand, cmte, amount, date} for a committee's direct or in-kind contribution to a candidate,
-// or null.
-export function committeeCheck(line){
+// or null. Some givers leave the candidate ID blank and name only the campaign committee the check went to (Coinbase's
+// PAC's $2,500 to Husted for Senate, June 2026): with cmteCand (committee ID -> its candidate, from the cm file), that
+// committee's candidate is used.
+export function committeeCheck(line,cmteCand=null){
   const c=String(line).split('|');
   if(c.length<22)return null;
   if(c[5]!=='24K'&&c[5]!=='24Z')return null;          // direct or in-kind contributions only, not outside spending
   if(c[19])return null;                               // memo line: detail of another entry, not new money
   const amount=Number(c[14]);if(!Number.isFinite(amount)||amount===0)return null;
-  const cand=c[16];if(!/^[HSP]\d[A-Z0-9]+$/.test(cand||''))return null;
+  const cand=/^[HSP]\d[A-Z0-9]+$/.test(c[16]||'')?c[16]:cmteCand?.get(c[15])||null;if(!cand)return null;
   return {cand,cmte:c[0],amount,date:c[13]};
 }
 // The same, for a corporate PAC's check only (kinds: committee id -> kind).
-export function corporateCheck(line,kinds){const x=committeeCheck(line);return x&&kinds.get(x.cmte)==='corporate'?x:null;}
+export function corporateCheck(line,kinds,cmteCand=null){const x=committeeCheck(line,cmteCand);return x&&kinds.get(x.cmte)==='corporate'?x:null;}
 // The trackers a giving committee belongs to (by its ID or its name, as each Tracker matches its PACs).
 export const trackersOf=(cmte,name)=>TRACKERS.filter(t=>isTrackerPac(t,{cid:cmte,name})).map(t=>t.key);
 // The groups whose forwarded gifts are read: research.json "bundled" conduits ({group: [committee IDs]}) and the other
@@ -322,7 +325,7 @@ export async function careerHistory({cycle,dir,refresh=false,byCand,through='',l
     const cm=await download(`cm${yy}.zip`,cy,dir,refresh,age),pas2=await download(`pas2${yy}.zip`,cy,dir,refresh,age),names=new Map(),cmteCand=new Map(),keysOf=new Map(),checks=[];
     for await(const line of lines(cm.file,'cm.txt')){const k=committeeKind(line);if(!k)continue;names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
     for await(const line of lines(pas2.file,'itpas2.txt')){
-      const x=committeeCheck(line);if(!x||!both.has(x.cand))continue;
+      const x=committeeCheck(line,cmteCand);if(!x||!both.has(x.cand))continue;
       if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
       const keys=keysOf.get(x.cmte);if(!keys.length)continue;checks.push({...x,keys});
       if(cy===cycle){const d=iso(x.date);if(d>last&&d<=today)last=d;}
@@ -369,7 +372,7 @@ async function main(argv){
   const conduits=conduitList(read('research.json').bundled);
   const checks=[],tracked=[],byKind=[],keysOf=new Map();let through='';const today=new Date().toISOString().slice(0,10);
   for await(const line of lines(pas2.file,'itpas2.txt')){
-    const x=committeeCheck(line);if(!x||!byCand.has(x.cand))continue;
+    const x=committeeCheck(line,cmteCand);if(!x||!byCand.has(x.cand))continue;
     if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
     const keys=keysOf.get(x.cmte),corp=kinds.get(x.cmte)==='corporate';byKind.push({cand:x.cand,kind:kinds.get(x.cmte)||'other',amount:x.amount});if(!corp&&!keys.length)continue;
     if(corp)checks.push(x);if(keys.length)tracked.push({...x,keys});
