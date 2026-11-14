@@ -91,7 +91,7 @@ test('the funding overview\'s parts: each source\'s share, the rest as other, an
 const trackers=[{key:'aipac',name:'AIPAC',status:'took',total:3358020,superPac:{for:0,against:1250000}},{key:'pharma',name:'Big Pharma',status:'took',total:9500,superPac:null},
   {key:'oil',name:'Big Oil',status:'none',total:0,superPac:null},{key:'tech',name:'Big Tech + AI',status:'took',total:12500,superPac:{for:400000,against:0}},{key:'crypto',name:'Crypto',status:'waiting',total:0,superPac:null}];
 
-test('the funding overview on the card: the shares, a donut, the total, and the five trackers, and the card stays 4:5',()=>{
+test('the funding overview on the card: the shares, a donut, the total, and the trackers, and the card stays 4:5',()=>{
   const svg=renderScorecardSvg({...model,receipts:undefined,raised:camp.receipts,period:'Jan 1, 2025 – Oct 14, 2026',spent:22351644,wealth,lists,funding:fundingParts(camp,sizes),trackers});
   assert.match(svg,/width="1000" height="1250"/);
   for(const t of ['FUNDING OVERVIEW','68% INDIVIDUALS','7% PACS','24% TRANSFERS','&lt;1% PARTY','0% SELF-FUNDING','1% OTHER','\\$200 &amp; under 26%','\\$2K\\+ 36%','\\$22\\.47M','RAISED'])assert.match(svg,tag(t));
