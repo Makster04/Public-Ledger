@@ -1052,7 +1052,7 @@ function profileLocation(view){
 function sectionSwitch(s,items,active){
   return `<nav class="profile-section-switch" aria-label="Section">${items.map(([key,label])=>`<a class="profile-section-link ${key===active?'active':''}" href="#${s.id}-${key}"${key===active?' aria-current="page"':''}>${label}</a>`).join('')}</nav>`;
 }
-// ---------- The six score tabs (Scores/06_SIX_GRADES_PROPOSAL.md) ----------
+// ---------- The six score tabs (Scores/, one file a score) ----------
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
 // The same context the monthly recalculation scores with (public/scoring.js sixContext).
@@ -4343,7 +4343,7 @@ function renderMethod(sub){
       <li><b>Scale:</b> A is 90–100, B 80–89, C 70–79, D 60–69 and F below 60, after rounding to a whole percentage.</li>
       <li><b>Not graded:</b> shown when there isn't enough evidence. It is never a zero.</li>
       <li><b>Where the rules live:</b> one file, <span class="mono">public/grades.js</span>. The inputs are the same records shown on each profile.</li>
-      <li><b>Full methodology:</b> with worked examples and open decisions, in <span class="mono">Scores/00_POLITICAL_SCORECARD_METHODOLOGY.md</span>.</li>
+      <li><b>How each score works:</b> one file a score in the <span class="mono">Scores</span> folder (<span class="mono">Scores/README.md</span> lists them).</li>
     </ul>
     <h3>Rule 1: actions count more than words</h3>
     <ul class="list">

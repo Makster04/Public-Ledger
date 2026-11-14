@@ -1,4 +1,4 @@
-// The five-part Integrity (Scores/03a_INTEGRITY_REVISION.md): Get It Done inside Showing Up, and Conflicts of Interest.
+// The five-part Integrity (retired Nov. 7, 2026; its parts feed the six scores): Get It Done inside Showing Up, and Conflicts of Interest.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getItDoneComponent,showingUpPart,showingUpComponent,incomeConflicts,lobbyistOverlap,contractsForDonors,foreignAgentFlag,giftsTravel,conflictsComponent,integrityPreview,INTEGRITY_WEIGHTS} from '../public/integrity.js';

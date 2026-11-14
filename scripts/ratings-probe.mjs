@@ -1,5 +1,5 @@
 // What each interest group's scorecard pages serve, so a reader can be written for each one from the real thing
-// (the Ideology tab's group ratings, Scores/06_SIX_GRADES_PROPOSAL.md). Nothing here is scored or shown on the site.
+// (the Ideology tab's group ratings, Scores/01_IDEOLOGY.md). Nothing here is scored or shown on the site.
 //   npm run ratings:probe                    every group below
 //   npm run ratings:probe -- --only lcv,nra  some of them
 // Writes data/ratings-probe.txt (for each address: what it answered, its title, the links and tables on it, whether the
