@@ -9,8 +9,8 @@ test('letter grades use the usual 90/80/70/60 cut-offs',()=>{
   assert.deepEqual([100,90,89.9,80,79,70,69,60,59,0].map(letter),['A','A','B','B','C','C','D','D','F','F']);
 });
 test('promises: kept 1, partly supported, a compromise or a changed position (partially kept) 1/2, contradicted 0; unclear and outcome checks left out; too few checks is not a zero',()=>{
-  assert.equal(promiseScore(st('consistent','consistent','contradiction')).pct,67);
-  assert.equal(promiseScore(st('consistent','partial','changed','outcome','unclear')).pct,67,'(1 + 1/2 + 1/2) / 3');
+  assert.equal(promiseScore(st('consistent','consistent','contradiction')).pct,66.7);
+  assert.equal(promiseScore(st('consistent','partial','changed','outcome','unclear')).pct,66.7,'(1 + 1/2 + 1/2) / 3');
   assert.equal(promiseScore(st('consistent','compromise','contradiction')).pct,50,'(1 + 1/2 + 0) / 3');
   assert.equal(promiseScore(st('consistent','consistent','outcome')).pct,null);
   assert.equal(promiseScore([]).pct,null);
@@ -34,7 +34,7 @@ test('People First: a Yea or sponsorship takes the bill side, a Nay the other, m
   assert.equal(r.n,3);assert.equal(r.people,3);assert.equal(r.nPeople,3);assert.equal(r.profit,0);assert.equal(r.pct,100);
   assert.equal(r.scored.find(a=>a.bill==='119-s-5').kind,'vote');
   assert.equal(pvpScore(pvpActions(marks,[{bill:'119-hr-1',pos:'Yea'},{bill:'119-s-5',pos:'Nay'}],[])).pct,null);
-  assert.equal(pvpScore(pvpActions(marks,[{bill:'119-hr-1',pos:'Yea'},{bill:'119-s-5',pos:'Yea'}],[{bill:'119-hr-7'}])).pct,67);
+  assert.equal(pvpScore(pvpActions(marks,[{bill:'119-hr-1',pos:'Yea'},{bill:'119-s-5',pos:'Yea'}],[{bill:'119-hr-7'}])).pct,66.7);
 });
 test('every displayed investigation says whether it is open or closed',()=>{
   for(const s of people)for(const e of s.ethics)if(e.status==='investigation')assert.ok(['open','closed'].includes(e.stage),`${s.id}: ${e.title}`);
@@ -42,7 +42,7 @@ test('every displayed investigation says whether it is open or closed',()=>{
 test('People First: each action counts its bill\'s strength, so a lukewarm bill counts less than a clear-cut one',()=>{
   const marks=new Map([['1-hr-1',mark('people',0.75)],['1-hr-2',mark('profit',1)],['1-hr-3',mark('people',0.5)]]);
   const r=pvpScore(pvpActions(marks,[{bill:'1-hr-1',pos:'Yea'},{bill:'1-hr-2',pos:'Yea'},{bill:'1-hr-3',pos:'Nay'}],[]));
-  assert.deepEqual([r.people,r.profit,r.nPeople,r.nProfit,r.pct],[0.75,1.5,1,2,33]);
+  assert.deepEqual([r.people,r.profit,r.nPeople,r.nProfit,r.pct],[0.75,1.5,1,2,33.3]);
   assert.deepEqual(r.scored.map(a=>a.points),[0.75,1,0.5]);
 });
 test('a bill\'s score: who gains and who took a side count half each, and opposite signals set it aside',()=>{
@@ -132,12 +132,12 @@ test('your match: weighted by importance, statement-only issues at half importan
   const ev={a:[{type:'senate_vote',side:'A'},{type:'senate_vote',side:'B'}],b:[{type:'stated',side:'A'}],c:[{type:'house_vote',side:'B'}],d:[]};
   const r=matchScore([{id:'a',side:'A',w:2},{id:'b',side:'A',w:2},{id:'c',side:'A',w:3},{id:'d',side:'A',w:1}],ev);
   // a: 1/2 x 2 = 1; b: 1/1 x (2 x 0.5) = 1; c: 0/1 x 3 = 0 -> 2 / (2 + 1 + 3) = 33%
-  assert.equal(r.score,33);assert.equal(r.nCov,3);assert.equal(r.effW,6);
+  assert.equal(r.score,33.3);assert.equal(r.nCov,3);assert.equal(r.effW,6);
   assert.equal(matchScore([{id:'a',side:'A',w:3},{id:'d',side:'A',w:3}],ev).score,null);
 });
 test('promises: vague goals and not-yet-actionable promises are left out; an unacted promise counts as contradicted',()=>{
   const r=promiseScore([{assessment:'consistent'},{assessment:'consistent'},{assessment:'contradiction',unacted:{reason:'x'}},{assessment:'pending'},{assessment:'consistent',vague:true}]);
-  assert.equal(r.pct,67);assert.equal(r.vague,1);assert.equal(r.notCounted,1);assert.equal(r.unacted,1);
+  assert.equal(r.pct,66.7);assert.equal(r.vague,1);assert.equal(r.notCounted,1);assert.equal(r.unacted,1);
 });
 test('trade checks: a report after 45 days or never is late; a single stock in an overseen sector is a conflict, a fund is not',()=>{
   const t=tradeChecks([{traded:'2026-01-01',filed:'2026-03-01',sector:'Energy'},{traded:'2026-01-01',filed:'2026-01-20',sector:'Energy',asset:'fund'},{traded:'2026-01-01',filed:'2026-01-10',sector:'Retail'},{missing:true,traded:'2026-02-01'}],['Energy']);
@@ -180,7 +180,7 @@ test('Stock Disclosure Dodger Index: late or missing trade reports, then late an
   assert.equal(disclosureDodger([r(true),r(false)]).why,'Not enough data');
   assert.equal(disclosureDodger([r(true),r(false),r(false),r(false)]).index,25,'trade part alone when no annual disclosures are on file');
   const annual=[{year:2024,due:'2024-05-15',filed:'2024-08-13'},{year:2025,due:'2025-05-15',filed:'2025-05-15'}];
-  assert.equal(disclosureDodger([r(true),r(false),r(false),r(false)],annual).index,Math.round(DODGER.weights.trades*25+DODGER.weights.annual*50));
+  assert.equal(disclosureDodger([r(true),r(false),r(false),r(false)],annual).index,Math.round((DODGER.weights.trades*25+DODGER.weights.annual*50)*10)/10);
 });
 test('every case in the research is tagged with its kind, and every decided case with the year of its latest status change',()=>{
   for(const p of people)for(const e of p.ethics||[]){
@@ -208,7 +208,7 @@ test('Ethics grade: 100 − Legal Trouble − a tenth of each trading index; an 
 test('promises: a president\'s PolitiFact tracker tallies count kept 1, compromise 1/2 (as partially kept), broken 0; stalled and in the works wait',()=>{
   const p=promiseScore([],[{counts:{kept:3,compromise:2,broken:1,stalled:4,inTheWorks:5}}]);
   assert.equal(p.partly,2,'PolitiFact\'s Compromise counts as partially kept');
-  assert.equal(p.clear,6);assert.equal(p.pct,Math.round((3+1)/6*100));assert.equal(p.notCounted,9);assert.equal(p.total,15);
+  assert.equal(p.clear,6);assert.equal(p.pct,Math.round((3+1)/6*1000)/10);assert.equal(p.notCounted,9);assert.equal(p.total,15);
   assert.equal(promiseScore(st('consistent'),[{counts:{kept:1,broken:1}}]).clear,3,'tracker tallies add to any checked statements');
   for(const s of people)for(const t of s.promiseTrackers||[]){
     assert.ok(/^https:\/\//.test(t.url)&&/^https:\/\//.test(t.src.u),`${s.id}: ${t.name} needs source links`);

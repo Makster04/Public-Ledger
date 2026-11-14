@@ -20,6 +20,10 @@ export const WEIGHT={action:1,statement:0.5};
 export const ACTION_TYPES=new Set(['senate_vote','house_vote','vote','state_vote','sponsored','cosponsored','official_act']);
 
 export function letter(pct){return pct>=90?'A':pct>=80?'B':pct>=70?'C':pct>=60?'D':'F';}
+// Every score and every part of one is a percentage to one decimal (84.3%): round1 keeps the value, pct1 shows it.
+export const round1=v=>Math.round(v*10)/10;
+export const num1=v=>round1(v).toFixed(1);
+export const pct1=v=>v==null||!Number.isFinite(+v)?'—':`${num1(+v)}%`;
 
 // One ID per bill, so a vote and a sponsorship on the same bill can be matched: "H.R. 1319 (117th Congress)" -> "117-hr-1319".
 // Amendments (SAMDT, HAMDT) are keyed like bills ("117-samdt-1858"), so a vote on one is scored on its own, not as the bill.
@@ -71,7 +75,7 @@ export function matchScore(choices,evidence){
     rows.push({id:c.id,status:rec.length?'record':'stated',match,n:basis.length,agree,iw,rec,st,stMatch:st.filter(e=>e.side===c.side).length});
   }
   const need=Math.min(MIN_MATCH_ISSUES,choices.length), enough=choices.length>0&&nCov>=need&&totW>0&&covW/totW>=0.5;
-  return {score:enough?Math.round(num/effW*100):null,covW,totW,effW,nCov,nChosen:choices.length,need,rows,num};
+  return {score:enough?round1(num/effW*100):null,covW,totW,effW,nCov,nChosen:choices.length,need,rows,num};
 }
 
 // Keeps Their Word: four verdicts (approved 2026-11-13).
@@ -113,7 +117,7 @@ export function promiseScore(statements,trackers,promises=[],today=null){
   const own=(promises||[]).filter(p=>!(p.qs||[]).some(([q])=>pledged.has(q)));let open=0;
   for(const p of own){const st=promiseStatus(p,today);if(st in n)n[st]++;else open++;}
   const clear=n.kept+n.partly+n.broken+n.alleged,points=n.kept+PROMISE_WEIGHT.partly*n.partly;
-  return {pct:clear>=MIN_CHECKS?Math.round(points/clear*100):null,...n,half:n.partly,points,clear,total:list.length+rated+own.length,
+  return {pct:clear>=MIN_CHECKS?round1(points/clear*100):null,...n,half:n.partly,points,clear,total:list.length+rated+own.length,
     notCounted:list.filter(x=>!CHECK_STATUS[x.assessment]).length+waiting+open,open,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
     unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated+own.length};
 }
@@ -192,7 +196,7 @@ export function disclosureDodger(rows,annual=[],{covered=true,why='No trading da
   if(parts.trades==null)return {index:null,why:'No trades',n:annual.length,parts};
   if(rows.length+annual.length<DODGER.minFilings)return {index:null,why:'Not enough data',n:rows.length+annual.length,parts};
   const W=DODGER.weights,use=Object.keys(W).filter(k=>parts[k]!=null),w=use.reduce((t,k)=>t+W[k],0);
-  return {index:Math.round(use.reduce((t,k)=>t+W[k]*parts[k],0)/w),why:null,n:rows.length+annual.length,late:rows.filter(r=>r.late).length,lateAnnual,parts};
+  return {index:round1(use.reduce((t,k)=>t+W[k]*parts[k],0)/w),why:null,n:rows.length+annual.length,late:rows.filter(r=>r.late).length,lateAnnual,parts};
 }
 
 // Blind trusts and divestment (step 8), from the reviewed research: holdings {status, since, src, note}.
@@ -341,7 +345,7 @@ export function pvpScore(actions){
     scored.push(Object.assign({},a,{took,points:pts2(w)}));
   }
   const n=scored.length;
-  return {pct:n>=MIN_PVP_ACTIONS?Math.round(people/(people+profit)*100):null,people:pts2(people),profit:pts2(profit),nPeople,nProfit,n,scored};
+  return {pct:n>=MIN_PVP_ACTIONS?round1(people/(people+profit)*100):null,people:pts2(people),profit:pts2(profit),nPeople,nProfit,n,scored};
 }
 // The actions one person took on scored bills: their recorded votes, the bills they sponsored or cosponsored (or, for a
 // president, signed or vetoed, and executive orders, keyed "eo-14251"), and their cited public statements on bills.

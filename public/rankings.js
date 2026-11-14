@@ -6,7 +6,7 @@
 // promises, votes, trades or scored actions), then by name, and a box says how many are tied. Each right-hand box carries
 // a line saying a low score isn't a finding of wrongdoing. The page builds each person's row (public/app.js); this file
 // sorts and draws them.
-import {letter} from './grades.js';
+import {letter,pct1} from './grades.js';
 import {leanLabel} from './six-scores.js';
 
 export const RANK={size:10,cut:70};
@@ -43,11 +43,11 @@ export function rankSides(rows,score,{state='',who=''}={},{size=RANK.size,cut=RA
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const ini=n=>String(n||'').split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase();
 const signed=v=>`${v>0?'+':v<0?'−':''}${Math.abs(v)}`;
-const valueText=(score,v)=>score.position?signed(v):`${v}%`;
+const valueText=(score,v)=>score.position?signed(v):pct1(v);
 function rowHTML(r,i,score,portraits){
   const v=r.scores[score.key],n=r.n?.[score.key],file=portraits?.[r.id]?.file,side=r.party==='D'?'d':r.party==='R'?'r':'i';
   const val=score.position?`<b>${esc(signed(v))}</b><span class="rk-chip rk-lean rk-${v<0?'lib':'con'}">${esc(leanLabel(v))}</span>`
-    :`<b>${v}%</b><span class="rk-chip gr-${letter(Math.min(100,v))}">${letter(Math.min(100,v))}</span>`;
+    :`<b>${pct1(v)}</b><span class="rk-chip gr-${letter(Math.min(100,v))}">${letter(Math.min(100,v))}</span>`;
   return `<a class="rk-row" href="#${esc(r.id)}"><span class="rk-n">${i+1}</span>${file?`<img class="rk-pic rk-${side}" src="/${esc(file)}" alt="" loading="lazy" decoding="async">`:`<span class="rk-pic rk-ini rk-${side}" aria-hidden="true">${esc(ini(r.name))}</span>`}`
     +`<span class="rk-who"><span class="rk-nm">${esc(r.name)}</span><span class="rk-sub">${esc([r.party,r.state,r.officeLabel].filter(Boolean).join(' · '))}${n&&score.unit?` · ${n.toLocaleString('en-US')} ${esc(score.unit)}`:''}</span></span><span class="rk-v">${val}</span></a>`;
 }

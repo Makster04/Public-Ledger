@@ -54,6 +54,8 @@ export function gradeNews(before,now,date){
     const a=before?.[id]?.[g],b=x?.[g];if(!b)continue;
     const from=a?a.pct??null:null,to=b.pct??null;
     if(from===to)continue;
+    // Scores are worked out to one decimal (since Nov. 14, 2026): a move under one point that keeps the letter isn't news.
+    if(from!=null&&to!=null&&letter(Math.min(100,from))===letter(Math.min(100,to))&&Math.abs(to-from)<1)continue;
     out.push({key:`grade:${id}:${g}:${from??'n'}>${to??'n'}`,kind:'grade',id,grade:g,from,to,
       fromLetter:from==null?null:letter(Math.min(100,from)),toLetter:to==null?null:letter(Math.min(100,to)),why:gradeWhy(g,a,b),date});
   }

@@ -32,7 +32,7 @@ test('ties go to whoever has more evidence, then by name; the box counts the tie
   assert.equal(s.left.top.length,10);assert.equal(s.left.all.length,14);assert.equal(s.left.tied,14);
   assert.deepEqual(s.left.top.slice(0,4).map(r=>r.n.peoplefirst),[2,2,2,2],'most evidence first');
   const html=rankingsHTML(rows,{key:'peoplefirst'});
-  assert.match(html,/14 people tied at 100%; these have the most evidence/);assert.match(html,/See all \(14\)/);
+  assert.match(html,/14 people tied at 100.0%; these have the most evidence/);assert.match(html,/See all \(14\)/);
   assert.equal((rankingsHTML(rows,{key:'peoplefirst',open:{left:true}}).match(/class="rk-row"/g)||[]).length,14);
 });
 
@@ -52,7 +52,7 @@ test('markup: tabs, the score\'s note, "only N" when fewer qualify, the no-wrong
   assert.match(html,/Only 1 scores under 70%\./);assert.match(html,/Only 1 scores 70% or higher\./);
   assert.match(html,/Lowest scores on this measure, not a finding of wrongdoing\./);
   assert.ok(html.includes('&lt;b&gt;X&lt;/b&gt;')&&!html.includes('<b>X</b>'));assert.match(html,/5 promises/);
-  assert.match(html,/<img class="rk-pic rk-d" src="\/portraits\/y.webp"/);assert.match(html,/<b>40%<\/b><span class="rk-chip gr-F">F<\/span>/);
+  assert.match(html,/<img class="rk-pic rk-d" src="\/portraits\/y.webp"/);assert.match(html,/<b>40.0%<\/b><span class="rk-chip gr-F">F<\/span>/);
   assert.match(rankingsHTML([],{key:'unbought'},{loading:true}),/Reading their disclosures…/);
   assert.match(rankingsHTML([],{key:'unbought'}),/It fills in as the refresh reads their disclosures/);
   assert.ok(!rankingsHTML([row('i',{ideology:-50})],{key:'ideology'}).includes('not a finding of wrongdoing'),'Ideology is a position, not a grade');

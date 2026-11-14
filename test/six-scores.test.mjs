@@ -30,14 +30,14 @@ test('Keeps Their Word and Shows Up: the examples in the proposal',()=>{
   const st=a=>({assessment:a});
   // 4 kept, 2 partially kept (one a compromise), 1 broken: 100 × (4 + 0.5 + 0.5) ÷ 7 = 71.
   const w=keepsTheirWord({statements:[st('consistent'),st('consistent'),st('consistent'),st('consistent'),st('partial'),st('compromise'),st('contradiction'),{assessment:'consistent',debate:true}]});
-  assert.deepEqual([w.pct,w.letter],[71,'C']);
+  assert.deepEqual([w.pct,w.letter],[71.4,'C']);
   assert.deepEqual(w.parts.find(p=>p.key==='partly'),{key:'partly',label:'Partially kept (½)',value:2});
   assert.deepEqual(w.parts.map(p=>p.key),['kept','partly','broken','alleged','clear'],'four verdicts, and the count');
   assert.equal(keepsTheirWord({statements:[st('consistent')]}).pct,null);
   const attendance={source:'https://voteview.com/data',people:{x:{years:{2025:{votes:100,missed:2}},spans:[],missed:{}}},days:{}};
   const getItDone={people:{x:{congresses:{119:{chamber:'S',party:'D',sponsored:10,advanced:4}}}},medians:{119:{S:{D:0.2}}}};
   const u=showsUp({id:'x'},{attendance,getItDone,asOfYear:2026});
-  assert.deepEqual([u.pct,u.letter,u.parts.map(p=>p.value)],[93,'A',[90,100]]);
+  assert.deepEqual([u.pct,u.letter,u.parts.map(p=>p.value)],[92.5,'A',[90,100]]);
   // Without Get It Done, Attendance alone.
   assert.equal(showsUp({id:'x'},{attendance,getItDone:null,asOfYear:2026}).pct,90);
   assert.equal(showsUp({id:'y'},{attendance,getItDone,asOfYear:2026}).pct,null);
@@ -57,7 +57,7 @@ test('Big Money Independence: their published formula, with the House weights',(
   assert.deepEqual([own[1].points,own[1].via,own[1].how],[1,'bill','sponsored']);
   const u=unbought(member,{sizes,pacRows:[{kind:'corporate',amount:300_000},{kind:'labor',amount:100_000}],earmarks:[{group:'J Street',amount:50_000},{group:'ActBlue',amount:9e6}],snapshot,trades,pledges});
   assert.deepEqual(Object.fromEntries(u.parts.map(p=>[p.key,p.points])),{donor:8.6,pac:-4.6,reliance:-5,earmarks:-1,stocks:-7.5,trades:-4.6,bonuses:0,pledges:1});
-  assert.deepEqual([u.pct,u.letter],[62,'D']);
+  assert.deepEqual([u.pct,u.letter],[61.9,'D']);
   // The stock terms are never dropped: without the disclosure there is no grade, only the parts read so far.
   const waiting=unbought(member,{sizes,pacRows:[{kind:'corporate',amount:300_000}],snapshot:null,trades,pledges});
   assert.equal(waiting.pct,null);assert.match(waiting.why,/annual financial disclosure hasn't been read/);
@@ -73,28 +73,28 @@ test('Big Money Independence: their published formula, with the House weights',(
   assert.match(unbought({...member,office:'President'}).why,/president/);
 });
 
-test('Plays by the Rules: the four indexes, rescaled over the ones available, minus Legal Trouble',()=>{
+test('Plays by the Rules: the four percentages, rescaled over the ones available, minus Legal Trouble',()=>{
   const rows=Array.from({length:20},(_,i)=>({traded:'2025-03-01',filed:i<5?'2025-05-01':'2025-03-20',asset:'stock',amount:'$1,001 - $15,000',sector:i<10?'Energy':'Tech',flag:i<8?'near a vote':null}));
   const person={id:'p',ethicsSearched:'Searched court, ethics and DOJ records, 2026-11-01',ethics:[{status:'investigation',stage:'closed',kind:'ethics'}]};
   const a=aboveBoard(person,{trades:{rows,covered:true,overseen:['Energy'],inDonors:4}});
-  // Trade Conflicts = 0.45 × 50 + 0.30 × 40 + 0.25 × 20 = 39.5 → 40; Dodger = 25 (5 of 20 late).
-  assert.deepEqual([a.tradeConflicts.index,a.dodger.index],[40,25]);
-  // 100 − (0.25 × 40 + 0.20 × 25) ÷ 0.45 − 5 = 61.7.
-  assert.deepEqual([a.pct,a.letter],[62,'D']);
-  assert.deepEqual(a.parts.map(p=>p.points),[null,null,-22.2,-11.1,-5]);
+  // Trade Conflicts = 0.45 × 50% + 0.30 × 40% + 0.25 × 20% = 39.5%; Dodger = 25% (5 of 20 late).
+  assert.deepEqual([a.tradeConflicts.index,a.dodger.index],[39.5,25]);
+  // 100% − (0.25 × 39.5% + 0.20 × 25%) ÷ 0.45 − 5 = 61.9%.
+  assert.deepEqual([a.pct,a.letter],[61.9,'D']);
+  assert.deepEqual(a.parts.map(p=>p.points),[null,null,-21.9,-11.1,-5]);
   // Legal records alone aren't enough; no review, no grade.
-  assert.match(aboveBoard(person,{}).why,/None of the four indexes/);
+  assert.match(aboveBoard(person,{}).why,/None of the four percentages/);
   assert.match(aboveBoard({...person,ethicsSearched:''},{trades:{rows,covered:true}}).why,/legal record/);
   // Fewer than 5 trades: no Trade Conflicts; covered with none: 0.
   assert.equal(tradeConflicts(rows.slice(0,3)).index,null);
   assert.equal(tradeConflicts([]).index,0);
 });
 
-test('People First: legislative action and the behavior-only CCI',()=>{
+test('People First: legislative action and the behavior-only Corporation Compromised',()=>{
   const cci=behaviorCci({businessVotes:{index:50},lobbied:{profit:3,n:14}});
   assert.equal(cci.index,40);
   const p=peopleFirst({pct:70,n:10,nPeople:7,nProfit:3},cci);
-  assert.deepEqual([p.pct,p.letter],[68,'D']);
+  assert.deepEqual([p.pct,p.letter],[67.5,'D']);
   assert.equal(peopleFirst({pct:70,n:10},behaviorCci({})).pct,70);
   assert.equal(peopleFirst({pct:null,n:1},cci).pct,null);
 });

@@ -6,6 +6,7 @@ const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
 const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
 const letter=value=>value>=90?'A':value>=80?'B':value>=70?'C':value>=60?'D':'F';
+const pct1=value=>`${(Math.round(value*10)/10).toFixed(1)}%`;
 // The card's two box colors (and the outline), the gray text on each, and the grade colors dark enough to read on paper.
 const INK='#121519',PAPER='#f3efe6',SUB='#4a525e',SUB_DARK='#b9b3a6';
 const GRADE_ON_PAPER={A:'#138a50',B:'#5f8f1e',C:'#a87708',D:'#bd6416',F:'#cc3d4a'};
@@ -103,9 +104,9 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
   const gradeRows=grades.map((g,i)=>{
     const y=320+i*46,graded=g.value!==null,l=graded?letter(g.value):null,c=graded?GRADE_ON_PAPER[l]:SUB;
     return `${text(g.label.toUpperCase(),R.x+26,y,{size:15,color:INK,weight:700,width:26,max:1,family:SANS})}
-      <rect x="${R.x+250}" y="${y-13}" width="190" height="14" rx="3" fill="#d9d3c6"/>
-      ${graded?`<rect x="${R.x+250}" y="${y-13}" width="${Math.max(4,Math.round(190*g.value/100))}" height="14" rx="3" fill="${c}"/>
-      ${text(l,R.x+462,y+4,{size:30,color:c,weight:700,width:2,max:1,family:SANS})}${text(`${Math.round(g.value)}%`,R.x+530,y,{size:15,color:SUB,weight:700,width:4,max:1,family:MONO,anchor:'end'})}`
+      <rect x="${R.x+250}" y="${y-13}" width="176" height="14" rx="3" fill="#d9d3c6"/>
+      ${graded?`<rect x="${R.x+250}" y="${y-13}" width="${Math.max(4,Math.round(176*g.value/100))}" height="14" rx="3" fill="${c}"/>
+      ${text(l,R.x+440,y+4,{size:30,color:c,weight:700,width:2,max:1,family:SANS})}${text(pct1(g.value),R.x+530,y,{size:13,color:SUB,weight:700,width:6,max:1,family:MONO,anchor:'end'})}`
         :text('NOT GRADED',R.x+530,y,{size:12,color:SUB,weight:700,width:12,max:1,family:MONO,anchor:'end'})}`;
   }).join('');
   const gradesBox=`${box(R.x,242,R.w,310,PAPER)}
@@ -180,7 +181,7 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
       :`${text('PUBLIC LEDGER',28,by+32,{size:13,color:INK,weight:700,width:30,family:MONO})}${text('FOLLOW THE EVIDENCE',972,by+32,{size:13,color:SUB,width:30,family:MONO,anchor:'end'})}`}`;
   const desc=[`Raised ${amount(model.raised)}, cash on hand ${amount(model.cash)}, spent ${amount(model.spent)}`,...(wealth.length?[wealth.map(x=>`${x.label} ${x.value||'Not read yet'}`).join(', ')]:[]),
     ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
-    ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+'%'}`)].join('. ');
+    ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+pct1(g.value)}`)].join('. ');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
     <title id="title">${xml(name)} — Public Ledger report card</title>
     <desc id="desc">${xml(desc)}. Reporting periods and evidence coverage are shown on the card.</desc>

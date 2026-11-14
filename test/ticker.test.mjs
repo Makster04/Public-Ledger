@@ -82,7 +82,7 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
     {key:'old',kind:'promise',id:'booker',promise:'x@2020-01-01',status:'kept',date:'2026-08-01'}]};
   const items=newsItems(news,{now:NOV14,people});
   assert.deepEqual(items.map(text),[
-    'Marshall (R) Keeps Their Word D → B (67% → 85%): 10 more promises checked, 1 broken','Ossoff (D) Keeps Their Word: C (74%), 23 promises decided',
+    'Marshall (R) Keeps Their Word D → B (67.0% → 85.0%): 10 more promises checked, 1 broken','Ossoff (D) Keeps Their Word: C (74.0%), 23 promises decided',
     'Collins (R) Shows Up: no longer graded (their record changed)','Booker (D): drug decriminalization promise (Apr 2021), partially kept',
     'Big Defense 🪖 · The Boeing Company PAC gave $5,000 each to Clyburn (D), Moolenaar (R), Meng (D), Hagerty (R) and 1 more',
     'Big Pharma + Insurance 💊 · Peraton Corp. PAC gave $1,000 to Clark (D)',

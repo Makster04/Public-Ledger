@@ -13,9 +13,11 @@
 **How it's calculated:**
 
 ```text
-75 + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges
-(never below 0)
+75% + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges
+(never below 0%)
 ```
+
+Each part adds or takes off percentage points, so the score is a percentage to one decimal.
 
 - **Donor:** up to +16 (House) or +14 (Senate). Smaller gifts earn more; a campaign funded entirely by small gifts gets the full amount.
 - **PAC Penalty:** each PAC dollar times a rate by type, with corporate PACs costing the most and unions the least. For example, $100,000 from corporate PACs costs a House member 1.5 points and a senator 1. Capped at 30.

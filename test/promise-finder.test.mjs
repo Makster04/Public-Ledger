@@ -225,7 +225,7 @@ test('said in debate the day of the vote or the day before: reviewed and shown, 
   // promiseScore leaves it out, like a vague goal.
   const check=(a,extra={})=>({assessment:a,...extra});
   const p=promiseScore([check('consistent'),check('consistent'),check('contradiction'),check('consistent',{debate:true}),check('consistent',{vague:true})]);
-  assert.deepEqual([p.pct,p.clear,p.debate,p.vague],[67,3,1,1]);
+  assert.deepEqual([p.pct,p.clear,p.debate,p.vague],[66.7,3,1,1]);
 });
 
 test('from the third full run: every member\'s vote on a saved roll call, Senate motions, "not just", and what subject links skip',()=>{

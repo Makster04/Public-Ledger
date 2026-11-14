@@ -12,7 +12,7 @@
 **How it's calculated:**
 
 ```text
-100 × (Kept + ½ × Partially kept) ÷ (Kept + Partially kept + Broken + Allegedly broken)
+100% × (Kept + ½ × Partially kept) ÷ (Kept + Partially kept + Broken + Allegedly broken)
 ```
 
 - **Kept:** they voted for, sponsored or cosponsored it, and nothing afterward went against it.

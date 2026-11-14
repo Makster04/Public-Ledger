@@ -17,7 +17,7 @@
 // reached the site ("seen", else its own date). With nothing to show, the strip or the cards aren't shown. The strip
 // scrolls slowly, stops while hovered or focused, and stands still for visitors whose device asks for reduced motion.
 import {TRACKER} from './trackers.js';
-import {ETHICS_COST,CASE_KIND} from './grades.js';
+import {ETHICS_COST,CASE_KIND,pct1} from './grades.js';
 
 export const TICKER={trades:24,pac:12,cards:16,pageDays:45,countingDays:45,liveEvery:300000,lateDays:45};
 const DAY=864e5,HOUR=36e5;
@@ -165,8 +165,8 @@ export function newsItems(news,{now=Date.now(),people,days=TICKER.pageDays}={}){
     if(x.kind==='grade'){
       const who=nameOf(x.id,people),name=GRADE_NAME[x.grade];if(!who||!name)continue;
       const parts=x.to==null?[who,` ${name}: no longer graded (${x.why})`]
-        :x.from==null?[who,` ${name}: `,{grade:x.toLetter},` (${x.to}%), ${x.why}`]
-        :[who,` ${name} `,{grade:x.fromLetter},' → ',{grade:x.toLetter},` (${x.from}% → ${x.to}%): ${x.why}`];
+        :x.from==null?[who,` ${name}: `,{grade:x.toLetter},` (${pct1(x.to)}), ${x.why}`]
+        :[who,` ${name} `,{grade:x.fromLetter},' → ',{grade:x.toLetter},` (${pct1(x.from)} → ${pct1(x.to)}): ${x.why}`];
       out.push({key:x.key,kind:'grade',tag:x.from==null&&x.to!=null?'Newly graded':'Grade change',date:x.date,at,order:2,href:`#${x.id}-${x.grade}`,parts,id:x.id,
         g:{score:name,from:x.from,to:x.to,fromLetter:x.fromLetter||null,toLetter:x.toLetter||null,why:x.why||''}});
     }else if(x.kind==='promise'){

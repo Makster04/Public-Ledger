@@ -68,3 +68,9 @@ test('the news file on hand: built from the site\'s own files, items newest firs
   assert.ok(n.items.every(x=>['grade','promise','lobby','superpac'].includes(x.kind)&&built-at(x)<=(NEWS_DAYS+1)*864e5));
   assert.equal(new Set(n.items.map(x=>x.key)).size,n.items.length,'each once');
 });
+
+test('grade changes: scores now carry one decimal, so a move under a point that keeps the letter is left out',()=>{
+  const before={a:{word:{pct:84,counted:9}},b:{word:{pct:89,counted:9}},c:{word:{pct:80,counted:9}}};
+  const now={a:{word:{pct:84.3,counted:9}},b:{word:{pct:90.0,counted:9}},c:{word:{pct:81.2,counted:10}}};
+  assert.deepEqual(gradeNews(before,now,'2026-11-14').map(x=>[x.id,x.from,x.to]),[['b',89,90],['c',80,81.2]],'a: 84 → 84.3 isn\'t news; b changed letter; c moved over a point');
+});
