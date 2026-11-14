@@ -17,7 +17,7 @@ import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './f
 import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {CLUB_KEYS,CLUB_LABEL,CLUB_RANGE,chamberCareer,routedStatus} from './career.js';
-import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending,helpToWin,fecName,ELECTION_LABEL} from './trackers.js';
+import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending,helpToWin,fecName,ELECTION_LABEL,pacsOf,routedBy,donorAmounts} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
@@ -782,7 +782,7 @@ const seatLookouts=new Map();
 function seatStatus(m,by){
   if(by==='corporate')return corporateOf(m);
   const cp=window.CORP_PACS;
-  if(cp?.people?.[m.id]){const e=cp.trackers?.[by]?.[m.id];return e&&(Number(e[0])>0||routedFromPayments(cp)&&Number(e[2]||0)>0)?'took':'none';}
+  if(cp?.people?.[m.id]){const e=cp.trackers?.[by]?.[m.id];return e&&(Number(e[0])>0||routedFromPayments(cp)&&Number(e[2]||0)>0||Number(e[3]||0)>0)?'took':'none';}
   const s=byId[m.id];if(!s||s.basic||s.office)return 'waiting';
   if(!seatLookouts.has(s.id))seatLookouts.set(s.id,Object.fromEntries(lookouts(lookoutInputs(s,null,'this')).map(x=>[x.key,x.status])));
   return seatLookouts.get(s.id)[by]||'waiting';
@@ -798,9 +798,9 @@ function seatCharts(by){
   const legend=c=>[c.took&&`<span>${dot('took')}${c.took} took</span>`,c.none&&`<span>${dot('none')}${c.none} none</span>`,c.waiting&&`<span>${dot('waiting')}${c.waiting} not read yet</span>`,c.vacant&&`<span><i class="seats-dot seats-vacant"></i>${c.vacant} vacant</span>`].filter(Boolean).join('');
   const any=charts.some(x=>x.counts.waiting),cyc=cp?`${cp.cycle-1}–${cp.cycle}`:'this cycle',thru=cp?.through?` (through ${fmtDate(cp.through)})`:'';
   const counted=!t?'PAC checks from groups a corporation sponsors'
-    :t.routed.length?`Checks from ${t.name}'s PAC${cp&&!(routedFromPayments(cp)&&cp.routed?.[by])?'':`, and the gifts ${t.name} collected from donors and passed on to the campaign`}`
+    :t.routed.length?`Checks from ${pacsOf(t)}${cp&&!(routedFromPayments(cp)&&cp.routed?.[by])?'':`, the gifts ${routedBy(t)} collected from donors and passed on to the campaign`}${t.donors?.length?`, and the named donors' own checks (${t.donors.map(d=>d.name).join(' and ')})`:''}`
     :`Checks from the PACs of ${t.name}'s companies and groups (its Tracker's list)`;
-  const said=cp?`${counted}, ${cyc}, from the FEC${thru}${t&&t.routed.length&&!cp.routed?.[by]?`. The gifts ${t.name} passed on aren't counted yet (they need the FEC key in .dev.vars)`:''}`
+  const said=cp?`${counted}, ${cyc}, from the FEC${thru}${t&&t.routed.length&&!cp.routed?.[by]?`. The gifts ${routedBy(t)} passed on aren't all counted yet (they need the FEC key in .dev.vars, and a run that reads every one of them)`:''}`
     :`${counted}, this cycle. The FEC's files haven't been read yet (npm run corporate:pacs), so only the full profiles are colored`;
   return `<div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}${tookShare(x.counts)?` <span class="seats-share" title="Of the members read, the share who ${esc(says.took)}">(${tookShare(x.counts)})</span>`:''}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
       <p class="sr-only">${x.label}: ${tookShare(x.counts)?`${tookShare(x.counts)} took ${what}; `:''}${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
@@ -1708,7 +1708,7 @@ function jfcEvidence(j,cycle){
     <div class="st-check"><h4>Joint fundraising money by the size of each share</h4><div class="mm-bars st-kinds" role="list">${j.bands.map((b,i)=>`<div class="mm-bar" role="listitem" title="${labels[i]}: ${fmtFull(b)}"><span>${labels[i]}</span><span class="mm-track"><span style="width:${(b/max*100).toFixed(1)}%"></span></span><span class="num">${shortMoney(b)} · ${Math.round(b/(j.people||1)*100)}%</span></div>`).join('')}</div></div>
     <p class="small muted">${j.shares.toLocaleString('en-US')} people's shares are listed on the reports; ${fmtFull(j.unlisted)} isn't, which is people whose share was $200 or less, so it counts as small gifts. ${j.committees>0?`${fmtFull(j.committees)} came from PACs and other committees and stays committee money. `:''}${j.scaled?'The listed shares add up to more than was passed on (they are listed before the committee\'s costs), so each is scaled down to fit. ':''}The Donor part of the score uses these sizes.</p></section>`;
 }
-// ----- Trackers: AIPAC, Big Pharma + Insurance, Big Oil, Big Tech + AI, Crypto, Big Defense and Wall Street (public/trackers.js) -----
+// ----- Trackers: the Pro-Israel Lobby, Big Pharma + Insurance, Big Oil, Big Tech + AI, Crypto, Big Defense and Wall Street (public/trackers.js) -----
 // The money behind a person's lookouts over a period (the Big Money Independence tab's period picker): the PAC lines (this cycle: the
 // reviewed reports merged with the refresh's whole-cycle list; other cycles: the refresh's), the gifts routed through
 // groups and those groups' own PAC checks this cycle, and the employee gifts the refresh read (crypto and AI so far). A
@@ -1722,7 +1722,7 @@ function lookoutInputs(s,d,period='this',sp=undefined){
     const c=m.pacs?.cycles?.[cy],span=`${cy-1}–${cy}`,cut=c?.more>0?`the ${(c.committees||[]).length} largest PAC givers for ${span}`:`every PAC check the FEC has processed for ${span}`;
     const read=(c?.committees||[]).map(x=>({cid:x.cid||null,name:x.name||'',amount:Number(x.amount)||0}));
     // A basic profile's checks from each tracker's PACs this cycle: the FEC bulk files' totals (npm run corporate:pacs).
-    const bulk=cy===current&&s.pac?.basic&&window.CORP_PACS?.people?.[s.id]?TRACKERS.map(t=>{const e=window.CORP_PACS.trackers?.[t.key]?.[s.id];return e&&e[0]>0?{cid:t.pacIds[0]||null,name:t.name,amount:e[0]}:null;}).filter(Boolean):null;
+    const bulk=cy===current&&s.pac?.basic&&window.CORP_PACS?.people?.[s.id]?TRACKERS.map(t=>{const e=window.CORP_PACS.trackers?.[t.key]?.[s.id];return e&&e[0]>0?{cid:t.pacIds[0]||null,name:`All of ${pacsOf(t)}`,amount:e[0],bulk:true}:null;}).filter(Boolean):null;
     if(bulk){lists.push(bulk);said.push(`every PAC check to them in the FEC's bulk files for ${span}`);continue;}
     if(cy===current&&s.pac&&!s.pac.basic){lists.push(researchPacLines(DATA,s),read);said.push(c?`${cut}, and every PAC line in the reports reviewed for ${s.pac.window||span}`:`the PAC lines in the reports reviewed for ${s.pac.window||span}`);continue;}
     if(c){lists.push(read);said.push(cut);}else missing=true;
@@ -1740,7 +1740,16 @@ function lookoutInputs(s,d,period='this',sp=undefined){
   if(ind){const per=cycles.map(cy=>Number(cy)===Number(ind.cycle)?ind:ind.cycles?.[cy]);
     if(per.every(Boolean)){employees={};for(const p of per)for(const [k,v] of Object.entries(p.industries||{}))employees[k]=(employees[k]||0)+(Number(v.total)||0);}}
   const superPac=Object.fromEntries(TRACKERS.filter(t=>t.superPacs.length).map(t=>[t.key,ownSuperPacSpending(t,{sp,cand:s.fecCand,out:s.out,cms:DATA.ie?.cm})]));
-  return {pacLines:missing?null:mergePacLines(...lists),routed,routedKnown,direct,employees,superPac,cycles,label:periodLabel(period,current),coverage:said.join('; ')};
+  // The named donors' own checks in the period (the Pro-Israel Lobby's), from the career file; null when not read.
+  const donors=namedDonorsOf(s,cycles);
+  return {pacLines:missing?null:mergePacLines(...lists),routed,routedKnown,direct,employees,donors,superPac,cycles,label:periodLabel(period,current),coverage:said.join('; ')};
+}
+// Every tracker's named donors' own checks to a sitting member's campaigns over some cycles ({donor key: dollars}), or
+// null when the career file hasn't read them, or for someone it doesn't cover (it reads sitting members only).
+function namedDonorsOf(s,cycles){
+  const h=window.TRACKER_HISTORY,out={};
+  for(const t of TRACKERS.filter(x=>x.donors?.length)){if(!h?.people?.[s.id])return null;const a=donorAmounts(h,t,s.id,cycles);if(a===null)return null;Object.assign(out,a);}
+  return out;
 }
 // "Summary of Major Lookouts": one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
 // period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
@@ -1772,7 +1781,7 @@ function lookoutsBox(s,inp){
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)}: ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Under AIPAC, Crypto and Big Tech + AI, since they spend heavily that way: what their super PACs spent to help them win this cycle (for them, plus against their opponents in a race they were in) and what they spent against them. It never changes the mark: the campaign doesn't take it. More in each tracker below.</p></div>`;
+    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)} (for the Pro-Israel Lobby also the named donors' own checks): ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Under the Pro-Israel Lobby, Crypto and Big Tech + AI, since they spend heavily that way: what their super PACs spent to help them win this cycle (for them, plus against their opponents in a race they were in) and what they spent against them. It never changes the mark: the campaign doesn't take it. More in each tracker below.</p></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
@@ -1781,11 +1790,11 @@ const titleCase=n=>String(n||'').toLowerCase().replace(/(^|[\s(/&-])([a-z])/g,(x
 function trackerPanel(s,d,inp,x,t,sp){
   const who=esc(s.short||s.name),cy=curCycle(s);
   const pacs=x.status==='waiting'&&inp.pacLines==null?`<p class="small muted">The PAC lines for ${esc(inp.label)} haven't been read yet.</p>`
-    :`${x.pacs.length?`${stTable(['PAC','Gave'],x.pacs.map(p=>[fecCmteLink(p.cid,titleCase(p.name))+(p.own?'<div class="small muted">From its own reports, this cycle</div>':'')+(p.cid?'':`<div class="small muted">Listed under this name on the campaign's report, with no FEC committee ID${t.routed.length?`; it may be gifts ${esc(t.name)} passed on`:''}</div>`),`${fmtFull(p.amount)}${p.n>1?` <span class="muted small">· ${p.n}</span>`:''}`]),'',[1])}<p class="small"><b class="num">${fmtFull(x.pac)}</b> in PAC checks, ${esc(inp.label)}.</p>`
-      :`<p class="small">No checks from ${esc(t.name)}'s PACs, ${esc(inp.label)}.</p>`}${inp.coverage?`<p class="small muted">Read: ${esc(inp.coverage)}.</p>`:''}`;
-  const routed=t.routed.length?(()=>{const b=DATA.bundled?.people?.[s.id]||{},rows=t.routed.map(g=>b[g]).filter(Boolean);
-    if(x.routed>0)return `<p class="small"><b class="num">${fmtFull(x.routed)}</b> in gifts ${esc(t.name)} collected from donors and passed on to the campaign, ${esc(inp.label)}${rows[0]?.n&&inp.cycles.length===1?` (${rows[0].n.toLocaleString('en-US')} gifts)`:''}.${rows[0]?.src?` <a href="${esc(rows[0].src)}" target="_blank" rel="noopener">FEC ↗</a>`:''} They also show under "Bundled through groups".</p>`;
-    return inp.routedKnown?`<p class="small">No gifts routed through ${esc(t.name)}, ${esc(inp.label)}.</p>`:'<p class="small muted">Not every record of gifts routed to this campaign has been read yet.</p>';})()
+    :`${x.pacs.length?`${stTable(['PAC','Gave'],x.pacs.map(p=>[(p.bulk?esc(p.name)+'<div class="small muted">Added up from the FEC\'s bulk files</div>':fecCmteLink(p.cid,titleCase(p.name)))+(p.own?'<div class="small muted">From its own reports, this cycle</div>':'')+(p.cid||p.bulk?'':`<div class="small muted">Listed under this name on the campaign's report, with no FEC committee ID${t.routed.length?`; it may be gifts ${esc(routedBy(t))} passed on`:''}</div>`),`${fmtFull(p.amount)}${p.n>1?` <span class="muted small">· ${p.n}</span>`:''}`]),'',[1])}<p class="small"><b class="num">${fmtFull(x.pac)}</b> in PAC checks, ${esc(inp.label)}.</p>`
+      :`<p class="small">No checks from ${esc(pacsOf(t))}, ${esc(inp.label)}.</p>`}${inp.coverage?`<p class="small muted">Read: ${esc(inp.coverage)}.</p>`:''}`;
+  const routed=t.routed.length?(()=>{const b=DATA.bundled?.people?.[s.id]||{},rows=t.routed.map(g=>b[g]).filter(Boolean),n=rows.reduce((a,r)=>a+(Number(r.n)||0),0);
+    if(x.routed>0)return `<p class="small"><b class="num">${fmtFull(x.routed)}</b> in gifts ${esc(routedBy(t))} collected from donors and passed on to the campaign, ${esc(inp.label)}${n&&inp.cycles.length===1?` (${n.toLocaleString('en-US')} gifts)`:''}.${rows.length===1&&rows[0].src?` <a href="${esc(rows[0].src)}" target="_blank" rel="noopener">FEC ↗</a>`:''} They also show under "Bundled through groups".</p>`;
+    return inp.routedKnown?`<p class="small">No gifts routed through ${esc(routedBy(t))}, ${esc(inp.label)}.</p>`:'<p class="small muted">Not every record of gifts routed to this campaign has been read yet.</p>';})()
     :`<p class="small muted">Not updated yet. Gifts these companies and groups collect from donors and pass on to campaigns (including their lobbyists' bundling) aren't read yet, so this is left blank for now.</p>`;
   const ind=d?.money?.industry,emp=!t.industries.length?`<p class="small muted">Gifts from these companies' employees aren't read yet; they're next for the refresh.</p>`
     :d===undefined?'<p class="small muted">Reading their gifts…</p>':!d?'<p class="small muted">The update service is offline, so the gifts can\'t be shown right now.</p>'
@@ -1827,9 +1836,17 @@ function trackerPanel(s,d,inp,x,t,sp){
   return `<div class="tr-panel" data-panel="${t.key}" role="tabpanel"${t.key===trackerTab?'':' hidden'}>
     <p class="small">${esc(t.about)}</p>
     <div class="st-check"><h4>PAC checks to the campaign</h4>${pacs}</div>
-    <div class="st-check"><h4>Gifts routed through ${esc(t.name)}</h4>${routed}</div>
-    <div class="st-check"><h4>Gifts from their employees</h4>${emp}</div>
+    <div class="st-check"><h4>Gifts routed through ${esc(routedBy(t))}</h4>${routed}</div>
+    ${t.donors?.length?`<div class="st-check"><h4>Named donors' own checks</h4>${namedHTML(t,x,inp)}</div>`:`<div class="st-check"><h4>Gifts from their employees</h4>${emp}</div>`}
     <div class="st-check"><h4>Super PAC spending</h4>${spBlock}</div>${followed}</div>`;
+}
+// A tracker's named donors (approved by name): their own checks to the campaign in the period, from the FEC's itemized
+// receipts (npm run corporate:pacs, sitting members only).
+function namedHTML(t,x,inp){
+  const who=esc(t.donors.map(d=>d.name).join(' and '));
+  if(x.donors>0)return `${stTable(['Donor','Gave the campaign'],x.named.map(d=>[esc(d.name),fmtFull(d.amount)]),'',[1])}<p class="small"><b class="num">${fmtFull(x.donors)}</b> in their own checks, ${esc(inp.label)}.</p><p class="small muted">From the FEC's itemized gifts to the campaign's own committees. Their super PAC money isn't here: the campaign never takes it.</p>`;
+  if(inp.donors==null)return `<p class="small muted">${who}'s own checks to this campaign haven't been read yet (npm run corporate:pacs reads them, with the FEC key, for sitting members).</p>`;
+  return `<p class="small">No checks from ${who} to the campaign, ${esc(inp.label)}.</p>`;
 }
 // The Trackers section on the Big Money Independence tab: a tab a tracker. d: the refresh's records (undefined while loading, null
 // offline); sp: the Super PACs page's data (undefined while loading, null offline).
@@ -2127,8 +2144,10 @@ const TIER_STATUS=[['','All','Every sitting member'],['lost','Lost','Lost a 2026
 const tierMembers=c=>c==='S'?SENATE:HOUSE.filter(x=>!x.delegate);
 const CAREER_CACHE=new Map();
 function careerOf(key,c){const k=`${key}:${c}`;if(!CAREER_CACHE.has(k))CAREER_CACHE.set(k,chamberCareer(window.TRACKER_HISTORY,key,tierMembers(c)));return CAREER_CACHE.get(k);}
-// AIPAC's career waits for its passed-on gifts in every cycle since 2022, which are most of its money (the page says so).
-const careerDone=key=>key!=='aipac'||(routedStatus(window.TRACKER_HISTORY).missing.length===0&&routedStatus(window.TRACKER_HISTORY).read.length>0);
+// The Pro-Israel Lobby's career waits for AIPAC's passed-on gifts in every cycle since 2022, which are most of its money,
+// and for the named donors' checks (the page says so).
+const donorsDone=key=>(TRACKER[key]?.donors||[]).every(d=>(window.TRACKER_HISTORY?.donorKeys||[]).includes(d.key));
+const careerDone=key=>key!=='aipac'||(routedStatus(window.TRACKER_HISTORY).missing.length===0&&routedStatus(window.TRACKER_HISTORY).read.length>0&&donorsDone(key));
 // A sitting member's career row for a tracker: {row, chamber, of (members ranked)}, or null.
 function memberCareer(s,key){
   if(!window.TRACKER_HISTORY?.trackers||!careerDone(key))return null;
@@ -2144,7 +2163,8 @@ function renderCareer(key){
   const t=TRACKER[key]||TRACKERS.find(x=>careerDone(x.key))||TRACKERS[0],rs=routedStatus(h);
   const pick=`<div class="hdd tr-pick" data-k="t"><button type="button" class="hdd-b" aria-haspopup="listbox" aria-expanded="false"><span aria-hidden="true">${t.emoji}</span> ${esc(t.name)} <span class="hdd-car" aria-hidden="true">▾</span></button>
     <div class="hdd-menu" role="listbox" aria-label="Tracker" hidden>${TRACKERS.map(x=>`<button type="button" role="option" class="hdd-opt" data-v="${x.key}" aria-selected="${x.key===t.key}"><span class="hdd-ck" aria-hidden="true">${x.key===t.key?'✓':''}</span><span><span aria-hidden="true">${x.emoji}</span> ${esc(x.name)}</span><span class="hdd-n">${careerOf(x.key,tierCh).took} took some</span></button>`).join('')}</div></div>`;
-  const aipacNote=t.key==='aipac'&&!careerDone('aipac')?`<div class="note small" style="margin:0 0 12px"><b>AIPAC's passed-on gifts ${rs.read.length?`for ${rs.missing.map(cycleSpan).join(' and ')} aren't read yet`:'aren\'t read yet'}</b> (npm run corporate:pacs reads them from its payments, with the FEC key), so these totals count ${rs.read.length?`them for ${rs.read.map(cycleSpan).join(' and ')} only, and otherwise`:'only'} its PAC's own checks, which the law caps at a few thousand dollars an election. Most of AIPAC's money arrives as those gifts, so the ranks and clubs will change, and the profiles' tags wait for them.</div>`:'';
+  const waitingFor=[rs.missing.length||!rs.read.length?`AIPAC's passed-on gifts ${rs.read.length?`for ${rs.missing.map(cycleSpan).join(' and ')}`:''}`.trim():'',donorsDone(t.key)?'':`the named donors' own checks (${(t.donors||[]).map(d=>d.name).join(' and ')})`].filter(Boolean);
+  const aipacNote=t.key==='aipac'&&!careerDone('aipac')?`<div class="note small" style="margin:0 0 12px"><b>Not read yet: ${esc(waitingFor.join(', and '))}</b> (npm run corporate:pacs reads them, with the FEC key), so these totals ${rs.read.length?`count AIPAC's passed-on gifts for ${rs.read.map(cycleSpan).join(' and ')} only, and otherwise`:'count only'} the PACs' own checks, which the law caps at a few thousand dollars an election. Most of AIPAC's money arrives as those gifts, so the ranks and clubs will change, and the profiles' tags wait for them.</div>`:'';
   app.innerHTML=`${head}<h1 class="ti-h">How highly bought &amp; paid for by ${pick}</h1>
     <div class="ti-ctl" id="ti-ctl"></div>${aipacNote}
     <p class="ti-note" id="ti-note"></p><div id="ti-body"></div><p class="small muted" id="ti-foot"></p></section>`;
@@ -2156,10 +2176,10 @@ function renderCareer(key){
     $('#ti-ctl').innerHTML=`<div class="seg ti-ch" role="group" aria-label="Chamber">${[['H','House'],['S','Senate']].map(([c,l])=>`<button type="button" data-ch="${c}" class="${c===tierCh?'active':''}" aria-pressed="${c===tierCh}">${l} <span class="seg-n">${careerOf(t.key,c).read}</span></button>`).join('')}</div>
       ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])],['s','Status',tierStatus,TIER_STATUS.map(([k,l,d])=>[k,l,d,cnt(tierParty,k)])]])}`;
     const aip=t.key==='aipac';
-    $('#ti-note').innerHTML=`Career totals: every dollar each ${CH}'s campaigns have taken from ${esc(t.name)} over their whole career, ranked. ${aip?'AIPAC\'s PAC checks plus the gifts it collected from donors and passed on, in every race they\'ve run. AIPAC\'s PAC began giving in 2022, so for AIPAC a career starts then.':`The checks from its PACs in every race they've run since ${h.cycles[0]-1} (the first year in the FEC's bulk files), under every candidate ID they've had, so a senator's House races count too.`} From the FEC's bulk files${h.through?`, through ${esc(fmtDate(h.through))}`:''}. Super PAC spending isn't counted, since the campaign never takes it (it's on each profile under "Spent to help them win"). Ranks are among the ${T.read} ${CHS}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`;
+    $('#ti-note').innerHTML=`Career totals: every dollar each ${CH}'s campaigns have taken from ${esc(t.name)} over their whole career, ranked. ${aip?`Checks from the pro-Israel PACs (AIPAC's, NORPAC, JACPAC, the RJC's and the others on its list) in every race they've run since ${h.cycles[0]-1}, under every candidate ID they've had; the named donors' own checks (Miriam and Sheldon Adelson) to the same campaigns; and the gifts AIPAC collected from donors and passed on since its PAC began giving in 2022 (NORPAC's, JACPAC's and the RJC's this cycle only). J Street isn't counted.`:`The checks from its PACs in every race they've run since ${h.cycles[0]-1} (the first year in the FEC's bulk files), under every candidate ID they've had, so a senator's House races count too.`} From the FEC's bulk files${h.through?`, through ${esc(fmtDate(h.through))}`:''}. Super PAC spending isn't counted, since the campaign never takes it (it's on each profile under "Spent to help them win"). Ranks are among the ${T.read} ${CHS}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`;
     const short=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
     const row=(r,k)=>{const s=tierWho(r.m),years=r.first?(r.first===r.last?cycleSpan(r.first):`${r.first-1}–${r.last}`):'';
-      const how=r.total>0?(aip?`AIPAC's PAC ${short(r.pac)}${r.routed>0?` + gifts it passed on ${short(r.routed)}`:''}`:`${years} · ${r.pacs} of its PAC${r.pacs===1?'':'s'}`):'';
+      const how=r.total>0?(aip?`PACs ${short(r.pac)}${r.routed>0?` + gifts passed on ${short(r.routed)}`:''}${r.donors>0?` + named donors ${short(r.donors)}`:''}`:`${years} · ${r.pacs} of its PAC${r.pacs===1?'':'s'}`):'';
       return `<a class="cc-row ${k}" href="#${esc(r.m.id)}-unbought">${r.total>0?`<span class="cc-rk num">${r.rank}</span>`:''}<span class="ti-ph">${portrait(s)}</span>
         <span class="cc-nm"><b>${esc(r.m.name)}</b><small>${esc(r.m.party)} · ${esc(r.m.seat||r.m.state)}${how?` · ${esc(how)}`:''}</small></span>
         <span class="cc-amt num" title="${esc(fmtFull(r.total))}">${k==='club'||k==='half'?short(r.total):fmtFull(r.total)}</span></a>`;};
@@ -2183,7 +2203,8 @@ function renderTrackers(key){
   const t=TRACKER[key]||TRACKERS[0];
   const routedNow=s=>Object.fromEntries(Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([g,v])=>[g,Number(v.routed)||0]));
   const directNow=s=>Object.fromEntries(Object.entries(DATA.bundled?.people?.[s.id]||{}).map(([g,v])=>[g,Number(v.direct)||0]));
-  const rows=ALL.filter(s=>s.fecCand).map(s=>({s,x:trackerMoney(t,{pacLines:s.pac?researchPacLines(DATA,s):null,routed:routedNow(s),routedKnown:earmarksSearched(s),direct:directNow(s)})}));
+  const rows=ALL.filter(s=>s.fecCand).map(s=>({s,x:trackerMoney(t,{pacLines:s.pac?researchPacLines(DATA,s):null,routed:routedNow(s),routedKnown:earmarksSearched(s),direct:directNow(s),donors:namedDonorsOf(s,[curCycle(s)])})}));
+  const dCol=!!t.donors?.length;
   const took=rows.filter(r=>r.x.status==='took').sort((a,b)=>b.x.total-a.x.total||a.s.name.localeCompare(b.s.name)),none=rows.filter(r=>r.x.status==='none'),waiting=rows.filter(r=>r.x.status==='waiting');
   const sum=took.reduce((n,r)=>n+r.x.total,0),routedRead=t.routed.length>0;
   const who=s=>`<a href="#${esc(s.id)}-unbought">${esc(s.name)}</a> <span class="chip ${esc(s.party)}">${esc(s.party)} · ${esc(s.chamber==='H'?s.district||s.state:s.state)}</span>${s.pac?.window?`<div class="small muted">PAC lines read: ${esc(s.pac.window)}</div>`:''}`;
@@ -2192,12 +2213,12 @@ function renderTrackers(key){
     <nav class="seg tr-tabs tr-page-tabs" aria-label="Trackers">${TRACKERS.map(x=>`<a href="#trackers-${x.key}" class="${x.key===t.key?'active':''}"${x.key===t.key?' aria-current="page"':''}>${esc(x.name)}</a>`).join('')}</nav>
     <p class="small" style="margin:12px 0 4px">${esc(t.about)}</p>
     <p class="tr-sum"><b class="num">${took.length}</b> of ${rows.length} profiled campaigns took money from ${esc(t.name)} this cycle, <b class="num">${fmtFull(sum)}</b> in all.</p>
-    ${took.length?`<div class="tablewrap"><table class="tr-rank"><thead><tr><th>#</th><th>Campaign</th><th class="r">PAC checks</th><th class="r">Gifts routed</th><th class="r">Total</th></tr></thead><tbody>${took.map((r,i)=>`<tr><td class="num">${i+1}</td><td>${who(r.s)}</td><td class="r num">${r.x.pac?fmtFull(r.x.pac)+(r.x.pacs.some(p=>!p.cid)?'<sup>*</sup>':''):'—'}</td><td class="r num">${routedRead?(r.x.routed?fmtFull(r.x.routed):'—'):'<span class="muted small">Not updated yet</span>'}</td><td class="r num"><b>${fmtFull(r.x.total)}</b></td></tr>`).join('')}</tbody></table></div>`:''}
+    ${took.length?`<div class="tablewrap"><table class="tr-rank"><thead><tr><th>#</th><th>Campaign</th><th class="r">PAC checks</th><th class="r">Gifts routed</th>${dCol?'<th class="r">Named donors</th>':''}<th class="r">Total</th></tr></thead><tbody>${took.map((r,i)=>`<tr><td class="num">${i+1}</td><td>${who(r.s)}</td><td class="r num">${r.x.pac?fmtFull(r.x.pac)+(r.x.pacs.some(p=>!p.cid)?'<sup>*</sup>':''):'—'}</td><td class="r num">${routedRead?(r.x.routed?fmtFull(r.x.routed):'—'):'<span class="muted small">Not updated yet</span>'}</td>${dCol?`<td class="r num">${r.x.donors?fmtFull(r.x.donors):'—'}</td>`:''}<td class="r num"><b>${fmtFull(r.x.total)}</b></td></tr>`).join('')}</tbody></table></div>`:''}
     ${none.length?`<details class="st-more"><summary>✓ Took none: ${none.length} campaign${none.length===1?'':'s'}</summary><div class="st-more-b small">${none.sort((a,b)=>a.s.name.localeCompare(b.s.name)).map(r=>`<a href="#${esc(r.s.id)}-unbought">${esc(r.s.name)}</a>`).join(', ')}</div></details>`:''}
-    ${took.some(r=>r.x.pacs.some(p=>!p.cid))?`<p class="small muted">* Includes lines the campaign's report lists under ${esc(t.name)}'s name with no FEC committee ID${t.routed.length?`, which may be gifts ${esc(t.name)} passed on rather than its PAC's own checks`:''}.</p>`:''}
+    ${took.some(r=>r.x.pacs.some(p=>!p.cid))?`<p class="small muted">* Includes lines the campaign's report lists under the name of one of ${esc(pacsOf(t))} with no FEC committee ID${t.routed.length?`, which may be gifts ${esc(routedBy(t))} passed on rather than a PAC's own checks`:''}.</p>`:''}
     ${routedRead?'':`<p class="small muted">Gifts routed: not updated yet. Gifts ${esc(t.name)}'s companies and groups collect and pass on to campaigns (including their lobbyists' bundling) aren't read yet, so the column is blank for now and the totals are PAC checks only.</p>`}
     ${waiting.length?`<p class="small muted">Not read yet for ${waiting.length}: ${waiting.map(r=>esc(r.s.name)).join(', ')}.</p>`:''}
-    <p class="small muted">From the FEC: the PAC lines in each reviewed profile's reports (the dates are under their name)${t.groupPacs?`, ${esc(t.name)}'s own PAC checks for the whole cycle from its reports,`:''}${t.routed.length?' and the gifts routed to them':''}. Each person's Big Money Independence tab adds the refresh's whole-cycle PAC list, so its amount can be larger. Senators and House members with basic profiles show theirs on their own Big Money Independence tab once the refresh has read them.</p></section>`;
+    <p class="small muted">From the FEC: the PAC lines in each reviewed profile's reports (the dates are under their name)${t.groupPacs?`, ${esc(Object.keys(t.groupPacs).map(g=>g.toUpperCase()).join(', '))}'s own PAC checks for the whole cycle from its reports,`:''}${t.routed.length?' the gifts routed to them':''}${dCol?`, and the named donors' own checks this cycle (${esc(t.donors.map(d=>d.name).join(' and '))}; sitting members only, from the FEC's itemized gifts)`:''}. Each person's Big Money Independence tab adds the refresh's whole-cycle PAC list, so its amount can be larger. Senators and House members with basic profiles show theirs on their own Big Money Independence tab once the refresh has read them.</p></section>`;
 }
 // ---------- Super PACs: every super PAC's spending this cycle (refresh "super-pacs", public/super-pacs.js) ----------
 let spQ='',spSort='total';

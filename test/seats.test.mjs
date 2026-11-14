@@ -84,9 +84,11 @@ test('each tracker\'s checks, matched as its Tracker matches PACs, with AIPAC\'s
   const routed={collins:3348020.18};
   const checks=[{cand:'S6ME00159',cmte:'C00797670',amount:10000,keys:['aipac']},{cand:'S8GA00180',cmte:'C09999999',amount:2500,keys:['pharma']},{cand:'S8GA00180',cmte:'C09999999',amount:-2500,keys:['pharma']},{cand:'H2AK01083',cmte:'C09999998',amount:1000,keys:['oil']}];
   const t=trackerTotals(checks,byCand,routed);
-  assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
+  assert.deepEqual(t.aipac,{collins:[10000,1,3348020.18,0]});assert.deepEqual(t.pharma,{},'refunded in full: none');assert.deepEqual(t.oil,{begich:[1000,1]});
   assert.deepEqual(Object.keys(t),['aipac','pharma','oil','tech','crypto','defense','wallstreet']);
-  assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250]},'routed gifts alone count');
+  assert.deepEqual(trackerTotals([],byCand,{ossoff:250}).aipac,{ossoff:[0,0,250,0]},'routed gifts alone count');
+  assert.deepEqual(trackerTotals([],byCand,{},{begich:3300}).aipac,{begich:[0,0,0,3300]},'the named donors\' checks alone count');
+  assert.deepEqual(trackerTotals([],byCand,{},{begich:3300}).oil,{},'only for the Pro-Israel Lobby');
 });
 
 test('every group\'s forwarded gifts: the reviewed profiles\' conduits and the others their search found, each committee once',()=>{
@@ -181,4 +183,42 @@ test('a member\'s other candidate IDs for the six years: the same committee in t
   assert.deepEqual(pastCandidates(rows,byCand,2022,2026),{kim:['H8NJ03206'],slotkin:['H8MI08102'],menendez:['H2NJ13075'],pappas:['S6NH00141'],stevens:['S6MI00426']},
     'Kim by his committee, Slotkin by name as the sitting House member, Menendez Jr. by his own committee (not his father\'s Senate ID), Pappas\'s 2026 Senate run, Stevens\'s 2026 Senate run under a new committee (not another party\'s namesake or an older Senate filing); not the other state\'s filing that lists Salinas\'s committee');
   assert.deepEqual(pastCandidates(rows,byCand,2022).stevens,undefined,'the Senate rule needs the latest cycle');
+});
+
+// The Pro-Israel Lobby's named donors (approved by name 2026-11-14): their own checks to members' campaigns, read from the
+// FEC's itemized receipts by their name.
+import {donorTotals,slimGift,donorGifts,namedDonors} from '../scripts/build-corporate-pacs.mjs';
+import {TRACKER as TR,isNamedDonor,donorAmounts} from '../public/trackers.js';
+const gift=(o={})=>slimGift({contributor_last_name:'ADELSON',contributor_first_name:'MIRIAM O. DR.',contributor_state:'NV',committee_id:'C00647339',
+  committee:{committee_type:'S',designation:'P',candidate_ids:['H8UT03238','S4UT00282']},contribution_receipt_amount:3300,contribution_receipt_date:'2024-10-16',two_year_transaction_period:2024,memo_code:null,line_number:'11AI',...o});
+test('a named donor\'s gifts: theirs by name and state, to a member\'s own campaign, memo lines left out but a joint committee\'s share',()=>{
+  const ma=TR.aipac.donors.find(d=>d.key==='madelson');
+  assert.ok(isNamedDonor(ma,{contributor_last_name:'Adelson',contributor_first_name:'Miriam',contributor_state:'NV'}));
+  assert.ok(!isNamedDonor(ma,{contributor_last_name:'ADELSON',contributor_first_name:'MIRIAM',contributor_state:'NY'}),'another state: someone else');
+  assert.ok(!isNamedDonor(ma,{contributor_last_name:'ADELSON',contributor_first_name:'SHELDON G.',contributor_state:'NV'}));
+  const byCand=new Map([['S4UT00282','curtis'],['H2AK01083','begich']]);
+  const rows=[gift(),gift({contribution_receipt_amount:3300,two_year_transaction_period:2022}),
+    gift({committee:{committee_type:'O',designation:'U',candidate_ids:[]}}),                                        // a super PAC
+    gift({committee:{committee_type:'Q',designation:'D',candidate_ids:['S4UT00282']}}),                             // a leadership PAC
+    gift({memo_code:'X',line_number:'11AI',contribution_receipt_amount:-2800}),                                     // a redesignation memo
+    gift({memo_code:'X',line_number:'12',contribution_receipt_amount:1000,committee:{committee_type:'H',designation:'P',candidate_ids:['H2AK01083']}}),
+    gift({contributor_state:'CA'}),gift({committee:{committee_type:'S',designation:'P',candidate_ids:['S9ZZ00000']}})];
+  assert.deepEqual(donorTotals(rows,ma,byCand),{curtis:{2022:3300,2024:3300},begich:{2024:1000}});
+});
+test('the named donors\' checks by cycle: read and saved, kept from the last file when a read fails, summed for a period',async()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'donors-')),byCand=new Map([['S4UT00282','curtis']]);
+  const page={results:[{contributor_last_name:'ADELSON',contributor_first_name:'MIRIAM',contributor_state:'NV',committee_id:'C1',committee:{committee_type:'S',designation:'P',candidate_ids:['S4UT00282']},contribution_receipt_amount:3300,two_year_transaction_period:2024,line_number:'11AI'}],pagination:{count:1,last_indexes:{}}};
+  const urls=[],get=async u=>{urls.push(u);if(u.includes('SHELDON'))throw Object.assign(new Error('HTTP 400'),{statusCode:400});return page;};
+  const prev={donorKeys:['sadelson'],donors:{aipac:{curtis:{2012:{sadelson:5000}}}}};
+  const out=await namedDonors({cycles:[2012,2024],byCand,prev,apiKey:true,dir,get,log:()=>{}});
+  assert.deepEqual(out,{donors:{aipac:{curtis:{2012:{sadelson:5000},2024:{madelson:3300}}}},donorKeys:['madelson','sadelson']},'Sheldon kept from the last file');
+  assert.ok(urls[0].includes('contributor_name=ADELSON%2C+MIRIAM')&&urls[0].includes('two_year_transaction_period=2012')&&urls[0].includes('two_year_transaction_period=2024'));
+  assert.ok(fs.existsSync(path.join(dir,'madelson.json')),'the pages are saved');
+  assert.equal((await donorGifts(TR.aipac.donors[0],[2012,2024],{dir,get:async()=>{throw new Error('not asked again');}})).length,1,'a finished read is used again within a week');
+  const h={people:{curtis:1},...out};
+  assert.deepEqual(donorAmounts(h,TR.aipac,'curtis',[2024]),{madelson:3300});
+  assert.deepEqual(donorAmounts(h,TR.aipac,'curtis'),{sadelson:5000,madelson:3300},'every cycle');
+  assert.equal(donorAmounts({...h,donorKeys:['madelson']},TR.aipac,'curtis',[2024]),null,'a donor not read: unknown');
+  assert.deepEqual(donorAmounts(h,TR.oil,'curtis'),{},'a tracker without named donors');
+  assert.deepEqual(await namedDonors({cycles:[2024],byCand,apiKey:false,dir,log:()=>{}}),{donors:{},donorKeys:[]},'no key and no last file: none read');
 });

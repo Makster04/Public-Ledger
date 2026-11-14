@@ -29,7 +29,7 @@ The index is higher when donor alignment is greater. It is a distinct measure fr
 
 ## Trackers
 
-Seven lobbies whose money to each campaign is followed (`public/trackers.js`; the lists and what each leaves out are in the README's Trackers section): **AIPAC** 🇮🇱, **Big Pharma + Insurance** 💊, **Big Oil** 🛢️, **Big Tech + AI** 🤖, **Crypto** 🤑, **Big Defense** 🪖 and **Wall Street** 💰. A tracker's PACs are matched by FEC committee ID (each checked by hand) or by name; for AIPAC, the gifts it collected from donors and passed on to the campaign count too. None of it changes a grade, and money taken isn't treated as proof that a vote was bought.
+Seven lobbies whose money to each campaign is followed (`public/trackers.js`; the lists and what each leaves out are in the README's Trackers section): **Pro-Israel Lobby** 🇮🇱, **Big Pharma + Insurance** 💊, **Big Oil** 🛢️, **Big Tech + AI** 🤖, **Crypto** 🤑, **Big Defense** 🪖 and **Wall Street** 💰. A tracker's PACs are matched by FEC committee ID (each checked by hand) or by name; for the Pro-Israel Lobby, the gifts AIPAC, NORPAC, JACPAC and the RJC collected from donors and passed on to the campaign count too, and so do the named donors' own checks (Miriam and Sheldon Adelson). None of it changes a grade, and money taken isn't treated as proof that a vote was bought.
 
 ### Summary of Major Lookouts
 
@@ -51,7 +51,7 @@ Members with the same total share a rank. A member's candidate IDs are those con
 
 ### Spent to help them win
 
-Since November 13, 2026, under AIPAC, Crypto and Big Tech + AI, which spend heavily through their own super PACs (`helpToWin` in `public/trackers.js`, from `public/super-pac-races.json`, built from the FEC's independent-expenditure file):
+Since November 13, 2026, under the Pro-Israel Lobby, Crypto and Big Tech + AI, which spend heavily through their own super PACs (`helpToWin` in `public/trackers.js`, from `public/super-pac-races.json`, built from the FEC's independent-expenditure file):
 
 ```text
 Spent to help them win = Σ over the tracker's super PACs:

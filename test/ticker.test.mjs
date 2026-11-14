@@ -80,7 +80,7 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
     'Big Defense 🪖 · The Boeing Company PAC gave $5,000 each to Clyburn (D), Moolenaar (R), Meng (D), Hagerty (R) and 1 more',
     'Big Pharma + Insurance 💊 · Peraton Corp. PAC gave $1,000 to Clark (D)',
     'Crypto 🤑 · Defend American Jobs spent $2.65M against Osborn (I), Nebraska Senate',
-    'AIPAC 🇮🇱 · United Democracy Project spent $73,834 for Smith (R), TX-9']);
+    'Pro-Israel Lobby 🇮🇱 · United Democracy Project spent $73,834 for Smith (R), TX-9']);
   assert.deepEqual(items.map(x=>x.tag),['Grade change','Newly graded','Grade change','Promise check','Lobby money','Lobby money','Super PAC','Super PAC']);
   assert.deepEqual(items.map(x=>x.href),['#marshall-word','#ossoff-word','#collins-showsup','#booker-word','#trackers-defense','#clark-unbought','#osborn-unbought','#superpacs']);
   assert.equal(items[4].at,'2026-11-12T10:00:00Z','placed by when it was first read');

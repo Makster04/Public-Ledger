@@ -65,7 +65,7 @@ import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {pacKind} from '../public/pac-types.js';
 import {writeSuperPacRaces} from './build-super-pac-races.mjs';
-import {TRACKERS,isTrackerPac} from '../public/trackers.js';
+import {TRACKERS,TRACKER,isTrackerPac,isNamedDonor} from '../public/trackers.js';
 import {requestSource,fecNext} from '../src/sources.mjs';
 import {conduitTotals} from './build-bundled.mjs';
 
@@ -145,12 +145,13 @@ export function kindTotals(checks,byCand){
   for(const o of Object.values(out))for(const k of Object.keys(o)){o[k]=Math.round(o[k]*100)/100;if(!(o[k]>0))delete o[k];}
   return out;
 }
-// Each tracker's totals, only for members who took some: [PAC dollars, its PACs that gave, routed dollars].
-export function trackerTotals(checks,byCand,routed={}){
+// Each tracker's totals, only for members who took some: [PAC dollars, its PACs that gave], and for the Pro-Israel Lobby
+// also [routed dollars (its groups' passed-on gifts), the named donors' own checks]. routed, donors: {id: dollars}.
+export function trackerTotals(checks,byCand,routed={},donors={}){
   const out={};
   for(const t of TRACKERS){
     const pac=corporateTotals(checks.filter(x=>x.keys.includes(t.key)),byCand),list={};
-    for(const [id,v] of Object.entries(pac)){const r=t.key==='aipac'?routed[id]||0:0;if(v[0]>0||r>0)list[id]=t.key==='aipac'?[v[0],v[1],r]:v;}
+    for(const [id,v] of Object.entries(pac)){const r=t.key==='aipac'?routed[id]||0:0,dn=t.key==='aipac'?donors[id]||0:0;if(v[0]>0||r>0||dn>0)list[id]=t.key==='aipac'?[v[0],v[1],r,dn]:v;}
     out[t.key]=list;
   }
   return out;
@@ -207,6 +208,49 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
   if(saved?.done)return saved.rows;
   const st=saved||{cmte,cycle,started:new Date(now).toISOString(),rows:[],next:`https://api.open.fec.gov/v1/schedules/schedule_b/?committee_id=${cmte}&two_year_transaction_period=${cycle}&per_page=100&sort=-disbursement_date`,pages:0,done:false};
   log(`Reading ${label}'s payments${st.pages?` (picking up at page ${st.pages+1})`:''}…`);
+  return readPages(st,{file,label,get,wait,log,slim:slimPayment});
+}
+// A named donor's gifts (public/trackers.js "donors"), from the FEC's itemized receipts (Schedule A) searched by their
+// name in every cycle given, 100 a page, newest first. The pages are saved in dir/<key>.json (read again when over a week
+// old, with refresh, or when the search changed), so a run that stops picks up where it left off. Only what matching
+// needs is kept: the name and state on the gift, the committee it went to (its type, designation and candidate IDs),
+// the amount, date, cycle, memo code and line.
+export const slimGift=r=>({last:r.contributor_last_name??null,first:r.contributor_first_name??null,state:r.contributor_state??null,
+  cmte:r.committee_id??null,type:r.committee?.committee_type??r.recipient_committee_type??null,dsgn:r.committee?.designation??r.recipient_committee_designation??null,
+  cands:r.committee?.candidate_ids||[],amount:Number(r.contribution_receipt_amount)||0,date:r.contribution_receipt_date??null,cycle:r.two_year_transaction_period??null,memo:r.memo_code??null,line:r.line_number??null});
+export async function donorGifts(d,cycles,{dir,refresh=false,get=url=>requestSource(url,process.env),wait=ms=>new Promise(r=>setTimeout(r,ms)),now=Date.now(),log=console.log,maxAge=WEEK}={}){
+  fs.mkdirSync(dir,{recursive:true});
+  const file=path.join(dir,`${d.key}.json`),q=new URLSearchParams({contributor_name:d.search,per_page:'100',sort:'-contribution_receipt_date'});
+  for(const c of cycles)q.append('two_year_transaction_period',String(c));
+  const next=`https://api.open.fec.gov/v1/schedules/schedule_a/?${q}`;
+  let saved=null;try{saved=JSON.parse(fs.readFileSync(file,'utf8'));}catch{}
+  if(saved&&(refresh||saved.first!==next||!(now-Date.parse(saved.started)<=maxAge)))saved=null;
+  if(saved?.done)return saved.rows;
+  const st=saved||{key:d.key,first:next,started:new Date(now).toISOString(),rows:[],next,pages:0,done:false};
+  log(`Reading ${d.name}'s gifts${st.pages?` (picking up at page ${st.pages+1})`:''}…`);
+  return readPages(st,{file,label:`${d.name}'s gifts`,get,wait,log,slim:slimGift});
+}
+// A named donor's own checks to each member's campaigns, by cycle: the gifts that are theirs (isNamedDonor) to a
+// candidate's own committee (committee type H, S or P; principal or authorized) whose candidate IDs include one of a
+// member's (byCand: candidate ID -> member). Memo lines are left out, except a joint fundraising committee's share of
+// their gift passed to the campaign (line 12), which the campaign itemizes as a memo under the committee's transfer.
+// {member: {cycle: dollars}}.
+export function donorTotals(rows,d,byCand){
+  const out={};
+  for(const r of rows||[]){
+    if(!isNamedDonor(d,{contributor_last_name:r.last,contributor_first_name:r.first,contributor_state:r.state}))continue;
+    if(!['H','S','P'].includes(r.type)||!['P','A'].includes(r.dsgn))continue;
+    if(r.memo==='X'&&!String(r.line||'').startsWith('12'))continue;
+    const id=(r.cands||[]).map(c=>byCand.get(c)).find(Boolean);if(!id||!r.cycle)continue;
+    const m=out[id]||(out[id]={});m[r.cycle]=Math.round(((m[r.cycle]||0)+r.amount)*100)/100;
+  }
+  return out;
+}
+// Reads an FEC list page by page into st ({rows, next, pages, done}), saving it to file after each page. When the FEC's
+// hourly limit is reached (HTTP 429), it waits (what the FEC says, else 10 minutes) and goes on, up to 7 times. When the
+// FEC times out (HTTP 502, 503 or 504), it asks again after 30 seconds, then 1 and 2 minutes, before stopping; any other
+// error stops it at once.
+async function readPages(st,{file,label,get,wait,log,slim}){
   let tries=0,slow=0;
   while(st.next){
     let d;
@@ -220,7 +264,7 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
       const ms=e.retryAfter||600000;log(`  The FEC's hourly limit was reached reading ${label} (page ${st.pages+1}); waiting ${Math.round(ms/60000)} minutes, then going on.`);
       await wait(ms);continue;
     }
-    st.rows.push(...(d.results||[]).map(slimPayment));st.next=fecNext(st.next,d);st.pages++;st.done=!st.next;
+    st.rows.push(...(d.results||[]).map(slim));st.next=fecNext(st.next,d);st.pages++;st.done=!st.next;
     fs.writeFileSync(file,JSON.stringify(st));
     if(st.pages%25===0)log(`  ${label}: ${st.pages} pages, ${st.rows.length} payments so far…`);
   }
@@ -315,7 +359,7 @@ export function careerRouted(got,prev,cycles){
 }
 // Reads every cycle since 1980 and returns the career file's contents. routedNow: this cycle's AIPAC gifts by member
 // (null when they weren't read); prev: the last file; legIds: congress-legislators' IDs by member.
-export async function careerHistory({cycle,dir,refresh=false,byCand,through='',links,legIds={},routedNow=null,prev=null,apiKey=false,log=console.log}){
+export async function careerHistory({cycle,dir,refresh=false,byCand,through='',links,legIds={},routedNow=null,prev=null,prevDonors=null,apiKey=false,donorDir=path.join(ROOT,'.local','fec-donors'),get=undefined,log=console.log}){
   const cycles=careerCycles(cycle),recent=new Set(cycles.slice(-HISTORY_CYCLES));let last=through;
   const {both,linked}=careerIds(byCand,links?.linked,legIds),sums=careerSums(both),got={};
   if(routedNow)got[cycle]=routedNow;
@@ -341,9 +385,29 @@ export async function careerHistory({cycle,dir,refresh=false,byCand,through='',l
     }
     if(cy%10===0||cy===cycle)log(`  Career totals: read through ${cy-1}–${cy}.`);
   }
+  const named=await namedDonors({cycles,byCand:both,prev:prevDonors,apiKey,dir:donorDir,refresh,get,log});
   return {about:'Each sitting member\'s career totals from each tracker: PAC checks in every cycle since 1980 (the FEC\'s bulk files), under every candidate ID they\'ve had, and the gifts AIPAC passed on since its PAC began giving (2022), for the Career Totals page. See scripts/build-corporate-pacs.mjs.',
     built:today,cycles,from:`${cycles[0]-1}-01-01`,through:last||null,
-    people:Object.fromEntries([...new Set(byCand.values())].map(id=>[id,1])),trackers:sums.totals(),...careerRouted(got,prev,cycles),linked};
+    people:Object.fromEntries([...new Set(byCand.values())].map(id=>[id,1])),trackers:sums.totals(),...careerRouted(got,prev,cycles),linked,...named};
+}
+// Every tracker's named donors' own checks to each member's campaigns, in every cycle (with the FEC key). A donor whose
+// gifts couldn't all be read keeps the last file's. {donors: {tracker: {member: {cycle: {donor key: dollars}}}},
+// donorKeys: [the donors read or kept]}.
+export async function namedDonors({cycles,byCand,prev=null,apiKey=false,dir,refresh=false,get,log=console.log}){
+  const donors={},donorKeys=[];
+  for(const t of TRACKERS)for(const d of t.donors||[]){
+    let by=null;
+    if(apiKey){
+      try{by=donorTotals(await donorGifts(d,cycles,{dir,refresh,log,...(get?{get}:{})}),d,byCand);
+        log(`  ${d.name}: own checks to ${Object.keys(by).length} members' campaigns.`);}
+      catch(e){log(`${d.name}'s gifts couldn't all be read (${e.message}); the pages read so far are saved for the next run.`);}
+    }
+    if(!by&&(prev?.donorKeys||[]).includes(d.key)){by={};for(const [id,cys] of Object.entries(prev.donors?.[t.key]||{}))for(const [cy,m] of Object.entries(cys))if(m?.[d.key])(by[id]||={})[cy]=m[d.key];}
+    if(!by)continue;
+    donorKeys.push(d.key);
+    for(const [id,cys] of Object.entries(by))for(const [cy,v] of Object.entries(cys))(((donors[t.key]||={})[id]||={})[cy]||={})[d.key]=v;
+  }
+  return {donors,donorKeys};
 }
 const LEGISLATORS='https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/legislators-current.json';
 // congress-legislators' current members file (public domain), saved in .local/legislators/ and read again when over a
@@ -395,16 +459,23 @@ async function main(argv){
   }else console.log('No FEC_API_KEY in .dev.vars: gifts forwarded by groups (AIPAC and others) aren\'t read, only their PAC checks.');
   // (a group with two committees counts only when both were read; one that wasn't keeps the last file's totals)
   const kept=keptEarmarks(prev,[...failed]),earmarks=earmarkTotals(got.filter(g=>readOk.has(g.key)),kept);
-  for(const [id,g] of Object.entries(earmarks))if(g.aipac)routed[id]=g.aipac[0];
-  const aipacIn=readOk.has('aipac')||'aipac' in kept;
+  // The Pro-Israel Lobby's passed-on gifts: AIPAC's, NORPAC's, JACPAC's and the RJC's together, counted only when every
+  // one of them that's read was read this time or kept from the last file.
+  const groups=TRACKER.aipac.routed.filter(k=>keys.includes(k));
+  for(const [id,g] of Object.entries(earmarks)){const v=groups.reduce((s,k)=>s+(Number(g[k]?.[0])||0),0);if(v>0)routed[id]=Math.round(v*100)/100;}
+  const aipacIn=groups.length>0&&groups.every(k=>readOk.has(k)||k in kept);
   if(process.env.FEC_API_KEY)console.log(`Forwarded gifts: ${readOk.size} of ${keys.length} groups read${Object.keys(kept).length?`, ${Object.keys(kept).length} kept from the last file`:''}; ${Object.keys(earmarks).length} members got some.`);
-  const trackers=trackerTotals(tracked,byCand,routed);
   // Career totals: every cycle since 1980, under every candidate ID each member has had.
   const sitting=[...(read('senate.json').senators||[]),...(read('house.json').members||[])],leg=await legislatorsFile(refresh);
   let prevHistory=null;try{prevHistory=JSON.parse(fs.readFileSync(path.join(ROOT,'public','tracker-history.json'),'utf8'));}catch{}
   const history=await careerHistory({cycle,dir,refresh,byCand:members,through,links,legIds:legislatorIds(sitting,leg),
-    routedNow:aipacIn?routed:null,prev:prevHistory?.routed?prevHistory:null,apiKey:!!process.env.FEC_API_KEY});
+    routedNow:aipacIn?routed:null,prev:prevHistory?.routed?prevHistory:null,prevDonors:prevHistory,apiKey:!!process.env.FEC_API_KEY});
+  // This cycle's totals for each tracker, with the Pro-Israel Lobby's named donors' checks this cycle.
+  const donorsNow={};for(const [id,cys] of Object.entries(history.donors?.aipac||{})){const v=Object.values(cys[cycle]||{}).reduce((s,x)=>s+(Number(x)||0),0);if(v)donorsNow[id]=Math.round(v*100)/100;}
+  const trackers=trackerTotals(tracked,byCand,routed,donorsNow);
   fs.writeFileSync(path.join(ROOT,'public','tracker-history.json'),JSON.stringify(history));
+  const allDonors=TRACKERS.flatMap(t=>t.donors||[]),missingDonors=allDonors.filter(d=>!history.donorKeys.includes(d.key));
+  if(allDonors.length)console.log(`Named donors: ${history.donorKeys.length} of ${allDonors.length} read${missingDonors.length?` (not read: ${missingDonors.map(d=>d.name).join(', ')}${process.env.FEC_API_KEY?'':'; they need the FEC key in .dev.vars'})`:''}.`);
   console.log(`Wrote public/tracker-history.json: career totals ${history.cycles[0]-1}–${cycle}, through ${history.through}; AIPAC's passed-on gifts for ${history.routedCycles.length?history.routedCycles.map(c=>`${c-1}–${String(c).slice(2)}`).join(', '):'no cycle yet'}${history.routedMissing.length?` (not read: ${history.routedMissing.map(c=>`${c-1}–${String(c).slice(2)}`).join(', ')})`:''}.`);
   // The trackers' super PACs in this cycle's races, primaries and generals (scripts/build-super-pac-races.mjs). A failed
   // download keeps the last file and doesn't stop the rest.

@@ -14,11 +14,13 @@ test('the five clubs and their lines',()=>{
   assert.equal(clubOf(null),null,'not read: not placed');
 });
 
-test('a member\'s career amount: PAC checks, plus for AIPAC the gifts it passed on in each cycle read; first and last cycles',()=>{
-  const h={people:{a:1,b:1,c:1},trackers:{aipac:{a:[10000,1,2024,2026]},oil:{b:[250000,12,1990,2024]}},routed:{aipac:{2022:{a:50000,c:7},2026:{a:3e6}}}};
-  assert.deepEqual(careerAmount(h,'aipac','a'),{pac:10000,pacs:1,routed:3050000,total:3060000,first:2022,last:2026});
-  assert.deepEqual(careerAmount(h,'oil','b'),{pac:250000,pacs:12,routed:0,total:250000,first:1990,last:2024});
-  assert.deepEqual(careerAmount(h,'aipac','c'),{pac:0,pacs:0,routed:7,total:7,first:2022,last:2022},'gifts passed on, no PAC check');
+test('a member\'s career amount: PAC checks, plus for the Pro-Israel Lobby the gifts passed on in each cycle read and the named donors\' checks; first and last cycles',()=>{
+  const h={people:{a:1,b:1,c:1},trackers:{aipac:{a:[10000,1,2024,2026]},oil:{b:[250000,12,1990,2024]}},routed:{aipac:{2022:{a:50000,c:7},2026:{a:3e6}}},
+    donors:{aipac:{a:{2012:{sadelson:5000},2024:{madelson:3300,sadelson:0}},b:{2020:{sadelson:2800}}}}};
+  assert.deepEqual(careerAmount(h,'aipac','a'),{pac:10000,pacs:1,routed:3050000,donors:8300,total:3068300,first:2012,last:2026},'a donor\'s check from 2012 starts the career');
+  assert.deepEqual(careerAmount(h,'oil','b'),{pac:250000,pacs:12,routed:0,donors:0,total:250000,first:1990,last:2024});
+  assert.deepEqual(careerAmount(h,'aipac','b'),{pac:0,pacs:0,routed:0,donors:2800,total:2800,first:2020,last:2020},'the named donors\' checks alone count');
+  assert.deepEqual(careerAmount(h,'aipac','c'),{pac:0,pacs:0,routed:7,donors:0,total:7,first:2022,last:2022},'gifts passed on, no PAC check');
   assert.equal(careerAmount(h,'oil','a').total,0);assert.equal(careerAmount(h,'oil','zz'),null);
   assert.equal(careerAmount(h,'oil','c').routed,0,'passed-on gifts count for AIPAC only');
 });
