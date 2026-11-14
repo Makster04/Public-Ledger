@@ -9,7 +9,7 @@ test('the card is on the party\'s color, 4:5, and shows the supplied grades and 
   const dem=renderScorecardSvg(model),rep=renderScorecardSvg({...model,party:'R',raised:null,cash:null}),ind=renderScorecardSvg({...model,party:'I'});
   assert.match(dem,/<rect width="1000" height="1250" fill="#70acff"\/>/);assert.match(rep,/fill="#ff969c"\/>/);assert.match(ind,/fill="#bbc2cc"\/>/);
   assert.match(dem,/width="1000" height="1250" viewBox="0 0 1000 1250"/);
-  assert.match(dem,tag('67'));assert.match(dem,/Keeps Their Word: Not graded yet/);assert.match(dem,tag('\\$18\\.87M'));assert.match(dem,/Jan 2025–Jun 2026/);
+  assert.match(dem,tag('67%'));assert.match(dem,/Keeps Their Word: Not graded yet/);assert.match(dem,tag('\\$18\\.87M'));assert.match(dem,/Jan 2025–Jun 2026/);
   assert.match(rep,tag('Not available'));assert.doesNotMatch(rep,/\$0/);
   assert.match(dem,tag('CORY BOOKER'));assert.match(dem,tag('NEW JERSEY · DEMOCRAT · U.S. SENATE'));
 });

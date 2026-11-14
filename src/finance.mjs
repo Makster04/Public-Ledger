@@ -6,7 +6,7 @@ import {SINCE} from './feeds.mjs';
 
 const TRADE_KINDS=['trades-house','trades-senate','trades-bargo','trades-eulerpool','trades-fmp'];
 const ANNUAL_KINDS=['net-worth-house','net-worth-senate'];
-const KINDS=['campaign',...ANNUAL_KINDS,...TRADE_KINDS,'house-fd','sec-sic'];
+const KINDS=['campaign','donor-sizes',...ANNUAL_KINDS,...TRADE_KINDS,'house-fd','sec-sic'];
 const latest=(a,b)=>!a?b:!b?a:a>b?a:b;
 const newerAnnual=(a,b)=>Number(a.year||0)-Number(b.year||0)||String(a.filed||'').localeCompare(String(b.filed||''))||String(a.checkedAt||'').localeCompare(String(b.checkedAt||''));
 
@@ -49,6 +49,9 @@ export async function getFinanceOverview(env){
       netWorth:annuals.at(-1)||null,
       trades:merged.slice(0,1500),
       tradesUnread:official.flatMap(kind=>own[kind].unread||[]),
+      // For the Rankings page's Big Money Independence and Plays by the Rules: the donor sizes, and whether older trade
+      // reports are still being read (as each profile's disclosure says).
+      sizes:own['donor-sizes']||null,tradesMore:official.some(kind=>Number(own[kind].more)>0),
       checkedAt:ownChecked,
       coverage:{netWorth:annuals.length>0,trades:tradeSources.length>0,campaign:!!own.campaign},
       tradesTruncated:merged.length>1500||tradeSources.some(s=>Number(s.count)>(s.rows||[]).length||Number(s.more)>0)
@@ -58,7 +61,7 @@ export async function getFinanceOverview(env){
   }
   // Return explicit empty sections for configured people even when their imports have never completed. The separate
   // sourceCoverage map explains those absences; an empty record list is never presented as a no-activity finding.
-  for(const person of config.people)people[person.id]||={netWorth:null,trades:[],tradesUnread:[],checkedAt:null,
+  for(const person of config.people)people[person.id]||={netWorth:null,trades:[],tradesUnread:[],sizes:null,tradesMore:false,checkedAt:null,
     coverage:{netWorth:false,trades:false,campaign:false},tradesTruncated:false,campaign:null};
   return {people,sourceCoverage,checkedAt};
 }

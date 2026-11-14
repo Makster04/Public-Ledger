@@ -179,9 +179,13 @@ export function excusedAbsences(person){
   return (person?.absences||[]).filter(a=>EXCUSED_ABSENCES[a?.reason]&&isDay(a.from)&&isDay(a.to||a.from)&&String(a.from)<=String(a.to||a.from)&&sourceUrl(a.src))
     .map(a=>({from:a.from,to:a.to||a.from,reason:a.reason,label:EXCUSED_ABSENCES[a.reason],note:a.note||'',src:a.src}));
 }
+// Delegates (D.C., Guam, the Virgin Islands, American Samoa, the Northern Mariana Islands) and Puerto Rico's Resident
+// Commissioner can't vote on most House roll calls, such as final passage, so their missed votes aren't counted (Nov. 14, 2026).
+export const NON_VOTING=new Set(['DC','PR','GU','VI','AS','MP']);
 export function showingUpComponent(person,attendance,{asOfYear=null}={}){
   const rec=attendance?.people?.[person?.id];
   const none=why=>({complete:false,value:null,why,years:[],excused:[],missed:0,votes:0,rate:null,sources:[]});
+  if(person?.chamber!=='S'&&NON_VOTING.has(person?.state))return none('Not graded: delegates and the Resident Commissioner can\'t vote on most House roll calls, so missed votes aren\'t a fair measure');
   if(!rec)return none(person?.office?'Not graded for this office':`No roll-call votes on record since ${WINDOW_FROM} (not in Congress then, or the attendance file has not been built)`);
   const last=asOfYear||Math.max(...Object.keys(rec.years||{}).map(Number)),first=WINDOW_FROM,inRange=d=>Number(String(d).slice(0,4))>=first&&Number(String(d).slice(0,4))<=last;
   const years=Object.entries(rec.years||{}).filter(([y])=>Number(y)>=first&&Number(y)<=last).map(([year,y])=>({year:Number(year),votes:y.votes,missed:y.missed})).sort((a,b)=>b.year-a.year);

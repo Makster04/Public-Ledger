@@ -1,4 +1,5 @@
-import {mountRankings,mountStocks} from './explore-finance.js';
+import {mountRankings,mountStocks,officialData} from './explore-finance.js';
+import {rankingsHTML} from './rankings.js';
 import {mountConsistency} from './consistency.js';
 import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
@@ -527,7 +528,7 @@ function route(){
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
-  else if(m[1]==='rankings'){mountRankings(app,financeExplorerModel());}
+  else if(m[1]==='rankings'){renderRankings();}
   else if(m[1]==='stocks'){mountStocks(app,financeExplorerModel());}
   else if(m[1]==='races'){renderRaces();}
   else if(m[1]==='bills'){renderBills(m[2]||'all');}
@@ -1039,7 +1040,7 @@ function bindProfileActions(s,pane){
       lists:u?[{title:'Bonuses',items:u.bonusItems||[]},{title:'Pledges and bills',items:(u.pledgeItems||[]).map(p=>({...p,emoji:ISSUE_ICON[PLEDGE_CATEGORY[p.kind]]||null})),empty:'No pledges or bills on file'}]:null,
       funding:c?fundingParts(c,d?.sizes):null,
       trackers:inp?lookouts(inp).map(x=>({key:x.key,name:x.name,card:TRACKER[x.key].card||null,emoji:TRACKER[x.key].emoji||null,status:x.status,total:x.total,superPac:TRACKER[x.key].superPacLine?inp.superPac?.[x.key]||null:null})):null};
-    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=Number(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
+    openScorecard({id:s.id,name:s.name,party:s.party,office:s.office?'President':CH[s.chamber].name,state:s.stateName||s.state||'United States',portrait:PORTRAITS[s.id]?.file?'/'+PORTRAITS[s.id].file:'',raised:c?.receipts,cash:c?.cash,...extras,period:c?.end?period(c.start,c.end):'No reviewed campaign period available',reviewedAt:s.basic?'Research not reviewed':DATA.asof,matchConfigured:true,grades:(()=>{const x=sixOf(s),tile=k=>document.querySelector(`[data-six-tile="${k}"] .hc-gv span`)?.textContent;const u=parseFloat(tile('unbought'));return [{label:'Keeps Their Word',value:x.word.pct,detail:x.word.why||`${x.word.score.clear} counted checks`},{label:'Shows Up',value:x.showsup.pct,detail:x.showsup.why||x.showsup.parts[0].note},{label:'Big Money Independence',value:Number.isFinite(u)?u:null,detail:Number.isFinite(u)?'IntegrityIndex.us formula':'See the profile'},{label:'Plays by the Rules',value:x.aboveboard.pct,detail:x.aboveboard.why||''},{label:'People First',value:x.peoplefirst.pct,detail:x.peoplefirst.why||`${x.peoplefirst.v?.n||0} scored actions`}];})()});
   });
   pane.querySelectorAll('.profile-subnav [data-section]').forEach(b=>{
     if(!pane.querySelector('#'+b.dataset.section)){b.hidden=true;return;}
@@ -1048,6 +1049,47 @@ function bindProfileActions(s,pane){
 }
 const sectionNav=items=>`<nav class="profile-subnav" aria-label="On this page">${items.map(([id,label])=>`<button type="button" data-section="${id}">${label}</button>`).join('')}</nav>`;
 function financeExplorerModel(){return {people:ALL.concat(BASIC_LIST),data:DATA,portraits:PORTRAITS,recordLive:window.RecordLive};}
+// ---------- Rankings (#rankings): the six scores' top and bottom 10 (public/rankings.js), then the money rankings ----------
+// Each person's row: the scores their profile shows. Big Money Independence and Plays by the Rules also use the official
+// disclosures the refresh has read, from the finance overview (one request for everyone), worked out as each profile's
+// Overview tiles do; until it arrives (or with the update service offline) those two wait.
+// Where someone sits now: a sitting member running for another seat is listed under the chamber they sit in.
+const SEAT_S=new Set(SENATE.map(x=>x.id)),SEAT_H=new Set(HOUSE.map(x=>x.id));
+const rankSeat=s=>s.office?'P':SEAT_S.has(s.id)?'S':SEAT_H.has(s.id)?'H':null;
+const rankOffice=s=>{const seat=rankSeat(s);return seat==='P'?'President':seat==='S'?'Senate':seat==='H'?'House':s.cand?`${s.chamber==='H'?'House':'Senate'} candidate`:s.chamber==='S'?'Senate':'House';};
+function rankDisclosure(s,fin){
+  const d=fin?.people?.[s.id];if(!d)return null;
+  const kind=s.chamber==='S'?'trades-senate':'trades-house',job=fin.sourceCoverage?.[s.id]?.[kind];
+  const why=!job?.last_success?'Their stock trade reports haven\'t been read yet':d.tradesMore?'Their older trade reports are still being read':(d.tradesUnread||[]).length?'Some trade reports were filed on paper and can\'t be read automatically':!(job.status==='ready'&&!job.stale)?(job.error||'The latest check of their trade reports isn\'t complete'):null;
+  return {sizes:d.sizes||null,netWorth:d.netWorth||null,trades:{rows:(d.trades||[]).filter(t=>t.official),covered:!why,why}};
+}
+function rankRows(fin){
+  return ALL.concat(FEATURED,BASIC_LIST).map(s=>{
+    const x=sixOf(s),d=fin?rankDisclosure(s,fin):null;
+    const u=fin||s.office?(s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null})):null;
+    const ab=SCORER.reviewedTrades(s).covered||!fin?x.aboveboard:aboveBoard(s,{trades:aboveBoardInputs(s,d),conflicts:SIX_CTX.conflicts,asOfYear:SCORER.asOfYear});
+    const seat=rankSeat(s);
+    return {id:s.id,name:s.name,party:s.party,state:s.state,chamber:seat==='S'||seat==='H'?seat:s.chamber,cand:!!s.cand&&!seat,office:!!s.office,officeLabel:rankOffice(s),
+      scores:{ideology:x.ideology.lean,word:x.word.pct,showsup:x.showsup.pct,unbought:u?.pct??null,aboveboard:ab?.pct??null,peoplefirst:x.peoplefirst.pct},
+      n:{ideology:(x.ideology.categories||[]).reduce((t,c)=>t+(c.n||0),0),word:x.word.score?.clear||0,showsup:x.showsup.detail?.attendance?.votes||0,
+        aboveboard:ab?.checked?.rows?.length||0,peoplefirst:x.peoplefirst.v?.n||0}};
+  });
+}
+let rankState={key:'ideology',state:'',who:'',open:{}};
+function renderRankings(){
+  app.innerHTML=`<section class="rk" id="rk-scores"></section><div id="rk-money"></div>`;
+  const host=$('#rk-scores'),hash=location.hash,states=[...new Map(ALL.concat(BASIC_LIST).filter(s=>s.state&&s.state!=='US').map(s=>[s.state,s.stateName||s.state])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+  let fin=null,loading=true,rows=rankRows(null);
+  const draw=()=>{host.innerHTML=rankingsHTML(rows,rankState,{portraits:PORTRAITS,states,loading});};
+  host.addEventListener('click',e=>{
+    const t=e.target.closest('[data-key]');if(t){rankState={...rankState,key:t.dataset.key,open:{}};draw();host.querySelector(`[data-key="${t.dataset.key}"]`)?.focus();return;}
+    const o=e.target.closest('[data-open]');if(o){const w=o.dataset.open,open={...rankState.open};if(w==='both'){const all=open.left&&open.right;open.left=open.right=!all;}else open[w]=!open[w];rankState={...rankState,open};draw();}
+  });
+  host.addEventListener('change',e=>{const f=e.target.closest('[data-filter]');if(f){rankState={...rankState,[f.dataset.filter]:f.value,open:{}};draw();}});
+  draw();
+  officialData(financeExplorerModel()).then(j=>{fin=j;}).catch(()=>{}).finally(()=>{if(!host.isConnected||location.hash!==hash)return;loading=false;rows=rankRows(fin);draw();});
+  mountRankings($('#rk-money'),{...financeExplorerModel(),embedded:true});
+}
 function profileLocation(view){
   if(SIX_BY[view])return {primary:view,view};
   return {primary:'overview',view:view==='sources'?'sources':'overview'};
@@ -1072,12 +1114,12 @@ function stHead(s,key){
   return `<header class="st-head"><div class="st-title"><div class="st-tag">${esc(m.tag)}</div><h2>${esc(m.name)}</h2><p>${esc(m.q)}</p></div>
     <div class="st-person" data-party="${esc(s.party)}"><div class="st-photo">${portrait(s)}</div><div class="st-who"><div class="st-office">${officeLabel(s)}</div><div class="st-name">${esc(s.name)}</div><div class="st-place">${esc(partyName(s.party))} · ${esc(placeLabel(s))}</div></div></div></header>`;
 }
-// The score card: the number out of 100 and its letter, or why it isn't graded yet, beside the breakdown.
+// The score card: the score as a percentage and its letter, or why it isn't graded yet, beside the breakdown.
 function stCard(key,res,breakdown){
   const m=SIX_BY[key],g=res?.pct==null?null:letter(Math.min(100,res.pct));
   if(res?.position!=null)return `<section class="st-card" aria-label="${esc(m.name)}"><div class="st-card-h"><h3>Political position (overall)</h3><span class="st-grade">${esc(res.badge)}</span></div><div class="st-card-b st-card-pos">${res.position}${breakdown}</div></section>`;
-  const big=res?.loading?`<div class="st-ng"><b>Reading the records…</b><span>${esc(res.loading)}</span></div>`:g?`<div class="st-big"><b>${res.pct}</b><span>/ 100</span></div><div class="st-letter"><span>Grade</span><b class="gr-${g}">${g}</b></div>`:`<div class="st-ng"><b>Not graded yet</b><span>${esc(res?.why||'')}</span></div>`;
-  return `<section class="st-card" aria-label="${esc(m.name)} score"><div class="st-card-h"><h3>${esc(m.name)}</h3><span class="st-grade">${g?`${res.pct} / 100 · Grade <b class="gr-${g}">${g}</b>`:res?.loading?'Loading':'Not graded yet'}</span></div><div class="st-card-b"><div class="st-score">${big}</div><div class="st-break">${breakdown}</div></div></section>`;
+  const big=res?.loading?`<div class="st-ng"><b>Reading the records…</b><span>${esc(res.loading)}</span></div>`:g?`<div class="st-big"><b>${res.pct}</b><span>%</span></div><div class="st-letter"><span>Grade</span><b class="gr-${g}">${g}</b></div>`:`<div class="st-ng"><b>Not graded yet</b><span>${esc(res?.why||'')}</span></div>`;
+  return `<section class="st-card" aria-label="${esc(m.name)} score"><div class="st-card-h"><h3>${esc(m.name)}</h3><span class="st-grade">${g?`${res.pct}% · Grade <b class="gr-${g}">${g}</b>`:res?.loading?'Loading':'Not graded yet'}</span></div><div class="st-card-b"><div class="st-score">${big}</div><div class="st-break">${breakdown}</div></div></section>`;
 }
 // A breakdown table: head [labels], rows [[cells]]; a cell is text or {v, cls}.
 const stTable=(head,rows,cls='',right=null)=>{const R=i=>right?right.includes(i):i>0;return `<div class="tablewrap"><table class="st-table ${cls}"><thead><tr>${head.map((h,i)=>`<th${R(i)?' class="r"':''}>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${R(i)?' class="r"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;};
@@ -1419,16 +1461,16 @@ function paneWord(s,pane){
 // ----- Shows Up -----
 function paneShowsUp(s,pane){
   const x=sixOf(s).showsup,a=x.parts[0],g=x.parts[1];
-  const row=p=>[esc(p.label),p.value==null?'—':String(p.value),p.weight?`× ${p.weight}`:'—',p.value==null||!p.weight?'—':(Math.round(p.value*p.weight*10)/10).toFixed(1)];
+  const row=p=>[esc(p.label),p.value==null?'—':`${p.value}%`,p.weight?`× ${p.weight}`:'—',p.value==null||!p.weight?'—':(Math.round(p.value*p.weight*10)/10).toFixed(1)];
   pane.innerHTML=stFrame(s,'showsup',{
     res:x,
-    breakdown:stTable(['Part','Score','Weight','Points'],[row(a),row(g),['<b>Total</b>','','',x.pct==null?'—':`<b>${x.pct}</b>`]])+`<p class="small muted">${esc(a.note||'')}${g.note?` · ${esc(g.note)}`:''}</p>`,
+    breakdown:stTable(['Part','Score','Weight','Points'],[row(a),row(g),['<b>Total</b>','','',x.pct==null?'—':`<b>${x.pct}%</b>`]])+`<p class="small muted">${esc(a.note||'')}${g.note?` · ${esc(g.note)}`:''}</p>`,
     sources:['<b>Roll-call record:</b> every recorded roll call from 2018 on, from Voteview.','<b>Sponsored bills:</b> the bills they sponsored and how far each got, from Congress.gov.','<b>Party comparison:</b> the typical advancement rate for their party in their chamber.'],
     needs:x.needs,
     notes:[['A fair comparison','uses the same definition of "advanced" and the same years for the member and their party.'],['Unknown is not zero.','Without a record, Shows Up says so rather than scoring it.']],
     evidenceTitle:'Evidence: votes missed and bills moved',
     evidence:`<section class="st-sec" id="legislation-lists-sec"><h4 class="st-sub">Legislative Activity</h4><div id="legislation-lists"></div></section><div id="showsup-evidence">${showingUpDetails(s,x.detail)}</div>`,
-    calc:`${stF('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')}${stF('Attendance = 100 − 5 × % of votes missed')}${stF('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')}${x.pct!=null&&g.value!=null?`<p class="small">0.75 × ${a.value} + 0.25 × ${g.value} = ${Math.round((0.75*a.value+0.25*g.value)*10)/10}, rounded to ${x.pct}.</p>`:x.pct!=null?`<p class="small">Get It Done isn't available, so Shows Up is Attendance alone: ${a.value}.</p>`:''}`,
+    calc:`${stF('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')}${stF('Attendance = 100 − 5 × % of votes missed')}${stF('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')}${x.pct!=null&&g.value!=null?`<p class="small">0.75 × ${a.value} + 0.25 × ${g.value} = ${Math.round((0.75*a.value+0.25*g.value)*10)/10}, rounded to ${x.pct}%.</p>`:x.pct!=null?`<p class="small">Get It Done isn't available, so Shows Up is Attendance alone: ${a.value}%.</p>`:''}`,
     assumptions:['The same roll-call period (2018 on) counts for everyone compared.','"Not voting", paired and announced votes are missed; Present counts as there. A reviewed, cited medical leave, birth or adoption, death in the family or military duty is left out.','Bills and joint resolutions count; one advanced when a committee reported it, a chamber passed it, or it became law. At least 10 sponsored bills.','Get It Done is capped at 100 when they meet or beat their party\'s typical rate.','The record shows that a vote was missed, not why or where they were.'],
     method:'showsup'});
   mountLegislation(pane.querySelector('#legislation-lists'),{person:s,data:DATA,recordLive:window.RecordLive});
@@ -1486,7 +1528,7 @@ function unboughtCalc(s,x){
   const donorRows=[...sizes.map((l,i)=>row(l,H.donor[i],S.donor[i])),row('Reported only as a total',H.unitemized,S.unitemized),row('Not yet sorted by size',H.unsorted,S.unsorted),row('Self-funding',H.self,S.self),row('Joint fundraising (committees\' shares)',H.joint,S.joint)];
   const sign=p=>p.points==null?`− … (${esc(p.label)})`:p.points<0?`− ${Math.abs(p.points).toFixed(1)} (${esc(p.label)})`:`+ ${(p.points||0).toFixed(1)} (${esc(p.label)})`;
   const mine=x?.parts?.length?`<div class="st-calc-mine"><b>${esc(s.name)} · ${me==='S'?'Senate':'House'}${x.period?` · ${esc(x.period)}`:''}</b>
-    <div class="eq">75 ${x.parts.map(sign).join(' ')}${x.pct!=null?` = ${Math.round(x.raw*10)/10}, rounded to <b>${x.pct}</b>`:''}</div>
+    <div class="eq">75 ${x.parts.map(sign).join(' ')}${x.pct!=null?` = ${Math.round(x.raw*10)/10}, rounded to <b>${x.pct}%</b>`:''}</div>
     ${x.pct==null&&x.why?`<div class="key">Waiting on: ${esc(x.why.replace(/^Not graded yet:\s*/,'').replace(/^./,c=>c.toLowerCase()).replace(/\.$/,''))}.</div>`:''}</div>`:'';
   return `<div class="st-calc">
   <h4>The formula</h4>
@@ -1943,7 +1985,7 @@ function aboveBoardInputs(s,d){
   return {rows,covered:t.covered,why:t.why,overseen:overseenSectors(s),inDonors:new Set(tradesInDonors(rows,donors).map(x=>x.trade)).size,known:{nearVotes:false,donors:true}};
 }
 function aboveBoardBreakdown(x){
-  return stTable(['Part','Index','Points'],x.parts.map(p=>[`${esc(p.label)}${p.note?`<div class="small muted">${esc(p.note)}</div>`:''}`,p.index==null?'<span class="muted">waiting</span>':`${Math.round(p.index*10)/10}${p.key==='legal'?'':' / 100'}`,p.points==null?'—':`<b class="st-neg">${pts1(p.points)}</b>`]).concat(x.pct==null?[]:[['<b>Plays by the Rules score</b>','',`<b>${x.pct} / 100</b>`]]),'st-ab');
+  return stTable(['Part','Index','Points'],x.parts.map(p=>[`${esc(p.label)}${p.note?`<div class="small muted">${esc(p.note)}</div>`:''}`,p.index==null?'<span class="muted">waiting</span>':`${Math.round(p.index*10)/10}${p.key==='legal'?' pts':'%'}`,p.points==null?'—':`<b class="st-neg">${pts1(p.points)}</b>`]).concat(x.pct==null?[]:[['<b>Plays by the Rules score</b>','',`<b>${x.pct}%</b>`]]),'st-ab');
 }
 function aboveBoardCalc(x){
   return `${stF('Plays by the Rules = 100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')}
@@ -1952,7 +1994,7 @@ function aboveBoardCalc(x){
     ${stF('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')}
     ${stF('Stock Disclosure Dodger = 0.70 × share of trade reports late (after 45 days) or missing + 0.30 × share of annual reports late')}
     ${stF('Legal Trouble = each case: status (finding 20 · open 15 · closed 5) × kind (criminal 1.5 · ethics or civil 1 · technical 0.5), halved for a closed case over 10 years old')}
-    <p class="small">A missing index drops out and the others are rescaled.${x?.pct!=null?` Here: ${x.parts.filter(p=>p.points!=null).map(p=>`${p.label} ${pts1(p.points)}`).join(', ')} → ${x.pct}.`:''}</p>`;
+    <p class="small">A missing index drops out and the others are rescaled.${x?.pct!=null?` Here: ${x.parts.filter(p=>p.points!=null).map(p=>`${p.label} ${pts1(p.points)}`).join(', ')} → ${x.pct}%.`:''}</p>`;
 }
 // What their latest annual report lists besides assets and debts, read automatically by the refresh (src/schedules.mjs):
 // earned income, positions held outside government, agreements, gifts and paid travel. Shown only: whether these
@@ -2009,16 +2051,16 @@ function paneAboveBoard(s,pane){
 // ----- People First -----
 function panePeopleFirst(s,pane){
   const x=sixOf(s).peoplefirst,v=x.v,c=x.cci;
-  const row=p=>[`${esc(p.label)}<div class="small muted">${esc(p.note||'')}</div>`,p.value==null?'—':String(p.value),p.weight?`× ${p.weight}`:'—'];
+  const row=p=>[`${esc(p.label)}<div class="small muted">${esc(p.note||'')}</div>`,p.value==null?'—':`${p.value}%`,p.weight?`× ${p.weight}`:'—'];
   const old=personPvp(s);
   pane.innerHTML=stFrame(s,'peoplefirst',{
     res:x,
-    breakdown:stTable(['Part','Score','Weight'],[row(x.parts[0]),row(x.parts[1])])+(x.pct!=null?`<p class="small">${x.blended?`0.75 × ${x.bills} + 0.25 × (100 − ${c.index}) = ${Math.round(x.raw*10)/10}`:`Legislative Action alone: ${x.bills}`}${Math.round(x.raw*10)/10!==x.pct?`, rounded to ${x.pct}`:''}.</p>`:''),
+    breakdown:stTable(['Part','Score','Weight'],[row(x.parts[0]),row(x.parts[1])])+(x.pct!=null?`<p class="small">${x.blended?`0.75 × ${x.bills} + 0.25 × (100 − ${c.index}) = ${Math.round(x.raw*10)/10}`:`Legislative Action alone: ${x.bills}`}${Math.round(x.raw*10)/10!==x.pct?`, rounded to ${x.pct}%`:''}${Math.round(x.raw*10)/10===x.pct?'%':''}.</p>`:''),
     sources:['<b>Votes and bills,</b> each scored by who gains and which worker and business groups took sides.','<b>Business funders\' positions</b> and the bills they lobbied on.','<b>Party comparison:</b> how they voted against their own party on the votes where business funders took a side.'],
     needs:x.needs,
     notes:[['A disputed bill','is shown but left unscored.'],['CCI','is the Corporation Compromised Index. It keeps only how they act, since Big Money Independence counts where the money comes from.']],
     evidenceTitle:'Evidence: votes, bills, groups and funding ties',
-    evidence:`<div id="pf-bills">${pvpTable(s,old)}</div><section class="st-sec"><h4 class="st-sub">Corporation Compromised Index</h4><p class="small">${c.index==null?esc(c.why)+', so it isn\'t counted.':`${c.index}: ${c.parts.businessVotes!=null?`voting with business funders ${c.parts.businessVotes} (65%)`:''}${c.parts.lobbiedBills!=null?`, donor-lobbied bills on the profit side ${Math.round(c.parts.lobbiedBills)} (35%)`:''}.`}</p></section>`,
+    evidence:`<div id="pf-bills">${pvpTable(s,old)}</div><section class="st-sec"><h4 class="st-sub">Corporation Compromised Index</h4><p class="small">${c.index==null?esc(c.why)+', so it isn\'t counted.':`${c.index}%: ${c.parts.businessVotes!=null?`voting with business funders ${c.parts.businessVotes}% (weighted 65%)`:''}${c.parts.lobbiedBills!=null?`, donor-lobbied bills on the profit side ${Math.round(c.parts.lobbiedBills)}% (weighted 35%)`:''}.`}</p></section>`,
     shown:'<div id="pf-funders"></div>',
     calc:`${stF('People First = 0.75 × Legislative Action + 0.25 × (100 − CCI)')}${stF('Legislative Action = 100 × worker-side points ÷ (worker-side + profit-side points)')}${stF('CCI = 0.65 × how far above their party they vote with business funders (25 points above = 100) + 0.35 × share of donor-lobbied bills where they took the profit side')}<p class="small">Without the CCI, People First is Legislative Action alone. At least ${MIN_PVP_ACTIONS} scored actions.</p>`,
     assumptions:['Each scored bill counts once, at its strength (|bill score| ÷ 100), across its versions.','Worker-side and profit-side support decide which side an action favors: a nonpartisan study of who gains, and which worker and business groups took sides.','The CCI compares their votes with business funders against their own party\'s, leaving their own vote out of the party\'s count; it needs 5 compared votes.','Donor-lobbied bills need at least 3 bills.','Outside spending is left out: candidates can\'t control it.'],
@@ -2040,7 +2082,7 @@ function fillProfileTiles(s){
 // The score tiles on the Overview and on the cards: Ideology's lean, then the five grades.
 function fillSixTile(tile,x){
   const g=x?.pct==null?null:letter(Math.min(100,x.pct));
-  tile.querySelector('.hc-gv').innerHTML=g?`<b class="gr-${g}">${g}</b><span>${x.pct}</span>`:'<span class="hc-ng">Not graded yet</span>';
+  tile.querySelector('.hc-gv').innerHTML=g?`<b class="gr-${g}">${g}</b><span>${x.pct}%</span>`:'<span class="hc-ng">Not graded yet</span>';
   tile.querySelector('.hc-gd').textContent=g?'':(x?.why||'');
 }
 function sixTiles(s,links){
@@ -2048,7 +2090,7 @@ function sixTiles(s,links){
   const tip=k=>SIX_BY[k].q;
   const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean"${leanStyle(i.lean)}>${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
   const tile=(k,res,detail,empty='Not graded yet')=>{const t=links?'a':'div',g=res?.pct==null?null:letter(Math.min(100,res.pct));
-    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${res.pct}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
+    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${res.pct}%</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
   return `<div class="hc-rc hc-six">${ideo}
     ${tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`)}
@@ -3338,7 +3380,7 @@ function ethIndexes(s,e,{integrity=false}={}){
     +`<div class="ix-f">${integrity?'Personal Finances deduction: 0.20 × the index.':'Historical published Ethics deduction: a tenth ('+INDEX_COST+' × the index).'}</div>`;
   const insiderCost=integrity?e.insider.index*.2:e.insiderCost,dodgerCost=integrity?e.dodger.index*.2:e.dodgerCost;
   return `<section class="recsec" id="eth-indexes"><div class="kicker">${integrity?'Integrity components':'The grade\'s three parts'}</div><h3 style="margin-top:4px">${integrity?'Legal Trouble and financial indices':'Ethics indexes'}</h3>
-  <div class="cx-stats ix-row">${ixCard({icon:'🚨',name:'Legal Trouble Index',value:e.legal.index==null?'—':fmtPts(e.legal.index),score:e.legal.index,tone:'bad',about:`${cost(e.legal,e.legal.index,true)}. ${cases?`${cases} case${cases===1?'':'s'} with points.`:'No case with points.'}`,how:legalHow})}${ixCard({icon:'📈',name:'Insider Trading Index',value:e.insider.index==null?'—':fmtPts(e.insider.index),score:e.insider.index,tone:'bad',about:`${cost(e.insider,insiderCost,false)}. Trades that overlap with their committees, votes or donors.`,how:insiderHow})}${ixCard({icon:'🙈',name:'Stock Disclosure Dodger Index',value:e.dodger.index==null?'—':fmtPts(e.dodger.index),score:e.dodger.index,tone:'bad',about:`${cost(e.dodger,dodgerCost,false)}. Trade reports filed late or never.`,how:dodgerHow})}</div>
+  <div class="cx-stats ix-row">${ixCard({icon:'🚨',name:'Legal Trouble Index',value:e.legal.index==null?'—':`${fmtPts(e.legal.index)} pts`,score:e.legal.index,tone:'bad',about:`${cost(e.legal,e.legal.index,true)}. ${cases?`${cases} case${cases===1?'':'s'} with points.`:'No case with points.'}`,how:legalHow})}${ixCard({icon:'📈',name:'Insider Trading Index',value:e.insider.index==null?'—':`${fmtPts(e.insider.index)}%`,score:e.insider.index,tone:'bad',about:`${cost(e.insider,insiderCost,false)}. Trades that overlap with their committees, votes or donors.`,how:insiderHow})}${ixCard({icon:'🙈',name:'Stock Disclosure Dodger Index',value:e.dodger.index==null?'—':`${fmtPts(e.dodger.index)}%`,score:e.dodger.index,tone:'bad',about:`${cost(e.dodger,dodgerCost,false)}. Trade reports filed late or never.`,how:dodgerHow})}</div>
   <div style="margin:8px 0 0">${points([['How a case counts',`Its status points × its kind × its age. Status: ${ETHICS_COST.finding} for a confirmed finding, ${ETHICS_COST.open} for an open investigation, ${ETHICS_COST.closed} for one closed without a finding, ${ETHICS_COST.allegation} for an allegation not yet resolved. Context items cost nothing.`],['Kind',`Criminal × ${CASE_KIND.criminal}, ethics or civil × ${CASE_KIND.ethics}, technical × ${CASE_KIND.technical} (such as an FEC fine for a late report).`],['Age',`× ${CASE_AGE.factor} when it was decided more than ${CASE_AGE.years} years ago. Open cases and unresolved allegations always count in full.`],['Trading',integrity?'Each available trading index costs 0.20 × its value in Personal Finances. The indices still have their existing evidence minimums.':`The two trading indexes cost a tenth of their value each, so trading can cost at most ${Math.round(2*100*INDEX_COST)} points.`]],'small')}</div></section>`;
 }
 function ethicsHTML(s){
@@ -3505,9 +3547,9 @@ function cciBlock(s,v){
     +(c.parts.businessVotes!=null?`<div class="ix-f">${fmt1(bv.diff)} ÷ ${C.voteCeiling} × 100 = <b>${c.parts.businessVotes}</b>${bv.diff>C.voteCeiling?' (capped)':bv.diff<=0?' (at or below the party: 0)':''} · ${bv.n} votes</div>`:`<div class="ix-f">${bv?.rows?.length?`${bv.n} of 5 compared votes`:'No business funder took a side on their votes'}: not counted</div>`);
   return `<div class="chart"><h3>Corporation Compromised Index 🏢</h3><div class="sub">How much of their campaign money comes from businesses' PACs, and how much more often they vote with business funders than their party does. Higher means more. It is a quarter of this grade, as 100 minus the index.</div>
     <div class="cx-stats ix-row">
-      ${ixCard({icon:'🏢',name:'Corporation Compromised Index',value:c.index,score:c.index,tone:'bad',about:`From ${c.used.length} of its 4 parts. Higher means more reliance on, and siding with, business money.`,how:indexHow})}
-      ${ixCard({name:CCI_PART.pacShare,value:c.parts.pacShare==null?'—':pc('pacShare'),score:c.parts.pacShare,tone:'bad',about:`${c.share!=null?`${fmt1(c.share)}% of the money raised${m?.start?`, ${period(m.start,m.end)}`:''}`:'No campaign money on file'}. ${wt('pacShare')}.`,how:pacHow})}
-      ${ixCard({name:CCI_PART.businessVotes,value:c.parts.businessVotes??'—',score:c.parts.businessVotes,tone:'bad',about:`${c.parts.businessVotes!=null?`${bv.diff>=0?fmt1(bv.diff)+' points more':fmt1(-bv.diff)+' points less'} often than their party, on ${bv.n} votes`:'Not counted'}. ${wt('businessVotes')}.`,how:voteHow})}
+      ${ixCard({icon:'🏢',name:'Corporation Compromised Index',value:`${c.index}%`,score:c.index,tone:'bad',about:`From ${c.used.length} of its 4 parts. Higher means more reliance on, and siding with, business money.`,how:indexHow})}
+      ${ixCard({name:CCI_PART.pacShare,value:c.parts.pacShare==null?'—':`${pc('pacShare')}%`,score:c.parts.pacShare,tone:'bad',about:`${c.share!=null?`${fmt1(c.share)}% of the money raised${m?.start?`, ${period(m.start,m.end)}`:''}`:'No campaign money on file'}. ${wt('pacShare')}.`,how:pacHow})}
+      ${ixCard({name:CCI_PART.businessVotes,value:c.parts.businessVotes==null?'—':`${c.parts.businessVotes}%`,score:c.parts.businessVotes,tone:'bad',about:`${c.parts.businessVotes!=null?`${bv.diff>=0?fmt1(bv.diff)+' points more':fmt1(-bv.diff)+' points less'} often than their party, on ${bv.n} votes`:'Not counted'}. ${wt('businessVotes')}.`,how:voteHow})}
       ${ixCard({name:CCI_PART.employees,value:'—',about:'Not counted yet: the top donor organizations\' employee giving comes from the daily refresh and isn\'t reviewed.',how:`Giving by employees of the companies among their top 20 donor organizations ÷ funds raised; ${C.employeeCeiling}% or more scores 100.`})}
       ${ixCard({name:CCI_PART.lobbiedBills,value:'—',about:'Not counted yet: lobbying on each bill comes from the refresh and isn\'t reviewed.',how:`Of the People First bills a top donor organization lobbied on, the share where they took the Profit side. Needs ${C.minLobbied} such bills.`})}
     </div>
@@ -4032,7 +4074,7 @@ function analysisBlock(s){
     <div class="cx-stats ix-row">
       ${ixCard({name:'Vote Donor Alignment',value:v.pct==null?'—':v.pct+'%',score:v.pct,tone:'bad',about:v.n?`${v.same} of ${v.n} votes went the way a donor that took a public position wanted (${v.rows.length} donor${v.rows.length===1?'':'s'})`:'No donor that gave to the campaign took a public position on a vote compared here',
         how:`Votes that went a donor's way ÷ votes where a donor that gave to the campaign, bundled for it or spent for them took a public side (its scorecard or key-vote letter). Missed votes don't count.<div class="ix-f">${v.n?`${v.same} ÷ ${v.n} = <b>${v.pct}%</b>`:'No compared votes = <b>—</b>'}</div>`})}
-      ${ixCard({icon:'🤝',name:'Donor Loyalty',value:dl?.index==null?'—':dl.index,score:dl?.index,tone:'bad',about:dlText,
+      ${ixCard({icon:'🤝',name:'Donor Loyalty',value:dl?.index==null?'—':`${dl.index}%`,score:dl?.index,tone:'bad',about:dlText,
         how:`For each funder: their rate of voting its way − the rest of their party's rate on the same votes. Averaged by each funder's money (no funder over half the weight). Only the part above the party counts; ${DONOR_LOYALTY.ceiling} points above scores 100. Needs ${DONOR_LOYALTY.minVotes} compared votes.${dl?.rows?.length?`<div class="ix-f">${dl.rows.slice(0,3).map(r=>`${esc(r.org)} <b${toneAttrs(50+r.diff/2,'bad')}>${sg1(r.diff)}</b> × ${r.share}%`).join(' + ')}${dl.rows.length>3?` + ${dl.rows.length-3} more`:''} = <b${toneAttrs(dl.index,'bad')}>${sg1(dl.diff)}</b> points</div>${dl.index!=null?`<div class="ix-f">${fmt1(Math.max(0,dl.diff))} ÷ ${DONOR_LOYALTY.ceiling} × 100 = <b${toneAttrs(dl.index,'bad')}>${dl.index}</b>${dl.diff>DONOR_LOYALTY.ceiling?' (capped)':dl.diff<=0?' (at or below the party: 0)':''}</div>`:''}`:''}`})}
       ${ixCard({name:'Speech Donor Alignment',value:'—',about:'Not measured yet. Floor speeches are collected, but must be sorted by issue and side before they can be compared',
         how:`Planned: speeches on an issue a top donor lobbied on that took the donor's side ÷ all such speeches.`})}
@@ -4126,8 +4168,8 @@ function scoresGrade(host,key,note){
   const rows=ALL.map(s=>({s,x:sixOf(s)[key]})).sort((a,b)=>(b.x.pct??-1)-(a.x.pct??-1)||a.s.name.localeCompare(b.s.name));
   const graded=rows.filter(r=>r.x.pct!=null).length;
   host.innerHTML=`<div class="chart"><h3>${esc(SIX_BY[key].name)}</h3><div class="sub">${graded} of ${ALL.length} have enough evidence for a grade. <a href="#method-${key}">How it's calculated</a></div>
-    ${rankBars(rows.map(({s,x})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-${key}`,value:x.pct,color:x.pct==null?null:gradeFill(Math.min(100,x.pct)),cls:x.pct==null?'':'gr-'+letter(Math.min(100,x.pct)),display:x.pct==null?'':`${letter(Math.min(100,x.pct))} ${x.pct}`,note:x.pct==null?x.why:note(x),tip:x.pct==null?x.why:`${s.name}: ${x.pct}`})))}
-    ${tableView(['Name','Score','Based on'],rows.map(({s,x})=>[`<a href="#${s.id}-${key}">${esc(s.name)}</a>`,x.pct==null?'Not graded yet':`${letter(Math.min(100,x.pct))} ${x.pct}`,esc(x.pct==null?x.why:note(x))]))}</div>`;
+    ${rankBars(rows.map(({s,x})=>({label:s.name,sub:whoSub(s),href:`#${s.id}-${key}`,value:x.pct,color:x.pct==null?null:gradeFill(Math.min(100,x.pct)),cls:x.pct==null?'':'gr-'+letter(Math.min(100,x.pct)),display:x.pct==null?'':`${letter(Math.min(100,x.pct))} ${x.pct}%`,note:x.pct==null?x.why:note(x),tip:x.pct==null?x.why:`${s.name}: ${x.pct}%`})))}
+    ${tableView(['Name','Score','Based on'],rows.map(({s,x})=>[`<a href="#${s.id}-${key}">${esc(s.name)}</a>`,x.pct==null?'Not graded yet':`${letter(Math.min(100,x.pct))} ${x.pct}%`,esc(x.pct==null?x.why:note(x))]))}</div>`;
 }
 // Ideology: everyone from most liberal to most conservative, and Voteview's chamber chart.
 function scoresLean(host){

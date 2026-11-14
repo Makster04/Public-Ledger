@@ -105,12 +105,12 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
     return `${text(g.label.toUpperCase(),R.x+26,y,{size:15,color:INK,weight:700,width:26,max:1,family:SANS})}
       <rect x="${R.x+250}" y="${y-13}" width="190" height="14" rx="3" fill="#d9d3c6"/>
       ${graded?`<rect x="${R.x+250}" y="${y-13}" width="${Math.max(4,Math.round(190*g.value/100))}" height="14" rx="3" fill="${c}"/>
-      ${text(l,R.x+462,y+4,{size:30,color:c,weight:700,width:2,max:1,family:SANS})}${text(String(Math.round(g.value)),R.x+530,y,{size:15,color:SUB,weight:700,width:4,max:1,family:MONO,anchor:'end'})}`
+      ${text(l,R.x+462,y+4,{size:30,color:c,weight:700,width:2,max:1,family:SANS})}${text(`${Math.round(g.value)}%`,R.x+530,y,{size:15,color:SUB,weight:700,width:4,max:1,family:MONO,anchor:'end'})}`
         :text('NOT GRADED',R.x+530,y,{size:12,color:SUB,weight:700,width:12,max:1,family:MONO,anchor:'end'})}`;
   }).join('');
   const gradesBox=`${box(R.x,242,R.w,310,PAPER)}
     ${text('FIVE GRADES',R.x+26,282,{size:24,color:INK,weight:700,width:30,family:SANS})}
-    ${text('0 TO 100 · FROM REVIEWED RECORDS',R.x+530,280,{size:11,color:SUB,width:40,family:MONO,anchor:'end'})}
+    ${text('PERCENT · FROM REVIEWED RECORDS',R.x+530,280,{size:11,color:SUB,width:40,family:MONO,anchor:'end'})}
     ${gradeRows}`;
   // Row 2, left: the bonuses and the pledges and bills, as a checklist (✓ earned, ✕ not, ? a record not read yet).
   const MARK={yes:['#18a35f','M-5 0l3.5 3.5L5-4'],no:['#e0535f','M-4-4l8 8M4-4l-8 8'],waiting:['#8b95a5','']};
@@ -180,7 +180,7 @@ export function renderScorecardSvg(model,portraitDataUrl=''){
       :`${text('PUBLIC LEDGER',28,by+32,{size:13,color:INK,weight:700,width:30,family:MONO})}${text('FOLLOW THE EVIDENCE',972,by+32,{size:13,color:SUB,width:30,family:MONO,anchor:'end'})}`}`;
   const desc=[`Raised ${amount(model.raised)}, cash on hand ${amount(model.cash)}, spent ${amount(model.spent)}`,...(wealth.length?[wealth.map(x=>`${x.label} ${x.value||'Not read yet'}`).join(', ')]:[]),
     ...lists.map(x=>`${x.title}: ${(x.items||[]).map(it=>`${it.label} (${it.status==='yes'?'yes':it.status==='waiting'?'not read yet':'no'})`).join(', ')||x.empty||'none on file'}`),
-    ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+' out of 100'}`)].join('. ');
+    ...grades.map(g=>`${g.label}: ${g.value===null?'Not graded yet':letter(g.value)+' '+g.value+'%'}`)].join('. ');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
     <title id="title">${xml(name)} — Public Ledger report card</title>
     <desc id="desc">${xml(desc)}. Reporting periods and evidence coverage are shown on the card.</desc>

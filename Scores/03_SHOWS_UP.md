@@ -17,3 +17,4 @@ Get It Done = 100 × min(1, their share of bills advanced ÷ their party's typic
 - **Advanced** means reported by a committee or got further: put on a calendar, passed a chamber, or became law.
 - **Excused absences** are removed, such as a documented medical or family leave.
 - **Minimums:** 50 roll-call votes for Attendance, 10 sponsored bills for Get It Done.
+- **Not graded:** delegates (D.C., Guam, the Virgin Islands, American Samoa, the Northern Mariana Islands) and Puerto Rico's Resident Commissioner, who can't vote on most House roll calls, such as final passage.
