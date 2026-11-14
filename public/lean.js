@@ -48,7 +48,7 @@ export function keyVoteScore(rows){
 export const POSITION_CATEGORIES=[
   ['Immigration',['immigration']],
   ['Taxes and government spending',['taxes','infra']],
-  ['Civil liberties',[]],
+  ['Civil liberties',['civlib']],
   ['Environment and energy',['climate']],
   ['Health care',['health']],
   ['Abortion and reproductive rights',['abortion']],
@@ -58,10 +58,10 @@ export const POSITION_CATEGORIES=[
   ['Foreign policy and defense',['ukraine','warpowers']],
   ['Voting and elections',['voting','jan6']],
   ['Education',['vouchers']],
-  ['Criminal justice and policing',[]],
+  ['Criminal justice and policing',['policing']],
   ['LGBTQ rights',['civil']],
-  ['Housing',[]],
-  ['Social Security and Medicare',[]],
+  ['Housing',['housing']],
+  ['Social Security and Medicare',['socsec']],
 ];
 // The fewest actions or statements a category needs before it gets a bar (a placeholder; see the methodology).
 export const MIN_POSITION_ITEMS=1;
