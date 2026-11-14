@@ -1775,7 +1775,9 @@ function lookoutsBox(s,inp){
   const thisCycle=inp.cycles.length===1&&Number(inp.cycles[0])===Number(curCycle(s));
   const tierTag=x=>{const r=memberCareer(s,x.key);if(!r)return '';const chs=r.chamber==='S'?'senators':'House members',c=r.row;
     const text=c.club==='none'?'None in their career':`${c.club==='under'?'':`${CLUB_LABEL[c.club]} · `}#${c.rank} of ${r.of} ${chs} · career ${c.total>=1e6?`$${(c.total/1e6).toFixed(2)}M`:c.total>=1e5?`$${Math.round(c.total/1e3)}K`:fmtFull(c.total)}`;
-    return `<a class="ti-tag ${c.club}" href="#career-${x.key}" data-ch="${r.chamber}" title="${esc(`Their campaigns' career total from ${x.name}${c.first?`, ${c.first-1}–${c.last}`:''}, among ${r.of} ${chs} (FEC bulk files)`)}">${esc(text)}</a>`;};
+    // Behind a small "More info" (Nov. 14, 2026), so the list stays short: the career standing, what it counts, and a link.
+    const what=c.club==='none'?`No checks or passed-on gifts from ${x.name} to their campaigns in any cycle read`:`Their campaigns' career total from ${x.name}${c.first?`, ${c.first-1}–${c.last}`:''}, ranked among ${r.of} ${chs}`;
+    return `<details class="lk-more"><summary>More info</summary><div class="lk-more-body"><a class="ti-tag ${c.club}" href="#career-${x.key}" data-ch="${r.chamber}">${esc(text)}</a><span>${esc(what)}, from the FEC's bulk files. <a href="#career-${x.key}">Career Totals →</a></span></div></details>`;};
   const helpLine=x=>{const t=TRACKER[x.key],h=thisCycle&&helpOf(s,t);if(!h)return null;if(!(h.help>0)&&!(h.againstThem>0))return '';
     const m=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
     const riv=helpRivals(h.rows.rivals),parts=[h.forThem>0?`${m(h.forThem)} for them`:'',...riv.slice(0,2).map(r=>`${m(r.amount)} against ${esc(r.name)} (${(ELECTION_LABEL[r.ele]||r.ele).toLowerCase()})`)].filter(Boolean);
