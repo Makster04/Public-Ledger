@@ -265,7 +265,8 @@ const isSite=(j,env)=>j.kind==='vote'&&/^vote:H:/.test(j.id)&&Number(j.id.split(
 // (the basic senator profiles) show these instead of loading each full profile.
 // The Super PACs page's data: the site-wide super PAC check's latest snapshot, or null before its first read.
 // ---------- The ticker's newest records (public/ticker.js, /api/ticker) ----------
-// Stock trades reported in the last two weeks and annual disclosures filed in the last month, from each person's official
+// Stock trades reported in the last two weeks (with the date traded, for lateness) and annual disclosures filed in the last
+// month (with the net worth range they give, and the year before's), from each person's official
 // trade and disclosure checks. Each check keeps its own short list in metadata ("ticker:<job id>") when it publishes, so
 // the ticker never reads the full snapshots. Each item carries "seen", when a check first read it (the ticker shows the
 // last 24 hours of those): kept from the check's previous list, the time of this publish for an item new to it, and
@@ -278,8 +279,12 @@ export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null
   const today=new Date(now+864e5).toISOString().slice(0,10),out=[];
   if(/^trades-/.test(kind)){
     for(const x of snapshot?.rows||[])if(x?.disclosed&&x.disclosed>=daysBefore(now,TICKER_DAYS.trade)&&x.disclosed<=today)
-      out.push({kind:'trade',subject,id:x.id||null,disclosed:x.disclosed,type:x.type||null,ticker:x.ticker||null,asset:x.ticker?null:(x.asset||null),amount:x.amount||null,owner:x.owner||null});
-  }else if(snapshot?.filed){const f=String(snapshot.filed).slice(0,10);if(f>=daysBefore(now,TICKER_DAYS.filing)&&f<=today)out.push({kind:'filing',subject,filed:f,year:snapshot.year??null});}
+      out.push({kind:'trade',subject,id:x.id||null,disclosed:x.disclosed,traded:x.traded||null,type:x.type||null,ticker:x.ticker||null,asset:x.ticker?null:(x.asset||null),amount:x.amount||null,owner:x.owner||null});
+  }else if(snapshot?.filed){const f=String(snapshot.filed).slice(0,10);if(f>=daysBefore(now,TICKER_DAYS.filing)&&f<=today){
+    // The net worth range it gives, and the year before's when that report was read too.
+    const was=(snapshot.history||[]).find(h=>h&&h.year!=null&&snapshot.year!=null&&Number(h.year)<Number(snapshot.year));
+    const range=x=>x&&Number.isFinite(x.low)&&Number.isFinite(x.high)?[x.low,x.high]:null;
+    out.push({kind:'filing',subject,filed:f,year:snapshot.year??null,...(range(snapshot)?{worth:range(snapshot)}:{}),...(range(was)?{was:range(was),wasYear:was.year}:{})});}}
   const before=Array.isArray(previous)?new Map(previous.map(x=>[tickerKey(x),x.seen??null])):null,stamp=new Date(now).toISOString();
   for(const x of out)x.seen=before?(before.has(tickerKey(x))?before.get(tickerKey(x)):stamp):null;
   return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,10);

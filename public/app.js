@@ -523,7 +523,7 @@ function route(){
   document.body.dataset.view=current?(TAB_ALIAS[m[2]]?.[0]||m[2]||'overview'):'';
   document.title=current?`${current.name} · Public Ledger`:'Public Ledger · Follow the record';
   document.querySelectorAll('.nav-more[open]').forEach(el=>el.open=false);
-  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='trackers'&&(m[1]==='career'||m[1]==='tiers'))||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&BASIC[m[1]]?.chamber==='S')||(a.dataset.route==='house'&&BASIC[m[1]]?.chamber==='H')));
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.route===m[1]||(a.dataset.route==='trackers'&&(m[1]==='career'||m[1]==='tiers'))||(a.dataset.route==='latest'&&m[1]==='latest')||(a.dataset.route==='home'&&!!byId[m[1]])||(a.dataset.route==='senate'&&BASIC[m[1]]?.chamber==='S')||(a.dataset.route==='house'&&BASIC[m[1]]?.chamber==='H')));
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
@@ -536,6 +536,8 @@ function route(){
   else if(m[1]==='superpacs'){renderSuperPacs();}
   else if(m[1]==='trackers'){renderTrackers(m[2]||'aipac');}
   else if(m[1]==='career'){renderCareer(m[2]);}
+  // The Latest updates page behind the ticker (public/ticker.js).
+  else if(m[1]==='latest'){import('./ticker.js').then(t=>t.renderLatest(app,{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:t.pagePeople(window)}));}
   // (the Tiers tab became Career Totals: its old links open it)
   else if(m[1]==='tiers'){history.replaceState(null,'',`#career${m[2]?`-${m[2]}`:''}`);renderCareer(m[2]);}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}

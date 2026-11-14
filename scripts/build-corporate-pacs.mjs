@@ -50,6 +50,7 @@
 //    routedMissing: [the cycles since 2022 not read], linked: {id: [their other candidate IDs]}}
 // Files for cycles before the last three are downloaded once (delete them from .local/fec-bulk/ to read them again);
 // all the cycles' pas2 files come to about 300 MB.
+// At the end it updates public/news.json (scripts/build-news.mjs), the ticker's news, from the same files.
 //
 //   npm run corporate:pacs               downloads into .local/fec-bulk/ (the pas2 file is shared with
 //                                        scripts/build-funder-history.mjs) and writes the file; files over a week old
@@ -182,7 +183,7 @@ async function download(name,cycle,dir,refresh,maxAge=WEEK){
   }
   return {file,downloaded:fs.statSync(file).mtime.toISOString().slice(0,10)};
 }
-async function* lines(zip,inner){
+export async function* lines(zip,inner){
   const p=spawn('unzip',['-p',zip,inner]);
   let err='';p.stderr.on('data',d=>err+=d);
   yield* readline.createInterface({input:p.stdout,crlfDelay:Infinity});
@@ -413,5 +414,8 @@ async function main(argv){
   fs.writeFileSync(path.join(ROOT,'public','corporate-pacs.json'),JSON.stringify(out));
   console.log(`Wrote public/corporate-pacs.json: ${vals.length} members read, ${vals.filter(v=>v[0]>0).length} took corporate PAC money, ${vals.filter(v=>!v[0]).length} took none (${checks.length} checks, through ${through||'?'}).`);
   for(const t of TRACKERS)console.log(`  ${t.name}: ${Object.keys(trackers[t.key]).length} took some`);
+  // The ticker's news from the same files: the trackers' newest PAC checks and super PAC filings, and grade changes.
+  try{const {writeNews}=await import('./build-news.mjs');await writeNews({dir});}
+  catch(e){console.warn(`Couldn't update public/news.json (${e.message}); run npm run news:build.`);}
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main(process.argv.slice(2)).catch(e=>{console.error(e.message);process.exit(1);});

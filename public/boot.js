@@ -30,6 +30,8 @@ try {
   const trackerHistory=fetch('/tracker-history.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // The trackers' super PACs in this cycle's races, primaries and generals (scripts/build-super-pac-races.mjs).
   const superPacRaces=fetch('/super-pac-races.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // The site's news for the ticker and the Latest updates page (scripts/build-news.mjs).
+  const news=fetch('/news.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
   window.DATA=await response.json();
@@ -49,6 +51,7 @@ try {
   window.CORP_PACS=await corporatePacs;
   window.TRACKER_HISTORY=await trackerHistory;
   window.SUPER_PAC_RACES=await superPacRaces;
+  window.NEWS=await news;
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};
@@ -59,11 +62,11 @@ try {
   // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).
   const el=await elect;window.MEMBERS_ELECT=el?.members||[];window.ELECT_RACES=el?.races||[];window.ELECT_INFO=el?{built:el.built,source:el.source}:null;
   await import('./app.js');
-  // The ticker under the top bar (public/ticker.js): race calls, rule changes, ratings, and the refresh's newest trades
-  // and disclosures. A person is named from the profiles and both chambers' directories.
-  import('./ticker.js').then(({mountTicker})=>{
-    const people=new Map();for(const p of [...(window.HOUSE||[]),...(window.SENATE||[]),...(window.DATA?.cands||[]),...(window.DATA?.members||[])])if(p?.id)people.set(p.id,p);
-    mountTicker(document.getElementById('ticker'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,people});
+  // The ticker under the top bar (public/ticker.js): race calls, grade changes, promise checks, the trackers' money, FEC
+  // reports, site updates, and the refresh's newest trades and disclosures. A person is named from the profiles and both
+  // chambers' directories.
+  import('./ticker.js').then(({mountTicker,pagePeople})=>{
+    mountTicker(document.getElementById('ticker'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:pagePeople(window)});
   }).catch(()=>{});
   await RecordLive.banner();
   window.addEventListener('hashchange',()=>RecordLive.banner());

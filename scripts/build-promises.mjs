@@ -190,4 +190,6 @@ function main(){
   console.log(`${all.length} promises for ${Object.keys(out).length} people: ${STATUSES.filter(s=>n[s]).map(s=>`${n[s]} ${s}`).join(', ')}.`);
   if(queue.length)console.log(`${queue.length} unclear, for a reviewer (data/promise-reviews.json):\n  ${queue.join('\n  ')}`);
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main();
+// The ticker's news (grade changes and reviewed verdicts follow from the promises), after the promises are written.
+async function withNews(){main();try{const {writeNews}=await import('./build-news.mjs');await writeNews();}catch(e){console.warn(`Couldn't update public/news.json (${e.message}); run npm run news:build.`);}}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))withNews();

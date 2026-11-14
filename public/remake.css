@@ -1153,6 +1153,26 @@ input, select { accent-color: var(--accent); }
 .tk-new { color: var(--dem); border-color: color-mix(in srgb, var(--dem) 45%, transparent); background: var(--dem-soft); }
 .tk-site { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); background: var(--good-soft); }
 .tk-trade, .tk-filing { color: var(--serious); border-color: color-mix(in srgb, var(--serious) 45%, transparent); background: var(--serious-soft); }
+/* The ticker's newer kinds (approved 2026-11-14): grades, promise checks, the trackers' money, FEC reports */
+.tk-tag { display: inline-flex; align-items: center; gap: 5px; }
+.tk-grade { color: #c9a7ff; border-color: #c9a7ff66; background: #2a2238; }
+.tk-promise { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); background: var(--good-soft); }
+.tk-lobby, .tk-superpac { color: var(--crit); border-color: color-mix(in srgb, var(--crit) 45%, transparent); background: var(--crit-soft); }
+.tk-fec { color: var(--dem); border-color: color-mix(in srgb, var(--dem) 45%, transparent); background: var(--dem-soft); }
+.tk-t b[class^="gr-"], .lu-t b[class^="gr-"] { font-weight: 800; }
+/* The Latest updates page */
+.lu-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.lu-chip { border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: .84rem; color: var(--ink-2); background: var(--surface); cursor: pointer; }
+.lu-chip:hover, .lu-chip:focus-visible { border-color: var(--ink-2); color: var(--ink); }
+.lu-chip.on { background: var(--surface-2); color: var(--ink); border-color: var(--ink-2); }
+.lu-chip small { color: var(--muted); margin-left: 5px; }
+.lu-day { margin: 20px 0 8px; font-family: var(--font-mono); font-size: .76rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.lu-row { display: grid; grid-template-columns: 160px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); margin: 0 0 8px; color: var(--ink-2); text-decoration: none; }
+.lu-row:hover, .lu-row:focus-visible { border-color: var(--ink-2); color: var(--ink); }
+.lu-row .tk-tag { justify-self: start; }
+.lu-d { font-family: var(--font-mono); font-size: .76rem; color: var(--muted); white-space: nowrap; }
+.lu-note { margin-top: 18px; max-width: 900px; }
+@media (max-width: 640px) { .lu-row { grid-template-columns: minmax(0, 1fr) auto; } .lu-row .lu-t { grid-column: 1 / -1; grid-row: 2; } }
 .tk-date { font-family: var(--font-mono); font-size: .74rem; color: var(--muted); }
 .tk-d { color: var(--dem); font-weight: 600; } .tk-r { color: var(--rep); font-weight: 600; } .tk-i { color: var(--ink); font-weight: 600; }
 .tk-all { flex: none; color: var(--muted); font-size: .8rem; text-decoration: none; white-space: nowrap; padding-left: 12px; border-left: 1px solid var(--line); }
