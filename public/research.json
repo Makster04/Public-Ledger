@@ -215,7 +215,7 @@
           "title": "Straw-donor scheme by a defense contractor that gave to her 2020 campaign and allied super PAC",
           "type": "Investigation (not charged)",
           "date": "2020–2026",
-          "summary": "Executives of Hawaii defense contractor Navatek (later PacMar Technologies) pleaded guilty to federal campaign-finance crimes for illegal contributions to Collins' 2020 campaign and $150,000 routed through a shell company to the pro-Collins super PAC 1820 PAC. CEO Martin Kao was sentenced to 87 months in prison (2025). In February 2025 the FEC fined PacMar $325,000; the Campaign Legal Center's complaint \"did not allege involvement by Collins or her campaign,\" and the campaign disgorged the illegal contributions. In September 2026 ProPublica reported that FBI anti-corruption agents had examined Collins' relationship with Navatek and sought a broader bribery probe before the inquiry was shut down in 2025. Collins was never charged or formally accused; her office \"vigorously\" denies any pay-to-play and says she cooperated fully.",
+          "summary": "Executives of Hawaii defense contractor Navatek (later PacMar Technologies) pleaded guilty to federal campaign-finance crimes for illegal contributions to Collins' 2020 campaign and $150,000 routed through a shell company to the pro-Collins super PAC 1820 PAC. CEO Martin Kao was sentenced to 87 months in prison (2025). In February 2025 the FEC fined PacMar $325,000; the Campaign Legal Center's complaint \"did not allege involvement by Collins or her campaign,\" and the campaign disgorged the illegal contributions. In September 2026 ProPublica reported that FBI anti-corruption agents had examined Collins' relationship with Navatek and sought a broader bribery probe before the inquiry was shut down in 2025. The FBI said the matter \"had already been investigated by the FBI years ago and ultimately found nothing implicating Senator Collins or Senator Collins' campaign.\" Collins was never charged or formally accused; her office \"vigorously\" denies any pay-to-play and says she cooperated fully.",
           "outcome": "No finding or charge against the senator. Contractor executives convicted; FEC civil penalty against the company.",
           "sources": [
             {
@@ -229,6 +229,10 @@
             {
               "t": "Boston Globe takeaways",
               "u": "https://www.bostonglobe.com/2026/09/22/nation/propublica-report-susan-collins-takeaways/"
+            },
+            {
+              "t": "Maine Public (via WBUR): ProPublica report on Collins and Navatek (Sept. 23, 2026)",
+              "u": "https://www.wbur.org/news/2026/09/23/susan-collins-propublica-navatek-jackson-campaign"
             }
           ],
           "sev": "neutral",
@@ -4855,7 +4859,41 @@
           "agree": 6,
           "n": 8
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records (including the PacMar/Navatek matter), STOCK Act reporting on the Senate eFD system, and news coverage for complaints and court cases, including ProPublica's September 2026 report. Not listed: a Senate ethics complaint and a report of unreported stock trades that were found only in partisan outlets (Raw Story, a Maine Democratic Party post), with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Campaign Legal Center (FEC outcome)",
+            "u": "https://campaignlegal.org/update/major-victory-clc-complaint-delivers-rare-accountability-maine-voters"
+          },
+          {
+            "t": "ProPublica, Sept. 22, 2026",
+            "u": "https://www.propublica.org/article/fbi-susan-collins-navatek-campaign-donations-investigation"
+          },
+          {
+            "t": "Boston Globe takeaways",
+            "u": "https://www.bostonglobe.com/2026/09/22/nation/propublica-report-susan-collins-takeaways/"
+          },
+          {
+            "t": "Maine Public (via WBUR): ProPublica report on Collins and Navatek (Sept. 23, 2026)",
+            "u": "https://www.wbur.org/news/2026/09/23/susan-collins-propublica-navatek-jackson-campaign"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "Dan Sullivan",
@@ -12375,7 +12413,29 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting on the Senate eFD system, and news coverage for complaints and court cases. The 2026 FEC complaints about the Senate candidate who shares his name concern that candidate, Dan J. Sullivan, not the senator. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Anchorage Daily News, Nov. 10, 2022",
+            "u": "https://www.adn.com/politics/2022/11/10/sen-sullivan-discloses-stock-sales-late-in-violation-of-financial-reporting-law/"
+          },
+          {
+            "t": "Washington Examiner, Nov. 8, 2022",
+            "u": "https://washingtonexaminer.com/news/senate/alaska-gop-senator-disclosed-stock-trades"
+          }
+        ]
+      }
     },
     {
       "name": "Roger W. Marshall",
@@ -12596,6 +12656,22 @@
           "sev": "warn",
           "status": "allegation",
           "kind": "technical"
+        },
+        {
+          "title": "End Citizens United request for a Senate Ethics investigation of office travel and staff campaign work",
+          "type": "Ethics body",
+          "date": "2026-10-21",
+          "summary": "End Citizens United, a PAC that backs campaign-finance limits, sent the Senate Ethics Committee a 22-page letter asking it to investigate whether Marshall used office funds for political travel, including at least 14 taxpayer-funded trips between 2021 and 2024 to Sarasota, Fla., where he has a vacation home, and New York trips tied to Fox News appearances, and whether his Senate staff did campaign work while his campaign reported no payroll. The letter drew on a joint Kansas Reflector and MS NOW investigation. His chief of staff, Brent Robertson, said the campaign does have paid staff, paid through an affiliated PAC.",
+          "outcome": "No Senate Ethics Committee action reported in the coverage found.",
+          "sources": [
+            {
+              "t": "HPPR (from the Kansas Reflector): Campaign finance group seeks investigation into Roger Marshall's alleged ethics violations (Oct. 22, 2026)",
+              "u": "https://www.hppr.org/hppr-news/2026-10-22/campaign-finance-group-seeks-investigation-into-roger-marshalls-alleged-ethics-violations"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
       "id": "marshall",
@@ -18197,7 +18273,41 @@
       ],
       "fecCandPast": [
         "H6KS01179"
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, and news coverage for complaints and court cases; the October 2026 End Citizens United request to the Senate Ethics Committee is listed as an allegation. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "LegiStorm, Sept. 30, 2021",
+            "u": "https://www.legistorm.com/pro_news/2835/sen-marshall-didnt-report-stock-transactions-on-time.html"
+          },
+          {
+            "t": "Insider's 'Conflicted Congress' tally of STOCK Act violators",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          },
+          {
+            "t": "HPPR (from the Kansas Reflector): Campaign finance group seeks investigation into Roger Marshall's alleged ethics violations (Oct. 22, 2026)",
+            "u": "https://www.hppr.org/hppr-news/2026-10-22/campaign-finance-group-seeks-investigation-into-roger-marshalls-alleged-ethics-violations"
+          }
+        ]
+      }
     },
     {
       "name": "Jon Ossoff",
@@ -22120,6 +22230,32 @@
           "u": "https://capitol-beat.org/2021/06/ossoff-moving-stock-holdings-into-blind-trust/"
         },
         "note": "He moved his stock portfolio into a qualified blind trust in 2021, as he had promised in his campaign. His office has declined to say what the trust now holds."
+      },
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records (the 2024 civil penalty above), STOCK Act and blind-trust reporting, and news coverage for complaints and court cases. Not listed: a March 2025 Senate ethics complaint by the Foundation for Accountability and Civic Trust over a fundraising email tied to his continuing-resolution vote, found only in a partisan outlet (Townhall) and not on the group's own site, with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FEC ADR 1142 — RAD referral 23L-54",
+            "u": "https://www.fec.gov/files/legal/adrs/1142/1142_01.pdf"
+          },
+          {
+            "t": "FEC ADR 1142 — negotiated settlement",
+            "u": "https://www.fec.gov/files/legal/adrs/1142/1142_07.pdf"
+          },
+          {
+            "t": "Ossoff press release on blind trust",
+            "u": "https://www.ossoff.senate.gov/press-releases/sens-ossoff-kelly-introduce-bill-banning-stock-trading-by-members-of-congress/"
+          }
+        ]
       }
     },
     {
@@ -24099,7 +24235,29 @@
           "agree": 8,
           "n": 8
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, and news coverage for complaints and court cases. Not listed: an April 2025 Senate ethics complaint by the Foundation for Accountability and Civic Trust over fundraising tied to his floor speech, found only in a partisan outlet (Townhall) and not on the group's own site, with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FEC candidate page",
+            "u": "https://www.fec.gov/data/candidate/S4NJ00185/?cycle=2026&election_full=true"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "John W. Hickenlooper",
@@ -28470,7 +28628,37 @@
           "agree": 1,
           "n": 1
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, Colorado Independent Ethics Commission records, and news coverage for complaints and court cases; nothing beyond the entries listed was found. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "The Colorado Sun, June 12, 2020",
+            "u": "https://coloradosun.com/2020/06/12/john-hickenlooper-ethics-violation/"
+          },
+          {
+            "t": "Colorado IEC minutes (official record)",
+            "u": "https://iec.colorado.gov/sites/iec/files/documents/Minutes%20-%202020-06-05.pdf"
+          },
+          {
+            "t": "9News on fines and fees",
+            "u": "https://www.9news.com/article/news/local/local-politics/ethics-commission-fines-former-gov-john-hickenlooper-ethics-violations/73-d2e4e02a-aeed-4f08-b7fe-97a9b21c56e8"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "Scott Perry",
@@ -28661,9 +28849,25 @@
           "status": "investigation",
           "stage": "open",
           "kind": "ethics"
+        },
+        {
+          "title": "Office of Congressional Conduct complaint over a campaign video filmed in his office",
+          "type": "Ethics body",
+          "date": "2026-10-26",
+          "summary": "Defend the Vote, a liberal PAC that endorsed his opponent, Janelle Stelson, asked the Office of Congressional Conduct to review whether Perry used official House resources for his campaign: a campaign video, posted in November 2025 and again in October 2026, that appears to have been recorded in his congressional office, and a 2024 campaign post of House Foreign Affairs Committee footage. Neither his campaign nor his office responded to WITF by publication.",
+          "outcome": "No Office of Congressional Conduct or House Ethics Committee action reported.",
+          "sources": [
+            {
+              "t": "WITF: Perry filmed a campaign video in his congressional office, liberal PAC files ethics complaint (Oct. 28, 2026)",
+              "u": "https://www.witf.org/2026/10/28/perry-filmed-a-campaign-video-in-his-congressional-office-liberal-pac-files-ethics-complaint/"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE matters (including the Jan. 6 committee referral), and court proceedings over the FBI seizure of his phone; no STOCK Act late-disclosure reports were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE matters (including the Jan. 6 committee referral), and court proceedings over the FBI seizure of his phone; no STOCK Act late-disclosure reports were found. The October 2026 Defend the Vote complaint to the Office of Congressional Conduct is listed from WITF (Penn Capital-Star could not be read). Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -30912,7 +31116,44 @@
           "agree": 3,
           "n": 3
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Axios (Aug. 9, 2022)",
+            "u": "https://www.axios.com/2022/08/09/rep-scott-perry-outraged-after-fbi-seized-his-phone"
+          },
+          {
+            "t": "Levin Center: Scott Perry cellphone case",
+            "u": "https://levin-center.org/congressional-lawmakers/congressional-oversight-resources/oversight-case-law/scott-perry-cellphone-case/"
+          },
+          {
+            "t": "CNN (Dec. 20, 2023)",
+            "u": "https://www.cnn.com/2023/12/20/politics/trump-scott-perry-cell-phone-records/index.html"
+          },
+          {
+            "t": "CBS News (Dec. 19, 2022)",
+            "u": "https://www.cbsnews.com/news/january-6-committee-sanctions-house-ethics-committee-kevin-mccarthy-jim-jordan-andy-biggs-scott-perry/"
+          },
+          {
+            "t": "Roll Call (Dec. 21, 2021)",
+            "u": "https://rollcall.com/2021/12/21/rep-scott-perry-calls-jan-6-panel-illegitimate-refuses-to-cooperate/"
+          },
+          {
+            "t": "WITF: Perry filmed a campaign video in his congressional office, liberal PAC files ethics complaint (Oct. 28, 2026)",
+            "u": "https://www.witf.org/2026/10/28/perry-filmed-a-campaign-video-in-his-congressional-office-liberal-pac-files-ethics-complaint/"
+          }
+        ]
+      }
     },
     {
       "name": "Mike Lawler",
@@ -31077,7 +31318,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news coverage and watchdog reporting (including searches for Business Insider 'Conflicted Congress' and other late-filing roundups) for STOCK Act late-disclosure reports, and searched for House Ethics Committee/OCE matters and court cases; none were found.",
+      "ethicsSearched": "Searched news coverage and watchdog reporting (including searches for Business Insider 'Conflicted Congress' and other late-filing roundups) for STOCK Act late-disclosure reports, and searched for House Ethics Committee/OCE matters and court cases; none were found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -35295,7 +35536,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Gabe Evans",
@@ -35460,7 +35722,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and lawsuits involving Rep. Evans; none were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and lawsuits involving Rep. Evans; none were found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -39246,7 +39508,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Mariannette Miller-Meeks",
@@ -39460,7 +39743,7 @@
           "decided": 2021
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE/Office of Congressional Conduct matters, financial-disclosure complaints, residency challenges and election contests involving Rep. Miller-Meeks; no STOCK Act late-trade reports were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE/Office of Congressional Conduct matters, financial-disclosure complaints, residency challenges and election contests involving Rep. Miller-Meeks; no STOCK Act late-trade reports were found. A 2026 FEC complaint by primary opponent David Pautsch over a mass text was found only through a DCCC release and was not confirmed independently, so it is not listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -43887,7 +44170,52 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "WOI (We Are Iowa)",
+            "u": "https://www.weareiowa.com/article/news/local/local-politics/representative-mariannette-miller-meeks-ethics-complaint-iowa-democratic-party-failure-disclose-personal-financial-information/524-b631d665-37b2-45ba-9283-0762511df527"
+          },
+          {
+            "t": "WHO 13",
+            "u": "https://who13.com/news/ethics-complaint-accuses-rep-miller-meeks-of-hiding-income-assets/"
+          },
+          {
+            "t": "Washington Examiner",
+            "u": "https://www.washingtonexaminer.com/news/3153683/miller-meeks-ethics-request-iowa-address/"
+          },
+          {
+            "t": "KCRG",
+            "u": "https://www.kcrg.com/2024/09/24/ethics-complaint-alleges-rep-miller-meeks-voting-davenport-despite-living-ottumwa/"
+          },
+          {
+            "t": "KCRG",
+            "u": "https://www.kcrg.com/2024/11/13/miller-meeks-vote-scott-county-accepted-counted-auditor-says/"
+          },
+          {
+            "t": "Little Village",
+            "u": "https://littlevillagemag.com/mariannette-miller-meeks-doesnt-live-in-her-district/"
+          },
+          {
+            "t": "NPR",
+            "u": "https://www.npr.org/2021/03/31/983159841/democrat-rita-hart-abandons-election-challenge-in-house-race-lost-by-6-votes"
+          },
+          {
+            "t": "Roll Call",
+            "u": "https://rollcall.com/2021/03/31/rita-hart-withdraws-challenge-to-iowa-house-race-result/"
+          }
+        ]
+      }
     },
     {
       "name": "Marcy Kaptur",
@@ -44017,7 +44345,7 @@
           "decided": 2023
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Kaptur.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Kaptur. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -47448,7 +47776,32 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "13abc (WTVG)",
+            "u": "https://www.13abc.com/2023/07/05/rep-kaptur-fined-delay-reporting-stock-sale/"
+          },
+          {
+            "t": "WTOL",
+            "u": "https://www.wtol.com/article/news/politics/marcy-kaptur-fined-failing-to-report-stock-transaction/512-2a727421-3355-49fe-9054-c2086caabc75"
+          },
+          {
+            "t": "Washington Examiner",
+            "u": "https://washingtonexaminer.com/news/campaigns/nrcc-trolls-rep-kaptur-violated-law-she-voted-for"
+          }
+        ]
+      }
     },
     {
       "name": "Marie Gluesenkamp Perez",
@@ -47605,7 +47958,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Gluesenkamp Perez; no official action or major-outlet report of a violation was found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Gluesenkamp Perez; no official action or major-outlet report of a violation was found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -49777,7 +50130,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Vicente Gonzalez",
@@ -49933,7 +50307,7 @@
           "kind": "technical"
         }
       ],
-      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Gonzalez; only the 2022 late stock-sale disclosure was documented by a credible outlet.",
+      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Gonzalez; only the 2022 late stock-sale disclosure was documented by a credible outlet. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -53491,7 +53865,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Business Insider (via Yahoo Finance), STOCK Act violations list",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          },
+          {
+            "t": "Business Insider (via Yahoo News)",
+            "u": "https://www.yahoo.com/news/democratic-rep-vicente-gonzalez-texas-210248781.html"
+          }
+        ]
+      }
     },
     {
       "name": "Kathy Castor",
@@ -53643,7 +54038,7 @@
           "kind": "technical"
         }
       ],
-      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Castor; only the Business Insider late-disclosure listing was documented by a credible outlet (partisan reports from the NRCC and Florida's Voice repeating the issue were not used as sources).",
+      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Castor; only the Business Insider late-disclosure listing was documented by a credible outlet (partisan reports from the NRCC and Florida's Voice repeating the issue were not used as sources). Rechecked Nov. 14, 2026: an October 2026 campaign attack by her opponent repeating the stock-disclosure issue (Townhall) is not a complaint and is not listed.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -56869,7 +57264,24 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Business Insider (via Yahoo Finance), STOCK Act violations list",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          }
+        ]
+      }
     }
   ],
   "votes": [
@@ -84406,7 +84818,7 @@
           "note": "His 2008 vote for auto-industry loans lines up with the priority on domestic auto manufacturing he stated in 2024."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee or Office of Congressional Ethics actions, FEC enforcement, criminal or civil cases and other formal complaints involving Rogers; found no documented finding or enforcement action. The only complaints found (a 2024 Michigan Democratic Party FEC complaint about an outside group and 2024 Democratic challenges to his Senate nominating petitions) came from a partisan source or had no documented finding against him, so none are listed. The numeric DW-NOMINATE score was not filled because the Voteview page (ICPSR 20120) loads the score with JavaScript and the fetched page did not include it; it shows him as more conservative than 64% of the 113th House and more liberal than 67% of Republicans.",
+      "ethicsSearched": "Searched for House Ethics Committee or Office of Congressional Ethics actions, FEC enforcement, criminal or civil cases and other formal complaints involving Rogers; found no documented finding or enforcement action. The only complaints found (a 2024 Michigan Democratic Party FEC complaint about an outside group and 2024 Democratic challenges to his Senate nominating petitions) came from a partisan source or had no documented finding against him, so none are listed. The numeric DW-NOMINATE score was not filled because the Voteview page (ICPSR 20120) loads the score with JavaScript and the fetched page did not include it; it shows him as more conservative than 64% of the 113th House and more liberal than 67% of Republicans. A June 2026 Michigan Democratic Party FEC complaint about ads by the Senate Opportunity Fund that backed him names only the group, not Rogers or his campaign, as respondent (The Washington Sun, June 18, 2026), so it is not listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -86156,7 +86568,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          }
+        ]
+      }
     },
     {
       "id": "cooper",
@@ -91135,7 +91560,7 @@
           "note": "She called for the war to end a week after voting against a congressional directive to withdraw forces; the cited reports include no explanation from her of how the two positions relate."
         }
       ],
-      "ethicsSearched": "Searched House Ethics Committee and Office of Congressional Conduct matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; a Sept. 25, 2026 complaint to the Office of Congressional Conduct by the political committee Defend The Vote over her husband's insurance-industry role was found only in partisan sources and has no public disposition, so it is not listed.",
+      "ethicsSearched": "Searched House Ethics Committee and Office of Congressional Conduct matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; a Sept. 25, 2026 complaint to the Office of Congressional Conduct by the political committee Defend The Vote over her husband's insurance-industry role was found only in partisan sources and has no public disposition, so it is not listed. Rechecked Nov. 14, 2026: the Defend The Vote complaint was still found only in partisan outlets (Raw Story), with no public disposition.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -94796,6 +95221,27 @@
           "u": "https://www.kcrg.com/2026/09/05/fact-check-did-ashley-hinson-vote-ban-stock-trading-congress/"
         },
         "note": "She sold her publicly traded stocks after taking office in 2021. Her family holds $1 million–$5 million in private stock from the sale of her husband's insurance business, which isn't traded on a stock market."
+      },
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "KCRG: Hinson apologizes, blames staff after journalist uncovers plagiarism",
+            "u": "https://www.kcrg.com/2020/07/20/hinson-apologizes-blames-staff-after-journalist-uncovers-plagiarism/"
+          },
+          {
+            "t": "The Hill: Iowa GOP House candidate pulls multiple sections from website amid plagiarism accusations",
+            "u": "https://thehill.com/homenews/campaign/508177-iowa-gop-house-candidate-pulls-multiple-sections-from-website-that-were/"
+          }
+        ]
       }
     },
     {
@@ -94963,7 +95409,7 @@
           "note": "He filed legislation matching the stated goal; the sources reviewed show no committee action on it."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run.",
+      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -97070,7 +97516,20 @@
       ],
       "fecCandPast": [
         "H8NH01210"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          }
+        ]
+      }
     },
     {
       "id": "sununu",
@@ -97222,7 +97681,7 @@
           "note": "His record includes a negotiated compromise that passed both chambers with large bipartisan margins, matching his description of his tenure."
         }
       ],
-      "ethicsSearched": "Searched for Senate ethics matters, criminal or civil cases, FEC or campaign-finance enforcement, lobbying-disclosure issues tied to his post-Senate work at Akin Gump, and controversies from his 2002–2008 campaigns. The only documented legal matter found was the 2002 phone-jamming case, which did not charge him. Criticism of his post-Senate corporate work came only from partisan outlets and PACs and is not included. A separate check of FEC enforcement records for his 2026 committee was not run.",
+      "ethicsSearched": "Searched for Senate ethics matters, criminal or civil cases, FEC or campaign-finance enforcement, lobbying-disclosure issues tied to his post-Senate work at Akin Gump, and controversies from his 2002–2008 campaigns. The only documented legal matter found was the 2002 phone-jamming case, which did not charge him. Criticism of his post-Senate corporate work came only from partisan outlets and PACs and is not included. A separate check of FEC enforcement records for his 2026 committee was not run. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -98120,7 +98579,36 @@
       ],
       "fecCandPast": [
         "S0NH00201"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Bush campaigner's conviction in New Hampshire phone jamming case overturned (JURIST, March 22, 2007)",
+            "u": "https://www.jurist.org/news/2007/03/bush-campaigners-conviction-in-new/"
+          },
+          {
+            "t": "Associated Press via HeraldNet, Dec. 2, 2006",
+            "u": "https://www.heraldnet.com/?p=330730"
+          }
+        ]
+      }
     },
     {
       "id": "flanagan",
@@ -101968,7 +102456,7 @@
           "note": "The statement and the sponsored bill match; the bill has not advanced past committee referral."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act late-disclosure reports and complaints, criminal and civil cases, and campaign-finance complaints involving Andy Barr. No congressional ethics findings or STOCK Act violations turned up in the sources reviewed; the web quota ran out before a final check for 2025–26 FEC complaints.",
+      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act late-disclosure reports and complaints, criminal and civil cases, and campaign-finance complaints involving Andy Barr. No congressional ethics findings or STOCK Act violations turned up in the sources reviewed; FEC enforcement records list one matter, MUR 8060 (a 2022 disclaimer complaint dismissed in 2024), shown above. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -101990,6 +102478,22 @@
           "status": "finding",
           "kind": "criminal",
           "decided": 1990
+        },
+        {
+          "title": "FEC complaint over campaign disclaimers (MUR 8060)",
+          "type": "Campaign finance",
+          "date": "2022-08-23",
+          "summary": "Raymond A. Lauk filed an FEC complaint against Andy Barr for Congress, its treasurer and Barr alleging a violation of the disclaimer rules for campaign communications (52 U.S.C. § 30120; 11 CFR 110.11).",
+          "outcome": "Dismissed: on Jan. 10, 2024 the Commission voted 6–0 to dismiss the complaint under its prosecutorial discretion, as its Office of General Counsel recommended, and closed the file.",
+          "sources": [
+            {
+              "t": "FEC: MUR 8060, Andy Barr for Congress, Inc.",
+              "u": "https://www.fec.gov/data/legal/matter-under-review/8060"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "technical"
         }
       ],
       "fecMissing": false,
@@ -104067,7 +104571,28 @@
       ],
       "fecCandPast": [
         "H0KY06104"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Nastiest Congressional Race Ever in Kentucky Coming Down to the Wire (Associated Press via WKYU, Oct. 29, 2012)",
+            "u": "https://www.wkyufm.org/politics/2012-10-29/nastiest-congressional-race-ever-in-kentucky-coming-down-to-the-wire"
+          },
+          {
+            "t": "FEC: MUR 8060, Andy Barr for Congress, Inc.",
+            "u": "https://www.fec.gov/data/legal/matter-under-review/8060"
+          }
+        ]
+      }
     },
     {
       "id": "wess",
@@ -104580,7 +105105,7 @@
           "note": "His vote matched his stated opposition to additional Ukraine funding."
         }
       ],
-      "ethicsSearched": "Searched news and watchdog reporting for House Ethics/Office of Congressional Conduct matters, STOCK Act disclosure complaints (a 2021 Campaign Legal Center STOCK Act complaint concerned Rep. Blake Moore of Utah, not Barry Moore), criminal and civil cases, and campaign-finance issues; FEC enforcement (MUR) records and the Alabama Ethics Commission were not checked directly.",
+      "ethicsSearched": "Searched news and watchdog reporting for House Ethics/Office of Congressional Conduct matters, STOCK Act disclosure complaints (a 2021 Campaign Legal Center STOCK Act complaint concerned Rep. Blake Moore of Utah, not Barry Moore), criminal and civil cases, and campaign-finance issues; FEC enforcement (MUR) records and the Alabama Ethics Commission were not checked directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -106883,7 +107408,28 @@
       ],
       "fecCandPast": [
         "H8AL02171"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Alabama Political Reporter: Barry Moore Found Not Guilty (Oct. 31, 2014)",
+            "u": "https://www.alreporter.com/2014/10/31/barry-moore-found-not-guilty/"
+          },
+          {
+            "t": "Washington Times: Jury finds Alabama Republican Rep. Barry Moore not guilty in perjury trial",
+            "u": "https://www.washingtontimes.com/news/2014/oct/30/jury-finds-alabama-republican-rep-barry-moore-not-/"
+          }
+        ]
+      }
     },
     {
       "id": "bankhead",
@@ -110403,7 +110949,7 @@
           "note": "The bill she introduced matches her stated view on state control of transportation funds."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee/Office of Congressional Conduct matters, STOCK Act or financial-disclosure issues, FEC enforcement or complaints, criminal or civil cases and bar discipline; found only the 2022 Wyoming State Bar complaint above (dismissed without investigation) and no other documented matters.",
+      "ethicsSearched": "Searched for House Ethics Committee/Office of Congressional Conduct matters, STOCK Act or financial-disclosure issues, FEC enforcement or complaints, criminal or civil cases and bar discipline; found only the 2022 Wyoming State Bar complaint above (dismissed without investigation) and no other documented matters. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -112267,7 +112813,24 @@
       ],
       "fecCandPast": [
         "H2WY00166"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "WyoFile: State Bar declined to investigate complaint against Hageman (Sept. 29, 2022)",
+            "u": "https://wyofile.com/state-bar-declined-to-investigate-complaint-against-hageman/"
+          }
+        ]
+      }
     },
     {
       "id": "thomas",
@@ -112842,7 +113405,7 @@
           "note": "Hern reintroduced the bill he had promoted and moved it through the House; Senate action was not checked."
         }
       ],
-      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Ethics/Conduct matters, STOCK Act late-disclosure reports (Insider, NOTUS/Washington Sun, Oklahoma Watch), FEC complaints or enforcement, and controversies listed on Wikipedia. No House Ethics or OCE investigation or FEC enforcement action involving Hern was found. The FEC enforcement (MUR) database and the House Ethics Committee site were not searched directly.",
+      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Ethics/Conduct matters, STOCK Act late-disclosure reports (Insider, NOTUS/Washington Sun, Oklahoma Watch), FEC complaints or enforcement, and controversies listed on Wikipedia. No House Ethics or OCE investigation or FEC enforcement action involving Hern was found. The FEC enforcement (MUR) database and the House Ethics Committee site were not searched directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -115677,7 +116240,32 @@
       ],
       "fecCandPast": [
         "H8OK01157"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "NOTUS / Washington Sun: Republican Rep. Kevin Hern Appears to Have Tardy Stock Disclosures. His Office Disputes He's Late. (Mar. 6, 2026)",
+            "u": "https://www.washingtonsun.com/money/kevin-hern-oklahoma-stock-act-trading-congress"
+          },
+          {
+            "t": "Oklahoma Watch (republished): Rep. Kevin Hern Appears to Have Tardy Stock Disclosures",
+            "u": "https://oklahomawatch.org/2026/03/10/rep-kevin-hern-appears-to-have-tardy-stock-disclosures-his-office-disputes-hes-late/"
+          },
+          {
+            "t": "Insider via Yahoo News: 64 members of Congress have violated a law designed to prevent insider trading",
+            "u": "https://news.yahoo.com/64-members-congress-violated-law-125839548.html?fr=sycsrp_catchall"
+          }
+        ]
+      }
     },
     {
       "id": "davis",
@@ -116256,7 +116844,7 @@
           "note": "The trades were disclosed well past the legal deadline, but she self-reported the lapse and filed the missing reports, in line with the stated commitment."
         }
       ],
-      "ethicsSearched": "Searched news coverage and House Ethics/Office of Congressional Conduct references for ethics complaints, STOCK Act and financial-disclosure issues, FEC complaints, and criminal or civil cases involving Julia Letlow.",
+      "ethicsSearched": "Searched news coverage and House Ethics/Office of Congressional Conduct references for ethics complaints, STOCK Act and financial-disclosure issues, FEC complaints, and criminal or civil cases involving Julia Letlow. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -119193,7 +119781,36 @@
       ],
       "fecCandPast": [
         "H2LA05126"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "NOTUS (Jan. 15, 2026)",
+            "u": "https://www.notus.org/congress/julia-letlow-stock-act-disclosures"
+          },
+          {
+            "t": "The Advocate",
+            "u": "https://www.theadvocate.com/baton_rouge/news/politics/julia-letlow-stock-trades-congress/article_48bcbeee-8627-5af7-8c83-e08dd373ca9c.html"
+          },
+          {
+            "t": "Forbes (Jan. 15, 2026)",
+            "u": "https://www.forbes.com/sites/zacheverson/2026/01/15/letlow-stock-act-julia-congress-ban-trading/"
+          },
+          {
+            "t": "State Affairs: Cassidy campaign files FEC complaint against Letlow (March 3, 2026)",
+            "u": "https://pro.stateaffairs.com/la/news/cassidy-fec-complaint-letlow"
+          }
+        ]
+      }
     },
     {
       "id": "husted",
@@ -119360,7 +119977,7 @@
           "note": "The bill he introduced carries out the protections he described; the cited record shows only its committee referral."
         }
       ],
-      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, Ohio Ethics Commission filings, FEC enforcement, and criminal or civil cases, including the FirstEnergy/HB 6 scandal. A June 2026 Senate ethics complaint concerning a senior aide's payments from a Columbus lobbying firm was found only in partisan or unestablished outlets (Heartland Signal, tiffinohio.net) with no public disposition, so it is not listed. Senate roll-call votes were not researched, per instructions; no ICPSR number was found.",
+      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, Ohio Ethics Commission filings, FEC enforcement, and criminal or civil cases, including the FirstEnergy/HB 6 scandal. The May 29, 2026 Senate ethics complaint about a senior aide's pay from a Columbus lobbying firm, first found only in partisan or unestablished outlets, is now listed from The Washington Sun (NOTUS) report. Senate roll-call votes were not researched, per instructions; no ICPSR number was found. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -119427,6 +120044,22 @@
           "stage": "closed",
           "kind": "ethics",
           "decided": 2009
+        },
+        {
+          "title": "Senate Ethics complaint over a senior aide's pay from a lobbying firm",
+          "type": "Ethics body",
+          "date": "2026-05-29",
+          "summary": "Columbus attorney Anne Griffin asked the Senate Ethics Committee on May 29, 2026 to investigate Husted's senior adviser and counsel, Sean Dunn, who reported $22,652 in 2025 consulting pay from Statehouse Impact Group, a Columbus lobbying firm, arguing that the work violated Senate Rule 37, and to examine whether Husted knew of the conflict and failed to prevent it. A Husted spokesperson said \"Mr. Dunn has been in regular contact with the Ethics Committee to ensure he has reported everything to their satisfaction.\"",
+          "outcome": "No Senate Ethics Committee action reported; the committee did not comment.",
+          "sources": [
+            {
+              "t": "The Washington Sun (NOTUS): Top Jon Husted Senate Aide Kept Working for Ohio Lobbying Firm (June 11, 2026)",
+              "u": "https://washingtonsun.com/ohio/jon-husted-sean-dunn-lobbying-firm"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
       "fecMissing": false,
@@ -124162,7 +124795,48 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FactCheck.org: Ohio Democratic Ads Connect Husted to Bribery Scandal, Despite No Charges of Wrongdoing (Sept. 2026)",
+            "u": "https://www.factcheck.org/2026/09/ohio-democratic-ads-connect-husted-to-bribery-scandal-despite-no-charges-of-wrongdoing/"
+          },
+          {
+            "t": "Ohio Capital Journal: FirstEnergy gave $1 million to boost Ohio Lt Gov Husted's campaign before scandal (Apr. 10, 2024)",
+            "u": "https://ohiocapitaljournal.com/2024/04/10/firstenergy-gave-1-million-to-boost-ohio-lt-gov-husteds-campaign-before-scandal-document-shows/"
+          },
+          {
+            "t": "News 5 Cleveland: FirstEnergy corruption case ends with hung jury",
+            "u": "https://www.news5cleveland.com/news/politics/ohio-politics/firstenergy-corruption-case-ends-in-mistrial"
+          },
+          {
+            "t": "Ohio Capital Journal: Husted took gifts from JobsOhio while he was Ohio lieutenant governor, financial disclosures show",
+            "u": "https://ohiocapitaljournal.com/2026/09/25/ohio-republican-u-s-sen-jon-husted-took-gifts-from-jobsohio-financial-disclosures-show/"
+          },
+          {
+            "t": "Ohio Supreme Court via CourtListener: State ex rel. Husted v. Brunner (Oct. 6, 2009)",
+            "u": "https://www.courtlistener.com/opinion/2691854/state-ex-rel-husted-v-brunner/"
+          },
+          {
+            "t": "Dayton Daily News: Elections board remains split on Husted's residency",
+            "u": "https://www.daytondailynews.com/news/local/elections-board-remains-split-husted-residency/yzjEy1Kq7bI3VeeBPNMIsI/"
+          },
+          {
+            "t": "The Washington Sun (NOTUS): Top Jon Husted Senate Aide Kept Working for Ohio Lobbying Firm (June 11, 2026)",
+            "u": "https://washingtonsun.com/ohio/jon-husted-sean-dunn-lobbying-firm"
+          }
+        ]
+      }
     },
     {
       "id": "brown",
@@ -124343,7 +125017,7 @@
           "note": "He voted to advance the border package he later described as a strong step toward securing the border."
         }
       ],
-      "ethicsSearched": "Searched Senate and House Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases. Reports that he omitted his wife's pension from past Senate disclosures (corrected in 2023) and that his Dignity of Work PAC paid a $50,000 tax bill late in 2025 were found only in partisan or partisan-leaning outlets (Washington Free Beacon, Fox News), with no ethics-body finding, so they are not listed. The numeric DW-NOMINATE score was not available from the Voteview page, and no campaign website URL appeared in search results.",
+      "ethicsSearched": "Searched Senate and House Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases. Reports that he omitted his wife's pension from past Senate disclosures (corrected in 2023) and that his Dignity of Work PAC paid a $50,000 tax bill late in 2025 were found only in partisan or partisan-leaning outlets (Washington Free Beacon, Fox News), with no ethics-body finding, so they are not listed. The numeric DW-NOMINATE score was not available from the Voteview page, and no campaign website URL appeared in search results. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -126645,7 +127319,32 @@
           "agree": 0,
           "n": 1
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "NBC News: Sen. Sherrod Brown received an extra property tax credit and racked up penalties for late payments",
+            "u": "https://www.nbcnews.com/politics/congress/sen-sherrod-brown-received-extra-property-tax-credit-rcna82048"
+          }
+        ]
+      }
     },
     {
       "id": "ricketts",
@@ -126807,7 +127506,7 @@
           "note": "His veto and later funding of the referendum match his stated support for capital punishment."
         }
       ],
-      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; found no ethics-body finding or enforcement action. Not listed because they involve no formal complaint or finding: criticism of his January 2023 appointment by Gov. Jim Pillen, whom the Ricketts family spent over $1.3 million helping elect (Nebraska Examiner, Jan. 12, 2023), and 2026 allegations by Osborn's campaign and the Nebraska Democratic Party that Ricketts was behind Democratic candidate William Forbes's primary run and later lawsuit, which his campaign denied. Senate roll-call votes were not researched, per instructions; note that rickettsforsenate.com is an opposition parody site, not his campaign site.",
+      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; found no ethics-body finding or enforcement action. Not listed because they involve no formal complaint or finding: criticism of his January 2023 appointment by Gov. Jim Pillen, whom the Ricketts family spent over $1.3 million helping elect (Nebraska Examiner, Jan. 12, 2023), and 2026 allegations by Osborn's campaign and the Nebraska Democratic Party that Ricketts was behind Democratic candidate William Forbes's primary run and later lawsuit, which his campaign denied. Senate roll-call votes were not researched, per instructions; note that rickettsforsenate.com is an opposition parody site, not his campaign site. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -129679,7 +130378,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Nebraska Supreme Court: Sandoval v. Ricketts, 302 Neb. 138 (Jan. 25, 2019)",
+            "u": "https://www.nebraska.gov/apps-courts-epub/public/viewCertified?docId=N00011518PUB"
+          },
+          {
+            "t": "VICE: Nebraska's governor loves the death penalty so much it got him sued (Dec. 4, 2017)",
+            "u": "https://www.vice.com/en/article/nebraskas-governor-loves-the-death-penalty-so-much-it-got-him-sued/"
+          }
+        ]
+      }
     },
     {
       "id": "osborn",
@@ -131612,7 +132332,7 @@
           "note": "Her vote against the bill matches her stated objection to a one-size-fits-all federal rule."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics/Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC complaints and criminal or civil cases; found only the March 2026 NRSC complaint to the FEC (pending). Certified primary results were not located (status uses unofficial election-night returns), and Voteview showed no numeric DW-NOMINATE score in fetched content.",
+      "ethicsSearched": "Searched for House Ethics/Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC complaints and criminal or civil cases; found only the March 2026 NRSC complaint to the FEC (pending). Certified primary results were not located (status uses unofficial election-night returns), and Voteview showed no numeric DW-NOMINATE score in fetched content. The October 2026 House Oversight and Alaska Department of Public Safety investigations of her campaign are listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -131632,6 +132352,27 @@
           ],
           "sev": "neutral",
           "status": "allegation",
+          "kind": "ethics"
+        },
+        {
+          "title": "House Oversight and Alaska state investigations of her campaign's alleged recruiting of a second \"Dan Sullivan\"",
+          "type": "Investigation",
+          "date": "2026-10-29",
+          "summary": "On Oct. 29, 2026, House Oversight Committee Chairman James Comer opened an investigation into allegations, first reported by The New York Times, that Peltola's campaign recruited challengers with a name nearly identical to Sen. Dan Sullivan's to confuse voters, and asked former campaign manager Elisa Rios and Democratic operative Jerid Kurtz for transcribed interviews on Nov. 5 and 6. The same day Gov. Mike Dunleavy directed the Alaska Department of Public Safety to investigate whether the alleged scheme violated state law and whether criminal or civil action was warranted. Peltola herself is not named as a subject. The Times quoted Rios as saying Peltola was not directly involved but was \"definitely aware\"; Rios later sought to retract her comments. The campaign said it \"has no involvement with either Sullivan campaign and did not recruit any candidates into the race.\"",
+          "outcome": "Open; no finding reported as of Nov. 14, 2026.",
+          "sources": [
+            {
+              "t": "House Oversight Committee: Chairman Comer seeks testimony (Oct. 29, 2026)",
+              "u": "https://oversight.house.gov/release/chairman-comer-seeks-testimony-from-democrat-operatives-who-plotted-to-rig-alaska-senate-race/"
+            },
+            {
+              "t": "The National News Desk: House panel launches probe into Peltola campaign over recruiting Senate candidates claims (Oct. 29, 2026)",
+              "u": "https://thenationaldesk.com/news/nation-world/house-panel-launches-probe-into-peltola-campaign-over-recruiting-senate-candidates-claims-dan-sullivan-james-comer-oversight-committee-alaska-democrats-dscc-mike-dunleavy-president-trump-rrt"
+            }
+          ],
+          "sev": "warn",
+          "status": "investigation",
+          "stage": "open",
           "kind": "ethics"
         }
       ],
@@ -133362,7 +134103,32 @@
       ],
       "fecCandPast": [
         "H2AK01158"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Alaska Public Media: GOP group complains Peltola spent campaign money while mum about running for office (March 30, 2026)",
+            "u": "https://alaskapublic.org/news/politics/washington-d-c/2026-03-30/gop-group-complains-peltola-spent-campaign-money-while-mum-about-running-for-office"
+          },
+          {
+            "t": "House Oversight Committee: Chairman Comer seeks testimony (Oct. 29, 2026)",
+            "u": "https://oversight.house.gov/release/chairman-comer-seeks-testimony-from-democrat-operatives-who-plotted-to-rig-alaska-senate-race/"
+          },
+          {
+            "t": "The National News Desk: House panel launches probe into Peltola campaign over recruiting Senate candidates claims (Oct. 29, 2026)",
+            "u": "https://thenationaldesk.com/news/nation-world/house-panel-launches-probe-into-peltola-campaign-over-recruiting-senate-candidates-claims-dan-sullivan-james-comer-oversight-committee-alaska-democrats-dscc-mike-dunleavy-president-trump-rrt"
+          }
+        ]
+      }
     },
     {
       "id": "hamilton",
@@ -133983,7 +134749,7 @@
           "note": "Collins voted for the tax cuts he described as a way to reduce mandatory spending, while his campaign says he supports Social Security and FactCheck.org notes the law reduces trust-fund revenue."
         }
       ],
-      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Conduct matters (found the 2025–26 referral), STOCK Act or financial-disclosure reports, FEC complaints or enforcement, and criminal or civil cases, and reviewed the controversies listed on Wikipedia and Flagpole. No STOCK Act violation, FEC enforcement action or criminal case involving Collins was found. The FEC enforcement (MUR) database and stock-trade trackers were not searched directly.",
+      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Conduct matters (found the 2025–26 referral), STOCK Act or financial-disclosure reports, FEC complaints or enforcement, and criminal or civil cases, and reviewed the controversies listed on Wikipedia and Flagpole. No STOCK Act violation, FEC enforcement action or criminal case involving Collins was found. The FEC enforcement (MUR) database and stock-trade trackers were not searched directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -135304,7 +136070,40 @@
       ],
       "fecCandPast": [
         "H4GA10071"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Georgia Recorder: More details released about ethics investigation into Congressman Mike Collins and former top aide (Jan. 6, 2026)",
+            "u": "https://georgiarecorder.com/briefs/more-details-released-about-ethics-investigation-into-congressman-mike-collins-and-former-top-aide/"
+          },
+          {
+            "t": "House Committee on Ethics: OCC Report and Findings, Rep. Mike Collins (Jan. 5, 2026)",
+            "u": "https://ethics.house.gov/wp-content/uploads/2026/01/OCC-Report-and-Findings-Rep.-Mike-Collins-1.5.26.pdf"
+          },
+          {
+            "t": "The Hill: House Ethics panel extends review of allegations into Collins, top aide",
+            "u": "https://thehill.com/homenews/5673886-house-ethics-committee-investigates-collins-phillips/"
+          },
+          {
+            "t": "NOTUS: Top Aide to Rep. Mike Collins Was Reimbursed for More Than $170,000 in Office Expenses",
+            "u": "https://www.notus.org/congress/mike-collins-aide-franking-office-reimbursements"
+          },
+          {
+            "t": "Flagpole: Mike Collins' Many Controversies, Explained (Sept. 14, 2026)",
+            "u": "https://flagpole.com/news/news-features/2026/09/14/mike-collins-many-controversies-explained/"
+          }
+        ]
+      }
     },
     {
       "id": "murphy",
