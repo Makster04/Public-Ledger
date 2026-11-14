@@ -114,10 +114,10 @@ async function trackerChecks(dir,cycle){
   if(!fs.existsSync(cm)||!fs.existsSync(pas2))return null;
   const byCand=membersByCandidate(readIf('public/senate.json'),readIf('public/house.json'));
   for(const [id,ids] of Object.entries(readIf('public/tracker-history.json')?.linked||{}))for(const c of ids)if(!byCand.has(c))byCand.set(c,id);
-  const names=new Map(),keysOf=new Map(),out=[];
-  for await(const line of lines(cm,'cm.txt')){const k=committeeKind(line);if(k)names.set(k[0],k[2]);}
+  const names=new Map(),cmteCand=new Map(),keysOf=new Map(),out=[];
+  for await(const line of lines(cm,'cm.txt')){const k=committeeKind(line);if(!k)continue;names.set(k[0],k[2]);if(k[3])cmteCand.set(k[0],k[3]);}
   for await(const line of lines(pas2,'itpas2.txt')){
-    const x=committeeCheck(line);if(!x||!byCand.has(x.cand))continue;
+    const x=committeeCheck(line,cmteCand);if(!x||!byCand.has(x.cand))continue;
     if(!keysOf.has(x.cmte))keysOf.set(x.cmte,trackersOf(x.cmte,names.get(x.cmte)));
     const keys=keysOf.get(x.cmte);if(keys.length)out.push({cmte:x.cmte,pac:names.get(x.cmte)||x.cmte,id:byCand.get(x.cand),amount:x.amount,date:mdy(x.date),keys});
   }

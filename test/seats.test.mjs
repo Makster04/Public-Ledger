@@ -46,7 +46,7 @@ test('a chamber\'s chart: a dot for each seat, linked to the profile, colored by
 
 // FEC bulk-file lines, as the files lay them out (pipe-separated): cm.txt and itpas2.txt.
 const cm=(id,name,dsgn,type,org,cand='')=>[id,name,'TREASURER','1 MAIN ST','','CITY','ST','00000',dsgn,type,'','Q',org,'SPONSOR',cand].join('|');
-const pas=(cmte,tp,amt,cand,memo='')=>{const c=new Array(22).fill('');c[0]=cmte;c[5]=tp;c[13]='10152025';c[14]=String(amt);c[16]=cand;c[19]=memo;return c.join('|');};
+const pas=(cmte,tp,amt,cand,memo='',to='')=>{const c=new Array(22).fill('');c[0]=cmte;c[5]=tp;c[13]='10152025';c[14]=String(amt);c[15]=to;c[16]=cand;c[19]=memo;return c.join('|');};
 
 test('the bulk files: a corporation\'s PAC, its direct and in-kind checks to each member, refunds taken off',()=>{
   assert.deepEqual(committeeKind(cm('C00000001','ACME CORP PAC','U','Q','C')),['C00000001','corporate','ACME CORP PAC',null]);
@@ -62,6 +62,12 @@ test('the bulk files: a corporation\'s PAC, its direct and in-kind checks to eac
   assert.equal(corporateCheck(pas('C00000001','24K',2000,'S6ME00159','X'),kinds),null,'a memo line repeats another');
   assert.equal(corporateCheck(pas('C00000002','24K',2500,'S6ME00159'),kinds),null,'a union\'s PAC');
   assert.equal(corporateCheck(pas('C00000004','24K',5000,'S6ME00159'),kinds),null,'a leadership PAC');
+  const cmteCand=new Map([['C00314575','S6ME00159']]);
+  assert.deepEqual(corporateCheck(pas('C00000001','24K',2500,'','','C00314575'),kinds,cmteCand),{cand:'S6ME00159',cmte:'C00000001',amount:2500,date:'10152025'},
+    'a check with the candidate ID left blank goes by the campaign committee it was sent to');
+  assert.equal(corporateCheck(pas('C00000001','24K',2500,'','','C00314575'),kinds),null,'without the committee list it can\'t be placed');
+  assert.equal(corporateCheck(pas('C00000001','24K',2500,'','','C99999999'),kinds,cmteCand),null,'nor when the committee isn\'t a candidate\'s');
+  assert.equal(corporateCheck(pas('C00000001','24K',2500,'H2AK01083','','C00314575'),kinds,cmteCand).cand,'H2AK01083','a filled-in candidate ID comes first');
   const byCand=membersByCandidate({senators:[{id:'collins',fecCand:'S6ME00159'},{id:'newsen'}]},{members:[{id:'begich',fecCand:'H2AK01083'},{id:'quiet',fecCand:'H0XX00001'}]});
   assert.deepEqual([...byCand],[['S6ME00159','collins'],['H2AK01083','begich'],['H0XX00001','quiet']],'a senator without a candidate ID isn\'t read');
   const t=corporateTotals([{cand:'S6ME00159',cmte:'C1',amount:5000},{cand:'S6ME00159',cmte:'C1',amount:-1000},{cand:'S6ME00159',cmte:'C2',amount:2500},{cand:'H2AK01083',cmte:'C1',amount:750},{cand:'H2AK01083',cmte:'C3',amount:-750},{cand:'S9ZZ00000',cmte:'C1',amount:1}],byCand);
