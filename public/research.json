@@ -39717,8 +39717,10 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
-          "kind": "ethics"
+          "status": "investigation",
+          "kind": "ethics",
+          "stage": "closed",
+          "decided": 2024
         },
         {
           "title": "2020 election contest by Rita Hart",
@@ -83705,7 +83707,7 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
+          "status": "context",
           "kind": "technical"
         }
       ],
@@ -102116,7 +102118,7 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
+          "status": "context",
           "kind": "ethics"
         }
       ],
@@ -102667,8 +102669,10 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
-          "kind": "technical"
+          "status": "investigation",
+          "kind": "technical",
+          "stage": "closed",
+          "decided": 2024
         }
       ],
       "fecMissing": false,
@@ -111224,8 +111228,10 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
-          "kind": "ethics"
+          "status": "investigation",
+          "kind": "ethics",
+          "stage": "closed",
+          "decided": 2022
         }
       ],
       "fecMissing": false,
@@ -120302,7 +120308,7 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
+          "status": "context",
           "kind": "ethics"
         },
         {
@@ -120318,7 +120324,7 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
+          "status": "context",
           "kind": "ethics"
         },
         {
@@ -131747,8 +131753,10 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
-          "kind": "ethics"
+          "status": "investigation",
+          "kind": "ethics",
+          "stage": "closed",
+          "decided": 2023
         }
       ],
       "fecMissing": true,
@@ -143675,7 +143683,7 @@
             }
           ],
           "sev": "neutral",
-          "status": "allegation",
+          "status": "context",
           "kind": "ethics"
         }
       ],

@@ -6,7 +6,7 @@ const people=data.members.concat(data.cands||[],data.featured||[]);
 test('every ethics item that is shown on the Overview has a valid status tag',()=>{
   for(const p of people)for(const e of p.ethics){
     if(e.outcome==='None found')continue;
-    assert.ok(['allegation','investigation','finding'].includes(e.status),`${p.id}: "${e.title}" needs status allegation, investigation or finding`);
+    assert.ok(['allegation','investigation','finding','context'].includes(e.status),`${p.id}: "${e.title}" needs status allegation, investigation, finding or context`);
   }
 });
 test('campaign money sources add up to total receipts, so the Overview bar is a complete split',()=>{
