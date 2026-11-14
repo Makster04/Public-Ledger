@@ -277,7 +277,7 @@ export function aboveBoard(person,{trades=null,conflicts=null,asOfYear=null}={})
     {key:'gifts',label:'Gifts & Travel',index:idx.gifts,points:idx.gifts==null?null:-round1(W.gifts/wsum*idx.gifts),note:coi.complete?null:coi.why},
     {key:'tradeConflicts',label:'Trade Conflicts',index:tc.index,points:tc.index==null?null:-round1(W.tradeConflicts/wsum*tc.index),note:tc.why||(tc.none?'No trades in the reports read':`${tc.n} trades`)},
     {key:'dodger',label:'Stock Disclosure Dodger',index:dodger.index,points:dodger.index==null?null:-round1(W.dodger/wsum*dodger.index),note:dodger.why||`${dodger.late||0} late or missing of ${checked.rows.length} trade reports (due within ${LATE_DAYS} days)`},
-    {key:'legal',label:'Legal Trouble',index:reviewed?legal.index:null,points:reviewed?-round1(legal.index):null,note:reviewed?`${legal.finding} confirmed, ${legal.open} open, ${legal.closed} closed without a finding`:'Not reviewed yet'},
+    {key:'legal',label:'Legal Trouble',index:reviewed?legal.index:null,points:reviewed?-round1(legal.index):null,note:reviewed?`${legal.finding} confirmed, ${legal.open} open, ${legal.allegation} unresolved allegation${legal.allegation===1?'':'s'}, ${legal.closed} closed without a finding`:'Not reviewed yet'},
   ];
   const needs=[['Financial disclosures read (income, gifts, trips, trades and filing dates)',covered||coi.complete],['Connections checked (lobbying, contracts, foreign-agent filings, committees, votes)',coi.complete],['Legal records reviewed (court, ethics and enforcement cases)',reviewed]];
   const base={parts,needs,legal,tradeConflicts:tc,dodger,conflicts:coi,checked,used};

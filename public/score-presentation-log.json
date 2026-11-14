@@ -39,6 +39,10 @@
    "date": "2026-11-11",
    "headline": "Above Board is now called Plays by the Rules",
    "note": "The grade that was called Above Board is now called Plays by the Rules: whether their own money is tied to the power of their office, whether they follow the disclosure rules, and whether they're in legal trouble. The formula, the inputs and every grade are unchanged, and old links to the tab still work. Display only."
+  },
+  {
+   "date": "2026-11-14",
+   "note": "Rule change (Plays by the Rules, Legal Trouble): an allegation that no official body has resolved yet now counts like an open investigation, 15 points × its kind, where it cost nothing before. A complaint that was dismissed, declined or decided in the person's favor counts as closed without a finding, 5 × its kind, like an acquittal or a dropped investigation. Reported ties with no accusation of breaking a rule are shown as context and cost nothing. Historical values were not recalculated."
   }
  ]
 }

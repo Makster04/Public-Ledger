@@ -6,7 +6,7 @@ export const MIN_CHECKS=3, MIN_MATCH_ISSUES=3, MIN_PVP_ACTIONS=3;
 // Ethics (placeholders): a case's status points (ETHICS_COST) times its kind (CASE_KIND), halved when its latest status
 // change is more than 10 years old (CASE_AGE); open cases always count in full. The trading indexes each cost a tenth of
 // their value (INDEX_COST), so trading can cost at most 20 points. Trade reports are due 45 days after a trade (STOCK Act).
-export const ETHICS_COST={finding:20,open:15,closed:5,allegation:0};
+export const ETHICS_COST={finding:20,open:15,closed:5,allegation:15};
 export const CASE_KIND={criminal:1.5,ethics:1,technical:0.5};
 export const CASE_AGE={years:10,factor:0.5};
 export const INDEX_COST=0.1, LATE_DAYS=45;
@@ -154,7 +154,8 @@ export function legalTrouble(ethics,{asOfYear=null,stockActCovered=false}={}){
     const status=caseStatus(e);if(!status)return;
     n[status]++;
     const kind=CASE_KIND[e.kind]?e.kind:'ethics';
-    const old=status!=='open'&&!!asOfYear&&e.decided!=null&&e.decided<asOfYear-CASE_AGE.years;
+    // An open case and an unresolved allegation always count in full; only a decided case is discounted for age.
+    const old=status!=='open'&&status!=='allegation'&&!!asOfYear&&e.decided!=null&&e.decided<asOfYear-CASE_AGE.years;
     const covered=stockActCovered&&e.type==='STOCK Act';
     const points=covered?0:ETHICS_COST[status]*CASE_KIND[kind]*(old?CASE_AGE.factor:1);
     rows.push({i,status,kind,old,covered,points});

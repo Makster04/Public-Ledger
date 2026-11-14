@@ -21,8 +21,8 @@
 - **Trade Conflicts:** trades in their committees' sectors (45%), within 30 days of a related vote (30%), or in donors' companies (25%). Needs 5 trades.
 - **Stock Disclosure Dodger:** trade reports filed more than 45 days late or never (70%), and late annual reports (30%).
 - **Legal Trouble:** the sum over all cases, capped at 100. Each case = status × kind × age:
-  - **Status:** confirmed finding 20, open investigation 15, closed without a finding 5, allegation 0.
+  - **Status:** confirmed finding 20, open investigation 15, unresolved allegation 15, closed without a finding (acquitted, dismissed, declined or dropped) 5. Context (a reported tie with no accusation of breaking a rule) is shown, not scored.
   - **Kind:** criminal × 1.5, ethics or civil × 1, technical × 0.5.
-  - **Age:** half for a closed case decided over 10 years ago.
+  - **Age:** half for a closed case decided over 10 years ago. Open cases and unresolved allegations always count in full.
 - **Outside Income & Conflicts and Gifts & Travel** need the disclosure reader, which isn't built yet. For now only the two trading indexes and Legal Trouble count. A missing index drops out and the others are rescaled.
 - **Needs:** a dated, sourced legal review (done Nov. 14, 2026 for every profile but the president's) plus at least one index.

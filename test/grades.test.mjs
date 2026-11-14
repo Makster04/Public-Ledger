@@ -16,10 +16,11 @@ test('promises: kept 1, partly supported, a compromise or a changed position (pa
   assert.equal(promiseScore([]).pct,null);
   assert.equal(MIN_CHECKS,3);
 });
-test('ethics: findings, open and closed investigations cost points; allegations and "None found" do not',()=>{
+test('ethics: findings, open and closed investigations and unresolved allegations cost points; context and "None found" do not',()=>{
   const e=(status,stage,outcome='x')=>({status,stage,outcome});
   assert.equal(ethicsScore([]).pct,100);
-  assert.equal(ethicsScore([e('allegation'),e('allegation'),e('x','x','None found')]).pct,100);
+  assert.equal(ethicsScore([e('context'),e('context'),e('x','x','None found')]).pct,100);
+  assert.equal(ethicsScore([e('allegation')]).pct,100-ETHICS_COST.allegation);
   assert.equal(ethicsScore([e('finding')]).pct,100-ETHICS_COST.finding);
   assert.equal(ethicsScore([e('investigation','open')]).pct,100-ETHICS_COST.open);
   assert.equal(ethicsScore([e('investigation','closed')]).pct,100-ETHICS_COST.closed);
@@ -151,7 +152,8 @@ test('Legal Trouble Index: status points × kind × age, totaled with a ceiling 
   assert.equal(legalTrouble([c('investigation','criminal',2001,'open')],{asOfYear:2026}).index,22.5,'an open case is never discounted for age, and the index keeps its exact value');
   assert.equal(legalTrouble([c('finding','ethics',2016)],{asOfYear:2026}).index,20,'exactly 10 years is not more than 10');
   assert.equal(legalTrouble([c('finding','criminal',2024),c('finding','criminal',2024),c('finding','criminal',2024),c('finding','criminal',2024)],{asOfYear:2026}).index,100,'ceiling');
-  assert.equal(legalTrouble([c('allegation','criminal'),{status:'finding',outcome:'None found'}]).index,0,'allegations and "None found" cost nothing');
+  assert.equal(legalTrouble([c('context','criminal'),{status:'finding',outcome:'None found'}]).index,0,'context and "None found" cost nothing');
+  assert.equal(legalTrouble([c('allegation','criminal',2001)],{asOfYear:2026}).index,22.5,'an unresolved allegation counts like an open case, never discounted for age');
   assert.equal(legalTrouble([c('finding',undefined,2024)]).index,ETHICS_COST.finding,'an untagged case counts as ethics, at full value');
   const stock={status:'finding',kind:'technical',type:'STOCK Act',decided:2025,outcome:'x'};
   assert.equal(legalTrouble([stock]).index,10);
@@ -192,7 +194,8 @@ test('Ethics grade: 100 − Legal Trouble − a tenth of each trading index; an 
   const e=(status,stage,outcome='x')=>({status,stage,outcome});
   assert.equal(INDEX_COST,0.1);
   assert.equal(ethicsScore([]).pct,100);
-  assert.equal(ethicsScore([e('allegation'),e('allegation'),e('x','x','None found')]).pct,100);
+  assert.equal(ethicsScore([e('context'),e('context'),e('x','x','None found')]).pct,100);
+  assert.equal(ethicsScore([e('allegation')]).pct,100-ETHICS_COST.allegation);
   assert.equal(ethicsScore([e('finding')]).pct,100-ETHICS_COST.finding);
   assert.equal(ethicsScore(Array(9).fill(e('finding'))).pct,0,'never below 0');
   // The worked example: Legal Trouble 35, Insider Trading 23 and Stock Disclosure Dodger 40 give 58.7, shown as 59.
