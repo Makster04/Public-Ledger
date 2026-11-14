@@ -1,6 +1,6 @@
 // The trackers: seven lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
 // "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
-// Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13).
+// Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13; AIPAC widened to the Pro-Israel Lobby, 2026-11-14).
 //
 // For each tracker:
 //   pacIds / patterns   its PACs: the FEC committee IDs on file (checked by hand), and name patterns for committees not on
@@ -8,6 +8,11 @@
 //   routed              its groups whose routed ("bundled") gifts count (research.json "bundled", scripts/build-bundled.mjs)
 //   groupPacs           each such group's own PAC: the reader of routed gifts also adds up that PAC's own checks to the
 //                       campaign over the whole cycle ("direct"), which fills in a check the PAC lines read don't reach
+//   donors              named individual donors whose own checks to a campaign count (approved by name; no other
+//                       donor's name is ever saved): key, name, the FEC search ("LAST, FIRST"), and the last name, first
+//                       names and states a gift must match. Read by npm run corporate:pacs into public/tracker-history.json.
+//   pacsLabel, routedLabel  how the page names its PACs and the groups whose passed-on gifts count, when "<name>'s PACs"
+//                       doesn't read well
 //   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
 //                       FEC committee IDs where known. superPacLine: the Summary of Major Lookouts shows their spending
 //                       as an extra line (approved 2026-11-11 for Crypto and Big Tech + AI, whose money mostly arrives
@@ -22,11 +27,23 @@ import {SUPER_PACS} from './industries.js';
 
 const P=s=>new RegExp(s);
 export const TRACKERS=[
-  {key:'aipac',icon:'🇮🇱🎁',emoji:'🇮🇱',name:'AIPAC',long:'AIPAC (American Israel Public Affairs Committee)',
-    about:'The American Israel Public Affairs Committee: its PAC\'s checks, the gifts it collects from donors and passes on to campaigns, and its super PAC, United Democracy Project.',
-    pacIds:['C00797670'],patterns:[P('^AMERICAN ISRAEL PUBLIC AFFAIRS'),P('^AIPAC\\b')],routed:['aipac'],
-    groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},superPacs:['United Democracy Project'],superPacLine:true,industries:[],
-    companies:[],groups:['AIPAC PAC']},
+  // The key stays 'aipac' (links, files). Its PACs: AIPAC's, the PACs that say on their own sites that they exist to support
+  // Israel or the U.S.-Israel relationship (NORPAC, JACPAC, To Protect Our Heritage, U.S. Israel PAC, CityPAC, DMFI PAC),
+  // the Republican Jewish Coalition's (approved), and those named for supporting Israel. Not J Street's (approved
+  // 2026-11-14: it often backs candidates AIPAC works against), and not those that don't say so (checked 2026-11-14:
+  // the Maryland Association for Concerned Citizens PAC, Mid Manhattan PAC, NATPAC 1947).
+  {key:'aipac',icon:'🇮🇱🎁',emoji:'🇮🇱',name:'Pro-Israel Lobby',card:'Pro-Israel',long:'Pro-Israel Lobby (AIPAC and other pro-Israel PACs)',
+    about:'AIPAC and the PACs that say they exist to support Israel or the U.S.–Israel relationship (NORPAC, JACPAC, To Protect Our Heritage PAC, U.S. Israel PAC, CityPAC, DMFI PAC, the Republican Jewish Coalition\'s PAC and others named for Israel): their PACs\' checks, the gifts AIPAC, NORPAC, JACPAC and the RJC collect from donors and pass on to campaigns, the named donors\' own checks (Miriam and Sheldon Adelson), and AIPAC\'s super PAC, United Democracy Project. J Street isn\'t included.',
+    // (by ID where the committee is on file; U.S. Israel PAC, CityPAC and the PACs named for Israel by their FEC names)
+    pacIds:['C00797670','C00247403','C00139659','C00135541','C00710848','C00345132'],
+    patterns:['^AMERICAN ISRAEL PUBLIC AFFAIRS','^AIPAC\\b','^NORPAC\\b','^JOINT ACTION COMMITTEE FOR POLITICAL AFFAIRS','\\bJACPAC\\b','^TO PROTECT OUR HERITAGE','^U\\.? ?S\\.? ISRAEL PAC|\\bUSI PAC\\b','^CITYPAC\\b','^DMFI PAC|DEMOCRATIC MAJORITY FOR ISRAEL','REPUBLICAN JEWISH COALITION','FRIENDS OF ISRAEL','^AMERICAN PRO-ISRAEL PAC','^PRO-ISRAEL AMERICA','DEFENDERS OF ISRAEL','U\\.?S\\.? ISRAEL FRIENDSHIP','CHRISTIANS FOR ISRAEL','DEMOCRATS FOR ISRAEL'].map(P),
+    routed:['aipac','fec:C00247403','fec:C00139659','fec:C00345132'],
+    groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},
+    donors:[{key:'madelson',name:'Miriam Adelson',search:'ADELSON, MIRIAM',last:'ADELSON',first:['MIRIAM'],states:['NV']},
+      {key:'sadelson',name:'Sheldon Adelson',search:'ADELSON, SHELDON',last:'ADELSON',first:['SHELDON'],states:['NV']}],
+    pacsLabel:'the pro-Israel PACs',routedLabel:'AIPAC, NORPAC, JACPAC and the RJC',
+    superPacs:['United Democracy Project'],superPacLine:true,industries:[],
+    companies:[],groups:['AIPAC PAC','NORPAC','JACPAC','To Protect Our Heritage PAC','U.S. Israel PAC (USI PAC)','CityPAC','DMFI PAC','Republican Jewish Coalition PAC']},
   {key:'pharma',icon:'💊🎁',emoji:'💊',name:'Big Pharma + Insurance',card:'Pharma + Ins.',long:'Big Pharma + Insurance (drugmakers, health insurers and PBMs)',
     about:'Drugmakers, health insurers and the pharmacy benefit managers (PBMs) the biggest insurers own, and their trade groups. Drugmakers and insurers often lobby against each other on drug prices; both give most to the health committees. Medical device makers, distributors, hospitals and drugstore chains aren\'t included.',
     pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345',
@@ -102,7 +119,7 @@ export function mergePacLines(...lists){
   const by=new Map();
   for(const list of lists){
     const own=new Map();
-    for(const l of list||[])if(l&&l.amount>0){const k=l.cid||upper(l.name);const o=own.get(k)||{cid:l.cid||null,name:l.name||'',amount:0};o.amount=cents(o.amount+(Number(l.amount)||0));own.set(k,o);}
+    for(const l of list||[])if(l&&l.amount>0){const k=l.cid||upper(l.name);const o=own.get(k)||{cid:l.cid||null,name:l.name||'',amount:0,...(l.bulk?{bulk:true}:{})};o.amount=cents(o.amount+(Number(l.amount)||0));own.set(k,o);}
     for(const [k,o] of own){const was=by.get(k);if(!was||o.amount>was.amount)by.set(k,{...o,name:o.name||was?.name||''});}
   }
   return [...by.values()];
@@ -110,19 +127,41 @@ export function mergePacLines(...lists){
 // One tracker's money to one campaign. pacLines: the period's PAC lines ([{cid, name, amount}]), or null when they
 // haven't been read; routed: {group: amount} for the period; routedKnown: every gift routed to them was searched for;
 // direct: {group: amount}, the group's own PAC checks to the campaign this cycle from its own reports (counted once
-// with its PAC line, at the larger amount); employees: {industry: total} for the period, or null when not read.
-// status: took (some PAC checks or routed gifts), none (none, with every needed record read), waiting (not read yet:
-// never shown as none).
-export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,direct=null,employees=null}={}){
+// with its PAC line, at the larger amount); employees: {industry: total} for the period, or null when not read;
+// donors: {donor key: amount}, the named donors' own checks to the campaign in the period, or null when not read.
+// status: took (some PAC checks, routed gifts or named donors' checks), none (none, with every needed record read),
+// waiting (not read yet: never shown as none).
+export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,direct=null,employees=null,donors=null}={}){
   const by=new Map();
-  for(const l of pacLines||[])if(isTrackerPac(t,l)){const k=l.cid||upper(l.name);const o=by.get(k)||{cid:l.cid||null,name:l.name,amount:0,n:0};o.amount=cents(o.amount+l.amount);o.n++;by.set(k,o);}
+  for(const l of pacLines||[])if(isTrackerPac(t,l)){const k=l.cid||upper(l.name);const o=by.get(k)||{cid:l.cid||null,name:l.name,amount:0,n:0,...(l.bulk?{bulk:true}:{})};o.amount=cents(o.amount+l.amount);o.n++;by.set(k,o);}
   for(const [g,gp] of Object.entries(t.groupPacs||{})){const a=Number(direct?.[g])||0;if(!(a>0))continue;
     const o=by.get(gp.cid);if(!o)by.set(gp.cid,{cid:gp.cid,name:gp.name,amount:cents(a),n:1,own:true});else if(a>o.amount){o.amount=cents(a);o.own=true;}}
   const pacs=[...by.values()].sort((a,b)=>b.amount-a.amount),pac=cents(pacs.reduce((s,p)=>s+p.amount,0));
-  const rt=cents(t.routed.reduce((s,g)=>s+(Number(routed?.[g])||0),0)),total=cents(pac+rt);
-  const known=pacLines!=null&&(!t.routed.length||routedKnown);
+  const rt=cents(t.routed.reduce((s,g)=>s+(Number(routed?.[g])||0),0));
+  const named=(t.donors||[]).map(d=>({key:d.key,name:d.name,amount:cents(Number(donors?.[d.key])||0)})).filter(d=>d.amount>0).sort((a,b)=>b.amount-a.amount);
+  const dn=cents(named.reduce((s,d)=>s+d.amount,0)),total=cents(pac+rt+dn);
+  const known=pacLines!=null&&(!t.routed.length||routedKnown)&&(!(t.donors||[]).length||donors!=null);
   const emp=t.industries.length&&employees?cents(t.industries.reduce((s,k)=>s+(Number(employees[k])||0),0)):null;
-  return {key:t.key,name:t.name,pacs,pac,routed:rt,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
+  return {key:t.key,name:t.name,pacs,pac,routed:rt,donors:dn,named,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
+}
+// How the page names a tracker's PACs and the groups whose passed-on gifts count.
+export const pacsOf=t=>t.pacsLabel||`${t.name}'s PACs`;
+export const routedBy=t=>t.routedLabel||t.name;
+// Does this gift (an FEC Schedule A row: contributor_last_name, contributor_first_name, contributor_state) come from the
+// named donor? The same last name, a first name starting as theirs does, and one of their states when they have any.
+export function isNamedDonor(d,r){
+  const last=upper(r?.contributor_last_name).replace(/[^A-Z]/g,''),first=upper(r?.contributor_first_name).trim();
+  return !!d&&last===d.last&&d.first.some(f=>first.startsWith(f))&&(!(d.states||[]).length||d.states.includes(upper(r?.contributor_state)));
+}
+// The named donors' checks to one member over some cycles, from the career file (tracker-history.json "donors": {tracker:
+// {member: {cycle: {donor key: dollars}}}}): {donor key: dollars}, or null when the file hasn't read every one of the
+// tracker's donors ("donorKeys").
+export function donorAmounts(h,t,id,cycles){
+  const list=t?.donors||[];if(!list.length)return {};
+  if(!list.every(d=>(h?.donorKeys||[]).includes(d.key)))return null;
+  const by=h.donors?.[t.key]?.[id]||{},want=cycles?new Set(cycles.map(Number)):null,out={};
+  for(const [cy,m] of Object.entries(by))if(!want||want.has(Number(cy)))for(const [k,v] of Object.entries(m||{}))out[k]=cents((out[k]||0)+(Number(v)||0));
+  return out;
 }
 export const lookouts=inputs=>TRACKERS.map(t=>trackerMoney(t,inputs));
 // Is this super PAC (an FEC committee ID and name) one of the tracker's own? By ID, or by name, ignoring case,

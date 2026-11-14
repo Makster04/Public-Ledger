@@ -13,7 +13,7 @@ const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});
 
 test('seven trackers in the approved order, each with its PACs on file and none shared',()=>{
   assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto','defense','wallstreet']);
-  assert.deepEqual(TRACKERS.map(t=>t.name),['AIPAC','Big Pharma + Insurance','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
+  assert.deepEqual(TRACKERS.map(t=>t.name),['Pro-Israel Lobby','Big Pharma + Insurance','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
   const ids=TRACKERS.flatMap(t=>t.pacIds);
   assert.equal(new Set(ids).size,ids.length,'no committee counts for two trackers by ID');
   for(const t of TRACKERS)for(const id of t.pacIds){
@@ -23,9 +23,12 @@ test('seven trackers in the approved order, each with its PACs on file and none 
 });
 
 test('who is in and who is out, as approved',()=>{
-  // AIPAC alone: J Street and other pro-Israel PACs aren't in it.
-  assert.ok(caught('aipac','AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'));
-  for(const n of ['J STREET PAC','NORPAC','PRO-ISRAEL AMERICA PAC'])assert.ok(!caught('aipac',n),n);
+  // The Pro-Israel Lobby (2026-11-14): AIPAC, the PACs that say they exist to support Israel, the RJC's and those named for
+  // Israel; not J Street, not groups that don't say so, and not a bank or an anti-Zionist PAC that shares a word.
+  for(const n of ['AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE','NORPAC','JOINT ACTION COMMITTEE FOR POLITICAL AFFAIRS','TO PROTECT OUR HERITAGE PAC','U.S. ISRAEL PAC  (USI PAC)','CITYPAC','DMFI PAC',
+    'REPUBLICAN JEWISH COALITION POLITICAL ACTION COMMITTEE (RJC-PAC)','FRIENDS OF ISRAEL POLITICAL ACTION COMMITTEE - FIPAC','PRO-ISRAEL AMERICA PAC','CHRISTIANS FOR ISRAEL PAC','DEMOCRATS FOR ISRAEL LOS ANGELES FEDERAL PAC'])assert.ok(caught('aipac',n),n);
+  for(const n of ['JSTREETPAC','J STREET PAC','J STREET ACTION FUND','BEND THE ARC JEWISH ACTION INC. PAC','JVP ACTION PAC','MARYLAND ASSOCIATION FOR CONCERNED CITIZENS POLITICAL ACTION COMMITTEE',
+    'MID MANHATTAN POLITICAL ACTION COMMITTEE (MID PAC)','NATPAC 1947','ZIONS BANCORPORATION PAC','ANTI-ZIONIST AMERICA PAC','ROCKET CITY PAC'])assert.ok(!caught('aipac',n),n);
   // Oil: Koch, coal and mining, and gas utilities are out.
   for(const n of ['EXXON MOBIL CORPORATION POLITICAL ACTION COMMITTEE','CHEVRON EMPLOYEES POLITICAL ACTION COMMITTEE','AMERICAN PETROLEUM INSTITUTE PAC','VALERO ENERGY CORPORATION PAC'])assert.ok(caught('oil',n),n);
   for(const n of ['KOCH INDUSTRIES INC POLITICAL ACTION COMMITTEE (KOCHPAC)','PEABODY ENERGY PAC','NATIONAL MINING ASSOCIATION PAC','ATMOS ENERGY CORPORATION PAC','SHELLEY FOR CONGRESS'])assert.ok(!caught('oil',n),n);
@@ -71,7 +74,7 @@ test('a lookout: PAC checks and routed gifts take it; employees\' gifts are show
   assert.equal(trackerMoney(TRACKER.pharma,{pacLines:[],employees:{ai:5}}).employees,null,'no employee read for this tracker yet');
 });
 
-test('AIPAC: routed gifts count, its own PAC checks fill in missing PAC lines once, and unsearched gifts wait',()=>{
+test('the Pro-Israel Lobby: routed gifts count, AIPAC\'s own PAC checks fill in missing PAC lines once, and unsearched gifts and unread donors wait',()=>{
   const t=TRACKER.aipac;
   const a=trackerMoney(t,{pacLines:[],routed:{aipac:819771.19,other:5},routedKnown:true,direct:{aipac:10000}});
   assert.equal(a.status,'took');assert.equal(a.routed,819771.19);assert.equal(a.pac,10000);assert.equal(a.total,829771.19);
@@ -80,13 +83,22 @@ test('AIPAC: routed gifts count, its own PAC checks fill in missing PAC lines on
   assert.equal(b.pac,10000,'the same checks counted once, at the larger amount');
   const c=trackerMoney(t,{pacLines:[line('AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE',10000,'C00797670')],direct:{aipac:5000},routedKnown:true});
   assert.equal(c.pac,10000);assert.ok(!c.pacs[0].own);
-  assert.equal(trackerMoney(t,{pacLines:[],routed:{},routedKnown:false}).status,'waiting','not every routed gift searched: no ✓');
-  assert.equal(trackerMoney(t,{pacLines:[],routed:{},routedKnown:true}).status,'none');
+  assert.equal(trackerMoney(t,{pacLines:[],routed:{},routedKnown:false,donors:{}}).status,'waiting','not every routed gift searched: no ✓');
+  assert.equal(trackerMoney(t,{pacLines:[],routed:{},routedKnown:true,donors:{}}).status,'none');
+  assert.equal(trackerMoney(t,{pacLines:[],routed:{},routedKnown:true}).status,'waiting','the named donors not read: no ✓');
+  // NORPAC's, JACPAC's and the RJC's passed-on gifts count with AIPAC's; J Street's don't.
+  const g=trackerMoney(t,{pacLines:[],routed:{aipac:100,'fec:C00247403':50,'fec:C00139659':25,'fec:C00345132':10,jstreet:999},routedKnown:true,donors:{}});
+  assert.equal(g.routed,185);
+  // The named donors' own checks count and are listed by name, largest first.
+  const d=trackerMoney(t,{pacLines:[],routed:{},routedKnown:true,donors:{sadelson:2800,madelson:6600,someone:5}});
+  assert.equal(d.status,'took');assert.equal(d.donors,9400);assert.equal(d.total,9400);
+  assert.deepEqual(d.named.map(x=>[x.name,x.amount]),[['Miriam Adelson',6600],['Sheldon Adelson',2800]]);
+  assert.equal(trackerMoney(TRACKER.oil,{pacLines:[],donors:{madelson:6600}}).total,0,'named donors only where the tracker has them');
   assert.equal(trackerMoney(TRACKER.oil,{pacLines:[],routedKnown:false}).status,'none','routed gifts only matter where the tracker has a group');
 });
 
 test('lookouts: one line a tracker, in order',()=>{
-  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true});
+  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true,donors:{}});
   assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500],['wallstreet','none',0]]);
 });
 
@@ -114,8 +126,9 @@ test('every reviewed profile gets a mark for each tracker from the files on hand
     for(const x of L){assert.ok(['took','none','waiting'].includes(x.status));assert.ok(x.total>=0);if(!s.pac&&x.total===0)assert.equal(x.status,'waiting',`${s.id} ${x.key}: no PAC lines, no ✓`);}
   }
   const s=research.members.find(p=>p.id==='lawler'),b=research.bundled.people.lawler.aipac;
-  const x=trackerMoney(TRACKER.aipac,{pacLines:researchPacLines(research,s),routed:{aipac:b.routed},routedKnown:true,direct:{aipac:b.direct}});
-  assert.equal(x.total,Math.round((b.routed+b.direct)*100)/100);
+  const x=trackerMoney(TRACKER.aipac,{pacLines:researchPacLines(research,s),routed:{aipac:b.routed},routedKnown:true,direct:{aipac:b.direct},donors:{}});
+  const other=researchPacLines(research,s).filter(l=>l.cid!=='C00797670'&&isTrackerPac(TRACKER.aipac,l)).reduce((a,l)=>a+l.amount,0);
+  assert.equal(x.total,Math.round((b.routed+b.direct+other)*100)/100,'AIPAC\'s gifts and checks, and the other pro-Israel PACs\' lines');
 });
 
 test('super PACs: its own by name, and those its companies gave to, with spending for and against the person',()=>{

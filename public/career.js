@@ -7,7 +7,8 @@
 //   none    none in their career
 // A member's career total is every check the tracker's PACs gave their campaigns in every cycle since 1980 (the first in
 // the FEC's bulk files), under every candidate ID they've had, plus, for AIPAC, the gifts it collected from donors and
-// passed on since its PAC began giving (2022), from public/tracker-history.json (scripts/build-corporate-pacs.mjs). Super
+// passed on since its PAC began giving (2022), and, for the Pro-Israel Lobby, the named donors' own checks to their
+// campaigns ("donors"), from public/tracker-history.json (scripts/build-corporate-pacs.mjs). Super
 // PAC spending isn't in it: the campaign never takes it. Shown only; no grade uses it.
 export const CLUB_KEYS=['club','half','six','under','none'];
 export const CLUB_LABEL={club:'Million Dollar Club',half:'Half-Million Club',six:'Six-Figure Club',under:'Under $100,000',none:'None, ever'};
@@ -20,15 +21,17 @@ export function clubOf(total){
   if(total==null)return null;
   return total>=CLUB_MIN.club?'club':total>=CLUB_MIN.half?'half':total>=CLUB_MIN.six?'six':total>0?'under':'none';
 }
-// A member's career money from a tracker: {pac, pacs (how many of its PACs gave), routed, total, first, last (the first
-// and last cycles with some)}, or null when the file hasn't read them.
+// A member's career money from a tracker: {pac, pacs (how many of its PACs gave), routed, donors (the named donors' own
+// checks), total, first, last (the first and last cycles with some)}, or null when the file hasn't read them.
 export function careerAmount(h,key,id){
   if(!h?.people?.[id])return null;
   const v=h.trackers?.[key]?.[id],pac=v?Math.max(0,Number(v[0])||0):0;
   const cycles=key==='aipac'?Object.entries(h.routed?.aipac||{}).filter(([,m])=>Number(m?.[id])>0):[];
   const routed=cents(cycles.reduce((a,[,m])=>a+Number(m[id]),0));
-  const years=[...(v&&pac>0?[v[2],v[3]]:[]),...cycles.map(([c])=>Number(c))].filter(Number.isFinite);
-  return {pac,pacs:v?Number(v[1])||0:0,routed,total:cents(pac+routed),first:years.length?Math.min(...years):null,last:years.length?Math.max(...years):null};
+  const given=Object.entries(h.donors?.[key]?.[id]||{}).map(([c,m])=>[Number(c),Object.values(m||{}).reduce((a,x)=>a+(Number(x)||0),0)]).filter(([,a])=>a>0);
+  const donors=cents(given.reduce((a,[,x])=>a+x,0));
+  const years=[...(v&&pac>0?[v[2],v[3]]:[]),...cycles.map(([c])=>Number(c)),...given.map(([c])=>c)].filter(Number.isFinite);
+  return {pac,pacs:v?Number(v[1])||0:0,routed,donors,total:cents(pac+routed+donors),first:years.length?Math.min(...years):null,last:years.length?Math.max(...years):null};
 }
 // AIPAC's passed-on gifts: the cycles the file has, and those since 2022 it doesn't have yet.
 export const routedStatus=h=>({read:h?.routedCycles||[],missing:h?.routedMissing||[]});

@@ -532,7 +532,7 @@ Every tab follows the same order:
 - **Counted, pledges and reform bills:** which pledges they signed and which of the three reform bills they sponsored or cosponsored.
 - **Shown, not counted:**
   - PAC money not yet processed by the FEC, marked with a *;
-  - the Summary of Major Lookouts: for each of the seven trackers (AIPAC, Big Pharma + Insurance, Big Oil, Big Tech + AI,
+  - the Summary of Major Lookouts: for each of the seven trackers (the Pro-Israel Lobby, Big Pharma + Insurance, Big Oil, Big Tech + AI,
     Crypto, Big Defense, Wall Street), whether the campaign took its PAC money or passed-on gifts, with the person's
     Career Totals club and rank; under AIPAC, Crypto and Big Tech + AI, what their super PACs spent to help them win and
     against them; and each tracker's panel, with gifts from the listed crypto and AI companies' employees and their
