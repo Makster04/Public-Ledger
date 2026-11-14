@@ -26,10 +26,12 @@ test('the Ethics indexes are logged; an older entry without them reads as a rule
 test('the monthly log records the grades the profiles show, for every reviewed and basic profile',async()=>{
   const committees=await read('public/committees.json'),sectors=await read('public/committee-sectors.json'),config=await read('data/config.json');
   const tallies=(await read('public/vote-party.json')).votes,files=sixFiles();
-  const e=buildEntry(research,committees,sectors,null,config,'2026-11-10',tallies,files);
+  // One day for both: a promise with no action yet turns allegedly broken once its deadline passes, so the page's scoring
+  // is checked on the log's own day, not today's.
+  const day='2026-11-10',e=buildEntry(research,committees,sectors,null,config,day,tallies,files);
   assert.equal(e.formula,'six');assert.deepEqual(e.grades,LOGGED_GRADES);assert.match(e.research,/^[0-9a-f]{12}$/);
   // The page's own path (public/app.js and boot.js, checked below): its scorer, its context and its basic profiles.
-  const scorer=makeScorer(research,committees,sectors.committees,tallies),ctx=sixContext(files);
+  const scorer=makeScorer(research,committees,sectors.committees,tallies),ctx=sixContext({...files,today:day});
   const people=gradedPeople(research,{senate:files.senate.senators,house:files.house.members});
   assert.equal(Object.keys(e.scores).length,people.length);
   for(const s of people){const x=scorer.six(s,ctx);for(const g of LOGGED_GRADES)assert.equal(e.scores[s.id][g].pct,x[g].pct,`${s.id} · ${g}`);}
