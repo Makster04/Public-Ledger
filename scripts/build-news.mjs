@@ -59,14 +59,14 @@ export function gradeNews(before,now,date){
   }
   return out;
 }
-// Reviewed verdicts: reviews is data/promise-reviews.json's "people", promises public/promises.json's.
+// Reviewed verdicts: reviews is data/promise-reviews.json's "people", promises public/promises.json's. Each keeps the
+// promise's topic (the question it's checked against, which the ticker names in a few words), not its words.
 export function promiseNews(reviews,promises){
   const out=[];
   for(const [id,list] of Object.entries(reviews||{}))for(const [key,r] of Object.entries(list||{})){
     if(!VERDICTS[r?.status]||!r.date)continue;
-    const p=(promises?.[id]||[]).find(x=>x.key===key),quote=String(p?.quote||'').trim();
-    out.push({key:`promise:${id}:${key}:${r.status}`,kind:'promise',id,promise:key,status:r.status,
-      quote:quote.length>90?quote.slice(0,88).replace(/\s+\S*$/,'')+'…':quote,date:r.date});
+    const p=(promises?.[id]||[]).find(x=>x.key===key);
+    out.push({key:`promise:${id}:${key}:${r.status}`,kind:'promise',id,promise:key,topic:p?.qs?.[0]?.[0]||String(key).split('@')[0],status:r.status,date:r.date});
   }
   return out;
 }
@@ -98,7 +98,10 @@ export function superPacNews(records,{limit=NEWS_LIMIT.superpac,min=SUPER_PAC_MI
 // one the run didn't find again stays; anything 45 days old (by "seen", else its date) goes.
 export function mergeNews(prev,fresh,{now=Date.now()}={}){
   const first=!prev,old=new Map((prev?.items||[]).map(x=>[x.key,x])),stamp=new Date(now).toISOString(),out=new Map();
-  for(const x of fresh)out.set(x.key,{...x,seen:old.has(x.key)?old.get(x.key).seen??null:first?null:stamp});
+  const own=x=>Date.parse(`${String(x.date).slice(0,10)}T12:00:00Z`);
+  // An item found for the first time is news from now, unless its own date is already past the 45 days (an old check
+  // that was only outside the window before): that one is left out, not stamped.
+  for(const x of fresh){if(!old.has(x.key)&&!(now-own(x)<=NEWS_DAYS*DAY))continue;out.set(x.key,{...x,seen:old.has(x.key)?old.get(x.key).seen??null:first?null:stamp});}
   for(const [k,x] of old)if(!out.has(k))out.set(k,x);
   const at=x=>Date.parse(x.seen||`${String(x.date).slice(0,10)}T12:00:00Z`);
   return [...out.values()].filter(x=>Number.isFinite(at(x))&&now-at(x)<=NEWS_DAYS*DAY).sort((a,b)=>at(b)-at(a)||String(a.key).localeCompare(String(b.key)));

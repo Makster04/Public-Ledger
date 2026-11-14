@@ -2,15 +2,16 @@
 // first, each with a tag (its kind's emoji and name), its date and a link to where it changed.
 //   races       a race called, or still counting (research.json "races" and "liteRaces")
 //   grades      a grade that moved, someone newly graded (news.json, scripts/build-news.mjs)
-//   promises    a reviewed promise verdict (news.json)
+//   promises    a reviewed promise verdict, by its topic and month, never its words (news.json)
 //   stock trades, net worth   newly reported trades (with how late they were filed) and annual disclosures (with their
 //               net worth range, and the year before's), from the refresh (/api/ticker), dated by when it first read them
 //   lobby money a tracker's PAC checks to sitting members (news.json, from the FEC bulk files)
 //   super PACs  a tracker's own super PAC's spending for or against a candidate (news.json, from the FEC's filings)
 //   FEC reports the campaign reports read (research.json "camp")
 //   site        site updates (score-presentation-log.json headlines; not rule changes) and the interest-group ratings read
-// The strip shows the last 7 days (filled to 6 items from older news when there are fewer), races still counting first,
-// then each kind in turn so one kind can't fill it. The page shows the last 45 days by day, with a filter for each kind.
+// The strip shows the last 7 days, and for each kind with nothing in them its newest item from the 45 days (filled to 6
+// items from older news when there are still fewer), races still counting first, then each kind in turn so one kind can't
+// fill it. The page shows the last 45 days by day, with a filter for each kind.
 // Each item is placed by when it reached the site ("seen", else its own date). With nothing to show, the strip isn't
 // shown. It scrolls slowly, stops while hovered or focused, and stands still for visitors whose device asks for reduced
 // motion.
@@ -118,7 +119,21 @@ export function liveItems(live,{now=Date.now(),people,days=TICKER.pageDays}={}){
 // From the news build (public/news.json, scripts/build-news.mjs): grade changes, reviewed promise verdicts, the
 // trackers' PAC checks and their super PACs' spending.
 const GRADE_NAME={word:'Keeps Their Word',showsup:'Shows Up',peoplefirst:'People First'};
-const VERDICT={kept:'Kept',partly:'Partially kept',broken:'Broken',alleged:'Allegedly broken'};
+const VERDICT={kept:'kept',partly:'partially kept',broken:'broken',alleged:'allegedly broken'};
+// A promise's topic in a few words (the question it's checked against, public/questions.json), so the line stays short:
+// "Cory Booker (D): drug decriminalization promise (Apr 2021), partially kept". A topic not listed reads from its id.
+export const PROMISE_TOPIC={'affordable-care-act':'Affordable Care Act','pre-existing-conditions':'pre-existing conditions',
+  'end-filibuster':'filibuster','stay-in-nato':'NATO','support-israel':'Israel','gun-purchase-limits':'gun buying','war-with-iran':'Iran war',
+  'climate-regulations':'climate rules','disposables-ban':'disposable plastics','transit-spending':'public transit','contraception':'birth control',
+  'planned-parenthood':'Planned Parenthood','block-mega-mergers':'mega-merger','military-equipment-police':'police military gear',
+  'release-nonviolent':'prisoner release','work-amnesty':'immigrant work status','paris-agreement':'Paris climate agreement','encryption-backdoor':'encryption',
+  'police-funding-shift':'police funding','decriminalize-drugs':'drug decriminalization','ukraine-aid':'Ukraine aid','medicaid-funding':'Medicaid funding',
+  'congress-stock-trading':'congressional stock trading','chips-industry':'chip manufacturing','ev-support':'electric vehicle','court-reform':'Supreme Court reform',
+  'fund-who':'WHO funding','rent-algorithms':'rent-pricing software','tax-the-rich':'taxes on the wealthy','voter-id':'voter ID','abolish-ice':'ICE',
+  'ai-regulation':'AI regulation','single-payer':'single-payer health care','cut-spending-debt':'spending cuts','homeless-funding':'homeless services',
+  'end-dei-hiring':'DEI hiring','local-police-ice':'local police and ICE','deport-serious-crime':'deportation','crypto-regulation':'crypto regulation',
+  'military-vs-cartels':'cartels'};
+export const promiseTopic=id=>PROMISE_TOPIC[id]||String(id||'').replace(/-/g,' ');
 const spName=n=>/^UNITED DEMOCRACY PROJECT/i.test(n||'')?'United Democracy Project':titleCase(n);
 // A list of people: "A (D), B (R) and C (D)", at most `max` named.
 function peopleList(ids,people,max=4){
@@ -139,9 +154,9 @@ export function newsItems(news,{now=Date.now(),people,days=TICKER.pageDays}={}){
       out.push({key:x.key,kind:'grade',tag:x.from==null&&x.to!=null?'Newly graded':'Grade change',date:x.date,at,order:2,href:`#${x.id}-${x.grade}`,parts});
     }else if(x.kind==='promise'){
       const who=nameOf(x.id,people);if(!who||!VERDICT[x.status])continue;
-      // (the promise's own month and year, so two promises that begin alike read apart)
-      const m=/@(\d{4})-(\d{2})/.exec(x.promise||''),when=m?` (${MONTHS[Number(m[2])-1]} ${m[1]})`:'';
-      out.push({key:x.key,kind:'promise',tag:'Promise check',date:x.date,at,order:2,href:`#${x.id}-word`,parts:[who,x.quote?` “${x.quote}”${when}: ${VERDICT[x.status]}`:`: a promise${when} ${VERDICT[x.status].toLowerCase()}`]});
+      // Its topic and its own month and year (so two promises on one topic read apart), never its words.
+      const m=/@(\d{4})-(\d{2})/.exec(x.promise||''),when=m?` (${MONTHS[Number(m[2])-1]} ${m[1]})`:'',topic=promiseTopic(x.topic||String(x.promise||'').split('@')[0]);
+      out.push({key:x.key,kind:'promise',tag:'Promise check',date:x.date,at,order:2,href:`#${x.id}-word`,parts:[who,`: ${topic?`${topic} promise`:'a promise'}${when}, ${VERDICT[x.status]}`]});
     }else if(x.kind==='lobby'){
       const T=TRACKER[x.tracker],list=peopleList(x.ids||[],people);if(!T||!list.n)continue;
       out.push({key:x.key,kind:'lobby',tag:'Lobby money',date:x.date,at,order:2,href:list.n===1?`#${x.ids.find(id=>nameOf(id,people))}-unbought`:`#trackers-${x.tracker}`,
@@ -180,12 +195,15 @@ export function mixKinds(items){
   while(queues.some(q=>q.length))for(const q of queues)if(q.length)out.push(q.shift());
   return out;
 }
-// The strip: races still counting first, then the last 7 days (filled to TICKER.fill from older news), each kind in turn,
-// at most `limit`.
+// The strip: races still counting first, then the last 7 days, and for each kind with nothing in them its newest item
+// from the page's 45 days (a quiet week for stock trades still shows the latest one, with its date), filled to TICKER.fill
+// from older news; each kind in turn, at most `limit`.
 export function tickerItems(data,{now=Date.now(),limit=TICKER.limit}={}){
   const all=allItems(data,{now}),pinned=all.filter(x=>x.pinned),rest=all.filter(x=>!x.pinned);
-  const week=rest.filter(x=>now-atOf(x)<=TICKER.days*DAY),more=rest.filter(x=>!week.includes(x)).slice(0,Math.max(0,TICKER.fill-week.length));
-  return [...pinned,...mixKinds([...week,...more])].slice(0,limit);
+  const week=rest.filter(x=>now-atOf(x)<=TICKER.days*DAY),older=rest.filter(x=>!week.includes(x)),kinds=new Set(week.map(groupOf)),newest=[];
+  for(const x of older)if(!kinds.has(groupOf(x))){kinds.add(groupOf(x));newest.push(x);}
+  const more=older.filter(x=>!newest.includes(x)).slice(0,Math.max(0,TICKER.fill-week.length-newest.length));
+  return [...pinned,...mixKinds([...week,...newest,...more])].slice(0,limit);
 }
 const part=p=>typeof p==='string'?esc(p):p.grade?`<b class="gr-${esc(p.grade)}">${esc(p.grade)}</b>`
   :`<b class="tk-${p.party==='D'?'d':p.party==='R'?'r':'i'}">${esc(p.name)}${p.party?` (${esc(p.party)})`:''}</b>`;
@@ -197,7 +215,7 @@ const plain=p=>typeof p==='string'?p:p.grade||`${p.name} (X)`;
 export function tickerHTML(items){
   if(!items.length)return '';
   const one=items.map(itemHTML).join(''),seconds=Math.max(30,Math.round(items.reduce((n,x)=>n+x.tag.length+x.parts.map(plain).join('').length+14,0)/7));
-  return `<div class="wrap"><span class="tk-label"><i class="tk-dot" aria-hidden="true"></i><span>Latest · ${TICKER.days} days</span></span><div class="tk-view"><div class="tk-track" style="--tk-time:${seconds}s"><div class="tk-set">${one}</div><div class="tk-set" aria-hidden="true">${one.replace(/<a /g,'<a tabindex="-1" ')}</div></div></div><a class="tk-all" href="#latest">All updates <span aria-hidden="true">→</span></a></div>`;
+  return `<div class="wrap"><span class="tk-label"><i class="tk-dot" aria-hidden="true"></i><span>Latest</span></span><div class="tk-view"><div class="tk-track" style="--tk-time:${seconds}s"><div class="tk-set">${one}</div><div class="tk-set" aria-hidden="true">${one.replace(/<a /g,'<a tabindex="-1" ')}</div></div></div><a class="tk-all" href="#latest">All updates <span aria-hidden="true">→</span></a></div>`;
 }
 const fetchTicker=()=>fetch('/api/ticker').then(r=>r.ok?r.json():null);
 // Fills the strip (host: the ticker's element) from what the page has loaded, then again whenever the refresh's newest
@@ -233,7 +251,7 @@ export function latestHTML(items,{group='',now=Date.now()}={}){
 export function renderLatest(host,data,{now=Date.now(),fetchLive=fetchTicker}={}){
   if(!host)return;
   host.innerHTML=`<section class="section lu" id="latest"><div class="kicker">Explore</div><h1>Latest updates</h1>
-    <p class="lede">Everything new on the site in the last ${TICKER.pageDays} days, newest first, by when it reached the site. The strip under the top bar shows the last ${TICKER.days} days.</p>
+    <p class="lede">Everything new on the site in the last ${TICKER.pageDays} days, newest first, by when it reached the site. The strip under the top bar shows the last ${TICKER.days} days, and the newest of each other kind.</p>
     <div id="lu-body"></div>
     <p class="small muted lu-note">Stock trades and annual reports come from the refresh while it runs; grade changes, reviewed promises, the trackers' PAC checks and their super PACs' filings from the news build (npm run news:build, also run by npm run corporate:pacs and npm run promises:build); FEC reports from each profile's campaign money. What the refresh has read: <a href="#updates">API updates</a> · <a href="#websites">Website updates</a>.</p></section>`;
   const body=host.querySelector('#lu-body');

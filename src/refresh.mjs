@@ -228,8 +228,8 @@ export async function runRefresh(env,{steps=8}={}) {
         if(oldRun&&oldRun!==job.run_id)await statement(db,'DELETE FROM records WHERE run_id=?',oldRun).run();
         // The ticker's newest records from this check, kept small beside it (getTicker reads only these).
         if(TICKER_KINDS.includes(job.kind)){
-          const was=await statement(db,'SELECT value FROM metadata WHERE key=?',`ticker:${job.id}`).first();let previous=null;try{previous=was?JSON.parse(was.value):null;}catch{}
-          await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',`ticker:${job.id}`,JSON.stringify(tickerRecent(job.kind,job.subject,snapshot,{previous}))).run();
+          const was=tickerList((await statement(db,'SELECT value FROM metadata WHERE key=?',`ticker:${job.id}`).first())?.value);
+          await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',`ticker:${job.id}`,JSON.stringify({v:TICKER_VERSION,from:completed,items:tickerRecent(job.kind,job.subject,snapshot,{previous:was?.items||null,stampNew:was?.v===TICKER_VERSION})})).run();
         }
         if(job.kind==='committee'){const p=config.people.find(p=>p.id===job.subject);await addFinance(db,p,snapshot.committee,config.cycle);}
         if(job.kind==='senate-index')for(const v of snapshot.rows){const a=JSON.parse(job.args);await addJob(db,`vote:S:${a.congress}:${a.session}:${v.number}`,'vote',`s-${a.congress}-${a.session}-${v.number}`,{chamber:'S',...a,number:v.number});}
@@ -265,17 +265,26 @@ const isSite=(j,env)=>j.kind==='vote'&&/^vote:H:/.test(j.id)&&Number(j.id.split(
 // (the basic senator profiles) show these instead of loading each full profile.
 // The Super PACs page's data: the site-wide super PAC check's latest snapshot, or null before its first read.
 // ---------- The ticker's newest records (public/ticker.js, /api/ticker) ----------
-// Stock trades reported in the last two weeks (with the date traded, for lateness) and annual disclosures filed in the last
-// month (with the net worth range they give, and the year before's), from each person's official
-// trade and disclosure checks. Each check keeps its own short list in metadata ("ticker:<job id>") when it publishes, so
-// the ticker never reads the full snapshots. Each item carries "seen", when a check first read it (the ticker shows the
-// last 24 hours of those): kept from the check's previous list, the time of this publish for an item new to it, and
-// null on a check's first list (nothing on it is news; the ticker goes by its own date).
+// Stock trades reported in the last 45 days (with the date traded, for lateness) and annual disclosures filed in the last
+// 45 days (with the net worth range they give, and the year before's), from each person's official trade and disclosure
+// checks: the Latest updates page's 45 days. Each check keeps its own short list in metadata ("ticker:<job id>", as
+// {v: TICKER_VERSION, from: the snapshot's time, items}) when it publishes, so the ticker reads a full snapshot only when
+// its list is missing or older than the snapshot (a check published before this list was kept, or reports imported by
+// hand with npm run efd:import). Each item carries "seen", when a check first read it: kept from the check's previous
+// list, the time of this publish for an item new to it, and null on a check's first list (nothing on it is news; the
+// ticker goes by its own date).
 export const TICKER_KINDS=['trades-house','trades-senate','net-worth-house','net-worth-senate'];
-export const TICKER_DAYS={trade:14,filing:30};
+export const TICKER_DAYS={trade:45,filing:45};
+export const TICKER_VERSION=2;
+// A check's stored list: {v, from, items}, or a plain array (the first version's).
+export function tickerList(value){
+  let v=value;if(typeof v==='string'){try{v=JSON.parse(v);}catch{return null;}}
+  return Array.isArray(v)?{v:1,from:null,items:v}:v&&Array.isArray(v.items)?v:null;
+}
 const daysBefore=(now,d)=>new Date(now-d*864e5).toISOString().slice(0,10);
 const tickerKey=x=>x.kind==='trade'?`t:${x.id||[x.disclosed,x.ticker||x.asset,x.type,x.amount].join('|')}`:`f:${x.year}:${x.filed}`;
-export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null}={}){
+// stampNew false: an item new to the list is not news (the list was rebuilt with a wider window), so it goes by its date.
+export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null,stampNew=true}={}){
   const today=new Date(now+864e5).toISOString().slice(0,10),out=[];
   if(/^trades-/.test(kind)){
     for(const x of snapshot?.rows||[])if(x?.disclosed&&x.disclosed>=daysBefore(now,TICKER_DAYS.trade)&&x.disclosed<=today)
@@ -286,18 +295,29 @@ export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null
     const range=x=>x&&Number.isFinite(x.low)&&Number.isFinite(x.high)?[x.low,x.high]:null;
     out.push({kind:'filing',subject,filed:f,year:snapshot.year??null,...(range(snapshot)?{worth:range(snapshot)}:{}),...(range(was)?{was:range(was),wasYear:was.year}:{})});}}
   const before=Array.isArray(previous)?new Map(previous.map(x=>[tickerKey(x),x.seen??null])):null,stamp=new Date(now).toISOString();
-  for(const x of out)x.seen=before?(before.has(tickerKey(x))?before.get(tickerKey(x)):stamp):null;
-  return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,10);
+  for(const x of out)x.seen=before?(before.has(tickerKey(x))?before.get(tickerKey(x)):stampNew?stamp:null):null;
+  return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,20);
 }
-// All the checks' lists, still within their windows, newest first, at most 40.
+// All the checks' lists, still within their windows, newest first, at most 80.
 export function tickerMerge(lists,{now=Date.now()}={}){
   const fresh=x=>x.kind==='trade'?x.disclosed>=daysBefore(now,TICKER_DAYS.trade):x.filed>=daysBefore(now,TICKER_DAYS.filing);
-  return lists.flat().filter(x=>x&&fresh(x)).sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,40);
+  return lists.flat().filter(x=>x&&fresh(x)).sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,80);
 }
-export async function getTicker(env){
+// The checks' lists, each brought up to date with its snapshot first: a check with no list of this version, or one older
+// than its snapshot, has its list made from the snapshot (what the old list held keeps its "seen"; what's new is news
+// only when a list of this version was there before, as when reports are imported by hand).
+export async function getTicker(env,{now=Date.now()}={}){
   await initialize(env.DB);
-  const rows=(await statement(env.DB,"SELECT value FROM metadata WHERE key LIKE 'ticker:%'").all()).results||[];
-  return {generatedAt:nowISO(),items:tickerMerge(rows.map(r=>{try{return JSON.parse(r.value);}catch{return [];}}))};
+  const db=env.DB,have=new Map();
+  for(const r of (await statement(db,"SELECT key,value FROM metadata WHERE key LIKE 'ticker:%'").all()).results||[]){const l=tickerList(r.value);if(l)have.set(r.key.slice(7),l);}
+  const checks=(await statement(db,`SELECT j.id,j.kind,j.subject,s.updated_at FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN (${TICKER_KINDS.map(()=>'?').join(',')})`,...TICKER_KINDS).all()).results||[];
+  for(const c of checks){
+    const was=have.get(c.id);if(was&&was.v===TICKER_VERSION&&was.from===c.updated_at)continue;
+    let snapshot=null;try{snapshot=JSON.parse((await statement(db,'SELECT payload FROM snapshots WHERE job_id=?',c.id).first())?.payload||'null');}catch{}
+    const list={v:TICKER_VERSION,from:c.updated_at,items:tickerRecent(c.kind,c.subject,snapshot,{now,previous:was?.items||null,stampNew:was?.v===TICKER_VERSION})};
+    await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',`ticker:${c.id}`,JSON.stringify(list)).run();have.set(c.id,list);
+  }
+  return {generatedAt:nowISO(),items:tickerMerge([...have.values()].map(l=>l.items),{now})};
 }
 export async function getSuperPacs(env) {
   await initialize(env.DB);

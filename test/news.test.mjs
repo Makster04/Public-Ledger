@@ -19,13 +19,14 @@ test('grade changes: only a grade that moved, newly graded or no longer graded, 
   assert.equal(gradeWhy('peoplefirst',null,{pct:80,actions:1}),'1 scored action');
 });
 
-test('promise checks: reviewed verdicts only, dated by the review, with the promise\'s words cut to fit',()=>{
+test('promise checks: reviewed verdicts only, dated by the review, with the promise\'s topic and not its words',()=>{
   const reviews={booker:{'drugs@2021-04-21':{status:'partly',date:'2026-11-13'},'x@2022-01-01':{status:'unclear',date:'2026-11-13'},'y@2022-01-01':{status:'kept'}},
     ossoff:{'prisons@2020-11-03':{status:'alleged',date:'2026-11-13'}}};
   const long='I '+'will fight for this every single day '.repeat(5);
-  const p=promiseNews(reviews,{booker:[{key:'drugs@2021-04-21',quote:'I support decriminalization.'}],ossoff:[{key:'prisons@2020-11-03',quote:long}]});
+  const p=promiseNews(reviews,{booker:[{key:'drugs@2021-04-21',qs:[['decriminalize-drugs',0]],quote:'I support decriminalization.'}],ossoff:[{key:'prisons@2020-11-03',quote:long}]});
   assert.deepEqual(p.map(x=>[x.id,x.status,x.date]),[['booker','partly','2026-11-13'],['ossoff','alleged','2026-11-13']],'unclear and undated reviews left out');
-  assert.equal(p[0].quote,'I support decriminalization.');assert.ok(p[1].quote.length<=90&&p[1].quote.endsWith('…'));
+  assert.deepEqual(p.map(x=>x.topic),['decriminalize-drugs','prisons'],'the question it\'s checked against, else the start of its key');
+  assert.ok(p.every(x=>!('quote' in x)),'no quotes');
   assert.equal(p[0].key,'promise:booker:drugs@2021-04-21:partly','a changed verdict is new news');
 });
 
@@ -49,10 +50,12 @@ test('merging with the last file: first-file items go by their own date, later o
   const a={key:'a',kind:'promise',date:'2026-11-13'},b={key:'b',kind:'lobby',date:'2026-10-07'},old={key:'o',kind:'lobby',date:'2026-09-01'};
   const first=mergeNews(null,[a,b,old],{now:NOV14});
   assert.deepEqual(first.map(x=>[x.key,x.seen]),[['a',null],['b',null]],'the first file: no stamps; a check from Sept. 1 is past 45 days');
-  const c={key:'c',kind:'lobby',date:'2026-09-20'},later=NOV14+864e5;
+  const c={key:'c',kind:'lobby',date:'2026-10-05'},later=NOV14+864e5;
   const second=mergeNews({items:first},[a,c],{now:later});
   assert.deepEqual(second.map(x=>[x.key,x.seen]),[['c',new Date(later).toISOString()],['a',null],['b',null]],
-    'a new item read today is today\'s news, whatever its own date; one not found again stays');
+    'a new item read today is today\'s news, though its own date is older; one not found again stays');
+  const stale={key:'s',kind:'lobby',date:'2026-09-29'};
+  assert.ok(!mergeNews({items:second},[a,stale],{now:later}).some(x=>x.key==='s'),'an old check found again once out of the window: not news');
   const gone=mergeNews({items:second},[],{now:later+50*864e5});
   assert.deepEqual(gone,[],'all past 45 days');
 });
