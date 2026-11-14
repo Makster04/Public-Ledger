@@ -1,4 +1,4 @@
-// The six scores on each profile (Scores/06_SIX_GRADES_PROPOSAL.md): Ideology (a position from liberal to conservative,
+// The six scores on each profile (Scores/, one file a score): Ideology (a position from liberal to conservative,
 // not a grade) and five letter grades, Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First. Each returns
 // {pct or lean, parts, why, needs}: `parts` is the breakdown shown on the score card (one row per part, with its points or
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and

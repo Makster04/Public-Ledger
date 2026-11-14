@@ -1,5 +1,5 @@
 // The four A-F grades on the home page cards. Shared by the page, the monthly scoring script and the tests; the
-// Methodology page and Scores/00_POLITICAL_SCORECARD_METHODOLOGY.md state the same rules.
+// Methodology page and the Scores folder state the same rules.
 // A grade is shown only with enough evidence; otherwise the card says "Not graded", never a zero.
 // Values the methodology still lists under "Open decisions" are marked (placeholder).
 export const MIN_CHECKS=3, MIN_MATCH_ISSUES=3, MIN_PVP_ACTIONS=3;

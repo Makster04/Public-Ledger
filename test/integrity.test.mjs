@@ -9,7 +9,7 @@ import data from '../public/research.json' with {type:'json'};
 
 test('overall Integrity normalizes available weights, requires two components and sourced legal review, and rounds only after the legal deduction',()=>{
   // Honesty 20%, Personal Finances 20%, Fundraising 25%, Showing Up 15%, Conflicts of Interest 20% (the worked example
-  // in Scores/03a_INTEGRITY_REVISION.md).
+  // from the retired Integrity grade).
   const r=integrityOverall({honesty:80,personalFinances:74,fundraising:70,showingUp:92.5,conflicts:55,legalTrouble:5});
   assert.equal(Number(r.weighted.toFixed(4)),73.175);assert.equal(Number(r.raw.toFixed(4)),68.175);assert.equal(r.pct,68);assert.equal(letter(r.pct),'D');
   const four=integrityOverall({honesty:80,personalFinances:74,fundraising:70,showingUp:92.5,legalTrouble:5});
