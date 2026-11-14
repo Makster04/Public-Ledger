@@ -196,6 +196,15 @@ test('a named donor\'s gifts: theirs by name and state, to a member\'s own campa
   assert.ok(isNamedDonor(ma,{contributor_last_name:'Adelson',contributor_first_name:'Miriam',contributor_state:'NV'}));
   assert.ok(!isNamedDonor(ma,{contributor_last_name:'ADELSON',contributor_first_name:'MIRIAM',contributor_state:'NY'}),'another state: someone else');
   assert.ok(!isNamedDonor(ma,{contributor_last_name:'ADELSON',contributor_first_name:'SHELDON G.',contributor_state:'NV'}));
+  // A common name needs its employer (or city and occupation) too; the 22 named donors are each listed once.
+  const ps=TR.aipac.donors.find(d=>d.key==='psinger'),lr=TR.aipac.donors.find(d=>d.key==='lrubin');
+  assert.ok(isNamedDonor(ps,{contributor_last_name:'SINGER',contributor_first_name:'PAUL E.',contributor_state:'NY',contributor_employer:'ELLIOTT MANAGEMENT CORP'}));
+  assert.ok(!isNamedDonor(ps,{contributor_last_name:'SINGER',contributor_first_name:'PAUL',contributor_state:'NY',contributor_employer:'NYU LANGONE'}),'another Paul Singer in New York');
+  assert.ok(isNamedDonor(ps,{contributor_last_name:'SINGER',contributor_first_name:'PAUL',contributor_state:'FL',contributor_employer:'ELLIOTT INVESTMENT MANAGEMENT'}),'any state when the employer matches');
+  assert.ok(isNamedDonor(lr,{contributor_last_name:'RUBIN',contributor_first_name:'LINDA',contributor_state:'CA',contributor_city:'Los Angeles',contributor_occupation:'INVESTOR'}));
+  assert.ok(!isNamedDonor(lr,{contributor_last_name:'RUBIN',contributor_first_name:'LINDA',contributor_state:'CA',contributor_city:'FRESNO',contributor_occupation:'INVESTOR'}));
+  assert.ok(isNamedDonor(TR.aipac.donors.find(d=>d.key==='detoledo'),{contributor_last_name:'DE TOLEDO',contributor_first_name:'PHILIP',contributor_state:'CA'}),'a two-word last name');
+  assert.equal(TR.aipac.donors.length,22);assert.equal(new Set(TR.aipac.donors.map(d=>d.key)).size,22);assert.equal(new Set(TR.aipac.donors.map(d=>d.search)).size,22);
   const byCand=new Map([['S4UT00282','curtis'],['H2AK01083','begich']]);
   const rows=[gift(),gift({contribution_receipt_amount:3300,two_year_transaction_period:2022}),
     gift({committee:{committee_type:'O',designation:'U',candidate_ids:[]}}),                                        // a super PAC
@@ -211,8 +220,10 @@ test('the named donors\' checks by cycle: read and saved, kept from the last fil
   const urls=[],get=async u=>{urls.push(u);if(u.includes('SHELDON'))throw Object.assign(new Error('HTTP 400'),{statusCode:400});return page;};
   const prev={donorKeys:['sadelson'],donors:{aipac:{curtis:{2012:{sadelson:5000}}}}};
   const out=await namedDonors({cycles:[2012,2024],byCand,prev,apiKey:true,dir,get,log:()=>{}});
-  assert.deepEqual(out,{donors:{aipac:{curtis:{2012:{sadelson:5000},2024:{madelson:3300}}}},donorKeys:['madelson','sadelson']},'Sheldon kept from the last file');
+  assert.deepEqual(out.donors,{aipac:{curtis:{2012:{sadelson:5000},2024:{madelson:3300}}}},'Sheldon kept from the last file; the page\'s gifts are only Miriam\'s');
+  assert.equal(out.donorKeys.length,22,'every donor read or kept');assert.ok(out.donorKeys.includes('sadelson'));
   assert.ok(urls[0].includes('contributor_name=ADELSON%2C+MIRIAM')&&urls[0].includes('two_year_transaction_period=2012')&&urls[0].includes('two_year_transaction_period=2024'));
+  assert.ok(urls[0].includes('contributor_state=NV'),'their state is asked for');assert.ok(!urls.find(u=>u.includes('SINGER')).includes('contributor_state'),'an employer match asks for no state');
   assert.ok(fs.existsSync(path.join(dir,'madelson.json')),'the pages are saved');
   assert.equal((await donorGifts(TR.aipac.donors[0],[2012,2024],{dir,get:async()=>{throw new Error('not asked again');}})).length,1,'a finished read is used again within a week');
   const h={people:{curtis:1},...out};
