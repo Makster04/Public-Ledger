@@ -259,7 +259,8 @@ export function stripHTML({trades=[],pac=[]}={},{people}={}){
   if(!trades.length&&!pac.length)return '';
   const seg=(label,cls,list,fn)=>list.length?`<span class="tk-label ${cls}"><i class="tk-dot" aria-hidden="true"></i><span>${label}</span></span>${list.map(x=>fn(x,people)).join('')}`:'';
   const one=seg('Trades','tk-l-trades',trades,tradeHTML)+seg('PAC money','tk-l-pac',pac,pacHTML);
-  const seconds=Math.max(30,Math.round(one.replace(/<[^>]+>/g,'').length/6));
+  // About 5.5 characters a second (slowed from 6 on Nov. 14, 2026: each item stays on screen about 0.7 seconds longer).
+  const seconds=Math.max(33,Math.round(one.replace(/<[^>]+>/g,'').length/5.5));
   return `<div class="tk-view"><div class="tk-track" style="--tk-time:${seconds}s"><div class="tk-set">${one}</div><div class="tk-set" aria-hidden="true">${one.replace(/<a /g,'<a tabindex="-1" ')}</div></div></div><a class="tk-all" href="#latest">All updates <span aria-hidden="true">→</span></a>`;
 }
 // Fills the strip (host: the ticker's element) from what the page has loaded, then again whenever the refresh's newest
