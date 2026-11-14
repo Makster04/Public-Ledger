@@ -681,7 +681,7 @@ function homeCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(sub)}</div></div></div>
     <div class="hc-ideo">${esc(ideo)}</div>
-    ${hcHead('✓','rc','Report Card','Four A–F grades from the documented record and your own answers')}
+    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
     ${reportCard(s)}
     ${hcHead('$','mi','Money &amp; Influence Analysis','Who pays for the campaign, and who spends for and against it')}
     <div class="hc-money">
@@ -700,7 +700,7 @@ function featuredCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(s.term)}</div></div></div>
     <div class="hc-ideo">${esc(REC_SHORT[s.recordType]||'')} · ${esc(s.seat)}</div>
-    ${hcHead('✓','rc','Report Card','Four A–F grades from the documented record and your own answers')}
+    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
     ${reportCard(s)}
     ${hcHead('$','mi','Money &amp; Influence Analysis',`Money raised by ${esc(s.cmteName||'the campaign committee')}, and outside spending for and against ${esc(s.short)}, from the daily FEC refresh`)}
     <div class="hc-live" data-live="${s.id}">${featuredMoney(s,null)}</div>
@@ -2349,7 +2349,7 @@ function basicCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span><span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
     <div class="hc-ideo">${esc(s.ideo?ideoText(s).short:'No voting score yet')}</div>
-    ${hcHead('✓','rc','Report Card','Four A–F grades from the documented record and your own answers')}
+    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
     ${basicReport(s)}
     ${hcHead('$','mi','Money &amp; Influence Analysis','Campaign money from the daily FEC refresh, and outside spending for and against them')}
     <div class="hc-live" data-basic="${s.id}">${basicMoney(s,undefined)}</div>
