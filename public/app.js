@@ -1,4 +1,5 @@
-import {mountRankings,mountStocks} from './explore-finance.js';
+import {mountRankings,mountStocks,officialData} from './explore-finance.js';
+import {rankingsHTML} from './rankings.js';
 import {mountConsistency} from './consistency.js';
 import {moneyMapBlock,bundledBox} from './money-map.js';
 import {mountLegislation} from './legislation.js';
@@ -527,7 +528,7 @@ function route(){
   if(!h||m[1]==='home'){homeCh=m[2]==='senate'?'S':m[2]==='house'?'H':m[2]==='candidates'?'C':homeCh;renderHome();}
   else if(m[1]==='updates'){window.RecordLive.dashboard(app);}
   else if(m[1]==='websites'){window.RecordLive.sites(app);}
-  else if(m[1]==='rankings'){mountRankings(app,financeExplorerModel());}
+  else if(m[1]==='rankings'){renderRankings();}
   else if(m[1]==='stocks'){mountStocks(app,financeExplorerModel());}
   else if(m[1]==='races'){renderRaces();}
   else if(m[1]==='bills'){renderBills(m[2]||'all');}
@@ -1048,6 +1049,47 @@ function bindProfileActions(s,pane){
 }
 const sectionNav=items=>`<nav class="profile-subnav" aria-label="On this page">${items.map(([id,label])=>`<button type="button" data-section="${id}">${label}</button>`).join('')}</nav>`;
 function financeExplorerModel(){return {people:ALL.concat(BASIC_LIST),data:DATA,portraits:PORTRAITS,recordLive:window.RecordLive};}
+// ---------- Rankings (#rankings): the six scores' top and bottom 10 (public/rankings.js), then the money rankings ----------
+// Each person's row: the scores their profile shows. Big Money Independence and Plays by the Rules also use the official
+// disclosures the refresh has read, from the finance overview (one request for everyone), worked out as each profile's
+// Overview tiles do; until it arrives (or with the update service offline) those two wait.
+// Where someone sits now: a sitting member running for another seat is listed under the chamber they sit in.
+const SEAT_S=new Set(SENATE.map(x=>x.id)),SEAT_H=new Set(HOUSE.map(x=>x.id));
+const rankSeat=s=>s.office?'P':SEAT_S.has(s.id)?'S':SEAT_H.has(s.id)?'H':null;
+const rankOffice=s=>{const seat=rankSeat(s);return seat==='P'?'President':seat==='S'?'Senate':seat==='H'?'House':s.cand?`${s.chamber==='H'?'House':'Senate'} candidate`:s.chamber==='S'?'Senate':'House';};
+function rankDisclosure(s,fin){
+  const d=fin?.people?.[s.id];if(!d)return null;
+  const kind=s.chamber==='S'?'trades-senate':'trades-house',job=fin.sourceCoverage?.[s.id]?.[kind];
+  const why=!job?.last_success?'Their stock trade reports haven\'t been read yet':d.tradesMore?'Their older trade reports are still being read':(d.tradesUnread||[]).length?'Some trade reports were filed on paper and can\'t be read automatically':!(job.status==='ready'&&!job.stale)?(job.error||'The latest check of their trade reports isn\'t complete'):null;
+  return {sizes:d.sizes||null,netWorth:d.netWorth||null,trades:{rows:(d.trades||[]).filter(t=>t.official),covered:!why,why}};
+}
+function rankRows(fin){
+  return ALL.concat(FEATURED,BASIC_LIST).map(s=>{
+    const x=sixOf(s),d=fin?rankDisclosure(s,fin):null;
+    const u=fin||s.office?(s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null})):null;
+    const ab=SCORER.reviewedTrades(s).covered||!fin?x.aboveboard:aboveBoard(s,{trades:aboveBoardInputs(s,d),conflicts:SIX_CTX.conflicts,asOfYear:SCORER.asOfYear});
+    const seat=rankSeat(s);
+    return {id:s.id,name:s.name,party:s.party,state:s.state,chamber:seat==='S'||seat==='H'?seat:s.chamber,cand:!!s.cand&&!seat,office:!!s.office,officeLabel:rankOffice(s),
+      scores:{ideology:x.ideology.lean,word:x.word.pct,showsup:x.showsup.pct,unbought:u?.pct??null,aboveboard:ab?.pct??null,peoplefirst:x.peoplefirst.pct},
+      n:{ideology:(x.ideology.categories||[]).reduce((t,c)=>t+(c.n||0),0),word:x.word.score?.clear||0,showsup:x.showsup.detail?.attendance?.votes||0,
+        aboveboard:ab?.checked?.rows?.length||0,peoplefirst:x.peoplefirst.v?.n||0}};
+  });
+}
+let rankState={key:'ideology',state:'',who:'',open:{}};
+function renderRankings(){
+  app.innerHTML=`<section class="rk" id="rk-scores"></section><div id="rk-money"></div>`;
+  const host=$('#rk-scores'),hash=location.hash,states=[...new Map(ALL.concat(BASIC_LIST).filter(s=>s.state&&s.state!=='US').map(s=>[s.state,s.stateName||s.state])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+  let fin=null,loading=true,rows=rankRows(null);
+  const draw=()=>{host.innerHTML=rankingsHTML(rows,rankState,{portraits:PORTRAITS,states,loading});};
+  host.addEventListener('click',e=>{
+    const t=e.target.closest('[data-key]');if(t){rankState={...rankState,key:t.dataset.key,open:{}};draw();host.querySelector(`[data-key="${t.dataset.key}"]`)?.focus();return;}
+    const o=e.target.closest('[data-open]');if(o){const w=o.dataset.open,open={...rankState.open};if(w==='both'){const all=open.left&&open.right;open.left=open.right=!all;}else open[w]=!open[w];rankState={...rankState,open};draw();}
+  });
+  host.addEventListener('change',e=>{const f=e.target.closest('[data-filter]');if(f){rankState={...rankState,[f.dataset.filter]:f.value,open:{}};draw();}});
+  draw();
+  officialData(financeExplorerModel()).then(j=>{fin=j;}).catch(()=>{}).finally(()=>{if(!host.isConnected||location.hash!==hash)return;loading=false;rows=rankRows(fin);draw();});
+  mountRankings($('#rk-money'),{...financeExplorerModel(),embedded:true});
+}
 function profileLocation(view){
   if(SIX_BY[view])return {primary:view,view};
   return {primary:'overview',view:view==='sources'?'sources':'overview'};

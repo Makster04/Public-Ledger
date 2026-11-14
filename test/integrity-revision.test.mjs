@@ -55,3 +55,14 @@ test('the Integrity preview carries all five parts',()=>{
   assert.equal(p.showingUp.attendance.value,90);assert.equal(p.showingUp.getItDone.value,100);assert.equal(p.showingUp.value,92.5);
   assert.equal(p.conflicts.complete,false);assert.ok(p.overall.missing.includes('conflicts'));
 });
+
+test('Shows Up leaves out delegates and the Resident Commissioner, who can\'t vote on most House roll calls',async()=>{
+  const {showingUpComponent,NON_VOTING}=await import('../public/integrity.js');
+  const attendance={people:{d:{years:{2025:{votes:900,missed:900}},spans:[],missed:{}}}};
+  for(const st of ['DC','PR','GU','VI','AS','MP']){
+    const r=showingUpComponent({id:'d',state:st,chamber:'H'},attendance);
+    assert.equal(r.complete,false);assert.match(r.why,/delegates and the Resident Commissioner/);
+  }
+  assert.deepEqual([...NON_VOTING].sort(),['AS','DC','GU','MP','PR','VI']);
+  assert.equal(showingUpComponent({id:'d',state:'NY',chamber:'H'},attendance).complete,true,'a voting member is still graded');
+});
