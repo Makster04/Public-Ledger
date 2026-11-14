@@ -31,7 +31,7 @@ test('the five grades, each once in order, with a bar as long as the score and t
   assert.match(svg,tag('FIVE GRADES'));assert.doesNotMatch(svg,/FOUR MEASURES|Promises delivered|Ethics/);
   for(const [grade,color,score] of [['A','#138a50',95],['B','#5f8f1e',85],['C','#a87708',75],['D','#bd6416',65],['F','#cc3d4a',16]]){
     assert.match(svg,new RegExp(`fill="${color}"[^>]*font-size="30"[^>]*><tspan[^>]*>${grade}</tspan>`));
-    assert.match(svg,new RegExp(`width="${Math.round(190*score/100)}" height="14" rx="3" fill="${color}"`));
+    assert.match(svg,new RegExp(`width="${Math.round(176*score/100)}" height="14" rx="3" fill="${color}"`));
   }
   const missing=renderScorecardSvg({...model,grades:[{value:null},{value:null},{value:50}]});
   assert.equal((missing.match(/>NOT GRADED</g)||[]).length,4,'a grade not worked out has no bar, letter or number');
