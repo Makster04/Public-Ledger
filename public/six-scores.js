@@ -4,7 +4,7 @@
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
 // Shared by the profile tabs (public/app.js) and the tests; nothing here fetches.
-import {ownSponsorship,promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter} from './grades.js';
+import {ownSponsorship,promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter,pct1} from './grades.js';
 import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA,ratingScore} from './question-scores.js';
 import {hill,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent} from './integrity.js';
 import {assetKind} from './holdings.js';
@@ -12,7 +12,7 @@ import {SIZE_BRACKETS} from './donor-sizes.js';
 
 const clamp=(x,min=0,max=100)=>Math.max(min,Math.min(max,x));
 const round1=x=>Math.round(x*10)/10;
-const graded=pct=>pct==null?null:{pct:Math.round(pct),letter:letter(Math.round(pct))};
+const graded=pct=>pct==null?null:{pct:round1(pct),letter:letter(round1(pct))};
 const isDay=d=>/^\d{4}-\d{2}-\d{2}/.test(String(d||''));
 const DAY=86400000;
 
@@ -225,7 +225,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const base={parts,needs,pacBy,held,traded,bonusItems,pledgeItems};
   if(!pacKnown)return {...base,pct:null,raw:null,why:'Their PAC money hasn\'t been sorted by type yet'};
   if(!disclosed)return {...base,pct:null,raw:null,why:held.value==null?held.why:traded.why};
-  const pct=Math.max(0,Math.round(raw));
+  const pct=Math.max(0,round1(raw));
   return {...base,pct,letter:letter(Math.min(100,pct)),raw,why:null};
 }
 
@@ -253,7 +253,7 @@ export function tradeConflicts(rows,{covered=true,inDonors=0,why='Their stock tr
   if(rows.length<TRADE_CONFLICTS.minTrades)return {index:null,why:`Fewer than ${TRADE_CONFLICTS.minTrades} trades`,n:rows.length,parts};
   const W=TRADE_CONFLICTS.weights,used=Object.keys(W).filter(k=>parts[k]!=null),w=used.reduce((t,k)=>t+W[k],0);
   if(!used.length)return {index:null,why:'Their trades aren\'t matched to industries yet',n:rows.length,parts};
-  return {index:Math.round(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),why:null,n:rows.length,parts,used,byDollar,unmatched:rows.filter(r=>['stock','option'].includes(tradeKind(r))&&!r.sector&&!r.conflict).length};
+  return {index:round1(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),why:null,n:rows.length,parts,used,byDollar,unmatched:rows.filter(r=>['stock','option'].includes(tradeKind(r))&&!r.sector&&!r.conflict).length};
 }
 // person: the profile; ethics review: person.ethicsSearched (the dated note of what was searched) and person.ethics.
 // trades: {rows, covered, why, overseen, inDonors}; conflicts: public/conflicts.json.
@@ -282,7 +282,7 @@ export function aboveBoard(person,{trades=null,conflicts=null,asOfYear=null}={})
   const needs=[['Financial disclosures read (income, gifts, trips, trades and filing dates)',covered||coi.complete],['Connections checked (lobbying, contracts, foreign-agent filings, committees, votes)',coi.complete],['Legal records reviewed (court, ethics and enforcement cases)',reviewed]];
   const base={parts,needs,legal,tradeConflicts:tc,dodger,conflicts:coi,checked,used};
   if(!reviewed)return {...base,pct:null,why:'The legal record hasn\'t been reviewed yet'};
-  if(!used.length)return {...base,pct:null,why:'None of the four indexes has its records read yet, and legal records alone aren\'t enough'};
+  if(!used.length)return {...base,pct:null,why:'None of the four percentages has its records read yet, and legal records alone aren\'t enough'};
   const raw=clamp(100-deduction-legal.index);
   return {...base,...graded(raw),raw,why:null};
 }
@@ -296,15 +296,15 @@ export function behaviorCci({businessVotes=null,lobbied=null}={}){
   const W=PEOPLE_FIRST.cciWeights,used=Object.keys(W).filter(k=>parts[k]!=null);
   if(!used.length)return {index:null,parts,used,why:'Not enough votes compared with business funders yet'};
   const w=used.reduce((t,k)=>t+W[k],0);
-  return {index:Math.round(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),parts,used,why:null};
+  return {index:round1(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),parts,used,why:null};
 }
 // v: pvpScore() of their actions on scored bills ({pct, nPeople, nProfit, n, people, profit}); cci: behaviorCci().
 export function peopleFirst(v,cci){
   const bills=v?.pct??null,on=bills!=null&&cci?.index!=null;
   const raw=bills==null?null:on?PEOPLE_FIRST.action*bills+PEOPLE_FIRST.cci*(100-cci.index):bills;
-  return {...graded(raw),pct:raw==null?null:Math.round(raw),raw,bills,cci,blended:on,v,
+  return {...graded(raw),pct:raw==null?null:round1(raw),raw,bills,cci,blended:on,v,
     parts:[{key:'action',label:'Legislative Action',value:bills,weight:on?PEOPLE_FIRST.action:1,note:v?.n?`${v.nPeople} for working people, ${v.nProfit} for profit, of ${v.n} scored actions`:'No scored actions yet'},
-      {key:'cci',label:'CCI (Corporation Compromised Index)',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100 − ${cci.index} counts`}],
+      {key:'cci',label:'Corporation Compromised',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100% − ${pct1(cci.index)} counts`}],
     why:raw==null?`Needs at least ${MIN_PVP_ACTIONS} scored actions (${v?.n||0} so far)`:null,
     needs:[['Votes and bills, each scored by who gains and which groups took sides',!!v?.n],['Business funders\' positions and the bills they lobbied on',cci?.index!=null],['How they voted against their own party on those votes',cci?.parts?.businessVotes!=null]]};
 }

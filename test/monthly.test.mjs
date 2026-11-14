@@ -75,3 +75,9 @@ test('the committed log is well formed: each entry\'s grades are those of its fo
   }
   assert.deepEqual(log.entries.map(x=>x.date),[...log.entries.map(x=>x.date)].sort(),'newest last');
 });
+
+test('a score now worked out to one decimal says so, and part changes are rounded to one decimal',()=>{
+  const before={x:{peoplefirst:{pct:84,people:5,profit:1,actions:6,cci:20}}};
+  assert.deepEqual(compare(before,{x:{peoplefirst:{pct:84.3,people:5,profit:1,actions:6,cci:20}}}).map(c=>c.why),['Now worked out to one decimal']);
+  assert.deepEqual(compare(before,{x:{peoplefirst:{pct:83.9,people:5,profit:1,actions:6,cci:20.3}}}).map(c=>c.why),['+0.3 Corporation Compromised percentage points']);
+});

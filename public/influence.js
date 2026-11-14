@@ -94,7 +94,7 @@ export function donorLoyalty(funders,party,tallies){
   if(!rows.length)return {index:null,why:!positions?'No funder took a position on their votes':!tallies?'Party totals not loaded':'No party totals for these votes',n:0,diff:null,rows};
   const diff=Math.round(rows.reduce((t,r)=>t+r.diff*r.weight,0)/wsum*10)/10;
   if(n<DONOR_LOYALTY.minVotes)return {index:null,why:'Not enough data',n,diff,rows};
-  return {index:Math.round(Math.min(100,Math.max(0,diff)/DONOR_LOYALTY.ceiling*100)),why:null,n,diff,rows};
+  return {index:Math.round(Math.min(100,Math.max(0,diff)/DONOR_LOYALTY.ceiling*100)*10)/10,why:null,n,diff,rows};
 }
 
 // The business funders for the Corporation Compromised Index 🏢 (public/grades.js): business lobbies, industries' trade

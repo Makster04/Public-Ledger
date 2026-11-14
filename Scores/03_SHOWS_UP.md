@@ -10,8 +10,8 @@
 
 ```text
 Shows Up = 0.75 × Attendance + 0.25 × Get It Done      (Attendance alone if Get It Done is missing)
-Attendance  = 100 − 5 × (% of votes missed)             e.g., missing 2% scores 90
-Get It Done = 100 × min(1, their share of bills advanced ÷ their party's typical share in their chamber)
+Attendance  = 100% − 5 × (% of votes missed)            e.g., missing 2% scores 90.0%
+Get It Done = 100% × min(1, their share of bills advanced ÷ their party's typical share in their chamber)
 ```
 
 - **Advanced** means reported by a committee or got further: put on a calendar, passed a chamber, or became law.

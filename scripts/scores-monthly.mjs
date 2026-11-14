@@ -49,7 +49,7 @@ export const NAMES={word:'Keeps Their Word',showsup:'Shows Up',peoplefirst:'Peop
 const PARTS={
   word:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
   showsup:[['missed','missed roll call','missed roll calls'],['votes','roll call on record','roll calls on record'],['getItDone','Get It Done point','Get It Done points']],
-  peoplefirst:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations'],['cci','Corporation Compromised Index point','Corporation Compromised Index points']],
+  peoplefirst:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations'],['cci','Corporation Compromised percentage point','Corporation Compromised percentage points']],
   promises:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
   ethics:[['finding','confirmed finding','confirmed findings'],['open','open investigation','open investigations'],['closed','investigation closed without a finding','investigations closed without a finding'],['allegation','unresolved allegation','unresolved allegations'],['late','late disclosure','late disclosures'],['conflict','committee-conflict trade','committee-conflict trades'],
     ['legal','Legal Trouble Index point','Legal Trouble Index points'],['insider','Insider Trading Index point','Insider Trading Index points'],['dodger','Stock Disclosure Dodger Index point','Stock Disclosure Dodger Index points']],
@@ -64,10 +64,10 @@ export function compare(before,after){
       const a=was?.[g],b=now[g];if(!b)continue;
       // A count an older entry didn't record (the Ethics indexes, before they existed) is not compared; an index without
       // enough data (null) counts as 0.
-      const diff=k=>a[k]===undefined?0:(b[k]??0)-(a[k]??0);
+      const diff=k=>a[k]===undefined?0:Math.round(((b[k]??0)-(a[k]??0))*10)/10;
       if(a&&a.pct===b.pct&&PARTS[g].every(([k])=>!diff(k)))continue;
       const why=a?PARTS[g].filter(([k])=>diff(k)).map(([k,one,many])=>{const d=diff(k);return `${d>0?'+':'−'}${Math.abs(d)} ${Math.abs(d)===1?one:many}`;}):[];
-      changes.push({id,grade:g,from:a?a.pct:undefined,to:b.pct,why:!a?'First recorded score':why.length?why.join(', '):'Rule or weight change'});
+      changes.push({id,grade:g,from:a?a.pct:undefined,to:b.pct,why:!a?'First recorded score':why.length?why.join(', '):Number.isInteger(a.pct)&&b.pct!=null&&Math.round(b.pct)===a.pct?'Now worked out to one decimal':'Rule or weight change'});
     }
   }
   for(const id of Object.keys(before||{}))if(!after[id])changes.push({id,grade:'all',from:null,to:null,why:'No longer profiled'});

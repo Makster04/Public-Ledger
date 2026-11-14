@@ -47,6 +47,10 @@
   {
    "date": "2026-11-14",
    "note": "Presentation only: the five grades now show as percentages (84%) instead of out of 100 (84 / 100), on the tiles, score cards, breakdowns, the Scores page and the report card image. The 0–100 indexes they're built from (Trade Conflicts, Stock Disclosure Dodger, Outside Income & Conflicts, Gifts & Travel, Insider Trading, the Corporation Compromised Index and Donor Loyalty) show as percentages too. Legal Trouble stays in points, since it adds up each case's points, and Ideology stays a position from −100 to +100. No score changed."
+  },
+  {
+   "date": "2026-11-14",
+   "note": "Rule change (all five grades), replacing today's earlier presentation note: there are no indexes any more. Every grade and every part of one is a percentage worked out to one decimal (84.3%), and the letter comes from that one-decimal percentage instead of a whole-number rounding. Trade Conflicts, Stock Disclosure Dodger, Outside Income & Conflicts, Gifts & Travel, Corporation Compromised and Donor Loyalty are percentages; Legal Trouble is the percentage points its cases take off. Ideology stays a position from −100 to +100. 26 Shows Up letters went down one step, each a score just under a line that used to round up (89.6% was 90, an A, and is now a B): Tom Cotton, Tina Smith, Deb Fischer, Julia Brownley, Nanette Diaz Barragán, Scott Peters, Sanford Bishop, Austin Scott, James Baird, Jake Auchincloss, Andy Harris, Julie Fedorchak, Ritchie Torres, Mary Gay Scanlon, Morgan Luttrell, Brandon Gill and Sylvia Garcia (A to B); Lois Frankel, Steny Hoyer, Michael Rulli, Michael Turner and Scott DesJarlais (B to C); Seth Moulton and Daniel Goldman (C to D); Darline Graham and Thomas Kean (D to F). No Keeps Their Word or People First letter changed. Big Money Independence and Plays by the Rules are figured from the refresh's disclosures, so their changes show there. Historical values were not recalculated."
   }
  ]
 }
