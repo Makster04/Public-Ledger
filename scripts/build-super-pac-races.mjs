@@ -45,15 +45,25 @@ export const partyOf=aff=>{const a=String(aff||'').toUpperCase();return /^DEMOCR
 // The tracker whose own super PAC a spender is, or null.
 export const trackerOfSpender=(id,name)=>TRACKERS.find(t=>t.superPacs.length&&isOwnSuperPac(t,{id,name}))?.key||null;
 
-// The file's records (objects by header) -> the races file's contents.
-export function superPacRaces(records,{cycle=2026}={}){
-  // Each transaction once: a spender's transaction ID, at its highest file number (an amendment replaces the original).
+// Each transaction once: a spender's transaction ID, at its highest file number (an amendment replaces the original).
+export function latestVersions(records){
   const latest=new Map();
   for(const r of records){
     const k=`${r.spe_id}|${r.tran_id}`,f=Number(r.file_num)||0,o=latest.get(k);
     if(!o||f>=o.f)latest.set(k,{f,r});
   }
-  const all=[...latest.values()].map(({r})=>({spe:r.spe_id,speName:r.spe_nam,cand:r.cand_id,name:r.cand_name,seat:seatOf(r.can_office,r.can_office_state,r.can_office_dis),
+  return [...latest.values()].map(({r})=>r);
+}
+// The independent-expenditure file's records (objects by its header).
+export async function readIeRecords(file){
+  const rl=readline.createInterface({input:fs.createReadStream(file,'utf8'),crlfDelay:Infinity});
+  let head=null;const records=[];
+  for await(const line of rl){if(!line)continue;const v=parseCsv(line);if(!head){head=v;continue;}records.push(Object.fromEntries(head.map((h,i)=>[h,v[i]])));}
+  return records;
+}
+// The file's records (objects by header) -> the races file's contents.
+export function superPacRaces(records,{cycle=2026}={}){
+  const all=latestVersions(records).map(r=>({spe:r.spe_id,speName:r.spe_nam,cand:r.cand_id,name:r.cand_name,seat:seatOf(r.can_office,r.can_office_state,r.can_office_dis),
     party:partyOf(r.cand_pty_aff),so:r.sup_opp==='O'?'O':'S',ele:String(r.ele_type||'').toUpperCase()[0]||'',amount:Number(r.exp_amo)||0,date:isoDate(r.exp_date)||isoDate(r.dissem_dt)})).filter(x=>x.cand&&x.seat&&x.ele);
   const spenders={},seats=new Set(),sums=new Map();let through='';
   for(const x of all){
@@ -82,10 +92,7 @@ async function download(file,url,refresh){
 // Reads (downloading when needed) the cycle's file and writes public/super-pac-races.json. Returns the file's contents.
 export async function writeSuperPacRaces({cycle,dir,refresh=false,log=console.log}){
   const file=await download(path.join(dir,`independent_expenditure_${cycle}.csv`),`${BASE}/${cycle}/independent_expenditure_${cycle}.csv`,refresh);
-  const rl=readline.createInterface({input:fs.createReadStream(file,'utf8'),crlfDelay:Infinity});
-  let head=null;const records=[];
-  for await(const line of rl){if(!line)continue;const v=parseCsv(line);if(!head){head=v;continue;}records.push(Object.fromEntries(head.map((h,i)=>[h,v[i]])));}
-  const out=superPacRaces(records,{cycle});
+  const out=superPacRaces(await readIeRecords(file),{cycle});
   fs.writeFileSync(path.join(ROOT,'public','super-pac-races.json'),JSON.stringify(out));
   log(`Wrote public/super-pac-races.json: ${Object.keys(out.spenders).length} tracker super PACs, ${out.rows.length} lines, ${Object.keys(out.cands).length} candidates in their races, through ${out.through}.`);
   return out;
