@@ -215,7 +215,7 @@
           "title": "Straw-donor scheme by a defense contractor that gave to her 2020 campaign and allied super PAC",
           "type": "Investigation (not charged)",
           "date": "2020–2026",
-          "summary": "Executives of Hawaii defense contractor Navatek (later PacMar Technologies) pleaded guilty to federal campaign-finance crimes for illegal contributions to Collins' 2020 campaign and $150,000 routed through a shell company to the pro-Collins super PAC 1820 PAC. CEO Martin Kao was sentenced to 87 months in prison (2025). In February 2025 the FEC fined PacMar $325,000; the Campaign Legal Center's complaint \"did not allege involvement by Collins or her campaign,\" and the campaign disgorged the illegal contributions. In September 2026 ProPublica reported that FBI anti-corruption agents had examined Collins' relationship with Navatek and sought a broader bribery probe before the inquiry was shut down in 2025. Collins was never charged or formally accused; her office \"vigorously\" denies any pay-to-play and says she cooperated fully.",
+          "summary": "Executives of Hawaii defense contractor Navatek (later PacMar Technologies) pleaded guilty to federal campaign-finance crimes for illegal contributions to Collins' 2020 campaign and $150,000 routed through a shell company to the pro-Collins super PAC 1820 PAC. CEO Martin Kao was sentenced to 87 months in prison (2025). In February 2025 the FEC fined PacMar $325,000; the Campaign Legal Center's complaint \"did not allege involvement by Collins or her campaign,\" and the campaign disgorged the illegal contributions. In September 2026 ProPublica reported that FBI anti-corruption agents had examined Collins' relationship with Navatek and sought a broader bribery probe before the inquiry was shut down in 2025. The FBI said the matter \"had already been investigated by the FBI years ago and ultimately found nothing implicating Senator Collins or Senator Collins' campaign.\" Collins was never charged or formally accused; her office \"vigorously\" denies any pay-to-play and says she cooperated fully.",
           "outcome": "No finding or charge against the senator. Contractor executives convicted; FEC civil penalty against the company.",
           "sources": [
             {
@@ -229,6 +229,10 @@
             {
               "t": "Boston Globe takeaways",
               "u": "https://www.bostonglobe.com/2026/09/22/nation/propublica-report-susan-collins-takeaways/"
+            },
+            {
+              "t": "Maine Public (via WBUR): ProPublica report on Collins and Navatek (Sept. 23, 2026)",
+              "u": "https://www.wbur.org/news/2026/09/23/susan-collins-propublica-navatek-jackson-campaign"
             }
           ],
           "sev": "neutral",
@@ -4855,7 +4859,41 @@
           "agree": 6,
           "n": 8
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records (including the PacMar/Navatek matter), STOCK Act reporting on the Senate eFD system, and news coverage for complaints and court cases, including ProPublica's September 2026 report. Not listed: a Senate ethics complaint and a report of unreported stock trades that were found only in partisan outlets (Raw Story, a Maine Democratic Party post), with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Campaign Legal Center (FEC outcome)",
+            "u": "https://campaignlegal.org/update/major-victory-clc-complaint-delivers-rare-accountability-maine-voters"
+          },
+          {
+            "t": "ProPublica, Sept. 22, 2026",
+            "u": "https://www.propublica.org/article/fbi-susan-collins-navatek-campaign-donations-investigation"
+          },
+          {
+            "t": "Boston Globe takeaways",
+            "u": "https://www.bostonglobe.com/2026/09/22/nation/propublica-report-susan-collins-takeaways/"
+          },
+          {
+            "t": "Maine Public (via WBUR): ProPublica report on Collins and Navatek (Sept. 23, 2026)",
+            "u": "https://www.wbur.org/news/2026/09/23/susan-collins-propublica-navatek-jackson-campaign"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "Dan Sullivan",
@@ -12375,7 +12413,29 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting on the Senate eFD system, and news coverage for complaints and court cases. The 2026 FEC complaints about the Senate candidate who shares his name concern that candidate, Dan J. Sullivan, not the senator. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Anchorage Daily News, Nov. 10, 2022",
+            "u": "https://www.adn.com/politics/2022/11/10/sen-sullivan-discloses-stock-sales-late-in-violation-of-financial-reporting-law/"
+          },
+          {
+            "t": "Washington Examiner, Nov. 8, 2022",
+            "u": "https://washingtonexaminer.com/news/senate/alaska-gop-senator-disclosed-stock-trades"
+          }
+        ]
+      }
     },
     {
       "name": "Roger W. Marshall",
@@ -12596,6 +12656,22 @@
           "sev": "warn",
           "status": "allegation",
           "kind": "technical"
+        },
+        {
+          "title": "End Citizens United request for a Senate Ethics investigation of office travel and staff campaign work",
+          "type": "Ethics body",
+          "date": "2026-10-21",
+          "summary": "End Citizens United, a PAC that backs campaign-finance limits, sent the Senate Ethics Committee a 22-page letter asking it to investigate whether Marshall used office funds for political travel, including at least 14 taxpayer-funded trips between 2021 and 2024 to Sarasota, Fla., where he has a vacation home, and New York trips tied to Fox News appearances, and whether his Senate staff did campaign work while his campaign reported no payroll. The letter drew on a joint Kansas Reflector and MS NOW investigation. His chief of staff, Brent Robertson, said the campaign does have paid staff, paid through an affiliated PAC.",
+          "outcome": "No Senate Ethics Committee action reported in the coverage found.",
+          "sources": [
+            {
+              "t": "HPPR (from the Kansas Reflector): Campaign finance group seeks investigation into Roger Marshall's alleged ethics violations (Oct. 22, 2026)",
+              "u": "https://www.hppr.org/hppr-news/2026-10-22/campaign-finance-group-seeks-investigation-into-roger-marshalls-alleged-ethics-violations"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
       "id": "marshall",
@@ -18197,7 +18273,41 @@
       ],
       "fecCandPast": [
         "H6KS01179"
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, and news coverage for complaints and court cases; the October 2026 End Citizens United request to the Senate Ethics Committee is listed as an allegation. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "LegiStorm, Sept. 30, 2021",
+            "u": "https://www.legistorm.com/pro_news/2835/sen-marshall-didnt-report-stock-transactions-on-time.html"
+          },
+          {
+            "t": "Insider's 'Conflicted Congress' tally of STOCK Act violators",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          },
+          {
+            "t": "HPPR (from the Kansas Reflector): Campaign finance group seeks investigation into Roger Marshall's alleged ethics violations (Oct. 22, 2026)",
+            "u": "https://www.hppr.org/hppr-news/2026-10-22/campaign-finance-group-seeks-investigation-into-roger-marshalls-alleged-ethics-violations"
+          }
+        ]
+      }
     },
     {
       "name": "Jon Ossoff",
@@ -22120,6 +22230,32 @@
           "u": "https://capitol-beat.org/2021/06/ossoff-moving-stock-holdings-into-blind-trust/"
         },
         "note": "He moved his stock portfolio into a qualified blind trust in 2021, as he had promised in his campaign. His office has declined to say what the trust now holds."
+      },
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records (the 2024 civil penalty above), STOCK Act and blind-trust reporting, and news coverage for complaints and court cases. Not listed: a March 2025 Senate ethics complaint by the Foundation for Accountability and Civic Trust over a fundraising email tied to his continuing-resolution vote, found only in a partisan outlet (Townhall) and not on the group's own site, with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FEC ADR 1142 — RAD referral 23L-54",
+            "u": "https://www.fec.gov/files/legal/adrs/1142/1142_01.pdf"
+          },
+          {
+            "t": "FEC ADR 1142 — negotiated settlement",
+            "u": "https://www.fec.gov/files/legal/adrs/1142/1142_07.pdf"
+          },
+          {
+            "t": "Ossoff press release on blind trust",
+            "u": "https://www.ossoff.senate.gov/press-releases/sens-ossoff-kelly-introduce-bill-banning-stock-trading-by-members-of-congress/"
+          }
+        ]
       }
     },
     {
@@ -24099,7 +24235,29 @@
           "agree": 8,
           "n": 8
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, and news coverage for complaints and court cases. Not listed: an April 2025 Senate ethics complaint by the Foundation for Accountability and Civic Trust over fundraising tied to his floor speech, found only in a partisan outlet (Townhall) and not on the group's own site, with no public disposition. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FEC candidate page",
+            "u": "https://www.fec.gov/data/candidate/S4NJ00185/?cycle=2026&election_full=true"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "John W. Hickenlooper",
@@ -28470,7 +28628,37 @@
           "agree": 1,
           "n": 1
         }
-      ]
+      ],
+      "ethicsSearched": "Searched the Senate Ethics Committee's letters and press releases, FEC enforcement records, STOCK Act reporting, Colorado Independent Ethics Commission records, and news coverage for complaints and court cases; nothing beyond the entries listed was found. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "The Colorado Sun, June 12, 2020",
+            "u": "https://coloradosun.com/2020/06/12/john-hickenlooper-ethics-violation/"
+          },
+          {
+            "t": "Colorado IEC minutes (official record)",
+            "u": "https://iec.colorado.gov/sites/iec/files/documents/Minutes%20-%202020-06-05.pdf"
+          },
+          {
+            "t": "9News on fines and fees",
+            "u": "https://www.9news.com/article/news/local/local-politics/ethics-commission-fines-former-gov-john-hickenlooper-ethics-violations/73-d2e4e02a-aeed-4f08-b7fe-97a9b21c56e8"
+          },
+          {
+            "t": "Senate Financial Disclosures (eFD)",
+            "u": "https://efdsearch.senate.gov/search/"
+          }
+        ]
+      }
     },
     {
       "name": "Scott Perry",
@@ -28661,9 +28849,25 @@
           "status": "investigation",
           "stage": "open",
           "kind": "ethics"
+        },
+        {
+          "title": "Office of Congressional Conduct complaint over a campaign video filmed in his office",
+          "type": "Ethics body",
+          "date": "2026-10-26",
+          "summary": "Defend the Vote, a liberal PAC that endorsed his opponent, Janelle Stelson, asked the Office of Congressional Conduct to review whether Perry used official House resources for his campaign: a campaign video, posted in November 2025 and again in October 2026, that appears to have been recorded in his congressional office, and a 2024 campaign post of House Foreign Affairs Committee footage. Neither his campaign nor his office responded to WITF by publication.",
+          "outcome": "No Office of Congressional Conduct or House Ethics Committee action reported.",
+          "sources": [
+            {
+              "t": "WITF: Perry filmed a campaign video in his congressional office, liberal PAC files ethics complaint (Oct. 28, 2026)",
+              "u": "https://www.witf.org/2026/10/28/perry-filmed-a-campaign-video-in-his-congressional-office-liberal-pac-files-ethics-complaint/"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE matters (including the Jan. 6 committee referral), and court proceedings over the FBI seizure of his phone; no STOCK Act late-disclosure reports were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE matters (including the Jan. 6 committee referral), and court proceedings over the FBI seizure of his phone; no STOCK Act late-disclosure reports were found. The October 2026 Defend the Vote complaint to the Office of Congressional Conduct is listed from WITF (Penn Capital-Star could not be read). Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -30912,7 +31116,44 @@
           "agree": 3,
           "n": 3
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Axios (Aug. 9, 2022)",
+            "u": "https://www.axios.com/2022/08/09/rep-scott-perry-outraged-after-fbi-seized-his-phone"
+          },
+          {
+            "t": "Levin Center: Scott Perry cellphone case",
+            "u": "https://levin-center.org/congressional-lawmakers/congressional-oversight-resources/oversight-case-law/scott-perry-cellphone-case/"
+          },
+          {
+            "t": "CNN (Dec. 20, 2023)",
+            "u": "https://www.cnn.com/2023/12/20/politics/trump-scott-perry-cell-phone-records/index.html"
+          },
+          {
+            "t": "CBS News (Dec. 19, 2022)",
+            "u": "https://www.cbsnews.com/news/january-6-committee-sanctions-house-ethics-committee-kevin-mccarthy-jim-jordan-andy-biggs-scott-perry/"
+          },
+          {
+            "t": "Roll Call (Dec. 21, 2021)",
+            "u": "https://rollcall.com/2021/12/21/rep-scott-perry-calls-jan-6-panel-illegitimate-refuses-to-cooperate/"
+          },
+          {
+            "t": "WITF: Perry filmed a campaign video in his congressional office, liberal PAC files ethics complaint (Oct. 28, 2026)",
+            "u": "https://www.witf.org/2026/10/28/perry-filmed-a-campaign-video-in-his-congressional-office-liberal-pac-files-ethics-complaint/"
+          }
+        ]
+      }
     },
     {
       "name": "Mike Lawler",
@@ -31077,7 +31318,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news coverage and watchdog reporting (including searches for Business Insider 'Conflicted Congress' and other late-filing roundups) for STOCK Act late-disclosure reports, and searched for House Ethics Committee/OCE matters and court cases; none were found.",
+      "ethicsSearched": "Searched news coverage and watchdog reporting (including searches for Business Insider 'Conflicted Congress' and other late-filing roundups) for STOCK Act late-disclosure reports, and searched for House Ethics Committee/OCE matters and court cases; none were found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -35295,7 +35536,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Gabe Evans",
@@ -35460,7 +35722,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and lawsuits involving Rep. Evans; none were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and lawsuits involving Rep. Evans; none were found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -39246,7 +39508,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Mariannette Miller-Meeks",
@@ -39460,7 +39743,7 @@
           "decided": 2021
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE/Office of Congressional Conduct matters, financial-disclosure complaints, residency challenges and election contests involving Rep. Miller-Meeks; no STOCK Act late-trade reports were found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-filing reports, House Ethics Committee and OCE/Office of Congressional Conduct matters, financial-disclosure complaints, residency challenges and election contests involving Rep. Miller-Meeks; no STOCK Act late-trade reports were found. A 2026 FEC complaint by primary opponent David Pautsch over a mass text was found only through a DCCC release and was not confirmed independently, so it is not listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -43887,7 +44170,52 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "WOI (We Are Iowa)",
+            "u": "https://www.weareiowa.com/article/news/local/local-politics/representative-mariannette-miller-meeks-ethics-complaint-iowa-democratic-party-failure-disclose-personal-financial-information/524-b631d665-37b2-45ba-9283-0762511df527"
+          },
+          {
+            "t": "WHO 13",
+            "u": "https://who13.com/news/ethics-complaint-accuses-rep-miller-meeks-of-hiding-income-assets/"
+          },
+          {
+            "t": "Washington Examiner",
+            "u": "https://www.washingtonexaminer.com/news/3153683/miller-meeks-ethics-request-iowa-address/"
+          },
+          {
+            "t": "KCRG",
+            "u": "https://www.kcrg.com/2024/09/24/ethics-complaint-alleges-rep-miller-meeks-voting-davenport-despite-living-ottumwa/"
+          },
+          {
+            "t": "KCRG",
+            "u": "https://www.kcrg.com/2024/11/13/miller-meeks-vote-scott-county-accepted-counted-auditor-says/"
+          },
+          {
+            "t": "Little Village",
+            "u": "https://littlevillagemag.com/mariannette-miller-meeks-doesnt-live-in-her-district/"
+          },
+          {
+            "t": "NPR",
+            "u": "https://www.npr.org/2021/03/31/983159841/democrat-rita-hart-abandons-election-challenge-in-house-race-lost-by-6-votes"
+          },
+          {
+            "t": "Roll Call",
+            "u": "https://rollcall.com/2021/03/31/rita-hart-withdraws-challenge-to-iowa-house-race-result/"
+          }
+        ]
+      }
     },
     {
       "name": "Marcy Kaptur",
@@ -44017,7 +44345,7 @@
           "decided": 2023
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Kaptur.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Kaptur. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -47448,7 +47776,32 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "13abc (WTVG)",
+            "u": "https://www.13abc.com/2023/07/05/rep-kaptur-fined-delay-reporting-stock-sale/"
+          },
+          {
+            "t": "WTOL",
+            "u": "https://www.wtol.com/article/news/politics/marcy-kaptur-fined-failing-to-report-stock-transaction/512-2a727421-3355-49fe-9054-c2086caabc75"
+          },
+          {
+            "t": "Washington Examiner",
+            "u": "https://washingtonexaminer.com/news/campaigns/nrcc-trolls-rep-kaptur-violated-law-she-voted-for"
+          }
+        ]
+      }
     },
     {
       "name": "Marie Gluesenkamp Perez",
@@ -47605,7 +47958,7 @@
           "sev": "good"
         }
       ],
-      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Gluesenkamp Perez; no official action or major-outlet report of a violation was found.",
+      "ethicsSearched": "Searched news and official sources for STOCK Act late-disclosure reports, House Ethics Committee and Office of Congressional Conduct (formerly OCE) matters, FEC complaints, and court cases involving Rep. Gluesenkamp Perez; no official action or major-outlet report of a violation was found. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -49777,7 +50130,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "House Clerk financial disclosure search (periodic transaction reports)",
+            "u": "https://disclosures-clerk.house.gov/FinancialDisclosure"
+          },
+          {
+            "t": "House Committee on Ethics",
+            "u": "https://ethics.house.gov/"
+          }
+        ]
+      }
     },
     {
       "name": "Vicente Gonzalez",
@@ -49933,7 +50307,7 @@
           "kind": "technical"
         }
       ],
-      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Gonzalez; only the 2022 late stock-sale disclosure was documented by a credible outlet.",
+      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Gonzalez; only the 2022 late stock-sale disclosure was documented by a credible outlet. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -53491,7 +53865,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Business Insider (via Yahoo Finance), STOCK Act violations list",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          },
+          {
+            "t": "Business Insider (via Yahoo News)",
+            "u": "https://www.yahoo.com/news/democratic-rep-vicente-gonzalez-texas-210248781.html"
+          }
+        ]
+      }
     },
     {
       "name": "Kathy Castor",
@@ -53643,7 +54038,7 @@
           "kind": "technical"
         }
       ],
-      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Castor; only the Business Insider late-disclosure listing was documented by a credible outlet (partisan reports from the NRCC and Florida's Voice repeating the issue were not used as sources).",
+      "ethicsSearched": "Searched for STOCK Act late-disclosure reports (Business Insider and other news coverage, stock-trade trackers), House Ethics Committee and Office of Congressional Ethics matters, and criminal or civil cases involving Rep. Castor; only the Business Insider late-disclosure listing was documented by a credible outlet (partisan reports from the NRCC and Florida's Voice repeating the issue were not used as sources). Rechecked Nov. 14, 2026: an October 2026 campaign attack by her opponent repeating the stock-disclosure issue (Townhall) is not a complaint and is not listed.",
       "cycleLabel": "Jan 2025 – Oct 2026",
       "cycleNote": "two-year House cycle",
       "ideo": {
@@ -56869,7 +57264,24 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Business Insider (via Yahoo Finance), STOCK Act violations list",
+            "u": "https://finance.yahoo.com/news/75-members-congress-violated-law-160918370.html"
+          }
+        ]
+      }
     }
   ],
   "votes": [
@@ -79904,7 +80316,7 @@
           "note": "The walkout delayed the map by about two weeks but did not stop it from being enacted."
         }
       ],
-      "ethicsSearched": "Searched for Texas Ethics Commission complaints or fines, FEC letters and complaints, criminal or civil cases and bar discipline involving Talarico; the only documented matter found was the FEC excess-contribution notices.",
+      "ethicsSearched": "Searched for Texas Ethics Commission complaints or fines, FEC letters and complaints, criminal or civil cases and bar discipline involving Talarico; the only documented matter found was the FEC excess-contribution notices. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Talarico.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -81492,7 +81904,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "NOTUS / The Washington Sun: James Talarico's Campaign Is Refunding Over $1 Million in Excess Contributions (Aug. 17, 2026)",
+            "u": "https://washingtonsun.com/money/james-talarico-campaign-money-excessive-contributions?redirected=notus_org"
+          }
+        ]
+      }
     },
     {
       "id": "paxton",
@@ -81673,7 +82098,7 @@
           "note": "No conviction resulted; the case ended through a diversion agreement that required restitution but no plea or admission of guilt."
         }
       ],
-      "ethicsSearched": "Searched news, court and official sources for the 2015 securities-fraud case and its 2024 pretrial-intervention resolution, the 2023 impeachment and Senate trial, the whistleblower lawsuit and judgment, the federal FBI/DOJ investigation, and the State Bar of Texas disciplinary case; Texas Ethics Commission and FEC enforcement records were not separately checked because of the research budget.",
+      "ethicsSearched": "Searched news, court and official sources for the 2015 securities-fraud case and its 2024 pretrial-intervention resolution, the 2023 impeachment and Senate trial, the whistleblower lawsuit and judgment, the federal FBI/DOJ investigation, and the State Bar of Texas disciplinary case; Texas Ethics Commission and FEC enforcement records were not separately checked because of the research budget. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Paxton.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -83024,7 +83449,52 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Texas Tribune: Felony charges against Ken Paxton to be dropped (Mar. 26, 2024)",
+            "u": "https://www.texastribune.org/2024/03/26/ken-paxton-plea-deal-securities-fraud-felony/"
+          },
+          {
+            "t": "FOX 26 Houston: Ken Paxton's felony case dismissed after completing pretrial diversion program",
+            "u": "https://www.fox26houston.com/news/texas-ken-paxton-felony-securities-fraud-dismissed"
+          },
+          {
+            "t": "Ballotpedia: Impeachment of Ken Paxton, 2023",
+            "u": "https://ballotpedia.org/Impeachment_of_Ken_Paxton,_2023"
+          },
+          {
+            "t": "Texas Tribune: Attorney general acquitted on 16 impeachment counts (Sept. 16, 2023)",
+            "u": "https://www.texastribune.org/2023/09/16/ken-paxton-impeachment-vote-deliberations/"
+          },
+          {
+            "t": "KUT: Texas will pay $6.6 million to whistleblowers after Paxton drops appeal (July 4, 2025)",
+            "u": "https://www.kut.org/politics/2025-07-04/texas-will-pay-6-6-million-to-whistleblowers-after-paxton-drops-appeal"
+          },
+          {
+            "t": "KUT: Texas Attorney General Ken Paxton's former aides win $6.6 million in whistleblower case (Apr. 5, 2025)",
+            "u": "https://www.kut.org/politics/2025-04-05/texas-attorney-general-ken-paxtons-former-aides-win-6-6-million-in-whistleblower-case"
+          },
+          {
+            "t": "PBS NewsHour/AP: DOJ declined to prosecute Texas attorney general in final weeks of Biden's term (Apr. 3, 2025)",
+            "u": "https://www.pbs.org/newshour/politics/doj-declined-to-prosecute-texas-attorney-general-in-final-weeks-of-bidens-term-ap-reports"
+          },
+          {
+            "t": "Texas Tribune: Texas bar sues Ken Paxton over 2020 election lawsuit (May 25, 2022)",
+            "u": "https://www.texastribune.org/2022/05/25/texas-bar-ken-paxton-2020-election"
+          },
+          {
+            "t": "Dallas Morning News: Texas Supreme Court dismisses state bar ethics complaint against AG Ken Paxton (Feb. 14, 2025)",
+            "u": "https://www.dallasnews.com/news/politics/2025/02/14/texas-supreme-court-dismisses-state-bar-ethics-complaint-against-ag-ken-paxton/"
+          }
+        ]
+      }
     },
     {
       "id": "elsayed",
@@ -83194,7 +83664,7 @@
           "note": "He did launch and lead the program, but the $700 million figure he cites was its goal, not the amount erased."
         }
       ],
-      "ethicsSearched": "Searched for ethics complaints, FEC complaints or enforcement, Hatch Act issues, lawsuits (including the 2018 eligibility challenge) and financial-disclosure matters, and reviewed Bridge Michigan fact-checks and the FEC candidate page.",
+      "ethicsSearched": "Searched for ethics complaints, FEC complaints or enforcement, Hatch Act issues, lawsuits (including the 2018 eligibility challenge) and financial-disclosure matters, and reviewed Bridge Michigan fact-checks and the FEC candidate page. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name El-Sayed.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -84218,7 +84688,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Bridge Michigan: Abdul El-Sayed clears eligibility hurdle in bid for Michigan governor (May 22, 2018)",
+            "u": "https://bridgemi.com/michigan-government/abdul-el-sayed-clears-eligibility-hurdle-bid-michigan-governor/"
+          },
+          {
+            "t": "Bridge Michigan: Fact check: Abdul El-Sayed, Haley Stevens clash over cash in US Senate debate (Jul. 7, 2026)",
+            "u": "https://bridgemi.com/michigan-government/fact-check-abdul-el-sayed-haley-stevens-clash-over-cash-in-us-senate-debate/"
+          },
+          {
+            "t": "Fox News: El-Sayed in the hot seat for another foreign rental property, nearly $300K in additional income (Jul. 29, 2026)",
+            "u": "https://www.foxnews.com/politics/el-sayed-hot-seat-another-foreign-rental-property-300k-additional-income"
+          }
+        ]
+      }
     },
     {
       "id": "rogers",
@@ -84406,7 +84897,7 @@
           "note": "His 2008 vote for auto-industry loans lines up with the priority on domestic auto manufacturing he stated in 2024."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee or Office of Congressional Ethics actions, FEC enforcement, criminal or civil cases and other formal complaints involving Rogers; found no documented finding or enforcement action. The only complaints found (a 2024 Michigan Democratic Party FEC complaint about an outside group and 2024 Democratic challenges to his Senate nominating petitions) came from a partisan source or had no documented finding against him, so none are listed. The numeric DW-NOMINATE score was not filled because the Voteview page (ICPSR 20120) loads the score with JavaScript and the fetched page did not include it; it shows him as more conservative than 64% of the 113th House and more liberal than 67% of Republicans.",
+      "ethicsSearched": "Searched for House Ethics Committee or Office of Congressional Ethics actions, FEC enforcement, criminal or civil cases and other formal complaints involving Rogers; found no documented finding or enforcement action. The only complaints found (a 2024 Michigan Democratic Party FEC complaint about an outside group and 2024 Democratic challenges to his Senate nominating petitions) came from a partisan source or had no documented finding against him, so none are listed. The numeric DW-NOMINATE score was not filled because the Voteview page (ICPSR 20120) loads the score with JavaScript and the fetched page did not include it; it shows him as more conservative than 64% of the 113th House and more liberal than 67% of Republicans. A June 2026 Michigan Democratic Party FEC complaint about ads by the Senate Opportunity Fund that backed him names only the group, not Rogers or his campaign, as respondent (The Washington Sun, June 18, 2026), so it is not listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -86156,7 +86647,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          }
+        ]
+      }
     },
     {
       "id": "cooper",
@@ -86322,7 +86826,7 @@
           "note": "He vetoed the bill as his statement indicated, but the veto was overridden, so the outcome he said he was determined to keep did not hold."
         }
       ],
-      "ethicsSearched": "Searched for state ethics findings, legislative investigations (Atlantic Coast Pipeline fund), civil suits (Boyce & Isley libel case), criminal matters, campaign-finance enforcement, and bar discipline; found no criminal charges, ethics-commission findings or bar discipline.",
+      "ethicsSearched": "Searched for state ethics findings, legislative investigations (Atlantic Coast Pipeline fund), civil suits (Boyce & Isley libel case), criminal matters, campaign-finance enforcement, and bar discipline; found no criminal charges, ethics-commission findings or bar discipline. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Cooper.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -87866,7 +88370,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "WUNC: Investigation Finds Gov. Cooper Improperly Controlled $58M Pipeline Fund",
+            "u": "https://www.wunc.org/politics/2019-11-21/investigation-finds-gov-cooper-improperly-controlled-58m-pipeline-fund"
+          },
+          {
+            "t": "WRAL: Report: Cooper didn't benefit from pipeline actions, but investigators suggest improper influence",
+            "u": "https://www.wral.com/report-cooper-didn-t-benefit-from-pipeline-actions-but-investigators-suggest-improper-influence/18780748/"
+          },
+          {
+            "t": "WRAL: Cooper settles libel suit from 2000 election",
+            "u": "https://www.wral.com/archive/13576483/"
+          }
+        ]
+      }
     },
     {
       "id": "whatley",
@@ -88018,7 +88543,7 @@
           "note": "His public emphasis on banking early votes matched the priorities he set after taking over the RNC."
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia and Ballotpedia profiles and news coverage of his NC GOP and RNC tenures for ethics complaints, criminal or civil cases naming him personally, FEC enforcement and bar discipline; found no documented matters (party-filed election lawsuits are listed in the record instead). Web search quota ran out before a dedicated FEC-enforcement search could be run.",
+      "ethicsSearched": "Reviewed his Wikipedia and Ballotpedia profiles and news coverage of his NC GOP and RNC tenures for ethics complaints, criminal or civil cases naming him personally, FEC enforcement and bar discipline; found no documented matters (party-filed election lawsuits are listed in the record instead). Web search quota ran out before a dedicated FEC-enforcement search could be run. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Whatley.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -89546,7 +90071,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "turek",
@@ -89701,7 +90235,7 @@
           "note": "His vote matches the border-security part of his stated position; the bill did not address a pathway to citizenship."
         }
       ],
-      "ethicsSearched": "Searched for ethics complaints, lawsuits, FEC or Iowa campaign-finance enforcement and investigations involving Josh Turek (web search, Wikipedia, campaign coverage); found no documented complaint, finding or case. A Fox News report criticizing his missed House votes and per diem payments was found but describes attendance, not a formal ethics proceeding. No published roll-call-based ideology ranking of Iowa House members was found.",
+      "ethicsSearched": "Searched for ethics complaints, lawsuits, FEC or Iowa campaign-finance enforcement and investigations involving Josh Turek (web search, Wikipedia, campaign coverage); found no documented complaint, finding or case. A Fox News report criticizing his missed House votes and per diem payments was found but describes attendance, not a formal ethics proceeding. No published roll-call-based ideology ranking of Iowa House members was found. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Turek.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -90973,7 +91507,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "hinson",
@@ -91135,7 +91678,7 @@
           "note": "She called for the war to end a week after voting against a congressional directive to withdraw forces; the cited reports include no explanation from her of how the two positions relate."
         }
       ],
-      "ethicsSearched": "Searched House Ethics Committee and Office of Congressional Conduct matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; a Sept. 25, 2026 complaint to the Office of Congressional Conduct by the political committee Defend The Vote over her husband's insurance-industry role was found only in partisan sources and has no public disposition, so it is not listed.",
+      "ethicsSearched": "Searched House Ethics Committee and Office of Congressional Conduct matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; a Sept. 25, 2026 complaint to the Office of Congressional Conduct by the political committee Defend The Vote over her husband's insurance-industry role was found only in partisan sources and has no public disposition, so it is not listed. Rechecked Nov. 14, 2026: the Defend The Vote complaint was still found only in partisan outlets (Raw Story), with no public disposition.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -94796,6 +95339,27 @@
           "u": "https://www.kcrg.com/2026/09/05/fact-check-did-ashley-hinson-vote-ban-stock-trading-congress/"
         },
         "note": "She sold her publicly traded stocks after taking office in 2021. Her family holds $1 million–$5 million in private stock from the sale of her husband's insurance business, which isn't traded on a stock market."
+      },
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "KCRG: Hinson apologizes, blames staff after journalist uncovers plagiarism",
+            "u": "https://www.kcrg.com/2020/07/20/hinson-apologizes-blames-staff-after-journalist-uncovers-plagiarism/"
+          },
+          {
+            "t": "The Hill: Iowa GOP House candidate pulls multiple sections from website amid plagiarism accusations",
+            "u": "https://thehill.com/homenews/campaign/508177-iowa-gop-house-candidate-pulls-multiple-sections-from-website-that-were/"
+          }
+        ]
       }
     },
     {
@@ -94963,7 +95527,7 @@
           "note": "He filed legislation matching the stated goal; the sources reviewed show no committee action on it."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run.",
+      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC or campaign-finance complaints, and criminal or civil cases involving Chris Pappas, and checked his Wikipedia profile. No documented ethics findings, complaints or cases turned up. A separate search for bar discipline or Executive Council-era matters was not run. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -97070,7 +97634,20 @@
       ],
       "fecCandPast": [
         "H8NH01210"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          }
+        ]
+      }
     },
     {
       "id": "sununu",
@@ -97222,7 +97799,7 @@
           "note": "His record includes a negotiated compromise that passed both chambers with large bipartisan margins, matching his description of his tenure."
         }
       ],
-      "ethicsSearched": "Searched for Senate ethics matters, criminal or civil cases, FEC or campaign-finance enforcement, lobbying-disclosure issues tied to his post-Senate work at Akin Gump, and controversies from his 2002–2008 campaigns. The only documented legal matter found was the 2002 phone-jamming case, which did not charge him. Criticism of his post-Senate corporate work came only from partisan outlets and PACs and is not included. A separate check of FEC enforcement records for his 2026 committee was not run.",
+      "ethicsSearched": "Searched for Senate ethics matters, criminal or civil cases, FEC or campaign-finance enforcement, lobbying-disclosure issues tied to his post-Senate work at Akin Gump, and controversies from his 2002–2008 campaigns. The only documented legal matter found was the 2002 phone-jamming case, which did not charge him. Criticism of his post-Senate corporate work came only from partisan outlets and PACs and is not included. A separate check of FEC enforcement records for his 2026 committee was not run. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -98120,7 +98697,36 @@
       ],
       "fecCandPast": [
         "S0NH00201"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Bush campaigner's conviction in New Hampshire phone jamming case overturned (JURIST, March 22, 2007)",
+            "u": "https://www.jurist.org/news/2007/03/bush-campaigners-conviction-in-new/"
+          },
+          {
+            "t": "Associated Press via HeraldNet, Dec. 2, 2006",
+            "u": "https://www.heraldnet.com/?p=330730"
+          }
+        ]
+      }
     },
     {
       "id": "flanagan",
@@ -98275,7 +98881,7 @@
           "note": "Her February 2017 votes against codifying the license ban align with her stated support for immigrant residents."
         }
       ],
-      "ethicsSearched": "Searched for ethics complaints, FEC or state campaign-finance enforcement, lawsuits, investigations and controversies involving Peggy Flanagan (web search, Wikipedia, Ballotpedia, 2026 race page); found no documented ethics findings, enforcement actions or cases (only partisan-outlet commentary, not used). Vote Smart key-votes page was blocked (403), so her state House voting record was checked only via official Minnesota House pages.",
+      "ethicsSearched": "Searched for ethics complaints, FEC or state campaign-finance enforcement, lawsuits, investigations and controversies involving Peggy Flanagan (web search, Wikipedia, Ballotpedia, 2026 race page); found no documented ethics findings, enforcement actions or cases (only partisan-outlet commentary, not used). Vote Smart key-votes page was blocked (403), so her state House voting record was checked only via official Minnesota House pages. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Flanagan.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -98795,7 +99401,16 @@
       ],
       "fecCandPast": [
         "H8MN05155"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "tafoya",
@@ -98933,7 +99548,7 @@
           "note": "Her campaign rhetoric on fraud matches the specific commitments in her written platform; as a non-officeholder she has no votes or official acts on the issue."
         }
       ],
-      "ethicsSearched": "Searched for FEC complaints or enforcement, financial-disclosure issues, lawsuits, criminal cases and investigations involving Michele Tafoya (web search, Wikipedia, campaign coverage); found no documented ethics, legal or campaign-finance cases (a widely reported 2003 incident in which she poured beer on fans at the Metrodome, for which she publicly apologized, is not a legal or ethics proceeding and is not listed). MinnPost (robots-blocked) and KARE 11 primary coverage (403) could not be fetched.",
+      "ethicsSearched": "Searched for FEC complaints or enforcement, financial-disclosure issues, lawsuits, criminal cases and investigations involving Michele Tafoya (web search, Wikipedia, campaign coverage); found no documented ethics, legal or campaign-finance cases (a widely reported 2003 incident in which she poured beer on fans at the Metrodome, for which she publicly apologized, is not a legal or ethics proceeding and is not listed). MinnPost (robots-blocked) and KARE 11 primary coverage (403) could not be fetched. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Tafoya.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -99445,7 +100060,16 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "stratton",
@@ -99593,7 +100217,7 @@
           "note": "The reinvestment program she described at the signing was set up and has paid out grants under her board's leadership."
         }
       ],
-      "ethicsSearched": "Searched web and news for ethics complaints or investigations, FEC or state campaign-finance complaints, criminal or civil cases and controversies involving Stratton (2025–2026), and reviewed her Wikipedia and Ballotpedia profiles; found no documented ethics findings, enforcement actions or cases. Not checked: Illinois Executive Inspector General reports, Illinois State Board of Elections enforcement records and ARDC (bar discipline) records directly (ilga.gov could not be fetched).",
+      "ethicsSearched": "Searched web and news for ethics complaints or investigations, FEC or state campaign-finance complaints, criminal or civil cases and controversies involving Stratton (2025–2026), and reviewed her Wikipedia and Ballotpedia profiles; found no documented ethics findings, enforcement actions or cases. Not checked: Illinois Executive Inspector General reports, Illinois State Board of Elections enforcement records and ARDC (bar discipline) records directly (ilga.gov could not be fetched). Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Stratton.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -100818,7 +101442,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "tracy",
@@ -100982,7 +101615,7 @@
           "note": "He resigned for the reason he gave in the letter."
         }
       ],
-      "ethicsSearched": "Searched for state ethics findings (Executive Inspector General and Executive Ethics Commission), Gaming Board-era controversies, criminal and civil cases, and campaign-finance complaints involving Don Tracy, and reviewed his Wikipedia profile. The only matter found was the 2019 inspector general finding, on which he was cleared in 2025. FEC enforcement records for his 2026 committee and bar-discipline records were not separately checked.",
+      "ethicsSearched": "Searched for state ethics findings (Executive Inspector General and Executive Ethics Commission), Gaming Board-era controversies, criminal and civil cases, and campaign-finance complaints involving Don Tracy, and reviewed his Wikipedia profile. The only matter found was the 2019 inspector general finding, on which he was cleared in 2025. FEC enforcement records for his 2026 committee and bar-discipline records were not separately checked. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Tracy.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -101284,7 +101917,24 @@
       "evidence": {},
       "notVoted": {},
       "assoc": {},
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Illinois Times: Don Tracy clears his name (Feb. 20, 2025)",
+            "u": "https://www.illinoistimes.com/news/don-tracy-clears-his-name-19783942/"
+          },
+          {
+            "t": "Chicago Sun-Times: Ex-Illinois Gaming Board chairman Don Tracy accused of making illegal campaign contributions (Sept. 18, 2019)",
+            "u": "https://chicago.suntimes.com/2019/9/18/20872873/illinois-gaming-board-chairman-political-contributions-don-tracy"
+          }
+        ]
+      }
     },
     {
       "id": "cbooker",
@@ -101447,7 +102097,7 @@
           "note": "His call for police-accountability changes matches his co-sponsorship of the proposed no-knock warrant ban, though he left office before it could be voted on."
         }
       ],
-      "ethicsSearched": "Searched news, Ballotpedia, Wikipedia and FEC enforcement (MUR) search results for ethics complaints, legislative ethics findings, criminal or civil cases, campaign-finance enforcement and bar discipline involving Charles Booker; found only the 2014 LRC dismissal, and no FEC enforcement matter naming his campaigns turned up in search results.",
+      "ethicsSearched": "Searched news, Ballotpedia, Wikipedia and FEC enforcement (MUR) search results for ethics complaints, legislative ethics findings, criminal or civil cases, campaign-finance enforcement and bar discipline involving Charles Booker; found only the 2014 LRC dismissal, and no FEC enforcement matter naming his campaigns turned up in search results. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Booker.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -101818,7 +102468,20 @@
       "funderPos": [],
       "fecCandPast": [
         "S0KY00420"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Louisville Public Media: Kentucky Legislative Employee Fired for Appearing in Alison Lundergan Grimes Campaign Ad",
+            "u": "https://www.lpm.org/news/2014-02-18/kentucky-legislative-employee-fired-for-appearing-in-alison-lundergan-grimes-campaign-ad"
+          }
+        ]
+      }
     },
     {
       "id": "barr",
@@ -101968,7 +102631,7 @@
           "note": "The statement and the sponsored bill match; the bill has not advanced past committee referral."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act late-disclosure reports and complaints, criminal and civil cases, and campaign-finance complaints involving Andy Barr. No congressional ethics findings or STOCK Act violations turned up in the sources reviewed; the web quota ran out before a final check for 2025–26 FEC complaints.",
+      "ethicsSearched": "Searched for House Ethics Committee and Office of Congressional Ethics matters, STOCK Act late-disclosure reports and complaints, criminal and civil cases, and campaign-finance complaints involving Andy Barr. No congressional ethics findings or STOCK Act violations turned up in the sources reviewed; FEC enforcement records list one matter, MUR 8060 (a 2022 disclaimer complaint dismissed in 2024), shown above. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -101990,6 +102653,22 @@
           "status": "finding",
           "kind": "criminal",
           "decided": 1990
+        },
+        {
+          "title": "FEC complaint over campaign disclaimers (MUR 8060)",
+          "type": "Campaign finance",
+          "date": "2022-08-23",
+          "summary": "Raymond A. Lauk filed an FEC complaint against Andy Barr for Congress, its treasurer and Barr alleging a violation of the disclaimer rules for campaign communications (52 U.S.C. § 30120; 11 CFR 110.11).",
+          "outcome": "Dismissed: on Jan. 10, 2024 the Commission voted 6–0 to dismiss the complaint under its prosecutorial discretion, as its Office of General Counsel recommended, and closed the file.",
+          "sources": [
+            {
+              "t": "FEC: MUR 8060, Andy Barr for Congress, Inc.",
+              "u": "https://www.fec.gov/data/legal/matter-under-review/8060"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "technical"
         }
       ],
       "fecMissing": false,
@@ -104067,7 +104746,28 @@
       ],
       "fecCandPast": [
         "H0KY06104"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Nastiest Congressional Race Ever in Kentucky Coming Down to the Wire (Associated Press via WKYU, Oct. 29, 2012)",
+            "u": "https://www.wkyufm.org/politics/2012-10-29/nastiest-congressional-race-ever-in-kentucky-coming-down-to-the-wire"
+          },
+          {
+            "t": "FEC: MUR 8060, Andy Barr for Congress, Inc.",
+            "u": "https://www.fec.gov/data/legal/matter-under-review/8060"
+          }
+        ]
+      }
     },
     {
       "id": "wess",
@@ -104219,7 +104919,7 @@
           "note": "His justice-focused campaign theme corresponds to documented roles on both the prosecution and defense side and as a municipal judge."
         }
       ],
-      "ethicsSearched": "Searched the web for lawsuits, Alabama State Bar discipline, ethics complaints, judicial-conduct matters, criminal cases and FEC enforcement involving Everett (W.) Wess, and reviewed his FEC candidate page; found no documented ethics, disciplinary, legal or campaign-finance enforcement matters (his committee reported negative cash on hand of -$10,011.31 as of June 30, 2026, which is not an enforcement action). Bhamwiki's profile of Wess and WHNT's candidate profile returned 403 errors and could not be checked; Alabama Judicial Inquiry Commission records were not searched directly.",
+      "ethicsSearched": "Searched the web for lawsuits, Alabama State Bar discipline, ethics complaints, judicial-conduct matters, criminal cases and FEC enforcement involving Everett (W.) Wess, and reviewed his FEC candidate page; found no documented ethics, disciplinary, legal or campaign-finance enforcement matters (his committee reported negative cash on hand of -$10,011.31 as of June 30, 2026, which is not an enforcement action). Bhamwiki's profile of Wess and WHNT's candidate profile returned 403 errors and could not be checked; Alabama Judicial Inquiry Commission records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which names Wess.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -104229,10 +104929,30 @@
           "title": "No documented violations found",
           "type": "Disclosure & ethics check",
           "date": "Checked Oct 2026",
-          "summary": "Searched the web for lawsuits, Alabama State Bar discipline, ethics complaints, judicial-conduct matters, criminal cases and FEC enforcement involving Everett (W.) Wess, and reviewed his FEC candidate page; found no documented ethics, disciplinary, legal or campaign-finance enforcement matters (his committee reported negative cash on hand of -$10,011.31 as of June 30, 2026, which is not an enforcement action). Bhamwiki's profile of Wess and WHNT's candidate profile returned 403 errors and could not be checked; Alabama Judicial Inquiry Commission records were not searched directly.",
+          "summary": "Searched the web for lawsuits, Alabama State Bar discipline, ethics complaints, judicial-conduct matters, criminal cases and FEC enforcement involving Everett (W.) Wess, and reviewed his FEC candidate page; found no documented ethics, disciplinary, legal or campaign-finance enforcement matters (his committee reported negative cash on hand of -$10,011.31 as of June 30, 2026, which is not an enforcement action). Bhamwiki's profile of Wess and WHNT's candidate profile returned 403 errors and could not be checked; Alabama Judicial Inquiry Commission records were not searched directly. The Campaign Legal Center's September 2026 complaint over the missing financial disclosure, found in the Nov. 14, 2026 recheck, is listed separately.",
           "outcome": "None found",
           "sources": [],
           "sev": "good"
+        },
+        {
+          "title": "Campaign Legal Center complaint over missing financial disclosure",
+          "type": "Ethics body",
+          "date": "2026-09-11",
+          "summary": "The Campaign Legal Center asked the Senate Ethics Committee to investigate Wess and 10 other Senate candidates for not filing the personal financial disclosure report the Ethics in Government Act requires; it listed Wess's FEC Statement of Candidacy as filed Jan. 22, 2026, with no extension requested. It noted that personal loans make up 85% of the campaign committee's reported receipts, which a disclosure report would let voters check against personal assets.",
+          "outcome": "No Senate Ethics Committee action reported in the coverage found.",
+          "sources": [
+            {
+              "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+            },
+            {
+              "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "technical"
         }
       ],
       "fecMissing": false,
@@ -104447,7 +105167,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+          }
+        ]
+      }
     },
     {
       "id": "moore",
@@ -104580,7 +105313,7 @@
           "note": "His vote matched his stated opposition to additional Ukraine funding."
         }
       ],
-      "ethicsSearched": "Searched news and watchdog reporting for House Ethics/Office of Congressional Conduct matters, STOCK Act disclosure complaints (a 2021 Campaign Legal Center STOCK Act complaint concerned Rep. Blake Moore of Utah, not Barry Moore), criminal and civil cases, and campaign-finance issues; FEC enforcement (MUR) records and the Alabama Ethics Commission were not checked directly.",
+      "ethicsSearched": "Searched news and watchdog reporting for House Ethics/Office of Congressional Conduct matters, STOCK Act disclosure complaints (a 2021 Campaign Legal Center STOCK Act complaint concerned Rep. Blake Moore of Utah, not Barry Moore), criminal and civil cases, and campaign-finance issues; FEC enforcement (MUR) records and the Alabama Ethics Commission were not checked directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -106883,7 +107616,28 @@
       ],
       "fecCandPast": [
         "H8AL02171"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Alabama Political Reporter: Barry Moore Found Not Guilty (Oct. 31, 2014)",
+            "u": "https://www.alreporter.com/2014/10/31/barry-moore-found-not-guilty/"
+          },
+          {
+            "t": "Washington Times: Jury finds Alabama Republican Rep. Barry Moore not guilty in perjury trial",
+            "u": "https://www.washingtontimes.com/news/2014/oct/30/jury-finds-alabama-republican-rep-barry-moore-not-/"
+          }
+        ]
+      }
     },
     {
       "id": "bankhead",
@@ -107035,7 +107789,7 @@
           "note": "Her debate remark matches her written platform; she has held no office, so there is no vote or official act to compare."
         }
       ],
-      "ethicsSearched": "Reviewed Montana Free Press, Daily Montanan and Wikipedia coverage of the race and found no ethics complaints, lawsuits, criminal cases or campaign-finance enforcement involving Bankhead; separate searches of FEC enforcement and court records were not completed because web-tool quotas ran out.",
+      "ethicsSearched": "Reviewed Montana Free Press, Daily Montanan and Wikipedia coverage of the race and found no ethics complaints, lawsuits, criminal cases or campaign-finance enforcement involving Bankhead; separate searches of FEC enforcement and court records were not completed because web-tool quotas ran out. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Bankhead.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -107347,7 +108101,16 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "alme",
@@ -107525,7 +108288,7 @@
           "note": "The documented hiring, protocols and training follow from the stated priority."
         }
       ],
-      "ethicsSearched": "Searched for ethics, Hatch Act and bar complaints, FEC complaints, lawsuits and criminal matters involving Kurt Alme, including the Daines withdrawal and handoff; found no findings or cases against him in nonpartisan sources (reports tying him to abuse allegations at the Yellowstone Boys and Girls Ranch appeared only in partisan outlets and were not used).",
+      "ethicsSearched": "Searched for ethics, Hatch Act and bar complaints, FEC complaints, lawsuits and criminal matters involving Kurt Alme, including the Daines withdrawal and handoff; found no findings or cases against him in nonpartisan sources (reports tying him to abuse allegations at the Yellowstone Boys and Girls Ranch appeared only in partisan outlets and were not used). Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Alme.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -109151,7 +109914,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "bodnar",
@@ -109348,7 +110120,7 @@
           "note": "The layoffs were the job losses he warned federal cuts would cause."
         }
       ],
-      "ethicsSearched": "Searched news coverage (Wikipedia, Montana Free Press, Montana Kaimin, Bozeman Daily Chronicle, Daily Montanan) for ethics complaints, Commissioner of Political Practices and FEC complaints, lawsuits and criminal matters involving Bodnar or his UM tenure; found the two items listed. The FEC enforcement (MUR) database and court dockets were not searched directly.",
+      "ethicsSearched": "Searched news coverage (Wikipedia, Montana Free Press, Montana Kaimin, Bozeman Daily Chronicle, Daily Montanan) for ethics complaints, Commissioner of Political Practices and FEC complaints, lawsuits and criminal matters involving Bodnar or his UM tenure; found the two items listed. The FEC enforcement (MUR) database and court dockets were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Bodnar.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -109842,7 +110614,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Montana Kaimin: UM settles sex discrimination lawsuit for $350,000, commits to Title IX review",
+            "u": "https://www.montanakaimin.com/news/um-settles-sex-discrimination-lawsuit-for-350-000-commits-to-title-ix-review/article_26450a36-b5c2-11ee-ac99-6fc5adaa7aab.html"
+          },
+          {
+            "t": "Bozeman Daily Chronicle: Bodnar secures ballot spot amid signature allegation",
+            "u": "https://www.bozemandailychronicle.com/townnews/politics/signature-allegation-complaint-alleges-bodnar-senate-campaigner-sought-bribe/article_b7295c78-f18e-4e51-98a4-ca8db7e6444f.html"
+          },
+          {
+            "t": "Montana Free Press: Cascade Co. investigating independent signature gathering",
+            "u": "https://montanafreepress.org/2026/09/10/cascade-county-investigating-independent-signatures/"
+          }
+        ]
+      }
     },
     {
       "id": "byrd",
@@ -109994,7 +110787,7 @@
           "note": "His platform emphasizes new energy technology alongside stated support for the existing fossil-fuel industry, matching his announcement remarks; he has no federal votes on energy."
         }
       ],
-      "ethicsSearched": "Searched the web for lawsuits, ethics complaints, criminal charges and state or federal campaign-finance enforcement involving James (W.) Byrd, and reviewed his FEC candidate page, Ballotpedia, Wikipedia and 2026 campaign coverage; found no documented ethics, legal or campaign-finance matters. Vote Smart's key-votes page (403), the Casper Star-Tribune (paywall redirect) and a Wyoming Tribune Eagle article (429) could not be fetched, and Wyoming Legislature roll-call records and Secretary of State campaign-finance filings were not checked directly.",
+      "ethicsSearched": "Searched the web for lawsuits, ethics complaints, criminal charges and state or federal campaign-finance enforcement involving James (W.) Byrd, and reviewed his FEC candidate page, Ballotpedia, Wikipedia and 2026 campaign coverage; found no documented ethics, legal or campaign-finance matters. Vote Smart's key-votes page (403), the Casper Star-Tribune (paywall redirect) and a Wyoming Tribune Eagle article (429) could not be fetched, and Wyoming Legislature roll-call records and Secretary of State campaign-finance filings were not checked directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Byrd.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -110250,7 +111043,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "hageman",
@@ -110403,7 +111205,7 @@
           "note": "The bill she introduced matches her stated view on state control of transportation funds."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics Committee/Office of Congressional Conduct matters, STOCK Act or financial-disclosure issues, FEC enforcement or complaints, criminal or civil cases and bar discipline; found only the 2022 Wyoming State Bar complaint above (dismissed without investigation) and no other documented matters.",
+      "ethicsSearched": "Searched for House Ethics Committee/Office of Congressional Conduct matters, STOCK Act or financial-disclosure issues, FEC enforcement or complaints, criminal or civil cases and bar discipline; found only the 2022 Wyoming State Bar complaint above (dismissed without investigation) and no other documented matters. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -112267,7 +113069,24 @@
       ],
       "fecCandPast": [
         "H2WY00166"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "WyoFile: State Bar declined to investigate complaint against Hageman (Sept. 29, 2022)",
+            "u": "https://wyofile.com/state-bar-declined-to-investigate-complaint-against-hageman/"
+          }
+        ]
+      }
     },
     {
       "id": "thomas",
@@ -112408,7 +113227,7 @@
           "note": "The runoff result is the documented outcome that her remark about fundraising refers to."
         }
       ],
-      "ethicsSearched": "Searched news and the web for ethics complaints, criminal or civil court cases, nursing-board discipline and campaign-finance enforcement involving N'Kiyla Jasmine Thomas, and reviewed her FEC candidate page; found no documented matters (Nurse.org reports her Oklahoma LPN license as active and unencumbered per Nursys). Her campaign site says she challenged the Tennessee Board of Nursing during her nursing education; no independent record of that dispute was found.",
+      "ethicsSearched": "Searched news and the web for ethics complaints, criminal or civil court cases, nursing-board discipline and campaign-finance enforcement involving N'Kiyla Jasmine Thomas, and reviewed her FEC candidate page; found no documented matters (Nurse.org reports her Oklahoma LPN license as active and unencumbered per Nursys). Her campaign site says she challenged the Tennessee Board of Nursing during her nursing education; no independent record of that dispute was found. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which names Thomas.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -112418,10 +113237,30 @@
           "title": "No documented violations found",
           "type": "Disclosure & ethics check",
           "date": "Checked Oct 2026",
-          "summary": "Searched news and the web for ethics complaints, criminal or civil court cases, nursing-board discipline and campaign-finance enforcement involving N'Kiyla Jasmine Thomas, and reviewed her FEC candidate page; found no documented matters (Nurse.org reports her Oklahoma LPN license as active and unencumbered per Nursys). Her campaign site says she challenged the Tennessee Board of Nursing during her nursing education; no independent record of that dispute was found.",
+          "summary": "Searched news and the web for ethics complaints, criminal or civil court cases, nursing-board discipline and campaign-finance enforcement involving N'Kiyla Jasmine Thomas, and reviewed her FEC candidate page; found no documented matters (Nurse.org reports her Oklahoma LPN license as active and unencumbered per Nursys). Her campaign site says she challenged the Tennessee Board of Nursing during her nursing education; no independent record of that dispute was found. The Campaign Legal Center's September 2026 complaint over the missing financial disclosure, found in the Nov. 14, 2026 recheck, is listed separately.",
           "outcome": "None found",
           "sources": [],
           "sev": "good"
+        },
+        {
+          "title": "Campaign Legal Center complaint over missing financial disclosure",
+          "type": "Ethics body",
+          "date": "2026-09-11",
+          "summary": "The Campaign Legal Center asked the Senate Ethics Committee to investigate Thomas and 10 other Senate candidates for not filing the personal financial disclosure report the Ethics in Government Act requires; it listed Thomas's FEC Statement of Candidacy as filed March 17, 2025, with no extension requested.",
+          "outcome": "No Senate Ethics Committee action reported in the coverage found.",
+          "sources": [
+            {
+              "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+            },
+            {
+              "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "technical"
         }
       ],
       "fecMissing": false,
@@ -112712,7 +113551,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+          }
+        ]
+      }
     },
     {
       "id": "hern",
@@ -112842,7 +113694,7 @@
           "note": "Hern reintroduced the bill he had promoted and moved it through the House; Senate action was not checked."
         }
       ],
-      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Ethics/Conduct matters, STOCK Act late-disclosure reports (Insider, NOTUS/Washington Sun, Oklahoma Watch), FEC complaints or enforcement, and controversies listed on Wikipedia. No House Ethics or OCE investigation or FEC enforcement action involving Hern was found. The FEC enforcement (MUR) database and the House Ethics Committee site were not searched directly.",
+      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Ethics/Conduct matters, STOCK Act late-disclosure reports (Insider, NOTUS/Washington Sun, Oklahoma Watch), FEC complaints or enforcement, and controversies listed on Wikipedia. No House Ethics or OCE investigation or FEC enforcement action involving Hern was found. The FEC enforcement (MUR) database and the House Ethics Committee site were not searched directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -115677,7 +116529,32 @@
       ],
       "fecCandPast": [
         "H8OK01157"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "NOTUS / Washington Sun: Republican Rep. Kevin Hern Appears to Have Tardy Stock Disclosures. His Office Disputes He's Late. (Mar. 6, 2026)",
+            "u": "https://www.washingtonsun.com/money/kevin-hern-oklahoma-stock-act-trading-congress"
+          },
+          {
+            "t": "Oklahoma Watch (republished): Rep. Kevin Hern Appears to Have Tardy Stock Disclosures",
+            "u": "https://oklahomawatch.org/2026/03/10/rep-kevin-hern-appears-to-have-tardy-stock-disclosures-his-office-disputes-hes-late/"
+          },
+          {
+            "t": "Insider via Yahoo News: 64 members of Congress have violated a law designed to prevent insider trading",
+            "u": "https://news.yahoo.com/64-members-congress-violated-law-125839548.html?fr=sycsrp_catchall"
+          }
+        ]
+      }
     },
     {
       "id": "davis",
@@ -115818,7 +116695,7 @@
           "note": "Most of his reported fundraising came in small donations, which fits his pitch to working-class voters."
         }
       ],
-      "ethicsSearched": "Searched news coverage and Louisiana Board of Ethics references for ethics complaints, campaign-finance enforcement (state or FEC), criminal or civil cases, and police-jury-era issues involving Jamie (James) Davis Jr.; none found.",
+      "ethicsSearched": "Searched news coverage and Louisiana Board of Ethics references for ethics complaints, campaign-finance enforcement (state or FEC), criminal or civil cases, and police-jury-era issues involving Jamie (James) Davis Jr.; none found. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Davis.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -116075,7 +116952,16 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "letlow",
@@ -116256,7 +117142,7 @@
           "note": "The trades were disclosed well past the legal deadline, but she self-reported the lapse and filed the missing reports, in line with the stated commitment."
         }
       ],
-      "ethicsSearched": "Searched news coverage and House Ethics/Office of Congressional Conduct references for ethics complaints, STOCK Act and financial-disclosure issues, FEC complaints, and criminal or civil cases involving Julia Letlow.",
+      "ethicsSearched": "Searched news coverage and House Ethics/Office of Congressional Conduct references for ethics complaints, STOCK Act and financial-disclosure issues, FEC complaints, and criminal or civil cases involving Julia Letlow. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -119193,7 +120079,36 @@
       ],
       "fecCandPast": [
         "H2LA05126"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "NOTUS (Jan. 15, 2026)",
+            "u": "https://www.notus.org/congress/julia-letlow-stock-act-disclosures"
+          },
+          {
+            "t": "The Advocate",
+            "u": "https://www.theadvocate.com/baton_rouge/news/politics/julia-letlow-stock-trades-congress/article_48bcbeee-8627-5af7-8c83-e08dd373ca9c.html"
+          },
+          {
+            "t": "Forbes (Jan. 15, 2026)",
+            "u": "https://www.forbes.com/sites/zacheverson/2026/01/15/letlow-stock-act-julia-congress-ban-trading/"
+          },
+          {
+            "t": "State Affairs: Cassidy campaign files FEC complaint against Letlow (March 3, 2026)",
+            "u": "https://pro.stateaffairs.com/la/news/cassidy-fec-complaint-letlow"
+          }
+        ]
+      }
     },
     {
       "id": "husted",
@@ -119360,7 +120275,7 @@
           "note": "The bill he introduced carries out the protections he described; the cited record shows only its committee referral."
         }
       ],
-      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, Ohio Ethics Commission filings, FEC enforcement, and criminal or civil cases, including the FirstEnergy/HB 6 scandal. A June 2026 Senate ethics complaint concerning a senior aide's payments from a Columbus lobbying firm was found only in partisan or unestablished outlets (Heartland Signal, tiffinohio.net) with no public disposition, so it is not listed. Senate roll-call votes were not researched, per instructions; no ICPSR number was found.",
+      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, Ohio Ethics Commission filings, FEC enforcement, and criminal or civil cases, including the FirstEnergy/HB 6 scandal. The May 29, 2026 Senate ethics complaint about a senior aide's pay from a Columbus lobbying firm, first found only in partisan or unestablished outlets, is now listed from The Washington Sun (NOTUS) report. Senate roll-call votes were not researched, per instructions; no ICPSR number was found. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -119427,6 +120342,22 @@
           "stage": "closed",
           "kind": "ethics",
           "decided": 2009
+        },
+        {
+          "title": "Senate Ethics complaint over a senior aide's pay from a lobbying firm",
+          "type": "Ethics body",
+          "date": "2026-05-29",
+          "summary": "Columbus attorney Anne Griffin asked the Senate Ethics Committee on May 29, 2026 to investigate Husted's senior adviser and counsel, Sean Dunn, who reported $22,652 in 2025 consulting pay from Statehouse Impact Group, a Columbus lobbying firm, arguing that the work violated Senate Rule 37, and to examine whether Husted knew of the conflict and failed to prevent it. A Husted spokesperson said \"Mr. Dunn has been in regular contact with the Ethics Committee to ensure he has reported everything to their satisfaction.\"",
+          "outcome": "No Senate Ethics Committee action reported; the committee did not comment.",
+          "sources": [
+            {
+              "t": "The Washington Sun (NOTUS): Top Jon Husted Senate Aide Kept Working for Ohio Lobbying Firm (June 11, 2026)",
+              "u": "https://washingtonsun.com/ohio/jon-husted-sean-dunn-lobbying-firm"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "ethics"
         }
       ],
       "fecMissing": false,
@@ -124162,7 +125093,48 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "FactCheck.org: Ohio Democratic Ads Connect Husted to Bribery Scandal, Despite No Charges of Wrongdoing (Sept. 2026)",
+            "u": "https://www.factcheck.org/2026/09/ohio-democratic-ads-connect-husted-to-bribery-scandal-despite-no-charges-of-wrongdoing/"
+          },
+          {
+            "t": "Ohio Capital Journal: FirstEnergy gave $1 million to boost Ohio Lt Gov Husted's campaign before scandal (Apr. 10, 2024)",
+            "u": "https://ohiocapitaljournal.com/2024/04/10/firstenergy-gave-1-million-to-boost-ohio-lt-gov-husteds-campaign-before-scandal-document-shows/"
+          },
+          {
+            "t": "News 5 Cleveland: FirstEnergy corruption case ends with hung jury",
+            "u": "https://www.news5cleveland.com/news/politics/ohio-politics/firstenergy-corruption-case-ends-in-mistrial"
+          },
+          {
+            "t": "Ohio Capital Journal: Husted took gifts from JobsOhio while he was Ohio lieutenant governor, financial disclosures show",
+            "u": "https://ohiocapitaljournal.com/2026/09/25/ohio-republican-u-s-sen-jon-husted-took-gifts-from-jobsohio-financial-disclosures-show/"
+          },
+          {
+            "t": "Ohio Supreme Court via CourtListener: State ex rel. Husted v. Brunner (Oct. 6, 2009)",
+            "u": "https://www.courtlistener.com/opinion/2691854/state-ex-rel-husted-v-brunner/"
+          },
+          {
+            "t": "Dayton Daily News: Elections board remains split on Husted's residency",
+            "u": "https://www.daytondailynews.com/news/local/elections-board-remains-split-husted-residency/yzjEy1Kq7bI3VeeBPNMIsI/"
+          },
+          {
+            "t": "The Washington Sun (NOTUS): Top Jon Husted Senate Aide Kept Working for Ohio Lobbying Firm (June 11, 2026)",
+            "u": "https://washingtonsun.com/ohio/jon-husted-sean-dunn-lobbying-firm"
+          }
+        ]
+      }
     },
     {
       "id": "brown",
@@ -124343,7 +125315,7 @@
           "note": "He voted to advance the border package he later described as a strong step toward securing the border."
         }
       ],
-      "ethicsSearched": "Searched Senate and House Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases. Reports that he omitted his wife's pension from past Senate disclosures (corrected in 2023) and that his Dignity of Work PAC paid a $50,000 tax bill late in 2025 were found only in partisan or partisan-leaning outlets (Washington Free Beacon, Fox News), with no ethics-body finding, so they are not listed. The numeric DW-NOMINATE score was not available from the Voteview page, and no campaign website URL appeared in search results.",
+      "ethicsSearched": "Searched Senate and House Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases. Reports that he omitted his wife's pension from past Senate disclosures (corrected in 2023) and that his Dignity of Work PAC paid a $50,000 tax bill late in 2025 were found only in partisan or partisan-leaning outlets (Washington Free Beacon, Fox News), with no ethics-body finding, so they are not listed. The numeric DW-NOMINATE score was not available from the Voteview page, and no campaign website URL appeared in search results. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases, the Office of Congressional Conduct's investigations and the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -126645,7 +127617,32 @@
           "agree": 0,
           "n": 1
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "NBC News: Sen. Sherrod Brown received an extra property tax credit and racked up penalties for late payments",
+            "u": "https://www.nbcnews.com/politics/congress/sen-sherrod-brown-received-extra-property-tax-credit-rcna82048"
+          }
+        ]
+      }
     },
     {
       "id": "ricketts",
@@ -126807,7 +127804,7 @@
           "note": "His veto and later funding of the referendum match his stated support for capital punishment."
         }
       ],
-      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; found no ethics-body finding or enforcement action. Not listed because they involve no formal complaint or finding: criticism of his January 2023 appointment by Gov. Jim Pillen, whom the Ricketts family spent over $1.3 million helping elect (Nebraska Examiner, Jan. 12, 2023), and 2026 allegations by Osborn's campaign and the Nebraska Democratic Party that Ricketts was behind Democratic candidate William Forbes's primary run and later lawsuit, which his campaign denied. Senate roll-call votes were not researched, per instructions; note that rickettsforsenate.com is an opposition parody site, not his campaign site.",
+      "ethicsSearched": "Searched Senate Ethics Committee matters, STOCK Act and financial-disclosure issues, FEC enforcement, and civil or criminal cases; found no ethics-body finding or enforcement action. Not listed because they involve no formal complaint or finding: criticism of his January 2023 appointment by Gov. Jim Pillen, whom the Ricketts family spent over $1.3 million helping elect (Nebraska Examiner, Jan. 12, 2023), and 2026 allegations by Osborn's campaign and the Nebraska Democratic Party that Ricketts was behind Democratic candidate William Forbes's primary run and later lawsuit, which his campaign denied. Senate roll-call votes were not researched, per instructions; note that rickettsforsenate.com is an opposition parody site, not his campaign site. Rechecked Nov. 14, 2026 against the Senate Ethics Committee's letters and press releases.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -129679,7 +130676,28 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Senate Ethics Committee letters to members (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/letterstomembers"
+          },
+          {
+            "t": "Senate Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://www.ethics.senate.gov/public/index.cfm/pressreleases"
+          },
+          {
+            "t": "Nebraska Supreme Court: Sandoval v. Ricketts, 302 Neb. 138 (Jan. 25, 2019)",
+            "u": "https://www.nebraska.gov/apps-courts-epub/public/viewCertified?docId=N00011518PUB"
+          },
+          {
+            "t": "VICE: Nebraska's governor loves the death penalty so much it got him sued (Dec. 4, 2017)",
+            "u": "https://www.vice.com/en/article/nebraskas-governor-loves-the-death-penalty-so-much-it-got-him-sued/"
+          }
+        ]
+      }
     },
     {
       "id": "osborn",
@@ -129820,7 +130838,7 @@
           "note": "His documented union leadership matches the worker-focused message of his campaign; he has no legislative record to compare."
         }
       ],
-      "ethicsSearched": "Searched FEC complaints and enforcement, criminal and civil cases, and other formal complaints; found the two 2026 FEC complaints listed (both filed by Republican-aligned complainants but reported by Nebraska Public Media), with no disposition. Bloomberg reported in January 2024 that Kellogg's fired him for watching Netflix at work after the strike; no grievance or legal outcome could be confirmed, so it is not listed. Reports that the campaign restructured family payments came only from Fox News syndications and were not verified.",
+      "ethicsSearched": "Searched FEC complaints and enforcement, criminal and civil cases, and other formal complaints; found the two 2026 FEC complaints listed (both filed by Republican-aligned complainants but reported by Nebraska Public Media), with no disposition. Bloomberg reported in January 2024 that Kellogg's fired him for watching Netflix at work after the strike; no grievance or legal outcome could be confirmed, so it is not listed. Reports that the campaign restructured family payments came only from Fox News syndications and were not verified. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Osborn.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -130515,7 +131533,24 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Nebraska Public Media: Conservative group asks for investigation into Senate candidate Dan Osborn's campaign and PACs (Mar. 24, 2026)",
+            "u": "https://nebraskapublicmedia.org/en/news/news-articles/conservative-group-asks-for-investigation-into-senate-candidate-dan-osborns-campaign-and-pacs/"
+          },
+          {
+            "t": "Nebraska Public Media: U.S. Senate candidate Dan Osborn faces another election spending complaint (Apr. 14, 2026)",
+            "u": "https://nebraskapublicmedia.org/es/news/news-articles/us-senate-candidate-dan-osborn-faces-another-election-spending-complaint/"
+          }
+        ]
+      }
     },
     {
       "id": "jackson",
@@ -130689,7 +131724,7 @@
           "note": "His state legislative action on drug prices matches the stated priority, though the bill did not become law."
         }
       ],
-      "ethicsSearched": "Searched news coverage for Maine Ethics Commission complaints, investigations, criminal or civil cases and campaign-finance issues involving Jackson; found only the 2023 residency complaint (dismissed). FEC enforcement records and bar/other discipline were not separately checked, and the Vote Smart key-votes page was blocked (403).",
+      "ethicsSearched": "Searched news coverage for Maine Ethics Commission complaints, investigations, criminal or civil cases and campaign-finance issues involving Jackson; found only the 2023 residency complaint (dismissed). FEC enforcement records and bar/other discipline were not separately checked, and the Vote Smart key-votes page was blocked (403). Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Jackson.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -131471,7 +132506,24 @@
       ],
       "fecCandPast": [
         "H4ME02218"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Maine Public: Maine commission clears Senate President Troy Jackson in ethics case over residency rules (Oct. 25, 2023)",
+            "u": "https://www.mainepublic.org/politics/2023-10-25/maine-commission-clears-senate-president-troy-jackson-in-ethics-case-over-residency-rules"
+          },
+          {
+            "t": "Bangor Daily News: GOP lawmaker files ethics complaint against top Maine Democrat over residency allegations (Aug. 30, 2023)",
+            "u": "https://www.bangordailynews.com/2023/08/30/politics/gop-lawmaker-ethics-complaint-maine-democrat-troy-jackson-residency-allegations-n6hjn1me0n/"
+          }
+        ]
+      }
     },
     {
       "id": "peltola",
@@ -131612,7 +132664,7 @@
           "note": "Her vote against the bill matches her stated objection to a one-size-fits-all federal rule."
         }
       ],
-      "ethicsSearched": "Searched for House Ethics/Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC complaints and criminal or civil cases; found only the March 2026 NRSC complaint to the FEC (pending). Certified primary results were not located (status uses unofficial election-night returns), and Voteview showed no numeric DW-NOMINATE score in fetched content.",
+      "ethicsSearched": "Searched for House Ethics/Office of Congressional Ethics matters, STOCK Act or financial-disclosure issues, FEC complaints and criminal or civil cases; found only the March 2026 NRSC complaint to the FEC (pending). Certified primary results were not located (status uses unofficial election-night returns), and Voteview showed no numeric DW-NOMINATE score in fetched content. The October 2026 House Oversight and Alaska Department of Public Safety investigations of her campaign are listed. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -131632,6 +132684,27 @@
           ],
           "sev": "neutral",
           "status": "allegation",
+          "kind": "ethics"
+        },
+        {
+          "title": "House Oversight and Alaska state investigations of her campaign's alleged recruiting of a second \"Dan Sullivan\"",
+          "type": "Investigation",
+          "date": "2026-10-29",
+          "summary": "On Oct. 29, 2026, House Oversight Committee Chairman James Comer opened an investigation into allegations, first reported by The New York Times, that Peltola's campaign recruited challengers with a name nearly identical to Sen. Dan Sullivan's to confuse voters, and asked former campaign manager Elisa Rios and Democratic operative Jerid Kurtz for transcribed interviews on Nov. 5 and 6. The same day Gov. Mike Dunleavy directed the Alaska Department of Public Safety to investigate whether the alleged scheme violated state law and whether criminal or civil action was warranted. Peltola herself is not named as a subject. The Times quoted Rios as saying Peltola was not directly involved but was \"definitely aware\"; Rios later sought to retract her comments. The campaign said it \"has no involvement with either Sullivan campaign and did not recruit any candidates into the race.\"",
+          "outcome": "Open; no finding reported as of Nov. 14, 2026.",
+          "sources": [
+            {
+              "t": "House Oversight Committee: Chairman Comer seeks testimony (Oct. 29, 2026)",
+              "u": "https://oversight.house.gov/release/chairman-comer-seeks-testimony-from-democrat-operatives-who-plotted-to-rig-alaska-senate-race/"
+            },
+            {
+              "t": "The National News Desk: House panel launches probe into Peltola campaign over recruiting Senate candidates claims (Oct. 29, 2026)",
+              "u": "https://thenationaldesk.com/news/nation-world/house-panel-launches-probe-into-peltola-campaign-over-recruiting-senate-candidates-claims-dan-sullivan-james-comer-oversight-committee-alaska-democrats-dscc-mike-dunleavy-president-trump-rrt"
+            }
+          ],
+          "sev": "warn",
+          "status": "investigation",
+          "stage": "open",
           "kind": "ethics"
         }
       ],
@@ -133362,7 +134435,32 @@
       ],
       "fecCandPast": [
         "H2AK01158"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Alaska Public Media: GOP group complains Peltola spent campaign money while mum about running for office (March 30, 2026)",
+            "u": "https://alaskapublic.org/news/politics/washington-d-c/2026-03-30/gop-group-complains-peltola-spent-campaign-money-while-mum-about-running-for-office"
+          },
+          {
+            "t": "House Oversight Committee: Chairman Comer seeks testimony (Oct. 29, 2026)",
+            "u": "https://oversight.house.gov/release/chairman-comer-seeks-testimony-from-democrat-operatives-who-plotted-to-rig-alaska-senate-race/"
+          },
+          {
+            "t": "The National News Desk: House panel launches probe into Peltola campaign over recruiting Senate candidates claims (Oct. 29, 2026)",
+            "u": "https://thenationaldesk.com/news/nation-world/house-panel-launches-probe-into-peltola-campaign-over-recruiting-senate-candidates-claims-dan-sullivan-james-comer-oversight-committee-alaska-democrats-dscc-mike-dunleavy-president-trump-rrt"
+          }
+        ]
+      }
     },
     {
       "id": "hamilton",
@@ -133503,7 +134601,7 @@
           "note": "His organizing of a pastors' gathering followed from his stated objection to the denomination's decision."
         }
       ],
-      "ethicsSearched": "Searched for FEC or state ethics complaints, lawsuits, investigations and controversies involving Hamilton and Church of the Resurrection; found the April 2026 Kansas GOP FEC complaint (no reported outcome). Criminal records and IRS/church-politics enforcement were not separately checked, and certified Kansas Secretary of State primary results were not fetched (result taken from Wikipedia's table).",
+      "ethicsSearched": "Searched for FEC or state ethics complaints, lawsuits, investigations and controversies involving Hamilton and Church of the Resurrection; found the April 2026 Kansas GOP FEC complaint (no reported outcome). Criminal records and IRS/church-politics enforcement were not separately checked, and certified Kansas Secretary of State primary results were not fetched (result taken from Wikipedia's table). Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Hamilton.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -133835,7 +134933,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Kansas Reflector: GOP ethics complaint says Kansas City-area pastor improperly used church resources (April 24, 2026)",
+            "u": "https://kansasreflector.com/2026/04/24/gop-ethics-complaint-says-kansas-city-area-pastor-improperly-used-church-resources/"
+          }
+        ]
+      }
     },
     {
       "id": "mcollins",
@@ -133983,7 +135094,7 @@
           "note": "Collins voted for the tax cuts he described as a way to reduce mandatory spending, while his campaign says he supports Social Security and FactCheck.org notes the law reduces trust-fund revenue."
         }
       ],
-      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Conduct matters (found the 2025–26 referral), STOCK Act or financial-disclosure reports, FEC complaints or enforcement, and criminal or civil cases, and reviewed the controversies listed on Wikipedia and Flagpole. No STOCK Act violation, FEC enforcement action or criminal case involving Collins was found. The FEC enforcement (MUR) database and stock-trade trackers were not searched directly.",
+      "ethicsSearched": "Searched the web for House Ethics Committee and Office of Congressional Conduct matters (found the 2025–26 referral), STOCK Act or financial-disclosure reports, FEC complaints or enforcement, and criminal or civil cases, and reviewed the controversies listed on Wikipedia and Flagpole. No STOCK Act violation, FEC enforcement action or criminal case involving Collins was found. The FEC enforcement (MUR) database and stock-trade trackers were not searched directly. Rechecked Nov. 14, 2026 against the House Ethics Committee's press releases and the Office of Congressional Conduct's investigations.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -135304,7 +136415,40 @@
       ],
       "fecCandPast": [
         "H4GA10071"
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "House Ethics Committee press releases (checked Nov. 14, 2026)",
+            "u": "https://ethics.house.gov/press-releases"
+          },
+          {
+            "t": "Office of Congressional Conduct investigations (checked Nov. 14, 2026)",
+            "u": "https://conduct.house.gov/reports/investigations"
+          },
+          {
+            "t": "Georgia Recorder: More details released about ethics investigation into Congressman Mike Collins and former top aide (Jan. 6, 2026)",
+            "u": "https://georgiarecorder.com/briefs/more-details-released-about-ethics-investigation-into-congressman-mike-collins-and-former-top-aide/"
+          },
+          {
+            "t": "House Committee on Ethics: OCC Report and Findings, Rep. Mike Collins (Jan. 5, 2026)",
+            "u": "https://ethics.house.gov/wp-content/uploads/2026/01/OCC-Report-and-Findings-Rep.-Mike-Collins-1.5.26.pdf"
+          },
+          {
+            "t": "The Hill: House Ethics panel extends review of allegations into Collins, top aide",
+            "u": "https://thehill.com/homenews/5673886-house-ethics-committee-investigates-collins-phillips/"
+          },
+          {
+            "t": "NOTUS: Top Aide to Rep. Mike Collins Was Reimbursed for More Than $170,000 in Office Expenses",
+            "u": "https://www.notus.org/congress/mike-collins-aide-franking-office-reimbursements"
+          },
+          {
+            "t": "Flagpole: Mike Collins' Many Controversies, Explained (Sept. 14, 2026)",
+            "u": "https://flagpole.com/news/news-features/2026/09/14/mike-collins-many-controversies-explained/"
+          }
+        ]
+      }
     },
     {
       "id": "murphy",
@@ -135419,7 +136563,7 @@
           "note": "His explanation acknowledges the full disclosure report had not yet been filed, which matches the watchdog's account of the filing record."
         }
       ],
-      "ethicsSearched": "Searched for ethics complaints, lawsuits, attorney discipline, FEC enforcement and financial-disclosure issues; found the Sept. 2026 Campaign Legal Center financial-disclosure complaint. New Jersey attorney-discipline records and court dockets were not checked directly (a common name made news searches inconclusive), and no township-committee records from 2000–2003 were found.",
+      "ethicsSearched": "Searched for ethics complaints, lawsuits, attorney discipline, FEC enforcement and financial-disclosure issues; found the Sept. 2026 Campaign Legal Center financial-disclosure complaint. New Jersey attorney-discipline records and court dockets were not checked directly (a common name made news searches inconclusive), and no township-committee records from 2000–2003 were found. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which names Murphy.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -135429,7 +136573,7 @@
           "title": "Campaign Legal Center complaint over missing financial disclosure",
           "type": "Ethics body",
           "date": "2026-09-11",
-          "summary": "The Campaign Legal Center asked the Senate Ethics Committee to investigate Murphy and 11 other Senate candidates for failing to timely file the personal financial disclosure report required under the Ethics in Government Act; it noted he filed his FEC Statement of Candidacy on Jan. 2, 2026. Murphy said his campaign had filed preliminary paperwork and was awaiting instructions on filing the full report.",
+          "summary": "The Campaign Legal Center asked the Senate Ethics Committee to investigate Murphy and 10 other Senate candidates for failing to timely file the personal financial disclosure report required under the Ethics in Government Act; it noted he filed his FEC Statement of Candidacy on Jan. 2, 2026. Murphy said his campaign had filed preliminary paperwork and was awaiting instructions on filing the full report.",
           "outcome": "Pending; no Senate Ethics Committee action reported in coverage found.",
           "sources": [
             {
@@ -135719,7 +136863,20 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "The Washington Sun: Complaint Says Dozens of Congressional Candidates Failed to File Financial Disclosures (Sept. 11, 2026)",
+            "u": "https://washingtonsun.com/money/dozens-congressional-candidates-fail-file-financial-disclosures-complaint"
+          }
+        ]
+      }
     },
     {
       "id": "baisley",
@@ -135856,7 +137013,7 @@
           "note": "His criticism of revenue rising with property values matches a bill he carried to let local governments reduce property-tax collections."
         }
       ],
-      "ethicsSearched": "Searched the web for ethics complaints (including Colorado Independent Ethics Commission matters), lawsuits, criminal cases and campaign-finance complaints or fines involving Baisley, and reviewed his Wikipedia and Ballotpedia profiles and the FEC candidate page. None were found; he was not among the 17 legislators named in the 2025 Independent Ethics Commission complaints. Wikipedia notes that States United Action says he has promoted misinformation about the 2020 election, which is an advocacy assessment, not an enforcement matter. Colorado TRACER campaign-finance filings and the FEC enforcement (MUR) database were not searched directly. Only one statement-versus-action pairing was included because no other verbatim, dated Baisley statements tied to a specific legislative action were found within the research budget.",
+      "ethicsSearched": "Searched the web for ethics complaints (including Colorado Independent Ethics Commission matters), lawsuits, criminal cases and campaign-finance complaints or fines involving Baisley, and reviewed his Wikipedia and Ballotpedia profiles and the FEC candidate page. None were found; he was not among the 17 legislators named in the 2025 Independent Ethics Commission complaints. Wikipedia notes that States United Action says he has promoted misinformation about the 2020 election, which is an advocacy assessment, not an enforcement matter. Colorado TRACER campaign-finance filings and the FEC enforcement (MUR) database were not searched directly. Only one statement-versus-action pairing was included because no other verbatim, dated Baisley statements tied to a specific legislative action were found within the research budget. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which names Baisley.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -135866,10 +137023,30 @@
           "title": "No documented violations found",
           "type": "Disclosure & ethics check",
           "date": "Checked Oct 2026",
-          "summary": "Searched the web for ethics complaints (including Colorado Independent Ethics Commission matters), lawsuits, criminal cases and campaign-finance complaints or fines involving Baisley, and reviewed his Wikipedia and Ballotpedia profiles and the FEC candidate page. None were found; he was not among the 17 legislators named in the 2025 Independent Ethics Commission complaints. Wikipedia notes that States United Action says he has promoted misinformation about the 2020 election, which is an advocacy assessment, not an enforcement matter. Colorado TRACER campaign-finance filings and the FEC enforcement (MUR) database were not searched directly. Only one statement-versus-action pairing was included because no other verbatim, dated Baisley statements tied to a specific legislative action were found within the research budget.",
+          "summary": "Searched the web for ethics complaints (including Colorado Independent Ethics Commission matters), lawsuits, criminal cases and campaign-finance complaints or fines involving Baisley, and reviewed his Wikipedia and Ballotpedia profiles and the FEC candidate page. None were found; he was not among the 17 legislators named in the 2025 Independent Ethics Commission complaints. Wikipedia notes that States United Action says he has promoted misinformation about the 2020 election, which is an advocacy assessment, not an enforcement matter. Colorado TRACER campaign-finance filings and the FEC enforcement (MUR) database were not searched directly. Only one statement-versus-action pairing was included because no other verbatim, dated Baisley statements tied to a specific legislative action were found within the research budget. The Campaign Legal Center's September 2026 complaint over the missing financial disclosure, found in the Nov. 14, 2026 recheck, is listed separately.",
           "outcome": "None found",
           "sources": [],
           "sev": "good"
+        },
+        {
+          "title": "Campaign Legal Center complaint over missing financial disclosure",
+          "type": "Ethics body",
+          "date": "2026-09-11",
+          "summary": "The Campaign Legal Center asked the Senate Ethics Committee to investigate Baisley and 10 other Senate candidates for not filing the personal financial disclosure report the Ethics in Government Act requires; it listed Baisley's FEC Statement of Candidacy as filed Jan. 5, 2026, with no extension requested. It noted that Baisley has reported personal loans to the campaign, which a disclosure report would let voters check against personal assets.",
+          "outcome": "No Senate Ethics Committee action reported in the coverage found.",
+          "sources": [
+            {
+              "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+            },
+            {
+              "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+              "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+            }
+          ],
+          "sev": "neutral",
+          "status": "allegation",
+          "kind": "technical"
         }
       ],
       "fecMissing": false,
@@ -136094,7 +137271,20 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Campaign Legal Center: Calls for ethics investigations of nearly 80 congressional candidates (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/update/campaign-legal-center-calls-ethics-investigations-nearly-80-congressional-candidates"
+          }
+        ]
+      }
     },
     {
       "id": "stelson",
@@ -136212,7 +137402,7 @@
           "note": "Stelson says she had long voted for Democratic candidates; her formal party registration changed from Republican to Democrat in February 2023, before her first campaign."
         }
       ],
-      "ethicsSearched": "Searched the web for FEC complaints or enforcement, ethics complaints, lawsuits and residency or ballot challenges involving Stelson, and reviewed her Wikipedia and Ballotpedia profiles and campaign coverage (Capital-Star, WITF, WESA, Inquirer). No ethics, legal or campaign-finance enforcement matters were found. Documented campaign controversies that are not legal or ethics matters include her pre-2023 Republican registration, questions about her residence outside the district before 2024, and an on-air joke from about a decade earlier for which she apologized. The FEC enforcement (MUR) database was not searched directly. Only one statement-versus-action pairing was included because, as a never-elected candidate, she has few dated, verifiable actions to pair with her statements.",
+      "ethicsSearched": "Searched the web for FEC complaints or enforcement, ethics complaints, lawsuits and residency or ballot challenges involving Stelson, and reviewed her Wikipedia and Ballotpedia profiles and campaign coverage (Capital-Star, WITF, WESA, Inquirer). No ethics, legal or campaign-finance enforcement matters were found. Documented campaign controversies that are not legal or ethics matters include her pre-2023 Republican registration, questions about her residence outside the district before 2024, and an on-air joke from about a decade earlier for which she apologized. The FEC enforcement (MUR) database was not searched directly. Only one statement-versus-action pairing was included because, as a never-elected candidate, she has few dated, verifiable actions to pair with her statements. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Stelson.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -138151,7 +139341,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "conley",
@@ -138261,7 +139460,7 @@
           }
         }
       ],
-      "ethicsSearched": "Searched the web for FEC complaints or enforcement, Hatch Act or ethics matters, lawsuits and investigations involving Conley, and reviewed her Wikipedia profile and campaign coverage (City & State, Nextgov, NOTUS/Spotlight PA). An FEC complaint, filed August 14, 2026 by Putnam County Republican chairman Andres Gil and alleging that a de facto campaign spokesperson was paid by outside groups (MD PAC and Precinct LLC), was found only in NRCC materials and a reprint of an NRCC release. It is not listed here because no independent source was found, and its FEC status is unknown. Republican ads criticizing her work for AI firms tied to Palantir are a campaign controversy, not a legal or ethics matter. The FEC enforcement (MUR) database was not searched directly. Only one statement-versus-action pairing was included because few dated, verifiable actions of hers outside her government roles were found within the research budget.",
+      "ethicsSearched": "Searched the web for FEC complaints or enforcement, Hatch Act or ethics matters, lawsuits and investigations involving Conley, and reviewed her Wikipedia profile and campaign coverage (City & State, Nextgov, NOTUS/Spotlight PA). An FEC complaint, filed August 14, 2026 by Putnam County Republican chairman Andres Gil and alleging that a de facto campaign spokesperson was paid by outside groups (MD PAC and Precinct LLC), was found only in NRCC materials and a reprint of an NRCC release. It is not listed here because no independent source was found, and its FEC status is unknown. Republican ads criticizing her work for AI firms tied to Palantir are a campaign controversy, not a legal or ethics matter. The FEC enforcement (MUR) database was not searched directly. Only one statement-versus-action pairing was included because few dated, verifiable actions of hers outside her government roles were found within the research budget. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Conley.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -139356,7 +140555,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "rutinel",
@@ -139545,7 +140753,7 @@
           "note": "His stated position on clean air matches the environmental-justice bill he sponsored."
         }
       ],
-      "ethicsSearched": "Searched for Colorado Independent Ethics Commission complaints and decisions, state or FEC campaign-finance complaints, lawsuits, investigations and fines involving Rutinel or his Climate Refarm nonprofit. The only documented item was FACT's June 2026 request to the Independent Ethics Commission, with no outcome found. Attack pieces from the Washington Free Beacon and the NRCC were not used.",
+      "ethicsSearched": "Searched for Colorado Independent Ethics Commission complaints and decisions, state or FEC campaign-finance complaints, lawsuits, investigations and fines involving Rutinel or his Climate Refarm nonprofit. The only documented item was FACT's June 2026 request to the Independent Ethics Commission, with no outcome found. Attack pieces from the Washington Free Beacon and the NRCC were not used. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Rutinel.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -140396,7 +141604,20 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "FACT: FACT Urges Independent Ethics Commission to Investigate Manny Rutinel (June 9, 2026)",
+            "u": "https://www.factdc.org/post/fact-urges-independent-ethics-commission-to-investigate-manny-rutinel-for-potential-ethics-violation"
+          }
+        ]
+      }
     },
     {
       "id": "bohannan",
@@ -140537,7 +141758,7 @@
           "note": "Her 2021 criticism of the bill matches her vote against it."
         }
       ],
-      "ethicsSearched": "Searched for Iowa House ethics complaints, FEC or Iowa Ethics and Campaign Disclosure Board actions, lawsuits, investigations and bar discipline involving Bohannan, and found no documented findings or cases. Her 2024 recount request was a lawful election procedure and is listed under record. Not checked: FEC filings to verify her stated policy of not taking PAC donations.",
+      "ethicsSearched": "Searched for Iowa House ethics complaints, FEC or Iowa Ethics and Campaign Disclosure Board actions, lawsuits, investigations and bar discipline involving Bohannan, and found no documented findings or cases. Her 2024 recount request was a lawful election procedure and is listed under record. Not checked: FEC filings to verify her stated policy of not taking PAC donations. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Bohannan.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -142270,7 +143491,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "merrin",
@@ -142422,7 +143652,7 @@
           "note": "He voted for HB 6 in 2019; by 2023, after the bribery scandal, he was criticizing House leadership for blocking a vote to repeal the remaining subsidies."
         }
       ],
-      "ethicsSearched": "Searched for Ohio Ethics Commission and Joint Legislative Ethics Committee actions, Ohio Elections Commission and FEC complaints, criminal or civil cases, and HB 6 scandal links involving Merrin. No charges, fines or formal ethics findings were found. Official Ohio Legislature roll-call pages could not be loaded (certificate error), so the date of his HB 6 vote is not confirmed from an official roll call. A reported 2024 Columbus Dispatch story about his Toledo rental properties and lead-safe status could not be retrieved or confirmed by another outlet, so it is not listed.",
+      "ethicsSearched": "Searched for Ohio Ethics Commission and Joint Legislative Ethics Committee actions, Ohio Elections Commission and FEC complaints, criminal or civil cases, and HB 6 scandal links involving Merrin. No charges, fines or formal ethics findings were found. Official Ohio Legislature roll-call pages could not be loaded (certificate error), so the date of his HB 6 vote is not confirmed from an official roll call. A reported 2024 Columbus Dispatch story about his Toledo rental properties and lead-safe status could not be retrieved or confirmed by another outlet, so it is not listed. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Merrin.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -143236,7 +144466,24 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "13abc: Merrin campaign responds to new Kaptur ad calling for his indictment (Oct. 20, 2024)",
+            "u": "https://www.13abc.com/2024/10/20/merrin-campaign-responds-new-kaptur-ad-calling-his-indictment/"
+          },
+          {
+            "t": "News 5 Cleveland (Jan. 3, 2023)",
+            "u": "https://www.news5cleveland.com/news/politics/ohio-politics/who-is-likely-incoming-ohio-house-speaker-derek-merrin"
+          }
+        ]
+      }
     },
     {
       "id": "braun",
@@ -143413,7 +144660,7 @@
           "note": "He voted against the bill he publicly warned about."
         }
       ],
-      "ethicsSearched": "Searched the web for ethics complaints (Washington Legislative Ethics Board), Public Disclosure Commission and FEC complaints or enforcement, lawsuits and investigations involving John Braun, and reviewed his Ballotpedia profile and campaign coverage (Washington State Standard, OPB, MyNorthwest). No documented ethics findings, enforcement actions or legal cases were found. The Legislative Ethics Board opinions list, PDC enforcement records and the FEC MUR database were not searched directly. The request described him as a former Senate Republican leader, but Washington State Standard coverage on Oct. 1, 2026 and OPB in July 2026 still describe him as the current Senate Republican (minority) leader, so he is listed that way. His exact birth year was not confirmed (he was reported as 58 in August 2025).",
+      "ethicsSearched": "Searched the web for ethics complaints (Washington Legislative Ethics Board), Public Disclosure Commission and FEC complaints or enforcement, lawsuits and investigations involving John Braun, and reviewed his Ballotpedia profile and campaign coverage (Washington State Standard, OPB, MyNorthwest). No documented ethics findings, enforcement actions or legal cases were found. The Legislative Ethics Board opinions list, PDC enforcement records and the FEC MUR database were not searched directly. The request described him as a former Senate Republican leader, but Washington State Standard coverage on Oct. 1, 2026 and OPB in July 2026 still describe him as the current Senate Republican (minority) leader, so he is listed that way. His exact birth year was not confirmed (he was reported as 58 in August 2025). Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Braun.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -144390,7 +145637,16 @@
           "out": []
         }
       },
-      "funderPos": []
+      "funderPos": [],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "flores",
@@ -144523,7 +145779,7 @@
           "note": "He did work as a career federal prosecutor during the Biden administration, but whether that makes him \"Biden DOJ\" is a political characterization, not a documented fact."
         }
       ],
-      "ethicsSearched": "Searched the web for ethics complaints, State Bar of Texas discipline, FEC complaints or enforcement, lawsuits and investigations involving Eric Flores, and reviewed his Ballotpedia profile and campaign coverage (Texas Tribune, AP/WSLS, KRGV, Spectrum News). No documented ethics findings, bar discipline, enforcement actions or legal cases against him were found. A Raw Story report about his defense of a school coach and an American Prospect article critical of a campaign message were seen only in search results and not reviewed. They concern his legal representation of clients and campaign messaging, not findings against him, so they are not listed. The State Bar of Texas attorney-discipline database and the FEC MUR database were not searched directly. The years he served as Alton city attorney and municipal judge and his exact birth year were not confirmed.",
+      "ethicsSearched": "Searched the web for ethics complaints, State Bar of Texas discipline, FEC complaints or enforcement, lawsuits and investigations involving Eric Flores, and reviewed his Ballotpedia profile and campaign coverage (Texas Tribune, AP/WSLS, KRGV, Spectrum News). No documented ethics findings, bar discipline, enforcement actions or legal cases against him were found. A Raw Story report about his defense of a school coach and an American Prospect article critical of a campaign message were seen only in search results and not reviewed. They concern his legal representation of clients and campaign messaging, not findings against him, so they are not listed. The State Bar of Texas attorney-discipline database and the FEC MUR database were not searched directly. The years he served as Alton city attorney and municipal judge and his exact birth year were not confirmed. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Flores.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -145481,7 +146737,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "beltran",
@@ -145633,7 +146898,7 @@
           "note": "After withdrawing his 2023 amendment, he refiled open carry as a bill in 2024, consistent with his stated support for it."
         }
       ],
-      "ethicsSearched": "Searched the web for Florida Commission on Ethics complaints, Florida Bar discipline, FEC or state campaign-finance enforcement, lawsuits and investigations involving Mike Beltran, and reviewed his Ballotpedia and Wikipedia profiles and coverage (WUSF, FOX 13, Creative Loafing, Florida Phoenix). No ethics findings, bar discipline, enforcement actions or cases against him were found. He was the plaintiff in an August 2026 suit against the super PAC Conservative Solutions for America over a doctored mailer image; a judge later dissolved his restraining order. Because it is not a matter against him, it appears only as context in the statements. The Florida Commission on Ethics and Florida Bar databases and the FEC MUR database were not searched directly. The exact primary vote count was not confirmed from an official source because the NBC, Florida Politics, The Hill and WFLA results pages were blocked.",
+      "ethicsSearched": "Searched the web for Florida Commission on Ethics complaints, Florida Bar discipline, FEC or state campaign-finance enforcement, lawsuits and investigations involving Mike Beltran, and reviewed his Ballotpedia and Wikipedia profiles and coverage (WUSF, FOX 13, Creative Loafing, Florida Phoenix). No ethics findings, bar discipline, enforcement actions or cases against him were found. He was the plaintiff in an August 2026 suit against the super PAC Conservative Solutions for America over a doctored mailer image; a judge later dissolved his restraining order. Because it is not a matter against him, it appears only as context in the statements. The Florida Commission on Ethics and Florida Bar databases and the FEC MUR database were not searched directly. The exact primary vote count was not confirmed from an official source because the NBC, Florida Politics, The Hill and WFLA results pages were blocked. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Beltran.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -146002,7 +147267,16 @@
           "agree": 0,
           "n": 0
         }
-      ]
+      ],
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "colom",
@@ -146157,7 +147431,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Mississippi Free Press coverage for ethics complaints, lawsuits and investigations involving Colom; none were found. The 2023 dispute over his federal judicial nomination (Sen. Hyde-Smith said he had received money from a PAC funded by George Soros, which he denied) is a political controversy, not a legal or ethics finding. The FEC enforcement (MUR) database, the Mississippi Bar and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Mississippi Free Press coverage for ethics complaints, lawsuits and investigations involving Colom; none were found. The 2023 dispute over his federal judicial nomination (Sen. Hyde-Smith said he had received money from a PAC funded by George Soros, which he denied) is a political controversy, not a legal or ethics finding. The FEC enforcement (MUR) database, the Mississippi Bar and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Colom.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -146389,7 +147663,16 @@
       "notVoted": {},
       "assoc": {},
       "funderPos": [],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "andrews",
@@ -146544,7 +147827,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and CBS News coverage for ethics complaints, lawsuits and investigations involving Andrews; none were found. Campaign controversies that are not legal or ethics matters: Rep. Nancy Mace's 2022 ads attacking her hospital's care for transgender youth, and an Oct. 2026 slur against her by President Trump. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and CBS News coverage for ethics complaints, lawsuits and investigations involving Andrews; none were found. Campaign controversies that are not legal or ethics matters: Rep. Nancy Mace's 2022 ads attacking her hospital's care for transgender youth, and an Oct. 2026 slur against her by President Trump. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the Senate Ethics Committee on candidates' missing financial disclosures, which does not name Andrews.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -146746,7 +148029,16 @@
       "notVoted": {},
       "assoc": {},
       "funderPos": [],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the Senate Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20Senate%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "mendoza",
@@ -146804,7 +148096,7 @@
         }
       ],
       "statements": [],
-      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Mendoza; none were found. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Mendoza; none were found. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Mendoza.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -147187,7 +148479,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "villegas",
@@ -147261,7 +148562,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Villegas; none were found. Intra-party disputes (the DCCC first backing his primary rival) and outside spending against him are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Villegas; none were found. Intra-party disputes (the DCCC first backing his primary rival) and outside spending against him are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Villegas.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -147659,7 +148960,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "dandiya",
@@ -147733,7 +149043,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile and Ballotpedia News coverage for ethics complaints, lawsuits and investigations involving Dandiya; none were found. Her campaign website could not be read (it returned an empty page). Her 2020 change of party registration and her move from the 21st to the 22nd District after redistricting are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile and Ballotpedia News coverage for ethics complaints, lawsuits and investigations involving Dandiya; none were found. Her campaign website could not be read (it returned an empty page). Her 2020 change of party registration and her move from the 21st to the 22nd District after redistricting are not ethics matters. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Dandiya.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -147935,7 +149245,16 @@
       "notVoted": {},
       "assoc": {},
       "funderPos": [],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "tronegarriott",
@@ -148072,7 +149391,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Trone Garriott; none were found. Her 29-vote 2024 state Senate win after a recount is an election result, not an ethics matter. Her Iowa Senate votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Trone Garriott; none were found. Her 29-vote 2024 state Senate win after a recount is an election result, not an ethics matter. Her Iowa Senate votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Trone Garriott.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -148445,7 +149764,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "lawrence",
@@ -148519,7 +149847,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia profile and Michigan Public coverage. Found: a 2013 felony plea (resisting or obstructing a police officer) from a pipeline protest, later expunged, which he defended in 2026 (\"I stand by the righteousness of that action\"); criticism in July 2026 of 2024 podcast remarks, which he called \"clumsy\"; and CNN KFile's September 2026 report that he deleted posts from 2020–2022. No ethics complaint, lawsuit or investigation was found. His campaign website returned an error. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile and Michigan Public coverage. Found: a 2013 felony plea (resisting or obstructing a police officer) from a pipeline protest, later expunged, which he defended in 2026 (\"I stand by the righteousness of that action\"); criticism in July 2026 of 2024 podcast remarks, which he called \"clumsy\"; and CNN KFile's September 2026 report that he deleted posts from 2020–2022. No ethics complaint, lawsuit or investigation was found. His campaign website returned an error. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Lawrence.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -148995,7 +150323,20 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          },
+          {
+            "t": "Wikipedia: William Lawrence (Michigan politician)",
+            "u": "https://en.wikipedia.org/wiki/William_Lawrence_(Michigan_politician)"
+          }
+        ]
+      }
     },
     {
       "id": "hines",
@@ -149030,7 +150371,7 @@
       "recordType": "none",
       "record": [],
       "statements": [],
-      "ethicsSearched": "Reviewed her Wikipedia profile and the 10th District's page; no ethics complaints, lawsuits or investigations were found. No campaign website could be found or read, so no platform or tagged statements are on file yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile and the 10th District's page; no ethics complaints, lawsuits or investigations were found. No campaign website could be found or read, so no platform or tagged statements are on file yet. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Hines.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -149368,7 +150709,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "ager",
@@ -149464,7 +150814,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and WLOS coverage for ethics complaints, lawsuits and investigations involving Ager; none were found. His company losing a school beef contract in 2025, when a pandemic-era program ended, is a business matter, not an ethics one. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and WLOS coverage for ethics complaints, lawsuits and investigations involving Ager; none were found. His company losing a school beef contract in 2025, when a pandemic-era program ended, is a business matter, not an ethics one. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Ager.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -149792,7 +151142,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "poindexter",
@@ -149850,7 +151209,7 @@
         }
       ],
       "statements": [],
-      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Cleveland 19 coverage. Cleveland 19 reported he acknowledged a marijuana possession arrest in the late 1990s (his opponent's ads alleged more, which he denies); Wikipedia notes teenage misdemeanor charges. No ethics complaint, lawsuit or investigation was found. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Cleveland 19 coverage. Cleveland 19 reported he acknowledged a marijuana possession arrest in the late 1990s (his opponent's ads alleged more, which he denies); Wikipedia notes teenage misdemeanor charges. No ethics complaint, lawsuit or investigation was found. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Poindexter.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -150112,7 +151471,16 @@
       "notVoted": {},
       "assoc": {},
       "funderPos": [],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "brooks",
@@ -150208,7 +151576,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his campaign website and IAFF coverage for ethics complaints, lawsuits and investigations involving Brooks; none were found. No Wikipedia article was found for him. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his campaign website and IAFF coverage for ethics complaints, lawsuits and investigations involving Brooks; none were found. No Wikipedia article was found for him. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Brooks.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -150596,7 +151964,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "cognetti",
@@ -150707,7 +152084,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Spotlight PA/NOTUS coverage for ethics complaints, lawsuits and investigations involving Cognetti; none were found. The reporting on PAC money reaching her campaign through other committees is under Keeps Their Word. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Spotlight PA/NOTUS coverage for ethics complaints, lawsuits and investigations involving Cognetti; none were found. The reporting on PAC money reaching her campaign through other committees is under Keeps Their Word. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Cognetti.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -151110,7 +152487,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "pulido",
@@ -151168,7 +152554,7 @@
         }
       ],
       "statements": [],
-      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Texas Tribune coverage for ethics complaints, lawsuits and investigations involving Pulido; none were found. Criticism of his old social media posts is a campaign controversy, not an ethics matter. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and Texas Tribune coverage for ethics complaints, lawsuits and investigations involving Pulido; none were found. Criticism of his old social media posts is a campaign controversy, not an ethics matter. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Pulido.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -151446,7 +152832,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "luria",
@@ -151531,7 +152926,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Luria; none were found. Her 2019–2023 House votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile and campaign website for ethics complaints, lawsuits and investigations involving Luria; none were found. Her 2019–2023 House votes are not reviewed here yet. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Luria.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -151799,7 +153194,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "cooke",
@@ -151921,7 +153325,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Civic Media coverage for ethics complaints, lawsuits and investigations involving Cooke; none were found. Criticism of her political consulting income (Milwaukee Journal Sentinel, 2024 and 2026) is a campaign controversy, not a finding of wrongdoing. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed her Wikipedia profile, campaign website and Civic Media coverage for ethics complaints, lawsuits and investigations involving Cooke; none were found. Criticism of her political consulting income (Milwaukee Journal Sentinel, 2024 and 2026) is a campaign controversy, not a finding of wrongdoing. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Cooke.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -152269,7 +153673,16 @@
           "n": 0
         }
       ],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "ojeda",
@@ -152385,7 +153798,7 @@
           }
         }
       ],
-      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and NC Newsroom (WFAE/WUNC) coverage for ethics complaints, lawsuits and investigations involving Ojeda; none were found. Not ethics matters: his January 2019 resignation from the West Virginia Senate (citing frustration; he later asked to rescind it) and his profane 2019 remarks about politicians and the NRA. The FEC enforcement (MUR) database and court records were not searched directly.",
+      "ethicsSearched": "Reviewed his Wikipedia profile, campaign website and NC Newsroom (WFAE/WUNC) coverage for ethics complaints, lawsuits and investigations involving Ojeda; none were found. Not ethics matters: his January 2019 resignation from the West Virginia Senate (citing frustration; he later asked to rescind it) and his profane 2019 remarks about politicians and the NRA. The FEC enforcement (MUR) database and court records were not searched directly. Rechecked Nov. 14, 2026 with news searches for new ethics, FEC and court complaints, and against the Campaign Legal Center's Sept. 11, 2026 letter to the House Ethics Committee on candidates' missing financial disclosures, which does not name Ojeda.",
       "stateIdeology": null,
       "bills": [],
       "sponsoredCount": null,
@@ -152547,7 +153960,16 @@
       "notVoted": {},
       "assoc": {},
       "funderPos": [],
-      "resultsOnly": true
+      "resultsOnly": true,
+      "legalReview": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "t": "Campaign Legal Center letter to the House Ethics Committee on candidates' missing financial disclosures (Sept. 11, 2026)",
+            "u": "https://campaignlegal.org/sites/default/files/2026-09/9.11.26%20Letter%20from%20CLC%20to%20House%20Ethics%20Committee.pdf"
+          }
+        ]
+      }
     }
   ],
   "ie": {
