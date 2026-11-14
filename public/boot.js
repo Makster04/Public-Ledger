@@ -62,9 +62,9 @@ try {
   // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).
   const el=await elect;window.MEMBERS_ELECT=el?.members||[];window.ELECT_RACES=el?.races||[];window.ELECT_INFO=el?{built:el.built,source:el.source}:null;
   await import('./app.js');
-  // The ticker under the top bar (public/ticker.js): race calls, grade changes, promise checks, the trackers' money, FEC
-  // reports, site updates, and the refresh's newest trades and disclosures. A person is named from the profiles and both
-  // chambers' directories.
+  // The ticker under the top bar (public/ticker.js): the refresh's newest stock trades and the trackers' PAC checks. The
+  // rest of the news is in the home page's Latest updates cards. A person is named from the profiles and both chambers'
+  // directories.
   import('./ticker.js').then(({mountTicker,pagePeople})=>{
     mountTicker(document.getElementById('ticker'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:pagePeople(window)});
   }).catch(()=>{});

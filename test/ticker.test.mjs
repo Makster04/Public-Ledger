@@ -7,7 +7,7 @@ import research from '../public/research.json' with {type:'json'};
 import log from '../public/score-presentation-log.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 import senate from '../public/senate.json' with {type:'json'};
-import {TICKER,raceItems,siteItems,ratingItems,liveItems,newsItems,fecItems,allItems,mixKinds,tickerItems,tickerHTML,latestHTML,shortDate,mountTicker,isFresh,seatLabel,pagePeople} from '../public/ticker.js';
+import {TICKER,raceItems,siteItems,ratingItems,liveItems,newsItems,fecItems,legalItems,allItems,mixKinds,stripData,stripHTML,cardItems,cardHTML,cardsHTML,amountShort,assetShort,pacShort,latestHTML,shortDate,mountTicker,mountCards,isFresh,seatLabel,pagePeople} from '../public/ticker.js';
 import {tickerRecent,tickerMerge,tickerList,getTicker,feedSignature,statement,TICKER_KINDS,TICKER_DAYS,TICKER_VERSION} from '../src/refresh.mjs';
 import {promiseTopic} from '../public/ticker.js';
 import {openDatabase} from '../scripts/sqlite.mjs';
@@ -16,12 +16,12 @@ const people=new Map();for(const p of [...house.members,...senate.senators,...re
 const NOV9=Date.parse('2026-11-09T15:00:00Z'),NOV14=Date.parse('2026-11-14T15:00:00Z');
 const text=x=>x.parts.map(p=>typeof p==='string'?p:p.grade?p.grade:`${p.name} (${p.party})`).join('');
 
-test('the windows: the strip\'s 7 days, the page\'s 45; a timestamp exactly, a date alone counted from noon UTC that day',()=>{
-  assert.deepEqual([TICKER.days,TICKER.fill,TICKER.pageDays,TICKER.lateDays],[7,6,45,45]);
-  assert.equal(isFresh('2026-11-03T00:00:00Z',NOV9),true);assert.equal(isFresh('2026-11-02T14:00:00Z',NOV9),false,'7 days and an hour before');
-  assert.equal(isFresh('2026-11-03',NOV9),true,'a date alone: from noon that day');assert.equal(isFresh('2026-11-02',NOV9),false,'noon 7 days and 3 hours before');
+test('the windows: the page\'s 45 days by default; a timestamp exactly, a date alone counted from noon UTC that day',()=>{
+  assert.deepEqual([TICKER.trades,TICKER.pac,TICKER.cards,TICKER.pageDays,TICKER.lateDays],[24,12,16,45,45]);
+  assert.equal(isFresh('2026-11-03T00:00:00Z',NOV9,7),true);assert.equal(isFresh('2026-11-02T14:00:00Z',NOV9,7),false,'7 days and an hour before');
+  assert.equal(isFresh('2026-11-03',NOV9,7),true,'a date alone: from noon that day');assert.equal(isFresh('2026-11-02',NOV9,7),false,'noon 7 days and 3 hours before');
   assert.equal(isFresh('2026-11-08',NOV9,1),false,'a 1-day window: yesterday, past noon today');assert.equal(isFresh('2026-11-09',NOV9,1),true);
-  assert.equal(isFresh('2026-11-12',NOV9),false,'a date to come');assert.equal(isFresh('',NOV9),false);
+  assert.equal(isFresh('2026-11-12',NOV9),false,'a date to come');assert.equal(isFresh('',NOV9),false);assert.equal(isFresh('2026-09-27',NOV9),true,'45 days by default');
   assert.equal(isFresh('2026-09-27',NOV9,TICKER.pageDays),true);assert.equal(isFresh('2026-09-20',NOV9,TICKER.pageDays),false);
 });
 
@@ -60,6 +60,13 @@ test('the refresh\'s trades (with how late they were filed) and annual reports (
   assert.deepEqual(items.map(text),['Ossoff (D) reported a sale of $1,001–$15,000 in AAPL (spouse) · filed 33 days late','Ossoff (D) reported a purchase in MSFT',
     'Begich (R) filed their 2025 annual report: net worth $1.10M–$3.60M, up from $900K–$2.40M in 2024','Collins (R) filed their 2025 annual financial disclosure']);
   assert.deepEqual(items.map(x=>[x.tag,x.href]),[['Stock trade','#ossoff-unbought'],['Stock trade','#ossoff-unbought'],['Net worth','#begich-unbought'],['Disclosure','#collins-unbought']]);
+  // What the strip and the net worth card show.
+  assert.deepEqual(items[0].trade,{dir:'sell',sym:'AAPL',amount:'$1K–$15K',late:33,owner:'spouse'});
+  assert.deepEqual(items[1].trade,{dir:'buy',sym:'MSFT',amount:'',late:0,owner:null});
+  assert.deepEqual(items[2].w,{worth:[1100000,3600000],was:[900000,2400000],wasYear:2024,year:2025});
+  assert.equal(amountShort('$1,000,001 - $5,000,000'),'$1M–$5M');assert.equal(assetShort('Apple Inc. Common Stock'),'Apple');
+  assert.equal(pacShort('GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)'),'GE Aerospace PAC');
+  assert.equal(pacShort('THE BOEING COMPANY PAC'),'Boeing PAC');
 });
 
 test('the news build\'s items: grade changes, promise checks, the trackers\' PAC checks and super PAC filings',()=>{
@@ -101,36 +108,63 @@ test('FEC reports: one item a report date, with how many campaigns and who raise
   assert.deepEqual([items[0].tag,items[0].href,items[0].date],['FEC reports','#rankings','2026-10-14']);
 });
 
-test('the strip: races still counting first, then the last 7 days, the newest of each other kind, each kind in turn, filled to 6',()=>{
+test('the strip: the newest stock trades and PAC checks in 45 days, newest first; mixing kinds in turn',()=>{
   const n=(key,kind,date,extra={})=>({key,kind,tag:kind,date,order:2,parts:[key],...extra});
   assert.deepEqual(mixKinds([n('g1','grade','2026-11-13'),n('g2','grade','2026-11-12'),n('g3','grade','2026-11-11'),n('p1','promise','2026-11-10'),n('t1','trade','2026-11-09'),n('p2','promise','2026-11-08')]).map(x=>x.key),
     ['g1','p1','t1','g2','p2','g3'],'one of each kind in turn, the newest kind first');
-  const items=tickerItems({research,log:log.entries,ratings:null,people,news:{items:[{key:'g',kind:'grade',id:'marshall',grade:'word',from:67,to:85,fromLetter:'D',toLetter:'B',why:'x',date:'2026-11-14'}]}},{now:NOV14});
-  assert.equal(items[0].tag,'Still counting');assert.ok(items.length<=TICKER.limit);
-  assert.ok(items.some(x=>x.kind==='grade'),'this week\'s grade change');
-  // A quiet week: filled to 6 with the newest older news.
-  const quiet=tickerItems({research:{races:[]},log:[],ratings:null,people,news:{items:[1,2,3,4,5,6,7,8].map(i=>({key:`p${i}`,kind:'promise',id:'booker',promise:'a@2021-04-21',status:'kept',quote:`q${i}`,date:`2026-10-${10+i}`}))}},{now:NOV14});
-  assert.deepEqual(quiet.map(x=>x.key),['p8','p7','p6','p5','p4','p3']);
-  // A week of grade changes, a stock trade from 3 weeks ago and an older one: the week, and the newest trade.
-  const busy=tickerItems({research:{races:[]},log:[],ratings:null,people,live:{items:[{kind:'trade',subject:'ossoff',id:'t1',disclosed:'2026-10-24',type:'sale',ticker:'AAPL'},{kind:'trade',subject:'ossoff',id:'t2',disclosed:'2026-10-20',type:'purchase',ticker:'MSFT'}]},
-    news:{items:[1,2,3,4,5,6,7].map(i=>({key:`g${i}`,kind:'grade',id:'marshall',grade:'word',from:60+i,to:70+i,fromLetter:'D',toLetter:'C',why:'x',date:'2026-11-13'}))}},{now:NOV14});
-  assert.deepEqual(busy.map(x=>x.kind),['grade','trade','grade','grade','grade','grade','grade','grade'],'the newest trade in turn with the week; the older one left for the page');
-  assert.match(text(busy[1]),/Ossoff \(D\) reported a sale in AAPL/);
-  assert.deepEqual(tickerItems({research:{races:[]},log:[],ratings:null,people},{now:Date.parse('2027-03-01')}),[],'nothing in 45 days: no ticker');
+  const live={items:[{kind:'trade',subject:'ossoff',id:'t1',disclosed:'2026-11-12',type:'sale',ticker:'AAPL',amount:'$1,001 - $15,000'},{kind:'trade',subject:'ossoff',id:'t2',disclosed:'2026-10-20',type:'purchase',ticker:'MSFT'},
+    {kind:'trade',subject:'ossoff',id:'t3',disclosed:'2026-08-01',type:'purchase',ticker:'OLD'}]};
+  const news={items:[{key:'l1',kind:'lobby',tracker:'defense',pac:'THE BOEING COMPANY PAC',amount:1000,date:'2026-10-12',ids:['tonko','kamlagerdove']},{key:'g',kind:'grade',id:'marshall',grade:'word',from:67,to:85,fromLetter:'D',toLetter:'B',why:'x',date:'2026-11-14'}]};
+  const strip=stripData(allItems({research:{races:[]},log:[],ratings:null,people,live,news},{now:NOV14}));
+  assert.deepEqual(strip.trades.map(x=>x.trade.sym),['AAPL','MSFT'],'45 days, newest first');
+  assert.deepEqual(strip.pac.map(x=>x.l.pac),['Boeing PAC']);
+  assert.deepEqual(stripData(allItems({research:{races:[]},log:[],ratings:null,people},{now:NOV14})),{trades:[],pac:[]});
   assert.equal(shortDate('2026-11-04'),'Nov 4');assert.equal(shortDate('2026-11-09T09:00:00Z'),'Nov 9');
 });
 
-test('the strip\'s markup: escaped text, grades as letters, the loop\'s second copy hidden, the link to the Latest updates page',()=>{
-  const items=[{key:'a',kind:'site',tag:'Site update',date:'2026-11-08',order:3,href:'#method',parts:['<script>x</script> & more']},
-    {key:'b',kind:'grade',tag:'Grade change',date:'2026-11-14',order:2,href:'#ossoff-word',parts:[{name:'Ossoff',party:'D'},' ',{grade:'B'}]}];
-  const html=tickerHTML(items);
-  assert.ok(!html.includes('<script>')&&html.includes('&lt;script&gt;x&lt;/script&gt; &amp; more'));
-  assert.match(html,/<b class="tk-d">Ossoff \(D\)<\/b> <b class="gr-B">B<\/b>/);
-  assert.match(html,/<span class="tk-tag tk-grade"><span aria-hidden="true">🎓<\/span>Grade change<\/span>/);
-  assert.match(html,/<span>Latest<\/span>/);assert.match(html,/class="tk-all" href="#latest"/);
-  assert.match(html,/<div class="tk-set" aria-hidden="true">.*tabindex="-1"/s);
-  assert.equal((html.match(/class="tk-item"/g)||[]).length,4,'two copies of each');
-  assert.equal(tickerHTML([]),'');
+test('the strip\'s markup: TRADES and PAC MONEY labeled, ▲ and ▼, late and owner tags, escaped, looped, the link to the page',()=>{
+  const trade=(id,dir,sym,extra={})=>({key:id,kind:'trade',tag:'Stock trade',date:'2026-11-12',href:'#ossoff-unbought',id:'ossoff',trade:{dir,sym,amount:'$1K–$15K',late:0,owner:null,...extra},parts:[]});
+  const pac={key:'l',kind:'lobby',tag:'Lobby money',date:'2026-10-12',href:'#trackers-defense',l:{pac:'Boeing <PAC>',amount:1000,ids:['tonko','kamlagerdove'],tracker:'Big Defense'},parts:[]};
+  const html=stripHTML({trades:[trade('a','buy','NVDA'),trade('b','sell','AAPL',{late:12,owner:'spouse'})],pac:[pac]},{people});
+  assert.match(html,/<span class="tk-label tk-l-trades">.*<span>Trades<\/span>/);assert.match(html,/<span class="tk-label tk-l-pac">.*<span>PAC money<\/span>/);
+  assert.match(html,/<span class="tk-arrow tk-buy" aria-label="Bought">▲<\/span><b class="tk-sym">NVDA<\/b><span class="tk-d">Ossoff \(D-GA\)<\/span><span class="tk-amt">\$1K–\$15K<\/span>/);
+  assert.match(html,/tk-sell" aria-label="Sold">▼.*<span class="tk-own">spouse<\/span><span class="tk-late">12 days late<\/span>/);
+  assert.match(html,/Boeing &lt;PAC&gt;<\/span><span class="tk-to" aria-label="to">→<\/span><span class="tk-d">Tonko \(D-NY\)<\/span><span class="tk-more">\+1 more<\/span><span class="tk-amt">\$1K each<\/span>/);
+  assert.match(html,/<div class="tk-set" aria-hidden="true">.*tabindex="-1"/s);assert.match(html,/class="tk-all" href="#latest"/);
+  assert.equal((html.match(/class="tk-item"/g)||[]).length,6,'two copies of each');
+  assert.ok(!stripHTML({trades:[],pac:[pac]},{people}).includes('Trades'),'no trades: PAC money alone');
+  assert.equal(stripHTML({trades:[],pac:[]}),'');
+});
+
+test('legal cases dated in 45 days, with their Legal Trouble points',()=>{
+  const r={members:[{id:'peltola',name:'Mary Peltola',party:'D',ethics:[{title:'An open case',date:'2026-10-29',status:'investigation',stage:'open',kind:'ethics',outcome:'Open'},
+    {title:'A complaint',date:'2026-10-21',status:'allegation',kind:'technical',outcome:'x'},{title:'Context',date:'2026-10-20',status:'context',outcome:'x'},
+    {title:'Old',date:'2026-05-01',status:'finding',outcome:'x'},{title:'A month only',date:'2026-10',status:'finding',outcome:'x'}]}]};
+  const items=legalItems(r,{now:NOV14,people});
+  assert.deepEqual(items.map(x=>[x.e.status,x.e.points,x.href]),[['Open investigation',15,'#peltola-aboveboard'],['Allegation',7.5,'#peltola-aboveboard']]);
+  assert.equal(text(items[0]),'Peltola (D): An open case (open investigation, 15 points in Legal Trouble)');
+});
+
+test('the cards: races still counting first, then each kind in turn, at most 16; each card\'s markup',()=>{
+  const news={items:[...[1,2,3].map(i=>({key:`g${i}`,kind:'grade',id:'marshall',grade:'word',from:60,to:85,fromLetter:'D',toLetter:'B',why:'8 more promises checked',date:'2026-11-1'+i})),
+    {key:'p',kind:'promise',id:'booker',promise:'decriminalize-drugs@2021-04-21',topic:'decriminalize-drugs',status:'partly',date:'2026-11-13'},
+    {key:'l1',kind:'lobby',tracker:'defense',pac:'THE BOEING COMPANY PAC',amount:1000,date:'2026-10-12',ids:['tonko','kamlagerdove']},
+    {key:'s',kind:'superpac',tracker:'aipac',spender:'UNITED DEMOCRACY PROJECT (UDP)',cand:'S6MI00418',name:'EL-SAYED, ABDUL',party:'D',seat:'S-MI',so:'O',amount:73834.08,date:'2026-10-29'}]};
+  const live={items:[{kind:'filing',subject:'begich',filed:'2026-11-09',year:2025,worth:[1100000,3600000],was:[900000,2400000],wasYear:2024},{kind:'trade',subject:'ossoff',disclosed:'2026-11-12',type:'sale',ticker:'AAPL'}]};
+  const all=allItems({research,log:log.entries,ratings:null,people,live,news},{now:NOV14}),cards=cardItems(all);
+  assert.equal(cards[0].kind,'warn','the race still counting first');assert.ok(cards.length<=TICKER.cards);
+  assert.ok(!cards.some(x=>['trade','site','new'].includes(x.kind)),'trades stay on the strip; site updates on the page');
+  const kinds=cards.slice(1,8).map(x=>x.kind==='call'?'race':x.kind);assert.equal(new Set(kinds).size,kinds.length,'each kind in turn');
+  const portraits={booker:{file:'portraits/booker.webp'}};
+  const html=k=>cardHTML(cards.find(x=>x.kind===k),{people,portraits});
+  assert.match(html('warn'),/Race · still counting · Nov \d+.*Alaska Senate.*%<\/b>/s);
+  assert.match(html('grade'),/<b class="gr-D">D<\/b> <span class="upd-arrow">→<\/span> <b class="gr-B">B<\/b> <small>85%<\/small>/);
+  assert.match(html('promise'),/<img src="\/portraits\/booker.webp".*Partly kept.*Drug decriminalization promise \(Apr 2021\)/s);
+  assert.match(html('superpac'),/United Democracy Project.*upd-against">against<\/span> <b>Abdul El-Sayed<\/b>.*\$73.8K|United Democracy Project.*against.*\$74K/s);
+  assert.match(html('lobby'),/Boeing PAC.*Paul Tonko.*and 1 more.*\$1K <small>each<\/small>.*Big Defense tracker/s);
+  assert.match(html('filing'),/2025 annual report.*\$1.10M–\$3.60M.*Up from \$900K–\$2.40M in 2024/s);
+  assert.match(cardsHTML(cards,{people,portraits}),/<h2 id="upd-h">Latest updates<\/h2><a class="upd-all" href="#latest">.*data-dir="-1".*data-dir="1"/s);
+  assert.equal(cardsHTML([],{people}),'');
 });
 
 test('the Latest updates page: a filter for each kind with its count, still counting first, then each day',()=>{
@@ -147,14 +181,17 @@ test('the Latest updates page: a filter for each kind with its count, still coun
   assert.deepEqual([...pagePeople(w).keys()],['a','b','c']);
 });
 
-test('mounted: drawn at once from what the page has, again when the refresh\'s records arrive; hidden when empty',async()=>{
-  const host={dataset:{},innerHTML:'',hidden:true};
+test('mounted: the strip and the cards drawn at once from what the page has, again when the refresh\'s records arrive; hidden when empty',async()=>{
+  const host={dataset:{},innerHTML:'',hidden:true},cards={dataset:{},innerHTML:'',hidden:true,addEventListener(){}};
   let answer;const live=new Promise(r=>answer=r);
   mountTicker(host,{research:{races:[]},log:[],ratings:null,people,fetchLive:()=>live});
-  assert.equal(host.hidden,true,'nothing yet');
-  answer({items:[{kind:'trade',subject:'ossoff',disclosed:new Date().toISOString().slice(0,10),type:'sale',ticker:'AAPL'}]});
+  mountCards(cards,{research:{races:[]},log:[],ratings:null,people,portraits:{},fetchLive:()=>live});
+  assert.equal(host.hidden,true,'nothing yet');assert.equal(cards.hidden,true);
+  const today=new Date().toISOString().slice(0,10);
+  answer({items:[{kind:'trade',subject:'ossoff',disclosed:today,type:'sale',ticker:'AAPL'},{kind:'filing',subject:'ossoff',filed:today,year:2025,worth:[1000,15000]}]});
   await live;await new Promise(r=>setTimeout(r,0));
-  assert.equal(host.hidden,false);assert.match(host.innerHTML,/Ossoff \(D\)<\/b> reported a sale in AAPL/);
+  assert.equal(host.hidden,false);assert.match(host.innerHTML,/▼<\/span><b class="tk-sym">AAPL<\/b><span class="tk-d">Ossoff \(D-GA\)/);
+  assert.equal(cards.hidden,false);assert.match(cards.innerHTML,/Net worth · .*Jon Ossoff.*\$1K–\$15K/s);
 });
 
 test('the refresh keeps each check\'s newest trades (with the date traded) and disclosures (with net worth), stamped with when first read',()=>{
