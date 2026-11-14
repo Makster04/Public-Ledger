@@ -211,17 +211,20 @@ export async function conduitPayments(cmte,cycle,{dir,refresh=false,label=cmte,g
   return readPages(st,{file,label,get,wait,log,slim:slimPayment});
 }
 // A named donor's gifts (public/trackers.js "donors"), from the FEC's itemized receipts (Schedule A) searched by their
-// name in every cycle given, 100 a page, newest first. The pages are saved in dir/<key>.json (read again when over a week
+// name (and their states, when they have any) in every cycle given, 100 a page, newest first. The pages are saved in dir/<key>.json (read again when over a week
 // old, with refresh, or when the search changed), so a run that stops picks up where it left off. Only what matching
 // needs is kept: the name and state on the gift, the committee it went to (its type, designation and candidate IDs),
-// the amount, date, cycle, memo code and line.
+// the amount, date, cycle, memo code and line, and the employer, city and occupation on it.
 export const slimGift=r=>({last:r.contributor_last_name??null,first:r.contributor_first_name??null,state:r.contributor_state??null,
+  emp:r.contributor_employer??null,city:r.contributor_city??null,occ:r.contributor_occupation??null,
   cmte:r.committee_id??null,type:r.committee?.committee_type??r.recipient_committee_type??null,dsgn:r.committee?.designation??r.recipient_committee_designation??null,
   cands:r.committee?.candidate_ids||[],amount:Number(r.contribution_receipt_amount)||0,date:r.contribution_receipt_date??null,cycle:r.two_year_transaction_period??null,memo:r.memo_code??null,line:r.line_number??null});
 export async function donorGifts(d,cycles,{dir,refresh=false,get=url=>requestSource(url,process.env),wait=ms=>new Promise(r=>setTimeout(r,ms)),now=Date.now(),log=console.log,maxAge=WEEK}={}){
   fs.mkdirSync(dir,{recursive:true});
   const file=path.join(dir,`${d.key}.json`),q=new URLSearchParams({contributor_name:d.search,per_page:'100',sort:'-contribution_receipt_date'});
   for(const c of cycles)q.append('two_year_transaction_period',String(c));
+  // (only their states are asked for when the match needs one, which keeps a common name's search short)
+  for(const s of d.states||[])q.append('contributor_state',s);
   const next=`https://api.open.fec.gov/v1/schedules/schedule_a/?${q}`;
   let saved=null;try{saved=JSON.parse(fs.readFileSync(file,'utf8'));}catch{}
   if(saved&&(refresh||saved.first!==next||!(now-Date.parse(saved.started)<=maxAge)))saved=null;
@@ -238,7 +241,7 @@ export async function donorGifts(d,cycles,{dir,refresh=false,get=url=>requestSou
 export function donorTotals(rows,d,byCand){
   const out={};
   for(const r of rows||[]){
-    if(!isNamedDonor(d,{contributor_last_name:r.last,contributor_first_name:r.first,contributor_state:r.state}))continue;
+    if(!isNamedDonor(d,{contributor_last_name:r.last,contributor_first_name:r.first,contributor_state:r.state,contributor_employer:r.emp,contributor_city:r.city,contributor_occupation:r.occ}))continue;
     if(!['H','S','P'].includes(r.type)||!['P','A'].includes(r.dsgn))continue;
     if(r.memo==='X'&&!String(r.line||'').startsWith('12'))continue;
     const id=(r.cands||[]).map(c=>byCand.get(c)).find(Boolean);if(!id||!r.cycle)continue;

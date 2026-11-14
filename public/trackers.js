@@ -10,7 +10,8 @@
 //                       campaign over the whole cycle ("direct"), which fills in a check the PAC lines read don't reach
 //   donors              named individual donors whose own checks to a campaign count (approved by name; no other
 //                       donor's name is ever saved): key, name, the FEC search ("LAST, FIRST"), and the last name, first
-//                       names and states a gift must match. Read by npm run corporate:pacs into public/tracker-history.json.
+//                       names and states a gift must match, and for a common name also an employer, city or occupation on
+//                       the gift (employers, cities, occupations). Read by npm run corporate:pacs into tracker-history.json.
 //   pacsLabel, routedLabel  how the page names its PACs and the groups whose passed-on gifts count, when "<name>'s PACs"
 //                       doesn't read well
 //   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
@@ -33,14 +34,39 @@ export const TRACKERS=[
   // 2026-11-14: it often backs candidates AIPAC works against), and not those that don't say so (checked 2026-11-14:
   // the Maryland Association for Concerned Citizens PAC, Mid Manhattan PAC, NATPAC 1947).
   {key:'aipac',icon:'🇮🇱🎁',emoji:'🇮🇱',name:'Pro-Israel Lobby',card:'Pro-Israel',long:'Pro-Israel Lobby (AIPAC and other pro-Israel PACs)',
-    about:'AIPAC and the PACs that say they exist to support Israel or the U.S.–Israel relationship (NORPAC, JACPAC, To Protect Our Heritage PAC, U.S. Israel PAC, CityPAC, DMFI PAC, the Republican Jewish Coalition\'s PAC and others named for Israel): their PACs\' checks, the gifts AIPAC, NORPAC, JACPAC and the RJC collect from donors and pass on to campaigns, the named donors\' own checks (Miriam and Sheldon Adelson), and AIPAC\'s super PAC, United Democracy Project. J Street isn\'t included.',
+    about:'AIPAC and the PACs that say they exist to support Israel or the U.S.–Israel relationship (NORPAC, JACPAC, To Protect Our Heritage PAC, U.S. Israel PAC, CityPAC, DMFI PAC, the Republican Jewish Coalition\'s PAC and others named for Israel): their PACs\' checks, the gifts AIPAC, NORPAC, JACPAC and the RJC collect from donors and pass on to campaigns, the named donors\' own checks (Miriam and Sheldon Adelson, and the 20 people who gave AIPAC\'s super PAC $1 million or more), and that super PAC, United Democracy Project. J Street isn\'t included.',
     // (by ID where the committee is on file; U.S. Israel PAC, CityPAC and the PACs named for Israel by their FEC names)
     pacIds:['C00797670','C00247403','C00139659','C00135541','C00710848','C00345132'],
     patterns:['^AMERICAN ISRAEL PUBLIC AFFAIRS','^AIPAC\\b','^NORPAC\\b','^JOINT ACTION COMMITTEE FOR POLITICAL AFFAIRS','\\bJACPAC\\b','^TO PROTECT OUR HERITAGE','^U\\.? ?S\\.? ISRAEL PAC|\\bUSI PAC\\b','^CITYPAC\\b','^DMFI PAC|DEMOCRATIC MAJORITY FOR ISRAEL','REPUBLICAN JEWISH COALITION','FRIENDS OF ISRAEL','^AMERICAN PRO-ISRAEL PAC','^PRO-ISRAEL AMERICA','DEFENDERS OF ISRAEL','U\\.?S\\.? ISRAEL FRIENDSHIP','CHRISTIANS FOR ISRAEL','DEMOCRATS FOR ISRAEL'].map(P),
     routed:['aipac','fec:C00247403','fec:C00139659','fec:C00345132'],
     groupPacs:{aipac:{cid:'C00797670',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'}},
+    // Named donors (approved 2026-11-14): Miriam and Sheldon Adelson, and every individual who gave United Democracy
+    // Project, AIPAC's super PAC, $1 million or more in 2021–2026 (the FEC's records of its receipts). What the site says
+    // about them is that giving, never a label for their beliefs. A common name is matched by its employer on the gift, in
+    // any state (people move: Paul Singer's gifts now come from Florida); the Rubins by their state, city and occupation;
+    // every other name by the states on their UDP gifts.
     donors:[{key:'madelson',name:'Miriam Adelson',search:'ADELSON, MIRIAM',last:'ADELSON',first:['MIRIAM'],states:['NV']},
-      {key:'sadelson',name:'Sheldon Adelson',search:'ADELSON, SHELDON',last:'ADELSON',first:['SHELDON'],states:['NV']}],
+      {key:'sadelson',name:'Sheldon Adelson',search:'ADELSON, SHELDON',last:'ADELSON',first:['SHELDON'],states:['NV']},
+      {key:'koum',name:'Jan Koum',search:'KOUM, JAN',last:'KOUM',first:['JAN'],states:['CA']},
+      {key:'jjacobson',name:'Jonathon Jacobson',search:'JACOBSON, JONATHON',last:'JACOBSON',first:['JONATHON'],states:['MA']},
+      {key:'psinger',name:'Paul Singer',search:'SINGER, PAUL',last:'SINGER',first:['PAUL'],states:[],employers:['ELLIOTT']},
+      {key:'saban',name:'Haim Saban',search:'SABAN, HAIM',last:'SABAN',first:['HAIM'],states:['CA']},
+      {key:'bmarcus',name:'Bernard Marcus',search:'MARCUS, BERNARD',last:'MARCUS',first:['BERNARD','BERNIE'],states:[],employers:['HOME DEPOT','MARCUS FOUNDATION']},
+      {key:'hlerner',name:'Helaine Lerner',search:'LERNER, HELAINE',last:'LERNER',first:['HELAINE'],states:['NY']},
+      {key:'mrowan',name:'Marc Rowan',search:'ROWAN, MARC',last:'ROWAN',first:['MARC'],states:['NY']},
+      {key:'zalik',name:'David Zalik',search:'ZALIK, DAVID',last:'ZALIK',first:['DAVID'],states:['GA']},
+      {key:'lrubin',name:'Linda Rubin',search:'RUBIN, LINDA',last:'RUBIN',first:['LINDA'],states:['CA'],cities:['LOS ANGELES'],occupations:['INVESTOR']},
+      {key:'bfrank',name:'Blair Frank',search:'FRANK, BLAIR',last:'FRANK',first:['BLAIR'],states:[],employers:['CAPITAL GROUP']},
+      {key:'vkohn',name:'Victor Kohn',search:'KOHN, VICTOR',last:'KOHN',first:['VICTOR'],states:['CA']},
+      {key:'leffell',name:'Michael Leffell',search:'LEFFELL, MICHAEL',last:'LEFFELL',first:['MICHAEL'],states:['NY']},
+      {key:'ahartman',name:'Alan Hartman',search:'HARTMAN, ALAN',last:'HARTMAN',first:['ALAN'],states:[],employers:['CENTERVIEW']},
+      {key:'schwartzberg',name:'Andrew Schwartzberg',search:'SCHWARTZBERG, ANDREW',last:'SCHWARTZBERG',first:['ANDREW'],states:['CA']},
+      {key:'detoledo',name:'Phil de Toledo',search:'DE TOLEDO, PHIL',last:'DETOLEDO',first:['PHIL'],states:['CA']},
+      {key:'sgrossman',name:'Sanford Grossman',search:'GROSSMAN, SANFORD',last:'GROSSMAN',first:['SANFORD'],states:['CO']},
+      {key:'dmesser',name:'David Messer',search:'MESSER, DAVID',last:'MESSER',first:['DAVID'],states:[],employers:['FREEPOINT']},
+      {key:'rayant',name:'Garry Rayant',search:'RAYANT, GARRY',last:'RAYANT',first:['GARRY'],states:['CA']},
+      {key:'plevy',name:'Paul Levy',search:'LEVY, PAUL',last:'LEVY',first:['PAUL'],states:[],employers:['JLL']},
+      {key:'trubin',name:'Tony Rubin',search:'RUBIN, TONY',last:'RUBIN',first:['TONY','ANTHONY'],states:['CA'],cities:['LOS ANGELES'],occupations:['INVESTOR']}],
     pacsLabel:'the pro-Israel PACs',routedLabel:'AIPAC, NORPAC, JACPAC and the RJC',
     superPacs:['United Democracy Project'],superPacLine:true,industries:[],
     companies:[],groups:['AIPAC PAC','NORPAC','JACPAC','To Protect Our Heritage PAC','U.S. Israel PAC (USI PAC)','CityPAC','DMFI PAC','Republican Jewish Coalition PAC']},
@@ -147,11 +173,14 @@ export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,dire
 // How the page names a tracker's PACs and the groups whose passed-on gifts count.
 export const pacsOf=t=>t.pacsLabel||`${t.name}'s PACs`;
 export const routedBy=t=>t.routedLabel||t.name;
-// Does this gift (an FEC Schedule A row: contributor_last_name, contributor_first_name, contributor_state) come from the
-// named donor? The same last name, a first name starting as theirs does, and one of their states when they have any.
+// Does this gift (an FEC Schedule A row: contributor_last_name, contributor_first_name, contributor_state, and the
+// employer, city and occupation) come from the named donor? The same last name, a first name starting as theirs does, one
+// of their states when they have any, and where their name is common, an employer containing one of theirs, their city
+// and an occupation containing one of theirs.
 export function isNamedDonor(d,r){
-  const last=upper(r?.contributor_last_name).replace(/[^A-Z]/g,''),first=upper(r?.contributor_first_name).trim();
-  return !!d&&last===d.last&&d.first.some(f=>first.startsWith(f))&&(!(d.states||[]).length||d.states.includes(upper(r?.contributor_state)));
+  const last=upper(r?.contributor_last_name).replace(/[^A-Z]/g,''),first=upper(r?.contributor_first_name).trim(),has=(list,v)=>!(list||[]).length||list.some(x=>upper(v).includes(x));
+  return !!d&&last===d.last&&d.first.some(f=>first.startsWith(f))&&(!(d.states||[]).length||d.states.includes(upper(r?.contributor_state)))
+    &&has(d.employers,r?.contributor_employer)&&(!(d.cities||[]).length||d.cities.includes(upper(r?.contributor_city).trim()))&&has(d.occupations,r?.contributor_occupation);
 }
 // The named donors' checks to one member over some cycles, from the career file (tracker-history.json "donors": {tracker:
 // {member: {cycle: {donor key: dollars}}}}): {donor key: dollars}, or null when the file hasn't read every one of the
