@@ -2,12 +2,15 @@
 // disclosures for them (tickerRecent, tickerMerge in src/refresh.mjs).
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import research from '../public/research.json' with {type:'json'};
 import log from '../public/score-presentation-log.json' with {type:'json'};
 import house from '../public/house.json' with {type:'json'};
 import senate from '../public/senate.json' with {type:'json'};
 import {TICKER,raceItems,siteItems,ratingItems,liveItems,newsItems,fecItems,allItems,mixKinds,tickerItems,tickerHTML,latestHTML,shortDate,mountTicker,isFresh,seatLabel,pagePeople} from '../public/ticker.js';
-import {tickerRecent,tickerMerge,TICKER_KINDS} from '../src/refresh.mjs';
+import {tickerRecent,tickerMerge,tickerList,getTicker,feedSignature,statement,TICKER_KINDS,TICKER_DAYS,TICKER_VERSION} from '../src/refresh.mjs';
+import {promiseTopic} from '../public/ticker.js';
+import {openDatabase} from '../scripts/sqlite.mjs';
 
 const people=new Map();for(const p of [...house.members,...senate.senators,...research.cands,...research.members])people.set(p.id,p);
 const NOV9=Date.parse('2026-11-09T15:00:00Z'),NOV14=Date.parse('2026-11-14T15:00:00Z');
@@ -64,7 +67,7 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
     {key:'g1',kind:'grade',id:'marshall',grade:'word',from:67,to:85,fromLetter:'D',toLetter:'B',why:'10 more promises checked, 1 broken',date:'2026-11-14',seen:null},
     {key:'g2',kind:'grade',id:'ossoff',grade:'word',from:null,to:74,fromLetter:null,toLetter:'C',why:'23 promises decided',date:'2026-11-14',seen:null},
     {key:'g3',kind:'grade',id:'collins',grade:'showsup',from:88,to:null,fromLetter:'B',toLetter:null,why:'their record changed',date:'2026-11-14',seen:null},
-    {key:'p1',kind:'promise',id:'booker',promise:'decriminalize-drugs@2021-04-21',status:'partly',quote:'I support decriminalization',date:'2026-11-13'},
+    {key:'p1',kind:'promise',id:'booker',promise:'decriminalize-drugs@2021-04-21',topic:'decriminalize-drugs',status:'partly',date:'2026-11-13'},
     {key:'l1',kind:'lobby',tracker:'defense',pac:'THE BOEING COMPANY PAC',amount:5000,date:'2026-10-07',seen:'2026-11-12T10:00:00Z',ids:['clyburn','moolenaar','meng','hagerty','nobody','tonko']},
     {key:'l2',kind:'lobby',tracker:'pharma',pac:'PERATON CORP. PAC (A.K.A. \'PERATON PAC\')',amount:1000,date:'2026-10-12',ids:['clark']},
     {key:'s1',kind:'superpac',tracker:'crypto',spender:'DEFEND AMERICAN JOBS',cand:'S4NE00207',name:'OSBORN, DAN',party:'I',seat:'S-NE',so:'O',amount:2650335.68,date:'2026-10-27'},
@@ -73,7 +76,7 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
   const items=newsItems(news,{now:NOV14,people});
   assert.deepEqual(items.map(text),[
     'Marshall (R) Keeps Their Word D → B (67% → 85%): 10 more promises checked, 1 broken','Ossoff (D) Keeps Their Word: C (74%), 23 promises decided',
-    'Collins (R) Shows Up: no longer graded (their record changed)','Booker (D) “I support decriminalization” (Apr 2021): Partially kept',
+    'Collins (R) Shows Up: no longer graded (their record changed)','Booker (D): drug decriminalization promise (Apr 2021), partially kept',
     'Big Defense 🪖 · The Boeing Company PAC gave $5,000 each to Clyburn (D), Moolenaar (R), Meng (D), Hagerty (R) and 1 more',
     'Big Pharma + Insurance 💊 · Peraton Corp. PAC gave $1,000 to Clark (D)',
     'Crypto 🤑 · Defend American Jobs spent $2.65M against Osborn (I), Nebraska Senate',
@@ -83,6 +86,12 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
   assert.equal(items[4].at,'2026-11-12T10:00:00Z','placed by when it was first read');
   assert.ok(!items.some(x=>x.key==='old'),'past the page\'s 45 days');
   assert.deepEqual([seatLabel('S-MI'),seatLabel('H-NY-12'),seatLabel('H-WY-00')],['Michigan Senate','NY-12','WY-AL']);
+  // A promise is named by its topic, never its words; a file built before topics were kept reads it from the promise's id.
+  assert.equal(text(newsItems({items:[{key:'q',kind:'promise',id:'collins',promise:'abortion@2022-08-01',status:'kept',quote:'I support a woman\'s right to have an abortion, and I believe…',date:'2026-11-13'}]},{now:NOV14,people})[0]),
+    'Collins (R): abortion promise (Aug 2022), kept');
+  assert.deepEqual([promiseTopic('stay-in-nato'),promiseTopic('border-security'),promiseTopic('some-new-question')],['NATO','border security','some new question']);
+  const topics=new Set(Object.values(JSON.parse(fs.readFileSync(new URL('../public/promises.json',import.meta.url),'utf8')).people).flat().flatMap(p=>p.qs.map(([q])=>q)));
+  assert.ok([...topics].every(q=>promiseTopic(q).length<=30),'every promise topic in a few words');
 });
 
 test('FEC reports: one item a report date, with how many campaigns and who raised most',()=>{
@@ -92,7 +101,7 @@ test('FEC reports: one item a report date, with how many campaigns and who raise
   assert.deepEqual([items[0].tag,items[0].href,items[0].date],['FEC reports','#rankings','2026-10-14']);
 });
 
-test('the strip: races still counting first, then the last 7 days, each kind in turn, filled to 6 from older news',()=>{
+test('the strip: races still counting first, then the last 7 days, the newest of each other kind, each kind in turn, filled to 6',()=>{
   const n=(key,kind,date,extra={})=>({key,kind,tag:kind,date,order:2,parts:[key],...extra});
   assert.deepEqual(mixKinds([n('g1','grade','2026-11-13'),n('g2','grade','2026-11-12'),n('g3','grade','2026-11-11'),n('p1','promise','2026-11-10'),n('t1','trade','2026-11-09'),n('p2','promise','2026-11-08')]).map(x=>x.key),
     ['g1','p1','t1','g2','p2','g3'],'one of each kind in turn, the newest kind first');
@@ -102,6 +111,11 @@ test('the strip: races still counting first, then the last 7 days, each kind in 
   // A quiet week: filled to 6 with the newest older news.
   const quiet=tickerItems({research:{races:[]},log:[],ratings:null,people,news:{items:[1,2,3,4,5,6,7,8].map(i=>({key:`p${i}`,kind:'promise',id:'booker',promise:'a@2021-04-21',status:'kept',quote:`q${i}`,date:`2026-10-${10+i}`}))}},{now:NOV14});
   assert.deepEqual(quiet.map(x=>x.key),['p8','p7','p6','p5','p4','p3']);
+  // A week of grade changes, a stock trade from 3 weeks ago and an older one: the week, and the newest trade.
+  const busy=tickerItems({research:{races:[]},log:[],ratings:null,people,live:{items:[{kind:'trade',subject:'ossoff',id:'t1',disclosed:'2026-10-24',type:'sale',ticker:'AAPL'},{kind:'trade',subject:'ossoff',id:'t2',disclosed:'2026-10-20',type:'purchase',ticker:'MSFT'}]},
+    news:{items:[1,2,3,4,5,6,7].map(i=>({key:`g${i}`,kind:'grade',id:'marshall',grade:'word',from:60+i,to:70+i,fromLetter:'D',toLetter:'C',why:'x',date:'2026-11-13'}))}},{now:NOV14});
+  assert.deepEqual(busy.map(x=>x.kind),['grade','trade','grade','grade','grade','grade','grade','grade'],'the newest trade in turn with the week; the older one left for the page');
+  assert.match(text(busy[1]),/Ossoff \(D\) reported a sale in AAPL/);
   assert.deepEqual(tickerItems({research:{races:[]},log:[],ratings:null,people},{now:Date.parse('2027-03-01')}),[],'nothing in 45 days: no ticker');
   assert.equal(shortDate('2026-11-04'),'Nov 4');assert.equal(shortDate('2026-11-09T09:00:00Z'),'Nov 9');
 });
@@ -113,7 +127,7 @@ test('the strip\'s markup: escaped text, grades as letters, the loop\'s second c
   assert.ok(!html.includes('<script>')&&html.includes('&lt;script&gt;x&lt;/script&gt; &amp; more'));
   assert.match(html,/<b class="tk-d">Ossoff \(D\)<\/b> <b class="gr-B">B<\/b>/);
   assert.match(html,/<span class="tk-tag tk-grade"><span aria-hidden="true">🎓<\/span>Grade change<\/span>/);
-  assert.match(html,/Latest · 7 days/);assert.match(html,/class="tk-all" href="#latest"/);
+  assert.match(html,/<span>Latest<\/span>/);assert.match(html,/class="tk-all" href="#latest"/);
   assert.match(html,/<div class="tk-set" aria-hidden="true">.*tabindex="-1"/s);
   assert.equal((html.match(/class="tk-item"/g)||[]).length,4,'two copies of each');
   assert.equal(tickerHTML([]),'');
@@ -153,11 +167,40 @@ test('the refresh keeps each check\'s newest trades (with the date traded) and d
   assert.deepEqual(tickerRecent('net-worth-house','begich',{filed:'2026-10-25',year:2025,low:1100000,high:3600000,history:[{year:2025,low:1100000,high:3600000},{year:2024,low:900000,high:2400000}]},{now}),
     [{kind:'filing',subject:'begich',filed:'2026-10-25',year:2025,worth:[1100000,3600000],was:[900000,2400000],wasYear:2024,seen:null}],'the range, and the year before\'s');
   assert.deepEqual(tickerRecent('net-worth-senate','ossoff',{filed:'2026-05-15',year:2025},{now}),[],'an old filing');
-  const merged=tickerMerge([trades,[{kind:'filing',subject:'ossoff',filed:'2026-11-08',year:2025}],[{kind:'trade',subject:'x',disclosed:'2026-10-01'}]],{now});
+  assert.deepEqual(TICKER_DAYS,{trade:45,filing:45},'the Latest updates page\'s 45 days');
+  const merged=tickerMerge([trades,[{kind:'filing',subject:'ossoff',filed:'2026-11-08',year:2025}],[{kind:'trade',subject:'x',disclosed:'2026-09-20'}]],{now});
   assert.deepEqual(merged.map(x=>x.disclosed||x.filed),['2026-11-08','2026-11-07','2026-11-05'],'newest first; one past its days dropped');
   assert.ok(trades.every(x=>x.seen===null),'a check\'s first list');
   const later=now+6*36e5,again=tickerRecent('trades-house','begich',{rows:[{id:'4',disclosed:'2026-11-06',type:'purchase',ticker:'MSFT'},{id:'1',disclosed:'2026-11-05',type:'purchase',ticker:'NVDA'}]},{now:later,previous:trades});
   assert.deepEqual(again.map(x=>[x.id,x.seen]),[['4',new Date(later).toISOString()],['1',null]],'the new one stamped; the one on the last list keeps its stamp');
   const third=tickerRecent('trades-house','begich',{rows:[{id:'4',disclosed:'2026-11-06',type:'purchase',ticker:'MSFT'}]},{now:later+36e5,previous:again});
   assert.equal(third[0].seen,new Date(later).toISOString(),'read again: still the first time');
+  const wider=tickerRecent('trades-house','begich',{rows:[{id:'4',disclosed:'2026-11-06',type:'purchase',ticker:'MSFT'},{id:'5',disclosed:'2026-10-10',type:'sale',ticker:'F'}]},{now:later,previous:third,stampNew:false});
+  assert.deepEqual(wider.map(x=>[x.id,x.seen]),[['4',new Date(later).toISOString()],['5',null]],'a list rebuilt with a wider window: what\'s new to it isn\'t news');
+  assert.deepEqual([tickerList('[{"kind":"trade"}]').v,tickerList({v:2,from:'x',items:[]}).from,tickerList('nonsense'),tickerList('{"v":2}')],[1,'x',null,null]);
+});
+
+test('the ticker endpoint reads the trades and annual reports already saved, once, and again when a check changes',async()=>{
+  const db=openDatabase(':memory:');db.exec(fs.readFileSync(new URL('../migrations/0001_initial.sql',import.meta.url),'utf8'));
+  db.exec(`INSERT INTO metadata VALUES ('initialized','x'),('feeds','${feedSignature()}')`);
+  const save=async(id,kind,subject,payload,at)=>{
+    await statement(db,"INSERT OR IGNORE INTO jobs(id,kind,subject,args,status) VALUES(?,?,?,'{}','ready')",id,kind,subject).run();
+    await statement(db,"INSERT INTO snapshots(job_id,run_id,payload,updated_at) VALUES(?,'r',?,?) ON CONFLICT(job_id) DO UPDATE SET payload=excluded.payload,updated_at=excluded.updated_at",id,JSON.stringify(payload),at).run();
+  };
+  // Checks published before the ticker kept lists (or a report imported by hand): no list yet.
+  await save('trades-senate:ossoff','trades-senate','ossoff',{rows:[{id:'a',disclosed:'2026-11-10',traded:'2026-08-01',type:'sale',ticker:'AAPL',amount:'$1,001 - $15,000'},{id:'b',disclosed:'2026-06-01',type:'sale',ticker:'X'}]},'2026-11-11T00:00:00Z');
+  await save('net-worth-house:begich','net-worth-house','begich',{filed:'2026-10-20',year:2025,low:1e6,high:5e6,history:[{year:2024,low:5e5,high:1e6}]},'2026-11-01T00:00:00Z');
+  await save('campaign:ossoff','campaign','ossoff',{receipts:1},'2026-11-01T00:00:00Z');
+  // An old list (the first version's, a plain array) for a check: rebuilt, its item keeping its stamp.
+  db.exec(`INSERT INTO metadata VALUES ('ticker:net-worth-house:begich','[{"kind":"filing","subject":"begich","filed":"2026-10-20","year":2025,"seen":"2026-11-01T05:00:00.000Z"}]')`);
+  const first=await getTicker({DB:db},{now:NOV14});
+  assert.deepEqual(first.items.map(x=>[x.kind,x.subject,x.disclosed||x.filed,x.seen]),[['trade','ossoff','2026-11-10',null],['filing','begich','2026-10-20','2026-11-01T05:00:00.000Z']],
+    'from the saved checks; a trade past 45 days left out');
+  assert.deepEqual([first.items[0].traded,first.items[1].worth,first.items[1].was],['2026-08-01',[1e6,5e6],[5e5,1e6]]);
+  const kept=tickerList((await statement(db,"SELECT value FROM metadata WHERE key='ticker:trades-senate:ossoff'").first()).value);
+  assert.deepEqual([kept.v,kept.from],[TICKER_VERSION,'2026-11-11T00:00:00Z'],'kept beside the check, with the snapshot\'s time');
+  // Reports imported by hand later: the check's snapshot changes, and the new trade is news from now.
+  await save('trades-senate:ossoff','trades-senate','ossoff',{rows:[{id:'c',disclosed:'2026-11-12',type:'purchase',ticker:'NVDA'},{id:'a',disclosed:'2026-11-10',traded:'2026-08-01',type:'sale',ticker:'AAPL'}]},'2026-11-14T12:00:00Z');
+  const second=await getTicker({DB:db},{now:NOV14});
+  assert.deepEqual(second.items.filter(x=>x.kind==='trade').map(x=>[x.id,x.seen]),[['c',new Date(NOV14).toISOString()],['a',null]]);
 });
