@@ -18326,7 +18326,16 @@
           "assessment": "consistent",
           "note": "Consistent with the pledge as commonly defined (company PACs). He does accept trade-association and leadership-PAC money, which critics count as corporate-adjacent.",
           "pledge": {
-            "kind": "corporate-pac"
+            "kind": "corporate-pac",
+            "refunded": [
+              {
+                "pac": "American Peanut Shellers Association Po",
+                "amount": 5000,
+                "date": "2026-09-30",
+                "note": "Refunded in full (FEC: contribution refund, Sept. 30, 2026); the FEC lists the PAC's sponsor as a corporation.",
+                "src": "https://www.fec.gov/data/disbursements/?committee_id=C00718866&recipient_name=peanut+shellers"
+              }
+            ]
           }
         },
         {
