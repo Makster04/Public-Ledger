@@ -224017,6 +224017,16 @@
             "t": "NHPR: Brown, Sununu discuss ties to Trump in Hampton debate (June 25, 2026)",
             "u": "https://www.nhpr.org/politics/2026-06-25/brown-sununu-discuss-ties-to-trump-hampton-debate"
           }
+        },
+        {
+          "person": "rutinel",
+          "pos": "oppose",
+          "date": "2026-09-25",
+          "why": "Said of the federal health-care cuts: \"Those are the same programs that Donald Trump and Gabe Evans are destroying right now to give tax breaks to their billionaire donors.\" (Evans, his opponent, voted for the law.)",
+          "src": {
+            "t": "CPR News: 8th Congressional District: Democrat Manny Rutinel (Sept. 25, 2026)",
+            "u": "https://cpr.org/2026/09/25/vg-2026-manny-rutinel-voter-guide"
+          }
         }
       ]
     },
@@ -224234,6 +224244,16 @@
           "src": {
             "t": "KNOE: A farmer's longshot: Jamie Davis's bid for U.S. Senate (June 24, 2026)",
             "u": "https://www.knoe.com/2026/06/24/farmers-longshot-jamie-daviss-bid-us-senate/"
+          }
+        },
+        {
+          "person": "rutinel",
+          "pos": "support",
+          "date": "2025-08-07",
+          "why": "Signed the Colorado General Assembly Democrats' letter urging Congress to extend the enhanced ACA premium tax credits: \"Enhanced premium tax credits must be extended in order to ensure stability and affordability for the Colorado insurance market.\"",
+          "src": {
+            "t": "Colorado House Democrats: General Assembly Dems urge Colorado's congressional delegation to extend tax credits (Aug. 7, 2025)",
+            "u": "https://www.cohousedems.com/news/general-assembly-dems-urge-colorado%E2%80%99s-congressional-delegation-to-extend-tax-credits%2C-save-coloradans-money"
           }
         }
       ]
@@ -224595,6 +224615,16 @@
             "t": "OnTheIssues: Dan Osborn on Jobs (from his 2024 campaign site)",
             "u": "https://ontheissues.org/domestic/Dan_Osborn_Jobs.htm"
           }
+        },
+        {
+          "person": "cbooker",
+          "pos": "support",
+          "date": "2022-11-02",
+          "why": "His 2022 Senate platform, as quoted by the Kentucky AFL-CIO: \"As Senator, he will fight to pass legislation like the Pro-Act to ensure that the federal government protects that right.\"",
+          "src": {
+            "t": "Kentucky AFL-CIO: Unions back Booker; Booker backs unions (Nov. 2, 2022)",
+            "u": "https://ky.aflcio.org/news/unions-back-booker-booker-backs-unions"
+          }
         }
       ]
     },
@@ -224699,6 +224729,28 @@
           "person": "ossoff",
           "bill": "117-s-53",
           "date": "2021-01-26"
+        }
+      ],
+      "stated": [
+        {
+          "person": "cbooker",
+          "pos": "support",
+          "date": "2022-11-02",
+          "why": "His 2022 Senate platform, as quoted by the Kentucky AFL-CIO: \"Raising the minimum wage to at least $15 an hour is not radical, it is the right thing to do.\"",
+          "src": {
+            "t": "Kentucky AFL-CIO: Unions back Booker; Booker backs unions (Nov. 2, 2022)",
+            "u": "https://ky.aflcio.org/news/unions-back-booker-booker-backs-unions"
+          }
+        },
+        {
+          "person": "rutinel",
+          "pos": "support",
+          "date": "2026-05-28",
+          "why": "In the Democratic primary debate, said yes when asked whether Congress should raise the federal minimum wage (the report gives no amount).",
+          "src": {
+            "t": "KUNC (Colorado Capitol News Alliance, from The Colorado Sun): Shannon Bird and Manny Rutinel try to differentiate in first major debate (May 29, 2026)",
+            "u": "https://www.kunc.org/politics/2026-05-29/shannon-bird-and-manny-rutinel-try-to-differentiate-in-first-major-debate-but-show-they-are-aligned-on-most-major-issues"
+          }
         }
       ]
     },
