@@ -841,6 +841,7 @@ function renderHome(){
       <label class="small muted">Sort <select id="hsort" aria-label="Sort candidates"><option value="">Default</option><option value="out">Most outside money</option><option value="camp">Most campaign money</option><option value="name">Name</option></select></label>
     </div>
   </section>
+  <section class="upd" id="home-updates" aria-label="Latest updates" hidden></section>
   <div class="directory-heading"><div><div class="page-eyebrow">THE PEOPLE BEHIND THE RECORD</div><h2>Explore profiles</h2></div><span id="profile-count" class="small muted" role="status"></span></div>
   <div class="directory-filters" id="hfilters">${homeDropdowns()}</div>
   <div class="grid hc-grid" id="cards"></div>
@@ -867,6 +868,8 @@ function renderHome(){
   const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);});
   bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);fillBasic(cards);});
   fillFeatured();
+  // The Latest updates cards (public/ticker.js): races, grades, super PACs, promises, legal cases, PAC checks, FEC reports and net worth.
+  import('./ticker.js').then(t=>t.mountCards($('#home-updates'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:t.pagePeople(window),portraits:window.PORTRAITS})).catch(()=>{});
   for(const host of [cards,$('.hero-side')].filter(Boolean)){
     host.addEventListener('click',e=>{const c=e.target.closest('.sen-card');if(c)location.hash=c.dataset.id;});
     host.addEventListener('keydown',e=>{const c=e.target.closest('.sen-card');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();location.hash=c.dataset.id;}});

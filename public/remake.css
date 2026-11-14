@@ -1179,6 +1179,57 @@ input, select { accent-color: var(--accent); }
 .tk-all:hover, .tk-all:focus-visible { color: var(--ink); }
 @media (max-width: 640px) { .tk-label span { display: none; } .tk-label { padding-right: 0; border-right: 0; } .tk-all { display: none; } .ticker { font-size: .8rem; } .ticker > .wrap { gap: 10px; } }
 @media (prefers-reduced-motion: reduce) { .tk-track { animation: none; } .tk-set[aria-hidden="true"] { display: none; } .tk-view { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .tk-dot { animation: none; } }
+/* The strip since Nov. 14, 2026: TRADES and PAC MONEY, each with its label, full width. */
+.ticker { display: flex; align-items: center; min-height: 40px; padding: 0 16px; }
+.ticker .tk-view { font-family: var(--font-mono); font-size: .78rem; }
+.ticker .tk-label { margin-right: 14px; color: #f2c94c; font-size: .7rem; letter-spacing: .1em; }
+.ticker .tk-l-pac { color: #9ecbff; margin-left: 8px; padding-left: 14px; border-left: 1px solid var(--line); }
+.ticker .tk-l-pac .tk-dot { background: #9ecbff; animation: none; }
+.ticker .tk-item { gap: 6px; margin-right: 22px; }
+.ticker .tk-item:hover, .ticker .tk-item:focus-visible { color: var(--ink); }
+.ticker .tk-d, .ticker .tk-r, .ticker .tk-i { font-weight: 400; }
+.tk-arrow { font-size: .72rem; } .tk-buy { color: #2ecc71; } .tk-sell { color: #ff6b6b; } .tk-other { color: var(--muted); }
+.tk-sym { color: var(--ink); font-weight: 500; }
+.tk-amt { color: #f2c94c; }
+.tk-pac, .tk-to, .tk-more { color: var(--ink-2); } .tk-more { color: var(--muted); }
+.tk-own, .tk-late { font-size: .68rem; border: 1px solid var(--line-2); border-radius: 4px; padding: 0 4px; color: var(--muted); }
+.tk-late { color: #ff9f43; border-color: #ff9f4366; }
+.ticker .tk-all { margin-left: 12px; }
+/* The home page's Latest updates cards. */
+.upd { margin: 26px 0 8px; }
+.upd-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.upd-head h2 { flex: 1; margin: 0; font-family: var(--font-display); font-size: 1.15rem; }
+.upd-all { border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: .8rem; color: var(--ink); background: var(--surface); text-decoration: none; }
+.upd-arr { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink); background: var(--surface); font: inherit; cursor: pointer; }
+.upd-all:hover, .upd-all:focus-visible, .upd-arr:hover, .upd-arr:focus-visible { border-color: var(--ink-2); }
+.upd-row { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 2px; }
+.upd-row::-webkit-scrollbar { display: none; }
+.upd-card { flex: none; width: 232px; min-height: 178px; scroll-snap-align: start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px; display: flex; flex-direction: column; gap: 7px; font-size: .84rem; color: var(--ink-2); text-decoration: none; }
+.upd-card:hover, .upd-card:focus-visible { border-color: var(--ink-2); }
+.upd-card b:not([class*="gr-"]) { color: var(--ink); }
+.upd-big b[class*="gr-"] { font-weight: 800; }
+.upd-k { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.upd-t { font-family: var(--font-display); font-weight: 700; color: var(--ink); font-size: .98rem; line-height: 1.2; }
+.upd-p { display: flex; align-items: center; gap: 9px; }
+.upd-p img, .upd-ini { width: 36px; height: 42px; border-radius: 7px; object-fit: cover; background: var(--surface-2); flex: none; }
+.upd-ini { display: grid; place-items: center; font-weight: 700; color: var(--ink); }
+.upd-nm { color: var(--ink); font-weight: 700; line-height: 1.15; }
+.upd-sub { font-size: .75rem; color: var(--muted); }
+.upd-rr { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.upd-bar { height: 4px; border-radius: 2px; margin-top: -3px; background: var(--muted); }
+.upd-bar.upd-d { background: var(--dem); } .upd-bar.upd-r { background: var(--rep); }
+.upd-big { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--ink); line-height: 1; }
+.upd-big small, .upd-lbl { font-size: .8rem; color: var(--muted); font-weight: 600; }
+.upd-range { font-size: 1.2rem; }
+.upd-arrow { color: var(--muted); font-size: 1rem; }
+.upd-chip { display: inline-block; border-radius: 999px; padding: 2px 9px; font-size: .74rem; font-weight: 700; }
+.upd-good { background: #2ecc7126; color: #2ecc71; } .upd-warn { background: #f2c94c26; color: #f2c94c; } .upd-crit { background: #ff6b6b26; color: #ff6b6b; }
+.upd-serious { background: #ff9f4326; color: #ff9f43; } .upd-neutral { background: var(--surface-2); color: var(--ink-2); }
+.upd-against { color: #ff6b6b; } .upd-for { color: #2ecc71; }
+.upd-src { margin-top: auto; font-size: .72rem; color: var(--muted); }
+.upd-clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.upd-small { font-size: .8rem; }
+@media (prefers-reduced-motion: reduce) { .upd-row { scroll-behavior: auto; } }
 @media print { .ticker { display: none !important; } }
 
 /* Net worth, stocks held and trades over time (Big Money Independence tab; public/wealth-timeline.js, charts.js). */
