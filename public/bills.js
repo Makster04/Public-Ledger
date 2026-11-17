@@ -1,4 +1,4 @@
-// The Bills page's list (research.json "billIndex"): every bill behind a saved roll call or on file for People First,
+// The Legislation tab's list (research.json "billIndex"; public/legislation-page.js draws it): every bill behind a saved roll call or on file for People First,
 // one entry per bill family (a bill, its versions in other Congresses and its companion measures), with the saved votes on
 // it and every group position on file for it. Kept apart from app.js so the tests can check it against the research.
 import {BILL_GROUPS,billKey,ownSponsorship} from './grades.js';
