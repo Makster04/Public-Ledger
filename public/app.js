@@ -262,7 +262,7 @@ const cmOf=i=>IE.cm[i];
 // An organization's name with its one-line description (public/orgs.js) shown on hover, tap or focus; inner replaces the
 // plain name, for a name that is also a link.
 const ORGS=makeOrgs(DATA);
-const orgName=(name,about,inner)=>about?`<span class="org" data-tip="${esc(`${name}: ${about}`)}">${inner??esc(name)}</span>`:(inner??esc(name));
+const orgName=(name,about,inner,group)=>{const g=group?` data-group="${esc(group)}"`:'';return about?`<span class="org"${g} data-tip="${esc(`${name}: ${about}`)}">${inner??esc(name)}</span>`:g?`<span${g}>${inner??esc(name)}</span>`:(inner??esc(name));};
 const candName=id=>IE.cands[id]||id;
 const flag=(t,why)=>`<span class="flag" ${why?`data-tip="${esc(why)}" tabindex="0"`:''}>${t}</span>`;
 // A profile's 2026 race: the profiled race they ran in, or the results-only race whose nominee names their profile.
@@ -1190,9 +1190,10 @@ function ratingCell(s,org){
   if(mine){const L=ratingLetter(mine),pct=Number.isFinite(mine.score)?`${mine.score}%`:null;
     const tip=mine.grade?`${org}'s own grade`:`${org} rates them ${mine.score}%: ${L} on this site's scale`;
     const life=mine.lifetime!=null?`lifetime ${ratingGrade(letter(mine.lifetime),`${org}'s lifetime rating, ${mine.lifetime}%`)} ${mine.lifetime}%`:null;
-    return `<a href="${esc(mine.url)}" target="_blank" rel="noopener">${esc(org)}</a> ${ratingGrade(L,tip)} <span class="muted small">${[pct&&esc(pct),esc(mine.year||grp?.year||''),life].filter(Boolean).map(x=>` · ${x}`).join('')}</span>`;}
+    return `<a href="${esc(mine.url)}" target="_blank" rel="noopener"${key?` data-rating="${esc(key)}"`:''}>${esc(org)}</a> ${ratingGrade(L,tip)} <span class="muted small">${[pct&&esc(pct),esc(mine.year||grp?.year||''),life].filter(Boolean).map(x=>` · ${x}`).join('')}</span>`;}
   const why=grp?.read?'not rated by them':grp?.why?`not read: ${grp.why}`:grp?.status?RATING_WHY[grp.status]:'not read yet';
-  return `${grp?.url?`<a href="${esc(grp.url)}" target="_blank" rel="noopener">${esc(org)}</a>`:esc(org)} <span class="muted small">· ${esc(why)}</span>`;
+  const k=key?` data-rating="${esc(key)}"`:'';
+  return `${grp?.url?`<a href="${esc(grp.url)}" target="_blank" rel="noopener"${k}>${esc(org)}</a>`:`<span${k}>${esc(org)}</span>`} <span class="muted small">· ${esc(why)}</span>`;
 }
 function leanScale(s,x){
   const peers=ALL.filter(p=>p.id!==s.id&&p.chamber===s.chamber&&!p.office).map(p=>({p,l:sixOf(p).ideology.lean})).filter(r=>r.l!=null);
@@ -1244,7 +1245,7 @@ function qRecordHTML(s,q,ev,meta,want){
   const carried=(st?.carried?.items||[]).map(it=>`<li class="evi"><span class="mk ${cls(it.side)}">${mark(it.side)}</span><div><div><span class="chip ghost">${esc(TYPEL[{state:'state_vote',act:'official_act',vote:'vote',s:'sponsored',c:'cosponsored'}[it.kind]]||it.kind)}</span> <b>${esc(it.title||'')}</b> <span class="mono muted">${esc(it.date||'date not given')}</span></div><div class="small">Counts toward "${esc(q.sides[it.side])}": <b>${it.pts} point${it.pts===1?'':'s'}</b></div><div class="small muted">${esc(it.why||'')} ${it.src?.u?`<a href="${esc(it.src.u)}" target="_blank" rel="noopener">${esc(it.src.t||'source')} ↗</a>`:''}</div></div></li>`);
   const stmts=(st?.statements||[]).map(x=>`<li class="evi"><span class="mk ${x.status==='cancelled'?'':cls(x.side)}">${x.status==='cancelled'?'–':mark(x.side)}</span><div><div><span class="chip ghost">Statement</span> <b>${esc(x.title||'')}</b> <span class="mono muted">${esc(x.date||'date not given')}</span></div><div class="small">${x.status==='cancelled'?`<b>Not counted:</b> said "${esc(q.sides[x.side])}", then a later vote on this question went the other way.`:x.status==='changed'?`<b>Changed position:</b> an earlier vote went the other way; this statement counts toward "${esc(q.sides[x.side])}": ${st.statementPoints} point${st.statementPoints===1?'':'s'}.`:`Counts toward "${esc(q.sides[x.side])}": ${st.statementPoints} point${st.statementPoints===1?'':'s'}`}</div><div class="small muted">${esc(x.why||'')} ${x.src?.u?`<a href="${esc(x.src.u)}" target="_blank" rel="noopener">${esc(x.src.t||'source')} ↗</a>`:''}</div></div></li>`);
   const rated=(st?.ratings||[]).map(r=>{const given=r.grade?`${r.grade}${r.score!=null?` (${r.score}%)`:''}`:`${r.score}%`;
-    return `<li class="evi"><span class="mk ${cls(r.side)}">${mark(r.side)}</span><div><div><span class="chip ghost">Group rating</span> <b>${esc(r.org)}: ${esc(given)}</b> <span class="mono muted">${esc(String(r.year||'year not given'))}</span></div>
+    return `<li class="evi"><span class="mk ${cls(r.side)}">${mark(r.side)}</span><div><div><span class="chip ghost">Group rating</span> <b><span data-rating="${esc(r.group||'')}">${esc(r.org)}</span>: ${esc(given)}</b> <span class="mono muted">${esc(String(r.year||'year not given'))}</span></div>
     <div class="small">Counts toward "${esc(q.sides[r.side])}": <b>${r.pts} point${r.pts===1?'':'s'}</b></div>
     <div class="small muted">${esc(r.org)}${/s$/.test(r.org)?"'":"'s"} scorecard favors "${esc(q.sides[r.favors])}". A rating above 50% counts toward that side and one below toward the other, up to 3 points the further it is from 50%. ${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">Their rating ↗</a>`:''}</div></div></li>`;});
   const all=[...stmts,...rated,...carried,...rows.map(li)];
@@ -1284,7 +1285,7 @@ function qItems(s,q,ev,meta){
     const tail=x.status==='cancelled'?qOff('not counted: a later vote went the other way'):`${qPill(q,x.side,st.statementPoints??QPOINTS.statement)}${x.status==='changed'?` ${qOff('changed position')}`:''}`;
     out.push(`<span class="qt-k">Said</span> ${quote?`<i>${esc(quote)}</i> `:''}<span class="qt-src">${where}</span> ${tail}`);
   }
-  for(const r of st.ratings||[])out.push(`<span class="qt-k">Rated</span> ${esc(r.grade||`${r.score}%`)} by ${link(r.url,esc(r.org))}${r.year?`, ${esc(String(r.year))}`:''} ${qPill(q,r.side,r.pts)}`);
+  for(const r of st.ratings||[])out.push(`<span class="qt-k">Rated</span> ${esc(r.grade||`${r.score}%`)} by ${link(r.url,`<span data-rating="${esc(r.group||'')}">${esc(r.org)}</span>`)}${r.year?`, ${esc(String(r.year))}`:''} ${qPill(q,r.side,r.pts)}`);
   for(const it of st.carried?.items||[]){
     const label=TYPEL[{state:'state_vote',act:'official_act',vote:'vote',s:'sponsored',c:'cosponsored'}[it.kind]]||it.kind;
     out.push(`<span class="qt-k">${esc(label)}</span> ${link(it.src?.u,esc(it.title||''))}${it.date?`, ${qYear(it.date)}`:''} ${qPill(q,it.side,it.pts)}`);
@@ -1328,7 +1329,7 @@ function paneIdeology(s,pane){
   const byIssue=ratingGroups(s),cells=list=>list.length?list.map(x=>ratingCell(s,x.g.org)).join('<br>'):'<span class="muted">None tracked</span>';
   const issues=[...RATING_ISSUES,...Object.keys(byIssue).filter(i=>!RATING_ISSUES.includes(i))].filter(i=>byIssue[i]&&(byIssue[i].conservative.length||byIssue[i].liberal.length));
   const noSide=Object.entries(byIssue).flatMap(([i,v])=>v.none.map(x=>`${ratingCell(s,x.g.org)} <span class="muted small">(${esc(i)})</span>`));
-  const ratings=stTable(['Issue','Conservative side','Liberal side'],issues.map(i=>[esc(i),cells(byIssue[i].conservative),cells(byIssue[i].liberal)]),'st-pairs',[])
+  const ratings=leanLegendHTML()+stTable(['Issue','Conservative side','Liberal side'],issues.map(i=>[esc(i),cells(byIssue[i].conservative),cells(byIssue[i].liberal)]),'st-pairs',[])
     +(noSide.length?`<p class="small muted">On neither side (shown, not counted in the Ratings lean): ${noSide.join(' · ')}</p>`:'');
   const position=`<div class="st-ideo-pos"><div class="st-ideo-n">${x.lean==null?'<b>Not placed yet</b>':`<b${leanStyle(x.lean)}>${signed(x.lean)}</b><span>${esc(x.label)}</span>`}</div>${leanScale(s,x)}${x.lean==null?`<p class="small">${esc(x.why)}.</p>`:''}</div>`;
   const checks=`<div class="st-checks"><div class="st-check"><h4>DW-NOMINATE <span class="muted small">(Voteview)</span></h4>${x.dw==null?'<p class="small muted">No score: it covers members of Congress, from their roll-call votes.</p>':`<div class="st-check-n">${s.ideo.dim1.toFixed(3)} → <b>${signed(x.dw)}</b></div><p class="small muted">Their career score, on the same scale. It rarely passes ±80, so it reads closer to the middle than the issue leans.</p>`}</div>
@@ -2117,6 +2118,7 @@ function renderProfile(s,requested='overview',focus){
   else if(s.basic&&!BASIC_FULL.has(view))paneBasicContent(s,view,content);
   else (PANES[view]||paneOverview)(s,content,focus);
   simplifyDetailSections(content,view);
+  paintLean(content);
   mountPacKinds(content);
   if(overview)fillProfileTiles(s);
   if(overview&&!s.office)fillWealthHeader(s);
@@ -2814,7 +2816,7 @@ function conduitBlock(s){
     const cp=window.CORP_PACS,rows=bulkEarmarkRows(s),groups=routedFromPayments(cp)?[...(cp.routed.groups||[]),...(cp.routed.kept||[])]:[];
     const nameOf=k=>(GPBY[k]||{}).org||DATA.bundled?.names?.[k]||k;
     const list=groups.map(nameOf),shown=list.slice(0,6).join(', ')+(list.length>6?`, and ${list.length-6} more`:'');
-    const body=rows.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Amount</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${orgName(nameOf(r.group),ORGS.group(r.group))}${r.src?`<div class="small"><a href="${esc(r.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a></div>`:''}</td><td class="small">${esc(r.period)}</td><td class="r"><b class="num">${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`
+    const body=rows.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Amount</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${orgName(nameOf(r.group),ORGS.group(r.group),undefined,r.group)}${r.src?`<div class="small"><a href="${esc(r.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a></div>`:''}</td><td class="small">${esc(r.period)}</td><td class="r"><b class="num">${fmtFull(r.amount)}</b></td></tr>`).join('')}</tbody></table></div>`
       :groups.length?`<div class="note">None of the ${groups.length} groups read (${esc(shown)}) forwarded donors' gifts to ${esc(s.short)}'s campaign this cycle, in the FEC's processed records as of ${esc(fmtDate(cp.built))}.</div>`
       :`<div class="note"><b>Not read yet for ${esc(s.short)}.</b> Gifts that groups forward to campaigns are read from each group's own FEC reports once the FEC bulk-file read has run with an FEC key. This does not mean ${esc(s.short)} received none.</div>`;
     const about=groups.length?`<p class="small muted" style="margin:6px 0 0">From every payment each group's PAC reported to the FEC this cycle, read the same way as on the reviewed profiles (read ${esc(fmtDate(cp.built))}): the groups the reviewed profiles' search found forwarding gifts. Another group could forward gifts too, so this is the least they got. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.${cp.routed?.kept?.length?` ${cp.routed.kept.length} group${cp.routed.kept.length===1?'':'s'} couldn't be read this time and keep${cp.routed.kept.length===1?'s':''} the last read's totals.`:''}${cp.routed?.failed?.length?` ${cp.routed.failed.length} group${cp.routed.failed.length===1?'':'s'} couldn't be read yet.`:''}</p>`:'';
@@ -2835,7 +2837,7 @@ function conduitBlock(s){
   if(B){
     const names=Object.keys(B.conduits||{}).map(k=>(GPBY[k]||{}).org||k);
     const hand=c.status==='measured'||c.status==='present';
-    const auto=mine.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Gifts forwarded</th><th class="r">Amount</th></tr></thead><tbody>${mine.map(([k,v])=>`<tr><td>${orgName((GPBY[k]||{}).org||B.names?.[k]||k,ORGS.group(k))}<div class="small"><a href="${esc(v.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a>${v.direct?` · its PAC's own checks, ${fmtFull(v.direct)}, are in the PAC table above`:''}</div></td><td class="small">${esc(bundledCycle(s.id,k))}</td><td class="r">${v.n?v.n.toLocaleString():'—'}</td><td class="r"><b class="num">${fmtFull(v.routed)}</b></td></tr>`).join('')}</tbody></table></div>`
+    const auto=mine.length?`<div class="tablewrap"><table><thead><tr><th>Group</th><th>Cycle</th><th class="r">Gifts forwarded</th><th class="r">Amount</th></tr></thead><tbody>${mine.map(([k,v])=>`<tr><td>${orgName((GPBY[k]||{}).org||B.names?.[k]||k,ORGS.group(k),undefined,k)}<div class="small"><a href="${esc(v.src)}" target="_blank" rel="noopener">FEC: what its PAC forwarded ↗</a>${v.direct?` · its PAC's own checks, ${fmtFull(v.direct)}, are in the PAC table above`:''}</div></td><td class="small">${esc(bundledCycle(s.id,k))}</td><td class="r">${v.n?v.n.toLocaleString():'—'}</td><td class="r"><b class="num">${fmtFull(v.routed)}</b></td></tr>`).join('')}</tbody></table></div>`
       :hand?'':`<div class="note">None of the groups tracked here (${esc(names.join(', '))}) forwarded donors' gifts to ${esc(s.short)}'s campaign, in the FEC's processed records as of ${esc(fmtDate(B.asOf))}.</div>`;
     const read=`From each group's PAC's own FEC reports, read ${esc(fmtDate(B.asOf))}. ActBlue and WinRed, which forward gifts for any campaign that uses them, aren't counted.`;
     if(!mine.length&&hand)body=`${body}${note}<p class="small muted" style="margin:6px 0 0">The automatic reading of every campaign's bundled gifts (from each group's PAC's own FEC reports, ${esc(fmtDate(B.asOf))}) found none for ${esc(s.short)}, so the figure researched by hand above stands.</p>`;
@@ -2851,7 +2853,7 @@ function researchedFunders(s){
   const rows=(s.funderPos||[]).filter(f=>f.pac>0||f.routed>0).slice().sort((a,b)=>(b.pac+(b.routed||0))-(a.pac+(a.routed||0)));
   if(!rows.length)return '';
   const cash=n=>'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:2});
-  return `<section class="chart researched-funders" id="f-groups"><div class="page-eyebrow">FOLLOW THE MONEY</div><h3>Selected researched funder groups</h3><p class="sub">Reviewed groups on file, not a complete donor ranking. Each underlying filing keeps its own period.</p><div class="tablewrap"><table><thead><tr><th>Group</th><th class="r">PAC’s own contribution</th><th class="r">Routed individual gifts</th></tr></thead><tbody>${rows.map(f=>`<tr><td><a href="#${s.id}-funders">${esc(f.org)}</a></td><td class="r mono">${cash(f.pac||0)}</td><td class="r mono">${f.routed?cash(f.routed):'—'}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Routed gifts are already part of campaign receipts; never add them again. A dash means no routed amount is shown in these reviewed entries.</p><a href="#${s.id}-funders">Compare each group’s positions with their actions →</a></section>`;
+  return `<section class="chart researched-funders" id="f-groups"><div class="page-eyebrow">FOLLOW THE MONEY</div><h3>Selected researched funder groups</h3><p class="sub">Reviewed groups on file, not a complete donor ranking. Each underlying filing keeps its own period.</p><div class="tablewrap"><table><thead><tr><th>Group</th><th class="r">PAC’s own contribution</th><th class="r">Routed individual gifts</th></tr></thead><tbody>${rows.map(f=>`<tr><td><a href="#${s.id}-funders" data-group="${esc(f.key)}">${esc(f.org)}</a></td><td class="r mono">${cash(f.pac||0)}</td><td class="r mono">${f.routed?cash(f.routed):'—'}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Routed gifts are already part of campaign receipts; never add them again. A dash means no routed amount is shown in these reviewed entries.</p><a href="#${s.id}-funders">Compare each group’s positions with their actions →</a></section>`;
 }
 function paneConnections(s,pane){
   pane.innerHTML=`${s.office?'':`<details class="data-disclosure" open><summary>Funder positions & voting evidence</summary>${donorTreemapBlock(s)}${fundersBlock(s)}${moneyVotesBlock(s)}</details>`}<section id="live-records"></section>`;
@@ -3315,7 +3317,7 @@ const bundledCycle=(id,key)=>{const c=DATA.bundled?.people?.[id]?.[key]?.cycles|
 function fundersBlock(s){
   const F=s.funderPos||[];
   const noVotes=!realVotes(s,DATA.votes).length&&!realVotes(s,DATA.hvotes).length;
-  const head=`<section class="recsec" id="rec-funders"><div class="kicker">Funding and legislative activity, side by side</div><h3 style="margin-top:4px">What ${esc(s.short)}'s funders and spenders wanted, and how ${esc(s.short)} voted</h3>
+  const head=`<section class="recsec" id="rec-funders"><div class="kicker">Funding and legislative activity, side by side</div><h3 style="margin-top:4px">What ${esc(s.short)}'s funders and spenders wanted, and how ${esc(s.short)} voted</h3>${leanLegendHTML()}
     <div class="note small" style="margin:6px 0 12px">${points([['Which groups',`Groups that gave to ${esc(s.short)}'s campaign, bundled their donors' gifts to it, or spent on the race, <i>and</i> take public positions on bills (scorecards, "key vote" letters or statements).`],['Bundled','Donors\' own gifts a group collected and forwarded through its PAC ("earmarked"). The FEC counts them as individual contributions, not the PAC\'s, so they are shown apart from its PAC checks.'],['What is shown',`Each key vote the group took a side on, next to ${esc(s.short)}'s recorded vote, with a link to the source: the group's own page, or a news report of its campaign.`],['Correlation, not cause','A match shows agreement, not that money changed the vote. Groups mostly back people who already vote their way, and spend against people who don\'t.'],['Groups covered',`Only the ${GP.length} groups whose public positions this app collects${GP.some(g=>g.status!=='done')?` (${GP.filter(g=>g.status!=='done').length} still being researched)`:''}. Other spenders, including the big party-aligned super PACs, are not compared.`]])}</div>`;
   if(!F.length)return head+`<p class="small muted">None of the ${GP.length} groups whose positions this app collects gave to ${esc(s.short)}'s campaign or spent on this race.</p></section>`;
   const money=g=>[g.pac?`gave <b class="num">${fmtFull(g.pac)}</b> to the campaign (${g.pacN} contribution${g.pacN>1?'s':''}, ${esc(s.pac.window)})`:'',
@@ -3328,8 +3330,8 @@ function fundersBlock(s){
     else if(!g.compared.length)res=`<p class="small muted" style="margin:6px 0 0">No published position by ${esc(g.org)} was found on the key votes ${esc(s.short)} cast.</p>`;
     else res=`<p class="small" style="margin:6px 0 4px"><b>${esc(s.short)} voted the way ${esc(g.org)} wanted on ${g.agree} of ${g.n} key votes it scored or took a public position on.</b></p>
       <div class="tablewrap"><table><thead><tr><th>#</th><th>Vote</th><th>${esc(g.org)} wanted</th><th>${esc(s.short)} voted</th><th>Same?</th><th>Group's own source</th></tr></thead><tbody>${g.compared.map((c,ci)=>{const v=(DATA.votes.concat(DATA.hvotes)).find(x=>x.id===c.voteId);return `<tr><td><span class="ftl-num ${c.match===null?'nv':c.match?'same':'opp'}">${voteNum(g,ci)}</span></td><td><a href="${voteUrl(v)}" target="_blank" rel="noopener">${esc(c.short)}</a><div class="small muted">${esc(c.chamber)} · ${fmtDate(c.date)}</div></td><td><span class="chip ${posClass(c.wanted)}">${esc(c.wanted)}</span></td><td><span class="chip ${posClass(c.cast)}">${esc(c.cast)}</span></td><td>${c.match===null?'<span class="muted">did not vote</span>':c.match?'<b style="color:var(--good)">✓ Same</b>':'<b style="color:var(--crit)">✕ Opposite</b>'}</td><td class="small">${c.basis==='scorecard'?'Scored in its scorecard':c.basis==='key_vote_alert'?'Key-vote letter before the vote':'Public statement'}: <a href="${esc(c.src.u)}" target="_blank" rel="noopener">${esc(c.src.t)} ↗</a></td></tr>`}).join('')}</tbody></table></div>${fundTimeline(s,g,'ftl-'+g.key)}`;
-    return `<div class="mv"><h4>${orgName(g.org,ORGS.group(g.key))}</h4><p class="small" style="margin:0">${money(g)}${g.spenders.length?` <span class="muted">(${esc(g.spenders.join(', '))})</span>`:''}</p>${res}</div>`;}).join('');
-  return head+body+`<p class="small muted" style="margin-top:10px"><b>Groups researched:</b> ${GP.map(g=>esc(g.org)+(g.status==='pending'?' (in progress)':'')).join(', ')}. <a href="#method">How positions were collected</a>.</p></section>`;
+    return `<div class="mv"><h4>${orgName(g.org,ORGS.group(g.key),undefined,g.key)}</h4><p class="small" style="margin:0">${money(g)}${g.spenders.length?` <span class="muted">(${esc(g.spenders.join(', '))})</span>`:''}</p>${res}</div>`;}).join('');
+  return head+body+`<p class="small muted" style="margin-top:10px"><b>Groups researched:</b> ${GP.map(g=>`<span data-group="${esc(g.key)}">${esc(g.org)}</span>`+(g.status==='pending'?' (in progress)':'')).join(', ')}. <a href="#method">How positions were collected</a>.</p></section>`;
 }
 
 function moneyVotesBlock(s){
@@ -3902,8 +3904,8 @@ const groupLean=()=>LEAN_DATA??=fetch('/group-lean.json',{cache:'no-cache'}).the
 async function paintLean(root){
   const d=await groupLean();if(!d||!root.isConnected)return;
   const years=(d.cycles||[]).map(String);
-  for(const el of root.querySelectorAll('[data-group]')){
-    const t=groupLeanTag(d.groups?.[el.dataset.group],years);if(!t)continue;
+  for(const el of root.querySelectorAll('[data-group],[data-rating]')){
+    const t=groupLeanTag(el.dataset.group?d.groups?.[el.dataset.group]:d.ratings?.[el.dataset.rating],years);if(!t)continue;
     el.classList.add('lean',t.cls);
     const tip=el.getAttribute('data-tip'),text=tip?`${tip} ${t.text}`:`${el.textContent}: ${t.text}`;
     el.setAttribute('data-tip',text);el.setAttribute('aria-label',text);
@@ -4378,7 +4380,8 @@ function renderMethod(sub){
     </ul>
     <h2 id="method-lean">Group colors</h2>
     <ul class="list">
-      <li><b>What the color shows:</b> on each bill's page, a group's name is colored by the party its political money mostly helps, from the FEC's files for the last three election cycles. It describes where the money goes, not the group's stated views.</li>
+      <li><b>What the color shows:</b> on each bill's page and on the profiles, a group's name is colored by the party its political money mostly helps, from the FEC's files for the last three election cycles. It describes where the money goes, not the group's stated views.</li>
+      <li><b>Groups that rate members but have no money on file here:</b> colored by their scorecard: red when it rates conservative votes higher, blue when it rates liberal votes higher, grey when it takes neither side. The Lugar Center's Bipartisan Index is grey by hand. A rating group that's also one of the groups with money takes that group's color.</li>
       <li><b>Helps Republicans:</b> its PACs' gifts to Republican candidates and its spending for them, plus its general-election spending against Democrats. <b>Helps Democrats:</b> the same, the other way round. Spending against a candidate in a primary is left out, since opposing a Republican in a primary doesn't help Democrats.</li>
       <li><b>Red:</b> 75% or more of its money helps Republicans. <b>Blue:</b> 75% or more helps Democrats. <b>Grey (bipartisan):</b> anything in between. <b>Yellow (libertarian):</b> only a group that calls itself libertarian; none of the groups yet.</li>
       <li><b>Set by hand:</b> Fairshake is grey: only its Republican-side super PAC is tracked here, and its network also runs one that backs Democrats. Hovering over a name gives its share and the reason.</li>

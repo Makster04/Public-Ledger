@@ -225,5 +225,343 @@
    "R": 0,
    "D": 3239079
   }
+ },
+ "ratings": {
+  "heritage": {
+   "lean": "republican",
+   "rShare": 99.1,
+   "R": 26011694,
+   "D": 235910,
+   "same": "heritage"
+  },
+  "clubforgrowth": {
+   "lean": "republican",
+   "rShare": 99.3,
+   "R": 66391689,
+   "D": 477766,
+   "same": "cfg"
+  },
+  "afp": {
+   "lean": "republican",
+   "rShare": 99.4,
+   "R": 234978100,
+   "D": 1367104,
+   "same": "afp"
+  },
+  "scf": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 11146771,
+   "D": 0,
+   "same": "scf"
+  },
+  "nra": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 24168938,
+   "D": 470,
+   "same": "nra"
+  },
+  "nrlc": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 2429870,
+   "D": 0,
+   "same": "nrlc"
+  },
+  "chamber": {
+   "lean": "republican",
+   "rShare": 81.6,
+   "R": 1027250,
+   "D": 231500,
+   "same": "chamber"
+  },
+  "nfib": {
+   "lean": "republican",
+   "rShare": 99.3,
+   "R": 1809477,
+   "D": 13000,
+   "same": "nfib"
+  },
+  "edf": {
+   "lean": "democrat",
+   "rShare": 2.8,
+   "R": 512703,
+   "D": 17630350,
+   "same": "edf"
+  },
+  "nrdc": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 6072878,
+   "same": "nrdc"
+  },
+  "aflcio": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 145023,
+   "same": "aflcio"
+  },
+  "seiu": {
+   "lean": "democrat",
+   "rShare": 0.4,
+   "R": 71233,
+   "D": 17744363,
+   "same": "seiu"
+  },
+  "afscme": {
+   "lean": "democrat",
+   "rShare": 0.1,
+   "R": 35000,
+   "D": 27874942,
+   "same": "afscme"
+  },
+  "nea": {
+   "lean": "democrat",
+   "rShare": 1.1,
+   "R": 52000,
+   "D": 4673442,
+   "same": "nea"
+  },
+  "aft": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 5664625,
+   "same": "aft"
+  },
+  "giffords": {
+   "lean": "democrat",
+   "rShare": 0.1,
+   "R": 11500,
+   "D": 18428361,
+   "same": "giffords"
+  },
+  "everytown": {
+   "lean": "democrat",
+   "rShare": 1.1,
+   "R": 3000,
+   "D": 281097,
+   "same": "everytown"
+  },
+  "ppaction": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 24,
+   "D": 15558584,
+   "same": "ppaf"
+  },
+  "hrc": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 1202085,
+   "same": "hrc"
+  },
+  "aclu": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "sba": {
+   "lean": "republican",
+   "rShare": 98.6,
+   "R": 715390,
+   "D": 10000,
+   "same": "sba"
+  },
+  "lcv": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 650,
+   "D": 87461327,
+   "same": "lcv"
+  },
+  "rfa": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 3685708,
+   "same": "rffa"
+  },
+  "goa": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "numbersusa": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "ara": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 426000,
+   "same": "ara"
+  },
+  "nssf": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "sfla": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "aea": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "defenders": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "climatehawks": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "cwa": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "teamsters": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "apwu": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "ntu": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "ccagw": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "network": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "naacp": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "civilrights": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "aauw": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "cpac": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "jbs": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "rlc": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "progressivepunch": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "ada": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "frc": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "ncpssm": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "ecu": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "commoncause": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "humane": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "standwithcrypto": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "c4ip": {
+   "lean": "bipartisan",
+   "basis": "scorecard",
+   "side": "none"
+  },
+  "ajp": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "imeu": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "niac": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "napo": {
+   "lean": "republican",
+   "basis": "scorecard",
+   "side": "conservative"
+  },
+  "norml": {
+   "lean": "democrat",
+   "basis": "scorecard",
+   "side": "liberal"
+  },
+  "lugar": {
+   "lean": "bipartisan",
+   "why": "It rates how often members work with the other party.",
+   "basis": "set"
+  }
  }
 }

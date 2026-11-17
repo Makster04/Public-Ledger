@@ -9,6 +9,9 @@
 //   red    75% or more of its money helps Republicans      blue   75% or more helps Democrats
 //   grey   anything between (bipartisan), or a hand-set reason below
 //   yellow libertarian: only a group that calls itself libertarian, set by hand below (none of the groups yet)
+// The groups that rate members (public/group-ratings.json) and have no money on file here go by their scorecard instead:
+// red when it rates conservative votes higher, blue when liberal ones, grey when it takes neither side. One with money
+// on file (the same group under another key, in RATING_SAME) takes that group's color.
 //   npm run groups:lean
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,6 +25,15 @@ export const LEAN_SHARE=75;
 export const LEAN_SET={
   fairshake:{lean:'bipartisan',why:'Only its Republican-side super PAC (Defend American Jobs) is tracked here; the Fairshake network also runs Protect Progress, which backs Democrats.'},
 };
+export const RATING_SAME={clubforgrowth:'cfg',ppaction:'ppaf',rfa:'rffa'};
+export const RATING_SET={lugar:{lean:'bipartisan',why:'It rates how often members work with the other party.'}};
+// A rating group's color: its money group's when it has one, else its scorecard's side.
+export function ratingLean(key,g,money){
+  const same=RATING_SAME[key]||(money?.[key]?key:null);
+  if(same&&money?.[same]?.lean)return {...money[same],same};
+  if(RATING_SET[key])return {...RATING_SET[key],basis:'set'};
+  return {lean:g?.lean==='conservative'?'republican':g?.lean==='liberal'?'democrat':'bipartisan',basis:'scorecard',side:g?.lean||'none'};
+}
 export const LEAN_LABEL={republican:'Mostly helps Republicans',democrat:'Mostly helps Democrats',libertarian:'Libertarian',bipartisan:'Bipartisan'};
 
 // One row's side: 'R' or 'D' (or null for another party or an unknown candidate). sup: spending for, or a gift.
@@ -70,8 +82,11 @@ async function main(){
   const out={about:'Each group\'s lean, from which party its PAC gifts and campaign spending helped (FEC bulk files). See scripts/build-group-lean.mjs.',
     built:new Date().toISOString().slice(0,10),cycles:used,share:LEAN_SHARE,groups:{}};
   for(const g of groups){const s=sums[g.key];out.groups[g.key]={...leanOf(s.R,s.D,LEAN_SET[g.key]),R:Math.round(s.R),D:Math.round(s.D)};}
+  const ratings=JSON.parse(fs.readFileSync(path.join(ROOT,'public','group-ratings.json'),'utf8')).groups||{};
+  out.ratings=Object.fromEntries(Object.entries(ratings).map(([k,g])=>[k,ratingLean(k,g,out.groups)]));
   fs.writeFileSync(path.join(ROOT,'public','group-lean.json'),JSON.stringify(out,null,1)+'\n');
   const n=k=>Object.values(out.groups).filter(x=>x.lean===k).length;
-  console.log(`Wrote public/group-lean.json (${used.join(', ')}): ${n('republican')} Republican, ${n('democrat')} Democratic, ${n('bipartisan')} bipartisan, ${n('libertarian')} libertarian, ${n(null)} with no money on file.`);
+  const r=Object.values(out.ratings),rn=k=>r.filter(x=>x.lean===k).length;
+  console.log(`Wrote public/group-lean.json (${used.join(', ')}): ${n('republican')} Republican, ${n('democrat')} Democratic, ${n('bipartisan')} bipartisan, ${n('libertarian')} libertarian, ${n(null)} with no money on file; rating groups: ${rn('republican')} red, ${rn('democrat')} blue, ${rn('bipartisan')} grey, ${rn('libertarian')} yellow.`);
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e.message);process.exit(1);});
