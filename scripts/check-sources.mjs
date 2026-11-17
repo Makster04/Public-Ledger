@@ -4,8 +4,10 @@
 //   3. Groups behind outside spending (ProPublica 404)   4. Lobbying on key bills (LDA.gov, "did not filter")
 // About 15 requests in all. Every key in .dev.vars is replaced by [key] in what is printed. Run it while the refresh is
 // stopped, or an hour after other FEC scripts, so the FEC's hourly limit isn't the answer.
-//   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda|bargo)
+//   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda|bargo|eulerpool)
 // 5. Bargo (--only bargo): what it lists for the Senate, and senators searched as the refresh searches them.
+// 6. Eulerpool (--only eulerpool): whether EULERPOOL_API_KEY is accepted, how the key has to be sent (header or ?token=),
+//    whether its congress-trading list answers the refresh's search by name, and what a trade looks like. 3 or 4 requests.
 import fs from 'node:fs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {HOSTS} from '../src/sources.mjs';
@@ -26,18 +28,36 @@ function localJobs(){
   try{return db.prepare("SELECT id,kind,subject,args,error FROM jobs WHERE kind IN ('fec-legal','donor-months','outside-groups','bill-lobbying')").all();}finally{db.close();}
 }
 
-async function ask(label,url,{as='json'}={}){
+// auth 'token': the key goes in ?token= instead of the way src/sources.mjs sends it (Eulerpool accepts either, its docs say).
+async function ask(label,url,{as='json',auth=null}={}){
   const u=new URL(url),h=HOSTS[u.hostname],headers={Accept:'application/json'};
   const key=h?.keys?.map(k=>env[k]).find(Boolean);
-  if(key){if(h.query)u.searchParams.set(h.query,key);else headers[h.header]=(h.prefix||'')+key;}
+  if(key){if(auth==='token')u.searchParams.set('token',key);else if(h.query)u.searchParams.set(h.query,key);else headers[h.header]=(h.prefix||'')+key;}
   if(h?.ua)headers['User-Agent']=h.ua;
   const shown=redact(decodeURIComponent(u.pathname+u.search));
   try{
     const r=await fetch(u,{headers,signal:AbortSignal.timeout(30000)}),text=await r.text();
     let json=null;if(as==='json')try{json=JSON.parse(text);}catch{}
     console.log(`\n• ${label}\n  ${shown}\n  → HTTP ${r.status}${r.ok?'':`: ${redact(text.replace(/\s+/g,' ')).slice(0,700)}`}`);
+    const left=r.headers.get('x-ratelimit-remaining');if(left!=null)console.log(`  requests left this month: ${left} of ${r.headers.get('x-ratelimit-limit')??'?'}`);
     return {status:r.status,json};
   }catch(e){console.log(`\n• ${label}\n  ${shown}\n  → no reply (${e.name}${e.cause?.code?` ${e.cause.code}`:''})`);return {status:0,json:null};}
+}
+
+// Eulerpool's replies, described: where the list of trades is, how many, the fields of a trade, the first few, and (for a
+// search by name) how many are that person's, since its reference page documents only `symbol` and `limit`, not a name.
+export const eulerpoolTrades=j=>Array.isArray(j)?j:Array.isArray(j?.data)?j.data:Array.isArray(j?.trades)?j.trades:[];
+export function eulerpoolLines(j,{name=null}={}){
+  if(!j||typeof j!=='object')return ['  No JSON in the reply.'];
+  const t=eulerpoolTrades(j),where=Array.isArray(j)?'a plain list':Array.isArray(j.data)?'"data"':Array.isArray(j.trades)?'"trades"':null;
+  if(!where)return [`  No list of trades in the reply; it has: ${Object.keys(j).join(', ')||'nothing'}`];
+  const out=[`  ${t.length} trades, in ${where}`];if(!t.length)return out;
+  const v=(x,...k)=>k.map(n=>x[n]).find(y=>y!=null&&y!=='')??'';
+  out.push(`  fields of a trade: ${Object.keys(t[0]).join(', ')}`);
+  for(const x of t.slice(0,3))out.push(`  ${v(x,'politician','name','member')} (${v(x,'chamber')||'no chamber'}): ${v(x,'tx_type','transaction_type','type')} ${v(x,'symbol','ticker')||v(x,'asset_description','asset','assetDescription')}, traded ${String(v(x,'tx_date','transaction_date','transactionDate')).slice(0,10)}, filed ${String(v(x,'filing_date','disclosureDate')).slice(0,10)}${v(x,'owner')?`, owner ${v(x,'owner')}`:''}, $${v(x,'tx_amount_low','amount_from','amountMin')} to $${v(x,'tx_amount_high','amount_to','amountMax')}`);
+  if(name){const fold=s=>String(s||'').toLowerCase(),mine=t.filter(x=>fold(v(x,'politician','name','member')).includes(fold(name))).length;
+    out.push(`  ${mine} of ${t.length} are ${name}'s${mine===t.length?', so the search by name works':', so the name was ignored and this is everyone\'s latest trades'}`);}
+  return out;
 }
 
 // Bargo's replies, described: how many trades, anything else it sent, the fields of a trade, the dates covered, how the
@@ -157,6 +177,22 @@ async function main(){
     const r3=await ask(`Search for "${a.last}" in either chamber`,`${B}?member=${encodeURIComponent(a.last)}&limit=250&page=0`),t3=bargoTrades(r3.json);
     console.log(`  ${t3.length} trades returned${t3.length?`: ${[...new Set(t3.map(t=>`${t.member} (${t.chamber??'no chamber'}, ${t.state??'no state'})`))].slice(0,5).join('; ')}`:''}.`);
   }
+  }
+  if(part('eulerpool')){
+  // 6. Eulerpool: turned off in the refresh (src/feeds.mjs RETIRED_FEEDS), so this is the only place its key is used.
+  console.log('\n=== 6. Eulerpool congress trading');
+  if(!env.EULERPOOL_API_KEY)console.log('EULERPOOL_API_KEY is not set in .dev.vars, so the answers will be about the missing key.');
+  else console.log(`EULERPOOL_API_KEY is set (${env.EULERPOOL_API_KEY.length} characters; the key itself is never printed).`);
+  const E='https://api.eulerpool.com/api/1/alternative/congress-trading',who=person(argPerson)||person('perry')||config.people.find(p=>p.inOffice);
+  const a=await ask('The documented list, newest 5 (key in the Authorization header, as the refresh sends it)',`${E}?limit=5`);
+  for(const l of eulerpoolLines(a.json))console.log(l);
+  const denied=a.status===401||a.status===403;
+  if(denied){const b=await ask('The same, with the key as ?token= instead',`${E}?limit=5`,{auth:'token'});for(const l of eulerpoolLines(b.json))console.log(l);}
+  const auth=denied?'token':null,last=surname(who);
+  const c=await ask(`As the refresh searches: politician=${last} (${who.name})`,`${E}?politician=${encodeURIComponent(last)}`,{auth});
+  for(const l of eulerpoolLines(c.json,{name:last}))console.log(l);
+  const d=await ask('By stock, as its reference page documents: symbol=NVDA, 5 results',`${E}?symbol=NVDA&limit=5`,{auth});
+  for(const l of eulerpoolLines(d.json))console.log(l);
   }
   console.log('\nDone. Copy everything above and send it; no keys are in it.');
 }
