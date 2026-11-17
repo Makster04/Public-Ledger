@@ -18,6 +18,7 @@ const KEYS=[['FEC_API_KEY','https://api.open.fec.gov/developers/','Campaign tota
   ['LEGISCAN_API_KEY','https://legiscan.com/legiscan','State bills, cross-checked against Open States'],
   ['LDA_API_KEY','https://lda.gov/','Lobbying filings (optional: works without a key at a lower limit)'],
   ['BARGO_API_KEY','https://www.bargo.ai/free-apis/dash','Stock trades (optional: works without a key at a lower limit)'],
+  ['EULERPOOL_API_KEY','https://eulerpool.com/developers/register','Stock trades: the newest 500 in Congress, once a day (optional: works without a key at a lower limit)'],
   ['COURTLISTENER_API_TOKEN','https://www.courtlistener.com/help/api/rest/','Court records'],
   ['GOOGLE_API_KEY','https://developers.google.com/fact-check-tools','Fact-checks and YouTube videos'],
   ['NYT_API_KEY','https://developer.nytimes.com/','New York Times articles'],

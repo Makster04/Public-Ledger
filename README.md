@@ -91,6 +91,7 @@ The local server binds only to your computer. It uses `.local/records.sqlite` an
 | `LEGISCAN_API_KEY` | [legiscan.com/legiscan](https://legiscan.com/legiscan) | State bills, cross-checked against Open States (checked weekly to stay well inside the monthly query cap) |
 | `LDA_API_KEY` (optional) | [lda.gov](https://lda.gov/) | Lobbying filings. Works without a key at a lower rate limit |
 | `BARGO_API_KEY` (optional) | [bargo.ai/free-apis/dash](https://www.bargo.ai/free-apis/dash) | Members' stock trades from the last 3 months. Works without a key at a lower limit |
+| `EULERPOOL_API_KEY` (optional) | [eulerpool.com/developers/register](https://eulerpool.com/developers/register) | The newest 500 stock trades in Congress, read once a day and matched to members. Works without a key at a lower limit. Test it with `npm run check:sources -- --only eulerpool` |
 | `DISCLOSED_CAPITOL_API_KEY` (not used) | [disclosedcapitol.com/developers](https://www.disclosedcapitol.com/developers) | Members' and executive-branch stock trades. Not read: its 750 free credits are a one-time trial, and calls cost money after that. The president's trades come from its free dataset instead (see "Not refreshed automatically") |
 | `COURTLISTENER_API_TOKEN` | [courtlistener.com/help/api/rest](https://www.courtlistener.com/help/api/rest/) | Court opinions and dockets naming profiled people. A free account allows about 125 requests a day, so this runs weekly |
 | `GOOGLE_API_KEY` | [developers.google.com/fact-check-tools](https://developers.google.com/fact-check-tools) | Published fact-checks of politicians' claims, and officials' YouTube videos. Turn on both the Fact Check Tools API and the YouTube Data API for this one key |
@@ -460,7 +461,7 @@ The local and Cloudflare servers share the same refresh and API implementation. 
 2. `npx wrangler d1 create public-ledger`
 3. Put the returned database ID in `wrangler.jsonc`.
 4. `npm run db:migrate`
-5. `npx wrangler secret put FEC_API_KEY`, then the same for `CONGRESS_API_KEY`, `GOVINFO_API_KEY`, `OPENSTATES_API_KEY`, `LEGISCAN_API_KEY`, `LDA_API_KEY`, `BARGO_API_KEY`, `COURTLISTENER_API_TOKEN`, `GOOGLE_API_KEY`, `NYT_API_KEY`, `REGULATIONS_API_KEY`, `SAM_API_KEY` and `SEC_USER_AGENT` (skip any you don't use)
+5. `npx wrangler secret put FEC_API_KEY`, then the same for `CONGRESS_API_KEY`, `GOVINFO_API_KEY`, `OPENSTATES_API_KEY`, `LEGISCAN_API_KEY`, `LDA_API_KEY`, `BARGO_API_KEY`, `EULERPOOL_API_KEY`, `COURTLISTENER_API_TOKEN`, `GOOGLE_API_KEY`, `NYT_API_KEY`, `REGULATIONS_API_KEY`, `SAM_API_KEY` and `SEC_USER_AGENT` (skip any you don't use)
 6. `npm run cloudflare:deploy`
 
 The hosted cron checks every five minutes, processing up to eight source pages per invocation. With every source enabled there are about 1,000 jobs plus one per new Congressional Record issue, so the first full refresh takes most of a day. Use the Workers paid plan for the configured CPU allowance. D1 and Worker usage may incur charges beyond included allowances; this project does not enable billing or create any cloud resources by itself. The hosted database begins empty and fills from official sources; the reviewed snapshot is bundled with the static assets. Local SQLite files and API keys are excluded from deployment.
