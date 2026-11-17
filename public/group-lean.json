@@ -1,0 +1,229 @@
+{
+ "about": "Each group's lean, from which party its PAC gifts and campaign spending helped (FEC bulk files). See scripts/build-group-lean.mjs.",
+ "built": "2026-11-17",
+ "cycles": [
+  "2022",
+  "2024",
+  "2026"
+ ],
+ "share": 75,
+ "groups": {
+  "aflcio": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 145023
+  },
+  "afp": {
+   "lean": "republican",
+   "rShare": 99.4,
+   "R": 234978100,
+   "D": 1367104
+  },
+  "afscme": {
+   "lean": "democrat",
+   "rShare": 0.1,
+   "R": 35000,
+   "D": 27874942
+  },
+  "ara": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 426000
+  },
+  "cfg": {
+   "lean": "republican",
+   "rShare": 99.3,
+   "R": 66391689,
+   "D": 477766
+  },
+  "chamber": {
+   "lean": "republican",
+   "rShare": 81.6,
+   "R": 1027250,
+   "D": 231500
+  },
+  "giffords": {
+   "lean": "democrat",
+   "rShare": 0.1,
+   "R": 11500,
+   "D": 18428361
+  },
+  "hrc": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 1202085
+  },
+  "lcv": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 650,
+   "D": 87461327
+  },
+  "nfib": {
+   "lean": "republican",
+   "rShare": 99.3,
+   "R": 1809477,
+   "D": 13000
+  },
+  "nra": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 24168938,
+   "D": 470
+  },
+  "nrlc": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 2429870,
+   "D": 0
+  },
+  "ppaf": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 24,
+   "D": 15558584
+  },
+  "rffa": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 3685708
+  },
+  "scf": {
+   "lean": "republican",
+   "rShare": 100,
+   "R": 11146771,
+   "D": 0
+  },
+  "seiu": {
+   "lean": "democrat",
+   "rShare": 0.4,
+   "R": 71233,
+   "D": 17744363
+  },
+  "heritage": {
+   "lean": "republican",
+   "rShare": 99.1,
+   "R": 26011694,
+   "D": 235910
+  },
+  "fairshake": {
+   "lean": "bipartisan",
+   "rShare": 100,
+   "why": "Only its Republican-side super PAC (Defend American Jobs) is tracked here; the Fairshake network also runs Protect Progress, which backs Democrats.",
+   "R": 88819016,
+   "D": 0
+  },
+  "edf": {
+   "lean": "democrat",
+   "rShare": 2.8,
+   "R": 512703,
+   "D": 17630350
+  },
+  "nrdc": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 6072878
+  },
+  "cffe": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 30025152
+  },
+  "emily": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 54632148
+  },
+  "acu": {
+   "lean": "bipartisan",
+   "rShare": 53.2,
+   "R": 8544801,
+   "D": 7522376
+  },
+  "aipac": {
+   "lean": "bipartisan",
+   "rShare": 65.7,
+   "R": 4982532,
+   "D": 2606023
+  },
+  "aha": {
+   "lean": "bipartisan",
+   "rShare": 50.4,
+   "R": 4300544,
+   "D": 4225279
+  },
+  "ama": {
+   "lean": "bipartisan",
+   "rShare": 41.1,
+   "R": 1589000,
+   "D": 2278563
+  },
+  "aba": {
+   "lean": "bipartisan",
+   "rShare": 65.1,
+   "R": 4601499,
+   "D": 2462000
+  },
+  "mba": {
+   "lean": "bipartisan",
+   "rShare": 55.6,
+   "R": 1867750,
+   "D": 1492247
+  },
+  "icba": {
+   "lean": "bipartisan",
+   "rShare": 59.4,
+   "R": 1320000,
+   "D": 904000
+  },
+  "nar": {
+   "lean": "bipartisan",
+   "rShare": 55.4,
+   "R": 10785333,
+   "D": 8686207
+  },
+  "aft": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 5664625
+  },
+  "nea": {
+   "lean": "democrat",
+   "rShare": 1.1,
+   "R": 52000,
+   "D": 4673442
+  },
+  "phrma": {
+   "lean": "bipartisan",
+   "rShare": 60.4,
+   "R": 466500,
+   "D": 306026
+  },
+  "sba": {
+   "lean": "republican",
+   "rShare": 98.6,
+   "R": 715390,
+   "D": 10000
+  },
+  "everytown": {
+   "lean": "democrat",
+   "rShare": 1.1,
+   "R": 3000,
+   "D": 281097
+  },
+  "jstreet": {
+   "lean": "democrat",
+   "rShare": 0,
+   "R": 0,
+   "D": 3239079
+  }
+ }
+}

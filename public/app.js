@@ -12,7 +12,7 @@ import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
-import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote} from './legislation-page.js';
+import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote,leanTag as groupLeanTag,leanLegendHTML} from './legislation-page.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
@@ -3896,6 +3896,20 @@ function renderLegislation(init){
   page.addEventListener('click',e=>{const c=e.target.closest('[data-bill]');if(c&&!e.target.closest('a'))open(c);});
   page.addEventListener('keydown',e=>{const c=e.target.closest('[data-bill]');if(c&&e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();open(c);}});
 }
+// Colors each group name marked data-group by its lean (public/group-lean.json), and adds the reason to its hover text.
+let LEAN_DATA;
+const groupLean=()=>LEAN_DATA??=fetch('/group-lean.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+async function paintLean(root){
+  const d=await groupLean();if(!d||!root.isConnected)return;
+  const years=(d.cycles||[]).map(String);
+  for(const el of root.querySelectorAll('[data-group]')){
+    const t=groupLeanTag(d.groups?.[el.dataset.group],years);if(!t)continue;
+    el.classList.add('lean',t.cls);
+    const tip=el.getAttribute('data-tip'),text=tip?`${tip} ${t.text}`:`${el.textContent}: ${t.text}`;
+    el.setAttribute('data-tip',text);el.setAttribute('aria-label',text);
+    if(!tip){el.classList.add('org');bindTips({querySelectorAll:()=>[el]});}
+  }
+}
 function renderBill(id){
   const bills=lgBills(),b=bills.find(x=>x.id===id||(x.keys||[]).includes(id));
   if(!b){app.innerHTML=`<section class="lg-bill"><a class="small" href="#legislation">← All legislation</a><h1 class="lg-h1">Bill not found</h1><p class="muted">No bill on file has the number ${esc(id)}.</p></section>`;return;}
@@ -3914,7 +3928,7 @@ function renderBill(id){
       ${yea.length||nay.length?`<div class="lg-who"><div><span class="lg-k">Yea (${yea.length})</span>${chips(yea)}</div><div><span class="lg-k">Nay (${nay.length})</span>${chips(nay)}</div></div>`:''}</div>`;};
   const groupLine=g=>{const info=groupInfo(DATA,g.group),m=g.money,hv=helpedVoted(b,g);
     const parts=m?[m.for&&`<span class="lg-for">${lgMoney(m.for)} to help</span>`,m.against&&`<span class="lg-against">${lgMoney(m.against)} against</span>`,m.routed&&`${lgMoney(m.routed)} in members' gifts it forwarded`,m.pac&&`${lgMoney(m.pac)} from its PACs`].filter(Boolean):[];
-    return `<li><div class="lg-gh"><b${info.about?` class="org" data-tip="${esc(`${info.org}: ${info.about}`)}"`:''}>${esc(info.org)}</b>${g.src?.u?` <a class="lg-src" href="${esc(g.src.u)}" target="_blank" rel="noopener" title="${esc(g.src.t||'Source')}">record ↗</a>`:''}${m?.fewDonors?' <span class="lg-flag lg-dark">◐ lists few donors</span>':''}</div>
+    return `<li><div class="lg-gh"><b data-group="${esc(g.group)}"${info.about?` class="org" data-tip="${esc(`${info.org}: ${info.about}`)}"`:''}>${esc(info.org)}</b>${g.src?.u?` <a class="lg-src" href="${esc(g.src.u)}" target="_blank" rel="noopener" title="${esc(g.src.t||'Source')}">record ↗</a>`:''}${m?.fewDonors?' <span class="lg-flag lg-dark">◐ lists few donors</span>':''}</div>
       ${g.why?`<div class="lg-m">${esc(g.why)}</div>`:''}
       <div class="lg-m">${parts.length?`${parts.join(' · ')} in the races tracked here`:'No money in the races tracked here'}</div>
       ${hv.n?`<div class="lg-m">Lawmakers it helped who voted on this: <b class="lg-ink">${hv.ok} of ${hv.n}</b> voted its way</div>`:''}</li>`;};
@@ -3937,7 +3951,7 @@ function renderBill(id){
       <div class="lg-stat"><span>Its opponents' money</span><b class="lg-against">${lgMoney(b.moneyAgainst)}</b><small>in the races tracked here</small></div></div>
     <div class="chart lg-sec" id="lg-where"><h3>Where it stands</h3><p class="small" style="margin:6px 0 0">${where}</p>${(b.steps||[]).length?`<ul class="list small">${b.steps.map(x=>`<li>${esc(x.text)}${x.src?.u?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener" title="${esc(x.src.t||'')}">Source ↗</a>`:''}</li>`).join('')}</ul>`:''}</div>
     <div class="chart lg-sec" id="lg-votes"><h3>The votes</h3><div class="sub">Each roll call, how each party split, and the lawmakers on each side: names are profiles on this site.</div>${b.votes.length?b.votes.map(voteBlock).join(''):'<p class="muted small">No roll call on this bill is on file.</p>'}</div>
-    <div class="chart lg-sec" id="lg-sides"><h3>Who wanted what, and their money</h3><div class="sub">Groups with a documented side (their statements, key-vote letters and scorecards, linked), the money each put into the races tracked here, and how the lawmakers it helped voted on this bill. Money in a race isn't proof it changed a vote.</div>
+    <div class="chart lg-sec" id="lg-sides"><h3>Who wanted what, and their money</h3><div class="sub">Groups with a documented side (their statements, key-vote letters and scorecards, linked), the money each put into the races tracked here, and how the lawmakers it helped voted on this bill. Money in a race isn't proof it changed a vote. Each name's color is the party its money mostly helps (<a href="#method-lean">how</a>).</div>${leanLegendHTML()}
       <div class="lg-sides"><div class="lg-side"><h4><i class="sw lg-sw-for"></i>Wanted it passed (${F.length})</h4>${F.length?`<ul>${F.map(groupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
         <div class="lg-side"><h4><i class="sw lg-sw-against"></i>Opposed it (${A.length})</h4>${A.length?`<ul>${A.map(groupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div></div></div>
     ${gains?`<div class="chart lg-sec" id="lg-gains"><h3>Who gains</h3><div class="sub">The People First score${pfText(b.pf)?`: ${esc(pfText(b.pf))}`:''} (−100 to +100), half from a nonpartisan study of who gains, half from which worker and business groups took sides. <a href="#method-peoplefirst">How it's calculated</a></div>${gains.why?`<p class="lg-lede" style="margin:8px 0 0">${esc(gains.why)}${gains.src?.u?` <a class="lg-src" href="${esc(gains.src.u)}" target="_blank" rel="noopener" title="${esc(gains.src.t||'')}">${esc(gains.by||'Source')} ↗</a>`:''}</p>`:''}</div>`:''}
@@ -3947,7 +3961,7 @@ function renderBill(id){
       <div class="small" style="margin-top:6px" data-lob="${esc(b.id)}"></div></div>
     <p class="small muted">Sources: Senate and House roll calls; the bill's summary and status sources (linked); groups' own records (linked); FEC records of the money in the races tracked here. People who give are added up, never named.</p></section>`;
   app.querySelector('.lg-tabs').addEventListener('click',e=>{const t=e.target.closest('[data-jump]');if(!t)return;app.querySelectorAll('.lg-tabs button').forEach(x=>x.classList.toggle('active',x===t));document.getElementById(t.dataset.jump)?.scrollIntoView({block:'start',behavior:'smooth'});});
-  mountBillLobbying(app);bindTips(app);hoverTips(app);
+  mountBillLobbying(app);bindTips(app);hoverTips(app);paintLean(app);
 }
 
 // ---------- compare ----------
@@ -4361,6 +4375,13 @@ function renderMethod(sub){
       <li><b>Integrity:</b> latest monthly comparison values, with profile links to component coverage and Not graded explanations. Historical Ethics and Promise values remain in the official monthly score log.</li>
       <li><b>People First:</b> bars centered at 50%, and a chart of People First against DW-NOMINATE to spot outliers.</li>
       <li><b>Ideological position:</b> the whole chamber on the DW-NOMINATE scale, with one person highlighted.</li>
+    </ul>
+    <h2 id="method-lean">Group colors</h2>
+    <ul class="list">
+      <li><b>What the color shows:</b> on each bill's page, a group's name is colored by the party its political money mostly helps, from the FEC's files for the last three election cycles. It describes where the money goes, not the group's stated views.</li>
+      <li><b>Helps Republicans:</b> its PACs' gifts to Republican candidates and its spending for them, plus its general-election spending against Democrats. <b>Helps Democrats:</b> the same, the other way round. Spending against a candidate in a primary is left out, since opposing a Republican in a primary doesn't help Democrats.</li>
+      <li><b>Red:</b> 75% or more of its money helps Republicans. <b>Blue:</b> 75% or more helps Democrats. <b>Grey (bipartisan):</b> anything in between. <b>Yellow (libertarian):</b> only a group that calls itself libertarian; none of the groups yet.</li>
+      <li><b>Set by hand:</b> Fairshake is grey: only its Republican-side super PAC is tracked here, and its network also runs one that backs Democrats. Hovering over a name gives its share and the reason.</li>
     </ul>
     <h2 id="method-influence">Money shown beside the grades</h2>
     <ul class="list">
