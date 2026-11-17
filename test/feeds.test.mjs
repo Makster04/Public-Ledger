@@ -33,7 +33,7 @@ test('every approved host sends its key the documented way, and saved links neve
   await assert.rejects(requestSource('https://data.sec.gov/submissions/CIK0000320193.json',{fetch:async()=>json({})}),/SEC contact line/);
   assert.equal(missingKey('www.bargo.ai',{}),null,'Bargo works without a key at a lower limit');
   assert.equal(missingKey('api.govinfo.gov',{CONGRESS_API_KEY:'x'}),null,'GovInfo accepts the Congress.gov key');
-  assert.equal(missingKey('api.eulerpool.com',{}),'Eulerpool');
+  assert.equal(missingKey('api.eulerpool.com',{}),null,'Eulerpool answers without a key too, at a lower limit');
   assert.equal(cleanURL('https://api.govinfo.gov/x?offsetMark=a&api_key=secret'),'https://api.govinfo.gov/x?offsetMark=a');
   for(const kind of Object.keys(FEEDS))assert.ok(HOSTS[FEEDS[kind].host],kind+' uses an approved host');
   await assert.rejects(requestSource('https://evil.example/x',env),/Unapproved/);
@@ -141,11 +141,21 @@ test('stock trades from three services merge into one row, matched to the offici
     {member:'Scott Perry',state:'PA10',ticker:'nvda',asset:'NVIDIA Corp',type:'purchase',amount_low:1001,amount_high:15000,amount_range:'$1,001 - $15,000',transaction_date:'2026-01-05',disclosure_date:'2026-03-02'},
     {member:'Rick Perry',state:'TX',ticker:'XOM',type:'sale',transaction_date:'2026-01-06'}]}]]);
   assert.equal(bg.rows.length,1,'a different Perry from another state is left out');
-  const eu=await run('trades-eulerpool','perry',{name:p.name,last:'Perry',first:'Scott',chamber:'H'},[[/eulerpool/,{data:[{politician:'Scott Perry',chamber:'House',ticker:'NVDA',type:'Purchase',amountMin:1001,amountMax:15000,transactionDate:'2026-01-05',disclosureDate:'2026-03-02'}]}]]);
+  // Eulerpool: one list of the newest trades in Congress, matched to members by name and chamber.
+  const eu=await run('trades-eulerpool','Congress',{limit:500},[[/eulerpool/,[
+    {politician:'Scott Perry',chamber:'house',symbol:'NVDA',asset_description:'NVIDIA Corp',tx_type:'purchase',tx_amount_low:1001,tx_amount_high:15000,tx_date:'2026-01-05',filing_date:'2026-03-02',owner:'Spouse',source_url:'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20031111.pdf'},
+    {politician:'Rick Perry',chamber:'house',symbol:'XOM',tx_type:'sale',tx_date:'2026-01-06',filing_date:'2026-02-01'},
+    {politician:'Scott Perry',chamber:'senate',symbol:'AAPL',tx_type:'sale',tx_date:'2026-01-07',filing_date:'2026-02-01'},
+    {politician:'Someone Else',chamber:'house',symbol:'MSFT',tx_type:'purchase',tx_date:'2026-01-08',filing_date:'2026-02-01'},
+    {politician:'Scott Perry',chamber:'house',symbol:'TSLA',tx_type:'purchase',filing_date:'2026-02-01'}]]]);
+  assert.equal(eu.calls.length,1,'one request for everyone');assert.match(eu.calls[0].url,/congress-trading\?limit=500$/);
   assert.equal(eu.calls[0].init.headers.Authorization,'Bearer ek');
+  assert.deepEqual([eu.snapshot.count,eu.snapshot.matched,eu.snapshot.people],[4,1,1],'a trade without a date is dropped; another Perry, the other chamber and someone not here are left out');
+  assert.deepEqual(eu.snapshot.byPerson.perry.map(t=>[t.ticker,t.type,t.owner,t.source]),[['NVDA','purchase','spouse','Eulerpool']]);
+  assert.ok(!('politician' in eu.snapshot.byPerson.perry[0]),'who it names is used for the match only');
   const fm=await run('trades-fmp','perry',{last:'Perry',first:'Scott',chamber:'H',state:'PA'},[[/financialmodelingprep/,[{firstName:'Scott',lastName:'Perry',district:'PA10',symbol:'NVDA',type:'Purchase',amount:'$1,001 - $15,000',transactionDate:'2026-01-05',disclosureDate:'2026-03-03',owner:'Spouse',assetDescription:'NVIDIA Corporation'},{firstName:'Scott',lastName:'Perry',district:'PA10',symbol:'AAPL',type:'Sale (Partial)',amount:'$15,001 - $50,000',transactionDate:'2026-02-01',disclosureDate:'2026-02-20'}]]]);
   const filings=[{id:'20031111',ptr:true,filed:'2026-03-02',url:'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20031111.pdf'}];
-  const t=mergeTrades([bg.rows,eu.rows,fm.rows],filings,{NVDA:{sector:'Technology',industry:'Semiconductors'}});
+  const t=mergeTrades([bg.rows,eu.snapshot.byPerson.perry,fm.rows],filings,{NVDA:{sector:'Technology',industry:'Semiconductors'}});
   assert.equal(t.length,2);const nv=t.find(x=>x.ticker==='NVDA');
   assert.deepEqual(nv.sources,['Bargo','Eulerpool','Financial Modeling Prep']);assert.equal(nv.filed,'2026-03-02');assert.equal(nv.official.doc,'20031111');
   assert.equal(nv.sector,'Technology');assert.equal(nv.owner,'spouse');assert.ok(nv.review.some(r=>/different disclosure dates/.test(r)));

@@ -2,7 +2,7 @@
 // sits, the fields of a trade in either of the spellings its docs show, and whether a search by name was honored.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {eulerpoolTrades,eulerpoolLines} from '../scripts/check-sources.mjs';
+import {eulerpoolTrades,eulerpoolLines,eulerpoolSpan} from '../scripts/check-sources.mjs';
 
 const ref={politician:'Scott Perry',symbol:'NVDA',transaction_type:'Purchase',amount_from:1001,amount_to:15000,transaction_date:'2026-03-02T00:00:00Z',filing_date:'2026-03-20',chamber:'House'};
 const promo={politician:'Nancy Pelosi',chamber:'House',ticker:'AAPL',type:'Sale',amountMin:250001,amountMax:500000,transactionDate:'2026-02-10',disclosureDate:'2026-02-28'};
@@ -27,4 +27,12 @@ test('Eulerpool: a trade is described in either spelling, and a search by name s
   assert.equal(lines[3],'  Nancy Pelosi (House): Sale AAPL, traded 2026-02-10, filed 2026-02-28, $250001 to $500000');
   assert.match(eulerpoolLines([ref],{name:'Perry'}).at(-1),/1 of 1 are Perry's, so the search by name works/);
   assert.match(eulerpoolLines([ref,promo],{name:'Perry'}).at(-1),/1 of 2 are Perry's, so the name was ignored/);
+});
+
+test('Eulerpool paging: a reply is summed up as its count, its fields, whether it starts where the default list does, and its dates',()=>{
+  const a={...live,id:7},b={...live,id:3,tx_date:'2026-09-01'},short={politician:'X',symbol:'NVDA',filing_date:'2026-11-05',chamber:'house'};
+  assert.deepEqual(eulerpoolSpan([a,b],7),['  2 trades, 14 fields each, starting with the same trade as the default list; dated 2026-09-01 to 2026-10-30']);
+  assert.deepEqual(eulerpoolSpan([b],7),['  1 trades, 14 fields each, starting with a different trade than the default list; dated 2026-09-01 to 2026-09-01']);
+  assert.deepEqual(eulerpoolSpan([short]),['  1 trades, 4 fields each; dated 2026-11-05 to 2026-11-05']);
+  assert.deepEqual(eulerpoolSpan({error:'Unauthorized'}),['  No trades in the reply.']);
 });
