@@ -12,6 +12,7 @@ import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
+import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote} from './legislation-page.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
 import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './fec-money.js';
@@ -122,7 +123,7 @@ for(const s of ALL.concat(FEATURED))for(const ev of Object.values(s.evidence||{}
   const v=VOTE_BY_ID.get(e.ref);if(v){e.bill=voteBill(v);continue;}
   const m=/:bill:(\d+)$/.exec(e.ref||''), b=m&&(s.bills||[])[+m[1]];if(b)e.bill=billKey(b.congress,b.num);
 }
-// Sponsorships and cosponsorships of the bills on the Bills page that count in Your match (public/bills.js).
+// Sponsorships and cosponsorships of the bills on the Legislation tab that count in Your match (public/bills.js).
 for(const [id,list] of issueEvidence(DATA))for(const {issue,entry} of list){const s=byId[id];if(!s)continue;const ev=(s.evidence||={})[issue]||=[];if(!ev.some(e=>e.bill===entry.bill))ev.push(entry);}
 // The reviewed grades come from public/scoring.js, shared with the monthly recalculation. Committee assignments
 // (public/committees.json) and the sectors each committee oversees (public/committee-sectors.json) feed the Ethics
@@ -516,7 +517,9 @@ const TAB_ALIAS={record:['ideology','m-record'],legislation:['showsup','legislat
 function route(){
   resizers=[];tip.classList.remove('show');
   const h=(location.hash||'#home').slice(1);
-  const m=h.match(/^([a-zA-Z0-9]+)(?:-([a-z]+))?$/)||[];
+  // A bill's page: #legislation-<bill id> (its id has digits and dashes, which the pattern below doesn't take).
+  const lgm=/^legislation(?:-(\d+-[a-z]+-\d+))?$/.exec(h);
+  const m=lgm?['',  'legislation',lgm[1]]:h.match(/^([a-zA-Z0-9]+)(?:-([a-z]+))?$/)||[];
   const current=byId[m[1]]||BASIC[m[1]];
   document.body.dataset.party=current?(['D','R'].includes(current.party)?current.party:'I'):'';
   document.body.dataset.page=current?'profile':(m[1]||'home');
@@ -531,7 +534,9 @@ function route(){
   else if(m[1]==='rankings'){renderRankings();}
   else if(m[1]==='stocks'){mountStocks(app,financeExplorerModel());}
   else if(m[1]==='races'){renderRaces();}
-  else if(m[1]==='bills'){renderBills(m[2]||'all');}
+  else if(m[1]==='legislation'){if(m[2])renderBill(m[2]);else renderLegislation();}
+  // The old Bills page became Legislation: its links open it (#bills-law with Became law picked).
+  else if(m[1]==='bills'){history.replaceState(null,'','#legislation');renderLegislation({status:m[2]==='law'?'law':''});}
   else if(m[1]==='senate'){renderSenate();}
   else if(m[1]==='house'){renderHouse();}
   else if(m[1]==='superpacs'){renderSuperPacs();}
@@ -3668,7 +3673,7 @@ function pledgeBlock(s,x){
     const a=c.actions;
     body=a.length?`<ul class="list small" style="margin:4px 0 0">${a.map(r=>`<li><b>${r.way==='for'?'Backed':'Against'}:</b> ${esc(r.what)} ${esc(r.measure)}, ${esc(r.title)}${r.date?` (${fmtDate(r.date)})`:''}. <a href="${esc(r.src.u)}" target="_blank" rel="noopener">${esc(r.src.t)} ↗</a></li>`).join('')}</ul>`
       :`<p class="small" style="margin:4px 0 0">No sponsorship, cosponsorship or vote on the ${c.bills.length} bill${c.bills.length===1?'':'s'} on file for this.</p>`;
-    body+=points([['How it\'s checked',`Sponsoring, cosponsoring or voting for one of the bills on the Bills page that would ${c.kind==='stock-trading'?'ban or limit members\' stock trading':c.kind==='lobbying'?'ban lobbying by former members':'overturn Citizens United'} counts as backing it. A vote against one is weighed with the reason given (for example, a section the bill carried on something else), so it is reviewed rather than counted as a broken pledge.`]],'small');
+    body+=points([['How it\'s checked',`Sponsoring, cosponsoring or voting for one of the bills on the Legislation tab that would ${c.kind==='stock-trading'?'ban or limit members\' stock trading':c.kind==='lobbying'?'ban lobbying by former members':'overturn Citizens United'} counts as backing it. A vote against one is weighed with the reason given (for example, a section the bill carried on something else), so it is reviewed rather than counted as a broken pledge.`]],'small');
   }
   return `<div class="note small" style="margin-top:12px"><div class="k" style="margin-bottom:6px"><b>Checked against the records on file · ${esc(c.label)}</b> <span class="chip ${cls}">${icon} ${esc(c.outcomeLabel)}</span></div>${body}
     ${c.conflict?`<p class="small" style="margin:8px 0 0"><b>Flagged for review:</b> the records point the other way from the reviewed verdict above. The reviewed verdict is still the one counted until it's checked again.</p>`:''}
@@ -3868,66 +3873,81 @@ function renderRaces(){
   $('#rj').addEventListener('change',e=>{const r=DATA.races.find(x=>x.id===e.target.value)||DATA.liteRaces.find(x=>x.id===e.target.value)||ER.find(x=>x.id===e.target.value);const want=r.chamber||'H';const cur=$('#rs .active').dataset.c;if(cur!==want){$('#rs .active').classList.remove('active');$(`#rs button[data-c="${want}"]`).classList.add('active');draw(want);}document.getElementById('r-'+r.id).scrollIntoView({behavior:'smooth',block:'start'});});
 }
 
-// ---------- bills ----------
-// Every bill on file (public/bills.js): the bills behind the saved roll calls and the People First bills, split into
-// those that became law and those that haven't (or were reintroduced), each with the groups that took a side on it.
-let billQ='';
-const BILL_SEG=[['all','All'],['law','Became law'],['not','Not passed or reintroduced']];
-const posDate=d=>!d?'':/^\d{4}-\d{2}-\d{2}$/.test(d)?fmtDate(d):/^\d{4}-\d{2}$/.test(d)?monLabel(d):d;
-function billGroupLine(p){
-  const g=groupInfo(DATA,p.group),tags=[];
-  if(g.pac>0)tags.push(`PACs gave ${fmt$(g.pac)} to campaigns here`);
-  if(g.routed>0)tags.push(`Bundled ${fmt$(g.routed)} from its donors here`);
-  if(g.out>0)tags.push(`${fmt$(g.out)} in outside spending here`);
-  if(!g.pac&&!g.routed&&!g.out)tags.push(g.pacs?'Has PACs; none gave to campaigns here':'Advocacy group; no PAC on file');
-  const src=p.src?.u?` <a href="${esc(p.src.u)}" target="_blank" rel="noopener" title="${esc(p.src.t||'Source')}">Source ↗</a>`:'';
-  return `<li><b${g.about?` data-tip="${esc(`${g.org}: ${g.about}`)}" class="org"`:''}>${esc(g.org)}</b> ${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join(' ')}<div class="small muted">${esc(p.why||'')}${p.date?` (${esc(posDate(p.date))})`:''}${src}</div></li>`;
+// ---------- Legislation (public/legislation-page.js) ----------
+// The tab: a card for each bill the site follows (public/bills.js billFamilies), with search, issue, status and sort; and
+// a page for each bill (#legislation-<bill id>): where it stands, every roll call with each party's split and the
+// lawmakers on each side, the groups that wanted it passed or opposed it with their records and the money they put into
+// the races tracked here, whether the lawmakers each group helped voted its way, who gains, its sponsors here and the
+// lobbying on it. It replaces the Bills page (#bills links open it).
+let lgState={q:'',area:'',status:'',sort:'money'},LG_BILLS=null;
+const lgBills=()=>LG_BILLS||(LG_BILLS=legislationModel(DATA,{scored:PVP_BILLS,voteParty:window.VOTE_PARTY,orgOf:k=>groupInfo(DATA,k).org}));
+const LG_DIR=new Map([...SENATE,...HOUSE].map(x=>[x.id,x]));
+const lgName=id=>byId[id]?.name||BASIC[id]?.name||LG_DIR.get(id)?.name||id;
+function renderLegislation(init){
+  if(init)lgState={...lgState,...init};
+  const bills=lgBills(),areas=[...new Set(bills.map(b=>b.area).filter(Boolean))].sort();
+  app.innerHTML=gridHTML(bills,lgState,{areas});
+  const page=app.querySelector('.lg-page');
+  const redraw=()=>{const list=filterBills(bills,lgState);$('#lg-cards').innerHTML=list.length?list.map(lgCardHTML).join(''):'<p class="muted">No bill matches.</p>';
+    $('#lg-count').textContent=list.length===bills.length?`${bills.length} bills · ${bills.filter(b=>b.st.key==='law').length} became law`:`${list.length} of ${bills.length} bills`;};
+  $('#lg-q').addEventListener('input',e=>{lgState.q=e.target.value;redraw();});
+  page.addEventListener('change',e=>{const k=e.target.dataset.lg;if(k){lgState[k]=e.target.value;redraw();}});
+  const open=c=>{location.hash=`#legislation-${c.dataset.bill}`;};
+  page.addEventListener('click',e=>{const c=e.target.closest('[data-bill]');if(c&&!e.target.closest('a'))open(c);});
+  page.addEventListener('keydown',e=>{const c=e.target.closest('[data-bill]');if(c&&e.target===c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();open(c);}});
 }
-function billCard(e){
-  const u=billUrl(e.id),nums=e.keys.map(billLabel);
-  const sup=e.positions.filter(p=>p.pos==='support'),opp=e.positions.filter(p=>p.pos==='oppose');
-  const here=[...new Set([...(e.work?.cosponsors||[]),...(e.cosponsors||[])].map(c=>c.person))].filter(id=>byId[id]).map(id=>`<a href="#${id}-${e.issue?'match':'pvp'}">${esc(byId[id].short||byId[id].name)}</a>`);
-  const statusSrc=e.statusSrc?` <a href="${esc(e.statusSrc.u)}" target="_blank" rel="noopener" title="${esc(e.statusSrc.t)}">Source ↗</a>`:'';
-  const status=e.status==='law'?`<b class="gr-A">Became law</b>: ${esc(e.law)}, signed ${fmtDate(e.date)}.${statusSrc}`:`<b>${e.reintroduced?'Not passed; reintroduced':'Not passed'}</b>: ${esc(e.stage)}${statusSrc}`;
-  const tally=v=>{const c={};for(const x of Object.values(v.pos||{}))if(/^(Yea|Nay|Aye|No)$/.test(x))c[x==='Aye'?'Yea':x==='No'?'Nay':x]=(c[x==='Aye'?'Yea':x==='No'?'Nay':x]||0)+1;return c.Yea||c.Nay?` · people on this site: ${c.Yea||0} yes, ${c.Nay||0} no`:'';};
-  const votes=e.votes.map(v=>`<li>${esc(v.chamber)}, ${fmtDate(v.date)}: ${esc(v.question||v.bill?.voteQuestion||'Vote')}, <b>${esc(v.result)}</b> <a href="${esc(voteUrl(v))}" target="_blank" rel="noopener">Roll call ↗</a><span class="muted">${tally(v)}</span></li>`)
-    .concat((e.steps||[]).map(x=>`<li>${esc(x.text)}${x.src?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener" title="${esc(x.src.t)}">Source ↗</a>`:''}</li>`));
-  return `<article class="card bill-card" id="bill-${esc(e.id)}">
-    <div class="bill-head"><h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}</h3>${e.area?`<span class="tag">${esc(e.area)}</span>`:''}${e.work?`<span class="tag" title="People First bill score">People First: ${e.work.status==='scored'?signed(e.work.score):'not scored'}</span>`:''}</div>
-    <div class="small muted">${nums.map(esc).join(' · ')}</div>
-    <p class="small" style="margin:8px 0 0">${status}</p>
-    ${e.summary?`<p class="small" style="margin:6px 0 0">${esc(e.summary)}${e.summarySrc?.u?` <a href="${esc(e.summarySrc.u)}" target="_blank" rel="noopener" title="${esc(e.summarySrc.t||'')}">Source ↗</a>`:''}</p>`:''}
-    ${e.note?`<p class="small muted" style="margin:6px 0 0">${esc(e.note)}</p>`:''}
-    <div class="bill-sides">
-      <div><h4 class="gr-A">Supported it (${sup.length})</h4>${sup.length?`<ul class="list small">${sup.map(billGroupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
-      <div><h4 class="gr-F">Opposed it (${opp.length})</h4>${opp.length?`<ul class="list small">${opp.map(billGroupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
-    </div>
-    ${votes.length?`<details class="small" style="margin-top:8px"><summary>Votes (${votes.length})</summary><ul class="list">${votes.join('')}</ul></details>`:''}
-    ${here.length?`<p class="small" style="margin:6px 0 0"><b>Sponsors and cosponsors on this site:</b> ${here.join(', ')}</p>`:''}
-    ${e.issue?`<p class="small muted" style="margin:6px 0 0"><b>Counts in Your match</b> under "${esc(ISSBY[e.issue]?.label||e.issue)}": sponsoring or cosponsoring it counts toward "${esc(ISSBY[e.issue]?.[e.side]||e.side)}".</p>`:''}
-    <div class="small" style="margin-top:6px" data-lob="${esc(e.id)}"></div>
-  </article>`;
-}
-function renderBills(seg){
-  if(!BILL_SEG.some(([k])=>k===seg))seg='all';
-  const F=billFamilies(DATA,PVP_BILLS),law=F.filter(e=>e.status==='law'),not=F.filter(e=>e.status!=='law');
-  const groups=new Set(F.flatMap(e=>e.positions.map(p=>p.group)));
-  app.innerHTML=`<section class="hero" style="padding-bottom:10px"><div class="asof">${F.length} bills · ${law.length} became law · ${not.length} not passed or reintroduced</div><h1 style="margin-top:8px">Bills</h1>
-    <p class="lede">Every bill collected so far: the bills behind the saved roll calls and the bills scored for People First, with the groups that supported or opposed each one.</p>
-    ${points([['Supported and opposed','Positions from the groups\' own scorecards, key-vote letters and statements, each with its source: '+groups.size+' groups so far, including Heritage Action, the ACLU, the League of Conservation Voters and the Human Rights Campaign.'],['Money','Beside each group, what its PACs gave to the campaigns on this site and what it spent on outside ads, from FEC records. A group with no PAC lobbies but gives no campaign money tracked here.'],['Versions','A bill reintroduced in a later Congress, or its Senate companion, is listed once with all its numbers.'],['Not graded here','This page lists bills. Grades count votes and sponsorships on them as described in the <a href="#method">methodology</a>.']])}
-    <div class="toolbar"><div class="seg" id="bill-seg">${BILL_SEG.map(([k,l])=>`<button data-k="${k}" class="${k===seg?'active':''}">${esc(l)} (${k==='all'?F.length:k==='law'?law.length:not.length})</button>`).join('')}</div>
-    <div class="search"><input id="bill-q" type="search" placeholder="Search by name, number, topic or group" aria-label="Search bills" value="${esc(billQ)}"></div></div></section>
-    <section class="section" style="padding-top:6px" id="bill-list"></section>`;
-  const text=e=>[e.title,...e.keys.map(billLabel),e.area,e.summary,...e.positions.map(p=>groupInfo(DATA,p.group).org)].join(' ').toLowerCase();
-  const draw=()=>{
-    const q=billQ.trim().toLowerCase(),hit=e=>!q||text(e).includes(q);
-    const part=(title,sub,list)=>{const L=list.filter(hit);return `<h2 style="margin-top:14px">${esc(title)} <span class="muted small">(${L.length})</span></h2><p class="small muted" style="margin:2px 0 10px">${sub}</p>${L.length?`<div class="bill-grid">${L.map(billCard).join('')}</div>`:'<p class="small muted">None match the search.</p>'}`;};
-    $('#bill-list').innerHTML=(seg!=='not'?part('Became law','Signed into law. Newest first.',law):'')+(seg!=='law'?part('Not passed yet, or reintroduced','Passed one chamber, fell short, or never got a vote. Bills reintroduced in later Congresses are marked. Newest action first.',not):'');
-    mountBillLobbying($('#bill-list'));bindTips(app);hoverTips(app);
-  };
-  draw();
-  $('#bill-seg').addEventListener('click',ev=>{const b=ev.target.closest('button');if(b)location.hash='#bills'+(b.dataset.k==='all'?'':'-'+b.dataset.k);});
-  $('#bill-q').addEventListener('input',ev=>{billQ=ev.target.value;draw();});
+function renderBill(id){
+  const bills=lgBills(),b=bills.find(x=>x.id===id||(x.keys||[]).includes(id));
+  if(!b){app.innerHTML=`<section class="lg-bill"><a class="small" href="#legislation">← All legislation</a><h1 class="lg-h1">Bill not found</h1><p class="muted">No bill on file has the number ${esc(id)}.</p></section>`;return;}
+  document.title=`${b.title} · Public Ledger`;
+  const PN={R:'Republicans',D:'Democrats',I:'Independents'};
+  const voteBlock=v=>{
+    const t=v.party||{},bars=['R','D','I'].filter(p=>t[p]&&((t[p].Yea||0)+(t[p].Nay||0))).map(p=>{const y=t[p].Yea||0,n=t[p].Nay||0;
+      return `<div class="lg-pb"><span>${PN[p]}</span><div class="lg-track" role="img" aria-label="${PN[p]}: ${y} Yea, ${n} Nay"><i style="width:${(y/(y+n)*100).toFixed(1)}%"></i></div><b>${y} Yea · ${n} Nay</b></div>`;}).join('');
+    const side=w=>Object.entries(v.pos||{}).filter(([,x])=>normVote(x)===w).map(([pid])=>pid);
+    const chips=ids=>{const known=ids.filter(pid=>byId[pid]),rest=ids.filter(pid=>!byId[pid]);
+      return (known.map(pid=>`<a class="lg-pc lg-p${esc(byId[pid].party)}" href="#${esc(pid)}">${esc(byId[pid].name)}</a>`).join('')||(rest.length?'':'<span class="muted small">None</span>'))
+        +(rest.length?`<details class="lg-rest"><summary>${known.length?'+ ':''}${rest.length} other member${rest.length===1?'':'s'}</summary><p>${rest.map(pid=>BASIC[pid]?`<a href="#${esc(pid)}">${esc(lgName(pid))}</a>`:esc(lgName(pid))).join(', ')}</p></details>`:'');};
+    const yea=side('Yea'),nay=side('Nay');
+    return `<div class="lg-vote"><div class="lg-vh"><b>${esc(v.chamber)}: ${esc(v.short||v.question||'Roll call')}</b><span>${fmtDate(v.date)} · ${esc(v.result||'')} · <a href="${esc(voteUrl(v))}" target="_blank" rel="noopener">Roll call ↗</a></span></div>
+      ${v.question?`<div class="small muted">${esc(v.question)}</div>`:''}${bars}
+      ${yea.length||nay.length?`<div class="lg-who"><div><span class="lg-k">Yea (${yea.length})</span>${chips(yea)}</div><div><span class="lg-k">Nay (${nay.length})</span>${chips(nay)}</div></div>`:''}</div>`;};
+  const groupLine=g=>{const info=groupInfo(DATA,g.group),m=g.money,hv=helpedVoted(b,g);
+    const parts=m?[m.for&&`<span class="lg-for">${lgMoney(m.for)} to help</span>`,m.against&&`<span class="lg-against">${lgMoney(m.against)} against</span>`,m.routed&&`${lgMoney(m.routed)} in members' gifts it forwarded`,m.pac&&`${lgMoney(m.pac)} from its PACs`].filter(Boolean):[];
+    return `<li><div class="lg-gh"><b${info.about?` class="org" data-tip="${esc(`${info.org}: ${info.about}`)}"`:''}>${esc(info.org)}</b>${g.src?.u?` <a class="lg-src" href="${esc(g.src.u)}" target="_blank" rel="noopener" title="${esc(g.src.t||'Source')}">record ↗</a>`:''}${m?.fewDonors?' <span class="lg-flag lg-dark">◐ lists few donors</span>':''}</div>
+      ${g.why?`<div class="lg-m">${esc(g.why)}</div>`:''}
+      <div class="lg-m">${parts.length?`${parts.join(' · ')} in the races tracked here`:'No money in the races tracked here'}</div>
+      ${hv.n?`<div class="lg-m">Lawmakers it helped who voted on this: <b class="lg-ink">${hv.ok} of ${hv.n}</b> voted its way</div>`:''}</li>`;};
+  const statusSrc=b.statusSrc?.u?` <a href="${esc(b.statusSrc.u)}" target="_blank" rel="noopener" title="${esc(b.statusSrc.t||'')}">Source ↗</a>`:'';
+  const where=b.status==='law'?`<b>Became law</b>: ${esc(b.law||'')}, signed ${fmtDate(b.date)}.${statusSrc}`:`<b>${b.reintroduced?'Not passed; reintroduced':'Not passed'}</b>: ${esc(b.stage||'')}${statusSrc}`;
+  const here=[...new Set([...(b.work?.cosponsors||[]),...(b.cosponsors||[])].map(c=>c.person))].filter(pid=>byId[pid]).map(pid=>`<a href="#${pid}">${esc(byId[pid].short||byId[pid].name)}</a>`);
+  const gains=b.work?.gains,u=billUrl(b.id),F=b.sides.for,A=b.sides.against;
+  const jump=[['lg-where','Where it stands'],['lg-votes','Votes'],['lg-sides','Who wanted what'],gains?['lg-gains','Who gains']:null,['lg-more','Sponsors & lobbying']].filter(Boolean);
+  app.innerHTML=`<section class="lg-bill">
+    <a class="small" href="#legislation">← All legislation</a>
+    <header class="lg-bh"><div class="page-eyebrow">${esc(b.num)}${b.congress?` · ${ordinal(b.congress).toUpperCase()} CONGRESS`:''}${b.law?` · ${esc(String(b.law).toUpperCase())}`:''}</div>
+      <h1 class="lg-h1">${esc(b.title)}</h1>
+      <div class="row lg-chips"><span class="chip lg-st lg-${b.st.key}">${esc(b.st.label)}${b.status==='law'&&b.date?` · ${fmtDate(b.date)}`:''}</span>${b.area?`<span class="chip">${esc(b.area)}</span>`:''}${pfText(b.pf)?`<span class="chip">People First: ${esc(pfText(b.pf))}</span>`:''}${u?`<a class="chip" href="${u}" target="_blank" rel="noopener">Congress.gov ↗</a>`:''}</div>
+      ${b.summary?`<p class="lg-lede">${esc(b.summary)}${b.summarySrc?.u?` <a class="lg-src" href="${esc(b.summarySrc.u)}" target="_blank" rel="noopener" title="${esc(b.summarySrc.t||'')}">Summary source ↗</a>`:''}</p>`:''}
+      ${b.note?`<p class="small muted">${esc(b.note)}</p>`:''}</header>
+    <nav class="lg-tabs" aria-label="On this page">${jump.map(([k,l],n)=>`<button type="button" data-jump="${k}"${n===0?' class="active"':''}>${esc(l)}</button>`).join('')}</nav>
+    <div class="lg-stats"><div class="lg-stat"><span>Roll calls</span><b>${b.votes.length}</b><small>${esc(b.votes.length?[...new Set(b.votes.map(v=>v.chamber))].join(' and '):'none on record')}</small></div>
+      <div class="lg-stat"><span>Groups on record</span><b>${F.length} for · ${A.length} against</b><small>with their records linked</small></div>
+      <div class="lg-stat"><span>Its backers' money</span><b class="lg-for">${lgMoney(b.moneyFor)}</b><small>in the races tracked here</small></div>
+      <div class="lg-stat"><span>Its opponents' money</span><b class="lg-against">${lgMoney(b.moneyAgainst)}</b><small>in the races tracked here</small></div></div>
+    <div class="chart lg-sec" id="lg-where"><h3>Where it stands</h3><p class="small" style="margin:6px 0 0">${where}</p>${(b.steps||[]).length?`<ul class="list small">${b.steps.map(x=>`<li>${esc(x.text)}${x.src?.u?` <a href="${esc(x.src.u)}" target="_blank" rel="noopener" title="${esc(x.src.t||'')}">Source ↗</a>`:''}</li>`).join('')}</ul>`:''}</div>
+    <div class="chart lg-sec" id="lg-votes"><h3>The votes</h3><div class="sub">Each roll call, how each party split, and the lawmakers on each side: names are profiles on this site.</div>${b.votes.length?b.votes.map(voteBlock).join(''):'<p class="muted small">No roll call on this bill is on file.</p>'}</div>
+    <div class="chart lg-sec" id="lg-sides"><h3>Who wanted what, and their money</h3><div class="sub">Groups with a documented side (their statements, key-vote letters and scorecards, linked), the money each put into the races tracked here, and how the lawmakers it helped voted on this bill. Money in a race isn't proof it changed a vote.</div>
+      <div class="lg-sides"><div class="lg-side"><h4><i class="sw lg-sw-for"></i>Wanted it passed (${F.length})</h4>${F.length?`<ul>${F.map(groupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div>
+        <div class="lg-side"><h4><i class="sw lg-sw-against"></i>Opposed it (${A.length})</h4>${A.length?`<ul>${A.map(groupLine).join('')}</ul>`:'<p class="small muted">No position on file.</p>'}</div></div></div>
+    ${gains?`<div class="chart lg-sec" id="lg-gains"><h3>Who gains</h3><div class="sub">The People First score${pfText(b.pf)?`: ${esc(pfText(b.pf))}`:''} (−100 to +100), half from a nonpartisan study of who gains, half from which worker and business groups took sides. <a href="#method-peoplefirst">How it's calculated</a></div>${gains.why?`<p class="lg-lede" style="margin:8px 0 0">${esc(gains.why)}${gains.src?.u?` <a class="lg-src" href="${esc(gains.src.u)}" target="_blank" rel="noopener" title="${esc(gains.src.t||'')}">${esc(gains.by||'Source')} ↗</a>`:''}</p>`:''}</div>`:''}
+    <div class="chart lg-sec" id="lg-more"><h3>Sponsors and lobbying</h3>
+      <p class="small" style="margin:6px 0 0"><b>Sponsors and cosponsors on this site:</b> ${here.length?here.join(', '):'none'}</p>
+      ${b.issue?`<p class="small muted" style="margin:6px 0 0"><b>Counts in Your match</b> under "${esc(ISSBY[b.issue]?.label||b.issue)}": sponsoring or cosponsoring it counts toward "${esc(ISSBY[b.issue]?.[b.side]||b.side)}".</p>`:''}
+      <div class="small" style="margin-top:6px" data-lob="${esc(b.id)}"></div></div>
+    <p class="small muted">Sources: Senate and House roll calls; the bill's summary and status sources (linked); groups' own records (linked); FEC records of the money in the races tracked here. People who give are added up, never named.</p></section>`;
+  app.querySelector('.lg-tabs').addEventListener('click',e=>{const t=e.target.closest('[data-jump]');if(!t)return;app.querySelectorAll('.lg-tabs button').forEach(x=>x.classList.toggle('active',x===t));document.getElementById(t.dataset.jump)?.scrollIntoView({block:'start',behavior:'smooth'});});
+  mountBillLobbying(app);bindTips(app);hoverTips(app);
 }
 
 // ---------- compare ----------
@@ -4564,7 +4584,7 @@ function renderMethod(sub){
       <li><b>What it shows:</b> on the Your match tab, a bar for each issue category, toward the liberal or the conservative side, by how much of the person's record on it is on each side. Context only, never part of a grade.</li>
       <li><b>Evidence:</b> the same as Your match: votes, sponsored and cosponsored bills and official acts, one credit per bill. Statements count at half, and only for an issue with no recorded action.</li>
       <li><b>Sides:</b> each issue's liberal side, listed above. Issues that aren't marked (trade, foreign policy, Jan. 6, infrastructure) aren't placed.</li>
-      <li><b>Categories:</b> immigration, taxes and spending, civil liberties, environment, health care, abortion, guns, workers, trade, foreign policy, voting, education, criminal justice, LGBTQ rights, housing, and Social Security and Medicare. Civil liberties, criminal justice, housing, and Social Security and Medicare (since November 14, 2026) are placed from sponsorships of the bills marked for them on the Bills page: the facial-recognition moratorium and the flag-burning amendment; the George Floyd Justice in Policing Act, the Justice Is Not For Sale Act and the Death Penalty for Dealing Fentanyl Act; the Ending Homelessness Act and the rent-setting software ban; and the resolution against raising the retirement age and the 2016 bill raising it. Housing has no conservative-side bill yet.</li>
+      <li><b>Categories:</b> immigration, taxes and spending, civil liberties, environment, health care, abortion, guns, workers, trade, foreign policy, voting, education, criminal justice, LGBTQ rights, housing, and Social Security and Medicare. Civil liberties, criminal justice, housing, and Social Security and Medicare (since November 14, 2026) are placed from sponsorships of the bills marked for them on the Legislation tab: the facial-recognition moratorium and the flag-burning amendment; the George Floyd Justice in Policing Act, the Justice Is Not For Sale Act and the Death Penalty for Dealing Fentanyl Act; the Ending Homelessness Act and the rent-setting software ban; and the resolution against raising the retirement age and the 2016 bill raising it. Housing has no conservative-side bill yet.</li>
       <li><b>Minimum:</b> one action or statement for now. A thin record shows its count beside the bar.</li>
     </ul>
     <h2>Portraits</h2>
@@ -4656,7 +4676,7 @@ function renderMethod(sub){
       <li><b>Groups read for everyone:</b> AIPAC, Club for Growth, EMILY's List, J Street and the Senate Conservatives Fund. For each profiled campaign, what each group's PAC forwarded is read from the PAC's own FEC reports (its disbursements to that campaign marked "earmark"), for the cycles its PAC reports cover. A group that reports a total line with each gift listed below it is counted from the total line, so nothing counts twice. The PAC's own checks stay in the PAC table.</li>
       <li><b>Left out:</b> ActBlue and WinRed, which forward gifts for any campaign that uses them, so the campaign, not a group, chose them.</li>
       <li><b>Researched by hand:</b> where the FEC reading misses a total found in the filings by a reporter, the hand-researched total is used and labeled. Sen. Booker: $707,803 through AIPAC's PAC from January to September 2025, as tallied from FEC filings by Sludge; $5,000 of it was the PAC's own check, so $702,803 counts as bundled.</li>
-      <li><b>Where it counts:</b> beside each group's own money in the funder list, a table on the Money &amp; Influence tab and a tag on the Bills page. It counts as that group's money in Donor Loyalty 🤝 and Vote Donor Alignment, never in a grade.</li>
+      <li><b>Where it counts:</b> beside each group's own money in the funder list, a table on the Money &amp; Influence tab and a line on each bill's page on the Legislation tab. It counts as that group's money in Donor Loyalty 🤝 and Vote Donor Alignment, never in a grade.</li>
       <li><b>Anyone else:</b> no row means none of these groups forwarded gifts to that campaign in the FEC's processed records as of the date shown. Other groups that bundle aren't read yet.</li>
     </ul>
     <h2>Voting ideology (liberal–conservative %)</h2>
