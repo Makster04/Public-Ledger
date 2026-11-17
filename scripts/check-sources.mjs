@@ -7,7 +7,8 @@
 //   npm run check:sources            (or: npm run check:sources -- --person collins, or -- --only fec|propublica|lda|bargo|eulerpool)
 // 5. Bargo (--only bargo): what it lists for the Senate, and senators searched as the refresh searches them.
 // 6. Eulerpool (--only eulerpool): whether EULERPOOL_API_KEY is accepted, how the key has to be sent (header or ?token=),
-//    whether its congress-trading list answers the refresh's search by name, and what a trade looks like. 3 or 4 requests.
+//    whether its congress-trading list answers the refresh's search by name, what a trade looks like, and whether any
+//    parameter pages back past the newest 100 trades. 7 or 8 requests.
 import fs from 'node:fs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {HOSTS} from '../src/sources.mjs';
@@ -58,6 +59,15 @@ export function eulerpoolLines(j,{name=null}={}){
   if(name){const fold=s=>String(s||'').toLowerCase(),mine=t.filter(x=>fold(v(x,'politician','name','member')).includes(fold(name))).length;
     out.push(`  ${mine} of ${t.length} are ${name}'s${mine===t.length?', so the search by name works':', so the name was ignored and this is everyone\'s latest trades'}`);}
   return out;
+}
+
+// One line for a paging test: how many trades, how many fields each has (a parameter can trim them to 4), whether the
+// first trade is the default list's (so the parameter did nothing) or another, and the dates covered.
+export function eulerpoolSpan(j,firstId=null){
+  const t=eulerpoolTrades(j);if(!t.length)return ['  No trades in the reply.'];
+  const d=t.map(x=>String(x.tx_date||x.transaction_date||x.filing_date||'').slice(0,10)).filter(Boolean).sort();
+  const same=firstId==null||t[0].id==null?'':t[0].id===firstId?', starting with the same trade as the default list':', starting with a different trade than the default list';
+  return [`  ${t.length} trades, ${Object.keys(t[0]).length} fields each${same}; dated ${d.length?`${d[0]} to ${d.at(-1)}`:'(no dates)'}`];
 }
 
 // Bargo's replies, described: how many trades, anything else it sent, the fields of a trade, the dates covered, how the
@@ -179,7 +189,7 @@ async function main(){
   }
   }
   if(part('eulerpool')){
-  // 6. Eulerpool: turned off in the refresh (src/feeds.mjs RETIRED_FEEDS), so this is the only place its key is used.
+  // 6. Eulerpool: the refresh reads its newest 500 trades once a day (src/feeds.mjs, trades-eulerpool); this checks the key.
   console.log('\n=== 6. Eulerpool congress trading');
   if(!env.EULERPOOL_API_KEY)console.log('EULERPOOL_API_KEY is not set in .dev.vars, so the answers will be about the missing key.');
   else console.log(`EULERPOOL_API_KEY is set (${env.EULERPOOL_API_KEY.length} characters; the key itself is never printed).`);
@@ -193,6 +203,9 @@ async function main(){
   for(const l of eulerpoolLines(c.json,{name:last}))console.log(l);
   const d=await ask('By stock, as its reference page documents: symbol=NVDA, 5 results',`${E}?symbol=NVDA&limit=5`,{auth});
   for(const l of eulerpoolLines(d.json))console.log(l);
+  // Paging: anything past the newest 100 needs the key, so these only answer when it's set.
+  const first=eulerpoolTrades(c.json)[0]?.id??null;
+  for(const q of ['offset=100','page=2','limit=500','symbol=NVDA']){const r=await ask(`Paging test: ${q}`,`${E}?${q}`,{auth});for(const l of eulerpoolSpan(r.json,first))console.log(l);}
   }
   console.log('\nDone. Copy everything above and send it; no keys are in it.');
 }

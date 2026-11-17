@@ -654,16 +654,17 @@ export const FEEDS={
       return {rows:numberTrades(rows),next:d.trades.length===250&&page<4?String(page+1):null};
     },
     summarize:rows=>({count:rows.length,rows:top(rows,200,'traded'),rowLimit:200})},
-  'trades-eulerpool':{host:'api.eulerpool.com',label:'Stock trades (Eulerpool)',tab:'ethics',
-    jobs:c=>profiled(c).filter(p=>p.inOffice).map(p=>({id:`trades-eulerpool:${p.id}`,subject:p.id,args:{name:p.name,last:surname(p),first:firstName(p),chamber:p.chamber}})),
+  // Eulerpool ignores a search by name (npm run check:sources -- --only eulerpool showed it), so instead of a request for
+  // each member it's one request a day for the newest 500 trades in Congress (about six weeks of filings), matched here to
+  // the members in office by name and chamber. A trade that matches no one, or more than one, is left out.
+  'trades-eulerpool':{host:'api.eulerpool.com',label:'Stock trades (Eulerpool)',tab:'ethics',scope:'global',
+    jobs:()=>[{id:'trades-eulerpool',subject:'Congress',args:{limit:EULERPOOL.limit}}],
     async page(job,a,env){
-      const d=await requestSource(`https://api.eulerpool.com/api/1/alternative/congress-trading?politician=${encodeURIComponent(a.last)}`,env);
-      const items=Array.isArray(d)?d:list(d?.data||d?.trades);need(Array.isArray(d)||Array.isArray(d?.data)||Array.isArray(d?.trades),'Eulerpool trades missing');
-      const rows=items.filter(t=>fold(t.politician).includes(fold(a.last))&&fold(t.politician).includes(fold(a.first).slice(0,3))&&(!t.chamber||fold(t.chamber).startsWith(a.chamber==='S'?'s':'h')))
-        .map(t=>trade('Eulerpool',{traded:t.transactionDate,disclosed:t.disclosureDate,ticker:t.ticker,asset:t.asset||t.assetDescription||null,type:t.type,low:t.amountMin,high:t.amountMax,owner:t.owner||null,link:null}));
-      return {rows:numberTrades(rows),next:null};
+      const d=await requestSource(`https://api.eulerpool.com/api/1/alternative/congress-trading?limit=${Number(a.limit)||EULERPOOL.limit}`,env);
+      need(Array.isArray(d)||Array.isArray(d?.data)||Array.isArray(d?.trades),'Eulerpool trades missing');
+      return {rows:(Array.isArray(d)?d:list(d.data||d.trades)).map(eulerpoolRow).filter(Boolean),next:null};
     },
-    summarize:rows=>({count:rows.length,rows:top(rows,200,'traded'),rowLimit:200})},
+    summarize:(rows,a,job,config)=>eulerpoolByPerson(rows,profiled(config).filter(p=>p.inOffice))},
   'trades-fmp':{host:'financialmodelingprep.com',label:'Stock trades (Financial Modeling Prep)',tab:'ethics',
     jobs:c=>profiled(c).filter(p=>p.inOffice).map(p=>({id:`trades-fmp:${p.id}`,subject:p.id,args:{last:surname(p),first:firstName(p),chamber:p.chamber,state:p.state}})),
     async page(job,a,env){
@@ -1226,6 +1227,38 @@ function trade(source,t){
 function numberTrades(rows){const seen={};return rows.map(r=>{const k=tradeKey(r);seen[k]=(seen[k]||0)+1;return {...r,id:`${k}#${seen[k]}`};});}
 export const tradeKey=t=>[t.traded,t.ticker||fold(t.asset).replace(/[^a-z0-9]/g,'').slice(0,40),t.type,t.low,t.high].join('|');
 
+// ---------- Eulerpool's list of the newest trades in Congress ----------
+export const EULERPOOL={limit:500};
+// One of its trades (its live replies spell the fields tx_date, tx_type, tx_amount_low; its docs show two other spellings,
+// read too), with who it names kept beside it for the match. A trade without a date is left out.
+export function eulerpoolRow(t){
+  if(!t||typeof t!=='object')return null;
+  const v=(...k)=>k.map(n=>t[n]).find(x=>x!=null&&x!=='');
+  try{
+    return {...trade('Eulerpool',{traded:v('tx_date','transaction_date','transactionDate'),disclosed:v('filing_date','disclosureDate'),ticker:v('symbol','ticker'),
+      asset:v('asset_description','asset','assetDescription')||null,type:v('tx_type','transaction_type','type'),low:v('tx_amount_low','amount_from','amountMin'),
+      high:v('tx_amount_high','amount_to','amountMax'),owner:v('owner')||null,link:v('source_url')||null}),
+      politician:String(v('politician','name','member')||''),chamber:fold(v('chamber')).startsWith('s')?'S':fold(v('chamber')).startsWith('h')?'H':null};
+  }catch{return null;}
+}
+// Who a trade names, among people: the same last name and one of their first names (sameName), and the same chamber when
+// the trade gives one. Null when no one or more than one matches.
+export function eulerpoolWho(row,people){
+  const words=String(row?.politician||'').replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)\.?$/i,'').trim().split(/\s+/).filter(Boolean);
+  if(words.length<2)return null;
+  const last=words.at(-1),first=words.slice(0,-1).join(' ');
+  const hits=people.filter(p=>(!row.chamber||p.chamber===row.chamber)&&sameName(first,last,p));
+  return hits.length===1?hits[0]:null;
+}
+// Each member's trades from the list, numbered as every trade service's are; how many trades the list held and how many
+// were matched.
+export function eulerpoolByPerson(rows,people){
+  const byPerson={};let matched=0;
+  for(const r of rows||[]){const p=eulerpoolWho(r,people);if(!p)continue;matched++;const {politician,chamber,...t}=r;(byPerson[p.id]||=[]).push(t);}
+  for(const id of Object.keys(byPerson))byPerson[id]=numberTrades(byPerson[id]);
+  return {count:(rows||[]).length,matched,people:Object.keys(byPerson).length,byPerson};
+}
+
 // ---------- the official trade reports (Periodic Transaction Reports) ----------
 const mdy=v=>{const m=String(v||'').match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);return m?`${m[3]}-${m[1].padStart(2,'0')}-${m[2].padStart(2,'0')}`:null;};
 // The House's asset codes: stocks and options are single companies; funds and bonds are not.
@@ -1444,10 +1477,12 @@ async function carried(env,jobId){
   return {rows,done:new Set(rows.map(x=>x.doc).filter(Boolean))};
 }
 
-// Sources turned off: Vote Smart needs a paid license, Financial Modeling Prep's free plan leaves out congressional trades
-// (HTTP 402), and Eulerpool was only an optional cross-check. Their readers stay for a later decision; no checks are
-// created for them, and the refresh deletes any it made before (refresh.mjs, ensureFeeds).
-export const RETIRED_FEEDS=['votesmart','trades-eulerpool','trades-fmp'];
+// Sources turned off: Vote Smart needs a paid license, and Financial Modeling Prep's free plan leaves out congressional
+// trades (HTTP 402). Their readers stay for a later decision; no checks are created for them, and the refresh deletes any
+// it made before (refresh.mjs, ensureFeeds). Eulerpool was turned off too, and came back on Nov. 17, 2026 as one list.
+export const RETIRED_FEEDS=['votesmart','trades-fmp'];
+// Sources that were one check for each member and are now one check for everyone: the old checks ("<kind>:<id>") go.
+export const RESHAPED_FEEDS=['trades-eulerpool'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index

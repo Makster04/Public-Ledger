@@ -32,7 +32,7 @@ export const HOSTS = {
   'lda.gov':{name:'LDA.gov',keys:['LDA_API_KEY'],header:'Authorization',prefix:'Token ',optional:true,perRun:10},
   'efile.fara.gov':{name:'FARA'},
   'www.bargo.ai':{name:'Bargo',keys:['BARGO_API_KEY'],header:'X-Api-Key',optional:true},
-  'api.eulerpool.com':{name:'Eulerpool',keys:['EULERPOOL_API_KEY'],header:'Authorization',prefix:'Bearer '},
+  'api.eulerpool.com':{name:'Eulerpool',keys:['EULERPOOL_API_KEY'],header:'Authorization',prefix:'Bearer ',optional:true},
   'financialmodelingprep.com':{name:'Financial Modeling Prep',keys:['FMP_API_KEY'],query:'apikey'},
   'www.courtlistener.com':{name:'CourtListener',keys:['COURTLISTENER_API_TOKEN'],header:'Authorization',prefix:'Token ',perRun:3},
   'factchecktools.googleapis.com':{name:'Google',keys:['GOOGLE_API_KEY'],query:'key',perRun:10},

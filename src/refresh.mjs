@@ -2,7 +2,7 @@ import config from '../data/config.json' with {type:'json'};
 import COMMITTEES from '../public/committees.json' with {type:'json'};
 import {fetchPage,summarize,SourceError,describeFailure,requestSource,missingKey,voteURL,HOSTS,DEFAULT_PER_RUN} from './sources.mjs';
 import {voteviewFiles,voteviewSenateVote,voteviewSenateIndex} from './voteview.mjs';
-import {FEEDS,FEED_KINDS,RETIRED_FEEDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
+import {FEEDS,FEED_KINDS,RETIRED_FEEDS,RESHAPED_FEEDS,FEEDS_VERSION,normalizeHouseApiVote,houseApiURL,history,SINCE} from './feeds.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,mergeHearings,mergeLegal,mergeStatements,donorOrgs} from './merge.mjs';
 
 const DAY=86400000;
@@ -70,6 +70,7 @@ async function ensureFeeds(db){
   const v=await statement(db,"SELECT value FROM metadata WHERE key='feeds'").first(),sig=feedSignature();
   if(v?.value===sig)return;
   await removeRetired(db);
+  await removeReshaped(db);
   await removeDeparted(db);
   for(const p of config.people)await addPerson(db,p,config);
   for(const j of feedJobs())await addJob(db,j.id,j.kind,j.subject,j.args);
@@ -92,6 +93,18 @@ async function ensureFeeds(db){
     await statement(db,'INSERT OR REPLACE INTO metadata(key,value) VALUES(?,?)',key,now).run();
   }
   await statement(db,"INSERT OR REPLACE INTO metadata(key,value) VALUES('feeds',?)",sig).run();
+}
+// A source that was one check for each member and is now one for everyone (RESHAPED_FEEDS): the old checks, named
+// "<kind>:<id>", go with their results; the new one is named after the kind alone.
+async function removeReshaped(db){
+  for(const kind of RESHAPED_FEEDS){
+    const like=`${kind}:%`;
+    await statement(db,'DELETE FROM records WHERE run_id IN (SELECT run_id FROM snapshots WHERE job_id LIKE ?)',like).run();
+    await statement(db,'DELETE FROM snapshots WHERE job_id LIKE ?',like).run();
+    await statement(db,'DELETE FROM refresh_history WHERE job_id LIKE ?',like).run();
+    await statement(db,'DELETE FROM metadata WHERE key LIKE ?',`ticker:${like}`).run();
+    await statement(db,'DELETE FROM jobs WHERE id LIKE ?',like).run();
+  }
 }
 // The checks, saved results and history of sources that were turned off (RETIRED_FEEDS), so they no longer show on the
 // Updates page or wait for a key.

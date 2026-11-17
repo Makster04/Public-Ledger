@@ -25,10 +25,13 @@ LEGISCAN_API_KEY=
 # https://lda.gov/
 LDA_API_KEY=
 
-# Stock trades: the official House and Senate reports are read without a key. Bargo is an optional cross-check.
-# (Vote Smart, Eulerpool and Financial Modeling Prep are turned off; any keys for them are ignored.)
+# Stock trades: the official House and Senate reports are read without a key. Bargo and Eulerpool are optional cross-checks.
+# (Vote Smart and Financial Modeling Prep are turned off; any keys for them are ignored.)
 # Optional. Bargo: last 3 months (works without a key at a lower limit). https://www.bargo.ai/free-apis/dash
 BARGO_API_KEY=
+# Optional. Eulerpool: the newest 500 trades in Congress, once a day (works without a key at a lower limit).
+# Free key: https://eulerpool.com/developers/register   Test it: npm run check:sources -- --only eulerpool
+EULERPOOL_API_KEY=
 
 # Not used. Disclosed Capitol's API: members' and executive-branch stock trades. The key is free, but its 750 credits are a
 # one-time trial and every call costs money after that, so nothing reads this key. The president's trades come from its

@@ -27,6 +27,13 @@ export async function getFinanceOverview(env){
       sectors={...sectors,...data.byTicker};
       continue;
     }
+    if(row.kind==='trades-eulerpool'){
+      // One list for everyone (src/feeds.mjs): each member's matched trades, as their own trade source.
+      for(const [id,list] of Object.entries(data.byPerson||{}))if(known.has(id)&&Array.isArray(list)){
+        const own=sections.get(id)||{};own[row.kind]={rows:list,count:list.length,checkedAt:row.updated_at};sections.set(id,own);
+      }
+      continue;
+    }
     if(row.kind==='house-fd'){
       // The yearly House index is global; only its explicitly keyed records belong to each person.
       for(const [id,list] of Object.entries(data.byPerson||{}))if(known.has(id)&&Array.isArray(list)){
