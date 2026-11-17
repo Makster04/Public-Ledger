@@ -196,7 +196,7 @@ test('mounted: the strip and the cards drawn at once from what the page has, aga
 
 test('the refresh keeps each check\'s newest trades (with the date traded) and disclosures (with net worth), stamped with when first read',()=>{
   const now=NOV9;
-  assert.deepEqual(TICKER_KINDS,['trades-house','trades-senate','net-worth-house','net-worth-senate']);
+  assert.deepEqual(TICKER_KINDS,['trades-house','trades-senate','trades-eulerpool','net-worth-house','net-worth-senate']);
   const trades=tickerRecent('trades-house','begich',{rows:[{id:'1',disclosed:'2026-11-05',traded:'2026-10-20',type:'purchase',ticker:'NVDA',amount:'$1,001 - $15,000',asset:'NVIDIA'},
     {id:'2',disclosed:'2026-09-01',type:'sale',ticker:'AAPL'},{id:'3',disclosed:'2026-11-07',type:'sale',ticker:null,asset:'US Treasury Note'}]},{now});
   assert.deepEqual(trades.map(x=>[x.id,x.disclosed,x.traded,x.ticker,x.asset]),[['3','2026-11-07',null,null,'US Treasury Note'],['1','2026-11-05','2026-10-20','NVDA',null]]);
@@ -240,4 +240,18 @@ test('the ticker endpoint reads the trades and annual reports already saved, onc
   await save('trades-senate:ossoff','trades-senate','ossoff',{rows:[{id:'c',disclosed:'2026-11-12',type:'purchase',ticker:'NVDA'},{id:'a',disclosed:'2026-11-10',traded:'2026-08-01',type:'sale',ticker:'AAPL'}]},'2026-11-14T12:00:00Z');
   const second=await getTicker({DB:db},{now:NOV14});
   assert.deepEqual(second.items.filter(x=>x.kind==='trade').map(x=>[x.id,x.seen]),[['c',new Date(NOV14).toISOString()],['a',null]]);
+});
+
+test('Eulerpool\'s daily list adds the trades it matched to members; one their own report also has shows once',()=>{
+  const now=NOV9;
+  const eu=tickerRecent('trades-eulerpool','Congress',{count:3,matched:3,people:2,byPerson:{
+    begich:[{id:'2026-10-20|NVDA|purchase|1001|15000#1',traded:'2026-10-20',disclosed:'2026-11-05',type:'purchase',ticker:'NVDA',amount:'$1,001 - $15,000'},
+      {id:'2026-10-21|AAPL|sale|1001|15000#1',traded:'2026-10-21',disclosed:'2026-11-06',type:'sale',ticker:'AAPL'}],
+    ossoff:[{id:'2026-10-20|NVDA|purchase|1001|15000#1',traded:'2026-10-20',disclosed:'2026-11-04',type:'purchase',ticker:'NVDA'},{id:'old',traded:'2026-01-02',disclosed:'2026-02-01',type:'sale',ticker:'F'}]}},{now});
+  assert.deepEqual(eu.map(x=>[x.subject,x.ticker,x.src]),[['begich','AAPL','eulerpool'],['begich','NVDA','eulerpool'],['ossoff','NVDA','eulerpool']],'every member, newest first; an old one dropped');
+  assert.ok(eu.every(x=>x.seen===null),'its first list isn\'t news');
+  assert.notEqual(eu[1].id,eu[2].id,'the same trade by two members stays two');
+  const own=tickerRecent('trades-house','begich',{rows:[{id:'h1',traded:'2026-10-20',disclosed:'2026-11-05',type:'purchase',ticker:'NVDA'}]},{now});
+  const merged=tickerMerge([own,eu],{now});
+  assert.deepEqual(merged.map(x=>[x.subject,x.ticker,x.src||'own']),[['begich','AAPL','eulerpool'],['begich','NVDA','own'],['ossoff','NVDA','eulerpool']],'the copy of their own report\'s trade is dropped');
 });

@@ -73,7 +73,7 @@ test('Big Money Independence: their published formula, with the House weights',(
   assert.match(unbought({...member,office:'President'}).why,/president/);
 });
 
-test('Plays by the Rules: the four percentages, rescaled over the ones available, minus Legal Trouble',()=>{
+test('Plays by the Rules: the four parts, rescaled over the ones available, minus Legal Trouble',()=>{
   const rows=Array.from({length:20},(_,i)=>({traded:'2025-03-01',filed:i<5?'2025-05-01':'2025-03-20',asset:'stock',amount:'$1,001 - $15,000',sector:i<10?'Energy':'Tech',flag:i<8?'near a vote':null}));
   const person={id:'p',ethicsSearched:'Searched court, ethics and DOJ records, 2026-11-01',ethics:[{status:'investigation',stage:'closed',kind:'ethics'}]};
   const a=aboveBoard(person,{trades:{rows,covered:true,overseen:['Energy'],inDonors:4}});
@@ -83,7 +83,7 @@ test('Plays by the Rules: the four percentages, rescaled over the ones available
   assert.deepEqual([a.pct,a.letter],[61.9,'D']);
   assert.deepEqual(a.parts.map(p=>p.points),[null,null,-21.9,-11.1,-5]);
   // Legal records alone aren't enough; no review, no grade.
-  assert.match(aboveBoard(person,{}).why,/None of the four percentages/);
+  assert.match(aboveBoard(person,{}).why,/None of the four parts/);
   assert.match(aboveBoard({...person,ethicsSearched:''},{trades:{rows,covered:true}}).why,/legal record/);
   // Fewer than 5 trades: no Trade Conflicts; covered with none: 0.
   assert.equal(tradeConflicts(rows.slice(0,3)).index,null);

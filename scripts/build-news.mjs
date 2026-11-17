@@ -14,6 +14,8 @@
 // grade change the next monthly log takes in stays listed). The bulk files are read when they're on disk (npm run
 // corporate:pacs downloads them); otherwise the last file's lobby and super PAC items are kept as they were.
 //   npm run news:build    (also run at the end of npm run corporate:pacs and npm run promises:build)
+//   node scripts/build-news.mjs --local   writes .local/news.json instead: npm start runs it once a day by itself
+//                                         (scripts/news-file.mjs)
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -21,6 +23,7 @@ import {letter} from '../public/grades.js';
 import {buildEntry,sixFiles,formulaOf} from './scores-monthly.mjs';
 import {committeeKind,committeeCheck,trackersOf,membersByCandidate,lines} from './build-corporate-pacs.mjs';
 import {readIeRecords,latestVersions,isoDate,seatOf,partyOf,trackerOfSpender} from './build-super-pac-races.mjs';
+import {NEWS_FILES,newestNews} from './news-file.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const NEWS_DAYS=45,NEWS_LIMIT={lobby:60,superpac:60},SUPER_PAC_MIN=10000;
@@ -48,7 +51,10 @@ export function gradeWhy(g,a,b){
   const n=d('actions');return n>0?`${plural(n,'more scored action')}`:n<0?`${plural(-n,'fewer scored action')}`:'a bill\'s score changed';
 }
 // The grades that moved: before and now are {id: {word, showsup, peoplefirst}} as the score log keeps them.
-export function gradeNews(before,now,date){
+// wholeNumbers: the last log is from before scores were worked out to one decimal (Nov. 14, 2026), so it holds rounded
+// whole numbers: a score that rounds to the logged one (89.7 against a logged 90) only lost its rounding, which isn't news.
+export const ONE_DECIMAL_SINCE='2026-11-14';
+export function gradeNews(before,now,date,{wholeNumbers=false}={}){
   const out=[];
   for(const [id,x] of Object.entries(now||{}))for(const g of GRADES){
     const a=before?.[id]?.[g],b=x?.[g];if(!b)continue;
@@ -56,6 +62,7 @@ export function gradeNews(before,now,date){
     if(from===to)continue;
     // Scores are worked out to one decimal (since Nov. 14, 2026): a move under one point that keeps the letter isn't news.
     if(from!=null&&to!=null&&letter(Math.min(100,from))===letter(Math.min(100,to))&&Math.abs(to-from)<1)continue;
+    if(wholeNumbers&&from!=null&&to!=null&&Math.round(to)===from)continue;
     out.push({key:`grade:${id}:${g}:${from??'n'}>${to??'n'}`,kind:'grade',id,grade:g,from,to,
       fromLetter:from==null?null:letter(Math.min(100,from)),toLetter:to==null?null:letter(Math.min(100,to)),why:gradeWhy(g,a,b),date});
   }
@@ -125,16 +132,17 @@ async function trackerChecks(dir,cycle){
   }
   return out;
 }
-// Builds and writes public/news.json; returns it.
-export async function writeNews({now=Date.now(),dir=process.env.FEC_BULK_DIR||path.join(ROOT,'.local','fec-bulk'),log=console.log}={}){
+// Builds and writes public/news.json (or, with local, .local/news.json); returns it. The "seen" stamps carry forward from
+// whichever of the two was built later.
+export async function writeNews({now=Date.now(),dir=process.env.FEC_BULK_DIR||path.join(ROOT,'.local','fec-bulk'),log=console.log,local=false}={}){
   const config=readIf('data/config.json')||{},cycle=Number(config.cycle)||2026,today=new Date(now).toISOString().slice(0,10);
-  const prev=readIf('public/news.json'),fresh=[];
+  const prev=newestNews(ROOT)?.news||null,fresh=[];
   // Grades: the page's own scoring now, against the last six-score log.
   const research=readIf('public/research.json'),scoreLog=readIf('public/score-log.json');
   const last=(scoreLog?.entries||[]).filter(e=>formulaOf(e)==='six').at(-1);
   if(research&&last){
     const entry=buildEntry(research,readIf('public/committees.json')||{},readIf('public/committee-sectors.json')||{},readIf('public/funder-history.json'),config,today,readIf('public/vote-party.json')?.votes||null,sixFiles());
-    fresh.push(...gradeNews(last.scores,entry.scores,today));
+    fresh.push(...gradeNews(last.scores,entry.scores,today,{wholeNumbers:String(last.date)<ONE_DECIMAL_SINCE}));
   }
   fresh.push(...promiseNews(readIf('data/promise-reviews.json')?.people,readIf('public/promises.json')?.people));
   const checks=await trackerChecks(dir,cycle);if(checks)fresh.push(...lobbyNews(checks));
@@ -142,10 +150,12 @@ export async function writeNews({now=Date.now(),dir=process.env.FEC_BULK_DIR||pa
   const items=mergeNews(prev,fresh,{now});
   const out={about:'The site\'s news for the ticker and the Latest updates page: grade changes, reviewed promise verdicts, the trackers\' PAC checks and their super PACs\' spending. See scripts/build-news.mjs.',
     built:today,since:last?.date||null,bulk:{checks:!!checks,superPacs:fs.existsSync(ie)},items};
-  fs.writeFileSync(path.join(ROOT,'public','news.json'),JSON.stringify(out));
+  const file=local?NEWS_FILES.local:NEWS_FILES.committed;
+  fs.mkdirSync(path.dirname(path.join(ROOT,file)),{recursive:true});
+  fs.writeFileSync(path.join(ROOT,file),JSON.stringify(out));
   const n=k=>items.filter(x=>x.kind===k).length;
-  log(`Wrote public/news.json: ${n('grade')} grade changes, ${n('promise')} reviewed verdicts, ${n('lobby')} PAC check groups, ${n('superpac')} super PAC filings${checks?'':' (no bulk files on disk: the last file\'s PAC checks kept)'}.`);
+  log(`Wrote ${file.split(path.sep).join('/')}: ${n('grade')} grade changes, ${n('promise')} reviewed verdicts, ${n('lobby')} PAC check groups, ${n('superpac')} super PAC filings${checks?'':' (no bulk files on disk: the last file\'s PAC checks kept)'}.`);
   return out;
 }
 
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))writeNews().catch(e=>{console.error(e.message);process.exit(1);});
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))writeNews({local:process.argv.includes('--local')}).catch(e=>{console.error(e.message);process.exit(1);});

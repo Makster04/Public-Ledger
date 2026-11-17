@@ -4,7 +4,7 @@
 // value and how it was figured), `why` says why a score isn't graded yet, and `needs` lists what grading requires and
 // whether each is in hand. Missing data stays unknown: a score without its evidence is "Not graded", never a zero.
 // Shared by the profile tabs (public/app.js) and the tests; nothing here fetches.
-import {ownSponsorship,promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter,pct1} from './grades.js';
+import {ownSponsorship,promiseScore,legalTrouble,tradeChecks,amountMid,ownTrades,disclosureDodger,oneCreditPerBill,ACTION_TYPES,MIN_CHECKS,MIN_PVP_ACTIONS,LATE_DAYS,HOLDINGS,letter,ix1} from './grades.js';
 import {ideologyLeans,IDEOLOGY_MIN_CATEGORIES,QFORMULA,ratingScore} from './question-scores.js';
 import {hill,showingUpComponent,getItDoneComponent,showingUpPart,conflictsComponent} from './integrity.js';
 import {assetKind} from './holdings.js';
@@ -282,7 +282,7 @@ export function aboveBoard(person,{trades=null,conflicts=null,asOfYear=null}={})
   const needs=[['Financial disclosures read (income, gifts, trips, trades and filing dates)',covered||coi.complete],['Connections checked (lobbying, contracts, foreign-agent filings, committees, votes)',coi.complete],['Legal records reviewed (court, ethics and enforcement cases)',reviewed]];
   const base={parts,needs,legal,tradeConflicts:tc,dodger,conflicts:coi,checked,used};
   if(!reviewed)return {...base,pct:null,why:'The legal record hasn\'t been reviewed yet'};
-  if(!used.length)return {...base,pct:null,why:'None of the four percentages has its records read yet, and legal records alone aren\'t enough'};
+  if(!used.length)return {...base,pct:null,why:'None of the four parts has its records read yet, and legal records alone aren\'t enough'};
   const raw=clamp(100-deduction-legal.index);
   return {...base,...graded(raw),raw,why:null};
 }
@@ -304,7 +304,7 @@ export function peopleFirst(v,cci){
   const raw=bills==null?null:on?PEOPLE_FIRST.action*bills+PEOPLE_FIRST.cci*(100-cci.index):bills;
   return {...graded(raw),pct:raw==null?null:round1(raw),raw,bills,cci,blended:on,v,
     parts:[{key:'action',label:'Legislative Action',value:bills,weight:on?PEOPLE_FIRST.action:1,note:v?.n?`${v.nPeople} for working people, ${v.nProfit} for profit, of ${v.n} scored actions`:'No scored actions yet'},
-      {key:'cci',label:'Corporation Compromised',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100% − ${pct1(cci.index)} counts`}],
+      {key:'cci',label:'Corporation Compromised',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100 − ${ix1(cci.index)} counts`}],
     why:raw==null?`Needs at least ${MIN_PVP_ACTIONS} scored actions (${v?.n||0} so far)`:null,
     needs:[['Votes and bills, each scored by who gains and which groups took sides',!!v?.n],['Business funders\' positions and the bills they lobbied on',cci?.index!=null],['How they voted against their own party on those votes',cci?.parts?.businessVotes!=null]]};
 }

@@ -51,6 +51,16 @@
   {
    "date": "2026-11-14",
    "note": "Rule change (all five grades), replacing today's earlier presentation note: there are no indexes any more. Every grade and every part of one is a percentage worked out to one decimal (84.3%), and the letter comes from that one-decimal percentage instead of a whole-number rounding. Trade Conflicts, Stock Disclosure Dodger, Outside Income & Conflicts, Gifts & Travel, Corporation Compromised and Donor Loyalty are percentages; Legal Trouble is the percentage points its cases take off. Ideology stays a position from −100 to +100. 26 Shows Up letters went down one step, each a score just under a line that used to round up (89.6% was 90, an A, and is now a B): Tom Cotton, Tina Smith, Deb Fischer, Julia Brownley, Nanette Diaz Barragán, Scott Peters, Sanford Bishop, Austin Scott, James Baird, Jake Auchincloss, Andy Harris, Julie Fedorchak, Ritchie Torres, Mary Gay Scanlon, Morgan Luttrell, Brandon Gill and Sylvia Garcia (A to B); Lois Frankel, Steny Hoyer, Michael Rulli, Michael Turner and Scott DesJarlais (B to C); Seth Moulton and Daniel Goldman (C to D); Darline Graham and Thomas Kean (D to F). No Keeps Their Word or People First letter changed. Big Money Independence and Plays by the Rules are figured from the refresh's disclosures, so their changes show there. Historical values were not recalculated."
+  },
+  {
+   "date": "2026-11-17",
+   "headline": "New Legislation tab: a card for each bill, with who took a side and the money behind them",
+   "note": "A Legislation tab in the top menu has a card for each of the 49 bills the site follows, and a page for each bill: where it stands, the groups that took a side and the money they put into the races tracked here, a flag for groups that list few donors, each roll call with each party's split, and whether the lawmakers a group helped voted its way. Old Bills page links open it. Display only: no score changed."
+  },
+  {
+   "date": "2026-11-17",
+   "headline": "Grades show as percentages to one decimal; their parts show as numbers from 0 to 100",
+   "note": "Presentation only: the five grades show as percentages to one decimal (84.3%). The parts of Plays by the Rules (Outside Income & Conflicts, Gifts & Travel, Trade Conflicts, Stock Disclosure Dodger and Legal Trouble) and Corporation Compromised in People First show as numbers from 0 to 100 with one decimal and no % sign, since they aren't shares of anything. No score changed."
   }
  ]
 }

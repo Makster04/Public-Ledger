@@ -24,6 +24,9 @@ export function letter(pct){return pct>=90?'A':pct>=80?'B':pct>=70?'C':pct>=60?'
 export const round1=v=>Math.round(v*10)/10;
 export const num1=v=>round1(v).toFixed(1);
 export const pct1=v=>v==null||!Number.isFinite(+v)?'—':`${num1(+v)}%`;
+// A measure from 0 to 100 that isn't a share of anything (the parts of Plays by the Rules, Corporation Compromised): one
+// decimal, no % sign.
+export const ix1=v=>v==null||!Number.isFinite(+v)?'—':num1(+v);
 
 // One ID per bill, so a vote and a sponsorship on the same bill can be matched: "H.R. 1319 (117th Congress)" -> "117-hr-1319".
 // Amendments (SAMDT, HAMDT) are keyed like bills ("117-samdt-1858"), so a vote on one is scored on its own, not as the bill.

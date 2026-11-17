@@ -6,6 +6,8 @@ import worker from '../src/worker.mjs';
 import {initialize,runRefresh} from '../src/refresh.mjs';
 import {HOSTS} from '../src/sources.mjs';
 import {openDatabase} from './sqlite.mjs';
+import {execFile} from 'node:child_process';
+import {newestNews} from './news-file.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 await fs.mkdir(path.join(root,'.local'),{recursive:true});
 const db=openDatabase(path.join(root,'.local','records.sqlite'));
@@ -15,6 +17,8 @@ const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=u
 const keys=Object.fromEntries([...new Set(Object.values(HOSTS).flatMap(h=>[...(h.keys||[]),...(h.agent?[h.agent]:[])]))].filter(k=>process.env[k]).map(k=>[k,process.env[k]]));
 const env={DB:db,LOCAL_MODE:true,...keys,ASSETS:{async fetch(req){
   const url=new URL(req.url);let relative;try{relative=decodeURIComponent(url.pathname);}catch{return new Response('Invalid path',{status:400});}
+  // The news: whichever of public/news.json and the daily .local/news.json was built later (scripts/news-file.mjs).
+  if(relative==='/news.json'){const n=newestNews(root);if(n)return new Response(JSON.stringify(n.news),{headers:{'Content-Type':mime['.json'],'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'}});}
   const file=path.resolve(root,'public','.'+(relative==='/'?'/index.html':relative));
   if(!file.startsWith(path.join(root,'public')+path.sep))return new Response('Not found',{status:404});
   try{return new Response(await fs.readFile(file),{headers:{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'}});}catch{return new Response('Not found',{status:404});}
@@ -35,10 +39,23 @@ let running=false;
 // Pages fetched per minute (LOCAL_STEPS in .dev.vars, 40 by default); each source still gets only its own share.
 const steps=Math.max(1,Math.min(200,Number(process.env.LOCAL_STEPS)||40));
 async function tick(){if(running)return;running=true;try{const r=await runRefresh(env,{steps});if(r.processed)console.log(`Refresh processed ${r.processed} source pages.`);}catch(e){console.error('Refresh failed:',e.message);}finally{running=false;}}
-let timer;
+let timer,newsTimer,newsRunning=false;
+// The site's news (grade changes, reviewed promise verdicts, the trackers' PAC checks and super PAC spending from the FEC
+// bulk files on disk), rebuilt into .local/news.json once a day while this runs, in its own process so pages stay quick.
+// The FEC bulk files themselves are downloaded again by npm run corporate:pacs and npm run superpacs:races.
+function buildNews(){
+  const today=new Date().toISOString().slice(0,10);
+  if(newsRunning||newestNews(root)?.news?.built===today)return;
+  newsRunning=true;
+  execFile(process.execPath,[path.join(root,'scripts','build-news.mjs'),'--local'],{cwd:root,timeout:20*60_000},(error,stdout)=>{
+    newsRunning=false;
+    if(error)console.error('Latest updates rebuild failed:',String(error.message).split('\n')[0]);
+    else console.log(`Latest updates rebuilt. ${String(stdout).trim().split('\n').at(-1)||''}`);
+  });
+}
 server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} is already in use. If Public Ledger is already running, open http://127.0.0.1:${port}. Otherwise choose another PORT in .dev.vars.`:error.message);db.close();process.exit(1);});
 server.listen(port,'127.0.0.1',()=>{
   console.log(`Public Ledger is ready at http://127.0.0.1:${port}\nOfficial records refresh while this process is running. Stop with Ctrl+C.`);
-  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);}
+  if(process.env.LOCAL_AUTORUN!=='false'){void tick();timer=setInterval(tick,60_000);buildNews();newsTimer=setInterval(buildNews,60*60_000);}
 });
-process.on('SIGINT',()=>{clearInterval(timer);server.close(()=>{db.close();process.exit(0);});});
+process.on('SIGINT',()=>{clearInterval(timer);clearInterval(newsTimer);server.close(()=>{db.close();process.exit(0);});});
