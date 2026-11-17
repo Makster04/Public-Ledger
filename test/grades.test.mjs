@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {letter,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,ACCESS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
+import {letter,pct1,ix1,promiseScore,ethicsScore,legalTrouble,insiderTrading,disclosureDodger,amountMid,pvpScore,pvpActions,billScore,BILL_GROUPS,GAINS_STEPS,ACCESS_STEPS,moneyRatio,matchScore,tradeChecks,billKey,billKeyFromText,oneCreditPerBill,MIN_CHECKS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,INSIDER,DODGER} from '../public/grades.js';
 const data=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
 const people=data.members.concat(data.cands,data.featured||[]);
 const st=(...a)=>a.map(assessment=>({assessment}));
@@ -237,4 +237,9 @@ test('People First: versions of a bill count once, the latest vote wins, and a s
   assert.deepEqual([r.n,r.scored[0].kind,r.people],[1,'vote',1],'the vote replaces the statement');
   r=pvpScore(pvpActions(marks,[],[{bill:'118-hr-20',kind:'cosponsored'}],[{bill:'117-hr-842',pos:'oppose'}]));
   assert.equal(r.scored[0].kind,'cosponsored','a cosponsorship wins over a statement');
+});
+
+test('percentages carry a % sign; the 0–100 parts of Plays by the Rules and Corporation Compromised don\'t',()=>{
+  assert.equal(pct1(84.25),'84.3%');assert.equal(ix1(84.25),'84.3');assert.equal(ix1(5),'5.0');
+  assert.equal(ix1(null),'—');assert.equal(pct1(undefined),'—');
 });

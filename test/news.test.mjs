@@ -74,3 +74,10 @@ test('grade changes: scores now carry one decimal, so a move under a point that 
   const now={a:{word:{pct:84.3,counted:9}},b:{word:{pct:90.0,counted:9}},c:{word:{pct:81.2,counted:10}}};
   assert.deepEqual(gradeNews(before,now,'2026-11-14').map(x=>[x.id,x.from,x.to]),[['b',89,90],['c',80,81.2]],'a: 84 → 84.3 isn\'t news; b changed letter; c moved over a point');
 });
+
+test('grade changes against a log of whole numbers: a score that only lost its rounding isn\'t news',()=>{
+  const before={a:{showsup:{pct:90}},b:{showsup:{pct:90}},c:{showsup:{pct:91}}};
+  const now={a:{showsup:{pct:89.7}},b:{showsup:{pct:89.4}},c:{showsup:{pct:89.6}}};
+  assert.deepEqual(gradeNews(before,now,'2026-11-17',{wholeNumbers:true}).map(x=>x.id),['b','c'],'a: 89.7 was logged as 90; b and c really moved');
+  assert.deepEqual(gradeNews(before,now,'2026-11-17').map(x=>x.id),['a','b','c'],'a log in one decimal: every letter change counts');
+});

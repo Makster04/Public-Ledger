@@ -285,8 +285,9 @@ const isSite=(j,env)=>j.kind==='vote'&&/^vote:H:/.test(j.id)&&Number(j.id.split(
 // its list is missing or older than the snapshot (a check published before this list was kept, or reports imported by
 // hand with npm run efd:import). Each item carries "seen", when a check first read it: kept from the check's previous
 // list, the time of this publish for an item new to it, and null on a check's first list (nothing on it is news; the
-// ticker goes by its own date).
-export const TICKER_KINDS=['trades-house','trades-senate','net-worth-house','net-worth-senate'];
+// ticker goes by its own date). Eulerpool's daily list of the newest trades in Congress (trades-eulerpool, one check for
+// everyone) adds the trades it matched to a member; a trade the member's own House or Senate check also has shows once.
+export const TICKER_KINDS=['trades-house','trades-senate','trades-eulerpool','net-worth-house','net-worth-senate'];
 export const TICKER_DAYS={trade:45,filing:45};
 export const TICKER_VERSION=2;
 // A check's stored list: {v, from, items}, or a plain array (the first version's).
@@ -299,9 +300,13 @@ const tickerKey=x=>x.kind==='trade'?`t:${x.id||[x.disclosed,x.ticker||x.asset,x.
 // stampNew false: an item new to the list is not news (the list was rebuilt with a wider window), so it goes by its date.
 export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null,stampNew=true}={}){
   const today=new Date(now+864e5).toISOString().slice(0,10),out=[];
-  if(/^trades-/.test(kind)){
-    for(const x of snapshot?.rows||[])if(x?.disclosed&&x.disclosed>=daysBefore(now,TICKER_DAYS.trade)&&x.disclosed<=today)
-      out.push({kind:'trade',subject,id:x.id||null,disclosed:x.disclosed,traded:x.traded||null,type:x.type||null,ticker:x.ticker||null,asset:x.ticker?null:(x.asset||null),amount:x.amount||null,owner:x.owner||null});
+  const addTrades=(rows,who,src)=>{for(const x of rows||[])if(x?.disclosed&&x.disclosed>=daysBefore(now,TICKER_DAYS.trade)&&x.disclosed<=today)
+    out.push({kind:'trade',subject:who,id:x.id||null,disclosed:x.disclosed,traded:x.traded||null,type:x.type||null,ticker:x.ticker||null,asset:x.ticker?null:(x.asset||null),amount:x.amount||null,owner:x.owner||null,...(src?{src}:{})});};
+  if(kind==='trades-eulerpool'){
+    // One list for everyone: each matched member's trades, keyed by member so the same trade for two people stays two.
+    for(const [who,rows] of Object.entries(snapshot?.byPerson||{}))addTrades(rows.map(x=>({...x,id:x.id?`${who}:${x.id}`:null})),who,'eulerpool');
+  }else if(/^trades-/.test(kind)){
+    addTrades(snapshot?.rows,subject,null);
   }else if(snapshot?.filed){const f=String(snapshot.filed).slice(0,10);if(f>=daysBefore(now,TICKER_DAYS.filing)&&f<=today){
     // The net worth range it gives, and the year before's when that report was read too.
     const was=(snapshot.history||[]).find(h=>h&&h.year!=null&&snapshot.year!=null&&Number(h.year)<Number(snapshot.year));
@@ -309,12 +314,16 @@ export function tickerRecent(kind,subject,snapshot,{now=Date.now(),previous=null
     out.push({kind:'filing',subject,filed:f,year:snapshot.year??null,...(range(snapshot)?{worth:range(snapshot)}:{}),...(range(was)?{was:range(was),wasYear:was.year}:{})});}}
   const before=Array.isArray(previous)?new Map(previous.map(x=>[tickerKey(x),x.seen??null])):null,stamp=new Date(now).toISOString();
   for(const x of out)x.seen=before?(before.has(tickerKey(x))?before.get(tickerKey(x)):stampNew?stamp:null):null;
-  return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,20);
+  return out.sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,kind==='trades-eulerpool'?80:20);
 }
+// The same trade from two checks (a member's own House or Senate report and Eulerpool's list): who, the day traded, the
+// company and buy or sell.
+const sameTrade=x=>[x.subject,x.traded,x.ticker||String(x.asset||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,40),x.type].join('|');
 // All the checks' lists, still within their windows, newest first, at most 80.
 export function tickerMerge(lists,{now=Date.now()}={}){
   const fresh=x=>x.kind==='trade'?x.disclosed>=daysBefore(now,TICKER_DAYS.trade):x.filed>=daysBefore(now,TICKER_DAYS.filing);
-  return lists.flat().filter(x=>x&&fresh(x)).sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,80);
+  const all=lists.flat().filter(x=>x&&fresh(x)),official=new Set(all.filter(x=>x.kind==='trade'&&x.src!=='eulerpool').map(sameTrade));
+  return all.filter(x=>x.src!=='eulerpool'||!official.has(sameTrade(x))).sort((a,b)=>String(b.disclosed||b.filed).localeCompare(String(a.disclosed||a.filed))).slice(0,80);
 }
 // The checks' lists, each brought up to date with its snapshot first: a check with no list of this version, or one older
 // than its snapshot, has its list made from the snapshot (what the old list held keeps its "seen"; what's new is news
