@@ -449,7 +449,7 @@ body[data-tab]:not([data-tab="overview"]) .profile-details { margin-top: 14px; p
 .profile-report .hc-gd, .ov-grades .hc-gd { white-space: normal; overflow: visible; text-overflow: clip; }
 .profile-report .hc-gv > span, .ov-grades .hc-gv > span { color: var(--ink); }
 .profile-identity .page-eyebrow, .profile-period a, .profile-coverage a, .profile-details a, .ov-foot a { color: var(--person); }
-body[data-party] #pane a:not(.cta):not(.hc-gt) { color: var(--person); }
+body[data-party] #pane a:not(.cta):not(.hc-gt):not(.lean) { color: var(--person); }
 .profile-subnav button { background: transparent; color: var(--person); border: 0; border-bottom: 2px solid transparent; border-radius: 0; padding: 8px 0; font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; }
 .profile-subnav button:hover, .profile-subnav button:focus-visible { border-bottom-color: var(--person); }
 .profile-photo .hc-pv img { transform: scale(1.24); transform-origin: center bottom; }

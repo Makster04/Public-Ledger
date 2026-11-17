@@ -138,15 +138,19 @@ export function gridHTML(bills,state={},{areas=[]}={}){
 }
 
 // ---------- Each group's lean, for coloring its name (public/group-lean.json, scripts/build-group-lean.mjs) ----------
-export const LEAN={republican:{cls:'lean-r',label:'Mostly helps Republicans'},democrat:{cls:'lean-d',label:'Mostly helps Democrats'},
-  libertarian:{cls:'lean-l',label:'Libertarian'},bipartisan:{cls:'lean-b',label:'Bipartisan'}};
+export const LEAN={republican:{cls:'lean-r',label:'Republican / conservative',money:'Mostly helps Republicans',card:'Conservative scorecard'},
+  democrat:{cls:'lean-d',label:'Democratic / liberal',money:'Mostly helps Democrats',card:'Liberal scorecard'},
+  libertarian:{cls:'lean-l',label:'Libertarian',money:'Libertarian',card:'Libertarian'},bipartisan:{cls:'lean-b',label:'Bipartisan',money:'Bipartisan',card:'Bipartisan'}};
 // The class and the line added to a group's hover text. x: group-lean.json's entry for it; years: its "cycles".
 export function leanTag(x,years=[]){
   const l=x&&LEAN[x.lean];if(!l)return null;
+  if(x.basis==='scorecard')return {cls:l.cls,label:l.label,text:x.lean==='bipartisan'?'Bipartisan: its scorecard takes neither a liberal nor a conservative side.'
+    :`${l.card}: it rates ${x.lean==='republican'?'conservative':'liberal'} votes higher. It has no political money on file here.`};
+  if(x.basis==='set')return {cls:l.cls,label:l.label,text:`${l.label}. ${x.why||''}`.trim()};
   const span=years.length?` (${years[0]}–${years.at(-1)} cycles)`:'';
   const share=x.rShare==null?'':x.lean==='republican'?`: ${x.rShare}% of its money helped Republicans${span}`
     :x.lean==='democrat'?`: ${Math.round((100-x.rShare)*10)/10}% of its money helped Democrats${span}`
     :x.why?'':`: ${x.rShare}% of its money helped Republicans and ${Math.round((100-x.rShare)*10)/10}% Democrats${span}`;
-  return {cls:l.cls,label:l.label,text:`${l.label}${share}.${x.why?` ${x.why}`:''}`};
+  return {cls:l.cls,label:l.label,text:`${l.money}${share}.${x.why?` ${x.why}`:''}`};
 }
 export const leanLegendHTML=()=>`<div class="lean-key small">${Object.values(LEAN).map(l=>`<span class="${l.cls}"><i></i>${l.label}</span>`).join('')}</div>`;
