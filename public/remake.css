@@ -1626,3 +1626,11 @@ input, select { accent-color: var(--accent); }
 .lg-side{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface-2)}.lg-side h4{margin:0 0 6px;font-size:.92rem;display:flex;align-items:center;gap:8px}
 .lg-side ul{list-style:none;margin:0;padding:0}.lg-side li{padding:8px 0;border-top:1px solid var(--line)}.lg-side li:first-child{border-top:0}
 .lg-gh b{color:var(--ink)}.lg-m{font-size:.78rem;color:var(--muted);margin-top:2px;line-height:1.4}.lg-ink{color:var(--ink)}
+
+/* Group names colored by the party their money mostly helps (public/group-lean.json). */
+:root{--lean-lib:#f3d35b;--lean-bi:#b4b8bf}
+.lean.lean-r{color:var(--rep)}.lean.lean-d{color:var(--dem)}.lean.lean-l{color:var(--lean-lib)}.lean.lean-b{color:var(--lean-bi)}
+.lean-key{display:flex;flex-wrap:wrap;gap:6px 16px;margin:4px 0 12px;color:var(--muted)}
+.lean-key span{display:inline-flex;align-items:center;gap:6px}
+.lean-key i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.lean-key .lean-r i{background:var(--rep)}.lean-key .lean-d i{background:var(--dem)}.lean-key .lean-l i{background:var(--lean-lib)}.lean-key .lean-b i{background:var(--lean-bi)}
