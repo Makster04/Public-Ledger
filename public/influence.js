@@ -1,5 +1,5 @@
-// The Money & Influence Analysis: shown beside the grades, never inside them. It shows timing and alignment, not proof
-// that money caused a decision. Shared by the page, the monthly scoring script and the tests. Values the methodology
+// Money rules: PAC and outside-spending sectors, top donors, funders' votes against their party (inside People First's
+// Corporation Compromised) and donation timing. Shared by the page, the monthly scoring script and the tests. Values the methodology
 // still lists under "Open decisions" are marked (placeholder).
 export const TOP_DONORS=20, SWING=0.5, WINDOW_MONTHS=6; // (placeholder) top 20 donors, a 50% change, a 6-month window
 

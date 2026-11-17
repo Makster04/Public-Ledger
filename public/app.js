@@ -9,7 +9,7 @@ import {compassOf,compassSvg,compassWord,signedLean} from './compass.js';
 import {KV_MIN,leanOfVote,whyNotMarked,sideTaken,keyVoteRows,keyVoteScore,positionByCategory,poolIdeo} from './lean.js';
 import {MIN_CHECKS,MIN_PVP_ACTIONS,ETHICS_COST,CASE_KIND,CASE_AGE,INDEX_COST,LATE_DAYS,WEIGHT,ACTION_TYPES,letter,pct1,num1,billKey,matchScore,promiseScore,promiseStatus,PROMISE_WEIGHT,moneyRatio,GAINS_STEPS,ACCESS_STEPS,BILL_GROUPS,BILL_STATUS,HOLDINGS,CORP_COMPROMISED,INSIDER,DODGER} from './grades.js';
 import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
-import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,drawMonthly,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
+import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
 import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote} from './legislation-page.js';
@@ -28,7 +28,7 @@ import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,lean
 import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
-import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,TOP_DONORS,WINDOW_MONTHS,SWING,categoryAlign,outsideBySector,topDonors,voteDonorAlignment,donorLoyalty,DONOR_LOYALTY,timingFlags,positionChangeFlags,stockFlags,tradesInDonors,corp,addMonths} from './influence.js';
+import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,categoryAlign,outsideBySector,topDonors,tradesInDonors,corp,addMonths} from './influence.js';
 (function(){
 const $=s=>document.querySelector(s);
 const app=$('#app'), tip=$('#tip');
@@ -2854,8 +2854,8 @@ function researchedFunders(s){
   return `<section class="chart researched-funders" id="f-groups"><div class="page-eyebrow">FOLLOW THE MONEY</div><h3>Selected researched funder groups</h3><p class="sub">Reviewed groups on file, not a complete donor ranking. Each underlying filing keeps its own period.</p><div class="tablewrap"><table><thead><tr><th>Group</th><th class="r">PAC’s own contribution</th><th class="r">Routed individual gifts</th></tr></thead><tbody>${rows.map(f=>`<tr><td><a href="#${s.id}-funders">${esc(f.org)}</a></td><td class="r mono">${cash(f.pac||0)}</td><td class="r mono">${f.routed?cash(f.routed):'—'}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Routed gifts are already part of campaign receipts; never add them again. A dash means no routed amount is shown in these reviewed entries.</p><a href="#${s.id}-funders">Compare each group’s positions with their actions →</a></section>`;
 }
 function paneConnections(s,pane){
-  pane.innerHTML=`${analysisBlock(s)}${s.office?'':`<details class="data-disclosure" open><summary>Funder positions & voting evidence</summary>${donorTreemapBlock(s)}${fundersBlock(s)}${moneyVotesBlock(s)}</details>`}<section id="live-records"></section>`;
-  mountAnalysis(s);if(!s.office){mountFundTL(pane);mountTreemap(s);}hoverTips(pane);bindTips(pane);
+  pane.innerHTML=`${s.office?'':`<details class="data-disclosure" open><summary>Funder positions & voting evidence</summary>${donorTreemapBlock(s)}${fundersBlock(s)}${moneyVotesBlock(s)}</details>`}<section id="live-records"></section>`;
+  if(!s.office){mountFundTL(pane);mountTreemap(s);}hoverTips(pane);bindTips(pane);
   window.RecordLive.profile(s,pane.querySelector('#live-records'),['donorOrgs','outside-groups']);
 }
 function paneMoneyHistory(s,pane){
@@ -4035,128 +4035,7 @@ function donorTreemapBlock(s){
 function mountTreemap(s){const el=document.getElementById('pvp-tm');if(!el)return;const p=s.pac||{},t=topDonors(p.rows,DATA.pacNames,s.camp&&!s.camp.missing?s.camp.unitemized:0);
   const tiles=t.tiles.map(x=>({...x,alignLabel:ALIGN_LABEL[x.align],catLabel:catLabel(x.cat),about:x.cat==='small'?SMALL_DOLLAR_ABOUT:ORGS.about(x.label,'pac')}));const f=()=>drawTreemap(document.getElementById('pvp-tm'),tiles);f();resizers.push(f);}
 
-// Money & Influence Analysis: alignment and timing, from the reviewed research now, and from the daily FEC and LDA.gov
-// refresh as it fills in. Never part of a grade.
-function influenceData(s){
-  const H=window.FUNDHIST,funders=s.funderPos||[],through=H?H.contribThrough.slice(0,7):null;
-  const rows=[];
-  // Every group whose positions are collected and whose PACs gave to this person, with the votes it took a position on.
-  for(const [key,h] of Object.entries(H?.people[s.id]||{})){
-    const g=funders.find(f=>f.key===key)||{key,org:(GPBY[key]||{}).org||key,compared:[]};
-    const series={};for(const [m,v] of h.c||[])series[m]=(series[m]||0)+v;
-    const total=Object.values(series).reduce((t,v)=>t+v,0);if(!total)continue;
-    const decisions=(g.compared||[]).map(c=>({date:c.date,match:c.match,label:`${c.short}: ${g.org} wanted ${c.wanted}, ${s.short} voted ${c.cast}`}));
-    // A changed-position check tagged with an issue the group took positions on (through the votes it scored).
-    const issues=new Set((g.compared||[]).flatMap(c=>(VOTE_BY_ID.get(c.voteId)?.codes||[]).map(x=>x.issue)));
-    const changes=(s.statements||[]).filter(x=>x.assessment==='changed'&&x.issue&&/^\d{4}-\d{2}/.test(x.did?.date||'')).map(x=>({date:x.did.date,issue:x.issue,label:`Changed position: ${x.topic}`}));
-    const flags=timingFlags(g.org,series,decisions,through).concat(positionChangeFlags(g.org,series,issues,changes,through));
-    rows.push({key,label:g.org,series,total,flags,markers:decisions.filter(d=>d.match!==null).map(d=>({date:d.date,kind:d.match?'same':'opp',label:d.label}))});
-  }
-  rows.sort((a,b)=>b.total-a.total);
-  const trades=personTrading(s).rows,stock=stockFlags(trades,funders.map(g=>({org:g.org,positions:(g.compared||[]).length})));
-  // Reviewed trades in a charted donor's company, as diamonds on that donor's row.
-  const inDonors=tradesInDonors(trades,rows.map(r=>({org:r.label})));
-  for(const {org,trade:t} of inDonors)rows.find(r=>r.label===org).markers.push({date:t.traded,kind:'trade',label:`${t.type||'Trade'} of ${t.company||t.asset}${t.owner?` (${t.owner})`:''}`});
-  const months=[];if(H)for(let m=H.start.slice(0,7);m<=through;m=addMonths(m,1))months.push(m);
-  return {rows:rows.slice(0,8),allFlags:rows.flatMap(r=>r.flags).concat(stock),months,vda:voteDonorAlignment(funders),through,trades,inDonors,stock};
-}
-// Whose trades the disclosures cover: members of Congress file Periodic Transaction Reports (STOCK Act); a president files
-// OGE Form 278-T reports, listed on the Ethics tab but not compared with donors; anyone else has no trading data.
-const tradeCoverage=s=>s.office?{ok:false,label:'Not compared with donors',short:'Not compared for a president',why:`A president's trades are listed on the Integrity tab, from OGE reports. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`}
-  :s.bioguide?{ok:true}:{ok:false,why:'Trade disclosures cover members of Congress only, and state disclosure rules vary.'};
-function stockBlock(s,d){
-  const cov=tradeCoverage(s),tr=d.trades;
-  const body=!cov.ok?`<p class="small muted" style="margin:0"><b>${esc(cov.label||'No trading data')}:</b> ${s.office?`${esc(s.short)}'s trades are listed from OGE reports on the <a href="#${s.id}-integrity">Integrity tab</a>. They aren't compared with donors here, because the donor data covers the 2026 candidates' committees.`:esc(cov.why)}</p>`
-    :!tr.length?`<p class="small muted" style="margin:0">No reviewed trades for ${esc(s.short)} yet. The latest reported trades are checked against the top donors below, as leads. A trade counts once it is reviewed.</p>`
-    :d.inDonors.length?`<div class="tablewrap"><table><thead><tr><th>Traded</th><th>Company</th><th>Type</th><th>Owner</th><th>Donor</th><th>Flag</th></tr></thead><tbody>${d.inDonors.map(({org,trade:t})=>`<tr><td class="mono" style="white-space:nowrap">${esc(t.traded||'')}</td><td>${esc(t.company||t.asset||'')}</td><td>${esc(t.type||'')}</td><td>${esc(t.owner||'Self')}</td><td>${esc(org)}</td><td>${d.stock.some(f=>f.trade===t)?`<b>${FLAG_TEXT.stock}</b>`:'<span class="muted">Donor took no position on a vote compared here</span>'}</td></tr>`).join('')}</tbody></table></div>`
-    :`<p class="small muted" style="margin:0">None of ${esc(s.short)}'s ${tr.length} reviewed trade${tr.length===1?'':'s'} was in a donor's company.</p>`;
-  if(!cov.ok)return `<div class="chart" id="f-stock"><h3>Stock holdings and trades</h3>${body}</div>`;
-  return `<div class="chart" id="f-stock"><h3>Stock holdings and trades</h3><div class="sub">${points([['What is checked','Trades from official reports, including spouse and dependent-child accounts, against the donors.'],['Timing flag',`A trade in a donor that had a stake in ${esc(s.short)}'s decisions, such as a public position on a vote or lobbying on a bill ${esc(s.short)} acted on.`],['Trade Conflicts 📈',`${(t=>t.index==null?esc(t.why||'Not enough trades yet'):pct1(t.index))(sixOf(s).aboveboard.tradeConflicts)}. The same percentage as on the <a href="#${s.id}-aboveboard">Plays by the Rules tab</a>, which shows how it's figured.`],['Graded in Plays by the Rules',`Trades count in <a href="#${s.id}-aboveboard">Plays by the Rules</a> through Trade Conflicts 📈 and Stock Disclosure Dodger 🙈, not here.`]],'small')}</div>
-    ${body}<div id="f-live-stock"></div></div>`;
-}
 const H0=()=>window.FUNDHIST?monLabel(window.FUNDHIST.start.slice(0,7)):'2019';
-const FLAG_TEXT={rose:'Donations rose',dropped:'Donations dropped',changed:'Position changed after a donation shift',stock:'Held or traded stock in a donor'};
-function analysisBlock(s){
-  const d=influenceData(s),v=d.vda;
-  // Donor Loyalty 🤝: against the rest of their party on the same votes, from the saved votes' party totals
-  // (public/vote-party.json, written by scripts/build-vote-party.mjs). A president signs bills rather than voting.
-  const dl=s.office?null:donorLoyalty(s.funderPos,s.party,window.VOTE_PARTY),side=s.party==='R'?'Republicans':'Democrats';
-  const pts1=x=>`${x>0?'+':x<0?'−':''}${Math.abs(Math.round(x))}`,sg1=x=>`${x>0?'+':x<0?'−':''}${fmt1(Math.abs(x))}`;
-  const dlText=!dl?`Not measured for a president, who signs bills rather than voting on them`
-    :dl.index!=null?`${pts1(dl.diff)} points vs. other ${side} on ${dl.n} votes, weighted by each funder's money. 100 at ${DONOR_LOYALTY.ceiling} points above`
-    :dl.why==='Not enough data'?`Not enough data: ${dl.n} compared vote${dl.n===1?'':'s'}, ${DONOR_LOYALTY.minVotes} needed${dl.diff!=null?` (${pts1(dl.diff)} points vs. other ${side} so far)`:''}`
-    :dl.why==='Party totals not loaded'?`The party totals for these votes aren't loaded yet`
-    :dl.why==='No funder took a position on their votes'?`No group that gave to the campaign or spent for them took a public side on a vote compared here`:esc(dl.why);
-  const flagRows=d.allFlags.map(f=>f.kind==='stock'?`<li><b>${FLAG_TEXT.stock}:</b> ${esc(f.org)} · ${esc(f.decision.label)} on ${fmtDate(f.decision.date)}</li>`
-    :`<li><b>${FLAG_TEXT[f.kind]}${f.kind==='rose'?' after a vote it wanted':f.kind==='dropped'?' after a vote it opposed':''}:</b> ${esc(f.org)}, ${fmtFull(f.before)} in the ${WINDOW_MONTHS} months before → ${fmtFull(f.after)} from ${monLabel(f.decision.date.slice(0,7))} through ${monLabel(f.to)}. ${esc(f.decision.label)} (${fmtDate(f.decision.date)}).</li>`);
-  return `<section id="f-analysis"><h2 style="margin-top:6px">Money &amp; Influence Analysis</h2>
-    <p class="intro">Does the timing of ${esc(s.short)}'s money line up with ${esc(s.short)}'s decisions?</p>${points([['Correlation, not cause','This shows timing and alignment. It does not prove that money caused a decision.'],['Context','These timing and alignment analyses sit beside the grades. The Corporation Compromised separately contributes to People First as explained in its calculation.'],['Settings under review',`The top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.`]])}
-    <div class="cx-stats ix-row">
-      ${ixCard({name:'Vote Donor Alignment',value:pct1(v.pct),score:v.pct,tone:'bad',about:v.n?`${v.same} of ${v.n} votes went the way a donor that took a public position wanted (${v.rows.length} donor${v.rows.length===1?'':'s'})`:'No donor that gave to the campaign took a public position on a vote compared here',
-        how:`Votes that went a donor's way ÷ votes where a donor that gave to the campaign, bundled for it or spent for them took a public side (its scorecard or key-vote letter). Missed votes don't count.<div class="ix-f">${v.n?`${v.same} ÷ ${v.n} = <b>${pct1(v.pct)}</b>`:'No compared votes = <b>—</b>'}</div>`})}
-      ${ixCard({icon:'🤝',name:'Donor Loyalty',value:pct1(dl?.index),score:dl?.index,tone:'bad',about:dlText,
-        how:`For each funder: their rate of voting its way − the rest of their party's rate on the same votes. Averaged by each funder's money (no funder over half the weight). Only the part above the party counts; ${DONOR_LOYALTY.ceiling} points above scores 100. Needs ${DONOR_LOYALTY.minVotes} compared votes.${dl?.rows?.length?`<div class="ix-f">${dl.rows.slice(0,3).map(r=>`${esc(r.org)} <b${toneAttrs(50+r.diff/2,'bad')}>${sg1(r.diff)}</b> × ${r.share}%`).join(' + ')}${dl.rows.length>3?` + ${dl.rows.length-3} more`:''} = <b${toneAttrs(dl.index,'bad')}>${sg1(dl.diff)}</b> points</div>${dl.index!=null?`<div class="ix-f">${fmt1(Math.max(0,dl.diff))} ÷ ${DONOR_LOYALTY.ceiling} × 100 = <b${toneAttrs(dl.index,'bad')}>${pct1(dl.index)}</b>${dl.diff>DONOR_LOYALTY.ceiling?' (capped)':dl.diff<=0?' (at or below the party: 0)':''}</div>`:''}`:''}`})}
-      ${ixCard({name:'Speech Donor Alignment',value:'—',about:'Not measured yet. Floor speeches are collected, but must be sorted by issue and side before they can be compared',
-        how:`Planned: speeches on an issue a top donor lobbied on that took the donor's side ÷ all such speeches.`})}
-      ${ixCard({name:'Timing flags',value:d.allFlags.length,about:`for review, not scored${d.stock.length?`; ${d.stock.length} from stock in a donor`:''}`,label:'How it\'s counted',
-        how:`One flag each time, within ${WINDOW_MONTHS} months: a group's donations rose ${SWING*100}% or more after a vote it wanted, or dropped ${SWING*100}% or more after a vote it opposed (compared with the ${WINDOW_MONTHS} months before); they changed position on an issue after a ${SWING*100}% shift in a group's donations; or they held or traded stock in a donor with a stake in their decisions.`})}
-      ${ixCard({name:'Stock in donors',value:tradeCoverage(s).ok&&d.trades.length?d.inDonors.length:'—',about:!tradeCoverage(s).ok?esc(tradeCoverage(s).short||'No trading data'):d.trades.length?`of ${d.trades.length} reviewed trade${d.trades.length===1?' was':'s were'} in a donor's company`:'No reviewed trades yet. The latest reports are checked below',label:'How it\'s counted',
-        how:`Reviewed trades whose company matches, by name, a PAC that gave to the campaign or a group whose positions are compared. ${tradeCoverage(s).ok&&d.trades.length?`<div class="ix-f">${d.inDonors.length} of ${d.trades.length} trades</div>`:''}`})}</div>
-    ${d.rows.length?`<div class="chart"><h3>Donations by month from donors with public positions</h3><div class="sub">${points([['Each row',`Contributions to the campaign from one group's PACs${d.months.length?`, ${monLabel(d.months[0])} – ${monLabel(d.months.at(-1))}`:''}. Each row has its own scale. The largest month is labeled at the right.`],['Triangles',`Votes the group took a side on. Green when ${esc(s.short)} voted its way, red when not.`],['Diamond at the top','A reviewed trade in that group\'s company.'],['Shaded window','A timing flag.'],['Source','FEC bulk data. The groups are the ones whose scorecards or key-vote letters are collected.']],'small')}</div>
-      <div class="cx-plot" id="f-months"></div>${legend([['var(--s1)','Monthly contributions'],['var(--good)','Voted the way the donor wanted'],['var(--crit)','Voted the other way'],['var(--s4)','Trade in the donor\'s company'],['var(--warn)','Timing flag window']])}
-      ${tableView(['Donor','Total','Votes compared','Flags'],d.rows.map(r=>[esc(r.label),fmtFull(r.total),r.markers.length,r.flags.length]))}</div>`:s.office?`<p class="small muted">The monthly donations from the ${GP.length} groups this app tracks cover the 2026 candidates' committees, not ${esc(s.short)}'s. There is no series to compare.</p>`:`<p class="small muted">None of the ${GP.length} groups this app tracks gave to ${esc(s.short)}'s campaign since ${H0()}, in the FEC data. There is no monthly series to compare yet.</p>`}
-    ${flagRows.length?`<div class="chart"><h3>Timing flags</h3><ul class="list small">${flagRows.join('')}</ul></div>`:''}
-    ${stockBlock(s,d)}
-    ${dl?.rows.length?`<details class="tv"><summary>Donor Loyalty 🤝 by funder</summary>${points([['Each funder','A group that gave to the campaign or spent for them, on the votes where it took a public side.'],['Party\'s way',`How the rest of the ${side} in the chamber voted on the same votes, from the official roll calls (Voteview's copy for Senate votes Senate.gov wouldn't send).`],['The percentage',`The differences weighted by each funder's money, with no funder counting more than all the others put together (at most half the weight). Only the part above the party counts, and ${DONOR_LOYALTY.ceiling} points above scores 100.`]],'small')}<div class="tablewrap"><table><thead><tr><th>Funder</th><th class="r">Gave, bundled or spent for them</th><th class="r">Weight</th><th class="r">Votes</th><th class="r">Their way</th><th class="r">Party's way</th><th class="r">Difference</th></tr></thead><tbody>${dl.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${fmtFull(r.money)}</td><td class="r">${r.share}%</td><td class="r">${r.n}</td><td class="r">${r.rate}%</td><td class="r">${r.partyRate}%</td><td class="r"><span${toneAttrs(50+r.diff/2,'bad')}>${pts1(r.diff)}</span></td></tr>`).join('')}</tbody></table></div></details>`:''}
-    ${v.rows.length?`<details class="tv"><summary>Vote Donor Alignment by donor</summary><div class="tablewrap"><table><thead><tr><th>Donor</th><th class="r">Votes its way</th><th class="r">Votes compared</th></tr></thead><tbody>${v.rows.map(r=>`<tr><td>${orgName(r.org,ORGS.about(r.org,'group'))}</td><td class="r">${r.same}</td><td class="r">${r.n}</td></tr>`).join('')}</tbody></table></div></details>`:''}
-    <div id="f-live-analysis"></div></section>`;
-}
-function mountAnalysis(s){
-  const el=document.getElementById('f-months');
-  if(el){const d=influenceData(s);const rows=d.rows.map(r=>({...r,flags:r.flags.map(f=>({from:f.from,to:f.to,tip:`${FLAG_TEXT[f.kind]}: ${fmtFull(f.before)} before, ${fmtFull(f.after)} after`}))}));
-    const f=()=>drawMonthly(document.getElementById('f-months'),rows,d.months,[]);f();resizers.push(f);}
-  liveAnalysis(s,document.getElementById('f-live-analysis'));
-}
-// From the daily refresh: the top donor organizations combining PAC and employee money, and the bills they lobbied on
-// that this person acted on.
-const orgKey=v=>String(v||'').toLowerCase().replace(/\b(pac|political action committee|employees|of|the|inc|corp|corporation|co|company|llc|federal|fund)\b/g,'').replace(/[^a-z0-9]/g,'');
-// The latest disclosed trades (from the refresh, not yet reviewed) in the top donor organizations; a donor that also
-// lobbied on a bill this person acted on makes it a timing flag, as leads for review.
-function liveStock(s,p,top,stake){
-  const el=document.getElementById('f-live-stock');if(!el)return [];
-  const trades=p.merged?.trades||[];
-  if(!trades.length){el.innerHTML=`<p class="small muted" style="margin:8px 0 0">The latest reported trades fill in from the daily refresh once the keys are set. <b>Sources:</b> the member's own trade reports (House Clerk and Senate eFD), cross-checked with Bargo and Eulerpool. <a href="#updates">Update status</a></p>`;return [];}
-  if(!top.length){el.innerHTML=`<p class="small muted" style="margin:8px 0 0">${trades.length} reported trade${trades.length===1?' is':'s are'} on file. They are checked against the top donor organizations once the FEC refresh lists them.</p>`;return [];}
-  const lobbied=new Set(stake.map(l=>corp(l.org)));
-  const hits=tradesInDonors(trades.map(t=>({...t,company:t.asset||t.ticker})),top.map(o=>({org:o.name,stake:lobbied.has(corp(o.name))})));
-  el.innerHTML=`<h4 style="margin:12px 0 6px">Latest disclosed trades in top donors (leads, for review)</h4>${hits.length?`<div class="tablewrap"><table><thead><tr><th>Traded</th><th>Asset</th><th>Type</th><th class="r">Amount</th><th>Owner</th><th>Top donor</th><th>Flag</th></tr></thead><tbody>${hits.map(({org,donor,trade:t})=>`<tr><td class="mono" style="white-space:nowrap">${esc(t.traded||'')}</td><td>${esc(t.asset||t.ticker||'')}${t.ticker?` <span class="muted mono">${esc(t.ticker)}</span>`:''}</td><td>${esc(t.type||'')}</td><td class="r">${esc(t.amount||'')}</td><td>${esc(t.owner||'')}</td><td>${esc(org)}</td><td>${donor.stake?`<b>${FLAG_TEXT.stock}</b> (it lobbied on a bill ${esc(s.short)} acted on)`:'<span class="muted">No lobbying on their bills found</span>'}</td></tr>`).join('')}</tbody></table></div>`:`<p class="small muted" style="margin:0">None of the ${trades.length} latest disclosed trades was in one of the top ${top.length} donor organizations.</p>`}`;
-  return hits;
-}
-async function liveAnalysis(s,host){
-  if(!host)return;
-  try{
-    const r=await fetch('/api/profile?id='+encodeURIComponent(s.id),{cache:'no-store'});if(!r.ok)throw 0;const p=await r.json();if(!host.isConnected)return;
-    const emp=p.sections.donors?.orgs||[],pac=p.sections.pac?.rows||[],months=p.sections['donor-months']?.months||{},lob=p.sections.lobbying?.rows||[];
-    if(!emp.length&&!pac.length){liveStock(s,p,[],[]);host.innerHTML=`<p class="small muted"><b>Coming from the daily refresh:</b> the top ${TOP_DONORS} donor organizations by month (each one's PAC plus its employees), and lobbying on bills ${esc(s.short)} acted on. They fill in from FEC and LDA.gov once the keys are set. <a href="#updates">Update status</a></p>`;return;}
-    const orgs=new Map();
-    for(const e of emp){const k=orgKey(e.employer);orgs.set(k,{name:e.employer,pac:0,emp:e.total});}
-    for(const x of pac){const k=orgKey(x.name);const o=orgs.get(k)||{name:x.name,pac:0,emp:0};o.pac+=x.amount;orgs.set(k,o);}
-    const top=[...orgs.values()].map(o=>({...o,total:o.pac+o.emp})).sort((a,b)=>b.total-a.total).slice(0,TOP_DONORS);
-    const mine=new Set([...(p.sections.legislation?.rows||[]),...(p.sections.cosponsored?.rows||[])].map(r=>r.bill||String(r.id).toLowerCase()).concat(p.sections.legislation?.bills||[],p.sections.cosponsored?.bills||[]).concat(DATA.votes.concat(DATA.hvotes).filter(v=>v.pos&&s.id in v.pos).map(voteBill)).filter(Boolean));
-    const stake=lob.filter(l=>l.bills.some(b=>mine.has(b)));
-    const hits=liveStock(s,p,top,stake);
-    const mrows=Object.entries(months).map(([org,series])=>({label:org,series,markers:[]})).slice(0,8),ms=[...new Set(mrows.flatMap(r=>Object.keys(r.series)))].sort();
-    for(const {org,trade:t} of hits){const row=mrows.find(r=>corp(r.label)===corp(org));if(row)row.markers.push({date:t.traded,kind:'trade',label:`${t.type||'Trade'} of ${t.asset||t.ticker} (disclosed, not yet reviewed)`});}
-    const allMonths=[];if(ms.length)for(let m=ms[0];m<=ms.at(-1);m=addMonths(m,1))allMonths.push(m);
-    host.innerHTML=`<div class="chart"><h3>Top ${top.length} donor organizations this cycle</h3><div class="sub">Each organization's PAC giving plus its employees' itemized giving, grouped by employer. Donors' names are never shown. From the latest FEC refresh.</div>
-      ${rankBars(top.map(o=>({label:o.name,value:Math.round(o.total/top[0].total*100),color:'var(--s1)',display:fmt$(o.total),note:[o.pac&&`PAC ${fmt$(o.pac)}`,o.emp&&`employees ${fmt$(o.emp)}`].filter(Boolean).join(' · '),tip:`${o.name}: ${fmtFull(o.total)}. ${EMPLOYER_ABOUT}`})))}</div>
-      ${mrows.length?`<div class="chart"><h3>Top donors' employees by month</h3><div class="cx-plot" id="f-live-months"></div></div>`:''}
-      <div class="chart"><h3>Who had a stake</h3><div class="sub">Lobbying reports filed for top donor organizations that name a bill ${esc(s.short)} sponsored, cosponsored or voted on (LDA.gov).</div>${stake.length?`<ul class="list small">${stake.map(l=>`<li>${esc(l.org)} (${esc(l.registrant||'self-filed')}, ${esc(l.period||'')} ${esc(l.year||'')}): ${l.bills.filter(b=>mine.has(b)).map(b=>esc(billLabel(b))).join(', ')}${l.url?` <a href="${esc(l.url)}" target="_blank" rel="noopener">report ↗</a>`:''}</li>`).join('')}</ul>`:'<p class="small muted">No lobbying report from a top donor names one of these bills yet.</p>'}</div>`;
-    if(mrows.length){const f=()=>drawMonthly(document.getElementById('f-live-months'),mrows,allMonths,[]);f();resizers.push(f);}
-    hoverTips(host);
-  }catch{if(host.isConnected)host.innerHTML='<p class="small muted">The refreshed donor and lobbying records are unavailable right now. The analysis above uses the reviewed research.</p>';
-    const el=document.getElementById('f-live-stock');if(el)el.innerHTML='<p class="small muted" style="margin:8px 0 0">The latest disclosed trades are unavailable right now.</p>';}
-}
 // Outside spending for and against, each split by the spenders' sectors and colored People- or Profit-aligned.
 function outsideSectorBlock(s){
   const o=s.out;if(!o||!o.cms?.length)return '';
@@ -4404,7 +4283,7 @@ function renderMethod(sub){
       <li><b>Integrity → Fundraising:</b> donor-size and PAC breakdowns, earmark coverage and pledge adjustments, with reporting dates and missing-data explanations.</li>
       <li><b>People First:</b> a diverging bar, votes and sponsorships on bills scored by who gains, a tree map of the top 20 donors, how funders wanted the candidate to vote, and money and votes by issue. These show agreement, not that money changed a vote.</li>
       <li><b>Legislative Activity:</b> sponsored bills and cosponsored legislation, searchable by title or measure and filterable by Congress. Reviewed selections and refreshed records are labeled separately; roll calls, state records, committees and official acts follow. Counts describe loaded records, not an assumed complete career total.</li>
-      <li><b>Money &amp; Influence:</b> the Money &amp; Influence Analysis (below), where the campaign's money comes from, outside money for and against (also by month), campaign funds raised, cash on hand, every PAC contribution, money routed through PACs, every outside-spending group and item, the combined view, and the latest official filings.</li>
+      <li><b>Money &amp; Influence:</b> where the campaign's money comes from, outside money for and against (also by month), campaign funds raised, cash on hand, every PAC contribution, money routed through PACs, every outside-spending group and item, the combined view, and the latest official filings.</li>
     </ul>
     <h2 id="m-grades">Grades on the home page</h2>
     <ul class="list">
@@ -4483,28 +4362,16 @@ function renderMethod(sub){
       <li><b>People First:</b> bars centered at 50%, and a chart of People First against DW-NOMINATE to spot outliers.</li>
       <li><b>Ideological position:</b> the whole chamber on the DW-NOMINATE scale, with one person highlighted.</li>
     </ul>
-    <h2 id="method-influence">Money &amp; Influence Analysis</h2>
+    <h2 id="method-influence">Money shown beside the grades</h2>
     <ul class="list">
-      <li><b>Where it shows:</b> on each Money &amp; Influence tab, beside the grades, never inside them.</li>
-      <li><b>Correlation, not cause:</b> it shows timing and alignment. It does not prove that money caused a decision.</li>
-      <li><b>Settings under review:</b> the top ${TOP_DONORS} donors, a ${SWING*100}% change, and a ${WINDOW_MONTHS}-month window.</li>
+      <li><b>Where it shows:</b> on each Big Money Independence tab, under "Shown, not counted in Big Money Independence", and on the People First tab. It sits beside the grades, never inside them.</li>
+      <li><b>Correlation, not cause:</b> it shows who gave and how they voted. It does not prove that money caused a decision.</li>
     </ul>
-    <h3>What it measures</h3>
+    <h3>What it shows</h3>
     <ul class="list">
-      <li><b>Vote Donor Alignment:</b> votes on bills where a donor group took a public position (in its scorecard or key-vote letter). It is the share that went the group's way. Missed votes are not counted.</li>
-      <li><b>Donor Loyalty 🤝:</b> how much more often they vote the way their funders wanted than the rest of their party does on the same votes. For each group that gave to the campaign or spent for them, their rate of voting its way minus the party's rate, from the official roll calls' party totals with their own vote left out (Voteview's copy of a Senate vote when Senate.gov won't send it, kept only when its totals match the recorded result). The groups are weighted by the money each gave, bundled from its donors or spent for them, but no group counts for more than all the others put together (at most half the weight), so one large funder with a single position on file can't decide the number alone. Only the part above the party counts: ${DONOR_LOYALTY.ceiling} points above scores 100. It needs ${DONOR_LOYALTY.minVotes} compared votes. Independents are compared with the party they caucus with.</li>
-      <li><b>Speech Donor Alignment:</b> not measured yet. Floor speeches arrive from the Congressional Record, but must first be sorted by issue and side.</li>
-      <li><b>Donations by month:</b> each group's PAC giving to the campaign by month (FEC bulk data since ${H0()}), with the votes it took a side on marked under its row.</li>
-      <li><b>Top donor organizations:</b> from the daily FEC refresh, the top ${TOP_DONORS} organizations, each combining its PAC with its employees' itemized giving, grouped by employer. Donors' names are never shown, as FEC rules on reusing contributor information require.</li>
-      <li><b>Timing flags (for review, not scored):</b>
-        <ul class="list">
-          <li>Donations rose ${SWING*100}% or more in the ${WINDOW_MONTHS} months after a vote the group wanted, compared with the ${WINDOW_MONTHS} months before.</li>
-          <li>Donations dropped ${SWING*100}% or more after a vote it opposed.</li>
-          <li>A position change on an issue followed a ${SWING*100}% shift in donations from a group that took positions on it.</li>
-          <li>The person held or traded stock in a group that donated and took positions on bills they acted on.</li>
-          <li>A window that runs past the data is not judged.</li>
-        </ul></li>
-      <li><b>Who had a stake:</b> lobbying reports (LDA.gov) for top donor organizations that name a bill the person sponsored, cosponsored or voted on. Also listed, as context: foreign-agent registrations (FARA), comments on federal rules (Regulations.gov) and federal contracts (USAspending, matched through SAM.gov company IDs).</li>
+      <li><b>Funder positions and votes:</b> for each group that gave to the campaign, bundled for it or spent for them and took a public side on a vote (in its scorecard or key-vote letter), what it wanted and how they voted, with a timeline of the group's money by month since ${H0()}.</li>
+      <li><b>Top donor organizations:</b> from the daily refresh, each organization's PAC giving plus its employees' itemized giving, grouped by employer, with its lobbying (LDA.gov), foreign-agent registrations (FARA), comments on federal rules (Regulations.gov) and federal contracts (USAspending, matched through SAM.gov company IDs). Donors' names are never shown, as FEC rules on reusing contributor information require.</li>
+      <li><b>Groups behind outside spending:</b> outside spenders looked up in ProPublica's Nonprofit Explorer, with their nonprofit type and yearly revenue.</li>
       <li><b>Outside spending by sector:</b> money spent for and against, each bar split by the groups' sectors. Outside spending is a plain number, not a grade, because the person cannot legally coordinate with these groups.
         <ul class="list">
           <li><b>People-aligned:</b> unions.</li>
@@ -4676,7 +4543,7 @@ function renderMethod(sub){
       <li><b>Groups read for everyone:</b> AIPAC, Club for Growth, EMILY's List, J Street and the Senate Conservatives Fund. For each profiled campaign, what each group's PAC forwarded is read from the PAC's own FEC reports (its disbursements to that campaign marked "earmark"), for the cycles its PAC reports cover. A group that reports a total line with each gift listed below it is counted from the total line, so nothing counts twice. The PAC's own checks stay in the PAC table.</li>
       <li><b>Left out:</b> ActBlue and WinRed, which forward gifts for any campaign that uses them, so the campaign, not a group, chose them.</li>
       <li><b>Researched by hand:</b> where the FEC reading misses a total found in the filings by a reporter, the hand-researched total is used and labeled. Sen. Booker: $707,803 through AIPAC's PAC from January to September 2025, as tallied from FEC filings by Sludge; $5,000 of it was the PAC's own check, so $702,803 counts as bundled.</li>
-      <li><b>Where it counts:</b> beside each group's own money in the funder list, a table on the Money &amp; Influence tab and a line on each bill's page on the Legislation tab. It counts as that group's money in Donor Loyalty 🤝 and Vote Donor Alignment, never in a grade.</li>
+      <li><b>Where it counts:</b> beside each group's own money in the funder list, a table on the Money &amp; Influence tab and a line on each bill's page on the Legislation tab. In People First's Corporation Compromised, it counts as that group's money when weighting a business group's votes; it counts in no other grade.</li>
       <li><b>Anyone else:</b> no row means none of these groups forwarded gifts to that campaign in the FEC's processed records as of the date shown. Other groups that bundle aren't read yet.</li>
     </ul>
     <h2>Voting ideology (liberal–conservative %)</h2>
