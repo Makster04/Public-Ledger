@@ -1283,6 +1283,13 @@ input, select { accent-color: var(--accent); }
 .lk-took .lk-mark, .lk-mark.lk-took { color: var(--crit); }
 .lk-none .lk-mark, .lk-mark.lk-none { color: var(--good); }
 .lk-waiting .lk-mark, .lk-mark.lk-waiting { color: var(--muted); }
+/* The key under the Summary of Major Lookouts, laid out like the money map's "Bundled through groups" box. */
+.lk-key { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
+.lk-key h4 { margin: 0 0 2px; font-family: var(--font-display); font-size: 1.02rem; font-weight: 800; color: var(--ink); }
+.lk-key .list { margin: 8px 0 0; padding-left: 18px; }
+.lk-key .list li { margin: 0 0 9px; line-height: 1.45; color: var(--ink-2); }
+.lk-key .list li b { color: var(--ink); }
+.lk-key > p.small.muted:last-child { margin: 4px 0 0; }
 .lk-name { background: none; border: 0; padding: 0; color: var(--ink); font: inherit; font-size: .88rem; text-align: left; cursor: pointer; }
 .lk-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 .lk-name:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }

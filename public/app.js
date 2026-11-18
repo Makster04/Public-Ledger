@@ -1841,7 +1841,12 @@ function lookoutsBox(s,inp){
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
   return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <p class="small muted">PAC checks and gifts routed through the group, ${esc(inp.label)} (for the Pro-Israel Lobby also the named donors' own checks): ✕ took some, ✓ none, … not read yet. Employees' own gifts are the smaller number. Under the Pro-Israel Lobby, Crypto and Big Tech + AI, since they spend heavily that way: what their super PACs spent to help them win this cycle (for them, plus against their opponents in a race they were in) and what they spent against them. It never changes the mark: the campaign doesn't take it. More in each tracker below.</p></div>`;
+    <div class="lk-key"><h4>How to read this</h4><p class="small muted">What each group gave the campaign, ${esc(inp.label)}.</p>
+      <ul class="list small">
+        <li><b><span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too.</li>
+        <li><b>+ from employees</b><br>Gifts from people who work in that industry, shown apart as the smaller number. They don't change the mark.</li>
+        <li><b>Super PAC spending</b> <span class="muted">(Pro-Israel Lobby, Crypto, Big Tech + AI)</span><br>What their super PACs spent to help them win this cycle (for them, and against their opponents in a race they were in) and against them. It never changes the mark: the campaign doesn't take that money.</li>
+      </ul><p class="small muted">More in each tracker below.</p></div></div>`;
 }
 let trackerTab='aipac';
 const fecCmteLink=(id,name)=>id?`<a href="https://www.fec.gov/data/committee/${esc(id)}/" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
