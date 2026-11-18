@@ -782,7 +782,7 @@ function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all
 // Who takes corporate PAC money, or money from one of the Trackers' groups, as seating charts of the House and the
 // Senate (public/seats.js), with a filter by the title. Each member's status from public/corporate-pacs.json (npm run
 // corporate:pacs: every member read from the FEC's bulk files); for a member it doesn't cover, from their profile (the
-// reviewed PAC lines, and for a tracker its Summary of Major Lookouts), else not read yet.
+// reviewed PAC lines, and for a tracker its Tracking Major Super PACs box), else not read yet.
 const SEAT_BY=[['corporate','Corporate PACs'],...TRACKERS.map(t=>[t.key,t.name])];
 let seatBy='corporate';
 function corporateOf(m){
@@ -1045,7 +1045,7 @@ function bindProfileActions(s,pane){
     // read), for their net worth and stocks, and Big Money Independence's bonuses and pledges, each with why.
     const d=s.office?null:await Promise.race([window.RecordLive.disclosure(s.id,s.chamber).catch(()=>null),new Promise(r=>setTimeout(()=>r(null),5000))]);
     const u=s.office?unbought(s):unbought(s,{...unboughtInputs(s),sizes:d?.sizes||null,snapshot:d?.netWorth||null,trades:d?.trades||null});
-    // The funding overview: where the money came from, and the eight trackers as the profile's Summary of Major Lookouts
+    // The funding overview: where the money came from, and the eight trackers as the profile's Tracking Major Super PACs box
     // shows them this cycle, with their super PACs' spending (the refresh's records, else the file's).
     const sp=s.office?null:await Promise.race([loadSuperPacs(),new Promise(r=>setTimeout(()=>r(null),3000))]);
     const inp=s.office?null:lookoutInputs(s,d,'this',sp||undefined);
@@ -1811,7 +1811,7 @@ function namedDonorsOf(s,cycles){
   for(const t of TRACKERS.filter(x=>x.donors?.length)){if(!h?.people?.[s.id])return null;const a=donorAmounts(h,t,s.id,cycles);if(a===null)return null;Object.assign(out,a);}
   return out;
 }
-// "Summary of Major Lookouts": one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
+// "Tracking Major Super PACs" (called the Summary of Major Lookouts until Nov. 18, 2026): one line a tracker, ✕ when the campaign took PAC checks or routed gifts from it in the
 // period, ✓ when it took none (with every record needed read), … while a record is waiting; the amount on the right, and
 // the employees' own gifts as a smaller number under it. For AIPAC, Crypto and Big Tech + AI, which spend heavily through
 // super PACs, a line under it gives their super PACs' spending for and against them this cycle; it never changes the
@@ -1842,8 +1842,8 @@ function lookoutsBox(s,inp){
   const row=x=>{const mark=x.status==='took'?'✕':x.status==='none'?'✓':'…',said=x.status==='took'?'took some':x.status==='none'?'none':'not read yet';
     return `<li class="lk-${x.status}"><span class="lk-mark" aria-hidden="true">${mark}</span><button type="button" class="lk-name" data-tracker-open="${x.key}">No PAC money or gifts from ${esc(x.name)}${TRACKER[x.key]?.icon?`&nbsp;<span class="lk-ic" aria-hidden="true">${TRACKER[x.key].icon}</span>`:''}<span class="sr-only">: ${said}</span></button>
       <span class="lk-amt">${x.status==='waiting'?'<span class="muted">not read yet</span>':`<b class="num">${fmtFull(x.total)}</b>`}${x.employees>0?`<small>+ ${fmtFull(x.employees)} from employees</small>`:''}</span>${tierTag(x)}${helpLine(x)??spLine(x)}</li>`;};
-  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Summary of Major Lookouts</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
-    <div class="lk-key"><h4>How to read this</h4><p class="small muted">What each group gave the campaign, ${esc(inp.label)}.</p>
+  return `<div class="mm-panel lookouts" id="u-lookouts"><h3>Tracking Major Super PACs</h3><ul class="lk-list">${lookouts(inp).map(row).join('')}</ul>
+    <div class="lk-key"><h4>How to read this</h4><p class="small muted">What each lobby gave the campaign, ${esc(inp.label)}, and what three of them spent through their super PACs.</p>
       <ul class="list small">
         <li><b><span class="lk-mark lk-took">✕</span> took some · <span class="lk-mark lk-none">✓</span> none · <span class="lk-mark lk-waiting">…</span> not read yet</b><br>PAC checks and gifts the group collected and passed on. For the Pro-Israel Lobby, its named donors' own checks too.</li>
         <li><b>+ from employees</b><br>Gifts from people who work in that industry, shown apart as the smaller number. They don't change the mark.</li>
@@ -1939,7 +1939,7 @@ function paneUnbought(s,pane){
   // The money map here: the pie of where the itemized gifts come from goes under its numbers (filled once the refresh's
   // records arrive), and the bundled gifts' box sits under the Sources, beside the score card.
   const mm={bundled:DATA.bundled?.people?.[s.id],groups:{...Object.fromEntries((DATA.groupPos||[]).map(g=>[g.key,g.org])),...(DATA.bundled?.names||{})},categories:DATA.categories||{},pacNames:DATA.pacNames||[],pacType:i=>pacTypeOf(DATA,i)};
-  // Under the Sources: the bundled gifts, then the Summary of Major Lookouts for the period picked.
+  // Under the Sources: the bundled gifts, then Tracking Major Super PACs for the period picked.
   let period='this',live=undefined,sp=undefined;
   const sideFor=d=>s.office?'':bundledBox(s,mm)+lookoutsBox(s,lookoutInputs(s,d,period,sp));
   const fillLookouts=()=>{const el=pane.querySelector('#u-lookouts');if(!el)return;const tmp=document.createElement('div');tmp.innerHTML=lookoutsBox(s,lookoutInputs(s,live,period,sp));el.replaceWith(tmp.firstElementChild);};

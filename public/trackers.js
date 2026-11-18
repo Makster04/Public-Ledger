@@ -1,5 +1,6 @@
 // The trackers: eight lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
-// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
+// "Tracking Major Super PACs", called the Summary of Major Lookouts until 2026-11-18) and on the
+// Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
 // Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13; AIPAC widened to the Pro-Israel Lobby, 2026-11-14; the insurers
 // and PBMs split off from Big Pharma as Health Insurers + PBMs, 2026-11-18).
 //
@@ -16,12 +17,12 @@
 //   pacsLabel, routedLabel  how the page names its PACs and the groups whose passed-on gifts count, when "<name>'s PACs"
 //                       doesn't read well
 //   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
-//                       FEC committee IDs where known. superPacLine: the Summary of Major Lookouts shows their spending
+//                       FEC committee IDs where known. superPacLine: Tracking Major Super PACs shows their spending
 //                       as an extra line (approved 2026-11-11 for Crypto and Big Tech + AI, whose money mostly arrives
 //                       that way, and then for AIPAC's United Democracy Project); it never changes the mark
 //   industries          the employee-gift groups the refresh reads for it (public/industries.js, "industry-gifts")
 //   companies, groups   who it follows, as listed on the page
-//   icon                its emoji, after its name on the Summary of Major Lookouts (approved 2026-11-13)
+//   icon                its emoji, after its name on Tracking Major Super PACs (approved 2026-11-13)
 //   emoji               the one the report card shows as its icon, without the 🎁 (the row's heading says "gifts")
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
 // beside it, and super PAC spending only in the tracker: a super PAC spends on its own, often against the candidate.
