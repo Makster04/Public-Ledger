@@ -691,15 +691,16 @@ function homeCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(sub)}</div></div></div>
     <div class="hc-ideo">${esc(ideo)}</div>
-    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
     ${sixTiles(s,false,MONEY_SCORES)}
-    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
     ${sixTiles(s,false,OTHER_SCORES)}
+    ${hcHead('◆','wl','Wealth','What their own disclosures show they own and trade')}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     <div class="hc-ft"><span>${race?esc(race.label):''}</span><span class="hc-vs">${riv.length?'vs. '+esc(riv.map(x=>x.short).join(', ')):'No profiled opponent'}</span></div>
   </article>`;
 }
-// The featured card (the president): the same Report Card and Money & Influence Analysis as the others. Not being on the
+// The featured card (the president): the same Dark Money Affiliated Scores, Other Scores and Wealth as the others. Not being on the
 // 2026 ballot, there is no reviewed race money, so the money comes from the daily FEC refresh of the committee that
 // still files (filled in by fillFeatured).
 function featuredCard(s){
@@ -708,11 +709,12 @@ function featuredCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(s.term)}</div></div></div>
     <div class="hc-ideo">${esc(REC_SHORT[s.recordType]||'')} · ${esc(s.seat)}</div>
-    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
     ${sixTiles(s,false,MONEY_SCORES)}
-    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
     ${sixTiles(s,false,OTHER_SCORES)}
+    ${hcHead('◆','wl','Wealth','What their own disclosures show they own and trade')}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     <div class="hc-ft"><span>Not on the 2026 ballot</span><span class="hc-vs">Open profile →</span></div>
   </article>`;
 }
@@ -2454,11 +2456,12 @@ function basicCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span><span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
     <div class="hc-ideo">${esc(s.ideo?ideoText(s).short:'No voting score yet')}</div>
-    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
     ${sixTiles(s,false,MONEY_SCORES)}
-    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
     ${sixTiles(s,false,OTHER_SCORES)}
+    ${hcHead('◆','wl','Wealth','What their own disclosures show they own and trade')}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
     <div class="hc-ft"><span>${esc(ballotLine(s))}</span><span class="hc-vs">Basic profile →</span></div>
   </article>`;
 }
