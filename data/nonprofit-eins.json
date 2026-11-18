@@ -1,0 +1,43 @@
+{
+  "about": "Each tracked group's nonprofit arm that files Form 990 (its 501(c)(4), (5) or (6), the one that does its politics), by IRS employer ID (EIN), for scripts/build-990.mjs. Looked up in ProPublica's Nonprofit Explorer and the IRS's e-file index on Nov. 18, 2026. A group missing here has no such filer confirmed: a PAC files only with the FEC.",
+  "groups": {
+    "aflcio": {"ein": "530228172", "name": "American Federation of Labor & Congress of Industrial Orgs"},
+    "afp": {"ein": "753148958", "name": "Americans for Prosperity"},
+    "ara": {"ein": "522277805", "name": "Alliance for Retired Americans"},
+    "cfg": {"ein": "204681603", "name": "Club for Growth"},
+    "chamber": {"ein": "530045720", "name": "Chamber of Commerce of the United States of America"},
+    "giffords": {"ein": "465592432", "name": "Giffords"},
+    "hrc": {"ein": "521243457", "name": "Human Rights Campaign Inc"},
+    "lcv": {"ein": "521733698", "name": "League of Conservation Voters Inc"},
+    "nfib": {"ein": "940707299", "name": "National Federation of Independent Business Inc"},
+    "nra": {"ein": "530116130", "name": "National Rifle Association of America"},
+    "nrlc": {"ein": "520986195", "name": "National Right to Life Committee Inc"},
+    "ppaf": {"ein": "133539048", "name": "Planned Parenthood Action Fund Inc"},
+    "rffa": {"ein": "132630359", "name": "Reproductive Freedom for All"},
+    "seiu": {"ein": "360852885", "name": "Service Employees International Union"},
+    "heritage": {"ein": "272244700", "name": "Heritage Action for America"},
+    "edf": {"ein": "900080500", "name": "Environmental Defense Action Fund"},
+    "nrdc": {"ein": "133976062", "name": "NRDC Action Fund Inc"},
+    "emily": {"ein": "461067490", "name": "EMILY's List Action"},
+    "acu": {"ein": "237065623", "name": "Credit Union National Association Inc (now America's Credit Unions)"},
+    "aipac": {"ein": "530217164", "name": "American Israel Public Affairs Committee"},
+    "aha": {"ein": "360726140", "name": "American Hospital Association Inc"},
+    "ama": {"ein": "360727175", "name": "American Medical Association"},
+    "aba": {"ein": "521001304", "name": "American Bankers Association"},
+    "mba": {"ein": "361505650", "name": "Mortgage Bankers Association"},
+    "icba": {"ein": "410327400", "name": "Independent Community Bankers of America"},
+    "nar": {"ein": "361520690", "name": "National Association of Realtors"},
+    "aft": {"ein": "360725240", "name": "American Federation of Teachers"},
+    "nea": {"ein": "530115260", "name": "National Education Association of the United States"},
+    "phrma": {"ein": "530241211", "name": "Pharmaceutical Research and Manufacturers of America"},
+    "sba": {"ein": "541850126", "name": "Susan B Anthony List Inc (SBA Pro-Life America)"},
+    "everytown": {"ein": "208802884", "name": "Everytown for Gun Safety Action Fund Inc"},
+    "jstreet": {"ein": "261507828", "name": "J Street"}
+  },
+  "notFound": {
+    "afscme": "The national union's own 990 filer isn't confirmed: several AFSCME councils share the name.",
+    "scf": "Senate Conservatives Fund is a PAC; no nonprofit arm found.",
+    "fairshake": "A super PAC network; super PACs file with the FEC, not the IRS.",
+    "cffe": "Campaign for a Family Friendly Economy: no nonprofit filer found by that name."
+  }
+}

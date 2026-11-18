@@ -66,6 +66,11 @@
    "date": "2026-11-18",
    "headline": "Profiles show ads that named them, corporations' and unions' messages to members, and lobbyists' gifts; bill pages show lobbying coalitions' members",
    "note": "Presentation only: on each profile's Big Money Independence tab, under \"Shown, not counted\": ads that named them near an election (FEC electioneering communications), what corporations and unions spent telling their members how to vote on them (FEC communication costs), and lobbyists' political gifts that name them (LDA.gov LD-203; lobbyists added up, never named). On each bill's page: the lobbying coalitions among the reports' clients and the member organizations on their registrations. No score changed."
+  },
+  {
+   "date": "2026-11-18",
+   "headline": "Nonprofits' tax returns: political spending, the super PACs they paid and their grants, beside group names",
+   "note": "Presentation only: the tracked groups' nonprofit arms, outside spenders that are nonprofits, groups that ran ads naming a candidate and super PACs' largest organization donors now show their newest IRS Form 990: political spending, every super PAC and other political group they paid, their grants and the grants they got from other nonprofits followed here. On bill pages, the funder comparisons, the outside-spending and ads cards, and the Super PACs page, where a donor that's a nonprofit is marked \"doesn't name its donors\". No score changed."
   }
  ]
 }

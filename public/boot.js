@@ -32,6 +32,8 @@ try {
   const superPacRaces=fetch('/super-pac-races.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   // The site's news for the ticker and the Latest updates page (scripts/build-news.mjs).
   const news=fetch('/news.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // Nonprofits' own tax returns (scripts/build-990.mjs), for following dark money.
+  const nonprofits=fetch('/nonprofits.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const response=await fetch('/research.json',{cache:'no-cache'});
   if(!response.ok)throw new Error('Research file unavailable');
   window.DATA=await response.json();
@@ -52,6 +54,7 @@ try {
   window.TRACKER_HISTORY=await trackerHistory;
   window.SUPER_PAC_RACES=await superPacRaces;
   window.NEWS=await news;
+  window.NONPROFITS=await nonprofits;
   window.QUESTIONS=(await questions)||{questions:[],categories:[]};
   window.QSTANCES=(await questionStances)||{people:{},coded:{}};
   window.QSTATEMENTS=(await questionStatements)||{people:{}};

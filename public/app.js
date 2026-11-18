@@ -12,6 +12,7 @@ import {makeScorer,voteBill,markBasic,sixContext} from './scoring.js';
 import {money,hoverTips,tableView,legend,rankBars,stackRows,divergingRows,leanRows,categoryBars,drawScatter,drawDelay,drawTradeTimeline,drawCaseTimeline,drawTreemap,sectorSpendBars,drawNetWorthYears,drawStocksTrades,drawTradeStrip,pieSVG,squarify} from './charts.js';
 import {makeOrgs,SMALL_DOLLAR_ABOUT,EMPLOYER_ABOUT} from './orgs.js';
 import {billFamilies,groupInfo,issueEvidence} from './bills.js';
+import {npOf,npLine,npDetails,npChip} from './nonprofits.js';
 import {legislationModel,gridHTML,cardHTML as lgCardHTML,filterBills,helpedVoted,pfText,money as lgMoney,ordinal,normVote,leanTag as groupLeanTag,leanLegendHTML} from './legislation-page.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {pacTypeOf,pacKindTotals,pacKind} from './pac-types.js';
@@ -2304,7 +2305,7 @@ async function renderSuperPacs(){
   const cand=c=>{const id=PROFILE_BY_FEC.get(c.cand),n=nameOf(c,id);return `${id?`<a href="#${esc(id)}">${esc(n)}</a>`:`<a href="https://www.fec.gov/data/candidate/${esc(c.cand)}/?cycle=${cy}" target="_blank" rel="noopener">${esc(n)}</a>`} <span class="muted small">${esc(officeOfCand(c.cand))}${String(c.cand).length>=4&&officeOfCand(c.cand)!=='President'?' · '+esc(String(c.cand).slice(2,4)):''}</span>`;};
   const row=(o,i)=>`<details class="sp-row"><summary><span class="sp-rank num">${i+1}</span><span class="sp-name"><b>${esc(o.name)}</b><span class="small muted">${esc(TYPE_LABEL_SP[o.type]||'Super PAC')} · ${o.cands.length} candidate${o.cands.length===1?'':'s'}</span></span><span class="num sp-total">${fmtFull(o.total)}</span><span class="small sp-split"><span class="st-pos">+${shortMoney(o.for)}</span> <span class="st-neg">−${shortMoney(o.against)}</span></span></summary>
     <div class="sp-body">${stTable(['Candidate','Supporting','Opposing'],o.cands.map(c=>[cand(c),c.for?`<span class="st-pos">+${fmtFull(c.for)}</span>`:'—',c.against?`<span class="st-neg">−${fmtFull(c.against)}</span>`:'—']),'',[1,2])}
-      ${o.donors?`<div class="st-check"><h4>Largest gifts this cycle</h4>${o.donors.orgs.length?`<ul class="st-ind-execs">${o.donors.orgs.map(g=>`<li><span>${esc(g.name)}</span><span class="num">${fmtFull(g.amount)}</span></li>`).join('')}</ul>`:'<p class="small">No gifts from companies, unions or other groups among its largest.</p>'}
+      ${o.donors?`<div class="st-check"><h4>Largest gifts this cycle</h4>${o.donors.orgs.length?`<ul class="st-ind-execs">${o.donors.orgs.map(g=>`<li><span>${esc(g.name)}${npChip(npOf(window.NONPROFITS,{name:g.name}))}</span><span class="num">${fmtFull(g.amount)}</span></li>`).join('')}</ul>`:'<p class="small">No gifts from companies, unions or other groups among its largest.</p>'}
         <p class="small">${o.donors.indiv.n?`People: <b class="num">${fmtFull(o.donors.indiv.total)}</b> from ${o.donors.indiv.n} of its largest gifts, not named.`:'No gifts from people among its largest.'}</p>
         <p class="small muted">From its ${o.donors.read} largest receipts on file this cycle.</p></div>`:''}
       <p class="small"><a href="https://www.fec.gov/data/committee/${esc(o.id)}/?cycle=${cy}" target="_blank" rel="noopener">FEC committee page ↗</a></p></div></details>`;
@@ -2314,7 +2315,7 @@ async function renderSuperPacs(){
     const by={total:(a,b)=>b.total-a.total,for:(a,b)=>b.for-a.for,against:(a,b)=>b.against-a.against,name:(a,b)=>a.name.localeCompare(b.name)}[spSort];
     L.sort(by);
     $('#sp-n').innerHTML=`<b class="num">${L.length}</b> of ${d.superPacs.length} super PACs${d.count>d.superPacs.length?` (the ${d.superPacs.length} that spent the most, of ${d.count})`:''}`;
-    $('#sp-list').innerHTML=L.map(row).join('')||'<p class="muted">No super PAC matches that search.</p>';
+    $('#sp-list').innerHTML=L.map(row).join('')||'<p class="muted">No super PAC matches that search.</p>';bindTips($('#sp-list'));
   };
   $('#sp-q').addEventListener('input',e=>{spQ=e.target.value;draw();});
   $('#sp-sort').addEventListener('change',e=>{spSort=e.target.value;draw();});
@@ -3330,7 +3331,8 @@ function fundersBlock(s){
     else if(!g.compared.length)res=`<p class="small muted" style="margin:6px 0 0">No published position by ${esc(g.org)} was found on the key votes ${esc(s.short)} cast.</p>`;
     else res=`<p class="small" style="margin:6px 0 4px"><b>${esc(s.short)} voted the way ${esc(g.org)} wanted on ${g.agree} of ${g.n} key votes it scored or took a public position on.</b></p>
       <div class="tablewrap"><table><thead><tr><th>#</th><th>Vote</th><th>${esc(g.org)} wanted</th><th>${esc(s.short)} voted</th><th>Same?</th><th>Group's own source</th></tr></thead><tbody>${g.compared.map((c,ci)=>{const v=(DATA.votes.concat(DATA.hvotes)).find(x=>x.id===c.voteId);return `<tr><td><span class="ftl-num ${c.match===null?'nv':c.match?'same':'opp'}">${voteNum(g,ci)}</span></td><td><a href="${voteUrl(v)}" target="_blank" rel="noopener">${esc(c.short)}</a><div class="small muted">${esc(c.chamber)} · ${fmtDate(c.date)}</div></td><td><span class="chip ${posClass(c.wanted)}">${esc(c.wanted)}</span></td><td><span class="chip ${posClass(c.cast)}">${esc(c.cast)}</span></td><td>${c.match===null?'<span class="muted">did not vote</span>':c.match?'<b style="color:var(--good)">✓ Same</b>':'<b style="color:var(--crit)">✕ Opposite</b>'}</td><td class="small">${c.basis==='scorecard'?'Scored in its scorecard':c.basis==='key_vote_alert'?'Key-vote letter before the vote':'Public statement'}: <a href="${esc(c.src.u)}" target="_blank" rel="noopener">${esc(c.src.t)} ↗</a></td></tr>`}).join('')}</tbody></table></div>${fundTimeline(s,g,'ftl-'+g.key)}`;
-    return `<div class="mv"><h4>${orgName(g.org,ORGS.group(g.key),undefined,g.key)}</h4><p class="small" style="margin:0">${money(g)}${g.spenders.length?` <span class="muted">(${esc(g.spenders.join(', '))})</span>`:''}</p>${res}</div>`;}).join('');
+    const np=npOf(window.NONPROFITS,{group:g.key});
+    return `<div class="mv"><h4>${orgName(g.org,ORGS.group(g.key),undefined,g.key)}</h4><p class="small" style="margin:0">${money(g)}${g.spenders.length?` <span class="muted">(${esc(g.spenders.join(', '))})</span>`:''}</p>${np?`<details class="tv np-more"><summary class="small">${npLine(np).replace(/ <a [^>]*>Return ↗<\/a>/,'')}</summary>${npDetails(np)}</details>`:''}${res}</div>`;}).join('');
   return head+body+`<p class="small muted" style="margin-top:10px"><b>Groups researched:</b> ${GP.map(g=>`<span data-group="${esc(g.key)}">${esc(g.org)}</span>`+(g.status==='pending'?' (in progress)':'')).join(', ')}. <a href="#method">How positions were collected</a>.</p></section>`;
 }
 
@@ -3944,7 +3946,7 @@ function renderBill(id){
     return `<li><div class="lg-gh"><b data-group="${esc(g.group)}"${info.about?` class="org" data-tip="${esc(`${info.org}: ${info.about}`)}"`:''}>${esc(info.org)}</b>${g.src?.u?` <a class="lg-src" href="${esc(g.src.u)}" target="_blank" rel="noopener" title="${esc(g.src.t||'Source')}">record ↗</a>`:''}${m?.fewDonors?' <span class="lg-flag lg-dark">◐ lists few donors</span>':''}</div>
       ${g.why?`<div class="lg-m">${esc(g.why)}</div>`:''}
       <div class="lg-m">${parts.length?`${parts.join(' · ')} in the races tracked here`:'No money in the races tracked here'}</div>
-      ${hv.n?`<div class="lg-m">Lawmakers it helped who voted on this: <b class="lg-ink">${hv.ok} of ${hv.n}</b> voted its way</div>`:''}</li>`;};
+      ${hv.n?`<div class="lg-m">Lawmakers it helped who voted on this: <b class="lg-ink">${hv.ok} of ${hv.n}</b> voted its way</div>`:''}${npOf(window.NONPROFITS,{group:g.group})?`<div class="lg-m">${npLine(npOf(window.NONPROFITS,{group:g.group}))}</div>`:''}</li>`;};
   const statusSrc=b.statusSrc?.u?` <a href="${esc(b.statusSrc.u)}" target="_blank" rel="noopener" title="${esc(b.statusSrc.t||'')}">Source ↗</a>`:'';
   const where=b.status==='law'?`<b>Became law</b>: ${esc(b.law||'')}, signed ${fmtDate(b.date)}.${statusSrc}`:`<b>${b.reintroduced?'Not passed; reintroduced':'Not passed'}</b>: ${esc(b.stage||'')}${statusSrc}`;
   const here=[...new Set([...(b.work?.cosponsors||[]),...(b.cosponsors||[])].map(c=>c.person))].filter(pid=>byId[pid]).map(pid=>`<a href="#${pid}">${esc(byId[pid].short||byId[pid].name)}</a>`);
@@ -4388,6 +4390,12 @@ function renderMethod(sub){
       <li><b>Integrity:</b> latest monthly comparison values, with profile links to component coverage and Not graded explanations. Historical Ethics and Promise values remain in the official monthly score log.</li>
       <li><b>People First:</b> bars centered at 50%, and a chart of People First against DW-NOMINATE to spot outliers.</li>
       <li><b>Ideological position:</b> the whole chamber on the DW-NOMINATE scale, with one person highlighted.</li>
+    </ul>
+    <h2 id="method-nonprofits">Nonprofits' tax returns</h2>
+    <ul class="list">
+      <li><b>Which nonprofits:</b> the tracked groups' nonprofit arms (the 501(c)(4), (5) or (6) that does a group's politics), outside spenders that are nonprofits, groups that ran ads naming a candidate near an election, and super PACs' organization donors of $100,000 or more, matched by exact name in the IRS's index of e-filed returns. Grants of $1 million or more to political nonprofits and 527 groups are followed one step further.</li>
+      <li><b>What's read:</b> each one's newest Form 990, 990-EZ or 990-PF, from the IRS's own e-file downloads: totals, political spending, every super PAC and other political group it paid (Schedule C), its grants to other organizations (Schedule I) and related tax-exempt organizations (Schedule R). "Grants from" lists only grants from other nonprofits followed here.</li>
+      <li><b>Where the trail stops:</b> a return's donor list (Schedule B) is blacked out of public copies, so a nonprofit that doesn't name its donors is where the money's start is lost. Shown, never graded.</li>
     </ul>
     <h2 id="method-lean">Group colors</h2>
     <ul class="list">
