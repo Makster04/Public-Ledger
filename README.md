@@ -386,7 +386,7 @@ Money in a race isn't proof it changed a vote, and every page says so. The tab l
 
 ## Home cards
 
-Each card has a **Report Card** with the six scores (the Ideology lean and the five letter grades, each linking to its tab on the profile), plus a **Money & Influence Analysis** section: campaign funds raised, outside money for and against, and outside money by month. The monthly chart shows spending for and against side by side, with each month's for-to-against ratio as a line on a scale at the right (all for, 3 : 1, 1 : 1, 1 : 3, all against). The badge gives the ratio for all seven months, always written for-to-against, such as "2.1 : 1" (green: more for) or "1 : 2.1" (orange: more against), or "No opposing spending" when nothing was spent against them. The rule is `moneyRatio` in `public/grades.js`.
+Each card has **Dark Money Affiliated Scores** (Big Money Independence, Plays by the Rules and People First, each linking to its tab on the profile), then three tiles from their own disclosures: **Net worth** (the range on their newest annual financial disclosure, and the year before's), **Stocks owned** (the individual stocks on that report, at the middle of each value range, or "Blind trust") and **Stock trades** (this cycle's, with how many were filed more than 45 days after the trade), from `/api/cards` (`cardWealth` in `src/finance.mjs`, the same records the profile reads); then **Other Scores** (the Ideology lean, Keeps Their Word and Shows Up). Campaign money and outside spending are on each profile.
 
 ## Latest updates strip
 

@@ -679,7 +679,8 @@ function miniOutside(s,bare,live){
     <div class="hc-mx" aria-hidden="true">${months.map(m=>`<span>${MON[+m.slice(5,7)-1]}</span>`).join('')}</div>
     <div class="hc-ms"><span><i class="sw" style="background:var(--s3)"></i>${fw}</span><span><i class="sw" style="background:var(--s2)"></i>${aw}</span><span><i class="hc-ln"></i>ratio, right scale</span><span>tallest bar ${fmt$(max)}</span></div></div>`;
 }
-// A titled section of a home card: the grades ("Report Card"), then the money ("Money & Influence Analysis").
+// A titled section of a home card: the money scores with what their disclosures show ("Dark Money Affiliated Scores"),
+// then the others ("Other Scores").
 const hcHead=(icon,cls,title,sub)=>`<div class="hc-sh"><h4><i class="${cls}" aria-hidden="true">${icon}</i>${title}</h4><p>${sub}</p></div>`;
 function homeCard(s){
   const c=s.camp, o=s.out, it=ideoText(s), race=raceOf(s), riv=rivalsOf(s), res=personResult(s);
@@ -690,13 +691,11 @@ function homeCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(sub)}</div></div></div>
     <div class="hc-ideo">${esc(ideo)}</div>
-    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
-    ${reportCard(s)}
-    ${hcHead('$','mi','Money &amp; Influence Analysis','Who pays for the campaign, and who spends for and against it')}
-    <div class="hc-money">
-      <div class="hc-mt">${c.missing?'<b class="hc-na">Not yet reported</b><span>Campaign funds raised</span><small>no FEC report filed yet</small>':`<b>${fmt$(c.receipts)}</b><span>Campaign funds raised</span><small>${shortPer(c.end)}</small>`}</div>
-      <div class="hc-mt"><b class="hc-two"><i class="sw" style="background:var(--s3)"></i>${fmt$(o.for.total)} <em>${o.multi?'supporting':'for'}</em><br><i class="sw" style="background:var(--s2)"></i>${fmt$(o.against.total)} <em>${o.multi?'opposing':'against'}</em></b><span>Outside money</span><small>${shortPer(o.end)}</small></div>
-    </div>
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${sixTiles(s,false,MONEY_SCORES)}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
+    ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
+    ${sixTiles(s,false,OTHER_SCORES)}
     <div class="hc-ft"><span>${race?esc(race.label):''}</span><span class="hc-vs">${riv.length?'vs. '+esc(riv.map(x=>x.short).join(', ')):'No profiled opponent'}</span></div>
   </article>`;
 }
@@ -709,10 +708,11 @@ function featuredCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(s.term)}</div></div></div>
     <div class="hc-ideo">${esc(REC_SHORT[s.recordType]||'')} · ${esc(s.seat)}</div>
-    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
-    ${reportCard(s)}
-    ${hcHead('$','mi','Money &amp; Influence Analysis',`Money raised by ${esc(s.cmteName||'the campaign committee')}, and outside spending for and against ${esc(s.short)}, from the daily FEC refresh`)}
-    <div class="hc-live" data-live="${s.id}">${featuredMoney(s,null)}</div>
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${sixTiles(s,false,MONEY_SCORES)}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
+    ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
+    ${sixTiles(s,false,OTHER_SCORES)}
     <div class="hc-ft"><span>Not on the 2026 ballot</span><span class="hc-vs">Open profile →</span></div>
   </article>`;
 }
@@ -869,11 +869,11 @@ function renderHome(){
     $('#profile-count').textContent=`${list.length} profiles · reviewed and basic coverage labeled`;
     cards.innerHTML=list.map(s=>s.basic?basicCard(s):homeCard(s)).join('')||`<p class="muted">No one matches that search. This release covers ${ALL.length} people in ${DATA.races.length} races; the methodology page explains how they were chosen.</p>`;
   };
-  draw('');fillBasic(cards);
-  $('#q').addEventListener('input',e=>{draw(e.target.value);fillBasic(cards);});
-  const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);});
-  bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);fillBasic(cards);});
-  fillFeatured();
+  draw('');fillBasic(cards);fillWealth(cards);
+  $('#q').addEventListener('input',e=>{draw(e.target.value);fillBasic(cards);fillWealth(cards);});
+  const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);fillWealth(cards);});
+  bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);fillBasic(cards);fillWealth(cards);});
+  fillFeatured();fillWealth(document);
   // The Latest updates cards (public/ticker.js): races, grades, super PACs, promises, legal cases, PAC checks, FEC reports and net worth.
   import('./ticker.js').then(t=>t.mountCards($('#home-updates'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:t.pagePeople(window),portraits:window.PORTRAITS})).catch(()=>{});
   for(const host of [cards,$('.hero-side')].filter(Boolean)){
@@ -2092,19 +2092,46 @@ function fillSixTile(tile,x){
   tile.querySelector('.hc-gv').innerHTML=g?`<b class="gr-${g}">${g}</b><span>${pct1(x.pct)}</span>`:'<span class="hc-ng">Not graded yet</span>';
   tile.querySelector('.hc-gd').textContent=g?'':(x?.why||'');
 }
-function sixTiles(s,links){
+// only: which tiles, in order (the home cards split them into the money scores and the others); all six when not given.
+const MONEY_SCORES=['unbought','aboveboard','peoplefirst'],OTHER_SCORES=['ideology','word','showsup'];
+function sixTiles(s,links,only){
   const x=sixOf(s),h=k=>links?`#${s.id}-${k}`:'',i=x.ideology;
   const tip=k=>SIX_BY[k].q;
   const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean"${leanStyle(i.lean)}>${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
   const tile=(k,res,detail,empty='Not graded yet')=>{const t=links?'a':'div',g=res?.pct==null?null:letter(Math.min(100,res.pct));
     return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
-  return `<div class="hc-rc hc-six">${ideo}
-    ${tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`)}
-    ${tile('showsup',u,u.parts[0].note||'')}
-    ${s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile')}
-    ${tile('aboveboard',x.aboveboard,'')}
-    ${tile('peoplefirst',pf,pf.v?.n?`${pf.v.nPeople} of ${pf.v.n} actions for working people`:'')}</div>`;
+  const T={ideology:()=>ideo,word:()=>tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`),showsup:()=>tile('showsup',u,u.parts[0].note||''),
+    unbought:()=>s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile'),
+    aboveboard:()=>tile('aboveboard',x.aboveboard,''),peoplefirst:()=>tile('peoplefirst',pf,pf.v?.n?`${pf.v.nPeople} of ${pf.v.n} actions for working people`:'')};
+  const keys=only||['ideology','word','showsup','unbought','aboveboard','peoplefirst'];
+  return `<div class="hc-rc hc-six${only?' hc-three':''}">${keys.map(k=>T[k]()).join('\n    ')}</div>`;
+}
+// The home cards' Net worth, Stocks owned and Stock trades (src/finance.mjs cardWealth, through /api/cards): from their
+// newest annual financial disclosure and their trade reports, as the profile reads them. w: undefined while loading,
+// null when the refresh is unreachable, else this person's ({} when nothing has been read).
+const m1=n=>{if(n==null)return '—';const a=Math.abs(n),sg=n<0?'−':'';return sg+(a>=1e9?`$${(a/1e9).toFixed(1)}B`:a>=1e6?`$${(a/1e6).toFixed(1)}M`:a>=1e3?`$${Math.round(a/1e3)}K`:`$${Math.round(a)}`);};
+const worth=(lo,hi)=>hi==null?`Over ${m1(lo)}`:lo===hi?m1(lo):`${m1(lo)} – ${m1(hi)}`;
+function wealthTiles(s,w){
+  const wait=w===undefined?'Loading…':w===null?'Refresh unavailable':'Not read yet',president=!!s.office,member=!!s.bioguide;
+  const nw=w?.netWorth,st=w?.stocks,tr=w?.trades,na=(t,label,sub)=>`<div class="hc-mt"><b class="hc-na">${t}</b><span>${label}</span><small>${sub}</small></div>`;
+  const netWorth=president?na('On profile','Net worth','a president files OGE reports, on the profile')
+    :nw?`<div class="hc-mt"><b class="hc-range">${worth(nw.low,nw.high)}</b><span>Net worth</span><small>${nw.year?`${esc(nw.year)} annual report`:'latest annual report'}${nw.was?` · was ${worth(nw.was.low,nw.was.high)} in ${esc(nw.was.year)}`:''}</small></div>`
+    :na(wait,'Net worth',member?'from their annual financial disclosure':'from their candidate financial report, once read');
+  const stocks=president?na('On profile','Stocks owned','from OGE reports, on the profile')
+    :st?.blindTrust?`<div class="hc-mt"><b>Blind trust</b><span>Stocks owned</span><small>a qualified blind trust holds them${st.year?` · ${esc(st.year)} report`:''}</small></div>`
+    :st&&st.value!=null?`<div class="hc-mt"><b>${m1(st.value)}</b><span>Stocks owned</span><small>${st.count?`in ${st.count} compan${st.count===1?'y':'ies'}`:'no individual stocks'}${st.year?` · ${esc(st.year)} annual report`:''}</small></div>`
+    :st?na('Can\'t total','Stocks owned',/open-ended/.test(st.why||'')?'a stock on their report has an open-ended value':'their report can\'t be read for this'):na(wait,'Stocks owned',member?'from their annual financial disclosure':'from their candidate financial report, once read');
+  const trades=president?na('On profile','Stock trades','from OGE reports, on the profile')
+    :!member&&!tr?na('Not covered','Stock trades','trade reports cover members of Congress')
+    :tr?`<div class="hc-mt"><b>${tr.n.toLocaleString('en-US')}</b><span>Stock trades</span><small>this cycle${tr.late?` · ${tr.late} filed late`:tr.n?' · none filed late':''}</small></div>`
+    :na(wait,'Stock trades','from their trade reports');
+  return `<div class="hc-money hc-wealth">${netWorth}${stocks}${trades}</div>`;
+}
+async function fillWealth(root=document){
+  const els=[...root.querySelectorAll('.hc-live[data-wealth]')];if(!els.length)return;
+  const all=await loadCards();
+  for(const el of els)if(el.isConnected){const s=byId[el.dataset.wealth]||BASIC[el.dataset.wealth];if(s)el.innerHTML=wealthTiles(s,all?(all[s.id]?.wealth||{}):null);}
 }
 
 function renderProfile(s,requested='overview',focus){
@@ -2427,10 +2454,11 @@ function basicCard(s){
       <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span><span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
     <div class="hc-ideo">${esc(s.ideo?ideoText(s).short:'No voting score yet')}</div>
-    ${hcHead('✓','rc','Report Card','The Ideology lean and five A–F grades from the documented record')}
-    ${basicReport(s)}
-    ${hcHead('$','mi','Money &amp; Influence Analysis','Campaign money from the daily FEC refresh, and outside spending for and against them')}
-    <div class="hc-live" data-basic="${s.id}">${basicMoney(s,undefined)}</div>
+    ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence, and what their own disclosures show they own and trade')}
+    ${sixTiles(s,false,MONEY_SCORES)}
+    <div class="hc-live" data-wealth="${s.id}">${wealthTiles(s,undefined)}</div>
+    ${hcHead('✓','rc','Other Scores','The Ideology lean and two A–F grades from the voting record and promises')}
+    ${sixTiles(s,false,OTHER_SCORES)}
     <div class="hc-ft"><span>${esc(ballotLine(s))}</span><span class="hc-vs">Basic profile →</span></div>
   </article>`;
 }

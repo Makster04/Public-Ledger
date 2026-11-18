@@ -3,6 +3,9 @@ import config from '../data/config.json' with {type:'json'};
 import {getStatus,statement} from './refresh.mjs';
 import {mergeTrades} from './merge.mjs';
 import {SINCE} from './feeds.mjs';
+import {stockHoldings} from '../public/six-scores.js';
+import {holdingsLead} from '../public/holdings.js';
+import {LATE_DAYS} from '../public/grades.js';
 
 const TRADE_KINDS=['trades-house','trades-senate','trades-bargo','trades-eulerpool','trades-fmp'];
 const ANNUAL_KINDS=['net-worth-house','net-worth-senate'];
@@ -71,4 +74,34 @@ export async function getFinanceOverview(env){
   for(const person of config.people)people[person.id]||={netWorth:null,trades:[],tradesUnread:[],sizes:null,tradesMore:false,checkedAt:null,
     coverage:{netWorth:false,trades:false,campaign:false},tradesTruncated:false,campaign:null};
   return {people,sourceCoverage,checkedAt};
+}
+
+// The home cards' Net worth, Stocks owned and Stock trades tiles, for everyone at once (/api/cards): from each person's
+// newest annual financial disclosure read by the refresh, and their trades from the official reports and the services
+// (merged as on the profile). Trades count this cycle's (from January 1 of the cycle's first year); one is late when
+// reported more than LATE_DAYS after the trade.
+export function cardWealth(own,{cycle=config.cycle,officialFrom=null}={}){
+  const annual=ANNUAL_KINDS.map(k=>own[k]).filter(Boolean).sort(newerAnnual).at(-1)||null;
+  const was=annual?(annual.history||[]).find(h=>h&&h.year!=null&&annual.year!=null&&Number(h.year)<Number(annual.year)&&h.low!=null):null;
+  const netWorth=annual&&annual.low!=null?{year:annual.year??null,low:annual.low,high:annual.high??null,url:annual.url||null,was:was?{year:was.year,low:was.low,high:was.high??null}:null}:null;
+  const lead=annual?holdingsLead(annual):null,held=annual?stockHoldings(annual,lead?.status==='blind-trust'?{status:'blind-trust'}:null):null;
+  const stocks=annual?{value:held.value,count:held.count??lead?.stocks??null,year:annual.year??null,blindTrust:!!held.blindTrust,why:held.why||null}:null;
+  const sources=TRADE_KINDS.map(k=>own[k]).filter(Boolean);
+  let trades=null;
+  if(sources.length){
+    const since=`${Number(cycle)-1}-01-01`,merged=mergeTrades(sources.map(x=>x.rows||[]),[],{},{officialFrom});
+    const rows=merged.filter(t=>String(t.traded||'')>=since),late=rows.filter(t=>{const f=t.filed||t.disclosed;return !f||(Date.parse(f)-Date.parse(t.traded))/864e5>LATE_DAYS;});
+    trades={n:rows.length,late:late.length,since,official:['trades-house','trades-senate'].some(k=>own[k])};
+  }
+  return {netWorth,stocks,trades};
+}
+export async function getCardWealth(env){
+  const rows=(await statement(env.DB,`SELECT j.subject,j.kind,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN (${[...ANNUAL_KINDS,...TRADE_KINDS].map(()=>'?').join(',')})`,...ANNUAL_KINDS,...TRADE_KINDS).all()).results;
+  const known=new Set(config.people.map(p=>p.id)),by=new Map();
+  for(const r of rows){const d=JSON.parse(r.payload);
+    if(r.kind==='trades-eulerpool'){for(const [id,list] of Object.entries(d.byPerson||{}))if(known.has(id)&&Array.isArray(list)){const o=by.get(id)||{};o[r.kind]={rows:list};by.set(id,o);}continue;}
+    if(!known.has(r.subject))continue;const o=by.get(r.subject)||{};o[r.kind]=d;by.set(r.subject,o);}
+  const people={};
+  for(const [id,own] of by){const official=['trades-house','trades-senate'].some(k=>own[k]);people[id]=cardWealth(own,{officialFrom:official?`${SINCE(config)}-01-01`:null});}
+  return {people};
 }
