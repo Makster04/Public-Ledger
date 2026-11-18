@@ -2858,7 +2858,7 @@ function researchedFunders(s){
 function paneConnections(s,pane){
   pane.innerHTML=`${s.office?'':`<details class="data-disclosure" open><summary>Funder positions & voting evidence</summary>${donorTreemapBlock(s)}${fundersBlock(s)}${moneyVotesBlock(s)}</details>`}<section id="live-records"></section>`;
   if(!s.office){mountFundTL(pane);mountTreemap(s);}hoverTips(pane);bindTips(pane);
-  window.RecordLive.profile(s,pane.querySelector('#live-records'),['donorOrgs','outside-groups']);
+  window.RecordLive.profile(s,pane.querySelector('#live-records'),['donorOrgs','outside-groups','electioneering','communication-costs','lobbyist-gifts']);
 }
 function paneMoneyHistory(s,pane){
   pane.innerHTML=`<h2>History & source records</h2><p class="intro">Reporting periods and historical records, separate from the current campaign summary.</p>${s.office?'':`<section class="chart"><h3>Outside spending over time</h3>${miniOutside(s)}</section><details class="data-disclosure"><summary>Same-period combined view & reporting notes</summary>${combinedBlock(s)}${shareBlock(s)}</details>`}<section id="live-records"></section>`;
@@ -3533,11 +3533,22 @@ function billsBlock(bills){
 // Fills each bill's lobbying line from the daily refresh (/api/bills), or says the update service isn't running.
 async function mountBillLobbying(host){
   const els=[...host.querySelectorAll('[data-lob]')];if(!els.length)return;
-  let lob=null;try{const r=await fetch('/api/bills',{cache:'no-cache'});if(r.ok)lob=(await r.json()).lobbying||{};}catch{}
+  let lob=null,co=null;try{const r=await fetch('/api/bills',{cache:'no-cache'});if(r.ok){const d=await r.json();lob=d.lobbying||{};co=d.coalitions||null;}}catch{}
   const yrs=id=>{const c=Number(id.split('-')[0]),y=1787+2*c;return `${y}–${String(y+1).slice(2)}`;};
   for(const el of els){const x=lob?.[el.dataset.lob],id=el.dataset.lob;
     el.innerHTML=!lob?'<span class="muted">Lobbying counts need the update service running.</span>':!x?'<span class="muted">Lobbying: not checked yet.</span>'
-      :`<b>Lobbying (${yrs(id)}):</b> ${x.atLeast?'At least ':''}${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}`;}
+      :`<b>Lobbying (${yrs(id)}):</b> ${x.atLeast?'At least ':''}${x.total.toLocaleString()} report${x.total===1?'':'s'} name it.${x.read?` Of the ${x.read} read, ${x.unions} ${x.unions===1?'was':'were'} filed for unions and ${x.others} for companies and other groups.`:''}${x.unionClients?.length?` Unions: ${esc(x.unionClients.slice(0,4).join(', '))}.`:''}${coalitionsHTML(x,co)}`;}
+}
+// The coalitions among a bill's lobbying clients, with the member organizations each lists on its registration (LDA.gov
+// LD-1: each pays more than $5,000 a quarter toward the lobbying). Organizations, so they're named.
+function coalitionsHTML(x,co){
+  if(!x?.clients)return '';
+  if(!co)return '<div class="small muted" style="margin-top:6px">Lobbying coalitions\' members: not read yet.</div>';
+  const found=x.clients.map(c=>({...c,...co.clients?.[c.id]})).filter(c=>c.members?.length);
+  if(!found.length)return `<div class="small muted" style="margin-top:6px">None of the ${x.clients.length} clients in the reports read lists member organizations on its registration.</div>`;
+  return `<details class="lg-rest" style="margin-top:6px"><summary>${found.length} lobbying coalition${found.length===1?'':'s'} and ${new Set(found.flatMap(c=>c.members)).size} member organizations behind them</summary>
+    <p class="small muted">From each client's lobbying registration (LDA.gov): the organizations it lists as affiliated, each paying more than $5,000 a quarter toward the lobbying. A report says a client lobbied on the bill, not which side it took.</p>
+    <ul class="list small">${found.map(c=>`<li><b>${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.client||c.name)} ↗</a>`:esc(c.client||c.name)}</b>: ${esc(c.members.slice(0,12).join(', '))}${c.members.length>12?` and ${c.members.length-12} more`:''}</li>`).join('')}</ul></details>`;
 }
 // The Corporation Compromised 🏢 on the People First tab: its parts, what each is built from, and what's missing.
 const CCI_PART={pacShare:'Business PACs\' share of funds raised',employees:'Donor companies\' employees',businessVotes:'Votes with business funders',lobbiedBills:'Profit side on lobbied bills'};

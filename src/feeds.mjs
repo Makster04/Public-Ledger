@@ -1073,7 +1073,7 @@ export const FEEDS={
       const d=await requestSource(u.href,env,{allow404:true});
       const results=list(d?.results).filter(f=>f.filing_uuid);
       const rows=results.map(f=>{const acts=list(f.lobbying_activities),client=f.client?.name||null;
-        return {id:f.filing_uuid,year:Number(f.filing_year)||cur.year,client,registrant:f.registrant?.name||null,union:isUnion(client),
+        return {id:f.filing_uuid,year:Number(f.filing_year)||cur.year,client,clientId:f.client?.id??null,registrant:f.registrant?.name||null,union:isUnion(client),
           named:acts.some(x=>billsInText(x.description,Number(congress)).includes(a.bill)),url:https(f.filing_document_url)};});
       // The search must have matched on the bill: if most reports returned don't name it, the filter wasn't applied.
       need(rows.length<10||rows.filter(r=>r.named).length>=rows.length/2,`LDA.gov did not filter reports by ${BILL_ABBR[type]} ${number}; nothing counted`);
@@ -1091,8 +1091,68 @@ export const FEEDS={
       for(const y of Object.values(byYear))if(y.found>1)both=true;
       const clients=list=>[...new Set(list.map(r=>r.client).filter(Boolean))];
       return {bill:a.bill,total:Object.values(byYear).reduce((t,y)=>t+y.max,0),atLeast:both,read:named.length,unions:named.filter(r=>r.union).length,others:named.filter(r=>!r.union).length,
-        unionClients:clients(named.filter(r=>r.union)).slice(0,8),otherClients:clients(named.filter(r=>!r.union)).slice(0,8)};
+        unionClients:clients(named.filter(r=>r.union)).slice(0,8),otherClients:clients(named.filter(r=>!r.union)).slice(0,8),
+        clients:[...new Map(named.filter(r=>r.clientId!=null).map(r=>[String(r.clientId),{id:String(r.clientId),name:r.client}])).values()].slice(0,100)};
     }},
+  // Electioneering communications (FEC Form 9): TV, radio and cable ads that name a federal candidate within 30 days of a
+  // primary or 60 of a general election, paid for by a group that isn't a political committee. They needn't say "vote
+  // for", so they aren't independent expenditures, and the group reports only the donors who gave for these ads, so most
+  // of its money's sources aren't public. Each candidate's, from historyFrom on, newest first, up to 10 pages of 100.
+  electioneering:{host:'api.open.fec.gov',label:'Ads that named them near an election (FEC electioneering communications)',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`electioneering:${p.id}`,subject:p.id,args:{cand:p.fecCand}})),
+    async page(job,a,env,config){
+      const n=Number(job.cursor||1);
+      const d=await requestSource(`https://api.open.fec.gov/v1/electioneering/?candidate_id=${a.cand}&per_page=100&page=${n}&sort=-disbursement_date`,env);
+      need(Array.isArray(d.results),'FEC electioneering communications missing');
+      const rows=d.results.filter(r=>r.candidate_id===a.cand&&Number(r.report_year)>=SINCE(config)).map(ecRow).filter(Boolean);
+      return {rows,next:d.results.length&&n<(Number(d.pagination?.pages)||1)&&n<10?String(n+1):null};
+    },
+    summarize:rows=>spendSummary(rows)},
+  // Communication costs (FEC Form 7): what a corporation or union spent telling its own members, executives or
+  // shareholders to vote for or against a candidate, reported once it passes $2,000 an election. Each candidate's, from
+  // historyFrom on, newest first, up to 10 pages of 100.
+  'communication-costs':{host:'api.open.fec.gov',label:'Corporations and unions telling their members how to vote (FEC communication costs)',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCand).map(p=>({id:`communication-costs:${p.id}`,subject:p.id,args:{cand:p.fecCand}})),
+    async page(job,a,env,config){
+      const n=Number(job.cursor||1);
+      const d=await requestSource(`https://api.open.fec.gov/v1/communication_costs/?candidate_id=${a.cand}&per_page=100&page=${n}&sort=-transaction_date`,env);
+      need(Array.isArray(d.results),'FEC communication costs missing');
+      const rows=d.results.filter(r=>r.candidate_id===a.cand&&Number(r.cycle||r.report_year)>=SINCE(config)).map(ccRow).filter(Boolean);
+      return {rows,next:d.results.length&&n<(Number(d.pagination?.pages)||1)&&n<10?String(n+1):null};
+    },
+    summarize:rows=>spendSummary(rows)},
+  // Lobbyists' and lobbying organizations' political gifts that name the person as the one honored (LDA.gov, LD-203:
+  // campaign gifts, events held in their honor, and the like), in the current cycle's two years. A year that has ended is
+  // read once. Up to 40 pages of 25 reports a year. Lobbyists are people, so their gifts are only added up; an
+  // organization's own gifts name the organization.
+  'lobbyist-gifts':{host:'lda.gov',label:'Lobbyists\' political gifts to them (LDA.gov LD-203)',tab:'finance',every:WEEK,
+    jobs:c=>profiled(c).filter(p=>p.fecCmte).map(p=>({id:`lobbyist-gifts:${p.id}`,subject:p.id,args:{name:honoreeQuery(p),cycle:c.cycle}})),
+    page:(job,a,env,config)=>{
+      const p=config.people.find(x=>x.id===job.subject);
+      return byPeriod(job,env,{periods:[a.cycle,a.cycle-1],read:async(year,cursor)=>{
+        const n=Number(cursor||1);
+        const d=await requestSource(`https://lda.gov/api/v1/contributions/?contribution_honoree=${encodeURIComponent(a.name)}&filing_year=${year}&page_size=25&page=${n}`,env,{allow404:true});
+        need(d===null||Array.isArray(d.results),'LDA.gov contribution reports missing');
+        const rows=lobbyistGiftRows(list(d?.results),p);
+        if(d?.next&&n>=LD203_PAGES)rows.push({id:`capped:${year}`,capped:true,year});
+        return {rows,next:d?.next&&n<LD203_PAGES?String(n+1):null};
+      }});
+    },
+    summarize:rows=>lobbyistGiftSummary(periodRows(rows))},
+  // The member organizations a lobbying coalition lists on its registration (LDA.gov LD-1, "affiliated organizations":
+  // each one that pays more than $5,000 a quarter toward the lobbying and takes part in it), for every client in the
+  // key bills' lobbying reports read. A registration doesn't change once filed, so each client is read once.
+  'lobby-coalitions':{host:'lda.gov',label:'Lobbying coalitions\' members (LDA.gov registrations)',tab:'pvp',scope:'global',every:WEEK,
+    jobs:()=>[{id:'lobby-coalitions',subject:'Congress',args:{}}],
+    async page(job,a,env){
+      const ids=job.cursor?[]:await billLobbyingClients(env);
+      return byPeriod(job,env,{periods:ids,closed:()=>true,read:async id=>{
+        const d=await requestSource(`https://lda.gov/api/v1/filings/?client_id=${encodeURIComponent(id)}&filing_type=RR&page_size=5`,env,{allow404:true});
+        need(d===null||Array.isArray(d.results),'LDA.gov registrations missing');
+        return {rows:[coalitionRow(id,list(d?.results))],next:null};
+      }});
+    },
+    summarize:rows=>{const clients={};for(const r of periodRows(rows))if(r.members?.length)clients[r.clientId]={client:r.client,members:r.members,url:r.url};return {clients,read:periodRows(rows).length};}},
   fara:{host:'efile.fara.gov',label:'Foreign agent registrations',tab:'finance',scope:'global',every:WEEK,
     jobs:()=>[{id:'fara',subject:'FARA',args:{}}],
     async page(job,a,env){
@@ -1482,6 +1542,96 @@ async function carried(env,jobId){
 // it made before (refresh.mjs, ensureFeeds). Eulerpool was turned off too, and came back on Nov. 17, 2026 as one list.
 export const RETIRED_FEEDS=['votesmart','trades-fmp'];
 // Sources that were one check for each member and are now one check for everyone: the old checks ("<kind>:<id>") go.
+// ---------- Electioneering communications, communication costs, lobbyists' gifts, lobbying coalitions ----------
+// A filer's name written as a person's ("SMITH, JOHN"), with no word an organization's name would have.
+const ORG_WORDS=/\b(inc|llc|corp|co|fund|action|pac|committee|association|council|coalition|alliance|union|federation|league|network|america|americans|project|institute|foundation|center|group|partners|trust|society|club|chamber|for|of|the)\b/i;
+export const personName=n=>/^[A-Za-z'.\- ]+,\s*[A-Za-z]/.test(String(n||''))&&!ORG_WORDS.test(String(n||''));
+// One FEC electioneering communication (Form 9). The candidate's share when the ad named several; the group is an
+// organization, never a person (a person files Form 9 too: their name isn't kept, only that a person paid).
+export function ecRow(r){
+  if(!r?.sub_id||!r.committee_id)return null;
+  const total=Number(r.disbursement_amount)||0;
+  return {id:String(r.sub_id),kind:'ec',committee:r.committee_id,group:personName(r.committee_name)?'A person (name not shown)':cut(r.committee_name,120),
+    date:day(r.communication_date)||day(r.public_distribution_date)||day(r.disbursement_date),paid:day(r.disbursement_date),
+    amount:Math.round((Number(r.calculated_candidate_share??total)||0)*100)/100,total,shared:Number(r.number_of_candidates)||1,
+    purpose:cut(r.purpose_description,120),election:r.election_type||null,year:Number(r.report_year)||null,amended:r.amendment_indicator==='A',url:https(r.pdf_url)};
+}
+// The communication types on Form 7.
+export const COMM_TYPES={DM:'Direct mail',EM:'Email',PH:'Phone calls',PC:'Phone calls',TV:'Television',RA:'Radio',BB:'Billboards',NP:'Newspaper',PI:'Print',
+  WS:'Website',SM:'Social media',TX:'Text messages',OT:'Other',OC:'Other'};
+// One FEC communication cost (Form 7). A deleted entry (action code D) is left out.
+export function ccRow(r){
+  if(!r?.sub_id||!r.committee_id||r.action_code==='D')return null;
+  return {id:String(r.sub_id),kind:'cc',committee:r.committee_id,group:cut(r.committee_name,120),side:r.support_oppose_indicator==='O'?'against':'for',
+    amount:Math.round((Number(r.transaction_amount)||0)*100)/100,date:day(r.transaction_date),how:COMM_TYPES[String(r.communication_type||'').toUpperCase()]||r.communication_type||null,
+    election:r.primary_general_indicator||null,year:Number(r.cycle||r.report_year)||null,url:https(r.pdf_url)};
+}
+// The same item filed again (an amendment repeats every field but its ID) counts once.
+const spendKey=r=>[r.committee,r.paid||r.date,r.total??r.amount,r.side||'',r.purpose||r.how||''].join('|');
+// Each group's spending that named the person (electioneering) or told members how to vote on them (communication
+// costs): by group, largest first, with the newest items.
+export function spendSummary(rows){
+  const seen=new Map();for(const r of rows){const k=spendKey(r),was=seen.get(k);if(!was||(r.amended&&!was.amended))seen.set(k,r);}
+  const items=[...seen.values()].sort((a,b)=>String(b.date).localeCompare(String(a.date))),by=new Map();
+  for(const r of items){const g=by.get(r.committee)||by.set(r.committee,{committee:r.committee,group:r.group,for:0,against:0,amount:0,n:0,first:r.date,last:r.date,
+      fewDonors:/^C3/.test(r.committee),url:`https://www.fec.gov/data/committee/${r.committee}/`}).get(r.committee);
+    g.amount+=r.amount;if(r.side)g[r.side]+=r.amount;g.n++;if(r.date&&r.date<g.first)g.first=r.date;if(r.date&&r.date>g.last)g.last=r.date;}
+  const round=v=>Math.round(v*100)/100,groups=[...by.values()].map(g=>({...g,amount:round(g.amount),for:round(g.for),against:round(g.against)})).sort((a,b)=>b.amount-a.amount);
+  return {total:round(items.reduce((t,r)=>t+r.amount,0)),for:round(items.reduce((t,r)=>t+(r.side==='for'?r.amount:0),0)),against:round(items.reduce((t,r)=>t+(r.side==='against'?r.amount:0),0)),
+    count:items.length,groups,rows:items.slice(0,40)};
+}
+// LD-203: how the honoree search is written ("Susan Collins": their first name and surname).
+export const honoreeQuery=p=>`${firstName(p)} ${surname(p)}`;
+export const LD203_PAGES=40;
+// The gift honors the person: the honoree field, without titles ("Sen.", "Rep.", "The Honorable"), written "First Last"
+// or "Last, First".
+export function honoreeIs(text,p){
+  let t=String(text||'').replace(/\b(the\s+)?(honorable|hon\.?|sen\.?|senator|rep\.?|representative|congressman|congresswoman|congressmember|dr\.?|mr\.?|mrs\.?|ms\.?)\s+/gi,'').trim();
+  if(!t)return false;
+  let first,last;
+  if(t.includes(',')){[last,first]=t.split(',').map(x=>x.trim());}
+  else{const w=t.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/);last=w.at(-1);first=w.slice(0,-1).join(' ');}
+  return !!first&&sameName(first,last,p);
+}
+export const LD203_TYPES={feca:'Campaign gifts',he:'Events in their honor',me:'Meetings and events',ple:'Presidential library',pic:'Inauguration'};
+// The items in a page of LD-203 reports that honor the person. A lobbyist's report keeps only the lobbyist's ID (to
+// count lobbyists), never the name; an organization's report keeps the organization's name.
+export function lobbyistGiftRows(results,p){
+  const out=[];
+  for(const f of results){if(!f?.filing_uuid)continue;
+    const filer=f.filer_type==='lobbyist'?'lobbyist':'organization';
+    list(f.contribution_items).forEach((it,i)=>{if(!honoreeIs(it.honoree_name,p))return;
+      out.push({id:`${f.filing_uuid}:${i}`,filing:f.filing_uuid,filer,lobbyist:filer==='lobbyist'?f.lobbyist?.id??null:null,registrantId:f.registrant?.id??null,
+        organization:filer==='organization'?cut(f.registrant?.name,120):null,period:f.filing_period||null,year:Number(f.filing_year)||null,posted:f.dt_posted||null,
+        type:it.contribution_type||null,amount:Number(it.amount)||0,date:day(it.date),payee:cut(it.payee_name,120),url:filer==='organization'?https(f.filing_document_url):null});});}
+  return out;
+}
+// A report filed again (an amendment) replaces the one before it: for each filer and half-year, only the latest report's
+// items count. Lobbyists are added up; organizations are named with their totals.
+export function lobbyistGiftSummary(rows){
+  const filerKey=r=>[r.registrantId,r.lobbyist??'org',r.year,String(r.period||'').replace(/_?amendment$/,'')].join('|'),latest=new Map();
+  const gifts=[...new Map(rows.filter(r=>!r.capped).map(r=>[r.id,r])).values()];
+  for(const r of gifts){const k=filerKey(r),was=latest.get(k);if(!was||String(r.posted)>String(was))latest.set(k,String(r.posted));}
+  const kept=gifts.filter(r=>String(r.posted)===latest.get(filerKey(r))),round=v=>Math.round(v*100)/100;
+  const lob=kept.filter(r=>r.filer==='lobbyist'),org=kept.filter(r=>r.filer==='organization'),orgs=new Map(),types={};
+  for(const r of org){const o=orgs.get(r.organization)||orgs.set(r.organization,{name:r.organization,amount:0,n:0,url:r.url}).get(r.organization);o.amount+=r.amount;o.n++;}
+  for(const r of kept)types[r.type||'other']=round((types[r.type||'other']||0)+r.amount);
+  return {total:round(kept.reduce((t,r)=>t+r.amount,0)),lobbyists:{amount:round(lob.reduce((t,r)=>t+r.amount,0)),people:new Set(lob.map(r=>r.lobbyist)).size,gifts:lob.length},
+    organizations:[...orgs.values()].map(o=>({...o,amount:round(o.amount)})).sort((a,b)=>b.amount-a.amount),types,years:[...new Set(kept.map(r=>r.year))].sort(),
+    capped:rows.filter(r=>r.capped).map(r=>r.year)};
+}
+// Every client named in the key bills' lobbying reports read (bill-lobbying snapshots), by its LDA.gov client ID.
+async function billLobbyingClients(env){
+  if(!env.DB)return [];
+  const r=await env.DB.prepare("SELECT s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind='bill-lobbying'").all();
+  const ids=new Set();for(const x of r.results)for(const c of JSON.parse(x.payload).clients||[])if(c.id!=null)ids.add(String(c.id));
+  return [...ids].sort();
+}
+// A client's registration: the organizations it lists as affiliated (a coalition's members).
+export function coalitionRow(id,filings){
+  const f=filings.find(x=>x?.client&&String(x.client.id)===String(id)&&list(x.affiliated_organizations).length)||filings.find(x=>x?.client&&String(x.client.id)===String(id));
+  return {id:String(id),clientId:String(id),client:cut(f?.client?.name,160)||null,members:[...new Set(list(f?.affiliated_organizations).map(o=>cut(o?.name,120)).filter(Boolean))],url:https(f?.filing_document_url)};
+}
 export const RESHAPED_FEEDS=['trades-eulerpool'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'

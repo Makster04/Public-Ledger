@@ -61,6 +61,11 @@
    "date": "2026-11-17",
    "headline": "Grades show as percentages to one decimal; their parts show as numbers from 0 to 100",
    "note": "Presentation only: the five grades show as percentages to one decimal (84.3%). The parts of Plays by the Rules (Outside Income & Conflicts, Gifts & Travel, Trade Conflicts, Stock Disclosure Dodger and Legal Trouble) and Corporation Compromised in People First show as numbers from 0 to 100 with one decimal and no % sign, since they aren't shares of anything. No score changed."
+  },
+  {
+   "date": "2026-11-18",
+   "headline": "Profiles show ads that named them, corporations' and unions' messages to members, and lobbyists' gifts; bill pages show lobbying coalitions' members",
+   "note": "Presentation only: on each profile's Big Money Independence tab, under \"Shown, not counted\": ads that named them near an election (FEC electioneering communications), what corporations and unions spent telling their members how to vote on them (FEC communication costs), and lobbyists' political gifts that name them (LDA.gov LD-203; lobbyists added up, never named). On each bill's page: the lobbying coalitions among the reports' clients and the member organizations on their registrations. No score changed."
   }
  ]
 }
