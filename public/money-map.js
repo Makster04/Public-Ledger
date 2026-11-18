@@ -84,6 +84,64 @@ export function moneyMap(s,{bundled=null,groups={},categories={},pacNames=[],pac
 // own spending below, dashed. Circle area and line width are to scale; amounts too small to see are drawn at the
 // smallest size.
 export const LAYOUT={W:1080,RMAX:70,RMIN:12,CX:540,CR:112,LX:250,RX:830,GAP:14,SLOT:58,LINE:46};
+const ariaOf=m=>`${m.cmte} raised ${short$(m.receipts)}: ${m.ins.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}. ${m.outs.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}.${m.side.length?` ${m.side.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}.`:''}`;
+// The same map for phones (from the Nov. 18, 2026 audit: on a phone the wide map left The Campaign and Money Out off
+// the side of the screen). Money in, the campaign and money out are stacked top to bottom; labels sit left of each
+// circle and the lines run down the right edge into the campaign and out of it. Circle area and line width are to
+// scale as on the wide map. Outside groups' spending is listed at the bottom, dashed, with no line: the campaign never
+// received it. The page shows this one below 820px wide (public/remake.css).
+export const TALL={W:380,RMAX:32,RMIN:8,PX:278,CX:150,CR:70,LANE:374,GAP:10,SLOT:56,LINE:30};
+export function mapSVGTall(m){
+  const {W,RMAX,RMIN,PX,CX,CR,LANE,GAP,SLOT,LINE}=TALL;
+  const ins=m.ins.map(n=>({...n})),outs=m.outs.map(n=>({...n})),side=m.side.map(n=>({...n}));
+  const maxA=Math.max(1,...ins.map(n=>n.a),...outs.map(n=>n.a),...side.map(n=>n.a));
+  const rad=a=>Math.max(RMIN,RMAX*Math.sqrt(a/maxA)),width=a=>Math.max(2,LINE*a/m.receipts);
+  const f=v=>Math.round(v*10)/10;
+  const t=(x,y,str,style,anchor='start')=>`<text x="${f(x)}" y="${f(y)}" text-anchor="${anchor}" style="${style}">${esc(str)}</text>`;
+  const T={label:'font:700 14px var(--font-display);fill:var(--ink)',amount:'font:500 13px var(--font-mono);fill:var(--ink)',sub:'font:400 12px var(--font-body);fill:var(--muted)',head:'font:500 11px var(--font-mono);letter-spacing:.08em;fill:var(--muted)'};
+  const colors=[...new Set([...ins,...outs].map(n=>n.color))];
+  const body=[`<defs>${colors.map(c=>`<marker id="mm-tarrow${c}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(${c})"/></marker>`).join('')}</defs>`];
+  let y=0;
+  const head=str=>{y+=20;body.push(t(16,y,str,T.head));y+=14;};
+  // A column of circles, labels to their left: each gets a row at least SLOT tall.
+  const column=(list,showShare,dashed=false)=>{for(const n of list){n.r=rad(n.a);const h=Math.max(2*n.r,SLOT);n.cx=PX;n.cy=y+h/2;y+=h+GAP;
+    const lx=n.cx-n.r-10,sub=n.sub||(dashed&&m.sideStart?`${day(m.sideStart)} – ${day(m.sideEnd)}`:'');
+    body.push(dashed?`<circle cx="${f(n.cx)}" cy="${f(n.cy)}" r="${f(n.r)}" style="fill:none;stroke:var(${n.color});stroke-width:2;stroke-dasharray:5 4"/>`
+      :`<circle cx="${f(n.cx)}" cy="${f(n.cy)}" r="${f(n.r)}" style="fill:var(${n.color});fill-opacity:.9"/>`,
+      t(lx,n.cy-(sub?11:4),n.label,T.label,'end'),t(lx,n.cy+(sub?7:14),showShare?`${short$(n.a)} · ${share(n.a,m.receipts)}`:short$(n.a),T.amount,'end'),sub?t(lx,n.cy+24,sub,T.sub,'end'):'');}
+    y-=GAP;};
+  // Lanes down the right edge, one a line, side by side: the first in the list takes the outermost.
+  const lanes=list=>{let x=LANE;return list.map(n=>{const w=width(n.a),c=x-w/2;x-=w+3;return {w,x:c};});};
+  // Points on the campaign circle's right edge, spread by line width around a height (dy from its middle).
+  const edge=(ws,at,cy)=>{const total=ws.reduce((a,b)=>a+b,0)+4*Math.max(0,ws.length-1);let yy=cy+at-total/2;
+    return ws.map(w=>{const py=yy+w/2;yy+=w+4;const dy=Math.max(-CR+4,Math.min(CR-4,py-cy));return {x:CX+Math.sqrt(CR*CR-dy*dy),y:cy+dy};});};
+  const line=(d,c,w)=>`<path d="${d}" style="fill:none;stroke:var(${c});stroke-opacity:.55;stroke-width:${f(w)}" marker-end="url(#mm-tarrow${c})"/>`;
+  head('MONEY IN');column(ins,true);
+  head('THE CAMPAIGN');y+=4;const cy=y+CR;y+=2*CR;
+  // Into the campaign: out of each circle to the right, down its lane, then left into the circle's upper right. The
+  // lowest source's lane is innermost, so it turns in highest and no two lines cross.
+  const inLanes=lanes(ins),inAt=edge([...inLanes].reverse().map(l=>l.w),-CR*0.42,cy).reverse();
+  ins.forEach((n,i)=>{const {x,w}=inLanes[i],p=inAt[i],r=Math.min(12,Math.max(2,x-(n.cx+n.r)-1));
+    body.push(line(`M${f(n.cx+n.r)},${f(n.cy)} H${f(x-r)} Q${f(x)},${f(n.cy)} ${f(x)},${f(n.cy+r)} V${f(p.y-12)} Q${f(x)},${f(p.y)} ${f(x-12)},${f(p.y)} H${f(p.x+9)}`,n.color,w));});
+  body.push(`<circle cx="${CX}" cy="${f(cy)}" r="${CR}" style="fill:var(--surface-2);stroke:var(--line-2);stroke-width:1.5"/>`);
+  const words=[];let cur='';for(const w of String(m.cmte).split(/\s+/)){if((cur+' '+w).trim().length>15&&cur){words.push(cur);cur=w;}else cur=(cur+' '+w).trim();}words.push(cur);
+  const shown=words.slice(0,3),nameTop=cy-18-(shown.length-1)*9;
+  shown.forEach((l,i)=>body.push(t(CX,nameTop+i*18,l,'font:700 15px var(--font-display);fill:var(--ink)','middle')));
+  body.push(t(CX,cy+26,`raised ${short$(m.receipts)}`,'font:500 14px var(--font-mono);fill:var(--ink)','middle'));
+  if(m.cmteId)body.push(t(CX,cy+45,`FEC ${m.cmteId}`,'font:400 11px var(--font-mono);fill:var(--muted)','middle'));
+  y+=8;head('MONEY OUT');column(outs,false);
+  // Out of the campaign: from its lower right, out to a lane, down, then left into each circle. The last one's lane is
+  // outermost and it leaves highest, so these don't cross either.
+  const outLanes=lanes([...outs].reverse()).reverse(),outAt=edge([...outLanes].reverse().map(l=>l.w),CR*0.45,cy).reverse();
+  outs.forEach((n,i)=>{const {x,w}=outLanes[i],p=outAt[i];
+    body.push(line(`M${f(p.x)},${f(p.y)} H${f(x-12)} Q${f(x)},${f(p.y)} ${f(x)},${f(p.y+12)} V${f(n.cy-12)} Q${f(x)},${f(n.cy)} ${f(x-12)},${f(n.cy)} H${f(n.cx+n.r+9)}`,n.color,w));});
+  if(side.length){
+    y+=22;body.push(`<line x1="16" x2="${W-16}" y1="${f(y)}" y2="${f(y)}" style="stroke:var(--line);stroke-width:1;stroke-dasharray:3 5"/>`);
+    head('OUTSIDE SPENDING');body.push(t(16,y+2,'not money the campaign received',T.sub));y+=16;column(side,false,true);
+  }
+  const H=Math.round(y+14);
+  return `<svg class="mm-tall" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ariaOf(m))}">${body.join('')}</svg>`;
+}
 export function mapSVG(m){
   const {W,RMAX,RMIN,CX,CR,LX,RX,GAP,SLOT,LINE}=LAYOUT;
   const ins=m.ins.map(n=>({...n})),outs=m.outs.map(n=>({...n})),side=m.side.map(n=>({...n}));
@@ -96,7 +154,7 @@ export function mapSVG(m){
   const t=(x,y,str,style,anchor='start')=>`<text x="${f(x)}" y="${f(y)}" text-anchor="${anchor}" style="${style}">${esc(str)}</text>`;
   const T={label:'font:700 15px var(--font-display);fill:var(--ink)',amount:'font:500 14px var(--font-mono);fill:var(--ink)',sub:'font:400 12.5px var(--font-body);fill:var(--muted)',head:'font:500 11px var(--font-mono);letter-spacing:.08em;fill:var(--muted)'};
   const colors=[...new Set([...ins,...outs,...side].map(n=>n.color))];
-  const out=[`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`${m.cmte} raised ${short$(m.receipts)}: ${ins.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}. ${outs.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}.${side.length?` ${side.map(n=>`${n.label} ${short$(n.a)}`).join(', ')}.`:''}`)}">`,
+  const out=[`<svg class="mm-wide" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ariaOf(m))}">`,
     `<defs>${colors.map(c=>`<marker id="mm-arrow${c}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(${c})"/></marker>`).join('')}</defs>`];
   for(const [x,h] of [[LX,'MONEY IN'],[CX,'THE CAMPAIGN'],[RX,'MONEY OUT']])out.push(t(x,18,h,T.head,'middle'));
   // Where each line meets the campaign: spread along its edge by line width.
@@ -174,7 +232,7 @@ export function moneyMapBlock(s,opts={}){
   return `<section class="mm" id="f-map">
     <h2>Money map</h2>
     <p class="small muted" style="margin:4px 0 10px">${esc(m.cmte)}${m.cmteId?` (${esc(m.cmteId)})`:''} · FEC committee totals, ${day(m.start)} – ${day(m.end)}${m.src?` · <a href="${esc(m.src)}" target="_blank" rel="noopener">source ↗</a>`:''}</p>
-    <div class="mm-diagram">${mapSVG(m)}</div>
+    <div class="mm-diagram">${mapSVG(m)}${mapSVGTall(m)}</div>
     <div class="mm-key small muted"><span><i class="mm-dot"></i>Circle area = dollars (amounts too small to see are drawn at the smallest size)</span><span><i class="mm-line"></i>Line width = dollars, in the direction the money moved</span>${m.side.length?'<span><i class="mm-dash"></i>Outside groups\' own spending, never given to the campaign</span>':''}</div>
     <div class="mm-books">
       <div class="mm-col"><div class="mm-panel"><h3>The numbers</h3><div class="tablewrap"><table>${money}</table></div></div>${opts.under||''}</div>

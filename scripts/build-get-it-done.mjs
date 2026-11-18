@@ -4,6 +4,11 @@
 // the bills and joint resolutions each one sponsored (Congress.gov, with CONGRESS_API_KEY from .dev.vars).
 //   npm run getitdone:build                 from 2018 through this year
 //   npm run getitdone:build -- --from 2016  from another year
+//   npm run getitdone:build -- --fresh      read everyone again, not from the saved progress
+// It reads one request at a time, PACE apart, waits and tries again when Congress.gov is busy, and saves each member's
+// counts as it goes (.local/get-it-done-cache.json, not committed; a week old is read again), so a run that stops
+// picks up where it left off. It writes nothing until every member is read: the Nov. 8, 2026 run wrote a file from the
+// ~70 members it managed to read, which left most profiles without Get It Done and the party medians on 11 senators.
 // Writes public/get-it-done.json:
 //   medians  {118: {S: {D: rate, R: rate}, H: {...}}}   the typical advanced rate of each party in each chamber
 //   counted  {118: {S: {D: members, R: members}, ...}}  how many members each median is taken from
@@ -26,6 +31,26 @@ export const advanced=text=>ADVANCED.test(String(text||''));
 export const MEDIAN_MIN=5;
 // Voteview's party codes: 100 Democrat, 200 Republican; independents (328) are compared with the Democrats.
 export const partyOf=code=>({'100':'D','200':'R','328':'D'})[String(code)]||null;
+
+// One Congress.gov request: PACE ms apart, measured from each request's start, so a full run (about 2,000 requests)
+// stays well under the key's 5,000 an hour with room for the refresh running beside it. Too many requests (429): wait
+// for its Retry-After or a minute; a server error or no answer: 15 seconds; then try again, up to 12 tries.
+export const PACE=1000,TRIES=12;
+const pause=ms=>new Promise(r=>setTimeout(r,Math.max(0,ms)));
+export async function paced(url,env,{pace=PACE,request=requestSource,wait=pause,log=console.log}={}){
+  for(let tries=1;;tries++){
+    const start=Date.now();
+    try{const d=await request(url,env);await wait(pace-(Date.now()-start));return d;}
+    catch(e){const busy=e?.statusCode===429,again=busy||e?.statusCode>=500||/HTTP 5\d\d|timeout|timed out|aborted|fetch failed/i.test(e?.message||'');
+      if(!again||tries>=TRIES)throw e;
+      if(tries===1||tries%4===0)log(`  Congress.gov ${busy?'says too many requests':'didn\'t answer'}; waiting, then trying again`);
+      await wait(Math.max(Number(e?.retryAfter)||0,busy?60_000:15_000));}
+  }
+}
+// A saved member is read again after a week (the current Congress's bills keep moving), or when the window starts
+// earlier than when they were read.
+export const CACHE_DAYS=7;
+export const cacheFresh=(hit,first,today)=>!!hit&&hit.from<=first&&!!hit.at&&(Date.parse(today)-Date.parse(hit.at))/864e5<=CACHE_DAYS;
 
 // One member's sponsored bills in the window's Congresses: {congress: {sponsored, advanced}}.
 export function countBills(items,congresses){
@@ -52,7 +77,7 @@ export function medians(members){
 async function sponsoredBills(bioguide,first,env){
   const items=[];let url=`https://api.congress.gov/v3/member/${bioguide}/sponsored-legislation?format=json&limit=250`;
   for(let page=0;url&&page<20;page++){
-    const d=await requestSource(url,env);
+    const d=await paced(url,env);
     const got=Array.isArray(d.sponsoredLegislation)?d.sponsoredLegislation:[];items.push(...got);
     if(!got.length||got.every(b=>Number(b.congress)<first))break;
     const next=d.pagination?.next;if(!next)break;const u=new URL(next);u.searchParams.set('format','json');url=u.href;
@@ -75,17 +100,29 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       const r=roster.get(m.bioguide_id)||roster.set(m.bioguide_id,[]).get(m.bioguide_id);r.push({congress,chamber,party:partyOf(m.party_code)});}
     console.log(`  ${chamber}${congress}: ${files.members.length} members`);
   }
-  console.log(`Reading the sponsored bills of ${roster.size} members of Congress ${congresses.join(' and ')} from Congress.gov; this takes several minutes…`);
+  const CACHE=new URL('.local/get-it-done-cache.json',root),today=new Date().toISOString().slice(0,10);
+  let cache={};
+  if(!process.argv.includes('--fresh'))try{cache=JSON.parse(await fs.readFile(CACHE,'utf8'));}catch{}
+  const save=async()=>{await fs.mkdir(new URL('.local/',root),{recursive:true});await fs.writeFile(CACHE,JSON.stringify(cache));};
+  const ids=[...roster.keys()],toRead=ids.filter(b=>!cacheFresh(cache[b],congresses[0],today));
+  console.log(`Reading the sponsored bills of ${toRead.length} of ${ids.length} members of Congress ${congresses.join(', ')} from Congress.gov`
+    +`${toRead.length<ids.length?` (${ids.length-toRead.length} saved from an earlier run)`:''}; about ${Math.max(1,Math.round(toRead.length*1.4/60))} minutes…`);
   const members=[],people={},problems=[];let done=0;
-  const ids=[...roster.keys()];
-  for(let k=0;k<ids.length;k+=4)await Promise.all(ids.slice(k,k+4).map(async bioguide=>{
-    try{
-      const counts=countBills(await sponsoredBills(bioguide,congresses[0],env),congresses);
-      for(const s of roster.get(bioguide)){const c=counts[s.congress]||{sponsored:0,advanced:0};members.push({...s,...c});
-        const id=site.get(bioguide);if(id)((people[id]||={congresses:{}}).congresses[s.congress]={chamber:s.chamber,party:s.party,sponsored:c.sponsored,advanced:c.advanced});}
-    }catch(e){problems.push(`${bioguide}: ${e.message}`);}
-    if(++done%50===0)console.log(`  ${done} of ${ids.length}`);
-  }));
+  for(const bioguide of toRead){
+    try{cache[bioguide]={at:today,from:congresses[0],counts:countBills(await sponsoredBills(bioguide,congresses[0],env),congresses)};}
+    catch(e){problems.push(`${bioguide}: ${e?.statusCode?`HTTP ${e.statusCode}`:'not read'}`);}
+    if(++done%25===0){await save();console.log(`  ${done} of ${toRead.length} read (saved)`);}
+  }
+  await save();
+  if(problems.length){
+    console.log(`\n${problems.length} of ${ids.length} members couldn't be read (${problems.slice(0,3).join('; ')}), so nothing was written.`
+      +` The ${ids.length-problems.length} read are saved: run npm run getitdone:build again and it picks up the rest.`);
+    process.exit(1);
+  }
+  for(const bioguide of ids){const counts=cache[bioguide].counts||{};
+    for(const s of roster.get(bioguide)){const c=counts[s.congress]||{sponsored:0,advanced:0};members.push({...s,sponsored:c.sponsored,advanced:c.advanced});
+      const id=site.get(bioguide);if(id)((people[id]||={congresses:{}}).congresses[s.congress]={chamber:s.chamber,party:s.party,sponsored:c.sponsored,advanced:c.advanced});}
+  }
   const {medians:rates,counted}=medians(members);
   const file={about:'Bills and joint resolutions each member sponsored, and how many advanced past introduction, against the typical member of their party in their chamber, for the Get It Done part of Showing Up (public/integrity.js). From Congress.gov and Voteview.',
     source:'https://api.congress.gov',built:new Date().toISOString().slice(0,10),from,to:year,congresses,medians:rates,counted,
@@ -94,6 +131,5 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   await fs.writeFile(OUT,JSON.stringify(file)+'\n');
   console.log(`\nWrote public/get-it-done.json: ${Object.keys(file.people).length} people on the site; typical rates:`);
   for(const c of congresses)for(const ch of ['S','H'])console.log(`  ${c} ${ch==='S'?'Senate':'House'}: ${Object.entries(rates[c]?.[ch]||{}).map(([p,r])=>`${p} ${(r*100).toFixed(1)}% (of ${counted[c][ch][p]} members)`).join(', ')}`);
-  if(problems.length)console.log(`\n${problems.length} members couldn't be read (${problems.slice(0,2).join('; ')}).`);
   console.log('\nRun npm test, then commit and push public/get-it-done.json.');
 }

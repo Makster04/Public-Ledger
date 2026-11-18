@@ -8,8 +8,8 @@
 // What they did afterward is their record on the same questions (public/question-evidence/<bioguide>.json: each bill
 // they sponsored or cosponsored and each deciding vote, with the side it takes), dated after the promise. Earlier
 // actions are background. A bill failing doesn't count against them; only their own vote or (co)sponsorship does.
-//   kept         every action after the promise went its way
-//   broken       their own votes went against it: every action after the promise did, or a reversal (after acting its
+//   kept         every action after the promise went its way, on at least 2 bills
+//   broken       their own votes went against it: every action after the promise did (on at least 2 bills), or a reversal (after acting its
 //                way, at least 2 later bills went against it and none its way since)
 //   alleged      allegedly broken: no bill introduced, (co)sponsored or voted on in the GRACE_MONTHS they held office
 //                after the promise (or after taking office, for a promise made as a candidate), while others in their
@@ -19,6 +19,7 @@
 //                else in their chamber acted on it either in the records read: a reviewer decides
 //   no-action    in office, nothing on it yet, and the grace months haven't run out (the date they do is shown)
 //   not-tested   not in Congress (a candidate, a member-elect, or out of office) while the promise could be acted on
+//                or only one bill on it since the promise, every action on it the same way (rule one-bill)
 // A reviewer can settle any promise in data/promise-reviews.json, keyed "<first question>@<date>":
 //   kept, partly (partially kept, ½: they acted on part of it, like a bill for $12 when they promised $15, or a
 //   compromised version; "step" and "compromise" from before are read as partly), broken, alleged, unclear, no-action, not-tested, not-a-promise (left out), promise (a statement the wording test missed);
@@ -106,6 +107,11 @@ export function judge(promise,acts,office,{today,grace=GRACE_MONTHS,review=null,
   if(counted.length){
     // "All 12 actions after the promise, on 9 bills, went its way": a bill's roll calls and (co)sponsorship count once.
     const all=w=>`${after.length===1?'The one action':`All ${after.length} actions`} after the promise${counted.length<after.length?`, on ${plural(counted.length,'bill')},`:''} went ${w}.`;
+    // One bill isn't enough to call it either way (from the Nov. 18, 2026 audit: 13 promises were "kept" on a single
+    // vote): with every action on one bill going the same way, it waits for a second bill. A reviewer can still settle it.
+    const bills=new Set(counted.map(a=>a[1].split('#')[0]));
+    if(bills.size<2&&(!no.length||!yes.length)){const one=counted[0];
+      return {...base,status:'not-tested',rule:'one-bill',why:`Only one bill since the promise, and ${after.length===1?'their action on it':`all ${after.length} of their actions on it`} went ${no.length?'against it':'its way'} (${fmt(one[3])}). One bill isn't enough to call it ${no.length?'broken':'kept'}: it's decided once a second bill on it comes up.`};}
     if(!no.length)return {...base,status:'kept',rule:'all-for',why:all('its way')};
     if(!yes.length)return {...base,status:'broken',rule:'all-against',why:all('against it')};
     const lastYes=yes.at(-1)[3],later=no.filter(a=>a[3]>lastYes);
@@ -184,7 +190,7 @@ function main(){
     evidence:bg=>has(`public/question-evidence/${bg}.json`)?read(`public/question-evidence/${bg}.json`):null,
     campaign:id=>has(`data/campaign-text/${id}.json`)?read(`data/campaign-text/${id}.json`):null,
     elect:p=>!dirs.has(p.bioguide)&&winners.has(p.id)});
-  fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, partly (partially kept), broken, alleged (allegedly broken: no action while others acted), unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
+  fs.writeFileSync(path.join(ROOT,'public','promises.json'),JSON.stringify({about:'Each profiled politician\'s promises to voters and whether they kept them: {person id: [{key, qs: [[question, side]], quote, sentence (the full sentence a short quote was cut from), date, url, where, kind (campaign or office), status (kept, partly (partially kept), broken, alleged (allegedly broken: no action while others acted), unclear, no-action, not-tested), rule (all-for, all-against, reversal, mixed, one-bill, no-action, grace, not-in-office, left-office, reviewed), why, deadline, forN, againstN, acts: [[question, bill, kind, date, side]] after the promise, before: the latest 3 earlier ones, beforeN}]}. Written by scripts/build-promises.mjs from data/question-statements.json, public/question-evidence/ and data/promise-reviews.json.',
     built:today,graceMonths:GRACE_MONTHS,people:out}));
   const all=Object.values(out).flat(),n={};for(const p of all)n[p.status]=(n[p.status]||0)+1;
   console.log(`${all.length} promises for ${Object.keys(out).length} people: ${STATUSES.filter(s=>n[s]).map(s=>`${n[s]} ${s}`).join(', ')}.`);

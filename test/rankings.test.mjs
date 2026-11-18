@@ -58,3 +58,19 @@ test('markup: tabs, the score\'s note, "only N" when fewer qualify, the no-wrong
   assert.ok(!rankingsHTML([row('i',{ideology:-50})],{key:'ideology'}).includes('not a finding of wrongdoing'),'Ideology is a position, not a grade');
   assert.match(rankingsHTML([row('i',{ideology:-50})],{key:'ideology'}),/<b>−50<\/b><span class="rk-chip rk-lean rk-lib">Liberal<\/span>/);
 });
+
+test('Shows Up ranks attendance-only grades apart from grades with both parts (Nov. 18, 2026 audit)',()=>{
+  const rows=[row('a',{showsup:99},{basis:{showsup:'both'}}),row('b',{showsup:100},{basis:{showsup:'attendance'}}),row('c',{showsup:60},{basis:{showsup:'both'}}),
+    row('d',{showsup:50},{basis:{showsup:'attendance'}}),row('e',{showsup:95})];
+  const both=rankSides(rows,RANK_BY.showsup);
+  assert.deepEqual([both.basis,both.byBasis,both.pool,both.left.all.map(r=>r.id),both.right.all.map(r=>r.id)],['both',{both:3,attendance:2},3,['a','e'],['c']],'a row with no basis counts with the first');
+  const att=rankSides(rows,RANK_BY.showsup,{basis:'attendance'});
+  assert.deepEqual([att.basis,att.left.all.map(r=>r.id),att.right.all.map(r=>r.id)],['attendance',['b'],['d']]);
+  assert.equal(rankSides(rows,RANK_BY.showsup,{basis:'nonsense'}).basis,'both');
+  // Other scores don't split.
+  assert.equal(rankSides(rows.map(r=>({...r,scores:{word:r.scores.showsup}})),RANK_BY.word).pool,5);
+  const html=rankingsHTML(rows,{key:'showsup',basis:'attendance'});
+  assert.match(html,/<select class="rk-sel" data-filter="basis"><option value="both">Attendance \+ bills moved \(3\)<\/option><option value="attendance" selected>Attendance only \(2\)<\/option><\/select>/);
+  assert.match(html,/ranked on their own/);
+  assert.doesNotMatch(rankingsHTML(rows,{key:'word'}),/data-filter="basis"/);
+});

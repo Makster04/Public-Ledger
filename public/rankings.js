@@ -16,7 +16,10 @@ export const RANK_SCORES=[
   {key:'word',name:'Keeps Their Word',left:'Top 10 Honest',right:'Top 10 Dishonest',unit:'promises',
     note:'The share of their decided promises they kept. It needs 3 decided promises.'},
   {key:'showsup',name:'Shows Up',left:'Top 10 Stalwarts',right:'Top 10 Slackers',unit:'votes',
-    note:'Roll-call attendance since 2018, and how far the bills they sponsor get. Delegates aren\'t graded.'},
+    note:'Roll-call attendance since 2018, and how far the bills they sponsor get. Delegates aren\'t graded.',
+    // Graded two ways (public/six-scores.js showsUp basis), so ranked apart (from the Nov. 18, 2026 audit).
+    bases:[['both','Attendance + bills moved'],['attendance','Attendance only']],
+    basisNote:'Without Get It Done (fewer than 10 sponsored bills, or not read yet) the grade is attendance alone, so those are ranked on their own.'},
   {key:'unbought',name:'Big Money Independence',left:'Top 10 Purists',right:'Top 10 Sellouts',unit:null,disclosure:true,
     note:'How independent their campaign money and holdings are from special interests. It needs their financial disclosure read.'},
   {key:'aboveboard',name:'Plays by the Rules',left:'Top 10 Ethical',right:'Top 10 Unethical',unit:'trades',disclosure:true,
@@ -28,16 +31,21 @@ export const RANK_BY=Object.fromEntries(RANK_SCORES.map(s=>[s.key,s]));
 export const WHO=[['','Everyone'],['S','Senate'],['H','House'],['C','Candidates']];
 const inWho=(r,who)=>!who||(who==='C'?!!r.cand:!r.cand&&!r.office&&r.chamber===who);
 
-// rows: [{id, name, party, state, chamber, cand, office, scores: {key: number|null}, n: {key: evidence count}}].
-// Returns how many have the score in the group picked, and each box: every qualifying row in order, the top `size`, and
-// how many share the first row's value.
-export function rankSides(rows,score,{state='',who=''}={},{size=RANK.size,cut=RANK.cut}={}){
+// rows: [{id, name, party, state, chamber, cand, office, scores: {key: number|null}, n: {key: evidence count},
+// basis: {key: how it was graded}}]. A score graded two ways (score.bases) ranks one way at a time (basis, the first by
+// default); byBasis counts each. Returns how many have the score in the group picked, and each box: every qualifying
+// row in order, the top `size`, and how many share the first row's value.
+export const basisOf=(r,score)=>r.basis?.[score.key]||score.bases?.[0][0];
+export function rankSides(rows,score,{state='',who='',basis=''}={},{size=RANK.size,cut=RANK.cut}={}){
   const k=score.key,v=r=>r.scores[k],ev=r=>r.n?.[k]||0,name=(a,b)=>String(a.name).localeCompare(String(b.name));
-  const pool=(rows||[]).filter(r=>Number.isFinite(r.scores?.[k])&&(!state||r.state===state)&&inWho(r,who));
+  const all=(rows||[]).filter(r=>Number.isFinite(r.scores?.[k])&&(!state||r.state===state)&&inWho(r,who));
+  const pick=score.bases?(score.bases.some(([b])=>b===basis)?basis:score.bases[0][0]):null;
+  const byBasis=score.bases?Object.fromEntries(score.bases.map(([b])=>[b,all.filter(r=>basisOf(r,score)===b).length])):null;
+  const pool=pick?all.filter(r=>basisOf(r,score)===pick):all;
   const hi=(a,b)=>v(b)-v(a)||ev(b)-ev(a)||name(a,b),lo=(a,b)=>v(a)-v(b)||ev(b)-ev(a)||name(a,b);
   const [left,right]=score.position?[pool.filter(r=>v(r)<0).sort(lo),pool.filter(r=>v(r)>0).sort(hi)]:[pool.filter(r=>v(r)>=cut).sort(hi),pool.filter(r=>v(r)<cut).sort(lo)];
   const side=list=>({all:list,top:list.slice(0,size),tied:list.length?list.filter(r=>v(r)===v(list[0])).length:0});
-  return {pool:pool.length,left:side(left),right:side(right)};
+  return {pool:pool.length,left:side(left),right:side(right),basis:pick,byBasis};
 }
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -73,7 +81,9 @@ export function rankingsHTML(rows,state={},{portraits={},states=[],loading=false
     <div class="rk-tabs" role="tablist" aria-label="Score">${RANK_SCORES.map(s=>`<button type="button" class="rk-tab" role="tab" data-key="${s.key}" aria-selected="${s.key===score.key}">${esc(s.name)}</button>`).join('')}</div>
     <div class="rk-bar"><p>${esc(score.note)} ${wait?'Reading the disclosures…':`${sides.pool.toLocaleString('en-US')} ${sides.pool===1?'person':'people'} graded${score.position?' or placed':''}.`} Ties go to whoever has more evidence.</p>
       <label><span class="sr-only">State</span><select class="rk-sel" data-filter="state"><option value="">All states</option>${states.map(([c,n])=>`<option value="${esc(c)}"${c===state.state?' selected':''}>${esc(n)}</option>`).join('')}</select></label>
-      <label><span class="sr-only">Who</span><select class="rk-sel" data-filter="who">${WHO.map(([c,n])=>`<option value="${c}"${c===(state.who||'')?' selected':''}>${n}</option>`).join('')}</select></label></div>
+      <label><span class="sr-only">Who</span><select class="rk-sel" data-filter="who">${WHO.map(([c,n])=>`<option value="${c}"${c===(state.who||'')?' selected':''}>${n}</option>`).join('')}</select></label>
+      ${score.bases?`<label><span class="sr-only">Graded on</span><select class="rk-sel" data-filter="basis">${score.bases.map(([b,n])=>`<option value="${b}"${b===sides.basis?' selected':''}>${esc(n)} (${sides.byBasis[b].toLocaleString('en-US')})</option>`).join('')}</select></label>`:''}</div>
+    ${score.basisNote?`<p class="rk-note rk-basis">${esc(score.basisNote)}</p>`:''}
     <div class="rk-grid">${boxHTML('left',score,sides.left,{open:!!state.open?.left,portraits,loading:wait})}${boxHTML('right',score,sides.right,{open:!!state.open?.right,portraits,loading:wait})}</div>
     ${sides.left.all.length>RANK.size||sides.right.all.length>RANK.size?`<div class="rk-foot"><button type="button" class="rk-viewall" data-open="both">${state.open?.left&&state.open?.right?'Show the top 10s':'View all rankings'} <span aria-hidden="true">→</span></button></div>`:''}`;
 }

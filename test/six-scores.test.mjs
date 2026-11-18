@@ -41,6 +41,8 @@ test('Keeps Their Word and Shows Up: the examples in the proposal',()=>{
   // Without Get It Done, Attendance alone.
   assert.equal(showsUp({id:'x'},{attendance,getItDone:null,asOfYear:2026}).pct,90);
   assert.equal(showsUp({id:'y'},{attendance,getItDone,asOfYear:2026}).pct,null);
+  // Which way it was graded, so the two kinds are never ranked together.
+  assert.deepEqual([u.basis,showsUp({id:'x'},{attendance,getItDone:null,asOfYear:2026}).basis,showsUp({id:'y'},{attendance,getItDone,asOfYear:2026}).basis],['both','attendance',null]);
 });
 
 // The proposal's Big Money Independence example: a House member who raised $2 million.

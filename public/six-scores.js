@@ -85,11 +85,12 @@ export function keepsTheirWord(person,{promises=null,today=null}={}){
 }
 
 // ---------- 3. Shows Up ----------
-//   0.75 × Attendance + 0.25 × Get It Done; Attendance alone without Get It Done.
+//   0.75 × Attendance + 0.25 × Get It Done; Attendance alone without Get It Done. basis says which: 'both', or
+//   'attendance' (Get It Done not available: under 10 sponsored bills, or not read), so the two are never ranked together.
 export function showsUp(person,{attendance=null,getItDone=null,asOfYear=null}={}){
   const x=showingUpPart(showingUpComponent(person,attendance,{asOfYear}),getItDoneComponent(person,getItDone));
   const g=x.complete?graded(x.value):null,a=x.attendance||{},d=x.getItDone||{};
-  return {...g,pct:g?.pct??null,detail:x,
+  return {...g,pct:g?.pct??null,detail:x,basis:g?(d.complete?'both':'attendance'):null,
     parts:[{key:'attendance',label:'Attendance',value:a.complete?round1(a.value):null,weight:d.complete?0.75:1,note:a.complete?`${a.missed.toLocaleString('en-US')} of ${a.votes.toLocaleString('en-US')} votes missed (${a.rate.toFixed(1)}%)`:a.why},
       {key:'getItDone',label:'Get It Done',value:d.complete?round1(d.value):null,weight:d.complete?0.25:0,note:d.complete?`${(d.rate*100).toFixed(1)}% of their bills advanced; their party's typical rate ${(d.typical*100).toFixed(1)}%`:d.why}],
     why:g?null:a.why||'No roll-call record',

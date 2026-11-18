@@ -213,7 +213,7 @@ export const GET_IT_DONE_MIN_BILLS=10,SHOWING_UP_PARTS={attendance:.75,getItDone
 export function getItDoneComponent(person,data){
   const rec=data?.people?.[person?.id];
   const none=why=>({complete:false,value:null,why,sponsored:0,advanced:0,rate:null,typical:null,congresses:[]});
-  if(!rec)return none('No sponsored bills on record for these Congresses (not in Congress then, or the Get It Done file has not been built)');
+  if(!rec)return none('Their sponsored bills aren\'t read yet, or they weren\'t in Congress in these years');
   const congresses=Object.entries(rec.congresses||{}).filter(([c])=>Number(c)>=WINDOW_CONGRESS).map(([c,x])=>({congress:Number(c),...x,typical:data.medians?.[c]?.[x.chamber]?.[x.party]??null})).sort((a,b)=>b.congress-a.congress);
   const sponsored=congresses.reduce((n,c)=>n+c.sponsored,0),advanced=congresses.reduce((n,c)=>n+c.advanced,0);
   if(sponsored<GET_IT_DONE_MIN_BILLS)return {...none(`Fewer than ${GET_IT_DONE_MIN_BILLS} sponsored bills in these Congresses`),sponsored,advanced,congresses};
