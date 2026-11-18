@@ -25,7 +25,7 @@ import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
-import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel} from './six-scores.js';
+import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST} from './six-scores.js';
 import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
@@ -1108,7 +1108,7 @@ function sectionSwitch(s,items,active){
 // Each tab: the score's tag, name and definition; the person; the score card with its breakdown; the sources and what
 // grading needs; the evidence it counts; what's shown but not counted; how it's calculated; the documented assumptions.
 // The same context the monthly recalculation scores with (public/scoring.js sixContext).
-const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS,questions:QCTX,promises:window.PROMISES});
+const SIX_CTX=sixContext({attendance:window.ATTENDANCE,getItDone:window.GET_IT_DONE,conflicts:window.CONFLICTS,ratings:window.GROUP_RATINGS,questions:QCTX,promises:window.PROMISES,lobbying:window.LOBBIED});
 const GROUP_RATINGS=window.GROUP_RATINGS||{groups:{},people:{}};
 const sixCache=new Map();
 const sixOf=s=>{if(!sixCache.has(s.id))sixCache.set(s.id,SCORER.six(withQ(s),SIX_CTX));return sixCache.get(s.id);};
@@ -2058,6 +2058,16 @@ function paneAboveBoard(s,pane){
 }
 
 // ----- People First -----
+// The scored bills their top business donors lobbied on (public/lobbied.js), with the side they took and who lobbied.
+function lobbiedHTML(s,lob){
+  if(s.office)return '';
+  if(!lob)return '<p class="small muted"><b>Donor-lobbied bills:</b> the lobbying file (public/lobbied-bills.json) isn\'t built yet, so they aren\'t counted.</p>';
+  if(!lob.n)return '<p class="small muted"><b>Donor-lobbied bills:</b> none of their top business donors is on the lobbying reports read for the bills they acted on.</p>';
+  const title=id=>SCORER.bills.find(b=>b.id===id)?.title||billLabel(id);
+  const who=b=>b.by.map(x=>`${esc(x.donor)}${x.via?` <span class="muted">(through ${esc(x.via)})</span>`:x.client.toLowerCase()!==x.donor.toLowerCase()?` <span class="muted">(reported as ${esc(x.client)})</span>`:''}`).join('; ');
+  return `<h4 class="st-sub">Bills their business donors lobbied on</h4><p class="small">${lob.n} bill${lob.n===1?'':'s'}; they took the profit side on ${lob.profit}${lob.n<PEOPLE_FIRST.minLobbied?` (it takes ${PEOPLE_FIRST.minLobbied} to count)`:''}.</p>
+    <div class="tablewrap"><table><thead><tr><th>Bill</th><th>${esc(s.short)}</th><th>Donors that lobbied on it</th></tr></thead><tbody>${lob.bills.map(b=>`<tr><td>${esc(title(b.bill))}<div class="small muted">${esc(billLabel(b.bill))}</div></td><td>${b.took==='profit'?'Profit side':'Worker side'}</td><td class="small">${who(b)}</td></tr>`).join('')}</tbody></table></div>`;
+}
 function panePeopleFirst(s,pane){
   const x=sixOf(s).peoplefirst,v=x.v,c=x.cci;
   const row=p=>[`${esc(p.label)}<div class="small muted">${esc(p.note||'')}</div>`,(p.key==='cci'?ix1:pct1)(p.value),p.weight?`× ${p.weight}`:'—'];
@@ -2065,14 +2075,14 @@ function panePeopleFirst(s,pane){
   pane.innerHTML=stFrame(s,'peoplefirst',{
     res:x,
     breakdown:stTable(['Part','Score','Weight'],[row(x.parts[0]),row(x.parts[1])])+(x.pct!=null?`<p class="small">${x.blended?`0.75 × ${pct1(x.bills)} + 0.25 × (100 − ${ix1(c.index)}) = ${pct1(x.pct)}`:`Legislative Action alone: ${pct1(x.bills)}`}.</p>`:''),
-    sources:['<b>Votes and bills,</b> each scored by who gains and which worker and business groups took sides.','<b>Business funders\' positions</b> and the bills they lobbied on.','<b>Party comparison:</b> how they voted against their own party on the votes where business funders took a side.'],
+    sources:['<b>Votes and bills,</b> each scored by who gains and which worker and business groups took sides.','<b>Business funders\' positions</b> and the bills they lobbied on (LDA.gov lobbying reports, and the members coalitions list on their registrations).','<b>Party comparison:</b> how they voted against their own party on the votes where business funders took a side.'],
     needs:x.needs,
     notes:[['A disputed bill','is shown but left unscored.'],['Corporation Compromised','is how far they side with their business funders, as a number from 0 to 100. It keeps only how they act, since Big Money Independence counts where the money comes from.']],
     evidenceTitle:'Evidence: votes, bills, groups and funding ties',
-    evidence:`<div id="pf-bills">${pvpTable(s,old)}</div><section class="st-sec"><h4 class="st-sub">Corporation Compromised</h4><p class="small">${c.index==null?esc(c.why)+', so it isn\'t counted.':`${ix1(c.index)}: ${c.parts.businessVotes!=null?`voting with business funders ${ix1(c.parts.businessVotes)} (weighted 65%)`:''}${c.parts.lobbiedBills!=null?`, donor-lobbied bills on the profit side ${pct1(c.parts.lobbiedBills)} (weighted 35%)`:''}.`}</p></section>`,
+    evidence:`<div id="pf-bills">${pvpTable(s,old)}</div><section class="st-sec"><h4 class="st-sub">Corporation Compromised</h4><p class="small">${c.index==null?esc(c.why)+', so it isn\'t counted.':`${ix1(c.index)}: ${[c.parts.businessVotes!=null?`voting with business funders ${ix1(c.parts.businessVotes)} (weighted 65%)`:'',c.parts.lobbiedBills!=null?`donor-lobbied bills on the profit side ${pct1(c.parts.lobbiedBills)} (weighted 35%)`:''].filter(Boolean).join(', ')}${c.used.length<2?', the only part counted so far':''}.`}</p>${lobbiedHTML(s,c.lobbied)}</section>`,
     shown:'<div id="pf-funders"></div>',
     calc:`${stF('People First = 0.75 × Legislative Action + 0.25 × (100 − Corporation Compromised)')}${stF('Legislative Action = 100% × worker-side points ÷ (worker-side + profit-side points)')}${stF('Corporation Compromised = 0.65 × how far above their party they vote with business funders (25 points above = 100) + 0.35 × the percentage of donor-lobbied bills where they took the profit side')}<p class="small">Without Corporation Compromised, People First is Legislative Action alone. At least ${MIN_PVP_ACTIONS} scored actions.</p>`,
-    assumptions:['Each scored bill counts once, at its strength (|bill score| ÷ 100), across its versions.','Worker-side and profit-side support decide which side an action favors: a nonpartisan study of who gains, and which worker and business groups took sides.','Corporation Compromised compares their votes with business funders against their own party\'s, leaving their own vote out of the party\'s count; it needs 5 compared votes.','Donor-lobbied bills need at least 3 bills.','Outside spending is left out: candidates can\'t control it.'],
+    assumptions:['Each scored bill counts once, at its strength (|bill score| ÷ 100), across its versions.','Worker-side and profit-side support decide which side an action favors: a nonpartisan study of who gains, and which worker and business groups took sides.','Corporation Compromised compares their votes with business funders against their own party\'s, leaving their own vote out of the party\'s count; it needs 5 compared votes.','Donor-lobbied bills need at least 3 bills. A bill counts when a lobbying report for one of their top 20 business donors names it, or one for a coalition that lists the donor as a member does; a report doesn\'t say which side the client was on.','Outside spending is left out: candidates can\'t control it.'],
     method:'peoplefirst'});
   const f=pane.querySelector('#pf-funders');if(f&&!s.office){f.innerHTML=`${fundersBlock(s)}${moneyVotesBlock(s)}`;mountFundTL(f);}
   hoverTips(pane);bindTips(pane);
@@ -4245,7 +4255,7 @@ function methodSix(){
     ['aboveboard','Plays by the Rules',SIX_BY.aboveboard.q,'Financial disclosures (outside pay, board seats, job deals, gifts, paid trips, trades and filing dates); lobbying reports, federal contracts, foreign-agent filings, committees and votes; court, ethics and enforcement cases.',
       f('Plays by the Rules = 100% − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')+f('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')+f('Stock Disclosure Dodger = 0.70 × share of trade reports late or missing + 0.30 × share of annual reports late')+f('Legal Trouble = Σ status (20 · 15 · 5) × kind (1.5 · 1 · 0.5), halved when closed over 10 years ago')+'<p class="small">Every part is a number from 0 to 100, and higher is worse; Legal Trouble is the points its cases take off. A missing part drops out and the others are rescaled. It needs the legal review and at least one of the four parts. Trade Conflicts leaves out how often they trade, which Big Money Independence counts. It shows overlap, not proof of wrongdoing.</p>'],
     ['peoplefirst','People First',SIX_BY.peoplefirst.q,'Their votes and bills, each scored by who gains and which worker and business groups took sides; their business funders\' positions and lobbying.',
-      f('People First = 0.75 × Legislative Action + 0.25 × (100 − Corporation Compromised)')+f('Legislative Action = 100% × worker-side points ÷ (worker-side + profit-side points)')+f('Corporation Compromised = 0.65 × voting with business funders beyond their party + 0.35 × the percentage of donor-lobbied bills on the profit side')+`<p class="small">Corporation Compromised keeps only how they act; Big Money Independence counts where the money comes from. At least ${MIN_PVP_ACTIONS} scored actions.</p>`],
+      f('People First = 0.75 × Legislative Action + 0.25 × (100 − Corporation Compromised)')+f('Legislative Action = 100% × worker-side points ÷ (worker-side + profit-side points)')+f('Corporation Compromised = 0.65 × voting with business funders beyond their party + 0.35 × the share of donor-lobbied bills on the profit side')+`<p class="small">Corporation Compromised is a number from 0 to 100 that keeps only how they act; Big Money Independence counts where the money comes from. A donor-lobbied bill is a scored bill they acted on that a lobbying report (LDA.gov) names for one of their top 20 business donors, or for a coalition that lists the donor as a member; it takes ${PEOPLE_FIRST.minLobbied}. A report doesn't say which side the client was on. At least ${MIN_PVP_ACTIONS} scored actions.</p>`],
   ];
   return rows.map(([key,name,q,uses,formula])=>`<section class="method-six" id="method-${key}"><h3>${esc(name)}</h3><p><b>Definition:</b> ${esc(q)}</p><p><b>Uses:</b> ${uses}</p>${formula}</section>`).join('');
 }

@@ -2,7 +2,8 @@
 // committee lists, the committee sectors and the roll calls' party totals. The page and the monthly recalculation (scripts/scores-monthly.mjs) both
 // use this, so they always agree. Your match is not here: it depends on each visitor's own choices.
 import {billKey,billKeyFromText,promiseScore,tradeChecks,ethicsScore,pvpScore,pvpActions,billScore,ownTrades,corporationCompromised,workersOverProfit} from './grades.js';
-import {tradesInDonors,businessLoyalty} from './influence.js';
+import {tradesInDonors,businessLoyalty,BUSINESS_FUNDERS} from './influence.js';
+import {topBusinessDonors,lobbiedBills} from './lobbied.js';
 import {pacTypeOf} from './pac-types.js';
 import {ideology,keepsTheirWord,showsUp,aboveBoard,peopleFirst,behaviorCci} from './six-scores.js';
 
@@ -43,11 +44,14 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
   const asOfYear=Number(String(data.asof||'').match(/\b(19|20)\d{2}\b/)?.[0])||null;
   // The PACs on file (itemized, in the reports listed on the Funding tab) give the business share of PAC money; it is
   // applied to the cycle's PAC total (the FEC summary), so PAC money and campaign funds cover the same dates.
+  const isBusinessPac=(i,cat)=>{const t=pacTypeOf(data,i);return t?BUSINESS_KINDS.has(t.kind):!NOT_BUSINESS_SECTOR.has(cat);};
+  // Their top business donors, for Lobbied Bills (public/lobbied.js): business PACs and the business groups compared.
+  const businessDonors=s=>s.office?[]:topBusinessDonors(s.pac?.rows,data.pacNames||[],isBusinessPac,(s.funderPos||[]).filter(f=>BUSINESS_FUNDERS.includes(f.key)));
   const businessMoney=s=>{
     const rows=s.pac?.rows||[],c=s.camp;if(!c||!(c.receipts>0))return null;
     if(!(c.pac>0))return {businessPac:0,receipts:c.receipts,pacTotal:0,rowsTotal:0,rowsBusiness:0,typed:0};
     let total=0,business=0,typed=0;
-    for(const [i,amt,cat] of rows){const t=pacTypeOf(data,i);total+=amt||0;if(t)typed+=amt||0;if(t?BUSINESS_KINDS.has(t.kind):!NOT_BUSINESS_SECTOR.has(cat))business+=amt||0;}
+    for(const [i,amt,cat] of rows){const t=pacTypeOf(data,i);total+=amt||0;if(t)typed+=amt||0;if(isBusinessPac(i,cat))business+=amt||0;}
     if(!(total>0))return null;
     return {businessPac:business/total*c.pac,receipts:c.receipts,pacTotal:c.pac,rowsTotal:total,rowsBusiness:business,typed,start:c.start,end:c.end};
   };
@@ -72,7 +76,7 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     return {rows:s.trades,covered:true,overseen:overseen(s),inDonors:trading(s).inDonors};
   };
   return {
-    bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,cci,actionsOf,
+    bills,marks,committeesOf,fullCommittee,overseen,trading,asOfYear,cci,actionsOf,businessDonors,
     promises:(s,today=null)=>promiseScore(s.statements,s.promiseTrackers,s.promises||[],today),
     ethics:s=>ethicsScore(s.ethics,trading(s),{asOfYear}),
     pvp(s){
@@ -81,15 +85,16 @@ export function makeScorer(data,committees={committees:{},people:{}},sectors={},
     },
     // The six scores (public/six-scores.js) that need no refreshed records. Big Money Independence, and Plays by the Rules's trading indexes,
     // also use the official reports read by the refresh, so the page adds those (ctx.trades, ctx.snapshot …).
-    // ctx: {attendance, getItDone, conflicts, trades, promises, today}.
+    // ctx: {attendance, getItDone, conflicts, trades, promises, lobbying, today}.
     six(s,ctx={}){
       const v=pvpScore(actionsOf(s)),votes=s.office?null:(s.funderPos?.length?businessLoyalty(s.funderPos,s.party,tallies):null);
+      const lobbied=s.office?null:lobbiedBills(v.scored,businessDonors(s),ctx.lobbying);
       return {
         ideology:ideology(s,data.issues,{ratings:ctx.ratings?.[s.id]||null,questions:ctx.questions||null}),
         word:keepsTheirWord(s,{promises:ctx.promises?.[s.id]||null,today:ctx.today||null}),
         showsup:showsUp(s,{attendance:ctx.attendance,getItDone:ctx.getItDone,asOfYear}),
         aboveboard:aboveBoard(s,{trades:ctx.trades||reviewedTrades(s),conflicts:ctx.conflicts,asOfYear}),
-        peoplefirst:peopleFirst(v,behaviorCci({businessVotes:votes})),
+        peoplefirst:peopleFirst(v,behaviorCci({businessVotes:votes,lobbied})),
       };
     },
     reviewedTrades:s=>reviewedTrades(s),
@@ -112,8 +117,8 @@ export function gradedPeople(data,{senate=[],house=[]}={}){
 // get-it-done.json, conflicts.json and group-ratings.json.
 // questions: {list, categories} from public/questions.json, for the Ideology lean (each person's stances are person.qst).
 // promises: public/promises.json (each profile's promises and verdicts); today: the day its "no action yet" deadlines are
-// checked against (default: today).
-export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null,questions=null,promises=null,today=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null,questions:questions||null,promises:promises?.people||null,today:today||new Date().toISOString().slice(0,10)});
+// checked against (default: today). lobbying: public/lobbied-bills.json, who lobbied each scored bill (Lobbied Bills).
+export const sixContext=({attendance=null,getItDone=null,conflicts=null,ratings=null,questions=null,promises=null,lobbying=null,today=null}={})=>({attendance:attendance||null,getItDone:getItDone||null,conflicts:conflicts||null,ratings:ratings?.people||null,questions:questions||null,promises:promises?.people||null,lobbying:lobbying||null,today:today||new Date().toISOString().slice(0,10)});
 // The grades the monthly change log records: those that come from the site's own files alone, so they're the same on
 // every page that shows them. Big Money Independence, and Plays by the Rules once a profile has read the refresh's trade records, also use
 // the refresh's saved records, so the log leaves them out for now.

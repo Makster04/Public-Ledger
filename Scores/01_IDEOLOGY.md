@@ -8,7 +8,7 @@
 
 - The overall lean on a scale from −100 to +100: very liberal, liberal, moderate, conservative or very conservative.
 - A lean for each category of questions, with the evidence behind it.
-- Group ratings, shown in opposing pairs.
+- Group ratings, shown in opposing pairs. Each group's name is colored by its lean: red for a group that mostly helps Republicans, blue for one that mostly helps Democrats, grey for a bipartisan one (yellow is kept for groups that call themselves libertarian). The colors are shown, not scored.
 - DW-NOMINATE.
 - Your Match: you pick your own sides, and it shows how close they are to you.
 
