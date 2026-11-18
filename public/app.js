@@ -26,6 +26,7 @@ import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST} from './six-scores.js';
+import {METHOD_TREE,BUILT_SECTIONS,topicOf,blurbOf} from './method-tree.js';
 import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
@@ -552,7 +553,7 @@ function route(){
   // (the Tiers tab became Career Totals: its old links open it)
   else if(m[1]==='tiers'){history.replaceState(null,'',`#career${m[2]?`-${m[2]}`:''}`);renderCareer(m[2]);}
   else if(m[1]==='compare'){if(m[2])cmpCh=m[2]==='house'?'H':'S';renderCompare();}
-  else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t)setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}
+  else if(m[1]==='method'){renderMethod();if(m[2]){const t=document.getElementById('method-'+m[2]);if(t){openTo(t);setTimeout(()=>t.scrollIntoView({block:'start'}),0);}}}
   else if(m[1]==='scores'){renderScores(m[2]||'match');}
   else if(m[1]==='align'){renderAlign();}
   else if(byId[m[1]]){const [tb,foc]=TAB_ALIAS[m[2]]||[m[2]||'overview'];renderProfile(byId[m[1]],tb,foc||null);}
@@ -4785,6 +4786,89 @@ function renderMethod(sub){
     <h2>Independence</h2>
     <p>Built from public records. No ties to any campaign, party or PAC. Nothing here is a voting recommendation.</p>
   </section>`;
+  methodTree(app);
+}
+
+// ---------- Methodology as a tree (public/method-tree.js) ----------
+// The trackers, explained: what counts toward each one's mark, what's only shown, and where they appear.
+function methodTrackers(){
+  const list=TRACKERS.map(t=>`${t.emoji} ${esc(t.name)}`).join(', ');
+  return `<p>${LOBBY_COUNT[0].toUpperCase()+LOBBY_COUNT.slice(1)} lobbies whose money to each campaign is followed: ${list}. Shown only; no grade uses them.</p>
+    <ul class="list">
+      <li><b>What counts toward the mark</b> (<span class="lk-mark lk-took">✕</span> took some, <span class="lk-mark lk-none">✓</span> none, <span class="lk-mark lk-waiting">…</span> not read yet): checks from the tracker's PACs to the campaign, found by FEC committee ID or by name, refunds taken off; the gifts a group collected from donors and passed on (the Pro-Israel Lobby's AIPAC, NORPAC, JACPAC and the RJC); and, for the Pro-Israel Lobby, its named donors' own checks.</li>
+      <li><b>Shown beside it, never counted:</b> gifts from people who work for the companies on the crypto and AI list (Big Tech + AI and Crypto), and super PAC spending, which no campaign takes.</li>
+      <li><b>Tracking Major Super PACs:</b> on each profile's Big Money Independence tab, one line a tracker with its mark and amount for the period picked. Under the Pro-Israel Lobby, Crypto and Big Tech + AI, "Spent to help them win" adds what their own super PACs spent for the person and against their opponents in a race they were in, and "Spent against them".</li>
+      <li><b>Career Totals:</b> every sitting member ranked by what their campaigns have taken from a tracker over their whole career (every FEC cycle since 1979–80), in five clubs, from the Million Dollar Club to None, ever.</li>
+      <li><b>The Trackers page and the seating charts:</b> every reviewed profile ranked by this cycle's money from each tracker, and every seat in the House and Senate colored by whether its member took any.</li>
+      <li><b>Sources:</b> the FEC's bulk files of PAC checks (pas2) and committees (cm) for every cycle and its independent-expenditure file, and, with the FEC key, the payments that show gifts passed on and the named donors' gifts. <span class="mono">npm run corporate:pacs</span> builds them.</li>
+      <li><b>Who's in and who's out:</b> each tracker's companies, groups and PACs are under "Who is followed" on every profile's tracker tabs. Big Pharma and Health Insurers + PBMs were one tracker until November 18, 2026: they're two because insurers and drugmakers often lobby against each other on drug prices.</li>
+    </ul>`;
+}
+// Open every box around an element, so a link to it (#method-unbought) shows it.
+function openTo(el){for(let d=el?.closest('details');d;d=d.parentElement?.closest('details'))d.open=true;}
+// The Methodology page's sections, rebuilt as the tree in METHOD_TREE: each heading becomes a box with its text inside.
+function methodTree(root){
+  const hero=root.querySelector('.hero');
+  const items=[...root.querySelectorAll('h2')].map(h=>{const nodes=[];let n=h.nextSibling;
+    while(n&&!(n.nodeType===1&&(n.tagName==='H2'||n.querySelector?.('h2')))){nodes.push(n);n=n.nextSibling;}
+    return {title:h.textContent.trim(),id:h.id||null,nodes};});
+  const firstText=nodes=>{for(const n of nodes){if(n.nodeType!==1)continue;const e=n.matches('p,li')?n:n.querySelector('p,li');if(e)return e.textContent;}return '';};
+  const topic=(title,nodes,{id=null,html='',blurb=null,cls=''}={})=>{
+    const d=document.createElement('details');d.className='mt-leaf'+(cls?` ${cls}`:'');if(id)d.id=id;
+    const b=blurb??blurbOf(firstText(nodes));
+    d.innerHTML=`<summary><span class="mt-car" aria-hidden="true"></span><span class="mt-st"><b>${esc(title)}</b>${b?`<small>${esc(b)}</small>`:''}</span></summary><div class="mt-body">${html}</div>`;
+    const body=d.querySelector('.mt-body');for(const n of nodes)body.appendChild(n);return d;};
+  // The parts that move: a retired section, or the old entries in the change log.
+  const split=(nodes,rules)=>{const out={keep:[]};let at='keep';
+    for(const n of nodes){if(n.nodeType===1&&n.tagName==='H3'){const r=rules.find(([re])=>re.test(n.textContent.trim()));if(r){at=r[1];continue;}at='keep';}
+      (out[at]||=[]).push(n);}
+    return out;};
+  const built={},used=new Set();
+  const six=items.find(i=>i.title.startsWith(BUILT_SECTIONS[0]));
+  if(six){used.add(six);
+    built['@six']=six.nodes.filter(n=>n.nodeType===1&&n.matches('section.method-six')).map(sec=>{const h=sec.querySelector('h3'),t=h?.textContent.trim()||'';h?.remove();
+      return topic(t,[sec],{blurb:blurbOf(sec.querySelector('p')?.textContent)});});}
+  const grades=items.find(i=>i.title.startsWith('Grades on the home page'));
+  if(grades){const g=split(grades.nodes,[[/^The three primary grades/,'retired'],[/^Outside money by month/,'outside']]);grades.nodes=g.keep;
+    if(g.retired)built['@retiredGrades']=[topic('The three primary grades (retired November 7, 2026)',g.retired)];
+    if(g.outside)built['@outsideMonthly']=[topic('Outside money by month',g.outside)];
+    grades.title='The grade scale, and actions over words';}
+  const log=items.find(i=>i.title.startsWith('Monthly recalculation'));
+  if(log){const migrations=log.nodes.filter(n=>n.nodeType===1&&n.matches('.note')&&/Presentation migration/.test(n.textContent));
+    const old=log.nodes.filter(n=>n.nodeType===1&&n.matches('.chart')&&/Retired grades:/.test(n.textContent));
+    log.nodes=log.nodes.filter(n=>!migrations.includes(n)&&!old.includes(n));
+    if(old.length)built['@oldLogs']=[topic('Earlier score logs (retired grades)',old,{blurb:'The monthly recalculations recorded before the six scores, kept as they were.'})];
+    if(migrations.length)built['@migrations']=[topic('Changes to how scores are shown',migrations.reverse(),{blurb:'Each change to how a score is shown, not how it\'s figured, newest first.'})];}
+  const integ=items.find(i=>i.title.startsWith('Integrity (provisional'));if(integ)integ.title='Integrity (retired November 7, 2026)';
+  const changes=items.find(i=>i.title.startsWith('What changed in this version'));if(changes)changes.title='Rule changes through November 1, 2026';
+  built['@trackers']=[topic('Trackers',[],{id:'method-trackers',html:methodTrackers(),blurb:`The ${LOBBY_COUNT} lobbies whose money is followed, what counts toward each one's mark, and where they show.`})];
+  // Each branch's topics, in its order; a heading no branch names goes under "More".
+  const per=Object.fromEntries(METHOD_TREE.map(b=>[b.key,[]])),more=[];
+  for(const it of items){if(used.has(it))continue;const at=topicOf(it.title.startsWith('The grade scale')?'Grades on the home page':it.title.startsWith('Integrity (retired')?'Integrity (provisional':it.title.startsWith('Rule changes through')?'What changed in this version':it.title);
+    const blurb=it===integ?'How Integrity was worked out before November 7, 2026, when its parts became Keeps Their Word, Big Money Independence and Plays by the Rules.':null;
+    const d=topic(it.title,it.nodes,{id:it.id,blurb});if(at)per[at.branch].push([at.at,d]);else more.push(d);}
+  const tree=document.createElement('section');tree.className='section mt';tree.setAttribute('aria-label','Methodology topics');
+  tree.innerHTML=`<div class="mt-bar"><input class="mt-q" type="search" placeholder="Find a topic (e.g. PAC Penalty, Legal Trouble)" aria-label="Find a topic"><button type="button" class="mt-b" data-all="1">Open all</button><button type="button" class="mt-b" data-all="0">Close all</button></div><p class="mt-none small muted" hidden>No topic mentions that.</p><div class="mt-root"></div>`;
+  const rootEl=tree.querySelector('.mt-root');
+  const branch=(b,kids,lead=null)=>{const d=document.createElement('details');d.className='mt-branch';d.id=b.key==='six'?'method-six':`method-tree-${b.key}`;
+    d.innerHTML=`<summary><span class="mt-car" aria-hidden="true"></span><span class="mt-ic" aria-hidden="true">${b.icon}</span><span class="mt-st"><b>${esc(b.name)}</b><small>${esc(b.about)}</small></span><span class="mt-n">${kids.length} topic${kids.length===1?'':'s'}</span></summary><div class="mt-kids"></div>`;
+    const k=d.querySelector('.mt-kids');if(lead)k.appendChild(lead);for(const x of kids)k.appendChild(x);return d;};
+  for(const b of METHOD_TREE){
+    const kids=b.topics.flatMap((t,at)=>t.startsWith('@')?(built[t]||[]):per[b.key].filter(([a])=>a===at).map(([,d])=>d));
+    let lead=null;if(b.key==='six'&&six){const p=six.nodes.find(n=>n.nodeType===1&&n.matches('p'));if(p){lead=p;p.classList.add('mt-lead');}}
+    rootEl.appendChild(branch(b,kids,lead));
+  }
+  if(more.length)rootEl.appendChild(branch({key:'more',icon:'📎',name:'More',about:'Other notes.'},more));
+  root.innerHTML='';if(hero)root.appendChild(hero);root.appendChild(tree);
+  const q=tree.querySelector('.mt-q'),none=tree.querySelector('.mt-none');
+  tree.addEventListener('click',e=>{const b=e.target.closest('[data-all]');if(!b)return;q.value='';filter();tree.querySelectorAll('details').forEach(d=>{d.open=b.dataset.all==='1';});});
+  // Find a topic: the boxes that mention it stay, opened; the rest are hidden until the box is cleared.
+  const filter=()=>{const v=q.value.trim().toLowerCase();let hits=0;
+    for(const br of tree.querySelectorAll('.mt-branch')){let any=false;
+      for(const t of br.querySelectorAll(':scope > .mt-kids > .mt-leaf')){const hit=!v||t.textContent.toLowerCase().includes(v);t.hidden=!hit;if(v)t.open=hit;if(hit)any=true;}
+      br.hidden=!!v&&!any;if(v)br.open=any;if(any&&v)hits++;}
+    none.hidden=!v||hits>0;if(!v)tree.querySelectorAll('details').forEach(d=>{d.open=false;});};
+  q.addEventListener('input',filter);
 }
 
 // ---------- tooltips ----------
