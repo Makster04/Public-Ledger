@@ -92,6 +92,11 @@ function transactions(section,kind){
 let orgs;
 const orgAbout=(name,kind)=>(orgs||=window.DATA?makeOrgs(window.DATA):null)?.about(name,kind)||null;
 const LIVE_ABOUT={pac:'Political action committee that gave to the campaign. Its FEC page lists who sponsors it.',outside:'Outside group that reported spending on this race to the FEC. It may not coordinate with the campaign.'};
+// The groups behind electioneering ads or communication costs, largest first. sides: show for and against.
+const spendTable=(x,sides)=>x?.count?`<p class="live-meta"><b>${cash(x.total)}</b> in ${x.count} item${x.count===1?'':'s'} from ${x.groups.length} group${x.groups.length===1?'':'s'}${sides?` · ${cash(x.for)} for them, ${cash(x.against)} against`:''}</p>
+  <div class="tablewrap"><table><thead><tr><th>Group</th>${sides?'<th class="r">For</th><th class="r">Against</th>':'<th class="r">Amount</th>'}<th class="r">Items</th><th>Dates</th></tr></thead><tbody>${x.groups.slice(0,20).map(g=>`<tr><td>${link(g.url,g.group)}${g.fewDonors?' <span class="live-warning">lists few donors</span>':''}</td>${sides?`<td class="r">${cash(g.for)}</td><td class="r">${cash(g.against)}</td>`:`<td class="r">${cash(g.amount)}</td>`}<td class="r">${g.n}</td><td>${date(g.first)}${g.last&&g.last!==g.first?` – ${date(g.last)}`:''}</td></tr>`).join('')}</tbody></table></div>`
+  :'<div class="live-empty">None reported to the FEC.</div>';
+const LD203={feca:'Campaign gifts',he:'Events in their honor',me:'Meetings and events',ple:'Presidential library',pic:'Inauguration'};
 const org=(name,about)=>about?`<span class="org" data-tip="${esc(`${name}: ${about}`)}">${esc(name)}</span>`:esc(name);
 const li=(url,label,small)=>`<li>${url?link(url,label):esc(label)}${small?`<small>${small}</small>`:''}</li>`;
 const ul=(rows,fn,none)=>rows&&rows.length?`<ul class="live-linklist">${rows.map(fn).join('')}</ul>`:`<div class="live-empty">${esc(none)}</div>`;
@@ -184,6 +189,22 @@ const SECTIONS={
         <td>${!x.checked.regulations?nc:r.comments.n?`${link(r.comments.latest?.url,n(r.comments.n,'comment','comments'))}`:none}</td>
         <td>${!x.checked.sam?nc:r.samReview?`<span class="live-warning">${esc(r.samReview)}</span>`:!r.uei?none:!x.checked.contracts?nc:r.contracts.n?`${link(r.contracts.top?.url,cash(r.contracts.total))} in ${n(r.contracts.n,'award','awards')}`:'None found'}</td></tr>`).join('')}</tbody></table></div>
       ${['lobbying','regulations','sam','contracts'].filter(k=>p.sections[k]).map(k=>`<details><summary>${esc(SECTIONS[k].title)}</summary>${SECTIONS[k].body(p.sections[k],p,person)}</details>`).join('')}${p.merged?.fara?.length?`<details><summary>${esc(SECTIONS.fara.title)}</summary>${SECTIONS.fara.body(p.merged.fara)}</details>`:''}`;}},
+  // Ads that named them near an election (FEC electioneering communications) and corporations' and unions' messages to
+  // their own members about them (FEC communication costs): by group, shown only.
+  electioneering:{title:'Ads that named them near an election',body:x=>`${pts([['What these are','TV, radio and cable ads that name them within 30 days of a primary or 60 days of a general election, paid for by a group that isn\'t a political committee (FEC electioneering communications). They needn\'t say "vote for", so they aren\'t counted as outside spending for or against them.'],
+      ['Their donors','A group that files these reports names only the donors who gave for the ads, so most of its money\'s sources aren\'t public.'],['Not graded','shown only']])}${spendTable(x,false)}`},
+  'communication-costs':{title:'Corporations and unions telling their members how to vote',body:x=>`${pts([['What these are','what a corporation or union spent telling its own members, executives or shareholders to vote for or against them, reported to the FEC once it passes $2,000 an election (communication costs).'],
+      ['Not graded','shown only']])}${spendTable(x,true)}`},
+  // Lobbyists' and lobbying organizations' gifts that name them as the one honored (LDA.gov LD-203). Lobbyists are people,
+  // so their gifts are only added up; an organization's own gifts name it.
+  'lobbyist-gifts':{title:'Lobbyists\' political gifts to them',body:x=>{
+    const types=Object.entries(x.types||{}).map(([k,v])=>`${esc(LD203[k]||k)} ${cash(v)}`).join(' · ');
+    return `${pts([['What these are','gifts that lobbyists and lobbying organizations report twice a year (LDA.gov, LD-203) naming them as the one honored: gifts to their campaign or leadership PAC, and events held in their honor. The current cycle\'s two years.'],
+      ['Lobbyists','added up, never named.'],x.capped?.length&&['Partly read',`${x.capped.join(', ')}: more reports name them than were read`],['Not graded','shown only']])}
+    ${x.total?`<p class="live-meta"><b>${cash(x.total)}</b> in all${types?` · ${types}`:''}</p>
+      <p class="live-meta">From ${x.lobbyists.people} lobbyist${x.lobbyists.people===1?'':'s'}: ${cash(x.lobbyists.amount)} in ${x.lobbyists.gifts} gift${x.lobbyists.gifts===1?'':'s'}.</p>
+      ${x.organizations.length?`<div class="tablewrap"><table><thead><tr><th>Lobbying organization (its own gifts)</th><th class="r">Amount</th><th class="r">Gifts</th></tr></thead><tbody>${x.organizations.slice(0,15).map(o=>`<tr><td>${link(o.url,o.name)}</td><td class="r">${cash(o.amount)}</td><td class="r">${o.n}</td></tr>`).join('')}</tbody></table></div>`:''}`
+      :'<div class="live-empty">No lobbyist gift names them in the reports read.</div>'}`;}},
   'outside-groups':{title:'Groups behind outside spending',body:x=>ul(x.rows,r=>r.ein?li(r.url,r.name,`Nonprofit (501(c)(${esc(r.subsection??'?')})) · ${r.filings.map(f=>`${esc(f.year)}: revenue ${cash(f.revenue)}`).join('; ')}`):li(r.irs527,r.group,esc(r.review)+' · search the IRS 527 filings'),'No outside spenders checked yet.')},
 };
 // Days from trade to disclosure, and late, for trades not reviewed yet (the same 45-day rule as the grade).

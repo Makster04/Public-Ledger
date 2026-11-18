@@ -374,13 +374,15 @@ const GLOBAL_KINDS=FEED_KINDS.filter(k=>FEEDS[k].scope==='global');
 // The lobbying counts for each key bill, for the People First bill scores.
 export async function getBills(env){
   const rows=(await statement(env.DB,"SELECT j.subject,s.payload,s.updated_at FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind='bill-lobbying'").all()).results;
-  return {lobbying:Object.fromEntries(rows.map(r=>[r.subject,{...JSON.parse(r.payload),checkedAt:r.updated_at}]))};
+  const co=await statement(env.DB,"SELECT s.payload,s.updated_at FROM snapshots s WHERE s.job_id='lobby-coalitions'").first();
+  return {lobbying:Object.fromEntries(rows.map(r=>[r.subject,{...JSON.parse(r.payload),checkedAt:r.updated_at}])),
+    coalitions:co?{...JSON.parse(co.payload),checkedAt:co.updated_at}:null};
 }
 // Global sources with one snapshot per day of the Record, hearing or meeting, each listing records by person: there are
 // thousands of them back to historyFrom, so a profile reads only the ones that name the person.
 const BY_PERSON=['crec-day','hearing','meeting'];
 // Index jobs list what to read (days of the Record, hearings, meetings, key bills' lobbying); a profile doesn't use them.
-const NOT_PROFILE=['meetings','crec-index','crec-archive','hearing-index','hearing-archive','bill-lobbying','super-pacs'];
+const NOT_PROFILE=['meetings','crec-index','crec-archive','hearing-index','hearing-archive','bill-lobbying','lobby-coalitions','super-pacs'];
 const named=id=>`%"${String(id).replace(/[%_\\]/g,'')}":[%`;
 // The meetings and transcripts that share a jacket number with this person's (the number in a transcript's GovInfo ID,
 // which a meeting lists): a member's meeting can have a transcript that doesn't list them, and the other way round.
