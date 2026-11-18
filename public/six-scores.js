@@ -294,9 +294,9 @@ export const PEOPLE_FIRST={action:0.75,cci:0.25,cciWeights:{businessVotes:0.65,l
 export function behaviorCci({businessVotes=null,lobbied=null}={}){
   const parts={businessVotes:Number.isFinite(businessVotes?.index)?businessVotes.index:null,lobbiedBills:lobbied&&lobbied.n>=PEOPLE_FIRST.minLobbied?pctOf(lobbied.profit,lobbied.n):null};
   const W=PEOPLE_FIRST.cciWeights,used=Object.keys(W).filter(k=>parts[k]!=null);
-  if(!used.length)return {index:null,parts,used,why:'Not enough votes compared with business funders yet'};
+  if(!used.length)return {index:null,parts,used,lobbied,why:'Not enough votes compared with business funders yet'};
   const w=used.reduce((t,k)=>t+W[k],0);
-  return {index:round1(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),parts,used,why:null};
+  return {index:round1(used.reduce((t,k)=>t+W[k]*parts[k],0)/w),parts,used,lobbied,why:null};
 }
 // v: pvpScore() of their actions on scored bills ({pct, nPeople, nProfit, n, people, profit}); cci: behaviorCci().
 export function peopleFirst(v,cci){

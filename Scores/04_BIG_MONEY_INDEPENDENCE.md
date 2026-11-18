@@ -10,6 +10,13 @@
 
 **What the tab shows:** each part's points, a money map, and a timeline of net worth, stocks and trades.
 
+**Shown, not counted:** outside groups' spending, which a candidate can't control, and lobbyists' gifts, whose campaign gifts the FEC numbers above already include:
+
+- Ads that named them near an election (FEC electioneering communications).
+- What corporations and unions spent telling their members how to vote on them (FEC communication costs).
+- Lobbyists' political gifts that name them (LDA.gov LD-203), with lobbyists added up, never named.
+- The groups behind outside spending, with a nonprofit's own tax return (IRS Form 990) where it has one, since a nonprofit doesn't name its donors.
+
 **How it's calculated:**
 
 ```text

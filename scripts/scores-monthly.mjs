@@ -49,7 +49,7 @@ export const NAMES={word:'Keeps Their Word',showsup:'Shows Up',peoplefirst:'Peop
 const PARTS={
   word:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
   showsup:[['missed','missed roll call','missed roll calls'],['votes','roll call on record','roll calls on record'],['getItDone','Get It Done point','Get It Done points']],
-  peoplefirst:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations'],['cci','Corporation Compromised percentage point','Corporation Compromised percentage points']],
+  peoplefirst:[['people','action for working people','actions for working people'],['profit','action for the wealthy and corporations','actions for the wealthy and corporations'],['cci','Corporation Compromised point','Corporation Compromised points']],
   promises:[['kept','kept promise','kept promises'],['half','partly kept or changed promise','partly kept or changed promises'],['broken','contradicted promise','contradicted promises'],['counted','counted check','counted checks']],
   ethics:[['finding','confirmed finding','confirmed findings'],['open','open investigation','open investigations'],['closed','investigation closed without a finding','investigations closed without a finding'],['allegation','unresolved allegation','unresolved allegations'],['late','late disclosure','late disclosures'],['conflict','committee-conflict trade','committee-conflict trades'],
     ['legal','Legal Trouble Index point','Legal Trouble Index points'],['insider','Insider Trading Index point','Insider Trading Index points'],['dodger','Stock Disclosure Dodger Index point','Stock Disclosure Dodger Index points']],
@@ -73,8 +73,8 @@ export function compare(before,after){
   for(const id of Object.keys(before||{}))if(!after[id])changes.push({id,grade:'all',from:null,to:null,why:'No longer profiled'});
   return changes.filter(c=>!(c.from===undefined&&c.to===null&&c.why==='First recorded score'));
 }
-// files: the parsed senate.json, house.json, attendance.json, get-it-done.json, conflicts.json, group-ratings.json and
-// promises.json.
+// files: the parsed senate.json, house.json, attendance.json, get-it-done.json, conflicts.json, group-ratings.json,
+// promises.json and lobbied-bills.json.
 export function buildEntry(research,committees,sectors,history,config,date,tallies=null,files={}){
   const scorer=makeScorer(research,committees,sectors.committees||{},tallies),ctx=sixContext({...files,today:date});
   const people=gradedPeople(research,{senate:files.senate?.senators||[],house:files.house?.members||[]});
@@ -84,7 +84,7 @@ export function buildEntry(research,committees,sectors,history,config,date,talli
 }
 // The files the page scores with, as buildEntry takes them (a missing one is null, as on the page).
 export const sixFiles=()=>({senate:readIf('public/senate.json'),house:readIf('public/house.json'),attendance:readIf('public/attendance.json'),
-  getItDone:readIf('public/get-it-done.json'),conflicts:readIf('public/conflicts.json'),ratings:readIf('public/group-ratings.json'),promises:readIf('public/promises.json')});
+  getItDone:readIf('public/get-it-done.json'),conflicts:readIf('public/conflicts.json'),ratings:readIf('public/group-ratings.json'),promises:readIf('public/promises.json'),lobbying:readIf('public/lobbied-bills.json')});
 // The entry before this one to compare with: the latest of the same formula, not from today.
 export const previousOf=(entries,entry)=>entries.filter(e=>e.date!==entry.date&&formulaOf(e)===formulaOf(entry)).at(-1)||null;
 export const ABOUT='Monthly recalculations, after review, of the grades the profiles show from the site\'s own files (Keeps Their Word, Shows Up and People First), for the reviewed profiles and every senator\'s and House member\'s basic profile, with every change and why. Entries marked "retired" logged the grades the six scores replaced (Promises delivered, Ethics and the earlier People First formula) and are kept as they were. Written by scripts/scores-monthly.mjs; newest last.';
