@@ -1283,6 +1283,37 @@ input, select { accent-color: var(--accent); }
 .lk-took .lk-mark, .lk-mark.lk-took { color: var(--crit); }
 .lk-none .lk-mark, .lk-mark.lk-none { color: var(--good); }
 .lk-waiting .lk-mark, .lk-mark.lk-waiting { color: var(--muted); }
+/* The Methodology page as a tree (public/method-tree.js, app.js methodTree): branches, then topics on a branch line. */
+.mt { max-width: 920px; }
+.mt-bar { display: flex; gap: 8px; margin: 0 0 16px; flex-wrap: wrap; }
+.mt-q { flex: 1 1 240px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; color: var(--ink); font: inherit; }
+.mt-b { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 14px; color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.mt-root { display: flex; flex-direction: column; gap: 10px; }
+.mt details > summary { list-style: none; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; }
+.mt details > summary::-webkit-details-marker { display: none; }
+.mt-branch > summary { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.mt-branch[open] > summary { border-color: var(--accent); }
+.mt-ic { font-size: 1.25rem; line-height: 1.3; }
+.mt-st { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.mt-st b { font-family: var(--font-display); font-size: 1.02rem; color: var(--ink); }
+.mt-leaf .mt-st b { font-size: .95rem; }
+.mt-st small { color: var(--muted); font-size: .8rem; line-height: 1.4; }
+.mt-n { flex: none; font-size: .72rem; color: var(--ink-2); background: var(--surface-2); border-radius: 999px; padding: 3px 9px; margin-top: 2px; }
+.mt-car { flex: none; width: 0; height: 0; margin-top: 7px; border-left: 6px solid var(--muted); border-top: 5px solid transparent; border-bottom: 5px solid transparent; transition: transform .15s; }
+.mt details[open] > summary > .mt-car { transform: rotate(90deg); }
+.mt-kids { margin: 8px 0 0 22px; padding-left: 16px; border-left: 2px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.mt-lead { margin: 0 0 4px; font-size: .86rem; color: var(--ink-2); }
+.mt-leaf > summary { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; }
+.mt-kids > .mt-leaf > summary::before { content: ''; position: absolute; left: -18px; top: 22px; width: 16px; border-top: 2px solid var(--line); }
+.mt-leaf[open] > summary { border-color: var(--ink-2); }
+.mt-body { margin: 8px 0 4px 12px; padding: 12px 14px; border-left: 2px solid var(--line); }
+.mt-body > section { padding: 0; margin: 0; }
+.mt-none { margin: 0 0 12px; }
+@media (max-width: 560px) {
+  .mt-kids { margin-left: 8px; padding-left: 10px; }
+  .mt-kids > .mt-leaf > summary::before { left: -12px; width: 10px; }
+  .mt-body { margin-left: 4px; padding: 10px 8px; }
+}
 /* The key under Tracking Major Super PACs, laid out like the money map's "Bundled through groups" box. */
 .lk-key { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
 .lk-key h4 { margin: 0 0 2px; font-family: var(--font-display); font-size: 1.02rem; font-weight: 800; color: var(--ink); }
