@@ -16,7 +16,7 @@
 // fill the row. The page shows the last 45 days by day, with a filter for each kind. Each item is placed by when it
 // reached the site ("seen", else its own date). With nothing to show, the strip or the cards aren't shown. The strip
 // scrolls slowly, stops while hovered or focused, and stands still for visitors whose device asks for reduced motion.
-import {TRACKER} from './trackers.js';
+import {TRACKER,isTrackerPac} from './trackers.js';
 import {ETHICS_COST,CASE_KIND,pct1} from './grades.js';
 
 export const TICKER={trades:24,pac:12,cards:16,pageDays:45,countingDays:45,liveEvery:300000,lateDays:45};
@@ -176,8 +176,10 @@ export function newsItems(news,{now=Date.now(),people,days=TICKER.pageDays}={}){
       out.push({key:x.key,kind:'promise',tag:'Promise check',date:x.date,at,order:2,href:`#${x.id}-word`,parts:[who,`: ${topic?`${topic} promise`:'a promise'}${when}, ${VERDICT[x.status]}`],id:x.id,
         p:{verdict:x.status,what:`${topic?`${topic[0].toUpperCase()}${topic.slice(1)} promise`:'A promise'}${when}`}});
     }else if(x.kind==='lobby'){
-      const T=TRACKER[x.tracker],list=peopleList(x.ids||[],people);if(!T||!list.n)continue;
-      out.push({key:x.key,kind:'lobby',tag:'Lobby money',date:x.date,at,order:2,href:list.n===1?`#${x.ids.find(id=>nameOf(id,people))}-unbought`:`#trackers-${x.tracker}`,
+      // (a check saved before Nov. 18, 2026 under Big Pharma from an insurer's or PBM's PAC is theirs now)
+      const key=x.tracker==='pharma'&&isTrackerPac(TRACKER.insurers,{cid:x.cmte,name:x.pac})?'insurers':x.tracker;
+      const T=TRACKER[key],list=peopleList(x.ids||[],people);if(!T||!list.n)continue;
+      out.push({key:x.key,kind:'lobby',tag:'Lobby money',date:x.date,at,order:2,href:list.n===1?`#${x.ids.find(id=>nameOf(id,people))}-unbought`:`#trackers-${key}`,
         l:{pac:pacShort(x.pac),amount:x.amount,ids:(x.ids||[]).filter(id=>nameOf(id,people)),tracker:T.name},
         parts:[`${T.name} ${T.emoji} · ${titleCase(x.pac)} gave ${dollars(x.amount)}${list.n>1?' each':''} to `,...list.parts]});
     }else if(x.kind==='superpac'){
