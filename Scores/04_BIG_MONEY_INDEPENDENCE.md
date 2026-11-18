@@ -10,6 +10,8 @@
 
 **What the tab shows:** each part's points, a money map, and a timeline of net worth, stocks and trades.
 
+**On the home page's cards:** the same grade as the profile's Overview, worked out from the same records the refresh has read (the FEC's gift sizes, the stocks on their annual report and this cycle's trades). It says what it's waiting for when a record isn't read yet.
+
 **Shown, not counted:** outside groups' spending, which a candidate can't control, and lobbyists' gifts, whose campaign gifts the FEC numbers above already include:
 
 - Ads that named them near an election (FEC electioneering communications).
@@ -36,3 +38,21 @@ Each part adds or takes off percentage points, so the score is a percentage to o
 - **Pledges:** +1 each for backing a lobbying ban, a congressional stock-trading ban, or overturning Citizens United, by pledge or by sponsoring or cosponsoring a bill.
 
 **Needs:** this cycle's FEC report, PAC money sorted by type, and their disclosure read. A president isn't graded.
+
+## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
+
+- **Eight numbers IntegrityIndex.us's page leaves out** are filled in here and labeled on the tab, for example the PAC penalty's cap of 30 and the PAC Reliance midpoint of 20%. They still need confirming.
+- **Gift sizes from the FEC** are read only for the 76 full profiles. For everyone else, itemized gifts count at the not-yet-sorted rate.
+- **Holdings and trades:**
+  - The blind-trust and no-stocks statuses still need review (`npm run review:holdings`).
+  - The House and Senate trade readers haven't had their first full live run.
+  - Senate eFD turns the refresh away, so senators' reports are fetched by hand.
+- **Forwarded gifts are a floor:**
+  - Only the groups found forwarding gifts are read. Others, such as Council for a Livable World, need their committees added.
+  - Three totals are missing: Ricketts' from Club for Growth, Stelson's from EMILY's List and Hageman's from the Senate Conservatives Fund.
+- **PAC types:** 156 PAC names aren't sorted by type yet, though 98% of PAC money is.
+- **The tab and the other places it shows can differ:**
+  - The tab's own figure credits joint fundraising back to the people who gave, and fills in PAC lines from the refresh.
+  - The profile's Overview, the home card, the rankings and the share card don't do this yet.
+  - So for someone whose joint fundraising has been read, the numbers can differ.
+- **A president** isn't graded.

@@ -4,7 +4,7 @@ import {getStatus,statement} from './refresh.mjs';
 import {mergeTrades} from './merge.mjs';
 import {SINCE} from './feeds.mjs';
 import {stockHoldings} from '../public/six-scores.js';
-import {holdingsLead} from '../public/holdings.js';
+import {holdingsLead,assetKind} from '../public/holdings.js';
 import {LATE_DAYS} from '../public/grades.js';
 
 const TRADE_KINDS=['trades-house','trades-senate','trades-bargo','trades-eulerpool','trades-fmp'];
@@ -95,13 +95,36 @@ export function cardWealth(own,{cycle=config.cycle,officialFrom=null}={}){
   }
   return {netWorth,stocks,trades};
 }
+// What Big Money Independence reads from the refresh, as a profile's Overview gets it (public/live.js disclosure), so a
+// home card's grade is the profile's: the FEC's gift sizes for the cycle, the stocks on the annual report (the House's
+// when there is one, as the profile reads it), and the official trades since the cycle began, with whether their trade
+// reports are read completely. A trade is [traded, low, high, amount]. job: their chamber's trade-report job with its
+// status (getStatus).
+export function cardBmi(own,{chamber,job=null,cycle=config.cycle,officialFrom=null}={}){
+  const sz=own['donor-sizes'],sizes=sz?(({cycles,...rest})=>rest)(sz):null;
+  const snap=own['net-worth-house']||own['net-worth-senate']||null;
+  const snapshot=snap?{year:snap.year??null,url:snap.url||null,unreadable:!!snap.unreadable,assets:Array.isArray(snap.assets)?snap.assets.filter(a=>assetKind(a)==='stock').map(a=>({name:a.name,type:a.type,value:a.value})):null}:null;
+  const kind=chamber==='S'?'trades-senate':'trades-house',sec=own[kind]||null;
+  const official=['trades-house','trades-senate'].filter(k=>own[k]),unread=official.flatMap(k=>own[k].unread||[]).length;
+  const ready=!!job&&job.status==='ready'&&!job.stale;
+  const why=!sec?'Their stock trade reports haven\'t been read yet':sec.more?'Their older trade reports are still being read':unread?`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`:!ready?(job?.error||'The latest read of their trade reports hasn\'t finished'):null;
+  const lists=TRADE_KINDS.map(k=>own[k]?.rows).filter(Boolean),since=`${Number(cycle)-1}-01-01`;
+  const rows=lists.length?mergeTrades(lists,[],{},{officialFrom}).slice(0,1500).filter(t=>t.official&&String(t.traded||'')>=since).map(t=>[t.traded,t.low??null,t.high??null,t.amount??null]):[];
+  return {sizes,snapshot,trades:{rows,covered:!why,why}};
+}
 export async function getCardWealth(env){
-  const rows=(await statement(env.DB,`SELECT j.subject,j.kind,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN (${[...ANNUAL_KINDS,...TRADE_KINDS].map(()=>'?').join(',')})`,...ANNUAL_KINDS,...TRADE_KINDS).all()).results;
+  const kinds=[...ANNUAL_KINDS,...TRADE_KINDS,'donor-sizes'];
+  const rows=(await statement(env.DB,`SELECT j.subject,j.kind,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN (${kinds.map(()=>'?').join(',')})`,...kinds).all()).results;
+  const jobs=new Map((await getStatus(env)).jobs.filter(j=>j.kind==='trades-house'||j.kind==='trades-senate').map(j=>[`${j.kind}:${j.subject}`,j]));
+  const chamberOf=new Map(config.people.map(p=>[p.id,p.chamber]));
   const known=new Set(config.people.map(p=>p.id)),by=new Map();
   for(const r of rows){const d=JSON.parse(r.payload);
     if(r.kind==='trades-eulerpool'){for(const [id,list] of Object.entries(d.byPerson||{}))if(known.has(id)&&Array.isArray(list)){const o=by.get(id)||{};o[r.kind]={rows:list};by.set(id,o);}continue;}
     if(!known.has(r.subject))continue;const o=by.get(r.subject)||{};o[r.kind]=d;by.set(r.subject,o);}
   const people={};
-  for(const [id,own] of by){const official=['trades-house','trades-senate'].some(k=>own[k]);people[id]=cardWealth(own,{officialFrom:official?`${SINCE(config)}-01-01`:null});}
+  for(const [id,own] of by){
+    const official=['trades-house','trades-senate'].some(k=>own[k]),officialFrom=official?`${SINCE(config)}-01-01`:null,chamber=chamberOf.get(id);
+    people[id]={...cardWealth(own,{officialFrom}),bmi:cardBmi(own,{chamber,job:jobs.get(`${chamber==='S'?'trades-senate':'trades-house'}:${id}`)||null,officialFrom})};
+  }
   return {people};
 }

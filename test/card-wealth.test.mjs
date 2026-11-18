@@ -28,3 +28,18 @@ test('stock trades: this cycle\'s, with those reported more than 45 days after t
   assert.deepEqual([w.trades.n,w.trades.late,w.trades.since,w.trades.official],[2,1,'2025-01-01',true],'a trade before the cycle is left out');
   assert.equal(cardWealth({'net-worth-house':annual()},{cycle:2026}).trades,null,'no trade report read');
 });
+
+test('Big Money Independence on the cards: the records the profile reads, trimmed to what the grade uses',async()=>{
+  const {cardBmi}=await import('../src/finance.mjs');
+  const sizes={brackets:[{total:5}],notSorted:0,start:'2025-01-01',end:'2026-09-30',cycles:{2024:{brackets:[]}}};
+  const job={status:'ready',stale:false};
+  const own={'donor-sizes':sizes,'net-worth-senate':annual(),'trades-senate':{rows:[trade('a','2025-03-01','2025-03-20',{source:'Senate eFD'}),trade('b','2024-06-01','2024-06-20',{source:'Senate eFD'})]}};
+  const b=cardBmi(own,{chamber:'S',job,cycle:2026,officialFrom:'2016-01-01'});
+  assert.deepEqual(Object.keys(b.sizes).sort(),['brackets','end','notSorted','start'],'past cycles left out');
+  assert.deepEqual(b.snapshot.assets.map(a=>a.name),['Apple Inc. (AAPL)','Microsoft Corp'],'stocks only');
+  assert.deepEqual(b.trades,{rows:[['2025-03-01',1001,15000,null]],covered:true,why:null},'this cycle\'s official trades');
+  assert.match(cardBmi(own,{chamber:'S',job:{status:'ready',stale:true},cycle:2026}).trades.why,/hasn't finished/);
+  assert.match(cardBmi({},{chamber:'H',job,cycle:2026}).trades.why,/haven't been read/);
+  assert.match(cardBmi({'trades-house':{rows:[],unread:['x','y']}},{chamber:'H',job,cycle:2026}).trades.why,/2 trade reports were filed on paper/);
+  assert.equal(cardBmi({},{chamber:'H'}).snapshot,null);
+});

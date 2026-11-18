@@ -22,3 +22,13 @@
 - **Not counted:** unclear cases (until reviewed), no action yet, and not tested yet (for example, a candidate who isn't in office).
 - **For a president:** PolitiFact's tracker also counts.
 - **Minimum:** 3 decided promises.
+
+## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
+
+- **Promises for more people:** 42 of the 75 full profiles have promises on file. The basic profiles have none, so they aren't graded.
+- **Promises waiting on a verdict:**
+  - 87 aren't tested yet: the person isn't in office, or nothing that decides the promise has come up.
+  - 8 have no action yet, not 6 months on.
+  - 1 unclear one is waiting for review.
+- **Promise trackers:** PolitiFact's trackers count only for the president. No tracker is read for anyone else.
+- **Debates and interviews on video or audio** aren't read. This is on hold.

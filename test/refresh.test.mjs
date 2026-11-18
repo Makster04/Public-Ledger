@@ -130,10 +130,12 @@ test('the home cards get everyone\'s campaign and outside-money totals in one re
   const db=database();
   await addJob(db,'campaign:murkowski','campaign','murkowski',args);await addJob(db,'outside:murkowski','outside','murkowski',args);
   const snap=(id,payload)=>statement(db,'INSERT INTO snapshots(job_id,run_id,payload,updated_at) VALUES(?,?,?,?)',id,'r',JSON.stringify(payload),'2026-10-01').run();
-  await snap('campaign:murkowski',{receipts:1234,cash:50,start:'2025-01-01',end:'2026-09-30',rows:[]});
+  await snap('campaign:murkowski',{receipts:1234,cash:50,start:'2025-01-01',end:'2026-09-30',individual:1000,pac:200,committee:'C00000001',rows:[]});
   await snap('outside:murkowski',{support:10,oppose:20,through:'2026-10-20',rows:[{amount:10}]});
   const {people}=await getCards({DB:db});
-  assert.deepEqual(people.murkowski,{campaign:{receipts:1234,cash:50,start:'2025-01-01',end:'2026-09-30'},outside:{support:10,oppose:20,through:'2026-10-20'}});
+  // (with every total a basic profile's campaign is built from, for Big Money Independence on the cards; the rows stay out)
+  const none=Object.fromEntries(['itemized','unitemized','party','transfers','candidate','loans','self','disbursements','debts','source'].map(k=>[k,null]));
+  assert.deepEqual(people.murkowski,{campaign:{receipts:1234,cash:50,start:'2025-01-01',end:'2026-09-30',individual:1000,pac:200,committee:'C00000001',...none},outside:{support:10,oppose:20,through:'2026-10-20'}});
   const res=await worker.fetch(new Request('http://x/api/cards'),{DB:db},{});assert.equal(res.status,200);
   db.close();
 });

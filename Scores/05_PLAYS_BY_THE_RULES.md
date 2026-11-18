@@ -26,3 +26,17 @@
   - **Age:** half for a closed case decided over 10 years ago. Open cases and unresolved allegations always count in full.
 - **Outside Income & Conflicts and Gifts & Travel** need the disclosure reader, which isn't built yet. For now only Trade Conflicts, Stock Disclosure Dodger and Legal Trouble count. A missing part drops out and the others are rescaled.
 - **Needs:** a dated, sourced legal review (done Nov. 14, 2026 for every profile but the president's) plus at least one of the four parts.
+
+## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
+
+- **Outside Income & Conflicts (35%) and Gifts & Travel (20%)** need the disclosure reader, which isn't built: every part of the annual reports into `public/conflicts.json`, matched against lobbying, contracts and foreign-agent filings.
+- **Committee sectors** (which industries each committee oversees, for Trade Conflicts) are a draft that needs review.
+- **Senate annual reports' due and filed dates** for the last 3 years, for Stock Disclosure Dodger's annual part.
+- **Legal cases:**
+  - Every case's tags (kind, year decided, open or closed) still need review.
+  - The placeholder weights (criminal × 1.5, technical × 0.5, half after 10 years) need confirming.
+  - Who confirms legal leads before they count is still to be decided.
+- **The president:**
+  - Their Legal Trouble review needs a dated recheck.
+  - Their trades need a spot-check against the OGE reports, and a decision on whether to score them.
+- **Lobbyists' honorary and event spending for them** (LD-203) is shown on the Big Money Independence tab. Whether it should count toward Gifts & Travel isn't decided.

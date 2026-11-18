@@ -95,20 +95,24 @@ function basicShape(x){
     cmteName:x.cmteName||'Their campaign committee'});
 }
 const BASIC=Object.fromEntries([...SENATE,...HOUSE,...ELECT].filter(x=>!byId[x.id]).map(x=>[x.id,basicShape(Object.assign(markBasic(x),{evidence:basicEvidence(x)}))]));
+// A basic profile's campaign in the full profiles' shape, from the refresh's campaign totals for them (the FEC's committee
+// totals, its "campaign" record); null when they're not usable.
+function refreshedCamp(s,k){
+  if(!(k&&Number(k.receipts)>=0&&k.start&&k.end))return null;
+  const n=v=>Number(v)||0,self=k.self!=null?n(k.self):n(k.candidate);
+  return {receipts:k.receipts,indiv:k.individual??null,itemized:k.itemized??null,unitemized:k.unitemized??null,party:k.party??null,pac:k.pac??null,transfers:k.transfers??null,
+    candidate:k.candidate??null,loans:k.loans??null,loansKnown:k.loans!=null,self,selfShare:k.receipts>0?self/k.receipts:0,
+    other:Math.max(0,k.receipts-n(k.individual)-n(k.pac)-n(k.party)-n(k.transfers)-self),disbursements:k.disbursements??null,cash:k.cash??null,debts:k.debts??null,
+    start:k.start,end:k.end,cmteId:k.committee,cmte:s.cmteName,src:k.source,missing:false,live:true,note:'Figures from the FEC\'s committee totals, read by the refresh.'};
+}
 // A basic profile's campaign totals and outside spending from the refresh's records (the FEC's committee totals, and its
 // independent expenditures for and against them), in the shape the full profiles' research uses; read once a visit.
 // true when something was filled in.
 async function hydrateBasic(s){
   const [k,o]=await Promise.all([window.RecordLive.section(s.id,'campaign').catch(()=>null),window.RecordLive.section(s.id,'outside').catch(()=>null)]);
   const n=v=>Number(v)||0;let changed=false;
-  if(k&&Number(k.receipts)>=0&&k.start&&k.end){
-    const self=k.self!=null?n(k.self):n(k.candidate);
-    s.camp={receipts:k.receipts,indiv:k.individual??null,itemized:k.itemized??null,unitemized:k.unitemized??null,party:k.party??null,pac:k.pac??null,transfers:k.transfers??null,
-      candidate:k.candidate??null,loans:k.loans??null,loansKnown:k.loans!=null,self,selfShare:k.receipts>0?self/k.receipts:0,
-      other:Math.max(0,k.receipts-n(k.individual)-n(k.pac)-n(k.party)-n(k.transfers)-self),disbursements:k.disbursements??null,cash:k.cash??null,debts:k.debts??null,
-      start:k.start,end:k.end,cmteId:k.committee,cmte:s.cmteName,src:k.source,missing:false,live:true,note:'Figures from the FEC\'s committee totals, read by the refresh.'};
-    s.cycleLabel=`${fmtDate(k.start)} – ${fmtDate(k.end)}`;changed=true;
-  }
+  const camp=refreshedCamp(s,k);
+  if(camp){s.camp=camp;s.cycleLabel=`${fmtDate(k.start)} – ${fmtDate(k.end)}`;changed=true;}
   if(o&&Number.isFinite(Number(o.total))){
     const side=v=>({super_pac:0,other:n(v),party:0,total:n(v)});
     // (the refresh doesn't tell super PACs from other spenders, so it's all under "other")
@@ -2114,7 +2118,7 @@ function sixTiles(s,links,only){
     return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
   const T={ideology:()=>ideo,word:()=>tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`),showsup:()=>tile('showsup',u,u.parts[0].note||''),
-    unbought:()=>s.office?tile('unbought',unbought(s),''):tile('unbought',links?{pct:null,why:'Reading their disclosure…'}:{pct:null,why:'Open the profile to read their disclosure'},'', links?'Loading':'On profile'),
+    unbought:()=>s.office?tile('unbought',unbought(s),''):tile('unbought',{pct:null,why:'Reading their disclosure…'},'','Loading'),
     aboveboard:()=>tile('aboveboard',x.aboveboard,''),peoplefirst:()=>tile('peoplefirst',pf,pf.v?.n?`${pf.v.nPeople} of ${pf.v.n} actions for working people`:'')};
   const keys=only||['ideology','word','showsup','unbought','aboveboard','peoplefirst'];
   return `<div class="hc-rc hc-six${only?' hc-three':''}">${keys.map(k=>T[k]()).join('\n    ')}</div>`;
@@ -2140,10 +2144,24 @@ function wealthTiles(s,w){
     :na(wait,'Stock trades','from their trade reports');
   return `<div class="hc-money hc-wealth">${netWorth}${stocks}${trades}</div>`;
 }
+// Big Money Independence on a home card: worked out as the profile's Overview works it out (fillProfileTiles), from the
+// records /api/cards sends (src/finance.mjs cardBmi), with a basic profile's campaign totals from the refresh as its
+// profile builds them (refreshedCamp). c: this person's /api/cards entry, or null when the refresh is unreachable.
+function cardUnbought(s,c){
+  if(s.office)return unbought(s);
+  if(!c)return {pct:null,why:'The update service is offline'};
+  const camp=s.basic&&!s.camp?.live?refreshedCamp(s,c.campaign):null,p=camp?{...s,camp}:s,b=c.wealth?.bmi;
+  const trades=b?{...b.trades,rows:b.trades.rows.map(([traded,low,high,amount])=>({traded,low,high,amount}))}:null;
+  return unbought(p,{...unboughtInputs(p),sizes:b?.sizes||null,snapshot:b?.snapshot||null,trades});
+}
 async function fillWealth(root=document){
   const els=[...root.querySelectorAll('.hc-live[data-wealth]')];if(!els.length)return;
   const all=await loadCards();
-  for(const el of els)if(el.isConnected){const s=byId[el.dataset.wealth]||BASIC[el.dataset.wealth];if(s)el.innerHTML=wealthTiles(s,all?(all[s.id]?.wealth||{}):null);}
+  for(const el of els)if(el.isConnected){
+    const s=byId[el.dataset.wealth]||BASIC[el.dataset.wealth];if(!s)continue;
+    el.innerHTML=wealthTiles(s,all?(all[s.id]?.wealth||{}):null);
+    const t=el.closest('article')?.querySelector('[data-six-tile="unbought"]');if(t)fillSixTile(t,cardUnbought(s,all?(all[s.id]||{}):null));
+  }
 }
 
 function renderProfile(s,requested='overview',focus){

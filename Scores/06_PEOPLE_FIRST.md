@@ -27,3 +27,16 @@ Corporation Compromised = 0.65 × Business-Funder Voting + 0.35 × Lobbied Bills
   - **Built by hand:** `npm run lobbying:bills` reads the reports into `public/lobbied-bills.json`. Without that file, Lobbied Bills waits and Business-Funder Voting counts alone.
 - **A missing part drops out** and the other is rescaled.
 - **Minimum:** 3 scored actions.
+
+## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
+
+- **Lobbied Bills:**
+  - The first full read of the lobbying reports (about 40,000 for the 10 scored bills) is in progress. It waits until `public/lobbied-bills.json` is in.
+  - Amendments can't be matched.
+  - A PAC is matched to its company by name, not by an official ID.
+- **Basic profiles:** Corporation Compromised isn't worked out, since they have no reviewed donors. Their People First is Legislative Action alone.
+- **The proposed Corporation Compromised revision** (adding employee giving) is waiting on a decision. Its employee-giving part isn't built.
+- **More scored bills:** a business group's position on the GENIUS Act (only the AFL-CIO's is on file), and cited positions on the National Right-to-Work Act.
+- **Cited statements** still to find for candidates without a voting record. For example, Charles Booker is one short of a grade.
+- **Decide** whether agency estimates and tariffs can mark a bill.
+- **Not found:** the Senate number of the BLAST Act.
