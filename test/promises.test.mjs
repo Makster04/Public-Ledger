@@ -34,9 +34,9 @@ test('a short quote is read in its full sentence, which has to make the promise'
 
 test('verdicts: kept, broken, a reversal, unclear when actions go both ways; earlier actions are background',()=>{
   assert.equal(judge(promise,[act('2021-02-01',0),act('2023-05-01',0,'118-s-2')],office,{today}).status,'kept');
-  assert.equal(judge(promise,[act('2021-02-01',1)],office,{today}).status,'broken');
-  const before=judge(promise,[act('2019-01-01',1),act('2021-02-01',0)],office,{today});
-  assert.deepEqual([before.status,before.before.length,before.acts.length],['kept',1,1],'an action before the promise is background');
+  assert.equal(judge(promise,[act('2021-02-01',1),act('2023-05-01',1,'118-s-2')],office,{today}).status,'broken');
+  const before=judge(promise,[act('2019-01-01',1),act('2021-02-01',0),act('2023-05-01',0,'118-s-2')],office,{today});
+  assert.deepEqual([before.status,before.before.length,before.acts.length],['kept',1,2],'an action before the promise is background');
   const rev=judge(promise,[act('2021-02-01',0),act('2024-03-01',1,'118-s-9'),act('2025-03-01',1,'119-s-9')],office,{today});
   assert.deepEqual([rev.status,rev.rule],['broken','reversal']);
   assert.deepEqual(Object.values((({status,rule})=>({status,rule}))(judge(promise,[act('2021-02-01',0),act('2024-03-01',1,'118-s-9')],office,{today}))),['unclear','mixed'],'one bill against is for a reviewer');
@@ -44,6 +44,26 @@ test('verdicts: kept, broken, a reversal, unclear when actions go both ways; ear
   // A cosponsorship and a vote on the same bill count once.
   const one=judge(promise,[act('2021-02-01',0,'117-s-53','c'),act('2021-03-05',0,'117-s-53#S117-74','y')],office,{today});
   assert.deepEqual([one.forN,one.acts.length],[1,2]);
+});
+
+test('one bill isn\'t enough to call a promise kept or broken: it waits for a second (Nov. 18, 2026 audit)',()=>{
+  const kept1=judge(promise,[act('2021-02-01',0)],office,{today});
+  assert.deepEqual([kept1.status,kept1.rule],['not-tested','one-bill']);
+  assert.match(kept1.why,/^Only one bill since the promise, and their action on it went its way \(Feb\. 1, 2021\)\. One bill isn't enough to call it kept/);
+  const broken1=judge(promise,[act('2021-02-01',1)],office,{today});
+  assert.deepEqual([broken1.status,broken1.rule],['not-tested','one-bill']);
+  assert.match(broken1.why,/went against it .*call it broken/);
+  // A cosponsorship and two roll calls on one bill are still one bill.
+  const same=judge(promise,[act('2021-02-01',0,'117-s-53','c'),act('2021-03-05',0,'117-s-53#S117-74','y'),act('2021-03-09',0,'117-s-53#S117-80','y')],office,{today});
+  assert.deepEqual([same.status,same.rule,same.acts.length],['not-tested','one-bill',3]);
+  assert.match(same.why,/all 3 of their actions on it went its way/);
+  // Both ways on one bill is still for a reviewer, and a reviewer can settle a one-bill promise.
+  assert.equal(judge(promise,[act('2021-02-01',0,'117-s-53','c'),act('2021-03-05',1,'117-s-53#S117-74','y')],office,{today}).status,'unclear');
+  assert.equal(judge(promise,[act('2021-02-01',0)],office,{today,review:{status:'kept',why:'Checked by hand.',date:'2026-11-18'}}).status,'kept');
+  // The file: no automatic kept or broken rests on fewer than 2 bills.
+  const file=JSON.parse(fs.readFileSync(new URL('../public/promises.json',import.meta.url),'utf8'));
+  for(const [id,list] of Object.entries(file.people))for(const p of list)if(['all-for','all-against'].includes(p.rule)){
+    const bills=new Set(p.acts.map(a=>a[1].split('#')[0]));assert.ok(bills.size>=2,`${id} ${p.key}: ${p.rule} on ${bills.size} bill`);}
 });
 
 test('no action: allegedly broken after 6 months in office while others acted; within them "no action yet"; candidates and promises to oppose are not tested',()=>{
@@ -126,7 +146,7 @@ test('buildPromises: one promise per quote and date, tagged to several questions
   const statements={x:{'minimum-wage':[[0,'I will raise the minimum wage.','2020-11-03','u','Campaign website, 2020']],'paid-leave':[[0,'I will raise the minimum wage.','2020-11-03','u','Campaign website, 2020'],[0,'He has fought for paid leave.','2020-11-03','u','Campaign website, 2020']],
     'tariffs':[[1,'I will end the tariffs.','2020-11-03','u','Campaign website, 2020']]}};
   const out=buildPromises({statements,people:[{id:'x',name:'Pat X',short:'X',bioguide:'B1'}],dirs:new Map([['B1',{since:'2021-01-03',chamber:'S'}]]),today,
-    evidence:()=>({'minimum-wage':[['117-s-53','c','2021-01-26',0]]}),campaign:()=>null,elect:()=>null,reviews:{x:{'tariffs@2020-11-03':{status:'not-a-promise',why:'x'}}}});
+    evidence:()=>({'minimum-wage':[['117-s-53','c','2021-01-26',0],['118-s-2','c','2023-05-01',0]]}),campaign:()=>null,elect:()=>null,reviews:{x:{'tariffs@2020-11-03':{status:'not-a-promise',why:'x'}}}});
   const l=out.people.x;
   assert.equal(l.length,1);assert.deepEqual(l[0].qs,[['minimum-wage',0],['paid-leave',0]]);assert.equal(l[0].status,'kept');assert.equal(l[0].kind,'campaign');
 });

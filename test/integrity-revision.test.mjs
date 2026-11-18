@@ -2,7 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getItDoneComponent,showingUpPart,showingUpComponent,incomeConflicts,lobbyistOverlap,contractsForDonors,foreignAgentFlag,giftsTravel,conflictsComponent,integrityPreview,INTEGRITY_WEIGHTS} from '../public/integrity.js';
-import {countBills,medians,advanced,partyOf} from '../scripts/build-get-it-done.mjs';
+import {countBills,medians,advanced,partyOf,paced,cacheFresh,CACHE_DAYS} from '../scripts/build-get-it-done.mjs';
 
 const r1=x=>Number(x.toFixed(1));
 
@@ -65,4 +65,21 @@ test('Shows Up leaves out delegates and the Resident Commissioner, who can\'t vo
   }
   assert.deepEqual([...NON_VOTING].sort(),['AS','DC','GU','MP','PR','VI']);
   assert.equal(showingUpComponent({id:'d',state:'NY',chamber:'H'},attendance).complete,true,'a voting member is still graded');
+});
+
+test('Get It Done build: paced requests that wait and try again when Congress.gov is busy, and saved progress a week old is read again',async()=>{
+  const waits=[],log=[];let calls=0;
+  const busy=Object.assign(new Error('HTTP 429'),{statusCode:429,retryAfter:0});
+  const request=async()=>{calls++;if(calls<3)throw busy;return {ok:true};};
+  assert.deepEqual(await paced('https://api.congress.gov/x',{},{pace:0,request,wait:async ms=>{waits.push(ms);},log:m=>log.push(m)}),{ok:true});
+  assert.equal(calls,3);assert.deepEqual(waits.filter(ms=>ms>0),[60000,60000],'a minute after each 429');
+  assert.ok(log.every(m=>!/api\.congress\.gov|api_key/.test(m)),'no URL or key in the log');
+  const bad=Object.assign(new Error('HTTP 404'),{statusCode:404});
+  await assert.rejects(paced('u',{},{pace:0,request:async()=>{throw bad;},wait:async()=>{},log:()=>{}}),/404/,'a 404 is not retried');
+  let n=0;await assert.rejects(paced('u',{},{pace:0,request:async()=>{n++;throw busy;},wait:async()=>{},log:()=>{}}));assert.equal(n,12,'gives up after 12 tries');
+  assert.equal(CACHE_DAYS,7);
+  assert.equal(cacheFresh({at:'2026-11-12',from:115},115,'2026-11-18'),true);
+  assert.equal(cacheFresh({at:'2026-11-10',from:115},115,'2026-11-18'),false,'over a week old');
+  assert.equal(cacheFresh({at:'2026-11-17',from:116},115,'2026-11-18'),false,'read for a later start');
+  assert.equal(cacheFresh(undefined,115,'2026-11-18'),false);
 });

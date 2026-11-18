@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {moneyMap,mapSVG,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST,pacKindsFor,SHORT_KIND} from '../public/money-map.js';
+import {moneyMap,mapSVG,mapSVGTall,TALL,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST,pacKindsFor,SHORT_KIND} from '../public/money-map.js';
 import {pacTypeOf} from '../public/pac-types.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
@@ -21,6 +21,31 @@ test('every profile\'s map: the kinds of receipts add up to what was raised, and
     for(const n of m.ins)assert.ok(svg.includes(`>${n.label}<`),`${s.id}: ${n.label}`);
   }
   assert.ok(drawn>=50,`${drawn} maps drawn`);
+});
+
+test('the phone map: everything the wide map shows, stacked, inside its own width, with its own arrow ids',()=>{
+  let drawn=0;
+  for(const s of people){
+    const m=moneyMap(s,opts(s));if(!m)continue;drawn++;
+    const svg=mapSVGTall(m),wide=mapSVG(m);
+    assert.doesNotMatch(svg,/NaN|undefined|Infinity/,s.id);
+    assert.equal((svg.match(/<circle /g)||[]).length,m.ins.length+m.outs.length+1+m.side.length,s.id);
+    for(const n of [...m.ins,...m.outs,...m.side])assert.ok(svg.includes(`>${n.label}<`),`${s.id}: ${n.label}`);
+    for(const h of ['MONEY IN','THE CAMPAIGN','MONEY OUT'])assert.ok(svg.includes(`>${h}<`),`${s.id}: ${h}`);
+    // One line into the campaign for each kind of money in, and one out of it for each kind of money out.
+    assert.equal((svg.match(/marker-end=/g)||[]).length,m.ins.length+m.outs.length,s.id);
+    // Every x stays inside the drawing (lines run down its right edge, labels end left of the circles).
+    for(const [,x] of svg.matchAll(/ (?:x|cx|x1|x2)="(-?[\d.]+)"/g))assert.ok(Number(x)>=0&&Number(x)<=TALL.W,`${s.id}: x ${x}`);
+    // The two drawings sit on one page, one hidden: their arrowheads can't share ids.
+    const ids=svg2=>new Set([...svg2.matchAll(/<marker id="([^"]+)"/g)].map(x=>x[1]));
+    for(const id of ids(svg))assert.ok(!ids(wide).has(id),`${s.id}: ${id}`);
+    assert.match(svg,/^<svg class="mm-tall"/);assert.match(wide,/^<svg class="mm-wide"/);
+  }
+  assert.ok(drawn>=50,`${drawn} maps drawn`);
+  const s=people.find(p=>p.id==='ossoff'),block=moneyMapBlock(s,opts(s));
+  assert.ok(block.includes('class="mm-wide"')&&block.includes('class="mm-tall"'),'the section carries both');
+  const css=fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8');
+  assert.match(css,/@media \(max-width: 820px\) \{\s*\.mm-diagram svg\.mm-wide \{ display: none; \}\s*\.mm-diagram svg\.mm-tall \{ display: block; \}/);
 });
 
 test('Ossoff: the example map',()=>{
