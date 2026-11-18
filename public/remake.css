@@ -1634,3 +1634,7 @@ input, select { accent-color: var(--accent); }
 .lean-key span{display:inline-flex;align-items:center;gap:6px}
 .lean-key i{width:10px;height:10px;border-radius:3px;display:inline-block}
 .lean-key .lean-r i{background:var(--rep)}.lean-key .lean-d i{background:var(--dem)}.lean-key .lean-l i{background:var(--lean-lib)}.lean-key .lean-b i{background:var(--lean-bi)}
+
+/* Nonprofits' own tax returns (public/nonprofits.js). */
+.np-chip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);font-size:.72rem;white-space:nowrap;cursor:help}
+.np-more{margin:4px 0 2px}.np-more>summary{cursor:pointer;color:var(--muted);line-height:1.4}.np .tablewrap{margin:4px 0 10px}.np-h{margin:10px 0 4px;font-size:.8rem;color:var(--ink-2)}

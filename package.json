@@ -28,6 +28,7 @@
     "superpacs:races": "node scripts/build-super-pac-races.mjs",
     "news:build": "node scripts/build-news.mjs",
     "groups:lean": "node scripts/build-group-lean.mjs",
+    "nonprofits:990": "node scripts/build-990.mjs",
     "funders:bundled": "node --env-file-if-exists=.dev.vars scripts/build-bundled.mjs",
     "review:money": "node scripts/review-money.mjs",
     "review:pledges": "node scripts/review-pledges.mjs",

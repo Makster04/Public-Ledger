@@ -4,6 +4,7 @@ import {makeOrgs,EMPLOYER_ABOUT} from './orgs.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {rangeText} from './net-worth.js';
 import {holdingsLead,officialDisclosureCoverage} from './holdings.js';
+import {npOf,npLine,npDetails,npChip} from './nonprofits.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cash=n=>n==null?'Not reported':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
 const date=v=>v?new Date(/^\d{4}-\d{2}-\d{2}$/.test(v)?v+'T12:00:00Z':v).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'Not yet checked';
@@ -94,7 +95,7 @@ const orgAbout=(name,kind)=>(orgs||=window.DATA?makeOrgs(window.DATA):null)?.abo
 const LIVE_ABOUT={pac:'Political action committee that gave to the campaign. Its FEC page lists who sponsors it.',outside:'Outside group that reported spending on this race to the FEC. It may not coordinate with the campaign.'};
 // The groups behind electioneering ads or communication costs, largest first. sides: show for and against.
 const spendTable=(x,sides)=>x?.count?`<p class="live-meta"><b>${cash(x.total)}</b> in ${x.count} item${x.count===1?'':'s'} from ${x.groups.length} group${x.groups.length===1?'':'s'}${sides?` · ${cash(x.for)} for them, ${cash(x.against)} against`:''}</p>
-  <div class="tablewrap"><table><thead><tr><th>Group</th>${sides?'<th class="r">For</th><th class="r">Against</th>':'<th class="r">Amount</th>'}<th class="r">Items</th><th>Dates</th></tr></thead><tbody>${x.groups.slice(0,20).map(g=>`<tr><td>${link(g.url,g.group)}${g.fewDonors?' <span class="live-warning">lists few donors</span>':''}</td>${sides?`<td class="r">${cash(g.for)}</td><td class="r">${cash(g.against)}</td>`:`<td class="r">${cash(g.amount)}</td>`}<td class="r">${g.n}</td><td>${date(g.first)}${g.last&&g.last!==g.first?` – ${date(g.last)}`:''}</td></tr>`).join('')}</tbody></table></div>`
+  <div class="tablewrap"><table><thead><tr><th>Group</th>${sides?'<th class="r">For</th><th class="r">Against</th>':'<th class="r">Amount</th>'}<th class="r">Items</th><th>Dates</th></tr></thead><tbody>${x.groups.slice(0,20).map(g=>`<tr><td>${link(g.url,g.group)}${g.fewDonors?' <span class="live-warning">lists few donors</span>':''}${npChip(npOf(window.NONPROFITS,{name:g.group}))}</td>${sides?`<td class="r">${cash(g.for)}</td><td class="r">${cash(g.against)}</td>`:`<td class="r">${cash(g.amount)}</td>`}<td class="r">${g.n}</td><td>${date(g.first)}${g.last&&g.last!==g.first?` – ${date(g.last)}`:''}</td></tr>`).join('')}</tbody></table></div>`
   :'<div class="live-empty">None reported to the FEC.</div>';
 const LD203={feca:'Campaign gifts',he:'Events in their honor',me:'Meetings and events',ple:'Presidential library',pic:'Inauguration'};
 const org=(name,about)=>about?`<span class="org" data-tip="${esc(`${name}: ${about}`)}">${esc(name)}</span>`:esc(name);
@@ -205,7 +206,7 @@ const SECTIONS={
       <p class="live-meta">From ${x.lobbyists.people} lobbyist${x.lobbyists.people===1?'':'s'}: ${cash(x.lobbyists.amount)} in ${x.lobbyists.gifts} gift${x.lobbyists.gifts===1?'':'s'}.</p>
       ${x.organizations.length?`<div class="tablewrap"><table><thead><tr><th>Lobbying organization (its own gifts)</th><th class="r">Amount</th><th class="r">Gifts</th></tr></thead><tbody>${x.organizations.slice(0,15).map(o=>`<tr><td>${link(o.url,o.name)}</td><td class="r">${cash(o.amount)}</td><td class="r">${o.n}</td></tr>`).join('')}</tbody></table></div>`:''}`
       :'<div class="live-empty">No lobbyist gift names them in the reports read.</div>'}`;}},
-  'outside-groups':{title:'Groups behind outside spending',body:x=>ul(x.rows,r=>r.ein?li(r.url,r.name,`Nonprofit (501(c)(${esc(r.subsection??'?')})) · ${r.filings.map(f=>`${esc(f.year)}: revenue ${cash(f.revenue)}`).join('; ')}`):li(r.irs527,r.group,esc(r.review)+' · search the IRS 527 filings'),'No outside spenders checked yet.')},
+  'outside-groups':{title:'Groups behind outside spending',body:x=>ul(x.rows,r=>r.ein?(o=>o?`<li>${link(r.url,r.name)}<small>${npLine(o,{lead:'Its'})}</small><details class="np-more"><summary class="small">Its tax return: political groups it paid, grants it made, grants it got</summary>${npDetails(o)}</details></li>`:li(r.url,r.name,`Nonprofit (501(c)(${esc(r.subsection??'?')})) · ${r.filings.map(f=>`${esc(f.year)}: revenue ${cash(f.revenue)}`).join('; ')}`))(npOf(window.NONPROFITS,{ein:r.ein})):li(r.irs527,r.group,esc(r.review)+' · search the IRS 527 filings'),'No outside spenders checked yet.')},
 };
 // Days from trade to disclosure, and late, for trades not reviewed yet (the same 45-day rule as the grade).
 const tradeDays=x=>x.map(t=>{const days=t.filed&&t.traded?Math.round((Date.parse(t.filed)-Date.parse(t.traded))/864e5):null;return {...t,company:t.asset||t.ticker,days,missing:!t.filed,late:!t.filed||days>LATE_DAYS};});
