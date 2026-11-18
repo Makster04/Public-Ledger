@@ -2114,17 +2114,17 @@ const m1=n=>{if(n==null)return '—';const a=Math.abs(n),sg=n<0?'−':'';return 
 const worth=(lo,hi)=>hi==null?`Over ${m1(lo)}`:lo===hi?m1(lo):`${m1(lo)} – ${m1(hi)}`;
 function wealthTiles(s,w){
   const wait=w===undefined?'Loading…':w===null?'Refresh unavailable':'Not read yet',president=!!s.office,member=!!s.bioguide;
-  const nw=w?.netWorth,st=w?.stocks,tr=w?.trades,na=(t,label,sub)=>`<div class="hc-mt"><b class="hc-na">${t}</b><span>${label}</span><small>${sub}</small></div>`;
+  const nw=w?.netWorth,st=w?.stocks,tr=w?.trades,na=(t,label,sub)=>`<div class="hc-mt"><div class="hc-gl">${label}</div><b class="hc-na">${t}</b><small>${sub}</small></div>`;
   const netWorth=president?na('On profile','Net worth','a president files OGE reports, on the profile')
-    :nw?`<div class="hc-mt"><b class="hc-range">${worth(nw.low,nw.high)}</b><span>Net worth</span><small>${nw.year?`${esc(nw.year)} annual report`:'latest annual report'}${nw.was?` · was ${worth(nw.was.low,nw.was.high)} in ${esc(nw.was.year)}`:''}</small></div>`
+    :nw?`<div class="hc-mt"><div class="hc-gl">Net worth</div><b class="hc-range">${worth(nw.low,nw.high)}</b><small>${nw.year?`${esc(nw.year)} annual report`:'latest annual report'}${nw.was?` · was ${worth(nw.was.low,nw.was.high)} in ${esc(nw.was.year)}`:''}</small></div>`
     :na(wait,'Net worth',member?'from their annual financial disclosure':'from their candidate financial report, once read');
   const stocks=president?na('On profile','Stocks owned','from OGE reports, on the profile')
-    :st?.blindTrust?`<div class="hc-mt"><b>Blind trust</b><span>Stocks owned</span><small>a qualified blind trust holds them${st.year?` · ${esc(st.year)} report`:''}</small></div>`
-    :st&&st.value!=null?`<div class="hc-mt"><b>${m1(st.value)}</b><span>Stocks owned</span><small>${st.count?`in ${st.count} compan${st.count===1?'y':'ies'}`:'no individual stocks'}${st.year?` · ${esc(st.year)} annual report`:''}</small></div>`
+    :st?.blindTrust?`<div class="hc-mt"><div class="hc-gl">Stocks owned</div><b>Blind trust</b><small>a qualified blind trust holds them${st.year?` · ${esc(st.year)} report`:''}</small></div>`
+    :st&&st.value!=null?`<div class="hc-mt"><div class="hc-gl">Stocks owned</div><b>${m1(st.value)}</b><small>${st.count?`in ${st.count} compan${st.count===1?'y':'ies'}`:'no individual stocks'}${st.year?` · ${esc(st.year)} annual report`:''}</small></div>`
     :st?na('Can\'t total','Stocks owned',/open-ended/.test(st.why||'')?'a stock on their report has an open-ended value':'their report can\'t be read for this'):na(wait,'Stocks owned',member?'from their annual financial disclosure':'from their candidate financial report, once read');
   const trades=president?na('On profile','Stock trades','from OGE reports, on the profile')
     :!member&&!tr?na('Not covered','Stock trades','trade reports cover members of Congress')
-    :tr?`<div class="hc-mt"><b>${tr.n.toLocaleString('en-US')}</b><span>Stock trades</span><small>this cycle${tr.late?` · ${tr.late} filed late`:tr.n?' · none filed late':''}</small></div>`
+    :tr?`<div class="hc-mt"><div class="hc-gl">Stock trades</div><b>${tr.n.toLocaleString('en-US')}</b><small>this cycle${tr.late?` · ${tr.late} filed late`:tr.n?' · none filed late':''}</small></div>`
     :na(wait,'Stock trades','from their trade reports');
   return `<div class="hc-money hc-wealth">${netWorth}${stocks}${trades}</div>`;
 }
