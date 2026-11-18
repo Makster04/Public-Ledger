@@ -98,13 +98,13 @@ test('the funding overview on the card: the shares, a donut, the total, and the 
   assert.match(svg,tag('WHERE THE \\$22\\.47M CAME FROM · Jan 2025 – Oct 2026 · FEC'));
   assert.equal([...svg.matchAll(/<path d="M[^"]+A[^"]+Z" fill="#[0-9a-f]{6}" stroke="#121519" stroke-width="2"/g)].length,10,'a ring piece for each gift size and each other source with money');
   // The trackers: ✕ took some, ✓ none, ? not read yet; super PAC spending under them; no evidence box, its words in the strip.
-  for(const t of ['MAJOR LOOKOUTS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE','AIPAC','\\$3\\.36M','\\$9,500','\\$0','\\$12,500','NOT READ YET','SUPER PAC: \\$1\\.25M AGAINST','SUPER PAC: \\$400,000 FOR'])assert.match(svg,tag(t));
+  for(const t of ['TRACKING MAJOR SUPER PACS · PAC CHECKS AND GIFTS ROUTED THROUGH EACH, THIS CYCLE','AIPAC','\\$3\\.36M','\\$9,500','\\$0','\\$12,500','NOT READ YET','SUPER PAC: \\$1\\.25M AGAINST','SUPER PAC: \\$400,000 FOR'])assert.match(svg,tag(t));
   assert.match(svg,tag('\\$3\\.36M','fill="#ff8a8a"'));assert.match(svg,tag('\\$0','fill="#5fe39a"'));
   assert.doesNotMatch(svg,/SEE THE EVIDENCE/);assert.match(svg,tag('PUBLIC LEDGER · RESEARCH SNAPSHOT: OCT 2, 2026'));assert.match(svg,tag('A GRADE IS NOT A CLEARANCE\\. MISSING DATA IS NOT ZERO\\.'));
   const noSizes=renderScorecardSvg({...model,funding:fundingParts(camp),trackers});assert.match(noSizes,tag('GIFT SIZES NOT READ YET'));
   assert.equal([...noSizes.matchAll(/stroke="#121519" stroke-width="2" fill-rule/g)].length,5,'individuals in one piece');
   // Without a campaign total (or its split), the evidence box as before.
-  const none=renderScorecardSvg({...model,trackers});assert.match(none,tag('SEE THE EVIDENCE, NOT JUST THE LETTER\\.'));assert.doesNotMatch(none,/FUNDING OVERVIEW|MAJOR LOOKOUTS/);
+  const none=renderScorecardSvg({...model,trackers});assert.match(none,tag('SEE THE EVIDENCE, NOT JUST THE LETTER\\.'));assert.doesNotMatch(none,/FUNDING OVERVIEW|TRACKING MAJOR SUPER PACS/);
 });
 
 test('the card\'s emojis: each tracker\'s as its icon with the mark as a badge, and the reform pledges\' issue emojis; still 4:5',()=>{

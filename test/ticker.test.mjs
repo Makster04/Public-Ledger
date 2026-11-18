@@ -85,7 +85,7 @@ test('the news build\'s items: grade changes, promise checks, the trackers\' PAC
     'Marshall (R) Keeps Their Word D → B (67.0% → 85.0%): 10 more promises checked, 1 broken','Ossoff (D) Keeps Their Word: C (74.0%), 23 promises decided',
     'Collins (R) Shows Up: no longer graded (their record changed)','Booker (D): drug decriminalization promise (Apr 2021), partially kept',
     'Big Defense 🪖 · The Boeing Company PAC gave $5,000 each to Clyburn (D), Moolenaar (R), Meng (D), Hagerty (R) and 1 more',
-    'Big Pharma + Insurance 💊 · Peraton Corp. PAC gave $1,000 to Clark (D)',
+    'Big Pharma 💊 · Peraton Corp. PAC gave $1,000 to Clark (D)',
     'Crypto 🤑 · Defend American Jobs spent $2.65M against Osborn (I), Nebraska Senate',
     'Pro-Israel Lobby 🇮🇱 · United Democracy Project spent $73,834 for Smith (R), TX-9']);
   assert.deepEqual(items.map(x=>x.tag),['Grade change','Newly graded','Grade change','Promise check','Lobby money','Lobby money','Super PAC','Super PAC']);

@@ -1,9 +1,9 @@
 // The trackers (public/trackers.js): the seven approved lobbies, how a campaign's money from each is counted for the
-// Summary of Major Lookouts (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
+// Tracking Major Super PACs box (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {TRACKERS,TRACKER,isTrackerPac,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,isOwnSuperPac,trackerOutside,ownSuperPacSpending} from '../public/trackers.js';
+import {TRACKERS,TRACKER,isTrackerPac,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,isOwnSuperPac,trackerOutside,ownSuperPacSpending,bulkUnread} from '../public/trackers.js';
 import {bundledBox} from '../public/money-map.js';
 
 const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
@@ -11,11 +11,13 @@ const read=f=>fs.readFileSync(new URL(f,import.meta.url),'utf8');
 const line=(name,amount,cid=null)=>({cid,name,amount});
 const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});
 
-test('seven trackers in the approved order, each with its PACs on file and none shared',()=>{
-  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','oil','tech','crypto','defense','wallstreet']);
-  assert.deepEqual(TRACKERS.map(t=>t.name),['Pro-Israel Lobby','Big Pharma + Insurance','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
+test('eight trackers in the approved order, each with its PACs on file and none shared',()=>{
+  assert.deepEqual(TRACKERS.map(t=>t.key),['aipac','pharma','insurers','oil','tech','crypto','defense','wallstreet']);
+  assert.deepEqual(TRACKERS.map(t=>t.name),['Pro-Israel Lobby','Big Pharma','Health Insurers + PBMs','Big Oil','Big Tech + AI','Crypto','Big Defense','Wall Street']);
   const ids=TRACKERS.flatMap(t=>t.pacIds);
   assert.equal(new Set(ids).size,ids.length,'no committee counts for two trackers by ID');
+  // (and no drugmaker's or insurer's PAC is caught by the other health tracker's patterns)
+  for(const id of [...TRACKER.pharma.pacIds,...TRACKER.insurers.pacIds])assert.equal(['pharma','insurers'].filter(k=>TRACKER[k].patterns.some(r=>r.test(research.pacCommittees[id][0]))).length,1,id);
   for(const t of TRACKERS)for(const id of t.pacIds){
     const c=research.pacCommittees[id];assert.ok(c,`${t.key}: ${id} is on file`);
     assert.ok(t.patterns.some(r=>r.test(c[0])),`${t.key}: ${c[0]} matches its own patterns too`);
@@ -32,13 +34,16 @@ test('who is in and who is out, as approved',()=>{
   // Oil: Koch, coal and mining, and gas utilities are out.
   for(const n of ['EXXON MOBIL CORPORATION POLITICAL ACTION COMMITTEE','CHEVRON EMPLOYEES POLITICAL ACTION COMMITTEE','AMERICAN PETROLEUM INSTITUTE PAC','VALERO ENERGY CORPORATION PAC'])assert.ok(caught('oil',n),n);
   for(const n of ['KOCH INDUSTRIES INC POLITICAL ACTION COMMITTEE (KOCHPAC)','PEABODY ENERGY PAC','NATIONAL MINING ASSOCIATION PAC','ATMOS ENERGY CORPORATION PAC','SHELLEY FOR CONGRESS'])assert.ok(!caught('oil',n),n);
-  // Pharma + Insurance: drugmakers, health insurers, the PBMs and their groups; devices, distributors, hospitals and
-  // drugstore chains are out (CVS Health is in, as Aetna's and Caremark's owner).
-  for(const n of ['PFIZER INC. PAC','AMGEN INC. POLITICAL ACTION COMMITTEE','PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA PAC','UNITEDHEALTH GROUP INCORPORATED PAC (UNITEDHEALTH GROUP PAC)','CVS HEALTH PAC',
-    'THE CIGNA GROUP EMPLOYEE POLITICAL ACTION COMMITTEE','BLUEPAC - BLUE CROSS BLUE SHIELD ASSOCIATION PAC','CAREFIRST BLUECROSS BLUESHIELD ASSOCIATES FEDERAL PAC','AMERICA\'S HEALTH INSURANCE PLANS, INC. PAC (AHIP PAC)',
-    'PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (PCMA PAC)','MOLINA HEALTHCARE, INC. PAC'])assert.ok(caught('pharma',n),n);
-  for(const n of ['MEDTRONIC INC PAC','MCKESSON CORPORATION EMPLOYEES POLITICAL FUND','WALGREEN CO PAC','AMERICAN HOSPITAL ASSOCIATION PAC','HCA HEALTHCARE PAC','MOLINARO VICTORY COMMITTEE','SHIELD AI POLITICAL ACTION COMMITTEE (SAIPAC)'])assert.ok(!caught('pharma',n),n);
-  assert.equal(TRACKER.pharma.card,'Pharma + Ins.','the report card\'s shorter label');
+  // Big Pharma: the drugmakers and their groups. Health Insurers + PBMs (split off 2026-11-18): the insurers, the PBMs
+  // and their groups (CVS Health is there, as Aetna's and Caremark's owner). Devices, distributors, hospitals and
+  // drugstore chains are in neither.
+  const drugs=['PFIZER INC. PAC','AMGEN INC. POLITICAL ACTION COMMITTEE','PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA PAC'];
+  const plans=['UNITEDHEALTH GROUP INCORPORATED PAC (UNITEDHEALTH GROUP PAC)','CVS HEALTH PAC','THE CIGNA GROUP EMPLOYEE POLITICAL ACTION COMMITTEE','BLUEPAC - BLUE CROSS BLUE SHIELD ASSOCIATION PAC',
+    'CAREFIRST BLUECROSS BLUESHIELD ASSOCIATES FEDERAL PAC','AMERICA\'S HEALTH INSURANCE PLANS, INC. PAC (AHIP PAC)','PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (PCMA PAC)','MOLINA HEALTHCARE, INC. PAC'];
+  for(const n of drugs){assert.ok(caught('pharma',n),n);assert.ok(!caught('insurers',n),n);}
+  for(const n of plans){assert.ok(caught('insurers',n),n);assert.ok(!caught('pharma',n),n);}
+  for(const n of ['MEDTRONIC INC PAC','MCKESSON CORPORATION EMPLOYEES POLITICAL FUND','WALGREEN CO PAC','AMERICAN HOSPITAL ASSOCIATION PAC','HCA HEALTHCARE PAC','MOLINARO VICTORY COMMITTEE','SHIELD AI POLITICAL ACTION COMMITTEE (SAIPAC)'])assert.ok(!caught('pharma',n)&&!caught('insurers',n),n);
+  assert.equal(TRACKER.insurers.card,'Insurers','the report card\'s shorter label (eight fit in its row)');
   // Wall Street: big banks, investment firms, private equity, exchanges, card companies and their national groups; community
   // banks, state bankers associations, credit unions and insurers are out.
   for(const n of ['JPMORGAN CHASE & CO. FEDERAL POLITICAL ACTION COMMITTEE','THE GOLDMAN SACHS GROUP, INC. POLITICAL ACTION COMMITTEE','AMERICAN BANKERS ASSOCIATION PAC (BANKPAC)','THE CARLYLE GROUP INC. PAC (AKA \'CARLYLE PAC\')',
@@ -98,8 +103,18 @@ test('the Pro-Israel Lobby: routed gifts count, AIPAC\'s own PAC checks fill in 
 });
 
 test('lookouts: one line a tracker, in order',()=>{
-  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true,donors:{}});
-  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500],['wallstreet','none',0]]);
+  const L=lookouts({pacLines:[line('PFIZER INC. PAC',5000),line('HUMANA INC. POLITICAL ACTION COMMITTEE',1500),line('LOCKHEED MARTIN CORPORATION EMPLOYEES\' POLITICAL ACTION COMMITTEE',2500,'C00303024')],routed:{aipac:100},routedKnown:true,donors:{}});
+  assert.deepEqual(L.map(x=>[x.key,x.status,x.total]),[['aipac','took',100],['pharma','took',5000],['insurers','took',1500],['oil','none',0],['tech','none',0],['crypto','none',0],['defense','took',2500],['wallstreet','none',0]]);
+  // A tracker the bulk file can't answer for yet waits instead of reading as none.
+  assert.deepEqual(lookouts({pacLines:[],routed:{},routedKnown:true,donors:{},unread:['pharma','insurers']}).filter(x=>x.status==='waiting').map(x=>x.key),['pharma','insurers']);
+});
+
+test('a bulk file built before the split can\'t answer for Big Pharma or the insurers',()=>{
+  assert.equal(bulkUnread({trackers:{aipac:{},pharma:{},oil:{}}},'pharma'),true,'Big Pharma\'s total still holds the insurers\'');
+  assert.equal(bulkUnread({trackers:{aipac:{},pharma:{},oil:{}}},'insurers'),true);
+  assert.equal(bulkUnread({trackers:{aipac:{},pharma:{},oil:{}}},'oil'),false);
+  assert.equal(bulkUnread({trackers:{aipac:{},pharma:{},insurers:{},oil:{}}},'pharma'),false,'built after: both are read');
+  assert.equal(bulkUnread(null,'oil'),true);
 });
 
 test('PAC lines: research.json\'s with full committee names, merged with the refresh\'s at the larger amount',()=>{
@@ -147,7 +162,8 @@ test('super PACs: its own by name, and those its companies gave to, with spendin
 test('where they show: the lookouts beside the score, the tracker tabs, the Trackers page, and the bundled box keeps AIPAC',()=>{
   const app=read('../public/app.js'),html=read('../public/index.html'),css=read('../public/remake.css');
   assert.match(app,/from '\.\/trackers\.js'/);
-  assert.match(app,/<h3>Summary of Major Lookouts<\/h3>/);
+  assert.match(app,/<h3>Tracking Major Super PACs<\/h3>/);
+  assert.ok(!/Summary of Major Lookouts<\/h3>/.test(app),'the old name is gone from the page');
   assert.match(app,/No PAC money or gifts from \$\{esc\(x\.name\)\}/);
   assert.match(app,/bundledBox\(s,mm\)\+lookoutsBox\(/,'the lookouts go right under "Bundled through groups"');
   assert.match(app,/else if\(m\[1\]==='trackers'\)\{renderTrackers\(/);

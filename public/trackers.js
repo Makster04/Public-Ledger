@@ -1,6 +1,8 @@
-// The trackers: seven lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
-// "Summary of Major Lookouts") and on the Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
-// Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13; AIPAC widened to the Pro-Israel Lobby, 2026-11-14).
+// The trackers: eight lobbies whose money the site follows on each profile (the Big Money Independence tab's "Trackers" and its
+// "Tracking Major Super PACs", called the Summary of Major Lookouts until 2026-11-18) and on the
+// Trackers page. Shown only; no grade uses them. Approved 2026-11-11 (Big Defense,
+// Wall Street, and insurers and PBMs added to Big Pharma, 2026-11-13; AIPAC widened to the Pro-Israel Lobby, 2026-11-14; the insurers
+// and PBMs split off from Big Pharma as Health Insurers + PBMs, 2026-11-18).
 //
 // For each tracker:
 //   pacIds / patterns   its PACs: the FEC committee IDs on file (checked by hand), and name patterns for committees not on
@@ -15,12 +17,12 @@
 //   pacsLabel, routedLabel  how the page names its PACs and the groups whose passed-on gifts count, when "<name>'s PACs"
 //                       doesn't read well
 //   superPacs           its own super PACs, by name (their spending for and against a candidate); superPacIds: their
-//                       FEC committee IDs where known. superPacLine: the Summary of Major Lookouts shows their spending
+//                       FEC committee IDs where known. superPacLine: Tracking Major Super PACs shows their spending
 //                       as an extra line (approved 2026-11-11 for Crypto and Big Tech + AI, whose money mostly arrives
 //                       that way, and then for AIPAC's United Democracy Project); it never changes the mark
 //   industries          the employee-gift groups the refresh reads for it (public/industries.js, "industry-gifts")
 //   companies, groups   who it follows, as listed on the page
-//   icon                its emoji, after its name on the Summary of Major Lookouts (approved 2026-11-13)
+//   icon                its emoji, after its name on Tracking Major Super PACs (approved 2026-11-13)
 //   emoji               the one the report card shows as its icon, without the 🎁 (the row's heading says "gifts")
 // A lookout counts what the campaign took: PAC checks, and gifts the group routed to it. Employees' own gifts are shown
 // beside it, and super PAC spending only in the tracker: a super PAC spends on its own, often against the candidate.
@@ -70,17 +72,25 @@ export const TRACKERS=[
     pacsLabel:'the pro-Israel PACs',routedLabel:'AIPAC, NORPAC, JACPAC and the RJC',
     superPacs:['United Democracy Project'],superPacLine:true,industries:[],
     companies:[],groups:['AIPAC PAC','NORPAC','JACPAC','To Protect Our Heritage PAC','U.S. Israel PAC (USI PAC)','CityPAC','DMFI PAC','Republican Jewish Coalition PAC']},
-  {key:'pharma',icon:'💊🎁',emoji:'💊',name:'Big Pharma + Insurance',card:'Pharma + Ins.',long:'Big Pharma + Insurance (drugmakers, health insurers and PBMs)',
-    about:'Drugmakers, health insurers and the pharmacy benefit managers (PBMs) the biggest insurers own, and their trade groups. Drugmakers and insurers often lobby against each other on drug prices; both give most to the health committees. Medical device makers, distributors, hospitals and drugstore chains aren\'t included.',
-    pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345',
-      'C00084061','C00085316','C00161141','C00194746','C00197228','C00199711','C00271007','C00274431','C00276311','C00384818','C00388819','C00397851','C00430256','C00450056','C00457242'],
-    patterns:['\\bPFIZER\\b','\\bMERCK\\b','JOHNSON (AND|&) JOHNSON','\\bABBVIE\\b','ELI LILLY','BRISTOL[- ]MYERS','\\bAMGEN\\b','\\bGILEAD\\b','\\bREGENERON\\b','\\bVERTEX PHARM','\\bBIOGEN\\b','\\bMODERNA\\b','\\bNOVARTIS\\b','\\bSANOFI\\b','GLAXOSMITHKLINE|\\bGSK\\b','ASTRAZENECA','NOVO NORDISK','\\bGENENTECH\\b','\\bBAYER\\b','BOEHRINGER','\\bTAKEDA\\b','\\bTEVA\\b','\\bVIATRIS\\b','\\bORGANON\\b','PHARMACEUTICAL RESEARCH (AND|&) MANUFACTURERS|\\bPHRMA\\b','BIOTECHNOLOGY INNOVATION ORGANIZATION','ASSOCIATION FOR ACCESSIBLE MEDICINES',
-      // Health insurers and PBMs (added 2026-11-13).
-      'UNITEDHEALTH|\\bOPTUM\\b','ELEVANCE HEALTH|\\bANTHEM\\b','\\bCIGNA\\b','EXPRESS SCRIPTS','\\bHUMANA\\b','\\bCENTENE\\b','CVS HEALTH|\\bAETNA\\b|CAREMARK','MOLINA HEALTHCARE','BLUE ?CROSS|BLUE ?SHIELD|\\bBLUEPAC\\b','HEALTH CARE SERVICE CORP',
+  {key:'pharma',icon:'💊🎁',emoji:'💊',name:'Big Pharma',long:'Big Pharma (drugmakers)',
+    about:'Drugmakers and their trade groups. Medical device makers, distributors, hospitals and drugstore chains aren\'t included. The health insurers and the pharmacy benefit managers they own are their own tracker (split off Nov. 18, 2026), since they often lobby against drugmakers on drug prices.',
+    pacIds:['C00251876','C00536573','C00016683','C00010983','C00199257','C00097485','C00082792','C00468660','C00021972','C00199703','C00355677','C00396895','C00332395','C00420398','C00390351','C00424838','C00033969','C00281162','C00562264','C00035675','C00441733','C00780171','C00144345'],
+    patterns:['\\bPFIZER\\b','\\bMERCK\\b','JOHNSON (AND|&) JOHNSON','\\bABBVIE\\b','ELI LILLY','BRISTOL[- ]MYERS','\\bAMGEN\\b','\\bGILEAD\\b','\\bREGENERON\\b','\\bVERTEX PHARM','\\bBIOGEN\\b','\\bMODERNA\\b','\\bNOVARTIS\\b','\\bSANOFI\\b','GLAXOSMITHKLINE|\\bGSK\\b','ASTRAZENECA','NOVO NORDISK','\\bGENENTECH\\b','\\bBAYER\\b','BOEHRINGER','\\bTAKEDA\\b','\\bTEVA\\b','\\bVIATRIS\\b','\\bORGANON\\b','PHARMACEUTICAL RESEARCH (AND|&) MANUFACTURERS|\\bPHRMA\\b','BIOTECHNOLOGY INNOVATION ORGANIZATION','ASSOCIATION FOR ACCESSIBLE MEDICINES'].map(P),
+    routed:[],superPacs:[],industries:[],
+    companies:['Pfizer','Merck','Johnson & Johnson','AbbVie','Eli Lilly','Bristol Myers Squibb','Amgen','Gilead','Regeneron','Vertex','Biogen','Moderna','Novartis','Sanofi','GSK','AstraZeneca','Novo Nordisk','Genentech (Roche)','Bayer','Boehringer Ingelheim','Takeda','Teva','Viatris','Organon'],
+    groups:['PhRMA','BIO (Biotechnology Innovation Organization)','Association for Accessible Medicines']},
+  // Split from Big Pharma (2026-11-18): insurers and drugmakers often lobby against each other on drug prices and PBM
+  // rules. The three biggest PBMs belong to insurers (Optum Rx to UnitedHealth, Caremark to CVS Health, which also owns
+  // Aetna, and Express Scripts to Cigna), so they're here.
+  {key:'insurers',icon:'☂️🎁',emoji:'☂️',name:'Health Insurers + PBMs',card:'Insurers',long:'Health Insurers + PBMs (health insurers and the pharmacy benefit managers they own)',
+    about:'Health insurers, the pharmacy benefit managers (PBMs) the biggest of them own, and their trade groups. CVS Health is here as the owner of Aetna and Caremark; drugstore chains aren\'t otherwise included. Split off from Big Pharma on Nov. 18, 2026: insurers and drugmakers often lobby against each other on drug prices and PBM rules.',
+    pacIds:['C00084061','C00085316','C00161141','C00194746','C00197228','C00199711','C00271007','C00274431','C00276311','C00384818','C00388819','C00397851','C00430256','C00450056','C00457242'],
+    patterns:['UNITEDHEALTH|\\bOPTUM\\b','ELEVANCE HEALTH|\\bANTHEM\\b','\\bCIGNA\\b','EXPRESS SCRIPTS','\\bHUMANA\\b','\\bCENTENE\\b','CVS HEALTH|\\bAETNA\\b|CAREMARK','MOLINA HEALTHCARE','BLUE ?CROSS|BLUE ?SHIELD|\\bBLUEPAC\\b','HEALTH CARE SERVICE CORP',
       '\\bHIGHMARK\\b','GUIDEWELL','PREMERA','HORIZON HEALTHCARE SERVICES','CAREFIRST','AMERICA\'?S HEALTH INSURANCE PLANS|\\bAHIP\\b','PHARMACEUTICAL CARE MANAGEMENT|\\bPCMA\\b','PRIME THERAPEUTICS'].map(P),
     routed:[],superPacs:[],industries:[],
-    companies:['Pfizer','Merck','Johnson & Johnson','AbbVie','Eli Lilly','Bristol Myers Squibb','Amgen','Gilead','Regeneron','Vertex','Biogen','Moderna','Novartis','Sanofi','GSK','AstraZeneca','Novo Nordisk','Genentech (Roche)','Bayer','Boehringer Ingelheim','Takeda','Teva','Viatris','Organon','UnitedHealth Group (Optum Rx)','CVS Health (Aetna, Caremark)','Cigna (Express Scripts)','Elevance Health (Anthem)','Humana','Centene','Molina Healthcare','the Blue Cross Blue Shield plans','Prime Therapeutics'],
-    groups:['PhRMA','BIO (Biotechnology Innovation Organization)','Association for Accessible Medicines','AHIP (America\'s Health Insurance Plans)','Blue Cross Blue Shield Association','PCMA (the PBMs\' trade group)']},
+    pacsLabel:'the insurers\' and PBMs\' PACs',
+    companies:['UnitedHealth Group (Optum Rx)','CVS Health (Aetna, Caremark)','Cigna (Express Scripts)','Elevance Health (Anthem)','Humana','Centene','Molina Healthcare','the Blue Cross Blue Shield plans','Prime Therapeutics'],
+    groups:['AHIP (America\'s Health Insurance Plans)','Blue Cross Blue Shield Association','PCMA (the PBMs\' trade group)']},
   {key:'oil',icon:'🛢️🎁',emoji:'🛢️',name:'Big Oil',long:'Big Oil (oil and gas)',
     about:'Oil and gas producers, refiners, pipelines and LNG, oilfield services, and their trade groups. Koch Industries, coal and mining, and gas utilities aren\'t included.',
     pacIds:['C00035006','C00513549','C00121368','C00040394','C00755454','C00551184','C00109546','C00354753','C00342766','C00246306','C00035204','C00483677','C00430157','C00496307','C00112896','C00429662','C00039503','C00525055','C00035691','C00431932','C00686287','C00083857','C00116145','C00426569','C00415026','C00736421','C00488080','C00510016','C00721647','C00215384','C00135855','C00486779','C00151175','C00438754','C00705996','C00279224','C00496752','C00567081'],
@@ -128,6 +138,12 @@ export const TRACKERS=[
     companies:['JPMorgan Chase','Goldman Sachs','Morgan Stanley','Bank of America','Citigroup','Wells Fargo','U.S. Bancorp','PNC','Truist','Capital One','BNY','State Street','Northern Trust','Santander US','BlackRock','Vanguard','Fidelity','Invesco','Edward Jones','LPL Financial','Robinhood','Carlyle','Citadel Securities','Nasdaq','Intercontinental Exchange (NYSE)','CME Group','Cboe','Visa','Mastercard','American Express','Discover','Synchrony','Ally'],
     groups:['American Bankers Association (BankPAC)','Bank Policy Institute','Consumer Bankers Association','SIFMA','Investment Company Institute','American Investment Council (private equity)','Managed Funds Association (hedge funds)','Futures Industry Association']}];
 export const TRACKER=Object.fromEntries(TRACKERS.map(t=>[t.key,t]));
+// A bulk-file total (public/corporate-pacs.json, public/tracker-history.json, from npm run corporate:pacs) that can't be
+// used for this tracker: the file has no entry for it, or it was built before the insurers and PBMs were split off from
+// Big Pharma (Nov. 18, 2026), when Big Pharma's totals still held theirs. The next run writes both.
+export const bulkUnread=(file,key)=>!file?.trackers||!(key in file.trackers)||(key==='pharma'&&!('insurers' in file.trackers));
+// How many lobbies, in words, for the pages' text.
+export const LOBBY_COUNT=['no','one','two','three','four','five','six','seven','eight','nine','ten'][TRACKERS.length]||String(TRACKERS.length);
 
 const cents=n=>Math.round(n*100)/100;
 const upper=s=>String(s||'').toUpperCase();
@@ -157,7 +173,8 @@ export function mergePacLines(...lists){
 // donors: {donor key: amount}, the named donors' own checks to the campaign in the period, or null when not read.
 // status: took (some PAC checks, routed gifts or named donors' checks), none (none, with every needed record read),
 // waiting (not read yet: never shown as none).
-export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,direct=null,employees=null,donors=null}={}){
+// unread: trackers whose totals aren't usable yet (bulkUnread), which wait rather than read as none.
+export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,direct=null,employees=null,donors=null,unread=null}={}){
   const by=new Map();
   for(const l of pacLines||[])if(isTrackerPac(t,l)){const k=l.cid||upper(l.name);const o=by.get(k)||{cid:l.cid||null,name:l.name,amount:0,n:0,...(l.bulk?{bulk:true}:{})};o.amount=cents(o.amount+l.amount);o.n++;by.set(k,o);}
   for(const [g,gp] of Object.entries(t.groupPacs||{})){const a=Number(direct?.[g])||0;if(!(a>0))continue;
@@ -166,12 +183,14 @@ export function trackerMoney(t,{pacLines=null,routed=null,routedKnown=false,dire
   const rt=cents(t.routed.reduce((s,g)=>s+(Number(routed?.[g])||0),0));
   const named=(t.donors||[]).map(d=>({key:d.key,name:d.name,amount:cents(Number(donors?.[d.key])||0)})).filter(d=>d.amount>0).sort((a,b)=>b.amount-a.amount);
   const dn=cents(named.reduce((s,d)=>s+d.amount,0)),total=cents(pac+rt+dn);
-  const known=pacLines!=null&&(!t.routed.length||routedKnown)&&(!(t.donors||[]).length||donors!=null);
+  const known=pacLines!=null&&!(unread||[]).includes(t.key)&&(!t.routed.length||routedKnown)&&(!(t.donors||[]).length||donors!=null);
   const emp=t.industries.length&&employees?cents(t.industries.reduce((s,k)=>s+(Number(employees[k])||0),0)):null;
   return {key:t.key,name:t.name,pacs,pac,routed:rt,donors:dn,named,total,employees:emp,status:total>0?'took':known?'none':'waiting'};
 }
 // How the page names a tracker's PACs and the groups whose passed-on gifts count.
 export const pacsOf=t=>t.pacsLabel||`${t.name}'s PACs`;
+// "the companies and groups of <tracker>", written as a possessive only where the name reads well that way.
+export const ofTracker=t=>/s$/i.test(t.name)?`the companies and groups of ${t.name}`:`${t.name}'s companies and groups`;
 export const routedBy=t=>t.routedLabel||t.name;
 // Does this gift (an FEC Schedule A row: contributor_last_name, contributor_first_name, contributor_state, and the
 // employer, city and occupation) come from the named donor? The same last name, a first name starting as theirs does, one

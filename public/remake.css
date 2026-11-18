@@ -1273,7 +1273,7 @@ input, select { accent-color: var(--accent); }
   .wt-panel { padding: 12px 10px 6px; }
 }
 
-/* Trackers (public/trackers.js): the Summary of Major Lookouts beside the Big Money Independence score, the Trackers section's tabs,
+/* Trackers (public/trackers.js): Tracking Major Super PACs beside the Big Money Independence score, the Trackers section's tabs,
    and the Trackers page. */
 .lookouts .lk-list { list-style: none; margin: 0; padding: 0; }
 .lookouts .lk-ic { white-space: nowrap; }
@@ -1283,7 +1283,7 @@ input, select { accent-color: var(--accent); }
 .lk-took .lk-mark, .lk-mark.lk-took { color: var(--crit); }
 .lk-none .lk-mark, .lk-mark.lk-none { color: var(--good); }
 .lk-waiting .lk-mark, .lk-mark.lk-waiting { color: var(--muted); }
-/* The key under the Summary of Major Lookouts, laid out like the money map's "Bundled through groups" box. */
+/* The key under Tracking Major Super PACs, laid out like the money map's "Bundled through groups" box. */
 .lk-key { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
 .lk-key h4 { margin: 0 0 2px; font-family: var(--font-display); font-size: 1.02rem; font-weight: 800; color: var(--ink); }
 .lk-key .list { margin: 8px 0 0; padding-left: 18px; }
