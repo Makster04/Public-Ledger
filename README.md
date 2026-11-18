@@ -386,7 +386,7 @@ Money in a race isn't proof it changed a vote, and every page says so. The tab l
 
 ## Home cards
 
-Each card has **Dark Money Affiliated Scores** (Big Money Independence, Plays by the Rules and People First, each linking to its tab on the profile), then three tiles from their own disclosures: **Net worth** (the range on their newest annual financial disclosure, and the year before's), **Stocks owned** (the individual stocks on that report, at the middle of each value range, or "Blind trust") and **Stock trades** (this cycle's, with how many were filed more than 45 days after the trade), from `/api/cards` (`cardWealth` in `src/finance.mjs`, the same records the profile reads); then **Other Scores** (the Ideology lean, Keeps Their Word and Shows Up). Campaign money and outside spending are on each profile.
+Each card has three sections: **Dark Money Affiliated Scores** (Big Money Independence, Plays by the Rules and People First, each linking to its tab on the profile), **Other Scores** (the Ideology lean, Keeps Their Word and Shows Up), and **Wealth**, three tiles from their own disclosures: **Net worth** (the range on their newest annual financial disclosure, and the year before's), **Stocks owned** (the individual stocks on that report, at the middle of each value range, or "Blind trust") and **Stock trades** (this cycle's, with how many were filed more than 45 days after the trade), from `/api/cards` (`cardWealth` in `src/finance.mjs`, the same records the profile reads). Campaign money and outside spending are on each profile.
 
 ## Latest updates strip
 
