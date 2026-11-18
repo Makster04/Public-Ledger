@@ -18,3 +18,10 @@ Get It Done = 100% × min(1, their share of bills advanced ÷ their party's typi
 - **Excused absences** are removed, such as a documented medical or family leave.
 - **Minimums:** 50 roll-call votes for Attendance, 10 sponsored bills for Get It Done.
 - **Not graded:** delegates (D.C., Guam, the Virgin Islands, American Samoa, the Northern Mariana Islands) and Puerto Rico's Resident Commissioner, who can't vote on most House roll calls, such as final passage.
+
+## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
+
+- **Excused absences:** none has been reviewed yet for anyone, so every missed vote counts.
+- **Get It Done for everyone:** 72 people have it. Everyone else is graded on Attendance alone.
+- **Older votes:** roll calls are read from 2018 on. Earlier years can be added with `npm run attendance:build -- --from 2016`.
+- **Committee hearing attendance** isn't counted: there's no complete public record of it.

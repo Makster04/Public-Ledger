@@ -351,7 +351,9 @@ export async function getCards(env) {
   const rows=(await statement(env.DB,"SELECT j.subject,j.kind,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN ('campaign','outside')").all()).results,people={};
   for(const r of rows){
     const d=JSON.parse(r.payload),o=people[r.subject]||={};
-    if(r.kind==='campaign')o.campaign={receipts:d.receipts??null,cash:d.cash??null,start:d.start||null,end:d.end||null};
+    // (with every total a basic profile's campaign is built from, for the home cards' Big Money Independence)
+    if(r.kind==='campaign')o.campaign={receipts:d.receipts??null,cash:d.cash??null,start:d.start||null,end:d.end||null,
+      ...Object.fromEntries(['individual','itemized','unitemized','party','pac','transfers','candidate','loans','self','disbursements','debts','committee','source'].map(k=>[k,d[k]??null]))};
     else o.outside={support:d.support||0,oppose:d.oppose||0,through:d.through||null};
   }
   return {people};
