@@ -1,5 +1,5 @@
 import {getStatus,getProfile,getCards,getBills,getSuperPacs,getTicker,runRefresh,statement} from './refresh.mjs';
-import {getFinanceOverview} from './finance.mjs';
+import {getFinanceOverview,getCardWealth} from './finance.mjs';
 import {getConsistency} from './consistency.mjs';
 const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers});
@@ -8,7 +8,12 @@ export default {
     const url=new URL(request.url);
     try{
       if(url.pathname==='/api/status'&&request.method==='GET')return json(await getStatus(env));
-      if(url.pathname==='/api/cards'&&request.method==='GET')return json(await getCards(env));
+      if(url.pathname==='/api/cards'&&request.method==='GET'){
+        // Campaign and outside money, and the home cards' Net worth, Stocks owned and Stock trades.
+        const cards=await getCards(env),w=await getCardWealth(env);
+        for(const [id,x] of Object.entries(w.people))(cards.people[id]||={}).wealth=x;
+        return json(cards);
+      }
       if(url.pathname==='/api/superpacs'&&request.method==='GET')return json(await getSuperPacs(env));
       if(url.pathname==='/api/ticker'&&request.method==='GET')return json(await getTicker(env));
       if(url.pathname==='/api/finance-overview'&&request.method==='GET')return json(await getFinanceOverview(env));
