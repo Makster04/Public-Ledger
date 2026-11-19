@@ -7,47 +7,6 @@
   "reviewedAt": "October 2, 2026",
   "people": [
     {
-      "id": "sullivan",
-      "name": "Dan Sullivan",
-      "short": "Sullivan",
-      "bioguide": "S001198",
-      "lis": "S383",
-      "fecCand": "S4AK00214",
-      "fecCmte": "C00570994",
-      "chamber": "S",
-      "state": "AK",
-      "race": "S-AK",
-      "ids": {
-        "govtrack": 412665,
-        "opensecrets": "N00035774",
-        "votesmart": 114964,
-        "wikidata": "Q5218668",
-        "ballotpedia": "Daniel S. Sullivan",
-        "wikipedia": "Dan Sullivan (U.S. senator)",
-        "icpsr": 41500,
-        "cspan": 1023262,
-        "thomas": "02290"
-      },
-      "social": {
-        "twitter": "SenDanSullivan",
-        "facebook": "SenDanSullivan",
-        "youtube_id": "UC7tXCm8gKlAhTFo2kuf5ylw",
-        "instagram": "sen_dansullivan",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": null,
-      "official": {
-        "site": "https://www.sullivan.senate.gov",
-        "feed": null
-      },
-      "stateLegYears": null
-    },
-    {
       "id": "ossoff",
       "name": "Jon Ossoff",
       "short": "Ossoff",

@@ -6,6 +6,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from '../public/results.js';
+// Alaska's race as the site had it on Nov. 11, still counting (called Nov. 17), for the rules on a race not called yet.
+import akCountingFile from './fixtures/alaska-counting-2026-11-11.json' with {type:'json'};
+const AK_COUNTING=akCountingFile.result;
 const D=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
@@ -24,8 +27,10 @@ test('a decided race has one winner and everyone else lost; a race not called ye
   const me=race('S-ME');
   assert.equal(outcomeOf(me,'jackson'),'won');assert.equal(outcomeOf(me,'collins'),'lost');
   const mt=race('S-MT');assert.deepEqual(mt.keys.map(k=>outcomeOf(mt,k)),['lost','won','lost'],'two lost in Montana');
-  const ak=race('S-AK');assert.equal(raceResult(ak).decided,false);
-  assert.deepEqual(ak.keys.map(k=>outcomeOf(ak,k)),['pending','pending']);
+  const ak=race('S-AK');assert.equal(raceResult(ak).decided,true,'called for Peltola on Nov. 17');
+  assert.deepEqual(ak.keys.map(k=>outcomeOf(ak,k)),['lost','won']);
+  const counting={...ak,result:AK_COUNTING};assert.equal(raceResult(counting).decided,false);
+  assert.deepEqual(counting.keys.map(k=>outcomeOf(counting,k)),['pending','pending'],'a race not called yet: as Alaska was on Nov. 11');
   const va=race('H-VA-02');assert.equal(outcomeOf(va,'H6VA02198'),'won','toss-up nominees are known by their FEC ID');assert.equal(outcomeOf(va,'H2VA02064'),'lost');
   assert.equal(outcomeOf({id:'x',keys:['a']},'a'),null,'no result on file');
   for(const o of ['won','lost','pending'])assert.ok(OUTCOME[o].label&&OUTCOME[o].cls);
@@ -39,7 +44,8 @@ test('the seat notes: who takes office when, and how long a losing incumbent ser
   // Ohio's special election: the winner takes the seat once the result is certified.
   assert.equal(seatNote(race('S-OH'),'brown'),'Takes the seat once the state certifies the result');
   assert.equal(seatNote(race('S-OH'),'husted',{incumbent:true,winner:'Sherrod Brown'}),'Serves until Sherrod Brown is sworn in, after the state certifies the result');
-  assert.equal(seatNote(race('S-AK'),'sullivan',{incumbent:true}),'','nothing while not called');
+  assert.equal(seatNote({...race('S-AK'),result:AK_COUNTING},'sullivan',{incumbent:true}),'','nothing while not called');
+  assert.equal(seatNote(race('S-AK'),'sullivan',{incumbent:true}),'Serves until Jan. 3, 2027');assert.equal(seatNote(race('S-AK'),'peltola'),'Takes office Jan. 3, 2027');
 });
 
 test('the 2026 line under a name turns past tense once the race is decided',()=>{
@@ -82,7 +88,9 @@ test('the count of called races names the ones not called yet',()=>{
   const c=resultCounts([...D.races,...D.liteRaces]);
   const n=D.races.length+D.liteRaces.length;
   assert.equal(c.total,n);assert.equal(c.missing,0);assert.equal(c.decided+c.pending.length,n);
-  assert.deepEqual(c.pending.map(r=>r.id).sort(),['S-AK']);
+  assert.deepEqual(c.pending.map(r=>r.id).sort(),[],'every race called (Alaska last, on Nov. 17)');
+  const was=resultCounts([...D.races.map(r=>r.id==='S-AK'?{...r,result:AK_COUNTING}:r),...D.liteRaces]);
+  assert.deepEqual(was.pending.map(r=>r.id),['S-AK'],'a race still counting is named');
 });
 
 test('the races page, profiles and home cards show the results, and the methodology explains them',()=>{
@@ -119,7 +127,8 @@ test('flip or hold: the winner against the party that held the seat before the e
   assert.equal(seatChange(race('S-GA'),'D').label,'Remains Blue');assert.equal(seatChange(race('S-AL'),'R').label,'Remains Red');
   assert.equal(seatChange(race('S-IA'),'D').label,'Flip +1','an open seat: Joni Ernst held it');
   assert.equal(seatChange(race('H-FL-22'),'D').label,'Remains Blue','a redrawn district: its current member is a Democrat');
-  assert.equal(seatChange(race('S-AK'),'D'),null,'nothing until the race is called');
+  assert.equal(seatChange({...race('S-AK'),result:AK_COUNTING},'D'),null,'nothing until the race is called');
+  assert.equal(seatChange(race('S-AK'),'D').label,'Flip +1','Peltola takes the seat Dan Sullivan held');
   assert.match(fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),/class="rc-change \$\{ch\.flip\?'flip':'hold'\}/);
 });
 

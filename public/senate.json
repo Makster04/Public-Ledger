@@ -22,23 +22,6 @@
    "fecCand": "S4AK00099"
   },
   {
-   "id": "sullivan",
-   "profiled": true,
-   "name": "Dan Sullivan",
-   "short": "Sullivan",
-   "party": "R",
-   "state": "AK",
-   "stateName": "Alaska",
-   "bioguide": "S001198",
-   "lis": "S383",
-   "class": 2,
-   "since": "2015-01-06",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://www.sullivan.senate.gov",
-   "fecCand": "S4AK00214"
-  },
-  {
    "id": "britt",
    "profiled": false,
    "name": "Katie Boyd Britt",
@@ -1621,6 +1604,11 @@
   }
  ],
  "lostSeats": [
+  {
+   "state": "AK",
+   "party": "R",
+   "until": "2027-01-03"
+  },
   {
    "state": "KS",
    "party": "R",

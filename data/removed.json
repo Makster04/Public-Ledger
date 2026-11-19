@@ -1,6 +1,6 @@
 {
  "about": "People taken off the site (scripts/remove-people.mjs): their profiles and records are removed, and the directory and ID builders skip them. Race results keep their names, vote shares and photos, without a profile link. Added Nov. 19, 2026: everyone the site marked \"Lost\" in the Nov. 3, 2026 general election (Alaska's Senate race was not called yet).",
- "reason": "Lost the Nov. 3, 2026 general election",
+ "reason": "Lost the Nov. 3, 2026 general election (Alaska's Senate race, called Nov. 17, added Nov. 19)",
  "added": "2026-11-19",
  "people": [
   {
@@ -650,6 +650,17 @@
    "fecCand": "H0WI03175",
    "profile": "basic",
    "race": null,
+   "inOffice": true
+  },
+  {
+   "id": "sullivan",
+   "name": "Dan Sullivan",
+   "party": "R",
+   "chamber": "S",
+   "bioguide": "S001198",
+   "fecCand": "S4AK00214",
+   "profile": "full",
+   "race": "S-AK",
    "inOffice": true
   }
  ]
