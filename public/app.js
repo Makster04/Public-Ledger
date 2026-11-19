@@ -804,16 +804,19 @@ function seatStatus(m,by){
   if(!seatLookouts.has(s.id))seatLookouts.set(s.id,Object.fromEntries(lookouts(lookoutInputs(s,null,'this')).map(x=>[x.key,x.status])));
   return seatLookouts.get(s.id)[by]||'waiting';
 }
+// The seats still held by members taken off the site (they lost in 2026), until their term ends (a seat with no end
+// date, like an appointed senator's, stays until the directory is rebuilt without them).
+const lostSeats=info=>{const today=new Date().toISOString().slice(0,10);return (info?.lost||[]).filter(s=>!TERRITORIES.has(s.state)&&(!s.until||s.until>today));};
 function seatCharts(by){
-  const t=TRACKER[by],cp=window.CORP_PACS,house=HOUSE.filter(m=>!TERRITORIES.has(m.state));
+  const t=TRACKER[by],cp=window.CORP_PACS,house=HOUSE.filter(m=>!TERRITORIES.has(m.state)),houseLost=lostSeats(window.HOUSE_INFO),senateLost=lostSeats(window.SENATE_INFO);
   const what=t?`money from ${t.name}`:'corporate PAC money';
   const says={took:`took ${what} this cycle`,none:`took no ${what} this cycle`};
   const statusOf=m=>seatStatus(m,by);
-  const charts=[house.length&&seatChart(house,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf,says}),
-    SENATE.length&&seatChart(SENATE,{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf,says})].filter(Boolean);
+  const charts=[house.length&&seatChart(house,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf,says,lost:houseLost}),
+    SENATE.length&&seatChart(SENATE,{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf,says,lost:senateLost})].filter(Boolean);
   const dot=k=>`<i class="seats-dot" style="background:${SEAT_COLORS[k]}"></i>`,party={D:'Democrats',I:'Independents',R:'Republicans'};
-  const legend=c=>[c.took&&`<span>${dot('took')}${c.took} took</span>`,c.none&&`<span>${dot('none')}${c.none} none</span>`,c.waiting&&`<span>${dot('waiting')}${c.waiting} not read yet</span>`,c.vacant&&`<span><i class="seats-dot seats-vacant"></i>${c.vacant} vacant</span>`].filter(Boolean).join('');
-  const any=charts.some(x=>x.counts.waiting),cyc=cp?`${cp.cycle-1}–${cp.cycle}`:'this cycle',thru=cp?.through?` (through ${fmtDate(cp.through)})`:'';
+  const legend=c=>[c.took&&`<span>${dot('took')}${c.took} took</span>`,c.none&&`<span>${dot('none')}${c.none} none</span>`,c.waiting&&`<span>${dot('waiting')}${c.waiting} not read yet</span>`,c.lost&&`<span><i class="seats-dot seats-lost"></i>${c.lost} lost in 2026</span>`,c.vacant&&`<span><i class="seats-dot seats-vacant"></i>${c.vacant} vacant</span>`].filter(Boolean).join('');
+  const any=charts.some(x=>x.counts.waiting),anyLost=charts.some(x=>x.counts.lost),cyc=cp?`${cp.cycle-1}–${cp.cycle}`:'this cycle',thru=cp?.through?` (through ${fmtDate(cp.through)})`:'';
   const counted=!t?'PAC checks from groups a corporation sponsors'
     :t.routed.length?`Checks from ${pacsOf(t)}${cp&&!(routedFromPayments(cp)&&cp.routed?.[by])?'':`, the gifts ${routedBy(t)} collected from donors and passed on to the campaign`}${t.donors?.length?`, and the ${t.donors.length} named donors' own checks`:''}`
     :`Checks from the PACs of ${ofTracker(t)} (its Tracker's list)`;
@@ -821,8 +824,8 @@ function seatCharts(by){
     :cp?`${counted}, ${cyc}, from the FEC${thru}${t&&t.routed.length&&!cp.routed?.[by]?`. The gifts ${routedBy(t)} passed on aren't all counted yet (they need the FEC key in .dev.vars, and a run that reads every one of them)`:''}`
     :`${counted}, this cycle. The FEC's files haven't been read yet (npm run corporate:pacs), so only the full profiles are colored`;
   return `<div class="seats-charts">${charts.map(x=>`<figure><figcaption>${x.label}${tookShare(x.counts)?` <span class="seats-share" title="Of the members read, the share who ${esc(says.took)}">(${tookShare(x.counts)})</span>`:''}</figcaption>${x.svg}<div class="seats-party">${x.parties.map(([p,n])=>`${party[p]} ${n}`).join(' · ')}</div><div class="seats-legend">${legend(x.counts)}</div>
-      <p class="sr-only">${x.label}: ${tookShare(x.counts)?`${tookShare(x.counts)} took ${what}; `:''}${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
-    <p class="seats-note">${dot('took')}Took ${esc(what)} · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat. ${esc(said)}. Democrats on the left, Republicans on the right; each dot opens their profile.</p>`;
+      <p class="sr-only">${x.label}: ${tookShare(x.counts)?`${tookShare(x.counts)} took ${what}; `:''}${x.counts.took} took ${what}, ${x.counts.none} took none, ${x.counts.waiting} not read yet, ${x.counts.lost?`${x.counts.lost} still held by members who lost in 2026, `:''}${x.counts.vacant} vacant seats.</p></figure>`).join('')}</div>
+    <p class="seats-note">${dot('took')}Took ${esc(what)} · ${dot('none')}None${any?` · ${dot('waiting')}Not read yet`:''} · <i class="seats-dot seats-vacant"></i>Vacant seat${anyLost?` · <i class="seats-dot seats-lost"></i>Still held by a member who lost in 2026, until they leave office (taken off this site, so not read)`:''}. ${esc(said)}. Democrats on the left, Republicans on the right; each dot opens their profile.</p>`;
 }
 function seatsBlock(){
   if(!SENATE.length&&!HOUSE.length)return '';

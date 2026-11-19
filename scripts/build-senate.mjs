@@ -9,7 +9,7 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {loadFiles,buildIds,writeIds} from './build-ids.mjs';
-import {removedList} from './remove-people.mjs';
+import {removedList,lostSeatOf} from './remove-people.mjs';
 
 const root=new URL('../',import.meta.url);
 const PARTY={Democrat:'D',Republican:'R',Independent:'I'};
@@ -56,18 +56,20 @@ export function addSenators(current,config,research,removed=new Set()){
       fecCand:senateFecId(x),fecCmte:null,chamber:'S',state:t.state,race:null,basic:true});
   }
   const idOf=x=>profiles.get(x.id.bioguide)||inConfig.get(x.id.bioguide)?.id||ids.get(x.id.bioguide);
-  return {added:fresh.length,senators:senators.map(x=>senatorEntry(x,idOf(x),profiles.has(x.id.bioguide)))};
+  // The removed senators still in office: their seats only, for the seating chart.
+  const lostSeats=current.filter(x=>x.terms.at(-1).type==='sen'&&removed.has(x.id.bioguide)).map(x=>lostSeatOf(senatorEntry(x,null,false))).sort((a,b)=>a.state.localeCompare(b.state));
+  return {added:fresh.length,senators:senators.map(x=>senatorEntry(x,idOf(x),profiles.has(x.id.bioguide))),lostSeats};
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const arg=process.argv.indexOf('--dir'),files=await loadFiles(arg>0?process.argv[arg+1]:null);
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
-  const {added,senators}=addSenators(files[0],config,research,removedList().bioguides);
+  const {added,senators,lostSeats}=addSenators(files[0],config,research,removedList().bioguides);
   const {committees,summary}=await buildIds(files,config,research);
   await writeIds(config,committees);
   const out={congress:config.congress,checked:new Date().toISOString().slice(0,10),source:'https://github.com/unitedstates/congress-legislators',
-    note:'Every sitting senator. Those with a reviewed profile link to it; the rest have a basic profile with their records from the daily refresh.',senators};
+    note:'Every sitting senator. Those with a reviewed profile link to it; the rest have a basic profile with their records from the daily refresh. lostSeats: the seats of senators who lost in 2026 and were taken off the site (data/removed.json), who serve until their term ends.',senators,lostSeats};
   await fs.writeFile(new URL('public/senate.json',root),JSON.stringify(out,null,1)+'\n');
   console.log(`${senators.length} senators in public/senate.json; ${added} added to data/config.json. ${summary}`);
 }

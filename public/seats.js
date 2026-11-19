@@ -1,10 +1,12 @@
 // The House and the Senate as seating charts on the home page: Democrats on the left, Republicans on the right,
 // independents between them, each seat a dot colored by whether the member's campaign took corporate PAC money this
 // cycle (public/corporate-pacs.json, from scripts/build-corporate-pacs.mjs): red took some, green took none, gray not
-// read yet; a vacant seat is a hollow ring. Within each party the dots are grouped by color, so each side's share shows
-// as wedges. Each dot links to the member's profile, with their name and status on hover.
+// read yet; a vacant seat is a hollow ring. A seat whose member lost in 2026 and was taken off the site (they serve until
+// Jan. 3, 2027) is a small gray dot in their party's place, without a name or a link. Within each party the dots are
+// grouped by color, so each side's share shows as wedges. Each dot links to the member's profile, with their name and
+// status on hover.
 
-export const SEAT_COLORS={took:'#ef5a5a',none:'#2fd27a',waiting:'#3b4452'};
+export const SEAT_COLORS={took:'#ef5a5a',none:'#2fd27a',waiting:'#3b4452',lost:'#8b95a5'};
 // The House's delegates and resident commissioner (no floor vote), left off its 435 seats.
 export const TERRITORIES=new Set(['DC','PR','GU','VI','AS','MP']);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -25,31 +27,44 @@ export function seatLayout(n,rows,r0,r1){
   return out.sort((p,q)=>q.a-p.a||p.r-q.r);
 }
 
-// The seats in order, left to right: Democrats (none, took, not read), independents, the vacant seats, Republicans
-// (not read, took, none). total: the chamber's seats; members past it are left off.
-export function seatOrder(list,total,statusOf){
-  const by=(party,order)=>order.flatMap(st=>list.filter(m=>m.party===party&&statusOf(m)===st));
-  const D=by('D',['none','took','waiting']),I=by('I',['none','took','waiting']),R=by('R',['waiting','took','none']);
-  const others=list.filter(m=>!['D','I','R'].includes(m.party));
-  const seated=[...D,...I,...others].concat(Array(Math.max(0,total-list.length)).fill(null),R);
+// The seats in order, left to right: Democrats (none, took, not read, lost in 2026), independents, the vacant seats,
+// Republicans (lost in 2026, not read, took, none). total: the chamber's seats; members past it are left off. lost: the
+// seats of members taken off the site who still hold them ({state, district, party, until}, from house.json and
+// senate.json lostSeats).
+const statusIn=statusOf=>m=>m.lost?'lost':statusOf(m);
+export function seatOrder(list,total,statusOf,lost=[]){
+  const st=statusIn(statusOf),all=[...list,...lost.map(s=>({...s,lost:true}))];
+  const by=(party,order)=>order.flatMap(s=>all.filter(m=>m.party===party&&st(m)===s));
+  const D=by('D',['none','took','waiting','lost']),I=by('I',['none','took','waiting','lost']),R=by('R',['lost','waiting','took','none']);
+  const others=all.filter(m=>!['D','I','R'].includes(m.party));
+  const seated=[...D,...I,...others].concat(Array(Math.max(0,total-all.length)).fill(null),R);
   return seated.slice(0,total);
 }
+// A lost seat's place, as on the race pages: "PA-10", or the state for a Senate seat.
+const placeOf=s=>s.district!=null?`${s.state}-${Number(s.district)||'AL'}`:s.state;
+const PARTY_NAME={D:'Democratic',R:'Republican',I:'Independent'};
+const MONTHS=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
+const day=d=>{const [y,m,dd]=String(d).split('-').map(Number);return `${MONTHS[m-1]} ${dd}, ${y}`;};
+// until: the end of their term, or null when it isn't a regular one (an appointed senator serves until the special
+// election's winner is sworn in).
+const serves=s=>s.until?`serves until ${day(s.until)}`:'serves until the winner takes office';
 
 // One chamber's chart: the SVG, the counts by status (and vacant seats), and the counts by party. says: what each
 // status means on hover.
 const SAYS={took:'took corporate PAC money this cycle',none:'took no corporate PAC money this cycle',waiting:'not read yet'};
-export function seatChart(list,{total,rows,r0,r1,dot,label,statusOf,says=SAYS}){
-  const order=seatOrder(list,total,statusOf),pos=seatLayout(total,rows,r0,r1),W=Math.ceil(r1*2+dot*2+4),H=Math.ceil(r1+dot+4),cx=W/2,cy=r1+dot+2;
+export function seatChart(list,{total,rows,r0,r1,dot,label,statusOf,says=SAYS,lost=[]}){
+  const status=statusIn(statusOf),order=seatOrder(list,total,statusOf,lost),pos=seatLayout(total,rows,r0,r1),W=Math.ceil(r1*2+dot*2+4),H=Math.ceil(r1+dot+4),cx=W/2,cy=r1+dot+2;
   const say={...SAYS,...says};
   const dots=pos.map((p,i)=>{const m=order[i],x=(cx+p.x).toFixed(1),y=(cy+p.y).toFixed(1);
     if(!m)return `<circle cx="${x}" cy="${y}" r="${(dot-0.8).toFixed(1)}" fill="none" stroke="#8b95a5" stroke-width="1.2"><title>Vacant seat</title></circle>`;
+    if(m.lost)return `<circle cx="${x}" cy="${y}" r="${(dot*0.55).toFixed(1)}" fill="${SEAT_COLORS.lost}"><title>${esc(PARTY_NAME[m.party]||'A')} seat (${esc(placeOf(m))}): its member lost in 2026 and ${serves(m)}</title></circle>`;
     const st=statusOf(m);
     return `<a href="#${esc(m.id)}" tabindex="-1"><circle cx="${x}" cy="${y}" r="${dot}" fill="${SEAT_COLORS[st]}"><title>${esc(m.name)} (${esc(m.party)}-${esc(m.state)}): ${say[st]}</title></circle></a>`;}).join('');
   // A dashed line where the Democrats' side ends and the Republicans' begins.
   const k=order.findIndex(m=>m&&m.party==='R'),mid=k>0?(pos[k-1].a+pos[k].a)/2:null;
   const split=mid==null?'':`<path d="M${(cx+(r0-10)*Math.cos(mid)).toFixed(1)} ${(cy-(r0-10)*Math.sin(mid)).toFixed(1)}L${(cx+(r1+dot+1)*Math.cos(mid)).toFixed(1)} ${(cy-(r1+dot+1)*Math.sin(mid)).toFixed(1)}" stroke="#c9d1dc" stroke-width="1.4" stroke-dasharray="3 3"/>`;
-  const seated=order.filter(Boolean),n=st=>seated.filter(m=>statusOf(m)===st).length;
-  const counts={took:n('took'),none:n('none'),waiting:n('waiting'),vacant:order.length-seated.length};
+  const seated=order.filter(Boolean),n=st=>seated.filter(m=>status(m)===st).length;
+  const counts={took:n('took'),none:n('none'),waiting:n('waiting'),vacant:order.length-seated.length,...(lost.length?{lost:n('lost')}:{})};
   const parties=['D','I','R'].map(p=>[p,seated.filter(m=>m.party===p).length]).filter(x=>x[1]);
   const svg=`<svg class="seats-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true" focusable="false">${dots}${split}
     <text x="${cx}" y="${(cy-6).toFixed(1)}" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-weight="700" font-size="${Math.round(r0*0.62)}" fill="#eef2f7">${total}</text></svg>`;

@@ -1421,6 +1421,7 @@ input, select { accent-color: var(--accent); }
 .seats-legend { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; font-size: 12px; font-weight: 600; margin-top: 4px; }
 .seats-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; vertical-align: 0; }
 .seats-vacant { border: 1.2px solid #8b95a5; width: 7px; height: 7px; }
+.seats-lost { background: #8b95a5; width: 5px; height: 5px; margin-left: 2px; margin-right: 6px; vertical-align: 1px; }
 .seats-note { font-size: 12px; line-height: 1.5; color: var(--ink-2); margin-top: 12px; max-width: 72ch; }
 
 /* The questions of a category on the Ideology tab (app.js qTableHTML): the question and their stance on the left, the

@@ -12,7 +12,7 @@ import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {loadFiles,buildIds,writeIds} from './build-ids.mjs';
 import {assignIds,nextElectionOf,STATE_NAMES} from './build-senate.mjs';
-import {removedList} from './remove-people.mjs';
+import {removedList,lostSeatOf} from './remove-people.mjs';
 
 const root=new URL('../',import.meta.url);
 const PARTY={Democrat:'D',Republican:'R',Independent:'I'};
@@ -49,18 +49,21 @@ export function addMembers(current,config,research,removed=new Set()){
       fecCand:houseFecId(x),fecCmte:null,chamber:'H',state:t.state,district:Number(t.district)||0,race:null,basic:true,light:true});
   }
   const idOf=x=>profiles.get(x.id.bioguide)||inConfig.get(x.id.bioguide)?.id||ids.get(x.id.bioguide);
-  return {added:fresh.length,removed:leaving.map(p=>p.name),members:members.map(x=>memberEntry(x,idOf(x),profiles.has(x.id.bioguide)))};
+  // The removed members still in office: their seats only (state, district, party, the term's end), for the seating chart.
+  const lostSeats=current.filter(x=>x.terms.at(-1).type==='rep'&&removed.has(x.id.bioguide)).map(x=>lostSeatOf(memberEntry(x,null,false)))
+    .sort((a,b)=>a.state.localeCompare(b.state)||a.district-b.district);
+  return {added:fresh.length,removed:leaving.map(p=>p.name),members:members.map(x=>memberEntry(x,idOf(x),profiles.has(x.id.bioguide))),lostSeats};
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const arg=process.argv.indexOf('--dir'),files=await loadFiles(arg>0?process.argv[arg+1]:null);
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
-  const {added,removed,members}=addMembers(files[0],config,research,removedList().bioguides);
+  const {added,removed,members,lostSeats}=addMembers(files[0],config,research,removedList().bioguides);
   const {committees,summary}=await buildIds(files,config,research);
   await writeIds(config,committees);
   const out={congress:config.congress,checked:new Date().toISOString().slice(0,10),source:'https://github.com/unitedstates/congress-legislators',
-    note:'Every member of the House, with the six non-voting delegates marked. Those with a reviewed profile link to it; the rest have a basic profile with their records from the refresh.',members};
+    note:'Every member of the House, with the six non-voting delegates marked. Those with a reviewed profile link to it; the rest have a basic profile with their records from the refresh. lostSeats: the seats of members who lost in 2026 and were taken off the site (data/removed.json), who serve until their term ends.',members,lostSeats};
   await fs.writeFile(new URL('public/house.json',root),JSON.stringify(out,null,1)+'\n');
   console.log(`${members.length} members in public/house.json (${members.filter(m=>m.delegate).length} delegates); ${added} added to data/config.json${removed.length?`; ${removed.length} who left taken out: ${removed.join(', ')}`:''}. ${summary}`);
 }

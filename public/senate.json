@@ -1619,5 +1619,32 @@
    "site": "https://www.lummis.senate.gov",
    "fecCand": "S0WY00137"
   }
+ ],
+ "lostSeats": [
+  {
+   "state": "KS",
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "ME",
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "MS",
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "OH",
+   "party": "R",
+   "until": null
+  },
+  {
+   "state": "SC",
+   "party": "R",
+   "until": "2027-01-03"
+  }
  ]
 }
