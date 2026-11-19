@@ -1,4 +1,4 @@
-// Strips key-like values from pages saved from other sites (data/ratings-samples/, data/county-samples/, the probe
+// Strips key-like values from pages saved from other sites (data/ratings-samples/, the probe
 // reports) before they're written, so a site's own browser key (a Google Maps key, a search widget's token) is never
 // committed here. From the Nov. 18, 2026 audit. The page's structure, which the readers are written from, is kept.
 //   node scripts/scrub-keys.mjs     scrub the saved pages already on disk
@@ -19,7 +19,7 @@ const RULES=[
 export function scrubKeys(text){
   let out=String(text);for(const [rx,fn] of RULES)out=out.replace(rx,fn);return out;
 }
-export const SAVED=['data/ratings-samples','data/county-samples','data/ratings-probe.txt','data/ratings-browse.txt','data/county-probe.txt'];
+export const SAVED=['data/ratings-samples','data/ratings-probe.txt','data/ratings-browse.txt'];
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   let changed=0;

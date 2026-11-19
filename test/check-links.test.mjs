@@ -45,6 +45,6 @@ test('saved pages: key-like values are stripped, the page around them kept',()=>
   assert.equal(scrubKeys('https://maps.example.com/js?key=abcdefghijklmnop1234&v=3'),'https://maps.example.com/js?key=REDACTED&v=3');
   assert.equal(scrubKeys('<h1>Key votes</h1><a href="/elon-musk-one-big-beautiful-bill">'),'<h1>Key votes</h1><a href="/elon-musk-one-big-beautiful-bill">','ordinary words and slugs stay');
   // Nothing key-like is left in the committed samples.
-  for(const dir of ['../data/ratings-samples/','../data/county-samples/'])for(const f of fs.readdirSync(new URL(dir,import.meta.url))){
+  for(const dir of ['../data/ratings-samples/'])for(const f of fs.readdirSync(new URL(dir,import.meta.url))){
     const t=fs.readFileSync(new URL(dir+f,import.meta.url),'utf8');assert.equal(scrubKeys(t),t,f);}
 });

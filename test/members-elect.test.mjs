@@ -57,9 +57,9 @@ test('the members-elect file: each a basic profile with its race, none already o
   const skip=read('data/members-elect-skip.json').skip;for(const d of Object.keys(skip))assert.ok(!E.races.some(r=>r.district===d),d+' is left out');
 });
 
-test('the page shows them: basic profiles, the House page list and the Races page section',()=>{
+test('the page shows them: basic profiles and the House page list',()=>{
   assert.match(app,/const ELECT=\(window\.MEMBERS_ELECT\|\|\[\]\)/);assert.match(app,/\[\.\.\.SENATE,\.\.\.HOUSE,\.\.\.ELECT\]/);
-  assert.match(app,/function electBlock\(\)/);assert.match(app,/Other House races with a new member/);assert.match(app,/HOUSE · MEMBER-ELECT/);
+  assert.match(app,/function electBlock\(\)/);assert.match(app,/HOUSE · MEMBER-ELECT/);
   assert.ok(app.indexOf('${electBlock()}')>app.indexOf('function renderHouse('),'on the House page');
   assert.match(fs.readFileSync(new URL('../public/boot.js',import.meta.url),'utf8'),/members-elect\.json/);
 });

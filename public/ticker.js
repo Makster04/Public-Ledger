@@ -57,7 +57,7 @@ export const seatLabel=seat=>{const [o,st,d]=String(seat||'').split('-');return 
 // Races: a call (within the page's 45 days of its result's date, else the results' "asof"); a race still counting for
 // as long as it's counting (and the results are under TICKER.countingDays old). A results-only race names its nominees
 // from their profiles when they have one, else as the race lists them. href: the profile: the one a results-only
-// nominee names, the person's own, or (a House member known by FEC ID) the one with that FEC ID; the Races page without one.
+// nominee names, the person's own, or (a House member known by FEC ID) the one with that FEC ID; the Latest updates page without one.
 export function raceItems(research,{now=Date.now(),people,days=TICKER.pageDays}={}){
   const asof=research?.election?.asof||research?.election?.date;if(!withinDays(asof,TICKER.countingDays,now))return [];
   const out=[];
@@ -66,7 +66,7 @@ export function raceItems(research,{now=Date.now(),people,days=TICKER.pageDays}=
     const date=res.date||asof,n=k=>r.nominees?.find(x=>(x.id||x.fecCand)===k);
     const profile=k=>{const x=n(k);if(x?.profile&&people?.get?.(x.profile))return x.profile;if(people?.get?.(k))return k;return [...(people?.values?.()||[])].find(p=>p?.fecCand===k)?.id||null;};
     const who=k=>{const id=profile(k);if(id)return nameOf(id,people);const x=n(k)||r.gone?.[k];return x?{name:String(x.name||'').split(/\s+/).pop(),party:x.party||null}:null;};
-    const link=k=>{const id=profile(k);return id?`#${id}`:'#races';};
+    const link=k=>{const id=profile(k);return id?`#${id}`:'#latest';};
     // The card's rows: the top shares, and the next candidate with at least 1% when there's room for three.
     const tally=res.tally||{},rows=Object.entries(tally.shares||{}).sort((a,b)=>b[1]-a[1]).map(([k,pct])=>{const w=who(k);return w&&Number.isFinite(pct)?{...w,pct}:null;}).filter(Boolean);
     for(const o of tally.others||[])if(rows.length<3&&Number.isFinite(o.pct)&&o.pct>=1)rows.push({name:String(o.name||'').split(/\s+/).pop(),party:o.party||null,pct:o.pct});
