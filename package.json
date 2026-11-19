@@ -27,6 +27,7 @@
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
     "superpacs:races": "node scripts/build-super-pac-races.mjs",
     "outside:update": "node scripts/build-outside-spending.mjs",
+    "links:check": "node scripts/check-links.mjs",
     "news:build": "node scripts/build-news.mjs",
     "groups:lean": "node scripts/build-group-lean.mjs",
     "nonprofits:990": "node scripts/build-990.mjs",

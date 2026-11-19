@@ -43,6 +43,12 @@ Individual donors' names are never shown (FEC rules restrict reusing them), exce
 
 ## What's new (November 2026)
 
+- **Nov. 18–19: More fixes from the site audit.**
+  - **Candidates can get Big Money Independence:** someone not sitting in Congress files no stock trade reports, so the grade needs only their candidate financial report. The Earmark Penalty is capped at 30 points like the PAC Penalty, and the grade shows at most 100%.
+  - **Outside spending through Nov. 17:** `npm run outside:update` brings it up to date from the FEC's bulk file (no key). Every row the research had is kept and matched to its FEC transaction, amendments take their latest version, and 13,418 items filed after Oct. 6 were added. A transaction is the spender, the original report and the ID, since committees restart IDs in every 24/48-hour report. The 186 rows that looked identical are separate items. The members-elect use the same rules.
+  - **Dates:** the research banner says what each date covers (reviewed research, outside spending, routed gifts) instead of one "snapshot" date.
+  - **Dead links:** `npm run links:check` checks every citation and swaps a dead one (404, 410 or a domain that's gone, twice) for its archived copy. `npm start` runs it once a month and applies the swaps to the data it serves, so the files never change on the Mac. The two found dead were replaced.
+  - **Smaller ones:** shorter Ideology axis labels on phones; the Integrity Honesty wording says most verdicts come from votes; `wrangler.jsonc` keeps a first deploy private (no workers.dev address or preview links); saved copies of other sites' pages have their key-like values removed (`scripts/scrub-keys.mjs`, also used when saving).
 - **Nov. 18: Fixes from the site audit.**
   - **Stock trades tile:** it no longer shows a count when their official House or Senate trade reports haven't been read. It says "Not read yet" and how many trades the trade services saw. Non-members read "Not covered".
   - **Money map on phones:** below 820px wide the map is stacked (Money In, The Campaign, Money Out, then outside spending), so nothing sits off the side of the screen (`public/money-map.js` `mapSVGTall`).

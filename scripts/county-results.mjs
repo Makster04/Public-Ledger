@@ -27,6 +27,7 @@ import {pathToFileURL} from 'node:url';
 import os from 'node:os';
 import {unzipFile} from '../src/sources.mjs';
 import {pdfText} from '../src/pdf.mjs';
+import {scrubKeys} from './scrub-keys.mjs';
 
 const root=new URL('..',import.meta.url);
 // What to do for a site that turns scripts away with a bot check: save the page from a browser, which reads it as any
@@ -1043,10 +1044,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       for(const [i,x] of (SAMPLES[st]||[]).entries()){
         const u=typeof x==='string'?x:x.u;
         try{const r=await sampleOne(x),file=`data/county-samples/${st}-${i+1}.${r.ext}`;
-          await fs.mkdir(new URL('data/county-samples/',root),{recursive:true});await fs.writeFile(new URL(file,root),r.text);lines.push(`  saved ${u} (HTTP ${r.status}) as ${file}`);}
+          await fs.mkdir(new URL('data/county-samples/',root),{recursive:true});await fs.writeFile(new URL(file,root),scrubKeys(r.text));lines.push(`  saved ${u} (HTTP ${r.status}) as ${file}`);}
         catch(e){lines.push(`  couldn't save ${u} (${e.cause?.code||e.message})`);}
       }}
-    await fs.writeFile(new URL('data/county-probe.txt',root),lines.join('\n')+'\n');
+    await fs.writeFile(new URL('data/county-probe.txt',root),scrubKeys(lines.join('\n')+'\n'));
     console.log(`\nSaved data/county-probe.txt (${lines.length} lines) and the sample pages in data/county-samples/. Commit and push them so the readers can be written from them.`);
     process.exit(0);
   }

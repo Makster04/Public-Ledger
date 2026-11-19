@@ -14,6 +14,7 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {tablesOf,namesOn} from './ratings-probe.mjs';
+import {scrubKeys} from './scrub-keys.mjs';
 
 const root=new URL('../',import.meta.url);
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -95,13 +96,13 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
       for(const [a,t] of links){if(seen.has(a)||!/^https?:/.test(a)||!RATING_LINK.test(`${t} ${a}`)||/facebook|twitter|x\.com|instagram|youtube|linkedin|donate|privacy|cookie/i.test(a))continue;
         seen.add(a);part.push(`    link: ${t.slice(0,60)||'(no text)'} → ${redact(a)}`);if(seen.size>=25)break;}
       for(const t of tablesOf(html))part.push(`    table: ${t}`);
-      drawn++;await fs.writeFile(new URL(`${g.key}-drawn-${drawn}.html`,samples),clean(html));
+      drawn++;await fs.writeFile(new URL(`${g.key}-drawn-${drawn}.html`,samples),scrubKeys(clean(html)));
       part.push(`    the drawn page: data/ratings-samples/${g.key}-drawn-${drawn}.html`);
       for(const a of answers){
         const n=namesOn(a.body,surnames);let shape;
         try{shape=shapeOf(JSON.parse(a.body));}catch{shape=`starts: ${a.body.slice(0,140).replace(/\s+/g,' ')}`;}
         part.push(`    data: ${redact(a.url).slice(0,220)} → HTTP ${a.status}, ${a.type||'no type'}, ${Math.round(a.body.length/1024)} KB · ${shape.slice(0,300)} · profiled members named: ${n.length}`);
-        if(n.length>=3&&saved<cap){saved++;const f=`${g.key}-data-${saved}.${/json/i.test(a.type)?'json':'txt'}`;await fs.writeFile(new URL(f,samples),a.body.slice(0,MAX));part.push(`      saved: data/ratings-samples/${f}`);}
+        if(n.length>=3&&saved<cap){saved++;const f=`${g.key}-data-${saved}.${/json/i.test(a.type)?'json':'txt'}`;await fs.writeFile(new URL(f,samples),scrubKeys(a.body.slice(0,MAX)));part.push(`      saved: data/ratings-samples/${f}`);}
       }
       if(!answers.length)part.push('    no data answers: the ratings, if any, are in the drawn page');
       await page.close();await sleep(2000);
@@ -110,6 +111,6 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   }
   await browser.close();
   for(const k of kept)out.push('',k);
-  await fs.writeFile(file,out.join('\n')+'\n');
+  await fs.writeFile(file,scrubKeys(out.join('\n')+'\n'));
   console.log('\nSaved data/ratings-browse.txt and the pages in data/ratings-samples/. Commit and push them so these groups\' readers can be written.');
 }

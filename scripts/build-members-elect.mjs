@@ -240,7 +240,7 @@ async function main(){
   const taken=[...D.members,...D.cands,...(D.featured||[]),...house,...senate].map(x=>x.id);
   const {members,races,left}=buildMembersElect({rows:wanted,pages,T,taken,profiled,house,skip,listUrl});
   const out={about:'The House members-elect of the November 3, 2026 election with no profile on the site yet, each with a basic profile and the race they won, and the races of winners profiled after the election. From scripts/build-members-elect.mjs (npm run house:elect): who won from Wikipedia\'s list of new members of the 120th Congress and the news report of each win it cites, the count from Wikipedia\'s state pages, and the money from the FEC\'s bulk files. Unofficial until each state certifies.',
-    built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:BULK},members,races};
+    built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:'https://www.fec.gov/data/browse-data/?tab=bulk-data'},members,races};
   fs.writeFileSync(path.join(ROOT,'public','members-elect.json'),JSON.stringify(out,null,1)+'\n');
   const noFec=members.filter(m=>!m.fecCand).map(m=>`${m.seat} ${m.name}`),noCount=races.filter(r=>!r.result.tally).map(r=>r.district);
   console.log(`${members.length} members-elect with a basic profile, ${races.length} races (${races.length-members.length} for winners already profiled). Wrote public/members-elect.json.`);

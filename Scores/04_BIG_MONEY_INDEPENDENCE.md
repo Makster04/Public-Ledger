@@ -23,7 +23,7 @@
 
 ```text
 75% + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges
-(never below 0%)
+(never below 0% or above 100%)
 ```
 
 Each part adds or takes off percentage points, so the score is a percentage to one decimal.
@@ -31,17 +31,20 @@ Each part adds or takes off percentage points, so the score is a percentage to o
 - **Donor:** up to +16 (House) or +14 (Senate). Smaller gifts earn more; a campaign funded entirely by small gifts gets the full amount.
 - **PAC Penalty:** each PAC dollar times a rate by type, with corporate PACs costing the most and unions the least. For example, $100,000 from corporate PACs costs a House member 1.5 points and a senator 1. Capped at 30.
 - **PAC Reliance:** up to −10, rising with PACs' share of all receipts.
-- **Earmark Penalty:** forwarded gifts × 0.00002, so $50,000 costs 1 point.
+- **Earmark Penalty:** forwarded gifts × 0.00002, so $50,000 costs 1 point. Capped at 30, like the PAC Penalty (since Nov. 18, 2026; IntegrityIndex.us gives no cap). Collins's $3.35M routed through AIPAC would otherwise have cost 67 points.
 - **Stock Penalty:** up to −20 for individual stocks held. Nothing for a qualified blind trust.
-- **Trade Penalty:** up to −20, rising with the number of trades.
+- **Trade Penalty:** up to −20, rising with the number of trades. Someone not sitting in Congress (a candidate, a member-elect) files no trade reports, so it is 0 for them (since Nov. 18, 2026).
 - **Bonuses:** +5 for no corporate PAC money, +1 for signing the no-corporate-PAC pledge, +1 for holding no individual stocks.
 - **Pledges:** +1 each for backing a lobbying ban, a congressional stock-trading ban, or overturning Citizens United, by pledge or by sponsoring or cosponsoring a bill.
 
-**Needs:** this cycle's FEC report, PAC money sorted by type, and their disclosure read. A president isn't graded.
+**Needs:** this cycle's FEC report, PAC money sorted by type, and their disclosure read: holdings and trades for a member of Congress, their candidate financial report for anyone else. A president isn't graded.
+
+**Shown at most 100%:** IntegrityIndex.us's final score has no upper cap, but a grade here is a percentage, so a House member with every bonus and pledge (up to 102) shows 100%.
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
-- **Eight numbers IntegrityIndex.us's page leaves out** are filled in here and labeled on the tab, for example the PAC penalty's cap of 30 and the PAC Reliance midpoint of 20%. They still need confirming.
+- **Ten numbers IntegrityIndex.us's page leaves out** are filled in here and labeled on the tab, for example the PAC penalty's and the Earmark Penalty's caps of 30 and the PAC Reliance midpoint of 20%. They still need confirming.
+- **Senate candidates' reports** are read only once someone saves them from Senate eFD (`npm run efd:import`); House candidates' are read by the refresh.
 - **Gift sizes from the FEC** are read only for the 76 full profiles. For everyone else, itemized gifts count at the not-yet-sorted rate.
 - **Holdings and trades:**
   - The blind-trust and no-stocks statuses still need review (`npm run review:holdings`).

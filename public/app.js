@@ -582,7 +582,7 @@ const GRADE={
     ['Higher score','Closer agreement with you. It does not measure honesty, ethics, or whether their policies benefit working people.'],
     ['Not graded','Until there is evidence on at least 3 of your issues.']]},
   integ:{q:'How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?',pts:[
-    ['Honesty (20%)','The Promises Delivered Index: reviewed kept, partly kept and broken commitments.'],
+    ['Honesty (20%)','The Promises Delivered Index: kept, partly kept and broken commitments, most decided automatically from their votes and bills (at least 2 bills each), the rest by a reviewer; each promise says which.'],
     ['Personal Finances (20%)','The Insider Trading Index, the Stock Disclosure Dodger Index, and the holdings and trading penalties.'],
     ['Fundraising (25%)','Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from IntegrityIndex.us.'],
     ['Showing Up (15%)','75% Attendance (roll-call votes missed since 2018: 100 minus 5 points per percentage point missed; votes missed while campaigning count; a cited medical leave, birth or adoption, death in the family or military duty is left out) and 25% Get It Done (their share of sponsored bills that advanced, against the typical member of their party in their chamber). A missed vote says nothing about where they were.'],
@@ -2687,7 +2687,9 @@ function drawKV(el,s){
   });
   let ax=`<line class="axis" x1="${mL}" x2="${W-mR}" y1="${base+2}" y2="${base+2}"></line>`;
   [[0,'0%','start'],[.5,'50%','middle'],[1,'100%','end']].forEach(([v,l,a])=>{ax+=`<line class="axis" x1="${X(v)}" x2="${X(v)}" y1="${base+2}" y2="${base+7}"></line><text class="tick" x="${X(v)}" y="${base+19}" text-anchor="${a}">${l}</text>`;});
-  ax+=`<text class="cap" x="${mL}" y="${base+40}">← Liberal side every time</text><text class="cap" x="${W-mR}" y="${base+40}" text-anchor="end">Conservative side every time →</text>`;
+  // On a phone the two long captions ran into each other (Nov. 18, 2026 audit): shorter ones there, same meaning.
+  const [capL,capR]=small?['← Always liberal','Always conservative →']:['← Liberal side every time','Conservative side every time →'];
+  ax+=`<text class="cap" x="${mL}" y="${base+40}">${capL}</text><text class="cap" x="${W-mR}" y="${base+40}" text-anchor="end">${capR}</text>`;
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(s.name)} took the conservative side on ${me.con} of ${me.n} bills marked liberal or conservative, among ${pool.length} ${CH[C].nouns}">${ax}${g}${mine}</svg>`;
   bindTips(el);
 }
