@@ -1,0 +1,3399 @@
+{
+ "about": "Who lobbied on each scored People First bill (LDA.gov reports, and coalitions' listed members), kept when the name matches a profile's top business donor. See scripts/build-lobbied-bills.mjs and public/lobbied.js.",
+ "built": "2026-11-18",
+ "bills": {
+  "119-hr-1": {
+   "reports": 12054,
+   "clientsRead": 2532,
+   "complete": true,
+   "clients": [
+    [
+     "AFLAC INC.",
+     null
+    ],
+    [
+     "ALLIANT ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ALLSTATE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "ALTICOR INC",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF DERMATOLOGY",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF DERMATOLOGY ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN AMBULANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BAKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL, INC.",
+     null
+    ],
+    [
+     "AMERICAN CLEAN POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF ENGINEERING COMPANIES, INC.",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "AMERICAN ELECTRIC POWER COMPANY, INC. AND AFFILIATED CORPORATIONS",
+     null
+    ],
+    [
+     "AMERICAN ELECTRIC POWER SERVICE CORPORATION",
+     null
+    ],
+    [
+     "AMERICAN HEALTH CARE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOSPITAL ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL & LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL AND LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN LAND TITLE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PUBLIC POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAS CREDIT UNIONS, FKA CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA",
+     null
+    ],
+    [
+     "AMGEN",
+     null
+    ],
+    [
+     "AMGEN INC.",
+     null
+    ],
+    [
+     "AMGEN USA INC.",
+     null
+    ],
+    [
+     "AMGEN, INC.",
+     null
+    ],
+    [
+     "APPLIED INTUITION",
+     null
+    ],
+    [
+     "APPLIED RESEARCH ASSOCIATES, INC.",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS INC",
+     null
+    ],
+    [
+     "ASSOCIATED EQUIPMENT DISTRIBUTORS",
+     null
+    ],
+    [
+     "ASSOCIATED GENERAL CONTRACTORS OF AMERICA",
+     null
+    ],
+    [
+     "ASTRANIS",
+     null
+    ],
+    [
+     "ASTRANIS SPACE TECHNOLOGIES CORP.",
+     null
+    ],
+    [
+     "AT&T SERVICES INC.",
+     null
+    ],
+    [
+     "AT&T SERVICES, INC.",
+     null
+    ],
+    [
+     "BAE SYSTEMS INC",
+     null
+    ],
+    [
+     "BAE SYSTEMS, INC.",
+     null
+    ],
+    [
+     "BANK OF AMERICA CORPORATION",
+     null
+    ],
+    [
+     "BLACKROCK, INC.",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "BMO FINANCIAL CORP",
+     null
+    ],
+    [
+     "BNSF RAILWAY COMPANY",
+     null
+    ],
+    [
+     "BOEING COMPANY",
+     null
+    ],
+    [
+     "BOSTON SCIENTIFIC",
+     "THE MEDICAL DEVICE COMPETITIVENESS COALITION"
+    ],
+    [
+     "BOSTON SCIENTIFIC (OFFICE-BASED FACILITY ASSN OBFA) (FKA USPA)",
+     null
+    ],
+    [
+     "BOSTON SCIENTIFIC CORPORATION",
+     null
+    ],
+    [
+     "BWX TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "CALPORTLAND CORPORATION",
+     null
+    ],
+    [
+     "CAPITAL ONE FINANCIAL CORPORATION",
+     null
+    ],
+    [
+     "CARNIVAL CORPORATION",
+     null
+    ],
+    [
+     "CATERPILLAR INC",
+     null
+    ],
+    [
+     "CENCORA, INC.",
+     null
+    ],
+    [
+     "CENTENE CORPORATION",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS INC",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS, INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A. INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A., INC.",
+     null
+    ],
+    [
+     "CHS, INC",
+     null
+    ],
+    [
+     "CHUGACH ALASKA CORP",
+     null
+    ],
+    [
+     "CONOCOPHILLIPS",
+     null
+    ],
+    [
+     "CONOCOPHILLIPS COMPANY",
+     "CARBON MANAGEMENT ALLIANCE (FORMERLY CALLED ENERGY ADVANCE CENTER)"
+    ],
+    [
+     "CONSTELLATION",
+     null
+    ],
+    [
+     "CONSTELLATION BRANDS, INC.",
+     null
+    ],
+    [
+     "CONSTELLATION ENERGY GENERATION, LLC",
+     null
+    ],
+    [
+     "CONSUMER BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "CORECIVIC",
+     null
+    ],
+    [
+     "CRUISE LINES INTERNATIONAL ASSOCIATION",
+     null
+    ],
+    [
+     "CRUISE LINES INTERNATIONAL ASSOCIATION, INC.",
+     null
+    ],
+    [
+     "CTIA",
+     null
+    ],
+    [
+     "CTIA - THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "CTIA-THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "CTIA: THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "DAVITA INC.",
+     null
+    ],
+    [
+     "DELTA AIR LINES INC",
+     null
+    ],
+    [
+     "DELTA AIRLINES",
+     null
+    ],
+    [
+     "DELTA AIRLINES, INC.",
+     null
+    ],
+    [
+     "DUKE ENERGY BUSINESS SERVICES LLC",
+     null
+    ],
+    [
+     "DUKE ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ELBIT SYSTEMS OF AMERICA, LLC",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC.",
+     null
+    ],
+    [
+     "ELI LILLY & COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY FKA LILLY USA, LLC",
+     null
+    ],
+    [
+     "ELI LILLY COMPANY",
+     "ALLIANCE FOR BIOPHARMACEUTICAL COMPETITIVENESS AND INNOVATION"
+    ],
+    [
+     "ENBRIDGE (U.S.) INC",
+     null
+    ],
+    [
+     "ENBRIDGE (U.S.) INC. (FORMERLY SPECTRA ENERGY)",
+     null
+    ],
+    [
+     "ENERGY TRANSFER PARTNERS",
+     null
+    ],
+    [
+     "EXXON MOBIL CORP",
+     null
+    ],
+    [
+     "EXXON MOBIL CORPORATION",
+     null
+    ],
+    [
+     "EXXONMOBIL CORPORATION",
+     null
+    ],
+    [
+     "FARMERS GROUP INC",
+     null
+    ],
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ],
+    [
+     "FREEPORT-MCMORAN INC.",
+     null
+    ],
+    [
+     "GENERAL ATOMICS",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS",
+     null
+    ],
+    [
+     "GENERAL MOTORS COMPANY",
+     null
+    ],
+    [
+     "GENERAL MOTORS LLC",
+     null
+    ],
+    [
+     "GENWORTH FINANCIAL, INC.",
+     null
+    ],
+    [
+     "GOLDMAN SACHS GROUP INC",
+     null
+    ],
+    [
+     "GOODYEAR TIRE & RUBBER COMPANY",
+     null
+    ],
+    [
+     "GROWTH ENERGY INC",
+     null
+    ],
+    [
+     "HARDWOOD FEDERATION",
+     null
+    ],
+    [
+     "HARTFORD FINANCIAL SERVICES GROUP",
+     null
+    ],
+    [
+     "HCA HEALTHCARE",
+     null
+    ],
+    [
+     "HF SINCLAIR CORPORATION",
+     null
+    ],
+    [
+     "HUNTINGTON BANCSHARES INCORPORATED",
+     null
+    ],
+    [
+     "IHEARTMEDIA INC",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS, LLC",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL MOTORS, LLC (FORMERLY NAVISTAR, INC)",
+     null
+    ],
+    [
+     "INTERNATIONAL PAPER",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "INTERNATIONAL PAPER COMPANY",
+     null
+    ],
+    [
+     "INVESTMENT COMPANY INSTITUTE",
+     null
+    ],
+    [
+     "INVESTMENT COMPANY INSTITUTE (ICI)",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORP",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORPORATION",
+     null
+    ],
+    [
+     "JACOBS SOLUTIONS, INC.",
+     null
+    ],
+    [
+     "JM FAMILY ENTERPRISES INC",
+     null
+    ],
+    [
+     "JM FAMILY ENTERPRISES, INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC.",
+     "ALLIANCE FOR BIOPHARMACEUTICAL COMPETITIVENESS AND INNOVATION"
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES, INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES, INC.",
+     null
+    ],
+    [
+     "JPMORGAN CHASE HOLDINGS LLC",
+     null
+    ],
+    [
+     "L3 HARRIS TECHNOLOGIES",
+     null
+    ],
+    [
+     "L3HARRIS TECHNOLOGIES",
+     null
+    ],
+    [
+     "L3HARRIS TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "LEIDOS",
+     null
+    ],
+    [
+     "LEIDOS INC",
+     null
+    ],
+    [
+     "LOCKHEED MARTIN CORPORATION",
+     null
+    ],
+    [
+     "LOWE'S COMPANIES INC.",
+     null
+    ],
+    [
+     "LPL FINANCIAL LLC",
+     null
+    ],
+    [
+     "MARSH & MCLENNAN COMPANIES, INC.",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY (MASSMUTUAL FINANCIAL GROUP)",
+     null
+    ],
+    [
+     "MERCK & CO INC",
+     null
+    ],
+    [
+     "MERCK & CO. INC.",
+     null
+    ],
+    [
+     "MERCK & CO., INC.",
+     null
+    ],
+    [
+     "MOLINA HEALTHCARE, INC.",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO LLC",
+     null
+    ],
+    [
+     "MORGAN STANLEY DEAN WITTER & COMPANY",
+     null
+    ],
+    [
+     "MORTGAGE BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "MOSAIC COMPANY",
+     null
+    ],
+    [
+     "NATIONAL ASPHALT PAVEMENT ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF CONVENIENCE STORES",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF POSTAL SUPERVISORS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ],
+    [
+     "NATIONAL AUTOMOBILE DEALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL BEER WHOLESALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CATTLEMEN'S BEEF ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CONFECTIONERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CORN GROWERS ASSN",
+     null
+    ],
+    [
+     "NATIONAL CORN GROWERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL COTTON COUNCIL OF AMERICA",
+     null
+    ],
+    [
+     "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION - PENN-DEL-JERSEY CHAPTER",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL INC",
+     null
+    ],
+    [
+     "NATIONAL PORK PRODUCERS COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION (NRECA)",
+     null
+    ],
+    [
+     "NATIONAL SHOOTING SPORTS FOUNDATION",
+     null
+    ],
+    [
+     "NATIONAL STONE SAND AND GRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "NELNET INC",
+     null
+    ],
+    [
+     "NEW YORK LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN CORPORATION",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE",
+     null
+    ],
+    [
+     "NUCOR CORPORATION",
+     null
+    ],
+    [
+     "NUTRIEN US LLC (FORMERLY KNOWN AS AGRIUM U.S. INC.) (A NUTRIEN LTD SUBSIDIARY)",
+     null
+    ],
+    [
+     "NV ENERGY",
+     null
+    ],
+    [
+     "PFIZER",
+     null
+    ],
+    [
+     "PFIZER INC.",
+     null
+    ],
+    [
+     "PFIZER, INC.",
+     null
+    ],
+    [
+     "PHILLIPS 66",
+     null
+    ],
+    [
+     "PHILLIPS 66 COMPANY",
+     null
+    ],
+    [
+     "PINNACLE WEST CAPITAL CORPORATION",
+     null
+    ],
+    [
+     "REAL ESTATE ROUNDTABLE",
+     null
+    ],
+    [
+     "ROYAL CARIBBEAN CRUISES LTD.",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY & FINANCIAL MARKETS ASSN.",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION (SIFMA)",
+     null
+    ],
+    [
+     "SIEMENS CORPORATION",
+     null
+    ],
+    [
+     "SIEMENS ENERGY",
+     null
+    ],
+    [
+     "SIEMENS ENERGY, INC",
+     null
+    ],
+    [
+     "SIEMENS ENERGY, INC.",
+     null
+    ],
+    [
+     "SIERRA NEVADA COMPANY, LLC",
+     null
+    ],
+    [
+     "SIERRA NEVADA CORPORATION",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY SERVICES INC",
+     null
+    ],
+    [
+     "SPACE EXPLORATION TECHNOLOGIES",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER INC",
+     null
+    ],
+    [
+     "T-MOBILE",
+     null
+    ],
+    [
+     "T-MOBILE USA, INC.",
+     null
+    ],
+    [
+     "TEXTRON INC.",
+     null
+    ],
+    [
+     "THE ALUMINUM ASSOCIATION",
+     null
+    ],
+    [
+     "THE AMERICAN COUNCIL OF ENGINEERING COMPANIES",
+     null
+    ],
+    [
+     "THE BOEING COMPANY",
+     null
+    ],
+    [
+     "THE CAPITAL CORPORATION",
+     null
+    ],
+    [
+     "THE CHEMOURS COMPANY",
+     null
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ],
+    [
+     "THE HOME DEPOT, INC.",
+     null
+    ],
+    [
+     "THE INTERNET & TELEVISION ASSN (FORMERLY NTL CABLE & TELECOMMUNICATIONS ASSN)",
+     null
+    ],
+    [
+     "THE NUCLEAR COMPANY",
+     null
+    ],
+    [
+     "THE WILLIAMS COMPANIES, INC.",
+     null
+    ],
+    [
+     "U.S. TRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "UNION PACIFIC",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP INC",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP, INC.",
+     null
+    ],
+    [
+     "US ANESTHESIA PARTNERS, INC.",
+     "US PHYSICIAN PARTNERS (INFORMAL COALITION)"
+    ],
+    [
+     "VALERO ENERGY CORPORATION",
+     null
+    ],
+    [
+     "WELLS FARGO & COMPANY",
+     null
+    ],
+    [
+     "WESTERN ALLIANCE BANCORPORATION",
+     null
+    ]
+   ]
+  },
+  "115-hr-1": {
+   "reports": 4362,
+   "clientsRead": 1497,
+   "complete": true,
+   "clients": [
+    [
+     "ABBOTT (FORMERLY KNOWN AS ALERE INC.)",
+     null
+    ],
+    [
+     "ABBOTT LABORATORIES",
+     null
+    ],
+    [
+     "AFLAC",
+     null
+    ],
+    [
+     "ALLIANT ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ALTICOR INC",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF DERMATOLOGY ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF NEUROLOGY",
+     null
+    ],
+    [
+     "AMERICAN ASSOCIATION OF ORTHODONTISTS",
+     null
+    ],
+    [
+     "AMERICAN BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BUS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN CLEAN POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF ENGINEERING COMPANIES",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "AMERICAN ELECTRIC POWER COMPANY, INC. AND AFFILIATED CORPORATIONS",
+     null
+    ],
+    [
+     "AMERICAN HEALTH CARE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOSPITAL ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL & LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL F/K/A PEGCC",
+     null
+    ],
+    [
+     "AMERICAN LAND TITLE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PUBLIC POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN ROAD AND TRANSPORTATION BUILDERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN SOCIETY OF ANESTHESIOLOGISTS",
+     null
+    ],
+    [
+     "AMERICAS CREDIT UNIONS, FKA CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA",
+     null
+    ],
+    [
+     "AMGEN",
+     null
+    ],
+    [
+     "AMGEN INC",
+     null
+    ],
+    [
+     "AMGEN INC.",
+     "WTPPG ON BEHALF OF ALLIANCE FOR BIOPHARMACEUTICAL COMPETITIVENESS & INNOVATION"
+    ],
+    [
+     "AMGEN USA INC",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS INC",
+     null
+    ],
+    [
+     "AT&T SERVICES INC (FKA AT&T CORPORATION)",
+     null
+    ],
+    [
+     "AT&T SERVICES, INC.",
+     null
+    ],
+    [
+     "BALL CORPORATION",
+     null
+    ],
+    [
+     "BANK OF AMERICA CORPORATION",
+     null
+    ],
+    [
+     "BECTON DICKINSON AND COMPANY",
+     null
+    ],
+    [
+     "BLACKROCK FUNDS SERVICES GROUP LLC",
+     null
+    ],
+    [
+     "BLACKROCK, INC.",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "BMO FINANCIAL CORP.",
+     null
+    ],
+    [
+     "BNSF RAILWAY CO",
+     null
+    ],
+    [
+     "BNSF RAILWAY COMPANY",
+     null
+    ],
+    [
+     "BOEING COMPANY",
+     null
+    ],
+    [
+     "BOSTON SCIENTIFIC",
+     "THE MEDICAL DEVICE COMPETITIVENESS COALITION"
+    ],
+    [
+     "BREAD FINANCIAL",
+     null
+    ],
+    [
+     "CAPITAL ONE FINANCIAL CORPORATION",
+     null
+    ],
+    [
+     "CARDINAL HEALTH INC",
+     null
+    ],
+    [
+     "CARNIVAL CORPORATION",
+     null
+    ],
+    [
+     "CATERPILLAR INC",
+     null
+    ],
+    [
+     "CATERPILLAR, INC.",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP ON BEHALF OF THE TAX REFORM COALITION"
+    ],
+    [
+     "CENTENE CORPORATION",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS, INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A. INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A., INC.",
+     null
+    ],
+    [
+     "CHS, INC",
+     null
+    ],
+    [
+     "CHS, INC.",
+     null
+    ],
+    [
+     "CHUGACH ALASKA CORP",
+     null
+    ],
+    [
+     "CITIZENS FINANCIAL GROUP INC",
+     null
+    ],
+    [
+     "CONOCOPHILLIPS",
+     null
+    ],
+    [
+     "CONSTELLATION BRANDS",
+     null
+    ],
+    [
+     "CONSTELLATION BRANDS, INC.",
+     null
+    ],
+    [
+     "CONSTELLATION ENERGY GENERATION, LLC",
+     null
+    ],
+    [
+     "CONSUMER BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "CONTINENTAL",
+     null
+    ],
+    [
+     "COX ENTERPRISES INC",
+     null
+    ],
+    [
+     "COX ENTERPRISES INC.",
+     null
+    ],
+    [
+     "COX ENTERPRISES, INC",
+     null
+    ],
+    [
+     "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",
+     null
+    ],
+    [
+     "CTIA-THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "DELTA",
+     null
+    ],
+    [
+     "DELTA AIR LINES INC",
+     null
+    ],
+    [
+     "DELTA AIRLINES, INC.",
+     null
+    ],
+    [
+     "DOW INC.",
+     null
+    ],
+    [
+     "DUKE ENERGY",
+     null
+    ],
+    [
+     "DUKE ENERGY BUSINESS SERVICES LLC",
+     null
+    ],
+    [
+     "DUKE ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC (F.K.A. ANTHEM, INC. & WELLPOINT, INC.)",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC.",
+     null
+    ],
+    [
+     "ELI LILLY & COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY",
+     null
+    ],
+    [
+     "ENBRIDGE (U.S.) INC",
+     null
+    ],
+    [
+     "ENERGY TRANSFER EQUITY LP",
+     null
+    ],
+    [
+     "ENERGY TRANSFER PARTNERS",
+     null
+    ],
+    [
+     "ENTERPRISE SERVICES, LLC",
+     null
+    ],
+    [
+     "EXXON MOBIL CORPORATION",
+     null
+    ],
+    [
+     "EXXONMOBIL CORPORATION",
+     null
+    ],
+    [
+     "FARMERS GROUP INC",
+     null
+    ],
+    [
+     "FARMERS GROUP, INC.",
+     null
+    ],
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ],
+    [
+     "FIFTH THIRD BANCORP",
+     null
+    ],
+    [
+     "FLUOR CORPORATION",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS CORP",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS CORPORATION",
+     null
+    ],
+    [
+     "GENERAL MOTORS",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP ON BEHALF OF THE TAX REFORM COALITION"
+    ],
+    [
+     "GENWORTH FINANCIAL INC",
+     null
+    ],
+    [
+     "GENWORTH FINANCIAL, INC.",
+     null
+    ],
+    [
+     "GOLDMAN SACHS GROUP INC",
+     null
+    ],
+    [
+     "GOLDMAN SACHS GROUP, INC.",
+     null
+    ],
+    [
+     "GOLDMAN, SACHS & CO.",
+     null
+    ],
+    [
+     "GOODYEAR TIRE & RUBBER COMPANY",
+     null
+    ],
+    [
+     "GOOGLE INC.",
+     null
+    ],
+    [
+     "GROWTH ENERGY",
+     null
+    ],
+    [
+     "HARTFORD FINANCIAL SERVICES GROUP",
+     null
+    ],
+    [
+     "HF SINCLAIR CORPORATION",
+     null
+    ],
+    [
+     "HOME DEPOT",
+     null
+    ],
+    [
+     "IHEARTMEDIA INC",
+     null
+    ],
+    [
+     "IHEARTMEDIA, INC. (FORMERLY KNOWN AS CLEAR CHANNEL COMMUNICATIONS, INC.)",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS, LLC",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL MOTORS, LLC (FORMERLY NAVISTAR, INC)",
+     null
+    ],
+    [
+     "INTERNATIONAL PAPER",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "INTERNATIONAL PAPER COMPANY",
+     null
+    ],
+    [
+     "INVESTMENT COMPANY INSTITUTE",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORP",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORPORATION",
+     null
+    ],
+    [
+     "JM FAMILY ENTERPRISES INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP ON BEHALF OF THE TAX REFORM COALITION"
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC (FORMERLY JOHNSON & JOHNSON)",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC.",
+     "WTPPG ON BEHALF OF ALLIANCE FOR BIOPHARMACEUTICAL COMPETITIVENESS & INNOVATION"
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES, INC.",
+     null
+    ],
+    [
+     "JPMORGAN CHASE BANK N.A.",
+     null
+    ],
+    [
+     "JPMORGAN CHASE HOLDINGS LLC",
+     null
+    ],
+    [
+     "LOCKHEED MARTIN CORPORATION",
+     null
+    ],
+    [
+     "LPL FINANCIAL",
+     null
+    ],
+    [
+     "MARSH & MCLENNAN COMPANIES, INC.",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+     null
+    ],
+    [
+     "MERCK & CO INC",
+     null
+    ],
+    [
+     "MERCK & CO. INC.",
+     null
+    ],
+    [
+     "MERCK & CO., INC.",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO LLC",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO. INCORPORATED",
+     null
+    ],
+    [
+     "MORTGAGE BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ALLIANCE OF FOREST OWNERS",
+     null
+    ],
+    [
+     "NATIONAL APARTMENT ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASSN OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF  BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF WATER COMPANIES",
+     null
+    ],
+    [
+     "NATIONAL AUTOMOBILE DEALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL BEER WHOLESALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL COTTON COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL INC",
+     null
+    ],
+    [
+     "NATIONAL PORK PRODUCERS COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSN",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION (NRECA)",
+     null
+    ],
+    [
+     "NATIONAL STONE SAND AND GRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL TELECOMMUNICATIONS COOPERATIVE ASSOCIATION",
+     null
+    ],
+    [
+     "NEW YORK LIFE",
+     null
+    ],
+    [
+     "NEW YORK LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN CORPORATION",
+     null
+    ],
+    [
+     "NUCOR CORPORATION",
+     null
+    ],
+    [
+     "OHIO CORN AND WHEAT GROWERS ASSOCIATION",
+     null
+    ],
+    [
+     "PFIZER",
+     null
+    ],
+    [
+     "PFIZER INC",
+     null
+    ],
+    [
+     "PFIZER INC.",
+     null
+    ],
+    [
+     "PFIZER, INC.",
+     null
+    ],
+    [
+     "PHILLIPS 66",
+     null
+    ],
+    [
+     "PINNACLE WEST CAPITAL CORPORATION",
+     null
+    ],
+    [
+     "REAL ESTATE ROUNDTABLE",
+     null
+    ],
+    [
+     "SCHWAN'S COMPANY",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY & FINANCIAL MARKETS ASSN.",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY & FINANCIAL MARKETS ASSOCIATION",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION",
+     null
+    ],
+    [
+     "SIEMENS CORPORATION",
+     null
+    ],
+    [
+     "SMALL BUSINESS INVESTOR ALLIANCE",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER INC",
+     null
+    ],
+    [
+     "T-MOBILE",
+     null
+    ],
+    [
+     "T-MOBILE USA",
+     null
+    ],
+    [
+     "T-MOBILE USA INC",
+     null
+    ],
+    [
+     "THE BANK OF NEW YORK MELLON",
+     null
+    ],
+    [
+     "THE BOEING COMPANY",
+     null
+    ],
+    [
+     "THE CHEMOURS COMPANY",
+     null
+    ],
+    [
+     "THE FARM CREDIT COUNCIL",
+     null
+    ],
+    [
+     "THE GOLDMAN SACHS GROUP, INC",
+     null
+    ],
+    [
+     "THE GOODYEAR TIRE & RUBBER COMPANY",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP ON BEHALF OF THE TAX REFORM COALITION"
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ],
+    [
+     "U.S. TRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "UNITED PARCEL SERVICE",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP INC",
+     null
+    ],
+    [
+     "VALERO ENERGY CORPORATION",
+     null
+    ],
+    [
+     "VIATRIS INC",
+     null
+    ],
+    [
+     "WELLS FARGO & COMPANY",
+     null
+    ],
+    [
+     "WINE AND SPIRITS WHOLESALERS OF AMERICA, INC.",
+     null
+    ]
+   ]
+  },
+  "117-hr-5376": {
+   "reports": 15668,
+   "clientsRead": 2339,
+   "complete": true,
+   "clients": [
+    [
+     "ABBOTT (FORMERLY KNOWN AS ALERE INC.)",
+     null
+    ],
+    [
+     "ABBOTT LABORATORIES",
+     null
+    ],
+    [
+     "AEROJET ROCKETDYNE, INC",
+     null
+    ],
+    [
+     "AFLAC INC.",
+     null
+    ],
+    [
+     "ALLIANT ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ALTICOR INC",
+     null
+    ],
+    [
+     "ALUMINUM ASSOCIATION INC",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF NEUROLOGY",
+     null
+    ],
+    [
+     "AMERICAN AMBULANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BAKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL, INC.",
+     null
+    ],
+    [
+     "AMERICAN CLEAN POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF ENGINEERING COMPANIES",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "AMERICAN ELECTRIC POWER COMPANY, INC. AND AFFILIATED CORPORATIONS",
+     null
+    ],
+    [
+     "AMERICAN HEALTH CARE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOSPITAL ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL & LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL F/K/A PEGCC",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION FKA PROPERTY CASUALTY INSURERS",
+     null
+    ],
+    [
+     "AMERICAN PUBLIC POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN SOCIETY OF ANESTHESIOLOGISTS",
+     null
+    ],
+    [
+     "AMGEN",
+     null
+    ],
+    [
+     "AMGEN INC",
+     null
+    ],
+    [
+     "AMGEN INC.",
+     null
+    ],
+    [
+     "AMGEN USA INC",
+     null
+    ],
+    [
+     "AMGEN USA INC.",
+     null
+    ],
+    [
+     "AMGEN USA, INC.",
+     null
+    ],
+    [
+     "AMGEN, INC.",
+     null
+    ],
+    [
+     "ASIAN AMERICAN HOTEL OWNERS ASSOCIATION",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS INC",
+     null
+    ],
+    [
+     "ASSOCIATED GENERAL CONTRACTORS OF AMERICA",
+     null
+    ],
+    [
+     "AT&T SERVICES INC",
+     null
+    ],
+    [
+     "AT&T SERVICES INC.",
+     null
+    ],
+    [
+     "AT&T SERVICES, INC.",
+     null
+    ],
+    [
+     "AT&T SERVICES, INC. (FKA AT&T)",
+     null
+    ],
+    [
+     "BAE SYSTEMS INC",
+     null
+    ],
+    [
+     "BALL CORPORATION",
+     null
+    ],
+    [
+     "BANK OF AMERICA CORPORATION",
+     null
+    ],
+    [
+     "BLACKROCK FUNDS SERVICES GROUP LLC",
+     null
+    ],
+    [
+     "BLACKROCK, INC.",
+     null
+    ],
+    [
+     "BNSF RAILWAY CO",
+     null
+    ],
+    [
+     "BNSF RAILWAY COMPANY",
+     null
+    ],
+    [
+     "BOEING COMPANY",
+     null
+    ],
+    [
+     "BOSTON SCIENTIFIC",
+     "THE MEDICAL DEVICE COMPETITIVENESS COALITION"
+    ],
+    [
+     "BOSTON SCIENTIFIC CORPORATION",
+     null
+    ],
+    [
+     "BROWNSTEIN HYATT FARBER SCHRECK LLP OBO ALLEN BARBARICH",
+     null
+    ],
+    [
+     "BWX TECHNOLOGIES",
+     null
+    ],
+    [
+     "BWX TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "CAPITAL ONE FINANCIAL CORPORATION",
+     null
+    ],
+    [
+     "CARDINAL HEALTH (F.K.A. THE GLOVER PARK GROUP)",
+     null
+    ],
+    [
+     "CENCORA INC. (FORMERLY AMERISOURCEBERGEN CORPORATION)",
+     null
+    ],
+    [
+     "CENCORA, INC.",
+     null
+    ],
+    [
+     "CENTENE CORPORATION",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS OPERATING, LLC",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS, INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A. INC.",
+     null
+    ],
+    [
+     "CHEVRON U.S.A., INC.",
+     null
+    ],
+    [
+     "CHUGACH ALASKA CORP",
+     null
+    ],
+    [
+     "CITIZENS FINANCIAL GROUP INC",
+     null
+    ],
+    [
+     "CONOCOPHILLIPS",
+     null
+    ],
+    [
+     "CONOCOPHILLIPS COMPANY",
+     "CARBON MANAGEMENT ALLIANCE (FORMERLY CALLED ENERGY ADVANCE CENTER)"
+    ],
+    [
+     "CONSTELLATION BRANDS",
+     null
+    ],
+    [
+     "CONSTELLATION ENERGY GENERATION, LLC",
+     null
+    ],
+    [
+     "CONSTELLATION ENERGY GENERATION, LLC, FORMERLY REPORTING AS EXELON CORPORATION",
+     null
+    ],
+    [
+     "CONSUMER BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "CORECIVIC",
+     null
+    ],
+    [
+     "COX ENTERPRISES INC",
+     null
+    ],
+    [
+     "COX ENTERPRISES INC.",
+     null
+    ],
+    [
+     "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",
+     null
+    ],
+    [
+     "CRUISE LLC",
+     null
+    ],
+    [
+     "CTIA - THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "CTIA-THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "DAVITA INC.",
+     null
+    ],
+    [
+     "DELTA AIR LINES",
+     null
+    ],
+    [
+     "DELTA AIR LINES INC",
+     null
+    ],
+    [
+     "DEVON ENERGY CORPORATION",
+     null
+    ],
+    [
+     "DUKE ENERGY BUSINESS SERVICES LLC",
+     null
+    ],
+    [
+     "DUKE ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC (F.K.A. ANTHEM, INC. & WELLPOINT, INC.)",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC.",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC. (FORMERLY REPORTED AS ANTHEM, INC.)",
+     null
+    ],
+    [
+     "ELI LILLY & COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY FKA LILLY USA, LLC",
+     null
+    ],
+    [
+     "ELI LILLY COMPANY",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP O/B/O ALLIANCE FOR BIOPHARMA"
+    ],
+    [
+     "ENBRIDGE (U.S.) INC",
+     null
+    ],
+    [
+     "ENBRIDGE (U.S.) INC. (FORMERLY SPECTRA ENERGY)",
+     null
+    ],
+    [
+     "ENERGY ACTION FUND",
+     null
+    ],
+    [
+     "ENERGY TRANSFER PARTNERS",
+     null
+    ],
+    [
+     "EXXON MOBIL CORP",
+     null
+    ],
+    [
+     "EXXON MOBIL CORPORATION",
+     null
+    ],
+    [
+     "EXXONMOBIL CORPORATION",
+     null
+    ],
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ],
+    [
+     "FLUOR CORPORATION",
+     null
+    ],
+    [
+     "FREEPORT-MCMORAN INC.",
+     null
+    ],
+    [
+     "FREEPORT-MCMORAN, INC.",
+     null
+    ],
+    [
+     "GENERAL ATOMICS",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS CORP",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS CORPORATION",
+     null
+    ],
+    [
+     "GENERAL MOTORS",
+     null
+    ],
+    [
+     "GENERAL MOTORS COMPANY",
+     null
+    ],
+    [
+     "GENERAL MOTORS LLC",
+     null
+    ],
+    [
+     "GOODYEAR TIRE & RUBBER COMPANY",
+     null
+    ],
+    [
+     "GROWTH ENERGY INC",
+     null
+    ],
+    [
+     "HCA HEALTHCARE",
+     null
+    ],
+    [
+     "HOME DEPOT",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS, LLC",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION (IFA)",
+     null
+    ],
+    [
+     "INTERNATIONAL MOTORS, LLC (FORMERLY NAVISTAR, INC)",
+     null
+    ],
+    [
+     "INTERNATIONAL PAPER",
+     null
+    ],
+    [
+     "INTERNATIONAL PAPER COMPANY",
+     null
+    ],
+    [
+     "INVESTMENT COMPANY INSTITUTE",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORP",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORP.",
+     null
+    ],
+    [
+     "JM FAMILY ENTERPRISES INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES INC.",
+     "ALLIANCE FOR BIOPHARMACEUTICAL COMPETITIVENESS AND INNOVATION"
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES, INC.",
+     null
+    ],
+    [
+     "JPMORGAN CHASE HOLDINGS LLC",
+     null
+    ],
+    [
+     "L3 HARRIS TECHNOLOGIES",
+     null
+    ],
+    [
+     "L3HARRIS TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "LEIDOS INC",
+     null
+    ],
+    [
+     "LOCKHEED MARTIN CORPORATION",
+     null
+    ],
+    [
+     "LOWE'S COMPANIES INC.",
+     null
+    ],
+    [
+     "LPL FINANCIAL",
+     null
+    ],
+    [
+     "MARSH & MCLENNAN COMPANIES, INC.",
+     "WORKING GROUP ON COMPETITIVE INTERNATIONAL TAXATION (INFORMAL COALITION)"
+    ],
+    [
+     "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "MERCK",
+     null
+    ],
+    [
+     "MERCK & CO INC",
+     null
+    ],
+    [
+     "MERCK & CO, INC.",
+     "THE WASHINGTON TAX & PUBLIC POLICY GROUP O/B/O ALLIANCE FOR BIOPHARMA"
+    ],
+    [
+     "MERCK & CO. INC.",
+     null
+    ],
+    [
+     "MERCK & CO., INC",
+     null
+    ],
+    [
+     "MERCK & CO., INC.",
+     null
+    ],
+    [
+     "MERCK & COMPANY, INC.",
+     null
+    ],
+    [
+     "MOLINA HEALTHCARE, INC.",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO LLC",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO. LLC",
+     null
+    ],
+    [
+     "MORTGAGE BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "MOSAIC COMPANY",
+     null
+    ],
+    [
+     "NATIONAL ALLIANCE OF FOREST OWNERS",
+     null
+    ],
+    [
+     "NATIONAL ALLIANCE OF FOREST OWNERS (NAFO)",
+     null
+    ],
+    [
+     "NATIONAL APARTMENT ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASPHALT PAVEMENT ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASSN OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ],
+    [
+     "NATIONAL AUTOMOBILE DEALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL BEER WHOLESALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CATTLEMEN'S BEEF ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CONFECTIONERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL INC",
+     null
+    ],
+    [
+     "NATIONAL PORK PRODUCERS COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSN",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION (NRECA)",
+     null
+    ],
+    [
+     "NATIONAL STONE SAND AND GRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "NCTA-THE INTERNET & TELEVISION ASSOCIATION",
+     null
+    ],
+    [
+     "NEW YORK LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN CORPORATION",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE (NEI)",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE, INC",
+     null
+    ],
+    [
+     "NUTRIEN US LLC",
+     null
+    ],
+    [
+     "NV ENERGY",
+     null
+    ],
+    [
+     "OVINTIV INC.",
+     null
+    ],
+    [
+     "PFIZER",
+     null
+    ],
+    [
+     "PFIZER INC",
+     null
+    ],
+    [
+     "PFIZER INC.",
+     null
+    ],
+    [
+     "PFIZER, INC.",
+     null
+    ],
+    [
+     "PHILLIPS 66",
+     null
+    ],
+    [
+     "PINNACLE WEST CAPITAL CORPORATION",
+     null
+    ],
+    [
+     "REAL ESTATE ROUNDTABLE",
+     null
+    ],
+    [
+     "RTX CORPORATION (FKA RAYTHEON TECHNOLOGIES CORPORATION AND AFFILIATES)",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION (SIFMA)",
+     null
+    ],
+    [
+     "SIEMENS ENERGY, INC",
+     null
+    ],
+    [
+     "SIERRA NEVADA CORPORATION",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY SERVICES, INC.",
+     null
+    ],
+    [
+     "SPACE EXPLORATION TECHNOLOGIES CORP.",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER INC",
+     null
+    ],
+    [
+     "STANLEY BLACK & DECKER, INC.",
+     null
+    ],
+    [
+     "T-MOBILE",
+     null
+    ],
+    [
+     "T-MOBILE USA, INC.",
+     null
+    ],
+    [
+     "THE AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "THE BOEING COMPANY",
+     null
+    ],
+    [
+     "THE CHEMOURS COMPANY",
+     null
+    ],
+    [
+     "THE GOODYEAR TIRE & RUBBER COMPANY",
+     null
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ],
+    [
+     "THE INTERNET & TELEVISION ASSN (FORMERLY NTL CABLE & TELECOMMUNICATIONS ASSN)",
+     null
+    ],
+    [
+     "THE WILLIAMS COMPANIES, INC.",
+     "ZERO CARBON HYDROGEN COALITION (INFORMAL)"
+    ],
+    [
+     "U.S. TRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "UNION PACIFIC",
+     null
+    ],
+    [
+     "UNITED PARCEL SERVICE",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP INC",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP, INC.",
+     null
+    ],
+    [
+     "VALERO ENERGY",
+     null
+    ],
+    [
+     "VALERO ENERGY CORPORATION",
+     null
+    ],
+    [
+     "VIATRIS INC",
+     null
+    ],
+    [
+     "VULCAN MATERIALS COMPANY",
+     null
+    ],
+    [
+     "WELLS FARGO",
+     null
+    ],
+    [
+     "WELLS FARGO & COMPANY",
+     null
+    ],
+    [
+     "WILLIAMS COMPANIES (FORMERLY WILLIAMS PARTNERS LP)",
+     null
+    ]
+   ]
+  },
+  "117-hr-1319": {
+   "reports": 8425,
+   "clientsRead": 1592,
+   "complete": true,
+   "clients": [
+    [
+     "ABBOTT (FORMERLY KNOWN AS ALERE INC.)",
+     null
+    ],
+    [
+     "ALLIANT ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ALLSTATE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF DERMATOLOGY",
+     null
+    ],
+    [
+     "AMERICAN ACADEMY OF DERMATOLOGY ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN AMBULANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN BUS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN CHEMISTRY COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN ELECTRIC POWER COMPANY, INC. AND AFFILIATED CORPORATIONS",
+     null
+    ],
+    [
+     "AMERICAN HEALTH CARE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOSPITAL ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL & LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN INVESTMENT COUNCIL",
+     null
+    ],
+    [
+     "AMERICAN LAND TITLE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION FKA PROPERTY CASUALTY INSURERS",
+     null
+    ],
+    [
+     "AMERICAN PUBLIC POWER ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAS CREDIT UNIONS, FKA CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA",
+     null
+    ],
+    [
+     "AMGEN INC",
+     null
+    ],
+    [
+     "AMGEN INC.",
+     null
+    ],
+    [
+     "AMGEN USA INC",
+     null
+    ],
+    [
+     "AMGEN USA INC.",
+     null
+    ],
+    [
+     "AMGEN, INC.",
+     null
+    ],
+    [
+     "ASIAN AMERICAN HOTEL OWNERS ASSOCIATION",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS INC",
+     null
+    ],
+    [
+     "ASSOCIATED GENERAL CONTRACTORS OF AMERICA",
+     null
+    ],
+    [
+     "AT&T SERVICES",
+     null
+    ],
+    [
+     "AT&T SERVICES INC",
+     null
+    ],
+    [
+     "AT&T SERVICES, INC.",
+     null
+    ],
+    [
+     "ATMOS ENERGY CORPORATION",
+     "COALITION FOR ENERGY ASSISTANCE MODERNIZATION"
+    ],
+    [
+     "BAE SYSTEMS INC",
+     null
+    ],
+    [
+     "BAE SYSTEMS, INC.",
+     null
+    ],
+    [
+     "BALL CORPORATION",
+     null
+    ],
+    [
+     "BANK OF AMERICA CORPORATION",
+     null
+    ],
+    [
+     "BNSF RAILWAY CO",
+     null
+    ],
+    [
+     "BNSF RAILWAY COMPANY",
+     null
+    ],
+    [
+     "BOEING COMPANY",
+     null
+    ],
+    [
+     "BWX TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "CAPITAL ONE FINANCIAL",
+     null
+    ],
+    [
+     "CAPITAL ONE FINANCIAL CORPORATION",
+     null
+    ],
+    [
+     "CARDINAL HEALTH (F.K.A. THE GLOVER PARK GROUP)",
+     null
+    ],
+    [
+     "CENCORA INC. (FORMERLY AMERISOURCEBERGEN CORPORATION)",
+     null
+    ],
+    [
+     "CENCORA, INC.",
+     null
+    ],
+    [
+     "CENTENE CORPORATION",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS OPERATING, LLC",
+     null
+    ],
+    [
+     "CHARTER COMMUNICATIONS, INC.",
+     null
+    ],
+    [
+     "CHUGACH ALASKA CORP",
+     null
+    ],
+    [
+     "CITIZENS FINANCIAL GROUP INC",
+     null
+    ],
+    [
+     "CONSTELLATION ENERGY GENERATION, LLC",
+     null
+    ],
+    [
+     "CONSUMER BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "CORECIVIC",
+     null
+    ],
+    [
+     "COX ENTERPRISES INC.",
+     null
+    ],
+    [
+     "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",
+     null
+    ],
+    [
+     "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICAS CREDIT UNIONS",
+     null
+    ],
+    [
+     "CTIA - THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "CTIA-THE WIRELESS ASSOCIATION",
+     null
+    ],
+    [
+     "DAVITA INC",
+     null
+    ],
+    [
+     "DAVITA, INC.",
+     null
+    ],
+    [
+     "DELTA AIR LINES INC",
+     null
+    ],
+    [
+     "DELTA AIR LINES, INC.",
+     null
+    ],
+    [
+     "DUKE ENERGY BUSINESS SERVICES LLC",
+     null
+    ],
+    [
+     "DUKE ENERGY CORPORATION",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC (F.K.A. ANTHEM, INC. & WELLPOINT, INC.)",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC. (FORMERLY REPORTED AS ANTHEM, INC.)",
+     null
+    ],
+    [
+     "ELI LILLY & COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY",
+     null
+    ],
+    [
+     "ELI LILLY AND COMPANY FKA LILLY USA, LLC",
+     null
+    ],
+    [
+     "ENBRIDGE (U.S.) INC",
+     null
+    ],
+    [
+     "EXXONMOBIL CORPORATION",
+     null
+    ],
+    [
+     "FAIR ISAAC CORPORATION (DBA FICO)",
+     null
+    ],
+    [
+     "FARM CREDIT MID-AMERICA",
+     null
+    ],
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS",
+     null
+    ],
+    [
+     "GENERAL DYNAMICS CORP",
+     null
+    ],
+    [
+     "GENWORTH FINANCIAL, INC.",
+     null
+    ],
+    [
+     "GROWTH ENERGY",
+     null
+    ],
+    [
+     "HCA HEALTHCARE",
+     null
+    ],
+    [
+     "HCA HEALTHCARE, INC.",
+     null
+    ],
+    [
+     "HF SINCLAIR CORPORATION",
+     null
+    ],
+    [
+     "HUNTINGTON BANCSHARES INCORPORATED",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS",
+     null
+    ],
+    [
+     "INDEPENDENCE BLUE CROSS, LLC",
+     null
+    ],
+    [
+     "INDEPENDENT INSURANCE AGENTS & BROKERS OF AMERICA",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION (IFA)",
+     null
+    ],
+    [
+     "INTERNATIONAL MOTORS, LLC (FORMERLY NAVISTAR, INC)",
+     null
+    ],
+    [
+     "INVESTMENT COMPANY INSTITUTE",
+     null
+    ],
+    [
+     "ITC HOLDINGS CORP",
+     null
+    ],
+    [
+     "J.R. SIMPLOT COMPANY",
+     null
+    ],
+    [
+     "JACOBS SOLUTIONS, INC.",
+     null
+    ],
+    [
+     "JM FAMILY ENTERPRISES, INC",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON SERVICES, INC.",
+     null
+    ],
+    [
+     "JOHNSON & JOHNSON VISION CARE, INC.",
+     "HEALTH CARE ALLIANCE FOR PATIENT SAFETY"
+    ],
+    [
+     "KRATOS",
+     null
+    ],
+    [
+     "L3HARRIS TECHNOLOGIES INC",
+     null
+    ],
+    [
+     "LEIDOS INC",
+     null
+    ],
+    [
+     "LOCKHEED MARTIN CORPORATION",
+     null
+    ],
+    [
+     "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+     null
+    ],
+    [
+     "MERCK",
+     null
+    ],
+    [
+     "MERCK & CO INC",
+     null
+    ],
+    [
+     "MERCK & CO. INC.",
+     null
+    ],
+    [
+     "MERCK & CO., INC",
+     null
+    ],
+    [
+     "MERCK & CO., INC.",
+     null
+    ],
+    [
+     "MERCK & COMPANY, INC.",
+     null
+    ],
+    [
+     "MORGAN STANLEY & CO LLC",
+     null
+    ],
+    [
+     "MORTGAGE BANKERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASSN OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF BROADCASTERS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ],
+    [
+     "NATIONAL AUTOMOBILE DEALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL BEER WHOLESALERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL CONFECTIONERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION - PENN-DEL-JERSEY CHAPTER",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL INC",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSN",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION (NRECA)",
+     null
+    ],
+    [
+     "NATIONAL TELECOMMUNICATIONS COOPERATIVE ASSOCIATION",
+     null
+    ],
+    [
+     "NCTA",
+     null
+    ],
+    [
+     "NCTA - THE INTERNET & TELEVISION ASSOCIATION",
+     null
+    ],
+    [
+     "NEW YORK LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN CORPORATION",
+     null
+    ],
+    [
+     "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE",
+     null
+    ],
+    [
+     "NUTRIEN US LLC",
+     null
+    ],
+    [
+     "NUTRIEN US LLC (FORMERLY KNOWN AS AGRIUM U.S. INC.) (A NUTRIEN LTD SUBSIDIARY)",
+     null
+    ],
+    [
+     "PFIZER",
+     null
+    ],
+    [
+     "PFIZER INC",
+     null
+    ],
+    [
+     "PFIZER INC.",
+     null
+    ],
+    [
+     "PINNACLE WEST CAPITAL CORP.",
+     "COALITION FOR ENERGY ASSISTANCE MODERNIZATION"
+    ],
+    [
+     "PINNACLE WEST CAPITAL CORPORATION",
+     null
+    ],
+    [
+     "REAL ESTATE ROUNDTABLE",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION (SIFMA)",
+     null
+    ],
+    [
+     "SIEMENS CORPORATION",
+     null
+    ],
+    [
+     "SIERRA NEVADA CORPORATION",
+     null
+    ],
+    [
+     "SOUTHERN COMPANY",
+     null
+    ],
+    [
+     "T-MOBILE",
+     null
+    ],
+    [
+     "T-MOBILE US, INC.",
+     null
+    ],
+    [
+     "T-MOBILE USA, INC.",
+     null
+    ],
+    [
+     "THE BOEING COMPANY",
+     null
+    ],
+    [
+     "THE INTERNET & TELEVISION ASSN (FORMERLY NTL CABLE & TELECOMMUNICATIONS ASSN)",
+     null
+    ],
+    [
+     "U.S. TRAVEL ASSOCIATION",
+     null
+    ],
+    [
+     "UNITEDHEALTH GROUP INC",
+     null
+    ],
+    [
+     "VALERO ENERGY CORPORATION",
+     null
+    ],
+    [
+     "VIATRIS INC",
+     null
+    ],
+    [
+     "WELLS FARGO",
+     null
+    ],
+    [
+     "WELLS FARGO & COMPANY",
+     null
+    ]
+   ]
+  },
+  "119-hr-6703": {
+   "reports": 143,
+   "clientsRead": 47,
+   "complete": true,
+   "clients": [
+    [
+     "AMGEN INC",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "ELEVANCE HEALTH, INC.",
+     null
+    ],
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ]
+   ]
+  },
+  "119-hr-1834": {
+   "reports": 54,
+   "clientsRead": 20,
+   "complete": true,
+   "clients": [
+    [
+     "FEDERATION OF AMERICAN HOSPITALS",
+     null
+    ]
+   ]
+  },
+  "117-samdt-1858": {
+   "reports": 0,
+   "clientsRead": 0,
+   "complete": true,
+   "clients": []
+  },
+  "117-hr-842": {
+   "reports": 2462,
+   "clientsRead": 202,
+   "complete": true,
+   "clients": [
+    [
+     "ALLSTATE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "ALTICOR INC",
+     null
+    ],
+    [
+     "AMERICAN BAKERS ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "AMERICAN HOSPITAL ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN HOTEL & LODGING ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN LAND TITLE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION",
+     null
+    ],
+    [
+     "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION FKA PROPERTY CASUALTY INSURERS",
+     null
+    ],
+    [
+     "AMERICAN SOCIETY OF ANESTHESIOLOGISTS",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS",
+     null
+    ],
+    [
+     "ASSOCIATED EQUIPMENT DISTRIBUTORS",
+     null
+    ],
+    [
+     "ASSOCIATED GENERAL CONTRACTORS OF AMERICA",
+     null
+    ],
+    [
+     "BOEING COMPANY",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "GENERAL MOTORS COMPANY",
+     null
+    ],
+    [
+     "HOME DEPOT",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "LOWE'S COMPANIES INC.",
+     null
+    ],
+    [
+     "NATIONAL APARTMENT ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ASSOCIATION OF REALTORS",
+     null
+    ],
+    [
+     "NATIONAL CONFECTIONERS ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL MULTIFAMILY HOUSING COUNCIL INC",
+     null
+    ],
+    [
+     "NATIONAL PORK PRODUCERS COUNCIL",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NEW YORK LIFE INSURANCE COMPANY",
+     null
+    ],
+    [
+     "OWNER-OPERATOR INDEPENDENT DRIVERS ASSOCIATION",
+     null
+    ],
+    [
+     "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION",
+     null
+    ],
+    [
+     "THE AMERICAN COUNCIL OF LIFE INSURERS",
+     null
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ]
+   ]
+  },
+  "117-s-53": {
+   "reports": 488,
+   "clientsRead": 59,
+   "complete": true,
+   "clients": [
+    [
+     "HOME DEPOT",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ]
+   ]
+  },
+  "117-hr-7": {
+   "reports": 510,
+   "clientsRead": 53,
+   "complete": true,
+   "clients": [
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS",
+     null
+    ],
+    [
+     "ASSOCIATED BUILDERS AND CONTRACTORS INC",
+     null
+    ],
+    [
+     "ASSOCIATED GENERAL CONTRACTORS OF AMERICA",
+     null
+    ],
+    [
+     "CHAMBER OF COMMERCE OF THE U.S.A.",
+     null
+    ],
+    [
+     "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
+     null
+    ],
+    [
+     "INTERNATIONAL FRANCHISE ASSOCIATION",
+     null
+    ],
+    [
+     "NATIONAL ROOFING CONTRACTORS ASSOCIATION",
+     null
+    ],
+    [
+     "NUCLEAR ENERGY INSTITUTE",
+     null
+    ],
+    [
+     "THE HOME DEPOT",
+     null
+    ]
+   ]
+  }
+ }
+}
