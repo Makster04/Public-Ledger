@@ -6,27 +6,6 @@
       "reviewedAt": "October 2, 2026",
       "rules": "805573ad7d29",
       "scores": {
-        "sullivan": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 35,
-            "legislative": 18,
-            "cci": 14
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "ossoff": {
           "integrity": {
             "pct": null,
@@ -659,13 +638,6 @@
         }
       },
       "changes": [
-        {
-          "id": "sullivan",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 35,
-          "why": "First preview value"
-        },
         {
           "id": "ossoff",
           "grade": "Workers comparison",

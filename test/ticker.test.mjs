@@ -6,6 +6,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import researchFile from '../public/research.json' with {type:'json'};
 const research=withRemovedResearch(researchFile);
+// The races as the site had them on Nov. 13: Alaska still counting (called Nov. 17), the tests' race still counting.
+import akCounting from './fixtures/alaska-counting-2026-11-11.json' with {type:'json'};
+const akRace=research.races.find(r=>r.id==='S-AK'),AK_CALLED=akRace.result,ASOF=research.election.asof;akRace.result=akCounting.result;research.election.asof='2026-11-13';
 import log from '../public/score-presentation-log.json' with {type:'json'};
 import houseFile from '../public/house.json' with {type:'json'};
 const house=withRemovedHouse(houseFile);
@@ -43,6 +46,11 @@ test('races: a race still counting stays on, pinned; a call within the window of
   assert.deepEqual([ga.tag,text(ga),ga.href],['Race called','Georgia Senate: Ossoff (D) wins · called by NBC News and CBS News','#ossoff']);
   assert.ok(night.some(x=>/^Arizona AZ-06: Mendoza \(D\) wins/.test(text(x))),'a House toss-up names its winner as the race lists them');
   assert.deepEqual(raceItems(research,{now:Date.parse('2027-01-15'),people}),[],'gone once the results are weeks old, even still counting');
+  // Alaska once it was called, Nov. 17: a call like the others, no longer pinned.
+  akRace.result=AK_CALLED;research.election.asof=ASOF;
+  const called=raceItems(research,{now:Date.parse('2026-11-19T15:00:00Z'),people}).find(x=>x.key==='race:S-AK');
+  assert.deepEqual([called.tag,text(called),called.href,!!called.pinned],['Race called','Alaska Senate: Peltola (D) wins · called by the AP on Nov. 17; Peltola won a majority outright','#peltola',false]);
+  akRace.result=akCounting.result;research.election.asof='2026-11-13';
 });
 
 test('site updates and ratings: within the window; rule changes and entries without a headline left out',()=>{

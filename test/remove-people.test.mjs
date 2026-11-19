@@ -11,10 +11,10 @@ const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf
 const R=removedList();
 
 test('the list: everyone the site marked Lost on Nov. 19, 2026, each with what identifies them',()=>{
-  assert.equal(R.people.length,59);
+  assert.equal(R.people.length,60,'59, and Sen. Dan Sullivan once Alaska was called (Nov. 17)');
   for(const p of R.people)assert.ok(p.id&&p.name&&['S','H'].includes(p.chamber),p.id);
-  for(const id of ['collins','marshall','husted','hydesmith','perry','lawler','paxton','fitzpatrick'])assert.ok(R.ids.has(id),id);
-  for(const id of ['ossoff','sullivan','peltola','booker'])assert.ok(!R.ids.has(id),`${id} stays (won, or Alaska not called)`);
+  for(const id of ['collins','marshall','husted','hydesmith','perry','lawler','paxton','fitzpatrick','sullivan'])assert.ok(R.ids.has(id),id);
+  for(const id of ['ossoff','peltola','booker'])assert.ok(!R.ids.has(id),`${id} stays (won)`);
 });
 
 test('nobody on the list is left in the data the site serves or the refresh reads',()=>{
@@ -59,4 +59,17 @@ test('the page: race results show a removed candidate unlinked, and there is no 
   assert.match(app,/if\(r\?\.keys\)return byId\[k\]\|\|\(r\.gone\?\.\[k\]\?\{id:k,\.\.\.r\.gone\[k\],gone:true\}:null\);/);
   assert.match(app,/byId\[k\]\?\{\.\.\.byId\[k\],href:'#'\+k\}:\{id:k,name:k,\.\.\.\(r\.gone\?\.\[k\]\|\|\{\}\),href:''\}/);
   assert.doesNotMatch(app,/\['lost','Lost','Lost a 2026 race'\]/);
+});
+
+test('the home filters: a candidate who won is under the chamber they won, and Next Congress is who sits from Jan. 3, 2027',()=>{
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
+  assert.match(app,/if\(c==='C'\)return !!s\.cand&&!s\.senInc&&!st\.has\('new'\);/,'Candidates: races not called yet');
+  assert.match(app,/\(st\.has\('new'\)&&st\.chamber===c\)/,'a senator-elect is under Senate');
+  assert.match(app,/\['next','Next Congress','Serving from Jan\. 3, 2027'\]/);
+  assert.match(app,/if\(sen\)next=Number\(sen\.nextElection\)>2026\|\|\(o==='won'&&race\.chamber==='S'\);/,'a senator not up in 2026, or re-elected');
+  assert.match(app,/const electLabel=c=>c==='S'\?'Senator-elect':'House member-elect';/);
+  // The data behind it: the next Senate is the 65 senators not up in 2026 and the 35 winners of 2026's races.
+  const D=read('public/research.json'),S=read('public/senate.json');
+  const up=S.senators.filter(m=>Number(m.nextElection)>2026).length,senateRaces=[...D.races,...D.liteRaces].filter(r=>r.chamber==='S');
+  assert.equal(up,65);assert.equal(senateRaces.length,35);assert.ok(senateRaces.every(r=>r.result?.winner),'every 2026 Senate race called (Alaska on Nov. 17)');
 });
