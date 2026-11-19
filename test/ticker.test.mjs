@@ -1,12 +1,16 @@
 // The ticker under the top bar and the Latest updates page (public/ticker.js), and the refresh's newest trades and
 // disclosures for them (tickerRecent, tickerMerge in src/refresh.mjs).
+import {withRemovedHouse,withRemovedResearch,withRemovedSenate} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import research from '../public/research.json' with {type:'json'};
+import researchFile from '../public/research.json' with {type:'json'};
+const research=withRemovedResearch(researchFile);
 import log from '../public/score-presentation-log.json' with {type:'json'};
-import house from '../public/house.json' with {type:'json'};
-import senate from '../public/senate.json' with {type:'json'};
+import houseFile from '../public/house.json' with {type:'json'};
+const house=withRemovedHouse(houseFile);
+import senateFile from '../public/senate.json' with {type:'json'};
+const senate=withRemovedSenate(senateFile);
 import {TICKER,raceItems,siteItems,ratingItems,liveItems,newsItems,fecItems,legalItems,allItems,mixKinds,stripData,stripHTML,cardItems,cardHTML,cardsHTML,amountShort,assetShort,pacShort,latestHTML,shortDate,mountTicker,mountCards,isFresh,seatLabel,pagePeople} from '../public/ticker.js';
 import {tickerRecent,tickerMerge,tickerList,getTicker,feedSignature,statement,TICKER_KINDS,TICKER_DAYS,TICKER_VERSION} from '../src/refresh.mjs';
 import {promiseTopic} from '../public/ticker.js';

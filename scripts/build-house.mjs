@@ -12,6 +12,7 @@ import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {loadFiles,buildIds,writeIds} from './build-ids.mjs';
 import {assignIds,nextElectionOf,STATE_NAMES} from './build-senate.mjs';
+import {removedList} from './remove-people.mjs';
 
 const root=new URL('../',import.meta.url);
 const PARTY={Democrat:'D',Republican:'R',Independent:'I'};
@@ -31,9 +32,10 @@ export function memberEntry(x,id,profiled){
 }
 
 // Adds the members without a profile to config.people, takes out the basic members who have left, and returns the
-// directory.
-export function addMembers(current,config,research){
-  const members=current.filter(x=>x.terms.at(-1).type==='rep').sort((a,b)=>a.terms.at(-1).state.localeCompare(b.terms.at(-1).state)||(Number(a.terms.at(-1).district)||0)-(Number(b.terms.at(-1).district)||0));
+// directory. removed: Bioguide IDs taken off the site (data/removed.json: they lost in 2026), left out though the
+// roster still lists them until they leave office.
+export function addMembers(current,config,research,removed=new Set()){
+  const members=current.filter(x=>x.terms.at(-1).type==='rep'&&!removed.has(x.id.bioguide)).sort((a,b)=>a.terms.at(-1).state.localeCompare(b.terms.at(-1).state)||(Number(a.terms.at(-1).district)||0)-(Number(b.terms.at(-1).district)||0));
   const now=new Set(members.map(x=>x.id.bioguide));
   const leaving=config.people.filter(p=>p.basic&&p.chamber==='H'&&!now.has(p.bioguide));
   config.people=config.people.filter(p=>!leaving.includes(p));
@@ -54,7 +56,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const arg=process.argv.indexOf('--dir'),files=await loadFiles(arg>0?process.argv[arg+1]:null);
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
-  const {added,removed,members}=addMembers(files[0],config,research);
+  const {added,removed,members}=addMembers(files[0],config,research,removedList().bioguides);
   const {committees,summary}=await buildIds(files,config,research);
   await writeIds(config,committees);
   const out={congress:config.congress,checked:new Date().toISOString().slice(0,10),source:'https://github.com/unitedstates/congress-legislators',

@@ -119,6 +119,17 @@ const byCongress=by=>by&&Object.keys(by).length>1?`<p class="live-meta">By Congr
 const billsMeta=(x,what)=>x.since||x.byCongress?`<p class="live-meta">${x.count.toLocaleString()} measures ${what} from the ${esc(congressName(congressOf(x.since||2016)))} on.</p>${byCongress(x.byCongress)}`:`<p class="live-meta">${x.count} measures ${what} in Congress ${x.congress}. Showing the latest ${x.rows.length}.</p>`;
 // An alignment issue's name, for the Threads posts found by searching for it.
 const issueName=id=>(window.DATA?.issues||[]).find(i=>i.id===id)?.label||id;
+// Each part of the saved research with the date it runs through (from the Nov. 18, 2026 audit: one "snapshot" date for
+// the whole file read as if outside spending stopped when the hand research did, or the other way round).
+const isoDay=d=>/^\d{4}-\d{2}-\d{2}$/.test(d||'')?new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):d||'';
+export function sectionDates(D=window.DATA,reviewedAt=null){
+  const out=[];const r=reviewedAt||D?.asof;if(r)out.push(['Reviewed research',r]);
+  if(D?.ie?.asof)out.push(['Outside spending filed through',isoDay(D.ie.asof)]);
+  if(D?.bundled?.asOf)out.push(['Gifts routed through groups read',isoDay(D.bundled.asOf)]);
+  out.push(['Campaign money','through each campaign\'s latest FEC report']);
+  return out;
+}
+const datesText=(D,r)=>sectionDates(D,r).map(([k,v])=>`${k}: ${v}`).join(' · ');
 const chips=a=>(a||[]).map(x=>`<span class="live-state">${esc(x)}</span>`).join(' ');
 const billName=k=>{const m=/^(\d+)-([a-z]+)-(\d+)$/.exec(k||'');const L={hr:'H.R.',s:'S.',hjres:'H.J.Res.',sjres:'S.J.Res.',hconres:'H.Con.Res.',sconres:'S.Con.Res.',hres:'H.Res.',sres:'S.Res.'};return m?`${L[m[2]]} ${m[3]} (${m[1]}th)`:k;};
 const SECTIONS={
@@ -254,9 +265,9 @@ export const RecordLive={
   async banner(){
     const element=document.querySelector('#refresh-banner');if(!element)return;
     try{const s=await status();
-      element.innerHTML=`<span>Research snapshot: ${esc(s.reviewedAt)}. Official records refresh separately.</span><a href="#updates">Source status &amp; coverage</a>`;
+      element.innerHTML=`<span>${esc(datesText(window.DATA,s.reviewedAt))}. Official records refresh separately.</span><a href="#updates">Source status &amp; coverage</a>`;
       const pane=document.querySelector('#pane'),hash=location.hash;
-      if(pane&&!pane.dataset.basic&&!document.querySelector('.profile-coverage')&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note"><b>Reviewed research:</b> as of ${esc(s.reviewedAt)}. Figures below keep their original reporting dates. <a href="${esc('#'+hash.slice(1).split('-')[0]+'-latest')}">See latest official records</a>.</div>`);
+      if(pane&&!pane.dataset.basic&&!document.querySelector('.profile-coverage')&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note"><b>Saved research:</b> ${esc(datesText(window.DATA,s.reviewedAt))}. Figures below keep their original reporting dates. <a href="${esc('#'+hash.slice(1).split('-')[0]+'-latest')}">See latest official records</a>.</div>`);
         const own=pane.querySelector('#live-records'),a=pane.querySelector('.snapshot-note a');if(own&&a)a.addEventListener('click',e=>{e.preventDefault();own.scrollIntoView({behavior:'smooth',block:'start'});});}
     }catch{element.innerHTML='Saved research is available. The update service is offline.';}
   },

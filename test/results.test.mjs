@@ -1,11 +1,12 @@
 // November 3, 2026 results (public/results.js and the "result" on each race in public/research.json): every covered race
 // has a result with a source, a winner is one of the race's own candidates, a race not called yet marks nobody as having
 // won or lost, and the seat notes say when winners take office and how long a losing incumbent serves.
+import {withRemovedResearch,withRemovedSenate} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from '../public/results.js';
-const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+const D=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
 const race=id=>D.races.find(r=>r.id===id)||D.liteRaces.find(r=>r.id===id);
 
 test('every covered race has a result with a source, and its winner or leader is one of its candidates',()=>{
@@ -93,7 +94,7 @@ test('the races page, profiles and home cards show the results, and the methodol
 });
 
 test('every 2026 Senate seat is on the Races page: profiled, or results only with its sitting senator linked',()=>{
-  const S=JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8')).senators;
+  const S=withRemovedSenate(JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8'))).senators;
   const states=new Set([...D.races,...D.liteRaces].filter(r=>r.chamber==='S').map(r=>r.state));
   for(const x of S.filter(y=>y.nextElection===2026))assert.ok(states.has(x.state),`${x.name}'s seat (${x.state}) has a race`);
   const lite=D.liteRaces.filter(r=>r.chamber==='S');assert.equal(lite.length,14);
@@ -107,7 +108,7 @@ test('every 2026 Senate seat is on the Races page: profiled, or results only wit
 });
 
 test('flip or hold: the winner against the party that held the seat before the election',()=>{
-  const S=JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8')).senators,people=[...D.members,...D.cands];
+  const S=withRemovedSenate(JSON.parse(fs.readFileSync(new URL('../public/senate.json',import.meta.url),'utf8'))).senators,people=[...D.members,...D.cands];
   for(const r of [...D.races,...D.liteRaces]){
     assert.ok(['D','R','I'].includes(r.held?.party)&&r.held.by,`${r.id}: who held the seat`);
     const inc=r.inc?people.find(p=>p.id===r.inc):r.nominees?.find(n=>n.incumbent);

@@ -3,6 +3,7 @@
 // replaces "not filed yet", toss-up nominees update too, and the president is left alone. A committee that raised almost
 // nothing while the FEC lists a newer principal committee is left as is, a part lower than on file is listed, and the
 // hand research's note on the old figures is kept as researchNote.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -10,7 +11,7 @@ import {campFromTotals,nomineeFromTotals,updateMoney,periodLabel} from '../scrip
 // The research with the people these tests use set back to fixed figures from before an update, so the tests pass
 // whichever figures are on file (before or after npm run money:update).
 function research(){
-  const r=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+  const r=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
   const camp=(id,o)=>{const p=[...r.members,...r.cands].find(x=>x.id===id);const {researchNote,...c}=p.camp;p.camp={...c,...o};};
   camp('ossoff',{cmteId:'C00718866',cmte:'Jon Ossoff for Senate',start:'2025-01-01',end:'2026-06-30',receipts:77279766,pac:920316,missing:false,note:'Coverage 2025-01-01..2026-06-30 (hand research).'});
   camp('jackson',{cmteId:'C00955609',missing:true,note:'Committee registered after June 30; first report due Oct. 15.',start:null,end:null,receipts:null});

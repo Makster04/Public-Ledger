@@ -1346,149 +1346,6 @@
     "title": "Chairman"
    }
   ],
-  "hydesmith": [
-   {
-    "id": "JSLC",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSAF",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAF13",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "SSAF14",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSAF17",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP01",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP02",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP14",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP18",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP22",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP24",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "SSEG",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "SSEG01",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSEG03",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSRA",
-    "rank": 6,
-    "party": "majority"
-   }
-  ],
-  "marshall": [
-   {
-    "id": "SSAF",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSAF14",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "SSAF16",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "SSBU",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "SSFI",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "SSFI10",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "SSFI12",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSFI13",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR11",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR12",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   }
-  ],
   "tuberville": [
    {
     "id": "SPAG",
@@ -2706,96 +2563,6 @@
     "party": "minority"
    }
   ],
-  "collins": [
-   {
-    "id": "SLIN",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "SSAP01",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP02",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP08",
-    "rank": 4,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP14",
-    "rank": 7,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP16",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP17",
-    "rank": 8,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP18",
-    "rank": 9,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP19",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP20",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "SSAP22",
-    "rank": 9,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP23",
-    "rank": 5,
-    "party": "majority",
-    "title": "Ex Officio"
-   },
-   {
-    "id": "SSAP24",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR12",
-    "rank": 3,
-    "party": "majority"
-   }
-  ],
   "murkowski": [
    {
     "id": "SLIA",
@@ -3332,93 +3099,6 @@
    {
     "id": "SSBK12",
     "rank": 2,
-    "party": "majority"
-   }
-  ],
-  "husted": [
-   {
-    "id": "SPAG",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP01",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP08",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP17",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP18",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP20",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSAP23",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "SSEV",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "SSEV09",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "SSEV10",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSEV15",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR09",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR11",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "SSHR12",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "SSSB",
-    "rank": 10,
     "party": "majority"
    }
   ],
@@ -8414,42 +8094,6 @@
     "party": "minority"
    }
   ],
-  "steil": [
-   {
-    "id": "HSBA",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA16",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA21",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HSHA",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   },
-   {
-    "id": "JSLC",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   },
-   {
-    "id": "JSPR",
-    "rank": 1,
-    "party": "majority",
-    "title": "Vice Chair"
-   }
-  ],
   "gmurphy": [
    {
     "id": "HSHA",
@@ -8732,86 +8376,6 @@
     "party": "minority"
    }
   ],
-  "valadao": [
-   {
-    "id": "HSAG",
-    "rank": 29,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG15",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG16",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP",
-    "rank": 13,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP01",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP02",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP24",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   },
-   {
-    "id": "JSLC",
-    "rank": 2,
-    "party": "majority"
-   }
-  ],
-  "carey": [
-   {
-    "id": "HSBU",
-    "rank": 15,
-    "party": "majority"
-   },
-   {
-    "id": "HSHA",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSHA27",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM",
-    "rank": 22,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM01",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM03",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "JSLC",
-    "rank": 3,
-    "party": "majority"
-   }
-  ],
   "jjohnson": [
    {
     "id": "HSFA",
@@ -8993,13 +8557,6 @@
     "party": "majority"
    }
   ],
-  "spartz": [
-   {
-    "id": "JSEC",
-    "rank": 6,
-    "party": "majority"
-   }
-  ],
   "beyer": [
    {
     "id": "HSWM",
@@ -9162,45 +8719,6 @@
     "id": "HSPW12",
     "rank": 4,
     "party": "minority"
-   }
-  ],
-  "wittman": [
-   {
-    "id": "HSAS",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS25",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HSAS28",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSII",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chair"
-   },
-   {
-    "id": "HSII06",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSII13",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSZS",
-    "rank": 2,
-    "party": "majority"
    }
   ],
   "neguse": [
@@ -9873,59 +9391,6 @@
     "party": "minority"
    }
   ],
-  "kiggans": [
-   {
-    "id": "HSAS",
-    "rank": 18,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS02",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS28",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS35",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSII",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSII06",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSII13",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR03",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR08",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairwoman"
-   }
-  ],
   "ansari": [
    {
     "id": "HSGO",
@@ -10026,49 +9491,6 @@
     "id": "HSII13",
     "rank": 7,
     "party": "minority"
-   }
-  ],
-  "mcollins": [
-   {
-    "id": "HSII",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSII06",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSII15",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 19,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW02",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 15,
-    "party": "majority"
-   },
-   {
-    "id": "HSSY",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HSSY16",
-    "rank": 4,
-    "party": "majority"
    }
   ],
   "gray": [
@@ -10450,48 +9872,6 @@
     "title": "Ranking Member"
    }
   ],
-  "mcdowell": [
-   {
-    "id": "HSBU",
-    "rank": 19,
-    "party": "majority"
-   },
-   {
-    "id": "HSII",
-    "rank": 20,
-    "party": "majority"
-   },
-   {
-    "id": "HSII13",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSII24",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 28,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 16,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW07",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 21,
-    "party": "majority"
-   }
-  ],
   "slee": [
    {
     "id": "HSAP",
@@ -10522,43 +9902,6 @@
     "id": "HSII10",
     "rank": 7,
     "party": "minority"
-   }
-  ],
-  "crank": [
-   {
-    "id": "HSAS",
-    "rank": 29,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS02",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS29",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS35",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSII",
-    "rank": 21,
-    "party": "majority"
-   },
-   {
-    "id": "HSII06",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSII13",
-    "rank": 13,
-    "party": "majority"
    }
   ],
   "begich": [
@@ -10971,69 +10314,6 @@
     "id": "HSPW13",
     "rank": 5,
     "party": "minority"
-   }
-  ],
-  "perry": [
-   {
-    "id": "HLIG",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HLIG06",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HLIG11",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA17",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA19",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO",
-    "rank": 15,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO05",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO33",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW13",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
    }
   ],
   "hjohnson": [
@@ -11557,44 +10837,6 @@
     "party": "minority"
    }
   ],
-  "vandrew": [
-   {
-    "id": "HSJU",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU01",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU13",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   },
-   {
-    "id": "HSPW",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW07",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 11,
-    "party": "majority"
-   }
-  ],
   "davids": [
    {
     "id": "HSAG",
@@ -11982,44 +11224,6 @@
     "party": "minority"
    }
   ],
-  "kiley": [
-   {
-    "id": "HSED",
-    "rank": 13,
-    "party": "majority"
-   },
-   {
-    "id": "HSED13",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSED14",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HSJU",
-    "rank": 18,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU03",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU08",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 21,
-    "party": "majority"
-   }
-  ],
   "sykes": [
    {
     "id": "HSPW",
@@ -12239,44 +11443,6 @@
     "party": "minority"
    }
   ],
-  "barrett": [
-   {
-    "id": "HSPW",
-    "rank": 24,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 18,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW13",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR10",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR11",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   }
-  ],
   "deluzio": [
    {
     "id": "HSAS",
@@ -12330,58 +11496,6 @@
     "id": "HSPW12",
     "rank": 24,
     "party": "minority"
-   }
-  ],
-  "bresnahan": [
-   {
-    "id": "HSAG",
-    "rank": 25,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG14",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG22",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 26,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 19,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW13",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSSM",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSSM22",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSSM27",
-    "rank": 3,
-    "party": "majority"
    }
   ],
   "pou": [
@@ -12557,63 +11671,6 @@
     "id": "HSSY16",
     "rank": 2,
     "party": "minority"
-   }
-  ],
-  "knott": [
-   {
-    "id": "HSHM",
-    "rank": 15,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM09",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM11",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU",
-    "rank": 20,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU01",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HSJU08",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 30,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW02",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW05",
-    "rank": 17,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW12",
-    "rank": 23,
-    "party": "majority"
-   },
-   {
-    "id": "HSSO",
-    "rank": 5,
-    "party": "majority"
    }
   ],
   "figures": [
@@ -12861,23 +11918,6 @@
    {
     "id": "HSSM24",
     "rank": 5,
-    "party": "majority"
-   }
-  ],
-  "gallagher": [
-   {
-    "id": "HSFA",
-    "rank": 28,
-    "party": "majority"
-   },
-   {
-    "id": "HSPW",
-    "rank": 36,
-    "party": "majority"
-   },
-   {
-    "id": "HSSY",
-    "rank": 22,
     "party": "majority"
    }
   ],
@@ -14747,83 +13787,6 @@
     "party": "minority"
    }
   ],
-  "delacruz": [
-   {
-    "id": "HSAG",
-    "rank": 20,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG03",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chair"
-   },
-   {
-    "id": "HSAG16",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA",
-    "rank": 23,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA04",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chairwoman"
-   },
-   {
-    "id": "HSBA20",
-    "rank": 13,
-    "party": "majority"
-   }
-  ],
-  "nunn": [
-   {
-    "id": "HSAG",
-    "rank": 21,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG16",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG22",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA",
-    "rank": 25,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA10",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chairman"
-   },
-   {
-    "id": "HSBA16",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA21",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSZS",
-    "rank": 13,
-    "party": "majority"
-   }
-  ],
   "mannion": [
    {
     "id": "HSAG",
@@ -14854,55 +13817,6 @@
     "id": "HSED14",
     "rank": 4,
     "party": "minority"
-   }
-  ],
-  "vanorden": [
-   {
-    "id": "HSAG",
-    "rank": 22,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG03",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG29",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chair"
-   },
-   {
-    "id": "HSAS",
-    "rank": 24,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS26",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS29",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR03",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR10",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
    }
   ],
   "newhouse": [
@@ -16035,33 +14949,6 @@
     "id": "HSED13",
     "rank": 6,
     "party": "minority"
-   }
-  ],
-  "turner": [
-   {
-    "id": "HSAS",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS25",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS29",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO06",
-    "rank": 2,
-    "party": "majority"
    }
   ],
   "norcross": [
@@ -17586,38 +16473,6 @@
     "title": "Ranking Member"
    }
   ],
-  "hinson": [
-   {
-    "id": "HSAP",
-    "rank": 19,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP01",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP15",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP23",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSSO",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSZS",
-    "rank": 8,
-    "party": "majority"
-   }
-  ],
   "harder": [
    {
     "id": "HSAP",
@@ -17987,44 +16842,6 @@
     "id": "HSAP23",
     "rank": 3,
     "party": "minority"
-   }
-  ],
-  "ciscomani": [
-   {
-    "id": "HSAP",
-    "rank": 28,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP04",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSAP15",
-    "rank": 6,
-    "party": "majority",
-    "title": "Vice Chair"
-   },
-   {
-    "id": "HSAP20",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR08",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR10",
-    "rank": 2,
-    "party": "majority"
    }
   ],
   "ivey": [
@@ -18572,43 +17389,6 @@
     "party": "minority"
    }
   ],
-  "evans": [
-   {
-    "id": "HSHM",
-    "rank": 13,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM05",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM12",
-    "rank": 2,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF",
-    "rank": 28,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF03",
-    "rank": 15,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF17",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF18",
-    "rank": 12,
-    "party": "majority"
-   }
-  ],
   "mejia": [
    {
     "id": "HSHM",
@@ -18624,59 +17404,6 @@
     "id": "HSSM",
     "rank": 12,
     "party": "minority"
-   }
-  ],
-  "mackenzie": [
-   {
-    "id": "HSED",
-    "rank": 17,
-    "party": "majority"
-   },
-   {
-    "id": "HSED02",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSED10",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HSED14",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA",
-    "rank": 25,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA05",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA07",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM05",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSHM12",
-    "rank": 3,
-    "party": "majority"
    }
   ],
   "tcarter": [
@@ -19462,19 +18189,6 @@
     "title": "Ranking Member"
    }
   ],
-  "hudson": [
-   {
-    "id": "HSIF",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF16",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   }
-  ],
   "castor": [
    {
     "id": "HSIF",
@@ -19910,39 +18624,6 @@
     "party": "minority"
    }
   ],
-  "millermeeks": [
-   {
-    "id": "HSIF",
-    "rank": 17,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF03",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF14",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF18",
-    "rank": 9,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR03",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairwoman"
-   }
-  ],
   "fletcher": [
    {
     "id": "HSIF",
@@ -20149,43 +18830,6 @@
     "id": "HSIF16",
     "rank": 12,
     "party": "minority"
-   }
-  ],
-  "kean": [
-   {
-    "id": "HSFA",
-    "rank": 16,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA13",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA19",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF",
-    "rank": 26,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF14",
-    "rank": 16,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF16",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSIF17",
-    "rank": 11,
-    "party": "majority"
    }
   ],
   "rulli": [
@@ -20544,39 +19188,6 @@
     "party": "minority"
    }
   ],
-  "fitzpatrick": [
-   {
-    "id": "HLIG",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HLIG01",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   },
-   {
-    "id": "HLIG11",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM02",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM05",
-    "rank": 11,
-    "party": "majority"
-   }
-  ],
   "schneider": [
    {
     "id": "HSFA",
@@ -20655,39 +19266,6 @@
    {
     "id": "HSWM04",
     "rank": 2,
-    "party": "minority"
-   }
-  ],
-  "gomez": [
-   {
-    "id": "HLIG",
-    "rank": 9,
-    "party": "minority"
-   },
-   {
-    "id": "HLIG01",
-    "rank": 1,
-    "party": "minority",
-    "title": "Ranking Member"
-   },
-   {
-    "id": "HLIG06",
-    "rank": 4,
-    "party": "minority"
-   },
-   {
-    "id": "HSWM",
-    "rank": 16,
-    "party": "minority"
-   },
-   {
-    "id": "HSWM03",
-    "rank": 5,
-    "party": "minority"
-   },
-   {
-    "id": "HSWM05",
-    "rank": 5,
     "party": "minority"
    }
   ],
@@ -20884,38 +19462,6 @@
    {
     "id": "HSWM06",
     "rank": 5,
-    "party": "majority"
-   }
-  ],
-  "milleroh": [
-   {
-    "id": "HSFA",
-    "rank": 27,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA16",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA17",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM",
-    "rank": 24,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM03",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM06",
-    "rank": 6,
     "party": "majority"
    }
   ],
@@ -21119,40 +19665,6 @@
     "party": "minority"
    }
   ],
-  "wagner": [
-   {
-    "id": "HLIG",
-    "rank": 11,
-    "party": "majority"
-   },
-   {
-    "id": "HLIG06",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HLIG11",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairwoman"
-   },
-   {
-    "id": "HSBA",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA09",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA16",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
-   }
-  ],
   "waters": [
    {
     "id": "HSBA",
@@ -21221,39 +19733,6 @@
     "rank": 1,
     "party": "minority",
     "title": "Ranking Member"
-   }
-  ],
-  "huizenga": [
-   {
-    "id": "HSBA",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA20",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA21",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA16",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA19",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
    }
   ],
   "meeks": [
@@ -21743,39 +20222,6 @@
     "party": "minority"
    }
   ],
-  "lawler": [
-   {
-    "id": "HSBA",
-    "rank": 22,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA04",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA16",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA",
-    "rank": 17,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA07",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSFA13",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chair"
-   }
-  ],
   "bynum": [
    {
     "id": "HSBA",
@@ -21882,34 +20328,6 @@
    {
     "id": "HSFA16",
     "rank": 3,
-    "party": "majority"
-   }
-  ],
-  "tmoore": [
-   {
-    "id": "HSBA",
-    "rank": 30,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA09",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chairman"
-   },
-   {
-    "id": "HSBA20",
-    "rank": 14,
-    "party": "majority"
-   },
-   {
-    "id": "HSBA21",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSBU",
-    "rank": 21,
     "party": "majority"
    }
   ],

@@ -3,7 +3,7 @@
  "built": "2026-11-13",
  "source": {
   "list": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress",
-  "fec": "https://www.fec.gov/files/bulk-downloads/2026"
+  "fec": "https://www.fec.gov/data/browse-data/?tab=bulk-data"
  },
  "members": [
   {
@@ -52,7 +52,7 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -167,41 +167,41 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 2434921.52,
-     "other": 0,
+     "super_pac": 11344678.57,
+     "other": 408774.87,
      "party": 0,
-     "total": 2434921.52
+     "total": 11753453.44
     },
     "against": {
-     "super_pac": 1599486.48,
-     "other": 2801.22,
-     "party": 0,
-     "total": 1602287.7
+     "super_pac": 12591736.29,
+     "other": 47614.87,
+     "party": 5000,
+     "total": 12644351.16
     },
     "parts": {
      "S": {
-      "super_pac": 193069.79,
-      "other": 0,
+      "super_pac": 1349281.31,
+      "other": 350605.11,
       "party": 0
      },
      "O": {
-      "super_pac": 1290687.24,
+      "super_pac": 8654842.17,
       "other": 2801.22,
       "party": 0
      },
      "OO": {
-      "super_pac": 2241851.73,
-      "other": 0,
+      "super_pac": 9995397.26,
+      "other": 58169.76,
       "party": 0
      },
      "SO": {
-      "super_pac": 308799.24,
-      "other": 0,
-      "party": 0
+      "super_pac": 3936894.12,
+      "other": 44813.65,
+      "party": 5000
      },
      "X": {
       "super_pac": 0,
@@ -215,7 +215,7 @@
      "n": 3,
      "amount": 10722.85
     },
-    "n": 63,
+    "n": 314,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -282,7 +282,7 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -292,10 +292,10 @@
      "total": 124.75
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 135677.18,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 135677.18
     },
     "parts": {
      "S": {
@@ -304,7 +304,7 @@
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 73177.18,
       "other": 0,
       "party": 0
      },
@@ -314,7 +314,7 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 62500,
       "other": 0,
       "party": 0
      },
@@ -330,7 +330,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 1,
+    "n": 5,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -397,14 +397,14 @@
    "cycleLabel": "Nov 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 52443.28,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 52443.28
     },
     "against": {
      "super_pac": 0,
@@ -414,7 +414,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 52443.28,
       "other": 0,
       "party": 0
      },
@@ -445,7 +445,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 2,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -512,39 +512,39 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 1312530.89,
-     "other": 109434.87,
+     "super_pac": 4065097.66,
+     "other": 346517.65,
      "party": 0,
-     "total": 1421965.76
+     "total": 4411615.31
     },
     "against": {
-     "super_pac": 291758,
+     "super_pac": 2608291.05,
      "other": 0,
      "party": 0,
-     "total": 291758
+     "total": 2608291.05
     },
     "parts": {
      "S": {
-      "super_pac": 46200,
-      "other": 50427.98,
+      "super_pac": 880592.69,
+      "other": 147406.04,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 619099.25,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 1266330.89,
-      "other": 59006.89,
+      "super_pac": 3184504.97,
+      "other": 199111.61,
       "party": 0
      },
      "SO": {
-      "super_pac": 291758,
+      "super_pac": 1989191.8,
       "other": 0,
       "party": 0
      },
@@ -560,7 +560,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 33,
+    "n": 103,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -627,30 +627,30 @@
    "cycleLabel": "Jan 2023 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 2218296.42,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 2218296.42
     },
     "against": {
-     "super_pac": 527222.35,
-     "other": 100000,
+     "super_pac": 650345.47,
+     "other": 170000,
      "party": 0,
-     "total": 627222.35
+     "total": 820345.47
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 2218296.42,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 51111.18,
-      "other": 100000,
+      "super_pac": 56111.18,
+      "other": 145000,
       "party": 0
      },
      "OO": {
@@ -659,8 +659,8 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 476111.17,
-      "other": 0,
+      "super_pac": 594234.29,
+      "other": 25000,
       "party": 0
      },
      "X": {
@@ -675,7 +675,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 6,
+    "n": 42,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -742,7 +742,7 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -857,39 +857,39 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 1287630.83,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 1287630.83
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 697796.72,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 697796.72
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 438914.6,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 450000,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 848716.23,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 247796.72,
       "other": 0,
       "party": 0
      },
@@ -905,7 +905,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 38,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -972,7 +972,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -1087,39 +1087,39 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 2744988.43,
-     "other": 0,
+     "super_pac": 6235022.84,
+     "other": 114180.56,
      "party": 0,
-     "total": 2744988.43
+     "total": 6349203.4
     },
     "against": {
-     "super_pac": 175721.84,
+     "super_pac": 524672.57,
      "other": 0,
      "party": 0,
-     "total": 175721.84
+     "total": 524672.57
     },
     "parts": {
      "S": {
-      "super_pac": 8988.27,
+      "super_pac": 822202.89,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 118018.56,
+      "super_pac": 280299.92,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 2736000.16,
-      "other": 0,
+      "super_pac": 5412819.95,
+      "other": 114180.56,
       "party": 0
      },
      "SO": {
-      "super_pac": 57703.28,
+      "super_pac": 244372.65,
       "other": 0,
       "party": 0
      },
@@ -1135,7 +1135,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 31,
+    "n": 147,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -1202,7 +1202,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -1317,40 +1317,40 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 499177.34,
-     "other": 0,
+     "super_pac": 2657182.41,
+     "other": 47103,
      "party": 0,
-     "total": 499177.34
+     "total": 2704285.41
     },
     "against": {
-     "super_pac": 2346886.08,
-     "other": 0,
+     "super_pac": 5726295.17,
+     "other": 11064.69,
      "party": 0,
-     "total": 2346886.08
+     "total": 5737359.86
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 159278.27,
+      "other": 33384,
       "party": 0
      },
      "O": {
-      "super_pac": 1981985.5,
+      "super_pac": 4181173.54,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 499177.34,
-      "other": 0,
+      "super_pac": 2497904.14,
+      "other": 13719,
       "party": 0
      },
      "SO": {
-      "super_pac": 364900.58,
-      "other": 0,
+      "super_pac": 1545121.63,
+      "other": 11064.69,
       "party": 0
      },
      "X": {
@@ -1365,7 +1365,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 47,
+    "n": 226,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -1432,7 +1432,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -1547,14 +1547,14 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 82642.42,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 82642.42
     },
     "against": {
      "super_pac": 0,
@@ -1564,7 +1564,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 82642.42,
       "other": 0,
       "party": 0
      },
@@ -1595,7 +1595,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 4,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -1662,40 +1662,40 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 97417.24,
+     "super_pac": 1173245.09,
      "other": 0,
      "party": 0,
-     "total": 97417.24
+     "total": 1173245.09
     },
     "against": {
-     "super_pac": 1900,
-     "other": 0,
+     "super_pac": 2326011.44,
+     "other": 7896.27,
      "party": 0,
-     "total": 1900
+     "total": 2333907.71
     },
     "parts": {
      "S": {
-      "super_pac": 54125.62,
+      "super_pac": 783127.77,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 1660469.08,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 43291.62,
+      "super_pac": 390117.32,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 1900,
-      "other": 0,
+      "super_pac": 665542.36,
+      "other": 7896.27,
       "party": 0
      },
      "X": {
@@ -1710,7 +1710,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 10,
+    "n": 71,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -1777,14 +1777,14 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 10833,
+     "super_pac": 39009.54,
      "other": 0,
      "party": 0,
-     "total": 10833
+     "total": 39009.54
     },
     "against": {
      "super_pac": 0,
@@ -1794,7 +1794,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 10833,
+      "super_pac": 39009.54,
       "other": 0,
       "party": 0
      },
@@ -1825,7 +1825,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 1,
+    "n": 2,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -1892,39 +1892,39 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 10833,
-     "other": 0,
+     "super_pac": 1770223.1,
+     "other": 13874,
      "party": 0,
-     "total": 10833
+     "total": 1784097.1
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 204805,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 204805
     },
     "parts": {
      "S": {
-      "super_pac": 10833,
-      "other": 0,
+      "super_pac": 145983.82,
+      "other": 13874,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 203031,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 1624239.28,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 1774,
       "other": 0,
       "party": 0
      },
@@ -1940,7 +1940,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 1,
+    "n": 29,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -2007,7 +2007,7 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -2122,7 +2122,7 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -2237,24 +2237,24 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 36932.47,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 36932.47
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 43430.16,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 43430.16
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 36932.47,
       "other": 0,
       "party": 0
      },
@@ -2269,7 +2269,7 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 43430.16,
       "other": 0,
       "party": 0
      },
@@ -2285,7 +2285,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 8,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -2352,14 +2352,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 34409,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 34409
     },
     "against": {
      "super_pac": 0,
@@ -2369,7 +2369,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 34409,
       "other": 0,
       "party": 0
      },
@@ -2400,7 +2400,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -2467,14 +2467,14 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 256736,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 256736
     },
     "against": {
      "super_pac": 0,
@@ -2484,7 +2484,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 256736,
       "other": 0,
       "party": 0
      },
@@ -2515,7 +2515,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 2,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -2582,14 +2582,14 @@
    "cycleLabel": "Jun 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 14.9,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 14.9
     },
     "against": {
      "super_pac": 0,
@@ -2599,7 +2599,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 14.9,
       "other": 0,
       "party": 0
      },
@@ -2630,7 +2630,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -2697,7 +2697,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -2812,7 +2812,7 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -2927,7 +2927,7 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -3042,7 +3042,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -3052,10 +3052,10 @@
      "total": 0
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 131700,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 131700
     },
     "parts": {
      "S": {
@@ -3064,7 +3064,7 @@
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 131700,
       "other": 0,
       "party": 0
      },
@@ -3090,7 +3090,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 4,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3157,7 +3157,7 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -3272,39 +3272,39 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 213487,
-     "other": 0,
+     "super_pac": 4161446.17,
+     "other": 43694.13,
      "party": 0,
-     "total": 213487
+     "total": 4205140.3
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 1334329.13,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 1334329.13
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 173072.75,
+      "other": 32237.13,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 1211216.58,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 213487,
-      "other": 0,
+      "super_pac": 3988373.42,
+      "other": 11457,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 123112.55,
       "other": 0,
       "party": 0
      },
@@ -3320,7 +3320,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 3,
+    "n": 65,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3387,40 +3387,40 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 4397986.36,
-     "other": 57187.07,
+     "super_pac": 10263863.26,
+     "other": 751720.48,
      "party": 0,
-     "total": 4455173.43
+     "total": 11015583.74
     },
     "against": {
-     "super_pac": 2779991.31,
-     "other": 0,
+     "super_pac": 5819272.96,
+     "other": 41863.69,
      "party": 0,
-     "total": 2779991.31
+     "total": 5861136.65
     },
     "parts": {
      "S": {
-      "super_pac": 388105.63,
-      "other": 0,
+      "super_pac": 3429844.1,
+      "other": 16798.39,
       "party": 0
      },
      "O": {
-      "super_pac": 2644674.87,
+      "super_pac": 5158556.5,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 4009880.73,
-      "other": 57187.07,
+      "super_pac": 6834019.16,
+      "other": 734922.09,
       "party": 0
      },
      "SO": {
-      "super_pac": 135316.44,
-      "other": 0,
+      "super_pac": 660716.46,
+      "other": 41863.69,
       "party": 0
      },
      "X": {
@@ -3435,7 +3435,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 109,
+    "n": 346,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3502,14 +3502,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 43817.74,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 43817.74
     },
     "against": {
      "super_pac": 0,
@@ -3519,7 +3519,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 43817.74,
       "other": 0,
       "party": 0
      },
@@ -3550,7 +3550,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 5,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3617,14 +3617,14 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 34886,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 34886
     },
     "against": {
      "super_pac": 0,
@@ -3634,7 +3634,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 34886,
       "other": 0,
       "party": 0
      },
@@ -3665,7 +3665,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3732,40 +3732,40 @@
    "cycleLabel": "Jun 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 861956.13,
-     "other": 0,
+     "super_pac": 5999566.89,
+     "other": 139874,
      "party": 0,
-     "total": 861956.13
+     "total": 6139440.89
     },
     "against": {
-     "super_pac": 1097155.1,
-     "other": 0,
+     "super_pac": 6816751.21,
+     "other": 406323.47,
      "party": 0,
-     "total": 1097155.1
+     "total": 7223074.68
     },
     "parts": {
      "S": {
-      "super_pac": 611956.13,
-      "other": 0,
+      "super_pac": 1548320.92,
+      "other": 34046,
       "party": 0
      },
      "O": {
-      "super_pac": 560944.03,
+      "super_pac": 3352712.99,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 250000,
-      "other": 0,
+      "super_pac": 4451245.97,
+      "other": 105828,
       "party": 0
      },
      "SO": {
-      "super_pac": 536211.07,
-      "other": 0,
+      "super_pac": 3464038.22,
+      "other": 406323.47,
       "party": 0
      },
      "X": {
@@ -3780,7 +3780,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 31,
+    "n": 217,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -3847,7 +3847,7 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -3962,7 +3962,7 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -3972,10 +3972,10 @@
      "total": 0
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 46907.36,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 46907.36
     },
     "parts": {
      "S": {
@@ -3984,7 +3984,7 @@
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 46907.36,
       "other": 0,
       "party": 0
      },
@@ -4010,7 +4010,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 4,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4077,40 +4077,40 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 5031643.81,
-     "other": 12196.67,
+     "super_pac": 11378360.65,
+     "other": 594695.42,
      "party": 0,
-     "total": 5043840.48
+     "total": 11973056.07
     },
     "against": {
-     "super_pac": 4472275.91,
-     "other": 0,
+     "super_pac": 9346807.46,
+     "other": 66360,
      "party": 0,
-     "total": 4472275.91
+     "total": 9413167.46
     },
     "parts": {
      "S": {
-      "super_pac": 365933.5,
-      "other": 7065.65,
+      "super_pac": 991440.47,
+      "other": 57429.21,
       "party": 0
      },
      "O": {
-      "super_pac": 4200158.68,
+      "super_pac": 7593496.95,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 4665710.31,
-      "other": 5131.02,
+      "super_pac": 10386920.18,
+      "other": 537266.21,
       "party": 0
      },
      "SO": {
-      "super_pac": 272117.23,
-      "other": 0,
+      "super_pac": 1753310.51,
+      "other": 66360,
       "party": 0
      },
      "X": {
@@ -4125,7 +4125,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 180,
+    "n": 458,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4192,7 +4192,7 @@
    "cycleLabel": "May 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -4307,14 +4307,14 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 1500,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 1500
     },
     "against": {
      "super_pac": 0,
@@ -4324,7 +4324,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 1500,
       "other": 0,
       "party": 0
      },
@@ -4355,7 +4355,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4422,25 +4422,25 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
-     "other": 0,
+     "super_pac": 296066.27,
+     "other": 4031.9,
      "party": 0,
-     "total": 0
+     "total": 300098.17
     },
     "against": {
-     "super_pac": 4710.31,
+     "super_pac": 225656.9,
      "other": 0,
      "party": 0,
-     "total": 4710.31
+     "total": 225656.9
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 283893.4,
+      "other": 4031.9,
       "party": 0
      },
      "O": {
@@ -4449,12 +4449,12 @@
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 12172.87,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 4710.31,
+      "super_pac": 225656.9,
       "other": 0,
       "party": 0
      },
@@ -4470,7 +4470,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 4,
+    "n": 37,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4537,39 +4537,39 @@
    "cycleLabel": "Sep 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 384869.64,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 384869.64
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 238119.03,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 238119.03
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 229869.64,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 220070,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 155000,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 18049.03,
       "other": 0,
       "party": 0
      },
@@ -4585,7 +4585,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 18,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4652,14 +4652,14 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 33751,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 33751
     },
     "against": {
      "super_pac": 0,
@@ -4669,7 +4669,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 33751,
       "other": 0,
       "party": 0
      },
@@ -4700,7 +4700,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4767,41 +4767,41 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 653320.63,
-     "other": 8048.51,
+     "super_pac": 8272899.27,
+     "other": 434991.28,
      "party": 0,
-     "total": 661369.14
+     "total": 8707890.55
     },
     "against": {
-     "super_pac": 2108759.92,
-     "other": 0,
-     "party": 37134,
-     "total": 2145893.92
+     "super_pac": 10937589.78,
+     "other": 1153.86,
+     "party": 88228.68,
+     "total": 11026972.32
     },
     "parts": {
      "S": {
-      "super_pac": 293617.78,
-      "other": 8048.51,
+      "super_pac": 1391008.16,
+      "other": 237448.99,
       "party": 0
      },
      "O": {
-      "super_pac": 1501603.34,
+      "super_pac": 7997861.22,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 359702.85,
-      "other": 0,
+      "super_pac": 6881891.11,
+      "other": 197542.29,
       "party": 0
      },
      "SO": {
-      "super_pac": 607156.58,
-      "other": 0,
-      "party": 37134
+      "super_pac": 2939728.56,
+      "other": 1153.86,
+      "party": 88228.68
      },
      "X": {
       "super_pac": 0,
@@ -4815,7 +4815,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 180,
+    "n": 621,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4882,40 +4882,40 @@
    "cycleLabel": "May 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 1430616.74,
-     "other": 0,
+     "super_pac": 2436004.95,
+     "other": 98575.44,
      "party": 0,
-     "total": 1430616.74
+     "total": 2534580.39
     },
     "against": {
-     "super_pac": 170408.11,
-     "other": 0,
+     "super_pac": 577180.07,
+     "other": 2343.89,
      "party": 0,
-     "total": 170408.11
+     "total": 579523.96
     },
     "parts": {
      "S": {
-      "super_pac": 64738.69,
-      "other": 0,
+      "super_pac": 732742.02,
+      "other": 94824.44,
       "party": 0
      },
      "O": {
-      "super_pac": 126791.19,
+      "super_pac": 211912.37,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 1365878.05,
-      "other": 0,
+      "super_pac": 1703262.93,
+      "other": 3751,
       "party": 0
      },
      "SO": {
-      "super_pac": 43616.92,
-      "other": 0,
+      "super_pac": 365267.7,
+      "other": 2343.89,
       "party": 0
      },
      "X": {
@@ -4930,7 +4930,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 37,
+    "n": 151,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -4997,39 +4997,39 @@
    "cycleLabel": "Feb 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 9573.3,
-     "other": 612.75,
+     "super_pac": 2259862.8,
+     "other": 199514.99,
      "party": 0,
-     "total": 10186.05
+     "total": 2459377.79
     },
     "against": {
-     "super_pac": 1206990,
+     "super_pac": 3985700.01,
      "other": 0,
      "party": 0,
-     "total": 1206990
+     "total": 3985700.01
     },
     "parts": {
      "S": {
-      "super_pac": 9573.3,
-      "other": 612.75,
+      "super_pac": 103250.41,
+      "other": 137239.99,
       "party": 0
      },
      "O": {
-      "super_pac": 694758.86,
+      "super_pac": 2282675.55,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 2156612.39,
+      "other": 62275,
       "party": 0
      },
      "SO": {
-      "super_pac": 512231.14,
+      "super_pac": 1703024.46,
       "other": 0,
       "party": 0
      },
@@ -5045,7 +5045,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 23,
+    "n": 121,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -5112,39 +5112,39 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 534600,
-     "other": 1629.65,
+     "super_pac": 2715282.51,
+     "other": 9494.87,
      "party": 0,
-     "total": 536229.65
+     "total": 2724777.38
     },
     "against": {
-     "super_pac": 162930.93,
+     "super_pac": 579981.76,
      "other": 0,
      "party": 0,
-     "total": 162930.93
+     "total": 579981.76
     },
     "parts": {
      "S": {
-      "super_pac": 133650,
-      "other": 1629.65,
+      "super_pac": 180876.25,
+      "other": 9494.87,
       "party": 0
      },
      "O": {
-      "super_pac": 98245.3,
+      "super_pac": 328434.77,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 400950,
+      "super_pac": 2534406.26,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 64685.63,
+      "super_pac": 251546.99,
       "other": 0,
       "party": 0
      },
@@ -5160,7 +5160,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 45,
+    "n": 143,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -5227,25 +5227,25 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
-     "other": 0,
+     "super_pac": 1859549.62,
+     "other": 63725.55,
      "party": 0,
-     "total": 0
+     "total": 1923275.17
     },
     "against": {
-     "super_pac": 0,
-     "other": 0,
+     "super_pac": 485000,
+     "other": 1059.61,
      "party": 0,
-     "total": 0
+     "total": 486059.61
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 407299.62,
+      "other": 30632.58,
       "party": 0
      },
      "O": {
@@ -5254,13 +5254,13 @@
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 1452250,
+      "other": 33092.97,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 485000,
+      "other": 1059.61,
       "party": 0
      },
      "X": {
@@ -5275,7 +5275,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 29,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -5342,39 +5342,39 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 1374950.89,
-     "other": 0,
+     "super_pac": 2896386.11,
+     "other": 163635.34,
      "party": 0,
-     "total": 1374950.89
+     "total": 3060021.45
     },
     "against": {
-     "super_pac": 4375794.75,
+     "super_pac": 4840205.68,
      "other": 82911.98,
      "party": 0,
-     "total": 4458706.73
+     "total": 4923117.66
     },
     "parts": {
      "S": {
-      "super_pac": 424868.61,
-      "other": 0,
+      "super_pac": 1039980.67,
+      "other": 163542.34,
       "party": 0
      },
      "O": {
-      "super_pac": 4247826.03,
+      "super_pac": 4549422.38,
       "other": 12160.98,
       "party": 0
      },
      "OO": {
-      "super_pac": 950082.28,
-      "other": 0,
+      "super_pac": 1856405.44,
+      "other": 93,
       "party": 0
      },
      "SO": {
-      "super_pac": 127968.72,
+      "super_pac": 290783.3,
       "other": 70751,
       "party": 0
      },
@@ -5390,7 +5390,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 37,
+    "n": 795,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -5457,7 +5457,7 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -5572,14 +5572,14 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 2500,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 2500
     },
     "against": {
      "super_pac": 0,
@@ -5589,7 +5589,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 2500,
       "other": 0,
       "party": 0
      },
@@ -5620,7 +5620,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -5687,7 +5687,7 @@
    "cycleLabel": "Dec 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -5802,7 +5802,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -5917,7 +5917,7 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -6032,39 +6032,39 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 40000,
-     "other": 0,
+     "super_pac": 1352192.25,
+     "other": 14303,
      "party": 0,
-     "total": 40000
+     "total": 1366495.25
     },
     "against": {
-     "super_pac": 27201.05,
+     "super_pac": 4380496.32,
      "other": 0,
      "party": 0,
-     "total": 27201.05
+     "total": 4380496.32
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 472911.94,
+      "other": 14303,
       "party": 0
      },
      "O": {
-      "super_pac": 5275,
+      "super_pac": 3638727.82,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 40000,
+      "super_pac": 879280.31,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 21926.05,
+      "super_pac": 741768.5,
       "other": 0,
       "party": 0
      },
@@ -6080,7 +6080,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 13,
+    "n": 52,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6147,7 +6147,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -6157,10 +6157,10 @@
      "total": 0
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 35632,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 35632
     },
     "parts": {
      "S": {
@@ -6179,7 +6179,7 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 35632,
       "other": 0,
       "party": 0
      },
@@ -6195,7 +6195,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6262,7 +6262,7 @@
    "cycleLabel": "May 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -6377,7 +6377,7 @@
    "cycleLabel": "Dec 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -6387,10 +6387,10 @@
      "total": 0
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 182500,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 182500
     },
     "parts": {
      "S": {
@@ -6409,7 +6409,7 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 182500,
       "other": 0,
       "party": 0
      },
@@ -6425,7 +6425,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 2,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6492,39 +6492,39 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 1371422.21,
-     "other": 0,
+     "super_pac": 7519211.86,
+     "other": 50193,
      "party": 0,
-     "total": 1371422.21
+     "total": 7569404.86
     },
     "against": {
-     "super_pac": 225974,
+     "super_pac": 4307274.39,
      "other": 0,
      "party": 0,
-     "total": 225974
+     "total": 4307274.39
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 1625596.16,
+      "other": 46245,
       "party": 0
      },
      "O": {
-      "super_pac": 19440.5,
+      "super_pac": 3645211.07,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 1371422.21,
-      "other": 0,
+      "super_pac": 5893615.7,
+      "other": 3948,
       "party": 0
      },
      "SO": {
-      "super_pac": 206533.5,
+      "super_pac": 662063.32,
       "other": 0,
       "party": 0
      },
@@ -6540,7 +6540,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 18,
+    "n": 147,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6607,40 +6607,40 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 1010495.12,
-     "other": 4957.16,
+     "super_pac": 6390402.86,
+     "other": 12962.29,
      "party": 0,
-     "total": 1015452.28
+     "total": 6403365.15
     },
     "against": {
-     "super_pac": 181653.2,
-     "other": 0,
+     "super_pac": 3949893.96,
+     "other": 112646,
      "party": 0,
-     "total": 181653.2
+     "total": 4062539.96
     },
     "parts": {
      "S": {
-      "super_pac": 837025.23,
-      "other": 4957.16,
+      "super_pac": 2434946.88,
+      "other": 10562.29,
       "party": 0
      },
      "O": {
-      "super_pac": 44496.66,
+      "super_pac": 2264694.32,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 173469.89,
-      "other": 0,
+      "super_pac": 3955455.98,
+      "other": 2400,
       "party": 0
      },
      "SO": {
-      "super_pac": 137156.54,
-      "other": 0,
+      "super_pac": 1685199.64,
+      "other": 112646,
       "party": 0
      },
      "X": {
@@ -6655,7 +6655,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 27,
+    "n": 179,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6722,14 +6722,14 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 34112,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 34112
     },
     "against": {
      "super_pac": 0,
@@ -6739,7 +6739,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 34112,
       "other": 0,
       "party": 0
      },
@@ -6770,7 +6770,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6837,40 +6837,40 @@
    "cycleLabel": "Apr 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 975639.46,
-     "other": 46638.53,
+     "super_pac": 10213522.93,
+     "other": 67291.6,
      "party": 0,
-     "total": 1022277.99
+     "total": 10280814.53
     },
     "against": {
-     "super_pac": 1258104.8,
-     "other": 0,
+     "super_pac": 3858391.29,
+     "other": 40622.42,
      "party": 0,
-     "total": 1258104.8
+     "total": 3899013.71
     },
     "parts": {
      "S": {
-      "super_pac": 34437.5,
-      "other": 11861.01,
+      "super_pac": 749149.77,
+      "other": 32302.97,
       "party": 0
      },
      "O": {
-      "super_pac": 807459.35,
+      "super_pac": 2433531.38,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 941201.96,
-      "other": 34777.52,
+      "super_pac": 9464373.16,
+      "other": 34988.63,
       "party": 0
      },
      "SO": {
-      "super_pac": 450645.45,
-      "other": 0,
+      "super_pac": 1424859.91,
+      "other": 40622.42,
       "party": 0
      },
      "X": {
@@ -6885,7 +6885,7 @@
      "n": 1,
      "amount": 5500
     },
-    "n": 89,
+    "n": 312,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -6952,7 +6952,7 @@
    "cycleLabel": "Oct 2023 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -7067,40 +7067,40 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
-     "other": 0,
+     "super_pac": 3846691.95,
+     "other": 249259.2,
      "party": 0,
-     "total": 0
+     "total": 4095951.15
     },
     "against": {
-     "super_pac": 1093454.38,
-     "other": 0,
+     "super_pac": 5494670.44,
+     "other": 671.52,
      "party": 0,
-     "total": 1093454.38
+     "total": 5495341.96
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 504215.39,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 516540.51,
+      "super_pac": 3336263.97,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 3342476.56,
+      "other": 249259.2,
       "party": 0
      },
      "SO": {
-      "super_pac": 576913.87,
-      "other": 0,
+      "super_pac": 2158406.47,
+      "other": 671.52,
       "party": 0
      },
      "X": {
@@ -7115,7 +7115,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 20,
+    "n": 130,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7182,7 +7182,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -7297,14 +7297,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 82059.06,
+     "super_pac": 118493.06,
      "other": 0,
      "party": 0,
-     "total": 82059.06
+     "total": 118493.06
     },
     "against": {
      "super_pac": 0,
@@ -7314,7 +7314,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 82059.06,
+      "super_pac": 118493.06,
       "other": 0,
       "party": 0
      },
@@ -7345,7 +7345,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 4,
+    "n": 5,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7412,39 +7412,39 @@
    "cycleLabel": "Aug 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 544082.14,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 544082.14
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 217250,
      "other": 1600,
      "party": 0,
-     "total": 1600
+     "total": 218850
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 393761.06,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 52500,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 150321.08,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 164750,
       "other": 1600,
       "party": 0
      },
@@ -7460,7 +7460,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 1,
+    "n": 23,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7527,7 +7527,7 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -7642,39 +7642,39 @@
    "cycleLabel": "Apr 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 1582629.08,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 1582629.08
     },
     "against": {
-     "super_pac": 22678.5,
+     "super_pac": 3592852.24,
      "other": 0,
      "party": 0,
-     "total": 22678.5
+     "total": 3592852.24
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 497285.58,
       "other": 0,
       "party": 0
      },
      "O": {
-      "super_pac": 0,
+      "super_pac": 1882350.25,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 1085343.5,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 22678.5,
+      "super_pac": 1710501.99,
       "other": 0,
       "party": 0
      },
@@ -7690,7 +7690,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 2,
+    "n": 82,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7757,14 +7757,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 28089.92,
+     "super_pac": 97024.5,
      "other": 0,
      "party": 0,
-     "total": 28089.92
+     "total": 97024.5
     },
     "against": {
      "super_pac": 0,
@@ -7774,7 +7774,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 5589.92,
+      "super_pac": 74524.5,
       "other": 0,
       "party": 0
      },
@@ -7805,7 +7805,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 41,
+    "n": 48,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7872,14 +7872,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 8197.05,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 8197.05
     },
     "against": {
      "super_pac": 0,
@@ -7889,7 +7889,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 8197.05,
       "other": 0,
       "party": 0
      },
@@ -7920,7 +7920,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -7987,29 +7987,29 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 74262.87,
-     "other": 0,
+     "super_pac": 319172.64,
+     "other": 662.49,
      "party": 0,
-     "total": 74262.87
+     "total": 319835.13
     },
     "against": {
-     "super_pac": 291177.76,
+     "super_pac": 2964871.88,
      "other": 0,
      "party": 0,
-     "total": 291177.76
+     "total": 2964871.88
     },
     "parts": {
      "S": {
-      "super_pac": 74262.87,
-      "other": 0,
+      "super_pac": 319172.64,
+      "other": 662.49,
       "party": 0
      },
      "O": {
-      "super_pac": 147005.35,
+      "super_pac": 1346034.03,
       "other": 0,
       "party": 0
      },
@@ -8019,7 +8019,7 @@
       "party": 0
      },
      "SO": {
-      "super_pac": 144172.41,
+      "super_pac": 1618837.85,
       "other": 0,
       "party": 0
      },
@@ -8035,7 +8035,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 37,
+    "n": 125,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8102,14 +8102,14 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 9842.29,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 9842.29
     },
     "against": {
      "super_pac": 0,
@@ -8119,7 +8119,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 9842.29,
       "other": 0,
       "party": 0
      },
@@ -8150,7 +8150,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8217,14 +8217,14 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 45849.63,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 45849.63
     },
     "against": {
      "super_pac": 0,
@@ -8234,7 +8234,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 45849.63,
       "other": 0,
       "party": 0
      },
@@ -8265,7 +8265,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 2,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8332,14 +8332,14 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 8815.99,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 8815.99
     },
     "against": {
      "super_pac": 0,
@@ -8349,7 +8349,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 8815.99,
       "other": 0,
       "party": 0
      },
@@ -8380,7 +8380,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8447,7 +8447,7 @@
    "cycleLabel": "Jan 2025 – Sep 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -8562,39 +8562,39 @@
    "cycleLabel": "Nov 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 370960.3,
-     "other": 0,
+     "super_pac": 4807337.72,
+     "other": 385.72,
      "party": 0,
-     "total": 370960.3
+     "total": 4807723.44
     },
     "against": {
-     "super_pac": 1029112.37,
+     "super_pac": 3450820.69,
      "other": 0,
      "party": 0,
-     "total": 1029112.37
+     "total": 3450820.69
     },
     "parts": {
      "S": {
-      "super_pac": 102960.3,
-      "other": 0,
+      "super_pac": 436122.43,
+      "other": 385.72,
       "party": 0
      },
      "O": {
-      "super_pac": 303149.49,
+      "super_pac": 1514661,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 268000,
+      "super_pac": 4371215.29,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 725962.88,
+      "super_pac": 1936159.69,
       "other": 0,
       "party": 0
      },
@@ -8610,7 +8610,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 50,
+    "n": 196,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8677,14 +8677,14 @@
    "cycleLabel": "Dec 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 1000,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 1000
     },
     "against": {
      "super_pac": 0,
@@ -8694,7 +8694,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 1000,
       "other": 0,
       "party": 0
      },
@@ -8725,7 +8725,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8792,24 +8792,24 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 894853.97,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 894853.97
     },
     "against": {
-     "super_pac": 0,
+     "super_pac": 86.59,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 86.59
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 259505.56,
       "other": 0,
       "party": 0
      },
@@ -8819,12 +8819,12 @@
       "party": 0
      },
      "OO": {
-      "super_pac": 0,
+      "super_pac": 635348.41,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 0,
+      "super_pac": 86.59,
       "other": 0,
       "party": 0
      },
@@ -8840,7 +8840,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 47,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -8907,7 +8907,7 @@
    "cycleLabel": "Dec 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -9022,39 +9022,39 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 224389.41,
-     "other": 0,
+     "super_pac": 9458225.74,
+     "other": 125000,
      "party": 0,
-     "total": 224389.41
+     "total": 9583225.74
     },
     "against": {
-     "super_pac": 3368669.6,
+     "super_pac": 10749981.17,
      "other": 0,
      "party": 0,
-     "total": 3368669.6
+     "total": 10749981.17
     },
     "parts": {
      "S": {
-      "super_pac": 155212.41,
-      "other": 0,
+      "super_pac": 4128610.03,
+      "other": 125000,
       "party": 0
      },
      "O": {
-      "super_pac": 2157866.82,
+      "super_pac": 8681079.78,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 69177,
+      "super_pac": 5329615.71,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 1210802.78,
+      "super_pac": 2068901.39,
       "other": 0,
       "party": 0
      },
@@ -9070,7 +9070,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 39,
+    "n": 188,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9137,7 +9137,7 @@
    "cycleLabel": "Jan 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
@@ -9252,40 +9252,40 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 4154060.8,
-     "other": 0,
+     "super_pac": 13174408.67,
+     "other": 18726.09,
      "party": 0,
-     "total": 4154060.8
+     "total": 13193134.76
     },
     "against": {
-     "super_pac": 152330.59,
-     "other": 0,
+     "super_pac": 1746730.43,
+     "other": 78437.83,
      "party": 0,
-     "total": 152330.59
+     "total": 1825168.26
     },
     "parts": {
      "S": {
-      "super_pac": 152732.19,
-      "other": 0,
+      "super_pac": 2323981.5,
+      "other": 18726.09,
       "party": 0
      },
      "O": {
-      "super_pac": 76697.62,
+      "super_pac": 635035.27,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 4001328.61,
+      "super_pac": 10850427.17,
       "other": 0,
       "party": 0
      },
      "SO": {
-      "super_pac": 75632.97,
-      "other": 0,
+      "super_pac": 1111695.16,
+      "other": 78437.83,
       "party": 0
      },
      "X": {
@@ -9300,7 +9300,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 45,
+    "n": 262,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9367,14 +9367,14 @@
    "cycleLabel": "Jan 2026 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
-     "other": 0,
+     "super_pac": 89562.21,
+     "other": 8237.44,
      "party": 0,
-     "total": 0
+     "total": 97799.65
     },
     "against": {
      "super_pac": 0,
@@ -9384,8 +9384,8 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
-      "other": 0,
+      "super_pac": 89562.21,
+      "other": 8237.44,
       "party": 0
      },
      "O": {
@@ -9415,7 +9415,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 5,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9482,40 +9482,40 @@
    "cycleLabel": "Jul 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 332644.63,
-     "other": 0,
+     "super_pac": 7453829.95,
+     "other": 145645.65,
      "party": 0,
-     "total": 332644.63
+     "total": 7599475.6
     },
     "against": {
-     "super_pac": 1087728.87,
-     "other": 0,
+     "super_pac": 6017092.16,
+     "other": 100000,
      "party": 0,
-     "total": 1087728.87
+     "total": 6117092.16
     },
     "parts": {
      "S": {
-      "super_pac": 258026.53,
-      "other": 0,
+      "super_pac": 1541517.72,
+      "other": 45570.65,
       "party": 0
      },
      "O": {
-      "super_pac": 197963.49,
+      "super_pac": 2089945.08,
       "other": 0,
       "party": 0
      },
      "OO": {
-      "super_pac": 74618.1,
-      "other": 0,
+      "super_pac": 5912312.23,
+      "other": 100075,
       "party": 0
      },
      "SO": {
-      "super_pac": 889765.38,
-      "other": 0,
+      "super_pac": 3927147.08,
+      "other": 100000,
       "party": 0
      },
      "X": {
@@ -9530,7 +9530,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 39,
+    "n": 223,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9597,14 +9597,14 @@
    "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 30000,
-     "other": 0,
+     "super_pac": 35000,
+     "other": 7602.67,
      "party": 0,
-     "total": 30000
+     "total": 42602.67
     },
     "against": {
      "super_pac": 0,
@@ -9614,8 +9614,8 @@
     },
     "parts": {
      "S": {
-      "super_pac": 30000,
-      "other": 0,
+      "super_pac": 35000,
+      "other": 7602.67,
       "party": 0
      },
      "O": {
@@ -9645,7 +9645,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 1,
+    "n": 20,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9712,14 +9712,14 @@
    "cycleLabel": "Dec 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
-    "end": "2026-09-30",
+    "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 290632.99,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 290632.99
     },
     "against": {
      "super_pac": 0,
@@ -9729,7 +9729,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 290632.99,
       "other": 0,
       "party": 0
      },
@@ -9760,7 +9760,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 9,
     "uncertain": 0,
     "cms": [],
     "same": null,

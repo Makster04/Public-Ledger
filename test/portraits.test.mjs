@@ -1,12 +1,13 @@
+import {withRemovedHouse,withRemovedResearch,withRemovedSenate} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const root=new URL('../public/',import.meta.url);
-const data=JSON.parse(await fs.readFile(new URL('research.json',root),'utf8'));
+const data=withRemovedResearch(JSON.parse(await fs.readFile(new URL('research.json',root),'utf8')));
 const index=JSON.parse(await fs.readFile(new URL('portraits/index.json',root),'utf8'));
 // Everyone profiled, plus every other sitting senator and member of the House (their basic profiles' cards).
-const senate=JSON.parse(await fs.readFile(new URL('senate.json',root),'utf8')).senators;
-const house=JSON.parse(await fs.readFile(new URL('house.json',root),'utf8')).members;
+const senate=withRemovedSenate(JSON.parse(await fs.readFile(new URL('senate.json',root),'utf8'))).senators;
+const house=withRemovedHouse(JSON.parse(await fs.readFile(new URL('house.json',root),'utf8'))).members;
 // Results-only nominees (liteRaces) are known by their id, or by their FEC candidate ID without one.
 const ids=new Set(data.members.concat(data.cands,data.featured||[]).map(s=>s.id).concat(senate.map(s=>s.id),house.map(s=>s.id),data.liteRaces.flatMap(r=>r.nominees.map(n=>n.id||n.fecCand))));
 test('every portrait belongs to a profiled person, a sitting senator or a House member, exists as a WebP, and says where it came from',async()=>{

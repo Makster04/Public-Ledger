@@ -1,12 +1,13 @@
 // The trackers (public/trackers.js): the seven approved lobbies, how a campaign's money from each is counted for the
 // Tracking Major Super PACs box (✕ took / ✓ none / … waiting), and the super PACs around each, plus where they show.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {TRACKERS,TRACKER,isTrackerPac,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,isOwnSuperPac,trackerOutside,ownSuperPacSpending,bulkUnread} from '../public/trackers.js';
 import {bundledBox} from '../public/money-map.js';
 
-const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+const research=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
 const read=f=>fs.readFileSync(new URL(f,import.meta.url),'utf8');
 const line=(name,amount,cid=null)=>({cid,name,amount});
 const caught=(key,name)=>isTrackerPac(TRACKER[key],{name});

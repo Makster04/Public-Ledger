@@ -1,13 +1,15 @@
 // The crypto and AI industry card (public/industries.js and the "industry-gifts" refresh read): the approved lists,
 // how gifts are matched to companies and executives, and the super PAC spending on file.
+import {withRemovedConfig,withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 import {SUPER_PACS,COMPANIES,EXECUTIVES,normEmployer,companyByEmployer,executiveFor,industryQueries,industryRow,industryGifts,industrySuperPacs} from '../public/industries.js';
 import {FEEDS} from '../src/feeds.mjs';
 
-const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+const research=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
 const json=x=>new Response(JSON.stringify(x),{status:200,headers:{'content-type':'application/json'}});
 const gift=(o)=>({sub_id:'1',committee_id:'C00000001',contribution_receipt_amount:500,contribution_receipt_date:'2025-06-01T00:00:00',...o});
 

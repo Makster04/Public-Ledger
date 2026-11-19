@@ -1,9 +1,11 @@
 // The four dark money sources: FEC electioneering communications and communication costs, LDA.gov lobbyists' gifts
 // (LD-203) and lobbying coalitions' members (LD-1 affiliated organizations). Sample replies follow the live ones' shape.
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 import {FEEDS,ecRow,ccRow,spendSummary,honoreeIs,honoreeQuery,lobbyistGiftRows,lobbyistGiftSummary,coalitionRow,personName,LD203_PAGES} from '../src/feeds.mjs';
 import {initialize,getBills,statement} from '../src/refresh.mjs';
 import {openDatabase} from '../scripts/sqlite.mjs';

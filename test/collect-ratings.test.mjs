@@ -1,3 +1,4 @@
+import {withRemovedConfig,withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -8,8 +9,8 @@ import {readSba,readLcv,readRfa,readHeritage,readClubForGrowth,cfgLatest,congres
 import {ratingsLean} from '../public/six-scores.js';
 
 const sample=f=>fs.readFileSync(new URL(`../data/ratings-samples/${f}`,import.meta.url),'utf8');
-const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
-const config=JSON.parse(fs.readFileSync(new URL('../data/config.json',import.meta.url),'utf8'));
+const research=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
+const config=withRemovedConfig(JSON.parse(fs.readFileSync(new URL('../data/config.json',import.meta.url),'utf8')));
 const full=[...research.members,...research.cands],have=new Set(full.map(p=>p.id));
 const people=[...full,...config.people.filter(p=>p.basic&&!have.has(p.id))].map(p=>({id:p.id,name:p.name,short:p.short,state:stateCode(p.state)||stateCode(p.stateName),chamber:p.chamber,district:p.chamber==='H'?districtOf(p.district):null,bioguide:p.bioguide||null,cand:!!p.cand}));
 // The complete items of a JSON list the probe saved cut short.

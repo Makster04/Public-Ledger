@@ -1,9 +1,11 @@
 // The official trade-report readers: the House Clerk's PDFs and the Senate eFD site. Responses are built from the
 // reports' published formats; the live sites aren't reachable from the tests, so the first live run confirms them.
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import zlib from 'node:zlib';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 import {FEEDS,housePtrTrades,efdTrades} from '../src/feeds.mjs';
 import {requestSource,hostRule,addCookies,cookieHeader} from '../src/sources.mjs';
 import {mergeTrades} from '../src/merge.mjs';

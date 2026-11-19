@@ -6,27 +6,6 @@
       "reviewedAt": "October 2, 2026",
       "rules": "805573ad7d29",
       "scores": {
-        "collins": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 100,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 16,
-            "legislative": 16,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": true,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "sullivan": {
           "integrity": {
             "pct": null,
@@ -43,27 +22,6 @@
           },
           "coverage": {
             "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "marshall": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 66.66666666666666,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 0,
-            "legislative": 0,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": true,
             "personalFinances": false,
             "fundraising": false,
             "legal": false
@@ -127,90 +85,6 @@
           },
           "coverage": {
             "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "perry": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 7,
-            "legislative": 0,
-            "cci": 71
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "lawler": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 100,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 41,
-            "legislative": 36,
-            "cci": 45
-          },
-          "coverage": {
-            "honesty": true,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "evans": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 25,
-            "legislative": 0,
-            "cci": 0
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "millermeeks": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 100,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 19,
-            "legislative": 0,
-            "cci": 23
-          },
-          "coverage": {
-            "honesty": true,
             "personalFinances": false,
             "fundraising": false,
             "legal": false
@@ -321,27 +195,6 @@
             "legal": false
           }
         },
-        "paxton": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "elsayed": {
           "integrity": {
             "pct": null,
@@ -363,49 +216,7 @@
             "legal": false
           }
         },
-        "rogers": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 83.33333333333334,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": true,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "cooper": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "whatley": {
           "integrity": {
             "pct": null,
             "why": "Needs two complete components",
@@ -447,27 +258,6 @@
             "legal": false
           }
         },
-        "hinson": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 0,
-            "legislative": 0,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "pappas": {
           "integrity": {
             "pct": null,
@@ -489,49 +279,7 @@
             "legal": false
           }
         },
-        "sununu": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "flanagan": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "tafoya": {
           "integrity": {
             "pct": null,
             "why": "Needs two complete components",
@@ -573,48 +321,6 @@
             "legal": false
           }
         },
-        "tracy": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "cbooker": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "barr": {
           "integrity": {
             "pct": null,
@@ -636,27 +342,6 @@
             "legal": false
           }
         },
-        "wess": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "moore": {
           "integrity": {
             "pct": null,
@@ -669,27 +354,6 @@
           "workers": {
             "pct": 0,
             "legislative": 0,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "bankhead": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
             "cci": null
           },
           "coverage": {
@@ -720,48 +384,6 @@
             "legal": false
           }
         },
-        "bodnar": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "byrd": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "hageman": {
           "integrity": {
             "pct": null,
@@ -775,27 +397,6 @@
             "pct": 20,
             "legislative": 0,
             "cci": 22
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "thomas": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
           },
           "coverage": {
             "honesty": false,
@@ -825,27 +426,6 @@
             "legal": false
           }
         },
-        "davis": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "letlow": {
           "integrity": {
             "pct": null,
@@ -862,27 +442,6 @@
           },
           "coverage": {
             "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "husted": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": 100,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": true,
             "personalFinances": false,
             "fundraising": false,
             "legal": false
@@ -925,27 +484,6 @@
           },
           "coverage": {
             "honesty": true,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "osborn": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
             "personalFinances": false,
             "fundraising": false,
             "legal": false
@@ -994,69 +532,6 @@
           }
         },
         "hamilton": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "mcollins": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": 0,
-            "legislative": 0,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "murphy": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "baisley": {
           "integrity": {
             "pct": null,
             "why": "Needs two complete components",
@@ -1161,90 +636,6 @@
             "legal": false
           }
         },
-        "merrin": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "braun": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "flores": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
-        "beltran": {
-          "integrity": {
-            "pct": null,
-            "why": "Needs two complete components",
-            "honesty": null,
-            "personalFinances": null,
-            "fundraising": null,
-            "legalTrouble": null
-          },
-          "workers": {
-            "pct": null,
-            "legislative": null,
-            "cci": null
-          },
-          "coverage": {
-            "honesty": false,
-            "personalFinances": false,
-            "fundraising": false,
-            "legal": false
-          }
-        },
         "trump": {
           "integrity": {
             "pct": null,
@@ -1269,38 +660,10 @@
       },
       "changes": [
         {
-          "id": "collins",
-          "grade": "Honesty",
-          "from": null,
-          "to": 100,
-          "why": "First preview value"
-        },
-        {
-          "id": "collins",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 16,
-          "why": "First preview value"
-        },
-        {
           "id": "sullivan",
           "grade": "Workers comparison",
           "from": null,
           "to": 35,
-          "why": "First preview value"
-        },
-        {
-          "id": "marshall",
-          "grade": "Honesty",
-          "from": null,
-          "to": 66.66666666666666,
-          "why": "First preview value"
-        },
-        {
-          "id": "marshall",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 0,
           "why": "First preview value"
         },
         {
@@ -1329,48 +692,6 @@
           "grade": "Workers comparison",
           "from": null,
           "to": 87,
-          "why": "First preview value"
-        },
-        {
-          "id": "perry",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 7,
-          "why": "First preview value"
-        },
-        {
-          "id": "lawler",
-          "grade": "Honesty",
-          "from": null,
-          "to": 100,
-          "why": "First preview value"
-        },
-        {
-          "id": "lawler",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 41,
-          "why": "First preview value"
-        },
-        {
-          "id": "evans",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 25,
-          "why": "First preview value"
-        },
-        {
-          "id": "millermeeks",
-          "grade": "Honesty",
-          "from": null,
-          "to": 100,
-          "why": "First preview value"
-        },
-        {
-          "id": "millermeeks",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 19,
           "why": "First preview value"
         },
         {
@@ -1406,20 +727,6 @@
           "grade": "Workers comparison",
           "from": null,
           "to": 100,
-          "why": "First preview value"
-        },
-        {
-          "id": "rogers",
-          "grade": "Honesty",
-          "from": null,
-          "to": 83.33333333333334,
-          "why": "First preview value"
-        },
-        {
-          "id": "hinson",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 0,
           "why": "First preview value"
         },
         {
@@ -1486,13 +793,6 @@
           "why": "First preview value"
         },
         {
-          "id": "husted",
-          "grade": "Honesty",
-          "from": null,
-          "to": 100,
-          "why": "First preview value"
-        },
-        {
           "id": "brown",
           "grade": "Honesty",
           "from": null,
@@ -1511,13 +811,6 @@
           "grade": "Honesty",
           "from": null,
           "to": 100,
-          "why": "First preview value"
-        },
-        {
-          "id": "mcollins",
-          "grade": "Workers comparison",
-          "from": null,
-          "to": 0,
           "why": "First preview value"
         },
         {

@@ -107,6 +107,8 @@ export const UNBOUGHT={
   S:{donor:[14,10,6,3,2],unitemized:14,unsorted:5.2,self:1,joint:1,donorCap:14,
      pac:{corporate:0.00001,lobbyist:0.000005,trade:0.000001,political:0.0000005,ideological:0.0000005,union:0.00000025,other:0.00000025}},
   earmark:0.00002,
+  earmarkMax:30,                          // their page gives no cap; ours, the same as the PAC penalty's (Nov. 18, 2026 audit)
+  ceiling:100,                            // their final score has "no upper cap"; a grade here is a percentage, so it shows at most 100%
   reliance:{max:10,midpoint:0.20},        // their page gives the maximum; the 20% midpoint is ours
   pacFloor:30,                            // their page says the PAC penalty is floored but gives no number; ours
   stocks:{max:20,midpoint:400000},
@@ -150,10 +152,12 @@ export function tradesIn(trades,start,end){
 }
 // sizes: the FEC's gift sizes for the cycle (public/donor-sizes.js); pacRows: [{kind, amount}] from the itemized PAC lines
 // with their FEC types; earmarks: [{group, amount}] gifts routed through conduit groups; snapshot: the latest annual
-// report; trades: {rows, covered, why}; pledges: unboughtPledges().
-export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false}={}){
+// report; trades: {rows, covered, why}; pledges: unboughtPledges(). inCongress: false for someone not sitting in Congress
+// (a candidate, a member-elect), who files no stock trade reports: the Trade Penalty is 0 for them, not waiting, and the
+// grade needs only their candidate financial report (from the Nov. 18, 2026 audit: candidates could never be graded).
+export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false,inCongress=true}={}){
   const c=person?.camp||{},R=c.receipts,W=UNBOUGHT[person?.chamber==='S'?'S':'H'];
-  const needs=[['The cycle\'s FEC report',R>0&&!c.missing],['Their financial disclosure read (holdings and trades)',false]];
+  const needs=[['The cycle\'s FEC report',R>0&&!c.missing],[inCongress?'Their financial disclosure read (holdings and trades)':'Their candidate financial report read (holdings)',false]];
   if(person?.office)return {pct:null,why:'Not graded for a president: there is no 2026 campaign to compare',parts:[],needs};
   if(!(R>0)||c.missing)return {pct:null,why:'No FEC report for this cycle yet',parts:[],needs};
   const share=n=>Number.isFinite(n)?n/R:0;
@@ -190,9 +194,9 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   if(pacKnown)pac=Math.min(UNBOUGHT.pacFloor,Object.entries(pacBy).reduce((t,[g,amt])=>t+amt*W.pac[g],0));
   const reliance=UNBOUGHT.reliance.max*(hill(pacTotal/R,UNBOUGHT.reliance.midpoint)||0);
   const earmarked=(earmarks||[]).filter(r=>Number.isFinite(r.amount)&&!/^(actblue|winred)$/i.test(String(r.group||''))).reduce((t,r)=>t+r.amount,0);
-  const earmark=earmarked*UNBOUGHT.earmark;
+  const earmarkRaw=earmarked*UNBOUGHT.earmark,earmark=Math.min(UNBOUGHT.earmarkMax,earmarkRaw);
   // The disclosure: holdings and trades. Without them the grade waits; the stock terms are never dropped.
-  const held=stockHoldings(snapshot,person?.holdings),traded=tradesIn(trades,c.start,c.end);
+  const held=stockHoldings(snapshot,person?.holdings),traded=inCongress?tradesIn(trades,c.start,c.end):{count:0,value:0,rows:[],notRequired:true,why:null};
   const disclosed=held.value!=null&&traded.count!=null;
   needs[1][1]=disclosed;
   const stocks=held.value==null?null:held.blindTrust?0:UNBOUGHT.stocks.max*(hill(held.value,UNBOUGHT.stocks.midpoint)||0);
@@ -216,9 +220,9 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
     {key:'donor',label:'Donor',points:round1(donor),note:donorNote},
     {key:'pac',label:'PAC Penalty',points:pac==null?null:-round1(pac),note:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
-    {key:'earmarks',label:'Earmark Penalty',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: not every group searched for yet)'}`},
+    {key:'earmarks',label:'Earmark Penalty',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: not every group searched for yet)'}${earmarkRaw>earmark?`; capped at ${UNBOUGHT.earmarkMax} points (it would be ${round1(earmarkRaw)})`:''}`},
     {key:'stocks',label:'Stock Penalty',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
-    {key:'trades',label:'Trade Penalty',points:tradePts==null?null:-round1(tradePts),note:traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
+    {key:'trades',label:'Trade Penalty',points:tradePts==null?null:tradePts?-round1(tradePts):0,note:traded.notRequired?'Not in Congress, so no stock trade reports are filed: none counted':traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
     {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},
     {key:'pledges',label:'Pledges and bills',points:pledgePts,note:list(pledgeItems),items:pledgeItems},
   ];
@@ -226,8 +230,8 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const base={parts,needs,pacBy,held,traded,bonusItems,pledgeItems};
   if(!pacKnown)return {...base,pct:null,raw:null,why:'Their PAC money hasn\'t been sorted by type yet'};
   if(!disclosed)return {...base,pct:null,raw:null,why:held.value==null?held.why:traded.why};
-  const pct=Math.max(0,round1(raw));
-  return {...base,pct,letter:letter(Math.min(100,pct)),raw,why:null};
+  const pct=Math.min(UNBOUGHT.ceiling,Math.max(0,round1(raw)));
+  return {...base,pct,letter:letter(pct),raw,capped:raw>UNBOUGHT.ceiling,why:null};
 }
 
 // ---------- 5. Plays by the Rules ----------

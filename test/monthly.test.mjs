@@ -1,10 +1,11 @@
+import {withRemovedConfig,withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {compare,buildEntry,sixFiles,previousOf,formulaOf} from '../scripts/scores-monthly.mjs';
 import {makeScorer,gradedPeople,sixContext,LOGGED_GRADES} from '../public/scoring.js';
 const read=async f=>JSON.parse(await fs.readFile(new URL('../'+f,import.meta.url),'utf8'));
-const research=await read('public/research.json');
+const research=withRemovedResearch(await read('public/research.json'));
 
 test('each change in the monthly log says what moved and why',()=>{
   const was={a:{promises:{pct:67,kept:2,half:0,broken:1,counted:3},ethics:{pct:100,finding:0,open:0,closed:0,allegation:0,late:0,conflict:0},pvp:{pct:null,people:0,profit:0,actions:0}}};
@@ -24,7 +25,7 @@ test('the Ethics indexes are logged; an older entry without them reads as a rule
   assert.equal(compare({a:e({legal:20,insider:null,dodger:null})},{a:e({legal:20,insider:0,dodger:null})}).length,0,'no data and 0 are the same');
 });
 test('the monthly log records the grades the profiles show, for every reviewed and basic profile',async()=>{
-  const committees=await read('public/committees.json'),sectors=await read('public/committee-sectors.json'),config=await read('data/config.json');
+  const committees=await read('public/committees.json'),sectors=await read('public/committee-sectors.json'),config=withRemovedConfig(await read('data/config.json'));
   const tallies=(await read('public/vote-party.json')).votes,files=sixFiles();
   // One day for both: a promise with no action yet turns allegedly broken once its deadline passes, so the page's scoring
   // is checked on the log's own day, not today's.

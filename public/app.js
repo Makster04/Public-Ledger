@@ -277,8 +277,10 @@ function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))||DATA.liteRa
 const raceKey=(r,s)=>r&&!r.keys?nomineeKey(r.nominees.find(n=>n.profile===s.id)||{})||s.id:s.id;
 // Who a key in a race is: their full or basic profile (a House nominee's basic profile found by their Bioguide ID), or
 // the nominee as a results-only race lists them.
+// A race's candidate: their profile, or for someone taken off the site (data/removed.json: they lost in 2026) the short
+// record their race keeps (r.gone: name, party, FEC ID), shown in results without a profile link.
 function racePerson(r,k){
-  if(r?.keys)return byId[k]||null;
+  if(r?.keys)return byId[k]||(r.gone?.[k]?{id:k,...r.gone[k],gone:true}:null);
   const n=r?.nominees?.find(x=>nomineeKey(x)===k);if(!n)return byId[k]||BASIC[k]||null;
   const p=byId[n.profile]||BASIC[k]||(n.bioguide?BASIC_LIST.find(x=>x.bioguide===n.bioguide):null);
   return p?{...p,fecCand:p.fecCand||n.fecCand||null}:{id:k,name:n.name,short:String(n.name||'').split(/\s+/).pop(),party:n.party,fecCand:n.fecCand||null};
@@ -582,7 +584,7 @@ const GRADE={
     ['Higher score','Closer agreement with you. It does not measure honesty, ethics, or whether their policies benefit working people.'],
     ['Not graded','Until there is evidence on at least 3 of your issues.']]},
   integ:{q:'How consistently does this politician keep commitments, manage financial conflicts, and meet accountability standards?',pts:[
-    ['Honesty (20%)','The Promises Delivered Index: reviewed kept, partly kept and broken commitments.'],
+    ['Honesty (20%)','The Promises Delivered Index: kept, partly kept and broken commitments, most decided automatically from their votes and bills (at least 2 bills each), the rest by a reviewer; each promise says which.'],
     ['Personal Finances (20%)','The Insider Trading Index, the Stock Disclosure Dodger Index, and the holdings and trading penalties.'],
     ['Fundraising (25%)','Donor-size contributions, PAC-type and PAC-reliance penalties, earmarked-donation penalties, and verified pledge adjustments, adapted from IntegrityIndex.us.'],
     ['Showing Up (15%)','75% Attendance (roll-call votes missed since 2018: 100 minus 5 points per percentage point missed; votes missed while campaigning count; a cited medical leave, birth or adoption, death in the family or military duty is left out) and 25% Get It Done (their share of sponsored bills that advanced, against the typical member of their party in their chamber). A missed vote says nothing about where they were.'],
@@ -775,7 +777,8 @@ function statusOf(s){
 }
 // Political Position with a Status picked: for Newly elected and Lost, Senate and House mean the seat they ran for.
 const inPosition=(s,c,st)=>!c||c==='C'||!['new','lost'].includes(st)?inChamber(s,c):statusOf(s).chamber===c;
-const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet'],['lost','Lost','Lost a 2026 race']];
+// No "Lost" choice since Nov. 19, 2026: everyone who lost was taken off the site (data/removed.json).
+const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet']];
 const inStatus=(s,k)=>!k||statusOf(s).has(k);
 function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
@@ -846,8 +849,8 @@ function renderHome(){
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
       ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
-      SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`],
-      HOUSE.length&&['Every House member',`<a href="#house">All ${HOUSE.length} members of the House</a>, the same way.`]],'lede-pts')}</details>
+      SENATE.length&&['Every senator',`<a href="#senate">The ${SENATE.length} sitting senators who didn't lose in 2026</a>, with a basic profile for each one not in these races.`],
+      HOUSE.length&&['Every House member',`<a href="#house">The ${HOUSE.length} House members who didn't lose in 2026</a>, the same way.`]],'lede-pts')}</details>
     ${seatsBlock()}
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
@@ -1035,7 +1038,7 @@ function profileReport(s){
   return `<section class="profile-report" aria-label="Four measures from the public record">${s.basic?basicReport(s,true):reportCard(s,true)}<p class="profile-coverage">${s.basic?'Ideology, Shows Up and People First come from official records alone: their votes on the coded roll calls, their attendance and their bills. Big Money Independence comes from their FEC reports and financial disclosures as the refresh reads them. Plays by the Rules also needs their legal record reviewed, and Keeps Their Word their statements.':'Based on reviewed records. Coverage varies; some methodology weights remain under review.'} <a href="${s.basic?'#method':'#'+s.id+'-sources'}">Sources & coverage ↗</a></p></section>`;
 }
 function evidenceStrip(s){
-  return `<aside class="evidence-strip"><div><div class="page-eyebrow">FOLLOW THE EVIDENCE</div><h3>Every conclusion has a paper trail.</h3><p class="small muted">Research snapshot: ${esc(DATA.asof)} · Each source keeps its own reporting period.</p></div><div class="row"><a href="${s.basic?'#method-sources':'#'+s.id+'-sources'}">${s.basic?'Source guide':'Profile sources'} ↗</a><a href="#method">Methodology ↗</a><a href="#method-log">Score history ↗</a></div></aside>`;
+  return `<aside class="evidence-strip"><div><div class="page-eyebrow">FOLLOW THE EVIDENCE</div><h3>Every conclusion has a paper trail.</h3><p class="small muted">Reviewed research: ${esc(DATA.asof)} · Outside spending filed through ${esc(fmtDate(DATA.ie?.asof))} · Each source keeps its own reporting period.</p></div><div class="row"><a href="${s.basic?'#method-sources':'#'+s.id+'-sources'}">${s.basic?'Source guide':'Profile sources'} ↗</a><a href="#method">Methodology ↗</a><a href="#method-log">Score history ↗</a></div></aside>`;
 }
 function bindProfileActions(s,pane){
   $('.profile-share')?.addEventListener('click',async()=>{
@@ -1524,8 +1527,11 @@ function unboughtInputs(s){
   const pacRows=[];for(const [i,amount] of (s.pac?.rows||[])){const t=pacTypeOf(DATA,i);if(t&&amount>0)pacRows.push({kind:t.kind,amount});}
   // Without reviewed PAC lines (a basic profile), each kind's share from the FEC bulk files (public/corporate-pacs.json).
   if(!pacRows.length&&(!s.pac||s.pac.basic))for(const [kind,amount] of Object.entries(window.CORP_PACS?.kinds?.[s.id]||{}))if(amount>0)pacRows.push({kind,amount});
-  return {pacRows,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[])};
+  return {pacRows,earmarks:earmarkRows(s).map(r=>({group:r.group,amount:r.amount})),pledges:unboughtPledges(s,DATA.billIndex||[]),inCongress:inCongressNow(s)};
 }
+// Sitting in Congress now (the Senate and House directories), so filing stock trade reports. A candidate, a member-elect
+// or a former member isn't, and Big Money Independence doesn't wait on trade reports for them.
+const inCongressNow=s=>!s.office&&!s.elect&&!!s.bioguide&&(SITTING.S.has(s.bioguide)||SITTING.H.has(s.bioguide));
 function unboughtBreakdown(x){
   const max=Math.max(1,...x.parts.map(p=>Math.abs(p.points||0)));
   const items=p=>p.items?`<ul class="st-items">${p.items.map(b=>`<li class="${b.status}"><span aria-hidden="true">${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'}</span><span><b>${esc(b.label)}</b>${b.status==='yes'?` ${spct1(b.points)}`:''} <span class="muted">${esc(b.status==='waiting'?'waiting: ':'')}${esc(b.why)}</span></span></li>`).join('')}</ul>`:`<div class="small muted">${esc(p.note||'')}</div>`;
@@ -1551,7 +1557,7 @@ function unboughtCalc(s,x){
     ${x.pct==null&&x.why?`<div class="key">Waiting on: ${esc(x.why.replace(/^Not graded yet:\s*/,'').replace(/^./,c=>c.toLowerCase()).replace(/\.$/,''))}.</div>`:''}</div>`:'';
   return `<div class="st-calc">
   <h4>The formula</h4>
-  <div class="st-calc-f">${f('Big Money Independence','75% + components, never below 0%')}${f('components','Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges')}<hr>
+  <div class="st-calc-f">${f('Big Money Independence','75% + components, never below 0% or above 100%')}${f('components','Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges')}<hr>
     ${f('Donor','Σ (share of receipts × size weight)',`up to ${H.donorCap} (House), ${S.donorCap} (Senate)`)}${f('PAC Penalty','Σ (PAC $ × type rate)',`at most ${UNBOUGHT.pacFloor}`)}
     ${f('PAC Reliance',`${R.max} × Hill(PAC share of receipts, ${R.midpoint*100}%)`)}${f('Earmark Penalty',`earmarked $ × ${rateText(UNBOUGHT.earmark)}`,'[not ActBlue or WinRed]')}
     ${f('Stock Penalty',`${K.max} × Hill(individual-stock value, $${K.midpoint.toLocaleString('en-US')})`)}${f('Trade Penalty',`${T.countMax} × Hill(trade count, ${T.countMidpoint}) + ${rateText(T.valueMax)} × Hill(trade value, $${T.valueMidpoint.toLocaleString('en-US')})`)}
@@ -1568,7 +1574,7 @@ function unboughtCalc(s,x){
     <div class="st-calc-card"><b class="t">PAC score penalty per dollar</b><div class="sub">Up to ${UNBOUGHT.pacFloor} points in all</div>${two(pacRows)}</div>
     <div class="st-calc-card"><b class="t">Individual donation weight</b><div class="sub">Donor part: 0 to ${H.donorCap} (House), 0 to ${S.donorCap} (Senate)</div>${two(donorRows)}</div>
   </div>
-  <div class="st-calc-card st-calc-consts">${two([one('Base score',UNBOUGHT.base),one('Earmark score penalty per dollar',rateText(UNBOUGHT.earmark)),one('PAC Reliance maximum penalty',R.max),one('PAC Reliance midpoint',`${R.midpoint*100}%`,true),one('PAC penalty cap',UNBOUGHT.pacFloor,true),one('Donor part cap (House · Senate)',`${H.donorCap} · ${S.donorCap}`,true)],false)}
+  <div class="st-calc-card st-calc-consts">${two([one('Base score',UNBOUGHT.base),one('Earmark score penalty per dollar',rateText(UNBOUGHT.earmark)),one('PAC Reliance maximum penalty',R.max),one('PAC Reliance midpoint',`${R.midpoint*100}%`,true),one('PAC penalty cap',UNBOUGHT.pacFloor,true),one('Earmark penalty cap',UNBOUGHT.earmarkMax,true),one('Donor part cap (House · Senate)',`${H.donorCap} · ${S.donorCap}`,true)],false)}
     <div class="key"><i>Orange</i>: a number their page leaves out, filled in by us.</div></div>
   <h4>Curves</h4>
   <div class="st-calc-grid">
@@ -1709,7 +1715,7 @@ function unboughtFor(s,inputs,d,period){
   const current=curCycle(s),m=d?.money||{};
   const curPacs=inputs.pacRows.length?inputs.pacRows:(m.pacs?.cycles?.[current]?.committees||[]).map(c=>({kind:c.kind||pacKindOf(c.cid),amount:c.amount})).filter(r=>r.kind);
   const curJfc=m.jfc?.cycles?.[current]&&!m.jfc.cycles[current].partial?m.jfc.cycles[current]:null;
-  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:earmarksSearched(s)};
+  const common={pledges:inputs.pledges,snapshot:d?.netWorth||null,trades:d?.trades||null,earmarksComplete:earmarksSearched(s),inCongress:inputs.inCongress};
   const past=unboughtPast(s,d),cycles=periodCycles(period,current,Object.keys(past.camp));
   if(cycles.length===1&&cycles[0]===current)return unbought(s,{...common,pacRows:curPacs,earmarks:inputs.earmarks,sizes:d?.sizes||null,jfc:curJfc});
   const label=periodLabel(period,current);
@@ -1954,13 +1960,13 @@ function paneUnbought(s,pane){
   const draw=(x,d)=>stFrame(s,'unbought',{side:sideFor(d),
     res:x,breakdown:x?.parts?.length?unboughtBreakdown(x):'',
     sources:['<b>FEC reports:</b> gifts by size, PAC money by type, and gifts routed through groups.','<b>Financial disclosures:</b> the stocks they hold and the trades they report.','<b>Pledges and bills:</b> pledges they signed and reform bills they sponsored or cosponsored.'],
-    needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],['Their financial disclosure read (holdings and trades)',false]],
+    needs:x?.needs||[['The cycle\'s FEC report',!!(s.camp&&!s.camp.missing)],[inCongressNow(s)?'Their financial disclosure read (holdings and trades)':'Their candidate financial report read (holdings)',false]],
     notes:[['Unknown is not none.','Missing records stay unknown; the stock terms are never dropped to make a grade possible.'],earmarksSearched(s)?['Earmarks:','every committee the FEC shows forwarding gifts to their campaign.']:['Earmarks are partial.',DATA.bundled?.names?'Not every FEC record of who forwarded gifts to their campaign could be read yet, so the penalty may be too small.':'Gifts routed through 5 groups are collected so far, so the penalty may be too small.'],['Formula:','<a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, with House and Senate weights.']],
     evidenceTitle:'Evidence: where the money comes from',
     evidence:`${s.office?'':moneyMapBlock(s,{...mm,withBundled:false,under:'<div id="u-states-slot"></div>'})}${s.office?'':'<div id="u-trackers"></div>'}<div id="u-fec"></div>${s.office?'':wealthTimelineHTML(s,undefined,null)}${holdingsEvidence(s,d,x)}${pledgesEvidence(s,inputs.pledges)}`,
     shown:`<div id="u-finance"></div><div id="u-connections"></div>`,
     calc:unboughtCalc(s,x),
-    assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
+    assumptions:['PAC penalty: at most 30 points (their page says it is capped but gives no number).','Earmark penalty: at most 30 points, the same as the PAC penalty (their page gives no cap).','Not in Congress (a candidate or a member-elect): no stock trade reports are filed, so the Trade Penalty is 0 and the grade needs only their candidate financial report.','Shown at most 100% (their final score has no upper cap; a grade here is a percentage).','Donor score: 0 to 16 for the House, 0 to 14 for the Senate.','PAC Reliance uses a 20% midpoint.','Stocks: the total of the middle of each individual stock\'s value range on their latest annual report ("avg_value" on their page is read as that total). Funds, bonds, property and cash are left out; a qualified blind trust removes the penalty.','Trade value: their published maximum (0.00001) is copied as published, so trade value barely counts. Trades are those in the campaign\'s reporting period.','The itemized PAC lines read so far give each PAC type\'s share, applied to the FEC\'s PAC total for the period.','When the FEC\'s gift-size split isn\'t read for the period, itemized gifts count at the not-yet-sorted rate, as their formula scores gifts the FEC hasn\'t sorted.','A broken pledge earns no point; a cosponsored bill still can. This is our one deliberate difference from their page.','Joint fundraising: the money a joint fundraising committee passed on is credited to the people who gave it, by the size of each one\'s share on the FEC\'s memo entries; the part no entry lists is shares of $200 or less, counted as small gifts. Committees\' shares and other transfers stay at the joint fundraising weight.','Earlier periods add up each cycle\'s totals, gift sizes, PAC lines (each cycle\'s PAC shares applied to that cycle\'s PAC total), earmarks and joint fundraising; trades count over the whole span; stocks held are from the latest annual report.','PAC money in reports the FEC hasn\'t processed yet is shown with a * and counts once it\'s processed.','Disclosures are read automatically from the official reports; paper filings and open-ended values wait.'],
     method:'unbought'});
   const first=s.office?unbought(s):unbought(s,{...inputs});
   pane.innerHTML=draw(s.office?first:{...first,pct:null,why:null,loading:'the FEC gift sizes and their financial disclosure'},null);
@@ -2229,7 +2235,7 @@ function renderSenate(){
   const years=[...new Set(SENATE.map(x=>x.nextElection))].sort();
   app.innerHTML=`<section class="section">
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. Senate'}</div><h1>The Senate</h1>
-    <p class="intro">All ${SENATE.length} sitting senators.</p>
+    <p class="intro">The ${SENATE.length} sitting senators who didn't lose in 2026. Those who lost the Nov. 3 general election were taken off the site; their races, on the Races page, show the result.</p>
     ${points([['Full profiles',`${full} senators on the 2026 ballot in the races this site covers: grades, campaign money, outside spending and statement checks.`],
       ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
@@ -2265,7 +2271,8 @@ function renderSenate(){
 // ---------- Career Totals: each sitting member's career money from one tracker, ranked in dollar clubs (public/career.js) ----------
 const trackerViews=v=>`<nav class="seg tr-page-tabs tr-views" aria-label="Lobby money">${[['trackers','Trackers'],['career','Career Totals']].map(([k,l])=>`<a href="#${k}"${k===v?' class="active" aria-current="page"':''}>${l}</a>`).join('')}</nav>`;
 let tierCh='H',tierParty='',tierStatus='';const tierOpen=new Set();
-const TIER_STATUS=[['','All','Every sitting member'],['lost','Lost','Lost a 2026 race']];
+// No Status menu since Nov. 19, 2026: the members who lost in 2026 were taken off the site (data/removed.json).
+const TIER_STATUS=[['','All','Every sitting member']];
 const tierMembers=c=>c==='S'?SENATE:HOUSE.filter(x=>!x.delegate);
 const CAREER_CACHE=new Map();
 function careerOf(key,c){const k=`${key}:${c}`;if(!CAREER_CACHE.has(k))CAREER_CACHE.set(k,chamberCareer(window.TRACKER_HISTORY,key,tierMembers(c)));return CAREER_CACHE.get(k);}
@@ -2304,7 +2311,7 @@ function renderCareer(key){
     const keep=r=>(!tierParty||r.m.party===tierParty)&&(!tierStatus||statusOf(tierWho(r.m)).has(tierStatus));
     const cnt=(p,st)=>T.rows.filter(r=>(!p||r.m.party===p)&&(!st||statusOf(tierWho(r.m)).has(st))).length;
     $('#ti-ctl').innerHTML=`<div class="seg ti-ch" role="group" aria-label="Chamber">${[['H','House'],['S','Senate']].map(([c,l])=>`<button type="button" data-ch="${c}" class="${c===tierCh?'active':''}" aria-pressed="${c===tierCh}">${l} <span class="seg-n">${careerOf(t.key,c).read}</span></button>`).join('')}</div>
-      ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])],['s','Status',tierStatus,TIER_STATUS.map(([k,l,d])=>[k,l,d,cnt(tierParty,k)])]])}`;
+      ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])]])}`;
     const aip=t.key==='aipac';
     $('#ti-note').innerHTML=`Career totals: every dollar each ${CH}'s campaigns have taken from ${esc(t.name)} over their whole career, ranked. ${aip?`Checks from the pro-Israel PACs (AIPAC's, NORPAC, JACPAC, the RJC's and the others on its list) in every race they've run since ${h.cycles[0]-1}, under every candidate ID they've had; the named donors' own checks to the same campaigns (Miriam and Sheldon Adelson, and the 20 people who gave AIPAC's super PAC $1 million or more); and the gifts AIPAC collected from donors and passed on since its PAC began giving in 2022 (NORPAC's, JACPAC's and the RJC's this cycle only). J Street isn't counted.`:`The checks from its PACs in every race they've run since ${h.cycles[0]-1} (the first year in the FEC's bulk files), under every candidate ID they've had, so a senator's House races count too.`} From the FEC's bulk files${h.through?`, through ${esc(fmtDate(h.through))}`:''}. Super PAC spending isn't counted, since the campaign never takes it (it's on each profile under "Spent to help them win"). Ranks are among the ${T.read} ${CHS}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`;
     const short=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
@@ -2417,7 +2424,7 @@ function renderHouse(){
   const full=HOUSE.filter(x=>byId[x.id]).length,info=window.HOUSE_INFO||{},dels=HOUSE.filter(x=>x.delegate).length;
   app.innerHTML=`<section class="section">
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. House'}</div><h1>The House</h1>
-    <p class="intro">All ${HOUSE.length-dels} members of the House${dels?`, and its ${dels} non-voting delegates`:''}.</p>
+    <p class="intro">The ${HOUSE.length-dels} members of the House who didn't lose in 2026${dels?`, and its ${dels} non-voting delegates`:''}. Those who lost the Nov. 3 general election were taken off the site; their races show the result, and the winners are here as members-elect.</p>
     ${points([['Full profiles',`${full} members in the races this site covers: every score, campaign money, outside spending and statement checks.`],
       ['Basic profiles',`The other ${HOUSE.length-full}: their seat, their committees, and the records the refresh collects for them (their bills, their stock trades and annual disclosures, and their campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
@@ -2684,7 +2691,9 @@ function drawKV(el,s){
   });
   let ax=`<line class="axis" x1="${mL}" x2="${W-mR}" y1="${base+2}" y2="${base+2}"></line>`;
   [[0,'0%','start'],[.5,'50%','middle'],[1,'100%','end']].forEach(([v,l,a])=>{ax+=`<line class="axis" x1="${X(v)}" x2="${X(v)}" y1="${base+2}" y2="${base+7}"></line><text class="tick" x="${X(v)}" y="${base+19}" text-anchor="${a}">${l}</text>`;});
-  ax+=`<text class="cap" x="${mL}" y="${base+40}">← Liberal side every time</text><text class="cap" x="${W-mR}" y="${base+40}" text-anchor="end">Conservative side every time →</text>`;
+  // On a phone the two long captions ran into each other (Nov. 18, 2026 audit): shorter ones there, same meaning.
+  const [capL,capR]=small?['← Always liberal','Always conservative →']:['← Liberal side every time','Conservative side every time →'];
+  ax+=`<text class="cap" x="${mL}" y="${base+40}">${capL}</text><text class="cap" x="${W-mR}" y="${base+40}" text-anchor="end">${capR}</text>`;
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(s.name)} took the conservative side on ${me.con} of ${me.n} bills marked liberal or conservative, among ${pool.length} ${CH[C].nouns}">${ax}${g}${mine}</svg>`;
   bindTips(el);
 }
@@ -3168,7 +3177,7 @@ function alLive(){
 function alResults(){
   const ch=chosenIssues();
   if(!ch.length)return '<div class="note">Answer at least one question (other than Skip) to see how every candidate compares, race by race.</div>';
-  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
+  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]).filter(Boolean);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
     <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span> ${decidedChip(outcomeOf(r,s.id))}</td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
     ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}</article>`}).join('');
 }
@@ -3839,7 +3848,7 @@ const numFmt=n=>Number(n).toLocaleString('en-US');
 function resultCard(r,county=null){
   const lite=!r.keys,res=raceResult(r),t=county||tallyOf(r);
   // A results-only nominee opens their profile: a winner's full profile, or a sitting member's basic one.
-  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k),p=racePerson(r,k);
+  const who=k=>{if(!lite)return byId[k]?{...byId[k],href:'#'+k}:{id:k,name:k,...(r.gone?.[k]||{}),href:''};const n=r.nominees.find(x=>nomineeKey(x)===k),p=racePerson(r,k);
     return {id:byId[n.profile]?n.profile:k,name:n.name,party:n.party,href:p&&(byId[p.id]||BASIC[p.id])?'#'+p.id:''};};
   const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(nomineeKey));
   const tile=k=>{const p=who(k),row=t&&t.rows.find(x=>x.key===k),o=outcomeOf(r,k),tag=p.href?'a':'div';
@@ -4287,7 +4296,7 @@ function methodSix(){
     ['showsup','Shows Up',SIX_BY.showsup.q,'Every roll call from 2018 on (Voteview); the bills they sponsored and how far each got (Congress.gov).',
       f('Shows Up = 0.75 × Attendance + 0.25 × Get It Done')+f('Attendance = 100 − 5 × % of votes missed')+f('Get It Done = 100 × min(1, their bills advanced rate ÷ their party\'s typical rate)')+'<p class="small">At least 50 votes; Attendance alone with fewer than 10 sponsored bills or when Get It Done isn\'t read yet. Those grades are marked "attendance only", and the Rankings page ranks them apart from grades with both parts.</p>'],
     ['unbought','Big Money Independence',SIX_BY.unbought.q,'FEC reports (gift sizes, PAC money by type, gifts routed through groups); their financial disclosure (stocks held, trades); pledges and reform bills. <a href="https://integrityindex.us/methodology" target="_blank" rel="noopener">IntegrityIndex.us\'s published formula ↗</a>, credited to them.',
-      f('Big Money Independence = 75% + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges, never below 0')+`<p class="small">House: donor weights ${W.H.donor.join(' · ')} (≤$200 to $2,000+), unitemized ${W.H.unitemized}, not yet sorted ${W.H.unsorted}; PAC Penalty per dollar: corporate ${W.H.pac.corporate}, lobbyist ${W.H.pac.lobbyist}, trade ${W.H.pac.trade}, political and ideological ${W.H.pac.political}, union and other ${W.H.pac.union}. Senate: donor weights ${W.S.donor.join(' · ')}, unitemized ${W.S.unitemized}, not yet sorted ${W.S.unsorted}; PAC Penalty per dollar ${W.S.pac.corporate} · ${W.S.pac.lobbyist} · ${W.S.pac.trade} · ${W.S.pac.political} · ${W.S.pac.union}. Earmark Penalty ${W.earmark} per dollar (not ActBlue or WinRed). PAC Reliance ${W.reliance.max} × Hill(PAC share, 20%). Stock Penalty ${W.stocks.max} × Hill(value, $400,000). Trade Penalty ${W.trades.countMax} × Hill(count, 50) + ${W.trades.valueMax} × Hill(value, $8,000). Bonuses +5 no corporate PAC money, +1 pledged not to take it, +1 no individual stocks; +1 each for a pledge or cosponsored bill to ban lobbying by former members, ban congressional stock trading, overturn Citizens United. Filled in where their page gives no number: PAC penalty at most 30, donor score 0–16 (House) or 0–14 (Senate), PAC Reliance midpoint 20%, stock value as the total of range midpoints. A broken pledge earns no point. No grade until their financial disclosure is read.</p>`],
+      f('Big Money Independence = 75% + Donor − PAC Penalty − PAC Reliance − Earmark Penalty − Stock Penalty − Trade Penalty + Bonuses + Pledges, never below 0 or above 100')+`<p class="small">House: donor weights ${W.H.donor.join(' · ')} (≤$200 to $2,000+), unitemized ${W.H.unitemized}, not yet sorted ${W.H.unsorted}; PAC Penalty per dollar: corporate ${W.H.pac.corporate}, lobbyist ${W.H.pac.lobbyist}, trade ${W.H.pac.trade}, political and ideological ${W.H.pac.political}, union and other ${W.H.pac.union}. Senate: donor weights ${W.S.donor.join(' · ')}, unitemized ${W.S.unitemized}, not yet sorted ${W.S.unsorted}; PAC Penalty per dollar ${W.S.pac.corporate} · ${W.S.pac.lobbyist} · ${W.S.pac.trade} · ${W.S.pac.political} · ${W.S.pac.union}. Earmark Penalty ${W.earmark} per dollar (not ActBlue or WinRed). PAC Reliance ${W.reliance.max} × Hill(PAC share, 20%). Stock Penalty ${W.stocks.max} × Hill(value, $400,000). Trade Penalty ${W.trades.countMax} × Hill(count, 50) + ${W.trades.valueMax} × Hill(value, $8,000). Bonuses +5 no corporate PAC money, +1 pledged not to take it, +1 no individual stocks; +1 each for a pledge or cosponsored bill to ban lobbying by former members, ban congressional stock trading, overturn Citizens United. Filled in where their page gives no number: PAC penalty at most 30, donor score 0–16 (House) or 0–14 (Senate), PAC Reliance midpoint 20%, stock value as the total of range midpoints. A broken pledge earns no point. No grade until their financial disclosure is read.</p>`],
     ['aboveboard','Plays by the Rules',SIX_BY.aboveboard.q,'Financial disclosures (outside pay, board seats, job deals, gifts, paid trips, trades and filing dates); lobbying reports, federal contracts, foreign-agent filings, committees and votes; court, ethics and enforcement cases.',
       f('Plays by the Rules = 100% − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble')+f('Trade Conflicts = 0.45 × share in their committees\' sectors + 0.30 × share within 30 days of a related vote + 0.25 × share in donor companies')+f('Stock Disclosure Dodger = 0.70 × share of trade reports late or missing + 0.30 × share of annual reports late')+f('Legal Trouble = Σ status (20 · 15 · 5) × kind (1.5 · 1 · 0.5), halved when closed over 10 years ago')+'<p class="small">Every part is a number from 0 to 100, and higher is worse; Legal Trouble is the points its cases take off. A missing part drops out and the others are rescaled. It needs the legal review and at least one of the four parts. Trade Conflicts leaves out how often they trade, which Big Money Independence counts. It shows overlap, not proof of wrongdoing.</p>'],
     ['peoplefirst','People First',SIX_BY.peoplefirst.q,'Their votes and bills, each scored by who gains and which worker and business groups took sides; their business funders\' positions and lobbying.',

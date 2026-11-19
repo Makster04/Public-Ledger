@@ -65,7 +65,7 @@ export function raceItems(research,{now=Date.now(),people,days=TICKER.pageDays}=
     const res=r?.result;if(!res)continue;
     const date=res.date||asof,n=k=>r.nominees?.find(x=>(x.id||x.fecCand)===k);
     const profile=k=>{const x=n(k);if(x?.profile&&people?.get?.(x.profile))return x.profile;if(people?.get?.(k))return k;return [...(people?.values?.()||[])].find(p=>p?.fecCand===k)?.id||null;};
-    const who=k=>{const id=profile(k);if(id)return nameOf(id,people);const x=n(k);return x?{name:String(x.name||'').split(/\s+/).pop(),party:x.party||null}:null;};
+    const who=k=>{const id=profile(k);if(id)return nameOf(id,people);const x=n(k)||r.gone?.[k];return x?{name:String(x.name||'').split(/\s+/).pop(),party:x.party||null}:null;};
     const link=k=>{const id=profile(k);return id?`#${id}`:'#races';};
     // The card's rows: the top shares, and the next candidate with at least 1% when there's room for three.
     const tally=res.tally||{},rows=Object.entries(tally.shares||{}).sort((a,b)=>b[1]-a[1]).map(([k,pct])=>{const w=who(k);return w&&Number.isFinite(pct)?{...w,pct}:null;}).filter(Boolean);

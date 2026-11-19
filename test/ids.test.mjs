@@ -1,10 +1,11 @@
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {matchPeople,buildCommittees} from '../scripts/build-ids.mjs';
 import {SECTORS,OTHER_SECTOR,sectorForSic} from '../public/sectors.js';
 const read=async f=>JSON.parse(await fs.readFile(new URL('../'+f,import.meta.url),'utf8'));
-const config=await read('data/config.json'),committees=await read('public/committees.json'),sectors=await read('public/committee-sectors.json');
+const config=withRemovedConfig(await read('data/config.json')),committees=await read('public/committees.json'),sectors=await read('public/committee-sectors.json');
 
 test('people are matched by Bioguide ID, or by FEC candidate ID only in the configured state',()=>{
   const leg=[{id:{bioguide:'A000001',fec:['S6ME00001']},terms:[{state:'ME'}]},{id:{bioguide:'B000002',fec:['H6TX00002']},terms:[{state:'TX'}]}];

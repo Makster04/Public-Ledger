@@ -1,10 +1,13 @@
 // Every member of the House (scripts/build-house.mjs): the directory, the basic members in the config, the lighter set
 // of checks the refresh makes for them, and their checks going when they leave.
+import {withRemovedConfig,withRemovedHouse} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import config from '../data/config.json' with {type:'json'};
-import house from '../public/house.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
+import houseFile from '../public/house.json' with {type:'json'};
+const house=withRemovedHouse(houseFile);
 import {addMembers,memberEntry,houseFecId,seatOf,isDelegate} from '../scripts/build-house.mjs';
 import {initialize,statement,LIGHT_KINDS} from '../src/refresh.mjs';
 import {openDatabase} from '../scripts/sqlite.mjs';

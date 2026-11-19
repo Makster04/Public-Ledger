@@ -13,8 +13,9 @@
 //   campaign: the principal campaign committee's own totals (committee_summary_2026.csv), as npm run money:update
 //   keeps the profiles' figures;
 //   outside spending: general-election independent expenditures (independent_expenditure_2026.csv), each spender's
-//   latest version of each item, from Jan. 1, 2025 through Sept. 30, 2026 like every other profile, "for" being spent
-//   supporting them or opposing their opponent and "against" the reverse.
+//   latest version of each item (an item is its report and transaction ID), from Jan. 1, 2025 through the file's latest
+//   filing like every other profile (npm run outside:update), "for" being spent supporting them or opposing their
+//   opponent and "against" the reverse.
 // Their basic profile is a directory entry like public/house.json's, marked "elect", and becomes a regular member's
 // once the new Congress is sworn in and npm run house:build reads the new House.
 import fs from 'node:fs';
@@ -110,8 +111,10 @@ export function fecTables({weball,ccl,cm,summary,ie}){
   const committees=new Map(cm.split('\n').filter(Boolean).map(l=>{const v=l.split('|');return [v[0],{name:v[1],type:v[9]}];}));
   const sl=summary.split(/\r?\n/).filter(Boolean),sh=parseCSV(sl[0]);const totals=new Map(sl.slice(1).map(l=>{const v=parseCSV(l);return [v[1],Object.fromEntries(sh.map((h,i)=>[h,v[i]]))];}));
   const il=ie.split(/\r?\n/).filter(Boolean),ih=parseCSV(il[0]);const byCand=new Map();
-  for(const l of il.slice(1)){const v=parseCSV(l),r=Object.fromEntries(ih.map((h,i)=>[h,v[i]]));if(r.ele_type!=='G'||!r.cand_id?.startsWith('H'))continue;(byCand.get(r.cand_id)||byCand.set(r.cand_id,[]).get(r.cand_id)).push(r);}
-  return {cands,principal,committees,totals,byCand};
+  const prev=new Map();let through='';
+  for(const l of il.slice(1)){const v=parseCSV(l),r=Object.fromEntries(ih.map((h,i)=>[h,v[i]]));if(r.prev_file_num)prev.set(String(r.file_num),String(r.prev_file_num));{const d=dmy(r.receipt_dat);if(d>through)through=d;}if(r.ele_type!=='G'||!r.cand_id?.startsWith('H'))continue;(byCand.get(r.cand_id)||byCand.set(r.cand_id,[]).get(r.cand_id)).push(r);}
+  const rootFile=f=>{let x=String(f);for(let i=0;i<20&&prev.has(x);i++)x=prev.get(x);return x;};
+  return {cands,principal,committees,totals,byCand,rootFile,through:through||null};
 }
 // A nominee's FEC candidate: same state and district, the name fits; the one that raised the most when two do.
 export function findCandidate(T,district,name,party){
@@ -132,10 +135,12 @@ export function campOf(T,cand){
 }
 const kindOf=t=>['O','U','V','W'].includes(t)?'super_pac':['X','Y','Z'].includes(t)?'party':'other';
 // Outside spending for and against one candidate, against their rivals, in the profiles' "out" shape (no committee table).
-export function outOf(T,me,rivals,{from='2025-01-01',to='2026-09-30'}={}){
+export function outOf(T,me,rivals,{from='2025-01-01',to=T.through||'2026-09-30'}={}){
   const by=()=>({super_pac:0,other:0,party:0}),parts={S:by(),O:by(),OO:by(),SO:by(),X:by()},pre={n:0,amount:0};let n=0;
   for(const cand of [me,...rivals].filter(Boolean)){
-    const latest=new Map();for(const r of T.byCand.get(cand)||[]){const k=r.spe_id+'|'+r.tran_id,o=latest.get(k);if(!o||Number(r.file_num)>Number(o.file_num))latest.set(k,r);}
+    // A transaction ID is unique only within one report and its amendments (each amendment names the filing it amends,
+    // prev_file_num): many committees start every 24/48-hour report again at SE.1.
+    const latest=new Map();for(const r of T.byCand.get(cand)||[]){const k=r.spe_id+'|'+(T.rootFile?T.rootFile(r.file_num):r.file_num)+'|'+r.tran_id,o=latest.get(k);if(!o||Number(r.file_num)>Number(o.file_num))latest.set(k,r);}
     for(const r of latest.values()){const date=dmy(r.dissem_dt)||dmy(r.exp_date),amt=Number(r.exp_amo)||0;if(!date||!['S','O'].includes(r.sup_opp))continue;
       if(date<from){if(cand===me){pre.n++;pre.amount+=amt;}continue;}if(date>to)continue;
       const k=cand===me?r.sup_opp:(r.sup_opp==='O'?'OO':'SO');parts[k][kindOf(T.committees.get(r.spe_id)?.type)]+=amt;n++;}
@@ -235,7 +240,7 @@ async function main(){
   const taken=[...D.members,...D.cands,...(D.featured||[]),...house,...senate].map(x=>x.id);
   const {members,races,left}=buildMembersElect({rows:wanted,pages,T,taken,profiled,house,skip,listUrl});
   const out={about:'The House members-elect of the November 3, 2026 election with no profile on the site yet, each with a basic profile and the race they won, and the races of winners profiled after the election. From scripts/build-members-elect.mjs (npm run house:elect): who won from Wikipedia\'s list of new members of the 120th Congress and the news report of each win it cites, the count from Wikipedia\'s state pages, and the money from the FEC\'s bulk files. Unofficial until each state certifies.',
-    built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:BULK},members,races};
+    built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:'https://www.fec.gov/data/browse-data/?tab=bulk-data'},members,races};
   fs.writeFileSync(path.join(ROOT,'public','members-elect.json'),JSON.stringify(out,null,1)+'\n');
   const noFec=members.filter(m=>!m.fecCand).map(m=>`${m.seat} ${m.name}`),noCount=races.filter(r=>!r.result.tally).map(r=>r.district);
   console.log(`${members.length} members-elect with a basic profile, ${races.length} races (${races.length-members.length} for winners already profiled). Wrote public/members-elect.json.`);

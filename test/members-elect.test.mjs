@@ -23,11 +23,17 @@ test('districts, names and counts are read from Wikipedia\'s markup',()=>{
 test('their money: the principal committee\'s totals, and outside spending for and against them through Sept. 30',()=>{
   const T={principal:new Map([['H1','C1']]),totals:new Map([['C1',{CMTE_NM:'OJEDA FOR NC',TTL_RECEIPTS:'100',INDV_CONTB:'80',INDV_ITEM_CONTB:'50',INDV_UNITEM_CONTB:'30',OTH_CMTE_CONTB:'10',PTY_CMTE_CONTB:'0',TRANF_FROM_OTHER_AUTH_CMTE:'5',CAND_CNTB:'0',CAND_LOAN:'0',TTL_DISB:'60',COH_COP:'40',DEBTS_OWED_BY_CMTE:'0',CVG_START_DT:'20250101',CVG_END_DT:'20261014'}]]),
     committees:new Map([['S1',{type:'O'}],['P1',{type:'X'}]]),
-    byCand:new Map([['H1',[{spe_id:'S1',tran_id:'a',file_num:'1',exp_amo:'10',sup_opp:'S',dissem_dt:'01-SEP-26'},{spe_id:'S1',tran_id:'a',file_num:'2',exp_amo:'12',sup_opp:'S',dissem_dt:'01-SEP-26'},{spe_id:'S1',tran_id:'b',file_num:'3',exp_amo:'99',sup_opp:'S',dissem_dt:'02-OCT-26'}]],
-      ['H2',[{spe_id:'P1',tran_id:'c',file_num:'4',exp_amo:'7',sup_opp:'O',dissem_dt:'03-SEP-26'}]]])};
+    byCand:new Map([['H1',[{spe_id:'S1',tran_id:'a',file_num:'1',exp_amo:'10',sup_opp:'S',dissem_dt:'01-SEP-26'},{spe_id:'S1',tran_id:'a',file_num:'2',prev_file_num:'1',exp_amo:'12',sup_opp:'S',dissem_dt:'01-SEP-26'},{spe_id:'S1',tran_id:'b',file_num:'3',exp_amo:'99',sup_opp:'S',dissem_dt:'02-OCT-26'}]],
+      ['H2',[{spe_id:'P1',tran_id:'c',file_num:'4',exp_amo:'7',sup_opp:'O',dissem_dt:'03-SEP-26'}]]]),
+    rootFile:f=>f==='2'?'1':String(f)};
   const c=campOf(T,'H1');assert.deepEqual([c.receipts,c.itemized,c.unitemized,c.other,c.cmte,c.start,c.end],[100,50,30,5,'Ojeda For NC','2025-01-01','2026-10-14']);
   const o=outOf(T,'H1',['H2']);
   assert.deepEqual([o.for.super_pac,o.for.party,o.for.total,o.against.total,o.n],[12,7,19,0,2],'the latest version of an item, after Sept. 30 left out, opposing the rival counts for them');
+  // A transaction ID is unique only within one report and its amendments: the same ID in another report is another item.
+  const T2={...T,byCand:new Map([['H1',[{spe_id:'S1',tran_id:'SE.1',file_num:'5',exp_amo:'10',sup_opp:'S',dissem_dt:'01-SEP-26'},{spe_id:'S1',tran_id:'SE.1',file_num:'6',exp_amo:'20',sup_opp:'S',dissem_dt:'08-SEP-26'}]]]),rootFile:String};
+  assert.equal(outOf(T2,'H1',[]).for.total,30);
+  // Through the bulk file's latest filing when it has one (fecTables sets it), so a member-elect's figures run as late as the profiles'.
+  assert.equal(outOf({...T,through:'2026-11-17'},'H1',['H2']).for.total,118,'12 + 99 after Sept. 30 + 7 opposing the rival');
 });
 
 test('the members-elect file: each a basic profile with its race, none already on the site',()=>{

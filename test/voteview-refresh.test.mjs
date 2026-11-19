@@ -1,13 +1,15 @@
 // Senate roll calls from Voteview when Senate.gov turns scripts away (HTTP 403): the same record shape as the official
 // file, senators matched by Bioguide ID, party totals that must add up to Voteview's own counts, a six-hour pause on
 // Senate.gov after a refusal, and the Senate's list of new votes from Voteview too.
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {openDatabase} from '../scripts/sqlite.mjs';
 import {addJob,feedSignature,runRefresh,statement,resetSenateRefusal} from '../src/refresh.mjs';
 import {voteviewSenateVote,voteviewSenateIndex,csvRows,voteviewPage} from '../src/voteview.mjs';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 const migration=await fs.readFile(new URL('../migrations/0001_initial.sql',import.meta.url),'utf8');
 
 // The 119th Congress, session 2: roll call 253 (Voteview's roll 912) is 2 Yea (R), 1 Nay (D), one paired; roll 254 adds up wrong.

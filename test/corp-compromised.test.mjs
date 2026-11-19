@@ -1,5 +1,6 @@
 // The Corporation Compromised Index 🏢 (step 9): business PACs' share of campaign funds and votes with business funders
 // beyond the party, 25% of the People First grade. Parts without data drop out; the PAC share is required.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -7,7 +8,7 @@ import {corporationCompromised,workersOverProfit,CORP_COMPROMISED} from '../publ
 import {businessLoyalty,BUSINESS_FUNDERS} from '../public/influence.js';
 import {makeScorer} from '../public/scoring.js';
 const read=async f=>JSON.parse(await fs.readFile(new URL(`../public/${f}`,import.meta.url),'utf8'));
-const D=await read('research.json'),T=(await read('vote-party.json')).votes;
+const D=withRemovedResearch(await read('research.json')),T=(await read('vote-party.json')).votes;
 
 test('the index weights its parts, drops the ones without data, and needs the PAC share',()=>{
   // 8% of funds from business PACs scores 40; 10 points above the party scores 40; 2 of 4 lobbied bills 50; employees 3% 30.

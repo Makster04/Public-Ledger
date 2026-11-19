@@ -13,6 +13,7 @@ import {sampleOf,scriptAddresses,botCheck} from './county-results.mjs';
 import {Worker} from 'node:worker_threads';
 import {xlsxText} from './xlsx.mjs';
 import {PROBED} from './collect-ratings.mjs';
+import {scrubKeys} from './scrub-keys.mjs';
 
 const root=new URL('../',import.meta.url);
 const UA='Mozilla/5.0 (compatible; PublicLedger/1.0; interest group scorecards)';
@@ -181,12 +182,12 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // A run for some groups keeps what earlier runs found for the others; the notes are saved after each group.
   const kept=only?(await fs.readFile(file,'utf8').catch(()=>'')).trim().split('\n\n').slice(1).filter(x=>!groups.some(g=>x.startsWith(`${g.org} (${g.key})`))):[];
   const out=[`Interest group scorecards probe, ${new Date().toISOString()}: what each group's scorecard pages serve, for writing its reader.`];
-  const save=()=>fs.writeFile(file,[...out,...kept.flatMap(k=>['',k])].join('\n')+'\n');
+  const save=()=>fs.writeFile(file,scrubKeys([...out,...kept.flatMap(k=>['',k])].join('\n')+'\n'));
   console.log(`Looking at ${groups.length} group${groups.length===1?"'s":"s'"} scorecard pages (about one page every two seconds)…`);
   for(const g of groups){
     out.push('',`${g.org} (${g.key}) · ${g.lean} · ${g.issue}${g.permission?' · shown only with their permission':''}`);console.log(`${g.org}…`);
     let n=0;for(const u of g.urls){const r=await probe(u,{surnames});out.push(...r.lines.map(l=>'  '+l));
-      if(r.sample){n++;await fs.writeFile(new URL(`${g.key}-${n}.${r.sample.ext}`,samples),r.sample.text);}await sleep(2000);}
+      if(r.sample){n++;await fs.writeFile(new URL(`${g.key}-${n}.${r.sample.ext}`,samples),scrubKeys(r.sample.text));}await sleep(2000);}
     await save();
   }
   console.log(`\nSaved data/ratings-probe.txt and the pages in data/ratings-samples/. Commit and push them so each group's reader can be written from what its site serves.`);

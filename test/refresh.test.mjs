@@ -1,3 +1,4 @@
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -47,19 +48,19 @@ test('source failures do not leak API keys or accept redirects to arbitrary host
   await assert.rejects(requestSource('https://api.open.fec.gov/v1/test/',{FEC_API_KEY:'secret',fetch:async()=>new Response('secret',{status:429,headers:{'Retry-After':'120'}})}),e=>e.retryAfter===120000&&!e.message.includes('secret'));
 });
 test('a failed refresh preserves the last successful campaign snapshot',async()=>{
-  const db=database();await addJob(db,'campaign:collins','campaign','collins',args);
+  const db=database();await addJob(db,'campaign:ossoff','campaign','ossoff',args);
   const env={DB:db,FEC_API_KEY:'test',fetch:async()=>response({results:[campaign()],pagination:{pages:1,page:1}})};
-  await runRefresh(env,{steps:1});let profile=await getProfile(env,'collins');assert.equal(profile.sections.campaign.receipts,1000);
+  await runRefresh(env,{steps:1});let profile=await getProfile(env,'ossoff');assert.equal(profile.sections.campaign.receipts,1000);
   await statement(db,'UPDATE jobs SET next_due=0').run();env.fetch=async()=>new Response('down',{status:503});
-  await runRefresh(env,{steps:1});profile=await getProfile(env,'collins');assert.equal(profile.sections.campaign.receipts,1000);
+  await runRefresh(env,{steps:1});profile=await getProfile(env,'ossoff');assert.equal(profile.sections.campaign.receipts,1000);
   const job=await statement(db,'SELECT status,failures,last_success FROM jobs').first();assert.equal(job.status,'error');assert.equal(job.failures,1);assert.ok(job.last_success);db.close();
 });
 test('multi-page transactions remain unpublished until the final page, then replace rather than append',async()=>{
-  const db=database();await addJob(db,'pac:collins','pac','collins',args);let phase=0;
+  const db=database();await addJob(db,'pac:ossoff','pac','ossoff',args);let phase=0;
   const env={DB:db,FEC_API_KEY:'test',fetch:async url=>{if(phase===1)return response({results:[pac('3',25)],pagination:{}});return new URL(url).searchParams.has('last_index')?response({results:[],pagination:{}}):response({results:[pac('1',100),pac('2',50)],pagination:{last_indexes:{last_index:'2',last_contribution_receipt_date:'2026-02-01'}}});}};
-  await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'collins')).sections.pac,undefined);
-  await statement(db,'UPDATE jobs SET next_due=0').run();await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'collins')).sections.pac.total,150);
-  phase=1;await statement(db,'UPDATE jobs SET next_due=0').run();await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'collins')).sections.pac.total,25);db.close();
+  await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'ossoff')).sections.pac,undefined);
+  await statement(db,'UPDATE jobs SET next_due=0').run();await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'ossoff')).sections.pac.total,150);
+  phase=1;await statement(db,'UPDATE jobs SET next_due=0').run();await runRefresh(env,{steps:1});assert.equal((await getProfile(env,'ossoff')).sections.pac.total,25);db.close();
 });
 test('a published vote is never scheduled again and does not go stale',async()=>{
   const db=database();const vote={chamber:'H',year:2026,number:1};await addJob(db,'vote:H:2026:1','vote','h-2026-1',vote);
@@ -70,24 +71,24 @@ test('a published vote is never scheduled again and does not go stale',async()=>
   const job=(await getStatus(env)).jobs.find(j=>j.id==='vote:H:2026:1');assert.equal(job.status,'ready');assert.equal(job.stale,false);db.close();
 });
 test('a new database starts from the bundled seed; a mismatched seed or an existing database is left alone',async()=>{
-  const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
+  const config=withRemovedConfig(JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8')));
   const checked='2026-10-01T12:00:00.000Z',vote={chamber:'S',congress:117,session:1,number:1};
   const seed={version:1,exportedAt:checked,scope:seedScope(config),voters:voterHashes(),jobs:[
-    {id:'campaign:collins',kind:'campaign',subject:'collins',args:{committee:args.committee,cycle:2026},lastSuccess:checked,checkedThrough:'2026-06-30',run:'r1',snapshot:normalizeCampaign(campaign(4321),args.committee,2026)},
-    {id:'vote:S:117:1:1',kind:'vote',subject:'117-1-1',args:vote,lastSuccess:checked,checkedThrough:null,run:'r2',snapshot:{id:'117-1-1',chamber:'S',number:1,date:'2021-01-06',positions:{collins:'Yea'}}}]};
+    {id:'campaign:ossoff',kind:'campaign',subject:'ossoff',args:{committee:args.committee,cycle:2026},lastSuccess:checked,checkedThrough:'2026-06-30',run:'r1',snapshot:normalizeCampaign(campaign(4321),args.committee,2026)},
+    {id:'vote:S:117:1:1',kind:'vote',subject:'117-1-1',args:vote,lastSuccess:checked,checkedThrough:null,run:'r2',snapshot:{id:'117-1-1',chamber:'S',number:1,date:'2021-01-06',positions:{ossoff:'Yea'}}}]};
   const fresh=()=>{const db=openDatabase(':memory:');db.exec(migration);return db;};
   let db=fresh();await initialize(db,seed);const env={DB:db};
-  const profile=await getProfile(env,'collins');assert.equal(profile.sections.campaign.receipts,4321);assert.equal(profile.votes[0].position,'Yea');
+  const profile=await getProfile(env,'ossoff');assert.equal(profile.sections.campaign.receipts,4321);assert.equal(profile.votes[0].position,'Yea');
   const jobs=Object.fromEntries((await statement(db,'SELECT id,status,next_due FROM jobs').all()).results.map(j=>[j.id,j]));
-  assert.equal(jobs['campaign:collins'].status,'ready');assert.equal(jobs['campaign:collins'].next_due,Date.parse(checked)+86400000);
-  assert.equal(jobs['vote:S:117:1:1'].next_due,Number.MAX_SAFE_INTEGER);assert.equal(jobs['pac:collins'].status,'pending');
+  assert.equal(jobs['campaign:ossoff'].status,'ready');assert.equal(jobs['campaign:ossoff'].next_due,Date.parse(checked)+86400000);
+  assert.equal(jobs['vote:S:117:1:1'].next_due,Number.MAX_SAFE_INTEGER);assert.equal(jobs['pac:ossoff'].status,'pending');
   await initialize(db,{...seed,jobs:[{...seed.jobs[0],snapshot:normalizeCampaign(campaign(1),args.committee,2026)}]});
-  assert.equal((await getProfile(env,'collins')).sections.campaign.receipts,4321);db.close();
+  assert.equal((await getProfile(env,'ossoff')).sections.campaign.receipts,4321);db.close();
   db=fresh();await initialize(db,{...seed,scope:{...seed.scope,cycle:2028}});
-  assert.equal((await getProfile({DB:db},'collins')).sections.campaign,undefined);db.close();
+  assert.equal((await getProfile({DB:db},'ossoff')).sections.campaign,undefined);db.close();
 });
 test('concurrent refreshers respect the lock',async()=>{
-  const db=database();await addJob(db,'campaign:collins','campaign','collins',args);
+  const db=database();await addJob(db,'campaign:ossoff','campaign','ossoff',args);
   await statement(db,"INSERT INTO locks VALUES ('refresh','other',?)",Date.now()+60000).run();
   const result=await runRefresh({DB:db},{steps:1});assert.equal(result.busy,true);db.close();
 });
