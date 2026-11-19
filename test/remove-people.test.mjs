@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {removedList,removeFromResearch} from '../scripts/remove-people.mjs';
+import {removedList,removeFromResearch,moveToLost,lostSeatOf} from '../scripts/remove-people.mjs';
 import {addMembers} from '../scripts/build-house.mjs';
 import {addSenators} from '../scripts/build-senate.mjs';
 
@@ -43,9 +43,15 @@ test('the directory builders leave out the removed members though the official r
   const config={people:[]},research={members:[],cands:[],featured:[]};
   const h=addMembers([rep('F000466','Fitzpatrick'),rep('X000001','Keeps')],config,research,R.bioguides);
   assert.deepEqual(h.members.map(m=>m.bioguide),['X000001']);assert.ok(!config.people.some(p=>p.bioguide==='F000466'));
+  assert.deepEqual(h.lostSeats,[{state:'PA',district:1,party:null,until:'2027-01-03'}],'their seat stays on the seating chart until the term ends, with no name');
   const sen=(bioguide,last)=>({id:{bioguide,fec:[],lis:'S1'},name:{first:'A',last},terms:term('sen','ME')});
   const s=addSenators([sen('C001035','Collins'),sen('K000383','King')],{people:[]},research,R.bioguides);
-  assert.deepEqual(s.senators.map(m=>m.bioguide),['K000383']);
+  assert.deepEqual(s.senators.map(m=>m.bioguide),['K000383']);assert.deepEqual(s.lostSeats,[{state:'ME',party:null,until:'2027-01-03'}]);
+  // Taking someone out of a directory file moves their seat to lostSeats, once.
+  const d={members:[{id:'fitzpatrick',bioguide:'F000466',name:'Brian Fitzpatrick',state:'PA',district:1,party:'R',termEnd:'2027-01-03'},{id:'keeps',bioguide:'X000001',state:'PA',district:2,party:'D'}]};
+  assert.equal(moveToLost(d,'members',R),1);assert.deepEqual(d.lostSeats,[{state:'PA',district:1,party:'R',until:'2027-01-03'}]);assert.deepEqual(d.members.map(m=>m.id),['keeps']);
+  d.members.push({id:'fitzpatrick',bioguide:'F000466',state:'PA',district:1,party:'R',termEnd:'2027-01-03'});moveToLost(d,'members',R);assert.equal(d.lostSeats.length,1,'not twice');
+  assert.equal(lostSeatOf({state:'OH',party:'R',termEnd:'2026-11-03'}).until,null,'an appointed senator\'s term "ends" on the special election\'s day, but they serve until the winner is sworn in');
 });
 
 test('the page: race results show a removed candidate unlinked, and there is no "Lost" filter left',()=>{

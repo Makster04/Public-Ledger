@@ -5,6 +5,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
 import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackersOf,trackerTotals,kindTotals,conduitList,earmarkTotals,paymentTotals,keptEarmarks,conduitPayments,slimPayment,candidateRow,pastCandidates} from '../scripts/build-corporate-pacs.mjs';
+import {removedList} from '../scripts/remove-people.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -45,6 +46,27 @@ test('a chamber\'s chart: a dot for each seat, linked to the profile, colored by
   assert.ok(!voting.some(x=>['DC','PR','GU','VI','AS','MP'].includes(x.state)));
   const evil=seatChart([{id:'x"><script>',name:'<b>',party:'D',state:'ZZ'}],{total:3,rows:1,r0:20,r1:40,dot:4,label:'T',statusOf:()=>'none'});
   assert.doesNotMatch(evil.svg,/<script|<b>/);
+});
+
+test('a seat held until Jan. 3 by a member who lost in 2026: in their party\'s place, gray, without a name or a link; vacant only when no one holds it',()=>{
+  const m=(id,party,st)=>({id,party,st,name:id,state:'XX'}),statusOf=x=>x.st;
+  const lost=[{state:'PA',district:10,party:'R',until:'2027-01-03'},{state:'CA',district:34,party:'D',until:'2027-01-03'}];
+  const o=seatOrder([m('d1','D','took'),m('r1','R','none')],5,statusOf,lost);
+  assert.deepEqual(o.map(x=>x?(x.lost?`lost-${x.party}`:x.id):null),['d1','lost-D',null,'lost-R','r1'],'next to their party\'s members not read yet');
+  const c=seatChart([m('d1','D','took'),m('r1','R','none')],{total:5,rows:1,r0:20,r1:40,dot:4,label:'T',statusOf,lost});
+  assert.deepEqual(c.counts,{took:1,none:1,waiting:0,vacant:1,lost:2});assert.deepEqual(c.parties,[['D',2],['R',2]],'the seat counts for its party');
+  assert.match(c.svg,/<circle[^>]*r="2\.2" fill="#8b95a5"><title>Republican seat \(PA-10\): its member lost in 2026 and serves until Jan\. 3, 2027<\/title><\/circle>/);
+  assert.equal((c.svg.match(/<a href=/g)||[]).length,2,'only the members on the site are linked');
+  assert.match(seatChart([],{total:1,rows:1,r0:20,r1:40,dot:4,label:'T',statusOf,lost:[{state:'OH',party:'R',until:null}]}).svg,/Republican seat \(OH\): its member lost in 2026 and serves until the winner takes office/);
+  assert.equal(tookShare(c.counts),'50%','a lost seat isn\'t read, and doesn\'t count toward the share');
+  // The files on hand: the House and the Senate are full again, but for the House's real vacancies.
+  // (this file's other tests put the removed members back into the directories: they're left out here)
+  const gone=removedList().bioguides,voting=houseFile.members.filter(x=>!TERRITORIES.has(x.state)&&!gone.has(x.bioguide)),hl=houseFile.lostSeats.filter(s=>!TERRITORIES.has(s.state));
+  const h=seatChart(voting,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf:()=>'waiting',lost:hl});
+  assert.equal(h.counts.lost,34);assert.equal(h.counts.vacant,435-voting.length-34);assert.ok(h.counts.vacant<=3,`${h.counts.vacant} vacant`);
+  const s=seatChart(senateFile.senators.filter(x=>!gone.has(x.bioguide)),{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf:()=>'waiting',lost:senateFile.lostSeats});
+  assert.deepEqual([s.counts.lost,s.counts.vacant],[5,0]);
+  for(const x of [...houseFile.lostSeats,...senateFile.lostSeats])assert.deepEqual(Object.keys(x).filter(k=>!['state','district','party','until'].includes(k)),[],'no name or ID kept');
 });
 
 // FEC bulk-file lines, as the files lay them out (pipe-separated): cm.txt and itpas2.txt.

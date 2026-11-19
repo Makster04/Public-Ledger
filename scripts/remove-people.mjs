@@ -35,6 +35,19 @@ export function removeFromResearch(D,{ids,bioguides}){
 }
 
 // Every other file: [file, what to remove from it].
+// A removed member still in office keeps their seat on the seating charts, without a name or a link: their state,
+// district (House), party and the end of their term (when the seat stops showing). Regular terms end on Jan. 3; any
+// other end in the roster is a placeholder (an appointed senator's is the special election's day, but they serve until
+// the winner is sworn in), so it's left open. The directory builders write the same from the roster.
+export const lostSeatOf=m=>({state:m.state,...(m.district!=null?{district:Number(m.district)||0}:{}),party:m.party||null,until:/-01-03$/.test(m.termEnd||'')?m.termEnd:null});
+const seatKey=s=>`${s.state}-${s.district??''}`;
+export function moveToLost(d,list,R){
+  const out=d[list].filter(m=>R.ids.has(m.id)||R.bioguides.has(m.bioguide));
+  d[list]=d[list].filter(m=>!out.includes(m));
+  if(out.length){const have=new Set((d.lostSeats||[]).map(seatKey));
+    d.lostSeats=[...(d.lostSeats||[]),...out.map(lostSeatOf).filter(s=>!have.has(seatKey(s)))].sort((a,b)=>a.state.localeCompare(b.state)||(a.district||0)-(b.district||0));}
+  return out.length;
+}
 export const FILES=[
   ['data/config.json',(d,R)=>{const n=d.people.length;d.people=d.people.filter(p=>!R.ids.has(p.id));return n-d.people.length;}],
   ['data/promise-reviews.json',(d,R)=>drop(d.people,R.ids)],
@@ -46,8 +59,8 @@ export const FILES=[
   ['public/funder-history.json',(d,R)=>drop(d.people,R.ids)],
   ['public/get-it-done.json',(d,R)=>drop(d.people,R.ids)],
   ['public/group-ratings.json',(d,R)=>drop(d.people,R.ids)],
-  ['public/house.json',(d,R)=>{const n=d.members.length;d.members=d.members.filter(m=>!R.ids.has(m.id)&&!R.bioguides.has(m.bioguide));return n-d.members.length;}],
-  ['public/senate.json',(d,R)=>{const n=d.senators.length;d.senators=d.senators.filter(m=>!R.ids.has(m.id)&&!R.bioguides.has(m.bioguide));return n-d.senators.length;}],
+  ['public/house.json',(d,R)=>moveToLost(d,'members',R)],
+  ['public/senate.json',(d,R)=>moveToLost(d,'senators',R)],
   ['public/integrity-preview-log.json',(d,R)=>(d.entries||[]).reduce((t,e)=>{const n=drop(e.scores,R.ids);const before=(e.changes||[]).length;e.changes=(e.changes||[]).filter(x=>!R.ids.has(x.id));return t+n+before-e.changes.length;},0)],
   ['public/score-log.json',(d,R)=>(d.entries||[]).reduce((t,e)=>{const n=drop(e.scores,R.ids);const before=(e.changes||[]).length;e.changes=(e.changes||[]).filter(x=>!R.ids.has(x.id));return t+n+before-e.changes.length;},0)],
   ['public/news.json',(d,R)=>{const n=d.items.length;d.items=d.items.filter(x=>!(x.id&&R.ids.has(x.id))&&!(x.ids||[]).some(i=>R.ids.has(i)));return n-d.items.length;}],

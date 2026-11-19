@@ -6895,5 +6895,211 @@
    "site": "https://hageman.house.gov",
    "fecCand": "H2WY00166"
   }
+ ],
+ "lostSeats": [
+  {
+   "state": "AZ",
+   "district": 6,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CA",
+   "district": 1,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CA",
+   "district": 3,
+   "party": "I",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CA",
+   "district": 22,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CA",
+   "district": 34,
+   "party": "D",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CO",
+   "district": 5,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CO",
+   "district": 8,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "GA",
+   "district": 10,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "IA",
+   "district": 1,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "IA",
+   "district": 2,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "IA",
+   "district": 3,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "IN",
+   "district": 5,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "MI",
+   "district": 4,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "MI",
+   "district": 7,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "MO",
+   "district": 2,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NC",
+   "district": 6,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NC",
+   "district": 9,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NC",
+   "district": 13,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NC",
+   "district": 14,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NJ",
+   "district": 2,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NJ",
+   "district": 7,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NY",
+   "district": 17,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "OH",
+   "district": 7,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "OH",
+   "district": 10,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "OH",
+   "district": 15,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "PA",
+   "district": 1,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "PA",
+   "district": 7,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "PA",
+   "district": 8,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "PA",
+   "district": 10,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "TX",
+   "district": 15,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "VA",
+   "district": 1,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "VA",
+   "district": 2,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "WI",
+   "district": 1,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "WI",
+   "district": 3,
+   "party": "R",
+   "until": "2027-01-03"
+  }
  ]
 }
