@@ -33,7 +33,7 @@ Each part adds or takes off percentage points, so the score is a percentage to o
 - **PAC Reliance:** up to −10, rising with PACs' share of all receipts.
 - **Earmark Penalty:** forwarded gifts × 0.00002, so $50,000 costs 1 point. Capped at 30, like the PAC Penalty (since Nov. 18, 2026; IntegrityIndex.us gives no cap). Collins's $3.35M routed through AIPAC would otherwise have cost 67 points.
 - **Stock Penalty:** up to −20 for individual stocks held. Nothing for a qualified blind trust.
-- **Trade Penalty:** up to −20, rising with the number of trades. Someone not sitting in Congress (a candidate, a member-elect) files no trade reports, so it is 0 for them (since Nov. 18, 2026).
+- **Trade Penalty:** up to −20, rising with the number of trades. Someone not sitting in Congress (a candidate, a member-elect) files no trade reports, so it is 0 for them (since Nov. 18, 2026). A member's trade reports count once they have all been read; that read stays counted for 14 days while the refresh re-reads them, and the grade says the day it was made (since Nov. 19, 2026; before, it lapsed after 36 hours, so a refresh that fell a day behind put most members back to waiting).
 - **Bonuses:** +5 for no corporate PAC money, +1 for signing the no-corporate-PAC pledge, +1 for holding no individual stocks.
 - **Pledges:** +1 each for backing a lobbying ban, a congressional stock-trading ban, or overturning Citizens United, by pledge or by sponsoring or cosponsoring a bill.
 

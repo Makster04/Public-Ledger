@@ -142,13 +142,32 @@ export function stockHoldings(snapshot,holdings){
   if(values.some(v=>v==null))return {value:null,count:stocks.length,why:'A stock on their annual report has an open-ended or unreadable value'};
   return {value:values.reduce((t,v)=>t+v,0),count:stocks.length,year:snapshot.year||null,url:snapshot.url||null,why:null};
 }
+// Whether someone's official trade reports count as read, and why not. sec: their chamber's trade-report record (null
+// when never read; more: older reports still to read); job: its check's status (status, stale, last_success, error);
+// unread: reports filed on paper. A complete read counts for TRADES_FRESH_DAYS after it finished, while the daily
+// re-read waits its turn, runs or fails (asOf: the day it was read); after that it waits for a new one. (Until
+// Nov. 19, 2026 a read counted only for the 36 hours its check stays current, so a refresh that fell a day behind, or a
+// local server stopped overnight, put most members' Trade Penalty back to waiting.) Reports are due 45 days after a
+// trade, so a read under two weeks old misses little.
+export const TRADES_FRESH_DAYS=14;
+export function tradeCoverage(sec,job,unread=0,now=Date.now()){
+  if(!sec)return {covered:false,why:'Their stock trade reports haven\'t been read yet',asOf:null};
+  if(sec.more)return {covered:false,why:'Their older trade reports are still being read',asOf:null};
+  if(unread)return {covered:false,why:`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`,asOf:null};
+  if(job&&job.status==='ready'&&!job.stale)return {covered:true,why:null,asOf:null};
+  const last=Date.parse(job?.last_success||'');
+  if(Number.isFinite(last)&&now-last<=TRADES_FRESH_DAYS*864e5)return {covered:true,why:null,asOf:new Date(last).toISOString().slice(0,10)};
+  return {covered:false,why:job?.error||(Number.isFinite(last)?`Their trade reports were last read in full on ${shortDay(new Date(last).toISOString().slice(0,10))}, over ${TRADES_FRESH_DAYS} days ago; they're waiting to be read again`:'The latest read of their trade reports hasn\'t finished'),asOf:null};
+}
+const MONTHS=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
+const shortDay=d=>{const [y,m,dd]=String(d).split('-').map(Number);return `${MONTHS[m-1]} ${dd}, ${y}`;};
 // Their trades over the campaign's reporting period, from the official trade reports read so far.
-// trades: {rows, covered, why}; a trade's value is the midpoint of its disclosed range.
+// trades: {rows, covered, why, asOf}; a trade's value is the midpoint of its disclosed range.
 export function tradesIn(trades,start,end){
   if(!trades?.covered)return {count:null,value:null,why:trades?.why||'Their stock trade reports haven\'t been read yet'};
   const rows=(trades.rows||[]).filter(t=>isDay(t.traded)&&(!start||t.traded>=start)&&(!end||t.traded<=end));
   const mid=t=>Number.isFinite(t.low)?(t.low+(Number.isFinite(t.high)?t.high:t.low))/2:amountMid(t.amount);
-  return {count:rows.length,value:rows.reduce((n,t)=>n+(mid(t)||0),0),rows,why:null};
+  return {count:rows.length,value:rows.reduce((n,t)=>n+(mid(t)||0),0),rows,why:null,asOf:trades.asOf||null};
 }
 // sizes: the FEC's gift sizes for the cycle (public/donor-sizes.js); pacRows: [{kind, amount}] from the itemized PAC lines
 // with their FEC types; earmarks: [{group, amount}] gifts routed through conduit groups; snapshot: the latest annual
@@ -222,7 +241,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
     {key:'earmarks',label:'Earmark Penalty',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: not every group searched for yet)'}${earmarkRaw>earmark?`; capped at ${UNBOUGHT.earmarkMax} points (it would be ${round1(earmarkRaw)})`:''}`},
     {key:'stocks',label:'Stock Penalty',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
-    {key:'trades',label:'Trade Penalty',points:tradePts==null?null:tradePts?-round1(tradePts):0,note:traded.notRequired?'Not in Congress, so no stock trade reports are filed: none counted':traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period`},
+    {key:'trades',label:'Trade Penalty',points:tradePts==null?null:tradePts?-round1(tradePts):0,note:traded.notRequired?'Not in Congress, so no stock trade reports are filed: none counted':traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period${traded.asOf?` (their trade reports as read on ${shortDay(traded.asOf)})`:''}`},
     {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},
     {key:'pledges',label:'Pledges and bills',points:pledgePts,note:list(pledgeItems),items:pledgeItems},
   ];

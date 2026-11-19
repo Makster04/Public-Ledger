@@ -25,7 +25,7 @@ import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
 import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
-import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST} from './six-scores.js';
+import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
 import {METHOD_TREE,BUILT_SECTIONS,topicOf,blurbOf} from './method-tree.js';
 import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange,countyTally} from './results.js';
@@ -1080,8 +1080,8 @@ const rankOffice=s=>{const seat=rankSeat(s);return seat==='P'?'President':seat==
 function rankDisclosure(s,fin){
   const d=fin?.people?.[s.id];if(!d)return null;
   const kind=s.chamber==='S'?'trades-senate':'trades-house',job=fin.sourceCoverage?.[s.id]?.[kind];
-  const why=!job?.last_success?'Their stock trade reports haven\'t been read yet':d.tradesMore?'Their older trade reports are still being read':(d.tradesUnread||[]).length?'Some trade reports were filed on paper and can\'t be read automatically':!(job.status==='ready'&&!job.stale)?(job.error||'The latest check of their trade reports isn\'t complete'):null;
-  return {sizes:d.sizes||null,netWorth:d.netWorth||null,trades:{rows:(d.trades||[]).filter(t=>t.official),covered:!why,why}};
+  const {why,asOf}=tradeCoverage(job?.last_success?{more:!!d.tradesMore}:null,job,(d.tradesUnread||[]).length);
+  return {sizes:d.sizes||null,netWorth:d.netWorth||null,trades:{rows:(d.trades||[]).filter(t=>t.official),covered:!why,why,asOf}};
 }
 function rankRows(fin){
   return ALL.concat(FEATURED,BASIC_LIST).map(s=>{

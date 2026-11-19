@@ -39,6 +39,13 @@ test('Big Money Independence on the cards: the records the profile reads, trimme
   assert.deepEqual(b.snapshot.assets.map(a=>a.name),['Apple Inc. (AAPL)','Microsoft Corp'],'stocks only');
   assert.deepEqual(b.trades,{rows:[['2025-03-01',1001,15000,null]],covered:true,why:null},'this cycle\'s official trades');
   assert.match(cardBmi(own,{chamber:'S',job:{status:'ready',stale:true},cycle:2026}).trades.why,/hasn't finished/);
+  // A complete read stays counted for two weeks while the daily re-read waits, runs or fails, with the day it was read.
+  const day=n=>new Date(Date.now()-n*864e5).toISOString();
+  const recent=cardBmi(own,{chamber:'S',job:{status:'pending',stale:true,last_success:day(3)},cycle:2026}).trades;
+  assert.equal(recent.covered,true);assert.equal(recent.asOf,day(3).slice(0,10));
+  assert.equal(cardBmi(own,{chamber:'S',job:{status:'error',stale:true,last_success:day(5),error:'eFD refused'},cycle:2026}).trades.covered,true);
+  assert.match(cardBmi(own,{chamber:'S',job:{status:'error',stale:true,last_success:day(20),error:'eFD refused'},cycle:2026}).trades.why,/eFD refused/);
+  assert.match(cardBmi(own,{chamber:'S',job:{status:'pending',stale:true,last_success:day(20)},cycle:2026}).trades.why,/last read in full on .*, over 14 days ago/);
   assert.match(cardBmi({},{chamber:'H',job,cycle:2026}).trades.why,/haven't been read/);
   assert.match(cardBmi({'trades-house':{rows:[],unread:['x','y']}},{chamber:'H',job,cycle:2026}).trades.why,/2 trade reports were filed on paper/);
   assert.equal(cardBmi({},{chamber:'H'}).snapshot,null);
