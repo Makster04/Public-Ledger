@@ -9,6 +9,7 @@
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {loadFiles,buildIds,writeIds} from './build-ids.mjs';
+import {removedList} from './remove-people.mjs';
 
 const root=new URL('../',import.meta.url);
 const PARTY={Democrat:'D',Republican:'R',Independent:'I'};
@@ -41,9 +42,10 @@ export function senatorEntry(x,id,profiled){
 // A senator's FEC candidate ID: the Senate one for their state, if congress-legislators lists it.
 export const senateFecId=x=>(x.id.fec||[]).filter(f=>f.startsWith('S')&&f.slice(2,4)===x.terms.at(-1).state).at(-1)||null;
 
-// Adds the senators without a profile to config.people and returns the directory.
-export function addSenators(current,config,research){
-  const senators=current.filter(x=>x.terms.at(-1).type==='sen').sort((a,b)=>a.terms.at(-1).state.localeCompare(b.terms.at(-1).state)||a.name.last.localeCompare(b.name.last));
+// Adds the senators without a profile to config.people and returns the directory. removed: Bioguide IDs taken off
+// the site (data/removed.json), left out though the roster still lists them until they leave office.
+export function addSenators(current,config,research,removed=new Set()){
+  const senators=current.filter(x=>x.terms.at(-1).type==='sen'&&!removed.has(x.id.bioguide)).sort((a,b)=>a.terms.at(-1).state.localeCompare(b.terms.at(-1).state)||a.name.last.localeCompare(b.name.last));
   const profiles=new Map([...research.members,...research.cands,...(research.featured||[])].filter(s=>s.bioguide).map(s=>[s.bioguide,s.id]));
   const inConfig=new Map(config.people.filter(p=>p.bioguide).map(p=>[p.bioguide,p]));
   const fresh=senators.filter(x=>!profiles.has(x.id.bioguide)&&!inConfig.has(x.id.bioguide));
@@ -61,7 +63,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const arg=process.argv.indexOf('--dir'),files=await loadFiles(arg>0?process.argv[arg+1]:null);
   const config=JSON.parse(await fs.readFile(new URL('data/config.json',root),'utf8'));
   const research=JSON.parse(await fs.readFile(new URL('public/research.json',root),'utf8'));
-  const {added,senators}=addSenators(files[0],config,research);
+  const {added,senators}=addSenators(files[0],config,research,removedList().bioguides);
   const {committees,summary}=await buildIds(files,config,research);
   await writeIds(config,committees);
   const out={congress:config.congress,checked:new Date().toISOString().slice(0,10),source:'https://github.com/unitedstates/congress-legislators',

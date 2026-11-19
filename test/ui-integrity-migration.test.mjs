@@ -25,7 +25,7 @@ test('Integrity view contains component sections and explicit unavailable-data l
 });
 
 test('historical published grade values are read from their stored percentages, never recomputed',()=>{
-  const existing=scoreLog.entries.find(e=>e.scores?.collins?.promises?.pct!=null&&e.scores?.collins?.ethics?.pct!=null);
+  const existing=scoreLog.entries.find(e=>Object.values(e.scores||{}).some(v=>v?.promises?.pct!=null&&v?.ethics?.pct!=null));
   assert.ok(existing,'historical Promise and Ethics values exist');
   assert.match(app,/v\.promises\?\.pct\?\?null/);
   assert.match(app,/v\.ethics\?\.pct\?\?null/);

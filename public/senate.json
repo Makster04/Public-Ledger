@@ -515,23 +515,6 @@
    "fecCand": "S6IN00191"
   },
   {
-   "id": "marshall",
-   "profiled": true,
-   "name": "Roger Marshall",
-   "short": "Marshall",
-   "party": "R",
-   "state": "KS",
-   "stateName": "Kansas",
-   "bioguide": "M001198",
-   "lis": "S411",
-   "class": 2,
-   "since": "2021-01-03",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://www.marshall.senate.gov",
-   "fecCand": "S0KS00315"
-  },
-  {
    "id": "moran",
    "profiled": false,
    "name": "Jerry Moran",
@@ -685,23 +668,6 @@
    "fecCand": "S6MD03441"
   },
   {
-   "id": "collins",
-   "profiled": true,
-   "name": "Susan M. Collins",
-   "short": "Collins",
-   "party": "R",
-   "state": "ME",
-   "stateName": "Maine",
-   "bioguide": "C001035",
-   "lis": "S252",
-   "class": 2,
-   "since": "1997-01-07",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://www.collins.senate.gov",
-   "fecCand": "S6ME00159"
-  },
-  {
    "id": "king",
    "profiled": false,
    "name": "Angus S. King, Jr.",
@@ -819,23 +785,6 @@
    "nextElection": 2028,
    "site": "https://www.schmitt.senate.gov",
    "fecCand": "S2MO00544"
-  },
-  {
-   "id": "hydesmith",
-   "profiled": false,
-   "name": "Cindy Hyde-Smith",
-   "short": "Hyde-Smith",
-   "party": "R",
-   "state": "MS",
-   "stateName": "Mississippi",
-   "bioguide": "H001079",
-   "lis": "S395",
-   "class": 2,
-   "since": "2018-04-09",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://www.hydesmith.senate.gov",
-   "fecCand": "S8MS00261"
   },
   {
    "id": "wicker",
@@ -1161,23 +1110,6 @@
    "fecCand": "S8NY00082"
   },
   {
-   "id": "husted",
-   "profiled": true,
-   "name": "Jon Husted",
-   "short": "Husted",
-   "party": "R",
-   "state": "OH",
-   "stateName": "Ohio",
-   "bioguide": "H001104",
-   "lis": "S438",
-   "class": 3,
-   "since": "2025-01-21",
-   "termEnd": "2026-11-03",
-   "nextElection": 2026,
-   "site": "https://www.husted.senate.gov",
-   "fecCand": "S6OH00304"
-  },
-  {
    "id": "moreno",
    "profiled": false,
    "name": "Bernie Moreno",
@@ -1329,23 +1261,6 @@
    "nextElection": 2030,
    "site": "https://www.whitehouse.senate.gov",
    "fecCand": "S6RI00221"
-  },
-  {
-   "id": "grahamnordone",
-   "profiled": false,
-   "name": "Darline Graham",
-   "short": "Graham Nordone",
-   "party": "R",
-   "state": "SC",
-   "stateName": "South Carolina",
-   "bioguide": "G000608",
-   "lis": "S441",
-   "class": 2,
-   "since": "2026-07-14",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://www.dgraham.senate.gov",
-   "fecCand": null
   },
   {
    "id": "tscott",

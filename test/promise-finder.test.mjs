@@ -1,3 +1,4 @@
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,7 +12,7 @@ import {reviewedStatement,didText,addCheck,decidingAct,card,addWaiting,profiledI
 import {promiseScore} from '../public/grades.js';
 
 const root=new URL('../',import.meta.url);
-const research=JSON.parse(fs.readFileSync(new URL('public/research.json',root),'utf8'));
+const research=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('public/research.json',root),'utf8')));
 const saved=F.savedVotes(research);
 const people=[...research.members,...research.cands,...(research.featured||[])];
 const titles=[...saved.map(v=>({key:v.key,title:v.what})),...research.billIndex.map(b=>({key:b.id,title:b.title})),...research.bills.map(b=>({key:b.id,title:b.title}))];
@@ -142,7 +143,7 @@ test('npm run promises:find: a whole run on a small database',()=>{
   fs.mkdirSync(path.join(dir,'speeches'));
   fs.writeFileSync(path.join(dir,'speeches','CREC-2025-11-17-pt1-PgH4500.txt'),'  Mr. LAWLER. Mr. Speaker, I rise in support of this bill, and I will vote for it tomorrow.\n  The SPEAKER pro tempore. The gentleman yields back.\n  Mr. PERRY. Mr. Speaker, I will vote against it.\n');
   const out=path.join(dir,'queue.json');
-  const log=execFileSync(process.execPath,['--no-warnings','scripts/find-promises.mjs','--db',dbFile,'--out',out,'--decisions',path.join(dir,'none.json'),'--no-voteview'],{cwd:new URL('.',root),encoding:'utf8',env:{...process.env,CONGRESS_API_KEY:'',GOVINFO_API_KEY:''}});
+  const log=execFileSync(process.execPath,['--no-warnings','scripts/find-promises.mjs','--db',dbFile,'--out',out,'--decisions',path.join(dir,'none.json'),'--no-voteview'],{cwd:new URL('.',root),encoding:'utf8',env:{...process.env,LEDGER_WITH_REMOVED:'1',CONGRESS_API_KEY:'',GOVINFO_API_KEY:''}});
   assert.match(log,/Floor speeches about a bill the speaker voted on: 2 \(read before 2, read now 0\)/);
   const q=JSON.parse(fs.readFileSync(out,'utf8'));
   assert.deepEqual(q.items.map(x=>`${x.id} ${x.link.how} ${x.draft.assessment}`).sort(),[

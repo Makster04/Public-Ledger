@@ -1,11 +1,12 @@
 // The Bills page's list (research.json "billIndex", public/bills.js): every bill on file is listed once, with a status
 // and cited group positions.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {billFamilies,groupInfo,unlisted,EXTRA_GROUPS} from '../public/bills.js';
 import {makeScorer} from '../public/scoring.js';
-const D=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
+const D=withRemovedResearch(JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8')));
 const KEY=/^\d{3}-(hr|s|hjres|sjres|hres|sres|hconres|sconres|samdt|hamdt)-\d+$/;
 
 test('each listed bill has a valid number, a status, and cited positions from known groups',()=>{

@@ -2,11 +2,13 @@
 // check, Open States is searched without a middle initial and then through the bills a former legislator sponsored,
 // LegiScan reads the sessions from the years they served, the House disclosure index matches legal first names, and the
 // years served come from the research's own entries.
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {FEEDS,sameName,firstNames,STATE_COVERAGE_FROM} from '../src/feeds.mjs';
 import {stateLegYears} from '../scripts/build-ids.mjs';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 const json=x=>new Response(JSON.stringify(x));
 const person=id=>config.people.find(p=>p.id===id);
 const args=(kind,id)=>FEEDS[kind].jobs(config).find(j=>j.subject===id).args;

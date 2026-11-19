@@ -1,10 +1,14 @@
 // Representative responses for every source added with the overhaul, built from each source's published documentation.
 // They check what each adapter keeps, what it refuses, and where its key goes. Live responses need your keys.
+import {withRemovedCommittees,withRemovedConfig} from './fixtures/with-removed.mjs';
+import committeesFile from '../public/committees.json' with {type:'json'};
+withRemovedCommittees(committeesFile);
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import zlib from 'node:zlib';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 import {FEEDS,billsInText,committeeCode,isOrg,normalizeHouseApiVote,houseApiURL,namesPerson,namesCampaign} from '../src/feeds.mjs';
 import {requestSource,missingKey,cleanURL,unzipFile,HOSTS,fetchPage} from '../src/sources.mjs';
 import {mergeTrades,mergeStateBills,mergeNews,committeeDiff,stateBillKey} from '../src/merge.mjs';

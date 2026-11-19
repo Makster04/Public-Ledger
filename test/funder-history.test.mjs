@@ -1,8 +1,9 @@
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {classify,context,aggregate,isoDate,isGeneral,IE_BEFORE} from '../scripts/build-funder-history.mjs';
-const data=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
+const data=withRemovedResearch(JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8')));
 const hist=JSON.parse(await fs.readFile(new URL('../public/funder-history.json',import.meta.url),'utf8'));
 const ctx=context(data);
 // A pas2 line: CMTE_ID|AMNDT|RPT|PGI|IMAGE|TP|ENTITY|NAME|CITY|ST|ZIP|EMPLOYER|OCC|DATE|AMT|OTHER_ID|CAND_ID|TRAN|FILE|MEMO|MEMO_TEXT|SUB

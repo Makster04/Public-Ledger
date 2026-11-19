@@ -117,7 +117,7 @@ export function outSummary(rows,{me,rivals=[],multi=false,start=SINCE,end,camp=n
 
 // Who a profile's rivals are: the other nominees of their race (research races, toss-up races, members-elect races).
 export function rivalsFor(s,{races=[],liteRaces=[],electRaces=[],byId={}}){
-  const race=races.find(x=>x.id===s.race);if(race)return (race.keys||[]).filter(k=>k!==s.id).map(k=>byId[k]?.fecCand).filter(Boolean);
+  const race=races.find(x=>x.id===s.race);if(race)return (race.keys||[]).filter(k=>k!==s.id).map(k=>byId[k]?.fecCand||race.gone?.[k]?.fecCand).filter(Boolean);
   const lite=liteRaces.find(x=>x.id===s.race);if(lite)return (lite.nominees||[]).filter(n=>n.fecCand&&n.fecCand!==s.fecCand).map(n=>n.fecCand);
   const er=electRaces.find(x=>x.id===s.race||(x.nominees||[]).some(n=>n.fecCand===s.fecCand||n.profile===s.id));
   return er?(er.nominees||[]).filter(n=>n.fecCand&&n.fecCand!==s.fecCand).map(n=>n.fecCand):[];

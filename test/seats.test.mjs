@@ -1,5 +1,6 @@
 // The home page's seating charts of who takes corporate PAC money (public/seats.js), and the bulk-file reader behind
 // them (scripts/build-corporate-pacs.mjs).
+import {withRemovedHouse,withRemovedSenate} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seatLayout,seatOrder,seatChart,corporateStatus,tookShare,TERRITORIES,SEAT_COLORS} from '../public/seats.js';
@@ -7,8 +8,10 @@ import {committeeKind,corporateCheck,membersByCandidate,corporateTotals,trackers
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import senate from '../public/senate.json' with {type:'json'};
-import house from '../public/house.json' with {type:'json'};
+import senateFile from '../public/senate.json' with {type:'json'};
+const senate=withRemovedSenate(senateFile);
+import houseFile from '../public/house.json' with {type:'json'};
+const house=withRemovedHouse(houseFile);
 
 test('seats: rows of arcs, every seat once, in order from the left',()=>{
   for(const [n,rows] of [[435,12],[100,5],[7,2]]){

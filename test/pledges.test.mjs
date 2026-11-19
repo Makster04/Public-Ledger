@@ -1,11 +1,12 @@
 // Money pledges (step 7): statements tagged "pledge" are checked again against the records on file (public/pledges.js),
 // shown under the reviewed verdict, and flagged only when the records directly conflict with it.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {pledgeCheck,allPledges,reportTiming,pledgeSince,conflictWith,PLEDGE_KINDS} from '../public/pledges.js';
 import {promiseScore} from '../public/grades.js';
-const D=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
+const D=withRemovedResearch(JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8')));
 
 const filings=[{report:'Q1',start:'2026-01-01',end:'2026-03-31',url:'u1'},{report:'Q2',start:'2026-04-01',end:'2026-06-30',url:'u2'},{report:'Y24',start:'2024-01-01',end:'2024-12-31',url:'u0'}];
 // PAC names 0-5, with FEC records for 0-3 (4 and 5 not matched).

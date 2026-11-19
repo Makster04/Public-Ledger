@@ -51,7 +51,7 @@ test('npm run statements:export: a whole run on a small database, without readin
   fs.mkdirSync(path.join(dir,'speeches'));
   fs.writeFileSync(path.join(dir,'speeches','CREC-2025-11-17-pt1-PgH4500.txt'),'  Mr. LAWLER. Mr. Speaker, a higher minimum wage helps families in the Hudson Valley.\n  The SPEAKER pro tempore. The gentleman yields back.\n  Mr. PERRY. Mr. Speaker, this bill is not about the minimum wage at all, I yield back.\n');
   const out=path.join(dir,'out');
-  const log=execFileSync(process.execPath,['--no-warnings','scripts/export-statements.mjs','--db',dbFile,'--out',out,'--read','0'],{cwd:new URL('.',root),encoding:'utf8',env:{...process.env,CONGRESS_API_KEY:'',GOVINFO_API_KEY:''}});
+  const log=execFileSync(process.execPath,['--no-warnings','scripts/export-statements.mjs','--db',dbFile,'--out',out,'--read','0'],{cwd:new URL('.',root),encoding:'utf8',env:{...process.env,LEDGER_WITH_REMOVED:'1',CONGRESS_API_KEY:'',GOVINFO_API_KEY:''}});
   assert.match(log,/press releases 1, floor speeches 4\./,"each speaker of a speech once, the 2012 release left out");assert.match(log,/1 still to read/);
   assert.deepEqual(fs.readdirSync(out).sort(),['lawler.json','perry.json'],'no file for someone without a profile; YouTube is left out');
   const perry=JSON.parse(fs.readFileSync(path.join(out,'perry.json'),'utf8')),lawler=JSON.parse(fs.readFileSync(path.join(out,'lawler.json'),'utf8'));

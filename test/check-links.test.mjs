@@ -33,7 +33,8 @@ test('checking: archives skipped, each site paced, every link answered',async()=
 test('the two dead links from the audit point at their archived copies',()=>{
   const q=fs.readFileSync(new URL('../public/question-statements.json',import.meta.url),'utf8'),r=fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8');
   assert.ok(!q.includes('"https://bsky.app/profile/booker.senate.gov/post/3mknwhhyans2d"')&&q.includes('web.archive.org/web/20260622102901/https://bsky.app/profile/booker.senate.gov/post/3mknwhhyans2d'));
-  assert.ok(!r.includes('"https://byrdforsenate.com"')&&r.includes('"https://web.archive.org/web/20261114044457/https://www.byrdforsenate.com/"'));
+  // (Byrd's profile, which had the other one, was taken off the site with everyone who lost in 2026.)
+  assert.ok(!r.includes('"https://byrdforsenate.com"'));
 });
 
 test('saved pages: key-like values are stripped, the page around them kept',()=>{

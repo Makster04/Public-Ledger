@@ -1,9 +1,11 @@
 // History back to config.historyFrom (2016): years and cycles that have ended are read once and kept, newest-first lists
 // are read back once a month, catch-up runs follow a few minutes apart, and the Record's archive is read a day at a time.
+import {withRemovedConfig} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 import {FEEDS,crecModsRows,history,ended,yearsFrom,cyclesFrom,SINCE} from '../src/feeds.mjs';
 import {parseXML} from '../src/sources.mjs';
 import {addJob,runRefresh,statement,getProfile,feedSignature} from '../src/refresh.mjs';

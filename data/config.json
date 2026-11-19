@@ -7,48 +7,6 @@
   "reviewedAt": "October 2, 2026",
   "people": [
     {
-      "id": "collins",
-      "name": "Susan M. Collins",
-      "short": "Collins",
-      "bioguide": "C001035",
-      "lis": "S252",
-      "fecCand": "S6ME00159",
-      "fecCmte": "C00314575",
-      "chamber": "S",
-      "state": "ME",
-      "race": "S-ME",
-      "ids": {
-        "govtrack": 300025,
-        "opensecrets": "N00000491",
-        "votesmart": 379,
-        "wikidata": "Q22279",
-        "ballotpedia": "Susan Collins",
-        "wikipedia": "Susan Collins",
-        "icpsr": 49703,
-        "cspan": 45738,
-        "thomas": "01541"
-      },
-      "social": {
-        "twitter": "SenatorCollins",
-        "facebook": "susancollins",
-        "youtube": "SenatorSusanCollins",
-        "youtube_id": "UC6GYaBx5kT2r4PN8KENxC-w",
-        "instagram": "sensusancollins",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": null,
-      "official": {
-        "site": "https://www.collins.senate.gov",
-        "feed": "https://www.collins.senate.gov/public/?a=rss.feed"
-      },
-      "stateLegYears": null
-    },
-    {
       "id": "sullivan",
       "name": "Dan Sullivan",
       "short": "Sullivan",
@@ -85,46 +43,6 @@
       "stateLeg": null,
       "official": {
         "site": "https://www.sullivan.senate.gov",
-        "feed": null
-      },
-      "stateLegYears": null
-    },
-    {
-      "id": "marshall",
-      "name": "Roger W. Marshall",
-      "short": "Marshall",
-      "bioguide": "M001198",
-      "lis": "S411",
-      "fecCand": "S0KS00315",
-      "fecCmte": "C00576173",
-      "chamber": "S",
-      "state": "KS",
-      "race": "S-KS",
-      "ids": {
-        "govtrack": 412704,
-        "opensecrets": "N00037034",
-        "votesmart": 172080,
-        "wikidata": "Q27923290",
-        "ballotpedia": "Roger Marshall",
-        "wikipedia": "Roger Marshall",
-        "icpsr": 21734,
-        "cspan": 103425
-      },
-      "social": {
-        "twitter": "SenatorMarshall",
-        "facebook": "RogerMarshallMD",
-        "youtube": "UCR3nOFMqBB-kRpKFwgapMaQ",
-        "instagram": "senrogermarshall",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": null,
-      "official": {
-        "site": "https://www.marshall.senate.gov",
         "feed": null
       },
       "stateLegYears": null
@@ -246,171 +164,6 @@
         "feed": null
       },
       "stateLegYears": null
-    },
-    {
-      "id": "perry",
-      "name": "Scott Perry",
-      "short": "Perry",
-      "bioguide": "P000605",
-      "lis": null,
-      "fecCand": "H2PA04135",
-      "fecCmte": "C00510164",
-      "chamber": "H",
-      "state": "PA",
-      "race": "H-PA-10",
-      "ids": {
-        "govtrack": 412569,
-        "opensecrets": "N00034120",
-        "votesmart": 59980,
-        "wikidata": "Q7437040",
-        "ballotpedia": "Scott Perry",
-        "wikipedia": "Scott Perry",
-        "icpsr": 21356,
-        "cspan": 79873,
-        "thomas": "02157"
-      },
-      "social": {
-        "twitter": "RepScottPerry",
-        "facebook": "repscottperry",
-        "youtube": "RepScottPerry",
-        "youtube_id": "UCzgrU5PT_HHRgf5hXPen4dQ",
-        "instagram": "repscottperry",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "PA",
-      "official": {
-        "site": "https://perry.house.gov",
-        "feed": "https://perry.house.gov/rss.xml"
-      },
-      "stateLegYears": [
-        2007,
-        2012
-      ]
-    },
-    {
-      "id": "lawler",
-      "name": "Mike Lawler",
-      "short": "Lawler",
-      "bioguide": "L000599",
-      "lis": null,
-      "fecCand": "H2NY17162",
-      "fecCmte": "C00815415",
-      "chamber": "H",
-      "state": "NY",
-      "race": "H-NY-17",
-      "ids": {
-        "govtrack": 456924,
-        "opensecrets": "N00051208",
-        "votesmart": 192271,
-        "wikidata": "Q105179052",
-        "ballotpedia": "Michael Lawler (New York)",
-        "wikipedia": "Mike Lawler"
-      },
-      "social": {
-        "twitter": "RepMikeLawler",
-        "facebook": "RepMikeLawler",
-        "youtube": "@RepMikeLawler",
-        "instagram": "RepMikeLawler",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "NY",
-      "official": {
-        "site": "https://lawler.house.gov",
-        "feed": null
-      },
-      "stateLegYears": [
-        2021,
-        2022
-      ]
-    },
-    {
-      "id": "evans",
-      "name": "Gabe Evans",
-      "short": "Evans",
-      "bioguide": "E000300",
-      "lis": null,
-      "fecCand": "H4CO08034",
-      "fecCmte": "C00849844",
-      "chamber": "H",
-      "state": "CO",
-      "race": "H-CO-08",
-      "ids": {
-        "govtrack": 456984,
-        "opensecrets": "N00053312",
-        "votesmart": 206217,
-        "wikidata": "Q115458993",
-        "ballotpedia": "Gabe Evans",
-        "wikipedia": "Gabe Evans"
-      },
-      "social": {
-        "twitter": "repgabeevans",
-        "facebook": "RepGabeEvans",
-        "instagram": "RepGabeEvans",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "CO",
-      "official": {
-        "site": "https://gabeevans.house.gov",
-        "feed": null
-      },
-      "stateLegYears": [
-        2023,
-        2025
-      ]
-    },
-    {
-      "id": "millermeeks",
-      "name": "Mariannette Miller-Meeks",
-      "short": "Miller-Meeks",
-      "bioguide": "M001215",
-      "lis": null,
-      "fecCand": "H8IA02043",
-      "fecCmte": "C00558825",
-      "chamber": "H",
-      "state": "IA",
-      "race": "H-IA-01",
-      "ids": {
-        "govtrack": 456817,
-        "opensecrets": "N00029495",
-        "votesmart": 103294,
-        "wikidata": "Q58495662",
-        "ballotpedia": "Mariannette Miller-Meeks",
-        "wikipedia": "Mariannette Miller-Meeks"
-      },
-      "social": {
-        "twitter": "RepMMM",
-        "facebook": "RepMMM",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "IA",
-      "official": {
-        "site": "https://millermeeks.house.gov",
-        "feed": null
-      },
-      "stateLegYears": [
-        2019,
-        2021
-      ]
     },
     {
       "id": "kaptur",
@@ -608,33 +361,6 @@
       ]
     },
     {
-      "id": "paxton",
-      "name": "Ken Paxton",
-      "short": "Paxton",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6TX00388",
-      "fecCmte": "C00901918",
-      "chamber": "S",
-      "state": "TX",
-      "race": "S-TX",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.kenpaxton.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "TX",
-      "official": null,
-      "stateLegYears": [
-        2003,
-        2015
-      ]
-    },
-    {
       "id": "elsayed",
       "name": "Abdul El-Sayed",
       "short": "El-Sayed",
@@ -659,43 +385,6 @@
       "stateLeg": null,
       "official": null,
       "stateLegYears": null
-    },
-    {
-      "id": "rogers",
-      "name": "Mike Rogers",
-      "short": "Rogers",
-      "bioguide": "R000572",
-      "lis": null,
-      "fecCand": "S4MI00595",
-      "fecCmte": "C00849810",
-      "chamber": "S",
-      "state": "MI",
-      "race": "S-MI",
-      "ids": {
-        "govtrack": 400342,
-        "opensecrets": "N00009668",
-        "votesmart": 8751,
-        "wikidata": "Q970515",
-        "ballotpedia": "Mike Rogers (Michigan)",
-        "wikipedia": "Mike Rogers (Michigan politician)",
-        "icpsr": 20120,
-        "cspan": 86133,
-        "thomas": "01651"
-      },
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://rogersforsenate.com",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "MI",
-      "official": null,
-      "stateLegYears": [
-        1995,
-        2001
-      ]
     },
     {
       "id": "cooper",
@@ -727,30 +416,6 @@
       ]
     },
     {
-      "id": "whatley",
-      "name": "Michael Whatley",
-      "short": "Whatley",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6NC00415",
-      "fecCmte": "C00913996",
-      "chamber": "S",
-      "state": "NC",
-      "race": "S-NC",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "turek",
       "name": "Josh Turek",
       "short": "Turek",
@@ -777,45 +442,6 @@
       "stateLegYears": [
         2023,
         2026
-      ]
-    },
-    {
-      "id": "hinson",
-      "name": "Ashley Hinson",
-      "short": "Hinson",
-      "bioguide": "H001091",
-      "lis": null,
-      "fecCand": "S6IA00314",
-      "fecCmte": "C00706267",
-      "chamber": "H",
-      "state": "IA",
-      "race": "S-IA",
-      "ids": {
-        "govtrack": 456816,
-        "opensecrets": "N00044521",
-        "votesmart": 168783,
-        "wikidata": "Q60713905",
-        "ballotpedia": "Ashley Hinson",
-        "wikipedia": "Ashley Hinson"
-      },
-      "social": {
-        "twitter": "RepAshleyHinson",
-        "facebook": "RepAshleyHinson",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://vote.ashleyhinson.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "IA",
-      "official": {
-        "site": "https://hinson.house.gov",
-        "feed": null
-      },
-      "stateLegYears": [
-        2017,
-        2021
       ]
     },
     {
@@ -861,39 +487,6 @@
       ]
     },
     {
-      "id": "sununu",
-      "name": "John E. Sununu",
-      "short": "Sununu",
-      "bioguide": "S001078",
-      "lis": "S296",
-      "fecCand": "S6NH00208",
-      "fecCmte": "C00924092",
-      "chamber": "S",
-      "state": "NH",
-      "race": "S-NH",
-      "ids": {
-        "govtrack": 300095,
-        "opensecrets": "N00000397",
-        "votesmart": 617,
-        "wikidata": "Q1699908",
-        "ballotpedia": "John E. Sununu",
-        "wikipedia": "John E. Sununu",
-        "icpsr": 29740,
-        "thomas": "01532"
-      },
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://sununusenator.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "flanagan",
       "name": "Peggy Flanagan",
       "short": "Flanagan",
@@ -924,30 +517,6 @@
       ]
     },
     {
-      "id": "tafoya",
-      "name": "Michele Tafoya",
-      "short": "Tafoya",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6MN00556",
-      "fecCmte": "C00935528",
-      "chamber": "S",
-      "state": "MN",
-      "race": "S-MN",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://micheletafoya.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "stratton",
       "name": "Juliana Stratton",
       "short": "Stratton",
@@ -975,59 +544,6 @@
       "stateLegYears": [
         2017,
         2019
-      ]
-    },
-    {
-      "id": "tracy",
-      "name": "Don Tracy",
-      "short": "Tracy",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6IL00615",
-      "fecCmte": "C00917120",
-      "chamber": "S",
-      "state": "IL",
-      "race": "S-IL",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://dontracyforil.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
-      "id": "cbooker",
-      "name": "Charles Booker",
-      "short": "Booker",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6KY00385",
-      "fecCmte": "C00929208",
-      "chamber": "S",
-      "state": "KY",
-      "race": "S-KY",
-      "ids": {},
-      "social": {
-        "bluesky": [
-          "booker4ky.bsky.social"
-        ],
-        "threads": []
-      },
-      "campaignSite": "https://charlesbooker.org",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "KY",
-      "official": null,
-      "stateLegYears": [
-        2019,
-        2020
       ]
     },
     {
@@ -1076,30 +592,6 @@
       "stateLegYears": null
     },
     {
-      "id": "wess",
-      "name": "Everett Wess",
-      "short": "Wess",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6AL00518",
-      "fecCmte": "C00935783",
-      "chamber": "S",
-      "state": "AL",
-      "race": "S-AL",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://wessforsenate.com/f/voter-guide-qa",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "moore",
       "name": "Barry Moore",
       "short": "Moore",
@@ -1142,30 +634,6 @@
       ]
     },
     {
-      "id": "bankhead",
-      "name": "Alani Bankhead",
-      "short": "Bankhead",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6MT00253",
-      "fecCmte": "C00937201",
-      "chamber": "S",
-      "state": "MT",
-      "race": "S-MT",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://alaniformt.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "alme",
       "name": "Kurt Alme",
       "short": "Alme",
@@ -1188,59 +656,6 @@
       "stateLeg": null,
       "official": null,
       "stateLegYears": null
-    },
-    {
-      "id": "bodnar",
-      "name": "Seth Bodnar",
-      "short": "Bodnar",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6MT00287",
-      "fecCmte": "C00941708",
-      "chamber": "S",
-      "state": "MT",
-      "race": "S-MT",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://sethformontana.com",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
-      "id": "byrd",
-      "name": "James Byrd",
-      "short": "Byrd",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6WY00217",
-      "fecCmte": "C00938738",
-      "chamber": "S",
-      "state": "WY",
-      "race": "S-WY",
-      "ids": {},
-      "social": {
-        "bluesky": [
-          "byrdforsenate.bsky.social"
-        ],
-        "threads": []
-      },
-      "campaignSite": "https://web.archive.org/web/20261114044457/https://www.byrdforsenate.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "WY",
-      "official": null,
-      "stateLegYears": [
-        2009,
-        2019
-      ]
     },
     {
       "id": "hageman",
@@ -1276,32 +691,6 @@
         "site": "https://hageman.house.gov",
         "feed": null
       },
-      "stateLegYears": null
-    },
-    {
-      "id": "thomas",
-      "name": "N'Kiyla Jasmine Thomas",
-      "short": "Thomas",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6OK04163",
-      "fecCmte": "C00899559",
-      "chamber": "S",
-      "state": "OK",
-      "race": "S-OK",
-      "ids": {},
-      "social": {
-        "bluesky": [
-          "jasmineforok.bsky.social"
-        ],
-        "threads": []
-      },
-      "campaignSite": "https://www.jasmineforok.com",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
       "stateLegYears": null
     },
     {
@@ -1343,32 +732,6 @@
       "stateLegYears": null
     },
     {
-      "id": "davis",
-      "name": "Jamie Davis",
-      "short": "Davis",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6LA00615",
-      "fecCmte": "C00929117",
-      "chamber": "S",
-      "state": "LA",
-      "race": "S-LA",
-      "ids": {},
-      "social": {
-        "bluesky": [
-          "jamieforlouisiana.bsky.social"
-        ],
-        "threads": []
-      },
-      "campaignSite": "https://jamieforlouisiana.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
       "id": "letlow",
       "name": "Julia Letlow",
       "short": "Letlow",
@@ -1403,42 +766,6 @@
         "feed": null
       },
       "stateLegYears": null
-    },
-    {
-      "id": "husted",
-      "name": "Jon Husted",
-      "short": "Husted",
-      "bioguide": "H001104",
-      "lis": "S438",
-      "fecCand": "S6OH00304",
-      "fecCmte": "C00896019",
-      "chamber": "S",
-      "state": "OH",
-      "race": "S-OH",
-      "ids": {
-        "govtrack": 457032,
-        "votesmart": 45796,
-        "wikidata": "Q6270269",
-        "ballotpedia": "Jon Husted",
-        "wikipedia": "Jon Husted"
-      },
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.jonhustedforsenate.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": "OH",
-      "official": {
-        "site": "https://www.husted.senate.gov",
-        "feed": null
-      },
-      "stateLegYears": [
-        2001,
-        2011
-      ]
     },
     {
       "id": "brown",
@@ -1516,30 +843,6 @@
         "site": "https://www.ricketts.senate.gov",
         "feed": null
       },
-      "stateLegYears": null
-    },
-    {
-      "id": "osborn",
-      "name": "Dan Osborn",
-      "short": "Osborn",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S4NE00207",
-      "fecCmte": "C00901355",
-      "chamber": "S",
-      "state": "NE",
-      "race": "S-NE",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.osbornforsenate.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
       "stateLegYears": null
     },
     {
@@ -1628,94 +931,6 @@
       "stateLeg": null,
       "official": null,
       "stateLegYears": null
-    },
-    {
-      "id": "mcollins",
-      "name": "Mike Collins",
-      "short": "Collins",
-      "bioguide": "C001129",
-      "lis": null,
-      "fecCand": "S6GA00390",
-      "fecCmte": "C00544684",
-      "chamber": "H",
-      "state": "GA",
-      "race": "S-GA",
-      "ids": {
-        "govtrack": 456895,
-        "opensecrets": "N00035370",
-        "votesmart": 151225,
-        "wikidata": "Q115806750",
-        "ballotpedia": "Mike Collins (Georgia)",
-        "wikipedia": "Mike Collins (politician)"
-      },
-      "social": {
-        "twitter": "RepMikeCollins",
-        "facebook": "RepMikeCollinsGA",
-        "instagram": "repmikecollins",
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://collins.house.gov/about",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": true,
-      "stateLeg": null,
-      "official": {
-        "site": "https://collins.house.gov",
-        "feed": null
-      },
-      "stateLegYears": null
-    },
-    {
-      "id": "murphy",
-      "name": "Justin Murphy",
-      "short": "Murphy",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S4NJ00532",
-      "fecCmte": "C00865808",
-      "chamber": "S",
-      "state": "NJ",
-      "race": "S-NJ",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://jerseyjustin4senate.org/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
-      "id": "baisley",
-      "name": "Mark Baisley",
-      "short": "Baisley",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "S6CO00507",
-      "fecCmte": "C00932848",
-      "chamber": "S",
-      "state": "CO",
-      "race": "S-CO",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://baisleyforsenate.com/issues/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "CO",
-      "official": null,
-      "stateLegYears": [
-        2019,
-        2026
-      ]
     },
     {
       "id": "stelson",
@@ -1819,111 +1034,6 @@
       "stateLegYears": [
         2021,
         2023
-      ]
-    },
-    {
-      "id": "merrin",
-      "name": "Derek Merrin",
-      "short": "Merrin",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "H4OH09169",
-      "fecCmte": "C00909630",
-      "chamber": "H",
-      "state": "OH",
-      "race": "H-OH-09",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.derekmerrin.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "OH",
-      "official": null,
-      "stateLegYears": [
-        2016,
-        2025
-      ]
-    },
-    {
-      "id": "braun",
-      "name": "John Braun",
-      "short": "Braun",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "H6WA03275",
-      "fecCmte": "C00915884",
-      "chamber": "H",
-      "state": "WA",
-      "race": "H-WA-03",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.votebraun.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "WA",
-      "official": null,
-      "stateLegYears": [
-        2013,
-        2026
-      ]
-    },
-    {
-      "id": "flores",
-      "name": "Eric Flores",
-      "short": "Flores",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "H6TX34080",
-      "fecCmte": "C00912246",
-      "chamber": "H",
-      "state": "TX",
-      "race": "H-TX-34",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://www.facebook.com/p/Eric-Flores-for-Congress-61578310026781/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": null,
-      "official": null,
-      "stateLegYears": null
-    },
-    {
-      "id": "beltran",
-      "name": "Mike Beltran",
-      "short": "Beltran",
-      "bioguide": null,
-      "lis": null,
-      "fecCand": "H6FL14237",
-      "fecCmte": "C00950832",
-      "chamber": "H",
-      "state": "FL",
-      "race": "H-FL-14",
-      "ids": {},
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "campaignSite": "https://beltranforcongress.com/",
-      "openstates": null,
-      "legiscan": null,
-      "inOffice": false,
-      "stateLeg": "FL",
-      "official": null,
-      "stateLegYears": [
-        2018,
-        2024
       ]
     },
     {
@@ -4021,47 +3131,6 @@
       "stateLegYears": null
     },
     {
-      "id": "hydesmith",
-      "name": "Cindy Hyde-Smith",
-      "short": "Hyde-Smith",
-      "bioguide": "H001079",
-      "lis": "S395",
-      "fecCand": "S8MS00261",
-      "fecCmte": null,
-      "chamber": "S",
-      "state": "MS",
-      "race": null,
-      "basic": true,
-      "ids": {
-        "govtrack": 412743,
-        "opensecrets": "N00043298",
-        "votesmart": 20784,
-        "wikidata": "Q5120540",
-        "ballotpedia": "Cindy Hyde-Smith",
-        "wikipedia": "Cindy Hyde-Smith",
-        "icpsr": 41707,
-        "cspan": 113208
-      },
-      "social": {
-        "twitter": "SenHydeSmith",
-        "facebook": "SenatorCindyHydeSmith",
-        "youtube_id": "UCJHxkJhGST0NTlkzJHWV03Q",
-        "instagram": "sencindyhydesmith",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://www.hydesmith.senate.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "stateLegYears": null
-    },
-    {
       "id": "wicker",
       "name": "Roger F. Wicker",
       "short": "Wicker",
@@ -5122,38 +4191,6 @@
       "official": {
         "site": "https://www.whitehouse.senate.gov",
         "feed": "https://www.whitehouse.senate.gov/rss/feeds/?type=all&cachebuster=1"
-      },
-      "stateLeg": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null,
-      "stateLegYears": null
-    },
-    {
-      "id": "grahamnordone",
-      "name": "Darline Graham",
-      "short": "Graham Nordone",
-      "bioguide": "G000608",
-      "lis": "S441",
-      "fecCand": null,
-      "fecCmte": null,
-      "chamber": "S",
-      "state": "SC",
-      "race": null,
-      "basic": true,
-      "ids": {
-        "govtrack": 457044,
-        "wikidata": "Q140537772",
-        "wikipedia": "Darline Graham Nordone"
-      },
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://www.dgraham.senate.gov",
-        "feed": null
       },
       "stateLeg": null,
       "campaignSite": null,
@@ -6768,47 +5805,6 @@
       "legiscan": null
     },
     {
-      "id": "ciscomani",
-      "name": "Juan Ciscomani",
-      "short": "Ciscomani",
-      "bioguide": "C001133",
-      "lis": null,
-      "fecCand": "H2AZ02360",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "AZ",
-      "district": 6,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456880,
-        "opensecrets": "N00049039",
-        "votesmart": 106728,
-        "wikidata": "Q115220916",
-        "ballotpedia": "Juan Ciscomani",
-        "wikipedia": "Juan Ciscomani"
-      },
-      "social": {
-        "twitter": "RepCiscomani",
-        "facebook": "100089186535085",
-        "youtube": "UCD329AYGX7YnMMSUaTKWHwA",
-        "instagram": "repjuanciscomani",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://ciscomani.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "grijalva",
       "name": "Adelita S. Grijalva",
       "short": "Grijalva",
@@ -6927,38 +5923,6 @@
       "legiscan": null
     },
     {
-      "id": "gallagher",
-      "name": "James Gallagher",
-      "short": "Gallagher",
-      "bioguide": "G000607",
-      "lis": null,
-      "fecCand": "H6CA01285",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CA",
-      "district": 1,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457043
-      },
-      "social": {
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://gallagher.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "huffman",
       "name": "Jared Huffman",
       "short": "Huffman",
@@ -6996,46 +5960,6 @@
       "official": {
         "site": "https://huffman.house.gov",
         "feed": "https://huffman.house.gov/rss.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "kiley",
-      "name": "Kevin Kiley",
-      "short": "Kiley",
-      "bioguide": "K000401",
-      "lis": null,
-      "fecCand": "H2CA03157",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CA",
-      "district": 3,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456881,
-        "opensecrets": "N00050259",
-        "votesmart": 169303,
-        "wikidata": "Q27987136",
-        "ballotpedia": "Kevin Kiley",
-        "wikipedia": "Kevin Kiley (politician)"
-      },
-      "social": {
-        "twitter": "RepKiley",
-        "facebook": "100089382125341",
-        "youtube": "@repkevinkiley",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://kiley.house.gov",
-        "feed": null
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -7803,48 +6727,6 @@
       "legiscan": null
     },
     {
-      "id": "valadao",
-      "name": "David G. Valadao",
-      "short": "Valadao",
-      "bioguide": "V000129",
-      "lis": null,
-      "fecCand": "H2CA20094",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CA",
-      "district": 22,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412515,
-        "opensecrets": "N00033367",
-        "votesmart": 120200,
-        "wikidata": "Q3528567",
-        "ballotpedia": "David G. Valadao",
-        "wikipedia": "David Valadao",
-        "icpsr": 21307,
-        "cspan": 623702,
-        "thomas": "02105"
-      },
-      "social": {
-        "twitter": "RepDavidValadao",
-        "facebook": "CongressmanDavidValadao",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://valadao.house.gov",
-        "feed": "https://valadao.house.gov/rss.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "obernolte",
       "name": "Jay Obernolte",
       "short": "Obernolte",
@@ -8299,49 +7181,6 @@
       "inOffice": true,
       "official": {
         "site": "https://aguilar.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "gomez",
-      "name": "Jimmy Gomez",
-      "short": "Gomez",
-      "bioguide": "G000585",
-      "lis": null,
-      "fecCand": "H8CA34266",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CA",
-      "district": 34,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412739,
-        "opensecrets": "N00040597",
-        "votesmart": 138524,
-        "wikidata": "Q6200205",
-        "ballotpedia": "Jimmy Gomez",
-        "wikipedia": "Jimmy Gomez",
-        "icpsr": 21754,
-        "cspan": 108883
-      },
-      "social": {
-        "twitter": "RepJimmyGomez",
-        "facebook": "RepJimmyGomez",
-        "youtube": "UCOmm091WM6D01xTdzsWNvbQ",
-        "instagram": "repjimmygomez",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://gomez.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -9268,46 +8107,6 @@
       "inOffice": true,
       "official": {
         "site": "https://boebert.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "crank",
-      "name": "Jeff Crank",
-      "short": "Crank",
-      "bioguide": "C001137",
-      "lis": null,
-      "fecCand": "H6CO05142",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CO",
-      "district": 5,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456983,
-        "opensecrets": "N00028132",
-        "votesmart": 66946,
-        "wikidata": "Q27663361",
-        "ballotpedia": "Jeff Crank",
-        "wikipedia": "Jeff Crank"
-      },
-      "social": {
-        "twitter": "RepJeffCrank",
-        "facebook": "RepJeffCrank",
-        "instagram": "repjeffcrank",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://crank.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -11444,47 +10243,6 @@
       "legiscan": null
     },
     {
-      "id": "nunn",
-      "name": "Zachary Nunn",
-      "short": "Nunn",
-      "bioguide": "N000193",
-      "lis": null,
-      "fecCand": "H2IA03119",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "IA",
-      "district": 3,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456898,
-        "opensecrets": "N00048870",
-        "votesmart": 151170,
-        "wikidata": "Q84719792",
-        "ballotpedia": "Zach Nunn",
-        "wikipedia": "Zach Nunn"
-      },
-      "social": {
-        "twitter": "ZachNunn",
-        "facebook": "RepZachNunn",
-        "youtube": "UCHcM0qd2GQ2CbOHSGZ06rrA",
-        "instagram": "repzachnunn",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://nunn.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "feenstra",
       "name": "Randy Feenstra",
       "short": "Feenstra",
@@ -12477,45 +11235,6 @@
       "inOffice": true,
       "official": {
         "site": "https://baird.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "spartz",
-      "name": "Victoria Spartz",
-      "short": "Spartz",
-      "bioguide": "S000929",
-      "lis": null,
-      "fecCand": "H0IN05326",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "IN",
-      "district": 5,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456822,
-        "opensecrets": "N00046537",
-        "votesmart": 178203,
-        "wikidata": "Q44059867",
-        "ballotpedia": "Victoria Spartz",
-        "wikipedia": "Victoria Spartz"
-      },
-      "social": {
-        "twitter": "RepSpartz",
-        "facebook": "RepSpartz",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://spartz.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -14216,51 +12935,6 @@
       "legiscan": null
     },
     {
-      "id": "huizenga",
-      "name": "Bill Huizenga",
-      "short": "Huizenga",
-      "bioguide": "H001058",
-      "lis": null,
-      "fecCand": "H0MI02094",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "MI",
-      "district": 4,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412437,
-        "opensecrets": "N00030673",
-        "votesmart": 38351,
-        "wikidata": "Q862199",
-        "ballotpedia": "Bill Huizenga",
-        "wikipedia": "Bill Huizenga",
-        "icpsr": 21142,
-        "cspan": 1033765,
-        "thomas": "02028"
-      },
-      "social": {
-        "twitter": "RepHuizenga",
-        "facebook": "RepHuizenga",
-        "youtube": "RepHuizenga",
-        "youtube_id": "UCQPlLLiMnysMmeJ5qUSSjQg",
-        "instagram": "RepHuizenga",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://huizenga.house.gov",
-        "feed": "https://huizenga.house.gov/news/rss.aspx"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "walberg",
       "name": "Tim Walberg",
       "short": "Walberg",
@@ -14341,45 +13015,6 @@
       "inOffice": true,
       "official": {
         "site": "https://debbiedingell.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "barrett",
-      "name": "Tom Barrett",
-      "short": "Barrett",
-      "bioguide": "B001321",
-      "lis": null,
-      "fecCand": "H2MI07123",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "MI",
-      "district": 7,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456994,
-        "opensecrets": "N00049596",
-        "votesmart": 153540,
-        "wikidata": "Q18684588",
-        "ballotpedia": "Tom Barrett (Michigan)",
-        "wikipedia": "Tom Barrett (Michigan politician)"
-      },
-      "social": {
-        "twitter": "reptombarrett",
-        "facebook": "RepTomBarrett",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://barrett.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -14993,50 +13628,6 @@
       "official": {
         "site": "https://bell.house.gov",
         "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "wagner",
-      "name": "Ann Wagner",
-      "short": "Wagner",
-      "bioguide": "W000812",
-      "lis": null,
-      "fecCand": "H2MO02102",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "MO",
-      "district": 2,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412548,
-        "opensecrets": "N00033106",
-        "votesmart": 136083,
-        "wikidata": "Q3917251",
-        "ballotpedia": "Ann Wagner",
-        "wikipedia": "Ann Wagner",
-        "icpsr": 21337,
-        "cspan": 82702,
-        "thomas": "02137"
-      },
-      "social": {
-        "twitter": "RepAnnWagner",
-        "facebook": "RepAnnWagner",
-        "youtube_id": "UCy2v2DXXvQnbRc8Zx77Dnsg",
-        "instagram": "repannwagner",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://wagner.house.gov",
-        "feed": "https://wagner.house.gov/rss.xml"
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -15795,46 +14386,6 @@
       "legiscan": null
     },
     {
-      "id": "mcdowell",
-      "name": "Addison P. McDowell",
-      "short": "McDowell",
-      "bioguide": "M001240",
-      "lis": null,
-      "fecCand": "H4NC06177",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NC",
-      "district": 6,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457001,
-        "opensecrets": "N00054055",
-        "votesmart": 213685,
-        "wikidata": "Q130979819",
-        "ballotpedia": "Addison McDowell",
-        "wikipedia": "Addison McDowell"
-      },
-      "social": {
-        "twitter": "RepMcDowell",
-        "facebook": "RepMcDowell",
-        "instagram": "repmcdowell",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://mcdowell.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "rouzer",
       "name": "David Rouzer",
       "short": "Rouzer",
@@ -15911,50 +14462,6 @@
       "official": {
         "site": "https://markharris.house.gov",
         "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "hudson",
-      "name": "Richard Hudson",
-      "short": "Hudson",
-      "bioguide": "H001067",
-      "lis": null,
-      "fecCand": "H2NC08185",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NC",
-      "district": 9,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412550,
-        "opensecrets": "N00033630",
-        "votesmart": 136448,
-        "wikidata": "Q3956999",
-        "ballotpedia": "Richard Hudson",
-        "wikipedia": "Richard Hudson (American politician)",
-        "icpsr": 21346,
-        "cspan": 79622,
-        "thomas": "02140"
-      },
-      "social": {
-        "twitter": "RepRichHudson",
-        "facebook": "RepRichHudson",
-        "youtube": "RepRichHudson",
-        "youtube_id": "UC9Q1qCvnQR7rHERjTjJl5Pg",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://hudson.house.gov",
-        "feed": "https://hudson.house.gov/rss.xml"
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -16079,86 +14586,6 @@
       "inOffice": true,
       "official": {
         "site": "https://adams.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "knott",
-      "name": "Brad Knott",
-      "short": "Knott",
-      "bioguide": "K000405",
-      "lis": null,
-      "fecCand": "H4NC13116",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NC",
-      "district": 13,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457004,
-        "opensecrets": "N00053743",
-        "votesmart": 213703,
-        "wikidata": "Q130979816",
-        "ballotpedia": "Brad Knott",
-        "wikipedia": "Brad Knott"
-      },
-      "social": {
-        "twitter": "RepKnott",
-        "facebook": "61571474013264",
-        "instagram": "repknott",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://knott.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "tmoore",
-      "name": "Tim Moore",
-      "short": "Moore",
-      "bioguide": "M001236",
-      "lis": null,
-      "fecCand": "H4NC14015",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NC",
-      "district": 14,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457005,
-        "opensecrets": "N00053948",
-        "votesmart": 41316,
-        "wikidata": "Q7804002",
-        "ballotpedia": "Timothy K. Moore",
-        "wikipedia": "Tim Moore (North Carolina politician)"
-      },
-      "social": {
-        "twitter": "RepTimMooreNC",
-        "facebook": "CongressmanTimMoore",
-        "instagram": "reptimmoore",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://timmoore.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -16419,48 +14846,6 @@
       "legiscan": null
     },
     {
-      "id": "vandrew",
-      "name": "Jefferson Van Drew",
-      "short": "Van Drew",
-      "bioguide": "V000133",
-      "lis": null,
-      "fecCand": "H8NJ02166",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NJ",
-      "district": 2,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412796,
-        "opensecrets": "N00042164",
-        "votesmart": 24685,
-        "wikidata": "Q6175202",
-        "ballotpedia": "Jeff Van Drew",
-        "wikipedia": "Jeff Van Drew",
-        "icpsr": 21980
-      },
-      "social": {
-        "twitter": "Congressman_JVD",
-        "facebook": "CongressmanJVD",
-        "youtube": "UCc5AGO_bQLeiv313Bbr35fg",
-        "instagram": "jeffvandrew",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://vandrew.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "conaway",
       "name": "Herbert C. Conaway, Jr.",
       "short": "Conaway",
@@ -16622,46 +15007,6 @@
       "official": {
         "site": "https://pallone.house.gov",
         "feed": "https://pallone.house.gov/rss.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "kean",
-      "name": "Thomas H. Kean, Jr.",
-      "short": "Kean",
-      "bioguide": "K000398",
-      "lis": null,
-      "fecCand": "H0NJ07261",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NJ",
-      "district": 7,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456917,
-        "opensecrets": "N00027502",
-        "votesmart": 43250,
-        "wikidata": "Q7791445",
-        "ballotpedia": "Thomas Kean Jr.",
-        "wikipedia": "Thomas Kean Jr."
-      },
-      "social": {
-        "twitter": "CongressmanKean",
-        "facebook": "CongressmanKean",
-        "instagram": "congressmankean",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://kean.house.gov",
-        "feed": null
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -18451,47 +16796,6 @@
       "legiscan": null
     },
     {
-      "id": "milleroh",
-      "name": "Max L. Miller",
-      "short": "Miller",
-      "bioguide": "M001222",
-      "lis": null,
-      "fecCand": "H2OH16051",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "OH",
-      "district": 7,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456929,
-        "opensecrets": "N00048277",
-        "votesmart": 206947,
-        "wikidata": "Q106522145",
-        "ballotpedia": "Max Miller",
-        "wikipedia": "Max Miller (politician)"
-      },
-      "social": {
-        "twitter": "repmaxmiller",
-        "facebook": "CongressmanMaxMiller",
-        "youtube": "@RepMaxMiller",
-        "instagram": "repmaxmiller",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://maxmiller.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "davidson",
       "name": "Warren Davidson",
       "short": "Davidson",
@@ -18528,51 +16832,6 @@
       "official": {
         "site": "https://davidson.house.gov",
         "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "turner",
-      "name": "Michael R. Turner",
-      "short": "Turner",
-      "bioguide": "T000463",
-      "lis": null,
-      "fecCand": "H2OH03091",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "OH",
-      "district": 10,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 400411,
-        "opensecrets": "N00025175",
-        "votesmart": 45519,
-        "wikidata": "Q505722",
-        "ballotpedia": "Michael Turner (Ohio)",
-        "wikipedia": "Mike Turner",
-        "icpsr": 20342,
-        "cspan": 1003607,
-        "thomas": "01741"
-      },
-      "social": {
-        "twitter": "RepMikeTurner",
-        "facebook": "RepMikeTurner",
-        "youtube": "CongressmanTurner",
-        "youtube_id": "UC-6Ss-aZ3OPisf9GdVGtN8g",
-        "instagram": "repmiketurner",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://turner.house.gov",
-        "feed": "https://turner.house.gov/news/rss.aspx"
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -18740,46 +16999,6 @@
       "official": {
         "site": "https://joyce.house.gov",
         "feed": "https://joyce.house.gov/rss/press-releases.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "carey",
-      "name": "Mike Carey",
-      "short": "Carey",
-      "bioguide": "C001126",
-      "lis": null,
-      "fecCand": "H2OH15228",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "OH",
-      "district": 15,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456864,
-        "opensecrets": "N00048568",
-        "votesmart": 196349,
-        "wikidata": "Q108010312",
-        "ballotpedia": "Mike Carey (Ohio)",
-        "wikipedia": "Mike Carey (politician)"
-      },
-      "social": {
-        "twitter": "RepMikeCarey",
-        "facebook": "RepMikeCarey",
-        "youtube": "@congressmanmikecarey",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://carey.house.gov",
-        "feed": null
       },
       "stateLeg": null,
       "stateLegYears": null,
@@ -19203,49 +17422,6 @@
       "legiscan": null
     },
     {
-      "id": "fitzpatrick",
-      "name": "Brian K. Fitzpatrick",
-      "short": "Fitzpatrick",
-      "bioguide": "F000466",
-      "lis": null,
-      "fecCand": "H6PA08277",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "PA",
-      "district": 1,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412721,
-        "opensecrets": "N00038779",
-        "votesmart": 167708,
-        "wikidata": "Q27831059",
-        "ballotpedia": "Brian Fitzpatrick",
-        "wikipedia": "Brian Fitzpatrick (American politician)",
-        "icpsr": 21718,
-        "cspan": 103537
-      },
-      "social": {
-        "twitter": "RepBrianFitz",
-        "facebook": "repbrianfitzpatrick",
-        "youtube_id": "UCYMNcgHss4_Q5JY2vSvMpgw",
-        "instagram": "repbrianfitz",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://fitzpatrick.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "boyle",
       "name": "Brendan F. Boyle",
       "short": "Boyle",
@@ -19447,86 +17623,6 @@
       "inOffice": true,
       "official": {
         "site": "https://houlahan.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "mackenzie",
-      "name": "Ryan Mackenzie",
-      "short": "Mackenzie",
-      "bioguide": "M001230",
-      "lis": null,
-      "fecCand": "H8PA15195",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "PA",
-      "district": 7,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457017,
-        "opensecrets": "N00041866",
-        "votesmart": 136465,
-        "wikidata": "Q7384273",
-        "ballotpedia": "Ryan Mackenzie",
-        "wikipedia": "Ryan Mackenzie"
-      },
-      "social": {
-        "twitter": "RepMackenzie",
-        "facebook": "repmackenzie",
-        "instagram": "RepMackenzie",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://mackenzie.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "bresnahan",
-      "name": "Robert P. Bresnahan, Jr.",
-      "short": "Bresnahan",
-      "bioguide": "B001327",
-      "lis": null,
-      "fecCand": "H4PA08124",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "PA",
-      "district": 8,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 457018,
-        "opensecrets": "N00053588",
-        "votesmart": 214735,
-        "wikidata": "Q130963821",
-        "ballotpedia": "Rob Bresnahan Jr.",
-        "wikipedia": "Rob Bresnahan"
-      },
-      "social": {
-        "twitter": "RepBresnahan",
-        "facebook": "RepBresnahan",
-        "instagram": "RepBresnahan",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://bresnahan.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -21264,47 +19360,6 @@
       "legiscan": null
     },
     {
-      "id": "delacruz",
-      "name": "Monica De La Cruz",
-      "short": "De La Cruz",
-      "bioguide": "D000594",
-      "lis": null,
-      "fecCand": "H0TX15124",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "TX",
-      "district": 15,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456943,
-        "opensecrets": "N00045793",
-        "votesmart": 188292,
-        "wikidata": "Q115496109",
-        "ballotpedia": "Monica De La Cruz",
-        "wikipedia": "Monica De La Cruz"
-      },
-      "social": {
-        "twitter": "RepMonicaDLC",
-        "facebook": "RepMonicaDLC",
-        "youtube": "@RepMonicaDLC",
-        "instagram": "RepMonicaDLC",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://delacruz.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "escobar",
       "name": "Veronica Escobar",
       "short": "Escobar",
@@ -22341,92 +20396,6 @@
       "legiscan": null
     },
     {
-      "id": "wittman",
-      "name": "Robert J. Wittman",
-      "short": "Wittman",
-      "bioguide": "W000804",
-      "lis": null,
-      "fecCand": "H8VA01147",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "VA",
-      "district": 1,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412255,
-        "opensecrets": "N00029459",
-        "votesmart": 58133,
-        "wikidata": "Q541251",
-        "ballotpedia": "Robert J. Wittman",
-        "wikipedia": "Rob Wittman",
-        "icpsr": 20756,
-        "cspan": 1028089,
-        "thomas": "01886"
-      },
-      "social": {
-        "twitter": "RobWittman",
-        "facebook": "RepRobWittman",
-        "youtube": "RobWittman",
-        "youtube_id": "UCIqIb-OaTbkIdU426eYIdPg",
-        "instagram": "reprobwittman",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://wittman.house.gov",
-        "feed": "https://www.wittman.house.gov/index.php?format=feed&type=rss"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "kiggans",
-      "name": "Jennifer A. Kiggans",
-      "short": "Kiggans",
-      "bioguide": "K000399",
-      "lis": null,
-      "fecCand": "H2VA02064",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "VA",
-      "district": 2,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456947,
-        "opensecrets": "N00048315",
-        "votesmart": 186387,
-        "wikidata": "Q83119566",
-        "ballotpedia": "Jennifer Kiggans",
-        "wikipedia": "Jen Kiggans"
-      },
-      "social": {
-        "twitter": "RepJenKiggans",
-        "facebook": "repjenkiggans",
-        "youtube": "@repjenkiggans",
-        "instagram": "repjenkiggans",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://kiggans.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "scottva",
       "name": "Robert C. \"Bobby\" Scott",
       "short": "Scott",
@@ -23261,45 +21230,6 @@
       "legiscan": null
     },
     {
-      "id": "steil",
-      "name": "Bryan Steil",
-      "short": "Steil",
-      "bioguide": "S001213",
-      "lis": null,
-      "fecCand": "H8WI01156",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "WI",
-      "district": 1,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412836,
-        "opensecrets": "N00043379",
-        "votesmart": 181289,
-        "wikidata": "Q58494431",
-        "ballotpedia": "Bryan Steil",
-        "wikipedia": "Bryan Steil",
-        "icpsr": 21970
-      },
-      "social": {
-        "twitter": "RepBryanSteil",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://steil.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "pocan",
       "name": "Mark Pocan",
       "short": "Pocan",
@@ -23337,46 +21267,6 @@
       "official": {
         "site": "https://pocan.house.gov",
         "feed": "https://pocan.house.gov/rss.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "vanorden",
-      "name": "Derrick Van Orden",
-      "short": "Van Orden",
-      "bioguide": "V000135",
-      "lis": null,
-      "fecCand": "H0WI03175",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "WI",
-      "district": 3,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456950,
-        "opensecrets": "N00046843",
-        "votesmart": 192343,
-        "wikidata": "Q115155627",
-        "ballotpedia": "Derrick Van Orden",
-        "wikipedia": "Derrick Van Orden"
-      },
-      "social": {
-        "twitter": "RepVanOrden",
-        "facebook": "RepVanOrden",
-        "instagram": "RepVanOrden",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://vanorden.house.gov",
-        "feed": null
       },
       "stateLeg": null,
       "stateLegYears": null,

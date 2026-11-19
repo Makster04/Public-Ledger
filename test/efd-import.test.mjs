@@ -1,6 +1,7 @@
 // Senate eFD reports saved by hand (scripts/import-efd.mjs): each saved page is matched to a senator by its folder or the
 // name on it, trade reports become the senator's official trades and the newest annual report their net worth, a second
 // import of the same pages counts them once, and the eFD checks say how to import when the site refuses (HTTP 403).
+import {withRemovedConfig,withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -10,7 +11,8 @@ import {openDatabase} from '../scripts/sqlite.mjs';
 import {importEfd,senatorFor,toSave,savedAnnuals} from '../scripts/import-efd.mjs';
 import {efdSavedReport,FEEDS,EFD_REFUSED,WEEK} from '../src/feeds.mjs';
 import {statement} from '../src/refresh.mjs';
-import config from '../data/config.json' with {type:'json'};
+import configFile from '../data/config.json' with {type:'json'};
+const config=withRemovedConfig(configFile);
 const migration=fs.readFileSync(new URL('../migrations/0001_initial.sql',import.meta.url),'utf8');
 
 const PTR_ID='1a2b3c4d-1111-2222-3333-444455556666';
@@ -124,7 +126,7 @@ test("a Senate candidate's report is imported too: matched by name or folder, wi
 
 test('the list of reports still to save: every senator and Senate candidate in a 2026 race, with a search and a folder',()=>{
   const all=toSave(),ids=all.map(x=>x.id);
-  const D=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+  const D=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
   const inRaces=config.people.filter(p=>p.chamber==='S'&&p.race&&(p.inOffice||p.ids)).map(p=>p.id);
   assert.deepEqual(ids.slice().sort(),inRaces.slice().sort());assert.ok(ids.includes('ossoff')&&ids.includes('talarico'));
   assert.ok(!ids.includes('schumer'),'a senator not on the 2026 ballot is left off the list');

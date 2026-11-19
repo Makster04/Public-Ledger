@@ -774,7 +774,8 @@ export const mapKey=c=>countyKey(c.name)+(c.fips.startsWith('51')&&Number(c.fips
 // The race's candidates ({key, name, party}), from the profiles or the results-only nominees.
 export function raceCandidates(research,id){
   const race=research.races.find(r=>r.id===id),people=[...research.members,...research.cands];
-  if(race)return race.keys.map(k=>{const p=people.find(x=>x.id===k);return {key:k,name:p.name,party:p.party};});
+  // A candidate taken off the site (data/removed.json) keeps a short record in their race (gone).
+  if(race)return race.keys.map(k=>{const p=people.find(x=>x.id===k)||race.gone?.[k];return {key:k,name:p.name,party:p.party};});
   const lite=research.liteRaces.find(r=>r.id===id);if(!lite)throw new Error('no race '+id);
   return lite.nominees.map(n=>({key:n.id||n.fecCand,name:n.name,party:n.party}));
 }

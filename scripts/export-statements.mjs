@@ -94,6 +94,8 @@ async function main(){
   const arg=(name,d)=>{const i=process.argv.indexOf(name);return i>=0?process.argv[i+1]:d;};
   const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
   const config=read('data/config.json'),research=read('public/research.json'),searches=read('data/question-search.json');
+  // Tests only (LEDGER_WITH_REMOVED=1): the people taken off the site put back as worked examples (test/fixtures).
+  if(process.env.LEDGER_WITH_REMOVED==='1'){const w=await import('../test/fixtures/with-removed.mjs');w.withRemovedConfig(config);w.withRemovedResearch(research);}
   const since=Number(arg('--since',config.historyFrom||2016)),maxRead=Number(arg('--read',200)),wait=process.argv.includes('--wait'),env=process.env;
   const dbFile=path.resolve(arg('--db',path.join(root,'.local','records.sqlite')));
   const outDir=path.resolve(arg('--out',path.join(root,'data','collected-statements'))),cache=path.resolve(arg('--speeches',path.join(path.dirname(dbFile),'speeches')));

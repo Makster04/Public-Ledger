@@ -1,6 +1,7 @@
 // Blind trusts and divestment (step 8): a qualified blind trust takes the trustee's trades out of the trading indexes; a
 // managed account or a trust in name only doesn't; "no individual stocks" labels the index. The annual report's asset list
 // gives a lead (public/holdings.js), and only the reviewed status counts.
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -8,7 +9,7 @@ import {assetKind,holdingsLead,holdingsReview,stockTradesSince,reviewedHoldingsS
 import {ethicsScore,tradeChecks,HOLDINGS,INSIDER} from '../public/grades.js';
 import {makeScorer} from '../public/scoring.js';
 import {holdingsReport} from '../scripts/review-holdings.mjs';
-const D=JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8'));
+const D=withRemovedResearch(JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8')));
 
 test('each asset on an annual report is sorted by kind, from the House codes or the Senate types',()=>{
   const k=a=>assetKind(a);

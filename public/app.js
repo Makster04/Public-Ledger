@@ -277,8 +277,10 @@ function raceOf(s){return DATA.races.find(r=>r.keys.includes(s.id))||DATA.liteRa
 const raceKey=(r,s)=>r&&!r.keys?nomineeKey(r.nominees.find(n=>n.profile===s.id)||{})||s.id:s.id;
 // Who a key in a race is: their full or basic profile (a House nominee's basic profile found by their Bioguide ID), or
 // the nominee as a results-only race lists them.
+// A race's candidate: their profile, or for someone taken off the site (data/removed.json: they lost in 2026) the short
+// record their race keeps (r.gone: name, party, FEC ID), shown in results without a profile link.
 function racePerson(r,k){
-  if(r?.keys)return byId[k]||null;
+  if(r?.keys)return byId[k]||(r.gone?.[k]?{id:k,...r.gone[k],gone:true}:null);
   const n=r?.nominees?.find(x=>nomineeKey(x)===k);if(!n)return byId[k]||BASIC[k]||null;
   const p=byId[n.profile]||BASIC[k]||(n.bioguide?BASIC_LIST.find(x=>x.bioguide===n.bioguide):null);
   return p?{...p,fecCand:p.fecCand||n.fecCand||null}:{id:k,name:n.name,short:String(n.name||'').split(/\s+/).pop(),party:n.party,fecCand:n.fecCand||null};
@@ -775,7 +777,8 @@ function statusOf(s){
 }
 // Political Position with a Status picked: for Newly elected and Lost, Senate and House mean the seat they ran for.
 const inPosition=(s,c,st)=>!c||c==='C'||!['new','lost'].includes(st)?inChamber(s,c):statusOf(s).chamber===c;
-const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet'],['lost','Lost','Lost a 2026 race']];
+// No "Lost" choice since Nov. 19, 2026: everyone who lost was taken off the site (data/removed.json).
+const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet']];
 const inStatus=(s,k)=>!k||statusOf(s).has(k);
 function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
 
@@ -846,8 +849,8 @@ function renderHome(){
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
       ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
-      SENATE.length&&['Every senator',`<a href="#senate">All ${SENATE.length} sitting senators</a>, with a basic profile for each one not in these races.`],
-      HOUSE.length&&['Every House member',`<a href="#house">All ${HOUSE.length} members of the House</a>, the same way.`]],'lede-pts')}</details>
+      SENATE.length&&['Every senator',`<a href="#senate">The ${SENATE.length} sitting senators who didn't lose in 2026</a>, with a basic profile for each one not in these races.`],
+      HOUSE.length&&['Every House member',`<a href="#house">The ${HOUSE.length} House members who didn't lose in 2026</a>, the same way.`]],'lede-pts')}</details>
     ${seatsBlock()}
     </div>
     ${FEATURED.length?`<aside class="hero-side" aria-label="Featured profile">${FEATURED.map(featuredCard).join('')}</aside>`:''}
@@ -2232,7 +2235,7 @@ function renderSenate(){
   const years=[...new Set(SENATE.map(x=>x.nextElection))].sort();
   app.innerHTML=`<section class="section">
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. Senate'}</div><h1>The Senate</h1>
-    <p class="intro">All ${SENATE.length} sitting senators.</p>
+    <p class="intro">The ${SENATE.length} sitting senators who didn't lose in 2026. Those who lost the Nov. 3 general election were taken off the site; their races, on the Races page, show the result.</p>
     ${points([['Full profiles',`${full} senators on the 2026 ballot in the races this site covers: grades, campaign money, outside spending and statement checks.`],
       ['Basic profiles',`The other ${SENATE.length-full}: their place in the Senate, their committees, and the records the daily refresh collects (votes, bills, statements, stock trades and campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
@@ -2268,7 +2271,8 @@ function renderSenate(){
 // ---------- Career Totals: each sitting member's career money from one tracker, ranked in dollar clubs (public/career.js) ----------
 const trackerViews=v=>`<nav class="seg tr-page-tabs tr-views" aria-label="Lobby money">${[['trackers','Trackers'],['career','Career Totals']].map(([k,l])=>`<a href="#${k}"${k===v?' class="active" aria-current="page"':''}>${l}</a>`).join('')}</nav>`;
 let tierCh='H',tierParty='',tierStatus='';const tierOpen=new Set();
-const TIER_STATUS=[['','All','Every sitting member'],['lost','Lost','Lost a 2026 race']];
+// No Status menu since Nov. 19, 2026: the members who lost in 2026 were taken off the site (data/removed.json).
+const TIER_STATUS=[['','All','Every sitting member']];
 const tierMembers=c=>c==='S'?SENATE:HOUSE.filter(x=>!x.delegate);
 const CAREER_CACHE=new Map();
 function careerOf(key,c){const k=`${key}:${c}`;if(!CAREER_CACHE.has(k))CAREER_CACHE.set(k,chamberCareer(window.TRACKER_HISTORY,key,tierMembers(c)));return CAREER_CACHE.get(k);}
@@ -2307,7 +2311,7 @@ function renderCareer(key){
     const keep=r=>(!tierParty||r.m.party===tierParty)&&(!tierStatus||statusOf(tierWho(r.m)).has(tierStatus));
     const cnt=(p,st)=>T.rows.filter(r=>(!p||r.m.party===p)&&(!st||statusOf(tierWho(r.m)).has(st))).length;
     $('#ti-ctl').innerHTML=`<div class="seg ti-ch" role="group" aria-label="Chamber">${[['H','House'],['S','Senate']].map(([c,l])=>`<button type="button" data-ch="${c}" class="${c===tierCh?'active':''}" aria-pressed="${c===tierCh}">${l} <span class="seg-n">${careerOf(t.key,c).read}</span></button>`).join('')}</div>
-      ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])],['s','Status',tierStatus,TIER_STATUS.map(([k,l,d])=>[k,l,d,cnt(tierParty,k)])]])}`;
+      ${ddMenus([['p','Party',tierParty,[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']].map(([k,l])=>[k,l,'',cnt(k,tierStatus)])]])}`;
     const aip=t.key==='aipac';
     $('#ti-note').innerHTML=`Career totals: every dollar each ${CH}'s campaigns have taken from ${esc(t.name)} over their whole career, ranked. ${aip?`Checks from the pro-Israel PACs (AIPAC's, NORPAC, JACPAC, the RJC's and the others on its list) in every race they've run since ${h.cycles[0]-1}, under every candidate ID they've had; the named donors' own checks to the same campaigns (Miriam and Sheldon Adelson, and the 20 people who gave AIPAC's super PAC $1 million or more); and the gifts AIPAC collected from donors and passed on since its PAC began giving in 2022 (NORPAC's, JACPAC's and the RJC's this cycle only). J Street isn't counted.`:`The checks from its PACs in every race they've run since ${h.cycles[0]-1} (the first year in the FEC's bulk files), under every candidate ID they've had, so a senator's House races count too.`} From the FEC's bulk files${h.through?`, through ${esc(fmtDate(h.through))}`:''}. Super PAC spending isn't counted, since the campaign never takes it (it's on each profile under "Spent to help them win"). Ranks are among the ${T.read} ${CHS}; the Party and Status filters only narrow who's shown. Money taken isn't proof that a vote was bought.`;
     const short=n=>n>=1e6?`$${(n/1e6).toFixed(2)}M`:n>=1e3?`$${Math.round(n/1e3)}K`:`$${Math.round(n)}`;
@@ -2420,7 +2424,7 @@ function renderHouse(){
   const full=HOUSE.filter(x=>byId[x.id]).length,info=window.HOUSE_INFO||{},dels=HOUSE.filter(x=>x.delegate).length;
   app.innerHTML=`<section class="section">
     <div class="kicker">${info.congress?info.congress+'th Congress':'U.S. House'}</div><h1>The House</h1>
-    <p class="intro">All ${HOUSE.length-dels} members of the House${dels?`, and its ${dels} non-voting delegates`:''}.</p>
+    <p class="intro">The ${HOUSE.length-dels} members of the House who didn't lose in 2026${dels?`, and its ${dels} non-voting delegates`:''}. Those who lost the Nov. 3 general election were taken off the site; their races show the result, and the winners are here as members-elect.</p>
     ${points([['Full profiles',`${full} members in the races this site covers: every score, campaign money, outside spending and statement checks.`],
       ['Basic profiles',`The other ${HOUSE.length-full}: their seat, their committees, and the records the refresh collects for them (their bills, their stock trades and annual disclosures, and their campaign money). Ideology, Shows Up and People First come from official records alone; Keeps Their Word, Big Money Independence and Plays by the Rules wait on reviewed research.`],
       ['Ideology','Voteview DW-NOMINATE, from every roll call they have cast, the same as on the full profiles.'],
@@ -3173,7 +3177,7 @@ function alLive(){
 function alResults(){
   const ch=chosenIssues();
   if(!ch.length)return '<div class="note">Answer at least one question (other than Skip) to see how every candidate compares, race by race.</div>';
-  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
+  return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]).filter(Boolean);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
     <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span> ${decidedChip(outcomeOf(r,s.id))}</td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
     ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}</article>`}).join('');
 }
@@ -3844,7 +3848,7 @@ const numFmt=n=>Number(n).toLocaleString('en-US');
 function resultCard(r,county=null){
   const lite=!r.keys,res=raceResult(r),t=county||tallyOf(r);
   // A results-only nominee opens their profile: a winner's full profile, or a sitting member's basic one.
-  const who=k=>{if(!lite)return {...byId[k],href:'#'+k};const n=r.nominees.find(x=>nomineeKey(x)===k),p=racePerson(r,k);
+  const who=k=>{if(!lite)return byId[k]?{...byId[k],href:'#'+k}:{id:k,name:k,...(r.gone?.[k]||{}),href:''};const n=r.nominees.find(x=>nomineeKey(x)===k),p=racePerson(r,k);
     return {id:byId[n.profile]?n.profile:k,name:n.name,party:n.party,href:p&&(byId[p.id]||BASIC[p.id])?'#'+p.id:''};};
   const keys=t?t.rows.map(x=>x.key):(r.keys||r.nominees.map(nomineeKey));
   const tile=k=>{const p=who(k),row=t&&t.rows.find(x=>x.key===k),o=outcomeOf(r,k),tag=p.href?'a':'div';

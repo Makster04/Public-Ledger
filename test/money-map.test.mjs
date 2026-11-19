@@ -1,10 +1,11 @@
+import {withRemovedResearch} from './fixtures/with-removed.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {moneyMap,mapSVG,mapSVGTall,TALL,moneyMapBlock,bundledBox,LAYOUT,short$,share,showFirst,SHOW_FIRST,pacKindsFor,SHORT_KIND} from '../public/money-map.js';
 import {pacTypeOf} from '../public/pac-types.js';
 
-const research=JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+const research=withRemovedResearch(JSON.parse(fs.readFileSync(new URL('../public/research.json',import.meta.url),'utf8')));
 const people=[...research.members,...research.cands];
 const opts=s=>({bundled:research.bundled?.people?.[s.id],groups:{...Object.fromEntries((research.groupPos||[]).map(g=>[g.key,g.org])),...(research.bundled?.names||{})},categories:research.categories||{}});
 

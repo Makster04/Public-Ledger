@@ -83,11 +83,11 @@ test('the summary rules reproduce the research\'s own summaries from its own row
   const kindOf=ci=>ie.cm[ci][2]==='super_pac'?'super_pac':ie.cm[ci][2]==='party'?'party':'other';
   const people=[...D.members,...D.cands],byId=Object.fromEntries(people.map(p=>[p.id,p]));let n=0;
   for(const s of people){if(!s.out||!s.fecCand||!ie.rows[s.race])continue;
-    const race=D.races.find(r=>r.id===s.race),rivals=race?race.keys.filter(k=>k!==s.id).map(k=>byId[k]?.fecCand).filter(Boolean):(D.liteRaces.find(r=>r.id===s.race)?.nominees||[]).map(x=>x.fecCand).filter(c=>c&&c!==s.fecCand);
+    const race=D.races.find(r=>r.id===s.race),rivals=race?race.keys.filter(k=>k!==s.id).map(k=>byId[k]?.fecCand||race.gone?.[k]?.fecCand).filter(Boolean):(D.liteRaces.find(r=>r.id===s.race)?.nominees||[]).map(x=>x.fecCand).filter(c=>c&&c!==s.fecCand);
     if(!race&&!D.liteRaces.some(r=>r.id===s.race))continue;
     const x=outSummary(ie.rows[s.race],{me:s.fecCand,rivals,multi:!!s.out.multi,start:s.out.start,end:s.out.end,camp:s.camp,kindOf});
     assert.deepEqual([x.for,x.against,x.n],[s.out.for,s.out.against,s.out.n],s.id);n++;}
-  assert.ok(n>=60,`${n} summaries`);
+  assert.ok(n>=40,`${n} summaries`);
   assert.equal(ie.asof,D.ie_asof);assert.ok(ie.asof>COMPILED_END,'past the research\'s own coverage');
   for(const rows of Object.values(ie.rows))for(const r of rows)assert.equal(r.length,10);
 });
