@@ -260,7 +260,7 @@ export const RecordLive={
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},
   async standalone(host,id){
     host.innerHTML='<section class="section"><p>Loading candidate…</p></section>';
-    try{const p=await get('/api/profile?id='+encodeURIComponent(id));if(!location.hash.startsWith('#'+id))return;host.innerHTML=`<div class="live-head"><h1>${esc(p.person.name)}</h1><a href="#races">Back to races</a></div><section class="section" id="live-person"></section>`;await this.profile(p.person,host.querySelector('#live-person'));}catch{host.innerHTML='<section class="section"><h1>Profile unavailable</h1><a href="#updates">Return to updates</a></section>';}
+    try{const p=await get('/api/profile?id='+encodeURIComponent(id));if(!location.hash.startsWith('#'+id))return;host.innerHTML=`<div class="live-head"><h1>${esc(p.person.name)}</h1><a href="#home">Back to people</a></div><section class="section" id="live-person"></section>`;await this.profile(p.person,host.querySelector('#live-person'));}catch{host.innerHTML='<section class="section"><h1>Profile unavailable</h1><a href="#updates">Return to updates</a></section>';}
   },
   async banner(){
     const element=document.querySelector('#refresh-banner');if(!element)return;

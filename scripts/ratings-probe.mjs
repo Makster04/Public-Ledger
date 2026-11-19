@@ -9,7 +9,7 @@
 // and left alone: the rule is to leave a group out rather than get around a block or type its ratings in by hand.
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-import {sampleOf,scriptAddresses,botCheck} from './county-results.mjs';
+import {sampleOf,scriptAddresses,botCheck} from './page-tools.mjs';
 import {Worker} from 'node:worker_threads';
 import {xlsxText} from './xlsx.mjs';
 import {PROBED} from './collect-ratings.mjs';

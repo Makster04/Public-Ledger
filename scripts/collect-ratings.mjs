@@ -11,7 +11,7 @@
 // and said so; nothing is typed in by hand.
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-import {botCheck} from './county-results.mjs';
+import {botCheck} from './page-tools.mjs';
 import {pdfText} from '../src/pdf.mjs';
 import {xlsxSheets} from './xlsx.mjs';
 

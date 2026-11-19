@@ -54,10 +54,9 @@ test('the directory builders leave out the removed members though the official r
   assert.equal(lostSeatOf({state:'OH',party:'R',termEnd:'2026-11-03'}).until,null,'an appointed senator\'s term "ends" on the special election\'s day, but they serve until the winner is sworn in');
 });
 
-test('the page: race results show a removed candidate unlinked, and there is no "Lost" filter left',()=>{
+test('the page: a race keeps a removed candidate unlinked, and there is no "Lost" filter left',()=>{
   const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
   assert.match(app,/if\(r\?\.keys\)return byId\[k\]\|\|\(r\.gone\?\.\[k\]\?\{id:k,\.\.\.r\.gone\[k\],gone:true\}:null\);/);
-  assert.match(app,/byId\[k\]\?\{\.\.\.byId\[k\],href:'#'\+k\}:\{id:k,name:k,\.\.\.\(r\.gone\?\.\[k\]\|\|\{\}\),href:''\}/);
   assert.doesNotMatch(app,/\['lost','Lost','Lost a 2026 race'\]/);
 });
 
