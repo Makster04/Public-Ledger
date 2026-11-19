@@ -1,19 +1,23 @@
 {
   "about": "House districts left out of public/members-elect.json (scripts/build-members-elect.mjs): a race not called yet, or a result no source on file confirms. Remove a district once its race is called, then run npm run house:elect again.",
   "skip": {
-    "AK-AL": "Not called yet (Quorum, Nov. 12, 2026)",
-    "CA-04": "Not called yet (Quorum, Nov. 12, 2026)",
-    "CA-23": "Not called yet (Quorum, Nov. 12, 2026)",
-    "CO-04": "Not called yet (Quorum, Nov. 12, 2026)",
+    "AK-AL": "Not called yet: ranked-choice count, no result found (Nov. 19, 2026)",
+    "CA-23": "Not called yet in the sources on file (Nov. 19, 2026)",
     "LA-05": "Runoff Dec. 12, 2026",
     "LA-06": "Runoff Dec. 12, 2026",
-    "ME-02": "Not called yet (Quorum, Nov. 12, 2026)",
-    "MN-01": "Not called yet (Quorum, Nov. 12, 2026)",
-    "NC-03": "Not called yet (Quorum, Nov. 12, 2026)",
-    "NC-05": "Not called yet (Quorum, Nov. 12, 2026)",
-    "NC-07": "Not called yet (Quorum, Nov. 12, 2026)",
-    "NC-10": "Not called yet (Quorum, Nov. 12, 2026)",
-    "TN-04": "Not called yet (Quorum, Nov. 12, 2026)",
-    "TX-38": "No source on file confirms the result yet"
+    "MN-01": "Not called yet: Jake Johnson 50.0%, Brad Finstad 49.9% (Nov. 18, 2026)",
+    "NC-05": "Recount: Chuck Hubbard leads Virginia Foxx by about 300 votes (Nov. 18, 2026)",
+    "NC-10": "Recount: Pat Harrigan leads by about 2,500 votes after the canvass (Nov. 17, 2026)",
+    "TX-38": "Not called yet in the sources on file (Nov. 19, 2026)"
+  },
+  "checked": "2026-11-19",
+  "called": {
+    "about": "Districts taken off the list once called, with the source that settled each.",
+    "CA-04": "Eric Jones defeated Rep. Mike Thompson, 52.5% to 47.5% (Ballotpedia; Wikipedia's results, 98% counted, Nov. 16)",
+    "CO-04": "Eileen Laubacher defeated Rep. Lauren Boebert; called by the AP Nov. 13, and Boebert conceded (Scripps News)",
+    "ME-02": "Paul LePage won after the ranked-choice count; called by the AP Nov. 12 (New Hampshire Public Radio)",
+    "NC-03": "Raymond Smith defeated Rep. Greg Murphy; called by the AP (WRAL, Nov. 18)",
+    "NC-07": "Rep. David Rouzer re-elected; called by the AP 13 days after the election (Axios Raleigh, Nov. 17)",
+    "TN-04": "Rep. Scott DesJarlais conceded to Victoria Broderick on Nov. 16 (WRAL, Nov. 18)"
   }
 }

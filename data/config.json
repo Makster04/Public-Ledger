@@ -5927,51 +5927,6 @@
       "legiscan": null
     },
     {
-      "id": "mthompson",
-      "name": "Mike Thompson",
-      "short": "Thompson",
-      "bioguide": "T000460",
-      "lis": null,
-      "fecCand": "H8CA01109",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CA",
-      "district": 4,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 400403,
-        "opensecrets": "N00007419",
-        "votesmart": 3564,
-        "wikidata": "Q1323196",
-        "ballotpedia": "Mike Thompson (California)",
-        "wikipedia": "Mike Thompson",
-        "icpsr": 29901,
-        "cspan": 57872,
-        "thomas": "01593"
-      },
-      "social": {
-        "twitter": "RepThompson",
-        "facebook": "RepMikeThompson",
-        "youtube": "CongressmanMThompson",
-        "youtube_id": "UC6pGbtqHZYZmScFGSz5bbdg",
-        "mastodon": "@repthompson@mastodon.social",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://mikethompson.house.gov",
-        "feed": "https://mikethompson.house.gov/news/rss.aspx"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "mcclintock",
       "name": "Tom McClintock",
       "short": "McClintock",
@@ -8027,45 +7982,6 @@
       "inOffice": true,
       "official": {
         "site": "https://hurd.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "boebert",
-      "name": "Lauren Boebert",
-      "short": "Boebert",
-      "bioguide": "B000825",
-      "lis": null,
-      "fecCand": "H0CO03165",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "CO",
-      "district": 4,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 456805,
-        "opensecrets": "N00045974",
-        "votesmart": 191290,
-        "wikidata": "Q96761544",
-        "ballotpedia": "Lauren Boebert",
-        "wikipedia": "Lauren Boebert"
-      },
-      "social": {
-        "twitter": "RepBoebert",
-        "facebook": "RepBoebert",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://boebert.house.gov",
         "feed": null
       },
       "stateLeg": null,
@@ -14218,47 +14134,6 @@
       "legiscan": null
     },
     {
-      "id": "gmurphy",
-      "name": "Gregory F. Murphy",
-      "short": "Murphy",
-      "bioguide": "M001210",
-      "lis": null,
-      "fecCand": "H0NC03172",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "NC",
-      "district": 3,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412845,
-        "opensecrets": "N00044027",
-        "votesmart": 166135,
-        "wikidata": "Q23074266",
-        "ballotpedia": "Gregory Murphy",
-        "wikipedia": "Greg Murphy (politician)",
-        "icpsr": 21987
-      },
-      "social": {
-        "twitter": "RepGregMurphy",
-        "facebook": "RepGregMurphy",
-        "instagram": "repgregmurphy",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://murphy.house.gov",
-        "feed": null
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
       "id": "foushee",
       "name": "Valerie P. Foushee",
       "short": "Foushee",
@@ -18489,51 +18364,6 @@
       "official": {
         "site": "https://fleischmann.house.gov",
         "feed": "https://fleischmann.house.gov/rss.xml"
-      },
-      "stateLeg": null,
-      "stateLegYears": null,
-      "campaignSite": null,
-      "openstates": null,
-      "legiscan": null
-    },
-    {
-      "id": "desjarlais",
-      "name": "Scott DesJarlais",
-      "short": "DesJarlais",
-      "bioguide": "D000616",
-      "lis": null,
-      "fecCand": "H0TN04195",
-      "fecCmte": null,
-      "chamber": "H",
-      "state": "TN",
-      "district": 4,
-      "race": null,
-      "basic": true,
-      "light": true,
-      "ids": {
-        "govtrack": 412477,
-        "opensecrets": "N00030957",
-        "votesmart": 123473,
-        "wikidata": "Q2260839",
-        "ballotpedia": "Scott DesJarlais",
-        "wikipedia": "Scott DesJarlais",
-        "icpsr": 21179,
-        "cspan": 623517,
-        "thomas": "02062"
-      },
-      "social": {
-        "twitter": "DesJarlaisTN04",
-        "facebook": "ScottDesJarlaisTN04",
-        "youtube": "ScottDesJarlaisTN04",
-        "youtube_id": "UCvjuSLoi3hS0ECQvJLhwOkA",
-        "instagram": "desjarlaistn04",
-        "bluesky": [],
-        "threads": []
-      },
-      "inOffice": true,
-      "official": {
-        "site": "https://desjarlais.house.gov",
-        "feed": "https://desjarlais.house.gov/news/rss.aspx"
       },
       "stateLeg": null,
       "stateLegYears": null,

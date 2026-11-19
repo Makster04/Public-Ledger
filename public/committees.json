@@ -8025,48 +8025,6 @@
     "party": "minority"
    }
   ],
-  "gmurphy": [
-   {
-    "id": "HSHA",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSHA08",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSVR03",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM",
-    "rank": 12,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM02",
-    "rank": 4,
-    "party": "majority"
-   },
-   {
-    "id": "HSWM04",
-    "rank": 7,
-    "party": "majority"
-   },
-   {
-    "id": "JSPR",
-    "rank": 2,
-    "party": "majority"
-   }
-  ],
   "mmiller": [
    {
     "id": "HSAG",
@@ -9181,44 +9139,6 @@
     "id": "HSVR09",
     "rank": 3,
     "party": "minority"
-   }
-  ],
-  "boebert": [
-   {
-    "id": "HSGO",
-    "rank": 18,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO05",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO16",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSGO33",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSII",
-    "rank": 10,
-    "party": "majority"
-   },
-   {
-    "id": "HSII13",
-    "rank": 6,
-    "party": "majority"
-   },
-   {
-    "id": "HSII15",
-    "rank": 2,
-    "party": "majority",
-    "title": "Vice Chair"
    }
   ],
   "hernandezrivera": [
@@ -12994,39 +12914,6 @@
     "id": "HSED14",
     "rank": 6,
     "party": "minority"
-   }
-  ],
-  "desjarlais": [
-   {
-    "id": "HSAG",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG03",
-    "rank": 5,
-    "party": "majority"
-   },
-   {
-    "id": "HSAG29",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS",
-    "rank": 8,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS28",
-    "rank": 3,
-    "party": "majority"
-   },
-   {
-    "id": "HSAS29",
-    "rank": 1,
-    "party": "majority",
-    "title": "Chairman"
    }
   ],
   "hayes": [
@@ -18842,24 +18729,6 @@
     "id": "HSIF18",
     "rank": 13,
     "party": "majority"
-   }
-  ],
-  "mthompson": [
-   {
-    "id": "HSWM",
-    "rank": 3,
-    "party": "minority"
-   },
-   {
-    "id": "HSWM02",
-    "rank": 2,
-    "party": "minority"
-   },
-   {
-    "id": "HSWM05",
-    "rank": 1,
-    "party": "minority",
-    "title": "Ranking Member"
    }
   ],
   "mkelly": [

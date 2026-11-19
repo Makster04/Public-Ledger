@@ -1,6 +1,6 @@
 {
  "about": "The House members-elect of the November 3, 2026 election with no profile on the site yet, each with a basic profile and the race they won, and the races of winners profiled after the election. From scripts/build-members-elect.mjs (npm run house:elect): who won from Wikipedia's list of new members of the 120th Congress and the news report of each win it cites, the count from Wikipedia's state pages, and the money from the FEC's bulk files. Unofficial until each state certifies.",
- "built": "2026-11-13",
+ "built": "2026-11-19",
  "source": {
   "list": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress",
   "fec": "https://www.fec.gov/data/browse-data/?tab=bulk-data"
@@ -465,6 +465,121 @@
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
    "race": "H-CA-01"
+  },
+  {
+   "id": "jones",
+   "name": "Eric Jones",
+   "short": "Jones",
+   "party": "D",
+   "state": "CA",
+   "stateName": "California",
+   "district": 4,
+   "seat": "CA-4",
+   "elect": true,
+   "takesOffice": "2027-01-03",
+   "how": "Defeated Mike Thompson (D)",
+   "switched": false,
+   "background": "Venture capitalist",
+   "born": "1990",
+   "fecCand": "H6CA04222",
+   "fecCmte": "C00919100",
+   "cmteName": "Eric Jones For Congress",
+   "camp": {
+    "receipts": 18058057.13,
+    "indiv": 3185820.63,
+    "itemized": 3172675.39,
+    "unitemized": 13145.24,
+    "party": 0,
+    "pac": 0,
+    "transfers": 0,
+    "candidate": 10064133.1,
+    "loans": 4800000,
+    "disbursements": 16516978.44,
+    "cash": 1541078.69,
+    "debts": 5881889.74,
+    "cmte": "Eric Jones For Congress",
+    "cmteId": "C00919100",
+    "start": "2025-07-01",
+    "end": "2026-10-14",
+    "missing": false,
+    "src": "https://www.fec.gov/data/committee/C00919100/?cycle=2026",
+    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14.",
+    "other": 8103.4,
+    "loansKnown": true,
+    "self": 14864133.1,
+    "selfShare": 82.3
+   },
+   "cycleLabel": "Jul 2025 – Oct 2026",
+   "out": {
+    "start": "2025-01-01",
+    "end": "2026-11-17",
+    "multi": false,
+    "incomplete": [],
+    "for": {
+     "super_pac": 2732639.96,
+     "other": 0,
+     "party": 0,
+     "total": 2732639.96
+    },
+    "against": {
+     "super_pac": 3625230.22,
+     "other": 63864,
+     "party": 0,
+     "total": 3689094.22
+    },
+    "parts": {
+     "S": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "O": {
+      "super_pac": 2018000,
+      "other": 0,
+      "party": 0
+     },
+     "OO": {
+      "super_pac": 2732639.96,
+      "other": 0,
+      "party": 0
+     },
+     "SO": {
+      "super_pac": 1607230.22,
+      "other": 63864,
+      "party": 0
+     },
+     "X": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     }
+    },
+    "rivals": [],
+    "others": [],
+    "excludedPre": {
+     "n": 0,
+     "amount": 0
+    },
+    "n": 66,
+    "uncertain": 0,
+    "cms": [],
+    "same": null,
+    "dupRemoved": {
+     "n": 0,
+     "amount": 0
+    },
+    "possibleRepeat": 0,
+    "pinned": 0
+   },
+   "call": {
+    "t": "Jones ousts House Democrat in California, The Hill (newspaper), 12 November 2026",
+    "u": "https://thehill.com/homenews/campaign/6217945-jones-wins-california-house-race/"
+   },
+   "list": {
+    "t": "Wikipedia: List of new members of the 120th United States Congress",
+    "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+   },
+   "race": "H-CA-04"
   },
   {
    "id": "pan",
@@ -1270,6 +1385,121 @@
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
    "race": "H-CO-01"
+  },
+  {
+   "id": "laubacher",
+   "name": "Eileen Laubacher",
+   "short": "Laubacher",
+   "party": "D",
+   "state": "CO",
+   "stateName": "Colorado",
+   "district": 4,
+   "seat": "CO-4",
+   "elect": true,
+   "takesOffice": "2027-01-03",
+   "how": "Defeated Lauren Boebert (R)",
+   "switched": true,
+   "background": "United States Navy rear admiral ; United States National Security Council",
+   "born": "1968/1969",
+   "fecCand": "H6CO04202",
+   "fecCmte": "C00904284",
+   "cmteName": "Eileen For Colorado",
+   "camp": {
+    "receipts": 13700426.19,
+    "indiv": 13638017.3,
+    "itemized": 4403318.75,
+    "unitemized": 9234698.55,
+    "party": 0,
+    "pac": 37944.04,
+    "transfers": 19046.22,
+    "candidate": 0,
+    "loans": 0,
+    "disbursements": 11854137.8,
+    "cash": 1846288.39,
+    "debts": 0,
+    "cmte": "Eileen For Colorado",
+    "cmteId": "C00904284",
+    "start": "2025-05-05",
+    "end": "2026-10-14",
+    "missing": false,
+    "src": "https://www.fec.gov/data/committee/C00904284/?cycle=2026",
+    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14.",
+    "other": 5418.63,
+    "loansKnown": true,
+    "self": 0,
+    "selfShare": 0
+   },
+   "cycleLabel": "May 2025 – Oct 2026",
+   "out": {
+    "start": "2025-01-01",
+    "end": "2026-11-17",
+    "multi": false,
+    "incomplete": [],
+    "for": {
+     "super_pac": 1625979.83,
+     "other": 35444,
+     "party": 0,
+     "total": 1661423.83
+    },
+    "against": {
+     "super_pac": 1084055.17,
+     "other": 0,
+     "party": 0,
+     "total": 1084055.17
+    },
+    "parts": {
+     "S": {
+      "super_pac": 96135.83,
+      "other": 35351,
+      "party": 0
+     },
+     "O": {
+      "super_pac": 233055.46,
+      "other": 0,
+      "party": 0
+     },
+     "OO": {
+      "super_pac": 1529844,
+      "other": 93,
+      "party": 0
+     },
+     "SO": {
+      "super_pac": 850999.71,
+      "other": 0,
+      "party": 0
+     },
+     "X": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     }
+    },
+    "rivals": [],
+    "others": [],
+    "excludedPre": {
+     "n": 0,
+     "amount": 0
+    },
+    "n": 62,
+    "uncertain": 0,
+    "cms": [],
+    "same": null,
+    "dupRemoved": {
+     "n": 0,
+     "amount": 0
+    },
+    "possibleRepeat": 0,
+    "pinned": 0
+   },
+   "call": {
+    "t": "GOP Rep. Lauren Boebert will lose reelection to Democrat Eileen Laubacher in Colorado, CNN projects, CNN, 9 November 2026",
+    "u": "https://edition.cnn.com/2026/11/09/politics/lauren-boebert-lose-reelection-eileen-laubacher"
+   },
+   "list": {
+    "t": "Wikipedia: List of new members of the 120th United States Congress",
+    "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+   },
+   "race": "H-CO-04"
   },
   {
    "id": "killin",
@@ -3802,6 +4032,121 @@
    "race": "H-KY-06"
   },
   {
+   "id": "lepage",
+   "name": "Paul LePage",
+   "short": "LePage",
+   "party": "R",
+   "state": "ME",
+   "stateName": "Maine",
+   "district": 2,
+   "seat": "ME-2",
+   "elect": true,
+   "takesOffice": "2027-01-03",
+   "how": "Open seat; replacing Jared Golden (D)",
+   "switched": true,
+   "background": "Governor of Maine; Mayor of Waterville",
+   "born": "1948",
+   "fecCand": "H6ME02148",
+   "fecCmte": "C00904094",
+   "cmteName": "Paul Lepage For Congress",
+   "camp": {
+    "receipts": 3177401.07,
+    "indiv": 1689499.2,
+    "itemized": 1483966.88,
+    "unitemized": 205532.32,
+    "party": 5000,
+    "pac": 618812.26,
+    "transfers": 779557.12,
+    "candidate": 0,
+    "loans": 0,
+    "disbursements": 2329177.43,
+    "cash": 848223.64,
+    "debts": 0,
+    "cmte": "Paul Lepage For Congress",
+    "cmteId": "C00904094",
+    "start": "2025-04-01",
+    "end": "2026-10-14",
+    "missing": false,
+    "src": "https://www.fec.gov/data/committee/C00904094/?cycle=2026",
+    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14.",
+    "other": 84532.49,
+    "loansKnown": true,
+    "self": 0,
+    "selfShare": 0
+   },
+   "cycleLabel": "Apr 2025 – Oct 2026",
+   "out": {
+    "start": "2025-01-01",
+    "end": "2026-11-17",
+    "multi": false,
+    "incomplete": [],
+    "for": {
+     "super_pac": 6917913.44,
+     "other": 75496.17,
+     "party": 0,
+     "total": 6993409.61
+    },
+    "against": {
+     "super_pac": 10602200.35,
+     "other": 26995,
+     "party": 0,
+     "total": 10629195.35
+    },
+    "parts": {
+     "S": {
+      "super_pac": 718816.49,
+      "other": 71920.84,
+      "party": 0
+     },
+     "O": {
+      "super_pac": 8984486.49,
+      "other": 75,
+      "party": 0
+     },
+     "OO": {
+      "super_pac": 6199096.95,
+      "other": 3575.33,
+      "party": 0
+     },
+     "SO": {
+      "super_pac": 1617713.86,
+      "other": 26920,
+      "party": 0
+     },
+     "X": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     }
+    },
+    "rivals": [],
+    "others": [],
+    "excludedPre": {
+     "n": 0,
+     "amount": 0
+    },
+    "n": 190,
+    "uncertain": 0,
+    "cms": [],
+    "same": null,
+    "dupRemoved": {
+     "n": 0,
+     "amount": 0
+    },
+    "possibleRepeat": 0,
+    "pinned": 0
+   },
+   "call": {
+    "t": "Ex-Maine Governor Flips House Seat in a Rare Midterm Win for Republicans, The New York Times, November 12, 2026",
+    "u": "https://www.nytimes.com/2026/11/12/sports/paul-lepage-maine-house-race.html"
+   },
+   "list": {
+    "t": "Wikipedia: List of new members of the 120th United States Congress",
+    "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+   },
+   "race": "H-ME-02"
+  },
+  {
    "id": "boafo",
    "name": "Adrian Boafo",
    "short": "Boafo",
@@ -6102,6 +6447,121 @@
    "race": "H-NY-21"
   },
   {
+   "id": "smithjr",
+   "name": "Raymond Smith Jr.",
+   "short": "Smith Jr.",
+   "party": "D",
+   "state": "NC",
+   "stateName": "North Carolina",
+   "district": 3,
+   "seat": "NC-3",
+   "elect": true,
+   "takesOffice": "2027-01-03",
+   "how": "Defeated Greg Murphy (R)",
+   "switched": true,
+   "background": "North Carolina House of Representatives",
+   "born": "1961",
+   "fecCand": "H6NC03229",
+   "fecCmte": "C00930784",
+   "cmteName": "Raymond Smith For North Carolina",
+   "camp": {
+    "receipts": 366580.83,
+    "indiv": 319614.84,
+    "itemized": 198613.85,
+    "unitemized": 121000.99,
+    "party": 1000,
+    "pac": 36250,
+    "transfers": 9508,
+    "candidate": 100,
+    "loans": 0,
+    "disbursements": 321978.57,
+    "cash": 44282.09,
+    "debts": 0,
+    "cmte": "Raymond Smith For North Carolina",
+    "cmteId": "C00930784",
+    "start": "2026-01-01",
+    "end": "2026-10-14",
+    "missing": false,
+    "src": "https://www.fec.gov/data/committee/C00930784/?cycle=2026",
+    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14.",
+    "other": 107.99,
+    "loansKnown": true,
+    "self": 100,
+    "selfShare": 0
+   },
+   "cycleLabel": "Jan 2026 – Oct 2026",
+   "out": {
+    "start": "2025-01-01",
+    "end": "2026-11-17",
+    "multi": false,
+    "incomplete": [],
+    "for": {
+     "super_pac": 358209.34,
+     "other": 0,
+     "party": 0,
+     "total": 358209.34
+    },
+    "against": {
+     "super_pac": 919709.97,
+     "other": 0,
+     "party": 0,
+     "total": 919709.97
+    },
+    "parts": {
+     "S": {
+      "super_pac": 21116.03,
+      "other": 0,
+      "party": 0
+     },
+     "O": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "OO": {
+      "super_pac": 337093.31,
+      "other": 0,
+      "party": 0
+     },
+     "SO": {
+      "super_pac": 919709.97,
+      "other": 0,
+      "party": 0
+     },
+     "X": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     }
+    },
+    "rivals": [],
+    "others": [],
+    "excludedPre": {
+     "n": 0,
+     "amount": 0
+    },
+    "n": 63,
+    "uncertain": 0,
+    "cms": [],
+    "same": null,
+    "dupRemoved": {
+     "n": 0,
+     "amount": 0
+    },
+    "possibleRepeat": 0,
+    "pinned": 0
+   },
+   "call": {
+    "t": "Rep. Greg Murphy concedes NC election loss to Democrat Raymond Smith, WRAL-TV, 11 November 2026",
+    "u": "https://www.wral.com/news/nccapitol/greg-murphy-concede-raymond-smith-us-house-virginia-foxx-chuck-hubbard-midterms-november-2026/"
+   },
+   "list": {
+    "t": "Wikipedia: List of new members of the 120th United States Congress",
+    "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+   },
+   "race": "H-NC-03"
+  },
+  {
    "id": "jefferson",
    "name": "Cyril Jefferson",
    "short": "Jefferson",
@@ -7367,6 +7827,95 @@
    "race": "H-SD-AL"
   },
   {
+   "id": "broderick",
+   "name": "Victoria Broderick",
+   "short": "Broderick",
+   "party": "D",
+   "state": "TN",
+   "stateName": "Tennessee",
+   "district": 4,
+   "seat": "TN-4",
+   "elect": true,
+   "takesOffice": "2027-01-03",
+   "how": "Defeated Scott DesJarlais (R)",
+   "switched": true,
+   "background": "Tennessee Democratic Party Executive Committee ; County chair of Lincoln County",
+   "born": "1991/1992",
+   "fecCand": "H4TN04270",
+   "fecCmte": null,
+   "cmteName": null,
+   "out": {
+    "start": "2025-01-01",
+    "end": "2026-11-17",
+    "multi": false,
+    "incomplete": [],
+    "for": {
+     "super_pac": 0,
+     "other": 0,
+     "party": 0,
+     "total": 0
+    },
+    "against": {
+     "super_pac": 0,
+     "other": 0,
+     "party": 0,
+     "total": 0
+    },
+    "parts": {
+     "S": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "O": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "OO": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "SO": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     },
+     "X": {
+      "super_pac": 0,
+      "other": 0,
+      "party": 0
+     }
+    },
+    "rivals": [],
+    "others": [],
+    "excludedPre": {
+     "n": 0,
+     "amount": 0
+    },
+    "n": 0,
+    "uncertain": 0,
+    "cms": [],
+    "same": null,
+    "dupRemoved": {
+     "n": 0,
+     "amount": 0
+    },
+    "possibleRepeat": 0,
+    "pinned": 0
+   },
+   "call": {
+    "t": "Victoria Broderick defeats Scott DesJarlais in Tennessee's 4th Congressional District, WKRN, November 4, 2026",
+    "u": "https://www.wkrn.com/news/broderick-defeats-scott-desjarlais-tn-4th-congressional-district"
+   },
+   "list": {
+    "t": "Wikipedia: List of new members of the 120th United States Congress",
+    "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+   },
+   "race": "H-TN-04"
+  },
+  {
    "id": "hatcher",
    "name": "Charlie Hatcher",
    "short": "Hatcher",
@@ -8416,45 +8965,45 @@
    "switched": false,
    "background": "Fort Bend County constable ; United States Army Reserve",
    "born": "1968",
-   "fecCand": "H0TX22302",
-   "fecCmte": "C00730150",
-   "cmteName": "Nehls For Congress",
+   "fecCand": "H6TX22283",
+   "fecCmte": "C00930065",
+   "cmteName": "Trever Nehls For Congress",
    "camp": {
-    "receipts": 429606.26,
-    "indiv": 159208.08,
-    "itemized": 157689.52,
-    "unitemized": 1518.56,
+    "receipts": 327410.4,
+    "indiv": 136107.89,
+    "itemized": 133174.62,
+    "unitemized": 2933.27,
     "party": 0,
-    "pac": 211650,
-    "transfers": 18584.76,
+    "pac": 188550,
+    "transfers": 1681.36,
     "candidate": 0,
     "loans": 0,
-    "disbursements": 607157.12,
-    "cash": 111527.84,
-    "debts": 126.73,
-    "cmte": "Nehls For Congress",
-    "cmteId": "C00730150",
-    "start": "2025-01-01",
-    "end": "2026-09-30",
+    "disbursements": 252643.4,
+    "cash": 74767,
+    "debts": 0,
+    "cmte": "Trever Nehls For Congress",
+    "cmteId": "C00930065",
+    "start": "2025-10-01",
+    "end": "2026-10-14",
     "missing": false,
-    "src": "https://www.fec.gov/data/committee/C00730150/?cycle=2026",
-    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-09-30.",
-    "other": 40163.42,
+    "src": "https://www.fec.gov/data/committee/C00930065/?cycle=2026",
+    "note": "Figures from the FEC's committee summary file (committee_summary_2026) through 2026-10-14.",
+    "other": 1071.15,
     "loansKnown": true,
     "self": 0,
     "selfShare": 0
    },
-   "cycleLabel": "Jan 2025 – Sep 2026",
+   "cycleLabel": "Oct 2025 – Oct 2026",
    "out": {
     "start": "2025-01-01",
     "end": "2026-11-17",
     "multi": false,
     "incomplete": [],
     "for": {
-     "super_pac": 0,
+     "super_pac": 4856.46,
      "other": 0,
      "party": 0,
-     "total": 0
+     "total": 4856.46
     },
     "against": {
      "super_pac": 0,
@@ -8464,7 +9013,7 @@
     },
     "parts": {
      "S": {
-      "super_pac": 0,
+      "super_pac": 4856.46,
       "other": 0,
       "party": 0
      },
@@ -8495,7 +9044,7 @@
      "n": 0,
      "amount": 0
     },
-    "n": 0,
+    "n": 1,
     "uncertain": 0,
     "cms": [],
     "same": null,
@@ -9951,9 +10500,6 @@
      "fecCand": "H6CA01269"
     },
     {
-     "id": "gallagher",
-     "bioguide": "G000607",
-     "incumbent": true,
      "name": "James Gallagher",
      "party": "R",
      "fecCand": "H6CA01285"
@@ -9970,11 +10516,11 @@
     "tally": {
      "shares": {
       "mcguireca": 56.4,
-      "gallagher": 43.6
+      "H6CA01285": 43.6
      },
      "votes": {
       "mcguireca": 114640,
-      "gallagher": 88475
+      "H6CA01285": 88475
      },
      "others": [],
      "counted": "69% of the expected vote counted (as of Nov 10 at 10:12 AM)",
@@ -9988,6 +10534,60 @@
    "held": {
     "party": "R",
     "by": "James Gallagher"
+   }
+  },
+  {
+   "id": "H-CA-04",
+   "chamber": "H",
+   "state": "California",
+   "district": "CA-04",
+   "label": "California CA-04",
+   "elect": true,
+   "nominees": [
+    {
+     "id": "jones",
+     "name": "Eric Jones",
+     "party": "D",
+     "fecCand": "H6CA04222"
+    },
+    {
+     "id": "mthompson",
+     "bioguide": "T000460",
+     "incumbent": true,
+     "name": "Mike Thompson",
+     "party": "D",
+     "fecCand": "H8CA01109"
+    }
+   ],
+   "result": {
+    "winner": "jones",
+    "date": "2026-11-12",
+    "how": "Defeated Mike Thompson (D)",
+    "src": {
+     "t": "Jones ousts House Democrat in California, The Hill (newspaper), 12 November 2026",
+     "u": "https://thehill.com/homenews/campaign/6217945-jones-wins-california-house-race/"
+    },
+    "tally": {
+     "shares": {
+      "jones": 52.5,
+      "mthompson": 47.5
+     },
+     "votes": {
+      "jones": 133179,
+      "mthompson": 120361
+     },
+     "others": [],
+     "counted": "98% of the expected vote counted (as of Nov 16 at 7:54 PM)",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in California (districts 1–26), California CA-04",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1–26)#District_4"
+     },
+     "asof": null
+    }
+   },
+   "held": {
+    "party": "D",
+    "by": "Mike Thompson"
    }
   },
   {
@@ -10005,9 +10605,6 @@
      "fecCand": "H6CA03158"
     },
     {
-     "id": "kiley",
-     "bioguide": "K000401",
-     "incumbent": true,
      "name": "Kevin Kiley",
      "party": "I",
      "fecCand": "H2CA03157"
@@ -10024,11 +10621,11 @@
     "tally": {
      "shares": {
       "pan": 58.6,
-      "kiley": 41.4
+      "H2CA03157": 41.4
      },
      "votes": {
       "pan": 108065,
-      "kiley": 76313
+      "H2CA03157": 76313
      },
      "others": [],
      "counted": "63% of the expected vote counted (as of Nov 9 at 2:44 PM)",
@@ -10161,9 +10758,6 @@
      "fecCand": "H6CA34286"
     },
     {
-     "id": "gomez",
-     "bioguide": "G000585",
-     "incumbent": true,
      "name": "Jimmy Gomez",
      "party": "D",
      "fecCand": "H8CA34266"
@@ -10180,11 +10774,11 @@
     "tally": {
      "shares": {
       "gonzalestorres": 62,
-      "gomez": 38
+      "H8CA34266": 38
      },
      "votes": {
       "gonzalestorres": 106298,
-      "gomez": 65061
+      "H8CA34266": 65061
      },
      "others": [],
      "counted": "98% of the expected vote counted (as of Nov 10 at 10:12 AM)",
@@ -10330,22 +10924,22 @@
     },
     "tally": {
      "shares": {
-      "kiros": 78.3,
+      "kiros": 78.4,
       "H6CO01331": 14.1
      },
      "votes": {
-      "kiros": 238022,
-      "H6CO01331": 42914
+      "kiros": 239082,
+      "H6CO01331": 43070
      },
      "others": [
       {
        "name": "Shimon Blau",
        "party": "I",
        "pct": 5.5,
-       "votes": 16606
+       "votes": 16650
       }
      ],
-     "counted": "99% of the expected vote counted (as of Nov 9 at 10:32 AM)",
+     "counted": "99% of the expected vote counted (as of Nov 16 at 1:00 AM)",
      "src": {
       "t": "Wikipedia: 2026 United States House of Representatives elections in Colorado, Colorado CO-01",
       "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Colorado#District_1"
@@ -10356,6 +10950,60 @@
    "held": {
     "party": "D",
     "by": "Diana DeGette"
+   }
+  },
+  {
+   "id": "H-CO-04",
+   "chamber": "H",
+   "state": "Colorado",
+   "district": "CO-04",
+   "label": "Colorado CO-04",
+   "elect": true,
+   "nominees": [
+    {
+     "id": "laubacher",
+     "name": "Eileen Laubacher",
+     "party": "D",
+     "fecCand": "H6CO04202"
+    },
+    {
+     "id": "boebert",
+     "bioguide": "B000825",
+     "incumbent": true,
+     "name": "Lauren Boebert",
+     "party": "R",
+     "fecCand": "H0CO03165"
+    }
+   ],
+   "result": {
+    "winner": "laubacher",
+    "date": "2026-11-09",
+    "how": "Defeated Lauren Boebert (R)",
+    "src": {
+     "t": "GOP Rep. Lauren Boebert will lose reelection to Democrat Eileen Laubacher in Colorado, CNN projects, CNN, 9 November 2026",
+     "u": "https://edition.cnn.com/2026/11/09/politics/lauren-boebert-lose-reelection-eileen-laubacher"
+    },
+    "tally": {
+     "shares": {
+      "laubacher": 48.8,
+      "boebert": 47.9
+     },
+     "votes": {
+      "laubacher": 185923,
+      "boebert": 182686
+     },
+     "others": [],
+     "counted": "98% of the expected vote counted (as of Nov 9 at 11:03 AM)",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Colorado, Colorado CO-04",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Colorado#District_4"
+     },
+     "asof": null
+    }
+   },
+   "held": {
+    "party": "R",
+    "by": "Lauren Boebert"
    }
   },
   {
@@ -10373,9 +11021,6 @@
      "fecCand": "H6CO05324"
     },
     {
-     "id": "crank",
-     "bioguide": "C001137",
-     "incumbent": true,
      "name": "Jeff Crank",
      "party": "R",
      "fecCand": "H6CO05142"
@@ -10392,11 +11037,11 @@
     "tally": {
      "shares": {
       "killin": 50.5,
-      "crank": 45.8
+      "H6CO05142": 45.8
      },
      "votes": {
       "killin": 155598,
-      "crank": 141074
+      "H6CO05142": 141074
      },
      "others": [],
      "counted": "95% of the expected vote counted (as of Nov 9 at 7:37 AM)",
@@ -10440,7 +11085,23 @@
      "t": "Former Hartford mayor Luke Bronin becomes CT's newest member of Congress, Hartford Courant, 2026-11-04",
      "u": "https://www.courant.com/2026/11/03/former-hartford-mayor-luke-bronin-becomes-cts-newest-member-of-congress/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "bronin": 67.28,
+      "H2CT03102": 30.96
+     },
+     "votes": {
+      "bronin": 170479,
+      "H2CT03102": 78461
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Connecticut, Connecticut CT-01",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Connecticut#District_1"
+     },
+     "asof": null
+    }
    },
    "held": {
     "party": "D",
@@ -10477,15 +11138,15 @@
     },
     "tally": {
      "shares": {
-      "rogersfl": 52.1,
-      "H6FL02299": 47.9
+      "rogersfl": 52.08,
+      "H6FL02299": 47.92
      },
      "votes": {
-      "rogersfl": 161177,
-      "H6FL02299": 148263
+      "rogersfl": 161199,
+      "H6FL02299": 148306
      },
      "others": [],
-     "counted": "99% of the expected vote counted (as of Nov 9 at 5:51 PM)",
+     "counted": "",
      "src": {
       "t": "Wikipedia: 2026 United States House of Representatives elections in Florida, Florida FL-02",
       "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida#District_2"
@@ -11166,9 +11827,6 @@
      "fecCand": "H6IN05307"
     },
     {
-     "id": "spartz",
-     "bioguide": "S000929",
-     "incumbent": true,
      "name": "Victoria Spartz",
      "party": "R",
      "fecCand": "H0IN05326"
@@ -11185,11 +11843,11 @@
     "tally": {
      "shares": {
       "fordin": 51.7,
-      "spartz": 48.3
+      "H0IN05326": 48.3
      },
      "votes": {
       "fordin": 134476,
-      "spartz": 125851
+      "H0IN05326": 125851
      },
      "others": [],
      "counted": "",
@@ -11239,8 +11897,8 @@
       "H6IA02237": 45.6
      },
      "votes": {
-      "jamesia": 171512,
-      "H6IA02237": 157722
+      "jamesia": 171604,
+      "H6IA02237": 157773
      },
      "others": [],
      "counted": "",
@@ -11410,6 +12068,41 @@
    }
   },
   {
+   "id": "H-ME-02",
+   "chamber": "H",
+   "state": "Maine",
+   "district": "ME-02",
+   "label": "Maine ME-02",
+   "elect": true,
+   "nominees": [
+    {
+     "id": "lepage",
+     "name": "Paul LePage",
+     "party": "R",
+     "fecCand": "H6ME02148"
+    },
+    {
+     "name": "Matthew Dunlap",
+     "party": "D",
+     "fecCand": "H6ME02171"
+    }
+   ],
+   "result": {
+    "winner": "lepage",
+    "date": "2026-11-12",
+    "how": "Open seat; replacing Jared Golden (D)",
+    "src": {
+     "t": "Ex-Maine Governor Flips House Seat in a Rare Midterm Win for Republicans, The New York Times, November 12, 2026",
+     "u": "https://www.nytimes.com/2026/11/12/sports/paul-lepage-maine-house-race.html"
+    },
+    "tally": null
+   },
+   "held": {
+    "party": "D",
+    "by": "Jared Golden"
+   }
+  },
+  {
    "id": "H-MD-05",
    "chamber": "H",
    "state": "Maryland",
@@ -11440,12 +12133,12 @@
     },
     "tally": {
      "shares": {
-      "boafo": 69.1,
-      "md05-chaffee": 30.2
+      "boafo": 70.3,
+      "md05-chaffee": 28.9
      },
      "votes": {
-      "boafo": 201324,
-      "md05-chaffee": 87938
+      "boafo": 224047,
+      "md05-chaffee": 92154
      },
      "others": [],
      "counted": "",
@@ -11511,9 +12204,6 @@
      "fecCand": "H6MI04204"
     },
     {
-     "id": "huizenga",
-     "bioguide": "H001058",
-     "incumbent": true,
      "name": "Bill Huizenga",
      "party": "R",
      "fecCand": "H0MI02094"
@@ -11530,11 +12220,11 @@
     "tally": {
      "shares": {
       "mccann": 50.1,
-      "huizenga": 48.3
+      "H0MI02094": 48.3
      },
      "votes": {
       "mccann": 185440,
-      "huizenga": 178741
+      "H0MI02094": 178741
      },
      "others": [],
      "counted": "",
@@ -11719,9 +12409,6 @@
      "fecCand": "H6MO02343"
     },
     {
-     "id": "wagner",
-     "bioguide": "W000812",
-     "incumbent": true,
      "name": "Ann Wagner",
      "party": "R",
      "fecCand": "H2MO02102"
@@ -11738,11 +12425,11 @@
     "tally": {
      "shares": {
       "wellman": 51.14,
-      "wagner": 46.21
+      "H2MO02102": 46.21
      },
      "votes": {
       "wellman": 169477,
-      "wagner": 153132
+      "H2MO02102": 153132
      },
      "others": [],
      "counted": "",
@@ -11839,12 +12526,12 @@
     },
     "tally": {
      "shares": {
-      "forstag": 50.3,
-      "H6MT01152": 46.8
+      "forstag": 50.5,
+      "H6MT01152": 46.6
      },
      "votes": {
-      "forstag": 132003,
-      "H6MT01152": 122694
+      "forstag": 135132,
+      "H6MT01152": 124854
      },
      "others": [],
      "counted": "",
@@ -11894,8 +12581,8 @@
       "H6NE02208": 40.77
      },
      "votes": {
-      "powell": 143785,
-      "H6NE02208": 103494
+      "powell": 145402,
+      "H6NE02208": 104498
      },
      "others": [],
      "counted": "",
@@ -12019,9 +12706,6 @@
      "fecCand": "H6NJ02251"
     },
     {
-     "id": "vandrew",
-     "bioguide": "V000133",
-     "incumbent": true,
      "name": "Jeff Van Drew",
      "party": "R",
      "fecCand": "H8NJ02166"
@@ -12038,11 +12722,11 @@
     "tally": {
      "shares": {
       "mullock": 50.87,
-      "vandrew": 48.08
+      "H8NJ02166": 48.08
      },
      "votes": {
       "mullock": 138683,
-      "vandrew": 131086
+      "H8NJ02166": 131086
      },
      "others": [],
      "counted": "",
@@ -12088,12 +12772,12 @@
     },
     "tally": {
      "shares": {
-      "bennett": 57.41,
-      "H0NJ07261": 41.04
+      "bennett": 57.54,
+      "H0NJ07261": 40.91
      },
      "votes": {
-      "bennett": 191316,
-      "H0NJ07261": 94388
+      "bennett": 193473,
+      "H0NJ07261": 137562
      },
      "others": [],
      "counted": "",
@@ -12418,6 +13102,60 @@
    }
   },
   {
+   "id": "H-NC-03",
+   "chamber": "H",
+   "state": "North Carolina",
+   "district": "NC-03",
+   "label": "North Carolina NC-03",
+   "elect": true,
+   "nominees": [
+    {
+     "id": "smithjr",
+     "name": "Raymond Smith Jr.",
+     "party": "D",
+     "fecCand": "H6NC03229"
+    },
+    {
+     "id": "gmurphy",
+     "bioguide": "M001210",
+     "incumbent": true,
+     "name": "Greg Murphy",
+     "party": "R",
+     "fecCand": "H0NC03172"
+    }
+   ],
+   "result": {
+    "winner": "smithjr",
+    "date": "2026-11-11",
+    "how": "Defeated Greg Murphy (R)",
+    "src": {
+     "t": "Rep. Greg Murphy concedes NC election loss to Democrat Raymond Smith, WRAL-TV, 11 November 2026",
+     "u": "https://www.wral.com/news/nccapitol/greg-murphy-concede-raymond-smith-us-house-virginia-foxx-chuck-hubbard-midterms-november-2026/"
+    },
+    "tally": {
+     "shares": {
+      "smithjr": 49.4,
+      "gmurphy": 49.3
+     },
+     "votes": {
+      "smithjr": 118434,
+      "gmurphy": 118176
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in North Carolina, North Carolina NC-03",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina#District_3"
+     },
+     "asof": null
+    }
+   },
+   "held": {
+    "party": "R",
+    "by": "Greg Murphy"
+   }
+  },
+  {
    "id": "H-NC-06",
    "chamber": "H",
    "state": "North Carolina",
@@ -12432,9 +13170,6 @@
      "fecCand": "H6NC06164"
     },
     {
-     "id": "mcdowell",
-     "bioguide": "M001240",
-     "incumbent": true,
      "name": "Addison McDowell",
      "party": "R",
      "fecCand": "H4NC06177"
@@ -12450,12 +13185,12 @@
     },
     "tally": {
      "shares": {
-      "jefferson": 51.1,
-      "mcdowell": 48.9
+      "jefferson": 51.2,
+      "H4NC06177": 48.8
      },
      "votes": {
-      "jefferson": 140001,
-      "mcdowell": 133737
+      "jefferson": 140707,
+      "H4NC06177": 134103
      },
      "others": [],
      "counted": "",
@@ -12486,9 +13221,6 @@
      "fecCand": "H6NC09218"
     },
     {
-     "id": "hudson",
-     "bioguide": "H001067",
-     "incumbent": true,
      "name": "Richard Hudson",
      "party": "R",
      "fecCand": "H2NC08185"
@@ -12505,11 +13237,11 @@
     "tally": {
      "shares": {
       "H6NC09218": 51.1,
-      "hudson": 48.9
+      "H2NC08185": 48.8
      },
      "votes": {
-      "H6NC09218": 138707,
-      "hudson": 132692
+      "H6NC09218": 139456,
+      "H2NC08185": 133196
      },
      "others": [],
      "counted": "",
@@ -12540,9 +13272,6 @@
      "fecCand": "H6NC13228"
     },
     {
-     "id": "knott",
-     "bioguide": "K000405",
-     "incumbent": true,
      "name": "Brad Knott",
      "party": "R",
      "fecCand": "H4NC13116"
@@ -12559,11 +13288,11 @@
     "tally": {
      "shares": {
       "barringer": 50.5,
-      "knott": 48.1
+      "H4NC13116": 48
      },
      "votes": {
-      "barringer": 159981,
-      "knott": 152329
+      "barringer": 160860,
+      "H4NC13116": 152864
      },
      "others": [],
      "counted": "",
@@ -12594,9 +13323,6 @@
      "fecCand": "H6NC14069"
     },
     {
-     "id": "tmoore",
-     "bioguide": "M001236",
-     "incumbent": true,
      "name": "Tim Moore",
      "party": "R",
      "fecCand": "H4NC14015"
@@ -12613,11 +13339,11 @@
     "tally": {
      "shares": {
       "womacknc": 51.1,
-      "tmoore": 48.9
+      "H4NC14015": 48.8
      },
      "votes": {
-      "womacknc": 147388,
-      "tmoore": 140973
+      "womacknc": 147920,
+      "H4NC14015": 141353
      },
      "others": [],
      "counted": "",
@@ -12648,9 +13374,6 @@
      "fecCand": "H6OH10121"
     },
     {
-     "id": "turner",
-     "bioguide": "T000463",
-     "incumbent": true,
      "name": "Mike Turner",
      "party": "R",
      "fecCand": "H2OH03067"
@@ -12667,11 +13390,11 @@
     "tally": {
      "shares": {
       "knickerbocker": 49.3,
-      "turner": 47.7
+      "H2OH03067": 47.7
      },
      "votes": {
       "knickerbocker": 149024,
-      "turner": 144086
+      "H2OH03067": 144086
      },
      "others": [],
      "counted": "",
@@ -12702,9 +13425,6 @@
      "fecCand": "H6OH15112"
     },
     {
-     "id": "carey",
-     "bioguide": "C001126",
-     "incumbent": true,
      "name": "Mike Carey",
      "party": "R",
      "fecCand": "H2OH15228"
@@ -12721,11 +13441,11 @@
     "tally": {
      "shares": {
       "leonard": 51.9,
-      "carey": 45.3
+      "H2OH15228": 45.3
      },
      "votes": {
       "leonard": 149287,
-      "carey": 130225
+      "H2OH15228": 130225
      },
      "others": [],
      "counted": "",
@@ -12771,12 +13491,12 @@
     },
     "tally": {
      "shares": {
-      "tedford": 52.32,
-      "H6OK01201": 47.68
+      "tedford": 52.3,
+      "H6OK01201": 47.7
      },
      "votes": {
-      "tedford": 121260,
-      "H6OK01201": 110521
+      "tedford": 121397,
+      "H6OK01201": 110707
      },
      "others": [],
      "counted": "",
@@ -12807,9 +13527,6 @@
      "fecCand": "H6PA01181"
     },
     {
-     "id": "fitzpatrick",
-     "bioguide": "F000466",
-     "incumbent": true,
      "name": "Brian Fitzpatrick",
      "party": "R",
      "fecCand": "H6PA08277"
@@ -12826,11 +13543,11 @@
     "tally": {
      "shares": {
       "harvie": 52.7,
-      "fitzpatrick": 47.3
+      "H6PA08277": 47.3
      },
      "votes": {
       "harvie": 188087,
-      "fitzpatrick": 168531
+      "H6PA08277": 168531
      },
      "others": [],
      "counted": "",
@@ -13033,11 +13750,11 @@
       "H6SD01141": 36
      },
      "votes": {
-      "jackley": 195587,
-      "H6SD01141": 109993
+      "jackley": 195589,
+      "H6SD01141": 109997
      },
      "others": [],
-     "counted": "98% of the expected vote counted (as of Nov. 5, 3:56 PM)",
+     "counted": "",
      "src": {
       "t": "Wikipedia: 2026 United States House of Representatives elections in South Dakota, South Dakota at-large",
       "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_South_Dakota"
@@ -13048,6 +13765,60 @@
    "held": {
     "party": "R",
     "by": "Dusty Johnson"
+   }
+  },
+  {
+   "id": "H-TN-04",
+   "chamber": "H",
+   "state": "Tennessee",
+   "district": "TN-04",
+   "label": "Tennessee TN-04",
+   "elect": true,
+   "nominees": [
+    {
+     "id": "broderick",
+     "name": "Victoria Broderick",
+     "party": "D",
+     "fecCand": "H4TN04270"
+    },
+    {
+     "id": "desjarlais",
+     "bioguide": "D000616",
+     "incumbent": true,
+     "name": "Scott DesJarlais",
+     "party": "R",
+     "fecCand": "H0TN04195"
+    }
+   ],
+   "result": {
+    "winner": "broderick",
+    "date": "2026-11-04",
+    "how": "Defeated Scott DesJarlais (R)",
+    "src": {
+     "t": "Victoria Broderick defeats Scott DesJarlais in Tennessee's 4th Congressional District, WKRN, November 4, 2026",
+     "u": "https://www.wkrn.com/news/broderick-defeats-scott-desjarlais-tn-4th-congressional-district"
+    },
+    "tally": {
+     "shares": {
+      "broderick": 48.87,
+      "desjarlais": 48.73
+     },
+     "votes": {
+      "broderick": 95585,
+      "desjarlais": 95308
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Tennessee, Tennessee TN-04",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Tennessee#District_4"
+     },
+     "asof": null
+    }
+   },
+   "held": {
+    "party": "R",
+    "by": "Scott DesJarlais"
    }
   },
   {
@@ -13078,7 +13849,23 @@
      "t": "Charlie Hatcher Beats Chaz Molder, Retaining Tennessee's 5th District Seat for Republicans, Nashville Banner, November 3, 2026",
      "u": "https://nashvillebanner.com/2026/11/03/tennessee-district-5-charlie-hatcher-wins/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "hatcher": 51.66,
+      "H6TN05397": 46.72
+     },
+     "votes": {
+      "hatcher": 110408,
+      "H6TN05397": 99841
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Tennessee, Tennessee TN-05",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Tennessee#District_5"
+     },
+     "asof": null
+    }
    },
    "held": {
     "party": "R",
@@ -13113,7 +13900,23 @@
      "t": "Johnny Garrett Wins Tennessee's 6th District, Nashville Banner, November 3, 2026",
      "u": "https://nashvillebanner.com/2026/11/03/tennessee-6th-district-johnny-garrett-wins/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "garrett": 50.77,
+      "H6TN06171": 47.51
+     },
+     "votes": {
+      "garrett": 120950,
+      "H6TN06171": 113177
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Tennessee, Tennessee TN-06",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Tennessee#District_6"
+     },
+     "asof": null
+    }
    },
    "held": {
     "party": "R",
@@ -13150,7 +13953,7 @@
     },
     "tally": {
      "shares": {
-      "taylortn": 49.6,
+      "taylortn": 49.63,
       "H6TN09449": 48.5
      },
      "votes": {
@@ -13402,8 +14205,8 @@
     },
     "tally": {
      "shares": {
-      "sell": 69.48,
-      "H6TX19198": 30.52
+      "sell": 69.4,
+      "H6TX19198": 30.5
      },
      "votes": {
       "sell": 154079,
@@ -13457,8 +14260,8 @@
       "H4TX21108": 45.5
      },
      "votes": {
-      "teixeira": 194302,
-      "H4TX21108": 162088
+      "teixeira": 194394,
+      "H4TX21108": 162119
      },
      "others": [],
      "counted": "",
@@ -13486,7 +14289,7 @@
      "id": "nehlstx",
      "name": "Trever Nehls",
      "party": "R",
-     "fecCand": "H0TX22302"
+     "fecCand": "H6TX22283"
     },
     {
      "name": "Marquette Greene-Scott",
@@ -13559,8 +14362,8 @@
       "H4TX23120": 44
      },
      "votes": {
-      "padillastout": 142032,
-      "H4TX23120": 119795
+      "padillastout": 142116,
+      "H4TX23120": 119822
      },
      "others": [],
      "counted": "",
@@ -13604,7 +14407,23 @@
      "t": "Frederick Haynes III will succeed Jasmine Crockett in the U.S. House, The Dallas Morning News, November 3, 2026",
      "u": "https://www.dallasnews.com/news/elections/article/us-house-30th-district-early-voting-results-22506658.php"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "haynesiii": 82.6,
+      "H6TX30211": 17.4
+     },
+     "votes": {
+      "haynesiii": 186871,
+      "H6TX30211": 39247
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Texas, Texas TX-30",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas#District_30"
+     },
+     "asof": null
+    }
    },
    "held": null
   },
@@ -13636,7 +14455,23 @@
      "t": "Yarbrough wins Texas House election for redistricted Julie Johnson seat, The Hill (newspaper), November 4, 2026",
      "u": "https://thehill.com/homenews/campaign/6134970-yarbrough-wins-texas-house-election/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "yarbrough": 51.5,
+      "H6TX32217": 48.5
+     },
+     "votes": {
+      "yarbrough": 142877,
+      "H6TX32217": 134792
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Texas, Texas TX-32",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas#District_32"
+     },
+     "asof": null
+    }
    },
    "held": null
   },
@@ -13669,7 +14504,23 @@
      "t": "Democrat Colin Allred wins Texas' 33rd Congressional District race, defeating Patrick Gillespie, CBS News, November 3, 2026",
      "u": "https://www.cbsnews.com/texas/news/texas-district-33-election-results-2026/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "allred": 78.6,
+      "tx33-gillespie": 21.4
+     },
+     "votes": {
+      "allred": 150891,
+      "tx33-gillespie": 41157
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Texas, Texas TX-33",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas#District_33"
+     },
+     "asof": null
+    }
    },
    "held": {
     "party": "D",
@@ -13704,7 +14555,23 @@
      "t": "Bexar County Sheriff's Deputy Johnny Garcia captures San Antonio's new 'whole enchilada' district, San Antonio Report, November 3, 2026",
      "u": "https://sanantonioreport.org/election-results-texas-35th-congressional-district-johnny-garcia/"
     },
-    "tally": null
+    "tally": {
+     "shares": {
+      "garciatx": 55.4,
+      "H6TX35087": 44.6
+     },
+     "votes": {
+      "garciatx": 139984,
+      "H6TX35087": 112574
+     },
+     "others": [],
+     "counted": "",
+     "src": {
+      "t": "Wikipedia: 2026 United States House of Representatives elections in Texas, Texas TX-35",
+      "u": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas#District_35"
+     },
+     "asof": null
+    }
    },
    "held": null
   },
@@ -13771,9 +14638,6 @@
      "fecCand": "H6VA01299"
     },
     {
-     "id": "wittman",
-     "bioguide": "W000804",
-     "incumbent": true,
      "name": "Rob Wittman",
      "party": "R",
      "fecCand": "H8VA01147"
@@ -13789,12 +14653,12 @@
     },
     "tally": {
      "shares": {
-      "taylorva": 51.16,
-      "wittman": 48.6
+      "taylorva": 51.31,
+      "H8VA01147": 48.44
      },
      "votes": {
-      "taylorva": 209482,
-      "wittman": 199014
+      "taylorva": 211717,
+      "H8VA01147": 199871
      },
      "others": [],
      "counted": "",
@@ -13876,9 +14740,6 @@
      "fecCand": "H6WI01283"
     },
     {
-     "id": "steil",
-     "bioguide": "S001213",
-     "incumbent": true,
      "name": "Bryan Steil",
      "party": "R",
      "fecCand": "H8WI01156"
@@ -13895,11 +14756,11 @@
     "tally": {
      "shares": {
       "berman": 52,
-      "steil": 48
+      "H8WI01156": 48
      },
      "votes": {
       "berman": 158839,
-      "steil": 146885
+      "H8WI01156": 146885
      },
      "others": [],
      "counted": "",

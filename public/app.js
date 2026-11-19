@@ -752,17 +752,10 @@ const gradeHow=()=>`<section class="hc-how" aria-labelledby="hc-how-h"><h2 id="h
     <div><h3>Grade scale</h3>${points([['A','90.0% and up'],['B','80.0–89.9%'],['C','70.0–79.9%'],['D','60.0–69.9%'],['F','Below 60.0%'],['Not graded','Too little evidence yet. It never means zero.']],'small')}<p class="small">Every grade and every part of one is a percentage, worked out to one decimal. <a href="#method">Full rules</a></p></div>
   </div></section>`;
 let homeSort='', homeParty='', homeStatus='';
-// The home page's chamber filter: sitting senators (and senators running again), House members, or the challengers and
-// candidates who aren't in office; each choice with how many profiles it holds.
-// A chamber holds who sits in it now and who was elected to it in 2026: a candidate who won is a senator- or
-// member-elect, under the chamber they won from the day the race is called (Nov. 19, 2026: before, every candidate
-// stayed under Candidates, so the Senate showed only its sitting senators). Candidates: those whose race isn't decided.
-const inChamber=(s,c)=>{
-  if(!c)return true;
-  const st=statusOf(s);
-  if(c==='C')return !!s.cand&&!s.senInc&&!st.has('new');
-  return ((!s.cand||s.senInc)&&s.chamber===c)||(st.has('new')&&st.chamber===c)||(!s.elect&&!!s.bioguide&&!!SITTING[c]?.has(s.bioguide));
-};
+// The home page's Political Position: the Senate and the House as they sit from Jan. 3, 2027 (since Nov. 19, 2026: the
+// newly elected in, the members leaving then out, so the Senate holds 100 and the House its 435 seats and six
+// delegates, less the seats not decided yet), and the people whose 2026 race isn't decided. With a Status picked,
+// Current and Leaving mean the chamber they sit in now, Newly elected the one they won.
 // Where someone stands after the 2026 election: current (in office now: a sitting senator or House member, including those
 // who lost and serve until January), newly elected (won a 2026 race for a seat they don't hold now) or lost (lost a
 // 2026 race). Someone can be both: a House member who won a Senate seat is current and newly elected.
@@ -786,35 +779,53 @@ function statusOf(s){
   out.chamber=race?.chamber||null;STATUS_CACHE.set(s.id,out);
   return out;
 }
-// Political Position with a Status picked: for Newly elected and Lost, Senate and House mean the seat they ran for.
-const inPosition=(s,c,st)=>!c||c==='C'||!['new','lost','next'].includes(st)?inChamber(s,c):st==='next'?nextChamber(s)===c:statusOf(s).chamber===c;
-// Who sits in the next Congress, from Jan. 3, 2027: everyone newly elected; a senator whose term runs past 2026 or who
-// won a 2026 Senate race; a House member who won a race on the site, or whose seat no member-elect on the site takes
-// (the site has every 2026 House winner who isn't a member already, and everyone who lost is off it). Senate 100,
-// House 435 and the six delegates, but for vacant seats.
+// Where someone sits from Jan. 3, 2027: 'S' or 'H'; false when they won't be in Congress then (retiring, or running
+// for another office); null while their 2026 race isn't decided. A senator whose term runs past 2026, or who won a 2026
+// race; a House member who won a seat in public/house-seats.json (npm run house:seats: Wikipedia's results, which find
+// a member who moved districts in redistricting); a delegate unless a member-elect takes their seat; everyone newly
+// elected.
 const BY_BIO={S:new Map(SENATE.filter(m=>m.bioguide).map(m=>[m.bioguide,m])),H:new Map(HOUSE.filter(m=>m.bioguide).map(m=>[m.bioguide,m]))};
 const seatKey=(state,district)=>`${state}-${Number(district)||0}`;
 const raceSeat=r=>{const m=/^H-([A-Z]{2})-(\w+)$/.exec(r?.id||'');return m?seatKey(m[1],m[2]):null;};
-let TAKEN=null;
+let TAKEN=null,WON=null;
 const takenSeats=()=>TAKEN||(TAKEN=new Set(ALL.concat(BASIC_LIST).filter(s=>{const st=statusOf(s);return st.has('new')&&st.chamber==='H';}).map(s=>raceSeat(raceFor(s)[0])).filter(Boolean)));
+const houseSeats=()=>window.HOUSE_SEATS?.seats||null;
+const wonHouseSeat=id=>{const seats=houseSeats();if(!seats)return false;WON||=new Set(Object.values(seats).map(x=>x.id).filter(Boolean));return WON.has(id);};
 const NEXT_CACHE=new Map();
-function nextCongress(s){
+function nextOf(s){
   if(NEXT_CACHE.has(s.id))return NEXT_CACHE.get(s.id);
-  const st=statusOf(s);let next=false;
-  if(st.has('new'))next=true;
+  const st=statusOf(s),[race,key]=s.office?[null,null]:raceFor(s),o=race&&outcomeOf(race,key),seats=houseSeats();
+  let next=false;
+  if(st.has('new'))next=st.chamber;
   else if(st.has('current')&&!s.elect&&s.bioguide){
-    const [race,key]=raceFor(s),o=race&&outcomeOf(race,key),sen=BY_BIO.S.get(s.bioguide),rep=BY_BIO.H.get(s.bioguide);
-    if(sen)next=Number(sen.nextElection)>2026||(o==='won'&&race.chamber==='S');
-    else if(rep)next=race?.chamber==='H'?o==='won':race?.chamber==='S'?false:!takenSeats().has(seatKey(rep.state,rep.district));
-  }
+    const sen=BY_BIO.S.get(s.bioguide),rep=BY_BIO.H.get(s.bioguide);
+    if(sen)next=Number(sen.nextElection)>2026||(o==='won'&&race.chamber==='S')?'S':o==='pending'?null:false;
+    else if(rep){
+      if(TERRITORIES.has(rep.state))next=takenSeats().has(seatKey(rep.state,rep.district))?false:'H';
+      else if(o==='pending')next=null;
+      else if(seats)next=wonHouseSeat(s.id)?'H':seats[seatKey(rep.state,rep.district)]?.pending?null:false;
+      else next=race?.chamber==='H'?(o==='won'?'H':false):race?.chamber==='S'?false:takenSeats().has(seatKey(rep.state,rep.district))?false:'H';
+    }
+  }else if(s.cand&&!s.senInc&&!st.has('lost'))next=null;
   NEXT_CACHE.set(s.id,next);return next;
 }
-// The chamber they'll sit in then: the one they won, or the one they sit in now.
-const nextChamber=s=>{const st=statusOf(s);return st.has('new')?st.chamber:BY_BIO.S.has(s.bioguide)?'S':BY_BIO.H.has(s.bioguide)?'H':null;};
+// Sitting in that chamber now.
+const sitsNow=(s,c)=>!s.elect&&!!s.bioguide&&!!SITTING[c]?.has(s.bioguide);
+const inPosition=(s,c,st)=>{
+  if(!c)return true;
+  if(c==='C')return nextOf(s)===null;
+  if(st==='current'||st==='leaving')return sitsNow(s,c);
+  if(st==='new')return statusOf(s).chamber===c;
+  return nextOf(s)===c;
+};
+const inChamber=(s,c)=>inPosition(s,c,'');
 // No "Lost" choice since Nov. 19, 2026: everyone who lost was taken off the site (data/removed.json).
-const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet'],['next','Next Congress','Serving from Jan. 3, 2027']];
-const inStatus=(s,k)=>!k||(k==='next'?nextCongress(s):statusOf(s).has(k));
-function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Candidates',all.filter(s=>inChamber(s,'C')).length]];}
+const STATUS_CHOICES=[['','All','Everyone on the site'],['current','Current','In office now'],['new','Newly elected','Won in 2026, not sworn in yet'],['leaving','Leaving Jan. 3','In office now, not in the next Congress']];
+const inStatus=(s,k)=>!k||(k==='leaving'?statusOf(s).has('current')&&nextOf(s)===false:statusOf(s).has(k));
+// Each Political Position's note, with the Status picked.
+const POS_NOTES={'':{'':'Everyone on the site',S:'Senators from Jan. 3, 2027',H:'House members from Jan. 3, 2027',C:'Races still counting, in a recount or a runoff'},
+  current:{S:'Senators now',H:'House members now'},new:{S:'Won a Senate seat in 2026',H:'Won a House seat in 2026'},leaving:{S:'Senators leaving Jan. 3',H:'House members leaving Jan. 3'}};
+function chamberChoices(){const all=ALL.concat(BASIC_LIST);return [['','All',all.length],['S','Senate',all.filter(s=>inChamber(s,'S')).length],['H','House',all.filter(s=>inChamber(s,'H')).length],['C','Not called yet',all.filter(s=>inChamber(s,'C')).length]];}
 
 // ---------- home ----------
 // Who takes corporate PAC money, or money from one of the Trackers' groups, as seating charts of the House and the
@@ -933,12 +944,12 @@ function renderHome(){
 
 // The home page's three filters, each a dropdown: Political Position, Party and Status, with each choice's count.
 function homeDropdowns(){
-  const every=ALL.concat(BASIC_LIST),pos=chamberChoices(),POS_NOTE={'':'Everyone on the site',S:'Sitting senators and senators-elect',H:'Sitting House members and members-elect',C:'Running for Congress, race not called yet'};
+  const every=ALL.concat(BASIC_LIST),pos=chamberChoices();
   const parties=[['','All parties'],['D','Democrats'],['R','Republicans'],['I','Independents']];
   // Each choice's count, with the other two filters as they are.
   const n=(c,p,st)=>every.filter(s=>inPosition(s,c,st)&&(!p||s.party===p)&&inStatus(s,st)).length;
   const menus=[
-    ['c','Political Position',homeCh,pos.map(([k,l])=>[k,l,(['new','lost'].includes(homeStatus)&&{S:'Ran for the Senate in 2026',H:'Ran for the House in 2026'}[k])||(homeStatus==='next'&&{S:'Senators from Jan. 3, 2027',H:'House members from Jan. 3, 2027'}[k])||POS_NOTE[k],n(k,homeParty,homeStatus)])],
+    ['c','Political Position',homeCh,pos.map(([k,l])=>[k,l,POS_NOTES[homeStatus]?.[k]||POS_NOTES[''][k],n(k,homeParty,homeStatus)])],
     ['p','Party',homeParty,parties.map(([k,l])=>[k,l,'',n(homeCh,k,homeStatus)])],
     ['s','Status',homeStatus,STATUS_CHOICES.map(([k,l,d])=>[k,l,d,n(homeCh,homeParty,k)])]];
   return ddMenus(menus);

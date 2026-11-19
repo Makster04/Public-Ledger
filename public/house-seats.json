@@ -1,0 +1,2651 @@
+{
+ "about": "Who won each House seat on Nov. 3, 2026, matched to the site's people (id; via: member, elect or profile), for the home page's count of the House from Jan. 3, 2027. unconfirmed: a member counted as returning because their state's page had no result yet and no new member is listed for the seat. pending: a seat without a winner yet, and why. From scripts/build-house-seats.mjs (npm run house:seats), reading Wikipedia's 2026 House election pages and its list of new members.",
+ "built": "2026-11-19",
+ "source": {
+  "pages": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+  "list": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
+ },
+ "seats": {
+  "AK-0": {
+   "pending": "Not called yet: ranked-choice count, no result found (Nov. 19, 2026)"
+  },
+  "AL-1": {
+   "name": "Jerry Carl",
+   "party": "R",
+   "id": "carl",
+   "via": "elect"
+  },
+  "AL-2": {
+   "name": "Shomari Figures",
+   "party": "D",
+   "id": "figures",
+   "via": "member"
+  },
+  "AL-3": {
+   "name": "Mike Rogers",
+   "party": "R",
+   "id": "mrogers",
+   "via": "member"
+  },
+  "AL-4": {
+   "name": "Robert Aderholt",
+   "party": "R",
+   "id": "aderholt",
+   "via": "member"
+  },
+  "AL-5": {
+   "name": "Dale Strong",
+   "party": "R",
+   "id": "strong",
+   "via": "member"
+  },
+  "AL-6": {
+   "name": "Gary Palmer",
+   "party": "R",
+   "id": "palmer",
+   "via": "member"
+  },
+  "AL-7": {
+   "name": "Terri Sewell",
+   "party": "D",
+   "id": "sewell",
+   "via": "member"
+  },
+  "AR-1": {
+   "name": "Rick Crawford",
+   "party": "R",
+   "id": "crawford",
+   "via": "member"
+  },
+  "AR-2": {
+   "name": "French Hill",
+   "party": "R",
+   "id": "hill",
+   "via": "member"
+  },
+  "AR-3": {
+   "name": "Steve Womack",
+   "party": "R",
+   "id": "womack",
+   "via": "member"
+  },
+  "AR-4": {
+   "name": "Bruce Westerman",
+   "party": "R",
+   "id": "westerman",
+   "via": "member"
+  },
+  "AZ-1": {
+   "name": "Amish Shah",
+   "party": "D",
+   "id": "shah",
+   "via": "elect"
+  },
+  "AZ-2": {
+   "name": "Eli Crane",
+   "party": "R",
+   "id": "crane",
+   "via": "member"
+  },
+  "AZ-3": {
+   "name": "Yassamin Ansari",
+   "party": "D",
+   "id": "ansari",
+   "via": "member"
+  },
+  "AZ-4": {
+   "name": "Greg Stanton",
+   "party": "D",
+   "id": "stanton",
+   "via": "member"
+  },
+  "AZ-5": {
+   "name": "Mark Lamb",
+   "party": "R",
+   "id": "lamb",
+   "via": "elect"
+  },
+  "AZ-6": {
+   "name": "JoAnna Mendoza",
+   "party": "D",
+   "id": "mendoza",
+   "via": "profile"
+  },
+  "AZ-7": {
+   "name": "Adelita Grijalva",
+   "party": "D",
+   "id": "grijalva",
+   "via": "member"
+  },
+  "AZ-8": {
+   "name": "Abraham Hamadeh",
+   "party": "R",
+   "id": "hamadeh",
+   "via": "member"
+  },
+  "AZ-9": {
+   "name": "Paul Gosar",
+   "party": "R",
+   "id": "gosar",
+   "via": "member"
+  },
+  "CA-1": {
+   "name": "Mike McGuire",
+   "party": "D",
+   "id": "mcguireca",
+   "via": "elect"
+  },
+  "CA-2": {
+   "name": "Jared Huffman",
+   "party": "D",
+   "id": "huffman",
+   "via": "member"
+  },
+  "CA-3": {
+   "name": "Ami Bera",
+   "party": "D",
+   "id": "bera",
+   "via": "member"
+  },
+  "CA-4": {
+   "name": "Eric Jones",
+   "party": "D",
+   "id": "jones",
+   "via": "elect"
+  },
+  "CA-5": {
+   "name": "Tom McClintock",
+   "party": "R",
+   "id": "mcclintock",
+   "via": "member"
+  },
+  "CA-6": {
+   "name": "Richard Pan",
+   "party": "D",
+   "id": "pan",
+   "via": "elect"
+  },
+  "CA-7": {
+   "name": "Doris O. Matsui",
+   "party": "D",
+   "id": "matsui",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "CA-8": {
+   "name": "John Garamendi",
+   "party": "D",
+   "id": "garamendi",
+   "via": "member"
+  },
+  "CA-9": {
+   "name": "Josh Harder",
+   "party": "D",
+   "id": "harder",
+   "via": "member"
+  },
+  "CA-10": {
+   "name": "Mark DeSaulnier",
+   "party": "D",
+   "id": "desaulnier",
+   "via": "member"
+  },
+  "CA-11": {
+   "name": "Scott Wiener",
+   "party": "D",
+   "id": "wiener",
+   "via": "elect"
+  },
+  "CA-12": {
+   "name": "Lateefah Simon",
+   "party": "D",
+   "id": "simon",
+   "via": "member"
+  },
+  "CA-13": {
+   "name": "Adam Gray",
+   "party": "D",
+   "id": "gray",
+   "via": "member"
+  },
+  "CA-14": {
+   "name": "Aisha Wahab",
+   "party": "D",
+   "id": "wahab",
+   "via": "member"
+  },
+  "CA-15": {
+   "name": "Kevin Mullin",
+   "party": "D",
+   "id": "mullin",
+   "via": "member"
+  },
+  "CA-16": {
+   "name": "Sam Liccardo",
+   "party": "D",
+   "id": "liccardo",
+   "via": "member"
+  },
+  "CA-17": {
+   "name": "Ro Khanna",
+   "party": "D",
+   "id": "khanna",
+   "via": "member"
+  },
+  "CA-18": {
+   "name": "Zoe Lofgren",
+   "party": "D",
+   "id": "lofgren",
+   "via": "member"
+  },
+  "CA-19": {
+   "name": "Jimmy Panetta",
+   "party": "D",
+   "id": "panetta",
+   "via": "member"
+  },
+  "CA-20": {
+   "name": "Vince Fong",
+   "party": "R",
+   "id": "fong",
+   "via": "member"
+  },
+  "CA-21": {
+   "name": "Jim Costa",
+   "party": "D",
+   "id": "costa",
+   "via": "member"
+  },
+  "CA-22": {
+   "name": "Randy Villegas",
+   "party": "D",
+   "id": "villegas",
+   "via": "profile"
+  },
+  "CA-23": {
+   "pending": "Not called yet in the sources on file (Nov. 19, 2026)"
+  },
+  "CA-24": {
+   "name": "Salud Carbajal",
+   "party": "D",
+   "id": "carbajal",
+   "via": "member"
+  },
+  "CA-25": {
+   "name": "Raul Ruiz",
+   "party": "D",
+   "id": "ruiz",
+   "via": "member"
+  },
+  "CA-26": {
+   "name": "Jacqui Irwin",
+   "party": "D",
+   "id": "irwin",
+   "via": "elect"
+  },
+  "CA-27": {
+   "name": "George Whitesides",
+   "party": "D",
+   "id": "whitesides",
+   "via": "member"
+  },
+  "CA-28": {
+   "name": "Judy Chu",
+   "party": "D",
+   "id": "chu",
+   "via": "member"
+  },
+  "CA-29": {
+   "name": "Luz Rivas",
+   "party": "D",
+   "id": "rivas",
+   "via": "member"
+  },
+  "CA-30": {
+   "name": "Laura Friedman",
+   "party": "D",
+   "id": "friedman",
+   "via": "member"
+  },
+  "CA-31": {
+   "name": "Gil Cisneros",
+   "party": "D",
+   "id": "cisneros",
+   "via": "member"
+  },
+  "CA-32": {
+   "name": "Brad Sherman",
+   "party": "D",
+   "id": "sherman",
+   "via": "member"
+  },
+  "CA-33": {
+   "name": "Pete Aguilar",
+   "party": "D",
+   "id": "aguilar",
+   "via": "member"
+  },
+  "CA-34": {
+   "name": "Angela Gonzales-Torres",
+   "party": "D",
+   "id": "gonzalestorres",
+   "via": "elect"
+  },
+  "CA-35": {
+   "name": "Norma Torres",
+   "party": "D",
+   "id": "ntorres",
+   "via": "member"
+  },
+  "CA-36": {
+   "name": "Ted Lieu",
+   "party": "D",
+   "id": "lieu",
+   "via": "member"
+  },
+  "CA-37": {
+   "name": "Sydney Kamlager-Dove",
+   "party": "D",
+   "id": "kamlagerdove",
+   "via": "member"
+  },
+  "CA-38": {
+   "name": "Hilda Solis",
+   "party": "D",
+   "id": "solis",
+   "via": "elect"
+  },
+  "CA-39": {
+   "name": "Mark Takano",
+   "party": "D",
+   "id": "takano",
+   "via": "member"
+  },
+  "CA-40": {
+   "name": "Ken Calvert",
+   "party": "R",
+   "id": "calvert",
+   "via": "member"
+  },
+  "CA-41": {
+   "name": "Linda Sánchez",
+   "party": "D",
+   "id": "sanchez",
+   "via": "member"
+  },
+  "CA-42": {
+   "name": "Robert Garcia",
+   "party": "D",
+   "id": "rgarcia",
+   "via": "member"
+  },
+  "CA-43": {
+   "name": "Maxine Waters",
+   "party": "D",
+   "id": "waters",
+   "via": "member"
+  },
+  "CA-44": {
+   "name": "Nanette Barragán",
+   "party": "D",
+   "id": "barragan",
+   "via": "member"
+  },
+  "CA-45": {
+   "name": "Derek Tran",
+   "party": "D",
+   "id": "tran",
+   "via": "member"
+  },
+  "CA-46": {
+   "name": "Lou Correa",
+   "party": "D",
+   "id": "correa",
+   "via": "member"
+  },
+  "CA-47": {
+   "name": "Dave Min",
+   "party": "D",
+   "id": "min",
+   "via": "member"
+  },
+  "CA-48": {
+   "name": "Marni von Wilpert",
+   "party": "D",
+   "id": "vonwilpert",
+   "via": "elect"
+  },
+  "CA-49": {
+   "name": "Mike Levin",
+   "party": "D",
+   "id": "levin",
+   "via": "member"
+  },
+  "CA-50": {
+   "name": "Scott Peters",
+   "party": "D",
+   "id": "speters",
+   "via": "member"
+  },
+  "CA-51": {
+   "name": "Sara Jacobs",
+   "party": "D",
+   "id": "jacobs",
+   "via": "member"
+  },
+  "CA-52": {
+   "name": "Juan Vargas",
+   "party": "D",
+   "id": "vargas",
+   "via": "member"
+  },
+  "CO-1": {
+   "name": "Melat Kiros",
+   "party": "D",
+   "id": "kiros",
+   "via": "elect"
+  },
+  "CO-2": {
+   "name": "Joe Neguse",
+   "party": "D",
+   "id": "neguse",
+   "via": "member"
+  },
+  "CO-3": {
+   "name": "Jeff Hurd",
+   "party": "R",
+   "id": "hurd",
+   "via": "member"
+  },
+  "CO-4": {
+   "name": "Eileen Laubacher",
+   "party": "D",
+   "id": "laubacher",
+   "via": "elect"
+  },
+  "CO-5": {
+   "name": "Jessica Killin",
+   "party": "D",
+   "id": "killin",
+   "via": "elect"
+  },
+  "CO-6": {
+   "name": "Jason Crow",
+   "party": "D",
+   "id": "crow",
+   "via": "member"
+  },
+  "CO-7": {
+   "name": "Brittany Pettersen",
+   "party": "D",
+   "id": "pettersen",
+   "via": "member"
+  },
+  "CO-8": {
+   "name": "Manny Rutinel",
+   "party": "D",
+   "id": "rutinel",
+   "via": "profile"
+  },
+  "CT-1": {
+   "name": "Luke Bronin",
+   "party": "D",
+   "id": "bronin",
+   "via": "elect"
+  },
+  "CT-2": {
+   "name": "Joe Courtney",
+   "party": "D",
+   "id": "courtney",
+   "via": "member"
+  },
+  "CT-3": {
+   "name": "Rosa DeLauro",
+   "party": "D",
+   "id": "delauro",
+   "via": "member"
+  },
+  "CT-4": {
+   "name": "Jim Himes",
+   "party": "D",
+   "id": "himes",
+   "via": "member"
+  },
+  "CT-5": {
+   "name": "Jahana Hayes",
+   "party": "D",
+   "id": "hayes",
+   "via": "member"
+  },
+  "DE-0": {
+   "name": "Sarah McBride",
+   "party": "D",
+   "id": "mcbride",
+   "via": "member"
+  },
+  "FL-1": {
+   "name": "Jimmy Patronis",
+   "party": "R",
+   "id": "patronis",
+   "via": "member"
+  },
+  "FL-2": {
+   "name": "Austin Rogers",
+   "party": "R",
+   "id": "rogersfl",
+   "via": "elect"
+  },
+  "FL-3": {
+   "name": "Kat Cammack",
+   "party": "R",
+   "id": "cammack",
+   "via": "member"
+  },
+  "FL-4": {
+   "name": "Aaron Bean",
+   "party": "R",
+   "id": "bean",
+   "via": "member"
+  },
+  "FL-5": {
+   "name": "John Rutherford",
+   "party": "R",
+   "id": "rutherford",
+   "via": "member"
+  },
+  "FL-6": {
+   "name": "Randy Fine",
+   "party": "R",
+   "id": "fine",
+   "via": "member"
+  },
+  "FL-7": {
+   "name": "Ryan Elijah",
+   "party": "R",
+   "id": "elijah",
+   "via": "elect"
+  },
+  "FL-8": {
+   "name": "Mike Haridopolos",
+   "party": "R",
+   "id": "haridopolos",
+   "via": "member"
+  },
+  "FL-9": {
+   "name": "Darren Soto",
+   "party": "D",
+   "id": "soto",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "FL-10": {
+   "name": "Maxwell Frost",
+   "party": "D",
+   "id": "frost",
+   "via": "member"
+  },
+  "FL-11": {
+   "name": "Joe Strada",
+   "party": "R",
+   "id": "strada",
+   "via": "elect"
+  },
+  "FL-12": {
+   "name": "Gus Bilirakis",
+   "party": "R",
+   "id": "bilirakis",
+   "via": "member"
+  },
+  "FL-13": {
+   "name": "Anna Paulina Luna",
+   "party": "R",
+   "id": "luna",
+   "via": "member"
+  },
+  "FL-14": {
+   "name": "Kathy Castor",
+   "party": "D",
+   "id": "castor",
+   "via": "profile"
+  },
+  "FL-15": {
+   "name": "Laurel Lee",
+   "party": "R",
+   "id": "llee",
+   "via": "member"
+  },
+  "FL-16": {
+   "name": "Sydney Gruters",
+   "party": "R",
+   "id": "gruters",
+   "via": "elect"
+  },
+  "FL-17": {
+   "name": "Greg Steube",
+   "party": "R",
+   "id": "steube",
+   "via": "member"
+  },
+  "FL-18": {
+   "name": "Scott Franklin",
+   "party": "R",
+   "id": "franklin",
+   "via": "member"
+  },
+  "FL-19": {
+   "name": "Jim Schwartzel",
+   "party": "R",
+   "id": "schwartzel",
+   "via": "elect"
+  },
+  "FL-20": {
+   "name": "Debbie Wasserman Schultz",
+   "party": "D",
+   "id": "wassermanschultz",
+   "via": "member"
+  },
+  "FL-21": {
+   "name": "Brian Mast",
+   "party": "R",
+   "id": "mast",
+   "via": "member"
+  },
+  "FL-22": {
+   "name": "Pia Dandiya",
+   "party": "D",
+   "id": "dandiya",
+   "via": "profile"
+  },
+  "FL-23": {
+   "name": "Lois Frankel",
+   "party": "D",
+   "id": "frankel",
+   "via": "member"
+  },
+  "FL-24": {
+   "name": "Oliver Gilbert",
+   "party": "D",
+   "id": "gilbert",
+   "via": "elect"
+  },
+  "FL-25": {
+   "name": "Jared Moskowitz",
+   "party": "D",
+   "id": "moskowitz",
+   "via": "member"
+  },
+  "FL-26": {
+   "name": "Mario Díaz-Balart",
+   "party": "R",
+   "id": "diazbalart",
+   "via": "member"
+  },
+  "FL-27": {
+   "name": "Maria Elvira Salazar",
+   "party": "R",
+   "id": "salazar",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "FL-28": {
+   "name": "Carlos Giménez",
+   "party": "R",
+   "id": "gimenez",
+   "via": "member"
+  },
+  "GA-1": {
+   "name": "Jim Kingston",
+   "party": "R",
+   "id": "kingston",
+   "via": "elect"
+  },
+  "GA-2": {
+   "name": "Sanford Bishop",
+   "party": "D",
+   "id": "bishop",
+   "via": "member"
+  },
+  "GA-3": {
+   "name": "Brian Jack",
+   "party": "R",
+   "id": "jack",
+   "via": "member"
+  },
+  "GA-4": {
+   "name": "Hank Johnson",
+   "party": "D",
+   "id": "hjohnson",
+   "via": "member"
+  },
+  "GA-5": {
+   "name": "Nikema Williams",
+   "party": "D",
+   "id": "nwilliams",
+   "via": "member"
+  },
+  "GA-6": {
+   "name": "Lucy McBath",
+   "party": "D",
+   "id": "mcbath",
+   "via": "member"
+  },
+  "GA-7": {
+   "name": "Rich McCormick",
+   "party": "R",
+   "id": "rmccormick",
+   "via": "member"
+  },
+  "GA-8": {
+   "name": "Austin Scott",
+   "party": "R",
+   "id": "ascott",
+   "via": "member"
+  },
+  "GA-9": {
+   "name": "Andrew Clyde",
+   "party": "R",
+   "id": "clyde",
+   "via": "member"
+  },
+  "GA-10": {
+   "name": "Houston Gaines",
+   "party": "R",
+   "id": "gaines",
+   "via": "elect"
+  },
+  "GA-11": {
+   "name": "John Cowan",
+   "party": "R",
+   "id": "cowan",
+   "via": "elect"
+  },
+  "GA-12": {
+   "name": "Rick Allen",
+   "party": "R",
+   "id": "allen",
+   "via": "member"
+  },
+  "GA-13": {
+   "name": "Jasmine Clark",
+   "party": "D",
+   "id": "clarkga",
+   "via": "elect"
+  },
+  "GA-14": {
+   "name": "Clay Fuller",
+   "party": "R",
+   "id": "fuller",
+   "via": "member"
+  },
+  "HI-1": {
+   "name": "Ed Case",
+   "party": "D",
+   "id": "case",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "HI-2": {
+   "name": "Jill N. Tokuda",
+   "party": "D",
+   "id": "tokuda",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IA-1": {
+   "name": "Christina Bohannan",
+   "party": "D",
+   "id": "bohannan",
+   "via": "profile"
+  },
+  "IA-2": {
+   "name": "Lindsay James",
+   "party": "D",
+   "id": "jamesia",
+   "via": "elect"
+  },
+  "IA-3": {
+   "name": "Sarah Trone Garriott",
+   "party": "D",
+   "id": "tronegarriott",
+   "via": "profile"
+  },
+  "IA-4": {
+   "name": "Chris McGowan",
+   "party": "R",
+   "id": "mcgowan",
+   "via": "elect"
+  },
+  "ID-1": {
+   "name": "Russ Fulcher",
+   "party": "R",
+   "id": "fulcher",
+   "via": "member"
+  },
+  "ID-2": {
+   "name": "Mike Simpson",
+   "party": "R",
+   "id": "simpson",
+   "via": "member"
+  },
+  "IL-1": {
+   "name": "Jonathan L. Jackson",
+   "party": "D",
+   "id": "jjackson",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-2": {
+   "name": "Donna Miller",
+   "party": "D",
+   "id": "miller",
+   "via": "elect"
+  },
+  "IL-3": {
+   "name": "Delia C. Ramirez",
+   "party": "D",
+   "id": "ramirez",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-4": {
+   "name": "Patty Garcia",
+   "party": "D",
+   "id": "garcia",
+   "via": "elect"
+  },
+  "IL-5": {
+   "name": "Mike Quigley",
+   "party": "D",
+   "id": "quigley",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-6": {
+   "name": "Sean Casten",
+   "party": "D",
+   "id": "casten",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-7": {
+   "name": "La Shawn Ford",
+   "party": "D",
+   "id": "ford",
+   "via": "elect"
+  },
+  "IL-8": {
+   "name": "Melissa Bean",
+   "party": "D",
+   "id": "beanil",
+   "via": "elect"
+  },
+  "IL-9": {
+   "name": "Daniel Biss",
+   "party": "D",
+   "id": "biss",
+   "via": "elect"
+  },
+  "IL-10": {
+   "name": "Bradley Scott Schneider",
+   "party": "D",
+   "id": "schneider",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-11": {
+   "name": "Bill Foster",
+   "party": "D",
+   "id": "foster",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-12": {
+   "name": "Mike Bost",
+   "party": "R",
+   "id": "bost",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-13": {
+   "name": "Nikki Budzinski",
+   "party": "D",
+   "id": "budzinski",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-14": {
+   "name": "Lauren Underwood",
+   "party": "D",
+   "id": "underwood",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-15": {
+   "name": "Mary E. Miller",
+   "party": "R",
+   "id": "mmiller",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-16": {
+   "name": "Darin LaHood",
+   "party": "R",
+   "id": "lahood",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IL-17": {
+   "name": "Eric Sorensen",
+   "party": "D",
+   "id": "sorensen",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "IN-1": {
+   "name": "Frank Mrvan",
+   "party": "D",
+   "id": "mrvan",
+   "via": "member"
+  },
+  "IN-2": {
+   "name": "Rudy Yakym",
+   "party": "R",
+   "id": "yakym",
+   "via": "member"
+  },
+  "IN-3": {
+   "name": "Marlin Stutzman",
+   "party": "R",
+   "id": "stutzman",
+   "via": "member"
+  },
+  "IN-4": {
+   "name": "Jim Baird",
+   "party": "R",
+   "id": "baird",
+   "via": "member"
+  },
+  "IN-5": {
+   "name": "J. D. Ford",
+   "party": "D",
+   "id": "fordin",
+   "via": "elect"
+  },
+  "IN-6": {
+   "name": "Jefferson Shreve",
+   "party": "R",
+   "id": "shreve",
+   "via": "member"
+  },
+  "IN-7": {
+   "name": "André Carson",
+   "party": "D",
+   "id": "carson",
+   "via": "member"
+  },
+  "IN-8": {
+   "name": "Mark Messmer",
+   "party": "R",
+   "id": "messmer",
+   "via": "member"
+  },
+  "IN-9": {
+   "name": "Erin Houchin",
+   "party": "R",
+   "id": "houchin",
+   "via": "member"
+  },
+  "KS-1": {
+   "name": "Tracey Mann",
+   "party": "R",
+   "id": "mann",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "KS-2": {
+   "name": "Derek Schmidt",
+   "party": "R",
+   "id": "schmidt",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "KS-3": {
+   "name": "Sharice Davids",
+   "party": "D",
+   "id": "davids",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "KS-4": {
+   "name": "Ron Estes",
+   "party": "R",
+   "id": "estes",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "KY-1": {
+   "name": "James Comer",
+   "party": "R",
+   "id": "comer",
+   "via": "member"
+  },
+  "KY-2": {
+   "name": "Brett Guthrie",
+   "party": "R",
+   "id": "guthrie",
+   "via": "member"
+  },
+  "KY-3": {
+   "name": "Morgan McGarvey",
+   "party": "D",
+   "id": "mcgarvey",
+   "via": "member"
+  },
+  "KY-4": {
+   "name": "Ed Gallrein",
+   "party": "R",
+   "id": "gallrein",
+   "via": "elect"
+  },
+  "KY-5": {
+   "name": "Hal Rogers",
+   "party": "R",
+   "id": "hrogers",
+   "via": "member"
+  },
+  "KY-6": {
+   "name": "Zach Dembo",
+   "party": "D",
+   "id": "dembo",
+   "via": "elect"
+  },
+  "LA-1": {
+   "name": "Steve Scalise",
+   "party": "R",
+   "id": "scalise",
+   "via": "member"
+  },
+  "LA-2": {
+   "name": "Troy Carter",
+   "party": "D",
+   "id": "tcarter",
+   "via": "member"
+  },
+  "LA-3": {
+   "name": "Clay Higgins",
+   "party": "R",
+   "id": "higgins",
+   "via": "member"
+  },
+  "LA-4": {
+   "name": "Mike Johnson",
+   "party": "R",
+   "id": "mjohnson",
+   "via": "member"
+  },
+  "LA-5": {
+   "pending": "Runoff Dec. 12, 2026"
+  },
+  "LA-6": {
+   "pending": "Runoff Dec. 12, 2026"
+  },
+  "MA-1": {
+   "name": "Richard E. Neal",
+   "party": "D",
+   "id": "neal",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MA-2": {
+   "name": "Jim McGovern",
+   "party": "D",
+   "id": "mcgovern",
+   "via": "member"
+  },
+  "MA-3": {
+   "name": "Lori Trahan",
+   "party": "D",
+   "id": "trahan",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MA-4": {
+   "name": "Jake Auchincloss",
+   "party": "D",
+   "id": "auchincloss",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MA-5": {
+   "name": "Katherine Clark",
+   "party": "D",
+   "id": "clark",
+   "via": "member"
+  },
+  "MA-6": {
+   "name": "Dan Koh",
+   "party": "D",
+   "id": "koh",
+   "via": "elect"
+  },
+  "MA-7": {
+   "name": "Ayanna Pressley",
+   "party": "D",
+   "id": "pressley",
+   "via": "member"
+  },
+  "MA-8": {
+   "name": "Stephen F. Lynch",
+   "party": "D",
+   "id": "lynch",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MA-9": {
+   "name": "William R. Keating",
+   "party": "D",
+   "id": "keating",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MD-1": {
+   "name": "Andy Harris",
+   "party": "R",
+   "id": "aharris",
+   "via": "member"
+  },
+  "MD-2": {
+   "name": "Johnny Olszewski",
+   "party": "D",
+   "id": "olszewski",
+   "via": "member"
+  },
+  "MD-3": {
+   "name": "Sarah Elfreth",
+   "party": "D",
+   "id": "elfreth",
+   "via": "member"
+  },
+  "MD-4": {
+   "name": "Glenn Ivey",
+   "party": "D",
+   "id": "ivey",
+   "via": "member"
+  },
+  "MD-5": {
+   "name": "Adrian Boafo",
+   "party": "D",
+   "id": "boafo",
+   "via": "elect"
+  },
+  "MD-6": {
+   "name": "April McClain Delaney",
+   "party": "D",
+   "id": "mcclaindelaney",
+   "via": "member"
+  },
+  "MD-7": {
+   "name": "Kweisi Mfume",
+   "party": "D",
+   "id": "mfume",
+   "via": "member"
+  },
+  "MD-8": {
+   "name": "Jamie Raskin",
+   "party": "D",
+   "id": "raskin",
+   "via": "member"
+  },
+  "ME-1": {
+   "name": "Chellie Pingree",
+   "party": "D",
+   "id": "pingree",
+   "via": "member"
+  },
+  "ME-2": {
+   "name": "Paul LePage",
+   "party": "R",
+   "id": "lepage",
+   "via": "elect"
+  },
+  "MI-1": {
+   "name": "Jack Bergman",
+   "party": "R",
+   "id": "bergman",
+   "via": "member"
+  },
+  "MI-2": {
+   "name": "John Moolenaar",
+   "party": "R",
+   "id": "moolenaar",
+   "via": "member"
+  },
+  "MI-3": {
+   "name": "Hillary Scholten",
+   "party": "D",
+   "id": "scholten",
+   "via": "member"
+  },
+  "MI-4": {
+   "name": "Sean McCann",
+   "party": "D",
+   "id": "mccann",
+   "via": "elect"
+  },
+  "MI-5": {
+   "name": "Tim Walberg",
+   "party": "R",
+   "id": "walberg",
+   "via": "member"
+  },
+  "MI-6": {
+   "name": "Debbie Dingell",
+   "party": "D",
+   "id": "dingell",
+   "via": "member"
+  },
+  "MI-7": {
+   "name": "William Lawrence",
+   "party": "D",
+   "id": "lawrence",
+   "via": "profile"
+  },
+  "MI-8": {
+   "name": "Kristen McDonald Rivet",
+   "party": "D",
+   "id": "mcdonaldrivet",
+   "via": "member"
+  },
+  "MI-9": {
+   "name": "Lisa McClain",
+   "party": "R",
+   "id": "mcclain",
+   "via": "member"
+  },
+  "MI-10": {
+   "name": "Christina Hines",
+   "party": "D",
+   "id": "hines",
+   "via": "profile"
+  },
+  "MI-11": {
+   "name": "Jeremy Moss",
+   "party": "D",
+   "id": "moss",
+   "via": "elect"
+  },
+  "MI-12": {
+   "name": "Rashida Tlaib",
+   "party": "D",
+   "id": "tlaib",
+   "via": "member"
+  },
+  "MI-13": {
+   "name": "Donavan McKinney",
+   "party": "D",
+   "id": "mckinney",
+   "via": "elect"
+  },
+  "MN-1": {
+   "pending": "Not called yet: Jake Johnson 50.0%, Brad Finstad 49.9% (Nov. 18, 2026)"
+  },
+  "MN-2": {
+   "name": "Matt Little",
+   "party": "D",
+   "id": "little",
+   "via": "elect"
+  },
+  "MN-3": {
+   "name": "Kelly Morrison",
+   "party": "D",
+   "id": "morrison",
+   "via": "member"
+  },
+  "MN-4": {
+   "name": "Betty McCollum",
+   "party": "D",
+   "id": "mccollum",
+   "via": "member"
+  },
+  "MN-5": {
+   "name": "Ilhan Omar",
+   "party": "D",
+   "id": "omar",
+   "via": "member"
+  },
+  "MN-6": {
+   "name": "Tom Emmer",
+   "party": "R",
+   "id": "emmer",
+   "via": "member"
+  },
+  "MN-7": {
+   "name": "Michelle Fischbach",
+   "party": "R",
+   "id": "fischbach",
+   "via": "member"
+  },
+  "MN-8": {
+   "name": "Pete Stauber",
+   "party": "R",
+   "id": "stauber",
+   "via": "member"
+  },
+  "MO-1": {
+   "name": "Wesley Bell",
+   "party": "D",
+   "id": "bell",
+   "via": "member"
+  },
+  "MO-2": {
+   "name": "Fred Wellman",
+   "party": "D",
+   "id": "wellman",
+   "via": "elect"
+  },
+  "MO-3": {
+   "name": "Bob Onder",
+   "party": "R",
+   "id": "onder",
+   "via": "member"
+  },
+  "MO-4": {
+   "name": "Mark Alford",
+   "party": "R",
+   "id": "alford",
+   "via": "member"
+  },
+  "MO-5": {
+   "name": "Emanuel Cleaver",
+   "party": "D",
+   "id": "cleaver",
+   "via": "member"
+  },
+  "MO-6": {
+   "name": "Chris Stigall",
+   "party": "R",
+   "id": "stigall",
+   "via": "elect"
+  },
+  "MO-7": {
+   "name": "Eric Burlison",
+   "party": "R",
+   "id": "burlison",
+   "via": "member"
+  },
+  "MO-8": {
+   "name": "Jason Smith",
+   "party": "R",
+   "id": "jsmith",
+   "via": "member"
+  },
+  "MS-1": {
+   "name": "Trent Kelly",
+   "party": "R",
+   "id": "tkelly",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MS-2": {
+   "name": "Bennie G. Thompson",
+   "party": "D",
+   "id": "bthompson",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MS-3": {
+   "name": "Michael Guest",
+   "party": "R",
+   "id": "guest",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MS-4": {
+   "name": "Mike Ezell",
+   "party": "R",
+   "id": "ezell",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "MT-1": {
+   "name": "Sam Forstag",
+   "party": "D",
+   "id": "forstag",
+   "via": "elect"
+  },
+  "MT-2": {
+   "name": "Troy Downing",
+   "party": "R",
+   "id": "downing",
+   "via": "member"
+  },
+  "NC-1": {
+   "name": "Don Davis",
+   "party": "D",
+   "id": "davisnc",
+   "via": "member"
+  },
+  "NC-2": {
+   "name": "Deborah Ross",
+   "party": "D",
+   "id": "ross",
+   "via": "member"
+  },
+  "NC-3": {
+   "name": "Raymond Smith Jr.",
+   "party": "D",
+   "id": "smithjr",
+   "via": "elect"
+  },
+  "NC-4": {
+   "name": "Valerie Foushee",
+   "party": "D",
+   "id": "foushee",
+   "via": "member"
+  },
+  "NC-5": {
+   "pending": "Recount: Chuck Hubbard leads Virginia Foxx by about 300 votes (Nov. 18, 2026)"
+  },
+  "NC-6": {
+   "name": "Cyril Jefferson",
+   "party": "D",
+   "id": "jefferson",
+   "via": "elect"
+  },
+  "NC-7": {
+   "name": "David Rouzer",
+   "party": "R",
+   "id": "rouzer",
+   "via": "member"
+  },
+  "NC-8": {
+   "name": "Mark Harris",
+   "party": "R",
+   "id": "mharris",
+   "via": "member"
+  },
+  "NC-9": {
+   "name": "Richard Ojeda",
+   "party": "D",
+   "id": "ojeda",
+   "via": "profile"
+  },
+  "NC-10": {
+   "pending": "Recount: Pat Harrigan leads by about 2,500 votes after the canvass (Nov. 17, 2026)"
+  },
+  "NC-11": {
+   "name": "Jamie Ager",
+   "party": "D",
+   "id": "ager",
+   "via": "profile"
+  },
+  "NC-12": {
+   "name": "Alma Adams",
+   "party": "D",
+   "id": "adams",
+   "via": "member"
+  },
+  "NC-13": {
+   "name": "Paul Barringer",
+   "party": "D",
+   "id": "barringer",
+   "via": "elect"
+  },
+  "NC-14": {
+   "name": "LaKesha Womack",
+   "party": "D",
+   "id": "womacknc",
+   "via": "elect"
+  },
+  "ND-0": {
+   "name": "Julie Fedorchak",
+   "party": "R",
+   "id": "fedorchak",
+   "via": "member"
+  },
+  "NE-1": {
+   "name": "Mike Flood",
+   "party": "R",
+   "id": "flood",
+   "via": "member"
+  },
+  "NE-2": {
+   "name": "Denise Powell",
+   "party": "D",
+   "id": "powell",
+   "via": "elect"
+  },
+  "NE-3": {
+   "name": "Adrian Smith",
+   "party": "R",
+   "id": "asmith",
+   "via": "member"
+  },
+  "NH-1": {
+   "name": "Stefany Shaheen",
+   "party": "D",
+   "id": "shaheennh",
+   "via": "elect"
+  },
+  "NH-2": {
+   "name": "Maggie Goodlander",
+   "party": "D",
+   "id": "goodlander",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "NJ-1": {
+   "name": "Donald Norcross",
+   "party": "D",
+   "id": "norcross",
+   "via": "member"
+  },
+  "NJ-2": {
+   "name": "Zack Mullock",
+   "party": "D",
+   "id": "mullock",
+   "via": "elect"
+  },
+  "NJ-3": {
+   "name": "Herb Conaway",
+   "party": "D",
+   "id": "conaway",
+   "via": "member"
+  },
+  "NJ-4": {
+   "name": "Chris Smith",
+   "party": "R",
+   "id": "csmith",
+   "via": "member"
+  },
+  "NJ-5": {
+   "name": "Josh Gottheimer",
+   "party": "D",
+   "id": "gottheimer",
+   "via": "member"
+  },
+  "NJ-6": {
+   "name": "Frank Pallone",
+   "party": "D",
+   "id": "pallone",
+   "via": "member"
+  },
+  "NJ-7": {
+   "name": "Rebecca Bennett",
+   "party": "D",
+   "id": "bennett",
+   "via": "elect"
+  },
+  "NJ-8": {
+   "name": "Rob Menendez",
+   "party": "D",
+   "id": "menendez",
+   "via": "member"
+  },
+  "NJ-9": {
+   "name": "Nellie Pou",
+   "party": "D",
+   "id": "pou",
+   "via": "member"
+  },
+  "NJ-10": {
+   "name": "LaMonica McIver",
+   "party": "D",
+   "id": "mciver",
+   "via": "member"
+  },
+  "NJ-11": {
+   "name": "Analilia Mejia",
+   "party": "D",
+   "id": "mejia",
+   "via": "member"
+  },
+  "NJ-12": {
+   "name": "Adam Hamawy",
+   "party": "D",
+   "id": "hamawy",
+   "via": "elect"
+  },
+  "NM-1": {
+   "name": "Melanie A. Stansbury",
+   "party": "D",
+   "id": "stansbury",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "NM-2": {
+   "name": "Gabe Vasquez",
+   "party": "D",
+   "id": "vasquez",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "NM-3": {
+   "name": "Teresa Leger Fernandez",
+   "party": "D",
+   "id": "legerfernandez",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "NV-1": {
+   "name": "Dina Titus",
+   "party": "D",
+   "id": "titus",
+   "via": "member"
+  },
+  "NV-2": {
+   "name": "Teresa Benitez-Thompson",
+   "party": "D",
+   "id": "benitezthompson",
+   "via": "elect"
+  },
+  "NV-3": {
+   "name": "Susie Lee",
+   "party": "D",
+   "id": "slee",
+   "via": "member"
+  },
+  "NV-4": {
+   "name": "Steven Horsford",
+   "party": "D",
+   "id": "horsford",
+   "via": "member"
+  },
+  "NY-1": {
+   "name": "Nick LaLota",
+   "party": "R",
+   "id": "lalota",
+   "via": "member"
+  },
+  "NY-2": {
+   "name": "Andrew Garbarino",
+   "party": "R",
+   "id": "garbarino",
+   "via": "member"
+  },
+  "NY-3": {
+   "name": "Tom Suozzi",
+   "party": "D",
+   "id": "suozzi",
+   "via": "member"
+  },
+  "NY-4": {
+   "name": "Laura Gillen",
+   "party": "D",
+   "id": "gillen",
+   "via": "member"
+  },
+  "NY-5": {
+   "name": "Gregory Meeks",
+   "party": "D",
+   "id": "meeks",
+   "via": "member"
+  },
+  "NY-6": {
+   "name": "Grace Meng",
+   "party": "D",
+   "id": "meng",
+   "via": "member"
+  },
+  "NY-7": {
+   "name": "Claire Valdez",
+   "party": "D",
+   "id": "valdez",
+   "via": "elect"
+  },
+  "NY-8": {
+   "name": "Hakeem Jeffries",
+   "party": "D",
+   "id": "jeffries",
+   "via": "member"
+  },
+  "NY-9": {
+   "name": "Yvette Clarke",
+   "party": "D",
+   "id": "clarke",
+   "via": "member"
+  },
+  "NY-10": {
+   "name": "Brad Lander",
+   "party": "D",
+   "id": "lander",
+   "via": "elect"
+  },
+  "NY-11": {
+   "name": "Nicole Malliotakis",
+   "party": "R",
+   "id": "malliotakis",
+   "via": "member"
+  },
+  "NY-12": {
+   "name": "Micah Lasher",
+   "party": "D",
+   "id": "lasher",
+   "via": "elect"
+  },
+  "NY-13": {
+   "name": "Darializa Avila Chevalier",
+   "party": "D",
+   "id": "avilachevalier",
+   "via": "elect"
+  },
+  "NY-14": {
+   "name": "Alexandria Ocasio-Cortez",
+   "party": "D",
+   "id": "ocasiocortez",
+   "via": "member"
+  },
+  "NY-15": {
+   "name": "Ritchie Torres",
+   "party": "D",
+   "id": "rtorres",
+   "via": "member"
+  },
+  "NY-16": {
+   "name": "George Latimer",
+   "party": "D",
+   "id": "latimer",
+   "via": "member"
+  },
+  "NY-17": {
+   "name": "Cait Conley",
+   "party": "D",
+   "id": "conley",
+   "via": "profile"
+  },
+  "NY-18": {
+   "name": "Pat Ryan",
+   "party": "D",
+   "id": "ryan",
+   "via": "member"
+  },
+  "NY-19": {
+   "name": "Josh Riley",
+   "party": "D",
+   "id": "riley",
+   "via": "member"
+  },
+  "NY-20": {
+   "name": "Paul Tonko",
+   "party": "D",
+   "id": "tonko",
+   "via": "member"
+  },
+  "NY-21": {
+   "name": "Anthony Constantino",
+   "party": "R",
+   "id": "constantino",
+   "via": "elect"
+  },
+  "NY-22": {
+   "name": "John Mannion",
+   "party": "D",
+   "id": "mannion",
+   "via": "member"
+  },
+  "NY-23": {
+   "name": "Nick Langworthy",
+   "party": "R",
+   "id": "langworthy",
+   "via": "member"
+  },
+  "NY-24": {
+   "name": "Claudia Tenney",
+   "party": "R",
+   "id": "tenney",
+   "via": "member"
+  },
+  "NY-25": {
+   "name": "Joseph Morelle",
+   "party": "D",
+   "id": "morelle",
+   "via": "member"
+  },
+  "NY-26": {
+   "name": "Tim Kennedy",
+   "party": "D",
+   "id": "tkennedy",
+   "via": "member"
+  },
+  "OH-1": {
+   "name": "Greg Landsman",
+   "party": "D",
+   "id": "landsman",
+   "via": "member"
+  },
+  "OH-2": {
+   "name": "David Taylor",
+   "party": "R",
+   "id": "taylor",
+   "via": "member"
+  },
+  "OH-3": {
+   "name": "Joyce Beatty",
+   "party": "D",
+   "id": "beatty",
+   "via": "member"
+  },
+  "OH-4": {
+   "name": "Jim Jordan",
+   "party": "R",
+   "id": "jordan",
+   "via": "member"
+  },
+  "OH-5": {
+   "name": "Bob Latta",
+   "party": "R",
+   "id": "latta",
+   "via": "member"
+  },
+  "OH-6": {
+   "name": "Michael Rulli",
+   "party": "R",
+   "id": "rulli",
+   "via": "member"
+  },
+  "OH-7": {
+   "name": "Brian Poindexter",
+   "party": "D",
+   "id": "poindexter",
+   "via": "profile"
+  },
+  "OH-8": {
+   "name": "Warren Davidson",
+   "party": "R",
+   "id": "davidson",
+   "via": "member"
+  },
+  "OH-9": {
+   "name": "Marcy Kaptur",
+   "party": "D",
+   "id": "kaptur",
+   "via": "profile"
+  },
+  "OH-10": {
+   "name": "Kristina Knickerbocker",
+   "party": "D",
+   "id": "knickerbocker",
+   "via": "elect"
+  },
+  "OH-11": {
+   "name": "Shontel Brown",
+   "party": "D",
+   "id": "sbrown",
+   "via": "member"
+  },
+  "OH-12": {
+   "name": "Troy Balderson",
+   "party": "R",
+   "id": "balderson",
+   "via": "member"
+  },
+  "OH-13": {
+   "name": "Emilia Sykes",
+   "party": "D",
+   "id": "sykes",
+   "via": "member"
+  },
+  "OH-14": {
+   "name": "David Joyce",
+   "party": "R",
+   "id": "djoyce",
+   "via": "member"
+  },
+  "OH-15": {
+   "name": "Don Leonard",
+   "party": "D",
+   "id": "leonard",
+   "via": "elect"
+  },
+  "OK-1": {
+   "name": "Mark Tedford",
+   "party": "R",
+   "id": "tedford",
+   "via": "elect"
+  },
+  "OK-2": {
+   "name": "Josh Brecheen",
+   "party": "R",
+   "id": "brecheen",
+   "via": "member"
+  },
+  "OK-3": {
+   "name": "Frank Lucas",
+   "party": "R",
+   "id": "lucas",
+   "via": "member"
+  },
+  "OK-4": {
+   "name": "Tom Cole",
+   "party": "R",
+   "id": "cole",
+   "via": "member"
+  },
+  "OK-5": {
+   "name": "Stephanie Bice",
+   "party": "R",
+   "id": "bice",
+   "via": "member"
+  },
+  "OR-1": {
+   "name": "Suzanne Bonamici",
+   "party": "D",
+   "id": "bonamici",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "OR-2": {
+   "name": "Cliff Bentz",
+   "party": "R",
+   "id": "bentz",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "OR-3": {
+   "name": "Maxine Dexter",
+   "party": "D",
+   "id": "dexter",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "OR-4": {
+   "name": "Val Hoyle",
+   "party": "D",
+   "id": "hoyle",
+   "via": "member"
+  },
+  "OR-5": {
+   "name": "Janelle Bynum",
+   "party": "D",
+   "id": "bynum",
+   "via": "member"
+  },
+  "OR-6": {
+   "name": "Andrea Salinas",
+   "party": "D",
+   "id": "salinas",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-1": {
+   "name": "Bob Harvie",
+   "party": "D",
+   "id": "harvie",
+   "via": "elect"
+  },
+  "PA-2": {
+   "name": "Brendan F. Boyle",
+   "party": "D",
+   "id": "boyle",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-3": {
+   "name": "Chris Rabb",
+   "party": "D",
+   "id": "rabb",
+   "via": "elect"
+  },
+  "PA-4": {
+   "name": "Madeleine Dean",
+   "party": "D",
+   "id": "dean",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-5": {
+   "name": "Mary Gay Scanlon",
+   "party": "D",
+   "id": "scanlon",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-6": {
+   "name": "Chrissy Houlahan",
+   "party": "D",
+   "id": "houlahan",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-7": {
+   "name": "Bob Brooks",
+   "party": "D",
+   "id": "brooks",
+   "via": "profile"
+  },
+  "PA-8": {
+   "name": "Paige Cognetti",
+   "party": "D",
+   "id": "cognetti",
+   "via": "profile"
+  },
+  "PA-9": {
+   "name": "Daniel Meuser",
+   "party": "R",
+   "id": "meuser",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-10": {
+   "name": "Janelle Stelson",
+   "party": "D",
+   "id": "stelson",
+   "via": "profile"
+  },
+  "PA-11": {
+   "name": "Lloyd Smucker",
+   "party": "R",
+   "id": "smucker",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-12": {
+   "name": "Summer L. Lee",
+   "party": "D",
+   "id": "leepa",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-13": {
+   "name": "John Joyce",
+   "party": "R",
+   "id": "jjoyce",
+   "via": "member"
+  },
+  "PA-14": {
+   "name": "Guy Reschenthaler",
+   "party": "R",
+   "id": "reschenthaler",
+   "via": "member"
+  },
+  "PA-15": {
+   "name": "Glenn Thompson",
+   "party": "R",
+   "id": "gthompson",
+   "via": "member"
+  },
+  "PA-16": {
+   "name": "Mike Kelly",
+   "party": "R",
+   "id": "mkelly",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "PA-17": {
+   "name": "Christopher R. Deluzio",
+   "party": "D",
+   "id": "deluzio",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "RI-1": {
+   "name": "Gabe Amo",
+   "party": "D",
+   "id": "amo",
+   "via": "member"
+  },
+  "RI-2": {
+   "name": "Seth Magaziner",
+   "party": "D",
+   "id": "magaziner",
+   "via": "member"
+  },
+  "SC-1": {
+   "name": "Nancy Lacore",
+   "party": "D",
+   "id": "lacore",
+   "via": "elect"
+  },
+  "SC-2": {
+   "name": "Joe Wilson",
+   "party": "R",
+   "id": "jwilson",
+   "via": "member"
+  },
+  "SC-3": {
+   "name": "Sheri Biggs",
+   "party": "R",
+   "id": "sbiggs",
+   "via": "member"
+  },
+  "SC-4": {
+   "name": "William Timmons",
+   "party": "R",
+   "id": "timmons",
+   "via": "member"
+  },
+  "SC-5": {
+   "name": "Wes Climer",
+   "party": "R",
+   "id": "climer",
+   "via": "elect"
+  },
+  "SC-6": {
+   "name": "Jim Clyburn",
+   "party": "D",
+   "id": "clyburn",
+   "via": "member"
+  },
+  "SC-7": {
+   "name": "Russell Fry",
+   "party": "R",
+   "id": "fry",
+   "via": "member"
+  },
+  "SD-0": {
+   "name": "Marty Jackley",
+   "party": "R",
+   "id": "jackley",
+   "via": "elect"
+  },
+  "TN-1": {
+   "name": "Diana Harshbarger",
+   "party": "R",
+   "id": "harshbarger",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "TN-2": {
+   "name": "Tim Burchett",
+   "party": "R",
+   "id": "burchett",
+   "via": "member"
+  },
+  "TN-3": {
+   "name": "Chuck Fleischmann",
+   "party": "R",
+   "id": "fleischmann",
+   "via": "member"
+  },
+  "TN-4": {
+   "name": "Victoria Broderick",
+   "party": "D",
+   "id": "broderick",
+   "via": "elect"
+  },
+  "TN-5": {
+   "name": "Charlie Hatcher",
+   "party": "R",
+   "id": "hatcher",
+   "via": "elect"
+  },
+  "TN-6": {
+   "name": "Johnny Garrett",
+   "party": "R",
+   "id": "garrett",
+   "via": "elect"
+  },
+  "TN-7": {
+   "name": "Matt Van Epps",
+   "party": "R",
+   "id": "vanepps",
+   "via": "member"
+  },
+  "TN-8": {
+   "name": "David Kustoff",
+   "party": "R",
+   "id": "kustoff",
+   "via": "member"
+  },
+  "TN-9": {
+   "name": "Brent Taylor",
+   "party": "R",
+   "id": "taylortn",
+   "via": "elect"
+  },
+  "TX-1": {
+   "name": "Nathaniel Moran",
+   "party": "R",
+   "id": "nmoran",
+   "via": "member"
+  },
+  "TX-2": {
+   "name": "Steve Toth",
+   "party": "R",
+   "id": "toth",
+   "via": "elect"
+  },
+  "TX-3": {
+   "name": "Keith Self",
+   "party": "R",
+   "id": "self",
+   "via": "member"
+  },
+  "TX-4": {
+   "name": "Pat Fallon",
+   "party": "R",
+   "id": "fallon",
+   "via": "member"
+  },
+  "TX-5": {
+   "name": "Lance Gooden",
+   "party": "R",
+   "id": "gooden",
+   "via": "member"
+  },
+  "TX-6": {
+   "name": "Jake Ellzey",
+   "party": "R",
+   "id": "ellzey",
+   "via": "member"
+  },
+  "TX-7": {
+   "name": "Lizzie Fletcher",
+   "party": "D",
+   "id": "fletcher",
+   "via": "member"
+  },
+  "TX-8": {
+   "name": "Jessica Steinmann",
+   "party": "R",
+   "id": "steinmann",
+   "via": "elect"
+  },
+  "TX-9": {
+   "name": "Leticia Gutierrez",
+   "party": "D",
+   "id": "gutierrez",
+   "via": "elect"
+  },
+  "TX-10": {
+   "name": "Chris Gober",
+   "party": "R",
+   "id": "gober",
+   "via": "elect"
+  },
+  "TX-11": {
+   "name": "August Pfluger",
+   "party": "R",
+   "id": "pfluger",
+   "via": "member"
+  },
+  "TX-12": {
+   "name": "Craig Goldman",
+   "party": "R",
+   "id": "cgoldman",
+   "via": "member"
+  },
+  "TX-13": {
+   "name": "Ronny Jackson",
+   "party": "R",
+   "id": "rjackson",
+   "via": "member"
+  },
+  "TX-14": {
+   "name": "Randy Weber",
+   "party": "R",
+   "id": "weber",
+   "via": "member"
+  },
+  "TX-15": {
+   "name": "Bobby Pulido",
+   "party": "D",
+   "id": "pulido",
+   "via": "profile"
+  },
+  "TX-16": {
+   "name": "Veronica Escobar",
+   "party": "D",
+   "id": "escobar",
+   "via": "member"
+  },
+  "TX-17": {
+   "name": "Pete Sessions",
+   "party": "R",
+   "id": "sessions",
+   "via": "member"
+  },
+  "TX-18": {
+   "name": "Christian Menefee",
+   "party": "D",
+   "id": "menefee",
+   "via": "member"
+  },
+  "TX-19": {
+   "name": "Tom Sell",
+   "party": "R",
+   "id": "sell",
+   "via": "elect"
+  },
+  "TX-20": {
+   "name": "Joaquin Castro",
+   "party": "D",
+   "id": "castro",
+   "via": "member"
+  },
+  "TX-21": {
+   "name": "Mark Teixeira",
+   "party": "R",
+   "id": "teixeira",
+   "via": "elect"
+  },
+  "TX-22": {
+   "name": "Trever Nehls",
+   "party": "R",
+   "id": "nehlstx",
+   "via": "elect"
+  },
+  "TX-23": {
+   "name": "Katy Padilla Stout",
+   "party": "D",
+   "id": "padillastout",
+   "via": "elect"
+  },
+  "TX-24": {
+   "name": "Beth Van Duyne",
+   "party": "R",
+   "id": "vanduyne",
+   "via": "member"
+  },
+  "TX-25": {
+   "name": "Roger Williams",
+   "party": "R",
+   "id": "rwilliams",
+   "via": "member"
+  },
+  "TX-26": {
+   "name": "Brandon Gill",
+   "party": "R",
+   "id": "gill",
+   "via": "member"
+  },
+  "TX-27": {
+   "name": "Michael Cloud",
+   "party": "R",
+   "id": "cloud",
+   "via": "member"
+  },
+  "TX-28": {
+   "name": "Henry Cuellar",
+   "party": "D",
+   "id": "cuellar",
+   "via": "member"
+  },
+  "TX-29": {
+   "name": "Sylvia Garcia",
+   "party": "D",
+   "id": "sgarcia",
+   "via": "member"
+  },
+  "TX-30": {
+   "name": "Frederick Haynes III",
+   "party": "D",
+   "id": "haynesiii",
+   "via": "elect"
+  },
+  "TX-31": {
+   "name": "John Carter",
+   "party": "R",
+   "id": "jcarter",
+   "via": "member"
+  },
+  "TX-32": {
+   "name": "Jace Yarbrough",
+   "party": "R",
+   "id": "yarbrough",
+   "via": "elect"
+  },
+  "TX-33": {
+   "name": "Colin Allred",
+   "party": "D",
+   "id": "allred",
+   "via": "elect"
+  },
+  "TX-34": {
+   "name": "Vicente Gonzalez",
+   "party": "D",
+   "id": "gonzalez",
+   "via": "profile"
+  },
+  "TX-35": {
+   "name": "Johnny Garcia",
+   "party": "D",
+   "id": "garciatx",
+   "via": "elect"
+  },
+  "TX-36": {
+   "name": "Brian Babin",
+   "party": "R",
+   "id": "babin",
+   "via": "member"
+  },
+  "TX-37": {
+   "name": "Greg Casar",
+   "party": "D",
+   "id": "casar",
+   "via": "member"
+  },
+  "TX-38": {
+   "pending": "Not called yet in the sources on file (Nov. 19, 2026)"
+  },
+  "UT-1": {
+   "name": "Ben McAdams",
+   "party": "D",
+   "id": "mcadams",
+   "via": "elect"
+  },
+  "UT-2": {
+   "name": "Blake Moore",
+   "party": "R",
+   "id": "bmoore",
+   "via": "member"
+  },
+  "UT-3": {
+   "name": "Celeste Maloy",
+   "party": "R",
+   "id": "maloy",
+   "via": "member"
+  },
+  "UT-4": {
+   "name": "Mike Kennedy",
+   "party": "R",
+   "id": "mkennedy",
+   "via": "member"
+  },
+  "VA-1": {
+   "name": "Shannon Taylor",
+   "party": "D",
+   "id": "taylorva",
+   "via": "elect"
+  },
+  "VA-2": {
+   "name": "Elaine Luria",
+   "party": "D",
+   "id": "luria",
+   "via": "profile"
+  },
+  "VA-3": {
+   "name": "Bobby Scott",
+   "party": "D",
+   "id": "scottva",
+   "via": "member"
+  },
+  "VA-4": {
+   "name": "Jennifer McClellan",
+   "party": "D",
+   "id": "mcclellan",
+   "via": "member"
+  },
+  "VA-5": {
+   "name": "John McGuire",
+   "party": "R",
+   "id": "mcguire",
+   "via": "member"
+  },
+  "VA-6": {
+   "name": "Ben Cline",
+   "party": "R",
+   "id": "cline",
+   "via": "member"
+  },
+  "VA-7": {
+   "name": "Eugene Vindman",
+   "party": "D",
+   "id": "vindman",
+   "via": "member"
+  },
+  "VA-8": {
+   "name": "Don Beyer",
+   "party": "D",
+   "id": "beyer",
+   "via": "member"
+  },
+  "VA-9": {
+   "name": "Morgan Griffith",
+   "party": "R",
+   "id": "griffith",
+   "via": "member"
+  },
+  "VA-10": {
+   "name": "Suhas Subramanyam",
+   "party": "D",
+   "id": "subramanyam",
+   "via": "member"
+  },
+  "VA-11": {
+   "name": "James Walkinshaw",
+   "party": "D",
+   "id": "walkinshaw",
+   "via": "member"
+  },
+  "VT-0": {
+   "name": "Becca Balint",
+   "party": "D",
+   "id": "balint",
+   "via": "member"
+  },
+  "WA-1": {
+   "name": "Suzan K. DelBene",
+   "party": "D",
+   "id": "delbene",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-2": {
+   "name": "Rick Larsen",
+   "party": "D",
+   "id": "larsen",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-3": {
+   "name": "Marie Gluesenkamp Perez",
+   "party": "D",
+   "id": "mgp",
+   "via": "profile"
+  },
+  "WA-4": {
+   "name": "Amanda McKinney",
+   "party": "R",
+   "id": "mckinneywa",
+   "via": "elect"
+  },
+  "WA-5": {
+   "name": "Michael Baumgartner",
+   "party": "R",
+   "id": "baumgartner",
+   "via": "member"
+  },
+  "WA-6": {
+   "name": "Emily Randall",
+   "party": "D",
+   "id": "randall",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-7": {
+   "name": "Pramila Jayapal",
+   "party": "D",
+   "id": "jayapal",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-8": {
+   "name": "Kim Schrier",
+   "party": "D",
+   "id": "schrier",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-9": {
+   "name": "Adam Smith",
+   "party": "D",
+   "id": "smithwa",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WA-10": {
+   "name": "Marilyn Strickland",
+   "party": "D",
+   "id": "strickland",
+   "via": "member",
+   "unconfirmed": "No result on Wikipedia's page yet, and no new member listed for the seat"
+  },
+  "WI-1": {
+   "name": "Mitchell Berman",
+   "party": "D",
+   "id": "berman",
+   "via": "elect"
+  },
+  "WI-2": {
+   "name": "Mark Pocan",
+   "party": "D",
+   "id": "pocan",
+   "via": "member"
+  },
+  "WI-3": {
+   "name": "Rebecca Cooke",
+   "party": "D",
+   "id": "cooke",
+   "via": "profile"
+  },
+  "WI-4": {
+   "name": "Gwen Moore",
+   "party": "D",
+   "id": "gmoore",
+   "via": "member"
+  },
+  "WI-5": {
+   "name": "Scott Fitzgerald",
+   "party": "R",
+   "id": "fitzgerald",
+   "via": "member"
+  },
+  "WI-6": {
+   "name": "Glenn Grothman",
+   "party": "R",
+   "id": "grothman",
+   "via": "member"
+  },
+  "WI-7": {
+   "name": "Michael Alfonso",
+   "party": "R",
+   "id": "alfonso",
+   "via": "elect"
+  },
+  "WI-8": {
+   "name": "Tony Wied",
+   "party": "R",
+   "id": "wied",
+   "via": "member"
+  },
+  "WV-1": {
+   "name": "Carol Miller",
+   "party": "R",
+   "id": "cmiller",
+   "via": "member"
+  },
+  "WV-2": {
+   "name": "Riley Moore",
+   "party": "R",
+   "id": "rmoore",
+   "via": "member"
+  },
+  "WY-0": {
+   "name": "Chuck Gray",
+   "party": "R",
+   "id": "graywy",
+   "via": "elect"
+  }
+ }
+}

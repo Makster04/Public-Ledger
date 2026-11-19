@@ -1,6 +1,6 @@
 {
- "about": "People taken off the site (scripts/remove-people.mjs): their profiles and records are removed, and the directory and ID builders skip them. Race results keep their names, vote shares and photos, without a profile link. Added Nov. 19, 2026: everyone the site marked \"Lost\" in the Nov. 3, 2026 general election (Alaska's Senate race was not called yet).",
- "reason": "Lost the Nov. 3, 2026 general election (Alaska's Senate race, called Nov. 17, added Nov. 19)",
+ "about": "People taken off the site (scripts/remove-people.mjs): their profiles and records are removed, and the directory and ID builders skip them. Race results keep their names, vote shares and photos, without a profile link. Added Nov. 19, 2026: everyone the site marked \"Lost\" in the Nov. 3, 2026 general election Alaska's Senate race, called Nov. 17, added Sen. Dan Sullivan on Nov. 19.",
+ "reason": "Lost the Nov. 3, 2026 general election (races called after Nov. 12 added Nov. 19)",
  "added": "2026-11-19",
  "people": [
   {
@@ -661,6 +661,50 @@
    "fecCand": "S4AK00214",
    "profile": "full",
    "race": "S-AK",
+   "inOffice": true
+  },
+  {
+   "id": "mthompson",
+   "name": "Mike Thompson",
+   "party": "D",
+   "chamber": "H",
+   "bioguide": "T000460",
+   "fecCand": "H8CA01109",
+   "profile": "basic",
+   "race": "H-CA-04",
+   "inOffice": true
+  },
+  {
+   "id": "boebert",
+   "name": "Lauren Boebert",
+   "party": "R",
+   "chamber": "H",
+   "bioguide": "B000825",
+   "fecCand": "H0CO03165",
+   "profile": "basic",
+   "race": "H-CO-04",
+   "inOffice": true
+  },
+  {
+   "id": "gmurphy",
+   "name": "Gregory F. Murphy",
+   "party": "R",
+   "chamber": "H",
+   "bioguide": "M001210",
+   "fecCand": "H0NC03172",
+   "profile": "basic",
+   "race": "H-NC-03",
+   "inOffice": true
+  },
+  {
+   "id": "desjarlais",
+   "name": "Scott DesJarlais",
+   "party": "R",
+   "chamber": "H",
+   "bioguide": "D000616",
+   "fecCand": "H0TN04195",
+   "profile": "basic",
+   "race": "H-TN-04",
    "inOffice": true
   }
  ]
