@@ -18,6 +18,11 @@
 //   opponent and "against" the reverse.
 // Their basic profile is a directory entry like public/house.json's, marked "elect", and becomes a regular member's
 // once the new Congress is sworn in and npm run house:build reads the new House.
+// Their state legislative service (since Nov. 19, 2026): a member-elect whose prior background names a chamber of their
+// state's legislature gets the chambers and years from the infobox of their own Wikipedia article (stateLeg, in the
+// research's form: "Michigan Senate, 2019–present"), and an entry in data/config.json (elect: true) so the refresh
+// reads their state record from Open States and LegiScan, as it does for the full profiles who served in one.
+//   npm run house:elect -- --state-only   only this step, on the current public/members-elect.json
 import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
@@ -49,7 +54,7 @@ export function districtOf(cell){
   d=/^(at-large|AL|0)$/i.test(String(d).trim())?'AL':String(Number(d)).padStart(2,'0');
   return STATES[st]?`${st}-${d}`:null;
 }
-// The House table of the new-members list: [{district, first, last, party, switched, how, background, born, ref}].
+// The House table of the new-members list: [{district, first, last, page, party, switched, how, background, born, ref}].
 export function newMembers(wikitext){
   const a=wikitext.indexOf('== House of Representatives =='),b=wikitext.indexOf('====Non-voting delegates====',a);
   const out=[];
@@ -58,10 +63,12 @@ export function newMembers(wikitext){
     const district=head&&districtOf(head);if(!district)continue;
     const repLine=lines.find(l=>/\{\{sortname/.test(l));if(!repLine)continue;
     const sn=/\{\{sortname\|([^|}]*)\|([^|}]*)(?:\|([^}]*))?\}\}\s*\((DFL|[A-Z])\)/.exec(repLine);if(!sn)continue;
+    // The article the name links to: the sortname's third field, or else the name itself.
+    const page=(sn[3]||'').split('|')[0].trim()||null;
     const cells=lines.slice(lines.indexOf(repLine)+1).map(l=>l.replace(/^\s*\|\s*/,''));
     const sw=cells[0]||'',ref=cells.slice(3).join(' '),field=k=>new RegExp(`\\|\\s*${k}\\s*=\\s*([^|}]+)`).exec(ref)?.[1]?.trim()||null;
     const url=/url\s*=\s*(https?:[^|\s}]+)/.exec(ref)?.[1]||null;
-    out.push({district,first:sn[1].trim(),last:sn[2].trim(),party:sn[4]==='DFL'?'D':sn[4],switched:/\|\s*Yes\s*\]\]/.test(sw),how:plain(sw).replace(/^(Yes|No)\b\s*;?\s*/,''),
+    out.push({district,first:sn[1].trim(),last:sn[2].trim(),page,party:sn[4]==='DFL'?'D':sn[4],switched:/\|\s*Yes\s*\]\]/.test(sw),how:plain(sw).replace(/^(Yes|No)\b\s*;?\s*/,''),
       background:plain(cells[1]),born:plain(cells[2])||null,
       ref:url?{u:url,t:plain(field('title')),site:plain(field('website')||field('work')||field('publisher')).replace(/^\[\[/,'')||null,date:plain(field('date'))||null}:null});
   }
@@ -215,6 +222,92 @@ export function buildMembersElect({rows,pages,T,taken,profiled,house,skip,listUr
   return {members,races,left};
 }
 
+// ---------- state legislative service ----------
+const BODY='(?:State\\s+)?(?:Senate|House of Representatives|House of Delegates|General Assembly|Assembly|Legislature)';
+const named=name=>new RegExp(`(?<!West )\\b${name}\\b`);
+// The state whose legislature some text names (the longest name, so West Virginia is not Virginia), as a code; or null.
+export function legislatureState(text){
+  const t=[].concat(text||[]).join(' ; ');
+  const hit=Object.entries(STATES).filter(([,name])=>new RegExp(`(?<!West )\\b${name}\\s+${BODY}`).test(t)).sort((a,b)=>b[1].length-a[1].length)[0];
+  return hit?hit[0]:null;
+}
+// The parts of a member-elect's prior background that name a chamber of their own state's legislature.
+export const stateLegBody=(background,stateName)=>String(background||'').split(/\s*;\s*/)
+  .filter(x=>named(stateName).test(x)&&new RegExp(BODY).test(x)&&!/\bU\.\s?S\.|United States/.test(x));
+// The chambers they served in and when, from an article's infobox: each office (officeN, or state_senateN, state_houseN,
+// state_assemblyN, state_delegateN) with its term_startN and term_endN. A term without an office of its own is another
+// term of the office above it, as the infobox shows it. A term with no end (or one hidden in a comment) runs to now.
+// Returns [{chamber, from, to (null: present)}], each chamber's terms joined where they meet, oldest first.
+const SEAT={state_senate:v=>`${v} Senate`,state_house:v=>`${v} House of Representatives`,state_assembly:v=>/State$/.test(v)?`${v} Assembly`:`${v} State Assembly`,state_delegate:v=>`${v} House of Delegates`};
+const chamberKind=chamber=>/Senate/.test(chamber)?'senate':/Delegates/.test(chamber)?'delegates':/Assembly/.test(chamber)?'assembly':/House/.test(chamber)?'house':'legislature';
+export function stateLegTerms(text,stateName){
+  const i=String(text||'').search(/\{\{\s*Infobox/i);if(i<0)return [];
+  const field=new Map();
+  for(const m of text.slice(i,i+20000).matchAll(/^\s*\|\s*([a-z_]+\d*)\s*=[ \t]*(.*)$/gm))if(!field.has(m[1]))field.set(m[1],m[2].replace(/<!--[\s\S]*?-->/g,'').trim());
+  const year=v=>Number(/\b(1[89]\d\d|20\d\d)\b/.exec(v||'')?.[1])||null;
+  const terms=[];let chamber=null;
+  for(const n of ['',...Array.from({length:40},(_,k)=>String(k+1))]){
+    const seat=Object.keys(SEAT).find(k=>field.has(k+n)),office=field.get('office'+n);
+    if(seat)chamber=named(stateName).test(plain(field.get(seat+n)))?SEAT[seat](plain(field.get(seat+n))):null;
+    else if(office!=null){const t=plain(office);chamber=/\bU\.\s?S\.|United States/.test(t)?null:new RegExp(`(?<!West )\\b${stateName}\\s+${BODY}`).exec(t)?.[0]||null;}
+    else if(n===''&&field.has('term_start'))chamber=null;
+    const from=year(field.get('term_start'+n));if(!chamber||!from)continue;
+    const end=field.get('term_end'+n);
+    terms.push({chamber,from,to:!end||/present|incumbent/i.test(end)?null:year(end)});
+  }
+  const by=new Map();
+  for(const t of terms.sort((a,b)=>a.from-b.from)){
+    const k=chamberKind(t.chamber),g=by.get(k)||{chamber:t.chamber,terms:[]};by.set(k,g);
+    if(t.chamber.length>g.chamber.length)g.chamber=t.chamber;
+    const last=g.terms.at(-1);
+    if(last&&(last.to==null||t.from<=last.to))last.to=last.to==null||t.to==null?null:Math.max(last.to,t.to);else g.terms.push({from:t.from,to:t.to});
+  }
+  return [...by.values()].flatMap(g=>g.terms.map(t=>({chamber:g.chamber,...t}))).sort((a,b)=>a.from-b.from);
+}
+// The research's form: one entry per chamber, newest first ("Michigan Senate, 2019–present").
+export function stateLegEntries(terms){
+  const by=new Map();for(const t of terms)(by.get(t.chamber)||by.set(t.chamber,[]).get(t.chamber)).push(t);
+  const last=ts=>ts.at(-1).to??Infinity;
+  return [...by.entries()].sort((a,b)=>last(b[1])-last(a[1])).map(([c,ts])=>`${c}, ${ts.map(t=>`${t.from}–${t.to??'present'}`).join(', ')}`);
+}
+// Adds stateLeg (entries), stateLegYears ([first, last], the last being this year while they serve) and stateLegSrc to
+// each member-elect whose background names their state's legislature; read: (title, cached) -> article text.
+export async function addStateLeg(members,rows,{cached=false,read=wiki,now=new Date().getUTCFullYear()}={}){
+  const pageOf=new Map(rows.map(r=>[`${r.first} ${r.last}`.replace(/\s+/g,' '),r.page]));
+  const found=[];
+  for(const m of members){
+    delete m.stateLeg;delete m.stateLegYears;delete m.stateLegSrc;
+    if(!stateLegBody(m.background,m.stateName).length)continue;
+    const title=(pageOf.get(m.name)||m.name).replace(/ /g,'_');
+    let text='';try{text=await read(title,cached);}catch(e){console.log(`  ${m.seat} ${m.name}: ${e.message}`);}
+    const terms=stateLegTerms(text,m.stateName);
+    m.stateLeg=terms.length?stateLegEntries(terms):stateLegBody(m.background,m.stateName);
+    m.stateLegYears=terms.length?[Math.min(...terms.map(t=>t.from)),Math.max(...terms.map(t=>t.to??now))]:null;
+    m.stateLegSrc={t:`Wikipedia: ${title.replace(/_/g,' ')}`,u:`https://en.wikipedia.org/wiki/${encodeURI(title)}`};
+    found.push(m);
+  }
+  return found;
+}
+// Their entries in data/config.json: elect and light, with no FEC or congressional IDs, so the refresh reads only their
+// state record (src/feeds.mjs state-openstates and state-legiscan) and their money stays the bulk files' above. Hand-set
+// Open States and LegiScan IDs and nicknames are kept; the entries of members-elect who left this file are dropped.
+// Returns the IDs added and dropped.
+export function electConfig(config,members){
+  const want=members.filter(m=>m.stateLeg?.length),ids=new Set(want.map(m=>m.id));
+  const dropped=config.people.filter(p=>p.elect&&!ids.has(p.id)).map(p=>p.id);
+  config.people=config.people.filter(p=>!p.elect||ids.has(p.id));
+  const added=[];
+  for(const m of want){
+    const i=config.people.findIndex(p=>p.id===m.id),p=config.people[i];
+    if(p&&!p.elect){console.log(`  ${m.id} is already someone else's ID in data/config.json; not added`);continue;}
+    const entry={id:m.id,name:m.name,short:m.short,bioguide:null,lis:null,fecCand:null,fecCmte:null,chamber:'H',state:m.state,district:m.district,race:null,
+      elect:true,light:true,stateLeg:legislatureState(m.stateLeg)||m.state,stateLegYears:m.stateLegYears,openstates:p?.openstates||null,legiscan:p?.legiscan||null,
+      ...(p?.nicknames?{nicknames:p.nicknames}:{})};
+    if(p)config.people[i]=entry;else{config.people.push(entry);added.push(m.id);}
+  }
+  return {added,dropped};
+}
+
 // ---------- the run ----------
 export async function wiki(title,cached){
   const dir=path.join(ROOT,'.local','wiki'),file=path.join(dir,`${title.replace(/[^\w–-]/g,'_')}.wiki`);
@@ -230,8 +323,24 @@ function bulk(name,cached){
     const u=spawnSync('unzip',['-p',file],{maxBuffer:1<<30,encoding:'utf8'});if(u.status!==0)throw new Error(`unzip ${name}: ${u.stderr}`);return u.stdout;})();
 }
 export const statePage=(st,d)=>st==='CA'?`2026_United_States_House_of_Representatives_elections_in_California_(districts_${Number(d)<=26?'1–26':'27–52'})`:`2026_United_States_House_of_Representatives_elections_in_${STATES[st].replace(/ /g,'_')}`;
+// The state legislative step on the file just built (or the current one), and the config entries it gives.
+async function stateStep(members,rows,cached){
+  const found=await addStateLeg(members,rows,{cached});
+  const file=path.join(ROOT,'data','config.json'),config=JSON.parse(fs.readFileSync(file,'utf8'));
+  const {added,dropped}=electConfig(config,members);
+  fs.writeFileSync(file,JSON.stringify(config,null,2));
+  console.log(`${found.length} members-elect served in their state's legislature; their state record is read by the refresh (data/config.json: ${added.length} added${dropped.length?`, ${dropped.length} dropped`:''}).`);
+  const noYears=found.filter(m=>!m.stateLegYears).map(m=>`${m.seat} ${m.name}`);
+  if(noYears.length)console.log(`No years served on Wikipedia for: ${noYears.join(', ')} (the latest sessions are searched)`);
+}
 async function main(){
   const cached=process.argv.includes('--cached'),read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));
+  if(process.argv.includes('--state-only')){
+    const file=path.join(ROOT,'public','members-elect.json'),E=read('public/members-elect.json');
+    await stateStep(E.members,newMembers(await wiki(LIST,cached)),cached);
+    fs.writeFileSync(file,JSON.stringify(E,null,1)+'\n');console.log('Wrote public/members-elect.json and data/config.json. Run npm test, then commit and push them.');
+    return;
+  }
   const D=read('public/research.json'),house=read('public/house.json').members,senate=read('public/senate.json').senators,skip=read('data/members-elect-skip.json').skip||{};
   const listUrl=`https://en.wikipedia.org/wiki/${LIST}`;
   const rows=newMembers(await wiki(LIST,cached));
@@ -249,6 +358,7 @@ async function main(){
   const taken=[...D.members,...D.cands,...(D.featured||[]),...house,...senate].map(x=>x.id);
   let previous=[];try{previous=read('public/members-elect.json').members||[];}catch{}
   const {members,races,left}=buildMembersElect({rows:wanted,pages,T,taken,profiled,house,skip,listUrl,previous});
+  await stateStep(members,wanted,cached);
   const out={about:'The House members-elect of the November 3, 2026 election with no profile on the site yet, each with a basic profile and the race they won, and the races of winners profiled after the election. From scripts/build-members-elect.mjs (npm run house:elect): who won from Wikipedia\'s list of new members of the 120th Congress and the news report of each win it cites, the count from Wikipedia\'s state pages, and the money from the FEC\'s bulk files. Unofficial until each state certifies.',
     built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:'https://www.fec.gov/data/browse-data/?tab=bulk-data'},members,races};
   fs.writeFileSync(path.join(ROOT,'public','members-elect.json'),JSON.stringify(out,null,1)+'\n');
