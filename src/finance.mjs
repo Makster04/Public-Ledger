@@ -3,7 +3,7 @@ import config from '../data/config.json' with {type:'json'};
 import {getStatus,statement} from './refresh.mjs';
 import {mergeTrades} from './merge.mjs';
 import {SINCE} from './feeds.mjs';
-import {stockHoldings} from '../public/six-scores.js';
+import {stockHoldings,tradeCoverage} from '../public/six-scores.js';
 import {holdingsLead,assetKind} from '../public/holdings.js';
 import {LATE_DAYS} from '../public/grades.js';
 
@@ -106,11 +106,10 @@ export function cardBmi(own,{chamber,job=null,cycle=config.cycle,officialFrom=nu
   const snapshot=snap?{year:snap.year??null,url:snap.url||null,unreadable:!!snap.unreadable,assets:Array.isArray(snap.assets)?snap.assets.filter(a=>assetKind(a)==='stock').map(a=>({name:a.name,type:a.type,value:a.value})):null}:null;
   const kind=chamber==='S'?'trades-senate':'trades-house',sec=own[kind]||null;
   const official=['trades-house','trades-senate'].filter(k=>own[k]),unread=official.flatMap(k=>own[k].unread||[]).length;
-  const ready=!!job&&job.status==='ready'&&!job.stale;
-  const why=!sec?'Their stock trade reports haven\'t been read yet':sec.more?'Their older trade reports are still being read':unread?`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`:!ready?(job?.error||'The latest read of their trade reports hasn\'t finished'):null;
+  const {why,asOf}=tradeCoverage(sec,job,unread);
   const lists=TRADE_KINDS.map(k=>own[k]?.rows).filter(Boolean),since=`${Number(cycle)-1}-01-01`;
   const rows=lists.length?mergeTrades(lists,[],{},{officialFrom}).slice(0,1500).filter(t=>t.official&&String(t.traded||'')>=since).map(t=>[t.traded,t.low??null,t.high??null,t.amount??null]):[];
-  return {sizes,snapshot,trades:{rows,covered:!why,why}};
+  return {sizes,snapshot,trades:{rows,covered:!why,why,...(asOf?{asOf}:{})}};
 }
 export async function getCardWealth(env){
   const kinds=[...ANNUAL_KINDS,...TRADE_KINDS,'donor-sizes'];

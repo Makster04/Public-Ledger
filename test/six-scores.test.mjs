@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX,UNBOUGHT} from '../public/six-scores.js';
+import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX,UNBOUGHT,tradeCoverage,tradesIn,TRADES_FRESH_DAYS} from '../public/six-scores.js';
 import {makeScorer} from '../public/scoring.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf8'));
@@ -88,6 +88,21 @@ test('Big Money Independence: their published formula, with the House weights',(
   const rich={...member,camp:{...member.camp,pac:0,itemized:0,unitemized:member.camp.receipts,indiv:member.camp.receipts}};
   const top=unbought(rich,{sizes:null,pacRows:[],earmarks:[],snapshot:{assets:[]},trades:{covered:true,rows:[]},pledges:pledges.map(p=>({...p,points:1,via:'pledge'}))});
   assert.ok(top.raw>100,`raw ${top.raw}`);assert.deepEqual([top.pct,top.letter,top.capped],[100,'A',true]);
+});
+
+test('trade reports read in full count for two weeks while the daily re-read waits its turn, runs or fails (Nov. 19, 2026)',()=>{
+  const now=Date.parse('2026-11-19T12:00:00Z'),sec={rows:[]};
+  assert.deepEqual(tradeCoverage(sec,{status:'ready',stale:false},0,now),{covered:true,why:null,asOf:null},'current');
+  assert.deepEqual(tradeCoverage(sec,{status:'pending',stale:true,last_success:'2026-11-16T08:00:00Z'},0,now),{covered:true,why:null,asOf:'2026-11-16'},'three days old, waiting to be read again');
+  assert.equal(tradeCoverage(sec,{status:'error',stale:true,last_success:'2026-11-10T08:00:00Z',error:'eFD refused'},0,now).asOf,'2026-11-10','a failed re-read keeps the last full read');
+  assert.equal(TRADES_FRESH_DAYS,14);
+  assert.deepEqual(tradeCoverage(sec,{status:'pending',stale:true,last_success:'2026-11-01T08:00:00Z'},0,now),{covered:false,why:'Their trade reports were last read in full on Nov. 1, 2026, over 14 days ago; they\'re waiting to be read again',asOf:null});
+  assert.match(tradeCoverage(sec,{status:'error',stale:true,last_success:'2026-11-01T08:00:00Z',error:'eFD refused'},0,now).why,/eFD refused/);
+  assert.match(tradeCoverage(null,null,0,now).why,/haven't been read yet/);
+  assert.match(tradeCoverage({more:true},{status:'ready',stale:false},0,now).why,/older trade reports/,'a read that isn\'t complete never counts');
+  assert.match(tradeCoverage(sec,{status:'ready',stale:false},2,now).why,/2 trade reports were filed on paper/);
+  // The grade says when an older read was made.
+  assert.equal(tradesIn({rows:[{traded:'2026-02-01',low:1001,high:15000}],covered:true,asOf:'2026-11-16'},'2025-01-01','2026-06-30').asOf,'2026-11-16');
 });
 
 test('Plays by the Rules: the four parts, rescaled over the ones available, minus Legal Trouble',()=>{

@@ -4,6 +4,7 @@ import {makeOrgs,EMPLOYER_ABOUT} from './orgs.js';
 import {sizeParts,sizeShare} from './donor-sizes.js';
 import {rangeText} from './net-worth.js';
 import {holdingsLead,officialDisclosureCoverage} from './holdings.js';
+import {tradeCoverage} from './six-scores.js';
 import {npOf,npLine,npDetails,npChip} from './nonprofits.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cash=n=>n==null?'Not reported':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
@@ -249,13 +250,12 @@ export const RecordLive={
   async disclosure(id,chamber){
     let p,st;try{[p,st]=await Promise.all([profileData(id),status()]);}catch{return null;}
     const kind=chamber==='S'?'trades-senate':'trades-house',sec=p?.sections?.[kind]||null,job=st?.jobs?.find(j=>j.subject===id&&j.kind===kind)||null;
-    const unread=(p?.merged?.tradesUnread||[]).length,ready=!!job&&job.status==='ready'&&!job.stale;
-    const why=!sec?'Their stock trade reports haven\'t been read yet':sec.more?'Their older trade reports are still being read':unread?`${unread} trade report${unread===1?' was':'s were'} filed on paper and can't be read automatically`:!ready?(job?.error||'The latest read of their trade reports hasn\'t finished'):null;
+    const {why,asOf}=tradeCoverage(sec,job,(p?.merged?.tradesUnread||[]).length);
     const official=(p?.merged?.trades||[]).filter(t=>t.official);
     const part=k=>p?.sections?.[k]||null;
     return {netWorth:p?.sections?.['net-worth-house']||p?.sections?.['net-worth-senate']||null,sizes:p?.sections?.['donor-sizes']||null,
       money:{history:part('campaign-history'),pacs:part('pac-history'),efile:part('pac-efile'),states:part('donor-states'),jfc:part('joint-fundraising'),industry:part('industry-gifts')},
-      trades:{rows:official,covered:!why,why,checkedAt:sec?.checkedAt||null}};
+      trades:{rows:official,covered:!why,why,asOf,checkedAt:sec?.checkedAt||null}};
   },
   async netWorthStatus(id){const s=await status();return s.jobs.find(j=>j.subject===id&&/^net-worth-/.test(j.kind))||null;},
   async standalone(host,id){
