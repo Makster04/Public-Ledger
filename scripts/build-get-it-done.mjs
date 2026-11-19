@@ -29,8 +29,10 @@ export const COUNTED=new Set(['HR','S','HJRES','SJRES']);
 export const ADVANCED=/became public law|signed by (the )?president|presented to (the )?president|passed (the )?(house|senate)|passed\/agreed to|agreed to in (the )?(house|senate)|ordered to be reported|reported (by|with|without|to|favorably)|placed on (the )?(senate legislative |union |house )?calendar|received in the (house|senate)|message on (house|senate) action|resolving differences|conference report|cleared for white house|vetoed|veto message|held at the desk|discharged (from|by)/i;
 export const advanced=text=>ADVANCED.test(String(text||''));
 export const MEDIAN_MIN=5;
-// Voteview's party codes: 100 Democrat, 200 Republican; independents (328) are compared with the Democrats.
-export const partyOf=code=>({'100':'D','200':'R','328':'D'})[String(code)]||null;
+// Voteview's party codes: 100 Democrat, 200 Republican; independents (328) are compared with the Democrats. Its files
+// for the 115th–117th Congresses write them as "100.0", so they are read as numbers (read as text, every member of
+// those Congresses had no party and their medians were missing).
+export const partyOf=code=>({100:'D',200:'R',328:'D'})[Number(code)]||null;
 
 // One Congress.gov request: PACE ms apart, measured from each request's start, so a full run (about 2,000 requests)
 // stays well under the key's 5,000 an hour with room for the refresh running beside it. Too many requests (429): wait
