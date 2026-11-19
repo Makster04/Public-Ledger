@@ -26,7 +26,8 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const BULK='https://www.fec.gov/files/bulk-downloads/2026';
 const LIST='List_of_new_members_of_the_120th_United_States_Congress';
-const UA='PublicLedger/1.0 (members-elect list for a nonprofit scorecard; https://github.com/Makster04/Public-Ledger)';
+// A generic client name: requests to other sites don't name the project or its owner.
+export const UA='house-results-reader/1.0 (non-commercial public-records research)';
 export const STATES={AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',
   HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',
   MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',
@@ -117,9 +118,14 @@ export function fecTables({weball,ccl,cm,summary,ie}){
   return {cands,principal,committees,totals,byCand,rootFile,through:through||null};
 }
 // A nominee's FEC candidate: same state and district, the name fits; the one that raised the most when two do.
+// Two candidates of one last name in a district (Trever Nehls ran for his twin brother Troy's TX-22 in 2026): the one
+// whose first name fits comes first, then the party, then the most raised. (Before Nov. 19, 2026 the one who raised more
+// was taken, so Trever's profile had Troy's FEC ID and money.)
+export const firstFits=(fecName,name)=>{const f=norm(String(fecName).split(',')[1]||'').split(' ')[0],g=norm(name).split(' ')[0];return !!f&&!!g&&(f===g||f.startsWith(g)||g.startsWith(f));};
 export function findCandidate(T,district,name,party){
   const [st,d]=district.split('-'),dist=d==='AL'?'00':d;
-  const fits=T.cands.filter(c=>c.st===st&&c.dist===dist&&nameFits(c.name,name));
+  let fits=T.cands.filter(c=>c.st===st&&c.dist===dist&&nameFits(c.name,name));
+  if(fits.length>1&&fits.some(c=>firstFits(c.name,name)))fits=fits.filter(c=>firstFits(c.name,name));
   const best=fits.filter(c=>!party||(party==='D'?c.party==='DEM':party==='R'?c.party==='REP':true));
   return (best.length?best:fits).sort((a,b)=>b.receipts-a.receipts)[0]||null;
 }
@@ -158,8 +164,10 @@ const dayOf=s=>{const t=Date.parse(`${s} 12:00 UTC`);return s&&Number.isFinite(t
 // Each new member without a profile, and their race. taken: IDs already in use; profiled: district -> {id, fecCand} of a
 // full profile whose race this is; house: the sitting members (to link a defeated or departing one); skip: district ->
 // reason. Returns {members, races, left}.
-export function buildMembersElect({rows,pages,T,taken,profiled,house,skip,listUrl}){
+// previous: the last file's members, whose IDs are kept (a profile's link doesn't change when another ID frees up).
+export function buildMembersElect({rows,pages,T,taken,profiled,house,skip,listUrl,previous=[]}){
   const members=[],races=[],left=[];const used=new Set(taken);
+  const kept=new Map(previous.map(m=>[`${m.seat}|${m.name}`,m.id]));for(const id of kept.values())used.add(id);
   for(const r of rows){
     if(skip[r.district]){left.push(`${r.district} ${r.first} ${r.last}: ${skip[r.district]}`);continue;}
     const [st,d]=r.district.split('-'),page=pages[st]?.[d];
@@ -175,7 +183,8 @@ export function buildMembersElect({rows,pages,T,taken,profiled,house,skip,listUr
     const named=held?.[1]?.trim()||null,inPrimary=/in a primary/i.test(r.how);
     const heldBy=named&&(!inPrimary||house.some(m=>m.state===st&&fitsName(m.name,named)))?named:null;
         const wbox=box.nominees.find(n=>nameFits(`${r.last}, ${r.first}`,n.name)),others=box.nominees.filter(n=>n!==wbox);
-    const id=pro?.id||(()=>{let b=slug(r.last)||slug(name),x=b;if(used.has(x))x=b+st.toLowerCase();let i=2;while(used.has(x))x=b+st.toLowerCase()+(i++);used.add(x);return x;})();
+    const seatName=`${st}-${d==='AL'?'AL':Number(d)}|${name}`;
+    const id=pro?.id||kept.get(seatName)||(()=>{let b=slug(r.last)||slug(name),x=b;if(used.has(x))x=b+st.toLowerCase();let i=2;while(used.has(x))x=b+st.toLowerCase()+(i++);used.add(x);return x;})();
     const rivals=others.slice(0,1).map(n=>{const f=findCandidate(T,r.district,n.name,n.party);const h=heldBy&&fitsName(n.name,heldBy)?house.find(m=>m.state===st&&fitsName(m.name,n.name)):null;
       return {...(h?{id:h.id,bioguide:h.bioguide,incumbent:true}:{}),name:n.name,party:n.party,fecCand:f?.id||null,box:n};});
     const keyOf=n=>n.id||n.fecCand||`${st.toLowerCase()}${d}-${slug(n.name.split(' ').slice(-1)[0])}`;
@@ -207,7 +216,7 @@ export function buildMembersElect({rows,pages,T,taken,profiled,house,skip,listUr
 }
 
 // ---------- the run ----------
-async function wiki(title,cached){
+export async function wiki(title,cached){
   const dir=path.join(ROOT,'.local','wiki'),file=path.join(dir,`${title.replace(/[^\w–-]/g,'_')}.wiki`);
   if(cached&&fs.existsSync(file))return fs.readFileSync(file,'utf8');
   const get=async t=>{const r=await fetch(`https://en.wikipedia.org/w/index.php?title=${encodeURIComponent(t)}&action=raw`,{headers:{'User-Agent':UA}});if(!r.ok)throw new Error(`Wikipedia: ${t} (HTTP ${r.status})`);await sleep(600);return r.text();};
@@ -220,7 +229,7 @@ function bulk(name,cached){
     if(!name.endsWith('.zip'))return fs.readFileSync(file,'utf8');
     const u=spawnSync('unzip',['-p',file],{maxBuffer:1<<30,encoding:'utf8'});if(u.status!==0)throw new Error(`unzip ${name}: ${u.stderr}`);return u.stdout;})();
 }
-const statePage=(st,d)=>st==='CA'?`2026_United_States_House_of_Representatives_elections_in_California_(districts_${Number(d)<=26?'1–26':'27–52'})`:`2026_United_States_House_of_Representatives_elections_in_${STATES[st].replace(/ /g,'_')}`;
+export const statePage=(st,d)=>st==='CA'?`2026_United_States_House_of_Representatives_elections_in_California_(districts_${Number(d)<=26?'1–26':'27–52'})`:`2026_United_States_House_of_Representatives_elections_in_${STATES[st].replace(/ /g,'_')}`;
 async function main(){
   const cached=process.argv.includes('--cached'),read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,f),'utf8'));
   const D=read('public/research.json'),house=read('public/house.json').members,senate=read('public/senate.json').senators,skip=read('data/members-elect-skip.json').skip||{};
@@ -238,7 +247,8 @@ async function main(){
     (pages[st]||={})[d]=section?{title:t,url:`https://en.wikipedia.org/wiki/${t}#${d==='AL'?'':`District_${Number(d)}`}`.replace(/#$/,''),section}:null;}
   const T=fecTables({weball:await bulk('weball26.zip',cached),ccl:await bulk('ccl26.zip',cached),cm:await bulk('cm26.zip',cached),summary:await bulk('committee_summary_2026.csv',cached),ie:await bulk('independent_expenditure_2026.csv',cached)});
   const taken=[...D.members,...D.cands,...(D.featured||[]),...house,...senate].map(x=>x.id);
-  const {members,races,left}=buildMembersElect({rows:wanted,pages,T,taken,profiled,house,skip,listUrl});
+  let previous=[];try{previous=read('public/members-elect.json').members||[];}catch{}
+  const {members,races,left}=buildMembersElect({rows:wanted,pages,T,taken,profiled,house,skip,listUrl,previous});
   const out={about:'The House members-elect of the November 3, 2026 election with no profile on the site yet, each with a basic profile and the race they won, and the races of winners profiled after the election. From scripts/build-members-elect.mjs (npm run house:elect): who won from Wikipedia\'s list of new members of the 120th Congress and the news report of each win it cites, the count from Wikipedia\'s state pages, and the money from the FEC\'s bulk files. Unofficial until each state certifies.',
     built:new Date().toISOString().slice(0,10),source:{list:listUrl,fec:'https://www.fec.gov/data/browse-data/?tab=bulk-data'},members,races};
   fs.writeFileSync(path.join(ROOT,'public','members-elect.json'),JSON.stringify(out,null,1)+'\n');

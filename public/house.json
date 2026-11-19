@@ -380,23 +380,6 @@
    "fecCand": "H2CA06259"
   },
   {
-   "id": "mthompson",
-   "profiled": false,
-   "name": "Mike Thompson",
-   "short": "Thompson",
-   "party": "D",
-   "state": "CA",
-   "stateName": "California",
-   "district": 4,
-   "seat": "CA-4",
-   "bioguide": "T000460",
-   "since": "1999-01-06",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://mikethompson.house.gov",
-   "fecCand": "H8CA01109"
-  },
-  {
    "id": "mcclintock",
    "profiled": false,
    "name": "Tom McClintock",
@@ -1228,23 +1211,6 @@
    "nextElection": 2026,
    "site": "https://hurd.house.gov",
    "fecCand": "H4CO03357"
-  },
-  {
-   "id": "boebert",
-   "profiled": false,
-   "name": "Lauren Boebert",
-   "short": "Boebert",
-   "party": "R",
-   "state": "CO",
-   "stateName": "Colorado",
-   "district": 4,
-   "seat": "CO-4",
-   "bioguide": "B000825",
-   "since": "2021-01-03",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://boebert.house.gov",
-   "fecCand": "H0CO03165"
   },
   {
    "id": "crow",
@@ -3800,23 +3766,6 @@
    "fecCand": "H0NC02125"
   },
   {
-   "id": "gmurphy",
-   "profiled": false,
-   "name": "Gregory F. Murphy",
-   "short": "Murphy",
-   "party": "R",
-   "state": "NC",
-   "stateName": "North Carolina",
-   "district": 3,
-   "seat": "NC-3",
-   "bioguide": "M001210",
-   "since": "2019-09-17",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://murphy.house.gov",
-   "fecCand": "H0NC03172"
-  },
-  {
    "id": "foushee",
    "profiled": false,
    "name": "Valerie P. Foushee",
@@ -5603,23 +5552,6 @@
    "fecCand": "H0TN03254"
   },
   {
-   "id": "desjarlais",
-   "profiled": false,
-   "name": "Scott DesJarlais",
-   "short": "DesJarlais",
-   "party": "R",
-   "state": "TN",
-   "stateName": "Tennessee",
-   "district": 4,
-   "seat": "TN-4",
-   "bioguide": "D000616",
-   "since": "2011-01-05",
-   "termEnd": "2027-01-03",
-   "nextElection": 2026,
-   "site": "https://desjarlais.house.gov",
-   "fecCand": "H0TN04195"
-  },
-  {
    "id": "ogles",
    "profiled": false,
    "name": "Andrew Ogles",
@@ -6917,6 +6849,12 @@
   },
   {
    "state": "CA",
+   "district": 4,
+   "party": "D",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CA",
    "district": 22,
    "party": "R",
    "until": "2027-01-03"
@@ -6925,6 +6863,12 @@
    "state": "CA",
    "district": 34,
    "party": "D",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "CO",
+   "district": 4,
+   "party": "R",
    "until": "2027-01-03"
   },
   {
@@ -6984,6 +6928,12 @@
   {
    "state": "MO",
    "district": 2,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "NC",
+   "district": 3,
    "party": "R",
    "until": "2027-01-03"
   },
@@ -7068,6 +7018,12 @@
   {
    "state": "PA",
    "district": 10,
+   "party": "R",
+   "until": "2027-01-03"
+  },
+  {
+   "state": "TN",
+   "district": 4,
    "party": "R",
    "until": "2027-01-03"
   },

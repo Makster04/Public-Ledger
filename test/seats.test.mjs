@@ -63,7 +63,7 @@ test('a seat held until Jan. 3 by a member who lost in 2026: in their party\'s p
   // (this file's other tests put the removed members back into the directories: they're left out here)
   const gone=removedList().bioguides,voting=houseFile.members.filter(x=>!TERRITORIES.has(x.state)&&!gone.has(x.bioguide)),hl=houseFile.lostSeats.filter(s=>!TERRITORIES.has(s.state));
   const h=seatChart(voting,{total:435,rows:12,r0:66,r1:168,dot:4.3,label:'House',statusOf:()=>'waiting',lost:hl});
-  assert.equal(h.counts.lost,34);assert.equal(h.counts.vacant,435-voting.length-34);assert.ok(h.counts.vacant<=3,`${h.counts.vacant} vacant`);
+  assert.equal(h.counts.lost,38,'34, and four whose races were called after Nov. 12');assert.equal(h.counts.vacant,435-voting.length-38);assert.ok(h.counts.vacant<=3,`${h.counts.vacant} vacant`);
   const s=seatChart(senateFile.senators.filter(x=>!gone.has(x.bioguide)),{total:100,rows:5,r0:44,r1:100,dot:5.6,label:'Senate',statusOf:()=>'waiting',lost:senateFile.lostSeats});
   assert.deepEqual([s.counts.lost,s.counts.vacant],[6,0],'Alaska\'s too, since Nov. 19');
   for(const x of [...houseFile.lostSeats,...senateFile.lostSeats])assert.deepEqual(Object.keys(x).filter(k=>!['state','district','party','until'].includes(k)),[],'no name or ID kept');

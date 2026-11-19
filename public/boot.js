@@ -11,6 +11,8 @@ try {
   const senate=fetch('/senate.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const house=fetch('/house.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const elect=fetch('/members-elect.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  // Who won each House seat in 2026 (public/house-seats.json, npm run house:seats), for the home page's House from Jan. 3.
+  const houseSeats=fetch('/house-seats.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const execTrades=fetch('/exec-trades.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const voteParty=fetch('/vote-party.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const attendance=fetch('/attendance.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
@@ -67,6 +69,7 @@ try {
   const hs=await house;window.HOUSE=hs?.members||[];window.HOUSE_INFO=hs?{checked:hs.checked,source:hs.source,congress:hs.congress,lost:hs.lostSeats||[]}:null;
   // The House members-elect without a profile, and the races they won (public/members-elect.json, npm run house:elect).
   const el=await elect;window.MEMBERS_ELECT=el?.members||[];window.ELECT_RACES=el?.races||[];window.ELECT_INFO=el?{built:el.built,source:el.source}:null;
+  window.HOUSE_SEATS=await houseSeats;
   await import('./app.js');
   // The ticker under the top bar (public/ticker.js): the refresh's newest stock trades and the trackers' PAC checks. The
   // rest of the news is in the home page's Latest updates cards. A person is named from the profiles and both chambers'
