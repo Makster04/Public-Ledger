@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX} from '../public/six-scores.js';
+import {leanLabel,issueLeans,ideology,ratingsLean,dwLean,keepsTheirWord,showsUp,unbought,unboughtPledges,stockHoldings,aboveBoard,tradeConflicts,behaviorCci,peopleFirst,SIX,UNBOUGHT} from '../public/six-scores.js';
 import {makeScorer} from '../public/scoring.js';
 
 const read=f=>JSON.parse(fs.readFileSync(new URL(`../${f}`,import.meta.url),'utf8'));
@@ -73,6 +73,21 @@ test('Big Money Independence: their published formula, with the House weights',(
   assert.match(stockHoldings({assets:[{name:'Acme',type:'Stock',value:'Over $50,000,000'}]}).why,/open-ended/);
   assert.equal(stockHoldings(null,{status:'blind-trust'}).value,0);
   assert.match(unbought({...member,office:'President'}).why,/president/);
+  // Not in Congress (a candidate, a member-elect): no trade reports are filed, so the grade needs only their report.
+  const cand=unbought(member,{sizes,pacRows:[{kind:'corporate',amount:300_000},{kind:'labor',amount:100_000}],earmarks:[{group:'J Street',amount:50_000}],snapshot,trades:null,pledges,inCongress:false});
+  assert.equal(cand.parts.find(p=>p.key==='trades').points,0);assert.match(cand.parts.find(p=>p.key==='trades').note,/Not in Congress/);
+  assert.ok(Math.abs(cand.pct-(u.pct+4.6))<=0.15,`the member's grade without the Trade Penalty: ${cand.pct} vs ${u.pct}`);
+  assert.match(cand.needs[1][0],/candidate financial report/);assert.equal(cand.needs[1][1],true);
+  assert.equal(unbought(member,{sizes,pacRows:[{kind:'corporate',amount:1}],snapshot,trades:null,pledges}).pct,null,'a member still waits on trade reports');
+  assert.equal(unbought(member,{sizes,pacRows:[{kind:'corporate',amount:1}],snapshot:null,trades:null,pledges,inCongress:false}).pct,null,'a candidate still waits on their report');
+  // The Earmark Penalty stops at 30 points, the PAC penalty's cap (their page gives none).
+  assert.equal(UNBOUGHT.earmarkMax,30);
+  const big=unbought(member,{sizes,pacRows:[{kind:'labor',amount:400_000}],earmarks:[{group:'AIPAC',amount:3_348_020}],snapshot,trades,pledges});
+  const e=big.parts.find(p=>p.key==='earmarks');assert.equal(e.points,-30);assert.match(e.note,/capped at 30 points \(it would be 67\)/);
+  // A grade is a percentage: at most 100% (their final score has no upper cap), with the raw total kept.
+  const rich={...member,camp:{...member.camp,pac:0,itemized:0,unitemized:member.camp.receipts,indiv:member.camp.receipts}};
+  const top=unbought(rich,{sizes:null,pacRows:[],earmarks:[],snapshot:{assets:[]},trades:{covered:true,rows:[]},pledges:pledges.map(p=>({...p,points:1,via:'pledge'}))});
+  assert.ok(top.raw>100,`raw ${top.raw}`);assert.deepEqual([top.pct,top.letter,top.capped],[100,'A',true]);
 });
 
 test('Plays by the Rules: the four parts, rescaled over the ones available, minus Legal Trouble',()=>{

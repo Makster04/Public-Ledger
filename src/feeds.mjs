@@ -1488,9 +1488,10 @@ async function efdReports(env,{jar},a){
     found.push(...d.data.filter(r=>Array.isArray(r)&&fold(r[1])===fold(a.last)));
     if(start+100>=Number(d.recordsFiltered??d.recordsTotal??0))break;
   }
-  // Another senator with the same last name: keep the rows whose first name matches.
+  // Another senator with the same last name: keep the rows whose first name matches. Candidates come from every state,
+  // so for them the first name always has to match.
   const firsts=new Set(found.map(r=>fold(r[0]).split(/\s+/)[0]));
-  const rows=firsts.size>1?found.filter(r=>[a.first].flat().some(f=>fold(r[0]).startsWith(fold(f).slice(0,3)))):found;
+  const rows=firsts.size>1||a.candidate?found.filter(r=>[a.first].flat().some(f=>fold(r[0]).startsWith(fold(f).slice(0,3)))):found;
   const out=[];
   for(const r of rows){
     const href=String(r[3]).match(/href=["']([^"']+)["']/)?.[1],m=href?.match(/^\/search\/view\/(ptr|annual|paper)\/([0-9a-f-]{8,40})\/?$/i);
