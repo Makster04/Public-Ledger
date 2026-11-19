@@ -45,7 +45,8 @@ test('refresh: a House basic profile gets only the lighter set of checks',async(
   await initialize(db);
   const p=config.people.find(x=>x.light&&x.fecCand);assert.ok(p);
   const kinds=new Set((await statement(db,'SELECT kind FROM jobs WHERE subject=?',p.id).all()).results.map(r=>r.kind));
-  for(const k of LIGHT_KINDS)if(k!=='trades-house'||p.inOffice!==false)assert.ok(kinds.has(k)||k==='trades-house',`${k} for ${p.id}`);
+  // (the state legislative feeds only for those who served in a state legislature)
+  for(const k of LIGHT_KINDS)if((k!=='trades-house'||p.inOffice!==false)&&(!/^state-/.test(k)||p.stateLeg))assert.ok(kinds.has(k)||k==='trades-house',`${k} for ${p.id}`);
   assert.ok(kinds.has('committee')&&kinds.has('legislation'),'campaign committee and sponsored bills');
   for(const k of ['press','bluesky','news-gdelt','news-nyt','courts','doj','fec-legal','factcheck','outside','pac','youtube'])assert.ok(!kinds.has(k),`no ${k}`);
   // A full profile still gets everything.

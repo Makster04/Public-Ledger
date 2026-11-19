@@ -48,7 +48,9 @@ async function applySeed(db,seed) {
 // the signature changes and the missing jobs are added, without touching existing ones.
 // House members with a basic profile (light: true, scripts/build-house.mjs) get the lighter set: their cosponsored
 // bills and their House disclosures here, and their sponsored bills and campaign committee and totals in addPerson.
-export const LIGHT_KINDS=new Set(['cosponsored','trades-house','net-worth-house']);
+// The state legislative feeds are in it too: they read only those who served in a state legislature, which for a light
+// entry is a member-elect's (elect: true, scripts/build-members-elect.mjs), their only jobs until they take office.
+export const LIGHT_KINDS=new Set(['cosponsored','trades-house','net-worth-house','state-openstates','state-legiscan']);
 const feedJobs=()=>{const light=new Set(config.people.filter(p=>p.light).map(p=>p.id));
   return FEED_KINDS.flatMap(kind=>FEEDS[kind].jobs(config).filter(j=>!light.has(j.subject)||LIGHT_KINDS.has(kind)).map(j=>({...j,kind})));};
 const hash=text=>{let h=0;for(const c of text)h=(Math.imul(h,31)+c.charCodeAt(0))|0;return (h>>>0).toString(36);};

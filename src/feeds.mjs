@@ -36,16 +36,20 @@ const NICKNAMES=[['mike','michael'],['andy','andrew'],['kathy','kathleen','kathe
   ['jeff','jeffrey'],['greg','gregory'],['matt','matthew'],['nick','nicholas'],['sam','samuel','samantha'],['ben','benjamin'],['dave','david'],
   ['liz','elizabeth'],['beth','elizabeth'],['sue','susan'],['kate','katherine'],['josh','joshua'],['zach','zachary'],['jon','jonathan'],['peggy','margaret'],
   ['manny','manuel'],['jamie','james'],['charlie','charles'],['jack','john'],['larry','lawrence'],['jerry','gerald','jerome'],['terry','terrence','theresa']];
+// The initials a person goes by ("jd" for J. D. Ford), or null when their first name is a name.
+const initialsOf=p=>{const w=p.name.replace(/,?\s+(Jr\.?|Sr\.?|III|II|IV)$/i,'').split(/\s+/).slice(0,-1);return w.length&&w.every(x=>/^[A-Z]\.?$/i.test(x))||/^([A-Z]\.){2,}$/i.test(w[0]||'')?fold(w.join('')).replace(/[^a-z]/g,''):null;};
 export function firstNames(p){
   const f=fold(firstName(p)),out=new Set([f,...(p.nicknames||[]).map(fold)]);
   for(const g of NICKNAMES)if(g.includes(f))for(const x of g)out.add(x);
   return [...out];
 }
 // The person an official list's row names: the same last name (or one word of a two-word one: Gluesenkamp Perez), and
-// a first name that is one of theirs; the list's first-name field can hold middle names too.
+// a first name that is one of theirs; the list's first-name field can hold middle names too. A person known by initials
+// (J. D. Ford) matches the same initials however they're written (J.D., JD).
 export function sameName(first,last,p){
   const l=fold(last).replace(/[^a-z\s-]/g,'').trim(),sur=fold(surname(p));
   if(!(l===sur||l.split(/\s+/).includes(sur)))return false;
+  const ini=initialsOf(p);if(ini&&fold(first).replace(/[^a-z]/g,'')===ini)return true;
   const words=fold(first).split(/[\s.,]+/).filter(w=>w.length>1);
   // One of their first names exactly, or one a prefix of the other (Chris, Christopher); Michelle is not Michael.
   return firstNames(p).some(n=>words.some(w=>w===n||(w.length>=3&&n.startsWith(w))||(n.length>=3&&w.startsWith(n))));
@@ -62,6 +66,9 @@ const https=u=>{try{const x=new URL(u);return x.protocol==='https:'?x.href:null;
 const cut=(t,n)=>t&&t.length>n?t.slice(0,n-1)+'…':t||null;
 const state=c=>c?JSON.parse(c):null;
 const profiled=c=>c.people.filter(p=>p.ids);
+// Who the state legislative feeds read: the profiled people who served in a state legislature, and the House
+// members-elect who did (elect: true in data/config.json, scripts/build-members-elect.mjs; since Nov. 19, 2026).
+const stateLegislators=c=>c.people.filter(p=>(p.ids||p.elect)&&p.stateLeg);
 const congressOf=year=>Math.floor((year-1789)/2)+1;
 const BILL_PATH={HR:'house-bill',S:'senate-bill',HJRES:'house-joint-resolution',SJRES:'senate-joint-resolution',HCONRES:'house-concurrent-resolution',SCONRES:'senate-concurrent-resolution',HRES:'house-resolution',SRES:'senate-resolution'};
 const billPage=(congress,type,number)=>`https://www.congress.gov/bill/${congress}th-congress/${BILL_PATH[String(type).toUpperCase()]}/${number}`;
@@ -373,7 +380,7 @@ export const FEEDS={
   // State legislative records, from Open States and LegiScan together (merged by state bill number when read).
   // configArgs: the job's details come only from data/config.json, so a check made before they changed is updated.
   'state-openstates':{host:'v3.openstates.org',label:'State bills (Open States)',tab:'match',configArgs:true,
-    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-openstates:${p.id}`,subject:p.id,args:{state:p.stateLeg.toLowerCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,openstates:p.openstates||null}})),
+    jobs:c=>stateLegislators(c).map(p=>({id:`state-openstates:${p.id}`,subject:p.id,args:{state:p.stateLeg.toLowerCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,openstates:p.openstates||null}})),
     async page(job,a,env){
       const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
       let c=state(job.cursor);
@@ -413,7 +420,7 @@ export const FEEDS={
   // The person's LegiScan ID is looked up once and kept in the published snapshot, so each later weekly check spends one
   // query (their sponsored bills) instead of repeating the session and people lookups, which LegiScan asks users to avoid.
   'state-legiscan':{host:'api.legiscan.com',label:'State bills (LegiScan)',tab:'match',every:WEEK,configArgs:true,
-    jobs:c=>profiled(c).filter(p=>p.stateLeg).map(p=>({id:`state-legiscan:${p.id}`,subject:p.id,args:{state:p.stateLeg.toUpperCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,legiscan:p.legiscan||null}})),
+    jobs:c=>stateLegislators(c).map(p=>({id:`state-legiscan:${p.id}`,subject:p.id,args:{state:p.stateLeg.toUpperCase(),name:p.name,first:firstName(p),last:surname(p),nicknames:p.nicknames||[],years:p.stateLegYears||null,legiscan:p.legiscan||null}})),
     async page(job,a,env){
       const nc=stateNotCovered(a);if(nc)return {rows:[{id:STATE_COVERAGE,notCovered:nc}],next:null};
       const ask=(op,extra)=>requestSource(`https://api.legiscan.com/?op=${op}&${extra}`,env);

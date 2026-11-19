@@ -177,7 +177,7 @@ function ideoText(s){
     if(s.ideoKind==='former_text'){const m=(s.ideoNote||'').match(/more (conservative|liberal) than \d+% of the \d+\w* (House|Senate)/i);const ph=m?m[0]:'scored by Voteview';return {head:'In Congress: '+ph,within:'',short:'Voteview: '+ph}}
     if(s.ideoKind==='state'&&s.stateIdeology)return {head:s.stateIdeology.text,within:'',short:s.stateIdeology.text};
     if(s.ideoKind==='former_noscore')return {head:'Former member of Congress',within:'',short:'Ideology score not retrieved'};
-    if(hasStateLeg(s))return {head:'No comparable ideology score',within:'',short:(s.recordType==='state_legislator'?'State legislator':'Former state legislator')+' (no comparable score)'};
+    if(hasStateLeg(s))return {head:'No comparable ideology score',within:'',short:(s.recordType==='state_legislator'||(s.stateLeg||[]).some(e=>/present/i.test(e))?'State legislator':'Former state legislator')+' (no comparable score)'};
     return {head:'No legislative voting record',within:'',short:'No legislative voting record'};
   }
   const ch=CH[icH(s)].name, grp=s.party==='R'?(ch+' Republicans'):(ch+' Democrats');
@@ -2601,6 +2601,15 @@ const BASIC_LIVE={promises:['crec-day','hearings','statements','factcheck','news
   ethics:['netWorth','trades','legal'],pvp:['donorOrgs'],finance:['campaign','campaign-history','donor-sizes','pac','outside','donorOrgs','outside-groups']};
 const BASIC_INTRO='These update on their own from official sources. Nothing here has been reviewed yet, so none of it counts toward a grade.';
 function renderBasic(s,tab,focus){renderProfile(s,tab,focus);}
+// A member-elect's state legislative service (from their Wikipedia article; since Nov. 19, 2026), in the record on the
+// Ideology tab: the chambers and years. Their state bills and votes, from Open States and LegiScan, are in Latest
+// official records below it.
+function stateServiceBlock(s){
+  if(!s.elect||!(s.stateLeg||[]).length)return '';
+  return `<section class="recsec state" id="state-service"><div class="kicker">State legislature · not a congressional record</div><h3 style="margin-top:4px">State legislative service</h3>
+    <ul class="list small" style="margin:6px 0 10px">${s.stateLeg.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>
+    <p class="small muted">${s.stateLegSrc?`<a href="${esc(s.stateLegSrc.u)}" target="_blank" rel="noopener">${esc(s.stateLegSrc.t)} ↗</a>. `:''}${(s.stateLegYears||[])[1]<2010?`Open States and LegiScan cover state legislatures from about 2010, after ${esc(s.short)}'s service, so they list none of it.`:`${esc(s.short)}'s state bills and recorded votes are under State legislative record below, from Open States and LegiScan. They aren't reviewed, so they don't count toward a grade.`}</p></section>`;
+}
 // The score tabs a basic profile shows in the full design: all of them, filled from the official records it has.
 const BASIC_FULL=new Set(Object.keys(SIX_BY));
 function paneBasicContent(s,view,pane){
@@ -3783,7 +3792,7 @@ function recordInto(s,host){
   const SV=inc?(s.chamber==='S'?DATA.votes:[]):(s.senateVotes?DATA.votes.filter(v=>s.id in v.pos):[]);
   const HV=inc?(s.chamber==='H'?DATA.hvotes:[]):(s.ideoKind==='house'?DATA.hvotes.filter(v=>s.id in v.pos):[]);
   const ev=evidenceOf(s);
-  const jump=[SV.length&&['rec-sv','Senate votes'],HV.length&&['rec-hv','House votes'],!inc&&['rec-other',recordHeading(s)],committeesOf(s).length&&['rec-cmte','Committees'],s.stateRecord&&['rec-state','State legislative record'],['live-records','Latest official records']].filter(Boolean);
+  const jump=[SV.length&&['rec-sv','Senate votes'],HV.length&&['rec-hv','House votes'],!inc&&['rec-other',recordHeading(s)],committeesOf(s).length&&['rec-cmte','Committees'],(s.stateRecord?['rec-state','State legislative record']:stateServiceBlock(s)&&['rec-state','State legislative service']),['live-records','Latest official records']].filter(Boolean);
   host.innerHTML=`
   <h2 id="m-record" style="margin-top:34px">Votes, committees & official actions</h2>
   <p class="intro">${inc?`${esc(s.short)}'s positions on consequential ${CH[s.chamber].name} roll calls, sponsored bills`:esc(REC_LABEL[s.recordType]||'')+'. '+esc({member_of_congress:'Positions on key House roll calls and notable sponsored bills',senator:'Positions on key Senate roll calls and notable sponsored bills',former_member_of_congress:'Votes and bills from '+s.short+"'s time in Congress",state_legislator:'Recorded votes and bills from '+s.short+"'s time in a state legislature",executive:'No legislative votes in executive office; major official actions are listed instead',none:'No legislative voting record; documented public actions and commitments are listed instead'}[s.recordType]||'')}${hasStateLeg(s)&&s.recordType!=='state_legislator'?', a separate state legislative record':''}. Each item links to its source. Your match uses the coded evidence from these records.</p>
@@ -3795,7 +3804,7 @@ function recordInto(s,host){
   `<section class="recsec" id="rec-other"><div class="kicker">${esc(recordKicker(s))}</div><h3 style="margin-top:4px">${esc(recordHeading(s))}</h3>
     <div>${s.record.map(r=>`<div class="vote"><div class="d">${esc(r.date||'')}</div><div><div class="t">${esc(r.title)}</div><div class="s">${esc(r.detail)}</div><div class="s muted">${esc(r.area||'')}${r.src?` · <a href="${esc(r.src.u)}" target="_blank" rel="noopener">${esc(r.src.t)} ↗</a>`:''}${(r.more||[]).map(m=>` · <a href="${esc(m.u)}" target="_blank" rel="noopener">${esc(m.t)} ↗</a>`).join('')}</div></div><div class="pos"><span class="chip ${posClass(r.position)}">${esc(r.position||'')}</span></div></div>`).join('')}</div></section>`}
   ${committeeBlock(s)}
-  <div id="rec-state">${stateRecordBlock(s)}</div>
+  <div id="rec-state">${stateRecordBlock(s)||stateServiceBlock(s)}</div>
   <section id="live-records" style="margin-top:28px"></section>`;
   host.querySelectorAll('#rec-sv,#rec-hv').forEach(sec=>{const V=sec.id==='rec-sv'?SV:HV;const f=sec.querySelector('[data-vf]'),L=sec.querySelector('[data-vl]');
     const draw=a=>{L.innerHTML=V.filter(v=>!a||v.area===a).slice().sort((x,y)=>y.date.localeCompare(x.date)).map(v=>{const p=v.pos[s.id]||'—';return `<div class="vote"><div class="d">${v.date}</div><div><div class="t"><a href="${voteUrl(v)}" target="_blank" rel="noopener">${esc(v.short)}</a></div><div class="s">${esc(v.issue)} · ${esc(v.result)}</div><div class="s muted">${esc(v.area)}</div><div class="s" style="margin:4px 0">${leanTag(v)}</div>${billDetails(v)}</div><div class="pos">${voteText(v,p)}</div></div>`}).join('');};

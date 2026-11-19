@@ -7,6 +7,7 @@
 // People who never served in Congress are looked up in Wikidata by their FEC candidate ID when Wikidata is reachable.
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
+import {legislatureState} from './build-members-elect.mjs';
 
 const BASE='https://raw.githubusercontent.com/unitedstates/congress-legislators/gh-pages/';
 const FILES=['legislators-current','legislators-historical','legislators-social-media','committees-current','committee-membership-current'];
@@ -117,9 +118,12 @@ export async function buildIds([current,historical,social,committees,membership]
     p.social.bluesky=bluesky;p.social.threads=threads;
     p.inOffice=!!x&&current.includes(x);
     p.official=p.inOffice?officialOf(x):null;
-    // State legislative service, for the Open States and LegiScan jobs (the legislature of the state they run in).
-    p.stateLeg=(s.stateLeg||[]).length?p.state:null;
-    p.stateLegYears=p.stateLeg?stateLegYears(s.stateLeg):null;
+    // State legislative service, for the Open States and LegiScan jobs: the legislature the research's entries name
+    // (Ojeda served in West Virginia's and runs in North Carolina), or else the state they run in. A basic profile has no
+    // entries and keeps what it was given (a member-elect's, from scripts/build-members-elect.mjs, once they take office).
+    const leg=s.stateLeg||[];
+    if(leg.length){p.stateLeg=legislatureState(leg)||p.state;p.stateLegYears=stateLegYears(leg);}
+    else{p.stateLeg=p.basic?p.stateLeg??null:null;p.stateLegYears=p.stateLeg?p.stateLegYears??null:null;}
     // A featured officeholder's site is the official one, not a campaign site to snapshot.
     p.campaignSite=s.office?null:s.cand?(s.site||null):(p.campaignSite||null);
     p.openstates=p.openstates||null;p.legiscan=p.legiscan||null;

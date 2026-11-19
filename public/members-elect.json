@@ -234,7 +234,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-AZ-01"
+   "race": "H-AZ-01",
+   "stateLeg": [
+    "Arizona House of Representatives, 2019–2024"
+   ],
+   "stateLegYears": [
+    2019,
+    2024
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Amish Shah",
+    "u": "https://en.wikipedia.org/wiki/Amish_Shah"
+   }
   },
   {
    "id": "lamb",
@@ -464,7 +475,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-CA-01"
+   "race": "H-CA-01",
+   "stateLeg": [
+    "California State Senate, 2014–present"
+   ],
+   "stateLegYears": [
+    2014,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Mike McGuire (politician)",
+    "u": "https://en.wikipedia.org/wiki/Mike_McGuire_(politician)"
+   }
   },
   {
    "id": "jones",
@@ -694,7 +716,19 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-CA-06"
+   "race": "H-CA-06",
+   "stateLeg": [
+    "California State Senate, 2014–2022",
+    "California State Assembly, 2010–2014"
+   ],
+   "stateLegYears": [
+    2010,
+    2022
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Richard Pan",
+    "u": "https://en.wikipedia.org/wiki/Richard_Pan"
+   }
   },
   {
    "id": "wiener",
@@ -809,7 +843,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-CA-11"
+   "race": "H-CA-11",
+   "stateLeg": [
+    "California Senate, 2016–present"
+   ],
+   "stateLegYears": [
+    2016,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Scott Wiener",
+    "u": "https://en.wikipedia.org/wiki/Scott_Wiener"
+   }
   },
   {
    "id": "irwin",
@@ -924,7 +969,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-CA-26"
+   "race": "H-CA-26",
+   "stateLeg": [
+    "California State Assembly, 2014–present"
+   ],
+   "stateLegYears": [
+    2014,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Jacqui Irwin",
+    "u": "https://en.wikipedia.org/wiki/Jacqui_Irwin"
+   }
   },
   {
    "id": "gonzalestorres",
@@ -1154,7 +1210,19 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-CA-38"
+   "race": "H-CA-38",
+   "stateLeg": [
+    "California State Senate, 1994–2000",
+    "California State Assembly, 1992–1994"
+   ],
+   "stateLegYears": [
+    1992,
+    2000
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Hilda Solis",
+    "u": "https://en.wikipedia.org/wiki/Hilda_Solis"
+   }
   },
   {
    "id": "vonwilpert",
@@ -2649,7 +2717,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-GA-10"
+   "race": "H-GA-10",
+   "stateLeg": [
+    "Georgia House of Representatives, 2019–present"
+   ],
+   "stateLegYears": [
+    2019,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Houston Gaines",
+    "u": "https://en.wikipedia.org/wiki/Houston_Gaines"
+   }
   },
   {
    "id": "cowan",
@@ -2879,7 +2958,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-GA-13"
+   "race": "H-GA-13",
+   "stateLeg": [
+    "Georgia House of Representatives, 2019–present"
+   ],
+   "stateLegYears": [
+    2019,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Jasmine Clark",
+    "u": "https://en.wikipedia.org/wiki/Jasmine_Clark"
+   }
   },
   {
    "id": "miller",
@@ -3224,7 +3314,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-IL-07"
+   "race": "H-IL-07",
+   "stateLeg": [
+    "Illinois House of Representatives, 2007–present"
+   ],
+   "stateLegYears": [
+    2007,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: La Shawn Ford",
+    "u": "https://en.wikipedia.org/wiki/La_Shawn_Ford"
+   }
   },
   {
    "id": "beanil",
@@ -3454,7 +3555,19 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-IL-09"
+   "race": "H-IL-09",
+   "stateLeg": [
+    "Illinois Senate, 2013–2019",
+    "Illinois House of Representatives, 2011–2013"
+   ],
+   "stateLegYears": [
+    2011,
+    2019
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Daniel Biss",
+    "u": "https://en.wikipedia.org/wiki/Daniel_Biss"
+   }
   },
   {
    "id": "fordin",
@@ -3569,7 +3682,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-IN-05"
+   "race": "H-IN-05",
+   "stateLeg": [
+    "Indiana Senate, 2018–2026"
+   ],
+   "stateLegYears": [
+    2018,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: J. D. Ford",
+    "u": "https://en.wikipedia.org/wiki/J._D._Ford"
+   }
   },
   {
    "id": "jamesia",
@@ -3684,7 +3808,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-IA-02"
+   "race": "H-IA-02",
+   "stateLeg": [
+    "Iowa House of Representatives, 2019–present"
+   ],
+   "stateLegYears": [
+    2019,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Lindsay James (politician)",
+    "u": "https://en.wikipedia.org/wiki/Lindsay_James_(politician)"
+   }
   },
   {
    "id": "mcgowan",
@@ -4259,7 +4394,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-MD-05"
+   "race": "H-MD-05",
+   "stateLeg": [
+    "Maryland House of Delegates, 2019–present"
+   ],
+   "stateLegYears": [
+    2019,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Adrian Boafo",
+    "u": "https://en.wikipedia.org/wiki/Adrian_Boafo"
+   }
   },
   {
    "id": "koh",
@@ -4489,7 +4635,19 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-MI-04"
+   "race": "H-MI-04",
+   "stateLeg": [
+    "Michigan Senate, 2019–present",
+    "Michigan House of Representatives, 2011–2014"
+   ],
+   "stateLegYears": [
+    2011,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Sean McCann (politician)",
+    "u": "https://en.wikipedia.org/wiki/Sean_McCann_(politician)"
+   }
   },
   {
    "id": "moss",
@@ -4604,7 +4762,19 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-MI-11"
+   "race": "H-MI-11",
+   "stateLeg": [
+    "Michigan Senate, 2019–present",
+    "Michigan House of Representatives, 2015–2019"
+   ],
+   "stateLegYears": [
+    2015,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Jeremy Moss",
+    "u": "https://en.wikipedia.org/wiki/Jeremy_Moss"
+   }
   },
   {
    "id": "mckinney",
@@ -4719,7 +4889,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-MI-13"
+   "race": "H-MI-13",
+   "stateLeg": [
+    "Michigan House of Representatives, 2023–present"
+   ],
+   "stateLegYears": [
+    2023,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Donavan McKinney",
+    "u": "https://en.wikipedia.org/wiki/Donavan_McKinney"
+   }
   },
   {
    "id": "little",
@@ -4834,7 +5015,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-MN-02"
+   "race": "H-MN-02",
+   "stateLeg": [
+    "Minnesota Senate, 2017–2021"
+   ],
+   "stateLegYears": [
+    2017,
+    2021
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Matt Little",
+    "u": "https://en.wikipedia.org/wiki/Matt_Little"
+   }
   },
   {
    "id": "wellman",
@@ -5409,7 +5601,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-NV-02"
+   "race": "H-NV-02",
+   "stateLeg": [
+    "Nevada State Assembly, 2010–2022"
+   ],
+   "stateLegYears": [
+    2010,
+    2022
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Teresa Benitez-Thompson",
+    "u": "https://en.wikipedia.org/wiki/Teresa_Benitez-Thompson"
+   }
   },
   {
    "id": "shaheennh",
@@ -5984,7 +6187,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-NY-07"
+   "race": "H-NY-07",
+   "stateLeg": [
+    "New York State Assembly, 2025–present"
+   ],
+   "stateLegYears": [
+    2025,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Claire Valdez",
+    "u": "https://en.wikipedia.org/wiki/Claire_Valdez"
+   }
   },
   {
    "id": "lander",
@@ -6214,7 +6428,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-NY-12"
+   "race": "H-NY-12",
+   "stateLeg": [
+    "New York State Assembly, 2025–present"
+   ],
+   "stateLegYears": [
+    2025,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Micah Lasher",
+    "u": "https://en.wikipedia.org/wiki/Micah_Lasher"
+   }
   },
   {
    "id": "avilachevalier",
@@ -6559,7 +6784,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-NC-03"
+   "race": "H-NC-03",
+   "stateLeg": [
+    "North Carolina House of Representatives, 2019–2023"
+   ],
+   "stateLegYears": [
+    2019,
+    2023
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Raymond Smith Jr.",
+    "u": "https://en.wikipedia.org/wiki/Raymond_Smith_Jr."
+   }
   },
   {
    "id": "jefferson",
@@ -7249,7 +7485,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-OK-01"
+   "race": "H-OK-01",
+   "stateLeg": [
+    "Oklahoma House of Representatives, 2022–present"
+   ],
+   "stateLegYears": [
+    2022,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Mark Tedford",
+    "u": "https://en.wikipedia.org/wiki/Mark_Tedford"
+   }
   },
   {
    "id": "harvie",
@@ -7479,7 +7726,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-PA-03"
+   "race": "H-PA-03",
+   "stateLeg": [
+    "Pennsylvania House of Representatives, 2017–present"
+   ],
+   "stateLegYears": [
+    2017,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Chris Rabb",
+    "u": "https://en.wikipedia.org/wiki/Chris_Rabb"
+   }
   },
   {
    "id": "lacore",
@@ -7709,7 +7967,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-SC-05"
+   "race": "H-SC-05",
+   "stateLeg": [
+    "South Carolina Senate, 2016–2026"
+   ],
+   "stateLegYears": [
+    2016,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Wes Climer",
+    "u": "https://en.wikipedia.org/wiki/Wes_Climer"
+   }
   },
   {
    "id": "jackley",
@@ -8143,7 +8412,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-TN-06"
+   "race": "H-TN-06",
+   "stateLeg": [
+    "Tennessee House of Representatives, 2019–present"
+   ],
+   "stateLegYears": [
+    2019,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Johnny Garrett (politician)",
+    "u": "https://en.wikipedia.org/wiki/Johnny_Garrett_(politician)"
+   }
   },
   {
    "id": "taylortn",
@@ -8258,7 +8538,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-TN-09"
+   "race": "H-TN-09",
+   "stateLeg": [
+    "Tennessee Senate, 2023–present"
+   ],
+   "stateLegYears": [
+    2023,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Brent Taylor (Tennessee politician)",
+    "u": "https://en.wikipedia.org/wiki/Brent_Taylor_(Tennessee_politician)"
+   }
   },
   {
    "id": "toth",
@@ -8373,7 +8664,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-TX-02"
+   "race": "H-TX-02",
+   "stateLeg": [
+    "Texas House of Representatives, 2013–2015, 2019–present"
+   ],
+   "stateLegYears": [
+    2013,
+    2026
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Steve Toth",
+    "u": "https://en.wikipedia.org/wiki/Steve_Toth"
+   }
   },
   {
    "id": "steinmann",
@@ -9753,7 +10055,18 @@
     "t": "Wikipedia: List of new members of the 120th United States Congress",
     "u": "https://en.wikipedia.org/wiki/List_of_new_members_of_the_120th_United_States_Congress"
    },
-   "race": "H-UT-01"
+   "race": "H-UT-01",
+   "stateLeg": [
+    "Utah State Senate, 2009–2012"
+   ],
+   "stateLegYears": [
+    2009,
+    2012
+   ],
+   "stateLegSrc": {
+    "t": "Wikipedia: Ben McAdams",
+    "u": "https://en.wikipedia.org/wiki/Ben_McAdams"
+   }
   },
   {
    "id": "taylorva",

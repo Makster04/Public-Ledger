@@ -42,11 +42,19 @@ export function addMembers(current,config,research,removed=new Set()){
   const profiles=new Map([...research.members,...research.cands,...(research.featured||[])].filter(s=>s.bioguide).map(s=>[s.bioguide,s.id]));
   const inConfig=new Map(config.people.filter(p=>p.bioguide).map(p=>[p.bioguide,p]));
   const fresh=members.filter(x=>!profiles.has(x.id.bioguide)&&!inConfig.has(x.id.bioguide));
-  const ids=assignIds(fresh,config.people.map(p=>p.id));
+  // A member-elect with an entry of their own (elect: true, scripts/build-members-elect.mjs: those who served in a state
+  // legislature) is the new member in that seat with that last name: their basic profile keeps the entry's ID and state
+  // record, and the entry goes.
+  const key=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z]/g,'');
+  const elect=new Map(fresh.map(x=>{const t=x.terms.at(-1);return [x.id.bioguide,config.people.find(p=>p.elect&&p.state===t.state&&p.district===(Number(t.district)||0)&&key(p.name).includes(key(x.name.last)))];}).filter(([,p])=>p));
+  config.people=config.people.filter(p=>![...elect.values()].includes(p));
+  const ids=assignIds(fresh.filter(x=>!elect.has(x.id.bioguide)),[...config.people,...elect.values()].map(p=>p.id));
+  for(const [b,p] of elect)ids.set(b,p.id);
   for(const x of fresh){
-    const t=x.terms.at(-1);
+    const t=x.terms.at(-1),e=elect.get(x.id.bioguide);
     config.people.push({id:ids.get(x.id.bioguide),name:x.name.official_full||`${x.name.first} ${x.name.last}`,short:x.name.last,bioguide:x.id.bioguide,lis:null,
-      fecCand:houseFecId(x),fecCmte:null,chamber:'H',state:t.state,district:Number(t.district)||0,race:null,basic:true,light:true});
+      fecCand:houseFecId(x),fecCmte:null,chamber:'H',state:t.state,district:Number(t.district)||0,race:null,basic:true,light:true,
+      ...(e?{stateLeg:e.stateLeg,stateLegYears:e.stateLegYears,openstates:e.openstates||null,legiscan:e.legiscan||null,...(e.nicknames?{nicknames:e.nicknames}:{})}:{})});
   }
   const idOf=x=>profiles.get(x.id.bioguide)||inConfig.get(x.id.bioguide)?.id||ids.get(x.id.bioguide);
   // The removed members still in office: their seats only (state, district, party, the term's end), for the seating chart.
