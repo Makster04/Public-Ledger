@@ -4,7 +4,7 @@ const PALETTES={D:{accent:'#70acff',party:'Democrat'},R:{accent:'#ff969c',party:
 const LABELS=['Keeps Their Word','Shows Up','Big Money Independence','Plays by the Rules','People First'];
 const xml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const finite=value=>typeof value==='number'&&Number.isFinite(value);
-const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
+const amount=value=>finite(value)?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',minimumFractionDigits:0,maximumFractionDigits:2}).format(value):typeof value==='string'&&value.trim()?value:'Not available';
 const letter=value=>value>=90?'A':value>=80?'B':value>=70?'C':value>=60?'D':'F';
 const pct1=value=>`${(Math.round(value*10)/10).toFixed(1)}%`;
 // The card's two box colors (and the outline), the gray text on each, and the grade colors dark enough to read on paper.

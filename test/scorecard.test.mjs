@@ -43,9 +43,9 @@ const lists=[{title:'Bonuses',items:[{label:'No corporate PAC money',status:'no'
 
 test('six money boxes: raised, cash on hand and spent, then net worth, stocks held and stock trades, each with its note',()=>{
   const svg=renderScorecardSvg({...model,period:'Jan 1, 2025 – Jun 30, 2026',spent:12500000,wealth,lists});
-  for(const t of ['RAISED','CASH ON HAND','SPENT','NET WORTH','STOCKS HELD','STOCK TRADES','\\$12\\.50M','\\$1\\.15M–','\\$5\\.35M','~\\$250K','2025 annual report','2 stocks or options','Jan 2025 – Jun 2026','as of Jun 30, 2026'])assert.match(svg,tag(t));
+  for(const t of ['RAISED','CASH ON HAND','SPENT','NET WORTH','STOCKS HELD','STOCK TRADES','\\$12\\.5M','\\$1\\.15M–','\\$5\\.35M','~\\$250K','2025 annual report','2 stocks or options','Jan 2025 – Jun 2026','as of Jun 30, 2026'])assert.match(svg,tag(t));
   assert.match(svg,tag('Not read yet','fill="#b9b3a6"'),'a number not read yet is gray');
-  assert.match(svg,/<desc[^>]*>Raised \$18\.87M, cash on hand \$23\.06M, spent \$12\.50M\. Net worth \$1\.15M–\$5\.35M, Stocks held ~\$250K, Stock trades Not read yet\./);
+  assert.match(svg,/<desc[^>]*>Raised \$18\.87M, cash on hand \$23\.06M, spent \$12\.5M\. Net worth \$1\.15M–\$5\.35M, Stocks held ~\$250K, Stock trades Not read yet\./);
   const boxes=[...svg.matchAll(/<rect x="([\d.]+)" y="(568|739)" width="([\d.]+)" height="155"/g)];
   assert.equal(boxes.length,6);assert.ok(boxes.every(b=>+b[1]>=416),'beside the checklist');
   // A president (no disclosures here): three boxes. A basic profile (no checklist): the boxes take the whole width.

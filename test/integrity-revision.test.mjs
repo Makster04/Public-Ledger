@@ -19,6 +19,7 @@ test('Get It Done: bills advanced against the typical member of their party in t
   assert.deepEqual(countBills(items,[118,119]),{118:{sponsored:2,advanced:2},119:{sponsored:2,advanced:1}},'resolutions and earlier Congresses left out; arriving in the other chamber is advanced');
   assert.ok(advanced('Committee on Armed Services. Ordered to be reported with an amendment favorably.'));assert.ok(!advanced('Committee on Finance. Hearings held.'));assert.ok(!advanced('Referred to the Subcommittee on Health.'));
   assert.equal(partyOf(328),'D','independents are compared with the party they caucus with');
+  assert.deepEqual(['100','200.0','100.0','328.0','',undefined].map(partyOf),['D','R','D','D',null,null],'Voteview\'s older files write "100.0"');
   const m=medians([{congress:119,chamber:'S',party:'D',sponsored:10,advanced:1},{congress:119,chamber:'S',party:'D',sponsored:20,advanced:4},{congress:119,chamber:'S',party:'D',sponsored:4,advanced:4},{congress:119,chamber:'S',party:'R',sponsored:8,advanced:2}]);
   assert.deepEqual(m,{medians:{119:{S:{D:0.15,R:0.25}}},counted:{119:{S:{D:2,R:1}}}},'the median of members with at least 5 bills');
   // The score: twice the typical rate is capped at 100; a quarter of it is 25.
