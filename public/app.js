@@ -142,7 +142,10 @@ const icH=s=>s.ideoKind==='house'?'H':s.chamber;
 // A candidate who won is a senator- or member-elect (Nov. 19, 2026: they were still called candidates).
 const electLabel=c=>c==='S'?'Senator-elect':'House member-elect';
 const wonSeat=s=>s.cand&&!s.senInc&&statusOf(s).has('new')?statusOf(s).chamber:null;
-const chipCh=s=>s.office?CH[s.chamber].member:s.senInc?'Senate':wonSeat(s)?electLabel(wonSeat(s)):s.cand?(s.openSeat?`${CH[s.chamber].name} candidate`:(s.chamber==='S'?'Senate challenger':'House challenger')):CH[s.chamber].name;
+// Newly elected: a candidate who won, or a House member-elect's basic profile. Their label is yellow (.chip.elect).
+const electOf=s=>wonSeat(s)||(s.elect?'H':null);
+const chipCls=s=>electOf(s)?'chip ch elect':'chip ch';
+const chipCh=s=>s.office?CH[s.chamber].member:s.senInc?'Senate':electOf(s)?electLabel(electOf(s)):s.cand?(s.openSeat?`${CH[s.chamber].name} candidate`:(s.chamber==='S'?'Senate challenger':'House challenger')):CH[s.chamber].name;
 const CH={S:{name:'Senate',noun:'senator',nouns:'senators',votes:DATA.votes,member:'Senate'},H:{name:'House',noun:'representative',nouns:'representatives',votes:DATA.hvotes,member:'House'},P:{name:'Presidency',noun:'president',nouns:'presidents',votes:[],member:'President'}};
 const fmt$=n=>{if(n==null)return'—';const a=Math.abs(n);if(a>=1e6)return'$'+(n/1e6).toFixed(a>=1e7?1:2)+'M';if(a>=1e3)return'$'+(n/1e3).toFixed(a>=1e5?0:1)+'K';return'$'+n.toFixed(0)};
 const fmtFull=n=>n==null?'—':'$'+Math.round(n).toLocaleString('en-US');
@@ -695,10 +698,10 @@ const hcHead=(icon,cls,title,sub)=>`<div class="hc-sh"><h4><i class="${cls}" ari
 function homeCard(s){
   const c=s.camp, o=s.out, it=ideoText(s), race=raceOf(s), riv=rivalsOf(s), res=personResult(s);
   const ideo=s.cand&&!s.ideo&&s.ideoKind!=='former_text'&&s.ideoKind!=='state'?`No voting score · ${REC_LABEL[s.recordType]||it.short}`:it.short;
-  const sub=s.cand?`${s.openSeat?'Open seat':termNow(s)} · ${s.since}`:`In the ${CH[s.chamber].name} since ${String(s.since).split(' (')[0]} · ${termNow(s)}`;
+  const sub=s.cand?[s.openSeat?'Open seat':termNow(s),s.since].filter(Boolean).join(' · '):`In the ${CH[s.chamber].name} since ${String(s.since).split(' (')[0]} · ${termNow(s)}`;
   return `<article class="card sen-card hc" tabindex="0" data-id="${s.id}" data-party="${esc(s.party)}" role="link" aria-label="Open profile of ${esc(s.name)}">
     <div class="hc-top">${portrait(s)}<div class="hc-who">
-      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
+      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="${chipCls(s)}">${chipCh(s)}</span>${res?`<span title="${esc(res.text)}">${resultChip(res.o)}</span>`:''}</div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(sub)}</div></div></div>
     <div class="hc-ideo">${esc(ideo)}</div>
     ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
@@ -716,7 +719,7 @@ function homeCard(s){
 function featuredCard(s){
   return `<article class="card sen-card hc hc-feat" tabindex="0" data-id="${s.id}" data-party="${esc(s.party)}" role="link" aria-label="Open profile of ${esc(s.name)}">
     <div class="hc-top">${portrait(s)}<div class="hc-who">
-      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div>
+      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(seatLabel(s))}</span><span class="${chipCls(s)}">${chipCh(s)}</span></div>
       <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(s.term)}</div></div></div>
     <div class="hc-ideo">${esc(REC_SHORT[s.recordType]||'')} · ${esc(s.seat)}</div>
     ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
@@ -791,6 +794,18 @@ let TAKEN=null,WON=null;
 const takenSeats=()=>TAKEN||(TAKEN=new Set(ALL.concat(BASIC_LIST).filter(s=>{const st=statusOf(s);return st.has('new')&&st.chamber==='H';}).map(s=>raceSeat(raceFor(s)[0])).filter(Boolean)));
 const houseSeats=()=>window.HOUSE_SEATS?.seats||null;
 const wonHouseSeat=id=>{const seats=houseSeats();if(!seats)return false;WON||=new Set(Object.values(seats).map(x=>x.id).filter(Boolean));return WON.has(id);};
+// A sitting member's 2026 result for their card, once the election is over: re-elected, a new district won, leaving,
+// or not called yet (null before the seats file is on hand, or when they weren't up).
+const seatWonBy=id=>{const seats=houseSeats();return seats?Object.entries(seats).find(([,x])=>x.id===id)?.[0]||null:null;};
+function electionNote(s){
+  if(Number(s.nextElection)!==2026||s.elect)return null;
+  const next=nextOf(s);
+  if(next===null)return '2026 race not called yet';
+  if(next===false)return 'Leaving Jan. 3, 2027';
+  if(s.chamber==='H'&&!s.delegate){const won=seatWonBy(s.id),now=seatKey(s.state,s.district);
+    if(won&&won!==now)return `Won ${won.replace(/-0$/,' at large')} on Nov. 3, 2026 (new district lines)`;}
+  return 'Re-elected Nov. 3, 2026';
+}
 const NEXT_CACHE=new Map();
 function nextOf(s){
   if(NEXT_CACHE.has(s.id))return NEXT_CACHE.get(s.id);
@@ -2554,8 +2569,8 @@ function basicMoney(s,c,{mini:withMini=true}={}){
 function basicCard(s){
   return `<article class="card sen-card hc" tabindex="0" data-id="${s.id}" data-party="${esc(s.party)}" role="link" aria-label="Open profile of ${esc(s.name)}">
     <div class="hc-top">${portrait(s)}<div class="hc-who">
-      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span><span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span></div>
-      <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · Next election ${s.nextElection}`)}</div></div></div>
+      <div class="row" style="gap:5px"><span class="chip ${s.party}">${s.party} · ${esc(s.chamber==='H'?s.seat:s.state)}</span>${s.elect?`<span class="chip ch elect">${electLabel('H')}</span>${(r=>r?`<span title="${esc(r.text)}">${resultChip(r.o)}</span>`:'')(personResult(s))}`:`<span class="chip ch">${s.chamber==='H'?'House':'Senate'}</span>`}</div>
+      <div class="name">${esc(s.name)}</div><div class="hc-sub">${esc(s.elect?[s.how||'Elected Nov. 3, 2026',`takes office ${fmtDate(s.takesOffice||'2027-01-03')}`].join(' · '):`In the ${s.chamber==='H'?'House':'Senate'} since ${String(s.since).slice(0,4)} · ${electionNote(s)||`Next election ${s.nextElection}`}`)}</div></div></div>
     <div class="hc-ideo">${esc(s.ideo?ideoText(s).short:'No voting score yet')}</div>
     ${hcHead('$','mi','Dark Money Affiliated Scores','Three A–F grades on money and influence')}
     ${sixTiles(s,false,MONEY_SCORES)}
@@ -4142,7 +4157,7 @@ function renderCompare(){
     const rows=all.filter(x=>cmpGrp==='all'||x.s.chamber===cmpGrp);
     const max=Math.max(1,...rows.map(x=>Math.max(x.rc,x.of,x.oa)));
     rows.sort((a,b)=>{const x=a[sort.k],y=b[sort.k];return (typeof x==='number'?x-y:String(x).localeCompare(String(y)))*sort.dir});
-    $('#side tbody').innerHTML=rows.map(({s,rc,of,oa,sc})=>`<tr><td><a href="#${s.id}-finance">${esc(s.name)}</a><div class="row" style="margin-top:3px"><span class="chip ${s.party}">${s.party}-${esc(seatLabel(s))}</span><span class="chip ch">${chipCh(s)}</span></div></td><td class="small">${esc(ideoText(s).short)}<div class="muted">${esc(evidenceOf(s).kind==='us'?'U.S. votes':evidenceOf(s).kind==='former'?'past congressional record':evidenceOf(s).kind==='state'?'state legislative record':evidenceOf(s).kind==='exec'?'executive record, no votes':'no voting record')}</div></td><td class="r">${s.ideo&&s.ideo.unity!=null?s.ideo.unity+'%':'—'}</td><td style="min-width:170px">${cell(rc,max,'--s1',s.camp.missing?'':'through '+fmtDate(s.camp.end))}</td><td style="min-width:170px">${cell(of,max,'--neutral',s.out.incomplete.length?'incomplete data':'')}</td><td style="min-width:170px">${cell(oa,max,'--neutral','')}</td><td style="min-width:150px">${scoreBadge(sc)}<div class="small muted">${esc(evidenceMix(s))}</div></td></tr>`).join('');bindTips(app);};
+    $('#side tbody').innerHTML=rows.map(({s,rc,of,oa,sc})=>`<tr><td><a href="#${s.id}-finance">${esc(s.name)}</a><div class="row" style="margin-top:3px"><span class="chip ${s.party}">${s.party}-${esc(seatLabel(s))}</span><span class="${chipCls(s)}">${chipCh(s)}</span></div></td><td class="small">${esc(ideoText(s).short)}<div class="muted">${esc(evidenceOf(s).kind==='us'?'U.S. votes':evidenceOf(s).kind==='former'?'past congressional record':evidenceOf(s).kind==='state'?'state legislative record':evidenceOf(s).kind==='exec'?'executive record, no votes':'no voting record')}</div></td><td class="r">${s.ideo&&s.ideo.unity!=null?s.ideo.unity+'%':'—'}</td><td style="min-width:170px">${cell(rc,max,'--s1',s.camp.missing?'':'through '+fmtDate(s.camp.end))}</td><td style="min-width:170px">${cell(of,max,'--neutral',s.out.incomplete.length?'incomplete data':'')}</td><td style="min-width:170px">${cell(oa,max,'--neutral','')}</td><td style="min-width:150px">${scoreBadge(sc)}<div class="small muted">${esc(evidenceMix(s))}</div></td></tr>`).join('');bindTips(app);};
   drawS();
   $('#side thead').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k;sort=sort.k===k?{k,dir:-sort.dir}:{k,dir:k==='name'?1:-1};drawS();});
   $('#cg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cmpGrp=b.dataset.g;$('#cg .active').classList.remove('active');b.classList.add('active');drawS();});

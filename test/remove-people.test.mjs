@@ -70,6 +70,9 @@ test('the home filters: the Senate and the House as they sit from Jan. 3, 2027, 
   assert.match(app,/if\(sen\)next=Number\(sen\.nextElection\)>2026\|\|\(o==='won'&&race\.chamber==='S'\)\?'S':o==='pending'\?null:false;/,'a senator not up in 2026, or re-elected');
   assert.match(app,/next=wonHouseSeat\(s\.id\)\?'H':seats\[seatKey\(rep\.state,rep\.district\)\]\?\.pending\?null:false;/,'a House member who won a seat, wherever it is');
   assert.match(app,/const electLabel=c=>c==='S'\?'Senator-elect':'House member-elect';/);
+  assert.match(app,/const chipCls=s=>electOf\(s\)\?'chip ch elect':'chip ch';/,'the newly elected label is yellow');
+  assert.match(fs.readFileSync(new URL('../public/remake.css',import.meta.url),'utf8'),/\.chip\.ch\.elect \{ background: #f2c94c;/);
+  assert.match(app,/if\(won&&won!==now\)return `Won /,'a member who won a new district says so');
   assert.match(fs.readFileSync(new URL('../public/boot.js',import.meta.url),'utf8'),/fetch\('\/house-seats\.json'/);
   // The data behind it: the next Senate is the 65 senators not up in 2026 and the 35 winners of 2026's races.
   const D=read('public/research.json'),S=read('public/senate.json');

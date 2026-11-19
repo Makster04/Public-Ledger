@@ -140,6 +140,8 @@ input, select { font-family: inherit; }
 .chip.R { border: 1px solid #77414a; }
 .chip.I { background: #2b2d31; color: #d0d3d8; border: 1px solid #626771; }
 .chip.ghost, .chip.ch { background: #222a33; color: #bdc7d3; }
+/* Newly elected (Senator-elect, House member-elect): yellow and a size up, so they stand out from sitting members. */
+.chip.ch.elect { background: #f2c94c; color: #1b1d21; font-size: .8rem; font-weight: 700; padding: 4px 11px; letter-spacing: .02em; }
 .grid { gap: 22px; }
 .hc-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 355px), 1fr)); }
 .hc { padding: 23px 21px 18px; gap: 15px; border: 1px solid var(--person-line); border-top: 3px solid var(--person); background: var(--surface); }
