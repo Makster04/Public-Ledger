@@ -69,6 +69,23 @@ test('a seat held until Jan. 3 by a member who lost in 2026: in their party\'s p
   for(const x of [...houseFile.lostSeats,...senateFile.lostSeats])assert.deepEqual(Object.keys(x).filter(k=>!['state','district','party','until'].includes(k)),[],'no name or ID kept');
 });
 
+test('the charts show each chamber from Jan. 3, 2027: the newly elected in their seats, a seat not called yet as a dashed ring between the parties',()=>{
+  const m=(id,party,st,extra={})=>({id,party,st,name:id,state:'XX',...extra}),statusOf=x=>x.st;
+  const pending=[{seat:'NC-5',state:'NC',why:'Recount'}];
+  const o=seatOrder([m('d1','D','took'),m('r1','R','none')],4,statusOf,[],pending);
+  assert.deepEqual(o.map(x=>x?(x.pending?'pending':x.id):null),['d1','pending',null,'r1'],'between the parties, before the vacant seats');
+  const c=seatChart([m('d1','D','took',{newly:true}),m('r1','R','none')],{total:3,rows:1,r0:20,r1:40,dot:4,label:'T',statusOf,pending});
+  assert.deepEqual(c.counts,{took:1,none:1,waiting:0,vacant:0,pending:1});assert.deepEqual(c.parties,[['D',1],['R',1]],'a seat not called yet has no party');
+  assert.match(c.svg,/stroke-dasharray="2 1\.6"><title>NC-5: not called yet \(Recount\)<\/title>/);assert.match(c.svg,/<title>d1 \(D-XX\), newly elected: took/);
+  assert.equal(tookShare(c.counts),'50%','not counted as read');
+  const app=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
+  assert.match(app,/function nextChambers\(\)/);assert.match(app,/of=c=>every\.filter\(s=>nextOf\(s\)===c&&!\(c==='H'&&TERRITORIES\.has\(s\.state\)\)\)/,'the House and Senate from Jan. 3');
+  assert.match(app,/label:'House',statusOf,says,lost:houseLost,pending\}/);
+  // The bulk files read the newly elected too, a sitting member's own ID first.
+  const byCand=membersByCandidate({senators:[{id:'pappas',fecCand:'H6NH01990'}]},{members:[]},[{id:'carl',fecCand:'H0AL01055'},{id:'pappasdup',fecCand:'H6NH01990'},{id:'nofec'}]);
+  assert.deepEqual([...byCand],[['H6NH01990','pappas'],['H0AL01055','carl']]);
+});
+
 // FEC bulk-file lines, as the files lay them out (pipe-separated): cm.txt and itpas2.txt.
 const cm=(id,name,dsgn,type,org,cand='')=>[id,name,'TREASURER','1 MAIN ST','','CITY','ST','00000',dsgn,type,'','Q',org,'SPONSOR',cand].join('|');
 const pas=(cmte,tp,amt,cand,memo='',to='')=>{const c=new Array(22).fill('');c[0]=cmte;c[5]=tp;c[13]='10152025';c[14]=String(amt);c[15]=to;c[16]=cand;c[19]=memo;return c.join('|');};

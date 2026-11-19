@@ -157,9 +157,13 @@ export function trackerTotals(checks,byCand,routed={},donors={}){
   return out;
 }
 // The members, by candidate ID: every senator and every House member with one.
-export function membersByCandidate(senate,house){
+// elect: the newly elected ({id, fecCand}: public/members-elect.json, and the candidates with full profiles who won), so
+// the seating charts, which show each chamber from Jan. 3, 2027, color their seats too (since Nov. 19, 2026). A sitting
+// member's own ID comes first.
+export function membersByCandidate(senate,house,elect=[]){
   const m=new Map();
   for(const p of [...(senate?.senators||[]),...(house?.members||[])])for(const id of [p.fecCand,...(p.fecCandPast||[])])if(id)m.set(id,p.id);
+  for(const p of elect)if(p?.id&&p.fecCand&&!m.has(p.fecCand))m.set(p.fecCand,p.id);
   return m;
 }
 // The totals by member: [dollars (net of refunds), corporate PACs that gave], 0 for a member with none.
@@ -428,7 +432,8 @@ async function main(argv){
   const cycle=Number(argv[argv.indexOf('--cycle')+1])||Number(config.cycle)||2026,yy=String(cycle).slice(2),refresh=argv.includes('--refresh');
   const dir=process.env.FEC_BULK_DIR||path.join(ROOT,'.local','fec-bulk');fs.mkdirSync(dir,{recursive:true});
   const read=f=>JSON.parse(fs.readFileSync(path.join(ROOT,'public',f),'utf8'));
-  const members=membersByCandidate(read('senate.json'),read('house.json'));
+  const research=read('research.json'),elect=read('members-elect.json');
+  const members=membersByCandidate(read('senate.json'),read('house.json'),[...(elect.members||[]),...(research.cands||[])]);
   // Each member's other candidate IDs count this cycle too (a House member running for the Senate in 2026 files under a
   // new ID): byCand has them; the career totals use the same links.
   const links=await linkedCandidates({cycle,dir,refresh,byCand:members}),byCand=links.both;
