@@ -267,7 +267,8 @@ export const RecordLive={
     try{const s=await status();
       element.innerHTML=`<span>${esc(datesText(window.DATA,s.reviewedAt))}. Official records refresh separately.</span><a href="#updates">Source status &amp; coverage</a>`;
       const pane=document.querySelector('#pane'),hash=location.hash;
-      if(pane&&!pane.dataset.basic&&!document.querySelector('.profile-coverage')&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note"><b>Saved research:</b> ${esc(datesText(window.DATA,s.reviewedAt))}. Figures below keep their original reporting dates. <a href="${esc('#'+hash.slice(1).split('-')[0]+'-latest')}">See latest official records</a>.</div>`);
+      if(pane&&!pane.dataset.basic&&!document.querySelector('.profile-coverage')&&/^#[a-zA-Z0-9]+(-[a-z]+)?$/.test(hash)&&!pane.querySelector('.snapshot-note')){pane.insertAdjacentHTML('afterbegin',`<div class="snapshot-note">${esc(datesText(window.DATA,s.reviewedAt))}. Figures below keep their original reporting dates.${pane.querySelector('#live-records')?' <a href="#live-records" data-latest>See latest official records</a>.':''}</div>`);
+        pane.querySelector('[data-latest]')?.addEventListener('click',e=>{e.preventDefault();const t=pane.querySelector('#live-records');if(!t)return;for(let d=t.closest('details');d;d=d.parentElement?.closest('details'))d.open=true;t.scrollIntoView({behavior:'smooth',block:'start'});});
         const own=pane.querySelector('#live-records'),a=pane.querySelector('.snapshot-note a');if(own&&a)a.addEventListener('click',e=>{e.preventDefault();own.scrollIntoView({behavior:'smooth',block:'start'});});}
     }catch{element.innerHTML='Saved research is available. The update service is offline.';}
   },

@@ -57,7 +57,7 @@ export const ONE_DECIMAL_SINCE='2026-11-14';
 export function gradeNews(before,now,date,{wholeNumbers=false}={}){
   const out=[];
   for(const [id,x] of Object.entries(now||{}))for(const g of GRADES){
-    const a=before?.[id]?.[g],b=x?.[g];if(!b)continue;
+    const a=before?.[id]?.[g],b=x?.[g];if(!b||b.provisional)continue;   // a provisional People First isn't a grade
     const from=a?a.pct??null:null,to=b.pct??null;
     if(from===to)continue;
     // Scores are worked out to one decimal (since Nov. 14, 2026): a move under one point that keeps the letter isn't news.

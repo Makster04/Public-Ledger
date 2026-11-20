@@ -18,14 +18,14 @@
        + 0.25 × Trade Conflicts + 0.20 × Stock Disclosure Dodger) − Legal Trouble
 ```
 
-- **Trade Conflicts (0–100):** 0.45 × the share of trades in their committees' sectors + 0.30 × the share within 30 days of a related vote + 0.25 × the share in donors' companies. Needs 5 trades.
+- **Trade Conflicts (0–100):** 0.45 × the share of trades in their committees' sectors + 0.30 × the share within 30 days of a related vote + 0.25 × the share in donors' companies. Needs 5 trades: with none, or fewer, it isn't counted (no trades isn't a clean score; since Nov. 20, 2026).
 - **Stock Disclosure Dodger (0–100):** 0.70 × the share of trade reports filed more than 45 days late or never + 0.30 × the share of annual reports filed late.
 - **Legal Trouble:** the points all cases take off, up to 100. Each case = status × kind × age:
   - **Status:** confirmed finding 20, open investigation 15, unresolved allegation 15, closed without a finding (acquitted, dismissed, declined or dropped) 5. Context (a reported tie with no accusation of breaking a rule) is shown, not scored.
   - **Kind:** criminal × 1.5, ethics or civil × 1, technical × 0.5.
   - **Age:** half for a closed case decided over 10 years ago. Open cases and unresolved allegations always count in full.
 - **Outside Income & Conflicts and Gifts & Travel** need the disclosure reader, which isn't built yet. For now only Trade Conflicts, Stock Disclosure Dodger and Legal Trouble count. A missing part drops out and the others are rescaled.
-- **Needs:** a dated, sourced legal review (done Nov. 14, 2026 for every profile but the president's) plus at least one of the four parts.
+- **Needs:** a dated, sourced legal review (done Nov. 14, 2026 for every profile but the president's) plus at least two of the four parts (since Nov. 20, 2026: one part alone, or no trades at all, had given 100%).
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 

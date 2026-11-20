@@ -107,7 +107,9 @@ const MERGED={step:'partly',compromise:'partly'};
 const PLEDGE_QUESTION={'stock-trading':'congress-stock-trading'};
 // A promise's status on a day: "no action yet" past its deadline is allegedly broken; an earlier first step or compromise
 // is partially kept.
-export const promiseStatus=(p,today)=>p?.status==='no-action'&&p.deadline&&today&&p.deadline<=today?'alleged':MERGED[p?.status]||p?.status;
+// An automatic "allegedly broken" (no action while others acted) counts only once a reviewer confirms it (p.reviewed);
+// until then it is 'alleged-review': shown, not counted (since Nov. 20, 2026: it rests on a topic match, not a vote).
+export const promiseStatus=(p,today)=>{const st=p?.status==='no-action'&&p.deadline&&today&&p.deadline<=today?'alleged':MERGED[p?.status]||p?.status;return st==='alleged'&&!p?.reviewed?'alleged-review':st;};
 // A reviewed check's status: an unacted contradiction is allegedly broken.
 export const checkStatus=x=>x?.assessment==='contradiction'&&x.unacted?'alleged':CHECK_STATUS[x?.assessment];
 export function promiseScore(statements,trackers,promises=[],today=null){
@@ -118,9 +120,10 @@ export function promiseScore(statements,trackers,promises=[],today=null){
     const w=(c.stalled||0)+(c.inTheWorks||0);waiting+=w;rated+=(c.kept||0)+(c.compromise||0)+(c.broken||0)+w;}
   const pledged=new Set(list.map(x=>PLEDGE_QUESTION[x.pledge?.kind]).filter(Boolean));
   const own=(promises||[]).filter(p=>!(p.qs||[]).some(([q])=>pledged.has(q)));let open=0;
-  for(const p of own){const st=promiseStatus(p,today);if(st in n)n[st]++;else open++;}
+  let review=0;
+  for(const p of own){const st=promiseStatus(p,today);if(st in n)n[st]++;else{open++;if(st==='alleged-review')review++;}}
   const clear=n.kept+n.partly+n.broken+n.alleged,points=n.kept+PROMISE_WEIGHT.partly*n.partly;
-  return {pct:clear>=MIN_CHECKS?round1(points/clear*100):null,...n,half:n.partly,points,clear,total:list.length+rated+own.length,
+  return {pct:clear>=MIN_CHECKS?round1(points/clear*100):null,...n,half:n.partly,points,clear,review,total:list.length+rated+own.length,
     notCounted:list.filter(x=>!CHECK_STATUS[x.assessment]).length+waiting+open,open,vague:(statements||[]).filter(x=>x.vague).length,debate:(statements||[]).filter(x=>x.debate&&!x.vague).length,
     unacted:list.filter(x=>x.assessment==='contradiction'&&x.unacted).length,promises:list.filter(x=>x.promise).length+rated+own.length};
 }

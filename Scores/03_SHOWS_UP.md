@@ -23,6 +23,7 @@ Get It Done = 100% × min(1, their share of bills advanced ÷ their party's typi
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
 - **Excused absences:** none has been reviewed yet for anyone, so every missed vote counts.
-- **Get It Done for everyone:** 72 people have it. Everyone else is graded on Attendance alone, and ranked apart. The Nov. 8 run read only about 70 members before Congress.gov stopped answering, so the party medians rest on 11 senators per party and 24 House members per party. Since Nov. 18 the build reads one request a second, waits and tries again when Congress.gov is busy, saves its progress (`.local/get-it-done-cache.json`), and writes nothing until every member is read. Run `npm run getitdone:build` on the Mac (about 30–45 minutes; run it again if it stops, and it picks up where it left off), then commit `public/get-it-done.json`.
+- **Get It Done for everyone:** read for all 497 members on Nov. 19, 2026, with typical rates for both parties in every Congress since 2017. Someone with fewer than 10 sponsored bills is graded on Attendance alone, and ranked apart. Rerun `npm run getitdone:build` now and then to keep it current.
+- **Attendance is as of its last build:** `public/attendance.json` was built Nov. 8, 2026, so later roll calls aren't counted until `npm run attendance:build` runs again.
 - **Older votes:** roll calls are read from 2018 on. Earlier years can be added with `npm run attendance:build -- --from 2016`.
 - **Committee hearing attendance** isn't counted: there's no complete public record of it.

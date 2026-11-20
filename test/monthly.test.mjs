@@ -35,12 +35,13 @@ test('the monthly log records the grades the profiles show, for every reviewed a
   const scorer=makeScorer(research,committees,sectors.committees,tallies),ctx=sixContext({...files,today:day});
   const people=gradedPeople(research,{senate:files.senate.senators,house:files.house.members});
   assert.equal(Object.keys(e.scores).length,people.length);
-  for(const s of people){const x=scorer.six(s,ctx);for(const g of LOGGED_GRADES)assert.equal(e.scores[s.id][g].pct,x[g].pct,`${s.id} · ${g}`);}
+  // (a provisional People First logs its number, marked provisional)
+  for(const s of people){const x=scorer.six(s,ctx);for(const g of LOGGED_GRADES){assert.equal(e.scores[s.id][g].pct,x[g].pct??x[g].provisional?.pct??null,`${s.id} · ${g}`);assert.equal(!!e.scores[s.id][g].provisional,!!x[g].provisional,`${s.id} · ${g} provisional`);}}
   for(const m of [...files.house.members,...files.senate.senators])assert.ok(e.scores[m.id],`${m.id} is logged`);
   for(const s of [...research.members,...research.cands,...(research.featured||[])])assert.ok(e.scores[s.id],`${s.id} is logged`);
   assert.ok(!('pvp' in e.scores.collins)&&!('ethics' in e.scores.collins)&&!('promises' in e.scores.collins),'the retired grades aren\'t logged any more');
   const pf=research.members.find(s=>s.id==='collins');
-  assert.equal(e.scores.collins.peoplefirst.pct,scorer.six(pf,ctx).peoplefirst.pct);
+  {const y=scorer.six(pf,ctx).peoplefirst;assert.equal(e.scores.collins.peoplefirst.pct,y.pct??y.provisional?.pct??null);}
 });
 test('the page scores the same way: its scorer, context and basic profiles come from public/scoring.js',async()=>{
   const app=await fs.readFile(new URL('../public/app.js',import.meta.url),'utf8'),boot=await fs.readFile(new URL('../public/boot.js',import.meta.url),'utf8');

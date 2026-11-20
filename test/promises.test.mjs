@@ -104,13 +104,19 @@ test('office window: sitting members from the directory, former members from the
   assert.deepEqual([act(['q'],'S','2025-01-01','2026-01-01'),act(['q'],'S','2025-01-01','2026-01-01','A'),act(['q'],'H','2025-01-01','2026-01-01'),act(['q'],'S','2025-03-15','2026-01-01')],[2,1,1,1]);
 });
 
-test('the grade, four verdicts: kept 1, partially kept 1/2, broken and allegedly broken 0; waiting promises aren\'t counted; a passed deadline is allegedly broken',()=>{
+test('the grade, four verdicts: kept 1, partially kept 1/2, broken and allegedly broken 0; waiting promises aren\'t counted; an automatic allegedly broken waits for review',()=>{
   assert.deepEqual(PROMISE_WEIGHT,{kept:1,partly:0.5,broken:0,alleged:0});
   const P=(status,extra={})=>({status,qs:[['q',0]],...extra});
   const s=promiseScore([],[],[P('kept'),P('kept'),P('partly'),P('compromise'),P('broken'),P('alleged'),P('unclear'),P('not-tested'),P('no-action',{deadline:'2027-01-01'})],today);
-  assert.deepEqual([s.kept,s.partly,s.broken,s.alleged,s.clear,s.open,s.pct],[2,2,1,1,6,3,Math.round((2+0.5+0.5)/6*100)],'an older compromise counts as partially kept');
+  // Since Nov. 20, 2026 an automatic "allegedly broken" (no action while others acted) is shown but not counted until a
+  // reviewer confirms it.
+  assert.deepEqual([s.kept,s.partly,s.broken,s.alleged,s.clear,s.open,s.review,s.pct],[2,2,1,0,5,4,1,60],'an older compromise counts as partially kept');
+  const r=promiseScore([],[],[P('alleged',{reviewed:'2026-11-13'}),P('kept'),P('kept')],today);
+  assert.deepEqual([r.alleged,r.clear,r.review,r.pct],[1,3,0,66.7],'a reviewed one counts as broken');
+  assert.equal(promiseStatus(P('alleged'),today),'alleged-review');
   assert.equal(promiseStatus(P('step'),today),'partly');
-  assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01'}),today),'alleged');
+  assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01'}),today),'alleged-review','a passed deadline is allegedly broken, waiting for review');
+  assert.equal(promiseStatus(P('no-action',{deadline:'2026-11-01',reviewed:'2026-11-13'}),today),'alleged');
   // A reviewed check left unacted at the end of the term is allegedly broken; a plain contradiction is broken; a partly
   // supported check or a changed position is partially kept (1/2).
   const c=promiseScore([{assessment:'contradiction',unacted:{reason:'x'}},{assessment:'contradiction'},{assessment:'changed'},{assessment:'partial'}]);
