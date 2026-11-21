@@ -1,6 +1,6 @@
 // Takes the people listed in data/removed.json off the site: their profiles, their records in every data file, and
 // their place in the refresh. Race results keep them: a race keeps its winner's profile and, for each removed
-// candidate, a short record (name, party, FEC ID; their photo stays) so the result shows them without a profile link,
+// candidate, a short record (name, party, FEC ID) so the result shows them without a profile link,
 // and outside spending aimed at them still counts for or against the winner. County results are untouched.
 // The directory builders (build-house, build-senate) and build-ids read data/removed.json too, so a removed member
 // isn't added back from the official rosters before they leave office.
@@ -84,6 +84,12 @@ async function main(){
   const D=read('public/research.json'),c=removeFromResearch(D,R);write('public/research.json',D);
   console.log(`public/research.json: ${c.profiles} profiles removed; ${c.races} race places kept as results only; ${c.votes} roll-call positions and ${c.bundled} routed-gift records removed`);
   for(const [f,fn] of FILES){if(!fs.existsSync(path.join(ROOT,f)))continue;const d=read(f),n=fn(d,R);if(n){write(f,d);console.log(`${f}: ${n} removed`);}}
+  // Their portraits (public/portraits/), except a results-only nominee's, which the race result still shows.
+  const shown=new Set((D.liteRaces||[]).flatMap(r=>(r.nominees||[]).map(n=>n.id||n.fecCand)));
+  const pf='public/portraits/index.json';
+  if(fs.existsSync(path.join(ROOT,pf))){const P=read(pf),gone=Object.keys(P.people||{}).filter(id=>R.ids.has(id)&&!shown.has(id));
+    for(const id of gone){delete P.people[id];const w=path.join(ROOT,`public/portraits/${id}.webp`);if(!dry&&fs.existsSync(w))fs.unlinkSync(w);}
+    if(gone.length){write(pf,P);console.log(`${pf}: ${gone.length} portraits removed`);}}
   let files=0;for(const f of perPersonFiles(R))if(fs.existsSync(path.join(ROOT,f))){if(!dry)fs.unlinkSync(path.join(ROOT,f));files++;}
   console.log(`${files} per-person files deleted (record evidence, campaign site text).${dry?' Dry run: nothing written.':''}`);
 }

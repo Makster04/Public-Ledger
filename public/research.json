@@ -27853,7 +27853,7 @@
       "measureKey": "S:H.R.1968(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": "Bank overdraft-fee rules are not on the issue list.",
       "id": "119-1-153",
       "congress": 119,
       "session": 1,
@@ -27979,7 +27979,7 @@
       "measureKey": "S:S.J.Res.18(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": null,
       "id": "119-1-191",
       "congress": 119,
       "session": 1,
@@ -28101,7 +28101,13 @@
         "voteResult": "Agreed to 51-48",
         "provisions": []
       },
-      "codes": [],
+      "codes": [
+        {
+          "issue": "taxes",
+          "yea": "B",
+          "why": "The adopted resolution keeps reconciliation instructions pairing tax cuts with spending cuts; they were used to pass the 2025 tax-and-spending law, Public Law 119-21 (CRS summary)."
+        }
+      ],
       "measureKey": "S:H.Con.Res.14(119thCongress)"
     },
     {
@@ -29083,7 +29089,7 @@
       "measureKey": "S:S.J.Res.98(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": "Crypto market regulation is not on the issue list.",
       "id": "119-2-234",
       "congress": 119,
       "session": 2,
@@ -29810,7 +29816,7 @@
       "measureKey": "H:S.5(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": null,
       "id": "h-119-1-050",
       "year": 2025,
       "roll": 50,
@@ -30237,7 +30243,13 @@
         "voteResult": "Passed 217-215",
         "provisions": []
       },
-      "codes": [],
+      "codes": [
+        {
+          "issue": "taxes",
+          "yea": "B",
+          "why": "Its reconciliation instructions let the Ways and Means Committee add up to $4.5 trillion to deficits, mostly tax cuts, tied to at least $2 trillion in net deficit reduction from other committees (CRS summary)."
+        }
+      ],
       "measureKey": "H:H.Con.Res.14(119thCongress)"
     },
     {
@@ -30672,7 +30684,7 @@
       "measureKey": "H:H.R.1968(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": "Bank overdraft-fee rules are not on the issue list.",
       "id": "h-119-1-096",
       "year": 2025,
       "roll": 96,
@@ -31540,7 +31552,7 @@
       "measureKey": "H:H.R.22(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": null,
       "id": "h-119-1-100",
       "year": 2025,
       "roll": 100,
@@ -31967,7 +31979,13 @@
         "voteResult": "Passed 216-214",
         "provisions": []
       },
-      "codes": [],
+      "codes": [
+        {
+          "issue": "taxes",
+          "yea": "B",
+          "why": "The adopted resolution keeps reconciliation instructions pairing tax cuts with spending cuts; they were used to pass the 2025 tax-and-spending law, Public Law 119-21 (CRS summary)."
+        }
+      ],
       "measureKey": "H:H.Con.Res.14(119thCongress)"
     },
     {
@@ -33823,7 +33841,7 @@
       "measureKey": "H:S.1582(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": "Crypto market regulation is not on the issue list.",
       "id": "h-119-1-199",
       "year": 2025,
       "roll": 199,
@@ -38629,7 +38647,7 @@
       "measureKey": "H:H.R.2913(119thCongress)"
     },
     {
-      "excluded": "Not mapped to an alignment issue yet; it counts in People First (added Nov. 21, 2026).",
+      "excluded": null,
       "id": "h-119-2-216",
       "year": 2026,
       "roll": 216,
@@ -39056,7 +39074,13 @@
         "voteResult": "Passed 230-193",
         "provisions": []
       },
-      "codes": [],
+      "codes": [
+        {
+          "issue": "labor",
+          "yea": "A",
+          "why": "It sets deadlines for first union contracts, with federal mediation and then binding arbitration when talks stall (CRS summary)."
+        }
+      ],
       "measureKey": "H:H.R.5408(119thCongress)"
     },
     {
