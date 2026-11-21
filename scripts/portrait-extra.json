@@ -637,9 +637,8 @@
     "lookup": false
   },
   "sc-andrews": {
-    "file": "data/portraits/sc-andrews.png",
-    "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
-    "url": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
+    "file": "data/portraits/andrews-2026.png",
+    "credit": "Photo supplied by the site's editor for use on this site; background removed"
   },
   "tn-bradshaw": {
     "skip": "Her Wikipedia photo is a full-length shot with a face mask, too small to cut out; initials until a portrait is supplied",
@@ -706,9 +705,8 @@
     "url": "https://commons.wikimedia.org/wiki/File:Scott_Colom.jpg"
   },
   "andrews": {
-    "file": "data/portraits/sc-andrews.png",
-    "credit": "Photo: York County Democratic Party, CC BY 4.0, via Wikimedia Commons; background removed for this site",
-    "url": "https://commons.wikimedia.org/wiki/File:Annie_Andrews_York_Town_(cropped_2).png"
+    "file": "data/portraits/andrews-2026.png",
+    "credit": "Photo supplied by the site's editor for use on this site; background removed"
   },
   "mendoza": {
     "skip": "Her Wikipedia photo is a distant shot of a Marine training field, too small to cut out; initials until a portrait is supplied",
