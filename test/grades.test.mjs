@@ -67,6 +67,12 @@ test('a bill\'s score: who gains and who took a side count half each, and opposi
   // The building-trades unions and the contractors' group count on construction-pay measures only.
   assert.equal(billScore({sides:[p('nabtu','oppose'),p('abc','support')]}).status,'none');
   assert.equal(billScore({construction:true,sides:[p('nabtu','oppose'),p('abc','support')]}).score,-100);
+  // The Consumer Federation of America counts on consumer-finance measures only; the Teamsters, CWA and the Club for
+  // Growth count on every bill.
+  assert.equal(billScore({sides:[p('cfa','oppose'),p('chamber','support')]}).status,'one-side');
+  assert.equal(billScore({consumer:true,sides:[p('cfa','oppose'),p('chamber','support')]}).score,-100);
+  assert.equal(billScore({sides:[p('teamsters','support'),p('cfg','oppose')]}).score,100);
+  assert.equal(billScore({sides:[p('cwa','oppose'),p('cfg','support')]}).score,-100);
   // Access to a basic need counts with money in who gains; with both, their average.
   assert.equal(billScore({access:g(100),sides:[p('aflcio','support')]}).score,100,'access alone is a who-gains study');
   assert.deepEqual(['gainsPart','moneyPart','accessPart'].map(k=>billScore({gains:g(-100),access:g(-50)})[k]),[-75,-100,-50]);

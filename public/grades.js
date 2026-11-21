@@ -294,7 +294,11 @@ export const BILL_GROUPS={
   chamber:{org:'U.S. Chamber of Commerce',side:'business'},nfib:{org:'NFIB',side:'business'},nam:{org:'National Association of Manufacturers',side:'business'},
   taxfoundation:{org:'Tax Foundation',side:'business',tax:true},
   // Construction pay and prevailing-wage measures (bills marked "construction"), one from each side.
-  nabtu:{org:"North America's Building Trades Unions",side:'worker',construction:true},abc:{org:'Associated Builders and Contractors',side:'business',construction:true}};
+  nabtu:{org:"North America's Building Trades Unions",side:'worker',construction:true},abc:{org:'Associated Builders and Contractors',side:'business',construction:true},
+  // Added Nov. 21, 2026: two more unions, a free-market group that scores key votes, and a consumer group that counts on
+  // consumer-finance measures only (bills marked "consumer").
+  teamsters:{org:'Teamsters',side:'worker'},cwa:{org:'Communications Workers of America (CWA)',side:'worker'},
+  cfg:{org:'Club for Growth',side:'business'},cfa:{org:'Consumer Federation of America',side:'worker',consumer:true}};
 export const GAINS_STEPS={
   '100':'Lower-income households come out ahead while the top pays more',
   '50':'Tilts toward lower-income households: they gain more, or pay less, as a share of income than the top',
@@ -311,7 +315,7 @@ const SIDE_SIGN={worker:1,business:-1},STEP=x=>[100,50,0,-50,-100].includes(x?.s
 export function billScore(b){
   const money=STEP(b?.gains),access=STEP(b?.access),halves=[money,access].filter(v=>v!=null);
   const gains=halves.length?halves.reduce((t,v)=>t+v,0)/halves.length:null;
-  const stance=side=>{const ps=(b?.sides||[]).filter(p=>BILL_GROUPS[p.group]?.side===side&&(p.pos==='support'||p.pos==='oppose')&&(!BILL_GROUPS[p.group].tax||b.tax)&&(!BILL_GROUPS[p.group].construction||b.construction));
+  const stance=side=>{const ps=(b?.sides||[]).filter(p=>BILL_GROUPS[p.group]?.side===side&&(p.pos==='support'||p.pos==='oppose')&&(!BILL_GROUPS[p.group].tax||b.tax)&&(!BILL_GROUPS[p.group].construction||b.construction)&&(!BILL_GROUPS[p.group].consumer||b.consumer));
     return ps.length?ps.reduce((t,p)=>t+(p.pos==='support'?100:-100)*SIDE_SIGN[side],0)/ps.length:null;};
   const worker=stance('worker'),business=stance('business'),both=[worker,business].filter(v=>v!=null);
   const sides=both.length?both.reduce((t,v)=>t+v,0)/both.length:null;

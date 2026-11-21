@@ -56,7 +56,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   // them on each issue and count in People First, as the full profiles' do.
   const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
   const basic=ch=>config.people.filter(p=>p.basic&&p.chamber===ch&&p.bioguide).map(p=>({id:p.id,bioguide:p.bioguide}));
-  const tracked=[...ids.map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide),...basic('S').filter(p=>!ids.includes(p.id))];
+  // Bioguide IDs from the full profiles, then the basic ones: someone listed on the saved votes may have only a basic
+  // profile, and still needs a position on a newly added vote.
+  const bio=new Map();for(const p of [...config.people,...people])if(p.bioguide)bio.set(p.id,p.bioguide);
+  const tracked=[...ids.map(id=>({id,bioguide:bio.get(id)})).filter(p=>p.bioguide),...basic('S').filter(p=>!ids.includes(p.id))];
   const check=process.argv.includes('--check'),byCongress=new Map();
   for(const v of research.votes)(byCongress.get(v.congress)||byCongress.set(v.congress,[]).get(v.congress)).push(v);
   let filled=0;const differ=[];
@@ -69,7 +72,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   }
   // House: one Clerk file per vote, only for votes missing someone, plus a check of the listed positions on those.
   const listedH=[...new Set(research.hvotes.flatMap(v=>Object.keys(v.pos||{})))];
-  const housePeople=[...listedH.map(id=>({id,bioguide:people.find(p=>p.id===id)?.bioguide})).filter(p=>p.bioguide),...basic('H').filter(p=>!listedH.includes(p.id))];
+  const housePeople=[...listedH.map(id=>({id,bioguide:bio.get(id)})).filter(p=>p.bioguide),...basic('H').filter(p=>!listedH.includes(p.id))];
   for(const v of research.hvotes.filter(v=>housePeople.some(p=>!(p.id in (v.pos||{}))))){
     try{
       const args=voteArgs(v,'H'),r=houseVotePositions(normalizeVote(await requestSource(voteURL(args),{},{json:false}),args,housePeople),v,housePeople);

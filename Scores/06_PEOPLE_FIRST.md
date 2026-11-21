@@ -5,6 +5,9 @@
 **What it uses:**
 
 - Scored bills, each rated from −100 (profit side) to +100 (worker side). Half comes from a cited nonpartisan analysis of who gains. Half comes from who took sides: worker groups count toward the worker side, business groups toward the profit side.
+  - **Worker groups:** the AFL-CIO, the Teamsters, the Communications Workers of America, the Economic Policy Institute and the National Employment Law Project; ITEP on tax bills, North America's Building Trades Unions on construction-pay measures, and the Consumer Federation of America on consumer-finance measures (bank fees, credit).
+  - **Business groups:** the U.S. Chamber of Commerce, NFIB, the National Association of Manufacturers and the Club for Growth (a free-market group that scores key votes); the Tax Foundation on tax bills and Associated Builders and Contractors on construction-pay measures.
+  - The Teamsters, CWA, Club for Growth and Consumer Federation of America were added Nov. 21, 2026, from their published key votes, scorecards and letters.
 - Their votes and sponsorships on those bills.
 - Their business funders' positions, and the lobbying reports (LDA.gov) that name the scored bills.
 
@@ -26,7 +29,7 @@ Corporation Compromised = 0.65 × Business-Funder Voting + 0.35 × Lobbied Bills
   - **What it doesn't say:** a report doesn't say which side the client lobbied for, so this is how often they sided with profit on the bills their business donors worked on, not whether they did what a donor wanted.
   - **Built by hand:** `npm run lobbying:bills` reads the reports into `public/lobbied-bills.json`. Without that file, Lobbied Bills waits and Business-Funder Voting counts alone.
 - **A missing part drops out** and the other is rescaled.
-- **Minimum:** 3 scored actions for a number, and 10 scored actions on at least 5 different bills for a grade. Under that, the number is shown as **provisional**, with no letter, and left out of the Rankings and Scores lists, the share card and the news (since Nov. 20, 2026). With 10 bills scored, everyone has 3 to 9 actions, so every People First number is provisional until more bills are scored; 95% of them were exactly 0% or 100%, mostly following party.
+- **Minimum:** 3 scored actions for a number, and 10 scored actions on at least 5 different bills for a grade. Under that, the number is shown as **provisional**, with no letter, and left out of the Rankings and Scores lists, the share card and the news (since Nov. 20, 2026). On Nov. 21, 2026, six more bills of this Congress were scored (17 in all, 10 of them from this Congress), so most members who served the whole term now have a grade: 453 of the 527 people graded on the site, up from none. 32 are still provisional: the senators first elected in 2024 (7 scored bills each) and House members who arrived in special elections. The grades still follow party closely: every Democrat is between 76.5% and 100%, every Republican between 0% and 32.7%, and about two in three are exactly 0% or 100%, because 7 of this Congress's 10 scored bills were close to party-line votes.
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
@@ -36,7 +39,8 @@ Corporation Compromised = 0.65 × Business-Funder Voting + 0.35 × Lobbied Bills
   - A PAC is matched to its company by name, not by an official ID.
 - **Basic profiles:** Corporation Compromised isn't worked out, since they have no reviewed donors. Their People First is Legislative Action alone.
 - **The proposed Corporation Compromised revision** (adding employee giving) is waiting on a decision. Its employee-giving part isn't built.
-- **More scored bills:** a business group's position on the GENIUS Act (only the AFL-CIO's is on file), and cited positions on the National Right-to-Work Act.
+- **More scored bills:** cited positions on the National Right-to-Work Act; a business group's position on the Protect America's Workforce Act (H.R. 2550, restoring federal workers' union rights) and on the Senate's December 2025 health-care bills (S. 3385 and S. 3386), which have only the AFL-CIO's; and bills where the parties split, so the grades say more than party. The U.S. Chamber's own key-vote page loads by script, so only the letters a search turned up are read.
+- **Senators first elected in 2024** have 7 scored bills, under the 10 a grade needs, so their People First stays provisional.
 - **Cited statements** still to find for candidates without a voting record. For example, Charles Booker is one short of a grade.
 - **Decide** whether agency estimates and tariffs can mark a bill.
 - **Not found:** the Senate number of the BLAST Act.
