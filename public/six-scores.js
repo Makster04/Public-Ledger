@@ -111,6 +111,7 @@ export const UNBOUGHT={
   ceiling:100,                            // their final score has "no upper cap"; a grade here is a percentage, so it shows at most 100%
   reliance:{max:10,midpoint:0.20},        // their page gives the maximum; the 20% midpoint is ours
   pacFloor:30,                            // their page says the PAC penalty is floored but gives no number; ours
+  pacCoverage:0.8,                        // reviewed PAC lines must cover 80% of the cycle's PAC money (Nov. 20, 2026 audit)
   stocks:{max:20,midpoint:400000},
   trades:{countMax:20,countMidpoint:50,valueMax:0.00001,valueMidpoint:8000},   // the value maximum is copied as published
   bonus:{noCorporatePac:5,corporatePacPledge:1,noStocks:1},
@@ -174,7 +175,11 @@ export function tradesIn(trades,start,end){
 // report; trades: {rows, covered, why}; pledges: unboughtPledges(). inCongress: false for someone not sitting in Congress
 // (a candidate, a member-elect), who files no stock trade reports: the Trade Penalty is 0 for them, not waiting, and the
 // grade needs only their candidate financial report (from the Nov. 18, 2026 audit: candidates could never be graded).
-export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false,inCongress=true}={}){
+// pacSampled: {read, window} when pacRows are the reviewed PAC lines of only some of the cycle's reports and cover less
+// than UNBOUGHT.pacCoverage of the PAC money, with no whole-cycle total by type to use instead: the PAC part waits rather
+// than spread a few reports' mix over the whole cycle (from the Nov. 20, 2026 audit: a candidate with $15,000 of
+// $245,500 read got the no-corporate-PAC bonus).
+export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=null,trades=null,pledges=[],jfc=null,earmarksComplete=false,inCongress=true,pacSampled=null}={}){
   const c=person?.camp||{},R=c.receipts,W=UNBOUGHT[person?.chamber==='S'?'S':'H'];
   const needs=[['The cycle\'s FEC report',R>0&&!c.missing],[inCongress?'Their financial disclosure read (holdings and trades)':'Their candidate financial report read (holdings)',false]];
   if(person?.office)return {pct:null,why:'Not graded for a president: there is no 2026 campaign to compare',parts:[],needs};
@@ -207,7 +212,9 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   // is applied to the FEC's PAC total for the period, so every PAC dollar counts.
   const pacTotal=Number(c.pac)||0,rows=(pacRows||[]).filter(r=>Number.isFinite(r.amount)&&r.amount>0),read=rows.reduce((t,r)=>t+r.amount,0);
   // PAC money not yet sorted by type leaves the PAC part (and the no-corporate-PAC bonus) waiting; the rest still shows.
-  const pacKnown=!(pacTotal>0&&!read);
+  const thin=!!pacSampled&&pacTotal>0&&read<UNBOUGHT.pacCoverage*pacTotal;
+  const pacKnown=!(pacTotal>0&&!read)&&!thin;
+  const thinWhy=thin?`Their PAC lines read so far (${pacSampled.window||'some reports'}) cover ${Math.round(read/pacTotal*100)}% of their PAC money; the PAC part waits until ${Math.round(UNBOUGHT.pacCoverage*100)}% is read`:null;
   let pac=null,pacBy={};
   for(const r of rows){const g=UNBOUGHT_PAC_GROUP[r.kind]||'other';pacBy[g]=(pacBy[g]||0)+r.amount/read*pacTotal;}
   if(pacKnown)pac=Math.min(UNBOUGHT.pacFloor,Object.entries(pacBy).reduce((t,[g,amt])=>t+amt*W.pac[g],0));
@@ -225,7 +232,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   // Every bonus is listed, earned or not, with why: status 'yes', 'no' or 'waiting' (on a record not read yet).
   const bonusItems=[
     {label:'No corporate PAC money',max:UNBOUGHT.bonus.noCorporatePac,status:!pacKnown?'waiting':corporate===0?'yes':'no',
-      why:!pacKnown?'their PAC money isn\'t sorted by type yet':corporate===0?(pacTotal?'none of their PAC money is from corporate PACs':'no PAC money at all'):`about $${Math.round(corporate).toLocaleString('en-US')} from corporate PACs`},
+      why:thin?'not enough of their PAC money read yet':!pacKnown?'their PAC money isn\'t sorted by type yet':corporate===0?(pacTotal?'none of their PAC money is from corporate PACs':'no PAC money at all'):`about $${Math.round(corporate).toLocaleString('en-US')} from corporate PACs`},
     {label:'Pledged not to take corporate PAC money',max:UNBOUGHT.bonus.corporatePacPledge,status:corp?.via==='pledge'?'yes':'no',
       why:corp?.via==='pledge'?'signed the pledge':corp?.via==='broken'?'pledge reviewed as broken':'no pledge on file'},
     {label:'Holds no individual stocks',max:UNBOUGHT.bonus.noStocks,status:held.value==null?'waiting':!held.blindTrust&&held.count===0?'yes':'no',
@@ -237,9 +244,9 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   const list=items=>items.map(b=>`${b.status==='yes'?'✓':b.status==='waiting'?'…':'✕'} ${b.label}${b.status==='yes'?` +${b.points}`:''} (${b.why})`).join(' · ');
   const parts=[
     {key:'donor',label:'Donor',points:round1(donor),note:donorNote},
-    {key:'pac',label:'PAC Penalty',points:pac==null?null:-round1(pac),note:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
+    {key:'pac',label:'PAC Penalty',points:pac==null?null:-round1(pac),note:thin?thinWhy:!pacKnown?'Their PAC money isn\'t sorted by type yet':`${pacTotal?`$${Math.round(pacTotal).toLocaleString('en-US')} from PACs, by type`:'No PAC money'}`,by:pacBy},
     {key:'reliance',label:'PAC Reliance',points:-round1(reliance),note:`${(share(pacTotal)*100).toFixed(1)}% of receipts from PACs`},
-    {key:'earmarks',label:'Earmark Penalty',points:-round1(earmark),note:`$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' (partial: not every group searched for yet)'}${earmarkRaw>earmark?`; capped at ${UNBOUGHT.earmarkMax} points (it would be ${round1(earmarkRaw)})`:''}`},
+    {key:'earmarks',label:'Earmark Penalty',points:-round1(earmark),floor:!earmarksComplete,note:`${earmarksComplete?'':'At least '}$${Math.round(earmarked).toLocaleString('en-US')} in gifts routed through groups${earmarksComplete?' (every group the FEC shows forwarding gifts to them)':' found so far: not every group has been searched, so the penalty can only grow'}${earmarkRaw>earmark?`; capped at ${UNBOUGHT.earmarkMax} points (it would be ${round1(earmarkRaw)})`:''}`},
     {key:'stocks',label:'Stock Penalty',points:stocks==null?null:-round1(stocks),note:held.blindTrust?'In a qualified blind trust: no penalty':held.value==null?held.why:`$${Math.round(held.value).toLocaleString('en-US')} in ${held.count} individual stock${held.count===1?'':'s'}`},
     {key:'trades',label:'Trade Penalty',points:tradePts==null?null:tradePts?-round1(tradePts):0,note:traded.notRequired?'Not in Congress, so no stock trade reports are filed: none counted':traded.count==null?traded.why:`${traded.count} trade${traded.count===1?'':'s'} in this period${traded.asOf?` (their trade reports as read on ${shortDay(traded.asOf)})`:''}`},
     {key:'bonuses',label:'Bonuses',points:bonus,note:list(bonusItems),items:bonusItems},
@@ -247,7 +254,7 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
   ];
   const raw=UNBOUGHT.base+donor-(pac||0)-reliance-earmark-(stocks||0)-(tradePts||0)+bonus+pledgePts;
   const base={parts,needs,pacBy,held,traded,bonusItems,pledgeItems};
-  if(!pacKnown)return {...base,pct:null,raw:null,why:'Their PAC money hasn\'t been sorted by type yet'};
+  if(!pacKnown)return {...base,pct:null,raw:null,why:thinWhy||'Their PAC money hasn\'t been sorted by type yet'};
   if(!disclosed)return {...base,pct:null,raw:null,why:held.value==null?held.why:traded.why};
   const pct=Math.min(UNBOUGHT.ceiling,Math.max(0,round1(raw)));
   return {...base,pct,letter:letter(pct),raw,capped:raw>UNBOUGHT.ceiling,why:null};
@@ -256,7 +263,8 @@ export function unbought(person,{sizes=null,pacRows=null,earmarks=[],snapshot=nu
 // ---------- 5. Plays by the Rules ----------
 //   100 − (0.35 × Outside Income & Conflicts + 0.20 × Gifts & Travel + 0.25 × Trade Conflicts
 //          + 0.20 × Stock Disclosure Dodger) − Legal Trouble, with missing indexes left out and the rest rescaled.
-export const ABOVE_BOARD={weights:{outside:0.35,gifts:0.20,tradeConflicts:0.25,dodger:0.20}};
+// minParts: a grade needs at least two of the four parts (since Nov. 20, 2026: one part, or no trades at all, gave 100%).
+export const ABOVE_BOARD={weights:{outside:0.35,gifts:0.20,tradeConflicts:0.25,dodger:0.20},minParts:2};
 export const TRADE_CONFLICTS={weights:{committees:0.45,nearVotes:0.30,donors:0.25},minTrades:5};
 const pctOf=(n,d)=>d?n/d*100:0;
 // A trade's kind: a reviewed trade's `asset` ('stock', 'fund' …), or an official report's `assetType`.
@@ -270,7 +278,8 @@ export const tradeKind=r=>r?.assetType||(KINDS.has(r?.asset)?r.asset:'stock');
 export function tradeConflicts(rows,{covered=true,inDonors=0,why='Their stock trade reports haven\'t been read yet',known={nearVotes:true,donors:true}}={}){
   rows=rows||[];
   if(!covered)return {index:null,why,n:0,parts:null};
-  if(!rows.length)return {index:0,why:null,n:0,parts:{committees:0,nearVotes:0,donors:0},none:true};
+  // No trades isn't a clean score: Trade Conflicts needs TRADE_CONFLICTS.minTrades of them, like any other count under it.
+  if(!rows.length)return {index:null,why:`No trades in the reports read (it takes ${TRADE_CONFLICTS.minTrades})`,n:0,parts:null,none:true};
   const single=rows.filter(r=>['stock','option'].includes(tradeKind(r))&&(r.sector||r.conflict)),dollars=single.map(r=>amountMid(r.amount)),byDollar=dollars.length&&dollars.every(v=>v!=null);
   const parts={committees:!single.length?null:byDollar?pctOf(single.reduce((t,r,i)=>t+(r.conflict?dollars[i]:0),0),dollars.reduce((t,v)=>t+v,0)):pctOf(single.filter(r=>r.conflict).length,single.length),
     nearVotes:known.nearVotes===false?null:pctOf(rows.filter(r=>r.flag||r.nearVote).length,rows.length),donors:known.donors===false?null:pctOf(Math.min(inDonors,rows.length),rows.length)};
@@ -306,7 +315,7 @@ export function aboveBoard(person,{trades=null,conflicts=null,asOfYear=null}={})
   const needs=[['Financial disclosures read (income, gifts, trips, trades and filing dates)',covered||coi.complete],['Connections checked (lobbying, contracts, foreign-agent filings, committees, votes)',coi.complete],['Legal records reviewed (court, ethics and enforcement cases)',reviewed]];
   const base={parts,needs,legal,tradeConflicts:tc,dodger,conflicts:coi,checked,used};
   if(!reviewed)return {...base,pct:null,why:'The legal record hasn\'t been reviewed yet'};
-  if(!used.length)return {...base,pct:null,why:'None of the four parts has its records read yet, and legal records alone aren\'t enough'};
+  if(used.length<ABOVE_BOARD.minParts)return {...base,pct:null,why:`Needs at least ${ABOVE_BOARD.minParts} of the four parts with their records read (${used.length} so far); legal records alone aren't enough`};
   const raw=clamp(100-deduction-legal.index);
   return {...base,...graded(raw),raw,why:null};
 }
@@ -314,7 +323,10 @@ export function aboveBoard(person,{trades=null,conflicts=null,asOfYear=null}={})
 // ---------- 6. People First ----------
 //   0.75 × Legislative Action + 0.25 × (100 − CCI); the CCI keeps only its behavior parts:
 //   0.65 × business-funder voting + 0.35 × donor-lobbied bills (rescaled over what's available).
-export const PEOPLE_FIRST={action:0.75,cci:0.25,cciWeights:{businessVotes:0.65,lobbiedBills:0.35},minLobbied:3};
+// firm: a People First grade needs this many scored actions on this many different bills. Under it, the number is shown
+// as provisional, with no letter, and is left out of the rankings and lists (option A, Nov. 20, 2026: with 10 bills
+// scored, everyone had 3 to 9 actions and 95% were at exactly 0% or 100%).
+export const PEOPLE_FIRST={action:0.75,cci:0.25,cciWeights:{businessVotes:0.65,lobbiedBills:0.35},minLobbied:3,firm:{actions:10,bills:5}};
 export function behaviorCci({businessVotes=null,lobbied=null}={}){
   const parts={businessVotes:Number.isFinite(businessVotes?.index)?businessVotes.index:null,lobbiedBills:lobbied&&lobbied.n>=PEOPLE_FIRST.minLobbied?pctOf(lobbied.profit,lobbied.n):null};
   const W=PEOPLE_FIRST.cciWeights,used=Object.keys(W).filter(k=>parts[k]!=null);
@@ -326,11 +338,14 @@ export function behaviorCci({businessVotes=null,lobbied=null}={}){
 export function peopleFirst(v,cci){
   const bills=v?.pct??null,on=bills!=null&&cci?.index!=null;
   const raw=bills==null?null:on?PEOPLE_FIRST.action*bills+PEOPLE_FIRST.cci*(100-cci.index):bills;
-  return {...graded(raw),pct:raw==null?null:round1(raw),raw,bills,cci,blended:on,v,
+  const nBills=new Set((v?.scored||[]).map(x=>x.credit||x.bill)).size,F=PEOPLE_FIRST.firm;
+  const firm=(v?.n||0)>=F.actions&&nBills>=F.bills,provisional=raw!=null&&!firm?{pct:round1(raw),n:v.n,bills:nBills}:null;
+  const shown=provisional?null:raw;
+  return {...graded(shown),pct:shown==null?null:round1(shown),raw,bills,cci,blended:on,v,provisional,
     parts:[{key:'action',label:'Legislative Action',value:bills,weight:on?PEOPLE_FIRST.action:1,note:v?.n?`${v.nPeople} for working people, ${v.nProfit} for profit, of ${v.n} scored actions`:'No scored actions yet'},
-      {key:'cci',label:'Corporation Compromised',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100 − ${ix1(cci.index)} counts`}],
-    why:raw==null?`Needs at least ${MIN_PVP_ACTIONS} scored actions (${v?.n||0} so far)`:null,
-    needs:[['Votes and bills, each scored by who gains and which groups took sides',!!v?.n],['Business funders\' positions and the bills they lobbied on',cci?.index!=null],['How they voted against their own party on those votes',cci?.parts?.businessVotes!=null]]};
+      {key:'cci',label:'Corporation Compromised',value:cci?.index??null,weight:on?PEOPLE_FIRST.cci:0,note:cci?.why||`100 − ${ix1(cci.index)} = ${ix1(100-cci.index)} counts`}],
+    why:raw==null?`Needs at least ${MIN_PVP_ACTIONS} scored actions (${v?.n||0} so far)`:provisional?`Provisional: based on only ${provisional.n} scored action${provisional.n===1?'':'s'} on ${provisional.bills} bill${provisional.bills===1?'':'s'}; a grade needs ${F.actions} actions on at least ${F.bills} bills`:null,
+    needs:[['Votes and bills, each scored by who gains and which groups took sides',!!v?.n],[`At least ${F.actions} scored actions on ${F.bills} different bills`,firm],['Business funders\' positions and the bills they lobbied on',cci?.index!=null],['How they voted against their own party on those votes (counted when available)',cci?.parts?.businessVotes!=null]]};
 }
 
 export const SIX=[

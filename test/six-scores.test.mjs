@@ -115,20 +115,30 @@ test('Plays by the Rules: the four parts, rescaled over the ones available, minu
   assert.deepEqual([a.pct,a.letter],[61.9,'D']);
   assert.deepEqual(a.parts.map(p=>p.points),[null,null,-21.9,-11.1,-5]);
   // Legal records alone aren't enough; no review, no grade.
-  assert.match(aboveBoard(person,{}).why,/None of the four parts/);
+  assert.match(aboveBoard(person,{}).why,/Needs at least 2 of the four parts/);
   assert.match(aboveBoard({...person,ethicsSearched:''},{trades:{rows,covered:true}}).why,/legal record/);
-  // Fewer than 5 trades: no Trade Conflicts; covered with none: 0.
+  // Fewer than 5 trades, or none: no Trade Conflicts (since Nov. 20, 2026 no trades isn't a clean 0).
   assert.equal(tradeConflicts(rows.slice(0,3)).index,null);
-  assert.equal(tradeConflicts([]).index,0);
+  assert.equal(tradeConflicts([]).index,null);assert.match(tradeConflicts([]).why,/No trades in the reports read \(it takes 5\)/);
+  // A grade needs two parts: no trades at all, or a few filed on time (the late-filing part alone), isn't an A.
+  const clean={...person,ethics:[]},few=n=>({rows:rows.slice(0,n).map(r=>({...r,filed:'2025-03-20'})),covered:true});
+  for(const n of [0,3]){const x=aboveBoard(clean,{trades:few(n)});assert.equal(x.pct,null,`${n} trades`);assert.match(x.why,/Needs at least 2 of the four parts/);}
+  assert.ok(aboveBoard(clean,{trades:few(6)}).pct!=null,'enough trades for both trade parts');
 });
 
 test('People First: legislative action and the behavior-only Corporation Compromised',()=>{
   const cci=behaviorCci({businessVotes:{index:50},lobbied:{profit:3,n:14}});
   assert.equal(cci.index,40);
-  const p=peopleFirst({pct:70,n:10,nPeople:7,nProfit:3},cci);
-  assert.deepEqual([p.pct,p.letter],[67.5,'D']);
-  assert.equal(peopleFirst({pct:70,n:10},behaviorCci({})).pct,70);
+  const scored=Array.from({length:10},(_,i)=>({bill:`b${i%5}`,credit:`b${i%5}`}));
+  const p=peopleFirst({pct:70,n:10,nPeople:7,nProfit:3,scored},cci);
+  assert.deepEqual([p.pct,p.letter,p.provisional],[67.5,'D',null]);
+  assert.equal(peopleFirst({pct:70,n:10,scored},behaviorCci({})).pct,70);
   assert.equal(peopleFirst({pct:null,n:1},cci).pct,null);
+  // Under 10 scored actions on 5 bills: the number is provisional, with no letter (option A, Nov. 20, 2026).
+  const thin=peopleFirst({pct:100,n:3,nPeople:3,nProfit:0,scored:scored.slice(0,3)},behaviorCci({}));
+  assert.deepEqual([thin.pct,thin.letter,thin.provisional],[null,undefined,{pct:100,n:3,bills:3}]);
+  assert.match(thin.why,/^Provisional: based on only 3 scored actions on 3 bills; a grade needs 10 actions on at least 5 bills/);
+  assert.equal(peopleFirst({pct:80,n:12,scored:scored.slice(0,4).concat(scored.slice(0,4),scored.slice(0,4))},behaviorCci({})).provisional?.bills,4,'enough actions on too few bills');
 });
 
 test('every profile: the six scores compute without errors and say why one isn\'t graded',()=>{

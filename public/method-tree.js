@@ -16,7 +16,7 @@ export const METHOD_TREE=[
     topics:['Who is covered','Competitive races','Election results','What refreshes','Automatic refresh checks','Known gaps','Independence']},
   {key:'glossary',icon:'📖',name:'Glossary',about:'The terms used across the site, in plain words.',topics:['Glossary']},
   {key:'history',icon:'🕘',name:'What changed, and when',about:'Every rule and formula change, the grades that were retired, and the earlier score logs.',
-    topics:['What changed in this version','@retiredGrades','Integrity (provisional','@oldLogs','@migrations']},
+    topics:['What changed in this version','@retiredGrades','Integrity (retired','@oldLogs','@migrations']},
 ];
 // The six scores' own section and the parts moved out of others are built by app.js, never matched as headings.
 export const BUILT_SECTIONS=['The six scores'];

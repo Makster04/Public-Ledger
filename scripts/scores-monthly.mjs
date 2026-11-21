@@ -39,7 +39,8 @@ export function personScores(s,scorer,history,ctx={}){
     word:{pct:x.word.pct,kept:w.kept,half:w.half,broken:w.broken+(w.alleged||0),counted:w.clear},
     showsup:{pct:u.pct,missed:a.complete?a.missed:null,votes:a.complete?a.votes:null,getItDone:d.complete?round1(d.value):null},
     // Counts of actions on each side (each one is weighted by its bill's strength in the grade itself).
-    peoplefirst:{pct:pf.pct,people:pf.v?.nPeople??0,profit:pf.v?.nProfit??0,actions:pf.v?.n??0,cci:pf.cci?.index??null},
+    // A provisional People First (too few scored actions for a grade) logs its number, marked, so the log stays continuous.
+    peoplefirst:{pct:pf.pct??pf.provisional?.pct??null,...(pf.provisional?{provisional:true}:{}),people:pf.v?.nPeople??0,profit:pf.v?.nProfit??0,actions:pf.v?.n??0,cci:pf.cci?.index??null},
     flags,
   };
 }

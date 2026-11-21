@@ -67,7 +67,9 @@ export const FILES=[
   ['public/promises.json',(d,R)=>drop(d.people,R.ids)],
   ['public/question-stances.json',(d,R)=>drop(d.people,R.bioguides)+drop(d.people,R.ids)],
   ['public/question-statements.json',(d,R)=>drop(d.people,R.ids)],
-  ['public/tracker-history.json',(d,R)=>drop(d.people,R.ids)+Object.values(d.trackers||{}).reduce((t,x)=>t+drop(x,R.ids)+drop(x?.people,R.ids),0)],
+  // Also each tracker's routed gifts by cycle, its named donors' gifts and the linked campaigns (all by person id).
+  ['public/tracker-history.json',(d,R)=>drop(d.people,R.ids)+Object.values(d.trackers||{}).reduce((t,x)=>t+drop(x,R.ids)+drop(x?.people,R.ids),0)
+    +Object.values(d.routed||{}).reduce((t,by)=>t+Object.values(by||{}).reduce((u,c)=>u+drop(c,R.ids),0),0)+Object.values(d.donors||{}).reduce((t,x)=>t+drop(x,R.ids),0)+drop(d.linked,R.ids)],
 ];
 // Files kept one a person: their record evidence (by Bioguide ID) and their campaign site text.
 const perPersonFiles=R=>[...[...R.bioguides].map(b=>`public/question-evidence/${b}.json`),...[...R.ids].map(id=>`data/campaign-text/${id}.json`)];

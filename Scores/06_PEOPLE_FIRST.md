@@ -26,7 +26,7 @@ Corporation Compromised = 0.65 × Business-Funder Voting + 0.35 × Lobbied Bills
   - **What it doesn't say:** a report doesn't say which side the client lobbied for, so this is how often they sided with profit on the bills their business donors worked on, not whether they did what a donor wanted.
   - **Built by hand:** `npm run lobbying:bills` reads the reports into `public/lobbied-bills.json`. Without that file, Lobbied Bills waits and Business-Funder Voting counts alone.
 - **A missing part drops out** and the other is rescaled.
-- **Minimum:** 3 scored actions.
+- **Minimum:** 3 scored actions for a number, and 10 scored actions on at least 5 different bills for a grade. Under that, the number is shown as **provisional**, with no letter, and left out of the Rankings and Scores lists, the share card and the news (since Nov. 20, 2026). With 10 bills scored, everyone has 3 to 9 actions, so every People First number is provisional until more bills are scored; 95% of them were exactly 0% or 100%, mostly following party.
 
 ## THINGS STILL NOT ADDED, UPDATED, OR CALCULATED YET
 
