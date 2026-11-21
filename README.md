@@ -42,6 +42,8 @@ Individual donors' names are never shown (FEC rules restrict reusing them), exce
 
 ## What's new (November 2026)
 
+- **Nov. 21: Two card fixes.** A provisional People First shows as a small "Provisional" label with its number, instead of the word stretched across the tile like a letter grade. And a House annual report that couldn't be read (filed on paper, or not readable as text) no longer shows as a $0 net worth on the home cards: it says "Can't read", as the profile's timeline already did, and isn't used as the year before.
+- **Nov. 21: A faster home page.** The cards are drawn 24 at first, then 48 more each time the end of the list comes near (or with the "Show more" button), instead of all 616 at once. On a phone with a slowed processor, the first cards now show in about 3.4 seconds instead of 10, with about 3,800 page elements instead of 48,000. A search, sort or filter starts the list over; the count still covers everyone who matches. The home page's "About the research" now names the six scores instead of the retired grades.
 - **Nov. 20: Fixes from the audit: no grade from too little evidence.**
   - **People First is provisional** until someone has 10 scored actions on 5 different bills: the number shows with no letter, and it's left out of the Rankings and Scores lists, the share card and the news. With 10 bills scored, that's everyone for now.
   - **Plays by the Rules** needs two of its four parts: no trades, or a few filed on time, no longer gives 100%. Trade Conflicts needs 5 trades.

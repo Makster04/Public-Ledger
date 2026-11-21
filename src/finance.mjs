@@ -82,8 +82,11 @@ export async function getFinanceOverview(env){
 // reported more than LATE_DAYS after the trade.
 export function cardWealth(own,{cycle=config.cycle,officialFrom=null}={}){
   const annual=ANNUAL_KINDS.map(k=>own[k]).filter(Boolean).sort(newerAnnual).at(-1)||null;
-  const was=annual?(annual.history||[]).find(h=>h&&h.year!=null&&annual.year!=null&&Number(h.year)<Number(annual.year)&&h.low!=null):null;
-  const netWorth=annual&&annual.low!=null?{year:annual.year??null,low:annual.low,high:annual.high??null,url:annual.url||null,was:was?{year:was.year,low:was.low,high:was.high??null}:null}:null;
+  // A report that couldn't be read (filed on paper, or not readable as text) has no assets or debts, which add up to $0:
+  // it's marked unreadable instead, never shown as a $0 net worth (since Nov. 21, 2026), and isn't an earlier year's "was".
+  const was=annual?(annual.history||[]).find(h=>h&&!h.unreadable&&h.year!=null&&annual.year!=null&&Number(h.year)<Number(annual.year)&&h.low!=null):null;
+  const netWorth=annual?.unreadable?{year:annual.year??null,unreadable:true,url:annual.url||null}
+    :annual&&annual.low!=null?{year:annual.year??null,low:annual.low,high:annual.high??null,url:annual.url||null,was:was?{year:was.year,low:was.low,high:was.high??null}:null}:null;
   const lead=annual?holdingsLead(annual):null,held=annual?stockHoldings(annual,lead?.status==='blind-trust'?{status:'blind-trust'}:null):null;
   const stocks=annual?{value:held.value,count:held.count??lead?.stocks??null,year:annual.year??null,blindTrust:!!held.blindTrust,why:held.why||null}:null;
   const sources=TRADE_KINDS.map(k=>own[k]).filter(Boolean);

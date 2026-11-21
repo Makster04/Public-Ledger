@@ -923,7 +923,7 @@ function renderHome(){
       DATA.election&&['November 3 results',resultsLine()],
       ['Where it comes from','FEC filings, roll-call votes, state legislative records, ethics findings and court records. Every entry links to its source.'],
       ['What each profile shows',"Their record, the money their campaign raised, outside groups' spending for and against them (kept separate), and their statements checked against their actions."],
-      ['Grades','Three primary grades: Your Match, Integrity, and People First. "Not graded" means required evidence is missing, never a zero.'],
+      ['Scores','Ideology (a position, not a grade) and five grades: Keeps Their Word, Shows Up, Big Money Independence, Plays by the Rules and People First. "Not graded" means required evidence is missing, never a zero.'],
       SENATE.length&&['Every senator',`<a href="#senate">The ${SENATE.length} sitting senators who didn't lose in 2026</a>, with a basic profile for each one not in these races.`],
       HOUSE.length&&['Every House member',`<a href="#house">The ${HOUSE.length} House members who didn't lose in 2026</a>, the same way.`]],'lede-pts')}</details>
     ${seatsBlock()}
@@ -938,6 +938,7 @@ function renderHome(){
   <div class="directory-heading"><div><div class="page-eyebrow">THE PEOPLE BEHIND THE RECORD</div><h2>Explore profiles</h2></div><span id="profile-count" class="small muted" role="status"></span></div>
   <div class="directory-filters" id="hfilters">${homeDropdowns()}</div>
   <div class="grid hc-grid" id="cards"></div>
+  <div class="hc-more" id="cards-more" hidden><button type="button" class="hero-secondary"></button></div>
   <details class="directory-method"><summary>How the six scores work</summary>${gradeHow()}</details>
   <section class="section">
     <div class="cols">
@@ -953,13 +954,13 @@ function renderHome(){
     const key={out:s=>s.basic?1:-(s.out.for.total+s.out.against.total),camp:s=>s.basic||s.camp.missing?1:-s.camp.receipts,name:s=>s.short+' '+s.name}[homeSort];
     if(key)list.sort((x,y)=>{const a=key(x),b=key(y);return typeof a==='number'?a-b:String(a).localeCompare(String(b))});
     $('#profile-count').textContent=`${list.length} profiles · reviewed and basic coverage labeled`;
-    cards.innerHTML=list.map(s=>s.basic?basicCard(s):homeCard(s)).join('')||`<p class="muted">No one matches that search. This release covers ${ALL.length} people in ${DATA.races.length} races; the methodology page explains how they were chosen.</p>`;
+    homeCards(cards,list);
   };
-  draw('');fillBasic(cards);fillWealth(cards);
-  $('#q').addEventListener('input',e=>{draw(e.target.value);fillBasic(cards);fillWealth(cards);});
-  const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);fillBasic(cards);fillWealth(cards);});
-  bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);fillBasic(cards);fillWealth(cards);});
-  fillFeatured();fillWealth(document);
+  draw('');
+  $('#q').addEventListener('input',e=>draw(e.target.value));
+  const hs=$('#hsort');hs.value=homeSort;hs.addEventListener('change',e=>{homeSort=e.target.value;draw($('#q').value);});
+  bindDropdowns($('#hfilters'),(k,v)=>{if(k==='c')homeCh=v;else if(k==='p')homeParty=v;else homeStatus=v;$('#hfilters').innerHTML=homeDropdowns();draw($('#q').value);});
+  fillFeatured();const side=$('.hero-side');if(side)fillWealth(side);
   // The Latest updates cards (public/ticker.js): races, grades, super PACs, promises, legal cases, PAC checks, FEC reports and net worth.
   import('./ticker.js').then(t=>t.mountCards($('#home-updates'),{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:t.pagePeople(window),portraits:window.PORTRAITS})).catch(()=>{});
   for(const host of [cards,$('.hero-side')].filter(Boolean)){
@@ -968,6 +969,31 @@ function renderHome(){
   }
 }
 
+// The home page's cards, a batch at a time (since Nov. 21, 2026): the first HOME_FIRST at once, then HOME_BATCH more each
+// time the end of the list comes near, or the "Show more" button is pressed. Drawing all 600 cards at once (about 48,000
+// elements, each card working out its six scores) took about 10 seconds on a phone. Each batch's money and disclosure
+// tiles are filled as it's added. A new search, sort or filter starts the list over.
+const HOME_FIRST=24,HOME_BATCH=48;let homeObserver=null;
+function homeCards(cards,list){
+  homeObserver?.disconnect();homeObserver=null;
+  const more=$('#cards-more'),btn=more?.querySelector('button');let i=0;
+  cards.innerHTML=list.length?'':'<p class="muted">No one matches that search.</p>';
+  const next=()=>{
+    const part=list.slice(i,i+(i?HOME_BATCH:HOME_FIRST));if(!part.length)return;i+=part.length;
+    // display: contents, so the batch's cards sit in the grid like the others
+    const wrap=document.createElement('div');wrap.className='hc-batch';wrap.innerHTML=part.map(s=>s.basic?basicCard(s):homeCard(s)).join('');
+    cards.appendChild(wrap);fillBasic(wrap);fillWealth(wrap);
+    const left=list.length-i;
+    if(more){more.hidden=!left;if(btn)btn.textContent=`Show ${Math.min(left,HOME_BATCH)} more (${left} left)`;}
+    if(!left){homeObserver?.disconnect();homeObserver=null;}
+  };
+  if(btn)btn.onclick=next;
+  next();
+  if(more&&i<list.length&&'IntersectionObserver' in window){
+    // After each batch the marker is observed afresh, so it's checked again even if it never left the margin.
+    homeObserver=new IntersectionObserver((es,ob)=>{if(!es.some(e=>e.isIntersecting))return;next();if(ob===homeObserver&&i<list.length){ob.unobserve(more);ob.observe(more);}},{rootMargin:'1200px 0px'});homeObserver.observe(more);
+  }
+}
 // The home page's three filters, each a dropdown: Political Position, Party and Status, with each choice's count.
 function homeDropdowns(){
   const every=ALL.concat(BASIC_LIST),pos=chamberChoices();
@@ -2215,7 +2241,7 @@ function sixTiles(s,links,only){
   const tip=k=>SIX_BY[k].q;
   const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean"${leanStyle(i.lean)}>${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
   const tile=(k,res,detail,empty='Not graded yet')=>{const t=links?'a':'div',g=res?.pct==null?null:letter(Math.min(100,res.pct)),pv=!g&&res?.provisional;
-    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:pv?`<b class="hc-prov">Provisional</b><span>${pct1(pv.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
+    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:pv?`<b class="hc-prov">Provisional</b><span>${pct1(pv.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):pv?esc(`Only ${pv.n} scored action${pv.n===1?'':'s'} on ${pv.bills} bill${pv.bills===1?'':'s'}; a grade needs ${PEOPLE_FIRST.firm.actions} on ${PEOPLE_FIRST.firm.bills} bills`):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
   const T={ideology:()=>ideo,word:()=>tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`),showsup:()=>tile('showsup',u,`${u.parts[0].note||''}${u.basis==='attendance'?' · attendance only':''}`),
     unbought:()=>s.office?tile('unbought',unbought(s),''):tile('unbought',{pct:null,why:'Reading their disclosure…'},'','Loading'),
@@ -2232,6 +2258,7 @@ function wealthTiles(s,w){
   const wait=w===undefined?'Loading…':w===null?'Refresh unavailable':'Not read yet',president=!!s.office,member=!!s.bioguide;
   const nw=w?.netWorth,st=w?.stocks,tr=w?.trades,na=(t,label,sub)=>`<div class="hc-mt"><div class="hc-gl">${label}</div><b class="hc-na">${t}</b><small>${sub}</small></div>`;
   const netWorth=president?na('On profile','Net worth','a president files OGE reports, on the profile')
+    :nw?.unreadable?na('Can\'t read','Net worth',`their ${nw.year?esc(nw.year)+' ':''}annual report was filed on paper or can't be read as text`)
     :nw?`<div class="hc-mt"><div class="hc-gl">Net worth</div><b class="hc-range">${worth(nw.low,nw.high)}</b><small>${nw.year?`${esc(nw.year)} annual report`:'latest annual report'}${nw.was?` · was ${worth(nw.was.low,nw.was.high)} in ${esc(nw.was.year)}`:''}</small></div>`
     :na(wait,'Net worth',member?'from their annual financial disclosure':'from their candidate financial report, once read');
   const stocks=president?na('On profile','Stocks owned','from OGE reports, on the profile')
