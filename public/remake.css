@@ -144,6 +144,13 @@ input, select { font-family: inherit; }
 .chip.ch.elect { background: #f2c94c; color: #1b1d21; font-size: .8rem; font-weight: 700; padding: 4px 11px; letter-spacing: .02em; }
 .grid { gap: 22px; }
 .hc-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 355px), 1fr)); }
+/* The home cards arrive a batch at a time; a batch is invisible to the grid, so its cards sit with the rest. */
+.hc-batch { display: contents; }
+.hc-more { display: flex; justify-content: center; margin: 18px 0 8px; }
+.hc-more[hidden] { display: none; }
+/* Not scroll anchors: when a batch is added above them, the page stays put instead of following them down (which kept
+   the marker in view and loaded every batch at once). */
+.hc-more, .hc-more ~ *, body > footer { overflow-anchor: none; }
 .hc { padding: 23px 21px 18px; gap: 15px; border: 1px solid var(--person-line); border-top: 3px solid var(--person); background: var(--surface); }
 .hc:hover, .hc:focus-visible { border-color: var(--person); box-shadow: 0 8px 28px #0004; }
 .hc-top { gap: 15px; align-items: center; }

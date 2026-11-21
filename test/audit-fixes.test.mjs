@@ -82,3 +82,16 @@ test('the removal script reaches the tracker history\'s routed gifts, named dono
   assert.equal(fn(d,{ids:new Set(['x'])}),5);
   assert.deepEqual(d,{people:{k:1},trackers:{aipac:{}},routed:{aipac:{2022:{k:2}}},donors:{aipac:{k:{}}},linked:{k:[]}});
 });
+
+test('the home page draws its cards a batch at a time, and the page stays put as each batch is added',()=>{
+  const css=read('public/remake.css');
+  assert.match(app,/const HOME_FIRST=24,HOME_BATCH=48;/);
+  assert.match(app,/function homeCards\(cards,list\)\{/);
+  assert.match(app,/\$\('#profile-count'\)\.textContent=`\$\{list\.length\} profiles · reviewed and basic coverage labeled`;\n    homeCards\(cards,list\);/,'the count is the whole list, not the cards drawn so far');
+  assert.match(app,/<div class="hc-more" id="cards-more" hidden><button type="button"/,'a button when scrolling doesn\'t load them');
+  assert.match(app,/cards\.appendChild\(wrap\);fillBasic\(wrap\);fillWealth\(wrap\);/,'each batch\'s tiles are filled');
+  assert.match(app,/ob\.unobserve\(more\);ob\.observe\(more\);/,'checked again after each batch');
+  assert.match(css,/\.hc-batch \{ display: contents; \}/);
+  assert.match(css,/\.hc-more, \.hc-more ~ \*, body > footer \{ overflow-anchor: none; \}/);
+  assert.ok(!app.includes('Three primary grades: Your Match, Integrity, and People First'));
+});
