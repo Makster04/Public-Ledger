@@ -2241,7 +2241,7 @@ function sixTiles(s,links,only){
   const tip=k=>SIX_BY[k].q;
   const ideo=`<${links?'a':'div'} class="hc-gt hc-ideo-t"${links?` href="${h('ideology')}"`:''} title="${esc(tip('ideology'))}"><div class="hc-gl">Ideology</div><div class="hc-gv">${i.lean==null?'<span class="hc-ng">Not placed yet</span>':`<b class="lean"${leanStyle(i.lean)}>${signed(i.lean)}</b><span>${esc(i.label)}</span>`}</div><div class="hc-gd">${i.lean==null?esc(i.why):`${i.scored} issues${i.dw!=null?` · DW-NOMINATE ${signed(i.dw)}`:''}`}</div></${links?'a':'div'}>`;
   const tile=(k,res,detail,empty='Not graded yet')=>{const t=links?'a':'div',g=res?.pct==null?null:letter(Math.min(100,res.pct)),pv=!g&&res?.provisional;
-    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:pv?`<b class="hc-prov">Provisional</b><span>${pct1(pv.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):esc(res?.why||detail||'')}</div></${t}>`;};
+    return `<${t} class="hc-gt" data-six-tile="${k}"${links?` href="${h(k)}"`:''} title="${esc(tip(k))}"><div class="hc-gl">${esc(SIX_BY[k].name)}</div><div class="hc-gv">${g?`<b class="gr-${g}">${g}</b><span>${pct1(res.pct)}</span>`:pv?`<b class="hc-prov">Provisional</b><span>${pct1(pv.pct)}</span>`:`<span class="hc-ng">${esc(empty)}</span>`}</div><div class="hc-gd">${g?esc(detail||''):pv?esc(`Only ${pv.n} scored action${pv.n===1?'':'s'} on ${pv.bills} bill${pv.bills===1?'':'s'}; a grade needs ${PEOPLE_FIRST.firm.actions} on ${PEOPLE_FIRST.firm.bills} bills`):esc(res?.why||detail||'')}</div></${t}>`;};
   const w=x.word.score,u=x.showsup,pf=x.peoplefirst;
   const T={ideology:()=>ideo,word:()=>tile('word',x.word,`${w.clear} promise${w.clear===1?'':'s'} decided`),showsup:()=>tile('showsup',u,`${u.parts[0].note||''}${u.basis==='attendance'?' · attendance only':''}`),
     unbought:()=>s.office?tile('unbought',unbought(s),''):tile('unbought',{pct:null,why:'Reading their disclosure…'},'','Loading'),
@@ -2258,6 +2258,7 @@ function wealthTiles(s,w){
   const wait=w===undefined?'Loading…':w===null?'Refresh unavailable':'Not read yet',president=!!s.office,member=!!s.bioguide;
   const nw=w?.netWorth,st=w?.stocks,tr=w?.trades,na=(t,label,sub)=>`<div class="hc-mt"><div class="hc-gl">${label}</div><b class="hc-na">${t}</b><small>${sub}</small></div>`;
   const netWorth=president?na('On profile','Net worth','a president files OGE reports, on the profile')
+    :nw?.unreadable?na('Can\'t read','Net worth',`their ${nw.year?esc(nw.year)+' ':''}annual report was filed on paper or can't be read as text`)
     :nw?`<div class="hc-mt"><div class="hc-gl">Net worth</div><b class="hc-range">${worth(nw.low,nw.high)}</b><small>${nw.year?`${esc(nw.year)} annual report`:'latest annual report'}${nw.was?` · was ${worth(nw.was.low,nw.was.high)} in ${esc(nw.was.year)}`:''}</small></div>`
     :na(wait,'Net worth',member?'from their annual financial disclosure':'from their candidate financial report, once read');
   const stocks=president?na('On profile','Stocks owned','from OGE reports, on the profile')

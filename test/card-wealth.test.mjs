@@ -50,3 +50,11 @@ test('Big Money Independence on the cards: the records the profile reads, trimme
   assert.match(cardBmi({'trades-house':{rows:[],unread:['x','y']}},{chamber:'H',job,cycle:2026}).trades.why,/2 trade reports were filed on paper/);
   assert.equal(cardBmi({},{chamber:'H'}).snapshot,null);
 });
+test('a report that couldn\'t be read is never a $0 net worth, on the card or as the year before',async()=>{
+  const paper=annual({low:0,high:0,assets:[],debts:[],unreadable:true,history:[{year:2025,low:0,high:0,unreadable:true},{year:2024,low:0,high:0,unreadable:true}]});
+  assert.deepEqual(cardWealth({'net-worth-house':paper},{cycle:2026}).netWorth,{year:2025,unreadable:true,url:'https://efdsearch.senate.gov/x'});
+  const w=cardWealth({'net-worth-house':annual({history:[{year:2025,low:1100000,high:3600000},{year:2024,low:0,high:0,unreadable:true},{year:2023,low:800000,high:2000000}]})},{cycle:2026});
+  assert.deepEqual(w.netWorth.was,{year:2023,low:800000,high:2000000},'an unreadable year is skipped');
+  const app=(await import('node:fs')).readFileSync(new URL('../public/app.js',import.meta.url),'utf8');
+  assert.match(app,/:nw\?\.unreadable\?na\('Can\\'t read','Net worth'/);
+});
