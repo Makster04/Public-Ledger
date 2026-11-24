@@ -25,6 +25,7 @@
     "votes:positions": "node scripts/fill-vote-positions.mjs",
     "bills:cosponsors": "node --env-file-if-exists=.dev.vars scripts/fill-bill-cosponsors.mjs",
     "pacs:types": "node --env-file-if-exists=.dev.vars scripts/build-pac-types.mjs",
+    "pacs:lines": "node --env-file-if-exists=.dev.vars scripts/fill-pac-lines.mjs",
     "corporate:pacs": "node --env-file-if-exists=.dev.vars scripts/build-corporate-pacs.mjs",
     "superpacs:races": "node scripts/build-super-pac-races.mjs",
     "outside:update": "node scripts/build-outside-spending.mjs",
