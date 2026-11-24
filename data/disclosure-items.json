@@ -2663,6 +2663,110 @@
      "travel": []
     }
    ]
+  },
+  "ager": {
+   "name": "Jamie Ager",
+   "chamber": "H",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-06-15",
+     "type": "C",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026/10079888.pdf",
+     "income": [
+      {
+       "source": "Hickory Nut Gap Farm LLC CEO role",
+       "amounts": [
+        120419.58,
+        149626
+       ],
+       "text": "Hickory Nut Gap Farm LLC CEO role $120,419.58 $149,626.00"
+      },
+      {
+       "source": "Warren Wilson College",
+       "type": "Spouse Salary",
+       "amounts": [
+        136000,
+        100000
+       ],
+       "text": "Warren Wilson College Spouse Salary $136,000.00 $100,000.00"
+      },
+      {
+       "source": "Hickory Nut Gap Farm LLC",
+       "type": "Spouse Salary",
+       "amounts": [
+        30000,
+        30000
+       ],
+       "text": "Hickory Nut Gap Farm LLC Spouse Salary $30,000.00 $30,000.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "CEO",
+       "org": "Hickory Nut Gap Meats LLC",
+       "text": "CEO Hickory Nut Gap Meats LLC"
+      },
+      {
+       "position": "CEO",
+       "org": "Hickory Nut Gap Farm LLC",
+       "text": "CEO Hickory Nut Gap Farm LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-02-02",
+     "type": "A",
+     "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2025/10073311.pdf",
+     "income": [
+      {
+       "source": "Hickory Nut Gap Farm LLC CEO role",
+       "amounts": [
+        120419.58,
+        149626
+       ],
+       "text": "Hickory Nut Gap Farm LLC CEO role $120,419.58 $149,626.00"
+      },
+      {
+       "source": "Warren Wilson College",
+       "type": "Spouse Salary",
+       "amounts": [
+        136000,
+        100000
+       ],
+       "text": "Warren Wilson College Spouse Salary $136,000.00 $100,000.00"
+      },
+      {
+       "source": "Hickory Nut Gap Farm LLC",
+       "type": "Spouse Salary",
+       "amounts": [
+        30000,
+        30000
+       ],
+       "text": "Hickory Nut Gap Farm LLC Spouse Salary $30,000.00 $30,000.00"
+      }
+     ],
+     "positions": [
+      {
+       "position": "CEO",
+       "org": "Hickory Nut Gap Meats LLC",
+       "text": "CEO Hickory Nut Gap Meats LLC"
+      },
+      {
+       "position": "CEO",
+       "org": "Hickory Nut Gap Farm LLC",
+       "text": "CEO Hickory Nut Gap Farm LLC"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
   }
  }
 }
