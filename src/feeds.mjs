@@ -4,7 +4,7 @@
 // Response formats follow each source's published documentation; live responses need your keys and are not verified
 // here. Every adapter checks the identity and shape of what comes back and refuses to publish anything else.
 import {SourceError,requestSource,cleanURL,fecNext,list,day,unzipFile,parseXML,addCookies,cookieHeader,partyTally,normalizeCampaign} from './sources.mjs';
-import {houseAnnualSchedules,efdAnnualSchedules} from './schedules.mjs';
+import {houseAnnualSchedules,efdAnnualSchedules,houseSections,spaced,SCHEDULES_READER} from './schedules.mjs';
 import {pdfText} from './pdf.mjs';
 import {billKey} from '../public/grades.js';
 import {sectorForSic} from '../public/sectors.js';
@@ -747,8 +747,9 @@ export const FEEDS={
         need(reports.length,'No annual report in the House disclosure index yet');
         // The years read before are carried; a report not read yet (a new year, or an amendment) is read, newest first.
         // A year kept only as a summary (saved before every year's assets were kept) is read again for its asset list.
-        // A report read before its income, positions, agreements, gifts and travel were read (src/schedules.mjs) is read again.
-        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.filter(r=>Array.isArray(r.assets)&&r.schedules).map(r=>String(r.id)));
+        // A report read before its income, positions, agreements, gifts and travel were read (src/schedules.mjs), or read by
+        // an earlier version of that reader (SCHEDULES_READER), is read again.
+        const before=annualRows(await lastPayload(env,job.id)),done=new Set(before.filter(r=>Array.isArray(r.assets)&&(r.schedules?.v||0)>=SCHEDULES_READER).map(r=>String(r.id)));
         const todo=reports.filter(f=>!done.has(String(f.id))).slice(0,12).map(({id,year,filed,url,type})=>({id,year,filed,url,type}));
         return {rows:before,next:todo.length?JSON.stringify({todo,i:0}):null};
       }
@@ -1390,12 +1391,21 @@ const FD_VALUE=String.raw`(?:Spouse\/DC\s+Over\s+\$[\d,]+|Over\s+\$[\d,]+|\$[\d,
 const section=(t,from,to)=>{const a=t.search(from);if(a<0)return '';const rest=t.slice(a+1),b=rest.search(to);return b<0?rest:rest.slice(0,b);};
 // An electronically filed House annual (or candidate) report's text: Schedule A's assets, each anchored on its [ST]-style
 // code with the owner code and the value right after it (the income ranges that follow are left out), and Schedule D's
-// liabilities, each ending on its amount. A report filed on paper has no text, so nothing is read.
+// liabilities, each ending on its amount. A report filed on paper has no text, so nothing is read. The newer reports set
+// the headings in small capitals that come out as "S A :" (src/schedules.mjs reads those), and a code can hold a digit
+// ([5P], a 529 plan); a name the form wrapped above its code is taken from the line before.
 export function houseAnnualHoldings(text){
-  const t=String(text||''),a=section(t,/Schedule\s*A\b/i,/Schedule\s*B\b/i),d=section(t,/Schedule\s*D\b/i,/Schedule\s*E\b/i);
-  const assets=[...a.matchAll(new RegExp(String.raw`([^\n\[]*)\[([A-Z]{2})\]\s*(?:(SP|JT|DC)\s+)?(${FD_VALUE})`,'g'))].map(m=>({name:m[1].replace(/\s+/g,' ').trim().replace(/^(SP|JT|DC)\s+/,'')||null,code:m[2],
-    owner:m[3]?HOUSE_OWNER[m[3]]:'self',value:m[4].replace(/\s+/g,' ').trim()}));
-  const debts=/None\s+disclosed/i.test(d)&&!/\$[\d,]+/.test(d)?[]:[...d.matchAll(/([^\n]*?)(Over\s+\$[\d,]+|\$[\d,]+\s*-\s*\$[\d,]+)\s*$/gm)].filter(m=>!/^(Owner|Creditor)\b/i.test(m[1].trim()))
+  const t=String(text||''),sec=houseSections(t);
+  const a=section(t,/Schedule\s*A\b/i,/Schedule\s*B\b/i)||sec.A||'',d=section(t,/Schedule\s*D\b/i,/Schedule\s*E\b/i)||sec.D||'';
+  const assets=[...a.matchAll(new RegExp(String.raw`([^\n\[]*)\[([A-Z0-9]{2})\]\s*(?:(SP|JT|DC)\s+)?(${FD_VALUE})`,'g'))].map(m=>{
+    let name=m[1].replace(/\s+/g,' ').trim().replace(/^(SP|JT|DC)\s+/,'');
+    if(!name){const above=a.slice(0,m.index).replace(/\n$/,'').split('\n').pop()||'';if(!/\$|\[[A-Z0-9]{2}\]/.test(above))name=above.replace(/\s+/g,' ').trim();}
+    return {name:name||null,code:m[2],owner:m[3]?HOUSE_OWNER[m[3]]:'self',value:m[4].replace(/\s+/g,' ').trim()};});
+  // A debt's row ends on its amount; its creditor and terms can wrap onto lines above it. Headings and notes are skipped.
+  const rows=[];let cur='';
+  for(const raw of d.split('\n')){const l=raw.trim();if(!l||spaced(l)||/^C\s*:/.test(l)||/^S?chedule\s*D\b|^(Owner|Creditor)\b|^Liability$|^Filing ID\b/i.test(l))continue;
+    cur=cur?cur+' '+l:l;if(/(Over\s+\$[\d,]+|\$[\d,]+\s*-\s*\$[\d,]+)\s*$/.test(cur)){rows.push(cur);cur='';}}
+  const debts=/None\s+disclosed/i.test(d)&&!/\$[\d,]+/.test(d)?[]:rows.map(r=>r.match(/^(.*?)(Over\s+\$[\d,]+|\$[\d,]+\s*-\s*\$[\d,]+)\s*$/))
     .map(m=>{const l=m[1].replace(/\s+/g,' ').trim(),owner=l.match(/^(SP|JT|DC)\s+/);return {creditor:l.replace(/^(SP|JT|DC)\s+/,'')||null,owner:owner?HOUSE_OWNER[owner[1]]:'self',amount:m[2].replace(/\s+/g,' ').trim()};});
   return {assets,debts};
 }
@@ -1426,8 +1436,9 @@ export function annualSummary(rows){
   for(const r of rows||[]){
     if(!r||r.year==null&&!r.filed)continue;
     const k=String(r.year??String(r.filed).slice(0,4)),o=byYear.get(k),f=String(r.filed||''),g=String(o?.filed||'');
-    // The same report twice (carried, and read again): the one with its asset list, then the one with its other parts.
-    if(!o||f>g||f===g&&(Array.isArray(r.assets)&&!Array.isArray(o.assets)||Array.isArray(r.assets)===Array.isArray(o.assets)&&r.schedules&&!o.schedules))byYear.set(k,r);
+    // The same report twice (carried, and read again): the one with its asset list, then the one with its other parts,
+    // then the one read by the newer reader (SCHEDULES_READER).
+    if(!o||f>g||f===g&&(Array.isArray(r.assets)&&!Array.isArray(o.assets)||Array.isArray(r.assets)===Array.isArray(o.assets)&&(r.schedules&&!o.schedules||(r.schedules?.v||0)>(o.schedules?.v||0))))byYear.set(k,r);
   }
   const list=[...byYear.values()].sort((a,b)=>(Number(b.year)||0)-(Number(a.year)||0)||String(b.filed||'').localeCompare(String(a.filed||'')));
   if(!list.length)return {};
@@ -1644,5 +1655,6 @@ export const RESHAPED_FEEDS=['trades-eulerpool'];
 export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k));
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
-// and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each).
-export const FEEDS_VERSION=6;
+// and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each); 7 = the House
+// Clerk's newer annual reports (2025 on: encrypted, with their own fonts) read again for their assets, debts and other parts.
+export const FEEDS_VERSION=7;
