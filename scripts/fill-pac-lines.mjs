@@ -52,10 +52,18 @@ export function sectorOf(name,committee,known){
 export function pacLines(person,reports,records,data,committees={}){
   const {start,end}=person.camp;
   const inPeriod=r=>day(r.coverage_end_date)>=start&&day(r.coverage_start_date)<=end;
-  const latest=new Map();
-  for(const r of reports.filter(inPeriod)){const k=`${r.report_type}|${r.report_year}|${day(r.coverage_start_date)}`,o=latest.get(k);if(!o||Number(r.file_number)>Number(o.file_number))latest.set(k,r);}
+  // Each report once (its latest version for the totals). A check belongs to its report by the version it was filed in,
+  // or by the report's type and year: the FEC's processed rows can still carry an earlier version's number after an
+  // amendment. Each report's checks come from the newest version that has rows, so two versions aren't both counted.
+  const keyOf=r=>`${r.report_type}|${r.report_year}|${day(r.coverage_start_date)}`,all=reports.filter(inPeriod),latest=new Map();
+  for(const r of all){const k=keyOf(r),o=latest.get(k);if(!o||Number(r.file_number)>Number(o.file_number))latest.set(k,r);}
   const reps=[...latest.values()].sort((a,b)=>day(a.coverage_start_date).localeCompare(day(b.coverage_start_date)));
-  const fileIndex=new Map(reps.map((r,i)=>[String(r.file_number),i]));
+  const repIndex=new Map(reps.map((r,i)=>[keyOf(r),i])),fileKey=new Map(all.map(r=>[String(r.file_number),keyOf(r)])),byTypeYear=new Map();
+  for(const r of reps){const k=`${r.report_type}|${r.report_year}`;byTypeYear.set(k,byTypeYear.has(k)?null:keyOf(r));}
+  const recKey=r=>fileKey.get(String(r.file_number))??byTypeYear.get(`${r.report_type}|${r.report_year}`)??null;
+  const inDates=r=>!r.contribution_receipt_date||(day(r.contribution_receipt_date)>=start&&day(r.contribution_receipt_date)<=end);
+  const usedFile=new Map();
+  for(const r of records){if(r.memo_code==='X'||!inDates(r))continue;const k=recKey(r),n=Number(r.file_number);if(k&&repIndex.has(k)&&!(usedFile.get(k)>=n))usedFile.set(k,n);}
   // Sectors already given, by name; and the saved PAC list's IDs and names.
   const known=new Map();for(const p of people(data))for(const r of p.pac?.rows||[])if(r[2])known.set(normName(data.pacNames[r[0]]),r[2]);
   const byId=new Map(),byName=new Map();
@@ -64,7 +72,8 @@ export function pacLines(person,reports,records,data,committees={}){
   const added=[],rows=[],seen=new Set();
   for(const r of records){
     if(r.memo_code==='X')continue;
-    const fi=fileIndex.get(String(r.file_number));if(fi==null)continue;       // a superseded version, or outside the period
+    const k=recKey(r);if(!k||!repIndex.has(k)||!inDates(r)||Number(r.file_number)!==usedFile.get(k))continue;   // outside the period, or another version's
+    const fi=repIndex.get(k);
     const key=`${r.file_number}|${r.transaction_id||r.sub_id}`;if(seen.has(key))continue;seen.add(key);
     const amount=Math.round(Number(r.contribution_receipt_amount)*100)/100;if(!amount)continue;
     const id=/^C\d{8}$/.test(r.contributor_id||'')?r.contributor_id:null,name=String(r.contributor_name||'').trim();
@@ -78,8 +87,8 @@ export function pacLines(person,reports,records,data,committees={}){
     rows.push([i,amount,sectorOf(data.pacNames[i],committee,known),fi]);
   }
   rows.sort((a,b)=>a[3]-b[3]||b[1]-a[1]);
-  const filings=reps.map((r,i)=>{const got=rows.filter(x=>x[3]===i),retrieved=Math.round(got.reduce((t,x)=>t+x[1],0)*100)/100,subtotal=Math.round(Number(r.other_political_committee_contributions_period||0)*100)/100;
-    return {report:reportName(r),start:day(r.coverage_start_date),end:day(r.coverage_end_date),filing:String(r.file_number),subtotal,retrieved,n:got.length,over:retrieved>subtotal+1,url:`https://docquery.fec.gov/cgi-bin/forms/${person.fecCmte}/${r.file_number}/sa/11C`};});
+  const filings=reps.map((r,i)=>{const file=usedFile.get(keyOf(r))??r.file_number,got=rows.filter(x=>x[3]===i),retrieved=Math.round(got.reduce((t,x)=>t+x[1],0)*100)/100,subtotal=Math.round(Number(r.other_political_committee_contributions_period||0)*100)/100;
+    return {report:reportName(r),start:day(r.coverage_start_date),end:day(r.coverage_end_date),filing:String(file),subtotal,retrieved,n:got.length,over:retrieved>subtotal+1,url:`https://docquery.fec.gov/cgi-bin/forms/${person.fecCmte}/${file}/sa/11C`};});
   const subtotal=Math.round(filings.reduce((t,f)=>t+f.subtotal,0)*100)/100,retrieved=Math.round(rows.reduce((t,x)=>t+x[1],0)*100)/100;
   const byCat=[...rows.reduce((m,x)=>m.set(x[2],(m.get(x[2])||0)+x[1]),new Map())].map(([k,v])=>[k,Math.round(v*100)/100]).sort((a,b)=>b[1]-a[1]);
   // A report with PAC money but no rows yet: the FEC hasn't processed it (it takes a few weeks after filing).
@@ -97,7 +106,8 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const check=process.argv.includes('--check'),only=(process.argv.find(a=>a.startsWith('--only='))||'').slice(7).split(',').filter(Boolean);
   const env=process.env,sleep=ms=>new Promise(r=>setTimeout(r,ms));
   if(!env.FEC_API_KEY){console.log('FEC_API_KEY is needed (in .dev.vars).');process.exit(1);}
-  const get=async u=>{for(let k=0;;k++){await sleep(300);try{return await requestSource(u,env);}catch(e){if(k>=2)throw e;await sleep(2000*3**k);}}};
+  // Each request is tried up to four times; when the FEC says too many requests (HTTP 429), the next try waits a minute.
+  const get=async u=>{for(let k=0;;k++){await sleep(300);try{return await requestSource(u,env);}catch(e){if(k>=3)throw e;await sleep(/\b429\b/.test(e.message)?65000:2000*3**k);}}};
   const list=people(data).filter(p=>only.length?only.includes(p.id):thin(p));
   if(!list.length){console.log('Every full profile\'s PAC lines cover 80% or more of its PAC money.');process.exit(0);}
   let changed=0;
