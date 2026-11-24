@@ -31,3 +31,12 @@ test('the added roll calls link to their bills, are selected, and list every mem
   }
   for(const k of Object.keys(VOTES))assert.ok(config.keyBills.includes(k),`${k} is a key bill`);
 });
+
+test('the added roll calls are mapped to an issue, or say why not',()=>{
+  const all=[...D.votes,...D.hvotes],V=id=>all.find(v=>v.id===id),ISS=new Set(D.issues.map(i=>i.id));
+  for(const id of ['h-119-1-050','119-1-191','h-119-1-100'])assert.deepEqual(V(id).codes.map(c=>c.issue+c.yea),['taxesB'],id);
+  assert.deepEqual(V('h-119-2-216').codes.map(c=>c.issue+c.yea),['laborA']);
+  for(const ids of Object.values(VOTES))for(const id of ids){const v=V(id);
+    if(v.codes.length){assert.equal(v.excluded,null,id);for(const c of v.codes){assert.ok(ISS.has(c.issue),id);assert.ok(c.why,id);}}
+    else assert.ok(v.excluded&&!/People First \(added/.test(v.excluded),id+' says why it is not mapped');}
+});

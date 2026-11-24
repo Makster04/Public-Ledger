@@ -29,7 +29,7 @@
 - **Promises for more people:** 25 of the 45 full profiles have promises on file (Nov. 20, 2026). The basic profiles have none, so they aren't graded.
 - **Promises waiting on a verdict:**
   - 57 aren't tested yet: the person isn't in office, nothing that decides the promise has come up, or only one bill on it has.
-  - 9 automatic "allegedly broken" verdicts are waiting for a reviewer (1 more was confirmed).
+  - The 9 automatic "allegedly broken" verdicts were reviewed on Nov. 24, 2026, against each person's sponsored and cosponsored bills: 3 confirmed (Ossoff on antitrust, cannabis and police militarization), 2 changed to partly kept (Ossoff on nonviolent drug sentences and on immigration) and 4 not counted, since the automatic check had missed related bills they sponsored or cosponsored (Hickenlooper on electric vehicles, Gluesenkamp Perez on manufacturing, Brown on renters and on transit). None wait for review now.
   - 7 have no action yet, not 6 months on.
   - 1 unclear one is waiting for review.
 - **Promise trackers:** PolitiFact's trackers count only for the president. No tracker is read for anyone else.
