@@ -18,6 +18,16 @@
     "status": "kept",
     "why": "He named agents and technology rather than a wall, and voted for both bipartisan border bills in 2024 that funded them. Four of his five votes the other way were on amendments to keep building the border wall; the fifth was a party-line budget amendment in February 2021.",
     "date": "2026-11-13"
+   },
+   "homeless-funding@2021-03-11": {
+    "status": "not-tested",
+    "why": "Not counted as broken: he sponsored a bill to extend the eviction moratorium (July 2021) and cosponsored the Eviction Crisis Act (2021) and the Housing for Homeless Students Act (2022).",
+    "date": "2026-11-24"
+   },
+   "transit-spending@2021-02-03": {
+    "status": "not-tested",
+    "why": "Not counted as broken: he cosponsored the Moving Transit Forward Act (2024) and voted for the infrastructure law, which funds public transit.",
+    "date": "2026-11-24"
    }
   },
   "kaptur": {
@@ -37,6 +47,31 @@
     "status": "alleged",
     "why": "There was no Senate bill to ban private prisons in these years, and he didn't introduce one. He also didn't join the related bills: the Private Prison Information Act (2021 and 2023, 15 cosponsors each) and the 2026 Private Detention Accountability Act.",
     "date": "2026-11-13"
+   },
+   "block-mega-mergers@2020-11-03": {
+    "status": "alleged",
+    "why": "He didn't join either major tech-antitrust bill, the American Innovation and Choice Online Act or the Open App Markets Act, in 2021 or 2023, and introduced no antitrust bill of his own.",
+    "date": "2026-11-24"
+   },
+   "marijuana@2020-11-03": {
+    "status": "alleged",
+    "why": "He didn't cosponsor the Cannabis Administration and Opportunity Act (2022, 2024) or the SAFE Banking Act (2021, 2023), and introduced no bill to legalize cannabis.",
+    "date": "2026-11-24"
+   },
+   "military-equipment-police@2020-11-03": {
+    "status": "alleged",
+    "why": "He didn't join the Stop Militarizing Our Streets Act (2024), and introduced no bill on military equipment for police.",
+    "date": "2026-11-24"
+   },
+   "release-nonviolent@2020-11-03": {
+    "status": "partly",
+    "why": "He cosponsored the EQUAL Act (October 2021), which ends the longer sentences for crack than for powder cocaine and lets people already sentenced ask for a new one: a narrower step than ending prison for nonviolent drug offenses.",
+    "date": "2026-11-24"
+   },
+   "work-amnesty@2020-11-03": {
+    "status": "partly",
+    "why": "He voted for the 2024 bipartisan border bill (the border half), but didn't cosponsor the Dream Act (2021 or 2023) or another bill giving undocumented immigrants a path to legal status; he cosponsored only the American Dream Employment Act, which lets Dreamers work in congressional offices.",
+    "date": "2026-11-24"
    }
   },
   "ricketts": {
@@ -51,6 +86,20 @@
     "status": "not-a-promise",
     "why": "About her opponent's positions, not a promise of hers.",
     "date": "2026-11-13"
+   }
+  },
+  "hickenlooper": {
+   "fuel-efficiency@2020-11-01": {
+    "status": "not-tested",
+    "why": "Not counted as broken: he sponsored a 2021 bill on electric-vehicle charging rates and voted for the Inflation Reduction Act's EV tax credits and the infrastructure law's charging money, though no bill on fuel-economy standards themselves.",
+    "date": "2026-11-24"
+   }
+  },
+  "mgp": {
+   "chips-industry@2023-03-28": {
+    "status": "not-tested",
+    "why": "Not counted as broken: she cosponsored the Investing in Rural Manufacturing Act (2023).",
+    "date": "2026-11-24"
    }
   }
  }
