@@ -40,3 +40,13 @@ test('a new PAC\'s sector: leadership and candidate committees are leadership PA
   assert.equal(sectorOf('XYZ HOLDINGS PAC',['X','Q','B','C'],none),'other');
   assert.equal(sectorOf('CITIZENS FOR GOOD',['X','N','',''],none),'ideo');
 });
+
+test('an amended report whose processed rows still carry the earlier version\'s number is read once',()=>{
+  const d=data(),p=d.members[0];
+  const reps=[rep('Q2','2026-04-01','2026-06-30',200,40000),rep('Q2','2026-04-01','2026-06-30',250,40000)];
+  const records=[rec(200,'ACME CORP PAC','C00000099',25000,{report_type:'Q2',report_year:2026}),rec(200,'BLUE HEN FEDERAL PAC',null,15000,{report_type:'Q2',report_year:2026}),
+    rec(199,'ACME CORP PAC','C00000099',25000,{report_type:'Q2',report_year:2026})];                 // an older version not in the list
+  const {pac,unprocessed}=pacLines(p,reps,records,d);
+  assert.deepEqual(pac.filings.map(f=>[f.report,f.filing,f.n,f.retrieved]),[['JUL Q 2026','200',2,40000]]);
+  assert.equal(unprocessed.length,0);assert.match(pac.filings[0].url,/\/200\/sa\/11C/);
+});
