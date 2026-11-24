@@ -20,6 +20,7 @@ import {periodCycles,periodLabel,periodOptions,combinePeriod,statePie} from './f
 import {COMPANIES,EXECUTIVES,SUPER_PACS} from './industries.js';
 import {ISSUE_ICON,PLEDGE_CATEGORY,topicCategory} from './issue-icons.js';
 import {CLUB_KEYS,CLUB_LABEL,CLUB_RANGE,chamberCareer,routedStatus} from './career.js';
+import {trackerAboutHTML,trackerPanel as aboutPanel} from './tracker-about.js';
 import {TRACKERS,TRACKER,researchPacLines,mergePacLines,trackerMoney,lookouts,trackerSuperPacs,ownSuperPacSpending,helpToWin,fecName,ELECTION_LABEL,pacsOf,routedBy,donorAmounts,bulkUnread,LOBBY_COUNT,ofTracker} from './trackers.js';
 import {rangeText} from './net-worth.js';
 import {wealthTimeline,headerWealth} from './wealth-timeline.js';
@@ -555,7 +556,7 @@ function route(){
   else if(m[1]==='senate'){renderSenate();}
   else if(m[1]==='house'){renderHouse();}
   else if(m[1]==='superpacs'){renderSuperPacs();}
-  else if(m[1]==='trackers'){renderTrackers(m[2]||'aipac');}
+  else if(m[1]==='trackers'){if(m[2]==='about')renderTrackerAbout();else renderTrackers(m[2]||'aipac');}
   else if(m[1]==='career'){renderCareer(m[2]);}
   // The Latest updates page behind the ticker (public/ticker.js).
   else if(m[1]==='latest'){import('./ticker.js').then(t=>t.renderLatest(app,{research:window.DATA,log:window.SCOREMIGRATIONS,ratings:window.GROUP_RATINGS,news:window.NEWS,people:t.pagePeople(window)}));}
@@ -2379,7 +2380,7 @@ function renderSenate(){
   draw();
 }
 // ---------- Career Totals: each sitting member's career money from one tracker, ranked in dollar clubs (public/career.js) ----------
-const trackerViews=v=>`<nav class="seg tr-page-tabs tr-views" aria-label="Lobby money">${[['trackers','Trackers'],['career','Career Totals']].map(([k,l])=>`<a href="#${k}"${k===v?' class="active" aria-current="page"':''}>${l}</a>`).join('')}</nav>`;
+const trackerViews=v=>`<nav class="seg tr-page-tabs tr-views" aria-label="Lobby money">${[['trackers','Trackers'],['career','Career Totals'],['trackers-about','About']].map(([k,l])=>`<a href="#${k}"${k===v?' class="active" aria-current="page"':''}>${l}</a>`).join('')}</nav>`;
 let tierCh='H',tierParty='',tierStatus='';const tierOpen=new Set();
 // No Status menu since Nov. 19, 2026: the members who lost in 2026 were taken off the site (data/removed.json).
 const TIER_STATUS=[['','All','Every sitting member']];
@@ -2445,6 +2446,33 @@ function renderCareer(key){
 }
 // A profile's career tag opens Career Totals on its chamber.
 document.addEventListener('click',e=>{const a=e.target.closest('a.ti-tag');if(a?.dataset.ch)tierCh=a.dataset.ch;});
+// ---------- Trackers' About: what each tracker follows (public/tracker-about.js) ----------
+// The counts beside each tracker: sitting members who took some this cycle (the seating charts' rule, from the FEC bulk
+// files), and members with a check in their career (Career Totals). Either is null while the files on hand can't answer.
+let aboutSel=null;
+function trackerAboutCounts(){
+  // (sitting members only: the bulk file also keeps others it has read)
+  const sitting=new Set([...SENATE,...HOUSE.filter(x=>!x.delegate)].map(x=>x.id));
+  const cp=window.CORP_PACS,ids=cp?.people?Object.keys(cp.people).filter(id=>sitting.has(id)):[],counts={};
+  for(const t of TRACKERS){
+    const took=cp?.trackers&&!bulkUnread(cp,t.key)?ids.filter(id=>seatStatus({id},t.key)==='took').length:null;
+    const career=window.TRACKER_HISTORY?.trackers&&careerDone(t.key)?careerOf(t.key,'H').took+careerOf(t.key,'S').took:null;
+    counts[t.key]={took,read:ids.length,career};
+  }
+  return counts;
+}
+function renderTrackerAbout(){
+  const counts=trackerAboutCounts(),h=window.TRACKER_HISTORY;
+  const meta={read:Object.values(counts)[0]?.read||0,through:window.CORP_PACS?.through?fmtDate(window.CORP_PACS.through):'',careerFrom:h?.cycles?.length?`${h.cycles[0]-1}–${String(h.cycles[0]).slice(2)}`:''};
+  app.innerHTML=`<section class="section" id="trackers-about"><div class="kicker">Lobby money</div>${trackerViews('trackers-about')}<h1>What each tracker follows</h1>${trackerAboutHTML(TRACKERS,counts,aboutSel,meta)}</section>`;
+  const host=$('#trackers-about');
+  host.addEventListener('click',e=>{
+    const b=e.target.closest('[data-ab]');if(!b)return;
+    aboutSel=b.dataset.ab;$('#ta-panel').innerHTML=aboutPanel(TRACKER[aboutSel],counts[aboutSel]);
+    host.querySelectorAll('.ta-tab').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.ab===aboutSel)));
+    if(b.classList.contains('ta-go'))$('#ta-each').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
 // ---------- Trackers: every reviewed profile ranked by money from each lobby (public/trackers.js) ----------
 function renderTrackers(key){
   const t=TRACKER[key]||TRACKERS[0];
