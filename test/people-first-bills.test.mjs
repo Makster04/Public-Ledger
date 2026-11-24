@@ -8,8 +8,8 @@ import {billScore,BILL_GROUPS} from '../public/grades.js';
 import {voteBill} from '../public/scoring.js';
 const D=withRemovedResearch(JSON.parse(await fs.readFile(new URL('../public/research.json',import.meta.url),'utf8')));
 const config=JSON.parse(await fs.readFile(new URL('../data/config.json',import.meta.url),'utf8'));
-const ADDED={'119-hr-5408':100,'119-hconres-14':-100,'119-hr-4':-100,'119-hr-3633':-100,'119-hr-1968':-100,'119-sjres-18':-100,'119-s-1582':-100};
-const VOTES={'119-hconres-14':['h-119-1-050','119-1-191','h-119-1-100'],'119-sjres-18':['119-1-153','h-119-1-096'],'119-hr-3633':['h-119-1-199','119-2-234'],'119-hr-5408':['h-119-2-216']};
+const ADDED={'119-sjres-28':-100,'119-hr-5408':100,'119-hconres-14':-100,'119-hr-4':-100,'119-hr-3633':-100,'119-hr-1968':-100,'119-sjres-18':-100,'119-s-1582':-100};
+const VOTES={'119-sjres-28':['119-1-106','h-119-1-095'],'119-hconres-14':['h-119-1-050','119-1-191','h-119-1-100'],'119-sjres-18':['119-1-153','h-119-1-096'],'119-hr-3633':['h-119-1-199','119-2-234'],'119-hr-5408':['h-119-2-216']};
 
 test('each added bill is scored from a worker group and a business group, with cited sources',()=>{
   for(const [id,score] of Object.entries(ADDED)){
@@ -39,4 +39,11 @@ test('the added roll calls are mapped to an issue, or say why not',()=>{
   for(const ids of Object.values(VOTES))for(const id of ids){const v=V(id);
     if(v.codes.length){assert.equal(v.excluded,null,id);for(const c of v.codes){assert.ok(ISS.has(c.issue),id);assert.ok(c.why,id);}}
     else assert.ok(v.excluded&&!/People First \(added/.test(v.excluded),id+' says why it is not mapped');}
+});
+
+test('the Senate vote on S. 3385 counts for the three-year ACA extension, as a version of H.R. 1834',()=>{
+  const b=D.bills.find(x=>x.id==='119-hr-1834');assert.ok(b.versions.includes('119-s-3385'));
+  const v=D.votes.find(x=>x.id==='119-1-644');assert.equal(voteBill(v),'119-s-3385');assert.deepEqual(v.codes.map(c=>c.issue+c.yea),['healthA']);
+  assert.ok(Object.keys(v.pos).length>=90);assert.ok(config.selectedVotes.some(x=>x.id==='119-1-644'));
+  assert.ok(D.bills.find(x=>x.id==='119-sjres-28').consumer);
 });
