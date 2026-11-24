@@ -8,20 +8,98 @@ const latin1=b=>new TextDecoder('latin1').decode(b);
 export const STREAM_CAP=16e6;
 // The most one PDF's streams may inflate to in all (a long scanned report's pages), so one file can't use up memory.
 export const PDF_CAP=64e6;
+// Under Node (npm start), its zlib inflates, with the wider window the House Clerk's newer reports need (below);
+// DecompressionStream takes the window from the header and stops partway through them. Elsewhere (a Worker),
+// DecompressionStream does, and a stream it stops partway keeps what it gave, so those reports are read in part there.
+let nodeZlib;
+const zlibOf=async()=>nodeZlib!==undefined?nodeZlib:(nodeZlib=await import('node:zlib').catch(()=>null));
 async function inflate(bytes,cap=STREAM_CAP){
+  const z=await zlibOf();
+  // The House Clerk's newer streams declare a 1 KB window in their header (58 47) but reach further back, so the window
+  // is set to the largest (32 KB) rather than taken from the header; without it they fail "invalid distance too far back".
+  if(z){try{const out=z.inflateSync(bytes,{maxOutputLength:cap,windowBits:15,chunkSize:1<<20});return new Uint8Array(out.buffer,out.byteOffset,out.length);}catch{return null;}}
+  const parts=[];let n=0;
+  const joined=()=>{const out=new Uint8Array(n);let o=0;for(const x of parts){out.set(x,o);o+=x.length;}return out;};
   try{
-    const reader=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate')).getReader(),parts=[];let n=0;
+    const reader=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate')).getReader();
     for(;;){const {done,value}=await reader.read();if(done)break;n+=value.length;if(n>cap){await reader.cancel().catch(()=>{});return null;}parts.push(value);}
-    const out=new Uint8Array(n);let o=0;for(const x of parts){out.set(x,o);o+=x.length;}return out;
-  }catch{return null;}
+    return joined();
+  }catch{return n>0?joined():null;}
 }
 // Streams that never hold text, so they're never inflated: pictures, embedded font programs, metadata, cross-reference
 // tables and attached files. Text is drawn by content streams (a page's, or a form's) through fonts' ToUnicode tables.
 export const NOT_TEXT=/\/Subtype\s*\/(Image|Type1C|CIDFontType0C|OpenType)\b|\/Type\s*\/(Metadata|XRef|EmbeddedFile)\b|\/Length[123]\s/;
-// Every indirect object: its number, its dictionary text, and its stream's bytes (inflated when FlateDecode).
+// ---------- Encrypted PDFs (the PDF standard's "Standard" security handler, blank user password) ----------
+// The House Clerk's e-filed reports since 2025 are encrypted with no password to open them (any reader opens them; the
+// encryption only carries the author's permissions). Their streams are read the same way a reader opens them: RC4 (40
+// to 128 bits, revisions 2 and 3) or AES-128 (revision 4, AESV2), with the key made from the blank password. A file that
+// needs a real password, or uses AES-256 (revisions 5 and 6), isn't read and gives '' as before.
+const PAD=[0x28,0xbf,0x4e,0x5e,0x4e,0x75,0x8a,0x41,0x64,0x00,0x4e,0x56,0xff,0xfa,0x01,0x08,0x2e,0x2e,0x00,0xb6,0xd0,0x68,0x3e,0x80,0x2f,0x0c,0xa9,0xfe,0x64,0x53,0x69,0x7a];
+// MD5, which the key needs (not in Web Crypto).
+export function md5(bytes){
+  const K=new Uint32Array(64),S=[7,12,17,22,5,9,14,20,4,11,16,23,6,10,15,21];for(let i=0;i<64;i++)K[i]=Math.floor(Math.abs(Math.sin(i+1))*2**32)>>>0;
+  const len=bytes.length,n=((len+8>>>6)+1)*64,m=new Uint8Array(n);m.set(bytes);m[len]=0x80;
+  const bits=len*8;for(let i=0;i<8;i++)m[n-8+i]=Math.floor(bits/2**(8*i))&255;
+  let a0=0x67452301,b0=0xefcdab89,c0=0x98badcfe,d0=0x10325476;const w=new Uint32Array(16),rotl=(x,c)=>(x<<c)|(x>>>(32-c));
+  for(let o=0;o<n;o+=64){
+    for(let i=0;i<16;i++)w[i]=m[o+4*i]|m[o+4*i+1]<<8|m[o+4*i+2]<<16|m[o+4*i+3]<<24;
+    let a=a0,b=b0,c=c0,d=d0;
+    for(let i=0;i<64;i++){let f,g;
+      if(i<16){f=(b&c)|(~b&d);g=i;}else if(i<32){f=(d&b)|(~d&c);g=(5*i+1)%16;}else if(i<48){f=b^c^d;g=(3*i+5)%16;}else{f=c^(b|~d);g=(7*i)%16;}
+      const t=d;d=c;c=b;b=(b+rotl((a+f+K[i]+w[g])>>>0,S[(i>>4)*4+(i%4)]))>>>0;a=t;}
+    a0=(a0+a)>>>0;b0=(b0+b)>>>0;c0=(c0+c)>>>0;d0=(d0+d)>>>0;
+  }
+  const out=new Uint8Array(16);[a0,b0,c0,d0].forEach((v,i)=>{for(let j=0;j<4;j++)out[4*i+j]=v>>>(8*j)&255;});return out;
+}
+export function rc4(key,data){
+  const s=new Uint8Array(256);for(let i=0;i<256;i++)s[i]=i;
+  for(let i=0,j=0;i<256;i++){j=(j+s[i]+key[i%key.length])&255;[s[i],s[j]]=[s[j],s[i]];}
+  const out=new Uint8Array(data.length);
+  for(let k=0,i=0,j=0;k<data.length;k++){i=(i+1)&255;j=(j+s[i])&255;[s[i],s[j]]=[s[j],s[i]];out[k]=data[k]^s[(s[i]+s[j])&255];}
+  return out;
+}
+const hexBytes=h=>{h=h.replace(/[^0-9a-fA-F]/g,'');if(h.length%2)h+='0';const b=new Uint8Array(h.length/2);for(let i=0;i<b.length;i++)b[i]=parseInt(h.slice(2*i,2*i+2),16);return b;};
+// A PDF string's bytes: <hex> or (literal), with the literal's escapes.
+function pdfStringBytes(s){
+  s=s.trim();if(s.startsWith('<'))return hexBytes(s.slice(1,s.indexOf('>')));
+  const out=[];const body=s.slice(1,-1);
+  for(let i=0;i<body.length;i++){const ch=body[i];
+    if(ch!=='\\'){out.push(ch.charCodeAt(0)&255);continue;}
+    const nx=body[++i];const E={n:10,r:13,t:9,b:8,f:12,'(':40,')':41,'\\':92};
+    if(nx in E)out.push(E[nx]);else if(/[0-7]/.test(nx)){let o=nx;while(o.length<3&&/[0-7]/.test(body[i+1]||''))o+=body[++i];out.push(parseInt(o,8)&255);}
+    else if(nx==='\r'){if(body[i+1]==='\n')i++;}else if(nx!=='\n')out.push(nx.charCodeAt(0)&255);}
+  return new Uint8Array(out);
+}
+// The file key for the blank user password, and how each object's key is made; null when the file isn't encrypted the
+// way this reads. raw: the file as latin1 text.
+export function pdfDecryptor(raw){
+  const ref=[...raw.matchAll(/\/Encrypt\s+(\d+)\s+(\d+)\s+R/g)].pop();if(!ref)return null;
+  const body=raw.match(new RegExp(`(?:^|\\s)${ref[1]}\\s+${ref[2]}\\s+obj([\\s\\S]*?)endobj`))?.[1];if(!body||!/\/Filter\s*\/Standard/.test(body))return {unsupported:true};
+  const num=k=>Number(body.match(new RegExp(`/${k}\\s+(-?\\d+)`))?.[1]);
+  const V=num('V')||0,R=num('R'),P=num('P'),bits=num('Length')||40,str=k=>{const m=body.match(new RegExp(`/${k}\\s*(<[0-9a-fA-F\\s]*>|\\((?:\\\\[\\s\\S]|[^\\\\)])*\\))`));return m?pdfStringBytes(m[1]):null;};
+  const O=str('O'),idm=[...raw.matchAll(/\/ID\s*\[\s*(<[0-9a-fA-F\s]*>|\((?:\\[\s\S]|[^\\)])*\))/g)].pop(),ID=idm?pdfStringBytes(idm[1]):new Uint8Array(0);
+  const aes=V===4&&/\/CFM\s*\/AESV2/.test(body);
+  if(!O||!(R>=2&&R<=4)||(V===4&&!aes&&!/\/CFM\s*\/V2/.test(body)))return {unsupported:true};
+  const n=R===2?5:Math.min(16,(V===4?128:bits)/8);
+  const p=new Uint8Array(4);for(let i=0;i<4;i++)p[i]=(P>>>(8*i))&255;
+  const meta=R>=4&&/\/EncryptMetadata\s+false/.test(body);
+  let k=md5(new Uint8Array([...PAD,...O.subarray(0,32),...p,...ID,...(meta?[255,255,255,255]:[])]));
+  if(R>=3)for(let i=0;i<50;i++)k=md5(k.subarray(0,n));
+  const key=k.subarray(0,n),self=Number(ref[1]);
+  const objKey=(obj,gen)=>md5(new Uint8Array([...key,obj&255,obj>>>8&255,obj>>>16&255,gen&255,gen>>>8&255,...(aes?[0x73,0x41,0x6c,0x54]:[])])).subarray(0,Math.min(16,n+5));
+  return {self,aes,async stream(obj,gen,data){
+    const k=objKey(obj,gen);if(!aes)return rc4(k,data);
+    if(data.length<32||data.length%16)return null;
+    try{const c=await crypto.subtle.importKey('raw',k,{name:'AES-CBC'},false,['decrypt']);return new Uint8Array(await crypto.subtle.decrypt({name:'AES-CBC',iv:data.subarray(0,16)},c,data.subarray(16)));}catch{return null;}
+  }};
+}
+
+// Every indirect object: its number, its dictionary text, and its stream's bytes (inflated when FlateDecode; decrypted
+// first when the file is encrypted with a blank password).
 async function readObjects(bytes){
-  const raw=latin1(bytes),objects=new Map();let left=PDF_CAP;
-  for(const m of raw.matchAll(/(\d+)\s+\d+\s+obj\b/g)){
+  const raw=latin1(bytes),objects=new Map(),crypt=pdfDecryptor(raw);let left=PDF_CAP;
+  if(crypt?.unsupported)return objects;
+  for(const m of raw.matchAll(/(\d+)\s+(\d+)\s+obj\b/g)){
     const start=m.index+m[0].length,end=raw.indexOf('endobj',start);if(end<0)continue;
     let body=raw.slice(start,end),stream=null;
     const s=body.search(/\bstream\r?\n/);
@@ -30,8 +108,16 @@ async function readObjects(bytes){
       if(to>from){
         const dict=body.slice(0,s);
         if(!NOT_TEXT.test(dict)){
-          const data=bytes.subarray(from,to);
-          stream=/\/FlateDecode/.test(dict)?(left>0?await inflate(trimEol(data),Math.min(STREAM_CAP,left)):null):/\/Filter/.test(dict)?null:data.slice();
+          let data=bytes.subarray(from,to);
+          // An encrypted stream is cut at its /Length (its last bytes may look like a line ending), then decrypted.
+          let crypted=false;
+          if(crypt&&Number(m[1])!==crypt.self&&!/\/Type\s*\/XRef\b/.test(dict)){
+            // (the length is written in the dictionary, or kept in another object: /Length 25 0 R)
+            const lm=dict.match(/\/Length\s+(\d+)\b(\s+\d+\s+R)?/),L=lm?(lm[2]?Number(raw.match(new RegExp(`(?:^|\\s)${lm[1]}\\s+\\d+\\s+obj\\s*(\\d+)\\s*endobj`))?.[1]):Number(lm[1])):NaN;
+            data=await crypt.stream(Number(m[1]),Number(m[2]),Number.isFinite(L)&&L>0&&from+L<=to?bytes.subarray(from,from+L):trimEol(data));crypted=true;
+            if(!data){objects.set(Number(m[1]),{dict:body.slice(0,s),stream:null});continue;}
+          }
+          stream=/\/FlateDecode/.test(dict)?(left>0?await inflate(crypted?data:trimEol(data),Math.min(STREAM_CAP,left)):null):/\/Filter/.test(dict)?null:data.slice();
           if(stream)left-=stream.length;
         }
       }
@@ -150,10 +236,12 @@ export async function pdfText(bytes){
   }
   const lines=[];
   for(const o of objects.values()){
-    if(!o.stream||/\/Type\s*\/(ObjStm|XRef|XObject)/.test(o.dict)||/\/Subtype\s*\/Image/.test(o.dict))continue;
+    // (a form, drawn by a page, holds text too: the House Clerk's newer reports draw their first page as one)
+    if(!o.stream||/\/Type\s*\/(ObjStm|XRef)/.test(o.dict)||/\/Subtype\s*\/Image/.test(o.dict))continue;
     const text=latin1(o.stream);if(!/\bBT\b/.test(text)||!/T[jJ]|['"]/.test(text))continue;
     let line='',font=null,y=null,stack=[],arr=null;
-    const newline=()=>{if(line.trim())lines.push(line.replace(/\s+/g,' ').trim());line='';};
+    // (a glyph its font maps to nothing, such as small capitals in the House Clerk's headings, comes out as \0 and is dropped)
+    const newline=()=>{const l=line.replace(/\0/g,'').replace(/\s+/g,' ').trim();if(l)lines.push(l);line='';};
     for(const t of tokens(text)){
       if(t.op==='['){arr=[];continue;}
       if(t.op===']'){stack.push({arr});arr=null;continue;}

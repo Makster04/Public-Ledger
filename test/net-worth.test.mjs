@@ -51,6 +51,44 @@ Schedule E: Positions`;
   assert.deepEqual(houseAnnualHoldings(''),{assets:[],debts:[]},'a paper report has no text');
 });
 
+test('a House report in the newer layout: small-capital headings, a name above its code, a 529 code, debts that wrap',()=>{
+  const text=`S A : A "U " I
+A sse t O w n e r V alu e o f A sse t I n c o me T y p e (s) I n c o me T x . >
+$ 1 , 0 0 0 ?
+Athene Life Insurance (Whole) [WU] SP $15,001 - $50,000 Dividends $1 - $200
+E*Trade Brokerage Account ⇒
+Amplify CWP Enhanced Dividend Income ETF (DIVO) [EF]
+JT $100,001 -
+$250,000
+Dividends $5,001 -
+$15,000
+Principle Investments (Prin Life Time 2030 Inst Fund)
+[PE]
+$15,001 - $50,000 Tax-Deferred
+D : P ensio n P l a n wit h U niv er sit y o f B el l ev u e
+Victory Capital Fund with USAA [5P]
+JT $15,001 - $50,000 None
+S B : T
+None disclosed.
+S D : L
+O w n e r Cre d i t o r D at e I n c u rre d T y p e A mo u n t o f
+L i ab i li t y
+Beneficial State Bank March 2018 note holder of commercial rental property,
+Portland OR
+$250,001 -
+$500,000
+JT Citizens Bank July 2024 Mortgage on our home $500,001 -
+$1,000,000
+C : M o r t g a g e o n W a sh ing t o n, D . C . a r ea co nd o m iniu m
+S E : P`;
+  const h=houseAnnualHoldings(text);
+  assert.deepEqual(h.assets.map(a=>[a.code,a.owner,a.value,a.name]),[['WU','spouse','$15,001 - $50,000','Athene Life Insurance (Whole)'],
+    ['EF','joint','$100,001 - $250,000','Amplify CWP Enhanced Dividend Income ETF (DIVO)'],['PE','self','$15,001 - $50,000','Principle Investments (Prin Life Time 2030 Inst Fund)'],
+    ['5P','joint','$15,001 - $50,000','Victory Capital Fund with USAA']]);
+  assert.deepEqual(h.debts.map(d=>[d.owner,d.amount,d.creditor]),[['self','$250,001 - $500,000','Beneficial State Bank March 2018 note holder of commercial rental property, Portland OR'],
+    ['joint','$500,001 - $1,000,000','Citizens Bank July 2024 Mortgage on our home']]);
+});
+
 test('a Senate eFD annual report: the asset and liability tables, not the gifts or transactions',()=>{
   const table=(heads,rows)=>`<table><thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
   const html=table(['#','Asset','Asset Type','Owner','Value','Income Type','Income Amount'],[['1','<strong>Vanguard 500</strong>','Mutual Funds','Spouse','$100,001 - $250,000','Dividends','$2,501 - $5,000'],['2','Checking','Bank Deposit','Self','$15,001 - $50,000','Interest','$1 - $200']])
