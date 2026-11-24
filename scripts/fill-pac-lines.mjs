@@ -133,5 +133,5 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
     }catch(e){console.log(`${p.id}: ${e.message}; its saved lines are kept`);}
   }
   if(changed&&!check){await fs.writeFile(file,JSON.stringify(data,null,2)+(raw.endsWith('\n')?'\n':''));}
-  console.log(`\n${check?'Check only: nothing written.':`${changed} profile${changed===1?'':'s'} updated in public/research.json.`}`);
+  console.log(`\n${check?'Check only: nothing written.':`${changed} profile${changed===1?'':'s'} updated in public/research.json.${changed?' Now run node scripts/build-funders.mjs, which updates each group\'s PAC gifts from the new lines, then commit public/research.json.':''}`}`);
 }

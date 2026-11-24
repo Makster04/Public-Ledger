@@ -17109,8 +17109,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 4,
           "for": 584500,
           "against": 0,
           "spenders": [
@@ -17170,8 +17170,8 @@
           "key": "jstreet",
           "org": "J Street",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5500,
+          "pacN": 4,
           "routed": 116118.33,
           "routedN": 187,
           "for": 0,
@@ -17216,8 +17216,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -17272,40 +17272,37 @@
           "n": 3
         },
         {
-          "key": "acu",
-          "org": "America's Credit Unions",
+          "key": "nar",
+          "org": "National Association of Realtors",
           "status": "done",
-          "pac": 3500,
-          "pacN": 1,
+          "pac": 7000,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
-          "compared": [
-            {
-              "voteId": "h-119-1-200",
-              "short": "GENIUS Act (stablecoin rules)",
-              "date": "2025-07-17",
-              "chamber": "House",
-              "wanted": "Yea",
-              "cast": "Nay",
-              "match": false,
-              "basis": "statement",
-              "scoredAs": "Urged the House to pass the GENIUS Act, which it calls a credit union-backed bill",
-              "src": {
-                "t": "America's Credit Unions: House clears credit union-backed digital assets, anti-CBDC bills (July 2025)",
-                "u": "https://www.americascreditunions.org/node/19526"
-              }
-            }
-          ],
+          "compared": [],
           "agree": 0,
-          "n": 1
+          "n": 0
+        },
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 6000,
+          "pacN": 4,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         },
         {
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
-          "pac": 3000,
-          "pacN": 1,
+          "pac": 5000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -17360,24 +17357,69 @@
           "n": 3
         },
         {
-          "key": "nar",
-          "org": "National Association of Realtors",
+          "key": "acu",
+          "org": "America's Credit Unions",
           "status": "done",
-          "pac": 3000,
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-200",
+              "short": "GENIUS Act (stablecoin rules)",
+              "date": "2025-07-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "statement",
+              "scoredAs": "Urged the House to pass the GENIUS Act, which it calls a credit union-backed bill",
+              "src": {
+                "t": "America's Credit Unions: House clears credit union-backed digital assets, anti-CBDC bills (July 2025)",
+                "u": "https://www.americascreditunions.org/node/19526"
+              }
+            }
+          ],
+          "agree": 0,
+          "n": 1
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
           "pacN": 1,
           "for": 0,
           "against": 0,
           "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "\"A Big, Ugly, Betrayal\": Weingarten on House passage of the reconciliation bill",
+              "src": {
+                "t": "AFT: \"A Big, Ugly, Betrayal\"—AFT's Weingarten on House Reconciliation Bill (May 2025)",
+                "u": "https://www.aft.org/node/101331"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
         },
         {
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 2000,
-          "pacN": 2,
+          "pac": 4050,
+          "pacN": 5,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -17492,17 +17534,192 @@
           "n": 7
         },
         {
-          "key": "edf",
-          "org": "Environmental Defense Fund",
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 3000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed bill and urged the Senate to reject it",
+              "src": {
+                "t": "NRDC: Senate Should Bury House Plan to Lock in Fossil Fuels (May 2025)",
+                "u": "https://www.nrdc.org/press-releases/senate-should-bury-house-plan-lock-fossil-fuels"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "src": {
+                "t": "Alliance for Retired Americans: Friday Alert, May 23, 2025",
+                "u": "https://retiredamericans.org/wp-content/uploads/2025/05/Friday-Alert-5-23-25.pdf"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "src": {
+                "t": "The Advocate: Republicans pass unpopular Big Beautiful Bill (quotes HRC President Kelley Robinson)",
+                "u": "https://www.advocate.com/politics/republicans-pass-unpopular-big-beautiful-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-102",
+              "short": "SAVE Act (proof of citizenship to register)",
+              "date": "2025-04-10",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the SAVE Act",
+              "src": {
+                "t": "The Advocate: HRC on the SAVE Act",
+                "u": "https://www.advocate.com/politics/national/hrc-trump-save-act-desperate"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
           "status": "done",
           "pac": 2000,
-          "pacN": 2,
+          "pacN": 1,
           "for": 0,
           "against": 0,
           "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed final passage: the bill \"guts critical funding for education, health care, and nutrition\"",
+              "src": {
+                "t": "NEA statement on final passage of the budget bill (July 3, 2025), as posted by the Nevada State Education Association",
+                "u": "https://www.nsea-nv.org/about-nsea/media-center/press-releases/nea-reacts-final-passage-trump-administrations-budget-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Reacted to House passage: \"This is not leadership—it's abandonment\"",
+              "src": {
+                "t": "NEA statement on House passage of the budget reconciliation bill (May 22, 2025), as posted by NEA Rhode Island",
+                "u": "https://www.neari.org/about-neari/media-center/press-releases/nea-reacts-houses-passage-budget-reconciliation-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "aha",
+          "org": "American Hospital Association",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Criticized House passage of the One Big Beautiful Bill Act",
+              "src": {
+                "t": "American Hospital Association: AHA Statement on House Passage of One Big Beautiful Bill Act (July 3, 2025)",
+                "u": "https://www.aha.org/press-releases/2025-07-03-aha-statement-house-passage-one-big-beautiful-bill-act"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
         }
       ],
       "legalReview": {
@@ -22028,10 +22245,82 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 221982.03,
           "routedN": 202,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "routed": 1724.5,
+          "routedN": 49,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 4,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-332",
+              "short": "Protect America's Workforce Act",
+              "date": "2025-12-11",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 17, 2025 backing the Protect America's Workforce Act and urging a House vote on it (passed Dec. 11, 2025, House roll call 332)",
+              "src": {
+                "t": "AFSCME press release, July 17, 2025: 'AFSCME's Saunders: We urge Congress to protect federal workers' freedom to collectively bargain'",
+                "u": "https://afscme.org/press/releases/afscmes-saunders-we-urge-congress-to-protect-federal-workers-freedom-to-collectively-bargain/"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 1, 2025 opposing the Senate-passed budget reconciliation bill (H.R. 1) as it returned to the House for final passage (House roll call 190, July 3, 2025)",
+              "src": {
+                "t": "AFSCME press release, July 1, 2025: 'AFSCME's Saunders: The Senate's distorted priorities will leave working people footing the bill'",
+                "u": "https://afscme.org/press/releases/2025/afscmes-saunders-the-senates-distorted-priorities-will-leave-working-people-footing-the-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "nar",
+          "org": "National Association of Realtors",
+          "status": "done",
+          "pac": 9000,
+          "pacN": 4,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -22058,8 +22347,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 2,
+          "pac": 7500,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -22102,8 +22391,8 @@
           "key": "aba",
           "org": "American Bankers Association",
           "status": "done",
-          "pac": 4000,
-          "pacN": 3,
+          "pac": 7500,
+          "pacN": 5,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -22112,13 +22401,142 @@
           "n": 0
         },
         {
-          "key": "emily",
-          "org": "EMILY's List",
+          "key": "aft",
+          "org": "American Federation of Teachers",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "routed": 1724.5,
-          "routedN": 49,
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "\"A Big, Ugly, Betrayal\": Weingarten on House passage of the reconciliation bill",
+              "src": {
+                "t": "AFT: \"A Big, Ugly, Betrayal\"—AFT's Weingarten on House Reconciliation Bill (May 2025)",
+                "u": "https://www.aft.org/node/101331"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "src": {
+                "t": "Alliance for Retired Americans: Friday Alert, May 23, 2025",
+                "u": "https://retiredamericans.org/wp-content/uploads/2025/05/Friday-Alert-5-23-25.pdf"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "src": {
+                "t": "The Advocate: Republicans pass unpopular Big Beautiful Bill (quotes HRC President Kelley Robinson)",
+                "u": "https://www.advocate.com/politics/republicans-pass-unpopular-big-beautiful-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-102",
+              "short": "SAVE Act (proof of citizenship to register)",
+              "date": "2025-04-10",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Yea",
+              "match": false,
+              "basis": "statement",
+              "scoredAs": "Opposed the SAVE Act",
+              "src": {
+                "t": "The Advocate: HRC on the SAVE Act",
+                "u": "https://www.advocate.com/politics/national/hrc-trump-save-act-desperate"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 2
+        },
+        {
+          "key": "acu",
+          "org": "America's Credit Unions",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-200",
+              "short": "GENIUS Act (stablecoin rules)",
+              "date": "2025-07-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Urged the House to pass the GENIUS Act, which it calls a credit union-backed bill",
+              "src": {
+                "t": "America's Credit Unions: House clears credit union-backed digital assets, anti-CBDC bills (July 2025)",
+                "u": "https://www.americascreditunions.org/node/19526"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -22127,8 +22545,111 @@
           "n": 0
         },
         {
-          "key": "nar",
-          "org": "National Association of Realtors",
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed final passage: the bill \"guts critical funding for education, health care, and nutrition\"",
+              "src": {
+                "t": "NEA statement on final passage of the budget bill (July 3, 2025), as posted by the Nevada State Education Association",
+                "u": "https://www.nsea-nv.org/about-nsea/media-center/press-releases/nea-reacts-final-passage-trump-administrations-budget-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Reacted to House passage: \"This is not leadership—it's abandonment\"",
+              "src": {
+                "t": "NEA statement on House passage of the budget reconciliation bill (May 22, 2025), as posted by NEA Rhode Island",
+                "u": "https://www.neari.org/about-neari/media-center/press-releases/nea-reacts-houses-passage-budget-reconciliation-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "nfib",
+          "org": "National Federation of Independent Business",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-349",
+              "short": "Lower Health Care Premiums for All Americans Act",
+              "date": "2025-12-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Lower Health Care Premiums for All Americans Act (H.R. 6703)', 'NFIB supported H.R. 6703' (the report gives no roll-call number). Matches House Roll Call 349, Dec. 17, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 6703",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Motion on Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote notice of July 2, 2025 urges members 'to support the Senate amendment to H.R. 1'. Matches House Roll Call 190, July 3, 2025 (motion to concur).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote 'Motion on Working Families Tax Cuts'",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote letter of May 21, 2025: 'A vote in favor of the One Big Beautiful Bill Act will be considered an NFIB key vote'. Matches House Roll Call 145, May 22, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 1",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            }
+          ],
+          "agree": 0,
+          "n": 3
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
           "pac": 1000,
           "pacN": 1,
@@ -22138,6 +22659,35 @@
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed bill and urged the Senate to reject it",
+              "src": {
+                "t": "NRDC: Senate Should Bury House Plan to Lock in Fossil Fuels (May 2025)",
+                "u": "https://www.nrdc.org/press-releases/senate-should-bury-house-plan-lock-fossil-fuels"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
         }
       ],
       "legalReview": {
@@ -29126,8 +29676,8 @@
           "key": "acu",
           "org": "America's Credit Unions",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 699931.92,
           "against": 0,
           "spenders": [
@@ -29203,8 +29753,8 @@
           "key": "nar",
           "org": "National Association of Realtors",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 4,
           "for": 40734,
           "against": 0,
           "spenders": [
@@ -29215,53 +29765,11 @@
           "n": 0
         },
         {
-          "key": "aba",
-          "org": "American Bankers Association",
-          "status": "done",
-          "pac": 4000,
-          "pacN": 3,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "aha",
-          "org": "American Hospital Association",
-          "status": "done",
-          "pac": 3500,
-          "pacN": 2,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [
-            {
-              "voteId": "h-119-1-190",
-              "short": "One Big Beautiful Bill Act (final)",
-              "date": "2025-07-03",
-              "chamber": "House",
-              "wanted": "Nay",
-              "cast": "Nay",
-              "match": true,
-              "basis": "statement",
-              "scoredAs": "Criticized House passage of the One Big Beautiful Bill Act",
-              "src": {
-                "t": "American Hospital Association: AHA Statement on House Passage of One Big Beautiful Bill Act (July 3, 2025)",
-                "u": "https://www.aha.org/press-releases/2025-07-03-aha-statement-house-passage-one-big-beautiful-bill-act"
-              }
-            }
-          ],
-          "agree": 1,
-          "n": 1
-        },
-        {
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 4,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -29301,6 +29809,160 @@
           "n": 2
         },
         {
+          "key": "aba",
+          "org": "American Bankers Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 6,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed final passage: the bill \"guts critical funding for education, health care, and nutrition\"",
+              "src": {
+                "t": "NEA statement on final passage of the budget bill (July 3, 2025), as posted by the Nevada State Education Association",
+                "u": "https://www.nsea-nv.org/about-nsea/media-center/press-releases/nea-reacts-final-passage-trump-administrations-budget-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Reacted to House passage: \"This is not leadership—it's abandonment\"",
+              "src": {
+                "t": "NEA statement on House passage of the budget reconciliation bill (May 22, 2025), as posted by NEA Rhode Island",
+                "u": "https://www.neari.org/about-neari/media-center/press-releases/nea-reacts-houses-passage-budget-reconciliation-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "\"A Big, Ugly, Betrayal\": Weingarten on House passage of the reconciliation bill",
+              "src": {
+                "t": "AFT: \"A Big, Ugly, Betrayal\"—AFT's Weingarten on House Reconciliation Bill (May 2025)",
+                "u": "https://www.aft.org/node/101331"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "aha",
+          "org": "American Hospital Association",
+          "status": "done",
+          "pac": 4500,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Criticized House passage of the One Big Beautiful Bill Act",
+              "src": {
+                "t": "American Hospital Association: AHA Statement on House Passage of One Big Beautiful Bill Act (July 3, 2025)",
+                "u": "https://www.aha.org/press-releases/2025-07-03-aha-statement-house-passage-one-big-beautiful-bill-act"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "icba",
+          "org": "Independent Community Bankers of America",
+          "status": "done",
+          "pac": 3000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ama",
+          "org": "American Medical Association",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
@@ -29330,19 +29992,6 @@
           "n": 1
         },
         {
-          "key": "icba",
-          "org": "Independent Community Bankers of America",
-          "status": "done",
-          "pac": 1000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -29353,6 +30002,19 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "phrma",
+          "org": "PhRMA (pharmaceutical companies)",
+          "status": "done",
+          "pac": 500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -33663,8 +34325,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 2000,
-          "pacN": 2,
+          "pac": 4050,
+          "pacN": 5,
           "for": 2881869.38,
           "against": 0,
           "spenders": [
@@ -33784,8 +34446,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 1306769.75,
           "against": 0,
           "spenders": [
@@ -33860,8 +34522,8 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "routed": 108951.84,
           "routedN": 128,
           "for": 0,
@@ -33875,8 +34537,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 105000,
           "against": 0,
           "spenders": [
@@ -33916,6 +34578,50 @@
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 7500,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-332",
+              "short": "Protect America's Workforce Act",
+              "date": "2025-12-11",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 17, 2025 backing the Protect America's Workforce Act and urging a House vote on it (passed Dec. 11, 2025, House roll call 332)",
+              "src": {
+                "t": "AFSCME press release, July 17, 2025: 'AFSCME's Saunders: We urge Congress to protect federal workers' freedom to collectively bargain'",
+                "u": "https://afscme.org/press/releases/afscmes-saunders-we-urge-congress-to-protect-federal-workers-freedom-to-collectively-bargain/"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 1, 2025 opposing the Senate-passed budget reconciliation bill (H.R. 1) as it returned to the House for final passage (House roll call 190, July 3, 2025)",
+              "src": {
+                "t": "AFSCME press release, July 1, 2025: 'AFSCME's Saunders: The Senate's distorted priorities will leave working people footing the bill'",
+                "u": "https://afscme.org/press/releases/2025/afscmes-saunders-the-senates-distorted-priorities-will-leave-working-people-footing-the-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
         },
         {
           "key": "ppaf",
@@ -34019,6 +34725,19 @@
           "n": 1
         },
         {
+          "key": "aba",
+          "org": "American Bankers Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "hrc",
           "org": "Human Rights Campaign",
           "status": "done",
@@ -34063,58 +34782,15 @@
           "n": 2
         },
         {
-          "key": "aba",
-          "org": "American Bankers Association",
+          "key": "aha",
+          "org": "American Hospital Association",
           "status": "done",
           "pac": 4000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "nra",
-          "org": "National Rifle Association",
-          "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 0,
-          "against": 2981.82,
-          "spenders": [
-            "National Rifle Association Of America Political Victory Fund"
-          ],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "afscme",
-          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
-          "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
           "compared": [
-            {
-              "voteId": "h-119-1-332",
-              "short": "Protect America's Workforce Act",
-              "date": "2025-12-11",
-              "chamber": "House",
-              "wanted": "Yea",
-              "cast": "Yea",
-              "match": true,
-              "basis": "key_vote_alert",
-              "scoredAs": "AFSCME statement of July 17, 2025 backing the Protect America's Workforce Act and urging a House vote on it (passed Dec. 11, 2025, House roll call 332)",
-              "src": {
-                "t": "AFSCME press release, July 17, 2025: 'AFSCME's Saunders: We urge Congress to protect federal workers' freedom to collectively bargain'",
-                "u": "https://afscme.org/press/releases/afscmes-saunders-we-urge-congress-to-protect-federal-workers-freedom-to-collectively-bargain/"
-              }
-            },
             {
               "voteId": "h-119-1-190",
               "short": "One Big Beautiful Bill Act (final)",
@@ -34123,23 +34799,23 @@
               "wanted": "Nay",
               "cast": "Nay",
               "match": true,
-              "basis": "key_vote_alert",
-              "scoredAs": "AFSCME statement of July 1, 2025 opposing the Senate-passed budget reconciliation bill (H.R. 1) as it returned to the House for final passage (House roll call 190, July 3, 2025)",
+              "basis": "statement",
+              "scoredAs": "Criticized House passage of the One Big Beautiful Bill Act",
               "src": {
-                "t": "AFSCME press release, July 1, 2025: 'AFSCME's Saunders: The Senate's distorted priorities will leave working people footing the bill'",
-                "u": "https://afscme.org/press/releases/2025/afscmes-saunders-the-senates-distorted-priorities-will-leave-working-people-footing-the-bill"
+                "t": "American Hospital Association: AHA Statement on House Passage of One Big Beautiful Bill Act (July 3, 2025)",
+                "u": "https://www.aha.org/press-releases/2025-07-03-aha-statement-house-passage-one-big-beautiful-bill-act"
               }
             }
           ],
-          "agree": 2,
-          "n": 2
+          "agree": 1,
+          "n": 1
         },
         {
           "key": "nea",
           "org": "National Education Association",
           "status": "done",
-          "pac": 2000,
-          "pacN": 1,
+          "pac": 4000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -34179,10 +34855,38 @@
           "n": 2
         },
         {
-          "key": "aha",
-          "org": "American Hospital Association",
+          "key": "nar",
+          "org": "National Association of Realtors",
           "status": "done",
-          "pac": 1500,
+          "pac": 3000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 0,
+          "pacN": 0,
+          "for": 0,
+          "against": 2981.82,
+          "spenders": [
+            "National Rifle Association Of America Political Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 2500,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -34197,10 +34901,69 @@
               "cast": "Nay",
               "match": true,
               "basis": "statement",
-              "scoredAs": "Criticized House passage of the One Big Beautiful Bill Act",
+              "scoredAs": "Condemned final passage of the budget bill",
               "src": {
-                "t": "American Hospital Association: AHA Statement on House Passage of One Big Beautiful Bill Act (July 3, 2025)",
-                "u": "https://www.aha.org/press-releases/2025-07-03-aha-statement-house-passage-one-big-beautiful-bill-act"
+                "t": "SEIU: Statement from SEIU President Verrett on Final Budget Bill Passage (July 2025)",
+                "u": "https://www.seiu.org/2025/07/statement-seiu-president-verrett-responds-to-final-budget-bill-passage"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Said House Republicans who voted for the bill would be held accountable",
+              "src": {
+                "t": "SEIU: SEIU's Verrett: House Republicans Who Voted to Rip Healthcare from Families Will Be Held Accountable (May 2025)",
+                "u": "https://seiu.org/2025/05/seius-verrett-house-republicans-who-voted-to-rip-healthcare-from-families-will-be-held-accountable"
+              }
+            },
+            {
+              "voteId": "h-117-1-070",
+              "short": "PRO Act (2021 House passage)",
+              "date": "2021-03-09",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Letter of support for the PRO Act",
+              "src": {
+                "t": "House Education and Labor Committee Democrats: SEIU letter of support for the PRO Act",
+                "u": "https://democrats-edworkforce.house.gov/download/letter-of-support-for-the-pro-act-from-seiu&download=1"
+              }
+            }
+          ],
+          "agree": 3,
+          "n": 3
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "\"A Big, Ugly, Betrayal\": Weingarten on House passage of the reconciliation bill",
+              "src": {
+                "t": "AFT: \"A Big, Ugly, Betrayal\"—AFT's Weingarten on House Reconciliation Bill (May 2025)",
+                "u": "https://www.aft.org/node/101331"
               }
             }
           ],
@@ -34208,8 +34971,8 @@
           "n": 1
         },
         {
-          "key": "nar",
-          "org": "National Association of Realtors",
+          "key": "ama",
+          "org": "American Medical Association",
           "status": "done",
           "pac": 1000,
           "pacN": 1,
@@ -61855,8 +62618,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 2550,
-          "pacN": 2,
+          "pac": 3600,
+          "pacN": 4,
           "for": 3017031.31,
           "against": 0,
           "spenders": [
@@ -61915,8 +62678,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 57021.84,
           "against": 0,
           "spenders": [
@@ -61983,11 +62746,63 @@
           "n": 0
         },
         {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "giffords",
           "org": "Giffords",
           "status": "done",
-          "pac": 2500,
+          "pac": 3500,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 2000,
           "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 138.4,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -67051,12 +67866,42 @@
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 7000,
+          "pacN": 2,
           "for": 1227889.42,
           "against": 0,
           "spenders": [
             "Planned Parenthood Votes North Carolina (FEC)"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 5625,
+          "pacN": 5,
+          "for": 500198.09,
+          "against": 0,
+          "spenders": [
+            "LCV Victory Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 500000,
+          "against": 0,
+          "spenders": [
+            "NRDC Action Votes"
           ],
           "compared": [],
           "agree": 0,
@@ -67072,36 +67917,6 @@
           "against": 0,
           "spenders": [
             "EDF Action Votes"
-          ],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "lcv",
-          "org": "League of Conservation Voters",
-          "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 500198.09,
-          "against": 0,
-          "spenders": [
-            "LCV Victory Fund"
-          ],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "nrdc",
-          "org": "Natural Resources Defense Council",
-          "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 500000,
-          "against": 0,
-          "spenders": [
-            "NRDC Action Votes"
           ],
           "compared": [],
           "agree": 0,
@@ -67141,8 +67956,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 53694.13,
           "against": 0,
           "spenders": [
@@ -67181,6 +67996,19 @@
           "n": 0
         },
         {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nrlc",
           "org": "National Right to Life Committee",
           "status": "done",
@@ -67191,6 +68019,19 @@
           "spenders": [
             "National Right to Life Victory Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -67213,6 +68054,45 @@
           "org": "National Education Association",
           "status": "done",
           "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 4500,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 50,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -69439,8 +70319,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 4650,
+          "pacN": 5,
           "for": 3238868.46,
           "against": 0,
           "spenders": [
@@ -69454,8 +70334,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 480015.29,
           "against": 0,
           "spenders": [
@@ -69470,8 +70350,8 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 202240,
           "against": 0,
           "spenders": [
@@ -69527,10 +70407,49 @@
           "n": 0
         },
         {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nea",
           "org": "National Education Association",
           "status": "done",
           "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 2500,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -73741,8 +74660,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 7432,
+          "pacN": 7,
           "for": 1386566.68,
           "against": 0,
           "spenders": [
@@ -73862,8 +74781,8 @@
           "key": "acu",
           "org": "America's Credit Unions",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 432212,
           "against": 0,
           "spenders": [
@@ -73893,8 +74812,8 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 221279.44,
           "routedN": 138,
           "for": 0,
@@ -73908,8 +74827,8 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 99854.4,
           "against": 0,
           "spenders": [
@@ -73966,11 +74885,157 @@
           "n": 0
         },
         {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "\"A Big, Ugly, Betrayal\": Weingarten on House passage of the reconciliation bill",
+              "src": {
+                "t": "AFT: \"A Big, Ugly, Betrayal\"—AFT's Weingarten on House Reconciliation Bill (May 2025)",
+                "u": "https://www.aft.org/node/101331"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed final passage: the bill \"guts critical funding for education, health care, and nutrition\"",
+              "src": {
+                "t": "NEA statement on final passage of the budget bill (July 3, 2025), as posted by the Nevada State Education Association",
+                "u": "https://www.nsea-nv.org/about-nsea/media-center/press-releases/nea-reacts-final-passage-trump-administrations-budget-bill"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Reacted to House passage: \"This is not leadership—it's abandonment\"",
+              "src": {
+                "t": "NEA statement on House passage of the budget reconciliation bill (May 22, 2025), as posted by NEA Rhode Island",
+                "u": "https://www.neari.org/about-neari/media-center/press-releases/nea-reacts-houses-passage-budget-reconciliation-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 7500,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-332",
+              "short": "Protect America's Workforce Act",
+              "date": "2025-12-11",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 17, 2025 backing the Protect America's Workforce Act and urging a House vote on it (passed Dec. 11, 2025, House roll call 332)",
+              "src": {
+                "t": "AFSCME press release, July 17, 2025: 'AFSCME's Saunders: We urge Congress to protect federal workers' freedom to collectively bargain'",
+                "u": "https://afscme.org/press/releases/afscmes-saunders-we-urge-congress-to-protect-federal-workers-freedom-to-collectively-bargain/"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "AFSCME statement of July 1, 2025 opposing the Senate-passed budget reconciliation bill (H.R. 1) as it returned to the House for final passage (House roll call 190, July 3, 2025)",
+              "src": {
+                "t": "AFSCME press release, July 1, 2025: 'AFSCME's Saunders: The Senate's distorted priorities will leave working people footing the bill'",
+                "u": "https://afscme.org/press/releases/2025/afscmes-saunders-the-senates-distorted-priorities-will-leave-working-people-footing-the-bill"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 2
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 4,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "src": {
+                "t": "Alliance for Retired Americans: Friday Alert, May 23, 2025",
+                "u": "https://retiredamericans.org/wp-content/uploads/2025/05/Friday-Alert-5-23-25.pdf"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 5000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -74025,15 +75090,30 @@
           "n": 3
         },
         {
-          "key": "ara",
-          "org": "Alliance for Retired Americans",
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 1500,
-          "pacN": 2,
+          "pac": 5000,
+          "pacN": 1,
           "for": 0,
           "against": 0,
           "spenders": [],
           "compared": [
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Nay",
+              "cast": "Nay",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Condemned final passage of the budget bill",
+              "src": {
+                "t": "SEIU: Statement from SEIU President Verrett on Final Budget Bill Passage (July 2025)",
+                "u": "https://www.seiu.org/2025/07/statement-seiu-president-verrett-responds-to-final-budget-bill-passage"
+              }
+            },
             {
               "voteId": "h-119-1-145",
               "short": "One Big Beautiful Bill Act (House passage)",
@@ -74043,22 +75123,50 @@
               "cast": "Nay",
               "match": true,
               "basis": "statement",
-              "scoredAs": "Opposed the House-passed One Big Beautiful Bill Act",
+              "scoredAs": "Said House Republicans who voted for the bill would be held accountable",
               "src": {
-                "t": "Alliance for Retired Americans: Friday Alert, May 23, 2025",
-                "u": "https://retiredamericans.org/wp-content/uploads/2025/05/Friday-Alert-5-23-25.pdf"
+                "t": "SEIU: SEIU's Verrett: House Republicans Who Voted to Rip Healthcare from Families Will Be Held Accountable (May 2025)",
+                "u": "https://seiu.org/2025/05/seius-verrett-house-republicans-who-voted-to-rip-healthcare-from-families-will-be-held-accountable"
+              }
+            },
+            {
+              "voteId": "h-117-1-070",
+              "short": "PRO Act (2021 House passage)",
+              "date": "2021-03-09",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Letter of support for the PRO Act",
+              "src": {
+                "t": "House Education and Labor Committee Democrats: SEIU letter of support for the PRO Act",
+                "u": "https://democrats-edworkforce.house.gov/download/letter-of-support-for-the-pro-act-from-seiu&download=1"
               }
             }
           ],
-          "agree": 1,
-          "n": 1
+          "agree": 3,
+          "n": 3
+        },
+        {
+          "key": "aba",
+          "org": "American Bankers Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         },
         {
           "key": "hrc",
           "org": "Human Rights Campaign",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 4264.33,
+          "pacN": 4,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -74101,8 +75209,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 3000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -74125,6 +75233,58 @@
           ],
           "agree": 1,
           "n": 1
+        },
+        {
+          "key": "nar",
+          "org": "National Association of Realtors",
+          "status": "done",
+          "pac": 3000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         }
       ],
       "fecCandPast": [
@@ -75752,6 +76912,97 @@
           "pacN": 0,
           "routed": 42572.69,
           "routedN": 67,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 50,
+          "pacN": 1,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -77715,10 +78966,23 @@
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 7506.67,
           "routedN": 41,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -77753,6 +79017,32 @@
           "n": 0
         },
         {
+          "key": "aha",
+          "org": "American Hospital Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aba",
+          "org": "American Bankers Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "mba",
           "org": "Mortgage Bankers Association",
           "status": "done",
@@ -77766,8 +79056,8 @@
           "n": 0
         },
         {
-          "key": "aft",
-          "org": "American Federation of Teachers",
+          "key": "nar",
+          "org": "National Association of Realtors",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
@@ -77781,6 +79071,19 @@
         {
           "key": "lcv",
           "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 2600,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
           "status": "done",
           "pac": 2500,
           "pacN": 1,
@@ -83323,10 +84626,23 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "routed": 47359.43,
           "routedN": 18,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 12500,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -83350,11 +84666,40 @@
           "n": 0
         },
         {
+          "key": "acu",
+          "org": "America's Credit Unions",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-200",
+              "short": "GENIUS Act (stablecoin rules)",
+              "date": "2025-07-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Urged the House to pass the GENIUS Act, which it calls a credit union-backed bill",
+              "src": {
+                "t": "America's Credit Unions: House clears credit union-backed digital assets, anti-CBDC bills (July 2025)",
+                "u": "https://www.americascreditunions.org/node/19526"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
           "key": "ama",
           "org": "American Medical Association",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -83363,24 +84708,11 @@
           "n": 0
         },
         {
-          "key": "mba",
-          "org": "Mortgage Bankers Association",
+          "key": "aba",
+          "org": "American Bankers Association",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "icba",
-          "org": "Independent Community Bankers of America",
-          "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -83392,7 +84724,181 @@
           "key": "nar",
           "org": "National Association of Realtors",
           "status": "done",
-          "pac": 2000,
+          "pac": 10000,
+          "pacN": 4,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "icba",
+          "org": "Independent Community Bankers of America",
+          "status": "done",
+          "pac": 8500,
+          "pacN": 5,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "chamber",
+          "org": "U.S. Chamber of Commerce",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-2-065",
+              "short": "Ending the Canada tariff emergency",
+              "date": "2026-02-11",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "key_vote_alert",
+              "scoredAs": "Letter to the House dated Feb. 11, 2026 urging the House 'to agree to the proposed resolutions terminating the national emergencies declared to impose broad-based tariffs'; matches House Roll Call 65, Feb. 11, 2026 (H.J.Res. 72 passage)",
+              "src": {
+                "t": "U.S. Chamber Letter to the House on Congressional Tariff Authority (Feb. 11, 2026)",
+                "u": "https://www.uschamber.com/international/letter-to-the-house-on-congressional-tariff-authority"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Chamber statement dated July 1, 2025 (after Senate passage) urging lawmakers to 'swiftly pass the OBBBA and deliver it to President Trump'; matches House Roll Call 190, July 3, 2025 (motion to concur in the Senate amendment to H.R. 1)",
+              "src": {
+                "t": "U.S. Chamber Applauds Senate Passage of the One Big Beautiful Bill, Encourages Continued Advancement Without Delay",
+                "u": "https://www.uschamber.com/improving-government/u-s-chamber-applauds-senate-passage-of-the-one-big-beautiful-bill-encourages-continued-advancement-without-delay"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Key-vote letter to the House dated May 21, 2025 urging support for passage of H.R. 1, the One Big Beautiful Bill Act; matches House Roll Call 145, May 22, 2025",
+              "src": {
+                "t": "U.S. Chamber Key Vote Letter on H.R. 1, the One Big Beautiful Bill Act (House)",
+                "u": "https://www.uschamber.com/improving-government/u-s-chamber-key-vote-letter-on-h-r-1-the-one-big-beautiful-bill-act"
+              }
+            },
+            {
+              "voteId": "h-118-2-151",
+              "short": "Ukraine aid supplemental",
+              "date": "2024-04-20",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Letter to the House dated Apr. 19, 2024 urging members to 'pass the security supplemental appropriations bills currently being considered by the House'; matches House Roll Call 151, Apr. 20, 2024 (H.R. 8035 passage)",
+              "src": {
+                "t": "U.S. Chamber Letter on Security Supplemental Appropriations Bills (House, Apr. 19, 2024)",
+                "u": "https://dev.uschamber.com/security/u-s-chamber-letter-on-security-supplemental-appropriations-bills"
+              }
+            },
+            {
+              "voteId": "h-118-1-243",
+              "short": "Fiscal Responsibility Act (debt-limit deal)",
+              "date": "2023-05-31",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Key-vote letter to Members of Congress dated May 29, 2023 urging a 'yes' vote on the Fiscal Responsibility Act of 2023; matches House Roll Call 243, May 31, 2023 (H.R. 3746 passage)",
+              "src": {
+                "t": "U.S. Chamber Key Vote Letter on the Fiscal Responsibility Act of 2023 (Congress)",
+                "u": "https://uschamber.com/economy/u-s-chamber-key-vote-letter-on-the-fiscal-responsibility-act-of-2023"
+              }
+            }
+          ],
+          "agree": 4,
+          "n": 5
+        },
+        {
+          "key": "nfib",
+          "org": "National Federation of Independent Business",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-349",
+              "short": "Lower Health Care Premiums for All Americans Act",
+              "date": "2025-12-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Lower Health Care Premiums for All Americans Act (H.R. 6703)', 'NFIB supported H.R. 6703' (the report gives no roll-call number). Matches House Roll Call 349, Dec. 17, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 6703",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Motion on Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote notice of July 2, 2025 urges members 'to support the Senate amendment to H.R. 1'. Matches House Roll Call 190, July 3, 2025 (motion to concur).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote 'Motion on Working Families Tax Cuts'",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote letter of May 21, 2025: 'A vote in favor of the One Big Beautiful Bill Act will be considered an NFIB key vote'. Matches House Roll Call 145, May 22, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 1",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            }
+          ],
+          "agree": 3,
+          "n": 3
+        },
+        {
+          "key": "phrma",
+          "org": "PhRMA (pharmaceutical companies)",
+          "status": "done",
+          "pac": 1000,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -86463,8 +87969,8 @@
           "key": "scf",
           "org": "Senate Conservatives Fund",
           "status": "done",
-          "pac": 31158,
-          "pacN": 10,
+          "pac": 75472.86,
+          "pacN": 20,
           "routed": 154013.12,
           "routedN": 3268,
           "for": 71722.91,
@@ -86567,10 +88073,49 @@
           "n": 1
         },
         {
+          "key": "icba",
+          "org": "Independent Community Bankers of America",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "sba",
           "org": "SBA Pro-Life America",
           "status": "done",
           "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nar",
+          "org": "National Association of Realtors",
+          "status": "done",
+          "pac": 2000,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -88867,13 +90412,26 @@
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
-          "pac": 2000,
-          "pacN": 1,
+          "pac": 7000,
+          "pacN": 2,
           "for": 4675.02,
           "against": 0,
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "sba",
+          "org": "SBA Pro-Life America",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -88892,10 +90450,10 @@
           "n": 0
         },
         {
-          "key": "mba",
-          "org": "Mortgage Bankers Association",
+          "key": "aba",
+          "org": "American Bankers Association",
           "status": "done",
-          "pac": 2500,
+          "pac": 5000,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -88905,11 +90463,11 @@
           "n": 0
         },
         {
-          "key": "sba",
-          "org": "SBA Pro-Life America",
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 5000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -88928,6 +90486,19 @@
           "spenders": [
             "National Right to Life Victory Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nfib",
+          "org": "National Federation of Independent Business",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -91267,11 +92838,53 @@
           "n": 2
         },
         {
+          "key": "acu",
+          "org": "America's Credit Unions",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-200",
+              "short": "GENIUS Act (stablecoin rules)",
+              "date": "2025-07-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Urged the House to pass the GENIUS Act, which it calls a credit union-backed bill",
+              "src": {
+                "t": "America's Credit Unions: House clears credit union-backed digital assets, anti-CBDC bills (July 2025)",
+                "u": "https://www.americascreditunions.org/node/19526"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "nra",
+          "org": "National Rifle Association",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "chamber",
           "org": "U.S. Chamber of Commerce",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 2000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -91354,6 +92967,78 @@
           ],
           "agree": 2,
           "n": 5
+        },
+        {
+          "key": "nfib",
+          "org": "National Federation of Independent Business",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-349",
+              "short": "Lower Health Care Premiums for All Americans Act",
+              "date": "2025-12-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Lower Health Care Premiums for All Americans Act (H.R. 6703)', 'NFIB supported H.R. 6703' (the report gives no roll-call number). Matches House Roll Call 349, Dec. 17, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 6703",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Motion on Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote notice of July 2, 2025 urges members 'to support the Senate amendment to H.R. 1'. Matches House Roll Call 190, July 3, 2025 (motion to concur).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote 'Motion on Working Families Tax Cuts'",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote letter of May 21, 2025: 'A vote in favor of the One Big Beautiful Bill Act will be considered an NFIB key vote'. Matches House Roll Call 145, May 22, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 1",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            }
+          ],
+          "agree": 3,
+          "n": 3
+        },
+        {
+          "key": "phrma",
+          "org": "PhRMA (pharmaceutical companies)",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         },
         {
           "key": "aipac",
@@ -94942,10 +96627,23 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "routed": 65083.33,
           "routedN": 36,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nar",
+          "org": "National Association of Realtors",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -95000,24 +96698,11 @@
           "n": 2
         },
         {
-          "key": "nar",
-          "org": "National Association of Realtors",
-          "status": "done",
-          "pac": 5000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
           "key": "aba",
           "org": "American Bankers Association",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 6500,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -95029,8 +96714,8 @@
           "key": "mba",
           "org": "Mortgage Bankers Association",
           "status": "done",
-          "pac": 2500,
-          "pacN": 1,
+          "pac": 5000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -95050,6 +96735,65 @@
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "nfib",
+          "org": "National Federation of Independent Business",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "h-119-1-349",
+              "short": "Lower Health Care Premiums for All Americans Act",
+              "date": "2025-12-17",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Lower Health Care Premiums for All Americans Act (H.R. 6703)', 'NFIB supported H.R. 6703' (the report gives no roll-call number). Matches House Roll Call 349, Dec. 17, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 6703",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-190",
+              "short": "One Big Beautiful Bill Act (final)",
+              "date": "2025-07-03",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Motion on Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote notice of July 2, 2025 urges members 'to support the Senate amendment to H.R. 1'. Matches House Roll Call 190, July 3, 2025 (motion to concur).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote 'Motion on Working Families Tax Cuts'",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            },
+            {
+              "voteId": "h-119-1-145",
+              "short": "One Big Beautiful Bill Act (House passage)",
+              "date": "2025-05-22",
+              "chamber": "House",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "House key vote 'Working Families Tax Cuts (H.R. 1)', 'NFIB supported H.R.1' (the report gives no roll-call number). Key-vote letter of May 21, 2025: 'A vote in favor of the One Big Beautiful Bill Act will be considered an NFIB key vote'. Matches House Roll Call 145, May 22, 2025 (passage).",
+              "src": {
+                "t": "NFIB How Congress Voted, 119th Congress Pre-Election Report: House key vote H.R. 1",
+                "u": "https://www.nfib.com/wp-content/uploads/2026/09/HCV-119-Pre-Election-Digital.pdf"
+              }
+            }
+          ],
+          "agree": 3,
+          "n": 3
         }
       ],
       "fecCandPast": [
@@ -102111,8 +103855,8 @@
           "key": "cffe",
           "org": "Campaign for a Family Friendly Economy",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 4150025.26,
           "against": 0,
           "spenders": [
@@ -102126,8 +103870,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 6875,
+          "pacN": 5,
           "for": 3887569.67,
           "against": 0,
           "spenders": [
@@ -102232,8 +103976,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 3526.41,
+          "pacN": 5,
           "for": 3550000,
           "against": 0,
           "spenders": [
@@ -102263,8 +104007,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 2503665.74,
           "against": 0,
           "spenders": [
@@ -102294,8 +104038,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 1033847.49,
           "against": 0,
           "spenders": [
@@ -102310,8 +104054,8 @@
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 915833.7,
           "against": 0,
           "spenders": [
@@ -102459,6 +104203,32 @@
           "n": 1
         },
         {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
@@ -102503,24 +104273,40 @@
           "n": 2
         },
         {
-          "key": "aft",
-          "org": "American Federation of Teachers",
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
           "for": 0,
           "against": 0,
           "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
+          "compared": [
+            {
+              "voteId": "117-2-170",
+              "short": "Women's Health Protection Act (codify abortion rights) - cloture",
+              "date": "2022-05-11",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "scorecard",
+              "scoredAs": "Congressional voting record: Women's Health Protection Act, motion to end debate on S. 4132",
+              "src": {
+                "t": "Reproductive Freedom for All: Congressional Voting Record for Women's Health Protection Act, Motion to End Debate S.4132",
+                "u": "https://reproductivefreedomforall.org/vote/womens-health-protection-act-motion-to-end-debate-s-4132/"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
         },
         {
           "key": "hrc",
           "org": "Human Rights Campaign",
           "status": "done",
-          "pac": 4500,
-          "pacN": 1,
+          "pac": 4540.9,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -102558,6 +104344,35 @@
           ],
           "agree": 2,
           "n": 2
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "117-2-242",
+              "short": "Bipartisan Safer Communities Act (gun safety)",
+              "date": "2022-06-23",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Backed the Bipartisan Safer Communities Act",
+              "src": {
+                "t": "Giffords: Giffords Applauds House Passage of Bipartisan Gun Violence Prevention Package (June 2022)",
+                "u": "https://giffords.org/press-release/2022/06/giffords-applauds-house-passage-of-bipartisan-gun-violence-prevention-package/"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
         }
       ],
       "legalReview": {
@@ -108366,8 +110181,8 @@
           "key": "aipac",
           "org": "AIPAC (American Israel Public Affairs Committee)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 195037.17,
           "routedN": 122,
           "for": 0,
@@ -108397,8 +110212,8 @@
           "key": "cfg",
           "org": "Club for Growth",
           "status": "done",
-          "pac": 1212.5,
-          "pacN": 1,
+          "pac": 1256.15,
+          "pacN": 2,
           "routed": 25740,
           "routedN": 97,
           "for": 4636.24,
@@ -108442,6 +110257,165 @@
           "n": 2
         },
         {
+          "key": "aba",
+          "org": "American Bankers Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 5,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "mba",
+          "org": "Mortgage Bankers Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "119-1-372",
+              "short": "One Big Beautiful Bill Act (taxes, Medicaid, border)",
+              "date": "2025-07-01",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Praised the Senate-passed bill's housing provisions",
+              "src": {
+                "t": "HousingWire: Big Beautiful Bill passes Senate (quotes MBA President and CEO Bob Broeksmit)",
+                "u": "https://www.housingwire.com/articles/big-beautiful-bill-passes-senate-real-estate-mortage-housing-tax-medicaid/"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "chamber",
+          "org": "U.S. Chamber of Commerce",
+          "status": "done",
+          "pac": 7500,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "119-1-372",
+              "short": "One Big Beautiful Bill Act (taxes, Medicaid, border)",
+              "date": "2025-07-01",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Key-vote letter to the Senate dated June 29, 2025 urging senators to support the One Big Beautiful Bill Act; matches Senate Roll Call Vote 372, July 1, 2025 (H.R. 1 passage)",
+              "src": {
+                "t": "U.S. Chamber Senate Key Vote Letter on One Big Beautiful Bill Act",
+                "u": "https://www.uschamber.com/improving-government/u-s-chamber-key-vote-letter-to-the-senate-on-one-big-beautiful-bill"
+              }
+            },
+            {
+              "voteId": "118-2-154",
+              "short": "Ukraine, Israel, Taiwan aid + TikTok divestiture package",
+              "date": "2024-04-23",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "key_vote_alert",
+              "scoredAs": "Letter to the Senate dated Apr. 23, 2024 urging senators to 'pass the security supplemental appropriations legislation currently being considered by the Senate'; matches Senate Roll Call Vote 154, Apr. 23, 2024 (H.R. 815 concurrence)",
+              "src": {
+                "t": "U.S. Chamber Letter on Security Supplemental Appropriations Bills (Senate, Apr. 23, 2024)",
+                "u": "https://uschamber.com/security/u-s-chamber-letter-on-security-supplemental-appropriations-bills-senate"
+              }
+            },
+            {
+              "voteId": "118-1-146",
+              "short": "Fiscal Responsibility Act (debt ceiling deal)",
+              "date": "2023-06-01",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Nay",
+              "match": false,
+              "basis": "key_vote_alert",
+              "scoredAs": "Key-vote letter to Members of Congress dated May 29, 2023 urging a 'yes' vote on the Fiscal Responsibility Act of 2023; matches Senate Roll Call Vote 146, June 1, 2023 (H.R. 3746 passage)",
+              "src": {
+                "t": "U.S. Chamber Key Vote Letter on the Fiscal Responsibility Act of 2023 (Congress)",
+                "u": "https://uschamber.com/economy/u-s-chamber-key-vote-letter-on-the-fiscal-responsibility-act-of-2023"
+              }
+            }
+          ],
+          "agree": 2,
+          "n": 3
+        },
+        {
+          "key": "acu",
+          "org": "America's Credit Unions",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "119-1-318",
+              "short": "GENIUS Act (stablecoin regulation)",
+              "date": "2025-06-17",
+              "chamber": "Senate",
+              "wanted": "Yea",
+              "cast": "Yea",
+              "match": true,
+              "basis": "statement",
+              "scoredAs": "Backed the GENIUS Act and fought amendments it called \"poison pills\"",
+              "src": {
+                "t": "America's Credit Unions: GENIUS Act clears Senate without interchange, credit card rate cap amendments (June 2025)",
+                "u": "https://www.americascreditunions.org/node/18806"
+              }
+            }
+          ],
+          "agree": 1,
+          "n": 1
+        },
+        {
+          "key": "aha",
+          "org": "American Hospital Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [
+            {
+              "voteId": "119-1-372",
+              "short": "One Big Beautiful Bill Act (taxes, Medicaid, border)",
+              "date": "2025-07-01",
+              "chamber": "Senate",
+              "wanted": "Nay",
+              "cast": "Yea",
+              "match": false,
+              "basis": "statement",
+              "scoredAs": "Opposed the Senate package's Medicaid cuts",
+              "src": {
+                "t": "American Hospital Association: AHA Statement on Senate Reconciliation Package (June 28, 2025)",
+                "u": "https://www.aha.org/press-releases/2025-06-28-aha-statement-senate-reconciliation-package"
+              }
+            }
+          ],
+          "agree": 0,
+          "n": 1
+        },
+        {
           "key": "ama",
           "org": "American Medical Association",
           "status": "done",
@@ -108471,24 +110445,11 @@
           "n": 1
         },
         {
-          "key": "aba",
-          "org": "American Bankers Association",
+          "key": "nar",
+          "org": "National Association of Realtors",
           "status": "done",
           "pac": 5000,
-          "pacN": 2,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
-          "key": "mba",
-          "org": "Mortgage Bankers Association",
-          "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -108502,80 +110463,22 @@
               "cast": "Yea",
               "match": true,
               "basis": "statement",
-              "scoredAs": "Praised the Senate-passed bill's housing provisions",
+              "scoredAs": "Hailed Senate passage of the bill's \"major wins for real estate\"",
               "src": {
-                "t": "HousingWire: Big Beautiful Bill passes Senate (quotes MBA President and CEO Bob Broeksmit)",
-                "u": "https://www.housingwire.com/articles/big-beautiful-bill-passes-senate-real-estate-mortage-housing-tax-medicaid/"
+                "t": "Chicago Agent Magazine: NAR hails Senate passage of One Big Beautiful Bill Act (July 1, 2025)",
+                "u": "https://chicagoagentmagazine.com/2025/07/01/nar-one-big-beautiful-bill/"
               }
             }
           ],
           "agree": 1,
-          "n": 1
-        },
-        {
-          "key": "acu",
-          "org": "America's Credit Unions",
-          "status": "done",
-          "pac": 4000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [
-            {
-              "voteId": "119-1-318",
-              "short": "GENIUS Act (stablecoin regulation)",
-              "date": "2025-06-17",
-              "chamber": "Senate",
-              "wanted": "Yea",
-              "cast": "Yea",
-              "match": true,
-              "basis": "statement",
-              "scoredAs": "Backed the GENIUS Act and fought amendments it called \"poison pills\"",
-              "src": {
-                "t": "America's Credit Unions: GENIUS Act clears Senate without interchange, credit card rate cap amendments (June 2025)",
-                "u": "https://www.americascreditunions.org/node/18806"
-              }
-            }
-          ],
-          "agree": 1,
-          "n": 1
-        },
-        {
-          "key": "aha",
-          "org": "American Hospital Association",
-          "status": "done",
-          "pac": 4000,
-          "pacN": 1,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [
-            {
-              "voteId": "119-1-372",
-              "short": "One Big Beautiful Bill Act (taxes, Medicaid, border)",
-              "date": "2025-07-01",
-              "chamber": "Senate",
-              "wanted": "Nay",
-              "cast": "Yea",
-              "match": false,
-              "basis": "statement",
-              "scoredAs": "Opposed the Senate package's Medicaid cuts",
-              "src": {
-                "t": "American Hospital Association: AHA Statement on Senate Reconciliation Package (June 28, 2025)",
-                "u": "https://www.aha.org/press-releases/2025-06-28-aha-statement-senate-reconciliation-package"
-              }
-            }
-          ],
-          "agree": 0,
           "n": 1
         },
         {
           "key": "icba",
           "org": "Independent Community Bankers of America",
           "status": "done",
-          "pac": 1500,
-          "pacN": 1,
+          "pac": 4000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -108587,8 +110490,8 @@
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 1471.95,
           "against": 0,
           "spenders": [
@@ -108602,8 +110505,8 @@
           "key": "nfib",
           "org": "National Federation of Independent Business",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 3000,
+          "pacN": 3,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -110385,8 +112288,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 3500,
+          "pacN": 2,
           "for": 771010.58,
           "against": 0,
           "spenders": [
@@ -110400,8 +112303,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 463307.69,
           "against": 0,
           "spenders": [
@@ -110416,8 +112319,8 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 406473.69,
           "against": 0,
           "spenders": [
@@ -110446,13 +112349,26 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 13356,
           "against": 0,
           "spenders": [
             "SEIU COPE (Service Employees International Union Committee On Political Education)"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -110468,6 +112384,45 @@
           "spenders": [
             "The Sentinel Action Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aflcio",
+          "org": "AFL-CIO",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -113030,8 +114985,8 @@
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 163165.64,
           "routedN": 222,
           "for": 5575116.62,
@@ -113107,8 +115062,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 37030.9,
           "against": 0,
           "spenders": [
@@ -113149,11 +115104,11 @@
           "n": 0
         },
         {
-          "key": "afscme",
-          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -113165,8 +115120,8 @@
           "key": "aft",
           "org": "American Federation of Teachers",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -113178,7 +115133,20 @@
           "key": "nea",
           "org": "National Education Association",
           "status": "done",
-          "pac": 5000,
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -117773,8 +119741,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 5900,
-          "pacN": 3,
+          "pac": 6950,
+          "pacN": 5,
           "for": 1256125.49,
           "against": 0,
           "spenders": [
@@ -117788,8 +119756,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2000,
+          "pacN": 2,
           "for": 950833.21,
           "against": 0,
           "spenders": [
@@ -117834,8 +119802,8 @@
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 112721.7,
           "against": 0,
           "spenders": [
@@ -117849,8 +119817,8 @@
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 11628.25,
           "routedN": 27,
           "for": 0,
@@ -117879,8 +119847,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -117892,8 +119860,21 @@
           "key": "nea",
           "org": "National Education Association",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 6000,
+          "pacN": 4,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -117915,19 +119896,6 @@
           "n": 0
         },
         {
-          "key": "nrdc",
-          "org": "Natural Resources Defense Council",
-          "status": "done",
-          "pac": 4000,
-          "pacN": 3,
-          "for": 0,
-          "against": 0,
-          "spenders": [],
-          "compared": [],
-          "agree": 0,
-          "n": 0
-        },
-        {
           "key": "scf",
           "org": "Senate Conservatives Fund",
           "status": "done",
@@ -117938,6 +119906,19 @@
           "spenders": [
             "Senate Conservatives Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -121711,8 +123692,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 4,
           "for": 1786838.43,
           "against": 0,
           "spenders": [
@@ -121756,8 +123737,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 3,
           "for": 185165.85,
           "against": 0,
           "spenders": [
@@ -121801,7 +123782,72 @@
           "key": "aft",
           "org": "American Federation of Teachers",
           "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 3000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
           "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -124659,8 +126705,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 3890,
-          "pacN": 3,
+          "pac": 6490,
+          "pacN": 6,
           "for": 519381.3,
           "against": 0,
           "spenders": [
@@ -124674,8 +126720,8 @@
           "key": "cffe",
           "org": "Campaign for a Family Friendly Economy",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 411014.06,
           "against": 0,
           "spenders": [
@@ -124704,8 +126750,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 1000,
-          "pacN": 1,
+          "pac": 2000,
+          "pacN": 2,
           "for": 200000,
           "against": 0,
           "spenders": [
@@ -124734,10 +126780,49 @@
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
-          "pac": 5000,
-          "pacN": 1,
+          "pac": 10000,
+          "pacN": 2,
           "routed": 7589.15,
           "routedN": 103,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -124761,8 +126846,21 @@
           "n": 0
         },
         {
-          "key": "afscme",
-          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
           "status": "done",
           "pac": 5000,
           "pacN": 1,
@@ -124774,11 +126872,11 @@
           "n": 0
         },
         {
-          "key": "aft",
-          "org": "American Federation of Teachers",
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
           "pac": 5000,
-          "pacN": 1,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -124787,11 +126885,11 @@
           "n": 0
         },
         {
-          "key": "nea",
-          "org": "National Education Association",
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
           "status": "done",
           "pac": 5000,
-          "pacN": 1,
+          "pacN": 2,
           "for": 0,
           "against": 0,
           "spenders": [],
@@ -124817,6 +126915,19 @@
           "org": "Everytown for Gun Safety",
           "status": "done",
           "pac": 1500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 1000,
           "pacN": 1,
           "for": 0,
           "against": 0,
@@ -126258,6 +128369,45 @@
           "compared": [],
           "agree": 0,
           "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 50,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
         }
       ],
       "resultsOnly": true,
@@ -127399,6 +129549,58 @@
           "spenders": [
             "National Rifle Association Of America Political Victory Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -130286,8 +132488,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5900,
+          "pacN": 6,
           "for": 525109.51,
           "against": 0,
           "spenders": [
@@ -130301,8 +132503,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 416500,
           "against": 0,
           "spenders": [
@@ -130316,8 +132518,8 @@
           "key": "ppaf",
           "org": "Planned Parenthood Action Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 254655.47,
           "against": 0,
           "spenders": [
@@ -130361,8 +132563,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5500,
+          "pacN": 4,
           "for": 50000,
           "against": 0,
           "spenders": [
@@ -130373,11 +132575,26 @@
           "n": 0
         },
         {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 18737.08,
+          "against": 0,
+          "spenders": [
+            "Reproductive Freedom For All Freedom Fund"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 4000,
+          "pacN": 1,
           "for": 18977.96,
           "against": 0,
           "spenders": [
@@ -130388,16 +132605,27 @@
           "n": 0
         },
         {
-          "key": "rffa",
-          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "key": "emily",
+          "org": "EMILY's List",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 18737.08,
+          "pac": 10618,
+          "pacN": 6,
+          "for": 0,
           "against": 0,
-          "spenders": [
-            "Reproductive Freedom For All Freedom Fund"
-          ],
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -130413,6 +132641,58 @@
           "spenders": [
             "National Rifle Association Of America Political Victory Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 3152.66,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 2293.41,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 1672.95,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -132532,8 +134812,8 @@
           "key": "giffords",
           "org": "Giffords",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 1823376,
           "against": 0,
           "spenders": [
@@ -132547,8 +134827,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 4950,
+          "pacN": 2,
           "for": 1100737.95,
           "against": 0,
           "spenders": [
@@ -132562,8 +134842,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 578900,
           "against": 0,
           "spenders": [
@@ -132577,8 +134857,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 13230.57,
           "against": 0,
           "spenders": [
@@ -132592,13 +134872,39 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 10000,
           "against": 0,
           "spenders": [
             "Reproductive Freedom For All Freedom Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -132614,6 +134920,71 @@
           "spenders": [
             "National Rifle Association Of America Political Victory Fund"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 3000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 127.91,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -133927,8 +136298,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 156735.31,
           "against": 0,
           "spenders": [
@@ -133949,6 +136320,71 @@
           "spenders": [
             "National Association Of Realtors Political Action Committee"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 1500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -136138,8 +138574,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 604500,
           "against": 0,
           "spenders": [
@@ -136153,8 +138589,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5990.01,
+          "pacN": 6,
           "for": 250009.23,
           "against": 0,
           "spenders": [
@@ -136168,8 +138604,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 250000,
           "against": 0,
           "spenders": [
@@ -136195,6 +138631,32 @@
           "n": 0
         },
         {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 9550,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -136205,6 +138667,71 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 1500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -139166,8 +141693,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500.01,
+          "pacN": 2,
           "for": 884575.07,
           "against": 0,
           "spenders": [
@@ -139181,8 +141708,8 @@
           "key": "cffe",
           "org": "Campaign for a Family Friendly Economy",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 774696.43,
           "against": 0,
           "spenders": [
@@ -139196,8 +141723,8 @@
           "key": "giffords",
           "org": "Giffords",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 2,
           "for": 652008.8,
           "against": 0,
           "spenders": [
@@ -139211,8 +141738,8 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 459500,
           "against": 0,
           "spenders": [
@@ -139226,8 +141753,8 @@
           "key": "emily",
           "org": "EMILY's List",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 2,
           "for": 122415.62,
           "against": 0,
           "spenders": [
@@ -139241,8 +141768,8 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 20194.48,
           "against": 0,
           "spenders": [
@@ -139256,13 +141783,39 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 2,
           "for": 10977.5,
           "against": 0,
           "spenders": [
             "SEIU COPE (Service Employees International Union Committee On Political Education)"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -139278,6 +141831,45 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 1500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -140923,8 +143515,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2000,
+          "pacN": 2,
           "for": 704012.15,
           "against": 0,
           "spenders": [
@@ -140953,8 +143545,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 3600,
+          "pacN": 4,
           "for": 362887.75,
           "against": 0,
           "spenders": [
@@ -140975,6 +143567,58 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -142621,16 +145265,94 @@
           "n": 0
         },
         {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 2500,
           "against": 0,
           "spenders": [
             "Retired Americans Action"
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 4950,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "edf",
+          "org": "Environmental Defense Fund",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -144940,8 +147662,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 3500.01,
+          "pacN": 3,
           "for": 516507.91,
           "against": 0,
           "spenders": [
@@ -144970,8 +147692,8 @@
           "key": "rffa",
           "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 210499,
           "against": 0,
           "spenders": [
@@ -144985,8 +147707,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 10000,
+          "pacN": 3,
           "for": 101862.12,
           "against": 0,
           "spenders": [
@@ -145000,8 +147722,8 @@
           "key": "ara",
           "org": "Alliance for Retired Americans",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 2500,
+          "pacN": 1,
           "for": 18977.97,
           "against": 0,
           "spenders": [
@@ -145022,6 +147744,45 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -147594,8 +150355,8 @@
           "key": "giffords",
           "org": "Giffords",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 887072,
           "against": 0,
           "spenders": [
@@ -147624,8 +150385,8 @@
           "key": "nrdc",
           "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 7000,
+          "pacN": 5,
           "for": 250000,
           "against": 0,
           "spenders": [
@@ -147639,8 +150400,8 @@
           "key": "seiu",
           "org": "SEIU (Service Employees International Union)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 190605.56,
           "against": 0,
           "spenders": [
@@ -147676,6 +150437,110 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 8000,
+          "pacN": 6,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "everytown",
+          "org": "Everytown for Gun Safety",
+          "status": "done",
+          "pac": 1500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 1092.62,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -149411,8 +152276,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 1000,
+          "pacN": 1,
           "for": 796262.22,
           "against": 0,
           "spenders": [
@@ -149438,6 +152303,45 @@
           "n": 0
         },
         {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -149448,6 +152352,45 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "cffe",
+          "org": "Campaign for a Family Friendly Economy",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "lcv",
+          "org": "League of Conservation Voters",
+          "status": "done",
+          "pac": 50,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -151595,8 +154538,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 5,
           "for": 174126.49,
           "against": 0,
           "spenders": [
@@ -151610,8 +154553,8 @@
           "key": "cffe",
           "org": "Campaign for a Family Friendly Economy",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 161650,
           "against": 0,
           "spenders": [
@@ -151637,6 +154580,32 @@
           "n": 0
         },
         {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 3,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "emily",
+          "org": "EMILY's List",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
           "key": "nra",
           "org": "National Rifle Association",
           "status": "done",
@@ -151647,6 +154616,97 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "afscme",
+          "org": "AFSCME (American Federation of State, County and Municipal Employees)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 4550,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ppaf",
+          "org": "Planned Parenthood Action Fund",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 2500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
+          "status": "done",
+          "pac": 2000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -154519,8 +157579,8 @@
           "key": "lcv",
           "org": "League of Conservation Voters",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 6940,
+          "pacN": 8,
           "for": 1784667.58,
           "against": 0,
           "spenders": [
@@ -154534,8 +157594,8 @@
           "key": "edf",
           "org": "Environmental Defense Fund",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 3,
           "for": 746580.25,
           "against": 0,
           "spenders": [
@@ -154549,12 +157609,27 @@
           "key": "afscme",
           "org": "AFSCME (American Federation of State, County and Municipal Employees)",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
+          "pac": 5000,
+          "pacN": 1,
           "for": 198205.97,
           "against": 0,
           "spenders": [
             "American Federation of State County & Municipal Employees PEOPLE"
+          ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "seiu",
+          "org": "SEIU (Service Employees International Union)",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 61708.33,
+          "against": 0,
+          "spenders": [
+            "SEIU COPE (Service Employees International Union Committee On Political Education)"
           ],
           "compared": [],
           "agree": 0,
@@ -154576,31 +157651,42 @@
           "n": 0
         },
         {
-          "key": "seiu",
-          "org": "SEIU (Service Employees International Union)",
+          "key": "nrdc",
+          "org": "Natural Resources Defense Council",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 61708.33,
+          "pac": 4000,
+          "pacN": 4,
+          "for": 50000,
           "against": 0,
           "spenders": [
-            "SEIU COPE (Service Employees International Union Committee On Political Education)"
+            "NRDC Action Votes"
           ],
           "compared": [],
           "agree": 0,
           "n": 0
         },
         {
-          "key": "nrdc",
-          "org": "Natural Resources Defense Council",
+          "key": "emily",
+          "org": "EMILY's List",
           "status": "done",
-          "pac": 0,
-          "pacN": 0,
-          "for": 50000,
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
           "against": 0,
-          "spenders": [
-            "NRDC Action Votes"
-          ],
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "nea",
+          "org": "National Education Association",
+          "status": "done",
+          "pac": 10000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
@@ -154616,6 +157702,84 @@
           "spenders": [
             "NRA Victory Fund, Inc."
           ],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "ara",
+          "org": "Alliance for Retired Americans",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "rffa",
+          "org": "Reproductive Freedom for All (formerly NARAL Pro-Choice America)",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "aft",
+          "org": "American Federation of Teachers",
+          "status": "done",
+          "pac": 5000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "hrc",
+          "org": "Human Rights Campaign",
+          "status": "done",
+          "pac": 4550,
+          "pacN": 2,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "jstreet",
+          "org": "J Street",
+          "status": "done",
+          "pac": 3500,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
+          "compared": [],
+          "agree": 0,
+          "n": 0
+        },
+        {
+          "key": "giffords",
+          "org": "Giffords",
+          "status": "done",
+          "pac": 1000,
+          "pacN": 1,
+          "for": 0,
+          "against": 0,
+          "spenders": [],
           "compared": [],
           "agree": 0,
           "n": 0
