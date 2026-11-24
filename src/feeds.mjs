@@ -1656,5 +1656,6 @@ export const FEED_KINDS=Object.keys(FEEDS).filter(k=>!RETIRED_FEEDS.includes(k))
 // Raised when what existing checks read changes, so ensureFeeds (src/refresh.mjs) updates them: 2 = state legislators'
 // years and names, and House members matched by legal first names; 3 = House candidates in the House disclosure index
 // and its net-worth check; 4 = every year's annual report kept with each member's net worth (read once each); 7 = the House
-// Clerk's newer annual reports (2025 on: encrypted, with their own fonts) read again for their assets, debts and other parts.
-export const FEEDS_VERSION=7;
+// Clerk's newer annual reports (2025 on: encrypted, with their own fonts) read again for their assets, debts and other parts;
+// 8 = the same, with the full profiles' reports read before the basic profiles'.
+export const FEEDS_VERSION=8;
