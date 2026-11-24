@@ -167,7 +167,7 @@ test('where they show: the lookouts beside the score, the tracker tabs, the Trac
   assert.ok(!/Summary of Major Lookouts<\/h3>/.test(app),'the old name is gone from the page');
   assert.match(app,/No PAC money or gifts from \$\{esc\(x\.name\)\}/);
   assert.match(app,/bundledBox\(s,mm\)\+lookoutsBox\(/,'the lookouts go right under "Bundled through groups"');
-  assert.match(app,/else if\(m\[1\]==='trackers'\)\{renderTrackers\(/);
+  assert.match(app,/else if\(m\[1\]==='trackers'\)\{(?:if\(m\[2\]==='about'\)renderTrackerAbout\(\);else )?renderTrackers\(/);
   assert.match(app,/<th class="r">PAC checks<\/th><th class="r">Gifts routed<\/th>/,'every tracker has the Gifts routed column');
   assert.match(app,/'<span class="muted small">Not updated yet<\/span>'/,'blank, saying so, where routed gifts aren\'t read yet');
   assert.doesNotMatch(app,/function industryCard\(/,'the old crypto and AI card is replaced by the Crypto and Tech + AI trackers');

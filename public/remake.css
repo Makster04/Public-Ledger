@@ -146,6 +146,49 @@ input, select { font-family: inherit; }
 .hc-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 355px), 1fr)); }
 /* The home cards arrive a batch at a time; a batch is invisible to the grid, so its cards sit with the rest. */
 .hc-batch { display: contents; }
+/* Trackers · About (public/tracker-about.js): the kinds of data, all trackers at a glance, and one tracker's lists. */
+.ta-sec { margin-top: 30px; display: grid; gap: 12px; min-width: 0; }
+.ta-sec h2 { margin: 0; }
+.ta-kinds { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 12px; }
+.ta-kind { display: grid; gap: 6px; align-content: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
+.ta-kind p { margin: 0; font-size: .9rem; color: var(--ink-2); }
+.ta-kind .ta-src { font-size: .8rem; color: var(--muted); }
+.ta-pill { width: max-content; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; border: 1px solid currentColor; }
+.ta-pill.yes, .ta-mk.yes { color: var(--good); }
+.ta-pill.yes { background: var(--good-soft); }
+.ta-pill.shown, .ta-mk.shown { color: var(--warn); }
+.ta-pill.shown { background: var(--warn-soft); }
+.ta-mk { font-weight: 600; }
+.ta-mk.no { color: var(--muted); font-weight: 400; }
+.ta-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.ta-table th, .ta-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.ta-table th { font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); vertical-align: bottom; }
+.ta-table .r { text-align: right; white-space: nowrap; }
+.ta-matrix td:first-child { white-space: nowrap; }
+.ta-go { all: unset; cursor: pointer; font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.ta-go:focus-visible, .ta-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.ta-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+.ta-tab { flex: none; font: inherit; font-size: .9rem; font-weight: 600; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; cursor: pointer; white-space: nowrap; }
+.ta-tab[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent-fill); border-color: var(--accent-fill); }
+.ta-panel { display: grid; gap: 24px; padding: 22px clamp(14px, 3vw, 26px); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); min-width: 0; }
+.ta-ph { display: grid; gap: 8px; }
+.ta-ph h2, .ta-ph p { margin: 0; }
+.ta-ph > p:not(.small) { color: var(--ink-2); max-width: 72ch; }
+.ta-stats { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.ta-stats div { display: grid; gap: 2px; max-width: 220px; }
+.ta-stats b { font-size: 1.35rem; }
+.ta-stats span { font-size: .8rem; color: var(--muted); }
+.ta-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 24px; }
+.ta-grid2:empty { display: none; }
+.ta-block { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.ta-block h3 { margin: 0; font-size: .78rem; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+.ta-block p { margin: 0; }
+.ta-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ta-chip { font-size: .85rem; padding: 3px 9px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line); }
+.ta-chip.m, .ta-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .78rem; }
+.ta-list { margin: 0; padding-left: 18px; display: grid; gap: 4px; color: var(--ink-2); font-size: .92rem; }
+.ta-foot { margin-top: 26px; display: grid; gap: 6px; max-width: 80ch; }
+.ta-foot p { margin: 0; }
 .hc-more { display: flex; justify-content: center; margin: 18px 0 8px; }
 .hc-more[hidden] { display: none; }
 /* Not scroll anchors: when a batch is added above them, the page stays put instead of following them down (which kept
