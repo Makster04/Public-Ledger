@@ -1,0 +1,2668 @@
+{
+ "about": "Each full profile's latest annual financial disclosures as the refresh read them (src/schedules.mjs): earned income, positions held outside government, agreements, gifts and paid travel, from the newest two reports read. Written by npm run disclosures:export; matched by scripts/match-conflicts.mjs.",
+ "built": "2026-11-24",
+ "people": {
+  "ossoff": {
+   "name": "Jon Ossoff",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/9af964b6-5eba-41e6-87fb-d6651c5b90b0/",
+     "income": [
+      {
+       "source": "Emory Healthcare Atlanta, GA",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Emory Healthcare Atlanta, GA · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/8e39e175-4a0b-4170-8981-294ba4e943d3/",
+     "income": [
+      {
+       "source": "Emory Healthcare Atlanta, GA",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Emory Healthcare Atlanta, GA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Georgia Obstetrics & Gynecology LLC Atlanta, GA",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Georgia Obstetrics & Gynecology LLC Atlanta, GA · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "booker": {
+   "name": "Cory A. Booker",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/55f811f9-464f-4666-8560-f4bb7c06d284/",
+     "income": [
+      {
+       "source": "St. Martin's Publishing Group New York, NY",
+       "type": "Other (Advance)",
+       "amounts": [
+        365500
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Advance) · St. Martin's Publishing Group New York, NY · $365,500.00 · n/a"
+      },
+      {
+       "source": "Trinet HR III, Inc. Dublin, CA",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Trinet HR III, Inc. Dublin, CA · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "Apr 2015",
+       "terms": "Penguin Random House LLC New York, New York · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"United\". (no royalties received in 2025).",
+       "text": "Apr 2015 · Penguin Random House LLC New York, New York · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"United\". (no royalties received in 2025). · n/a"
+      },
+      {
+       "date": "Oct 2013",
+       "terms": "New Jersey Public Employee Retirement System Newark, New Jersey · Continuing participation in an employee benefit plan · Under terms of defined benefit state pension plan, filer will receive monthly payment of $2,627.74 beginning at age 60.",
+       "text": "Oct 2013 · New Jersey Public Employee Retirement System Newark, New Jersey · Continuing participation in an employee benefit plan · Under terms of defined benefit state pension plan, filer will receive monthly payment of $2,627.74 beginning at age 60. · n/a"
+      },
+      {
+       "date": "Jun 2025",
+       "terms": "St. Martin's Publishing Group New York, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"Stand\".",
+       "text": "Jun 2025 · St. Martin's Publishing Group New York, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"Stand\". · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/c5bef4ec-17d4-4c1f-b147-13453fe81588/",
+     "income": [],
+     "positions": [],
+     "agreements": [
+      {
+       "date": "Apr 2015",
+       "terms": "Penguin Random House LLC New York, New York · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"United\". (no royalties received in 2024).",
+       "text": "Apr 2015 · Penguin Random House LLC New York, New York · Royalty Agreement · Advance and royalties based on customary and usual terms for book, \"United\". (no royalties received in 2024). · n/a"
+      },
+      {
+       "date": "Oct 2013",
+       "terms": "New Jersey Public Employee Retirement System Newark, New Jersey · Continuing participation in an employee benefit plan · Under terms of defined benefit state pension plan, filer will receive monthly payment of $2,627.74 beginning at age 60.",
+       "text": "Oct 2013 · New Jersey Public Employee Retirement System Newark, New Jersey · Continuing participation in an employee benefit plan · Under terms of defined benefit state pension plan, filer will receive monthly payment of $2,627.74 beginning at age 60. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "hickenlooper": {
+   "name": "John W. Hickenlooper",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-08-07",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/d5b10a7a-5b87-4bac-b9d5-169ef0498fe9/",
+     "income": [
+      {
+       "source": "Liberty Media Corporation Englewood, CO",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Liberty Media Corporation Englewood, CO · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Chipotle Mexican Grill, Inc. Newport Beach, CA",
+       "type": "Board Compensation",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Board Compensation · Chipotle Mexican Grill, Inc. Newport Beach, CA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Denver Employees Retirement Plan Denver, CO",
+       "type": "Pension",
+       "amounts": [
+        17433.12
+       ],
+       "paidTo": "Self",
+       "text": "Self · Pension · Denver Employees Retirement Plan Denver, CO · $17,433.12 · n/a"
+      },
+      {
+       "source": "Fidelity Investments Albuquerque, NM",
+       "type": "Other (Required Minimum Distribution)",
+       "amounts": [
+        130800.36
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Required Minimum Distribution) · Fidelity Investments Albuquerque, NM · $130,800.36 · n/a"
+      },
+      {
+       "source": "Wesleyan University Middletown, CT",
+       "type": "Other (Annuity payment)",
+       "amounts": [
+        6580.72
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Annuity payment) · Wesleyan University Middletown, CT · $6,580.72 · Fixed annuity payment received in exchange for charitable gift made by the filer to Wesleyan University."
+      }
+     ],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "Anne Morris Macdonald Marital Trust Philadelphia, PA",
+       "text": "Feb 2024 to present · Trustee · Anne Morris Macdonald Marital Trust Philadelphia, PA · Trust · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Dec 2015",
+       "terms": "Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY · Royalty Agreement · Royalty for book, \"The Opposite of Woe\" (no royalties received in 2025).",
+       "text": "Dec 2015 · Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY · Royalty Agreement · Royalty for book, \"The Opposite of Woe\" (no royalties received in 2025). · n/a"
+      },
+      {
+       "date": "Jan 2011",
+       "terms": "Denver Employees Retirement Pension Plan Denver, CO · Continuing participation in an employee benefit plan · Defined benefit plan that provides service retirement benefits.",
+       "text": "Jan 2011 · Denver Employees Retirement Pension Plan Denver, CO · Continuing participation in an employee benefit plan · Defined benefit plan that provides service retirement benefits. · n/a"
+      },
+      {
+       "date": "Apr 2011",
+       "terms": "Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan.",
+       "text": "Apr 2011 · Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/2d8ab18f-612f-4dfd-92f7-87740b0cc9ec/",
+     "income": [
+      {
+       "source": "Liberty Media Corporation Englewood, CO",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Liberty Media Corporation Englewood, CO · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Chipotle Mexican Grill, Inc. Newport Beach, CA",
+       "type": "Board Compensation",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Board Compensation · Chipotle Mexican Grill, Inc. Newport Beach, CA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Denver Employees Retirement Plan Denver, CO",
+       "type": "Pension",
+       "amounts": [
+        17433.12
+       ],
+       "paidTo": "Self",
+       "text": "Self · Pension · Denver Employees Retirement Plan Denver, CO · $17,433.12 · n/a"
+      },
+      {
+       "source": "Sirius XM Radio Inc. New York, NY",
+       "type": "Board Compensation",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Board Compensation · Sirius XM Radio Inc. New York, NY · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Trustee",
+       "org": "Anne Morris Macdonald Marital Trust Philadelphia, PA",
+       "text": "Feb 2024 to present · Trustee · Anne Morris Macdonald Marital Trust Philadelphia, PA · Trust · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Dec 2015",
+       "terms": "Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY · Royalty Agreement · Royalty for book, \"The Opposite of Woe\" (no royalties received in 2024).",
+       "text": "Dec 2015 · Penguin Press (an imprint of Penguin Publishing Group, a division of Penguin Random House LLC) New York, NY · Royalty Agreement · Royalty for book, \"The Opposite of Woe\" (no royalties received in 2024). · n/a"
+      },
+      {
+       "date": "Jan 2011",
+       "terms": "Denver Employees Retirement Pension Plan Denver, CO · Continuing participation in an employee benefit plan · Defined benefit plan that provides service retirement benefits.",
+       "text": "Jan 2011 · Denver Employees Retirement Pension Plan Denver, CO · Continuing participation in an employee benefit plan · Defined benefit plan that provides service retirement benefits. · n/a"
+      },
+      {
+       "date": "Apr 2011",
+       "terms": "Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan.",
+       "text": "Apr 2011 · Colorado PERA DC Plan Denver, CO · Continuing participation in an employee benefit plan · Defined contribution pension plan. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "talarico": {
+   "name": "James Talarico",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/458f098c-ecd2-4650-b5e3-3d6e1ae8f0f6/",
+     "income": [
+      {
+       "source": "Maya Consulting LLC Austin, TX",
+       "type": "Self-Employment Income",
+       "amounts": [
+        33333.36
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Maya Consulting LLC Austin, TX · $33,333.36 · n/a"
+      },
+      {
+       "source": "Texas House of Representatives Austin, TX",
+       "type": "Salary",
+       "amounts": [
+        51497.64
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Texas House of Representatives Austin, TX · $51,497.64 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Member, Board of Directors)",
+       "org": "Breakthrough T1D Greater Austin Chapter (formerly JDRF) Austin, TX",
+       "text": "Jun 2024 to present · Other (Member, Board of Directors) · Breakthrough T1D Greater Austin Chapter (formerly JDRF) Austin, TX · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Member of the Texas House of Representatives)",
+       "org": "Texas House of Representatives Austin, TX",
+       "text": "Nov 2018 to present · Other (Member of the Texas House of Representatives) · Texas House of Representatives Austin, TX · Other (State Representative) · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "Maya Consulting LLC Austin, TX",
+       "text": "Sep 2019 to Oct 2025 · Consultant · Maya Consulting LLC Austin, TX · Other (Limited Liability Company) · n/a"
+      },
+      {
+       "position": "Other (Managing Member)",
+       "org": "Nine Banded, LLC Austin, TX",
+       "text": "Sep 2025 to present · Other (Managing Member) · Nine Banded, LLC Austin, TX · Other (Limited Liability Company) · Entity has no value and was inactive during reporting period."
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Mar 2026",
+       "terms": "HarperCollins Publishers LLC New York, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for untitled book.",
+       "text": "Mar 2026 · HarperCollins Publishers LLC New York, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for untitled book. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-01-07",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/b83d44bf-3718-4171-956c-6379ea50cf76/",
+     "income": [
+      {
+       "source": "Maya Consulting LLC Austin, TX",
+       "type": "Self-Employment Income",
+       "amounts": [
+        83333.4
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Maya Consulting LLC Austin, TX · $83,333.40 · n/a"
+      },
+      {
+       "source": "Texas House of Representatives Austin, TX",
+       "type": "Salary",
+       "amounts": [
+        13904.92
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Texas House of Representatives Austin, TX · $13,904.92 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Member, Board of Directors)",
+       "org": "Breakthrough T1D Greater Austin Chapter (formerly JDRF) Austin, TX",
+       "text": "Jun 2024 to present · Other (Member, Board of Directors) · Breakthrough T1D Greater Austin Chapter (formerly JDRF) Austin, TX · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Member of the Texas House of Representatives)",
+       "org": "Texas House of Representatives Austin, TX",
+       "text": "Nov 2018 to present · Other (Member of the Texas House of Representatives) · Texas House of Representatives Austin, TX · Other (State Representative) · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "Maya Consulting LLC Austin, TX",
+       "text": "Sep 2019 to Oct 2025 · Consultant · Maya Consulting LLC Austin, TX · Other (Limited Liability Company) · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "elsayed": {
+   "name": "Abdul El-Sayed",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-07-27",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/15ab1389-aa49-43b1-a8fe-6cafe0c30385/",
+     "income": [
+      {
+       "source": "Brown University Providence, RI",
+       "amounts": [
+        1500
+       ],
+       "text": "02/14/2025 · Speech · $1,500.00 · Brown University Providence, RI · Self · n/a"
+      },
+      {
+       "source": "Corewell Health Grand Rapids, MI",
+       "amounts": [
+        1000
+       ],
+       "text": "02/18/2025 · Speech · $1,000.00 · Corewell Health Grand Rapids, MI · Self · Debated in favor of physician activism at Oakland Univ. William Beaumont School of Medicine, but Corewell Health paid on the University's behalf."
+      },
+      {
+       "source": "University of Michigan Ann Arbor, MI",
+       "amounts": [
+        750
+       ],
+       "text": "02/09/2026 · Speech · $750.00 · University of Michigan Ann Arbor, MI · Self · n/a"
+      },
+      {
+       "source": "County of Wayne Detroit, MI",
+       "type": "Salary",
+       "amounts": [
+        82749.48
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · County of Wayne Detroit, MI · $82,749.48 · n/a"
+      },
+      {
+       "source": "County of Wayne Detroit, MI",
+       "type": "Other (Consulting Fees)",
+       "amounts": [
+        72000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting Fees) · County of Wayne Detroit, MI · $72,000.00 · n/a"
+      },
+      {
+       "source": "AME Higher LLC Detroit, MI",
+       "type": "Salary",
+       "amounts": [
+        64000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · AME Higher LLC Detroit, MI · $64,000.00 · n/a"
+      },
+      {
+       "source": "AME Higher LLC Detroit, MI",
+       "type": "Member Draw",
+       "amounts": [
+        103000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Member Draw · AME Higher LLC Detroit, MI · $103,000.00 · n/a"
+      },
+      {
+       "source": "One Health Management Naperville, IL",
+       "type": "Other (Consulting Fees)",
+       "amounts": [
+        82000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting Fees) · One Health Management Naperville, IL · $82,000.00 · n/a"
+      },
+      {
+       "source": "Robert Woods Johnson Foundation Princeton, NJ",
+       "type": "Other (Consulting Fees)",
+       "amounts": [
+        500
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting Fees) · Robert Woods Johnson Foundation Princeton, NJ · $500.00 · n/a"
+      },
+      {
+       "source": "EDUGAGED Sherman Oaks, CA",
+       "type": "Other (Consulting Fees)",
+       "amounts": [
+        2500
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting Fees) · EDUGAGED Sherman Oaks, CA · $2,500.00 · n/a"
+      },
+      {
+       "source": "Mind Work Psychiatry Ann Arbor, MI",
+       "type": "Member Draw",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Member Draw · Mind Work Psychiatry Ann Arbor, MI · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Oxford University Press New York, NY",
+       "type": "Royalties",
+       "amounts": [
+        1117.53
+       ],
+       "paidTo": "Self",
+       "text": "Self · Royalties · Oxford University Press New York, NY · $1,117.53 · Income from the Royalty Agreement for the book \"Medicare for All\" described in Part 9."
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Owner)",
+       "org": "AME Higher LLC Detroit, MI",
+       "text": "Sep 2018 to present · Other (Owner) · AME Higher LLC Detroit, MI · Partnership · n/a"
+      },
+      {
+       "position": "Other (Owner)",
+       "org": "Incision Media LLC Detroit, MI",
+       "text": "Sep 2022 to present · Other (Owner) · Incision Media LLC Detroit, MI · Partnership · n/a"
+      },
+      {
+       "position": "Employee",
+       "org": "County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI",
+       "text": "Mar 2023 to Apr 2025 · Employee · County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI · Other (County Government) · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI",
+       "text": "Apr 2025 to present · Consultant · County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI · Other (County Government) · n/a"
+      },
+      {
+       "position": "Other (Employee and Visiting Scholar)",
+       "org": "University of Michigan, Gerald R. Ford School of Public Policy Ann Arbor, MI",
+       "text": "Aug 2021 to Apr 2025 · Other (Employee and Visiting Scholar) · University of Michigan, Gerald R. Ford School of Public Policy Ann Arbor, MI · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Visiting Scholar)",
+       "org": "FXB Harvard School of Public Health Boston, MA",
+       "text": "Feb 2021 to present · Other (Visiting Scholar) · FXB Harvard School of Public Health Boston, MA · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Scholar in Residence)",
+       "org": "Wayne State University, Dept. of Criminal Justice Detroit, MI",
+       "text": "Feb 2019 to Apr 2025 · Other (Scholar in Residence) · Wayne State University, Dept. of Criminal Justice Detroit, MI · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Scholar in Residence)",
+       "org": "American University, School of Public Affairs Washington, DC",
+       "text": "Jan 2019 to Apr 2025 · Other (Scholar in Residence) · American University, School of Public Affairs Washington, DC · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Host/ Executive Producer)",
+       "org": "Crooked Media Los Angeles, CA",
+       "text": "Sep 2019 to Apr 2024 · Other (Host/ Executive Producer) · Crooked Media Los Angeles, CA · Corporation · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "Columbia University, Vagelos College of Physicians & Surgeons Alumni Board New York, NY",
+       "text": "Aug 2023 to present · Other (Board Member) · Columbia University, Vagelos College of Physicians & Surgeons Alumni Board New York, NY · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "HealthChoice of Michigan Detroit, MI",
+       "text": "Mar 2023 to Apr 2025 · Other (Board Member) · HealthChoice of Michigan Detroit, MI · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "Climate Power Washington, DC",
+       "text": "May 2020 to present · Other (Advisory Board Member) · Climate Power Washington, DC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "Roosevelt Institute New York, NY",
+       "text": "Jan 2020 to Apr 2025 · Other (Board Member) · Roosevelt Institute New York, NY · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Partner",
+       "org": "Uptime USA Aggregator, LLC New York, NY",
+       "text": "May 2023 to present · Partner · Uptime USA Aggregator, LLC New York, NY · Partnership · n/a"
+      },
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "FrameWorks Institute Washington, DC",
+       "text": "Apr 2024 to present · Other (Advisory Board Member) · FrameWorks Institute Washington, DC · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Feb 2019",
+       "terms": "Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Medicare for All\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six month basis.",
+       "text": "Feb 2019 · Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Medicare for All\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six month basis. · n/a"
+      },
+      {
+       "date": "Feb 2019",
+       "terms": "Harry N. Abrams, Inc. New York, NY · Royalty Agreement · Income from book sales of \"Healing Politics\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six month basis.",
+       "text": "Feb 2019 · Harry N. Abrams, Inc. New York, NY · Royalty Agreement · Income from book sales of \"Healing Politics\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six month basis. · n/a"
+      },
+      {
+       "date": "May 2015",
+       "terms": "Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Systems Science & Population Health\" are paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis.",
+       "text": "May 2015 · Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Systems Science & Population Health\" are paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-07-27",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/bc3f8f23-e9a3-4294-a459-52636204fb9f/",
+     "income": [
+      {
+       "source": "University of Michigan Ann Arbor, MI",
+       "amounts": [
+        1500
+       ],
+       "text": "02/15/2024 · Speech · $1,500.00 · University of Michigan Ann Arbor, MI · Self · n/a"
+      },
+      {
+       "source": "Boston College Chestnut Hill, MA",
+       "amounts": [
+        500
+       ],
+       "text": "03/13/2024 · Speech · $500.00 · Boston College Chestnut Hill, MA · Self · n/a"
+      },
+      {
+       "source": "Michigan Primary Care Association Lansing, MI",
+       "amounts": [
+        500
+       ],
+       "text": "05/15/2024 · Speech · $500.00 · Michigan Primary Care Association Lansing, MI · Self · n/a"
+      },
+      {
+       "source": "University of Michigan Ann Arbor, MI",
+       "amounts": [
+        750
+       ],
+       "text": "04/30/2024 · Speech · $750.00 · University of Michigan Ann Arbor, MI · Self · n/a"
+      },
+      {
+       "source": "American Medical Student Association Sterling, VA",
+       "amounts": [
+        5000
+       ],
+       "text": "08/06/2024 · Speech · $5,000.00 · American Medical Student Association Sterling, VA · Self · n/a"
+      },
+      {
+       "source": "Wisconsin Public Health Association Kimberly, WI",
+       "amounts": [
+        4500
+       ],
+       "text": "08/06/2024 · Speech · $4,500.00 · Wisconsin Public Health Association Kimberly, WI · Self · n/a"
+      },
+      {
+       "source": "Coalition of Kaiser Permanente Unions Washington, DC",
+       "amounts": [
+        11600
+       ],
+       "text": "09/13/2024 · Speech · $11,600.00 · Coalition of Kaiser Permanente Unions Washington, DC · Self · n/a"
+      },
+      {
+       "source": "University of Wisconsin Madison, WI",
+       "amounts": [
+        250
+       ],
+       "text": "10/22/2024 · Appearance · $250.00 · University of Wisconsin Madison, WI · Self · n/a"
+      },
+      {
+       "source": "League of Oregon Cities Salem, OR",
+       "amounts": [
+        13500
+       ],
+       "text": "11/15/2024 · Speech · $13,500.00 · League of Oregon Cities Salem, OR · Self · n/a"
+      },
+      {
+       "source": "League of Oregon Cities Salem, OR",
+       "amounts": [
+        380.87
+       ],
+       "text": "12/05/2024 · Speech · $380.87 · League of Oregon Cities Salem, OR · Self · n/a"
+      },
+      {
+       "source": "Corewell Health Grand Rapids, MI",
+       "amounts": [
+        1000
+       ],
+       "text": "02/18/2025 · Speech · $1,000.00 · Corewell Health Grand Rapids, MI · Self · Debated in favor of physician activism at Oakland Univ. William Beaumont School of Medicine, but Corewell Health paid on the University's behalf."
+      },
+      {
+       "source": "Brown University Providence, RI",
+       "amounts": [
+        1500
+       ],
+       "text": "02/14/2025 · Speech · $1,500.00 · Brown University Providence, RI · Self · n/a"
+      },
+      {
+       "source": "Ford Foundation New York, NY",
+       "amounts": [
+        5000
+       ],
+       "text": "11/27/2024 · Speech · $5,000.00 · Ford Foundation New York, NY · Self · n/a"
+      },
+      {
+       "source": "Crooked Media Los Angeles, CA",
+       "amounts": [
+        800
+       ],
+       "text": "04/05/2024 · Appearance · $800.00 · Crooked Media Los Angeles, CA · Self · n/a"
+      },
+      {
+       "source": "Crooked Media Los Angeles, CA",
+       "amounts": [
+        800
+       ],
+       "text": "05/14/2024 · Appearance · $800.00 · Crooked Media Los Angeles, CA · Self · n/a"
+      },
+      {
+       "source": "County of Wayne Detroit, MI",
+       "type": "Salary",
+       "amounts": [
+        278939.07
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · County of Wayne Detroit, MI · $278,939.07 · n/a"
+      },
+      {
+       "source": "AME Higher LLC Detroit, MI",
+       "type": "Salary",
+       "amounts": [
+        56000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · AME Higher LLC Detroit, MI · $56,000.00 · n/a"
+      },
+      {
+       "source": "AME Higher LLC Detroit, MI",
+       "type": "Member Draw",
+       "amounts": [
+        6000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Member Draw · AME Higher LLC Detroit, MI · $6,000.00 · n/a"
+      },
+      {
+       "source": "University of Michigan Ann Arbor, MI",
+       "type": "Salary",
+       "amounts": [
+        17508.73
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · University of Michigan Ann Arbor, MI · $17,508.73 · n/a"
+      },
+      {
+       "source": "University of Michigan Ann Arbor, MI",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · University of Michigan Ann Arbor, MI · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Mind Work Psychiatry LLC Ann Arbor, MI",
+       "type": "Member Draw",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Member Draw · Mind Work Psychiatry LLC Ann Arbor, MI · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Owner)",
+       "org": "AME Higher LLC Detroit, MI",
+       "text": "Sep 2018 to present · Other (Owner) · AME Higher LLC Detroit, MI · Partnership · n/a"
+      },
+      {
+       "position": "Other (Owner)",
+       "org": "Incision Media LLC Detroit, MI",
+       "text": "Sep 2022 to present · Other (Owner) · Incision Media LLC Detroit, MI · Partnership · n/a"
+      },
+      {
+       "position": "Employee",
+       "org": "County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI",
+       "text": "Mar 2023 to Apr 2025 · Employee · County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI · Other (County Government) · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI",
+       "text": "Dec 2022 to Apr 2023 · Consultant · County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI · Other (County Government) · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI",
+       "text": "Apr 2025 to present · Consultant · County of Wayne Dept. of Health, Human & Veterans Services Detroit, MI · Other (County Government) · n/a"
+      },
+      {
+       "position": "Employee",
+       "org": "University of Michigan, Gerald R. Ford School of Public Policy Ann Arbor, MI",
+       "text": "Aug 2021 to Apr 2025 · Employee · University of Michigan, Gerald R. Ford School of Public Policy Ann Arbor, MI · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Visiting Scholar)",
+       "org": "FXB Harvard School of Public Health Boston, MA",
+       "text": "Feb 2021 to present · Other (Visiting Scholar) · FXB Harvard School of Public Health Boston, MA · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Scholar in Residence)",
+       "org": "Wayne State University, Dept. of Criminal Justice Detroit, MI",
+       "text": "Feb 2019 to Apr 2025 · Other (Scholar in Residence) · Wayne State University, Dept. of Criminal Justice Detroit, MI · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Scholar in Residence)",
+       "org": "American University, School of Public Affairs Washington, DC",
+       "text": "Jan 2019 to Apr 2025 · Other (Scholar in Residence) · American University, School of Public Affairs Washington, DC · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Contributor)",
+       "org": "Turner Broadcasting System, Inc. Atlanta, GA",
+       "text": "Feb 2020 to Feb 2023 · Other (Contributor) · Turner Broadcasting System, Inc. Atlanta, GA · Corporation · n/a"
+      },
+      {
+       "position": "Other (Host/Executive Producer)",
+       "org": "Crooked Media Los Angeles, CA",
+       "text": "Sep 2019 to Apr 2024 · Other (Host/Executive Producer) · Crooked Media Los Angeles, CA · Corporation · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "Columbia University, Vagelos College of Physicians & Surgeons Alumni Board New York, NY",
+       "text": "Aug 2023 to present · Other (Board Member) · Columbia University, Vagelos College of Physicians & Surgeons Alumni Board New York, NY · Educational Organization · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "HealthChoice of Michigan Detroit, MI",
+       "text": "Mar 2023 to Apr 2025 · Other (Board Member) · HealthChoice of Michigan Detroit, MI · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "Climate Power Washington, DC",
+       "text": "May 2020 to present · Other (Advisory Board Member) · Climate Power Washington, DC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "FrameWorks Institute Washington, DC",
+       "text": "May 2022 to Dec 2023 · Other (Advisory Board Member) · FrameWorks Institute Washington, DC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Board Member)",
+       "org": "Roosevelt Institute New York, NY",
+       "text": "Jan 2020 to Apr 2025 · Other (Board Member) · Roosevelt Institute New York, NY · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Partner",
+       "org": "Uptime USA Aggregator, LLC New York, NY",
+       "text": "May 2023 to present · Partner · Uptime USA Aggregator, LLC New York, NY · Partnership · n/a"
+      },
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "FrameWorks Institute Washington, DC",
+       "text": "Apr 2024 to present · Other (Advisory Board Member) · FrameWorks Institute Washington, DC · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Mar 2023",
+       "terms": "County of Wayne Detroit, MI · Continuing participation in an employee benefit plan · Continued participation in the Wayne County Defined Contribution 401(a) Plan.",
+       "text": "Mar 2023 · County of Wayne Detroit, MI · Continuing participation in an employee benefit plan · Continued participation in the Wayne County Defined Contribution 401(a) Plan. · n/a"
+      },
+      {
+       "date": "Dec 2022",
+       "terms": "County of Wanye Detroit, MI · Continuing participation in an employee benefit plan · Continued participation in the Wayne County FICA Alternative 457(b) Plan.",
+       "text": "Dec 2022 · County of Wanye Detroit, MI · Continuing participation in an employee benefit plan · Continued participation in the Wayne County FICA Alternative 457(b) Plan. · n/a"
+      },
+      {
+       "date": "Feb 2019",
+       "terms": "Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Medicare for All\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis.",
+       "text": "Feb 2019 · Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Medicare for All\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis. · n/a"
+      },
+      {
+       "date": "Feb 2019",
+       "terms": "Harry N. Abrams, Inc. New York, NY · Royalty Agreement · Income from book sales of \"Healing Politics\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis.",
+       "text": "Feb 2019 · Harry N. Abrams, Inc. New York, NY · Royalty Agreement · Income from book sales of \"Healing Politics\" will be used to cover the initial advance, after which time they will be paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis. · n/a"
+      },
+      {
+       "date": "May 2015",
+       "terms": "Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Systems Science & Population Health\" are paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis.",
+       "text": "May 2015 · Oxford University Press USA New York, NY · Royalty Agreement · Income from book sales of \"Systems Science & Population Health\" are paid directly to AME Higher LLC. Royalties are disbursed on a six-month basis. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "cooper": {
+   "name": "Roy Cooper",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-04-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/81f91312-70a1-4ace-84c2-1b8ce9eb2b56/",
+     "income": [
+      {
+       "source": "WV Consolidated Public Retirement Board Charleston, West Virginia",
+       "type": "Pension",
+       "amounts": [
+        54420.75
+       ],
+       "paidTo": "Self",
+       "text": "Self · Pension · WV Consolidated Public Retirement Board Charleston, West Virginia · $54,420.75 · Gross pension is $3,628.05 per month. Gross pension for 2025 was $43,536.60. Gross pension for first 3 months of 2026 was $10,884.15."
+      }
+     ],
+     "positions": [],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "turek": {
+   "name": "Josh Turek",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/3ad0667f-a89d-4a71-89d9-fef79ecf6c85/",
+     "income": [
+      {
+       "source": "State of Iowa Des Moines, IA",
+       "type": "Salary",
+       "amounts": [
+        63868.28
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Iowa Des Moines, IA · $63,868.28 · n/a"
+      },
+      {
+       "source": "Leonard Dental Group Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Leonard Dental Group Chicago, IL · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Pure Dental Spa Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Pure Dental Spa Chicago, IL · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Cloud Dentistry Houston, TX",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Cloud Dentistry Houston, TX · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Kwikly Dentistry Minneapolis, MN",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Kwikly Dentistry Minneapolis, MN · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (State Representative)",
+       "org": "State of Iowa Des Moines, IA",
+       "text": "Jan 2023 to present · Other (State Representative) · State of Iowa Des Moines, IA · Other (State Government) · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Ryan Martin Foundation Norwalk, CT",
+       "text": "Jan 2010 to present · Director · Ryan Martin Foundation Norwalk, CT · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-12-10",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/8bf6b1ce-3113-4379-a246-c2e8deb9e6a8/",
+     "income": [
+      {
+       "source": "State of Iowa Des Moines, IA",
+       "type": "Salary",
+       "amounts": [
+        42412.65
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Iowa Des Moines, IA · $42,412.65 · n/a"
+      },
+      {
+       "source": "DoorDash Delivery San Francisco, CA",
+       "type": "Other (Self-employment Income)",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Other (Self-employment Income) · DoorDash Delivery San Francisco, CA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Heartland Dental LLC Effingham, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Heartland Dental LLC Effingham, IL · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Kevin Galvin DMD PLLC Council Bluffs, IA",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Kevin Galvin DMD PLLC Council Bluffs, IA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Leonard Dental Group Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Leonard Dental Group Chicago, IL · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Pure Dental Spa Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Pure Dental Spa Chicago, IL · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (State Representative)",
+       "org": "State of Iowa Des Moines, IA",
+       "text": "Jan 2023 to present · Other (State Representative) · State of Iowa Des Moines, IA · Other (State Government) · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Ryan Martin Foundation Norwalk, CT",
+       "text": "Jan 2010 to present · Director · Ryan Martin Foundation Norwalk, CT · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Employee",
+       "org": "United Seating and Mobility LLC (d/b/a Numotion) Cape Girardeau, MO",
+       "text": "Jul 2019 to Jan 2023 · Employee · United Seating and Mobility LLC (d/b/a Numotion) Cape Girardeau, MO · Company · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "flanagan": {
+   "name": "Peggy Flanagan",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/73fbab45-d9bf-47ed-834b-a20d72af6920/",
+     "income": [
+      {
+       "source": "State of Minnesota Saint Paul, MN",
+       "type": "Salary",
+       "amounts": [
+        129021.26
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Minnesota Saint Paul, MN · $129,021.26 · n/a"
+      },
+      {
+       "source": "The Minneapolis Foundation Minneapolis, MN",
+       "type": "Other (Salary & Consulting)",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Other (Salary & Consulting) · The Minneapolis Foundation Minneapolis, MN · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Advanced Native Political Leadership Action Fund/Tides Advocacy San Francisco, CA",
+       "type": "Other (Consulting)",
+       "amounts": [
+        5000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting) · Advanced Native Political Leadership Action Fund/Tides Advocacy San Francisco, CA · $5,000.00 · Consulting work for Advanced Native Political Leadership"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "Advance Native Political Leadership San Francisco, CA",
+       "text": "Aug 2018 to Feb 2025 · Other (Advisory Board Member) · Advance Native Political Leadership San Francisco, CA · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Lieutenant Governor)",
+       "org": "State of Minnesota St. Paul, MN",
+       "text": "Jan 2019 to present · Other (Lieutenant Governor) · State of Minnesota St. Paul, MN · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (Board Chair)",
+       "org": "Capitol Area Architectural and Planning Board St. Paul, MN",
+       "text": "Jan 2019 to present · Other (Board Chair) · Capitol Area Architectural and Planning Board St. Paul, MN · Other (State Government) · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Nov 2018",
+       "terms": "The Management Center Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits.",
+       "text": "Nov 2018 · The Management Center Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits. · n/a"
+      },
+      {
+       "date": "Mar 2016",
+       "terms": "Children's Defense Fund Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits.",
+       "text": "Mar 2016 · Children's Defense Fund Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-08-10",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/c652babd-b0b3-4483-9dcd-98859125c187/",
+     "income": [
+      {
+       "source": "State of Minnesota Saint Paul, MN",
+       "type": "Salary",
+       "amounts": [
+        122240.36
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Minnesota Saint Paul, MN · $122,240.36 · n/a"
+      },
+      {
+       "source": "Mitchell Hamline School of Law Saint Paul, MN",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Mitchell Hamline School of Law Saint Paul, MN · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "The Minneapolis Foundation Minneapolis, MN",
+       "type": "Other (Salary & Consulting)",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Other (Salary & Consulting) · The Minneapolis Foundation Minneapolis, MN · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Minnesota Public Radio Saint Paul, MN",
+       "type": "Other (Consulting)",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Other (Consulting) · Minnesota Public Radio Saint Paul, MN · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Advanced Native Political Leadership Action Fund/Tides Advocacy San Francisco, CA",
+       "type": "Other (Consulting)",
+       "amounts": [
+        5000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Consulting) · Advanced Native Political Leadership Action Fund/Tides Advocacy San Francisco, CA · $5,000.00 · Consulting work for Advanced Native Political Leadership"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Advisory Board Member)",
+       "org": "Advance Native Political Leadership San Francisco, CA",
+       "text": "Aug 2018 to Feb 2025 · Other (Advisory Board Member) · Advance Native Political Leadership San Francisco, CA · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Lieutenant Governor)",
+       "org": "State of Minnesota St. Paul, MN",
+       "text": "Jan 2019 to present · Other (Lieutenant Governor) · State of Minnesota St. Paul, MN · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (Board Chair)",
+       "org": "Capitol Area Architectural and Planning Board St. Paul, MN",
+       "text": "Jan 2019 to present · Other (Board Chair) · Capitol Area Architectural and Planning Board St. Paul, MN · Other (State Government) · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Nov 2018",
+       "terms": "The Management Center Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits.",
+       "text": "Nov 2018 · The Management Center Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits. · n/a"
+      },
+      {
+       "date": "Mar 2016",
+       "terms": "Children's Defense Fund Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits.",
+       "text": "Mar 2016 · Children's Defense Fund Washington, DC · Continuing participation in an employee benefit plan · Defined contribution pension plan that provides service retirement benefits. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "stratton": {
+   "name": "Juliana Stratton",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/b2bf65fc-b2ee-48ec-80e1-0c0a48f0cfb3/",
+     "income": [
+      {
+       "source": "Adler University Chicago, IL",
+       "amounts": [
+        1000
+       ],
+       "text": "02/07/2025 · Appearance · $1,000.00 · Adler University Chicago, IL · Spouse · n/a"
+      },
+      {
+       "source": "State of Illinois Springfield, IL",
+       "type": "Salary",
+       "amounts": [
+        253400
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Illinois Springfield, IL · $253,400.00 · Salary for January 2025 through May 2026"
+      },
+      {
+       "source": "State of Illinois Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · State of Illinois Chicago, IL · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Proprietor",
+       "org": "JDS Mediation Services Inc Chicago, IL",
+       "text": "Aug 1995 to Mar 2026 · Proprietor · JDS Mediation Services Inc Chicago, IL · Firm · Not active since becoming Lieutenant Governor in 2019. Entity dissolved in March 2026."
+      },
+      {
+       "position": "Other (Lieutenant Governor)",
+       "org": "State of Illinois Springfield, IL",
+       "text": "Jan 2019 to present · Other (Lieutenant Governor) · State of Illinois Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Healing-Centered Illinois Task Force Springfield, IL",
+       "text": "Aug 2023 to Jan 2024 · Officer · Healing-Centered Illinois Task Force Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Rivers of Illinois Coordinating Council Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Rivers of Illinois Coordinating Council Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Military Economic Development Committee Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Military Economic Development Committee Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Illinois Council on Women and Girls Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Illinois Council on Women and Girls Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Restore, Reinvest, Renew (R3) Board Springfield, IL",
+       "text": "Jan 2020 to present · Officer · Restore, Reinvest, Renew (R3) Board Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Governor's Rural Affairs Council Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Governor's Rural Affairs Council Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Governor's Opioid Overdose Prevention and Recovery Steering Committee Springfield, IL",
+       "text": "Jan 2020 to present · Officer · Governor's Opioid Overdose Prevention and Recovery Steering Committee Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (Ex officio executive committee member)",
+       "org": "National Lieutenant Governor's Association Covington, KY",
+       "text": "Aug 2023 to present · Other (Ex officio executive committee member) · National Lieutenant Governor's Association Covington, KY · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Committee Chair)",
+       "org": "Council of State Governments Lexington, KY",
+       "text": "May 2023 to Dec 2024 · Other (Committee Chair) · Council of State Governments Lexington, KY · Nonprofit Organization · Interbranch Affairs Committee Co-Chair"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Jul 2011",
+       "terms": "Municipal Employees' Annuity and Benefit Fund of Chicago Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Jul 2011 · Municipal Employees' Annuity and Benefit Fund of Chicago Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Oct 2014",
+       "terms": "COUNTY EMPLOYEES' AND OFFICERS' ANNUITY AND BENEFIT FUND OF COOK COUNTY AND THE FOREST PRESERVE DISTRICT EMPLOYEES' ANNUITY AND BENEFIT FUND OF COOK COUNTY Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Oct 2014 · COUNTY EMPLOYEES' AND OFFICERS' ANNUITY AND BENEFIT FUND OF COOK COUNTY AND THE FOREST PRESERVE DISTRICT EMPLOYEES' ANNUITY AND BENEFIT FUND OF COOK COUNTY Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Aug 2025",
+       "terms": "General Assembly Retirement System (GARS) Springfield, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Aug 2025 · General Assembly Retirement System (GARS) Springfield, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Nov 2018",
+       "terms": "State Universities Retirement System (SURS) of Illinois Champaign, IL · Continuing participation in an employee benefit plan · Continuing participation in a defined contribution employee plan",
+       "text": "Nov 2018 · State Universities Retirement System (SURS) of Illinois Champaign, IL · Continuing participation in an employee benefit plan · Continuing participation in a defined contribution employee plan · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2026-08-13",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/1ddd0a81-774e-4f6e-b604-0515f714fbf5/",
+     "income": [
+      {
+       "source": "Adler University Chicago, IL",
+       "amounts": [
+        1000
+       ],
+       "text": "02/21/2024 · Appearance · $1,000.00 · Adler University Chicago, IL · Spouse · n/a"
+      },
+      {
+       "source": "Adler University Chicago, IL",
+       "amounts": [
+        1000
+       ],
+       "text": "05/06/2024 · Appearance · $1,000.00 · Adler University Chicago, IL · Spouse · n/a"
+      },
+      {
+       "source": "Adler University Chicago, IL",
+       "amounts": [
+        650
+       ],
+       "text": "05/06/2024 · Appearance · $650.00 · Adler University Chicago, IL · Spouse · n/a"
+      },
+      {
+       "source": "Adler University Chicago, IL",
+       "amounts": [
+        1000
+       ],
+       "text": "02/07/2025 · Appearance · $1,000.00 · Adler University Chicago, IL · Spouse · n/a"
+      },
+      {
+       "source": "State of Illinois Springfield, IL",
+       "type": "Salary",
+       "amounts": [
+        250300
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Illinois Springfield, IL · $250,300.00 · Salary for January 2024 through May 2025"
+      },
+      {
+       "source": "State of Illinois Chicago, IL",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · State of Illinois Chicago, IL · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Proprietor",
+       "org": "JDS Mediation Services Inc Chicago, IL",
+       "text": "Aug 1995 to present · Proprietor · JDS Mediation Services Inc Chicago, IL · Firm · Not active since becoming Lieutenant Governor in 2019."
+      },
+      {
+       "position": "Other (Lieutenant Governor)",
+       "org": "State of Illinois Springfield, IL",
+       "text": "Jan 2019 to present · Other (Lieutenant Governor) · State of Illinois Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Healing-Centered Illinois Task Force Springfield, IL",
+       "text": "Aug 2023 to Jan 2024 · Officer · Healing-Centered Illinois Task Force Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Rivers of Illinois Coordinating Council Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Rivers of Illinois Coordinating Council Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Military Economic Development Committee Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Military Economic Development Committee Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Illinois Council on Women and Girls Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Illinois Council on Women and Girls Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Restore, Reinvest, Renew (R3) Board Springfield, IL",
+       "text": "Jan 2020 to present · Officer · Restore, Reinvest, Renew (R3) Board Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Governor's Rural Affairs Council Springfield, IL",
+       "text": "Jan 2019 to present · Officer · Governor's Rural Affairs Council Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "Governor's Opioid Overdose Prevention and Recovery Steering Committee Springfield, IL",
+       "text": "Jan 2020 to present · Officer · Governor's Opioid Overdose Prevention and Recovery Steering Committee Springfield, IL · Other (State Government) · n/a"
+      },
+      {
+       "position": "Officer",
+       "org": "National Lieutenant Governor's Association Covington, KY",
+       "text": "Jul 2022 to Aug 2023 · Officer · National Lieutenant Governor's Association Covington, KY · Nonprofit Organization · Serve as Ex-officio Executive Committee member since August 2023 (to present)."
+      },
+      {
+       "position": "Other (Committee Chair)",
+       "org": "Council of State Governments Lexington, KY",
+       "text": "May 2023 to Dec 2024 · Other (Committee Chair) · Council of State Governments Lexington, KY · Nonprofit Organization · Interbranch Affairs Committee Co-Chair"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Jul 2011",
+       "terms": "Municipal Employees' Annuity and Benefit Fund of Chicago Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Jul 2011 · Municipal Employees' Annuity and Benefit Fund of Chicago Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Oct 2014",
+       "terms": "COUNTY EMPLOYEES' AND OFFICERS' ANNUITY AND BENEFIT FUND OF COOK COUNTY AND THE FOREST PRESERVE DISTRICT EMPLOYEES' ANNUITY AND BENEFIT FUND OF COOK COUNTY Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Oct 2014 · COUNTY EMPLOYEES' AND OFFICERS' ANNUITY AND BENEFIT FUND OF COOK COUNTY AND THE FOREST PRESERVE DISTRICT EMPLOYEES' ANNUITY AND BENEFIT FUND OF COOK COUNTY Chicago, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Aug 2025",
+       "terms": "General Assembly Retirement System (GARS) Springfield, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan",
+       "text": "Aug 2025 · General Assembly Retirement System (GARS) Springfield, IL · Continuing participation in an employee benefit plan · Continuing participation in defined benefit employee pension plan · n/a"
+      },
+      {
+       "date": "Nov 2018",
+       "terms": "State Universities Retirement System (SURS) of Illinois Champaign, IL · Continuing participation in an employee benefit plan · Continuing participation in a defined contribution employee plan",
+       "text": "Nov 2018 · State Universities Retirement System (SURS) of Illinois Champaign, IL · Continuing participation in an employee benefit plan · Continuing participation in a defined contribution employee plan · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "alme": {
+   "name": "Kurt Alme",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-03",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/cfb54c78-6034-41ee-8fb7-aa8739531e92/",
+     "income": [],
+     "positions": [
+      {
+       "position": "Officer",
+       "org": "National Christian Foundation Alpharetta, Georgia",
+       "text": "Jan 2022 to Apr 2024 · Officer · National Christian Foundation Alpharetta, Georgia · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Aug 2002",
+       "terms": "State of Montana 457 Plan Helena, Montana · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions.",
+       "text": "Aug 2002 · State of Montana 457 Plan Helena, Montana · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions. · n/a"
+      },
+      {
+       "date": "Aug 2002",
+       "terms": "State of Montana Public Employee Defined Contribution Plan Helena, Montana · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions.",
+       "text": "Aug 2002 · State of Montana Public Employee Defined Contribution Plan Helena, Montana · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions. · n/a"
+      },
+      {
+       "date": "Feb 2022",
+       "terms": "National Christian Foundation 401(k) Plan Alpharetta, Georgia · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions.",
+       "text": "Feb 2022 · National Christian Foundation 401(k) Plan Alpharetta, Georgia · Continuing participation in an employee benefit plan · I will continue to participate in this defined contribution plan, but the plan sponsor no longer makes contributions. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "ricketts": {
+   "name": "Pete Ricketts",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2025,
+     "filed": "2026-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/a8d4d3ca-b222-4c06-ae91-8b3b73686894/",
+     "income": [
+      {
+       "source": "Northside Entertainment Holdings LLC Chicago, IL",
+       "type": "Other (Taxable Income)",
+       "amounts": [
+        15684
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Taxable Income) · Northside Entertainment Holdings LLC Chicago, IL · $15,684.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Director",
+       "org": "Chicago Cubs Charities Chicago, IL",
+       "text": "Dec 2009 to present · Director · Chicago Cubs Charities Chicago, IL · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Director Emeritus)",
+       "org": "Bellevue University Bellevue, NE",
+       "text": "Jul 2008 to present · Other (Director Emeritus) · Bellevue University Bellevue, NE · Educational Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Lumen Christi Institute Chicago, IL",
+       "text": "Jan 2013 to present · Director · Lumen Christi Institute Chicago, IL · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Mid-America Council of Boy Scouts of America Omaha, NE",
+       "text": "Jan 2012 to present · Director · Mid-America Council of Boy Scouts of America Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Nebraska Game and Parks Foundation Omaha, NE",
+       "text": "Jan 2023 to present · Director · Nebraska Game and Parks Foundation Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Non-voting board member)",
+       "org": "Opportunity Education Foundation Omaha, NE",
+       "text": "Jan 2009 to present · Other (Non-voting board member) · Opportunity Education Foundation Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Eleanor Elaine Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Eleanor Elaine Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Margot Elizabeth Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Margot Elizabeth Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Roscoe Rollins Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Roscoe Rollins Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "Exempt Trust under the Susanne E. Shore Special Trust (2012) Omaha, NE",
+       "text": "Dec 2012 to present · Trustee · Exempt Trust under the Susanne E. Shore Special Trust (2012) Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Other (Adviser)",
+       "org": "Exempt Trust under the J. Peter Ricketts Special Trust (2012) Omaha, NE",
+       "text": "Dec 2012 to present · Other (Adviser) · Exempt Trust under the J. Peter Ricketts Special Trust (2012) Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Other (Adviser)",
+       "org": "J. Peter Ricketts PTC Trust Jackson, WY",
+       "text": "Apr 2022 to present · Other (Adviser) · J. Peter Ricketts PTC Trust Jackson, WY · Trust · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Ptolemy, LLC Omaha, NE",
+       "text": "Jan 2023 to present · Other (Manager) · Ptolemy, LLC Omaha, NE · Company · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Ortelius, LLC Omaha, NE",
+       "text": "Jan 2023 to present · Other (Manager) · Ortelius, LLC Omaha, NE · Company · n/a"
+      },
+      {
+       "position": "Other (Member)",
+       "org": "Progress, Inc. - Strategic Command Consultation Committee Omaha, NE",
+       "text": "Apr 2015 to present · Other (Member) · Progress, Inc. - Strategic Command Consultation Committee Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Offutt Advisory Council Offutt AFB, NE",
+       "text": "Jan 2014 to present · Director · Offutt Advisory Council Offutt AFB, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Cellarius, LLC Omaha, Nebraska",
+       "text": "Oct 2024 to present · Other (Manager) · Cellarius, LLC Omaha, Nebraska · Company · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Andor, LLC Omaha, Nebraska",
+       "text": "Mar 2015 to present · Other (Manager) · Andor, LLC Omaha, Nebraska · Company · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Jan 2015",
+       "terms": "State of Nebraska Lincoln, NE · Continuing participation in an employee benefit plan · Continuing participation in state employee defined benefit plan, as disclosed in part 3",
+       "text": "Jan 2015 · State of Nebraska Lincoln, NE · Continuing participation in an employee benefit plan · Continuing participation in state employee defined benefit plan, as disclosed in part 3 · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2024,
+     "filed": "2025-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/355ca0f6-a3d6-4d82-bb2f-d35283c4404d/",
+     "income": [
+      {
+       "source": "Northside Entertainment Holdings LLC Chicago, IL",
+       "type": "Other (Taxable Income)",
+       "amounts": [
+        38263
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Taxable Income) · Northside Entertainment Holdings LLC Chicago, IL · $38,263.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Director",
+       "org": "Chicago Cubs Charities Chicago, IL",
+       "text": "Dec 2009 to present · Director · Chicago Cubs Charities Chicago, IL · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Director Emeritus)",
+       "org": "Bellevue University Bellevue, NE",
+       "text": "Jul 2008 to present · Other (Director Emeritus) · Bellevue University Bellevue, NE · Educational Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Lumen Christi Institute Chicago, IL",
+       "text": "Jan 2013 to present · Director · Lumen Christi Institute Chicago, IL · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Mid-America Council of Boy Scouts of America Omaha, NE",
+       "text": "Jan 2012 to present · Director · Mid-America Council of Boy Scouts of America Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Nebraska Game and Parks Foundation Omaha, NE",
+       "text": "Jan 2023 to present · Director · Nebraska Game and Parks Foundation Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Non-voting board member)",
+       "org": "Opportunity Education Foundation Omaha, NE",
+       "text": "Jan 2009 to present · Other (Non-voting board member) · Opportunity Education Foundation Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Eleanor Elaine Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Eleanor Elaine Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Margot Elizabeth Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Margot Elizabeth Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "2001 Grandchildren's Trust FBO Roscoe Rollins Ricketts Omaha, NE",
+       "text": "Dec 2001 to present · Trustee · 2001 Grandchildren's Trust FBO Roscoe Rollins Ricketts Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Trustee",
+       "org": "Exempt Trust under the Susanne E. Shore Special Trust (2012) Omaha, NE",
+       "text": "Dec 2012 to present · Trustee · Exempt Trust under the Susanne E. Shore Special Trust (2012) Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Other (Adviser)",
+       "org": "Exempt Trust under the J. Peter Ricketts Special Trust (2012) Omaha, NE",
+       "text": "Dec 2012 to present · Other (Adviser) · Exempt Trust under the J. Peter Ricketts Special Trust (2012) Omaha, NE · Trust · n/a"
+      },
+      {
+       "position": "Other (Adviser)",
+       "org": "J. Peter Ricketts PTC Trust Jackson, WY",
+       "text": "Apr 2022 to present · Other (Adviser) · J. Peter Ricketts PTC Trust Jackson, WY · Trust · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Ptolemy, LLC Omaha, NE",
+       "text": "Jan 2023 to present · Other (Manager) · Ptolemy, LLC Omaha, NE · Company · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Ortelius, LLC Omaha, NE",
+       "text": "Jan 2023 to present · Other (Manager) · Ortelius, LLC Omaha, NE · Company · n/a"
+      },
+      {
+       "position": "Other (Member)",
+       "org": "Progress, Inc. - Strategic Command Consultation Committee Omaha, NE",
+       "text": "Apr 2015 to present · Other (Member) · Progress, Inc. - Strategic Command Consultation Committee Omaha, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Director",
+       "org": "Offutt Advisory Council Offutt AFB, NE",
+       "text": "Jan 2014 to present · Director · Offutt Advisory Council Offutt AFB, NE · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Cellarius, LLC Omaha, Nebraska",
+       "text": "Oct 2024 to present · Other (Manager) · Cellarius, LLC Omaha, Nebraska · Company · n/a"
+      },
+      {
+       "position": "Other (Manager)",
+       "org": "Andor, LLC Omaha, Nebraska",
+       "text": "Mar 2015 to present · Other (Manager) · Andor, LLC Omaha, Nebraska · Company · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Jan 2015",
+       "terms": "State of Nebraska Lincoln, NE · Continuing participation in an employee benefit plan · Continuing participation in state employee defined benefit plan, as disclosed in part 3",
+       "text": "Jan 2015 · State of Nebraska Lincoln, NE · Continuing participation in an employee benefit plan · Continuing participation in state employee defined benefit plan, as disclosed in part 3 · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "jackson": {
+   "name": "Troy Jackson",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-10-05",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/da9df3ca-15dc-49a9-8058-f0bb42764a26/",
+     "income": [
+      {
+       "source": "Food and Medicine Brewer, ME",
+       "type": "Self-Employment Income",
+       "amounts": [
+        4800
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Food and Medicine Brewer, ME · $4,800.00 · 2025 income"
+      },
+      {
+       "source": "Eastern Maine Labor Council Brewer, ME",
+       "type": "Self-Employment Income",
+       "amounts": [
+        5100
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Eastern Maine Labor Council Brewer, ME · $5,100.00 · 2025 income"
+      },
+      {
+       "source": "International Association of Machinists Upper Marlboro, MD",
+       "type": "Self-Employment Income",
+       "amounts": [
+        90000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · International Association of Machinists Upper Marlboro, MD · $90,000.00 · Payments received personally and by Jackson Associates, which is solely owned by the filer. 2025 income $50,000; 2026 income $40,000"
+      },
+      {
+       "source": "International Union of Painters and Allied Trades Hanover, MD",
+       "type": "Self-Employment Income",
+       "amounts": [
+        48000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · International Union of Painters and Allied Trades Hanover, MD · $48,000.00 · 2025 income $30,000; 2026 income $18,000"
+      },
+      {
+       "source": "State of Maine Augusta, ME",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · State of Maine Augusta, ME · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Rula Mental Health Santa Clara, CA",
+       "type": "Self-Employment Income",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Self-Employment Income · Rula Mental Health Santa Clara, CA · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Amwell Boston, MA",
+       "type": "Self-Employment Income",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Self-Employment Income · Amwell Boston, MA · &gt; $1,000 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (Member - Board of Directors)",
+       "org": "Fish River Rural Healthcare Eagle Lake, ME",
+       "text": "Jan 2018 to present · Other (Member - Board of Directors) · Fish River Rural Healthcare Eagle Lake, ME · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Member - Board of Directors)",
+       "org": "Aroostook County Action Program Presque Isle, ME",
+       "text": "Jun 2018 to Dec 2024 · Other (Member - Board of Directors) · Aroostook County Action Program Presque Isle, ME · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (State Senator)",
+       "org": "Maine Senate Augusta, ME",
+       "text": "Dec 2016 to Dec 2024 · Other (State Senator) · Maine Senate Augusta, ME · Other (State Government) · n/a"
+      },
+      {
+       "position": "Other (President)",
+       "org": "Jackson Associates Allagash, ME",
+       "text": "Jun 2021 to present · Other (President) · Jackson Associates Allagash, ME · Corporation · n/a"
+      },
+      {
+       "position": "Other (Organizer)",
+       "org": "Food and Medicine Brewer, ME",
+       "text": "Sep 2021 to Feb 2025 · Other (Organizer) · Food and Medicine Brewer, ME · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (Organizer)",
+       "org": "Eastern Maine Labor Council Brewer, ME",
+       "text": "Sep 2021 to Feb 2025 · Other (Organizer) · Eastern Maine Labor Council Brewer, ME · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (General Consultant)",
+       "org": "International Union of Painters and Allied Trades Hanover, MD",
+       "text": "Mar 2025 to Jun 2026 · Other (General Consultant) · International Union of Painters and Allied Trades Hanover, MD · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Other (General Consultant)",
+       "org": "International Association of Machinists Upper Marlboro, MD",
+       "text": "Mar 2025 to Aug 2026 · Other (General Consultant) · International Association of Machinists Upper Marlboro, MD · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Dec 2024",
+       "terms": "Maine Public Employees Retirement System Augusta, ME · Continuing participation in an employee benefit plan · Defined pension plan that provides service retirement benefits.",
+       "text": "Dec 2024 · Maine Public Employees Retirement System Augusta, ME · Continuing participation in an employee benefit plan · Defined pension plan that provides service retirement benefits. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "peltola": {
+   "name": "Mary Peltola",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-07-20",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/85441785-8302-4682-81ab-a7e0571ebbea/",
+     "income": [
+      {
+       "source": "Prometheus Anchorage, AK",
+       "type": "Other (Fellowship)",
+       "amounts": [
+        15000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Fellowship) · Prometheus Anchorage, AK · $15,000.00 · n/a"
+      },
+      {
+       "source": "Holland & Hart LLP Denver, CO",
+       "type": "Salary",
+       "amounts": [
+        342400.16
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Holland & Hart LLP Denver, CO · $342,400.16 · n/a"
+      },
+      {
+       "source": "Alaskans for Mary Anchorage, AK",
+       "type": "Salary",
+       "amounts": [
+        32625
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Alaskans for Mary Anchorage, AK · $32,625.00 · n/a"
+      },
+      {
+       "source": "American Opportunity Action Washington, DC",
+       "type": "Other (Fellowship)",
+       "amounts": [
+        80000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Other (Fellowship) · American Opportunity Action Washington, DC · $80,000.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Employee",
+       "org": "Holland & Hart LLP Denver, CO",
+       "text": "Mar 2025 to Jan 2026 · Employee · Holland & Hart LLP Denver, CO · Firm · n/a"
+      },
+      {
+       "position": "Other (Fellowship)",
+       "org": "Prometheus Anchorage, AK",
+       "text": "Feb 2025 to Mar 2025 · Other (Fellowship) · Prometheus Anchorage, AK · Other (Limited Liability Company) · n/a"
+      },
+      {
+       "position": "Other (Fellowship)",
+       "org": "American Opportunity Action Washington, DC",
+       "text": "Apr 2025 to Dec 2025 · Other (Fellowship) · American Opportunity Action Washington, DC · Nonprofit Organization · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "Jan 2009",
+       "terms": "Filer and the State of Alaska Juneau, AK · Continuing participation in an employee benefit plan · Continuing participation in an employee defined contribution plan managed by former employer. Employer no longer contributes to the plan.",
+       "text": "Jan 2009 · Filer and the State of Alaska Juneau, AK · Continuing participation in an employee benefit plan · Continuing participation in an employee defined contribution plan managed by former employer. Employer no longer contributes to the plan. · n/a"
+      },
+      {
+       "date": "Oct 2014",
+       "terms": "Filer and Novagold USA, Inc. Salt Lake City, UT · Continuing participation in an employee benefit plan · Continuing participation in an employee defined contribution plan managed by former employer. Employer no longer contributes to the plan.",
+       "text": "Oct 2014 · Filer and Novagold USA, Inc. Salt Lake City, UT · Continuing participation in an employee benefit plan · Continuing participation in an employee defined contribution plan managed by former employer. Employer no longer contributes to the plan. · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "hamilton": {
+   "name": "Adam Hamilton",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-06-30",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/179a5420-811c-45f3-a6ca-bcb78c39cfd7/",
+     "income": [
+      {
+       "source": "First United Methodist Church Richardson Richardson, TX",
+       "amounts": [
+        5000
+       ],
+       "text": "02/24/2025 · Speech · $5,000.00 · First United Methodist Church Richardson Richardson, TX · Self · n/a"
+      },
+      {
+       "source": "Florida Southern College Lakeland, FL",
+       "amounts": [
+        5000
+       ],
+       "text": "11/12/2025 · Speech · $5,000.00 · Florida Southern College Lakeland, FL · Self · n/a"
+      },
+      {
+       "source": "United Methodist Publishing House Nashville, TN",
+       "type": "Royalties",
+       "amounts": [
+        417372.7
+       ],
+       "paidTo": "Self",
+       "text": "Self · Royalties · United Methodist Publishing House Nashville, TN · $417,372.70 · Royalties from publishing agreements"
+      },
+      {
+       "source": "Johnson County Community College Overland Park, KS",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Johnson County Community College Overland Park, KS · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Church of the Resurrection Leawood, Kansas",
+       "type": "Salary",
+       "amounts": [
+        394239.05
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Church of the Resurrection Leawood, Kansas · $394,239.05 · n/a"
+      },
+      {
+       "source": "Crown Publishing Group, a division of Penguin Random House New York, NY",
+       "type": "Royalties",
+       "amounts": [
+        111.46
+       ],
+       "paidTo": "Self",
+       "text": "Self · Royalties · Crown Publishing Group, a division of Penguin Random House New York, NY · $111.46 · Royalties from publishing agreements"
+      },
+      {
+       "source": "HarperCollins Publishing New York, NY",
+       "type": "Royalties",
+       "amounts": [
+        11178.41
+       ],
+       "paidTo": "Self",
+       "text": "Self · Royalties · HarperCollins Publishing New York, NY · $11,178.41 · Royalties from publishing agreements"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Employee",
+       "org": "Church of the Resurrection Leawood, Kansas",
+       "text": "Jun 1990 to present · Employee · Church of the Resurrection Leawood, Kansas · Nonprofit Organization · Senior Pastor"
+      },
+      {
+       "position": "Director",
+       "org": "American Public Square Kansas City, MO",
+       "text": "Jan 2024 to Jan 2026 · Director · American Public Square Kansas City, MO · Nonprofit Organization · Board of Directors"
+      },
+      {
+       "position": "Trustee",
+       "org": "Research Medical Center Kansas City, MO",
+       "text": "Jan 2021 to Dec 2024 · Trustee · Research Medical Center Kansas City, MO · Company · n/a"
+      }
+     ],
+     "agreements": [
+      {
+       "date": "May 2025",
+       "terms": "Church of the Resurrection Leawood, KS · Compensation Agreement · Updated compensation package approved by the Church Conference on 5/13/2025. Includes salary, housing/utility/household expenses, pension contributions/deferred compensation, and HSA contributions.",
+       "text": "May 2025 · Church of the Resurrection Leawood, KS · Compensation Agreement · Updated compensation package approved by the Church Conference on 5/13/2025. Includes salary, housing/utility/household expenses, pension contributions/deferred compensation, and HSA contributions. · n/a"
+      },
+      {
+       "date": "May 2025",
+       "terms": "Church of the Resurrection Leawood, KS · Continuing participation in an employee benefit plan · Updated agreement for continued participation in 403(b) retirement plan administered by Wespath",
+       "text": "May 2025 · Church of the Resurrection Leawood, KS · Continuing participation in an employee benefit plan · Updated agreement for continued participation in 403(b) retirement plan administered by Wespath · n/a"
+      },
+      {
+       "date": "Feb 2023",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Wrestling with Doubt, Finding Faith”",
+       "text": "Feb 2023 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Wrestling with Doubt, Finding Faith” · n/a"
+      },
+      {
+       "date": "Feb 2024",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Message of Jesus: Words that Changed the World”",
+       "text": "Feb 2024 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Message of Jesus: Words that Changed the World” · n/a"
+      },
+      {
+       "date": "Dec 2024",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Holy Spirit: God's Presence and Power at Work in Us”",
+       "text": "Dec 2024 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Holy Spirit: God's Presence and Power at Work in Us” · n/a"
+      },
+      {
+       "date": "May 2025",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Why Did Jesus Have to Die: The Meaning of the Crucifixion”",
+       "text": "May 2025 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Why Did Jesus Have to Die: The Meaning of the Crucifixion” · n/a"
+      },
+      {
+       "date": "Jan 2016",
+       "terms": "Penguin Random House New York City, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for four-book series beginning with \"Unafraid\"",
+       "text": "Jan 2016 · Penguin Random House New York City, NY · Royalty Agreement · Advance and royalties based on customary and usual terms for four-book series beginning with \"Unafraid\" · n/a"
+      },
+      {
+       "date": "Jul 2009",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Unleashing the Word”",
+       "text": "Jul 2009 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Unleashing the Word” · n/a"
+      },
+      {
+       "date": "May 2005",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Confronting the Controversies,” and supplementary materials",
+       "text": "May 2005 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Confronting the Controversies,” and supplementary materials · n/a"
+      },
+      {
+       "date": "Jan 2002",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Leading Beyond the Walls.”",
+       "text": "Jan 2002 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Leading Beyond the Walls.” · n/a"
+      },
+      {
+       "date": "Aug 2004",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Making Love Last a Lifetime\" and supplementary materials",
+       "text": "Aug 2004 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Making Love Last a Lifetime\" and supplementary materials · n/a"
+      },
+      {
+       "date": "Sep 2018",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Christianity and World Religions”",
+       "text": "Sep 2018 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Christianity and World Religions” · n/a"
+      },
+      {
+       "date": "Dec 2009",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “24 Hours That Changed the World,” different editions, and supplementary materials.",
+       "text": "Dec 2009 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “24 Hours That Changed the World,” different editions, and supplementary materials. · n/a"
+      },
+      {
+       "date": "Jul 2012",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Seeing Gray in a World of Black and White.\"",
+       "text": "Jul 2012 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Seeing Gray in a World of Black and White.\" · n/a"
+      },
+      {
+       "date": "Oct 2009",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Catch: Attracting and Connecting Visitors”",
+       "text": "Oct 2009 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Catch: Attracting and Connecting Visitors” · n/a"
+      },
+      {
+       "date": "Feb 2009",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Enough: Discovering Joy through Simplicity and Generosity\"",
+       "text": "Feb 2009 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Enough: Discovering Joy through Simplicity and Generosity\" · n/a"
+      },
+      {
+       "date": "May 2005",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Selling Swimsuits in the Arctic: Seven Simple Keys to Growing Churches”",
+       "text": "May 2005 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Selling Swimsuits in the Arctic: Seven Simple Keys to Growing Churches” · n/a"
+      },
+      {
+       "date": "Aug 2007",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Christianity's Family Tree: What Other Christians Believe and Why.”",
+       "text": "Aug 2007 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Christianity's Family Tree: What Other Christians Believe and Why.” · n/a"
+      },
+      {
+       "date": "Jan 2013",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “When Christians Get It Wrong.”",
+       "text": "Jan 2013 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “When Christians Get It Wrong.” · n/a"
+      },
+      {
+       "date": "Jan 2011",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Making Sense of God's Will.\"",
+       "text": "Jan 2011 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Making Sense of God's Will.\" · n/a"
+      },
+      {
+       "date": "Sep 2011",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Journey: Walking the Road to Bethlehem”",
+       "text": "Sep 2011 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Journey: Walking the Road to Bethlehem” · n/a"
+      },
+      {
+       "date": "Sep 2011",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Journey: A Season of Reflections”",
+       "text": "Sep 2011 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Journey: A Season of Reflections” · n/a"
+      },
+      {
+       "date": "Dec 2011",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Final Words from the Cross.”",
+       "text": "Dec 2011 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Final Words from the Cross.” · n/a"
+      },
+      {
+       "date": "Aug 2012",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Forgiveness: Finding Peace Through Letting Go.”",
+       "text": "Aug 2012 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Forgiveness: Finding Peace Through Letting Go.” · n/a"
+      },
+      {
+       "date": "Dec 2012",
+       "terms": "The Way: Walking in the Footsteps of Jesus Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “The Way: Walking in the Footsteps of Jesus.”",
+       "text": "Dec 2012 · The Way: Walking in the Footsteps of Jesus Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “The Way: Walking in the Footsteps of Jesus.” · n/a"
+      },
+      {
+       "date": "Oct 2018",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Love to Stay: Six Keys to a Successful Marriage\"",
+       "text": "Oct 2018 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Love to Stay: Six Keys to a Successful Marriage\" · n/a"
+      },
+      {
+       "date": "Sep 2014",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Not a Silent Night: Mary Looks Back to Bethlehem.\"",
+       "text": "Sep 2014 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Not a Silent Night: Mary Looks Back to Bethlehem.\" · n/a"
+      },
+      {
+       "date": "Sep 2014",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Revival: Faith as Wesley Lived It.\"",
+       "text": "Sep 2014 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Revival: Faith as Wesley Lived It.\" · n/a"
+      },
+      {
+       "date": "Mar 2024",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"Making Sense of the Bible: Rediscovering the Power of Scripture Today.\"",
+       "text": "Mar 2024 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"Making Sense of the Bible: Rediscovering the Power of Scripture Today.\" · n/a"
+      },
+      {
+       "date": "Jun 2015",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"The Call: The Life and Message of the Apostle Paul.\"",
+       "text": "Jun 2015 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"The Call: The Life and Message of the Apostle Paul.\" · n/a"
+      },
+      {
+       "date": "Dec 2015",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"John: The Gospel of Light and Life.\"",
+       "text": "Dec 2015 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"John: The Gospel of Light and Life.\" · n/a"
+      },
+      {
+       "date": "Oct 2015",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"Speaking Well: A Pocket Guide, Essential Skills for Speakers, Leaders, and Preachers.\"",
+       "text": "Oct 2015 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, \"Speaking Well: A Pocket Guide, Essential Skills for Speakers, Leaders, and Preachers.\" · n/a"
+      },
+      {
+       "date": "Dec 2020",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Words of Life: Jesus and the Promise of the Ten Commandments Today\"",
+       "text": "Dec 2020 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Words of Life: Jesus and the Promise of the Ten Commandments Today\" · n/a"
+      },
+      {
+       "date": "Apr 2016",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Half Truths: God Helps those Who Help Themselves and Other Things the Bible Doesn’t Say”",
+       "text": "Apr 2016 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Half Truths: God Helps those Who Help Themselves and Other Things the Bible Doesn’t Say” · n/a"
+      },
+      {
+       "date": "May 2017",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Moses: In the Footsteps of the Reluctant Prophet.”",
+       "text": "May 2017 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Moses: In the Footsteps of the Reluctant Prophet.” · n/a"
+      },
+      {
+       "date": "Dec 2016",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Creed: What Christians Believe and Why.\"",
+       "text": "Dec 2016 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Creed: What Christians Believe and Why.\" · n/a"
+      },
+      {
+       "date": "Oct 2017",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Faithful: Christmas Through the Eyes of Joseph\"",
+       "text": "Oct 2017 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Faithful: Christmas Through the Eyes of Joseph\" · n/a"
+      },
+      {
+       "date": "Dec 2018",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Simon Peter: Flawed but Faithful Disciple.\"",
+       "text": "Dec 2018 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Simon Peter: Flawed but Faithful Disciple.\" · n/a"
+      },
+      {
+       "date": "Mar 2018",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Unafraid: Living with Courage and Hope in Uncertain Times.\"",
+       "text": "Mar 2018 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Royalties based on customary and usual terms for book, “Unafraid: Living with Courage and Hope in Uncertain Times.\" · n/a"
+      },
+      {
+       "date": "Sep 2020",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Incarnation: Rediscovering the Significance of Christmas”",
+       "text": "Sep 2020 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “Incarnation: Rediscovering the Significance of Christmas” · n/a"
+      },
+      {
+       "date": "Dec 2019",
+       "terms": "The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Walk: Five Essential Practices of the Christian Life”",
+       "text": "Dec 2019 · The United Methodist Publishing House Nashville, TN · Royalty Agreement · Advance and royalties based on customary and usual terms for book, “The Walk: Five Essential Practices of the Christian Life” · n/a"
+      },
+      {
+       "date": "Jan 2014",
+       "terms": "HarperCollins Publishing New York, NY · Royalty Agreement · Royalties based on customary and usual terms for book, \"Making Sense of the Bible\"",
+       "text": "Jan 2014 · HarperCollins Publishing New York, NY · Royalty Agreement · Royalties based on customary and usual terms for book, \"Making Sense of the Bible\" · n/a"
+      }
+     ],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "colom": {
+   "name": "Scott Colom",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-15",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/1e978b2e-d509-48cb-994c-51a45cc4896d/",
+     "income": [
+      {
+       "source": "State of Mississippi Jackson, MS",
+       "type": "Salary",
+       "amounts": [
+        171763.72
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Mississippi Jackson, MS · $171,763.72 · n/a"
+      },
+      {
+       "source": "Potter Property Management LLC Starkville, MS",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Potter Property Management LLC Starkville, MS · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Lowndes County Columbus, MS",
+       "type": "Salary",
+       "amounts": [
+        6960
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Lowndes County Columbus, MS · $6,960.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (District Attorney)",
+       "org": "State of Mississippi Columbus, MS",
+       "text": "Jan 2016 to present · Other (District Attorney) · State of Mississippi Columbus, MS · Other (State office) · n/a"
+      },
+      {
+       "position": "Other (District Attorney)",
+       "org": "Lowndes County Columbus, MS",
+       "text": "Jan 2016 to present · Other (District Attorney) · Lowndes County Columbus, MS · Other (State Office) · n/a"
+      },
+      {
+       "position": "Other (Managing Member)",
+       "org": "Parkside Properties, LLC Columbus, MS",
+       "text": "Jan 2019 to present · Other (Managing Member) · Parkside Properties, LLC Columbus, MS · Other (Limited Liability Company) · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-12-03",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/e760c1bb-ce2d-44d8-817c-8f6fe1ee702f/",
+     "income": [
+      {
+       "source": "State of Mississippi Jackson, MS",
+       "type": "Salary",
+       "amounts": [
+        224169.73
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · State of Mississippi Jackson, MS · $224,169.73 · n/a"
+      },
+      {
+       "source": "Potter Property Management LLC Starkville, MS",
+       "type": "Salary",
+       "amounts": [
+        1000
+       ],
+       "paidTo": "Spouse",
+       "text": "Spouse · Salary · Potter Property Management LLC Starkville, MS · &gt; $1,000 · n/a"
+      },
+      {
+       "source": "Lowndes County Columbus, MS",
+       "type": "Salary",
+       "amounts": [
+        11000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Lowndes County Columbus, MS · $11,000.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Other (District Attorney)",
+       "org": "State of Mississippi Columbus, MS",
+       "text": "Jan 2016 to present · Other (District Attorney) · State of Mississippi Columbus, MS · Other (State office) · n/a"
+      },
+      {
+       "position": "Other (District Attorney)",
+       "org": "Lowndes County Columbus, MS",
+       "text": "Jan 2016 to present · Other (District Attorney) · Lowndes County Columbus, MS · Other (State Office) · n/a"
+      },
+      {
+       "position": "Other (Managing Member)",
+       "org": "Parkside Properties, LLC Columbus, MS",
+       "text": "Jan 2019 to present · Other (Managing Member) · Parkside Properties, LLC Columbus, MS · Other (Limited Liability Company) · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  },
+  "andrews": {
+   "name": "Annie Andrews",
+   "chamber": "S",
+   "reports": [
+    {
+     "year": 2026,
+     "filed": "2026-05-09",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/b48781aa-b8ac-440b-a242-173e87bb29e9/",
+     "income": [
+      {
+       "source": "University of Oklahoma Oklahoma City, Oklahoma",
+       "amounts": [
+        1000
+       ],
+       "text": "04/20/2026 · Speech · $1,000.00 · University of Oklahoma Oklahoma City, Oklahoma · Self · n/a"
+      },
+      {
+       "source": "University of Pittsburgh Medical Center Pittsburgh, PA",
+       "amounts": [
+        615.86
+       ],
+       "text": "07/31/2025 · Speech · $615.86 · University of Pittsburgh Medical Center Pittsburgh, PA · Self · n/a"
+      },
+      {
+       "source": "Pediatric Academic Societies The Woodlands, TX",
+       "amounts": [
+        736.06
+       ],
+       "text": "06/13/2025 · Speech · $736.06 · Pediatric Academic Societies The Woodlands, TX · Self · n/a"
+      },
+      {
+       "source": "First Presbyterian Church of Hilton Head Hilton Head, SC",
+       "amounts": [
+        651.2
+       ],
+       "text": "02/24/2025 · Speech · $651.20 · First Presbyterian Church of Hilton Head Hilton Head, SC · Self · n/a"
+      },
+      {
+       "source": "Maine AAP Manchester, ME",
+       "amounts": [
+        4739.76
+       ],
+       "text": "04/05/2025 · Speech · $4,739.76 · Maine AAP Manchester, ME · Self · n/a"
+      },
+      {
+       "source": "Johns Hopkins University Baltimore, MD",
+       "amounts": [
+        700
+       ],
+       "text": "02/19/2025 · Speech · $700.00 · Johns Hopkins University Baltimore, MD · Self · n/a"
+      },
+      {
+       "source": "Childrens National Medical Center Washington, DC",
+       "type": "Salary",
+       "amounts": [
+        69830
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Childrens National Medical Center Washington, DC · $69,830.00 · 2025 + 2026 salary up to date of filing this report"
+      },
+      {
+       "source": "Everytown for Gun Safety Action Fund New York, NY",
+       "type": "Self-Employment Income",
+       "amounts": [
+        12000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Everytown for Gun Safety Action Fund New York, NY · $12,000.00 · 2025 payments"
+      },
+      {
+       "source": "Everytown for Gun Safety Support Fund New York, NY",
+       "type": "Self-Employment Income",
+       "amounts": [
+        41000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Everytown for Gun Safety Support Fund New York, NY · $41,000.00 · 2025 Payments"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Employee",
+       "org": "Children's National Medical Center Washington, DC",
+       "text": "Aug 2023 to present · Employee · Children's National Medical Center Washington, DC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "Everytown for Gun Safety New York, NY",
+       "text": "May 2023 to May 2025 · Consultant · Everytown for Gun Safety New York, NY · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "The Arena Charleston, SC",
+       "text": "Jun 2024 to Nov 2024 · Consultant · The Arena Charleston, SC · Company · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    },
+    {
+     "year": 2025,
+     "filed": "2025-12-04",
+     "type": "annual",
+     "url": "https://efdsearch.senate.gov/search/view/annual/5588e6c6-6475-41e1-ac2e-3c0e0392f47c/",
+     "income": [
+      {
+       "source": "University of Pittsburgh Medical Center Pittsburgh, PA",
+       "amounts": [
+        615.86
+       ],
+       "text": "07/31/2025 · Speech · $615.86 · University of Pittsburgh Medical Center Pittsburgh, PA · Self · n/a"
+      },
+      {
+       "source": "Pediatric Academic Societies The Woodlands, TX",
+       "amounts": [
+        736.08
+       ],
+       "text": "06/13/2025 · Speech · $736.08 · Pediatric Academic Societies The Woodlands, TX · Self · n/a"
+      },
+      {
+       "source": "First Presbyterian Church of Hilton Head Hilton Head, SC",
+       "amounts": [
+        651.2
+       ],
+       "text": "02/24/2025 · Speech · $651.20 · First Presbyterian Church of Hilton Head Hilton Head, SC · Self · n/a"
+      },
+      {
+       "source": "Twig Association Rochester, NY",
+       "amounts": [
+        430.95
+       ],
+       "text": "12/09/2024 · Speech · $430.95 · Twig Association Rochester, NY · Self · n/a"
+      },
+      {
+       "source": "Weill Cornell Medical Center New York, NY",
+       "amounts": [
+        664.98
+       ],
+       "text": "12/09/2024 · Speech · $664.98 · Weill Cornell Medical Center New York, NY · Self · n/a"
+      },
+      {
+       "source": "Corewell Health Grand Rapids, MI",
+       "amounts": [
+        488.85
+       ],
+       "text": "12/04/2024 · Speech · $488.85 · Corewell Health Grand Rapids, MI · Self · n/a"
+      },
+      {
+       "source": "Twig Association Rochester, NY",
+       "amounts": [
+        2000
+       ],
+       "text": "10/29/2024 · Speech · $2,000.00 · Twig Association Rochester, NY · Self · n/a"
+      },
+      {
+       "source": "Corewell Health Grand Rapids, MI",
+       "amounts": [
+        1000
+       ],
+       "text": "10/25/2024 · Speech · $1,000.00 · Corewell Health Grand Rapids, MI · Self · n/a"
+      },
+      {
+       "source": "Academic Pediatric Association McLean, VA",
+       "amounts": [
+        3681.61
+       ],
+       "text": "10/22/2024 · Speech · $3,681.61 · Academic Pediatric Association McLean, VA · Self · n/a"
+      },
+      {
+       "source": "American Academy of Pediatrics Itasca, IL",
+       "amounts": [
+        600
+       ],
+       "text": "09/30/2024 · Speech · $600.00 · American Academy of Pediatrics Itasca, IL · Self · n/a"
+      },
+      {
+       "source": "Missouri AAP Jefferson City, MO",
+       "amounts": [
+        500
+       ],
+       "text": "05/20/2024 · Speech · $500.00 · Missouri AAP Jefferson City, MO · Self · n/a"
+      },
+      {
+       "source": "Children's Mercy Hospital Kansas City, MO",
+       "amounts": [
+        750
+       ],
+       "text": "04/15/2024 · Speech · $750.00 · Children's Mercy Hospital Kansas City, MO · Self · n/a"
+      },
+      {
+       "source": "Maine AAP Manchester, ME",
+       "amounts": [
+        4739.76
+       ],
+       "text": "04/05/2025 · Speech · $4,739.76 · Maine AAP Manchester, ME · Self · n/a"
+      },
+      {
+       "source": "Everytown for Gun Safety Action Fund New York, NY",
+       "type": "Self-Employment Income",
+       "amounts": [
+        35000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Everytown for Gun Safety Action Fund New York, NY · $35,000.00 · n/a"
+      },
+      {
+       "source": "Everytown for Gun Safety Support Fund New York, NY",
+       "type": "Self-Employment Income",
+       "amounts": [
+        95631
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · Everytown for Gun Safety Support Fund New York, NY · $95,631.00 · n/a"
+      },
+      {
+       "source": "The Arena Charleston, SC",
+       "type": "Self-Employment Income",
+       "amounts": [
+        16194
+       ],
+       "paidTo": "Self",
+       "text": "Self · Self-Employment Income · The Arena Charleston, SC · $16,194.00 · n/a"
+      },
+      {
+       "source": "Childrens National Medical Center Washington, DC",
+       "type": "Salary",
+       "amounts": [
+        97000
+       ],
+       "paidTo": "Self",
+       "text": "Self · Salary · Childrens National Medical Center Washington, DC · $97,000.00 · n/a"
+      }
+     ],
+     "positions": [
+      {
+       "position": "Employee",
+       "org": "Children's National Medical Center Washington, DC",
+       "text": "Aug 2023 to present · Employee · Children's National Medical Center Washington, DC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Employee",
+       "org": "Medical University of South Carolina Charleston, SC",
+       "text": "Jan 2023 to Jun 2023 · Employee · Medical University of South Carolina Charleston, SC · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "Everytown for Gun Safety NY, NY",
+       "text": "May 2023 to May 2025 · Consultant · Everytown for Gun Safety NY, NY · Nonprofit Organization · n/a"
+      },
+      {
+       "position": "Consultant",
+       "org": "The Arena Charleston, SC",
+       "text": "Jun 2024 to Nov 2024 · Consultant · The Arena Charleston, SC · Company · n/a"
+      }
+     ],
+     "agreements": [],
+     "gifts": [],
+     "travel": []
+    }
+   ]
+  }
+ }
+}
