@@ -1744,3 +1744,43 @@ input, select { accent-color: var(--accent); }
 /* Nonprofits' own tax returns (public/nonprofits.js). */
 .np-chip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);font-size:.72rem;white-space:nowrap;cursor:help}
 .np-more{margin:4px 0 2px}.np-more>summary{cursor:pointer;color:var(--muted);line-height:1.4}.np .tablewrap{margin:4px 0 10px}.np-h{margin:10px 0 4px;font-size:.8rem;color:var(--ink-2)}
+
+/* My alignment (approved Nov. 25, 2026): a category's other questions behind a divider-style button, and importance as a
+   bar with five dots. */
+.al-more { display: flex; align-items: center; gap: 14px; margin: 22px 0 18px; }
+.al-more::before, .al-more::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.al-mbtn { display: inline-flex; align-items: center; gap: 10px; border: 1px dashed var(--line-2); background: transparent; color: var(--ink-2); border-radius: 999px; padding: 9px 16px 9px 12px; font: inherit; font-weight: 700; font-size: .9rem; cursor: pointer; max-width: 100%; text-align: left; }
+.al-mbtn:hover { border-style: solid; border-color: var(--accent); color: var(--ink); }
+.al-pm { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; font-size: 1rem; line-height: 1; color: var(--ink); }
+.al-mn { font-weight: 600; color: var(--muted); font-size: .82rem; white-space: nowrap; }
+.al-oin { border-left: 3px solid var(--line-2); padding: 2px 0 2px 16px; margin: 0 0 18px; }
+.al-oin .al-q { background: var(--bg); }
+.al-olabel { display: block; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.al-imp { display: flex; align-items: center; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+.al-il { font-size: .82rem; color: var(--muted); flex: 0 0 auto; }
+.al-il b { color: var(--ink); font-weight: 700; }
+.al-scale { position: relative; flex: 1 1 300px; max-width: 420px; padding: 8px 9px 22px; }
+.al-track, .al-fill { position: absolute; left: 18px; top: 15px; height: 4px; border-radius: 2px; }
+.al-track { right: 18px; background: var(--line-2); }
+.al-fill { background: var(--accent); }
+.al-dots { position: relative; display: flex; justify-content: space-between; }
+.al-dot { position: relative; width: 18px; height: 18px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.al-dot::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--line-2); transition: transform .12s; }
+.al-dot.done::before { background: var(--accent); border-color: var(--accent); }
+.al-dot.on::before { width: 16px; height: 16px; background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.al-dot:hover::before { transform: scale(1.2); }
+.al-dot:focus-visible { outline: none; }
+.al-dot:focus-visible::before { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent); }
+.al-dot span { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); font-size: .72rem; color: var(--muted); white-space: nowrap; }
+.al-dot.on span { color: var(--ink); font-weight: 700; }
+.al-dot:first-child span { left: 0; transform: none; }
+.al-dot:last-child span { left: auto; right: 0; transform: none; }
+.al-hint { font-size: .76rem; color: var(--muted); margin: 7px 0 0; }
+@media (max-width: 720px) {
+  .al-more { display: block; }
+  .al-more::before, .al-more::after { display: none; }
+  .al-mbtn { width: 100%; border-radius: 12px; }
+  .al-imp { gap: 4px; }
+  .al-scale { flex-basis: 100%; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) { .al-dot::before { transition: none; } }

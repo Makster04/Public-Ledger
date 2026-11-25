@@ -29,7 +29,7 @@ import {pledgeCheck} from './pledges.js';
 import {holdingsLead,reviewedHoldingsSummary,assetKind} from './holdings.js';
 import {SIX,UNBOUGHT,UNBOUGHT_PAC_LABEL,unbought,unboughtPledges,aboveBoard,leanLabel,PEOPLE_FIRST,tradeCoverage} from './six-scores.js';
 import {METHOD_TREE,BUILT_SECTIONS,topicOf,blurbOf} from './method-tree.js';
-import {QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
+import {keyQuestions,QPOINTS,IMPORTANCE,MIN_POINTS,IDEOLOGY_MIN_CATEGORIES,QFORMULA,LEGACY_ISSUES,personStances,matchFrom,stanceWord,recordRows,stanceNet,questionLean,billLink,rollUrl} from './question-scores.js';
 import {OUTCOME,raceResult,outcomeOf,seatNote,resultCounts,termAfter,tallyOf,sharePct,nomineeKey,seatChange} from './results.js';
 import {integrityPreview,previewCci,workersPreview,fundraisingPledgePoints,coversPeriod,HILL_POWER} from './integrity.js';
 import {ALIGN_LABEL,SECTOR_LABEL_EXTRA,categoryAlign,outsideBySector,topDonors,tradesInDonors,corp,addMonths} from './influence.js';
@@ -3222,13 +3222,15 @@ const RECT=ACTION_TYPES;
 const TYPEL=DATA.typeLabel;
 const WLAB=Object.fromEntries(IMPORTANCE);
 const ALKEY='crc-align-v2';
-// Your answers, by question: {side: 'A' (sides[0]) or 'B', w: importance 1–5} or {neutral: true} (skipped). Answers
+// Your answers, by question: {side: 'A' (sides[0]) or 'B', w: importance 1–5}; an unanswered question is left out. (A
+// "Skip" saved before Nov. 25, 2026, {neutral: true}, is dropped on load: it counted as nothing, as no answer does.) Answers
 // saved before the questions replaced the 16 issues carry over to the question that took each one over (importance
 // Low 2, Medium 3, High 5).
 let PROF=(()=>{try{const v=JSON.parse(localStorage.getItem(ALKEY)||'null');if(v&&v.issues)return v}catch(e){}
   try{const old=JSON.parse(localStorage.getItem('crc-align-v1')||'null'),out={issues:{}};
     for(const [k,p] of Object.entries(old?.issues||{})){const m=LEGACY_ISSUES[k];if(!m||!p?.side||!QISSBY[m[0]])continue;out.issues[m[0]]={side:(p.side==='A'?m[1]:1-m[1])===0?'A':'B',w:({1:2,2:3,3:5})[p.w]||3};}
     return out;}catch(e){}return {issues:{}}})();
+for(const [k,p] of Object.entries(PROF.issues||{}))if(p?.neutral||!p?.side)delete PROF.issues[k];
 function saveProf(){try{localStorage.setItem(ALKEY,JSON.stringify(PROF))}catch(e){}}
 const chosenIssues=()=>QISS.filter(i=>PROF.issues[i.id]&&PROF.issues[i.id].side&&PROF.issues[i.id].w>0);
 // Example starting points: labeled by their content only. Every choice can be changed.
@@ -3260,10 +3262,10 @@ function qSide(i,side){const q=QISSBY[i];return q?(side==='A'?q.A:q.B):'';}
 function builderHTML(){
   return `<div class="albuild">
     <div class="row" style="margin-bottom:10px"><span class="small muted">Start from an example (you can change every choice):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
-    <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>.</p>
+    <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>. Click a side again to clear it.</p>
     ${QISS.filter(i=>QCODED[i.id]).map(i=>{const pr=PROF.issues[i.id]||{};return `<div class="alrow" data-i="${i.id}">
       <div class="alq"><b>${issIcon(i.cat)}${esc(i.q)}</b></div>
-      <div class="seg alside" role="group" aria-label="${esc(i.q)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button><button data-s="" class="${!pr.side?'active':''}">Skip</button></div>
+      <div class="seg alside" role="group" aria-label="${esc(i.q)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button></div>
       <label class="alw small">Importance <select data-w aria-label="${esc(i.q)}: importance">${IMPORTANCE.map(([w,l])=>`<option value="${w}" ${(pr.w||3)===w?'selected':''}>${l}</option>`).join('')}</select></label>
     </div>`}).join('')}
   </div>`;
@@ -3271,7 +3273,7 @@ function builderHTML(){
 function bindBuilder(root,onChange){
   root.querySelectorAll('.alrow').forEach(r=>{
     const id=r.dataset.i;
-    r.querySelector('.alside').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const w=+r.querySelector('select').value;if(b.dataset.s)PROF.issues[id]={side:b.dataset.s,w};else delete PROF.issues[id];r.querySelectorAll('.alside button').forEach(x=>x.classList.toggle('active',x===b));saveProf();onChange();});
+    r.querySelector('.alside').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const w=+r.querySelector('select').value;const off=PROF.issues[id]?.side===b.dataset.s;if(off)delete PROF.issues[id];else PROF.issues[id]={side:b.dataset.s,w};r.querySelectorAll('.alside button').forEach(x=>x.classList.toggle('active',!off&&x===b));saveProf();onChange();});
     r.querySelector('select').addEventListener('change',e=>{if(PROF.issues[id]){PROF.issues[id].w=+e.target.value;saveProf();onChange();}});
   });
   root.querySelectorAll('[data-ex]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.ex;PROF={issues:{}};if(k!=='clear')Object.entries(EXAMPLES[+k].set).forEach(([i,[s,w]])=>PROF.issues[i]={side:s,w});saveProf();onChange(true);}));
@@ -3284,12 +3286,15 @@ const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:
 const AL_ICON=ISSUE_ICON;
 const AL_GROUPS=QUESTIONS.categories.map(c=>[c.id,c.name,AL_ICON[c.id]||'•']);
 const AL_GBY=Object.fromEntries(AL_GROUPS.map(g=>[g[0],g]));
-// mixed order for "All questions": one from each category in turn
-const AL_ORDER=(()=>{const by=AL_GROUPS.map(([g])=>QISS.filter(i=>i.group===g)),out=[];for(let k=0;out.length<QISS.length&&k<QISS.length;k++)by.forEach(l=>{if(l[k])out.push(l[k])});QISS.forEach(i=>{if(!out.includes(i))out.push(i)});return out})();
-const AL_OPTS=[['A'],['B'],['']];
+// Each category's key questions (question-scores.js keyQuestions); the rest are under "Other" in the category's view.
+const AL_KEY=keyQuestions(QUESTIONS.questions,QCODED);
+// mixed order for "All questions": one from each category in turn, the key questions first and then the others
+const AL_ORDER=(()=>{const mix=list=>{const by=AL_GROUPS.map(([g])=>list.filter(i=>i.group===g)),out=[],max=Math.max(0,...by.map(l=>l.length));for(let k=0;k<max;k++)by.forEach(l=>{if(l[k])out.push(l[k])});list.forEach(i=>{if(!out.includes(i))out.push(i)});return out;};
+  return [...mix(QISS.filter(i=>AL_KEY.has(i.id))),...mix(QISS.filter(i=>!AL_KEY.has(i.id)))];})();
+const AL_OPTS=[['A'],['B']];
 const AL_PAGE=5;
-let alView={g:'',page:0};
-const alPick=id=>{const p=PROF.issues[id];if(!p)return -1;if(p.neutral)return 2;return p.side==='A'?0:p.side==='B'?1:-1};
+let alView={g:'',page:0};const alOpen={};
+const alPick=id=>{const p=PROF.issues[id];if(!p)return -1;return p.side==='A'?0:p.side==='B'?1:-1};
 const alAnswered=()=>QISS.filter(i=>alPick(i.id)>=0).length;
 // (how many bills, amendments and roll calls are coded to each question: public/question-stances.json "coded")
 function alTied(i){
@@ -3298,13 +3303,24 @@ function alTied(i){
 }
 function alCard(i){
   const [g,label,icon]=AL_GBY[i.group]||['','Other','•'],cls=AL_CLASS[g]||'econ',n=AL_ORDER.indexOf(i)+1,k=alPick(i.id),p=PROF.issues[i.id]||{};
-  const opts=[[0,i.A],[1,i.B],[2,'Skip']];
+  const opts=[[0,i.A],[1,i.B]],v=p.w||3;
   return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${cls}" aria-hidden="true">${icon}</span><span class="al-tag al-${cls}">${esc(label)}</span><span class="al-qn">Question ${n} of ${QISS.length}</span></div>
     <h3 id="alq-${i.id}">${issIcon(i.cat)}${esc(i.q)}</h3><p class="al-tied">${alTied(i)}</p>
     <div class="al-opts" role="radiogroup" aria-labelledby="alq-${i.id}">${opts.map(([j,l])=>`<button type="button" role="radio" aria-checked="${k===j}" data-k="${j}" class="${k===j?'on':''}"><span class="al-r" aria-hidden="true"></span>${esc(l)}</button>`).join('')}</div>
-    ${k===0||k===1?`<div class="al-opts al-imp" role="radiogroup" aria-label="How important is this question to you?"><span class="small muted" style="align-self:center">How important?</span>${IMPORTANCE.map(([w,l])=>`<button type="button" role="radio" aria-checked="${p.w===w}" data-w="${w}" class="${p.w===w?'on':''}"><span class="al-r" aria-hidden="true"></span>${l}</button>`).join('')}</div>`:''}</article>`;
+    ${k===0||k===1?`<div class="al-imp"><span class="al-il" id="ali-${i.id}">How important? <b>${IMPORTANCE[v-1][1]}</b></span><div class="al-scale"><span class="al-track" aria-hidden="true"></span><span class="al-fill" aria-hidden="true" style="width:calc((100% - 36px) * ${(v-1)/4})"></span>
+      <div class="al-dots" role="radiogroup" aria-labelledby="ali-${i.id}">${IMPORTANCE.map(([w,l])=>`<button type="button" role="radio" class="al-dot${w===v?' on':w<v?' done':''}" aria-checked="${w===v}" tabindex="${w===v?0:-1}" data-w="${w}" aria-label="${l}"><span aria-hidden="true">${l}</span></button>`).join('')}</div></div></div>
+      <p class="al-hint">Click your answer again to clear it.</p>`:''}</article>`;
 }
-function alList(){return alView.g?AL_ORDER.filter(i=>i.group===alView.g):AL_ORDER.slice(alView.page*AL_PAGE,alView.page*AL_PAGE+AL_PAGE);}
+function alList(){return alView.g?AL_ORDER.filter(i=>i.group===alView.g&&AL_KEY.has(i.id)):AL_ORDER.slice(alView.page*AL_PAGE,alView.page*AL_PAGE+AL_PAGE);}
+// A category's other questions (its key ones are alList), behind a divider-style button that opens them in place.
+const alOther=g=>AL_ORDER.filter(i=>i.group===g&&!AL_KEY.has(i.id));
+const alOtherCount=g=>`${alOther(g).filter(i=>alPick(i.id)>=0).length} answered`;
+function alOtherHTML(g){
+  const rest=alOther(g);if(!rest.length)return '';
+  const name=AL_GBY[g][1],open=!!alOpen[g];
+  return `<div class="al-more"><button type="button" class="al-mbtn" data-more="${g}" aria-expanded="${open}" aria-controls="al-other"><span class="al-pm" aria-hidden="true">${open?'−':'+'}</span><span>${open?`Hide the ${rest.length} other ${esc(name)} questions`:`Show ${rest.length} other ${esc(name)} questions`}</span><span class="al-mn">${alOtherCount(g)}</span></button></div>`
+    +(open?`<div class="al-oin" id="al-other"><span class="al-olabel">Other ${esc(name)} questions · fewer bills and votes coded to them · they count the same if you answer them</span>${rest.map(alCard).join('')}</div>`:'');
+}
 // "Your matches so far": the closest records to your answers, or flipped to the furthest ("mismatches").
 let alLiveMode='match', alLiveCh='';
 function alLive(){
@@ -3312,7 +3328,7 @@ function alLive(){
   const sw=`<div class="seg al-seg" role="group" aria-label="Show matches or mismatches"><button type="button" data-m="match" class="${mis?'':'active'}" aria-pressed="${!mis}">Top matches</button><button type="button" data-m="mismatch" class="${mis?'active':''}" aria-pressed="${mis}">Top mismatches</button></div>`;
   const sw2=`<div class="seg al-seg" role="group" aria-label="Which races">${[['','All'],['S','Senate'],['H','House']].map(([c,l])=>`<button type="button" data-c="${c}" class="${alLiveCh===c?'active':''}" aria-pressed="${alLiveCh===c}">${l}</button>`).join('')}</div>`;
   const counted=chosenIssues().length;
-  if(!counted)return `<h4>${title}</h4>${sw}${sw2}<p class="small muted" style="margin:0">Answer a few questions${alAnswered()?' (skipped ones are not counted)':''} to see how every candidate compares.</p>`;
+  if(!counted)return `<h4>${title}</h4>${sw}${sw2}<p class="small muted" style="margin:0">Answer a few questions to see how every candidate compares.</p>`;
   const rows=ALL.filter(s=>!alLiveCh||s.chamber===alLiveCh).map(s=>({s,r:scoreFor(s)})), graded=rows.filter(x=>x.r.score!=null);
   // matches are records at 50% or more of your answers, mismatches below 50%, so neither list borrows from the other
   const pool=graded.filter(x=>mis?x.r.score<50:x.r.score>=50).sort((a,b)=>(mis?a.r.score-b.r.score:b.r.score-a.r.score)||a.s.name.localeCompare(b.s.name));
@@ -3324,7 +3340,7 @@ function alLive(){
 }
 function alResults(){
   const ch=chosenIssues();
-  if(!ch.length)return '<div class="note">Answer at least one question (other than Skip) to see how every candidate compares, race by race.</div>';
+  if(!ch.length)return '<div class="note">Answer at least one question to see how every candidate compares, race by race.</div>';
   return `<p class="small muted" style="margin:0 0 6px">Results for ${ch.length} question${ch.length===1?'':'s'}. Open a candidate for the question-by-question breakdown and every piece of evidence.</p>`+DATA.races.map(r=>{const C=r.keys.map(k=>byId[k]).filter(Boolean);return `<article class="race"><div class="rh"><h3>${esc(r.label)}</h3><span class="small muted">${r.open?'Open seat':DATA.election?'Incumbent ran':'Incumbent running'}</span></div>
     <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Compared with your choices</th><th>Evidence used</th></tr></thead><tbody>${C.map(s=>{const sc=scoreFor(s);return `<tr><td><a href="#${s.id}-match"><b>${esc(s.name)}</b></a> <span class="chip ${s.party}">${s.party}</span> ${decidedChip(outcomeOf(r,s.id))}</td><td>${sc.score==null?scoreBadge(sc):`<span class="alscore"><b class="gr-${letter(sc.score)}">${letter(sc.score)}</b> <b>${sc.score}%</b> match</span>`}<div class="small muted">${sc.nCov} of ${sc.nChosen} of your issues have evidence</div></td><td class="small">${esc(evidenceOf(s).label)}<div class="muted">${esc(evidenceMix(s))}</div></td></tr>`}).join('')}</tbody></table></div>
     ${evidenceNote(C)?`<p class="small" style="margin:6px 0 0;color:var(--ink-2)"><b>Comparing records:</b> ${evidenceNote(C)}</p>`:''}</article>`}).join('');
@@ -3352,33 +3368,40 @@ function renderAlign(){
       <div class="al-ex"><span class="small muted">Or start from an example (you can change every answer):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
     </div>
     <aside class="al-box al-live" id="al-live" aria-live="polite"></aside>
-    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Importance','From Least to Most: a question set to Most counts five times as much as one set to Least.'],['Skip','Leaves the question out. It never counts against anyone.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
+    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Importance','From Least to Most: a question set to Most counts five times as much as one set to Least.'],['Unanswered','A question you leave unanswered is left out and never counts against anyone. Click your answer again to clear it.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
   </div>
   <section class="section" id="al-results" style="padding-top:8px"><h2>Every candidate, race by race</h2>${ALNOTE}<div id="alr"></div></section>`;
   const drawCats=()=>{$('#al-cats').innerHTML=[['','All questions','☰',QISS.length]].concat(AL_GROUPS.map(([g,l,ic])=>[g,l,ic,QISS.filter(i=>i.group===g).length])).map(([g,l,ic,n])=>{const done=(g?QISS.filter(i=>i.group===g):QISS).filter(i=>alPick(i.id)>=0).length;return `<button type="button" class="al-cat${alView.g===g?' on':''}" data-g="${g}" aria-pressed="${alView.g===g}"><span class="al-ic${g?' al-'+(AL_CLASS[g]||'econ'):''}" aria-hidden="true">${ic}</span><span class="al-cl">${l}</span><span class="al-cn" title="${done} of ${n} answered">${n}</span></button>`}).join('');};
   const drawTop=()=>{const L=alList(),a=alAnswered();
-    $('#al-pos').textContent=alView.g?`${AL_GBY[alView.g][1]} · ${L.length} question${L.length===1?'':'s'}`:`Questions ${alView.page*AL_PAGE+1}–${alView.page*AL_PAGE+L.length} of ${QISS.length}`;
+    const rest=alView.g?alOther(alView.g).length:0;
+    $('#al-pos').textContent=alView.g?`${AL_GBY[alView.g][1]} · ${L.length} ${rest?'key ':''}question${L.length===1?'':'s'}${rest?` + ${rest} other`:''}`:`Questions ${alView.page*AL_PAGE+1}–${alView.page*AL_PAGE+L.length} of ${QISS.length}`;
     $('#al-pct').textContent=`${a} of ${QISS.length} answered · ${Math.round(a/QISS.length*100)}% complete`;
     $('#al-bar').style.width=(a/QISS.length*100)+'%';
     const gi=AL_GROUPS.findIndex(g=>g[0]===alView.g);
     $('#al-prev').disabled=alView.g?false:alView.page===0;
     $('#al-next').textContent=alView.g?(gi<AL_GROUPS.length-1?`Next: ${AL_GROUPS[gi+1][1]} →`:'See my results ↓'):(alView.page<pages-1?'Next →':'See my results ↓');};
-  const drawQs=()=>{$('#al-qs').innerHTML=alList().map(alCard).join('');};
+  const drawQs=()=>{$('#al-qs').innerHTML=alList().map(alCard).join('')+(alView.g?alOtherHTML(alView.g):'');};
   const drawBox=focus=>{$('#al-live').innerHTML=alLive();const b=$('#al-all');if(b)b.addEventListener('click',()=>$('#al-results').scrollIntoView({behavior:'smooth'}));if(focus){const f=$(`#al-live ${focus}`);if(f)f.focus();}};
   const drawLive=()=>{drawBox();$('#alr').innerHTML=alResults();bindTips(app);};
   $('#al-live').addEventListener('click',e=>{const m=e.target.closest('button[data-m]'),c=e.target.closest('button[data-c]');
     if(m&&m.dataset.m!==alLiveMode){alLiveMode=m.dataset.m;drawBox(`[data-m="${alLiveMode}"]`);}
     else if(c&&c.dataset.c!==alLiveCh){alLiveCh=c.dataset.c;drawBox(`[data-c="${alLiveCh}"]`);}});
   const all=()=>{drawCats();drawTop();drawQs();drawLive();};
+  // the importance bar's dots move with the arrow keys too
+  $('#al-qs').addEventListener('keydown',e=>{const d=e.target.closest('.al-dot'),step={ArrowRight:1,ArrowUp:1,ArrowLeft:-1,ArrowDown:-1}[e.key];if(!d||!step)return;
+    e.preventDefault();const id=d.closest('.al-q').dataset.i,p=PROF.issues[id];if(!p?.side)return;
+    const w=Math.min(5,Math.max(1,(p.w||3)+step));if(w===p.w)return;p.w=w;saveProf();d.closest('.al-q').outerHTML=alCard(QISSBY[id]);$(`.al-q[data-i="${id}"] button[data-w="${w}"]`)?.focus();drawLive();});
   $('#al-qs').addEventListener('click',e=>{
+    const m=e.target.closest('button[data-more]');if(m){alOpen[m.dataset.more]=!alOpen[m.dataset.more];drawQs();$(`button[data-more="${m.dataset.more}"]`)?.focus();return;}
     const b=e.target.closest('button[data-k],button[data-w]');if(!b)return;
     const card=b.closest('.al-q'),id=card.dataset.i,p=PROF.issues[id];
     if(b.dataset.w){if(!p||!p.side)return;p.w=+b.dataset.w;}
-    else{const k=+b.dataset.k;if(alPick(id)===k)delete PROF.issues[id];else{const [side]=AL_OPTS[k];PROF.issues[id]=side?{side,w:p?.w||3}:{side:'',w:0,neutral:true};}}
+    else{const k=+b.dataset.k;if(alPick(id)===k)delete PROF.issues[id];else PROF.issues[id]={side:AL_OPTS[k][0],w:p?.w||3};}
     saveProf();
     const key=b.dataset.w?'w':'k',val=b.dataset.w||b.dataset.k;card.outerHTML=alCard(QISSBY[id]);
     $(`.al-q[data-i="${id}"] button[data-${key}="${val}"]`)?.focus();
     drawCats();drawTop();drawLive();
+    const cnt=alView.g&&$('.al-mbtn .al-mn');if(cnt)cnt.textContent=alOtherCount(alView.g);
   });
   $('#al-cats').addEventListener('click',e=>{const b=e.target.closest('button[data-g]');if(!b)return;alView={g:b.dataset.g,page:0};all();});
   const go=d=>{
@@ -4726,8 +4749,8 @@ function renderMethod(sub){
     <h2>Voter alignment</h2>
     <ul class="list">
       <li><b>Questions:</b> ${QISS.length} questions in ${QUESTIONS.categories.length} categories, each with two sides written neutrally, modeled on the topics of iSideWith.com's quiz in our own wording. Bills, amendments and roll calls are coded to ${Object.keys(QCODED).length} of them so far; the rest read "Not on record" until they are.</li>
-      <li><b>Answering:</b> on My alignment, pick one of each question's two sides, or Skip.</li>
-      <li><b>Importance:</b> Least (1), Less (2), Somewhat (3), More (4) or Most (5); a question counts by its importance. Skip is recorded but left out of every score.</li>
+      <li><b>Answering:</b> on My alignment, pick one of each question's two sides, or leave it unanswered (click a side again to clear it). Each category shows its 10 key questions first, the ones with the most bills and votes coded to them; the rest are under "Show other questions".</li>
+      <li><b>Importance:</b> Least (1), Less (2), Somewhat (3), More (4) or Most (5); a question counts by its importance. An unanswered question is left out of every score.</li>
       <li><b>Same answers everywhere:</b> each question says how many bills, amendments and roll calls are coded to it. Your answers are also used on each Your match tab and in the home-page "Your match" grade.</li>
       <li><b>Evidence from votes:</b> a key vote is assigned to an issue only when the measure's content makes the direction clear, with the reason shown under "Bill details". Nominations, stopgap spending bills, bundled packages and lopsided votes are not used; each shows why. When a member voted more than once on a bill, only the final vote counts.</li>
       <li><b>Other evidence:</b> state votes, sponsored bills, official actions and statements are coded only when the item's own words make the side clear, and each shows the reason. Coding was proposed item by item, then reviewed. Two items coded from a bill title alone were removed. No vote is inferred, and absences never count.</li>
