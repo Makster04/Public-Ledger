@@ -6,6 +6,11 @@
 //             dated by the review
 //   lobby     a tracker's PAC checks to sitting members, from this cycle's FEC bulk files (pas2 and cm in .local/fec-bulk/):
 //             one item per PAC, date and amount, with every member who got that check
+//   site      a site update: each dated line of the README's "What's new" (its bold title is the headline), after the
+//             newest headline in public/score-presentation-log.json, which had them before (since Nov. 25, 2026); a line
+//             ending in <!-- not news --> is maintenance and is left out. Placed by its own date.
+//   conflict  someone's Conflicts of Interest score (public/conflicts.json) newly given or moved since the last run, with
+//             the interested organizations behind it
 //   superpac  a tracker's own super PAC's spending for or against a candidate, from the cycle's independent-expenditure
 //             file (each transaction at its latest amendment): one item per super PAC, candidate, side and day, at least
 //             $10,000
@@ -24,6 +29,7 @@ import {buildEntry,sixFiles,formulaOf} from './scores-monthly.mjs';
 import {committeeKind,committeeCheck,trackersOf,membersByCandidate,lines} from './build-corporate-pacs.mjs';
 import {readIeRecords,latestVersions,isoDate,seatOf,partyOf,trackerOfSpender} from './build-super-pac-races.mjs';
 import {NEWS_FILES,newestNews} from './news-file.mjs';
+import {conflictsComponent} from '../public/integrity.js';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const NEWS_DAYS=45,NEWS_LIMIT={lobby:60,superpac:60},SUPER_PAC_MIN=10000;
@@ -103,6 +109,33 @@ export function superPacNews(records,{limit=NEWS_LIMIT.superpac,min=SUPER_PAC_MI
   return [...by.values()].map(o=>({...o,amount:Math.round(o.amount*100)/100})).filter(o=>o.amount>=min)
     .sort((a,b)=>b.date.localeCompare(a.date)||b.amount-a.amount).slice(0,limit);
 }
+// The README's "What's new" lines as site updates: "- **Nov. 25: Title.** text" under "## What's new (November 2026)".
+const MONTH={jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
+export function siteNews(readme,{after=''}={}){
+  const out=[];let year=null;
+  for(const line of String(readme||'').split('\n')){
+    const h=/^##\s+What.s new \((\w+) (\d{4})\)/.exec(line);if(h){year=Number(h[2]);continue;}
+    if(/^## /.test(line)){year=null;continue;}
+    const m=year&&/^- \*\*([A-Z][a-z]{2})[a-z]*\.? (\d{1,2})(?:[–-]\d{1,2})?: (.+?)\*\*/.exec(line);
+    if(!m||/<!--\s*not news\s*-->/.test(line)||!MONTH[m[1].toLowerCase()])continue;
+    const date=`${year}-${String(MONTH[m[1].toLowerCase()]).padStart(2,'0')}-${m[2].padStart(2,'0')}`;if(date<=after)continue;
+    const headline=m[3].replace(/\.$/,'').replace(/`/g,'').trim();
+    out.push({key:`site:${date}:${headline.toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60)}`,kind:'site',date,headline});
+  }
+  return out;
+}
+// Conflicts of Interest: each score in public/conflicts.json that's new or moved since the last run's (scores).
+export function conflictNews(conflicts,scores,date){
+  const out=[],now={};
+  for(const id of Object.keys(conflicts?.people||{})){
+    const x=conflictsComponent({id},conflicts);if(!x.complete)continue;
+    const to=Math.round(x.value*10)/10,from=scores?.[id]??null;now[id]=to;if(from===to)continue;
+    const rec=conflicts.people[id],names=[...new Set(['income','positions','agreements','gifts','travel'].flatMap(k=>(rec[k]||[]).filter(i=>i.interested).map(i=>i.name||i.source||i.org||i.sponsor)))];
+    const why=names.length?`${plural(names.length,'interested organization')}: ${names.join(', ')}`:'nothing on their report from an organization with business before their committees';
+    out.push({key:`conflict:${id}:${to}`,kind:'conflict',id,from,to,why,date:rec.reviewed?.at||date});
+  }
+  return {items:out,scores:now};
+}
 // This run's items with the last file's: an item keeps its "seen" (a new one gets now's, or none on the first file);
 // one the run didn't find again stays; anything 45 days old (by "seen", else its date) goes.
 export function mergeNews(prev,fresh,{now=Date.now()}={}){
@@ -145,16 +178,19 @@ export async function writeNews({now=Date.now(),dir=process.env.FEC_BULK_DIR||pa
     fresh.push(...gradeNews(last.scores,entry.scores,today,{wholeNumbers:String(last.date)<ONE_DECIMAL_SINCE}));
   }
   fresh.push(...promiseNews(readIf('data/promise-reviews.json')?.people,readIf('public/promises.json')?.people));
+  const plog=readIf('public/score-presentation-log.json'),after=((plog?.entries||plog||[]).map(e=>e.date).sort().at(-1))||'';
+  try{fresh.push(...siteNews(fs.readFileSync(path.join(ROOT,'README.md'),'utf8'),{after}));}catch{}
+  const coi=conflictNews(readIf('public/conflicts.json'),prev?.conflicts,today);fresh.push(...coi.items);
   const checks=await trackerChecks(dir,cycle);if(checks)fresh.push(...lobbyNews(checks));
   const ie=path.join(dir,`independent_expenditure_${cycle}.csv`);if(fs.existsSync(ie))fresh.push(...superPacNews(await readIeRecords(ie)));
-  const items=mergeNews(prev,fresh,{now});
-  const out={about:'The site\'s news for the ticker and the Latest updates page: grade changes, reviewed promise verdicts, the trackers\' PAC checks and their super PACs\' spending. See scripts/build-news.mjs.',
-    built:today,since:last?.date||null,bulk:{checks:!!checks,superPacs:fs.existsSync(ie)},items};
+  const items=mergeNews(prev,fresh,{now}).filter(x=>x.kind!=='conflict'||coi.scores[x.id]===x.to||!(x.id in coi.scores));
+  const out={about:'The site\'s news for the ticker and the Latest updates page: grade changes, Conflicts of Interest scores, reviewed promise verdicts, site updates, the trackers\' PAC checks and their super PACs\' spending. See scripts/build-news.mjs.',
+    built:today,since:last?.date||null,bulk:{checks:!!checks,superPacs:fs.existsSync(ie)},conflicts:coi.scores,items};
   const file=local?NEWS_FILES.local:NEWS_FILES.committed;
   fs.mkdirSync(path.dirname(path.join(ROOT,file)),{recursive:true});
   fs.writeFileSync(path.join(ROOT,file),JSON.stringify(out));
   const n=k=>items.filter(x=>x.kind===k).length;
-  log(`Wrote ${file.split(path.sep).join('/')}: ${n('grade')} grade changes, ${n('promise')} reviewed verdicts, ${n('lobby')} PAC check groups, ${n('superpac')} super PAC filings${checks?'':' (no bulk files on disk: the last file\'s PAC checks kept)'}.`);
+  log(`Wrote ${file.split(path.sep).join('/')}: ${n('grade')} grade changes, ${n('conflict')} Conflicts of Interest scores, ${n('site')} site updates, ${n('promise')} reviewed verdicts, ${n('lobby')} PAC check groups, ${n('superpac')} super PAC filings${checks?'':' (no bulk files on disk: the last file\'s PAC checks kept)'}.`);
   return out;
 }
 

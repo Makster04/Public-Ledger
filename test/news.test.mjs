@@ -81,3 +81,19 @@ test('grade changes against a log of whole numbers: a score that only lost its r
   assert.deepEqual(gradeNews(before,now,'2026-11-17',{wholeNumbers:true}).map(x=>x.id),['b','c'],'a: 89.7 was logged as 90; b and c really moved');
   assert.deepEqual(gradeNews(before,now,'2026-11-17').map(x=>x.id),['a','b','c'],'a log in one decimal: every letter change counts');
 });
+
+test('site updates come from the README\'s "What\'s new" lines, after the presentation log, without maintenance lines',async()=>{
+  const {siteNews}=await import('../scripts/build-news.mjs');
+  const readme=`# X\n## What's new (November 2026)\n\n- **Nov. 25: Bills show their issues.** More text.\n- **Nov. 24: \`npm run x\` reads more.** Text. <!-- not news -->\n- **Nov. 18–19: Fixes.** Text.\n- **Nov. 17: Old one.** Text.\n## What refreshes\n- **Nov. 30: Not news.**`;
+  assert.deepEqual(siteNews(readme,{after:'2026-11-17'}).map(x=>[x.date,x.headline,x.kind]),[['2026-11-25','Bills show their issues','site'],['2026-11-18','Fixes','site']]);
+});
+
+test('a Conflicts of Interest score is news when it\'s new or moves, with the interested organizations',async()=>{
+  const {conflictNews}=await import('../scripts/build-news.mjs');
+  const rec=(interested)=>({report:{year:2025},reviewed:{at:'2026-11-25'},income:[{source:'Acme Denver, CO',name:'Acme',amount:null,interested}],positions:[],agreements:[],gifts:[],travel:[]});
+  const first=conflictNews({people:{h:rec(true),b:rec(false)}},undefined,'2026-11-25');
+  assert.deepEqual(first.items.map(x=>[x.id,x.from,x.to]),[['h',null,88],['b',null,100]]);
+  assert.match(first.items[0].why,/1 interested organization: Acme/);
+  assert.equal(conflictNews({people:{h:rec(true)}},first.scores,'2026-11-26').items.length,0,'no news when nothing moved');
+  assert.deepEqual(conflictNews({people:{h:rec(false)}},first.scores,'2026-11-26').items.map(x=>[x.from,x.to]),[[88,100]]);
+});

@@ -1,7 +1,8 @@
 // The ticker under the top bar, the Latest updates cards on the home page and the Latest updates page behind them: the
 // site's news, newest first, each with a tag (its kind's emoji and name), its date and a link to where it changed.
 //   races       a race called, or still counting (research.json "races" and "liteRaces")
-//   grades      a grade that moved, someone newly graded (news.json, scripts/build-news.mjs)
+//   grades      a grade that moved, someone newly graded, and a Conflicts of Interest score given or moved, with the
+//               interested organizations behind it (news.json, scripts/build-news.mjs)
 //   promises    a reviewed promise verdict, by its topic and month, never its words (news.json)
 //   legal       a legal case dated in the last 45 days (research.json "ethics"), with what it costs in Legal Trouble
 //   stock trades, net worth   newly reported trades (with how late they were filed) and annual disclosures (with their
@@ -9,7 +10,8 @@
 //   lobby money a tracker's PAC checks to sitting members (news.json, from the FEC bulk files)
 //   super PACs  a tracker's own super PAC's spending for or against a candidate (news.json, from the FEC's filings)
 //   FEC reports the campaign reports read (research.json "camp")
-//   site        site updates (score-presentation-log.json headlines; not rule changes) and the interest-group ratings read
+//   site        site updates (score-presentation-log.json headlines, not rule changes; since Nov. 25, 2026 the README's
+//               "What's new" lines, through news.json) and the interest-group ratings read
 // The strip (approved Nov. 14, 2026, from the mockup) has two parts: TRADES, the newest stock trades (▲ bought, ▼ sold,
 // the company, who, the amount as reported, and how late it was filed), and PAC MONEY, the trackers' newest PAC checks.
 // The cards show the rest (and the PAC checks too): races still counting first, then each kind in turn, so one kind can't
@@ -36,7 +38,7 @@ export const atOf=x=>t(x.at||x.date)||0;
 
 // The kinds: each item's tag emoji, and the group its filter is under on the page.
 export const KIND={call:['🗳️','race'],warn:['🗳️','race'],grade:['🎓','grade'],promise:['📝','promise'],legal:['🚨','legal'],trade:['📈','trade'],filing:['💵','finance'],
-  lobby:['💰','lobby'],superpac:['📣','superpac'],fec:['🏦','fec'],site:['🛠️','site'],new:['📊','site']};
+  lobby:['💰','lobby'],superpac:['📣','superpac'],fec:['🏦','fec'],site:['🛠️','site'],new:['📊','site'],conflict:['⚖️','grade']};
 export const GROUPS=[['race','🗳️','Races'],['grade','🎓','Grades'],['promise','📝','Promises'],['legal','🚨','Legal'],['trade','📈','Stock trades'],['finance','💵','Net worth'],
   ['lobby','💰','Lobby money'],['superpac','📣','Super PACs'],['fec','🏦','FEC reports'],['site','🛠️','Site']];
 const groupOf=x=>KIND[x.kind]?.[1]||'site';
@@ -161,7 +163,8 @@ function peopleList(ids,people,max=4){
 export function newsItems(news,{now=Date.now(),people,days=TICKER.pageDays}={}){
   const out=[];
   for(const x of news?.items||[]){
-    const at=x.seen||null;if(!isFresh(at||x.date,now,days))continue;
+    // (a site update goes by its own date: it's dated by the change, not by when the builder first read it)
+    const at=x.kind==='site'?null:x.seen||null;if(!isFresh(at||x.date,now,days))continue;
     if(x.kind==='grade'){
       const who=nameOf(x.id,people),name=GRADE_NAME[x.grade];if(!who||!name)continue;
       const parts=x.to==null?[who,` ${name}: no longer graded (${x.why})`]
@@ -169,6 +172,13 @@ export function newsItems(news,{now=Date.now(),people,days=TICKER.pageDays}={}){
         :[who,` ${name} `,{grade:x.fromLetter},' → ',{grade:x.toLetter},` (${pct1(x.from)} → ${pct1(x.to)}): ${x.why}`];
       out.push({key:x.key,kind:'grade',tag:x.from==null&&x.to!=null?'Newly graded':'Grade change',date:x.date,at,order:2,href:`#${x.id}-${x.grade}`,parts,id:x.id,
         g:{score:name,from:x.from,to:x.to,fromLetter:x.fromLetter||null,toLetter:x.toLetter||null,why:x.why||''}});
+    }else if(x.kind==='conflict'){
+      const who=nameOf(x.id,people);if(!who||!Number.isFinite(x.to))continue;
+      out.push({key:x.key,kind:'conflict',tag:'Conflicts of Interest',date:x.date,at,order:x.to<100?1:2,href:`#${x.id}-aboveboard`,id:x.id,c:{from:x.from,to:x.to,why:x.why||''},
+        parts:[who,` Conflicts of Interest${x.from==null?'':` ${x.from} →`} ${x.to} of 100: ${x.why||''}`]});
+    }else if(x.kind==='site'){
+      if(!x.headline)continue;
+      out.push({key:x.key,kind:'site',tag:'Site update',date:x.date,at:null,order:3,href:'#method',parts:[x.headline]});
     }else if(x.kind==='promise'){
       const who=nameOf(x.id,people);if(!who||!VERDICT[x.status])continue;
       // Its topic and its own month and year (so two promises on one topic read apart), never its words.
@@ -277,13 +287,13 @@ export function mountTicker(host,{research,log,ratings,people,news=null,fetchLiv
 }
 
 // ---------- The Latest updates cards (home page) ----------
-const CARD_KINDS=new Set(['call','warn','grade','promise','legal','lobby','superpac','fec','filing']);
+const CARD_KINDS=new Set(['call','warn','grade','promise','legal','lobby','superpac','fec','filing','conflict','site']);
 // Races still counting first, then the newest of each kind in turn, so one kind can't fill the row; at most `limit`.
 export function cardItems(all,{limit=TICKER.cards}={}){
   const list=all.filter(x=>CARD_KINDS.has(x.kind)),pinned=list.filter(x=>x.pinned);
   return [...pinned,...mixKinds(list.filter(x=>!x.pinned))].slice(0,limit);
 }
-const CARD_NAME={call:'Race · called',warn:'Race · still counting',grade:'Grade',promise:'Promise checked',legal:'Legal',lobby:'PAC check',superpac:'Super PAC',fec:'FEC report',filing:'Net worth'};
+const CARD_NAME={call:'Race · called',warn:'Race · still counting',grade:'Grade',promise:'Promise checked',legal:'Legal',lobby:'PAC check',superpac:'Super PAC',fec:'FEC report',filing:'Net worth',conflict:'Conflicts of Interest',site:'Site update'};
 const chamberOf=p=>p?.office?'President':p?.chamber==='H'?'House':p?.chamber==='S'?'Senate':p?.class!=null?'Senate':p?.district!=null?'House':'';
 const initials=n=>String(n||'').split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase();
 // A person: their portrait (initials without one), full name, and party · state · chamber.
@@ -296,6 +306,8 @@ const CARD={
   race:x=>{const r=x.race;return `<div class="upd-t">${esc(r.label)}</div>${r.rows.length?r.rows.map(w=>`<div class="upd-rr"><span>${esc(w.name)} <span class="tk-${sideOf(w)}">${esc(w.party||'')}</span></span><b>${w.pct.toFixed(1)}%</b></div><div class="upd-bar upd-${sideOf(w)}" style="width:${Math.max(2,Math.min(100,w.pct))}%"></div>`).join(''):`<div>${x.parts.map(part).join('')}</div>`}<div class="upd-src">${esc(r.src)}</div>`;},
   grade:(x,people,portraits)=>{const g=x.g;return `${personHTML(x.id,people,portraits)}<div>${esc(g.score)}</div><div class="upd-big">${g.to==null?'<span class="upd-lbl">No longer graded</span>':`${g.from!=null&&g.fromLetter?`<b class="gr-${esc(g.fromLetter)}">${esc(g.fromLetter)}</b> <span class="upd-arrow">→</span> `:'<span class="upd-lbl">Newly graded </span>'}<b class="gr-${esc(g.toLetter)}">${esc(g.toLetter)}</b> <small>${g.to}%</small>`}</div><div class="upd-src">${esc(g.why)}</div>`;},
   promise:(x,people,portraits)=>{const [label,tone]=VERDICT_CHIP[x.p.verdict]||[x.p.verdict,'neutral'];return `${personHTML(x.id,people,portraits)}<div><span class="upd-chip upd-${tone}">${esc(label)}</span></div><div class="upd-clamp">${esc(x.p.what)}</div>`;},
+  conflict:(x,people,portraits)=>{const c=x.c;return `${personHTML(x.id,people,portraits)}<div>Conflicts of Interest</div><div class="upd-big">${c.from==null?'<span class="upd-lbl">Newly scored </span>':`${c.from} <span class="upd-arrow">→</span> `}${c.to} <small>of 100</small></div><div class="upd-src upd-clamp">${esc(c.why)}</div>`;},
+  site:x=>`<div class="upd-t">${esc(x.parts[0])}</div><div class="upd-src">Public Ledger</div>`,
   legal:(x,people,portraits)=>`${personHTML(x.id,people,portraits)}<div><span class="upd-chip upd-${x.e.points?'serious':'neutral'}">${esc(x.e.status)} · ${x.e.points} pt${x.e.points===1?'':'s'}</span></div><div class="upd-clamp upd-small">${esc(x.e.title)}</div>`,
   lobby:(x,people)=>{const l=x.l,more=l.ids.length-1,p=people?.get?.(l.ids[0]);return `<div class="upd-t">${esc(l.pac)}</div><div>→ <b>${esc(p?.name||'')}</b>${where(l.ids[0],people)?` <span class="tk-${sideOf(p)}">(${esc(where(l.ids[0],people))})</span>`:''}${more?` and ${more} more`:''}</div><div class="upd-big">${esc(money(l.amount))}${more?' <small>each</small>':''}</div><div class="upd-src">${esc(l.tracker)} tracker · FEC</div>`;},
   superpac:(x,people)=>{const s=x.s,p=x.id&&people?.get?.(x.id);return `<div class="upd-t">${esc(s.spender)}</div><div><span class="${s.so==='O'?'upd-against':'upd-for'}">${s.so==='O'?'against':'for'}</span> <b>${esc(p?.name||s.who?.name||'')}</b> <span class="tk-${sideOf(p||s.who)}">(${esc((p||s.who)?.party||'')})</span></div><div class="upd-big">${esc(money(s.amount))}</div><div class="upd-src">${esc([s.seat,`${s.tracker} tracker`].filter(Boolean).join(' · '))} · FEC 24/48-hour report</div>`;},
