@@ -22,3 +22,8 @@ test('why a person has no report read: none saved, waiting for the House re-read
   assert.equal(whyMissing([paper],'net-worth-house'),'report has no text (filed on paper?)');
   assert.equal(whyMissing([old],'net-worth-senate'),'report has no text (filed on paper?)','the Senate reader has no versions');
 });
+
+test('a report the reader failed on is named, with the reason',()=>{
+  const bad=payload({id:'9',year:2025,filed:'2026-05-01',assets:[],schedules:{...parts(SCHEDULES_READER,false),income:[],readError:'Maximum call stack size exceeded'}});
+  assert.equal(whyMissing([bad],'net-worth-house'),'the reader failed on its 2025 report: Maximum call stack size exceeded');
+});
