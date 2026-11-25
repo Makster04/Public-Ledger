@@ -32,7 +32,8 @@ export function whyMissing(payloads,kind){
   const rows=payloads.flatMap(p=>annualRows(p));
   if(!rows.length)return 'no annual report saved yet';
   if(kind==='net-worth-house'&&!rows.some(r=>(r.schedules?.v||0)>=SCHEDULES_READER))return 'waiting to be read again';
-  return 'report has no text (filed on paper?)';
+  const failed=rows.find(r=>r.schedules?.readError);
+  return failed?`the reader failed on its ${failed.year} report: ${failed.schedules.readError}`:'report has no text (filed on paper?)';
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
@@ -43,14 +44,20 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const db=new DatabaseSync(dbFile,{readOnly:true});
   const rows=db.prepare("SELECT j.kind,j.subject,s.payload FROM snapshots s JOIN jobs j ON j.id=s.job_id WHERE j.kind IN ('net-worth-house','net-worth-senate')").all();
   const queued=db.prepare("SELECT COUNT(*) n FROM jobs WHERE kind='net-worth-house' AND next_due<=?").get(Date.now()).n;
-  db.close();
+  const jobOf=db.prepare("SELECT status,error,next_due,failures,page FROM jobs WHERE id=?");
+  // The state of a person's House check, for one still waiting: running, due, failing (with its error), or when it's due.
+  const stateOf=id=>{const j=jobOf.get(`net-worth-house:${id}`);if(!j)return '';
+    const wait=Math.round((j.next_due-Date.now())/60000);
+    return j.error?`; last try failed ${j.failures}x: ${String(j.error).slice(0,160)}${wait>0?`, tried again in ${wait} min`:''}`
+      :j.status==='running'||j.page>0?`; being read now (report ${j.page+1})`:wait>0?`; due in ${wait} min`:'; due now, in the queue';};
   const by=new Map(),kindOf=new Map();
   for(const r of rows){try{(by.get(r.subject)||by.set(r.subject,[]).get(r.subject)).push(JSON.parse(r.payload));kindOf.set(r.subject,r.kind);}catch{}}
   const people={},missing=[];
   for(const p of full){
     const reports=readReports(by.get(p.id)||[]);
-    if(reports.length)people[p.id]={name:p.name,chamber:p.chamber,reports};else missing.push(`${p.id} (${whyMissing(by.get(p.id)||[],kindOf.get(p.id))})`);
+    if(reports.length)people[p.id]={name:p.name,chamber:p.chamber,reports};else{const why=whyMissing(by.get(p.id)||[],kindOf.get(p.id));missing.push(`${p.id} (${why}${why==='waiting to be read again'?stateOf(p.id):''})`);}
   }
+  db.close();
   // How far the refresh has got reading the House reports again (each House member's newest report).
   const house=rows.filter(r=>r.kind==='net-worth-house').map(r=>{try{return JSON.parse(r.payload);}catch{return null;}}).filter(Boolean);
   const current=house.filter(p=>(p.schedules?.v||0)>=SCHEDULES_READER).length;

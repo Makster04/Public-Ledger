@@ -753,8 +753,12 @@ export const FEEDS={
         const todo=reports.filter(f=>!done.has(String(f.id))).slice(0,12).map(({id,year,filed,url,type})=>({id,year,filed,url,type}));
         return {rows:before,next:todo.length?JSON.stringify({todo,i:0}):null};
       }
-      const f=c.todo[c.i],text=await pdfText(await requestSource(f.url,env,{as:'bytes'}));
-      return {rows:[{id:f.id,...holdingsSnapshot(f,{...houseAnnualHoldings(text),schedules:houseAnnualSchedules(text)})}],
+      // A report that can't be fetched fails the check (it's tried again); one fetched but that the reader fails on is saved
+      // as unreadable, with the reason, so one bad file doesn't start the member's reports over each time.
+      const f=c.todo[c.i],bytes=await requestSource(f.url,env,{as:'bytes'});let text='',readError=null;
+      try{text=await pdfText(bytes);}catch(e){readError=String(e?.message||e).slice(0,200);}
+      const schedules=houseAnnualSchedules(text);
+      return {rows:[{id:f.id,...holdingsSnapshot(f,{...houseAnnualHoldings(text),schedules:readError?{...schedules,readError}:schedules})}],
         next:c.i+1<c.todo.length?JSON.stringify({...c,i:c.i+1}):null};
     },
     summarize:annualSummary},
