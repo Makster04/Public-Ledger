@@ -83,7 +83,10 @@ async function ensureFeeds(db){
   const version=await statement(db,"SELECT value FROM metadata WHERE key='feeds-version'").first();
   if(version?.value!==String(FEEDS_VERSION)){
     const kinds=FEED_KINDS.filter(k=>FEEDS[k].rereadOnUpgrade);
-    if(kinds.length)await statement(db,`UPDATE jobs SET next_due=0 WHERE kind IN (${kinds.map(()=>'?').join(',')}) AND status!='running'`,...kinds).run();
+    // The full profiles' checks first (due at 0), then the basic profiles' (due at 1, still due now): a re-read of every
+    // House member's reports takes hours at the House Clerk's pace, and the full profiles are the ones the pages grade.
+    const light=config.people.filter(p=>p.light).map(p=>p.id);
+    if(kinds.length)await statement(db,`UPDATE jobs SET next_due=CASE WHEN subject IN (SELECT value FROM json_each(?)) THEN 1 ELSE 0 END WHERE kind IN (${kinds.map(()=>'?').join(',')}) AND status!='running'`,JSON.stringify(light),...kinds).run();
     await statement(db,"INSERT OR REPLACE INTO metadata(key,value) VALUES('feeds-version',?)",String(FEEDS_VERSION)).run();
   }
   // A roll call is read once, with the positions of the people configured then. When someone who votes in that chamber
