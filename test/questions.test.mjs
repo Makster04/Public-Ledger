@@ -52,3 +52,17 @@ test('each category\'s key questions: at most ten, the most coded first, ties in
   const real=keyQuestions(Q.questions,S.coded);
   for(const c of Q.categories){const n=Q.questions.filter(q=>q.cat===c.id).length,k=Q.questions.filter(q=>q.cat===c.id&&real.has(q.id)).length;assert.equal(k,Math.min(n,KEY_PER_CATEGORY),c.id);}
 });
+
+// The statements My alignment shows (approved Nov. 25, 2026): an opinion, the side Agree counts toward, and the neutral
+// label records use; half arguing the left side and half the right, category by category.
+test('every question has a statement, the side Agree counts toward and a neutral label; the two voices are balanced',()=>{
+  const voice={L:0,R:0},byCat={};
+  for(const q of Q.questions){
+    assert.ok(typeof q.statement==='string'&&/[.]$/.test(q.statement)&&!/\?$/.test(q.statement)&&q.statement.length<=120,`${q.id}: a statement`);
+    assert.ok([0,1].includes(q.agree),`${q.id}: agree`);
+    assert.ok(typeof q.label==='string'&&q.label.length>=3&&q.label.length<=60&&!/[.?]$/.test(q.label),`${q.id}: a label`);
+    if(q.liberal!=null){const v=q.agree===q.liberal?'L':'R';voice[v]++;const c=byCat[q.cat]||(byCat[q.cat]={L:0,R:0});c[v]++;}
+  }
+  assert.ok(Math.abs(voice.L-voice.R)<=5,`${voice.L} left, ${voice.R} right`);
+  for(const [c,v] of Object.entries(byCat))assert.ok(Math.abs(v.L-v.R)<=2,`${c}: ${v.L} left, ${v.R} right`);
+});

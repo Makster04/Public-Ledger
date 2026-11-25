@@ -1,5 +1,5 @@
 {
- "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the Ideology lean); axis is the compass axis it counts on, the Political Compass way (approved Nov. 25, 2026): econ (across; axisSide is the economic-left side, the one with more government in the economy) or auth (up and down; axisSide is the authoritarian side, the one with more state power over what people may do, say or consume), or null for neither. axisWeight 0.5 marks a question that leans only slightly that way, and counts half. groups names the interest groups whose scorecard is about the question, each with the side a high rating from it favors (public/question-scores.js ratingItems); groups that rate across many topics are on no question. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
+ "about": "The questions behind My alignment and the Ideology tab. Each has two sides (sides[0] and sides[1]); liberal is the index of the liberal side, or null when the question splits both parties or has no left-right side (those count in My alignment but not in the Ideology lean); axis is the compass axis it counts on, the Political Compass way (approved Nov. 25, 2026): econ (across; axisSide is the economic-left side, the one with more government in the economy) or auth (up and down; axisSide is the authoritarian side, the one with more state power over what people may do, say or consume), or null for neither. axisWeight 0.5 marks a question that leans only slightly that way, and counts half. statement is what My alignment shows (approved Nov. 25, 2026): an opinion someone might voice, answered from strongly agree to strongly disagree, half of them arguing the left side and half the right where the question has one; agree is the side Agree counts toward; label is the short, neutral wording shown with lawmakers' records, where Favor means sides[0]. q and sides stay as the question was asked, for the evidence. groups names the interest groups whose scorecard is about the question, each with the side a high rating from it favors (public/question-scores.js ratingItems); groups that rate across many topics are on no question. \"added\" questions are ours, for votes the quiz has no question for. Ids never change once published: rewording keeps the evidence gathered for a question; a change of meaning gets a new id.",
  "credit": "Questions modeled on the topics of iSideWith.com's political quiz (https://www.isidewith.com/political-quiz), in our own wording, with questions added for votes the quiz doesn't cover.",
  "left_out": {
   "local": [
@@ -92,6 +92,9 @@
    "id": "ai-regulation",
    "cat": "technology",
    "q": "Should the federal government regulate artificial intelligence to make sure it is used ethically?",
+   "statement": "Government rules on artificial intelligence would only slow down American innovation.",
+   "agree": 1,
+   "label": "Federal rules for AI",
    "sides": [
     "Yes",
     "No"
@@ -104,6 +107,9 @@
    "id": "algorithm-disclosure",
    "cat": "technology",
    "q": "Should large tech companies have to share how their algorithms work with government regulators?",
+   "statement": "Big tech companies should have to show regulators how their algorithms work.",
+   "agree": 0,
+   "label": "Algorithm disclosure to regulators",
    "sides": [
     "Yes",
     "No"
@@ -116,6 +122,9 @@
    "id": "data-privacy",
    "cat": "technology",
    "q": "Should there be stricter rules on how tech companies collect and use people's personal data?",
+   "statement": "Tech companies collect too much of our personal data, and the law should rein them in.",
+   "agree": 0,
+   "label": "Stricter data privacy rules",
    "sides": [
     "Yes",
     "No"
@@ -128,6 +137,9 @@
    "id": "deepfake-ads",
    "cat": "technology",
    "q": "Should it be illegal to use AI-generated deepfakes in political campaign ads?",
+   "statement": "AI-generated deepfakes have no place in political ads and should be illegal.",
+   "agree": 0,
+   "label": "Banning deepfakes in campaign ads",
    "sides": [
     "Yes",
     "No"
@@ -140,6 +152,9 @@
    "id": "right-to-delete",
    "cat": "technology",
    "q": "Should people have a legal right to make search engines delete old personal information about them?",
+   "statement": "People should be able to make search engines erase old information about them.",
+   "agree": 0,
+   "label": "A right to have old personal information deleted",
    "sides": [
     "Yes",
     "No"
@@ -152,6 +167,9 @@
    "id": "social-media-under-16",
    "cat": "technology",
    "q": "Should children under 16 be banned from using social media?",
+   "statement": "Kids under 16 shouldn't be on social media at all.",
+   "agree": 0,
+   "label": "Banning social media under 16",
    "sides": [
     "Yes",
     "No"
@@ -164,6 +182,9 @@
    "id": "robot-tax",
    "cat": "technology",
    "q": "Should companies that replace workers with AI or robots pay a special tax?",
+   "statement": "Taxing companies for using AI or robots would punish progress.",
+   "agree": 1,
+   "label": "A tax on replacing workers with AI or robots",
    "sides": [
     "Yes",
     "No"
@@ -176,6 +197,9 @@
    "id": "social-media-real-id",
    "cat": "technology",
    "q": "Should social media users have to verify their identity with a government ID?",
+   "statement": "Social media users should have to verify who they are with a government ID.",
+   "agree": 0,
+   "label": "Government ID to use social media",
    "sides": [
     "Yes",
     "No"
@@ -188,6 +212,9 @@
    "id": "social-media-age-id",
    "cat": "technology",
    "q": "Should social media users have to prove their age with an electronic ID?",
+   "statement": "Social media sites should check users' ages with an electronic ID.",
+   "agree": 0,
+   "label": "Electronic age checks for social media",
    "sides": [
     "Yes",
     "No"
@@ -200,6 +227,9 @@
    "id": "break-up-big-tech",
    "cat": "technology",
    "q": "Should the government break up tech giants like Amazon, Google and Meta?",
+   "statement": "Amazon, Google and Meta have grown too powerful and should be broken up.",
+   "agree": 0,
+   "label": "Breaking up big tech companies",
    "sides": [
     "Yes",
     "No"
@@ -212,6 +242,9 @@
    "id": "crypto-regulation",
    "cat": "technology",
    "q": "Should cryptocurrencies face stricter government regulation?",
+   "statement": "Cryptocurrency is regulated enough; more rules would push it overseas.",
+   "agree": 1,
+   "label": "Stricter crypto regulation",
    "sides": [
     "Yes",
     "No"
@@ -227,6 +260,9 @@
    "id": "algorithm-liability",
    "cat": "technology",
    "q": "Should tech companies be legally responsible for the content their algorithms promote?",
+   "statement": "Tech companies should be legally responsible for what their algorithms push to users.",
+   "agree": 0,
+   "label": "Liability for content algorithms promote",
    "sides": [
     "Yes",
     "No"
@@ -239,6 +275,9 @@
    "id": "self-custody-wallets",
    "cat": "technology",
    "q": "Should people be allowed to hold money in self-hosted digital wallets the government can monitor but not control?",
+   "statement": "People should be free to hold their money in their own digital wallets, even if the government can't control them.",
+   "agree": 0,
+   "label": "Self-held digital wallets",
    "sides": [
     "Yes",
     "No"
@@ -251,6 +290,9 @@
    "id": "art-sale-reporting",
    "cat": "technology",
    "q": "Should people selling artwork face the same reporting and disclosure rules as investment funds and public companies?",
+   "statement": "Art sales should face the same reporting rules as investment funds, to stop money laundering.",
+   "agree": 0,
+   "label": "Investment-style reporting for art sales",
    "sides": [
     "Yes",
     "No"
@@ -263,6 +305,9 @@
    "id": "ai-pay-creators",
    "cat": "technology",
    "q": "Should AI companies have to pay creators whose work they use to train their models?",
+   "statement": "AI companies should pay the artists and writers whose work trains their models.",
+   "agree": 0,
+   "label": "Paying creators whose work trains AI",
    "sides": [
     "Yes",
     "No"
@@ -275,6 +320,9 @@
    "id": "right-to-repair",
    "cat": "technology",
    "q": "Should companies have to provide the parts and manuals people need to repair their own products?",
+   "statement": "If you buy something, the maker should have to provide the parts and manuals to fix it.",
+   "agree": 0,
+   "label": "A right to repair",
    "sides": [
     "Yes",
     "No"
@@ -287,6 +335,9 @@
    "id": "loot-boxes",
    "cat": "technology",
    "q": "Should \"loot boxes\" in video games be legally treated as gambling?",
+   "statement": "Loot boxes in video games are gambling and should be regulated like it.",
+   "agree": 0,
+   "label": "Treating loot boxes as gambling",
    "sides": [
     "Yes",
     "No"
@@ -299,6 +350,9 @@
    "id": "facial-recognition",
    "cat": "national-security",
    "q": "Should the government use facial recognition for mass surveillance to improve public safety?",
+   "statement": "Facial recognition cameras help police catch criminals and keep the public safe.",
+   "agree": 0,
+   "label": "Facial recognition for mass surveillance",
    "sides": [
     "Yes",
     "No"
@@ -311,6 +365,9 @@
    "id": "target-terrorists-abroad",
    "cat": "national-security",
    "q": "Should the U.S. kill suspected terrorists in other countries?",
+   "statement": "The U.S. should kill suspected terrorists wherever they are, even in other countries.",
+   "agree": 0,
+   "label": "Killing suspected terrorists abroad",
    "sides": [
     "Yes",
     "No"
@@ -322,6 +379,9 @@
    "id": "ai-weapons",
    "cat": "national-security",
    "q": "Should the military use weapons guided by artificial intelligence?",
+   "statement": "The military should be allowed to use weapons guided by artificial intelligence.",
+   "agree": 0,
+   "label": "AI-guided weapons",
    "sides": [
     "Yes",
     "No"
@@ -333,6 +393,9 @@
    "id": "ai-defense",
    "cat": "national-security",
    "q": "Should the government invest in artificial intelligence for national defense?",
+   "statement": "The government should invest heavily in artificial intelligence for national defense.",
+   "agree": 0,
+   "label": "AI for national defense",
    "sides": [
     "Yes",
     "No"
@@ -344,6 +407,9 @@
    "id": "women-draft",
    "cat": "national-security",
    "q": "Should 18-year-old women have to register for the military draft?",
+   "statement": "If men have to register for the draft, women should too.",
+   "agree": 0,
+   "label": "Draft registration for women",
    "sides": [
     "Yes",
     "No"
@@ -355,6 +421,9 @@
    "id": "force-without-congress",
    "cat": "national-security",
    "q": "Should the President be able to use military force against al-Qaeda without Congress's approval?",
+   "statement": "The President needs to be able to strike al-Qaeda without waiting for Congress.",
+   "agree": 0,
+   "label": "Force against al-Qaeda without Congress",
    "sides": [
     "Yes",
     "No"
@@ -367,6 +436,9 @@
    "id": "military-vs-cartels",
    "cat": "national-security",
    "q": "Should the President use the U.S. military against Mexican drug cartels?",
+   "statement": "Sending the U.S. military after Mexican drug cartels would be a dangerous mistake.",
+   "agree": 1,
+   "label": "Using the military against cartels",
    "sides": [
     "Yes",
     "No"
@@ -378,6 +450,9 @@
    "id": "foreign-farmland",
    "cat": "national-security",
    "q": "Should foreign governments and companies be banned from buying U.S. farmland?",
+   "statement": "Foreign governments and companies shouldn't be allowed to buy American farmland.",
+   "agree": 0,
+   "label": "Banning foreign purchases of farmland",
    "sides": [
     "Yes",
     "No"
@@ -389,6 +464,9 @@
    "id": "encryption-backdoor",
    "cat": "national-security",
    "q": "Should tech companies have to give the government a way into encrypted messaging apps?",
+   "statement": "Tech companies should have to give law enforcement a way into encrypted messages.",
+   "agree": 0,
+   "label": "Government access to encrypted messages",
    "sides": [
     "Yes",
     "No"
@@ -401,6 +479,9 @@
    "id": "cancel-f35",
    "cat": "national-security",
    "q": "Should the government cancel the F-35 fighter jet program?",
+   "statement": "The F-35 fighter jet program costs too much and should be canceled.",
+   "agree": 0,
+   "label": "Canceling the F-35",
    "sides": [
     "Yes",
     "No"
@@ -412,6 +493,9 @@
    "id": "ufo-records",
    "cat": "national-security",
    "q": "Should the government release all of its classified records on UFOs (unidentified anomalous phenomena)?",
+   "statement": "The government should release every classified record it has on UFOs.",
+   "agree": 0,
+   "label": "Releasing UFO records",
    "sides": [
     "Yes",
     "No"
@@ -423,6 +507,9 @@
    "id": "crypto-sanctioned",
    "cat": "national-security",
    "q": "Should people be banned from using cryptocurrency to send money to relatives in heavily sanctioned countries?",
+   "statement": "People shouldn't be allowed to send crypto to relatives in heavily sanctioned countries.",
+   "agree": 0,
+   "label": "Banning crypto transfers to sanctioned countries",
    "sides": [
     "Yes",
     "No"
@@ -435,6 +522,9 @@
    "id": "abortion",
    "cat": "social",
    "q": "Where do you stand on abortion?",
+   "statement": "Abortion ends a human life and should be banned in most cases.",
+   "agree": 0,
+   "label": "Abortion restrictions",
    "sides": [
     "Pro-life",
     "Pro-choice"
@@ -452,6 +542,9 @@
    "id": "contraception",
    "cat": "social",
    "q": "Should the right to use birth control be protected in federal law?",
+   "statement": "The right to use birth control should be guaranteed in federal law.",
+   "agree": 0,
+   "label": "Protecting birth control in federal law",
    "sides": [
     "Yes",
     "No"
@@ -465,6 +558,9 @@
    "id": "gender-identity-protections",
    "cat": "social",
    "q": "Should gender identity be protected under anti-discrimination laws?",
+   "statement": "Gender identity should be protected under anti-discrimination laws.",
+   "agree": 0,
+   "label": "Gender identity in anti-discrimination law",
    "sides": [
     "Yes",
     "No"
@@ -477,6 +573,9 @@
    "id": "assisted-dying",
    "cat": "social",
    "q": "Should terminally ill patients be allowed to end their lives with a doctor's help?",
+   "statement": "Terminally ill people should have the right to end their lives with a doctor's help.",
+   "agree": 0,
+   "label": "Medically assisted dying",
    "sides": [
     "Yes",
     "No"
@@ -489,6 +588,9 @@
    "id": "marital-rape",
    "cat": "social",
    "q": "Should rape within a marriage be punished as severely as any other rape?",
+   "statement": "Rape within a marriage should be punished as severely as any other rape.",
+   "agree": 0,
+   "label": "Equal punishment for marital rape",
    "sides": [
     "Yes",
     "No"
@@ -500,6 +602,9 @@
    "id": "school-bathrooms",
    "cat": "social",
    "q": "Should public schools let students use the bathroom that matches their gender identity?",
+   "statement": "Students should use the school bathroom that matches their sex at birth.",
+   "agree": 1,
+   "label": "Bathroom use by gender identity in schools",
    "sides": [
     "Yes",
     "No"
@@ -512,6 +617,9 @@
    "id": "same-sex-adoption",
    "cat": "social",
    "q": "Should same-sex couples have the same adoption rights as other couples?",
+   "statement": "Same-sex couples should have exactly the same adoption rights as anyone else.",
+   "agree": 0,
+   "label": "Equal adoption rights for same-sex couples",
    "sides": [
     "Yes",
     "No"
@@ -524,6 +632,9 @@
    "id": "minors-transition-care",
    "cat": "social",
    "q": "Should people under 18 be able to receive gender-transition treatment?",
+   "statement": "Gender-transition treatment should wait until people are adults.",
+   "agree": 1,
+   "label": "Gender-transition care for minors",
    "sides": [
     "Yes",
     "No"
@@ -536,6 +647,9 @@
    "id": "religious-refusal",
    "cat": "social",
    "q": "Should businesses be able to refuse a customer's request that conflicts with the owner's religious beliefs?",
+   "statement": "Business owners shouldn't be forced to provide services that violate their religious beliefs.",
+   "agree": 0,
+   "label": "Religious exemptions for businesses",
    "sides": [
     "Yes",
     "No"
@@ -547,6 +661,9 @@
    "id": "women-combat",
    "cat": "social",
    "q": "Should women be allowed to serve in military combat roles?",
+   "statement": "Women who meet the standards should be able to serve in combat roles.",
+   "agree": 0,
+   "label": "Women in combat roles",
    "sides": [
     "Yes",
     "No"
@@ -559,6 +676,9 @@
    "id": "same-sex-marriage",
    "cat": "social",
    "q": "Should same-sex marriage be legal?",
+   "statement": "Same-sex marriage should stay legal.",
+   "agree": 0,
+   "label": "Legal same-sex marriage",
    "sides": [
     "Yes",
     "No"
@@ -571,6 +691,9 @@
    "id": "sex-work",
    "cat": "social",
    "q": "Should consensual sex work be decriminalized?",
+   "statement": "Decriminalizing sex work would only encourage exploitation.",
+   "agree": 1,
+   "label": "Decriminalizing sex work",
    "sides": [
     "Yes",
     "No"
@@ -583,6 +706,9 @@
    "id": "hate-speech",
    "cat": "social",
    "q": "Should hate speech be protected by the First Amendment?",
+   "statement": "Even hateful speech should be protected by the First Amendment.",
+   "agree": 0,
+   "label": "First Amendment protection for hate speech",
    "sides": [
     "Yes",
     "No"
@@ -595,6 +721,9 @@
    "id": "planned-parenthood",
    "cat": "social",
    "q": "Should Planned Parenthood keep receiving federal funding?",
+   "statement": "Taxpayer money shouldn't go to Planned Parenthood.",
+   "agree": 1,
+   "label": "Federal funding for Planned Parenthood",
    "sides": [
     "Yes",
     "No"
@@ -607,6 +736,9 @@
    "id": "end-dei-hiring",
    "cat": "social",
    "q": "Should government agencies end diversity, equity and inclusion (DEI) hiring programs in favor of merit-only hiring?",
+   "statement": "Government hiring should be based on merit alone, not diversity programs.",
+   "agree": 0,
+   "label": "Ending DEI hiring programs",
    "sides": [
     "Yes",
     "No"
@@ -618,6 +750,9 @@
    "id": "face-veils",
    "cat": "social",
    "q": "Should women be allowed to wear a face veil (niqab) at civic ceremonies?",
+   "statement": "Women should be allowed to wear a face veil at civic ceremonies like citizenship oaths.",
+   "agree": 0,
+   "label": "Face veils at civic ceremonies",
    "sides": [
     "Yes",
     "No"
@@ -630,6 +765,9 @@
    "id": "assault-weapons",
    "cat": "guns",
    "q": "Should the federal government ban assault weapons or buy them back?",
+   "statement": "Military-style assault weapons don't belong in civilian hands.",
+   "agree": 0,
+   "label": "An assault weapons ban",
    "sides": [
     "Yes",
     "No"
@@ -643,6 +781,9 @@
    "id": "sensitivity-training",
    "cat": "social",
    "q": "Should federal employees be required to take racial sensitivity training?",
+   "statement": "Racial sensitivity training makes federal workplaces better.",
+   "agree": 0,
+   "label": "Required racial sensitivity training",
    "sides": [
     "Yes",
     "No"
@@ -655,6 +796,9 @@
    "id": "women-on-boards",
    "cat": "social",
    "q": "Should companies be required to have women on their boards of directors?",
+   "statement": "Companies should pick their board members on merit, not to meet a gender quota.",
+   "agree": 1,
+   "label": "Requiring women on corporate boards",
    "sides": [
     "Yes",
     "No"
@@ -667,6 +811,9 @@
    "id": "epstein-files",
    "cat": "governance",
    "q": "Should the federal government release all of its Jeffrey Epstein files, including the client list, without redactions?",
+   "statement": "The government should release all of the Epstein files, client list included, without redactions.",
+   "agree": 0,
+   "label": "Releasing the Epstein files",
    "sides": [
     "Yes",
     "No"
@@ -678,6 +825,9 @@
    "id": "expand-house",
    "cat": "governance",
    "q": "Should the House of Representatives add seats to keep up with population growth?",
+   "statement": "The House should add seats so each member represents fewer people.",
+   "agree": 0,
+   "label": "Expanding the House",
    "sides": [
     "Yes",
     "No"
@@ -689,6 +839,9 @@
    "id": "presidential-immunity",
    "cat": "governance",
    "q": "Should former presidents have absolute immunity from prosecution for official acts in office?",
+   "statement": "No president should be above the law, even for official acts.",
+   "agree": 1,
+   "label": "Immunity for former presidents",
    "sides": [
     "Yes",
     "No"
@@ -701,6 +854,9 @@
    "id": "justice-ethics",
    "cat": "governance",
    "q": "Should Supreme Court justices be banned from financial dealings with people who have an interest in their cases?",
+   "statement": "Supreme Court justices should be banned from financial dealings with anyone who has a case before them.",
+   "agree": 0,
+   "label": "Ethics rules for Supreme Court justices",
    "sides": [
     "Yes",
     "No"
@@ -712,6 +868,9 @@
    "id": "end-filibuster",
    "cat": "governance",
    "q": "Should the Senate end the filibuster so a simple majority can pass laws?",
+   "statement": "The Senate should end the filibuster so a simple majority can pass laws.",
+   "agree": 0,
+   "label": "Ending the filibuster",
    "sides": [
     "Yes",
     "No"
@@ -723,6 +882,9 @@
    "id": "fire-civil-servants",
    "cat": "governance",
    "q": "Should the President be able to fire career (nonpolitical) federal employees more easily?",
+   "statement": "The President should be able to fire federal employees who aren't doing their jobs.",
+   "agree": 0,
+   "label": "Easier firing of career federal workers",
    "sides": [
     "Yes",
     "No"
@@ -735,6 +897,9 @@
    "id": "national-id",
    "cat": "governance",
    "q": "Should the U.S. create a national ID system to improve security and prevent fraud?",
+   "statement": "A national ID card would make the country safer and cut fraud.",
+   "agree": 0,
+   "label": "A national ID system",
    "sides": [
     "Yes",
     "No"
@@ -747,6 +912,9 @@
    "id": "foreign-agent-lobbyists",
    "cat": "governance",
    "q": "Should lobbyists for foreign governments have to register as foreign agents?",
+   "statement": "Lobbyists for foreign governments should have to register as foreign agents.",
+   "agree": 0,
+   "label": "Registering foreign-government lobbyists",
    "sides": [
     "Yes",
     "No"
@@ -758,6 +926,9 @@
    "id": "reject-electoral-votes",
    "cat": "governance",
    "q": "Should Congress be able to reject a state's certified electoral votes?",
+   "statement": "Congress should be able to reject a state's electoral votes when there are serious doubts about the count.",
+   "agree": 0,
+   "label": "Congress rejecting certified electoral votes",
    "sides": [
     "Yes",
     "No"
@@ -771,6 +942,9 @@
    "id": "climate-regulations",
    "cat": "environmental",
    "q": "Should the government tighten environmental rules to fight climate change?",
+   "statement": "Climate change is serious enough that the government should tighten environmental rules now.",
+   "agree": 0,
+   "label": "Tighter climate rules",
    "sides": [
     "Yes",
     "No"
@@ -786,6 +960,9 @@
    "id": "animal-testing",
    "cat": "environmental",
    "q": "Should researchers be allowed to test drugs, vaccines, medical devices and cosmetics on animals?",
+   "statement": "Testing drugs and medical products on animals is necessary to keep people safe.",
+   "agree": 0,
+   "label": "Animal testing",
    "sides": [
     "Yes",
     "No"
@@ -797,6 +974,9 @@
    "id": "disposables-ban",
    "cat": "environmental",
    "q": "Should disposable products made of less than half biodegradable material, like plastic cups and cutlery, be banned?",
+   "statement": "Banning plastic cups and cutlery is government overreach.",
+   "agree": 1,
+   "label": "Banning non-biodegradable disposables",
    "sides": [
     "Yes",
     "No"
@@ -809,6 +989,9 @@
    "id": "geoengineering",
    "cat": "environmental",
    "q": "Should the government fund geoengineering research to fight climate change?",
+   "statement": "The government should fund research into geoengineering to cool the planet.",
+   "agree": 0,
+   "label": "Geoengineering research",
    "sides": [
     "Yes",
     "No"
@@ -820,6 +1003,9 @@
    "id": "fracking",
    "cat": "environmental",
    "q": "Should fracking for oil and natural gas be allowed?",
+   "statement": "Fracking has made America energy independent and should stay legal.",
+   "agree": 0,
+   "label": "Fracking",
    "sides": [
     "Yes",
     "No"
@@ -832,6 +1018,9 @@
    "id": "wind-subsidies",
    "cat": "environmental",
    "q": "Should the wind power industry get tax credits and subsidies?",
+   "statement": "Wind power deserves tax credits to help it grow.",
+   "agree": 0,
+   "label": "Wind power subsidies",
    "sides": [
     "Yes",
     "No"
@@ -844,6 +1033,9 @@
    "id": "arctic-drilling",
    "cat": "environmental",
    "q": "Should oil drilling be allowed in Alaska's Arctic National Wildlife Refuge?",
+   "statement": "The Arctic National Wildlife Refuge should be protected from oil drilling.",
+   "agree": 1,
+   "label": "Drilling in the Arctic refuge",
    "sides": [
     "Yes",
     "No"
@@ -856,6 +1048,9 @@
    "id": "ev-support",
    "cat": "environmental",
    "q": "Should the federal government help people buy electric vehicles and pay for charging stations?",
+   "statement": "The government should help people buy electric cars and build charging stations.",
+   "agree": 0,
+   "label": "Federal help for electric vehicles",
    "sides": [
     "Yes",
     "No"
@@ -869,6 +1064,9 @@
    "id": "food-waste",
    "cat": "environmental",
    "q": "Should the government fund programs to reduce food waste?",
+   "statement": "The government should fund programs to cut food waste.",
+   "agree": 0,
+   "label": "Food waste programs",
    "sides": [
     "Yes",
     "No"
@@ -881,6 +1079,9 @@
    "id": "factory-farming",
    "cat": "environmental",
    "q": "Should the federal government ban factory farming to protect animals and the environment?",
+   "statement": "Factory farming is cruel to animals and should be banned.",
+   "agree": 0,
+   "label": "Banning factory farming",
    "sides": [
     "Yes",
     "No"
@@ -893,6 +1094,9 @@
    "id": "offshore-drilling",
    "cat": "environmental",
    "q": "Should the U.S. expand offshore oil drilling?",
+   "statement": "More offshore drilling would lower energy prices and create jobs.",
+   "agree": 0,
+   "label": "Expanding offshore drilling",
    "sides": [
     "Yes",
     "No"
@@ -905,6 +1109,9 @@
    "id": "paris-agreement",
    "cat": "environmental",
    "q": "Should the U.S. leave the Paris climate agreement?",
+   "statement": "The U.S. should stay in the Paris climate agreement.",
+   "agree": 1,
+   "label": "Leaving the Paris climate agreement",
    "sides": [
     "Yes",
     "No"
@@ -917,6 +1124,9 @@
    "id": "dakota-access",
    "cat": "environmental",
    "q": "Should the government stop the Dakota Access oil pipeline?",
+   "statement": "The Dakota Access pipeline should keep running.",
+   "agree": 1,
+   "label": "Stopping the Dakota Access pipeline",
    "sides": [
     "Yes",
     "No"
@@ -929,6 +1139,9 @@
    "id": "carbon-capture",
    "cat": "environmental",
    "q": "Should companies developing carbon-capture technology get government subsidies?",
+   "statement": "Companies developing carbon-capture technology should get government subsidies.",
+   "agree": 0,
+   "label": "Carbon-capture subsidies",
    "sides": [
     "Yes",
     "No"
@@ -941,6 +1154,9 @@
    "id": "deep-sea-mining",
    "cat": "environmental",
    "q": "Should deep-sea mining be allowed in U.S. waters to get minerals for green technology?",
+   "statement": "Deep-sea mining would do too much damage to the ocean and should stay banned in U.S. waters.",
+   "agree": 1,
+   "label": "Deep-sea mining in U.S. waters",
    "sides": [
     "Yes",
     "No"
@@ -953,6 +1169,9 @@
    "id": "gas-stoves",
    "cat": "environmental",
    "q": "Should the sale of new gas stoves be banned?",
+   "statement": "Banning new gas stoves is a step too far.",
+   "agree": 1,
+   "label": "Banning new gas stoves",
    "sides": [
     "Yes",
     "No"
@@ -965,6 +1184,9 @@
    "id": "equal-pay",
    "cat": "economic",
    "q": "Should employers have to pay men and women the same for the same job?",
+   "statement": "Employers should be required by law to pay men and women the same for the same job.",
+   "agree": 0,
+   "label": "Equal pay for the same job",
    "sides": [
     "Yes",
     "No"
@@ -977,6 +1199,9 @@
    "id": "welfare-restrictions",
    "cat": "economic",
    "q": "Should welfare benefits come with more or fewer restrictions?",
+   "statement": "Welfare benefits come too easily; they need stricter conditions, like work requirements.",
+   "agree": 0,
+   "label": "More restrictions on welfare",
    "sides": [
     "More restrictions",
     "Fewer restrictions"
@@ -989,6 +1214,9 @@
    "id": "company-tax-breaks",
    "cat": "economic",
    "q": "Should the President give individual companies tax breaks to keep jobs in the U.S.?",
+   "statement": "Giving individual companies tax breaks to keep jobs here is smart economic policy.",
+   "agree": 0,
+   "label": "Company-specific tax breaks to keep jobs",
    "sides": [
     "Yes",
     "No"
@@ -1000,6 +1228,9 @@
    "id": "tax-the-rich",
    "cat": "economic",
    "q": "Should taxes on the wealthy go up?",
+   "statement": "The wealthiest Americans don't pay their fair share, and their taxes should go up.",
+   "agree": 0,
+   "label": "Higher taxes on the wealthy",
    "sides": [
     "Yes",
     "No"
@@ -1012,6 +1243,9 @@
    "id": "postal-banking",
    "cat": "economic",
    "q": "Should the Postal Service offer basic banking services?",
+   "statement": "The Postal Service should stick to mail, not banking.",
+   "agree": 1,
+   "label": "Postal banking",
    "sides": [
     "Yes",
     "No"
@@ -1024,6 +1258,9 @@
    "id": "audit-the-fed",
    "cat": "economic",
    "q": "Should Congress audit the Federal Reserve?",
+   "statement": "Congress should audit the Federal Reserve.",
+   "agree": 0,
+   "label": "Auditing the Federal Reserve",
    "sides": [
     "Yes",
     "No"
@@ -1035,6 +1272,9 @@
    "id": "minimum-wage",
    "cat": "economic",
    "q": "Should the federal minimum wage go up?",
+   "statement": "Raising the federal minimum wage is long overdue.",
+   "agree": 0,
+   "label": "A higher federal minimum wage",
    "sides": [
     "Yes",
     "No"
@@ -1047,6 +1287,9 @@
    "id": "cut-spending-debt",
    "cat": "economic",
    "q": "Should the government cut spending to reduce the national debt?",
+   "statement": "The national debt is out of control, and cutting government spending is the way to fix it.",
+   "agree": 0,
+   "label": "Spending cuts to reduce the debt",
    "sides": [
     "Yes",
     "No"
@@ -1063,6 +1306,9 @@
    "id": "tariffs",
    "cat": "economic",
    "q": "Should the U.S. add or raise tariffs on imported goods?",
+   "statement": "Tariffs on imported goods protect American jobs and are worth the higher prices.",
+   "agree": 0,
+   "label": "Higher tariffs on imports",
    "sides": [
     "Yes",
     "No"
@@ -1074,6 +1320,9 @@
    "id": "licensing-reform",
    "cat": "economic",
    "q": "Should licensing requirements be dropped for low-risk jobs like hair braiding or flower arranging?",
+   "statement": "You shouldn't need a government license to braid hair or arrange flowers.",
+   "agree": 0,
+   "label": "Dropping licenses for low-risk jobs",
    "sides": [
     "Yes",
     "No"
@@ -1086,6 +1335,9 @@
    "id": "paid-leave",
    "cat": "economic",
    "q": "Should employers have to give full-time workers paid leave for a new child or a sick family member?",
+   "statement": "Every full-time worker should get paid leave for a new child or a sick family member, guaranteed by law.",
+   "agree": 0,
+   "label": "Required paid family leave",
    "sides": [
     "Yes",
     "No"
@@ -1098,6 +1350,9 @@
    "id": "data-center-ban",
    "cat": "economic",
    "q": "Should the government ban building new data centers?",
+   "statement": "The country should stop building new data centers until we know what they do to power bills and water.",
+   "agree": 0,
+   "label": "Banning new data centers",
    "sides": [
     "Yes",
     "No"
@@ -1110,6 +1365,9 @@
    "id": "universal-basic-income",
    "cat": "economic",
    "q": "Should the U.S. have a universal basic income?",
+   "statement": "A universal basic income would discourage work and cost too much.",
+   "agree": 1,
+   "label": "A universal basic income",
    "sides": [
     "Yes",
     "No"
@@ -1122,6 +1380,9 @@
    "id": "block-mega-mergers",
    "cat": "economic",
    "q": "Should the government block \"mega mergers\" that would give one company a large share of its industry?",
+   "statement": "The government should block mergers that let one company dominate its industry.",
+   "agree": 0,
+   "label": "Blocking mega mergers",
    "sides": [
     "Yes",
     "No"
@@ -1134,6 +1395,9 @@
    "id": "corporate-tax",
    "cat": "economic",
    "q": "Should the tax rate on corporations go up or down?",
+   "statement": "Lower taxes on corporations create jobs and keep businesses in America.",
+   "agree": 1,
+   "label": "A higher corporate tax rate",
    "sides": [
     "Raise",
     "Lower"
@@ -1146,6 +1410,9 @@
    "id": "public-pensions",
    "cat": "economic",
    "q": "Should pensions for retired government workers go up?",
+   "statement": "Retired government workers have earned bigger pensions.",
+   "agree": 0,
+   "label": "Bigger public-worker pensions",
    "sides": [
     "Yes",
     "No"
@@ -1158,6 +1425,9 @@
    "id": "usmca",
    "cat": "economic",
    "q": "Should the U.S. stay in its trade agreement with Canada and Mexico (the USMCA, which replaced NAFTA)?",
+   "statement": "The U.S. should stay in its trade agreement with Canada and Mexico.",
+   "agree": 0,
+   "label": "Staying in the USMCA",
    "sides": [
     "Yes",
     "No"
@@ -1169,6 +1439,9 @@
    "id": "union-rights",
    "cat": "economic",
    "q": "Should workers have stronger legal protections to form unions and bargain collectively?",
+   "statement": "Unions do more harm than good, and the law shouldn't make them easier to form.",
+   "agree": 1,
+   "label": "Stronger union protections",
    "sides": [
     "Yes",
     "No"
@@ -1182,6 +1455,9 @@
    "id": "chips-industry",
    "cat": "economic",
    "q": "Should the federal government fund U.S. manufacturing of computer chips and other key industries?",
+   "statement": "The government should pay to build computer chips and other key products in America.",
+   "agree": 0,
+   "label": "Funding U.S. chip manufacturing",
    "sides": [
     "Yes",
     "No"
@@ -1195,6 +1471,9 @@
    "id": "gun-purchase-limits",
    "cat": "guns",
    "q": "Should buying a gun come with more restrictions than it does now?",
+   "statement": "More background checks and limits on buying guns would save lives.",
+   "agree": 0,
+   "label": "More limits on buying guns",
    "sides": [
     "Yes",
     "No"
@@ -1210,6 +1489,9 @@
    "id": "decriminalize-drugs",
    "cat": "criminal",
    "q": "Should drug use be decriminalized?",
+   "statement": "Drug use should be treated as a health problem, not a crime.",
+   "agree": 0,
+   "label": "Decriminalizing drug use",
    "sides": [
     "Yes",
     "No"
@@ -1222,6 +1504,9 @@
    "id": "retirement-age",
    "cat": "economic",
    "q": "Should the retirement age for Social Security go up?",
+   "statement": "People live longer now, so the Social Security retirement age should go up.",
+   "agree": 0,
+   "label": "Raising the Social Security retirement age",
    "sides": [
     "Yes",
     "No"
@@ -1234,6 +1519,9 @@
    "id": "gun-age-21",
    "cat": "guns",
    "q": "Should the minimum age to buy any gun be raised to 21?",
+   "statement": "If you're old enough to vote and serve, you're old enough to buy a gun.",
+   "agree": 1,
+   "label": "A minimum age of 21 to buy any gun",
    "sides": [
     "Yes",
     "No"
@@ -1246,6 +1534,9 @@
    "id": "eminent-domain",
    "cat": "economic",
    "q": "Should the government be able to take private property for public use if it pays fair compensation?",
+   "statement": "The government should be able to take private property for public projects, as long as it pays a fair price.",
+   "agree": 0,
+   "label": "Eminent domain",
    "sides": [
     "Yes",
     "No"
@@ -1258,6 +1549,9 @@
    "id": "congress-stock-trading",
    "cat": "governance",
    "q": "Should members of Congress be allowed to trade stocks while in office?",
+   "statement": "Members of Congress shouldn't be allowed to trade stocks while in office.",
+   "agree": 1,
+   "label": "Stock trading by members of Congress",
    "sides": [
     "Yes",
     "No"
@@ -1269,6 +1563,9 @@
    "id": "armed-teachers",
    "cat": "guns",
    "q": "Should teachers be allowed to carry guns at school?",
+   "statement": "Teachers who want to carry a gun at school should be allowed to.",
+   "agree": 0,
+   "label": "Armed teachers",
    "sides": [
     "Yes",
     "No"
@@ -1281,6 +1578,9 @@
    "id": "misinformation-rules",
    "cat": "social",
    "q": "Should social media sites be regulated to curb fake news and misinformation?",
+   "statement": "Social media companies should be required to curb fake news and misinformation.",
+   "agree": 0,
+   "label": "Regulating online misinformation",
    "sides": [
     "Yes",
     "No"
@@ -1293,6 +1593,9 @@
    "id": "term-limits",
    "cat": "governance",
    "q": "Should members of Congress have term limits?",
+   "statement": "Members of Congress should have term limits.",
+   "agree": 0,
+   "label": "Term limits for Congress",
    "sides": [
     "Yes",
     "No"
@@ -1304,6 +1607,9 @@
    "id": "court-reform",
    "cat": "governance",
    "q": "Should the Supreme Court get more seats and term limits for justices?",
+   "statement": "Adding seats and term limits to the Supreme Court would be a partisan power grab.",
+   "agree": 1,
+   "label": "Supreme Court expansion and term limits",
    "sides": [
     "Yes",
     "No"
@@ -1315,6 +1621,9 @@
    "id": "nsa-metadata",
    "cat": "national-security",
    "q": "Should the NSA be allowed to collect records of people's phone calls, such as numbers, times and lengths?",
+   "statement": "The government has no business collecting records of everyone's phone calls.",
+   "agree": 1,
+   "label": "NSA collection of phone records",
    "sides": [
     "Yes",
     "No"
@@ -1327,6 +1636,9 @@
    "id": "flag-burning",
    "cat": "social",
    "q": "Should burning the American flag be illegal?",
+   "statement": "Burning the American flag is offensive, but it's free speech and should stay legal.",
+   "agree": 1,
+   "label": "Banning flag burning",
    "sides": [
     "Yes",
     "No"
@@ -1339,6 +1651,9 @@
    "id": "permanent-dst",
    "cat": "governance",
    "q": "Should the U.S. stop changing the clocks and make Daylight Saving Time permanent?",
+   "statement": "Changing the clocks twice a year is pointless; Daylight Saving Time should be permanent.",
+   "agree": 0,
+   "label": "Permanent Daylight Saving Time",
    "sides": [
     "Yes",
     "No"
@@ -1350,6 +1665,9 @@
    "id": "net-neutrality",
    "cat": "technology",
    "q": "Should internet providers be allowed to speed up websites that pay more and slow down those that pay less?",
+   "statement": "Internet providers shouldn't be allowed to slow down websites that don't pay them extra.",
+   "agree": 1,
+   "label": "Letting internet providers favor sites that pay more",
    "sides": [
     "Yes",
     "No"
@@ -1362,6 +1680,9 @@
    "id": "no-fly-no-buy",
    "cat": "guns",
    "q": "Should people on the no-fly list be banned from buying guns and ammunition?",
+   "statement": "Being put on a no-fly list without a trial shouldn't take away your right to own a gun.",
+   "agree": 1,
+   "label": "Banning gun sales to people on the no-fly list",
    "sides": [
     "Yes",
     "No"
@@ -1374,6 +1695,9 @@
    "id": "snowden-immunity",
    "cat": "national-security",
    "q": "Should the U.S. grant Edward Snowden immunity?",
+   "statement": "Edward Snowden exposed government overreach and should be granted immunity.",
+   "agree": 0,
+   "label": "Immunity for Edward Snowden",
    "sides": [
     "Yes",
     "No"
@@ -1386,6 +1710,9 @@
    "id": "whistleblowers",
    "cat": "governance",
    "q": "Should there be stronger legal protections for whistleblowers?",
+   "statement": "Whistleblowers need stronger legal protection.",
+   "agree": 0,
+   "label": "Stronger whistleblower protections",
    "sides": [
     "Yes",
     "No"
@@ -1398,6 +1725,9 @@
    "id": "ai-diagnosis",
    "cat": "healthcare",
    "q": "Should AI be allowed to diagnose patients and prescribe medicine without a doctor's supervision?",
+   "statement": "AI should be allowed to diagnose patients and prescribe medicine without a doctor watching.",
+   "agree": 0,
+   "label": "AI diagnosis without a doctor",
    "sides": [
     "Yes",
     "No"
@@ -1409,6 +1739,9 @@
    "id": "youth-unhealthy-ads",
    "cat": "healthcare",
    "q": "Should the government ban marketing products like vaping and junk food to young people?",
+   "statement": "Vaping and junk food shouldn't be marketed to kids.",
+   "agree": 0,
+   "label": "Banning unhealthy-product ads to kids",
    "sides": [
     "Yes",
     "No"
@@ -1421,6 +1754,9 @@
    "id": "marijuana",
    "cat": "healthcare",
    "q": "Should marijuana be legal?",
+   "statement": "Marijuana should be legal for adults, like alcohol.",
+   "agree": 0,
+   "label": "Legal marijuana",
    "sides": [
     "Yes",
     "No"
@@ -1433,6 +1769,9 @@
    "id": "drug-prices",
    "cat": "healthcare",
    "q": "Should the government cap or regulate the prices of prescription drugs?",
+   "statement": "The government should cap what drug companies charge for prescription drugs.",
+   "agree": 0,
+   "label": "Capping prescription drug prices",
    "sides": [
     "Yes",
     "No"
@@ -1446,6 +1785,9 @@
    "id": "mental-health-funding",
    "cat": "healthcare",
    "q": "Should the government spend more on mental health research and treatment?",
+   "statement": "The government should spend more on mental health research and treatment.",
+   "agree": 0,
+   "label": "More mental health funding",
    "sides": [
     "Yes",
     "No"
@@ -1458,6 +1800,9 @@
    "id": "pre-existing-conditions",
    "cat": "healthcare",
    "q": "Should health insurers be allowed to deny coverage for pre-existing conditions?",
+   "statement": "Insurers should never be allowed to deny coverage for a pre-existing condition.",
+   "agree": 1,
+   "label": "Letting insurers deny pre-existing conditions",
    "sides": [
     "Yes",
     "No"
@@ -1470,6 +1815,9 @@
    "id": "medical-debt",
    "cat": "healthcare",
    "q": "Should the government forgive all medical debt for necessary, non-elective care?",
+   "statement": "Forgiving all medical debt would be unfair to people who paid their bills.",
+   "agree": 1,
+   "label": "Forgiving medical debt",
    "sides": [
     "Yes",
     "No"
@@ -1482,6 +1830,9 @@
    "id": "medicaid-funding",
    "cat": "healthcare",
    "q": "Should federal funding for Medicaid go up?",
+   "statement": "Medicaid already costs too much; its federal funding shouldn't keep growing.",
+   "agree": 1,
+   "label": "More Medicaid funding",
    "sides": [
     "Yes",
     "No"
@@ -1494,6 +1845,9 @@
    "id": "single-payer",
    "cat": "healthcare",
    "q": "Should the U.S. have a single-payer health care system?",
+   "statement": "Health care is a right, and the government should cover everyone through a single public plan.",
+   "agree": 0,
+   "label": "Single-payer health care",
    "sides": [
     "Yes",
     "No"
@@ -1506,6 +1860,9 @@
    "id": "medicaid-work",
    "cat": "healthcare",
    "q": "Should people have to work to receive Medicaid?",
+   "statement": "Able-bodied adults should have to work to get Medicaid.",
+   "agree": 0,
+   "label": "Medicaid work requirements",
    "sides": [
     "Yes",
     "No"
@@ -1518,6 +1875,9 @@
    "id": "va-privatization",
    "cat": "healthcare",
    "q": "Should veterans' health care be more or less privatized?",
+   "statement": "Veterans should be able to get care from private doctors instead of waiting on the VA.",
+   "agree": 0,
+   "label": "More privatized veterans' care",
    "sides": [
     "More",
     "Less"
@@ -1530,6 +1890,9 @@
    "id": "food-dyes",
    "cat": "healthcare",
    "q": "Should the U.S. ban food ingredients and dyes that are banned in Europe?",
+   "statement": "Food dyes and ingredients banned in Europe should be banned here too.",
+   "agree": 0,
+   "label": "Banning ingredients Europe bans",
    "sides": [
     "Yes",
     "No"
@@ -1542,6 +1905,9 @@
    "id": "fund-who",
    "cat": "healthcare",
    "q": "Should the U.S. fund the World Health Organization?",
+   "statement": "The World Health Organization doesn't deserve American taxpayer money.",
+   "agree": 1,
+   "label": "Funding the WHO",
    "sides": [
     "Yes",
     "No"
@@ -1553,6 +1919,9 @@
    "id": "affordable-care-act",
    "cat": "healthcare",
    "q": "Do you support the Affordable Care Act (Obamacare)?",
+   "statement": "The Affordable Care Act has helped millions of people and should stay.",
+   "agree": 0,
+   "label": "The Affordable Care Act",
    "sides": [
     "Yes",
     "No"
@@ -1565,6 +1934,9 @@
    "id": "drug-ads",
    "cat": "healthcare",
    "q": "Should drug companies be banned from advertising prescription drugs to consumers?",
+   "statement": "Drug companies shouldn't be allowed to advertise prescription drugs on TV.",
+   "agree": 0,
+   "label": "Banning prescription drug ads",
    "sides": [
     "Yes",
     "No"
@@ -1577,6 +1949,9 @@
    "id": "doctor-misinformation",
    "cat": "healthcare",
    "q": "Should medical boards discipline doctors who give health advice that goes against scientific consensus?",
+   "statement": "Medical boards shouldn't punish doctors for disagreeing with the official consensus.",
+   "agree": 1,
+   "label": "Discipline for doctors who spread health misinformation",
    "sides": [
     "Yes",
     "No"
@@ -1589,6 +1964,9 @@
    "id": "fix-it-first",
    "cat": "infrastructure",
    "q": "Should fixing existing roads and bridges come before building new infrastructure?",
+   "statement": "Fixing the roads and bridges we have should come before building new ones.",
+   "agree": 0,
+   "label": "Fixing existing infrastructure first",
    "sides": [
     "Yes",
     "No"
@@ -1600,6 +1978,9 @@
    "id": "highways-to-transit",
    "cat": "infrastructure",
    "q": "Should building new highway lanes be stopped, with the money going to public transit?",
+   "statement": "Money for new highway lanes would do more good spent on public transit.",
+   "agree": 0,
+   "label": "Shifting highway money to transit",
    "sides": [
     "Yes",
     "No"
@@ -1612,6 +1993,9 @@
    "id": "nationalize-grid",
    "cat": "infrastructure",
    "q": "Should the federal government take over the electric grid to upgrade it and prevent blackouts?",
+   "statement": "A government takeover of the electric grid would make it worse, not better.",
+   "agree": 1,
+   "label": "A federal takeover of the electric grid",
    "sides": [
     "Yes",
     "No"
@@ -1624,6 +2008,9 @@
    "id": "free-school-meals",
    "cat": "education",
    "q": "Should the federal government provide free breakfast and lunch to all public school students?",
+   "statement": "Every public school student should get free breakfast and lunch.",
+   "agree": 0,
+   "label": "Free school meals for all",
    "sides": [
     "Yes",
     "No"
@@ -1637,6 +2024,9 @@
    "id": "free-college",
    "cat": "education",
    "q": "Should the federal government pay tuition at four-year colleges and universities?",
+   "statement": "Taxpayers shouldn't pay other people's college tuition.",
+   "agree": 1,
+   "label": "Free four-year college",
    "sides": [
     "Yes",
     "No"
@@ -1649,6 +2039,9 @@
    "id": "tax-rich-student-loans",
    "cat": "education",
    "q": "Should taxes on the wealthy go up to lower interest rates on student loans?",
+   "statement": "Taxing the wealthy more to lower student-loan interest rates is fair.",
+   "agree": 0,
+   "label": "Higher taxes on the wealthy to cut student-loan rates",
    "sides": [
     "Yes",
     "No"
@@ -1661,6 +2054,9 @@
    "id": "corporal-punishment",
    "cat": "education",
    "q": "Should teachers be allowed to physically discipline students?",
+   "statement": "Teachers should never be allowed to physically discipline students.",
+   "agree": 1,
+   "label": "Physical discipline in schools",
    "sides": [
     "Yes",
     "No"
@@ -1673,6 +2069,9 @@
    "id": "school-vouchers",
    "cat": "education",
    "q": "Should students get public vouchers to pay for private schools?",
+   "statement": "Parents should be able to use public money to send their kids to private school.",
+   "agree": 0,
+   "label": "School vouchers",
    "sides": [
     "Yes",
     "No"
@@ -1685,6 +2084,9 @@
    "id": "universal-preschool",
    "cat": "education",
    "q": "Should the federal government fund universal preschool?",
+   "statement": "Every child should have access to free, federally funded preschool.",
+   "agree": 0,
+   "label": "Universal preschool",
    "sides": [
     "Yes",
     "No"
@@ -1697,6 +2099,9 @@
    "id": "abolish-education-dept",
    "cat": "education",
    "q": "Should the U.S. Department of Education be abolished?",
+   "statement": "The U.S. Department of Education should be abolished and schools left to the states.",
+   "agree": 0,
+   "label": "Abolishing the Department of Education",
    "sides": [
     "Yes",
     "No"
@@ -1709,6 +2114,9 @@
    "id": "common-core",
    "cat": "education",
    "q": "Do you support Common Core national education standards?",
+   "statement": "National education standards like Common Core help students.",
+   "agree": 0,
+   "label": "Common Core standards",
    "sides": [
     "Yes",
     "No"
@@ -1720,6 +2128,9 @@
    "id": "remove-library-books",
    "cat": "education",
    "q": "Should public schools be able to remove library books that parents find inappropriate?",
+   "statement": "Removing library books because some parents object is censorship.",
+   "agree": 1,
+   "label": "Removing library books parents object to",
    "sides": [
     "Yes",
     "No"
@@ -1732,6 +2143,9 @@
    "id": "school-phone-ban",
    "cat": "education",
    "q": "Should students be banned from using phones during the school day?",
+   "statement": "Students shouldn't be using phones during the school day.",
+   "agree": 0,
+   "label": "Phone bans in school",
    "sides": [
     "Yes",
     "No"
@@ -1746,6 +2160,9 @@
    "id": "critical-race-theory",
    "cat": "education",
    "q": "Should critical race theory be taught in K-12 schools?",
+   "statement": "Critical race theory doesn't belong in K-12 classrooms.",
+   "agree": 1,
+   "label": "Teaching critical race theory in K-12",
    "sides": [
     "Yes",
     "No"
@@ -1757,6 +2174,9 @@
    "id": "charter-schools",
    "cat": "education",
    "q": "Do you support charter schools?",
+   "statement": "Charter schools give families better options.",
+   "agree": 0,
+   "label": "Charter schools",
    "sides": [
     "Yes",
     "No"
@@ -1769,6 +2189,9 @@
    "id": "sex-ed-opt-out",
    "cat": "education",
    "q": "Should parents be able to take their children out of sex-education classes on LGBTQ+ relationships and gender identity?",
+   "statement": "Parents should be able to take their kids out of sex-ed lessons on LGBTQ+ topics.",
+   "agree": 0,
+   "label": "Opting out of LGBTQ+ sex-ed",
    "sides": [
     "Yes",
     "No"
@@ -1781,6 +2204,9 @@
    "id": "college-loan-accountability",
    "cat": "education",
    "q": "Should colleges pay a price when graduates with low-paying degrees default on their student loans?",
+   "statement": "Colleges should pay a price when graduates of low-paying programs can't repay their loans.",
+   "agree": 0,
+   "label": "College accountability for loan defaults",
    "sides": [
     "Yes",
     "No"
@@ -1792,6 +2218,9 @@
    "id": "truancy-penalties",
    "cat": "education",
    "q": "Should parents face criminal penalties when their children chronically skip school?",
+   "statement": "Parents should face criminal penalties when their kids chronically skip school.",
+   "agree": 0,
+   "label": "Criminal penalties for truancy",
    "sides": [
     "Yes",
     "No"
@@ -1804,6 +2233,9 @@
    "id": "legacy-admissions",
    "cat": "education",
    "q": "Should colleges be banned from giving preference to children of alumni?",
+   "statement": "Colleges shouldn't give an edge to children of alumni.",
+   "agree": 0,
+   "label": "Banning legacy admissions",
    "sides": [
     "Yes",
     "No"
@@ -1815,6 +2247,9 @@
    "id": "competency-tests",
    "cat": "electoral",
    "q": "Should politicians over 75 have to pass a mental competency test?",
+   "statement": "Politicians over 75 should have to pass a mental competency test.",
+   "agree": 0,
+   "label": "Competency tests for older politicians",
    "sides": [
     "Yes",
     "No"
@@ -1826,6 +2261,9 @@
    "id": "mail-ballots",
    "cat": "electoral",
    "q": "Should every voter automatically be mailed a ballot?",
+   "statement": "Mailing every voter a ballot invites mistakes and fraud.",
+   "agree": 1,
+   "label": "Mailing every voter a ballot",
    "sides": [
     "Yes",
     "No"
@@ -1839,6 +2277,9 @@
    "id": "convicted-candidates",
    "cat": "electoral",
    "q": "Should people convicted of a crime be allowed to run for office?",
+   "statement": "People convicted of crimes should still be allowed to run for office.",
+   "agree": 0,
+   "label": "Letting people with convictions run for office",
    "sides": [
     "Yes",
     "No"
@@ -1850,6 +2291,9 @@
    "id": "noncitizen-voting",
    "cat": "electoral",
    "q": "Should non-citizens living in the U.S. be allowed to vote?",
+   "statement": "Only citizens should vote in American elections.",
+   "agree": 1,
+   "label": "Voting by non-citizens",
    "sides": [
     "Yes",
     "No"
@@ -1861,6 +2305,9 @@
    "id": "electoral-college",
    "cat": "electoral",
    "q": "Should the Electoral College be abolished?",
+   "statement": "The president should be chosen by the national popular vote, not the Electoral College.",
+   "agree": 0,
+   "label": "Abolishing the Electoral College",
    "sides": [
     "Yes",
     "No"
@@ -1872,6 +2319,9 @@
    "id": "group-donations",
    "cat": "electoral",
    "q": "Should corporations, unions and nonprofits be allowed to donate to political parties?",
+   "statement": "Corporations and unions shouldn't be allowed to donate to political parties.",
+   "agree": 1,
+   "label": "Corporate and union donations to parties",
    "sides": [
     "Yes",
     "No"
@@ -1883,6 +2333,9 @@
    "id": "foreign-lobbyist-fundraising",
    "cat": "electoral",
    "q": "Should foreign lobbyists be allowed to raise money for U.S. elections?",
+   "statement": "Foreign lobbyists should be banned from raising money for U.S. elections.",
+   "agree": 1,
+   "label": "Foreign lobbyists raising money for elections",
    "sides": [
     "Yes",
     "No"
@@ -1894,6 +2347,9 @@
    "id": "automatic-registration",
    "cat": "electoral",
    "q": "Should every eligible citizen be registered to vote automatically?",
+   "statement": "Every eligible citizen should be registered to vote automatically.",
+   "agree": 0,
+   "label": "Automatic voter registration",
    "sides": [
     "Yes",
     "No"
@@ -1907,6 +2363,9 @@
    "id": "proportional-representation",
    "cat": "electoral",
    "q": "Should the U.S. switch to proportional representation so third parties can win seats in Congress?",
+   "statement": "The U.S. should switch to proportional representation so third parties can win seats.",
+   "agree": 0,
+   "label": "Proportional representation",
    "sides": [
     "Yes",
     "No"
@@ -1919,6 +2378,9 @@
    "id": "donation-limits",
    "cat": "electoral",
    "q": "Should there be a limit on how much one donor can give a candidate?",
+   "statement": "There should be a limit on how much one donor can give a candidate.",
+   "agree": 0,
+   "label": "Limits on donations to candidates",
    "sides": [
     "Yes",
     "No"
@@ -1930,6 +2392,9 @@
    "id": "candidate-tax-returns",
    "cat": "electoral",
    "q": "Should political candidates have to release their recent tax returns?",
+   "statement": "Candidates' tax returns are their own business.",
+   "agree": 1,
+   "label": "Requiring candidates to release tax returns",
    "sides": [
     "Yes",
     "No"
@@ -1941,6 +2406,9 @@
    "id": "lobbying-ban",
    "cat": "electoral",
    "q": "Should former White House and congressional officials be banned from lobbying for five years after they leave?",
+   "statement": "Former officials should have to wait five years before becoming lobbyists.",
+   "agree": 0,
+   "label": "A five-year lobbying ban for former officials",
    "sides": [
     "Yes",
     "No"
@@ -1952,6 +2420,9 @@
    "id": "voter-id",
    "cat": "electoral",
    "q": "Should voters have to show a photo ID?",
+   "statement": "Requiring a photo ID to vote is a simple way to protect elections.",
+   "agree": 0,
+   "label": "Photo ID to vote",
    "sides": [
     "Yes",
     "No"
@@ -1965,6 +2436,9 @@
    "id": "ranked-choice",
    "cat": "electoral",
    "q": "Should ranked-choice voting be required in all congressional elections?",
+   "statement": "Ranked-choice voting should be used in all congressional elections.",
+   "agree": 0,
+   "label": "Ranked-choice voting",
    "sides": [
     "Yes",
     "No"
@@ -1976,6 +2450,9 @@
    "id": "voting-age",
    "cat": "electoral",
    "q": "Should the voting age be lowered?",
+   "statement": "Sixteen- and seventeen-year-olds aren't ready to vote; the voting age should stay at 18.",
+   "agree": 1,
+   "label": "A lower voting age",
    "sides": [
     "Yes",
     "No"
@@ -1987,6 +2464,9 @@
    "id": "fine-nonvoters",
    "cat": "electoral",
    "q": "Should people who don't vote be fined?",
+   "statement": "People who don't vote should be fined.",
+   "agree": 0,
+   "label": "Fines for not voting",
    "sides": [
     "Yes",
     "No"
@@ -1999,6 +2479,9 @@
    "id": "social-media-political-ads",
    "cat": "electoral",
    "q": "Should social media companies ban political ads?",
+   "statement": "Social media companies should ban political ads.",
+   "agree": 0,
+   "label": "Banning political ads on social media",
    "sides": [
     "Yes",
     "No"
@@ -2010,6 +2493,9 @@
    "id": "election-day-holiday",
    "cat": "electoral",
    "q": "Should federal Election Day be a national holiday?",
+   "statement": "Election Day should be a national holiday so everyone can vote.",
+   "agree": 0,
+   "label": "An Election Day holiday",
    "sides": [
     "Yes",
     "No"
@@ -2021,6 +2507,9 @@
    "id": "body-cameras",
    "cat": "criminal",
    "q": "Should police officers be required to wear body cameras?",
+   "statement": "Every police officer should wear a body camera on duty.",
+   "agree": 0,
+   "label": "Required police body cameras",
    "sides": [
     "Yes",
     "No"
@@ -2033,6 +2522,9 @@
    "id": "release-nonviolent",
    "cat": "criminal",
    "q": "Should nonviolent prisoners be released to reduce prison overcrowding?",
+   "statement": "Releasing prisoners early to ease overcrowding puts communities at risk.",
+   "agree": 1,
+   "label": "Releasing nonviolent prisoners",
    "sides": [
     "Yes",
     "No"
@@ -2045,6 +2537,9 @@
    "id": "ai-justice",
    "cat": "criminal",
    "q": "Should AI be used to make decisions in the criminal justice system?",
+   "statement": "AI should help make decisions in the criminal justice system.",
+   "agree": 0,
+   "label": "AI in criminal justice decisions",
    "sides": [
     "Yes",
     "No"
@@ -2056,6 +2551,9 @@
    "id": "juvenile-solitary",
    "cat": "criminal",
    "q": "Should solitary confinement be banned for juveniles?",
+   "statement": "Putting children in solitary confinement should be banned.",
+   "agree": 0,
+   "label": "Banning solitary confinement for juveniles",
    "sides": [
     "Yes",
     "No"
@@ -2068,6 +2566,9 @@
    "id": "death-penalty-traffickers",
    "cat": "criminal",
    "q": "Should drug traffickers face the death penalty?",
+   "statement": "Drug traffickers who flood communities with fentanyl deserve the death penalty.",
+   "agree": 0,
+   "label": "The death penalty for drug traffickers",
    "sides": [
     "Yes",
     "No"
@@ -2080,6 +2581,9 @@
    "id": "military-equipment-police",
    "cat": "criminal",
    "q": "Should police departments be allowed to use military-grade equipment?",
+   "statement": "Police departments don't need military-grade equipment.",
+   "agree": 1,
+   "label": "Military-grade equipment for police",
    "sides": [
     "Yes",
     "No"
@@ -2092,6 +2596,9 @@
    "id": "qualified-immunity",
    "cat": "criminal",
    "q": "Do you support qualified immunity for police officers?",
+   "statement": "Police officers need qualified immunity so they can do their jobs without fear of lawsuits.",
+   "agree": 0,
+   "label": "Qualified immunity for police",
    "sides": [
     "Yes",
     "No"
@@ -2104,6 +2611,9 @@
    "id": "private-prisons",
    "cat": "criminal",
    "q": "Should the government hire private companies to run prisons?",
+   "statement": "Nobody should profit from locking people up; private prisons should end.",
+   "agree": 1,
+   "label": "Private prisons",
    "sides": [
     "Yes",
     "No"
@@ -2116,6 +2626,9 @@
    "id": "civil-forfeiture",
    "cat": "criminal",
    "q": "Should police be able to seize cash and property from people who haven't been convicted of a crime?",
+   "statement": "Police shouldn't be able to seize property from people who haven't been convicted of anything.",
+   "agree": 1,
+   "label": "Civil asset forfeiture",
    "sides": [
     "Yes",
     "No"
@@ -2129,6 +2642,9 @@
    "id": "police-funding-shift",
    "cat": "criminal",
    "q": "Should some police funding be moved to social and community programs?",
+   "statement": "Moving money away from police makes neighborhoods less safe.",
+   "agree": 1,
+   "label": "Shifting police funding to social programs",
    "sides": [
     "Yes",
     "No"
@@ -2141,6 +2657,9 @@
    "id": "mandatory-minimums",
    "cat": "criminal",
    "q": "Should drug possession carry mandatory minimum prison sentences?",
+   "statement": "Drug possession should carry a mandatory minimum prison sentence.",
+   "agree": 0,
+   "label": "Mandatory minimums for drug possession",
    "sides": [
     "Yes",
     "No"
@@ -2153,6 +2672,9 @@
    "id": "felon-voting",
    "cat": "criminal",
    "q": "Should people convicted of crimes have the right to vote?",
+   "statement": "People convicted of crimes should keep the right to vote.",
+   "agree": 0,
+   "label": "Voting rights for people with convictions",
    "sides": [
     "Yes",
     "No"
@@ -2165,6 +2687,9 @@
    "id": "restorative-justice",
    "cat": "criminal",
    "q": "Should restorative justice programs be used as an alternative to prison?",
+   "statement": "Restorative justice programs let offenders off too easy.",
+   "agree": 1,
+   "label": "Restorative justice instead of prison",
    "sides": [
     "Yes",
     "No"
@@ -2177,6 +2702,9 @@
    "id": "genealogy-searches",
    "cat": "criminal",
    "q": "Should police be able to search commercial DNA genealogy databases without a warrant?",
+   "statement": "Police should need a warrant to search commercial DNA genealogy databases.",
+   "agree": 1,
+   "label": "Warrantless searches of DNA genealogy databases",
    "sides": [
     "Yes",
     "No"
@@ -2189,6 +2717,9 @@
    "id": "license-plate-readers",
    "cat": "criminal",
    "q": "Should police use automatic license plate readers to track vehicles?",
+   "statement": "Automatic license plate readers help police solve crimes and should be used.",
+   "agree": 0,
+   "label": "License plate readers",
    "sides": [
     "Yes",
     "No"
@@ -2201,6 +2732,9 @@
    "id": "police-union-limits",
    "cat": "criminal",
    "q": "Should police unions' bargaining power be limited in misconduct cases?",
+   "statement": "Police unions shouldn't be able to shield officers from discipline for misconduct.",
+   "agree": 0,
+   "label": "Limiting police unions in misconduct cases",
    "sides": [
     "Yes",
     "No"
@@ -2212,6 +2746,9 @@
    "id": "support-israel",
    "cat": "foreign",
    "q": "Should the U.S. keep supporting Israel?",
+   "statement": "The U.S. should keep supporting Israel.",
+   "agree": 0,
+   "label": "Supporting Israel",
    "sides": [
     "Yes",
     "No"
@@ -2226,6 +2763,9 @@
    "id": "military-spending",
    "cat": "foreign",
    "q": "Should military spending go up or down?",
+   "statement": "America's military needs more money to keep up with China and Russia.",
+   "agree": 0,
+   "label": "More military spending",
    "sides": [
     "Increase",
     "Decrease"
@@ -2237,6 +2777,9 @@
    "id": "national-service",
    "cat": "foreign",
    "q": "Should every 18-year-old have to serve at least one year in the military?",
+   "statement": "Every 18-year-old should serve at least a year in the military.",
+   "agree": 0,
+   "label": "Required military service",
    "sides": [
     "Yes",
     "No"
@@ -2249,6 +2792,9 @@
    "id": "war-with-iran",
    "cat": "foreign",
    "q": "Should the U.S. go to war with Iran?",
+   "statement": "Going to war with Iran would be a mistake.",
+   "agree": 1,
+   "label": "War with Iran",
    "sides": [
     "Yes",
     "No"
@@ -2263,6 +2809,9 @@
    "id": "drone-strikes",
    "cat": "foreign",
    "q": "Should the military fly drones over other countries to gather intelligence and kill suspected terrorists?",
+   "statement": "Drones are a smart way to gather intelligence and target terrorists abroad.",
+   "agree": 0,
+   "label": "Drone strikes abroad",
    "sides": [
     "Yes",
     "No"
@@ -2274,6 +2823,9 @@
    "id": "arms-to-india",
    "cat": "foreign",
    "q": "Should the U.S. sell weapons to India to counter Chinese and Russian influence?",
+   "statement": "Selling weapons to India is a smart way to counter China and Russia.",
+   "agree": 0,
+   "label": "Arms sales to India",
    "sides": [
     "Yes",
     "No"
@@ -2285,6 +2837,9 @@
    "id": "stay-in-nato",
    "cat": "foreign",
    "q": "Should the U.S. stay in NATO?",
+   "statement": "NATO keeps America safer, and the U.S. should stay in it.",
+   "agree": 0,
+   "label": "Staying in NATO",
    "sides": [
     "Yes",
     "No"
@@ -2296,6 +2851,9 @@
    "id": "terror-suspect-rights",
    "cat": "foreign",
    "q": "Should foreign terrorism suspects have constitutional rights?",
+   "statement": "Foreign terrorism suspects shouldn't get the same constitutional rights as Americans.",
+   "agree": 1,
+   "label": "Constitutional rights for foreign terror suspects",
    "sides": [
     "Yes",
     "No"
@@ -2308,6 +2866,9 @@
    "id": "strike-north-korea",
    "cat": "foreign",
    "q": "Should the U.S. strike North Korea to destroy its long-range missiles and nuclear weapons?",
+   "statement": "The U.S. should strike North Korea to destroy its long-range missiles.",
+   "agree": 0,
+   "label": "Striking North Korea",
    "sides": [
     "Yes",
     "No"
@@ -2319,6 +2880,9 @@
    "id": "stay-in-un",
    "cat": "foreign",
    "q": "Should the U.S. stay in the United Nations?",
+   "statement": "The U.S. should stay in the United Nations and lead it.",
+   "agree": 0,
+   "label": "Staying in the UN",
    "sides": [
     "Yes",
     "No"
@@ -2330,6 +2894,9 @@
    "id": "defend-low-spending-allies",
    "cat": "foreign",
    "q": "Should the U.S. defend NATO allies that spend little on their own defense?",
+   "statement": "The U.S. shouldn't defend allies who won't pay for their own defense.",
+   "agree": 1,
+   "label": "Defending low-spending NATO allies",
    "sides": [
     "Yes",
     "No"
@@ -2341,6 +2908,9 @@
    "id": "foreign-election-influence",
    "cat": "foreign",
    "q": "Should the U.S. government try to influence elections in other countries?",
+   "statement": "The U.S. government should stay out of other countries' elections.",
+   "agree": 1,
+   "label": "Influencing foreign elections",
    "sides": [
     "Yes",
     "No"
@@ -2352,6 +2922,9 @@
    "id": "arms-human-rights",
    "cat": "foreign",
    "q": "Should arms sales be restricted to countries accused of human rights abuses?",
+   "statement": "The U.S. shouldn't sell weapons to countries that abuse human rights.",
+   "agree": 0,
+   "label": "Restricting arms sales to rights abusers",
    "sides": [
     "Yes",
     "No"
@@ -2363,6 +2936,9 @@
    "id": "foreign-aid",
    "cat": "foreign",
    "q": "Should foreign aid spending go up or down?",
+   "statement": "America spends too much on foreign aid.",
+   "agree": 1,
+   "label": "More foreign aid",
    "sides": [
     "Increase",
     "Decrease"
@@ -2374,6 +2950,9 @@
    "id": "spy-on-allies",
    "cat": "foreign",
    "q": "Should the NSA keep spying on U.S. allies?",
+   "statement": "The NSA should keep spying on U.S. allies.",
+   "agree": 0,
+   "label": "Spying on allies",
    "sides": [
     "Yes",
     "No"
@@ -2385,6 +2964,9 @@
    "id": "enhanced-interrogation",
    "cat": "foreign",
    "q": "Should the military be allowed to use enhanced interrogation, like waterboarding, on suspected terrorists?",
+   "statement": "Waterboarding is torture and should never be allowed.",
+   "agree": 1,
+   "label": "Enhanced interrogation",
    "sides": [
     "Yes",
     "No"
@@ -2397,6 +2979,9 @@
    "id": "ukraine-aid",
    "cat": "foreign",
    "q": "Should the U.S. give Ukraine military aid and funding?",
+   "statement": "The U.S. should keep giving Ukraine military aid.",
+   "agree": 0,
+   "label": "Military aid to Ukraine",
    "sides": [
     "Yes",
     "No"
@@ -2408,6 +2993,9 @@
    "id": "jerusalem-capital",
    "cat": "foreign",
    "q": "Should the U.S. recognize Jerusalem as Israel's capital?",
+   "statement": "The U.S. was right to recognize Jerusalem as Israel's capital.",
+   "agree": 0,
+   "label": "Jerusalem as Israel's capital",
    "sides": [
     "Yes",
     "No"
@@ -2419,6 +3007,9 @@
    "id": "war-powers",
    "cat": "foreign",
    "q": "Should the President need Congress's approval before using military force abroad, except to respond to an attack?",
+   "statement": "The President should need Congress's approval before using military force abroad, except to answer an attack.",
+   "agree": 0,
+   "label": "Congressional approval for military force",
    "sides": [
     "Yes",
     "No"
@@ -2432,6 +3023,9 @@
    "id": "abolish-ice",
    "cat": "immigration",
    "q": "Should the federal government abolish Immigration and Customs Enforcement (ICE)?",
+   "statement": "ICE enforces our immigration laws and should not be abolished.",
+   "agree": 1,
+   "label": "Abolishing ICE",
    "sides": [
     "Yes",
     "No"
@@ -2444,6 +3038,9 @@
    "id": "high-risk-entry-ban",
    "cat": "immigration",
    "q": "Should immigrants from high-risk countries be barred until screening for potential terrorists improves?",
+   "statement": "Immigrants from high-risk countries should be kept out until screening improves.",
+   "agree": 0,
+   "label": "Barring immigrants from high-risk countries",
    "sides": [
     "Yes",
     "No"
@@ -2456,6 +3053,9 @@
    "id": "citizenship-test",
    "cat": "immigration",
    "q": "Should immigrants have to pass a test on the country's language, history and government to become citizens?",
+   "statement": "New citizens should have to pass a test on our language, history and government.",
+   "agree": 0,
+   "label": "A citizenship test",
    "sides": [
     "Yes",
     "No"
@@ -2467,6 +3067,9 @@
    "id": "birthright-citizenship",
    "cat": "immigration",
    "q": "Should children born in the U.S. to non-citizen parents automatically be citizens?",
+   "statement": "Anyone born in the U.S. should be a citizen, as the Constitution says.",
+   "agree": 0,
+   "label": "Birthright citizenship",
    "sides": [
     "Yes",
     "No"
@@ -2479,6 +3082,9 @@
    "id": "learn-english",
    "cat": "immigration",
    "q": "Should immigrants be expected to learn English?",
+   "statement": "Immigrants should be expected to learn English.",
+   "agree": 0,
+   "label": "Expecting immigrants to learn English",
    "sides": [
     "Yes",
     "No"
@@ -2490,6 +3096,9 @@
    "id": "local-police-ice",
    "cat": "immigration",
    "q": "Should local police be able to hold undocumented immigrants arrested for minor crimes and hand them to federal immigration authorities?",
+   "statement": "Local police shouldn't hold people for immigration agents over minor offenses.",
+   "agree": 1,
+   "label": "Local police holding immigrants for ICE",
    "sides": [
     "Yes",
     "No"
@@ -2502,6 +3111,9 @@
    "id": "sanctuary-funding",
    "cat": "immigration",
    "q": "Should sanctuary cities receive federal funding?",
+   "statement": "Sanctuary cities shouldn't get federal money.",
+   "agree": 1,
+   "label": "Federal funding for sanctuary cities",
    "sides": [
     "Yes",
     "No"
@@ -2514,6 +3126,9 @@
    "id": "dual-citizenship",
    "cat": "immigration",
    "q": "Should immigrants be allowed to hold dual citizenship?",
+   "statement": "Immigrants should be able to keep their old citizenship along with American citizenship.",
+   "agree": 0,
+   "label": "Dual citizenship",
    "sides": [
     "Yes",
     "No"
@@ -2526,6 +3141,9 @@
    "id": "deport-serious-crime",
    "cat": "immigration",
    "q": "Should immigrants who commit a serious crime be deported?",
+   "statement": "Immigrants who commit serious crimes should be deported.",
+   "agree": 0,
+   "label": "Deporting immigrants who commit serious crimes",
    "sides": [
     "Yes",
     "No"
@@ -2538,6 +3156,9 @@
    "id": "border-security",
    "cat": "immigration",
    "q": "Should border security be tightened?",
+   "statement": "The border is secure enough; the focus should be on fixing the immigration system.",
+   "agree": 1,
+   "label": "Tighter border security",
    "sides": [
     "Yes",
     "No"
@@ -2553,6 +3174,9 @@
    "id": "work-amnesty",
    "cat": "immigration",
    "q": "Should undocumented immigrants who are working get temporary legal status?",
+   "statement": "Undocumented immigrants who are working here should get temporary legal status.",
+   "agree": 0,
+   "label": "Temporary status for working undocumented immigrants",
    "sides": [
     "Yes",
     "No"
@@ -2565,6 +3189,9 @@
    "id": "undocumented-healthcare",
    "cat": "immigration",
    "q": "Should undocumented immigrants have access to government-funded health care?",
+   "statement": "Taxpayer-funded health care shouldn't go to people here illegally.",
+   "agree": 1,
+   "label": "Public health care for undocumented immigrants",
    "sides": [
     "Yes",
     "No"
@@ -2577,6 +3204,9 @@
    "id": "skilled-visas",
    "cat": "immigration",
    "q": "Should the number of temporary visas for high-skilled workers go up or down?",
+   "statement": "America should let in more high-skilled workers on temporary visas.",
+   "agree": 0,
+   "label": "More high-skilled worker visas",
    "sides": [
     "Increase",
     "Decrease"
@@ -2588,6 +3218,9 @@
    "id": "dreamers-citizenship",
    "cat": "immigration",
    "q": "Should children of undocumented immigrants be given legal citizenship?",
+   "statement": "Children brought here illegally who grew up American should get a path to citizenship.",
+   "agree": 0,
+   "label": "Citizenship for Dreamers",
    "sides": [
     "Yes",
     "No"
@@ -2600,6 +3233,9 @@
    "id": "border-wall",
    "cat": "immigration",
    "q": "Should the U.S. build a wall along the southern border?",
+   "statement": "A wall along the southern border is necessary to stop illegal immigration.",
+   "agree": 0,
+   "label": "A southern border wall",
    "sides": [
     "Yes",
     "No"
@@ -2612,6 +3248,9 @@
    "id": "remain-in-mexico",
    "cat": "immigration",
    "q": "Should asylum seekers at the southern border have to wait in Mexico while their cases are decided?",
+   "statement": "Making asylum seekers wait in Mexico puts them in danger.",
+   "agree": 1,
+   "label": "Remain in Mexico",
    "sides": [
     "Yes",
     "No"
@@ -2624,6 +3263,9 @@
    "id": "e-verify",
    "cat": "immigration",
    "q": "Should all employers have to check new hires' immigration status with E-Verify?",
+   "statement": "Requiring every employer to use E-Verify would burden small businesses.",
+   "agree": 1,
+   "label": "Requiring E-Verify",
    "sides": [
     "Yes",
     "No"
@@ -2636,6 +3278,9 @@
    "id": "no-traffic-laws",
    "cat": "transportation",
    "q": "Should the government eliminate traffic laws and rely on voluntary compliance?",
+   "statement": "Traffic laws should be eliminated in favor of voluntary compliance.",
+   "agree": 0,
+   "label": "Eliminating traffic laws",
    "sides": [
     "Yes",
     "No"
@@ -2648,6 +3293,9 @@
    "id": "diesel-emissions",
    "cat": "transportation",
    "q": "Should diesel vehicles face stricter emissions standards?",
+   "statement": "Diesel emissions rules are strict enough already.",
+   "agree": 1,
+   "label": "Stricter diesel emissions standards",
    "sides": [
     "Yes",
     "No"
@@ -2660,6 +3308,9 @@
    "id": "transit-spending",
    "cat": "transportation",
    "q": "Should the government spend more on public transportation?",
+   "statement": "The government should spend more on buses and trains.",
+   "agree": 0,
+   "label": "More public transit spending",
    "sides": [
     "Yes",
     "No"
@@ -2672,6 +3323,9 @@
    "id": "accessible-transit",
    "cat": "transportation",
    "q": "Should all public transportation have to be fully accessible to people with disabilities?",
+   "statement": "All public transportation should be fully accessible to people with disabilities.",
+   "agree": 0,
+   "label": "Fully accessible transit",
    "sides": [
     "Yes",
     "No"
@@ -2684,6 +3338,9 @@
    "id": "fuel-efficiency",
    "cat": "transportation",
    "q": "Should vehicles face stricter fuel efficiency standards?",
+   "statement": "Stricter fuel efficiency standards save drivers money and cut pollution.",
+   "agree": 0,
+   "label": "Stricter fuel efficiency standards",
    "sides": [
     "Yes",
     "No"
@@ -2696,6 +3353,9 @@
    "id": "gps-tracking",
    "cat": "transportation",
    "q": "Should GPS tracking be required in all vehicles to monitor driving and enforce traffic laws?",
+   "statement": "Requiring GPS tracking in every car to enforce traffic laws would be an invasion of privacy.",
+   "agree": 1,
+   "label": "Required GPS tracking in vehicles",
    "sides": [
     "Yes",
     "No"
@@ -2708,6 +3368,9 @@
    "id": "ev-mandate",
    "cat": "transportation",
    "q": "Should all new cars have to be electric or hybrid by a set date?",
+   "statement": "The government shouldn't force people to buy electric or hybrid cars.",
+   "agree": 1,
+   "label": "An electric-car mandate",
    "sides": [
     "Yes",
     "No"
@@ -2720,6 +3383,9 @@
    "id": "carpool-incentives",
    "cat": "transportation",
    "q": "Should commuters get financial incentives for carpooling or shared rides?",
+   "statement": "Commuters should get paid incentives for carpooling.",
+   "agree": 0,
+   "label": "Carpool incentives",
    "sides": [
     "Yes",
     "No"
@@ -2732,6 +3398,9 @@
    "id": "distracted-driving",
    "cat": "transportation",
    "q": "Should penalties for distracted driving go up?",
+   "statement": "Penalties for distracted driving should go up.",
+   "agree": 0,
+   "label": "Tougher distracted-driving penalties",
    "sides": [
     "Yes",
     "No"
@@ -2744,6 +3413,9 @@
    "id": "self-driving-rules",
    "cat": "transportation",
    "q": "Should the testing and use of self-driving cars on public roads be strictly regulated?",
+   "statement": "Self-driving cars should be strictly regulated before they're allowed on public roads.",
+   "agree": 0,
+   "label": "Strict rules for self-driving cars",
    "sides": [
     "Yes",
     "No"
@@ -2757,6 +3429,9 @@
    "id": "rideshare-subsidies",
    "cat": "transportation",
    "q": "Should the government subsidize ride-sharing for low-income people?",
+   "statement": "Taxpayers shouldn't subsidize ride-sharing.",
+   "agree": 1,
+   "label": "Ride-share subsidies for low-income people",
    "sides": [
     "Yes",
     "No"
@@ -2769,6 +3444,9 @@
    "id": "smart-roads",
    "cat": "transportation",
    "q": "Should the government invest in smart transportation, like AI-managed traffic systems and connected highways?",
+   "statement": "The government should invest in smart roads and AI-managed traffic systems.",
+   "agree": 0,
+   "label": "Smart transportation investment",
    "sides": [
     "Yes",
     "No"
@@ -2781,6 +3459,9 @@
    "id": "high-speed-rail",
    "cat": "transportation",
    "q": "Should the government heavily subsidize high-speed rail?",
+   "statement": "High-speed rail is worth heavy government investment.",
+   "agree": 0,
+   "label": "High-speed rail subsidies",
    "sides": [
     "Yes",
     "No"
@@ -2793,6 +3474,9 @@
    "id": "frequent-flier-rules",
    "cat": "transportation",
    "q": "Should airline frequent-flier programs be regulated to protect customers from sudden devaluations and hidden fees?",
+   "statement": "Airline frequent-flier programs should be regulated to protect customers.",
+   "agree": 0,
+   "label": "Regulating frequent-flier programs",
    "sides": [
     "Yes",
     "No"
@@ -2805,6 +3489,9 @@
    "id": "classic-car-design",
    "cat": "transportation",
    "q": "Should new vehicles be required to keep classic car designs?",
+   "statement": "New cars should be required to keep classic designs.",
+   "agree": 0,
+   "label": "Classic car design requirements",
    "sides": [
     "Yes",
     "No"
@@ -2816,6 +3503,9 @@
    "id": "child-vaccines",
    "cat": "science",
    "q": "Should children be required to get vaccines for preventable diseases?",
+   "statement": "Children should be required to get vaccines for preventable diseases.",
+   "agree": 0,
+   "label": "Required childhood vaccines",
    "sides": [
     "Yes",
     "No"
@@ -2828,6 +3518,9 @@
    "id": "space-funding",
    "cat": "science",
    "q": "Should the government fund space travel?",
+   "statement": "The government should keep funding space travel.",
+   "agree": 0,
+   "label": "Space funding",
    "sides": [
     "Yes",
     "No"
@@ -2839,6 +3532,9 @@
    "id": "nuclear-energy",
    "cat": "science",
    "q": "Do you support nuclear energy?",
+   "statement": "Nuclear power is a clean and reliable source of energy we should use more.",
+   "agree": 0,
+   "label": "Nuclear energy",
    "sides": [
     "Yes",
     "No"
@@ -2850,6 +3546,9 @@
    "id": "genetic-research",
    "cat": "science",
    "q": "Should the government fund genetic engineering research to prevent and cure diseases?",
+   "statement": "The government should fund genetic engineering research to cure diseases.",
+   "agree": 0,
+   "label": "Genetic research funding",
    "sides": [
     "Yes",
     "No"
@@ -2861,6 +3560,9 @@
    "id": "crispr-rules",
    "cat": "science",
    "q": "Should the use of CRISPR to modify human genes be regulated?",
+   "statement": "Editing human genes with CRISPR should be strictly regulated.",
+   "agree": 0,
+   "label": "Regulating human gene editing",
    "sides": [
     "Yes",
     "No"
@@ -2872,6 +3574,9 @@
    "id": "lab-grown-meat",
    "cat": "science",
    "q": "Should lab-grown meat be allowed to be sold?",
+   "statement": "Lab-grown meat shouldn't be sold as food.",
+   "agree": 1,
+   "label": "Selling lab-grown meat",
    "sides": [
     "Yes",
     "No"
@@ -2884,6 +3589,9 @@
    "id": "gmo-labels",
    "cat": "science",
    "q": "Should genetically engineered foods (GMOs) have to be labeled?",
+   "statement": "Genetically engineered foods should be labeled.",
+   "agree": 0,
+   "label": "GMO labels",
    "sides": [
     "Yes",
     "No"
@@ -2896,6 +3604,9 @@
    "id": "homeless-funding",
    "cat": "housing",
    "q": "Should the government spend more on homeless shelters and services?",
+   "statement": "The government should spend more on homeless shelters and services.",
+   "agree": 0,
+   "label": "More homelessness funding",
    "sides": [
     "Yes",
     "No"
@@ -2908,6 +3619,9 @@
    "id": "rent-algorithms",
    "cat": "housing",
    "q": "Should landlords be banned from using software that coordinates rent prices?",
+   "statement": "Landlords shouldn't be allowed to use software that coordinates rent prices.",
+   "agree": 0,
+   "label": "Banning rent-setting software",
    "sides": [
     "Yes",
     "No"
@@ -2920,6 +3634,9 @@
    "id": "rent-control",
    "cat": "housing",
    "q": "Should the government limit how much landlords can charge (rent control)?",
+   "statement": "Rent control makes housing shortages worse.",
+   "agree": 1,
+   "label": "Rent control",
    "sides": [
     "Yes",
     "No"
@@ -2932,6 +3649,9 @@
    "id": "affordable-housing",
    "cat": "housing",
    "q": "Should the government give incentives to build affordable housing?",
+   "statement": "The government should give incentives to build affordable housing.",
+   "agree": 0,
+   "label": "Affordable housing incentives",
    "sides": [
     "Yes",
     "No"
@@ -2944,6 +3664,9 @@
    "id": "dense-housing",
    "cat": "housing",
    "q": "Should the government give incentives to build high-density housing?",
+   "statement": "The government should encourage building more apartments and dense housing.",
+   "agree": 0,
+   "label": "Incentives for dense housing",
    "sides": [
     "Yes",
     "No"
@@ -2955,6 +3678,9 @@
    "id": "homeless-encampments",
    "cat": "housing",
    "q": "Should homeless people who have turned down available shelter be allowed to sleep or camp on public property?",
+   "statement": "People who turn down shelter shouldn't be allowed to camp on sidewalks and in parks.",
+   "agree": 1,
+   "label": "Camping on public property after refusing shelter",
    "sides": [
     "Yes",
     "No"
@@ -2967,6 +3693,9 @@
    "id": "squatter-removal",
    "cat": "housing",
    "q": "Should police be able to remove squatters from a home without a court order?",
+   "statement": "Police should be able to remove squatters from a home without waiting for a court.",
+   "agree": 0,
+   "label": "Removing squatters without a court order",
    "sides": [
     "Yes",
     "No"
@@ -2979,6 +3708,9 @@
    "id": "national-sales-tax",
    "cat": "housing",
    "q": "Should the federal income tax be abolished and replaced with a national sales tax?",
+   "statement": "The income tax should be abolished and replaced with a national sales tax.",
+   "agree": 0,
+   "label": "Replacing the income tax with a sales tax",
    "sides": [
     "Yes",
     "No"
@@ -2991,6 +3723,9 @@
    "id": "first-time-buyers",
    "cat": "housing",
    "q": "Should first-time homebuyers get government subsidies?",
+   "statement": "First-time homebuyers should get government help with a down payment.",
+   "agree": 0,
+   "label": "Help for first-time homebuyers",
    "sides": [
     "Yes",
     "No"
@@ -3003,6 +3738,9 @@
    "id": "investor-home-buying",
    "cat": "housing",
    "q": "Should large investment funds be banned from buying apartment buildings and single-family homes?",
+   "statement": "Large investment funds shouldn't be allowed to buy up homes and apartment buildings.",
+   "agree": 0,
+   "label": "Banning big investors from buying homes",
    "sides": [
     "Yes",
     "No"
@@ -3015,6 +3753,9 @@
    "id": "foreign-home-buyers",
    "cat": "housing",
    "q": "Should foreign investors be restricted from buying homes in the U.S.?",
+   "statement": "Foreign investors should be restricted from buying homes in the U.S.",
+   "agree": 0,
+   "label": "Restricting foreign home buyers",
    "sides": [
     "Yes",
     "No"
@@ -3026,6 +3767,9 @@
    "id": "green-spaces",
    "cat": "housing",
    "q": "Should new housing developments have to include green spaces and parks?",
+   "statement": "New housing developments should have to include parks and green spaces.",
+   "agree": 0,
+   "label": "Required green space in new housing",
    "sides": [
     "Yes",
     "No"
@@ -3038,6 +3782,9 @@
    "id": "foreclosure-help",
    "cat": "housing",
    "q": "Should homeowners facing foreclosure get government financial help?",
+   "statement": "Homeowners who fall behind on their mortgage shouldn't get a government bailout.",
+   "agree": 1,
+   "label": "Foreclosure help",
    "sides": [
     "Yes",
     "No"
@@ -3050,6 +3797,9 @@
    "id": "backyard-cottages",
    "cat": "housing",
    "q": "Should homeowners be able to build a small backyard cottage (ADU) without a permit?",
+   "statement": "Homeowners should be able to build a backyard cottage without a permit.",
+   "agree": 0,
+   "label": "Backyard cottages without a permit",
    "sides": [
     "Yes",
     "No"
