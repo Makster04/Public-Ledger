@@ -3024,8 +3024,9 @@ function showingUpDetails(s,x){
 // Conflicts of Interest's arithmetic, for its row.
 function conflictsMath(x){
   if(!x?.complete)return '';
+  const u=x.income?.unstated?` (${x.income.unstated} interested income source${x.income.unstated===1?'':'s'} with no amount given count 20 each, like a board seat)`:'';
   const p=x.parts||{},f=v=>v==null?'not available':Number(v.toFixed(1));
-  return `Outside Income & Conflicts ${f(x.outside)} (income, boards & agreements ${f(p.income)}; Lobbyist Overlap ${f(p.lobbyistOverlap)}; Contracts for Donors ${f(p.contractsForDonors)}; Foreign Agent ${f(p.foreignAgent)}) · Gifts & Travel ${f(x.gifts)} · 100 − (0.60 × outside + 0.40 × gifts & travel) = ${Number(x.value.toFixed(2))}.`;
+  return `Outside Income & Conflicts ${f(x.outside)} (income, boards & agreements ${f(p.income)}; Lobbyist Overlap ${f(p.lobbyistOverlap)}; Contracts for Donors ${f(p.contractsForDonors)}; Foreign Agent ${f(p.foreignAgent)}) ${u} · Gifts & Travel ${f(x.gifts)} · 100 − (0.60 × outside + 0.40 × gifts & travel) = ${Number(x.value.toFixed(2))}.`;
 }
 // Conflicts of Interest in full: what the report shows from interested organizations, each with its source.
 function conflictsDetails(s,x){
@@ -3033,14 +3034,14 @@ function conflictsDetails(s,x){
   if(!x.complete)return `<p class="small">${esc(x.why)}</p><p class="small muted">Read from the latest annual or candidate financial disclosure (Senate eFD Parts 1–10, House Schedules A–J): outside income, board seats, agreements, gifts and paid travel. An organization counts only after it is matched and reviewed as having business before their committees; an unreviewed name is a lead. Not graded until then — missing evidence is never a clean record.</p>`;
   const list=(title,rows,line)=>rows?.length?`<p class="small"><b>${esc(title)}:</b> ${rows.map(line).join('; ')}</p>`:'';
   const link=r=>r?.src?.u?` · <a href="${esc(r.src.u)}" target="_blank" rel="noopener noreferrer">${esc(r.src.t||'source')} ↗</a>`:'';
-  const money=n=>Number.isFinite(Number(n))?fmtFull(Number(n)):'amount not given';
+  const money=n=>n!=null&&n!==''&&Number.isFinite(Number(n))&&Number(n)>0?fmtFull(Number(n)):'amount not given',why=r=>r?.why?` <span class="muted">(${esc(r.why)})</span>`:'',who=r=>r?.paidTo&&!/^(self|filer)$/i.test(r.paidTo)?` (${esc(String(r.paidTo).toLowerCase())})`:'';
   const rec=(window.CONFLICTS?.people||{})[s.id]||{};const mine=r=>r?.interested===true;
   return `<p class="small"><b>${Number(x.value.toFixed(1))} of 100.</b> ${esc(conflictsMath(x))}</p>
-    ${list('Income from interested organizations',(rec.income||[]).filter(mine),r=>`${esc(r.payer||r.source||'payer')} ${money(r.amount)}${link(r)}`)}
-    ${list('Board seats and positions',(rec.positions||[]).filter(mine),r=>`${esc(r.position||'position')}, ${esc(r.org||'organization')}${link(r)}`)}
-    ${list('Agreements',(rec.agreements||[]).filter(mine),r=>`${esc(r.kind||'agreement')}, ${esc(r.org||'organization')}${link(r)}`)}
-    ${list('Gifts',(rec.gifts||[]).filter(mine),r=>`${esc(r.source||'source')} ${money(r.value)}${link(r)}`)}
-    ${list('Paid travel',(rec.travel||[]).filter(mine),r=>`${esc(r.sponsor||'sponsor')}${r.dates?`, ${esc(r.dates)}`:''} ${money(r.value)}${link(r)}`)}
+    ${list('Income from interested organizations',(rec.income||[]).filter(mine),r=>`${esc(r.payer||r.source||'payer')}${who(r)}, ${money(r.amount)}${why(r)}${link(r)}`)}
+    ${list('Board seats and positions',(rec.positions||[]).filter(mine),r=>`${esc(r.position||'position')}, ${esc(r.org||'organization')}${why(r)}${link(r)}`)}
+    ${list('Agreements',(rec.agreements||[]).filter(mine),r=>`${esc(r.kind||'agreement')}, ${esc(r.org||'organization')}${why(r)}${link(r)}`)}
+    ${list('Gifts',(rec.gifts||[]).filter(mine),r=>`${esc(r.source||'source')}, ${money(r.value)}${why(r)}${link(r)}`)}
+    ${list('Paid travel',(rec.travel||[]).filter(mine),r=>`${esc(r.sponsor||'sponsor')}${r.dates?`, ${esc(r.dates)}`:''} ${money(r.value)}${why(r)}${link(r)}`)}
     <p class="small muted">From their ${esc(x.report?.year||'')} report${x.report?.url?` (<a href="${esc(x.report.url)}" target="_blank" rel="noopener noreferrer">open ↗</a>)`:''}, matches reviewed ${esc(fmtDate(x.reviewed?.at))}. Legal gifts, trips and income count when they come from an interested organization: this measures exposure to those with business before them, not a rule broken.</p>`;
 }
 

@@ -239,10 +239,13 @@ export const CONFLICT_WEIGHTS={income:.40,lobbyistOverlap:.25,contractsForDonors
 const interested=list=>(list||[]).filter(x=>x?.interested===true);
 const amount=x=>Number.isFinite(Number(x?.amount??x?.value))?Number(x.amount??x.value):0;
 // I: income, board seats and agreements (latest report year): 60 × Hill(income from interested organizations, $50,000)
-// + 20 a board seat or officer position with one (at most 40) + 40 for an agreement with one, capped at 100.
+// + 20 a board seat or officer position with one, or an income source from one whose amount the report doesn't give
+// (spouse pay is "over $1,000" or "N/A"; since Nov. 25, 2026), at most 40 together + 40 for an agreement with one,
+// capped at 100.
 export function incomeConflicts({income=[],positions=[],agreements=[]}={}){
-  const money=interested(income).reduce((n,x)=>n+amount(x),0),seats=interested(positions).length,deals=interested(agreements).length;
-  return {value:clamp((money>0?60*hill(money,50000):0)+Math.min(40,20*seats)+(deals?40:0)),money,seats,deals};
+  const paid=interested(income),money=paid.reduce((n,x)=>n+amount(x),0),unstated=paid.filter(x=>!(amount(x)>0)).length;
+  const seats=interested(positions).length,deals=interested(agreements).length;
+  return {value:clamp((money>0?60*hill(money,50000):0)+Math.min(40,20*(seats+unstated))+(deals?40:0)),money,seats,unstated,deals};
 }
 export const lobbyistOverlap=sharePct=>Number.isFinite(sharePct)&&sharePct>=0?100*(sharePct>0?hill(sharePct,25):0):null;
 export const contractsForDonors=companies=>Number.isFinite(companies)&&companies>=0?100*(companies>0?hill(companies,5):0):null;

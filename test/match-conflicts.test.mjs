@@ -44,3 +44,11 @@ test('a record is built only when every organization has a decision', ()=>{
   assert.equal(x.complete,true);
   assert.ok(x.value<100&&x.value>0);
 });
+
+test('an interested income source with no amount counts 20, like a board seat', ()=>{
+  const x=conflictsComponent({id:'h'},{people:{h:{report:{year:2025},reviewed:{at:'2026-11-25'},
+    income:[{source:'A',amount:null,interested:true},{source:'B',amount:null,interested:true},{source:'C',amount:null,interested:false}],positions:[],agreements:[],gifts:[],travel:[]}}});
+  assert.equal(x.income.unstated,2);
+  assert.equal(x.outside,40);
+  assert.equal(x.value,76);
+});
