@@ -55,3 +55,18 @@ test('coverage counts promises, tagged quotes and stances, with what each person
   assert.deepEqual(c.totals.promises.all,{met:1,some:0,none:3,of:4});
   assert.equal(personCoverage({id:'x',bioguide:null,sitting:false},{}).sources.record,false);
 });
+
+test('sentences are ranked by how clearly they take a side, and the queue shows the clearest per question',async()=>{
+  const {stanceRank,tagQueue}=await import('../scripts/question-statements.mjs');
+  assert.equal(stanceRank('I will vote against any bill that cuts Social Security benefits.','Doe'),5);
+  assert.equal(stanceRank('I strongly support the Dream Act and its protections for Dreamers.','Doe'),4);
+  assert.equal(stanceRank('We must fully fund border security in this country now.','Doe'),3);
+  assert.equal(stanceRank('Congress should act on the price of prescription drugs.','Doe'),2);
+  assert.equal(stanceRank('The bill was introduced in March and referred to committee.','Doe'),1);
+  const seen=d=>[{date:d,url:'u'}];
+  const q=tagQueue([{text:'The wall was discussed at length in committee today.',questions:['border-wall'],seen:seen('2025-01-01')},
+    {text:'We will finish the wall and secure the border for good.',questions:['border-wall','border-security'],seen:seen('2025-02-01')},
+    {text:'Tariffs were raised on steel imports this year.',questions:['tariffs'],seen:seen('2025-03-01')}],'Doe',{top:2,skip:new Set(['border-security'])});
+  assert.deepEqual(q.map(x=>[x.q,x.best[0].rank]),[['border-wall',5],['tariffs',1]]);
+  assert.equal(q[0].best.length,2);
+});

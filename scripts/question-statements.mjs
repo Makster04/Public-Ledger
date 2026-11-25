@@ -17,13 +17,16 @@
 // writes .local/statement-candidates/<id>.json: each sentence that names one of a question's search phrases
 // (data/question-search.json "any", plus its "said" phrases for how people talk about it), once per wording, with the
 // dates and links it was found at, and the questions it may be about. --print lists them compactly.
+//   npm run statements:find -- --queue warren    for tagging (since Nov. 25, 2026): for each question, the person's
+//                                               clearest sentences (stanceRank), clearest questions first; --top N
+//                                               questions (default 20), --skip-tagged leaves out questions tagged already
 //   npm run statements:record
 // checks data/question-statements.json (known people and questions, a side, a quote, a date and a link) and writes
 // public/question-statements.json for the site.
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {sentences} from '../src/promise-finder.mjs';
+import {sentences,commitmentIn,surnameOf} from '../src/promise-finder.mjs';
 import {phraseRe} from './question-bills.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -69,6 +72,25 @@ export function statementCandidates(docs,searches){
   const out=[...by.values()];for(const c of out)c.seen.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
   return out;
 }
+// How clearly a sentence takes a side, for ordering what's tagged first (since Nov. 25, 2026): 5 their own promise
+// ("I will…", "I'll vote to…"), 4 their own stance ("I support…", "we oppose…"), 3 "we must / we need to / we cannot",
+// 2 "should", "must" or "ought to", 1 anything else; a very long sentence one less. name: their surname.
+export function stanceRank(sentence,name){
+  const s=String(sentence||''),c=commitmentIn(s,name);let r=1;
+  if(c&&!c.third&&!c.conditional&&(c.kind==='promise'||c.side!=='unclear'))r=c.kind==='promise'?5:4;
+  else if(/\b(?:I|we)\s+(?:must|need to|have to|cannot|can['’]t|should|refuse to|will not|won['’]t)\b/i.test(s))r=3;
+  else if(/\b(?:should|must|ought to|need to)\b/i.test(s))r=2;
+  return Math.max(1,r-(s.length>400?1:0));
+}
+// The tagging queue: for each question a person's sentences name, the clearest two (stanceRank, then newest), the
+// questions with the clearest sentences first, at most top of them. cands: statementCandidates' list.
+export function tagQueue(cands,name,{top=20,skip=new Set()}={}){
+  const byQ=new Map();
+  for(const c of cands){const rank=stanceRank(c.text,name),date=c.seen[0]?.date||'';
+    for(const q of c.questions){if(skip.has(q))continue;(byQ.get(q)||byQ.set(q,[]).get(q)).push({...c,rank,date});}}
+  const out=[...byQ].map(([q,list])=>({q,best:list.sort((a,b)=>b.rank-a.rank||String(b.date).localeCompare(String(a.date))).slice(0,2)}));
+  return out.sort((a,b)=>b.best[0].rank-a.best[0].rank||(b.best[1]?.rank||0)-(a.best[1]?.rank||0)||a.q.localeCompare(b.q)).slice(0,top);
+}
 // The election a date leads up to: the year itself when even, else the next ("2025-03-01" -> "2026").
 export const cycleOf=date=>{const y=Number(String(date||'').slice(0,4));return y?String(y%2?y+1:y):'';};
 // The campaign a statement belongs to: the one its source names ("Campaign website, 2020", "Bluesky post, 2026
@@ -99,9 +121,10 @@ export function checkStatements(coded,{people,questions}){
 }
 
 function main(){
-  const args=process.argv.slice(2),find=args.includes('--find'),print=args.includes('--print'),only=args.filter(a=>!a.startsWith('--'));
+  const args=process.argv.slice(2),find=args.includes('--find')||args.includes('--queue'),queue=args.includes('--queue'),print=args.includes('--print'),only=args.filter((a,i)=>!a.startsWith('--')&&args[i-1]!=='--top');
   const Q=read('public/questions.json').questions,R=read('public/research.json');
-  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[])].map(p=>p.id));
+  // The full profiles, and since Nov. 25, 2026 every sitting senator and House member (their floor speeches).
+  const people=new Set([...R.members,...(R.cands||[]),...(R.featured||[]),...(read('public/senate.json').senators||[]),...(read('public/house.json').members||[])].map(p=>p.id));
   if(find){
     const searches=read('data/question-search.json');delete searches.about;
     const dir=path.join(ROOT,'.local','statement-candidates');fs.mkdirSync(dir,{recursive:true});
@@ -113,6 +136,13 @@ function main(){
       const c=campaign.has(id)?read(`data/campaign-text/${id}.json`):null,k=collected.has(id)?read(`data/collected-statements/${id}.json`):null,r=record.has(id)?read(`data/record-statements/${id}.json`):null;
       const cands=statementCandidates([...campaignDocs(c),...collectedDocs(k),...collectedDocs(r)],searches);
       if(!cands.length)continue;
+      if(queue){
+        const name=c?.name||k?.name||r?.name||id,skip=args.includes('--skip-tagged')?new Set(Object.keys(coded[id]||{})):new Set();
+        const list=tagQueue(cands,surnameOf({name}),{top:Number(args[args.indexOf('--top')+1])||20,skip});
+        console.log(`## ${id} (${name})`);
+        for(const x of list)for(const b of x.best)console.log(`${x.q} | ${b.rank} | ${b.date} | ${b.seen[0]?.url||''} | ${b.text.slice(0,420)}`);
+        continue;
+      }
       fs.writeFileSync(path.join(dir,`${id}.json`),JSON.stringify({person:id,name:c?.name||k?.name||r?.name||id,built:new Date().toISOString().slice(0,10),candidates:cands}));
       const done=Object.keys(coded[id]||{}).length;
       console.log(`${id}: ${cands.length} sentences on ${new Set(cands.flatMap(x=>x.questions)).size} questions${done?` (${done} questions tagged)`:''}`);
