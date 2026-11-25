@@ -51,10 +51,15 @@ const byId=Object.fromEntries(ALL.concat(FEATURED).map(s=>[s.id,s]));
 // the Ideology lean, the compass and Your match. QISS has each question in the shape the alignment code reads: A and B
 // are its two sides, group its category.
 const QUESTIONS=window.QUESTIONS||{questions:[],categories:[]},QSTANCES=window.QSTANCES||{people:{},coded:{}};
+// Records read as favoring or opposing a short neutral label (approved Nov. 25, 2026): everywhere a question's wording or
+// its answers show beside a lawmaker's record (the Ideology tab, the evidence, promises, the Overview, the Legislation
+// tab), q is its label and its sides are Favor and Oppose (Favor is sides[0]). The question as asked stays in ask and
+// askSides; My alignment shows the statement, answered from strongly agree to strongly disagree.
+for(const q of QUESTIONS.questions)if(!q.ask){q.ask=q.q;q.askSides=q.sides;q.q=q.label||q.q;q.sides=['Favor','Oppose'];}
 const QCTX={list:QUESTIONS.questions,categories:QUESTIONS.categories};
 // An issue category's emoji at the start of a sentence about it (public/issue-icons.js); hidden from screen readers.
 const issIcon=cat=>ISSUE_ICON[cat]?`<span class="iss-ic" aria-hidden="true">${ISSUE_ICON[cat]}</span> `:'';
-const QISS=QUESTIONS.questions.map(q=>({...q,label:q.q,A:q.sides[0],B:q.sides[1],statement:q.q,group:q.cat})),QISSBY=Object.fromEntries(QISS.map(i=>[i.id,i]));
+const QISS=QUESTIONS.questions.map(q=>({...q,label:q.q,A:q.sides[0],B:q.sides[1],statement:q.statement||q.ask||q.q,group:q.cat})),QISSBY=Object.fromEntries(QISS.map(i=>[i.id,i]));
 const QCODED=QSTANCES.coded&&!Array.isArray(QSTANCES.coded)?QSTANCES.coded:{};
 // A person's stance on every question (public/question-scores.js personStances), worked out once: their record, their
 // carried-over evidence, what they said (public/question-statements.json) and the topic groups' ratings of them
@@ -3230,7 +3235,8 @@ let PROF=(()=>{try{const v=JSON.parse(localStorage.getItem(ALKEY)||'null');if(v&
   try{const old=JSON.parse(localStorage.getItem('crc-align-v1')||'null'),out={issues:{}};
     for(const [k,p] of Object.entries(old?.issues||{})){const m=LEGACY_ISSUES[k];if(!m||!p?.side||!QISSBY[m[0]])continue;out.issues[m[0]]={side:(p.side==='A'?m[1]:1-m[1])===0?'A':'B',w:({1:2,2:3,3:5})[p.w]||3};}
     return out;}catch(e){}return {issues:{}}})();
-for(const [k,p] of Object.entries(PROF.issues||{}))if(p?.neutral||!p?.side)delete PROF.issues[k];
+// (a "Skip" saved before Nov. 25, 2026 is neutral: true; a Neutral answer since is neutral: 2, kept as answered)
+for(const [k,p] of Object.entries(PROF.issues||{}))if(p?.neutral!==2&&!p?.side)delete PROF.issues[k];
 function saveProf(){try{localStorage.setItem(ALKEY,JSON.stringify(PROF))}catch(e){}}
 const chosenIssues=()=>QISS.filter(i=>PROF.issues[i.id]&&PROF.issues[i.id].side&&PROF.issues[i.id].w>0);
 // Example starting points: labeled by their content only. Every choice can be changed.
@@ -3243,7 +3249,8 @@ const EXAMPLES=[
 // their record, weighted by its importance. rows: [{q, i (the question), pr (your answer), s, word, agree, status}].
 function scoreFor(s){
   const ch=chosenIssues();
-  const r=matchFrom(Object.fromEntries(ch.map(i=>[i.id,{side:PROF.issues[i.id].side==='A'?0:1,w:PROF.issues[i.id].w}])),qstOf(s),QUESTIONS.questions);
+  // (a "strongly" answer counts 1.5 times its importance)
+  const r=matchFrom(Object.fromEntries(ch.map(i=>[i.id,{side:PROF.issues[i.id].side==='A'?0:1,w:PROF.issues[i.id].w*(PROF.issues[i.id].strong?1.5:1)}])),qstOf(s),QUESTIONS.questions);
   r.rows.forEach(x=>{x.i=QISSBY[x.q.id];x.pr=PROF.issues[x.q.id];});
   return r;
 }
@@ -3257,30 +3264,40 @@ function evidenceMix(s){
   return n?`a stance on ${n} of the ${QISS.length} questions`:'no stance on the questions yet';
 }
 function sideLabel(i,side){return side==='A'?ISSBY[i].A:ISSBY[i].B}
-function qSide(i,side){const q=QISSBY[i];return q?(side==='A'?q.A:q.B):'';}
+// Your answer to a statement, as a place on the scale: 2 strongly agree … −2 strongly disagree; null when unanswered.
+// It's kept as the question's side (A or B), the importance, and strong: true for "strongly"; Neutral is neutral: 2.
+const LIKERT=[[2,'Strongly agree'],[1,'Agree'],[0,'Neutral'],[-1,'Disagree'],[-2,'Strongly disagree']],LIKERT_WORD=Object.fromEntries(LIKERT);
+function ansOf(id){const p=PROF.issues[id],q=QISSBY[id];if(!p||!q)return null;if(p.neutral===2)return 0;if(!p.side)return null;
+  const k=p.side==='A'?0:1;return (k===(q.agree??0)?1:-1)*(p.strong?2:1);}
+function setAns(id,a){const q=QISSBY[id],p=PROF.issues[id];
+  if(a==null)delete PROF.issues[id];else if(a===0)PROF.issues[id]={neutral:2};
+  else{const k=a>0?(q.agree??0):1-(q.agree??0);PROF.issues[id]={side:k===0?'A':'B',w:p?.w||3,...(Math.abs(a)===2?{strong:true}:{})};}}
+const ansWord=id=>LIKERT_WORD[ansOf(id)]||'';
+function qSide(i){return ansWord(i);}
 // Your positions, on the questions with coded bills and votes (the rest are in My alignment).
 function builderHTML(){
   return `<div class="albuild">
     <div class="row" style="margin-bottom:10px"><span class="small muted">Start from an example (you can change every choice):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
-    <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>. Click a side again to clear it.</p>
+    <p class="small muted" style="margin:0 0 8px">The ${QISS.filter(i=>QCODED[i.id]).length} questions with bills and votes coded so far. All ${QISS.length} are in <a href="#align">My alignment</a>. Click an answer again to clear it.</p>
     ${QISS.filter(i=>QCODED[i.id]).map(i=>{const pr=PROF.issues[i.id]||{};return `<div class="alrow" data-i="${i.id}">
-      <div class="alq"><b>${issIcon(i.cat)}${esc(i.q)}</b></div>
-      <div class="seg alside" role="group" aria-label="${esc(i.q)}: your position"><button data-s="A" class="${pr.side==='A'?'active':''}">${esc(i.A)}</button><button data-s="B" class="${pr.side==='B'?'active':''}">${esc(i.B)}</button></div>
-      <label class="alw small">Importance <select data-w aria-label="${esc(i.q)}: importance">${IMPORTANCE.map(([w,l])=>`<option value="${w}" ${(pr.w||3)===w?'selected':''}>${l}</option>`).join('')}</select></label>
+      <div class="alq"><b>${issIcon(i.cat)}${esc(i.statement)}</b></div>
+      <div class="seg alside" role="group" aria-label="${esc(i.statement)}: your answer">${LIKERT.map(([a,l])=>`<button data-a="${a}" class="${ansOf(i.id)===a?'active':''}">${l}</button>`).join('')}</div>
+      <label class="alw small">Importance <select data-w aria-label="${esc(i.statement)}: importance">${IMPORTANCE.map(([w,l])=>`<option value="${w}" ${(pr.w||3)===w?'selected':''}>${l}</option>`).join('')}</select></label>
     </div>`}).join('')}
   </div>`;
 }
 function bindBuilder(root,onChange){
   root.querySelectorAll('.alrow').forEach(r=>{
     const id=r.dataset.i;
-    r.querySelector('.alside').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const w=+r.querySelector('select').value;const off=PROF.issues[id]?.side===b.dataset.s;if(off)delete PROF.issues[id];else PROF.issues[id]={side:b.dataset.s,w};r.querySelectorAll('.alside button').forEach(x=>x.classList.toggle('active',!off&&x===b));saveProf();onChange();});
+    r.querySelector('.alside').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const w=+r.querySelector('select').value;const a=+b.dataset.a,off=ansOf(id)===a;setAns(id,off?null:a);if(PROF.issues[id]?.side)PROF.issues[id].w=w;r.querySelectorAll('.alside button').forEach(x=>x.classList.toggle('active',!off&&x===b));saveProf();onChange();});
     r.querySelector('select').addEventListener('change',e=>{if(PROF.issues[id]){PROF.issues[id].w=+e.target.value;saveProf();onChange();}});
   });
   root.querySelectorAll('[data-ex]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.ex;PROF={issues:{}};if(k!=='clear')Object.entries(EXAMPLES[+k].set).forEach(([i,[s,w]])=>PROF.issues[i]={side:s,w});saveProf();onChange(true);}));
 }
 const ALNOTE=`<div class="note small" style="margin:10px 0">${points([['What this is','A comparison between the positions <i>you</i> pick and each candidate\'s documented record.'],['What it is not','A rating of how good a candidate is. It covers only the questions on their record.'],['Evidence used','Votes, bills, amendments and cosponsorships on each question, and statements (3 points each, not counted when a later vote went the other way), one credit per bill.'],['When a score shows','Their record has to cover at least three of the questions you answered (all of them, if you answered fewer) and at least half of your total importance; a question is on their record with at least 3 points on it. Otherwise you see "Not on record", never a zero.']])}<p style="margin:6px 0 0"><a href="#method">How it is calculated</a></p></div>`;
 // ---------- My alignment: a five-point quiz over the issue list. Each answer is saved as a side and an importance:
-// strongly agree/disagree = importance 3, agree/disagree = 2, neutral = answered but not counted. ----------
+// each statement answered from strongly agree to strongly disagree (a "strongly" answer counts 1.5 times); Neutral is
+// answered but not counted. ----------
 // The categories (public/questions.json), with a color from the earlier groups and an icon.
 const AL_CLASS={economic:'econ',healthcare:'econ',housing:'econ',infrastructure:'econ',transportation:'econ',social:'rights',criminal:'rights',education:'rights',guns:'rights',immigration:'imm',electoral:'imm',foreign:'foreign','national-security':'foreign',environmental:'env',science:'env',technology:'gov',governance:'gov'};
 const AL_ICON=ISSUE_ICON;
@@ -3291,11 +3308,10 @@ const AL_KEY=keyQuestions(QUESTIONS.questions,QCODED);
 // mixed order for "All questions": one from each category in turn, the key questions first and then the others
 const AL_ORDER=(()=>{const mix=list=>{const by=AL_GROUPS.map(([g])=>list.filter(i=>i.group===g)),out=[],max=Math.max(0,...by.map(l=>l.length));for(let k=0;k<max;k++)by.forEach(l=>{if(l[k])out.push(l[k])});list.forEach(i=>{if(!out.includes(i))out.push(i)});return out;};
   return [...mix(QISS.filter(i=>AL_KEY.has(i.id))),...mix(QISS.filter(i=>!AL_KEY.has(i.id)))];})();
-const AL_OPTS=[['A'],['B']];
 const AL_PAGE=5;
 let alView={g:'',page:0};const alOpen={};
-const alPick=id=>{const p=PROF.issues[id];if(!p)return -1;return p.side==='A'?0:p.side==='B'?1:-1};
-const alAnswered=()=>QISS.filter(i=>alPick(i.id)>=0).length;
+const alPick=id=>ansOf(id)??-9;           // −9: not answered
+const alAnswered=()=>QISS.filter(i=>ansOf(i.id)!=null).length;
 // (how many bills, amendments and roll calls are coded to each question: public/question-stances.json "coded")
 function alTied(i){
   const n=QCODED[i.id]||0;
@@ -3303,18 +3319,18 @@ function alTied(i){
 }
 function alCard(i){
   const [g,label,icon]=AL_GBY[i.group]||['','Other','•'],cls=AL_CLASS[g]||'econ',n=AL_ORDER.indexOf(i)+1,k=alPick(i.id),p=PROF.issues[i.id]||{};
-  const opts=[[0,i.A],[1,i.B]],v=p.w||3;
-  return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${cls}" aria-hidden="true">${icon}</span><span class="al-tag al-${cls}">${esc(label)}</span><span class="al-qn">Question ${n} of ${QISS.length}</span></div>
-    <h3 id="alq-${i.id}">${issIcon(i.cat)}${esc(i.q)}</h3><p class="al-tied">${alTied(i)}</p>
-    <div class="al-opts" role="radiogroup" aria-labelledby="alq-${i.id}">${opts.map(([j,l])=>`<button type="button" role="radio" aria-checked="${k===j}" data-k="${j}" class="${k===j?'on':''}"><span class="al-r" aria-hidden="true"></span>${esc(l)}</button>`).join('')}</div>
-    ${k===0||k===1?`<div class="al-imp"><span class="al-il" id="ali-${i.id}">How important? <b>${IMPORTANCE[v-1][1]}</b></span><div class="al-scale"><span class="al-track" aria-hidden="true"></span><span class="al-fill" aria-hidden="true" style="width:calc((100% - 36px) * ${(v-1)/4})"></span>
+  const a=ansOf(i.id),v=p.w||3;
+  return `<article class="al-q" data-i="${i.id}"><div class="al-qh"><span class="al-ic al-${cls}" aria-hidden="true">${icon}</span><span class="al-tag al-${cls}">${esc(label)}</span><span class="al-qn">Statement ${n} of ${QISS.length}</span></div>
+    <h3 id="alq-${i.id}">${issIcon(i.cat)}${esc(i.statement)}</h3><p class="al-tied">${alTied(i)}</p>
+    <div class="al-lk" role="radiogroup" aria-labelledby="alq-${i.id}">${LIKERT.map(([x,l])=>`<button type="button" role="radio" aria-checked="${a===x}" data-k="${x}" class="lk${x>0?'a':x<0?'d':'n'}${Math.abs(x)===2?' lks':''}"><i aria-hidden="true"></i>${l}</button>`).join('')}</div>
+    ${a!=null&&a!==0?`<div class="al-imp"><span class="al-il" id="ali-${i.id}">How important? <b>${IMPORTANCE[v-1][1]}</b></span><div class="al-scale"><span class="al-track" aria-hidden="true"></span><span class="al-fill" aria-hidden="true" style="width:calc((100% - 36px) * ${(v-1)/4})"></span>
       <div class="al-dots" role="radiogroup" aria-labelledby="ali-${i.id}">${IMPORTANCE.map(([w,l])=>`<button type="button" role="radio" class="al-dot${w===v?' on':w<v?' done':''}" aria-checked="${w===v}" tabindex="${w===v?0:-1}" data-w="${w}" aria-label="${l}"><span aria-hidden="true">${l}</span></button>`).join('')}</div></div></div>
-      <p class="al-hint">Click your answer again to clear it.</p>`:''}</article>`;
+      <p class="al-hint">Click your answer again to clear it.</p>`:a===0?'<p class="al-hint">Neutral is saved but left out of your match. Click it again to clear it.</p>':''}</article>`;
 }
 function alList(){return alView.g?AL_ORDER.filter(i=>i.group===alView.g&&AL_KEY.has(i.id)):AL_ORDER.slice(alView.page*AL_PAGE,alView.page*AL_PAGE+AL_PAGE);}
 // A category's other questions (its key ones are alList), behind a divider-style button that opens them in place.
 const alOther=g=>AL_ORDER.filter(i=>i.group===g&&!AL_KEY.has(i.id));
-const alOtherCount=g=>`${alOther(g).filter(i=>alPick(i.id)>=0).length} answered`;
+const alOtherCount=g=>`${alOther(g).filter(i=>ansOf(i.id)!=null).length} answered`;
 function alOtherHTML(g){
   const rest=alOther(g);if(!rest.length)return '';
   const name=AL_GBY[g][1],open=!!alOpen[g];
@@ -3368,10 +3384,10 @@ function renderAlign(){
       <div class="al-ex"><span class="small muted">Or start from an example (you can change every answer):</span>${EXAMPLES.map((x,k)=>`<button class="pill" data-ex="${k}">${esc(x.name)}</button>`).join('')}<button class="pill ghostb" data-ex="clear">Clear all</button></div>
     </div>
     <aside class="al-box al-live" id="al-live" aria-live="polite"></aside>
-    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Importance','From Least to Most: a question set to Most counts five times as much as one set to Least.'],['Unanswered','A question you leave unanswered is left out and never counts against anyone. Click your answer again to clear it.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
+    <aside class="al-box al-keep"><h4>💡 Keep in mind</h4>${points([['Importance','From Least to Most: a question set to Most counts five times as much as one set to Least. A "strongly" answer counts 1.5 times as much again.'],['Neutral','Saved as your answer but left out of your match.'],['Unanswered','A question you leave unanswered is left out and never counts against anyone. Click your answer again to clear it.'],['A match','Compares a record with your views. It is not a rating of the candidate.']])}</aside>
   </div>
   <section class="section" id="al-results" style="padding-top:8px"><h2>Every candidate, race by race</h2>${ALNOTE}<div id="alr"></div></section>`;
-  const drawCats=()=>{$('#al-cats').innerHTML=[['','All questions','☰',QISS.length]].concat(AL_GROUPS.map(([g,l,ic])=>[g,l,ic,QISS.filter(i=>i.group===g).length])).map(([g,l,ic,n])=>{const done=(g?QISS.filter(i=>i.group===g):QISS).filter(i=>alPick(i.id)>=0).length;return `<button type="button" class="al-cat${alView.g===g?' on':''}" data-g="${g}" aria-pressed="${alView.g===g}"><span class="al-ic${g?' al-'+(AL_CLASS[g]||'econ'):''}" aria-hidden="true">${ic}</span><span class="al-cl">${l}</span><span class="al-cn" title="${done} of ${n} answered">${n}</span></button>`}).join('');};
+  const drawCats=()=>{$('#al-cats').innerHTML=[['','All questions','☰',QISS.length]].concat(AL_GROUPS.map(([g,l,ic])=>[g,l,ic,QISS.filter(i=>i.group===g).length])).map(([g,l,ic,n])=>{const done=(g?QISS.filter(i=>i.group===g):QISS).filter(i=>ansOf(i.id)!=null).length;return `<button type="button" class="al-cat${alView.g===g?' on':''}" data-g="${g}" aria-pressed="${alView.g===g}"><span class="al-ic${g?' al-'+(AL_CLASS[g]||'econ'):''}" aria-hidden="true">${ic}</span><span class="al-cl">${l}</span><span class="al-cn" title="${done} of ${n} answered">${n}</span></button>`}).join('');};
   const drawTop=()=>{const L=alList(),a=alAnswered();
     const rest=alView.g?alOther(alView.g).length:0;
     $('#al-pos').textContent=alView.g?`${AL_GBY[alView.g][1]} · ${L.length} ${rest?'key ':''}question${L.length===1?'':'s'}${rest?` + ${rest} other`:''}`:`Questions ${alView.page*AL_PAGE+1}–${alView.page*AL_PAGE+L.length} of ${QISS.length}`;
@@ -3396,7 +3412,7 @@ function renderAlign(){
     const b=e.target.closest('button[data-k],button[data-w]');if(!b)return;
     const card=b.closest('.al-q'),id=card.dataset.i,p=PROF.issues[id];
     if(b.dataset.w){if(!p||!p.side)return;p.w=+b.dataset.w;}
-    else{const k=+b.dataset.k;if(alPick(id)===k)delete PROF.issues[id];else PROF.issues[id]={side:AL_OPTS[k][0],w:p?.w||3};}
+    else{const k=+b.dataset.k;setAns(id,ansOf(id)===k?null:k);}
     saveProf();
     const key=b.dataset.w?'w':'k',val=b.dataset.w||b.dataset.k;card.outerHTML=alCard(QISSBY[id]);
     $(`.al-q[data-i="${id}"] button[data-${key}="${val}"]`)?.focus();
@@ -3443,7 +3459,7 @@ function alignInto(s,host){
       ${r.nChosen?(r.score==null?points([['On their record',`${r.nCov} of your ${r.nChosen} questions.`],['Needed for a score',`At least ${r.need} of the questions you answered on their record (${MIN_POINTS} or more points on each), and at least half of your total importance.`]],'small'):points([['How it works',`On each question, agreement = (1 + your side × their stance) ÷ 2, where their stance runs from −1 (all on the other side) to +1 (all on yours). Each question counts by the importance you set, from Least (1) to Most (5).`],['The math',`(${r.rows.filter(x=>x.agree!=null).map(x=>`${Math.round(x.agree*100)}% × ${x.pr.w}`).join(' + ')}) ÷ ${r.covW} = ${r.score}%`]],'small')):'<p class="small muted" style="margin:0">Answer questions below or in <a href="#align">My alignment</a>.</p>'}
     </div>
     ${r.nChosen?`<h3 style="margin-top:18px">Question by question</h3>${r.rows.map(x=>`<div class="alissue" data-q="${esc(x.q.id)}">
-      <div class="row" style="justify-content:space-between"><div><b>${issIcon(x.q.cat)}${esc(x.q.q)}</b> <span class="small muted">· you: ${esc(qSide(x.q.id,x.pr.side))} · importance ${WLAB[x.pr.w]}</span></div>
+      <div class="row" style="justify-content:space-between"><div><b>${issIcon(x.q.cat)}${esc(x.q.statement)}</b> <span class="small muted">· you: ${esc(qSide(x.q.id))} · importance ${WLAB[x.pr.w]}</span></div>
       <div>${x.status==='none'?'<span class="chip ghost">Not on record</span>':`<span class="chip ${x.agree>=.5?'dfor':'dag'}">${esc(x.word)} · ${Math.round(x.agree*100)}% agreement</span>`}</div></div>
       <div class="q-ev small muted">Loading the record…</div></div>`).join('')}`:''}
     <details class="tv" ${r.nChosen?'':'open'}><summary>${r.nChosen?'Change your choices':'Choose your positions'}</summary><div id="alb2" style="margin-top:10px">${builderHTML()}</div></details>`;
@@ -4270,7 +4286,7 @@ function scoresMatch(host){
       <label class="small">Person <select id="sc-person">${rows.map(({s})=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select></label><div id="sc-issues"></div></div>`:''}`;
   const sel=host.querySelector('#sc-person');
   const drawIssues=()=>{const s=byId[sel.value],r=scoreFor(s);const list=r.rows.slice().sort((a,b)=>b.pr.w-a.pr.w);
-    host.querySelector('#sc-issues').innerHTML=rankBars(list.map(x=>({label:x.i.label,sub:`you: ${qSide(x.i.id,x.pr.side)} · importance ${WLAB[x.pr.w]}`,value:x.status==='none'?null:Math.round(x.agree*100),color:'var(--s1)',
+    host.querySelector('#sc-issues').innerHTML=rankBars(list.map(x=>({label:x.i.statement,sub:`you: ${qSide(x.i.id)} · importance ${WLAB[x.pr.w]}`,value:x.status==='none'?null:Math.round(x.agree*100),color:'var(--s1)',
       display:x.status==='none'?'':`${Math.round(x.agree*100)}%`,note:x.status==='none'?'not on record':`their stance: ${x.word}`,tip:x.status==='none'?'':`${x.i.label}: ${Math.round(x.agree*100)}% agreement`})));
     hoverTips(host);};
   if(sel){sel.addEventListener('change',drawIssues);drawIssues();}
@@ -4749,7 +4765,7 @@ function renderMethod(sub){
     <h2>Voter alignment</h2>
     <ul class="list">
       <li><b>Questions:</b> ${QISS.length} questions in ${QUESTIONS.categories.length} categories, each with two sides written neutrally, modeled on the topics of iSideWith.com's quiz in our own wording. Bills, amendments and roll calls are coded to ${Object.keys(QCODED).length} of them so far; the rest read "Not on record" until they are.</li>
-      <li><b>Answering:</b> on My alignment, pick one of each question's two sides, or leave it unanswered (click a side again to clear it). Each category shows its 10 key questions first, the ones with the most bills and votes coded to them; the rest are under "Show other questions".</li>
+      <li><b>Answering:</b> on My alignment, each question is an opinion statement, half of them arguing the left side and half the right where the question has one; answer from Strongly agree to Strongly disagree (a "strongly" answer counts 1.5 times), choose Neutral (saved but not counted), or leave it unanswered (click an answer again to clear it). Lawmakers' records show a short neutral label for each question, as Favor or Oppose. Each category shows its 10 key questions first, the ones with the most bills and votes coded to them; the rest are under "Show other questions".</li>
       <li><b>Importance:</b> Least (1), Less (2), Somewhat (3), More (4) or Most (5); a question counts by its importance. An unanswered question is left out of every score.</li>
       <li><b>Same answers everywhere:</b> each question says how many bills, amendments and roll calls are coded to it. Your answers are also used on each Your match tab and in the home-page "Your match" grade.</li>
       <li><b>Evidence from votes:</b> a key vote is assigned to an issue only when the measure's content makes the direction clear, with the reason shown under "Bill details". Nominations, stopgap spending bills, bundled packages and lopsided votes are not used; each shows why. When a member voted more than once on a bill, only the final vote counts.</li>

@@ -1784,3 +1784,25 @@ input, select { accent-color: var(--accent); }
   .al-scale { flex-basis: 100%; max-width: none; }
 }
 @media (prefers-reduced-motion: reduce) { .al-dot::before { transition: none; } }
+
+/* My alignment (approved Nov. 25, 2026): each statement answered from strongly agree to strongly disagree. */
+.al-lk { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.al-lk button { min-height: 52px; padding: 8px 6px; border: 1px solid var(--line-2); border-radius: 10px; background: #191919; color: var(--ink-2); font: inherit; font-weight: 700; font-size: .86rem; cursor: pointer; line-height: 1.15; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; text-align: center; }
+.al-lk button i { width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; opacity: .75; }
+.al-lk button.lks i { width: 14px; height: 14px; }
+.al-lk button:hover { border-color: var(--accent); }
+.al-lk button.lka { color: var(--for-ink); }
+.al-lk button.lkd { color: var(--against-ink); }
+.al-lk button[aria-checked="true"] { color: var(--ink); }
+.al-lk button.lka[aria-checked="true"] { background: color-mix(in srgb, var(--for-ink) 14%, #191919); border-color: var(--for-ink); }
+.al-lk button.lkd[aria-checked="true"] { background: color-mix(in srgb, var(--against-ink) 14%, #191919); border-color: var(--against-ink); }
+.al-lk button.lkn[aria-checked="true"] { background: var(--accent-soft); border-color: var(--accent); }
+.al-lk button[aria-checked="true"] i { opacity: 1; }
+.al-lk button.lka[aria-checked="true"] i { background: var(--for-ink); border-color: var(--for-ink); }
+.al-lk button.lkd[aria-checked="true"] i { background: var(--against-ink); border-color: var(--against-ink); }
+.al-lk button.lkn[aria-checked="true"] i { background: var(--accent); border-color: var(--accent); }
+.alrow .alside { flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .al-lk { gap: 4px; }
+  .al-lk button { font-size: .72rem; padding: 6px 2px; min-height: 58px; }
+}
